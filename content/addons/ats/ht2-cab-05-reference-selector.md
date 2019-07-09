@@ -58,11 +58,7 @@ To create the action structure, follow these steps:
 
     ![](attachments/ht2-create-unsupported-widget/ht2-cab-05-reference-selector/ref-selector-childelement-select.png)
 
-<<<<<<< HEAD:content/ats/ht2-cab-05-reference-selector.md
     When you create a custom action for an unsupported widget action, you must use the [*Find Widget Child Node*](rg1-find-widget-child-node) action. This action is a combination of the [*Find/Assert Widget*](rg1-findassert-widget) and [*Find Element by Sizzle*](rg1-find-element-by-sizzle) actions, combining the best of both. It is an official Mendix action, it has all the internal processes, and it uses a CSS/jQuery selector to find the child, which makes it flexible. The selector for finding the input element is an input. You use this selector in the *Find Widget Child Node* action to find an input element inside the text box widget.
-=======
-    When you create a custom action for an unsupported widget action, you must use the [*Find Widget Child Node*](/ats/refguide/rg-version-1/find-widget-child-node) action. This action is a combination of the [*Find/Assert Widget*](/ats/refguide/rg-version-1/findassert-widget) and [*Find Element by Sizzle*](/ats/refguide/rg-version-1/find-element-by-sizzle) actions, combining the best of both. It is an official Mendix action, it has all the internal processes, and it uses a CSS/jQuery selector to find the child, which makes it flexible. The selector for finding the input element is an input. You use this selector in the *Find Widget Child Node* action to find an input element inside the text box widget.
->>>>>>> development:content/ats/howtos/ht-version-2/cab-05-reference-selector-2.md
 
 3.  Before you start creating the action, you need to know if ATS can find the select element within the reference selector widget. You use the debugger to simulate what ATS does. Since the *Find Widget Child Node* action uses `mx-name` to find the parent, you also must use `mx-name` in your code. Use jQuery to find out if ATS can find the element. Enter the following code in the console of the debugger:
   * `$( ‘.mx-name-referenceSelector1 select’ )`
@@ -79,11 +75,7 @@ To create the action structure, follow these steps:
 
     ![](attachments/ht2-create-unsupported-widget/ht2-cab-05-reference-selector/ref-selector-selectoptionbytext-action.png)
 
-<<<<<<< HEAD:content/ats/ht2-cab-05-reference-selector.md
 6.  The *Select Option by Text* action is a core action that triggers an event. Finish your custom action with a [*Mendix Wait*](rg1-mendix-wait) action:
-=======
-6.  The *Select Option by Text* action is a core action that triggers an event. Finish your custom action with a [*Mendix Wait*](/ats/refguide/rg-version-1/mendix-wait) action:
->>>>>>> development:content/ats/howtos/ht-version-2/cab-05-reference-selector-2.md
 
     ![](attachments/ht2-create-unsupported-widget/ht2-cab-05-reference-selector/ref-selector-mendixwait-action.png)
 

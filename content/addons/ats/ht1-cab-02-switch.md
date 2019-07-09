@@ -57,11 +57,7 @@ In the previous section, you wrote down the user approach for the Mendix Switch 
 
     ![](attachments/ht1-create-unsupported-widget/ht1-cab-02-switch/highlighted-switch-mxname.png)
 
-<<<<<<< HEAD:content/ats/ht1-cab-02-switch.md
     When selecting which element to find, also remember that ATS clicks in the middle of an element. In this case, ATS does not click the actual switch. This means you must use the [Find Widget Child Node](rg1-find-widget-child-node) action. This action is a combination of the [Find/Assert Widget](rg1-findassert-widget) and [Find Element by Sizzle](rg1-find-element-by-sizzle) actions, combining the best of both. It’s an official Mendix action, it has all the internal processes, and it uses a CSS/jQuery selector to find the child, which makes it flexible.
-=======
-    When selecting which element to find, also remember that ATS clicks in the middle of an element. In this case, ATS does not click the actual switch. This means you must use the [Find Widget Child Node](/ats/refguide/rg-version-1/find-widget-child-node) action. This action is a combination of the [Find/Assert Widget](/ats/refguide/rg-version-1/findassert-widget) and [Find Element by Sizzle](/ats/refguide/rg-version-1/find-element-by-sizzle) actions, combining the best of both. It’s an official Mendix action, it has all the internal processes, and it uses a CSS/jQuery selector to find the child, which makes it flexible.
->>>>>>> development:content/ats/howtos/ht-version-1/cab-02-switch.md
 
 2.  Check the different child nodes to find the one you need. While doing this, keep the [guidelines for creating a custom action](ht1-guidelines-custom-action) in mind! It must be generic, so pick an element or element class that’s always present, because you "hard-code" it into your action. Also, make sure the element is visible for the end-user so that ATS can click it.
 
@@ -112,11 +108,7 @@ In the previous section, you wrote down the user approach for the Mendix Switch 
 
     ![](attachments/ht1-create-unsupported-widget/ht1-cab-02-switch/mendix-switch-findwidgetchild-description-output.png)
 
-<<<<<<< HEAD:content/ats/ht1-cab-02-switch.md
 9.  Click the Mendix switch to change its state. Add the [Click/Doubleclick](rg1-clickdoubleclick) action, because this action is a Mendix action:
-=======
-9.  Click the Mendix switch to change its state. Add the [Click/Doubleclick](/ats/refguide/rg-version-1/clickdoubleclick) action, because this action is a Mendix action:
->>>>>>> development:content/ats/howtos/ht-version-1/cab-02-switch.md
 
     ![](attachments/ht1-create-unsupported-widget/ht1-cab-02-switch/mendix-switch-click-doubleclick-add.png)
 
@@ -177,11 +169,7 @@ You have an action that clicks the Switch widget to alter its state, and now you
 
     The logic you use is as follows: **Only click the switch if the value of the switch is NOT the same as the value entered by the user.**
 
-<<<<<<< HEAD:content/ats/ht1-cab-02-switch.md
     There is a precondition on the Click/Doubleclick action performing the logic: use the [Assert Not Equals](rg1-assert-not-equals) action as the precondition.
-=======
-    There is a precondition on the Click/Doubleclick action performing the logic: use the [Assert Not Equals](/ats/refguide/rg-version-1/assert-not-equals) action as the precondition.
->>>>>>> development:content/ats/howtos/ht-version-1/cab-02-switch.md
 
     For example, if you want to set the switch to unchecked, you enter the value false. If the switch is already false, then the values are equal and the precondition fails, which results in ATS *not* executing the Click/Doubleclick action, and vice versa. 
 

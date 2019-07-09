@@ -62,19 +62,11 @@ This is a summary:
 
 ## 4 Action Structure
 
-<<<<<<< HEAD:content/ats/ht2-cab-11-find-itemrow.md
 ATS has a Mendix action called [*Find Item/Row (by child element)*](rg1-find-itemrow-by-child), which finds the parent item/row of a widget. This action returns the list view item that the element is currently in. The index number does not matter.
 
 To define the action structure, follow these steps:
 
 1.  Use the [*Find/Assert Widget*](rg1-findassert-widget) action to find the text box containing a specific value. Add the Find/Assert Widget action, provide a proper test step description, and provide an output description:
-=======
-ATS has a Mendix action called [*Find Item/Row (by child element)*](/ats/refguide/rg-version-1/find-itemrow-by-child), which finds the parent item/row of a widget. This action returns the list view item that the element is currently in. The index number does not matter.
-
-To define the action structure, follow these steps:
-
-1.  Use the [*Find/Assert Widget*](/ats/refguide/rg-version-1/findassert-widget) action to find the text box containing a specific value. Add the Find/Assert Widget action, provide a proper test step description, and provide an output description:
->>>>>>> development:content/ats/howtos/ht-version-2/cab-11-find-itemrow-2.md
 
     ![](attachments/ht2-create-search-context-actions/getitemrow-listviewitem-textbox.png)
 
@@ -84,11 +76,7 @@ To define the action structure, follow these steps:
 
     ![](attachments/ht2-create-search-context-actions/getitemrow-listviewitem-finditemrow.png)
 
-<<<<<<< HEAD:content/ats/ht2-cab-11-find-itemrow.md
 3.  The last step is that you must return the found list view as an output parameter. To use the output parameter, you must add the [Set Return Value](rg1-set-return-value) action and connect the output of test step 2. This action does not need any descriptions. The Set Return Value action gives the connected input to the output parameter as a Page Element, because the item/row is a Page Element:
-=======
-3.  The last step is that you must return the found list view as an output parameter. To use the output parameter, you must add the [Set Return Value](/ats/refguide/rg-version-1/set-return-value) action and connect the output of test step 2. This action does not need any descriptions. The Set Return Value action gives the connected input to the output parameter as a Page Element, because the item/row is a Page Element:
->>>>>>> development:content/ats/howtos/ht-version-2/cab-11-find-itemrow-2.md
 
     ![](attachments/ht2-create-search-context-actions/getitemrow-listviewitem-setreturnvalue.png)
 

@@ -22,13 +22,8 @@ Keep in mind that Google Chrome is the browser used in these documents.
 | [w3schools jQuery](https://www.w3schools.com/jquery/default.asp) | On this page, you can find information on jQuery. They use a lot of examples and have a tutorial. |
 | [Official jQuery website](https://api.jquery.com/) | On this page, you can find all on jQuery. They also have examples. However, the W3schools page (above) is more understandable and has a tutorial. |
 | [Stack Overflow](https://stackoverflow.com/) | A massive forum for developers. If you have a question regarding code, look for the answer here. |
-<<<<<<< HEAD:content/ats/ht1-custom-action-helpful-resources.md
 | [Guidelines for Creating a Custom Action](ht1-guidelines-custom-action) | These are the guidelines to follow when creating custom actions. This is a prerequisite for each how-to. |
 | [ATS Selectors](rg1-selectors) | This is documentation on the different selectors you can use within ATS. Most important are the ATS selectors, as these are pseudo-selectors and are not standard jQuery/CSS. This is a prerequisite for each how-to. |
-=======
-| [Guidelines for Creating a Custom Action](guidelines-custom-action-1) | These are the guidelines to follow when creating custom actions. This is a prerequisite for each how-to. |
-| [ATS Selectors](/ats/refguide/rg-version-1/selectors) | This is documentation on the different selectors you can use within ATS. Most important are the ATS selectors, as these are pseudo-selectors and are not standard jQuery/CSS. This is a prerequisite for each how-to. |
->>>>>>> development:content/ats/howtos/ht-version-1/custom-action-helpful-resources.md
 | [JavaScript Checker](http://www.jslint.com/) | This page checks your JavaScript for mistakes. |
 | [Custom Action Basics](ht1-custom-action-basics) | This is a how-to for the basics of creating a custom action. |
 

@@ -1,10 +1,7 @@
 ---
-<<<<<<< HEAD:content/addons/aqm/aqm-overview.md
 title: "AQM Overview"
 category: "Application Quality Monitor"
-=======
-title: "Application Quality Monitor"
->>>>>>> development:content/aqm/aqm-overview.md
+
 ---
 
 ## 1 Introduction

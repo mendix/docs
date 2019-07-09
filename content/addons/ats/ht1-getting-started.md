@@ -24,11 +24,7 @@ Before starting with this how-to, make sure you have the following prerequisites
 * ATS account
 * Your ATS instance
 * An application under test (AUT)
-<<<<<<< HEAD:content/ats/ht1-getting-started.md
 * Selenium hub (for more information on the Selenium options, see [ATS Deployment](ov-deployment))
-=======
-* Selenium hub (for more information on the Selenium options, see [ATS Deployment](/ats/general/deployment))
->>>>>>> development:content/ats/howtos/ht-version-1/getting-started.md
 
 {{% youtube zJOpO0AymAg %}}
 
@@ -53,11 +49,7 @@ To create a new project, follow these steps:
       **Mendix Project/App ID** | Enter the Mendix project/app ID of the app you want to test, NOT the project ID of ATS! This will give ATS access to your Developer Portal and user stories. A project can be created without a Mendix project/app ID, but than you have no access to the Developer Portal and user stories.
       **Mendix API Key** | This is the API key you created in your Developer Portal project for ATS.
       **Project Users** | Enter the people that need access to this project. This project will then appear in their **My Projects** menu. You can always edit this later. There are two different roles for a project user: a **Tester** can only test, create tests, and monitor results; a **Project Administrator** has the same rights as the tester but has also editing rights to the configuration settings of a project.
-<<<<<<< HEAD:content/ats/ht1-getting-started.md
       **Action Libraries** | Make sure that the action libraries **Core** and **Mendix** are included. Please note that without libraries, it is not possible to select actions for the test script. For more information on action libraries, see [Standard Actions Reference](rg1-standard-actions-reference).
-=======
-      **Action Libraries** | Make sure that the action libraries **Core** and **Mendix** are included. Please note that without libraries, it is not possible to select actions for the test script. For more information on action libraries, see [Standard Actions Reference](/ats/refguide/rg-version-1/standard-actions-reference).
->>>>>>> development:content/ats/howtos/ht-version-1/getting-started.md
 
 3.  Click **Save & Open** at the bottom of the page to open the **Project Dashboard**.
 
@@ -192,11 +184,7 @@ To use the recorder function, follow these steps:
 
       ![](attachments/ht1-getting-started/recorded-test-steps.png)
 
-<<<<<<< HEAD:content/ats/ht1-getting-started.md
 All the test steps are numbered for easy identification. The up and down arrows can be used to change the sequence of the test steps. You can **delete**, **copy** or **paste** a selected test step. With the **Extract action**, you can combine actions of multiple steps into one step. Select the steps you want to combine and click **Extract action**. For more information on extracting an action, see [Custom Action](rg1-custom-actions).
-=======
-All the test steps are numbered for easy identification. The up and down arrows can be used to change the sequence of the test steps. You can **delete**, **copy** or **paste** a selected test step. With the **Extract action**, you can combine actions of multiple steps into one step. Select the steps you want to combine and click **Extract action**. For more information on extracting an action, see [Extract Action](/ats/refguide/rg-version-1/custom-actions).
->>>>>>> development:content/ats/howtos/ht-version-1/getting-started.md
 
 #### 5.2.2 Test Data Tab
 
@@ -275,11 +263,7 @@ Here, you can select your AUT and Selenium hub for ATS to use.
 | **Selenium Hub** | Select the Selenium Hub you want to use to execute the test case. |
 | **Browser** | Select the browser that the Selenium Hub uses to execute the test case. Please note that these are the supported browsers. |
 
-<<<<<<< HEAD:content/ats/ht1-getting-started.md
 Now click **Run** again in the upper-right corner to execute the test case against the provided parameters. For more information on the run configuration, see [Run Configuration](rg1-test-run).
-=======
-Now click **Run** again in the upper-right corner to execute the test case against the provided parameters. For more information on the run configuration, see [Run Configuration](/ats/refguide/rg-version-1/test-run).
->>>>>>> development:content/ats/howtos/ht-version-1/getting-started.md
 
 ## 7 Result
 
@@ -287,15 +271,9 @@ When you click **Run**, the **Monitoring / Results** page will open.
 
 ![](attachments/ht1-getting-started/monitoring-results-pending.png)
 
-<<<<<<< HEAD:content/ats/ht1-getting-started.md
 Once your test case is executed, the result is shown here. For more information on results, see [Monitoring](rg1-monitoring).
 
 You have now finished the getting started guide for ATS. Please check the [how-to's](ht1) and [best practices](/addons/ats/bestpractices/bp-version-1/bp-version-1) for more information.
-=======
-Once your test case is executed, the result is shown here. For more information on results, see [Monitoring](/ats/refguide/rg-version-1/monitoring).
-
-You have now finished the getting started guide for ATS. Please check the [how-to's](ht-version-1) and [best practices](/ats/bestpractices/bp-version-1/bp-version-1) for more information.
->>>>>>> development:content/ats/howtos/ht-version-1/getting-started.md
 
 Good luck testing your Mendix app with ATS!
 

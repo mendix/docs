@@ -2251,15 +2251,15 @@ module.exports = {
      ****************************************************/
 	{
       from: "/ats/",
-      to: "/addons/ats/"
+      to: "/addons/ats/index"
     },
 	{
       from: "/apm/",
-      to: "/addons/apm/"
+      to: "/addons/apm/index"
     },
 	{
       from: "/addons/APM",
-      to: "/addons/apm/"
+      to: "/addons/apm/index"
     },
 	{
 	  from: "/apm/installation-guide",
@@ -2271,7 +2271,7 @@ module.exports = {
     },
 	{
       from: "/aqm/",
-      to: "/addons/aqm/"
+      to: "/addons/aqm/index"
     },
     // {
     //   from: "~*\\\/apm\\\/use-cases\\\/uc",

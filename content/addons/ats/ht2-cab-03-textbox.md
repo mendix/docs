@@ -58,11 +58,7 @@ To create the action structure, follow these steps:
 
     ![](attachments/ht2-create-unsupported-widget/ht2-cab-03-textbox/text-box-childelement-input-debugger.png)
 
-<<<<<<< HEAD:content/ats/ht2-cab-03-textbox.md
     When you create a custom action for an unsupported widget action, you must use the [*Find Widget Child Node*](rg1-find-widget-child-node) action. This action is a combination of the [*Find/Assert Widget*](rg1-findassert-widget) and [*Find Element by Sizzle*](rg1-find-element-by-sizzle) actions, combining the best of both. It is an official Mendix action, it has all the internal processes, and it uses a CSS/jQuery selector to find the child, which makes it flexible. The selector for finding the input element is an input. You use this selector in the *Find Widget Child Node* action to find an input element inside the text box widget.
-=======
-    When you create a custom action for an unsupported widget action, you must use the [*Find Widget Child Node*](/ats/refguide/rg-version-1/find-widget-child-node) action. This action is a combination of the [*Find/Assert Widget*](/ats/refguide/rg-version-1/findassert-widget) and [*Find Element by Sizzle*](/ats/refguide/rg-version-1/find-element-by-sizzle) actions, combining the best of both. It is an official Mendix action, it has all the internal processes, and it uses a CSS/jQuery selector to find the child, which makes it flexible. The selector for finding the input element is an input. You use this selector in the *Find Widget Child Node* action to find an input element inside the text box widget.
->>>>>>> development:content/ats/howtos/ht-version-2/cab-03-textbox-2.md
 
     Before you start creating the action, you must know if ATS can find the `input` element within the text box widget. You use the debugger to simulate what ATS does. Since the *Find Widget Child Node* action uses the `mx-name` to find the parent, you must also use the `mx-name` in your code.
 
@@ -80,19 +76,11 @@ To create the action structure, follow these steps:
 
     ![](attachments/ht2-create-unsupported-widget/ht2-cab-03-textbox/text-box-focusclearelementvalue-add.png)
 
-<<<<<<< HEAD:content/ats/ht2-cab-03-textbox.md
 6.  After focusing the `input` element, enter the text. When entering text in an `input` element, use the [*Send Keys*](rg1-send-keys) action. Add the action, connect the input element from step 1, and give it a proper description:
-=======
-6.  After focusing the `input` element, enter the text. When entering text in an `input` element, use the [*Send Keys*](/ats/refguide/rg-version-1/send-keys) action. Add the action, connect the input element from step 1, and give it a proper description:
->>>>>>> development:content/ats/howtos/ht-version-2/cab-03-textbox-2.md
 
     ![](attachments/ht2-create-unsupported-widget/ht2-cab-03-textbox/text-box-sendkeys-add.png)
 
-<<<<<<< HEAD:content/ats/ht2-cab-03-textbox.md
 7.  The last action you add is [*Mendix Wait*](rg1-mendix-wait). You trigger a possible event in the widget by entering text, so you need to ensure that ATS waits for all the background processes to finish:
-=======
-7.  The last action you add is [*Mendix Wait*](/ats/refguide/rg-version-1/mendix-wait). You trigger a possible event in the widget by entering text, so you need to ensure that ATS waits for all the background processes to finish:
->>>>>>> development:content/ats/howtos/ht-version-2/cab-03-textbox-2.md
 
     ![](attachments/ht2-create-unsupported-widget/ht2-cab-03-textbox/text-box-rg1-mendix-wait.png)
 

@@ -22,11 +22,7 @@ Before starting with this how-to, make sure you have the following prerequisites
 * ATS account
 * Your ATS instance
 * An application under test (AUT)
-<<<<<<< HEAD:content/ats/ht2-getting-started.md
 * Selenium hub (for more information on the Selenium options, see [ATS Deployment](ov-deployment))
-=======
-* Selenium hub (for more information on the Selenium options, see [ATS Deployment](/ats/general/deployment))
->>>>>>> development:content/ats/howtos/ht-version-2/getting-started-2.md
 
 {{% alert type="info" %}}
 
@@ -182,11 +178,7 @@ To use the recorder function, follow these steps:
 | **Recorded event** | All the registered clicks/entering text will show up here in the sequence where they were done. Select an event to open the **Action mapping** menu of that particular event. The ATS recorder selects the actions for you. |
 | **Action mapping** | This shows all the available actions for this event. Click **Select** if you want to choose a different action.|
 
-<<<<<<< HEAD:content/ats/ht2-getting-started.md
 All the test steps are numbered for easy identification. To change the sequence of the test steps click the left of the test step while dragging the test step up or down. You can **delete**, **copy** or **paste** a selected test step. With the **Extract action**, you can combine actions of multiple steps into one step. Select the steps you want to combine and click **Extract action**. For more information on extracting an action, see [Custom Actions](rg1-custom-actions).
-=======
-All the test steps are numbered for easy identification. To change the sequence of the test steps click the left of the test step while dragging the test step up or down. You can **delete**, **copy** or **paste** a selected test step. With the **Extract action**, you can combine actions of multiple steps into one step. Select the steps you want to combine and click **Extract action**. For more information on extracting an action, see [Extract Action](/ats/refguide/rg-version-1/custom-actions).
->>>>>>> development:content/ats/howtos/ht-version-2/getting-started-2.md
 
 ![](attachments/ht2-getting-started/recorded-test-case.png)
 

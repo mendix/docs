@@ -13,7 +13,7 @@ This document explains the best way to find the action you need in ATS. This is 
 * Retrieving a value from a widget
 * Asserting values/information
 * Generating values/information
- 
+
 Select the category that covers your situation. If you are not sure, use the widget name to search for an action inside ATS and take a look at what pops up.
 
 For a quick summary and action plan, go straight to section [8 Summary](#summary).
@@ -25,7 +25,7 @@ When the ATS recorder does not record any steps, you can use this best practice 
 {{% /alert %}}
 
 ## 2 Finding a Widget
- 
+
 In ATS there are many actions for finding a widget, from generically finding a widget to finding a specific data grid row. The first part of this section explains the generic action for finding a widget, and the second part explains the actions that conduct a more specific search. The last part of the section provides a summary of the first two parts. The magic word while searching for an action that can find something is "Find."
 
 ### 2.1 Generic Action
@@ -79,7 +79,7 @@ When you want to find a widget, always use the Find/Assert Widget action if poss
 If you want to find something more specific inside a widget or the widget does not have an `mx-name`, use "Find" in combination with the widget name as displayed in the [Mendix App Store](https://appstore.home.mendix.com/) and Mendix Studio Pro. You can also find the name using the ATS helper.
 
 If you cannot find a widget because it has no unique name or because it is not supported, see [How to Create Custom Actions](ht1-create-custom-actions) for more information.
- 
+
  ## 3 Clicking a Widget
 
 In ATS, there are many actions for clicking a widget, from generically clicking a widget to clicking a specific data grid row. The first part of this section explains the generic action for clicking a widget, and the second part explains the actions that conduct a more specific click. The last part of the section provides a summary of the first two parts. The magic word while searching for an action that can click something is "Click."
@@ -157,7 +157,7 @@ ATS uses the `widget name` parameter instead of `mx-name`. The widget name is fo
 ![](attachments/bp2-finding-the-action-you-need/mx-name-ats-helper-cp.png)
 
 The Set Value action works on almost every widget that is an input widget.
- 
+
 This is the **Set Value** action:
 
 ![](attachments/bp2-finding-the-action-you-need/set-value-action-search.png)
@@ -172,11 +172,7 @@ ATS also has a few specific actions for setting an input widget. To find these, 
 
 In this example, you want to set the value of a check box widget, but you want to set it to a specific state. You cannot use the Set Value action because it does not work.
 
-<<<<<<< HEAD:content/ats/bp2-finding-the-action-you-need.md
-The solution in this situation is to use the following search term: "Set Checkbox". ATS checks all the actions and returns those that match these words. There is an action called [Set Checkbox Value](rg1-set-checkbox-value), which uses the `mx-name` of the widget and the boolean value you set to check or clear the check box.
-=======
 The solution in this situation is to use the following search term: "Set Checkbox". ATS checks all the actions and returns those that match these words. There is an action called [Set Checkbox Value](../../refguide/rg-version-1/set-checkbox-value), which uses the `mx-name` of the widget and the Boolean value you set to check or clear the check box.
->>>>>>> development:content/ats/bestpractices/bp-version-2/finding-the-action-you-need-2.md
 
 ![](attachments/bp2-finding-the-action-you-need/set-checkbox-value-action-search.png)
 
@@ -225,7 +221,7 @@ ATS uses the `widget name` parameter instead of  `mx-name`. The widget name is f
 ![](attachments/bp2-finding-the-action-you-need/mx-name-ats-helper-cp.png)
 
 The Get Value action works on almost every widget that is an input widget.
- 
+
 This is the Get Value action:
 
 ![](attachments/bp2-finding-the-action-you-need/get-value-action-search.png)
@@ -255,11 +251,7 @@ The solution in this situation is to use the following search term: "Get CKEdito
 
 In this example, you want to get the message displayed in the dialog box widget. You cannot use the Get Value action because there is no `mx-name`.
 
-<<<<<<< HEAD:content/ats/bp2-finding-the-action-you-need.md
-The solution in this situation is to use the following search term: "Get Dialog". ATS checks all the actions and returns those that match these words. There is an action called [Get Dialog Message Text](rg1-get-dialog-message-text), which uses the dialog as a WebElement to retrieve the message text. You use the Find/Assert Dialog action to get the dialog as a WebEelement.
-=======
 The solution in this situation is to use the following search term: "Get Dialog". ATS checks all the actions and returns those that match these words. There is an action called [Get Dialog Message Text](../../refguide/rg-version-1/get-dialog-message-text), which uses the dialog as a WebElement to retrieve the message text. You use the Find/Assert Dialog action to get the dialog as a WebElement.
->>>>>>> development:content/ats/bestpractices/bp-version-2/finding-the-action-you-need-2.md
 
 ![](attachments/bp2-finding-the-action-you-need/rg1-get-dialog-message-text-action-search.png)
 
@@ -284,7 +276,7 @@ ATS uses the `widget name` parameter instead of `mx-name`. The widget name is fo
 ![](attachments/bp2-finding-the-action-you-need/mx-name-ats-helper-cp.png)
 
 The Assert Value action works on almost every widget that is an input widget.
- 
+
 This is the Assert Value action:
 
 ![](attachments/bp2-finding-the-action-you-need/assert-value-action-search.png)

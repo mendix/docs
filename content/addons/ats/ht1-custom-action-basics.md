@@ -141,11 +141,8 @@ You have now created an input parameter. You can add as many input parameters as
     ![](attachments/ht1-custom-action-basics/new-action-output-parameter-complete.png)
 
 6.  The **Output Parameter** requires additional steps. Go to the **Test Steps** tab and click **Add**.
-<<<<<<< HEAD:content/ats/ht1-custom-action-basics.md
 7.  Add the [Find/Assert Widget](rg1-findassert-widget) action and the [Set Return Value](rg1-set-return-value) action.
-=======
-7.  Add the [Find/Assert Widget](/ats/refguide/rg-version-1/findassert-widget) action and the [Set Return Value](/ats/refguide/rg-version-1/set-return-value) action.
->>>>>>> development:content/ats/howtos/ht-version-1/custom-action-basics.md
+
     
     ![](attachments/ht1-custom-action-basics/output-parameter-actions.png)
 

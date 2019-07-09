@@ -3,21 +3,12 @@ title: "Guidelines for Creating a Custom Action"
 parent: "custom-action-general"
 ---
 
-<<<<<<< HEAD:content/ats/ht1-guidelines-custom-action.md
 For a details on custom actions, please see [Custom Actions](rg1-custom-actions) in the ATS Reference Guide 1.
  
 These are the definitions of Mendix actions and Core actions:
 
 * Mendix actions are a combination [Mendix actions](rg1-mendix-actions) and [Mendix App Store widget actions](rg1-mendix-appstore-widgets-actions)
 * Core actions are a combination of [ATS Core actions](rg1-ats-core-actions) and [Selenium actions](rg1-selenium-actions)
-=======
-For a details on custom actions, please see [Custom Actions](/ats/refguide/rg-version-1/custom-actions) in the ATS Reference Guide 1.
- 
-These are the definitions of Mendix actions and Core actions:
-
-* Mendix actions are a combination [Mendix actions](/ats/refguide/rg-version-1/mendix-actions) and [Mendix App Store widget actions](/ats/refguide/rg-version-1/mendix-appstore-widgets-actions)
-* Core actions are a combination of [ATS Core actions](/ats/refguide/rg-version-1/ats-core-actions) and [Selenium actions](/ats/refguide/rg-version-1/selenium-actions)
->>>>>>> development:content/ats/howtos/ht-version-1/guidelines-custom-action-1.md
 
 {{% alert type="info" %}}
 
@@ -35,11 +26,7 @@ Always try to use a Mendix action first. This table explains why you should use 
 | Visibility checks | A Mendix action only searches for elements that are _visible_. |
 | Browser support | A Mendix action always works in the supported browser. |
 | Mendix support | A Mendix action always works on the latest version of Mendix. |
-<<<<<<< HEAD:content/ats/ht1-guidelines-custom-action.md
 | Waiting for background processes | A Mendix action waits untill the Mendix app is finished rendering. This aspect is also covered by the [Mendix Wait](rg1-mendix-wait) action.<br> |
-=======
-| Waiting for background processes | A Mendix action waits untill the Mendix app is finished rendering. This aspect is also covered by the [Mendix Wait](/ats/refguide/rg-version-1/mendix-wait) action.<br> |
->>>>>>> development:content/ats/howtos/ht-version-1/guidelines-custom-action-1.md
 
 However, there are reasons not to use the Mendix actions. For example, sometimes a custom action can get too complex using a Mendix action, because of the input parameters that are required. For example, when using a Mendix action, you have six input parameters:
 
@@ -102,11 +89,7 @@ This is the Mendix Wait action:
 
 ![](attachments/ht1-guidelines-custom-action/rg1-mendix-wait-action.png)
 
-<<<<<<< HEAD:content/ats/ht1-guidelines-custom-action.md
 For more information, please see [Mendix wait](rg1-mendix-wait).
-=======
-For more information, please see [Mendix wait](/ats/refguide/rg-version-1/mendix-wait).
->>>>>>> development:content/ats/howtos/ht-version-1/guidelines-custom-action-1.md
 
 {{% alert type="info" %}}
 
@@ -116,11 +99,7 @@ This guideline does not apply to the Search Context action, since it does not tr
 
 ## 6 Action Parameters
 
-<<<<<<< HEAD:content/ats/ht1-guidelines-custom-action.md
 When defining action parameters, always use the ATS [naming conventions](rg1-best-practices).
-=======
-When defining action parameters, always use the ATS [naming conventions](/ats/refguide/rg-version-1/best-practices).
->>>>>>> development:content/ats/howtos/ht-version-1/guidelines-custom-action-1.md
 
 In addition, include the optional input parameters in the action parameters for an unsupported widget action.
 
@@ -186,15 +165,9 @@ These are the different data types in ATS:
 
 The JavaScript actions have three different versions, based on the data types:
 
-<<<<<<< HEAD:content/ats/ht1-guidelines-custom-action.md
 * [Execute Javascript Integer](rg1-execute-javascript-integer)
 * [Execute Javascript String](rg1-execute-javascript-string)
 * [Execute Javascript WebElement](rg1-execute-javascript-webelement)
-=======
-* [Execute Javascript Integer](/ats/refguide/rg-version-1/execute-javascript-integer)
-* [Execute Javascript String](/ats/refguide/rg-version-1/execute-javascript-string)
-* [Execute Javascript WebElement](/ats/refguide/rg-version-1/execute-javascript-webelement)
->>>>>>> development:content/ats/howtos/ht-version-1/guidelines-custom-action-1.md
 
 They all produce outputs based on their data type. This means that you cannot return a string inside the Execute Javascript web element action.
 

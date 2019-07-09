@@ -10,7 +10,6 @@ ATS provides a powerful solution for automation of not only your functional and 
 
 A small investment in setting up ATS, which is very easy to learn, will save you a lot of (re)testing time in the long run. This will help your team and its stakeholders to have the right insights into the quality off your apps at any time and at the press of a button.
 
-<<<<<<< HEAD:content/addons/ats/index.md
 ## 2 Main Documents in This Category
 
 This category includes the following sections: 
@@ -19,8 +18,3 @@ This category includes the following sections:
 * [ATS Reference Guide](rg)
 * [ATS How-to's](ht)
 * [ATS Best Practices](bp)
-=======
-The *ATS Guide* is divided into the following categories: 
-
-{{% category_block %}}
->>>>>>> development:content/ats/index.md

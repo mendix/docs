@@ -33,7 +33,7 @@ You can return to the structural editor by clicking **Structure mode**
 
 {{% snippet file="refguide/Style+Property.md" %}}
 
-## 3 Designer Properties
+## 3 Design Properties
 
 {{% snippet file="refguide/Canvas+Width+Property.md" %}}
 

@@ -48,7 +48,7 @@ Trigger actions define what happens when the trigger fires.
 
 These are possible trigger actions:
 
-* **Notify**. You can use `{1}` for the administrator as configured in the global setting [More tab](configuration#more).You can use replacement variables like `{1}` in the subject and message. These are described in the **i**nformation icons.
+* **Notify**. You can use `{1}` for the administrator as configured in the global setting [More tab](configuration#more). You can use replacement variables like `{1}` in the subject and message. These are described in the **i**nformation icons.
 * **Create log message**. You can use replacement variables like `{1}` in the message. These are described in the **i**nformation icons.
 * **Create trap message**. You can use replacement variables like `{1}` in the message. These are described in the **i**nformation icons.
 * **Save statistics**. The duration of this snapshot is configured in the global settings. The snapshot will have 10-20 minutes of statistics by default.

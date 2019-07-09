@@ -40,7 +40,7 @@ If the [export mapping](export-mappings) requires an input, this field shows the
 
 ### 2.3 Parameter
 
-If the [export mapping](export-mappings) requires an input, you can select a variable of the correct type.
+If the [export mapping](export-mappings) requires an input, you can select a parameter of the correct type.
 
 ### 2.4 Content Type
 

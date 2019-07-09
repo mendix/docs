@@ -243,7 +243,7 @@ The properties above are common across the chart types. In this section, the pro
 
 * **Colors**: Contains the color of each slice e.g. green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
 
-* **Refresh interval (ms)**: Refresh the chart in intervals of ms, when set to 0 refresh is disabled
+* **Refresh interval (ms)**: Refresh the chart in intervals of milliseconds, when set to 0 refresh is disabled
 
 ### 3.4 Area Chart
 

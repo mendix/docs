@@ -53,9 +53,9 @@ For each value of the attribute, you can specify whether the element is editable
 
 ### 2.2 Show/Enable Element Based on Expression
 
-By selecting this option, visibility or editability becomes conditional based on whether the enetered [microflow expression](expressions) evaluates to `true` or `false`.
+By selecting this option, visibility or editability becomes conditional based on whether the entered [microflow expression](expressions) evaluates to `true` or `false`.
 
-The expression result must be of the Boolean type. The expression can use the obejct of the enclosing data container available as a `$currentObject` variable.
+The expression result must be of the Boolean type. The expression can use the object of the enclosing data container available as `$currentObject`.
 
 {{% alert type="warning" %}}
 

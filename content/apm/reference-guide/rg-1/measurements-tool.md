@@ -28,7 +28,7 @@ Double-clicking or selecting and clicking the **Edit** button shows the measurem
 
  ![](attachments/Measurements_Tool/Measurement_Configuration_Edit.png)
 
-The **Measurment configuration** tab allows you to do the folllowing:
+The **Measurement configuration** tab allows you to do the following:
 
 *   Change the **Name**
 *   Choose when to **Run**
@@ -58,7 +58,7 @@ See the description of [Triggers](triggers) for how to configure triggers.
 
 Expressions for measurements and measurement triggers are written the same as expressions that are written in the Mendix Modeler expression editor. 
 
-The `$Measurement` variables is available with columns:
+The `$Measurement` variable is available with columns:
 
 * `ValueString`
 * `ValueDate`

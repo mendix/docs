@@ -27,7 +27,7 @@ When migrating from Mendix 7 to Mendix 8, you must integrate **theme_old** into 
 
 {{% alert type="info" %}}If you customized any widget where the DOM structure has changed, consult [Troubleshoot DOM Changes when Migrating to Mendix 8](migration-dom-issues) to ensure your custom styling works.{{% /alert %}}
 
-## 2.1 Working with HTML Files
+### 2.1 Working with HTML Files
 
 If you have altered the CSS in your HTML files, consult the instructions below. If you have not, you may ignore this subsection.
 
@@ -45,7 +45,7 @@ If you changed any **login\*.html** files, complete the following actions:
 * Make sure you don’t import `styles/css/lib/lib.css` anymore [todo: discuss this to edit it]
 * Place either `<link*rel*="stylesheet" *type*="text/css" *href*="styles/web/css/main.css?{{cachebust}}">` or `{{themecss}}` inside of the `<head></head>` tags
 
-## 2.2 Working with JSON Files
+### 2.2 Working with JSON Files
 
 If you have altered your JSON files, consult the instructions below. If you have not, you may ignore this subsection.
 

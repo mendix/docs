@@ -1,7 +1,7 @@
 ---
 title: "SDK Use Cases"
 category: "Mendix Platform SDK"
-menu_order: 4
+menu_order: 5
 ---
 
 ## 1 Introduction

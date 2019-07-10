@@ -1,7 +1,7 @@
 ---
 title: "Create Your First Script"
-menu_order: 20
 parent: "sdk-howtos"
+menu_order: 20
 ---
 
 ## 1 Introduction

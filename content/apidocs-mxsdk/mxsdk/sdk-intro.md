@@ -1,9 +1,9 @@
 ---
-title: "Introduction to the SDK"
+title: "SDK Introduction"
 category: "Mendix Platform SDK"
 menu_order: 1
 tags: ["SDK", "Mendix SDK", "Platform SDK", "Model SDK", "metadata"]
-# (When content is updated here, it should also be updated on https://developers.mendix.com/sdk/, contact Ben)	
+#When content is updated here, it should also be updated on https://developers.mendix.com/sdk/, contact Ben.
 ---
 
 ## 1 Introduction

@@ -149,19 +149,29 @@ On this page, you will see the following buttons (depending on your permissions)
 * **Unpublish** – click this to remove that version from the content
 * **Edit** – click this to edit the content (for details on editing, see step 6 of the [Adding New App Store Content](share-app-store-content#edit) section of *How to Share App Store Content*)
 
-### 4.3 Shared with Me {#shared-with-me}
+### 4.3 Drafts
+
+This page contains drafts of App Store content you have started:
+
+![](attachments/app-store-overview/drafts.png)
+
+Click the name of the App Store item to be taken to the [DRAFT](share-app-store-content#adding) page, where you can continue editing the content details.
+
+Click **Delete** to delete a draft.
+
+### 4.4 Shared with Me {#shared-with-me}
 
 This page contains content shared with you by other companies have marked you as an [external downloader]():
 
 ![](attachments/app-store-overview/shared-with-me.png)
 
-### 4.4 Reviews{#my-reviews}
+### 4.5 Reviews {#my-reviews}
 
 This page contains reviews of **Your content** by other users as well as **Your reviews** that you have written of other content:
 
 ![](attachments/app-store-overview/your-reviews.png)
 
-### 4.5 Notifications
+### 4.6 Notifications
 
 This page presents a history of notifications on content you have contributed to:
 

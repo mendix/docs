@@ -21,7 +21,7 @@ See [Common Properties](microflow-element-common-properties) for properties that
 
 ## 2 Input Properties
 
-### 2.1 Variable name
+### 2.1 Variable
 
 The variable of which you want to change the value.
 
@@ -29,4 +29,4 @@ The variable of which you want to change the value.
 
 ### 3.1 Value
 
-The new value for the variable. The value is entered using an [expression](expressions). The type of the expression should be the same as the type of the selected variable.
+The new value for the variable. The value is entered using an [expression](expressions). The type of the expression must be the same as the type of the selected variable.

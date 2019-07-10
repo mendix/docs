@@ -24,19 +24,23 @@ The following sub-sections explain the steps to take in converting your app proj
 
 Make sure that you have either committed your latest changes to Team Server, or taken a backup of your local project before you start the conversion.
 
-### 2.2 Upgrade to the Latest Release of Version 7
+### 2.2 Upgrade to the Latest Release of Version 7 {#upgrade}
 
-You should always convert your project from the latest release of Mendix version 7.
+{{% alert type="warning" %}}
+It is technically required for you to upgrade your app project to the latest version of Mendix 7, which is [7.23](/releasenotes/studio-pro/7.23). You can only convert your app project to Mendix 8 from 7.23.x.
+{{% /alert %}}
 
-1. Download the latest version of Desktop Modeler version 7.
-2. Open your app in the latest version of the Desktop Modeler version 7.
+To upgrade to Mendix 7, follow these steps:
+
+1. Download the latest patch release of Desktop Modeler [7.23](/releasenotes/studio-pro/7.23).
+2. Open your app in Desktop Modeler 7.23.x.
 3. Allow it to upgrade the app, if necessary.
 
 ### 2.3 Review Your Mendix 7 Project
 
 Review your app project in combination with the sections below and assess if further action needs to be taken before upgrading to Mendix 8.
 
-In particular, it is easier to fix deprecations in Java actions (see [Deprecated and Removed APIs](#deprecated-apis)) in Mendix 7 before upgrading to Mendix 8.
+In particular, it is easier to fix deprecations in Java actions (see [Java Version, Deprecated and Removed APIs](#deprecated-apis)) in Mendix 7 before upgrading to Mendix 8. However, Float and Currency deprecation errors will be easier to fix in Mendix 8 instead (see the section [Elements of Type Float & Currency](#float-currency) below for instructions).
 
 ### 2.4 Save Version 7 Project
 
@@ -56,7 +60,7 @@ Open the project in Mendix Studio Pro version 8 and allow Studio Pro to update y
 
 Review all error messages and messages about deprecated items and make changes where necessary.
 
-If you are using one, or both, of the deprecated data types Currency and Float you will see errors. See the section [Attributes of Type Float and Currency](#float-currency) below for more information.
+If you are using one, or both, of the deprecated data types Currency and Float you will see errors. See the section [Elements of Type Float & Currency](#float-currency) below for more information.
 
 ### 2.7 Upgrade All Widgets
 
@@ -76,7 +80,9 @@ Test the app for any unexpected results.
 Congratulations! Your app has been successfully upgraded to Mendix 8 and you can continue working as normal.
 {{% /alert %}}
 
-## 3 Deprecated & Removed APIs {#deprecated-apis}
+## 3 Java Version, Deprecated & Removed APIs {#deprecated-apis}
+
+Mendix 8 runs on Java 11, whereas Mendix 7 runs on Java 8. Make sure that your Java actions are compatible with Java 11. The official Java 8 to 11 migration guide can be found in the [Migrating From JDK 8 to Later JDK Releases](https://docs.oracle.com/en/java/javase/11/migrate/index.html#JSMIG-GUID-7744EF96-5899-4FB2-B34E-86D49B2E89B6) section of the *Oracle JDK Migration Guide*.
 
 Deprecated Java actions should be fixed in Mendix 7, before you migrate the app project to Mendix 8.
 
@@ -84,13 +90,21 @@ Fix the deprecations in your Java actions by importing your project into your Ja
 
 Details of removed and deprecated APIs will be added to the *Breaking Changes* section of the [Studio Pro 8 release notes](/releasenotes/studio-pro/).
 
-## 4 Attributes of Type Float & Currency {#float-currency}
+## 4 Elements of Type Float & Currency {#float-currency}
 
-Attributes of type Float and Currency were deprecated in Mendix version 7, and have now been removed from Mendix version 8. If your app contains attributes of type Float and/or Currency, these will need to be converted to type Decimal.
+The types Float and Currency were deprecated in Mendix version 7, and have now been removed from Mendix version 8. 
 
-We recommend that you make this change separately from other changes as it will force a change to your domain model and the underlying database.
+The following elements of type Float or Currency will report errors in version 8:
 
-To convert attributes of type float and currency to decimal, do the following.
+* Attributes
+* Constants
+* Create variable actions
+* Data set columns and parameters
+* Microflow/nanoflow parameters and return types
+* Java/JavaScript action parameters and return types
+* The functions 'formatFloat', 'parseFloat' and 'toFloat'
+
+It is possible to fix most of the deprecation errors in one single action. To achieve this, do the following:
 
 1. In Studio Pro 8, find the error message which relates to the support of Currency and Float data types.
 
@@ -100,20 +114,14 @@ To convert attributes of type float and currency to decimal, do the following.
 
     ![Change manually or automatically?](attachments/moving-from-7-to-8/currency-float-change-options.png)
 
-3. Click **Convert attributes of type 'Currency' or 'Float' to 'Decimal'…** to convert all the attributes automatically.
+3. Click **Convert all to Decimal** to convert all the attributes automatically.
 
     ![Warning when converting all Float and Currency to Decimal](attachments/moving-from-7-to-8/convert-to-decimal-warning.png)
 
-4. Click **Convert all to Decimal** to perform the conversion
-
-5. Find all references to the converted attributes (within microflow actions, for example) and ensure that they expect the *Decimal* attribute type. If the attribute types do not match, you may have additional errors and warnings.
-
-Alternatively, you can convert each attribute manually by clicking **Find attributes of type 'Currency' or 'Float'** and then convert each of them manually.
-
-![Warning when converting all Float and Currency to Decimal](attachments/moving-from-7-to-8/convert-to-decimal-manual.png)
+4. Click **Convert all to Decimal** to perform the conversion.
 
 {{% alert type="warning" %}}
-The next time your app is run locally or deployed the database will be converted to support the new attribute types.
+If any attributes have been converted during this process, the next time your app is run locally or deployed the database will be converted to support the new attribute types.
 
 **This database conversion could take a long time!** We suggest that you first test the data conversion on a representative dataset, so that you can estimate how long it will take to convert your production database.
 {{% /alert %}}

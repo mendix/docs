@@ -67,7 +67,7 @@ To create this microflow, follow these steps:
 15. For **Value**, enter *$IteratorProduct/Stock*, then click **OK**.
 16. From the **Toolbox**, drag a **Change list** activity onto the loop
 17. Connect the **Create PublishedProduct** activity to the **Add to list** activity.
-18. Double-click the **Add to list** activity and for **Variable name**, select **PublishedProductList**.
+18. Double-click the **Add to list** activity and for **List**, select **PublishedProductList**.
 19. For **Value**, enter *$NewPublishedProduct*, then click **OK**.
 20. Double-click the red end event and for **Type**, select **List**.
 21. For **Entity**, select **PublishedProduct**.

@@ -8,7 +8,7 @@ tags: ["microflow", "retrieve", "optimize"]
 
 ## 1 Introduction
 
-Often in processes you need to retrieve objects in order to complete the process. But what if those objects cannot be found? Usually additional actions are required, but since the objects you retrieve and create are assigned different variable names, sometimes you cannot merge them back into a single flow.
+Often in processes you need to retrieve objects in order to complete the process. But what if those objects cannot be found? Usually additional actions are required, but since the objects you retrieve and create are assigned different names, sometimes you cannot merge them back into a single flow.
 
 **This how-to will teach you how to do the following:**
 

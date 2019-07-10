@@ -252,7 +252,7 @@ contains('stringtosearchin', $param)
 will return true.
 
 {{% alert type="warning" %}}
-This function is case-senstive.
+This function is case-sensitive.
 {{% /alert %}}
 
 ### Input Parameters

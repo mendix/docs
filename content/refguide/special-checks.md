@@ -62,7 +62,7 @@ Type: Any type of object.
 
 ### Output
 
-Returns whether the object is new (created but not yet committed). Note this only holds when this function is called on the variable which represents the created object. When the object is retrieved from the database isNew will always yield false.
+Returns whether the object is new (created but not yet committed). Note this only holds when this function is called on a created object. When the object is retrieved from the database isNew will always yield false.
 
 Type: Boolean.
 

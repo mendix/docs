@@ -20,7 +20,7 @@ The following frameworks are automatically installed (if necessary):
 * Microsoft .NET Framework 4.7.2
 * Microsoft Visual C++ 2010 SP1 Redistributable Package
 * Microsoft Visual C++ 2013 Redistributable Package
-* AdoptOpenJDK 11 or Oracle JDK 11 (the former is installed automatically as of [Mendix 8.0.0 Beta 3](/releasenotes/studio-pro/8.0#803) if you do not have any JDK 11 installed) 
+* AdoptOpenJDK 11 or Oracle JDK 11 (the former is installed automatically as of [Mendix 8.0.0 Beta 3](/releasenotes/studio-pro/8.0#800) if you do not have any JDK 11 installed) 
 
 {{% alert type="info" %}}
 You can choose which JDK is used for building and running locally via the **Edit** > **Preferences** menu item in Studio Pro.

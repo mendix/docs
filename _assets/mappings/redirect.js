@@ -2273,20 +2273,5 @@ module.exports = {
       from: "/aqm/",
       to: "/addons/aqm/index"
     },
-    // {
-    //   from: "~*\\\/apm\\\/use-cases\\\/uc",
-    //   to: "/apm/use-cases/",
-    //   exact: true
-    // },
-    // {
-    //   from: "~*\\\/apm\\\/installation-guide\\\/ig",
-    //   to: "/apm/installation-guide/",
-    //   exact: true
-    // },
-    // {
-    //   from: "~*\\\/apm\\\/reference-guide\\\/rg",
-    //   to: "/apm/reference-guide/",
-    //   exact: true
-    // },
   ]
 }

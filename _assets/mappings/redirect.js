@@ -238,7 +238,7 @@ module.exports = {
     },
 	{
       from: "/addons/APM",
-      to: "/apm/"
+      to: "/addons/apm/index"
     },
 	{
       from: "/releasenotes/desktop-modeler/",
@@ -2247,12 +2247,8 @@ module.exports = {
       to: "/howto6/solving-load-and-import-errors"
     },
 	/****************************************************
-     * APM (permanent, mapped)
+     * Add-on Guides (permanent, mapped)
      ****************************************************/
-	{
-      from: "/ats/",
-      to: "/addons/ats/index"
-    },
 	{
       from: "/apm/",
       to: "/addons/apm/index"
@@ -2272,6 +2268,10 @@ module.exports = {
 	{
       from: "/aqm/",
       to: "/addons/aqm/index"
+    },
+	{
+      from: "/ats/",
+      to: "/addons/ats/index"
     },
 	// {
     //   from: "~*\\\/apm\\\/use-cases\\\/uc",

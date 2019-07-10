@@ -10,7 +10,7 @@ This activity can be used in both **Microflows** and **Nanoflows**.
 
 ## 1 Introduction
 
-This activity creates a list variable containing an empty list.
+This activity creates a list which is empty.
 
 {{% alert type="info" %}}
 
@@ -18,14 +18,14 @@ See [Common Properties](microflow-element-common-properties) for properties that
 
 {{% /alert %}}
 
-## Action Properties
+## 2 Action Properties
 
-### Entity
+### 2.1 Entity
 
 The entity of the objects list. All objects in the list should be of the same type.
 
-## Output Properties
+## 3 Output Properties
 
-### Variable
+### 3.1 List
 
-Variable name defines the name of the list variable. The variable can be used by all activities that follow this activity.
+This is the name of the list which can be used by all activities that follow this activity.

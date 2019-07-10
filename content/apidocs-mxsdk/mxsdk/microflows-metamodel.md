@@ -3,11 +3,12 @@ title: "Microflows in the Metamodel"
 parent: "understanding-the-metamodel"
 menu_order: 4
 ---
-## Overview
+
+## 1 Introduction
 
 Microflows have parameters, a return type (the return value is defined in an object, see below), and allowed module roles. Rules are similar to microflows, but have rule parameters, and they do not have some Microflow-specific properties
 
-### Graphical overview
+### 1.1 Graphical Overview
 
 ![](attachments/15466739/16842814.svg)
 
@@ -18,13 +19,13 @@ The [Microflows](/refguide/microflows) overview page | The [`microflows`](https:
 [Rule](/refguide/rules) | [Rule](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.rule.html)
 [Parameter](/refguide/parameter) | [MicroflowParameter](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.microflowparameter.html)
 
-### Microflow & Rule structure
+### 1.2 Microflow & Rule Structure
 
 Microflows consist of a collection of objects connected by flows. The objects represent activities, such as Object manipulation & retrieval, microflow calls, web service calls, etc. (details follow below).
 
-_For example, a simple microflow could consist of a start event, a single activity, and an end event. The `Microflow would then have three MicroflowObjects in its MicroflowObjectCollection, and would have two SequenceFlows. The first sequence flow would have the start event as its origin and the activity as its destination. The second sequence flow would have the activity as its origin, and the end event as its destination._
+For example, a simple microflow could consist of a start event, a single activity, and an end event. The microflow would then have three MicroflowObjects in its MicroflowObjectCollection, and would have two SequenceFlows. The first sequence flow would have the start event as its origin and the activity as its destination. The second sequence flow would have the activity as its origin, and the end event as its destination.
 
-#### Graphical overview
+#### 1.2.1 Graphical Overview
 
 ![](attachments/15466739/16842811.svg)
 
@@ -33,11 +34,11 @@ Studio Pro Guide | Model SDK API docs
 [Activities](/refguide/activities) | [MicroflowObjectCollection](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.microflowobjectcollection.html)
 [Sequence Flow](/refguide/sequence-flow) | [SequenceFlow](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.sequenceflow.html)
 
-### Microflow objects
+### 1.3 Microflow Objects
 
 There are several types of objects that can be added to a microflow. One type is `Activity`, which can either be a loop, or an action activity, which will execute a microflow action (see the next section for more details on different types of activities). Other microflow object types include start and end events, decisions and merges, annotations and parameters.
 
-#### Graphical overview
+#### 1.3.1 Graphical Overview
 
 ![](attachments/15466739/16842852.svg)
 
@@ -50,7 +51,7 @@ Studio Pro Guide | Model SDK API docs
 [Loop](/refguide/loop)s, with [Break](/refguide/break-event) and [Continue](/refguide/continue-event) events | [LoopedActivity](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.loopedactivity.html), [BreakEvent](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.breakevent.html), [ContinueEvent](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.continueevent.html)
 [Annotation](/refguide/annotation) | [Annotation](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.annotation.html)
 
-### <a name="Flows"></a>Flows
+### 1.4 <a name="Flows"></a>Flows
 
 A microflow consists of objects that are connected by flows, specifically, `SequenceFlow`s. A flow has an origin and a destination, with which the order of objects in the microflow is defined.
 
@@ -60,7 +61,7 @@ Object type decisions have sequence flows for each specialization of the entity 
 
 Annotation flows are used to connect annotations to other microflow objects.
 
-#### Graphical overview
+#### 1.4.1 Graphical Overview
 
 ![](attachments/15466739/16842853.svg)
 
@@ -72,7 +73,7 @@ Studio Pro Guide | Model SDK API docs
 |Properties [`origin`](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.flow.html#origin) and [`destination`](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.flow.html#destination) of Flow
 |[CaseValue](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.casevalue.html) and its inheritance hierarchy
 
-### Decisions
+### 1.5 Decisions
 
 The control flow in microflows is defined with decisions of two types: 
 
@@ -83,7 +84,7 @@ Two paths of a control can be merged with a decision.
 
 A decision conditionally splits on either an expression or a rule. In case of a rule, a call is made, similar to a microflow call, with a rule parameter mapping.
 
-#### Graphical overview
+#### 1.5.1 Graphical Overview
 
 ![](attachments/15466739/16842854.svg)
 
@@ -97,15 +98,15 @@ Studio Pro Guide | Model SDK API docs
 |[RuleCall](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.rulecall.html)
 |[RuleCallParameterMapping](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.rulecallparametermapping.html)
 
-## Microflow activities
+## 2 Microflow activities
 
-### Working with objects
+### 2.1 Working with Objects
 
 Objects can be manipulated in microflows through several activities. New objects can be created. Existing objects can be retrieved (see the next subsection for details). All objects can be updated or deleted. All changes (including creation and deletion) can be committed or rolled back.
 
 Object attributes can be updated with a change action, both in a create action and in an update action.These actions have a list of items that describe which attribute or association is set, to a certain value.
 
-#### Graphical overview
+#### 2.1.1 Graphical Overview
 
 ![](attachments/15466739/18582248.svg)
 
@@ -115,11 +116,11 @@ Studio Pro Guide | Model SDK API docs
 [Change Object](/refguide/change-object) | [DeleteAction](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.deleteaction.html)
 [Rollback Object](/refguide/rollback-object) |[CommitAction](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.commitaction.html) and [RollbackAction](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.rollbackaction.html)
 
-### Retrieving Objects
+### 2.2 Retrieving Objects
 
 A retrieve action is either an association-based retrieve or a database-based retrieve. An association-based retrieve points to a specific association and retrieves the relevant objects over that association. A database-based retrieve directly accesses the database and provides control over the XPath constraint, sorting of the retrieved objects and the range of objects to retrieve.
 
-#### Graphical overview
+#### 2.2.1 Graphical Overview
 
 ![](attachments/15466739/18582244.svg)
 
@@ -131,11 +132,11 @@ Studio Pro Guide | Model SDK API docs
 |[Range](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.range.html), [ConstantRange](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.constantrange.html) and [CustomRange](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.customrange.html)
 |[SortItemList](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.sortitemlist.html) and [SortItem](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.sortitem.html)
 
-### Microflow Calls
+### 2.3 Microflow Calls
 
 Microflows can call other microflows by defining a mapping of expressions to parameters (of the called microflow).
 
-#### Graphical overview
+#### 2.3.1 Graphical Overview
 
 ![](attachments/15466739/16842821.svg)
 
@@ -145,11 +146,11 @@ Studio Pro Guide | Model SDK API docs
 |[MicroflowCall](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.microflowcall.html)
 |[MicroflowCallParameterMapping](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.microflowcallparametermapping.html)
 
-### Web Client activities
+### 2.4 Web Client Activities
 
 Microflows can trigger behavior in the browser: showing and closing pages, showing (popup) messages, providing validation feedback and triggering file downloads.
 
-#### Graphical overview
+#### 2.4.1 Graphical Overview
 
 ![](attachments/15466739/18582245.svg)
 
@@ -161,11 +162,11 @@ Studio Pro Guide | Model SDK API docs
 [Validation Feedback](/refguide/validation-feedback) |[ValidationFeedbackAction](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.validationfeedbackaction.html)
 [Download File](/refguide/download-file) |[DownloadFileAction](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.downloadfileaction.html)
 
-### App service calls
+### 2.5 App Service Calls
 
 An app service call action points to a specific app service action (which is part of a consumed app service). The action call has a list of parameter mappings of app service action parameters to expressions.
 
-#### Graphical overview
+#### 2.5.1 Graphical Overview
 
 ![](attachments/15466739/16842823.svg)
 
@@ -176,11 +177,11 @@ Studio Pro Guide | Model SDK API docs
 |[AppServiceCallParameterMapping](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.appservicecallparametermapping.html)
 |[AppServiceActionParameter](https://apidocs.mendix.com/modelsdk/latest/classes/appservices.appserviceactionparameter.html)
 
-### Web service calls
+### 2.6 Web Service Calls
 
 A web service call to an imported web service has an HTTP configuration, and a request and response handling configuration to map the request and response parameters of the third-party web service operation to Mendix app concepts.
 
-#### Graphical overview
+#### 2.6.1 Graphical Overview
 
 ![](attachments/15466739/16842843.svg)
 
@@ -192,11 +193,11 @@ Studio Pro Guide | Model SDK API docs
 |[HttpConfiguration](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.httpconfiguration.html)
 |[RequestHandling](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.requesthandling.html) and [ResultHandling](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.resulthandling.html)
 
-### Web service calls - Request HTTP configuration
+### 2.7 Web Service Calls – Request HTTP Configuration
 
 An HTTP configuration has an optional custom endpoint location, authentication credentials, and optional HTTP headers.
 
-#### Graphical overview
+#### 2.7.1 Graphical Overview
 
 ![](attachments/15466739/16842844.svg)
 
@@ -205,7 +206,7 @@ Studio Pro Guide | Model SDK API docs
 [Call Web Service](/refguide/call-web-service-action) |[HttpConfiguration](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.httpconfiguration.html)
 |[HttpHeaderEntry](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.httpheaderentry.html)
 
-### Web service calls - Request handling
+### 2.8 Web Service Calls – Request Handling
 
 A web service operation request needs to be mapped from Mendix app concepts to the specifics of the web service operation. There are four different ways in which request handling can be configured. Each has its own specific configuration options.
 
@@ -214,7 +215,7 @@ A web service operation request needs to be mapped from Mendix app concepts to t
 3.  Advanced Parameter Mapping - This is a combination of the above two mappings, starting one level deeper in the XML hierarchy than a regular export mapping. Use a MicroflowExpression for a primitive value and an ExportMapping for a complex one.
 4.  Custom mapping - Specify the XML to be sent manually. Powerful yet dangerous.
 
-#### Graphical overview
+#### 2.8.1 Graphical Overview
 
 ![](attachments/15466739/18582232.svg)
 
@@ -226,11 +227,11 @@ Studio Pro Guide | Model SDK API docs
 |[MappingRequestHandling](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.mappingrequesthandling.html)
 |[CustomRequestHandling](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.customrequesthandling.html)
 
-### Web service calls - Response handling
+### 2.9 Web Service Calls – Response Handling
 
 The result of a web service operation needs to be mapped to Mendix app concepts with an import mapping call which uses an import mapping. The range of objects to map can also be controlled.
 
-#### Graphical overview
+#### 2.9.1 Graphical Overview
 
 ![](attachments/15466739/16842842.svg)
 
@@ -241,11 +242,11 @@ Studio Pro Guide | Model SDK API docs
 |[ImportMapping](https://apidocs.mendix.com/modelsdk/latest/classes/importmappings.importmapping.html)
 |[Range](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.range.html)
 
-### Variables
+### 2.10 Variables
 
 Microflow variables can be created and changed with specific actions. A create variable action also has a data type to indicate the type of the newly created variable.
 
-#### Graphical overview
+#### 2.10.1 Graphical Overview
 
 ![](attachments/15466739/16842846.svg)
 
@@ -254,11 +255,11 @@ Studio Pro Guide | Model SDK API docs
 [Create Variable](/refguide/create-variable) |[CreateVariableAction](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.createvariableaction.html)
 [Change Variable](/refguide/change-variable) |[ChangeVariableAction](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.changevariableaction.html)
 
-### Lists
+### 2.11 Lists
 
 Lists can be created, changed and deleted with specific actions. List aggregation actions have a specific function (e.g. sum or average). List operations can also be executed, see the following sections for details.
 
-#### Graphical overview
+#### 2.11.1 Graphical Overview
 
 ![](attachments/15466739/18582227.svg)
 
@@ -270,11 +271,11 @@ Studio Pro Guide | Model SDK API docs
 [List Operation](/refguide/list-operation) |[AggregateListAction](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.aggregatelistaction.html)
 |[ListOperationAction](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.listoperationaction.html) and [ListOperation](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.listoperation.html)
 
-### Lists - Operations
+### 2.12 Lists – Operations
 
 Lists can be manipulated with different types of operations. Lists can be sorted, with a list of sorting items. Head and tail provide the first and remainder of a list, respectively. Find and filter respectively pick one and all elements of a list that adhere to some condition.
 
-#### Graphical overview
+#### 2.12.1 Graphical Overview
 
 ![](attachments/15466739/18582228.svg)
 
@@ -285,11 +286,11 @@ Studio Pro Guide | Model SDK API docs
 |[Sort](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.sort.html), [SortItemList](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.sortitemlist.html) and [SortItem](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.sortitem.html)
 |[Filter](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.filter.html) and [Find](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.find.html)
 
-### Lists - Binary operations
+### 2.13 Lists – Binary Operations
 
 Lists can be manipulated with several binary operations, which take two lists as input.
 
-#### Graphical overview
+#### 2.13.1 Graphical Overview
 
 ![](attachments/15466739/16842849.svg)
 
@@ -302,12 +303,11 @@ Studio Pro Guide | Model SDK API docs
 |[Subtract](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.subtract.html)
 |[Union](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.union.html)
 
-
-### Java action calls
+### 2.14 Java Action Calls
 
 Java action calls point to a specific Java action and have a parameter mapping with an expression for every parameter of the Java action.
 
-#### Graphical overview
+#### 2.15 Graphical Overview
 
 ![](attachments/15466739/18582230.svg)
 
@@ -318,11 +318,11 @@ Studio Pro Guide | Model SDK API docs
 |[JavaActionCallAction](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.javaactioncallaction.html)
 |[JavaActionParameterMapping](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.javaactionparametermapping.html)
 
-### Logging
+### 2.16 Logging
 
 Logging actions target a single log node on a specific log level. The log message is parameterized.
 
-#### Graphical overview
+#### 2.16.1 Graphical Overview
 
 ![](attachments/15466739/16844080.svg)
 
@@ -333,13 +333,13 @@ Studio Pro Guide | Model SDK API docs
 |[StringTemplate](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.stringtemplate.html)
 |[TemplateArgument](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.templateargument.html)
 
-### Importing & Exporting XML
+### 2.17 Importing & Exporting XML
 
 XML import actions use an XML-to-domain mapping similar to web service response mappings.
 
 XML export actions use a domain-to-XML mapping similar to web service request mappings.
 
-#### Graphical overview
+#### 2.17.1 Graphical Overview
 
 ![](attachments/15466739/18582238.svg)
 
@@ -352,11 +352,11 @@ Model SDK API docs
 *   [FileDocumentExport](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.filedocumentexport.html)
 *   [VariableExport](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.variableexport.html)
 
-### Document generation
+### 2.18 Document Generation
 
 Documents are generated from a document template. Such a template has parameters, which are mapped with a parameter mapping at each call site.
 
-#### Graphical overview
+#### 2.18.1 Graphical Overview
 
 ![](attachments/15466739/16844082.svg)
 

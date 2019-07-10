@@ -7,9 +7,9 @@ tags: ["studio pro", "loop"]
 
 ## 1 Introduction
 
-A loop is used to iterate over a list of objects. For each object the flow inside the loop is executed. The flow starts at the element that has no incoming sequence flows. A loop can contain all elements used in flows, with the exception of start and stop events. Additionally, a loop (and only a loop) can contain [break events](break-event) and [continue events](continue-event).
+A loop is used to iterate over a list of objects. For each object the flow inside the loop is executed. The iterator, which looks the same as a parameter, represents the current object in the list for each iteration. Beneath it the name of the object is shown in black and the entity type of the object in blue.
 
-The iterator which looks the same as an input object represents the variable that holds one element of the list for each iteration. Beneath it the name of the variable is shown in black and the type of the variable in blue.
+The flow starts at the element that has no incoming sequence flows. A loop can contain all elements used in flows, with the exception of start and stop events. Additionally, a loop (and only a loop) can contain [break events](break-event) and [continue events](continue-event).
 
 {{% alert type="info" %}}
 
@@ -23,10 +23,10 @@ If you have a situation where you have a list of objects of the entity 'OrderLin
 
 ### 2.1 Iterate over
 
-The list variable over which this loop will iterate.
+The list over which this loop will iterate.
 
 ## 3 Action Properties
 
 ### 3.1 Name
 
-The name of the variable that will hold one element of the list at a time. The flow inside the loop is executed for each element in the list and each time this variable will contain the current element. If the list variable over which the loop iterates is of type `List of Order`, the iterator variable will be of type `Order`.
+The name of the current object taken from the list. The flow inside the loop is executed for each object in the list, and the object will always have this name. If the list over which the loop iterates is of type `List of Order`, the iterator object will be of type `Order`.

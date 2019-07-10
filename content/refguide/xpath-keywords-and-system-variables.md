@@ -44,7 +44,7 @@ These will be created for each user role in your app project. Here is an example
 | --- | --- |
 | `[%UserRole_Administrator%]` | The Administrator user role. |
 
-Here is an example for retreiving that user role: 
+Here is an example for retrieving that user role: 
 
 ![](attachments/xpath/user-role.png)
 

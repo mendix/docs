@@ -19,8 +19,8 @@ An XML file always starts with the XML version and encoding declaration. These a
 | Attribute | Description |
 | --- | --- |
 | id | The id is where your widget is located. The path to the js file, starting at the root folder, separated by dots. Note that this is case-sensitive. |
-| needsEntityContext | This boolean determines whether your widget requires an object to be passed as the EntityContext and is required. If this is set to "true", the widget can only be used within a dataview or a templategrid. If set to "false", the widget can be used anywhere, but won't have an object passed to it automatically. |
-| offlineCapable | This boolean determines whether your widget can be used on pages that are accessible through the offline profile. If this attribute is not set, or set to "false", the widget cannot be used offline. If set to "true", the widget can be used offline. Keep in mind that there are a number of restrictions when working offline. Calling a microflows or fetching data using XPath are examples of features that are not supported offline. For more information, see the [Ensuring Your App Is Offline-First](/refguide/offline-first#limitations) section of *Offline First*. |
+| needsEntityContext | This Boolean determines whether your widget requires an object to be passed as the EntityContext and is required. If this is set to "true", the widget can only be used within a dataview or a templategrid. If set to "false", the widget can be used anywhere, but won't have an object passed to it automatically. |
+| offlineCapable | This Boolean determines whether your widget can be used on pages that are accessible through the offline profile. If this attribute is not set, or set to "false", the widget cannot be used offline. If set to "true", the widget can be used offline. Keep in mind that there are a number of restrictions when working offline. Calling a microflows or fetching data using XPath are examples of features that are not supported offline. For more information, see the [Ensuring Your App Is Offline-First](/refguide/offline-first#limitations) section of *Offline First*. |
 | xmlns | The XML namespace used by the widget. The value of this attribute is the same for every widget. `<widget id="HelloWorld.widget.helloworld" needsEntityContext="true" xmlns="http://www.mendix.com/widget/1.0/">` |
 
 ### 3.2 Child elements {#Widgets-XMLreferenceguide-id}
@@ -73,7 +73,7 @@ Other possible attributes are:
 | defaultValue | The default value that a property starts with when it is created. |
 | required | Specifies if the property is a required field or not. Defaults to "True" if not present. |
 | isDefault | Marks a property as the default property that is selected when the widget is selected. |
-| multiline | Makes the string input mulitple lines, which is useful for long texts. |
+| multiline | Makes the string input multiple lines, which is useful for long texts. |
 | parameterIsList| Requires the parameter of a microflow to be a list of the type defined in the **entityProperty**. |
 | isPath | _("no", "optional", "yes")_ The path for an attribute or entity property, it can be either "no", "optional" or "yes", where "no" is the default value if the property is left out. The "optional" means that the attribute/entity can be either the current entity (or an attribute of the current entity) or an entity (or attribute) over a 1-deep association. |
 | pathType | _("reference", "referenceSet")_ This defines what sort of reference should be shown for an entity/attribute over an association, either a "reference" or a "referenceSet". |
@@ -239,9 +239,9 @@ The Microflow property allows a user to select a microflow in Mendix Studio Pro.
 </property>
 ```
 
-The Microflow property has an extra required child element: returnType. Use this to set what type of variable you expect as a return value. Studio Pro will then enforce this on the microflow that is assigned.
+The Microflow property has an extra required child element: returnType. Use this to set what type of value you return. Studio Pro will then enforce this on the microflow that is assigned.
 
-Possible return types:
+Possible return types are shown below:
 
 *   Void
 *   Boolean
@@ -267,7 +267,7 @@ The Nanoflow property allows a user to select a nanoflow in Mendix Studio Pro. T
 </property>
 ```
 
-The Nanoflow property has an extra required child element: returnType. Use this to set what type of variable you expect as a return value. Studio Pro will then enforce this on the nanoflow that is assigned.
+The Nanoflow property has an extra required child element: returnType. Use this to set what type of value you return. Studio Pro will then enforce this on the nanoflow that is assigned.
 
 Possible return types:
 

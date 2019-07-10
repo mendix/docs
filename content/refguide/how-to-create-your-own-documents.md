@@ -39,7 +39,7 @@ The domain model for this application looks like this:
 The **Customer** holds the address information and the preferred communication language. The **Order** owns the date and sum of all the order lines. The **OrderLine** entity has the customer-specific price for a **Product**. Because you want to generate a document, the **OrderDocument** entity has been added. This entity inherits from the **System.FileDocument** entity.
 
 {{% alert type="info" %}}
-Do not use the **Sytem.FileDocument** entity directly, because you have no control over the security of that part from the **System** module.
+Do not use the **System.FileDocument** entity directly, because you have no control over the security of that part from the **System** module.
 {{% /alert %}}
 
 ### 4.2 The Microflow
@@ -68,15 +68,15 @@ Here is the input parameter:
 
 ![](attachments/core/2018-02-28_16-32-33.png)
 
-In the next step, you will create a new OrderDocument. This object will store the actual document. Set the reference to the **Order** variable and the name of the document:
+In the next step, you will create a new OrderDocument. This object will store the actual document. Set the reference to the **Order** object and the name of the document:
 
 ![](attachments/core/2018-02-28_16-52-43.png)
 
-Now you need to have a **Language** object. In our case, the **Customer** holds  the preferred communication language. In our microflow example, you first retrieve the **Customer** via the **Order**, and then retrieve the **Language** from that **Customer**:
+Now you need to have a **Language** object. In our case, the **Customer** is associated with the preferred communication language. In our microflow example, you first retrieve the **Customer** via the **Order**, and then retrieve the **Language** from that **Customer**:
 
 ![](attachments/core/2018-02-28_16-58-54.png)
 
-The next step is to use the **Generate document** activity. Within this activity, you can use the available variables and select the document template to create the document. However, the document template does not exist yet, so you need to create it and place it in your folder:
+The next step is to use the **Generate document** activity. Within this activity, you can use the available objects and select the document template to create the document. However, the document template does not exist yet, so you need to create it and place it in your folder:
 
 ![](attachments/core/2018-02-28_17-06-53.png)
 
@@ -92,7 +92,7 @@ The **Generate document** activity has been added:
 
 ![](attachments/core/2018-03-01_13-06-33.png)
 
-After you have configured the general settings of the document template, you do not need a seperate commit for **NewOrderDocument**. This entity is automatically committed via the document template activity.
+After you have configured the general settings of the document template, you do not need a separate commit for **NewOrderDocument**. This entity is automatically committed via the document template activity.
 
 Now that you have set up the **Generate document** configuration, you can configure the template itself.
 
@@ -117,7 +117,7 @@ Now that you have created the document template, you can see that there is an er
 
 ![](attachments/core/2018-03-01_14-08-48.png)
 
-To resolve this error, open the **Generate document** activity of the microflow. When the activity is opened, the parameter mapping will be updated and the variable allocated to the mapping parameter.
+To resolve this error, open the **Generate document** activity of the microflow. When the activity is opened, the parameter mapping will be updated and allocated to the mapping parameter.
 
 Now, your **Generate document** configuration should look like this:
 

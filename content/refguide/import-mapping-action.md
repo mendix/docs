@@ -20,7 +20,7 @@ With the Import Mapping action, you can import the data stored in an XML or JSON
 
 ### 2.1 Variable
 
-The input variable can either be a string, a file document, an [HttpRequest](http-request-and-response-entities#http-request), or an [HttpRequest](http-request-and-response-entities#http-response). The content of the file document, HttpRequest, or HttpResponse should be XML or JSON.
+The input variable can be the name of a string variable, a file document, an [HttpRequest](http-request-and-response-entities#http-request), or an [HttpRequest](http-request-and-response-entities#http-response). The content of the file document, HttpRequest, or HttpResponse should be XML or JSON.
 
 ## 3 Import Mapping
 
@@ -30,11 +30,11 @@ The [import mapping](import-mappings) defines how to transform the XML or JSON i
 
 ### 3.2 Input Content Type
 
-If the import mapping is based on a [message definitions](message-definitions), it can import both XML and JSON. Select whether the input variable contains XML or JSON.
+If the import mapping is based on a [message definitions](message-definitions), it can import both XML and JSON. Select whether the input object contains XML or JSON.
 
 ### 3.3 The Input Contains
 
-If the import mapping is based on a [message definitions](message-definitions), it can import both single objects and lists. Select whether the input variable contains a single object or a list of objects.
+If the import mapping is based on a [message definitions](message-definitions), it can import both single objects and lists. Select whether the input is a single object or a list of objects.
 
 ### 3.4 If No Object Was Found
 
@@ -84,12 +84,12 @@ Setting this to _yes_ can greatly decrease performance!
 
 ### 5.1 Store in Variable
 
-Choose whether to store the result of the import in a variable.
+Choose whether to store the result of the import.
 
 ### 5.2 Type
 
-The type of the output variable.
+The type of the result.
 
 ### 5.3 Name
 
-The name for the variable that will hold the result of the import.
+The name of the result of the import.

@@ -88,7 +88,7 @@ To be able to use the data from your model in the REST service, you need to crea
 
 7. Click **Show** to start editing the newly created microflow.
 8. Add two parameters: **httpRequest** and **OrderID**.
-9.  Add an action to the microflow to convert the **OrderID** variable (string) to an integer variable. This is needed to be able to search for the OrderID (autonumber).
+9. Add an action to the microflow to convert the **OrderID** variable (string) to an integer variable. This is needed to be able to search for the OrderID (autonumber).
 
 	![](attachments/publish-rest-service/ConvertOrderID.png)
 

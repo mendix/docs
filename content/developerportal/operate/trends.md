@@ -52,6 +52,8 @@ You can find the trends by following these steps:
 
 ### 3.2 Interpreting the Graphs
 
+As with all complex IT systems, there are many interrelated components which can cause performance issues. This document cannot cover all possibilities, but is intended as a general introduction to the information which is displayed and a few ideas about where to look for possible areas of concern.
+
 #### 3.2.1 Scales
 
 The scales are produced automatically by the graphing software. This can lead to unexpected scales.
@@ -62,7 +64,11 @@ For example a scale for transactions per seconds may have a value of 30 m. This 
 
 Disk utilization is calculated as the disk usage that is used by the user of the system. Due to operating system overhead and empty space in block size allocation, not all disk space can be fully allocated. For this reason, the total amount of usable space will be ~4% lower than the actual disk space.
 
-#### 3.2.2 Combining Information{#combine-info}
+#### 3.2.3 Disk Partitions
+
+If there is more than one disk partition in the system, the `/srv` partition generally contains project files and uploaded files of the application, while `/var` generally holds the database storage.
+
+#### 3.2.4 Combining Information{#combine-info}
 
 You can often get more information about the performance of your app by combining the information from several graphs. Useful graphs for this are:
 
@@ -83,17 +89,14 @@ The **Number of handled external requests** graph shows the number of requests t
 
 ![](attachments/trends/no-ext-reqs.png)
 
-The number of requests per second is split up by request handlers:
+The number of requests per second is split up by request handlers. The key ones are:
 
 * **/** should not list any requests, because static content is directly served to the user by the front-facing web server, which is placed between the user and this application process
-* **api-doc/** ?????????????
-* **rest-doc/** ????????????
 * **ws/** shows the number of web service calls that were done
-* **p/** ??????????????
 * **xas/** lists general queries for data in data grids, sending changes to the server and triggering the execution of microflows
 * **file** shows the number of file uploads and downloads
-* **odata-doc/** ????????????
-* **openid/** ???????????
+
+Additional information about request handlers is available in the *Requests* section of [Monitoring Mendix Runtime](/refguide/monitoring-mendix-runtime#request-handlers) and the *Applying Access Restrictions to Unnecessary Request Handlers* section of [How To Implement Best Practices for App Security](/howto/security/best-practices-security#request-handlers).
 
 ### <a name="Trends-appmxruntimecache"></a>4.2 Object Cache
 
@@ -105,11 +108,11 @@ Non-persistable entities live in the JVM memory and are garbage collected regula
 
 ### <a name="Trends-appmxruntimesessions"></a>4.3 User Accounts and Login Sessions
 
-The **User Accounts and Login Sessions** graph shows the number of logged-in named and anonymous user sessions for your application, next to the total number of existing login accounts in the application.
-
-{{% todo %}}[Which value is which?]{{% /todo %}}
+The **User Accounts and Login Sessions** graph shows the number of logged-in named and anonymous user sessions for your application.
 
 ![](attachments/trends/user-accounts-logins.png)
+
+The value of **named users** shows the total number of existing login accounts in the application.
 
 ### <a name="Trends-appmxruntimejvmheap"></a>4.4 JVM Object Heap
 
@@ -118,6 +121,12 @@ The **JVM Object Heap** graph shows the internal distribution of allocated memor
 ![](attachments/trends/jvm-heap.png)
 
 One of the most important things to know in order to be able to interpret the values in this graph, is the fact that the JVM does not immediately clean up objects that are no longer in use. This graph will show unused memory as still in use until the so-called *garbage collector*, which analyzes the memory to free up space, is run. So, you cannot see how much of the JVM memory that is in use before a garbage collection will be available after the garbage collection cycle, because the garbage collection process will only find out about that when it actually runs.
+
+There are three sorts of space in the JVM heap, which the garbage collector treats separately to enable it to work efficiently:
+
+* **eden space** is for newly-created objects
+* **survivor space** is where objects are moved if the garbage collector cannot clean them out of eden space
+* **tenured generation** holds objects which are longer-lived
 
 For example, if the **tenured generation** is shown as 65% of the complete heap size, this might as well change to 0% if a garbage collection is triggered when the percentage reaches two thirds of the total heap size. However, it could stay at this 65% if all data in this memory part is still referenced by running actions in the application. This behavior means that the JVM heap memory graphs are the most difficult to base conclusions on.
 
@@ -160,7 +169,7 @@ Besides the threadpool that is used for *external* HTTP requests, described abov
 
 ### <a name="Trends-appcpu"></a>4.9 Application Node CPU Usage
 
-The **Application node CPU usage** graph shows the CPU utilization in percentage, broken down into different types of CPU usage.
+The **Application node CPU usage** graph shows the CPU utilization in percentage, broken down into different types of CPU usage. Each CPU is counted as 100%, so in a multi-CPU system, the scale will be several hundred percent.
 
 ![](attachments/trends/app-cpu.png)
 
@@ -172,19 +181,17 @@ CPU usage of the database is shown in [Database Node CPU Usage](#Trends-dbcpu), 
 
 ### <a name="Trends-appdiskstatsthroughput"></a>4.10 Application Node Disk Throughput
 
-The **Application node disk throughput** graph shows the amount of data that is being read from and written to disk.
+The **Application node disk throughput** graph shows the rate at which data is being read from and written to disk.
 
 ![](attachments/trends/app-disk-throughput.png)
 
- If there is more than one disk partition in the system, the /srv partition generally contains project files and uploaded files of the application, while /var generally holds the database storage.
+If you see large values here which do not immediately drop back again, it may indicate that your app is continually swapping data to disk. This could be caused by inefficient queries, for example ones which require sorting within the app.
 
 ### <a name="Trends-appdfabs"></a><a name="Trends-appdf"></a>4.11 Application Node Disk Usage (in Bytes)
 
 The **Application node disk usage (in bytes)** graph displays the absolute amount of data that is stored on disk.
 
 ![](attachments/trends/app-disk-usage-bytes.png)
-
-If there's more than one disk partition in the system, the /srv partition generally holds project files and uploaded files of the application, while /var generally holds the database storage.
 
 ### <a name="Trends-appdiskstatsutilization"></a>4.12 Application Node Disk Usage in Percentage (%)
 
@@ -207,6 +214,8 @@ The **Application node load** is commonly used as a general indication of overal
 ![](attachments/trends/app-load.png)
 
 The load value is a composite value, calculated from a range of other measurements, as shown in the other graphs on this page. If you are investigating high server load, this graph alone is not sufficient.
+
+This value is used in [Alerts](/developerportal/operate/monitoring-application-health) to signal that the CPU usage is not OK. A **warning** is issued for extended load higher than 2.8, and **critical** is signaled for extended load higher than 6.0.
 
 ### <a name="Trends-appdiskstatslatency"></a>4.15 Application Node Disk Latency
 
@@ -242,7 +251,7 @@ The **Database table vs. index size** graph shows the distribution between disk 
 
 ![](attachments/trends/db-table-vs-index.png)
 
-Remember, indexes actually occupy memory space and disk storage, as they're just parts of your data copied and stored, sorted in another way! Besides your data, indexes also have to be read into system memory to be able to use them.
+Remember, indexes actually occupy memory space and disk storage, as they're just parts of your data copied and stored, sorted in another way! Besides the data you are processing, the relevant parts of the indexes also have to be read into system memory to be able to use them.
 
 ### <a name="Trends-appmxruntimepgstattuples"></a>5.3 Database transactions and Mutations
 
@@ -266,11 +275,15 @@ The **Database node operating system memory** graph shows the distribution of op
 
 ![](attachments/trends/db-os-memory.png)
 
-The most important part of this graph is the **cache** section. This type of memory usage contains parts of the database that have been read from disk earlier. It is crucial to the performance of an application that parts of the database data and indexes that are referenced a lot are always immediately available in the working memory of the server, in the cache. A lack of disk cache on a busy application will result in continuous re-reads of data from disk, which takes several orders of magnitude more time, slowing down the entire application.
+The most important values on this graph are **cache** and **apps**.
+
+The **cache** values show the memory used to hold parts of the database that have been read from disk earlier. It is crucial to the performance of an application that parts of the database data and indexes that are referenced a lot are always immediately available in the working memory of the server, in the cache. A lack of disk cache on a busy application will result in continuous re-reads of data from disk, which takes several orders of magnitude more time, slowing down the entire application. This may indicate that you have a large number of concurrent database connections from your app and that the environment is not large enough to support these.
+
+The **apps** values show the amount of memory allocated to the database server (postgresql) to perform database queries.
 
 ### <a name="Trends-dbcpu"></a>5.6 Database Node CPU Usage
 
-The **Database node CPU usage** graph shows the amount of CPU usage in percentage, broken down into different types of CPU usage.
+The **Database node CPU usage** graph shows the amount of CPU usage in percentage, broken down into different types of CPU usage. Each CPU is counted as 100%, so in a multi-CPU system, the scale will be several hundred percent.
 
 ![](attachments/trends/db-cpu-usage.png)
 

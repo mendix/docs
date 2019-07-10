@@ -1,6 +1,6 @@
 ---
 title: "Find Element by CSS"
-parent: "find"
+parent: "rg1-find"
 ---
 
 ## Description

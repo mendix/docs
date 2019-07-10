@@ -1,6 +1,6 @@
 ---
 title: "Runtime Recorder Results"
-parent: "rg1-recorder"
+parent: "rg2-recorder"
 ---
 
 When you open a runtime recording from the [recorded sessions overview](rg2-recorder), the details of this runtime recording will be shown. The results are sorted by duration. All the recorded actions are clickable and will show detailed information. By drilling down to an exact location, you can pinpoint where the time is spent.

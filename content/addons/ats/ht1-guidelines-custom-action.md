@@ -1,6 +1,6 @@
 ---
 title: "Guidelines for Creating a Custom Action"
-parent: "custom-action-general"
+parent: "ht1-custom-action-general"
 ---
 
 For a details on custom actions, please see [Custom Actions](rg1-custom-actions) in the ATS Reference Guide 1.

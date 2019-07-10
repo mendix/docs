@@ -1,6 +1,6 @@
 ---
 title: "AQM Overview"
-category: "Application Quality Monitor"
+category: "AQM Guide"
 
 ---
 

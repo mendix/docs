@@ -1,6 +1,6 @@
 ---
 title: "ATS Best Practices"
-category: "Application Test Suite"
+category: "ATS Guide"
 menu_order: 2
 ---
 

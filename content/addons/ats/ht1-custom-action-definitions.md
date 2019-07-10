@@ -1,6 +1,6 @@
 ---
 title: "Definitions"
-parent: "custom-action-general"
+parent: "ht1-custom-action-general"
 description: "Explains the different types of custom actions."
 tags: ["ATS", "testing"]
 ---

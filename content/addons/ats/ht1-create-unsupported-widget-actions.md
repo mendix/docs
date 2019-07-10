@@ -1,6 +1,6 @@
 ---
 title: "Create Unsupported Widget Actions"
-parent: "ht1-ht1-create-custom-actions"
+parent: "ht1-create-custom-actions"
 ---
 
 In this sub-category, you can find all the how-to's for creating an Unsupported Widget action:

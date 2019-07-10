@@ -1,6 +1,6 @@
 ---
 title: "Maintenance"
-category: "Application Test Suite"
+category: "ATS Guide"
 ---
 
 ## Maintenance Window

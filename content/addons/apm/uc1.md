@@ -1,6 +1,6 @@
 ---
 title: "APM 1 Use Cases"
-category: "Use Cases"
+parent: "uc"
 menu_order: 20
 ---
 

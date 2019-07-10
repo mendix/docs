@@ -1,6 +1,6 @@
 ---
 title: "ATS How-to's"
-category: "Application Test Suite"
+category: "ATS Guide"
 menu_order: 3
 ---
 

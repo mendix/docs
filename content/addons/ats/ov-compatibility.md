@@ -1,6 +1,6 @@
 ---
 title: "Compatibility"
-category: "Application Test Suite"
+category: "ATS Guide"
 ---
 
 ## Mendix Platform Compatibility

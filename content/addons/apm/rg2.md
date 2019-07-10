@@ -1,6 +1,6 @@
 ---
 title: "APM 2 Reference Guide"
-category: "Reference Guide"
+parent: "rg"
 menu_order: 10
 ---
 

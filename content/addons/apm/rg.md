@@ -1,6 +1,6 @@
 ---
 title: "APM Reference Guide"
-category: "Application Performance Monitor"
+category: "APM Guide"
 ---
 
 ## 1 Introduction

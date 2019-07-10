@@ -23,8 +23,6 @@ JavaScript actions are run in the browser, and each browser version has its own 
 
 Older browsers might not have the new ES6 functions implemented, so be careful copying and pasting modern sample code from the internet, especially when IE11 must be supported. Some ECMAScript 6 functions are polyfilled by the Mendix Client.
 
-{{% todo %}}[check with "client" if polyfills are correct]{{% /todo %}} 
-
 Mendix Studio Pro contains the following polyfills from [Core JS](https://github.com/zloirock/core-js):
 
 * **core-js/fn/array/find**
@@ -212,8 +210,6 @@ mxobj.getOriginalValue("Name")   // "Fred"
 For more information on changing objects, consult the [Set](https://apidocs.mendix.com/7/client/mendix_lib_MxObject.html#set) section of the *Mendix Client API*.
 
 #### 2.2.5 Loading Platform-Shipped Dependencies
-
-{{% todo %}}[update code snippet when Andries does]{{% /todo %}} 
 
 Use the following code for loading platform-shipped dependencies (please note the shipped dependencies might vary per Mendix version):
 

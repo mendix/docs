@@ -172,7 +172,7 @@ ATS also has a few specific actions for setting an input widget. To find these, 
 
 In this example, you want to set the value of a check box widget, but you want to set it to a specific state. You cannot use the Set Value action because it does not work.
 
-The solution in this situation is to use the following search term: "Set Checkbox". ATS checks all the actions and returns those that match these words. There is an action called [Set Checkbox Value](../../refguide/rg-version-1/set-checkbox-value), which uses the `mx-name` of the widget and the Boolean value you set to check or clear the check box.
+The solution in this situation is to use the following search term: "Set Checkbox". ATS checks all the actions and returns those that match these words. There is an action called [Set Checkbox Value](rg1-set-checkbox-value), which uses the `mx-name` of the widget and the Boolean value you set to check or clear the check box.
 
 ![](attachments/bp2-finding-the-action-you-need/set-checkbox-value-action-search.png)
 
@@ -251,7 +251,7 @@ The solution in this situation is to use the following search term: "Get CKEdito
 
 In this example, you want to get the message displayed in the dialog box widget. You cannot use the Get Value action because there is no `mx-name`.
 
-The solution in this situation is to use the following search term: "Get Dialog". ATS checks all the actions and returns those that match these words. There is an action called [Get Dialog Message Text](../../refguide/rg-version-1/get-dialog-message-text), which uses the dialog as a WebElement to retrieve the message text. You use the Find/Assert Dialog action to get the dialog as a WebElement.
+The solution in this situation is to use the following search term: "Get Dialog". ATS checks all the actions and returns those that match these words. There is an action called [Get Dialog Message Text](rg1-get-dialog-message-text), which uses the dialog as a WebElement to retrieve the message text. You use the Find/Assert Dialog action to get the dialog as a WebElement.
 
 ![](attachments/bp2-finding-the-action-you-need/rg1-get-dialog-message-text-action-search.png)
 

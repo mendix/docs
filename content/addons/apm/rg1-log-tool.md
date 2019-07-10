@@ -12,7 +12,7 @@ Logging consists of a log node, a level, and the logging message itself. For the
 
 The **Logs** tab shows the stored logs in the database.
 
- ![](attachments/Log_Tool/Overview.png)
+ ![](attachments/rg1-log-tool/Overview.png)
 
 You can start and stop the log tool via the "play" button in the header.
 

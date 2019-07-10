@@ -100,7 +100,7 @@ The following steps describe how to add test steps manually to your test case. Y
 
     ![](attachments/ht1-create-a-test-case/helper-new-expense-button.png)
 
-17. ATS has an action that clicks a widget, which is the [Click Widget](click-widget) action. Inside your test case, click **Add** again and add the **Click Widget** action.
+17. ATS has an action that clicks a widget, which is the [Click Widget](rg1-click-widget) action. Inside your test case, click **Add** again and add the **Click Widget** action.
 
     ![](attachments/ht1-create-a-test-case/click-widget-new-expense.png)
 

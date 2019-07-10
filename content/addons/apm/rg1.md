@@ -58,7 +58,7 @@ The APM Statistics tool collects statistical data about microflows and client AP
 
 This is the statistics tool (for load balanced environments you see the server where the microflow runs):
 
-![](attachments/rg1-introduction/attachments/rg1-statistics-tool.png)
+![](attachments/rg1-introduction/rg1-statistics-tool.png)
 
 ## 4 The Performance Tool to Record Microflows
 

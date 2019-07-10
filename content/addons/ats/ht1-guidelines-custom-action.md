@@ -87,7 +87,7 @@ When using core actions to trigger an event, always use a Mendix Wait action aft
 
 This is the Mendix Wait action:
 
-![](attachments/ht1-guidelines-custom-action/rg1-mendix-wait-action.png)
+![](attachments/ht1-guidelines-custom-action/mendix-wait-action.png)
 
 For more information, please see [Mendix wait](rg1-mendix-wait).
 

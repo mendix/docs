@@ -84,7 +84,7 @@ To create the action structure, follow these steps:
 
 8.  The last action you add is [Mendix Wait](rg1-mendix-wait). You trigger a possible event in the widget by entering text, so you need to ensure that ATS waits for all the background processes to finish:
 
-    ![](attachments/ht1-create-unsupported-widget/ht1-cab-03-textbox/text-box-rg1-mendix-wait.png)
+    ![](attachments/ht1-create-unsupported-widget/ht1-cab-03-textbox/text-box-mendix-wait.png)
 
 ## 5 Action Parameters
 

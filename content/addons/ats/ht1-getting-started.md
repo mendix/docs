@@ -65,7 +65,7 @@ Only the Project Administrator role has the rights to edit the settings in **Con
 
 To start configuring your project, click **Configuration** in the navigation bar on the left to open the **Configuration** page. This page contains the **Project**, **Selenium**, and **Applications** tabs.
 
-![](attachments/ht1-getting-started/configuration-ht1-getting-started.png)
+![](attachments/ht1-getting-started/configuration-getting-started.png)
 
 ### 4.1 Project Tab
 
@@ -273,7 +273,7 @@ When you click **Run**, the **Monitoring / Results** page will open.
 
 Once your test case is executed, the result is shown here. For more information on results, see [Monitoring](rg1-monitoring).
 
-You have now finished the getting started guide for ATS. Please check the [how-to's](ht1) and [best practices](/addons/ats/bestpractices/bp-version-1/bp-version-1) for more information.
+You have now finished the getting started guide for ATS. Please check the [how-to's](ht1) and [best practices](bp1) for more information.
 
 Good luck testing your Mendix app with ATS!
 

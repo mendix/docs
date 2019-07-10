@@ -1,7 +1,7 @@
 ---
 title: "SDK FAQ"
 category: "Mendix Platform SDK"
-menu_order: 20
+menu_order: 2
 ---
 
 ## 1 General Questions

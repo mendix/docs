@@ -42,7 +42,7 @@ If you changed any **login\*.html** files, complete the following actions:
 
 * Apply the same changes you did in the old file to the new HTML file
 * Confirm the **bootstrap.min.css** and **mxui.css** imports are gone (if they are not, delete them)
-* Make sure you do not import `styles/css/lib/lib.css` anymore [todo: discuss this to edit it]
+* Make sure you do not import `styles/css/lib/lib.css` anymore
 * Place either `<link*rel*="stylesheet" *type*="text/css" *href*="styles/web/css/main.css?{{cachebust}}">` or `{{themecss}}` inside of the `<head></head>` tags
 
 ### 2.2 Working with JSON Files

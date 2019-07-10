@@ -40,9 +40,13 @@ Mendix Studio Pro contains the following polyfills from [Core JS](https://github
 * **core-js/fn/string/starts-with**
 * **core-js/fn/string/ends-with**
 * **core-js/fn/string/pad-end**
-* **core-js/es6/promise**
-* **core-js/es6/symbol**
-* **core-js/es6/map**
+* **core-js/features/string/includes**
+* **core-js/features/promise**
+* **core-js/features/symbol**
+* **core-js/features/set**
+* **core-js/features/map**
+
+Mendix Studio Pro also contains a polyfill for Mozilla's [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API).
 
 ### 2.1 Handling Input{#handlinginput}
 
@@ -215,12 +219,7 @@ Use the following code for loading platform-shipped dependencies (please note th
 
 ```javascript
 // Synchronous libs that are already loaded
-var dojoTopic = require("dojo/topic");
-
-// Asynchonous libs that need to loaded asynchronous
-require([ "Noty" ], function (Noty) {
-    // do you stuff
-});    
+var lang = require("mendix/lang");
 ```
 
 The following libraries are provided by the Mendix Client:

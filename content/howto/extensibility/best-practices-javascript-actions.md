@@ -23,8 +23,6 @@ JavaScript actions are run in the browser, and each browser version has its own 
 
 Older browsers might not have the new ES6 functions implemented, so be careful copying and pasting modern sample code from the internet, especially when IE11 must be supported. Some ECMAScript 6 functions are polyfilled by the Mendix Client.
 
-{{% todo %}}[check with "client" if polyfills are correct]{{% /todo %}} 
-
 Mendix Studio Pro contains the following polyfills from [Core JS](https://github.com/zloirock/core-js):
 
 * **core-js/fn/array/find**
@@ -40,9 +38,13 @@ Mendix Studio Pro contains the following polyfills from [Core JS](https://github
 * **core-js/fn/string/starts-with**
 * **core-js/fn/string/ends-with**
 * **core-js/fn/string/pad-end**
-* **core-js/es6/promise**
-* **core-js/es6/symbol**
-* **core-js/es6/map**
+* **core-js/features/string/includes**
+* **core-js/features/promise**
+* **core-js/features/symbol**
+* **core-js/features/set**
+* **core-js/features/map**
+
+Mendix Studio Pro also contains a polyfill for Mozilla's [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API).
 
 ### 2.1 Handling Input{#handlinginput}
 
@@ -209,18 +211,11 @@ For more information on changing objects, consult the [Set](https://apidocs.mend
 
 #### 2.2.5 Loading Platform-Shipped Dependencies
 
-{{% todo %}}[update code snippet when Andries does]{{% /todo %}} 
-
 Use the following code for loading platform-shipped dependencies (please note the shipped dependencies might vary per Mendix version):
 
 ```javascript
 // Synchronous libs that are already loaded
-var dojoTopic = require("dojo/topic");
-
-// Asynchonous libs that need to loaded asynchronous
-require([ "Noty" ], function (Noty) {
-    // do you stuff
-});    
+var lang = require("mendix/lang");
 ```
 
 The following libraries are provided by the Mendix Client:

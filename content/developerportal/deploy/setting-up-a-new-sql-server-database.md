@@ -28,14 +28,12 @@ As a recovery model, Mendix only requires the **Simple** mode. The functionality
 
 ![](attachments/setting-up-a-new-sql-server-database/18580675.png)
 
-After the database is created, the Mendix Platform can initiate the initial setup and prepare all the tables and functions for usage by the platform. When starting the platform for the first time, there are two queries that require elevated privileges from a `sysadmin` role. The `sysadmin` role can be temporarily assigned to the user, or these queries can be executed by the administrator as well.
-
-There are two more queries that are only executed once, but these privileges are implicitly assigned to the `db_owner` role. As long as the user is `db_owner`, the function and procedure can be created without problems.
+After the database is created, the Mendix Platform can initiate the initial setup and prepare all the tables and functions for usage by the platform. Some of these queries require `sysadmin` privileges. The `sysadmin` role can be temporarily assigned to the user, or these queries can be executed by the administrator. Other queries need privileges which are implicitly assigned to the `db_owner` role. If the user used by the Mendix runtime does not have enough permissions for any of these queries, you can run them manually – see below for more information.
 
 ## 3 Configuring the Read Committed Snapshot Isolation Level
 
 {{% alert type="info" %}}
-You only need to follow these steps if the database user used by the Mendix runtime does not have enough permission to issue the `ALTER DATABASE` command.
+You only need to follow these steps if the database user used by the Mendix runtime does not have enough permission to issue the `ALTER DATABASE` command (usually the `sysadmin` role).
 {{% /alert %}}
 
 The database schema needs to be configured so that the **Read Committed Snapshot** feature is enabled. This can be achieved by executing the following command on the database:
@@ -60,7 +58,7 @@ For Mendix version 7, you only need to perform these steps if the following are 
 
 ### 4.1 Installing SQL Server Extensions
 
-For the correct functioning of Mendix, some SQL Server extensions need to be installed. This can be achieved via the following command, setting the file path to the correct location of your Mendix installation:
+For the correct functioning of Mendix, some SQL Server extensions need to be installed. This can be achieved with the following command, which requires a `sysadmin` or administrator role. Remember to set the file path to the correct location of your Mendix installation:
 
 ```
 CREATE ASSEMBLY [Mendix.SqlServerExtensions] FROM "D:\MyFolder\Mendix\server\runtime\lib\Mendix.SqlServerExtensions.dll" WITH PERMISSION_SET = SAFE;

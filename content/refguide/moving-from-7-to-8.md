@@ -24,12 +24,16 @@ The following sub-sections explain the steps to take in converting your app proj
 
 Make sure that you have either committed your latest changes to Team Server, or taken a backup of your local project before you start the conversion.
 
-### 2.2 Upgrade to the Latest Release of Version 7
+### 2.2 Upgrade to the Latest Release of Version 7 {#upgrade}
 
-You should always convert your project from the latest release of Mendix version 7.
+{{% alert type="warning" %}}
+It is technically required for you to upgrade your app project to the latest version of Mendix 7, which is [7.23](/releasenotes/studio-pro/7.23). You can only convert your app project to Mendix 8 from 7.23.x.
+{{% /alert %}}
 
-1. Download the latest version of Desktop Modeler version 7.
-2. Open your app in the latest version of the Desktop Modeler version 7.
+To upgrade to Mendix 7, follow these steps:
+
+1. Download the latest patch release of Desktop Modeler [7.23](/releasenotes/studio-pro/7.23).
+2. Open your app in Desktop Modeler 7.23.x.
 3. Allow it to upgrade the app, if necessary.
 
 ### 2.3 Review Your Mendix 7 Project

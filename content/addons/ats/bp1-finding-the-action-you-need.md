@@ -13,7 +13,7 @@ This document explains the best way for finding the action you need in ATS. This
 4. Retrieving a value from a widget
 5. Asserting values/information
 6. Generating values/information
- 
+
 Select the chapter that covers your situation. If you are not sure what covers your situation, use the widget name to search for an action inside ATS and take a look at what pops up.
 
 Go straight to chapter 7 for a quick summary and action plan.
@@ -25,7 +25,7 @@ When the ATS recorder does not record any steps, you can use this best practice 
 {{% /alert %}}
 
 ## 2 Finding a Widget
- 
+
 In ATS there are many actions for finding a widget. From finding a widget to finding a specific datagrid row. The first chapter explains the generic action for finding a widget. The second chapter explains the actions that conduct a more specific search. The last chapter provides a summary of the first two chapters. The magic word while searching for an action that can find something is "Find".
 
 ### 2.1 Generic Action
@@ -40,7 +40,7 @@ The _Find/Assert Widget_ action works on every widget that has a `mx-name`.
 
 _The Find/Assert Widget Action_
 
-![](attachments/bp1-finding-the-action-you-need/rg1-findassert-widget-action-search-1.png)  
+![](attachments/bp1-finding-the-action-you-need/findassert-widget-action-search-1.png)  
 
 If the generic action does not work check if there is a specific one.
 
@@ -73,7 +73,7 @@ When you want to find a widget always use the _Find/Assert Widget_ action if pos
 If you want to find something more specific inside a widget or the widget does not have a `mx-name`. Then use "Find" in combination with the widget name as displayed in the [Mendix App Store](https://appstore.home.mendix.com/), the Mendix modeler. You can also find the name using the ATS helper.
 
 In case you cannot find a widget due to no unique name or because it is not supported, go to [How to Create Custom Actions](ht1-create-custom-actions).
- 
+
 ## 3 Clicking a Widget
 
  In ATS there are many actions for clicking a widget. From clicking a widget to clicking a specific datagrid row. The first chapter explains the generic action for clicking a widget. The second chapter explains the actions that conduct a more specific click. The last chapter provides a summary of the first two chapters. The magic word while searching for an action that can click something is "Click".
@@ -144,7 +144,7 @@ The **Widget Name** is found using the ATS helper, the value is the **Widget Nam
 ![](attachments/bp1-finding-the-action-you-need/mx-name-ats-helper-cp-1.png)
 
 The _Set Value_ action works on almost every widget that is an input widget.
- 
+
 _The Set Value Action_
 
 ![](attachments/bp1-finding-the-action-you-need/set-value-action-search-1.png)
@@ -200,7 +200,7 @@ The **Widget Name** is found using the ATS helper, the value is the **Widget Nam
 ![](attachments/bp1-finding-the-action-you-need/mx-name-ats-helper-cp-1.png)
 
 The _Get Value_ action works on almost every widget that is an input widget.
- 
+
 _The Get Value Action_
 
 ![](attachments/bp1-finding-the-action-you-need/get-value-action-search-1.png)
@@ -221,13 +221,13 @@ ATS also has a few specific actions for getting a value from an widget. To find 
 
     The solution is to use the following search term, "Get CKEditor". ATS checks all the actions and returns those that match these words. You see there is an action called [_Get CKEditor Value_](rg1-get-ckeditor-value). The  _Get CKEditor Value_ action uses the `mx-name` to return the value displayed in the CKEditor widget.
 
-    ![](attachments/bp1-finding-the-action-you-need/rg1-get-ckeditor-value-action-search-1.png)
+    ![](attachments/bp1-finding-the-action-you-need/get-ckeditor-value-action-search-1.png)
 
 3. Example, you want to get the message displayed in the dialog box widget. You cannot use the _Get Value_ action because there is no `mx-name`.
 
     The solution is to use the following search term "Get Dialog".  ATS checks all the actions and returns those that match these words. You see there is an action called [_Get Dialog Message Text_](rg1-get-dialog-message-text). The  _Get Dialog Message Text_ action uses the dialog as a WebElement to retrieve the message text. You use the _Find/Assert Dialog_ action to get the dialog as a WebEelement.
 
-    ![](attachments/bp1-finding-the-action-you-need/rg1-get-dialog-message-text-action-search-1.png)
+    ![](attachments/bp1-finding-the-action-you-need/get-dialog-message-text-action-search-1.png)
 
 ### 5.3 Summary
 
@@ -250,7 +250,7 @@ The **Widget Name** is found using the ATS helper, the value is the **Widget Nam
 ![](attachments/bp1-finding-the-action-you-need/mx-name-ats-helper-cp-1.png)
 
 The _Assert Value_ action works on almost every widget that is an input widget.
- 
+
 _The Assert Value Action_
 
 ![](attachments/bp1-finding-the-action-you-need/assert-value-action-search-1.png)
@@ -322,7 +322,7 @@ ATS also has a few specific actions for generating values to use in your test ca
 
     The solution is to use the following search term, "Current Date". ATS checks all the actions and returns those that match these words. You see there is an action called [_Get Current DateTime String_](rg1-get-current-datetime-string). The _Get Current DateTime String_ action retrieves the current date and allows you to set the date format.
 
-    ![](attachments/bp1-finding-the-action-you-need/rg1-get-current-datetime-string-action-search-1.png)
+    ![](attachments/bp1-finding-the-action-you-need/get-current-datetime-string-action-search-1.png)
 
 ### 7.3 Summary
 

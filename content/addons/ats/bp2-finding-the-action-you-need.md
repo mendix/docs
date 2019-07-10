@@ -40,7 +40,7 @@ The Find/Assert Widget action works on every widget that has a `mx-name`.
 
 This is the **Find/Assert Widget** action:
 
-![](attachments/bp2-finding-the-action-you-need/rg1-findassert-widget-action-search.png)  
+![](attachments/bp2-finding-the-action-you-need/findassert-widget-action-search.png)  
 
 If the generic action does not work, check if there is a specific one.
 
@@ -245,7 +245,7 @@ The solution in this situation is to use the following search term: "Get InputRe
 In this example, you want to get the value displayed in the CKEditor widget. You cannot use the Get Value action because it does not work.  
 
 The solution in this situation is to use the following search term: "Get CKEditor". ATS checks all the actions and returns those that match these words. There is an action called [Get CKEditor Value](rg1-get-ckeditor-value), which uses the `mx-name` to return the value displayed in the CKEditor widget.
-![](attachments/bp2-finding-the-action-you-need/rg1-get-ckeditor-value-action-search.png)
+![](attachments/bp2-finding-the-action-you-need/get-ckeditor-value-action-search.png)
 
 #### 5.2.3 Example 3
 
@@ -253,7 +253,7 @@ In this example, you want to get the message displayed in the dialog box widget.
 
 The solution in this situation is to use the following search term: "Get Dialog". ATS checks all the actions and returns those that match these words. There is an action called [Get Dialog Message Text](rg1-get-dialog-message-text), which uses the dialog as a WebElement to retrieve the message text. You use the Find/Assert Dialog action to get the dialog as a WebElement.
 
-![](attachments/bp2-finding-the-action-you-need/rg1-get-dialog-message-text-action-search.png)
+![](attachments/bp2-finding-the-action-you-need/get-dialog-message-text-action-search.png)
 
 ### 5.3 Summary
 
@@ -361,7 +361,7 @@ In this example, you want to use today's date in your test case. This makes your
 
 The solution in this situation is to use the following search term: "Current Date". ATS checks all the actions and returns those that match these words. There is an action called [Get Current DateTime String](rg1-get-current-datetime-string), which retrieves the current date and allows you to set the date format.
 
-![](attachments/bp2-finding-the-action-you-need/rg1-get-current-datetime-string-action-search.png)
+![](attachments/bp2-finding-the-action-you-need/get-current-datetime-string-action-search.png)
 
 ### 7.3 Summary
 

@@ -68,4 +68,4 @@ This option is only available for supported Selenium hubs.
 
 With this option, you specify the screen resolution for your test run. For a list of all the supported screen resolutions, see [Supported selenium hub provider section](rg2-supported-selenium-hub-provider).
 
-After you set the run configuration, execute the test case by clicking **Run**, or schedule the test case by clicking **Schedule**. For details on scheduling test cases in ATS, see [Scheduling](schedule).
+After you set the run configuration, execute the test case by clicking **Run**, or schedule the test case by clicking **Schedule**. For details on scheduling test cases in ATS, see [Scheduling](rg2-schedule).

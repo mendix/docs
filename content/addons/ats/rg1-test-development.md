@@ -11,6 +11,6 @@ These are the test development documents:
 *   [Standard Actions Reference](rg1-standard-actions-reference)
 *   [Custom Actions](rg1-custom-actions)
 *   [Selectors](rg1-selectors)
-*   [Best Practices](rg1-bp)
+*   [Best Practices](rg1-best-practices)
 *   [Data Driven Tests](rg1-data-driven-tests)
 *   [Test Case Documentation](rg1-test-case-documentation)

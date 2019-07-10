@@ -148,7 +148,7 @@ You have now created an input parameter. You can add as many input parameters as
 
 8.  For ATS to return the outcome of a test step as an **Output Parameter**, it needs to know what it must return. ATS returns the **Value** connected to the **Set Return Value** action. Now connect the outcome of test step 1 to the **Set Return Value** action.
     
-    ![](attachments/ht1-custom-action-basics/rg1-set-return-value-parameter.png)
+    ![](attachments/ht1-custom-action-basics/set-return-value-parameter.png)
 
     ATS now returns the outcome of test step 1.
   

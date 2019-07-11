@@ -17,9 +17,7 @@ The following image formats are supported: *png*, *jpeg*, *gif*, *bmp*, *svg*. T
 
 ## 3 Custom Images
 
-To use your own images, they must first be added to an image collection. To add an image collection, right-click a module in the **Project Explorer** and select **Add other > Image collection**.
-
-After naming the new image collection, open it and click **Add** in the menu bar to add custom images to your module.
+To use your own images, they must first be added to an [image collection](image-collection). For information on how to create an image collection, see [Image Collection](image-collection). To add images, open an image collection in your module and click **Add** in the menu bar to add custom images to your module.
 
 You can now use these custom images in your app project.
 

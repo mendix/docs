@@ -95,7 +95,7 @@ We've extended ATS with a new simple API. Via this API, you can run your automat
 
 ### More Changes and Fixes
 
-* There's a completely new [ATS Reference Guide](/addons/ats/rg2) for version 2.0.
+* There's a completely new [ATS Reference Guide](/addons/ats/rg2-ats) for version 2.0.
 * We've introduced a new setting per app to schedule the cleanup of your execution logs. The default retention time for your logs is 90 days. The last log of a test case is always kept.
 * We've improved the overall performance by optimizing security rules.
 * Drop-down menus are now configured as part of the parameter where they are used. They are no longer considered independent, and they are only an option for parameters.

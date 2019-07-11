@@ -10,5 +10,6 @@ The reference guide for ATS is categorized according to the ATS version.
 
 ## 2 Main Documents in This Category
 
-* [ATS 2 Reference Guide](rg2)
-* [ATS 1 Reference Guide](rg1)
+* [ATS 2 Reference Guide](rg2-ats)
+* [ATS 1 Reference Guide](rg1-ats)
+

@@ -273,7 +273,7 @@ When you click **Run**, the **Monitoring / Results** page will open.
 
 Once your test case is executed, the result is shown here. For more information on results, see [Monitoring](rg-one-monitoring).
 
-You have now finished the getting started guide for ATS. Please check the [how-to's](ht-one) and [best practices](bp1) for more information.
+You have now finished the getting started guide for ATS. Please check the [how-to's](ht-one) and [best practices](bp-one) for more information.
 
 Good luck testing your Mendix app with ATS!
 

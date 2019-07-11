@@ -6,5 +6,5 @@ menu_order: 10
 
 These are the main documents in this section:
 
-* [Test Case Dependencies](bp2-test-case-dependencies)
-* [Finding the Action You Need](bp2-finding-the-action-you-need)
+* [Test Case Dependencies](bp-two-test-case-dependencies)
+* [Finding the Action You Need](bp-two-finding-the-action-you-need)

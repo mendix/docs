@@ -258,7 +258,7 @@ You have now created your test case using the ATS Recorder.
 
 We advise you to use the recorder as much as possible to add test steps. But, the ATS Recorder might not be able to record certain manual test steps. So, we advise to add steps in the following order:
 * Record your manual test steps using the ATS Recorder
-* Adding test steps using the ATS Helper, see [Finding the action you need](bp2-finding-the-action-you-need).
+* Adding test steps using the ATS Helper, see [Finding the action you need](bp-two-finding-the-action-you-need).
 * Create a custom action, see [Create custom action](ht-two-create-custom-actions).
 
 ## 6 Next Up

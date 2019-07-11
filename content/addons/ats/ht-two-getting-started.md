@@ -144,7 +144,7 @@ To create a test case, follow these steps:
 Now that you have created a test case, the next step is to configure your test case and start adding test steps. ATS provides two different tools to help add test steps: ATS helper (Setup step manually) and ATS recorder (Record step). We advise you to use the recorder as much as possible to add test steps. But, the ATS Recorder might not be able to record certain manual test steps. So, we advise to add steps in the following order:
 
 * Record your manual test steps using the ATS Recorder
-* Adding test steps using the ATS Helper, see [Finding the action you need](bp2-finding-the-action-you-need).
+* Adding test steps using the ATS Helper, see [Finding the action you need](bp-two-finding-the-action-you-need).
 * Create a custom action, see [Create custom action](ht-two-create-custom-actions).
 
 Before you start adding test steps, add the ATS Helper and ATS Recorder tools:

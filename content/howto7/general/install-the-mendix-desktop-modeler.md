@@ -68,7 +68,7 @@ This concludes the how-to about installing the Mendix Desktop Modeler.
 
 ## 5 Troubleshooting
 
-Some people run into problems when installing the Desktop Modeler. A work-around can be to restart your system and install the prerequisites separately if you don't already have them installed. 
+Some people run into problems when installing the Desktop Modeler. One work-around is to restart your system and install the prerequisites separately if they are not already installed. 
 
 For a 64-bit system the prerequisites are:
 
@@ -84,7 +84,7 @@ For a 32-bit system the prerequisites are:
 * Microsoft Visual C++ 2010 SP1 Redistributable Package (http://download.microsoft.com/download/C/6/D/C6D0FD4E-9E53-4897-9B91-836EBA2AACD3/vcredist_x86.exe)
 * Microsoft Visual C++ 2013 Redistributable Package (http://download.microsoft.com/download/2/E/6/2E61CFA4-993B-4DD4-91DA-3737CD5CD6E3/vcredist_x86.exe)
 
-Based on the error message you get from the installer you can decide to install a separate prerequisite, or you can try to manually install them all.
+Based on the error message you get from the installer you can decide to install a single prerequisite, or you can try to manually install them all.
 
 After that you can retry installing the Desktop Modeler.
 

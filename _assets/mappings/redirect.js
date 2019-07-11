@@ -2258,7 +2258,7 @@ module.exports = {
       to: "/addons/apm/rg-two-apm"
     },
 	{
-      from: "/apm/",
+      from: "/apm/index",
       to: "/addons/apm/rg-apm"
     },
 	{
@@ -2266,11 +2266,11 @@ module.exports = {
       to: "/addons/apm/rg-apm"
     },
 	{
-      from: "/aqm/",
+      from: "/aqm/index",
       to: "/addons/aqm/overview"
     },
 	{
-      from: "/ats/",
+      from: "/ats/index",
       to: "/addons/ats/rg-ats"
     },	
 	// {

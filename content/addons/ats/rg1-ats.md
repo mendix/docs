@@ -1,6 +1,6 @@
 ---
 title: "ATS 1 Reference Guide"
-parent: "rg"
+parent: "rg-ats"
 menu_order: 20
 ---
 

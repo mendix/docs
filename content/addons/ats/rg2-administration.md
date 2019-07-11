@@ -1,6 +1,6 @@
 ---
 title: "Administration"
-parent: "rg2"
+parent: "rg2-ats"
 description: "Describes a tenant administrator role in ATS."
 tags: ["ats", "administrator", "administration"]
 ---

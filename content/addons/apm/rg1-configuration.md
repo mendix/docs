@@ -1,6 +1,6 @@
 ---
 title: "Configuration"
-parent: "rg1"
+parent: "rg1-apm"
 ---
 
 This chapter describes the global configuration and the **Start/Stop** dialog. Both can be selected from the header. The header also has a button that opens the documentation and a button that returns you to the home page of the app to which the APM tool has been added.

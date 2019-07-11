@@ -1,6 +1,6 @@
 ---
 title: "APM 2 Reference Guide"
-parent: "rg"
+parent: "rg-apm"
 menu_order: 10
 ---
 

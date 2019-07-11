@@ -1,6 +1,6 @@
 ---
 title: "Local Profile"
-parent: "rg2"
+parent: "rg2-ats"
 description: "Describes a local profile in ATS."
 tags: ["ats", "profile", "password"]
 ---

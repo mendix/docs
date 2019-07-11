@@ -1,6 +1,6 @@
 ---
 title: "Apps"
-parent: "rg2"
+parent: "rg2-apm"
 ---
 
 ## 1 Apps Overview

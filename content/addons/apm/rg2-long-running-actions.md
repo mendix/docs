@@ -1,6 +1,6 @@
 ---
 title: "Long-Running Actions"
-parent: "rg2"
+parent: "rg2-apm"
 ---
 
 After clicking the **Long running microflow** indicator, a pop-up window with long-running microflows will be displayed.

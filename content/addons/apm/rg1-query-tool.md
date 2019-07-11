@@ -1,6 +1,6 @@
 ---
 title: "Query Tool"
-parent: "rg1"
+parent: "rg1-apm"
 ---
 To collect database or application information the Query Tool has been introduced.
 

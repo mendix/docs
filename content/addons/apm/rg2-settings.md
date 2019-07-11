@@ -1,6 +1,6 @@
 ---
 title: "Settings"
-parent: "rg2"
+parent: "rg2-apm"
 ---
 
 The settings displayed in this screenshot are available for an environment:

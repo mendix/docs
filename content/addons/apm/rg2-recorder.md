@@ -1,6 +1,6 @@
 ---
 title: "Performance Recorder"
-parent: "rg2"
+parent: "rg2-apm"
 ---
 
 ## 1 Introduction

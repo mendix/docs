@@ -1,6 +1,6 @@
 ---
 title: "Projects"
-parent: "rg1"
+parent: "rg1-ats"
 ---
 ## 1 Introduction
 

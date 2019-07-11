@@ -1,6 +1,6 @@
 ---
 title: "CI/CD API"
-parent: "rg2"
+parent: "rg2-ats"
 ---
 
 ## 1 CI/CD API

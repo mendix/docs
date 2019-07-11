@@ -1,6 +1,6 @@
 ---
 title: "Logs"
-parent: "rg2"
+parent: "rg2-apm"
 ---
 
 ## 1 Logs Overview

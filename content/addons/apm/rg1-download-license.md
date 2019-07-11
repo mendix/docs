@@ -1,6 +1,6 @@
 ---
 title: "Download and License"
-parent: "rg1"
+parent: "rg1-apm"
 ---
 
 ## Download

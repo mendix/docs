@@ -1,6 +1,6 @@
 ---
 title: "Data Management"
-parent: "rg1"
+parent: "rg1-ats"
 ---
 
 ## 1 Repository

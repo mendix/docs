@@ -1,6 +1,6 @@
 ---
 title: "Dashboard"
-parent: "rg2"
+parent: "rg2-apm"
 ---
 
 The dashboard of an environment shows real-time information regarding the following

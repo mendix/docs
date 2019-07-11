@@ -1,6 +1,6 @@
 ---
 title: "Selectors"
-parent: "rg2"
+parent: "rg2-ats"
 ---
 
 ## 1 Introduction

@@ -1,6 +1,6 @@
 ---
 title: "Monitoring"
-parent: "rg1"
+parent: "rg1-ats"
 ---
 
 ## Test Results

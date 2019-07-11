@@ -1,6 +1,6 @@
 ---
 title: "Configuration"
-parent: "rg1"
+parent: "rg1-ats"
 ---
 
 On the configuration page under the **Project** tab you can see the current project settings. You can change the settings and add users or libraries to your project by clicking the **Edit Project Settings** button.

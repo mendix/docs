@@ -1,6 +1,6 @@
 ---
 title: "Dashboard"
-parent: "rg1"
+parent: "rg1-apm"
 ---
 The Application Performance Monitor (APM) dashboard is the home screen of APM:
 

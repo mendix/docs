@@ -2254,20 +2254,14 @@ module.exports = {
       to: "/addons/apm-addon/rg-two-apm"
     },
 	{
-      from: "/apm/",
-      to: "/addons/apm-addon/index"
+	 from: "~*\\\/apm\\\/",
+	 to: "/addons/apm-addon/index",
+	 exact: true
     },
 	{
-      from: "/addons/APM/",
-      to: "/addons/apm-addon/index"
-    },
-	{
-      from: "/aqm/",
-      to: "/addons/aqm-addon/index"
-    },
-	{
-      from: "/ats/",
-      to: "/addons/ats-addon/index"
+	 from: "~*\\\/ats\\\/",
+	 to: "/addons/ats-addon/index",
+	 exact: true
     },	
 	// {
     //   from: "~*\\\/apm\\\/use-cases\\\/uc",

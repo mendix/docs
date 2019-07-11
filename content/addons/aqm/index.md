@@ -2,8 +2,13 @@
 title: "AQM Guide"
 ---
 
+## 1 Introduction
+
 Mendix Application Quality Monitor (AQM) is an application analysis add-on for the Mendix Platform.
 
-The *AQM Guide* contains the following documentation: 
+## 2 Main Sections in This Guide
 
-{{% category_block %}}
+This guide includes the following sections: 
+
+* [AQM Overview](overview)
+

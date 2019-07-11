@@ -17,7 +17,7 @@ Before starting this how-to, make sure you are familiar with the following:
 * CICD
 * Using REST services
 * [Mendix Unit Testing module](https://appstore.home.mendix.com/link/app/390/) (only if used in your application)
-* [Mendix Application Test Suite](/addons/ats/) (only if used in your application)
+* [Mendix Application Test Suite](/addons/ats-addon/) (only if used in your application)
 
 ## 3 The Pipeline
 
@@ -116,7 +116,7 @@ You can also (manually) create a web service that exposes the standard unit stru
 
 #### 3.4.2 Mendix Application Test Suite (ATS) Tests
 
-ATS has its own [API for CICD](/addons/ats/rg-two-cicd-api#3-api). To use this, follow the steps in the **ATS and CI/CD** section of [How to Use ATS in Combination with CI/CD](/addons/ats/ht-two-ats-and-ci-cd#four).
+ATS has its own [API for CICD](/addons/ats-addon/rg-two-cicd-api#3-api). To use this, follow the steps in the **ATS and CI/CD** section of [How to Use ATS in Combination with CI/CD](/addons/ats-addon/ht-two-ats-and-ci-cd#four).
 
 ### 3.5 Next Steps
 

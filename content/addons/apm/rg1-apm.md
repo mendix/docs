@@ -10,17 +10,17 @@ The Application Performance Monitor (APM) is a solution that helps to analyze pe
 
 This is the reference guide for the Mansystems APM for Mendix. It has the following chapters:
 
-*   [Dashboard](rg1-dashboard)
-*   [Configuration](rg1-configuration)
-*   [Log Tool](rg1-log-tool)
-*   [Trap Tool](rg1-trap-tool)
-*   [Statistics Tool](rg1-statistics-tool)
-*   [Performance Tool](rg1-performance-tool)
-*   [JVM Browser](rg1-jvm-browser)
-*   [Measurements Tool](rg1-measurements-tool)
-*   [Triggers](rg1-triggers)
-*   [Query Tool](rg1-query-tool)
-*   [Load Test Recorder](rg1-load-test-recorder)
+*   [Dashboard](rg-one-dashboard)
+*   [Configuration](rg-one-configuration)
+*   [Log Tool](rg-one-log-tool)
+*   [Trap Tool](rg-one-trap-tool)
+*   [Statistics Tool](rg-one-statistics-tool)
+*   [Performance Tool](rg-one-performance-tool)
+*   [JVM Browser](rg-one-jvm-browser)
+*   [Measurements Tool](rg-one-measurements-tool)
+*   [Triggers](rg-one-triggers)
+*   [Query Tool](rg-one-query-tool)
+*   [Load Test Recorder](rg-one-load-test-recorder)
 
 The sections below provide an introduction to APM. There is an explanation of what APM is, which tools are in the APM suite, and what they are used for. APM consists of the following tools:
 
@@ -58,7 +58,7 @@ The APM Statistics tool collects statistical data about microflows and client AP
 
 This is the statistics tool (for load balanced environments you see the server where the microflow runs):
 
-![](attachments/rg1-statistics-tool/Overview.png)
+![](attachments/rg-one-statistics-tool/Overview.png)
 
 ## 4 The Performance Tool to Record Microflows
 
@@ -66,15 +66,15 @@ When support wants to investigate a performance issue, either proactively throug
 
 This is the call tree, which provides an overview of what happens, showing the called microflows and one iteration of a loop, filtered by duration:
 
-![](attachments/rg1-introduction/Performance_Tool_Tree_View.png)
+![](attachments/rg-one-introduction/Performance_Tool_Tree_View.png)
 
 Below is the performance tool output. You can double-click on all actions and in the case of a microflow call, you can browse to the next microflow. In the case of loops you will see the individual iterations.
 
-![](attachments/rg1-introduction/Performance_Tool_Browse_Microflow.png)
+![](attachments/rg-one-introduction/Performance_Tool_Browse_Microflow.png)
 
 This is the SQL statements during an action:
 
-![](attachments/rg1-introduction/Performance_Tool_Browse_Actions.png)
+![](attachments/rg-one-introduction/Performance_Tool_Browse_Actions.png)
 
 ## 5 The Trap Tool Is Your Flight Data Recorder
 
@@ -88,7 +88,7 @@ The measurements can be used to trigger events on thresholds. For example, if mo
 
 The trigger can be to trap logging, or to execute a microflow, for example, to send an email or to make a heap dump.
 
-![](attachments/rg1-introduction/Measurements_Tool.png)
+![](attachments/rg-one-introduction/Measurements_Tool.png)
 
 ## 7 JVM Browser
 

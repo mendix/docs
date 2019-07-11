@@ -30,7 +30,7 @@ In ATS there are many actions for finding a widget, from generically finding a w
 
 ### 2.1 Generic Action
 
-When you want to find a widget, the main choice is always the [Find/Assert Widget](rg1-findassert-widget) action. It finds the widget you need using the `mx-name` of the widget. 
+When you want to find a widget, the main choice is always the [Find/Assert Widget](rg-one-findassert-widget) action. It finds the widget you need using the `mx-name` of the widget. 
 
 ATS uses the `widget name` parameter instead of  `mx-name`. The widget name is found using the ATS helper, and the value is the `widget name`:
 
@@ -52,7 +52,7 @@ When you are looking for a specific widget or content of that widget, use the wi
 
 In this example, you want to find a row inside a data grid widget. You can use the Find/Assert Widget action in combination with the column name, but that doesn't work if there are multiple data grids.
 
-The solution in this situation is to use the following search term: "Find Datagrid". ATS checks all the actions and returns those that match these words. There is an action called [Find/Assert DataGrid Row](rg1-findassert-datagrid-row), which enables searching for a data grid row containing a specific value in a specific column. This action also works on list views and template grids.
+The solution in this situation is to use the following search term: "Find Datagrid". ATS checks all the actions and returns those that match these words. There is an action called [Find/Assert DataGrid Row](rg-one-findassert-datagrid-row), which enables searching for a data grid row containing a specific value in a specific column. This action also works on list views and template grids.
 
 ![](attachments/bp2-finding-the-action-you-need/find-datagrid-example.png)
 
@@ -60,7 +60,7 @@ The solution in this situation is to use the following search term: "Find Datagr
 
 In this example, you want to find the check box in a simple check box set selector widget. You cannot use the Find/Assert Widget action here, because the check box does not have its own `mx-name`. It is part of the simple check box set selector widget.
 
-The solution in this situation is to use the following search term: "Find Simple Checkbox Set Selector". ATS checks all the actions and returns those that match these words. There is an action called [Find Simple Checkbox Set Selector](rg1-find-simple-checkbox-set-selector), which finds the check box based on the `widget name` of the entire widget and the value displayed by the check box.
+The solution in this situation is to use the following search term: "Find Simple Checkbox Set Selector". ATS checks all the actions and returns those that match these words. There is an action called [Find Simple Checkbox Set Selector](rg-one-find-simple-checkbox-set-selector), which finds the check box based on the `widget name` of the entire widget and the value displayed by the check box.
 
 ![](attachments/bp2-finding-the-action-you-need/find-simple-checkbox-set-selector-example.png)
 
@@ -68,7 +68,7 @@ The solution in this situation is to use the following search term: "Find Simple
 
 In this example, you want to find a dialog box based on the title or text inside. You cannot use the Find/Assert Widget action, because the dialog box does not have a `mx-name`.
 
-The solution in this situation is to use the following search term: "Find Dialog". ATS checks all the actions and returns those that match these words. There is an action called [Find/Assert Dialog](rg1-findassert-dialog), which can find a dialog based on title, text, or only a dialog. 
+The solution in this situation is to use the following search term: "Find Dialog". ATS checks all the actions and returns those that match these words. There is an action called [Find/Assert Dialog](rg-one-findassert-dialog), which can find a dialog based on title, text, or only a dialog. 
 
 ![](attachments/bp2-finding-the-action-you-need/find-dialog-example.png)
 
@@ -78,7 +78,7 @@ When you want to find a widget, always use the Find/Assert Widget action if poss
 
 If you want to find something more specific inside a widget or the widget does not have an `mx-name`, use "Find" in combination with the widget name as displayed in the [Mendix App Store](https://appstore.home.mendix.com/) and Mendix Studio Pro. You can also find the name using the ATS helper.
 
-If you cannot find a widget because it has no unique name or because it is not supported, see [How to Create Custom Actions](ht1-create-custom-actions) for more information.
+If you cannot find a widget because it has no unique name or because it is not supported, see [How to Create Custom Actions](ht-one-create-custom-actions) for more information.
 
  ## 3 Clicking a Widget
 
@@ -86,7 +86,7 @@ In ATS, there are many actions for clicking a widget, from generically clicking 
 
  ### 3.1 Generic Action
 
-When you want to click a widget, the main choice is always the [Click Widget](rg1-click-widget) action. It clicks the widget you need using the `mx-name` of the widget.
+When you want to click a widget, the main choice is always the [Click Widget](rg-one-click-widget) action. It clicks the widget you need using the `mx-name` of the widget.
 
 ATS uses the `widget name` parameter instead of `mx-name`. The widget name is found using the ATS helper, and the value is the `widget name`:
 
@@ -108,7 +108,7 @@ ATS also has a few specific click actions. To find these, use the search term "C
 
 In this example, you want to click the **Load more** button inside a list view widget. You cannot use the Click Widget action, because the button does not have its own `mx-name`. It is part of the list view widget.
 
-The solution in this situation is to use one of the following search terms: "Click Widget Button" because you want to click a button that is part of a widget. ATS checks all the actions and returns those that match these words. There is an action called [Click Widget Button](rg1-click-widget-button), which uses the `mx-name` of the widget and the button type to click the right button. In this case, select the "load more" type.
+The solution in this situation is to use one of the following search terms: "Click Widget Button" because you want to click a button that is part of a widget. ATS checks all the actions and returns those that match these words. There is an action called [Click Widget Button](rg-one-click-widget-button), which uses the `mx-name` of the widget and the button type to click the right button. In this case, select the "load more" type.
 
 ![](attachments/bp2-finding-the-action-you-need/click-widget-button-action-search.png)
 
@@ -116,7 +116,7 @@ The solution in this situation is to use one of the following search terms: "Cli
 
 In this example, you want to click a specific data grid row inside a data grid. You can use the Click Widget action in combination with the column name, but if there are multiple data grids, ATS cannot distinguish them.
 
-The solution in this situation is to use the following search term: "Click DataGrid".  ATS checks all the actions and returns those that match these words. There is an action called [Click DataGrid Row](rg1-click-datagrid-row). which enables you to click a data grid row containing a specific value in a specific column. This action also works on list views and template grids.
+The solution in this situation is to use the following search term: "Click DataGrid".  ATS checks all the actions and returns those that match these words. There is an action called [Click DataGrid Row](rg-one-click-datagrid-row). which enables you to click a data grid row containing a specific value in a specific column. This action also works on list views and template grids.
 
 ![](attachments/bp2-finding-the-action-you-need/click-datagrid-row-action-search.png)
 
@@ -124,7 +124,7 @@ The solution in this situation is to use the following search term: "Click DataG
 
 In this example, you want to click a menu item in a menu bar widget. You cannot use the Click Widget action, because the menu item does not have its own `mx-name`. It is part of the menu bar widget.
 
-The solution in this situation is to use the following search term: "Click menu". ATS checks all the actions and returns those that match these words. There is an action called [Click Menu Item](rg1-click-menu-item), which clicks on a menu item inside a menu bar widget using the caption.
+The solution in this situation is to use the following search term: "Click menu". ATS checks all the actions and returns those that match these words. There is an action called [Click Menu Item](rg-one-click-menu-item), which clicks on a menu item inside a menu bar widget using the caption.
 
 ![](attachments/bp2-finding-the-action-you-need/click-menu-item-action-search.png)
 
@@ -132,7 +132,7 @@ The solution in this situation is to use the following search term: "Click menu"
 
 In this example, you want to click an element you found in a previous step. You cannot use the Click Widget action, because it does not accept an element as input.
 
-The solution in this situation is to use the following search term: "Click/Doubleclick". ATS checks all the actions and returns those that match these words. You see there is an action called [Click/Doubleclick](rg1-clickdoubleclick), which you should use when you want to click an element found in a previous step.
+The solution in this situation is to use the following search term: "Click/Doubleclick". ATS checks all the actions and returns those that match these words. You see there is an action called [Click/Doubleclick](rg-one-clickdoubleclick), which you should use when you want to click an element found in a previous step.
 
 ![](attachments/bp2-finding-the-action-you-need/clickdoubleclick-action-search.png)
 
@@ -142,7 +142,7 @@ When you want to click a widget, always use the Click Widget action if possible.
 
 If you want to click something more specific inside a widget or the widget does not have an `mx-name`, use "Click" in combination with the widget name as displayed in the [Mendix App Store](https://appstore.home.mendix.com/) and Mendix Studio Pro. You can also find the name using the ATS helper.
 
-If you cannot click a widget because it has no unique name or because it is not supported, see [How to Create Custom Actions](ht1-create-custom-actions) for more information.
+If you cannot click a widget because it has no unique name or because it is not supported, see [How to Create Custom Actions](ht-one-create-custom-actions) for more information.
 
 ## 4 Setting an Input Widget
 
@@ -150,7 +150,7 @@ In ATS, there are several actions for setting an input widget, from a simple act
 
 ### 4.1 Generic Action
 
-When you want to set an input widget, the main choice is always the [Set Value](rg1-set-value) action. It sets the input widget using the `mx-name` of the widget and the value to set. 
+When you want to set an input widget, the main choice is always the [Set Value](rg-one-set-value) action. It sets the input widget using the `mx-name` of the widget and the value to set. 
 
 ATS uses the `widget name` parameter instead of `mx-name`. The widget name is found using the ATS helper, and the value is the `widget name`:
 
@@ -172,7 +172,7 @@ ATS also has a few specific actions for setting an input widget. To find these, 
 
 In this example, you want to set the value of a check box widget, but you want to set it to a specific state. You cannot use the Set Value action because it does not work.
 
-The solution in this situation is to use the following search term: "Set Checkbox". ATS checks all the actions and returns those that match these words. There is an action called [Set Checkbox Value](rg1-set-checkbox-value), which uses the `mx-name` of the widget and the Boolean value you set to check or clear the check box.
+The solution in this situation is to use the following search term: "Set Checkbox". ATS checks all the actions and returns those that match these words. There is an action called [Set Checkbox Value](rg-one-set-checkbox-value), which uses the `mx-name` of the widget and the Boolean value you set to check or clear the check box.
 
 ![](attachments/bp2-finding-the-action-you-need/set-checkbox-value-action-search.png)
 
@@ -180,7 +180,7 @@ The solution in this situation is to use the following search term: "Set Checkbo
 
 In this example, you want to set the BooleanSlider widget to certain value. You cannot use the Set Value action because it does not work. 
 
-The solution in this situation is to use the following search term: "Set BooleanSlider". ATS checks all the actions and returns those that match these words. There is an action called [Set BooleanSlider Value](rg1-set-booleanslider-value), which uses the `mx-name` of the widget and the value to which you want to set the slider.
+The solution in this situation is to use the following search term: "Set BooleanSlider". ATS checks all the actions and returns those that match these words. There is an action called [Set BooleanSlider Value](rg-one-set-booleanslider-value), which uses the `mx-name` of the widget and the value to which you want to set the slider.
 
 ![](attachments/bp2-finding-the-action-you-need/set-booleanslider-value-action-search.png)
 
@@ -188,7 +188,7 @@ The solution in this situation is to use the following search term: "Set Boolean
 
 In this example, you want to set a radio button inside a GridSelector widget. You cannot use the Set Value, because the radio button does not have its own `mx-name`. It is part of the GridSelector widget.
 
-The solution in this situation is to use the following search term: "Set Grid Selector". ATS checks all the actions and returns those that match these words. There is an action called [Set Grid Selector Value](rg1-set-grid-selector-radiobutton-checked), which uses the `mx-name` of the widget, column caption, and row caption to locate the radio button.
+The solution in this situation is to use the following search term: "Set Grid Selector". ATS checks all the actions and returns those that match these words. There is an action called [Set Grid Selector Value](rg-one-set-grid-selector-radiobutton-checked), which uses the `mx-name` of the widget, column caption, and row caption to locate the radio button.
 
 ![](attachments/bp2-finding-the-action-you-need/set-grid-selector-radiobutton-action-search.png)
 
@@ -196,7 +196,7 @@ The solution in this situation is to use the following search term: "Set Grid Se
 
 In this example, you want to set an input reference selector widget. You cannot use the Set Value action because it does not work. 
 
-The solution in this situation is to use the following search term: "Set InputReferenceSelector". ATS checks all the actions and returns those that match these words. There is an action called [Set InputReferenceSelector Value](rg1-set-inputreferenceselector-value), which uses the `mx-name` and the value to which you set the InputReferenceSelector widget.
+The solution in this situation is to use the following search term: "Set InputReferenceSelector". ATS checks all the actions and returns those that match these words. There is an action called [Set InputReferenceSelector Value](rg-one-set-inputreferenceselector-value), which uses the `mx-name` and the value to which you set the InputReferenceSelector widget.
 
 ![](attachments/bp2-finding-the-action-you-need/set-inputreferenceselector-value-action-search.png)
 
@@ -206,7 +206,7 @@ When you want to set an input widget, always use the Set Value action if possibl
 
 If you want to set a special input widget or the widget does not have an `mx-name`, use "Click" in combination with the widget name as displayed in the [Mendix App Store](https://appstore.home.mendix.com/) and Mendix Studio Pro. You can also find the name using the ATS helper.
 
-If you cannot set an input widget because it has no unique name or because it is not supported, see [How to Create Custom Actions](ht1-create-custom-actions) for more information.
+If you cannot set an input widget because it has no unique name or because it is not supported, see [How to Create Custom Actions](ht-one-create-custom-actions) for more information.
 
 ## 5 Retrieving a Value from a Widget
 
@@ -214,7 +214,7 @@ In ATS, there are several actions for getting a value from a widget. The first p
 
 ### 5.1 Generic Action
 
-When you want to get a value from a widget, the main choice is always the [Get Value](rg1-get-value) action. It retrieves the value of a widget using the `mx-name` of the widget.
+When you want to get a value from a widget, the main choice is always the [Get Value](rg-one-get-value) action. It retrieves the value of a widget using the `mx-name` of the widget.
 
 ATS uses the `widget name` parameter instead of  `mx-name`. The widget name is found using the ATS helper, and the value is the `widget name`:
 
@@ -236,7 +236,7 @@ ATS has a few specific actions for getting a value from an widget. To find these
 
 In this example, you want to get the value of an InputReferenceSelector widget. You cannot use the Get Value action, because it does not work. 
 
-The solution in this situation is to use the following search term: "Get InputReferenceSelector". ATS checks all the actions and returns those that match these words. There is an action called [Get InputReferenceSelector](rg1-get-inputreferenceselector-value), which returns the value the InputReferenceSelector widget is set to using the `mx-name`. 
+The solution in this situation is to use the following search term: "Get InputReferenceSelector". ATS checks all the actions and returns those that match these words. There is an action called [Get InputReferenceSelector](rg-one-get-inputreferenceselector-value), which returns the value the InputReferenceSelector widget is set to using the `mx-name`. 
 
 ![](attachments/bp2-finding-the-action-you-need/get-inputreferenceselector-value-action-search.png)
 
@@ -244,14 +244,14 @@ The solution in this situation is to use the following search term: "Get InputRe
 
 In this example, you want to get the value displayed in the CKEditor widget. You cannot use the Get Value action because it does not work.  
 
-The solution in this situation is to use the following search term: "Get CKEditor". ATS checks all the actions and returns those that match these words. There is an action called [Get CKEditor Value](rg1-get-ckeditor-value), which uses the `mx-name` to return the value displayed in the CKEditor widget.
+The solution in this situation is to use the following search term: "Get CKEditor". ATS checks all the actions and returns those that match these words. There is an action called [Get CKEditor Value](rg-one-get-ckeditor-value), which uses the `mx-name` to return the value displayed in the CKEditor widget.
 ![](attachments/bp2-finding-the-action-you-need/get-ckeditor-value-action-search.png)
 
 #### 5.2.3 Example 3
 
 In this example, you want to get the message displayed in the dialog box widget. You cannot use the Get Value action because there is no `mx-name`.
 
-The solution in this situation is to use the following search term: "Get Dialog". ATS checks all the actions and returns those that match these words. There is an action called [Get Dialog Message Text](rg1-get-dialog-message-text), which uses the dialog as a WebElement to retrieve the message text. You use the Find/Assert Dialog action to get the dialog as a WebElement.
+The solution in this situation is to use the following search term: "Get Dialog". ATS checks all the actions and returns those that match these words. There is an action called [Get Dialog Message Text](rg-one-get-dialog-message-text), which uses the dialog as a WebElement to retrieve the message text. You use the Find/Assert Dialog action to get the dialog as a WebElement.
 
 ![](attachments/bp2-finding-the-action-you-need/get-dialog-message-text-action-search.png)
 
@@ -261,7 +261,7 @@ When you want to get a value from a widget, always use the Get Value action if p
 
 If you want to get the value from a specific widget or the widget does not have an `mx-name`, use "Get" in combination with the widget name as displayed in the [Mendix App Store](https://appstore.home.mendix.com/) and Mendix Studio Pro. You can also find the name using the ATS helper.
 
-If you cannot get the value from a widget because it has no unique name or because it is not supported, see [How to Create Custom Actions](ht1-create-custom-actions) for more information.
+If you cannot get the value from a widget because it has no unique name or because it is not supported, see [How to Create Custom Actions](ht-one-create-custom-actions) for more information.
 
 ## 6 Asserting Values/Information
 
@@ -269,7 +269,7 @@ In ATS, there are several actions for asserting values. The first part of this s
 
 ### 6.1 Generic Action
 
-When you want to assert a value inside a widget, the main choice is always the [Assert Value](rg1-assert-value) action. It asserts the value of a widget using the `mx-name` of the widget.
+When you want to assert a value inside a widget, the main choice is always the [Assert Value](rg-one-assert-value) action. It asserts the value of a widget using the `mx-name` of the widget.
 
 ATS uses the `widget name` parameter instead of `mx-name`. The widget name is found using the ATS helper, and the value is the `widget name`:
 
@@ -291,7 +291,7 @@ ATS has a few specific actions for asserting values in a widget or inside ATS. T
 
 In this example, you want to assert that a specific validation message appears. You cannot use the Assert Value action, because that would assert the value inside the widget and not the validation message.
 
-The solution in this situation is to use the following search term: "Assert Validation". ATS checks all the actions and returns those that match these words. There is an action called [Assert Validation Message](rg1-assert-validation-message), which uses the `mx-name` of a widget to assert the validation message that appears in the widget.
+The solution in this situation is to use the following search term: "Assert Validation". ATS checks all the actions and returns those that match these words. There is an action called [Assert Validation Message](rg-one-assert-validation-message), which uses the `mx-name` of a widget to assert the validation message that appears in the widget.
 
 ![](attachments/bp2-finding-the-action-you-need/assert-validation-message-action-search.png)
     
@@ -299,7 +299,7 @@ The solution in this situation is to use the following search term: "Assert Vali
 
 In this example, you want to assert that the right page has opened. You cannot use the Assert Value, because there is no `mx-name` that you can use.
 
-The solution in this situation is to use the following search term: "Assert Page". ATS checks all the actions and returns those that match these words. There is an action called [Assert Current Page](rg1-assert-current-page), which uses the page title to assert that the right page has opened.
+The solution in this situation is to use the following search term: "Assert Page". ATS checks all the actions and returns those that match these words. There is an action called [Assert Current Page](rg-one-assert-current-page), which uses the page title to assert that the right page has opened.
 
 ![](attachments/bp2-finding-the-action-you-need/assert-current-page-action-search.png)
 
@@ -309,7 +309,7 @@ The above examples show actions meant to assert something in your Mendix app. AT
 
 In this example, you want to assert that the outcome of an earlier test step is not the same as a certain value. You cannot use the Assert Value action, because you want to assert a value inside ATS. 
 
-The solution in this situation is to use the following search term: "Assert not equal". ATS checks all the actions and returns those that match these words. There is an action called [Assert Not Equals](rg1-assert-not-equals), which compares two provided values and checks if they are equal or not.
+The solution in this situation is to use the following search term: "Assert not equal". ATS checks all the actions and returns those that match these words. There is an action called [Assert Not Equals](rg-one-assert-not-equals), which compares two provided values and checks if they are equal or not.
 
 ![](attachments/bp2-finding-the-action-you-need/assert-not-equals-action-search.png)
 
@@ -319,7 +319,7 @@ When you want to assert a value from a widget always use the _Assert Value_ acti
 
 If you want to assert a value from a specific widget or the widget does not have a `mx-name`. Then use "Assert" in combination with the widget name as displayed in the [Mendix App Store](https://appstore.home.mendix.com/), Mendix Studio Pro. You can also find the name using the ATS helper.
 
- In case you cannot assert the value from a widget due to no unique name or because it is not supported, go to [How to Create Custom Actions](ht1-create-custom-actions).
+ In case you cannot assert the value from a widget due to no unique name or because it is not supported, go to [How to Create Custom Actions](ht-one-create-custom-actions).
 
 ## 7 Generating Values/Information<a name="GeneratingValuesInformation"></a>
 
@@ -327,7 +327,7 @@ In ATS, there are several actions for generating random or present time values. 
 
 ### 7.1 Generic Action
 
-In some test cases, you want to enter the same value a few times. Instead of entering the same value every time, you can use the [Concatenate String](rg1-concatenate-string) action, which combines the text you enter and returns it so that you can reuse that value in different actions.
+In some test cases, you want to enter the same value a few times. Instead of entering the same value every time, you can use the [Concatenate String](rg-one-concatenate-string) action, which combines the text you enter and returns it so that you can reuse that value in different actions.
 
 It is also used for creating variable selectors. 
 
@@ -343,7 +343,7 @@ ATS also has a few specific actions for generating values to use in your test ca
 
 In this example, you want to have a unique value in your test case. That also makes your test case reusable. 
 
-The solution in this situation is to use the following search term: "Random".  ATS checks all the actions and returns those that match this word. There is an action called [Random String](rg1-random-string), which generates a random value and allows you to set a prefix and/or postfix.
+The solution in this situation is to use the following search term: "Random".  ATS checks all the actions and returns those that match this word. There is an action called [Random String](rg-one-random-string), which generates a random value and allows you to set a prefix and/or postfix.
 
 ![](attachments/bp2-finding-the-action-you-need/random-string-action-search.png)
 
@@ -351,7 +351,7 @@ The solution in this situation is to use the following search term: "Random".  A
 
 In this example, you want to have a unique number value in your test case. That also makes your test case reusable.
 
-The solution in this situation is to use the following search term: "Random". ATS checks all the actions and returns those that match this word. There is an action called [Random Number](rg1-random-number), which generates a random number and allows you to set a minimum and maximum.
+The solution in this situation is to use the following search term: "Random". ATS checks all the actions and returns those that match this word. There is an action called [Random Number](rg-one-random-number), which generates a random number and allows you to set a minimum and maximum.
 
 ![](attachments/bp2-finding-the-action-you-need/random-number-action-search.png)
 
@@ -359,7 +359,7 @@ The solution in this situation is to use the following search term: "Random". AT
 
 In this example, you want to use today's date in your test case. This makes your test case reusable, but you don't want to enter it every time you execute the test case.
 
-The solution in this situation is to use the following search term: "Current Date". ATS checks all the actions and returns those that match these words. There is an action called [Get Current DateTime String](rg1-get-current-datetime-string), which retrieves the current date and allows you to set the date format.
+The solution in this situation is to use the following search term: "Current Date". ATS checks all the actions and returns those that match these words. There is an action called [Get Current DateTime String](rg-one-get-current-datetime-string), which retrieves the current date and allows you to set the date format.
 
 ![](attachments/bp2-finding-the-action-you-need/get-current-datetime-string-action-search.png)
 
@@ -376,11 +376,11 @@ It all comes down to following these steps to achieve the right result
 
      Task                             | Action |
     ----------------------------------|:------:|
-     Finding a widget                 | [Find/Assert Widget](rg1-findassert-widget) action |
-     Clicking a widget                | [Click Widget](rg1-click-widget) action |
-     Cover an input widget            | [Set Value](rg1-set-value) action |
-     Retrieving a value from a widget | [Get Value](rg1-get-value) action |
-     Asserting values/information     | [Assert Value](rg1-assert-value) action |
+     Finding a widget                 | [Find/Assert Widget](rg-one-findassert-widget) action |
+     Clicking a widget                | [Click Widget](rg-one-click-widget) action |
+     Cover an input widget            | [Set Value](rg-one-set-value) action |
+     Retrieving a value from a widget | [Get Value](rg-one-get-value) action |
+     Asserting values/information     | [Assert Value](rg-one-assert-value) action |
      Generating values/information    | See [6 Generating Values/Information](#GeneratingValuesInformation) for more information |
 
     If these do not work because you do not have an `mx-name` or they don't cover the task, go to step 3 below.
@@ -396,4 +396,4 @@ It all comes down to following these steps to achieve the right result
      Generating values/information    | See [6 Generating Values/Information](#GeneratingValuesInformation) for more information |
 
     If you are certain that ATS does not support your task, go to step 4 below.
-4. If ATS does not support your task with a standard solution, you must create your own solution. For more information, see [How to Create Custom Actions](ht1-create-custom-actions).
+4. If ATS does not support your task with a standard solution, you must create your own solution. For more information, see [How to Create Custom Actions](ht-one-create-custom-actions).

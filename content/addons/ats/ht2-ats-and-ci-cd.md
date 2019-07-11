@@ -1,6 +1,6 @@
 ---
 title: "Use ATS in Combination with CI/CD"
-parent: "ht2"
+parent: "ht-two"
 description: "Describes how you can use ATS 2.0 in your CI/CD pipeline."
 tags: ["ATS", "testing", "CI/CD"]
 ---
@@ -19,8 +19,8 @@ This how-to explains the basics of a CI/CD pipeline, how ATS fits in and an exam
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Complete [How to Get Started](ht2-getting-started)
-* Complete [How to Create a Test Case](ht2-create-a-test-case)
+* Complete [How to Get Started](ht-two-getting-started)
+* Complete [How to Create a Test Case](ht-two-create-a-test-case)
 * Complete Mendix Rapid App Developer course
 
 ## 3 CI/CD Basics
@@ -66,17 +66,17 @@ To generate a CI/CD API key follow these steps:
 2. Open up the app you want to access for CI/CD.
 3. Inside your app open the profile menu and click **Show Test Settings**.
 
-![](attachments/ht2-ats-and-ci-cd/show-test-settings.png)
+![](attachments/ht-two-ats-and-ci-cd/show-test-settings.png)
 
 4. On the **Settings** page you find the **CI/CD API Key** section.
 5. Click **Generate new CI/CD API key**. You need this to get access to ATS in your CI/CD tool.
 
-![](attachments/ht2-ats-and-ci-cd/generate-new-ci-cd-api-key.png)
+![](attachments/ht-two-ats-and-ci-cd/generate-new-ci-cd-api-key.png)
 
 6. A **confirmation** dialog box appears that warns you that an existing CI/CD API key will become invalid once you generate a new one.
 7. Click **Continue**.
 
-![](attachments/ht2-ats-and-ci-cd/confirmation-continu.png)
+![](attachments/ht-two-ats-and-ci-cd/confirmation-continu.png)
 
 8. The **Your new API key:** dialog box appears. 
 
@@ -88,7 +88,7 @@ This is the only time ATS shows the API. Write it down in a secure place.
 
 9. Make sure you wrote down the API key. Now close the dialog box. 
 
-![](attachments/ht2-ats-and-ci-cd/your-new-api-key.png)
+![](attachments/ht-two-ats-and-ci-cd/your-new-api-key.png)
 
 Keep your API key at hand, you need it later on. 
 
@@ -104,19 +104,19 @@ To create a CI/CD template follow these steps:
 4. Click the **CI/CD Templates** tab.
 5. Click either **Add Testcase** or **Add Testsuite** depending on what you want to execute.
 
-![](attachments/ht2-ats-and-ci-cd/ci-cd-templates-tab.png)
+![](attachments/ht-two-ats-and-ci-cd/ci-cd-templates-tab.png)
 
 6. The **Select Testcase** dialog box opens. Where you select your test case.
 
- ![](attachments/ht2-ats-and-ci-cd/ci-cd-template-select-test-case.png)
+ ![](attachments/ht-two-ats-and-ci-cd/ci-cd-template-select-test-case.png)
 
 7. After selecting your test case the **New CI/CD Template** dialog box opens.  Here you select your run configuration and click **Save**.
 
- ![](attachments/ht2-ats-and-ci-cd/new-ci-cd-template.png)
+ ![](attachments/ht-two-ats-and-ci-cd/new-ci-cd-template.png)
 
 8. After clicking **Save** the CI/CD template for test case appears with a unique ID.
 
- ![](attachments/ht2-ats-and-ci-cd/ci-cd-template-with-uid.png)
+ ![](attachments/ht-two-ats-and-ci-cd/ci-cd-template-with-uid.png)
 
 Keep the unique ID at hand for later on.
 
@@ -145,7 +145,7 @@ This is only an example for Jenkins on Linux in shell scripting and can be writt
 * Make sure that curl and xmllint are installed on your Linux server
 * In your Jenkins project, add a build step of type Execute shell and use the following shell script
 
-![](attachments/ht2-ats-and-ci-cd/script-cicd-jenkins.png)
+![](attachments/ht-two-ats-and-ci-cd/script-cicd-jenkins.png)
 
 ```
 #/bin/bash

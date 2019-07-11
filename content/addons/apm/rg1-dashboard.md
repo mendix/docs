@@ -1,10 +1,10 @@
 ---
 title: "Dashboard"
-parent: "rg1-apm"
+parent: "rg-one-apm"
 ---
 The Application Performance Monitor (APM) dashboard is the home screen of APM:
 
- ![](attachments/rg1-dashboard/Dashboard.png)
+ ![](attachments/rg-one-dashboard/Dashboard.png)
 
 The dashboard shows recent information from the statistics tool, measurements tool, trap tool, and log tool.
 

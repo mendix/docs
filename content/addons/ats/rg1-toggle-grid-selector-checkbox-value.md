@@ -1,6 +1,6 @@
 ---
 title: "Toggle Grid Selector Checkbox Value"
-parent: "rg1-grid-selector"
+parent: "rg-one-grid-selector"
 ---
 
 ## Description

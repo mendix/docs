@@ -1,6 +1,6 @@
 ---
 title: "Click Coordinates"
-parent: "rg1-selenium-actions"
+parent: "rg-one-selenium-actions"
 ---
 
 ## Description

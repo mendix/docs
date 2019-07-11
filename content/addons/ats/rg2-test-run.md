@@ -1,6 +1,6 @@
 ---
 title: "Test Run"
-parent: "rg2-ats"
+parent: "rg-two-ats"
 ---
 
 ## 1 Introduction
@@ -12,11 +12,11 @@ There are multiple ways to run an existing test:
 * Click the play icon on the right side of the test result under **Results**
 * Click the **Run** button after opening the result log
 
-Before a test is run, the **Job Configuration** page opens. For every test run, a new job is created. For details on the different options you can set for running a test, see [Job Configuration](rg2-test-run-configuration).
+Before a test is run, the **Job Configuration** page opens. For every test run, a new job is created. For details on the different options you can set for running a test, see [Job Configuration](rg-two-test-run-configuration).
 
 You can also cancel a running job by pressing **Cancel** in the corresponding line on the test run page. This immediately cancels the job and interrupts all the running test steps.
 
-![](attachments/rg2-test-run/job-cancel.png)
+![](attachments/rg-two-test-run/job-cancel.png)
 
 ## 2 Special Behavior 
 

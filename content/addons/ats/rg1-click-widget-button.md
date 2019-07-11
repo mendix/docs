@@ -1,6 +1,6 @@
 ---
 title: "Click Widget Button"
-parent: "rg1-generic"
+parent: "rg-one-generic"
 ---
 
 ## Description

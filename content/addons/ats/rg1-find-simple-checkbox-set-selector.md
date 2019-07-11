@@ -1,6 +1,6 @@
 ---
 title: "Find Simple Checkbox Set Selector"
-parent: "rg1-simple-checkbox-set-selector"
+parent: "rg-one-simple-checkbox-set-selector"
 ---
 
 ## Description

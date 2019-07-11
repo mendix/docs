@@ -1,13 +1,13 @@
 ---
 title: "Logs"
-parent: "rg2-apm"
+parent: "rg-two-apm"
 ---
 
 ## 1 Logs Overview
 
 Selecting **Logs** from the menu shows the overview of logs and traps.
 
-![](attachments/rg2/logs.png)
+![](attachments/rg-two/logs.png)
 
 ## 2 Logs
 
@@ -25,7 +25,7 @@ The logging will be cleaned up automatically. The **Pin icon** can be used to pr
 
 Trap records can be opened. When opening a trap, a list is displayed of all the low-level log records that happened just before the trap was displayed:
 
-![](attachments/rg2/trap.png)
+![](attachments/rg-two/trap.png)
 
 The **Trap now** button can be used to simulate a trap. This trap will be saved and can be used to get insights into what is happening in the application.
 
@@ -35,7 +35,7 @@ If there are traps with errors, warnings, or messages that are known, not of int
 
 On the **Trap exclusions** tab, it is possible to manage which traps to ignore. It is possible to add, edit, copy, and delete exclusions as well as enable or disable them. By excluding certain errors, warnings, or messages, the **Logs** module will only capture information of interest. 
 
-![](attachments/rg2/exclusions.png)
+![](attachments/rg-two/exclusions.png)
 
 An exclusion contains the following:
 
@@ -53,4 +53,4 @@ To make the pattern more generic, you need to escape according to regular expres
 
 The **Test** button performs a query on the APM manager to see if existing logs or traps match the patterns. This is added for convenience to test if the patterns work as expected.
 
-![](attachments/rg2/exclude_dialog.png)
+![](attachments/rg-two/exclude_dialog.png)

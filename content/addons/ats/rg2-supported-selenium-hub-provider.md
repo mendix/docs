@@ -1,6 +1,6 @@
 ---
 title: "Supported Selenium Providers" 
-parent: "rg2-test-run"
+parent: "rg-two-test-run"
 ---
 
 ## 1 Supported Selenium Provider Options

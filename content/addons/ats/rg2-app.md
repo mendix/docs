@@ -1,13 +1,13 @@
 ---
 title: "App"
-parent: "rg2-ats"
+parent: "rg-two-ats"
 ---
 
 ## 1 Dashboard
 
 The dashboard is where you find all information about the results of your tests. It is split into two parts: **Current Status and 7-Day History** infographics and the **Recent Tests** result tree.
 
-![](attachments/rg2-project/dashboard.png)
+![](attachments/rg-two-project/dashboard.png)
 
 ### 1.1 Infographics
 
@@ -47,9 +47,9 @@ The following three icons exist for test cases, test suites, and data-driven tes
 
 | Icon                                     | Meaning    |
 | ---------------------------------------- | ---------- |
-|![](attachments/rg2-project/test-case-icon.png) | Test case  |
-|![](attachments/rg2-project/test-suite-icon.png) | Test suite |
-|![](attachments/rg2-project/ddt-icon.png)| Data-driven test case |
+|![](attachments/rg-two-project/test-case-icon.png) | Test case  |
+|![](attachments/rg-two-project/test-suite-icon.png) | Test suite |
+|![](attachments/rg-two-project/ddt-icon.png)| Data-driven test case |
 
 To open the latest execution log, click **Show Log**. When you click the **name of a test case/test suite**, the edit page opens.
 
@@ -73,7 +73,7 @@ Settings is the central point for configuring ATS. You can set the Mendix API Ke
 
 Only App Admins can access the settings. Testers can only use the available deployments and Selenium hubs.
 
-![](attachments/rg2-project/settings.png)
+![](attachments/rg-two-project/settings.png)
 
 {{% /alert %}}
 
@@ -83,7 +83,7 @@ Under **Environments**, you add the different environment URLs that you use for 
 
 You edit, create, and delete the applications by clicking the buttons in the top bar:
 
-![](attachments/rg2-project/deployments.png)
+![](attachments/rg-two-project/deployments.png)
 
 When you create a new application, set the following parameters:
 
@@ -96,7 +96,7 @@ When you create a new application, set the following parameters:
 
 Under **Selenium Hubs**, you add the different Selenium hubs that you use for the current app. The users run the tests on the listed hubs. To add a new Selenium hub, click **New** in the top menu:
 
-![](attachments/rg2-project/selenium-hub.png)
+![](attachments/rg-two-project/selenium-hub.png)
 
 In the **Edit Selenium Hub** dialog box, set the following parameters:
 
@@ -148,4 +148,4 @@ For information on where to find the API keys of your Mendix app, see [Authentic
 
 The CI/CD API key is used to allow other systems or applications access to the ATS CI/CD API. Generating a new API key revokes access for any systems using the old API key. These systems are not able to access the ATS CI/CD API until they are updated with the new API key. Make sure to save the displayed API key in a secure place, as you cannot view it again in ATS.
 
-For more information about the CI/CD API, see [CI/CD API](rg2-cicd-api).
+For more information about the CI/CD API, see [CI/CD API](rg-two-cicd-api).

@@ -1,6 +1,6 @@
 ---
 title: "Get Started"
-parent: "ht1"
+parent: "ht-one"
 description: "Describes the initial steps for automatically testing your apps using ATS."
 tags: ["ATS", "testing"]
 ---
@@ -32,13 +32,13 @@ Before starting with this how-to, make sure you have the following prerequisites
 
 When you [log in to ATS](https://ats.mendix.com) as a user, you see the **My Projects** page. A project is a folder in which all the data related to a specific application will be saved and managed. Every user can create a new project, and, as its owner, manage other users' access to it. If there are no projects on your account yet, you are prompted to create a new project.
 
-![](attachments/ht1-getting-started/my-projects.png)
+![](attachments/ht-one-getting-started/my-projects.png)
 
 To create a new project, follow these steps:
 
 1. Click **Add project/Create new project**, which opens the *Create new project/library* page:
 
-      ![](attachments/ht1-getting-started/create-new-project.png)
+      ![](attachments/ht-one-getting-started/create-new-project.png)
 
 2.  Enter the following information about your project:
 
@@ -49,11 +49,11 @@ To create a new project, follow these steps:
       **Mendix Project/App ID** | Enter the Mendix project/app ID of the app you want to test, NOT the project ID of ATS! This will give ATS access to your Developer Portal and user stories. A project can be created without a Mendix project/app ID, but than you have no access to the Developer Portal and user stories.
       **Mendix API Key** | This is the API key you created in your Developer Portal project for ATS.
       **Project Users** | Enter the people that need access to this project. This project will then appear in their **My Projects** menu. You can always edit this later. There are two different roles for a project user: a **Tester** can only test, create tests, and monitor results; a **Project Administrator** has the same rights as the tester but has also editing rights to the configuration settings of a project.
-      **Action Libraries** | Make sure that the action libraries **Core** and **Mendix** are included. Please note that without libraries, it is not possible to select actions for the test script. For more information on action libraries, see [Standard Actions Reference](rg1-standard-actions-reference).
+      **Action Libraries** | Make sure that the action libraries **Core** and **Mendix** are included. Please note that without libraries, it is not possible to select actions for the test script. For more information on action libraries, see [Standard Actions Reference](rg-one-standard-actions-reference).
 
 3.  Click **Save & Open** at the bottom of the page to open the **Project Dashboard**.
 
-      ![](attachments/ht1-getting-started/project-dashboard-empty.png)
+      ![](attachments/ht-one-getting-started/project-dashboard-empty.png)
 
 ## 4 Configuring Your Project
 
@@ -65,7 +65,7 @@ Only the Project Administrator role has the rights to edit the settings in **Con
 
 To start configuring your project, click **Configuration** in the navigation bar on the left to open the **Configuration** page. This page contains the **Project**, **Selenium**, and **Applications** tabs.
 
-![](attachments/ht1-getting-started/configuration-getting-started.png)
+![](attachments/ht-one-getting-started/configuration-getting-started.png)
 
 ### 4.1 Project Tab
 
@@ -79,7 +79,7 @@ To add a new Selenium hub, follow these steps:
 
 1. Click **New** in the top bar, which opens the **Selenium hub** dialog box:
 
-      ![](attachments/ht1-getting-started/selenium-hub-dialog.png)
+      ![](attachments/ht-one-getting-started/selenium-hub-dialog.png)
 
 2.  Set the following parameters:
 
@@ -101,7 +101,7 @@ To add a new application, follow these steps:
 
 1. Click **New** in the top bar, which opens the **Application** dialog box.
 
-      ![](attachments/ht1-getting-started/application-dialog.png)
+      ![](attachments/ht-one-getting-started/application-dialog.png)
 
 2.  Set the following parameters:
 
@@ -119,7 +119,7 @@ To add a new application, follow these steps:
 
 The repository is where you create and store all your test cases, test suites, and custom actions. It is the ATS filing system, the heart of ATS.
 
-![](attachments/ht1-getting-started/repository-empty.png)
+![](attachments/ht-one-getting-started/repository-empty.png)
 
 The repository has three tabs:
 
@@ -139,7 +139,7 @@ To create a test case, follow these steps:
 2. Select **Test Case** in the drop-down menu and enter a name for your test case. Since you are likely to create multiple test cases and test suites, using a predefined naming structure is advised.
 3. Enter a clear description for your test case. In case others may need to know what your test case does, use a template to make sure all aspects of the case are described clearly.
 
-      ![](attachments/ht1-getting-started/create-new-test-case.png)
+      ![](attachments/ht-one-getting-started/create-new-test-case.png)
 
 4. Click **Create**.
 5. When the **Test Case** page opens, you are now in the actual test case. In the top left corner of the page, you can see the name and description of your test case. The **Test Case** page also displays the following buttons:
@@ -149,7 +149,7 @@ To create a test case, follow these steps:
       * **Export** – exports the test case as a XML file (this file can be uploaded into another ATS environment)
       * **PDF** – extracts a PDF report of your test case
 
-![](attachments/ht1-getting-started/test-case-page.png)
+![](attachments/ht-one-getting-started/test-case-page.png)
 
 ### 5.2 Building a Test Script
 
@@ -162,7 +162,7 @@ Before you start building your test script, add the following tools:
 3. To use the recorder function, you need to have the Google Chrome browser installed on your system and install the ATS Recorder Chrome plugin. The ATS recorder only works in Chrome.
 4. Install the ATS recorder extension in your Chrome browser.
 
-![](attachments/ht1-getting-started/ats-information-dialog.png)
+![](attachments/ht-one-getting-started/ats-information-dialog.png)
 
 #### 5.2.1 Record – Using the Recorder Function
 
@@ -173,7 +173,7 @@ To use the recorder function, follow these steps:
 1. Click **Record** while inside a test case in ATS, which opens the **Recording Session** page. On this page you can manage your recording sessions.
 2. You can now open the Mendix application you want to test in another tab of the browser and start testing the application manually. The test steps you take will now be recorded and saved in the chosen test case.
 
-      ![](attachments/ht1-getting-started/recording-session-cp.png)
+      ![](attachments/ht-one-getting-started/recording-session-cp.png)
 
 3.  Click **Save** to save your actions for this event.
 
@@ -182,15 +182,15 @@ To use the recorder function, follow these steps:
       **Recorded event** | All the registered clicks/entering text will show up here in the sequence where they were done. Select an event to open the **Action mapping** menu of that particular event. The ATS recorder selects the actions for you.
       **Action mapping** | This shows all the available actions for this event. Click  **Select** if you want to choose a different action.
 
-      ![](attachments/ht1-getting-started/recorded-test-steps.png)
+      ![](attachments/ht-one-getting-started/recorded-test-steps.png)
 
-All the test steps are numbered for easy identification. The up and down arrows can be used to change the sequence of the test steps. You can **delete**, **copy** or **paste** a selected test step. With the **Extract action**, you can combine actions of multiple steps into one step. Select the steps you want to combine and click **Extract action**. For more information on extracting an action, see [Custom Action](rg1-custom-actions).
+All the test steps are numbered for easy identification. The up and down arrows can be used to change the sequence of the test steps. You can **delete**, **copy** or **paste** a selected test step. With the **Extract action**, you can combine actions of multiple steps into one step. Select the steps you want to combine and click **Extract action**. For more information on extracting an action, see [Custom Action](rg-one-custom-actions).
 
 #### 5.2.2 Test Data Tab
 
 In this tab, you can connect your datasets to a test case. Use the arrow to select the dataset you need and click **Save**. A new menu will appear in which you can see the dataset fields that are available to select. You can also use this menu to check if you selected the correct dataset.
 
-![](attachments/ht1-getting-started/data-set-test-case.png)
+![](attachments/ht-one-getting-started/data-set-test-case.png)
 
 {{% alert type="info" %}}
 
@@ -202,13 +202,13 @@ If you do not use the dataset, make sure to disconnect it. ATS will remember whe
 
 This tab shows you the actions used in this test case and the test suites that are using this test case. Use this screen to verify that if you make a change to a custom action, it does not affect another test case or test suite.
 
-![](attachments/ht1-getting-started/show-usages-test-case.png)
+![](attachments/ht-one-getting-started/show-usages-test-case.png)
 
 #### 5.2.4 Stories Tab
 
 This tab displays the user stories that are connected to your test case, the test cases within that story, and the success rate of the user story.
 
-![](attachments/ht1-getting-started/stories-test-case.png)
+![](attachments/ht-one-getting-started/stories-test-case.png)
 
 ### 5.3 Creating a Test Suite
 
@@ -218,7 +218,7 @@ To create a test suite, follow these steps:
 2. Enter a name for your test suite. Since you are likely to create multiple test cases and test suites, using a predefined naming structure is advised.
 3. Enter a clear description for your test suite. Others may need to know what your test suite does. It might be handy to use a template to make sure all aspects of the suite are present.
 
-      ![](attachments/ht1-getting-started/create-new-test-suite.png)
+      ![](attachments/ht-one-getting-started/create-new-test-suite.png)
 
 4. Click **Create**. 
 5. The **Test Suite** page looks similar to the **Test Case** page, but with fewer options. The **Test Suite** page also displays the following buttons:
@@ -227,7 +227,7 @@ To create a test suite, follow these steps:
       * **Quickrun** – immediately executes a test suite with the last set of run configurations (use this option to check your test case while building)
       * **Export** – exports the test suite as a XML file (this file can be uploaded into another ATS environment)
 
-![](attachments/ht1-getting-started/test-suite-page.png)
+![](attachments/ht-one-getting-started/test-suite-page.png)
 
 #### 5.3.1 Test Cases/Suites Tab
 
@@ -235,25 +235,25 @@ Here you can see all the steps that are in your test suite. Each step is either 
 
 Clicking **Add** adds a test case to your test suite. Enter a clear description for this step and **Search** for a test case you want to add to your test suite. You can **Create a new Test Case** if you want to add a complete new test case to your test suite.
 
-![](attachments/ht1-getting-started/select-test.png)
+![](attachments/ht-one-getting-started/select-test.png)
 
 #### 5.3.2 Show Usages Tab
 
 This tab shows you all the **Test Cases used by this Test Suite**, all the **Test Suites used by this Test Suite**, and the **Test Suites using this Test Suite**. Use this screen to make sure that if you make a change, it does not affect other test cases or test suites.
 
-![](attachments/ht1-getting-started/show-usages-test-suite.png)
+![](attachments/ht-one-getting-started/show-usages-test-suite.png)
 
 #### 5.3.3 Stories Tab
 
 This tab displays the user stories that are connected to your test suite, the test cases within that story, and the success rate of the user story. You can **Open**, **Unlink**, or **Link** a user story to your test suite.
 
-![](attachments/ht1-getting-started/stories-test-suite.png)
+![](attachments/ht-one-getting-started/stories-test-suite.png)
 
 ## 6 Run Configuration
 
 When you click **Run** in the upper-right corner of your test case, the **Select Run Configuration** page will open.
 
-![](attachments/ht1-getting-started/run-configuration.png)
+![](attachments/ht-one-getting-started/run-configuration.png)
 
 Here, you can select your AUT and Selenium hub for ATS to use.
 
@@ -263,22 +263,22 @@ Here, you can select your AUT and Selenium hub for ATS to use.
 | **Selenium Hub** | Select the Selenium Hub you want to use to execute the test case. |
 | **Browser** | Select the browser that the Selenium Hub uses to execute the test case. Please note that these are the supported browsers. |
 
-Now click **Run** again in the upper-right corner to execute the test case against the provided parameters. For more information on the run configuration, see [Run Configuration](rg1-test-run).
+Now click **Run** again in the upper-right corner to execute the test case against the provided parameters. For more information on the run configuration, see [Run Configuration](rg-one-test-run).
 
 ## 7 Result
 
 When you click **Run**, the **Monitoring / Results** page will open.
 
-![](attachments/ht1-getting-started/monitoring-results-pending.png)
+![](attachments/ht-one-getting-started/monitoring-results-pending.png)
 
-Once your test case is executed, the result is shown here. For more information on results, see [Monitoring](rg1-monitoring).
+Once your test case is executed, the result is shown here. For more information on results, see [Monitoring](rg-one-monitoring).
 
-You have now finished the getting started guide for ATS. Please check the [how-to's](ht1) and [best practices](bp1) for more information.
+You have now finished the getting started guide for ATS. Please check the [how-to's](ht-one) and [best practices](bp1) for more information.
 
 Good luck testing your Mendix app with ATS!
 
 ## 8 Next Up
 
-You have now learned a few basics of working with ATS, so the next how-to is [How to Install the ATS Helper and ATS Recorder](ht1-install-ats-helper-recorder).
+You have now learned a few basics of working with ATS, so the next how-to is [How to Install the ATS Helper and ATS Recorder](ht-one-install-ats-helper-recorder).
 
-For an overview of all the how-tos and the structure, see [ATS 1 How-to's](ht1). We advise following the how-to's in the order listed there.
+For an overview of all the how-tos and the structure, see [ATS 1 How-to's](ht-one). We advise following the how-to's in the order listed there.

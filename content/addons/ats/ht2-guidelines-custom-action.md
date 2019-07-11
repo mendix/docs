@@ -1,16 +1,16 @@
 ---
 title: "Guidelines for Creating a Custom Action"
-parent: "ht2-custom-action-general"
+parent: "ht-two-custom-action-general"
 ---
 
 ## 1 Introduction
 
-For details on custom actions, please see [Custom Actions](rg1-custom-actions) in the ATS 1 Reference Guide.
+For details on custom actions, please see [Custom Actions](rg-one-custom-actions) in the ATS 1 Reference Guide.
  
 These are the definitions of Mendix actions and core actions:
 
-* Mendix actions include [Mendix actions](rg1-mendix-actions) and [Mendix App Store widget actions](rg1-mendix-appstore-widgets-actions)
-* Core actions include [ATS Core actions](rg1-ats-core-actions) and [Selenium actions](rg1-selenium-actions)
+* Mendix actions include [Mendix actions](rg-one-mendix-actions) and [Mendix App Store widget actions](rg-one-mendix-appstore-widgets-actions)
+* Core actions include [ATS Core actions](rg-one-ats-core-actions) and [Selenium actions](rg-one-selenium-actions)
 
 {{% alert type="info" %}}
 
@@ -28,15 +28,15 @@ Always try to use a Mendix action first. This table explains why you should use 
 | Visibility checks | A Mendix action only searches for elements that are *visible*. |
 | Browser support | A Mendix action always works in the supported browser. |
 | Mendix support | A Mendix action always works on the latest version of Mendix. |
-| Waiting for background processes | A Mendix action waits untill the Mendix app is finished rendering. This aspect is also covered by the [Mendix Wait](rg1-mendix-wait) action.<br> |
+| Waiting for background processes | A Mendix action waits untill the Mendix app is finished rendering. This aspect is also covered by the [Mendix Wait](rg-one-mendix-wait) action.<br> |
 
 However, there are reasons to not use Mendix actions. For example, sometimes a custom action can get too complex using a Mendix action, because of the input parameters that are required. For another example, when using a Mendix action, you have six input parameters:
 
-![](attachments/ht2-guidelines-custom-action/mendix-action-input-parameters.png)
+![](attachments/ht-two-guidelines-custom-action/mendix-action-input-parameters.png)
 
 But when you use a core action, you have four input parameters: 
 
-![](attachments/ht2-guidelines-custom-action/core-action-input-parameters.png)
+![](attachments/ht-two-guidelines-custom-action/core-action-input-parameters.png)
 
 The difference is because of the required **Widget Name** input parameter in a Mendix action. When you use a core action, this is not always required. So if you don not need the widget name, a core action is a better solution. This is a valid reason to use the core actions; otherwise, the custom action is not user-friendly.
 
@@ -46,7 +46,7 @@ Only use items that are visually present on the page, like the text inside a cer
 
 This is a visual component:
 
-![](attachments/ht2-guidelines-custom-action/visual-component-widget.png)
+![](attachments/ht-two-guidelines-custom-action/visual-component-widget.png)
 
 {{% alert type="info" %}}
 
@@ -75,7 +75,7 @@ Try to find the generic aspect of the child node. In most cases, the `mx-name-` 
 
 This is the `mx-name` in the debugger:
 
-![](attachments/ht2-guidelines-custom-action/mx-name-in-debugger.png)
+![](attachments/ht-two-guidelines-custom-action/mx-name-in-debugger.png)
 
 {{% alert type="info" %}}
 
@@ -89,9 +89,9 @@ When using core actions to trigger an event, always use a Mendix Wait action aft
 
 This is the Mendix Wait action:
 
-![](attachments/ht2-guidelines-custom-action/mendix-wait-action.png)
+![](attachments/ht-two-guidelines-custom-action/mendix-wait-action.png)
 
-For more information, please see [Mendix Wait](rg1-mendix-wait).
+For more information, please see [Mendix Wait](rg-one-mendix-wait).
 
 {{% alert type="info" %}}
 
@@ -101,7 +101,7 @@ This guideline does not apply to the Search Context action, since it does not tr
 
 ## 7 Action Parameters
 
-When defining action parameter names, always use the ATS [naming conventions](rg1-best-practices).
+When defining action parameter names, always use the ATS [naming conventions](rg-one-best-practices).
 
 In addition, include the optional input parameters in the action parameters for an unsupported widget action.
 
@@ -121,9 +121,9 @@ These are some of the most used action parameters:
 
 These are the three most used action parameters:
 
-![](attachments/ht2-guidelines-custom-action/standard-input-parameters.png)
+![](attachments/ht-two-guidelines-custom-action/standard-input-parameters.png)
 
-![](attachments/ht2-guidelines-custom-action/standard-input-parameters-2.png)
+![](attachments/ht-two-guidelines-custom-action/standard-input-parameters-2.png)
 
 Last but not least, give a description to the action parameters, especially when it requires specific information. You can also give a generic example of what the user should enter, making it more user-friendly.
 
@@ -141,7 +141,7 @@ In addition, describe the output of each test step to make it easier to understa
 
 This is an example:
 
-![](attachments/ht2-guidelines-custom-action/describe-teststeps-define-output.png)
+![](attachments/ht-two-guidelines-custom-action/describe-teststeps-define-output.png)
 
 ## 9 Data Type Awareness
 
@@ -163,13 +163,13 @@ These are the different data types in ATS:
 | Float | **The Float type is deprecated and should not be used.** | N/A |
 | Currency | **The Currency type is deprecated and should not be used** | N/A |
 
-![](attachments/ht2-guidelines-custom-action/datatype-web-element.png)
+![](attachments/ht-two-guidelines-custom-action/datatype-web-element.png)
 
 The JavaScript actions have three different versions, based on the data types:
 
-* [Execute Javascript Integer](rg1-execute-javascript-integer)
-* [Execute Javascript String](rg1-execute-javascript-string)
-* [Execute Javascript WebElement](rg1-execute-javascript-webelement)
+* [Execute Javascript Integer](rg-one-execute-javascript-integer)
+* [Execute Javascript String](rg-one-execute-javascript-string)
+* [Execute Javascript WebElement](rg-one-execute-javascript-webelement)
 
 They all produce outputs based on their data type. This means that you cannot return a string inside the Execute Javascript web element action.
 

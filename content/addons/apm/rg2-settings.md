@@ -1,11 +1,11 @@
 ---
 title: "Settings"
-parent: "rg2-apm"
+parent: "rg-two-apm"
 ---
 
 The settings displayed in this screenshot are available for an environment:
 
-![](attachments/rg2/settings.png)
+![](attachments/rg-two/settings.png)
 
 By default, the best options are already selected for the most common situations. The following settings can be changed:
 
@@ -28,8 +28,8 @@ By default, the best options are already selected for the most common situations
 * **Generate API key**
 * **Delete this environment** – Clicking this button will delete the environment from the APM manager.
 
-When you generate an API key for a runtime/Mendix Studio Pro environment, you see this key only once, so copy-paste and use it immediately. For more information about the installation, see the [APM 2 Installation Guide](ig2).
+When you generate an API key for a runtime/Mendix Studio Pro environment, you see this key only once, so copy-paste and use it immediately. For more information about the installation, see the [APM 2 Installation Guide](ig-two).
 
-![](attachments/rg2/api_key_dialog.png)
+![](attachments/rg-two/api_key_dialog.png)
 
 Click **Copy** to copy the API key to the clipboard.

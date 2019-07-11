@@ -1,6 +1,6 @@
 ---
 title: "Set Value (by Index)"
-parent: "rg1-input"
+parent: "rg-one-input"
 ---
 
 ## Description

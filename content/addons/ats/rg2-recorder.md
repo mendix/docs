@@ -1,6 +1,6 @@
 ---
 title: "Recorder"
-parent: "rg2-ats"
+parent: "rg-two-ats"
 ---
 
 ## 1 Introduction
@@ -11,7 +11,7 @@ The recorder is a function/plugin in ATS that records the actions behind your te
 
 To use the recorder function, you must have the Google Chrome browser installed on your system and install the **ATS Recorder** Chrome plugin. To install the plugin, click this icon in the top-right corner of the screen:
 
-![](attachments/rg2-recorder/information-icon.png)
+![](attachments/rg-two-recorder/information-icon.png)
 
 Clicking the **ATS Recorder** link will lead you to the Chrome Web Store, where you can add the plugin to your browser.
 
@@ -21,7 +21,7 @@ With the ATS Recorder plugin installed, you can start a recording session at any
 
 Open the recording session with three recorded test steps:
 
-![](attachments/rg2-recorder/recording.png)
+![](attachments/rg-two-recorder/recording.png)
 
 Some recorded test steps offer you several actions to choose from. In the example above, you can choose one of the following actions:
 

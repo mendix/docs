@@ -2259,11 +2259,11 @@ module.exports = {
     },
 	{
 	  from: "/apm/installation-guide",
-	  to: "/addons/apm/ig2"
+	  to: "/addons/apm/ig-two"
 	},
 	{
       from: "/apm/reference-guide/rg-2/reference-guide-2",
-      to: "/addons/apm/rg2-apm"
+      to: "/addons/apm/rg-two-apm"
     },
 	{
       from: "/aqm/",

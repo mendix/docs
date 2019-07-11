@@ -1,6 +1,6 @@
 ---
 title: "Performance Tool"
-parent: "rg1-apm"
+parent: "rg-one-apm"
 ---
 Use the Performance Tool to measure individual microflows and break them up into actions, loop iterations and sub-microflows. Optionally it is possible to run the Mendix profiler and link SQL statements to actions.
 
@@ -16,11 +16,11 @@ The performance tool consists of:
 
 The performance tool is a recorder that when started records all action and SQL statements and on stop gives you the option to process and store the recording. During the recording and even when recording is stopped you can filter the recorded data. This filtering removes the recorded items from memory, so there is no undo here.
 
- ![](attachments/rg1-performance-tool/Recorder.png)
+ ![](attachments/rg-one-performance-tool/Recorder.png)
 
 Enter a **Session name** and start recording.
 
-![](attachments/rg1-performance-tool/Recorder_Started.png)
+![](attachments/rg-one-performance-tool/Recorder_Started.png)
 
 You can use **Set marker** to label or mark recorder items, so when recording multiple functions at once, you can recognize the recorded items in the results.
 
@@ -32,7 +32,7 @@ The recording will automatically stop if the maximum amount of items in memory i
 
 On **Stop** you get the option to process the recorded items. You can also filter some more.
 
- ![](attachments/rg1-performance-tool/Recorder_Stopped.png)
+ ![](attachments/rg-one-performance-tool/Recorder_Stopped.png)
 
 If on processing the actual data is more than allowed to store a special filter dialog appears. In this dialog you can filter further. If you use the process button in the filter dialog you overule the checked and process all the data that is in memory.
 
@@ -42,7 +42,7 @@ During processing of recorded data SQL statements are linked to actions or if th
 
 The following screenshot shows the filter options of the Performance Tool when the performance tool is  running:
 
- ![](attachments/rg1-performance-tool/Filter_Running.png)
+ ![](attachments/rg-one-performance-tool/Filter_Running.png)
 
 The thresholds are used to filter recorded microflows, actions or SQL statements and not store them in/remove them from memory if they have an execution duration less than the threshold.
 
@@ -63,7 +63,7 @@ is used.
 
 The following screenshot shows the options of the Performance Tool:
 
- ![](attachments/rg1-performance-tool/Options.png)
+ ![](attachments/rg-one-performance-tool/Options.png)
 
 The **Max actions to record**, **Max SQL statements to record** and **Run fixed period of time (seconds)**
  offer some protection in production environments to prevent that the Performance Tool runs and fills up memory. If any of the maximum thresholds is reached the Performance Tool is stopped. When stopped the Performance Tool stopped recording and you can still filter data and choose to cancel.
@@ -82,7 +82,7 @@ Changes to the options are applied to the Performance Tool if the button **Save*
 
 You can look at what is being recorded in the **Show recorded** dialog:
 
- ![](attachments/rg1-performance-tool/Recorded_Microflows.png)
+ ![](attachments/rg-one-performance-tool/Recorded_Microflows.png)
 
 Here the running and finished microflow grids are loaded per 10 records. Using the **Refresh & next chunk**
  button refreshes existing records that are not finished. An additional 10 records are loaded. If microflows have finished in the meantime those records move from running to finished. If filtering is applied finished running microflows can disappear. Running microflows are sorted by start date, oldest first. Finished microflows are sorted by duration, longest first.
@@ -93,4 +93,4 @@ You can [View] and drill down into microflows. However, you cannot see SQL state
 
 ## Advanced usage
 
-To insert context information in the performance tool recording you can use a special action. This is described in the following article: [Inserting context information](rg1-inserting-context-information)
+To insert context information in the performance tool recording you can use a special action. This is described in the following article: [Inserting context information](rg-one-inserting-context-information)

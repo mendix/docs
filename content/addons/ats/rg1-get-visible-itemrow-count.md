@@ -1,6 +1,6 @@
 ---
 title: "Get Visible Item/Row Count"
-parent: "rg1-datagrid-templategrid-listview"
+parent: "rg-one-datagrid-templategrid-listview"
 ---
 
 ## Description

@@ -7,10 +7,10 @@ This document describes the installation and uninstallation of the APM tool. The
 
 Read all the details here:
 
-*   [Prerequisites](ig1-prerequisites)
-*   [Installation Steps](ig1-installation-steps)
-*   [Upgrade Steps](ig1-upgrade-steps)
-*   [Uninstall Steps](ig1-uninstall-steps)
+*   [Prerequisites](ig-one-prerequisites)
+*   [Installation Steps](ig-one-installation-steps)
+*   [Upgrade Steps](ig-one-upgrade-steps)
+*   [Uninstall Steps](ig-one-uninstall-steps)
 
 ## Installation for the Experienced User
 

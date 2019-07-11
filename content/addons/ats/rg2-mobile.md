@@ -1,6 +1,6 @@
 ---
 title: "Mobile"
-parent: "rg2-ats"
+parent: "rg-two-ats"
 ---
 
 ## 1 Introduction
@@ -83,7 +83,7 @@ Follow these steps to do so:
 3. Press **F1** to open the **Settings** dialog box.
 4.  Select the **Devices** tab:
 
-    ![](attachments/rg2-mobile/chrome-settings-1.png)
+    ![](attachments/rg-two-mobile/chrome-settings-1.png)
     
 5. Select **Add custom device**.
 6. Set the following properties:
@@ -94,7 +94,7 @@ Follow these steps to do so:
     * **User agent string** to *Mozilla/5.0 (Linux; Android 7.0; SM-G930V Build/NRD90M) AppleWebKit/537.36 (KHTML,  like Gecko) Chrome/59.0.3071.125 Mobile Safari/537.36*
 7.  Select **Add**.
 
-    ![](attachments/rg2-mobile/chrome-settings-2.png)
+    ![](attachments/rg-two-mobile/chrome-settings-2.png)
     
 8. Close the Settings and the DevTools by clicking the **X** button in the top right corner twice.
 
@@ -108,7 +108,7 @@ Once you have created a test case for mobile, you will want to run it. This is w
 4. Under **Platform Settings**, select the mobile platform you wish to test: Android 6 or Android 7.
 5. Click **Run**.
 
-![](attachments/rg2-mobile/run-configuration.png)
+![](attachments/rg-two-mobile/run-configuration.png)
 
 ## 4 Native Dialogs
 
@@ -134,7 +134,7 @@ Follow these steps:
 5. Press <kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>M</kbd> to enable the mobile device toolbar.
 6. In the mobile device toolbar, select the new device profile **ATS Mobile**.
 
-    ![](attachments/rg2-mobile/chrome-settings-3.png)
+    ![](attachments/rg-two-mobile/chrome-settings-3.png)
 
 You can enable and use the ATS Helper and Recorder as usual, as long as the mobile device profile is enabled.
 

@@ -1,6 +1,6 @@
 ---
 title: "Load Test Recorder"
-parent: "rg1-apm"
+parent: "rg-one-apm"
 ---
 The load test recorder is a recorder for sessions to be used in a separate tool. It is only seen with 
 special permissions. Mansystems has a load test tool that can be used in projects by our consultants. 
@@ -12,7 +12,7 @@ The APM Tool includes the load test session recorder, so APM Tool users do not n
 
 You can start and stop the Load Test Recorder. The followingscreenshot below shows the Log Tool when started:
 
-![](attachments/rg1-load-test-recorder/Control.png)
+![](attachments/rg-one-load-test-recorder/Control.png)
 
 You can Start and stop timers to mark individual functionality in the session. This helps the load tool to measure those functions.
 
@@ -20,7 +20,7 @@ You can Start and stop timers to mark individual functionality in the session. T
 
 The following screenshot shows the Load Test Recorder Options:
 
-![](attachments/rg1-load-test-recorder/Options.png)
+![](attachments/rg-one-load-test-recorder/Options.png)
 
 The **Max messages to record** can limit the amount of records in memory. The recording stops when the maximum is reached.
 
@@ -31,4 +31,4 @@ You can configure the Load Test Recorder to stop if a queue builds up with too m
 ## Recorded Sessions
 
 The recorded sessions can be downloaded from the recorded sessions tab.
-![](attachments/rg1-load-test-recorder/Overview.png)
+![](attachments/rg-one-load-test-recorder/Overview.png)

@@ -1,6 +1,6 @@
 ---
 title: "Click/Doubleclick"
-parent: "rg1-generic"
+parent: "rg-one-generic"
 ---
 
 ## Description
@@ -13,7 +13,7 @@ Performs a Click or Doubleclick and waits for Mendix activities.
 
 ## Usage
 
-Pass the WebElement you want to click as parameter for the action. To get the WebElement, use an action like [Find/Assert Widget](rg1-findassert-widget).
+Pass the WebElement you want to click as parameter for the action. To get the WebElement, use an action like [Find/Assert Widget](rg-one-findassert-widget).
 Optionally you can specify if a doubleclick should be performed or not.
 
 ## Input Parameters

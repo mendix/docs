@@ -1,10 +1,10 @@
 ---
 title: "GroupBox"
-parent: "rg1-mendix-actions"
+parent: "rg-one-mendix-actions"
 ---
 
 This section contains these documents:
 
-* [Open GroupBox](rg1-open-groupbox)
-* [GroupBox Is Collapsed](rg1-groupbox-is-collapsed)
-* [Close GroupBox](rg1-close-groupbox)
+* [Open GroupBox](rg-one-open-groupbox)
+* [GroupBox Is Collapsed](rg-one-groupbox-is-collapsed)
+* [Close GroupBox](rg-one-close-groupbox)

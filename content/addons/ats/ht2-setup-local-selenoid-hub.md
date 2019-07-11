@@ -1,6 +1,6 @@
 ---
 title: "Set Up a Local Selenoid Hub"
-parent: "ht2-setup-local-selenium-index"
+parent: "ht-two-setup-local-selenium-index"
 description: "Describes how to set up a local selenoid hub."
 tags: ["ATS", "testing", "Selenium hub"]
 ---
@@ -124,14 +124,14 @@ In case you want to record your test case as a video follow these steps:
 
    **enableVideo** with a boolean set to **true**
 
-   ![](attachments/ht2-setup-local-selenium-index/ht2-setup-local-selenoid-hub/add_capability.png)
+   ![](attachments/ht-two-setup-local-selenium-index/ht-two-setup-local-selenoid-hub/add_capability.png)
 
 2. Once the test case finishes you can find your video in: `http://yourmachinenameorIP:4444/video`. The video shows as "session-id.mp4"
 4. (Optional:) You can give the video file a custom name by adding another Custom Capability:
 
    **VideoName** with a string, for example **MyTestVideo.mp4** (don't forget the .mp4!)
 
-   ![](attachments/ht2-setup-local-selenium-index/ht2-setup-local-selenoid-hub/video_name.png)
+   ![](attachments/ht-two-setup-local-selenium-index/ht-two-setup-local-selenoid-hub/video_name.png)
 
 After executing the test case, don't forget to download the video file or give it a different name in the next session, otherwise it is overwritten!
 
@@ -227,14 +227,14 @@ To install a hub with a Portal for "Live-View" you need a different browsers.jso
 
    **enableVNC** with boolean set to **true**
 
-   ![](attachments/ht2-setup-local-selenium-index/ht2-setup-local-selenoid-hub/enable_vnc.png)
+   ![](attachments/ht-two-setup-local-selenium-index/ht-two-setup-local-selenoid-hub/enable_vnc.png)
 
 7.  After starting your test case you can view your session in the portal:
 
-    ![](attachments/ht2-setup-local-selenium-index/ht2-setup-local-selenoid-hub/selenoidui1.png)
+    ![](attachments/ht-two-setup-local-selenium-index/ht-two-setup-local-selenoid-hub/selenoidui1.png)
 
 8.  By clicking on your session, you will be able to see your live view:
 
-    ![](attachments/ht2-setup-local-selenium-index/ht2-setup-local-selenoid-hub/selenoidui2.png)
+    ![](attachments/ht-two-setup-local-selenium-index/ht-two-setup-local-selenoid-hub/selenoidui2.png)
 
-Congratulations you have finished setting up a local Selenoid hub. The next how-to is  [Use ATS in Combination with CI/CD](ht2-ats-and-ci-cd). You find an overview of all the how-tos and the structure on the [ATS 2 How-to's](ht2) page. We advise you to follow the predefined structure.
+Congratulations you have finished setting up a local Selenoid hub. The next how-to is  [Use ATS in Combination with CI/CD](ht-two-ats-and-ci-cd). You find an overview of all the how-tos and the structure on the [ATS 2 How-to's](ht-two) page. We advise you to follow the predefined structure.

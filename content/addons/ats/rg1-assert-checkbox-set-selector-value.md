@@ -1,6 +1,6 @@
 ---
 title: "Assert Checkbox Set Selector Value"
-parent: "rg1-checkbox-set-selector"
+parent: "rg-one-checkbox-set-selector"
 ---
 ## Description
 Finds the check box by the column caption and its cell value and asserts that the check box is set to the given value.

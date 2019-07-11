@@ -130,7 +130,7 @@ ATS does not support the uploading of files in every situation. This table prese
 <sup>1</sup> This is only possible when you prepare your own files on that server.<br />
 <sup>2</sup> This depends on where the agent is installed.
 
-For more information, see [How to Upload a File in Your App Using ATS](../howtos/ht2/ht2-upload-file-using-ats].
+For more information, see [How to Upload a File in Your App Using ATS](../howtos/ht-two/ht-two-upload-file-using-ats].
 
 ## 5 Selenium SaaS Subscription
 
@@ -148,7 +148,7 @@ Selenium SaaS providers in general provide the following three solutions:
 
 To test your application for desktops and mobile, you need **automated browser testing**.
 
-ATS has two supported Selenium providers (for details, see [Supported Selenium Providers](rg2-supported-selenium-hub-provider)). The solutions of these providers are discussed in the next sections.
+ATS has two supported Selenium providers (for details, see [Supported Selenium Providers](rg-two-supported-selenium-hub-provider)). The solutions of these providers are discussed in the next sections.
 
 ### 5.2 Browserstack Solutions/Products
 

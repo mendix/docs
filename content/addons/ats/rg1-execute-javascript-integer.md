@@ -1,6 +1,6 @@
 ---
 title: "Execute JavaScript Integer"
-parent: "rg1-selenium-actions"
+parent: "rg-one-selenium-actions"
 ---
 
 ## Description

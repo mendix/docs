@@ -1,6 +1,6 @@
 ---
 title: "Prerequisites for How-to's"
-parent: "ht1-custom-action-general"
+parent: "ht-one-custom-action-general"
 description: "Names and explains the different prerequisites for all the how-to's in this category."
 tags: ["ATS", "testing"]
 ---
@@ -17,7 +17,7 @@ In the [Become a Rapid Developer Learning Path](https://gettingstarted.mendixclo
 
 ## 3 Guidelines for Building a Custom Action
 
-[Guidelines for Building a Custom Action](ht1-guidelines-custom-action) is a best practice document that describes the guidelines  you must follow when building custom actions. These guidelines deliver the best results.
+[Guidelines for Building a Custom Action](ht-one-guidelines-custom-action) is a best practice document that describes the guidelines  you must follow when building custom actions. These guidelines deliver the best results.
 
 ## 4 Google Chrome and Chrome DevTools Basics
 
@@ -38,9 +38,9 @@ For more information, see [W3Cschools](https://www.w3schools.com/html/default.as
 
 ## 6 ATS Selectors
 
-The how-to's use jQuery selectors to find elements in the browser. Next to the standard jQuery selectors, ATS also uses pseudo-selectors. You can find these pseudo-selectors in the [ATS Selector](rg1-selectors) documentation.
+The how-to's use jQuery selectors to find elements in the browser. Next to the standard jQuery selectors, ATS also uses pseudo-selectors. You can find these pseudo-selectors in the [ATS Selector](rg-one-selectors) documentation.
 
-For more information on selectors, see [Helpful Resources](ht1-custom-action-helpful-resources).
+For more information on selectors, see [Helpful Resources](ht-one-custom-action-helpful-resources).
 
 ## 7 General ATS Knowledge
 
@@ -48,4 +48,4 @@ The how-to's describe how to create custom actions, but they do not describe eve
 
 ## 8 Custom Action Basics
 
-The how-to's don't explain everything in detail. Simple things like adding an input parameter are not explained. Make sure you have completed the [Custom Action Basics](ht1-custom-action-basics) how-to.
+The how-to's don't explain everything in detail. Simple things like adding an input parameter are not explained. Make sure you have completed the [Custom Action Basics](ht-one-custom-action-basics) how-to.

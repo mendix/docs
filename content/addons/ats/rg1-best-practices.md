@@ -1,6 +1,6 @@
 ---
 title: "Best Practices"
-parent: "rg1-test-development"
+parent: "rg-one-test-development"
 ---
 
 ## Best Practices for writing custom actions
@@ -13,9 +13,9 @@ Use input parameters and generic functions instead of hardcoding every variable 
 
 ### Retrieve WebElements/Widgets before applying JavaScript actions on them
 
-If you want to access a child node, from a parent widget and you cannot use the [Find widget child node action](rg1-find-widget-child-node), you should get the parent widget first, before you manipulate the DOM with a JavaScript action. Especially if you use the extended JQuery selectors. Those selectors tend to be slower in their execution time and if you have to traverse the whole DOM to get to the desired node, this can make a huge difference. Use the [Find/Assert Widget action](rg1-findassert-widget) on the parent widget and pass the result to the JavaScript action as input parameter. From there you can traverse the subtree with the parent widget as root and save execution time.
+If you want to access a child node, from a parent widget and you cannot use the [Find widget child node action](rg-one-find-widget-child-node), you should get the parent widget first, before you manipulate the DOM with a JavaScript action. Especially if you use the extended JQuery selectors. Those selectors tend to be slower in their execution time and if you have to traverse the whole DOM to get to the desired node, this can make a huge difference. Use the [Find/Assert Widget action](rg-one-findassert-widget) on the parent widget and pass the result to the JavaScript action as input parameter. From there you can traverse the subtree with the parent widget as root and save execution time.
 
-For more information about JQuery selectors read the [JQuery selectors section](rg1-selectors#jquery-selectors) of this reference or visit the [official JQuery selectors reference](https://api.jquery.com/category/selectors/).  
+For more information about JQuery selectors read the [JQuery selectors section](rg-one-selectors#jquery-selectors) of this reference or visit the [official JQuery selectors reference](https://api.jquery.com/category/selectors/).  
 
 ### Naming Conventions
 Always use descriptive names for your actions and parameters, e.g. "Set TextBox value" for an action or "Column Name" for a parameter. This makes it easier to know what your action does, without looking into it.

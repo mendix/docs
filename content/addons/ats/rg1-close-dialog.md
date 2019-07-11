@@ -1,6 +1,6 @@
 ---
 title: "Close Dialog"
-parent: "rg1-dialog"
+parent: "rg-one-dialog"
 ---
 
 ## Description

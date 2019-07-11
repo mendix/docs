@@ -1,6 +1,6 @@
 ---
 title: "Definitions"
-parent: "ht2-custom-action-general"
+parent: "ht-two-custom-action-general"
 description: "Explains the different types of custom actions."
 tags: ["ATS", "testing"]
 ---
@@ -13,7 +13,7 @@ A custom action is an action created by the user. The how-to's for creating cust
 
 Before starting this how-to, make sure you have completed the following prerequisite:
 
-* Read [Guidelines for Creating a Custom Action](ht2-guidelines-custom-action)
+* Read [Guidelines for Creating a Custom Action](ht-two-guidelines-custom-action)
 
 ## 3 Combined Actions
 
@@ -38,15 +38,15 @@ There are two ways of making a combined action:
 
 These are the steps in a Mendix app:
 
-![](attachments/ht2-custom-action-general/ht2-general-definition/combined-action-app-steps.png)
+![](attachments/ht-two-custom-action-general/ht-two-general-definition/combined-action-app-steps.png)
 
 These are the steps in ATS:
 
-![](attachments/ht2-custom-action-general/ht2-general-definition/combined-action-ats-steps.png)
+![](attachments/ht-two-custom-action-general/ht-two-general-definition/combined-action-ats-steps.png)
 
 This is the combined action:
 
-![](attachments/ht2-custom-action-general/ht2-general-definition/combined-action-ats-newexpense-action.png)
+![](attachments/ht-two-custom-action-general/ht-two-general-definition/combined-action-ats-newexpense-action.png)
 
 ### 3.2 Summary
 
@@ -70,15 +70,15 @@ Follow the guidelines for building a custom action to create an unsupported widg
 
 This is the widget in a Mendix app:
 
-![](attachments/ht2-custom-action-general/ht2-general-definition/unsupported-widget-action-app-widget.png)
+![](attachments/ht-two-custom-action-general/ht-two-general-definition/unsupported-widget-action-app-widget.png)
 
 These are the steps in ATS:
 
-![](attachments/ht2-custom-action-general/ht2-general-definition/unsupported-widget-action-ats-steps.png)
+![](attachments/ht-two-custom-action-general/ht-two-general-definition/unsupported-widget-action-ats-steps.png)
 
 This is the unsupported widget action:
 
-![](attachments/ht2-custom-action-general/ht2-general-definition/unsupported-widget-action-ats-switch-action.png)
+![](attachments/ht-two-custom-action-general/ht-two-general-definition/unsupported-widget-action-ats-switch-action.png)
 
 ### 4.3 Summary
 
@@ -93,21 +93,21 @@ This is the unsupported widget action:
 
 Sometimes an app has a lot of widgets with the same `mx-name`, but ATS always finds the first result. To overcome this, you need to create a search context action. All Mendix actions have an input parameter called **Search Context**. The search context action finds an element that a Mendix/core action can use.
 
-The focus is on finding an element that you can use to find the widget. The [Find/Assert Widget](rg1-findassert-widget) action is a great example for a search context action.
+The focus is on finding an element that you can use to find the widget. The [Find/Assert Widget](rg-one-findassert-widget) action is a great example for a search context action.
 
 ### 5.2 Example
 
 This is an element in a Mendix app:
 
-![](attachments/ht2-custom-action-general/ht2-general-definition/searchcontext-action-listview-app.png)
+![](attachments/ht-two-custom-action-general/ht-two-general-definition/searchcontext-action-listview-app.png)
 
 These are the steps in ATS:
 
-![](attachments/ht2-custom-action-general/ht2-general-definition/searchcontext-action-listview-ats-steps.png)
+![](attachments/ht-two-custom-action-general/ht-two-general-definition/searchcontext-action-listview-ats-steps.png)
 
 This is the search context action:
 
-![](attachments/ht2-custom-action-general/ht2-general-definition/searchcontext-action-listview-ats-searchcontext-action.png)
+![](attachments/ht-two-custom-action-general/ht-two-general-definition/searchcontext-action-listview-ats-searchcontext-action.png)
 
 ### 5.3 Summary
 
@@ -130,11 +130,11 @@ Function actions distinguish themselves from other actions by their purpose. If 
 
 These are the steps in ATS:
 
-![](attachments/ht2-custom-action-general/ht2-general-definition/function-action-ats-teststeps.png)
+![](attachments/ht-two-custom-action-general/ht-two-general-definition/function-action-ats-teststeps.png)
 
 This the function action:
 
-![](attachments/ht2-custom-action-general/ht2-general-definition/function-action-ats-function-action.png)
+![](attachments/ht-two-custom-action-general/ht-two-general-definition/function-action-ats-function-action.png)
 
 ### 6.3 Summary
 

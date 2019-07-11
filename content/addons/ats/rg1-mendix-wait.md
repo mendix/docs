@@ -1,6 +1,6 @@
 ---
 title: "Mendix wait"
-parent: "rg1-system"
+parent: "rg-one-system"
 ---
 
 ## Description

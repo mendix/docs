@@ -1,6 +1,6 @@
 ---
 title: "Open Application"
-parent: "rg1-generic"
+parent: "rg-one-generic"
 ---
 
 ## Description

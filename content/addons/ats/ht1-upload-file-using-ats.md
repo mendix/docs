@@ -1,6 +1,6 @@
 ---
 title: "Upload a File in Your App Using ATS"
-parent: "ht1"
+parent: "ht-one"
 description: "Describes how to upload a file in your app using ATS and the restrictions it has."
 tags: ["ATS", "testing"]
 ---
@@ -15,10 +15,10 @@ Quick summary:
 
 | Selenium Setup | Uploading your own file | Uploading a file | Uploading possible? |
 | :-------------- | :---------------------- | :--------------- | :------------------ |
-| Local Selenium Server (Docker) | ![](attachments/ht1-upload-file-using-ats/grey.png) Limited<sup>1</sup> | ![](attachments/ht1-upload-file-using-ats/green.png) Yes | ![](attachments/ht1-upload-file-using-ats/green.png) Yes |
-| BrowserStack (SaaS) | ![](attachments/ht1-upload-file-using-ats/red.png) No | ![](attachments/ht1-upload-file-using-ats/green.png) Yes | ![](attachments/ht1-upload-file-using-ats/green.png) Yes |
-| SauceLabs (SaaS) | ![](attachments/ht1-upload-file-using-ats/red.png) No | ![](attachments/ht1-upload-file-using-ats/red.png) No | ![](attachments/ht1-upload-file-using-ats/red.png) No |
-| Selenium SaaS Agent | ![](attachments/ht1-upload-file-using-ats/grey.png) Limited<sup>2</sup> | ![](attachments/ht1-upload-file-using-ats/green.png) Yes | ![](attachments/ht1-upload-file-using-ats/red.png) No |
+| Local Selenium Server (Docker) | ![](attachments/ht-one-upload-file-using-ats/grey.png) Limited<sup>1</sup> | ![](attachments/ht-one-upload-file-using-ats/green.png) Yes | ![](attachments/ht-one-upload-file-using-ats/green.png) Yes |
+| BrowserStack (SaaS) | ![](attachments/ht-one-upload-file-using-ats/red.png) No | ![](attachments/ht-one-upload-file-using-ats/green.png) Yes | ![](attachments/ht-one-upload-file-using-ats/green.png) Yes |
+| SauceLabs (SaaS) | ![](attachments/ht-one-upload-file-using-ats/red.png) No | ![](attachments/ht-one-upload-file-using-ats/red.png) No | ![](attachments/ht-one-upload-file-using-ats/red.png) No |
+| Selenium SaaS Agent | ![](attachments/ht-one-upload-file-using-ats/grey.png) Limited<sup>2</sup> | ![](attachments/ht-one-upload-file-using-ats/green.png) Yes | ![](attachments/ht-one-upload-file-using-ats/red.png) No |
 
 <sup>1</sup> This only possible when you prepare your own files on that server. <br>
 <sup>2</sup> This depends on where the agent is installed.
@@ -33,7 +33,7 @@ Quick summary:
 
 Before starting with this how-to, make sure you have the following prerequisites in place:
 
-* Complete [How to Create a Test Case](ht1-create-a-test-case)
+* Complete [How to Create a Test Case](ht-one-create-a-test-case)
 * Know your Selenium setup (a provider like Browsertack, local server, etc.)
 
 ## 3 Uploading a File
@@ -50,11 +50,11 @@ The third situation is that you use a Selenium SaaS agent. ATS executes the test
 
 ### 3.2 Uploading a File Using ATS
 
-ATS has a standard action for uploading files into your Mendix app. The  [Set File Manager](rg1-set-file-manager) action uploads a file from the local computer into the app using a file path. As explained earlier the file must be on the local machine for this to work.
+ATS has a standard action for uploading files into your Mendix app. The  [Set File Manager](rg-one-set-file-manager) action uploads a file from the local computer into the app using a file path. As explained earlier the file must be on the local machine for this to work.
 
 _The Set File Manager action_
 
-![](attachments/ht1-upload-file-using-ats/set-file-manager-action.png)
+![](attachments/ht-one-upload-file-using-ats/set-file-manager-action.png)
 
 A possible filepath is:
 
@@ -62,7 +62,7 @@ C:\users\ats\documents\receipt-1.png
 
 _File Uploader widget in the app_
 
-![](attachments/ht1-upload-file-using-ats/file-uploader-widget-app.png)
+![](attachments/ht-one-upload-file-using-ats/file-uploader-widget-app.png)
 
 ### 3.3 Advice
 

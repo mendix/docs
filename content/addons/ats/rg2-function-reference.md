@@ -1,6 +1,6 @@
 ---
 title: "Function Reference"
-parent: "rg2-ats"
+parent: "rg-two-ats"
 ---
 
 ## 1 Introduction

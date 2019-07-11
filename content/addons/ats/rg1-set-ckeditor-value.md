@@ -1,6 +1,6 @@
 ---
 title: "Set CKEditor Value"
-parent: "rg1-ckeditor"
+parent: "rg-one-ckeditor"
 ---
 
 ## Description

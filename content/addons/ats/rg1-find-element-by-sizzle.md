@@ -1,6 +1,6 @@
 ---
 title: "Find Element by Sizzle"
-parent: "rg1-find"
+parent: "rg-one-find"
 ---
 
 ## Description

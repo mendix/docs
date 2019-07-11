@@ -1,17 +1,17 @@
 ---
 title: "Manual Test Steps"
-parent: "rg1-test-development"
+parent: "rg-one-test-development"
 ---
 
 Manual test steps are the process to search and select required actions to manually create a test case in ATS. In this way the test case will be created by selecting the actions manually.
 
 When you create a new test case it is empty and has no test steps assigned.
 
-![Buttons on the Test Case Window](attachments/rg1-manual-test-steps/21168178.png)
+![Buttons on the Test Case Window](attachments/rg-one-manual-test-steps/21168178.png)
 
 _Buttons on the Test Case Window_
 
-![](attachments/rg1-manual-test-steps/21168179.png)
+![](attachments/rg-one-manual-test-steps/21168179.png)
 
 To add a new test step follow these steps:
 
@@ -23,7 +23,7 @@ To add a new test step follow these steps:
 
 You can now select the created test step and edit its parameters under the _Test Step Settings_ to the right.
 
-![](attachments/rg1-manual-test-steps/21168180.png)
+![](attachments/rg-one-manual-test-steps/21168180.png)
 
 On the test step settings you can configure the following:
 

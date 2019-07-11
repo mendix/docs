@@ -1,6 +1,6 @@
 ---
 title: "Generic"
-parent: "uc1"
+parent: "uc-one"
 ---
 The trap tool is always on in development, test, acceptance and production and is used to have all logging immediately available when an error occurs.
 

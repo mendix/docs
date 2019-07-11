@@ -116,7 +116,7 @@ You can also (manually) create a web service that exposes the standard junit str
 
 #### 3.4.2 Mendix Application Test Suite (ATS) Tests
 
-ATS has its own [API for CICD](/addons/ats/rg2-cicd-api#3-api). To use this, follow the steps in the **ATS and CI/CD** section of [How to Use ATS in Combination with CI/CD](/addons/ats/ht2-ats-and-ci-cd#four).
+ATS has its own [API for CICD](/addons/ats/rg-two-cicd-api#3-api). To use this, follow the steps in the **ATS and CI/CD** section of [How to Use ATS in Combination with CI/CD](/addons/ats/ht-two-ats-and-ci-cd#four).
 
 ### 3.5 Next Steps
 

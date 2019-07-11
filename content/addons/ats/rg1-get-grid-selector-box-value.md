@@ -1,6 +1,6 @@
 ---
 title: "Get Grid Selector Box Value"
-parent: "rg1-grid-selector"
+parent: "rg-one-grid-selector"
 ---
 
 ## Description

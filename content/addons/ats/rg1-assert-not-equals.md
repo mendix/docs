@@ -1,6 +1,6 @@
 ---
 title: "Assert Not equals"
-parent: "rg1-ats-core-actions"
+parent: "rg-one-ats-core-actions"
 ---
 
 ## Description

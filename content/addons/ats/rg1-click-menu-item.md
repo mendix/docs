@@ -1,6 +1,6 @@
 ---
 title: "Click Menu Item"
-parent: "rg1-navigation-menu"
+parent: "rg-one-navigation-menu"
 ---
 
 ## Description

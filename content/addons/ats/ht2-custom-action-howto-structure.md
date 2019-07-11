@@ -1,6 +1,6 @@
 ---
 title: "Structure for How-To's"
-parent: "ht2-custom-action-general"
+parent: "ht-two-custom-action-general"
 description: "Explains the general structure of the how-to's for creating custom actions."
 tags: ["ATS", "testing"]
 ---
@@ -13,11 +13,11 @@ This document explains the general structure of the how-to's for creating custom
 
 In the introduction of each how-to, you find a description of what the how-to explains and in which situation it applies. It also states that you must create a new action. You use this action during the how-to. You must perform all the steps inside this action during the how-to unless stated otherwise.
 
-The introduction also tells you what type of action the how-to explains. The how-to's are written based on the [guidelines for building a custom action](ht2-guidelines-custom-action).
+The introduction also tells you what type of action the how-to explains. The how-to's are written based on the [guidelines for building a custom action](ht-two-guidelines-custom-action).
 
 ## 3 How-to Prerequisites
 
-All of the how-to's have the prerequisite that you must read and if necessary complete the [General](ht2-custom-action-general) section.
+All of the how-to's have the prerequisite that you must read and if necessary complete the [General](ht-two-custom-action-general) section.
 
 ## 4 User Approach
 
@@ -45,7 +45,7 @@ ATS is a functional testing tool, and it simulates a user. To ensure that ATS al
 
 ## 6 Parameters
 
-After creating the action structure, you must create and connect the necessary parameters to the actions. There is a naming convention that you must follow in most situations. There is a how-to for the [basics of creating a custom action](ht2-custom-action-basics).
+After creating the action structure, you must create and connect the necessary parameters to the actions. There is a naming convention that you must follow in most situations. There is a how-to for the [basics of creating a custom action](ht-two-custom-action-basics).
 
 ## 7 Final Check
 

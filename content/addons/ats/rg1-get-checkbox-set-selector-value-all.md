@@ -1,6 +1,6 @@
 ---
 title: "Get Checkbox Set Selector Value (All)"
-parent: "rg1-checkbox-set-selector"
+parent: "rg-one-checkbox-set-selector"
 ---
 
 ## Description

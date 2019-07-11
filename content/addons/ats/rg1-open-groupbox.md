@@ -1,6 +1,6 @@
 ---
 title: "Open GroupBox"
-parent: "rg1-groupbox"
+parent: "rg-one-groupbox"
 ---
 
 ## Description

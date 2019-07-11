@@ -1,6 +1,6 @@
 ---
 title: "Set Up a Local Selenium Solution"
-parent: "ht2-setup-local-selenium-index"
+parent: "ht-two-setup-local-selenium-index"
 description: "Describes the options to set up a local selenium solution."
 tags: ["ATS", "testing", "Selenium hub"]
 ---
@@ -25,7 +25,7 @@ Mendix does not deliver support for local Selenium solutions.
 The official website of the Selenium hub (SeleniumHQ) is [https://www.seleniumhq.org/](https://www.seleniumhq.org/)
 
 ### 2.2 Setting Up the Selenium Solution
-For an example of how to set up this Selenium solution, see: [How to Set Up a Local Selenium Hub](ht2-setup-local-selenium-hub)
+For an example of how to set up this Selenium solution, see: [How to Set Up a Local Selenium Hub](ht-two-setup-local-selenium-hub)
 
 ### 2.3 Characteristics of the Selenium Solution
 Characteristics of the Selenium solution are the following:
@@ -38,7 +38,7 @@ Characteristics of the Selenium solution are the following:
 The official GitHub page of the Docker Selenium hub (Docker Selenium) is [https://github.com/SeleniumHQ/docker-selenium](https://github.com/SeleniumHQ/docker-selenium)
 
 ### 3.2 Setting up the Selenium Solution
-For an example of how to set up this Selenium solution, see: [How to Set Up a Local Docker Selenium hub](ht2-setup-local-docker-selenium-hub)
+For an example of how to set up this Selenium solution, see: [How to Set Up a Local Docker Selenium hub](ht-two-setup-local-docker-selenium-hub)
 
 ### 3.3 Characteristics of the Selenium Solution
 Characteristics of the Selenium solution are the following:
@@ -52,7 +52,7 @@ Characteristics of the Selenium solution are the following:
 The official website of the Selenoid hub (Aerokude) is [http://aerokube.com/](http://aerokube.com/)
 
 ### 4.2 Setting Up the Selenium Solution
-For an example of how to set up this Selenium solution, see: [How to Set Up a Local Selenoid Hub](ht2-setup-local-selenoid-hub)
+For an example of how to set up this Selenium solution, see: [How to Set Up a Local Selenoid Hub](ht-two-setup-local-selenoid-hub)
 
 ### 4.3 Characteristics of the Selenium Solution
 Characteristics of the Selenium solution are the following:

@@ -1,11 +1,11 @@
 ---
 title: "CI/CD API"
-parent: "rg2-ats"
+parent: "rg-two-ats"
 ---
 
 ## 1 CI/CD API
 
-With the CI/CD API, you can easily integrate ATS into your automated deployment workflow. You can run a test according to predefined templates and then query its status and result. Additionally, you can rerun the test cases that were not passed for a failed test suite. For more information on how to integrate ATS into your CI/CD workflow, see the [How-To ATS CI/CD](/addons/ats/ht2-ats-and-ci-cd).
+With the CI/CD API, you can easily integrate ATS into your automated deployment workflow. You can run a test according to predefined templates and then query its status and result. Additionally, you can rerun the test cases that were not passed for a failed test suite. For more information on how to integrate ATS into your CI/CD workflow, see the [How-To ATS CI/CD](/addons/ats/ht-two-ats-and-ci-cd).
 
 {{% alert type="warning" %}}
 **For on-premises implementations** – to use the CI/CD API, you need a special web service user, which ATS uses for authentication. Please contact [Mansystems Support](https://www.mansystems.com/contact/) if you are having problems with this.
@@ -15,7 +15,7 @@ With the CI/CD API, you can easily integrate ATS into your automated deployment 
 
 CI/CD Templates are predefined configurations for a remote job run. The remote job run is triggered via the run job web service. Every CI/CD Template consists of the job configuration, an associated test case or test suite, and a generated unique ID. This ID identifies the CI/CD template. An overview of all the existing CI/CD Templates is found on the **CI/CD Templates tab** on the Test Runs page.
 
-![](attachments/rg2-ci_cd/CICD_JobTemplateOverview.png)
+![](attachments/rg-two-ci_cd/CICD_JobTemplateOverview.png)
 
 | Name | Description |
 |------|-------------|
@@ -26,7 +26,7 @@ CI/CD Templates are predefined configurations for a remote job run. The remote j
 
 You can add new CI/CD Templates by clicking **Add Testcase** or **Add Testsuite**. A dialog box will open where you select the test case or test suite for the CI/CD Template. After that, the **New CI/CD Template** dialog box opens.
 
-![](attachments/rg2-ci_cd/CICD_JobTemplateNewEdit.png)
+![](attachments/rg-two-ci_cd/CICD_JobTemplateNewEdit.png)
 
 Configure the following options in the **New CI/CD Template** dialog box:
 
@@ -37,7 +37,7 @@ Configure the following options in the **New CI/CD Template** dialog box:
 | Selenium Hub | The Selenium hub where the test is executed. |
 | Browser | The browser that is used for the test: Firefox or Chrome.|
 
-For supported Selenium hubs, like Browserstack, further options are available. For more details, see [Supported Selenium Hub Provider](rg2-supported-selenium-hub-provider).
+For supported Selenium hubs, like Browserstack, further options are available. For more details, see [Supported Selenium Hub Provider](rg-two-supported-selenium-hub-provider).
 
 ## 3 API
 

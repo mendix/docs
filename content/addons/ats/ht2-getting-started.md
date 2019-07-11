@@ -1,6 +1,6 @@
 ---
 title: "Get Started"
-parent: "ht2"
+parent: "ht-two"
 description: "Describes the initial steps for automatically testing your apps using ATS."
 tags: ["ATS", "testing"]
 ---
@@ -33,19 +33,19 @@ You add users to ATS by inviting them to your Mendix app project. For more infor
 
 When you [log in to ATS](https://ats.mendix.com), you see the **My Apps** page. An app is a folder in which all the data related to a specific application is saved and managed. You must click your app to gain access to the **test settings**.
 
-![](attachments/ht2-getting-started/my-apps-page.png)
+![](attachments/ht-two-getting-started/my-apps-page.png)
 
 1. Open your app inside ATS. This opens the **Dashboard** page.
 
-	![](attachments/ht2-getting-started/dashboard-page.png)
+	![](attachments/ht-two-getting-started/dashboard-page.png)
 
 2. Open the profile menu and click **Show Test Settings**.
 
-	![](attachments/ht2-getting-started/show-test-settings.png)
+	![](attachments/ht-two-getting-started/show-test-settings.png)
 
 You are now on the **Settings** page. Here you add environments and selenium hubs.
 
-![](attachments/ht2-getting-started/settings-page.png)
+![](attachments/ht-two-getting-started/settings-page.png)
 
 {{% alert type="info" %}}
 
@@ -61,7 +61,7 @@ To add a new environment, follow these steps:
 
 1. Click **New** under **Environments**, which opens the **Environment** dialog box.
 
-	![](attachments/ht2-getting-started/new-environment.png)
+	![](attachments/ht-two-getting-started/new-environment.png)
 
 2.  Set the following parameters:
 
@@ -72,7 +72,7 @@ To add a new environment, follow these steps:
 
 3. Click **Save** to save the settings.
 
-	![](attachments/ht2-getting-started/add-environment.png)
+	![](attachments/ht-two-getting-started/add-environment.png)
 
 ### 3.2 Selenium hubs
 
@@ -82,7 +82,7 @@ To add a new Selenium hub, follow these steps:
 
 1. Click **New Selenium Hub** under **Selenium hubs**.
 
-      ![](attachments/ht2-getting-started/new-selenium-hub.png)
+      ![](attachments/ht-two-getting-started/new-selenium-hub.png)
 
       This opens the **Select Provider** dialog box. Here you select one of the three supported selenium providers or a custom selenium hub. ATS creates the URL needed to access your selenium provider when you select a supported selenium provider. When you select custom, you must provide the URL yourself. 
 
@@ -98,15 +98,15 @@ To add a new Selenium hub, follow these steps:
 
 4. Click **Save** to save the settings.
 
-	![](attachments/ht2-getting-started/browserstack-selenium-hub-wizard.png)
+	![](attachments/ht-two-getting-started/browserstack-selenium-hub-wizard.png)
 
-For further documentation on how-to install the ATS helper and the Recorder see [How-to configure a Selenium hub](ht2-configure-a-selenium-hub).
+For further documentation on how-to install the ATS helper and the Recorder see [How-to configure a Selenium hub](ht-two-configure-a-selenium-hub).
 
 ## 4 Test Cases
 
 The **Test Cases** menu is where you access the repositoy, test data and user stories.
 
-![](attachments/ht2-getting-started/test-cases-menu.png)
+![](attachments/ht-two-getting-started/test-cases-menu.png)
 
 The **Test Cases** menu has three tabs: 
 
@@ -124,20 +124,20 @@ To create a test case, follow these steps:
 
 1. On the **Repository** tab, click **Actions** and click **New Test Case** in the drop-down. This opens the **Create new** dialog box.
 
-	![](attachments/ht2-getting-started/actions-new-test-case.png)
+	![](attachments/ht-two-getting-started/actions-new-test-case.png)
 
 2. Enter a name for your test case. Since you are likely to create multiple test cases and test suites, using a predefined naming structure is advised.
 3. Enter a clear description for your test case. In case others may need to know what your test case does, use a template to make sure all aspects of the case are described clearly.
 4. Click **Create**.
 
-	![](attachments/ht2-getting-started/create-new-test-case.png)
+	![](attachments/ht-two-getting-started/create-new-test-case.png)
 
 5. When the **Test Case Details** page opens, you are now in the actual test case. In the top left corner of the page, you see the name and description of your test case. The **Test Case Details** page also displays the following buttons:
 
       * **Run** – brings you to the **Job Configuration** page
       * **Export** – exports the test case as a XML file (this file can be uploaded into another ATS environment) or exports a PDF report or your test case
 
-	![](attachments/ht2-getting-started/test-case-details-page.png)
+	![](attachments/ht-two-getting-started/test-case-details-page.png)
 
 ### 4.2 Adding Test Steps
 
@@ -145,7 +145,7 @@ Now that you have created a test case, the next step is to configure your test c
 
 * Record your manual test steps using the ATS Recorder
 * Adding test steps using the ATS Helper, see [Finding the action you need](bp2-finding-the-action-you-need).
-* Create a custom action, see [Create custom action](ht2-create-custom-actions).
+* Create a custom action, see [Create custom action](ht-two-create-custom-actions).
 
 Before you start adding test steps, add the ATS Helper and ATS Recorder tools:
 
@@ -154,9 +154,9 @@ Before you start adding test steps, add the ATS Helper and ATS Recorder tools:
 3. To use the recorder function, you need to have the Google Chrome browser installed on your system and install the ATS Recorder Chrome plugin. The ATS recorder only works in Chrome.
 4. Install the ATS recorder extension in your Chrome browser.
 
-	![](attachments/ht2-getting-started/information-dialog.png)
+	![](attachments/ht-two-getting-started/information-dialog.png)
 
-For further documentation on how-to install the ATS helper and the Recorder see [How-to install the ATS Helper and Recorder](ht2-install-ats-helper-recorder).
+For further documentation on how-to install the ATS helper and the Recorder see [How-to install the ATS Helper and Recorder](ht-two-install-ats-helper-recorder).
 
 #### 4.2.1 Record – Using the Recorder Function
 
@@ -166,29 +166,29 @@ To use the recorder function, follow these steps:
 
 1. Click **Record step** while inside a test case in ATS, which opens the **Recording Session** page. On this page you can manage your recording session.
 
-	![](attachments/ht2-getting-started/click-record.png)
+	![](attachments/ht-two-getting-started/click-record.png)
 
 2. You can now open the Mendix application you want to test in another tab of the browser and start testing the application manually. The test steps you take are recorded in the recording session.
 3.  Click **Save** to save your test steps.
 
-	![](attachments/ht2-getting-started/recording-session.png)
+	![](attachments/ht-two-getting-started/recording-session.png)
 
 	| Field | Description |
 | :--- | :--- |
 | **Recorded event** | All the registered clicks/entering text will show up here in the sequence where they were done. Select an event to open the **Action mapping** menu of that particular event. The ATS recorder selects the actions for you. |
 | **Action mapping** | This shows all the available actions for this event. Click **Select** if you want to choose a different action.|
 
-All the test steps are numbered for easy identification. To change the sequence of the test steps click the left of the test step while dragging the test step up or down. You can **delete**, **copy** or **paste** a selected test step. With the **Extract action**, you can combine actions of multiple steps into one step. Select the steps you want to combine and click **Extract action**. For more information on extracting an action, see [Custom Actions](rg1-custom-actions).
+All the test steps are numbered for easy identification. To change the sequence of the test steps click the left of the test step while dragging the test step up or down. You can **delete**, **copy** or **paste** a selected test step. With the **Extract action**, you can combine actions of multiple steps into one step. Select the steps you want to combine and click **Extract action**. For more information on extracting an action, see [Custom Actions](rg-one-custom-actions).
 
-![](attachments/ht2-getting-started/recorded-test-case.png)
+![](attachments/ht-two-getting-started/recorded-test-case.png)
 
-For further documentation on how-to create a test case see [How-to create a test case](ht2-create-a-test-case).
+For further documentation on how-to create a test case see [How-to create a test case](ht-two-create-a-test-case).
 
 #### 4.2.2 Test Data Tab
 
 In this tab, you can connect your datasets to a test case. Use the arrow to select the dataset you need and click **Save**. A new menu will appear in which you can see the dataset fields that are available to select. You can also use this menu to check if you selected the correct dataset.
 
-![](attachments/ht2-getting-started/test-data-tab.png)
+![](attachments/ht-two-getting-started/test-data-tab.png)
 
 {{% alert type="info" %}}
 
@@ -196,21 +196,21 @@ If you do not use the dataset, make sure to disconnect it. ATS will remember whe
 
 {{% /alert %}}
 
-For further documentation on how-to create a datadriven test case see [How-to create a datadriven test case](ht2-create-datadriven-test-case).
+For further documentation on how-to create a datadriven test case see [How-to create a datadriven test case](ht-two-create-datadriven-test-case).
 
 #### 4.2.3 Show Usages Tab
 
 This tab shows you the actions used in this test case and the test suites that are using this test case. Use this screen to verify that if you make a change to a custom action, it does not affect another test case or test suite.
 
-![](attachments/ht2-getting-started/show-usages-tab.png)
+![](attachments/ht-two-getting-started/show-usages-tab.png)
 
 #### 4.2.4 Stories Tab
 
 This tab displays the user stories that are connected to your test case, the test cases within that story, and the success rate of the user story.
 
-![](attachments/ht2-getting-started/stories-tab.png)
+![](attachments/ht-two-getting-started/stories-tab.png)
 
-For further documentation on how-to link stories to test cases see [How-to link Test Cases/Test Suites to User Stories](ht2-connect-stories-to-testcases).
+For further documentation on how-to link stories to test cases see [How-to link Test Cases/Test Suites to User Stories](ht-two-connect-stories-to-testcases).
 
 ### 4.3 Creating a Test Suite
 
@@ -218,13 +218,13 @@ To create a test suite, follow these steps:
 
 1. On the **Repository** tab, click **Actions** and click **New Test Suite** in the drop-down. This opens the **Create new** dialog box.
 
-	![](attachments/ht2-getting-started/actions-new-test-suite.png)
+	![](attachments/ht-two-getting-started/actions-new-test-suite.png)
 
 2. Enter a name for your test suite. Since you are likely to create multiple test cases and test suites, using a predefined naming structure is advised.
 3. Enter a clear description for your test suite. In case others may need to know what your test suite does, use a template to make sure all aspects of the suite are described clearly.
 4. Click **Create**.
 
-      ![](attachments/ht2-getting-started/create-new-test-suite.png)
+      ![](attachments/ht-two-getting-started/create-new-test-suite.png)
 
 5.  The **Test Suite** page looks similar to the **Test Case** page, but with fewer options. The **Test Suite** page also displays the following buttons:
 
@@ -233,7 +233,7 @@ To create a test suite, follow these steps:
       * **Run** – brings you to the **Job Configuration** page.
       * **Export** – exports the test suite as a XML file (this file can be uploaded into another ATS environment).
 
-	![](attachments/ht2-getting-started/test-suite-details-page.png)
+	![](attachments/ht-two-getting-started/test-suite-details-page.png)
 
 #### 4.3.1 Test Steps Tab
 
@@ -241,29 +241,29 @@ Here you can see all the steps that are in your test suite. Each step is either 
 
 You add a test case to your test suite by clicking the **Select and add test case/suite** button.
 
-![](attachments/ht2-getting-started/add-test-case.png)
+![](attachments/ht-two-getting-started/add-test-case.png)
 
-For further documentation on how-to create a test suite see [How-to create a test suite](ht2-create-a-test-suite).
+For further documentation on how-to create a test suite see [How-to create a test suite](ht-two-create-a-test-suite).
 
 #### 4.3.2 Show Usages Tab
 
 This tab shows you all the **Test Cases used by this Test Suite**, all the **Test Suites used by this Test Suite**, and the **Test Suites using this Test Suite**. Use this screen to make sure that if you make a change, it does not affect other test cases or test suites.
 
-![](attachments/ht2-getting-started/show-usages-tab-test-suite.png)
+![](attachments/ht-two-getting-started/show-usages-tab-test-suite.png)
 
 #### 4.3.3 Stories Tab
 
 This tab displays the user stories that are connected to your test suite, the test cases within that story, and the success rate of the user story. You can **Open**, **Unlink**, or **Link** a user story to your test suite.
 
-![](attachments/ht2-getting-started/stories-tab-test-suite.png)
+![](attachments/ht-two-getting-started/stories-tab-test-suite.png)
 
-For further documentation on how-to link stories to test suites see [How-to link Test Cases/Test Suites to User Stories](ht2-connect-stories-to-testcases).
+For further documentation on how-to link stories to test suites see [How-to link Test Cases/Test Suites to User Stories](ht-two-connect-stories-to-testcases).
 
 ## 5 Run Configuration
 
 When you click **Run** in the upper-right corner of your test case/suite, the **Job Configuration** page will open.
 
-![](attachments/ht2-getting-started/job-configuration.png)
+![](attachments/ht-two-getting-started/job-configuration.png)
 
 Here, you can select your Environment and Selenium hub for ATS to use.
 
@@ -286,14 +286,14 @@ Now click **Run** again in the upper-right corner to execute the test case/suite
 
 When you click **Run**, the **Test Runs** page will open.
 
-![](attachments/ht2-getting-started/test-runs-page.png)
+![](attachments/ht-two-getting-started/test-runs-page.png)
 
 Once your test case/suite is executed, the result is shown here.
 
-You have now finished the getting started guide for ATS. We advice to read next [How-to Install the ATS Helper and Recorder](ht2-install-ats-helper-recorder).
+You have now finished the getting started guide for ATS. We advice to read next [How-to Install the ATS Helper and Recorder](ht-two-install-ats-helper-recorder).
 
 Good luck testing your Mendix app with ATS!
 
 ## 7 Next Up
 
-You now learned a few basics of working with ATS. The next how-to is [How to Install the ATS Helper and ATS Recorder](ht2-install-ats-helper-recorder). You find an overview of all the how-tos and the structure on the [ATS 2 How-to's](ht2) page. We advise you to follow the predefined structure.
+You now learned a few basics of working with ATS. The next how-to is [How to Install the ATS Helper and ATS Recorder](ht-two-install-ats-helper-recorder). You find an overview of all the how-tos and the structure on the [ATS 2 How-to's](ht-two) page. We advise you to follow the predefined structure.

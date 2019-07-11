@@ -1,6 +1,6 @@
 ---
 title: "Assert InputReferenceSelector Value"
-parent: "rg1-input-reference-selector"
+parent: "rg-one-input-reference-selector"
 ---
 ## Description
 Asserts that the InputReferenceSelector has the given value.

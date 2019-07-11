@@ -1,6 +1,6 @@
 ---
 title: "Find Item/Row"
-parent: "rg1-datagrid-templategrid-listview"
+parent: "rg-one-datagrid-templategrid-listview"
 ---
 
 ## Description

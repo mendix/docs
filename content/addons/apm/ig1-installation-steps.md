@@ -1,15 +1,15 @@
 ---
 title: "Installation Steps"
-parent: "ig1"
+parent: "ig-one"
 menu_order: 2
 ---
-This chapter describes the installation of the APM tool. For details on upgrading to a new version, see [Upgrade Steps](ig1-upgrade-steps).
+This chapter describes the installation of the APM tool. For details on upgrading to a new version, see [Upgrade Steps](ig-one-upgrade-steps).
 
 ## Backup
 
 Did you commit your work to the team server? And did you make a database backup?
 
-![](attachments/ig1-installation-steps/Commit.png)
+![](attachments/ig-one-installation-steps/Commit.png)
 
 If you don't have an SVN client like Tortoise SVN installed, make a copy of the widgets folder in your project.
 
@@ -17,7 +17,7 @@ If you don't have an SVN client like Tortoise SVN installed, make a copy of the 
 
 Import the module APMAgent in the modeler.
 
-![](attachments/ig1-installation-steps/Import_Module_Package.png)
+![](attachments/ig-one-installation-steps/Import_Module_Package.png)
 
 Write down the widgets in the warning dialog that are overwritten to be able to revert these changes.
 
@@ -25,17 +25,17 @@ Write down the widgets in the warning dialog that are overwritten to be able to 
 
 If you are not using only **English, United States**, copy the **English, United States** language for the APMAgent module to all the languages using **Tools** > **Language Operations** in the Modeller:
 
-![](attachments/ig1-installation-steps/Language_Operations_Header.png)
+![](attachments/ig-one-installation-steps/Language_Operations_Header.png)
 
-![](attachments/ig1-installation-steps/Language_Operations_APM.png)
+![](attachments/ig-one-installation-steps/Language_Operations_APM.png)
 
-![](attachments/ig1-installation-steps/Language_Operations_Footer.png)
+![](attachments/ig-one-installation-steps/Language_Operations_Footer.png)
 
 ## Add Permissions
 
 Add `APMAgent.Admin` permissions to the project **Ssecurity** > **User roles** tab for a selected administrator role.
 
-![](attachments/ig1-installation-steps/Add_Permissions.png)
+![](attachments/ig-one-installation-steps/Add_Permissions.png)
 
 **Note:** Do not use the Debug role. This is for developers of the APM tool to test certain features.
 
@@ -47,7 +47,7 @@ Add `APMAgent.Admin` permissions to the project **Ssecurity** > **User roles** t
 
 To use the APM tools, you need to call the APM tool UI. Use the **APMAgent/USE_ME/IVK_OpenConsole** microflow for this. Add a navigation menu item, for example.
 
-![](attachments/ig1-installation-steps/Add_To_Navigation.png)
+![](attachments/ig-one-installation-steps/Add_To_Navigation.png)
 
 ## Optional: Add to After Startup and Before Shutdown
 
@@ -63,7 +63,7 @@ Call `APMAgent\USE_ME\BeforeShutdown` from a before shutdown microflow.
 
 You can find the AfterStartup and BeforeShutdown microflows in the project settings.
 
-![](attachments/ig1-installation-steps/Project_Settings_After_Startup.png)
+![](attachments/ig-one-installation-steps/Project_Settings_After_Startup.png)
 
 ## Configure APMAgent.CompanyName and APMAgent.AppName Constants
 
@@ -85,7 +85,7 @@ See the sample microflow APMAgent.SampleNotifyMicroflow_LogMessage.
 
 You can now start up.
 
-If an error appears, see [After Startup Error](ig1-after-startup-error).
+If an error appears, see [After Startup Error](ig-one-after-startup-error).
 
 Otherwise, log in as Admin and navigate to the APM tool.
 
@@ -93,7 +93,7 @@ Otherwise, log in as Admin and navigate to the APM tool.
 
 After startup for the first time, a small wizard is started:
 
-![](attachments/ig1-installation-steps/Welcome_Dialog.png)
+![](attachments/ig-one-installation-steps/Welcome_Dialog.png)
 
 *   If you have received a license request code for this app, you can enter this code in the license request code field.   
 *   Use the **Mail license request** button to send a mail with the license request.

@@ -1,16 +1,16 @@
 ---
 title: "Test Run"
-parent: "rg1-test-development"
+parent: "rg-one-test-development"
 ---
 
 To run an existing test, you have to open the test case or test suite by clicking its name in the repository.
 The test case (or test suite) details page will open. On this page you can see all the test steps and for the test suite the containing test case of your test. If you want to execute your test case, click _Run_.
 
-![Test case details](attachments/rg1-test-run/testCaseDetails.png)
+![Test case details](attachments/rg-one-test-run/testCaseDetails.png)
 
 The _Select Run Configuration_ page will open. On this page, you can set the run configuration for the test case (or test suite) you want to exectue.
 
-![Test Run Configuration](attachments/rg1-test-run/runConfiguration.png)
+![Test Run Configuration](attachments/rg-one-test-run/runConfiguration.png)
 
 The following options are available:
 
@@ -34,4 +34,4 @@ Enable the taking of screenshots during the test run.
 
 Set the depth of the error logging.
 
-As soon as you have finished setting the run configuration, you can execute the test case by clicking _Run_ or you can schedule the test case by clicking _Schedule_. If you want to know more about scheduling test cases in ATS, visit the [Scheduling section](rg1-scheduling).
+As soon as you have finished setting the run configuration, you can execute the test case by clicking _Run_ or you can schedule the test case by clicking _Schedule_. If you want to know more about scheduling test cases in ATS, visit the [Scheduling section](rg-one-scheduling).

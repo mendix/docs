@@ -1,6 +1,6 @@
 ---
 title: "Increase ATS Recorder and Helper Coverage"
-parent: "ht2"
+parent: "ht-two"
 description: "Describes how to increase the ATS Recorder and Helper coverage of your application"
 tags: ["ATS", "testing"]
 ---
@@ -17,7 +17,7 @@ ATS provides two different tools to help build test scripts: the ATS Helper and 
 ## 2 Prerequisites
 Before starting this how-to, make sure you have the following prerequisites in place:
 
-*  Read and Installed the ATS Helper and Recorder, see [How to Install the ATS Helper and ATS Recorder](ht2-install-ats-helper-recorder)
+*  Read and Installed the ATS Helper and Recorder, see [How to Install the ATS Helper and ATS Recorder](ht-two-install-ats-helper-recorder)
 *  Completed the Rapid Application Developer course
 
 ## 3 Increasing ATS Recorder Coverage of Your AUT
@@ -54,7 +54,7 @@ To add a constant in Mendix Studio Pro follow these steps:
 * Type: Boolean
 * Default value: True
 
-![](attachments/ht2-increase-recorder-coverage/add-constant.png)
+![](attachments/ht-two-increase-recorder-coverage/add-constant.png)
 
 6. Click **OK**. This opens the **New Constant Value** dialog.
 7. Click **OK** in the **New Constant Value** dialog and click **OK** in the **New Configuration** dialog.
@@ -65,7 +65,7 @@ You now added the constant in Mendix Studio Pro. If you have this constant anywh
 
 Your application has many buttons, images, and menu widgets etc. on each page. It is possible that those widgets have the same mx-name, for example, mx-name-actionButton1. The recorder can often record these widgets, but when you run your test case it might fail. It might fail because ATS interacts with the first widget it finds with that mx-name. Changing the name in Mendix Studio Pro to a unique name solves this problem:
 
-![](attachments/ht2-increase-recorder-coverage/changed-mx-name.png)
+![](attachments/ht-two-increase-recorder-coverage/changed-mx-name.png)
 
 Make sure you use some kind of naming structure when deciding to rename several widgets in your app. Consistency is important.
 
@@ -79,7 +79,7 @@ Custom widgets are often designed differently than Mendix widgets. As the ATS Re
 
 Even with the tips from the previous chapter recording every widget on your AUT is not possible. There are some widgets that are too complicated to record. But if the ATS Recorder doesn't record a widget, it doesn't mean ATS cannot interact with it. When the ATS Recorder doesn't record certain widgets, you must check with the ATS Helper if that widget has an mx-name. For example, the ATS Recorder might not record clicking on a certain image. But when you check that image with the ATS Helper you see that that image does have an mx-name:
 
-![](attachments/ht2-increase-recorder-coverage/not-recordable-image.png)
+![](attachments/ht-two-increase-recorder-coverage/not-recordable-image.png)
 
 If the image has an mx-name, ATS can *Find, Click, Set, Assert, and Get* these widgets with the standard Mendix actions.
 
@@ -92,7 +92,7 @@ In case the widget doesn't have a unique mx-name or an mx-name at all, the follo
 
 The previous chapter described that ATS can interact with the correct widget by giving it a unique name in Mendix Studio Pro. Another way to let ATS interact with the correct widget is by adding another mx-name in the ATS action. The mechanics are the same as the **Search Context** input parameter. ATS will search for the widget with the second mx-name inside the widget with the first mx-name. For example: 'container8 microflowButton2' ATS searches for the microflowbutton inside the container. ATS searches for the second mx-name within the first mx-name:
 
-![](attachments/ht2-increase-recorder-coverage/2-mx-names.png)
+![](attachments/ht-two-increase-recorder-coverage/2-mx-names.png)
 
 You have to add this manually in ATS. To find the mx-name use the ATS Helper in your AUT.
 
@@ -100,28 +100,28 @@ You have to add this manually in ATS. To find the mx-name use the ATS Helper in 
 
 You can develop a widget without an mx-name, for example, a navigation list with several navigation options:
 
-![](attachments/ht2-increase-recorder-coverage/no-mx-name-listview.png)
+![](attachments/ht-two-increase-recorder-coverage/no-mx-name-listview.png)
 
 The ATS Recorder cannot record the options in the navigation list, as they do not have an mx-name. For the same reason, the ATS Helper can not interact with these options. The ATS Helper shows the mx-name of the complete navigation list, instead of the options:
 
-![](attachments/ht2-increase-recorder-coverage/no-mx-name-listview-app-e.png)
+![](attachments/ht-two-increase-recorder-coverage/no-mx-name-listview-app-e.png)
 
 You can manually enter a class in the **Class** of Mendix Studio Pro with an mx-name to solve this:
 
-![](attachments/ht2-increase-recorder-coverage/mx-name-listview.png)
+![](attachments/ht-two-increase-recorder-coverage/mx-name-listview.png)
 
-![](attachments/ht2-increase-recorder-coverage/mx-name-listview-app-e.png)
+![](attachments/ht-two-increase-recorder-coverage/mx-name-listview-app-e.png)
 
 As the options in the navigation list have an mx-name, the ATS helper can interact with them. In ATS you can *Find, Click, Set, Assert, and Get* these widgets with the standard Mendix actions. ATS can still interact with the options if you add another class as well:
 
-![](attachments/ht2-increase-recorder-coverage/extra-class-name.png)
+![](attachments/ht-two-increase-recorder-coverage/extra-class-name.png)
 
 You have given the **Class** an mx-name and not the widget name in the **Name** field, as the options of the navigation list do not have a **Name** field. Widgets that the ATS Recorder recognizes get their mx-name from the name in the **Name** field. For example, the navigation list:
 
-![](attachments/ht2-increase-recorder-coverage/mx-name-in-name.png)
+![](attachments/ht-two-increase-recorder-coverage/mx-name-in-name.png)
 
 For this reason, recording this widget is still not possible.
 
 ## 4 Next Up
 
-With these tips you increase the ATS Recorder and ATS Helper coverage of your AUT. The next how-to is [How to Create Custom Actions](ht2-create-custom-actions). You find an overview of all the how-tos and the structure on the [ATS 2 How-to's](ht2) page. We advise you to follow the predefined structure.
+With these tips you increase the ATS Recorder and ATS Helper coverage of your AUT. The next how-to is [How to Create Custom Actions](ht-two-create-custom-actions). You find an overview of all the how-tos and the structure on the [ATS 2 How-to's](ht-two) page. We advise you to follow the predefined structure.

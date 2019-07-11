@@ -1,11 +1,11 @@
 ---
 title: "Create Custom Action Basics"
-parent: "ht2-create-custom-actions"
+parent: "ht-two-create-custom-actions"
 ---
 
 ## 1 Introduction
 
-This how-to explains the basics of creating a custom action. You must complete this how-to before proceeding with [How to Create Custom Actions](ht2-create-custom-actions).
+This how-to explains the basics of creating a custom action. You must complete this how-to before proceeding with [How to Create Custom Actions](ht-two-create-custom-actions).
 
 **This how-to will teach you how to do the following:**
 
@@ -18,9 +18,9 @@ This how-to explains the basics of creating a custom action. You must complete t
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Have a general knowledge of ATS
-* Read [How to Get Started](ht2-getting-started)
-* Read [How to Create a Test Case](ht2-create-a-test-case)
-* Read [Guidelines for Creating a Custom Action](ht2-guidelines-custom-action)
+* Read [How to Get Started](ht-two-getting-started)
+* Read [How to Create a Test Case](ht-two-create-a-test-case)
+* Read [Guidelines for Creating a Custom Action](ht-two-guidelines-custom-action)
 
 ## 3 Creating a Custom Action
 
@@ -35,17 +35,17 @@ The following sections describe how to create a custom action. There are two opt
 2. Click the **Actions** drop-down menu in the **Repository** tab.
 3.  Select **New Action**:
     
-    ![](attachments/ht2-custom-action-basics/repository-add-action.png)
+    ![](attachments/ht-two-custom-action-basics/repository-add-action.png)
 
     This opens the **Create new** dialog box:
     
-    ![](attachments/ht2-custom-action-basics/create-new-action-dialog.png)
+    ![](attachments/ht-two-custom-action-basics/create-new-action-dialog.png)
 
 4. Enter a name in the **Name** field (for example, *Set Drop-Down*). It is advisable to use a name that describes what the action does.
 5. Enter a description in the **Description** field (for example, *This action sets the drop-down menu to a specific value*). It is advisable to give each action a detailed description of what it does.
 6.  Click **Create**:
     
-    ![](attachments/ht2-custom-action-basics/create-new-action-dialog-complete.png)
+    ![](attachments/ht-two-custom-action-basics/create-new-action-dialog-complete.png)
 
 You have now created a custom action from the repository.
 
@@ -58,22 +58,22 @@ To use the **Extract Action** button, follow these steps:
 3. Select the test steps you want to combine in a custom action by clicking the check box in front of the step.
 4.  Click **Extract Action**:
     
-    ![](attachments/ht2-custom-action-basics/test-case-extract-action.png)
+    ![](attachments/ht-two-custom-action-basics/test-case-extract-action.png)
 
     This opens the **Action - Set Details** dialog box.
 5. Enter a name in the **Name** field (for example, *Set Drop-Down*).
 6. Enter a description in the **Description** field (for example, *This action sets the drop-down menu to a specific value*).
 7.  Click **Close**:
     
-    ![](attachments/ht2-custom-action-basics/test-case-action-set-details.png)
+    ![](attachments/ht-two-custom-action-basics/test-case-action-set-details.png)
 
 8.  Select the newly created action and click **Open**:
     
-    ![](attachments/ht2-custom-action-basics/test-case-open-new-action.png)
+    ![](attachments/ht-two-custom-action-basics/test-case-open-new-action.png)
 
 Both ways open the **Action Details** page. This page works the same as the **Test Case Details** page. You add test steps by clicking **Setup step manually** or by clicking **Record step**.
 
-![](attachments/ht2-custom-action-basics/action-details-page-add-record.png)
+![](attachments/ht-two-custom-action-basics/action-details-page-add-record.png)
 
 ## 4 Adding Parameters
 
@@ -82,7 +82,7 @@ To add parameters to your custom action, follow these steps:
 1. Go to the **Action Details** page of your action.
 2.  Click the **Settings** tab:
     
-    ![](attachments/ht2-custom-action-basics/action-details-page-settings.png)
+    ![](attachments/ht-two-custom-action-basics/action-details-page-settings.png)
 
 3. Follow the steps in the sections below for adding input and output parameters.
 
@@ -92,7 +92,7 @@ To add input parameters, follow these steps:
 
 1.  Click **New**:
     
-    ![](attachments/ht2-custom-action-basics/action-details-page-settings-new.png)
+    ![](attachments/ht-two-custom-action-basics/action-details-page-settings-new.png)
 
     This will open the **Edit Input Parameter** dialog box.
 
@@ -103,7 +103,7 @@ To add input parameters, follow these steps:
 6.  Select a **Required/Optional** option. For example, the **Widget Name** parameter is always required, otherwise the action does not work.
 7.  Click **Save**:
     
-    ![](attachments/ht2-custom-action-basics/new-action-edit-input-parameter.png)
+    ![](attachments/ht-two-custom-action-basics/new-action-edit-input-parameter.png)
 
 You can add as many input parameters as you need, but remember to keep the action simple.
 
@@ -113,7 +113,7 @@ To add an output parameter, follow these steps:
 
 1.  Click **Set**:
     
-    ![](attachments/ht2-custom-action-basics/action-details-page-settings-set.png)
+    ![](attachments/ht-two-custom-action-basics/action-details-page-settings-set.png)
 
     This opens the different **Output Parameter** fields.
 
@@ -122,16 +122,16 @@ To add an output parameter, follow these steps:
 4. Select a data type from the **Datatype** drop-down menu (for example, *Page Element*).
 5.  Select a **Required/Optional** option. Only use **Optional** if the action still works when nothing is returned.
     
-    ![](attachments/ht2-custom-action-basics/new-action-output-parameter-complete.png)
+    ![](attachments/ht-two-custom-action-basics/new-action-output-parameter-complete.png)
 
 6. The **Output Parameter** requires additional steps. Go to the **Test Steps** tab and click **Add**.
-7.  Add the [Find/Assert Widget](rg1-findassert-widget) action and the [Set Return Value](rg1-set-return-value) action.
+7.  Add the [Find/Assert Widget](rg-one-findassert-widget) action and the [Set Return Value](rg-one-set-return-value) action.
     
-    ![](attachments/ht2-custom-action-basics/output-parameter-actions.png)
+    ![](attachments/ht-two-custom-action-basics/output-parameter-actions.png)
 
 8.  For ATS to return the outcome of a test step as an **Output Parameter**, it needs to know what it must return. ATS returns the **Value** connected to the **Set Return Value** action. Now, connect the outcome of test step 1 to the **Set Return Value** action.
     
-    ![](attachments/ht2-custom-action-basics/set-return-value-parameter.png)
+    ![](attachments/ht-two-custom-action-basics/set-return-value-parameter.png)
 
     Make sure the data type of the **Output Parameter** corresponds with data type of the connected outcome.
     
@@ -145,4 +145,4 @@ To connect the input parameter, follow these steps:
 2.  Open the parameter drop-down menu.
 3.  Select the input parameter you want to connect.
     
-    ![](attachments/ht2-custom-action-basics/action-connect-input-parameter.png)
+    ![](attachments/ht-two-custom-action-basics/action-connect-input-parameter.png)

@@ -1,6 +1,6 @@
 ---
 title: "Get Property Value"
-parent: "rg1-get"
+parent: "rg-one-get"
 ---
 
 ## Description

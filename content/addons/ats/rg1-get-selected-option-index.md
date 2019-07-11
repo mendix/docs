@@ -1,6 +1,6 @@
 ---
 title: "Get Selected Option Index"
-parent: "rg1-get"
+parent: "rg-one-get"
 ---
 
 ## Description

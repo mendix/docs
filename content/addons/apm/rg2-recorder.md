@@ -1,6 +1,6 @@
 ---
 title: "Performance Recorder"
-parent: "rg2-apm"
+parent: "rg-two-apm"
 ---
 
 ## 1 Introduction
@@ -15,19 +15,19 @@ A new recording session is started by clicking **Record runtime(s)**. You can pr
 
 It is possible to record an individual user's browser without recording the runtime by clearing the **Record all browsers** box and then clicking **Select browsers to record**. A pop-up window will show a list of the users logged in on the current day. You can select here the users whose browsers you want to record.
 
-![](attachments/rg2/select-browsers.png)
+![](attachments/rg-two/select-browsers.png)
 
 When recording a browser, the user has to confirm the following message:
 
-![](attachments/rg2/Browser_agent_recording_notice.png)
+![](attachments/rg-two/Browser_agent_recording_notice.png)
 
 ## 3 Recorded Results
 
 The results of a recording are found in the **Recorded sessions** overview. This tab displays the recordings of the runtime(s) separate from the browser recordings. 
 
-When you click a recording of the **Browser** type, the [browser recording results](rg2-browser-recorder-results) opens. When you click a recording of the **Server** type, the [server recording results](rg2-runtime-recorder-results) opens.
+When you click a recording of the **Browser** type, the [browser recording results](rg-two-browser-recorder-results) opens. When you click a recording of the **Server** type, the [server recording results](rg-two-runtime-recorder-results) opens.
 
-![](attachments/rg2/recorder.png)
+![](attachments/rg-two/recorder.png)
 
 {{% alert type="info" %}}
 

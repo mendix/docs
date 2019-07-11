@@ -1,6 +1,6 @@
 ---
 title: "Click Drop-Down div Converter Split Button"
-parent: "rg1-dropdown-div-converter"
+parent: "rg-one-dropdown-div-converter"
 ---
 
 ## Description

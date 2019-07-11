@@ -1,6 +1,6 @@
 ---
 title: "Assert Grid Selector Value"
-parent: "rg1-grid-selector"
+parent: "rg-one-grid-selector"
 ---
 ## Description
 Asserts the value of the check box and the radio button inside the Grid Selector Widget.

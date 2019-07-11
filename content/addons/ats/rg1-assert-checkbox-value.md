@@ -1,6 +1,6 @@
 ---
 title: "Assert Checkbox Value"
-parent: "rg1-input"
+parent: "rg-one-input"
 ---
 
 ## Description

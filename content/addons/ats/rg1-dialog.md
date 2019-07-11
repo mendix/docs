@@ -1,6 +1,6 @@
 ---
 title: "Dialog"
-parent: "rg1-mendix-actions"
+parent: "rg-one-mendix-actions"
 ---
 
 {{% alert type="info" %}}
@@ -13,8 +13,8 @@ A <i>ConfirmationDialog</i> is shown when a delete or microflow action requires 
 
 **Dialog** contains these documents:
 
-* [Cancel Dialog](rg1-cancel-dialog)
-* [Close Dialog](rg1-close-dialog)
-* [Confirm Dialog](rg1-confirm-dialog)
-* [Find/Assert Dialog](rg1-findassert-dialog)
-* [Get Dialog Message Text](rg1-get-dialog-message-text)
+* [Cancel Dialog](rg-one-cancel-dialog)
+* [Close Dialog](rg-one-close-dialog)
+* [Confirm Dialog](rg-one-confirm-dialog)
+* [Find/Assert Dialog](rg-one-findassert-dialog)
+* [Get Dialog Message Text](rg-one-get-dialog-message-text)

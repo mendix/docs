@@ -1,6 +1,6 @@
 ---
 title: "Local Profile"
-parent: "rg2-ats"
+parent: "rg-two-ats"
 description: "Describes a local profile in ATS."
 tags: ["ats", "profile", "password"]
 ---
@@ -9,7 +9,7 @@ tags: ["ats", "profile", "password"]
 
 Local accounts, meaning accounts created by a tenant administrator, can access and change their profile information via the **Edit Profile** page. 
 
-For more details on tenant administration, see [Administration](rg2-administration).
+For more details on tenant administration, see [Administration](rg-two-administration).
 
 ## 2 Performing Basic Functions
 
@@ -21,7 +21,7 @@ To open the **Edit Profile** page, do the following:
 
 2.  Click **Show Profile**.
 
-    ![Edit profile page](attachments/rg2-profile/profile.png)
+    ![Edit profile page](attachments/rg-two-profile/profile.png)
 
 ### 2.2 Changing the Full Name 
 
@@ -45,7 +45,7 @@ To change your password from the **Edit Profile** page, do the following:
 
 {{% alert type="info" %}}
 
-To change your password, you need to log in first. If you have problems with logging in, contact your tenant administrator. For more details on tenant administration, see [Administration](rg2-administration).
+To change your password, you need to log in first. If you have problems with logging in, contact your tenant administrator. For more details on tenant administration, see [Administration](rg-two-administration).
 
 {{% /alert %}} 
 

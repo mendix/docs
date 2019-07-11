@@ -1,29 +1,29 @@
 ---
 title: "Job Configuration"
-parent: "rg2-test-run"
+parent: "rg-two-test-run"
 ---
 
 ## 1 Introduction
 
 To run an existing test, you must open the test case or test suite by clicking its name in the repository, or click the play button displayed in the test case:
 
-![](attachments/rg2-test-run/play-button.png)
+![](attachments/rg-two-test-run/play-button.png)
 
 The test case (or test suite) details page then opens. On this page, you can see all the test steps and, for the test suite, the containing test case of your test.
 
 If you want to execute your test case, click **Run**:
 
-![](attachments/rg2-test-run/test-case-details-run.png)
+![](attachments/rg-two-test-run/test-case-details-run.png)
 
 The **General Settings** job configuration page then opens. On this page, set the job configuration for the test case (or test suite) you want to execute. For every test run, a new job is created.
 
-![](attachments/rg2-test-run/runconfig.png)
+![](attachments/rg-two-test-run/runconfig.png)
 
 For explanations of the general settings sections, see [2 General Settings](#general).
 
 If you selected a Selenium hub from a supported Selenium hub provider (SauceLabs, or Browserstack), you get access to the **Platform Settings** section for the selection of the operating system and screen resolution:
 
-![](attachments/rg2-test-run/runconfig-os.png)
+![](attachments/rg-two-test-run/runconfig-os.png)
 
 For explanations of the platform settings, see [3 Platform Settings](#platform).
 
@@ -56,7 +56,7 @@ This option is only available for supported Selenium hubs.
 
 If you have selected a Selenium hub from a supported Selenium hub provider (SauceLabs, or Browserstack), you get access to the platform settings. Here you can set the operating system on which the test case is executed.
 
-For more information on the different supported operating systems, see [Supported Selenium Hub Providers](rg2-supported-selenium-hub-provider).
+For more information on the different supported operating systems, see [Supported Selenium Hub Providers](rg-two-supported-selenium-hub-provider).
 
 ### 3.2 Resolution
 
@@ -66,6 +66,6 @@ This option is only available for supported Selenium hubs.
 
 {{% /alert %}}
 
-With this option, you specify the screen resolution for your test run. For a list of all the supported screen resolutions, see [Supported selenium hub provider section](rg2-supported-selenium-hub-provider).
+With this option, you specify the screen resolution for your test run. For a list of all the supported screen resolutions, see [Supported selenium hub provider section](rg-two-supported-selenium-hub-provider).
 
-After you set the run configuration, execute the test case by clicking **Run**, or schedule the test case by clicking **Schedule**. For details on scheduling test cases in ATS, see [Scheduling](rg2-schedule).
+After you set the run configuration, execute the test case by clicking **Run**, or schedule the test case by clicking **Schedule**. For details on scheduling test cases in ATS, see [Scheduling](rg-two-schedule).

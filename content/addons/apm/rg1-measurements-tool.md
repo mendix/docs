@@ -1,6 +1,6 @@
 ---
 title: "Measurements Tool"
-parent: "rg1-apm"
+parent: "rg-one-apm"
 ---
 The measurements tool is meant to measure system resources and to trigger actions on thresholds. This allows you to monitor memory and save statistics or perform a trap when memory usage reaches, for example, 80%. 
 
@@ -10,7 +10,7 @@ Measurements are created via the **Collect in Measurements Tool** button in the 
 
 The charts tab shows graphs of collected data in the measurements tool.
 
- ![](attachments/rg1-measurements-tool/Charts.png)
+ ![](attachments/rg-one-measurements-tool/Charts.png)
 
 Double-clicking the measurement will open a read-only view of the measurement configuration.
 
@@ -18,7 +18,7 @@ Double-clicking the measurement will open a read-only view of the measurement co
 
 Measurements can be configured on the **Measurement configuration** tab. If the measurement is running, you can only view the measurement configuration. 
 
-  ![](attachments/rg1-measurements-tool/Measurement_Configuration_Tab.png)                     
+  ![](attachments/rg-one-measurements-tool/Measurement_Configuration_Tab.png)                     
 
 Measurements can be started and stopped here. In the dialog behind the play-button, you can start or stop all measurements at once.
 
@@ -26,7 +26,7 @@ Measurements can be started and stopped here. In the dialog behind the play-butt
 
 Double-clicking or selecting and clicking the **Edit** button shows the measurement configuration dialog.  Here, the selected measurement can be configured:
 
- ![](attachments/rg1-measurements-tool/Measurement_Configuration_Edit.png)
+ ![](attachments/rg-one-measurements-tool/Measurement_Configuration_Edit.png)
 
 The **Measurement configuration** tab allows you to do the following:
 
@@ -49,9 +49,9 @@ The **Measurement configuration** tab allows you to do the following:
 ### Triggers Tab
 Here you can define triggers on high memory usage for example.
 
- ![](attachments/rg1-measurements-tool/Measurement_Triggers.png)                 
+ ![](attachments/rg-one-measurements-tool/Measurement_Triggers.png)                 
 
-See the description of [Triggers](rg1-triggers) for how to configure triggers.
+See the description of [Triggers](rg-one-triggers) for how to configure triggers.
 
 
 ### Expressions
@@ -81,7 +81,7 @@ $Measurement/ValueLong - $Measurement_1/ValueLong
 
 The tester will execute the measurement and test the trigger (if enabled) to verify the expressions.
 
-![](attachments/rg1-measurements-tool/Measurement_Tester.png)
+![](attachments/rg-one-measurements-tool/Measurement_Tester.png)
 
 If there is an error, the error message appears on **Apply & test**. You can view the stack trace as well.
 
@@ -91,12 +91,12 @@ In the tester, you can clear the cache and also remove all records from the data
 
 If a trigger fires, a record is created in the triggered events. 
 
-The events are automatically deleted after a certain amount of days as configured in the global setting [More tab](rg1-configuration#more). 
+The events are automatically deleted after a certain amount of days as configured in the global setting [More tab](rg-one-configuration#more). 
 **Remove triggered events after (days)**. 
 
 If you want to keep an event for future reference you can use the **Keep**-button above the triggered event grid.
 
-![](attachments/rg1-triggers/Triggered_Events.png)
+![](attachments/rg-one-triggers/Triggered_Events.png)
 
 If a trap is created with the trigger actions, you can open the trap.
 

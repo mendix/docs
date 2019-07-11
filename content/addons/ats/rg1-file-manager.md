@@ -1,8 +1,8 @@
 ---
 title: "File Manager"
-parent: "rg1-mendix-actions"
+parent: "rg-one-mendix-actions"
 ---
 
 This section contains this document:
 
-* [Set File Manager](rg1-set-file-manager)
+* [Set File Manager](rg-one-set-file-manager)

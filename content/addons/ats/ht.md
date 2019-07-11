@@ -10,5 +10,5 @@ This section presents how-to's for ATS.
 
 ## 2 Main Documents in This section
 
-* [ATS 2 How-to's](ht2)
-* [ATS 1 How-to's](ht1)
+* [ATS 2 How-to's](ht-two)
+* [ATS 1 How-to's](ht-one)

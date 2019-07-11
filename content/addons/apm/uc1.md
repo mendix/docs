@@ -8,8 +8,8 @@ The APM tools have been used extensively by Mansystems’ developers and support
 
 The different use cases are described here:
 
-*   [Generic](uc1-generic)
-*   [In development](uc1-in-development)
-*   [In test and acceptance](uc1-in-test-and-acceptance)
-*   [In production](uc1-in-production)
-*   [In a load test](uc1-in-a-load-test)
+*   [Generic](uc-one-generic)
+*   [In development](uc-one-in-development)
+*   [In test and acceptance](uc-one-in-test-and-acceptance)
+*   [In production](uc-one-in-production)
+*   [In a load test](uc-one-in-a-load-test)

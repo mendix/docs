@@ -1,6 +1,6 @@
 ---
 title: "Get BootstrapRTE Value"
-parent: "rg1-bootstraprte"
+parent: "rg-one-bootstraprte"
 ---
 
 ## Description

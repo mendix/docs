@@ -1,6 +1,6 @@
 ---
 title: "Triggers"
-parent: "rg1-apm"
+parent: "rg-one-apm"
 ---
 
 Triggers can be configured in the measurements tool, the trap tool and the statistics tool. Triggers are meant to fired on events based on a pattern and/or a threshold. This allows you to monitor memory and save statistics or perform a trap when memory usage reaches, for example, 80%. 
@@ -17,7 +17,7 @@ Measurement triggers are used to check measurements for a specific value. If the
 
 The trigger definition tab contains the **Description** and **Enabled** attributes as well as specific settings for the different trigger types.
 
- ![](attachments/rg1-triggers/Trigger_Definition.png)   
+ ![](attachments/rg-one-triggers/Trigger_Definition.png)   
 
 #### Shared Fields
 
@@ -44,11 +44,11 @@ The trigger definition tab contains the **Description** and **Enabled** attribut
 
 Trigger actions define what happens when the trigger fires.
 
- ![](attachments/rg1-triggers/Trigger_Actions.png) 
+ ![](attachments/rg-one-triggers/Trigger_Actions.png) 
 
 These are possible trigger actions:
 
-* **Notify**. You can use `{1}` for the administrator as configured in the global setting [More tab](rg1-configuration#more). You can use replacement variables like `{1}` in the subject and message. These are described in the **i**nformation icons.
+* **Notify**. You can use `{1}` for the administrator as configured in the global setting [More tab](rg-one-configuration#more). You can use replacement variables like `{1}` in the subject and message. These are described in the **i**nformation icons.
 * **Create log message**. You can use replacement variables like `{1}` in the message. These are described in the **i**nformation icons.
 * **Create trap message**. You can use replacement variables like `{1}` in the message. These are described in the **i**nformation icons.
 * **Save statistics**. The duration of this snapshot is configured in the global settings. The snapshot will have 10-20 minutes of statistics by default.
@@ -62,7 +62,7 @@ These are only visible with special permissions:
 
 The continuation tab enables configuration of what happens after the trigger has fired and the action has been executed.
 
-![](attachments/rg1-triggers/Trigger_Continuation.png)
+![](attachments/rg-one-triggers/Trigger_Continuation.png)
 
 You can:
 
@@ -74,11 +74,11 @@ This is to prevent, for example, a large amount of emails when the CPU usage is 
 
 ## Triggered Events
 
-If a trigger fires, a record is created in the triggered events. The events are automatically deleted after a certain amount of days, as configured in the global setting [More tab](rg1-configuration#more). 
+If a trigger fires, a record is created in the triggered events. The events are automatically deleted after a certain amount of days, as configured in the global setting [More tab](rg-one-configuration#more). 
 
 **Remove triggered events after (days)**. If you want to keep an event for future reference, you can keep the event using the keep-button above the triggered event grid.
 
-![](attachments/rg1-triggers/Triggered_Events.png)
+![](attachments/rg-one-triggers/Triggered_Events.png)
 
 If a trap is created with the trigger actions, you can open the trap.
 

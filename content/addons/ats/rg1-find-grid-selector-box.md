@@ -1,6 +1,6 @@
 ---
 title: "Find Grid Selector Box"
-parent: "rg1-grid-selector"
+parent: "rg-one-grid-selector"
 ---
 
 ## Description

@@ -1,6 +1,6 @@
 ---
 title: "Assert CKEditor Value"
-parent: "rg1-ckeditor"
+parent: "rg-one-ckeditor"
 ---
 ## Description
 Compares the CKEditor value with the given value.

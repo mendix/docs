@@ -1,9 +1,9 @@
 ---
 title: "Navigation Menu"
-parent: "rg1-mendix-actions"
+parent: "rg-one-mendix-actions"
 ---
 
 This section contains these documents:
 
-* [Find/Assert Menu Item](rg1-findassert-menu-item)
-* [Click Menu Item](rg1-click-menu-item)
+* [Find/Assert Menu Item](rg-one-findassert-menu-item)
+* [Click Menu Item](rg-one-click-menu-item)

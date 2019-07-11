@@ -1,6 +1,6 @@
 ---
 title: "Create a Negative Test Case"
-parent: "ht2"
+parent: "ht-two"
 description: "Describes the steps for performing negative tests with ATS."
 tags: ["ATS", "testing"]
 ---
@@ -19,11 +19,11 @@ To test this, you log in as an employee and assert that you do not see the admin
 
 This is the navigation menu for an employee:
 
-![](attachments/ht2-create-a-negative-test-case/navigation-menu-employee-company-expenses-app.png)
+![](attachments/ht-two-create-a-negative-test-case/navigation-menu-employee-company-expenses-app.png)
 
 This is the navigation menu for an administrator:
 
-![](attachments/ht2-create-a-negative-test-case/navigation-menu-administrator-company-expenses-app.png)
+![](attachments/ht-two-create-a-negative-test-case/navigation-menu-administrator-company-expenses-app.png)
 
 **This how-to will teach you how to do the following**
 
@@ -33,7 +33,7 @@ This is the navigation menu for an administrator:
 
 Before starting this how-to, make sure you have completed the following prerequisite:
 
-* Read [How to Create a Test Case](ht2-create-a-test-case)
+* Read [How to Create a Test Case](ht-two-create-a-test-case)
 
 ## 3 Creating a Negative Test Case
 
@@ -41,33 +41,33 @@ The test case used in this how-to was created beforehand. It asserts that the na
 
 This is the navigation menu:
 
-![](attachments/ht2-create-a-negative-test-case/navigation-menu-employee-company-expenses-app.png)
+![](attachments/ht-two-create-a-negative-test-case/navigation-menu-employee-company-expenses-app.png)
 
 This is the final test case:
 
-![](attachments/ht2-create-a-negative-test-case/negative-test-case.png)
+![](attachments/ht-two-create-a-negative-test-case/negative-test-case.png)
 
 1. Open your app in ATS and go to the **Test Cases** menu item.
 2. Go to the **Repository** tab:
 
-  ![](attachments/ht2-create-a-negative-test-case/go-to-repository.png)
+  ![](attachments/ht-two-create-a-negative-test-case/go-to-repository.png)
 
 3. Select the test case to add the negative test step.
 4. Add the **Assert not true** action where you want to place the negative test step:
 
-![](attachments/ht2-create-a-negative-test-case/Assert_not_true_step_added.png)
+![](attachments/ht-two-create-a-negative-test-case/Assert_not_true_step_added.png)
 
 5. Set the **Assert Value** parameter of the Assert not true action to **True**:
 
-![](attachments/ht2-create-a-negative-test-case/set-to-true.png)
+![](attachments/ht-two-create-a-negative-test-case/set-to-true.png)
 
-6. Add the action needed to search for the menu item as a **Precondition**. Check the precondition box and add the [Find/Assert Menu Item](rg1-findassert-menu-item) action:
+6. Add the action needed to search for the menu item as a **Precondition**. Check the precondition box and add the [Find/Assert Menu Item](rg-one-findassert-menu-item) action:
 
-  ![](attachments/ht2-create-a-negative-test-case/add-findassert-menu-item-as-precondition-2.png)
+  ![](attachments/ht-two-create-a-negative-test-case/add-findassert-menu-item-as-precondition-2.png)
 
 7. Enter the information needed to find the **Admin Menu** as an administrator to verify it is not visible as an employee. Also, enter a proper description.
 
-  ![](attachments/ht2-create-a-negative-test-case/negative-test-step-finished-2.png)
+  ![](attachments/ht-two-create-a-negative-test-case/negative-test-step-finished-2.png)
 
 These are the inner-workings:
 
@@ -80,7 +80,7 @@ You can use this method for a lot of different things.
 
 _The finished test case_
 
-![](attachments/ht2-create-a-negative-test-case/the-finished-test-case.png)
+![](attachments/ht-two-create-a-negative-test-case/the-finished-test-case.png)
 
  {{% alert type="info" %}}
 You can also add the **Assert not false** action with the **Assert value** set to false, instead of the **Assert not true** action, to create a negative test case.
@@ -88,4 +88,4 @@ You can also add the **Assert not false** action with the **Assert value** set t
 
 ## 4 Next Up
 
-The next how-to is [How to Create Extracted Actions](ht2-create-extracted-actions). You find an overview of all the how-tos and the structure on the [ATS 2 How-to's](ht2) page. We advise you to follow the predefined structure.
+The next how-to is [How to Create Extracted Actions](ht-two-create-extracted-actions). You find an overview of all the how-tos and the structure on the [ATS 2 How-to's](ht-two) page. We advise you to follow the predefined structure.

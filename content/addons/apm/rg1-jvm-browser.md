@@ -1,14 +1,14 @@
 ---
 title: "JVM Browser"
-parent: "rg1-apm"
+parent: "rg-one-apm"
 ---
 A JVM Browser shows information similar to JConsole or JVisualVM tools provided with the Java JDK. Using the **Refresh** button refreshes an individual item.
 
-![](attachments/rg1-jvm-browser/Overview.png)                
+![](attachments/rg-one-jvm-browser/Overview.png)                
 
 Double-clicking an items drills down shows its details.
 
-![](attachments/rg1-jvm-browser/Details.png)
+![](attachments/rg-one-jvm-browser/Details.png)
 
 You can start collecting statistics on individual items using the **Collect** button. These statistics can be viewed in the Measurements Tool.
 

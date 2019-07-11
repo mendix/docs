@@ -1,6 +1,6 @@
 ---
 title: "Compatibility Table" 
-parent: "rg2-test-run"
+parent: "rg-two-test-run"
 ---
 
 ## 1 Introduction

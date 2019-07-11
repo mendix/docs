@@ -1,6 +1,6 @@
 ---
 title: "Browserstack Test Files"
-parent: "ht2-upload-file-using-ats"
+parent: "ht-two-upload-file-using-ats"
 ---
 
 ## Windows XP

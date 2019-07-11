@@ -1,6 +1,6 @@
 ---
 title: "GroupBox is Collapsed"
-parent: "rg1-groupbox"
+parent: "rg-one-groupbox"
 ---
 
 ## Description

@@ -1,13 +1,13 @@
 ---
 title: "Get"
-parent: "rg1-selenium-actions"
+parent: "rg-one-selenium-actions"
 ---
 
 This section contains these documents:
 
-* [Get Property Value](rg1-get-property-value)
-* [Get Selected Option Index](rg1-get-selected-option-index)
-* [Get Selected Option Text](rg1-get-selected-option-text)
-* [Get Selected Option Value](rg1-get-selected-option-value)
-* [Get Text](rg1-get-text)
+* [Get Property Value](rg-one-get-property-value)
+* [Get Selected Option Index](rg-one-get-selected-option-index)
+* [Get Selected Option Text](rg-one-get-selected-option-text)
+* [Get Selected Option Value](rg-one-get-selected-option-value)
+* [Get Text](rg-one-get-text)
 

@@ -1,6 +1,6 @@
 ---
 title: "Get InputReferenceSelector Value"
-parent: "rg1-input-reference-selector"
+parent: "rg-one-input-reference-selector"
 ---
 
 ## Description

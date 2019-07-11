@@ -1,6 +1,6 @@
 ---
 title: "On-Premises Installation"
-parent: "rg2-ats"
+parent: "rg-two-ats"
 description: "Describes installation requirements."
 tags: ["ats", "installation", "requirements"]
 ---

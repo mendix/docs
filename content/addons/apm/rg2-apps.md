@@ -1,17 +1,17 @@
 ---
 title: "Apps"
-parent: "rg2-apm"
+parent: "rg-two-apm"
 ---
 
 ## 1 Apps Overview
 
 The homepage of APM displays the list of licensed applications from the Mendix Developer Portal in alphabetical order.
 
-![](attachments/rg2/ProjectsDashboard.png)
+![](attachments/rg-two/ProjectsDashboard.png)
 
 It is possible to search on an app's name or select one from the overview directly.
 
-Selecting an app in the overview displays the overview of the [environments](rg2-environments) for that app.
+Selecting an app in the overview displays the overview of the [environments](rg-two-environments) for that app.
 
 In order to find a specific application faster, it is possible to mark it as a favorite by clicking the star icon on the application tile. Favorite applications are shown first in the overview.
 
@@ -21,23 +21,23 @@ In case an application is not visible in this overview, click **Can’t find you
 
 APM has several tour guides and videos to help navigate through APM to perform certain tasks. These can be accessed by clicking the documentation icon next to your profile image and selecting the **Tour** option.
 
-![](attachments/rg2/Documentation.png)
+![](attachments/rg-two/Documentation.png)
 
 {{% alert type="info" %}}
 By default, APM displays the tour guides and videos upon login for new users.
 {{% /alert %}}
 
-![](attachments/rg2/Tour.png)
+![](attachments/rg-two/Tour.png)
 
 When starting a tour, a tool tip will appear throughout the APM application with instructions to follow.
 
-![](attachments/rg2/TourStep.png)
+![](attachments/rg-two/TourStep.png)
 
 ## 3 Profile Menu and User Settings
 
 In the profile menu, you can see links to your Mendix Profile and also the user settings for APM.
 
-![](attachments/rg2/profile_menu.png)
+![](attachments/rg-two/profile_menu.png)
 
 In the user settings, you can configure the home page to be one of the following:
 
@@ -45,7 +45,7 @@ In the user settings, you can configure the home page to be one of the following
 * A specific app on the Environments overview if an app is selected and the environments drop-down menu is empty
 * A specific environment of a specific app
 
-![](attachments/rg2/user_settings.png)
+![](attachments/rg-two/user_settings.png)
 
 These are the settings on the **User settings** dialog box":
 

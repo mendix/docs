@@ -1,6 +1,6 @@
 ---
 title: "Assert Active Tab Caption"
-parent: "rg1-tab"
+parent: "rg-one-tab"
 ---
 
 ## Description

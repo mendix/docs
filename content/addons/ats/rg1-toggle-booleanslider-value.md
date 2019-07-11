@@ -1,6 +1,6 @@
 ---
 title: "Toggle BooleanSlider Value"
-parent: "rg1-booleanslider"
+parent: "rg-one-booleanslider"
 ---
 
 ## Description

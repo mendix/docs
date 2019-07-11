@@ -1,6 +1,6 @@
 ---
 title: "Data Driven Tests"
-parent: "rg1-test-development"
+parent: "rg-one-test-development"
 ---
 
 Data Driven Testing in ATS allows you to run tests using tables of data directly as test inputs. This way you can test an array of different input values without having to write additional tests. Datasets are easy to create and maintain, so you can add additional data records later on without changing your test cases.
@@ -11,7 +11,7 @@ To use your datasets in test cases you need to select a _Master dataset_ under t
 
 When you run a test with a dataset field set as a parameter a new test will be run for every record in the dataset.
 
-![Set master dataset inside a test case](attachments/rg1-data-driven-tests/21168190.png)
+![Set master dataset inside a test case](attachments/rg-one-data-driven-tests/21168190.png)
 
 The page also gives an overview over the selected dataset:
 
@@ -25,7 +25,7 @@ Shows the fields available in the selected set and their data types
 
 There are 2 error types that can occur when setting a dataset:
 
-![Errors when setting dataset](attachments/rg1-data-driven-tests/21168191.png)
+![Errors when setting dataset](attachments/rg-one-data-driven-tests/21168191.png)
 
 **Missing fields**
 
@@ -45,7 +45,7 @@ If you change the selected dataset the system will remember your set parameters 
 
 When you have selected a master dataset you can use the the contained field as input values for your test steps.
 
-![Setting a filed as input value](attachments/rg1-data-driven-tests/21168192.png)
+![Setting a filed as input value](attachments/rg-one-data-driven-tests/21168192.png)
 
 **Exporting a Test Case**
 

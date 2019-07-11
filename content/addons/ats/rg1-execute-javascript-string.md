@@ -1,6 +1,6 @@
 ---
 title: "Execute Javascript String"
-parent: "rg1-selenium-actions"
+parent: "rg-one-selenium-actions"
 ---
 
 ## Description

@@ -14,15 +14,15 @@ The Application Performance Monitor (APM) is a solution that helps you to analyz
 
 This is the reference guide for Mansystems APM 2 for Mendix. It has the following chapters:
 
-* [Apps](rg2-apps)
-* [Environments](rg2-environments)
-* [Dashboard](rg2-dashboard)
-* [Logs](rg2-logs)
-* [Performance Statistics](rg2-statistics)
-* [Performance Recorder](rg2-recorder)
-* [Settings](rg2-settings)
+* [Apps](rg-two-apps)
+* [Environments](rg-two-environments)
+* [Dashboard](rg-two-dashboard)
+* [Logs](rg-two-logs)
+* [Performance Statistics](rg-two-statistics)
+* [Performance Recorder](rg-two-recorder)
+* [Settings](rg-two-settings)
 
-![](attachments/rg2/APM_Powered_logo.png)
+![](attachments/rg-two/APM_Powered_logo.png)
 
 The sections below provide a short explanation of APM along with its features and possible uses.
 
@@ -48,7 +48,7 @@ Mendix APM collects statistical data about microflows, client API requests, and 
 
 In development, it is advised to add checking in APM to the generic definition of done.
 
-![](attachments/rg2/statistics_history.png)
+![](attachments/rg-two/statistics_history.png)
 
 ## 4 The Performance Recorder to Collect Individual Traces
 

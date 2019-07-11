@@ -1,7 +1,7 @@
 ---
 title: "ATS Best Practices"
 category: "ATS Guide"
-menu_order: 2
+menu_order: 4
 ---
 
 ## 1 Introduction

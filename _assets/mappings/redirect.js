@@ -2250,28 +2250,12 @@ module.exports = {
      * Add-on Guides (permanent, mapped)
      ****************************************************/
 	{
-      from: "/apm/",
-      to: "/addons/apm/"
-    },
-	{
-      from: "/addons/APM",
-      to: "/addons/apm/"
-    },
-	{
 	  from: "/apm/installation-guide",
 	  to: "/addons/apm/ig-two"
 	},
 	{
       from: "/apm/reference-guide/rg-2/reference-guide-2",
       to: "/addons/apm/rg-two-apm"
-    },
-	{
-      from: "/aqm/",
-      to: "/addons/aqm/"
-    },
-	{
-      from: "/ats/",
-      to: "/addons/ats/"
     },
 	// {
     //   from: "~*\\\/apm\\\/use-cases\\\/uc",

@@ -1,6 +1,6 @@
 ---
 title: "ATS 1 Best Practices"
-category: "Best Practices"
+parent: "bp"
 menu_order: 20
 ---
 

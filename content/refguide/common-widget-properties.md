@@ -1,6 +1,7 @@
 ---
 title: "Common Widget Properties"
 parent: "common-widgets"
+menu_order: 60
 tags: ["studio pro"]
 ---
 

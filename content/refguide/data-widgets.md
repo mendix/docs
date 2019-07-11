@@ -6,7 +6,7 @@ tags: ["studio pro"]
 ---
 
 
-[{{% image_container width="76" %}}![](attachments/16713890/16844023.png){{% /image_container %}}](data-grid)**[Data grid](data-grid)**
+[![](attachments/16713890/16844023.png)](data-grid)**[Data grid](data-grid)**
 The data grid shows a list of objects in a grid. For example, a data grid can show all the orders a customer has placed. Using controls provided by the data grid you can browse, search and edit those objects.
 
 

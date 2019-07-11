@@ -1,6 +1,7 @@
 ---
 title: "Chart Widgets"
 parent: "pages"
+menu_order: 70
 tags: ["Charts", "Any Chart", "Studio Pro", "Pages"]
 ---
 
@@ -41,9 +42,12 @@ This module also contains several building blocks for inspiration and as startin
 
 See [Any Chart Widgets](charts-any-configuration) to learn how to configure *Any charts* widgets.
 
-## 4 Read More
+## 4 Documents in This Section
 
-* [Any Chart Configuration](charts-any-configuration)
+The following documents explain how to use charts in more detail:
+
+* [Chart Configuration](charts-configuration)
+* [Chart Advanced Cheat Sheet](charts-advanced-cheat-sheet)
+* [Any Chart Widgets](charts-any-configuration)
 * [Any Chart Building Bocks](charts-any-building-bocks)
 * [Any Chart Cheat Sheet](charts-any-cheat-sheet)
-* [Basic Chart Cheat Sheet](charts-advanced-cheat-sheet)

@@ -8,8 +8,6 @@ tags: ["Trends","v3","Mendix Cloud","Developer Portal"]
 #Please do not rename the anchors in this document as they are used in links from the Developer Portal
 ---
 
-{{% todo %}}[CHECK SECTIONS MARKED ???????????????]{{% /todo %}}
-
 ## 1 Introduction
 
 To track the usage growth of your app, and to debug performance problems, the Mendix Cloud includes detailed graphs on both infrastructure and application level. These graphs show various performance trends of all your apps in the paid editions of the Mendix Platform. If you experience issues with your app, always check the **Alerts** and **Trends** in the **Developer Portal** under **Operate**.

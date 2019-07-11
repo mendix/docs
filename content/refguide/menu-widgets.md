@@ -1,10 +1,10 @@
 ---
 title: "Menu Widgets"
 parent: "pages"
+menu_order: 45
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
-
 
 These are widgets that you can use to display menus in your application.
 

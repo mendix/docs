@@ -2255,19 +2255,19 @@ module.exports = {
     },
 	{
       from: "/apm/",
-      to: "/addons/apm-addon/"
+      to: "/addons/apm-addon/index"
     },
 	{
       from: "/addons/APM/",
-      to: "/addons/apm-addon/"
+      to: "/addons/apm-addon/index"
     },
 	{
       from: "/aqm/",
-      to: "/addons/aqm-addon/"
+      to: "/addons/aqm-addon/index"
     },
 	{
       from: "/ats/",
-      to: "/addons/ats-addon/"
+      to: "/addons/ats-addon/index"
     },	
 	// {
     //   from: "~*\\\/apm\\\/use-cases\\\/uc",

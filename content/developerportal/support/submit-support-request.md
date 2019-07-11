@@ -55,8 +55,8 @@ To submit a request with Mendix Support, follow these steps:
 	* **Standard Change: Change Mendix Cloud File Storage** – increase or decrease the file storage size
 	* **Standard Change: Change Mendix Cloud URL** – change a *non-custom* Mendix URL (for example, *something.mendixcloud.com*)
 	* **Standard Change: Assign Company Admin** – make an existing Mendix user the [Company Admin](../company-app-roles/companyadmin-settings)
-	* **Standard Change: Request ATS License** – obtain a license to use ATS (for more information on this product, see [ATS Guide](/addons/ats/index))
-	* **Standard Change: Request APM License** – obtain a license to use APM (see [APM Guide](/addons/apm/index) for more information)
+	* **Standard Change: Request ATS License** – obtain a license to use ATS (for more information on this product, see [ATS Guide](/addons/ats-addon/index))
+	* **Standard Change: Request APM License** – obtain a license to use APM (see [APM Guide](/addons/apm-addon/index) for more information)
 	* **Standard Change: Reset Google authenticator** – reset the Google authenticator if you are using it for [2FA](/developerportal/deploy/two-factor-authentication) (for example, when you get a new phone)
 	* **Standard Change** – other changes which can be made on the platform, but for which you do not have access
 	* **Non-Standard Change** – any other changes not covered by other issues above

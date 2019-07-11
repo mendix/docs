@@ -15,7 +15,7 @@ We are happy to announce that ATS now supports mobile testing for web applicatio
 * ATS functions are context-aware, meaning, they detect the device and interact accordingly. For example, when setting a date field on mobile, the native date dialog box is used. All native input elements are set by automating the native dialog boxes, with the exception of drop-down menus, which are set directly.
 * You can use the ATS recorder even if you have different pages for desktop and mobile. 
 
-For more details, refer to [Mobile](/addons/ats/rg-two-mobile) in the *ATS Reference Guide*.
+For more details, refer to [Mobile](/addons/ats-addon/rg-two-mobile) in the *ATS Reference Guide*.
 
 _Please note that this feature is still in beta._
 
@@ -33,7 +33,7 @@ In order to make it easier to read and understand the results of a test run we a
 * Test suites do not have a result per se, but maintain a counter of passed / total test cases. 
 * With regards to the charts on the dashboard we no longer distinguish between failed and not executed. Instead we only distinguish between passed and not passed.
 
-For all the details please refer to [results section in the ATS reference guide](/addons/ats/rg-two-results).
+For all the details please refer to [results section in the ATS reference guide](/addons/ats-addon/rg-two-results).
 
 ### Changes in provider and platform support
 

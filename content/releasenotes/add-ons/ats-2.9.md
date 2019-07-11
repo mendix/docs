@@ -112,7 +112,7 @@ SCRUM Masters in the Developer Portal get an administrator role in ATS even if t
 
 We are reintroducing **On-Premises** as a deployment option for ATS. At this point we have introduced a new user role **Tenant administrator** which will only be used in on-premises instances of ATS. The tenant administrator will be able to create and edit accounts and apps. 
 
-For more details on tenant administration, see [Administration](/addons/ats/rg-two-administration) in *ATS 2 Reference Guide*.
+For more details on tenant administration, see [Administration](/addons/ats-addon/rg-two-administration) in *ATS 2 Reference Guide*.
 
 ### Mendix 7.16
 

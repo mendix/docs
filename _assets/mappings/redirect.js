@@ -2251,27 +2251,27 @@ module.exports = {
      ****************************************************/
 	{
 	  from: "/apm/installation-guide",
-	  to: "/addons/apm/ig-two"
+	  to: "/addons/apm-addon/ig-two"
 	},
 	{
       from: "/apm/reference-guide/rg-2/reference-guide-2",
-      to: "/addons/apm/rg-two-apm"
+      to: "/addons/apm-addon/rg-two-apm"
     },
 	{
       from: "/apm/index",
-      to: "/addons/apm/index"
+      to: "/addons/apm-addon/index"
     },
 	{
       from: "/addons/APM/index",
-      to: "/addons/apm/index"
+      to: "/addons/apm-addon/index"
     },
 	{
       from: "/aqm/index",
-      to: "/addons/aqm/index"
+      to: "/addons/aqm-addon/index"
     },
 	{
       from: "/ats/index",
-      to: "/addons/ats/index"
+      to: "/addons/ats-addon/index"
     },	
 	// {
     //   from: "~*\\\/apm\\\/use-cases\\\/uc",

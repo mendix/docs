@@ -12,5 +12,5 @@ This list shows the available authentication widgets:
 * [Login ID Text Box](login-id-text-box)
 * [Password Text Box](password-text-box)
 * [Sign-In Button](sign-in-button)
-* [Sign-Out Button](action-button)
+* [Sign-Out Button](action-button) – documented under [Button Widgets](button-widgets)
 * [Validation Message](validation-message)

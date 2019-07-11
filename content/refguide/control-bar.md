@@ -19,9 +19,13 @@ See [Search Button](search-button).
 
 See [Add Button](add-button).
 
+### Create Button
+
+See [Grid Create Button](grid-new-button).
+
 ### Action Button
 
-See [Action Button](grid-action-button).
+See [Grid Action Button](grid-action-button).
 
 ### Remove Button
 

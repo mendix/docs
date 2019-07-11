@@ -32,7 +32,7 @@ This property indicates whether the control bar buttons will be visible in the e
 
 {{% alert type="warning" %}}
 
-Even if the control bar buttons are invisible, there can still be a default button that is triggered by (double) clicking a row. For more information, see the property [Default Button Trigger](#dbt) and [Data Grid Buttons](control-bar).
+Even if the control bar buttons are invisible, there can still be a default button that is triggered by (double) clicking a row. For more information, see the property [Default Button Trigger](#dbt) and [Control Bar](control-bar).
 
 {{% /alert %}}
 

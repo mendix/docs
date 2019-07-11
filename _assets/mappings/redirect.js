@@ -237,10 +237,6 @@ module.exports = {
       to: "/howto/front-end/create-a-custom-theme-with-the-mendix-ui-framework"
     },
 	{
-      from: "/addons/APM",
-      to: "/addons/apm/index"
-    },
-	{
       from: "/releasenotes/desktop-modeler/",
       to: "/releasenotes/studio-pro/"
     },

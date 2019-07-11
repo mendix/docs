@@ -238,7 +238,7 @@ module.exports = {
     },
 	{
       from: "/addons/APM",
-      to: "/apm/"
+      to: "/addons/apm/index"
     },
 	{
       from: "/releasenotes/desktop-modeler/",
@@ -2247,9 +2247,33 @@ module.exports = {
       to: "/howto6/solving-load-and-import-errors"
     },
 	/****************************************************
-     * APM (permanent, unmapped)
+     * Add-on Guides (permanent, mapped)
      ****************************************************/
-    // {
+	{
+	  from: "/apm/installation-guide",
+	  to: "/addons/apm/ig-two"
+	},
+	{
+      from: "/apm/reference-guide/rg-2/reference-guide-2",
+      to: "/addons/apm/rg-two-apm"
+    },
+	{
+      from: "/apm/index",
+      to: "/addons/apm/index"
+    },
+	{
+      from: "/addons/APM/index",
+      to: "/addons/apm/index"
+    },
+	{
+      from: "/aqm/index",
+      to: "/addons/aqm/index"
+    },
+	{
+      from: "/ats/index",
+      to: "/addons/ats/index"
+    },	
+	// {
     //   from: "~*\\\/apm\\\/use-cases\\\/uc",
     //   to: "/apm/use-cases/",
     //   exact: true

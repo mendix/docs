@@ -79,6 +79,10 @@ You can often get more information about the performance of your app by combinin
 
 For example, a combination of a moderate number of IO operations, low disk throughput, visible cpu iowait, full memory disk cache, and reports of long running database queries in the application log could point to a shortage of system memory for disk cache that leads to repeated random reads from disk storage.
 
+#### 3.2.5 More Information
+
+If you would like some more information about how these graphs are created and further suggestions for interpretation, see [Monitoring a Mendix application using Munin](https://github.com/mendix/m2ee-tools/blob/master/doc/munin.md) in the Mendix m2ee-tools GitHub repo.
+
 ## 4 Application Statistics
 
 These graphs show various application specific metrics, such as the number of HTTP requests, database queries, user sessions,  JVM memory, and other application performance statistics.
@@ -116,7 +120,7 @@ The value of **named users** shows the total number of existing login accounts i
 
 ### <a name="Trends-appmxruntimejvmheap"></a>4.4 JVM Object Heap
 
-The **JVM Object Heap** graph shows the internal distribution of allocated memory inside the application process for objects that are in use by microflows, scheduled events, and all other data that flows around inside the Mendix runtime process.
+The **JVM Object Heap** graph shows the internal distribution of allocated memory inside the application process for *Java* objects. Java objects are created in Java actions, but also include all objects that are used by microflows running in your app at runtime.
 
 ![](attachments/trends/jvm-heap.png)
 
@@ -146,7 +150,7 @@ The **Application node operating system memory** graph shows the distribution of
 
 ![](attachments/trends/node-os-memory.png)
 
-The most important part of the graph is the category **apps** which shows the amount of memory that is continuously in use by the application process.
+The most important part of the graph is the category **apps** which shows the amount of memory that is continuously in use by the application process. Performance issues can arise if the apps memory takes up too large a proportion of the operating system memory or if the **committed** value exceeds the operating system memory.
 
 ### <a name="Trends-appm2eeserverthreadpool"></a>4.7 Threadpool for Handling External Requests
 

@@ -2263,7 +2263,7 @@ module.exports = {
 	},
 	{
       from: "/apm/reference-guide/rg-2/reference-guide-2",
-      to: "/addons/apm/rg2"
+      to: "/addons/apm/rg2-apm"
     },
 	{
       from: "/aqm/",

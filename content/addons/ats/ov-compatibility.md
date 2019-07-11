@@ -1,6 +1,7 @@
 ---
 title: "Compatibility"
-category: "ATS Guide"
+parent: "ov"
+menu_order: 2
 ---
 
 ## Mendix Platform Compatibility

@@ -1,6 +1,7 @@
 ---
 title: "Deployment Options"
-category: "ATS Guide"
+parent: "ov"
+menu_order: 3
 ---
 
 This document describes the supported deployment scenarios for the Application Test Suite (ATS).

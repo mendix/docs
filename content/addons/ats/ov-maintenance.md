@@ -1,6 +1,7 @@
 ---
 title: "Maintenance"
-category: "ATS Guide"
+parent: "ov"
+menu_order: 4
 ---
 
 ## Maintenance Window

@@ -8,7 +8,7 @@ category: "APM Guide"
 
 The installation guide for APM for is organized according to the APM version.
 
-## 2 Main Documents in This Category
+## 2 Main Documents in This Section
 
 * [APM 2 Installation Guide](ig-two)
 * [APM 1 Installation Guide](ig-one)

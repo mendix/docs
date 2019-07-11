@@ -2,9 +2,12 @@
 title: "Statistics Tool"
 parent: "rg-one-apm"
 ---
+
+## 1 Intoduction
+
 This chapter gives an overview of the statistics tool, which measures the durations of microflows and browser-client requests and gathers statistics like number of executions as well as the, minimum, maximum and average durations. The statistics tool is used as the first step in gaining insight into what a system is doing when it doesn’t perform  optimally. The tool is also used to determine potential performance issues by looking at the trends.
 
-## Statistics
+## 2 Statistics
 
 The statistics tool screen is split into several sections:
 
@@ -12,14 +15,15 @@ The statistics tool screen is split into several sections:
 
 Statistics are stored periodically to be able to determine potential trends. The **Periodic store frequency** can be changed in the [Options](#Options).   
 
-## History chart
+## 3 History chart
+
 It is possible to select a microflow and press the **History chart** button to see a graph with history statistics:  
 
 ![](attachments/rg-one-statistics-tool/Trend.png)
 
 The statistics can be started or stopped using the start/stop buttons in the **Start/Stop** dialog box. This dialog is accessible through the top-bar start button.
 
-## Manual Statistics
+## 4 Manual Statistics
 
 ![](attachments/rg-one-statistics-tool/Manual_statistics.png)  
 
@@ -27,7 +31,7 @@ In the manual statistics section it is possible to create a snapshot of statisti
 
 **Note**: By default, the result is sorted by **Total (ms)**. This will give a overview of the actions and microflows on which the application spent the most time. The average (**Avg**) is **Total (ms)** divided by **Count**. Sorted on **Avg**, the actions and microflows with the longest average duration can be found. Sorted on **Count** the actions and microflows that were executed the most can be found. The results can also be sorted on **Last run** to see what microflows have been executed recently.
 
-## Running Actions
+## 5 Running Actions
 
 This section will give a real-time overview of running actions and microflows. This is the best place to start when there are performance complaints. Running actions show a list of microflows that have been started but have not yet ended. The duration is the time between the start and the moment when the refresh button was hit.
 
@@ -35,7 +39,7 @@ This section will give a real-time overview of running actions and microflows. T
 
 **Note**: When the server generates a lot of log messages, the server is running at a high CPU, and all the tools are running, a queue can build up in the Mendix thread that sends the log messages to the subscribers. As a consequence, it can look like running microflows takes 10 seconds while the maximum in the statistics is 1 second. This is caused by the fact that the running time is calculated on the refresh date, and the duration of a microflow is calculated by the message date. When this happens, the debug running counter for the message delay shows a high number (for example, 10000 milliseconds). The statistics tool pauses collecting and handling messages if the processing delay is above the configured **Max Processing Delay (ms)**.*
 
-## Stored Snapshot
+## 6 Stored Snapshot
 
 A stored snapshot is a collection of statistics saved to the database. This section provides an overview  of all the stored snapshots.
 
@@ -50,14 +54,14 @@ In stored snapshots, you can find all the statistics bundled per snapshot. These
 
 You can prevent a snapshot from being deleted by cleanup when you select to keep it.
 
-## Snapshot Details
+## 7 Snapshot Details
 
 ![](attachments/rg-one-statistics-tool/Snapshot_Details.png)
 
 You can rename snapshots and view the details that will include filtering details when applied.
 
 <a name="Options"></a>
-## Statistics Tool options
+## 8 Statistics Tool options
 
 This screenshot shows the options of the statistics tool:
 
@@ -71,7 +75,7 @@ The top **N** is both for maximum duration and total duration, so between *N* an
 
 The dashboard options include also a top **N** and an exclude pattern to interactively filter with these options.
 
-### Protections Tab
+### 8.1 Protections Tab
 
 On the **Protections** tab, you see the following:
 
@@ -83,13 +87,14 @@ The statistics tool is also protected with a **Max Processing Delay (ms)**. The 
 
 The data is cleaned up automatically after a certain amount of days.
 
-### Triggers Tab
+### 8.2 Triggers Tab
+
 On the trigger tab you can define triggers that fire on a certain microflow duration.
 
 ![](attachments/rg-one-statistics-tool/Triggers.png)
 
 See the description of [Triggers](rg-one-triggers) for how to configure triggers.
 
-### Save & Apply
+### 8.3 Save & Apply
 
 Changes to the options are applied to the statistics tool session currently running if the button **Save & apply** is used.

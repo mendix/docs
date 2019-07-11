@@ -3,9 +3,12 @@ title: "Installation Steps"
 parent: "ig-one"
 menu_order: 2
 ---
-This chapter describes the installation of the APM tool. For details on upgrading to a new version, see [Upgrade Steps](ig-one-upgrade-steps).
 
-## Backup
+## 1 Introduction
+
+This section describes the installation of the APM tool. For details on upgrading to a new version, see [Upgrade Steps](ig-one-upgrade-steps).
+
+## 2 Backup
 
 Did you commit your work to the team server? And did you make a database backup?
 
@@ -13,7 +16,7 @@ Did you commit your work to the team server? And did you make a database backup?
 
 If you don't have an SVN client like Tortoise SVN installed, make a copy of the widgets folder in your project.
 
-## Import Module APMAgent
+## 3 Import Module APMAgent
 
 Import the module APMAgent in the modeler.
 
@@ -21,7 +24,7 @@ Import the module APMAgent in the modeler.
 
 Write down the widgets in the warning dialog that are overwritten to be able to revert these changes.
 
-## Copy the Language If a Language Other Than English US Is Used
+## 4 Copy the Language If a Language Other Than English US Is Used
 
 If you are not using only **English, United States**, copy the **English, United States** language for the APMAgent module to all the languages using **Tools** > **Language Operations** in the Modeller:
 
@@ -31,7 +34,7 @@ If you are not using only **English, United States**, copy the **English, United
 
 ![](attachments/ig-one-installation-steps/Language_Operations_Footer.png)
 
-## Add Permissions
+## 5 Add Permissions
 
 Add `APMAgent.Admin` permissions to the project **Ssecurity** > **User roles** tab for a selected administrator role.
 
@@ -43,13 +46,13 @@ Add `APMAgent.Admin` permissions to the project **Ssecurity** > **User roles** t
 
 **Note:** If you want to get rid of the warnings about security, introduce the Debug, HeapDump, Load test recorder, and OData user roles. Then give these roles the corresponding permissions from the APM module: APMAgent.Debug, APMAgent.HeapDump, APMAgent.OData, and APMAgent.LoadTestRecorder.
 
-## Add to Navigation
+## 6 Add to Navigation
 
 To use the APM tools, you need to call the APM tool UI. Use the **APMAgent/USE_ME/IVK_OpenConsole** microflow for this. Add a navigation menu item, for example.
 
 ![](attachments/ig-one-installation-steps/Add_To_Navigation.png)
 
-## Optional: Add to After Startup and Before Shutdown
+## 7 Optional: Add to After Startup and Before Shutdown
 
 {{% alert type="info" %}}
 
@@ -65,13 +68,13 @@ You can find the AfterStartup and BeforeShutdown microflows in the project setti
 
 ![](attachments/ig-one-installation-steps/Project_Settings_After_Startup.png)
 
-## Configure APMAgent.CompanyName and APMAgent.AppName Constants
+## 8 Configure APMAgent.CompanyName and APMAgent.AppName Constants
 
 Set the name of your company and app in the constants. 
 
 **Note:** Do not change the constants in the model. Use the Modeler settings or the runtime settings for constants. After an upgrade, a model constant gets overwritten.
 
-## Optionally Configure the APMAgent.NotifyMicroflowName Constant
+## 9 Optionally Configure the APMAgent.NotifyMicroflowName Constant
 
 This constant defines the microflow that is called on the trigger notify action. You can call a microflow that sends an e-mail. The microflow gets three string parameters:
 
@@ -81,7 +84,7 @@ This constant defines the microflow that is called on the trigger notify action.
 
 See the sample microflow APMAgent.SampleNotifyMicroflow_LogMessage.
 
-## Start the Modeler or the Runtime
+## 10 Start the Modeler or the Runtime
 
 You can now start up.
 
@@ -89,7 +92,7 @@ If an error appears, see [After Startup Error](ig-one-after-startup-error).
 
 Otherwise, log in as Admin and navigate to the APM tool.
 
-## Welcome Dialog
+## 11 Welcome Dialog
 
 After startup for the first time, a small wizard is started:
 

@@ -2257,6 +2257,22 @@ module.exports = {
       from: "/apm/reference-guide/rg-2/reference-guide-2",
       to: "/addons/apm/rg-two-apm"
     },
+	{
+      from: "/apm/",
+      to: "/addons/apm/rg-apm"
+    },
+	{
+      from: "/addons/APM",
+      to: "/addons/apm/rg-apm"
+    },
+	{
+      from: "/aqm/",
+      to: "/addons/aqm/overview"
+    },
+	{
+      from: "/ats/",
+      to: "/addons/ats/rg-ats"
+    },	
 	// {
     //   from: "~*\\\/apm\\\/use-cases\\\/uc",
     //   to: "/apm/use-cases/",

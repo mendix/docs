@@ -65,7 +65,7 @@ Mendix Studio Pro needs to be installed on your computer before you can start bu
 
 ## 5 Troubleshooting
 
-Some people run into problems when installing Studio Pro. A work-around can be to restart your system and install the prerequisites separately if you don't already have them installed. 
+Some people run into problems when installing Studio Pro. One work-around is to restart your system and install the prerequisites separately if they are not already installed. 
 
 The prerequisites are:
 
@@ -74,7 +74,7 @@ The prerequisites are:
 * Microsoft Visual C++ 2010 SP1 Redistributable Package (http://download.microsoft.com/download/A/8/0/A80747C3-41BD-45DF-B505-E9710D2744E0/vcredist_x64.exe)
 * Microsoft Visual C++ 2013 Redistributable Package (http://download.microsoft.com/download/2/E/6/2E61CFA4-993B-4DD4-91DA-3737CD5CD6E3/vcredist_x64.exe)
 
-Based on the error message you get from the installer you can decide to install a separate prerequisite, or you can try to manually install them all.
+Based on the error message you get from the installer you can decide to install a single prerequisite, or you can try to manually install them all.
 
 After that you can retry installing Studio Pro.
 

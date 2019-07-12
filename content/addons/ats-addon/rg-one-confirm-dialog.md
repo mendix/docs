@@ -3,20 +3,20 @@ title: "Confirm Dialog"
 parent: "rg-one-dialog"
 ---
 
-## Description
+## 1 Description
 
 Clicks Proceed/Ok Button on a Confirmation, Error, Warning or Info Dialog.
 
-## Supported Widgets
+## 2 Supported Widgets
 
- + ConfirmationDialog
- + DialogMessage
+* ConfirmationDialog
+* DialogMessage
 
-## Usage
+## 3 Usage
 
 Optionally you can provide the dialog title and dialog type, to specify which dialog you want to confirm. Otherwise this action will confirm the first found active dialog.
 
-## Input Parameters
+## 4 Input Parameters
 
 Name | Datatype | Required | Description
 --- | --- | --- | ---

@@ -2,19 +2,20 @@
 title: "Assert Checkbox Set Selector Value"
 parent: "rg-one-checkbox-set-selector"
 ---
-## Description
+
+## 1 Description
+
 Finds the check box by the column caption and its cell value and asserts that the check box is set to the given value.
 
 ## Supported widgets
-+ Checkbox Set Selector
 
+* Checkbox Set Selector
 
-## Usage
+## 3 Usage
+
 Pass the name of the widget, the column caption, and the cell value of the checkbox you want to assert the value for.
 
-## Input Parameters
-
-
+## 4 Input Parameters
 
 Name | Datatype | Required | Description
 ---- | -------- | ------- |---------------

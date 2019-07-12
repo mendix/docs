@@ -3,7 +3,7 @@ title: "Dialog"
 parent: "rg-one-mendix-actions"
 ---
 
-{{% alert type="info" %}}
+## 1 Introduction
 
 A <i>Window</i> is rendered when a page is opened as a popup.
 
@@ -11,7 +11,7 @@ A <i>ConfirmationDialog</i> is shown when a delete or microflow action requires 
 
 {{% /alert %}}
 
-**Dialog** contains these documents:
+## 2 Main Documents in This Section
 
 * [Cancel Dialog](rg-one-cancel-dialog)
 * [Close Dialog](rg-one-close-dialog)

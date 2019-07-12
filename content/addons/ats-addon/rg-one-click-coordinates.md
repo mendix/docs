@@ -3,17 +3,17 @@ title: "Click Coordinates"
 parent: "rg-one-selenium-actions"
 ---
 
-## Description
+## 1 Description
 
 Moves to a certain point on the current page and clicks it. The actual system mouse pointer is not moved. 
 
-## Usage
+## 2 Usage
 
 Pass the horizontal and vertical coordinates as X and Y offset. By default, the upper-left corner of the current page is used as point of origin.
 
 If you want to start from a reference element, pass in the desired reference element. ATS will use the upper left corner of the reference element as new point of origin for calculating the desired click-position.
 
-## Input Parameters
+## 3 Input Parameters
 
 Name | Datatype | Required | Description
 ---- | -------- | ------- | ---------------

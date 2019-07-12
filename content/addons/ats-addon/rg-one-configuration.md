@@ -3,11 +3,13 @@ title: "Configuration"
 parent: "rg-one-ats"
 ---
 
+## 1 Introduction
+
 On the configuration page under the **Project** tab you can see the current project settings. You can change the settings and add users or libraries to your project by clicking the **Edit Project Settings** button.
 
 ![Configuration Page Project Tab](attachments/rg-one-configuration/21168209.png)
 
-## Configure the Selenium Hubs
+## 2 Configure the Selenium Hubs
 
 On the **Selenium** tab, you can see a list of the Selenium hubs that are configured for this project. Project users can run tests on the listed hubs:
 
@@ -27,7 +29,7 @@ Parallel Sessions | The number of tests that can run in parallel on the Selenium
 Proxy URL | The URL of an optional proxy server. Normally there should be no need to use a proxy server
 Custom Capabilities | Set the Selenium DesiredCapabilities (for more information, see the Selenium documentation).
 
-## Configure Test Applications
+## 3 Configure Test Applications
 
 On the **Applications** tab, you can see a list of test applications that are configured for the current project:
 

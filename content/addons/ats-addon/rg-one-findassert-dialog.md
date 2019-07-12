@@ -3,21 +3,21 @@ title: "Find/Assert Dialog"
 parent: "rg-one-dialog"
 ---
 
-## Description
+## 1 Description
 
 Finds/Asserts a Dialog by title or type.
 
-## Supported Widgets
+## 2 Supported Widgets
 
  + Window
  + DialogMessage
  + ConfirmationDialog
 
-## Usage
+## 3 Usage
 
 Optionally you can provide the dialog title and dialog type, to specify which dialog you want to find. Otherwise this action will return the first found active dialog.
 
-## Input Parameters
+## 4 Input Parameters
 
 Name | Datatype | Required | Description
 --- | --- | --- | ---
@@ -25,7 +25,7 @@ Dialog Title | String | no | The title of the dialog you want to cancel
 Dialog Type | Enumeration | no | The type of the dialog you want to cancel
 Message Text | String | no | The message text of the dialog
 
-## Return Value
+## 5 Return Value
 
 Name | Datatype | Description
 --- | --- | ---

@@ -3,19 +3,19 @@ title: "Cancel Dialog"
 parent: "rg-one-dialog"
 ---
 
-## Description
+## 1 Description
 
 Clicks Cancel on a Confirmation Dialog.
 
-## Supported Widgets
+## 2 Supported Widgets
 
- + ConfirmationDialog
+* ConfirmationDialog
 
-## Usage
+## 3 Usage
 
 Optionally you can provide the dialog title and dialog type, to specify which dialog you want to cancel. Otherwise this action will cancel the first found active dialog.     
 
-## Input Parameters
+## 4 Input Parameters
 
 Name | Datatype | Required | Description
 --- | --- | --- | ---

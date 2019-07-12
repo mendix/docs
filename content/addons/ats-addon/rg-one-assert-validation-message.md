@@ -3,20 +3,20 @@ title: "Assert Validation Message"
 parent: "rg-one-generic"
 ---
 
-## Description
+## 1 Description
 
 Asserts the validation message of a widget with a certain text.
 
-## Supported Widgets
+## 2 Supported Widgets
 
- + All standard widgets
+* All standard widgets
 
-## Usage
+## 3 Usage
 
 You have to pass the widget name and the expected validation message to the action.
 Optionally you can provide a WebElement as search context, to narrow down the search for the widget, if there are two or more widgets with the same name.
 
-## Input Parameters
+## 4 Input Parameters
 
 Name | Datatype |Required| Description
 --- | --- | --- | ---

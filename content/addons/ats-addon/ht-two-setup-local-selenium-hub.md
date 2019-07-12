@@ -137,6 +137,7 @@ The following steps describe how to start the selenium hub and the node with a J
 
 1. Create JSON files in the created folder:
 
+	```
 	**gridHubConfig.json:**
 
 	   {
@@ -187,6 +188,7 @@ The following steps describe how to start the selenium hub and the node with a J
 		"withoutServlets": [],
 		"custom": {}
 		}
+	```
 
 2.  Start the hub:
 

@@ -10,11 +10,9 @@ ATS provides a powerful solution for automation of not only your functional and 
 
 A small investment in setting up ATS, which is very easy to learn, will save you a lot of (re)testing time in the long run. This will help your team and its stakeholders to have the right insights into the quality off your apps at any time and at the press of a button.
 
-## 2 Main Sections in This Guide
-
-This guide includes the following sections: 
+## 2 Main Documents in This Category
 
 * [ATS Overview](ov)
-* [ATS Reference Guide](rg-ats)
+* [ATS Reference Guides](rg-ats)
 * [ATS How-to's](ht)
 * [ATS Best Practices](bp)

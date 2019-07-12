@@ -6,7 +6,7 @@ menu_order: 2
 
 ## 1 Introduction
 
-The reference guide for ATS is organized according to the ATS version.
+The *ATS Reference Guides* are organized according to the ATS version.
 
 ## 2 Main Documents in This Section
 

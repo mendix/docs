@@ -5,7 +5,7 @@ category: "APM Guide"
 
 ## 1 Introduction
 
-The use cases for APM  are organized according to the APM version.
+The *APM Use Cases* are organized according to the APM version.
 
 ## 2 Main Documents in This Section
 

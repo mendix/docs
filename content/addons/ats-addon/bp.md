@@ -6,7 +6,7 @@ menu_order: 4
 
 ## 1 Introduction
 
-This section presents best practices for ATS.
+The *ATS Best Practices* are organized according to the ATS version.
 
 ## 2 Main Documents in This section
 

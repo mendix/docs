@@ -25,7 +25,7 @@ To add an image collection, do the following.
 1. Right-click a module in the **Project Explorer**
 2. Select **Add other > Image collection**
 
-![Add an image collection](attachments/image-collection/add-collection.png)
+    ![Add an image collection](attachments/image-collection/add-collection.png)
 
 3. Give your image collection a name.
 
@@ -67,7 +67,7 @@ The **Move to other image collection** button allows you to move the selected im
 It is not possible to *copy* an image, you can only *move* it. If you need to make a copy, you can export the image to a file (see below) and then add the image to a different image collection.
 {{% /alert %}}
 
-### 3.5 Export to File
+### 3.6 Export to File
 
 The **Export to file…** button saves the selected image(s) as image files. You can select the folder where the images will be saved and they will be given the same name as they have in the image collection. If a file with the same name already exists, you will be warned.
 

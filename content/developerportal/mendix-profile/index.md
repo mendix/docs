@@ -2,7 +2,7 @@
 title: "Mendix Profile"
 menu_order: 10
 description: "Describes the personal profile page of the Mendix Developer Portal."
-tags: ["profile", "Developer Portal", "settings", "badge", "point", "connection", "invite", "leaderboard", "edit"]
+tags: ["profile", "Developer Portal", "settings", "badge", "point", "connection", "invite", "leaderboard", "edit", "daily digest"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -248,6 +248,11 @@ You can easily edit the information on your Mendix Profile by clicking the **Set
 ### 10.1 General Information
 
 In this section, you can upload your profile image as well as fill in personal details such as **Job title**, **location**, **Summary**, and **Website URL**.
+
+Under **Contact**, you can select how much information you want to receive from Mendix:
+
+* **Receive daily digest** – enabled by default
+* **Receive updates for threads in which I am active** – enabled by default
 
 There is also a link to [Mendix Support](https://support.mendix.com/hc/en-us) if you need to perform certain account actions that require their assistance.
 

@@ -12,7 +12,7 @@ If you want to use your own static images within an application, for example for
 
 For information on how to use images in your app, see [Images](images).
 
-Remember that, if you want to use the same set of custom images in several apps, you can export and import complete image collections, with their images, using [Import & Export Objects](importing-and-exporting-objects).
+Remember that, if you want to use the same set of custom images in several apps, you can export and import complete image collections, with their images, using [Import & Export Objects](/howto/integration/importing-and-exporting-objects).
 
 ## 2 Adding an Image Collection
 

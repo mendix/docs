@@ -3,15 +3,15 @@ title: "Get Current Page Title"
 parent: "rg-one-system"
 ---
 
-## Description
+## 1 Description
 
 Returns the current Page/Form Title.
 
-## Usage
+## 2 Usage
 
 Use this action to get the current page or current form title as a string.
 
-## Return Value
+## 3 Return Value
 
 Name | Datatype | Description
 --- | --- | ---

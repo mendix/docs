@@ -3,24 +3,25 @@ title: "Get BooleanSlider Value"
 parent: "rg-one-booleanslider"
 ---
 
-## Description
+## 1 Description
+
 Returns the current active text value from the BooleanSlider Appstore Widget.
 
-## Supported Widgets
-+ BooleanSlider
+## 2 Supported Widgets
 
-## Usage
+* BooleanSlider
+
+## 3 Usage
+
 Pass the name of the widget you want to get the value from.
 
-## Input Parameters
-
-
+## 4 Input Parameters
 
 Name | Datatype | Required | Description
 ---- | -------- | ------- |---------------
 Widget Name | String | Yes | The name of the widget.
 
-## Return Value
+## 5 Return Value
 
 Name | Datatype | Description
 ---- | --------- | ---------------

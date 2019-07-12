@@ -135,11 +135,10 @@ This step is recommended because you can easily change options (for example time
 
 The following steps describe how to start the selenium hub and the node with a JSON configuration file:
 
-1. Create JSON files in the created folder:
+1.  Create JSON files in the created folder:
 
-	```
 	**gridHubConfig.json:**
-
+	```
 	   {
 		"port": 4444,
 		"newSessionWaitTimeout": -1,
@@ -154,9 +153,11 @@ The following steps describe how to start the selenium hub and the node with a J
 		"browserTimeout": 0,
 		"timeout": 1800
 	   }
-
+	```
+	
 	**node.json:**
 
+	```
 	   {
 		"capabilities":
 		[

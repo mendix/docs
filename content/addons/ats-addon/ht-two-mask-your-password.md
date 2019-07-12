@@ -87,7 +87,7 @@ To unmask your password, follow these steps:
 
     ![](attachments/ht-two-mask-your-password/selected_input_parameters.png)
 
-### 3.1 Verifying that Your Password Is Unmasked
+### 3.1 Verifying That Your Password Is Unmasked
 
 To verify that your password is unmasked, follow these steps:
 

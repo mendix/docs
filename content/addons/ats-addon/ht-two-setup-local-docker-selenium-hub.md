@@ -16,23 +16,23 @@ Mendix does not deliver support for the local Selenium solutions.
 ## 2 Prerequisites
 
 The following components are needed:
+
 * Some basic docker and docker-compose knowledge
 * A machine with the latest versions of **docker** and **docker-compose** installed
 * Your machine should allow connections from ATS on port 4444
 * Since version 2.6, ATS uses the Selenium 3.8.1 API. That's why we recommend using this version of Selenium for the docker images as well
 
-
-## 3 Installing Your Hub and Nodes with Docker-Compose
+## 3 Installing Your Hub & Nodes with Docker-Compose
 
 The following steps describe how to install your hub and nodes with Docker-Compose:
 
 1. Create a folder or directory to place your docker-compose file
-2. Create a docker-compose.yml in your folder/directory: 
+2.  Create a docker-compose.yml in your folder/directory: 
 
-    ```
-    hub: 
-     image: selenium/hub:3.8.1
-     environment:
+	```
+	hub: 
+	 image: selenium/hub:3.8.1
+	 environment:
        - TZ=Europe/Amsterdam
        - GRID_TIMEOUT=90
      ports:

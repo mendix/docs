@@ -55,7 +55,7 @@ The combined action:
 * There is always a Setup or Teardown call type in a test case
 * Covers multiple widgets
 * Reusable
- 
+
 ## 3 Unsupported Widget Action
 
 ### 3.1 Description
@@ -79,7 +79,6 @@ The steps in ATS:
 The unsupported widget action:
 
 ![](attachments/ht-one-custom-action-general/ht-one-general-definition/unsupported-widget-action-ats-switch-action.png)
-
 
 ### 3.3 Summary
 

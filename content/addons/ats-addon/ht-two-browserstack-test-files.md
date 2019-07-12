@@ -3,16 +3,16 @@ title: "Browserstack Test Files"
 parent: "ht-two-upload-file-using-ats"
 ---
 
-## Windows XP
+## 1 Windows XP
 
-### Audio Files
+### 1.1 Audio Files
 
 * *C:\Documents and Settings\hello\My Documents\audio\250Hz_44100Hz_16bit_05sec.wav*
 * *C:\Documents and Settings\hello\My Documents\audio\BachCPE_SonataAmin_1.wma*
 * *C:\Documents and Settings\hello\My Documents\audio\blind_willie.mp3*
 * *C:\Documents and Settings\hello\My Documents\audio\first_noel.mp3*
 
-### Documents
+### 1.2 Documents 
 
 * *C:\Documents and Settings\hello\My Documents\documents\xls-sample2.xls*
 * *C:\Documents and Settings\hello\My Documents\documents\doc-sample1.doc*
@@ -24,7 +24,7 @@ parent: "ht-two-upload-file-using-ats"
 * *C:\Documents and Settings\hello\My Documents\documents\text-sample2.txt*
 * *C:\Documents and Settings\hello\My Documents\documents\xls-sample1.xls*
 
-### Images
+### 1.3 Images
 
 * *C:\Documents and Settings\hello\My Documents\images\wallpaper4.jpg*
 * *C:\Documents and Settings\hello\My Documents\images\cartoon-animation.gif*
@@ -39,7 +39,7 @@ parent: "ht-two-upload-file-using-ats"
 * *C:\Documents and Settings\hello\My Documents\images\wallpaper2.jpg*
 * *C:\Documents and Settings\hello\My Documents\images\wallpaper3.jpg*
 
-### Videos
+### 1.4 Videos
 
 * *C:\Documents and Settings\hello\My Documents\video\dfs.avi*
 * *C:\Documents and Settings\hello\My Documents\video\pod.avi*
@@ -48,16 +48,16 @@ parent: "ht-two-upload-file-using-ats"
 * *C:\Documents and Settings\hello\My Documents\video\sample_mpeg4.mp4*
 * *C:\Documents and Settings\hello\My Documents\video\saper.avi*
 
-## Windows 7 / 8 / 8.1 / 10
+## 2 Windows 7 / 8 / 8.1 / 10
 
-### Audio
+### 2.1 Audio
 
 * *C:\Users\hello\Desktop\audio\250Hz_44100Hz_16bit_05sec.wav*
 * *C:\Users\hello\Desktop\audio\BachCPE_SonataAmin_1.wma*
 * *C:\Users\hello\Desktop\audio\blind_willie.mp3*
 * *C:\Users\hello\Desktop\audio\first_noel.mp3*
 
-### Documents
+### 2.2 Documents
 
 * *C:\Users\hello\Desktop\documents\xls-sample2.xls*
 * *C:\Users\hello\Desktop\documents\doc-sample1.doc*

@@ -35,19 +35,19 @@ The first three input parameters are in bold, the other five are not in bold. Bo
 
 ### 3.1 Adding Required Input Parameters 
 
-#### Widget name
+#### 3.1.1 Widget name
 
 In **Widget Name** you have to add the mx-name of the datagrid:
 
 ![](attachments/ht-two-assert-datagrid-rows/widget-name-grid.png)
 
-#### Column 1 Name
+#### 3.1.2 Column 1 Name
 
 In **Column 1 Name** you have to add the mx-name of the column you want to assert. In this example that is the description column:
 
 ![](attachments/ht-two-assert-datagrid-rows/column-mx-name.png)
 
-#### Column 1 Value
+#### 3.1.3 Column 1 Value
 
 In **Column 1 Value** you have to add the value of the column you want to assert:
 
@@ -63,13 +63,13 @@ As there could be more rows with the same description, ATS can assert the wrong 
 
 ![](attachments/ht-two-assert-datagrid-rows/add-optional-parameters.png)
 
-#### Column 2
+#### 3.2.1 Column 2
 
 In **Column 2 Name** you have to add the mx-name of the column. In **Column 2 Value** you have to add the value of the column you want to assert:
 
 ![](attachments/ht-two-assert-datagrid-rows/column-value-2.png)
 
-#### Column 3
+#### 3.2.2 Column 3
 
 In **Column 3 Name** you have to add the mx-name of the column. In **Column 3 Value** you have to add the value of the column you want to assert:
 

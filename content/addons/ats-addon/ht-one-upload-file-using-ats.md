@@ -5,7 +5,7 @@ description: "Describes how to upload a file in your app using ATS and the restr
 tags: ["ATS", "testing"]
 ---
 
-## 1 Introduction<a name="introduction"></a>
+## 1 Introduction {#introduction}
 
 This how-to explains how to upload a file in your app using ATS. You have some test situations in which you must upload a file to finish that test situation. During manual testing, you upload this file from your local computer into your app. ATS works similar, the only difference is that the local computer is your Selenium hub.
 
@@ -75,11 +75,11 @@ Each Selenium setup has different possibilities. We advise that if you want to t
 | Selenium SaaS Agent | Install the agent on a server with your Mendix app. Also put the generic test files there. |
 
 ## 4 Uploading a File Using a Local Selenium Server (Docker)
- 
+
 When testing using a local Selenium server, ATS executes the test on that server. The _Set File Manager_ action only has access to the files on that server. You can create a generic set of test files or just add files to the server and use them in your tests.
 
 ## 5 Uploading a File in BrowserStack (SaaS)
- 
+
 When testing using the BrowserStack, ATS executes the test against a new VM session every time. So every run gets a new VM session and afterwards BrowserStack deletes the entire session. With this setup it is not possible to upload your own files. BrowserStack does provide a large set of test files that they upload in each VM session. You can use the Set File Manager action to achieve this.
 
 Those files are always present so you don't have to change the filepath every time.

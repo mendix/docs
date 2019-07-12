@@ -27,7 +27,7 @@ Type | Description
 [![](attachments/pages/building-block-icon.png)Building block](building-block) | A [building block](building-block) is pre-styled set of widgets. Building blocks will automatically appear in the page editor toolbox, allowing for easy reuse. By designing a comprehensive library of building blocks, a great deal of the fussy work involved in page design can be averted. 
 [![](attachments/pages/page-icon.png)Page](page) | A [page](page) is the end-user interface of a Mendix application. Pages are the things that are actually shown to the end-user. 
 [![](attachments/pages/menu-icon.png)Menu](menu) | A [menu](menu) defines a menu structure that can be used by a menu widget. 
-![](attachments/pages/image-collection-icon.png)Image collection | An image collection is a page resource where you place custom images to use them in your application. For more information, see [Images](images). 
+[![](attachments/pages/image-collection-icon.png)Image collection](image-collection) | An [image collection](image-collection) is a page resource where you place custom images to use them in your application. For more information, see [Images](images). 
 
 ## 3 Widgets and Their Categories
 

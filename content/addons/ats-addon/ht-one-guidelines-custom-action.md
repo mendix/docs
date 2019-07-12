@@ -3,17 +3,17 @@ title: "Guidelines for Creating a Custom Action"
 parent: "ht-one-custom-action-general"
 ---
 
+## 1 Introduction
+
 For a details on custom actions, please see [Custom Actions](rg-one-custom-actions) in the ATS Reference Guide 1.
- 
+
 These are the definitions of Mendix actions and Core actions:
 
 * Mendix actions are a combination [Mendix actions](rg-one-mendix-actions) and [Mendix App Store widget actions](rg-one-mendix-appstore-widgets-actions)
 * Core actions are a combination of [ATS Core actions](rg-one-ats-core-actions) and [Selenium actions](rg-one-selenium-actions)
 
 {{% alert type="info" %}}
-
 These are guidelines, not rules. It is possible that you will encounter situations in which the guidelines cannot be followed.
-
 {{% /alert %}}
 
 ## 1 Using Mendix Actions
@@ -22,7 +22,7 @@ Always try to use a Mendix action first. This table explains why you should use 
 
 | Reason | Description |
 | :--- | :--- |
-| Automatic context | A Mendix action will automatically adjust to the Mendix Platform, ensuring that it will work correctly. | 
+| Automatic context | A Mendix action will automatically adjust to the Mendix Platform, ensuring that it will work correctly. |
 | Visibility checks | A Mendix action only searches for elements that are _visible_. |
 | Browser support | A Mendix action always works in the supported browser. |
 | Mendix support | A Mendix action always works on the latest version of Mendix. |
@@ -172,4 +172,3 @@ The JavaScript actions have three different versions, based on the data types:
 They all produce outputs based on their data type. This means that you cannot return a string inside the Execute Javascript web element action.
 
 Good luck building custom actions! Please post any questions about customer actions on the [Mendix Forum](https://forum.mendixcloud.com/index4.html) under the category **Testing**.
-

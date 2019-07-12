@@ -2,11 +2,14 @@
 title: "Measurements Tool"
 parent: "rg-one-apm"
 ---
+
+## 1 Introduction
+
 The measurements tool is meant to measure system resources and to trigger actions on thresholds. This allows you to monitor memory and save statistics or perform a trap when memory usage reaches, for example, 80%. 
 
 Measurements are created via the **Collect in Measurements Tool** button in the JVM browser or in the query tool. The collected measurements can be stored in the database and used for generating graphs or for triggering events.
 
-## Charts
+## 2 Charts
 
 The charts tab shows graphs of collected data in the measurements tool.
 
@@ -14,7 +17,7 @@ The charts tab shows graphs of collected data in the measurements tool.
 
 Double-clicking the measurement will open a read-only view of the measurement configuration.
 
-## Measurement Configuration
+## 3 Measurement Configuration
 
 Measurements can be configured on the **Measurement configuration** tab. If the measurement is running, you can only view the measurement configuration. 
 
@@ -22,7 +25,7 @@ Measurements can be configured on the **Measurement configuration** tab. If the 
 
 Measurements can be started and stopped here. In the dialog behind the play-button, you can start or stop all measurements at once.
 
-### Measurement Configuration Tab
+### 3.1 Measurement Configuration Tab
 
 Double-clicking or selecting and clicking the **Edit** button shows the measurement configuration dialog.  Here, the selected measurement can be configured:
 
@@ -46,15 +49,15 @@ The **Measurement configuration** tab allows you to do the following:
 *   For a query measurement, the **Expose query results to JMX** makes the query results visible in other Java management consoles – this is only useful for query measurements, since JVM Browser measurements are already available  there
 *   If a query has multiple results, you can configure using the first column a part of the name via **Use first result column in name**
 
-### Triggers Tab
+### 3.2 Triggers Tab
+
 Here you can define triggers on high memory usage for example.
 
  ![](attachments/rg-one-measurements-tool/Measurement_Triggers.png)                 
 
 See the description of [Triggers](rg-one-triggers) for how to configure triggers.
 
-
-### Expressions
+### 3.3 Expressions
 
 Expressions for measurements and measurement triggers are written the same as expressions that are written in the Mendix Modeler expression editor. 
 
@@ -77,7 +80,7 @@ This is an example to calculate the difference between the current and the previ
 
 $Measurement/ValueLong - $Measurement_1/ValueLong
 
-## Tester Tab
+## 4 Tester Tab
 
 The tester will execute the measurement and test the trigger (if enabled) to verify the expressions.
 
@@ -87,7 +90,7 @@ If there is an error, the error message appears on **Apply & test**. You can vie
 
 In the tester, you can clear the cache and also remove all records from the database.
 
-## Triggered Events
+## 5 Triggered Events
 
 If a trigger fires, a record is created in the triggered events. 
 

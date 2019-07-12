@@ -15,20 +15,19 @@ ATS provides two different tools to help build test scripts: the ATS Helper and 
 * Install the [ATS Recorder](rg-one-recorder)
 
 ## 2 Prerequisites
+
 Before starting this how-to, make sure you have the following prerequisites in place:
 
 *  ATS
 *  Mendix app
 
-  {{% alert type="info" %}}
-  Both the ATS Helper and the ATS Recorder only work on a Mendix app.
-  {{% /alert %}}
+	{{% alert type="info" %}}  Both the ATS Helper and the ATS Recorder only work on a Mendix app.
+	{{% /alert %}}
 
 *  Google Chrome Browser
 
-  {{% alert type="info" %}}
-  Both the ATS Helper and the ATS Recorder only function in [Google Chrome](https://www.google.com/chrome/browser/). 
-  {{% /alert %}}
+	{{% alert type="info" %}}  Both the ATS Helper and the ATS Recorder only function in [Google Chrome](https://www.google.com/chrome/browser/). 
+	{{% /alert %}}
 
 {{% youtube C7GuDU9nePQ %}}
 

@@ -3,15 +3,17 @@ title: "Test Case Dependencies"
 parent: "bp-two"
 ---
 
+## 1 Introduction
+
 This document describes what a test case dependency is  and explains the best way of handling test case dependencies within ATS.
 
-## 1 What Is a Test Case Dependency?
+## 2 What Is a Test Case Dependency?
 
 A test case dependency exists in a situation where the behavior or outcome of one test case depends on the preceding execution or result of another test case.
 
 Here are two examples to explain the definition. 
 
-### 1.1 Example 1
+### 2.1 Example 1
 
 You have a test case that creates a new expense in the company expenses app. It creates the new expense using a random number in the **Amount** field and a random string for the **Description** field. 
 
@@ -33,11 +35,11 @@ This is the **TC.02 - Delete Expense** screen:
 
 As you see, TC.02 - Delete Expense cannot delete the expense from TC.01 - Create New Expense, because the description is a randomly generated value.
 
-### 1.2 Example 2
+### 2.2 Example 2
 
 To get to a functionality, you have to walk through four different pages. This is also a test case dependency, caused by the GUI. 
 
-## 2 Why You Must Not Use Test Case Dependencies<a name="why"></a>
+## 3 Why You Must Not Use Test Case Dependencies {#why}
 
 This chapter explains why you must not use dependencies between test cases by defining the impact on your tests. The criteria for a good test case is used. The first example of the first chapter is used, in which there are the TC.01 - Create New Expense and TC.02 - Delete Expense test cases, but TC.02 can only be executed after TC.01.
 
@@ -50,9 +52,9 @@ This chapter explains why you must not use dependencies between test cases by de
 
 As you see, this does not line up with testing standards; therefore, you must not use it. For this same reason, ATS does not allow data sharing between test cases. In the next section, different options are explained.
 
-## 3 Handling Test Case Dependencies
+## 4 Handling Test Case Dependencies
 
-### 3.1 Course of Action
+### 4.1 Course of Action
 
 The previous section explains the reasons for not using test case dependencies. You must only accept a dependency if you have a very good reason. When it comes to test case dependencies, follow these steps:
 
@@ -61,7 +63,7 @@ The previous section explains the reasons for not using test case dependencies. 
 3. Minimize them.
 4. Manage them.
 
-### 3.2 Dealing with Test Case Dependencies
+### 4.2 Dealing with Test Case Dependencies
 
 Assuming you want to test a function that depends on a previous execution (like in the TC.01 and TC.02 example), you have three options. The first two options also cover data dependency. The TC.01 and TC.02 example is used to explain the options:
 
@@ -71,7 +73,7 @@ Assuming you want to test a function that depends on a previous execution (like 
 
 The options are described below.
 
-#### 3.2.1 Option 1 – Separate Test Cases Without Direct Dependency
+#### 4.2.1 Option 1 – Separate Test Cases Without Direct Dependency
 
 Create two separate test cases (for example, one test case that creates a new expense, and another test case that deletes a new expense).
 
@@ -100,7 +102,7 @@ This table presents aspects against the good test case criteria:
 
 Option 1 is the best option.
 
-#### 3.2.2 Option 2 – Multiple Scenarios in One Test Case
+#### 4.2.2 Option 2 – Multiple Scenarios in One Test Case
 
 This option only applies if you have a very long setup routine and the scenarios are very short. For example, you have a scenario for creating a new expense, and you have a scenario for deleting an expense. You can combine these scenarios into one test case.
 
@@ -117,7 +119,7 @@ This table presents aspects against the good test case criteria:
 | Reliability  | * The more scenarios you put into a single test case, the less reliable your outcomes will be, because there can be side-effects between the scenarios. |
 | Precision, <br> Understandability, <br> Analyzability, <br> Lack of ambiguity | * If the test case fails, you always need to check the test log to find out the scenario in which the cause of this failure is located. |
 
-#### 3.2.3 Option 3 – Separate Test Cases with Dependency
+#### 4.2.3 Option 3 – Separate Test Cases with Dependency
 
 This is the last option, and you must only use this option if option 1 and option 2 do not work. This option does not work for data sharing between test cases. 
 

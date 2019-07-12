@@ -3,9 +3,11 @@ title: "Configuration"
 parent: "rg-one-apm"
 ---
 
+## 1 Introduction
+
 This chapter describes the global configuration and the **Start/Stop** dialog. Both can be selected from the header. The header also has a button that opens the documentation and a button that returns you to the home page of the app to which the APM tool has been added.
 
-## After Startup Configuration
+## 2 After Startup Configuration
 
 ![](attachments/rg-one-dashboard/Configuration_After_Startup.png)
 
@@ -15,7 +17,7 @@ As a protection, you can set a **Maximum log level** after startup if the log to
 
 In some cases, tools are run for a fixed period of time. However, running after startup usually means you want to run a specific tool all the time. With the  **Clear fixed period of time** after startup option, you can make sure the tools will keep on running after startup.
 
-## License {#license}
+## 3 License {#license}
 
 APM requires an application license that can be requested via email using the button in the configuration dialog. If the email client is not configured, you can use the **Manual license request** button and copy-paste the text in an email to [apmtool@mansystems.nl](mailto:apmtool@mansystems.nl).
 
@@ -25,7 +27,7 @@ A license is required per app. Every license has an end date.
 
 The license code goes in the **License key** field. The **Expiry date** field is automatically filled. When a license request code is delivered in the APM order, this one-time **License request code** can be filled in to automatically obtain a license when mailing the license request.
 
-## JDBC
+## 4 JDBC
 
 The JDBC settings are for executing queries in the query tool and using the explain plan query in the performance tool. Usually these settings are correctly determined during installation and can stay unchanged.
 
@@ -37,28 +39,29 @@ The **Explain plan query** is also automatically set during installation. This q
 
 The remaining four options are used in the query tool to determine the output and set a timeout.
 
-## Clean Data
+## 5 Clean Data
 
 To quickly remove all the data that is collected by and stored in the APM tool, you can use the buttons on the **Clean data** tab:
 
 ![](attachments/rg-one-dashboard/Configuration_CleanData.png)                       
 
-## More {#more}
+## 6 More {#more}
+
 Some other features and settings are collected on the **More** tab:
 
 ![](attachments/rg-one-dashboard/Configuration_More.png)                       
 
-### Dashboard
+### 6.1 Dashboard
 
 A default measurement graph can be selected for the dashboard.
 
-### Triggered Events
+### 6.2 Triggered Events
 
 Automatic cleanup for the triggered event data in the measurements tool is configured here.
 
 Also, the default **Triggers notify to** can be configured here.
 
-### Settings
+### 6.3 Settings
 
 You can do the following:
 
@@ -66,7 +69,7 @@ You can do the following:
 * Globally set all settings to production, non-production, or custom
 * Recreate sample data
 
-## Start/Stop
+## 7 Start/Stop
 
 A dialog has been added to manually start/stop the tools:
 

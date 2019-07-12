@@ -4,10 +4,6 @@ parent: "rg-apm"
 menu_order: 1
 ---
 
-{{% alert type="warning" %}}
-The documentation in this section describes a product that is in closed beta, so it is subject to change before the final release. For more information, see [Beta Features](/releasenotes/beta-features/).
-{{% /alert %}}
-
 ## 1 Introduction
 
 The Application Performance Monitor (APM) is a solution that helps you to analyze performance issues and runtime behavior.

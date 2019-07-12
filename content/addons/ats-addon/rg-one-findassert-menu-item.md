@@ -7,7 +7,7 @@ parent: "rg-one-navigation-menu"
 
 Finds/Asserts a visible Menu Item in a Navigation Tree, Menu Bar and Simple Menu Bar
 
-## 2 Supported widgets
+## 2 Supported Widgets
 
  + NavigationTree
  + MenuBar

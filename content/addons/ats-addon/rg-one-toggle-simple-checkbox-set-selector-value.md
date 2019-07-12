@@ -3,17 +3,19 @@ title: "Toggle Simple Checkbox Set Selector Value"
 parent: "rg-one-simple-checkbox-set-selector"
 ---
 
-## Description
+## 1 Description
+
 Inverts the value of the check box found by the given value connected to the check box.
 
-## Supported Widgets
-+ Simple Checkbox Set Selector
+## 2 Supported Widgets
 
-## Usage
+* Simple Checkbox Set Selector
+
+## 3 Usage
+
 Pass the name of the widget and the value connected to the check box.
 
-## Input Parameters
-
+## 4 Input Parameters
 
 Name | Datatype | Required | Description
 ---- | -------- | -------- | ---------------

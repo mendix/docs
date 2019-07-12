@@ -7,7 +7,7 @@ parent: "rg-one-grid-selector"
 
 Asserts the value of the check box and the radio button inside the Grid Selector Widget.
 
-## 2 Supported widgets
+## 2 Supported Widgets
 
 * Grid Selector
 

@@ -3,26 +3,26 @@ title: "Get Dialog Message Text"
 parent: "rg-one-dialog"
 ---
 
-## Description
+## 1 Description
 
 Returns the text from messages and confirmation dialogs
 
-## Supported Widgets
+## 2 Supported Widgets
 
- + ConfirmationDialog
- + DialogMessage
+* ConfirmationDialog
+* DialogMessage
 
-## Usage
+## 3 Usage
 
 You have to pass the dialog as WebElement to the action. To get the dialog as WebElement use the action [Find/Assert Dialog](rg-one-findassert-dialog).
 
-## Input Parameters
+## 4 Input Parameters
 
 Name | Datatype | Required | Description
 --- | --- | --- | ---
 Dialog| WebElement | yes | The dialog as WebElement of which you want to get the message text
 
-## Return Value
+## 5 Return Value
 
 Name | Datatype | Description
 --- | --- | ---

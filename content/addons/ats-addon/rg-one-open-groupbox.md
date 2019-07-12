@@ -3,20 +3,20 @@ title: "Open GroupBox"
 parent: "rg-one-groupbox"
 ---
 
-## Description
+## 1 Description
 
 Opens a groupbox by its given name.
 
-## Supported widgtes
+## 2 Supported widgtes
 
- + GroupBox
+* GroupBox
 
-## Usage
+## 3 Usage
 
 Pass the name of the GroupBox you want to open as parameter for the action.
 Optionally you can provide a WebElement as search context, to narrow down the search for the widget, if there are two or more widgets with the same name.
 
-## Input Parameters
+## 4 Input Parameters
 
 Name | Datatype | Required | Description
 --- | --- | --- | ---

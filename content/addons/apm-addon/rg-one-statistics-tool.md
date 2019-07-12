@@ -15,7 +15,7 @@ The statistics tool screen is split into several sections:
 
 Statistics are stored periodically to be able to determine potential trends. The **Periodic store frequency** can be changed in the [Options](#Options).   
 
-## 3 History chart
+## 3 History Chart
 
 It is possible to select a microflow and press the **History chart** button to see a graph with history statistics:  
 
@@ -60,8 +60,7 @@ You can prevent a snapshot from being deleted by cleanup when you select to keep
 
 You can rename snapshots and view the details that will include filtering details when applied.
 
-<a name="Options"></a>
-## 8 Statistics Tool options
+## 8 Statistics Tool options {#Options}
 
 This screenshot shows the options of the statistics tool:
 

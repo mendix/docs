@@ -7,7 +7,7 @@ parent: "rg-one-tab"
 
 Returns the caption of the active tab page.
 
-## 2 Supported widgets
+## 2 Supported Widgets
 
 * TabContainer
 

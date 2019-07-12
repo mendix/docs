@@ -7,7 +7,7 @@ parent: "rg-one-input"
 
 Asserts the text value from a TextBox, TextArea, DateInput.
 
-## 2 Supported widgets
+## 2 Supported Widgets
 
 * TextBox
 * TextArea

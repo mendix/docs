@@ -7,7 +7,7 @@ parent: "rg-one-input"
 
 Returns true if the value is available in the dropdown otherwise false.
 
-## 2 Supported widgets
+## 2 Supported Widgets
 
 * Dropdown
 * ReferenceSelector

@@ -30,9 +30,7 @@ The following schedule settings are available:
 ## 3 Platform
 
 {{% alert type="info" %}}
-
 This option is only available for supported Selenium hubs.
-
 {{% /alert %}}
 
 If you have selected a Selenium hub from a supported Selenium hub provider (SauceLabs, or Browserstack), you will get access to the platform settings. Here you can set the operating system on which the test case will be run.

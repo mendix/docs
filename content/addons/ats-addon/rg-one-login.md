@@ -3,16 +3,16 @@ title: "Login"
 parent: "rg-one-generic"
 ---
 
-## Description
+## 1 Description
 
 Login to a Mendix Application with standard login page or on Cloud using MxID.
 
-## Usage
+## 2 Usage
 
 Provide the name and password of the user account as parameters.
 Optionally you can use a MxID to login to your mendix application.
 
-## Input Parameters
+## 3 Input Parameters
 
 Name | Datatype | Required | Description
 --- | --- | --- | ---

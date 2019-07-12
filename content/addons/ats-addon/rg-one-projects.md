@@ -2,6 +2,7 @@
 title: "Projects"
 parent: "rg-one-ats"
 ---
+
 ## 1 Introduction
 
 Creating new test cases – especially with recording – is a simple activity, so you can quickly end up with many of them. Moreover, when you test multiple applications or even have different teams, you do not want all data in one place, but you want to separate, structure, and protect the data.

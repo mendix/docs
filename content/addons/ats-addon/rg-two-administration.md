@@ -5,13 +5,11 @@ description: "Describes a tenant administrator role in ATS."
 tags: ["ats", "administrator", "administration"]
 ---
 
-{{% alert type="info" %}}
-
-Tenant administration is a feature that is only available in the on-premises version of ATS.
-
-{{% /alert %}}
-
 ## 1 Introduction
+
+{{% alert type="info" %}}
+Tenant administration is a feature that is only available in the on-premises version of ATS.
+{{% /alert %}}
 
 A tenant administrator is a user role which is used in on-premises instances of ATS. The tenant administrator is able to create and edit accounts and apps. 
 
@@ -46,11 +44,8 @@ Name | The name the user logs in with, which must be unique.
 Password | The initial password of the user (which should be changed by the user when logging in).
 Confirm Password | Must match the **Password**.
 
-
 {{% alert type="info" %}}
-
 When a new account is created, the user's for all apps will be set according to the specified **Default app role** for each app.
-
 {{% /alert %}}
 
 ## 4 Editing Accounts
@@ -62,9 +57,7 @@ A tenant administrator can change the full name of an account and the password. 
 When editing accounts, you can set accounts to inactive or block them, which will deactivate the account. 
 
 {{% alert type="info" %}}
-
 When a user attempts to log in with an incorrect password a certain number of times in a certain amount of time, according to Mendix regulations, that account will be marked as blocked by the system. As a tenant administrator, you can unblock accounts by toggling the **Blocked** check box.
-
 {{% /alert %}}
 
 ## 5 Managing Apps
@@ -76,8 +69,6 @@ On the **Apps** tab, you can see all the apps that exist on this ATS instance. H
 You can enter/edit the name and the Mendix app ID. The name is used in the **My apps** page. The Mendix app ID is used to retrieve information from the Mendix Developer Portal (for example, user stories), which are needed for certain ATS features. You can leave the Mendix app ID empty if you do not plan to use these features.
 
 {{% alert type="info" %}}
-
 When creating a new app, you will be assigned as an administrator for this app. All other users will have no access to the app. Go to the newly created app's **App settings** to manage access to it.
-
 {{% /alert %}}
 

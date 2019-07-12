@@ -2,18 +2,20 @@
 title: "Assert CKEditor Value"
 parent: "rg-one-ckeditor"
 ---
-## Description
+
+## 1 Description
+
 Compares the CKEditor value with the given value.
 
-## Supported widgets
- + CKEditor
+## 2 Supported widgets
 
-## Usage
+* CKEditor
+
+## 3 Usage
+
 Pass the name of the widget and the value you want to assert.
 
-## Input Parameters
-
-
+## 4 Input Parameters
 
 Name | Datatype | Required | Description
 ---- | -------- | ------- |---------------

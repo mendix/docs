@@ -3,15 +3,15 @@ title: "Concatenate String"
 parent: "rg-one-ats-core-actions"
 ---
 
-## Description
+## 1 Description
 
 Concatenate Strings
 
-## Usage
+## 2 Usage
 
 Pass the Strings you want to concatenate, with a maximum of five strings.
 
-## Input Parameters
+## 3 Input Parameters
 
 Name | Datatype | Required | Description
 ---- | -------- | ------- |---------------

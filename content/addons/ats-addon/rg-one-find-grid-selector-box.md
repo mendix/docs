@@ -3,17 +3,19 @@ title: "Find Grid Selector Box"
 parent: "rg-one-grid-selector"
 ---
 
-## Description
+## 1 Description
+
 Find check box and radio button by column and row caption.
 
-## Supported widgtes
- + Grid Selector
+## 2 Supported Widgets
 
-## Usage
+* Grid Selector
+
+## 3 Usage
+
 Pass the name of the parent widget, the column caption, and row caption.
 
-## Input Parameters
-
+## 4 Input Parameters
 
 Name | Datatype | Required | Description
 ---- | -------- | -------- | ---------------
@@ -21,7 +23,7 @@ Widget Name | String | Yes | The name of the Grid Selector widget.
 Column Caption | String | Yes | The column caption of the check box cell you want to find.
 Row Caption | String | Yes | The row caption of the check box cell you want to find.
 
-## Return Value
+## 5 Return Value
 
 Name | Datatype | Description
 ---- | --------- | ---------------

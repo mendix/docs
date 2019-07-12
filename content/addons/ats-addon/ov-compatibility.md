@@ -4,7 +4,7 @@ parent: "ov"
 menu_order: 2
 ---
 
-## Mendix Platform Compatibility
+## 1 Mendix Platform Compatibility
 
 | ATS version | Supported Mendix Versions | Tested |
 | --- | --- | --- |
@@ -16,16 +16,16 @@ menu_order: 2
 
 &sup1; On Mendix 7.13 and above, in some circumstances, tests will not wait for microflows that are executed asynchronously to finish executing before proceeding. This can cause tests to fail. A temporary workaround is to add a "sleep" with a sufficient duration after clicking a button that calls an asynchronous microflow.
 
-## Browser Support
+## 2 Browser Support
 
-### Firefox
+### 2.1 Firefox
 
 | ATS version | Supported Browser Version | Notes |
 | --- | --- | --- |
 | 1.5 - 1.8 | 44, 45, 38 ESR, 45 ESR |  |
 | 2.x | 58 |  |
 
-### Chrome
+### 2.2 Chrome
 
 | ATS version | Supported Browser Version | Notes |
 | --- | --- | --- |
@@ -33,7 +33,7 @@ menu_order: 2
 | 1.7, 1.8 | 51-53 |   |
 | 2.x | 64 |  |
 
-### Internet Explorer
+### 2.3 Internet Explorer
 
 | ATS version | Supported Browser Version | Notes |
 | ----------- | ------------------------- | ----- |
@@ -47,11 +47,11 @@ Internet Explorer gets the same development attention as other browsers. However
 
 {{% /alert %}}
 
-#### Known Limitations
+#### 2.3.1 Known Limitations
 
 * IE can produce typos when keys are sent to the browser, which can result in wrong values being set to input fields
 * Running tests on Windows XP with Internet Explorer is not possible
 
-### Other Browsers
+### 2.4 Other Browsers
 
 We plan to support Edge and Safari in future releases.

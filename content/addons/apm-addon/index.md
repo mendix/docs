@@ -4,14 +4,11 @@ title: "APM Guide"
 
 ## 1 Introduction
 
-The *APM Guide* contains all the documentation for versions 1 and 2 of Application Performance Monitor (APM).
+This category contains all the documentation for versions 1 and 2 of Application Performance Monitor (APM).
 
-## 2 Main Sections in This Guide
+## 2 Main Documents in This Category
 
-This guide includes the following sections: 
-
-* [APM Installation Guide](ig)
-* [APM Reference Guide](rg-apm)
+* [APM Installation Guides](ig)
+* [APM Reference Guides](rg-apm)
 * [APM Use Cases](uc)
-
 

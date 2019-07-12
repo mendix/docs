@@ -33,31 +33,31 @@ The following steps describe how to install your hub and nodes with Docker-Compo
 	hub: 
 	 image: selenium/hub:3.8.1
 	 environment:
-       - TZ=Europe/Amsterdam
-       - GRID_TIMEOUT=90
-     ports:
-       - 4444:4444
+		- TZ=Europe/Amsterdam
+		- GRID_TIMEOUT=90
+	 ports:
+		- 4444:4444
     
-    firefox:
-     image: selenium/node-firefox:3.8.1
-     links:
-       - hub:hub
-     environment:
-       - TZ=Europe/Amsterdam
-       - SCREEN_WIDTH=1600
-       - SCREEN_HEIGHT=900
+	firefox:
+	 image: selenium/node-firefox:3.8.1
+	 links:
+		- hub:hub
+	 environment:
+		- TZ=Europe/Amsterdam
+		- SCREEN_WIDTH=1600
+		- SCREEN_HEIGHT=900
     
-    chrome:
-     image: selenium/node-chrome:3.8.1
-     links:
-       - hub:hub
-     environment:
-       - TZ=Europe/Amsterdam
-       - SCREEN_WIDTH=1600
-       - SCREEN_HEIGHT=900
-     volumes:
-       - /dev/shm:/dev/shm
-     privileged: true
+	chrome:
+	 image: selenium/node-chrome:3.8.1
+	 links:
+		- hub:hub
+	environment:
+		- TZ=Europe/Amsterdam
+		- SCREEN_WIDTH=1600
+		- SCREEN_HEIGHT=900
+	volumes:
+		- /dev/shm:/dev/shm
+	privileged: true
 	```
 
 3.  Open a console and give the following command from the folder/directory where you placed your docker-compose.yml:
@@ -74,7 +74,7 @@ The following steps describe how to install your hub and nodes with Docker-Compo
    sudo docker-compose ps
 
          Name                 Command           State           Ports         
-   ---------------------------------------------------------------------------
+   ---------------------------------------------------------------------
    docker_chrome_1    /opt/bin/entry_point.sh   Up                            
    docker_firefox_1   /opt/bin/entry_point.sh   Up                            
    docker_hub_1       /opt/bin/entry_point.sh   Up      0.0.0.0:4444->4444/tcp

@@ -11,6 +11,12 @@ Images can be used to brighten up your application. [Navigation items](navigatio
 
 The **System** module contains some images that are used by the standard components. If you place a data view on a page, the **Save** and **Cancel** buttons will have images from the **System** module on them. You can always use different images if you like. The same holds for images on the control bar buttons of the data grid.
 
+{{% alert type="info" %}}
+This sort of image is called a **static** image as it is always the same. For example, the icon you put on a save button will always look the same whatever object you are saving.
+
+If you want different images to appear for different objects (for example, a picture of a product) these images should be stored as images in the database. See [How To Work with Images & Files](/howto/data-models/working-with-images-and-files) for more information.
+{{% /alert %}}
+
 ## 2 Supported Formats
 
 The following image formats are supported: *png*, *jpeg*, *gif*, *bmp*, and *svg*. The *png* format is recommended, as it is compressed without losing any information and supports transparency very well.

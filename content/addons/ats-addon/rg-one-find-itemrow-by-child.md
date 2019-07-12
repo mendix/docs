@@ -3,27 +3,27 @@ title: "Find Item/Row (by child element)"
 parent: "rg-one-datagrid-templategrid-listview"
 ---
 
-## Description
+## 1 Description
 
 Finds Item or Row of a TemplateGrid, DataGrid or ListView containing a specified element.
 
-## Supported Widgets
+## 2 Supported Widgets
 
- + DataGrid
- + TemplateGrid
- + ListView
+* DataGrid
+* TemplateGrid
+* ListView
 
-## Usage
+## 3 Usage
 
 Provide the child WebElement which resides in the item or row you want to find, e.g. a specific button or DataView.  
 
-## Input Parameters
+## 4 Input Parameters
 
 Name | Datatype | Required | Description
 --- | --- | --- | ---
 Child Element | WebElement | yes | The WebElement in the Item/Row
 
-## Return Value
+## 5 Return Value
 
 Name | Datatype | Description
 ---- | --------- | ---------------

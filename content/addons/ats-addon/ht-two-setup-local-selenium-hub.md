@@ -22,9 +22,9 @@ The following components are needed:
 * From version 2.6, ATS uses the Selenium 3.8.1 API; therefore, we recommend using this version of Selenium as well
 
 ## 3 Downloading Selenium Server
- 
+
  The following steps describe how to download the Selenium server:
- 
+
 1. Create a folder on your disk (for example, *C:\Selenium*).
 2. Download [Selenium Server stand-alone version 3.8.1](http://selenium-release.storage.googleapis.com/3.8/selenium-server-standalone-3.8.1.jar) and place it in the folder
 
@@ -41,13 +41,13 @@ The following steps describe how to download the latest Chrome and Gecko (Firefo
 The following steps describe how to start the Selenium hub: 
 
 1. Go to the folder and open a command box (Shift+Right click and choose Open command window here)
-2. Start your Selenium hub (version number can be different):
+2.  Start your Selenium hub (version number can be different):
 
-   ```
-   java -jar selenium-server-standalone-3.8.1.jar -role hub
-   ```
+	```
+	java -jar selenium-server-standalone-3.8.1.jar -role hub
+	```
 
-   You should see logging like this:
+	You should see logging like this:
 
        C:\Selenium>java -jar selenium-server-standalone-3.8.1.jar -role hub
        11:30:27.208 INFO - Selenium build info: version: '3.8.1', revision: '6e95a6684b'
@@ -64,11 +64,9 @@ The following steps describe how to start the Selenium hub:
        11:30:28.395 INFO - Nodes should register to http://10.20.101.63:4444/grid/register/
        11:30:28.395 INFO - Selenium Grid hub is up and running
 
-
-
 3.  Check with the following link if the hub works: `http://localhost:4444/grid/console`
 
-   ![](attachments/ht-two-setup-local-selenium-index/ht-two-setup-local-selenium-hub/grid_hub.png)
+	![](attachments/ht-two-setup-local-selenium-index/ht-two-setup-local-selenium-hub/grid_hub.png)
 
    Congratulations, your local Selenium hub is running.
 
@@ -77,13 +75,13 @@ The following steps describe how to start the Selenium hub:
 The following steps describe how to start the node with three Chrome and three Firefox browsers:
 
 1. Go to the folder and open a command box (Shift+Right click and choose the **Open command** window here)
-2. Start the node:
+2.  Start the node:
 
-   ```
+	```
    java -Dwebdriver.chrome.driver=C:\Selenium\chromedriver.exe  -Dwebdriver.firefox.driver=C:\Selenium\geckodriver.exe -jar selenium-    server-standalone-3.8.1.jar -role node -hub http://localhost:4444/grid/register -browser "browserName=firefox, maxInstances=3"  -browser "browserName=chrome, maxInstances=3"
-   ```
+	```
 
-   The output should look something like this:
+	The output should look something like this:
 
        C:\Selenium>java -Dwebdriver.chrome.driver=C:\Selenium\chromedriver.exe  -Dwebdriver.firefox.driver=C:\Selenium\geckodriver.exe -   jar selenium-server-standalone-3.8.1.jar -role node -hub http://localhost:4444/grid/register -browser "browserName=firefox,    maxInstances=3"  -browser "browserName=chrome, maxInstances=3"
        13:12:18.198 INFO - Selenium build info: version: '3.8.1', revision: '6e95a6684b'
@@ -114,12 +112,9 @@ The following steps describe how to start the node with three Chrome and three F
        13:12:19.338 INFO - Registering the node to the hub: http://localhost:4444/grid/register
        13:12:19.416 INFO - The node is registered to the hub and ready to use
 
-
-
-
 3.  Check in the console whether your Selenium hub node is active [http://localhost:4444/grid/console](http://localhost:4444/grid/console):
 
-    ![](attachments/ht-two-setup-local-selenium-index/ht-two-setup-local-selenium-hub/grid_nodes.png)
+	![](attachments/ht-two-setup-local-selenium-index/ht-two-setup-local-selenium-hub/grid_nodes.png)
 
 ## 7 Starting Testing
 
@@ -136,7 +131,7 @@ This step is recommended because you can easily change options (for example time
 The following steps describe how to start the selenium hub and the node with a JSON configuration file:
 1. Create JSON files in the created folder:
 
-   **gridHubConfig.json:**
+	**gridHubConfig.json:**
 
        {
          "port": 4444,
@@ -187,37 +182,34 @@ The following steps describe how to start the selenium hub and the node with a J
          "custom": {}
        }
 
+2.  Start the hub:
 
+	```
+	java -jar selenium-server-standalone-3.8.1.jar -role hub -hubConfig gridHubConfig.json
+	```
 
-2. Start the hub:
+3.  Start the node:
 
-   ```
-   java -jar selenium-server-standalone-3.8.1.jar -role hub -hubConfig gridHubConfig.json
-   ```
-
-3. Start the node:
- 
-   ```
-   java -Dwebdriver.chrome.driver=C:\Selenium\chromedriver.exe -Dwebdriver.firefox.driver=C:\Selenium\geckodriver.exe -jar selenium- server-standalone-3.8.1.jar -role node -nodeConfig node.json   
-   ```
-
+	```
+	java -Dwebdriver.chrome.driver=C:\Selenium\chromedriver.exe -Dwebdriver.firefox.driver=C:\Selenium\geckodriver.exe -jar selenium- server-standalone-3.8.1.jar -role node -nodeConfig node.json   
+	```
 
 ## 9 Optional: Batching File to Start Up Everything at Once
 
 The following steps describe how to create a batch file to start up everything at once:
 
-1. Create start.bat:
+1.  Create start.bat:
 
-   ```
+	```
    start /B java -jar C:\Selenium\selenium-server-standalone-3.8.1.jar -role hub -hubConfig C:\Selenium \gridHubConfig.json
    timeout /t 10
    start /B java -Dwebdriver.chrome.driver=C:\Selenium\chromedriver.exe -Dwebdriver.firefox.driver=C:\Selenium\geckodriver.exe -jar  C:\Selenium\selenium-server-standalone-3.8.1.jar -role node -nodeConfig C:\Selenium\node.json
    exit
-   ```
+	```
 
-2. Start from the cmd box:
-    
-   ```
-   start.bat
-   ```
+2.  Start from the cmd box:
+  
+	```
+	start.bat
+	```
 Congratulations you have finished setting up a local selenium hub. The next how-to is [How to Set Up a Local Docker Selenium Hub](ht-two-setup-local-docker-selenium-hub). You find an overview of all the how-tos and the structure on the [ATS 2 How-to's](ht-two) page. We advise you to follow the predefined structure.

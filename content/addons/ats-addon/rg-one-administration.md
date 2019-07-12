@@ -3,6 +3,8 @@ title: "Administration"
 parent: "rg-one-ats"
 ---
 
+## 1 Introduction
+
 As an administrator in the ATS, you have access to additional functionality:
 
 *   Manage Projects system wide
@@ -10,7 +12,7 @@ As an administrator in the ATS, you have access to additional functionality:
 *   Configure Selenium hubs for all projects
 *   Change Recorder configuration
 
-## Manage Projects
+## 2 Manage Projects
 
 When you log in as an administrator the _Projects_ page is shown:
 
@@ -24,7 +26,7 @@ When creating a new library on the _Projects_ page, the created library is empty
 
 {{% /alert %}}
 
-### Create or Edit a Project/Action Library
+### 2.1 Create or Edit a Project/Action Library
 
 If you create a new Project/Action Library or you want to edit an existing one, the following page will open:
 
@@ -34,7 +36,7 @@ You can edit the name, the Mendix Project ID and the Mendix API key. Furthermore
 
 You can also add existing Action Libraries.
 
-## Add Selenium Configurations
+## 3 Add Selenium Configurations
 
 As an admin user you can configure Selenium hubs as you normally would. For more information, see [SeleniumHub](rg-one-configuration).
 
@@ -44,7 +46,7 @@ Additionally, as an administrator, you can assign a Selenium hub to a specific p
 
 ![Edit Selenium hub dialog as admin](attachments/rg-one-administration/21168202.png)
 
-## Add Applications
+## 4 Add Applications
 
 As an admin user, you can add and configure applications to test.
 
@@ -52,7 +54,7 @@ As an admin user, you can add and configure applications to test.
 
 For more information, see [Configure Test Applications](rg-one-configuration#configure-test-applications).
 
-## Create Accounts
+## 5 Create Accounts
 
 On the _Accounts_ page you can create new users and administrators for the system. Administrators only have access to the administration part of ATS. They can see test cases and test results, but they can't create new test cases or run them.
 
@@ -76,7 +78,7 @@ Tester | Adds the tester user role.
 Tenant Administrator | Adds the tenant administrator role.
 Password | The initial password of the user (which should be changed by the user when logging in).
 
-## Recorder Config
+## 6 Recorder Config
 
 Admin users have access to the _Recorder Config_ page where recorder setting can be changed.
 

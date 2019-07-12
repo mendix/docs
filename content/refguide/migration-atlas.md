@@ -49,9 +49,9 @@ If you changed any **login\*.html** files, complete the following actions:
 
 If you have altered your JSON files, consult the instructions below. If you have not, you may ignore this subsection.
 
-If you changed Design Properties for Web in **settings.json**, you must manually integrate your old **settings.json** into the new folder.
+If you changed design properties for web in **settings.json**, you must manually integrate your old **settings.json** into the new folder.
 
-If you changed Hybrid App imports in **components.json**, make sure to do the following:
+If you changed hybrid mobile app imports in **components.json**, make sure to do the following:
 
 * Manually integrate your old **components.json** into the new folder
 * Confirm the **bootstrap.min.css**, **bootstrap-rtl.min.css**, and **mxui.css** imports are gone (if they are not, delete them)

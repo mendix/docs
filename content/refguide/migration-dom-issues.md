@@ -20,13 +20,13 @@ When you upgrade to Mendix 8, DOM structure changes will also alter the correlat
 
 Before Mendix 8, the client provided a large amount of default styling if your app project lacked a theme. This made building your own theme difficult, as you needed to override the default styling. As of Mendix 8, all styling has been moved to AtlasUI. Now, building your own theme from scratch requires significantly less work.
 
-If you have already built your own theme from scratch in an earlier version of Mendix, you might depend on the default styling (specifically the Bootstrap files and the **mxui.css** file) which are not included in Mendix 8 applications by default. For this case, Mendix provides legacy **mxui.css** and Bootstrap files with defaults in this [GitHub repository](https://github.com/mendix/legacy-mxui-css). Downloading files from this repository will enable your custom theme.
+If you have already built your own theme from scratch in an earlier version of Mendix, you might depend on the default styling (specifically the Bootstrap files and the **mxui.css** file) not included in Mendix 8 applications by default. For this case, Mendix provides legacy **mxui.css** and Bootstrap files with defaults in this [GitHub repository](https://github.com/mendix/legacy-mxui-css). Download files from this repository to enable your custom theme.
 
 ## 4 Focus-Specific Class Removed
 
 Before Mendix 8, the client frequently applied `mx-focus` to the element receiving focus and removed `mx-focus` when the element lost focus. Because all supported browsers now have proper support for the `:focus` pseudo-class, these reapplications are no longer necessary.  For more information on `:focus`, see Mozilla’s [:focus documentation](https://developer.mozilla.org/en-US/docs/Web/CSS/:focus).
 
-If your are using `mx-focus` in your theme, you should replace it with `:focus` .
+If your are using `mx-focus` in your theme, you should replace it with `:focus`.
 
 Code such as this:
 

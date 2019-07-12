@@ -3,19 +3,20 @@ title: "Find/Assert DataGrid Row"
 parent: "rg-one-datagrid-templategrid-listview"
 ---
 
-## Description
+## 1 Description
 
 Find/Assert a DataGrid Row by a certain column value.
 
-## Supported Widgets
- + DataGrid
+## 2 Supported Widgets
 
-## Usage
+* DataGrid
+
+## 3 Usage
 
 You have to pass the name of the DataGrid, the column title and the cell value of the row, to determine which row to find.
 Optionally you can provide a WebElement as search context, to narrow down the search for the DataGrid widget, if there are two or more DataGrids with the same name.
 
-## Input Parameters
+## 4 Input Parameters
 
 Name | Datatype | Required | Description
 --- | --- | --- | ---
@@ -24,7 +25,7 @@ Column Name | String | yes |The name of the column in which the column value is 
 Column Value | String | yes | The column value which defines the row
 Search Context | WebElement | no | Limit the search to the given WebElement
 
-## Return Value
+## 5 Return Value
 
 Name | Datatype | Description
 --- | --- | ---

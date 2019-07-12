@@ -90,17 +90,17 @@ The following steps describe how to install the hub and nodes with Docker-Compos
 6.  Open a console and give the following command from the folder/directory where you placed your docker-compose.yml:
 
 	```
-   sudo docker-compose up -d
-   
-   Starting docker_selenoid_1 ... done
+	sudo docker-compose up -d
+	
+	Starting docker_selenoid_1 ... done
 	```
 
 7.  After it started, you can check the status of the container
 
 	```
-   sudo docker-compose ps
+	sudo docker-compose ps
          Name                     Command               State           Ports         
-   -----------------------------------------------------------------------------------
+   ---------------------------------------------------------------------
    docker_selenoid_1   /usr/bin/selenoid -conf /e ...   Up      0.0.0.0:4444->4444/tcp
 	```
 

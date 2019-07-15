@@ -3,19 +3,21 @@ title: "Set Checkbox Set Selector Value"
 parent: "rg-one-checkbox-set-selector"
 ---
 
-## Description
+## 1 Description
+
 Finds check box by column caption and cell value. Sets its value to checked.
 
-## Supported Widgets
- + Checkbox Set Selector
+## 2 Supported Widgets
 
-## Usage
+* Checkbox Set Selector
+
+## 3 Usage
+
 Pass the name of the widget, the column caption, and the cell value of the check box you want to set.
+
 Set checked to true or false.
 
-## Input Parameters
-
-
+## 4 Input Parameters
 
 Name | Datatype | Required | Description
 ---- | -------- | ------- |---------------

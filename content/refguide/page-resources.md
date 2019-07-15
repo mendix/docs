@@ -16,7 +16,7 @@ You can add the following page resources:
 * [Snippet](snippet)
 * [Building block](building-block) 
 * [Menu](menu)
-* Image collection
+* [Image collection](image-collection)
 
 ## 2 Adding Page Resources
 

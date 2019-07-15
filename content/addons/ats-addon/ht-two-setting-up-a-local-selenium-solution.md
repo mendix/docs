@@ -48,6 +48,7 @@ For an example of how to set up this Selenium solution, see: [How to Set Up a Lo
 ### 3.3 Characteristics of the Selenium Solution
 
 Characteristics of the Selenium solution are the following:
+
 * Browsers run in Linux containers
 * Live-view possible with debug images and VNC (viewer)
 * No (out-of-the-box) video recording
@@ -65,6 +66,7 @@ For an example of how to set up this Selenium solution, see: [How to Set Up a Lo
 ### 4.3 Characteristics of the Selenium Solution
 
 Characteristics of the Selenium solution are the following:
+
 * Selenoid is a powerful Go implementation of the original Selenium hub code. It is using Docker to launch browsers
 * While ATS works fine with Selenoid (since it's based on the official Selenium code) and it even supports parallel testing on the Selenoid hub we can't guarantee that ATS supports it in the future
 * Browsers run in Linux containers
@@ -74,6 +76,7 @@ Characteristics of the Selenium solution are the following:
 ## 5 Why You Would Prefer a SaaS-solution as Selenium Solution (Like Browserstack or Saucelabs)
 
 The following reasons describe why a SaaS-solution is preferred above a local Selenium solution:
+
 * Active support team
 * Secures your connections
 * Out-of-the-box video recording and live-view in your personal portal

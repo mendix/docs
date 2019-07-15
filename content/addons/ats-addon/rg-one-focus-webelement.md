@@ -3,19 +3,19 @@ title: "Focus WebElement"
 parent: "rg-one-system"
 ---
 
-## Description
+## 1 Description
 
 Focuses a WebElement and performs a Mendix wait afterwards.
 
-## Supported widgtes
+## 2 Supported Widgets
 
- + All WebElements
+* All WebElements
 
-## Usage
+## 3 Usage
 
 Pass the WebElement you want to focus as parameter for the action. To get the WebElement, use an action like Find/Assert Widget.
 
-## Input Parameters
+## 4 Input Parameters
 
 Name | Datatype | Required | Description
 --- | --- | --- | ---

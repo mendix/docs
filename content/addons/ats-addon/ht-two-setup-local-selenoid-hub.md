@@ -104,12 +104,12 @@ The following steps describe how to install the hub and nodes with Docker-Compos
    docker_selenoid_1   /usr/bin/selenoid -conf /e ...   Up      0.0.0.0:4444->4444/tcp
 	```
 
-8.  To check the status of the hub
+8.  To check the status of the hub:
 
 	```
-   curl -s http://localhost:4444/status
- 
-   {"total":5,"used":0,"queued":0,"pending":0,"browsers":{"chrome":{"65.0":{}},"firefox":{"58.0":{}}}}
+	curl -s http://localhost:4444/status
+
+	{"total":5,"used":0,"queued":0,"pending":0,"browsers":{"chrome":{"65.0":{}},"firefox":{"58.0":{}}}}
 	```
 
 ## 4 Starting Testing

@@ -31,8 +31,8 @@ ATS supports different screen resolutions for every operating system. The follow
 
 ### 2.1 Windows
 
-> 1920x1080 FullHD (16:9) *default*, 1600x1200 UXGA (4:3), 1280x1024 SXGA (5:4), 1024x765 XGA (4:3)
+* 1920x1080 FullHD (16:9) *default*, 1600x1200 UXGA (4:3), 1280x1024 SXGA (5:4), 1024x765 XGA (4:3)
 
 ### 2.2 Macintosh
 
-> 1600x1200 UXGA (4:3) *default*, 1280x960 UVGA (4:3), 1024x768 XGA (4:3)
+* 1600x1200 UXGA (4:3) *default*, 1280x960 UVGA (4:3), 1024x768 XGA (4:3)

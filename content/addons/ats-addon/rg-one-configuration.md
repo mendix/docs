@@ -29,7 +29,7 @@ Parallel Sessions | The number of tests that can run in parallel on the Selenium
 Proxy URL | The URL of an optional proxy server. Normally there should be no need to use a proxy server
 Custom Capabilities | Set the Selenium DesiredCapabilities (for more information, see the Selenium documentation).
 
-## 3 Configure Test Applications
+## 3 Configure Test Applications {#configure-test-applications}
 
 On the **Applications** tab, you can see a list of test applications that are configured for the current project:
 

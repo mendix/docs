@@ -3,18 +3,19 @@ title: "Set CKEditor Value"
 parent: "rg-one-ckeditor"
 ---
 
-## Description
+## 1 Description
+
 Sets the given value as current value for the CKEditor value. The value can be formatted via HTML code.
 
-## Supported Widgets
-+ CKEditor
+## 2 Supported Widgets
 
-## Usage
+* CKEditor
+
+## 3 Usage
+
 Pass the name of the widget and the value you want to set.
 
-## Input Parameters
-
-
+## 4 Input Parameters
 
 Name | Datatype | Required | Description
 ---- | -------- | ------- |---------------

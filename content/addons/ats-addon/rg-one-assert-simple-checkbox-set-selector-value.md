@@ -7,7 +7,7 @@ parent: "rg-one-simple-checkbox-set-selector"
 
 Asserts that the check box found by the given value is checked or cleared.
 
-## 2 Supported widgets
+## 2 Supported Widgets
 
 * Simple Checkbox Set Selector
 

@@ -3,20 +3,20 @@ title: "Set Checkbox Value"
 parent: "rg-one-input"
 ---
 
-## Description
+## 1 Description
 
 Sets the value of a Checkbox.
 
-## Supported widgets
+## 2 Supported widgets
 
- + Checkbox
+* Checkbox
 
-## Usage
+## 3 Usage
 
 Pass the name of the checkbox and the value you want to set.
 Optionally you can provide a WebElement as search context, to narrow down the search for the widget, if there are two or more widgets with the same name.
 
-## Input Parameters
+## 4 Input Parameters
 
 Name | Datatype | Required | Description
 --- | --- | --- | ---

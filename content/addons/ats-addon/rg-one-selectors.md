@@ -20,7 +20,7 @@ Pattern |Name | Meaning
 :containsText(*text*) | ContainsText pseudo-class | Selects a element whose inner text value is equal to the given text. Can only be used on text, CDATA and element nodes
 :val(*text*) | Value pseudo-class | Selects a input, select or textarea whose value is equal to the given text
 
-## 3 CSS Selectors
+## 3 CSS Selectors {#css-selectors}
 
 You can use any CSS Selector defined in CSS3 and supported by your browser. The following table shows some of the commonly used CSS3 selectors in ATS.
 
@@ -37,7 +37,7 @@ You can use any CSS Selector defined in CSS3 and supported by your browser. The 
 
 For more informations visit the official [W3C CSS3 selectors reference](http://www.w3.org/TR/css3-selectors/).
 
-## 4 JQuery Selectors
+## 4 JQuery Selectors {#jquery-selectors}
 
 JQuery uses CSS3 selectors and extends the collection of selectors with its own ones. You can use those in your ATS actions.
 

@@ -13,9 +13,9 @@ The performance tool consists of:
 - [Filter](#filter)
 - [Options](#options)
 - [Show recorded](#show-recorded)
-- [Advanced usage](#advanced-usage)
+- [Advanced usage](#advanced)
 
-## 2 Recorder
+## 2 Recorder {#recorder}
 
 The performance tool is a recorder that when started records all action and SQL statements and on stop gives you the option to process and store the recording. During the recording and even when recording is stopped you can filter the recorded data. This filtering removes the recorded items from memory, so there is no undo here.
 
@@ -41,7 +41,7 @@ If on processing the actual data is more than allowed to store a special filter 
 
 During processing of recorded data SQL statements are linked to actions or if that fails to the complete microflow. Not every SQL statement can be traced back to a microflow and/or action. Heuristics is applied to improve on this.
 
-## 3 Filter
+## 3 Filter {#filter}
 
 The following screenshot shows the filter options of the Performance Tool when the performance tool is  running:
 
@@ -62,7 +62,7 @@ is used.
 *   If the record SQL statements is checked while running, recording of SQL statements is started.
 *   If the thresholds are increased, the already recorded microflows and/or SQL statements are filtered to match the new threshold.
 
-## 4 Options
+## 4 Options {#options}
 
 The following screenshot shows the options of the Performance Tool:
 
@@ -81,7 +81,7 @@ Changes to the options are applied to the Performance Tool if the button **Save*
 *   If the record SQL statements is checked while running, recording of SQL statements is started.
 *   If the thresholds are increased, the already recorded microflows and/or SQL statements are filtered to match the new threshold
 
-## 5 Show recorded
+## 5 Show Recorded {#show-recorded}
 
 You can look at what is being recorded in the **Show recorded** dialog:
 
@@ -94,6 +94,6 @@ You can store an individual microflow (including sub microflows if recorded as s
 
 You can [View] and drill down into microflows. However, you cannot see SQL statements or event microflows as main microflows inside the interval of an action here. This is only visible after processing and storing the recorded data in the database.
 
-## 6 Advanced usage
+## 6 Advanced Usage {#advanced}
 
 To insert context information in the performance tool recording you can use a special action. This is described in the following article: [Inserting context information](rg-one-inserting-context-information)

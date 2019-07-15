@@ -78,10 +78,8 @@ To prepare your app project, follow these steps:
 
 	You will receive a confirmation when the items have been added to the ignore list. You can also double-check via TortoiseSVN:
 
-	{{% image_container width="350" %}}
-	![](attachments/set-up-sass/check-ignore.png)
-	{{% /image_container %}}
-	
+	{{% image_container width="350" %}}![](attachments/set-up-sass/check-ignore.png){{% /image_container %}}
+
 	If you need to remove an item from the ignore list, right-click it and select **TortoiseSVN** > **Remove from ignore list**.
 
 9. Open your app project in Studio Pro, then click **Run Locally** and **View**:

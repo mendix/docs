@@ -29,6 +29,8 @@ To learn more about generalizations and specializations, see [Generalization & O
 
 ### 2.1 FileDocument{#filedocument}
 
+The URL of the file within your app runtime is `/file?fileID={FILEID}` where `{FILEID}` is the value of the `FileID` attribute in your FileDocument entity. You can find the runtime URL of your app by using the `GetApplicationUrl` activity from the [Community Commons Function Library](https://appstore.home.mendix.com/link/app/170/) which you can download from the Mendix App Store.
+
 ### 2.2 Image{#image}
 
 ### 2.3 User{#user}

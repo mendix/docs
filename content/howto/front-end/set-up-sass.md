@@ -84,9 +84,8 @@ To prepare your app project, follow these steps:
 
 9. Open your app project in Studio Pro, then click **Run Locally** and **View**:
 
-	{{% image_container width="500" %}}
-	![](attachments/set-up-sass/run-view.png)
-	{{% /image_container %}}
+	{{% image_container width="500" %}}![](attachments/set-up-sass/run-view.png)
+{{% /image_container %}}
 
 ## 4  Setting Up Your Sass Files
 

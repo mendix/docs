@@ -155,6 +155,8 @@ To add content to the App Store, follow these steps:
 
 	{{% image_container width="450" %}}![](attachments/share-app-store-content/add_content_5.png)
 	{{% /image_container %}}
+	
+	The editor comes with a set of basic formatting tools, such as bold, bullet lists, and URL links. You can attach images to your Documentation by either dragging the image from file explorer to the editor (this will upload your image), or by linking to a URL by selecting the Image button in the editor tools. Uploaded images cannot be resized, but linked images can.
 
 9. Note that there is nothing for you to do on the **Statistics** and **All versions** tabs. The **Statistics** tab will chart the downloads of your content over time. The **All versions** tab will list the various versions of your content that have been updated.
 10. In the **Version Details** section on the bottom-right of the screen, do the following:<br />

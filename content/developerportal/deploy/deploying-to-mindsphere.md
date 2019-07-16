@@ -109,9 +109,9 @@ These two values must be identical and must, therefore, fit the constraints list
 This is the URL of the MindSphere gateway and is of the following format:
 
 ```html
-https://gateway.{region}.mindsphere.io
+https://gateway.{Region}.mindsphere.io
 
-This needs to be changed depending on the `{region}` your app is running. The default value is for MindSphere running on **AWS**:
+This needs to be changed depending on the `{Region}` your app is running. The default value is for MindSphere running on **AWS**:
 
 ```html
 https://gateway.eu1.mindsphere.io
@@ -128,10 +128,10 @@ https://gateway.eu2.mindsphere.io
 The value of this constant is shown below:
 
 ```html
-https://core.piam.{region}.eu1.mindsphere.io/token_keys
+https://core.piam.{Region}.eu1.mindsphere.io/token_keys
 ```
 
-This needs to be changed depending on the `{region}` your app is running. The default value is for MindSphere running on **AWS**:
+This needs to be changed depending on the `{Region}` your app is running. The default value is for MindSphere running on **AWS**:
 
 ```html
 https://core.piam.eu1.mindsphere.io/token_keys
@@ -205,7 +205,7 @@ To deploy your deployment package, do the following:
 
 1. Log in to MindSphere CF CLI using a one-time code:
 
-    * Enter `cf login -a https://api.cf.{region}.{mindsphere-domain} --sso`
+    * Enter `cf login -a https://api.cf.{Region}.{mindsphere-domain} --sso`
     * Open the URL printed by the CLI and log in using your WebKey credentials to get a One Time Code
     * Enter the One Time Code in the CLI
 
@@ -324,12 +324,12 @@ To create a new app in the MindSphere launchpad, do the following:
 
 14.  Set the **Configurations > content-security-policy** *Value* to the following (hover your mouse over the text and you will be able to copy the contents to your clipboard):
 
-      If your app is running on MindSphere on **AWS** use region `eu1`:
+      If your app is running on MindSphere on **AWS** use Region `eu1`:
 
       ```code
       default-src 'self' 'unsafe-inline' 'unsafe-eval' static.eu1.mindsphere.io sprintr.home.mendix.com; font-src 'self' static.eu1.mindsphere.io fonts.gstatic.com; style-src * 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval' static.eu1.mindsphere.io sprintr.home.mendix.com; img-src * data:;
       ```
-      If your app is running on Mindsphere on **Azure** use region `eu2`:
+      If your app is running on Mindsphere on **Azure** use Region `eu2`:
 
       ```code
       default-src 'self' 'unsafe-inline' 'unsafe-eval' static.eu1.mindsphere.io sprintr.home.mendix.com; img-src 'self' static.eu1.mindsphere.io sprintr.home.mendix.com data: uistorageaccountprod.blob.core.windows.net; font-src 'self' data: *.eu2.mindsphere.io uistorageaccountprod.blob.core.windows.net static.eu1.mindsphere.io; style-src 'self' 'unsafe-inline' *.eu2.mindsphere.io uistorageaccountprod.blob.core.windows.net static.eu1.mindsphere.io sprintr.home.mendix.com home.mendix.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' *.eu2.mindsphere.io uistorageaccountprod.blob.core.windows.net static.eu1.mindsphere.io sprintr.home.mendix.com home.mendix.com; connect-src 'self' 'unsafe-inline' *;

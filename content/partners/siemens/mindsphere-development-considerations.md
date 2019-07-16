@@ -235,17 +235,22 @@ To make your Mendix app multi-tenant, do the following:
 
 1.  Make all *persistable* entities which have a **TenantId** attribute a specialization of the MindSphereSingleSignOn.TenantObject entity.
     This ensures that every object is associated with the Tenant object of the user who creates it.
-2.  Every action on this object must have the following XPath constraint:
+
+2.  Every microflow action on this object must have the following XPath constraint:
 
     ```java
-    [MindSphereSingleSignOn.TenantObject_Tenant/MindSphereSingleSignOn.Tenant/MindSphereSingleSignOn.MindSphereAccount_Tenant='[%CurrentUser%]']
+    [MindSphereSingleSignOn.TenantObject_Tenant/MindSphereSingleSignOn.Tenant/MindSphereSingleSignOn.MindSphereAccount_Tenant='$currentUser']
     ```
 
     This ensures that the user can only retrieve entities which belong to their tenant, in other words, where their Tenant matches the TenantId of the entity. You can copy and paste this constraint from here (hover your mouse over the text and click the **Copy** button). You can also copy it from XPath constraint on the *TenantObject* entity in the *MindSphereSingleSignOn* module. For more information on XPath, see [XPath](/refguide/xpath).
 
-{{% alert type="info" %}}
-For consistency, it is recommended that all access to these entities is done through a sub-microflow which contains the XPath constraint. This enforces multi-tenant security.
-{{% /alert %}}
+    {{% alert type="info" %}}For consistency, it is recommended that all access to these entities is done through a sub-microflow which contains the XPath constraint. This enforces multi-tenant security.{{% /alert %}}
+
+3.  Similarly, every data widget on a page (for example a *Data view*) which retrieves data from the database or via an association must have the following XPath constraint, which works in the same way as the microflow XPath constraint, above:
+
+    ```java
+    [MindSphereSingleSignOn.TenantObject_Tenant/MindSphereSingleSignOn.Tenant/MindSphereSingleSignOn.MindSphereAccount_Tenant='[%CurrentUser%]']
+    ```
 
 **Example**
 

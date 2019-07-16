@@ -105,7 +105,46 @@ Enter the name of your app as registered in the MindSphere developer portal as t
 
 These two values must be identical and must, therefore, fit the constraints listed in the [App Name](/partners/siemens/mindsphere-development-considerations#appname) section of *MindSphere Development Considerations*.
 
-#### 4.1.2 RegisterSingleSignOn
+#### 4.1.2 MindSphereGatewayURL
+
+This is the URL of the MindSphere gateway and is of the following format:
+
+```html
+https://gateway.{Region}.mindsphere.io
+
+This needs to be changed depending on the `{Region}` your app is running. The default value is for MindSphere running on **AWS**:
+
+```html
+https://gateway.eu1.mindsphere.io
+```
+
+If your app is running on Mindsphere on **Azure** change this constant to:
+
+```html
+https://gateway.eu2.mindsphere.io
+```
+
+#### 4.1.3 PublicKeyURL
+
+The value of this constant is shown below:
+
+```html
+https://core.piam.{Region}.eu1.mindsphere.io/token_keys
+```
+
+This needs to be changed depending on the `{Region}` your app is running. The default value is for MindSphere running on **AWS**:
+
+```html
+https://core.piam.eu1.mindsphere.io/token_keys
+```
+
+If your app is running on Mindsphere on **Azure** change this constant to:
+
+```html
+https://core.piam.eu2.mindsphere.io/token_keys
+```
+
+#### 4.1.4 RegisterSingleSignOn
 
 Add the *RegisterSingleSignOn* microflow as the **After startup** microflow or added as a sub-microflow of an existing *after startup* microflow.
 
@@ -167,7 +206,7 @@ To deploy your deployment package, do the following:
 
 1. Log in to MindSphere CF CLI using a one-time code:
 
-    * Enter `cf login -a https://api.cf.{region}.{mindsphere-domain} --sso`
+    * Enter `cf login -a https://api.cf.{Region}.{mindsphere-domain} --sso`
     * Open the URL printed by the CLI and log in using your WebKey credentials to get a One Time Code
     * Enter the One Time Code in the CLI
 
@@ -286,8 +325,15 @@ To create a new app in the MindSphere launchpad, do the following:
 
 14.  Set the **Configurations > content-security-policy** *Value* to the following (hover your mouse over the text and you will be able to copy the contents to your clipboard):
 
-      ```http
+      If your app is running on MindSphere on **AWS** use Region `eu1`:
+
+      ```code
       default-src 'self' 'unsafe-inline' 'unsafe-eval' static.eu1.mindsphere.io sprintr.home.mendix.com; font-src 'self' static.eu1.mindsphere.io fonts.gstatic.com; style-src * 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval' static.eu1.mindsphere.io sprintr.home.mendix.com; img-src * data:;
+      ```
+      If your app is running on Mindsphere on **Azure** use Region `eu2`:
+
+      ```code
+      default-src 'self' 'unsafe-inline' 'unsafe-eval' static.eu1.mindsphere.io sprintr.home.mendix.com; img-src 'self' static.eu1.mindsphere.io sprintr.home.mendix.com data: uistorageaccountprod.blob.core.windows.net; font-src 'self' data: *.eu2.mindsphere.io uistorageaccountprod.blob.core.windows.net static.eu1.mindsphere.io; style-src 'self' 'unsafe-inline' *.eu2.mindsphere.io uistorageaccountprod.blob.core.windows.net static.eu1.mindsphere.io sprintr.home.mendix.com home.mendix.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' *.eu2.mindsphere.io uistorageaccountprod.blob.core.windows.net static.eu1.mindsphere.io sprintr.home.mendix.com home.mendix.com; connect-src 'self' 'unsafe-inline' *;
       ```
 
       {{% alert type="info" %}}These content security policy (CSP) settings are needed to ensure that the MindSphere OS Bar and the [Mendix Feedback Widget](https://appstore.home.mendix.com/link/app/199/) are loaded correctly. You may need to set additional CSP settings if you make additional calls to other domains (for example, if you use Google maps from maps.googleapi.com).{{% /alert %}}

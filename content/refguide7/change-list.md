@@ -28,10 +28,11 @@ Defines the type of change that is performed to the list.
 
 | Option | Description |
 | --- | --- |
-| Add | The value is added to the list. |
-| Remove | The value is removed from the list. |
+| Add | The value is added to the list If the value is already in the list, it will result in a duplicate entry. |
+| Remove | If the value is in the list, it is removed from the list. Otherwise nothing happens. |
 | Clear | The list is emptied. |
 | Replace | The list is emptied and the value is added to the list. |
+Adding a value with preventing a duplicate entry can be done in two steps: first remove the value, then add the value. Other option is to do a Aggregate List-acivity->Contains and only this results in true then Add the value.
 
 _Default value:_ Add
 

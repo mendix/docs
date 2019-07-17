@@ -150,6 +150,8 @@ These settings can be used to store files using the Microsoft Azure blob storage
 | com.mendix.core.StorageService | Has to be set to 'com.mendix.storage.azure' to select Azure as the storage service |   |
 | com.mendix.storage.azure.AccountName | Account name to authenticate with the azure blob storage service |   |
 | com.mendix.storage.azure.AccountKey | Account key to authenticate with the azure blob storage service |   |
+| com.mendix.storage.azure.SharedAccessSignature | Provides delegated access to resources in your storage account. [Shared Access Signature](https://docs.microsoft.com/en-us/azure/storage/common/storage-dotnet-shared-access-signature-part-1)|   |
+| com.mendix.storage.azure.BlobEndpoint |Set the blob endpoint. This setting is required when authenticate by SharedAccessSignature is used|   |
 | com.mendix.storage.azure.Container | Name of the container containing the blob. The container is created if it does not exist yet. |   |
 | com.mendix.storage.azure.ParallelismFactor | Maximum number of parallel multi-part file uploads / downloads. We advise you not to change this setting unless you experience slow file transfers for large files. Choosing larger values will lead to higher memory usage. | 5 |
 |com.mendix.storage.azure.UseHttps| For enabling or disabling secure connections using HTTPS. Can be `true` or `false`. | `true` |

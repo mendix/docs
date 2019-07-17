@@ -16,75 +16,75 @@ Mendix does not deliver support for the local Selenium solutions.
 ## 2 Prerequisites
 
 The following components are needed:
+
 * Some basic docker and docker-compose knowledge
 * A machine with the latest versions of **docker** and **docker-compose** installed
 * Your machine should allow connections from ATS on port 4444
 * Since version 2.6, ATS uses the Selenium 3.8.1 API. That's why we recommend using this version of Selenium for the docker images as well
 
-
-## 3 Installing Your Hub and Nodes with Docker-Compose
+## 3 Installing Your Hub & Nodes with Docker-Compose
 
 The following steps describe how to install your hub and nodes with Docker-Compose:
 
 1. Create a folder or directory to place your docker-compose file
-2. Create a docker-compose.yml in your folder/directory: 
+2.  Create a docker-compose.yml in your folder/directory: 
 
-    ```
-    hub: 
-     image: selenium/hub:3.8.1
-     environment:
-       - TZ=Europe/Amsterdam
-       - GRID_TIMEOUT=90
-     ports:
-       - 4444:4444
+	```
+	hub: 
+	 image: selenium/hub:3.8.1
+	 environment:
+		- TZ=Europe/Amsterdam
+		- GRID_TIMEOUT=90
+	 ports:
+		- 4444:4444
     
-    firefox:
-     image: selenium/node-firefox:3.8.1
-     links:
-       - hub:hub
-     environment:
-       - TZ=Europe/Amsterdam
-       - SCREEN_WIDTH=1600
-       - SCREEN_HEIGHT=900
+	firefox:
+	 image: selenium/node-firefox:3.8.1
+	 links:
+		- hub:hub
+	 environment:
+		- TZ=Europe/Amsterdam
+		- SCREEN_WIDTH=1600
+		- SCREEN_HEIGHT=900
     
-    chrome:
-     image: selenium/node-chrome:3.8.1
-     links:
-       - hub:hub
-     environment:
-       - TZ=Europe/Amsterdam
-       - SCREEN_WIDTH=1600
-       - SCREEN_HEIGHT=900
-     volumes:
-       - /dev/shm:/dev/shm
-     privileged: true
-    ```
+	chrome:
+	 image: selenium/node-chrome:3.8.1
+	 links:
+		- hub:hub
+	environment:
+		- TZ=Europe/Amsterdam
+		- SCREEN_WIDTH=1600
+		- SCREEN_HEIGHT=900
+	volumes:
+		- /dev/shm:/dev/shm
+	privileged: true
+	```
 
-3. Open a console and give the following command from the folder/directory where you placed your docker-compose.yml:
+3.  Open a console and give the following command from the folder/directory where you placed your docker-compose.yml:
 
-   ```
-   sudo docker-compose up -d
-   ```
+	```
+	sudo docker-compose up -d
+	```
 
-The first time it will start pulling the images from the Docker hub.
+	The first time it will start pulling the images from the Docker hub.
 
-4. After the process has started, you can check the status with the following commands:
+4.  After the process has started, you can check the status with the following commands:
 
-   ```
+	```
    sudo docker-compose ps
 
          Name                 Command           State           Ports         
-   ---------------------------------------------------------------------------
+   ---------------------------------------------------------------------
    docker_chrome_1    /opt/bin/entry_point.sh   Up                            
    docker_firefox_1   /opt/bin/entry_point.sh   Up                            
    docker_hub_1       /opt/bin/entry_point.sh   Up      0.0.0.0:4444->4444/tcp
-   ```
+	```
 
 5.  Check with the following link if the hub works: `http://localhost:4444/grid/console`. Note: You can also replace localhost with the server name or IP-address of the Docker host.
 
-   ![](attachments/ht-two-setup-local-selenium-index/ht-two-setup-local-docker-selenium-hub/docker_grid.png)
+	![](attachments/ht-two-setup-local-selenium-index/ht-two-setup-local-docker-selenium-hub/docker_grid.png)
 
-   Congratulation, your local Selenium hub is running.
+	Congratulation, your local Selenium hub is running.
 
 ## 4 Starting Testing
 
@@ -120,7 +120,6 @@ By default the hub only accepts a maximum of 5 sessions to run in parallel at a 
 
 If you want to watch your test case live for debugging purpose, you can use the following docker-compose.yml:
 
-    ```
     hub: 
      image: selenium/hub:3.8.1
      environment:
@@ -153,9 +152,9 @@ If you want to watch your test case live for debugging purpose, you can use the 
      volumes:
        - /dev/shm:/dev/shm
      privileged: true
-     ```
 
 Some side notes in case you follow this step:
+
 * Notice that you are using debug versions and you are mapping the network ports of the browser images 
 * You need a VNC-client like Tigervnc, VNC Viewer for Google Chrome or any other favorite client of your choice
 * For Chrome you use as an address: localhost:5900 (or machinename/ip:5900) with password "secret"

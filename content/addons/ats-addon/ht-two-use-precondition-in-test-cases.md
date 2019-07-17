@@ -16,6 +16,7 @@ In the Company Expenses app I want to click on the following expense to view the
 ![](attachments/ht-two-use-precondition-in-test-cases/expense-to-click-on.png)
 
 **This how-to will teach you how to do the following:**
+
 * How to use preconditions in test cases
 * Analyzing the results of a test case with preconditions
 
@@ -26,89 +27,84 @@ Before starting with this how-to, make sure you have completed the following pre
 * Read [How to Get Started](ht-two-getting-started)
 * Read [How to Create a Test Case](ht-two-create-a-test-case)
 
-## 3 How to use preconditions in test cases
+## 3 How to Use Preconditions in Test Cases
 
 The following steps explain how to create a test case with preconditions: 
 
 1. Open ATS and go to your project.
 2. Click the **Test Cases** menu item to go to the **Repository tab**.
-3. Create a new test case and record the following steps:
+3.  Create a new test case and record the following steps:
     * Open the Company Expenses app
     * Log in as employee
     * Log out
 
-   ![](attachments/ht-two-use-precondition-in-test-cases/beginning-of-test-case.png)
+	![](attachments/ht-two-use-precondition-in-test-cases/beginning-of-test-case.png)
 
-4. Add the **Find/Assert DataGrid Row** action. Give it a description and enter an output value name.
-
-You must add the **Find/Assert DataGrid Row** action instead of the **Click DataGrid Row** action, since it has an output parameter which you need in the next steps.
-
+4. Add the **Find/Assert DataGrid Row** action. Give it a description and enter an output value name. You must add the **Find/Assert DataGrid Row** action instead of the **Click DataGrid Row** action, since it has an output parameter which you need in the next steps.
 5. Enter `grid7` in **Widget Name**, `column9` in **Column 1 Name** and "Some office supplies" in **Column 1 Value**. You can make the search for this data grid row more specific by entering more column names with values. The different values are found by using the ATS Helper. For more information on how to find these values, see [How to Create a Test Case](ht-two-create-a-test-case).
 6. Check the **Precondition** checkbox.
-7. Click **Setup precondition**.
+7.  Click **Setup precondition**.
 
-   ![](attachments/ht-two-use-precondition-in-test-cases/find-datagrid-row.png)
+	![](attachments/ht-two-use-precondition-in-test-cases/find-datagrid-row.png)
 
-Clicking **Setup precondition** opens the **Select funtion or action** dialog:
+	Clicking **Setup precondition** opens the **Select funtion or action** dialog:
 
-   ![](attachments/ht-two-use-precondition-in-test-cases/select-function-or-action.png)
+	![](attachments/ht-two-use-precondition-in-test-cases/select-function-or-action.png)
 
-8. Add the **Find/Assert DataGrid Row** action as precondition. 
+8.  Add the **Find/Assert DataGrid Row** action as precondition. 
 
-{{% alert type="info" %}}
+	{{% alert type="info" %}}You add the same action as a precondition because you do not want the test case to fail at this step if the expense is not present on that page.
+	{{% /alert %}}
 
-You add the same action as a precondition because you do not want the test case to fail at this step if the expense is not present on that page.
-{{% /alert %}}
+9.  Enter the same values in the input parameter fields:
 
-9. Enter the same values in the input parameter fields:
+	![](attachments/ht-two-use-precondition-in-test-cases/find-datagrid-row-precondition.png)
 
-   ![](attachments/ht-two-use-precondition-in-test-cases/find-datagrid-row-precondition.png)
-
-Now you want to double-click on the expense, but only if the expense is present on that page.
+	Now you want to double-click on the expense, but only if the expense is present on that page.
 
 10. Add the **Click/Doubleclick** action and enter a description. 
 11. Use the output of the previous step in the **Element** input parameter and set **Doubleclick** to true. 
 11. Add the **Assert not equalTo** action as precondition.
 12. Use the output of the previous step in the **Object 1** input parameter of the precondition and Leave **Object 2** empty:
 
-   ![](attachments/ht-two-use-precondition-in-test-cases/click-doubleclick-action.png)
+	![](attachments/ht-two-use-precondition-in-test-cases/click-doubleclick-action.png)
 
-By adding the **Assert not equalTo** action as precondition the underlying action is only executed if the expense is found in the previous step. If step 3 is not executed then the output of step 3 is empty. The **Assert not equalTo** action then asserts empty with empty, which are equal to each other, so the precondition fails and the actual test step is not executed. 
+	By adding the **Assert not equalTo** action as precondition the underlying action is only executed if the expense is found in the previous step. If step 3 is not executed then the output of step 3 is empty. The **Assert not equalTo** action then asserts empty with empty, which are equal to each other, so the precondition fails and the actual test step is not executed. 
 
-These two steps are enough to only double-click on the expense in case the expense is present on the page. But if the expense is not present on the page ATS does not execute the double-click. The next step is to make ATS search the next page in the data grid for the expense and click on it if found.
+	These two steps are enough to only double-click on the expense in case the expense is present on the page. But if the expense is not present on the page ATS does not execute the double-click. The next step is to make ATS search the next page in the data grid for the expense and click on it if found.
 
 13. Record your click on the **Next page** button and add the step:
 
-   ![](attachments/ht-two-use-precondition-in-test-cases/next-chunk.png)
+	![](attachments/ht-two-use-precondition-in-test-cases/next-chunk.png)
 
 14. Add the **Assert equalTo** action as precondition.
 15. Use the output of step 3 in the **Object 1** input parameter of the precondition and leave **Object 2** empty: 
 
-   ![](attachments/ht-two-use-precondition-in-test-cases/click-widget-action.png)
+	![](attachments/ht-two-use-precondition-in-test-cases/click-widget-action.png)
 
-ATS only executes the underlying action if the expense is **not** found in step 3 because you added the **Assert equalTo** action as precondition. If step 3 is not executed the output of step 3 is empty. The **Assert equalTo** action then asserts empty with empty, which are equal to each other, so the precondition is successful and the test step is executed.
+	ATS only executes the underlying action if the expense is **not** found in step 3 because you added the **Assert equalTo** action as precondition. If step 3 is not executed the output of step 3 is empty. The **Assert equalTo** action then asserts empty with empty, which are equal to each other, so the precondition is successful and the test step is executed.
 
 16. Add the **Find/Assert DataGrid Row** action to be able to find the expense on this page. Use the same values as in the previous **Find/Assert DataGrid Row** action.
 17. Add the **Assert equalTo** action as a precondition and use the outcome of step 3 in the **Object 1** input parameter:
 
-   ![](attachments/ht-two-use-precondition-in-test-cases/find-expense-on-new-page.png)
+	![](attachments/ht-two-use-precondition-in-test-cases/find-expense-on-new-page.png)
 
 18. Add the **Click/Doubleclick** action and give the action a description.
 19. Add the **Assert equalTo** action as a precondition and use the outcome of step 6 in the **Object 1** input parameter:
 
-   ![](attachments/ht-two-use-precondition-in-test-cases/click-on-found-expense.png)
+	![](attachments/ht-two-use-precondition-in-test-cases/click-on-found-expense.png)
 
 20. The last step that you must add is the **Close Dialog** step, as double-clicking on an expense opens the **New Expense** dialog:
 
-   ![](attachments/ht-two-use-precondition-in-test-cases/new-expense-dialog.png)
+	![](attachments/ht-two-use-precondition-in-test-cases/new-expense-dialog.png)
 
-Before you run the test case you must define the setup and teardown steps, depending on your test situation. 
+	Before you run the test case you must define the setup and teardown steps, depending on your test situation. 
 
-The final test case looks like this:
+	The final test case looks like this:
 
-   ![](attachments/ht-two-use-precondition-in-test-cases/setup-and-teardown.png)
+	![](attachments/ht-two-use-precondition-in-test-cases/setup-and-teardown.png)
 
-## 4. Analyzing the results of a test case using preconditions
+## 4. Analyzing the Results of a Test Case Using Preconditions
 
 Running the test case can give two different results. If the expense is present on the first page the test run results look like:
 

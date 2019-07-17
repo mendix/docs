@@ -22,12 +22,15 @@ Mendix does not deliver support for local Selenium solutions.
 ## 2 Setting Up Local Selenium Hub (SeleniumHQ) 
 
 ### 2.1 Official Website
+
 The official website of the Selenium hub (SeleniumHQ) is [https://www.seleniumhq.org/](https://www.seleniumhq.org/)
 
 ### 2.2 Setting Up the Selenium Solution
+
 For an example of how to set up this Selenium solution, see: [How to Set Up a Local Selenium Hub](ht-two-setup-local-selenium-hub)
 
 ### 2.3 Characteristics of the Selenium Solution
+
 Characteristics of the Selenium solution are the following:
 * Live-view possible only on the machine where Selenium is installed
 * No (out-of-the-box) video recording
@@ -35,13 +38,17 @@ Characteristics of the Selenium solution are the following:
 ## 3 Setting Up Local Docker Selenium Hub (Docker Selenium)
 
 ### 3.1 Official Website
+
 The official GitHub page of the Docker Selenium hub (Docker Selenium) is [https://github.com/SeleniumHQ/docker-selenium](https://github.com/SeleniumHQ/docker-selenium)
 
 ### 3.2 Setting up the Selenium Solution
+
 For an example of how to set up this Selenium solution, see: [How to Set Up a Local Docker Selenium hub](ht-two-setup-local-docker-selenium-hub)
 
 ### 3.3 Characteristics of the Selenium Solution
+
 Characteristics of the Selenium solution are the following:
+
 * Browsers run in Linux containers
 * Live-view possible with debug images and VNC (viewer)
 * No (out-of-the-box) video recording
@@ -49,13 +56,17 @@ Characteristics of the Selenium solution are the following:
 ## 4 Setting Up Local Selenoid Hub (Aerokube)
 
 ### 4.1 Official Website
+
 The official website of the Selenoid hub (Aerokude) is [http://aerokube.com/](http://aerokube.com/)
 
 ### 4.2 Setting Up the Selenium Solution
+
 For an example of how to set up this Selenium solution, see: [How to Set Up a Local Selenoid Hub](ht-two-setup-local-selenoid-hub)
 
 ### 4.3 Characteristics of the Selenium Solution
+
 Characteristics of the Selenium solution are the following:
+
 * Selenoid is a powerful Go implementation of the original Selenium hub code. It is using Docker to launch browsers
 * While ATS works fine with Selenoid (since it's based on the official Selenium code) and it even supports parallel testing on the Selenoid hub we can't guarantee that ATS supports it in the future
 * Browsers run in Linux containers
@@ -65,6 +76,7 @@ Characteristics of the Selenium solution are the following:
 ## 5 Why You Would Prefer a SaaS-solution as Selenium Solution (Like Browserstack or Saucelabs)
 
 The following reasons describe why a SaaS-solution is preferred above a local Selenium solution:
+
 * Active support team
 * Secures your connections
 * Out-of-the-box video recording and live-view in your personal portal

@@ -12,9 +12,9 @@ This how-to explains how to create an unsupported widget action for the Mendix s
 The how-to assumes that you must build your own action. 
 
 The how-to applies to all widgets like the button widget. If ATS needs to click the widget, you can follow this how-to until section [5 Last Check](#LastCheck). Keep in mind that it might need some adjustments according to the widget!
- 
+
 Sections [6 Adding Logic to Make Your Action "Smarter"](#AddingLogic) and [7 Final Check](#FinalCheck) apply "logic" to an action that is of the check box type. If a widget is of the check box type, you can follow these steps to apply logic. 
- 
+
 **This how-to will teach you how to do the following:**
 
 * Approach a widget that ATS must click.
@@ -24,31 +24,31 @@ Sections [6 Adding Logic to Make Your Action "Smarter"](#AddingLogic) and [7 Fin
 ## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisite:
- 
+
 * Read [General](ht-two-custom-action-general)
 
 ## 3 Defining the User Approach
- 
+
 First you define the user approach and how you interact with the widget. Since you are creating an Unsupported Widget action, how you find the widget is not important. What is important is how you interact with it.
 
 To define the user approach, follow these steps:
- 
+
 1.  Trigger the Mendix Switch by clicking it. This changes its state from checked to unchecked:
 
     * Switch unchecked:
- 
+
     ![](attachments/ht-two-create-unsupported-widget/ht-two-cab-02-switch/switch-widget-unchecked.png)
 
     * Switch checked:
- 
+
     ![](attachments/ht-two-create-unsupported-widget/ht-two-cab-02-switch/switch-widget-checked.png)
 
 2. You must determine where you must click it. After looking at the widget, you find out that you must click the actual switch to activate it.
 
 ## 4 Creating the Action Structure
- 
+
 In the previous section, you wrote down the user approach for the Mendix Switch widget. Now you must create this approach in ATS with actions. Create a new action for the next steps.
- 
+
 1.  Look for the element in the debugger ATS needs to click. ATS always clicks in the middle of an element, keep this in mind while looking for the element to click. You must start by checking the parent element, which is always the element with `mx-name-` when building an unsupported widget action. If the widget does not have `mx-name-`, look for the highest `div` element that is still referencing the widget. The parent element of the switch widget has `mx-name-switch1` in the debugger:
 
     ![](attachments/ht-two-create-unsupported-widget/ht-two-cab-02-switch/highlighted-switch-mxname-debugger.png)
@@ -115,8 +115,8 @@ In the previous section, you wrote down the user approach for the Mendix Switch 
 10. Connect the output of the first test steps to the *Click/Doubleclick* action and give a proper description:
 
     ![](attachments/ht-two-create-unsupported-widget/ht-two-cab-02-switch/mendix-switch-click-doubleclick-set-element.png)
-  
-## 5 Last Check<a name="LastCheck"></a>
+
+## 5 Last Check {#LastCheck}
 
 Now check for the following:
 
@@ -131,7 +131,7 @@ Congratulations! You have created your own custom action for the Mendix Switch w
 
 ![](attachments/ht-two-create-unsupported-widget/ht-two-cab-02-switch/mendix-switch-nocondition.png)
 
-## 6 Adding Logic to Make Your Action "Smarter"<a name="AddingLogic"></a>
+## 6 Adding Logic to Make Your Action "Smarter" {#AddingLogic}
 
 You have an action that clicks the Switch widget to alter its state, and now you will make it "smarter." Your action now clicks the Switch no matter its current state. Next, you need to add logic to set the switch to a specific state.
 
@@ -177,7 +177,7 @@ You have an action that clicks the Switch widget to alter its state, and now you
 
     ![](attachments/ht-two-create-unsupported-widget/ht-two-cab-02-switch/mendix-switch-precondition-clickdoubleclick.png)
 
-## 7 Final Check<a name="FinalCheck"></a>
+## 7 Final Check {#FinalCheck}
 
 Now check the following items:
 

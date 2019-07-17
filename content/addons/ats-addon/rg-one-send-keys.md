@@ -3,15 +3,15 @@ title: "Send Keys"
 parent: "rg-one-selenium-actions"
 ---
 
-## Description
+## 1 Description
 
 Simulates typing text into the provided WebElement.
 
-## Usage
+## 2 Usage
 
 Pass the text and the WebElement you want to insert the text into as parameter for this action. To get the WebElement, use an action like Find/Assert Widget which returns a WebElement.
 
-## Input Parameters
+## 3 Input Parameters
 
 Name | Datatype | Required | Description
 ---- | -------- | ------- |---------------

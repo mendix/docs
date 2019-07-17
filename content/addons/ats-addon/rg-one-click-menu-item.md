@@ -3,22 +3,22 @@ title: "Click Menu Item"
 parent: "rg-one-navigation-menu"
 ---
 
-## Description
+## 1 Description
 
 Clicks a Menu Item in a Navigation Tree, Menu Bar and Simple Menu Bar.
 
-## Supported widgets
+## 2 Supported Widgets
 
  + NavigationTree
  + MenuBar
  + SimpleMenuBar
 
-## Usage
+## 3 Usage
 
 Pass the name of the parent widget and the caption of the menu item you want to click.
 Optionally you can provide a WebElement as search context, to narrow down the search for the widget, if there are two or more widgets with the same name.     
 
-## Input Parameters
+## 4 Input Parameters
 
 Name | Datatype | Required | Description
 --- | --- | --- | ---

@@ -3,16 +3,16 @@ title: "Set Return Value"
 parent: "rg-one-ats-core-actions"
 ---
 
-## Description
+## 1 Description
 
 Sets the given value as return value for the action it is used in.
 
-## Usage
+## 2 Usage
 
 Use this action to set the return value of your custom action.
 Pass the value you want to set as return value as parameter.
 
-## Input Parameters
+## 3 Input Parameters
 
 Name | Datatype | Required | Description
 ---- | -------- | ------- |---------------

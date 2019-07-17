@@ -3,16 +3,16 @@ title: "Open Application"
 parent: "rg-one-generic"
 ---
 
-## Description
+## 1 Description
 
 Opens a Mendix application at [Application URL] in a browser with
 Mendix specific settings.
 
-## Usage
+## 2 Usage
 
 Pass the URL of the application you want to open. You can also use the global constant **Application URL**.
 
-## Input Parameters
+## 3 Input Parameters
 
 Name | Datatype | Required | Description
 --- | --- | --- | ---

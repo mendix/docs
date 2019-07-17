@@ -80,7 +80,7 @@ If you want to find something more specific inside a widget or the widget does n
 
 If you cannot find a widget because it has no unique name or because it is not supported, see [How to Create Custom Actions](ht-one-create-custom-actions) for more information.
 
- ## 3 Clicking a Widget
+## 3 Clicking a Widget
 
 In ATS, there are many actions for clicking a widget, from generically clicking a widget to clicking a specific data grid row. The first part of this section explains the generic action for clicking a widget, and the second part explains the actions that conduct a more specific click. The last part of the section provides a summary of the first two parts. The magic word while searching for an action that can click something is "Click."
 
@@ -321,7 +321,7 @@ If you want to assert a value from a specific widget or the widget does not have
 
  In case you cannot assert the value from a widget due to no unique name or because it is not supported, go to [How to Create Custom Actions](ht-one-create-custom-actions).
 
-## 7 Generating Values/Information<a name="GeneratingValuesInformation"></a>
+## 7 Generating Values/Information {#GeneratingValuesInformation}
 
 In ATS, there are several actions for generating random or present time values. The first part of this section explains a generic action that makes a reusable string, and the second part explains the actions that perform more specific tasks. The last part of the section provides a summary of the first two parts. In this case, there is no magic word to find the actions you need.
 
@@ -367,7 +367,7 @@ The solution in this situation is to use the following search term: "Current Dat
 
 For generating values or information, you should follow the first two parts of this section. There is no generic solution regarding this, only a constant provider like the Concatenate String action.
 
-## 8 Summary<a name="summary"></a>
+## 8 Summary {#summary}
 
 It all comes down to following these steps to achieve the right result
 

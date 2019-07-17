@@ -24,7 +24,7 @@ Before starting with this how-to, make sure you have completed the following pre
 *  Read [How to Get Started](ht-two-getting-started)
 *  Read [How to Install the ATS Helper and ATS Recorder](ht-two-install-ats-helper-recorder)
 
-## 3 Creating a Test Case<a name="3"></a>
+## 3 Creating a Test Case {#3}
 
 To create a test case, follow these steps:
 
@@ -163,7 +163,8 @@ The following steps describe how to add test steps manually to your test case. Y
     * The **Widget Name** parameter with the widget name
     * The **Column 1 Name** parameter with the column name
     * The **Column 1 Value** parameter with the description
-  
+      
+
     ![](attachments/ht-two-create-a-test-case/findassert-datagrid-row-new-expense-parameters.png)
 
 31. The last step of your test case is to end your user session by logging out. ATS has two ways for logging out of your application:
@@ -184,11 +185,12 @@ The following steps describe how to add test steps manually to your test case. Y
     * **Setup** for all the steps that you must perform to get to the test situation
     * **Regular** for all the steps that are part of your test situation
     * **Teardown** for all the steps that are necessary for cleaning up
-  
-    Test step 1 and test step 2 must have the **Call Type: Setup**. Test steps 3-9 must have the **Call Type: Regular**. Test step 10 must have the **Call Type: Teardown**.
-  
-    ![](attachments/ht-two-create-a-test-case/call-type-new-expense.png)
-
+    
+    
+  Test step 1 and test step 2 must have the **Call Type: Setup**. Test steps 3-9 must have the **Call Type: Regular**. Test step 10 must have the **Call Type: Teardown**.
+    
+![](attachments/ht-two-create-a-test-case/call-type-new-expense.png)
+    
     You have now manually created your test case.
 
 ## 5 Adding Test Steps Using the ATS Recorder
@@ -249,9 +251,10 @@ To add test steps using the ATS Recorder, follow these steps:
     * **Setup** for all the steps that you must perform to get to the test situation
     * **Regular** for all the steps that are part of your test situation
     * **Teardown** for all steps that are necessary to clean up
-  
-    Test steps 1 and 2 must have **Call Type: Setup**. Test steps 3–9 must have **Call Type: Regular**. Test step 10 must have **Call Type: Teardown**:
     
+    
+    Test steps 1 and 2 must have **Call Type: Setup**. Test steps 3–9 must have **Call Type: Regular**. Test step 10 must have **Call Type: Teardown**:
+
 ![](attachments/ht-two-create-a-test-case/call-type-new-expense-recorder.png)
 
 You have now created your test case using the ATS Recorder.

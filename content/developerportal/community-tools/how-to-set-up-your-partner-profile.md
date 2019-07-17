@@ -133,7 +133,7 @@ All of the fields in the project editor must be filled out before submitting the
 {{% /image_container %}}
 
 {{% alert type="warning" %}}
-All projects are reviewed by Mendix Techncial Writers upon submission. After their approval, the project will be shown in the **Published** project section.
+All projects are reviewed by Mendix upon submission. After approval, the project will be shown in the **Published** project section.
 {{% /alert %}}
 
 Published projects are listed in the **Published** projects section, where the following buttons are available for each published project:

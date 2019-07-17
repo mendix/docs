@@ -3,20 +3,21 @@ title: "Get Text"
 parent: "rg-one-get"
 ---
 
-## Description
+## 1 Description
 
 Returns the text value inside a WebElement.
 
-## Usage
+## 2 Usage
+
 Pass the WebElement you want to get the text value from.
 
-## Input Parameters
+## 3 Input Parameters
 
 Name | Datatype | Required | Description
 ---- | -------- | ------- |---------------
 Web Element | WebElement | yes | The WebElement you want to get the text value from.
 
-## Return Value
+## 4 Return Value
 
 Name | Datatype | Description
 ---- | --------- | ---------------

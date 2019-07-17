@@ -27,6 +27,7 @@ The first column shows the status of a test. If the test is done, a warning and/
 
     ![](attachments/rg-two-test-run/canceled-flag.PNG)
     
+
 The second column shows the type of the test. The following list explains all the different icons:
 
 *  Test case:
@@ -57,7 +58,7 @@ When you click your test case, the **Result log** opens. The result log shows de
 
 If the test was not successful, you can check the error log for more information.
 
-### 2.1 Result calculation
+### 2.1 Result Calculation
 
 Test step result:
 
@@ -110,7 +111,6 @@ The **Run Configuration** tab shows the configuration with which the test was ex
 
 ![](attachments/rg-two-results/result-log-run-config.png)
 
-
 ### 2.5 Error Log
 
 The **Error Log** shows detailed information about a failed test step.
@@ -122,7 +122,6 @@ The **Error Log** shows detailed information about a failed test step.
 All the screenshots ATS takes during the test run are available under **Screenshots**. Screenshots are only taken if a test step fails.
 
 ![](attachments/rg-two-results/result-log-screenshots.png)
-
 
 ### 2.6 Recording
 

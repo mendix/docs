@@ -28,7 +28,7 @@ Before starting with this how-to, make sure you have the following prerequisites
 
 {{% youtube zJOpO0AymAg %}}
 
-## 3 Creating a New Project<a name="CreatingNewProject"></a>
+## 3 Creating a New Project {#CreatingNewProject}
 
 When you [log in to ATS](https://ats.mendix.com) as a user, you see the **My Projects** page. A project is a folder in which all the data related to a specific application will be saved and managed. Every user can create a new project, and, as its owner, manage other users' access to it. If there are no projects on your account yet, you are prompted to create a new project.
 

@@ -3,27 +3,27 @@ title: "Get Item/Row Index"
 parent: "rg-one-datagrid-templategrid-listview"
 ---
 
-## Description
+## 1 Description
 
 Returns the zero-based index of a row in a Datagrid, or of an item in a TemplateGrid or ListView.
 
-## Supported Widgets
+## 2 Supported Widgets
 
- + DataGrid
- + TemplateGrid
- + ListView
+* DataGrid
+* TemplateGrid
+* ListView
 
-## Usage
+## 3 Usage
 
 You have to provide a Item/Row as WebElement. To get the DataGrid row or TemplateGrid/ListView Item, use the actions [Find Item/Row](rg-one-find-itemrow), [Find Item/Row (by child element)](rg-one-find-itemrow-by-child) or [Find/Assert DataGrid Row](rg-one-findassert-datagrid-row).    
 
-## Input Parameters
+## 4 Input Parameters
 
 Name | Datatype | Required| Description
 --- | --- | --- | ---
 Item/Row | WebElement |yes| The DataGrid row or TemplateGrid/ListView Item
 
-## Return Value
+## 5 Return Value
 
 Name | Datatype | Description
 --- | --- | ---

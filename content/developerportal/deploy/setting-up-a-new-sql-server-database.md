@@ -6,7 +6,13 @@ menu_order: 10
 
 ## 1 Introduction
 
-This how-to will teach you how to set up a new SQL Server database.
+This how-to will teach you how to manually set up a new SQL Server database.
+
+{{% alert type="info" %}}
+You only need to follow these steps if the database user used by Mendix does not have enough permission to create the database for you.
+
+Some of these steps are only required for specific versions of SQL Server or Mendix.
+{{% /alert %}}
 
 ## 2 Set Up a New Database
 
@@ -22,11 +28,13 @@ As a recovery model, Mendix only requires the **Simple** mode. The functionality
 
 ![](attachments/setting-up-a-new-sql-server-database/18580675.png)
 
-After the database is created, the Mendix Platform can initiate the initial setup and prepare all the tables and functions for usage by the platform. When starting the platform for the first time, there are two queries that require elevated privileges from a `sysadmin` role. The `sysadmin` role can be temporarily assigned to the user, or these queries can be executed by the administrator as well.
-
-There are two more queries that are only executed once, but these privileges are implicitly assigned to the `db_owner` role. As long as the user is `db_owner`, the function and procedure can be created without problems.
+After the database is created, the Mendix Platform can initiate the initial setup and prepare all the tables and functions for usage by the platform. Some of these queries require `sysadmin` privileges. The `sysadmin` role can be temporarily assigned to the user, or these queries can be executed by the administrator. Other queries need privileges which are implicitly assigned to the `db_owner` role. If the user used by the Mendix runtime does not have enough permissions for any of these queries, you can run them manually – see below for more information.
 
 ## 3 Configuring the Read Committed Snapshot Isolation Level
+
+{{% alert type="info" %}}
+You only need to follow these steps if the database user used by the Mendix runtime does not have enough permission to issue the `ALTER DATABASE` command (usually the `sysadmin` role).
+{{% /alert %}}
 
 The database schema needs to be configured so that the **Read Committed Snapshot** feature is enabled. This can be achieved by executing the following command on the database:
 
@@ -39,15 +47,22 @@ You need to replace `MySchema` with the name of your schema.
 
 ## 4 Configuring the necessary SQL Server extensions
 
-For the correct functioning of Mendix, some SQL Server extensions need to be installed. This can be achieved via the following command:
+{{% alert type="info" %}}
+You do not have to configure these extensions for Mendix version 8.0.0 and above.
+
+For Mendix version 7, you only need to perform these steps if the following are true:
+
+* your SQL server version is older than SQL Server 2014
+* the database user used by Mendix does not have permission to issue the commands in this section
+{{% /alert %}}
+
+### 4.1 Installing SQL Server Extensions
+
+For the correct functioning of Mendix, some SQL Server extensions need to be installed. This can be achieved with the following command, which requires a `sysadmin` or administrator role. Remember to set the file path to the correct location of your Mendix installation:
 
 ```
 CREATE ASSEMBLY [Mendix.SqlServerExtensions] FROM "D:\MyFolder\Mendix\server\runtime\lib\Mendix.SqlServerExtensions.dll" WITH PERMISSION_SET = SAFE;
 ```
-
-{{% alert type="info" %}}
-Of course, the file path needs to be set to the corresponding file which is part of your Mendix installation.
-{{% /alert %}}
 
 The permission above requires CLR to be enabled on the SQL Server instance. CLR can be enabled using this query:
 
@@ -56,13 +71,23 @@ EXEC sp_configure 'clr enabled' , '1';
 RECONFIGURE;
 ```
 
-### 4.1 Queries to Be Executed with the `db_owner` or `db_ddladmin` Database Role
+### 4.2 Queries to Be Executed with the `db_owner` or `db_ddladmin` Database Role
 
-The function and assembly need to be created for timezone handling. Also for these functions, Common Language Runtime (CLR) needs to be enabled on the SQL Server instance. If your are not working on the same timezone as UTC, you need to enable CLR and this function. Without time zone support in the platform, development of your functionality will be much more difficult. This can be achieved using the following commands:
+#### 4.2.1 Create Function mx_toLocalDateTime
+
+If you are not working in the same timezone as UTC, you need to enable CLR and this function. Without timezone support in the platform, development of your functionality will be much more difficult. A function needs to be created for timezone handling. Also, for this function, Common Language Runtime (CLR) needs to be enabled on the SQL Server instance (see above). 
+
+You can create the timezone handling function using the following command:
 
 ```
 CREATE FUNCTION [dbo].[mx_toLocalDateTime] (@utcDateTime datetime, @dstTimeZone nvarchar(50)) RETURNS datetime AS EXTERNAL NAME [Mendix.SqlServerExtensions].[Mendix.SqlServerExtensions.DateTimeLocalizer].[ConvertToLocalDateTime];
 ```
+
+#### 4.2.2 Create Procedure usp_nextsequencevalue
+
+{{% alert type="info" %}}
+This is normally executed automatically by the Mendix runtime so long as the database user used by Mendix has permission to create procedures.
+{{% /alert %}}
 
 ```
 CREATE PROCEDURE [dbo].[usp_nextsequencevalue]

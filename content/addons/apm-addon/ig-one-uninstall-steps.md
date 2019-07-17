@@ -3,21 +3,24 @@ title: "Uninstall Steps"
 parent: "ig-one"
 menu_order: 3
 ---
+
+## 1 Introduction
+
 This chapter describes the uninstallation of the APM tool. The optional in this chapter means you need to verify if this option was chosen during the install before undoing it.
 
-## Backup
+## 2 Backup
 
 Did you commit your work to the team server? And did you make a database backup?
 ![](attachments/ig-one-uninstall-steps/Delete_Module.png)
 
 If you don't have installed an SVN client like Tortoise SVN make a copy of the widgets folder in your project.
 
-## Delete Module APMAgent
+## 3 Delete Module APMAgent
 
 Import the module APMAgent in the modeler.
 ![](attachments/ig-one-uninstall-steps/Commit.png)
 
-## Delete Mansystems customized widgets
+## 4 Delete Mansystems Customized Widgets
 
 Mansystems customized versions of AppStore widgets
 
@@ -31,20 +34,20 @@ Mansystems customized versions of AppStore widgets
 * BootstrapTreeViewWidget_APM.mpk
 * BooleanSlider_APM.mpk
 
-## Delete permissions
+## 5 Delete Permissions
 
 Delete permissions APMAgent.Admin from project security / user roles tab to a selected administrator role. On Edit of the last dialog Mendix will remove the permissions for you.
 ![](attachments/ig-one-uninstall-steps/Delete_Permissions.png)
 
 **_Note._** _If you added the Debug role, remove it now._
 
-## Delete from navigation
+## 6 Delete from Navigation
 
 Delete the APM Tools item that calls "APMAgent/USE_ME/IVK_OpenConsole" from navigation.
 
 ![](attachments/ig-one-uninstall-steps/Delete_From_Navigation.png)
 
-## Optional: Revert After startup and before shutdown
+## 7 Optional: Revert After Startup & Before Shutdown
 
 Remove the call microflow action to APMAgent\USE_ME\AfterStartup from an after startup microflow. This feature is runtime configurable and by default none of the tools are started.
 Remove the call microflow action to APMAgent\USE_ME\BeforeShutdown from a before shutdown microflow.
@@ -52,11 +55,11 @@ You can find the AfterStartup and BeforeShutdown microflows in the project setti
 
 ![](attachments/ig-one-uninstall-steps/Revert_After_Startup.png)
 
-## Optional: Undo request permissions for the Mendix cloud or on premise runtime
+## 8 Optional: Undo Request Permissions for the Mendix Cloud or On-Premises Runtime
 
 For a Mendix Cloud slot you send an email to Mendix support requesting to undo the added permissions
 
-## Remove user libraries
+## 9 Remove User Libraries
 
 Remove the APMAgent libraries in the project folder 'userlib':
 
@@ -68,6 +71,6 @@ Remove the APMAgent libraries in the project folder 'userlib':
 *   org.mariadb.jdbc.jar
 *   log4j
 
-## Start the Modeler or the Runtime
+## 10 Start the Modeler or the Runtime
 
 Clean deployment and startup.

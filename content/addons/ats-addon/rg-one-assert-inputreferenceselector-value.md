@@ -2,18 +2,20 @@
 title: "Assert InputReferenceSelector Value"
 parent: "rg-one-input-reference-selector"
 ---
-## Description
+
+## 1 Description
+
 Asserts that the InputReferenceSelector has the given value.
 
-## Supported widgets
- + InputReferenceSelector
+## 2 Supported Widgets
 
-## Usage
+* InputReferenceSelector
+
+## 3 Usage
+
 Pass the name of the widget and the value you want to assert.
 
-## Input Parameters
-
-
+## 4 Input Parameters
 
 Name | Datatype | Required | Description
 ---- | -------- | ------- |---------------

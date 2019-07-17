@@ -3,23 +3,25 @@ title: "Find Checkbox Set Selector"
 parent: "rg-one-checkbox-set-selector"
 ---
 
-## Description
+## 1 Description
+
 Finds the select all check box. 
 
-## Supported widgtes
- + Checkbox Set Selector
+## 2 Supported Widgets
 
-## Usage
+* Checkbox Set Selector
+
+## 3 Usage
+
 Pass the name of the widget you want to get the select all check box from.
 
-## Input Parameters
-
+## 4 Input Parameters
 
 Name | Datatype | Required | Description
 ---- | -------- | -------- | ---------------
 Widget Name | String | Yes | The name of the widget.
 
-## Return Value
+## 5 Return Value
 
 Name | Datatype | Description
 ---- | --------- | ---------------

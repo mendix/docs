@@ -3,7 +3,7 @@ title: "ATS Core Actions"
 parent: "rg-one-standard-actions-reference"
 ---
 
-**ATS Core Actions** section contains these documents:
+This section contains these documents:
 
 * [Assert Equals](rg-one-assert-equals)
 * [Assert Not equals](rg-one-assert-not-equals)

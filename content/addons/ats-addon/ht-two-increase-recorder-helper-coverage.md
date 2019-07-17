@@ -15,6 +15,7 @@ ATS provides two different tools to help build test scripts: the ATS Helper and 
 * How to increase ATS Helper coverage of your AUT.
 
 ## 2 Prerequisites
+
 Before starting this how-to, make sure you have the following prerequisites in place:
 
 *  Read and Installed the ATS Helper and Recorder, see [How to Install the ATS Helper and ATS Recorder](ht-two-install-ats-helper-recorder)
@@ -122,6 +123,6 @@ You have given the **Class** an mx-name and not the widget name in the **Name** 
 
 For this reason, recording this widget is still not possible.
 
-## 4 Next Up
+## 5 Next Up
 
 With these tips you increase the ATS Recorder and ATS Helper coverage of your AUT. The next how-to is [How to Create Custom Actions](ht-two-create-custom-actions). You find an overview of all the how-tos and the structure on the [ATS 2 How-to's](ht-two) page. We advise you to follow the predefined structure.

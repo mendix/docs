@@ -24,7 +24,7 @@ Clone this [code sample](https://github.com/mendix/text-box-sample) from GitHub 
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Install [Node.js](https://nodejs.org/en/about/) (a version below 10, preferably 8)
+* Install the latest stable version of [Node.js](https://nodejs.org/en/about/)
 	* For Windows, install using the [official installer](https://nodejs.org/dist/latest-v8.x/)
 	* For Mac, install using [Homebrew](https://brew.sh/) by executing these commands:
 		* `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`

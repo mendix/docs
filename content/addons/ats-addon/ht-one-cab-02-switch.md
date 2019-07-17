@@ -116,7 +116,7 @@ In the previous section, you wrote down the user approach for the Mendix Switch 
 
     ![](attachments/ht-one-create-unsupported-widget/ht-one-cab-02-switch/mendix-switch-click-doubleclick-set-element.png)
 
-## 5 Last Check<a name="LastCheck"></a>
+## 5 Last Check {#LastCheck}
 
 Now check for the following:
 
@@ -131,7 +131,7 @@ Congratulations! You have created your own custom action for the Mendix Switch w
 
 ![](attachments/ht-one-create-unsupported-widget/ht-one-cab-02-switch/mendix-switch-nocondition.png)
 
-## 6 Adding Logic to Make Your Action "Smarter"<a name="AddingLogic"></a>
+## 6 Adding Logic to Make Your Action "Smarter" {#AddingLogic}
 
 You have an action that clicks the Switch widget to alter its state, and now you will make it "smarter." Your action now clicks the Switch no matter its current state. Next, you need to add logic to set the switch to a specific state.
 
@@ -177,7 +177,7 @@ You have an action that clicks the Switch widget to alter its state, and now you
 
     ![](attachments/ht-one-create-unsupported-widget/ht-one-cab-02-switch/mendix-switch-precondition-clickdoubleclick.png)
 
-## 7 Final Check<a name="FinalCheck"></a>
+## 7 Final Check {#FinalCheck}
 
 Now check the following items:
 

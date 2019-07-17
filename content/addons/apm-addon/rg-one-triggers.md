@@ -3,44 +3,46 @@ title: "Triggers"
 parent: "rg-one-apm"
 ---
 
+## 1 Introduction
+
 Triggers can be configured in the measurements tool, the trap tool and the statistics tool. Triggers are meant to fired on events based on a pattern and/or a threshold. This allows you to monitor memory and save statistics or perform a trap when memory usage reaches, for example, 80%. 
 
-## Triggers Types
+## 2 Triggers Types
 
-### Measurement Triggers
+### 2.1 Measurement Triggers
 
 Measurement triggers are used to check measurements for a specific value. If the expression in a trigger is fulfilled, the configured action is taken.
 
-## Trigger Configuration
+## 3 Trigger Configuration
 
-### Trigger Definition Tab
+### 3.1 Trigger Definition Tab
 
 The trigger definition tab contains the **Description** and **Enabled** attributes as well as specific settings for the different trigger types.
 
  ![](attachments/rg-one-triggers/Trigger_Definition.png)   
 
-#### Shared Fields
+#### 3.1.1 Shared Fields
 
 * **Description** to describe the trigger. This description can be used in log and trap message actions as {1}.
 * **Enabled** to enable or disable a trigger. Triggers are automatically disabled if the continuation is set to **Stop**.
 
-#### Measurement Triggers
+#### 3.1.2 Measurement Triggers
 
 * **Expression** to set the business rule that fires the action. See below for details.
 * **Parameter** to define another measurement to be used in the expression as a parameter.
 
-#### Statistics Triggers
+#### 3.1.3 Statistics Triggers
 
 * **Microflow pattern** to determine for which microflows this trigger should check.
 * **Threshold value (ms)** to set the threshold value. If a microflow takes longer the trigger will fire.
 
-#### Message Triggers
+#### 3.1.4 Message Triggers
 
 * **Node pattern** to determine for which log node the trigger should fire.
 * **Level** to determine for which log level the trigger should fire.
 * **Message pattern** to define the message pattern for which the trigger fires.
 
-### Trigger Actions Tab
+### 3.2 Trigger Actions Tab
 
 Trigger actions define what happens when the trigger fires.
 
@@ -58,7 +60,7 @@ These are only visible with special permissions:
 * **Run microflow** ***(Deprecated)***. You can use this to run a microflow with parameters that depend on the trigger type. This was used in the past to notify, but the notify option has been simplified.
 * **Create heap dump**. You can only see this option if you have special permissions. (**USE WITH CAUTION**: creating a heap dump pauses the system for a certain period of time depending on the amount of heap space assigned to the Java process running the Mendix server. This can freeze the app for many seconds).
 
-### Trigger Continuation Tab
+### 3.3 Trigger Continuation Tab
 
 The continuation tab enables configuration of what happens after the trigger has fired and the action has been executed.
 
@@ -72,7 +74,7 @@ You can:
 
 This is to prevent, for example, a large amount of emails when the CPU usage is high.
 
-## Triggered Events
+## 4 Triggered Events
 
 If a trigger fires, a record is created in the triggered events. The events are automatically deleted after a certain amount of days, as configured in the global setting [More tab](rg-one-configuration#more). 
 

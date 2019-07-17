@@ -3,15 +3,15 @@ title: "Assert Not equals"
 parent: "rg-one-ats-core-actions"
 ---
 
-## Description
+## 1 Description
 
 Assert that two values are not equal.
 
-## Usage
+## 2 Usage
 
 Pass the two values you want to compare and assert that they are not equal.
 
-## Input Parameters
+## 3 Input Parameters
 
 Name | Datatype | Required | Description
 ---- | -------- | ------- |---------------

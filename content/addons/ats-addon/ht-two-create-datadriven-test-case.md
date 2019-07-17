@@ -114,7 +114,7 @@ The records look like this:
 
 You can also update your records from Excel.  For details on how to do this, see [5 Creating a Master Data Set with Excel](#create).
 
-## 4 Creating the Excel File<a name="excel"></a>
+## 4 Creating the Excel File {#excel}
 
 The following steps explain how to create the right Excel file and how it should look. You will need this file in [5 Creating a Master Data Set with Excel](#create).
 
@@ -143,7 +143,7 @@ The following steps explain how to create the right Excel file and how it should
 
 4. Save the Excel file so that you can use it in the next section.
 
-## 5 Creating a Master Data Set with Excel<a name="create"></a>
+## 5 Creating a Master Data Set with Excel {#create}
 
 The following steps explain how to create and update a master dataset from an Excel file. You will use the file you created in [4 Creating the Excel File](#excel).
 

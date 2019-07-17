@@ -3,20 +3,20 @@ title: "Set File Manager"
 parent: "rg-one-file-manager"
 ---
 
-## Description
+## 1 Description
 
 Sets a file manager to the given file path to upload a file.
 
-## Supported Widgets
+## 2 Supported Widgets
 
- + FileManager
+* FileManager
 
-## Usage
+## 3 Usage
 
 You have to pass the widget name and the file path to the action.
 Optionally you can provide a WebElement as search context, to narrow down the search for the widget, if there are two or more widgets with the same name.
 
-## Input Parameters
+## 4 Input Parameters
 
 Name | Datatype |Required| Description
 --- | --- | --- | ---

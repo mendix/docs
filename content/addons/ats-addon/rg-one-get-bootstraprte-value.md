@@ -3,24 +3,25 @@ title: "Get BootstrapRTE Value"
 parent: "rg-one-bootstraprte"
 ---
 
-## Description
+## 1 Description
+
 Returns the current BootstrapRTE value as an HTML string.
 
-## Supported Widgets
-+ BootstrapRTE
+## 2 Supported Widgets
 
-## Usage
+* BootstrapRTE
+
+## 3 Usage
+
 Pass the name of the widget you want to get the value from.
 
-## Input Parameters
-
-
+## 4 Input Parameters
 
 Name | Datatype | Required | Description
 ---- | -------- | ------- |---------------
 Widget Name | String | Yes | The name of the widget.
 
-## Return Value
+## 5 Return Value
 
 Name | Datatype | Description
 ---- | --------- | ---------------

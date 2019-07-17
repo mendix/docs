@@ -3,17 +3,19 @@ title: "Toggle Grid Selector Checkbox Value"
 parent: "rg-one-grid-selector"
 ---
 
-## Description
+## 1 Description
+
 Inverses the check box found by the given column and row caption.
 
-## Supported Widgets
-+ Grid Selector
+## 2 Supported Widgets
 
-## Usage
+* Grid Selector
+
+## 3 Usage
+
 Pass the name of the widget, the column caption, and the row caption of the check box you want to toggle.
 
-## Input Parameters
-
+## 4 Input Parameters
 
 Name | Datatype | Required | Description
 ---- | -------- | -------- | ---------------

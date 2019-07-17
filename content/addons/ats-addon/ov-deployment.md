@@ -4,9 +4,9 @@ parent: "ov"
 menu_order: 3
 ---
 
-This document describes the supported deployment scenarios for the Application Test Suite (ATS).
-
 ## 1 Introduction
+
+This document describes the supported deployment scenarios for the Application Test Suite (ATS).
 
 Every customer situation is different. We want to make sure there's a convenient deployment option for ATS in all scenarios. The main determinant is where your app is running — either in the cloud or on-premises. The second determinant is the Selenium component, which either can run in the cloud or be hosted on-premises by the customer. For each scenario, we need to ensure secure and reliable communication between the components.
 
@@ -101,6 +101,7 @@ Future Proof<sup>5</sup>      | ![][green] Yes | ![][green] Yes                |
 <sup>5</sup> Future features may depend on the functionality offered by the Mendix Cloud or the Selenium service providers. They may not be available if you run your app on-premises or host your own Selenium server.
 
 ### 4.2 Setup and Maintenance
+
 The following matrix compares the efforts for setup and maintenance of the different options.
 
 Aspect                                | Standard                   | Public App On-Premises     | Private App On-Premises     | Customer-Hosted Selenium
@@ -130,7 +131,7 @@ ATS does not support the uploading of files in every situation. This table prese
 <sup>1</sup> This is only possible when you prepare your own files on that server.<br />
 <sup>2</sup> This depends on where the agent is installed.
 
-For more information, see [How to Upload a File in Your App Using ATS](../howtos/ht-two/ht-two-upload-file-using-ats].
+For more information, see [How to Upload a File in Your App Using ATS](ht-two-upload-file-using-ats).
 
 ## 5 Selenium SaaS Subscription
 
@@ -216,7 +217,6 @@ Selenium Service | Agent Name          | Setup Instructions
 ---------------- | ------------------- | ------------------
 BrowserStack     | BrowserStack Local  | [Here](https://www.browserstack.com/local-testing)
 SauceLabs        | Sauce Connect Proxy | [Here](https://wiki.saucelabs.com/display/DOCS/Setting+Up+Sauce+Connect+Proxy)
-
 
 ### 6.4 Customer-Hosted Selenium {#customer-hosted-selenium}
 

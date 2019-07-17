@@ -3,18 +3,19 @@ title: "Set BooleanSlider Value"
 parent: "rg-one-booleanslider"
 ---
 
-## Description
+## 1 Description
+
 Sets the given text as active value for the BooleanSlider appstore widget.
 
-## Supported Widgets
-+ BooleanSlider
+## 2 Supported Widgets
 
-## Usage
+* BooleanSlider
+
+## 3 Usage
+
 Pass the name of the widget and the value you want to mark as active.
 
-## Input Parameters
-
-
+## 4 Input Parameters
 
 Name | Datatype | Required | Description
 ---- | -------- | ------- |---------------

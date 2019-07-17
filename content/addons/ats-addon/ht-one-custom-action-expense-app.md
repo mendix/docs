@@ -10,7 +10,7 @@ tags: ["ATS", "testing"]
 
 This document explains how the Custom Action App works. All custom action how-to's are based on the Custom Action App. You can follow the how-to's in the Custom Action App for a better understanding.
 
-## 3 The Login Information
+## 2 The Login Information
 
 The Custom Action App is a modified Company Expenses sample app. You need the following information to gain access:
 
@@ -26,7 +26,7 @@ The app has only one account that has no login limitations, meaning that every o
 
 Every night (GMT), the newly created expenses are deleted by ATS. The 30 initial expenses are considered core data and are also maintained by ATS.
 
-## 4 The Main Page
+## 3 The Main Page
 
 When you log in for the first time, you see the **My Expenses** page. On this page, you can create new expenses or delete expenses.
 
@@ -34,7 +34,7 @@ When you log in for the first time, you see the **My Expenses** page. On this pa
 
 This page is used to create the how-to's for combined actions.
 
-## 5 The Custom Action Page
+## 4 The Custom Action Page
 
 Click the **Custom Actions** tab to open the page:
 

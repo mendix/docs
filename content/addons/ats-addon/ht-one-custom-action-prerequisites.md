@@ -19,7 +19,7 @@ In the [Become a Rapid Developer Learning Path](https://gettingstarted.mendixclo
 
 [Guidelines for Building a Custom Action](ht-one-guidelines-custom-action) is a best practice document that describes the guidelines  you must follow when building custom actions. These guidelines deliver the best results.
 
-## 4 Google Chrome and Chrome DevTools Basics
+## 4 Google Chrome & Chrome DevTools Basics
 
 The how-to's make use of the Google Chrome web browser and the Chrome DevTools. You must have a basic understanding of the Chrome DevTools to get the full experience from each how-to.
 

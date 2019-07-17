@@ -3,21 +3,22 @@ title: "Sort DataGrid"
 parent: "rg-one-datagrid-templategrid-listview"
 ---
 
-## Description
+## 1 Description
 
 Sorts a DataGrid by the specified column.
 
-## Supported Widgets
+## 2 Supported Widgets
 
- + DataGrid
+* DataGrid
 
-## Usage
+## 3 Usage
 
 You have to pass the DataGrid and the column name to determine the DataGrid widget and the sorting.
 
-## Input Parameters
+## 4 Input Parameters
 
 Name | Datatype |Required| Description
 --- | --- | --- | ---
 Widget Name | String | yes | The name of the DataGrid
 Column Name | String |yes| The name of the column for sorting
+

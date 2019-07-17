@@ -2,18 +2,20 @@
 title: "Assert Simple Checkbox Set Selector Value"
 parent: "rg-one-simple-checkbox-set-selector"
 ---
-## Description
+
+## 1 Description
+
 Asserts that the check box found by the given value is checked or cleared.
 
-## Supported widgets
- + Simple Checkbox Set Selector
+## 2 Supported Widgets
 
-## Usage
+* Simple Checkbox Set Selector
+
+## 3 Usage
+
 Pass the name of the widget, the value connected to the check box, and if the check box should be checked or cleared.
 
-## Input Parameters
-
-
+## 4 Input Parameters
 
 Name | Datatype | Required | Description
 ---- | -------- | ------- |---------------

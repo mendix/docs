@@ -74,7 +74,7 @@ a {
 
 }
 
-code:not([class*="language-"]) {
+:not(pre) > code {
   color: $color-code-font;
   background: $color-code-background;
   border: 1px solid $color-code-border;

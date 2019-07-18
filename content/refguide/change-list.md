@@ -7,6 +7,8 @@ tags: ["studio pro", "List"]
 
 {{% alert type="warning" %}}
 This activity can be used in both **Microflows** and **Nanoflows**.
+
+Note that there are minor differences between the way this function works in microflows, and the way it works in nanoflows.
 {{% /alert %}}
 
 ## 1 Introduction
@@ -33,13 +35,15 @@ Defines the type of change that is applied to the list.
 
 | Option | Description |
 | --- | --- |
-| Add | The value is added to the list. |
-| Remove | The value is removed from the list. |
+| Add | The object(s) referred to by value are added to the list. In a **microflow** the same object can be added multiple times. In a **nanoflow** objects will not be added if they are already in the list. |
+| Remove | The object(s) referred to by value are removed from the list. If there are duplicate objects in the list, then only one will be removed. If you ask to remove an object which isn't in the list, there is no error |
 | Clear | The list is emptied. |
-| Replace | The list is emptied and the value is added to the list. |
+| Replace | The list is emptied and the object(s) referred to by value are added to the list. |
 
 _Default value:_ Add
 
+If you do not want duplicates in your (microflow) list, you can either remove the object(s) first, or use the **Contains** [List Operation](list-operation) to examine the list before adding the object(s).
+
 ### 3.2 Value
 
-Value defines the value that is used to change the list. The value is entered using an [expression](expressions). The expression should result in an object or list of the same type of [entity](entities) as the input list.
+Value defines the objects that are used to change the list. The value is entered using an [expression](expressions). The expression should result in an object or list of objects of the same type of [entity](entities) as the input list.

@@ -25,13 +25,21 @@ The three entities are:
 * [Image](#image)
 * [User](#user)
 
+
+
 To learn more about generalizations and specializations, see [Generalization & One-to-One Associations](generalization-and-1-1-association).
 
 ### 2.1 FileDocument{#filedocument}
 
+A 
+
 The URL of the file within your app runtime is `/file?fileID={FILEID}` where `{FILEID}` is the value of the `FileID` attribute in your FileDocument entity. You can find the runtime URL of your app by using the `GetApplicationUrl` activity from the [Community Commons Function Library](https://appstore.home.mendix.com/link/app/170/) which you can download from the Mendix App Store.
 
+For more information on working with FileDocuments, see [How to Work with Images & Files](/howto/data-models/working-with-images-and-files).
+
 ### 2.2 Image{#image}
+
+For more information on working with Images, see [How to Work with Images & Files](/howto/data-models/working-with-images-and-files).
 
 ### 2.3 User{#user}
 

@@ -165,7 +165,7 @@ Rounds up to an integer (everything after the decimal point is rounded up).
 
 ### 6.2 Output
 
-The input value rounded down to the nearest integer.
+The input value rounded up to the nearest integer.
 
 Type: Integer/Long
 

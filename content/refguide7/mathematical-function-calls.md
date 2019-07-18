@@ -119,7 +119,7 @@ random()
 
 ## floor
 
-Rounds down to an integer (returns the integer which is less than or equal to the input).
+Rounds down to an integer (returns the largest integer which is less than or equal to the input).
 
 ### Input
 
@@ -156,7 +156,7 @@ returns:
 
 ## ceil
 
-Rounds up to an integer (returns the integer which is greater than or equal to the input).
+Rounds up to an integer (returns the smallest integer which is greater than or equal to the input).
 
 ### Input
 

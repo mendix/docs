@@ -25,3 +25,7 @@ Mendix supports the following data types:
 | Nothing | No value. Can only be used as the return type of a [microflow](microflows). |   |
 | Object | A single object of a specific [entity](entities). |   |
 | String | A piece of text that can contain letters, numbers, spaces and other characters. The attribute types String and HashString both map to this data type. | 'Hello World!'; 'Desiderius Erasmus' |
+
+If you want to change data from one type to another (for example, to display a number as part of a message in a text box) you will usually need to use an expression to do this. See [Expressions](expressions) for more information on what is available.
+
+An exception is converting an Integer/Long to a Decimal, where conversion is done implicitly if you provide an Integer/Long where a Decimal is expected.

@@ -119,7 +119,7 @@ random()
 
 ## floor
 
-Rounds down to an integer (everything after the decimal point is ignored).
+Rounds down to an integer (returns the largest integer which is less than or equal to the input).
 
 ### Input
 
@@ -156,7 +156,7 @@ returns:
 
 ## ceil
 
-Rounds up to an integer (everything after the decimal point is rounded up).
+Rounds up to an integer (returns the smallest integer which is greater than or equal to the input).
 
 ### Input
 
@@ -165,7 +165,7 @@ Rounds up to an integer (everything after the decimal point is rounded up).
 
 ### Output
 
-The input value rounded down to the nearest integer.
+The input value rounded up to the nearest integer.
 
 Type: Integer/Long
 

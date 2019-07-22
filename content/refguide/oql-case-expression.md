@@ -22,8 +22,7 @@ _Extended_
 
 ```
 CASE
-WHEN boolean_expression 
-THEN result_expression [ ...n ] 
+WHEN boolean_expression THEN result_expression [ ...n ] 
 ELSE else_result_expression
 END
 ```

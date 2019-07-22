@@ -18,7 +18,7 @@
     "email": "community@mendix.com",
     "url": "https://docs.mendix.com/community/"
   },
-  "license": "CC BY 4.0.",
+  "license": "CC-BY-4.0",
   "devDependencies": {
     "algoliasearch": "^3.32.0",
     "async": "^2.6.2",

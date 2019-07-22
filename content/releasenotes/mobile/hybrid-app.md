@@ -16,6 +16,10 @@ For more information on hybrid mobile app development in Mendix, see the [Hybrid
 
 ## 2019
 
+### July 18th, 2019 (4.1.3 / 4.1.0)
+
+* We fixed an issue where, when using a PIN view, Android devices would sometimes offer a QWERTY keyboard instead of a numeric one.
+
 ### July 2nd, 2019 (4.1.1 / 4.1.0)
 
 * We moved the Google Services *.json*, *.plist*, and *build-extras.xml* files to the **/config** folder.

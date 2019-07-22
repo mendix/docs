@@ -17,7 +17,8 @@ For more information on hybrid mobile app development in Mendix, see the [Hybrid
 ## 2019
 
 ### July 18th, 2019 (4.1.3 / 4.1.0)
-* We fixed an issue where the keyboard type might have been inconsistent with the input type requirement in the Pin view.
+
+* We fixed an issue where certain keyboards were inconsistent with the PIN function's input type requirements.
 
 ### July 2nd, 2019 (4.1.1 / 4.1.0)
 

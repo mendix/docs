@@ -2,6 +2,7 @@
 title: "Team Server API"
 category: "API Documentation"
 ---
+
 ## 1 Introduction
 
 The team server API allows you to retrieve the information (branches, revisions) of application models stored in our team server. You always access an application model via the context of an application (see the Deploy API for more information about retrieving applications and application identifiers).
@@ -12,9 +13,9 @@ The image below provides a domain model representation of the concepts discussed
 
 The Developer Portal Management API requires its users to authenticate themselves. This can be done by using API keys; for more information about this please refer to [this article](authentication "authentication").
 
-## 3 API calls
+## 3 API Calls
 
-### 3.1 Retrieve branches
+### 3.1 Retrieve Branches
 
 <a name="TeamServerAPI-Description" rel="nofollow"></a>Retrieves all branches that belong to the team server project of a specific app which the authenticated user has access to as a regular user.
 
@@ -72,7 +73,7 @@ List of objects with the following key-value pairs:
 }]
 ```
 
-### 3.2 Retrieve Branch{#retrieve-branch}
+### 3.2 Retrieve Branch {#retrieve-branch}
 
 Retrieves a specific branch that belongs to the team server project of a specific app which the authenticated user has access to as a regular user.
 

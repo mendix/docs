@@ -52,7 +52,7 @@ Widget categories are described in the table below:
 | Widget Category                                      | Description                                                  | Link to More Detailed Documentation                          |
 | ---------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | Data Containers                                      | Contains a data view (the starting point for showing the contents of one object),  list view (the starting point for showing the contents of list of objects), and a data grid (shows a list of objects in a table format). | [Data View & List View Properties](page-editor-data-view-list-view)<br />[Data Grid Properties](page-editor-data-grid) |
-| Columns                                              | Contains pre-set layout grids with a specific number of columns. |                                                              |
+| [Columns](page-editor-widgets-columns)               | Contains pre-set layout grids with a specific number of columns. | [Column Widgets](page-editor-widgets-columns)                |
 | [Input Elements](page-editor-widgets-input-elements) | Contains elements that can be used for inputting data.       | [Input Element Widgets](page-editor-widgets-input-elements)  |
 | [Text](page-editor-widgets-text)                     | Contains text display widgets.                               | [Text Widgets](page-editor-widgets-text)                     |
 | [Images](page-editor-widgets-images)                 | Contains image display widgets.                              | [Image Widgets](page-editor-widgets-images)                  |

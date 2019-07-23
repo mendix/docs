@@ -49,17 +49,13 @@ These settings can be configured as follows:
 You can migrate databases using either Studio Pro, the Service Console, or m2ee-tools. The Service Console gives you the advantage of seeing a progress bar during the copy process, which is handy if you copy a lot of data which takes a long time to execute.
 
 {{% alert type="info" %}}
-
 Database migration is handled by Mendix as a normal database synchronization phase during the start-up process of an app. As a consequence, it is possible that during the start-up process you will get to see messages like ‘The database has to be synchronized’ or you will see an empty message. In the future, tools like the Service Console and m2ee-tools will recognize this phase better and give more appropriate messages. However, these tools already correctly handle the database migration.
-
 {{% /alert %}}
 
 {{% alert type="warning" %}}
+Before the data copying process starts, the main database structure will be generated based on the source database structure. This is necessary to make sure all the data is copied without any problems, especially in cases where the source database has a larger element value than what the current domain model specifies.
 
-Before the data copy process starts, the main database structure will be generated based on the source database structure. This is necessary to make sure that all data is copied without any problems especially in cases when the source database has a large element value than what the current domain model specifies.
-
-As of Mendix 8.1, the source database structure and data will not be changed as part of the migration which used to be the case in prior versions of Mendix.
-
+As of version [8.1](/releasenotes/studio-pro/8.0#801), the source database structure and data do not change as part of the migration.
 {{% /alert %}}
 
 ## 3 Migrating a Non-PostgreSQL Database to a PostgreSQL Database

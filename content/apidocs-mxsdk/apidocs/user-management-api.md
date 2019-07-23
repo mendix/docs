@@ -313,7 +313,7 @@ Mendix-ApiKey:87a8a34d-5ee7-43ba-81f0-7b1b17d5ecd7
 
 ```
 
-#### 4.6.2 Output
+#### 4.6.3 Output
 
 None when successful, with HTTP status 200.
 
@@ -766,9 +766,9 @@ Mendix-ApiKey:87a8a34d-5ee7-43ba-81f0-7b1b17d5ecd7
 
 None if successful, HTTP status 200.
 
-## 4.16 Addendum
+### 4.16 Addendum
 
-### 4.16.1 Countries Reference
+#### 4.16.1 Countries Reference
 
 Afghanistan
 Albania

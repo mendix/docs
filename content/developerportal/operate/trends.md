@@ -13,7 +13,7 @@ tags: ["Trends","v3","Mendix Cloud","Developer Portal"]
 To track the usage growth of your app, and to debug performance problems, the Mendix Cloud includes detailed graphs on both infrastructure and application level. These graphs show various performance trends of all your apps in the paid editions of the Mendix Platform. If you experience issues with your app, always check the **Alerts** and **Trends** in the **Developer Portal** under **Operate**.
 
 {{% alert type="info" %}}
-This document describes the trends graphs available in Mendix Cloud V3. If your app is deployed to Mendix Cloud V4, please refer to [Trends in Mendix Cloud v4](trends-v4).
+This document describes the trends graphs available in Mendix Cloud V3. If your app is deployed to Mendix Cloud V4, please refer to [Trends in Mendix Cloud V4](trends-v4).
 
 If you don't know which Mendix Cloud version you are using, you can find out by following the instructions in [Cloud Version and Region in the Mendix Cloud](/developerportal/deploy/cloud-version-region).
 {{% /alert %}}
@@ -73,7 +73,7 @@ You can often get more information about the performance of your app by combinin
 * The CPU iowait information from [Database Node CPU Usage](#Trends-dbcpu)
 * [Application Node Disk I/Os](#Trends-appdiskstatsiops)
 * [Database Node Disk I/Os](#Trends-dbdiskstatsiops)
-* [Number of Handled External Requests](#appmxruntimerequests)
+* [Number of Handled External Requests](#Trends-appmxruntimerequests)
 
 For example, a combination of a moderate number of IO operations, low disk throughput, visible cpu iowait, full memory disk cache, and reports of long running database queries in the application log could point to a shortage of system memory for disk cache that leads to repeated random reads from disk storage.
 
@@ -104,6 +104,10 @@ Additional information about request handlers is available in the *Requests* sec
 
 In the **Object cache** graph you can monitor the number of Mendix Objects that live in memory.
 
+{{% alert type="info" %}}
+This metric is only available for apps built with Mendix version 6 and below. Mendix version 7 and above use a stateless runtime and so have no object cache. See the [Mendix 7.0 Release Notes](/releasenotes/studio-pro/7.0) for more information.
+{{% /alert %}}
+
 ![](attachments/trends/object-cache.png)
 
 Non-persistable entities live in the JVM memory and are garbage collected regularly. If you have a memory leak, the number of objects in memory will grow over time. This might be a problem. 
@@ -114,7 +118,13 @@ The **User Accounts and Login Sessions** graph shows the number of logged-in nam
 
 ![](attachments/trends/user-accounts-logins.png)
 
-The value of **named users** shows the total number of existing login accounts in the application.
+These are the user types:
+
+User Type | Explanation
+------------ | -------------
+**named users** | Total number of user accounts.
+**concurrent named user sessions** | Total number of named login sessions that are occurring at that moment.
+**concurrent anonymous user sessions** | Total number of anonymous login sessions that are occurring at that moment.
 
 ### <a name="Trends-appmxruntimejvmheap"></a>4.4 JVM Object Heap
 
@@ -307,7 +317,7 @@ The **Database node disk usage (in bytes)** graph displays the absolute amount o
 
 ### <a name="Trends-dbdiskstatsutilization"></a>5.9 Database Node Disk Usage in Percentage (%)
 
-The **Database node diskusage (percentage)** graph shows the displays the relative amounts of data that are stored on disk.
+The **Database node disk usage (percentage)** graph shows the displays the relative amounts of data that are stored on disk.
 
 ![](attachments/trends/db-disk-usage-pct.png)
 

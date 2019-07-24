@@ -138,15 +138,15 @@ Now that we have added our widget to the page, we need to feed it some data.  To
 
     ![](attachments/19202962/19399008.png)
     
-9.  For the change object in the loop, set the **Type**  to **Add** for the  Datapoint member and the **Value** to `$NewDatapoint` .  Do the same for the other change object, but set the Value to `$NewDataset`.
+	For the change object in the loop, set the **Type**  to **Add** for the  Datapoint member and the **Value** to `$NewDatapoint` .  Do the same for the other change object, but set the Value to `$NewDataset`.
 
     ![](attachments/19202962/19399011.png)
 
-10. Due to the way the ChartJS module expects the data structure, after each point is created, you must then associate it with the NewDataset object that we passed into the flow.  This NewDataset must then be associated with the Chart object.  These two actions happen after the Datapoint creation.
+	Due to the way the ChartJS module expects the data structure, after each point is created, you must then associate it with the **NewDataset** object that we passed into the flow.  This NewDataset must then be associated with the **Chart** object.  These two actions happen after the Datapoint creation.
   
     ![](attachments/19202962/19399010.png)
 
-11. In the **RetrieveValuesForChart** microflow, create a second DataSet object with **Label** `'Series 2'` and **Color** `#0000FF`. Note that **SUB_CreateSeries** is called once for each series of the chart.
+9. In the **MF_RetrieveValuesForChart** microflow, create a second DataSet object with **Label** `'Series 2'` and **Color** `#0000FF`. Note that **SUB_CreateSeries** is called once for each series of the chart.
 
     ![](attachments/19202962/19399012.png)
 

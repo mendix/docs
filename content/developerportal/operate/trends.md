@@ -132,7 +132,7 @@ The **JVM Object Heap** graph shows the internal distribution of allocated memor
 
 ![](attachments/trends/jvm-heap.png)
 
-One of the most important things to know, in order to be able to interpret the values in this graph, is that the JVM does not immediately clean up objects that are no longer in use. This graph will show unused memory as still in use until the so-called *garbage collector*, which analyzes the memory to free up space, is run. So, you cannot see how much of the JVM memory that is in use before a garbage collection will be available after the garbage collection cycle, because the garbage collection process will only find out about that when it actually runs.
+One of the most important things to know, in order to be able to interpret the values in this graph, is that the JVM does not immediately clean up objects that are no longer in use. This graph will show unused memory as still in use until the so-called *garbage collector*, which analyzes the memory to free up space, is run. So, you cannot see how much of the JVM memory that is in use before a garbage collection will be available after the garbage collection cycle, because the garbage collection process will only find that out when it actually runs.
 
 There are three sorts of space in the JVM heap, which the garbage collector treats separately to enable it to work efficiently:
 
@@ -140,7 +140,7 @@ There are three sorts of space in the JVM heap, which the garbage collector trea
 * **survivor space** is where objects are moved if the garbage collector cannot clean them out of eden space
 * **tenured generation** holds objects which are longer-lived
 
-For example, if the **tenured generation** is shown as 65% of the complete heap size, this might well change to 0% if a garbage collection is triggered when the percentage reaches two thirds of the total heap size. However, it could stay at this 65% if all data in this memory part is still referenced by running actions in the application. This behavior means that the JVM heap memory graphs are the most difficult to base conclusions on.
+For example, if the **tenured generation** is shown as 65% of the complete heap size, this may change to 0% if a garbage collection is triggered when the percentage reaches two thirds of the total heap size. However, it could stay at this 65% if all data in this memory part is still referenced by running actions in the application. This behavior means that the JVM heap memory graphs are the most difficult to base conclusions on.
 
 ### <a name="Trends-appmxruntimejvmprocessmemory"></a>4.5 JVM Process Memory Usage
 
@@ -205,7 +205,7 @@ The **Application node disk usage (in bytes)** graph displays the absolute amoun
 
 ### <a name="Trends-appdiskstatsutilization"></a>4.12 Application Node Disk Usage in Percentage (%)
 
-The **Application node disk usage (percentage)** graph shows the relative amounts of data that is stored on disk.
+The **Application node disk usage (percentage)** graph shows the relative amounts of data that are stored on disk.
 
 ![](attachments/trends/app-disk-usage-pct.png)
 

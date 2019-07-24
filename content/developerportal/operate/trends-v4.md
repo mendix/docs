@@ -10,7 +10,7 @@ tags: ["Trends","v4","Mendix Cloud","Developer Portal"]
 
 ## 1 Introduction
 
-To track the usage growth of your app, and to debug performance problems, the Mendix Cloud includes detailed graphs on both infrastructure and application level. These graphs show various performance trends of all your apps in the paid editions of the Mendix Platform. If you experience issues with your app, always check the **Alerts** and **Trends** in the **Developer Portal** under **Operate**.
+To track the usage growth of your app, and to debug performance problems, the Mendix Cloud includes detailed graphs of both your app and its environment. These graphs show performance trends of your apps in the paid editions of the Mendix Platform. If you experience issues with your app, always check the **Alerts** and **Trends** in the **Developer Portal** under **Operate**.
 
 {{% alert type="info" %}}
 This document describes the trends graphs available in Mendix Cloud V4. If your app is deployed to Mendix Cloud V3, please refer to [Trends in Mendix Cloud V3](trends).
@@ -28,9 +28,9 @@ Only the [Technical Contact](../company-app-roles/technical-contact) is allowed 
 
 {{% /alert %}}
 
-Assign this permission by following these steps:
+Assign permission by following these steps:
 
-1. Open your app in the [Developer Portal](http://home.mendix.com)
+1. Open your app in the [Developer Portal](http://home.mendix.com).
 2. Click **Security** under the **Settings** category on the left.
 3. Go to the **Node Permissions** tab.
 4. Choose the environment for which you want to grant access.
@@ -44,7 +44,7 @@ Assign this permission by following these steps:
 
 You can find the trends by following these steps:
 
-1. Open your app in the [Developer Portal](http://home.mendix.com)
+1. Open your app in the [Developer Portal](http://home.mendix.com).
 2. Click **Metrics** under the **Operate** category.
 3. Select the environment you want to monitor under the tab **Trends**.
 
@@ -62,15 +62,15 @@ If there is more than one disk partition in the system, the `/srv` partition gen
 
 You can often get more information about the performance of your app by combining the information from several graphs. Useful graphs for this are:
 
-* The CPU iowait information from [Database Node CPU Usage](#Trends-dbcpu)
+* [Database Node CPU Usage](#Trends-dbcpu)
 * [Database Node Disk I/Os](#Trends-dbdiskstatsiops)
 * [Number of Handled External Requests](#Trends-appmxruntimerequests)
 
-For example, a combination of a moderate number of IO operations, low disk throughput, visible cpu iowait, full memory disk cache, and reports of long running database queries in the application log could point to a shortage of system memory for disk cache that leads to repeated random reads from disk storage.
+For example, a combination of a moderate number of IO operations, low disk throughput, high CPU usage, full memory disk cache, and reports of long running database queries in the application log could point to a shortage of system memory for disk cache that leads to repeated random reads from disk storage.
 
 ## 4 Application Statistics
 
-This section explains the metrics that represent the current status and statistics of a running Mendix application. This includes requests that the application processes from the services/clients with which it's integrated as well as actions it performs on its own database, Java Virtual Machine-related statistics, and the Jetty Web server it uses.
+This section explains the metrics that represent the current status and statistics of a running Mendix application. This includes requests that the application processes from the services/clients with which it is integrated as well as Java Virtual Machine-related statistics and the Jetty Web server it uses.
 
 ### <a name="Trends-appmxruntimerequests"></a>4.1 Number of Handled External Requests
 
@@ -108,10 +108,10 @@ Additional information about request handlers is available in the *Requests* sec
 In the **Object cache** graph you can monitor the number of Mendix Objects that live in memory.
 
 {{% alert type="info" %}}
-This metric is only available for apps built with Mendix version 6 and below. Mendix version 7 and above use a stateless runtime and so have no object cache. See the [Mendix 7.0 Release Notes](/releasenotes/studio-pro/7.0) for more information.
+This metric is only available for apps built with Mendix versions 6 and below. Mendix versions 7 and above use a stateless runtime and so have no object cache. See the [Mendix 7.0 Release Notes](/releasenotes/studio-pro/7.0) for more information.
 {{% /alert %}}
 
-Non-persistable entities live in the JVM memory and are garbage-collected regularly. If you have a memory leak, the number of objects in memory will grow over time. This might be a problem. In this graph, you can monitor the number of Mendix objects that live in memory.
+Non-persistable entities live in the JVM memory and are garbage-collected regularly. If you have a memory leak, the number of objects in memory will grow over time. This might be a problem.
 
 ### <a name="Trends-appmxruntimesessions"></a>4.3 User Accounts and Login Sessions
 
@@ -124,8 +124,8 @@ These are the user types:
 User Type | Explanation
 ------------ | -------------
 **named users** | Total number of user accounts.
-**concurrent named user sessions** | Total number of named login sessions that are occurring at that moment.
-**concurrent anonymous user sessions** | Total number of anonymous login sessions that are occurring at that moment.
+**concurrent named user sessions** | Total number of sessions for users using a named login. 
+**concurrent anonymous user sessions** | Total number of sessions for users who are logging in anonymously. 
 
 ### <a name="Trends-appmxruntimejvmheap"></a>4.4 JVM Object Heap
 
@@ -133,7 +133,7 @@ The **JVM Object Heap** graph shows the internal distribution of allocated memor
 
 ![](attachments/trends-v4/jvm-heap.png)
 
-One of the most important things to know in order to be able to interpret the values in this graph, is the fact that the JVM does not immediately clean up objects that are no longer in use. This graph will show unused memory as still in use until the so-called *garbage collector*, which analyzes the memory to free up space, is run. So, you cannot see how much of the JVM memory that is in use before a garbage collection will be available after the garbage collection cycle, because the garbage collection process will only find out about that when it actually runs.
+One of the most important things to know, in order to be able to interpret the values in this graph, is that the JVM does not immediately clean up objects that are no longer in use. This graph will show unused memory as still in use until the so-called *garbage collector*, which analyzes the memory to free up space, is run. So, you cannot see how much of the JVM memory that is in use before a garbage collection will be available after the garbage collection cycle, because the garbage collection process will only find that out when it actually runs.
 
 These are the types of object:
 
@@ -144,7 +144,7 @@ Object Type | Explanation
 **eden space** | The pool from which memory is initially allocated for most objects.
 **unused** | Unused JVM heap memory.
 
-For example, if the **tenured generation** is shown as 65% of the complete heap size, this might as well change to 0% if a garbage collection is triggered when the percentage reaches two thirds of the total heap size. However, it could stay at this 65% if all data in this memory part is still referenced by running actions in the application. This behavior means that the JVM heap memory graphs are the most difficult to base conclusions on.
+For example, if the **tenured generation** is shown as 65% of the complete heap size, this may change to 0% if a garbage collection is triggered when the percentage reaches two thirds of the total heap size. However, it could stay at this 65% if all data in this memory part is still referenced by running actions in the application. This behavior means that the JVM heap memory graphs are the most difficult to base conclusions on.
 
 ### <a name="Trends-appmxruntimejvmprocessmemory"></a>4.5 JVM Process Memory Usage
 
@@ -154,7 +154,7 @@ This **JVM Process Memory Usage** graph is similar to the previous graph, *JVM O
 
 This graph is primarily present to provide more insight in situations where the part of the real used memory *outside* the JVM Object Heap is growing too much, causing problems with memory shortage in the operating system.
 
-For more information about this graph, see this Tech Blog post: [What's in My JVM Memory?](https://tech.mendix.com/linux/2015/01/14/whats-in-my-jvm-memory/).
+More information on this graph is available in a Tech Blog post: [What's in my JVM memory?](https://tech.mendix.com/linux/2015/01/14/whats-in-my-jvm-memory/).
 
 These are the types:
 
@@ -181,7 +181,7 @@ Performance issues can arise if the apps memory takes up too large a proportion 
 
 ### <a name="Trends-appm2eeserverthreadpool"></a>4.7 Threadpool for Handling External Requests
 
-The **Threadpool for handling external requests** graph shows the number of concurrent requests that are being handled by the Mendix Runtime, The requests are counted in two circumstances:
+The **Threadpool for handling external requests** graph shows the number of concurrent requests that are being handled by the Mendix Runtime. The requests are counted in two circumstances:
 
 * they are initiated by a remote API – the way the normal web-based client communicates
 * they are initiated by calling web services
@@ -190,7 +190,7 @@ The **Threadpool for handling external requests** graph shows the number of conc
 
 Because creating a new thread that can concurrently process a request is an expensive operation, Mendix holds a pool of threads that can quickly start processing new incoming requests. This pool automatically grows and shrinks according to the number of requests that are flowing through the application.
 
-These are the values shown:
+The values shown by the graph are:
 
 Value | Explanation
 ------------ | -------------
@@ -217,9 +217,9 @@ The **Application node CPU usage** graph shows the CPU utilization in percentage
 CPU usage of the database is shown in [Database Node CPU Usage](#Trends-dbcpu), below.
 {{% /alert %}}
 
-### 4.10 Application Node Disk Usage in Percentage (%)
+### <a name="Trends-appdf"></a>4.10 Application Node Disk Usage in Percentage (%)
 
-The **Application node disk usage (percentage)** shows the relative amounts of data that is stored on disk.
+The **Application node disk usage (percentage)** graph shows the relative amounts of data that are stored on disk.
 
 ![](attachments/trends-v4/app-disk-usage-pct.png)
 
@@ -243,11 +243,11 @@ These are the types of query:
 
 Type | Explanation
 ------------ | -------------
-**inserts** | Amount of SQL `INSERT INTO` statements per second. This is used to add new rows of data to a table in the database.
-**transactions** | Amount of SQL transactions per second. A transaction is a unit of work that is performed against a database.
-**update** | Amount of SQL `UPDATE` statements per second. The SQL `UPDATE` query is used to modify the existing records in a table.
-**select** | Amount of SQL `SELECT` statements per second. The SQL `SELECT` statement is used to fetch the data from a database table that returns this data in the form of a result table.
-**delete** | Amount of SQL `DELETE` statements per second. The SQL `DELETE` query is used to delete the existing records from a table.
+**inserts** | Number of SQL `INSERT INTO` statements per second. These add new rows of data to a table in the database. 
+**transactions** | Number of SQL transactions per second. A transaction is a unit of work that is performed against a database. 
+**update** | Number of SQL `UPDATE` statements per second. The SQL `UPDATE` query modifies the existing records in a table. 
+**select** | Number of SQL `SELECT` statements per second. The SQL `SELECT` statement fetches data from a database table that returns this data in the form of a result table. 
+**delete** | Number of SQL `DELETE` statements per second. The SQL `DELETE` query deletes the existing records from a table. 
 
 ### <a name="Trends-dbpgtableindexsizeVERSIONmain"></a>5.2 Database Table vs. Index Size
 
@@ -255,7 +255,7 @@ The **Database table vs. index size** graph shows the distribution between disk 
 
 ![](attachments/trends-v4/db-table-vs-index.png)
 
-Remember, indexes actually occupy memory space and disk storage, as they're just parts of your data copied and stored, sorted in another way! Besides the data you are processing, the relevant parts of the indexes also have to be read into system memory to be able to use them.
+Remember, indexes actually occupy memory space and disk storage, as they are just copies of parts of your data stored and sorted in another way! Besides the data you are processing, the relevant parts of the indexes also have to be read into system memory to be able to use them.
 
 These are the values:
 
@@ -270,7 +270,7 @@ The **Database transactions and mutations** graph shows the number of database o
 
 ![](attachments/trends-v4/db-mutations.png)
 
-For a single database operation that affects more than one object, this graph shows the number of objects actually changed, as measured from inside the database. However, the [Number of database queries being executed](#Trends-appmxruntimeconnectionbus) graph will only show a single database query.
+For a single database operation that affects more than one object, this graph shows the number of objects actually changed, as measured from inside the database. However, the [Number of database queries being executed](#Trends-appmxruntimeconnectionbus) graph will only show a single database query for the same operation.
 
 These are the values:
 
@@ -296,7 +296,7 @@ The **Database node operating system memory** graph shows the distribution of op
 
 ![](attachments/trends-v4/db-os-memory.png)
 
-It is crucial to the performance of an application that parts of the database data and indexes that are referenced a lot are always immediately available in the working memory of the server. A lack of Freeable memory on a busy application will result in continuous re-reads of data from disk, which takes several orders of magnitude more time, slowing down the entire application. This may indicate that you have a large number of concurrent database connections from your app and that the environment is not large enough to support these.
+It is crucial to the performance of an application that parts of the database data and indexes that are referenced a lot are always available in the working memory of the server. A lack of Freeable memory on a busy application will result in continuous re-reads of data from disk, which takes several orders of magnitude more time, slowing down the entire application. This may indicate that you have a large number of concurrent database connections from your app and that the environment is not large enough to support these.
 
 These are the types:
 
@@ -336,8 +336,8 @@ There are two sets of values:
 
 Value | Explanation
 ------------ | -------------
-**read** | Read ops on the current targeted file storage.
-**write** | Write ops on the current targeted file storage.
+**read** | Read ops on the disk holding the database. 
+**write** | Write ops on the disk holding the database. 
 
 ### <a name="Trends-dbdiskstatslatency"></a>5.10 Database Node Disk Latency
 
@@ -345,14 +345,14 @@ The **Database node disk latency** graph shows the average waiting times for dis
 
 ![](attachments/trends-v4/db-disk-latency.png)
 
-Interpreting the values in this graph should be done in combination with the other disk stats graphs, and while having insight in the type of requests that done. Sequential or random reads and writes can create a different burden for disk storage.
+Interpreting the values in this graph should be done in combination with the other disk stats graphs, together with the type of requests that were made. Sequential or random reads and writes can create a different burden for disk storage.
 
 There are two sets of values:
 
 Value | Explanation
 ------------ | -------------
-**read** | Read ops on the current targeted file storage.
-**write** | Write ops on the current targeted file storage.
+**read** | Read ops on the disk holding the database. 
+**write** | Write ops on the disk holding the database. 
 
 ## 6 Read More
 

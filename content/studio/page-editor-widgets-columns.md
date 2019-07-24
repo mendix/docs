@@ -11,7 +11,7 @@ tags: ["studio", "page editor", "layout", "layout grid", "columns" "widgets"]
 
 The **Columns** category contains widgets with a pre-set number of columns that allow you to structure your page. All widgets in this category are based on a [layout grid](#layout-grid) – an element that structures your page with rows and columns. 
 
-The number of columns and their width are predefined in these widgets. However, if you want to change them, for example, add more columns, you can do it through [layout grid properties](#layout-grid-properties).  
+The number of columns are predefined in these widgets, however, if you want to add more columns, you can do it in the [layout grid properties](#layout-grid-properties).  
 
 ## 2 Layout Grid Overview {#layout-grid}
 

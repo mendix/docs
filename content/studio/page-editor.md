@@ -26,8 +26,8 @@ Pages of Studio consist of the following components:
 
 * **Layouts** structure your pages. Every page is based on a layout. For example, **Atlas_Default** or **PopupLayout** are types of layouts you can choose when creating a page.
 * **Templates** – a starting point for creating new pages. Every time you create a new page, you select a template depending on data you want to display on your page and the way you want to display it: a list, a dashboard, a form. For example, **Dashboard Action Tiles**, **List Default**, **Master Detail** are types of templates. 
-* **Building blocks** – pre-configured  set of elements that speeds up the process of building your page and styling it. For more information, see section [5.1 Building Blocks](#building-blocks). 
 * **Widgets** – single user-interface elements. For more information, see section [5.2. Widgets](#widgets) and [Widgets](page-editor-widgets).
+* **Building blocks** – pre-configured  set of elements that speeds up the process of building your page and styling it. For more information, see section [5.1 Building Blocks](#building-blocks). 
 
 The components described above are powered by Atlas UI. For more information, see [Atlas UI](../../howto/front-end/atlas-ui). 
 
@@ -86,7 +86,7 @@ The selected element is indicated with an blue border. Additionally, if the elem
 {{% image_container width="400" %}}![](attachments/page-editor/input-widget-example.png)
 {{% /image_container %}}
 
-## 4 Breadcrumb Trail
+## 4 Breadcrumb Trail {#breadcrumb}
 
 When you select an item on your page, there appears a breadcrumb trail in the left bottom corner of Studio.
 
@@ -116,10 +116,20 @@ The **Toolbox** shows the tools that can be used on pages.
 
 This tab consists of the following:
 
-* [Building Blocks](#building-blocks)
 * [Widgets](#widgets)
+* [Building Blocks](#building-blocks)
 
-### 5.1 Building Blocks {#building-blocks}
+### 5.1 Widgets {#widgets}
+
+Widgets are single user-interface elements that can be configured. You can [quickly configure](page-editor-widgets#quick-config) most of the non-custom widgets when adding them on a page. For more information, see [Widgets](page-editor-widgets). 
+
+{{% alert type="info" %}}
+
+You can update widgets in the [Widget Overview](settings-widget-overview). 
+
+{{% /alert %}}
+
+### 5.2 Building Blocks {#building-blocks}
 
 Building blocks consist of pre-set widgets that allow you to build a page faster: you only need to drag-and-drop them to the page.  
 

@@ -185,7 +185,7 @@ Data grid specific actions are the following ones:
 
 * **Create** – allows end-users to create new objects in a grid (for more information, see section [2.5.1.1 Grid Create Button](#grid-create-button))
 
-* **Select** – confirms the choice of a row of the grid when it is used for selecting an object for a reference selector or reference set selector. For this reason, the select button can only be placed on a grid that is connected to a reference selector or a reference set selector
+* **Select** – confirms the choice of a row of the grid when it is used for selecting an object for a drop-down with an association selected as a data source or reference set selector. For this reason, the select button can only be placed on a grid that is connected to a drop-down with an association as a data source or a reference set selector
 
 * **Select All** – allows the end-user to select all objects in the grid; can only be used if you set **[Selection Mode](#selection-mode)** to **Multi-selection** or **One-click multi-selection** (for more information, see section [2.6 Events](#grid-events))
 

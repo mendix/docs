@@ -59,7 +59,7 @@ To see a working domain model already configured in an application, you can go t
     ![](attachments/19202962/19398994.png)
     
 4.  For the Series attribute, create a new enumeration named **Series** that contains the values **Series 1** and **Series 2**.
-5.  Create a non-persistant **ChartWrapper** entity with no attributes:
+5.  Create a non-persistable **ChartWrapper** entity with no attributes:
 
     ![](attachments/19202962/19398997.png)
 
@@ -81,7 +81,7 @@ To make this sample project actually generate charts, the first thing to do is c
 
     ![](attachments/19202962/19398998.png)
 
-4. Right-click the data view and select **Got to microflow**.
+4. Right-click the data view and select **Go to microflow**.
 5. In the **NewChartWrapper** microflow, create a new ChartWrapper object and set that object as the return.
 
     ![](attachments/19202962/19398999.png)
@@ -122,23 +122,19 @@ Now that we have added our widget to the page, we need to feed it some data.  To
 
     ![](attachments/19202962/19399005.png)
 
-2. In this new microflow, create a new **DataSet** object.
-
+2. In this new microflow, create a new **Dataset** object.
 3.  Populate values for **Label** and **Color**:
 
     ![](attachments/19202962/19399006.png)
     
 4. Create a new microflow in your module called **SUB_CreateSeries**.  This will be used as a sub-microflow to retrieve all the data associated with our new dataset.
-
-5. Create input parameters for **SeriesType**, **Chart**, and **Dataset**.
-
+5. Create input parameters for **Series**, **Chart**, and **Dataset**.
 6. Add a loop.
-
 7.  We iterate through that list and create a **NewDatapoint**, setting X, Y, and X sorting using the corresponding attributes for our **Value** entity:
 
     ![](attachments/19202962/19399009.png)
     
-8.  Retrieve the dataPoints:
+8.  Retrieve the **Datapoints**:
 
     ![](attachments/19202962/19399008.png)
     

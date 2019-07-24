@@ -38,7 +38,7 @@ These resources let you style your app with a wide variety of interface parts. H
 
 	![default button](attachments/how-to-use-native-styling/default-button.png)
 
-3. Open *theme/styles/mobile/custom/custom-variables.js* using your IDE of choice.
+3. Open *theme/styles/native/app/custom-variables.js* using your IDE of choice.
 4. Change the `brand.primary` from **#0595DB** to *rosybrown*:
 
 	```javascript
@@ -98,8 +98,8 @@ When you have specific design requirements, you will need to build custom classe
 1. Place a fourth button widget on your app's home page.
 2. Navigate to your Mendix app's folder using your IDE.
 3. Open the **theme** folder of your app.
-4. Open *styles/mobile/app/custom.js*.
-5. Copy this code snippet into *styles/mobile/custom/custom.js*:
+4. Open *styles/native/app/custom.js*.
+5. Copy this code snippet into *styles/native/app/custom.js*:
 
 	```javascript
 	export const className = {

@@ -4,7 +4,7 @@ title: "Column Widgets"
 parent: "page-editor-widgets"
 description: "Describes column widgets in Mendix Studio."
 menu_order: 60
-tags: ["studio", "page editor", "layout", "layout grid", "columns" "widgets"]
+tags: ["studio", "page editor", "layout", "layout grid", "columns", "widgets"]
 ---
 
 ## 1 Introduction 

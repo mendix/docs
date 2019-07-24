@@ -133,7 +133,7 @@ You can update widgets in the [Widget Overview](settings-widget-overview).
 
 Building blocks consist of pre-set widgets that allow you to build a page faster: you only need to drag-and-drop them to the page.  
 
-![](attachments/page-editor/buildingblocks.png)
+![](attachments/page-editor/building-blocks.png)
 
 Building blocks of Studio are divided into the following categories:
 

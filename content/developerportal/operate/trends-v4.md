@@ -237,7 +237,7 @@ The **Number of database queries being executed** graph shows the number of data
 
 ![](attachments/trends-v4/no-db-queries.png)
 
-The queries are broken down into queries that actually modify data (**insert**, **update**, and **delete**) and queries that fetch data (**select**), against the number of transactions (like microflows from which these queries originate).
+The queries are broken down into queries that actually modify data (**insert**, **update**, and **delete**) and queries that fetch data (**select**).
 
 These are the types of query:
 
@@ -317,6 +317,8 @@ The **Database node CPU usage** graph shows the amount of CPU usage over time, a
 The **Database node disk throughput** graph shows the amount of data that is being read from and written to disk.
 
 ![](attachments/trends-v4/db-disk-throughput.png)
+
+If you see large values here which do not immediately drop back again, it may indicate that your app is continually swapping data to disk. This could be caused by inefficient queries, for example ones which require sorting within the app.
 
 ### <a name="Trends-dbdfabs"></a><a name="Trends-dbdf"></a>5.8 Database Node Disk Usage (in Bytes)
 

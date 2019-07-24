@@ -193,11 +193,9 @@ CPU usage of the database is shown in [Database Node CPU Usage](#Trends-dbcpu), 
 
 ### <a name="Trends-appdiskstatsthroughput"></a>4.10 Application Node Disk Throughput
 
-The **Application node disk throughput** graph shows the rate at which data is being read from and written to disk.
+The **Application node disk throughput** graph shows the rate at which data which isn't stored in the database is being read from and written to disk.
 
 ![](attachments/trends/app-disk-throughput.png)
-
-If you see large values here which do not immediately drop back again, it may indicate that your app is continually swapping data to disk. This could be caused by inefficient queries, for example ones which require sorting within the app.
 
 ### <a name="Trends-appdfabs"></a><a name="Trends-appdf"></a>4.11 Application Node Disk Usage (in Bytes)
 
@@ -255,7 +253,7 @@ The **Number of database queries being executed** graph shows the number of data
 
 ![](attachments/trends/no-db-queries.png)
 
-The queries are broken down into queries that actually modify data (**insert**, **update**, and **delete**) and queries that fetch data (**select**), against the number of transactions (like microflows from which these queries originate).
+The queries are broken down into queries that actually modify data (**insert**, **update**, and **delete**) and queries that fetch data (**select**).
 
 ### <a name="Trends-appmxruntimepgtableindexsize"></a>5.2 Database Table vs. Index Size
 
@@ -280,6 +278,14 @@ The **Number of database connections** graph shows the number of connections to 
 ![](attachments/trends/no-db-connections.png)
 
 This should go up and down with the usage of the application. The number of connections is limited to 50.
+
+The connections are categorized as follows:
+
+Connection Type | Description
+--- | ---
+active | a microflow or client xpath request is using the database right now
+idle in transaction | the connection is in use by a microflow, but it's currently executing a microflow activity that is not using the database
+idle | the connection is open and available to quickly allocate to a microflow or xpath request that needs it
 
 ### <a name="Trends-dbmemory"></a>5.5 Database Node Operating System Memory
 
@@ -308,6 +314,8 @@ Clearly visible amounts of **iowait**, in combination with a high number of disk
 The **Database node disk throughput** graph shows the amount of data that is being read from and written to disk.
 
 ![](attachments/trends/db-disk-throughput.png)
+
+If you see large values here which do not immediately drop back again, it may indicate that your app is continually swapping data to disk. This could be caused by inefficient queries, for example ones which require sorting within the app.
 
 ### <a name="Trends-dbdfabs"></a><a name="Trends-dbdf"></a>5.8 Database Node Disk Usage (in Bytes)
 

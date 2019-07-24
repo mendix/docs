@@ -324,15 +324,7 @@ The **Database node disk usage (in bytes)** graph displays the absolute amount o
 
 ![](attachments/trends-v4/db-disk-usage-bytes.png)
 
-### 5.9 Database Node Disk Usage in Percentage (%)
-
-The **Database node disk usage (percentage)** graph shows the displays the relative amounts of data that are stored on disk.
-
-![](attachments/trends-v4/db-disk-usage-pct.png)
-
-This graph should be interpreted in combination with other graphs. See [Combining Information](#combine-info), above.
-
-### <a name="Trends-dbdiskstatsiops"></a>5.10 Database Node Disk I/Os
+### <a name="Trends-dbdiskstatsiops"></a>5.9 Database Node Disk I/Os
 
 The **Database node disk IO/s** graph shows the *number* of disk read and write operations that are done from and to the disk storage. It does not show the amount of data that was transferred.
 
@@ -345,7 +337,7 @@ Value | Explanation
 **read** | Read ops on the current targeted file storage.
 **write** | Write ops on the current targeted file storage.
 
-### <a name="Trends-dbdiskstatslatency"></a>5.11 Database Node Disk Latency
+### <a name="Trends-dbdiskstatslatency"></a>5.10 Database Node Disk Latency
 
 The **Database node disk latency** graph shows the average waiting times for disk operations to complete.
 

@@ -7,7 +7,7 @@ tags: ["Atlas", "UI", "UX", "user experience", "Studio", "customize", "custom"]
 
 ## 1 Introduction
 
-There are 2 customizable settings files for the Atlas UI that can be found in the **theme** folder of your Mendix project. These are called **settings.json** and **settings-native.json**.
+There are two customizable settings files for Atlas UI that can be found in the **theme** folder of your Mendix project. These files are named **settings.json** and **settings-native.json**.
 
 **This how-to will teach you how to do the following:**
 

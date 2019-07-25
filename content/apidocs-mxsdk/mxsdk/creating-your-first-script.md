@@ -72,7 +72,7 @@ const project = await client.platform().createNewApp(`NewApp-${Date.now()}`);
 const workingCopy = await project.createWorkingCopy();
 ```
 
-The `createNewApp()` call is where you actually kick off the process that will create a new project in the Mendix Platform which will also create a commit in the Team Server repository. By using `await`, you're waiting for the asynchoronous call for creating the app and resuming the code afterwards. The result of this call will be accessible via Studio Pro, but in order to be able to manipulate it using the SDK, you need to expose it as an online working copy. The subsequent call `createWorkingCopy()` will exactly do that.
+The `createNewApp()` call is where you actually kick off the process that will create a new project in the Mendix Platform which will also create a commit in the Team Server repository. By using `await`, you're waiting for the asynchronous call for creating the app and resuming the code afterwards. The result of this call will be accessible via Studio Pro, but in order to be able to manipulate it using the SDK, you need to expose it as an online working copy. The subsequent call `createWorkingCopy()` will exactly do that.
 
 If you create an online working copy from an existing app on the Team Server, be sure your app has been saved using the latest Mendix Studio Pro version. Earlier versions might not be supported!
 

@@ -70,6 +70,6 @@ To configure the regular expressions used to match phone or tablet users, see [C
 
 It is also possible to force the client to use a specific profile by adding a `profile` query string parameter to the URL when visiting a Mendix application. The possible values are the names of the profiles. For example:
 
-```html
+```http
 https://myapp.mendixcloud.com/index.html?profile=Responsive
 ```

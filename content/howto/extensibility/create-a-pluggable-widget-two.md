@@ -42,7 +42,7 @@ To add these restrictions, follow the instructions below:
 
 1. In *TextBox.xml* add the enumeration attribute for `Editable` inside `propertyGroup` (where you put the attribute inside `propertyGroup` will affect how the attribute renders in the Mendix Studios): 
 
-	```ts
+	```xml
 	<property key="editable" type="enumeration" defaultValue="default">
 		<caption>Editable</caption>
 		<description/>
@@ -57,7 +57,7 @@ To add these restrictions, follow the instructions below:
 
 3. Now add read-only functionality to your widget. In *TextBox.tsx*, replace the `render` function with the code below to check if the input should be disabled and pass it to in the `TextInput` component:
 
-	```ts
+	```tsx
 	render(): ReactNode {
 		const value = this.props.textAttribute.value || "";
 		return <TextInput
@@ -81,7 +81,7 @@ To add these restrictions, follow the instructions below:
 
 4. In *components/TextInput.tsx*, add the `disabled` property to the `InputProps` interface and set the HTML input attribute to `disabled`:
 
-	```ts
+	```tsx
 	import { CSSProperties, ChangeEvent, Component, ReactNode, createElement } from "react";
 	import classNames from "classnames";
 	export interface InputProps {
@@ -156,7 +156,7 @@ This section will teach you to add validation to your TextBox widget. Using micr
 
 3. To render the message, create a new component *components/Alert.tsx*:
 
-	```ts
+	```tsx
 	import { FunctionComponent, createElement } from "react";
 	import classNames from "classnames";
 	export interface AlertProps {
@@ -179,7 +179,7 @@ This section will teach you to add validation to your TextBox widget. Using micr
 
 4. In *TextBox.tsx*, the validation feedback can be accessed though the attribute `validation` property and shown in the `Alert` component. Replace the `render` function with the following code:
 
-	```ts
+	```tsx
 	render(): ReactNode {
 		const value = this.props.textAttribute.value || "";
 		const validationFeedback = this.props.textAttribute.validation;
@@ -199,7 +199,7 @@ This section will teach you to add validation to your TextBox widget. Using micr
 
 5. Add `Fragment` to the current React import (shown below), and add a new `Alert` import underneath the existing imports in *TextBox.tsx*:
 
-	```ts
+	```tsx
 	import { Component, ReactNode, Fragment, createElement } from "react";
 	import { Alert } from "./components/Alert";
 	```
@@ -243,7 +243,7 @@ Validation can come from a modeled microflow or nanoflow, but can also be widget
 
 2. In *TextBox.tsx*, add a validation handler to the attribute after the `onUpdate` function:
 
-	```ts
+	```tsx
 	componentDidMount() {
 		this.props.textAttribute.setValidator(this.validator.bind(this));
 	}
@@ -303,7 +303,7 @@ Limitation: The implementation in this sample will cause the onChange event to t
 
 2. In *TextBox.tsx*, check if `onChangeAction` is available and call the execute function `onLeave` when the value is changed. When doing this, replace the `onUpdate` function with your new `onLeave` function:
    
-	```ts
+	```tsx
 	class TextBox extends Component<TextBoxContainerProps> {
 		private readonly onLeaveHandle = this.onLeave.bind(this);
 		componentDidMount() {
@@ -349,7 +349,7 @@ Limitation: The implementation in this sample will cause the onChange event to t
 
 3. In *components/TextInput.tsx*, introduce a state for input changes and use the `onBlur` function to call the `onLeave` function by replacing the `onUpdate` function:
    
-	```ts
+	```tsx
 	import { CSSProperties, Component, ReactNode, createElement, ChangeEvent } from "react";
 	import classNames from "classnames";
 	
@@ -420,7 +420,7 @@ To make the input widget more accessible for people using screen readers, you wi
 
 1. In *TextBox.tsx*, replace the `render` function with `id`, `required`, and `hasError` properties:
    
-	```ts
+	```tsx
 	render(): ReactNode {
 		const value = this.props.textAttribute.value || "";
 		const validationFeedback = this.props.textAttribute.validation;
@@ -444,7 +444,7 @@ To make the input widget more accessible for people using screen readers, you wi
 
 2. In *components/Alert.tsx*, add the `id` and `alert`properties:
 
-	```ts
+	```tsx
 	import { FunctionComponent, createElement } from "react";
 	import classNames from "classnames";
 	export interface AlertProps {
@@ -462,7 +462,7 @@ To make the input widget more accessible for people using screen readers, you wi
 
 3. In *components/TextInput.tsx*, add the `id` property to the `InputProps` and pass it from the `TextBox` component to the `TextInput` component:
 
-	```ts
+	```tsx
 	export interface InputProps {
 		id?: string;
 		value: string;
@@ -479,7 +479,7 @@ To make the input widget more accessible for people using screen readers, you wi
 	
 	Then add the `id` and `aria` attributes to be rendered:
 	
-	```ts
+	```tsx
 	render(): ReactNode {
 		const className = classNames("form-control", this.props.className);
 		const labelledby = `${this.props.id}-label` 
@@ -520,7 +520,7 @@ To easily view changes to your widget while in Mendix Studio or Mendix Studio Pr
 
 To add preview mode functionality, create a new file *src/TextBox.webmodeler.tsx* and add this code to it:
 
-```ts
+```tsx
 import { Component, createElement, ReactNode } from "react";
 import { TextBoxPreviewProps, VisibilityMap } from "../typings/TextBoxProps";
 import { TextInput } from "./components/TextInput";

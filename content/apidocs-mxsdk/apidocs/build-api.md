@@ -17,9 +17,9 @@ The image below provides a domain model representation of the concepts discussed
 
 ![](attachments/deploy-api/api-model.png)
 
-## 2 API calls
+## 2 API Calls
 
-### 2.1 Retrieve packages
+### 2.1 Retrieve Packages
 
 #### 2.1.1 Description
 
@@ -61,7 +61,7 @@ List of objects with the following key-value pairs:
     Possible values: Succeeded, Queued, Building, Uploading and Failed.
 *   _Size_ (Long) : Size of the package in bytes.
 
-##### 2.1.3.1 Error codes:
+##### 2.1.3.1 Error Codes
 
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
@@ -138,7 +138,7 @@ An object with the following key-value pairs:
      * Failed
 *   _Size_ (Long) : Size of the package in bytes
 
-##### 2.2.3.1 Error codes
+##### 2.2.3.1 Error Codes
 
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
@@ -160,7 +160,7 @@ An object with the following key-value pairs:
 }
 ```
 
-### 2.3 Delete package
+### 2.3 Delete Package
 
 #### 2.3.1 Description
 
@@ -187,7 +187,7 @@ Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 ```
 
-##### 2.3.2.2 Error codes
+##### 2.3.2.2 Error Codes
 
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
@@ -195,7 +195,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 | 404 | PACKAGE_NOT_FOUND | Package or build job not found. |
 | 409 | PACKAGE_IN_USE | Package is still in use. |
 
-### 2.4 Download package
+### 2.4 Download Package
 
 Downloads a specific deployment package that is available for a specific app that the authenticated user has access to as a regular user. This package can be found if you click **Details** on an app in the **Nodes** screen in the Mendix Platform.
 
@@ -229,7 +229,7 @@ Error codes
 | 404 | PACKAGE_NOT_FOUND | Package or build job not found. |
 | 500 | BUILD_NOT_SUCCEEDED | Build not successful finished. |
 
-### 2.5 Start building deployment package{#start-building-deployment-package}
+### 2.5 Start Building Deployment Package {#start-building-deployment-package}
 
 Start the process to build a deployment package, based on the team server project of a specific app that the authenticated user has access to as a regular user. This package can be found if you click **Details** on an app in the **Nodes** screen in the Mendix Platform. For a Sandbox, this will also trigger a deployment of the new package.
 

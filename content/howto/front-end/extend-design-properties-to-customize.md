@@ -34,7 +34,7 @@ These design properties are used in the **Design** section of Studio.
 
 {{% alert type="info" %}}
 
-When you use a new class as a Design Property, make sure that this class exists.
+When you use a new class as a design property, make sure that this class exists.
 
 {{% /alert %}}
 

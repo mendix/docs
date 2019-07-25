@@ -197,13 +197,13 @@ The **Application node disk throughput** graph shows the rate at which data whic
 
 ![](attachments/trends/app-disk-throughput.png)
 
-### <a name="Trends-appdfabs"></a><a name="Trends-appdf"></a>4.11 Application Node Disk Usage (in Bytes)
+### <a name="Trends-appdfabs"></a>4.11 Application Node Disk Usage (in Bytes)
 
 The **Application node disk usage (in bytes)** graph displays the absolute amount of data that is stored on disk.
 
 ![](attachments/trends/app-disk-usage-bytes.png)
 
-### <a name="Trends-appdiskstatsutilization"></a>4.12 Application Node Disk Usage in Percentage (%)
+### <a name="Trends-appdf"></a>4.12 Application Node Disk Usage in Percentage (%)
 
 The **Application node disk usage (percentage)** graph shows the relative amounts of data that are stored on disk.
 
@@ -235,7 +235,7 @@ The **Application node disk latency** graph shows the average waiting times for 
 
 Interpreting the values in this graph should be done in combination with the other disk stats graphs, and taking the types of requests into consideration. Sequential or random reads and writes can create a different burden for disk storage.
 
-### <a name="Trends-appdiskstatsutilization"></a>4.16 Application Node Disk Utilization
+### <a name="Trends-appdiskstatsutilization"></a><a name="Trends-appdiskstatsutilization"></a>4.16 Application Node Disk Utilization
 
 The **Application node disk utilization** shows the percentage of time that the disk storage is busy processing requests.
 
@@ -317,13 +317,13 @@ The **Database node disk throughput** graph shows the amount of data that is bei
 
 If you see large values here which do not immediately drop back again, it may indicate that your app is continually swapping data to disk. This could be caused by inefficient queries, for example ones which require sorting within the app.
 
-### <a name="Trends-dbdfabs"></a><a name="Trends-dbdf"></a>5.8 Database Node Disk Usage (in Bytes)
+### <a name="Trends-dbdfabs"></a>5.8 Database Node Disk Usage (in Bytes)
 
 The **Database node disk usage (in bytes)** graph displays the absolute amount of data that is stored on disk.
 
 ![](attachments/trends/db-disk-usage-bytes.png)
 
-### <a name="Trends-dbdiskstatsutilization"></a>5.9 Database Node Disk Usage in Percentage (%)
+### <a name="Trends-dbdf"></a>5.9 Database Node Disk Usage in Percentage (%)
 
 The **Database node disk usage (percentage)** graph shows the displays the relative amounts of data that are stored on disk.
 

@@ -107,7 +107,7 @@ Decisions deal with making choices and merging different paths.
 
 | Graphic | Name | Description |
 | --- | --- | --- |
-| [![exclusive split](attachments/819203/917726.png)](exclusive-split) | [Exclusive split](exclusive-split) | Makes a decision based on a condition and follows one and only one of the outgoing flows. Please note that there is no parallel execution in nanoflows. |
+| [![decision](attachments/819203/917726.png)](exclusive-split) | [Decision](decision) | Makes a decision based on a condition and follows one and only one of the outgoing flows. Please note that there is no parallel execution in nanoflows. |
 | [![merge](attachments/819203/918116.png)](merge) | [Merge](merge) | Can be used to combine multiple sequence flows into one. If a choice is made in a nanoflow and afterwards some common work needs to be done, you can combine the two (or more) paths using a merge. |
 
 ### 5.4 Activities {#activities}

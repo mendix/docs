@@ -85,10 +85,13 @@ To add content to the App Store, follow these steps:
 
 	![](attachments/share-app-store-content/add_content_button.png)
 
-2.  The **DRAFT** page will open, where you need to select the purpose of your contribution:
+2.  <a name="two"></a>The **DRAFT** page will open, where you need to select the purpose of your contribution:
 
 	* **Share** – components that can be downloaded using Studio Pro – if you select this option, continue to [step #3](#three) below
 	* **Promote** – a way to advertise a component or solution while not making it downloadable – if you select this option, continue to [step #4](#four) below
+
+	{{% alert type="warning" %}}You can only set this in the initial version of your content. You cannot change this setting by updating the App Store item later.
+	{{% /alert %}}
 
 3.  <a name="three"></a>When adding Studio Pro content, select **your content source**:
 
@@ -115,6 +118,9 @@ To add content to the App Store, follow these steps:
 
 	* **Public App Store (visible for anyone)** – your content will be available to every developer in the Mendix community (this content will have to be reviewed and approved by Mendix before it is available)
 	* <a name="private-app-store"></a>**Private App Store (visible for your company)** – your content will receive the **Company only** label and be available only to the developers in your company as well as [external downloaders](../app-store/app-store-overview#ext); this content will not be reviewed by Mendix
+	
+	{{% alert type="warning" %}}You can only set this in the initial version of your content. You cannot change this setting by updating the App Store item later.
+	{{% /alert %}}
 
 5. In the **Content protection** section, you can choose to **Enable protection** or **Disable protection** for the content. This will determine which members of your company can manage the content. For more information, see the [ Content Managers](app-store-overview#cm) section of *App Store Overview*.
 6.  <a name="edit"></a>In the bottom half of the **DRAFT** screen, do the following:<br />

@@ -124,13 +124,13 @@ Retrieves a user account's OpenID based on its email address.
 
 Company Manager, Member Manager
 
-#### 4.3 Request
+### 4.3 Request
 
-##### 4.3.1 Parameter
+#### 4.3.1 Parameter
 
 *   _emailAddress_ : The email address of the user account you are trying to retrieve. Please note that this address should be URL-encoded.
 
-##### 4.3.2 Example
+#### 4.3.2 Example
 
 ```java
 GET /api/1/users/by-email/johndoe3%40example.com HTTP/1.1
@@ -313,7 +313,7 @@ Mendix-ApiKey:87a8a34d-5ee7-43ba-81f0-7b1b17d5ecd7
 
 ```
 
-#### 4.6.2 Output
+#### 4.6.3 Output
 
 None when successful, with HTTP status 200.
 
@@ -766,9 +766,9 @@ Mendix-ApiKey:87a8a34d-5ee7-43ba-81f0-7b1b17d5ecd7
 
 None if successful, HTTP status 200.
 
-## 4.16 Addendum
+### 4.16 Addendum
 
-### 4.16.1 Countries Reference
+#### 4.16.1 Countries Reference
 
 Afghanistan
 Albania

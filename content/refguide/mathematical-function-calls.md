@@ -10,13 +10,13 @@ Returns the largest value from the specified arguments.
 
 ### 1.1 Input Parameters
 
-*   Two or more values that are all either of type Date and time or of a numeric type (Integer/Long, Decimal).
+* Two or more values that are all either of type Date and time or of a numeric type (Integer/Long or Decimal).
 
 ### 1.2 Output
 
 Returns the largest value from the specified arguments. If the arguments are of type Date and time, the result will also be of type Date and time. If the arguments are numeric, the result will be of the most precise type. For example, if both an Integer/Long and a Decimal argument are specified, the result will be of type Decimal.
 
-Type: Integer/Long or Decimal
+Type: Date and time, Integer/Long, or Decimal
 
 ```java
 max(5, 1, 5, 6.7)
@@ -36,13 +36,13 @@ Returns the smallest value from the specified arguments.
 
 ### 2.1 Input
 
-Two or more values that are all either of type Date and time or of a numeric type (Integer/Long, Decimal).
+* Two or more values that are all either of type Date and time or of a numeric type (Integer/Long, Decimal).
 
 ### 2.2 Output
 
 Returns the smallest value from the specified arguments. If the arguments are of type Date and time, the result will also be of type Date and time. If the arguments are numeric, the result will be of the most precise type. For example, if both an Integer/Long and a Decimal argument are specified, the result will be of type Decimal.
 
-Type: Integer/Long or Decimal
+Type: Date and time, Integer/Long, or Decimal
 
 ```java
 min(5, 1, 5, 6.7)
@@ -70,7 +70,7 @@ Rounds a number to a certain precision.
 
 ### 3.2 Output
 
-In the **Settings**, your option for **Round numbers** can be set:
+In the [Project Settings](project-settings), your option for **Round numbers** can be set which determines how half numbers (0.5) are treated:
 *   For the **Half away from zero** option (also called "commercial rounding"), +2.5 becomes +3 and -1.5 becomes -2
 *   The **Half to the nearest even number** option (also called "bankers' rounding") is the default rounding mode used in  [IEEE 754](http://en.wikipedia.org/wiki/IEEE_floating_point "IEEE floating point") computing functions and operators; for example, +23.5 becomes +24, as does +24.5; and -22.5 becomes -22, as does -21.5
 
@@ -119,7 +119,7 @@ random()
 
 ## 5 floor
 
-Rounds down to an integer (everything after the decimal point is ignored).
+Rounds down to an integer (returns the largest integer which is less than or equal to the input).
 
 ### 5.1 Input
 
@@ -156,7 +156,7 @@ returns:
 
 ## 6 ceil
 
-Rounds up to an integer (everything after the decimal point is rounded up).
+Rounds up to an integer (returns the smallest integer which is greater than or equal to the input).
 
 ### 6.1 Input
 
@@ -165,7 +165,7 @@ Rounds up to an integer (everything after the decimal point is rounded up).
 
 ### 6.2 Output
 
-The input value rounded down to the nearest integer.
+The input value rounded up to the nearest integer.
 
 Type: Integer/Long
 
@@ -247,7 +247,7 @@ Calculates the absolute value of a number (ie not negative).
 
 ### 8.2 Output
 
-The absolute value of the input, which is never negative. Corresponds to taking the square and then the square root.
+The absolute value of the input, which is never negative. Corresponds to taking the square and then the positive square root.
 
 Type: Integer/Long or Decimal
 

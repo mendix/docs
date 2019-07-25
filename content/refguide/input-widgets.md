@@ -1,6 +1,7 @@
 ---
 title: "Input Widgets"
 parent: "pages"
+menu_order: 30
 tags: ["studio pro"]
 ---
 

@@ -25,13 +25,13 @@ We use this process when the Mendix Support team is unable to resolve the issue 
 
 We use this process as a communicative means to inform all the parties involved in a proactive manner of a potential SLA breach.
 
-The essence of our escalation management is to bring order, structure, focused management attention, and additional resources to those customer situations which could otherwise result in a high level of customer dissatisfaction and/or damage to the service provider's reputation.                                                                                   
+The essence of our escalation management is to bring order, structure, focused management attention, and additional resources to those customer situations which could otherwise result in a high level of customer dissatisfaction and/or damage to the service provider's reputation.
 
 ## 3 Escalation Process Overview
 
 ![](attachments/escalation-management-process/escalation_process_overview.png)
 
-## 4 When Should an Escalation Be Initiated
+## 4 When Should an Escalation Be Initiated?
 
 For customers and partners who hold a valid support services contract, an escalation may be initiated anytime after the SLA response time. If you have worked through our standard support processes and with our teams and you are not satisfied with the level or timeliness of service you received, you can escalate accordingly. Additionally, an escalation should be initiated when there is tangible impact to your production environment, or there is high risk to the business operations.
 
@@ -52,9 +52,9 @@ The entry point into the Mendix escalation process is through your support case.
 This is the normal process for a support case:
 
 1. Navigate to the [Mendix Support](https://support.mendix.com/hc/en-us).
-2. Click **Submit a request**, which will open this form:
+2.  Click **Submit a request**, which will open this form:
 
-  ![](attachments/escalation-management-process/zendesk.png)
+	![](attachments/escalation-management-process/zendesk.png)
 
 3. Once the ticket has been submitted, this incoming ticket is assigned to a Support Engineer.
 
@@ -62,7 +62,7 @@ The Support Engineer will come to a solution most of the time, sometimes after d
 
 If the gap between the customer's expectation and the Mendix Platform possibilities cannot be resolved, an escalation is started.
 
-## 6 Methods to Escalate My Support Case
+## 6 How Can I Escalate My Case?
 
 ### 6.1 Via Email
 
@@ -78,9 +78,9 @@ Send an email to **escalation[at]mendix.com** (and CC your Customer Success Mana
 
 In the case notes, CC **escalation[at]mendix.com** and in the case note, do the following:
 
-*	Document the problem description
-*	Provide the business use case for the escalation
-*	The next steps provided by the assigned Technical Support Engineer
+* Document the problem description
+* Provide the business use case for the escalation
+* The next steps provided by the assigned Technical Support Engineer
 
 ![](attachments/escalation-management-process/escalation.png)
 
@@ -88,7 +88,7 @@ In the case notes, CC **escalation[at]mendix.com** and in the case note, do the 
 
 You will be contacted by the assigned Lead or Manager and we will collaborate and develop a communication plan. As needed, a technical plan of action will be co-developed to ensure resolution of the issue. The Lead or Manager will also update your account team (Customer Success Manager and/or Account Executive) of the case progression. The assigned Leads will work as advocates internally and become a virtual member of your own problem-resolution team.
 
-## 8 What Criteria Does Mendix Use for Closing My Escalation?
+## 8 What Criteria Does Mendix Use to Close My Escalation?
 
 An escalation will be considered closed if it meets one or more of the following requirements:
 

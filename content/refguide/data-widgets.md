@@ -1,6 +1,7 @@
 ---
 title: "Data Widgets"
 parent: "pages"
+menu_order: 15
 tags: ["studio pro"]
 ---
 

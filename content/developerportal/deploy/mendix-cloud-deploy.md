@@ -162,7 +162,7 @@ The Mendix status page ([https://status.mendix.com/](https://status.mendix.com/)
 
 ## 7 Read More
 
-* [AppCloudServices](https://appstore.home.mendix.com/link/app/934/); the **AppCloudServices** module allows your app to integrate with services on the Mendix Cloud
+**AppCloudServices** module allows your app to integrate with services on the Mendix Cloud
 * [Custom Domains](custom-domains)
 * [Licensing Mendix Cloud Apps](licensing-apps)
 * [How to Manage Company & App Roles](/developerportal/company-app-roles/manage-roles)

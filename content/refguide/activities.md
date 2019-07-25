@@ -22,10 +22,10 @@ Object activities can be used to create and manipulate objects. The [domain mode
 | [![commit object](attachments/819203/17661961.png)](committing-objects) | [Commit object(s)](committing-objects) | Commit object(s) can be used to commit changes to one or more objects. |
 | [![create object](attachments/819203/917756.png)](create-object) | [Create object](create-object) | Create object can be used to create an object. |
 | [![delete object](attachments/819203/918191.png)](deleting-objects) | [Delete object(s)](deleting-objects) | Delete object can be used to delete an object. |
-| [![retrieve](attachments/819203/917866.png)](retrieve) | [Retrieve](retrieve) | Retrieve can be used to get one (or more) associated objects of another object. Furthermore, this activity can also get one (or more) objects directly from a database. |
+| [![retrieve](attachments/819203/917866.png)](retrieve) | [Retrieve](retrieve) | Retrieve can be used to get one (or more) associated objects of another object. Furthermore, this activity can also get one or more objects directly from a database. |
 | [![rollback object](attachments/819203/918119.png)](rollback-object) | [Rollback object](rollback-object) | Rollback object can be used to undo uncommitted changes that were made to an object in the part of the microflow preceding the activity. Furthermore, it deletes objects that have been created but have never been committed. |
 
-## 3 List Activitities
+## 3 List Activities
 
 List activities can be used to create and manipulate lists of objects.
 
@@ -47,7 +47,7 @@ Action call activities can be used to call another microflow or to call a Java a
 | [![javascript action call](attachments/819203/918008.png)](javascript-action-call) | [JavaScript action call](javascript-action-call) | JavaScript Action call can be used to call a JavaScript action. Arguments can be passed to the action and the result can be stored in a variable. |
 | [![nanoflow call](attachments/819203/918005.png)](nanoflow-call) | [Call nanoflow](nanoflow-call) | Nanoflow call can be used to call another nanoflow. Arguments can be passed to the nanoflow and the result can be stored in a variable. |
 
-## 5 Variable Activitities
+## 5 Variable Activities
 
 Variable activities can be used to create or change a variable within a microflow.
 
@@ -56,7 +56,7 @@ Variable activities can be used to create or change a variable within a microflo
 | [![change variable](attachments/819203/918011.png)](change-variable) | [Change variable](change-variable) | Change variable can be used to change the value of a variable. |
 | [![create variable](attachments/819203/918110.png)](create-variable) | [Create variable](create-variable) | Create variable can be used to create a new variable. |
 
-## 6 Client Activitities
+## 6 Client Activities
 
 Client activities can be used to have the web client of your application perform an action, such as showing a different page or downloading a file.
 
@@ -69,7 +69,7 @@ Client activities can be used to have the web client of your application perform
 | [![validation feedback](attachments/819203/918097.png)](validation-feedback) | [Validation feedback](validation-feedback) | Validation feedback can be used to display a red text below a widget that displays an attribute or association. |
 | ![show home page](attachments/819203/17661963.png) | [Show home page](show-home-page) | Show home Page can be used to navigate to the home page for the current user. |
 
-## 7 Integration Activitities
+## 7 Integration Activities
 
 Integration activities can be used to integrate with other systems, for example by calling a web service.
 
@@ -80,7 +80,7 @@ Integration activities can be used to integrate with other systems, for example 
 | ![import with mapping](attachments/819203/19398968.png) | [Import with mapping](import-mapping-action) | Import with mapping can be used to parse the data in a string variable or data stored in a file document, and store them to entities defined in the [domain model](domain-model) of the database. An [Import Mapping](import-mappings) is used to map the incoming XML or JSON to entities. |
 | ![export with mapping](attachments/819203/19398969.png) | [Export with mapping](export-mapping-action) | Export with mapping can be used to export the data stored in [domain model](domain-model) entities into an XML or JSON string. It can also be stored in a file document. An [Export Mapping](export-mappings) is used to map domain model entities into XML or JSON. |
 
-## 8 Document Generation Activitities
+## 8 Document Generation Activities
 
 | Graphic | Name | Description |
 | --- | --- | --- |

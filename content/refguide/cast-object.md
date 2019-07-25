@@ -10,7 +10,7 @@ This activity can only be used in **Microflows**.
 
 ## 1 Introduction
 
-The Cast Object activity can be used in a microflow after an [inheritance split](inheritance-split) to change the type of object from the generalized object type to the specialized object type of the path out of the inheritance split. 
+The Cast Object activity can be used in a microflow after an [object type decision](object-type-decision) to change the type of object from the generalized object type to the specialized object type of the path out of the object type decision. 
 
 To read more about specialization and generalization, see [Entities](entities).
 
@@ -22,9 +22,9 @@ For the properties that all the activities share (for example, a caption), see [
 
 ## 2 Output Properties
 
-### 2.1 Variable Name
+### 2.1 Name
 
-This is the variable name for the result of the cast. It can be used by all activities that follow this activity.
+This is the name for the result of the cast. It can be used by all activities that follow this activity.
 
 ## 3 Example
 

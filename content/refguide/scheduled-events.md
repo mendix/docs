@@ -90,7 +90,7 @@ If it is absolutely critical to run a scheduled event on a specific day of the m
 
 {{% /alert %}}
 
-In your microflow you should start with an exclusive split and do an expression such as:
+In your microflow you should start with a decision and do an expression such as:
 
 ```java
 parseInteger( formatDateTime( [%CurrentDateTime%], 'dd') ) = 1

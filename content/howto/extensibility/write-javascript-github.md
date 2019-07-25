@@ -271,7 +271,7 @@ To create a JavaScript action that can search for users on GitHub, follow the st
 
 	![select search github users](attachments/jsactions-advanced/select-searchgithub-users.png)
 
-	Optionally, you can expose the JavaScript action as a nanoflow action. When you do, you can choose a **Caption**, **Category**, and **Icon**. Note that your icon image will need to be in an existing image collection:
+	Optionally, you can expose the JavaScript action as a nanoflow action. When you do, you can choose a **Caption**, **Category**, and **Icon**. Note that your icon image will need to be in an existing [image collection](/refguide/image-collection):
 
 	![nanoflow options](attachments/jsactions-advanced/nanoflow-options.png)
 
@@ -283,14 +283,14 @@ To create a JavaScript action that can search for users on GitHub, follow the st
 	a. Add the **SearchGitHubUsers** action to the search nanoflow then double-click it. <br/>
 	b. Click **User entity** > **Select**, then double-click the **GitHubUser** entity. <br/>
 	c. Click **Query** > **Edit**, then type in *$GithubSearch/Query* and click **OK**. <br/>
-	d. To display the results in the user interface, type *UserList* into the **Variable** field. <br/>
+	d. To display the results in the user interface, type *UserList* into the **List** field. <br/>
 	e. Your finished **Call JavaScript Action** will look like this:
 
-	![variable display](attachments/jsactions-advanced/variable-display.png)
+	![list display](attachments/jsactions-advanced/variable-display.png)
 
 18. To edit your **Change Object** activity, do the following: <br/>
 	a. Double-click your **Change Object** activity. <br/>
-	b. Select **GithubSearch(HowTo.GithubSearch)** from the **Variable** drop-down menu. <br/>
+	b. Select **GithubSearch(HowTo.GithubSearch)** from the **Object** drop-down menu. <br/>
 	c. Click **Action** > **New**. <br/>
 	d. Select **HowTo.GithubSearch_GithubUser(ListofHowTo.GithubUser)** from the **Member** drop-down menu. <br/>
 	e. Type *$UserList* into the **Value** field and click **OK**. <br/>

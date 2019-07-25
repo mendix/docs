@@ -5,7 +5,7 @@ tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-The simple menu bar widget shows a configured menu in the form of a horizontal or vertical bar with images and captions. Items cannot have subitems; the menu structure can only have one level. The [menu items](menu-item) points to either the page or the microflow that will opened or started when the item is clicked.
+The simple menu bar widget shows a configured menu in the form of a horizontal or vertical bar with images and captions. Items cannot have subitems; the menu structure can only have one level. The [menu items](menu#menu-item) points to either the page or the microflow that will opened or started when the item is clicked.
 
 {{% alert type="info" %}}
 

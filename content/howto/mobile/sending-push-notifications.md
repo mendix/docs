@@ -49,9 +49,15 @@ Use the **New** button to add new actions. Each action requires a name, an actio
 
 ![](attachments/push_notifications_action.png)
 
-The names of the actions can be used as the vlaue of the ActionName attribute of the MessageData entity.
+The names of the actions can be used as the value of the ActionName attribute of the MessageData entity.
 
 ### 2.1 Shortcomings of This Approach
 
 * Nanoflows are not yet supported
 * Microflows can only be used in online apps; in offline apps, microflows are not supported
+
+## 3 Read More
+
+* [Set Up the Apple Push Notification Server](setting-up-apple-push-notification-server)
+* [Set Up the Google Firebase Cloud Messaging Server](setting-up-google-firebase-cloud-messaging-server)
+

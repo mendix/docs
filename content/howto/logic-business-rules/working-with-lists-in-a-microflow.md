@@ -16,9 +16,9 @@ To see the results of this how-to it is necessary that you setup a test project 
 
 Before you continue, make sure that you know how to create:
 
-*   **Domain models**, if you need more info, take a look at this [how-to](../data-models/create-a-basic-data-layer).
-*   **Overview and detail pages**, if you need more info, take a look at this [how-to](../front-end/create-your-first-two-overview-and-detail-pages).
-*   **Menu items**, if you need more info, take a look at this [how-to](../general/setting-up-the-navigation-structure).
+*   **Domain models**, if you need more info, take a look at this [how-to](/howto/data-models/create-a-basic-data-layer).
+*   **Overview and detail pages**, if you need more info, take a look at this [how-to](/howto/front-end/create-your-first-two-overview-and-detail-pages).
+*   **Menu items**, if you need more info, take a look at this [how-to](/howto/general/setting-up-the-navigation-structure).
 
 1.  Create the following domain model:
 
@@ -52,7 +52,7 @@ In the previous section you have set up a basic data structure and created some 
     ![](attachments/18448686/18581118.png)
 
 5.  Double-click the action button and in its properties, enter *Set Processing to Complete* for the **Caption**.
-6.  For **On click**, select **Call a micrfolow**, and then select the **IVK_SetOrderToComplete** microflow.
+6.  For **On click**, select **Call a microflow**, and then select the **IVK_SetOrderToComplete** microflow.
 
     ![](attachments/18448686/18581054.png)
 
@@ -69,7 +69,7 @@ In the previous section you have set up a basic data structure and created some 
 11. Select **From database** for the **Source** option.
 12. Set the following properties:<br>
     a. For **Entity**, select **Order**_<br>
-    b. For **Name**, enter **OrderList**<br>
+    b. For **List**, enter **OrderList**<br>
 
     {{% alert type="info" %}}
     With the currents settings your retrieve action gets every order in the database, using the XPath expression in the following steps you will filter the results that come back from the database.
@@ -102,10 +102,11 @@ In the previous section you retrieved a list of orders with the status 'Processi
     ![](attachments/18448686/18581086.png)
 
     {{% alert type="info" %}}
+    A loop is used to iterate over a list of objects. For each object the flow inside the loop is executed.
 
     For each object the flow inside the loop is executed. The flow starts at the element that has no incoming sequence flows. A loop can contain all elements used in microflows, with the exception of start and stop events. Additionally, a loop (and only a loop) can contain break events and continue events.
 
-    The iterator which looks the same as an input object represents the variable that holds one element of the list for each iteration. Beneath it the name of the variable is shown in black and the type of the variable in blue. For more information, see [Loop](/refguide/loop).
+    The iterator, which looks the same as a parameter, represents the current object in the list for each iteration. Beneath it the name of the object is shown in black and the entity type of the object in blue. For more information, see [Loop](/refguide/loop).
 
     {{% /alert %}}
 
@@ -118,9 +119,9 @@ In the previous section you retrieved a list of orders with the status 'Processi
     ![](attachments/18448686/18581084.png)
 
 5.  Double click the **change activity** to open its properties.
-6.  Select the **IteratorOrder** at the **Variable** drop-down menu and click the **New** button. This will open the **Edit Change Item** editor.
+6.  Select the **IteratorOrder** at the **Object** drop-down menu and click the **New** button. This will open the **Edit Change Item** editor.
 7. Set the following properties:<br>
-    a. For **Member** select **Orderstatus**.<br>
+    a. For **Member** select **OrderStatus**.<br>
     b. For **Value** enter `MyFirstModule.OrderStatus.Complete`.<br>
 
     ![](attachments/18448686/18581080.png)
@@ -140,7 +141,7 @@ In the previous section you retrieved a list of orders with the status 'Processi
 
 ## 5 Calculating a Total List Value Using a Variable and a Loop
 
-In the previous section you iterated over a filtered list of objects using a 'Loop'. In this section you will use a loop to calculate the total sum of all your orders. To calculate this sum you will generate a variable, which will be changed for every iteration in the loop.  
+In the previous section you iterated over a filtered list of objects using a 'Loop'. In this section you will use a loop to calculate the total sum of all your orders. To calculate this sum you will create a variable, which will be changed for every iteration in the loop.  
 
 1.  Add a new microflow button to your order data grid with the following details:</br>
     a. **Caption** of the button:  Calculate Total Order Price
@@ -149,22 +150,22 @@ In the previous section you iterated over a filtered list of objects using a 'Lo
 
     ![](attachments/18448686/18581106.png)
 
-3.  Drag a **Create variable** before the Orderslist.
+3.  Drag a **Create variable** before Retrieve0 OrdersList.
 
     ![](attachments/18448686/18581073.png)
 
-4.  Double click the **variable** to open its properties and set the following properties:</br>
+4.  Double click the **Create … variable** to open its properties and configure it as follows:</br>
     a.  For **Data type** select **Decimal**.</br>
     b.  In the value editor, enter `0`.</br>
     c.  For **Variable** enter *CalculatedTotalPrice*.</br>
 
     ![](attachments/18448686/variable.png)
     
-5.  Add a **Change** variable inside the loop.
+5.  Add a **Change variable** activity inside the loop.
 
     ![](attachments/18448686/18581069.png)
 
-6.  Double click the **change** variable activity to open its **properties** and set the following properties:<br>
+6.  Double click the **Change variable** activity to open its **properties** and set the following properties:<br>
     a. For **Variable** select **CalculatedTotalPrice**.<br>
     b. For **Value** enter `$CalculatedTotalPrice + $IteratorOrder/TotalPrice`.<br>
 
@@ -197,15 +198,15 @@ In the previous section you iterated over a filtered list of objects using a 'Lo
 In the previous section you iterated over a list to add the value of single object to a total price variable. In this section you will use the 'aggregate list' function to calculate the total price instead of using a loop. The aggregate list can be used to calculate aggregated values such as the maximum, minimum, sum, average and total amount of objects over a list of objects.
 
 1.  Open the **IVK_CalculateTotalPriceOrders** microflow and remove the loop and the **CalculatedTotalPrice** variable.
-2.  Add an **Aggregate list** activity after the **Orderlist**.
+2.  Add an **Aggregate list** activity after the **OrderList**.
 
     ![](attachments/18448686/18581061.png)
 
 3.  Double click the aggregate list activity to open its properties and set the following properties:</br>
-    a. For **Variable** select **OrderList**.</br>
+    a. For **List** select **OrderList**.</br>
     b. For **Function** select **Sum** (see the [documentation](/refguide/aggregate-list) for the description of the other functions).</br>
     c. For **Attribute** select **TotalPrice**.</br>
-    d.  For **Variable** enter a descriptive name like _SumTotalPrice_.<br>
+    d. For **Variable** enter a descriptive name like _SumTotalPrice_.<br>
 
     ![](attachments/18448686/18581059.png)
 

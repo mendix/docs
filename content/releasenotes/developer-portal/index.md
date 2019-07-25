@@ -14,11 +14,26 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deploym
 
 ## 2019
 
+### July 5th, 2019
+
+#### SAP Logging Improvements
+
+* We updated the **SAP Logging Connector** to allow the log level to be set via a constant instead of an enumeration. This means that you can change the log level with a restart, without needing to fully redeploy your app.
+* We also solved an issue where the SAP Logging Connector had conflicts with the Community Commons module.
+
+### July 4th, 2019
+
+#### Fixes to SAP Cloud Platform Deployment
+
+* We fixed an issue where the XSUAA configuration wasn’t updated after deployment.
+
+    **Please redeploy any apps which you deployed to SAP Cloud Platform between June 27th and 8:00 CST on July 4th.**
+
 ### June 28th, 2019
 
 #### SAP Logging Improvements
 
-* We added a component in the App Store which, when configured in your app, allows you to use the logging format supported by SAP Kibana. For more information, see [SAP Logger Connector](/partners/sap/sap-logger).
+* We added a component in the App Store which, when configured in your app, allows you to use the logging format supported by SAP Kibana. For more information, see [SAP Logging Connector](/partners/sap/sap-logger).
 
 ### June 27th, 2019
 

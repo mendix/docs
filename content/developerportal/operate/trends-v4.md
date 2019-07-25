@@ -275,7 +275,7 @@ The disk latency graph shows the average waiting times for disk operations to co
 
 Disk throughput shows the amount of data that is being read from and written to disk. If there's more than one disk partition in the system, the `/srv` partition generally contains the project files and uploaded files of the application, while `/var` generally holds the database storage.
 
-### <a name="Trends-appdiskstatsutilization"></a><a name="Trends-dbdiskstatsutilization"></a>5.6 Disk Utilization
+### <a name="Trends-appdiskstatsutilization"></a><a name="Trends-dbdiskstatsutilization"></a>6.5 Disk Utilization
 
 Disk utilization shows the percentage of time that the disk storage is busy processing requests. This graph should be interpreted in combination with other graphs, like CPU **iowait**, **disk iops**, and **number of running requests**. For example, a combination of a moderate number of IO operations, low amount of disk throughput, visible CPU **iowait**, filled up memory disk cache, and reports of long-running database queries in the application log could point to a shortage of system memory for the disk cache that leads to repeated random reads from disk storage.
 
@@ -285,7 +285,7 @@ Disk utilization is calculated as the disk usage that is used by the user of the
 
 {{% /alert %}}
 
-## 6 Read More
+## 7 Read More
 
 * [Alerts](monitoring-application-health)
 * [Maintenance Windows: Configuration](/developerportal/deploy/maintenance-windows)

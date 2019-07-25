@@ -49,7 +49,7 @@ In this section, you will install the SMTP Email module and integrate it into an
 ### 3.2 Exposing the Configuration Page
 
 1. Create a new page called **EmailAdmin**.
-2. Drop in the **SMTPEmailModule.Administration** snippit to give you access to those pages.
+2. Drop in the **SMTPEmailModule.Administration** snippet to give you access to those pages.
 3. Add the **EmailAdmin** page to your app's **Navigation**:
 
     ![](attachments/19202956/19398976.png)
@@ -72,7 +72,7 @@ In this section, you will learn how to build a microflow in your application tha
 
 This flow takes in a number of parameters, including **To**, **From**, **Subject**, and the email settings. The **Send Email** Java Action is what actually bounces the email to the SMTP (as long as you define the key input information, you have a lot of flexibility about what emails you send).
 
-To make the process a little simpler, the SMTPEmailModule includes an **Email** entity in the domain model. This entity brings all the important variables together in one place:
+To make the process a little simpler, the SMTPEmailModule includes an **Email** entity in the domain model. This entity brings all the important attributes together in one place:
 
 ![](attachments/19202956/19398979.png)
 
@@ -108,7 +108,7 @@ To send an email in a microflow, follow these steps:
 
     ![](attachments/19202956/19398984.png)
 
-8. Add a Change object before the sub-microflow call. Set the **Variable** as **Email**.
+8. Add a Change object before the sub-microflow call. Set the **Object** as **Email**.
 
 9. Because users are only editing the plain text of the email on the previous page, change the email so that the **UseOnlyPlainText** Boolean is set to **true**:
 

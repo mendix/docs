@@ -1,7 +1,8 @@
 ---
-title: "Page Templates"
-parent: "pages"
-tags: ["studio pro"]
+title: "Page Template"
+parent: "page-resources"
+menu_order: 20
+tags: ["studio pro", "page template", "page resource"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -33,7 +34,7 @@ Page template properties are described in the sections below.
 
 {{% snippet file="refguide/Style+Property.md" %}}
 
-## 4 Designer Properties
+## 4 Design Properties
 
 {{% snippet file="refguide/Canvas+Width+Property.md" %}}
 

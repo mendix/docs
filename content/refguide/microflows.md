@@ -25,7 +25,7 @@ The microflow editor offers keyboard support for navigating and manipulating mic
 | --- | --- |
 | Arrow Keys | Select nearby element (activity, event, loop or parameter) in the direction of the arrow. |
 | Enter | Edit the properties of the selected element. |
-| F2 | Rename the variable introduced by the selected element. |
+| F2 | Rename the item returned by the selected element. |
 | Shift+F2 or just start typing | Edit the caption of the selected element. |
 | Ctrl+Arrow Keys | Move the selected element in the direction of the arrow. |
 | Tab | If a loop is selected, the first element inside the loop will be selected. |
@@ -42,10 +42,10 @@ A microflow is composed of elements. Below is a categorized overview of all elem
 
 *   [Events](#events) represent start and endpoints of a microflow and special operations in a loop.
 *   [Flows](#flows) form the connection between elements.
-*   [Gateways](#gateways) deal with making choices and merging different paths again.
+*   [Decisions](#decisions) deal with making choices and merging different paths again.
 *   [Activities](#activities) are the actions that are executed in a microflow.
 *   [Artifacts](#artifacts) provide the microflow with input and allow comments to be made.
-*   [Error handlers](#errorhandlers) can be set on an activity, gateway or loop to define how to handle an error.
+*   [Error handlers](#errorhandlers) can be set on an activity, decision, or loop to define how to handle an error.
 
 ## 4 Events<a name="events"></a>
 
@@ -65,18 +65,18 @@ Flows form the connection between elements.
 
 | Graphic | Name | Description |
 | --- | --- | --- |
-| ![](attachments/819203/917883.png) | A sequence flow is an arrow that links events, activities, splits and merges with each other. Together they defined the order of execution within a microflow. |
-| ![](attachments/819203/917688.png) | An association is a connection that can be used to connect an annotation to another element. |
+| [![](attachments/819203/917883.png)](sequence-flow) | [Sequence Flow](sequence-flow) | A sequence flow is an arrow that links events, activities, decisions, and merges with each other. Together they define the order of execution within a microflow. |
+| [![](attachments/819203/917688.png)](annotation#annotation-flow) | [Annotation flow](annotation#annotation-flow) | An association is a connection that can be used to connect an annotation to another element. |
 
-## 6 Gateways<a name="gateways"></a>
+## 6 Decisions {#decisions}
 
-Gateways deal with making choices and merging different paths again..
+Decisions deal with making choices and merging different paths again..
 
 | Graphic | Name | Description |
 | --- | --- | --- |
-| [![](attachments/819203/917726.png)](exclusive-split) | [Exclusive Split](exclusive-split) | An exclusive split makes a decision based on a condition and follows one and only one of the outgoing flows.
-**Note**: There is no parallell execution in microflows. |
-| [![](attachments/819203/918122.png)](inheritance-split) | [Inheritance Split](inheritance-split) | An inheritance split is an element that makes a choice based on the [specialization](entities) of the selected object. You can give the specialized object a name using a [Cast Object](cast-object) action. |
+| [![](attachments/819203/917726.png)](decision) | [Decision](decision) | A decision makes a decision based on a condition and follows one and only one of the outgoing flows.
+**Note**: There is no parallel execution in microflows. |
+| [![](attachments/819203/918122.png)](object-type-decision) | [Object Type Decision](object-type-decision) | An object type decision is an element that makes a choice based on the [specialization](entities) of the selected object. You can give the specialized object a name using a [Cast Object](cast-object) action. |
 | [![](attachments/819203/918116.png)](merge) | [Merge](merge) | A merge can be used to combine multiple sequence flows into one. If a choice is made in a microflow and afterwards some common work needs to be done, you can combine the two (or more) paths using a merge. |
 
 ## 7 Activities<a name="activities"></a>
@@ -97,22 +97,22 @@ Artifacts provide the microflow with input and allow comments to be made.
 | [![](attachments/819203/918019.png)](parameter) | [Parameter](parameter) | A parameter is data that serves as input for the microflow. Parameters are filled at the location from where the microflow is triggered. |
 | [![](attachments/819203/917689.png)](annotation) | [Annotation](annotation) | An annotation is an element that can be used to put comments in a microflow. |
 
-## 9 Variable Usages
+## 9 Item Usages
 
-Studio Pro visualizes which variables are used by the selected object(s). It does this by showing the used variables in white text on a blue background. Conversely, elements that use the variable(s) defined by the selected object(s) are marked with the word 'Usage' in white text on a green background.
+Studio Pro visualizes which items are used by the selected element(s). It does this by showing the used items in white text on a blue background. Conversely, elements that use the item(s) returned by the selected element(s) are marked with the word 'Usage' in white text on a green background.
 
-In the example below, the parameter **AccountPasswordData** is highlighted because it is used in the selected activity. And the activity **Save password** has a usage label because it uses the variable defined by the selected activity.
+In the example below, the parameter **AccountPasswordData** is highlighted because it is used in the selected activity (**Retrieve Account**). And the activity **Save password** has a **Usage** label because it uses the object returned by **Retrieve Account**.
 
 ![](attachments/16713739/16843950.png)
 
 ## 10 Errors
 
-When an error occurs in a microflow, all changes that have been made to objects are rolled back and the microflow is aborted. Optionally, you can handle errors in the microflow itself by configuring different error handling settings. You can even inspect the details of the error by looking at the predefined variables `$latestError` and `$latestSoapFault`.
+When an error occurs in a microflow, all changes that have been made to objects are rolled back and the microflow is aborted. Optionally, you can handle errors in the microflow itself by configuring different error handling settings. You can even inspect the details of the error by looking at the predefined objects `$latestError` and `$latestSoapFault`.
 
 ### 10.1 Error Handlers<a name="errorhandlers"></a>
 
-An error handler can be set on an activity, gateway or loop.
-On an activity or gateway it gives you three options:
+An error handler can be set on an activity, decision, or loop.
+On an activity or decision, it gives you three options:
 
 *   Rollback (default)
 *   Custom with rollback
@@ -133,7 +133,7 @@ The continue option means that when an error occurs, the loop will simply contin
 
 ### 10.2 Inspecting Errors
 
-When an error occurs inside a microflow, under the hood a Java exception is raised that contains information about the error that occurred. Inside a custom error handler (i.e. after an error handling flow), you can inspect the type of this Java exception as well as several other properties. Every microflow contains two predefined error variables, `$latestError` and `$latestSoapFault`. `$latestError` is an object of entity System.Error, while `$latestSoapFault` is an object of entity System.SoapFault, which is a specialization of System.Error.
+When an error occurs inside a microflow, under the hood a Java exception is raised that contains information about the error that occurred. Inside a custom error handler (i.e. after an error handling flow), you can inspect the type of this Java exception as well as several other properties. Every microflow contains two predefined error objects, `$latestError` and `$latestSoapFault`. `$latestError` is an object of entity System.Error, while `$latestSoapFault` is an object of entity System.SoapFault, which is a specialization of System.Error.
 
 In a custom error handler that is executed after an error occurs, `$latestError` is set to an object containing information about the error that occurred. If the error is a SOAP fault (an error that occurs as a result of a web service call), `$latestSoapFault` is set to an object that contains more specific information about the SOAP fault. Otherwise, `$latestSoapFault` is `empty`.
 
@@ -160,7 +160,7 @@ Click [here](http://www.w3.org/TR/soap12-part1/#soapfault) for more information 
 
 {{% alert type="warning" %}}
 
-In microflows that apply entity access, it is not possible to inspect the attributes of error objects for security reasons. You can pass the error object to a submicroflow that does not apply entity access and inspect the attributes there.
+In microflows that apply entity access, it is not possible to inspect the attributes of error objects for security reasons. You can pass the error object to a sub-microflow that does not apply entity access and inspect the attributes there.
 
 {{% /alert %}}
 

@@ -1,6 +1,7 @@
 ---
 title: "Common Widgets"
 parent: "pages"
+menu_order: 20
 tags: ["studio pro"]
 ---
 

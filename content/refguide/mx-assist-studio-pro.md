@@ -40,7 +40,7 @@ To open the settings of Mendix Assist, click **Edit** > **Preference**. In the *
 Mendix Assist has the following properties:
 
 * **Enable Mendix Assist** – switches Mendix Assist on and off
-* **Show suggestions for system variable** – when enabled, Mendix Assist will make suggestions for system variables as well (for example, it can suggest that you change such variables as **currentUser** or **currentSession**)
+* **Show suggestions for system variable** – when enabled, Mendix Assist will make suggestions for system objects as well (for example, it can suggest that you change such objects as **currentUser** or **currentSession**)
 
   ![](attachments/mx-assist-studio-pro/mx-assist-system-variables.png)
 
@@ -57,11 +57,11 @@ To add an activity/element do the following:
 
 The activity/element is then added to the flow.
 
-When you select **Add a check**, an [exclusive split](exclusive-split) will be added:
+When you select **Add a check**, a [decision](decision) will be added:
 
 ![](attachments/mx-assist-studio-pro/mx-assist-add-check.png) 
 
-If you do not see the activity or element you would like to add in the suggestions, click **Add other element** and choose an activity, loop, exclusive split, merge, or inheritance split.
+If you do not see the activity or element you would like to add in the suggestions, click **Add other element** and choose an activity, loop, decision, merge, or object type decision.
 
 ![](attachments/mx-assist-studio-pro/mx-assist-add-other-element.png)
 

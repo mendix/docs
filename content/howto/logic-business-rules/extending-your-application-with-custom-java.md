@@ -77,8 +77,8 @@ To edit the Java action in Eclipse, follow these steps:
 	As you can see, Studio Pro generated a variable for `inputAssets`. You can use that variable to get the name of the asset and reverse it like this:
 
 	```java
-String assetsAssetName = this.inputAssets.getAssetName(this.getContext());
-return new StringBuilder(assetsAssetName).reverse().toString();
+	String assetsAssetName = this.inputAssets.getAssetName(this.getContext());
+	return new StringBuilder(assetsAssetName).reverse().toString();
 	```
 
 6.  Insert the above code between the `//BEGIN USER CODE` and `//END USER CODE` comment statements. It should look like this:
@@ -90,7 +90,7 @@ return new StringBuilder(assetsAssetName).reverse().toString();
 ## 5 Calling the Java Action from a Microflow
 
 1. Back in Studio Pro, locate the **Assets** page via **Project Explorer**.
-2.  Under **{AssetName}, right-click and select **Add widget**:
+2.  Under **{AssetName}**, right-click and select **Add widget**:
 
 	{{% image_container width="300" %}}![](attachments/extend-custom-java/add-widget.png)
 	{{% /image_container %}}

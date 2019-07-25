@@ -20,7 +20,7 @@ The mx tool enables the options described below.
 
 ### 3.1 `mx convert`
 
-The `mx convert` command converts the inputted app project(s) to the Studio Pro version which which the tool was bundled. For example, if you are using the mx command-line tool that came with Mendix version 8.1.0.58215, then `mx convert` will convert app projects to that version. 
+The `mx convert` command converts the inputted app project(s) to the Studio Pro version with which the tool was bundled. For example, if you are using the mx command-line tool that came with Mendix version 8.1.0.58215, then `mx convert` will convert app projects to that version. 
 
 The input can be a single file, directory, or multiple files.
 
@@ -51,23 +51,21 @@ For `OUTPUT`, enter the output location for the converted results. Keep the foll
 
 #### 3.1.4 Examples
 
-|Example|Result|
-|---|---|
-|`mx convert --in-place C:\MxProjects\App-main`|converts the project in folder `C:\MxProjects\App-main` to the version of the mx tool.|
-|`mx convert C:\Mendix\App1.mpk C:\Mendix\App2.mpk C:\Mendix\ConvertedProjects\`|convert project packages `App1.mpk` and `App2.mpk` that are in the `C:\Mendix\` folder and put the results in the `C:\Mendix\ConvertedProjects\` folder.|
-|`mx convert --skip-error-check C:\Mendix\Packages\ C:\Mendix\ConvertedPackages\`|convert all project packages in folder `C:\Mendix\Packages\` and output to folder `C:\Mendix\ConvertedPackages\` without checking for errors.|
+| Example | Result |
+| --- | --- |
+| `mx convert --in-place C:\MxProjects\App-main` | Converts the app project in folder *C:\MxProjects\App-main* to the Studio Pro version with which the mx tool was bundled. |
+| `mx convert C:\Mendix\App1.mpk C:\Mendix\App2.mpk C:\Mendix\ConvertedProjects\` | Converts the *App1.mpk* and *App2.mpk* app project packages that are in the *C:\Mendix\* folder and puts the results in the *C:\Mendix\ConvertedProjects\* folder. |
+| `mx convert --skip-error-check C:\Mendix\Packages\ C:\Mendix\ConvertedPackages\` | Converts all app project packages in the *C:\Mendix\Packages\* folder and outputs to the *C:\Mendix\ConvertedPackages\* folder without checking for errors. |
 
 #### 3.1.5 Return Codes 
 
-|Exit code|Description|
-|---|---|
-|0|The conversion was successful|
-|1|An internal error occurred|
-|2|There’s something wrong with the command-line options|
-|3|Converting the project(s) failed|
+| Exit Code | Description |
+| --- | --- |
+| 0 | The conversion was successful. |
+| 1 | An internal error occurred. |
+| 2 | There is something wrong with the command-line options. |
+| 3 | Converting the project(s) failed. |
 
 ### 3.2 Undocumented Options
 
-The `mx` tool contains options that are not described in this document. Those are for internal Mendix usage and are not officially supported. This might change in the future, but currently using these options is for your own risk.
-
-
+The mx tool contains options that are not described in this document. Those are for internal Mendix usage and are not officially supported. This might change in the future, but these options can be used only at your own risk.

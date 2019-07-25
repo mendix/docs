@@ -109,18 +109,19 @@ These two values must be identical and must, therefore, fit the constraints list
 
 This is the URL of the MindSphere gateway and is of the following format:
 
-```html
+```http
 https://gateway.{Region}.mindsphere.io
+```
 
 This needs to be changed depending on the `{Region}` your app is running. The default value is for MindSphere running on **AWS**:
 
-```html
+```http
 https://gateway.eu1.mindsphere.io
 ```
 
 If your app is running on Mindsphere on **Azure** change this constant to:
 
-```html
+```http
 https://gateway.eu2.mindsphere.io
 ```
 
@@ -128,19 +129,19 @@ https://gateway.eu2.mindsphere.io
 
 The value of this constant is shown below:
 
-```html
+```http
 https://core.piam.{Region}.eu1.mindsphere.io/token_keys
 ```
 
 This needs to be changed depending on the `{Region}` your app is running. The default value is for MindSphere running on **AWS**:
 
-```html
+```http
 https://core.piam.eu1.mindsphere.io/token_keys
 ```
 
 If your app is running on Mindsphere on **Azure** change this constant to:
 
-```html
+```http
 https://core.piam.eu2.mindsphere.io/token_keys
 ```
 

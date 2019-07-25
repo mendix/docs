@@ -157,7 +157,7 @@ In this section you will learn to turn the class you made into a design property
 3. Find the `ActionButton` class. There are already design properties in `ActionButton`. Next, you will add some of your own.
 4. Place this object under the first one in `ActionButton`:
 
-	```javascript
+	```json
 	{
 		"name": "Bordered",
 		"type": "Toggle",

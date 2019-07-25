@@ -17,7 +17,7 @@ There are two customizable settings files for Atlas UI that can be found in the 
 
 Properties in the **Design** section of Studio allow users to change the position and styling of widgets on a page. Atlas UI contains a design properties file that can be extended with your own custom design properties.
 
-You can find the design properties inside the **settings.json** or **settings-native.json** files of the Mendix project.
+You can find the design properties inside the **settings.json** or **settings-native.json** files of your Mendix project.
 
 The example below shows the design properties of a `"Button"`. 
 

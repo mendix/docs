@@ -20,11 +20,11 @@ The scheme below shows that the data source of the list view has been set to **D
 
 The table below describes the most common errors you can come across when configuring a list view,  causes of these errors, and ways to fix them. 
 
-| Text in the Checks Panel                                     | Cause of an Error                                            | Way to Fix                                                   |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| No entity configured for the data source of this list view. Select an entity or change the data source. | The **Database** (or **XPath**/**Association**) option is selected as the data source for the list view on the page has been set, but the **Entity** property is not specified. | Open the list view's properties > the **Data Source** section and select an entity in the **Entity** field. |
-| No microflow configured for the data source of this list view. Select a microflow or change the data source. | The data source is set to **Microflow**, but no specific microflow is selected. | Open the list view's properties > the **Data Source** section and select a microflow in the **Microflow** field, or change the type of the data source. |
-| No nanoflow configured for the data source of this list view. Select a nanoflow or change the data source. | A nanoflow is selected as the data source, but no specific nanoflow is selected. | Open Studio Pro and select a nanoflow for this list view, or change the type of the data source. |
+| Error Code | Text in the Checks Panel                                     | Cause of an Error                                            | Way to Fix                                                   |
+| ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| CE0488     | No entity configured for the data source of this list view. Select an entity or change the data source. | The **Database** (or **XPath**/**Association**) option is selected as the data source for the list view on the page has been set, but the **Entity** property is not specified. | Open the list view's properties > the **Data Source** section and select an entity in the **Entity** field. |
+|            | No microflow configured for the data source of this list view. Select a microflow or change the data source. | The data source is set to **Microflow**, but no specific microflow is selected. | Open the list view's properties > the **Data Source** section and select a microflow in the **Microflow** field, or change the type of the data source. |
+|            | No nanoflow configured for the data source of this list view. Select a nanoflow or change the data source. | A nanoflow is selected as the data source, but no specific nanoflow is selected. | Open Studio Pro and select a nanoflow for this list view, or change the type of the data source. |
 
 ## 3 Data View Consistency Errors 
 
@@ -35,11 +35,11 @@ Not configuring a data source for a [data view](page-editor-data-view-list-view#
 
 The table below describes the most common errors you can come across when configuring a data view,  causes of these errors, and ways to fix them. 
 
-| Text in the Checks Panel                                     | Cause of an Error                                            | Way to Fix                                                   |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| No entity configured for the data source of this data view. Select an entity or change the data source. | **Context** is selected as the data source for the data view, but the **Entity** property is not specified. | Open the data view's properties> the **Data Source** section and select an entity in the **Entity** field, or change the type of the data source. |
-| No microflow configured for the data source of this data view. Select a microflow or change the data source | The data source is set to **Microflow**, but no specific microflow is selected. | Open the data view's properties> the **Data Source** section and select a microflow in the **Microflow** field, or change the type of the data source. |
-| No list widget configured for the data source of this data view. Select a widget or change the data source. | The list widget option is configured as the data source for the data view, but you have not selected the specific list you would like the data view to listen to. | Create a list view on the same page, configure it, and select it as a list widget for the data view; or change the type of the data source. |
+| Error Code | Text in the Checks Panel                                     | Cause of an Error                                            | Way to Fix                                                   |
+| ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| CE0488     | No entity configured for the data source of this data view. Select an entity or change the data source. | **Context** is selected as the data source for the data view, but the **Entity** property is not specified. | Open the data view's properties> the **Data Source** section and select an entity in the **Entity** field, or change the type of the data source. |
+|            | No microflow configured for the data source of this data view. Select a microflow or change the data source | The data source is set to **Microflow**, but no specific microflow is selected. | Open the data view's properties> the **Data Source** section and select a microflow in the **Microflow** field, or change the type of the data source. |
+| CE0536     | No list widget configured for the data source of this data view. Select a widget or change the data source. | The list widget option is configured as the data source for the data view, but you have not selected the specific list you would like the data view to listen to. | Create a list view on the same page, configure it, and select it as a list widget for the data view; or change the type of the data source. |
 
 
 ## 4 Context Not Available Consistency Errors
@@ -129,10 +129,10 @@ To fix this error you can either place a button within a list view that will pas
 
 The most common errors for [input elements](page-editor-widgets-input-elements) (such as, a text box, a drop-down, a check box, etcetera) , their causes, and ways to fix them are described in the table below. 
 
-| Text in the Checks Panel                                     | Cause of an Error                                            | Way to Fix                                                   |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| This widget can only function inside a data container. Move it into a data view, list view or template grid. | You have added an input widget to a page, but it is not inside a data view or a list view. | There are two ways to fix the error: <ul><li>When you do not have a specific data view or list view available yet: open widget's properties > the **Data Source** section and click **Wrap with a new data view**, the input widget will be automatically placed inside a new data view.</li><li>When you already have a data view or a list view which this input element relates to: drag and drop the input element inside the data view or the list view</li></ul> |
-| Select an attribute for this {name of the input element}.    | You have added an input element and it is inside a data container, but the attribute  which this input element is connected to is not selected. | Open widget's properties > the **Data Source** section and select an attribute in the **Attribute** field. |
+| Error Code | Text in the Checks Panel                                     | Cause of an Error                                            | Way to Fix                                                   |
+| ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| CE0544     | This widget can only function inside a data container. Move it into a data view, list view or template grid. | You have added an input widget to a page, but it is not inside a data view or a list view. | There are two ways to fix the error: <ul><li>When you do not have a specific data view or list view available yet: open widget's properties > the **Data Source** section and click **Wrap with a new data view**, the input widget will be automatically placed inside a new data view.</li><li>When you already have a data view or a list view which this input element relates to: drag and drop the input element inside the data view or the list view</li></ul> |
+| CE0545     | Select an attribute for this {name of the input element}.    | You have added an input element and it is inside a data container, but the attribute  which this input element is connected to is not selected. | Open widget's properties > the **Data Source** section and select an attribute in the **Attribute** field. |
 
 ## 6 Image Widgets Consistency Errors
 
@@ -145,11 +145,11 @@ The most common consistency errors for [static image widgets](page-editor-widget
 
 Errors for static and dynamic images are described in the table below. 
 
-| Text in the Checks Panel                                     | Cause of an Error                                            | Way to Fix                                                   |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| No image selected.                                           | You have added a static image widget on a page, but the image itself is not selected. | Open image properties > the **General** section and click **Select Image**. You can either select a default image or upload your own one. |
-| Move this widget into a data container, for example a data view or list view. | You have added a dynamic image to a page, but it is not inside a data view or a list view. | Open image properties > the **General** section and click **Wrap with a new data view**, the image will be automatically placed inside a new data view. You can also add a list view or a data view to the page and drag and drop a dynamic image inside it. |
-| Select an entity for the data source of this image viewer.   | You have added a dynamic image to a page, the dynamic image is placed inside a data view or a list view, but an entity for the image is not specified. | Open image properties > the **General** section and select an entity in the **Entity** field. |
+| Error Code | Text in the Checks Panel                                     | Cause of an Error                                            | Way to Fix                                                   |
+| ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+|            | No image selected.                                           | You have added a static image widget on a page, but the image itself is not selected. | Open image properties > the **General** section and click **Select Image**. You can either select a default image or upload your own one. |
+|            | Move this widget into a data container, for example a data view or list view. | You have added a dynamic image to a page, but it is not inside a data view or a list view. | Open image properties > the **General** section and click **Wrap with a new data view**, the image will be automatically placed inside a new data view. You can also add a list view or a data view to the page and drag and drop a dynamic image inside it. |
+| CE0489     | Select an entity for the data source of this image viewer.   | You have added a dynamic image to a page, the dynamic image is placed inside a data view or a list view, but an entity for the image is not specified. | Open image properties > the **General** section and select an entity in the **Entity** field. |
 
 ## 7 On Click Action Consistency Errors 
 

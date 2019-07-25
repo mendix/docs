@@ -270,7 +270,7 @@ The **Number of database tuple mutations** graph shows the number of database ob
 
 ![](attachments/trends-v4/db-mutations.png)
 
-For a single database operation that affects more than one object, this graph shows the number of objects actually changed, as measured from inside the database. However, the [Number of database queries being executed](#Trends-appmxruntimeconnectionbus) graph will only show a single database query for the same operation.
+For a single database operation that affects more than one object, this graph shows the number of objects actually changed, as measured from inside the database. However, the [Number of database queries being executed](#Trends-dbmxruntimeconnectionbus) graph will only show a single database query for the same operation.
 
 These are the values:
 

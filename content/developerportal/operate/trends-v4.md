@@ -264,13 +264,13 @@ Value | Explanation
 **tables** | Total space taken by the database.
 **indices** | Amount of space taken by the indices in the database.
 
-### <a name="Trends-dbpgstatdatabaseVERSIONmain"></a>5.3 Database transactions and Mutations
+### <a name="Trends-dbpgstatdatabaseVERSIONmain"></a>5.3 Number of Database Tuple Mutations
 
-The **Database transactions and mutations** graph shows the number of database objects that were actually changed by database queries from the application.
+The **Number of database tuple mutations** graph shows the number of database objects that were actually changed by database queries from the application.
 
 ![](attachments/trends-v4/db-mutations.png)
 
-For a single database operation that affects more than one object, this graph shows the number of objects actually changed, as measured from inside the database. However, the [Number of database queries being executed](#Trends-appmxruntimeconnectionbus) graph will only show a single database query for the same operation.
+For a single database operation that affects more than one object, this graph shows the number of objects actually changed, as measured from inside the database. However, the [Number of database queries being executed](#Trends-dbmxruntimeconnectionbus) graph will only show a single database query for the same operation.
 
 These are the values:
 
@@ -282,7 +282,7 @@ Value | Explanation
 **xact updated** | Number of tuples updated per second.
 **xact deleted** | Number of tuples deleted per second.
 
-### <a name="Trends-dbpgstatactivityVERSIONmain"></a>5.4 Number of Database Connections
+### <a name="Trends-dbmxruntimepgstatactivity"></a>5.4 Number of Database Connections
 
 The **Number of database connections** graph shows the number of connections to the PostgreSQL server.
 

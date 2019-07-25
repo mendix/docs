@@ -4,6 +4,7 @@ category: "Security"
 menu_order: 20
 description: "A set of security aspects and checks to use when developing your Mendix application."
 tags: ["security", "best practices", "access rules", "authentication", "encryption", "password", "ssl", "identity provider", "mendix cloud"]
+#The anchor request-handlers below is mapped, so it should not be removed or changed.
 ---
 
 ## 1 Introduction
@@ -47,7 +48,7 @@ These are the common cases and best practices:
     *	Use prepared statements, which will cause the database-specific connector to take care of escaping the value
     *	Sanity-check your user input (for example, use a regular expression to check if your user input only contains alphanumeric characters, spaces, and dashes)
 
-## 4 Applying Access Restrictions to Unnecessary Request Handlers
+## 4 Applying Access Restrictions to Unnecessary Request Handlers{#request-handlers}
 
 A Mendix app offers various endpoints that can be used to obtain information about offered services. The paths used by these endpoints end in `-doc`. By default, access to these endpoints is disabled when deploying to a cloud node.
 

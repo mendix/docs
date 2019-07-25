@@ -22,7 +22,7 @@ Developers wanting to upgrade their Studio apps to Mendix version 8 can only do 
 
 For Mendix 8, automatic upgrade will not be offered in Studio. 
 
-{{% alert type="note" %}}
+{{% alert type="info" %}}
 Note that apps with version lower than 7.23.7 will still show the orange upgrade bar to upgrade to Mendix 7.23.7 version.
 {{% /alert %}}
 

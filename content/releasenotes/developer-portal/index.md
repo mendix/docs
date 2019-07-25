@@ -14,6 +14,18 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deploym
 
 ## 2019
 
+### July 25th, 2019
+
+#### Mendix Cloud Improvements
+
+* We reordered and improved the Trends pages of operating metrics to improve the user experience.
+* We improved the performance of calculating the environment health status.
+* We improved the ability to recover from a failed deployment in the free app cluster.
+
+#### Fixes
+
+* We fixed an issue where updates to decimal constants in the Developer Portal were limited to 2 decimal places. This has been increased to 8 decimal places. (Ticket #85507)
+
 ### July 5th, 2019
 
 #### SAP Logging Improvements

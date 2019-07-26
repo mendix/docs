@@ -128,7 +128,7 @@ To be sure the image is fully up to date with the latest patches, follow the bel
     You now have SSH access to the Azure instance.
 4.  Execute below commands:
 
-    ```java
+    ```bash
     sudo su
 
     echo "deb http://packages.mendix.com/platform/debian/ jessie main contrib non-free" > /etc/apt/sources.list.d/mendix.list
@@ -150,7 +150,7 @@ Now that the deployment package is in place you can deploy it on the instance. Y
     You now have SSH access to the Azure instance.
 4.  Before you start, switch to the MxAdmin user with the following command:
 
-    ```java
+    ```bash
     sudo su MxAdmin
     ```
 
@@ -158,21 +158,21 @@ Now that the deployment package is in place you can deploy it on the instance. Y
 
 5.  Copy the deployment package to the model-upload folder
 
-    ```java
+    ```bash
     cp [Deployment_Package] /srv/app/data/model-upload/
     ```
 
 6.  In the console type **m2ee**. This will allow you to configure a Mendix app.
 7.  Execute the following command:
 
-    ```java
+    ```bash
     m2ee(admin): unpack [Deployment_Package]
     ```
 
 8.  Enter **y** to confirm that all content will be overwritten.
 9.  If this is the first time you are unpacking a deployment package, Mendix may give a warning that it cannot find the Mendix Runtime. To solve this execute the following command:
 
-    ```java
+    ```bash
     m2ee(admin): download_runtime
     ```
 
@@ -180,7 +180,7 @@ Now that the deployment package is in place you can deploy it on the instance. Y
 
 11. Execute the following command:
 
-    ```java
+    ```bash
     m2ee(admin): start
     ```
 
@@ -190,7 +190,7 @@ Now that the deployment package is in place you can deploy it on the instance. Y
 
 13. Finally, make the app accessible by configuring a password for the administrator with the following command:
 
-    ```java
+    ```bash
     m2ee(admin): create_admin_user
     ```
 

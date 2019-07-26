@@ -22,7 +22,13 @@ For more information on hybrid mobile app development in Mendix, see the [Hybrid
 
 ### July 2nd, 2019 (4.1.1 / 4.1.0)
 
-* We moved the Google Services *.json*, *.plist*, and *build-extras.xml* files to the **/config** folder.
+* We moved the Google Services *.json*, *.plist*, and *build-extras.xml* files to the **/config** folder. Thus, if you have an existing **config.xml** file, make sure that lines `213-214` read as follows:
+
+```
+<resource-file src="config/google-services.json" target="app/google-services.json" />
+<resource-file src="config/build-extras.gradle" target="build-extras.gradle" />
+```
+
 * We changed how the *build-extras.xml* file is included in your app project. Now PhoneGap Build properly includes that file.
 * The build process no longer fails when you do not provide a *GoogleServices-Info.plist* file. This is useful if you use Firebase Cloud Messaging for push notifications on Android, but use the Apple Push Notification service for push notifications on iOS.
 

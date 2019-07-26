@@ -19,7 +19,7 @@ The Developer Portal Management API requires its users to authenticate themselve
 
 <a name="TeamServerAPI-Description" rel="nofollow"></a>Retrieves all branches that belong to the team server project of a specific app which the authenticated user has access to as a regular user.
 
-```java
+```http
 HTTP Method: GET
  URL: https://deploy.mendix.com/api/1/apps/<AppId>/branches/
 ```
@@ -32,7 +32,7 @@ HTTP Method: GET
 
 ##### 3.1.1.2 Example
 
-```java
+```http
 GET /api/1/apps/calc/branches/ HTTP/1.1
 Host: deploy.mendix.com
 
@@ -59,7 +59,7 @@ List of objects with the following key-value pairs:
 
 ##### 3.1.2.2 Example
 
-```java
+```json
 [{
      "Name" :  "trunk" ,
      "LatestRevisionNumber" :  9 ,
@@ -77,7 +77,7 @@ List of objects with the following key-value pairs:
 
 Retrieves a specific branch that belongs to the team server project of a specific app which the authenticated user has access to as a regular user.
 
-```java
+```http
  HTTP Method: GET
  URL: https://deploy.mendix.com/api/1/apps/<AppId>/branches/<Name>
 ```
@@ -91,7 +91,7 @@ Retrieves a specific branch that belongs to the team server project of a specifi
 
 ##### 3.2.1.2 Example
 
-```java
+```http
 GET /api/1/apps/calc/branches/statistical%20functions HTTP/1.1
 Host: deploy.mendix.com
 
@@ -119,7 +119,7 @@ An object with the following key-value pairs:
 
 ##### 3.2.2.2 Example
 
-```java
+```json
 {
     "Name": "statistical functions",
     "LatestRevisionNumber": 13,
@@ -132,7 +132,7 @@ An object with the following key-value pairs:
 
 Retrieves all revisions of a specific branch that belongs to the team server project of a specific app which the authenticated user has access to as a regular user.
 
-```java
+```http
 HTTP Method: GET
  URL: https://deploy.mendix.com/api/1/apps/<AppId>/branches/<Name>/revisions/
 ```
@@ -146,7 +146,7 @@ HTTP Method: GET
 
 ##### 3.3.1.2 Example
 
-```java
+```http
 GET /api/1/apps/calc/branches/trunk/revisions/ HTTP/1.1
 Host: deploy.mendix.com
 
@@ -175,7 +175,7 @@ List of objects with the following key-value pairs:
 
 ##### 3.3.2.2 Example
 
-```java
+```json
 [{
     "MendixVersion": "5.6.0",
     "CommitMessage": "Implement C key",

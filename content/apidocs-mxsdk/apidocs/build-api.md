@@ -294,7 +294,7 @@ Error codes
 
 ##### 2.5.2.1 Example
 
-```java
+```json
 {
      "PackageId" :  "b3d14e53-2654-4534-b374-9179a69ef3cf"
 }

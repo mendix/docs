@@ -77,23 +77,27 @@ If you changed any files in the **styles/sass/lib** folder, complete the actions
 
 If you added a file to the **lib/base** folder, copy that file from **theme_old/styles/sass/lib/base/** to **theme/styles/web/sass/core/base/**. You must also complete the following action:
 
-* Import the file in `theme/styles/web/sass/main.scss` into the `core/base` group in alphabetic order
+* Import the file into **theme/styles/web/sass/main.scss** under the "Base" group in alphabetic order
 
-If you added a file to the `lib/components` folder, copy that file from **theme_old/styles/sass/lib/components/** to **theme/styles/web/sass/core/widgets/**. You must also complete the following action:
+If you added a file to the **lib/components** folder, copy that file from **theme_old/styles/sass/lib/components/** to **theme/styles/web/sass/core/widgets/**. You must also complete the following action:
 
-* Import the file in **theme/styles/web/sass/main.scss** into the **core/widgets** group in alphabetic order
+* Import the file into **theme/styles/web/sass/main.scss** under the "Widgets" group in alphabetic order
+* Cut all Design Properties and extra classes from your file if any, leaving only the default styling
+* Create a new file in **theme/styles/web/sass/core/helpers/** with the same name
+* Paste those Design properties and extra classes in this file
+* Import the file into **theme/styles/web/sass/main.scss** under the above mentioned import
 
 If you added a file to the **lib/customwidgets** folder, copy your content from **theme_old/styles/sass/lib/customwidgets/** to **theme/styles/web/sass/core/widgetscustom/**. You must also complete the following action:
 
-* Import the file in **theme/styles/web/sass/main.scss** into the **core/widgetscustom** group in alphabetic order
+* Import the file into **theme/styles/web/sass/main.scss** under the "Custom Widgets" group in alphabetic order
 
 If you added a file to the **lib/buildingblocks** folder, copy that file from **theme_old/styles/sass/lib/buildingblocks/** to **theme/styles/web/sass/resources/atlas_resources_default/buildingblocks**. You must also complete the following action:
 
-* Import the file in **theme/styles/web/sass/main.scss** into the **resources/atlas_resources_default/buildingblocks** group in alphabetic order
+* Import the file into **theme/styles/web/sass/main.scss** under the "Building Blocks" group in alphabetic order
 
 If you added a file to the **lib/layouts** folder, copy that file from **theme_old/styles/sass/lib/layouts/** to **theme/styles/web/sass/resources/atlas_resources_default/layouts**. You must also complete the following action:
 
-* Import the file in **theme/styles/web/sass/main.scss** into the **resources/atlas_resources_default/layouts** group in alphabetic order
+* Import the file into **theme/styles/web/sass/main.scss** under the "Layouts" group in alphabetic order
 
 Make sure any custom or added SASS files are all imported in either **styles/web/sass/main.scss** or **styles/web/sass/app/_custom.scss**.
 

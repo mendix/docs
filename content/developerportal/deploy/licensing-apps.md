@@ -1,6 +1,6 @@
 ---
 title: "Licensing Mendix Cloud Apps"
-# New document which replaces four others
+#New document which replaces four others
 parent: "mendix-cloud-deploy"
 menu_order: 15
 description: "Licensing apps for production by linking them to a licensed cloud node."

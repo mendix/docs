@@ -100,7 +100,7 @@ The generator will ask some questions in the setup. Specify the following inform
 Open the **(YourMendixProject)/CustomWidgets/TextBox** folder in your IDE of choice. From now on, all file references will be relative to this path. To set up your new widget, first you must use an attribute of the context object and display that attribute in an input field: 
 
 1. To prevent future errors, remove the file *src/components/HelloWorldSample.tsx*.
-2. Edit *src/TextBox.xml* to remove the `sampleText` property and add the property `Text attribute`:
+2. Edit *src/TextBox.xml*, the generator creates a sample property `sampleText`, which should be removed andand add the new property `Text attribute`:
 
 	```xml
 	<?xml version="1.0" encoding="utf-8" ?>
@@ -160,11 +160,12 @@ Open the **(YourMendixProject)/CustomWidgets/TextBox** folder in your IDE of cho
 	* The interface defines the properties of the React components – the value is passed to the component and it will render an HTML input element with the given value
 	* The component is a class extending `Component` and should be exported to be used in other components
 	* The render method is the only required function in a component, and it will return the expected DOM for the browser (for more information, see React’s [component documentation](https://reactjs.org/docs/react-component.html))
-5. The container component *TextBox.tsx* receives the properties in the runtime, and forwards the data to the display component. The container works like glue between the Mendix application and the display component. Override the class lines in *TextBox.tsx* until they look like this:
+5. The container component *TextBox.tsx* receives the properties in the runtime, and forwards the data to the display component. The container works like glue between the Mendix application and the display component. In the *TextBox.tsx* overwrite the render function until they look like this:
 
 	```tsx
 	import { Component, ReactNode, createElement } from "react"; 
 	import { TextInput } from "./components/TextInput";
+	import { TextBoxContainerProps } from "../typings/TextBoxProps";
 	class TextBox extends Component<TextBoxContainerProps> {
 		render(): ReactNode {
 			const value = this.props.textAttribute.value || "";
@@ -312,7 +313,7 @@ The value from the attribute can be displayed and updated using the other input,
 				onUpdate={this.onUpdateHandle}
 			/>;
 		}
-		private onUpdate(value: string) {
+		private onUpdate(value: string): void {
 			this.props.textAttribute.setValue(value);
 		}
 	}
@@ -348,7 +349,7 @@ The value from the attribute can be displayed and updated using the other input,
 				onChange={this.handleChange}
 			/>;
 		}
-		private onChange(event: ChangeEvent<HTMLInputElement>) {
+		private onChange(event: ChangeEvent<HTMLInputElement>): void {
 			if (this.props.onUpdate) {
 				this.props.onUpdate(event.target.value);
 			}

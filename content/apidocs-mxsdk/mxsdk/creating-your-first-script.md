@@ -106,7 +106,7 @@ For more information, see [Async Await](https://basarat.gitbooks.io/typescript/d
 
 1.  Compile the script with the TypeScript compiler into JavaScript using the following command:
 
-    ```java
+    ```bash
     $ tsc
     ```
 
@@ -114,7 +114,7 @@ For more information, see [Async Await](https://basarat.gitbooks.io/typescript/d
 
     The TypeScript compiler will execute in a single run to compile all files configured in `tsconfig.json`. While developing your script, it can be practical to have the compiler immediately run once you make changes to your code. Use the `--watch` flag for `tsc` to monitor the files configured in the `tsconfig.json` file for changes and immediately run the compiler when you save the file:
 
-    ```java
+    ```bash
     $ tsc --watch
     ```
 

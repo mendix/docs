@@ -2,7 +2,7 @@
 title: "Publish a Mendix Hybrid Mobile App in Mobile App Stores"
 parent: "hybrid-mobile"
 menu_order: 60
-tags: ["mobile", "app store", "phonegap"]
+tags: ["mobile", "app store", "phonegap", "Hybrid"]
 ---
 ## 1 Introduction
 

@@ -19,6 +19,7 @@ Pluggable widgets are the new generation of custom-built widgets. These widgets 
 **Are you in a hurry?** 
 
 Clone this [code sample](https://github.com/mendix/text-box-sample) from GitHub with the basic and advanced features already implemented.
+{{% todo %}}[Note: if you update a code snippet, please make sure you update the completed sample on this GitHub repository too. Thank you!]{{% /todo %}}
 
 ## 2 Prerequisites
 

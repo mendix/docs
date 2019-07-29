@@ -416,7 +416,7 @@ Replaces all occurrences of a regular expression with another string.
     * Type: string
 * The regular expression to match
     * Type: string
-* The replacement value
+* The replacement value (literal, which means it does not support backreference or captures)
     * Type: string
 
 {{% alert type="warning" %}}
@@ -466,7 +466,7 @@ Replaces the first occurrence of the regular expression with a replacement strin
     * Type: string
 * The regular expression to match
     * Type: string
-* The replacement value
+* The replacement value (literal, which means it does not support backreference or captures)
     * Type: string
 
 {{% alert type="warning" %}}

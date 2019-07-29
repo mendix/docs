@@ -171,7 +171,7 @@ gulp.task('build:hugo', `Build`, [], done => {
   MAIN BUILD TASKS
 **************************************************/
 gulp.task('build', `BUILD. Used for production`, done => {
-  runSequence('clean', 'write:mappings', ['build:menu', 'build:sass', 'build:js'], 'write:assetmappings', 'build:hugo', 'pdf', 'check', (err) => {
+  runSequence('clean', 'write:mappings', ['build:menu', 'build:sass', 'build:js'], 'write:assetmappings', 'build:hugo', 'check', (err) => {
       //if any error happened in the previous tasks, exit with a code > 0
       if (err) {
         var exitCode = 2;

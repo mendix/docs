@@ -10,12 +10,12 @@ Input widgets are typically used to show data to the user and allow them to edit
 
 Input widgets need to be linked to an attribute in order to function. As such, they must be placed within a data widget filled by an object. [Data views](data-view) are the most common input data widget, though a number of other options are available.
 
-*   [Check Box](check-box)
-*   [Date Picker](date-picker)
+*   [Text Box](text-box)
+*   [Text Area](text-area)
 *   [Drop-Down](drop_down)
-*   [Input Reference Set Selector](input-reference-set-selector)
+*   [Check Box](check-box)
 *   [Radio Buttons](radio-buttons)
+*   [Date Picker](date-picker)
 *   [Reference Selector](reference-selector)
 *   [Reference Set Selector](reference-set-selector)
-*   [Text Area](text-area)
-*   [Text Box](text-box)
+*   [Input Reference Set Selector](input-reference-set-selector)

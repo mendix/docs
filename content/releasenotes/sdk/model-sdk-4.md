@@ -5,6 +5,13 @@ parent: "model-sdk"
 
 These are the release notes for the [Model SDK](/apidocs-mxsdk/mxsdk/) version 4.
 
+## 4.23.0 {#423}
+
+**Release date: July 29th, 2019**
+
+* We added support for Mendix [8.0.0 GA](../studio-pro/8.0).
+* We added transaction support, which brings the ability to manually `commit` / `rollback` changes.
+
 ## 4.22.0 {#422}
 
 **Release date: July 2nd, 2019**

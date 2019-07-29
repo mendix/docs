@@ -254,22 +254,3 @@ gulp.task('algolia', `Push Algolia indexes`, done => {
     cb: done
   });
 });
-
-/*************************************************
- PDFS
-**************************************************/
-gulp.task('pdf', `Generate PDFs`, done => {
-  const bestPracticesFolder = 'best-practices';
-  generatePDF({
-    src: path.join(CONFIG.CONTENTFOLDER, bestPracticesFolder),
-    dist: path.join(CONFIG.DIST_FOLDER, bestPracticesFolder),
-    drafts: PUBLISH_DRAFTS,
-    cb: (err) => {
-      if (err) {
-        return process.exit(2);
-      } else {
-        done();
-      }
-    }
-  });
-})

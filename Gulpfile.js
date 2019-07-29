@@ -171,7 +171,7 @@ gulp.task('build:hugo', `Build`, [], done => {
   MAIN BUILD TASKS
 **************************************************/
 gulp.task('build', `BUILD. Used for production`, done => {
-  runSequence('clean', 'write:mappings', ['build:menu', 'build:sass', 'build:js'], 'write:assetmappings', 'build:hugo', 'pdf', 'check', (err) => {
+  runSequence('clean', 'write:mappings', ['build:menu', 'build:sass', 'build:js'], 'write:assetmappings', 'build:hugo', 'check', (err) => {
       //if any error happened in the previous tasks, exit with a code > 0
       if (err) {
         var exitCode = 2;
@@ -254,22 +254,3 @@ gulp.task('algolia', `Push Algolia indexes`, done => {
     cb: done
   });
 });
-
-/*************************************************
- PDFS
-**************************************************/
-gulp.task('pdf', `Generate PDFs`, done => {
-  const bestPracticesFolder = 'best-practices';
-  generatePDF({
-    src: path.join(CONFIG.CONTENTFOLDER, bestPracticesFolder),
-    dist: path.join(CONFIG.DIST_FOLDER, bestPracticesFolder),
-    drafts: PUBLISH_DRAFTS,
-    cb: (err) => {
-      if (err) {
-        return process.exit(2);
-      } else {
-        done();
-      }
-    }
-  });
-})

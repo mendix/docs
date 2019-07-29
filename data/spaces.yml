@@ -191,13 +191,6 @@ studio:
     - "Theme Customizer"
     - "Settings"
     - "Starting With Your Own Data"
-best-practices:
-  space: "Expert Best Practices"
-  priority: false
-  draft: true
-  menu_categories:
-    - "Best Practices Overview"
-    - "Architecture"
 partners:
   space: "Strategic Partners Guide"
   priority: false

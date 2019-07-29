@@ -81,7 +81,7 @@ Before you can link an app to a new environment, you need to unlink it from its 
 
 ### 4.2.1 Unlinking a Free App{#unlink}
 
-To unlick a Free App, do the following:
+To unlink a Free App, do the following:
 
 1.  Go to the [Developer Portal](http://home.mendix.com).
 
@@ -160,7 +160,7 @@ Your app is now connected to this node.
 ### 4.3.2 Connecting Your App: Method 2
 
 {{% alert type="info" %}}
-This method described below will only work if there is currently no app linked to the node.
+The method described below will only work if there is currently no app linked to the node.
 {{% /alert %}}
 
 To connect your app to a licensed node, do the following: 

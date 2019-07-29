@@ -5,13 +5,12 @@ menu_order: 25
 tags: ["studio pro"]
 ---
 
-
 Container widgets are a set of tools that allow you to provide structure for your page's content.
 
+*   [Layout grid](layout-grid)
 *   [Container](container)
 *   [Group box](group-box)
-*   [Layout grid](layout-grid)
-*   [Navigation list](navigation-list)
-*   [Scroll Container](scroll-container)
 *   [Tab container](tab-container)
+*   [Scroll Container](scroll-container)
 *   [Table](table)
+*   [Navigation list](navigation-list)

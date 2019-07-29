@@ -10,7 +10,6 @@ These are the Mendix Studio Pro major version release notes:
 * [8](8)
 * [7](7)
 * [6](6)
-* [5](5)
 
 {{% alert type="info" %}}
 With Mendix 8, the product has been renamed from **Mendix Desktop Modeler** to **Mendix Studio Pro**.

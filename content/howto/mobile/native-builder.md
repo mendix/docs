@@ -8,7 +8,7 @@ tags: ["GitHub", "App Center", "Android", "native", "iOS", "Packaging"]
 
 ## 1 Introduction
 
-The Native Builder takes your Mendix project containing a native profile and packages a native app for iOS and Android. To download the Native Builder executable, [click here](https://www.dropbox.com/sh/hpw7sshut9bco68/AABackrr75rPSgW7u5LBMkMra?dl=0).
+The Native Builder takes your Mendix project containing a native profile and packages a native app for iOS and Android. To download the Native Builder executable, [click here](https://www.dropbox.com/sh/hpw7sshut9bco68/AABackrr75rPSgW7u5LBMkMra?dl=0). You can download the *.zip* file to a folder of your preference, and then you must extract all of the files in order for the Native Builder to work. 
 
 ## 2 Prerequisites
 

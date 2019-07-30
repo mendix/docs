@@ -18,10 +18,10 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deploym
 
 #### App Store Improvements  
 
-* When creating new app store content, we simplified the options available for formatting the Documentation section. We also made it possible to upload images into the Documentation editor - drag an image from your file explorer directly into the editor (so Copy + Paste does not work due to browser inconsistencies).   
-You can also link to images via URL by clicking the image button in the toolbar.  
-* Small user changes and improvements when creating new content with the source of Github. Easier selection screen for choosing your repository.  
-* Other minor bug fixes.  
+* We simplified the options available for formatting the Documentation section when creating new app store content.
+* We made it possible to upload images into the Documentation editor - you can drag and drop an image from your file explorer into the editor, or link to images via URL (Copy + Paste does *not* work due to browser inconsistencies).
+* We made some user changes and improvements when you create new content using GitHub as the source. For example, an easier-to-use selection screen when choosing your repository.  
+* We also made some other minor bug fixes.  
 
 ### July 25th, 2019
 

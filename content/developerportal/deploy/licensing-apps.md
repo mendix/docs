@@ -14,8 +14,9 @@ To run Mendix apps in production on the Mendix Cloud, they must be linked to a l
 
 This page explains how you can link your app to a licensed node. It covers the following:
 
-* Free Apps 
-* Moving an existing app
+* [Linking Your App to a Licensed Node](#licensed-node)
+* [Unlinking a Free App](#unlink-free) from its environment
+* [Exchanging Linked Apps Between Nodes](#exchange-apps)
 
 {{% alert type="warning" %}}
 These instructions will not move databases, file storage, or any other environment configurations to another node. Only the deployment package of a Mendix model – the app as built in Mendix Studio Pro – is moved.
@@ -59,9 +60,16 @@ You need to have enabled two-factor authentication. See [Two-Factor Authenticati
 
 ## 4 Linking Your App to a Licensed Node {#licensed-node}
 
-You have deployed an app: either as a free app, or to a licensed node. You now want to link it to a licensed node, or to a different licensed node.
+You have deployed an app: either as a free app, or to a licensed node. You now want to link it to a licensed node, or to a different licensed node. There are several steps you need to carry out:
 
-For the specific case of swapping two apps between licensed nodes, see the guidance in the [Exchange Linked Apps Between Nodes](#exchange-apps) section.
+* [Back up your data](#backing-up)
+* [Unlink from the current environment](#unlink)
+* [Connect your app to a licensed node](#connect-app)
+* [Restore the backup of your data](#restoring)
+
+{{% alert type="info" %}}
+For the specific case of swapping two apps between licensed nodes, see the guidance in the [Exchanging Linked Apps Between Nodes](#exchange-apps) section.
+{{% /alert %}}
 
 ### 4.1 Backing Up{#backing-up}
 
@@ -75,11 +83,11 @@ When you unlink your Free App from its Sandbox environment, the environment will
 If you are unlinking from a licensed node, the node is NOT deleted and data is retained in the node.
 {{% /alert %}}
 
-### 4.2 Unlinking From Current Environment
+### 4.2 Unlinking From Current Environment{#unlink}
 
 Before you can link an app to a new environment, you need to unlink it from its current environment. All apps will be created as a Free App by default the first time they are deployed. In most cases, therefore, you will have to unlink them.
 
-### 4.2.1 Unlinking a Free App{#unlink}
+### 4.2.1 Unlinking a Free App{#unlink-free}
 
 To unlink a Free App, do the following:
 
@@ -89,7 +97,7 @@ To unlink a Free App, do the following:
 
 3.  Go to **Environments** in the left navigation panel.
 
-    If the **Environments** tab shows the following message, then your app is not currently linked to a node and you can go straight to the [Connect Your App to a Licensed Node](#connect-app) section.
+    If the **Environments** tab shows the following message, then your app is not currently linked to a node and you can go straight to the [Connecting Your App to a Licensed Node](#connect-app) section.
 
     ![](attachments/licensing-apps/link-node.png)
    
@@ -111,7 +119,7 @@ Your app has now been unlinked from the Sandbox environment.
 
 It is not possible to unlink an app from a licensed node. The only way to do this is to connect another app to the licensed node; this will unlink the existing app automatically.
 
-An example of how this behavior can be used is given in the [Exchange Linked Apps Between Nodes](#exchange-apps) section.
+An example of how this behavior can be used is given in the [Exchanging Linked Apps Between Nodes](#exchange-apps) section.
 
 ### 4.3 Connecting Your App to a Licensed Node{#connect-app}
 
@@ -183,13 +191,13 @@ To connect your app to a licensed node, do the following:
 
 The app is now connected to the licensed node.
 
-### 4.4 Restoring Backup
+### 4.4 Restoring Backup{#restoring}
 
 After you have linked your app to a licensed node it will be using the resources currently in that node. For example, the data in the existing database.
 
 If you want to use the data which was originally in your app, you will need to restore the backup from your old node. For more information on restoring a backup, see [Restore a Backup](/developerportal/operate/restore-backup).
 
-## 5 Exchange Linked Apps Between Nodes {#exchange-apps}
+## 5 Exchanging Linked Apps Between Nodes {#exchange-apps}
 
 If you want to swap the nodes of two apps which are already linked to nodes, you can do it by creating a new (third) app. By using the fact that linking an app to a node will remove an app which is already linked, you can use this app to unlink one app. You can then move this app to the other node, unlinking the app which is there. Finally, you can put this app into the first node.
 

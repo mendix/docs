@@ -66,6 +66,11 @@ The settings below influence the behavior of the log files. These settings can o
 | Name | Description | Default value |
 | --- | --- | --- |
 | ClientQueryTimeout | Defines the timeout in seconds for most of the database queries which are executed to load data into client widgets, like data grids. After the duration as specified here, a query will be canceled and an exception will be thrown. |   |
+| DatabaseType | Defines the database engine which is used as the Mendix database. Valid values are<br/>DB2<br/>HSQLDB<br/>MYSQL<br/>ORACLE<br/>POSTGRESQL<br/>SAPHANA<br/>SQLSERVER | |
+| DatabaseUserName | Name required for authentication to the database | |
+| DatabasePassword | Password for the DatabaseUserName supplied above | |
+| DatabaseHost | The host name and optionally the TCP port number of the database. Use a colon as separator between host name and port number. Possible values are: db.url.org, db.url.org:1521, 10.0.0.5, 10.0.0.5:1433\. It's possible to use a plain IPv6 address by enclosing it in brackets, like: [::1]:5432 <br/>This will be overridden if you supply **DatabaseJdbcUrl**| |
+| DatabaseName | The name of the database or schema used by the Mendix app <br/>This will be overridden if you supply **DatabaseJdbcUrl** | |
 | DatabaseJdbcUrl | Defines the JDBC URL to use for the database connection (which overrides the other database connection settings). This feature is not supported for PostgreSQL databases. |   |
 | DatabaseUseSsl | For PostgreSQL databases, defines whether the connection will be made using SSL. | false |
 | LogMinDurationQuery | Defines whether database queries are logged via the ConnectionBus_Queries log node if they finished after the number of milliseconds specified here. By default, only the relevant SQL query will be logged. Set the log level of the ConnectionBus_Queries log node to TRACE to show more information about the page or the microflow which leads to this query. |   |

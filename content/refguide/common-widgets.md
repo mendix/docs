@@ -9,6 +9,6 @@ tags: ["studio pro"]
 *   [Text](text)
 *   [Image](image)
 *   [Label](label)
-*   [Page title](page-title)
 *   [Snippet Call](snippet-call)
+*   [Page title](page-title)
 *   [Common Widget Properties](common-widget-properties)

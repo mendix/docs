@@ -1,5 +1,5 @@
 ---
-title: "Sidebar Toggle Button"
+title: "Sidebar Toggle"
 parent: "layout-widgets"
 menu_order: 30
 tags: ["studio pro"]

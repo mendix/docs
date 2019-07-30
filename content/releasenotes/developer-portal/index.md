@@ -23,6 +23,18 @@ You can also link to images via URL by clicking the image button in the toolbar.
 * Small user changes and improvements when creating new content with the source of Github. Easier selection screen for choosing your repository.  
 * Other minor bug fixes.  
 
+### July 25th, 2019
+
+#### Mendix Cloud Improvements
+
+* We reordered and improved the Trends pages of operating metrics to improve the user experience.
+* We improved the performance of calculating the environment health status.
+* We improved the ability to recover from a failed deployment in the free app cluster.
+
+#### Fixes
+
+* We fixed an issue where updates to decimal constants in the Developer Portal were limited to 2 decimal places. This has been increased to 8 decimal places. (Ticket #85507)
+
 ### July 5th, 2019
 
 #### SAP Logging Improvements

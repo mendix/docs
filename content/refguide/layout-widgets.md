@@ -6,6 +6,8 @@ tags: ["studio pro"]
 ---
 
 
+*   [Layout grid](layout-grid)
+*   [Scroll container](scroll-container)
 *   [Placeholder](placeholder)
 *   [Header](header)
-*   [Sidebar toggle button](sidebar-toggle-button)
+*   [Sidebar toggle](sidebar-toggle-button)

@@ -240,7 +240,7 @@ Below is an example of using an external dependency based on [Noty](https://gith
 	b. Add a script tag for the library after *mxui.js*. <br/>
 	c. Put the following code in *theme/index.html* to handle external dependencies:
 
-	```javascript
+	```html
 	<!doctype html>
 	<html>
 		<head>
@@ -263,7 +263,7 @@ Below is an example of using an external dependency based on [Noty](https://gith
 
 4. To support hybrid mobile apps, add the script and CSS to *theme/components.json*: 
 
-	```javascript
+	```json
 	{
 		"files": {
 			"css": [

@@ -536,7 +536,7 @@ The default class to style all badges is named `com_mendix_widget_native_badge_B
 
 ### 10.4 Barcode Scanner
 
-The barcode scanner widget allows your app to scan barcodes and QR codes. This widget renders a camera view in a stylable container.
+The barcode scanner widget allows your app to scan barcodes and QR codes. This widget renders a camera view in a styleable container.
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |

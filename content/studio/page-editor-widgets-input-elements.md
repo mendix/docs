@@ -81,11 +81,27 @@ Specific properties of the input elements are described in the table below:
 | Text Area     | Number of Lines    | This property is only displayed when the **Grow Automatically** option is disabled.  The number of lines determine how many lines the text area shows at the same time. If the text in the text area contains more lines you will have to use a scrollbar to see it all. <br />Default value for the **Number of Lines** option: 5 |
 | Radio Buttons | Orientation        | This property defines whether the radio buttons are displayed in your app horizontally or vertically. <br />Default value for **Orientation**: Horizontal. |
 
-## 4 Design Section {#input-elements-design}
+## 4 Input Validation Section
+
+In **Input Validation**, you can specify whether the widget's value should be validated. You can set a validation type for an input widget and specify an end-user message when a field is obligatory to fill in. For example, you can mark the **Full name** field as required for new customers and you can add a message saying: "Please specify your name to proceed".
+
+![](attachments/page-editor-widgets-input-elements/Validation-type-required.png)
+
+The **Input Validation** section properties are described in the table below:
+
+| Property        | Description                                                  |
+| --------------- | ------------------------------------------------------------ |
+| Validation Type | Possible values are the following ones:<br /><li><ul>None – end-users can leave this field empty</ul><ul>Required – this field is obligatory</ul><ul>Custom – </ul></li> |
+| Message         |                                                              |
+|                 |                                                              |
+
+
+
+## 5 Design Section {#input-elements-design}
 
 For information on the **Design** section and its properties, see [Design Section in Widgets](page-editor-widgets-design-section).
 
-## 5 Read More
+## 6 Read More
 
 * [Pages](page-editor) 
 * [Widgets](page-editor-widgets)

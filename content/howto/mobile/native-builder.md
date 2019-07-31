@@ -143,7 +143,43 @@ Now that your repository is connected, follow the steps below to run Native Buil
 
 If you haven’t provided your signature keys, App Center builds by default debug artifacts. To release your apps you have to sign your builds with your signature keys. Signature keys prove the authenticity of your app and prevent forgeries. 
 
-Native Builder automatically detects changes to the master branch build configuration and uses them for consecutive builds. By following [Managing App Signing Keys](https://docs.mendix.com/refguide/managing-app-signing-keys), you can make sure that your apps are signed and ready for release.
+By following [Managing App Signing Keys](https://docs.mendix.com/refguide/managing-app-signing-keys), you can make sure that your have the prerequisites for signing your apps, namely:
+
+**iOS**:
+1. A mobile provisioning profile
+2. A .p12 distribution certificate 
+
+**Android**: 
+1. A release key-store
+
+There two paths to signing your app, manually or with App Center. We will continue with describing signing with Appcenter. To do so: 
+
+1. Go to [App Center](https://appcenter.ms/apps)
+2. Select the app you wish to configure
+3. Select build on the left panel
+4. Select the branch you would like to configure from the list
+5. Select the wrench icon on the top right side to open the build configuration panel
+
+The steps here on differ depending on the app type you are configuring:
+ - iOS
+     1. Enable Sign builds
+     2. Upload your mobile provisioning profile
+     3. Upload your .p12 certificate
+     4. Type the password you used when exporting the .p12 certificate
+     5. Click Save or Save and build if you wish to build immediately 
+
+
+ - Android
+     1. Toggle the build variant from *debug* to *release*
+     2. Enable Sign builds
+     3. Upload your keystore file
+     4. Type the password to your keystore
+     5. Type the name of your key's alias
+     6. Type the password of the key's alias
+     7. Click Save or Save and builds if you wish to build immediately 
+        
+
+Finally either start a build for this branch manually or re-run native-builder with the same build number as the branch you just configured (e.g. build/1) to have it handle the build process and download of your now signed artifacts.
 
 ### 10.2 Custom Native Code
 
@@ -151,7 +187,7 @@ If you have custom native dependencies or code, you can include them in your app
 
 ### 10.3 Custom App Center Configuration
 
-In App Center you can configure your builds at the branch level. If no configuration is available for branch **master**, Native Builder will create a default configuration. If a configuration is already present, it will not be modified by the tool. The configuration of **master** is copied to the build branch (e.g. `build/1`), so any changes made to the **master** configuration will be kept.
+In App Center you can configure your builds at the branch level. If no configuration is available for branch **master**, Native Builder will create a default configuration. If a configuration is already present, it will not be modified by the tool. When a branch for a build is initialized the configuration of master is copied over as is. **Consecutive builds will not alter the configuration for this branch!** That is to avoid overriding you custom configuration.
 
 ## 11 When to Sync Your Native Template Fork
 
@@ -187,6 +223,8 @@ If your Native template is not the latest version, synchronize your fork with th
 **Unable to Configure Build:{explanation}** — Something went wrong while communicating with App Center. Verify your connection, check that App Center is available, and try running Native Builder again.
 
 **Build {build number} for App {app number} Has Failed** — The native build on App Center has failed. Read the log file that Native Builder has downloaded. The log file is named *{AppName}-{BuildNumber}.log* and is located in the same folder as your Native Builder executable.
+
+**The build configuration is overridden with the default** — While Native Builder is rigorously checking to identify if the branch it is building has been manually configured; in some cases it may result to false positives. That could for instance lead to your custom configuration being overridden. If that starts happening and you need i.e. custom signing, consider running the build directly via Appcenter and skip the Native Builder for this branch.
 
 **Unknown Error** — If you do not understand an error, you can sign in to App Center and delete the build configuration for the **master** branch. Then run Native Builder again. The tool will recreate the default build configuration for **master** and your branch.
 

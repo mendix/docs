@@ -28,6 +28,47 @@ To improve security of your app, it is recommended that you delete the MindSpher
 
 ![Section of a microflow showing the Access token action and the Edit Custom HTTP Header dialog in the Call REST action](attachments/mindsphere-development-considerations/delete-mindspheretoken.png)
 
+### 2.1 Authorizing MindSphere REST Calls from within 'Scheduled Events'
+
+The Access token connector could **not** be used for calling any MindSphere API in a microflow which is executed without a user context - e.g. called from a scheduled event. Therefore the MindSphereSingleSignOn module offers a microflow **DS_GetAccessTokenForScheduledEvents** that returns a Token for a given Tenant. You find this flow here:
+
+![DS_GetAccessTokenForScheduledEvents](attachments/mindsphere-development-considerations/DS_GetAccessTokenForScheduledEvents.png)
+
+The microflow uses the [MindSphere Application Credentials](#5.1.2%20Application%20Credentials) functionality to fetch a token and uses different environment variables depending on the location where the app is running:
+
+a) Local: <br/>
+The microflow uses the application credentials you entered at startup to fetch a token. See also [Application Credentials](#5.1.2%20Application%20Credentials)
+
+b)  Developer Tenant: <br/>
+The following cloud foundry environment variables must be set for the app:
+
+Developer Tenant |
+----- |
+`MDSP_KEY_STORE_CLIENT_ID` - enable Application Credentials in the Developer Cockpit for your app and use the Client ID |
+`MDSP_KEY_STORE_CLIENT_SECRET` - enable Application Credentials in the Developer Cockpit for your app and use the Client Secret |
+`MDSP_OS_VM_APP_NAME`  - enter the name of your app in Developer Cockpit |
+`MDSP_OS_VM_APP_VERSION`  - enter the version of your app in Developer Cockpit |
+
+c) Operator Tenant: <br/>
+Some of the following environment variables are set automatically
+
+Operator Tenant |
+----- |
+`MDSP_KEY_STORE_CLIENT_ID` - created automatically on an Operator Tenant, when application credentials are enabled for the app |
+`MDSP_KEY_STORE_CLIENT_SECRET` - created automatically on an Operator Tenant when application credentials are enabled for the app |
+`MDSP_OS_VM_APP_NAME` - name of your app |
+`MDSP_OS_VM_APP_VERSION`  - version of your app |
+
+Make sure these environment variables exists. Use the returned Token as usuall in your REST calls to MindSphere. Do not delete the Token after usage as it is not transferred to the client and it is cached in MindSphereSingleSignOn module.
+
+The following example shows how to use the microflow **DS_GetAccessTokenForScheduledEvents**. The sample retrieves a list of all Tenants from the database and fetches
+a token for each tenant. With the token you can proceed with your custom application logic.
+
+!!! info "Hint"
+    Do not create a Tenant object by your self as this is done automatically during login.
+
+![DS_GetAccessTokenForScheduledEvents](attachments/mindsphere-development-considerations/sample_getAccessTokeenForScheduledEvents.png)
+
 ## 3 Cloud Foundry Environment Variables {#cfenvvars}
 
 If you need to set or change the value of any Cloud Foundry Environment Variables, you will have to do this using the Cloud Foundry Command Line Interface (CF CLI).

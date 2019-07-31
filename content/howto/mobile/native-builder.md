@@ -63,7 +63,7 @@ Command-line arguments provide information to the Native Builder, such as where 
 	Your finished product will look like this example (note the double quotes around paths which could contain spaces): 
 
 	```
-	native-builder.exe --java-home "C:\Program Files\Java\jdk-12.0.1" --project-path "C:\MyApp\MyApp.mpr" --mxbuild-path "C:\Program Files\Mendix\8.0.0\modeler\mxbuild.exe" --runtime-url myapp.mendixcloud.com --github-access-token c0e1dfasdfdsaf02c55ded223dbdebdbe5991095224 --appcenter-api-token 3e18912c2b43f4fe6c85f9asdfdfsbf60d3dae72f34 --app-name CoolApp --app-version 1.2.3 --app-identifier com.mendix.MyAwesomeApp
+	native-builder.exe --java-home "C:\Program Files\Java\jdk-12.0.1" --project-path "C:\MyApp\MyApp.mpr" --mxbuild-path "C:\Program Files\Mendix\8.0.0\modeler\mxbuild.exe" --runtime-url myapp.mendixcloud.com --github-access-token c0e1dfasdfdsaf02c55ded223dbdebdbe5991095224 --appcenter-api-token 3e18912c2b43f4fe6c85f9asdfdfsbf60d3dae72f34 --app-name CoolApp  --app-identifier com.mendix.MyAwesomeApp --build-number 120  --app-version 1.2.3
 	```
 
 ### 5.2 Parameter Table {#parameter-table}
@@ -79,9 +79,9 @@ Command-line arguments provide information to the Native Builder, such as where 
 |   `--appcenter-organization`   |   (Optional) Organization name used in App Center   |   `my-company`   |
 |   `--app-name`   |   Name of the app to build   |   `CoolApp`   |
 |   `--app-version`   |   Version of the app   |  `1.2.3`   |
+|   `--build-number`   |   Build number, an arbitary unique integer value   |   `120`   |
 |   `--app-identifier`   |   Unique app identifier   |   `com.mendix.MyAwesomeApp`   |
 |   `--app-icon-path`   |   (Optional) Absolute path to the app icon   |   `"C:\MyAppIcon.png"`   |
-|   `--build-number`   |   (Optional) Build number   |   `1`   |
 
 ## 6 Explaining Advanced Parameters
 
@@ -107,7 +107,7 @@ This parameter specifies an app icon file. The image must be a *.png* file, and 
 
 ### 6.6 --build-number
 
-This parameter is optional. Every build should have a unique, incrementing number. This number will be used as the name of the branch in GitHub, such as `branch/120` if you provide `--build-number 1`. Alternatively, you can use dates in the “YYYYmmddHHmm” format, such as `202012311010` for a build run on December 31, 2020 at 10:10.
+Every build that is scheduled for release should have a unique, incrementing number. This number will be used as the name of the branch in GitHub, such as `branch/120`. Android limits the max value to 32bit integeger's max value which is 2,147,483,647. Consider starting with 1 and incrementing by one with each release. Alternatively, you can use dates in the “YYmmddHHmm” format, such as `2007310950` for a build run on July 31, 2020 at 09:50.
 
 ## 7 Completing Your Initial Run
 

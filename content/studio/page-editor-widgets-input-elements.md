@@ -83,19 +83,16 @@ Specific properties of the input elements are described in the table below:
 
 ## 4 Input Validation Section
 
-In **Input Validation**, you can specify whether the widget's value should be validated. You can set a validation type for an input widget and specify an end-user message when a field is obligatory to fill in. For example, you can mark the **Full name** field as required for new customers and you can add a message saying: "Please specify your name to proceed".
+In **Input Validation**, you can specify whether the widget's value should be validated. You can set a validation type for an input widget and specify an end-user message in case validation fails. For example, you can mark the **Full name** field as required for new customers and you can add a message saying: "Please specify your name to proceed".
 
 ![](attachments/page-editor-widgets-input-elements/Validation-type-required.png)
 
 The **Input Validation** section properties are described in the table below:
 
-| Property        | Description                                                  |
-| --------------- | ------------------------------------------------------------ |
-| Validation Type | Possible values are the following ones:<br /><li><ul>None – value for the widget's field is not required, it can be left empty</ul><ul>Required – widget's field cannot be empty, end-users need to fill it in</ul><ul>Custom – can be set only in Studio Pro. However, if custom validation has been set in Studio Pro and   you can specify or change a message for custom validation if it has been set in Studio Pro</ul></li> |
-| Message         |                                                              |
-|                 |                                                              |
-
-
+| Property                                 | Description                                                  |
+| ---------------------------------------- | ------------------------------------------------------------ |
+| Validation Type                          | This property indicates whether a value filled in a widget should be validated. Possible options are the following:<br /><li><ul>**None** – a value is not required, the widget can be left empty</ul><ul>**Required** – the widget cannot be empty, end-users need to fill a value in it</ul><ul>**Custom** – can be set only in Studio Pro. However, if a custom validation has been set in Studio Pro, you can specify or change a [message](#validation-message) for the custom validation</ul></li> |
+| <a name="validation-message"></a>Message | A message that is shown to end-users when **Validation Type** is **Required** or **Custom** and when the validation has failed. |
 
 ## 5 Design Section {#input-elements-design}
 

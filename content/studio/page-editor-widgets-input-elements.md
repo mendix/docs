@@ -91,7 +91,7 @@ The **Input Validation** section properties are described in the table below:
 
 | Property        | Description                                                  |
 | --------------- | ------------------------------------------------------------ |
-| Validation Type | Possible values are the following ones:<br /><li><ul>None – end-users can leave this field empty</ul><ul>Required – this field is obligatory</ul><ul>Custom – </ul></li> |
+| Validation Type | Possible values are the following ones:<br /><li><ul>None – value for the widget's field is not required, it can be left empty</ul><ul>Required – widget's field cannot be empty, end-users need to fill it in</ul><ul>Custom – can be set only in Studio Pro. However, if custom validation has been set in Studio Pro and   you can specify or change a message for custom validation if it has been set in Studio Pro</ul></li> |
 | Message         |                                                              |
 |                 |                                                              |
 

@@ -12,6 +12,7 @@ The Native Builder takes your Mendix project containing a native profile and pac
 
 ## 2 Prerequisites
 
+* The [Native Builder](#) executable
 * A [GitHub](https://github.com/) account
 * A [Microsoft App Center](https://appcenter.ms/) account
 * Java JDK 11 (if you have Studio Pro installed, you should already have JDK 11 in *C:\Program Files\AdoptOpenJDK*) which can be acquired [here](https://adoptopenjdk.net/) 
@@ -22,8 +23,8 @@ When run, the Native Builder packages your apps by doing the following:
 
 1. Deploys your Mendix project locally.
 2. Forks a Mendix template repository on GitHub.
-3. Creates a new branch called **build/{build number provided to the tool}**. 
-4. Commits the required files and assets to the forked repository to the build branch.
+3. Creates a new branch in the forked repository called **build/{build number provided to the tool}**. 
+4. Commits the required files and assets to the build branch in the forked repository.
 5. Verifies that there is a build configuration for branch **master** on App Center. If there is not, one is provided.
 6. Copies the build configuration for branch **master** to that of branch **build/{build number}**.
 7. Starts a build for iOS and Android.
@@ -86,11 +87,11 @@ Command-line arguments provide information to the Native Builder, such as where 
 
 ### 6.1 --appcenter-organization
 
-In App Center you can be a member of one or more organizations. If the apps need to be built as part of an organization, then provide the name of that organization to Native Builder using `--appcenter-organization`. If you leave the command-line argument out, the app will be part of your personal App Center account.
+In App Center you can be a member of one or more organizations. If the app needs to be built as part of an organization, then provide the name of that organization to Native Builder using `--appcenter-organization`. If you leave the command-line argument out, the app will be part of your personal App Center account.
 
 ### 6.2 --app-name
 
-This parameter displays the name of your app. You can see this name when users install your app on a device. This parameter is also used the app’s name in App Center.
+This parameter is the name of your app. You can see this name when users install your app on a device. It is also used as the app’s name in App Center.
 
 ### 6.3 --app-version
 
@@ -98,7 +99,7 @@ This parameter specifies the version of the app you want to build. See [semantic
 
 ### 6.4 --app-identifier
 
-This parameter serves as a unique identifier for your app. Once your app is uploaded to the Apple App Store or the Play Store, the app’s identifier can no longer be modified. If you do modify the identifier after an app is published, it will be treated as a different app by both stores. An app identifier be in reverse DNS notation, e.g. {com.mendix.MyAwesomeApp}.
+This parameter serves as a unique identifier for your app. Once your app is uploaded to the Apple App Store or the Play Store, the app’s identifier can no longer be modified. If you do modify the identifier after an app is published, it will be treated as a different app by both stores. An app identifier is specified as reverse DNS notation, e.g. {com.mendix.MyAwesomeApp}.
 
 ### 6.5 --app-icon-path
 
@@ -118,13 +119,13 @@ Follow the steps below to run your Native Builder for the first time (it will fa
 	a. Navigate to App Center.<br />
 	b. Select your newly created app.<br />
 	c. Select build on the left panel.<br />
-	d. You should be greeted with a screen that allows you to link your account with a repository service.<br />
+	d. You will be greeted with a screen that allows you to link your account with a repository service.<br />
 	e. Choose GitHub.<br />
 	f. If you are not logged in already you will be asked to log into your Github account.<br />
 	g. Select approve in the permission request.<br />
 	h. Select the repository you want to connect to.<br />
-	i. You should be redirected back to your App Center account.<br />
-	j. Your repository’s branches should now be listed in the build page.
+	i. You will be redirected back to your App Center account.<br />
+	j. Your repository’s branches are now listed in the build page.
 
 ## 8 Completing Your Final Run
 
@@ -142,7 +143,7 @@ Now that your repository is connected, follow the steps below to run Native Buil
 
 If you haven’t provided your signature keys, App Center builds by default debug artifacts. To release your apps you have to sign your builds with your signature keys. Signature keys prove the authenticity of your app and prevent forgeries. 
 
-Native Builder automatically detects changes to the master branch build configuration and uses them for consecutive builds. By following [Managing App Signing Keys](https://docs.mendix.com/refguide6/managing-app-signing), you can make sure that your apps are signed and ready for release.
+Native Builder automatically detects changes to the master branch build configuration and uses them for consecutive builds. By following [Managing App Signing Keys](https://docs.mendix.com/refguide/managing-app-signing-keys), you can make sure that your apps are signed and ready for release.
 
 ### 10.2 Custom Native Code
 
@@ -154,7 +155,7 @@ In App Center you can configure your builds at the branch level. If no configura
 
 ## 11 When to Sync Your Native Template Fork
 
-When Mendix updates the Native template, Native Builder will not automatically sync your GitHub fork. You will have to manually sync yourself. The Native Builder avoids automatic synchronization because of possible merge conflicts with customized apps. 
+When Mendix updates the Native template, Native Builder will not automatically sync your GitHub fork. You will have to manually sync it yourself. The Native Builder avoids automatic synchronization because of possible merge conflicts with customized apps. 
 
 The following error scenarios could indicate that your fork is out of step with the latest native template:
 
@@ -169,9 +170,9 @@ If your Native template is not the latest version, synchronize your fork with th
 
 ### 12.1 GitHub Errors
 
-**Invalid Access Token** — Your access token is invalid. Consult the [GitHub Token](#github-token) section above and provide the access token to Native Oven.
+**Invalid Access Token** — Your access token is invalid. Consult the [GitHub Token](#github-token) section above and provide the access token to Native Builder.
 
-**Unable to Create the Fork: the Access Token Needs Access to the Repo Scope** — Your access token is valid, but has too few permissions for Native Builder to work. Native Oven forks a GitHub repository, creates a branch, and commits files. Consult the [GitHub Token](#github-token) section above and provide the new access token to Native Oven.
+**Unable to Create the Fork: the Access Token Needs Access to the Repo Scope** — Your access token is valid, but has too few permissions for Native Builder to work. Native Builder forks a GitHub repository, creates a branch, and commits files. Consult the [GitHub Token](#github-token) section above and provide the new access token to Native Builder.
 
 **Unable to Delete Branch Build/{build number}** — Something went wrong while communicating with GitHub. Verify your connection, check that GitHub is available, and try running Native Builder again.
 

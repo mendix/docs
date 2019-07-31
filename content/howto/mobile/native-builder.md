@@ -8,11 +8,11 @@ tags: ["GitHub", "App Center", "Android", "native", "iOS", "Packaging"]
 
 ## 1 Introduction
 
-The Native Builder takes your Mendix project containing a native profile and packages a native app for iOS and Android. To download the Native Builder executable, [click here](https://www.dropbox.com/sh/hpw7sshut9bco68/AABackrr75rPSgW7u5LBMkMra?dl=0). You can download the *.zip* file to a folder of your preference, and then you must extract all of the files in order for the Native Builder to work. 
+The Native Builder takes your Mendix project containing a native profile and packages a native app for iOS and Android. 
 
 ## 2 Prerequisites
 
-* The [Native Builder](#) executable
+* The [Native Builder](#) executable (download to a folder of your preference and extract all contents)
 * A [GitHub](https://github.com/) account
 * A [Microsoft App Center](https://appcenter.ms/) account
 * Java JDK 11 (if you have Studio Pro installed, you should already have JDK 11 in *C:\Program Files\AdoptOpenJDK*) which can be acquired [here](https://adoptopenjdk.net/) 
@@ -173,6 +173,7 @@ For an Android app, do the following:
 6. Provide the password of the key's alias.
 7. Click **Save**, or **Save and build** if you wish to build immediately.
         
+
 Finally, either start a build for this branch manually or run Native Builder again with the same build number as the branch you just configured (e.g. **build/1**) to let it handle the build process and download your signed artifacts.
 
 ### 10.2 Custom Native Code

@@ -81,11 +81,24 @@ Specific properties of the input elements are described in the table below:
 | Text Area     | Number of Lines    | This property is only displayed when the **Grow Automatically** option is disabled.  The number of lines determine how many lines the text area shows at the same time. If the text in the text area contains more lines you will have to use a scrollbar to see it all. <br />Default value for the **Number of Lines** option: 5 |
 | Radio Buttons | Orientation        | This property defines whether the radio buttons are displayed in your app horizontally or vertically. <br />Default value for **Orientation**: Horizontal. |
 
-## 4 Design Section {#input-elements-design}
+## 4 Input Validation Section
+
+In **Input Validation**, you can specify whether the widget's value should be validated. You can set a validation type for an input widget and specify an end-user message in case validation fails. For example, you can mark the **Full name** field as required for new customers and you can add a message saying: "Please specify your name to proceed".
+
+![](attachments/page-editor-widgets-input-elements/Validation-type-required.png)
+
+The **Input Validation** section properties are described in the table below:
+
+| Property                                 | Description                                                  |
+| ---------------------------------------- | ------------------------------------------------------------ |
+| Validation Type                          | This property indicates whether a value filled in a widget should be validated. Possible options are the following:<br /><li><ul>**None** – a value is not required, the widget can be left empty</ul><ul>**Required** – the widget cannot be empty, end-users need to fill a value in it</ul><ul>**Custom** – can be set only in Studio Pro. However, if a custom validation has been set in Studio Pro, you can specify or change a [message](#validation-message) for the custom validation</ul></li> |
+| <a name="validation-message"></a>Message | A message that is shown to end-users when **Validation Type** is **Required** or **Custom** and when the validation has failed. |
+
+## 5 Design Section {#input-elements-design}
 
 For information on the **Design** section and its properties, see [Design Section in Widgets](page-editor-widgets-design-section).
 
-## 5 Read More
+## 6 Read More
 
 * [Pages](page-editor) 
 * [Widgets](page-editor-widgets)

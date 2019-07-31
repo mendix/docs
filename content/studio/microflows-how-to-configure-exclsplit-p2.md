@@ -29,11 +29,13 @@ After microflows are created, you can add them to pages to run them in your app.
 To embed the microflow with an exclusive split (the attribute of the enumeration type) to pages, do the following:
 
 1. Сreate a page for the existing customers details and name it *Customer_details*. For more information on creating pages, see section [3.2 Creating a New Page](page-editor) in *Pages*.
+
 2.  In **Toolbox**>**Widgets** >**Data Containers**, find **Data View**.
 
     ![](attachments/microflows-how-to-configure-exclsplit/data-view.png)
 
 3. Drag and drop **Data View** to the page.
+
 4.  In the **Properties** tab for the **DATA VIEW**, do the following:<br/> 
     a. Set **Data Source** to **Context.**<br/>
     b. Set **Entity** to **Customer**.
@@ -41,28 +43,37 @@ To embed the microflow with an exclusive split (the attribute of the enumeration
     ![](attachments/microflows-how-to-configure-exclsplit/data-view-properties.png)
 
 5. In **Toolbox**>**Widgets** >**Buttons** find **Create Object**, drag and drop it inside the data view container (it is named **New** by default).
-6.  We are going to create a new page that will be opened when a user clicks the **New** button. Open the **Properties** tab for the created button and do the following:<br/>
-    a. Set **Customer** as **Entity** in the **Events** section.<br/>
-    b. Click **Select Page**.<br/>
 
+6.  We are going to create a new page that will be opened when a user clicks the **New** button. Open the **Properties** tab for the created button and do the following:<br/>
+    
+    a. Turn the **Create Object** toggle on.
+
+    b. Set **Customer** as **Entity** in the **Events** section.<br/>
+
+    b. Click **Select Page**.<br/>
+    
     ![](attachments/microflows-how-to-configure-exclsplit/create-button-properties.png) <br/>
 
     c. In the **Select Page** dialog window, click **New** page.<br/>
-    d. In the **Create new page** dialog window, fill out the title of the page, for example, *New_customer*. <br/>
+d. In the **Create new page** dialog window, fill out the title of the page, for example, *New_customer*. <br/>
     e. Tick **Pre-fill page contents based on the Customer entity** and click **Create**.
-
+    
     ![](attachments/microflows-how-to-configure-exclsplit/pre-fill-contents.png) 
-
+    
     The page with customer details is generated.
+    
 7. Return to the **Customer_details** page, and in **Toolbox**>**Widgets** >**Data Containers**, find **List View**, drag and drop it to the page.
+
 8. Open **Properties** for the list view and set **Customer** as **Data Source**>**Entity**.
-9.  In the **Toolbox**>**Building Blocks**>**Lists** select **List 4**, drag and drop it to the list view. 
+
+9. In the **Toolbox**>**Building Blocks**>**Lists** select **List 4**, drag and drop it to the list view. 
 
     ![](attachments/microflows-how-to-configure-exclsplit/list-view-list4.png) 
 
 10. Delete the following elements from the list view:<br/>
-    a. The **TEXT** widget with the subtitle. <br/>
-    b. The **IMAGE** widget.<br/>
+   a. The **TEXT** widget with the subtitle. <br/>
+   b. The **IMAGE** widget.<br/>
+
 11. Open the **Properties** of the **Details** button, and do the following:<br/>
     a. Set **Events**>**On Click Action** to **Microflow**.<br/>
     b. Click **Select microflow** and set **Show_grade_specific_page**.

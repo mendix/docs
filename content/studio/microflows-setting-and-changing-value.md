@@ -20,7 +20,7 @@ You can also change the value when you configure the following activities:
 * **Change Object** - can be used to change an existing object or properties of this object
 * **Change Variable** - change the value of an existing variable in the current microflow. 
 
-You can also configure a return value for the **End Event** - the location where the microflow will stop.
+You can also configure a return value for the **End Event** – the location where the microflow will stop.
 
 For more information on the functions of these activities, see [Microflows](microflows). 
 

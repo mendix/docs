@@ -63,7 +63,7 @@ Command-line arguments provide information to the Native Builder, such as where 
 	Your finished product will look like this example (note the double quotes around paths which could contain spaces): 
 
 	```
-	native-builder.exe --java-home "C:\Program Files\Java\jdk-12.0.1" --project-path "C:\MyApp\MyApp.mpr" --mxbuild-path "C:\Program Files\Mendix\8.0.0\modeler\mxbuild.exe" --runtime-url myapp.mendixcloud.com --github-access-token c0e1dfasdfdsaf02c55ded223dbdebdbe5991095224 --appcenter-api-token 3e18912c2b43f4fe6c85f9asdfdfsbf60d3dae72f34 --app-name CoolApp  --app-identifier com.mendix.MyAwesomeApp --build-number 120  --app-version 1.2.3
+	native-builder.exe --java-home "C:\Program Files\Java\jdk-12.0.1" --project-path "C:\MyApp\MyApp.mpr" --mxbuild-path "C:\Program Files\Mendix\8.0.0\modeler\mxbuild.exe" --runtime-url myapp.mendixcloud.com --github-access-token c0e1dfasdfdsaf02c55ded223dbdebdbe5991095224 --appcenter-api-token 3e18912c2b43f4fe6c85f9asdfdfsbf60d3dae72f34 --app-name CoolApp  --app-identifier com.mendix.MyAwesomeApp --build-number 1 --app-version 1.2.3
 	```
 
 ### 5.2 Parameter Table {#parameter-table}
@@ -79,7 +79,7 @@ Command-line arguments provide information to the Native Builder, such as where 
 |   `--appcenter-organization`   |   (Optional) Organization name used in App Center   |   `my-company`   |
 |   `--app-name`   |   Name of the app to build   |   `CoolApp`   |
 |   `--app-version`   |   Version of the app   |  `1.2.3`   |
-|   `--build-number`   |   Build number, an arbitary unique integer value   |   `120`   |
+|   `--build-number`   |   Build number, an arbitary unique integer value   |   `1`   |
 |   `--app-identifier`   |   Unique app identifier   |   `com.mendix.MyAwesomeApp`   |
 |   `--app-icon-path`   |   (Optional) Absolute path to the app icon   |   `"C:\MyAppIcon.png"`   |
 
@@ -107,7 +107,7 @@ This parameter specifies an app icon file. The image must be a *.png* file, and 
 
 ### 6.6 --build-number
 
-Every build that is scheduled for release should have a unique, incrementing number. This number will be used as the name of the branch in GitHub, such as `branch/120`. Android limits the max value to 32bit integeger's max value which is 2,147,483,647. Consider starting with 1 and incrementing by one with each release. Alternatively, you can use dates in the “YYmmddHHmm” format, such as `2007310950` for a build run on July 31, 2020 at 09:50.
+Every build that is scheduled for release should have a unique, incrementing number. This number will be used as the name of the branch in GitHub, such as `branch/120`. The highest integer Android will allow is 2,147,483,647. Consider starting with 1 and incrementing by one with each release. Alternatively, you can use dates in the “YYmmddHHmm” format, such as `2007310950` for a build run on July 31, 2020 at 09:50.
 
 ## 7 Completing Your Initial Run
 
@@ -143,43 +143,37 @@ Now that your repository is connected, follow the steps below to run Native Buil
 
 If you haven’t provided your signature keys, App Center builds by default debug artifacts. To release your apps you have to sign your builds with your signature keys. Signature keys prove the authenticity of your app and prevent forgeries. 
 
-By following [Managing App Signing Keys](https://docs.mendix.com/refguide/managing-app-signing-keys), you can make sure that your have the prerequisites for signing your apps, namely:
+First, follow [Managing App Signing Keys](https://docs.mendix.com/refguide/managing-app-signing-keys) to acquire the signing keys you need. Android and iOS apps require different types of keys as that document explains.
 
-**iOS**:
-1. A mobile provisioning profile
-2. A .p12 distribution certificate 
+Next, use your keys to sign your app. To sign your app using App Center, do the following: 
 
-**Android**: 
-1. A release key-store
+1. Navigate to [App Center](https://appcenter.ms/apps).
+2. Select the app you wish to configure.
+3. Select **Build** on the left panel.
+4. Select the branch you would like to configure from the list.
+5. Select the **Wrench icon** in the top-right corner to open the **Build configuration** panel.
 
-There two paths to signing your app, manually or with App Center. We will continue with describing signing with Appcenter. To do so: 
+The next steps differ depending on the type of app you want to configure.
 
-1. Go to [App Center](https://appcenter.ms/apps)
-2. Select the app you wish to configure
-3. Select build on the left panel
-4. Select the branch you would like to configure from the list
-5. Select the wrench icon on the top right side to open the build configuration panel
+For an iOS app, do the following:
 
-The steps here on differ depending on the app type you are configuring:
- - iOS
-     1. Enable Sign builds
-     2. Upload your mobile provisioning profile
-     3. Upload your .p12 certificate
-     4. Type the password you used when exporting the .p12 certificate
-     5. Click Save or Save and build if you wish to build immediately 
+1. Turn the **Sign builds** toggle on.
+2. Upload your mobile provisioning profile.
+3. Upload your *.p12* certificate.
+4. Provide the password you used when exporting the *.p12* certificate.
+5. Click **Save**, or **Save and build** if you wish to build immediately.
 
+For an Android app, do the following:
 
- - Android
-     1. Toggle the build variant from *debug* to *release*
-     2. Enable Sign builds
-     3. Upload your keystore file
-     4. Type the password to your keystore
-     5. Type the name of your key's alias
-     6. Type the password of the key's alias
-     7. Click Save or Save and builds if you wish to build immediately 
+1. In the **Build Variant** drop-down menu, select **release**
+2. Select **Sign builds**
+3. Upload your keystore file.
+4. Provide the password to your keystore.
+5. Provide the name of your key's alias.
+6. Provide the password of the key's alias.
+7. Click **Save**, or **Save and build** if you wish to build immediately.
         
-
-Finally either start a build for this branch manually or re-run native-builder with the same build number as the branch you just configured (e.g. build/1) to have it handle the build process and download of your now signed artifacts.
+Finally, either start a build for this branch manually or run Native Builder again with the same build number as the branch you just configured (e.g. **build/1**) to let it handle the build process and download your signed artifacts.
 
 ### 10.2 Custom Native Code
 
@@ -187,7 +181,7 @@ If you have custom native dependencies or code, you can include them in your app
 
 ### 10.3 Custom App Center Configuration
 
-In App Center you can configure your builds at the branch level. If no configuration is available for branch **master**, Native Builder will create a default configuration. If a configuration is already present, it will not be modified by the tool. When a branch for a build is initialized the configuration of master is copied over as is. **Consecutive builds will not alter the configuration for this branch!** That is to avoid overriding you custom configuration.
+In App Center you can configure your builds at the branch level. If no configuration is available for branch **master**, Native Builder will create a default configuration. If a configuration is already present, it will not be modified by the tool. When a branch for a build is initialized, the configuration of **master** is copied over. Consecutive builds will not alter this branch's configuration. This is to avoid overriding your custom configuration.
 
 ## 11 When to Sync Your Native Template Fork
 
@@ -196,7 +190,7 @@ When Mendix updates the Native template, Native Builder will not automatically s
 The following error scenarios could indicate that your fork is out of step with the latest native template:
 
 * Your App Center build fails
-* Your app crashes while you are testing it, after adding a new plugin widget or javascript action
+* Your app crashes while you are testing it after adding a new pluggable widget or JavaScript action
 
 If either of these things happen, make sure that you are using the latest Native template version by consulting the [native-template GitHub page](https://github.com/mendix/native-template). 
 
@@ -224,7 +218,7 @@ If your Native template is not the latest version, synchronize your fork with th
 
 **Build {build number} for App {app number} Has Failed** — The native build on App Center has failed. Read the log file that Native Builder has downloaded. The log file is named *{AppName}-{BuildNumber}.log* and is located in the same folder as your Native Builder executable.
 
-**The build configuration is overridden with the default** — While Native Builder is rigorously checking to identify if the branch it is building has been manually configured; in some cases it may result to false positives. That could for instance lead to your custom configuration being overridden. If that starts happening and you need i.e. custom signing, consider running the build directly via Appcenter and skip the Native Builder for this branch.
+**The build configuration is overridden with the default** — While Native Builder is checking to identify if the branch it is building has been manually configured, it may detect false positives. This could lead to your custom configuration getting overridden. If that happens, consider running the build directly using App Center and skip using the Native Builder for this branch.
 
 **Unknown Error** — If you do not understand an error, you can sign in to App Center and delete the build configuration for the **master** branch. Then run Native Builder again. The tool will recreate the default build configuration for **master** and your branch.
 

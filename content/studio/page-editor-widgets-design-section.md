@@ -32,7 +32,7 @@ The following widgets have specific properties:
 * [List view](#list-view-design-properties)  (a Data Container widget)
 * [Container](#container-design-properties) (a Layout widget)
 * [Buttons](#button-design-properties) (all Button widgets)
-* [Text](#text-design-properties) (a Typography widget)
+* [Text](#text-design-properties) (a Text widget)
 
 ### 2.1 List View Specific Properties {#list-view-design-properties}
 

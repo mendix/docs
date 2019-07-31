@@ -12,10 +12,6 @@ When converting your Mendix app project from Desktop Modeler version 7 to Studio
 
 For information about new features in Mendix 8, see [Studio Pro 8 release notes](/releasenotes/studio-pro/).
 
-{{% alert type="warning" %}}
-Mendix version 8 and Studio Pro 8 are still in beta. There may be additional breaking changes and update requirements introduced in future beta releases and when Mendix version 8 is made generally available (GA).
-{{% /alert %}}
-
 ## 2 Converting Your App Project
 
 The following sub-sections explain the steps to take in converting your app project from Mendix 7 to Mendix 8.

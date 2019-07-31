@@ -134,12 +134,6 @@ If your original project was version 7.23.2 or below and you want to work collab
 
 Follow the instructions in [Migration From the Sync Process to Collaborative Development](/refguide7/collaborative-development-migration).
 
-[//]: # "Java Action Parameters - Java Action code generation can break the code in beta 2. See Ivan"
-
-[//]: # "open JDK 11 - future betas"
-
-[//]: # "Widget DOM Changes - future betas"
-
 ## 7 Mendix Cloud Version 3
 
 Apps made in Mendix Studio Pro cannot be deployed to *Version 3* of the Mendix Cloud. If you are using a licensed Mendix Cloud V3 node, then we recommend that you upgrade to Mendix Cloud V4. If this is not possible, you will need to continue to use Mendix version 7 to create and maintain your apps.
@@ -154,7 +148,7 @@ We also noticed that by attempting to prevent those name conflicts, we sometimes
 
 What does that mean in practice? For most app projects, nothing changes and everything still works as it used to. But, in a limited number of cases, Mendix Desktop Modeler version 7 will have introduced a postfix for your parameter name. For example, a parameter called `Customer` might become `CustomerParameter1` in the generated Java code. This postfix will be removed when you migrate your app to Mendix Studio Pro 8.
 
-In these few casesyou need to make a simple fix before your code will compile again:
+In these few cases you need to make a simple fix before your code will compile again:
 
 * If it is a Java action in a module downloaded from the App Store that is causing errors, just download it again, or update it to the latest version
 * If it is your own Java action, then the fix is ever easier – just remove those postfixes from your Java code (in the previous example, `CustomerParameter1` just becomes `Customer` again).

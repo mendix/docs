@@ -72,7 +72,7 @@ howto7:
     - "Monitoring & Troubleshooting"
     - "Collaboration & Requirements Management"
 howto:
-  space: "Mendix 8 How-to's"
+  space: "Studio Pro 8 How-to's"
   priority: 7
   mendix_version: 8
   menu_categories:  

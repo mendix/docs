@@ -64,8 +64,9 @@ Make sure these environment variables exists. Use the returned Token as usuall i
 The following example shows how to use the microflow **DS_GetAccessTokenForScheduledEvents**. The sample retrieves a list of all Tenants from the database and fetches
 a token for each tenant. With the token you can proceed with your custom application logic.
 
-!!! info "Hint"
-    Do not create a Tenant object by your self as this is done automatically during login.
+{{% alert type="warning" %}}
+Do not create a Tenant object by your self as this is done automatically during login.
+{{% /alert %}}
 
 ![DS_GetAccessTokenForScheduledEvents](attachments/mindsphere-development-considerations/sample_getAccessTokeenForScheduledEvents.png)
 

@@ -62,7 +62,7 @@ Command-line arguments provide information to the Native Builder, such as where 
 	Your finished product will look like this example (note the double quotes around paths which could contain spaces): 
 
 	```
-	native-builder.exe --java-home "C:\Program Files\Java\jdk-12.0.1" --project-path "C:\MyApp\MyApp.mpr" --mxbuild-path "C:\Program Files\Mendix\8.0.0\modeler\mxbuild.exe" --runtime-url myapp.mendixcloud.com --github-access-token c0e1dfasdfdsaf02c55ded223dbdebdbe5991095224 --appcenter-api-token 3e18912c2b43f4fe6c85f9asdfdfsbf60d3dae72f34 --appcenter-organization my-company --app-name CoolApp --app-version 1.2.3 --app-identifier com.mendix.MyAwesomeApp --app-icon-path "C:\MyAppIcon.png" --build-number 1
+	native-builder.exe --java-home "C:\Program Files\Java\jdk-12.0.1" --project-path "C:\MyApp\MyApp.mpr" --mxbuild-path "C:\Program Files\Mendix\8.0.0\modeler\mxbuild.exe" --runtime-url myapp.mendixcloud.com --github-access-token c0e1dfasdfdsaf02c55ded223dbdebdbe5991095224 --appcenter-api-token 3e18912c2b43f4fe6c85f9asdfdfsbf60d3dae72f34 --app-name CoolApp --app-version 1.2.3 --app-identifier com.mendix.MyAwesomeApp
 	```
 
 ### 5.2 Parameter Table {#parameter-table}
@@ -106,7 +106,7 @@ This parameter specifies an app icon file. The image must be a *.png* file, and 
 
 ### 6.6 --build-number
 
-This parameter is optional but recommended. Every build should have a unique, incrementing number. This number will be used as the name of the branch in GitHub, such as `branch/120` if you provide `--build-number 1`. Alternatively, you can use dates in the “YYYYmmddHHmm” format, such as `202012311010` for a build run on December 31, 2020 at 10:10.
+This parameter is optional. Every build should have a unique, incrementing number. This number will be used as the name of the branch in GitHub, such as `branch/120` if you provide `--build-number 1`. Alternatively, you can use dates in the “YYYYmmddHHmm” format, such as `202012311010` for a build run on December 31, 2020 at 10:10.
 
 ## 7 Completing Your Initial Run
 

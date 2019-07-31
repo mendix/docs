@@ -12,7 +12,7 @@ The Native Builder takes your Mendix project containing a native profile and pac
 
 ## 2 Prerequisites
 
-* The [Native Builder](#) executable (download to a folder of your preference and extract all contents)
+* The [Native Builder](https://www.dropbox.com/sh/hpw7sshut9bco68/AABackrr75rPSgW7u5LBMkMra?dl=0) executable (download to a folder of your preference and extract all contents)
 * A [GitHub](https://github.com/) account
 * A [Microsoft App Center](https://appcenter.ms/) account
 * Java JDK 11 (if you have Studio Pro installed, you should already have JDK 11 in *C:\Program Files\AdoptOpenJDK*) which can be acquired [here](https://adoptopenjdk.net/) 
@@ -81,29 +81,29 @@ Command-line arguments provide information to the Native Builder, such as where 
 |   `--app-icon-path`   |   (Optional) Absolute path to the app icon   |   `"C:\MyAppIcon.png"`   |
 |   `--appcenter-organization`   |   (Optional) Organization name used in App Center   |   `my-company`   |
 
-#### 5.2 Advanced Parameter Explanation
+### 5.2 Advanced Parameter Explanation
 
-### 5.2.1 --appcenter-organization
+#### 5.2.1 --appcenter-organization
 
 In App Center you can be a member of one or more organizations. If the app needs to be built as part of an organization, then provide the name of that organization to Native Builder using `--appcenter-organization`. If you leave the command-line argument out, the app will be part of your personal App Center account.
 
-### 5.2.2 --app-name
+#### 5.2.2 --app-name
 
 This parameter is the name of your app. You can see this name when users install your app on a device. It is also used as the app’s name in App Center.
 
-### 5.2.3 --app-version
+#### 5.2.3 --app-version
 
 This parameter specifies the version of the app you want to build. See [Semantic Versioning](https://semver.org/) for more information on how to select a proper version number.
 
-### 5.2.4 --app-identifier
+#### 5.2.4 --app-identifier
 
 This parameter serves as a unique identifier for your app. Once your app is uploaded to the Apple App Store or the Play Store, the app’s identifier can no longer be modified. If you do modify the identifier after an app is published, it will be treated as a different app by both stores. An app identifier is specified as reverse DNS notation, e.g. {com.mendix.MyAwesomeApp}.
 
-### 5.2.5 --app-icon-path
+#### 5.2.5 --app-icon-path
 
 This parameter specifies an app icon file. The image must be a *.png* file, and have a resolution of 1024x1024. Mendix will do the resizing for you. If a file path is not provided, default app icons will be provided by branch **master**.
 
-### 5.2.6 --build-number
+#### 5.2.6 --build-number
 
 Every build that is scheduled for release should have a unique, incrementing number. This number will be used as the name of the branch in GitHub, such as `branch/120`. The highest integer Android will allow is 2,147,483,647. Consider starting with 1 and incrementing by one with each release. Alternatively, you can use dates in the “YYmmddHHmm” format, such as `2007310950` for a build run on July 31, 2020 at 09:50.
 

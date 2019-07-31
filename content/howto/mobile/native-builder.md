@@ -196,7 +196,7 @@ When Mendix updates the Native template, Native Builder will not automatically s
 The following error scenarios could indicate that your fork is out of step with the latest native template:
 
 * Your App Center build fails
-* Your app crashes while you are testing it
+* Your app crashes while you are testing it, after adding a new plugin widget or javascript action
 
 If either of these things happen, make sure that you are using the latest Native template version by consulting the [native-template GitHub page](https://github.com/mendix/native-template). 
 

@@ -19,23 +19,24 @@ The Native Builder takes your Mendix project containing a native profile and pac
 
 ## 3 About the Native Builder
 
-When run, the Native Builder packages your apps by doing the following:
+Native Builder uses mxbuild, GitHub, and App Center to build your apps. The tool automates the configuration of these processes to streamling your app building experience. When run, the Native Builder packages your apps by doing the following:
 
 1. Deploys your Mendix project locally.
-2. Forks a Mendix template repository on GitHub.
+2. Forks the Mendix native template repository on GitHub.
 3. Creates a new branch in the forked repository called **build/{build number provided to the tool}**. 
 4. Commits the required files and assets to the build branch in the forked repository.
-5. Verifies that there is a build configuration for branch **master** on App Center. If there is not, one is provided.
-6. Copies the build configuration for branch **master** to that of branch **build/{build number}**.
-7. Starts a build for iOS and Android.
-8. Provides progress information on the build.
-9. Downloads the zipped app if the build succeeded, or the build log file if the build failed.
+5. Configures your apps in App Center.
+6. Starts a build for iOS and Android.
+7. Provides progress information on the build.
+8. Downloads the zipped app if the build succeeded, or the build log file if the build failed.
 
 ## 4 Getting Your Tokens
 
+The sections below describe how to get tokens which allow Native Oven to authenticate with GitHub and App Center. If you already have tokens for your GitHub and App Center, you do not need to repeat these sections.
+
 ### 4.1 GitHub Token {#github-token}
 
-1. Go to [GitHub](www.github.com) and sign in.
+1. Go to [GitHub](https://github.com/) and sign in.
 2. Go to [Settings](https://github.com/settings/profile) by clicking on your profile picture in the top right.
 3. Navigate to [Personal access tokens](https://github.com/settings/tokens) and then click **Generate new token** to create a new personal access token.
 4. In the **Note** field, write *Native Builder.*
@@ -132,13 +133,15 @@ Now that your repository is connected, follow the steps below to run Native Buil
 2. Native Builder will take a few minutes to complete.
 3. When the build succeeds your binaries should have been downloaded for you.
 
+You can now use your binaries to run your app on testing devices. To publish your apps, though, you will need to get your apps signed. Consult [Enable Build Signing](#signing) below for more information on app signing.
+
 {{% alert type="info" %}} In case of failure, the build logs will be downloaded for your convenience. Remember to provide them when filing a ticket with Mendix.{{% /alert %}}
 
 ## 8 Advanced Usage
 
-### 8.1 Enable Build Signing
+### 8.1 Enable Build Signing {#signing}
 
-If you haven’t provided your signature keys, App Center builds by default debug artifacts. To release your apps you have to sign your builds with your signature keys. Signature keys prove the authenticity of your app and prevent forgeries. 
+If you haven’t provided your signature keys, App Center builds unsigned apps. To release your apps you have to sign your builds with your signature keys. Signature keys prove the authenticity of your app and prevent forgeries. 
 
 First, follow [Managing App Signing Keys](https://docs.mendix.com/refguide/managing-app-signing-keys) to acquire the signing keys you need. Android and iOS apps require different types of keys as that document explains.
 
@@ -174,13 +177,13 @@ Finally, either start a build for this branch manually or run Native Builder aga
 
 ### 8.2 Custom Native Code
 
-If you have custom native dependencies or code, you can include them in your app by merging your changes to the **master** branch of the GitHub fork which Native Builder is making. Every build branches off from **master** and your changes will be included. Remember to rebase your forked repository occasionally to get the latest changes from upstream.
+If you have custom native dependencies or code, you can include them in your app by merging your changes to the **master** branch of the GitHub fork which Native Builder is making. Every build branches off from **master** and your changes will be included. Remember to sync your forked repository occasionally to get the latest changes from upstream. For more information on syncing your repository, see [When to Sync Your Native Template Fork](#sync-your-fork) below.
 
 ### 8.3 Custom App Center Configuration
 
 In App Center you can configure your builds at the branch level. If no configuration is available for branch **master**, Native Builder will create a default configuration. If a configuration is already present, it will not be modified by the tool. When a branch for a build is initialized, the configuration of **master** is copied over. Consecutive builds will not alter this branch's configuration. This is to avoid overriding your custom configuration.
 
-## 9 When to Sync Your Native Template Fork
+## 9 When to Sync Your Native Template Fork {#sync-your-fork}
 
 When Mendix updates the Native template, Native Builder will not automatically sync your GitHub fork. You will have to manually sync it yourself. The Native Builder avoids automatic synchronization because of possible merge conflicts with customized apps. 
 

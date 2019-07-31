@@ -14,6 +14,15 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deploym
 
 ## 2019
 
+### July 31st, 2019  
+
+#### App Store Improvements  
+
+* We simplified the options available for formatting the Documentation section when creating new app store content.
+* We made it possible to upload images into the Documentation editor - you can drag and drop an image from your file explorer into the editor, or link to images via URL (Copy + Paste does *not* work due to browser inconsistencies).
+* We made some user changes and improvements when you create new content using GitHub as the source. For example, an easier-to-use selection screen when choosing your repository.  
+* We also made some other minor bug fixes.  
+
 ### July 25th, 2019
 
 #### Mendix Cloud Improvements

@@ -476,10 +476,8 @@ The widget’s style properties are as follows:
 | `bottomBar` | `backgroundColor` | This is the color of the background. |
 | `bottomBar` | `fontFamily` | This is the font type of the bottom bar text. |
 | `bottomBar` | `fontSize` | This is the font size of the bottom bar text. |
-| `bottomBar` | `iconColor` | This is the default icon color. |
-| `bottomBar` | `textColor` | This is the default text color. |
-| `bottomBar` | `selectedIconColor` | This is the selected icon color. |
-| `bottomBar` | `selectedTextColor` | This is the selected text color. |
+| `bottomBar` | `color` | This is the default icon and text color. |
+| `bottomBar` | `selectedColor` | This is the selected icon and text color. |
 
 The default class to style the navigation is named  `navigationStyle`. There is no support to for a custom class styling on navigation.
 

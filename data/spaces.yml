@@ -86,12 +86,7 @@ howto:
     - "Extensibility"
     - "Security"
     - "Testing"
-    - "Monitoring & Troubleshooting"
-    - "SAP"
-    - "Siemens"    
-  banner:
-    type: 'info'
-    text: 'You are browsing the documentation for Mendix 8, which is currently a beta release. For more information, see <a href="/releasenotes/beta-features/index">Mendix Beta Features</a>.'
+    - "Monitoring & Troubleshooting"   
 refguide5:
   space: "Mendix 5 Reference Guide"
   priority: false
@@ -143,12 +138,6 @@ refguide:
     - "Mendix Runtime"
     - "Mobile"
     - "Java Programming"
-    - "SAP"
-    - "IBM"
-    - "Siemens"
-  banner:
-    type: 'info'
-    text: 'You are browsing the documentation for Mendix 8, which is currently a beta release. For more information, see <a href="/releasenotes/beta-features/index">Mendix Beta Features</a>.'
 releasenotes:
   space: "Release Notes"
   priority: false

@@ -4,6 +4,8 @@ category: "App Settings"
 menu_order: 10
 description: "Describes general settings of your app."
 tags: ["Settings", "App", "Developer Portal"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+#The anchor #managing-app-users below is mapped from App > General > Settings > Manage App Users, so it should not be removed or changed.
 ---
 
 ## 1 Introduction
@@ -57,11 +59,15 @@ Specific steps for configuring different cloud platforms are provided here:
 
 Click **Manage App Users** to manage App Users, who are end-users who can access the deployed app on specific environments to use it, test it, and provide feedback.
 
+{{% alert type="info" %}}
+You can also manage app users from Studio, by clicking **Manage Users** on the **Settings > Roles and Permissions** page within Studio.
+{{% /alert %}}
+
 On the **App User Management** page, you will only see the environments for your app for which the following factors are true:
 
 * Mendix Single Sign-On is implemented:
-	* In Studio Pro, SSO can implemented via the [AppCloudServices](https://appstore.home.mendix.com/link/app/934/) module – for details, see [Mendix Single Sign-On](../deploy/integrate-with-mendix-sso)
 	* In Studio, SSO is automatically implemented for your app project by enabling security for your app – for details, see the [Enabling Security](/studio/settings-security#enabling-security) section of *Security, Roles & Permissions*
+	* In Studio Pro, SSO can implemented via the [AppCloudServices](https://appstore.home.mendix.com/link/app/934/) module – for details, see [Mendix Single Sign-On](../deploy/integrate-with-mendix-sso)
 * Your user role allows you to manage other users (for more information, see the [User Management Properties](/refguide/user-roles#user-management) section of *User Roles*)
 
 ### 4.1 Inviting App Users
@@ -70,13 +76,13 @@ To invite a new App User on the **App User Management** page, follow these steps
 
 1. Click **Invite Users**.
 2. Enter the email addresses of the end-users you want to invite.
-3.  Click **Include your app team** to include invitiations to all the members of your [App Team](../collaborate/team). This may be useful, because people invited to join your App Team are not added as App Users automatically.
+3.  Click **Include your app team** to include invitations to all the members of your [App Team](../collaborate/team). This may be useful, because people invited to join your App Team are not added as App Users automatically.
 
 	{{% image_container width="450" %}}![](attachments/invite-app-user.png)
 	{{% /image_container %}}
 	
 4. Select the role for the App User (for example, **User** or **Administrator**). Permissions for these roles correspond to what you have configured for your app project's user roles in [Project Security](/refguide/project-security#user-roles) in Mendix Studio Pro or [Roles and Permissions](/studio/settings-security#roles-and-permissions) in Mendix Studio. If you have created a customized role, you need to publish the app before you are able to see and assign it here.
-5. Add a personal message to your invitiation, and finally click **Next** then **Send Invitations** to send it.
+5. Add a personal message to your invitation, and finally click **Next** then **Send Invitations** to send it.
 
 The invitee will receive an email asking them to authorize access to their Mendix account on this screen:
 

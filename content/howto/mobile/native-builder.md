@@ -19,7 +19,7 @@ The Native Builder takes your Mendix project containing a native profile and pac
 
 ## 3 About the Native Builder
 
-Native Builder uses mxbuild, GitHub, and App Center to build your apps. The tool automates the configuration of these processes to streamling your app building experience. When run, the Native Builder packages your apps by doing the following:
+Native Builder uses MxBuild, GitHub, and App Center to build your apps. The tool automates the configuration of these processes to streamline your app building experience. When run, the Native Builder packages your apps by doing the following:
 
 1. Deploys your Mendix project locally.
 2. Forks the Mendix native template repository on GitHub.
@@ -70,13 +70,13 @@ Command-line arguments provide information to the Native Builder, such as where 
 | ---- | ---- | ---- |
 |   `--java-home`   |   Absolute path to the directory where Java executable is located   |   `"C:\Program Files\Java\jdk-11.0.1"`   |
 |   `--project-path`   |   Absolute path to the Mendix project file   | `"C:\MyApp\MyApp.mpr"`     |
-|   `--mxbuild-path`   |   Absolute path to mxbuild executable   |   `"C:\Program Files\Mendix\8.0.0\modeler\mxbuild.exe"`   |
+|   `--mxbuild-path`   |   Absolute path to MxBuild executable   |   `"C:\Program Files\Mendix\8.0.0\modeler\mxbuild.exe"`   |
 |   `--runtime-url`   |   URL of the Mendix runtime   |   `myapp.mendixcloud.com`   |
 |   `--github-access-token`   |   GitHub access token   |   `c0e1dasf1e102c55ded223dbdebdbe59asf95224`   |
 |   `--appcenter-api-token`   |   App Center API token   |   `3e18asdfb43f4fe6c85afsd0bf60dde72f134`   |
 |   `--app-name`   |   Name of the app to build   |   `CoolApp`   |
 |   `--app-version`   |   Version of the app   |  `1.2.3`   |
-|   `--build-number`   |   Build number, an arbitary unique integer value   |   `1`   |
+|   `--build-number`   |   Build number, an arbitrary unique integer value   |   `1`   |
 |   `--app-identifier`   |   Unique app identifier   |   `com.mendix.MyAwesomeApp`   |
 |   `--app-icon-path`   |   (Optional) Absolute path to the app icon   |   `"C:\MyAppIcon.png"`   |
 |   `--appcenter-organization`   |   (Optional) Organization name used in App Center   |   `my-company`   |
@@ -119,7 +119,7 @@ Follow the steps below to run your Native Builder for the first time (it will fa
 	c. Select build on the left panel.<br />
 	d. You will be greeted with a screen that allows you to link your account with a repository service.<br />
 	e. Choose GitHub.<br />
-	f. If you are not logged in already you will be asked to log into your Github account.<br />
+	f. If you are not logged in already you will be asked to log into your GitHub account.<br />
 	g. Select approve in the permission request.<br />
 	h. Select the repository you want to connect to.<br />
 	i. You will be redirected back to your App Center account.<br />

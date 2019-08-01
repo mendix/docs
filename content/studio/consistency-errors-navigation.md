@@ -50,8 +50,7 @@ If you set a page that expects an object to be passed to it as the home page (fo
 
 Let us study an example: in your **Navigation**, you have set **Customer Details** page as the home page. 
 
-{{% image_container width="350" %}}![Navigation Item Properties](attachments/consistency-errors-navigation/navigation-item-properties.png)
-{{% /image_container %}}
+![Navigation Item Properties](attachments/consistency-errors-navigation/navigation-item-properties.png)
 
 You have the **Customer Details** page with a data view that expects an object *Customer* to be passed to it. In other words, this page needs to get data first to be able to display it. 
 

@@ -14,7 +14,7 @@ For more information on the Make It Native app, see [Getting the Make It Native 
 
 **Release date: August 1st, 2019**
 
-This is the official release of the Android and iOS versions of the Make It Native app, with support for Mendix Studio Pro 8.0. The apps are not backwards compatible with the Beta 1, 2, or 3 versions of Mendix Studio Pro. For more information on Mendix Studio Pro 8.0, see the [8.0.0 Release Notes](/releasenotes/studio-pro/8.0)
+This is the official release of the Android and iOS versions of the Make It Native app, with support for Mendix Studio Pro 8.0. The apps are not backwards compatible with the Mendix Studio Pro 8.0.0 Beta versions of Mendix Studio Pro. For more information on Mendix Studio Pro 8.0, see the [8.0.0 Release Notes](/releasenotes/studio-pro/8.0)
 
 ### Limitations:
 

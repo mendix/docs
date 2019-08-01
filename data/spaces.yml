@@ -16,24 +16,6 @@ addons:
     - "APM Guide"
     - "AQM Guide"
     - "ATS Guide"
-howto50:
-  space: "Mendix 5 How-to's"
-  priority: false
-  mendix_version: 5
-  noindex: true
-  menu_categories:
-    - "Getting Started"
-    - "Data Models"
-    - "GUIs"
-    - "Logic & Business Rules"
-    - "Mobile"
-    - "Security"
-    - "Integration"
-    - "Extendability"
-    - "Custom Widget Development"
-    - "Testing"
-    - "Monitoring & Troubleshooting"
-    - "Collaboration & Project Management"
 howto6:
   space: "Mendix 6 How-to's"
   priority: false
@@ -86,20 +68,7 @@ howto:
     - "Extensibility"
     - "Security"
     - "Testing"
-    - "Monitoring & Troubleshooting"   
-refguide5:
-  space: "Mendix 5 Reference Guide"
-  priority: false
-  mendix_version: 5
-  noindex: true
-  menu_categories:
-    - "General"
-    - "Team Server"
-    - "Modeler"
-    - "Runtime"
-    - "Java Programming"
-    - "Mobile"
-    - "Proactive Maintenance"
+    - "Monitoring & Troubleshooting"
 refguide6:
   space: "Mendix 6 Reference Guide"
   priority: false

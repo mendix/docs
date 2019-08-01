@@ -1,7 +1,7 @@
 ---
 title: "Package Native Apps Using Native Builder"
 parent: "native-mobile"
-menu_order: 40
+menu_order: 70
 description: A how-to for packaging your iOS and Android apps.
 tags: ["GitHub", "App Center", "Android", "native", "iOS", "Packaging"]
 ---
@@ -188,3 +188,8 @@ If your Native template is not the latest version, synchronize your fork with th
 **Build {build number} for App {app number} Has Failed** — The native build on App Center has failed. Read the log file that Native Builder has downloaded. The log file is named *{AppName}-{BuildNumber}.log* and is located in the same folder as your Native Builder executable.
 
 **Unknown Error** — If you do not understand an error, you can sign in to App Center and delete the build configuration for the **master** branch. Then run Native Builder again. The tool will recreate the default build configuration for **master** and your branch.
+
+## 13 Read More
+
+* [Get Started with Native Mobile](getting-started-with-native-mobile)
+* [Debug Native Apps (Advanced)](native-debug)

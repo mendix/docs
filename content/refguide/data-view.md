@@ -87,6 +87,8 @@ This property determines how input widgets are rendered if read-only.
 
 *Default value:* Control
 
+{{% alert type="info" %}}Not supported on Native mobile pages{{% /alert %}}
+
 ## 6 Data Source Properties
 
 The data source determines which object will be shown in the data view. For general information about data sources, see [Data Sources](data-sources).

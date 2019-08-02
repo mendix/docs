@@ -44,7 +44,7 @@ The following steps will teach you to build a pluggable input widget, and show y
 	Optionally you may remove all unused custom widgets to optimize the debugging process. Select **Project > Show Project Directory in Explorer** from the Mendix Studio Pro menu and open the **widgets** folder. Then, delete all the files in this folder. 
 	
 	To resolve the errors this incurs:<br />
-	a. Press <kbd>F4</kbd> to refresh your app.<br />
+	a. Press <kbd>F4</kbd> or select **Project > Synchronize Project Directory** to refresh your app.<br />
 	b. Double-click the errors in the bottom menu to see their locations.<br />
 	c. Delete the widgets those errors bring you to.
 

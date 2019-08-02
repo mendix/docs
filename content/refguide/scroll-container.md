@@ -38,7 +38,7 @@ This property determines in which mode the scroll container operates.
 
 _Default value:_ Headline
 
-{{% alert type="info" %}}Not supported on Native mobile pages{{% /alert %}}
+{{% alert type="info" %}}_Default value:_ Headline is not supported on native mobile pages.{{% /alert %}}
 
 ### Scroll Behavior
 
@@ -51,7 +51,7 @@ This property determines what happens when the content of a region does not fit 
 
 _Default value:_ Per region
 
-{{% alert type="info" %}}Not supported on Native mobile pages{{% /alert %}}
+{{% alert type="info" %}}_Default value:_ Per region is not supported on native mobile pages.{{% /alert %}}
 
 ### Width
 
@@ -59,7 +59,8 @@ By default the scroll container will extend the full width of its parent widget.
 
 _Default value:_ Full width
 
-{{% alert type="info" %}}Not supported on Native mobile pages{{% /alert %}}
+{{% alert type="info" %}}_Default value:_ Full width
+ is not supported on native mobile pages.{{% /alert %}}
 
 ### Width Value (for Width Set to 'pixels' or 'percentage')
 
@@ -73,7 +74,7 @@ _Default value:_ Center
 
 ## Regions
 
-{{% alert type="info" %}}Not supported on Native mobile pages{{% /alert %}}
+{{% alert type="info" %}}Regions are not supported on native mobile pages.{{% /alert %}}
 
 ### Enable Top
 

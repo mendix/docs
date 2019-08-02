@@ -4,6 +4,8 @@ parent: "rg-ats"
 menu_order: 10
 ---
 
+Before you start testing, read [Compatibility](ov-compatibility) and [Deployment Options](ov-deployment) for setting up ATS.
+
 These are the main documents in this category:
 
 * [General](rg-two-general)

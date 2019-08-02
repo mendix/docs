@@ -17,11 +17,11 @@ Follow these steps to set the bookmark:
 2. Log in with your account.
 3.  Open the information dialog by clicking this icon in the upper right corner of the screen:
 
-   ![](attachments/rg-two-ats-helper/information.png)
+	![](attachments/rg-two-ats-helper/information.png)
    
 4.  Find the link that says **ATS Helper**:
 
-   ![](attachments/rg-two-ats-helper/info-dialog.png)
+	![](attachments/rg-two-ats-helper/info-dialog.png)
 
 5. Create a browser bookmark for this link with one of these methods:
    * Drag the link to your browser's bookmark bar

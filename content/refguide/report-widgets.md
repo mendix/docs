@@ -6,7 +6,7 @@ tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="warning" %}}Report widgets are not supported on Native mobile pages{{% /alert %}}
+{{% alert type="warning" %}}Report widgets are not supported on native mobile pages.{{% /alert %}}
 
 With reporting, you can create reports over the database data. Reporting is used for creating aggregated information (for example , the total sales per customer).
 

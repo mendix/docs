@@ -45,7 +45,7 @@ This property specifies what happens when the image is clicked:
 
 _Default value:_ Do nothing
 
-{{% alert type="info" %}}Not supported on Native mobile pages{{% /alert %}}
+{{% alert type="info" %}}On click events are not supported on native mobile pages.{{% /alert %}}
 
 ### Microflow (in the case 'Call microflow')
 

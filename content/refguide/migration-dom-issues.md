@@ -50,7 +50,7 @@ We made a number of updates to the data grid markup. Previously, the data grid w
 
 Another data grid markup change is that the `div` containing the toolbar and the `div` containing the paging bar (both part of the control bar) are now in a logical order. Previously, additional CSS was needed to display them in the right order, and additional JavaScript was needed to dictate a logical tab behavior. The current structure now falls in line with [Web Content Accessibility Guidelines 2.1's criterion 1.3.2](https://www.w3.org/TR/WCAG21/#meaningful-sequence) by having [the DOM order follow the visual order](https://www.w3.org/TR/WCAG20-TECHS/C27.html).
 
-With new accessibility features implemented, now `div` containing pagination section (inside of control bar) has appropriate `role` attribute set. Buttons inside of this `div`, including the div itself, now has translatable `aria-label` attributes which can be set from Modeler's `System Texts` page with category name `Accessibility`. New `span` and `caption` elements added as a sibling to *`buttons` for pagination* and `thead` respectively. They are only visible to screen readers. 
+With new accessibility features implemented, now `div` containing pagination section (inside of control bar) has appropriate `role` attribute set. Buttons inside of this `div`, including the `div` itself, now has translatable `aria-label` attributes which can be set from Modeler's `System Texts` page with category name `Accessibility`. New `span` and `caption` elements added as a sibling to *`buttons` for pagination* and `thead` respectively. They are only visible to screen readers. 
 
 This is the current markup of the data grid (unchanged code omitted):
 

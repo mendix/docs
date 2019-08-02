@@ -11,7 +11,7 @@ tags: ["studio", "microflow", "set value", "variable"]
 
 This document describes microflow expressions in Mendix Studio. Expressions can be used to create or change an object or a variable based on logic. 
 
-The **Expression** tab is available for the following activities in the microflow:
+The **Expression** tab is available for the following activities in a microflow:
 
 *  [End Event](/refguide/end-event)
 *  [Decision](microflows-decision)
@@ -90,7 +90,7 @@ You add a **[Decision](microflows-decision)** to check if an object (in the exam
 
 ## 4 Expression Types {#expression-types}
 
-An overview of the possibilities with expressions can be found below:
+A list of the operators you can use in expressions in Studio can be found below:
 
 ### 4.1 Relational Expressions
 

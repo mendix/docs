@@ -20,8 +20,8 @@ Pages define the end-user interface of a Mendix application. Every page is based
 
 There are two different ways to edit your page:
 
-* [Structure Mode](#structure-mode), the traditional editor used in previous versions of Mendix
-* [Design Mode](#design-mode), a WYSIWYG (**W**hat **Y**ou **S**ee **I**s **W**hat **Y**ou **G**et) editor which better reflects what the page will look like when it is published.
+* [Structure Mode](#structure-mode), the default editor which clearly shows the relationship between page elements, together with additional information about each element
+* [Design Mode](#design-mode), a WYSIWYG (**W**hat **Y**ou **S**ee **I**s **W**hat **Y**ou **G**et) editor which better reflects what the page will look like when it is published
 
 You can switch to the WYSIWYG editor from the traditional editor by clicking the **Design mode** button in the page editor.
 You can return to the structural editor by clicking **Structure mode**
@@ -30,22 +30,22 @@ You can return to the structural editor by clicking **Structure mode**
 
 Both modes allow you to edit your page by doing the following:
 
-* Dragging widgets from the **Toolbox** dock onto the page
+* Dragging widgets from the **Toolbox** pane onto the page
 * Dragging widgets, and their contents, from one place on the page to another
-* Properties of each widget are shown in the **Properties** dock
-* A Properties dialog can be opened from the menu you get when you right-click the widget
+* Properties of each widget are shown in the **Properties** pane
+* A Properties dialog window can be opened from the menu you get when you right-click the widget
 
 ### 2.1 Structure Mode{#structure-mode}
 
-In structure mode, the page widgets are laid out so that it is easy to see the logical relationship between them. It has the following features which are not available in design Mode:
+In Structure mode, the page widgets are laid out so that it is easy to see the logical relationship between them. It has the following features which are not available in Design mode:
 
 * Widgets are shown with additional information easily visible – for example, data sources for data views and the width assigned to columns
 
     ![Frequently-used widgets](attachments/page/structure-mode-info.png)
 
-* Each widget has a drop zone before/above and after/below it – this makes it easier to place widgets correctly when they appear close together in Design Mode
-* Right-click on a drop zone allows you to add a widget at that position
-* There is a menu at the top of the page of frequently-used widgets – these cannot be dragged, but are positioned by clicking on a drop zone after selecting the widget
+* Each widget has a drop zone before/above and after/below it – this makes it easier to place widgets correctly when they appear close together in Design mode
+* Right-click on a drop zone allows you to insert a widget into it
+* There is a menu at the top of the page of frequently-used widgets – these cannot be dragged, but are positioned by clicking a drop zone after selecting the widget
 
     ![Frequently-used widgets](attachments/page/frequently-used.png)
 
@@ -55,17 +55,17 @@ In structure mode, the page widgets are laid out so that it is easy to see the l
 
 ### 2.2 Design Mode
 
-In design mode, the page is laid out as it will appear when published so that it is easy to see the spatial relationship between them.
+In Design mode, the page is laid out as it will appear when published so that it is easy to see the spatial relationship between them.
 
-For example, the first image shown under [Structure Mode](#structure-mode), above, will look like this in design mode for a tablet:
+For example, the example page shown in [Structure Mode](#structure-mode), above, will look like this in Design mode for a tablet:
 
 ![Design mode page as displayed on a tablet](attachments/page/design-mode-example.png)
 
-It has the following features which are not available in structure Mode:
+It has the following features which are not available in Structure mode:
 
-* The widgets are shown as they will be on the page – for example two text widgets which are laid out vertically in structural mode may actually be laid out horizontally when the app is published, and this will be reflected in design mode
+* The widgets are shown as they will be on the page – for example two text widgets which are laid out vertically in structural mode may actually be laid out horizontally when the app is published, and this will be reflected in Design mode
 
-* The page layout can be seen for different device form-factors – for example phone or browser by clicking the appropriate form factor button
+* The page layout can be seen for different device modes – for example phone or browser by clicking the appropriate device mode button
 
     ![Show styles button](attachments/page/design-factor.png)
 

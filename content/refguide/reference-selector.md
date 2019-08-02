@@ -44,7 +44,7 @@ The advantage of a selecting using a drop-down is that it is very efficient; no 
 
 _Default value:_ Drop-down
 
-{{% alert type="info" %}}_Default value:_ Drop-down is not supported on native mobile pages.{{% /alert %}}
+{{% alert type="info" %}}Not supported on native mobile pages.{{% /alert %}}
 
 ### Empty Option Caption
 

@@ -21,8 +21,7 @@ This property indicates whether the contents of the tab page should be refreshed
 
 _Default value:_ True
 
-{{% alert type="info" %}}_Default value:_ True
- is not supported on native mobile pages.{{% /alert %}}
+{{% alert type="info" %}}Not supported on native mobile pages.{{% /alert %}}
 
 ## Visibility Properties
 

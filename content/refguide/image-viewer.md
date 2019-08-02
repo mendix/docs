@@ -67,7 +67,7 @@ This is the image that is displayed if no image is uploaded.
 
 _Default value_: Percentage
 
-{{% alert type="info" %}}_Default value_: Percentage is not supported on native mobile pages.{{% /alert %}}
+{{% alert type="info" %}}Not supported on native mobile pages.{{% /alert %}}
 
 {{% snippet file="refguide/Image+Width.md" %}}
 
@@ -77,7 +77,7 @@ _Default value_: 100
 
 _Default value_: Auto
 
-{{% alert type="info" %}}_Default value_: Auto is not supported on native mobile pages.{{% /alert %}}
+{{% alert type="info" %}}Not supported on native mobile pages.{{% /alert %}}
 
 {{% snippet file="refguide/Image+Height.md" %}}
 

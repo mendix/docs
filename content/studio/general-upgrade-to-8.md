@@ -1,6 +1,7 @@
 ---
 title: "Upgrading to Mendix Version 8"
 category: "General Info"
+menu_order: 30
 description: "Describes the process of upgrading to Mendix version 8 in Studio."
 tags: ["studio", "studio pro", "upgrade", "version"]
 ---

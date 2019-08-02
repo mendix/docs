@@ -16,8 +16,7 @@ When you use the execute button you will see the results.
 
 If you open a query that is used in the measurements tool it is presented as read-only.
 
-You can perform XPath queries like //System.User[starts-with(Name,'a')];Name,LastLogin
-For XPath queries you can select a user to impersonate, so the query includes security.
+You can perform XPath queries like *//System.User[starts-with(Name,'a')];Name,LastLogin*. For XPath queries you can select a user to impersonate, so the query includes security.
 
 You can perform a query of type ID. This determines the Mendix entity related to the given ID.
 Additionally the ID query can specify columns specific to the entity related to the ID and show these as the query result.

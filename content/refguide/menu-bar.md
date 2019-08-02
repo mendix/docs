@@ -5,7 +5,7 @@ tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="warning" %}}The Menu Bar widget is not supported on Native mobile pages{{% /alert %}}
+{{% alert type="warning" %}}The menu bar widget is not supported on native mobile pages.{{% /alert %}}
 
 ## 1 Introduction
 

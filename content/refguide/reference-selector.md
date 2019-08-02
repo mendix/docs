@@ -44,7 +44,7 @@ The advantage of a selecting using a drop-down is that it is very efficient; no 
 
 _Default value:_ Drop-down
 
-{{% alert type="info" %}}Not supported on Native mobile pages{{% /alert %}}
+{{% alert type="info" %}}_Default value:_ Drop-down is not supported on native mobile pages.{{% /alert %}}
 
 ### Empty Option Caption
 
@@ -64,13 +64,13 @@ See [Opening Pages](opening-pages). Note that opening select pages in content is
 You can generate a new page to show by right-clicking the widget and selecting 'Generate select page...'.
 {{% /alert %}}
 
-{{% alert type="info" %}}Not supported on Native mobile pages{{% /alert %}}
+{{% alert type="info" %}}Select page is not supported on native mobile pages.{{% /alert %}}
 
 ### Go-To Page
 
 The go-to page gives end users quick access to a more detailed overview of the object being selected. This property determines which page is shown to the user. The page should contain a data view with the same entity as the one that is selected by the reference selector.
 
-{{% alert type="info" %}}Not supported on Native mobile pages{{% /alert %}}
+{{% alert type="info" %}}Go-to page is not supported on native mobile pages.{{% /alert %}}
 
 ### Go-To Page Settings
 

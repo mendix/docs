@@ -11,13 +11,10 @@ The Mendix mobile app and generated hybrid mobile apps contain their own `index.
 ```js
 {
     "files": {
-        "css": [
-            "lib/bootstrap/css/bootstrap.min.css",
-            "mxclientsystem/mxui/ui/mxui.css",
-            "css/theme.css"
-        ],
-        "js": [ "mxclientsystem/mxui/mxui.js" ]
-    }
+        "css": ["styles/web/css/main.css"],
+        "js": ["mxclientsystem/mxui/mxui.js"]
+    },
+    "cachebust": "{{cachebust}}"
 }
 
 ```
@@ -28,15 +25,12 @@ If you want to include more resources, you can add your own `components.json` fi
 ```js
 {
     "files": {
-        "css": [
-            "lib/bootstrap/css/bootstrap.min.css",
-            "mxclientsystem/mxui/ui/mxui.css",
-            "css/theme.css"
-        ],
-        "js": [ 
-			"mxclientsystem/mxui/mxui.js",
-			"myOwnCode.js"
-		]
-    }
+        "css": ["styles/web/css/main.css"],
+        "js": [
+		"mxclientsystem/mxui/mxui.js",
+		"myOwnCode.js"
+	]
+    },
+    "cachebust": "{{cachebust}}"
 }
 ```

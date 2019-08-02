@@ -18,7 +18,7 @@ If you don't have an SVN client like Tortoise SVN installed, make a copy of the 
 
 ## 3 Import Module APMAgent
 
-Import the module APMAgent in the modeler.
+Import the module APMAgent in the Modeler.
 
 ![](attachments/ig-one-installation-steps/Import_Module_Package.png)
 
@@ -26,7 +26,7 @@ Write down the widgets in the warning dialog that are overwritten to be able to 
 
 ## 4 Copy the Language If a Language Other Than English US Is Used
 
-If you are not using only **English, United States**, copy the **English, United States** language for the APMAgent module to all the languages using **Tools** > **Language Operations** in the Modeller:
+If you are not using only **English, United States**, copy the **English, United States** language for the APMAgent module to all the languages using **Tools** > **Language Operations** in the Modeler:
 
 ![](attachments/ig-one-installation-steps/Language_Operations_Header.png)
 
@@ -36,7 +36,7 @@ If you are not using only **English, United States**, copy the **English, United
 
 ## 5 Add Permissions
 
-Add `APMAgent.Admin` permissions to the project **Ssecurity** > **User roles** tab for a selected administrator role.
+Add `APMAgent.Admin` permissions to the project **Security** > **User roles** tab for a selected administrator role.
 
 ![](attachments/ig-one-installation-steps/Add_Permissions.png)
 

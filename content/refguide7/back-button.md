@@ -1,5 +1,5 @@
 ---
-title: "Back Button"
+title: "Close Page Button"
 parent: "button-widgets"
 ---
 

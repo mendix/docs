@@ -1,4 +1,5 @@
-/* http://prismjs.com/download.html?themes=prism&languages=markup+css+clike+javascript+bash+git+http+java+json+markdown+powershell+jsx+scss+sql+typescript&plugins=line-numbers+toolbar+normalize-whitespace+show-language+copy-to-clipboard */
+/* PrismJS 1.17.1
+https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript+bash+git+http+java+scala+markdown+json+typescript+sql+powershell+scss+jsx+tsx&plugins=toolbar+normalize-whitespace+show-language+copy-to-clipboard */
 /**
  * prism.js default theme for JavaScript, CSS and HTML
  * Based on dabblet (http://dabblet.com)
@@ -11,6 +12,7 @@ pre[class*="language-"] {
 	background: none;
 	text-shadow: 0 1px white;
 	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
 	text-align: left;
 	white-space: pre;
 	word-spacing: normal;
@@ -56,13 +58,13 @@ pre[class*="language-"] {
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-	background: #f9f9fa;
+	background: #f5f2f0;
 }
 
 /* Inline code */
 :not(pre) > code[class*="language-"] {
 	padding: .1em;
-	//border-radius: .3em;
+	border-radius: .3em;
 	white-space: normal;
 }
 
@@ -105,8 +107,8 @@ pre[class*="language-"] {
 .token.url,
 .language-css .token.string,
 .style .token.string {
-	color: #a67f59;
-	background: hsla(0, 0%, 100%, .5);
+	color: #9a6e3a;
+	background: #f5f2f0;
 }
 
 .token.atrule,
@@ -115,7 +117,8 @@ pre[class*="language-"] {
 	color: #07a;
 }
 
-.token.function {
+.token.function,
+.token.class-name {
 	color: #DD4A68;
 }
 
@@ -137,51 +140,11 @@ pre[class*="language-"] {
 	cursor: help;
 }
 
-pre.line-numbers {
-	position: relative;
-	padding-left: 3.5em;
-	counter-reset: linenumber;
-}
-
-pre.line-numbers > code {
+div.code-toolbar {
 	position: relative;
 }
 
-.line-numbers .line-numbers-rows {
-	position: absolute;
-	pointer-events: none;
-	top: 0;
-	font-size: 100%;
-	left: -3.8em;
-	width: 3em; /* works for line-numbers below 1000 lines */
-	letter-spacing: -1px;
-	border-right: 1px solid #DDD;
-
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-
-}
-
-	.line-numbers-rows > span {
-		pointer-events: none;
-		display: block;
-		counter-increment: linenumber;
-	}
-
-		.line-numbers-rows > span:before {
-			content: counter(linenumber);
-			color: $base-text-color;
-			display: block;
-			padding-right: 0.8em;
-			text-align: right;
-		}
-pre.code-toolbar {
-	position: relative;
-}
-
-pre.code-toolbar > .toolbar {
+div.code-toolbar > .toolbar {
 	position: absolute;
 	top: .3em;
 	right: .2em;
@@ -189,19 +152,25 @@ pre.code-toolbar > .toolbar {
 	opacity: 0;
 }
 
-pre.code-toolbar:hover > .toolbar {
+div.code-toolbar:hover > .toolbar {
 	opacity: 1;
 }
 
-pre.code-toolbar > .toolbar .toolbar-item {
+/* Separate line b/c rules are thrown out if selector is invalid.
+   IE11 and old Edge versions don't support :focus-within. */
+div.code-toolbar:focus-within > .toolbar {
+	opacity: 1;
+}
+
+div.code-toolbar > .toolbar .toolbar-item {
 	display: inline-block;
 }
 
-pre.code-toolbar > .toolbar a {
+div.code-toolbar > .toolbar a {
 	cursor: pointer;
 }
 
-pre.code-toolbar > .toolbar button {
+div.code-toolbar > .toolbar button {
 	background: none;
 	border: 0;
 	color: inherit;
@@ -214,9 +183,9 @@ pre.code-toolbar > .toolbar button {
 	-ms-user-select: none;
 }
 
-pre.code-toolbar > .toolbar a,
-pre.code-toolbar > .toolbar button,
-pre.code-toolbar > .toolbar span {
+div.code-toolbar > .toolbar a,
+div.code-toolbar > .toolbar button,
+div.code-toolbar > .toolbar span {
 	color: #bbb;
 	font-size: .8em;
 	padding: 0 .5em;
@@ -226,12 +195,13 @@ pre.code-toolbar > .toolbar span {
 	border-radius: .5em;
 }
 
-pre.code-toolbar > .toolbar a:hover,
-pre.code-toolbar > .toolbar a:focus,
-pre.code-toolbar > .toolbar button:hover,
-pre.code-toolbar > .toolbar button:focus,
-pre.code-toolbar > .toolbar span:hover,
-pre.code-toolbar > .toolbar span:focus {
+div.code-toolbar > .toolbar a:hover,
+div.code-toolbar > .toolbar a:focus,
+div.code-toolbar > .toolbar button:hover,
+div.code-toolbar > .toolbar button:focus,
+div.code-toolbar > .toolbar span:hover,
+div.code-toolbar > .toolbar span:focus {
 	color: inherit;
 	text-decoration: none;
 }
+

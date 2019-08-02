@@ -7,7 +7,7 @@ tags: ["studio", "app viewing", "checks", "errors", "consistency errors"]
 
 ## 1 Introduction 
 
-When [previwing or publishing your app](publishing-app#publishing-your-app), Mendix Studio checks your app on [consistency errors](consistency-errors). If there are any, the app cannot be published, and you see the **Checks** button goes red with the number of errors indicated.
+When [previewing or publishing your app](publishing-app#publishing-your-app), Mendix Studio checks your app on [consistency errors](consistency-errors). If there are any, the app cannot be published, and you see the **Checks** button goes red with the number of errors indicated.
 
 ![](attachments/checks/checks-button.png)
 
@@ -54,7 +54,7 @@ The information displayed in the table of the **Checks** panel is represented be
 
 | Item     | Description                                                  |
 | -------- | ------------------------------------------------------------ |
-| Message  | Contains an explanation of the error.                        |
+| Message  | Contains an explanation of the error and an error code. If an error has documentation and an explanation how to fix it, the error code is clickable, and the corresponding documentation opens. |
 | Module   | Indicates the module where the error is found.               |
 | Document | Indicates the place of your app where the error is found (for example, a page, a microflow). |
 | Element  | Indicated the exact element that is faulty (button, activity, etcetera ). |

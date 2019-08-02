@@ -8,7 +8,6 @@ Before you start testing, read [Compatibility](ov-compatibility) and [Deployment
 
 These are the main documents in this category:
 
-* [General](rg-two-general)
 * [App](rg-two-app)
 * [Drop-Downs](rg-two-drop-down)
 * [Test Case](rg-two-test-case)

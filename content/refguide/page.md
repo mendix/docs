@@ -23,8 +23,8 @@ There are two different ways to edit your page:
 * [Structure Mode](#structure-mode), the default editor which clearly shows the relationship between page elements, together with additional information about each element
 * [Design Mode](#design-mode), a WYSIWYG (**W**hat **Y**ou **S**ee **I**s **W**hat **Y**ou **G**et) editor which better reflects what the page will look like when it is published
 
-You can switch to the WYSIWYG editor from the traditional editor by clicking the **Design mode** button in the page editor.
-You can return to the structural editor by clicking **Structure mode**
+You can switch to the WYSIWYG editor from the default editor by clicking the **Design mode** button in the page editor.
+You can return to the structural editor by clicking **Structure mode**.
 
 ![Design mode and Structure mode buttons](attachments/page/design-mode.png)
 
@@ -32,8 +32,8 @@ Both modes allow you to edit your page by doing the following:
 
 * Dragging widgets from the **Toolbox** pane onto the page
 * Dragging widgets, and their contents, from one place on the page to another
-* Properties of each widget are shown in the **Properties** pane
-* A Properties dialog window can be opened from the menu you get when you right-click the widget
+* Viewing and editing properties of each widget in the **Properties** pane
+* Opening a **Properties** dialog window from the menu you get when you right-click the widget
 
 ### 2.1 Structure Mode{#structure-mode}
 
@@ -55,9 +55,9 @@ In Structure mode, the page widgets are laid out so that it is easy to see the l
 
 ### 2.2 Design Mode
 
-In Design mode, the page is laid out as it will appear when published so that it is easy to see the spatial relationship between them.
+In Design mode, the page is laid out as it will appear when published so that it is easy to see the spatial relationship between the elements.
 
-For example, the example page shown in [Structure Mode](#structure-mode), above, will look like this in Design mode for a tablet:
+For example, the example page shown in [Structure Mode](#structure-mode), above, will look like this in **Design mode** for a tablet:
 
 ![Design mode page as displayed on a tablet](attachments/page/design-mode-example.png)
 

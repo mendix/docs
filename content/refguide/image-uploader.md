@@ -5,7 +5,7 @@ tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="warning" %}}The Image Uploader widget is not supported on Native mobile pages{{% /alert %}}
+{{% alert type="warning" %}}The image uploader widget is not supported on native mobile pages.{{% /alert %}}
 
 An image uploader is used to upload images to the server. It also generates a thumbnail of the uploaded image. The uploaded image or its thumbnail can be shown by use of the image viewer.
 

@@ -5,7 +5,7 @@ tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="warning" %}}The Validation Message widget is not supported on Native mobile pages{{% /alert %}}
+{{% alert type="warning" %}}The validation message widget is not supported on native mobile pages.{{% /alert %}}
 
 The validation message widget informs the user about authentication failures. It is hidden by default and only appears if an error message is present.   
 

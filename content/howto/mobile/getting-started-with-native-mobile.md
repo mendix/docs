@@ -35,9 +35,9 @@ For details on making a Mendix app using the Native Mobile Quickstart app templa
 
 To start a new app based on a template, follow these steps:
 
-1.  Open Mendix Studio Pro. Select **File** > **New Project** , and then select the Native Mobile Quickstart app: 
+1.  Open Mendix Studio Pro. Select **File** > **New Project** , and then select the **Native Mobile Quickstart** app: 
 
-	{{% image_container width="500" %}}![mobile quickstart app](attachments/getting-started-with-native-mobile/native-mobile-quickstart.png){{% /image_container %}}
+	![mobile quickstart app](attachments/getting-started-with-native-mobile/native-mobile-quickstart.png)
 
 2.  Next, click **Use this starting point**:
 

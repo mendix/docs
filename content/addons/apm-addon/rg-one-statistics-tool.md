@@ -37,7 +37,7 @@ This section will give a real-time overview of running actions and microflows. T
 
 ![](attachments/rg-one-statistics-tool/Now_Running.png)
 
-**Note**: When the server generates a lot of log messages, the server is running at a high CPU, and all the tools are running, a queue can build up in the Mendix thread that sends the log messages to the subscribers. As a consequence, it can look like running microflows takes 10 seconds while the maximum in the statistics is 1 second. This is caused by the fact that the running time is calculated on the refresh date, and the duration of a microflow is calculated by the message date. When this happens, the debug running counter for the message delay shows a high number (for example, 10000 milliseconds). The statistics tool pauses collecting and handling messages if the processing delay is above the configured **Max Processing Delay (ms)**.*
+**Note**: When the server generates a lot of log messages, the server is running at a high CPU, and all the tools are running, a queue can build up in the Mendix thread that sends the log messages to the subscribers. As a consequence, it can look like running microflows takes 10 seconds while the maximum in the statistics is 1 second. This is caused by the fact that the running time is calculated on the refresh date, and the duration of a microflow is calculated by the message date. When this happens, the debug running counter for the message delay shows a high number (for example, 10000 milliseconds). The statistics tool pauses collecting and handling messages if the processing delay is above the configured **Max Processing Delay (ms)**.
 
 ## 6 Stored Snapshot
 

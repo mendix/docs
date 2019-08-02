@@ -26,7 +26,7 @@ This property defines whether the text area grows automatically depending on the
 
 _Default value:_ No
 
-{{% alert type="info" %}}Not supported on Native mobile pages. On iOS, the text area will grow automatically.{{% /alert %}}
+{{% alert type="info" %}}Not supported on native mobile pages. On iOS, the text area will grow automatically.{{% /alert %}}
 
 ### Number of Lines
 

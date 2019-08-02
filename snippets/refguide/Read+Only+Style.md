@@ -10,4 +10,4 @@ This property determines how the widget is rendered if it is read-only.
 | Control                     | Widget is displayed but disabled so the value cannot be modified.
 | Text                        | Widget is replaced by a textual representation of the value.
 
-{{% alert type="info" %}}Not supported on Native mobile pages{{% /alert %}}
+{{% alert type="info" %}}Not supported on native mobile pages.{{% /alert %}}

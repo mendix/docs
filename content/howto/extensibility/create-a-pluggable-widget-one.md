@@ -19,19 +19,17 @@ Pluggable widgets are the new generation of custom-built widgets. These widgets 
 **Are you in a hurry?** 
 
 Clone this [code sample](https://github.com/mendix/text-box-sample) from GitHub with the basic and advanced features already implemented.
+{{% todo %}}[If you update a code snippet, please make sure to update the completed sample on this GitHub repository too. Thank you!]{{% /todo %}}
 
 ## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Install the latest stable version of [Node.js](https://nodejs.org/en/about/)
-	* For Windows, install using the [official installer](https://nodejs.org/dist/latest-v8.x/)
-	* For Mac, install using [Homebrew](https://brew.sh/) by executing these commands:
-		* `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
-		* `brew install node@8`
-* Install [npm](https://www.npmjs.com/) with the following command: `npm install npm@latest -g`
-* Install [Yeoman](https://yeoman.io/) with the following command: `npm install yo -g`
-* Install the Mendix Pluggable Widget Generator with the following command: `npm install @mendix/generator-widget -g`
+* Install a long term support (LTS) or current version of [Node.js](https://docs.npmjs.com/files/package.json#engines)
+	* For Windows, install using this [official installer](https://nodejs.org/en/download/package-manager/#windows)
+	* For Mac, install using [Homebrew](https://docs.brew.sh/Installation) and these [official tools](https://nodejs.org/en/download/package-manager/#macos)
+* Install [Yeoman](https://yeoman.io/) with the following command: ` $ npm install yo -g`
+* Install the Mendix Pluggable Widget Generator with the following command: ` $ npm install @mendix/generator-widget -g`
 * Install an integrated development environment (IDE) of your choice (Mendix recommends [Microsoft Visual Studio Code](https://code.visualstudio.com/))
 * Have a basic understanding of [TypeScript](https://www.typescriptlang.org/)
 
@@ -46,7 +44,7 @@ The following steps will teach you to build a pluggable input widget, and show y
 	Optionally you may remove all unused custom widgets to optimize the debugging process. Select **Project > Show Project Directory in Explorer** from the Mendix Studio Pro menu and open the **widgets** folder. Then, delete all the files in this folder. 
 	
 	To resolve the errors this incurs:<br />
-	a. Press <kbd>F4</kbd> to refresh your app.<br />
+	a. Press <kbd>F4</kbd> or select **Project > Synchronize Project Directory** to refresh your app.<br />
 	b. Double-click the errors in the bottom menu to see their locations.<br />
 	c. Delete the widgets those errors bring you to.
 
@@ -75,12 +73,26 @@ The Pluggable Widget Generator is the quickest way to start developing a widget.
 Using a terminal or command line, navigate to your new Mendix app project’s folder, create a new folder named *CustomWidgets*, and start the generator using:
 
 ```
-mkdir CustomWidgets
-cd CustomWidgets
-yo @mendix/widget TextBox
+$ mkdir CustomWidgets
+$ cd CustomWidgets
+$ yo @mendix/widget TextBox
 ```
 
-The generator will ask some questions in the setup. Select the **TypeScript, For web and hybrid mobile apps, Empty widget, No unit test,** and **No end-to-end tests** options:
+The generator will ask you a few questions during setup. Answer the questions by specifying the following information:
+
+* Widget name: *{Your widget name}*
+* Widget Description: *{Your widget description}*
+* Organization Name: *{Your organization name}*
+* Copyright: *{Your copyright date}*
+* License: *{Your license}*
+* Initial Version:*{Your initial version number}*
+* Author: *{Your author name}*
+* Mendix Project path: *../../*
+* Programming language: **TypeScript**
+* Widget type: **For web and hybrid mobile apps**
+* Widget template: **Empty widget (recommended for more experienced developers)**
+* Unit tests: **No**
+* End-to-end tests: **No**
 
 ![mx generator](attachments/pluggable-part-one/generatorblack.png)
 
@@ -89,7 +101,7 @@ The generator will ask some questions in the setup. Select the **TypeScript, For
 Open the **(YourMendixProject)/CustomWidgets/TextBox** folder in your IDE of choice. From now on, all file references will be relative to this path. To set up your new widget, first you must use an attribute of the context object and display that attribute in an input field: 
 
 1. To prevent future errors, remove the file *src/components/HelloWorldSample.tsx*.
-2. Edit *src/TextBox.xml* to remove the `sampleText` property and add the property `Text attribute`:
+2. Edit *src/TextBox.xml*, the generator creates a sample property `sampleText`, which should be removed andand add the new property `Text attribute`:
 
 	```xml
 	<?xml version="1.0" encoding="utf-8" ?>
@@ -116,7 +128,7 @@ Open the **(YourMendixProject)/CustomWidgets/TextBox** folder in your IDE of cho
 	* The property `pluginWidget=true` will make the widget work with the new widget API
 	* The `needsEntityContext=true` is set up to allow the attribute to be taken from context
 	* The property of the type attribute only allows the selection of string attributes from the domain model
-3. The typescript typing based on the XML will be generated automatically. Start the development process with the following command: `npm run dev`.
+3. The typescript typing based on the XML will be generated automatically. Start the development process with the following command: `$ npm run dev`.
 
 	This process will bundle the widget and generate the properties into *typings/TextBoxProperties.d.ts*.
 	
@@ -149,17 +161,25 @@ Open the **(YourMendixProject)/CustomWidgets/TextBox** folder in your IDE of cho
 	* The interface defines the properties of the React components – the value is passed to the component and it will render an HTML input element with the given value
 	* The component is a class extending `Component` and should be exported to be used in other components
 	* The render method is the only required function in a component, and it will return the expected DOM for the browser (for more information, see React’s [component documentation](https://reactjs.org/docs/react-component.html))
-5. The container component *TextBox.tsx* receives the properties in the runtime, and forwards the data to the display component. The container works like glue between the Mendix application and the display component. Override the class lines in *TextBox.tsx* until they look like this:
+5. The container component *TextBox.tsx* receives the properties in the runtime, and forwards the data to the display component. The container works like glue between the Mendix application and the display component. In the *TextBox.tsx* overwrite the render function until they look like this:
 
 	```tsx
 	import { Component, ReactNode, createElement } from "react"; 
+	import { hot } from "react-hot-loader/root";
+
+	import { TextBoxContainerProps } from "../typings/TextBoxProps";
 	import { TextInput } from "./components/TextInput";
+
+	import "./ui/TextBox.css";
+
 	class TextBox extends Component<TextBoxContainerProps> {
 		render(): ReactNode {
 			const value = this.props.textAttribute.value || "";
 			return <TextInput value={value} />;
 		}
 	}
+
+	export default hot(TextBox);
 	```
 	
 	Be sure all the imports are included before moving on from this step.
@@ -301,7 +321,7 @@ The value from the attribute can be displayed and updated using the other input,
 				onUpdate={this.onUpdateHandle}
 			/>;
 		}
-		private onUpdate(value: string) {
+		private onUpdate(value: string): void {
 			this.props.textAttribute.setValue(value);
 		}
 	}
@@ -337,7 +357,7 @@ The value from the attribute can be displayed and updated using the other input,
 				onChange={this.handleChange}
 			/>;
 		}
-		private onChange(event: ChangeEvent<HTMLInputElement>) {
+		private onChange(event: ChangeEvent<HTMLInputElement>): void {
 			if (this.props.onUpdate) {
 				this.props.onUpdate(event.target.value);
 			}

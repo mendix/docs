@@ -38,11 +38,33 @@ The click action defines what action is performed when a list view entry is 'cli
 
 With this property you can change the number of containers that will be shown in one page. You cannot set this property when the list view is editable.
 
+### Scroll direction
+
+{{% alert type="info" %}}The scroll direction property is only supported on native mobile pages.{{% /alert %}}
+
+This property determines whether the list view lays out its items vertically (default) or horizontally.
+
+### Number of columns
+
+{{% alert type="info" %}}The number of columns property is only supported on native mobile pages.{{% /alert %}}
+
+With this property you can change the number of items that will be shown next to each other in one row.
+If you set the scroll direction property to horizontal, this property determines the number of items per column.
+
+### Pull down action
+
+{{% alert type="info" %}}The number of columns property is only supported on native mobile pages.{{% /alert %}}
+
+The pull down action defines what action is performed when you drag downwards on a list view.
+Its common behavior is to update the contents of the list view by synchronizing data.
+
 ## Data source properties
 
 The data source determines which objects will be shown in the list view. For general information about data sources, see [Data Sources](data-sources).
 
 ### Type
+
+{{% alert type="warning" %}}Search is not supported on native mobile pages.{{% /alert %}}
 
 The list view supports the following types of data sources: database source, XPath source, association source and microflow Source. The database and XPath sources retrieve objects from the database and supports searching and sorting. The database source can also be used in [offline](offline-first) applications. The association source follows an association from the enclosing data view to get to the objects. Finally, the microflow source calculates the list of objects by executing a microflow.
 
@@ -56,6 +78,8 @@ See the corresponding data source for its properties:
 *   [Association source](association-source)
 
 ## Templates properties
+
+{{% alert type="warning" %}}Templates are not supported on native mobile pages.{{% /alert %}}
 
 ### Templates
 

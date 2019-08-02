@@ -9,6 +9,8 @@ tags: ["studio pro"]
 
 A check box is an [input widget](input-widgets) that can be used to display and edit Boolean attributes. It will display a tick if the value is true and remain empty if it is false.
 
+{{% alert type="info" %}}In native mobile applications, the check box widget is rendered as a toggle.{{% /alert %}}
+
 {{% alert type="info" %}}
 
 ![](attachments/pages/check-box.png)

@@ -45,6 +45,8 @@ This property specifies what happens when the image is clicked:
 
 _Default value:_ Do nothing
 
+{{% alert type="info" %}}On click events are not supported on native mobile pages.{{% /alert %}}
+
 ### Microflow (in the case 'Call microflow')
 
 This property specifies the microflow that will be executed when the image is clicked.
@@ -65,6 +67,8 @@ This is the image that is displayed if no image is uploaded.
 
 _Default value_: Percentage
 
+{{% alert type="info" %}}Not supported on native mobile pages.{{% /alert %}}
+
 {{% snippet file="refguide/Image+Width.md" %}}
 
 _Default value_: 100
@@ -72,6 +76,8 @@ _Default value_: 100
 {{% snippet file="refguide/Image+Height+Unit.md" %}}
 
 _Default value_: Auto
+
+{{% alert type="info" %}}Not supported on native mobile pages.{{% /alert %}}
 
 {{% snippet file="refguide/Image+Height.md" %}}
 

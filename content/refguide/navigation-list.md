@@ -6,6 +6,8 @@ tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert type="warning" %}}The navigation list widget is not supported on native mobile pages.{{% /alert %}}
+
 A navigation list can be used to attach an action to an entire row. Such a row is called a navigation list item.
 
 {{% alert type="info" %}}

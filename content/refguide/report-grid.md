@@ -6,6 +6,8 @@ tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert type="warning" %}}The template grid widget is not supported on native mobile pages.{{% /alert %}}
+
 This shows the reported data in a grid.
 
 ## Data Source Properties

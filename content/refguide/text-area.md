@@ -26,6 +26,8 @@ This property defines whether the text area grows automatically depending on the
 
 _Default value:_ No
 
+{{% alert type="info" %}}Not supported on native mobile pages. On iOS, the text area will grow automatically.{{% /alert %}}
+
 ### Number of Lines
 
 The number of lines determine how many lines the text area shows at the same time. If the text in the text area contains more lines you will have to use a scrollbar to see it all. This property is only shown if Grow automatically is set to No.
@@ -42,9 +44,13 @@ You've used {1} characters of the {2} characters that are allowed.
 
 {{% /alert %}}
 
+{{% alert type="info" %}}Not supported on native mobile pages.{{% /alert %}}
+
 ### Text Too Long Message
 
 This is the text displayed when the number of typed characters is higher than the maximum allowed number of characters.
+
+{{% alert type="info" %}}Not supported on native mobile pages.{{% /alert %}}
 
 ### Maximum Length
 

@@ -36,7 +36,7 @@ If you are not using only **English, United States**, copy the **English, United
 
 ## 5 Add Permissions
 
-Add `APMAgent.Admin` permissions to the project **Ssecurity** > **User roles** tab for a selected administrator role.
+Add `APMAgent.Admin` permissions to the project **Security** > **User roles** tab for a selected administrator role.
 
 ![](attachments/ig-one-installation-steps/Add_Permissions.png)
 

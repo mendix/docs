@@ -418,7 +418,7 @@ Until now the components did not keep any state. Each keystroke passed through t
 	* The state `editedValue` will be empty until the input value is changed by the user 
 	* The `setState` function will update the state and will re-render the component (in the rendering, the new value is taken from `editedValue`)
 	* The `onBlur` function will set the new value in the attribute through the container component – the state is reset, and the new value is received by an update of the attribute (which will propagate as a new property value)
-	* The `onLeave` function will set the value. The `setValue` will automatically calls the onChange action, as this is connected trough the XML configuration
+	* The `onLeave` function will set the value. The `setValue` will automatically call the onChange action, as this is connected trough the XML configuration
 
 
 ### 3.5 Adding Accessibility

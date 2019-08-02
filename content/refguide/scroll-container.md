@@ -59,8 +59,7 @@ By default the scroll container will extend the full width of its parent widget.
 
 _Default value:_ Full width
 
-{{% alert type="info" %}}_Default value:_ Full width
- is not supported on native mobile pages.{{% /alert %}}
+{{% alert type="info" %}}Not supported on native mobile pages.{{% /alert %}}
 
 ### Width Value (for Width Set to 'pixels' or 'percentage')
 

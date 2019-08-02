@@ -19,7 +19,7 @@ For more information on Studio version and Mendix version, see [Studio Version &
 
 ## 2 Upgrading Your Studio App to Mendix Version 8
 
-Developers wanting to upgrade their Studio apps to Mendix version 8 can only do so in Studio Pro or by involving developers familiar with Studio Pro. For more information on upgrading apps using Studio Pro, see [Moving from Desktop Modeler Version 7 to Studio Pro 8](/refguide/moving-from-7-to-8).
+Developers wanting to upgrade their Studio apps to Mendix version 8 can only do so in Studio Pro or by involving developers familiar with Studio Pro. For more information on upgrading apps using Studio Pro, see [Moving from Desktop Modeler Version 7 to Studio Pro 8](/refguide/moving-from-7-to-8) in  the *Mendix Reference Guide*.
 
 Automatic upgrade will not be offered in Studio when moving from Mendix 7 to Mendix 8.  However, if your app has Mendix 8 beta version, it will be upgraded to Mendix 8 automatically.
 

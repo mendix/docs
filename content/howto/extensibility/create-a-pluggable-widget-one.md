@@ -19,13 +19,13 @@ Pluggable widgets are the new generation of custom-built widgets. These widgets 
 **Are you in a hurry?** 
 
 Clone this [code sample](https://github.com/mendix/text-box-sample) from GitHub with the basic and advanced features already implemented.
-{{% todo %}}[Note: if you update a code snippet, please make sure you update the completed sample on this GitHub repository too. Thank you!]{{% /todo %}}
+{{% todo %}}[If you update a code snippet, please make sure to update the completed sample on this GitHub repository too. Thank you!]{{% /todo %}}
 
 ## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Install an LTS or current version of [Node.js](https://docs.npmjs.com/files/package.json#engines)
+* Install a long term support (LTS) or current version of [Node.js](https://docs.npmjs.com/files/package.json#engines)
 	* For Windows, install using this [official installer](https://nodejs.org/en/download/package-manager/#windows)
 	* For Mac, install using [Homebrew](https://docs.brew.sh/Installation) and these [official tools](https://nodejs.org/en/download/package-manager/#macos)
 * Install [Yeoman](https://yeoman.io/) with the following command: ` $ npm install yo -g`
@@ -78,7 +78,7 @@ $ cd CustomWidgets
 $ yo @mendix/widget TextBox
 ```
 
-The generator will ask some questions in the setup. Specify the following information:
+The generator will ask you a few questions during setup. Answer the questions by specifying the following information:
 
 * Widget name: *{Your widget name}*
 * Widget Description: *{Your widget description}*

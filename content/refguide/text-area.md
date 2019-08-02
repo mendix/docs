@@ -44,13 +44,13 @@ You've used {1} characters of the {2} characters that are allowed.
 
 {{% /alert %}}
 
-{{% alert type="info" %}}Not supported on Native mobile pages{{% /alert %}}
+{{% alert type="info" %}}Not supported on native mobile pages.{{% /alert %}}
 
 ### Text Too Long Message
 
 This is the text displayed when the number of typed characters is higher than the maximum allowed number of characters.
 
-{{% alert type="info" %}}Not supported on Native mobile pages{{% /alert %}}
+{{% alert type="info" %}}Not supported on native mobile pages.{{% /alert %}}
 
 ### Maximum Length
 

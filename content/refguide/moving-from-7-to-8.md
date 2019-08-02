@@ -134,11 +134,26 @@ If your original project was version 7.23.2 or below and you want to work collab
 
 Follow the instructions in [Migration From the Sync Process to Collaborative Development](/refguide7/collaborative-development-migration).
 
-## 7 Mendix Cloud Version 3
+## 7 Upgrading From Mendix 7 to 8 for Studio
+
+Due to breaking changes in Mendix version 8, apps in Studio cannot be upgraded automatically using the regular Studio upgrade mechanism.  
+
+This means the following:
+
+* Existing apps built in Studio will remain or can be upgraded to the latest release of Mendix version 7.23 
+
+    {{% alert type="info" %}}If your app has Mendix 8 beta version, it will be upgraded to Mendix 8 automatically.
+    {{% /alert %}}
+
+*  Newly created apps in Studio will have Mendix version 8 from the start    
+
+Developers wanting to upgrade their Studio apps to Mendix version 8 can only do so in Studio Pro. 
+
+## 8 Mendix Cloud Version 3
 
 Apps made in Mendix Studio Pro cannot be deployed to *Version 3* of the Mendix Cloud. If you are using a licensed Mendix Cloud V3 node, then we recommend that you upgrade to Mendix Cloud V4. If this is not possible, you will need to continue to use Mendix version 7 to create and maintain your apps.
 
-## 8 Java Code Generation
+## 9 Java Code Generation
 
 In Mendix Studio Pro version 8, we are changing the way we generate Java code for Java actions and datasets.
 
@@ -153,7 +168,7 @@ In these few cases you need to make a simple fix before your code will compile a
 * If it is a Java action in a module downloaded from the App Store that is causing errors, just download it again, or update it to the latest version
 * If it is your own Java action, then the fix is ever easier – just remove those postfixes from your Java code (in the previous example, `CustomerParameter1` just becomes `Customer` again).
 
-### 8.1 Example of Differences
+### 9.1 Example of Differences
 
 In this example we have a Java action called `LogMessage`, which has a parameter called `Message`. In Mendix Modeler version 7 if you introduced a domain model entity also called `Message`, we would generate the following Java code for you (please note that some code is omitted for readability):
 
@@ -193,9 +208,9 @@ Studio Pro 8 will generate the following code for you:
 
 This code behaves as expected and works out of the box. However, if you previously changed your user code to comply with the way Mendix Modeler version 7 was generating this code, you just need to update your user code to use the new names of parameters.
 
-## 9 Troubleshooting
+## 10 Troubleshooting
 
-### 9.1 Cannot Open Project: `Layout … has an invalid value …`
+### 10.1 Cannot Open Project: `Layout … has an invalid value …`
 
 Very rarely, you may receive a message similar to the one below when opening a project in Mendix Studio Pro 8 which needs to be upgraded from a previous version of Mendix.
 
@@ -209,7 +224,7 @@ See the image below for an indication of where you might find the error in your 
 
 To resolve this issue, use the previous version of Mendix to change the invalid **Layout type** (in the example above, `Legacy`) to a valid value.
 
-### 9.2 DOM and Atlas UI Issues
+### 10.2 DOM and Atlas UI Issues
 
 Mendix 8 comes with several improvements to its DOM structure. These DOM changes will affect the Sass styling of app projects. Because of these updates, Mendix 8 app projects are designed to be completed using [Atlas UI Resources](https://appstore.home.mendix.com/link/app/104730/) (v2.0.0 or higher). Upgrading your Atlas UI can cause issues with your app project's theming. To troubleshoot either DOM or Atlas UI migration issues, consult the following documents:
 

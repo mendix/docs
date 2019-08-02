@@ -55,7 +55,7 @@ Part of the AppCloudServices module.
 
 * [Permissions API](permissions-api)
 
-## 9 Pluggable Widgets
+## 9 Pluggable Widgets API
 
 Understand pluggable widgets, how they extend app functionality, and how they can be built to interact with Mendix's APIs:
 

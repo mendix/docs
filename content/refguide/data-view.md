@@ -87,7 +87,7 @@ This property determines how input widgets are rendered if read-only.
 
 *Default value:* Control
 
-{{% alert type="info" %}}Not supported on Native mobile pages{{% /alert %}}
+{{% alert type="info" %}}Read-only style is not supported on native mobile pages.{{% /alert %}}
 
 ## 6 Data Source Properties
 

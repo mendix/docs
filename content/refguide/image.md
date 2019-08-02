@@ -39,6 +39,8 @@ See [Images](images).
 
 _Default value_: Auto
 
+{{% alert type="info" %}}Not supported on native mobile pages.{{% /alert %}}
+
 {{% snippet file="refguide/Image+Width.md" %}}
 
 _Default value_: not applicable
@@ -47,11 +49,15 @@ _Default value_: not applicable
 
 _Default value_: Auto
 
+{{% alert type="info" %}}Not supported on native mobile pages.{{% /alert %}}
+
 {{% snippet file="refguide/Image+Height.md" %}}
 
 _Default value_: not applicable
 
 {{% snippet file="refguide/Image+Responsive.md" %}}
+
+{{% alert type="info" %}}Not applicable is not supported on native mobile pages.{{% /alert %}}
 
 ### Visibility properties
 

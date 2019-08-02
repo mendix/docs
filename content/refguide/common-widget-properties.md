@@ -33,6 +33,8 @@ The tab index influences the order in which the end-user navigates through the p
 
 _Default value:_ 0
 
+{{% alert type="info" %}}Tab index is not supported on native mobile pages.{{% /alert %}}
+
 {{% snippet file="refguide/Name+Property.md" %}}
 
 {{% snippet file="refguide/Class+Property.md" %}}

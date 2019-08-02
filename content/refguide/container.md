@@ -44,6 +44,8 @@ The render mode determines which HTML5 tag will be used to show the container in
 
 _Default value:_ Div
 
+{{% alert type="info" %}}Render mode is not supported on native mobile pages.{{% /alert %}}
+
 ## Visibility properties
 
 {{% snippet file="refguide/Visibility+Property.md" %}}

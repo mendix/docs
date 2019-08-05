@@ -13,7 +13,7 @@ The API documentation is divided into the sections described below.
 
 Most Mendix Platform APIs require their users to authenticate themselves. This is done by using API keys.
 
-* [Authentication](build-api)
+* [Authentication](authentication)
 
 ## 3 Build API
 

@@ -477,7 +477,7 @@ Associated with each of the classifier objects will be zero or more **Classifier
 
 ### 7.2 Visual Recognition – Create Classifier{#createClassifier}
 
-This action allows you to train a new classifier for the Visual Recognition service by uploading zip files containing images.
+This action allows you to train a new classifier for the Visual Recognition service by uploading *zip* files containing images.
 
 ![Configuration dialog for the Visual Recognition - Create Classifier action](attachments/ibm-watson-connector/visualrecognition-createclassifier.png)
 
@@ -487,7 +487,7 @@ One file contains negative examples: images which are visually similar to the po
 
 For example, if you want to have a classifier to identify different sorts of mammal, you could upload positive class image files "dog", "cat", "pig", and "horse", and a negative one containing images of reptiles.
 
-Each zip file must
+Each *zip* file must
 
 * have a maximum size of 100MB
 * contain at least 10 images in jpg or png format (minimum recommended image resolution is 32X32 pixels)

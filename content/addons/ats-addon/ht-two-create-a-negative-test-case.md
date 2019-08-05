@@ -48,26 +48,26 @@ This is the final test case:
 ![](attachments/ht-two-create-a-negative-test-case/negative-test-case.png)
 
 1. Open your app in ATS and go to the **Test Cases** menu item.
-2. Go to the **Repository** tab:
+2.  Go to the **Repository** tab:
 
-  ![](attachments/ht-two-create-a-negative-test-case/go-to-repository.png)
+	![](attachments/ht-two-create-a-negative-test-case/go-to-repository.png)
 
 3. Select the test case to add the negative test step.
-4. Add the **Assert not true** action where you want to place the negative test step:
+4.  Add the **Assert not true** action where you want to place the negative test step:
 
-![](attachments/ht-two-create-a-negative-test-case/Assert_not_true_step_added.png)
+	![](attachments/ht-two-create-a-negative-test-case/Assert_not_true_step_added.png)
 
-5. Set the **Assert Value** parameter of the Assert not true action to **True**:
+5.  Set the **Assert Value** parameter of the Assert not true action to **True**:
 
-![](attachments/ht-two-create-a-negative-test-case/set-to-true.png)
+	![](attachments/ht-two-create-a-negative-test-case/set-to-true.png)
 
-6. Add the action needed to search for the menu item as a **Precondition**. Check the precondition box and add the [Find/Assert Menu Item](rg-one-findassert-menu-item) action:
+6.  Add the action needed to search for the menu item as a **Precondition**. Check the precondition box and add the [Find/Assert Menu Item](rg-one-findassert-menu-item) action:
 
-  ![](attachments/ht-two-create-a-negative-test-case/add-findassert-menu-item-as-precondition-2.png)
+	![](attachments/ht-two-create-a-negative-test-case/add-findassert-menu-item-as-precondition-2.png)
 
-7. Enter the information needed to find the **Admin Menu** as an administrator to verify it is not visible as an employee. Also, enter a proper description.
+7.  Enter the information needed to find the **Admin Menu** as an administrator to verify it is not visible as an employee. Also, enter a proper description.
 
-  ![](attachments/ht-two-create-a-negative-test-case/negative-test-step-finished-2.png)
+	![](attachments/ht-two-create-a-negative-test-case/negative-test-step-finished-2.png)
 
 These are the inner-workings:
 

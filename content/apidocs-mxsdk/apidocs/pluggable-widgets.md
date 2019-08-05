@@ -25,7 +25,7 @@ The essential part of a pluggable widget is its client component: a React compon
 
 The client component is mainly focused on presentation and interaction with an end-user, while data fetching, validation, and updating are handled by the Mendix Platform. Mendix provides your component with APIs which follow a [unidirectional data flow pattern](https://www.geeksforgeeks.org/unidirectional-data-flow/), much like the [Redux](https://redux.js.org/basics/data-flow) and [Flux](https://facebook.github.io/flux/docs/in-depth-overview#structure-and-data-flow) APIs. Mendix follows the “batteries included but removable” motto. You do not have to care about nuances if standard behavior suffices for you, but you can adjust behaviors when required.
 
-A widget component is [mounted](https://en.reactjs.org/docs/react-component.html#mounting) and [unmounted](https://en.reactjs.org/docs/react-component.html#unmounting) when a widget is shown or hidden — for example when a page is opened or due to [conditional visibility](https://docs.mendix.com/refguide/conditions). A component receives [props](https://en.reactjs.org/docs/components-and-props.html) which resemble properties described in its widget definition XML file. A prop's key comes from the [`key`](#key-attribute) attribute, and its value is based on the configuration of the property. Prop values are immutable, but the Mendix Platform re-renders the component passing new values when necessary.
+A widget component is [mounted](https://en.reactjs.org/docs/react-component.html#mounting) and [unmounted](https://en.reactjs.org/docs/react-component.html#unmounting) when a widget is shown or hidden — for example when a page is opened or due to [conditional visibility](/refguide/conditions). A component receives [props](https://en.reactjs.org/docs/components-and-props.html) which resemble properties described in its widget definition XML file. A prop's key comes from the [`key`](#key-attribute) attribute, and its value is based on the configuration of the property. Prop values are immutable, but the Mendix Platform re-renders the component passing new values when necessary.
 
 A prop value is often not just a primitive value, but an object whose structure depends on the [`type`](#type-attribute) of its widget's property. A prop's values can expose data, metadata, and associated actions — whatever is applicable for the property. Here is an example of one interface. It is a value for an action property, such as the type you would find in the [On click](https://docs.mendix.com/refguide/action-button#events-on-click) property of an action button:
 
@@ -108,11 +108,8 @@ Here is an example of a widget’s attributes section:
 This section is generated based on options chosen while running the Mendix Pluggable Widget Generator. You will rarely need to modify it after it is generated. This sample widget features several widget attributes:
 
 * `id`  — <a name="widget-id"></a> This the fully qualified name of the widget called widget ID. Using widget ID, the Mendix Platform distinguishes widgets from each other. Widget ID should never be changed after a widget is used in a project or is published in the App Store. Reverse domain-style names, as in example above, are recommended.
-
 * `pluginWidget`  — This should always be set to `true`. This way, the Mendix Platform can distinguish between the newer pluggable widgets and the older custom widgets.
-
 * `offlineCapable` — This shows if a widget can work while an app is offline. For more information on offline apps, see the [Offline-First](/refguide/offline-first) guide. A widget that fetches information from a third-party API, for example a widget that fetches airline ticket prices, could not function without an internet connection. If a widget cannot work offline, Mendix Studio Pro and Studio will forbid its use on pages that must be available offline.
-
 * `supportedPlatform` — This shows the platforms a widget is compatible with.  `Web` describes widgets that are only compatible with web and hybrid mobile apps. `Native` describes widgets that are compatible with native mobile apps.
 
 ### 5.2 Widget Description
@@ -243,6 +240,6 @@ Here is how a caption and description look in Studio Pro:
 
 ![description](attachments/pluggable-widgets/card-description.png)
 
-## 8 Read more
+## 8 Read More
 
 * [Build a Text Box Pluggable Widget: Part 1](/howto/extensibility/create-a-pluggable-widget-one)

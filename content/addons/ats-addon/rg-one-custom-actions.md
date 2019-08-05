@@ -1,6 +1,7 @@
 ---
 title: "Custom Actions"
 parent: "rg-one-test-development"
+menu_order: 5
 ---
 
 ## 1 Create Custom Actions from Scratch

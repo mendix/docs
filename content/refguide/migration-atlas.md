@@ -14,6 +14,15 @@ Each section in this document could apply to your app project, but some sections
 
 {{% alert type="warning" %}}If you have added any content in the **Atlas_UI_Resource module**, you have to move that content out of the module. If you do not, it will be overwritten.{{% /alert %}}
 
+When your project is using an unmodified AtlasUI, upgrading your project to Mendix 8 will automatically update your
+Atlas UI resources to version 2.1. If you didn't made any changes in the custom folder you are good to go, and you can skip the rest of this guide. 
+
+If you using a unmodified Atlas UI resources but made changes to the custom folder, then these changes are preserved and will be used by the new Atlas version.
+An consistency error will notify you if this is the case. In this case you can proceed to the steps described in section 2.5 of this refguide.
+
+If you are using an modified version of Atlas UI resources we cannot update it automatically. An consistency error will notify you if 
+this is the case. In this case you need to update Atlas yourself.
+
 Follow the steps below to begin upgrading your Atlas UI Resources module:
 
 1. Download the latest [Atlas UI Resources](https://appstore.home.mendix.com/link/app/104730/) module (v2.0.0 or higher).
@@ -103,6 +112,7 @@ Make sure any custom or added Sass files are all imported in either **styles/web
 
 After troubleshooting your issues with the guidance above, complete the following steps to test your migrated app project:
 
+## 2.5  
 1. Recompile your Sass to CSS.
 2. Test your app project to see if everything works as expected.
 3. Delete **theme_old**.

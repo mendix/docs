@@ -95,7 +95,7 @@ A widget XML file consists of three sections: widget attributes, widget descript
 
 Here is an example of a widget’s attributes section:
 
-```tsx
+```xml
     <widget
         id="com.mendix.widget.MyProgressCard"
         pluginWidget="true"
@@ -107,7 +107,7 @@ Here is an example of a widget’s attributes section:
 
 This section is generated based on options chosen while running the Mendix Pluggable Widget Generator. You will rarely need to modify it after it is generated. This sample widget features several widget attributes:
 
-* `id`  — <a name="widget-id"></a> This the fully qualified name of the widget called widget ID. Using widget ID, the Mendix Platform distinguishes widgets from each other. Widget ID should never be changed after a widget is used in a project or is published in the App Store. Reverse domain-style names, as in example above, are recommended.
+* `id`<a name="widget-id"></a> — This the fully qualified name of the widget called widget ID. Using widget ID, the Mendix Platform distinguishes widgets from each other. Widget ID should never be changed after a widget is used in a project or is published in the App Store. Reverse domain-style names, as in example above, are recommended.
 * `pluginWidget`  — This should always be set to `true`. This way, the Mendix Platform can distinguish between the newer pluggable widgets and the older custom widgets.
 * `offlineCapable` — This shows if a widget can work while an app is offline. For more information on offline apps, see the [Offline-First](/refguide/offline-first) guide. A widget that fetches information from a third-party API, for example a widget that fetches airline ticket prices, could not function without an internet connection. If a widget cannot work offline, Mendix Studio Pro and Studio will forbid its use on pages that must be available offline.
 * `supportedPlatform` — This shows the platforms a widget is compatible with.  `Web` describes widgets that are only compatible with web and hybrid mobile apps. `Native` describes widgets that are compatible with native mobile apps.
@@ -218,18 +218,18 @@ Note that the **Common** and **Appearance** tabs are added to your widget config
 Every `property` tag in the Widget Properties Definition has a shape similar to this:
 
 ```xml
-    <property key="icon" type="icon">
-        <caption>Icon</caption>
-        <description>Card icon</description>
+    <property key="cardName" type="textTemplate">
+        <caption>Card name</caption>
+        <description>Name of the card</description>
     </property>
 ```
 
 Some properties can or must have more attributes or tags. This depends on the `type` property. The following elements should be present for every property:
 
-* `key` — <a name="key-attribute"></a>`key`is a property's unique, single-word identifier. `key` elements are used internally to identify properties, so they should never change after a widget is used in a project or is published in the App Store. A `key` element also identifies a property value when it is passed to a pluggable widget’s client component.
-* `type` — <a name="type-attribute"></a>`type`signifies a property's type. The `type` element can be a `string` , `action`, or `icon` as in the example above. The `type` element defines which values can be configured for a property, which UI is used in the Studios, and what type of value a pluggable widget’s client component receives.
-* `caption` —  The `caption` element is a short label identifying a property to a modeling developer. The first letter of a caption should be capitalized.
-* `description` — `description` is a longer description of a property. A description should be capitalized and limited to one or two sentences.
+* `key`<a name="key-attribute"></a> — This element is a property's unique, single-word identifier. The `key` elements are used internally to identify properties, so they should never change after a widget is used in a project or is published in the App Store. A `key` element also identifies a property value when it is passed to a pluggable widget’s client component.
+* `type`<a name="type-attribute"></a> — This element is a property's type. The `type` element defines which values can be configured for a property, which UI is used in the Mendix Studios, and what type of value a pluggable widget’s client component receives.
+* `caption` —  This element is a short label identifying a property to a modeling developer. The first letter of a caption should be capitalized.
+* `description` — This element is a longer description of a property. A description should be capitalized and limited to one or two sentences.
 
 Here is how a caption and description look in Studio Pro:
 

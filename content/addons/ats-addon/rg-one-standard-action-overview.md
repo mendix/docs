@@ -1,6 +1,7 @@
 ---
-title: "Standard Action Overview"
+title: "Standard Actions"
 parent: "rg-one-test-development"
+menu_order: 4
 ---
 
 ## 1 Introduction

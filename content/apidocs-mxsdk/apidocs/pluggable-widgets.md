@@ -25,9 +25,9 @@ The essential part of a pluggable widget is its client component: a React compon
 
 The client component is mainly focused on presentation and interaction with an end-user, while data fetching, validation, and updating are handled by the Mendix Platform. Mendix provides your component with APIs which follow a [unidirectional data flow pattern](https://www.geeksforgeeks.org/unidirectional-data-flow/), much like the [Redux](https://redux.js.org/basics/data-flow) and [Flux](https://facebook.github.io/flux/docs/in-depth-overview#structure-and-data-flow) APIs. Mendix follows the “batteries included but removable” motto. You do not have to care about nuances if standard behavior suffices for you, but you can adjust behaviors when required.
 
-A widget component is [mounted](https://en.reactjs.org/docs/react-component.html#mounting) and [unmounted](https://en.reactjs.org/docs/react-component.html#unmounting) when a widget is shown or hidden — for example when a page is opened or due to [conditional visibility](https://docs.mendix.com/refguide/conditions). A component receives [properties](https://en.reactjs.org/docs/components-and-props.html) which resemble properties described in its widget definition XML file. A property's key comes from the [`key`](#key-attribute) attribute, and its value is based on the configuration of the property. Property values are immutable, but the Mendix Platform re-renders the component passing new values when necessary.
+A widget component is [mounted](https://en.reactjs.org/docs/react-component.html#mounting) and [unmounted](https://en.reactjs.org/docs/react-component.html#unmounting) when a widget is shown or hidden — for example when a page is opened or due to [conditional visibility](/refguide/conditions). A component receives [props](https://en.reactjs.org/docs/components-and-props.html) which resemble properties described in its widget definition XML file. A prop's key comes from the [`key`](#key-attribute) attribute, and its value is based on the configuration of the property. Prop values are immutable, but the Mendix Platform re-renders the component passing new values when necessary.
 
-A property value is often not just a primitive value, but an object whose structure depends on the [`type`](#type-attribute) of its widget's property. A property's values can expose data, metadata, and associated actions — whatever is applicable for the property. Here is an example of one interface. It is a value for an action property, such as the type you would find in the [On click](https://docs.mendix.com/refguide/action-button#events-on-click) property of an action button:
+A prop value is often not just a primitive value, but an object whose structure depends on the [`type`](#type-attribute) of its widget's property. A prop's values can expose data, metadata, and associated actions — whatever is applicable for the property. Here is an example of one interface. It is a value for an action property, such as the type you would find in the [On click](/refguide/action-button#events-on-click) property of an action button:
 
 ```ts
     export interface ActionValue {
@@ -45,7 +45,7 @@ A pluggable widget is distributed as single widget package file with an *.mpk* e
 
 Manually building a widget package can be difficult, so Mendix recommends you use scripts provided by the [Mendix Pluggable Widget Generator](https://www.npmjs.com/package/@mendix/generator-widget). For more information on how to use a generator, see [How To Build a Text Box Pluggable Widget: Part 1](/howto/extensibility/create-a-pluggable-widget-one).
 
-A widget package file is just a *.zip* archive containing the following things:
+A widget package file is just a *zip* archive containing the following things:
 
 * A *package.xml* file describing the whole package
 * A widget definition XML file, preferably located in *{widgetName}.xml* where `widdgetName` is the last part of widget [ID](#widget-id)
@@ -108,11 +108,8 @@ Here is an example of a widget’s attributes section:
 This section is generated based on options chosen while running the Mendix Pluggable Widget Generator. You will rarely need to modify it after it is generated. This sample widget features several widget attributes:
 
 * `id`  — <a name="widget-id"></a> This the fully qualified name of the widget called widget ID. Using widget ID, the Mendix Platform distinguishes widgets from each other. Widget ID should never be changed after a widget is used in a project or is published in the App Store. Reverse domain-style names, as in example above, are recommended.
-
 * `pluginWidget`  — This should always be set to `true`. This way, the Mendix Platform can distinguish between the newer pluggable widgets and the older custom widgets.
-
 * `offlineCapable` — This shows if a widget can work while an app is offline. For more information on offline apps, see the [Offline-First](/refguide/offline-first) guide. A widget that fetches information from a third-party API, for example a widget that fetches airline ticket prices, could not function without an internet connection. If a widget cannot work offline, Mendix Studio Pro and Studio will forbid its use on pages that must be available offline.
-
 * `supportedPlatform` — This shows the platforms a widget is compatible with.  `Web` describes widgets that are only compatible with web and hybrid mobile apps. `Native` describes widgets that are compatible with native mobile apps.
 
 ### 5.2 Widget Description
@@ -229,13 +226,10 @@ Every `property` tag in the Widget Properties Definition has a shape similar to 
 
 Some properties can or must have more attributes or tags. This depends on the `type` property. The following elements should be present for every property:
 
-`key` — <a name="key-attribute"></a>`key`is a property's unique, single-word identifier. `Key` elements are used internally to identify properties, so they should never change after a widget is used in a project or is published in the App Store. A `Key` element also identifies a property value when it is passed to a pluggable widget’s client component.
-
-`type` — <a name="type-attribute"></a>`type`signifies a property's type. The `type` element can be a `string` , `action`, or `icon` as in the example above. The `type` element defines which values can be configured for a property, which UI is used in the Studios, and what type of value a pluggable widget’s client component receives.
-
-`caption` —  The `caption` element is a short label identifying a property to a modeling developer. The first letter of a caption should be capitalized.
-
-`description` — `description` is a longer description of a property. A description should be capitalized and limited to one or two sentences.
+* `key` — <a name="key-attribute"></a>`key`is a property's unique, single-word identifier. `key` elements are used internally to identify properties, so they should never change after a widget is used in a project or is published in the App Store. A `key` element also identifies a property value when it is passed to a pluggable widget’s client component.
+* `type` — <a name="type-attribute"></a>`type`signifies a property's type. The `type` element can be a `string` , `action`, or `icon` as in the example above. The `type` element defines which values can be configured for a property, which UI is used in the Studios, and what type of value a pluggable widget’s client component receives.
+* `caption` —  The `caption` element is a short label identifying a property to a modeling developer. The first letter of a caption should be capitalized.
+* `description` — `description` is a longer description of a property. A description should be capitalized and limited to one or two sentences.
 
 Here is how a caption and description look in Studio Pro:
 
@@ -243,6 +237,6 @@ Here is how a caption and description look in Studio Pro:
 
 ![description](attachments/pluggable-widgets/card-description.png)
 
-## 8 Read more
+## 8 Read More
 
 * [Build a Text Box Pluggable Widget: Part 1](/howto/extensibility/create-a-pluggable-widget-one)

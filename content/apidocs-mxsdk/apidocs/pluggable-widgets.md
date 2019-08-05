@@ -25,9 +25,9 @@ The essential part of a pluggable widget is its client component: a React compon
 
 The client component is mainly focused on presentation and interaction with an end-user, while data fetching, validation, and updating are handled by the Mendix Platform. Mendix provides your component with APIs which follow a [unidirectional data flow pattern](https://www.geeksforgeeks.org/unidirectional-data-flow/), much like the [Redux](https://redux.js.org/basics/data-flow) and [Flux](https://facebook.github.io/flux/docs/in-depth-overview#structure-and-data-flow) APIs. Mendix follows the “batteries included but removable” motto. You do not have to care about nuances if standard behavior suffices for you, but you can adjust behaviors when required.
 
-A widget component is [mounted](https://en.reactjs.org/docs/react-component.html#mounting) and [unmounted](https://en.reactjs.org/docs/react-component.html#unmounting) when a widget is shown or hidden — for example when a page is opened or due to [conditional visibility](https://docs.mendix.com/refguide/conditions). A component receives [properties](https://en.reactjs.org/docs/components-and-props.html) which resemble properties described in its widget definition XML file. A property's key comes from the [`key`](#key-attribute) attribute, and its value is based on the configuration of the property. Property values are immutable, but the Mendix Platform re-renders the component passing new values when necessary.
+A widget component is [mounted](https://en.reactjs.org/docs/react-component.html#mounting) and [unmounted](https://en.reactjs.org/docs/react-component.html#unmounting) when a widget is shown or hidden — for example when a page is opened or due to [conditional visibility](https://docs.mendix.com/refguide/conditions). A component receives [props](https://en.reactjs.org/docs/components-and-props.html) which resemble properties described in its widget definition XML file. A prop's key comes from the [`key`](#key-attribute) attribute, and its value is based on the configuration of the property. Prop values are immutable, but the Mendix Platform re-renders the component passing new values when necessary.
 
-A property value is often not just a primitive value, but an object whose structure depends on the [`type`](#type-attribute) of its widget's property. A property's values can expose data, metadata, and associated actions — whatever is applicable for the property. Here is an example of one interface. It is a value for an action property, such as the type you would find in the [On click](https://docs.mendix.com/refguide/action-button#events-on-click) property of an action button:
+A prop value is often not just a primitive value, but an object whose structure depends on the [`type`](#type-attribute) of its widget's property. A prop's values can expose data, metadata, and associated actions — whatever is applicable for the property. Here is an example of one interface. It is a value for an action property, such as the type you would find in the [On click](https://docs.mendix.com/refguide/action-button#events-on-click) property of an action button:
 
 ```ts
     export interface ActionValue {
@@ -45,7 +45,7 @@ A pluggable widget is distributed as single widget package file with an *.mpk* e
 
 Manually building a widget package can be difficult, so Mendix recommends you use scripts provided by the [Mendix Pluggable Widget Generator](https://www.npmjs.com/package/@mendix/generator-widget). For more information on how to use a generator, see [How To Build a Text Box Pluggable Widget: Part 1](/howto/extensibility/create-a-pluggable-widget-one).
 
-A widget package file is just a *.zip* archive containing the following things:
+A widget package file is just a zip archive containing the following things:
 
 * A *package.xml* file describing the whole package
 * A widget definition XML file, preferably located in *{widgetName}.xml* where `widdgetName` is the last part of widget [ID](#widget-id)

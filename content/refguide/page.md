@@ -35,7 +35,7 @@ Both modes allow you to edit your page by doing the following:
 * Viewing and editing properties of each widget in the **Properties** pane
 * Opening a **Properties** dialog window from the menu you get when you right-click the widget
 
-### 2.1 Structure Mode{#structure-mode}
+### 2.1 Structure Mode {#structure-mode}
 
 In Structure mode, the page widgets are laid out so that it is easy to see the logical relationship between them. It has the following features which are not available in Design mode:
 
@@ -53,7 +53,7 @@ In Structure mode, the page widgets are laid out so that it is easy to see the l
 
     ![Show styles button](attachments/page/show-styles.png)
 
-### 2.2 Design Mode
+### 2.2 Design Mode {#design-mode}
 
 In Design mode, the page is laid out as it will appear when published so that it is easy to see the spatial relationship between the elements.
 

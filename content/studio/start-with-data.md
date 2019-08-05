@@ -39,10 +39,8 @@ During the import process, spreadsheet data is analyzed and converted the follow
 
 2. Your columns are converted into attributes.
 
-3. The links between the worksheets are identified and can be converted into associations if both conditions below are met: <br/>
-   a. Several or all values of one column in your spreadsheet are identical to the values of another column.<br/>
-   b. The type of data in these columns is Text or General.<br/>
-   c. The values of the other column are unique. <br/>
+3. The links between the worksheets are identified and can be converted into associations if all of the following conditions are met: <br/>
+   a. All values of one column in your spreadsheet are used in another column.<br/>b. The values of the other column are unique. <br/>c. The type of data in these columns is converted to string or enumeration attribute types. For more information on correspondence between Excel data types and attribute types, see the [Correspondence Between Excel Data Types and Attribute Types](#excel-type-attribute-type) section.<br/>
 
 Download this Excel spreadsheet example to check how data is normalized there: [Spreadsheet Example](attachments/start-with-data/Example.xlsx). You can also import it into an app and test how this spreadsheet is converted. For more information, see the [Importing a Spreadsheet](#importing-spreadsheet) section.
 
@@ -73,9 +71,17 @@ In the **Data Preview**, you can check the spreadsheet data before the actual im
 
 The columns which have associations cannot be deselected for the import, you need to delete the association first.   
 
-To review a list of associations and unselect the ones that you do not want to be created, Click **Manage Relations** and a pop-up window will open: 
+To review a list of associations and unselect the ones that you do not want to be created, click **Manage Relations**. In the **Manage Relations** pop-up window, you can see which table and column will be used to create an association **from** and which will be used to create an association **to**. A column with unique data is the one the association goes **to**. 
 
 ![](attachments/start-with-data/manage-relations.png)
+
+For example, in the image above you can see that an association will be created from the **MarketingDocs** entity to the **Contributors** entity. This association was discovered through the column **Responsible** in **MarketingDocs** and the column **Name** in **Contributors**.  As a result, when data is imported the **MarketingDocs** entity will not have **Responsible** as an attribute, instead it will have an association to the **Contributors** entity and will get data from this entity through the association.
+
+{{% alert type="info" %}}
+
+A column can be used to create an association **from** it once only. If an association is created to lead **from** a column, no link can be created as a link **to** it. 
+
+{{% /alert %}}
 
 At the bottom of each column (that will be turned into an attribute) an attribute type is automatically identified and indicated. Click the drop-down menu to change the attribute type. For more information on how Excel data types correspond to attribute types, see [Correspondence between Excel Data Types and Attribute Types](#excel-type-attribute-type).
 

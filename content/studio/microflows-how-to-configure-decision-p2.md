@@ -41,7 +41,7 @@ To embed the microflow with a decision (the attribute of the enumeration type) t
     ![](attachments/microflows-how-to-configure-decision/data-view-properties.png)
 
 5. In **Toolbox**>**Widgets** >**Buttons** find **Create Object**, drag and drop it inside the data view container (it is named **New** by default).
-6.  We are going to create a new page that will be opened when a user clicks the **New** button. Open the **Properties** tab for the created button and do the following:<br/>
+6.  You are going to create a new page that will be opened when a user clicks the **New** button. Open the **Properties** tab for the created button and do the following:<br/>
     a. Set **Customer** as **Entity** in the **Events** section.<br/>
     b. Click **Select Page**.<br/>
 
@@ -77,13 +77,13 @@ You can now publish and view your app.
 
 To embed the microflow with a decision (the attribute of the Boolean type), do the following:
 
-1. We need to add an option to mark customer as blocked. To do this, open the **New_customer** page created in the previous section. For more information, see [Embedding the Microflow Having a Decision with Attribute of the Enumeration Type](#embedding-decision-enumeration).
+1. You need to add an option to mark customer as blocked. To do this, open the **New_customer** page created in the previous section. For more information, see [Embedding the Microflow Having a Decision with Attribute of the Enumeration Type](#embedding-decision-enumeration).
 2. In **Toolbox**>**Widgets** >**Input Elements** select **Radio Buttons**, drag and drop it into the **Data view** container.
 3.  In the **Properties** for the radio buttons, click **Data Source**>**Attribute** and select **Blocked Boolean**. 
 
     ![](attachments/microflows-how-to-configure-decision/new-customer-page-blocked-attribute.png)
 
-4. Now we will add the microflow to pages. Open the page **Order_form_for_bronze_customers.**
+4. Now you will add the microflow to pages. Open the page **Order_form_for_bronze_customers.**
 5.  In **Toolbox**>**Widgets** >**Data Containers**, find **Data View**. 
 
     ![](attachments/microflows-how-to-configure-decision/data-view.png)

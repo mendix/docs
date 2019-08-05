@@ -226,13 +226,10 @@ Every `property` tag in the Widget Properties Definition has a shape similar to 
 
 Some properties can or must have more attributes or tags. This depends on the `type` property. The following elements should be present for every property:
 
-`key` — <a name="key-attribute"></a>`key`is a property's unique, single-word identifier. `Key` elements are used internally to identify properties, so they should never change after a widget is used in a project or is published in the App Store. A `Key` element also identifies a property value when it is passed to a pluggable widget’s client component.
-
-`type` — <a name="type-attribute"></a>`type`signifies a property's type. The `type` element can be a `string` , `action`, or `icon` as in the example above. The `type` element defines which values can be configured for a property, which UI is used in the Studios, and what type of value a pluggable widget’s client component receives.
-
-`caption` —  The `caption` element is a short label identifying a property to a modeling developer. The first letter of a caption should be capitalized.
-
-`description` — `description` is a longer description of a property. A description should be capitalized and limited to one or two sentences.
+* `key` — <a name="key-attribute"></a>`key`is a property's unique, single-word identifier. `key` elements are used internally to identify properties, so they should never change after a widget is used in a project or is published in the App Store. A `key` element also identifies a property value when it is passed to a pluggable widget’s client component.
+* `type` — <a name="type-attribute"></a>`type`signifies a property's type. The `type` element can be a `string` , `action`, or `icon` as in the example above. The `type` element defines which values can be configured for a property, which UI is used in the Studios, and what type of value a pluggable widget’s client component receives.
+* `caption` —  The `caption` element is a short label identifying a property to a modeling developer. The first letter of a caption should be capitalized.
+* `description` — `description` is a longer description of a property. A description should be capitalized and limited to one or two sentences.
 
 Here is how a caption and description look in Studio Pro:
 

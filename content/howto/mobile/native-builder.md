@@ -63,7 +63,7 @@ Command-line arguments provide information to the Native Builder, such as where 
 	Your finished product will look like this example (note the double quotes around paths which could contain spaces): 
 
 	```
-	native-builder.exe --java-home "C:\Program Files\Java\jdk-11.0.1" --project-path "C:\MyApp\MyApp.mpr" --mxbuild-path "C:\Program Files\Mendix\8.0.0\modeler\mxbuild.exe" --runtime-url myapp.mendixcloud.com --github-access-token c0e1dfasdfdsaf02c55ded223dbdebdbe5991095224 --appcenter-api-token 3e18912c2b43f4fe6c85f9asdfdfsbf60d3dae72f34 --app-name CoolApp  --app-identifier com.mendix.MyAwesomeApp --build-number 1 --app-version 1.2.3
+	native-builder.exe --java-home "C:\Program Files\Java\jdk-11.0.1" --project-path "C:\MyApp\MyApp.mpr" --mxbuild-path "C:\Program Files\Mendix\8.0.0\modeler\mxbuild.exe" --runtime-url https://myapp.mendixcloud.com --github-access-token c0e1dfasdfdsaf02c55ded223dbdebdbe5991095224 --appcenter-api-token 3e18912c2b43f4fe6c85f9asdfdfsbf60d3dae72f34 --app-name CoolApp  --app-identifier com.mendix.MyAwesomeApp --build-number 1 --app-version 1.2.3
 	```
 
 |   Parameter   |   Description   |   Example   |
@@ -71,7 +71,7 @@ Command-line arguments provide information to the Native Builder, such as where 
 |   `--java-home`   |   Absolute path to the directory where Java executable is located   |   `"C:\Program Files\Java\jdk-11.0.1"`   |
 |   `--project-path`   |   Absolute path to the Mendix project file   | `"C:\MyApp\MyApp.mpr"`     |
 |   `--mxbuild-path`   |   Absolute path to MxBuild executable   |   `"C:\Program Files\Mendix\8.0.0\modeler\mxbuild.exe"`   |
-|   `--runtime-url`   |   URL of the Mendix runtime   |   `myapp.mendixcloud.com`   |
+|   `--runtime-url`   |   URL of the Mendix runtime   |   `https://myapp.mendixcloud.com`   |
 |   `--github-access-token`   |   GitHub access token   |   `c0e1dasf1e102c55ded223dbdebdbe59asf95224`   |
 |   `--appcenter-api-token`   |   App Center API token   |   `3e18asdfb43f4fe6c85afsd0bf60dde72f134`   |
 |   `--app-name`   |   Name of the app to build   |   `CoolApp`   |
@@ -82,20 +82,23 @@ Command-line arguments provide information to the Native Builder, such as where 
 |   `--appcenter-organization`   |   (Optional) Organization name used in App Center   |   `my-company`   |
 
 ### 5.2 Advanced Parameter Explanation
+#### 5.2.1 --runtime-url
 
-#### 5.2.1 --appcenter-organization
+This parameter should point to the runtime you want to run your app against. If testing against a locally deployed app use your machine's IP address, e.g. `http://192.168.1.12:8080`. If testing against a Mendix Cloud deployed app use the fully qualified runtime url of your deployement server, e.g. `https://myapp.mendixcloud.com`. The correct protocol needs to be appended otherwise the URL will be prefixed by default with `http://`.
+
+#### 5.2.2 --appcenter-organization
 
 In App Center you can be a member of one or more organizations. If the app needs to be built as part of an organization, then provide the name of that organization to Native Builder using `--appcenter-organization`. If you leave the command-line argument out, the app will be part of your personal App Center account.
 
-#### 5.2.2 --app-name
+#### 5.2.3 --app-name
 
 This parameter is the name of your app. You can see this name when users install your app on a device. It is also used as the app’s name in App Center.
 
-#### 5.2.3 --app-version
+#### 5.2.4 --app-version
 
 This parameter specifies the version of the app you want to build. See [Semantic Versioning](https://semver.org/) for more information on how to select a proper version number.
 
-#### 5.2.4 --app-identifier
+#### 5.2.5 --app-identifier
 
 This parameter serves as a unique identifier for your app. Once your app is uploaded to the Apple App Store or the Play Store, the app’s identifier can no longer be modified. If you do modify the identifier after an app is published, it will be treated as a different app by both stores. An app identifier is specified as reverse DNS notation, e.g. {com.mendix.MyAwesomeApp}.
 

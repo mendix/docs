@@ -1,17 +1,17 @@
 ---
-title: "Template grid"
+title: "Template Grid"
 parent: "data-widgets"
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-
 The template grid shows a list of objects in a tile view. For example, a template grid can show a list of products. Using controls provided by the template grid you can browse, search and manipulate those objects. The template grid has a lot in common with the data grid. The main difference is that the objects are shown in templates (a sort of small data view) instead of rows.
 
-Like data grid rows, single tiles don't have their content updated. For example, a dataview inside a tile won't be updated through a **refresh in client** setting in a microflow action. Refreshing the template grid entity will refresh the whole grid.
+Like data grid rows, single tiles do not have their content updated. For example, a data view inside a tile is not updated via the **Refresh in client** setting in a microflow action. Refreshing the template grid entity refreshes the whole grid.
 
 {{% alert type="info" %}}
 
 ![](attachments/pages/template-grid.png)
+
 A template grid showing employees with their profile picture.
 
 {{% /alert %}}

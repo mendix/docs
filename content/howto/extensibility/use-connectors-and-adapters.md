@@ -97,7 +97,7 @@ This module enables bringing the world into your application with the Google Map
 
 [Click to download in the Mendix App Store.](https://appstore.home.mendix.com/link/app/39/Mendix/Google-Maps-Widget)
 
-## 13 IMAP/POP3 incoming email
+## 13 IMAP/POP3 Incoming Email
 
 [![](attachments/18448690/imap.png)](https://appstore.home.mendix.com/link/app/1042/Mendix/IMAP/POP3-incoming-email)
 

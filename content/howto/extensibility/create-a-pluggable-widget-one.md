@@ -282,7 +282,7 @@ The input works, but the styling could be improved. In the next code snippets, y
 
 While the Mendix input widgets come with labels, you will need to add one to TextBox manually. With the new API it is easy to add a label to any widget.
 
-1.  In the *TextBox.xml* file, add attribute `<propertyGroup caption="Label">` with its child `<systemProperty />` above the existing `<propertyGroup caption="Data source">`:
+1.  In the *TextBox.xml* file, add an element `<propertyGroup caption="Label">` with a child element `<systemProperty />` above the existing `<propertyGroup caption="Data source">` element:
 
 	```xml
 	<propertyGroup caption="Label">
@@ -290,7 +290,7 @@ While the Mendix input widgets come with labels, you will need to add one to Tex
 	</propertyGroup>
 	```
 
-	This will add the **Show label** radio buttons in the widget properties tab **Label**. When **Show label** is set to true, it will automatically render the label for you in the page editor and the browser:
+	This will add the **Show label** radio buttons in the widget properties tab **Label** (after synchronizing the Project Directory and updating the widget). When **Show label** is set to true, it will automatically render the label for you in the page editor and the browser:
 
 	![edit text box two](attachments/pluggable-part-one/edittextboxtwo.png)
 
@@ -367,7 +367,7 @@ The value from the attribute can be displayed and updated using the other input,
 	
 	Explaining the code: 
 	
-	* The input's `value` is set by the `this.prop.value`, and this property is not changed directly; the update function will use the `setValue` to trigger a re-render with the updated property
+	* The input's `value` is set by the `this.props.value`, and this property is not changed directly; the update function will use the `setValue` to trigger a re-render with the updated property
 	* There are two ways of handling input changes in React: [controlled components](https://reactjs.org/docs/forms.html#controlled-components) or [uncontrolled components](https://reactjs.org/docs/uncontrolled-components.html)
 	* The `onUpdate` function is optional and it should be checked for availability before executing it
 	* The custom widget TextBox will still not pass text to the Text box widget after this step – it will gain this functionality in [Build a Text Box Pluggable Widget: Part 2 (Advanced)](create-a-pluggable-widget-two).

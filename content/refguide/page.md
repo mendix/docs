@@ -57,9 +57,47 @@ To delete a page, do the following:
 
 The selected page is deleted. 
 
-### 2.4 Adding and Viewing Elements on a Page 
+### 2.4 Adding Elements on a Page 
 
 The way you can add an element on a page depends on a mode you are editing your page in. For more information on modes, see the [Page Editor Modes](#page-editor-modes) section.
+
+In **Structure mode**, there are several ways to add an element on a page:
+
+1.  Through the **Toolbox**: <br/>
+    a. Open the **Toolbox** and select **Widgets** or **Building blocks** tab there. <br/>
+    
+    ![](attachments/page/toolbox.png)<br/>
+   
+    c. Select an element you would like to add and drag and drop this element on your page. <br/>
+   
+2. Though the menu at the top of the page: <br/>
+
+    a.  Do one of the following:<br/>
+
+    ​	i. Select frequently-used widgets (a data view, a data grid, a template grid, or a list view).<br/>
+
+    ​	ii. Click **Add widget**  or **Add building block**, find an element in a list and click **Select**.<br/>
+
+    ​	![](attachments/page/top-menu.png)
+
+    b. Click a drop-zone on a page to position an element.  <br/>
+
+3. By right-clicking a drop-zone:<br/>
+
+    a. Right-click a drop-zone you want to insert an element in.<br/>
+
+    b. Select between adding a widget or a building block.<br/>
+
+    ![](attachments/page/adding-widget-in-drop-zone.png)<br/>
+
+    c. Select an element you would like to add and confirm your choice by clicking **Select**.
+
+In **Design mode**, you can add elements though the Toolbox. Do the following:
+
+1. Open the **Toolbox** and select **Widgets** or **Building blocks** tab there. 
+2. Select an element you would like to add and drag and drop this element on your page.
+
+### 2.5 Viewing Element Properties 
 
 To view properties of an element, do one of the following:
 

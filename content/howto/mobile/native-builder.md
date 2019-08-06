@@ -82,9 +82,10 @@ Command-line arguments provide information to the Native Builder, such as where 
 |   `--appcenter-organization`   |   (Optional) Organization name used in App Center   |   `my-company`   |
 
 ### 5.2 Advanced Parameter Explanation
+
 #### 5.2.1 --runtime-url
 
-This parameter should point to the runtime you want to run your app against. If testing against a locally deployed app use your machine's IP address, e.g. `http://192.168.1.12:8080`. If testing against a Mendix Cloud deployed app use the fully qualified runtime url of your deployement server, e.g. `https://myapp.mendixcloud.com`. The correct protocol needs to be appended otherwise the URL will be prefixed by default with `http://`.
+This parameter should point to the runtime you want to run your app against. If testing against a locally deployed app, use your machine's IP address (for example, `http://192.168.1.12:8080`). If testing against a Mendix Cloud-deployed app, use the fully qualified runtime URL of your deployement server (for example, `https://myapp.mendixcloud.com`). The correct protocol needs to be appended, otherwise the URL will be prefixed by default with `http://`.
 
 #### 5.2.2 --appcenter-organization
 
@@ -102,11 +103,11 @@ This parameter specifies the version of the app you want to build. See [Semantic
 
 This parameter serves as a unique identifier for your app. Once your app is uploaded to the Apple App Store or the Play Store, the app’s identifier can no longer be modified. If you do modify the identifier after an app is published, it will be treated as a different app by both stores. An app identifier is specified as reverse DNS notation, e.g. {com.mendix.MyAwesomeApp}.
 
-#### 5.2.5 --app-icon-path
+#### 5.2.6 --app-icon-path
 
 This parameter specifies an app icon file. The image must be a *.png* file, and have a resolution of 1024x1024. Mendix will do the resizing for you. If a file path is not provided, default app icons will be provided by branch **master**.
 
-#### 5.2.6 --build-number
+#### 5.2.7 --build-number
 
 Every build that is scheduled for release should have a unique, incrementing number. This number will be used as the name of the branch in GitHub, such as `branch/120`. The highest integer Android will allow is 2,147,483,647. Consider starting with 1 and incrementing by one with each release. Alternatively, you can use dates in the “YYmmddHHmm” format, such as `2007310950` for a build run on July 31, 2020 at 09:50.
 

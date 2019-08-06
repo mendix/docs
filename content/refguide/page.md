@@ -10,13 +10,64 @@ tags: ["studio pro", "page", "properties"]
 
 {{% alert type="info" %}}
 
-This document describes the types of page editor and the properties of a page. For details on what pages are for and what kind of widgets can be placed on them, see [Pages](pages).
+This document describes basic functions you can perform in the page editor, its modes, and the properties of a page. For details on what pages are for and what kind of widgets can be placed on them, see [Pages](pages).
 
 {{% /alert %}}
 
 Pages define the end-user interface of a Mendix application. Every page is based on a [layout](layout). A page fills the "gaps" defined by a layout with widgets such as the [data view](data-view) and [data grid](data-grid).
 
-## 2 Page Editor Modes
+## 2 Performing Basic Functions
+
+### 2.1 Opening a Page
+
+To open a page in Studio Pro, do the following:
+
+1. In the [Project Explorer](project-explorer), open a module where this page is located. 
+
+2. Navigate to the page's location inside the module. A page can be listed as an individual element or be included in the **Pages** folder:
+
+    ![](attachments/page/project-explorer-pages.png)
+
+3. Select a page you want to open and double-click it.
+
+The selected page is opened. 
+
+### 2.2 Creating a Page
+
+To create a new page, do the following:
+
+1.  In the [Project Explorer](project-explorer), right-click the module or a folder you want to create a page in and select **Add page**:
+
+    ![](attachments/page/add-page.png)
+
+2.  In the **Create Page** dialog window, fill in the **Page name** and select a **Navigation layout**.
+
+    ![](attachments/page/create-page.png)
+
+3. Click **OK**. 
+
+A new page is created.
+
+### 2.3 Deleting a Page
+
+To delete a page, do the following:
+
+1. In the [Project Explorer](project-explorer), select a page you would like to delete and right-click it.
+2. In the displayed list, select **Delete** and confirm your choice by clicking **Delete** in the pop-up dialog.
+
+The selected page is deleted. 
+
+### 2.4 Adding and Viewing Elements on a Page 
+
+The way you can add an element on a page depends on a mode you are editing your page in. For more information on modes, see the [Page Editor Modes](#page-editor-modes) section.
+
+To view properties of an element, do one of the following:
+
+1. Select an element and open **Properties** pane to view its properties.
+2. Right-click an element and select **Properties** from the list of options that opens.
+3. Double-click an element.
+
+## 3 Page Editor Modes {#page-editor-modes}
 
 There are two different ways to edit your page:
 
@@ -35,7 +86,7 @@ Both modes allow you to edit your page by doing the following:
 * Viewing and editing properties of each widget in the **Properties** pane
 * Opening a **Properties** dialog window from the menu you get when you right-click the widget
 
-### 2.1 Structure Mode {#structure-mode}
+### 3.1 Structure Mode {#structure-mode}
 
 In Structure mode, the page widgets are laid out so that it is easy to see the logical relationship between them. It has the following features which are not available in Design mode:
 
@@ -53,7 +104,7 @@ In Structure mode, the page widgets are laid out so that it is easy to see the l
 
     ![Show styles button](attachments/page/show-styles.png)
 
-### 2.2 Design Mode {#design-mode}
+### 3.2 Design Mode {#design-mode}
 
 In Design mode, the page is laid out as it will appear when published so that it is easy to see the spatial relationship between the elements.
 
@@ -71,7 +122,7 @@ It has the following features which are not available in Structure mode:
 
 * The widgets have design properties and CSS classes and styles applied to them so you can see what they will look like
 
-## 3 Common Properties
+## 4 Common Properties
 
 {{% snippet file="refguide/Document+Name+Property.md" %}}
 
@@ -81,23 +132,23 @@ It has the following features which are not available in Structure mode:
 
 {{% snippet file="refguide/Style+Property.md" %}}
 
-## 4 Design Properties
+## 5 Design Properties
 
 {{% snippet file="refguide/Canvas+Width+Property.md" %}}
 
 {{% snippet file="refguide/Canvas+Height+Property.md" %}}
 
-## 5 General Properties
+## 6 General Properties
 
-### 5.1 Title
+### 6.1 Title
 
 The title of the page that is shown using the [page title widget](page-title). If the page is shown in a pop-up window, the title appears in the title bar of the pop-up. The title can be overridden from places where forms are opened to make it possible to reuse a page for different purposes. For example, a [grid create button](grid-new-button) and an [action button](action-button) (for editing) can refer to the same page, but they override the titles to **New** and **Edit**, respectively.
 
-### 5.2 Layout
+### 6.2 Layout
 
 This is the [layout](layout) on which this page is based.
 
-### 5.3 URL
+### 6.3 URL
 
 The URL of the page can be used to directly navigate to the page (for example, from external links or bookmarks). It will be shown in the address bar of the browser when you visit the page. When navigating to a page without a URL configured, the last visited URL is shown. Note that the full URL of the page will be the base URL of your application followed by `/p` and then by the configured URL of the page (for example, `http://example.mendixcloud.com/p/home_page`).
 
@@ -109,45 +160,45 @@ In simple e-commerce applications, the URLs can be configured as follows:
 
 * */order/{Id}* – the URL for a page with data from a particular `Order` (actual URLs in a browser will look like `http://example.mendixcloud.com/p/order/3212449487634321`, wherein `3212449487634321` is the unique identifier of the `Order`)
 
-## 6 Navigation Properties
+## 7 Navigation Properties
 
-### 6.1 Visible For
+### 7.1 Visible For
 
 These are the module roles for which the page is visible. This has an effect on [menu widgets](menu-widgets) and on buttons that are visible only if allowed (for example, an [action button](action-button) for editing).
 
 For more information, see [Module Security](module-security).
 
-## 7 Pop-Up Properties
+## 8 Pop-Up Properties
 
 The pop-up properties are only relevant for pop-up pages (as opposed to content pages).
 
-### 7.1 Width (Pixels)
+### 8.1 Width (Pixels)
 
 This specifies the pop-up width in pixels. When set to 0, the width is determined automatically.
 
 *Default value:* 0
 
-### 7.2 Height (Pixels)
+### 8.2 Height (Pixels)
 
 Specifies the pop-up height in pixels. When set to 0, the height is determined automatically.
 
 *Default value:* 0
 
-### 7.3 Resizable
+### 8.3 Resizable
 
 Specifies whether the pop-up is resizable (Yes) or fixed-size (No).
 
 *Default value:* Yes
 
-### 7.4 Close Action
+### 8.4 Close Action
 
 Configures the behavior of the popup close button (the little cross in the top-right corner). The default behavior of the popup close button is to rollback any changes and close the popup. If you want to customize the behavior of the popup close button, you can point to a button on the page. When the popup close button is clicked, it will then act as if the selected button is clicked. If the selected button is not available the popup close button will revert back to the default behavior.
 
 *Default value:* Default (cancel)
 
-## 8 Usage Properties
+## 9 Usage Properties
 
-### 8.1 Mark as Used
+### 9.1 Mark as Used
 
 You can search for unused items in Studio Pro by pressing <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd>. Pages that are only used from Java code will be listed as unused, because Studio Pro cannot look inside Java source code.
 

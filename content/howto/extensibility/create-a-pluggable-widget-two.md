@@ -40,7 +40,7 @@ Right now the input is editable for any user at all times. However, the input sh
 
 To add these restrictions, follow the instructions below:
 
-1. In *TextBox.xml* add the enumeration attribute for `Editable` inside `propertyGroup` of `Data source` (where you put the attribute inside `propertyGroup` will affect how the attribute renders in the Mendix Studios): 
+1. In *TextBox.xml* add the enumeration attribute for `Editable` inside the `propertyGroup` of `Data source` (where you put the attribute inside `propertyGroup` will affect how the attribute renders in the Mendix Studios): 
 
 	```xml
 	<property key="editable" type="enumeration" defaultValue="default">
@@ -226,14 +226,14 @@ This section will teach you to add validation to your TextBox widget. Using micr
 Validation can come from a modeled microflow or nanoflow, but can also be widget specific. For this sample you will learn to implement a custom, required message which will show when the input is empty.
 
 
-1.  In *TextBox.xml*, add the `requiredMessage` property inside `propertyGroup`:
+1.  In *TextBox.xml*, add the `requiredMessage` property inside the `propertyGroup` of `Data source`:
 
 	```xml
 	<property key="requiredMessage" type="textTemplate" required="false">
 		<caption>Required message</caption>
 		<description/>
 		<translations>
-			<translation lang="en_US">A input text is required</translation>
+			<translation lang="en_US">An input text is required</translation>
 		</translations>
 	</property>
 	```
@@ -279,7 +279,7 @@ Validation can come from a modeled microflow or nanoflow, but can also be widget
 
 Until now the components did not keep any state. Each keystroke passed through the `onUpdate` function, which set the new value. The newly-set value was received through the React lifecycle, which updated the property and called the `render` function. This method can cause many rendering actions to be triggered by all widgets that are using that same attribute, such as a re-render for each keystroke. This pattern also makes it also difficult to trigger an onChange action. The onChange action should only trigger on leaving the input combined with a changed value. 
 
-1.  In *TextBox.xml*, add the `onChange` action inside `properties` and make edit `textAttribute` property by adding a reference to the key of the action :
+1.  In *TextBox.xml*, add the `onChange` action inside `properties` and edit the `textAttribute` property by adding a reference to the key of the action :
 
 	```xml
 	<propertyGroup caption="Data source">
@@ -418,7 +418,7 @@ Until now the components did not keep any state. Each keystroke passed through t
 	* The state `editedValue` will be empty until the input value is changed by the user 
 	* The `setState` function will update the state and will re-render the component (in the rendering, the new value is taken from `editedValue`)
 	* The `onBlur` function will set the new value in the attribute through the container component – the state is reset, and the new value is received by an update of the attribute (which will propagate as a new property value)
-	* The `onLeave` function will set the value. The `setValue` function will automatically call the onChange action, as this is connected trough the XML configuration
+	* The `onLeave` function will set the value. The `setValue` function will automatically call the onChange action, as this is connected with the XML configuration
 
 
 ### 3.5 Adding Accessibility
@@ -518,8 +518,8 @@ To make the input widget more accessible for people using screen readers, you wi
 	
 	Explaining the code:
 
-	* The `Label` component provided by the platform has a `for` attribute which will have a reference to the widget's ID – you must set the ID to for the screen reader to link the label to the `this` input
-	* The `Label` component will have an ID `<widgetid>-label` in the input – you must link the `area-labeledby` to the ID of the label
+	* The `Label` component provided by the platform has a `for` attribute which will have a reference to the widget's ID – you must set the ID for the screen reader, so that it can link the label to the `this` input
+	* The `Label` component will have an ID `<widgetid>-label` – you must link the input's `aria-labelledby` to the ID of the label
 
 You have now made your widget compatible with screen readers. If a screen reader is describing your app aloud, it will list the widget elements to the user.
 

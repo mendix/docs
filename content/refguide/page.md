@@ -18,6 +18,15 @@ Pages define the end-user interface of a Mendix application. Every page is based
 
 ## 2 Performing Basic Functions
 
+You can perform the following basic function when working in the page editor:
+
+* Open a page
+* Create a page
+* Delete a page
+* Add elements on a page
+* View element properties
+* 
+
 ### 2.1 Opening a Page
 
 To open a page in Studio Pro, do the following:
@@ -57,7 +66,7 @@ To delete a page, do the following:
 
 The selected page is deleted. 
 
-### 2.4 Adding Elements on a Page 
+### 2.4 Adding Elements on a Page {#add-elements}
 
 The way you can add an element on a page depends on a mode you are editing your page in. For more information on modes, see the [Page Editor Modes](#page-editor-modes) section.
 
@@ -97,13 +106,27 @@ In **Design mode**, you can add elements though the Toolbox. Do the following:
 1. Open the **Toolbox** and select **Widgets** or **Building blocks** tab there. 
 2. Select an element you would like to add and drag and drop this element on your page.
 
-### 2.5 Viewing Element Properties 
+### 2.5 Viewing Element Properties {#view-properties}
 
 To view properties of an element, do one of the following:
 
 1. Select an element and open **Properties** pane to view its properties.
 2. Right-click an element and select **Properties** from the list of options that opens.
 3. Double-click an element.
+
+### 2.6 Manipulating Elements on a Page {#manipulate-elements}
+
+To cut/copy/paste you can use <kbd>Ctrl</kbd> + <kbd>Z</kbd> /  <kbd>Ctrl</kbd> + <kbd>C</kbd> / <kbd>Ctrl</kbd> + <kbd>V</kbd> or  <kbd>Cmn</kbd> + <kbd>Z</kbd> /  <kbd>Cmd</kbd> + <kbd>C</kbd> / <kbd>Cmd</kbd> + <kbd>V</kbd>.
+
+{{% alert type="info" %}}
+
+You can cut/copy/paste elements on a page to different apps in Studio Pro if they have the same Mendix version. However, you cannot cut/copy/paste the whole page.
+
+You cannot cut/copy/paste from Studio Pro to Studio.
+
+{{% /alert %}}
+
+To delete an element from a page, select this element and press <kbd>Delete</kbd> or right-click an element and select **Delete** in a drop-down menu. 
 
 ## 3 Page Editor Modes {#page-editor-modes}
 

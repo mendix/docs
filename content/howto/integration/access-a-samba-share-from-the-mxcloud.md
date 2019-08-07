@@ -69,7 +69,3 @@ For more details on all the properties, see here: [http://jcifs.samba.org/src/do
 ## 4 Further Documentation
 
 *   [http://jcifs.samba.org/](http://jcifs.samba.org/)
-
-## 5 Read More
-
-* [Use Connectors and Adapters](/howto/extensibility/use-connectors-and-adapters)

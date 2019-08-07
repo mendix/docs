@@ -18,6 +18,3 @@ yarn-error.log
 manifest_test.yml
 _scripts/hugo_bin
 .vscode/settings.json
-
-mx-*
-bin

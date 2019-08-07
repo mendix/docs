@@ -59,7 +59,7 @@ When it's done, open a browser and go to [http://localhost:4000](http://localhos
 
 #### Gulp Tasks
 
-Make sure you have Gulp installed first (`npm install gulp -g`). By running `gulp help`, you can access the different tasks that are used when building the website.
+By running `yarn run help`, you can access the different tasks that are used when building the website.
 
 **Please note that the task `check:html` is currently broken in Windows.**
 

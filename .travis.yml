@@ -26,7 +26,6 @@ before_install:
   - mv ./hugo $HOME/bin/hugo
 install:
   - rm -rf _site
-  - yarn global add gulp
   - yarn install
 before_deploy:
   - export PATH=$HOME:$PATH
@@ -38,23 +37,23 @@ before_deploy:
   - chmod a+x $HOME/autopilot-linux
   - ./_scripts/before_deploy.sh
 script:
-  - gulp build
+  - ./node_modules/.bin/gulp build
 cache:
   yarn: true
   #directories:
   #  - node_modules
 branches:
   only:
-  - master
-  - development
+    - master
+    - development
 deploy:
-- provider: script
-  script:
-    - ./_scripts/deploy.sh
-  skip_cleanup: true
-  on:
-    branch:
-      - master
-      - development
+  - provider: script
+    script:
+      - ./_scripts/deploy.sh
+    skip_cleanup: true
+    on:
+      branch:
+        - master
+        - development
 after_deploy:
   - ./_scripts/algolia.sh

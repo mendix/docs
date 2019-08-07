@@ -29,7 +29,7 @@ Node.js is a JavaScript runtime. You can install it by downloading the installer
 
 1. Open a terminal window. In Windows, you can run this by pressing <kbd>Win</kbd> + <kbd>R</kbd>, typing `cmd`, and pressing <kbd>Enter</kbd>.
 2. Go to the folder where the documentation resides: `cd C:\Projects\Mendix\docs` (assuming you have put it in this folder).
-3. Check if you have both Hugo and Node.JS installed correctly by typing these commands in your terminal and pressing <kbd>Enter</kbd>):
+3. Check if you have both Hugo, Node.JS and yarn installed correctly by typing these commands in your terminal and pressing <kbd>Enter</kbd>):
 
    `hugo version`
 
@@ -39,11 +39,15 @@ Node.js is a JavaScript runtime. You can install it by downloading the installer
 
    It should show you the version: `v8.1.3` (the version number you installed)
 
+   `yarn -v`
+
+   It should show you yarn version
+
 4. If both commands work, there is one more command you need to type to install the dependencies:
 
-   `npm install`
+   `yarn install`
 
-   This will take a while. It will install all the dependencies you need. You can also use **yarn**. Make sure yarn is installed and run `yarn`.
+   This will take a while. It will install all project dependencies specified in package.json.
 
 #### Running the Server
 

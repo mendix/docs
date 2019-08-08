@@ -9,6 +9,6 @@ In the first case we say the widget is connected to an attribute and in the seco
 
 <div class="alert alert-warning">
 
-An input widget connected to an attribute <strong>path</strong> must be read-only. The Modeler will check this for you.
+In Mendix 8.0 an input widget connected to an attribute <strong>path</strong> must be read-only. The Modeler will check this for you. In a later versions of Mendix, it is possible to edit attributes over a path.
 
 </div>

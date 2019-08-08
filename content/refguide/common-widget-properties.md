@@ -1,8 +1,8 @@
 ---
 title: "Common Widget Properties"
-parent: "common-widgets"
-menu_order: 90
-tags: ["studio pro"]
+parent: "pages"
+menu_order: 120
+tags: ["studio pro", "widget properties", "properties", "common", "widget"]
 ---
 
 These are properties that are shared by many widgets. For a complete list of properties, take a look at the relevant widget.

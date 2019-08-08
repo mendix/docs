@@ -2,20 +2,33 @@
 title: "Input Widgets"
 parent: "pages"
 menu_order: 30
-tags: ["studio pro"]
+tags: ["studio pro", "input widgets", "widget"]
 ---
 
+## 1 Introduction
 
 Input widgets are typically used to show data to the user and allow them to edit data. The following list shows the available input widgets.
 
 Input widgets need to be linked to an attribute in order to function. As such, they must be placed within a data widget filled by an object. [Data views](data-view) are the most common input data widget, though a number of other options are available.
 
-*   [Text Box](text-box)
-*   [Text Area](text-area)
-*   [Drop-Down](drop_down)
-*   [Check Box](check-box)
-*   [Radio Buttons](radio-buttons)
-*   [Date Picker](date-picker)
-*   [Reference Selector](reference-selector)
-*   [Reference Set Selector](reference-set-selector)
-*   [Input Reference Set Selector](input-reference-set-selector)
+*   [Text Box](text-box) – allows to enter, edit, and display a text
+*   [Text Area](text-area) – allows to enter, edit it, and display a long text
+*   [Drop-Down](drop_down) – allows end-users to pick an option from a preset list of options
+*   [Check Box](check-box) – allows end-user to mark a value as true or false
+*   [Radio Buttons](radio-buttons) – allow end-users select the option from a number of preset ones
+*   [Date Picker](date-picker) – allow end-users select a date in a calendar
+*   [Reference Selector](reference-selector) – is used to select and display many-to-one or one-to-one (reference type) associations
+*   [Reference Set Selector](reference-set-selector) –  is used to select and edit association of reference set type 
+*   [Input Reference Set Selector](input-reference-set-selector) – is used to display and edit many-to-many associations 
+
+## 2 Performing Basic Functions
+
+{{% snippet file="refguide/performing-basic-functions-widgets.md" %}}
+
+## 3 Read More
+
+* [Page](page)
+
+* [Pages](pages)
+
+  

@@ -1,8 +1,8 @@
 ---
 title: "Layout Widgets"
-parent: "pages"
-menu_order: 13
-tags: ["studio pro"]
+parent: "layout"
+menu_order: 10
+tags: ["studio pro", "layout grid, "layout widgets", "layout"]
 ---
 
 

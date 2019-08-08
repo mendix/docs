@@ -11,16 +11,16 @@ Common widgets category contain widgets that are commonly used. This category co
 
 
 * [Text](text) – displays a text that can contain attributes
-
 * [Image](image) – displays static image
-
 * [Label](label) – displays static text 
-
 * [Snippet Call](snippet-call) – allows you to use a snippet on another snippet, a page, or a layout
-
 * [Page Title](page-title) – displays page title set in page properties
 
-## 2 Read More
+## 2 Performing Basic Functions
+
+{{% snippet file="refguide/performing-basic-functions-widgets.md" %}}
+
+## 3 Read More
 
 * [Page](page)
 

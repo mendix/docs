@@ -25,7 +25,7 @@ You can perform the following basic function when working in the page editor:
 * Delete a page
 * Add elements on a page
 * View element properties
-* 
+* Arrange elements on a page
 
 ### 2.1 Opening a Page
 
@@ -114,7 +114,7 @@ To view properties of an element, do one of the following:
 2. Right-click an element and select **Properties** from the list of options that opens.
 3. Double-click an element.
 
-### 2.6 Manipulating Elements on a Page {#manipulate-elements}
+### 2.6 Arranging Elements on a Page {#arrange-elements}
 
 To cut/copy/paste you can use <kbd>Ctrl</kbd> + <kbd>Z</kbd> /  <kbd>Ctrl</kbd> + <kbd>C</kbd> / <kbd>Ctrl</kbd> + <kbd>V</kbd> or  <kbd>Cmn</kbd> + <kbd>Z</kbd> /  <kbd>Cmd</kbd> + <kbd>C</kbd> / <kbd>Cmd</kbd> + <kbd>V</kbd>.
 
@@ -157,7 +157,7 @@ In Structure mode, the page widgets are laid out so that it is easy to see the l
 
 * Each widget has a drop zone before/above and after/below it – this makes it easier to place widgets correctly when they appear close together in Design mode
 * Right-click on a drop zone allows you to insert a widget into it
-* There is a menu at the top of the page of frequently-used widgets – these cannot be dragged, but are positioned by clicking a drop zone after selecting the widget
+* There is a menu at the top of the page of data widgets – these cannot be dragged, but are positioned by clicking a drop zone after selecting the widget
 
     ![Frequently-used widgets](attachments/page/frequently-used.png)
 

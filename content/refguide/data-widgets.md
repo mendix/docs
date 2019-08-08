@@ -21,18 +21,17 @@ The Data widgets category contains the following widgets:
 
 * **[Template grid](template-grid)** – shows a list of objects in a tile view. For example, a template grid can show a list of employees with their profile pictures. Using controls provided by the template grid you can browse, search, and manipulate those objects.
 
+  ![](attachments/data-widgets/template-grid-example.png)
+
 * **[List view](list-view)** – shows a list of objects. For example, you can display list of all customers using a list view. 
 
   ![](attachments/data-widgets/list-view-example.png)
 
 ## 2 Performing Basic Functions
 
-For more information on how to add widgets to a page, view their properties, and manipulate them, see [Adding Elements on a Page](page#add-elements), [Viewing Element Properties](page#view-properties), and [Manipulating Elements on a Page](page#manipulate-elements) sections in *Page*.
+{{% snippet file="refguide/performing-basic-functions-widgets.md" %}}
 
 ## 3 Read More
 
 * [Page](page)
-* [Data View](data-view)
-* [Data Grid](data-grid)
-* [Template Grid](template-grid)
-* [List View](list-view)
+* [Pages](pages)

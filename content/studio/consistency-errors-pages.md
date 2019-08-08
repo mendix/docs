@@ -56,7 +56,7 @@ Possible errors that you can get when a page is expecting a context that is unav
 
 When a page expects a context that is not passed to it from another page or a microflow, you will get consistency errors. 
 
-Let us study an example: the **Customers** page contains a list view with a list of all customer names (**Customer** is set as **Entity** in the **Data Source** properties), and a **Details** button outside of the list view (placed in a [container](page-editor-widgets-layouts#container-overview) only). The **Details** button opens a **Customer Details** page when a user clicks it (the **On Click Action** for the button is set to **Page** and the **Create Object** option is disabled). 
+Let us study an example: the **Customers** page contains a list view with a list of all customer names (**Customer** is set as **Entity** in the **Data Source** properties), and a **Details** button outside of the list view (placed in a [container](page-editor-widgets-structure#container-overview) only). The **Details** button opens a **Customer Details** page when a user clicks it (the **On Click Action** for the button is set to **Page** and the **Create Object** option is disabled). 
 
 ![Button Properties on the Customers Page](attachments/consistency-errors-pages/customers-page.png)
 

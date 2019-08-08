@@ -55,7 +55,7 @@ To configure your Windows virtual machine to work with Mendix Studio Pro, follow
 
 Congratulations! You have successfully configured port forwarding to enable testing Mendix apps with your Mac. 
 
-### 4 Viewing Your App on Your Testing Device
+## 4 Viewing Your App on Your Testing Device
 
 Whenever you create or open a Mendix app in Mendix Studio Pro, be sure to do so from a mapped drive instead of a network drive:
 
@@ -83,7 +83,7 @@ Instead, you must enter your Mac's IP address into your Make It Native app. To r
 
 Congratulations! You have successfully viewed your app on a test device.
 
-### 5 Viewing Changes to Your App on Your Testing Device
+## 5 Viewing Changes to Your App on Your Testing Device
 
 For information on how to change to your app and then see that change on your device, see the [Viewing Changes to Your App on Your Testing Device](getting-started-with-native-mobile#viewingchanges) section in *Get Started with Native Mobile*.
 

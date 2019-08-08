@@ -34,10 +34,10 @@ The Access token connector could **not** be used for calling any MindSphere API 
 
 ![DS_GetAccessTokenForScheduledEvents](attachments/mindsphere-development-considerations/DS_GetAccessTokenForScheduledEvents.png)
 
-The microflow uses the [MindSphere Application Credentials](#5.1.2%20Application%20Credentials) functionality to fetch a token and uses different environment variables depending on the location where the app is running:
+The microflow uses the [MindSphere Application Credentials](#5.1.2 Application Credentials) functionality to fetch a token and uses different environment variables depending on the location where the app is running:
 
 a) Local: <br/>
-The microflow uses the application credentials you entered at startup to fetch a token. See also [Application Credentials](#5.1.2%20Application%20Credentials)
+The microflow uses the application credentials you entered at startup to fetch a token. See also [Application Credentials](#5.1.2 Application Credentials)
 
 b)  Developer Tenant: <br/>
 The following cloud foundry environment variables must be set for the app:
@@ -68,7 +68,7 @@ a token for each tenant. With the token you can proceed with your custom applica
 Do not create a Tenant object by your self as this is done automatically during login.
 {{% /alert %}}
 
-![DS_GetAccessTokenForScheduledEvents](attachments/mindsphere-development-considerations/sample_getAccessTokeenForScheduledEvents.png)
+![DS_GetAccessTokenForScheduledEvents](attachments/mindsphere-development-considerations/sample_getAccessTokenForScheduledEvents.png)
 
 ## 3 Cloud Foundry Environment Variables {#cfenvvars}
 

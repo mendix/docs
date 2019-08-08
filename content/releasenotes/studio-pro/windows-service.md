@@ -5,6 +5,19 @@ category: "Studio Pro"
 
 To download the Windows Service, go to the Desktop Modeler page in the [Mendix App Store](https://appstore.home.mendix.com/link/modelers) and open **Related downloads**.
 
+## 4.6
+
+**Release date: August 8, 2019**
+
+* We added support for Mendix 8.
+* We added the option to download the applicable server distribution on the form where you add or update an app.
+* We select now the default location in the Browse window when uploaded or temporary files path is not set.
+* We updated the Newtonsoft Json.NET library from 5.0.3 to 12.0.2.
+* We updated the DotNetZip library from version 1.11.0 to 1.13.3.
+* We replaced an old version of the Active Directory Common Dialogs .NET library by Tulpep.ActiveDirectoryObjectPicker 2.3.133.
+
+*Known issue*: if an Oracle Java 8 installation is available, this version will be selected by default for Mendix 8 apps. Please make sure you select JRE or JDK 11 from Oracle or OpenJDK (AdoptOpenJDK). This will be fixed in a future release.
+
 ## 4.5.1
 
 **Release date: June 5, 2018**

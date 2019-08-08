@@ -55,7 +55,7 @@ For each value of the attribute, you can specify whether the element is editable
 
 By selecting this option, visibility or editability becomes conditional based on whether the entered [microflow expression](expressions) evaluates to `true` or `false`.
 
-The expression result must be of the Boolean type. The expression can use the object of the enclosing data container available as `$currentObject`.
+The expression result must be of the Boolean type. The expression can use the object of the enclosing data container available as `$currentObject`. Starting with Mendix 8.1 the expression can access objects of all data containers enclosing that data container widget. These objects are available under the name of the widget they originate from, e.g. as `$dataView1`.
 
 {{% alert type="warning" %}}
 

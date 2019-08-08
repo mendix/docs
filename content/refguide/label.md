@@ -6,6 +6,8 @@ tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+## 1 Introduction
+
 {{% alert type="warning" %}}The label widget is not supported on native mobile pages.{{% /alert %}}
 
 {{% alert type="warning" %}}
@@ -18,24 +20,17 @@ For all other text use the [text widget](text) as it provides more features, e.g
 
 A label shows static text, which intent is to describe the purpose of a specific widget to the user.
 
-{{% alert type="info" %}}
-
-![](attachments/pages/label.png)
-A label placed in a cell with render mode header.
-
-{{% /alert %}}
-
-## General properties
+## 2 General Properties
 
 {{% snippet file="refguide/Caption+Property.md" %}}
 
-## Visibility properties
+## 3 Visibility Properties
 
 {{% snippet file="refguide/Visibility+Property.md" %}}
 
 {{% snippet file="refguide/Visibility+Property+With+Module+Roles+Simple.md" %}}
 
-## Common properties
+## 4 Common Properties
 
 {{% snippet file="refguide/Name+Property.md" %}}
 

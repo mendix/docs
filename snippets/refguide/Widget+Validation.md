@@ -14,7 +14,7 @@ The possible values of a predefined validation are the following:
 * Date in the future – dateTime
 * Date in the past – dateTime
 
-Custom validations are expressions that follow the [Microflow expression](expressions) syntax. Both `$currentObject` and `$value` are in a scope that refers to the current object and the current member value, respectively.
+Custom validations are expressions that follow the [Microflow expression](expressions) syntax. Both `$currentObject` and `$value` are in a scope that refers to the current object and the current member value, respectively. Starting with Mendix 8.1 the expression can access objects of all data containers enclosing that data container widget. These objects are available under the name of a widget they originate from, e.g. as `$dataView1`.
 
 When a validation is set and it fails for this widget, a message will be shown when the user selects **Save**.
 

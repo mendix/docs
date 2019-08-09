@@ -27,9 +27,9 @@ Before starting this how-to, make sure you have completed the following prerequi
 You will need to take the following into account when planning to migrate to Mendix Cloud V4:
 
 * Your app needs to be on a supported version of Mendix, that is **Mendix version 6.0 or above**
-* Long-running scheduled events will probably need to be split into smaller chunks using a queueing system like the Amazon SQS connector to spread the work out over multiple instances
+* If you are using Mendix 7, you might want to split long-running scheduled events into smaller chunks, using a queueing system like the Amazon SQS connector to spread the work out over multiple instances
 * If you use a mail server from your app, you will need to use a third-party email provider – for more information, see [Sending Email](sending-email)
-* To secure your app, you will have to use one of the recommended methods discussed in [Securing Outgoing Connections from Your Application](securing-outgoing-connections-from-your-application) if you are currently using a VPN.
+* If you are currently using a VPN to secure your app, you will have to use one of the recommended methods discussed in [Securing Outgoing Connections from Your Application](securing-outgoing-connections-from-your-application) instead.
 
 To make the most of the features of Mendix Cloud V4, we recommend that your apps are built as [12-factor apps](https://12factor.net/).
 
@@ -37,7 +37,8 @@ To make the most of the features of Mendix Cloud V4, we recommend that your apps
 
 There are a few other differences between the way you develop and deploy apps in Mendix Cloud v4 and Mendix Cloud v3:
 
-* In Mendix Cloud v4, the debugger is always active, and does not have to be activated – the button shows the credentials to connect Mendix Studio Pro to the debugger
+* In Mendix Cloud v4, the debugger is always active, and does not have to be activated – the **Show Debugger Information** button shows the credentials to connect Mendix Studio Pro to the debugger
+    {{% alert type="info" %}}You can only use the debugger if your app is scaled to a single instance.{{% /alert %}}
 * In Mendix Cloud v4, the Java security manager is no longer enabled
     * In Cloud Foundry, short-lived containers ensure standardization and apps are completely isolated from the management network, so the Java security manager is not needed to enforce standardization and act as an additional security layer
 * In Mendix Cloud v4, the number of permitted database connections is tied to the RAM of the database environment, rather than being static.
@@ -108,7 +109,11 @@ To learn how to do this, see [How to Deploy the App to an Environment](mendix-cl
 
 ### 4.3 Linking the App to the v4 Node
 
-After the v3 node has been offboarded, follow these steps to link the app to the v4 Node:
+Follow these steps to link the app to the v4 Node:
+
+{{% alert type="warning" %}}
+Make sure you have downloaded the latest backup and deployment package before linking your app to the v4 node.
+{{% /alert %}}
 
 1.  In the [Developer Portal](http://home.mendix.com), go to **Apps** and select the app that has been detached from the v3 node.
 
@@ -137,15 +142,7 @@ If you have a custom domain set up, you will need to change this. Instructions f
 
 ### 4.6 Offboarding the v3 Node
 
-Your app is now running in Mendix Cloud v4. If everything works correctly, submit a request at [Mendix Support](https://support.mendix.com) to offboard the v3 node. This means that the app will be detached from the node.
-
-With the node removed, the app will still remain in the [Developer Portal](http://home.mendix.com) as a Free App.
-
-{{% alert type="warning" %}}
-
-Make sure you have downloaded the latest backup and deployment package before offboarding the node.
-
-{{% /alert %}}
+Your app is now running in Mendix Cloud v4. If everything works correctly, submit a request at [Mendix Support](https://support.mendix.com) to offboard the v3 node. This means that your v3 node will no longer be available.
 
 ## 5 Read More
 

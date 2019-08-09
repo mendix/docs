@@ -19,7 +19,7 @@ Mendix Cloud v4 is a mature product, launched in Q1 2017, and has a number of im
 * It is still being actively developed and improved, with new features regularly being introduced (for example [flexible environments](mendix-cloud-deploy#flexible-environments))
 * It uses industry-standard techniques for scalability and maintainability
 * It supports all current versions of Mendix, including Mendix version 8
-* It has improved monitoring features, including using some external monitoring tools
+* It has improved monitoring features, including using external monitoring tools
 
 ## 2 Can I Upgrade All My Apps?
 
@@ -63,7 +63,7 @@ You can, however, launch services on your own AWS account, in the same region to
 
 We add regions based on customer demand. If you would like a different region, contact your Mendix Customer Success Manager to see what we can offer. Note that we any request will need to take into account the costs of launching a complete Cloud Foundry cluster, with backup services, monitoring, etc. 
 
-You can also consider running your Mendix app using your own AWS account in a different AWS region. You can do this using Docker, and there is some information on how to do this in the [Docker](docker-deploy) documentation. If you do this, however, you will not receive all the benefits of running in the Mendix Cloud.
+You can also consider running your Mendix app using your own AWS account in a different AWS region. You can do this using Docker, and there is information on how to do this in the [Docker](docker-deploy) documentation. If you do this, however, you will not receive all the benefits of running in the Mendix Cloud.
 
 ## 7 What Other Considerations Are There When Running My App in Mendix Cloud V4?
 

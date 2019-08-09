@@ -91,7 +91,7 @@ To visualize data from the Asset Manager app in Tableau, follow these steps:
 
     ![](attachments/18448736/18582022.png)
 
-2.  On the **Server Connection** dialog box, enter *http://localhost:8080/odata/Assets/v1/SmartTasks* for the **Server**
+2.  On the **Server Connection** dialog box, enter `http://localhost:8080/odata/Assets/v1/SmartTasks` for the **Server**
    address:
 
     ![](attachments/18448736/18582020.png)
@@ -105,8 +105,7 @@ To visualize data from the Asset Manager app in Tableau, follow these steps:
     ![](attachments/18448736/18582015.png)
 
 5.  Click **Data** > **New Data Source** and repeat step 1–4 to add a server connection for
-   *http://localhost:8080/odata/Assets/v1/Engineers*:
-
+   `http://localhost:8080/odata/Assets/v1/Engineers`:
 6.  Open **Sheet1**. Under **Data**, click **Engineers** and drag **ID** from **Measures** to **Dimensions**:
 
     ![](attachments/18448736/18582012.png)
@@ -167,11 +166,11 @@ To filter data with query parameters, follow these steps:
 
     ![](attachments/18448736/ther-is-no-field-named-name.png)
 
-4.  Open **Sheet1** and drag **Name** to **Rows** again. Now you should now see a bar chart with only the data of the two engineers:
+5.  Open **Sheet1** and drag **Name** to **Rows** again. Now you should now see a bar chart with only the data of the two engineers:
 
     ![](attachments/18448736/18581997.png)
 
-5. You can combine filters by using the `&` character. Repeat steps 1–4, but now use `http://localhost:8080/odata/Expenses/Expenses?$skip=1` as the server URL. You should now see a bar chart showing the data of engineers 2 and 3.
+6. You can combine filters by using the `&` character. Repeat steps 1–4, but now use `http://localhost:8080/odata/Expenses/Expenses?$skip=1` as the server URL. You should now see a bar chart showing the data of engineers 2 and 3.
 
 These are some other query examples:
 

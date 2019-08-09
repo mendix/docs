@@ -100,7 +100,7 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deploym
 
 #### Mendix Cloud Improvements
 
-* We re-designed the app user management page of the Developer Portal for Mendix Cloud environments which are enabled for single sign-on (SSO).
+* We redesigned the app user management page of the Developer Portal for Mendix Cloud environments which are enabled for single sign-on (SSO).
 
 ### May 13th, 2019
 

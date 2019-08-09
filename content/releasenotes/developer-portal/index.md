@@ -14,6 +14,12 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deploym
 
 ## 2019
 
+### August 9th, 2019
+
+#### App User Management Improvements 
+
+* We redesigned the UI for managing app users and improved the performance of loading manageable app environments and users.
+
 ### July 31st, 2019  
 
 #### App Store Improvements  

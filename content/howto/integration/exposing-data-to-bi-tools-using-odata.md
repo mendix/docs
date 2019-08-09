@@ -162,10 +162,7 @@ To filter data with query parameters, follow these steps:
 
     ![](attachments/18448736/18581998.png)
 
-4.  On the warning indicating that the data being used was refreshed, click **OK**:
-
-    ![](attachments/18448736/ther-is-no-field-named-name.png)
-
+4.  On the warning indicating that the data being used was refreshed, click **OK**.
 5.  Open **Sheet1** and drag **Name** to **Rows** again. Now you should now see a bar chart with only the data of the two engineers:
 
     ![](attachments/18448736/18581997.png)

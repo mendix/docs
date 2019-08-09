@@ -52,7 +52,7 @@ A published OData service can be used by third-party applications to read data f
 
 	![](attachments/18448736/18582024.png)
 
-   Security in OData is managed by the **Project Security** settings and the entity-level access rules; therefore, if you have already configured access rules in your app, you don not have to configure security separately for OData.
+	Security in OData is managed by the **Project Security** settings and the entity-level access rules; therefore, if you have already configured access rules in your app, you don not have to configure security separately for OData.
 
 6.  Repeat steps 4 and 5 for the **Engineer** entity:
 

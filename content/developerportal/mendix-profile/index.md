@@ -251,7 +251,7 @@ In this section, you can upload your profile image as well as fill in personal d
 
 Under **Contact**, you can select how much information you want to receive from Mendix:
 
-* **Receive daily digest** – enabled by default
+* **Receive daily digest** – disabled by default
 * **Receive updates for threads in which I am active** – enabled by default
 
 There is also a link to [Mendix Support](https://support.mendix.com/hc/en-us) if you need to perform certain account actions that require their assistance.

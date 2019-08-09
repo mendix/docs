@@ -2,7 +2,7 @@
 title: "Layout Widgets"
 parent: "layout"
 menu_order: 10
-tags: ["studio pro", "layout grid, "layout widgets", "layout"]
+tags: ["studio pro", "layout grid", "layout widgets", "layout"]
 ---
 
 

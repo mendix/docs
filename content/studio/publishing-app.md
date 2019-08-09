@@ -85,7 +85,7 @@ To view your app on a mobile device, follow these steps:
 
     ![View on Mobile Device Option](attachments/publishing-app/view-on-mobile-device.png)
 
-2. Scan the QR-code with your mobile device using the [Mendix Mobile app](https://play.google.com/store/apps/details?id=com.mendix.SprintrMobile&hl=en). Follow the directions to download the Mendix Mobile app in case you do not have it installed.
+2. Scan the QR-code with your mobile device or open the link in your mobile device.
 
 ## 5 Possible Statuses When Publishing Your App
 

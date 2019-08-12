@@ -19,7 +19,6 @@ Pluggable widgets are the new generation of custom-built widgets. These widgets 
 **Are you in a hurry?** 
 
 Clone this [code sample](https://github.com/mendix/text-box-sample) from GitHub with the basic and advanced features already implemented.
-{{% todo %}}[If you update a code snippet, please make sure to update the completed sample on this GitHub repository too. Thank you!]{{% /todo %}}
 
 ## 2 Prerequisites
 
@@ -166,19 +165,19 @@ Open the **(YourMendixProject)/CustomWidgets/TextBox** folder in your IDE of cho
 	```tsx
 	import { Component, ReactNode, createElement } from "react"; 
 	import { hot } from "react-hot-loader/root";
-
+	
 	import { TextBoxContainerProps } from "../typings/TextBoxProps";
 	import { TextInput } from "./components/TextInput";
-
+	
 	import "./ui/TextBox.css";
-
+	
 	class TextBox extends Component<TextBoxContainerProps> {
 		render(): ReactNode {
 			const value = this.props.textAttribute.value || "";
 			return <TextInput value={value} />;
 		}
 	}
-
+	
 	export default hot(TextBox);
 	```
 	

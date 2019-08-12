@@ -44,10 +44,10 @@ These resources let you style your app with a wide variety of interface parts. H
 	```javascript
 	//Brand Style
 	export const brand = {
-		primary: 'rosybrown',
-		success: '#76CA02',
-		warning: '#f99b1d',
-		danger: '#ed1c24',
+		primary: "rosybrown",
+		success: "#76CA02",
+		warning: "#f99b1d",
+		danger: "#ed1c24",
 	};
 	```
 
@@ -116,7 +116,7 @@ When you have specific design requirements, you will need to build custom classe
 	
 	To alter a class on your own, consult [Native Styling](/refguide/native-styling-refguide) to understand widget structures.
 
-6. Apply a transparent background color to customize the the default button widget:
+6. Now you will edit the code you pasted. Apply a transparent background color to customize the the default button widget:
 
 	```javascript
 	export const className = {
@@ -153,7 +153,7 @@ When you have specific design requirements, you will need to build custom classe
 In this section you will learn to turn the class you made into a design property, so that it can be easily used by other people.
 
 1. Place a fifth button widget on your app's home page.
-2. Open *settings-native.json* in your IDE.
+2. Open *theme/settings-native.json* in your IDE.
 3. Find the `ActionButton` class. There are already design properties in `ActionButton`. Next, you will add some of your own.
 4. Place this object under the first one in `ActionButton`:
 
@@ -163,7 +163,7 @@ In this section you will learn to turn the class you made into a design property
 		"type": "Toggle",
 		"description": "Create a bordered button.",
 		"class": "btnBordered"
-	}
+	},
 	```
 4. In Mendix Studio Pro, press <kbd>F4</kbd> to synchronize your project directory.
 5.  Select the fifth button. In **Properties** > **Design Properties**, your **Bordered** design property should now be visible:

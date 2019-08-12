@@ -57,32 +57,53 @@ Specific steps for configuring different cloud platforms are provided here:
 
 ## 4 Managing App Users {#managing-app-users}
 
-Click **Manage App Users** to manage App Users, who are end-users who can access the deployed app on specific environments to use it, test it, and provide feedback.
+Click **Manage App Users** to manage and invite App Users, who are end-users who can access the deployed app on specific environments to use it, test it, and provide feedback.
 
 {{% alert type="info" %}}
 You can also manage app users from Studio, by clicking **Manage Users** on the **Settings > Roles and Permissions** page within Studio.
 {{% /alert %}}
 
-On the **App User Management** page, you will only see the environments for your app for which the following factors are true:
+After clicking **Manage App Users**, you will see the environments overview on the **App User Management** page for your app. The following factors are true for these environments:
 
-* Mendix Single Sign-On is implemented:
+* [Mendix Single Sign-On](../deploy/integrate-with-mendix-sso) is implemented:
 	* In Studio, SSO is automatically implemented for your app project by enabling security for your app – for details, see the [Enabling Security](/studio/settings-security#enabling-security) section of *Security, Roles & Permissions*
 	* In Studio Pro, SSO can implemented via the [AppCloudServices](https://appstore.home.mendix.com/link/app/934/) module – for details, see [Mendix Single Sign-On](../deploy/integrate-with-mendix-sso)
 * Your user role allows you to manage other users (for more information, see the [User Management Properties](/refguide/user-roles#user-management) section of *User Roles*)
 
-### 4.1 Inviting App Users
+![](attachments/app-user-management-environments.png)
 
-To invite a new App User on the **App User Management** page, follow these steps:
+### 4.1 Manage Users
 
-1. Click **Invite Users**.
-2. Enter the email addresses of the end-users you want to invite.
-3.  Click **Include your app team** to include invitations to all the members of your [App Team](../collaborate/team). This may be useful, because people invited to join your App Team are not added as App Users automatically.
+When you click **Manage Uses** on for your environment, you will see a page with a list of the current App Users you can remove or edit:
+
+![](attachments/app-user-management-users.png)
+
+To remove an App User from the environment, click **Remove** by their name.
+
+To edit an App User's roles, click **Edit** by their name. Permissions for these roles (for example, **User** or **Administrator**) correspond to what you have configured for your app project's user roles in [Project Security](/refguide/project-security#user-roles) in Mendix Studio Pro or [Roles and Permissions](/studio/settings-security#roles-and-permissions) in Mendix Studio. If you have created a customized role, you need to publish the app before you are able to see and assign it here.
+
+{{% alert type="info" %}}
+If an App User has been granted access to an app environment through a security group, only a Company Admin using the [Security Groups](../company-app-roles/users#security-groups) page can remove them from that environment (by removing them from that security group) or edit the roles granted by that security group policy.
+{{% /alert %}}
+
+### 4.2 Invite Users
+
+To invite new App Users to your app, click **Invite Users** on the **App User Management** page or on the page with a list of current App Users and follow these steps:
+
+1. Enter the email addresses of the end-users you want to invite.
+
+2.  Click **Include your app team** to include invitations to all the members of your [App Team](../collaborate/team). This may be useful, because people invited to join your App Team are not added as App Users automatically.
 
 	{{% image_container width="450" %}}![](attachments/invite-app-user.png)
 	{{% /image_container %}}
 	
+3. Click **Add to invitee list**.
+
 4. Select the role for the App User (for example, **User** or **Administrator**). Permissions for these roles correspond to what you have configured for your app project's user roles in [Project Security](/refguide/project-security#user-roles) in Mendix Studio Pro or [Roles and Permissions](/studio/settings-security#roles-and-permissions) in Mendix Studio. If you have created a customized role, you need to publish the app before you are able to see and assign it here.
-5. Add a personal message to your invitation, and finally click **Next** then **Send Invitations** to send it.
+
+5. Click **Next**.
+
+6. Add a personal message to your invitation, and finally click **Next** then **Send Invitations** to send it.
 
 The invitee will receive an email asking them to authorize access to their Mendix account on this screen:
 
@@ -90,21 +111,6 @@ The invitee will receive an email asking them to authorize access to their Mendi
 {{% /image_container %}}
 
 After they provide authorization, they will be brought to your deployed app.
-
-### 4.2 Editing App Users
-
-You can remove and edit App Users on the **App User Management** page:
-
-{{% image_container width="500" %}}![](attachments/app-user-management.png)
-{{% /image_container %}}
-
-To remove an App User, click **Remove from Environment** by their name.
-
-To edit an App User's roles, click **Edit** by their name.
-
-{{% alert type="info" %}}
-If an App User has been granted access to an app environment through a security group, only a Company Admin using the [Security Groups](../company-app-roles/users#security-groups) page can remove them from that environment (by removing them from that security group) or edit the roles granted by that security group policy.
-{{% /alert %}}
 
 ## 5 Editing App Info
 

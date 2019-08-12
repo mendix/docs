@@ -63,7 +63,7 @@ Click **Manage App Users** to manage and invite App Users, who are end-users who
 You can also manage app users from Studio, by clicking **Manage Users** on the **Settings > Roles and Permissions** page within Studio.
 {{% /alert %}}
 
-After clicking **Manage App Users**, you will see the environments overview on the **App User Management** page for your app. The following factors are true for these environments:
+After clicking **Manage App Users**, you will see a list of environments for your app on the **App User Management** page. You will only be able to see environments that satisfy these requirements:
 
 * [Mendix Single Sign-On](../deploy/integrate-with-mendix-sso) is implemented:
 	* In Studio, SSO is automatically implemented for your app project by enabling security for your app – for details, see the [Enabling Security](/studio/settings-security#enabling-security) section of *Security, Roles & Permissions*

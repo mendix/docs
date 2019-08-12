@@ -1,6 +1,7 @@
 ---
 title: "Create a Test Case"
 parent: "ht-one"
+menu_order: 3
 description: "Describes how to create a test case and add test steps."
 tags: ["ATS", "testing"]
 ---

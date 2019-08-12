@@ -1,7 +1,8 @@
 ---
 title: "Install the ATS Helper and the ATS Recorder"
 parent: "ht-one"
-description: "Describes how to install the ATS helper and the ATS Recorder tool."
+menu_order: 2
+description: "Describes how to install the ATS Helper and the ATS Recorder tool."
 tags: ["ATS", "testing"]
 ---
 
@@ -20,15 +21,13 @@ Before starting this how-to, make sure you have the following prerequisites in p
 *  ATS
 *  Mendix app
 
-  {{% alert type="info" %}}
-  Both the ATS Helper and the ATS Recorder only work on a Mendix app.
-  {{% /alert %}}
+	{{% alert type="info" %}}Both the ATS Helper and the ATS Recorder only work on a Mendix app.
+	{{% /alert %}}
 
 *  Google Chrome Browser
 
-  {{% alert type="info" %}}
-  Both the ATS Helper and the ATS Recorder only function in [Google Chrome](https://www.google.com/chrome/browser/). 
-  {{% /alert %}}
+	{{% alert type="info" %}}Both the ATS Helper and the ATS Recorder only function in [Google Chrome](https://www.google.com/chrome/browser/). 
+	{{% /alert %}}
 
 {{% youtube C7GuDU9nePQ %}}
 

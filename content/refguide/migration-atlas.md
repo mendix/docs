@@ -55,39 +55,44 @@ If you changed any **login\*.html** files, complete the following actions:
 
 ### 2.2 Working with JSON Files
 
-If you have altered **settings.json** and/or **components.json** files, consult the instructions below. If you have not, you may ignore this subsection.
+If you have altered **settings.json** or **components.json** files, consult the instructions below. If you have not, you may ignore this subsection.
 
 #### 2.2.1 Design Properties
+
 If you changed design properties in your theme, you must manually integrate them into the new Atlas UI.
 
-Design properties are stored in `designProperties` section in the **settings.json** file.
+Design properties are stored in the `designProperties` section in the **settings.json** file.
 
-In you have custom design properties and they are not moved to the new Atlas UI theme, you will have consistency errors with an error code *CE6083* that notify you about missing design properties in your project.
+If you have custom design properties which have not been moved to the new Atlas UI theme, you will see consistency errors (error code **CE6083**) which will notify you about your project's missing design properties.
 
 Please move your custom design properties to the **settings.json** file of the new Atlas UI theme.
 
-### 2.2.2 Additional Css Files
+### 2.2.2 Additional CSS Files
 
 {{% alert type="warning" %}}
-Changing `cssFiles` is not recommended. Please consider moving custom css files to **theme/styles/web/sass/app/_custom.scss** file.
+Changing `cssFiles` is not recommended. Please consider moving custom CSS files to your **theme/styles/web/sass/app/_custom.scss** file.
 {{% /alert %}}
 
 If you changed `cssFiles` in **settings.json**, you must integrate your changes to the new **settings.json** file.
-By default Atlas UI version 1.x includes 2 files, like the following:
-```
+
+By default Atlas UI version 1 includes two files:
+
+```javascript
 "cssFiles": [
     "styles/css/lib/lib.css",
     "styles/css/custom/custom.css"
 ],
 ```
-Atlas 2.1.0 uses a single file:
-```
+
+Atlas 2.1.0, however, uses a single file:
+
+```javascript
 "cssFiles": [
 	"styles/web/css/main.css"
 ],
 ```
 
-If your `cssFiles` section adds more files you must also include them in **settings.json** file of the new theme.
+If your `cssFiles` section adds more files, you must include them in your new theme's **settings.json** file.
 
 If you changed hybrid mobile app imports in **components.json**, make sure to do the following:
 

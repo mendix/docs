@@ -14,13 +14,11 @@ Each section in this document could apply to your app project, but some sections
 
 {{% alert type="warning" %}}If you have added any content in the **Atlas_UI_Resource module**, you have to move that content out of the module. If you do not, it will be overwritten.{{% /alert %}}
 
-When your app project is using unmodified Atlas UI resources, upgrading your app project to Mendix 8 will automatically update your
-Atlas UI resources to version 2.1. If you did not make any changes in the custom folder, you are good to go and you can skip the rest of this guide. 
+When your app project is using unmodified Atlas UI resources, upgrading your app project to Mendix 8 will automatically update your Atlas UI resources to version 2.1. If you did not make any changes in the custom folder, you are good to go and you can skip the rest of this guide. 
 
-If you using unmodified Atlas UI resources but you made changes to the custom folder, these changes are preserved and will be used by the new Atlas UI version. A consistency error will notify you if this is the case. In this case, proceed to the steps described in the [Working with a Modified Custom Folder](#modified) section below.
+If you are using unmodified Atlas UI resources but you made changes to the custom folder, these changes are preserved and will be used by the new Atlas UI version. You will see a consistency error in this case. Proceed to the steps described in the [Working with a Modified Custom Folder](#modified) section below to resolve this error.
 
-If you are using an modified version of Atlas UI resources we cannot update it automatically. An consistency error will notify you if 
-this is the case. In this case you need to update Atlas yourself.
+If you are using a modified version of Atlas UI resources, Mendix cannot update it automatically. You will see a consistency error in this case. To resolve your theming issues, you need to update Atlas yourself.
 
 Follow the steps below to begin upgrading your Atlas UI Resources module:
 

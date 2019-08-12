@@ -93,9 +93,6 @@ If the generic action does not work check if there is a specific one.
 ATS also has a few specific click actions. To find these use the search term, "Click" in combination with the widget name. 
 
 1.  Example, you want to click the load more button inside a listview widget. You cannot use the _Click Widget_ action because the load more button does not have its own `mx-name`. It is part of the listview widget. The solution is to use one of the following search terms, "Click load more" or "Click listview". ATS checks all the actions and returns those that match these words. You see there is an action called [_Click Widget Button_](rg-one-click-widget-button). The _Click Widget Button_ action uses the `mx-name` of the widget and the button type to click the right button. In this case, select the "load more" type.
-
-	![](attachments/bp-one-finding-the-action-you-need/click-widget-button-action-search-1.png)
-
 2.  Example, you want to click a specific datagrid row inside a datagrid. You can use the _Click Widget_ action in combination with the column name, but if there are multiple datagrids ATS cannot distinguish them. The solution is to use the following search term, "Click DataGrid".  ATS checks all the actions and returns those that match these words. You see there is an action called [_Click DataGrid Row_](rg-one-click-datagrid-row). The _Click DataGrid Row_  action enables you to click a datagrid row containing a specific value in a specific column. This action also works on listviews and templategrids.
 
 	![](attachments/bp-one-finding-the-action-you-need/click-datagrid-row-action-search-1.png)

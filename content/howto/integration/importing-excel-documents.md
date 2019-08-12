@@ -8,7 +8,7 @@ tags: ["import", "excel", "integration"]
 
 ## 1 Introduction
 
-Adding large amounts of data to your application, for example reference data or data from an external application, can be very time consuming. In order to save time and effort, this process can be automated by using the 'Excel Importer' module. In this How-to you will setup import templates, and import data into your application by using the 'Excel Importer'.
+Adding large amounts of data to your application (for example, reference data or data from an external application) can be very time-consuming. In order to save time and effort, this process can be automated using the [Excel Importer](https://appstore.home.mendix.com/link/app/72/) from the Mendix App Store. In this how-to, you will set up import templates and import data into your app using this module.
 
 ## 2 Prerequisites
 
@@ -23,26 +23,24 @@ Before starting this how-to, make sure you know how to do the following:
 
 ## 3 Preparing the Data Structure, GUI, and Modules
 
-Before you can start importing data into your application, you first need to set up the data structure and GUI.
+Before you can start importing data into your application, you first need to set up the data structure and GUI by following these these steps:
 
-Follow these steps:
+1.  Create the following domain model:
 
-1.  Create the following domain model.
+	![](attachments/18448735/18581969.png)
+
+	Create an enumeration for the **OrderStatus** attribute with the values of **Open**, **Processing**, and **Complete**.
   
-    ![](attachments/18448735/18581969.png)
-
-    The enumeration for the **OrderStatus** attribute should have the values of **Open**, **Processing**, and **Complete**.
-    
-    The **XLSFile** object inherits from the 'Filedocument' object. If you don't know how to achieve this, please take a look at [How to Work with Images & Files](../data-models/working-with-images-and-files).
-2. Create **Overview** and **Detail** pages to manage objects of type **Customer** and **Order**.
+	Configure the **XLSFile** object to inherit from the **FileDocument** object (for more information, see [How to Work with Images & Files](../data-models/working-with-images-and-files)).
+2. Create **Overview** and **Detail** pages to manage objects of the **Customer** and **Order** types.
 3.  Create menu items to access the **Order** and the **Customer** overview pages.
-4.  Download the **Excel Importer** and **Mx Model Reflection** modules from the appstore.
-5.  Create menu items for the **ExcelImportOverview** and the **MxObjects_Overview** pages. Those pages already exist within the _**USE_ME** folders of the downloaded modules.
-6.  Configure the **Administrator** user role to have the **Configurator** module role for the **Excel Importer** module, and the **ModelAdministrator** module role for the **Mx Model Reflection** module.
+4.  Download the **Excel Importer** and **Mx Model Reflection** modules from the Mendix App Store (available by clicking the shopping-cart icon in the upper-right side of Studio Pro).
+5.  Create menu items for the **ExcelImportOverview** and the **MxObjects_Overview** pages (these pages already exist in the **_USE_ME** folders of the downloaded modules).
+6.  Configure the **Administrator** user role to have the **Configurator** module role for the **ExcelImporter** module, and the **ModelAdministrator** module role for the **Mx Model Reflection** module.
 
 ## 4 Preparing the Logic for the Data Import
 
-As an enumeration is used for the **OrderStatus** attribute, a microflow needs to be created to determine the enumeration value of the attribute based on the input from the Excel file.
+Because an enumeration is used for the **OrderStatus** attribute, you need to create a microflow to determine the enumeration value of the attribute based on the input from the Excel file.
 
 1.  Create the following microflow and name it **IVK_ParseStatus**.
   
@@ -61,15 +59,15 @@ As an enumeration is used for the **OrderStatus** attribute, a microflow needs t
 
 ## 5 Using the Application Model Metadata in the Client
 
-In order to set up import templates for importing data, your application model meta data should be reflected in the client. This can be achieved by using [Mx Model reflection](https://appstore.home.mendix.com/link/app/69/Mendix/Mx-Model-reflection). In this part of the How-to you will learn to do so.
+In order to set up import templates for importing data, your application model metadata should be reflected in the client. This can be achieved by using the [Mx Model Reflection](https://appstore.home.mendix.com/link/app/69/Mendix/Mx-Model-reflection) module. In this section, you will learn how to do this by following these steps:
 
 1.  Click **Run Locally** to start your application:
 
-    ![](attachments/18448735/18581975.png)
+	![](attachments/18448735/18581975.png)
 
 2.  Click **View** to open your application in the browser:
 
-    ![](attachments/18448735/18581974.png)
+	![](attachments/18448735/18581974.png)
 
 3.  **Log in** as an Administrator.
 4.  Click on the menu item for the **MxObjects_Overview** in your navigation.

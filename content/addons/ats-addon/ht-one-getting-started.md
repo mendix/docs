@@ -154,14 +154,14 @@ To create a test case, follow these steps:
 
 ### 5.2 Building a Test Script
 
-Now that you have created a test case, the next step is to configure your test case and start building your test script. ATS provides two different tools to build test scripts: ATS helper (Add) and ATS recorder (Record). In this how-to, we only describe how to use the ATS recorder.
+Now that you have created a test case, the next step is to configure your test case and start building your test script. ATS provides two different tools to build test scripts: ATS Helper (Add) and ATS Recorder (Record). In this how-to, we only describe how to use the ATS Recorder.
 
 Before you start building your test script, add the following tools:
 
 1. Click the **I-icon** in the top right corner of the screen, which opens, the **ATS Information** dialog box.
-2. Drag and drop the **ATS helper** link to your bookmark bar.
-3. To use the recorder function, you need to have the Google Chrome browser installed on your system and install the ATS Recorder Chrome plugin. The ATS recorder only works in Chrome.
-4. Install the ATS recorder extension in your Chrome browser.
+2. Drag and drop the **ATS Helper** link to your bookmark bar.
+3. To use the recorder function, you need to have the Google Chrome browser installed on your system and install the ATS Recorder Chrome plugin. The ATS Recorder only works in Chrome.
+4. Install the ATS Recorder extension in your Chrome browser.
 
 ![](attachments/ht-one-getting-started/ats-information-dialog.png)
 
@@ -180,7 +180,7 @@ To use the recorder function, follow these steps:
 
       Field | Description
       --- | ---
-      **Recorded event** | All the registered clicks/entering text will show up here in the sequence where they were done. Select an event to open the **Action mapping** menu of that particular event. The ATS recorder selects the actions for you.
+      **Recorded event** | All the registered clicks/entering text will show up here in the sequence where they were done. Select an event to open the **Action mapping** menu of that particular event. The ATS Recorder selects the actions for you.
       **Action mapping** | This shows all the available actions for this event. Click  **Select** if you want to choose a different action.
 
       ![](attachments/ht-one-getting-started/recorded-test-steps.png)

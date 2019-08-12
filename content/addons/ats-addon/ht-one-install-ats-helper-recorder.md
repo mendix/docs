@@ -2,7 +2,7 @@
 title: "Install the ATS Helper and the ATS Recorder"
 parent: "ht-one"
 menu_order: 2
-description: "Describes how to install the ATS helper and the ATS Recorder tool."
+description: "Describes how to install the ATS Helper and the ATS Recorder tool."
 tags: ["ATS", "testing"]
 ---
 

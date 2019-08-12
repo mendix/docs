@@ -100,7 +100,7 @@ To add a new Selenium hub, follow these steps:
 
 	![](attachments/ht-two-getting-started/browserstack-selenium-hub-wizard.png)
 
-For further documentation on how-to install the ATS helper and the Recorder see [How-to configure a Selenium hub](ht-two-configure-a-selenium-hub).
+For further documentation on how-to install the ATS Helper and the Recorder see [How-to configure a Selenium hub](ht-two-configure-a-selenium-hub).
 
 ## 4 Test Cases
 
@@ -141,7 +141,7 @@ To create a test case, follow these steps:
 
 ### 4.2 Adding Test Steps
 
-Now that you have created a test case, the next step is to configure your test case and start adding test steps. ATS provides two different tools to help add test steps: ATS helper (Setup step manually) and ATS recorder (Record step). We advise you to use the recorder as much as possible to add test steps. But, the ATS Recorder might not be able to record certain manual test steps. So, we advise to add steps in the following order:
+Now that you have created a test case, the next step is to configure your test case and start adding test steps. ATS provides two different tools to help add test steps: ATS Helper (Setup step manually) and ATS Recorder (Record step). We advise you to use the recorder as much as possible to add test steps. But, the ATS Recorder might not be able to record certain manual test steps. So, we advise to add steps in the following order:
 
 * Record your manual test steps using the ATS Recorder
 * Adding test steps using the ATS Helper, see [Finding the action you need](bp-two-finding-the-action-you-need).
@@ -150,13 +150,13 @@ Now that you have created a test case, the next step is to configure your test c
 Before you start adding test steps, add the ATS Helper and ATS Recorder tools:
 
 1. Click the **I-icon** in the top right corner of the screen, which opens, the **ATS Information** dialog box.
-2. Drag and drop the **ATS helper** link to your bookmark bar.
-3. To use the recorder function, you need to have the Google Chrome browser installed on your system and install the ATS Recorder Chrome plugin. The ATS recorder only works in Chrome.
-4.  Install the ATS recorder extension in your Chrome browser.
+2. Drag and drop the **ATS Helper** link to your bookmark bar.
+3. To use the recorder function, you need to have the Google Chrome browser installed on your system and install the ATS Recorder Chrome plugin. The ATS Recorder only works in Chrome.
+4.  Install the ATS Recorder extension in your Chrome browser.
 
 	![](attachments/ht-two-getting-started/information-dialog.png)
 
-For further documentation on how-to install the ATS helper and the Recorder see [How-to install the ATS Helper and Recorder](ht-two-install-ats-helper-recorder).
+For further documentation on how-to install the ATS Helper and the Recorder see [How-to install the ATS Helper and Recorder](ht-two-install-ats-helper-recorder).
 
 #### 4.2.1 Record – Using the Recorder Function
 
@@ -175,7 +175,7 @@ To use the recorder function, follow these steps:
 
 	| Field | Description |
 | :--- | :--- |
-| **Recorded event** | All the registered clicks/entering text will show up here in the sequence where they were done. Select an event to open the **Action mapping** menu of that particular event. The ATS recorder selects the actions for you. |
+| **Recorded event** | All the registered clicks/entering text will show up here in the sequence where they were done. Select an event to open the **Action mapping** menu of that particular event. The ATS Recorder selects the actions for you. |
 | **Action mapping** | This shows all the available actions for this event. Click **Select** if you want to choose a different action.|
 
 All the test steps are numbered for easy identification. To change the sequence of the test steps click the left of the test step while dragging the test step up or down. You can **delete**, **copy** or **paste** a selected test step. With the **Extract action**, you can combine actions of multiple steps into one step. Select the steps you want to combine and click **Extract action**. For more information on extracting an action, see [Custom Actions](rg-one-custom-actions).

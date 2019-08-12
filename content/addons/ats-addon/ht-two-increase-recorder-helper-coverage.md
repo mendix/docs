@@ -7,7 +7,7 @@ tags: ["ATS", "testing"]
 
 ## 1 Introduction
 
-ATS provides two different tools to help build test scripts: the ATS Helper and ATS Recorder. The ATS Helper identifies the mx-name of widgets on the application under test (AUT). But, not all widgets have an mx-name, in which case the ATS Helper cannot interact with them. The ATS Recorder is a function/plugin within ATS that records your manual test steps in the AUT and automatically selects the correct action for each step. However, sometimes the ATS recorder does not record the step you are performing. There are ways to increase the ATS Recorder coverage of your AUT. This how-to describes how to increase the overall coverage of the ATS tools for your AUT.
+ATS provides two different tools to help build test scripts: the ATS Helper and ATS Recorder. The ATS Helper identifies the mx-name of widgets on the application under test (AUT). But, not all widgets have an mx-name, in which case the ATS Helper cannot interact with them. The ATS Recorder is a function/plugin within ATS that records your manual test steps in the AUT and automatically selects the correct action for each step. However, sometimes the ATS Recorder does not record the step you are performing. There are ways to increase the ATS Recorder coverage of your AUT. This how-to describes how to increase the overall coverage of the ATS tools for your AUT.
 
 **This how-to will teach you how to do the following:**
 
@@ -113,7 +113,7 @@ You can manually enter a class in the **Class** of Mendix Studio Pro with an mx-
 
 ![](attachments/ht-two-increase-recorder-coverage/mx-name-listview-app-e.png)
 
-As the options in the navigation list have an mx-name, the ATS helper can interact with them. In ATS you can *Find, Click, Set, Assert, and Get* these widgets with the standard Mendix actions. ATS can still interact with the options if you add another class as well:
+As the options in the navigation list have an mx-name, the ATS Helper can interact with them. In ATS you can *Find, Click, Set, Assert, and Get* these widgets with the standard Mendix actions. ATS can still interact with the options if you add another class as well:
 
 ![](attachments/ht-two-increase-recorder-coverage/extra-class-name.png)
 

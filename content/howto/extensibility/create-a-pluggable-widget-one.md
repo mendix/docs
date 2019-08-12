@@ -100,8 +100,8 @@ The generator will ask you a few questions during setup. Answer the questions by
 
 Open the **(YourMendixProject)/CustomWidgets/TextBox** folder in your IDE of choice. From now on, all file references will be relative to this path. To set up your new widget, first you must use an attribute of the context object and display that attribute in an input field: 
 
-1. To prevent future errors, remove the file *src/components/HelloWorldSample.tsx* Errors in TextBox.webmodeler.tsx will be dealt with in step 6
-1. Edit *src/TextBox.xml*, the generator creates a sample property `sampleText`, which should be removed and add the new property `Text attribute`:
+1. To prevent future errors, remove the file *src/components/HelloWorldSample.tsx*. Errors in *TextBox.webmodeler.tsx* will be dealt with in step 6 below.
+2. In *src/TextBox.xml*, the generator creates a sample property `sampleText`. Remove this property and add the new property `Text attribute`:
 
 	```xml
 	<?xml version="1.0" encoding="utf-8" ?>
@@ -128,7 +128,7 @@ Open the **(YourMendixProject)/CustomWidgets/TextBox** folder in your IDE of cho
 	* The property `pluginWidget=true` will make the widget work with the new widget API
 	* The `needsEntityContext=true` is set up to allow the attribute to be taken from context
 	* The property of the type attribute only allows the selection of string attributes from the domain model
-1. The typescript typing based on the XML will be generated automatically. Start the development process with the following command: `$ npm run dev`.
+3. The typescript typing based on the XML will be generated automatically. Start the development process with the following command: `$ npm run dev`.
 
 	This process will bundle the widget and generate the properties into *typings/TextBoxProperties.d.ts*.
 	
@@ -140,7 +140,7 @@ Open the **(YourMendixProject)/CustomWidgets/TextBox** folder in your IDE of cho
 		@ ./src/TextBox.tsx 14:0-28:2
 	```
 
-1. Create a new file, *components/TextInput.tsx*. This will be the display component. A display component does not interact with APIs and can be re-used in any React application. Paste the following code into *TextInput.tsx*:
+4. Create a new file, *components/TextInput.tsx*. This will be the display component. A display component does not interact with APIs and can be re-used in any React application. Paste the following code into *TextInput.tsx*:
 
 	```tsx
 	import { Component, ReactNode, createElement } from "react";
@@ -161,7 +161,7 @@ Open the **(YourMendixProject)/CustomWidgets/TextBox** folder in your IDE of cho
 	* The interface defines the properties of the React components – the value is passed to the component and it will render an HTML input element with the given value
 	* The component is a class extending `Component` and should be exported to be used in other components
 	* The render method is the only required function in a component, and it will return the expected DOM for the browser (for more information, see React’s [component documentation](https://reactjs.org/docs/react-component.html))
-1. The container component *TextBox.tsx* receives the properties in the runtime, and forwards the data to the display component. The container works like glue between the Mendix application and the display component. In the *TextBox.tsx* overwrite the render function until they look like this:
+5. The container component *TextBox.tsx* receives the properties in the runtime, and forwards the data to the display component. The container works like glue between the Mendix application and the display component. In the *TextBox.tsx* overwrite the render function until they look like this:
 
 	```tsx
 	import { Component, ReactNode, createElement } from "react"; 
@@ -188,7 +188,7 @@ Open the **(YourMendixProject)/CustomWidgets/TextBox** folder in your IDE of cho
 	
 	* The `textAttribute` is an object that will automatically have the actual data stored in the attribute – when the data is changed, it will cause an update of the component, and the new data will be displayed in the input
 
-1. Alter *Textbox.webmodeler.tsx* by adding the `TextInput` import to *Textbox.webmodeler.tsx*:
+6. Alter *Textbox.webmodeler.tsx* by adding the `TextInput` import to *Textbox.webmodeler.tsx*:
 
 	```tsx	
 	import { TextInput } from "./components/TextInput";
@@ -205,7 +205,7 @@ Open the **(YourMendixProject)/CustomWidgets/TextBox** folder in your IDE of cho
 	```
 	
 	Before moving on from this step, you should remove the import lines concerning "Hello World" sample text from *TextBox.webmodeler.tsx* and *TextBox.tsx*, as these lines are no longer in use.	
-1.  Add a test widget to the project home page:<br />
+7.  Add a test widget to the project home page:<br />
 	a. To find your widget for the first time you need to refresh from the files system. Use <kbd>F4</kbd> or select **Project > Synchronize Project Directory** from the Mendix Studio Pro menu.<br />
 	b. Navigate to **Home > Add widget** in the editor menu.<br />
 	c. Select the newly-created **TextBox** widget at the bottom of the list.<br />
@@ -217,7 +217,7 @@ Open the **(YourMendixProject)/CustomWidgets/TextBox** folder in your IDE of cho
 	![](attachments/pluggable-part-one/updateallwidgets.png)
 	
 	{{% alert type="info" %}}The widgets in Studio and Studio Pro are not automatically updated. To refresh them press <kbd>F4</kbd> or select **Project > Synchronize Project Directory** from the Mendix Studio Pro menu to reload the widgets from the file system. Then right-click the widget and select **Update all widgets** to update the newly-changed properties in the widget.{{% /alert %}}
-1.  When running the project, the new widget is already functional. The first text box is a standard Text box widget and the second is our pluggable widget. When data is changed in the first input and the cursor is moved to the next widget, the data of our widget is also updated: 
+8.  When running the project, the new widget is already functional. The first text box is a standard Text box widget and the second is your pluggable widget. When data is changed in the first input and the cursor is moved to the next widget, the data of your widget is also updated: 
 
 	![two text widgets](attachments/pluggable-part-one/twotextwidgets.png)
 

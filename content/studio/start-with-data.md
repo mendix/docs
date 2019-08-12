@@ -19,16 +19,17 @@ To create an app based on a spreadsheet, you need to use the **App from a spread
 
 3. Choose **App from a spreadsheet** to create an app with the spreadsheet import functionality.
 
-4. Make sure that the spreadsheet meets the following requirements:<br/>
-a. The size of your file does not exceed 1MB. <br/>
+4.  Make sure that the spreadsheet meets the following requirements:<br/>
+
+	a. The size of your file does not exceed 1MB. <br/>
+
+	b. The number of worksheets does not exceed 50.<br/>
+
+	c. The number of columns per worksheet does not exceed 100.<br/>
+
+	d. A column name does not exceed 100 characters.<br/>
     
-b. The number of worksheets does not exceed 50.<br/>
-    
-c. The number of columns per worksheet does not exceed 100.<br/>
-    
-d. A column name does not exceed 100 characters.<br/>
-    
-5. Make sure that you have normalized your data in the spreadsheet. Check if the following requirements are met: 
+5.  Make sure that you have normalized your data in the spreadsheet. Check if the following requirements are met: 
 
     a. Each column should name a unique name within a workbook. 
 

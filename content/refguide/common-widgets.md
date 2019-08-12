@@ -10,11 +10,11 @@ tags: ["studio pro", "common widgets", "widget"]
 Common widgets category contain widgets that are commonly used. This category contains the following widgets:
 
 
-* [Text](text) – displays a text that can contain attributes
-* [Image](image) – displays static image
-* [Label](label) – displays static text 
-* [Snippet Call](snippet-call) – allows you to use a snippet on another snippet, a page, or a layout
-* [Page Title](page-title) – displays page title set in page properties
+* [**Text**](text) – displays a text that can contain attributes
+* [**Image**](image) – displays static image
+* [**Label**](label) – displays static text 
+* [**Snippet Call**](snippet-call) – allows you to use a snippet on another snippet, a page, or a layout
+* [**Page Title**](page-title) – displays page title set in page properties
 
 ## 2 Performing Basic Functions
 

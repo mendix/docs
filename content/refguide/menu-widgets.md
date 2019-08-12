@@ -10,9 +10,9 @@ tags: ["studio pro"]
 
 Menu widgets display a menu (navigation) of your application on a page.
 
-*   [Menu Bar](menu-bar) – displays [navigation](navigation) configured for the selected profile in a form of a horizontal bar
-*   [Navigation Tree](navigation-tree) – displays [navigation](navigation) configured for the selected profile in a form of a tree
-*   [Simple Menu Bar](simple-menu-bar) – displays [navigation](navigation) configured for the selected profile in a form a horizontal or vertical bar 
+*   [**Menu Bar**](menu-bar) – displays [navigation](navigation) configured for the selected profile in a form of a horizontal bar
+*   [**Navigation Tree**](navigation-tree) – displays [navigation](navigation) configured for the selected profile in a form of a tree
+*   [**Simple Menu Bar**](simple-menu-bar) – displays [navigation](navigation) configured for the selected profile in a form a horizontal or vertical bar 
 
 ## 2 Performing Basic Functions
 

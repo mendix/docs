@@ -1,6 +1,7 @@
 ---
 title: "Create Custom Actions"
 parent: "ht-one"
+menu_order: 5
 ---
 
 These are the documents for creating a custom action:

@@ -1,6 +1,7 @@
 ---
 title: "Get Started"
 parent: "ht-one"
+menu_order: 1
 description: "Describes the initial steps for automatically testing your apps using ATS."
 tags: ["ATS", "testing"]
 ---

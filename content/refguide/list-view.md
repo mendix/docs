@@ -24,9 +24,17 @@ The data source determines which objects will be shown in a list view. For gener
 
 ### 3.1 Type
 
-{{% alert type="warning" %}}Type is not supported on native mobile pages.{{% /alert %}}
+The list view supports the following types of data sources: database source, XPath source, association source, microflow source, and nanoflow source. 
 
-The list view supports the following types of data sources: database source, XPath source, association source and microflow Source. The database and XPath sources retrieve objects from the database and supports searching and sorting. The database source can also be used in [offline](offline-first) applications. The association source follows an association from the enclosing data view to get to the objects. Finally, the microflow source calculates the list of objects by executing a microflow.
+The database source can be used in [offline](offline-first) applications. 
+
+The database and XPath sources retrieve objects from the database and supports searching and sorting. 
+
+{{% alert type="warning" %}}Searching is not supported on native mobile pages.{{% /alert %}}
+
+The association source follows an association from an enclosing data view to get to objects. 
+
+Microflow and nanoflow sources calculates the list of objects by executing a microflow or a nanoflow.
 
 See the corresponding data source for its properties:
 

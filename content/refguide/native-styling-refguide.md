@@ -611,9 +611,9 @@ The widget’s style properties are as follows:
 
 The default class to style all map widgets is named `com_mendix_widget_native_maps_Maps`.
 
-### 10.8 Notification
+### 10.8 Notifications
 
-The notification widget lets you display a custom message in your app. This widget has no user interface so does not support any styling.
+The notifications widget lets you display a custom message in your app. This widget has no user interface so does not support any styling.
 
 ### 10.9 Progress Bar
 

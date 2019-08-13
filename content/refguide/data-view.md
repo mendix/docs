@@ -18,19 +18,17 @@ In a more complex example, a data view can contain customer information and [tab
 
 ## 2 Data View Footer
 
-The footer of the data view is the section at the bottom of the data view that often contains buttons to confirm or cancel the page. However, arbitrary widgets are allowed. The footer will stick to the bottom if the data view is the only top-level widget.
+The footer of the data view is the section at the bottom of the data view that often contains buttons to confirm or cancel changes.  
 
 ## 3 Properties
+
+Data view has the following properties:
 
 ![](attachments/data-widgets/data-view-properties.png)
 
 ### 3.1 Common Section
 
-
-
-
-
-
+For more information on properties of this section, see the [Common Section](common-widget-properties#common-properties) section in *Properties Common for Widgets*. 
 
 ### 3.2 Data Source Section
 
@@ -55,7 +53,7 @@ _Default value:_ True
 
 #### 3.4.2 Read-Only Style
 
-This property determines how input widgets are rendered if read-only. 
+This property determines how input widgets are rendered if they are read-only. 
 
 | Value   | Description                                                  |
 | ------- | ------------------------------------------------------------ |
@@ -98,9 +96,11 @@ _Default value:_ empty
 
 ### 3.6 Visibility Section
 
-
+For more information on properties of this section, see the [Visibility Properties](common-widget-properties#visibility-properties) section in *Properties Common for Widgets*. 
 
 ## 4 Read More
 
-* [Entities](entities)
-* [Associations](associations)
+* [Page](page)
+* [Data Widgets](data-widgets)
+* [Data Sources](data-sources)
+* [Properties Common for Widgets](common-widget-properties)

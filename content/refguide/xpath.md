@@ -1,6 +1,7 @@
 ---
 title: "XPath"
 category: "App Modeling"
+menu_order: 90
 description: "Describes how the XPath query langauge is used in Mendix by presenting functions and examples."
 tags: ["studio pro"]
 ---

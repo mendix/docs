@@ -238,20 +238,12 @@ Below is an example of using an external dependency based on [Noty](https://gith
 3. In *theme/index.html*, do the following: <br/>
 	a. Add a link to the style sheets after *mxui.css*. <br/>
 	b. Add a script tag for the library after *mxui.js*. <br/>
-	c. Put the following code in *theme/index.html* to handle external dependencies:
+	c. Add a `script` tag after "mxui.js" in *theme/index.html* to add an external javascript:
 
 	```html
 	<!doctype html>
 	<html>
-		<head>
-			<!-- ... --->
-			<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css?{{cachebust}}">
-			<link rel="stylesheet" href="mxclientsystem/mxui/ui/mxui.css?{{cachebust}}">
-			<link rel="stylesheet" href="noty/noty.css?{{cachebust}}">
-			<link rel="stylesheet" href="noty/themes/bootstrap-v3.css?{{cachebust}}">
-			{{themecss}}
-			<!-- ... --->
-		</head>
+		<!-- ... --->
 		<body dir="ltr">
 			<div id="content"></div>
 			<!-- ... --->
@@ -260,6 +252,19 @@ Below is an example of using an external dependency based on [Noty](https://gith
 		</body>
 	</html>
 	```
+	d. Add the links in the `cssFiles` array of the *theme/settings.json* to add the external styling:
+	```json
+	{
+	    // ...
+	    "cssFiles": [
+	    	"styles/web/css/main.css",
+		"noty/noty.css"
+		"noty/themes/bootstrap-v3.css"
+	    ],
+	    // ...
+	}
+	```		
+		
 
 4. To support hybrid mobile apps, add the script and CSS to *theme/components.json*: 
 

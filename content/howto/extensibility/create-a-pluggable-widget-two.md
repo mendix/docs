@@ -522,7 +522,7 @@ To add preview mode functionality, create a new file *src/TextBox.webmodeler.tsx
 
 ```tsx
 import { Component, createElement, ReactNode } from "react";
-import { TextBoxPreviewProps, VisibilityMap } from "../typings/TextBoxProps";
+import { TextBoxPreviewProps } from "../typings/TextBoxProps";
 import { TextInput } from "./components/TextInput";
 
 declare function require(name: string): string;

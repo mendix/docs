@@ -483,7 +483,7 @@ The default class to style the navigation is named  `navigationStyle`. There is 
 
 ## 10 Add-On Widgets
 
-Add-on widgets are distributed through the [Mendix App Store](https://appstore.home.mendix.com/index3.html), and are not shipped with Mendix Studio Pro. They might also be distributed through starter apps, as well as modules importing pages from other projects. 
+Add-on widgets are distributed through the [Native Mobile Resources](https://appstore.home.mendix.com/link/app/109513/) module, and are not shipped with Mendix Studio Pro. Other add-on widgets might also be distributed through starter apps, as well as modules importing pages from other projects. 
 
 ### 10.1 Activity Indicator
 
@@ -513,7 +513,7 @@ The app events widget allows you to set actions when your app’s network status
 
 ### 10.3 Badge
 
-The [badge widget](https://appstore.home.mendix.com/link/app/50325/) displays text or values as a badge. This is how a badge widget could look in an app:
+The badge widget displays text or values as a badge. This is how a badge widget could look in an app:
 
 {{% image_container width="350" %}}![badge](attachments/native-styling-refguide/badge.png){{% /image_container %}}
 
@@ -534,7 +534,7 @@ The default class to style all badges is named `com_mendix_widget_native_badge_B
 
 ### 10.4 Barcode Scanner
 
-The [barcode scanner widget](https://appstore.home.mendix.com/link/app/1469/) allows your app to scan barcodes and QR codes. This widget renders a camera view in a styleable container.
+The barcode scanner widget allows your app to scan barcodes and QR codes. This widget renders a camera view in a styleable container.
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
@@ -544,7 +544,7 @@ The default class to style all barcode scanner widgets is named `com_mendix_widg
 
 ### 10.5 Feedback
 
-The [feedback widget](https://appstore.home.mendix.com/link/app/199/) allows users to give direct feedback. This is how a feedback widget could look in an app:
+The feedback widget allows users to give direct feedback. This is how a feedback widget could look in an app:
 
 {{% image_container width="350" %}}![feedback](attachments/native-styling-refguide/feedback-two.png){{% /image_container %}}
 
@@ -576,7 +576,7 @@ The default class to style all feedback widgets is named `com_mendix_widget_nati
 
 ### 10.6 Floating Action Button
 
-The [floating action button widget](https://appstore.home.mendix.com/link/app/76543/) lets you customize the appearance and functionality of floating action buttons. The widget’s style properties are as follows:
+The floating action button widget lets you customize the appearance and functionality of floating action buttons. The widget’s style properties are as follows:
 
 | Element | Style Properties    | Description |
 | --- | ---| --- |
@@ -595,7 +595,7 @@ The default class to style all floating actions buttons is named `com_mendix_wid
 
 ### 10.7 Maps
 
-The [maps widget](https://appstore.home.mendix.com/link/app/108261/) supports various digital map providers. This is how a maps widget could look in an app:
+The maps widget supports various digital map providers. This is how a maps widget could look in an app:
 
 {{% image_container width="350" %}}![maps](attachments/native-styling-refguide/maps.png){{% /image_container %}}
 
@@ -613,11 +613,11 @@ The default class to style all map widgets is named `com_mendix_widget_native_ma
 
 ### 10.8 Notification
 
-The [notification widget](https://appstore.home.mendix.com/link/app/1348/) lets you display a custom message in your app. This widget has no user interface so does not support any styling.
+The notification widget lets you display a custom message in your app. This widget has no user interface so does not support any styling.
 
 ### 10.9 Progress Bar
 
-The [progress bar widget](https://appstore.home.mendix.com/link/app/48910/) shows percentage of progress. This is how a progress bar widget could look in an app:
+The progress bar widget shows percentage of progress. This is how a progress bar widget could look in an app:
 
 {{% image_container width="300" %}}![progress bar](attachments/native-styling-refguide/progress-bar.png){{% /image_container %}}
 
@@ -641,7 +641,7 @@ The default class to style all progress bars is named `com_mendix_widget_native_
 
 ### 10.10 Progress Circle
 
-The [progress circle widget](https://appstore.home.mendix.com/link/app/47783/) displays progress in a circle using positive or negative values. This is how a progress circle widget could look in an app:
+The progress circle widget displays progress in a circle using positive or negative values. This is how a progress circle widget could look in an app:
 
 {{% image_container width="300" %}}![progress circle](attachments/native-styling-refguide/progress-circle.png){{% /image_container %}}
 
@@ -670,7 +670,7 @@ The default class to style all progress circles is named `com_mendix_widget_nati
 
 ### 10.11 QR Code
 
-The [QR code widget](https://appstore.home.mendix.com/link/app/2891/) generates a QR code based on a value, which a user can then scan. This is how a QR code widget could look in an app:
+The QR code widget generates a QR code based on a value, which a user can then scan. This is how a QR code widget could look in an app:
 
 {{% image_container width="350" %}}![qr code](attachments/native-styling-refguide/qr-code.png){{% /image_container %}}
 
@@ -693,7 +693,7 @@ The default class to style all QR codes is named `com_mendix_widget_native_qrcod
 
 ### 10.12 Range Slider {#range-slider}
 
-The [range slider widget](https://appstore.home.mendix.com/link/app/52704/) allows you to change a range of values using a slider with maximum and minimum bound values. This is how a range slider widget could look in an app:
+The range slider widget allows you to change a range of values using a slider with maximum and minimum bound values. This is how a range slider widget could look in an app:
 
 {{% image_container width="300" %}}![range slider](attachments/native-styling-refguide/range-slider.png){{% /image_container %}}
 
@@ -727,7 +727,7 @@ The default class to style all range slider inputs is named `com_mendix_widget_n
 
 ### 10.13 Slider
 
-The [slider widget](https://appstore.home.mendix.com/link/app/48786/) simply allows you to change a number value using a slider. This is how a slider widget could look in an app:
+The slider widget simply allows you to change a number value using a slider. This is how a slider widget could look in an app:
 
 {{% image_container width="300" %}}![slider](attachments/native-styling-refguide/slider.png){{% /image_container %}}
 
@@ -737,7 +737,7 @@ The default class to style all slider inputs is named `com_mendix_widget_native_
 
 ### 10.14 Ratings
 
-The [ratings widget](https://appstore.home.mendix.com/link/app/11/) allows users to rate an object from 0 to 5. This is how a ratings widget could look in an app:
+The ratings widget allows users to rate an object from 0 to 5. This is how a ratings widget could look in an app:
 
 {{% image_container width="350" %}}![ratings](attachments/native-styling-refguide/ratings.png){{% /image_container %}}
 
@@ -766,7 +766,7 @@ The default class to style all rating inputs is named `com_mendix_widget_native_
 
 ### 10.15 Toggle Buttons
 
-The [toggle buttons widget](https://appstore.home.mendix.com/link/app/50324/) allows you to set an enumeration attribute. This is how a toggle buttons widget could look in an app:
+The toggle buttons widget allows you to set an enumeration attribute. This is how a toggle buttons widget could look in an app:
 
 {{% image_container width="350" %}}![toggle buttons](attachments/native-styling-refguide/toggle-buttons.png){{% /image_container %}}
 
@@ -802,7 +802,7 @@ The default class to style all toggle buttons is named `com_mendix_widget_native
 
 ### 10.16 Video Player
 
-The [video player widget](https://appstore.home.mendix.com/link/app/110700/) allows you to play video based on a URL, and is limited to MP4 only. This is how a video player widget could look in an app:
+The video player widget allows you to play video based on a URL, and is limited to MP4 only. This is how a video player widget could look in an app:
 
 {{% image_container width="300" %}}![video player](attachments/native-styling-refguide/video-player.png){{% /image_container %}}
 

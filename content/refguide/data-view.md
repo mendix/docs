@@ -2,7 +2,7 @@
 title: "Data View"
 parent: "data-widgets"
 menu_order: 10
-tags: ["Page", "Display", "widget", "object", "studio pro"]
+tags: ["page", "data view", "widget", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -10,7 +10,7 @@ tags: ["Page", "Display", "widget", "object", "studio pro"]
 
 The data view is a starting point for showing the contents of exactly one object. For example, if you want to show the details of a single program item, you can use a data view to do this:
 
-![](attachments/data-widgets/data-view-example.png)
+![](attachments/data-widgets/data-view-example-structure-mode.png)
 
 In a more complex example, a data view can contain customer information and [tab containers](tab-container) per specific topic (for example, addresses and payment information) with nested data grids for related objects:
 
@@ -26,11 +26,20 @@ Data view has the following properties:
 
 ![](attachments/data-widgets/data-view-properties.png)
 
-### 3.1 Common Section
+Data view properties consist of the following sections:
 
-For more information on properties of this section, see the [Common Section](common-widget-properties#common-properties) section in *Properties Common for Widgets*. 
+* [Common](#common-section)
+* [Data source](#data-source)
+* Design Properties
+* [Editability](#editability)
+* [General](#general)
+* [Visibility](#visibility)
 
-### 3.2 Data Source Section
+### 3.1 Common Section {#common-section}
+
+{{% snippet file="refguide/common-section-link.md" %}}
+
+### 3.2 Data Source Section {#data-source}
 
 The data source determines which object will be shown in the data view. For more information on data sources, see [Data Sources](data-sources).
 
@@ -43,7 +52,7 @@ The data view supports the following types of data source: context, microflow, n
 | Nanoflow         | A data source that runs a selected nanoflow and displays a return value. |
 | Listen to widget | A data source that allows a data view to display detailed information on an object in the list widget on the same page. For more information on listen to widget source, see [Listen To Widget Source](microflow-source). |
 
-### 3.4 Editability Section
+### 3.4 Editability Section {#editability}
 
 #### 3.4.1 Editable
 
@@ -64,7 +73,7 @@ This property determines how input widgets are rendered if they are read-only.
 
 {{% alert type="info" %}}Read-only style is not supported on native mobile pages.{{% /alert %}}
 
-### 3.5 General Section
+### 3.5 General Section {#general}
 
 #### 3.5.1 Form Orientation
 
@@ -94,9 +103,9 @@ There are a number of ways a data view can end up without source data. For insta
 
 _Default value:_ empty
 
-### 3.6 Visibility Section
+### 3.6 Visibility Section {#visibility}
 
-For more information on properties of this section, see the [Visibility Properties](common-widget-properties#visibility-properties) section in *Properties Common for Widgets*. 
+{{% snippet file="refguide/visibility-section-link.md" %}}
 
 ## 4 Read More
 

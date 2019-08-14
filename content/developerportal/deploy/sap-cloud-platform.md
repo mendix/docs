@@ -378,7 +378,17 @@ To connect a service in the section **Available Services**
 
     ![](attachments/sap-cloud-platform/service-connect.png)
 
-    The services you have selected will be added as **Services To Be Bound**. They will not actually be bound until you stop and start the application.
+    The services you have selected will be added as **Services To Be Bound**. Now, you can upload JSON **File** with a configuration that will be applied to the service binding. 
+
+To upload JSON **File** for service binding
+
+1. Select the service in the **Service To Be Bound** section.
+2. Click the ellipsis next to the service you want to upload file.
+3. Select **Add Binding Configuration**.
+4. Select a JSON **File** to upload.
+5. Click on Save button to save the configuration.
+
+The service bindings will be created with provided configurations when you restart the application. 
 
 {{% alert type="info" %}}
 If you receive an error, and the service fails to bind please check all aspects of your SAP account. The error message may not provide full information about, for example, which plans you are allowed to choose for a particular service.

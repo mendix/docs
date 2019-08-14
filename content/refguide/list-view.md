@@ -20,6 +20,8 @@ An example of list view properties is represented in the image below:
 
 ![](attachments/data-widgets/list-view-properties.png)
 
+List view properties consist of the following sections:
+
 * [Common](#common)
 * [Data source](#data-source)
 * Design Properties

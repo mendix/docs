@@ -24,11 +24,11 @@ For more information, see [Control Bar](control-bar).
 
 ### 2.3 Search Bar
 
-**Search Bar** is only available for **Database** and **XPath** data sources. For more information, see [Search Bar](search-bar).
+**Search Bar** is only available for **Database** and **XPath** [data sources](#data-source). For more information on a search bar and its settings, see [Search Bar](search-bar).
 
 ### 2.4 Sort Bar
 
-**Sort Bar** is only available for **Database** and **XPath** data sources. For more information, see [Sort Bar](sort-bar).
+**Sort Bar** is only available for **Database** and **XPath** [data sources](#data-source). For more information on a sort bar and its settings, see [Sort Bar](sort-bar).
 
 ## 3 Properties
 

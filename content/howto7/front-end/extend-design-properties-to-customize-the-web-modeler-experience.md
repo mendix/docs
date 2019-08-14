@@ -41,7 +41,7 @@ When you apply a new class in **settings.json** file, make sure that this class 
 
 ## 3 Changing Atlas UI to Old Mendix UI Framework 
 
-If your project's version is 7.8.0 or lower, you can change Atlas UI framework to the old Mendix UI framework.
+If your project's version is 7.8.0 or lower, you can change Atlas UI framework to the old Mendix UI Framework.
 
 The first line in the **settings.json** file enables the resources, page templates, and building blocks that are integrated with Atlas UI, the Web Modeler, and the Desktop Modeler:
 
@@ -51,7 +51,7 @@ If this line is deleted, the old Mendix UI Framework resources will be loaded in
 
 {{% alert type="warning" %}}
 
-You can only switch to the old Mendix UI framework following the instructions above if your project's  version is 7.8.0 or lower.
+You can only switch to the old Mendix UI Framework following the instructions above if your project's  version is 7.8.0 or lower.
 
 {{% /alert %}}
 

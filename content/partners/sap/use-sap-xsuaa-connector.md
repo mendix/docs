@@ -76,8 +76,8 @@ If your app already had XSUAA included, your login.html file may have been modif
 If login.html does not support XSUAA then you need to add the SSO login button to the landing page. Do this by following these steps:
 
 1. In the top menu of , select **Project** > **Show Project Directory in Explorer**.
-2. Open the **theme** folder
-3. Copy the content of **login-with-sso.html** to **login.html**
+2. Open the **theme** folder.
+3. Copy the content of **login-with-sso.html** to **login.html**.
 3. Open **login.html** for editing.
 4. Locate the following lines:
 
@@ -87,7 +87,7 @@ If login.html does not support XSUAA then you need to add the SSO login button t
 		<span class="loginpage-signin">Mendix Account</span>
 	</a>
 	```
-5. Replace or add below the <a> element above the following lines
+5. Replace those lines with the following lines (or add them below the `<a>` element in the code above):
 
 	```html
 	<a id="ssoButton" href="/xsauaalogin/" class="btn btn-default btn-lg">

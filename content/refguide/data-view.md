@@ -22,20 +22,20 @@ The footer of the data view is the section at the bottom of the data view that o
 
 ## 3 Properties
 
-Data view has the following properties:
+An example of data view properties is represented in the image below:
 
 ![](attachments/data-widgets/data-view-properties.png)
 
 Data view properties consist of the following sections:
 
-* [Common](#common-section)
+* [Common](#common)
 * [Data source](#data-source)
 * Design Properties
 * [Editability](#editability)
 * [General](#general)
 * [Visibility](#visibility)
 
-### 3.1 Common Section {#common-section}
+### 3.1 Common Section {#common}
 
 {{% snippet file="refguide/common-section-link.md" %}}
 

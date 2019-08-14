@@ -7,7 +7,7 @@ tags: ["Atlas", "UI", "UX", "user experience"]
 
 ## 1 Introduction
 
-Calypso is the tool for everyone who wants to customize their Mendix app. From designers to front-enders, for Mac users and Windows users. Everyone can easily use this tool without installing any external dependencies. Everything is packaged inside Calypso. The only thing for you left to do is install it, choose your mendix app and start customizing!
+Calypso is a tool which allows you to customize your Mendix apps. Designers and front-enders, Mac users and Windows users — everyone can easily use this tool without installing any external dependencies. Everything is packaged inside Calypso. You simply need to install Calypso, choose your Mendix app, and start customizing.
 
 ## 2 Prerequisites
 
@@ -15,11 +15,11 @@ Calypso is the tool for everyone who wants to customize their Mendix app. From d
 
 ## 2 Calypso Features
 
-* Dark mode!
+* Dark mode
 * Checks Sass files for errors
 * Compiles Sass files to CSS
 * Shows notifications on error
-* Moves watched (compiled) files to deployment folder
+* Moves watched (compiled) files to deployment folder (**todo which is it**?)
 * Injects Sass files in browser for instant changes
 
 

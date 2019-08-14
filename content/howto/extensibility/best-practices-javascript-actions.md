@@ -238,7 +238,7 @@ Below is an example of using an external dependency based on [Noty](https://gith
 3. In *theme/index.html*, do the following: <br/>
 	a. Add a link to the style sheets after *mxui.css*. <br/>
 	b. Add a script tag for the library after *mxui.js*. <br/>
-	c. Add a `script` tag after "mxui.js" in *theme/index.html* to add an external javascript:
+	c. Add a `script` tag after **mxui.js** in *theme/index.html* to add an external JavaScript:
 
 	```html
 	<!doctype html>
@@ -252,7 +252,9 @@ Below is an example of using an external dependency based on [Noty](https://gith
 		</body>
 	</html>
 	```
-	d. Add the links in the `cssFiles` array of the *theme/settings.json* to add the external styling:
+	
+	d. Add the following links in the `cssFiles` array of the *theme/settings.json* to add external styling:
+	
 	```json
 	{
 	    // ...

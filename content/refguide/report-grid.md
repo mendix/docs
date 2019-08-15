@@ -50,4 +50,4 @@ If this property is false, the report grid will not show its data until the user
 
 ### Name, Class, Style
 
-For details, see [Common Widget Properties](common-widget-properties).
+For details, see [Properties Common for Widgets](common-widget-properties).

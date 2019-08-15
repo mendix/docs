@@ -36,11 +36,10 @@ Data view properties consist of the following sections:
 * [Common](#common)
 * [Data source](#data-source)
 * Design Properties
-* [Editability](#editability)
 * [General](#general)
-* [Visibility](visibility)
+* [Visibility](#visibility)
 
-### 3.1 Common Section
+### 3.1 Common Section {#common}
 
 {{% snippet file="refguide/common-section-link.md" %}}
 
@@ -59,7 +58,7 @@ The list view supports the following types of data sources:
 
 The database and XPath sources retrieve objects from the database and supports searching and sorting. 
 
-### 3.3 General Section
+### 3.3 General Section {#general}
 
 #### 3.3.1 Show Control Bar Buttons
 

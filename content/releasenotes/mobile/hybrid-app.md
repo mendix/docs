@@ -18,8 +18,8 @@ For more information on hybrid mobile app development in Mendix, see the [Hybrid
 
 ### August 15th, 2019 (4.1.4 / 4.1.0)
 
-* We identified and fixed a situation where Apps would get stuck in a loading loop on Android devices with older Webview versions.
-* We identified and fixed an unhandled exception with Secure Storage in cases where the device does not have any security features enabled.
+* We fixed a situation where apps would get stuck in a loading loop on Android devices with older WebView versions.
+* We fixed an unhandled exception with secure storage in cases where the device does not have any security features enabled.
 
 ### July 18th, 2019 (4.1.3 / 4.1.0)
 

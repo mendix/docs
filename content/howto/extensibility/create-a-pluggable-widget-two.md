@@ -555,5 +555,5 @@ Explaining the code:
 
 ## 4 Read More
 
-* [Make JavaScript Actions](/howto/extensibility/build-javascript-actions)
+* [Write JavaScript Actions](/howto/extensibility/build-javascript-actions)
 * [Build a Text Box Pluggable Widget: Part 1](create-a-pluggable-widget-one)

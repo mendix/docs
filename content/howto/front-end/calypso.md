@@ -22,12 +22,12 @@ Calypso is a tool which [**EDIT for specificity: automatically processes your st
 ## 3 Setting Up Calypso
 
 1. Install Calypso.
-2. After you opened the app you see a couple of configurations. In the **Hostname** drop-down menu, select the host name of your Mendix app's device or put its IP address in manually by clicking **Other**. If you are using Windows, you should usually select **localhost**. If you are running Windows through a virtual machine, use your virtual machine's IP address as the **Hostname**. Alternatively you can install Calypso on a virtual machine and choose **localhost**.
-3. If this is your first time using Calypso, you may have to tell your Windows firewall to **Allow access** for the program.
-3. Next up is the port. A Mendix app normally runs on port 8080. However, if you are running multiple Mendix apps, or changed this configuration for another reason, the port can be different. You can find the port you need by going to **Project {YourProjectName}** > **Settings**. Here you will see the used port at the default configuration.
+2. After you opened the app you see a couple of configurations. In the **Hostname** drop-down menu, select the host name of your Mendix app's device or put its IP address in manually by clicking **Other**. Most Windows users should select **localhost**. If you are running Windows through a virtual machine, use your virtual machine's IP address as the **Hostname**. Alternatively you can install Calypso on a virtual machine and choose **localhost**.
+3. If this is your first time using Calypso, you may have to tell your Windows firewall to **Allow access** to use Calypso.
+3. Configure your **Port**. A Mendix app normally runs on port 8080. However, if you are running multiple Mendix apps, or changed your port configuration, your port number may be different. Find your port information by navigating to **Project {YourProjectName}** > **Settings** **CANNOT FIND THIS PATHWAY**, then type that number into Calypso's **Port** field.
 4. In **Apps Collection**, click the **Browse** button and then select the folder which contains all your Mendix apps. Configuring this enables you to switch easily between apps. 
 5. Complete **App Folder** by selecting the folder of your Mendix app from the drop-down menu.
-6. **Watching** will allow you to specify which files you want to be processed by Calypso. Most users will only need to select the **Watching** > **theme/styles** path. However, when you are building custom error pages or are using JavaScript on your pages, you may wish to select the other two folders as well.
+6. Complete **Watching** to specify which files you want to be processed by Calypso. Most users will only need to select the **Watching** > **theme/styles** path. However, when you are building custom error pages or are using JavaScript on your pages, you may wish to select the other two folders as well.
 
 	![files to watch](attachments/calypso/calypso-watching.png)
 

@@ -32,7 +32,7 @@ To select the environment for Studio, do the following:
 
     ![](attachments/studio-deployment-settings/developer-portal-web-modeler-target.png) <br/>
 
-    {{% alert type="info" %}} Only [**Technical Contact**](technical-contact) can see the **Change** button and click it. 
+    {{% alert type="info" %}} Only [**Technical Contact**](company-app-roles/technical-contact) can see the **Change** button and click it. 
 
     {{% /alert %}}
 

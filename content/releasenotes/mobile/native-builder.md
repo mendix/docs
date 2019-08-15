@@ -12,8 +12,7 @@ We are heavily invested in streamlining the experience of building your apps and
 
 ## 2019
 
-### August #, 2019 (1.0.0) CORRECT DATE?
-* Support for Mendix Studio Pro 8.1.
+### August 15th, 2019 (1.0.0)
 * Added `output-path` parameter to allow defining the location where artifacts should be outputed.
 * Use of github templates rather than forking to create a unique repository for each app.
 * Repositories are from now on by default private.

@@ -15,6 +15,7 @@ For more information on hybrid mobile app development in Mendix, see the [Hybrid
 {{% /alert %}}
 
 ## 2019
+
 ### August 15th, 2019 (4.1.4 / 4.1.0)
 
 * We fixed an issue where Android devices with older WebView versions might get stack in a loading loop. 

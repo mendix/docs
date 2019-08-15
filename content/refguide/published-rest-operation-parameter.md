@@ -10,7 +10,7 @@ tags: ["published REST", "operation", "parameter", "resource", "mapping", "not f
 
 ## 1 Introduction
 
-When a client calls a published REST operation, they call a URL with an optional query string and possibly a body. These parameters can be passed to the microflow and import mapping as path parameters, query parameters, and body parameters respectively.
+When a client calls a published REST operation, they call a URL with an optional query string and possibly a body. These parameters can be passed to the microflow and import mapping as query parameters, path parameters, body parameters, header parameters and form parameters.
 
 <!-- needs clarifying, 2 things cannot map to three things 'respectively' -->
 
@@ -26,6 +26,7 @@ Specify where the parameter comes from. Possible values are the following:
 * **Path** The operation path can contain parameters as well. If you add a path parameter, make sure you add it to the operation path as well. For more information, see [Published REST Path Parameters](published-rest-path-parameters).
 * **Body** – the microflow can have 0 or 1 body parameters. A body parameter is taken from the body of the request. If the body is a file document or an image, its contents will be filled with the body of the request. If the body parameter is an other type of object or a list, an import mapping is needed to convert the body content of the request into an object or a list. **GET**, **HEAD** and **OPTIONS** operations shouldn't have body parameters.
 * **Header** – the value of a header parameter is taken from the (first) request header with that name
+* **Form** – (available for `multipart/form-data` requests), the value of a form parameter is taken from the body part with that name
 
 ### 2.2 Name
 

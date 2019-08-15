@@ -112,7 +112,7 @@ This property indicates whether the first item will be selected initially. This 
 
 _Default value:_ False
 
-#### <a name="dbt"></a>Default Button Trigger
+#### 3.3.7 <a name="dbt"></a>Default Button Trigger
 
 The default button can be triggered by a single or a double click on a row.
 
@@ -123,13 +123,13 @@ The default button can be triggered by a single or a double click on a row.
 
 _Default value:_ Double click
 
-#### 3.3.7 Refresh Time (in Seconds)
+#### 3.3.8 Refresh Time (in Seconds)
 
 If the refresh time is non-zero, the data grid will refresh its contents every given number of seconds. For example, a task list could be refreshed every minute so that you know when new tasks arrive. By default the refresh time is zero and this means that the grid will not automatically refresh itself.
 
 _Default value:_ 0
 
-#### 3.3.8 Tooltip Page
+#### 3.3.9 Tooltip Page
 
 A tooltip page is a page that appears when you hover your mouse over a row. The tooltip page should consist of a data view on the same entity as the data grid. Besides creating and connecting a tooltip page you also have to specify on which columns the tooltip will appear. See the property 'Show tooltip' of [data grid columns](columns).
 
@@ -137,7 +137,7 @@ A tooltip page is a page that appears when you hover your mouse over a row. The 
 
 {{% snippet file="refguide/visibility-section-link.md" %}}
 
-## Read More
+## 4 Read More
 
 * [Page](page)
 * [Data Widgets](data-widgets)

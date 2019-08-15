@@ -2,45 +2,80 @@
 title: "Data View"
 parent: "data-widgets"
 menu_order: 10
-tags: ["Page", "Display", "widget", "object", "studio pro"]
+tags: ["page", "data view", "widget", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
-The data view is a central component of Mendix applications. It is the starting point for showing the contents of exactly one object. For example, if you want to show the details of a single customer, you can use a data view to do this. The data view typically contains input widgets like text boxes with labels. In more complex screens, a data view can contain tab controls per topic (for example, address and payment information) and data views and data grids for related objects (for example, order history or wish list).
+The data view is a starting point for showing the contents of exactly one object. For example, if you want to show the details of a single program item, you can use a data view to do this:
 
-{{% alert type="info" %}}
+![](attachments/data-widgets/data-view-example-structure-mode.png)
 
-![](attachments/pages/data-view.png)
+In a more complex example, a data view can contain customer information and [tab containers](tab-container) per specific topic (for example, addresses and payment information) with nested data grids for related objects:
 
-A more advanced data view with a tab control and a data grid inside.
+![](attachments/data-widgets/data-view-complex-example.png)
 
-{{% /alert %}}
+## 2 Data View Footer
 
-## 2 Components
+The footer of the data view is the section at the bottom of the data view that often contains buttons to confirm or cancel changes.  
 
-### 2.1 Data View Contents Area
+## 3 Properties
 
-The data view contents area is where all the layout and input widgets go. Often the contents area contains a table with two columns: the first column showing labels and the second column containing input widgets. Other layouts are possible, as you can see in the examples above.
+An example of data view properties is represented in the image below:
 
-### 2.2 Data View Footer
+![](attachments/data-widgets/data-view-properties.png)
 
-The footer of the data view is the section at the bottom of the data view that often contains buttons to confirm or cancel the page. However, arbitrary widgets are allowed. The footer will stick to the bottom if the data view is the only top-level widget.
+Data view properties consist of the following sections:
 
-## 3 Common Properties
+* [Common](#common)
+* [Data source](#data-source)
+* Design Properties
+* [Editability](#editability)
+* [General](#general)
+* [Visibility](#visibility)
 
-{{% snippet file="refguide/Name+Property.md" %}}
+### 3.1 Common Section {#common}
 
-{{% snippet file="refguide/Class+Property.md" %}}
+{{% snippet file="refguide/common-section-link.md" %}}
 
-{{% snippet file="refguide/Style+Property.md" %}}
+### 3.2 Data Source Section {#data-source}
 
-{{% snippet file="refguide/Tab+index+Property.md" %}}
+The data source determines which object will be shown in the data view. For more information on data sources, see [Data Sources](data-sources).
 
-## 4 General Properties
+The data view supports the following types of data source: context, microflow, nanoflow, and listen to widget. 
 
-### 4.1 Form Orientation
+| Data Source Type | Description                                                  |
+| ---------------- | ------------------------------------------------------------ |
+| Context          | A data source determining that wherever you are opening the page from, you are passing the selected object. For example, when you add the **Show Page** activity in the microflow, you select the page and the object to pass. (For more information on the microflows, see [Microflows](microflows).) That means that when the page is opened in the microflow, the object of this type is provided and will be shown in the data view on the page. <br />If a data view is nested inside another data widget, you can specify an entity path that starts in the context object and follows one or more associations. For more information on the context source, see [Context Source](entity-path-source).<br /> |
+| Microflow        | A data source that runs a selected microflow and displays a return value. For more  information on the microflow source, see [Microflow Source](microflow-source). |
+| Nanoflow         | A data source that runs a selected nanoflow and displays a return value. |
+| Listen to widget | A data source that allows a data view to display detailed information on an object in the list widget on the same page. For more information on listen to widget source, see [Listen To Widget Source](microflow-source). |
+
+### 3.3 Editability Section {#editability}
+
+#### 3.3.1 Editable
+
+The editable property indicates whether the data view as a whole is editable or not. If the data view is not editable, no widget inside the data view will be editable. On the other hand, if the data view is editable, each widget is determined to be editable based on its own editable property.
+
+_Default value:_ True
+
+#### 3.3.2 Read-Only Style
+
+This property determines how input widgets are rendered if they are read-only. 
+
+| Value   | Description                                                  |
+| ------- | ------------------------------------------------------------ |
+| Control | The widget is displayed but disabled, so the value cannot be modified. |
+| Text    | The widget is replaced by a textual representation of the value. |
+
+*Default value:* Control
+
+{{% alert type="info" %}}Read-only style is not supported on native mobile pages.{{% /alert %}}
+
+### 3.4 General Section {#general}
+
+#### 3.4.1 Form Orientation
 
 With this property, you can specify the position of the input widget labels inside the data view. If the orientation is horizontal, the labels will be placed next to the input widgets. If the orientation is vertical, the labels will be placed above the input widgets.
 
@@ -48,19 +83,19 @@ Note that form groups are responsive and the labels may be placed above input wi
 
 _Default value:_ Horizontal
 
-### 4.2 Label Width (Weight)
+#### 3.4.2. Label Width (Weight)
 
 If the form orientation is set to horizontal, this property can be used to specify the width of the input widget labels inside the data view. The width is specified using column weights from the [Bootstrap grid system](http://getbootstrap.com/css/#grid). For more details, see [Layout Grid](layout-grid).
 
 _Default value:_ 3
 
-### 4.3 Show Footer
+#### 3.4.3 Show Footer
 
 With this property, you can specify whether you want the footer of the data view to be visible. The footer of nested data views is always invisible, regardless of the value of this property.
 
 _Default value:_ True
 
-### 4.4 Empty Entity Message
+#### 3.4.4 Empty Entity Message
 
 If this message is specified, a data view that receives no source data will show this message instead of its content. Otherwise, the data view will show its static content and disabled input widgets. This property is a translatable text. For more details, see [Translatable Texts](translatable-texts).
 
@@ -68,50 +103,13 @@ There are a number of ways a data view can end up without source data. For insta
 
 _Default value:_ empty
 
-## 5 Editability Properties
+### 3.5 Visibility Section {#visibility}
 
-### 5.1 Editable
+{{% snippet file="refguide/visibility-section-link.md" %}}
 
-The editable property indicates whether the data view as a whole is editable or not. If the data view is not editable, no widget inside the data view will be editable. On the other hand, if the data view is editable, each widget is determined to be editable based on its own editable property.
+## 4 Read More
 
-_Default value:_ True
-
-### 5.2 Read-Only Style
-
-This property determines how input widgets are rendered if read-only. 
-
-| Value            | Description |
-|------------------|-------------|
-| Control          | The widget is displayed but disabled, so the value cannot be modified.|
-| Text             | The widget is replaced by a textual representation of the value.|
-
-*Default value:* Control
-
-{{% alert type="info" %}}Read-only style is not supported on native mobile pages.{{% /alert %}}
-
-## 6 Data Source Properties
-
-The data source determines which object will be shown in the data view. For general information about data sources, see [Data Sources](data-sources).
-
-### 6.1 Type
-
-The data view supports the following types of data source: context, microflow, and listen to widget. Whatever data source you select, the data view will always return one single object.
-
-### 6.2 Entity, Microflow, Listen To Widget
-
-See the corresponding data source for specific properties:
-
-* [Context source](entity-path-source) - either a page parameter or a surrounding data element
-* [Microflow source](microflow-source) - a microflow returning only one object
-* [Listen to widget source](listen-to-grid-source) - any widget returning only one object
-
-## 7 Visibility Properties
-
-{{% snippet file="refguide/Visibility+Property.md" %}}
-
-{{% snippet file="refguide/Visibility+Property+With+Module+Roles+Simple.md" %}}
-
-## 8 Read More
-
-* [Entities](entities)
-* [Associations](associations)
+* [Page](page)
+* [Data Widgets](data-widgets)
+* [Data Sources](data-sources)
+* [Properties Common for Widgets](common-widget-properties)

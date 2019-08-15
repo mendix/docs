@@ -37,7 +37,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 The SAP app may already have the SAP XSUAA Connector installed. Look in **Project... > App Store modules** for the module **SapAuthentication**. This is the XSUAA connector.
 
-If the SAP XSUAA Connector is not already in your project, download it from the App Store. It can be found here: [SAP Cloud Platform XSUAA Connector](https://appstore.home.mendix.com/link/app/78091/).
+If the SAP XSUAA Connector is not already in your project, download it from the App Store. It can be found here: [XSUAA Connector for SAP Cloud Platform](https://appstore.home.mendix.com/link/app/78091/).
 
 For more information, see [How to Use App Store Content](/developerportal/app-store/app-store-content).
 
@@ -56,7 +56,7 @@ The app needs to be bound to the SAP XSUAA service. This is achieved by executin
 To add the After Startup microflow to your application, follow these steps:
 
 1. In the **Project Explorer**, select **Project ... > Settings** and open the **Runtime** tab.
-2. For the **After Startup** microflow, select the microflow **App Store Modules > SapAuthentication > USE_ME > AfterStartup**.
+2. For the **After Startup** microflow, select the microflow **App Store Modules > SapAuthentication > USE_ME > ASu_StartXSUAA**.
 
 ![](attachments/use-sap-xsuaa-connector/runtime-settings.png)
 
@@ -77,16 +77,23 @@ If login.html does not support XSUAA then you need to add the SSO login button t
 
 1. In the top menu of , select **Project** > **Show Project Directory in Explorer**.
 2. Open the **theme** folder.
+3. Copy the content of **login-with-sso.html** to **login.html**.
 3. Open **login.html** for editing.
-4. Locate this line:
+4. Locate the following lines:
 
 	```html
-	<div class="login-logo"></div>
+	<a id="ssoButton" href="/openid/login" class="btn btn-default btn-lg">
+		<img src="logo.png" />
+		<span class="loginpage-signin">Mendix Account</span>
+	</a>
 	```
-5. Below the line above, add this line:
+5. Replace those lines with the following lines (or add them below the `<a>` element in the code above):
 
 	```html
-	<a id="ssoButton" href="/xsauaalogin/" class="login-sso-button btn btn-primary">Sign in with your XSUAA account</a>
+	<a id="ssoButton" href="/xsauaalogin/" class="btn btn-default btn-lg">
+		<img src="logo.png" />
+		<span class="loginpage-signin">Sign in using XSUAA</span>
+	</a>
 	```
 6. Deploy and run your app. The XSUAA login button will look like this:
 

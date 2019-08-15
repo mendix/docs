@@ -23,7 +23,7 @@ The Data widgets category contains the following widgets:
 
   ![](attachments/data-widgets/template-grid-example.png)
 
-* **[List view](list-view)** – shows a list of objects. For example, you can display list of all customers using a list view. 
+* **[List view](list-view)** – shows a list of objects. For example, you can display list of all profiles using a list view. 
 
   ![](attachments/data-widgets/list-view-example.png)
 

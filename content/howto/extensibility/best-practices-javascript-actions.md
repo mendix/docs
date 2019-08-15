@@ -238,20 +238,12 @@ Below is an example of using an external dependency based on [Noty](https://gith
 3. In *theme/index.html*, do the following: <br/>
 	a. Add a link to the style sheets after *mxui.css*. <br/>
 	b. Add a script tag for the library after *mxui.js*. <br/>
-	c. Put the following code in *theme/index.html* to handle external dependencies:
+	c. Add a `script` tag after **mxui.js** in *theme/index.html* to add an external JavaScript:
 
 	```html
 	<!doctype html>
 	<html>
-		<head>
-			<!-- ... --->
-			<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css?{{cachebust}}">
-			<link rel="stylesheet" href="mxclientsystem/mxui/ui/mxui.css?{{cachebust}}">
-			<link rel="stylesheet" href="noty/noty.css?{{cachebust}}">
-			<link rel="stylesheet" href="noty/themes/bootstrap-v3.css?{{cachebust}}">
-			{{themecss}}
-			<!-- ... --->
-		</head>
+		<!-- ... --->
 		<body dir="ltr">
 			<div id="content"></div>
 			<!-- ... --->
@@ -260,6 +252,21 @@ Below is an example of using an external dependency based on [Noty](https://gith
 		</body>
 	</html>
 	```
+	
+	d. Add the following links in the `cssFiles` array of the *theme/settings.json* to add external styling:
+	
+	```json
+	{
+	    // ...
+	    "cssFiles": [
+	    	"styles/web/css/main.css",
+		"noty/noty.css"
+		"noty/themes/bootstrap-v3.css"
+	    ],
+	    // ...
+	}
+	```		
+		
 
 4. To support hybrid mobile apps, add the script and CSS to *theme/components.json*: 
 
@@ -522,7 +529,7 @@ Not all capabilities are recommended for use. Consider the side effects that an 
 
 ## 7 Read More
 
-* [Make JavaScript Actions](/howto/extensibility/build-javascript-actions)
+* [Write JavaScript Actions](/howto/extensibility/build-javascript-actions)
 * [JavaScript Actions](/refguide/javascript-actions)
 * [Mendix Client API](https://apidocs.mendix.com/7/client/)
 * JavaScript basics:

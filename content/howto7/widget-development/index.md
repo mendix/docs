@@ -81,6 +81,6 @@ Within the Mendix Community of developers, there are plenty of widget developers
 
 ## 5 Main Documents in This Category
 
-* [Add a Preview Image for a Custom Widget](add-a-preview-image-for-custom-widget)
+* [Make a Preview Image for a Custom Widget](add-a-preview-image-for-custom-widget)
 * [Scaffold a Widget with the Yeoman Widget Generator](scaffold-a-widget-with-the-yeoman-widget-generator)
 * [Use the Widget Development Plugin for Adobe Brackets](use-the-widget-development-plugin-for-adobe-brackets)

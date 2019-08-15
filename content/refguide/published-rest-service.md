@@ -84,13 +84,16 @@ If authentication is required, you can select which authentication methods you w
 * Select **Username and password** to allow clients to authenticate themselves using a username and a password in the **Authorization** header (this is called "basic authentication")
 * Select **Active session** to allow access from JavaScript inside your current application
   * Once a user has logged into the browser, the JavaScript in your app can access the REST service using the current user's session
+  * [Offline-First](offline-first) apps cannot use active session authentication, because they don't have sessions that stay active while the app is running
   * To prevent cross-site request forgery, the `X-Csrf-Token` header needs to be set on each request, for example:
 
-    ```var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open("GET", "http://mysite/rest/myservice/myresource", false);
-    xmlHttp.setRequestHeader("X-Csrf-Token", mx.session.getConfig("csrftoken"));
-    xmlHttp.send(null);
-    ```
+```javascript
+var xmlHttp = new XMLHttpRequest();
+xmlHttp.open("GET", "http://mysite/rest/myservice/myresource", false);
+xmlHttp.setRequestHeader("X-Csrf-Token", mx.session.getConfig("csrftoken"));
+xmlHttp.send(null);
+```
+
 * Select **Custom** to authenticate using a microflow. This microflow is called every time a user want to access a resource.
 
 Check more than one authentication method to have the service try each of them. It will first try **Custom** authentication, then **Username and password**, and then **Active session**. For more details, see [Published REST Routing](published-rest-routing).

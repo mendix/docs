@@ -51,41 +51,41 @@ The database and XPath sources retrieve objects from the database and supports s
 
 {{% alert type="warning" %}}Searching is not supported on native mobile pages.{{% /alert %}}
 
-### 2.4 General Section {#general}
+### 2.3 General Section {#general}
 
-#### 2.4.1 Editable
+#### 2.3.1 Editable
 
 If this property is set to *Yes*, items in the list view can be edited. The changes made to list view items can be saved with a **Save** button and reverted with a **Cancel** button. **On click** and **Page size** properties are not displayed to avoid confusion about what changes are saved or reverted.
 
-#### 2.4.2 On Click 
+#### 2.3.2 On Click 
 
 An on-click event defines what action is performed when a user clicks a list view row. For more information on on-click events, see [On Click Event](on-click-event). 
 
-#### 2.4.3 Page Size
+#### 2.3.3 Page Size
 
 the number of rows displayed on the page; after the indicated limit is reached, the **Load more...** button is displayed on the page.
 
-#### 2.4.4 Scroll Direction
+#### 2.3.4 Scroll Direction
 
 {{% alert type="info" %}}The scroll direction property is only supported on native mobile pages.{{% /alert %}}
 
 This property determines whether the list view lays out its items vertically (default) or horizontally.
 
-#### 2.4.5 Number of Columns
+#### 2.3.5 Number of Columns
 
 {{% alert type="info" %}}The number of columns property is only supported on native mobile pages.{{% /alert %}}
 
 With this property you can change the number of items that will be shown next to each other in one row.
 If you set the scroll direction property to horizontal, this property determines the number of items per column.
 
-#### 2.4.6 Pull Down Action
+#### 2.3.6 Pull Down Action
 
 {{% alert type="info" %}}The number of columns property is only supported on native mobile pages.{{% /alert %}}
 
 The pull down action defines what action is performed when you drag downwards on a list view.
 Its common behavior is to update the contents of the list view by synchronizing data.
 
-### 2.5 Templates Section {#templates}
+### 2.4 Templates Section {#templates}
 
 {{% alert type="warning" %}}Templates are not supported on native mobile pages.{{% /alert %}}
 
@@ -99,7 +99,7 @@ Now if there is a row of type Bicycle the template specific for bicycles will be
 
 {{% /alert %}}
 
-### 2.6 Visibility Section
+### 2.5 Visibility Section
 
 {{% snippet file="refguide/visibility-section-link.md" %}}
 

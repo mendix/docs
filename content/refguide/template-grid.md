@@ -22,11 +22,11 @@ The template grid has a lot in common with a [data grid](data-grid). The main di
 
 For more information, see [Control Bar](control-bar).
 
-### 2.3 Search Bar
+### 2.2 Search Bar
 
 **Search Bar** is only available for **Database** and **XPath** [data sources](#data-source). For more information on a search bar and its settings, see [Search Bar](search-bar).
 
-### 2.4 Sort Bar
+### 2.3 Sort Bar
 
 **Sort Bar** is only available for **Database** and **XPath** [data sources](#data-source). For more information on a sort bar and its settings, see [Sort Bar](sort-bar).
 

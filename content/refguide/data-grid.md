@@ -78,8 +78,6 @@ This property indicates with the buttons to page through the information in the 
 
 _Default value:_ True
 
-{{% snippet file="refguide/Column+Width+Properties.md" %}}
-
 #### 3.3.3 Number of Rows
 
 With this property you can change the number of rows that will be shown in one page. See also the property 'Show empty rows'.

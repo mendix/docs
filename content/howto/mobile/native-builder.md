@@ -199,7 +199,7 @@ The following error scenarios could indicate that your repository is out of sync
 
 If either of these things happen, make sure that you are using the latest Native template version by consulting the [native-template GitHub page](https://github.com/mendix/native-template).
 
-If your Native template is not the latest version, synchronize your repository with the latest version of the Native template. For instructions on syncing a GitHub repository, see GitHub's [Syncing a repository](https://help.github.com/en/articles/syncing-a-fork).
+If your Native template is not the latest version, synchronize your repository with the latest version of the Native template. For instructions on syncing a GitHub repository, see GitHub's [Syncing a fork](https://help.github.com/en/articles/syncing-a-fork).
 
 ## 10 Resolving Errors
 

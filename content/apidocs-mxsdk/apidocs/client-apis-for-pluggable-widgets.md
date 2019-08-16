@@ -31,7 +31,7 @@ A user can specify multiple classes for every widget. They can do this either di
 
 ### 3.3 Style
 
-A user can specify a custom CSS for every widget on a web page by using the [style](/refguide/container#style) property. This styling is passed to a client component through an optional **style** prop of the type `CSSProperties` (X is `undefined` if no inline style was configured **todo: what does X stand for?**).
+A user can specify a custom CSS for every widget on a web page by using the [style](/refguide/container#style) property. This styling is passed to a client component through an optional **style** prop of the type `CSSProperties` (the **style** prop is `undefined` if no inline style was configured).
 
 On native pages, the meaning of a **style** prop is very different. First of all, a user cannot specify the aforementioned inline styles for widgets on a native page. So a **style** prop is used to pass styles computed based on configured classes. A client component will receive an array of [style objects](/refguide/native-styling-refguide#2-style-objects).
 
@@ -43,7 +43,7 @@ If a widget uses a TabIndex prop [system property](link to other doc todo: link 
 
 ### 4.1 ActionValue
 
-ActionValue is used to represent actions, like the [On click](/refguide/action-button#events-on-click) property of an action button. For any action except **Do nothing**, your component will receive a value adhering to the following interface. For **Do nothing** it will receive `undefined`. The ActionValue property appears like this:
+ActionValue is used to represent actions, like the [On click](/refguide/action-button#events-on-click) property of an action button. For any action except **Do nothing**, your component will receive a value adhering to the following interface. For **Do nothing** it will receive `undefined`. The **ActionValue** prop appears like this:
 
 ```
     export interface ActionValue {
@@ -53,11 +53,11 @@ ActionValue is used to represent actions, like the [On click](/refguide/action-b
     }
 ```
 
-The flag `canExecute` indicates if an action can be executed under the current conditions. Think of a Call a microflow action triggering a microflow with a parameter. Such an action cannot be executed until a parameter object is available, for example when a parent Data view has finished loading. An attempt to `execute` an action that cannot be executed will have no effect except generating a debug-level warning message.
+The flag `canExecute` indicates if an action can be executed under the current conditions. Think of a Call microflow action triggering a microflow with a parameter. Such an action cannot be executed until a parameter object is available, for example when a parent Data view has finished loading. An attempt to `execute` an action that cannot be executed will have no effect except generating a debug-level warning message.
 
-The flag `isExecuting` indicates whether an action is currently running. A long-running action can take seconds to complete. Your component might use this information to render an inline loading indicator which can set expectations. Often it is not desirable to allow a user to trigger multiple actions in parallel. Therefore, a component (maybe based on a configuration) can decide to skip triggering an action while a previous execution is still in progress.
+The flag `isExecuting` indicates whether an action is currently running. A long-running action can take seconds to complete. Your component might use this information to render an inline loading indicator which lets users track loading progress. Often it is not desirable to allow a user to trigger multiple actions in parallel. Therefore, a component (maybe based on a configuration) can decide to skip triggering an action while a previous execution is still in progress.
 
-Note that `isExecuting` indicates only whether the current action is running. It does not indicate whether a target nanoflow, microflow, or object operation is running due to another action (such as Save).
+Note that `isExecuting` indicates only whether the current action is running. It does not indicate whether a target nanoflow, microflow, or object operation is running due to another action.
 
 The method `execute` triggers the action. It returns nothing and does not guarantee that the action will be started synchronously. But when the action does start, the component will receive a new prop with the `isExecuting` flag set.
 
@@ -80,7 +80,7 @@ DynamicValue is used to represent values that can change over time and is used b
 
 A component will receive a `DynamicValue<X>`  where type `X` depends on a property configuration. For example, for the [TextTemplate property](link to second doc todo: Pluggable Widgets API?) it will be `DynamicValue<string>`, but for the [Expression property](todo: Pluggable Widgets API?) `X` will depend on a configured `returnType`.
 
-Though the type definition above looks complex, it is fairly simply to use because a component can always read `DynamicValue.value`. This field either contains an actual value, such as an interpolated `string` in the case of a Text template, or the last known correct value if the value is being recomputed, such as a parent Data view reloading its Data source. In other cases the value is set as `undefined`.
+Though the type definition above looks complex, it is fairly simply to use because a component can always read `DynamicValue.value`. This field either contains an actual value, such as an interpolated `string` in the case of a Text template, or the last known correct value if the value is being recomputed, such as when a parent Data view reloads its Data source. In other cases the value is set as `undefined`.
 
 `DynamicValue.status` provides a component with additional information about the state of a dynamic value, as well as if the component should handle them differently. This is done using a [discriminated union](https://www.typescriptlang.org/docs/handbook/advanced-types.html#discriminated-unions) that covers the following situations:
 

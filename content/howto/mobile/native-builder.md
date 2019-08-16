@@ -22,9 +22,9 @@ The Native Builder takes your Mendix project containing a native profile and pac
 Native Builder uses MxBuild, GitHub, and App Center to build your apps. The tool automates the configuration of these processes to streamline your app building experience. When run, the Native Builder packages your apps by doing the following:
 
 1. Deploys your Mendix project locally.
-2. Forks the Mendix native template repository on GitHub.
-3. Creates a new branch in the forked repository called **build/{build number provided to the tool}**. 
-4. Commits the required files and assets to the build branch in the forked repository.
+2. Creates a new repository using the Mendix native template repository on GitHub named after the app name provided.
+3. Creates a new branch in the new repository called **build/{build number provided to the tool}**.
+4. Commits the required files and assets to the build branch in the new repository.
 5. Configures your apps in App Center.
 6. Starts a build for iOS and Android.
 7. Provides progress information on the build.
@@ -32,7 +32,7 @@ Native Builder uses MxBuild, GitHub, and App Center to build your apps. The tool
 
 ## 4 Getting Your Tokens
 
-The sections below describe how to get tokens which allow Native Oven to authenticate with GitHub and App Center. If you already have tokens for your GitHub and App Center, you do not need to repeat these sections.
+The sections below describe how to get tokens which allow Native Builder to authenticate with GitHub and App Center. If you already have tokens for your GitHub and App Center, you do not need to repeat these sections.
 
 ### 4.1 GitHub Token {#github-token}
 
@@ -47,9 +47,9 @@ The sections below describe how to get tokens which allow Native Oven to authent
 ### 4.2 App Center Token {#appcenter-token}
 
 1. Go to [App Center](https://appcenter.ms/apps) and sign in.
-3. Click your profile icon in the top right corner, then click **Settings**.
+3. Click your profile icon in the top right corner, then click **Settings**, and then **Account Settings**.
 4. In the **API Tokens** tab, click the **New API token** button.
-5. Add a description of your token, select **Full Access**, then click **Add new API token**. Store this token in a secure place as well. You will not be able to see it again. If you lose it, you will have to create a new token and delete your old one.
+5. Add a description of your token, select **Full Access**, then click **Add new API token**, and then **New API Token**. Store this token in a secure place as well. You will not be able to see it again. If you lose it, you will have to create a new token and delete your old one.
 
 ## 5 Setting Up Your Parameters
 
@@ -80,6 +80,7 @@ Command-line arguments provide information to the Native Builder, such as where 
 |   `--app-identifier`   |   Unique app identifier   |   `com.mendix.MyAwesomeApp`   |
 |   `--app-icon-path`   |   (Optional) Absolute path to the app icon   |   `"C:\MyAppIcon.png"`   |
 |   `--appcenter-organization`   |   (Optional) Organization name used in App Center   |   `my-company`   |
+|   `--output-path`   |	  (Optional) Absolute path to the location where artifacts should be outputed   |   `C:\Downloads`   |
 
 ### 5.2 Advanced Parameter Explanation
 
@@ -181,24 +182,24 @@ Finally, either start a build for this branch manually or run Native Builder aga
 
 ### 8.2 Custom Native Code
 
-If you have custom native dependencies or code, you can include them in your app by merging your changes to the **master** branch of the GitHub fork which Native Builder is making. Every build branches off from **master** and your changes will be included. Remember to sync your forked repository occasionally to get the latest changes from upstream. For more information on syncing your repository, see [When to Sync Your Native Template Fork](#sync-your-fork) below.
+If you have custom native dependencies or code, you can include them in your app by merging your changes to the **master** branch of the GitHub repository which Native Builder is making. Every build branches off from **master** and your changes will be included. Remember to sync your repository occasionally to get the latest changes from Mendix Native template. For more information on syncing your repository, see [When to Sync Your Native Template](#sync-your-repository) below.
 
 ### 8.3 Custom App Center Configuration
 
 In App Center you can configure your builds at the branch level. If no configuration is available for branch **master**, Native Builder will create a default configuration. If a configuration is already present, it will not be modified by the tool. When a branch for a build is initialized, the configuration of **master** is copied over. Consecutive builds will not alter this branch's configuration. This is to avoid overriding your custom configuration.
 
-## 9 When to Sync Your Native Template Fork {#sync-your-fork}
+## 9 When to Sync Your Native Template {#sync-your-repository}
 
-When Mendix updates the Native template, Native Builder will not automatically sync your GitHub fork. You will have to manually sync it yourself. The Native Builder avoids automatic synchronization because of possible merge conflicts with customized apps. 
+When Mendix updates the Native template, Native Builder will not automatically sync your GitHub repository. You will have to manually sync it yourself. The Native Builder avoids automatic synchronization because of possible merge conflicts with customized apps.
 
-The following error scenarios could indicate that your fork is out of step with the latest native template:
+The following error scenarios could indicate that your repository is out of sync with the latest native template:
 
 * Your App Center build fails
 * Your app crashes while you are testing it after adding a new pluggable widget or JavaScript action
 
-If either of these things happen, make sure that you are using the latest Native template version by consulting the [native-template GitHub page](https://github.com/mendix/native-template). 
+If either of these things happen, make sure that you are using the latest Native template version by consulting the [native-template GitHub page](https://github.com/mendix/native-template).
 
-If your Native template is not the latest version, synchronize your fork with the latest version of the Native template. For instructions on syncing a GitHub fork, see GitHub's [Syncin a fork](https://help.github.com/en/articles/syncing-a-fork).
+If your Native template is not the latest version, synchronize your repository with the latest version of the Native template. For instructions on syncing a GitHub repository, see GitHub's [Syncing a fork](https://help.github.com/en/articles/syncing-a-fork).
 
 ## 10 Resolving Errors
 
@@ -206,7 +207,7 @@ If your Native template is not the latest version, synchronize your fork with th
 
 **Invalid Access Token** — Your access token is invalid. Consult the [GitHub Token](#github-token) section above and provide the access token to Native Builder.
 
-**Unable to Create the Fork: the Access Token Needs Access to the Repo Scope** — Your access token is valid, but has too few permissions for Native Builder to work. Native Builder forks a GitHub repository, creates a branch, and commits files. Consult the [GitHub Token](#github-token) section above and provide the new access token to Native Builder.
+**Unable to Create the Repository: the Access Token Needs Access to the Repo Scope** — Your access token is valid, but has too few permissions for Native Builder to work. Native Builder clones a template GitHub repository, creates a branch, and commits files. Consult the [GitHub Token](#github-token) section above and provide the new access token to Native Builder.
 
 **Unable to Delete Branch Build/{build number}** — Something went wrong while communicating with GitHub. Verify your connection, check that GitHub is available, and try running Native Builder again.
 

@@ -150,9 +150,17 @@ Applications that can be embedded within an Iframe can be misused by attackers. 
 
 By sending a header to the user’s browser, it can block the use of the Mendix application within an Iframe, and avoid this type of attack. This header can easily be configured (and is enabled by default) within the Mendix Developer Portal at your node’s environment details at via **Prevent embedding your app in an Iframe**.
 
+{{% alert type="info" %}}
+
+The option to prevent embedding your app in an IFrame has been replaced with the more flexible option to set HTTP Headers. See section below.
+
+{{% /alert %}}
+
 ## 12 Adding HTTP Headers
 
-For information on how to add HTTP headers, see the [HTTP Headers](/developerportal/deploy/environments-details#http-headers) section in *Environment Details* in the *Developer Portal Guide*.  
+HTTP headers can add an additional layer of security for web apps and help you detect certain attacks.  
+
+For information on how to add HTTP headers, see the [HTTP Headers](/developerportal/deploy/environments-details#http-headers) section in *Environment Details*.  
 
 ## 13 Maintaining a High Level of Project Hygiene
 
@@ -181,5 +189,5 @@ Security in Mendix does not include scanning files that end-users upload or down
 
 To scan uploaded files for malicious content, do one of the following:
 
-1. Create a custom module and configure the functionality yourself.
-2. Check available modules in the [Mendix App Store](https://appstore.home.mendix.com/index3.html). For more information on how to use the Mendix App Store content, see [How to Use the App Store Content](/developerportal/app-store/app-store-content).
+* Create a custom module and configure the functionality yourself.
+* Check available modules in the [Mendix App Store](https://appstore.home.mendix.com/index3.html). For more information on how to use the Mendix App Store content, see [How to Use the App Store Content](/developerportal/app-store/app-store-content).

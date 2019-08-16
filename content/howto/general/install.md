@@ -69,7 +69,7 @@ Some people run into problems when installing Studio Pro. One work-around is to 
 
 The prerequisites are:
 
-* .NET Framework 4.7.2 (https://download.microsoft.com/download/6/E/4/6E48E8AB-DC00-419E-9704-06DD46E5F81D/NDP472-KB4054530-x86-x64-AllOS-ENU.exe)
+* Microsoft .NET Framework 4.7.2 (https://download.microsoft.com/download/6/E/4/6E48E8AB-DC00-419E-9704-06DD46E5F81D/NDP472-KB4054530-x86-x64-AllOS-ENU.exe)
 * AdoptOpenJDK 11 (https://cdn.mendix.com/installer/AdoptOpenJDK/OpenJDK11U-jdk_x64_windows_hotspot_11.0.3_7.msi)
 * Microsoft Visual C++ 2010 SP1 Redistributable Package (http://download.microsoft.com/download/A/8/0/A80747C3-41BD-45DF-B505-E9710D2744E0/vcredist_x64.exe)
 * Microsoft Visual C++ 2013 Redistributable Package (http://download.microsoft.com/download/2/E/6/2E61CFA4-993B-4DD4-91DA-3737CD5CD6E3/vcredist_x64.exe)
@@ -78,7 +78,24 @@ Based on the error message you get from the installer you can decide to install 
 
 After that you can retry installing Studio Pro.
 
-## 6 Read More
+## 6 Mendix Studio Pro offline installation experience
+
+Mendix Studio Pro installation experience includes all tools and frameworks required to run the application. If any of the prerequisites are not found at the moment of installation the Studio Pro setup process will attempt to download and install the missing elements automatically. The Mendix Studio Pro installer does not include all dependencies and relies on internet connectivity to obtain them in case if any of the required pieces of software are missing. 
+
+However, it is possible to prepare the prerequisite installers beforehand, so Mendix Studio Pro setup process can pick them up instead of downloading from the remote location.
+
+1. Create a folder for Mendix Studio Pro installer
+1. Download the latest Mendix Studio Pro installer and move it in the aforementioned folder
+1. Create a folder named `Dependencies` in the same location where the Mendix Studio Pro installer was placed
+1. Download the prerequsites listed in [5 Troubleshooting](#5-thoubleshooting) and move them into the `Dependencies` folder
+1. Rename the dependencies as follows
+   1. `.NET Framework 4.7.2` executable to `dotnetfx472.exe`
+   1. `Java Development Kit 11 (x64)` msi to `adoptopenjdk_11_x64.msi`
+   1. `Visual C++ 2010 SP1 Redistributabe (x64)` executable to `vcredist2010_x64.exe`
+   1. `Visual C++ Redistributabe for Visual Studio 2015 (x64)` executable to `vcredist2015_x64.exe`
+1. Run the installer as described in section [4 Install Mendix Studio Pro](#4-install-mendix-studio-pro)
+
+## 7 Read More
 
 * [Studio Pro Overview](/refguide/studio-pro-overview)
 * [App Modeling](/refguide/modeling)

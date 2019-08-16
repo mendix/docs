@@ -11,7 +11,7 @@
     "docker": "gulp serve",
     "serve-test": "HUGO_ENV=test ./node_modules/.bin/gulp serve",
     "serve-prod": "HUGO_ENV=production ./node_modules/.bin/gulp serve",
-    "help": "./node_modules/.bin/gulp help"
+    "help": "gulp help"
   },
   "author": {
     "name": "Mendix B.V.",

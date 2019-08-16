@@ -148,11 +148,11 @@ You can add individual certificates in your project’s settings in . Test, acce
 
 Applications that can be embedded within an Iframe can be misused by attackers. By using an overlay, it could trick users into clicking buttons and make them perform actions within the application on their behalf without knowing it. This approach is called [clickjacking](https://www.owasp.org/index.php/Clickjacking).
 
-By sending a header to the user’s browser, it can block the use of the Mendix application within an Iframe, and avoid this type of attack. This header can easily be configured (and is enabled by default) within the Mendix Developer Portal at your node’s environment details at via **Prevent embedding your app in an Iframe**.
+By sending a header to the user’s browser, it can block the use of the Mendix application within an Iframe, and avoid this type of attack. This header can easily be configured (and is enabled by default) within the Mendix Developer Portal at your node’s environment details via **HTTP Headers**.
 
 {{% alert type="info" %}}
 
-The option to prevent embedding your app in an IFrame has been replaced with the more flexible option to set HTTP Headers. For more information, see the [Adding HTTP Headers](#adding-http-header) section below.
+The **Prevent embedding your app in an Iframe option** has been replaced with the more flexible option to set HTTP Headers. For more information, see the [Adding HTTP Headers](#adding-http-header) section below.
 
 {{% /alert %}}
 

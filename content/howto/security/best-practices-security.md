@@ -152,13 +152,13 @@ By sending a header to the user’s browser, it can block the use of the Mendix 
 
 {{% alert type="info" %}}
 
-The option to prevent embedding your app in an IFrame has been replaced with the more flexible option to set HTTP Headers. See section below.
+The option to prevent embedding your app in an IFrame has been replaced with the more flexible option to set HTTP Headers. For more information, see the [Adding HTTP Headers](#adding-http-header) section below.
 
 {{% /alert %}}
 
-## 12 Adding HTTP Headers
+## 12 Adding HTTP Headers {#adding-http-header}
 
-HTTP headers can add an additional layer of security for web apps and help you detect certain attacks.  
+HTTP headers can add an additional layer of security and help you detect certain attacks if any.  
 
 For information on how to add HTTP headers, see the [HTTP Headers](/developerportal/deploy/environments-details#http-headers) section in *Environment Details*.  
 

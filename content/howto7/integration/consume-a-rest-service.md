@@ -154,7 +154,13 @@ To fill in the CreateInput microflow, follow these steps:
 
 Congratulations! You can now start your app and get summaries from Wikipedia.
 
-## 8 Read More
+## 8 Example
+
+**How to consume REST natively with Mendix**
+
+{{% youtube waOlvSqdaP4 %}}
+
+## 9 Read More
 
 * [How to Consume a Complex Web Service](consume-a-complex-web-service)
 * [How to Consume a Simple Web Service](consume-a-simple-web-service)

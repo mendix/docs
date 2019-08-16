@@ -265,9 +265,8 @@ Below is an example of using an external dependency based on [Noty](https://gith
 	    ],
 	    // ...
 	}
-	```		
-		
-
+	```
+	
 4. To support hybrid mobile apps, add the script and CSS to *theme/components.json*: 
 
 	```json
@@ -406,9 +405,9 @@ function GetUserNameSampleRest(userID) {
 
 Explaining the Promise API code:
 
-* The URL refers to a sample API that returns a JSON object `{ id: string, name: string }`. Fetch is a browser API for retrieving data which returns a promise (see the [MDI Fetch API documentation](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API). The response is a promise that is converted into data with the `.json()` function. The name is accessed and returned. 
+* The URL refers to a sample API that returns a JSON object `{ id: string, name: string }`, and `fetch` is a browser API for retrieving data which returns a promise (see the [MDI Fetch API documentation](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) — the response is a promise that is converted into data with the `.json()` function (the name is accessed and returned)
 
-* As this is a part of a promise already, it does not need to call a `resolve` function or return a promise itself. This makes error handling on promises easier, as a single error function can be used to catch errors at all three steps: fetch, parse JSON, and accessing the data. For a more detailed explanation, see the [MDN promise documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+* As this is a part of a promise already, it does not need to call a `resolve` function or return a promise itself — this makes error handling on promises easier, as a single error function can be used to catch errors at all three steps: fetch, parse JSON, and accessing the data (for a more detailed explanation, see the [MDN promise documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise))
 
 * For more information on building a JavaScript action rest consume function, see [Write JavaScript Actions: Part 2 (Advanced)](write-javascript-github).
 

@@ -19,12 +19,12 @@ To enter the **Environment details** page, go to the [Developer Portal](http://h
 The view of the **General** tab depends on the Mendix Cloud version on which the app is hosted. In this tab, you can find the following information about your environment:
 
 *  **Status**
-	* White – the environment is stopped or was never deployed
-	* Green – the environment is working correctly
-	* Orange – the environment has warnings
-	* Red – the environment is not working correctly
+   * White – the environment is stopped or was never deployed
+   * Green – the environment is working correctly
+   * Orange – the environment has warnings
+   * Red – the environment is not working correctly
 
-	![](attachments/environments-details/environment-status.png)   
+        ![](attachments/environments-details/environment-status.png)   
 
 * **Running since** date – the date on which the app was started
 * **Name** – the type of environment (Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy#flexible-environments)): see [Naming of Environments](#naming) for more information
@@ -91,8 +91,8 @@ If your app is hosted in Mendix Cloud v4, you will see a section named **Instanc
 In **Scaling**, there are two sliders that you can control:
 
 * Use the **Instances** slider to increase or decrease the amount from one to four instances by sliding the slider
-	* The instances are meant for improved resiliency and increased processing power
-	* The minimum amount of RAM memory per instances is 1GB; you can spread the RAM memory among four instances if you have more than 1GB of RAM memory
+   * The instances are meant for improved resiliency and increased processing power
+   * The minimum amount of RAM memory per instances is 1GB; you can spread the RAM memory among four instances if you have more than 1GB of RAM memory
 * Use the **Memory per instance** slider to increase or decrease the memory amount per instance by sliding the slider
 
 The **Total Allocated Memory** is a process circle that shows how much memory is currently used for scaling.
@@ -128,9 +128,9 @@ The license overview contains the following information:
 * **Expiration date**
 * **Runtime mode** (Production, Acceptance, Test)
 * **Limitations**
-	* **Limitation type** (see below for details)
-	* **Amount type**
-	* **Number of allowed users**
+    * **Limitation type** (see below for details)
+    * **Amount type**
+    * **Number of allowed users**
 
 The limitation types are the following:
 
@@ -221,15 +221,15 @@ There are three types of value for these headers:
 
 *  Choose a value from a dropdown
 
-	![](attachments/environments-details/http-header-dropdown.png)
+    ![](attachments/environments-details/http-header-dropdown.png)
 
 *  Choose a value from a dropdown and specify a URL
 
-	![](attachments/environments-details/http-header-url.png)
+    ![](attachments/environments-details/http-header-url.png)
 
 *  Enter the required values as a string
 
-	![](attachments/environments-details/http-header-string.png)
+    ![](attachments/environments-details/http-header-string.png)
 
 The changes to the headers will be implemented when the app is redeployed.
 

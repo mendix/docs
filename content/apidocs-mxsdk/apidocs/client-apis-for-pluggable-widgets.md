@@ -120,7 +120,7 @@ A component will receive `EditableValue<X>` where `X` depends on the configured 
 
 The flag `readOnly` indicates whether a value can actually be edited. It will be false, for example, when a widget is placed inside a Data view that is not [editable](/refguide/data-view#5-1-editable), or when a selected attribute is not editable due to [access rules](/refguide/access-rules). The `readOnly` flag is always false when a `status` is not `ValueStatus.Available`. Any attempt to edit a value set to read-only will have no affect and incur a debug-level warning message.
 
-The value can be read from the `value` field and modified using `setValue` function. Note that `setValue` returns nothing and does not guarantee that the value is changed synchronously. But when it does synchronize, a component receives a new prop reflecting the change.
+The value can be read from the `value` field and modified using `setValue` function. Note that `setValue` returns nothing and does not guarantee that the value is changed synchronously. But when a change is propagated, a component receives a new prop reflecting the change.
 
 When setting a value, a new value might not satisfy certain validation rules — for example a value might be bigger that the underlying attribute allows. In this case, your change will affect only `value` and `displayValue` received through a prop. Your change will not be propagated to an object’s attribute and will not be visible outside of your component. The component will also receive a validation error text through the `validation` field of `EditableValue`.
 

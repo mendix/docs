@@ -43,7 +43,7 @@ The app preview is your personal preview of the app. Hence, only users logged in
 
 ## 3 Publishing Your App {#publishing-your-app}
 
-When you publish your app, you deploy it to a cloud environment. A cloud environment is a location in the cloud that can host your app, and deployment is a process to put the latest version of your app in that location. For more information for app administrators, see [Environments](/developerportal/deploy/environments) in *Developer Portal Guide*.
+When you publish your app, you deploy it to a cloud environment. A cloud environment is a location in the cloud that can host your app, and deployment is a process to put the latest version of your app in that location. For more technical information, see [Environments](/developerportal/deploy/environments) in *Developer Portal Guide*.
 
 By default all apps created in Mendix Studio are Free Apps. A Free App is a complete deployment environment in the Mendix Cloud with some limitations. You can upgrade your Free App to a licensed app. The main differences between a Free App and a licensed app are described in the table below: 
 
@@ -145,15 +145,15 @@ However, Studio may fail to get your environment status. This can happen when th
 
 Studio can fail to get your environment status in the following cases:
 
-*  Your app was a Free App, was unlinked from the Free App environment by an app administrator, but was not upgraded to the licensed app (for more information on Free Apps and licensed apps, see section [2 Publishing Your App](#publishing-your-app)) 
+*  Your app was a Free App, was unlinked from the Free App environment, but was not upgraded to the licensed app (for more information on Free Apps and licensed apps, see section [2 Publishing Your App](#publishing-your-app)) 
 
 	![Failing to Get App Environment Status](attachments/publishing-app/unlinked-app.png)
 
-*  Your app is a licensed app, and no environment has been set for the Studio deployment by an app administrator
+*  Your app is a licensed app, and no environment has been set for the Studio deployment by a [Technical Contact](developerportal/company-app-roles/technical-contact):
 
 	![Deploy Failed, No Environment for Studio](attachments/publishing-app/no-environment.png)
 
-For technical information for app administrators, see [Studio Deployment Settings](/developerportal/deploy/studio-deployment-settings) in *Developer Portal Guide*. 
+For more technical information, see [Studio Deployment Settings](/developerportal/deploy/studio-deployment-settings) in *Developer Portal Guide*. 
 
 ## 7 Read More
 

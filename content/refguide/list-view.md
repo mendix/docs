@@ -100,7 +100,7 @@ Now if there is a row of type Bicycle the template specific for bicycles will be
 
 {{% /alert %}}
 
-### 2.5 Visibility Section
+### 2.5 Visibility Section {#visibility}
 
 {{% snippet file="refguide/visibility-section-link.md" %}}
 

@@ -149,7 +149,7 @@ Studio can fail to get your environment status in the following cases:
 
 	![Failing to Get App Environment Status](attachments/publishing-app/unlinked-app.png)
 
-*  Your app is a licensed app, and no environment has been set for the Studio deployment by a [Technical Contact](developerportal/company-app-roles/technical-contact):
+*  Your app is a licensed app, and no environment has been set for the Studio deployment by a [Technical Contact](/developerportal/company-app-roles/technical-contact):
 
 	![Deploy Failed, No Environment for Studio](attachments/publishing-app/no-environment.png)
 

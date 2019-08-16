@@ -8,13 +8,9 @@ tags: ["studio pro"]
 
 The text widget shows text which can optionally contain parameters. Every parameter is replaced with the value of the attribute it refers to. The text widget is the recommended way to show text to the user.
 
-{{% alert type="info" %}}
-
 ![](attachments/pages/text.png)
 
 Text widget placed in a data view, showing a greeting message to the user.
-
-{{% /alert %}}
 
 If you start typing in any empty container Studio Pro will automatically generate a text widget to display your text.
 

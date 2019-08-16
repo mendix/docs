@@ -40,11 +40,17 @@ Calypso is a tool which makes it easier for you to customize your Mendix apps' s
 
 With your Mendix app and Calypso running, complete the steps below to see how Calypso works:
 
-1. Add a button widget to your app's home page. Run your app again, then click **View** to notice the button's defaul styling:
+1. Add a button widget to your app's **Home_Responsive** page: 
 
-BLUE BUTTON PIC HERE
+	![drop a button](attachments/calypso/drop-a-button.png)
+	
+2. Run your app again, then click **View** > **Responsive Browser** to notice the button's default styling:
+	
+	![blue text button](attachments/calypso/blue-button.png)
 
 2. Click **Project** > **Show Project Directory in Explorer**.
 3. Open  *theme\styles\web\sass\app\_custom-variables.scss* .
 4. Change `$brand-primary: #0595DB;` to `$brand-primary: *brown*`. 
 5. Look at your app in your browser again. The button's text has switched from blue to brown.
+
+	![brown text button](attachments/calypso/brown-button.png)

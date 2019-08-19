@@ -134,7 +134,7 @@ developerportal:
     - "App Store"
     - "Mendix Support"
 studio:
-  space: "Studio Guide"
+  space: "Studio 8 Guide"
   priority: false
   menu_categories:
     - "General Info"

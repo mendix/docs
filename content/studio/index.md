@@ -1,9 +1,15 @@
 ---
-title: "Studio Guide"
+title: "Studio 8 Guide"
 tags: ["studio", "web modeler"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 frontpage_featured: true
 ---
+
+{{% alert type="warning" %}}
+
+The **Studio 8 Guide** describes Mendix Studio functionality that correlates to Mendix 8 version. It describes the latest Studio functionality and features.
+
+{{% /alert %}}
 
 ## 1 Introduction 
 

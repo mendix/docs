@@ -5,7 +5,7 @@ tags: ["studio", "web modeler"]
 frontpage_featured: false
 ---
 
-{{% alert type="info" %}}
+{{% alert type="warning" %}}
 
 The **Studio 7 Guide** describes Mendix Studio functionality that correlates to Mendix 7.23.7 version. For details on the latest functionality and features, see the [Studio 8 Guide](/studio). 
 

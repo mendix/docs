@@ -32,7 +32,7 @@ The *Studio version* is updated continuously (even daily), which will provide yo
 
 {{% alert type="info" %}}
 
-Automatic upgrade will not be offered in Studio when moving from Mendix 7 to Mendix 8, as Mendix 8 contains changes that cannot be upgraded automatically using the regular Studio upgrade mechanism. For more information, see the [Upgrading to Mendix Version 8](upgrade-to-8) section below.
+Automatic upgrade will not be offered in Studio when moving from Mendix 7 to Mendix 8, as Mendix 8 contains changes that cannot be upgraded automatically using the regular Studio upgrade mechanism. For more information, see the [Upgrading to Mendix Version 8](#upgrade-to-8) section below.
 
 {{% /alert %}}
 

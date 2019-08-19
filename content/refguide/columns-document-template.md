@@ -45,12 +45,7 @@ If you choose 'Custom' as the date format (see above) the custom date format det
 [http://download.oracle.com/javase/6/docs/api/java/text/SimpleDateFormat.html](http://download.oracle.com/javase/6/docs/api/java/text/SimpleDateFormat.html).
 
 {{% alert type="info" %}}
-
-The custom date format
-`EEE, MMM d, yy`
-results in the following text
-`Wed, Jul 4, 01`
-
+The custom date format `EEE, MMM d, yy` results in the following text: `Wed, Jul 4, 01`.
 {{% /alert %}}
 
 ## 2 Data Source Properties

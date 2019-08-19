@@ -19,7 +19,7 @@ The Native Builder takes your Mendix project containing a native profile and pac
 
 ## 3 About the Native Builder
 
-Native Builder uses MxBuild, GitHub, and App Center to build your apps. The tool automates the configuration of these processes to streamline your app building experience. When run, the Native Builder packages your apps by doing the following:
+The Native Builder uses MxBuild, GitHub, and App Center to build your apps. The tool automates the configuration of these processes to streamline your app building experience. So long as your app names are unique, you can even create multiple apps. When run, the Native Builder packages your apps by doing the following:
 
 1. Deploys your Mendix project locally.
 2. Creates a new repository using the Mendix native template repository on GitHub named after the app name provided.
@@ -68,9 +68,9 @@ Command-line arguments provide information to the Native Builder, such as where 
 
 |   Parameter   |   Description   |   Example   |
 | ---- | ---- | ---- |
-|   `--java-home`   |   Absolute path to the directory where Java executable is located   |   `"C:\Program Files\Java\jdk-11.0.1"`   |
-|   `--project-path`   |   Absolute path to the Mendix project file   | `"C:\MyApp\MyApp.mpr"`     |
-|   `--mxbuild-path`   |   Absolute path to MxBuild executable   |   `"C:\Program Files\Mendix\8.0.0\modeler\mxbuild.exe"`   |
+|   `--java-home`   |   Absolute path to the directory where Java executable is located   |   `C:\Program Files\Java\jdk-11.0.1`   |
+|   `--project-path`   |   Absolute path to the Mendix project file   | `C:\MyApp\MyApp.mpr`     |
+|   `--mxbuild-path`   |   Absolute path to MxBuild executable   |   `C:\Program Files\Mendix\8.0.0\modeler\mxbuild.exe`   |
 |   `--runtime-url`   |   URL of the Mendix runtime   |   `https://myapp.mendixcloud.com`   |
 |   `--github-access-token`   |   GitHub access token   |   `c0e1dasf1e102c55ded223dbdebdbe59asf95224`   |
 |   `--appcenter-api-token`   |   App Center API token   |   `3e18asdfb43f4fe6c85afsd0bf60dde72f134`   |
@@ -78,9 +78,9 @@ Command-line arguments provide information to the Native Builder, such as where 
 |   `--app-version`   |   Version of the app   |  `1.2.3`   |
 |   `--build-number`   |   Build number, an arbitrary unique integer value   |   `1`   |
 |   `--app-identifier`   |   Unique app identifier   |   `com.mendix.MyAwesomeApp`   |
-|   `--app-icon-path`   |   (Optional) Absolute path to the app icon   |   `"C:\MyAppIcon.png"`   |
-|   `--app-round-icon-path`   |   (Optional) Absolute path to the app round icon. This is specific to android    |   `"C:\MyAppRoundIcon.png"`   |
-|   `--app-splash-screen-path`   |   (Optional) Absolute path to the app splash screen image   |   `"C:\MyAppSplash.png"`   |
+|   `--app-icon-path`   |   (Optional) Absolute path to the app icon   |   `C:\MyAppIcon.png`   |
+|   `--app-round-icon-path`   |   (Optional) Absolute path to the app round icon, specific to android    |   `C:\MyAppRoundIcon.png`   |
+|   `--app-splash-screen-path`   |   (Optional) Absolute path to the app splash screen image   |   `C:\MyAppSplash.png`   |
 |   `--appcenter-organization`   |   (Optional) Organization name used in App Center   |   `my-company`   |
 |   `--output-path`   |	  (Optional) Absolute path to the location where artifacts should be outputed   |   `C:\Downloads`   |
 
@@ -198,37 +198,45 @@ If you have custom native dependencies or code, you can include them in your app
 
 In App Center you can configure your builds at the branch level. If no configuration is available for branch **master**, Native Builder will create a default configuration. If a configuration is already present, it will not be modified by the tool. When a branch for a build is initialized, the configuration of **master** is copied over. Consecutive builds will not alter this branch's configuration. This is to avoid overriding your custom configuration.
 
-### 8.4 Connecting to Local Running Instance of Studio Pro
+### 8.4 Connecting to a Local Running Instance of Studio Pro
 
-If you have added custom dependencies and still need to test against a local running app in studio pro, you would need to make some local changes to your template.
+If you have added custom dependencies and still need to test against a local running app in Studio Pro, you need to make some local changes to your template.
+
+#### 8.4.1 iOS
 
 For an iOS app, do the following:
 
-1. Clone your repository locally from Github
-2. Open the `ios` directory with **Xcode**
-3. Where `LOCAL_IP_ADDRESS` should be replaced by your local IP address. An example could be `10.0.0.2`.
-4. Locate the `AppDelegate.swift` file
-5. Go to line **13** and replace this section of the code;
+1. Clone your repository locally from GitHub.
+2. Open the `ios` directory using **Xcode**.
+3. Replace any instance of `LOCAL_IP_ADDRESS` with your local IP address (*10.0.0.2* for example).
+4. Open **AppDelegate.swift**.
+5. Replace this section of the code (on line **13**):
+
    ```swift 
    let bundleUrl = Bundle.main.url(forResource: "index.ios", withExtension: "bundle", subdirectory: "Bundle")
    ```
-   with,
+   
+   with the following code:
+   
    ```swift 
    let bundleUrl = AppUrl.forBundle(url: "http://LOCAL_IP_ADDRESS:8080", remoteDebuggingPackagerPort: 8083, isDebuggingRemotely: true)
    ```
-6. Locate the `Info.plist` file and replace the value of `Runtime url` with `http://LOCAL_IP_ADDRESS:8080`.
-7. Run the app by clicking the **Play** button on the top left.
+   
+6. Locate the **Info.plist** file and replace the value of `Runtime url` with `http://LOCAL_IP_ADDRESS:8080`.
+7. Run the app by clicking the **Play** button.
+
+#### 8.4.2 Android
 
 For an Android app, do the following:
 
-1. Clone your repository locally from Github
-2. Open the `android` directory with **Android Studio**
-3. Where `LOCAL_IP_ADDRESS` should be replaced by your local IP address. An example could be `10.0.0.2`.
-4. Locate the `MainApplication.java` file in **app/src/main/java/com/mendix/nativetemplate**
-5. Go to line **35** and replace `false` with `true`
-6. Then, Locate the `runtime_url` file in **app/src/main/res/raw**
-7. Replace the contents with `http://LOCAL_IP_ADDRESS:8080`
-8.  Run the app by clicking the **Play** button on the top right.
+1. Clone your repository locally from GitHub.
+2. Open the `android` directory using Android Studio.
+3. Replace any instance of `LOCAL_IP_ADDRESS` with your local IP address (*10.0.0.2* for example).
+4. Open **app/src/main/java/com/mendix/nativetemplate/MainApplication.java**.
+5. On line **35** replace `false` with `true`.
+6. Open **app/src/main/res/raw/runtime_url**.
+7. Replace the file's contents with `http://LOCAL_IP_ADDRESS:8080`.
+8.  Run the app by clicking the **Play** button.
 
 ## 9 When to Sync Your Native Template {#sync-your-repository}
 

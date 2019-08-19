@@ -4,23 +4,21 @@ parent: "project-explorer"
 tags: ["studio pro", "security"]
 ---
 
-## Introduction
+## 1 Introduction
 
 Security in Mendix has two sides: you want different people to see different parts of your application and you want to prevent unauthorized access. Both of these can be managed from Studio Pro. Access to forms, data and microflows can be limited to authorized users.
 
 {{% alert type="info" %}}
-
-Security in Mendix does not include scanning files that end-users upload or download from your application for viruses and malware. For more information, see the [Scanning for Malicious Content](/howto/security#scanning-for-malicious-content) section in *How to Implement Best Practices for App Security*. 
-
+Security in Mendix does not include scanning files that end-users upload or download from your application for viruses and malware. For more information, see the [Scanning Uploaded Files for Malicious Content](/howto/best-practices-security#scanning-for-malicious-content) section in *How to Implement Best Practices for App Security*. 
 {{% /alert %}}
 
-## Security Levels
+## 2 Security Levels
 
 If you want full security, you need to explicitly give access to forms, entities and microflows before someone can access them. By default, no one can access anything. To make it easier to create prototypes and demos there are security levels that require less security settings than are needed for a production system.
 
 See [Project Security](project-security) for a description of the security levels.
 
-## Project versus Module Security
+## 3 Project vs. Module Security
 
 At the level of a project some global settings can be specified: the security level, the administrator account and whether or not to allow anonymous access.
 
@@ -30,7 +28,7 @@ Most of the security settings take place at the module level. This has the advan
 
 See [Module Security](module-security).
 
-## User Roles versus Module Roles
+## 4 User Roles vs. Module Roles
 
 An end user in a Mendix application has one or more user roles. These roles can be assigned from within the client when creating or editing a user. User roles are at the level of a project and can be edited in [Project Security](project-security).
 
@@ -54,7 +52,7 @@ Let us say you have a project with two modules: System and ProjectManagement (PM
 
 {{% /alert %}}
 
-## Entity Access versus Page Access
+## 5 Entity Access vs. Page Access
 
 Per entity you can specify who can read or write what members (attributes and associations) under what circumstances. Using XPath constraints you can express powerful security behavior; e.g. "an employee can only see orders created by the department he is a part of".
 

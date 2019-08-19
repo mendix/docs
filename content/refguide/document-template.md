@@ -12,13 +12,13 @@ This document describes the properties of a document template. If you want to se
 
 ### 2.1 Page Format
 
-The page format determines the size of the page you are targeting with the document template. Examples are A4 (portrait) and A5 (landscape). You can also choose a Custom page format and use the properties 'Page width' and 'Page height' below.
+The page format determines the size of the page you are targeting with the document template. Examples are A4 (portrait) and A5 (landscape). You can also choose a Custom page format and use the properties [Page width](#width) and [Page height](#height) below.
 
-### 2.2 Page Width (Inch)
+### 2.2 Page Width (Inch) {#width}
 
 The width of the page you are targeting with the document template. Automatically set by choosing a page format. If you change it, the page format will be set to 'Custom'.
 
-### 2.3 Page Height (Inch)
+### 2.3 Page Height (Inch) {#height}
 
 The height of the page you are targeting with the document template. Automatically set by choosing a page format. If you change it, the page format will be set to 'Custom'.
 
@@ -35,7 +35,7 @@ The margins specify the distance between the border of the paper and the content
 Indicates whether the header and/or footer are also shown on the first page.
 
 {{% alert type="warning" %}}
-Note that you must use a page break widget to indicate you're no longer on the first page. This cannot be calculated while generating content.
+You must use a page break widget to indicate you're no longer on the first page. This cannot be calculated while generating content.
 {{% /alert %}}
 
 _Default value_: True.
@@ -50,7 +50,7 @@ Indicates whether the page has a footer that is displayed on each page (except o
 
 ## 3 Style
 
-See [Style](style).
+For details, see [Style](style).
 
 ## 4 Common Properties
 

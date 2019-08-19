@@ -144,25 +144,15 @@ There are several scenarios possible for protecting your outgoing connections us
 
 You can add individual certificates in your project’s settings in . Test, acceptance, and production environments require their certificates to be uploaded to the Mendix Cloud (for more information, see [Certificates](/developerportal/deploy/certificates)).
 
-## 11 Preventing Your App from Being Embedded in an IFrame
+## 11 Adding HTTP Headers {#adding-http-header}
 
-Applications that can be embedded within an Iframe can be misused by attackers. By using an overlay, it could trick users into clicking buttons and make them perform actions within the application on their behalf without knowing it. This approach is called [clickjacking](https://www.owasp.org/index.php/Clickjacking).
+HTTP headers can add an additional layer of security and help you detect certain attacks. For information on how to add HTTP headers, see the [HTTP Headers](/developerportal/deploy/environments-details#http-headers) section in *Environment Details*.  
 
-By sending a header to the user’s browser, it can block the use of the Mendix application within an Iframe, and avoid this type of attack. This header can easily be configured (and is enabled by default) within the Mendix Developer Portal at your node’s environment details via **HTTP Headers**.
+An example of an attack is when an application is embedded in an Iframe. Applications that can be embedded within an Iframe can be misused by attackers. By using an overlay, it could trick users into clicking buttons and make them perform actions within the application on their behalf without knowing it. This approach is called [clickjacking](https://www.owasp.org/index.php/Clickjacking).
 
-{{% alert type="info" %}}
+By sending a header to the user’s browser, it can block the use of the Mendix application within an Iframe, and avoid this type of attack. This header can easily be configured within the Mendix Developer Portal at your node’s environment details via **HTTP Headers**.
 
-The **Prevent embedding your app in an Iframe option** has been replaced with the more flexible option to set HTTP Headers. For more information, see the [Adding HTTP Headers](#adding-http-header) section below.
-
-{{% /alert %}}
-
-## 12 Adding HTTP Headers {#adding-http-header}
-
-HTTP headers can add an additional layer of security and help you detect certain attacks if any.  
-
-For information on how to add HTTP headers, see the [HTTP Headers](/developerportal/deploy/environments-details#http-headers) section in *Environment Details*.  
-
-## 13 Maintaining a High Level of Project Hygiene
+## 12 Maintaining a High Level of Project Hygiene
 
 As an application grows in functionality, it also increases the chance of containing logic that could be exploitable for an attacker. Also, over time, vulnerabilities within logic can be discovered. Keeping your project hygiene at a high level will reduce the chances of a vulnerable application.
 
@@ -174,7 +164,7 @@ To keep your project hygiene at a good level, perform the following steps:
 
 A good source of known vulnerabilities is the [Common Vulnerabilities and Exposures website](https://cve.mitre.org/).
 
-## 14 Configuring User Roles & Access
+## 13 Configuring User Roles & Access
 
 Which users and roles are defined within an application is different per app and project. However, there are some key guidelines to keep in mind when validating the user security:
 
@@ -183,7 +173,7 @@ Which users and roles are defined within an application is different per app and
 * Roles managing other user roles should be as strict as possible (configured via **User management** within the user role options)
 * The role of the app project’s administrator user (default **MxAdmin**) should only be able to create the actual administrative accounts (or configure SSO)
 
-## 15 Scanning Uploaded Files for Malicious Content {#scanning-for-malicious-content}
+## 14 Scanning Uploaded Files for Malicious Content {#scanning-for-malicious-content}
 
 Security in Mendix does not include scanning files that end-users upload or download from your application for viruses and malware. 
 

@@ -33,35 +33,31 @@ In this section, you will learn how to install the ChartJS widget.
 
 1.  Using the in-Modeler App Store browser, find the **ChartJS** widget:
 
-    ![](attachments/19202962/19398991.png)
-    
+	![](attachments/19202962/19398991.png)
+  
 2.  Hit the download button to import the collection of widgets into your project.
 
 ### 3.2 Setting Up the Domain Model
 
-In order to leverage the ChartJS classes in Mendix in a predictable way, the widget expects a specific data model structure.  This is defined by entities and attributes in the domain model.  To get the widget to work properly, the data structure must match the widget expectations exactly.   We also need to create a data entry entity to house our data for the purpose of this exercise.
+In order to leverage the ChartJS classes in Mendix in a predictable way, the widget expects a specific data model structure.  This is defined by entities and attributes in the domain model.  To get the widget to work properly, the data structure must match the widget expectations exactly.  We also need to create a data entry entity to house our data for the purpose of this exercise.
 
 {{% alert type="warning" %}}
-
-TIP: Download the Github test project
-
-To see a working domain model already configured in an application, you can go to the GitHub repository [here](https://github.com/mendix/ChartJS), download the zip package.
-
+TIP: To see a working domain model already configured in an application, you can go to the GitHub repository [here](https://github.com/mendix/ChartJS), download the zip package.
 {{% /alert %}}
 
 1.  Make a new module named **Charting**.
 2.  Configure your domain model to contain a **Chart**, **Dataset**, and **Datapoint** entities:
 
-    ![](attachments/19202962/19398992.png)
-    
+	![](attachments/19202962/19398992.png)
+  
 3.  Create the entity **Values** with attributes **X**, **Y**, and **Series**:
 
-    ![](attachments/19202962/19398994.png)
-    
+	![](attachments/19202962/19398994.png)
+  
 4.  For the Series attribute, create a new enumeration named **Series** that contains the values **Series 1** and **Series 2**.
 5.  Create a non-persistable **ChartWrapper** entity with no attributes:
 
-    ![](attachments/19202962/19398997.png)
+	![](attachments/19202962/19398997.png)
 
 ### 3.3 Creating the Data Entry Mechanism
 
@@ -69,13 +65,13 @@ To make this sample project actually generate charts, the first thing to do is c
 
 1.  Create a page that will allow for creation of data. 
 2.  Add this page to user navigation.
-3.  Use the **Generate page** feature to automatically create the data entry page for a data point.
+3.  Use the **Generate page** feature to automatically create the data entry page.
 
     ![](attachments/19202962/19398995.png)
 
 ### 3.4 Adding a ChartJS Widget to a New Page
 
-1.  Create a page called ShowChart and add it to the user navigation.
+1.  Create a page called *ShowChart* and add it to the user navigation.
 2.  Add a data view to this page that contains a ChartWrapper entity and has a microflow as the data source.
 3.  Create a new microflow named **NewChartWrapper** to populate the data view.    
 
@@ -128,7 +124,7 @@ Now that we have added our widget to the page, we need to feed it some data.  To
     ![](attachments/19202962/19399006.png)
     
 4. Create a new microflow in your module called **SUB_CreateSeries**.  This will be used as a sub-microflow to retrieve all the data associated with our new dataset.
-5. Create input parameters for **Series**, **Chart**, and **Dataset**.
+5. Create input parameters for **Series**, **Chart**, and **NewDataset**.
 6. Add a loop.
 7.  We iterate through that list and create a **NewDatapoint**, setting X, Y, and X sorting using the corresponding attributes for our **Value** entity:
 
@@ -138,7 +134,7 @@ Now that we have added our widget to the page, we need to feed it some data.  To
 
     ![](attachments/19202962/19399008.png)
     
-	For the change object in the loop, set the **Type**  to **Add** for the  Datapoint member and the **Value** to `$NewDatapoint` .  Do the same for the other change object, but set the Value to `$NewDataset`.
+	For the change object in the loop, set the **Type**  to **Add** for the  Datapoint member and the **Value** to `$NewDatapoint` .  Do the same for the other change object, but set the **Value** to `$NewDataset`.
 
     ![](attachments/19202962/19399011.png)
 

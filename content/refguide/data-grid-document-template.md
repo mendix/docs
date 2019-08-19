@@ -10,7 +10,8 @@ The data grid shows a list of objects in a grid. For example, a data grid can sh
 
 {{% alert type="info" %}}
 
-![](attachments/819203/918138.png)](data-grid-document-template)
+![](attachments/819203/918138.png)
+
 A data grid showing a list of orders with a description and the referenced customer name.
 
 {{% /alert %}}
@@ -32,9 +33,7 @@ See [Sort Bar](sort-bar).
 The column weights are percentages separated by semi-colons that determine the widths of the columns. The weights have to add up to 100\. An alternative way of changing the widths of columns is by dragging the separating line between columns.
 
 {{% alert type="info" %}}
-
 In the screenshot above the column weights are 50;25;25.
-
 {{% /alert %}}
 
 ### 3.2 Cell Spacing
@@ -47,7 +46,7 @@ Cell padding specifies the space between the content of the cell and the cell wa
 
 ### 3.4 Enable Striping
 
-With striping enabled you can set the properties of even and uneven datagrid rows individually. This way you can create a striping effect by varying color for the 2 different row styles.
+With striping enabled you can set the properties of even and uneven data grid rows individually. This way you can create a striping effect by varying color for the 2 different row styles.
 
 ### 3.5 Style
 
@@ -73,4 +72,4 @@ The entity (path) property specifies which entity instances will be shown in the
 
 ### 5.2 Microflow
 
-When a nested data grid is connected to a template, a microflow is needed to retrieve the data. The input parameter of these microflows is always the object of the containing data view and the output is a list of objects of the type of the nested datagrid.
+When a nested data grid is connected to a template, a microflow is needed to retrieve the data. The input parameter of these microflows is always the object of the containing data view and the output is a list of objects of the type of the nested data grid.

@@ -16,7 +16,7 @@ Before we start, we recommend you first read the following two pages:
 * [Document Templates](document-templates)
 * [Generate Documents](generate-document)
 
-## 2 Know Your Document
+## 2 Knowing Your Document
 
 Before you start producing a document with Mendix, it is advisable to make a draft version of the document you want to produce. You can sketch something on a piece of paper or ask your customer to provide you with an example. Either way, it is good to have in mind what you want to achieve.
 
@@ -24,13 +24,13 @@ Using your desired document, you can choose a strategy for producing it. Mendix 
 
 For our example, we’ve concluded that the Mendix functionality does suffice. So, let’s have a look at how this works with an example.
 
-## 3 The Business Case
+## 3 Business Case
 
 In this application, customers can purchase products. They will do so by creating orders and selecting the products they want to purchase. To be able to present the customer with an overview of their order, a PDF will be created and sent to the customer as an attachment to their confirmation email. The order should show the customer details, the logo of the company, the products with their price, and the total value of the order.
 
 ## 4 Generating a Document with Out-of-the-Box Mendix Functionality
 
-### 4.1 The Domain Model
+### 4.1 Domain Model
 
 The domain model for this application looks like this:
 
@@ -42,7 +42,7 @@ The **Customer** holds the address information and the preferred communication l
 Do not use the **System.FileDocument** entity directly, because you have no control over the security of that part from the **System** module.
 {{% /alert %}}
 
-### 4.2 The Microflow
+### 4.2 Microflow
 
 Now the domain model has been set up, you are ready to create the microflow for your new generate document function.
 
@@ -103,7 +103,7 @@ Make sure to set the correct entity access for entities and their attributes use
 
 {{% /alert %}}
 
-### 4.3 The Document Template
+### 4.3 Document Template
 
 In this example, the following document template is available:
 
@@ -136,7 +136,7 @@ This is the resulting document:
 
 In this example, you retrieved the **OrderLine** information via the **Entity (path)** data source. An alternative way of doing this would be to use a microflow that returns objects for the list presentation. If you do this, make sure to add the correct user role(s) to the microflows that are being used as data source microflows within the document template.
 
-## 5 Alternative Ways of Creating Documents<a name="Alternative"></a>
+## 5 Alternative Ways of Creating Documents {#Alternative}
 
 In addition to out-of-the-box Mendix functions, there are two other ways of generating documents with your Mendix app.
 

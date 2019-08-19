@@ -198,6 +198,38 @@ If you have custom native dependencies or code, you can include them in your app
 
 In App Center you can configure your builds at the branch level. If no configuration is available for branch **master**, Native Builder will create a default configuration. If a configuration is already present, it will not be modified by the tool. When a branch for a build is initialized, the configuration of **master** is copied over. Consecutive builds will not alter this branch's configuration. This is to avoid overriding your custom configuration.
 
+### 8.4 Connecting to Local Running Instance of Studio Pro
+
+If you have added custom dependencies and still need to test against a local running app in studio pro, you would need to make some local changes to your template.
+
+For an iOS app, do the following:
+
+1. Clone your repository locally from Github
+2. Open the `ios` directory with **Xcode**
+3. Where `LOCAL_IP_ADDRESS` should be replaced by your local IP address. An example could be `10.0.0.2`.
+4. Locate the `AppDelegate.swift` file
+5. Go to line **13** and replace this section of the code;
+   ```swift 
+   let bundleUrl = Bundle.main.url(forResource: "index.ios", withExtension: "bundle", subdirectory: "Bundle")
+   ```
+   with,
+   ```swift 
+   let bundleUrl = AppUrl.forBundle(url: "http://LOCAL_IP_ADDRESS:8080", remoteDebuggingPackagerPort: 8083, isDebuggingRemotely: true)
+   ```
+6. Locate the `Info.plist` file and replace the value of `Runtime url` with `http://LOCAL_IP_ADDRESS:8080`.
+7. Run the app by clicking the **Play** button on the top left.
+
+For an Android app, do the following:
+
+1. Clone your repository locally from Github
+2. Open the `android` directory with **Android Studio**
+3. Where `LOCAL_IP_ADDRESS` should be replaced by your local IP address. An example could be `10.0.0.2`.
+4. Locate the `MainApplication.java` file in **app/src/main/java/com/mendix/nativetemplate**
+5. Go to line **35** and replace `false` with `true`
+6. Then, Locate the `runtime_url` file in **app/src/main/res/raw**
+7. Replace the contents with `http://LOCAL_IP_ADDRESS:8080`
+8.  Run the app by clicking the **Play** button on the top right.
+
 ## 9 When to Sync Your Native Template {#sync-your-repository}
 
 When Mendix updates the Native template, Native Builder will not automatically sync your GitHub repository. You will have to manually sync it yourself. The Native Builder avoids automatic synchronization because of possible merge conflicts with customized apps.

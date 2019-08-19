@@ -8,7 +8,7 @@
 
 Common structure of property definition:
 
-```
+```xml
     <property key="propertyKey" type="propertyType">
         <caption>My Property</caption>
         <description>This is my property</description>
@@ -36,14 +36,9 @@ This defines a property's type. A `type` must be one of the following: [ todo] M
 
 ## 3 XML Elements
 
-`**<caption>**` [required]
+`**<caption>**` [required] — This defines a user-friendly name of a property visible to modeling person.
 
-    Defines a user-friendly name of a property visible to modeling person.
-
-`**<description>**` [required]
-
-    Description that shows a purpose of the property to a modeling person.
-
+`**<description>**` [required] — This is a description that shows a purpose of the property to a modeling person.
 
 ## 4 Static Properties
 
@@ -68,7 +63,7 @@ String is represented as an simple text input in Studio Pro. It is passed as `st
 
 For Single line [todo: single line what?] the Studio Pro UI XML is as follows:
 
-```
+```xml
     <property key="myString" type="string">
         <caption>My string</caption>
         <description>My string setting</description>
@@ -81,7 +76,7 @@ In Studio Pro, a single line string widget appears this way:
 
 For Multiline (todo: multiline what?)] the Studio Pro UI XML is as follows:
 
-```
+```xml
     <property key="myStringMultiline" type="string" multiline="true">
         <caption>My string multiline</caption>
         <description>My string multiline setting</description>
@@ -105,12 +100,11 @@ Boolean is represented as a Yes/No switch [todo: find this in product to find ac
 | `key`          | Yes      | String         | [+Property types available to Pluggable widgets: key](https://paper.dropbox.com/doc/Property-types-available-to-Pluggable-widgets-key-khDOHBDy9pr5leYZzqQoK#:h2=key) |
 | `defaultValue` | Yes      | Boolean        | Default value for the property. `true` or `false`                                                                                                                    |
 
-
 ### 4.2.2 Studio Pro UI
 
 For Boolean widgets, the Studio Pro UI XML is as follows:
 
-```
+```xml
     <property key="myBoolean" type="boolean" defaultValue="false">
         <caption>My boolean</caption>
         <description>My boolean setting</description>
@@ -137,7 +131,7 @@ Integer is represented as a number input in Studio Pro. It is passed as `number`
 
 For integer widgets, the Studio Pro UI XML is as follows:
 
-```
+```xml
     <property key="myInteger" type="integer" defaultValue="1000">
         <caption>My integer</caption>
         <description>My integer setting</description>
@@ -166,8 +160,8 @@ Enumeration allows user to select one out of multiple options defined in the XML
 
 One `<enumerationValues>` element must be declared with multiple `<enumerationValue>` elements inside in order to define possible enumeration values. `key` attribute is required for every enumeration value as well as a caption. Enter enumeration values like this:
 
-```
-    `<enumerationValue key="myEnumOption">My enum option caption</enumerationValue>`
+```xml
+`<enumerationValue key="myEnumOption">My enum option caption</enumerationValue>`
 ```
 
 The `key` of a selected element will be passed to the client component. `key` should not be changed since it is used to identify options used in a project.
@@ -176,7 +170,7 @@ The `key` of a selected element will be passed to the client component. `key` sh
 
 For enumeration value widgets, the Studio Pro UI XML is as follows:
 
-```
+```xml
     <property key="myEnumeration" type="enumeration" defaultValue="red">
         <caption>My enumeration</caption>
         <description>My enumeration setting</description>
@@ -208,7 +202,7 @@ Icon allows a user to configure an icon similar to one used by [Action button](h
 
 For icon components, the Studio Pro UI XML is as follows:
 
-```
+```xml
     <property key="cardIcon" type="icon" required="false">
         <caption>Icon</caption>
         <description>Card icon</description>
@@ -233,7 +227,7 @@ Image allows a user to configure a static image from an \[Image collection\](htt
 
 For image components, the Studio Pro UI XML is as follows:
 
-```
+```xml
     <property key="bgImage" type="image" required="false">
         <caption>Background Image</caption>
         <description>Image shown blurred in a background</description>
@@ -273,7 +267,7 @@ Allowed return types with corresponding types that a client components will rece
 
 For an expression property, the Studio Pro UI XML is as follows:
 
-```
+```xml
     <property key="progressBarColor" type="expression" defaultValue="'red'">
         <caption>Color</caption>
         <description>Progress bar CSS color</description>
@@ -362,7 +356,7 @@ The attribute property allows a widget to work directly with entities' attribute
 
 #### 6.6.2 XML Elements
 
-`<attributeTypes>` [required] — This element encapsulates `<attributeType>` elements which declare supported attribute types available while configuring the attribute property in Studio and Studio Pro.
+`<attributeTypes>` [required] — This element encapsulates `<attributeType>` elements which declare supported attribute types available while configuring the attribute property in the Studios.
 
 `<attributeType>` [required one or more] — this element defines the allowed attribute type in the `name` attribute.
 
@@ -370,18 +364,18 @@ These are the supported attribute types and their corresponding types that a cli
 
 * `AutoNumber` — `EditableValue<string>`
 * `Binary` — `EditableValue<string>`
-* `Boolean` - `EditableValue<boolean>`
-* `DateTime` - `EditableValue<Date>`
-* `Enum` - `EditableValue<string>`
-* `HashString` - `EditableValue<string>`
-* `Integer` - `EditableValue<BigJS>`
-* `Long` - `EditableValue<BigJS>`
-* `String` - `EditableValue<string>`
-* `Decimal` - `EditableValue<BigJS>`
+* `Boolean` — `EditableValue<boolean>`
+* `DateTime` — `EditableValue<Date>`
+* `Enum` — `EditableValue<string>`
+* `HashString` — `EditableValue<string>`
+* `Integer` — `EditableValue<BigJS>`
+* `Long` — `EditableValue<BigJS>`
+* `String` — `EditableValue<string>`
+* `Decimal` — `EditableValue<BigJS>`
 
-**Studio Pro UI**
+For *XML* elements, the Studio Pro UI *XML* is as follows:
 
-    XML
+```xml
     <property key="percentage" type="attribute" onChange="onPercentageChange">
         <caption>Percentage</caption>
         <description>Progress percentage</description>
@@ -395,15 +389,17 @@ These are the supported attribute types and their corresponding types that a cli
         <caption>On change</caption>
         <description/>
     </property>
-    Studio Pro
+```
+
+An *XML* element could appear in Studio Pro like this:
 
 ![](https://paper-attachments.dropbox.com/s_5009BD3439660B5188074DAF5510BE4D6691349683FF768E28F7376F479D54D2_1564567208591_image.png)
 
 ### 6.7 Object
 
-Object property allows to create an arbitrary list of properties.
+The object property allows to create an arbitrary list of properties.
 
-**XML Attributes**
+#### 6.7.1 XML Attributes
 
 | Attribute | Required | Attribute Type | Description                                                                                                                                                          |
 | --------- | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -411,14 +407,13 @@ Object property allows to create an arbitrary list of properties.
 | `key`     | Yes      | String         | [+Property types available to Pluggable widgets: key](https://paper.dropbox.com/doc/Property-types-available-to-Pluggable-widgets-key-khDOHBDy9pr5leYZzqQoK#:h2=key) |
 | `isList`  | Yes      | Boolean        | Must be `true`                                                                                                                                                       |
 
-**XML Elements**
-`<properties>` [required]
+#### 6.7.2 XML Elements
 
-    Encapsulates list or properties to be configured. Properties must be grouped by `<propertyGroup>` elements. Nested object properties are not supported.
+`<properties>` [required] — Encapsulates list or properties to be configured. Properties must be grouped by `<propertyGroup>` elements. Nested object properties are not supported.
 
-**Studio Pro UI**
+For the object property, the Studio Pro UI *XML* is as follows:
 
-    XML
+```xml
     <property key="myObject" type="object" isList="true">
         <caption>My object list</caption>
         <description/>
@@ -436,48 +431,61 @@ Object property allows to create an arbitrary list of properties.
             </propertyGroup>
         </properties>
     </property>
-    Studio Pro
+```
+
+An object property could appear in Studio Pro like this:
 
 ![](https://paper-attachments.dropbox.com/s_5009BD3439660B5188074DAF5510BE4D6691349683FF768E28F7376F479D54D2_1565101889323_image.png)
 
 ## 7 System Properties
 
 System properties is a way for a pluggable widget to adopt extended widget functionality provided by Mendix platform. System properties should be defined as `<systemProperty>` elements.
-**Required attributes**
+(todo: figure out how to format this)**Required attributes**
 `**key**`
 
-    Defines the type of a system property. Allowed values are:
-    - `Label`
-    - `Name`
-    - `TabIndex`
-    - `Visibility`
-    - `Editability`
-## Label
+    Defines the type of a system property. The following values are allowed:
+* `Label`
+* `Name`
+* `TabIndex`
+* `Visibility`
+* `Editability`
+
+### 7.1 Label
 
 Label property allows a pluggable widget to have labeling functionality similar to one of [core input widgets](https://docs.mendix.com/refguide/text-box#label-properties). This allows a user to set a label, a label position, and a label width. If a widget has a label configured, its client component will automatically be wrapped into a correct markup.
 
-    <systemProperty key="Label"/>
-## Name
+```xml
+<systemProperty key="Label"/>
+```
+
+### 7.2 Name
 
 Every widget have a name by default. This property can be used to control position of the widget name input. If this property is not specified, input will be placed in **Common** tab. Widget’s name is also used for locating it during \[automated tests\](https://docs.mendix.com/howto/integration/selenium-support). For that purpose in web apps, a widget name is automatically appended to a `class` prop a component receives, and in native apps is passed as a separate `name` prop.
 
-    <systemProperty key="Name"/>
-## TabIndex
+```xml
+<systemProperty key="Name"/>
+```
+
+### 7.3 TabIndex
 
 TabIndex property allow pluggable widgets to implement **Tab index** setting similar to one of a [core input widgets](https://docs.mendix.com/refguide/text-box#tab-index). Every selectable and/or input-like widget should oft for this to provide a consistent developing experience for a user and accessible app for an end-user. Widget’s tab index, when it is not zero, is passed to a client component in a `tabIndex` prop.
 
-    <systemProperty key="TabIndex"/>
-## Visibility
+```xml
+<systemProperty key="TabIndex"/>
+```
 
-Remark: introduced in 8.1
-Every pluggable widget can be \[conditionally hidden\](https://docs.mendix.com/refguide/conditions). This property can be used to control a position of the widget visibility inputs.
+### 7.4 Visibility
 
-    <systemProperty key="Visibility"/>
-## Editability
+Every pluggable widget can be [conditionally hidden](/refguide/conditions). This property can be used to control a position of the widget visibility inputs.
 
-Remark: introduced in 8.1
-Editability property allows a pluggable widget to have Editable configuration similar to one of [core input widgets](https://docs.mendix.com/refguide/text-box#editability-properties). When a widget is marked as read-only or conditionally editable with condition being false, then all [EditableValue](/appdev/appdev/master/link%20to%20docs)s its client component receives will have `readOnly` flag.
+```xml
+<systemProperty key="Visibility"/>
+```
 
-    <systemProperty key="Editability"/>
+### 7.5 Editability
 
+Editability property allows a pluggable widget to have Editable configuration similar to one of [core input widgets](/refguide/text-box#editability-properties). When a widget is marked as read-only or conditionally editable with condition being false, then all [EditableValues](todo: figure out where this anchor link was supposed to go) its client component receives will have `readOnly` flag.
 
+```xml
+<systemProperty key="Editability"/>
+```

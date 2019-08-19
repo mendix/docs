@@ -23,7 +23,7 @@ The Mendix documentation is built on top of Hugo and Node.JS. When you want to d
 
 Hugo is a static page generator that runs on Go. Make sure you install Hugo following [these guides](https://gohugo.io/getting-started/installing/).
 
-Node.js is a JavaScript runtime. You can install it by downloading the installer [here](https://nodejs.org/en/download/). We are using the **Current** version (`8.x.x`).
+Node.js is a JavaScript runtime. You can install it by downloading the installer [here](https://nodejs.org/en/download/). We are using version (`12.x.x`).
 
 #### Installing Dependencies
 
@@ -37,7 +37,7 @@ Node.js is a JavaScript runtime. You can install it by downloading the installer
 
    `node -v`
 
-   It should show you the version: `v8.1.3` (the version number you installed)
+   It should show you the version: `v12.0.0` (the version number you installed)
 
    `yarn -v`
 

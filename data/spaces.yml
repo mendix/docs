@@ -150,7 +150,7 @@ studio:
     - "Settings"
     - "Starting With Your Own Data"
 studio7:
-  space: "Studio Guide"
+  space: "Studio 7 Guide"
   priority: false
   menu_categories:
     - "General Info"

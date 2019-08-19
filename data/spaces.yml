@@ -149,6 +149,22 @@ studio:
     - "Theme Customizer"
     - "Settings"
     - "Starting With Your Own Data"
+studio7:
+  space: "Studio Guide"
+  priority: false
+  menu_categories:
+    - "General Info"
+    - "Domain Model"
+    - "Pages"
+    - "Navigation Document"
+    - "Microflows"
+    - "Data Filters"
+    - "Previewing & Publishing Your App"
+    - "Checks"
+    - "Consistency Errors"
+    - "Theme Customizer"
+    - "Settings"
+    - "Starting With Your Own Data"
 partners:
   space: "Strategic Partners Guide"
   priority: false

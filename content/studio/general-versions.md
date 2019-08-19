@@ -20,13 +20,13 @@ The **Mendix Studio version** and the **Mendix version** can be viewed by clicki
 
 ## 2 Studio Bundles and Mendix Version
 
-Studio supports a range of **Mendix versions**, which form a *bundle*. For example, Studio supports Mendix versions 7.15 – 7.22 as one bundle. This means that if one *Studio Pro user* has application with 7.15.3 version, and another has application with 7.22.0 version, for both users Studio interface and functionality will look the same, because it is one bundle of Studio.
+Studio supports a range of **Mendix versions**, which form a *bundle*. For example, Studio supports Mendix versions 7.15 – 7.22 (including all minor versions and path releases) as one bundle. This means that if one *Studio Pro* user has a project of Mendix 7.15.3 version, and another has a project of Mendix 7.22.0 version, for both users Studio interface and functionality will look the same, because it is one bundle of Studio.
 
 Studio introduces a new bundle when there are breaking changes in a model that prevent your app from functioning properly without an upgrade.  An example of a breaking change is introduction of a new functionality. 
 
 ## 3 Upgrading to the Next Version
 
-The Studio version is updated continuously (even daily), which will provide you with the latest user interface features for editing your app. No action is required from you, these updates are done automatically. However, when there is a new Mendix version, an orange top-bar is displayed, informing you that you can upgrade your app to the next version.  
+The *Studio version* is updated continuously (even daily), which will provide you with the latest user interface features for editing your app. No action is required from you, these updates are done automatically. However, when there is a new *Mendix version*, an orange top-bar is displayed, informing you that you can upgrade your app to the next version.  
 
 ![](attachments/general-versions/top-bar-upgrade.png)
 

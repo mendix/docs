@@ -221,9 +221,9 @@ An icon component will appear in Studio Pro like this:
 
 ### 5.2 Image
 
-Remark: introduced in Mendix 8.1
 Image allows a user to configure a static image from an \[Image collection\](https://docs.mendix.com/refguide/image-collection). It is passed as `DynamicValue<ImageValue>` prop to a client component.
-**XML** **Attributes**
+
+### 5.2.3 XML Attributes
 
 | Attribute  | Required | Attribute Type | Description                                                                                                                                                          |
 | ---------- | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -231,23 +231,26 @@ Image allows a user to configure a static image from an \[Image collection\](htt
 | `key`      | Yes      | String         | [+Property types available to Pluggable widgets: key](https://paper.dropbox.com/doc/Property-types-available-to-Pluggable-widgets-key-khDOHBDy9pr5leYZzqQoK#:h2=key) |
 | `required` | No       | Boolean        | Whether the proeprty must be specified by the user. `true` by default                                                                                                |
 
-**Studio Pro UI**
+For image components, the Studio Pro UI XML is as follows:
 
-    XML
+```
     <property key="bgImage" type="image" required="false">
         <caption>Background Image</caption>
         <description>Image shown blurred in a background</description>
     </property>
+```
 
+An image component will appear in Studio Pro like this:
 
-    Studio Pro
 ![](https://paper-attachments.dropbox.com/s_81786A5931B829139B98071139DA0CB7AC3499B0317A73DEBE39335668768ACA_1565096923473_image.png)
 
-# Dynamic Properties
-## Expression
+## 6 Dynamic Properties
 
-Expression allows a user to configure a [microflow expression](https://docs.mendix.com/refguide6/microflow-expressions) which result will be passed to the client component as a `DynamicValue<T>` where `T` depends on a return type of the expression.
-**XML** **Attributes**
+### 6.1 Expression
+
+Expression allows a user to configure an [expression](/refguide/expressions), the result of which  will be passed to the client component as a `DynamicValue<T>` where `T` depends on a return type of the expression.
+
+#### 6.1.1 XML Attributes
 
 | Attribute      | Required | Attribute Type      | Description                                                                                                                                                          |
 | -------------- | -------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -256,39 +259,37 @@ Expression allows a user to configure a [microflow expression](https://docs.mend
 | `defaultValue` | No       | String (Expression) | Default value for the property.                                                                                                                                      |
 | `required`     | No       | Boolean             | Whether the proeprty must be specified by the user. `true` by default                                                                                                |
 
-**XML Elements**
-`<returnType>` [required]
+#### 6.1.2 XML Elements
 
-    Expression property must contain `<returnType>` element in order to define allowed return types for the expression. Mendix platform will ensure the that configured expression is returning the right data type.
-
+`<returnType>` [required] — An expression property must contain a `<returnType>` element in order to define allowed return types for the expression. The Mendix platform will ensure the that configured expression is returning the correct data type.
 
 Allowed return types with corresponding types that a client components will receive:
 
-    - `Boolean` - `DynamicValue<boolean>`
-    - `DateTime` - `DynamicValue<Date>`
-    - `Decimal` - `DynamicValue<BigJS>`
-    - `Integer` - `DynamicValue<BigJS>`
-    - `String` - `DynamicValue<string>`
+* `Boolean`— `DynamicValue<boolean>`
+* `DateTime` — `DynamicValue<Date>`
+* `Decimal` — `DynamicValue<BigJS>`
+* `Integer` — `DynamicValue<BigJS>`
+* `String` — `DynamicValue<string>`
 
-**Studio Pro UI**
+For an expression property, the Studio Pro UI XML is as follows:
 
-    XML
+```
     <property key="progressBarColor" type="expression" defaultValue="'red'">
         <caption>Color</caption>
         <description>Progress bar CSS color</description>
         <returnType type="String" />
     </property>
+```
 
-
-    Studio Pro
+An expression property could appear in Studio Pro like this:
 
 ![](https://paper-attachments.dropbox.com/s_5009BD3439660B5188074DAF5510BE4D6691349683FF768E28F7376F479D54D2_1564489919356_image.png)
 
-## TextTemplate
+### 6.4 TextTemplate
 
-Text template allows a user to configure translatable text template similar to \[Text template\](https://docs.mendix.com/refguide/text#text-template) of a Text widget. The interpolated string will be passed to the client component as `DynamicValue<string>`.
+`TextTemplate` allows a user to configure translatable text template similar to the [text template](/refguide/text#text-template) of a text widget. The interpolated string will be passed to the client component as `DynamicValue<string>`.
 
-**XML Attributes**
+#### 6.4.1 XML Attributes
 
 | Attribute   | Required | Attribute Type | Description                                                                                                                                                          |
 | ----------- | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -298,17 +299,13 @@ Text template allows a user to configure translatable text template similar to \
 | `required`  | No       | Boolean        | Whether the property must be specified by the user. `true` by default                                                                                                |
 
 
-**XML Elements**
-`<translations>`
+#### 6.4.2 XML Elements
 
-    Allows to set default value for text templates for different languages using `<translation>` elements with a `lang` attribute representing \[ISO 639\](https://en.wikipedia.org/wiki/ISO_639) code of the language. Available languages are listed in the [Languages Tab](
-    https://docs.mendix.com/refguide/project-settings#4-languages-tab
-    ) in Studio Pro.
+`<translations>` — Allows to set a default value for text templates for different languages using `<translation>` elements with a `lang` attribute representing [ISO 639](https://en.wikipedia.org/wiki/ISO_639) code of the language. Available languages are listed in the [Languages Tab](/refguide/project-settings#4-languages-tab) in Studio Pro.
 
-**Studio Pro UI**
+For `TextTemplate`, the Studio Pro UI XML is as follows:
 
-
-    XML
+```xml
     <property key="myBlockTitle" type="textTemplate">
         <caption>Input title</caption>
         <description>Title for the color input</description>
@@ -318,41 +315,43 @@ Text template allows a user to configure translatable text template similar to \
             <translation lang="uk_UA">Колір</translation>
         </translations>
     </property>
-    
-    Studio Pro
+```
+
+`TextTemplate` could appear in Studio Pro like this:
 
 ![](https://paper-attachments.dropbox.com/s_5009BD3439660B5188074DAF5510BE4D6691349683FF768E28F7376F479D54D2_1565103789244_image.png)
 
+### 6.5 Action
 
+The action property allows a user to configure an action to do things like calling nanoflows, saving changes, and opening pages. The client component will receive `ActionValue` representing it, or `undefined` when the **Do nothing** action was selected.
 
-## Action
-
-Action property allows a user to configure an action like calling nanoflows, saving changes, and opening pages. The client component will receive `ActionValue` representing it, or `undefined` when “Do nothing” action was selected.
-
-**XML Attributes**
+#### 6.5.1 XML Attributes
 
 | Attribute  | Required | Attribute Type | Description                                                                                                                                                          |
 | ---------- | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `type`     | Yes      | String         | Must be `action`                                                                                                                                                     |
 | `key`      | Yes      | String         | [+Property types available to Pluggable widgets: key](https://paper.dropbox.com/doc/Property-types-available-to-Pluggable-widgets-key-khDOHBDy9pr5leYZzqQoK#:h2=key) |
 | `required` | No       | Boolean        | Whether the proeprty must be specified by the user. `true` by default                                                                                                |
+#### 6.5.2 Studio Pro UI
 
+For an action property, the Studio Pro UI XML is as follows:
 
-**Studio Pro UI**
-
-    XML
+```xml
     <property key="buttonAction" type="action">
         <caption>On click</caption>
         <description>Action to be performed when button is clicked</description>
     </property>
-    Studio Pro
+```
+
+An action property could appear in Studio Pro like this:
+
 ![](https://paper-attachments.dropbox.com/s_5009BD3439660B5188074DAF5510BE4D6691349683FF768E28F7376F479D54D2_1564500861810_image.png)
 
-## Attribute
+### 6.6 Attribute
 
-Attribute property allows a widget to work directly with attributes of entities, both reading and writing. Depending on the widget purposes widget may restrict attribute types it supports. The client component will receive `EditableValue<T>` where `T` depends on a `<attributeType>` configured.
+The attribute property allows a widget to work directly with entities' attributes, both reading and writing attributes. Depending on the widget's purposes, a widget may restrict attribute types it supports (todo: check meaning). The client component will receive `EditableValue<T>` where `T` depends on a `<attributeType>` configured.
 
-**XML Attributes**
+#### 6.6.1 XML Attributes
 
 | Attribute  | Required | Attribute Type | Description                                                                                                                                                          |
 | ---------- | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -361,27 +360,24 @@ Attribute property allows a widget to work directly with attributes of entities,
 | `onChange` | No       | Property Path  | Path to an Action property that will be executed by Mendix platform when value is changed by the widget.                                                             |
 | `required` | No       | Boolean        | Whether the proeprty must be specified by the user. `true` by default                                                                                                |
 
-**XML Elements**
-`<attributeTypes>` [required]
+#### 6.6.2 XML Elements
 
-    Element that encapsulates `<attributeType>` elements which declare supported attribute types available while configuring Attribute property in Studio and Studio Pro.
+`<attributeTypes>` [required] — This element encapsulates `<attributeType>` elements which declare supported attribute types available while configuring the attribute property in Studio and Studio Pro.
 
-`<attributeType>` [required one or more]
+`<attributeType>` [required one or more] — this element defines the allowed attribute type in the `name` attribute.
 
-    Element that defines allowed attribute type in `name` attribute.
+These are the supported attribute types and their corresponding types that a client components will receive:
 
-Supported attribute types with the corresponding types that a client components will receive:
-
-- `AutoNumber` - `EditableValue<string>`
-- `Binary` - `EditableValue<string>`
-- `Boolean` - `EditableValue<boolean>`
-- `DateTime` - `EditableValue<Date>`
-- `Enum` - `EditableValue<string>`
-- `HashString` - `EditableValue<string>`
-- `Integer` - `EditableValue<BigJS>`
-- `Long` - `EditableValue<BigJS>`
-- `String` - `EditableValue<string>`
-- `Decimal` - `EditableValue<BigJS>`
+* `AutoNumber` — `EditableValue<string>`
+* `Binary` — `EditableValue<string>`
+* `Boolean` - `EditableValue<boolean>`
+* `DateTime` - `EditableValue<Date>`
+* `Enum` - `EditableValue<string>`
+* `HashString` - `EditableValue<string>`
+* `Integer` - `EditableValue<BigJS>`
+* `Long` - `EditableValue<BigJS>`
+* `String` - `EditableValue<string>`
+* `Decimal` - `EditableValue<BigJS>`
 
 **Studio Pro UI**
 
@@ -403,7 +399,7 @@ Supported attribute types with the corresponding types that a client components 
 
 ![](https://paper-attachments.dropbox.com/s_5009BD3439660B5188074DAF5510BE4D6691349683FF768E28F7376F479D54D2_1564567208591_image.png)
 
-## Object
+### 6.7 Object
 
 Object property allows to create an arbitrary list of properties.
 
@@ -444,7 +440,7 @@ Object property allows to create an arbitrary list of properties.
 
 ![](https://paper-attachments.dropbox.com/s_5009BD3439660B5188074DAF5510BE4D6691349683FF768E28F7376F479D54D2_1565101889323_image.png)
 
-# System Properties
+## 7 System Properties
 
 System properties is a way for a pluggable widget to adopt extended widget functionality provided by Mendix platform. System properties should be defined as `<systemProperty>` elements.
 **Required attributes**

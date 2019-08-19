@@ -1,6 +1,10 @@
+---
 # Property types available to Pluggable widgets
+---
 
-[ ] Make a link to this doc from https://docs.mendix.com/apidocs-mxsdk/apidocs/pluggable-widgets#7-widget-property
+## 1 Introduction
+
+[todo ] Make a link to this doc from https://docs.mendix.com/apidocs-mxsdk/apidocs/pluggable-widgets#7-widget-property
 
 Common structure of property definition:
 
@@ -11,26 +15,26 @@ Common structure of property definition:
     </property>
 ```
 
-## XML attributes
+## 2 XML attributes
 
-`**key**` [required]
-****
-    Defines the prop key in client component props to be supplied to widget client component. Must be unique per widget. Can contain letters (`a-z`, `A-Z`), digits (`0-9`) or underscores  ( `_` ) but can not start with a digit.
+### 2.1 `key` [required]
 
-`**type**` [required]
+Defines the prop key in client component props to be supplied to widget client component. Must be unique per widget. Can contain letters of all cases, digits, or underscores. However, a `key` attribute cannot *start* with a digit.
 
-    Defined the type of a property. Must be one of the following: 
-    [ ] Make them links to section
-    - `action`
-    - `attribute`
-    - `boolean`
-    - `enumeration`
-    - `expression`
-    - `integer`
-    - `object`
-    - `string`
-    - `textTemplate`
-## XML elements
+### 2.2 `**type**` [required]
+
+Defined the type of a property. Must be one of the following: [ todo] Make them links to section
+* `action`
+* `attribute`
+* `boolean`
+* `enumeration`
+* `expression`
+* `integer`
+* `object`
+* `string`
+* `textTemplate`
+
+## 3 XML elements
 
 `**<caption>**` [required]
 

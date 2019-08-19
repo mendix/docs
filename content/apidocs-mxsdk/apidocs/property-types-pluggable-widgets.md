@@ -19,11 +19,11 @@ Common structure of property definition:
 
 ### 2.1 `key` [required]
 
-Defines the prop key in client component props to be supplied to widget client component. Must be unique per widget. Can contain letters of all cases, digits, or underscores. However, a `key` attribute cannot *start* with a digit.
+Defines the prop key in client component props to be supplied to widget client component. It must be unique for each widget and can contain letters of all cases, digits, or underscores. However, a `key` attribute cannot *start* with a digit.
 
 ### 2.2 `**type**` [required]
 
-Defined the type of a property. Must be one of the following: [ todo] Make them links to section
+This defines a property's type. A `type` must be one of the following: [ todo] Make them links to section
 * `action`
 * `attribute`
 * `boolean`
@@ -34,7 +34,7 @@ Defined the type of a property. Must be one of the following: [ todo] Make them 
 * `string`
 * `textTemplate`
 
-## 3 XML elements
+## 3 XML Elements
 
 `**<caption>**` [required]
 
@@ -45,15 +45,15 @@ Defined the type of a property. Must be one of the following: [ todo] Make them 
     Description that shows a purpose of the property to a modeling person.
 
 
-# Static properties
+## 4 Static Properties
 
 Those properties are made to pass values configured in Studio or Studio Pro to the widget. They don’t depend on any dynamic data and passed to the widget client component as simple primitive values.
 
-## String
+### 4.1 String
 
 String is represented as an simple text input in Studio Pro. It is passed as `string` prop to a client component.
 
-**XML** **Attributes**
+### 4.2.1 XML Attributes
 
 | Attribute      | Required | Attribute Type | Description                                                                                                                                                          |
 | -------------- | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -64,40 +64,40 @@ String is represented as an simple text input in Studio Pro. It is passed as `st
 | `required`     | No       | Boolean        | Whether the proeprty must be specified by the user. `true` by default                                                                                                |
 
 
-**Studio Pro UI**
+### 4.2.2 Studio Pro UI
 
-    **Single line**
-    XML
+For Single line [todo: single line what?] the Studio Pro UI XML is as follows:
+
+```
     <property key="myString" type="string">
         <caption>My string</caption>
         <description>My string setting</description>
     </property>
+```
 
+In Studio Pro, a single line string widget appears this way:
 
-    Studio Pro
 ![](https://paper-attachments.dropbox.com/s_5009BD3439660B5188074DAF5510BE4D6691349683FF768E28F7376F479D54D2_1565098954506_image.png)
 
+For Multiline (todo: multiline what?)] the Studio Pro UI XML is as follows:
 
-
-
-    **Multiline**
-    XML
+```
     <property key="myStringMultiline" type="string" multiline="true">
         <caption>My string multiline</caption>
         <description>My string multiline setting</description>
     </property>
+```
 
+In Studio Pro, a multi-line string widget appears this way:
 
-    Studio Pro
 ![](https://paper-attachments.dropbox.com/s_5009BD3439660B5188074DAF5510BE4D6691349683FF768E28F7376F479D54D2_1565099729178_image.png)
 
 
+## 4.2 Boolean
 
-## Boolean
+Boolean is represented as a Yes/No switch [todo: find this in product to find actual name] in Studio Pro. It is passed as `boolean` prop to a client component.
 
-Boolean is represented as a Yes/No switch in the Studio Pro. It is passed as `boolean` prop to a client component.
-
-**XML attributes**
+### 4.2.1 XML attributes
 
 | Attribute      | Required | Attribute Type | Description                                                                                                                                                          |
 | -------------- | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -106,22 +106,26 @@ Boolean is represented as a Yes/No switch in the Studio Pro. It is passed as `bo
 | `defaultValue` | Yes      | Boolean        | Default value for the property. `true` or `false`                                                                                                                    |
 
 
-**Studio Pro UI**
+### 4.2.2 Studio Pro UI
 
-    XML
+For Boolean widgets, the Studio Pro UI XML is as follows:
+
+```
     <property key="myBoolean" type="boolean" defaultValue="false">
         <caption>My boolean</caption>
         <description>My boolean setting</description>
     </property>
-    
-    Studio Pro
+``` 
+
+Boolean widgets appear in Studio Pro like this:
+
 ![](https://paper-attachments.dropbox.com/s_5009BD3439660B5188074DAF5510BE4D6691349683FF768E28F7376F479D54D2_1565100063589_image.png)
 
-## Integer
+## 4.3 Integer
 
 Integer is represented as a number input in Studio Pro. It is passed as `number` prop to a client component.
 
-**XML attributes**
+### 4.3.1 XML attributes
 
 | Attribute      | Required | Attribute Type | Description                                                                                                                                                          |
 | -------------- | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -129,23 +133,26 @@ Integer is represented as a number input in Studio Pro. It is passed as `number`
 | `key`          | Yes      | String         | [+Property types available to Pluggable widgets: key](https://paper.dropbox.com/doc/Property-types-available-to-Pluggable-widgets-key-khDOHBDy9pr5leYZzqQoK#:h2=key) |
 | `defaultValue` | Yes      | Integer        | Default value for the property.                                                                                                                                      |
 
+### 4.3.2 Studio Pro UI
 
-**Studio Pro UI**
+For integer widgets, the Studio Pro UI XML is as follows:
 
-    XML
+```
     <property key="myInteger" type="integer" defaultValue="1000">
         <caption>My integer</caption>
         <description>My integer setting</description>
     </property>
-    Studio Pro
+```
+
+Integer widgets appear in Studio Pro like this:
 
 ![](https://paper-attachments.dropbox.com/s_5009BD3439660B5188074DAF5510BE4D6691349683FF768E28F7376F479D54D2_1565100098654_image.png)
 
-## Enumeration
+## 4.4 Enumeration
 
 Enumeration allows user to select one out of multiple options defined in the XML. A key of a selected enum option is passed as `string` prop to a client component.
 
-**XML attributes**
+### 4.4.1 XML Attributes
 
 | Attribute      | Required | Attribute Type | Description                                                                                                                                                          |
 | -------------- | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -153,12 +160,15 @@ Enumeration allows user to select one out of multiple options defined in the XML
 | `key`          | Yes      | String         | [+Property types available to Pluggable widgets: key](https://paper.dropbox.com/doc/Property-types-available-to-Pluggable-widgets-key-khDOHBDy9pr5leYZzqQoK#:h2=key) |
 | `defaultValue` | Yes      | Integer        | Default value for the property.                                                                                                                                      |
 
-**XML elements**
+### 4.4.2 XML Elements
+
 `<enumerationValues>` [required]
 
-    One `<enumerationValues>` element must be declared with multiple `<enumerationValue>` elements inside in order to define possible enumeration values. `key` attribute is required for every enumeration value as well as a caption.
-    Example of an enum option:
-    <enumerationValue key="myEnumOption">My enum option caption</enumerationValue>
+One `<enumerationValues>` element must be declared with multiple `<enumerationValue>` elements inside in order to define possible enumeration values. `key` attribute is required for every enumeration value as well as a caption. Enter enumeration values like this:
+
+```
+    `<enumerationValue key="myEnumOption">My enum option caption</enumerationValue>`
+```
 
 The `key` of a selected element will be passed to the client component. `key` should not be changed since it is used to identify options used in a project.
 

@@ -79,6 +79,8 @@ Command-line arguments provide information to the Native Builder, such as where 
 |   `--build-number`   |   Build number, an arbitrary unique integer value   |   `1`   |
 |   `--app-identifier`   |   Unique app identifier   |   `com.mendix.MyAwesomeApp`   |
 |   `--app-icon-path`   |   (Optional) Absolute path to the app icon   |   `"C:\MyAppIcon.png"`   |
+|   `--app-round-icon-path`   |   (Optional) Absolute path to the app round icon. This is specific to android    |   `"C:\MyAppRoundIcon.png"`   |
+|   `--app-splash-screen-path`   |   (Optional) Absolute path to the app splash screen image   |   `"C:\MyAppSplash.png"`   |
 |   `--appcenter-organization`   |   (Optional) Organization name used in App Center   |   `my-company`   |
 |   `--output-path`   |	  (Optional) Absolute path to the location where artifacts should be outputed   |   `C:\Downloads`   |
 
@@ -108,7 +110,15 @@ This parameter serves as a unique identifier for your app. Once your app is uplo
 
 This parameter specifies an app icon file. The image must be a *.png* file, and have a resolution of 1024x1024. Mendix will do the resizing for you. If a file path is not provided, default app icons will be provided by branch **master**.
 
-#### 5.2.7 --build-number
+#### 5.2.7 --app-round-icon-path
+
+This parameter specifies an app round icon file which is specific to Android. The image must be a *.png* file, and have a resolution of 1024x1024. Mendix will do the resizing for you. If a file path is not provided, default app icons will be provided by branch **master**.
+
+#### 5.2.8 --app-splash-screen-path
+
+This parameter specifies an app splash file. The image must be a *.png* file, and have a resolution of 1440x2560. Mendix will do the resizing for you. If a file path is not provided, default app splash images will be provided by branch **master**.
+
+#### 5.2.9 --build-number
 
 Every build that is scheduled for release should have a unique, incrementing number. This number will be used as the name of the branch in GitHub, such as `branch/120`. The highest integer Android will allow is 2,147,483,647. Consider starting with 1 and incrementing by one with each release. Alternatively, you can use dates in the “YYmmddHHmm” format, such as `2007310950` for a build run on July 31, 2020 at 09:50.
 

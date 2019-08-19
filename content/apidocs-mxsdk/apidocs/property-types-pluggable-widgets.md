@@ -172,9 +172,11 @@ One `<enumerationValues>` element must be declared with multiple `<enumerationVa
 
 The `key` of a selected element will be passed to the client component. `key` should not be changed since it is used to identify options used in a project.
 
-**Studio Pro UI**
+### 4.4.3 Studio Pro UI
 
-    XML
+For enumeration value widgets, the Studio Pro UI XML is as follows:
+
+```
     <property key="myEnumeration" type="enumeration" defaultValue="red">
         <caption>My enumeration</caption>
         <description>My enumeration setting</description>
@@ -184,16 +186,19 @@ The `key` of a selected element will be passed to the client component. `key` sh
             <enumerationValue key="blue">Blue</enumerationValue>
         </enumerationValues>
     </property>
-    Studio Pro
+```
+
+Enumeration widgets appear in Studio Pro like this:
 
 ![](https://paper-attachments.dropbox.com/s_5009BD3439660B5188074DAF5510BE4D6691349683FF768E28F7376F479D54D2_1565100380376_image.png)
 
-# Components
-## Icon
+## 5 Components
 
-Remark: introduced in Mendix 8.1
-Icon allows a user to configure an icon similar to one used by \[Action button\](https://docs.mendix.com/refguide/action-button#icon). It is passed as `DynamicValue<IconValue>` prop to a client component.
-**XML** **Attributes**
+### 5.1 Icon
+
+Icon allows a user to configure an icon similar to one used by [Action button](https://docs.mendix.com/refguide/action-button#icon). It is passed as `DynamicValue<IconValue>` prop to a client component.
+
+## 5.2 XML Attributes
 
 | Attribute  | Required | Attribute Type | Description                                                                                                                                                          |
 | ---------- | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -201,22 +206,20 @@ Icon allows a user to configure an icon similar to one used by \[Action button\]
 | `key`      | Yes      | String         | [+Property types available to Pluggable widgets: key](https://paper.dropbox.com/doc/Property-types-available-to-Pluggable-widgets-key-khDOHBDy9pr5leYZzqQoK#:h2=key) |
 | `required` | No       | Boolean        | Whether the proeprty must be specified by the user. `true` by default                                                                                                |
 
-**Studio Pro UI**
+For icon components, the Studio Pro UI XML is as follows:
 
-    XML
+```
     <property key="cardIcon" type="icon" required="false">
         <caption>Icon</caption>
         <description>Card icon</description>
     </property>
+```
 
-
-    Studio Pro
+An icon component will appear in Studio Pro like this:
 
 ![](https://paper-attachments.dropbox.com/s_81786A5931B829139B98071139DA0CB7AC3499B0317A73DEBE39335668768ACA_1565096170318_image.png)
 
-
-
-## Image
+### 5.2 Image
 
 Remark: introduced in Mendix 8.1
 Image allows a user to configure a static image from an \[Image collection\](https://docs.mendix.com/refguide/image-collection). It is passed as `DynamicValue<ImageValue>` prop to a client component.

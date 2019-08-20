@@ -17,16 +17,16 @@ To smarten up your app with business logic you can use microflows. To verify tha
 Before you can start with this how-to, make sure you have completed the following prerequisites:
 
 * Download [Mendix Studio Pro](https://appstore.home.mendix.com/link/modelers/)
-* Review the software used in this how-to:
+* Review the App Store items used in this how-to:
 
-    | Software | Version Used in This How-to |
+    | App Store Item | Version Used in This How-to |
     | --- | --- |
-    | UnitTesting module | 4.2 |
-    | Community Commons Function Library module | 5.4 |
-    | ObjectHandling module | 1.0 |
+    | [UnitTesting](https://appstore.home.mendix.com/link/app/390/) | 4.2 |
+    | [Community Commons Function Library](https://appstore.home.mendix.com/link/app/170/) | 5.4 |
+    | [ObjectHandling](https://appstore.home.mendix.com/link/app/37114/) | 1.0 |
 
 {{% alert type="warning" %}}
-All images, names and steps in this how-to are based on these versions. When using other versions the images and/or names on your screen may be different than the images or names used in this how-to.
+All images, names, and steps in this how-to are based on the App Store item versions listed above. When using later versions of these App Store items, images and/or names on your screen may be different than what is used in this how-to.
 {{% /alert %}}
 
 ## 2 The UnitTesting Module

@@ -9,10 +9,10 @@
 Common structure of property definition:
 
 ```xml
-    <property key="propertyKey" type="propertyType">
-        <caption>My Property</caption>
-        <description>This is my property</description>
-    </property>
+<property key="propertyKey" type="propertyType">
+	<caption>My Property</caption>
+	<description>This is my property</description>
+</property>
 ```
 
 ## 2 XML attributes
@@ -64,10 +64,10 @@ String is represented as an simple text input in Studio Pro. It is passed as `st
 For Single line [todo: single line what?] the Studio Pro UI XML is as follows:
 
 ```xml
-    <property key="myString" type="string">
-        <caption>My string</caption>
-        <description>My string setting</description>
-    </property>
+<property key="myString" type="string">
+	<caption>My string</caption>
+	<description>My string setting</description>
+</property>
 ```
 
 In Studio Pro, a single line string widget appears this way:
@@ -77,10 +77,10 @@ In Studio Pro, a single line string widget appears this way:
 For Multiline (todo: multiline what?)] the Studio Pro UI XML is as follows:
 
 ```xml
-    <property key="myStringMultiline" type="string" multiline="true">
-        <caption>My string multiline</caption>
-        <description>My string multiline setting</description>
-    </property>
+<property key="myStringMultiline" type="string" multiline="true">
+	<caption>My string multiline</caption>
+	<description>My string multiline setting</description>
+</property>
 ```
 
 In Studio Pro, a multi-line string widget appears this way:

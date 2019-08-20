@@ -202,41 +202,47 @@ In App Center you can configure your builds at the branch level. If no configura
 
 If you have added custom dependencies and still need to test against a local running app in Studio Pro, you need to make some local changes to your template.
 
-#### 8.4.1 iOS
+> Replace any instance of `LOCAL_IP_ADDRESS` with your local IP address (*10.0.0.2* for example).
+
+#### 8.4.1 Getting Started
+
+1. Clone your repository locally from GitHub.
+2. Switch to the latest branch created by Native Builder (*build/1* for example)
+3. Then, Follow this [Guide](https://github.com/mendix/native-template#21-install-dependencies) on how to install dependencies.
+
+#### 8.4.2 iOS
 
 For an iOS app, do the following:
 
-1. Clone your repository locally from GitHub.
-2. Open the `ios` directory using **Xcode**.
-3. Replace any instance of `LOCAL_IP_ADDRESS` with your local IP address (*10.0.0.2* for example).
-4. Open **AppDelegate.swift**.
-5. Replace this section of the code (on line **13**):
+1. Open the **ios/NativeTemplate.xcworkspace** file using **Xcode**.
+2. Open **NativeTemplate/AppDelegate.swift**.
+3. Replace this section of the code (on line **13**):
 
-   ```swift 
+   ```swift
    let bundleUrl = Bundle.main.url(forResource: "index.ios", withExtension: "bundle", subdirectory: "Bundle")
    ```
-   
+
    with the following code:
-   
-   ```swift 
+
+   ```swift
    let bundleUrl = AppUrl.forBundle(url: "http://LOCAL_IP_ADDRESS:8080", remoteDebuggingPackagerPort: 8083, isDebuggingRemotely: true)
    ```
-   
-6. Locate the **Info.plist** file and replace the value of `Runtime url` with `http://LOCAL_IP_ADDRESS:8080`.
-7. Run the app by clicking the **Play** button.
 
-#### 8.4.2 Android
+4. Locate the **Info.plist** file and replace the value of `Runtime url` with `http://LOCAL_IP_ADDRESS:8080`.
+5. Run the app by clicking the **Play** button.
+
+#### 8.4.3 Android
+
+> Note: Starting with Android 9 (API level 28), cleartext support is disabled by default. So if you are debugging with a device using v28 and above, you would need to include the `android:usesCleartextTraffic="true"` property in the `application` tag in your **app/src/main/AndroidManifest.xml** file.
 
 For an Android app, do the following:
 
-1. Clone your repository locally from GitHub.
-2. Open the `android` directory using Android Studio.
-3. Replace any instance of `LOCAL_IP_ADDRESS` with your local IP address (*10.0.0.2* for example).
-4. Open **app/src/main/java/com/mendix/nativetemplate/MainApplication.java**.
-5. On line **35** replace `false` with `true`.
-6. Open **app/src/main/res/raw/runtime_url**.
-7. Replace the file's contents with `http://LOCAL_IP_ADDRESS:8080`.
-8.  Run the app by clicking the **Play** button.
+1. Open the `android` directory using Android Studio.
+2. Open **app/src/main/java/com/mendix/nativetemplate/MainApplication.java**.
+3. On line **35** replace `false` with `true`.
+4. Open **app/src/main/res/raw/runtime_url**.
+5. Replace the file's contents with `http://LOCAL_IP_ADDRESS:8080`.
+6. Run the app by clicking the **Play** button.
 
 ## 9 When to Sync Your Native Template {#sync-your-repository}
 

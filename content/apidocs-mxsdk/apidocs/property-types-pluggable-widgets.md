@@ -29,16 +29,16 @@ This defines the prop key in client component props to be supplied to widget cli
 This defines a property's type. A `type` must be one of the following: [ todo] Make them links to section
 
 * Static Properties
-	* [`string`](#string)
-	* [`boolean`](#boolean)
-	* [`integer`](#integer)
-	* [`enumeration`](#enumeration)
+	* [string](#string)
+	* [Boolean](#boolean)
+	* [integer](#integer)
+	* [enumeration](#enumeration)
 * Dynamic Properties
-	* [`expression`](#expression)
-	* [`textTemplate`](#textTemplate)
-	* [`action`](#action)
-	* [`attribute`](#attribute)
-	* [`object`](#object)
+	* [expression](#expression)
+	* [TextTemplate](#textTemplate)
+	* [action](#action)
+	* [attribute](#attribute)
+	* [object](#object)
 
 ### 1.2 XML Elements
 

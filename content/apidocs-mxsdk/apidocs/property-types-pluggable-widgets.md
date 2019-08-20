@@ -20,11 +20,11 @@ Common structure of property definition:
 
 ## 2 XML attributes
 
-### 2.1 `key` [required]
+### 2.1 `key` (required)
 
 This defines the prop key in client component props to be supplied to widget client component. It must be unique for each widget and can contain letters of all cases, digits, or underscores. However, a `key` attribute cannot *start* with a digit.
 
-### 2.2 `**type**` [required]
+### 2.2 `**type**` (required)
 
 This defines a property's type. A `type` must be one of the following: [ todo] Make them links to section
 * `action`
@@ -39,9 +39,9 @@ This defines a property's type. A `type` must be one of the following: [ todo] M
 
 ## 3 XML Elements
 
-`**<caption>**` [required] — This defines a user-friendly name of a property visible to modeling person.
+`**<caption>**` (required) — This defines a user-friendly name of a property visible to modeling person.
 
-`**<description>**` [required] — This is a description that shows a purpose of the property to a modeling person.
+`**<description>**` (required) — This is a description that shows a purpose of the property to a modeling person.
 
 ## 4 Static Properties
 
@@ -159,7 +159,7 @@ Enumeration allows user to select one out of multiple options defined in the XML
 
 ### 4.4.2 XML Elements
 
-`<enumerationValues>` [required]
+`<enumerationValues>` (required)
 
 One `<enumerationValues>` element must be declared with multiple `<enumerationValue>` elements inside in order to define possible enumeration values. `key` attribute is required for every enumeration value as well as a caption. Enter enumeration values like this:
 
@@ -258,7 +258,7 @@ Expression allows a user to configure an [expression](/refguide/expressions), th
 
 #### 6.1.2 XML Elements
 
-`<returnType>` [required] — An expression property must contain a `<returnType>` element in order to define allowed return types for the expression. The Mendix platform will ensure the that configured expression is returning the correct data type.
+`<returnType>` (required) — An expression property must contain a `<returnType>` element in order to define allowed return types for the expression. The Mendix platform will ensure the that configured expression is returning the correct data type.
 
 Allowed return types with corresponding types that a client components will receive:
 
@@ -359,9 +359,9 @@ The attribute property allows a widget to work directly with entities' attribute
 
 #### 6.6.2 XML Elements
 
-`<attributeTypes>` [required] — This element encapsulates `<attributeType>` elements which declare supported attribute types available while configuring the attribute property in the Studios.
+`<attributeTypes>` (required) — This element encapsulates `<attributeType>` elements which declare supported attribute types available while configuring the attribute property in the Studios.
 
-`<attributeType>` [required one or more] — this element defines the allowed attribute type in the `name` attribute.
+`<attributeType>` (required one or more) — this element defines the allowed attribute type in the `name` attribute.
 
 These are the supported attribute types and their corresponding types that a client components will receive:
 
@@ -412,7 +412,7 @@ The object property allows to create an arbitrary list of properties.
 
 #### 6.7.2 XML Elements
 
-`<properties>` [required] — Encapsulates list or properties to be configured. Properties must be grouped by `<propertyGroup>` elements. Nested object properties are not supported.
+`<properties>` (required) — Encapsulates list or properties to be configured. Properties must be grouped by `<propertyGroup>` elements. Nested object properties are not supported.
 
 For the object property, the Studio Pro UI *XML* is as follows:
 

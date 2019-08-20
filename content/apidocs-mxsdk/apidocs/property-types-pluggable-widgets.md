@@ -286,7 +286,7 @@ For an expression property, the Studio Pro UI *XML* is as follows:
 
 An expression property could appear in Studio Pro like this:
 
-![](attachments/widget-property-types/.png)
+![](attachments/widget-property-types/expression.png)
 
 ### 4.4 TextTemplate{#texttemplate}
 

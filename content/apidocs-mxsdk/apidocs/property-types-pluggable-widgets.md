@@ -105,11 +105,11 @@ Boolean is represented as a Yes/No switch [todo: find this in product to find ac
 For Boolean widgets, the Studio Pro UI XML is as follows:
 
 ```xml
-    <property key="myBoolean" type="boolean" defaultValue="false">
-        <caption>My boolean</caption>
-        <description>My boolean setting</description>
-    </property>
-``` 
+<property key="myBoolean" type="boolean" defaultValue="false">
+	<caption>My boolean</caption>
+	<description>My boolean setting</description>
+</property>
+```
 
 Boolean widgets appear in Studio Pro like this:
 
@@ -132,10 +132,10 @@ Integer is represented as a number input in Studio Pro. It is passed as `number`
 For integer widgets, the Studio Pro UI XML is as follows:
 
 ```xml
-    <property key="myInteger" type="integer" defaultValue="1000">
-        <caption>My integer</caption>
-        <description>My integer setting</description>
-    </property>
+<property key="myInteger" type="integer" defaultValue="1000">
+	<caption>My integer</caption>
+	<description>My integer setting</description>
+</property>
 ```
 
 Integer widgets appear in Studio Pro like this:
@@ -171,15 +171,15 @@ The `key` of a selected element will be passed to the client component. `key` sh
 For enumeration value widgets, the Studio Pro UI XML is as follows:
 
 ```xml
-    <property key="myEnumeration" type="enumeration" defaultValue="red">
-        <caption>My enumeration</caption>
-        <description>My enumeration setting</description>
-        <enumerationValues>
-            <enumerationValue key="red">Red</enumerationValue>
-            <enumerationValue key="green">Green</enumerationValue>
-            <enumerationValue key="blue">Blue</enumerationValue>
-        </enumerationValues>
-    </property>
+	<property key="myEnumeration" type="enumeration" defaultValue="red">
+	<caption>My enumeration</caption>
+	<description>My enumeration setting</description>
+	<enumerationValues>
+		<enumerationValue key="red">Red</enumerationValue>
+		<enumerationValue key="green">Green</enumerationValue>
+		<enumerationValue key="blue">Blue</enumerationValue>
+	</enumerationValues>
+	</property>
 ```
 
 Enumeration widgets appear in Studio Pro like this:
@@ -203,10 +203,10 @@ Icon allows a user to configure an icon similar to one used by [Action button](h
 For icon components, the Studio Pro UI XML is as follows:
 
 ```xml
-    <property key="cardIcon" type="icon" required="false">
-        <caption>Icon</caption>
-        <description>Card icon</description>
-    </property>
+<property key="cardIcon" type="icon" required="false">
+	<caption>Icon</caption>
+	<description>Card icon</description>
+</property>
 ```
 
 An icon component will appear in Studio Pro like this:
@@ -215,7 +215,7 @@ An icon component will appear in Studio Pro like this:
 
 ### 5.2 Image
 
-Image allows a user to configure a static image from an \[Image collection\](https://docs.mendix.com/refguide/image-collection). It is passed as `DynamicValue<ImageValue>` prop to a client component.
+Image allows a user to configure a static image from an [Image collection](https://docs.mendix.com/refguide/image-collection). It is passed as `DynamicValue<ImageValue>` prop to a client component.
 
 ### 5.2.3 XML Attributes
 
@@ -228,10 +228,10 @@ Image allows a user to configure a static image from an \[Image collection\](htt
 For image components, the Studio Pro UI XML is as follows:
 
 ```xml
-    <property key="bgImage" type="image" required="false">
-        <caption>Background Image</caption>
-        <description>Image shown blurred in a background</description>
-    </property>
+<property key="bgImage" type="image" required="false">
+	<caption>Background Image</caption>
+	<description>Image shown blurred in a background</description>
+</property>
 ```
 
 An image component will appear in Studio Pro like this:
@@ -268,11 +268,11 @@ Allowed return types with corresponding types that a client components will rece
 For an expression property, the Studio Pro UI XML is as follows:
 
 ```xml
-    <property key="progressBarColor" type="expression" defaultValue="'red'">
-        <caption>Color</caption>
-        <description>Progress bar CSS color</description>
-        <returnType type="String" />
-    </property>
+<property key="progressBarColor" type="expression" defaultValue="'red'">
+	<caption>Color</caption>
+	<description>Progress bar CSS color</description>
+	<returnType type="String" />
+</property>
 ```
 
 An expression property could appear in Studio Pro like this:
@@ -300,15 +300,15 @@ An expression property could appear in Studio Pro like this:
 For `TextTemplate`, the Studio Pro UI XML is as follows:
 
 ```xml
-    <property key="myBlockTitle" type="textTemplate">
-        <caption>Input title</caption>
-        <description>Title for the color input</description>
-        <translations>
-            <translation lang="en_US">Color</translation>
-            <translation lang="nl_NL">Kleur</translation>
-            <translation lang="uk_UA">Колір</translation>
-        </translations>
-    </property>
+<property key="myBlockTitle" type="textTemplate">
+	<caption>Input title</caption>
+	<description>Title for the color input</description>
+	<translations>
+		<translation lang="en_US">Color</translation>
+		<translation lang="nl_NL">Kleur</translation>
+		<translation lang="uk_UA">Колір</translation>
+	</translations>
+</property>
 ```
 
 `TextTemplate` could appear in Studio Pro like this:
@@ -331,10 +331,10 @@ The action property allows a user to configure an action to do things like calli
 For an action property, the Studio Pro UI XML is as follows:
 
 ```xml
-    <property key="buttonAction" type="action">
-        <caption>On click</caption>
-        <description>Action to be performed when button is clicked</description>
-    </property>
+<property key="buttonAction" type="action">
+	<caption>On click</caption>
+	<description>Action to be performed when button is clicked</description>
+</property>
 ```
 
 An action property could appear in Studio Pro like this:
@@ -376,19 +376,19 @@ These are the supported attribute types and their corresponding types that a cli
 For *XML* elements, the Studio Pro UI *XML* is as follows:
 
 ```xml
-    <property key="percentage" type="attribute" onChange="onPercentageChange">
-        <caption>Percentage</caption>
-        <description>Progress percentage</description>
-        <attributeTypes>
-            <attributeType name="Decimal"/>
-            <attributeType name="Integer"/>
-        </attributeTypes>
-    </property>
+<property key="percentage" type="attribute" onChange="onPercentageChange">
+	<caption>Percentage</caption>
+	<description>Progress percentage</description>
+	<attributeTypes>
+		<attributeType name="Decimal"/>
+		<attributeType name="Integer"/>
+	</attributeTypes>
+</property>
     
-    <property key="onPercentageChange" type="action">
-        <caption>On change</caption>
-        <description/>
-    </property>
+<property key="onPercentageChange" type="action">
+	<caption>On change</caption>
+	<description/>
+</property>
 ```
 
 An *XML* element could appear in Studio Pro like this:
@@ -414,23 +414,23 @@ The object property allows to create an arbitrary list of properties.
 For the object property, the Studio Pro UI *XML* is as follows:
 
 ```xml
-    <property key="myObject" type="object" isList="true">
-        <caption>My object list</caption>
-        <description/>
-        <properties>
-            <propertyGroup caption="Object list group">
-                <property key="myObjectBool" type="boolean" defaultValue="true">
-                    <caption>My boolean</caption>
-                    <description>My boolean setting</description>
-                </property>
+<property key="myObject" type="object" isList="true">
+	<caption>My object list</caption>
+	<description/>
+	<properties>
+		<propertyGroup caption="Object list group">
+			<property key="myObjectBool" type="boolean" defaultValue="true">
+				<caption>My boolean</caption>
+					<description>My boolean setting</description>
+			</property>
     
-                <property key="myObjectAction" type="action">
-                    <caption>My action</caption>
-                    <description>My action setting</description>
-                </property>
-            </propertyGroup>
-        </properties>
-    </property>
+			<property key="myObjectAction" type="action">
+				<caption>My action</caption>
+				<description>My action setting</description>
+			</property>
+		</propertyGroup>
+	</properties>
+</property>
 ```
 
 An object property could appear in Studio Pro like this:

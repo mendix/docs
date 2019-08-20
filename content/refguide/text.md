@@ -2,29 +2,47 @@
 title: "Text"
 parent: "common-widgets"
 menu_order: 10
-tags: ["studio pro"]
+tags: ["studio pro", "text", "text widget", "common widget"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-The text widget shows text which can optionally contain parameters. Every parameter is replaced with the value of the attribute it refers to. The text widget is the recommended way to show text to the user.
+## 1 Introduction
 
-![](attachments/pages/text.png)
+The text widget displays a text which can contain attributes if necessary. Every attribute is replaced with the value of this attribute. For example, you can show a greeting message to a user by placing a text widget in a [data view](data-view).
 
-Text widget placed in a data view, showing a greeting message to the user.
+![Text Widget](attachments/common-widgets/text.png)
 
-If you start typing in any empty container Studio Pro will automatically generate a text widget to display your text.
+If you start typing in any empty container, Studio Pro will automatically generate a text widget to display your text.
 
-## General properties
+## 2 Properties
 
-### Text template
+An example of text properties is represented in the image below:
 
-Text template defines the text that will be shown. The template can contain parameters that are written as a number between braces, e.g. {1}. The first parameter has number 1, the second 2 etcetera. Note that to use template parameters the widget must be placed in a context of an entity, e.g. inside a [data view](data-view) or [list view](list-view).
+{{% image_container width="250" %}}![Text Properties](attachments/common-widgets/text-properties.png)
+{{% /image_container %}}
 
-### Parameters
+Text properties consist of the following sections:
+
+* [Common](#common)
+* Design Properties
+* [General](#general)
+* [Visibility](#visibility)
+
+### 2.1 Common Section
+
+{{% snippet file="refguide/common-section-link.md" %}}
+
+### 2.2 General Section {#general}
+
+#### 2.2.1 Text Template
+
+Text template defines the text that will be shown. The template can contain attributes that are written as a number between braces, e.g. {1}. The first attribute has number 1, the second – 2, etc. To use attributes the widget must be placed in a context of an entity, e.g. inside a [data view](data-view) or a [list view](list-view).
+
+#### 2.2.2 Parameters
 
 For each parameter in the template you define an attribute of the context entity or a referred entity of which the value will be inserted at the position of the parameter.
 
-### Render mode
+#### 2.2.3 Render Mode
 
 The render mode determines how the text will be shown in the web browser.
 
@@ -38,16 +56,10 @@ The render mode determines how the text will be shown in the web browser.
 
 _Default value:_ Text
 
-## Visibility properties
+### 2.4 Visibility Section {#visibility}
 
-{{% snippet file="refguide/Visibility+Property.md" %}}
+{{% snippet file="refguide/visibility-section-link.md" %}}
 
-{{% snippet file="refguide/Visibility+Property+With+Module+Roles+Simple.md" %}}
+## 3 Read More
 
-## Common properties
 
-{{% snippet file="refguide/Name+Property.md" %}}
-
-{{% snippet file="refguide/Class+Property.md" %}}
-
-{{% snippet file="refguide/Style+Property.md" %}}

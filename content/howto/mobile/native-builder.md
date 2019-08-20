@@ -19,7 +19,7 @@ The Native Builder takes your Mendix project containing a native profile and pac
 
 ## 3 About the Native Builder
 
-The Native Builder uses MxBuild, GitHub, and App Center to build your apps. The tool automates the configuration of these processes to streamline your app building experience. So long as your app names are unique, you can even create multiple apps. When run, the Native Builder packages your apps by doing the following:
+The Native Builder uses MxBuild, GitHub, and App Center to build your applications. The tool automates the configuration of these processes to streamline your app building experience. The Native builder allows you to create as many apps on GitHub as possible, as long as they are given unique app names. When run, the Native Builder packages your apps by doing the following:
 
 1. Deploys your Mendix project locally.
 2. Creates a new repository using the Mendix native template repository on GitHub named after the app name provided.
@@ -207,14 +207,14 @@ If you have added custom dependencies and still need to test against a local run
 #### 8.4.1 Getting Started
 
 1. Clone your repository locally from GitHub.
-2. Switch to the latest branch created by Native Builder (*build/1* for example)
-3. Then, Follow this [Guide](https://github.com/mendix/native-template#21-install-dependencies) on how to install dependencies.
+2. Switch to the latest branch created by Native Builder ({build/1} for example)
+3. Follow this [guide](https://github.com/mendix/native-template#21-install-dependencies) to install your dependencies.
 
 #### 8.4.2 iOS
 
 For an iOS app, do the following:
 
-1. Open the **ios/NativeTemplate.xcworkspace** file using **Xcode**.
+1. Open **ios/NativeTemplate.xcworkspace** using **Xcode**.
 2. Open **NativeTemplate/AppDelegate.swift**.
 3. Replace this section of the code (on line **13**):
 

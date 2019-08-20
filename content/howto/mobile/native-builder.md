@@ -200,9 +200,9 @@ In App Center you can configure your builds at the branch level. If no configura
 
 ### 8.4 Connecting to a Local Running Instance of Studio Pro
 
-Advanced users might wish to connect to a local running instance of Studio Pro. Be aware that if you make changes to your template, you must revert all those changes to use the Native Builder with your template.
+Advanced users might wish to connect to a local running instance of Studio Pro. Be aware that if you make the changes described in this section to your template, you must revert all those changes to use the Native Builder with your template.
 
-To successfully connect to a local instance of Studio Pro, you must also replace any instance of `LOCAL_IP_ADDRESS` with your local IP address ({10.0.0.2} for example) in your template.
+While following the instructions below, be sure to replace any instance of `LOCAL_IP_ADDRESS` with *your* local IP address ({10.0.0.2} for example).
 
 #### 8.4.1 Getting Started
 

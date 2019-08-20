@@ -65,7 +65,7 @@ String is represented as an simple text input in Studio Pro. It is passed as `st
 
 #### 2.1.2 Studio Pro UI
 
-For Single line [todo: single line what?] the Studio Pro UI XML is as follows:
+For Single line [todo: single line what?] the Studio Pro UI *XML* is as follows:
 
 ```xml
 <property key="myString" type="string">
@@ -78,7 +78,7 @@ In Studio Pro, a single line string widget appears this way:
 
 ![](https://paper-attachments.dropbox.com/s_5009BD3439660B5188074DAF5510BE4D6691349683FF768E28F7376F479D54D2_1565098954506_image.png)
 
-For Multiline (todo: multiline what?)] the Studio Pro UI XML is as follows:
+For Multiline (todo: multiline what?)] the Studio Pro UI *XML* is as follows:
 
 ```xml
 <property key="myStringMultiline" type="string" multiline="true">
@@ -106,7 +106,7 @@ Boolean is represented as a Yes/No switch [todo: find this in product to find ac
 
 #### 2.2.2 Studio Pro UI
 
-For Boolean widgets, the Studio Pro UI XML is as follows:
+For Boolean widgets, the Studio Pro UI *XML* is as follows:
 
 ```xml
 <property key="myBoolean" type="boolean" defaultValue="false">
@@ -133,7 +133,7 @@ Integer is represented as a number input in Studio Pro. It is passed as `number`
 
 #### 2.3.2 Studio Pro UI
 
-For integer widgets, the Studio Pro UI XML is as follows:
+For integer widgets, the Studio Pro UI *XML* is as follows:
 
 ```xml
 <property key="myInteger" type="integer" defaultValue="1000">
@@ -148,7 +148,7 @@ Integer widgets appear in Studio Pro like this:
 
 ### 2.4 Enumeration
 
-Enumeration allows user to select one out of multiple options defined in the XML. A key of a selected enum option is passed as `string` prop to a client component.
+Enumeration allows user to select one out of multiple options defined in the *XML*. A key of a selected enum option is passed as `string` prop to a client component.
 
 #### 2.4.1 XML Attributes
 
@@ -172,7 +172,7 @@ The `key` of a selected element will be passed to the client component. `key` sh
 
 #### 2.4.3 Studio Pro UI
 
-For enumeration value widgets, the Studio Pro UI XML is as follows:
+For enumeration value widgets, the Studio Pro UI *XML* is as follows:
 
 ```xml
 	<property key="myEnumeration" type="enumeration" defaultValue="red">
@@ -205,7 +205,7 @@ Icon allows a user to configure an icon similar to one used by [Action button](h
 | `required` | No       | Boolean        | Whether the proeprty must be specified by the user. `true` by default                                                                                                |
 #### 3.1.2 Studio Pro UI
 
-For icon components, the Studio Pro UI XML is as follows:
+For icon components, the Studio Pro UI *XML* is as follows:
 
 ```xml
 <property key="cardIcon" type="icon" required="false">
@@ -231,7 +231,7 @@ Image allows a user to configure a static image from an [Image collection](https
 | `required` | No       | Boolean        | Whether the proeprty must be specified by the user. `true` by default                                                                                                |
 #### 3.2.2 Studio Pro UI
 
-For image components, the Studio Pro UI XML is as follows:
+For image components, the Studio Pro UI *XML* is as follows:
 
 ```xml
 <property key="bgImage" type="image" required="false">
@@ -273,7 +273,7 @@ Allowed return types with corresponding types that a client components will rece
 
 #### 4.1.3 Studio Pro UI
 
-For an expression property, the Studio Pro UI XML is as follows:
+For an expression property, the Studio Pro UI *XML* is as follows:
 
 ```xml
 <property key="progressBarColor" type="expression" defaultValue="'red'">
@@ -305,7 +305,7 @@ An expression property could appear in Studio Pro like this:
 
 `<translations>` — Allows to set a default value for text templates for different languages using `<translation>` elements with a `lang` attribute representing [ISO 639](https://en.wikipedia.org/wiki/ISO_639) code of the language. Available languages are listed in the [Languages Tab](/refguide/project-settings#4-languages-tab) in Studio Pro.
 
-For `TextTemplate`, the Studio Pro UI XML is as follows:
+For `TextTemplate`, the Studio Pro UI *XML* is as follows:
 
 ```xml
 <property key="myBlockTitle" type="textTemplate">
@@ -338,7 +338,7 @@ The action property allows a user to configure an action to do things like calli
 | `required` | No       | Boolean        | Whether the proeprty must be specified by the user. `true` by default                                                                                                |
 #### 4.5.2 Studio Pro UI
 
-For an action property, the Studio Pro UI XML is as follows:
+For an action property, the Studio Pro UI *XML* is as follows:
 
 ```xml
 <property key="buttonAction" type="action">
@@ -382,6 +382,8 @@ These are the supported attribute types and their corresponding types that a cli
 * `Long` — `EditableValue<BigJS>`
 * `String` — `EditableValue<string>`
 * `Decimal` — `EditableValue<BigJS>`
+
+#### 4.6.3 Studio Pro UI
 
 For *XML* elements, the Studio Pro UI *XML* is as follows:
 
@@ -442,6 +444,8 @@ For the object property, the Studio Pro UI *XML* is as follows:
 	</properties>
 </property>
 ```
+
+#### 4.7.3 Studio Pro UI
 
 An object property could appear in Studio Pro like this:
 

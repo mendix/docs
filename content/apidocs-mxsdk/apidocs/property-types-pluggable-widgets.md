@@ -1,10 +1,13 @@
 ---
-# Property types available to Pluggable widgets
+title: "Pluggable Widget Property Types"
+category: "API Documentation"
+description: A guide for understanding pluggable widgets' property types.
+tags: ["Widget", "Pluggable", "Custom", "JavaScript", "React"]
 ---
 
 ## 1 Introduction
 
-[todo ] Make a link to this doc from https://docs.mendix.com/apidocs-mxsdk/apidocs/pluggable-widgets#7-widget-property
+todo: write intro text here
 
 Common structure of property definition:
 
@@ -19,7 +22,7 @@ Common structure of property definition:
 
 ### 2.1 `key` [required]
 
-Defines the prop key in client component props to be supplied to widget client component. It must be unique for each widget and can contain letters of all cases, digits, or underscores. However, a `key` attribute cannot *start* with a digit.
+This defines the prop key in client component props to be supplied to widget client component. It must be unique for each widget and can contain letters of all cases, digits, or underscores. However, a `key` attribute cannot *start* with a digit.
 
 ### 2.2 `**type**` [required]
 
@@ -489,3 +492,7 @@ Editability property allows a pluggable widget to have Editable configuration si
 ```xml
 <systemProperty key="Editability"/>
 ```
+
+## 8 Read More
+
+* [Pluggable Widgets API](pluggable-widgets)

@@ -200,9 +200,9 @@ In App Center you can configure your builds at the branch level. If no configura
 
 ### 8.4 Connecting to a Local Running Instance of Studio Pro
 
-If you have added custom dependencies and still need to test against a local running app in Studio Pro, you need to make some local changes to your template.
+Advanced users might wish to connect to a local running instance of Studio Pro. Be aware that if you make changes to your template, you must revert all those changes before connecting your template to the Native Builder again.
 
-> Replace any instance of `LOCAL_IP_ADDRESS` with your local IP address ({10.0.0.2} for example).
+Note that if you have added custom dependencies and still need to test against a local running app in Studio Pro, you must replace any instance of `LOCAL_IP_ADDRESS` with your local IP address ({10.0.0.2} for example) in your template.
 
 #### 8.4.1 Getting Started
 
@@ -233,7 +233,7 @@ For an iOS app, do the following:
 
 #### 8.4.3 Android
 
-> Note: Starting with Android 9 (API level 28), cleartext support is disabled by default. So if you are debugging with a device using v28 and above, you would need to include the `android:usesCleartextTraffic="true"` property in the `application` tag in your **app/src/main/AndroidManifest.xml** file.
+{{% alert type="info" %}}Starting with Android 9 (API level 28), cleartext support is disabled by default. If you are debugging with a device using v28 or higher, you need to include the `android:usesCleartextTraffic="true"` property in the `application` tag in your **app/src/main/AndroidManifest.xml** file.{{% /alert %}}
 
 For an Android app, do the following:
 

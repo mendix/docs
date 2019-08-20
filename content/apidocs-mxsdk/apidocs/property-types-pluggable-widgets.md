@@ -28,15 +28,17 @@ This defines the prop key in client component props to be supplied to widget cli
 
 This defines a property's type. A `type` must be one of the following: [ todo] Make them links to section
 
-* `action`
-* `attribute`
-* `boolean`
-* `enumeration`
-* `expression`
-* `integer`
-* `object`
-* `string`
-* `textTemplate`
+* Static Properties
+	* [`string`](#string)
+	* [`boolean`](#boolean)
+	* [`integer`](#integer)
+	* [`enumeration`](#enumeration)
+* Dynamic Properties
+	* [`expression`](#expression)
+	* [`textTemplate`](#textTemplate)
+	* [`action`](#action)
+	* [`attribute`](#attribute)
+	* [`object`](#object)
 
 ### 1.2 XML Elements
 
@@ -48,7 +50,7 @@ This defines a property's type. A `type` must be one of the following: [ todo] M
 
 Those properties are made to pass values configured in Studio or Studio Pro to the widget. They don’t depend on any dynamic data and passed to the widget client component as simple primitive values.
 
-### 2.1 String
+### 2.1 String{#string}
 
 String is represented as an simple text input in Studio Pro. It is passed as `string` prop to a client component.
 
@@ -92,7 +94,7 @@ In Studio Pro, a multi-line string widget appears this way:
 ![](https://paper-attachments.dropbox.com/s_5009BD3439660B5188074DAF5510BE4D6691349683FF768E28F7376F479D54D2_1565099729178_image.png)
 
 
-### 2.2 Boolean
+### 2.2 Boolean{#boolean}
 
 Boolean is represented as a Yes/No switch [todo: find this in product to find actual name] in Studio Pro. It is passed as `boolean` prop to a client component.
 
@@ -119,7 +121,7 @@ Boolean widgets appear in Studio Pro like this:
 
 ![](https://paper-attachments.dropbox.com/s_5009BD3439660B5188074DAF5510BE4D6691349683FF768E28F7376F479D54D2_1565100063589_image.png)
 
-### 2.3 Integer
+### 2.3 Integer{#integer}
 
 Integer is represented as a number input in Studio Pro. It is passed as `number` prop to a client component.
 
@@ -146,7 +148,7 @@ Integer widgets appear in Studio Pro like this:
 
 ![](https://paper-attachments.dropbox.com/s_5009BD3439660B5188074DAF5510BE4D6691349683FF768E28F7376F479D54D2_1565100098654_image.png)
 
-### 2.4 Enumeration
+### 2.4 Enumeration{#enumeration}
 
 Enumeration allows user to select one out of multiple options defined in the *XML*. A key of a selected enum option is passed as `string` prop to a client component.
 
@@ -246,7 +248,7 @@ An image component will appear in Studio Pro like this:
 
 ## 4 Dynamic Properties
 
-### 4.1 Expression
+### 4.1 Expression{#expression}
 
 Expression allows a user to configure an [expression](/refguide/expressions), the result of which  will be passed to the client component as a `DynamicValue<T>` where `T` depends on a return type of the expression.
 
@@ -287,7 +289,7 @@ An expression property could appear in Studio Pro like this:
 
 ![](https://paper-attachments.dropbox.com/s_5009BD3439660B5188074DAF5510BE4D6691349683FF768E28F7376F479D54D2_1564489919356_image.png)
 
-### 4.4 TextTemplate
+### 4.4 TextTemplate{#texttemplate}
 
 `TextTemplate` allows a user to configure translatable text template similar to the [text template](/refguide/text#text-template) of a text widget. The interpolated string will be passed to the client component as `DynamicValue<string>`.
 
@@ -325,7 +327,7 @@ For `TextTemplate`, the Studio Pro UI *XML* is as follows:
 
 ![](https://paper-attachments.dropbox.com/s_5009BD3439660B5188074DAF5510BE4D6691349683FF768E28F7376F479D54D2_1565103789244_image.png)
 
-### 4.5 Action
+### 4.5 Action{#action}
 
 The action property allows a user to configure an action to do things like calling nanoflows, saving changes, and opening pages. The client component will receive `ActionValue` representing it, or `undefined` when the **Do nothing** action was selected.
 
@@ -351,7 +353,7 @@ An action property could appear in Studio Pro like this:
 
 ![](https://paper-attachments.dropbox.com/s_5009BD3439660B5188074DAF5510BE4D6691349683FF768E28F7376F479D54D2_1564500861810_image.png)
 
-### 4.6 Attribute
+### 4.6 Attribute{#attribute}
 
 The attribute property allows a widget to work directly with entities' attributes, both reading and writing attributes. Depending on the widget's purposes, a widget may restrict attribute types it supports (todo: check meaning). The client component will receive `EditableValue<T>` where `T` depends on a `<attributeType>` configured.
 
@@ -407,7 +409,7 @@ An *XML* element could appear in Studio Pro like this:
 
 ![](https://paper-attachments.dropbox.com/s_5009BD3439660B5188074DAF5510BE4D6691349683FF768E28F7376F479D54D2_1564567208591_image.png)
 
-### 4.7 Object
+### 4.7 Object{#object}
 
 The object property allows to create an arbitrary list of properties.
 

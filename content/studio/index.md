@@ -7,7 +7,7 @@ frontpage_featured: true
 
 {{% alert type="warning" %}}
 
-The **Studio 8 Guide** describes Mendix Studio functionality that correlates to Mendix 8 version. It describes the latest Studio functionality and features.
+The **Studio 8 Guide** describes Mendix Studio functionality that corresponds to Mendix 8 version. It describes the latest Studio functionality and features.
 
 {{% /alert %}}
 
@@ -24,7 +24,7 @@ Studio enables you to do the following:
 
 ## 2 Document Categories
 
-The *Studio Guide* is divided into the following categories:
+The *Studio 8 Guide* is divided into the following categories:
 
 * [General Info](general) 
 * [Domain Model](domain-models)

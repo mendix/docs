@@ -7,7 +7,7 @@ frontpage_featured: false
 
 {{% alert type="warning" %}}
 
-The **Studio 7 Guide** describes Mendix Studio functionality that correlates to Mendix 7.23.7 version. For details on the latest functionality and features, see the [Studio 8 Guide](/studio). 
+The **Studio 7 Guide** describes Mendix Studio functionality that corresponds to Mendix 7.23.7 version. For details on the latest functionality and features, see the [Studio 8 Guide](/studio). 
 
 {{% /alert %}}
 
@@ -24,7 +24,7 @@ Studio enables you to do the following:
 
 ## 2 Document Categories
 
-The *Studio Guide* is divided into the following categories:
+The *Studio 7 Guide* is divided into the following categories:
 
 * [General Info](general) 
 * [Domain Model](domain-models)

@@ -202,7 +202,7 @@ In App Center you can configure your builds at the branch level. If no configura
 
 If you have added custom dependencies and still need to test against a local running app in Studio Pro, you need to make some local changes to your template.
 
-> Replace any instance of `LOCAL_IP_ADDRESS` with your local IP address (*10.0.0.2* for example).
+> Replace any instance of `LOCAL_IP_ADDRESS` with your local IP address ({10.0.0.2} for example).
 
 #### 8.4.1 Getting Started
 

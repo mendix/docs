@@ -42,9 +42,9 @@ This defines a property's type. A `type` must be one of the following: [ todo] M
 
 ### 1.2 XML Elements
 
-`**<caption>**` (required) — This defines a user-friendly name of a property visible to modeling person.
+`**<caption>**` (required) — This defines a user-friendly name of a property visible to a developer.
 
-`**<description>**` (required) — This is a description that shows a purpose of the property to a modeling person.
+`**<description>**` (required) — This is a description that shows a purpose of the property to a developer.
 
 ## 2 Static Properties
 
@@ -78,7 +78,7 @@ For Single line [todo: single line what?] the Studio Pro UI *XML* is as follows:
 
 In Studio Pro, a single line string widget appears this way:
 
-![](https://paper-attachments.dropbox.com/s_5009BD3439660B5188074DAF5510BE4D6691349683FF768E28F7376F479D54D2_1565098954506_image.png)
+![](attachments/widget-property-types/string.png)
 
 For Multiline (todo: multiline what?)] the Studio Pro UI *XML* is as follows:
 
@@ -91,8 +91,7 @@ For Multiline (todo: multiline what?)] the Studio Pro UI *XML* is as follows:
 
 In Studio Pro, a multi-line string widget appears this way:
 
-![](https://paper-attachments.dropbox.com/s_5009BD3439660B5188074DAF5510BE4D6691349683FF768E28F7376F479D54D2_1565099729178_image.png)
-
+![](attachments/widget-property-types/string-multiline.png)
 
 ### 2.2 Boolean{#boolean}
 
@@ -119,7 +118,7 @@ For Boolean widgets, the Studio Pro UI *XML* is as follows:
 
 Boolean widgets appear in Studio Pro like this:
 
-![](https://paper-attachments.dropbox.com/s_5009BD3439660B5188074DAF5510BE4D6691349683FF768E28F7376F479D54D2_1565100063589_image.png)
+![](attachments/widget-property-types/boolean.png)
 
 ### 2.3 Integer{#integer}
 
@@ -146,7 +145,7 @@ For integer widgets, the Studio Pro UI *XML* is as follows:
 
 Integer widgets appear in Studio Pro like this:
 
-![](https://paper-attachments.dropbox.com/s_5009BD3439660B5188074DAF5510BE4D6691349683FF768E28F7376F479D54D2_1565100098654_image.png)
+![](attachments/widget-property-types/integer.png)
 
 ### 2.4 Enumeration{#enumeration}
 
@@ -190,13 +189,13 @@ For enumeration value widgets, the Studio Pro UI *XML* is as follows:
 
 Enumeration widgets appear in Studio Pro like this:
 
-![](https://paper-attachments.dropbox.com/s_5009BD3439660B5188074DAF5510BE4D6691349683FF768E28F7376F479D54D2_1565100380376_image.png)
+![](attachments/widget-property-types/enumeration.png)
 
 ## 3 Components
 
 ### 3.1 Icon
 
-Icon allows a user to configure an icon similar to one used by [Action button](https://docs.mendix.com/refguide/action-button#icon). It is passed as `DynamicValue<IconValue>` prop to a client component.
+Icon allows a user to configure an icon similar to one used by [Action button](/refguide/action-button#icon). It is passed as `DynamicValue<IconValue>` prop to a client component.
 
 #### 3.1.1 XML Attributes
 
@@ -218,7 +217,7 @@ For icon components, the Studio Pro UI *XML* is as follows:
 
 An icon component will appear in Studio Pro like this:
 
-![](https://paper-attachments.dropbox.com/s_81786A5931B829139B98071139DA0CB7AC3499B0317A73DEBE39335668768ACA_1565096170318_image.png)
+![](attachments/widget-property-types/icon.png)
 
 ### 3.2 Image
 
@@ -244,7 +243,7 @@ For image components, the Studio Pro UI *XML* is as follows:
 
 An image component will appear in Studio Pro like this:
 
-![](https://paper-attachments.dropbox.com/s_81786A5931B829139B98071139DA0CB7AC3499B0317A73DEBE39335668768ACA_1565096923473_image.png)
+![](attachments/widget-property-types/image.png)
 
 ## 4 Dynamic Properties
 
@@ -287,7 +286,7 @@ For an expression property, the Studio Pro UI *XML* is as follows:
 
 An expression property could appear in Studio Pro like this:
 
-![](https://paper-attachments.dropbox.com/s_5009BD3439660B5188074DAF5510BE4D6691349683FF768E28F7376F479D54D2_1564489919356_image.png)
+![](attachments/widget-property-types/.png)
 
 ### 4.4 TextTemplate{#texttemplate}
 
@@ -325,7 +324,7 @@ For `TextTemplate`, the Studio Pro UI *XML* is as follows:
 
 `TextTemplate` could appear in Studio Pro like this:
 
-![](https://paper-attachments.dropbox.com/s_5009BD3439660B5188074DAF5510BE4D6691349683FF768E28F7376F479D54D2_1565103789244_image.png)
+![](attachments/widget-property-types/text.png)
 
 ### 4.5 Action{#action}
 
@@ -351,7 +350,7 @@ For an action property, the Studio Pro UI *XML* is as follows:
 
 An action property could appear in Studio Pro like this:
 
-![](https://paper-attachments.dropbox.com/s_5009BD3439660B5188074DAF5510BE4D6691349683FF768E28F7376F479D54D2_1564500861810_image.png)
+![](attachments/widget-property-types/action.png)
 
 ### 4.6 Attribute{#attribute}
 
@@ -407,7 +406,7 @@ For *XML* elements, the Studio Pro UI *XML* is as follows:
 
 An *XML* element could appear in Studio Pro like this:
 
-![](https://paper-attachments.dropbox.com/s_5009BD3439660B5188074DAF5510BE4D6691349683FF768E28F7376F479D54D2_1564567208591_image.png)
+![](attachments/widget-property-types/xml-element.png)
 
 ### 4.7 Object{#object}
 
@@ -451,7 +450,7 @@ For the object property, the Studio Pro UI *XML* is as follows:
 
 An object property could appear in Studio Pro like this:
 
-![](https://paper-attachments.dropbox.com/s_5009BD3439660B5188074DAF5510BE4D6691349683FF768E28F7376F479D54D2_1565101889323_image.png)
+![](attachments/widget-property-types/object.png)
 
 ## 5 System Properties
 
@@ -459,7 +458,8 @@ System properties is a way for a pluggable widget to adopt extended widget funct
 (todo: figure out how to format this)**Required attributes**
 `**key**`
 
-    Defines the type of a system property. The following values are allowed:
+Defines the type of a system property. The following values are allowed:
+    
 * `Label`
 * `Name`
 * `TabIndex`

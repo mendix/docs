@@ -202,7 +202,7 @@ In App Center you can configure your builds at the branch level. If no configura
 
 Advanced users might wish to connect to a local running instance of Studio Pro. Be aware that if you make changes to your template, you must revert all those changes to use the Native Builder with your template.
 
-Note that if you have added custom dependencies and still need to test against a local running app in Studio Pro, you must replace any instance of `LOCAL_IP_ADDRESS` with your local IP address ({10.0.0.2} for example) in your template.
+To successfully connect to a local instance of Studio Pro, you must also replace any instance of `LOCAL_IP_ADDRESS` with your local IP address ({10.0.0.2} for example) in your template.
 
 #### 8.4.1 Getting Started
 

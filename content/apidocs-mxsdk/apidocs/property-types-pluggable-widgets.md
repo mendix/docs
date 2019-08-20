@@ -56,13 +56,13 @@ String is represented as an simple text input in Studio Pro. It is passed as `st
 
 #### 2.1.1 XML Attributes
 
-| Attribute      | Required | Attribute Type | Description                                                                                                                                                          |
-| -------------- | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `type`         | Yes      | String         | Must be `string`                                                                                                                                                     |
+| Attribute      | Required | Attribute Type | Description                                                  |
+| -------------- | -------- | -------------- | ------------------------------------------------------------ |
+| `type`         | Yes      | String         | Must be `string`                                             |
 | `key`          | Yes      | String         | [+Property types available to Pluggable widgets: key](https://paper.dropbox.com/doc/Property-types-available-to-Pluggable-widgets-key-khDOHBDy9pr5leYZzqQoK#:h2=key) |
-| `defaultValue` | No       | String         | Default value for the property.                                                                                                                                      |
-| `multiline`    | No       | Boolean        | `true` to enable multiline input in the Studio, `false` otherwise.                                                                                                   |
-| `required`     | No       | Boolean        | Whether the proeprty must be specified by the user. `true` by default                                                                                                |
+| `defaultValue` | No       | String         | Default value for the property.                              |
+| `multiline`    | No       | Boolean        | `true` to enable multiline input in the Studio, `false` otherwise. |
+| `required`     | No       | Boolean        | Whether the property must be specified by the user. `true` by default |
 
 
 #### 2.1.2 Studio Pro UI

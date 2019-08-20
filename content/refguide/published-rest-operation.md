@@ -54,7 +54,7 @@ An operation has different parameters:
 
 A microflow for an operation takes these operation parameters as input.
 
-A microflow parameter that has the *List* or *Object* type indicates a body parameter. You can specify an import mapping to convert the incoming JSON or XML. A parameter of type a *FileDocument* (or that inherits from *FileDocument*) is special: it can also be used for form parameters, and an import mapping is not needed.
+A microflow parameter that has the *List* or *Object* type indicates a body parameter. You can specify an import mapping to convert the incoming JSON or XML. A parameter of the *FileDocument* type (or that inherits from a *FileDocument*) is special: It can also be used for form parameters, and an import mapping is not needed.
 
 An operation microflow may also take an [HttpRequest](http-request-and-response-entities#http-request) parameter. You can add this parameter if you would like to inspect the requested URL and headers.
 

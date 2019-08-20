@@ -19,7 +19,7 @@ The Native Builder takes your Mendix project containing a native profile and pac
 
 ## 3 About the Native Builder
 
-Native Builder uses MxBuild, GitHub, and App Center to build your apps. The tool automates the configuration of these processes to streamline your app building experience. When run, the Native Builder packages your apps by doing the following:
+The Native Builder uses MxBuild, GitHub, and App Center to build your applications. The tool automates the configuration of these processes to streamline your app building experience. The Native builder allows you to create as many apps on GitHub as possible, as long as they are given unique app names. When run, the Native Builder packages your apps by doing the following:
 
 1. Deploys your Mendix project locally.
 2. Creates a new repository using the Mendix native template repository on GitHub named after the app name provided.
@@ -68,9 +68,9 @@ Command-line arguments provide information to the Native Builder, such as where 
 
 |   Parameter   |   Description   |   Example   |
 | ---- | ---- | ---- |
-|   `--java-home`   |   Absolute path to the directory where Java executable is located   |   `"C:\Program Files\Java\jdk-11.0.1"`   |
-|   `--project-path`   |   Absolute path to the Mendix project file   | `"C:\MyApp\MyApp.mpr"`     |
-|   `--mxbuild-path`   |   Absolute path to MxBuild executable   |   `"C:\Program Files\Mendix\8.0.0\modeler\mxbuild.exe"`   |
+|   `--java-home`   |   Absolute path to the directory where Java executable is located   |   `C:\Program Files\Java\jdk-11.0.1`   |
+|   `--project-path`   |   Absolute path to the Mendix project file   | `C:\MyApp\MyApp.mpr`     |
+|   `--mxbuild-path`   |   Absolute path to MxBuild executable   |   `C:\Program Files\Mendix\8.0.0\modeler\mxbuild.exe`   |
 |   `--runtime-url`   |   URL of the Mendix runtime   |   `https://myapp.mendixcloud.com`   |
 |   `--github-access-token`   |   GitHub access token   |   `c0e1dasf1e102c55ded223dbdebdbe59asf95224`   |
 |   `--appcenter-api-token`   |   App Center API token   |   `3e18asdfb43f4fe6c85afsd0bf60dde72f134`   |
@@ -78,7 +78,9 @@ Command-line arguments provide information to the Native Builder, such as where 
 |   `--app-version`   |   Version of the app   |  `1.2.3`   |
 |   `--build-number`   |   Build number, an arbitrary unique integer value   |   `1`   |
 |   `--app-identifier`   |   Unique app identifier   |   `com.mendix.MyAwesomeApp`   |
-|   `--app-icon-path`   |   (Optional) Absolute path to the app icon   |   `"C:\MyAppIcon.png"`   |
+|   `--app-icon-path`   |   (Optional) Absolute path to the app icon   |   `C:\MyAppIcon.png`   |
+|   `--app-round-icon-path`   |   (Optional) Absolute path to the app round icon, specific to android    |   `C:\MyAppRoundIcon.png`   |
+|   `--app-splash-screen-path`   |   (Optional) Absolute path to the app splash screen image   |   `C:\MyAppSplash.png`   |
 |   `--appcenter-organization`   |   (Optional) Organization name used in App Center   |   `my-company`   |
 |   `--output-path`   |	  (Optional) Absolute path to the location where artifacts should be outputed   |   `C:\Downloads`   |
 
@@ -108,7 +110,15 @@ This parameter serves as a unique identifier for your app. Once your app is uplo
 
 This parameter specifies an app icon file. The image must be a *.png* file, and have a resolution of 1024x1024. Mendix will do the resizing for you. If a file path is not provided, default app icons will be provided by branch **master**.
 
-#### 5.2.7 --build-number
+#### 5.2.7 --app-round-icon-path
+
+This parameter specifies an app round icon file which is specific to Android. The image must be a *.png* file, and have a resolution of 1024x1024. Mendix will do the resizing for you. If a file path is not provided, default app icons will be provided by branch **master**.
+
+#### 5.2.8 --app-splash-screen-path
+
+This parameter specifies an app splash file. The image must be a *.png* file, and have a resolution of 1440x2560. Mendix will do the resizing for you. If a file path is not provided, default app splash images will be provided by branch **master**.
+
+#### 5.2.9 --build-number
 
 Every build that is scheduled for release should have a unique, incrementing number. This number will be used as the name of the branch in GitHub, such as `branch/120`. The highest integer Android will allow is 2,147,483,647. Consider starting with 1 and incrementing by one with each release. Alternatively, you can use dates in the “YYmmddHHmm” format, such as `2007310950` for a build run on July 31, 2020 at 09:50.
 
@@ -187,6 +197,52 @@ If you have custom native dependencies or code, you can include them in your app
 ### 8.3 Custom App Center Configuration
 
 In App Center you can configure your builds at the branch level. If no configuration is available for branch **master**, Native Builder will create a default configuration. If a configuration is already present, it will not be modified by the tool. When a branch for a build is initialized, the configuration of **master** is copied over. Consecutive builds will not alter this branch's configuration. This is to avoid overriding your custom configuration.
+
+### 8.4 Connecting to a Local Running Instance of Studio Pro
+
+Advanced users might wish to connect to a local running instance of Studio Pro. Be aware that if you make the changes described in this section to your template, you must revert all those changes to use the Native Builder with your template.
+
+While following the instructions below, be sure to replace any instance of `LOCAL_IP_ADDRESS` with *your* local IP address ({10.0.0.2} for example).
+
+#### 8.4.1 Getting Started
+
+1. Clone your repository locally from GitHub.
+2. Switch to the latest branch created by Native Builder ({build/1} for example)
+3. Follow this [guide](https://github.com/mendix/native-template#21-install-dependencies) to install your dependencies.
+
+#### 8.4.2 iOS
+
+For an iOS app, do the following:
+
+1. Open **ios/NativeTemplate.xcworkspace** using **Xcode**.
+2. Open **NativeTemplate/AppDelegate.swift**.
+3. Replace this section of the code (on line **13**):
+
+   ```swift
+   let bundleUrl = Bundle.main.url(forResource: "index.ios", withExtension: "bundle", subdirectory: "Bundle")
+   ```
+
+   with the following code:
+
+   ```swift
+   let bundleUrl = AppUrl.forBundle(url: "http://LOCAL_IP_ADDRESS:8080", remoteDebuggingPackagerPort: 8083, isDebuggingRemotely: true)
+   ```
+
+4. Locate the **Info.plist** file and replace the value of `Runtime url` with `http://LOCAL_IP_ADDRESS:8080`.
+5. Run the app by clicking the **Play** button.
+
+#### 8.4.3 Android
+
+{{% alert type="info" %}}Starting with Android 9 (API level 28), cleartext support is disabled by default. If you are debugging with a device using v28 or higher, you need to include the `android:usesCleartextTraffic="true"` property in the `application` tag in your **app/src/main/AndroidManifest.xml** file.{{% /alert %}}
+
+For an Android app, do the following:
+
+1. Open the `android` directory using Android Studio.
+2. Open **app/src/main/java/com/mendix/nativetemplate/MainApplication.java**.
+3. On line **35** replace `false` with `true`.
+4. Open **app/src/main/res/raw/runtime_url**.
+5. Replace the file's contents with `http://LOCAL_IP_ADDRESS:8080`.
+6. Run the app by clicking the **Play** button.
 
 ## 9 When to Sync Your Native Template {#sync-your-repository}
 

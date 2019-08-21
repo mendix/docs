@@ -334,7 +334,7 @@ The action property allows a user to configure an action to do things like calli
 | ---------- | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `type`     | Yes      | String         | Must be `action`                                                                                                                                                     |
 | `key`      | Yes      | String         | [+Property types available to Pluggable widgets: key](https://paper.dropbox.com/doc/Property-types-available-to-Pluggable-widgets-key-khDOHBDy9pr5leYZzqQoK#:h2=key) |
-| `required` | No       | Boolean        | Whether the proeprty must be specified by the user. `true` by default                                                                                                |
+| `required` | No       | Boolean        | Whether the property must be specified by the user. `true` by default                                                                                                |
 #### 4.5.2 Studio Pro UI
 
 For an action property, the Studio Pro UI *XML* is as follows:
@@ -453,7 +453,7 @@ An object property could appear in Studio Pro like this:
 ## 5 System Properties
 
 System properties is a way for a pluggable widget to adopt extended widget functionality provided by Mendix platform. System properties should be defined as `<systemProperty>` elements.
-(todo: figure out how to format this)**Required attributes**
+(todo: figure out how to format this, make it more clear, as it is linked to in 2 or more tables in this doc)**Required attributes**
 `**key**`
 
 Defines the type of a system property. The following values are allowed:

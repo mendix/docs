@@ -24,27 +24,30 @@ The common structure of a property definition is as follows:
 
 This defines the prop key in the client component props which are supplied to the widget client component. Each property must have a unique `key` which can contain letters of all cases, digits, or underscores. However, a `key` attribute cannot *start* with a digit.
 
-#### 1.1.2 `**type**` (required)
+#### 1.1.2 `type` (required)
 
 This defines a property's type. A `type` must be one of the following: 
 
 * Static Properties
 	* [string](#string)
-	* [Boolean](#boolean)
+	* [boolean](#boolean)
 	* [integer](#integer)
 	* [enumeration](#enumeration)
+* Component Properties
+	* [icon](#icon)
+	* [image](#image)
 * Dynamic Properties
 	* [expression](#expression)
-	* [TextTemplate](#textTemplate)
+	* [textTemplate](#textTemplate)
 	* [action](#action)
 	* [attribute](#attribute)
 	* [object](#object)
 
 ### 1.2 XML Elements
 
-`**<caption>**` (required) — This defines the property name visible for the user (not an end-user) while configuring the widget in Studio and Studio Pro.
+`<caption>` (required) — This defines the property name visible for the user (not an end-user) while configuring the widget in Studio and Studio Pro.
 
-`**<description>**` (required) — This is a description which explains a property's purpose.
+`<description>` (required) — This is a description which explains a property's purpose.
 
 ## 2 Static Properties
 
@@ -149,7 +152,7 @@ An integer property can appear in Studio Pro like this:
 
 ### 2.4 Enumeration{#enumeration}
 
-Enumeration allows a user to select one out of multiple options defined in the *XML*. A key of a selected enumeration that option is passed as `string` prop to a client component [todo: clarify? add comma after enumeration? does key need tics?].
+Enumeration allows a user to select one out of multiple options defined in the *XML*. The `key` of a selected enumeration element is passed as `string` prop to a client component.
 
 #### 2.4.1 XML Attributes
 
@@ -201,7 +204,7 @@ Icon allows a user to configure an icon similar to one used by an [action button
 | ---------- | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `type`     | Yes      | String         | Must be `icon`                                                                                                                                                       |
 | `key`      | Yes      | String         | [+Property types available to Pluggable widgets: key](https://paper.dropbox.com/doc/Property-types-available-to-Pluggable-widgets-key-khDOHBDy9pr5leYZzqQoK#:h2=key) |
-| `required` | No       | Boolean        | Whether the proeprty must be specified by the user. `true` by default                                                                                                |
+| `required` | No       | Boolean        | Whether the property must be specified by the user. `true` by default                                                                                                |
 #### 3.1.2 Studio Pro UI
 
 For icon components, the Studio Pro UI *XML* is as follows:
@@ -227,7 +230,7 @@ Image allows a user to configure a static image from an [image collection](https
 | ---------- | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `type`     | Yes      | String         | Must be `image`                                                                                                                                                      |
 | `key`      | Yes      | String         | [+Property types available to Pluggable widgets: key](https://paper.dropbox.com/doc/Property-types-available-to-Pluggable-widgets-key-khDOHBDy9pr5leYZzqQoK#:h2=key) |
-| `required` | No       | Boolean        | Whether the proeprty must be specified by the user. `true` by default                                                                                                |
+| `required` | No       | Boolean        | Whether the property must be specified by the user. `true` by default                                                                                                |
 #### 3.2.2 Studio Pro UI
 
 For image components, the Studio Pro UI *XML* is as follows:
@@ -256,7 +259,7 @@ Expression allows a user to configure an [expression](/refguide/expressions), th
 | `type`         | Yes      | String              | Must be `expression`                                                                                                                                                 |
 | `key`          | Yes      | String              | [+Property types available to Pluggable widgets: key](https://paper.dropbox.com/doc/Property-types-available-to-Pluggable-widgets-key-khDOHBDy9pr5leYZzqQoK#:h2=key) |
 | `defaultValue` | No       | String (Expression) | Default value for the property.                                                                                                                                      |
-| `required`     | No       | Boolean             | Whether the proeprty must be specified by the user. `true` by default                                                                                                |
+| `required`     | No       | Boolean             | Whether the property must be specified by the user. `true` by default                                                                                                |
 
 #### 4.1.2 XML Elements
 
@@ -352,7 +355,7 @@ An action property could appear in Studio Pro like this:
 
 ### 4.6 Attribute{#attribute}
 
-The attribute property allows a widget to work directly with entities' attributes, both reading and writing attributes. Depending on the widget's purposes, a widget may restrict attribute types it supports (todo: check meaning). The client component will receive `EditableValue<T>` where `T` depends on a `<attributeType>` configured.
+The attribute property allows a widget to work directly with entities' attributes, both reading and writing attributes. Depending on the widget's purposes, a widget should define attribute types it supports. The client component will receive `EditableValue<T>` where `T` depends on a `<attributeType>` configured.
 
 #### 4.6.1 XML Attributes
 
@@ -452,12 +455,8 @@ An object property could appear in Studio Pro like this:
 
 ## 5 System Properties
 
-System properties is a way for a pluggable widget to adopt extended widget functionality provided by Mendix platform. System properties should be defined as `<systemProperty>` elements.
-(todo: figure out how to format this, make it more clear, as it is linked to in 2 or more tables in this doc)**Required attributes**
-`**key**`
+System properties is a way for a pluggable widget to adopt extended widget functionality provided by Mendix platform. System properties should be defined as `<systemProperty>` elements. The only property XML attribute `<systemProperty>` requires is `key` attribute, which defines a system property's type. The following values are allowed:
 
-Defines the type of a system property. The following values are allowed:
-    
 * `Label`
 * `Name`
 * `TabIndex`
@@ -498,7 +497,7 @@ Every pluggable widget can be [conditionally hidden](/refguide/conditions). This
 
 ### 5.5 Editability
 
-The editability property allows a pluggable widget to have an editable configuration similar to a [core input widget](/refguide/text-box#editability-properties). When a widget is marked as read-only or conditionally editable with condition being false, all [EditableValues](todo: figure out where this anchor link was supposed to go) its client component receives will have `readOnly` flag.
+The editability property allows a pluggable widget to have an editable configuration similar to a [core input widget](/refguide/text-box#editability-properties). When a widget is marked as read-only or conditionally editable with condition being false, all [editable values](client-apis-for-pluggable-widgets#editable-value) its client component receives will have `readOnly` flag.
 
 ```xml
 <systemProperty key="Editability"/>

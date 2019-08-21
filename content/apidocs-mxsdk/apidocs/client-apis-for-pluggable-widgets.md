@@ -90,7 +90,7 @@ Though the type definition above looks complex, it is fairly simply to use becau
 	* In case a dynamic value was previously in a `ValueStatus.Available` state, then the previous `value` is still returned. This is done so that a component can keep showing the previous value if it doesn’t need to handle `Loading` explicitly. This prevents flickering: a state when a displayed value rapidly changes between loading and not loading several times.
 	* In other cases, the `value` is `undefined`. This is a common situation while a page is still being loaded.
 
-### 4.3 EditableValue
+### 4.3 EditableValue {#editable-value}
 
 EditableValue is used to represent values that can be changed by a pluggable widget client component and is currently passed only to [Attribute properties](link to another doc todo: Pluggable Widgets API? Which section?). It is defined as follows:
 

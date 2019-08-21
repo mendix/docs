@@ -194,7 +194,7 @@ An enumeration property can appear in Studio Pro like this:
 
 ## 3 Components
 
-### 3.1 Icon
+### 3.1 Icon {#icon}
 
 Icon allows a user to configure an icon similar to one used by an [action button](/refguide/action-button#icon). It is passed as `DynamicValue<IconValue>` prop to a client component.
 
@@ -220,7 +220,7 @@ An icon component will appear in Studio Pro like this:
 
 ![](attachments/widget-property-types/icon.png)
 
-### 3.2 Image
+### 3.2 Image {#image}
 
 Image allows a user to configure a static image from an [image collection](https://docs.mendix.com/refguide/image-collection). It is passed as `DynamicValue<ImageValue>` prop to a client component.
 
@@ -423,7 +423,7 @@ The object property allows to create an arbitrary list of properties.
 
 #### 4.7.2 XML Elements
 
-`<properties>` (required) — This encapsulates the list or properties to be configured. Properties must be grouped by `<propertyGroup>` elements. Nested object properties are not supported.
+`<properties>` (required) — This encapsulates the list or properties to be configured. For more information on property groups, see the [Property Groups](pluggable-widgets#property-groups) section of *Pluggable Widgets API*. Properties must be grouped by `<propertyGroup>` elements. Nested object properties are not supported.
 
 For the object property, the Studio Pro UI *XML* is as follows:
 

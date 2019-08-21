@@ -832,4 +832,5 @@ The default class to style all web views is named `com_mendix_widget_native_webv
 ## 11 Read More
 
 * [Style Your Mendix Native App](/howto/mobile/how-to-use-native-styling)
-* [Native Styling](/howto/mobile/native-styling)
+* [Implement Native Styling](/howto/mobile/native-styling)
+

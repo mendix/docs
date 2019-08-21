@@ -79,7 +79,7 @@ For the single line property the Studio Pro UI *XML* is as follows:
 </property>
 ```
 
-In Studio Pro, a single line string widget appears this way:
+In Studio Pro, a single line string property appears this way:
 
 ![](attachments/widget-property-types/string.png)
 

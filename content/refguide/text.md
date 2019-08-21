@@ -8,7 +8,7 @@ tags: ["studio pro", "text", "text widget", "common widget"]
 
 ## 1 Introduction
 
-The text widget displays a text which can contain attributes if necessary. Every attribute is replaced with the value of this attribute. For example, you can show a greeting message to a user by placing a text widget in a [data view](data-view).
+The text widget displays a text which can contain parameters if necessary. Every attribute is replaced with the value of this attribute. For example, you can show a greeting message to a user by placing a text widget in a [data view](data-view) and adding parameters to it.
 
 ![Text Widget](attachments/common-widgets/text.png)
 
@@ -34,25 +34,53 @@ Text properties consist of the following sections:
 
 ### 2.2 General Section {#general}
 
-#### 2.2.1 Text Template
+#### 2.2.1 Caption
 
-Text template defines the text that will be shown. The template can contain attributes that are written as a number between braces, e.g. {1}. The first attribute has number 1, the second – 2, etc. To use attributes the widget must be placed in a context of an entity, e.g. inside a [data view](data-view) or a [list view](list-view).
+**Caption** defines a text that will be shown. The caption can contain parameters that are written as a number between braces, e.g. {1}. The first parameter has number 1, the second – 2, etc. 
+
+For more information on using parameters, see the [Parameters]() section below. 
 
 #### 2.2.2 Parameters
 
-For each parameter in the template you define an attribute of the context entity or a referred entity of which the value will be inserted at the position of the parameter.
+Parameters are attributes the value of which will be displayed. To view **Parameters**, do one of the following:
+
+*  Double-click the **Caption** setting in properties.
+*  Double-click the text widget on the page and click **Edit** in the **General** section > **Caption**.  
+
+Parameters have the following settings:
+
+* **Index** – an identification number of a parameter 
+* **Attribute (path)** – an attribute a value of which will be displayed 
+* **Format** – a format in which an attribute value will be displayed
+
+##### 2.2.2.1 Adding New Parameters
+
+To use parameters, do the following:
+
+1. Place the **Text** widget must be placed in a context of an entity, i.e. inside a [data widget](data-widgets).
+2. Double-click the **Caption** setting in the text widget properties.
+3. In the **Edit Caption** dialog window > **Parameters** section click **New**.
+4. In the **Edit Template Parameter** dialog window, click **Select**, choose an attribute and confirm your choice. 
+5. In the **Caption** setting, write the text you would like to display and use **Index** of the parameter you would like to include. In the example below, to include a Full Name of your customer, you need to use {1} index:  
+
+##### 2.2.2.2 Performing Other Actions on Parameters
+
+In addition to adding new parameters, you can perform the following actions on parameters:
+
+* **Delete** – to delete a parameter click Delete or press <kbd>Delete</kbd> on your keyboard
+* **Edit** – double-click a parameter to edit it or click Edit
+* **Move up** – to move a parameter up in the list of parameters and also to change its index, click **Move up**
+*  **Move down** – to move a parameter down in the list of parameters and also to change its index, click **Move down**
 
 #### 2.2.3 Render Mode
 
-The render mode determines how the text will be shown in the web browser.
+The render mode determines how the text will be displayed. 
 
 | Value     | Description |
 | --------- | ----------- |
-| Text      | The text will be rendered inline with the previous/next texts on a page (`<span>` tag in HTML) |
-| Paragraph | The text will be rendered as a separate paragraph (`<p>` tag in HTML) |
-| Heading 1 | The text will be rendered as a large heading (`<h1>` tag in HTML) |
-| ...       | ... |
-| Heading 6 | The text will be rendered as a small heading (`<h6>` tag in HTML) |
+| Text      | The text will be rendered inline with the previous/next texts on a page (`<span>` tag in HTML). |
+| Paragraph | The text will be rendered as a separate paragraph (`<p>` tag in HTML). |
+| Heading 1 - Heading 6 | The text will be rendered as a selected heading (for example, `<h1>` tag in HTML). **Heading 1** is the largest type of heading, **Heading 6** is the smallest one. |
 
 _Default value:_ Text
 
@@ -62,4 +90,6 @@ _Default value:_ Text
 
 ## 3 Read More
 
-
+* [Page](page)
+* [Common Widgets](common-widgets)
+* [Properties Common for Widgets](common-widget-properties)

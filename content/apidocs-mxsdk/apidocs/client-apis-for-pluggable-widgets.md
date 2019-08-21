@@ -7,7 +7,7 @@ tags: ["Widget", "Pluggable",  "JavaScript"]
 
 ## 1 Introduction
 
-The main API the Mendix platform provides to a pluggable widget client component is the props the component is passed **todo: rewrite for clarity**. These props resemble the structure of properties specified in the widget definition XML file (a structure described in [Pluggable Widgets API](pluggable-widgets)). A property's attribute type affects how the property will be represented to the client component. Simply, an attribute's type defines what will it be. You can find the correspondence in the separate [document](link to page Property types) and here we describe all interfaces that property value can adhere to in more details **todo: delete sentence, save to put in after property doc comes out**.
+The main API the Mendix platform provides to a pluggable widget client component is the props the component is passed **todo: rewrite for clarity**. These props resemble the structure of properties specified in the widget definition XML file (a structure described in [Pluggable Widgets API](pluggable-widgets)). A property's attribute type affects how the property will be represented to the client component. Simply, an attribute's type defines what will it be. You can find the more details on property types and the interfaces that property value can adhere to in [Pluggable Widget Property Types](property-types-pluggable-widgets).
 
 The Mendix platform also exposes a few JavaScript modules, specifically extra Mendix APIs as well as existing libraries, like React, that client components must share with the platform to function properly. For more information on exposed libraries, see the [Exposed Libraries](#exposed-libraries) section below.
 
@@ -31,7 +31,7 @@ A user can specify multiple classes for every widget. They can do this either di
 
 ### 3.3 Style
 
-A user can specify a custom CSS for every widget on a web page by using the [style](/refguide/container#style) property. This styling is passed to a client component through an optional **style** prop of the type `CSSProperties` (the **style** prop is `undefined` if no inline style was configured).
+A user can specify a custom CSS for every widget on a web page by using the [style](/refguide/container#style) property. This styling is passed to a client component through an optional **style** prop of the type `CSSProperties`.
 
 On native pages, the meaning of a **style** prop is very different. First of all, a user cannot specify the aforementioned inline styles for widgets on a native page. So a **style** prop is used to pass styles computed based on configured classes. A client component will receive an array of [style objects](/refguide/native-styling-refguide#2-style-objects).
 
@@ -78,7 +78,7 @@ DynamicValue is used to represent values that can change over time and is used b
     }
 ```
 
-A component will receive a `DynamicValue<X>`  where type `X` depends on a property configuration. For example, for the [TextTemplate property](link to second doc todo: Pluggable Widgets API?) it will be `DynamicValue<string>`, but for the [Expression property](todo: Pluggable Widgets API?) `X` will depend on a configured `returnType`.
+A component will receive a `DynamicValue<X>`  where type `X` depends on a property configuration. For example, for the [TextTemplate property](property-types-pluggable-widgets#texttemplate) it will be `DynamicValue<string>`, but for the [expression property](property-types-pluggable-widgets#expression) `X` will depend on a configured `returnType`.
 
 Though the type definition above looks complex, it is fairly simply to use because a component can always read `DynamicValue.value`. This field either contains an actual value, such as an interpolated `string` in the case of a Text template, or the last known correct value if the value is being recomputed, such as when a parent Data view reloads its Data source. In other cases the value is set as `undefined`.
 
@@ -92,7 +92,7 @@ Though the type definition above looks complex, it is fairly simply to use becau
 
 ### 4.3 EditableValue {#editable-value}
 
-EditableValue is used to represent values that can be changed by a pluggable widget client component and is currently passed only to [Attribute properties](link to another doc todo: Pluggable Widgets API? Which section?). It is defined as follows:
+EditableValue is used to represent values that can be changed by a pluggable widget client component and is currently passed only to [attribute properties](property-types-pluggable-widgets#attribute). It is defined as follows:
 
 ```
     export interface EditableValue<T extends AttributeValue> {
@@ -134,7 +134,7 @@ The optional field `universe` is used to indicate the set of all possible values
 
 ### 4.4 IconValue
 
-`DynamicValue<IconValue>` is used to represent icons: small pictograms in the Mendix platform. Those can be static or dynamic file- or font-based images. An icon can only be configured through an [Icon](todo: add what link?) property. `IconValue` is defined as follows:
+`DynamicValue<IconValue>` is used to represent icons: small pictograms in the Mendix platform. Those can be static or dynamic file- or font-based images. An icon can only be configured through an [icon](property-types-pluggable-widgets#attribute) property. `IconValue` is defined as follows:
 
 ```
     interface GlyphIcon {

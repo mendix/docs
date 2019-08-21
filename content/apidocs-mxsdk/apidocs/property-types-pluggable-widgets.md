@@ -62,7 +62,7 @@ String is represented as a simple text input in Studio Pro. It is passed as a `s
 | Attribute      | Required | Attribute Type | Description                                                  |
 | -------------- | -------- | -------------- | ------------------------------------------------------------ |
 | `type`         | Yes      | String         | Must be `string`                                             |
-| `key`          | Yes      | String         | [+Property types available to Pluggable widgets: key](https://paper.dropbox.com/doc/Property-types-available-to-Pluggable-widgets-key-khDOHBDy9pr5leYZzqQoK#:h2=key) |
+| `key`          | Yes      | String         | [+Property types available to pluggable widgets: key](#system-properties) |
 | `defaultValue` | No       | String         | Default value for the property.                              |
 | `multiline`    | No       | Boolean        | `true` to enable multiline input in the Studio, `false` otherwise. |
 | `required`     | No       | Boolean        | Whether the property must be specified by the user. `true` by default |
@@ -105,7 +105,7 @@ Boolean is represented as a toggle in Studio Pro. It is passed as `boolean` prop
 | Attribute      | Required | Attribute Type | Description                                                                                                                                                          |
 | -------------- | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `type`         | Yes      | String         | Must be `boolean`                                                                                                                                                    |
-| `key`          | Yes      | String         | [+Property types available to Pluggable widgets: key](https://paper.dropbox.com/doc/Property-types-available-to-Pluggable-widgets-key-khDOHBDy9pr5leYZzqQoK#:h2=key) |
+| `key`          | Yes      | String         | [+Property types available to pluggable widgets: key](#system-properties) |
 | `defaultValue` | Yes      | Boolean        | Default value for the property. `true` or `false`                                                                                                                    |
 
 #### 2.2.2 Studio Pro UI
@@ -132,7 +132,7 @@ Integer is represented as a number input in Studio Pro. It is passed as a `numbe
 | Attribute      | Required | Attribute Type | Description                                                                                                                                                          |
 | -------------- | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `type`         | Yes      | String         | Must be `integer`                                                                                                                                                    |
-| `key`          | Yes      | String         | [+Property types available to Pluggable widgets: key](https://paper.dropbox.com/doc/Property-types-available-to-Pluggable-widgets-key-khDOHBDy9pr5leYZzqQoK#:h2=key) |
+| `key`          | Yes      | String         | [+Property types available to pluggable widgets: key](#system-properties) |
 | `defaultValue` | Yes      | Integer        | Default value for the property.                                                                                                                                      |
 
 #### 2.3.2 Studio Pro UI
@@ -159,7 +159,7 @@ Enumeration allows a user to select one out of multiple options defined in the *
 | Attribute      | Required | Attribute Type | Description                                                                                                                                                          |
 | -------------- | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `type`         | Yes      | String         | Must be `enumeration`                                                                                                                                                |
-| `key`          | Yes      | String         | [+Property types available to Pluggable widgets: key](https://paper.dropbox.com/doc/Property-types-available-to-Pluggable-widgets-key-khDOHBDy9pr5leYZzqQoK#:h2=key) |
+| `key`          | Yes      | String         | [+Property types available to pluggable widgets: key](#system-properties) |
 | `defaultValue` | Yes      | Integer        | Default value for the property.                                                                                                                                      |
 
 #### 2.4.2 XML Elements
@@ -203,7 +203,7 @@ Icon allows a user to configure an icon similar to one used by an [action button
 | Attribute  | Required | Attribute Type | Description                                                                                                                                                          |
 | ---------- | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `type`     | Yes      | String         | Must be `icon`                                                                                                                                                       |
-| `key`      | Yes      | String         | [+Property types available to Pluggable widgets: key](https://paper.dropbox.com/doc/Property-types-available-to-Pluggable-widgets-key-khDOHBDy9pr5leYZzqQoK#:h2=key) |
+| `key`      | Yes      | String         |[+Property types available to pluggable widgets: key](#system-properties) |
 | `required` | No       | Boolean        | Whether the property must be specified by the user. `true` by default                                                                                                |
 #### 3.1.2 Studio Pro UI
 
@@ -229,7 +229,7 @@ Image allows a user to configure a static image from an [image collection](https
 | Attribute  | Required | Attribute Type | Description                                                                                                                                                          |
 | ---------- | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `type`     | Yes      | String         | Must be `image`                                                                                                                                                      |
-| `key`      | Yes      | String         | [+Property types available to Pluggable widgets: key](https://paper.dropbox.com/doc/Property-types-available-to-Pluggable-widgets-key-khDOHBDy9pr5leYZzqQoK#:h2=key) |
+| `key`      | Yes      | String         | [+Property types available to pluggable widgets: key](#system-properties) |
 | `required` | No       | Boolean        | Whether the property must be specified by the user. `true` by default                                                                                                |
 #### 3.2.2 Studio Pro UI
 
@@ -257,7 +257,7 @@ Expression allows a user to configure an [expression](/refguide/expressions), th
 | Attribute      | Required | Attribute Type      | Description                                                                                                                                                          |
 | -------------- | -------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `type`         | Yes      | String              | Must be `expression`                                                                                                                                                 |
-| `key`          | Yes      | String              | [+Property types available to Pluggable widgets: key](https://paper.dropbox.com/doc/Property-types-available-to-Pluggable-widgets-key-khDOHBDy9pr5leYZzqQoK#:h2=key) |
+| `key`          | Yes      | String              | [+Property types available to pluggable widgets: key](#system-properties) |
 | `defaultValue` | No       | String (Expression) | Default value for the property.                                                                                                                                      |
 | `required`     | No       | Boolean             | Whether the property must be specified by the user. `true` by default                                                                                                |
 
@@ -298,7 +298,7 @@ An expression property could appear in Studio Pro like this:
 | Attribute   | Required | Attribute Type | Description                                                                                                                                                          |
 | ----------- | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `type`      | Yes      | String         | Must be `textTemplate`                                                                                                                                               |
-| `key`       | Yes      | String         | [+Property types available to Pluggable widgets: key](https://paper.dropbox.com/doc/Property-types-available-to-Pluggable-widgets-key-khDOHBDy9pr5leYZzqQoK#:h2=key) |
+| `key`       | Yes      | String         | [+Property types available to pluggable widgets: key](#system-properties) |
 | `multiline` | No       | Boolean        | `true` to enable multiline input in the Studio, `false` otherwise.                                                                                                   |
 | `required`  | No       | Boolean        | Whether the property must be specified by the user. `true` by default                                                                                                |
 
@@ -336,7 +336,7 @@ The action property allows a user to configure an action to do things like calli
 | Attribute  | Required | Attribute Type | Description                                                                                                                                                          |
 | ---------- | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `type`     | Yes      | String         | Must be `action`                                                                                                                                                     |
-| `key`      | Yes      | String         | [+Property types available to Pluggable widgets: key](https://paper.dropbox.com/doc/Property-types-available-to-Pluggable-widgets-key-khDOHBDy9pr5leYZzqQoK#:h2=key) |
+| `key`      | Yes      | String         | [+Property types available to pluggable widgets: key](#system-properties) |
 | `required` | No       | Boolean        | Whether the property must be specified by the user. `true` by default                                                                                                |
 #### 4.5.2 Studio Pro UI
 
@@ -362,7 +362,7 @@ The attribute property allows a widget to work directly with entities' attribute
 | Attribute  | Required | Attribute Type | Description                                                  |
 | ---------- | -------- | -------------- | ------------------------------------------------------------ |
 | `type`     | Yes      | String         | Must be `attribute`                                          |
-| `key`      | Yes      | String         | [+Property types available to Pluggable widgets: key](https://paper.dropbox.com/doc/Property-types-available-to-Pluggable-widgets-key-khDOHBDy9pr5leYZzqQoK#:h2=key) |
+| `key`      | Yes      | String         | [+Property types available to pluggable widgets: key](#system-properties) |
 | `onChange` | No       | Property Path  | This path to an Action property that will be executed by Mendix platform when value is changed by the widget. |
 | `required` | No       | Boolean        | This decides if the property must be specified by the user (`true` by default). |
 
@@ -418,7 +418,7 @@ The object property allows to create an arbitrary list of properties.
 | Attribute | Required | Attribute Type | Description                                                                                                                                                          |
 | --------- | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `type`    | Yes      | String         | Must be `object`                                                                                                                                                     |
-| `key`     | Yes      | String         | [+Property types available to Pluggable widgets: key](https://paper.dropbox.com/doc/Property-types-available-to-Pluggable-widgets-key-khDOHBDy9pr5leYZzqQoK#:h2=key) |
+| `key`     | Yes      | String         | [+Property types available to pluggable widgets: key](#system-properties) |
 | `isList`  | Yes      | Boolean        | Must be `true`                                                                                                                                                       |
 
 #### 4.7.2 XML Elements
@@ -453,7 +453,7 @@ An object property could appear in Studio Pro like this:
 
 ![](attachments/widget-property-types/object.png)
 
-## 5 System Properties
+## 5 System Properties {#system-properties}
 
 System properties is a way for a pluggable widget to adopt extended widget functionality provided by Mendix platform. System properties should be defined as `<systemProperty>` elements. The only property XML attribute `<systemProperty>` requires is `key` attribute, which defines a system property's type. The following values are allowed:
 
@@ -506,3 +506,4 @@ The editability property allows a pluggable widget to have an editable configura
 ## 6 Read More
 
 * [Pluggable Widgets API](pluggable-widgets)
+* [Client APIs Available to Pluggable Widgets](client-apis-for-pluggable-widgets)

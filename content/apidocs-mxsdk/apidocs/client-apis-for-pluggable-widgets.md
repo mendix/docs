@@ -201,3 +201,4 @@ The Mendix platform uses [big.js](https://www.npmjs.com/package/react-native) to
 ## 7 Read More
 
 * [Pluggable Widgets API](pluggable-widgets)
+* [Pluggable Widget Property Types](property-types-pluggable-widgets)

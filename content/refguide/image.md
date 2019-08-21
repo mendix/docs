@@ -20,7 +20,7 @@ If you want to dynamically show different images based on data, please take a lo
 
 An example of text properties is represented in the image below:
 
-{{% image_container width="250" %}}![Image Properties](attachments/common-widgets/image-properties.png)
+{{% image_container width="350" %}}![Image Properties](attachments/common-widgets/image-properties.png)
 {{% /image_container %}}
 
 Text properties consist of the following sections:

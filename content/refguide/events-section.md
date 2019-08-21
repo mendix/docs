@@ -1,5 +1,5 @@
 ---
-title: "Properties Common for Widgets"
+title: "Events Section"
 parent: "pages"
 menu_order: 130
 tags: ["studio pro", "events section", "properties", "widget", "on click", "action"]

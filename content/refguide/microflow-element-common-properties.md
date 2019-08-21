@@ -19,12 +19,13 @@ Common properties for microflows and nanoflows are the following ones:
 * [Caption](#caption)
 * [Auto-generate caption](#auto-generate-caption)
 * [Background color](#color)
+* [Error handling type](#error-handling)
 
 ## 2 Caption {#caption}
 
 The caption describes to a user what happens in this element. 
 
-## 3 Auto-Generate Caption{#auto-generate-caption}
+## 3 Auto-Generate Caption {#auto-generate-caption}
 
 The auto-generate caption property specifies whether the caption is automatically generated based on the type of activity.
 
@@ -39,7 +40,11 @@ _Default value_: Yes
 
 Here you can choose a background color for the activity. Colors do not influence execution; they are only used to quickly spot an element in a flow. For example, you can make activities with [error handlers](microflows#errorhandlers) red so you can easily identify them.
 
-## 4 Read More
+## 4 Error handling type {#error-handling}
+
+Here you can choose a type of error handling for the activity. Please refer to the [error handlers](microflows#errorhandlers) page to see the avaliable options and their effects.
+
+## 5 Read More
 
 * [Microflows](microflows)
 * [Nanoflows](nanoflows)

@@ -19,7 +19,7 @@ The Native Builder takes your Mendix project containing a native profile and pac
 
 ## 3 About the Native Builder
 
-The Native Builder uses MxBuild, GitHub, and App Center to build your applications. The tool automates the configuration of these processes to streamline your app building experience. The Native builder allows you to create as many apps on GitHub as possible, as long as they are given unique app names. When run, the Native Builder packages your apps by doing the following:
+The Native Builder uses MxBuild, GitHub, and App Center to build your applications. The tool automates the configuration of these processes to streamline your app building experience. The Native builder allows you to create as many apps on GitHub as possible, as long as they are given unique app names using the `--app-name` parameter (for more information, see [Setting Up Your Parameters](#parameters) below). When run, the Native Builder packages your apps by doing the following:
 
 1. Deploys your Mendix project locally.
 2. Creates a new repository using the Mendix native template repository on GitHub named after the app name provided.
@@ -51,7 +51,7 @@ The sections below describe how to get tokens which allow Native Builder to auth
 4. In the **API Tokens** tab, click the **New API token** button.
 5. Add a description of your token, select **Full Access**, then click **Add new API token**, and then **New API Token**. Store this token in a secure place as well. You will not be able to see it again. If you lose it, you will have to create a new token and delete your old one.
 
-## 5 Setting Up Your Parameters
+## 5 Setting Up Your Parameters {#parameters}
 
 ### 5.1 Inputting Command-Line Arguments
 

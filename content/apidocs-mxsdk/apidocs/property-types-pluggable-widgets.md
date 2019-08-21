@@ -7,7 +7,7 @@ tags: ["Widget", "Pluggable", "Custom", "JavaScript", "React"]
 
 ## 1 Introduction
 
-In order to be configurable, pluggable widgets use a [widget properties definition](/apidocs-mxsdk/apidocs/pluggable-widgets.md#properties-definition) which describes the properties available to pluggable widgets.
+In order to be configurable, pluggable widgets use a [widget properties definition](/apidocs-mxsdk/apidocs/pluggable-widgets#properties-definition) which describes the properties available to pluggable widgets.
 
 The common structure of a property definition is as follows:
 

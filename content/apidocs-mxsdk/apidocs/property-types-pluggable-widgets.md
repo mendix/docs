@@ -7,9 +7,9 @@ tags: ["Widget", "Pluggable", "Custom", "JavaScript", "React"]
 
 ## 1 Introduction
 
-todo: write intro text here
+In order to be configurable, pluggable widgets use a [widget properties definition](/apidocs-mxsdk/apidocs/pluggable-widgets.md#properties-definition) which describes the properties available to pluggable widgets.
 
-Common structure of property definition:
+The common structure of a property definition is as follows:
 
 ```xml
 <property key="propertyKey" type="propertyType">
@@ -22,7 +22,7 @@ Common structure of property definition:
 
 #### 1.1.1 `key` (required)
 
-This defines the prop key in the client component props which are supplied to the widget client component. Each widget must have a unique `key` which can contain letters of all cases, digits, or underscores. However, a `key` attribute cannot *start* with a digit.
+This defines the prop key in the client component props which are supplied to the widget client component. Each property must have a unique `key` which can contain letters of all cases, digits, or underscores. However, a `key` attribute cannot *start* with a digit.
 
 #### 1.1.2 `**type**` (required)
 
@@ -42,7 +42,7 @@ This defines a property's type. A `type` must be one of the following:
 
 ### 1.2 XML Elements
 
-`**<caption>**` (required) — This defines a user-friendly name of a visible property (todo: really? is it a Name or a Caption? also, are these supposed to have ** in them ** or was that dropbox?)
+`**<caption>**` (required) — This defines the property name visible for the user (not an end-user) while configuring the widget in Studio and Studio Pro.
 
 `**<description>**` (required) — This is a description which explains a property's purpose.
 
@@ -67,7 +67,7 @@ String is represented as a simple text input in Studio Pro. It is passed as a `s
 
 #### 2.1.2 Studio Pro UI
 
-For single line widgets the Studio Pro UI *XML* is as follows:
+For the single line property the Studio Pro UI *XML* is as follows:
 
 ```xml
 <property key="myString" type="string">
@@ -80,7 +80,7 @@ In Studio Pro, a single line string widget appears this way:
 
 ![](attachments/widget-property-types/string.png)
 
-For multi-line widgets the Studio Pro UI *XML* is as follows:
+For the multi-line property the Studio Pro UI *XML* is as follows:
 
 ```xml
 <property key="myStringMultiline" type="string" multiline="true">
@@ -89,7 +89,7 @@ For multi-line widgets the Studio Pro UI *XML* is as follows:
 </property>
 ```
 
-In Studio Pro, a multi-line string widget appears this way:
+In Studio Pro, a multi-line string property appears this way:
 
 ![](attachments/widget-property-types/string-multiline.png)
 
@@ -107,7 +107,7 @@ Boolean is represented as a toggle in Studio Pro. It is passed as `boolean` prop
 
 #### 2.2.2 Studio Pro UI
 
-For Boolean widgets, the Studio Pro UI *XML* is as follows:
+For the Boolean property, the Studio Pro UI *XML* is as follows:
 
 ```xml
 <property key="myBoolean" type="boolean" defaultValue="false">
@@ -116,7 +116,7 @@ For Boolean widgets, the Studio Pro UI *XML* is as follows:
 </property>
 ```
 
-Boolean widgets appear in Studio Pro like this:
+A Boolean property can appear in Studio Pro like this:
 
 ![](attachments/widget-property-types/boolean.png)
 
@@ -134,7 +134,7 @@ Integer is represented as a number input in Studio Pro. It is passed as a `numbe
 
 #### 2.3.2 Studio Pro UI
 
-For integer widgets, the Studio Pro UI *XML* is as follows:
+For the integer property, the Studio Pro UI *XML* is as follows:
 
 ```xml
 <property key="myInteger" type="integer" defaultValue="1000">
@@ -143,7 +143,7 @@ For integer widgets, the Studio Pro UI *XML* is as follows:
 </property>
 ```
 
-Integer widgets appear in Studio Pro like this:
+An integer property can appear in Studio Pro like this:
 
 ![](attachments/widget-property-types/integer.png)
 
@@ -171,7 +171,7 @@ The `key` of a selected element will be passed to the client component. `key` sh
 
 #### 2.4.3 Studio Pro UI
 
-For enumeration value widgets, the Studio Pro UI *XML* is as follows:
+For the enumeration value property, the Studio Pro UI *XML* is as follows:
 
 ```xml
 	<property key="myEnumeration" type="enumeration" defaultValue="red">
@@ -185,7 +185,7 @@ For enumeration value widgets, the Studio Pro UI *XML* is as follows:
 	</property>
 ```
 
-Enumeration widgets appear in Studio Pro like this:
+An enumeration property can appear in Studio Pro like this:
 
 ![](attachments/widget-property-types/enumeration.png)
 

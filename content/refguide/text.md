@@ -74,7 +74,7 @@ To use parameters, do the following:
 
 4. In the **Edit Template Parameter** dialog window, click **Select**, choose an attribute and confirm your choice.
 
-5.  In the **Caption** setting, write the text you would like to display and use **Index** of the parameter you would like to include. In the example below, to include a full name of your customer and a number of unread messages, you need to use indexes {1} for the *FullName* attribute, and {2} for the *NrOfUnread* attribute:  
+5.  In the **Caption** setting, write the text you would like to display and type **Index** of the parameter you would like to include. In the example below, to include a full name of your customer and a number of unread messages, you need to use indexes {1} for the *FullName* attribute, and {2} for the *NrOfUnread* attribute:  
 
     ![Parameter Example](attachments/common-widgets/parameters-example.png)
 

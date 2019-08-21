@@ -38,7 +38,7 @@ This defines a property's type. A `type` must be one of the following:
 	* [image](#image)
 * Dynamic Properties
 	* [expression](#expression)
-	* [textTemplate](#textTemplate)
+	* [textTemplate](#texttemplate)
 	* [action](#action)
 	* [attribute](#attribute)
 	* [object](#object)

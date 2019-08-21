@@ -37,7 +37,7 @@ On native pages, the meaning of a **style** prop is very different. First of all
 
 ### 3.4 TabIndex
 
-If a widget uses a TabIndex prop [system property](link to other doc todo: link to "propery groups" section of Pluggable Widgets API?), then it will receive a configured **Tab index** through a `number` **tabIndex** property, except in the case when a configured tab index is on its default value of 0. Currently, **tabIndex** is not passed to widgets used on native pages. 
+If a widget uses a TabIndex prop [system property](property-types-pluggable-widgets#tabindex), then it will receive a configured **Tab index** through a `number` **tabIndex** property, except in the case when a configured tab index is on its default value of 0. Currently, **tabIndex** is not passed to widgets used on native pages. 
 
 ## 4 Property Values
 

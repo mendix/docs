@@ -78,24 +78,7 @@ Based on the error message you get from the installer you can decide to install 
 
 After that you can retry installing Studio Pro.
 
-## 6 Installing Mendix Studio Pro Offline {#offline}
-
-The Mendix Studio Pro installation experience includes all the tools and frameworks required to run the application. If any of the prerequisites are not found at the moment of installation, the Studio Pro setup process will attempt to download and install the missing elements automatically. The Mendix Studio Pro installer does not include all dependencies and relies on internet connectivity to obtain them if any of the required pieces of software are missing. 
-
-It is possible to prepare the prerequisite installers beforehand, so that the Mendix Studio Pro setup process can pick them up instead of downloading from the remote location. Follow these steps to prepare the installers:
-
-1. Create a folder for the Mendix Studio Pro installer.
-2. Download the latest [Mendix Studio Pro installer](https://appstore.home.mendix.com/link/modelers/) and move it into folder you created.
-3. Create a folder with the name **Dependencies** in the same location where the Mendix Studio Pro installer was placed.
-4. Download the prerequisites listed in the [Troubleshooting](#troubleshooting) section above and move them into the **Dependencies** folder.
-5. Rename the following dependencies:
-	* The `.NET Framework 4.7.2` executable to `dotnetfx472.exe`
-	* The `Java Development Kit 11 (x64)` *msi* to `adoptopenjdk_11_x64.msi`
- 	* The `Visual C++ 2010 SP1 Redistributabe (x64)` executable to `vcredist2010_x64.exe`
- 	* The `Visual C++ Redistributabe for Visual Studio 2015 (x64)` executable to `vcredist2015_x64.exe`
-6. Run the installer as described in the [Installing Mendix Studio Pro](#install) section above.
-
-## 7 Read More
+## 6 Read More
 
 * [Studio Pro Overview](/refguide/studio-pro-overview)
 * [App Modeling](/refguide/modeling)

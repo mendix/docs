@@ -479,7 +479,7 @@ Every widget have a name by default. This property can be used to control positi
 <systemProperty key="Name"/>
 ```
 
-### 5.3 TabIndex
+### 5.3 TabIndex {#tabindex}
 
 The TabIndex property allows pluggable widgets to implement the **Tab index** setting similar to  a [core input widget](/refguide/text-box#tab-index). Every selectable or input-like widget should opt for this to provide a consistent developing experience and an accessible app for an end-user. A widget’s tab index, when it is not zero, is passed to a client component in a `tabIndex` prop.
 

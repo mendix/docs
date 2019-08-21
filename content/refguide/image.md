@@ -27,6 +27,7 @@ Text properties consist of the following sections:
 
 * [Common](#common)
 * Design Properties
+* [Events](events)
 * [General](#general)
 * [Visibility](#visibility)
 
@@ -36,7 +37,7 @@ Text properties consist of the following sections:
 
 ### 2.2 Events Section {#events}
 
-{{% snippet file="refguide/On+Click+Event+Action.md" %}}
+For information on the Events section and its properties, see [Events Section](events-section). 
 
 ### 2.3 General Section {#general}
 

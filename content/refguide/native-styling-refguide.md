@@ -483,7 +483,7 @@ The default class to style the navigation is named  `navigationStyle`. There is 
 
 ## 10 Add-On Widgets
 
-Add-on widgets are distributed through the [Mendix App Store](https://appstore.home.mendix.com/index3.html), and are not shipped with Mendix Studio Pro. They might also be distributed through starter apps, as well as modules importing pages from other projects. 
+Add-on widgets are distributed through the [Native Mobile Resources](https://appstore.home.mendix.com/link/app/109513/) module, and are not shipped with Mendix Studio Pro. Other add-on widgets might also be distributed through starter apps, as well as modules importing pages from other projects. 
 
 ### 10.1 Activity Indicator
 
@@ -832,4 +832,5 @@ The default class to style all web views is named `com_mendix_widget_native_webv
 ## 11 Read More
 
 * [Style Your Mendix Native App](/howto/mobile/how-to-use-native-styling)
-* [Native Styling](/howto/mobile/native-styling)
+* [Implement Native Styling](/howto/mobile/native-styling)
+

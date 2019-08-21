@@ -35,11 +35,11 @@ When you [log in to ATS](https://ats.mendix.com), you see the **My Apps** page. 
 
 ![](attachments/ht-two-getting-started/my-apps-page.png)
 
-1. Open your app inside ATS. This opens the **Dashboard** page.
+1.  Open your app inside ATS. This opens the **Dashboard** page.
 
 	![](attachments/ht-two-getting-started/dashboard-page.png)
 
-2. Open the profile menu and click **Show Test Settings**.
+2.  Open the profile menu and click **Show Test Settings**.
 
 	![](attachments/ht-two-getting-started/show-test-settings.png)
 
@@ -59,7 +59,7 @@ At **Environments** you see a list of test applications that have been configure
 
 To add a new environment, follow these steps:
 
-1. Click **New** under **Environments**, which opens the **Environment** dialog box.
+1.  Click **New** under **Environments**, which opens the **Environment** dialog box.
 
 	![](attachments/ht-two-getting-started/new-environment.png)
 
@@ -70,7 +70,7 @@ To add a new environment, follow these steps:
 | **Name** | The name of the application. Using the name of the application is advised. |
 | **URL** | The URL of the actual Mendix application to test. |
 
-3. Click **Save** to save the settings.
+3.  Click **Save** to save the settings.
 
 	![](attachments/ht-two-getting-started/add-environment.png)
 
@@ -80,11 +80,11 @@ At **Selenium hubs**, you see a list of the Selenium hubs configured for this ap
 
 To add a new Selenium hub, follow these steps:
 
-1. Click **New Selenium Hub** under **Selenium hubs**.
+1.  Click **New Selenium Hub** under **Selenium hubs**.
 
-      ![](attachments/ht-two-getting-started/new-selenium-hub.png)
+	![](attachments/ht-two-getting-started/new-selenium-hub.png)
 
-      This opens the **Select Provider** dialog box. Here you select one of the three supported selenium providers or a custom selenium hub. ATS creates the URL needed to access your selenium provider when you select a supported selenium provider. When you select custom, you must provide the URL yourself. 
+	This opens the **Select Provider** dialog box. Here you select one of the three supported selenium providers or a custom selenium hub. ATS creates the URL needed to access your selenium provider when you select a supported selenium provider. When you select custom, you must provide the URL yourself. 
 
 2. Click the provider you use.
 3.  Set the following parameters:
@@ -96,11 +96,11 @@ To add a new Selenium hub, follow these steps:
 | **Access Key** | The access key for your selenium provider account. |
 | **Custom Capabilities** | Can be used to set the Selenium desired capabilities. |
 
-4. Click **Save** to save the settings.
+4.  Click **Save** to save the settings.
 
 	![](attachments/ht-two-getting-started/browserstack-selenium-hub-wizard.png)
 
-For further documentation on how-to install the ATS helper and the Recorder see [How-to configure a Selenium hub](ht-two-configure-a-selenium-hub).
+For further documentation on how-to install the ATS Helper and the Recorder see [How-to configure a Selenium hub](ht-two-configure-a-selenium-hub).
 
 ## 4 Test Cases
 
@@ -122,26 +122,26 @@ In this how-to, only the **Repository** tab is described.
 
 To create a test case, follow these steps:
 
-1. On the **Repository** tab, click **Actions** and click **New Test Case** in the drop-down. This opens the **Create new** dialog box.
+1.  On the **Repository** tab, click **Actions** and click **New Test Case** in the drop-down. This opens the **Create new** dialog box.
 
 	![](attachments/ht-two-getting-started/actions-new-test-case.png)
 
 2. Enter a name for your test case. Since you are likely to create multiple test cases and test suites, using a predefined naming structure is advised.
 3. Enter a clear description for your test case. In case others may need to know what your test case does, use a template to make sure all aspects of the case are described clearly.
-4. Click **Create**.
+4.  Click **Create**.
 
 	![](attachments/ht-two-getting-started/create-new-test-case.png)
 
 5. When the **Test Case Details** page opens, you are now in the actual test case. In the top left corner of the page, you see the name and description of your test case. The **Test Case Details** page also displays the following buttons:
 
-      * **Run** – brings you to the **Job Configuration** page
-      * **Export** – exports the test case as a XML file (this file can be uploaded into another ATS environment) or exports a PDF report or your test case
+	* **Run** – brings you to the **Job Configuration** page
+	* **Export** – exports the test case as a XML file (this file can be uploaded into another ATS environment) or exports a PDF report or your test case
 
 	![](attachments/ht-two-getting-started/test-case-details-page.png)
 
 ### 4.2 Adding Test Steps
 
-Now that you have created a test case, the next step is to configure your test case and start adding test steps. ATS provides two different tools to help add test steps: ATS helper (Setup step manually) and ATS recorder (Record step). We advise you to use the recorder as much as possible to add test steps. But, the ATS Recorder might not be able to record certain manual test steps. So, we advise to add steps in the following order:
+Now that you have created a test case, the next step is to configure your test case and start adding test steps. ATS provides two different tools to help add test steps: ATS Helper (Setup step manually) and ATS Recorder (Record step). We advise you to use the recorder as much as possible to add test steps. But, the ATS Recorder might not be able to record certain manual test steps. So, we advise to add steps in the following order:
 
 * Record your manual test steps using the ATS Recorder
 * Adding test steps using the ATS Helper, see [Finding the action you need](bp-two-finding-the-action-you-need).
@@ -150,13 +150,13 @@ Now that you have created a test case, the next step is to configure your test c
 Before you start adding test steps, add the ATS Helper and ATS Recorder tools:
 
 1. Click the **I-icon** in the top right corner of the screen, which opens, the **ATS Information** dialog box.
-2. Drag and drop the **ATS helper** link to your bookmark bar.
-3. To use the recorder function, you need to have the Google Chrome browser installed on your system and install the ATS Recorder Chrome plugin. The ATS recorder only works in Chrome.
-4. Install the ATS recorder extension in your Chrome browser.
+2. Drag and drop the **ATS Helper** link to your bookmark bar.
+3. To use the recorder function, you need to have the Google Chrome browser installed on your system and install the ATS Recorder Chrome plugin. The ATS Recorder only works in Chrome.
+4.  Install the ATS Recorder extension in your Chrome browser.
 
 	![](attachments/ht-two-getting-started/information-dialog.png)
 
-For further documentation on how-to install the ATS helper and the Recorder see [How-to install the ATS Helper and Recorder](ht-two-install-ats-helper-recorder).
+For further documentation on how-to install the ATS Helper and the Recorder see [How-to install the ATS Helper and Recorder](ht-two-install-ats-helper-recorder).
 
 #### 4.2.1 Record – Using the Recorder Function
 
@@ -164,7 +164,7 @@ With the ATS Recorder plugin installed, you can start a recording session at any
 
 To use the recorder function, follow these steps:
 
-1. Click **Record step** while inside a test case in ATS, which opens the **Recording Session** page. On this page you can manage your recording session.
+1.  Click **Record step** while inside a test case in ATS, which opens the **Recording Session** page. On this page you can manage your recording session.
 
 	![](attachments/ht-two-getting-started/click-record.png)
 
@@ -175,7 +175,7 @@ To use the recorder function, follow these steps:
 
 	| Field | Description |
 | :--- | :--- |
-| **Recorded event** | All the registered clicks/entering text will show up here in the sequence where they were done. Select an event to open the **Action mapping** menu of that particular event. The ATS recorder selects the actions for you. |
+| **Recorded event** | All the registered clicks/entering text will show up here in the sequence where they were done. Select an event to open the **Action mapping** menu of that particular event. The ATS Recorder selects the actions for you. |
 | **Action mapping** | This shows all the available actions for this event. Click **Select** if you want to choose a different action.|
 
 All the test steps are numbered for easy identification. To change the sequence of the test steps click the left of the test step while dragging the test step up or down. You can **delete**, **copy** or **paste** a selected test step. With the **Extract action**, you can combine actions of multiple steps into one step. Select the steps you want to combine and click **Extract action**. For more information on extracting an action, see [Custom Actions](rg-one-custom-actions).
@@ -216,22 +216,22 @@ For further documentation on how-to link stories to test cases see [How-to link 
 
 To create a test suite, follow these steps:
 
-1. On the **Repository** tab, click **Actions** and click **New Test Suite** in the drop-down. This opens the **Create new** dialog box.
+1.  On the **Repository** tab, click **Actions** and click **New Test Suite** in the drop-down. This opens the **Create new** dialog box.
 
 	![](attachments/ht-two-getting-started/actions-new-test-suite.png)
 
 2. Enter a name for your test suite. Since you are likely to create multiple test cases and test suites, using a predefined naming structure is advised.
 3. Enter a clear description for your test suite. In case others may need to know what your test suite does, use a template to make sure all aspects of the suite are described clearly.
-4. Click **Create**.
+4.  Click **Create**.
 
-      ![](attachments/ht-two-getting-started/create-new-test-suite.png)
+	![](attachments/ht-two-getting-started/create-new-test-suite.png)
 
 5.  The **Test Suite** page looks similar to the **Test Case** page, but with fewer options. The **Test Suite** page also displays the following buttons:
 
-      * **Parallel** - executes the test steps at same time, depending on your selenium settings.
-      * **Sequential** - executes the test steps one at a time, like a test case.
-      * **Run** – brings you to the **Job Configuration** page.
-      * **Export** – exports the test suite as a XML file (this file can be uploaded into another ATS environment).
+	* **Parallel** - executes the test steps at same time, depending on your selenium settings.
+	* **Sequential** - executes the test steps one at a time, like a test case.
+	* **Run** – brings you to the **Job Configuration** page.
+	* **Export** – exports the test suite as a XML file (this file can be uploaded into another ATS environment).
 
 	![](attachments/ht-two-getting-started/test-suite-details-page.png)
 

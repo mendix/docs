@@ -19,7 +19,6 @@ Pluggable widgets are the new generation of custom-built widgets. These widgets 
 **Are you in a hurry?** 
 
 Clone this [code sample](https://github.com/mendix/text-box-sample) from GitHub with the basic and advanced features already implemented.
-{{% todo %}}[If you update a code snippet, please make sure to update the completed sample on this GitHub repository too. Thank you!]{{% /todo %}}
 
 ## 2 Prerequisites
 
@@ -100,8 +99,8 @@ The generator will ask you a few questions during setup. Answer the questions by
 
 Open the **(YourMendixProject)/CustomWidgets/TextBox** folder in your IDE of choice. From now on, all file references will be relative to this path. To set up your new widget, first you must use an attribute of the context object and display that attribute in an input field: 
 
-1. To prevent future errors, remove the file *src/components/HelloWorldSample.tsx*.
-2. Edit *src/TextBox.xml*, the generator creates a sample property `sampleText`, which should be removed andand add the new property `Text attribute`:
+1. To prevent future errors, remove the file *src/components/HelloWorldSample.tsx*. Errors in *TextBox.webmodeler.tsx* will be dealt with in step 6 below.
+2. In *src/TextBox.xml*, the generator creates a sample property `sampleText`. Remove this property and add the new property `Text attribute`:
 
 	```xml
 	<?xml version="1.0" encoding="utf-8" ?>
@@ -166,19 +165,19 @@ Open the **(YourMendixProject)/CustomWidgets/TextBox** folder in your IDE of cho
 	```tsx
 	import { Component, ReactNode, createElement } from "react"; 
 	import { hot } from "react-hot-loader/root";
-
+	
 	import { TextBoxContainerProps } from "../typings/TextBoxProps";
 	import { TextInput } from "./components/TextInput";
-
+	
 	import "./ui/TextBox.css";
-
+	
 	class TextBox extends Component<TextBoxContainerProps> {
 		render(): ReactNode {
 			const value = this.props.textAttribute.value || "";
 			return <TextInput value={value} />;
 		}
 	}
-
+	
 	export default hot(TextBox);
 	```
 	
@@ -217,8 +216,7 @@ Open the **(YourMendixProject)/CustomWidgets/TextBox** folder in your IDE of cho
 	![](attachments/pluggable-part-one/updateallwidgets.png)
 	
 	{{% alert type="info" %}}The widgets in Studio and Studio Pro are not automatically updated. To refresh them press <kbd>F4</kbd> or select **Project > Synchronize Project Directory** from the Mendix Studio Pro menu to reload the widgets from the file system. Then right-click the widget and select **Update all widgets** to update the newly-changed properties in the widget.{{% /alert %}}
-8. On the test project **Home** page, create a data view with an attribute. Add a **Text box** input widget and one of your newly-created **TextBox** widgets next to each other to compare them. Select the same attribute in both widgets.
-9.  When running the project, the new widget is already functional. The first text box is a standard Text box widget and the second is our pluggable widget. When data is changed in the first input and the cursor is moved to the next widget, the data of our widget is also updated: 
+8.  When running the project, the new widget is already functional. The first text box is a standard Text box widget and the second is your pluggable widget. When data is changed in the first input and the cursor is moved to the next widget, the data of your widget is also updated: 
 
 	![two text widgets](attachments/pluggable-part-one/twotextwidgets.png)
 
@@ -282,7 +280,7 @@ The input works, but the styling could be improved. In the next code snippets, y
 
 While the Mendix input widgets come with labels, you will need to add one to TextBox manually. With the new API it is easy to add a label to any widget.
 
-1.  In the *TextBox.xml* file, add attribute `<propertyGroup caption="Label">` with its child `<systemProperty />` above the existing `<propertyGroup caption="Data source">`:
+1.  In the *TextBox.xml* file, add an element `<propertyGroup caption="Label">` with a child element `<systemProperty />` above the existing `<propertyGroup caption="Data source">` element:
 
 	```xml
 	<propertyGroup caption="Label">
@@ -290,7 +288,7 @@ While the Mendix input widgets come with labels, you will need to add one to Tex
 	</propertyGroup>
 	```
 
-	This will add the **Show label** radio buttons in the widget properties tab **Label**. When **Show label** is set to true, it will automatically render the label for you in the page editor and the browser:
+	This will add the **Show label** radio buttons in the widget properties tab **Label** (after synchronizing the Project Directory and updating the widget). When **Show label** is set to true, it will automatically render the label for you in the page editor and the browser:
 
 	![edit text box two](attachments/pluggable-part-one/edittextboxtwo.png)
 
@@ -367,7 +365,7 @@ The value from the attribute can be displayed and updated using the other input,
 	
 	Explaining the code: 
 	
-	* The input's `value` is set by the `this.prop.value`, and this property is not changed directly; the update function will use the `setValue` to trigger a re-render with the updated property
+	* The input's `value` is set by the `this.props.value`, and this property is not changed directly; the update function will use the `setValue` to trigger a re-render with the updated property
 	* There are two ways of handling input changes in React: [controlled components](https://reactjs.org/docs/forms.html#controlled-components) or [uncontrolled components](https://reactjs.org/docs/uncontrolled-components.html)
 	* The `onUpdate` function is optional and it should be checked for availability before executing it
 	* The custom widget TextBox will still not pass text to the Text box widget after this step – it will gain this functionality in [Build a Text Box Pluggable Widget: Part 2 (Advanced)](create-a-pluggable-widget-two).
@@ -379,5 +377,5 @@ Continue with the next tutorial to learn how to add validation feedback,  custom
 ## 4 Read More
 
 * [Build a Text Box Pluggable Widget: Part 2 (Advanced)](create-a-pluggable-widget-two)
-* [Make JavaScript Actions](/howto/extensibility/build-javascript-actions)
+* [Write JavaScript Actions](/howto/extensibility/build-javascript-actions)
 * [Mendix Client API](https://apidocs.mendix.com/7/client/)

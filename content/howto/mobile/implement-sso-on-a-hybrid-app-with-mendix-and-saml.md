@@ -95,12 +95,14 @@ MxApp.onConfigReady(function(config) {
                     samlWindow.executeScript({
                         code: "document.cookie;"
                     }, function(values) {
+                        samlWindow.removeEventListener("exit", exitFn);
+
                         var authPromise = new Promise(function(resolve, reject) {
                             var token = new RegExp('AUTH_TOKEN=([^;]+)', 'g').exec(values[0]);
                             if (token && token.length > 1) {
                                 mx.session.tokenStore.set(token[1]).then(resolve);
                             } else {
-                                resolve();                            
+                                resolve();
                             }
                         });
 

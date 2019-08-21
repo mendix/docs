@@ -25,6 +25,7 @@ Widgets/Components for which the font tab page is visible:
 {{% alert type="info" %}}
 
 ![](attachments/core/2018-03-01_14-27-27.png)
+
 The font tab page in the style editor.
 
 {{% /alert %}}
@@ -44,6 +45,7 @@ Widgets/Components for which the cell styling tab page is visible:
 {{% alert type="info" %}}
 
 ![](attachments/core/2018-03-01_14-29-13.png)
+
 The cell styling tab page in the style editor.
 
 {{% /alert %}}
@@ -55,6 +57,7 @@ The custom styles tab page is always visible for widgets/components that allow s
 {{% alert type="info" %}}
 
 ![](attachments/core/2018-03-01_14-33-46.png)
+
 The custom styles tab page in the style editor.
 
 {{% /alert %}}
@@ -75,7 +78,6 @@ To add your own, use the following setup:
 <font kerning="yes" embed-url="mycustomfont.ttf">
     <font-triplet name="myfont" style="normal" weight="normal"/>
 </font>
-
 ```
 
 The embed-url is where the library can find the font file. The font-triplet-name is the name you would use in your custom css style. This name has to be in lowercase for your own custom fonts.
@@ -94,10 +96,9 @@ If you want to use italic or bold versions of the font, you need to specify this
 <font kerning="yes" embed-url="mycustomfontinboldanditalic.ttf">
    <font-triplet name="myfont" style="italic" weight="bold"/>
 </font>
-
 ```
 
 In the end your setup should look like this:
 
-*   fop.xconf, your custom font and the 6 default fonts should be in your project resources folder.
-*   the fop.xconf file should include a reference to your custom font.
+* The *fop.xconf* file, your custom font, and the 6 default fonts should be in your project resources folder
+* The *fop.xconf* file should include a reference to your custom font

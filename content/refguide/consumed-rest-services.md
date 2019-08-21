@@ -38,6 +38,6 @@ Above, the object `person` is described with the corresponding values for the at
 
 ## 3 Example
 
-**How to consume REST natively with Mendix**
+**How to consume REST with Mendix Studio Pro 8**
 
-{{% youtube waOlvSqdaP4 %}}
+{{% youtube OhzWTa1kZ00 %}}

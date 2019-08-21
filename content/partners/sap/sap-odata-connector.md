@@ -4,6 +4,7 @@ category: "SAP"
 menu_order: 10
 description: "Presents reference information on the use of the SAP OData Connector."
 tags: ["SAP", "integration", "OData", "BAPI"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction{#Introduction}

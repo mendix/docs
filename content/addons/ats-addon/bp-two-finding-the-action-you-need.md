@@ -20,7 +20,7 @@ For a quick summary and action plan, go straight to section [8 Summary](#summary
 
 {{% alert type="info" %}}
 
-When the ATS recorder does not record any steps, you can use this best practice to find the right action.
+When the ATS Recorder does not record any steps, you can use this best practice to find the right action.
 
 {{% /alert %}}
 
@@ -32,7 +32,7 @@ In ATS there are many actions for finding a widget, from generically finding a w
 
 When you want to find a widget, the main choice is always the [Find/Assert Widget](rg-one-findassert-widget) action. It finds the widget you need using the `mx-name` of the widget. 
 
-ATS uses the `widget name` parameter instead of  `mx-name`. The widget name is found using the ATS helper, and the value is the `widget name`:
+ATS uses the `widget name` parameter instead of  `mx-name`. The widget name is found using the ATS Helper, and the value is the `widget name`:
 
 ![](attachments/bp-two-finding-the-action-you-need/mx-name-ats-helper-cp.png)
 
@@ -76,7 +76,7 @@ The solution in this situation is to use the following search term: "Find Dialog
 
 When you want to find a widget, always use the Find/Assert Widget action if possible. 
 
-If you want to find something more specific inside a widget or the widget does not have an `mx-name`, use "Find" in combination with the widget name as displayed in the [Mendix App Store](https://appstore.home.mendix.com/) and Mendix Studio Pro. You can also find the name using the ATS helper.
+If you want to find something more specific inside a widget or the widget does not have an `mx-name`, use "Find" in combination with the widget name as displayed in the [Mendix App Store](https://appstore.home.mendix.com/) and Mendix Studio Pro. You can also find the name using the ATS Helper.
 
 If you cannot find a widget because it has no unique name or because it is not supported, see [How to Create Custom Actions](ht-one-create-custom-actions) for more information.
 
@@ -88,7 +88,7 @@ In ATS, there are many actions for clicking a widget, from generically clicking 
 
 When you want to click a widget, the main choice is always the [Click Widget](rg-one-click-widget) action. It clicks the widget you need using the `mx-name` of the widget.
 
-ATS uses the `widget name` parameter instead of `mx-name`. The widget name is found using the ATS helper, and the value is the `widget name`:
+ATS uses the `widget name` parameter instead of `mx-name`. The widget name is found using the ATS Helper, and the value is the `widget name`:
 
 ![](attachments/bp-two-finding-the-action-you-need/mx-name-ats-helper-cp.png)
 
@@ -140,7 +140,7 @@ The solution in this situation is to use the following search term: "Click/Doubl
 
 When you want to click a widget, always use the Click Widget action if possible. 
 
-If you want to click something more specific inside a widget or the widget does not have an `mx-name`, use "Click" in combination with the widget name as displayed in the [Mendix App Store](https://appstore.home.mendix.com/) and Mendix Studio Pro. You can also find the name using the ATS helper.
+If you want to click something more specific inside a widget or the widget does not have an `mx-name`, use "Click" in combination with the widget name as displayed in the [Mendix App Store](https://appstore.home.mendix.com/) and Mendix Studio Pro. You can also find the name using the ATS Helper.
 
 If you cannot click a widget because it has no unique name or because it is not supported, see [How to Create Custom Actions](ht-one-create-custom-actions) for more information.
 
@@ -152,7 +152,7 @@ In ATS, there are several actions for setting an input widget, from a simple act
 
 When you want to set an input widget, the main choice is always the [Set Value](rg-one-set-value) action. It sets the input widget using the `mx-name` of the widget and the value to set. 
 
-ATS uses the `widget name` parameter instead of `mx-name`. The widget name is found using the ATS helper, and the value is the `widget name`:
+ATS uses the `widget name` parameter instead of `mx-name`. The widget name is found using the ATS Helper, and the value is the `widget name`:
 
 ![](attachments/bp-two-finding-the-action-you-need/mx-name-ats-helper-cp.png)
 
@@ -204,7 +204,7 @@ The solution in this situation is to use the following search term: "Set InputRe
 
 When you want to set an input widget, always use the Set Value action if possible. 
 
-If you want to set a special input widget or the widget does not have an `mx-name`, use "Click" in combination with the widget name as displayed in the [Mendix App Store](https://appstore.home.mendix.com/) and Mendix Studio Pro. You can also find the name using the ATS helper.
+If you want to set a special input widget or the widget does not have an `mx-name`, use "Click" in combination with the widget name as displayed in the [Mendix App Store](https://appstore.home.mendix.com/) and Mendix Studio Pro. You can also find the name using the ATS Helper.
 
 If you cannot set an input widget because it has no unique name or because it is not supported, see [How to Create Custom Actions](ht-one-create-custom-actions) for more information.
 
@@ -216,7 +216,7 @@ In ATS, there are several actions for getting a value from a widget. The first p
 
 When you want to get a value from a widget, the main choice is always the [Get Value](rg-one-get-value) action. It retrieves the value of a widget using the `mx-name` of the widget.
 
-ATS uses the `widget name` parameter instead of  `mx-name`. The widget name is found using the ATS helper, and the value is the `widget name`:
+ATS uses the `widget name` parameter instead of  `mx-name`. The widget name is found using the ATS Helper, and the value is the `widget name`:
 
 ![](attachments/bp-two-finding-the-action-you-need/mx-name-ats-helper-cp.png)
 
@@ -259,7 +259,7 @@ The solution in this situation is to use the following search term: "Get Dialog"
 
 When you want to get a value from a widget, always use the Get Value action if possible. 
 
-If you want to get the value from a specific widget or the widget does not have an `mx-name`, use "Get" in combination with the widget name as displayed in the [Mendix App Store](https://appstore.home.mendix.com/) and Mendix Studio Pro. You can also find the name using the ATS helper.
+If you want to get the value from a specific widget or the widget does not have an `mx-name`, use "Get" in combination with the widget name as displayed in the [Mendix App Store](https://appstore.home.mendix.com/) and Mendix Studio Pro. You can also find the name using the ATS Helper.
 
 If you cannot get the value from a widget because it has no unique name or because it is not supported, see [How to Create Custom Actions](ht-one-create-custom-actions) for more information.
 
@@ -271,7 +271,7 @@ In ATS, there are several actions for asserting values. The first part of this s
 
 When you want to assert a value inside a widget, the main choice is always the [Assert Value](rg-one-assert-value) action. It asserts the value of a widget using the `mx-name` of the widget.
 
-ATS uses the `widget name` parameter instead of `mx-name`. The widget name is found using the ATS helper, and the value is the `widget name`:
+ATS uses the `widget name` parameter instead of `mx-name`. The widget name is found using the ATS Helper, and the value is the `widget name`:
 
 ![](attachments/bp-two-finding-the-action-you-need/mx-name-ats-helper-cp.png)
 
@@ -317,7 +317,7 @@ The solution in this situation is to use the following search term: "Assert not 
 
 When you want to assert a value from a widget always use the _Assert Value_ action if possible.
 
-If you want to assert a value from a specific widget or the widget does not have a `mx-name`. Then use "Assert" in combination with the widget name as displayed in the [Mendix App Store](https://appstore.home.mendix.com/), Mendix Studio Pro. You can also find the name using the ATS helper.
+If you want to assert a value from a specific widget or the widget does not have a `mx-name`. Then use "Assert" in combination with the widget name as displayed in the [Mendix App Store](https://appstore.home.mendix.com/), Mendix Studio Pro. You can also find the name using the ATS Helper.
 
  In case you cannot assert the value from a widget due to no unique name or because it is not supported, go to [How to Create Custom Actions](ht-one-create-custom-actions).
 

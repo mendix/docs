@@ -9,23 +9,43 @@ tags: ["studio pro", "page", "properties"]
 
 This document describes page properties. For details on what pages are for and what kind of widgets can be placed on them, see [Pages](pages).
 
-## 2 Common Properties
+## 2 Common Section
 
-{{% snippet file="refguide/Document+Name+Property.md" %}}
+### 2.1 Name
 
-{{% snippet file="refguide/Documentation+Property.md" %}}
+The internal name of the widget. You can use this to give sensible names to widgets. The name property also appears in the generated HTML: the widget DOM element automatically includes the class `mx-name-{NAME}`, which can be useful for [Selenium testing](/howto7/integration/selenium-support).
 
-{{% snippet file="refguide/Document+Class+Property.md" %}}
+### 2.2 Documentation
 
-{{% snippet file="refguide/Style+Property.md" %}}
+This property can be used to store developer documentation. End-users will never see this documentation.
 
-## 3 Design Properties
+### 2.3 Class
+
+The class property allows you to specify one or more cascading style sheet (CSS) classes for the widget. The classes should be separated by a space. The classes will be applied to the widget in the browser and the widget will get the corresponding styling. The classes should be classes in the theme that is used in the project. It overrules the default styling of the widget.
+
+Styling is applied in the following order:
+
+1. The default styling defined by the theme the project uses.
+2. The `Class` property.
+3. The `Style` property.
+
+You can see which widgets in a page have styling applied via the class or style property by clicking the <strong>Show styles</strong> button in **Structure mode**.
+
+![](attachments/common-widgets-properties/show-styles.png)
+
+### 2.4 Style
+
+The style property allows you to specify additional CSS styling. If a class is also specified, this styling is applied *after* the class. 
+
+You can see which widgets in a page have styling applied via the style or class property by clicking the <strong>Show styles</strong> button in **Structure mode**.
+
+## 3 Design Section
 
 {{% snippet file="refguide/Canvas+Width+Property.md" %}}
 
 {{% snippet file="refguide/Canvas+Height+Property.md" %}}
 
-## 4 General Properties
+## 4 General Section
 
 ### 4.1 Title
 
@@ -47,7 +67,7 @@ In simple e-commerce applications, the URLs can be configured as follows:
 
 * */order/{Id}* – the URL for a page with data from a particular `Order` (actual URLs in a browser will look like `http://example.mendixcloud.com/p/order/3212449487634321`, wherein `3212449487634321` is the unique identifier of the `Order`)
 
-## 5 Navigation Properties
+## 5 Navigation Section
 
 ### 5.1 Visible For
 
@@ -55,7 +75,7 @@ These are the module roles for which the page is visible. This has an effect on 
 
 For more information, see [Module Security](module-security).
 
-## 6 Pop-Up Properties
+## 6 Pop-Up Section
 
 The pop-up properties are only relevant for pop-up pages (as opposed to content pages).
 
@@ -83,7 +103,7 @@ Configures the behavior of the popup close button (the little cross in the top-r
 
 *Default value:* Default (cancel)
 
-## 7 Usage Properties
+## 7 Usage Section
 
 ### 7.1 Mark as Used
 

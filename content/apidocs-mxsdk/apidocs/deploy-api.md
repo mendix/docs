@@ -772,7 +772,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/settings/
 **Example Request**
 
 ```json
-GET /api/1/apps/calc/environments/acceptance/settings/ 
+POST /api/1/apps/calc/environments/acceptance/settings/ 
 Host: deploy.mendix.com
 
 Content-Type: application/json

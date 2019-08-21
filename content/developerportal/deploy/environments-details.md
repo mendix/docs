@@ -219,17 +219,17 @@ For Mendix Cloud v3, only *X-Frame-Options* is supported. For Mendix Cloud v4 th
 
 There are three types of value for these headers:
 
-* Choose a value from a dropdown
+*  Choose a value from a dropdown
 
-   ![](attachments/environments-details/http-header-dropdown.png)
+    ![](attachments/environments-details/http-header-dropdown.png)
 
-* Choose a value from a dropdown and specify a URL
+*  Choose a value from a dropdown and specify a URL
 
-   ![](attachments/environments-details/http-header-url.png)
+    ![](attachments/environments-details/http-header-url.png)
 
-* Enter the required values as a string
+*  Enter the required values as a string
 
-   ![](attachments/environments-details/http-header-string.png)
+    ![](attachments/environments-details/http-header-string.png)
 
 The changes to the headers will be implemented when the app is redeployed.
 

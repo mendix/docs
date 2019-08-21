@@ -201,7 +201,7 @@ See the following link for more information about plotly.js and the options: htt
 
 #### 2.1.5 Common
 
-These are properties which are common to many widgets. For information see [Common Widget Properties](common-widget-properties#common-properties).
+These are properties which are common to many widgets. For information see [Properties Common for Widgets](common-widget-properties#common-properties).
 
 ## 3 Configuration by Chart Type {#configuration-by-chart-type}
 

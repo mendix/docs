@@ -1,5 +1,5 @@
 ---
-title: "Make JavaScript Actions"
+title: "Write JavaScript Actions"
 category: "Extensibility"
 menu_order: 3
 tags: ["widget", "pluggable", "JavaScript", "API", "JavaScript-API"]

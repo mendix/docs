@@ -134,7 +134,23 @@ developerportal:
     - "App Store"
     - "Mendix Support"
 studio:
-  space: "Studio Guide"
+  space: "Studio 8 Guide"
+  priority: false
+  menu_categories:
+    - "General Info"
+    - "Domain Model"
+    - "Pages"
+    - "Navigation Document"
+    - "Microflows"
+    - "Data Filters"
+    - "Previewing & Publishing Your App"
+    - "Checks"
+    - "Consistency Errors"
+    - "Theme Customizer"
+    - "Settings"
+    - "Starting With Your Own Data"
+studio7:
+  space: "Studio 7 Guide"
   priority: false
   menu_categories:
     - "General Info"

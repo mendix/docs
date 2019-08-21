@@ -2,48 +2,71 @@
 title: "Template Grid"
 parent: "data-widgets"
 menu_order: 30
-tags: ["studio pro"]
+tags: ["studio pro", "template grid", "data widgets"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 {{% alert type="warning" %}}The template grid widget is not supported on native mobile pages.{{% /alert %}}
 
-The template grid shows a list of objects in a tile view. For example, a template grid can show a list of products. Using controls provided by the template grid you can browse, search and manipulate those objects. The template grid has a lot in common with the data grid. The main difference is that the objects are shown in templates (a sort of small data view) instead of rows.
+## 1 Introduction
 
-{{% alert type="info" %}}
+A template grid shows a list of objects in a tile view. For example, a template grid can show a list of employees with their profile pictures. Using controls provided by the template grid you can browse, search, and manipulate those objects:
 
-![](attachments/pages/template-grid.png)
-A template grid showing employees with their profile picture.
+![](attachments/data-widgets/template-grid.png)
 
-{{% /alert %}}
+The template grid has a lot in common with a [data grid](data-grid). The main difference is that the objects are shown in templates instead of rows.
 
-## Common properties
+## 2 Components
 
-{{% snippet file="refguide/Name+Property.md" %}}
+### 2.1 Control Bar
 
-{{% snippet file="refguide/Class+Property.md" %}}
+For more information, see [Control Bar](control-bar).
 
-{{% snippet file="refguide/Style+Property.md" %}}
+### 2.2 Search Bar
 
-{{% snippet file="refguide/Tab+index+Property.md" %}}
+**Search Bar** is only available for **Database** and **XPath** [data sources](#data-source). For more information on a search bar and its settings, see [Search Bar](search-bar).
 
-## Components
+### 2.3 Sort Bar
 
-### Control bar
+**Sort Bar** is only available for **Database** and **XPath** [data sources](#data-source). For more information on a sort bar and its settings, see [Sort Bar](sort-bar).
 
-See [Control Bar](control-bar).
+## 3 Properties
 
-### Search bar (for data source type 'Database' and 'XPath')
+An example of template grid properties is represented in the image below:
 
-See [Search Bar](search-bar).
+{{% image_container width="250" %}}![](attachments/data-widgets/template-grid-properties.png)
+{{% /image_container %}}
 
-### Sort bar (for data source type 'Database' and 'XPath')
+Template grid properties consist of the following sections:
 
-See [Sort Bar](sort-bar).
+* [Common](#common)
+* [Data source](#data-source)
+* Design Properties
+* [General](#general)
+* [Visibility](#visibility)
 
-## General properties
+### 3.1 Common Section {#common}
 
-### Show control bar
+{{% snippet file="refguide/common-section-link.md" %}}
+
+### 3.2 Data Source Properties {#data-source}
+
+The data source determines which objects will be shown in the template grid. For general information about data sources, see [Data Sources](data-sources).
+
+#### 3.2.1 Type
+
+The list view supports the following types of data sources: 
+
+* [Database source](database-source) – objects are retrieved directly form the database
+* [XPath source](xpath-source) – objects are retrieved directly form the database
+* [Microflow source](microflow-source) – calculates the list of objects by executing a microflow
+* [Association source](association-source) – follows an association to get to objects
+
+The database and XPath sources retrieve objects from the database and supports searching and sorting. 
+
+### 3.3 General Section {#general}
+
+#### 3.3.1 Show Control Bar
 
 This property indicates whether the control bar will be visible in the end user interface. The control bar also includes the paging buttons.
 
@@ -55,29 +78,29 @@ Even if the control bar is invisible there can still be a default button that is
 
 _Default value:_ True
 
-### Show paging buttons
+#### 3.3.2 Show Paging Buttons
 
 This property indicates with the buttons to page through the information in the grid are visible. Only hide these buttons if you are sure that there will never be more objects than the number of rows of the grid. Note that hiding the control bar also hides the paging buttons.
 
 _Default value:_ True
 
-### Number of rows
+#### 3.3.3 Number of Rows
 
 With this property you can change the number of rows of templates that will be shown on one page.
 
 _Default value:_ 3
 
-### Number of columns
+#### 3.3.4 Number of Columns
 
 With this property you can change the number of templates that will be shown next to each other in one row.
 
 _Default value:_ 2
 
-### Style template
+#### 3.3.5 Style Template
 
 The style template property allows you to choose from three different styling of the template grid. These stylings depend on your theme package.
 
-### Selection mode
+#### 3.3.6 Selection Mode
 
 The selection mode determines whether and how the user can select items in the grid.
 
@@ -91,13 +114,13 @@ The selection mode determines whether and how the user can select items in the g
 
 _Default value:_ Single selection
 
-### Select first
+#### 3.3.7 Select First
 
 This property indicates whether the first item will be selected initially. This is especially useful if there is a data view listening to this grid.
 
 _Default value:_ False
 
-### Default button trigger
+#### 3.3.8 Default Button Trigger
 
 The default button can be triggered by a single or a double click on a row.
 
@@ -108,31 +131,19 @@ The default button can be triggered by a single or a double click on a row.
 
 _Default value:_ Double click
 
-### Refresh time (in seconds)
+#### 3.3.9 Refresh Time (in Seconds)
 
 If the refresh time is non-zero, the template grid will refresh its contents every given number of seconds. For example, a task list could be refreshed every minute so that you know when new tasks arrive. By default the refresh time is zero and this means that the grid will not automatically refresh itself.
 
 _Default value:_ 0
 
-## Data source properties
+### 3.4 Visibility Section {#visibility}
 
-The data source determines which objects will be shown in the template grid. For general information about data sources, see [Data Sources](data-sources).
+{{% snippet file="refguide/visibility-section-link.md" %}}
 
-### Type
+## 4 Read More
 
-The template grid supports the following types of data sources: Database Source, Association Source, Microflow Source. The database source retrieves objects from the database and supports searching and sorting. The association source follows an association from the enclosing data view to get to the objects. Finally, the microflow source calculates the list of objects by executing a microflow.
-
-### Other properties
-
-See the corresponding data source for its properties:
-
-*   [Database source](database-source)
-*   [XPath source](xpath-source)
-*   [Microflow source](microflow-source)
-*   [Association source](association-source)
-
-## Visibility properties
-
-{{% snippet file="refguide/Visibility+Property.md" %}}
-
-{{% snippet file="refguide/Visibility+Property+With+Module+Roles+Simple.md" %}}
+* [Page](page)
+* [Data Widgets](data-widgets)
+* [Data Sources](data-sources)
+* [Properties Common for Widgets](common-widget-properties)

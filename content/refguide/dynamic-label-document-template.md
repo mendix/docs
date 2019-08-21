@@ -11,6 +11,7 @@ A dynamic label is used for the same kind of attributes as a text box from the p
 {{% alert type="info" %}}
 
 ![](attachments/819203/918131.png)
+
 A dynamic label linking to a customer name.
 
 {{% /alert %}}
@@ -19,7 +20,7 @@ A dynamic label linking to a customer name.
 
 ### 2.1 Style
 
-See [Style](style)
+For details, see [Style](style).
 
 ### 2.2 Render XHTML
 
@@ -52,13 +53,16 @@ _Default value:_ Date
 ### 2.6 Custom Date Format (Only for Attributes of the DateTime Type)
 
 If you choose 'Custom' as the date format (see above) the custom date format determines the way date and/or time are formatted. The custom date format is a string that follows the rules described in
-[http://download.oracle.com/javase/6/docs/api/java/text/SimpleDateFormat.html](http://download.oracle.com/javase/6/docs/api/java/text/SimpleDateFormat.html).
+[Class SimpleDateFormat](http://download.oracle.com/javase/6/docs/api/java/text/SimpleDateFormat.html).
 
 {{% alert type="info" %}}
 
-The custom date format
+The custom date format:
+
 `EEE, MMM d, yy`
-results in the following text
+
+results in the following text:
+
 `Wed, Jul 4, 01`
 
 {{% /alert %}}

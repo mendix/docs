@@ -28,7 +28,7 @@ The **On click** property specifies what action is executed when a user click a 
 * **Call a nanoflow** – the specified nanoflow is executed.
   * **Nanoflow** – a [nanoflow](nanoflow) that should be executed.
 * **Open link** – triggers an action based on a link type, some of which are specific to mobile devices.
-  * **Link Type** – the type of action triggered when pressing the button. For more information, see the [Link Type Options](#on-click-link-type) section below. 
+  * **Link Type** – the type of action triggered when pressing the button. For information on available link types, see the [Link Types](#on-click-link-type) section below. 
   * **Address** – usage of the address property depends on the chosen link type. The property is used either as a URL (Web), as an email address (Email), or as a phone number (Call/Text). 
   * **Address value**  – allows you to specify an address if a literal value is selected in **Address**.
   * **Address attribute** – allows you to select an attribute if a attribute value is selected in **Address**. An address attribute specifies a path to an attribute. 
@@ -46,9 +46,9 @@ The **On click** property specifies what action is executed when a user click a 
 * **Synchronize** – synchronizes the data stored locally on your device with the server database.
 * **Sign out** – signs the currently signed-in user out. When no user is signed in, no action is performed.
 
-### 2.1 Link Type Options {#on-click-link-type}
+### 2.1 Link Types {#on-click-link-type}
 
-This specifies the type of action triggered when pressing the button. These are the options:
+The table below described link types available for the **Open link** on click event:
 
 | Value | Description |
 | --- | --- |
@@ -61,7 +61,7 @@ _Default value:_ Web
 
 {{%alert type="info" %}}
 
-When you configure **Email**, **Phone Call** or **Message** options, the corresponding default app will be opened on the device when the action is triggered, for example, the default email client will be opened to compose a message.
+When you configure **Email**, **Call**, or **Text** options, the corresponding default app will be opened on the device when the action is triggered, for example, the default email client will be opened to compose a message.
 
 {{%/alert %}}
 

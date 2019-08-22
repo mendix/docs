@@ -188,7 +188,7 @@ Mendix platform re-export [react](https://www.npmjs.com/package/react), [react-d
 
 Mendix provides you with React version 16.8.x (in npm terms `~16.8.0`). Patch versions might change from one minor release of Mendix to another. Mendix will always provide a matching version of react-dom.
 
-For react-native Mendix exposes a single version: 0.59.9 **todo: will this version change in future? if so, that's a dependency this doc should avoid**. We also include the following libraries:
+For react-native Mendix exposes a single version: 0.59.9. Mendix also includes the following libraries:
 
 * [react-native-gesture-handler](https://www.npmjs.com/package/react-native-gesture-handler) of version 1.3.0
 * [react-native-video](https://www.npmjs.com/package/react-native-video) of version 4.4.4
@@ -196,7 +196,7 @@ For react-native Mendix exposes a single version: 0.59.9 **todo: will this versi
 
 ### 6.2 Big.js
 
-The Mendix platform uses [big.js](https://www.npmjs.com/package/react-native) to represent and operate on numbers. With Mendix 8.0 we re-export the version 5.2, but in future versions it might be updated to newer minor versions (in npm terms - `^5.2.0`) **todo: Can I just delete this time-dependant sentence, or should it be altered?**.
+The Mendix platform uses [big.js](https://www.npmjs.com/package/react-native) to represent and operate on numbers. Mendix 8.0 re-exports version 5.2.
 
 ## 7 Read More
 

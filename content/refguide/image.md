@@ -10,6 +10,10 @@ tags: ["studio pro", "image", "image widget"]
 
 The image widget can be used to show a static image on a page, layout, or snippet.
 
+For example, you can configure an image clicking which a page with customer details opens:
+
+![Image Example](attachments/common-widgets/image-example.png)
+
 {{% alert type="info" %}}
 
 If you want to dynamically show different images based on data, please take a look at the [image viewer](image-viewer).

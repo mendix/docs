@@ -9,7 +9,8 @@ tags: ["studio pro", "events section", "properties", "widget", "on click", "acti
 
 An **On click** event specifies an event that is executed when a user clicks a widget. Often **On click** property is a part of the **Events** section in properties. For example, you can specify that when a user clicks a customer's profile image, the page with this customer's details will open:
 
-![](attachments/on-click-event/on-click-event-example.png)
+{{% image_container width="350" %}}![](attachments/on-click-event/on-click-event-example.png)
+{{% /image_container %}}
 
 On click event is common for many widgets, for example, an image, buttons, a list view. 
 

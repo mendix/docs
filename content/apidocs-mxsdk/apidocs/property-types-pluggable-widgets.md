@@ -62,7 +62,7 @@ String is represented as a simple text input in Studio Pro. It is passed as a `s
 | Attribute      | Required | Attribute Type | Description                                                  |
 | -------------- | -------- | -------------- | ------------------------------------------------------------ |
 | `type`         | Yes      | String         | Must be `string`                                             |
-| `key`          | Yes      | String         | [+Property types available to pluggable widgets: key](#key) |
+| `key`          | Yes      | String         | See [key](#key) |
 | `defaultValue` | No       | String         | Default value for the property.                              |
 | `multiline`    | No       | Boolean        | `true` to enable multiline input in the Studio, `false` otherwise. |
 | `required`     | No       | Boolean        | Whether the property must be specified by the user. `true` by default |
@@ -70,7 +70,7 @@ String is represented as a simple text input in Studio Pro. It is passed as a `s
 
 #### 2.1.2 Studio Pro UI
 
-For the single line property the Studio Pro UI *XML* is as follows:
+When the proprety is defined as follows:
 
 ```xml
 <property key="myString" type="string">
@@ -79,11 +79,11 @@ For the single line property the Studio Pro UI *XML* is as follows:
 </property>
 ```
 
-In Studio Pro, a single line string property appears this way:
+Then the Studio Pro UI for the property appears like this:
 
 ![](attachments/widget-property-types/string.png)
 
-For the multi-line property the Studio Pro UI *XML* is as follows:
+When the proprety is defined as follows:
 
 ```xml
 <property key="myStringMultiline" type="string" multiline="true">
@@ -92,7 +92,7 @@ For the multi-line property the Studio Pro UI *XML* is as follows:
 </property>
 ```
 
-In Studio Pro, a multi-line string property appears this way:
+Then the Studio Pro UI for the property appears like this:
 
 ![](attachments/widget-property-types/string-multiline.png)
 
@@ -105,12 +105,12 @@ Boolean is represented as a toggle in Studio Pro. It is passed as `boolean` prop
 | Attribute      | Required | Attribute Type | Description                                                                                                                                                          |
 | -------------- | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `type`         | Yes      | String         | Must be `boolean`                                                                                                                                                    |
-| `key`          | Yes      | String         | [+Property types available to pluggable widgets: key](#key) |
+| `key`          | Yes      | String         | See [key](#key) |
 | `defaultValue` | Yes      | Boolean        | Default value for the property. `true` or `false`                                                                                                                    |
 
 #### 2.2.2 Studio Pro UI
 
-For the Boolean property, the Studio Pro UI *XML* is as follows:
+When the proprety is defined as follows:
 
 ```xml
 <property key="myBoolean" type="boolean" defaultValue="false">
@@ -119,7 +119,7 @@ For the Boolean property, the Studio Pro UI *XML* is as follows:
 </property>
 ```
 
-A Boolean property can appear in Studio Pro like this:
+Then the Studio Pro UI for the property appears like this:
 
 ![](attachments/widget-property-types/boolean.png)
 
@@ -132,12 +132,12 @@ Integer is represented as a number input in Studio Pro. It is passed as a `numbe
 | Attribute      | Required | Attribute Type | Description                                                                                                                                                          |
 | -------------- | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `type`         | Yes      | String         | Must be `integer`                                                                                                                                                    |
-| `key`          | Yes      | String         | [+Property types available to pluggable widgets: key](#key) |
+| `key`          | Yes      | String         | See [key](#key) |
 | `defaultValue` | Yes      | Integer        | Default value for the property.                                                                                                                                      |
 
 #### 2.3.2 Studio Pro UI
 
-For the integer property, the Studio Pro UI *XML* is as follows:
+When the proprety is defined as follows:
 
 ```xml
 <property key="myInteger" type="integer" defaultValue="1000">
@@ -146,7 +146,7 @@ For the integer property, the Studio Pro UI *XML* is as follows:
 </property>
 ```
 
-An integer property can appear in Studio Pro like this:
+Then the Studio Pro UI for the property appears like this:
 
 ![](attachments/widget-property-types/integer.png)
 
@@ -159,7 +159,7 @@ Enumeration allows a user to select one out of multiple options defined in the *
 | Attribute      | Required | Attribute Type | Description                                                                                                                                                          |
 | -------------- | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `type`         | Yes      | String         | Must be `enumeration`                                                                                                                                                |
-| `key`          | Yes      | String         | [+Property types available to pluggable widgets: key](#key) |
+| `key`          | Yes      | String         | See [key](#key) |
 | `defaultValue` | Yes      | Integer        | Default value for the property.                                                                                                                                      |
 
 #### 2.4.2 XML Elements
@@ -174,7 +174,7 @@ The `key` of a selected element will be passed to the client component. `key` sh
 
 #### 2.4.3 Studio Pro UI
 
-For the enumeration value property, the Studio Pro UI *XML* is as follows:
+When the proprety is defined as follows:
 
 ```xml
 	<property key="myEnumeration" type="enumeration" defaultValue="red">
@@ -188,7 +188,7 @@ For the enumeration value property, the Studio Pro UI *XML* is as follows:
 	</property>
 ```
 
-An enumeration property can appear in Studio Pro like this:
+Then the Studio Pro UI for the property appears like this:
 
 ![](attachments/widget-property-types/enumeration.png)
 
@@ -203,11 +203,11 @@ Icon allows a user to configure an icon similar to one used by an [action button
 | Attribute  | Required | Attribute Type | Description                                                                                                                                                          |
 | ---------- | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `type`     | Yes      | String         | Must be `icon`                                                                                                                                                       |
-| `key`      | Yes      | String         |[+Property types available to pluggable widgets: key](#key) |
+| `key`      | Yes      | String         |See [key](#key) |
 | `required` | No       | Boolean        | Whether the property must be specified by the user. `true` by default                                                                                                |
 #### 3.1.2 Studio Pro UI
 
-For icon components, the Studio Pro UI *XML* is as follows:
+When the component is defined as follows:
 
 ```xml
 <property key="cardIcon" type="icon" required="false">
@@ -216,7 +216,7 @@ For icon components, the Studio Pro UI *XML* is as follows:
 </property>
 ```
 
-An icon component will appear in Studio Pro like this:
+Then the Studio Pro UI for the component appears like this:
 
 ![](attachments/widget-property-types/icon.png)
 
@@ -229,11 +229,11 @@ Image allows a user to configure a static image from an [image collection](https
 | Attribute  | Required | Attribute Type | Description                                                                                                                                                          |
 | ---------- | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `type`     | Yes      | String         | Must be `image`                                                                                                                                                      |
-| `key`      | Yes      | String         | [+Property types available to pluggable widgets: key](#key) |
+| `key`      | Yes      | String         | See [key](#key) |
 | `required` | No       | Boolean        | Whether the property must be specified by the user. `true` by default                                                                                                |
 #### 3.2.2 Studio Pro UI
 
-For image components, the Studio Pro UI *XML* is as follows:
+When the component is defined as follows:
 
 ```xml
 <property key="bgImage" type="image" required="false">
@@ -242,7 +242,7 @@ For image components, the Studio Pro UI *XML* is as follows:
 </property>
 ```
 
-An image component will appear in Studio Pro like this:
+Then the Studio Pro UI for the component appears like this:
 
 ![](attachments/widget-property-types/image.png)
 
@@ -257,7 +257,7 @@ Expression allows a user to configure an [expression](/refguide/expressions), th
 | Attribute      | Required | Attribute Type      | Description                                                                                                                                                          |
 | -------------- | -------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `type`         | Yes      | String              | Must be `expression`                                                                                                                                                 |
-| `key`          | Yes      | String              | [+Property types available to pluggable widgets: key](#key) |
+| `key`          | Yes      | String              | See [key](#key) |
 | `defaultValue` | No       | String (Expression) | Default value for the property.                                                                                                                                      |
 | `required`     | No       | Boolean             | Whether the property must be specified by the user. `true` by default                                                                                                |
 
@@ -275,7 +275,7 @@ Expression allows a user to configure an [expression](/refguide/expressions), th
 
 #### 4.1.3 Studio Pro UI
 
-For an expression property, the Studio Pro UI *XML* is as follows:
+When the proprety is defined as follows:
 
 ```xml
 <property key="progressBarColor" type="expression" defaultValue="'red'">
@@ -285,7 +285,7 @@ For an expression property, the Studio Pro UI *XML* is as follows:
 </property>
 ```
 
-An expression property could appear in Studio Pro like this:
+Then the Studio Pro UI for the property appears like this:
 
 ![](attachments/widget-property-types/expression.png)
 
@@ -298,7 +298,7 @@ An expression property could appear in Studio Pro like this:
 | Attribute   | Required | Attribute Type | Description                                                                                                                                                          |
 | ----------- | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `type`      | Yes      | String         | Must be `textTemplate`                                                                                                                                               |
-| `key`       | Yes      | String         | [+Property types available to pluggable widgets: key](#key) |
+| `key`       | Yes      | String         | See [key](#key) |
 | `multiline` | No       | Boolean        | `true` to enable multiline input in the Studio, `false` otherwise.                                                                                                   |
 | `required`  | No       | Boolean        | Whether the property must be specified by the user. `true` by default                                                                                                |
 
@@ -307,7 +307,9 @@ An expression property could appear in Studio Pro like this:
 
 `<translations>` — Allows to set a default value for text templates for different languages using `<translation>` elements with a `lang` attribute representing [ISO 639](https://en.wikipedia.org/wiki/ISO_639) code of the language. Available languages are listed in the [Languages Tab](/refguide/project-settings#4-languages-tab) in Studio Pro.
 
-For `TextTemplate`, the Studio Pro UI *XML* is as follows:
+#### 4.4.3 Studio Pro UI
+
+When the property is defined as follows:
 
 ```xml
 <property key="myBlockTitle" type="textTemplate">
@@ -321,9 +323,7 @@ For `TextTemplate`, the Studio Pro UI *XML* is as follows:
 </property>
 ```
 
-#### 4.4.3 Studio Pro UI
-
-`TextTemplate` could appear in Studio Pro like this:
+Then the Studio Pro UI for the property appears like this:
 
 ![](attachments/widget-property-types/text.png)
 
@@ -336,11 +336,11 @@ The action property allows a user to configure an action to do things like calli
 | Attribute  | Required | Attribute Type | Description                                                                                                                                                          |
 | ---------- | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `type`     | Yes      | String         | Must be `action`                                                                                                                                                     |
-| `key`      | Yes      | String         | [+Property types available to pluggable widgets: key](#key) |
+| `key`      | Yes      | String         | See [key](#key) |
 | `required` | No       | Boolean        | Whether the property must be specified by the user. `true` by default                                                                                                |
 #### 4.5.2 Studio Pro UI
 
-For an action property, the Studio Pro UI *XML* is as follows:
+When the property is defined as follows:
 
 ```xml
 <property key="buttonAction" type="action">
@@ -349,7 +349,7 @@ For an action property, the Studio Pro UI *XML* is as follows:
 </property>
 ```
 
-An action property could appear in Studio Pro like this:
+Then the Studio Pro UI for the property appears like this:
 
 ![](attachments/widget-property-types/action.png)
 
@@ -362,7 +362,7 @@ The attribute property allows a widget to work directly with entities' attribute
 | Attribute  | Required | Attribute Type | Description                                                  |
 | ---------- | -------- | -------------- | ------------------------------------------------------------ |
 | `type`     | Yes      | String         | Must be `attribute`                                          |
-| `key`      | Yes      | String         | [+Property types available to pluggable widgets: key](#key) |
+| `key`      | Yes      | String         | See [key](#key) |
 | `onChange` | No       | Property Path  | This path to an Action property that will be executed by Mendix platform when value is changed by the widget. |
 | `required` | No       | Boolean        | This decides if the property must be specified by the user (`true` by default). |
 
@@ -387,7 +387,7 @@ The attribute property allows a widget to work directly with entities' attribute
 
 #### 4.6.3 Studio Pro UI
 
-For *XML* elements, the Studio Pro UI *XML* is as follows:
+When the property is defined as follows:
 
 ```xml
 <property key="percentage" type="attribute" onChange="onPercentageChange">
@@ -405,7 +405,7 @@ For *XML* elements, the Studio Pro UI *XML* is as follows:
 </property>
 ```
 
-An *XML* element could appear in Studio Pro like this:
+Then the Studio Pro UI for the property appears like this:
 
 ![](attachments/widget-property-types/xml-element.png)
 
@@ -418,14 +418,16 @@ The object property allows to create an arbitrary list of properties.
 | Attribute | Required | Attribute Type | Description                                                                                                                                                          |
 | --------- | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `type`    | Yes      | String         | Must be `object`                                                                                                                                                     |
-| `key`     | Yes      | String         | [+Property types available to pluggable widgets: key](#key) |
+| `key`     | Yes      | String         | See [key](#key) |
 | `isList`  | Yes      | Boolean        | Must be `true`                                                                                                                                                       |
 
 #### 4.7.2 XML Elements
 
 `<properties>` (required) — This encapsulates the list or properties to be configured. For more information on property groups, see the [Property Groups](pluggable-widgets#property-groups) section of *Pluggable Widgets API*. Properties must be grouped by `<propertyGroup>` elements. Nested object properties are not supported.
 
-For the object property, the Studio Pro UI *XML* is as follows:
+#### 4.7.3 Studio Pro UI
+
+When the property is defined as follows:
 
 ```xml
 <property key="myObject" type="object" isList="true">
@@ -447,9 +449,7 @@ For the object property, the Studio Pro UI *XML* is as follows:
 </property>
 ```
 
-#### 4.7.3 Studio Pro UI
-
-An object property could appear in Studio Pro like this:
+Then the Studio Pro UI for the property appears like this:
 
 ![](attachments/widget-property-types/object.png)
 

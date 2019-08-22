@@ -15,7 +15,7 @@ The Mendix platform also exposes a few JavaScript modules, specifically extra Me
 
 Mendix does not provide you code as an *npm package*, which is the approach commonly used by JavaScript libraries. Instead, Mendix provides you modules available during execution. Hence, if you are using a module bundler like [webpack](https://webpack.js.org/), you should configure it to mark these modules as [externals](https://webpack.js.org/configuration/externals/).
 
-This process can be cumbersome, so it is recommended you use this [tools package](https://www.npmjs.com/package/@mendix/pluggable-widgets-tools) which contains the correctly configured bundlers to work with pluggable widgets. If you follow best practices and use the [Mendix Pluggable Widget Generator](https://www.npmjs.com/package/@mendix/generator-widget) to scaffold your widget, then this package is added automatically.
+This process can be cumbersome, so it is recommended you use this [tools package](https://www.npmjs.com/package/@mendix/pluggable-widgets-tools) which contains the correctly-configured bundlers to work with pluggable widgets. If you follow best practices and use the [Mendix Pluggable Widget Generator](https://www.npmjs.com/package/@mendix/generator-widget) to scaffold your widget, then this package is added automatically.
 
 ## 3 Standard Properties
 
@@ -23,27 +23,27 @@ Alongside the props that correspond to the properties specified in widget defini
 
 ### 3.1 Name 
 
-In Mendix Studio and Mendix Studio Pro, every widget must have a name configured. The primary usage of a widget name is to make its component identifiable in the client, so that it can be targeted using [Selenium](/howto/integration/selenium-support) or Appium test automation. In web apps, the Mendix platform automatically adds the class `mx-name-{widgetName}` to a widget so that no extra action from a component developer is required. Unfortunately, this solution is not possible for [native apps](/howto/mobile/native-mobile). A component developer must manually pass a given `string` **name** prop to an underlying React Native [testID](https://facebook.github.io/react-native/docs/view#testid).
+In Mendix Studio and Mendix Studio Pro, every widget must have a name configured. The primary usage of a widget name is to make its component identifiable in the client so that it can be targeted using [Selenium](/howto/integration/selenium-support) or Appium test automation. In web apps, the Mendix platform automatically adds the class `mx-name-{widgetName}` to a widget so that no extra action from a component developer is required. Unfortunately, this solution is not possible for [native apps](/howto/mobile/native-mobile). For native apps a component developer must manually pass a given `string` `name` prop to an underlying React Native [testID](https://facebook.github.io/react-native/docs/view#testid).
 
 ### 3.2 Class
 
-A user can specify multiple classes for every widget. They can do this either directly by configuring a [class](/refguide/container#class) property in the Studios, or by using design properties. In web apps, the Mendix platform creates a CSS class string from the configuration and passes it as a `string` **class** prop to every client component. Unfortunately, React Native does not have similar support for classes. Therefore in native apps a component will not receive **class** prop, but a **style** prop instead.
+A user can specify multiple classes for every widget. They can do this either directly by configuring a [class](/refguide/container#class) property in the Studios, or by using design properties. In web apps, the Mendix platform creates a *CSS* class string from the configuration and passes it as a `string` `class` prop to every client component. Unfortunately, React Native does not have similar support for classes. Therefore in native apps a component will not receive `class` prop, but a `style` prop instead.
 
 ### 3.3 Style
 
-A user can specify a custom CSS for every widget on a web page by using the [style](/refguide/container#style) property. This styling is passed to a client component through an optional **style** prop of the type `CSSProperties`.
+A user can specify a custom *CSS* for every widget on a web page by using the [style](/refguide/container#style) property. This styling is passed to a client component through an optional `style` prop of the type `CSSProperties`.
 
-On native pages, the meaning of a **style** prop is very different. First of all, a user cannot specify the aforementioned inline styles for widgets on a native page. So a **style** prop is used to pass styles computed based on configured classes. A client component will receive an array of [style objects](/refguide/native-styling-refguide#2-style-objects).
+On native pages, the meaning of a `style` prop is very different. First of all, a user cannot specify the aforementioned inline styles for widgets on a native page. So a `style` prop is used to pass styles computed based on configured classes. A client component will receive an array of [style objects](/refguide/native-styling-refguide#2-style-objects).
 
 ### 3.4 TabIndex
 
-If a widget uses a TabIndex prop [system property](property-types-pluggable-widgets#tabindex), then it will receive a configured **Tab index** through a `number` **tabIndex** property, except in the case when a configured tab index is on its default value of 0. Currently, **tabIndex** is not passed to widgets used on native pages. 
+If a widget uses a TabIndex prop [system property](property-types-pluggable-widgets#tabindex), then it will receive a configured `Tab index` through a `number` `tabIndex` property, except in the case when a configured tab index is on its default value of 0. Currently, `tabIndex` is not passed to widgets used on native pages. 
 
 ## 4 Property Values
 
 ### 4.1 ActionValue
 
-ActionValue is used to represent actions, like the [On click](/refguide/action-button#events-on-click) property of an action button. For any action except **Do nothing**, your component will receive a value adhering to the following interface. For **Do nothing** it will receive `undefined`. The **ActionValue** prop appears like this:
+ActionValue is used to represent actions, like the [On click](/refguide/action-button#events-on-click) property of an action button. For any action except **Do nothing**, your component will receive a value adhering to the following interface. For **Do nothing** it will receive `undefined`. The `ActionValue` prop appears like this:
 
 ```
     export interface ActionValue {
@@ -53,7 +53,7 @@ ActionValue is used to represent actions, like the [On click](/refguide/action-b
     }
 ```
 
-The flag `canExecute` indicates if an action can be executed under the current conditions. Think of a Call microflow action triggering a microflow with a parameter. Such an action cannot be executed until a parameter object is available, for example when a parent Data view has finished loading. An attempt to `execute` an action that cannot be executed will have no effect except generating a debug-level warning message.
+The flag `canExecute` indicates if an action can be executed under the current conditions. Think of a **Call microflow** action triggering a microflow with a parameter. Such an action cannot be executed until a parameter object is available, for example when a parent Data view has finished loading. An attempt to `execute` an action that cannot be executed will have no effect except generating a debug-level warning message.
 
 The flag `isExecuting` indicates whether an action is currently running. A long-running action can take seconds to complete. Your component might use this information to render an inline loading indicator which lets users track loading progress. Often it is not desirable to allow a user to trigger multiple actions in parallel. Therefore, a component (maybe based on a configuration) can decide to skip triggering an action while a previous execution is still in progress.
 
@@ -92,7 +92,7 @@ Though the type definition above looks complex, it is fairly simply to use becau
 
 ### 4.3 EditableValue {#editable-value}
 
-EditableValue is used to represent values that can be changed by a pluggable widget client component and is currently passed only to [attribute properties](property-types-pluggable-widgets#attribute). It is defined as follows:
+EditableValue is used to represent values that can be changed by a pluggable widget client component and is passed only to [attribute properties](property-types-pluggable-widgets#attribute). It is defined as follows:
 
 ```
     export interface EditableValue<T extends AttributeValue> {

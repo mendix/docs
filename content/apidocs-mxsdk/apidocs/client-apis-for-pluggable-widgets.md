@@ -45,12 +45,12 @@ If a widget uses a TabIndex prop [system property](property-types-pluggable-widg
 
 ActionValue is used to represent actions, like the [On click](/refguide/action-button#events-on-click) property of an action button. For any action except **Do nothing**, your component will receive a value adhering to the following interface. For **Do nothing** it will receive `undefined`. The `ActionValue` prop appears like this:
 
-```
-    export interface ActionValue {
-        readonly canExecute: boolean;
-        readonly isExecuting: boolean;
-        execute(): void;
-    }
+```ts
+export interface ActionValue {
+    readonly canExecute: boolean;
+    readonly isExecuting: boolean;
+    execute(): void;
+}
 ```
 
 The flag `canExecute` indicates if an action can be executed under the current conditions. Think of a **Call microflow** action triggering a microflow with a parameter. Such an action cannot be executed until a parameter object is available, for example when a parent Data view has finished loading. An attempt to `execute` an action that cannot be executed will have no effect except generating a debug-level warning message.
@@ -65,17 +65,17 @@ The method `execute` triggers the action. It returns nothing and does not guaran
 
 DynamicValue is used to represent values that can change over time and is used by many property types. It is defined as follows:
 
-```
-    export type DynamicValue<T> =
-        | { readonly status: ValueStatus.Available; readonly value: T }
-        | { readonly status: ValueStatus.Unavailable; readonly value: undefined }
-        | { readonly status: ValueStatus.Loading; readonly value: T | undefined };
+```ts
+export type DynamicValue<T> =
+    | { readonly status: ValueStatus.Available; readonly value: T }
+    | { readonly status: ValueStatus.Unavailable; readonly value: undefined }
+    | { readonly status: ValueStatus.Loading; readonly value: T | undefined };
     
-    export const enum ValueStatus {
-        Loading = "loading",
-        Unavailable = "unavailable",
-        Available = "available"
-    }
+export const enum ValueStatus {
+    Loading = "loading",
+    Unavailable = "unavailable",
+    Available = "available"
+}
 ```
 
 A component will receive a `DynamicValue<X>`  where type `X` depends on a property configuration. For example, for the [TextTemplate property](property-types-pluggable-widgets#texttemplate) it will be `DynamicValue<string>`, but for the [expression property](property-types-pluggable-widgets#expression) `X` will depend on a configured `returnType`.
@@ -94,24 +94,24 @@ Though the type definition above looks complex, it is fairly simply to use becau
 
 EditableValue is used to represent values that can be changed by a pluggable widget client component and is passed only to [attribute properties](property-types-pluggable-widgets#attribute). It is defined as follows:
 
-```
-    export interface EditableValue<T extends AttributeValue> {
-        readonly status: ValueStatus;
-        readonly readOnly: boolean;
+```ts
+export interface EditableValue<T extends AttributeValue> {
+    readonly status: ValueStatus;
+    readonly readOnly: boolean;
     
-        readonly value: T | undefined;
-        setValue(value: T | undefined): void;
-        readonly validation: string | undefined;
-        setValidator(validator?: (value: T | undefined) => string | undefined): void;
+    readonly value: T | undefined;
+    setValue(value: T | undefined): void;
+    readonly validation: string | undefined;
+    setValidator(validator?: (value: T | undefined) => string | undefined): void;
     
-        readonly displayValue: string;
-        setTextValue(value: string): void;
+    readonly displayValue: string;
+    setTextValue(value: string): void;
     
-        readonly formatter: ValueFormatter<T>;
-        setFormatter(formatter: ValueFormatter<T> | undefined): void;
+    readonly formatter: ValueFormatter<T>;
+    setFormatter(formatter: ValueFormatter<T> | undefined): void;
     
-        readonly universe?: T[];
-    }
+    readonly universe?: T[];
+}
 ```
 
 A component will receive `EditableValue<X>` where `X` depends on the configured `attributeType`.
@@ -136,25 +136,25 @@ The optional field `universe` is used to indicate the set of all possible values
 
 `DynamicValue<IconValue>` is used to represent icons: small pictograms in the Mendix platform. Those can be static or dynamic file- or font-based images. An icon can only be configured through an [icon](property-types-pluggable-widgets#attribute) property. `IconValue` is defined as follows:
 
-```
-    interface GlyphIcon {
-        readonly type: "glyph";
-        readonly iconClass: string;
-    }
+```ts
+interface GlyphIcon {
+    readonly type: "glyph";
+    readonly iconClass: string;
+}
     
-    interface WebImageIcon {
-        readonly type: "image";
-        readonly iconUrl: string;
-    }
+interface WebImageIcon {
+    readonly type: "image";
+    readonly iconUrl: string;
+}
     
-    interface NativeImageIcon {
-        readonly type: "image";
-        readonly iconUrl: Readonly<ImageURISource>;
-    }
+interface NativeImageIcon {
+    readonly type: "image";
+    readonly iconUrl: Readonly<ImageURISource>;
+}
     
-    export type WebIcon = GlyphIcon | WebImageIcon | undefined;
-    export type NativeIcon = GlyphIcon | NativeImageIcon | undefined;
-    export type IconValue = WebIcon | NativeIcon;
+export type WebIcon = GlyphIcon | WebImageIcon | undefined;
+export type NativeIcon = GlyphIcon | NativeImageIcon | undefined;
+export type IconValue = WebIcon | NativeIcon;
 ```
 
 In practice, `WebIcon` and `NativeIcon` are usually passed to a `Icon` component provided by Mendix, since this provides a convenient way of handling all types of icons at once. For more information on `Icon`, see the [Icon](#icon) section below.
@@ -163,13 +163,13 @@ In practice, `WebIcon` and `NativeIcon` are usually passed to a `Icon` component
 
 `DynamicValue<ImageValue>` is used to represent static or dynamic images. An image can be configured only through an [image](property-types-pluggable-widgets#image) property. `ImageValue` is defined as follows:
 
-```
-    export type WebImage = {
-        readonly uri: string;
-        readonly altText?: string;
-    } | undefined;
-    export type NativeImage = Readonly<ImageURISource> | undefined;
-    export type ImageValue = WebImage | NativeImage;
+```ts
+export type WebImage = {
+    readonly uri: string;
+    readonly altText?: string;
+} | undefined;
+export type NativeImage = Readonly<ImageURISource> | undefined;
+export type ImageValue = WebImage | NativeImage;
 ```
 
 `NativeImage` can be passed as a source of React Native’s [Image](https://facebook.github.io/react-native/docs/image) component, and `WebImage`  can be passed  to react-dom’s `img`.

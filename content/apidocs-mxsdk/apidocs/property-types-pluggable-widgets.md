@@ -20,11 +20,11 @@ The common structure of a property definition is as follows:
 
 ### 1.1 XML Attributes
 
-#### 1.1.1 `key` (required) {#key}
+#### 1.1.1 Key (required) {#key}
 
-This defines the prop key in the client component props which are supplied to the widget client component. Each property must have a unique `key` which can contain letters of all cases, digits, or underscores. However, a `key` attribute cannot *start* with a digit.
+This defines the prop `key` in the client component props which are supplied to the widget client component. Each property must have a unique `key` which can contain letters of all cases, digits, or underscores. However, a `key` attribute cannot *start* with a digit.
 
-#### 1.1.2 `type` (required)
+#### 1.1.2 Type (required)
 
 This defines a property's type. A `type` must be one of the following: 
 
@@ -127,7 +127,7 @@ Then the Studio Pro UI for the property appears like this:
 
 Integer is represented as a number input in Studio Pro. It is passed as a `number` prop to a client component.
 
-#### 2.3.1 XML attributes
+#### 2.3.1 XML Attributes
 
 | Attribute      | Required | Attribute Type | Description                                                                                                                                                          |
 | -------------- | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -357,7 +357,7 @@ Then the Studio Pro UI for the property appears like this:
 
 The attribute property allows a widget to work directly with entities' attributes, both reading and writing attributes. Depending on the widget's purposes, a widget should define attribute types it supports. The client component will receive `EditableValue<T>` where `T` depends on a `<attributeType>` configured.
 
-#### 4.6.1 XML Attributes
+#### 4.6.1 XML 
 
 | Attribute  | Required | Attribute Type | Description                                                  |
 | ---------- | -------- | -------------- | ------------------------------------------------------------ |

@@ -3,7 +3,7 @@ title: "Package Native Apps Using Native Builder"
 parent: "native-mobile"
 menu_order: 70
 description: A how-to for packaging your iOS and Android apps.
-tags: ["GitHub", "App Center", "Android", "native", "iOS", "Packaging"]
+tags: ["GitHub", "App Center", "Android", "native", "iOS", "Packaging", "Mobile"]
 ---
 
 ## 1 Introduction

@@ -172,7 +172,7 @@ In practice, `WebIcon` and `NativeIcon` are usually passed to a `Icon` component
     export type ImageValue = WebImage | NativeImage;
 ```
 
-`NativeImage` can be passed as a source of React Native’s [Image](https://facebook.github.io/react-native/docs/image) component, and `WebImage`  - to react-dom’s `img` **todo: What is happening in this sentence? "- to react-dom’s `img`"**.
+`NativeImage` can be passed as a source of React Native’s [Image](https://facebook.github.io/react-native/docs/image) component, and `WebImage`  can be passed  to react-dom’s `img`.
 
 ## 5 Exposed Modules
 

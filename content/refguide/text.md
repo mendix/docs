@@ -2,56 +2,114 @@
 title: "Text"
 parent: "common-widgets"
 menu_order: 10
-tags: ["studio pro"]
+tags: ["studio pro", "text", "text widget", "common widget"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-The text widget shows text which can optionally contain parameters. Every parameter is replaced with the value of the attribute it refers to. The text widget is the recommended way to show text to the user.
+## 1 Introduction
 
-{{% alert type="info" %}}
+The text widget displays a text which can contain parameters if necessary. Every attribute is replaced with the value of this attribute. For example, you can show a greeting message to a user by placing a text widget in a [data view](data-view) and adding parameters to it.
 
-![](attachments/pages/text.png)
+![Text Widget](attachments/common-widgets/text.png)
 
-Text widget placed in a data view, showing a greeting message to the user.
+If you start typing in any empty container, Studio Pro will automatically generate a text widget to display your text.
 
-{{% /alert %}}
+## 2 Properties
 
-If you start typing in any empty container Studio Pro will automatically generate a text widget to display your text.
+An example of text properties is represented in the image below:
 
-## General properties
+{{% image_container width="350" %}}![Text Properties](attachments/common-widgets/text-properties.png)
+{{% /image_container %}}
 
-### Text template
+Text properties consist of the following sections:
 
-Text template defines the text that will be shown. The template can contain parameters that are written as a number between braces, e.g. {1}. The first parameter has number 1, the second 2 etcetera. Note that to use template parameters the widget must be placed in a context of an entity, e.g. inside a [data view](data-view) or [list view](list-view).
+* [Common](#common)
+* Design Properties
+* [General](#general)
+* [Visibility](#visibility)
 
-### Parameters
+### 2.1 Common Section {#common}
 
-For each parameter in the template you define an attribute of the context entity or a referred entity of which the value will be inserted at the position of the parameter.
+{{% snippet file="refguide/common-section-link.md" %}}
 
-### Render mode
+### 2.2 General Section {#general}
 
-The render mode determines how the text will be shown in the web browser.
+#### 2.2.1 Caption {#caption}
+
+**Caption** defines a text that will be shown. The caption can contain parameters that are written between braces, e.g. {1}.  
+
+For more information on using parameters, see the [Parameters]() section below. 
+
+#### 2.2.2 Parameters
+
+Parameters are attributes the value of which will be displayed. To view **Parameters**, do one of the following:
+
+* Double-click the **Caption** setting in properties
+
+*  Double-click the text widget on the page and click **Edit** in the **General** section > **Caption**:
+
+    ![Opening Parameters](attachments/common-widgets/caption-edit-button.png) 
+
+Parameters have the following settings:
+
+* **Index** – an identification number of a parameter 
+
+* **Attribute (path)** – an attribute a value of which will be displayed 
+
+*  **Format** – a format in which an attribute value will be displayed
+
+    ![Parameter Settings](attachments/common-widgets/parameter-settings.png)
+
+##### 2.2.2.1 Adding New Parameters
+
+To use parameters, do the following:
+
+1. Place the **Text** widget must be placed in a context of an entity, i.e. inside a [data widget](data-widgets).
+
+2. Double-click the **Caption** setting in the text widget properties.
+
+3.  In the **Edit Caption** dialog window > **Parameters** section click **New**:
+
+    ![Adding New Parameter](attachments/common-widgets/adding-parameter.png)
+
+4. In the **Edit Template Parameter** dialog window, click **Select**, choose an attribute and confirm your choice.
+
+5.  In the **Caption** setting, write the text you would like to display and type **Index** of the parameter you would like to include. In the example below, to include a full name of your customer and a number of unread messages, you need to use indexes {1} for the *FullName* attribute, and {2} for the *NrOfUnread* attribute:  
+
+    ![Parameter Example](attachments/common-widgets/parameters-example.png)
+
+##### 2.2.2.2 Performing Other Actions on Parameters
+
+In addition to adding new parameters, you can perform the following actions on parameters:
+
+* **Delete** – to delete a parameter click Delete or press <kbd>Delete</kbd> on your keyboard
+
+* **Edit** – double-click a parameter to edit it or click Edit
+
+* **Move up** – to move a parameter up in the list of parameters and also to change its index, click **Move up**
+
+*  **Move down** – to move a parameter down in the list of parameters and also to change its index, click **Move down**
+
+    ![Parameter Actions](attachments/common-widgets/parameter-actions.png)
+
+#### 2.2.3 Render Mode
+
+The render mode determines how the text will be displayed. 
 
 | Value     | Description |
 | --------- | ----------- |
-| Text      | The text will be rendered inline with the previous/next texts on a page (`<span>` tag in HTML) |
-| Paragraph | The text will be rendered as a separate paragraph (`<p>` tag in HTML) |
-| Heading 1 | The text will be rendered as a large heading (`<h1>` tag in HTML) |
-| ...       | ... |
-| Heading 6 | The text will be rendered as a small heading (`<h6>` tag in HTML) |
+| Text      | The text will be rendered inline with the previous/next texts on a page (`<span>` tag in HTML). |
+| Paragraph | The text will be rendered as a separate paragraph (`<p>` tag in HTML). |
+| Heading 1 - Heading 6 | The text will be rendered as a selected heading (for example, `<h1>` tag in HTML). **Heading 1** is the largest type of heading, **Heading 6** is the smallest one. |
 
 _Default value:_ Text
 
-## Visibility properties
+### 2.4 Visibility Section {#visibility}
 
-{{% snippet file="refguide/Visibility+Property.md" %}}
+{{% snippet file="refguide/visibility-section-link.md" %}}
 
-{{% snippet file="refguide/Visibility+Property+With+Module+Roles+Simple.md" %}}
+## 3 Read More
 
-## Common properties
-
-{{% snippet file="refguide/Name+Property.md" %}}
-
-{{% snippet file="refguide/Class+Property.md" %}}
-
-{{% snippet file="refguide/Style+Property.md" %}}
+* [Page](page)
+* [Common Widgets](common-widgets)
+* [Properties Common for Widgets](common-widget-properties)

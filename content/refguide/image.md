@@ -37,7 +37,7 @@ Text properties consist of the following sections:
 
 ### 2.2 Events Section {#events}
 
-For information on the Events section and its properties, see [Events Section](events-section). 
+For information on the Events section and its properties, see [On Click Event & Events Section](on-click-event). 
 
 ### 2.3 General Section {#general}
 

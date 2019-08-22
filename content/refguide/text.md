@@ -28,13 +28,13 @@ Text properties consist of the following sections:
 * [General](#general)
 * [Visibility](#visibility)
 
-### 2.1 Common Section
+### 2.1 Common Section {#common}
 
 {{% snippet file="refguide/common-section-link.md" %}}
 
 ### 2.2 General Section {#general}
 
-#### 2.2.1 Caption
+#### 2.2.1 Caption {#caption}
 
 **Caption** defines a text that will be shown. The caption can contain parameters that are written between braces, e.g. {1}.  
 

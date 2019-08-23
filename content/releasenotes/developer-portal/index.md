@@ -14,6 +14,12 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deploym
 
 ## 2019
 
+### August 23th, 2019
+
+#### Mendix Cloud Improvements
+
+* We optimized the environments screen to require fewer remote requests to be executed.
+
 ### August 9th, 2019
 
 #### App User Management Improvements 

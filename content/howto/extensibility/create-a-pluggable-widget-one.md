@@ -377,5 +377,7 @@ Continue with the next tutorial to learn how to add validation feedback,  custom
 ## 4 Read More
 
 * [Build a Text Box Pluggable Widget: Part 2 (Advanced)](create-a-pluggable-widget-two)
-* [Write JavaScript Actions](/howto/extensibility/build-javascript-actions)
 * [Mendix Client API](https://apidocs.mendix.com/7/client/)
+* [Pluggable Widgets API](pluggable-widgets)
+* [Client APIs Available to Pluggable Widgets](client-apis-for-pluggable-widgets)
+* [Pluggable Widget Property Types](property-types-pluggable-widgets)

@@ -555,5 +555,7 @@ Explaining the code:
 
 ## 4 Read More
 
-* [Write JavaScript Actions](/howto/extensibility/build-javascript-actions)
 * [Build a Text Box Pluggable Widget: Part 1](create-a-pluggable-widget-one)
+* [Pluggable Widgets API](pluggable-widgets)
+* [Client APIs Available to Pluggable Widgets](client-apis-for-pluggable-widgets)
+* [Pluggable Widget Property Types](property-types-pluggable-widgets)

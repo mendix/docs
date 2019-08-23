@@ -46,7 +46,7 @@ The **General** section contains the **Caption** property. **Caption** defines t
 
 {{% snippet file="refguide/visibility-section-link.md" %}}
 
-## 5 Read More
+## 3 Read More
 
 * [Page](page)
 * [Common Widgets](common-widgets)

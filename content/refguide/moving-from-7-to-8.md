@@ -35,6 +35,19 @@ If your original project was Mendix version 7.23.2 or below and you want to work
 
 Follow the instructions in [Migration From the Sync Process to Collaborative Development](/refguide7/collaborative-development-migration).
 
+### 2.2 Atlas Compatibility
+
+Before moving to Mendix 8, make sure that you are using the latest Mendix 7 compatible Atlas version 1.2.4. By first updating Atlas to this version, you will prevent several errors related to design properties after your Mendix 8 migration.
+
+How to update to Atlas 1.2.4:
+
+1. Check if you customized anything in your Studio Pro Atlas UI Resource module, as updating Atlas will override all of that module's content. Move your customized content out of the Atlas UI Module before updating.
+2. Check if you customized anything in the **theme** folder inside your Mendix project. If so, rename the **theme** folder to something else, like *theme_oldest*.
+3. Update Atlas by opening the App Store inside Studio Pro, search for *Atlas UI Resources*, click the **All Versions** pane, and download **Atlas UI Resources v1.2.4**.
+4. When prompted, choose to replace your existing Atlas module.
+
+{{% alert type="info" %}} You do not have to move any customized files from **theme_oldest** to **theme** yet, as after migrating to Mx8, you will update Atlas again which will create a new **theme folder**.{{% /alert %}}
+
 ## 3 Converting Your App Project{#converting}
 
 The following sub-sections explain the steps to take in converting your app project from Mendix 7 to Mendix 8.

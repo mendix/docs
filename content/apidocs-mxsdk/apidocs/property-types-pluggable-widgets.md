@@ -7,7 +7,7 @@ tags: ["Widget", "Pluggable", "Custom", "JavaScript", "React"]
 
 ## 1 Introduction
 
-In order to be configurable, pluggable widgets use a [widget properties definition](/apidocs-mxsdk/apidocs/pluggable-widgets#properties-definition) which describes the properties available to pluggable widgets.
+In order to be configurable, pluggable widgets use a [widget properties definition](/apidocs-mxsdk/apidocs/pluggable-widgets#properties-definition) which describes the properties available to pluggable widgets. To see examples of pluggable widgets in action, see [How To Build Pluggable Widgets](/howto/extensibility/pluggable-widgets).
 
 The common structure of a property definition is as follows:
 
@@ -291,7 +291,7 @@ Then the Studio Pro UI for the property appears like this:
 
 ### 4.4 TextTemplate{#texttemplate}
 
-`TextTemplate` allows a user to configure translatable text template similar to the [text template](/refguide/text#text-template) of a text widget. The interpolated string will be passed to the client component as `DynamicValue<string>`.
+`TextTemplate` allows a user to configure translatable text template similar to the [Caption](/refguide/text#caption) of a text widget. The interpolated string will be passed to the client component as `DynamicValue<string>`.
 
 #### 4.4.1 XML Attributes
 
@@ -507,3 +507,4 @@ The editability property allows a pluggable widget to have an editable configura
 
 * [Pluggable Widgets API](pluggable-widgets)
 * [Client APIs Available to Pluggable Widgets](client-apis-for-pluggable-widgets)
+* [Build Pluggable Widgets](/howto/extensibility/pluggable-widgets)

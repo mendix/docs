@@ -40,7 +40,7 @@ Text properties consist of the following sections:
 
 For more information on using parameters, see the [Parameters]() section below. 
 
-#### 2.2.2 Parameters
+#### 2.2.2 Parameters {#parameters}
 
 Parameters are attributes the value of which will be displayed. To view **Parameters**, do one of the following:
 

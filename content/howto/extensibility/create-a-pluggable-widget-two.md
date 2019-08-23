@@ -556,6 +556,6 @@ Explaining the code:
 ## 4 Read More
 
 * [Build a Text Box Pluggable Widget: Part 1](create-a-pluggable-widget-one)
-* [Pluggable Widgets API](pluggable-widgets)
-* [Client APIs Available to Pluggable Widgets](client-apis-for-pluggable-widgets)
-* [Pluggable Widget Property Types](property-types-pluggable-widgets)
+* [Pluggable Widgets API](/apidocs-mxsdk/apidocs/pluggable-widgets)
+* [Client APIs Available to Pluggable Widgets](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets)
+* [Pluggable Widget Property Types](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets)

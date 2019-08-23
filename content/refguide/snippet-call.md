@@ -23,11 +23,11 @@ Label properties consist of the following sections:
 * Design Properties
 * [General](#general)
 
-### 2.1 Common Properties
+### 2.1 Common Properties {#common}
 
 {{% snippet file="refguide/common-section-link.md" %}}
 
-### 2.2 General Section
+### 2.2 General Section {#general}
 
 This section contains the **Snippet** property, it shows the name of an actual snippet that will be displayed here.
 

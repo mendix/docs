@@ -2,12 +2,13 @@
 title: "Page Title"
 parent: "common-widgets"
 menu_order: 50
-tags: ["studio pro"]
+tags: ["studio pro", "page title", "common widgets"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+## 1 Introduction
 
-The page title widget shows the title of the [page](page) on which it is used. This can be the title defined on the page itself or the override title defined when showing a page.
+A page title shows the title of the current [page](page). This can be the title defined on the page itself or an overridden title.
 
 {{% alert type="info" %}}
 
@@ -15,8 +16,29 @@ The page title widget makes it possible to embed the page title in a [layout](la
 
 {{% /alert %}}
 
-## Visibility properties
+## 2 Properties
 
-{{% snippet file="refguide/Visibility+Property.md" %}}
+An example of page title properties is represented in the image below:
 
-{{% snippet file="refguide/Visibility+Property+With+Module+Roles+Simple.md" %}}
+{{% image_container width="350" %}}![Page Title Properties](attachments/common-widgets/page-title-properties.png)
+{{% /image_container %}}
+
+Page title properties consist of the following sections:
+
+* [Common](#common)
+* Design Properties
+* [Visibility](#visibility)
+
+### 2.1 Common Section {#common}
+
+{{% snippet file="refguide/common-section-link.md" %}}
+
+### 2.2 Visibility Section {#visibility}
+
+{{% snippet file="refguide/visibility-section-link.md" %}}
+
+## 3 Read More
+
+* [Page](page)
+* [Common Widgets](common-widgets)
+* [Properties Common for Widgets](common-widget-properties)

@@ -28,7 +28,7 @@ To create an app based on a spreadsheet, you need to use the **App from a spread
 	c. The number of columns per worksheet does not exceed 100.<br/>
 
 	d. A column name does not exceed 100 characters.<br/>
-    
+  
 5.  Make sure that you have normalized your data in the spreadsheet. Check if the following requirements are met: 
 
     a. Each column should name a unique name within a workbook. 
@@ -37,7 +37,7 @@ To create an app based on a spreadsheet, you need to use the **App from a spread
 
       {{% /alert %}}
 
-    b. Each cell of the worksheet (a row or a column) should contain a single value or be empty.
+    b. Each cell of the worksheet (a row or a column) should contain a single value. It is also not recommended to leave cells empty. 
 
     c. If you want to create links (associations) between two columns, make sure the conditions mentioned above for creating these links are met. <br/>
 
@@ -70,7 +70,25 @@ If you choose to start without data, you will have just a blank app, and will no
 
 ### 4.1 Previewing Spreadsheet Data
 
-Once you select the spreadsheet for import, your data is analyzed and worksheets that have relations (associations) are identified: 
+Once you select the spreadsheet for import, your data is analyzed and is converted to associations, entities, and attributes.  
+
+#### 4.1.1 Correspondence Between Excel Data Types and Attribute Types {#excel-type-attribute-type}
+
+In the table below, you can see how the Excel data corresponds to the attribute types: 
+
+| Excel Data                                                   | Attribute Type                                               |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| The following Excel data will be converted into the string attribute type: 1. No data: no values, an empty column. 2. If the value does not fall under any of the cases described below. | String                                                       |
+| The Excel data will be converted into the Boolean attribute type if the values in the columns are: <ul><li>1 and 0</li><li>Y/y and N/n</li><li>yes and no</li><li>true and false</li></ul> | Boolean                                                      |
+| Data of type General or Number that falls into a range from –2,147,483,648 to 2,147,483,647 and does not contain empty cells. | Integer                                                      |
+| Data of type General or Number that falls into a range from –9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 and does not contain empty cells. | Long                                                         |
+| Other numbers that do not fall under Integer and Long attribute type conditions and the column does not contain empty cells. | Decimal                                                      |
+| Date and Time.                                               | Date and Time **Note** If only the date is indicated, the time is set to 00:00 in the preview |
+| The column is converted into an entity with enumeration attribute type, when the following conditions are met:  <ul><li>The value is identified as a string</li><li>Values in the column are used more than once</li><li>The number of such values is less than or equals ten</li></ul>When all conditions listed above are met, the column is treated as enumeration, and the values are turned into enumeration items. Values which are identical apart from being spelled with a lowercase or an uppercase will be combined under the version which is most common, or under the first one if all values are used the same number of times. For example, the values "Test" and "test" will be combined. | Enumeration                                                  |
+
+#### 4.1.1 Previewing Associations
+
+After you upload the spreadsheet, worksheets that have relations (associations) are identified:  
 
 {{% image_container width="400" %}}![](attachments/start-with-data/relations-identified.png)
 {{% /image_container %}}
@@ -93,28 +111,25 @@ A column can be used to create an association **from** it once only. If an assoc
 
 {{% /alert %}}
 
+####4.1.2 Managing Attribute Types
+
 At the bottom of each column (that will be turned into an attribute) an attribute type is automatically identified and indicated. Click the drop-down menu to change the attribute type. For more information on how Excel data types correspond to attribute types, see [Correspondence between Excel Data Types and Attribute Types](#excel-type-attribute-type).
 
 ![](attachments/start-with-data/attribute-type-drop-down.png)
+
+If columns have empty values,the attribute type will be identified as *String*. However, if you change it to another attribute type, Studio will automatically choose and fill in a default value for the following attribute types:
+
+* Booleans – empty values are converted to *False*
+* Long and integer – empty values are converted to *0*
+
+If you change an attribute type for a column with empty values from *String* to any other ones, the values will remain empty.
+
+#### 4.1.3 Generating Pages for My Data Option
 
 **Generate pages for my data** will generate an overview page with a data grid for you, and *{EntityName}__NewEdit* pages for each entity. For more information, see [Generating Pages](#generating-pages). 
 
 ![](attachments/start-with-data/generate-pages-option.png)
 
-
-#### 4.1.1 Correspondence Between Excel Data Types and Attribute Types {#excel-type-attribute-type}
-
-In the table below, you can see how the Excel data corresponds to the attribute types: 
-
-| Excel Data                                                   | Attribute Type                                               |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| The following Excel data will be converted into the string attribute type:<br />1. No data: no values, an empty column.<br />2. If the value does not fall under any of the cases described below. | String                                                       |
-| The Excel data will be converted into the Boolean attribute type if the values in the columns are: <ul><li>1 and 0</li><li>Y/y and N/n</li><li>yes and no</li><li>true and false</li></ul> | Boolean                                                      |
-| Data of type General or Number that falls into a range from –2,147,483,648 to 2,147,483,647 and does not contain empty cells. | Integer                                                      |
-| Data of type General or Number that falls into a range from –9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 and does not contain empty cells. | Long                                                         |
-| Other numbers that do not fall under Integer and Long attribute type conditions and the column does not contain empty cells. | Decimal                                                      |
-| Date and Time.                                               | Date and Time<br />**Note** If only the date is indicated, the time is set to 00:00 in the preview |
-| The column is converted into an entity with enumeration attribute type, when the following conditions are met: <br /><ul><li>The value is identified as a string</li><li>Values in the column are used more than once</li><li>The number of such values is less than or equals ten</li></ul>When all conditions listed above are met, the column is treated as enumeration, and the values are turned into enumeration items. Values which are identical apart from being spelled with a lowercase or an uppercase will be combined under the version which is most common, or under the first one if all values are used the same number of times. For example, the values "Test" and "test" will be combined. | Enumeration                                                  |
 ### 4.2 Importing Data
 
 After you have reviewed all data, click **Import Data** at the bottom of the **Data Preview** screen. 

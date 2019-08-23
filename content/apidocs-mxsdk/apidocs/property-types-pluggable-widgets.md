@@ -291,7 +291,7 @@ Then the Studio Pro UI for the property appears like this:
 
 ### 4.4 TextTemplate{#texttemplate}
 
-`TextTemplate` allows a user to configure translatable text template similar to the [text template](/refguide/text#text-template) of a text widget. The interpolated string will be passed to the client component as `DynamicValue<string>`.
+`TextTemplate` allows a user to configure translatable text template similar to the [Caption](/refguide/text#caption) of a text widget. The interpolated string will be passed to the client component as `DynamicValue<string>`.
 
 #### 4.4.1 XML Attributes
 

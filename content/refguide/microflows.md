@@ -109,7 +109,7 @@ In the example below, the parameter **AccountPasswordData** is highlighted becau
 
 When an error occurs in a microflow, all changes that have been made to objects are rolled back and the microflow is aborted. Optionally, you can handle errors in the microflow itself by configuring different error handling settings. You can even inspect the details of the error by looking at the predefined objects `$latestError` and `$latestSoapFault`.
 
-### 10.1 Error Handlers<a name="errorhandlers"></a>
+### 10.1 Error Handlers {#errorhandlers}
 
 An error handler can be set on an activity, decision, or loop.
 On an activity or decision, it gives you three options:

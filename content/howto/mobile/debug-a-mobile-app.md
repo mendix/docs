@@ -110,7 +110,7 @@ You can use PhoneGap Build to build the native application and tell it to initia
    }
    ```
 
-7. Save your changes and zip the unzipped phonegap.zip files you just extracted:
+7. Save your changes and zip the unzipped **phonegap.zip** files you just extracted:
 
       ![phonegap-7](./attachments/debug-a-mobile-app/phonegap-7.png)
 
@@ -244,11 +244,11 @@ You can use PhoneGap Build to build the native application and tell it to initia
 
    ![phonegap-3](./attachments/debug-a-mobile-app/phonegap-3.png)
 
-5. Unzip the downloaded package and navigate to the `/dist/phonegap.zip` file:
+5. Unzip the downloaded package and navigate to the */dist/phonegap.zip* file:
 
       ![phonegap-4](./attachments/debug-a-mobile-app/phonegap-4.png)
 
-6. Extract the contents of this file and find `www/settings.json`:
+6. Extract the contents of this file and find *www/settings.json*:
 
    ![phonegap-5](./attachments/debug-a-mobile-app/phonegap-5.png)
 
@@ -264,7 +264,7 @@ You can use PhoneGap Build to build the native application and tell it to initia
    }
    ```
 
-8. Save your changes and rezip the `phonegap/` directory in `/dist/`:
+8. Save your changes and rezip the *phonegap* directory in */dist/*:
 
    ![phonegap-7](./attachments/debug-a-mobile-app/phonegap-7.png)
 

@@ -20,7 +20,7 @@ You can also use the [text widget](text) as it provides more features, e.g. you 
 
 A label shows static text, which describes the purpose of a specific widget to a user.
 
-##2 Properties
+## 2 Properties
 
 An example of label properties is represented in the image below:
 

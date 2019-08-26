@@ -1,6 +1,7 @@
 ---
 title: "Client APIs Available to Pluggable Widgets"
-category: "API Documentation"
+parent: "pluggable-widgets"
+menu_order: 10
 description: A guide for understanding the client APIs available to pluggable widgets.
 tags: ["Widget", "Pluggable",  "JavaScript"]
 ---

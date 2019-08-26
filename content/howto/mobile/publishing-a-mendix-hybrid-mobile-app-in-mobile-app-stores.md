@@ -79,33 +79,36 @@ The **PhoneGap Build: Signing Key Required** page asks you to go to the PhoneGap
 2. Set up the app signing key for your app in your account.
 3. Click the avatar icon at the top-right of the page, and then click **Edit account** to configure how your app will build.
 
+## 5 Preparing and Publishing Your App
+
 For publishing to a specific platform, see the subsequent sections of this how-to:
 
 * [Preparing and Publishing for iOS](#publishing-for-ios)
 * [Preparing and Publishing for Android](#publishing-for-android)
 
-## 5 Preparing and Publishing for iOS{#publishing-for-ios}
+## 6 Preparing and Publishing for iOS{#publishing-for-ios}
 
 Apple provides general information on [publishing an iOS app in the Apple App Store](https://developer.apple.com/programs/ios/distribute.html). Before uploading your app, make sure to check the [App Review Guidelines](https://developer.apple.com/app-store/review/) to make sure your app will be accepted. An Apple Developer Account is required. If you do not have one, [register as an Apple Developer](https://developer.apple.com/register/index.action).
 
 1. Click the **Signing Keys** tab, and under **iOS**, click **add a key**. 
 2. A dialog box will prompt you to upload a certificate file and a provisioning profile file. You can get those files from Apple. The certificate is the *.p12* file, and the provisioning profile is the *.mobileprovision* file. For more information, see [Managing App Signing Keys](/refguide/managing-app-signing-keys).
 3. Give the key a title that you can easily recognize, and upload the files.
-4. Before using the key, it must be unlocked with the passphrase that was set up for the key. Click the lock with the yellow background on the same row as the key and enter the passphrase. As the pop-up window states, the key can now be used for builds for the period of an hour. After an hour, the passphrase needs to be entered again for security reasons.
-5. Now you are ready to configure the app. Click **Apps** at the top of the page to go to an overview showing your apps. Click  your app's name or logo to go to the details of the app.
-6. Select the correct key for your app. Next to the text **iOS**, there is a drop-down menu with the **No key selected** option. Select the newly uploaded key from the drop-down menu, which should be listed under **unlocked**.
+4. Click the lock with the yellow background on the same row as your key and enter a passphrase. The key can now be used for builds for the period of an hour. After an hour, the passphrase needs to be entered again.
+5. Click **Apps** at the top of the page to go to an overview showing your apps. Click  your app's name or logo to see the app's details.
+6. Select the correct key for your app. Next to the text **iOS**, there is a drop-down menu with the **No key selected** option. From the drop-down menu, select the newly uploaded key which should be listed under **unlocked**.
 
 Your PhoneGap Build account is now ready and you can continue the packaging process.
 
-### 5.1 Completing the Packaging Process
+### 6.1 Completing the Packaging Process
 
-To complete the packaging process in the Mendix Developer Portal, follow these steps:
+To complete the building process in the Mendix Developer Portal, follow these steps:
 
 1. Close the **Adobe PhoneGap Build** tab and go back to the original **Mendix Developer Platform** tab.
-2. Click **Restart build job** to restart the packaging process. You will be presented with a page showing the build status of your apps titled **Building Mobile App Store Packages**. It will display the status of **Building** while PhoneGap Build is processing your app. Once ready, it will display the status of **Done**, and a button will be available to start the download of your iOS package.
+2. Click **Restart build job** to restart the packaging process. 
+    You will be presented with a page title **Building Mobile App Store Packages**  showing the build status of your apps. It will display the status of **Building** while PhoneGap Build is building your app. Once ready, it will display the status of **Done**, and a button will be available to start the download of your iOS package.
 3. When the build process is done, click **Download iOS package** and save the package (the *.ipa* file) to your computer.
 
-### 5.2 Installing the iOS App on Your Test Device
+### 6.2 Installing the iOS App on Your Test Device
 
 You can now deploy your app to your test device. You must use a Mac device for this step. An easy way to do this is with Apple iTunes.
 
@@ -118,33 +121,33 @@ To install the iOS app on your test device, follow these steps:
 2. Open iTunes and connect your iOS device to your computer.
 5. Select the *.ipa* package file that you downloaded earlier, and drag it onto your mobile device's **Devices** section on iTunes' left menu. Drop the *.ipa* file there to install it on your mobile device.
 6. If there is an existing version, iTunes will ask if you want to replace that existing version of the app. If there is one, do so. You can also open an *.ipa* file directly with iTunes by double-clicking it.
-7. Your app should show up in the list of apps. Click the **Install** button next to your app.
+7. Your app will show up in the list of apps. Click the **Install** button next to your app.
 8. Click **Apply** at the bottom of the screen to execute the actual installation.
 
 The app should now be visible on your device. Open it and log in to the app with a regular user account. You can set one up in the Mendix app in your desktop browser if you have not done so yet.
 
-### 5.3 Uploading the iOS App to the App Store
+### 6.3 Uploading the iOS App to the App Store
 
 1. Follow Apple's [Add an app to your account](https://help.apple.com/app-store-connect/#/dev2cd126805) tutorial to add an app entry to your account.
 2. After adding a new app to your account, follow Apple's [View and edit app information](https://help.apple.com/app-store-connect/#/dev97865727c) tutorial to describe your new app entry. Consult the other pages under the left menu's **Enter app information** category should they apply to your app.
 3. Follow Apple's [Uploading builds overview](https://help.apple.com/app-store-connect/#/dev82a6a9d79) to upload a build of your app to App Store Connect.
 4. Use Apple's [Choose the build before you submit to review](https://help.apple.com/app-store-connect/#/dev7cbda8c55) to select the build which you will submit to App Review.
 
-### 5.4 Testing
+### 6.4 Testing
 
 Test your app per the [TestFlight beta testing overview](https://help.apple.com/app-store-connect/#/devdc42b26b8) documentation to ensure your app works the way it should. TestFlight beta testing allows you to control which users can test your app, and then collect feedback from them.
 
-### 5.5 Publishing
+### 6.5 Publishing
 
 Publish your app by following Apple's [Overview of publishing an app](https://help.apple.com/app-store-connect/#/dev34e9bbb5a) and the subsequent documents in the left menu's **Publish on the App Store section** category.
 
-## 6 Preparing and Publishing for Android{#publishing-for-android}
+## 7 Preparing and Publishing for Android{#publishing-for-android}
 
 If you plan on publishing an Android app, read Google's overview of [the Android app publishing process](http://developer.android.com/tools/publishing/publishing_overview.html). Before submitting your app to an app store, [review the launch checklist](http://developer.android.com/distribute/tools/launch-checklist.html). Google provides information on [publishing your app in the Google Play Store](http://developer.android.com/distribute/googleplay/index.html).
 
 To publish an Android app, you must first complete the [Android](/refguide/managing-app-signing-keys#android) section of *Managing App Signing Keys* which will detail how to generate a keystore and upload that keystore to PhoneGap build. Creating a keystore is only needed should you wish to publish your app. If you just want to test your app, then do not consult *Managing App Signing Keys* and instead just keep following this document's steps.
 
-### 6.1 Download the resulting Android Binary (APK){#download-apk}
+### 7.1 Download the resulting Android Binary (APK){#download-apk}
 
 After you create your build you can download the resulting APK using a download link or a QR code. One way to do this is to use your phone browser to navigate to the PhoneGap install page with your APK on it. To enable APK installations:
 
@@ -155,11 +158,11 @@ After you create your build you can download the resulting APK using a download 
 5. Enable the **Allow from this source** switch or check box.
 6. Tap the **OK** button if prompted.
 
-### 6.2 Installing Your APK
+### 7.2 Installing Your APK
 
 To install your APK, you can either download the APK file using your mobile device's web browser, or transfer the APK file to your Android device using a USB cord.
 
-#### 6.2.1 Option 1: Using Your Device's Browser
+#### 7.2.1 Option 1: Using Your Device's Browser
 
 Go to the PhoneGap install page using your phone browser to continue installation, then follow these instructions:
 1. Tap the Android link to get the APK.
@@ -172,7 +175,7 @@ To install an APK file directly from your Android's **Download** folder:
 3. Tap the **Allow** switch or check box.
 4. Tap the **OK** button if prompted.
 
-#### 6.2.2 Option 2: Using a USB Cord
+#### 7.2.2 Option 2: Using a USB Cord
 
 The second way to install your app is by connecting your device to a machine via USB. To Install an APK from your device's file manager app this way:
 1. Follow the instructions on Google’s [Transfer files between your computer & Android device](https://support.google.com/android/answer/9064445?hl=en) to get the APK onto your device. Remember which folder you transfer the APK into.
@@ -180,29 +183,29 @@ The second way to install your app is by connecting your device to a machine via
 3. Tap the **Install** button.
 4. Tap the **Done** button when prompted. You should now be able to access your installed app via your **App Drawer**, as well as by tapping the **Open** button after the installation completes.
 
-### 6.3 Testing Your App
+### 7.3 Testing Your App
 
 Using your new app, ensure all pages, buttons, and functionality work the way you intended them to. You can test your app using automatic software, such as [BrowserStack](https://www.browserstack.com/), or test your app manually. 
 
-### 6.4 Upload to Play Console
+### 7.4 Upload to Play Console
 
 To upload your Mendix app to the Play Console, follow the instructions on Google's [Upload your app to the Play Console](https://developer.android.com/studio/publish/upload-bundle) site. Before uploading to the Play Console you will have to complete the [signup steps](https://play.google.com/apps/publish/signup/) of signing-in with your Google account, accepting the developer agreement, paying the registration fee, and completing your account details. Once you have satisfied those requirements, you can [upload your app](https://support.google.com/googleplay/android-developer/answer/7159011) to the Play Console.
 
-### 6.5 Create, Review & Roll Out a Release
+### 7.5 Create, Review & Roll Out a Release
 
 1. To create a release of your Mendix app and roll it out, follow the instructions on the [Step 1: Create a release](https://support.google.com/googleplay/android-developer/answer/7159011) section in Google's Prepare & roll out releases page.
 2. To test your app on a real device, complete the steps in Google's [Run apps on a hardware device](https://developer.android.com/studio/run/device) page.
 3. To prepare your app's release, complete the steps on the [Step 2: Prepare your app's release](https://support.google.com/googleplay/android-developer/answer/7159011) section in Google's Prepare & roll out releases page.
 4. To review and roll out a release of your Mendix app and roll it out, follow the instructions on the [Step 3: Review and roll out your release](https://support.google.com/googleplay/android-developer/answer/7159011) section in Google's Prepare & roll out releases page.
 
-## 7 Examples
+## 8 Examples
 
 The video below shows how to build a PhoneGap app in the cloud. After showing you how to build mobile app store packages, it  details how to find these packages in PhoneGap and add security keys to them.
 
 **How to build a Phonegap app in the cloud**
 {{% youtube 7ic625u2YJE %}}
 
-## 8 Read More
+## 9 Read More
 
 * [Deploy your First Hybrid Mobile App](deploy-your-first-hybrid-mobile-app)
 * [Debug a Mobile App with Mendix](debug-a-mobile-app)

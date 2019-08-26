@@ -16,7 +16,7 @@ For example, you can configure an image clicking which a page with customer deta
 
 {{% alert type="info" %}}
 
-If you want to dynamically show different images based on data, please take a look at the [image viewer](image-viewer).
+If you want to dynamically show different images based on data, you need to add [image viewer](image-viewer) on your page.
 
 {{% /alert %}}
 

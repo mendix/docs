@@ -32,7 +32,7 @@ Label properties consist of the following sections:
 * [Common](#common)
 * Design Properties
 * [General](#general)
-* [Visibility](visibility)
+* [Visibility](#visibility)
 
 ### 2.1 Common Section {#common}
 

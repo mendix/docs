@@ -28,7 +28,7 @@ To create an app based on a spreadsheet, you need to use the **App from a spread
 	c. The number of columns per worksheet does not exceed 100.<br/>
 
 	d. A column name does not exceed 100 characters.<br/>
-    
+  
 5.  Make sure that you have normalized your data in the spreadsheet. Check if the following requirements are met: 
 
     a. Each column should name a unique name within a workbook. 

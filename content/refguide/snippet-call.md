@@ -8,7 +8,9 @@ tags: ["studio pro", snippet call", "common widget"]
 
 ## 1 Introduction
 
-The **Snippet call** widget allows you to use a [snippet](snippet) on a [page](page), a [layout](layout), or another snippet.
+The **Snippet call** widget allows you to use a [snippet](snippet) on a [page](page), a [layout](layout), or another snippet:
+
+![Snippet Call Example](attachments/common-widgets/snippet-call-example.png)
 
 ## 2 Properties
 

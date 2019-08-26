@@ -8,7 +8,9 @@ tags: ["studio pro", "page title", "common widgets"]
 
 ## 1 Introduction
 
-A page title shows the title of the current [page](page). This can be the title defined on the page itself or an overridden title.
+This widget displays a page title of the current page that is set in [page properties](page-properties#title).
+
+![Page Title Example](attachments/common-widgets/page-title-example.png)
 
 {{% alert type="info" %}}
 

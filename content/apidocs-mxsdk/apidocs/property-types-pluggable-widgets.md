@@ -463,7 +463,7 @@ System properties is a way for a pluggable widget to adopt extended widget funct
 * `Visibility`
 * `Editability`
 
-### 5.1 Label
+### 5.1 Label {#label}
 
 Label property allows a pluggable widget to have labeling functionality similar to a [core input widget](/refguide/text-box#label-properties). This allows a user to set a label, a label position, and a label width. If a widget has a label configured, its client component will automatically be wrapped into a correct markup.
 
@@ -471,7 +471,7 @@ Label property allows a pluggable widget to have labeling functionality similar 
 <systemProperty key="Label"/>
 ```
 
-### 5.2 Name
+### 5.2 Name {#name}
 
 Every widget have a name by default. This property can be used to control position of the widget name input. If this property is not specified, input will be placed in **Common** tab. A widget’s name is also used for locating it during [automated tests](/howto/integration/selenium-support). For that purpose in web apps, a widget name is automatically appended to a `class` prop a component receives, and in native apps is passed as a separate `name` prop.
 
@@ -487,7 +487,7 @@ The TabIndex property allows pluggable widgets to implement the **Tab index** se
 <systemProperty key="TabIndex"/>
 ```
 
-### 5.4 Visibility
+### 5.4 Visibility {#visibility}
 
 Every pluggable widget can be [conditionally hidden](/refguide/conditions). This property can be used to control a position of the widget visibility inputs.
 
@@ -495,7 +495,7 @@ Every pluggable widget can be [conditionally hidden](/refguide/conditions). This
 <systemProperty key="Visibility"/>
 ```
 
-### 5.5 Editability
+### 5.5 Editability {#editability}
 
 The editability property allows a pluggable widget to have an editable configuration similar to a [core input widget](/refguide/text-box#editability-properties). When a widget is marked as read-only or conditionally editable with condition being false, all [editable values](client-apis-for-pluggable-widgets#editable-value) its client component receives will have `readOnly` flag.
 

@@ -21,6 +21,12 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deploym
 * We updated the **SAP OData Connector** to support the **Edm.Int64** data type. (Ticket #87284)
 * We also fixed a *java.net.SocketException: Broken pipe (Write failed)* exception which occurred when sending a large request to the OData service endpoint. (Ticket #86680)
 
+### August 23rd, 2019
+
+#### Mendix Cloud Improvements
+
+* We improved the performance of the Environments page by reducing the number of remote requests needed.
+
 ### August 9th, 2019
 
 #### App User Management Improvements 

@@ -78,12 +78,12 @@ In the table below, you can see how the Excel data corresponds to the attribute 
 
 | Excel Data                                                   | Attribute Type It Is Converted to                            |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| One of the following conditions should be met: 1. No data: no values, an empty column. 2. If the value does not fall under any of the cases described below. | String                                                       |
+| One of the following conditions should be met: <ul><li>No data: no values, an empty column</li><li>If the value does not fall under any of the cases described below</li></ul> | String                                                       |
 | Values in the columns should be exclusively one of the following: <ul><li>1 and 0</li><li>Y/y and N/n</li><li>yes and no</li><li>true and false</li><li>V/v and empty cells</li><li>X/x and empty cells</li></ul> | Boolean                                                      |
 | Data of type General or Number that falls into a range from –2,147,483,648 to 2,147,483,647 and does not contain empty cells. | Integer                                                      |
 | Data of type General or Number that falls into a range from –9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 and does not contain empty cells. | Long                                                         |
 | Other numbers that do not fall under Integer and Long attribute type conditions and the column does not contain empty cells. | Decimal                                                      |
-| Data of type Date and Time that does not contain empty cells. | Date and Time **Note** If only the date is indicated, the time is set to 00:00 in the preview |
+| Data of type Date or Time that does not contain empty cells. | Date and Time **Note** If only the date is indicated, the time is set to 00:00 in the preview |
 | All of the following conditions should be met:  <ul><li>The value is identified as a string</li><li>Values in the column are used more than once</li><li>The number of such values is less than or equals ten</li></ul>When all conditions listed above are met, the column is treated as enumeration, and the values are turned into enumeration items. Values which are identical apart from being spelled with a lowercase or an uppercase will be combined under the version which is most common, or under the first one if all values are used the same number of times. For example, the values "Test" and "test" will be combined. | Enumeration                                                  |
 
 #### 4.1.1 Previewing Associations

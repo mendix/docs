@@ -198,6 +198,12 @@ Then the Studio Pro UI for the property appears like this:
 
 Icon allows a user to configure an icon similar to one used by an [action button](/refguide/action-button#icon). It is passed as `DynamicValue<IconValue>` prop to a client component.
 
+{{% alert type="info" %}}
+
+This proeprty type was introduced in Mendix 8.1.
+
+{{% /alert %}}
+
 #### 3.1.1 XML Attributes
 
 | Attribute  | Required | Attribute Type | Description                                                                                                                                                          |
@@ -224,6 +230,12 @@ Then the Studio Pro UI for the component appears like this:
 
 Image allows a user to configure a static image from an [image collection](https://docs.mendix.com/refguide/image-collection). It is passed as `DynamicValue<ImageValue>` prop to a client component.
 
+{{% alert type="info" %}}
+
+This proeprty type was introduced in Mendix 8.1.
+
+{{% /alert %}}
+
 #### 3.2.1 XML Attributes
 
 | Attribute  | Required | Attribute Type | Description                                                                                                                                                          |
@@ -246,11 +258,43 @@ Then the Studio Pro UI for the component appears like this:
 
 ![](attachments/widget-property-types/image.png)
 
+### 3.1 Widgets {#widgets}
+
+Widgets property allows a user to configure a list of widgets to be placed inside a pluggable widget similar to the content of a [container](/refguide/container) widget. It is passed as `ReactElement[]` prop to a client component.
+
+{{% alert type="info" %}}
+
+This proeprty type was introduced in Mendix 8.2.
+
+{{% /alert %}}
+
+#### 3.1.1 XML Attributes
+
+| Attribute  | Required | Attribute Type | Description                                                                                                                                                          |
+| ---------- | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `type`     | Yes      | String         | Must be `widgets`                                                                                                                                                       |
+| `key`      | Yes      | String         |See [key](#key) |
+| `required` | No       | Boolean        | Whether the property must be specified by the user. `true` by default                                                                                                |
+#### 3.1.2 Studio Pro UI
+
+When the component is defined as follows:
+
+```xml
+<property key="content" type="widgets" required="false">
+	<caption>Content</caption>
+	<description>Content of a box</description>
+</property>
+```
+
+Then the Studio Pro UI for the component appears like this:
+
+![](attachments/widget-property-types/widgets.png)
+
 ## 4 Dynamic Properties
 
 ### 4.1 Expression{#expression}
 
-Expression allows a user to configure an [expression](/refguide/expressions), the result of which  will be passed to the client component as a `DynamicValue<T>` where `T` depends on a return type of the expression.
+Expression allows a user to configure an [expression](/refguide/expressions), the result of which will be passed to the client component as a `DynamicValue<T>` where `T` depends on a return type of the expression.
 
 #### 4.1.1 XML Attributes
 

@@ -8,7 +8,7 @@ tags: ["Widget", "Pluggable",  "JavaScript"]
 
 ## 1 Introduction
 
-The main API the Mendix platform provides to a pluggable widget client component is the props the component receives. These props resemble the structure of properties specified in the widget definition XML file (a structure described in [Pluggable Widgets API](pluggable-widgets)). A property's attribute type affects how the property will be represented to the client component. Simply, an attribute's type defines what will it be. You can find the more details on property types and the interfaces that property value can adhere to in [Pluggable Widget Property Types](property-types-pluggable-widgets).
+The main API the Mendix platform provides to a pluggable widget client component is the props the component receives. These props resemble the structure of properties specified in the widget definition XML file (a structure described in [Pluggable Widgets API](pluggable-widgets)). A property's attribute type affects how the property will be represented to the client component. Simply, an attribute's type defines what will it be. You can find the more details on property types and the interfaces that property value can adhere to in [Pluggable Widget Property Types](property-types-pluggable-widgets). To see examples of pluggable widgets in action, see [How To Build Pluggable Widgets](/howto/extensibility/pluggable-widgets)
 
 The Mendix platform also exposes a few JavaScript modules, specifically extra Mendix APIs as well as existing libraries, like React, that client components must share with the platform to function properly. For more information on exposed libraries, see the [Exposed Libraries](#exposed-libraries) section below.
 
@@ -203,3 +203,4 @@ The Mendix platform uses [big.js](https://www.npmjs.com/package/react-native) to
 
 * [Pluggable Widgets API](pluggable-widgets)
 * [Pluggable Widget Property Types](property-types-pluggable-widgets)
+* [Build Pluggable Widgets](/howto/extensibility/pluggable-widgets)

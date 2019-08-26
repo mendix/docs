@@ -37,7 +37,7 @@ To create an app based on a spreadsheet, you need to use the **App from a spread
 
       {{% /alert %}}
 
-    b. Each cell of the worksheet (a row or a column) should contain a single value. It is also not recommended to leave cells empty. 
+    b. Each cell of the worksheet (a row or a column) should contain a single value or be empty. 
 
     c. If you want to create links (associations) between two columns, make sure the conditions mentioned above for creating these links are met. <br/>
 
@@ -76,15 +76,15 @@ Once you select the spreadsheet for import, your data is analyzed and is convert
 
 In the table below, you can see how the Excel data corresponds to the attribute types: 
 
-| Excel Data                                                   | Attribute Type                                               |
+| Excel Data                                                   | Attribute Type It Is Converted to                            |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| The following Excel data will be converted into the string attribute type: 1. No data: no values, an empty column. 2. If the value does not fall under any of the cases described below. | String                                                       |
-| The Excel data will be converted into the Boolean attribute type if the values in the columns are: <ul><li>1 and 0</li><li>Y/y and N/n</li><li>yes and no</li><li>true and false</li></ul> | Boolean                                                      |
+| One of the following conditions should be met: 1. No data: no values, an empty column. 2. If the value does not fall under any of the cases described below. | String                                                       |
+| Values in the columns should be exclusively one of the following: <ul><li>1 and 0</li><li>Y/y and N/n</li><li>yes and no</li><li>true and false</li><li>V/v and empty cells</li><li>X/x and empty cells</li></ul> | Boolean                                                      |
 | Data of type General or Number that falls into a range from –2,147,483,648 to 2,147,483,647 and does not contain empty cells. | Integer                                                      |
 | Data of type General or Number that falls into a range from –9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 and does not contain empty cells. | Long                                                         |
 | Other numbers that do not fall under Integer and Long attribute type conditions and the column does not contain empty cells. | Decimal                                                      |
-| Date and Time.                                               | Date and Time **Note** If only the date is indicated, the time is set to 00:00 in the preview |
-| The column is converted into an entity with enumeration attribute type, when the following conditions are met:  <ul><li>The value is identified as a string</li><li>Values in the column are used more than once</li><li>The number of such values is less than or equals ten</li></ul>When all conditions listed above are met, the column is treated as enumeration, and the values are turned into enumeration items. Values which are identical apart from being spelled with a lowercase or an uppercase will be combined under the version which is most common, or under the first one if all values are used the same number of times. For example, the values "Test" and "test" will be combined. | Enumeration                                                  |
+| Data of type Date and Time that does not contain empty cells. | Date and Time **Note** If only the date is indicated, the time is set to 00:00 in the preview |
+| All of the following conditions should be met:  <ul><li>The value is identified as a string</li><li>Values in the column are used more than once</li><li>The number of such values is less than or equals ten</li></ul>When all conditions listed above are met, the column is treated as enumeration, and the values are turned into enumeration items. Values which are identical apart from being spelled with a lowercase or an uppercase will be combined under the version which is most common, or under the first one if all values are used the same number of times. For example, the values "Test" and "test" will be combined. | Enumeration                                                  |
 
 #### 4.1.1 Previewing Associations
 
@@ -122,9 +122,7 @@ If columns have empty values,the attribute type will be identified as *String*. 
 * Booleans – empty values are converted to *False*
 * Long and integer – empty values are converted to *0*
 
-If you change an attribute type for a column with empty values from *String* to any other ones, the values will remain empty.
-
-#### 4.1.3 Generating Pages for My Data Option
+#### 4.1.3 Generate Pages for My Data 
 
 **Generate pages for my data** will generate an overview page with a data grid for you, and *{EntityName}__NewEdit* pages for each entity. For more information, see [Generating Pages](#generating-pages). 
 

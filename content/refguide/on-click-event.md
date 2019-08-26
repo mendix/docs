@@ -18,10 +18,10 @@ On click event is common for many widgets, for example, an image, buttons, a lis
 
 The **On click** property specifies what action is executed when a user click a widget. Possible options are described below:
 
-**Do nothing** – No action is taken. This option is useful for setting up a page without defining the underlying functionality yet.
+* **Do nothing** – No action is taken. This option is useful for setting up a page without defining the underlying functionality yet.
 
 * **Show a page** – the specified page opens.
-* **Page** – a [page](page) that should open. For more information opening pages function, see [Opening Pages](opening-pages).
+  * **Page** – a [page](page) that should open. For more information opening pages function, see [Opening Pages](opening-pages).
   * **Page for specializations** – allows you to configure a different page for each specialization of the context object. If this action is placed inside a data view, it is possible to configure different page(s) for each specialization of the data view object. If this action is placed in a data grid, it is possible to configure different pages for each specialization of the data grid entity. This setting is not shown when there is not a context object or when the context object has no specializations.
 * **Call a microflow** – the specified microflow is executed. 
 * **Microflow** – a [microflow](microflow) that should be executed.

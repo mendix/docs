@@ -28,7 +28,7 @@ To improve security of your app, it is recommended that you delete the MindSpher
 
 ![Section of a microflow showing the Access token action and the Edit Custom HTTP Header dialog in the Call REST action](attachments/mindsphere-development-considerations/delete-mindspheretoken.png)
 
-For more information on how to perform REST calls see the Mendix learning path  [Importing and Exporting Your Data](https://gettingstarted.mendixcloud.com/link/path/44)
+For more information on how to perform REST calls see the Mendix learning path  [Importing and Exporting Your Data](https://gettingstarted.mendixcloud.com/link/path/44).
 
 ## 3 Cloud Foundry Environment Variables {#cfenvvars}
 
@@ -54,10 +54,7 @@ Your project will define the default values for [constants](/refguide/constants)
 
 ## 4 Licensing Your App {#licensing}
 
-When you initially deploy a Mendix App, it is treated as a *Free App*. For a MindSphere app the most important restrictions are:
-
-* You can have a maximum of ten users
-* The app will go into sleep mode after 1-2 hours: this could cause the Cloud Foundry environment to be restarted and pick up the latest values of environment variables.
+When you initially deploy a Mendix App, it is treated as a *Free App*. For a MindSphere app the most important restriction is that the app will go into sleep mode after 1-2 hours: this could cause the Cloud Foundry environment to be restarted and pick up the latest values of environment variables.
 
 To license your app, you need to obtain a license key from [Mendix Support](https://support.mendix.com).
 
@@ -65,18 +62,18 @@ Instructions for licensing apps are available in the [License Activation](https:
 
 ## 5 Local Testing {#localtesting}
 
-### 5.1 Corporate Proxy
+### 5.1 Corporate Proxies
 
-For corporate web proxy, the following settings must be applied in Mendix Desktop Modeler in order to communicate with MindSphere during local development.
+If you need to use a corporate web proxy, the following settings must be applied in Mendix Studio Pro to allow communication with MindSphere during local development.
 
 {{% image_container width="50%" %}}![](attachments/mindsphere-development-considerations/proxy-settings.png){{% /image_container %}}
 
-Contact your local IT-department for the `proxyHost` and `proxyPort` values.
+Contact your local IT department for the `proxyHost` and `proxyPort` values you need.
 
 {{% alert type="info" %}}
-Proxy settings for version control used in Mendix Desktop Modeler:
+Proxy settings for version control used in Mendix Studio Pro:
 
-For more information about the version control used in Mendix Desktop Modeler see [Using Version Control in Mendix Desktop Modeler](https://docs.mendix.com/refguide7/using-version-control-in-the-dm#9-working-outside-the-desktop-modeler). Depending on your local development situation, you have to configure your version control client to use a proxy as well. This might be necessary if you have to solve a merge conflict manually.
+For more information about the version control used by Mendix apps, see [Using Version Control in Studio Pro](https://docs.mendix.com/refguide/using-version-control-in-studio-pro#9-working-outside-studio-pro). Depending on your local development environment, you may have to configure your version control client to use a proxy as well. You may need to do this to solve a merge conflict manually.
 {{% /alert %}}
 
 ### 5.2 Credentials

@@ -259,7 +259,7 @@ Then the Studio Pro UI for the component appears like this:
 Widgets property allows a user to place multiple widgets inside a pluggable widget similar to the content of a [container](/refguide/container) widget. It is passed as `ReactElement[]` prop to a client component.
 
 {{% alert type="info" %}}
-This proeprty type was introduced in Mendix 8.2.
+This proeprty type was introduced in Mendix 8.3.
 {{% /alert %}}
 
 #### 3.1.1 XML Attributes

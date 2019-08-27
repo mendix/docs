@@ -8,6 +8,24 @@ tags: ["domain model", "entity", "system", "generalization", "specialization", "
 
 ## 1 Introduction
 
+
+{{% todo %}}
+[Should we document system attributes here or somewhere else?
+"currentDeviceType",
+"currentSession",
+"latestError",
+"latestHttpResponse",
+"latestSoapFault"]
+{{% /todo %}}
+
+{{% todo %}}
+[Where do we document attributes with stored information
+"CreatedBy",
+"CreationDate",
+"LastChangedBy",
+"LastChangedDate"]
+{{% /todo %}}
+
 The domain model in the **System** module holds information which is needed for the native functions of Mendix. For example, managing scheduled events and reporting on errors.
 
 The entities in the system domain model fall into three categories:
@@ -21,11 +39,10 @@ The entities in the system domain model fall into three categories:
 There are three entities in the system domain model which can be used as generalizations. You cannot use any of the other entities in the system domain model as generalizations.
 
 The three entities are:
+
 * [FileDocument](#filedocument)
 * [Image](#image)
 * [User](#user)
-
-
 
 To learn more about generalizations and specializations, see [Generalization & One-to-One Associations](generalization-and-1-1-association).
 

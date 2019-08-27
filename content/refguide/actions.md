@@ -22,19 +22,19 @@ An action page has the tabs below.
 
 ### 2.1 Name
 
-**Name** is the name of the action the consumer will see in their toolbox.
+This is the name of the action the consumer will see in their toolbox.
 
 ### 2.2 Icon
 
-**Icon** is the icon that belongs to the action. An icon can be selected from any image documents in the app project. A new icon can be added to an image document if it is not available yet.
+This is the icon that belongs to the action. An icon can be selected from any image documents in the app project. A new icon can be added to an image document if it is not available yet.
 
 ### 2.3 Microflow
 
-**Microflow** defines which microflow will be executed when this action is called.
+This defines which microflow will be executed when this action is called.
 
 ### 2.4 Description
 
-**Description** describes the action. The consumer will see this description in their overview.
+This describes the action. The consumer will see this description in their overview.
 
 ## 3 Parameters
 
@@ -42,19 +42,19 @@ An action page has the tabs below.
 
 ### 3.1 Microflow Parameter
 
-**Microflow parameter** defines the name of the parameter in the microflow.
+This defines the name of the parameter in the microflow.
 
 ### 3.2 Type
 
-**Type** defines the type of the parameter.
+This defines the type of the parameter.
 
 ### 3.3 Can Be Empty
 
-**Can be empty** defines whether a value can be empty as an input parameter.
+This defines whether a value can be empty as an input parameter.
 
 ### 3.4 Action Parameter
 
-**Action parameter** defines the name of the parameter in the app service action call. This is initially copied from the microflow parameter name, but it can be modified. There are three reserved parameter names that are not allowed to be used:
+This defines the name of the parameter in the app service action call. This is initially copied from the microflow parameter name, but it can be modified. There are three reserved parameter names that are not allowed to be used:
 
 * *username*
 * *password*
@@ -68,11 +68,11 @@ A button is available for complex types (for example, an entity from your domain
 
 ## 4 Return Type
 
-**Return type** defines what kind of object will be returned by the action. This can be a simple type (like an integer or string), or a complex type (for example, an entity from your entity model).
+This defines what kind of object will be returned by the action. This can be a simple type (like an integer or string), or a complex type (for example, an entity from your entity model).
 
 ### 4.1 Can Be Empty
 
-**Can be empty** defines whether the return value can be empty.
+This defines whether the return value can be empty.
 
 For example, an **empty** ReturnObject is disallowed here:
 

@@ -1,12 +1,12 @@
 ---
 title: "Create Your First Script"
+parent: "sdk-howtos"
 menu_order: 20
-parent: "tutorial-for-the-mendix-sdk"
 ---
 
 ## 1 Introduction
 
-This documentation will guide you through the process of setting up everything you need to start working with the Mendix Platform SDK. In [Setting Up Your Development Environment](setting-up-your-development-environment), you set up all the development tools. Let's create an SDK script that automatically bootstraps a new Mendix app.
+In [Setting Up Your Development Environment](setting-up-your-development-environment), you set up all the development tools. Now you will create an SDK script that automatically bootstraps a new Mendix app.
 
 ## 2 Writing a First Script
 
@@ -72,7 +72,7 @@ const project = await client.platform().createNewApp(`NewApp-${Date.now()}`);
 const workingCopy = await project.createWorkingCopy();
 ```
 
-The `createNewApp()` call is where you actually kick off the process that will create a new project in the Mendix Platform which will also create a commit in the Team Server repository. By using `await`, you're waiting for the asynchoronous call for creating the app and resuming the code afterwards. The result of this call will be accessible via Studio Pro, but in order to be able to manipulate it using the SDK, you need to expose it as an online working copy. The subsequent call `createWorkingCopy()` will exactly do that.
+The `createNewApp()` call is where you actually kick off the process that will create a new project in the Mendix Platform which will also create a commit in the Team Server repository. By using `await`, you're waiting for the asynchronous call for creating the app and resuming the code afterwards. The result of this call will be accessible via Studio Pro, but in order to be able to manipulate it using the SDK, you need to expose it as an online working copy. The subsequent call `createWorkingCopy()` will exactly do that.
 
 If you create an online working copy from an existing app on the Team Server, be sure your app has been saved using the latest Mendix Studio Pro version. Earlier versions might not be supported!
 
@@ -106,7 +106,7 @@ For more information, see [Async Await](https://basarat.gitbooks.io/typescript/d
 
 1.  Compile the script with the TypeScript compiler into JavaScript using the following command:
 
-    ```java
+    ```bash
     $ tsc
     ```
 
@@ -114,7 +114,7 @@ For more information, see [Async Await](https://basarat.gitbooks.io/typescript/d
 
     The TypeScript compiler will execute in a single run to compile all files configured in `tsconfig.json`. While developing your script, it can be practical to have the compiler immediately run once you make changes to your code. Use the `--watch` flag for `tsc` to monitor the files configured in the `tsconfig.json` file for changes and immediately run the compiler when you save the file:
 
-    ```java
+    ```bash
     $ tsc --watch
     ```
 

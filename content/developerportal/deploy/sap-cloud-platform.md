@@ -50,11 +50,11 @@ Once the app has been created you can continue with [Set Up Region](#SetUpRegion
 
 You are now prompted with an SAP Cloud Platform login screen. Select the region where your SAP Cloud Platform is located.
 
-Make sure that you have enough quota in this region for your organization to run a Mendix app. You will need enough quota to create:
+Make sure that you have enough quota in this region for your organization to run a Mendix app. You will need enough quota to create the following:
 
-* a database
-* a route
-* a binding to XSUAA
+* Database
+* Route
+* Binding to XSUAA
 
 ![](attachments/sap-cloud-platform/01-sap-select-region.png)
 
@@ -62,12 +62,11 @@ If you have already logged on to SAP and your SAP session has not expired, you w
 
 You may be asked to provide your credentials in one of two ways:
 
-1. You will be taken to the SAP authentication page to enter your credentials. In this case, your SAP username (email address) must be the same as your Mendix username.
-
-2. The Developer Portal will ask for your credentials which it will then use to obtain an access token from SAP. The Developer Portal will then use the access token. It will not store your credentials. *This method is being deprecated*.
+* You will be taken to the SAP authentication page to enter your credentials – in this case, your SAP user name (email address) must be the same as your Mendix user name
+* The Developer Portal will ask for your credentials, which it will then use to obtain an access token from SAP – the Developer Portal will then use the access token, but it will not store your credentials (please note this method is being deprecated)
 
 {{% alert type="info" %}}
-If you have issues using SAP authentication, please refer to the reference [SAP Single Sign On](/refguide/sap/sap-single-sign-on).
+If you have issues using SAP authentication, please refer to the reference [SAP Single Sign On](/partners/sap/sap-single-sign-on).
 {{% /alert %}}
 
 You will now be asked to provide the final details for the SAP Cloud Platform development environment.
@@ -155,11 +154,11 @@ At any time, you can create a new deployment package from a committed version of
 {{% alert type="info" %}}
 You can also deploy your app (the steps in sections 4 and 5.1 of this How-To) automatically from Studio Pro. However, you will then have less control over the deployment.
 
-If you click **Run** in Studio Pro this will automatically:
+If you click **Run** in Studio Pro, this will automatically do the following:
 
-* commit the project
-* generate a deployment package
-* deploy the deployment package to the first available environment (this will replace any app which is currently running in this environment)
+1. Commit the project.
+2. Generate a deployment package.
+3. Deploy the deployment package to the first available environment (this will replace any app which is currently running in this environment).
 {{% /alert %}}
 
 {{% alert type="warning" %}}
@@ -378,7 +377,17 @@ To connect a service in the section **Available Services**
 
     ![](attachments/sap-cloud-platform/service-connect.png)
 
-    The services you have selected will be added as **Services To Be Bound**. They will not actually be bound until you stop and start the application.
+    The services you have selected will be added as **Services To Be Bound**. Now, you can upload JSON **File** with a configuration that will be applied to the service binding. 
+
+To upload the JSON **File** for service binding, follow these steps:
+
+1. Select the service in the **Service To Be Bound** section.
+2. Click the ellipsis (**...**) next to the service for which you want to upload the file.
+3. Select **Add Binding Configuration**.
+4. Select the JSON **File** to upload.
+5. Click **Save**.
+
+The service bindings will be created with the provided configurations when you restart the application. 
 
 {{% alert type="info" %}}
 If you receive an error, and the service fails to bind please check all aspects of your SAP account. The error message may not provide full information about, for example, which plans you are allowed to choose for a particular service.
@@ -392,7 +401,7 @@ If you no longer require a service you can unbind it or remove it from your app.
 
 **Unbinding a Service**
 
-1. Click the ellipsis next to the service you want to unbind in the **Bound Services** section.
+1. Click the ellipsis (**...**) next to the service you want to unbind in the **Bound Services** section.
 2. Select **Unbind Service**.
 
     ![](attachments/sap-cloud-platform/service-unbind.png)
@@ -526,4 +535,4 @@ The Mendix status page ([https://status.mendix.com/](https://status.mendix.com/)
 
 ## 11 Read More
 
-* [SAP Single Sign On](/refguide/sap/sap-single-sign-on)
+* [SAP Single Sign On](/partners/sap/sap-single-sign-on)

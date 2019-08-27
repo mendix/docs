@@ -5,8 +5,7 @@ tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-
-Clicking a drop down button shows a list of items. Each item has a caption and an image. Clicking an item may execute a microflow or open a page.
+Clicking a drop down button shows a list of items. Each item can have an caption, an image, and an action to be performed when its clicked. Different items can have different on-click actions. 
 
 ## Button properties
 
@@ -36,7 +35,17 @@ The dropdown buttons contains a list of items. Each item has the following prope
 
 ### Action
 
-The action of a drop down button item can specify a page or a microflow to execute when the item is clicked.
+You can set the following on-click actions to be performed when an item is clicked:
+
+* Call microflow
+* Call nanoflow 
+* Open page 
+* Save 
+* Cancel 
+* Link 
+* Close page 
+* Delete 
+* Sync 
 
 ## Visibility properties
 

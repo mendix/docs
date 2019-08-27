@@ -1,6 +1,7 @@
 ---
 title: "Report Parameter"
 parent: "report-widgets"
+menu_order: 20
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -29,4 +30,4 @@ If the type of the dataset parameter is an object, this property indicates which
 
 ### Name, Class, Style
 
-For details, see [Common Widget Properties](common-widget-properties).
+For details, see [Properties Common for Widgets](common-widget-properties).

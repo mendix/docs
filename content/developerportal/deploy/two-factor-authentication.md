@@ -31,13 +31,13 @@ After entering the authentication code, your browser session is authorized for t
 
 ![](attachments/two-factor-authentication/information.png)
 
-## 4 Setting Up and Disabling
+## 4 Setting Up & Disabling
 
 To transport your deployment package into the production environment, follow these steps:
 
 1. In your app project, go to the **Deploy** tab.
 3. Click **Deploy** below the package you want to deploy.
-4. In the _Environments_ section click **Transport to Production** for the deployment package you want to transfer from your test environment to acceptance and then to production.
+4. In the **Environments** section click **Transport to Production** for the deployment package you want to transfer from your test environment to acceptance and then to production.
 5. Click **Use Google Authenticator** in the dialog box that opens. Note that the installation screens are different per smartphone type. The following steps are based on an Android phone.
 6. Open the **Google Authenticator** app on your smartphone.
 7. Select **Set up account** on the main page.
@@ -53,7 +53,7 @@ If you change your device or phone number, you must contact [Mendix Support](htt
 
 You can re-activate 2FA by triggering any action that requires 2FA on your production environment.
 
-## 5 Change the Authentication Method
+## 5 Changing the Authentication Method
 
 After you have set up your authentication method, you cannot change the authentication method yourself. Only [Mendix Support](https://support.mendix.com) is able to disable the current authentication method. After the authentication method has been disabled, it can be set to a different method.
 

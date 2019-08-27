@@ -1,7 +1,8 @@
 ---
 title: "Document Templates"
-category: "App Modeling"
-tags: ["studio pro"]
+parent: "resources"
+menu_order: 90
+tags: ["studio pro", "document template"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

@@ -24,14 +24,11 @@ Clone this [code sample](https://github.com/mendix/text-box-sample) from GitHub 
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Install [Node.js](https://nodejs.org/en/about/) (a version below 10, preferably 8)
-	* For Windows, install using the [official installer](https://nodejs.org/dist/latest-v8.x/)
-	* For Mac, install using [Homebrew](https://brew.sh/) by executing these commands:
-		* `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
-		* `brew install node@8`
-* Install [npm](https://www.npmjs.com/) with the following command: `npm install npm@latest -g`
-* Install [Yeoman](https://yeoman.io/) with the following command: `npm install yo -g`
-* Install the Mendix Pluggable Widget Generator with the following command: `npm install @mendix/generator-widget -g`
+* Install a long term support (LTS) or current version of [Node.js](https://docs.npmjs.com/files/package.json#engines)
+	* For Windows, install using this [official installer](https://nodejs.org/en/download/package-manager/#windows)
+	* For Mac, install using [Homebrew](https://docs.brew.sh/Installation) and these [official tools](https://nodejs.org/en/download/package-manager/#macos)
+* Install [Yeoman](https://yeoman.io/) with the following command: ` $ npm install yo -g`
+* Install the Mendix Pluggable Widget Generator with the following command: ` $ npm install @mendix/generator-widget -g`
 * Install an integrated development environment (IDE) of your choice (Mendix recommends [Microsoft Visual Studio Code](https://code.visualstudio.com/))
 * Have a basic understanding of [TypeScript](https://www.typescriptlang.org/)
 
@@ -46,7 +43,7 @@ The following steps will teach you to build a pluggable input widget, and show y
 	Optionally you may remove all unused custom widgets to optimize the debugging process. Select **Project > Show Project Directory in Explorer** from the Mendix Studio Pro menu and open the **widgets** folder. Then, delete all the files in this folder. 
 	
 	To resolve the errors this incurs:<br />
-	a. Press <kbd>F4</kbd> to refresh your app.<br />
+	a. Press <kbd>F4</kbd> or select **Project > Synchronize Project Directory** to refresh your app.<br />
 	b. Double-click the errors in the bottom menu to see their locations.<br />
 	c. Delete the widgets those errors bring you to.
 
@@ -75,12 +72,26 @@ The Pluggable Widget Generator is the quickest way to start developing a widget.
 Using a terminal or command line, navigate to your new Mendix app project’s folder, create a new folder named *CustomWidgets*, and start the generator using:
 
 ```
-mkdir CustomWidgets
-cd CustomWidgets
-yo @mendix/widget TextBox
+$ mkdir CustomWidgets
+$ cd CustomWidgets
+$ yo @mendix/widget TextBox
 ```
 
-The generator will ask some questions in the setup. Select the **TypeScript, For web and hybrid mobile apps, Empty widget, No unit test,** and **No end-to-end tests** options:
+The generator will ask you a few questions during setup. Answer the questions by specifying the following information:
+
+* Widget name: *{Your widget name}*
+* Widget Description: *{Your widget description}*
+* Organization Name: *{Your organization name}*
+* Copyright: *{Your copyright date}*
+* License: *{Your license}*
+* Initial Version:*{Your initial version number}*
+* Author: *{Your author name}*
+* Mendix Project path: *../../*
+* Programming language: **TypeScript**
+* Widget type: **For web and hybrid mobile apps**
+* Widget template: **Empty widget (recommended for more experienced developers)**
+* Unit tests: **No**
+* End-to-end tests: **No**
 
 ![mx generator](attachments/pluggable-part-one/generatorblack.png)
 
@@ -88,8 +99,8 @@ The generator will ask some questions in the setup. Select the **TypeScript, For
 
 Open the **(YourMendixProject)/CustomWidgets/TextBox** folder in your IDE of choice. From now on, all file references will be relative to this path. To set up your new widget, first you must use an attribute of the context object and display that attribute in an input field: 
 
-1. To prevent future errors, remove the file *src/components/HelloWorldSample.tsx*.
-2. Edit *src/TextBox.xml* to remove the `sampleText` property and add the property `Text attribute`:
+1. To prevent future errors, remove the file *src/components/HelloWorldSample.tsx*. Errors in *TextBox.webmodeler.tsx* will be dealt with in step 6 below.
+2. In *src/TextBox.xml*, the generator creates a sample property `sampleText`. Remove this property and add the new property `Text attribute`:
 
 	```xml
 	<?xml version="1.0" encoding="utf-8" ?>
@@ -116,7 +127,7 @@ Open the **(YourMendixProject)/CustomWidgets/TextBox** folder in your IDE of cho
 	* The property `pluginWidget=true` will make the widget work with the new widget API
 	* The `needsEntityContext=true` is set up to allow the attribute to be taken from context
 	* The property of the type attribute only allows the selection of string attributes from the domain model
-3. The typescript typing based on the XML will be generated automatically. Start the development process with the following command: `npm run dev`.
+3. The typescript typing based on the XML will be generated automatically. Start the development process with the following command: `$ npm run dev`.
 
 	This process will bundle the widget and generate the properties into *typings/TextBoxProperties.d.ts*.
 	
@@ -130,7 +141,7 @@ Open the **(YourMendixProject)/CustomWidgets/TextBox** folder in your IDE of cho
 
 4. Create a new file, *components/TextInput.tsx*. This will be the display component. A display component does not interact with APIs and can be re-used in any React application. Paste the following code into *TextInput.tsx*:
 
-	```ts
+	```tsx
 	import { Component, ReactNode, createElement } from "react";
 	
 	export interface InputProps {
@@ -149,17 +160,25 @@ Open the **(YourMendixProject)/CustomWidgets/TextBox** folder in your IDE of cho
 	* The interface defines the properties of the React components – the value is passed to the component and it will render an HTML input element with the given value
 	* The component is a class extending `Component` and should be exported to be used in other components
 	* The render method is the only required function in a component, and it will return the expected DOM for the browser (for more information, see React’s [component documentation](https://reactjs.org/docs/react-component.html))
-5. The container component *TextBox.tsx* receives the properties in the runtime, and forwards the data to the display component. The container works like glue between the Mendix application and the display component. Override the class lines in *TextBox.tsx* until they look like this:
+5. The container component *TextBox.tsx* receives the properties in the runtime, and forwards the data to the display component. The container works like glue between the Mendix application and the display component. In the *TextBox.tsx* overwrite the render function until they look like this:
 
-	```ts
+	```tsx
 	import { Component, ReactNode, createElement } from "react"; 
+	import { hot } from "react-hot-loader/root";
+	
+	import { TextBoxContainerProps } from "../typings/TextBoxProps";
 	import { TextInput } from "./components/TextInput";
+	
+	import "./ui/TextBox.css";
+	
 	class TextBox extends Component<TextBoxContainerProps> {
 		render(): ReactNode {
 			const value = this.props.textAttribute.value || "";
 			return <TextInput value={value} />;
 		}
 	}
+	
+	export default hot(TextBox);
 	```
 	
 	Be sure all the imports are included before moving on from this step.
@@ -170,13 +189,13 @@ Open the **(YourMendixProject)/CustomWidgets/TextBox** folder in your IDE of cho
 
 6. Alter *Textbox.webmodeler.tsx* by adding the `TextInput` import to *Textbox.webmodeler.tsx*:
 
-	```ts	
+	```tsx	
 	import { TextInput } from "./components/TextInput";
 	```
 	
 	Then, override the class lines in *Textbox.webmodeler.tsx* until they look like this:
 	
-	```ts
+	```tsx
 	export class preview extends Component<TextBoxPreviewProps> {
 		render(): ReactNode {
 			return <TextInput value={this.props.textAttribute} />;
@@ -197,8 +216,7 @@ Open the **(YourMendixProject)/CustomWidgets/TextBox** folder in your IDE of cho
 	![](attachments/pluggable-part-one/updateallwidgets.png)
 	
 	{{% alert type="info" %}}The widgets in Studio and Studio Pro are not automatically updated. To refresh them press <kbd>F4</kbd> or select **Project > Synchronize Project Directory** from the Mendix Studio Pro menu to reload the widgets from the file system. Then right-click the widget and select **Update all widgets** to update the newly-changed properties in the widget.{{% /alert %}}
-8. On the test project **Home** page, create a data view with an attribute. Add a **Text box** input widget and one of your newly-created **TextBox** widgets next to each other to compare them. Select the same attribute in both widgets.
-9.  When running the project, the new widget is already functional. The first text box is a standard Text box widget and the second is our pluggable widget. When data is changed in the first input and the cursor is moved to the next widget, the data of our widget is also updated: 
+8.  When running the project, the new widget is already functional. The first text box is a standard Text box widget and the second is your pluggable widget. When data is changed in the first input and the cursor is moved to the next widget, the data of your widget is also updated: 
 
 	![two text widgets](attachments/pluggable-part-one/twotextwidgets.png)
 
@@ -210,7 +228,7 @@ The input works, but the styling could be improved. In the next code snippets, y
 
 1. In *TextBox.tsx*, pass the properties from the runtime to the `TextInput` component:
 
-	```ts
+	```tsx
 	class TextBox extends Component<TextBoxContainerProps> {
 		render(): ReactNode {
 			const value = this.props.textAttribute.value || "";
@@ -226,7 +244,7 @@ The input works, but the styling could be improved. In the next code snippets, y
 
 2. In *components/TextInput.tsx*, add the attributes to the interface and render them in the input:
 
-	```ts
+	```tsx
 	import { CSSProperties, Component, ReactNode, createElement } from "react";
 	import classNames from "classnames";
 	export interface InputProps {
@@ -262,7 +280,7 @@ The input works, but the styling could be improved. In the next code snippets, y
 
 While the Mendix input widgets come with labels, you will need to add one to TextBox manually. With the new API it is easy to add a label to any widget.
 
-1.  In the *TextBox.xml* file, add attribute `<propertyGroup caption="Label">` with its child `<systemProperty />` above the existing `<propertyGroup caption="Data source">`:
+1.  In the *TextBox.xml* file, add an element `<propertyGroup caption="Label">` with a child element `<systemProperty />` above the existing `<propertyGroup caption="Data source">` element:
 
 	```xml
 	<propertyGroup caption="Label">
@@ -270,7 +288,7 @@ While the Mendix input widgets come with labels, you will need to add one to Tex
 	</propertyGroup>
 	```
 
-	This will add the **Show label** radio buttons in the widget properties tab **Label**. When **Show label** is set to true, it will automatically render the label for you in the page editor and the browser:
+	This will add the **Show label** radio buttons in the widget properties tab **Label** (after synchronizing the Project Directory and updating the widget). When **Show label** is set to true, it will automatically render the label for you in the page editor and the browser:
 
 	![edit text box two](attachments/pluggable-part-one/edittextboxtwo.png)
 
@@ -288,7 +306,7 @@ The value from the attribute can be displayed and updated using the other input,
 
 1. In *TextBox.tsx*, create a function that will update the attribute and pass it to the `TextInput` component:
 
-	```ts
+	```tsx
 	class TextBox extends Component<TextBoxContainerProps> {
 		private readonly onUpdateHandle = this.onUpdate.bind(this);
 		render(): ReactNode {
@@ -301,7 +319,7 @@ The value from the attribute can be displayed and updated using the other input,
 				onUpdate={this.onUpdateHandle}
 			/>;
 		}
-		private onUpdate(value: string) {
+		private onUpdate(value: string): void {
 			this.props.textAttribute.setValue(value);
 		}
 	}
@@ -313,7 +331,7 @@ The value from the attribute can be displayed and updated using the other input,
 	* When a function is passed to another component, the function might have a scoping issue – this can be solved by binding the context `this` to the function before passing it to the display component (for more information, see this [freeCodeCamp blog post](https://medium.freecodecamp.org/this-is-why-we-need-to-bind-event-handlers-in-class-components-in-react-f7ea1a6f93eb))
 2. In *components/TextInput.tsx*, handle the change events of the input and pass the new value to the `onUpdate` function of the container component:
 
-	```ts
+	```tsx
 	import { CSSProperties, ChangeEvent, Component, ReactNode, createElement } from "react";
 	import classNames from "classnames";
 	export interface InputProps {
@@ -337,7 +355,7 @@ The value from the attribute can be displayed and updated using the other input,
 				onChange={this.handleChange}
 			/>;
 		}
-		private onChange(event: ChangeEvent<HTMLInputElement>) {
+		private onChange(event: ChangeEvent<HTMLInputElement>): void {
 			if (this.props.onUpdate) {
 				this.props.onUpdate(event.target.value);
 			}
@@ -347,7 +365,7 @@ The value from the attribute can be displayed and updated using the other input,
 	
 	Explaining the code: 
 	
-	* The input's `value` is set by the `this.prop.value`, and this property is not changed directly; the update function will use the `setValue` to trigger a re-render with the updated property
+	* The input's `value` is set by the `this.props.value`, and this property is not changed directly; the update function will use the `setValue` to trigger a re-render with the updated property
 	* There are two ways of handling input changes in React: [controlled components](https://reactjs.org/docs/forms.html#controlled-components) or [uncontrolled components](https://reactjs.org/docs/uncontrolled-components.html)
 	* The `onUpdate` function is optional and it should be checked for availability before executing it
 	* The custom widget TextBox will still not pass text to the Text box widget after this step – it will gain this functionality in [Build a Text Box Pluggable Widget: Part 2 (Advanced)](create-a-pluggable-widget-two).
@@ -359,5 +377,7 @@ Continue with the next tutorial to learn how to add validation feedback,  custom
 ## 4 Read More
 
 * [Build a Text Box Pluggable Widget: Part 2 (Advanced)](create-a-pluggable-widget-two)
-* [Make JavaScript Actions](/howto/extensibility/build-javascript-actions)
 * [Mendix Client API](https://apidocs.mendix.com/7/client/)
+* [Pluggable Widgets API](/apidocs-mxsdk/apidocs/pluggable-widgets)
+* [Client APIs Available to Pluggable Widgets](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets)
+* [Pluggable Widget Property Types](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets)

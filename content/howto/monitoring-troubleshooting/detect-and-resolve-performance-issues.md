@@ -3,15 +3,16 @@ title: "Detect & Resolve Performance Issues"
 category: "Monitoring & Troubleshooting"
 tags: ["monitoring", "troubleshooting", "performance issue", "performance"]
 ---
-Any application can run into performance issues. Here are a number of possible performance issues you may run into, some root causes, and finally how you can resolve them.
 
-## Overview
+## 1 Introduction
+
+Any application can run into performance issues. Here are a number of possible performance issues you may run into, some root causes, and finally how you can resolve them.
 
 The flow chart below, designed  like a microflow, provides a great infrastructure for deciding how to troubleshoot and resolve performance-related issues. The rest of this article will be based on this flow.
 
 ![](attachments/18448611/18580226.png)
 
-## Issues
+## 2 Issues
 
 Performance issues typically manifest themselves for users in one of two ways: either an action takes too long to complete (a page feels slow or unresponsive), or an entire page loads slowly.
 
@@ -25,7 +26,7 @@ All performance issues are extremely context-sensitive. That is, there is no sin
 
 {{% /alert %}}
 
-## Slow UI
+## 3 Slow UI
 
 If your user interface is slow, you'll need to figure out whether this is due to slow microflows called by the page, or due to a large number of calls made by the UI. To determine, you'll need to use a web browser debugger, such as Firebug [http://getfirebug.com/](http://getfirebug.com/).
 
@@ -41,7 +42,7 @@ Here I have _26_ xpath retrieves for my single page load. The timeline on the ri
 
 Once you've identified the cause, either too many loads, or slow loads, you're ready to move on.
 
-### Too Many Loads
+### 3.1 Too Many Loads
 
 If you have too many loads occurring on a single page, review the page structure in Studio Pro to determine if that number can be reduced. Here are a few common causes of large number of loads:
 
@@ -53,7 +54,7 @@ If you have too many loads occurring on a single page, review the page structure
 
 Every situation is unique, but you're well on your way to finding your slow component. From here, sometimes trial and error is you best bet. Remove objects from your page until it speeds up to narrow down the slow one.
 
-### Slow Loads
+### 3.2 Slow Loads
 
 So you've determined that slow loads are your issue. Take a look at the slow load in Firebug, and determine where it comes from:
 
@@ -61,11 +62,11 @@ So you've determined that slow loads are your issue. Take a look at the slow loa
 *   A microflow
 *   Slow network (long transfer time for small amount of data)
 
-#### Slow Network
+#### 3.2.1 Slow Network
 
 If your data transfers are taking a long time, you may wish to contact a system administrator for further assistance. This article focuses on issues you can resolve within your application model.
 
-#### Retrieve Action
+#### 3.2.2 Retrieve Action
 
 If you find that a particular retrieve action is slow, you can work to simplify it. Review the following:
 
@@ -73,11 +74,11 @@ If you find that a particular retrieve action is slow, you can work to simplify 
 *   Missing Indexes
 *   Combined Security Rules (i.e. a user with multiple user roles, each with complex security)
 
-#### Microflow
+#### 3.2.3 Microflow
 
 If your slow action occurs via microflow, see the next section for information on troubleshooting slow microflows.
 
-## Slow Microflows
+## 4 Slow Microflows
 
 So your performance issue is caused by a microflow. Now you just need to find out _which_ _microflow,_ and _which activities_ are the slowest in that microflow.
 
@@ -89,17 +90,17 @@ There are a number of tools you can use to identify your slow microflow, and the
 *   Microflow Debugger
 *   Microflow Time Stamps
 
-### Server Monitoring
+### 4.1 Server Monitoring
 
 The Mendix Server and Developer Portal offer a number of performance graphs and logs.
 
-### Microflow Debugger
+### 4.2 Microflow Debugger
 
 Once you've identified a slow page, it's pretty easy to identify which microflows are executed on that page. Make sure you look at directly referenced microflows, such as data sources, but also look at any sub-flows, on change event handlers, or domain model event handlers that could be called by your page.
 
 Setting a break point and stepping through these relevant microflows can often give you a quick (although subjective) way to find a slow action. To get started with debugging microflows, see: [Debugging Microflows](/howto/monitoring-troubleshooting/debug-microflows). If you cannot subjectively identify your slow process, move on to the next step.
 
-### Microflow Time Stamps
+### 4.3 Microflow Time Stamps
 
 Times Stamps can allow you to objectively identify slow microflows and activities by timing their execution. To do so, consider a simple microflow like this:
 
@@ -121,9 +122,9 @@ Here, you're calculating the number of milliseconds between when your microflow 
 
 Add microflow timers until you find your culprit microflow, then add extra timers in that microflow to determine which activity is the slow one. If you find a slow activity, look at Optimizing Microflow Activities. If not, look further down for suggestions on optimizing your microflow as a whole.
 
-## Optimizing Microflow Activities
+## 5 Optimizing Microflow Activities
 
-### Slow Database Retrieves
+### 5.1 Slow Database Retrieves
 
 Slow retrieves can occur for a number of different reasons. Here are a few:
 
@@ -135,27 +136,27 @@ Slow retrieves can occur for a number of different reasons. Here are a few:
 
 Additionally, review this article on denormalization and how it can improve your app performance in some cases: [Denormalize Data to Improve Performance](/howto/data-models/denormalize-data-to-improve-performance#1-introduction)
 
-### Slow Database Commits
+### 5.2 Slow Database Commits
 
 Slow commits are often caused by a Before or After Commit event. Review those microflows for slow activities.
 
 If you are commit large amounts of data (1000s of rows), you might consider using batching to improve performance. Additionally, check for the use of the "Refresh in Client" property.
 
-#### Batches
+#### 5.2.1 Batches
 
 Below is an example of how to _retrieve_ in batches. You can do something quite similar for commits as well. This article will be expanded in the future to include a complete example of a batch retrieve and a batch commit.
 
 ![](attachments/18448611/18580216.png)
 
-#### Refresh in Client
+#### 5.2.2 Refresh in Client
 
 The "Refresh in Client" property of a change or commit activity is quite useful to provide updated information to your user. However, when committing large numbers of rows,this can slow you application down as it attempts to update thousands of rows in your client's browser. Consider turning it off if possible.
 
-### Slow Sub Microflow
+### 5.3 Slow Sub Microflow
 
 If you find that you have a slow sub microflow, begin the process of identifying the slow activity within the microflow, based on the Slow Microflows section above.
 
-### General Slow Microflow (No Specific Activity Identified)
+### 5.4 General Slow Microflow (No Specific Activity Identified)
 
 If your microflow is slow as a whole, but there is no particular activity that stands out as the culprit, consider the structure of your microflow. Here are a number of possible issues:
 
@@ -163,7 +164,7 @@ If your microflow is slow as a whole, but there is no particular activity that s
 *   Many retrieves
 *   Unnecessary/Nested Loops
 
-#### Many Commits
+#### 5.4.1 Many Commits
 
 If you find yourself committing data inside a loop, you can typically optimize this by making changes to your entities and storing them into a list. For example, consider this microflow:
 
@@ -175,16 +176,16 @@ Every time the loop executes, an Order object is committed. You can optimize thi
 
 This ultimately reduces the number of database operations that need to be performed during execution of your microflow, thus enhancing performance.
 
-#### Many Retrieves
+#### 5.4.2 Many Retrieves
 
 If your microflow performs multiple retrieves, especially in a loop, this may be the cause of your performance issues. To optimize this, think about how you could retrieve data in lists outside of a loop. Additionally, check for any calculated attributes on your retrieved entities, as they are calculated every time you retrieve that entity, _regardless_ of whether they are actually used.
 
-#### Unnecessary / Nested Loops
+#### 5.4.3 Unnecessary / Nested Loops
 
 If you find that your microflow has a large number of objects to loop over, or especially if your microflow has nested loops, execution time can escalate quickly. In this situation, think about your Domain Model architecture, and how an additional entity, attribute, or association might make it simply to accessing the information you need. You might also be able to more effectively use xpath rather than search in a loop for a particular object.
 
 As always, make sure you look at retrieves and commits performed in your loops, and try to minimize them wherever possible.
 
-## Read More
+## 6 Read More
 
-[Expert Webinar Series: App Performance](http://ww2.mendix.com/Expert-Webinar.Performance.html)
+* [Expert Webinar Series: App Performance](http://ww2.mendix.com/Expert-Webinar.Performance.html)

@@ -47,7 +47,7 @@ Add series and configure their properties, each series represents a dataset. For
 
   In this case, new series can be added by clicking the **Series > New** button in the **Chart properties** tab.
 
-  {{% alert type="info" %}}From version 1.4 of charts you can create charts with a variable number of data series. For instructions on how to do this, see [How to Create a Dynamic Series Chart](/howto/extensibility/charts-dynamic-series).{{% /alert %}}
+  {{% alert type="info" %}}From version 1.4 of charts you can create charts with a variable number of data series. For instructions on how to do this, see [How to Create a Dynamic Series Chart](/howto/front-end/charts-dynamic-series).{{% /alert %}}
 
 1. Data source<a name="data-source"></a>
 
@@ -61,7 +61,7 @@ Add series and configure their properties, each series represents a dataset. For
 
     * **Data source**: the data source type for the series: *Database*, *Microflow* or *REST endpoint*
 
-    * **REST URL**: Relative or full URL to REST endpoint. For more information on setting up a REST endpoint see [REST Charts](../howto/extensibility/charts-basic-rest)
+    * **REST URL**: Relative or full URL to REST endpoint. For more information on setting up a REST endpoint see [REST Charts](/howto/front-end/charts-basic-rest)
 
     * **XPath constraint**: The constraint on the data from the entity (used when the data source is Database)
 
@@ -106,7 +106,7 @@ Add series and configure their properties, each series represents a dataset. For
 
     * **Series entity**: the entity which defines a series – the list of objects of this entity type will be used to construct the series; one series for each object.
     
-      Each entity is associated with the values which will be plotted, see [How to Create a Dynamic Series Chart](/howto/extensibility/charts-dynamic-series) for more information.
+      Each entity is associated with the values which will be plotted, see [How to Create a Dynamic Series Chart](/howto/front-end/charts-dynamic-series) for more information.
 
     * **Series name attribute**: the attribute in the series entity which will be displayed as the series name if a legend is displayed
 
@@ -201,7 +201,7 @@ See the following link for more information about plotly.js and the options: htt
 
 #### 2.1.5 Common
 
-These are properties which are common to many widgets. For information see [Common Widget Properties](common-widget-properties#common-properties).
+These are properties which are common to many widgets. For information see [Properties Common for Widgets](common-widget-properties#common-properties).
 
 ## 3 Configuration by Chart Type {#configuration-by-chart-type}
 
@@ -243,7 +243,7 @@ The properties above are common across the chart types. In this section, the pro
 
 * **Colors**: Contains the color of each slice e.g. green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
 
-* **Refresh interval (ms)**: Refresh the chart in intervals of ms, when set to 0 refresh is disabled
+* **Refresh interval (ms)**: Refresh the chart in intervals of milliseconds, when set to 0 refresh is disabled
 
 ### 3.4 Area Chart
 

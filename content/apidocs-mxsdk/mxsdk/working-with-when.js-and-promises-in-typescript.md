@@ -1,21 +1,22 @@
 ---
 title: "Working with when.js and Promises in TypeScript"
-parent: "reference-documentation"
+parent: "sdk-refguide"
+menu_order: 3
 ---
 
-On this page you will find an explanation about the use of _promises_ in the Mendix SDK.
+## 1 Introduction
 
-## What's a promise and why do you want to use it?
+On this page you will find an explanation about the use of promises in the Mendix SDK.
 
 Some of the operations you perform when, for instance, loading a working copy in the Model Server, take some time to complete. In regular (synchronous) programming, you would have to wait for each operation to complete before you could start with the next one.
 
-In an asynchronous programming paradigm, you can start operations in the background and continue with other stuff while you are waiting for the background jobs to complete. Traditional JavaScript uses [callback functions](https://www.impressivewebs.com/callback-functions-javascript/) to achieve this. However, these tend to become [very complicated](http://know.cujojs.com/tutorials/async/async-programming-is-messy.html.md) when you have multiple nested, callbacks. This phenomenon is known as _callback hell_. Hence, the need for [ _promises_ ](http://know.cujojs.com/tutorials/async/simplifying-async-with-promises).
+In an asynchronous programming paradigm, you can start operations in the background and continue with other stuff while you are waiting for the background jobs to complete. Traditional JavaScript uses [callback functions](https://www.impressivewebs.com/callback-functions-javascript/) to achieve this. However, these tend to become [very complicated](http://know.cujojs.com/tutorials/async/async-programming-is-messy.html.md) when you have multiple nested, callbacks. This phenomenon is known as "callback hell." Hence, the need for [ _promises_ ](http://know.cujojs.com/tutorials/async/simplifying-async-with-promises).
 
-A _promise_ is an object that will eventually either get a value (the promise is _fulfilled_), or it will be _rejected_ if something goes wrong. Promises can be _chained_ , meaning that a command _y_ will only be executed once the promise for _x_ is fulfilled.
+A promise is an object that will eventually either get a value (the promise is fulfilled), or it will be rejected if something goes wrong. Promises can be chained, meaning that a command `y` will only be executed once the promise for`x` is fulfilled.
 
 There are multiple libraries that implement promises in JavaScript; in the Mendix SDK we have chosen to use [when.js](https://github.com/cujojs#usage).
 
-## How do when.js promises map to TypeScript?
+## 2 How Do when.js Promises Map to TypeScript?
 
 In the when.js [documentation](http://know.cujojs.com/tutorials/promises/consuming-promises.html.md) you will find many code examples that look like this:
 
@@ -43,9 +44,9 @@ var greetingPromise = sayHello();
 greetingPromise.then( greeting => console.log(greeting) ); // 'hello world'
 ```
 
-As you can see, specifying the `function` keyword isn't required here. In TypeScript you can use _arrow functions_. In the above example, `(greeting)` is simply the list of parameters of the function that is defined after the `=>`. If there is just a single parameter, the parentheses may even be omitted. Likewise, when the function body is a single expression, the curly braces may be omitted.
+As you can see, specifying the `function` keyword isn't required here. In TypeScript you can use arrow functions. In the above example, `(greeting)` is simply the list of parameters of the function that is defined after the `=>`. If there is just a single parameter, the parentheses may even be omitted. Likewise, when the function body is a single expression, the curly braces may be omitted.
 
-## How do you use promises?
+## 3 How Do You Use Promises?
 
 The returning pattern is that each time you receive a Promise object from a function call, you call `then` on it, until you end the chain with `done`. In `done`, you handle either the result if everything worked correctly, or you handle the error in case a promise was rejected somewhere along the way.
 
@@ -86,9 +87,9 @@ Always either [return a promise to a caller, or end it with `done`](https://gith
 
 {{% /alert %}}
 
-## Common pitfalls
+## 4 Common Pitfalls
 
-### Execution in the wrong order
+### 4.1 Execution in the Wrong Order
 
 In a piece of code that looks like the following snippet, it can happen that `Done` is printed to the console before `loadAllDocuments()` has finished.
 
@@ -124,13 +125,13 @@ You can load model units or elements using the convenience method `loadAsPromise
 
 {{% /alert %}}
 
-### `this` binding
+### 4.2 `this` Binding
 
 In an arrow function, the object `this` points to is different from what it would be in a regular function declaration.
 
 In practice, this sometimes makes you prefer the function notation (for example, when you want to put a timeout on an integration test).
 
-### Potentially unhandled rejection
+### 4.3 Potentially Unhandled Rejection
 
 If your script exits with `Potentially unhandled rejection` somewhere in the output, then you have most likely started an asynchronous/background operation as a [when.js](http://know.cujojs.com/tutorials/async/simplifying-async-with-promises) promise, but you did not "finish" the promise chain with a [`done`](https://github.com/cujojs/when/blob/master/docs/api.md#promisedone) operation. You should always end like this:
 
@@ -141,7 +142,7 @@ asyncOperation(...)
 	.done(callback, errorHandler); // Always end with 'done'
 ```
 
-## Resources
+## 5 Resources
 
-*   When.js [API documentation](https://github.com/cujojs/when/blob/master/docs/api.md#api)
-*   "Learning promises" [tutorial](http://know.cujojs.com/tutorials/promises/consuming-promises)
+* When.js [API documentation](https://github.com/cujojs/when/blob/master/docs/api.md#api)
+* "Learning promises" [tutorial](http://know.cujojs.com/tutorials/promises/consuming-promises)

@@ -6,17 +6,19 @@ menu_order: 30
 tags: ["new relic", "on-premises", "monitoring", "setup"]
 ---
 
+## 1 Introduction
+
 When setting up a Mendix application on-premise, you can set up advanced monitoring with New Relic. This works with both Windows and Linux deployments.
 
-## Preparations
+## 2 Preparations
 
-1.  Set up a trial account with New Relic at [https://newrelic.com/](https://newrelic.com/)
+1. Set up a trial account with New Relic at [https://newrelic.com/](https://newrelic.com/).
 2.  Follow the New Relic for Java installation here: [https://docs.newrelic.com/docs/agents/java-agent/installation/java-agent-manual-installation](https://docs.newrelic.com/docs/agents/java-agent/installation/java-agent-manual-installation)
-3.  As noted in the guide in step 2: unzip the newrelic.zip into a directory that the user of the Mendix process has access to (i.e. the user home directory)
-4.  Check the newrelic.yml file in the unzipped newrelic directory, make sure you read through the settings and that you understand the security implications
-5.  Follow the Linux / Windows specific steps below to complete the installation
+3. As noted in the guide in step 2: unzip the *newrelic.zip* file into a directory that the user of the Mendix process has access to (meaning, the user home directory).
+4. Check the newrelic.yml file in the unzipped newrelic directory, make sure you read through the settings and that you understand the security implications.
+5. Follow the Linux / Windows specific steps below to complete the installation.
 
-### Linux specific steps
+## 3 Linux-Specific Steps
 
 1.  Add '-javaagent:/PATH/TO/NEWRELIC.JAR' to your java options in the m2ee.yaml file. Make sure to replace the path to the actual path of the newrelic.jar.
 
@@ -30,19 +32,17 @@ The configuration section in m2ee.yaml should look something like this:
  ]
 ```
 
-### Windows specific steps
+## 4 Windows-Specific Steps
 
 1.  Add  '-javaagent:/PATH/TO/NEWRELIC.JAR' to your java arguments in the Windows Service Console
 
 ![](attachments/setting-up-monitoring-with-new-relic/18580677.png)
 
 {{% alert type="info" %}}
-
 After you restart the application your data should show up in New Relic. Note that this requires the application to send data to New Relic servers, so your firewalls should be configured to allow this traffic.
-
 {{% /alert %}}
 
-## Read More
+## 5 Read More
 
 *   [Setting up monitoring with New Relic](setting-up-monitoring-with-new-relic)
 *   [Finding the Root Cause of Runtime Errors](/howto/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)

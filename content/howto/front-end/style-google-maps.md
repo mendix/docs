@@ -1,11 +1,11 @@
 ---
 title: "Style Google Maps"
 category: "Front-End"
-menu_order: 65
+menu_order: 60
 tags: ["studio pro"]
 ---
 
-## 1. Introduction
+## 1 Introduction
 
 Google Maps is a very powerful addition to your applications. You can use it to display locations, areas, routes, etc. By default every map overview looks the same, like on the default Google Maps website. There is now a new option available on the Google Maps widget to style the map overview to make it match your application design. Follow the steps below to sauce-up the map overviews in your applications with a minimal amount of effort!
 
@@ -15,7 +15,7 @@ Google Maps is a very powerful addition to your applications. You can use it to 
 *   Find and implement the right style matching your application
 *   Upload new styles to support the community
 
-## 2. Preparation
+## 2 Preparation
 
 Before you start this how-to, please make sure you have completed the following prerequisites.
 
@@ -25,9 +25,9 @@ Before you start this how-to, please make sure you have completed the following 
 These instructions are for the Google Maps widget which you can download from the App Store. The Google Maps widget within the Atlas UI template has different options.
 {{% /alert %}}
 
-## 3. Adding the style
+## 3 Adding the Style
 
-### 3.1 Widget properties
+### 3.1 Widget Properties
 
 In this chapter I will explain how you can add styling to the Google Maps widget.
 
@@ -39,14 +39,14 @@ In this chapter I will explain how you can add styling to the Google Maps widget
 
     Here is the example styling:
 
-    ```java
+    ```json
     [{"featureType":"all","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"landscape","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"landscape","elementType":"geometry.fill","stylers":[{"color":"#abce83"}]},{"featureType":"landscape","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"visibility":"simplified"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":"#5B5B3F"}]},{"featureType":"road","elementType":"labels.text.stroke","stylers":[{"color":"#ABCE83"}]},{"featureType":"road","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"road.highway","elementType":"geometry","stylers":[{"color":"#EBF4A4"}]},{"featureType":"road.arterial","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road.local","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"geometry","stylers":[{"visibility":"on"},{"color":"#aee2e0"}]}]
     ```
 
 3.  The example style will give you this result:
     ![](attachments/19202780/19398958.png)
 
-### 3.2 Finding the right style
+### 3.2 Finding the Right Style
 
 Choosing an existing style sheet from a large library that fits your application will save you a lot of time. Here is a community website where new styles are uploaded on a regular basis: [https://snazzymaps.com/](https://snazzymaps.com/).
 
@@ -63,14 +63,14 @@ Choosing an existing style sheet from a large library that fits your application
 
     The style array:
 
-    ```java
+    ```json
     [{"featureType":"all","elementType":"labels.text.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"color":"#000000"},{"lightness":13}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#144b53"},{"lightness":14},{"weight":1.4}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#08304b"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#0c4152"},{"lightness":5}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#0b434f"},{"lightness":25}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},{"featureType":"road.arterial","elementType":"geometry.stroke","stylers":[{"color":"#0b3d51"},{"lightness":16}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"}]},{"featureType":"transit","elementType":"all","stylers":[{"color":"#146474"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#021019"}]}]
     ```
 
 6.  And there it is:
     ![](attachments/19202780/19398963.png)
 
-### 3.3 Upload your own style array
+### 3.3 Upload Your Own Style Array
 
 Supporting communities is cool. Therefore I will also show you how to upload your own custom style array to the website.
 
@@ -81,7 +81,7 @@ Supporting communities is cool. Therefore I will also show you how to upload you
 
     Happy modelling!
 
-## 4.. Read More
+## 4 Read More
 
 *   [Create a custom theme with the Mendix UI Framework](create-a-custom-theme-with-the-mendix-ui-framework)
 *   [Layouts and Snippets](layouts-and-snippets)

@@ -19,7 +19,7 @@ This how-to will walk you through the steps needed to implement push notificatio
 
 ## 2 Importing the PushNotifications Module from the App Store
 
-The [Push Notifications Connector module](https://appstore.home.mendix.com/link/app/3003/) is published in the Mendix App Store. To import it into your project, click **App Store** in the top right of Stuido Pro, which will open the App Store in a new tab. Search for "Push Notifications Connector" and click the title of the result:
+The [Push Notifications Connector module](https://appstore.home.mendix.com/link/app/3003/) is published in the Mendix App Store. To import it into your project, click **App Store** in the top right of Mendix Studio Pro, which will open the App Store in a new tab. Search for "Push Notifications Connector" and click the title of the result:
 
 ![](attachments/19955732/20218020.png)
 
@@ -68,7 +68,7 @@ Please do not remove the button with the caption **Device Registration reference
 
 The PushNotifications module contains a microflow named **AfterStartup_PushNotifications** that will start the APNs connector for you. Call this microflow from your **AfterStartup** microflow.
 
-If your project uses Mendix SSO, most likely the **AppCloudServices.StartAppCloudServices** microflow is set to execute after startup (for details, refer to [Integrate Your App with Mendix SSO](/developerportal/deploy/integrate-with-mendix-sso) in the *Mendix Studio Pro Guide*). We suggest that you change your startup microflow to a new microflow, from which you will call both after the startup microflows.
+If your project uses Mendix SSO, most likely the **AppCloudServices.StartAppCloudServices** microflow is set to execute after startup (for details, refer to [Integrate Your App with Mendix SSO](/developerportal/deploy/integrate-with-mendix-sso) in the *Mendix Studio Pro Guide*). It is recommended that you change your startup microflow to a new microflow, from which you will call both after the startup microflows.
 
 <iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/02c590e5-f8bf-4f0e-90d6-3719390ee863/onstartupacsandpushnotifications?embed=true" allowfullscreen=""></iframe>
 
@@ -117,3 +117,8 @@ You now need to build the hybrid mobile application. For an explanation on how t
 For more information about the PhoneGap Build, refer to the [Adobe PhoneGap Build documentation](http://docs.phonegap.com/).
 
 Please note that a free PhoneGap Build account is limited to a single application, whereas paid plans support multiple applications. As a consequence, you may need to delete an existing app from your PhoneGap Build environment in order to create a new one.
+
+## 11 Read More
+
+* [Microflows](/refguide/microflows)
+* [Test the Implementation](testing-the-implementation)

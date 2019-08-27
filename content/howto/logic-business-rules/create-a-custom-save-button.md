@@ -57,7 +57,7 @@ To replace the default Save button with a custom one, follow these steps:
 
     ![](attachments/18448679/18580983.png)
 
-5.  In the **Input** section, select **Customer** for **Variable** and click **OK**. The microflow should now look like this:
+5.  In the **Input** section, select **Customer** for **Object or List** and click **OK**. The microflow should now look like this:
     
     ![](attachments/18448679/18580982.png)
 
@@ -87,6 +87,6 @@ To replace the default Save button with a custom one, follow these steps:
 * [Optimize Retrieve Activities](optimizing-retrieve-activities)
 * [Configure Error Handling](set-up-error-handling)
 * [Optimize Microflow Aggregates](optimizing-microflow-aggregates)
-* [Extract and Use Submicroflows](extract-and-use-sub-microflows)
+* [Extract & Use Sub-Microflows](extract-and-use-sub-microflows)
 * [Button Widgets](/refguide/button-widgets)
 * [Microflow Activities](/refguide/activities)

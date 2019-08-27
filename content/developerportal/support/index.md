@@ -72,3 +72,11 @@ If you suspect an issue in the Mendix platform exists after your analysis (or if
 ## 8 Product Support Period
 
 Mendix supports the current major release and the two prior major releases (and we support each major release for a minimum of 24 months). Because of this, we recommend that you upgrade your projects to the latest version of Studio Pro at least once a year. We will reach out to you in time if you are running on a version that will become unsupported so that you have ample time to perform an upgrade.
+
+## 9 Main Documents in This Category
+
+* [Prepare Your App Project for Support](prepare-your-project) – shows  you how to configure project authorization to select the affected app(s) in the Mendix Support Portal
+* [Submit a Support Request](submit-support-request) – presents the details necessary for Mendix Support to process your request
+* [Make a New App Node Request](new-app-node-request-template) – describes how to deploy a new licensed node in the Mendix Cloud or on-premises/virtual private cloud
+* [Support Ticket Priority](ticket-priority) – describes how priority levels are determined for Mendix Support
+* [Support Escalation Process](escalation-management-process) – describes how a support request can be escalated to bring your issue to closure

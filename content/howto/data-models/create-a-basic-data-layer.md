@@ -140,7 +140,6 @@ To configure the delete behavior, double-click the **Order_Customer** associatio
 * [Work with Images & Files](working-with-images-and-files)
 * [Denormalize Data to Improve Performance](denormalize-data-to-improve-performance)
 * [Set Up Data Validation](setting-up-data-validation)
-* [Work with Object Events](working-with-object-events)
 * [Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
 * [Stories](/developerportal/collaborate/stories)
 * [Define Access Rules Using XPath](../logic-business-rules/define-access-rules-using-xpath)

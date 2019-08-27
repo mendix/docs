@@ -1,6 +1,6 @@
 ---
 title: "Set Up Your Development Environment"
-parent: "tutorial-for-the-mendix-sdk"
+parent: "sdk-howtos"
 menu_order: 10
 ---
 
@@ -32,7 +32,7 @@ To set up your development tools, follow these steps:
 
 2.  Open a terminal (on Windows, [Command Prompt](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands)) and run the following command:
 
-    ```text
+    ```bash
     $ node --version
     v8.9.1
     ```
@@ -50,7 +50,7 @@ To set up your development tools, follow these steps:
 
 5.  Use the following command to check the TypeScript compiler version on your PATH:
 
-    ```text
+    ```bash
     $ tsc --version
     Version 2.6.2 (should be the latest 2.* version)
     ```
@@ -100,7 +100,7 @@ To set up a working directory for your script, follow these steps:
 
 5.  In Code, create a `[tsconfig.json](https://github.com/Microsoft/TypeScript/wiki/tsconfig.json)` file next to your `package.json`. The `tsconfig.json` file is used by the TypeScript compiler to compile your code in the proper manner to a JS file. Create it with the following contents. 
 
-    ```text
+    ```json
     {
     	"compilerOptions" : {
     		"module" : "commonjs",

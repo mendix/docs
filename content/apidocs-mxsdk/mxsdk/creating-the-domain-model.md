@@ -1,6 +1,6 @@
 ---
 title: "Create the Domain Model"
-parent: "tutorial-for-the-mendix-sdk"
+parent: "sdk-howtos"
 menu_order: 30
 description: "Explains how to create a domain model with inheritance and what the relation is between the metamodel and the SDK."
 ---
@@ -24,7 +24,7 @@ To be able to create such a domain model, there are several questions that you n
 2.  Which SDK classes do you need to use?
 3.  How do you use those SDK classes?
 
-The answer to the first question is directly based on functional requirements: you need to create two entities, one association, and set the generalization of one of the two entities. For the answers to the second and third question you need to combine information from several sources of information: the [*Studio Pro Guide*](/refguide/), [References](reference-documentation), and the [Model SDK API](https://apidocs.mendix.com/modelsdk/latest/index.html) documentation.
+The answer to the first question is directly based on functional requirements: you need to create two entities, one association, and set the generalization of one of the two entities. For the answers to the second and third question you need to combine information from several sources of information: the [*Studio Pro Guide*](/refguide/), [References](sdk-refguide), and the [Model SDK API](https://apidocs.mendix.com/modelsdk/latest/index.html) documentation.
 
 The *Studio Pro Guide* gives an overview of what can be configured for different parts of the Mendix app model, the Metamodel reference guide specifies in detail which actual programmable objects are available in the SDK, and the Model SDK API docs provide the precise API details needed to write the actual code.
 

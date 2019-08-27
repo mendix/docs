@@ -9,7 +9,7 @@ description: "Describes how to create and share Mendix App Store content."
 
 ## 1 Introduction
 
-The App Store is driven by contributions from members of the Mendix community who share the connectors, modules, and apps they have built. This how-to presents details on adding and updating App Store content.
+The App Store is driven by contributions from members of the Mendix community who share the connectors, modules, and apps they have built. This how-to shows how to add and update App Store content.
 
 **This how-to will teach you how to do the following:**
 
@@ -85,28 +85,35 @@ To add content to the App Store, follow these steps:
 
 	![](attachments/share-app-store-content/add_content_button.png)
 
-2.  The **DRAFT** page will open, where you need to select the purpose of your contribution:
+2.  <a name="two"></a>The **DRAFT** page will open, where you need to select the purpose of your contribution:
 
 	* **Share** – components that can be downloaded using Studio Pro – if you select this option, continue to [step #3](#three) below
 	* **Promote** – a way to advertise a component or solution while not making it downloadable – if you select this option, continue to [step #4](#four) below
+
+	{{% alert type="warning" %}}You can only set this in the initial version of your content. You cannot change this setting by updating the App Store item later.
+	{{% /alert %}}
 
 3.  <a name="three"></a>When adding Studio Pro content, select **your content source**:
 
 	* If you select **Select from GitHub**, follow these steps:<br />
 		a. Select the type of GitHub profile (**Organisation** or **User**) where the content is stored.<br />
 		b. Enter the **GitHub profile name**.<br />
-		c. Select the **GitHub repo** from which the content will be uploaded by clicking **Select**. The system will crawl all of the projects for that GitHub profile and present the Mendix package file (*.mpk*) options to you in a pop-up window. When you find the correct *.mpk* file name, click **Select** on this window.<br />
-		d. Select the **release** by clicking **Select**. If there are various releases of the *.mpk* file available, the system will present them to you in a pop-up window. When you find the correct release, click **Select** on this window.<br />
-		e. Check the **Use GitHub readme.md** check box if you want the *readme.md* file to be included with the App Store content.<br />
-		f. Note that the **Release notes** section is only available for updating a new version of the content (for details see the  [Updating Existing App Store Content](#updating) section below).<br />
+		c. Click **Check** to confirm that this profile is publicly available in GitHub.<br />
+		d. Select the **GitHub repo** from which the content will be uploaded by clicking **Select**.<br/>The system will crawl all of the projects for that GitHub profile and present the Mendix package file (*.mpk*) options to you in a pop-up window.<br/>
+		e. Click **Select** on this window when you find the correct *.mpk* file name.<br />
+		f. Select the **release** by clicking **Select**.<br/>
+		If there are various releases of the *.mpk* file available, the system will present them to you in a pop-up window. When you find the correct release, click **Select** on this window.<br />
+		g. Check the **Use GitHub README for documentation** check box if you want the repo's *readme.md* file to be included on the App Store item's [Documentation tab](#doc-tab).<br/>This is useful for including nicely formatted documentation with screenshots for your App Store item.<br />
+		{{% alert type="info" %}}The **Release notes** section is only available for updating a new version of the content (for details see the  [Updating Existing App Store Content](#updating) section below).{{% /alert %}}<br />
 
 		{{% image_container width="400" %}}![](attachments/share-app-store-content/add_content_1.png)
 		{{% /image_container %}}
 
 	* If you select **Manual upload**, follow these steps:<br />
 		a. Select the **Source file** by clicking **Upload**.<br />
-		b. On the **Upload source file** pop-up window, click **Browse** to browse the source files on your computer, select your source file, and then click **Save**.<br />
-		c. Enter the **Release notes** that describe your manually uploaded content.<br />
+		b. On the **Upload source file** pop-up window, click **Browse** to browse the source files on your computer.<br/>
+		c. Select your source file, and click **Save**.<br />
+		d. Enter the **Release notes** that describe your manually uploaded content.<br />
 
 		{{% image_container width="400" %}}![](attachments/share-app-store-content/add_content_2.png)
 		{{% /image_container %}}
@@ -115,6 +122,9 @@ To add content to the App Store, follow these steps:
 
 	* **Public App Store (visible for anyone)** – your content will be available to every developer in the Mendix community (this content will have to be reviewed and approved by Mendix before it is available)
 	* <a name="private-app-store"></a>**Private App Store (visible for your company)** – your content will receive the **Company only** label and be available only to the developers in your company as well as [external downloaders](../app-store/app-store-overview#ext); this content will not be reviewed by Mendix
+	
+	{{% alert type="warning" %}}You can only set this in the initial version of your content. You cannot change this setting by updating the App Store item later.
+	{{% /alert %}}
 
 5. In the **Content protection** section, you can choose to **Enable protection** or **Disable protection** for the content. This will determine which members of your company can manage the content. For more information, see the [ Content Managers](app-store-overview#cm) section of *App Store Overview*.
 6.  <a name="edit"></a>In the bottom half of the **DRAFT** screen, do the following:<br />
@@ -134,7 +144,7 @@ To add content to the App Store, follow these steps:
 	{{% image_container width="400" %}}![](attachments/share-app-store-content/add_content_4.png)
 	{{% /image_container %}}
 
-8.  <a name="doc-tab"></a>On the **Documentation** tab, you can write or edit the documentation that should accompany your app in the editor. Note that this is only applicable when the **Use GitHub readme.md** check box is not checked, and you are only able to edit the documentation of your own and your company's content.
+8.  <a name="doc-tab"></a>On the **Documentation** tab, you can write or edit the documentation that should accompany your app in the editor. You are only able to edit the documentation of your own and your company's content. Note that this is only applicable when the **Use GitHub README for documentation** check box is not checked.
 
 	* The documentation template includes the following sections that you must fill out in order to submit your content:
 		* An extended **Description** of the content
@@ -149,16 +159,25 @@ To add content to the App Store, follow these steps:
 
 	{{% image_container width="450" %}}![](attachments/share-app-store-content/add_content_5.png)
 	{{% /image_container %}}
+	
+	The editor comes with a set of basic formatting tools, such as bold, bullet lists, and URL links.
+	
+	You can attach images to your documentation in one of two ways:
+	
+	* Drag the image from file explorer to the editor (this will upload your image)
+	* Click the Image button in the editor tools and enter a URL which points to an image
+		
+	Uploaded images cannot be resized, but linked images can.
 
 9. Note that there is nothing for you to do on the **Statistics** and **All versions** tabs. The **Statistics** tab will chart the downloads of your content over time. The **All versions** tab will list the various versions of your content that have been updated.
 10. In the **Version Details** section on the bottom-right of the screen, do the following:<br />
 	a. Check the **Beta version** check-box if the content is in beta.<br />
 	b. Select the **Mendix Studio Pro version** on which you built the content.<br />
-	c.  Select the type of **License** you want applied to your app (if applicable):<br />
-		* **Apache V2** (for more information, see [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0))<br />
-		* **GNU General Public License, version 3** (for more information, see [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html))<br />
-		* **Mendix EULA** (for more information, see [Mendix Terms of Use](https://www.mendix.com/terms-of-use/))<br />
-		* **MIT** (for more information, see [MIT License](https://opensource.org/licenses/MIT))<br />
+	c. Select the type of **License** you want applied to your app (if applicable):<br />
+	* **Apache V2** (for more information, see [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0))<br />
+	* **GNU General Public License, version 3** (for more information, see [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html))<br />
+	* **Mendix EULA** (for more information, see [Mendix Terms of Use](https://www.mendix.com/terms-of-use/))<br />
+	* **MIT** (for more information, see [MIT License](https://opensource.org/licenses/MIT))<br />
 
 	{{% image_container width="300" %}}![](attachments/share-app-store-content/add_content_8.png)
 	{{% /image_container %}}

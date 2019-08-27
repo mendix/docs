@@ -21,7 +21,7 @@ This option is only available when support for other SVN servers is enabled in t
 
 From the list select the Team Server app you wish to open, then choose the development line that you want to download.
 
-For more information about the Mendix Team Server, see [Team Server](team-server).
+For more information about the Mendix Team Server, see [Team Server Overview](/developerportal/develop/team-server).
 
 For more information about development lines, see [Version Control](version-control).
 

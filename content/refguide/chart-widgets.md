@@ -1,6 +1,7 @@
 ---
 title: "Chart Widgets"
 parent: "pages"
+menu_order: 70
 tags: ["Charts", "Any Chart", "Studio Pro", "Pages"]
 ---
 
@@ -8,9 +9,9 @@ tags: ["Charts", "Any Chart", "Studio Pro", "Pages"]
 
 You can add a wide range of charts to your app pages to display data series visually.
 
-[Basic Charts](#basic-charts) are included in Mendix starter apps based on Atlas UI. They can be included in other Mendix apps by downloading them from the Mendix App Store here: https://appstore.home.mendix.com/link/app/105695/.
+[**Basic Charts**](#basic-charts) are included in Mendix starter apps based on Atlas UI. They can be included in other Mendix apps by downloading them from the Mendix App Store here: https://appstore.home.mendix.com/link/app/105695/.
 
-[Any Chart](#any-chart) gives much more control and implements all the features of [plotly.js](https://plot.ly/). The *Any chart* widget can be included in your Mendix app by downloading it from the Mendix App Store here: https://appstore.home.mendix.com/link/app/106517/.
+[**Any Chart**](#any-chart) gives much more control and implements all the features of [plotly.js](https://plot.ly/). The *Any chart* widget can be included in your Mendix app by downloading it from the Mendix App Store here: https://appstore.home.mendix.com/link/app/106517/.
 
 ## 2 Basic Charts {#basic-charts}
 
@@ -29,7 +30,7 @@ The widgets contain several settings which can be changed in Studio Pro to custo
 
 **Dynamic Series Chart**
 
-From version 1.4 of the basic charts you can create charts with a variable number of data series. For instructions on how to do this, see [How to Create a Dynamic Series Chart](/howto/extensibility/charts-dynamic-series).
+From version 1.4 of the basic charts you can create charts with a variable number of data series. For instructions on how to do this, see [How to Create a Dynamic Series Chart](/howto/front-end/charts-dynamic-series).
 
 ## 3 Any Chart {#any-chart}
 
@@ -41,9 +42,12 @@ This module also contains several building blocks for inspiration and as startin
 
 See [Any Chart Widgets](charts-any-configuration) to learn how to configure *Any charts* widgets.
 
-## 4 Read More
+## 4 Documents in This Section
 
-* [Any Chart Configuration](charts-any-configuration)
+The following documents explain how to use charts in more detail:
+
+* [Chart Configuration](charts-configuration)
+* [Chart Advanced Cheat Sheet](charts-advanced-cheat-sheet)
+* [Any Chart Widgets](charts-any-configuration)
 * [Any Chart Building Bocks](charts-any-building-bocks)
 * [Any Chart Cheat Sheet](charts-any-cheat-sheet)
-* [Basic Chart Cheat Sheet](charts-advanced-cheat-sheet)

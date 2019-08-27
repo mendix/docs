@@ -7,26 +7,26 @@ tags: ["test", "testing", "microflow", "unittesting"]
 
 To smarten up your app with business logic you can use microflows. To verify that your microflow works as expected you can create unit tests using the UnitTesting module. The UnitTesting module provides an easy to use interface to manage and run unit tests. The module supports unit tests that are created using microflows and unit tests that are created using JUnit.
 
-**After completing this how-to you will know:**
+**This how-to will teach you how to do the following:**
 
-*   How to set up the UnitTesting module.
-*   How to create a microflow unit test.
+* Set up the UnitTesting module
+* Create a microflow unit test
 
 ## 1 Preparation
 
 Before you can start with this how-to, make sure you have completed the following prerequisites:
 
 * Download [Mendix Studio Pro](https://appstore.home.mendix.com/link/modelers/)
-* Review the software used in this how-to:
+* Review the App Store items used in this how-to:
 
-    | Software | Version Used in This How-to |
+    | App Store Item | Version Used in This How-to |
     | --- | --- |
-    | UnitTesting module | 4.2 |
-    | Community Commons Function Library module | 5.4 |
-    | ObjectHandling module | 1.0 |
+    | [UnitTesting](https://appstore.home.mendix.com/link/app/390/) | 4.2 |
+    | [Community Commons Function Library](https://appstore.home.mendix.com/link/app/170/) | 5.4 |
+    | [ObjectHandling](https://appstore.home.mendix.com/link/app/37114/) | 1.0 |
 
 {{% alert type="warning" %}}
-All images, names and steps in this how-to are based on these versions. When using other versions the images and/or names on your screen may be different than the images or names used in this how-to.
+All images, names, and steps in this how-to are based on the App Store item versions listed above. When using later versions of these App Store items, images and/or names on your screen may be different than what is used in this how-to.
 {{% /alert %}}
 
 ## 2 The UnitTesting Module

@@ -88,7 +88,7 @@ To be able to use the data from your model in the REST service, you need to crea
 
 7. Click **Show** to start editing the newly created microflow.
 8. Add two parameters: **httpRequest** and **OrderID**.
-9.  Add an action to the microflow to convert the **OrderID** variable (string) to an integer variable. This is needed to be able to search for the OrderID (autonumber).
+9. Add an action to the microflow to convert the **OrderID** variable (string) to an integer variable. This is needed to be able to search for the OrderID (autonumber).
 
 	![](attachments/publish-rest-service/ConvertOrderID.png)
 
@@ -189,7 +189,7 @@ Now that you covered the error handling of the parameter parsing, it's time to h
 
 To add the error handling for those situations when the OrderID parameter is filled but no result is found, follow these steps:
 
-1.  After the activity for retrieving from the database, add an exclusive split activity with the following statement: `$Order != empty`. The true exit is connected to the activity for exporting to JSON. For the false exit, add new Create object activities that create a **NewhttpErrorNotFoundResponse** and a **NewhttpErrorNotFoundHeader**:
+1.  After the activity for retrieving from the database, add a decision activity with the following statement: `$Order != empty`. The true exit is connected to the activity for exporting to JSON. For the false exit, add new Create object activities that create a **NewhttpErrorNotFoundResponse** and a **NewhttpErrorNotFoundHeader**:
 
 	![](attachments/publish-rest-service/OrderNotFoundResponse.png)
 

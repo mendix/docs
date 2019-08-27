@@ -1,6 +1,7 @@
 ---
 title: "Reference Selector"
 parent: "input-widgets"
+menu_order: 70
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -43,6 +44,8 @@ The advantage of a selecting using a drop-down is that it is very efficient; no 
 
 _Default value:_ Drop-down
 
+{{% alert type="info" %}}Not supported on native mobile pages.{{% /alert %}}
+
 ### Empty Option Caption
 
 This property represents the caption for the empty option in the drop-down reference selector shown to the user. Setting the caption is not available if the Select Using property set to the Page option. This is a translable text. For more details, see [Translatable Texts](translatable-texts).
@@ -61,9 +64,13 @@ See [Opening Pages](opening-pages). Note that opening select pages in content is
 You can generate a new page to show by right-clicking the widget and selecting 'Generate select page...'.
 {{% /alert %}}
 
+{{% alert type="info" %}}Select page is not supported on native mobile pages.{{% /alert %}}
+
 ### Go-To Page
 
 The go-to page gives end users quick access to a more detailed overview of the object being selected. This property determines which page is shown to the user. The page should contain a data view with the same entity as the one that is selected by the reference selector.
+
+{{% alert type="info" %}}Go-to page is not supported on native mobile pages.{{% /alert %}}
 
 ### Go-To Page Settings
 

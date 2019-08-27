@@ -19,7 +19,7 @@ When creating a new repository, enter the name for the new Team Server project a
 
 Should you wish to use an existing repository, then select the corresponding Team Server app from the list. Note that this only works when the existing repository is empty.
 
-For more information about the Mendix Team Server, see [Team Server](team-server).
+For more information about the Mendix Team Server, see [Team Server Overview](/developerportal/develop/team-server).
 
 ### Other SVN server
 

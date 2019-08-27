@@ -55,7 +55,11 @@ Download Current Log | view the current log on the screen and download it, if re
 
 ## 4 Apps on SAP Cloud Platform
 
-For apps deployed to SAP Cloud Platform you can see the logs using Kibana. 
+For apps deployed to SAP Cloud Platform you can see the logs using Kibana.
+
+{{% alert type="info" %}}
+To make full use of Kibana and see proper mapping of the log level, multiline log messages, and stack traces, you will need to configure the *SAP Logger Connector* in your app. For more information see [SAP Logger Connector](/partners/sap/sap-logger).
+{{% /alert %}}
 
 The logs page shows all the environments for this app. Click the **Logs** button to open the log in Kibana.
 

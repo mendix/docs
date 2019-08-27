@@ -70,7 +70,6 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 *   [Work with Images & Files](working-with-images-and-files)
 *   [Create a Basic Data Layer](create-a-basic-data-layer)
-*   [Work with Object Events](working-with-object-events)
 *   [Denormalize Data to Improve Performance](denormalize-data-to-improve-performance)
 *   [Set Up Data Validation](setting-up-data-validation)
 *   [Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)

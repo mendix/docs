@@ -47,7 +47,7 @@ These are the possible values:
 * **Date** (this is the default)
 * **Time**
 * **Date and time**
-* **Custom** (see below for more deteails)
+* **Custom** (see below for more details)
 
 _Default value:_ Date
 

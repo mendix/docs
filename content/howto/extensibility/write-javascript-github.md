@@ -52,7 +52,7 @@ To create a JavaScript action that can search for users on GitHub, follow the st
 
 	You can now start creating the API for **SearchGitHubUsers**, an action which consists of parameters and a return type.
 
-3.  Your **SearchGitGubUsers** JavaScript action only requires a single parameter. Create it by clicking **Parameters** > **Add**. Name the parameter *Query,* and add an extended **Description** if desired. 
+3.  Your **SearchGitHubUsers** JavaScript action only requires a single parameter. Create it by clicking **Parameters** > **Add**. Name the parameter *Query,* and add an extended **Description** if desired. 
 
 	![parameter name](attachments/jsactions-advanced/name-query.png)
 
@@ -269,9 +269,9 @@ To create a JavaScript action that can search for users on GitHub, follow the st
 
 	![add javascript action call](attachments/jsactions-advanced/add-jsaction-call.png)
 
-	![select search github users](attachments/jsactions-advanced/select-searchgithub-users.png)
+	![select search GitHub users](attachments/jsactions-advanced/select-searchgithub-users.png)
 
-	Optionally, you can expose the JavaScript action as a nanoflow action. When you do, you can choose a **Caption**, **Category**, and **Icon**. Note that your icon image will need to be in an existing image collection:
+	Optionally, you can expose the JavaScript action as a nanoflow action. When you do, you can choose a **Caption**, **Category**, and **Icon**. Note that your icon image will need to be in an existing [image collection](/refguide/image-collection):
 
 	![nanoflow options](attachments/jsactions-advanced/nanoflow-options.png)
 
@@ -283,14 +283,14 @@ To create a JavaScript action that can search for users on GitHub, follow the st
 	a. Add the **SearchGitHubUsers** action to the search nanoflow then double-click it. <br/>
 	b. Click **User entity** > **Select**, then double-click the **GitHubUser** entity. <br/>
 	c. Click **Query** > **Edit**, then type in *$GithubSearch/Query* and click **OK**. <br/>
-	d. To display the results in the user interface, type *UserList* into the **Variable** field. <br/>
+	d. To display the results in the user interface, type *UserList* into the **List** field. <br/>
 	e. Your finished **Call JavaScript Action** will look like this:
 
-	![variable display](attachments/jsactions-advanced/variable-display.png)
+	![list display](attachments/jsactions-advanced/variable-display.png)
 
 18. To edit your **Change Object** activity, do the following: <br/>
 	a. Double-click your **Change Object** activity. <br/>
-	b. Select **GithubSearch(HowTo.GithubSearch)** from the **Variable** drop-down menu. <br/>
+	b. Select **GithubSearch(HowTo.GithubSearch)** from the **Object** drop-down menu. <br/>
 	c. Click **Action** > **New**. <br/>
 	d. Select **HowTo.GithubSearch_GithubUser(ListofHowTo.GithubUser)** from the **Member** drop-down menu. <br/>
 	e. Type *$UserList* into the **Value** field and click **OK**. <br/>

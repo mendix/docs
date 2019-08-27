@@ -1,7 +1,7 @@
 ---
 title: "Set Up the Navigation Structure"
 category: "General Info"
-menu_order: 30
+menu_order: 3
 tags: ["studio pro"]
 ---
 Once you've created some pages you want to give users the ability to access them. The easiest way to do this is by using a navigation menu. The navigation editor of Studio Pro allows you define navigation menus for desktop, tablet and phone interfaces. It also allows you to define which page is shown as a default home page depending on the user role.
@@ -13,7 +13,7 @@ Before starting this how-to make sure you have completed the following prerequis
 *   [Creating a basic data layer](../data-models/create-a-basic-data-layer)
 *   [Creating your first two Overview and Detail pages](../front-end/create-your-first-two-overview-and-detail-pages)
 
-## 2 Setting a Default Home Page
+## 2 Setting a Default Home Page {#home}
 
 This section will explain how to set the default home page. Please note that this setting is overridden by the role based home page if you decide to configure that.
 

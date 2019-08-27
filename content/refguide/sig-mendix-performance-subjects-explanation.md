@@ -79,7 +79,7 @@ A basic sequence diagram looks like this:
 
 The Mendix Client uses a REST-like protocol to request data from the Mendix Runtime. The following example shows what this looks like when requesting objects from the Employees entity:
 
-```java
+```json
 {
    "action":"retrieve_by_xpath",
    "params":{
@@ -130,7 +130,7 @@ Depending on the data displayed and the domain model (usage of inheritance and r
 
 The response of the Mendix Runtime to the Mendix Client is as follows:
 
-```sql
+```json
 {"count":2,"mxobjects":[{"objectType":"MyFirstModule.Employee","guid":"281474976710757","attributes":{"Firstname":{"value":"peter1"},"DateOfBirth":{"value":-315622800000},"Jobtitle":{"value":"sales"},"Department":{"value":"sales"},"Lastname":{"value":"jones"&#125;&#125;},{"objectType":"MyFirstModule.Employee","guid":"281474976710657","attributes":{"Firstname":{"value":"piet"},"DateOfBirth":{"value":476406000000},"Jobtitle":{"value":"consultant"},"Department":{"value":"expert services"},"Lastname":{"value":"jansen"&#125;&#125;}]}
 ```
 
@@ -147,7 +147,7 @@ The typical create-new-object flow consists of these steps:
 
 Create a new object:
 
-```java
+```json
 {
    "action":"instantiate",
    "params":{
@@ -164,7 +164,7 @@ Create a new object:
 
 Save the object to the database:
 
-```java
+```json
 {
    "action":"change",
    "params":{
@@ -303,7 +303,7 @@ WHERE "id" = ?
 
 Refresh the data grid:
 
-```java
+```json
 {"action":"retrieve_by_xpath","params":{"xpath":"//MyFirstModule.Employee","schema":{"id":"a2916c7c-af2f-4267-a8e9-99604f045861","offset":0,"sort":[["Firstname","asc"]],"amount":20},"count":true,"aggregates":false},"context":[],"releaseids":["281474976710757"],"profiledata":{"204eeb2972550c0":28&#125;&#125;
 ```
 
@@ -327,7 +327,7 @@ A high-level sequence diagram for this scenario looks like this:
 
 JSON action executed from Mendix Client to Mendix Runtime:
 
-```java
+```json
 {"action":"executeaction","params":{"actionname":"MyFirstModule.GetAllEmployees","applyto":"none"},"context":[],"profiledata":{"204f418ba05e7c0":55&#125;&#125;
 ```
 
@@ -345,7 +345,7 @@ FROM "myfirstmodule$employee"
 
 Response from the Mendix Runtime to the Mendix Client:
 
-```java
+```json
 {"actionResult":[{"objectType":"MyFirstModule.Employee","guid":"281474976710657","attributes":{"Firstname":{"value":"piet"},"DateOfBirth":{"value":476406000000},"Jobtitle":{"value":"consultant"},"Department":{"value":"expert services"},"Lastname":{"value":"jansen"&#125;&#125;},{"objectType":"MyFirstModule.Employee","guid":"281474976710957","attributes":{"Firstname":{"value":"wee"},"DateOfBirth":{"value":1454886000000},"Jobtitle":{"value":"ewji"},"Department":{"value":"wew"},"Lastname":{"value":"ewfeew"&#125;&#125;},{"objectType":"MyFirstModule.Employee","guid":"281474976710958
 …
 }]}

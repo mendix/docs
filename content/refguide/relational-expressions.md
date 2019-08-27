@@ -4,7 +4,7 @@ parent: "expressions"
 tags: ["studio pro"]
 ---
 
-Relational expressions allow the user to compare variables and base changes and actions upon that information. The return type of such expressions is always boolean.
+Relational expressions allow the user to compare values and to make changes and perform actions based upon that information. The return type of such expressions is always Boolean.
 
 ## Less than ( < )
 

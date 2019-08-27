@@ -1,20 +1,41 @@
 ---
-title: "Hybrid App"
+title: "Hybrid App Base & Template"
 category: "Mobile Products"
-menu_order: 10
+menu_order: 30
 toc-level: 1
-description: "Hybrid App release notes."
+description: "Mendix Hybrid App Base & Hybrid App Template release notes."
 ---
 
-These are the release notes for the Hybrid App.
+The version numbers for each release below refer to the [Hybrid App Base](https://github.com/mendix/hybrid-app-base) and [Hybrid App Template](https://github.com/mendix/hybrid-app-template) packages, respectively. If you are building your hybrid mobile app using the regular PhoneGap Build approach from within the Mendix Developer Portal, you do not need to worry about these numbers. Downloading and building a new package will set you up with the latest version.
 
-The version numbers for each release refer to the [Hybrid App Base](https://github.com/mendix/hybrid-app-base) and [Hybrid App Template](https://github.com/mendix/hybrid-app-template) packages, respectively.
+If you are using the advanced flow, you can get the latest version of the Hybrid App Base by running `npm update` from your hybrid app project directory. To upgrade to the latest version of the Hybrid App Template, either pull in the latest changes from GitHub, or download a new copy from the Mendix Developer Portal ([Developer Portal](https://sprintr.home.mendix.com/index.html) > **DEPLOY**).
 
-If you're building the app using the regular PhoneGap Build approach from within the Mendix Developer Portal, you do not need to worry about these numbers. Downloading and building a new package will set you up with the latest version.
-
-If you're using the advanced flow, you can get the latest version of the Hybrid App Base by running `npm update` from your hybrid app project directory. To upgrade to the latest version of the Hybrid App Template, either pull in the latest changes from GitHub, or download a new copy from the Mendix Developer Portal ([Developer Portal](https://sprintr.home.mendix.com/index.html) > **DEPLOY**).
+{{% alert type="info" %}}
+For more information on hybrid mobile app development in Mendix, see the [Hybrid Mobile](/refguide/hybrid-mobile) section of the *Studio Pro 8 Guide* and the [Hybrid Mobile](/howto/mobile/hybrid-mobile) section of the *Studio Pro 8 How-to's*.
+{{% /alert %}}
 
 ## 2019
+
+### August 15th, 2019 (4.1.4 / 4.1.0)
+
+* We fixed an issue where Android devices with older WebView versions might get stack in a loading loop. 
+* We fixed an unhandled exception with Secure Storage when using a PIN view. Users on devices with no OS-level security features enabled — like pin, password, biometrics — will now be prompted to enable any of them before proceeding to set their app's PIN.
+
+### July 18th, 2019 (4.1.3 / 4.1.0)
+
+* We fixed an issue where, when using a PIN view, Android devices would sometimes offer a QWERTY keyboard instead of a numeric one.
+
+### July 2nd, 2019 (4.1.1 / 4.1.0)
+
+* We moved the Google Services *.json*, *.plist*, and *build-extras.xml* files to the **/config** folder. Thus, if you have an existing **config.xml** file, make sure that lines `213-214` read as follows:
+
+```
+<resource-file src="config/google-services.json" target="app/google-services.json" />
+<resource-file src="config/build-extras.gradle" target="build-extras.gradle" />
+```
+
+* We changed how the *build-extras.xml* file is included in your app project. Now PhoneGap Build properly includes that file.
+* The build process no longer fails when you do not provide a *GoogleServices-Info.plist* file. This is useful if you use Firebase Cloud Messaging for push notifications on Android, but use the Apple Push Notification service for push notifications on iOS.
 
 ### May 14th, 2019 (4.1.0 / 4.1.0)
 

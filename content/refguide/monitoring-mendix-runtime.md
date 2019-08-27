@@ -3,6 +3,7 @@ title: "Monitoring Mendix Runtime"
 category: "Mendix Runtime"
 description: "Describes the supported Mendix Runtime monitoring actions."
 tags: ["runtime", "json", "studio pro", "on-premises", "local"]
+#The anchor request-handlers below is mapped, so it should not be removed or changed.
 ---
 
 ## 1 Introduction
@@ -215,7 +216,7 @@ This request returns the current executions of actions known by the Mendix Runti
 
 ### 3.3 Return Values
 
-#### 3.3.1 Requests
+#### 3.3.1 Requests{#request-handlers}
 
 Displays information about the request per handler:
 

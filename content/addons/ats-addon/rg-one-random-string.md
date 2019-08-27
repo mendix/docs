@@ -3,16 +3,16 @@ title: "Random String"
 parent: "rg-one-ats-core-actions"
 ---
 
-## Description
+## 1 Description
 
 Creates a random aphanumerical String using:
 Math.random().toString(36).slice(2,8)
 
-## Usage
+## 2 Usage
 
 Optionally you can pass a post- or prefix and the length for the generated string to the action as parameters.
 
-## Input Parameters
+## 3 Input Parameters
 
 Name | Datatype | Required | Description
 ---- | -------- | ------- |---------------
@@ -20,7 +20,7 @@ Prefix | String | no | The string to put in front of the generated string.
 Postfix | String | no | The string to append to the generated string.
 Length | Integer | no | The length of the generated string.
 
-## Return Value
+## 4 Return Value
 
 Name | Datatype | Description
 ---- | --------- | ---------------

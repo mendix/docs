@@ -3,16 +3,19 @@ title: "Set BootstrapRTE Value"
 parent: "rg-one-bootstraprte"
 ---
 
-## Description
+## 1 Description
+
 Sets the given value as current value for the BootstrapRTE value. Strings can be formatted via HTML code.
 
-## Supported Widgets
-+ BootstrapRTE
+## 2 Supported Widgets
 
-## Usage
+* BootstrapRTE
+
+## 3 Usage
+
 Pass the name of the widget and the value you want to set.
 
-## Input Parameters
+## 4 Input Parameters
 
 Name | Datatype | Required | Description
 ---- | -------- | ------- |---------------

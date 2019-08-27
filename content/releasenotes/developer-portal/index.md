@@ -14,6 +14,46 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deploym
 
 ## 2019
 
+### August 26th, 2019
+
+#### SAP OData Connector Improvements & Fixes
+
+* We updated the **SAP OData Connector** to support the **Edm.Int64** data type. (Ticket #87284)
+* We also fixed a *java.net.SocketException: Broken pipe (Write failed)* exception which occurred when sending a large request to the OData service endpoint. (Ticket #86680)
+
+### August 23rd, 2019
+
+#### Mendix Cloud Improvements
+
+* We improved the performance of the Environments page by reducing the number of remote requests needed.
+
+### August 9th, 2019
+
+#### App User Management Improvements 
+
+* We redesigned the UI for managing app users and improved the performance of loading manageable app environments and users.
+
+### July 31st, 2019  
+
+#### App Store Improvements  
+
+* We simplified the options available for formatting the Documentation section when creating new app store content.
+* We made it possible to upload images into the Documentation editor - you can drag and drop an image from your file explorer into the editor, or link to images via URL (Copy + Paste does *not* work due to browser inconsistencies).
+* We made some user changes and improvements when you create new content using GitHub as the source. For example, an easier-to-use selection screen when choosing your repository.  
+* We also made some other minor bug fixes.  
+
+### July 25th, 2019
+
+#### Mendix Cloud Improvements
+
+* We reordered and improved the Trends pages of operating metrics to improve the user experience.
+* We improved the performance of calculating the environment health status.
+* We improved the ability to recover from a failed deployment in the free app cluster.
+
+#### Fixes
+
+* We fixed an issue where updates to decimal constants in the Developer Portal were limited to 2 decimal places. This has been increased to 8 decimal places. (Ticket #85507)
+
 ### July 5th, 2019
 
 #### SAP Logging Improvements
@@ -73,7 +113,7 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deploym
 
 #### Mendix Cloud Improvements
 
-* We re-designed the app user management page of the Developer Portal for Mendix Cloud environments which are enabled for single sign-on (SSO).
+* We redesigned the app user management page of the Developer Portal for Mendix Cloud environments which are enabled for single sign-on (SSO).
 
 ### May 13th, 2019
 
@@ -855,7 +895,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 * When updating the admin user password in the Mendix Cloud, the password policy description was wrong, which led to confusing situations. We updated the text.
 * When navigating to **Node Security**, the **App Team** tab no longer disappears.
-* Due to a ZIP file encoding change in Mendix 7.5.0, AppServices could not be parsed when deploying to the Mendix Cloud. We fixed this.
+* Due to a *zip* file encoding change in Mendix 7.5.0, AppServices could not be parsed when deploying to the Mendix Cloud. We fixed this.
 * The **View Current Log** button is no longer hidden for Free Apps.
 
 ### July 12th, 2017

@@ -72,7 +72,7 @@ In this chapter you will build a testsuite. A testsuite contains one or more tes
 3. Select TestSuite 1 and press **CTRL+N** to create a new TestCase.
    ![](attachments/18448632/18580331.png)
 4. Click **OK**.
-5. Expand Testuite 1 and TestCase 1.
+5. Expand TestSuite 1 and TestCase 1.
 6. Right-click **Test Steps(0)** and select **SOAP Request**.
    ![](attachments/18448632/18580312.png)
 7. Enter _Retrieve Customers_ in the name field.
@@ -101,7 +101,7 @@ In this chapter you will build a testsuite. A testsuite contains one or more tes
 
 14. Press **ALT+Enter** to submit the request. The customers you created in the previous how-to will be shown in the response. The response will look like the code below:
 
-    ```
+    ```xml
     <soap:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tns="http://www.example.com/">
         <soap:Body>
             <tns:GetCustomersResponse>
@@ -163,7 +163,7 @@ In this chapter you will extend your test case with multiple test steps and asse
 
 2.  Change the request into the following value:
 
-    ```java
+    ```xml
     <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:exam="http://www.example.com/">
        <soapenv:Header/>
        <soapenv:Body>

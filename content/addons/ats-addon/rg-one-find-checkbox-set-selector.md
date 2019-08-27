@@ -7,7 +7,7 @@ parent: "rg-one-checkbox-set-selector"
 
 Finds a check box by given cell value and column caption. Returns the first match.
 
-## 2 Supported widgtes
+## 2 Supported Widgets
 
 * Checkbox Set Selector
 

@@ -7,7 +7,7 @@ parent: "rg-one-input"
 
 Returns true if the checkbox is checked otherwise false.
 
-## 2 Supported widgets
+## 2 Supported Widgets
 
 * Checkbox
 

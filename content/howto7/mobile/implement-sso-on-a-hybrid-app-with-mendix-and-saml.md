@@ -96,12 +96,14 @@ MxApp.onConfigReady(function(config) {
                     samlWindow.executeScript({
                         code: "document.cookie;"
                     }, function(values) {
+                        samlWindow.removeEventListener("exit", exitFn);
+
                         var authPromise = new Promise(function(resolve, reject) {
                             var token = new RegExp('AUTH_TOKEN=([^;]+)', 'g').exec(values[0]);
                             if (token && token.length > 1) {
                                 mx.session.tokenStore.set(token[1]).then(resolve);
                             } else {
-                                resolve();                            
+                                resolve();
                             }
                         });
 
@@ -151,7 +153,7 @@ To use the hybrid app package, follow these steps:
     ![](attachments/implement-sso/entry.js-with-fix.png)
 
 7.  Create the PhoneGap Build package by following the instructions in the **Through Uploading to PhoneGap Build** section of the [Mendix PhoneGap Build App Template documentation](https://github.com/mendix/hybrid-app-template#through-uploading-to-phonegap-build). Be sure to read the **Prerequisites** and **Build on PhoneGap** sections of this documentation as well. This is an overview of the steps:<br>
-    a. Install [Node.js](https://nodejs.org/en/download/). <br>
+    a. Install the latest stable version of [Node.js](https://nodejs.org/en/download/). <br>
     b. In the hybrid app root folder, execute **npm install**. <br>
     {{% alert type="warning" %}}Not all versions of the **cordova-inappbrowser-plugin** will work correctly when implementing SSO for your hybrid app. In some versions, the InAppBrowser page is not always closed, causing the application to be opened in the InAppBrowser instead of the app. This can result in incorrect behavior, such as the camera not being detected. To make sure the SSO implementation works correctly, we recommend using version **3.0.0** of the cordova-inappbrowser-plugin. You can check the version of the plugin that is used by opening the *config.xml.mustache* file (under `src`) and looking for the following line: `<plugin name="cordova-plugin-inappbrowser" source="npm" spec="1.4.0" />`.  If necessary, change the plugin version to `3.0.0` before packaging your app: `<plugin name="cordova-plugin-inappbrowser" source="npm" spec="3.0.0" />`.{{% /alert %}}<br>
     c. In the hybrid app root folder execute **npm run package**.<br>

@@ -98,7 +98,7 @@ The following quantifiers can be used:
 | + | The preceding subexpression should occur once or more. |
 |   | No quantifier means that the preceding subexpression should occur exactly once. |
 
-## **4 Read More**
+## 4 Read More
 
 * [https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html#matches-java.lang.String-java.lang.CharSequence-](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html#matches-java.lang.String-java.lang.CharSequence-)
 * [http://www.regular-expressions.info/java.html](http://www.regular-expressions.info/java.html)

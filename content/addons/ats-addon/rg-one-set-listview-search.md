@@ -3,20 +3,20 @@ title: "Set ListView Search"
 parent: "rg-one-datagrid-templategrid-listview"
 ---
 
-## Description
+## 1 Description
 
 Sets the ListView Search Text.
 
-## Supported Widgets
+## 2 Supported Widgets
 
- + ListView
+* ListView
 
-## Usage
+## 3 Usage
 
 You have to pass the widget name and the search text to the action.
 Optionally you can provide a WebElement as search context, to narrow down the search for the widget, if there are two or more widgets with the same name.
 
-## Input Parameters
+## 4 Input Parameters
 
 Name | Datatype |Required| Description
 --- | --- | --- | ---

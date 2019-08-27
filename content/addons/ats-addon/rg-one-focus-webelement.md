@@ -7,7 +7,7 @@ parent: "rg-one-system"
 
 Focuses a WebElement and performs a Mendix wait afterwards.
 
-## 2 Supported widgtes
+## 2 Supported Widgets
 
 * All WebElements
 

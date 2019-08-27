@@ -3,18 +3,19 @@ title: "Set Checkbox Set Selector Value"
 parent: "rg-one-checkbox-set-selector"
 ---
 
-## Description
+## 1 Description
+
 Clear/check the "select all" check box.
 
-## Supported Widgets
- + Checkbox Set Selector
+## 2 Supported Widgets
 
-## Usage
+* Checkbox Set Selector
+
+## 3 Usage
+
 Pass the name of the widget and the value you want do set for the "select all" check box.
 
-## Input Parameters
-
-
+## 4 Input Parameters
 
 Name | Datatype | Required | Description
 ---- | -------- | ------- |---------------

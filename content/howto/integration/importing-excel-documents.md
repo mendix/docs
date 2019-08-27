@@ -8,7 +8,7 @@ tags: ["import", "excel", "integration"]
 
 ## 1 Introduction
 
-Adding large amounts of data to your application, for example reference data or data from an external application, can be very time consuming. In order to save time and effort, this process can be automated by using the 'Excel Importer' module. In this How-to you will setup import templates, and import data into your application by using the 'Excel Importer'.
+Adding large amounts of data to your application (for example, reference data or data from an external application) can be very time-consuming. In order to save time and effort, this process can be automated using the [Excel Importer](https://appstore.home.mendix.com/link/app/72/) from the Mendix App Store. In this how-to, you will set up import templates and import data into your app using this module.
 
 ## 2 Prerequisites
 
@@ -21,26 +21,26 @@ Before starting this how-to, make sure you know how to do the following:
 * Add App Store content to your app (see [How to Use App Store Content](/developerportal/app-store/app-store-content))
 * Secure your applications (see [How to Create a Secure App](../security/create-a-secure-app))
 
-## 3 Preparing the Data Structure, GUI, and Modules
+## 3 Preparing the Data Structure, GUI & Modules
 
-Before you can start importing data into your application, you first need to set up the data structure and GUI.
+Before you can start importing data into your application, you first need to set up the data structure and GUI by following these these steps:
 
-Follow these steps:
+1.  Create the following domain model:
 
-1.  Create the following domain model.
+	![](attachments/18448735/18581969.png)
+
+	Create an enumeration for the **OrderStatus** attribute with the values of **Open**, **Processing**, and **Complete**.
   
-    ![](attachments/18448735/18581969.png)
-
-    The 'XLSFile' object inherits from the 'Filedocument' object. If you don't know how to achieve this, please take a look at [How to Work with Images & Files](../data-models/working-with-images-and-files).
-2. Create **Overview** and **Detail** pages to manage objects of type **Customer** and **Order**.
+	Configure the **XLSFile** object to inherit from the **FileDocument** object (for more information, see [How to Work with Images & Files](../data-models/working-with-images-and-files)).
+2. Create **Overview** and **Detail** pages to manage objects of the **Customer** and **Order** types.
 3.  Create menu items to access the **Order** and the **Customer** overview pages.
-4.  Download the **Excel Importer** and **Mx Model Reflection** modules from the appstore.
-5.  Create menu items for the **ExcelImportOverview** and the **MxObjects_Overview** pages. Those pages already exist within the _**USE_ME** folders of the downloaded modules.
-6.  Configure the **Administrator** user role to have the **Configurator** module role for the **Excel Importer** module, and the **ModelAdministrator** module role for the **Mx Model Reflection** module.
+4.  Download the **Excel Importer** and **Mx Model Reflection** modules from the Mendix App Store (available by clicking the shopping-cart icon in the upper-right side of Studio Pro).
+5.  Create menu items for the **ExcelImportOverview** and the **MxObjects_Overview** pages (these pages already exist in the **_USE_ME** folders of the downloaded modules).
+6.  Configure the **Administrator** user role to have the **Configurator** module role for the **ExcelImporter** module, and the **ModelAdministrator** module role for the **Mx Model Reflection** module.
 
-## 4 Preparing the Logic for the Data Import
+## 4 Preparing the Logic for Data Import {#preparing}
 
-As an enumeration is used for the **OrderStatus** attribute, a microflow needs to be created to determine the enumeration value of the attribute based on the input from the Excel file.
+Because an enumeration is used for the **OrderStatus** attribute, you need to create a microflow to determine the enumeration value of the attribute based on the input from the Excel file.
 
 1.  Create the following microflow and name it **IVK_ParseStatus**.
   
@@ -57,204 +57,169 @@ As an enumeration is used for the **OrderStatus** attribute, a microflow needs t
 
 3.  **Save** the microflow.
 
-## 5 Using the Application Model Metadata in the Client
+## 5 Using Application Model Metadata in the Client
 
-In order to set up import templates for importing data, your application model meta data should be reflected in the client. This can be achieved by using [Mx Model reflection](https://appstore.home.mendix.com/link/app/69/Mendix/Mx-Model-reflection). In this part of the How-to you will learn to do so.
+In order to set up import templates for importing data, your application model metadata should be reflected in the client. This can be achieved by using the [Mx Model Reflection](https://appstore.home.mendix.com/link/app/69/Mendix/Mx-Model-reflection) module. In this section, you will learn how to do this by following these steps:
 
-1.  Click **Run Locally** to start your application:
-
-    ![](attachments/18448735/18581975.png)
-
-2.  Click **View** to open your application in the browser:
-
-    ![](attachments/18448735/18581974.png)
-
+1.  Click **Run Locally** to start your application.
+2.  Click **View** to open your application in the browser.
 3.  **Log in** as an Administrator.
 4.  Click on the menu item for the **MxObjects_Overview** in your navigation.
-5.  Select the module that contains the objects you want to use in your client, by clicking on the box to the left of it. In this case  **MyFirstModule** .
-6.  Click on the arrows next to **Synchronize all entities and microflows of checked modules on the left.**
-  
-    ![](attachments/18448735/18581937.png)
+5.  Select the module that contains the objects you want to use in your client by checking the box to the left of it – which in this case  is **MyFirstModule**:
 
-7.  Now the two objects and the parse microflow from the module **MyFirstModule** can be seen and used in the client.
+	![](attachments/18448735/18581937.png)
 
-## 6 Creating the Import Templates
+6.  Click the button next to **Synchronize all entities and microflows of checked modules on the left**. Now the two objects and the parse microflow from the **MyFirstModule** module can be seen and used in the client.
 
-Before you can import data from an Excel File into your application, you have to first setup an import template. In this template you will configure which objects the data should be mapped to, if an object is associated to another object, from which row of the Excel File the import should start and which columns should be imported.
+## 6 Manually Creating an Import Template {#creating}
 
-In this how-to, you will import data from a simple Excel file which can be downloaded here:
+Before you can import data from an Excel File into your application, you have to set up an import template. In this template, you will configure the objects to which the data should be mapped, if an object is associated to another object, from which row of the Excel file the import should start, and which columns should be imported.
+
+In this section, you will import data from a simple Excel file example, which can be downloaded here:
 
 [![](attachments/18448735/18581938.png)](attachments/18448735/18581949.xlsx)
 
-Based on the structure of the file you want to import, you will setup your template.
+Based on the structure of the file you want to import, you need to manually set up your template by following these steps:
 
-1.  Click on the menu item for the ExcelImportOverview in your navigation.
-2.  Click on **New Template**.![](attachments/18448735/18581971.png)
-3.  Determine the name of the template.
-4.  Click on the arrow next to the **Mendix object** box.
-5.  Select the **Customer** object.
+1.  Click the menu item for **ExcelImportOverview** in the navigation of your app's home page.
+2.  Click **New Template**:
+
+	![](attachments/18448735/18581971.png)
+
+3.  Give a name to the template.
+4.  Click the arrow next to the **Mendix object** box.
+5.  Double-click the **Customer** object:
   
-    ![](attachments/18448735/18581966.png)
+	![](attachments/18448735/18581966.png)
 
-6.  Click on the arrow next to **Reference to import objects** box.
-7.  Select the **MyFirstModule.Customer_XLSFile** association.
+6.  Click the arrow next to the **Reference to import objects** box.
+7.  Select the **MyFirstModule.Customer_XLSFile** association. By setting the association to the XLS file, the XLS file is saved on disk and the imported data is linked to the source file.
+8.  Make sure **Import Action** is set to **Synchronize objects**:
 
-    {{% alert type="warning" %}}By setting the association to the XLS File, the XLS file is saved on disk and the imported data is linked to the source file.{{% /alert %}}
+	![](attachments/18448735/18581965.png)
 
-8.  Set **Import Action** to **Synchronize objects**.
-  
-    ![](attachments/18448735/18581965.png)
+	{{% alert type="info" %}}For this example you will be using a simple Excel file that has just one sheet and column headers on the first row. If a more comprehensive Excel file is used, you can change these values via the **Sheet nr**, **Header row nr**, and **Import from row nr** fields.{{% /alert %}}
 
-    {{% alert type="warning" %}}For this example you will be using a simple Excel file, with just one sheet and columnheaders at the first row. If a more comprehensive Excel file is used you can change these values at the Sheet nr, Header row nr, and Import from row nr boxes.{{% /alert %}}
+9.  In the **Connect columns to attributes** section, click **New** to create a mapping from the Excel sheet column to the proper Mendix attribute.
+10. Add the column number that corresponds to the column number from the Excel file you want to map.
 
-9.  Under the **Connect columns to attributes** section, click on **New** to create a mapping from the Excel sheet column to the proper Mendix attribute.
-  
-    ![](attachments/18448735/18581964.png)
-
-10. Add the column number, this should correspond with the column number from the value on the Excel file you want to map
-
-    {{% alert type="warning" %}}The number of the first column in Excel is 0, the second 1, etc.{{% /alert %}}
+	{{% alert type="info" %}}The number of the first column in Excel is 0, the second is 1, etc.{{% /alert %}}
 
 11. Define the Excel column header as the **Caption** value.
-12. Choose **Attribute** as a **type**.
-13. Click on the arrow next to the **Attribute** box.
+12. Select **Attribute** for the **Type**.
+13. Click the arrow next to the **Attribute** box:
+
+	![](attachments/18448735/18581963.png)
+
+14. Double-click the **Attribute** to which you want to map the Excel value:
+
+	![](attachments/18448735/18581962.png)
+
+15. Repeat steps 9 to 14 above for each attribute of the **Customer** object.
+
+	* For the mapping of attribute **Name**, set the **Key** value to **Yes** to prevent a customer from being duplicated.
+
+	![](attachments/18448735/18581961.png)
+	
+	{{% alert type="info" %}}If the mapping is set up right, a green check appears in front of the row.{{% /alert %}}
+
+16. You now need to create mappings for the **Order** object attributes. However, because the **Order** object is associated to the **Customer** object, the mapping setup will be slightly different. Follow these steps for each attribute of the **Order** object:<br/>
+	a. Add the column number that corresponds to the column number from the Excel file you want to map.<br/>
+	b. Define the Excel column header as the **Caption** value.<br/>
+	c. Choose **Reference** for the type.<br/>
+	d. Click the arrow next to the **Reference** box, where you can select the association over which the order is linked to the customer –  which in this case should **Order_Customer**.<br/>
+	e. Click the arrow next to the **Attribute** box and double-click the **Attribute** to which you want to map the Excel value.<br/>
+	f. For the mapping of attribute **Number**, set the **Key** value to **Yes, only for the associated object** in order to prevent orders being duplicated.<br/>
+	g. Click **Save**.
   
-    ![](attachments/18448735/18581963.png)
+	![](attachments/18448735/18581956.png)
 
-14. Select the **attribute** you want to map the Excel value to.
-  
-    ![](attachments/18448735/18581962.png)
-
-15. Repeat steps 9 to 14 for each attribute of the **Customer** object.
-
-    {{% alert type="warning" %}}If the mapping is setup right, a green check will appear in front of the row.{{% /alert %}}
-
-16. For the mapping of attribute **Name** set the key value to **Yes**, to prevent a customer from being duplicated.
-  
-    ![](attachments/18448735/18581961.png)
-
-17. After creating all the mappings for the **Customer** object attributes, also create mappings for the **Order** object attributes by repeating steps 9 to 11. Because the **Order** object is associated to the **Customer** object, the mapping setup will be slightly different. The additional steps are described below.
-18. Choose **Reference** instead of **Attribute** as a type.
-19. Click on the arrow next to the **Reference** box, here you will select over which association the Order is linked to the Customer.
-  
-    ![](attachments/18448735/18581959.png)
-
-20. Select the **Customer_Order** association.
-  
-    ![](attachments/18448735/18581960.png)
-
-21. Click on the arrow next to the **Attribute** box.
-  
-    ![](attachments/18448735/18581958.png)
-
-22. Select the **Number** attribute form the **Order** object.
-  
-    ![](attachments/18448735/18581957.png)
-
-23. Click **Save**.
-24. Repeat steps 17 to 23 for each attribute of the **Order** object.
-25. For the mapping of attribute **Number** set the key value to**'Yes, only for the associated object**, to prevent orders being duplicated.
-  
-    ![](attachments/18448735/18581956.png)
-
-26. For the mapping of attribute **OrderStatus** the Excel file value needs to be parsed to an enumeration value. To achieve this we can use the **IVK_ParseStatus** microflow, created under 2.0, by clicking on the arrow next to the **Parse with** box.
-  
-    ![](attachments/18448735/18581955.png)
-
-27. Select the **IVK_ParseStatus** microflow.
+17. For the mapping of the **OrderStatus** attribute, the Excel file value needs to be parsed to an enumeration value. To achieve this, you can use the **IVK_ParseStatus** microflow (created in the [Preparing the Logic for Data Import](#preparing) section above). Click the arrow next to the **Parse with** box and select the **IVK_ParseStatus** microflow:
   
     ![](attachments/18448735/18581953.png)
 
-28. Click **Save**.
-29. Save the **Import Template**.
+18. Save the import template.
 
-## 7 Importing the Excel File
+### 6.1 Importing an Excel File
 
-Now the template is setup you can start importing data from an Excel file into your application. You can use the example file downloadable under **4\. Create Import Templates**
+Now that the template is set up, you can start importing data from an Excel file into your application. You can use the example file you downloaded in the [Creating the Import Template](#creating) section above.
 
-1.  Click on the menu item for the **ExcelImportOverview** in your navigation.
-2.  Go to the **Import Files** tab.
-3.  Click **New**.
-  
-    ![](attachments/18448735/18581952.png)
+Follow these steps to import the Excel file:
 
-4.  Select the template you just created.
-5.  Click **Browse**.
+1. Click the menu item for **ExcelImportOverview** in the navigation of your app's home page.
+2.  Go to the **Import files** tab and click **New**:
 
-    ![](attachments/18448735/18581951.png)
+	![](attachments/18448735/18581952.png)
 
-6.  Select the example **Excel file** from your local drive.
-7.  Click **Save**.
-8.  Select the **Import** file.
-9.  Click **Import file**.
+3. Select the template you just created.
+4.  Click **Browse**:
 
-    ![](attachments/18448735/18581950.png)
+	![](attachments/18448735/18581951.png)
 
-10.  Check if the data is imported under the menu items you created in chapter 1 step 3.
+5. Select the example Excel file you downloaded and click **Save**.
+6.  Click the Excel file under **Filename** to select it, then click **Import file**:
 
-## 8 Creating the Import Templates by the Excel File
+	![](attachments/18448735/18581950.png)
 
-In the previous steps you have manually added all the columns to your import template. In this section you will be creating the same Excel template in an automated way. You can do this by using the **New template by excelfile** button at the **Normal templates** tab. An example Excel file can be downloaded here:
+7. Click **OK** when the import has finished.
+
+## 7 Automatically Creating an Import Template via an Excel File
+
+In the previous steps, you manually added all the columns to your import template. In this section, you will create the same Excel template in an automated way, which you can do this via the specific **New template by excelfile** button. You can use this same Excel file example:
 
 [![](attachments/18448735/18581938.png)](attachments/18448735/18581949.xlsx)
 
-1.  Click on the menu item for the ExcelImportOverview in your navigation.
-2.  Click on  **New template by excelfile
+Follow these steps to create the import template via the Excel file:
 
-    ![](attachments/18448735/18581948.png)
+1.  Click the menu item for **ExcelImportOverview** in the navigation of your app's home page.
+2.  Click **New template by excelfile**:
 
-3.  Select the [Import Example.xlsx](attachments/18448735/18581949.xlsx)
-4.  Define the sheet number.
-5.  Define the Header row nr.
-6.  Define the row to import from.
+	![](attachments/18448735/18581948.png)
 
-    ![](attachments/18448735/18581947.png)
+3.  Select the example Excel file you downloaded.
+4.  Define the **Sheet nr**, **Header row nr**, and **Import from row nr**:
 
-7.  Click on 'Save & next'.
-8.  Automatically a row is created for every header of the Excel file.
+	![](attachments/18448735/18581947.png)
 
-    ![](attachments/18448735/18581936.png)
+5.  Click **Save & next**. This will automatically create a row for every header of the Excel file:
 
-9.  Select the **Customer object** **type**.
+	![](attachments/18448735/18581936.png)
 
-    ![](attachments/18448735/18581935.png)
+6.  Back in the top section of the page, click the arrow next to **Mendix object** and select the **Customer** object type:
 
-10.  Click on **Connecting matching attributes**.![](attachments/18448735/18581934.png)
+	![](attachments/18448735/18581935.png)
 
-     {{% alert type="warning" %}}The attributes of the selected Mendix Object which have the same name as the Caption will be automatically matched.{{% /alert %}}
+10.  Under **Connect columns to attributes**, click **Connect matching attributes**:
 
-11.  To complete the template repeat the same actions as performed in chapter 4.
+	![](attachments/18448735/18581934.png)
 
-     {{% alert type="warning" %}}Keep in mind that you have to set a key attribute for as well as the **Customer** object as the **Order** object.{{% /alert %}}
+	This will automatically match attributes of the selected Mendix object that have the same name as the **Caption**.
 
-## 9 Exporting/Importing the Template
+11.  Complete the template as you did in the [Creating the Import Template](#creating) section above.
 
-Once you have completed an Excel template you can export the template for example from the test environment and import it into the acceptance environment. When exporting and importing this template, the exact template will be uploaded. So columns are generated, the Mendix object is selected, the attributes are connected, and the parse microflows are selected.
+	{{% alert type="info" %}}Remember that you have to set a key attribute for the **Customer** object as well as the **Order** object.{{% /alert %}}
 
-1.  Select the Excel template you created in chapter 4.
-2.  Click **Export template** and save the file on your computer
+## 8 Exporting & Importing a Template
 
-    ![](attachments/18448735/18581933.png)
+Once you have completed an Excel template, you can export the template (for example, from a test environment) and import it (for example, into an acceptance environment). When exporting and importing a template, the exact template will be uploaded, which means that columns are generated, the Mendix object is selected, the attributes are connected, and the parse microflows are selected.
 
-3.  Import the downloaded file by clicking **Import template**.
-4.  Select the downloaded file and click **Import**.
+Follow these steps to export and import your template:
 
-    ![](attachments/18448735/18581932.png)**
+1.  Click the menu item for **ExcelImportOverview** in the navigation of your app's home page.
+2.  Click the Excel template you created in the [Creating the Import Template](#creating) section above to select it, then click **Export template** and save the file on your computer:
 
-5.  You have now imported a complete import template.
+	![](attachments/18448735/18581933.png)
 
-    {{% alert type="warning" %}}You will have a duplicate import template in your app, but in a real life situation you would import this template in a different environment/database where this template is not created yet.{{% /alert %}}
+3.  Import the file you just downloaded by clicking **Import template**, selecting the file, and clicking **Import**:
 
-## 10 Read More
+	![](attachments/18448735/18581932.png)
 
-* [Consume a Complex Web Service](consume-a-complex-web-service)
-* [Consume a Simple Web Service](consume-a-simple-web-service)
+You have now imported a complete import template.
+
+{{% alert type="info" %}}You will have a duplicate import template in your app, but in a working scenario, you would import this template in a different environment/database where the template had not already been created.{{% /alert %}}
+
+## 9 Read More
+
 * [Export XML documents](export-xml-documents)
-* [Importing Excel Documents](importing-excel-documents)
 * [Expose a Web Service](expose-a-web-service)
-* [Selenium Support](selenium-support)
-* [Synchronize User Accounts Using the LDAP Module](synchronizing-user-accounts-using-the-ldap-module)
 * [Import XML Documents](importing-xml-documents)
-* [Consume a REST Service](consume-a-rest-service)
-* [Expose Data to BI Tools Using OData](exposing-data-to-bi-tools-using-odata)
-* [The Export to CSV Button](/refguide/export-to-csv-button)

@@ -27,7 +27,7 @@ If you selected a Selenium hub from a supported Selenium hub provider (SauceLabs
 
 For explanations of the platform settings, see [3 Platform Settings](#platform).
 
-## 2 General Settings<a name="general"></a>
+## 2 General Settings {#general}
 
 ### 2.1 Environment
 
@@ -44,7 +44,7 @@ This the browser in which ATS executes the test case. The browser version is set
 * Firefox: version 58
 * Chrome: version 64 (for Windows XP: version 49)
 
-## 3 Platform Settings<a name="platform"></a>
+## 3 Platform Settings {#platform}
 
 ### 3.1 Platform
 

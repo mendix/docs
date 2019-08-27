@@ -15,7 +15,7 @@ The statistics tool screen is split into several sections:
 
 Statistics are stored periodically to be able to determine potential trends. The **Periodic store frequency** can be changed in the [Options](#Options).   
 
-## 3 History chart
+## 3 History Chart
 
 It is possible to select a microflow and press the **History chart** button to see a graph with history statistics:  
 
@@ -37,7 +37,7 @@ This section will give a real-time overview of running actions and microflows. T
 
 ![](attachments/rg-one-statistics-tool/Now_Running.png)
 
-**Note**: When the server generates a lot of log messages, the server is running at a high CPU, and all the tools are running, a queue can build up in the Mendix thread that sends the log messages to the subscribers. As a consequence, it can look like running microflows takes 10 seconds while the maximum in the statistics is 1 second. This is caused by the fact that the running time is calculated on the refresh date, and the duration of a microflow is calculated by the message date. When this happens, the debug running counter for the message delay shows a high number (for example, 10000 milliseconds). The statistics tool pauses collecting and handling messages if the processing delay is above the configured **Max Processing Delay (ms)**.*
+**Note**: When the server generates a lot of log messages, the server is running at a high CPU, and all the tools are running, a queue can build up in the Mendix thread that sends the log messages to the subscribers. As a consequence, it can look like running microflows takes 10 seconds while the maximum in the statistics is 1 second. This is caused by the fact that the running time is calculated on the refresh date, and the duration of a microflow is calculated by the message date. When this happens, the debug running counter for the message delay shows a high number (for example, 10000 milliseconds). The statistics tool pauses collecting and handling messages if the processing delay is above the configured **Max Processing Delay (ms)**.
 
 ## 6 Stored Snapshot
 
@@ -60,8 +60,7 @@ You can prevent a snapshot from being deleted by cleanup when you select to keep
 
 You can rename snapshots and view the details that will include filtering details when applied.
 
-<a name="Options"></a>
-## 8 Statistics Tool options
+## 8 Statistics Tool options {#Options}
 
 This screenshot shows the options of the statistics tool:
 

@@ -40,7 +40,7 @@ Every app always has one profile of a Responsive type which cannot be deleted. T
 
 A Mendix app can be installed on a tablet or phone as an app by creating a PhoneGap hybrid package. Hybrid profiles can be accessed from such a PhoneGap app. Hybrid app profiles are determined by device type (phone or tablet) and by the offline accessibility feature enabled (online or offline). If no profile exists with the requested combination, an error will be displayed in the app.
 
-Hybrid offline apps are designed to allow users to continue using their Mendix app even when they have no internet connection. However, certain restrictions apply. For an overview of the ramifications of running an offline device profile, see [Offline first](offline-first).
+Hybrid offline apps are designed to allow users to continue using their Mendix app even when they have no internet connection. However, certain restrictions apply. For an overview of the ramifications of running an offline device profile, see [Offline First](offline-first).
 
 Four different hybrid profiles are available:
 
@@ -112,9 +112,7 @@ If the sign-in page is set to none, a built-in pop-up window will appear instead
 Each device type contains a default menu. You can use these menus in [menu widgets](menu-widgets). Defining the menu for a device type works the same as when editing a menu document. For more details, see [Menu](menu).
 
 {{% alert type="warning" %}}
-
 If [security](project-security) is enabled, the menu will only show the items to which the user has access.
-
 {{% /alert %}}
 
 ### 4.3 Profile Buttons

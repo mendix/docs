@@ -48,10 +48,10 @@ In the following sections of this how-to, it is assumed that you have a reposito
 
 ## 4 SVN Versions
 
-Mendix Studio Pro (8.0.0 beta 2 and above) has a (built-in) Subversion client that uses version 1.9 of the SVN working copy format. This client should be compatible with any 1.x version of the SVN server, so you could use, for example, a 1.6.x or 1.9.x SVN server as well.
+Mendix Studio Pro has a (built-in) Subversion client that uses version 1.9 of the SVN working copy format. This client should be compatible with any 1.x version of the SVN server, so you could use, for example, a 1.6.x or 1.9.x SVN server as well.
 
 {{% alert type="warning" %}}
-Mendix Studio Pro (version 8.0.0 beta 2 and above) uses the Subversion 1.9 working copy. Previous versions of the Mendix Desktop Modeler used a Subversion 1.7 working copy. These working copy versions **are not compatible**.
+Mendix Studio Pro uses the Subversion 1.9 working copy. Previous versions of the Mendix Desktop Modeler used a Subversion 1.7 working copy. These working copy versions **are not compatible**.
 
 This means that, if you use a separate SVN client (for example [TortoiseSVN](https://tortoisesvn.net/)) to work on your Mendix app project, you must always use the version which matches your app model. If you open a local model from Mendix version 7.x or 6.x with the latest version of TortoiseSVN **you will no longer be able to open it in Mendix**.{{% /alert %}}
 

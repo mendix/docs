@@ -3,7 +3,7 @@ title: "Monitoring"
 parent: "rg-one-ats"
 ---
 
-## Test Results
+## 1 Test Results
 
 The link Monitoring/Results shows you pending and most recent tests to review the results of test case or test suite runs. You can switch between both views via tabs.
 
@@ -32,7 +32,7 @@ Error log:
 
 ![Result Log Error Tab](attachments/rg-one-monitoring/21168220.png)
 
-## Running Tests
+## 2 Running Tests
 
 When building up or after finishing your test case, you want to run your test case in order to see if it works as intended.
 

@@ -3,17 +3,19 @@ title: "Set Checkbox Set Selector Value"
 parent: "rg-one-grid-selector"
 ---
 
-## Description
+## 1 Description
+
 Finds the check box by column and row caption. Sets its value to the given checked parameter.
 
-## Supported Widgets
-+ Grid Selector
+## 2 Supported Widgets
 
-## Usage
+* Grid Selector
+
+## 3 Usage
+
 Pass the name of the widget, the column caption, and the row caption of the checkbox you want to find.
 
-## Input Parameters
-
+## 4 Input Parameters
 
 Name | Datatype | Required | Description
 ---- | -------- | -------- | ---------------

@@ -3,21 +3,21 @@ title: "Get Selected Option Value"
 parent: "rg-one-get"
 ---
 
-## Description
+## 1 Description
 
 Returns the value of the currently selected item of a WebElement, e.g. select
 
-## Usage
+## 2 Usage
 
 Pass the parent WebElement of which you want to get the currently selected option's value from.
 
-## Input Parameters
+## 3 Input Parameters
 
 Name | Datatype | Required | Description
 ---- | -------- | ------- |---------------
 Select Element | WebElement | yes | The parent WebElement, e.g. select
 
-## Return Value
+## 4 Return Value
 
 Name | Datatype | Description
 ---- | --------- | ---------------

@@ -3,18 +3,19 @@ title: "Toggle BooleanSlider Value"
 parent: "rg-one-booleanslider"
 ---
 
-## Description
+## 1 Description
+
 Clicks the BooleanSlider widget to toggle its value. This will invert the current value of the BooleanSlider.
 
-## Supported widgets
- + BooleanSlider
+## 2 Supported widgets
 
-## Usage
+* BooleanSlider
+
+## 3 Usage
+
 Pass the name of the widget.
 
-## Input Parameters
-
-
+## 4 Input Parameters
 
 Name | Datatype | Required | Description
 ---- | -------- | ------- |---------------

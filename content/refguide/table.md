@@ -1,9 +1,12 @@
 ---
 title: "Table"
 parent: "container-widgets"
+menu_order: 60
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
+
+{{% alert type="warning" %}}The table widget is not supported on native mobile pages.{{% /alert %}}
 
 Tables can be used to lend structure to a page. They contain a number of [rows](table-row) and columns, the intersection of which is called a [cell](table-cell). Each cell can contain widgets.
 

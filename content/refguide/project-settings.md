@@ -209,7 +209,7 @@ The way web services are called has been optimized, which means you can use cust
 
 The default language indicates the language that is used when a user has not chosen a language. The default language is also used as a fall-back language when a certain text is not translated to another language.
 
-### 4.2 Languages
+### 4.2 Languages {#languages}
 
 This is the list of languages in which your application will be available for users.
 
@@ -263,19 +263,19 @@ For background information, see [Transport Layer Security (TLS) Renegotiation Is
 
 The look and feel of a Mendix application is governed by the [UI Resources package](ui-resources-package). This package supplies the project with all the required theme information accompanied by matching page templates and building blocks. The module which is designated as the UI Resources package is governed by the **UI resources package** setting. Generally, this is automatically updated when a new UI Resources package is imported. However, with this setting, the desired module can also be set manually.
 
-### 6.2 Theme ZIP File
+### 6.2 Theme Zip File
 
 {{% alert type="warning" %}}
 
-[Deprecated] The use of a ZIP file to configure a project's theme is deprecated. A [UI Resources package](ui-resources-package) is the preferred method of sharing themes.
+[Deprecated] The use of a *zip* file to configure a project's theme is deprecated. A [UI Resources package](ui-resources-package) is the preferred method of sharing themes.
 
 {{% /alert %}}
 
-Older projects may still use a theme ZIP file as the basis for their theme. In this situation, the **Theme ZIP file** setting can be used to switch between any ZIP files found in the **theme** folder. Note that this practice is deprecated and will be removed in a future version.
+Older projects may still use a theme *zip* file as the basis for their theme. In this situation, the **Theme ZIP file** setting can be used to switch between any *zip* files found in the **theme** folder. Note that this practice is deprecated and will be removed in a future version.
 
-Switching from a ZIP file to a UI Resources package is straightforward:
+Switching from a *zip* file to a UI Resources package is straightforward:
 
-1. Firstly, replace the contents of the theme folder with the contents of the desired ZIP file.
+1. Firstly, replace the contents of the theme folder with the contents of the desired *zip* file.
 
 2. Then, use the **UI resources package** setting described above to select a module. Ideally, this module should only contain UI documents, such as page templates and building blocks. This will allow you to export and import the module to other projects without worrying about reference errors.
 

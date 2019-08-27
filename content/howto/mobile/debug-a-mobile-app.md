@@ -78,7 +78,7 @@ Since Mendix Studio Pro only runs on Mendix, you need to make sure that your vir
 
 ### 4.2 PhoneGap Configuration
 
-You can use PhoneGap Build to build the native application and tell it to intialize based on this new URL, rather than the default. Follow these steps to download a package, update it, and upload it to PhoneGap Build:
+You can use PhoneGap Build to build the native application and tell it to initialize based on this new URL, rather than the default. Follow these steps to download a package, update it, and upload it to PhoneGap Build:
 
 1. Go to home.mendix.com and open your app.
 2. Go to the **Mobile App** page.
@@ -100,7 +100,7 @@ You can use PhoneGap Build to build the native application and tell it to intial
 
 6. Change the `url` property to the IP address of your local machine, with the port 8080.
 
-   ```javascript
+   ```json
    {
      "url": "http://10.140.149.92:8080",
      "hybridTabletProfile": "",
@@ -110,7 +110,7 @@ You can use PhoneGap Build to build the native application and tell it to intial
    }
    ```
 
-7. Save your changes and zip the unzipped phonegap.zip files you just extracted:
+7. Save your changes and zip the unzipped **phonegap.zip** files you just extracted:
 
       ![phonegap-7](./attachments/debug-a-mobile-app/phonegap-7.png)
 
@@ -232,7 +232,7 @@ In order to build (and debug) a Mendix iOS app, you need to ensure that you have
 
 ### 5.2 Phonegap Configuration <a name="PhonegapConfiguration"></a>
 
-You can use PhoneGap Build to build the native application and tell it to intialize based on this new URL, rather than the default. Follow these steps to change the PhoneGap Build
+You can use PhoneGap Build to build the native application and tell it to initialize based on this new URL, rather than the default. Follow these steps to change the PhoneGap Build
 
 1. Go to **home.mendix.com** and open your app.
 2. Navigate to the **Mobile App** page, listed under Deploy.
@@ -244,17 +244,17 @@ You can use PhoneGap Build to build the native application and tell it to intial
 
    ![phonegap-3](./attachments/debug-a-mobile-app/phonegap-3.png)
 
-5. Unzip the downloaded package and navigate to the `/dist/phonegap.zip` file:
+5. Unzip the downloaded package and navigate to the */dist/phonegap.zip* file:
 
       ![phonegap-4](./attachments/debug-a-mobile-app/phonegap-4.png)
 
-6. Extract the contents of this file and find `www/settings.json`:
+6. Extract the contents of this file and find *www/settings.json*:
 
    ![phonegap-5](./attachments/debug-a-mobile-app/phonegap-5.png)
 
 7. Change the `url` property to the IP address of your local machine, with the port 8080.
 
-   ```javascript
+   ```json
    {
      "url": "http://10.140.149.92:8080",
      "hybridTabletProfile": "",
@@ -264,7 +264,7 @@ You can use PhoneGap Build to build the native application and tell it to intial
    }
    ```
 
-8. Save your changes and rezip the `phonegap/` directory in `/dist/`:
+8. Save your changes and rezip the *phonegap* directory in */dist/*:
 
    ![phonegap-7](./attachments/debug-a-mobile-app/phonegap-7.png)
 
@@ -280,7 +280,7 @@ You can use PhoneGap Build to build the native application and tell it to intial
 
  ![phonegap-10](./attachments/debug-a-mobile-app/phonegap-10.png)
 
-12. Choose your .p12 certificate (from Step 12 in the Apple Developer Configuration) section and your enw provisioning profile:
+12. Choose your .p12 certificate (from Step 12 in the Apple Developer Configuration) section and your new provisioning profile:
 
     ![phonegap-11](./attachments/debug-a-mobile-app/phonegap-11.png)
 
@@ -366,7 +366,7 @@ You can use PhoneGap Build to build the native application and tell it to intial
 
 7. Change the `url` property to the IP address of your local machine, with the port 8080.
 
-   ```javascript
+   ```json
    {
      "url": "http://10.140.149.92:8080",
      "hybridTabletProfile": "",

@@ -9,7 +9,7 @@ Asserts the value of the BooleanSlider Appstore Widget (String).
 
 ## 2 Supported widgets
  
- + BooleanSlider
+* BooleanSlider
 
 ## 3 Usage
 

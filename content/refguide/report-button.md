@@ -1,5 +1,5 @@
 ---
-title: "Report Button"
+title: "Generate Report Button"
 parent: "report-widgets"
 menu_order: 40
 tags: ["studio pro"]
@@ -7,9 +7,9 @@ tags: ["studio pro"]
 ---
 
 
-If a report pane has parameter widgets, it should also have a report button.
+If a report pane has parameter widgets, it should also have a generate report button.
 
-The reports are generated at the moment when the end user clicks the report button.
+The reports are generated at the moment when the end user clicks the generate report button.
 
 ## Appearance Properties
 
@@ -19,4 +19,4 @@ Here you type the caption that the end user sees for the button that generates r
 
 ## Common Properties
 
-For details on name, class, and style, see [Common Widget Properties](common-widget-properties).
+For details on name, class, and style, see [Properties Common for Widgets](common-widget-properties).

@@ -49,7 +49,7 @@ Use the **New** button to add new actions. Each action requires a name, an actio
 
 ![](attachments/push_notifications_action.png)
 
-The names of the actions can be used as the vlaue of the ActionName attribute of the MessageData entity.
+The names of the actions can be used as the value of the ActionName attribute of the MessageData entity.
 
 ### 2.1 Shortcomings of This Approach
 

@@ -3,8 +3,6 @@ title: "Standard Actions Reference"
 parent: "rg-one-test-development"
 ---
 
-## Predefined Actions in ATS
-
 These sections provide you with information on all the predefined actions in ATS:
 
 * [Mendix Actions](rg-one-mendix-actions)

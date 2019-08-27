@@ -1,31 +1,32 @@
-const gulp               = require('gulp-help')(require('gulp'));
-const gutil              = require('gulp-util');
-const sass               = require('gulp-sass');
-const sourcemaps         = require('gulp-sourcemaps');
-const minify             = require('gulp-minify');
-const hash               = require('gulp-hash');
+const gulp = require('gulp');
+const help = require('gulp-help-four');
+help(gulp);
+const gutil = require('gulp-util');
+const sass = require('gulp-sass');
+const sourcemaps = require('gulp-sourcemaps');
+const minify = require('gulp-minify');
+const hash = require('gulp-hash');
 
-const CONFIG             = require('./_gulp/config');
+const CONFIG = require('./_gulp/config');
 
-const server             = require('./_gulp/server');
-const jsonServer         = require('./_gulp/json');
-const hugo               = require('./_gulp/hugo');
-const redirect_mappings  = require('./_gulp/mappings_redirects');
-const asset_mappings     = require('./_gulp/mappings_assets');
-const htmlproofer        = require('./_gulp/htmlproofer');
-const algolia            = require('./_gulp/algolia');
-const menu_check         = require('./_gulp/menu_check');
-const menu_build         = require('./_gulp/menu_build');
-const generatePDF        = require('./_gulp/pdf');
+const server = require('./_gulp/server');
+const jsonServer = require('./_gulp/json');
+const hugo = require('./_gulp/hugo');
+const redirect_mappings = require('./_gulp/mappings_redirects');
+const asset_mappings = require('./_gulp/mappings_assets');
+const htmlproofer = require('./_gulp/htmlproofer');
+const algolia = require('./_gulp/algolia');
+const menu_check = require('./_gulp/menu_check');
+const menu_build = require('./_gulp/menu_build');
+const generatePDF = require('./_gulp/pdf');
 
-const { gulpErr }        = require('./_gulp/helpers');
-const { cyan, red }      = require('./_gulp/helpers/command_line').colors;
+const { gulpErr } = require('./_gulp/helpers');
+const { cyan, red } = require('./_gulp/helpers/command_line').colors;
 
-const path               = require('path');
-const pump               = require('pump');
-const browserSync        = require('browser-sync').create();
-const del                = require('del');
-const runSequence        = require('run-sequence');
+const path = require('path');
+const pump = require('pump');
+const browserSync = require('browser-sync').create();
+const del = require('del');
 
 const PUBLISH_DRAFTS = typeof process.env.HUGO_ENV !== 'undefined' ? process.env.HUGO_ENV === 'test' : false;
 
@@ -35,7 +36,7 @@ gutil.log(`Gulp started at ${cyan(CONFIG.BUILDDATE)}, drafts ${cyan(PUBLISH_DRAF
 /*************************************************
   CLEAN
 **************************************************/
-const cleanTask = p => del([ p ], { force: true });
+const cleanTask = p => del([p], { force: true });
 
 gulp.task('clean', `Cleanup the ${CONFIG.DIST_FOLDER} directory`, () => cleanTask(CONFIG.DIST_FOLDER));
 gulp.task('clean:js', `Cleanup the ${CONFIG.PATHS.scripts.dest} directory`, () => cleanTask(CONFIG.PATHS.scripts.dest));
@@ -103,11 +104,36 @@ gulp.task('check:menu', `Check menu structure in the build folder`, done => {
 });
 
 /*************************************************
+  HTML PROOFER
+**************************************************/
+gulp.task('check:html', `Check HTML files in the build folder`, done => {
+  htmlproofer.check({
+    external: !!process.env.EXTERNAL,
+    dir: path.resolve(CONFIG.CURRENTFOLDER, '_site'),
+    callback: function (err) {
+      if (err) {
+        return process.exit(2);
+      } else {
+        done();
+      }
+    }
+  });
+});
+
+/*************************************************
+  MAIN CHECK TASK
+**************************************************/
+gulp.task('check', `Test the html and menu`,
+  gulp.series('check:html', 'check:menu', done => done())
+);
+
+
+/*************************************************
   JAVASCRIPT
 **************************************************/
 gulp.task('js-watch', `Internal task, don't use`, ['build:js'], function (done) {
-    browserSync.reload();
-    done();
+  browserSync.reload();
+  done();
 });
 
 // BUILD
@@ -170,20 +196,18 @@ gulp.task('build:hugo', `Build`, [], done => {
 /*************************************************
   MAIN BUILD TASKS
 **************************************************/
-gulp.task('build', `BUILD. Used for production`, done => {
-  runSequence('clean', 'write:mappings', ['build:menu', 'build:sass', 'build:js'], 'write:assetmappings', 'build:hugo', 'pdf', 'check', (err) => {
-      //if any error happened in the previous tasks, exit with a code > 0
-      if (err) {
-        var exitCode = 2;
-        gutil.log('[ERROR] gulp build task failed:', red(err.message));
-        gutil.log('[FAIL] gulp build task failed - exiting with code ' + exitCode);
-        return process.exit(exitCode);
-      }
-      else {
-        return done();
-      }
-    });
-});
+gulp.task('build', `BUILD. Used for production`, gulp.series('clean', 'write:mappings', ['build:menu', 'build:sass', 'build:js'], 'write:assetmappings', 'build:hugo', 'check', (done) => {
+  //if any error happened in the previous tasks, exit with a code > 0
+  // if (err) {
+  //   var exitCode = 2;
+  //   gutil.log('[ERROR] gulp build task failed:', red(err.message));
+  //   gutil.log('[FAIL] gulp build task failed - exiting with code ' + exitCode);
+  //   return process.exit(exitCode);
+  // }
+  // else {
+  return done();
+  // }
+}))
 
 /*************************************************
   MAIN SERVE TASK
@@ -201,14 +225,12 @@ gulp.task('dev', ``, ['dev:sass', 'build:js', 'write:menu', 'build:hugo'], done 
     online: false,
     open: false
   });
-  gulp.watch(CONFIG.PATHS.styles.src, ['dev:sass']);
-  gulp.watch(CONFIG.PATHS.scripts.src, ['js-watch']);
+  gulp.watch(CONFIG.PATHS.styles.src, gulp.series('dev:sass'));
+  gulp.watch(CONFIG.PATHS.scripts.src, gulp.series('js-watch'));
   gutil.log(`\n\n*********\nOpen your browser with this address: ${cyan(`localhost:${CONFIG.PORT}`)}\n*********\n`);
 });
 
-gulp.task('serve', `Serve`, done => {
-  runSequence('clean', ['build:menu', 'build:sass', 'build:js'], 'dev');
-})
+gulp.task('serve', `Serve`, gulp.series('clean', ['build:menu', 'build:sass', 'build:js'], 'dev', done => done()))
 
 /*************************************************
   JSON SERVER
@@ -218,58 +240,15 @@ gulp.task('json', `Run JSON export server`, ['dev:sass', 'build:js', 'write:menu
 })
 
 /*************************************************
-  HTML PROOFER
-**************************************************/
-gulp.task('check:html', `Check HTML files in the build folder`, done => {
-  htmlproofer.check({
-    external: !!process.env.EXTERNAL,
-    dir: path.resolve(CONFIG.CURRENTFOLDER, '_site'),
-    callback: function (err) {
-      if (err) {
-        return process.exit(2);
-      } else {
-        done();
-      }
-    }
-  });
-});
-
-/*************************************************
-  MAIN CHECK TASK
-**************************************************/
-gulp.task('check', `Test the html and menu`, done => {
-  runSequence('check:html', 'check:menu', done);
-});
-
-/*************************************************
   ALGOLIA
 **************************************************/
 gulp.task('algolia', `Push Algolia indexes`, done => {
   algolia.run({
-    target : path.resolve(CONFIG.CURRENTFOLDER, '_site'),
-    source : CONFIG.CONTENTFOLDER,
+    target: path.resolve(CONFIG.CURRENTFOLDER, '_site'),
+    source: CONFIG.CONTENTFOLDER,
     spacesFile: path.resolve(CONFIG.CURRENTFOLDER, 'data/spaces.yml'),
     algolia_app_id: CONFIG.ALGOLIA_APP_ID,
     algolia_index: CONFIG.ALGOLIA_INDEX,
     cb: done
   });
 });
-
-/*************************************************
- PDFS
-**************************************************/
-gulp.task('pdf', `Generate PDFs`, done => {
-  const bestPracticesFolder = 'best-practices';
-  generatePDF({
-    src: path.join(CONFIG.CONTENTFOLDER, bestPracticesFolder),
-    dist: path.join(CONFIG.DIST_FOLDER, bestPracticesFolder),
-    drafts: PUBLISH_DRAFTS,
-    cb: (err) => {
-      if (err) {
-        return process.exit(2);
-      } else {
-        done();
-      }
-    }
-  });
-})

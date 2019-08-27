@@ -414,9 +414,9 @@ Replaces all occurrences of a regular expression with another string.
 
 * The string to search in
     * Type: string
-* The regular expression to match
+* The regular expression to match (if you want to search for a literal string, enclose it between \G and \E. For example, `\GPaul S. Mueller\E` will search for the string `Paul S. Mueller`, without interpreting the dot as a wildcard)
     * Type: string
-* The replacement value
+* The string to be substituted for each match (this does not support backreferences, substitutions, or captures)
     * Type: string
 
 {{% alert type="warning" %}}
@@ -465,8 +465,8 @@ Replaces the first occurrence of the regular expression with a replacement strin
 * The string to search in
     * Type: string
 * The regular expression to match
-    * Type: string
-* The replacement value
+    * Type: string (if you want to search for a literal string, enclose it between \G and \E. For example, `\GPaul S. Mueller\E` will search for the string `Paul S. Mueller`, without interpreting the dot as a wildcard)
+* The string to be substituted for the first match (this does not support backreferences, substitutions, or captures)
     * Type: string
 
 {{% alert type="warning" %}}
@@ -480,7 +480,7 @@ Please note that this function call uses a regular expression language provided 
 
 ### Output
 
-The original string, with all occurrences of the regular expression replaced by the replacement string. If the regular expression does not occur in the string, the original is returned.
+The original string, with the first occurrence of the regular expression replaced by the replacement string. If the regular expression does not occur in the string, the original is returned.
 
 * Type: string
 

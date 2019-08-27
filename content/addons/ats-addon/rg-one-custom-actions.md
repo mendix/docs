@@ -1,6 +1,7 @@
 ---
 title: "Custom Actions"
 parent: "rg-one-test-development"
+menu_order: 5
 ---
 
 ## 1 Create Custom Actions from Scratch
@@ -23,7 +24,7 @@ Now open the newly created action by doubleclicking its name in the repository.
 
 On this page you can edit your new action by adding other existing actions to it, like you would in a test case, and set **input-** and **output parameters**.
 
-## 2 Create Custom Actions from existing Actions
+## 2 Create Custom Actions from Existing Actions
 
 Based on the existing actions, you can build up your own actions (custom actions). Also, if you are fluent in JavaScript, you can add a whole variety of functionalities by using the generic “Execute JavaScript” action.
 

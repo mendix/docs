@@ -3,23 +3,23 @@ title: "Get Property Value"
 parent: "rg-one-get"
 ---
 
-## Description
+## 1 Description
 
 Returns the property value from a web element
 (Does not have access to dojo widget properties)
 
-## Usage
+## 2 Usage
 
 Pass the WebElement you want to get the text value from.
 
-## Input Parameters
+## 3 Input Parameters
 
 Name | Datatype | Required | Description
 ---- | -------- | ------- |---------------
 Element | WebElement | yes | The WebElement you want to get the property value from.
 Property Name | String | yes | The name of the property
 
-## Return Value
+## 4 Return Value
 
 Name | Datatype | Description
 ---- | --------- | ---------------

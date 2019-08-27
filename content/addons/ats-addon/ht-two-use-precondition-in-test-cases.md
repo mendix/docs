@@ -27,7 +27,7 @@ Before starting with this how-to, make sure you have completed the following pre
 * Read [How to Get Started](ht-two-getting-started)
 * Read [How to Create a Test Case](ht-two-create-a-test-case)
 
-## 3 How to use preconditions in test cases
+## 3 How to Use Preconditions in Test Cases
 
 The following steps explain how to create a test case with preconditions: 
 
@@ -104,7 +104,7 @@ The following steps explain how to create a test case with preconditions:
 
 	![](attachments/ht-two-use-precondition-in-test-cases/setup-and-teardown.png)
 
-## 4. Analyzing the results of a test case using preconditions
+## 4. Analyzing the Results of a Test Case Using Preconditions
 
 Running the test case can give two different results. If the expense is present on the first page the test run results look like:
 

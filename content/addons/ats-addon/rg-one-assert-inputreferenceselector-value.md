@@ -7,7 +7,7 @@ parent: "rg-one-input-reference-selector"
 
 Asserts that the InputReferenceSelector has the given value.
 
-## 2 Supported widgets
+## 2 Supported Widgets
 
 * InputReferenceSelector
 

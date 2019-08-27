@@ -9,7 +9,7 @@ Asserts that the BootstrapRTE value is equal to the given value.
 
 ## 2 Supported widgets
  
- + BootstrapRTE
+* BootstrapRTE
 
 ## 3 Usage
 

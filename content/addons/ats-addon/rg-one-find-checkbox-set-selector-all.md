@@ -7,7 +7,7 @@ parent: "rg-one-checkbox-set-selector"
 
 Finds the select all check box. 
 
-## 2 Supported widgtes
+## 2 Supported Widgets
 
 * Checkbox Set Selector
 

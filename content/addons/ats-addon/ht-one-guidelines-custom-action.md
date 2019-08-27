@@ -16,7 +16,7 @@ These are the definitions of Mendix actions and Core actions:
 These are guidelines, not rules. It is possible that you will encounter situations in which the guidelines cannot be followed.
 {{% /alert %}}
 
-## 1 Using Mendix Actions
+## 2 Using Mendix Actions
 
 Always try to use a Mendix action first. This table explains why you should use a Mendix action:
 
@@ -38,7 +38,7 @@ But when you use a Core action, you have four input parameters:
 
 The difference is because of the required **Widget Name** input parameter in a Mendix action. When you use a Core action, this is not always required. So if you don't need the widget name, a Core action is a better solution. This is a valid reason to use the Core actions; otherwise, the custom action is not user-friendly.
 
-## 2 Using Visual/Optical Components
+## 3 Using Visual/Optical Components
 
 Only use items that are visually present on the page, like the text inside a certain widget. Sometimes it seems easier to use an attribute or a certain class from a widget, but doing this right the first time will save you time in the future. Invest the time and use the visual components instead of taking the easy way out.
 
@@ -52,7 +52,7 @@ This guideline focuses on how to find certain widgets.
 
 {{% /alert %}}
 
-## 3 The User Approach
+## 4 The User Approach
 
 When building a custom action, always think about what the user does. In addition, keep in mind the things you do without performing an event, like reading a data grid, as these are important when building Search Context Actions.
 
@@ -63,7 +63,7 @@ Some examples of questions you should ask yourself are:
 
 Another example is with a check box. Do not set it using the JavaScript check function, but click it, because that's what a user would do. If you want to set the check box based on its current state, use the precondition and the click action. By doing this, you invest time in a more complex solution to save time later.
 
-## 4 Building It Generically
+## 5 Building It Generically
 
 When building an action for an unsupported widget, keep in mind that the action should work on the widget on every occasion. When a widget has two ways for entering information, use the most obvious one. For example, when using jQuery to find child nodes, make sure you use the generic aspects of the child node to specify it. Some class names are application-specific, and you cannot use them. You don’t want to have to rebuild this when you need it for another application.
 
@@ -81,7 +81,7 @@ This guideline focuses on unsupported widget actions.
 
 {{% /alert %}}
 
-## 5 Background Processes
+## 6 Background Processes
 
 When using core actions to trigger an event, always use a Mendix Wait action after triggering the event. The Mendix Wait action covers the Mendix app rendering process. The action waits until the application has finished its background processes, like communicating with the database. If the Mendix app no longer renders, then the action passes. This only works on Mendix applications, so when you need to cover a bit of HTML for logging in, the Mendix Wait will not work.
 
@@ -97,7 +97,7 @@ This guideline does not apply to the Search Context action, since it does not tr
 
 {{% /alert %}}
 
-## 6 Action Parameters
+## 7 Action Parameters
 
 When defining action parameters, always use the ATS [naming conventions](rg-one-best-practices).
 
@@ -131,7 +131,7 @@ Follow the naming conventions. Only deviate when there is no standard name.
 
 {{% /alert %}}
 
-## 7 Describing the Steps and Defining the Output
+## 8 Describing the Steps and Defining the Output
 
 When you describe your test steps in ATS, delivering support and updating the action is a lot easier. This will refresh your memory, and it will make it easier to understand for other people.
 
@@ -141,7 +141,7 @@ This is an example:
 
 ![](attachments/ht-one-guidelines-custom-action/describe-teststeps-define-output.png)
 
-## 8 Data Type Awareness
+## 9 Data Type Awareness
 
 Be aware of data types. All the action parameters require a certain data type, which means it will only accept or suggest that data type. For example, an input parameter that requires an integer will not accept `3.8`, because it only accepts whole numbers.
 

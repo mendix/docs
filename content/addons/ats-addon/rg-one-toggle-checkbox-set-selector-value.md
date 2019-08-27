@@ -3,18 +3,19 @@ title: "Toggle Checkbox Set Selector Value"
 parent: "rg-one-checkbox-set-selector"
 ---
 
-## Description
+## 1 Description
+
 Finds the check box via the column caption and cell value. Inverts the value.
 
-## Supported Widgets
- + Checkbox Set Selector
+## 2 Supported Widgets
 
-## Usage
+* Checkbox Set Selector
+
+## 3 Usage
+
 Pass the name of the widget, the column caption, and the cell value of the check box you want to toggle.
 
-## Input Parameters
-
-
+## 4 Input Parameters
 
 Name | Datatype | Required | Description
 ---- | -------- | ------- |---------------

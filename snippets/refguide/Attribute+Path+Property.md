@@ -9,6 +9,6 @@ In the first case we say the widget is connected to an attribute and in the seco
 
 <div class="alert alert-warning">
 
-An input widget connected to an attribute <strong>path</strong> must be read-only. The Modeler will check this for you.
+An input widget connected to an attribute <strong>path</strong> must be read-only. Studio Pro will check this for you.
 
 </div>

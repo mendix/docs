@@ -78,23 +78,20 @@ To prepare your app project, follow these steps:
 
 	You will receive a confirmation when the items have been added to the ignore list. You can also double-check via TortoiseSVN:
 
-	{{% image_container width="350" %}}
-	![](attachments/set-up-sass/check-ignore.png)
-	{{% /image_container %}}
-	
+	{{% image_container width="350" %}}![](attachments/set-up-sass/check-ignore.png){{% /image_container %}}
+
 	If you need to remove an item from the ignore list, right-click it and select **TortoiseSVN** > **Remove from ignore list**.
 
 9. Open your app project in Studio Pro, then click **Run Locally** and **View**:
 
-	{{% image_container width="500" %}}
-	![](attachments/set-up-sass/run-view.png)
-	{{% /image_container %}}
+	{{% image_container width="500" %}}![](attachments/set-up-sass/run-view.png)
+{{% /image_container %}}
 
 ## 4  Setting Up Your Sass Files
 
 Final steps! Read below to open and work with Sass:
 
-1. Open the main app project folder and go to **theme** \> **styles** \> **sass** \> **custom**.
+1. Open the main app project folder and go to **{project name}** \> **theme** \> **styles** \> **web** \> **sass**.
 2. Double-click either the **custom.scss** or **\_custom-variables.scss** file, which will open in VSC:
 
 	![](attachments/set-up-sass/custom-variables.png)
@@ -113,7 +110,7 @@ Final steps! Read below to open and work with Sass:
 
 ### 4.1  Keeping Your Sass in the Custom Folder
 
-it is important to keep in mind that you are only working in the **custom** folder. You will not make any changes in the **lib** folder, but you can use that as a reference. You will only use the contents of the **\_variables.scss** file to get the variables you need and copy them in your **\_custom-variables.scss** file. The variables can differ from the default font sizes, colors, background colors, heights, and so on. In the **\_custom-variables.scss** file, you can also make your own variables, for example `$brand-blue: \#48B0F7;`.
+it is important to keep in mind that you are only working in the **custom** folder. You will not make any changes in the **lib** folder, but you can use that as a reference. You will only use the contents of the **\_variables.scss** file to get the variables you need and copy them in your **\_custom-variables.scss** file. The variables can differ from the default font sizes, colors, background colors, heights, and so on. In the **\_custom-variables.scss** file, you can also make your own variables, for example `$brand-blue: #48B0F7;`.
 
 You can now work on the Sass structure and organize everything neatly by creating sub-folders and files in the **custom** folder. You can also look in the **lib** folder to get an idea of which folders and files you will most likely use in your app project.
 
@@ -130,9 +127,9 @@ Before you can see any changes in your app project with your new Sass, you need 
 To import all the sub-folders and files you have created, write this:
 
 ```
-\@import "custom-variables";
+@import "custom-variables";
 // base
-\@import "base/login";
+@import "base/login";
 ```
 
 After you import everything, you are finally ready to Sass! 

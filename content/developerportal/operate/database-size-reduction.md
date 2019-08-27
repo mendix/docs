@@ -20,7 +20,7 @@ However, there may be times where physically reclaiming the lost space is import
 
 Let’s explore how to reclaim this space.
 
-### 2 Recovering Physical Disk Space
+## 2 Recovering Physical Disk Space
 
 Physical disk space can be recovered by creating a database backup, and then restoring it.
 

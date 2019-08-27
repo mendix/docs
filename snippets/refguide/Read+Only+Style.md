@@ -9,3 +9,5 @@ This property determines how the widget is rendered if it is read-only.
 | Inherited from snippet call | Set to `Control` or `Text` by the containing data view of the snippet call, or `Text` when the snippet call is not enclosed by a data view. *(Default value for widgets outside a data view inside a snippet)*
 | Control                     | Widget is displayed but disabled so the value cannot be modified.
 | Text                        | Widget is replaced by a textual representation of the value.
+
+{{% alert type="info" %}}Not supported on native mobile pages.{{% /alert %}}

@@ -91,7 +91,7 @@ The activity is added to the flow.
 
 ### 4.2 Adding a Check {#add-check}
 
-Adding a check means that you will add an exclusive split with Boolean attribute type: your flow will be split into one flow labeled *true* and another one labeled *false*. For more information, see [Exclusive Split](microflows-exclusive-split).   
+Adding a check means that you will add a **Decision** with Boolean attribute type: your flow will be split into one flow labeled *true* and another one labeled *false*. For more information, see [Decision](microflows-decision).   
 
 {{% image_container width="300" %}}![](attachments/mx-assist/check-added.png)
 {{% /image_container %}}
@@ -114,7 +114,7 @@ To add the check, do the following:
 
 3. The number of options for the check will be opened, select the check that you want to add and click it. 
 
-The exclusive split is added to the microflow. 
+The decision is added to the microflow. 
 
 {{% alert type="info" %}}
 
@@ -124,7 +124,7 @@ The number of options for the check depend on the number of variables of Boolean
 
 ### 4.3 Adding a Decision
 
-When you add a decision via Mendix Assist that means you add an exclusive split with attribute of enumeration type to your microflow. For more information, see [Exclusive Split](microflows-exclusive-split) and [Attribute Types](domain-models-attributes). This means, if you do not have parameters with enumeration data type, **Add decision** will not appear in the suggestions.
+When you add a decision via Mendix Assist that means you add a decision with attribute of enumeration type to your microflow. For more information, see [Decision](microflows-decision) and [Attribute Types](domain-models-attributes). This means, if you do not have parameters with enumeration data type, **Add decision** will not appear in the suggestions.
 
 To add the decision, do the following:
 
@@ -135,7 +135,7 @@ To add the decision, do the following:
     {{% image_container width="350" %}}![](attachments/mx-assist/adding-decision.png)
     {{% /image_container %}}
 
-The exclusive split is added to the microflow.
+The decision is added to the microflow.
 
 {{% alert type="info" %}}
 
@@ -147,4 +147,4 @@ The number of options for **Add a decision** depend on the number of parameters 
 
 * [General Info](general)
 * [Microflows](microflows)
-* [Exclusive Split](microflows-exclusive-split)
+* [Decision](microflows-decision)

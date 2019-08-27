@@ -14,6 +14,12 @@ Each section in this document could apply to your app project, but some sections
 
 {{% alert type="warning" %}}If you have added any content in the **Atlas_UI_Resource module**, you have to move that content out of the module. If you do not, it will be overwritten.{{% /alert %}}
 
+When your app project is using unmodified Atlas UI resources, upgrading your app project to Mendix 8 will automatically update your Atlas UI resources to version 2.1. If you did not make any changes in the custom folder, you are good to go and you can skip the rest of this guide. 
+
+If you are using unmodified Atlas UI resources but you made changes to the custom folder, these changes are preserved and will be used by the new Atlas UI version. You will see a consistency error in this case. Proceed to the steps described in the [Working with a Modified Custom Folder](#modified) section below to resolve this error.
+
+If you are using a modified version of Atlas UI resources, Mendix cannot update it automatically. You will see a consistency error in this case. To resolve your theming issues, you need to update Atlas yourself.
+
 Follow the steps below to begin upgrading your Atlas UI Resources module:
 
 1. Download the latest [Atlas UI Resources](https://appstore.home.mendix.com/link/app/104730/) module (v2.0.0 or higher).
@@ -47,9 +53,44 @@ If you changed any **login\*.html** files, complete the following actions:
 
 ### 2.2 Working with JSON Files
 
-If you have altered your JSON files, consult the instructions below. If you have not, you may ignore this subsection.
+If you have altered **settings.json** or **components.json** files, consult the instructions below. If you have not, you may ignore this subsection.
 
-If you changed design properties for web in **settings.json**, you must manually integrate your old **settings.json** into the new folder.
+#### 2.2.1 Design Properties
+
+If you changed design properties in your theme, you must manually integrate them into the new Atlas UI.
+
+Design properties are stored in the `designProperties` section in the **settings.json** file.
+
+If you have custom design properties which have not been moved to the new Atlas UI theme, you will see consistency errors (error code **CE6083**) which will notify you about your project's missing design properties.
+
+Please move your custom design properties to the **settings.json** file of the new Atlas UI theme.
+
+### 2.2.2 Additional CSS Files
+
+{{% alert type="warning" %}}
+Changing `cssFiles` is not recommended. Please consider moving custom CSS files to your **theme/styles/web/sass/app/_custom.scss** file.
+{{% /alert %}}
+
+If you changed `cssFiles` in **settings.json**, you must integrate your changes to the new **settings.json** file.
+
+By default Atlas UI version 1 includes two files:
+
+```javascript
+"cssFiles": [
+    "styles/css/lib/lib.css",
+    "styles/css/custom/custom.css"
+],
+```
+
+Atlas 2.1.0, however, uses a single file:
+
+```javascript
+"cssFiles": [
+	"styles/web/css/main.css"
+],
+```
+
+If your `cssFiles` section adds more files, you must include them in your new theme's **settings.json** file.
 
 If you changed hybrid mobile app imports in **components.json**, make sure to do the following:
 
@@ -77,29 +118,35 @@ If you changed any files in the **styles/sass/lib** folder, complete the actions
 
 If you added a file to the **lib/base** folder, copy that file from **theme_old/styles/sass/lib/base/** to **theme/styles/web/sass/core/base/**. You must also complete the following action:
 
-* Import the file in `theme/styles/web/sass/main.scss` into the `core/base` group in alphabetic order
+* Import the file into **theme/styles/web/sass/main.scss** under the `Base` group in alphabetic order
 
-If you added a file to the `lib/components` folder, copy that file from **theme_old/styles/sass/lib/components/** to **theme/styles/web/sass/core/widgets/**. You must also complete the following action:
+If you added a file to the **lib/components** folder, copy that file from **theme_old/styles/sass/lib/components/** to **theme/styles/web/sass/core/widgets/**. You must also complete the following actions:
 
-* Import the file in **theme/styles/web/sass/main.scss** into the **core/widgets** group in alphabetic order
+1. Import the file into **theme/styles/web/sass/main.scss** under the `Widgets` group in alphabetical order
+2. Cut all design properties and extra classes from your file (to be pasted later), leaving only the default styling
+3. Create a new file in **theme/styles/web/sass/core/helpers/** with the same name
+4. Paste those design properties and extra classes into this new file
+5. Import the file into **theme/styles/web/sass/main.scss** under the import mentioned above
 
 If you added a file to the **lib/customwidgets** folder, copy your content from **theme_old/styles/sass/lib/customwidgets/** to **theme/styles/web/sass/core/widgetscustom/**. You must also complete the following action:
 
-* Import the file in **theme/styles/web/sass/main.scss** into the **core/widgetscustom** group in alphabetic order
+* Import the file into **theme/styles/web/sass/main.scss** under the `Custom Widgets` group in alphabetical order
 
 If you added a file to the **lib/buildingblocks** folder, copy that file from **theme_old/styles/sass/lib/buildingblocks/** to **theme/styles/web/sass/resources/atlas_resources_default/buildingblocks**. You must also complete the following action:
 
-* Import the file in **theme/styles/web/sass/main.scss** into the **resources/atlas_resources_default/buildingblocks** group in alphabetic order
+* Import the file into **theme/styles/web/sass/main.scss** under the `Building Blocks` group in alphabetical order
 
 If you added a file to the **lib/layouts** folder, copy that file from **theme_old/styles/sass/lib/layouts/** to **theme/styles/web/sass/resources/atlas_resources_default/layouts**. You must also complete the following action:
 
-* Import the file in **theme/styles/web/sass/main.scss** into the **resources/atlas_resources_default/layouts** group in alphabetic order
+* Import the file into **theme/styles/web/sass/main.scss** under the `Layouts` group in alphabetical order
 
-Make sure any custom or added SASS files are all imported in either **styles/web/sass/main.scss** or **styles/web/sass/app/_custom.scss**.
+Make sure any custom or added Sass files are all imported in either **styles/web/sass/main.scss** or **styles/web/sass/app/_custom.scss**.
 
 After troubleshooting your issues with the guidance above, complete the following steps to test your migrated app project:
 
-1. Recompile your SASS to CSS.
+## 2.5 Working with a Modified Custom Folder {#modified}
+
+1. Recompile your Sass to CSS.
 2. Test your app project to see if everything works as expected.
 3. Delete **theme_old**.
 

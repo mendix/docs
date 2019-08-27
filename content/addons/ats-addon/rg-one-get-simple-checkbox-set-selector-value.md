@@ -3,24 +3,26 @@ title: "Get Simple Checkbox Set Selector Value"
 parent: "rg-one-simple-checkbox-set-selector"
 ---
 
-## Description
+## 1 Description
+
 Returns the current value of the found check box.
 
-## Supported Widgets
-+ Simple Checkbox Set Selector
+## 2 Supported Widgets
 
-## Usage
+* Simple Checkbox Set Selector
+
+## 3 Usage
+
 Pass the name of the widget and the value connected to the check box.
 
-## Input Parameters
-
+## 4 Input Parameters
 
 Name | Datatype | Required | Description
 ---- | -------- | -------- | ---------------
 Widget Name | String | Yes | The name of the Simple Checkbox Set Selector widget.
 Value | String | yes | The value connected to the check box.
 
-## Return Value
+## 5 Return Value
 
 Name | Datatype | Description
 ---- | --------- | ---------------

@@ -70,4 +70,4 @@ On opening the level dialog, the levels are synchronized with the levels in the 
 
 Changes to the log level are immediately applied to the log tool if it is running.
 
-**Note**: With the debug permission, a delete button is available to delete nodes. When the log tool is used in development or with new releases, certain log nodes might no longerbe needed. You can delete them from the log levels. Since records are automatically created when a message from that node arrives, it does not harm the system to delete the configuration records.*
+**Note**: With the debug permission, a delete button is available to delete nodes. When the log tool is used in development or with new releases, certain log nodes might no longerbe needed. You can delete them from the log levels. Since records are automatically created when a message from that node arrives, it does not harm the system to delete the configuration records.

@@ -3,17 +3,19 @@ title: "Set Grid Selector RadioButton Value"
 parent: "rg-one-grid-selector"
 ---
 
-## Description
+## 1 Description
+
 Finds the radio button by column and row caption. Sets it to be checked.
 
-## Supported Widgets
-+ Grid Selector
+## 2 Supported Widgets
 
-## Usage
+* Grid Selector
+
+## 3 Usage
+
 Pass the name of the widget, the column caption, and the row caption of the radio button you want to find.
 
-## Input Parameters
-
+## 4 Input Parameters
 
 Name | Datatype | Required | Description
 ---- | -------- | -------- | ---------------

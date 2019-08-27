@@ -28,44 +28,46 @@ To improve security of your app, it is recommended that you delete the MindSpher
 
 ![Section of a microflow showing the Access token action and the Edit Custom HTTP Header dialog in the Call REST action](attachments/mindsphere-development-considerations/delete-mindspheretoken.png)
 
-### 2.1 Authorizing MindSphere REST Calls from within 'Scheduled Events'
+### 2.1 Authorizing MindSphere REST Calls from within Scheduled Events
 
-The Access token connector could **not** be used for calling any MindSphere API in a microflow which is executed without a user context - e.g. called from a scheduled event. Therefore the MindSphereSingleSignOn module offers a microflow **DS_GetAccessTokenForScheduledEvents** that returns a Token for a given Tenant. You find this flow here:
+The access token connector *cannot* be used for calling a MindSphere API in a microflow which is executed *without* a user context - e.g. called from a **scheduled event**. Therefore the MindSphereSingleSignOn module offers a microflow, **DS_GetAccessTokenForScheduledEvents**, that returns a Token for a given Tenant. You can find this microflow here:
 
 ![DS_GetAccessTokenForScheduledEvents](attachments/mindsphere-development-considerations/DS_GetAccessTokenForScheduledEvents.png)
 
-The microflow uses the [MindSphere Application Credentials](#5.1.2 Application Credentials) functionality to fetch a token and uses different environment variables depending on the location where the app is running:
+The microflow uses the [MindSphere Application Credentials](#app-creds) functionality to fetch a token, and uses different environment variables depending on the location where the app is running:
 
-a) Local: <br/>
-The microflow uses the application credentials you entered at startup to fetch a token. See also [Application Credentials](#5.1.2 Application Credentials)
+1. Local:
 
-b)  Developer Tenant: <br/>
-The following cloud foundry environment variables must be set for the app:
+    The microflow uses the application credentials you entered at startup to fetch a token. See also [Application Credentials](#app-creds).
 
-Developer Tenant |
------ |
-`MDSP_KEY_STORE_CLIENT_ID` - enable Application Credentials in the Developer Cockpit for your app and use the Client ID |
-`MDSP_KEY_STORE_CLIENT_SECRET` - enable Application Credentials in the Developer Cockpit for your app and use the Client Secret |
-`MDSP_OS_VM_APP_NAME`  - enter the name of your app in Developer Cockpit |
-`MDSP_OS_VM_APP_VERSION`  - enter the version of your app in Developer Cockpit |
+2. Developer Tenant:
 
-c) Operator Tenant: <br/>
-Some of the following environment variables are set automatically
+    The following cloud foundry environment variables must be set for the app:
 
-Operator Tenant |
------ |
-`MDSP_KEY_STORE_CLIENT_ID` - created automatically on an Operator Tenant, when application credentials are enabled for the app |
-`MDSP_KEY_STORE_CLIENT_SECRET` - created automatically on an Operator Tenant when application credentials are enabled for the app |
-`MDSP_OS_VM_APP_NAME` - name of your app |
-`MDSP_OS_VM_APP_VERSION`  - version of your app |
+    | Developer Tenant | Description |
+    | ----- | ----- |
+    | `MDSP_KEY_STORE_CLIENT_ID` | enable Application Credentials in the Developer Cockpit for your app and use the Client ID |
+    | `MDSP_KEY_STORE_CLIENT_SECRET` | enable Application Credentials in the Developer Cockpit for your app and use the Client Secret |
+    | `MDSP_OS_VM_APP_NAME` | enter the name of your app in Developer Cockpit |
+    | `MDSP_OS_VM_APP_VERSION` | enter the version of your app in Developer Cockpit |
 
-Make sure these environment variables exists. Use the returned Token as usuall in your REST calls to MindSphere. Do not delete the Token after usage as it is not transferred to the client and it is cached in MindSphereSingleSignOn module.
+3. Operator Tenant:
 
-The following example shows how to use the microflow **DS_GetAccessTokenForScheduledEvents**. The sample retrieves a list of all Tenants from the database and fetches
-a token for each tenant. With the token you can proceed with your custom application logic.
+    Some of the following environment variables are set automatically:
+
+    | Operator Tenant | Description |
+    | ----- | ----- |
+    | `MDSP_KEY_STORE_CLIENT_ID` | created automatically on an Operator Tenant, when application credentials are enabled for the app |
+    | `MDSP_KEY_STORE_CLIENT_SECRET` | created automatically on an Operator Tenant when application credentials are enabled for the app |
+    | `MDSP_OS_VM_APP_NAME` | name of your app |
+    | `MDSP_OS_VM_APP_VERSION` | version of your app |
+
+Make sure these environment variables exists. Use the returned token as usual in your REST calls to MindSphere. Do not delete the token after usage as it is not transferred to the client and it is cached in MindSphereSingleSignOn module.
+
+The following example shows how to use the microflow **DS_GetAccessTokenForScheduledEvents**. The sample retrieves a list of all Tenants from the database and fetches a token for each tenant. With the token you can proceed with your custom application logic.
 
 {{% alert type="warning" %}}
-Do not create a Tenant object by your self as this is done automatically during login.
+Do not create a Tenant object yourself as this is done automatically during login.
 {{% /alert %}}
 
 ![DS_GetAccessTokenForScheduledEvents](attachments/mindsphere-development-considerations/sample_getAccessTokenForScheduledEvents.png)
@@ -111,7 +113,7 @@ The SSO module supports two ways to get a valid MindSphere token locally. The me
 * **Application Credentials**: which is the default and recommended way
 * **Service Credentials**: which is the backup method for when Application Credentials are not possible
 
-#### 5.1.2 Application Credentials
+#### 5.1.1 Application Credentials{#app-creds}
 When you run your app locally, you will not be able to use SSO to get your credentials. You will be logged in as MxAdmin and will be presented with a login screen either when the app starts, or the first time that your app attempts to retrieve your access token, depending on the value of the constant *AskForCredentialsOnStartUp*.
 
 {{% image_container width="50%" %}}![](attachments/mindsphere-development-considerations/image19.png){{% /image_container %}}

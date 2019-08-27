@@ -92,7 +92,7 @@ Network components | Capture SNMP traps | UP/DOWN/ERROR |
 ### Hardware and Network
 
 | Type of Monitoring | Applicable Metric | Threshold |
-| --- | --- | --- | --- |
+| --- | --- | --- | 
 | Network latency | Ping time and network bandwidth measurements | Timings > 1000 ms or network bandwidth maxed |
 | Error report | Monitor error report logs hard errors | ERRORS |
 | Network latency | Ping time between network components | UP/DOWN/SNMP traps |
@@ -105,20 +105,20 @@ Network components | Capture SNMP traps | UP/DOWN/ERROR |
 ### Web Server
 
 | Type of Monitoring | Applicable Metric | Threshold |
-| --- | --- | --- | --- |
+| --- | --- | --- |
 | HTTP response | Average response time retrieving 1K GIF | Response time > 1000 ms |
 
 ### Databases
 
 | Type of Monitoring | Applicable Metric | Threshold |
-| --- | --- | --- | --- |
+| --- | --- | --- |
 | SQL Server | Average response time | Response time > 1000 ms |
 | PostgreSQL | Average response time | Response time > 1000 ms |
 
 ### Application
 
 | Type of Monitoring | Applicable Metric | Threshold |
-| --- | --- | --- | --- |
+| --- | --- | --- |
 | Complex page requests | Average response time | > 10 secs or less |
 | Error logs | Search for warnings emitted by the application | Warnings occur |
 

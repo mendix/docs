@@ -303,7 +303,7 @@ These are the types:
 Type | Explanation
 ------------ | -------------
 **Used memory** | Total memory size of the database instance minus the freeable memory.
-**Freeable memory** | The amount of available random access memory.
+**Freeable memory** | Memory that is allocated dynamically containing, for example, cached reads and indexes.
 **Swap usage** | The amount of swap space used on the database instance.
 
 ### <a name="Trends-dbcpu"></a>5.6 Database Node CPU Usage

@@ -112,7 +112,7 @@ Possible values: HSQLDB, MYSQL, ORACLE, POSTGRESQL, SQLSERVER |   |
 | SourceDatabaseUserName | The user name for the connection to the source database. |   |
 | SourceOracleServiceName | Defines the SERVICE_NAME when you have a connection with an Oracle DBMS as source. |   |
 
-## 5 S3 Storage Service Settings {#aws-s3} {#5-amazon-s3-storage-service-settings}
+## 5 S3 Storage Service Settings {#5-amazon-s3-storage-service-settings}
 
 The settings described below influence the behavior of the Amazon S3 Storage Service module. This module can be used for both Amazon S3 Storage and IBM Cloud Object Storage. Using these settings manually in Mendix Cloud is strongly discouraged, as files stored in external systems will not be included in backup creation and restoration.
 
@@ -121,8 +121,9 @@ The settings described below influence the behavior of the Amazon S3 Storage Ser
 | com.mendix.storage.s3.AccessKeyId | Acts as the username to authenticate with the S3 service. |   |
 | com.mendix.storage.s3.SecretAccessKey | Acts as the password to authenticate with the S3 service. |   |
 | com.mendix.storage.s3.BucketName | Name of the bucket where the files are stored on S3. |   |
-| com.mendix.storage.s3.ResourceNameSuffix | Suffix for the keys under which objects are stored. This can be used when buckets are divided into different segments for different users with different credentials (e.g. store objects as "[key].customer1" for customer1 and as "[key].customer2" for customer2) |   |
+| com.mendix.storage.s3.ResourceNameSuffix | Suffix for the keys under which objects are stored. This can be used when S3 buckets are divided into different segments for different users with different credentials (e.g. store objects as "[key].customer1" for customer1 and as "[key].customer2" for customer2) |   |
 | com.mendix.storage.s3.PerformDeleteFromStorage | Deprecated. Use `com.mendix.storage.PerformDeleteFromStorage`.<br/>Defines whether a delete of a Mendix File Document should result in an actual delete in the storage service. A reason to not perform an actual delete in the storage service can be when it's also used as a backup service. | true |
+| <a name="s3-region"></a>com.mendix.storage.s3.Region | Sets the region in which the S3 bucket is located. This will be used to determine the service endpoint, unless overridden in com.mendix.storage.s3.EndPoint. This setting will also be used as the signing region for requests. |
 | com.mendix.storage.s3.EndPoint | Overrides the default endpoint. This setting is required when the storage is on a non-AWS location (for example, IBM Cloud Object Storage). Both the endpoint (for example, `s3.example.com`) or the full URL (including the protocol) are supported (for example, `https://s3.example.com`). Note that when setting a custom endpoint, path style access will be enabled. For more information, see [Class S3ClientOptions](http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/s3/S3ClientOptions.html#withPathStyleAccess(boolean)). |   |
 | com.mendix.storage.s3.UseV2Auth | Let the authentication policy use 'Signature Version 2' instead of the default 'Signature Version 4'. Set this setting to 'true' when the endpoint does not support 'Signature Version 4'. | false |
 | com.mendix.storage.s3.EncryptionKeys | List of keys which can be used to encrypt and decrypt data at rest in S3\. The right key to decrypt the data with is automatically selected depending on with which key it was encrypted. Each encryption key consists of a key id, the encryption algorithm and the actual key (Base64 encoded). Example: ![](attachments/Custom+Settings/code_snippet_2.png) |   |

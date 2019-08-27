@@ -1,6 +1,7 @@
 ---
 title: "Create a Test Suite"
 parent: "ht-one"
+menu_order: 4
 description: "Describes how to create a test suite and add test cases and test suites to your test suite."
 tags: ["ATS", "testing"]
 ---

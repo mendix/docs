@@ -10,6 +10,16 @@ tags: ["Native", "Android", "iOS", "Apple", "Android"]
 For more information on the Make It Native app, see [Getting the Make It Native App](/refguide/getting-the-make-it-native-app).
 {{% /alert %}}
 
+## Android 1.0.0 / iOS 1.0.2
+
+**Release date: August 1st, 2019**
+
+This is the official release of the Android and iOS versions of the Make It Native app, with support for Mendix Studio Pro 8.0. The apps are not backwards compatible with the Mendix Studio Pro 8.0.0 Beta versions of Mendix Studio Pro. For more information on Mendix Studio Pro 8.0, see the [8.0.0 Release Notes](/releasenotes/studio-pro/8.0)
+
+### Limitations:
+
+* Clearing data on Android via the start screen does not clear cookies correctly. Using the developer menu option does clear cookies.
+
 ## Android 1.0 / iOS 1.0
 
 **Release date: June 21st, 2019**

@@ -1,5 +1,5 @@
 ---
-title: "In Test and Acceptance"
+title: "In Test & Acceptance"
 parent: "uc-one"
 ---
 During the test and acceptance phase other users than the developer are testing and using the application. Now it is especially important to collect information for further analysis if they find an issue.

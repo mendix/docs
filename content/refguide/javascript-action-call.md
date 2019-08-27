@@ -1,8 +1,8 @@
 ---
 title: "JavaScript Action Call"
 parent: "action-call-activities"
-menu_order: 20
-description: "This reference guide explains the properties of the JavaScript action call activity."
+menu_order: 4
+description: "This reference explains the properties of the JavaScript action call activity."
 tags: ["javascript", "return", "variable", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -50,6 +50,6 @@ The result of the Javascript action will be given this name. The label indicates
 ## 4 Read More
 
 * [JavaScript Actions](javascript-actions)
-* [Make JavaScript Actions](/howto/extensibility/build-javascript-actions)
+* [Write JavaScript Actions](/howto/extensibility/build-javascript-actions)
 * [Nanoflows](nanoflows)
 * [Java Action Call](java-action-call)

@@ -13,26 +13,22 @@ The access rules of an entity define what a user is allowed to do with objects o
 Every access rule is applicable to one or more [module roles](module-security#module-role). An access rule grants certain access rights to those roles. Rules are additive, which means that if multiple access rules apply to the same module role, all access rights of those rules are combined for that module role.
 
 {{% alert type="warning" %}}
-
 Access rules are not inherited from an entity's generalization; rather, the security for every entity is specified explicitly. This means that when adding an access rule to an entity, always make sure that all required XPath constraints are applied. The generalization's access rules, that might already define XPath constraints, do not apply to its specializations and will therefore not limit their visibility.
-
 {{% /alert %}}
 
 ## 2 Properties
 
-Access rules are defined in the entity **Properties** > the **Access rules** section.
+Access rules are defined in the entity's **Properties** > **Access rules**.
 
 ![Access Rules for Entities](attachments/access-rules/access-rules-section.png)
 
 {{% alert type="info" %}}
-
-The **Access rules** section is visible only if  the project security is set to **Production**. For more information, see [Project Security](project-security).
-
+The **Access rules** section is visible only if the [Project Security](project-security) is set to **Production**.
 {{% /alert %}}
 
 ### 2.1 Documentation
 
-In this property you can describe the intention of the access rule. This helps to keep access rules comprehensible, especially in case of non-trivial XPath constraints.
+In this property, you can describe the intention of the access rule. This helps to keep access rules comprehensible, especially in the case of non-trivial XPath constraints.
 
 ### 2.2 Rule Applies to the Following Module Roles
 
@@ -46,9 +42,9 @@ If this check box is checked, users are allowed to create new objects of this en
 
 If this checkbox is checked, users are allowed to delete existing objects of this entity.
 
-The set of objects that can be deleted can be limited by using an XPath constraint (see below).
+The set of objects that can be deleted can be limited by using an [XPath constraint](#constraint).
 
-### 2.5 Member Read and Write Rights
+### 2.5 Member Read & Write Rights
 
 Member read and write rights define the access rights for every member (attribute or association) of the entity. These access rights indicate whether users are allowed to view and/or edit the member's value.
 
@@ -58,38 +54,34 @@ Member read and write rights define the access rights for every member (attribut
 | Read | Users are allowed to view the value of this member, but cannot edit it. |
 | Read, Write | Users are allowed to view and edit the value of this member. |
 
-The set of objects to which the member access rights apply can be limited by using an XPath constraint (see below).
+The set of objects to which the member access rights apply can be limited by using an [XPath constraint](#constraint).
 
 {{% alert type="info" %}}
-
-A customer is allowed to view the discount, but is not allowed to edit it. The access rights for the discount attribute are 'Read'.
+A customer is allowed to view the discount, but is not allowed to edit it. The access rights for the discount attribute are **Read**.
 
 ![](attachments/domain-model-editor/917534.png)
-
 {{% /alert %}}
 
-### 2.6 XPath Constraint
+### 2.6 XPath Constraint {#constraint}
 
-The [XPath constraint](xpath-constraints) can be used to constrain the set of objects to which the access rule applies. If the XPath constraint is empty, the rule applies to all objects of the entity.
+An [XPath constraint](xpath-constraints) can be used to constrain the set of objects to which the access rule applies. If the XPath constraint is empty, the rule applies to all objects of the entity.
 
-Entity 'Customer' is a specialization of entity 'User'. Entity 'Order' is associated to entity 'Customer'.
+The **Customer** entity is a specialization of the **User** entity. The **Order** entity is associated to the **Customer** entity.
 
 ![](attachments/domain-model-editor/917537.png)
 
-A logged in customer is allowed to view personal orders, but is not allowed to view orders of other customers. This is accomplished by using the following XPath constraint in the access rule of entity 'Order':
+A logged-in customer is allowed to view personal orders, but is not allowed to view the orders of other customers. This is accomplished by using the following XPath constraint in the access rule of the **Order** entity:
 
 ```java
 [Module.Order_Customer = '[%CurrentUser%]']
 ```
 
-Because of this XPath constraint, the access rule only applies to orders of which the customer is the currently signed in user.
+Because of this XPath constraint, the access rule only applies to orders of which the customer is the currently signed-in user.
 
 {{% alert type="info" %}}
+The **Show XPath constraint** check box only indicates whether you can see the XPath constraint in the access rule dialog box, it does not influence the behavior of your application.
+{{% /alert %}}
 
-The checkbox 'Show XPath constraint' only indicates whether you can see the XPath constraint in the access rule dialog, it does not influence the behavior of your application.
-
-{{% /alert %}}{{% alert type="warning" %}}
-
+{{% alert type="warning" %}}
 XPath constraints can only be applied to persistable entities as they are computed in the database. Defining XPath constraints for non-persistable entities results in consistency check errors.
-
 {{% /alert %}}

@@ -33,7 +33,7 @@ The following components are needed:
 
 The following steps describe how to download the latest Chrome and Gecko (Firefox) drivers:
 
-1. With the following link you can download the latest Chrome driver:[https://sites.google.com/a/chromium.org/chromedriver/downloads](https://sites.google.com/a/chromium.org/chromedriver/downloads) (chromedriver_win32.zip)
+1. With the following link you can download the latest Chrome driver:[https://sites.google.com/a/chromium.org/chromedriver/downloads](https://sites.google.com/a/chromium.org/chromedriver/downloads) (*chromedriver_win32.zip*)
 2.  With the following link you can download the latest Gecko driver: [https://github.com/mozilla/geckodriver/releases](https://github.com/mozilla/geckodriver/releases) (Make sure it matches the version (win32bits or win64bits) of Firefox you installed on the machine).
 3. Place the unzipped items in the same folder as the Selenium jar.
 
@@ -137,7 +137,7 @@ The following steps describe how to start the selenium hub and the node with a J
 
 1.  Create JSON files in the created folder:
 
-	**gridHubConfig.json:**
+	*gridHubConfig.json*:
 	```
 	   {
 		"port": 4444,
@@ -155,7 +155,7 @@ The following steps describe how to start the selenium hub and the node with a J
 	   }
 	```
 	
-	**node.json:**
+	*node.json*:
 
 	```
 	   {

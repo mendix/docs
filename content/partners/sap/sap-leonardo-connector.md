@@ -80,7 +80,7 @@ There are two inputs to this action.
 
 *Limitations*
 
-The **ClassifyImage** action does not currently support a list of image objects, or images in an archive (.zip) file.
+The **ClassifyImage** action does not currently support a list of image objects, or images in an archive (ZIP) file.
 
 *Options* are not available on the SAP API Business Hub.
 
@@ -106,7 +106,7 @@ This implements the [**Product Image Classification API (inference_sync)**](http
 
 **Input**
 
-The input is an object which is a *System.FileDocument* entity, or an entity which is based on the *System.FileDocument* entity. For example, it could be an object based on *System.Image* which is a single image. It could also be an object containing a *.zip* archive file containing images. 
+The input is an object which is a *System.FileDocument* entity, or an entity which is based on the *System.FileDocument* entity. For example, it could be an object based on *System.Image* which is a single image. It could also be an object containing a ZIP archive file containing images. 
 
 *Limitations*
 
@@ -138,7 +138,7 @@ The input is an image object which is a *System.Image* entity, or an entity whic
 
 *Limitations*
 
-The **DetectFace** action does not currently support a list of image objects, or images in an archive (.zip) file.
+The **DetectFace** action does not currently support a list of image objects, or images in an archive (ZIP) file.
 
 **Output**
 
@@ -214,7 +214,7 @@ An image object which is a *System.Image* entity, or an entity which is based on
 
 *Limitations*
 
-The **ExtractImageFeature** action does not currently support a list of image objects or images in an archive (.zip) file.
+The **ExtractImageFeature** action does not currently support a list of image objects or images in an archive (ZIP) file.
 
 **ExtractImageFeature** uses only the default model for inferring vectors.
 

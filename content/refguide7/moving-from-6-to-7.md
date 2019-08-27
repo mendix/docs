@@ -145,7 +145,7 @@ For more information, see [Layouts](layout#layout-type) and the blog post [Layou
 
 #### 6.1.3 Apply Context & Remove from Context
 
-The **Apply context** and **Remove from context** options of the reference selector, data grid, and template grid data sources were deprecated long ago (in [Mendix 5.19.0](/releasenotes/studio-pro/5.19)), and they have now been removed. You will now get consistency errors in places where you used them. We suggest using explicit XPath constraints instead.
+The **Apply context** and **Remove from context** options of the reference selector, data grid, and template grid data sources were deprecated in Mendix version 5.19, and they have been removed. You will now get consistency errors in places where you used them. We suggest using explicit XPath constraints instead.
 
 ### 6.2 Removed Client APIs
 

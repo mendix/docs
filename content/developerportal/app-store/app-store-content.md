@@ -156,14 +156,14 @@ You cannot create a new project in an existing repository that is not empty.
 
 Downloading a theme is very similar to downloading a widget. Like a widget, a theme is added to the project structure, in the **theme** folder of your app project. A theme downloaded from the App Store will immediately be set as the active theme for your project. You can find out which theme is active for your project in the app  project **Settings**.
 
-To delete a theme, remove the *.zip* file from your project's **theme** folder.
+To delete a theme, remove the ZIP file from your project's **theme** folder.
 
 ## 7 Read More
 
 * [App Store Overview](app-store-overview)
 * [How to Share App Store Content](share-app-store-content)
 * [App Store Content Support](app-store-content-support)
-* [Common Widget Properties](/refguide/common-widget-properties)
+* [Properties Common for Widgets](/refguide/common-widget-properties)
 * [How to Install the SMTP Email Module](/howto/integration/install-and-configure-the-smtp-module)
 * [My Top 5 Mendix Widgets for Speeding Up Application Development](http://www.mendix.com/blog/top-5-mendix-widgets-speeding-application-development/)
 

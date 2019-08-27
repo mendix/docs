@@ -40,7 +40,7 @@ You can get this sort of error in two circumstances:
 
     Search for the correct platform version, and the file referred to in the error message.
 
-    If the files are missing, you should re-install the server distribution (tar.gz file) and confirm that the files are now in the right place.
+    If the files are missing, you should re-install the server distribution (*tar.gz* file) and confirm that the files are now in the right place.
 
 2.  The Mendix service cannot access the files
 

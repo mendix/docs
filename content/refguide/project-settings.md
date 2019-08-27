@@ -209,7 +209,7 @@ The way web services are called has been optimized, which means you can use cust
 
 The default language indicates the language that is used when a user has not chosen a language. The default language is also used as a fall-back language when a certain text is not translated to another language.
 
-### 4.2 Languages
+### 4.2 Languages {#languages}
 
 This is the list of languages in which your application will be available for users.
 

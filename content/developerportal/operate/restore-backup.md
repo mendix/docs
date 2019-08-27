@@ -80,11 +80,11 @@ You may want to restore a backup which has been created on another platform, for
 
 ### .tar.gz archive
 
-A **Full snapshot** backup file is a .tar.gz file (for example files_and_database-fc9e126f-201811210121.tar.gz).
+A **Full snapshot** backup file is a *.tar.gz* file (for example, *files_and_database-fc9e126f-201811210121.tar.gz*).
 
 ### .tar archive
 
-The .tar archive within the .tar.gz archive (for example files_and_database-fc9e126f-201811210121.tar) contains a number of files in a folder structure.
+The *.tar* archive within the *.tar.gz* archive (for example, *files_and_database-fc9e126f-201811210121.tar*) contains a number of files in a folder structure.
 
 Here is an example:
 

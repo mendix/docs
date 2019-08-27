@@ -40,7 +40,7 @@ Right now the input is editable for any user at all times. However, the input sh
 
 To add these restrictions, follow the instructions below:
 
-1. In *TextBox.xml* add the enumeration attribute for `Editable` inside `propertyGroup` (where you put the attribute inside `propertyGroup` will affect how the attribute renders in the Mendix Studios): 
+1. In *TextBox.xml* add the enumeration attribute for `Editable` inside the `propertyGroup` of `Data source` (where you put the attribute inside `propertyGroup` will affect how the attribute renders in the Mendix Studios): 
 
 	```xml
 	<property key="editable" type="enumeration" defaultValue="default">
@@ -164,9 +164,11 @@ This section will teach you to add validation to your TextBox widget. Using micr
 		className?: string;
 	}
 	export const Alert: FunctionComponent<AlertProps> = ({ alertStyle, className, children }) =>
-		children
-			? <div className={classNames(`alert alert-${alertStyle}`, className) }>{children}</div>
-			: null;
+		children ? (
+			<div className={classNames(`alert alert-${alertStyle} mx-validation-message`, className)}>
+				{children}
+			</div>
+		) : null;
 	Alert.displayName = "Alert";
 	Alert.defaultProps = { alertStyle: "danger" };
 	```
@@ -224,14 +226,14 @@ This section will teach you to add validation to your TextBox widget. Using micr
 Validation can come from a modeled microflow or nanoflow, but can also be widget specific. For this sample you will learn to implement a custom, required message which will show when the input is empty.
 
 
-1.  In *TextBox.xml*, add the `requiredMessage` property inside `propertyGroup`:
+1.  In *TextBox.xml*, add the `requiredMessage` property inside the `propertyGroup` of `Data source`:
 
 	```xml
 	<property key="requiredMessage" type="textTemplate" required="false">
 		<caption>Required message</caption>
 		<description/>
 		<translations>
-			<translation lang="en_US">A input text is required</translation>
+			<translation lang="en_US">An input text is required</translation>
 		</translations>
 	</property>
 	```
@@ -243,8 +245,8 @@ Validation can come from a modeled microflow or nanoflow, but can also be widget
 
 2. In *TextBox.tsx*, add a validation handler to the attribute after the `onUpdate` function:
 
-	```tsx
-	componentDidMount() {
+	```ts
+	componentDidMount(): void {
 		this.props.textAttribute.setValidator(this.validator.bind(this));
 	}
 
@@ -277,18 +279,25 @@ Validation can come from a modeled microflow or nanoflow, but can also be widget
 
 Until now the components did not keep any state. Each keystroke passed through the `onUpdate` function, which set the new value. The newly-set value was received through the React lifecycle, which updated the property and called the `render` function. This method can cause many rendering actions to be triggered by all widgets that are using that same attribute, such as a re-render for each keystroke. This pattern also makes it also difficult to trigger an onChange action. The onChange action should only trigger on leaving the input combined with a changed value. 
 
-{{% todo %}}[check if this limitation is solved before end of April, then delete it if so]{{% /todo %}}
-
-{{% alert type="warning" %}}
-Limitation: The implementation in this sample will cause the onChange event to trigger when the validation fails. A failed validation will prevent the real change in the attribute, thus the actual value will not be changed.{{% /alert %}}
-
-1.  In *TextBox.xml*, add the `onChange` action inside `propertyGroup`:
+1.  In *TextBox.xml*, add the `onChange` action inside `properties` and edit the `textAttribute` property by adding a reference to the key of the action :
 
 	```xml
-	<property key="onChangeAction" type="action" required="false">
-		<caption>OnChange action</caption>
-		<description/>
-	</property>
+	<propertyGroup caption="Data source">
+		<property key="textAttribute" type="attribute" onChange="onChangeAction">
+			<caption>Text attribute</caption>
+			<description/>
+			<attributeTypes>
+				<attributeType name="String"/>
+			</attributeTypes>
+		</property>
+	</propertyGroup>
+	<!-- ... -->
+	<propertyGroup caption="Events">
+		<property key="onChangeAction" type="action" required="false">
+			<caption>OnChange action</caption>
+			<description/>
+		</property>
+	</propertyGroup>
 	```
 	
 	After altering this code, do the following to see your changes:<br/>
@@ -306,7 +315,7 @@ Limitation: The implementation in this sample will cause the onChange event to t
 	```tsx
 	class TextBox extends Component<TextBoxContainerProps> {
 		private readonly onLeaveHandle = this.onLeave.bind(this);
-		componentDidMount() {
+		componentDidMount(): void {
 			this.props.textAttribute.setValidator(this.validator.bind(this));
 		}
 		render(): ReactNode {
@@ -327,15 +336,11 @@ Limitation: The implementation in this sample will cause the onChange event to t
 		private isReadOnly(): boolean {
 			return this.props.editable === "never" || this.props.textAttribute.readOnly;
 		}
-		private onLeave(value: string, isChanged: boolean) {
+		private onLeave(value: string, isChanged: boolean): void {
 			if (!isChanged) {
 				return;
 			}
-			const { textAttribute, onChangeAction } = this.props;
-			textAttribute.setValue(value);
-			if (onChangeAction && onChangeAction.canExecute) {
-				onChangeAction.execute();
-			}
+			this.props.textAttribute.setValue(value);
 		}
 		private validator(value: string | undefined): string | undefined {
 			const { requiredMessage } = this.props;
@@ -370,7 +375,7 @@ Limitation: The implementation in this sample will cause the onChange event to t
 		private readonly onChangeHandle = this.onChange.bind(this);
 		private readonly onBlurHandle = this.onBlur.bind(this);
 		readonly state: InputState = { editedValue: undefined };
-		componentDidUpdate(prevProps: InputProps) {
+		componentDidUpdate(prevProps: InputProps): void {
 			if (this.props.value !== prevProps.value) {
 				this.setState({ editedValue: undefined });
 			}
@@ -388,15 +393,15 @@ Limitation: The implementation in this sample will cause the onChange event to t
 				onBlur={this.onBlurHandle}
 			/>;
 		}
-		private getCurrentValue() {
+		private getCurrentValue(): string {
 			return this.state.editedValue !== undefined
 				? this.state.editedValue
 				: this.props.value;
 		}
-		private onChange(event: ChangeEvent<HTMLInputElement>) {
+		private onChange(event: ChangeEvent<HTMLInputElement>): void {
 			this.setState({ editedValue: event.target.value });
 		}
-		private onBlur() {
+		private onBlur(): void {
 			const inputValue = this.props.value;
 			const currentValue = this.getCurrentValue();
 			if (this.props.onLeave) {
@@ -413,6 +418,8 @@ Limitation: The implementation in this sample will cause the onChange event to t
 	* The state `editedValue` will be empty until the input value is changed by the user 
 	* The `setState` function will update the state and will re-render the component (in the rendering, the new value is taken from `editedValue`)
 	* The `onBlur` function will set the new value in the attribute through the container component – the state is reset, and the new value is received by an update of the attribute (which will propagate as a new property value)
+	* The `onLeave` function will set the value. The `setValue` function will automatically call the onChange action, as this is connected with the XML configuration
+
 
 ### 3.5 Adding Accessibility
 
@@ -426,7 +433,7 @@ To make the input widget more accessible for people using screen readers, you wi
 		const validationFeedback = this.props.textAttribute.validation;
 		const required = !!(this.props.requiredMessage && this.props.requiredMessage.value);
 		return <Fragment>
-			<TextInput        
+			<TextInput		
 				id={this.props.id}
 				value={value}
 				style={this.props.style}
@@ -453,9 +460,11 @@ To make the input widget more accessible for people using screen readers, you wi
 		className?: string;
 	}
 	export const Alert: FunctionComponent<AlertProps> = ({ alertStyle, className, children, id }) =>
-		children
-			? <div id={id} className={classNames(`alert alert-${alertStyle}`, className) }>{children}</div>
-			: null;
+		children ? (
+			<div id={id} className={classNames(`alert alert-${alertStyle} mx-validation-message`, className)}>
+				{children}
+			</div>
+		) : null;
 	Alert.displayName = "Alert";
 	Alert.defaultProps = { alertStyle: "danger" };
 	```
@@ -509,8 +518,8 @@ To make the input widget more accessible for people using screen readers, you wi
 	
 	Explaining the code:
 
-	* The `Label` component provided by the platform has a `for` attribute which will have a reference to the widget's ID – you must set the ID to for the screen reader to link the label to the `this` input
-	* The `Label` component will have an ID `<widgetid>-label` in the input – you must link the `area-labeledby` to the ID of the label
+	* The `Label` component provided by the platform has a `for` attribute which will have a reference to the widget's ID – you must set the ID for the screen reader, so that it can link the label to the `this` input
+	* The `Label` component will have an ID `<widgetid>-label` – you must link the input's `aria-labelledby` to the ID of the label
 
 You have now made your widget compatible with screen readers. If a screen reader is describing your app aloud, it will list the widget elements to the user.
 
@@ -522,26 +531,20 @@ To add preview mode functionality, create a new file *src/TextBox.webmodeler.tsx
 
 ```tsx
 import { Component, createElement, ReactNode } from "react";
-import { TextBoxPreviewProps, VisibilityMap } from "../typings/TextBoxProps";
+import { TextBoxPreviewProps } from "../typings/TextBoxProps";
 import { TextInput } from "./components/TextInput";
 
 declare function require(name: string): string;
 
-// eslint-disable-next-line @typescript-eslint/class-name-casing
 export class preview extends Component<TextBoxPreviewProps> {
-    render(): ReactNode {
-        const value = `[${this.props.textAttribute}]`;
-        return <TextInput value={value} disabled={this.props.editable === "never"} />;
-    }
-}
-
-export function getVisibleProperties(_valueMap: TextBoxPreviewProps, visibilityMap: VisibilityMap): VisibilityMap {
-    /* To hide any property in Mendix Studio, please assign the property in visibilityMap to false */
-    return visibilityMap;
+	render(): ReactNode {
+		const value = `[${this.props.textAttribute}]`;
+		return <TextInput value={value} disabled={this.props.editable === "never"} />;
+	}
 }
 
 export function getPreviewCss(): string {
-    return require("./ui/TextBox.css");
+	return require("./ui/TextBox.css");
 }
 ```
 
@@ -552,5 +555,7 @@ Explaining the code:
 
 ## 4 Read More
 
-* [Make JavaScript Actions](/howto/extensibility/build-javascript-actions)
 * [Build a Text Box Pluggable Widget: Part 1](create-a-pluggable-widget-one)
+* [Pluggable Widgets API](/apidocs-mxsdk/apidocs/pluggable-widgets)
+* [Client APIs Available to Pluggable Widgets](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets)
+* [Pluggable Widget Property Types](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets)

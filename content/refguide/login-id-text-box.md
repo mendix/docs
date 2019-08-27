@@ -5,10 +5,11 @@ tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert type="warning" %}}The login ID text box widget is not supported on native mobile pages.{{% /alert %}}
 
 The login id text box is a widget that can be used to provide a login id for authentication. A login id is a unique identifier used to identify a user. Examples are a username or  email address. 
 
-It must be placed on a page together with a [login id text box](login-id-text-box) and a [sign-in button](sign-in-button).
+It must be placed on a page together with a [Password text box](password-text-box) and a [Sign-in button](sign-in-button).
 
 ## Common Properties
 

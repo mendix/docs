@@ -6,7 +6,9 @@ tags: ["studio pro"]
 
 ## 1 Introduction
 
-Adding a time unit to a date. In all examples, the first input can be either a new dateTime (depicted in all examples), a variable of type DateTime, or an attribute of a domain entity of type DateTime.
+This is a reference for adding a time unit to a date. 
+
+The first input can be either a new dateTime (depicted in all examples), a variable of the DateTime type, or an attribute of a domain entity of the DateTime type.
 
 ## 2 addMilliseconds
 
@@ -14,9 +16,9 @@ Add a number of milliseconds to a date.
 
 ### 2.1 Input Parameters
 
-*   Initial date
-    Type: DateTime
-*   The amount of milliseconds to be added
+* Initial date
+	* Type: DateTime
+* The amount of milliseconds to be added
     Type: Integer
 
 ### 2.2 Output

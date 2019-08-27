@@ -44,17 +44,17 @@ The following steps explain how to create a master dataset within ATS. If you wa
 2. Click the **Test Data** tab.
 3.  Click **New Data Set**
 
-   ![](attachments/ht-two-create-datadriven-test-case/test-cases-data-sets-new-data-set.png)
+	![](attachments/ht-two-create-datadriven-test-case/test-cases-data-sets-new-data-set.png)
 
-   When you click the **New Data Set**, the **New Data Set** dialog box opens.
+	When you click the **New Data Set**, the **New Data Set** dialog box opens.
 
-   ![](attachments/ht-two-create-datadriven-test-case/new-data-set-dialog.png)
+	![](attachments/ht-two-create-datadriven-test-case/new-data-set-dialog.png)
 
 4. Enter a name for your dataset in the **Name** field. Remember that you must find the dataset later, so give it a unique and corresponding name.
 5. Enter a description for your dataset in the **Description** field. Providing a clear description of what data is found inside is advisable.
 6.  Click **Save**.
 
-   ![](attachments/ht-two-create-datadriven-test-case/new-data-set-dialog-new-expense.png)
+	![](attachments/ht-two-create-datadriven-test-case/new-data-set-dialog-new-expense.png)
 
 ### 3.1 Creating Data Set Fields
 
@@ -63,13 +63,13 @@ The following steps explain how to add dataset fields to your master dataset.
 1. Click the name of the dataset.
 2.  Click **New Field**.
 
-    ![](attachments/ht-two-create-datadriven-test-case/add-new-field-data-set.png)
+	![](attachments/ht-two-create-datadriven-test-case/add-new-field-data-set.png)
 
 3. When you click **New Field**, the **New Field** dialog box opens. Enter **Amount** in the name field. This field represents the expense amount in the Company Expenses app. By using the exact label from the Mendix app, it becomes easier to connect the fields from your dataset to the right action.
 4. The amount in the Company Expenses app can only be a number. Select **Number** as the datatype.
 5.  Click **Save**
 
-   ![](attachments/ht-two-create-datadriven-test-case/new-data-set-field-amount.png)
+	![](attachments/ht-two-create-datadriven-test-case/new-data-set-field-amount.png)
 
 Repeat steps 1 to 5 for these fields in the Company Expenses app:
 
@@ -90,15 +90,15 @@ To create a record for your dataset fields, follow these steps:
 1. Click the **Records** tab.
 2.  Click **New Record**:
 
-    ![](attachments/ht-two-create-datadriven-test-case/click-new-record.png)
+	![](attachments/ht-two-create-datadriven-test-case/click-new-record.png)
 
-    The **New Record** dialog box opens:
+	The **New Record** dialog box opens:
 
-    ![](attachments/ht-two-create-datadriven-test-case/new-record-dialog.png)
+	![](attachments/ht-two-create-datadriven-test-case/new-record-dialog.png)
 
 3.  Enter the desired values for each field and click **Save**:
 
-    ![](attachments/ht-two-create-datadriven-test-case/entered-new-record.png)
+	![](attachments/ht-two-create-datadriven-test-case/entered-new-record.png)
 
 Repeat step 2 and step 3 as many times as you want. In our example, we create a record for each expense type:
 
@@ -120,26 +120,26 @@ The following steps explain how to create the right Excel file and how it should
 
 1.  Open Excel and create a new file. ATS implements the values in the first row as dataset fields and all the rows beyond the first row as records. This is an example:
 
-    ![](attachments/ht-two-create-datadriven-test-case/excel-sheet-example-ats.png)
+	![](attachments/ht-two-create-datadriven-test-case/excel-sheet-example-ats.png)
 
 2.  Create the dataset fields you need:
 
-    * Amount
-    * Date
-    * Type
-    * Description
+	* Amount
+	* Date
+	* Type
+	* Description
 
-   ![](attachments/ht-two-create-datadriven-test-case/excel-sheet-data-set-fields.png)
+	![](attachments/ht-two-create-datadriven-test-case/excel-sheet-data-set-fields.png)
 
 3.  Now you must add records. Create a record for each expense type available, five in total:
 
-    * Accommodation
-    * Meal
-    * Other
-    * Supplies
-    * Transport
+	* Accommodation
+	* Meal
+	* Other
+	* Supplies
+	* Transport
 
-    ![](attachments/ht-two-create-datadriven-test-case/excel-sheet-add-records-new-expense.png)
+	![](attachments/ht-two-create-datadriven-test-case/excel-sheet-add-records-new-expense.png)
 
 4. Save the Excel file so that you can use it in the next section.
 
@@ -151,11 +151,11 @@ The following steps explain how to create and update a master dataset from an Ex
 2. Click the **Test Data** tab.
 3.  Click **New Data Set**.
 
-    ![](attachments/ht-two-create-datadriven-test-case/test-cases-data-sets-new-data-set.png)
+	![](attachments/ht-two-create-datadriven-test-case/test-cases-data-sets-new-data-set.png)
 
-    When you click the **New Data Set**, the **New Data Set** dialog box opens.
+	When you click the **New Data Set**, the **New Data Set** dialog box opens.
 
-    ![](attachments/ht-two-create-datadriven-test-case/new-data-set-dialog.png)
+	![](attachments/ht-two-create-datadriven-test-case/new-data-set-dialog.png)
 
 4.  Enter a name for your dataset in the **Name** field. Remember that you must find the dataset later, so giving it a unique and corresponding name is advisable.
 5. Enter a description for your dataset in the **Description** field. Providing a clear description of what data is found inside is advisable.
@@ -163,7 +163,7 @@ The following steps explain how to create and update a master dataset from an Ex
 7. Select the Excel file you created in [4 Creating the Excel File](#excel).
 8.  Click **Save**.
 
-    ![](attachments/ht-two-create-datadriven-test-case/new-data-set-dialog-new-expense-excel.png)
+	![](attachments/ht-two-create-datadriven-test-case/new-data-set-dialog-new-expense-excel.png)
 
 Now you have a new master dataset using an Excel file.
 
@@ -175,25 +175,25 @@ To update a master dataset using an Excel file, follow these steps:
 2. Click the **Records** tab.
 3.  Click **Export to Excel**:
 
-    ![](attachments/ht-two-create-datadriven-test-case/export-data-set-excel.png)
+	![](attachments/ht-two-create-datadriven-test-case/export-data-set-excel.png)
 
-    You now download an Excel file containing the dataset.
+	You now download an Excel file containing the dataset.
 
 4. Save the file to your local computer so that you can make changes.
 5.  Change the description of all records to "ATS excel description 1" etc.
 
-    ![](attachments/ht-two-create-datadriven-test-case/excel-sheet-update-records.png)
+	![](attachments/ht-two-create-datadriven-test-case/excel-sheet-update-records.png)
 
 6.  Click **Import from Excel** inside the **Records** tab:
 
-    ![](attachments/ht-two-create-datadriven-test-case/import-from-excel-new-records.png)
+	![](attachments/ht-two-create-datadriven-test-case/import-from-excel-new-records.png)
 
-    This will open the **Import records** dialog box.
+	This will open the **Import records** dialog box.
 
 7. Select the file you altered in steps 4–5. 
 8.  Click **Import**.
 
-    ![](attachments/ht-two-create-datadriven-test-case/import-new-records-excel.png)
+	![](attachments/ht-two-create-datadriven-test-case/import-new-records-excel.png)
 
 ATS updates the changed records:
 
@@ -208,25 +208,25 @@ The following steps explain how to connect the master dataset to your test case.
 1. Open your test case and click the **Test Data** tab.
 2.  Click the arrow icon:
 
-    ![](attachments/ht-two-create-datadriven-test-case/test-data-tab-test-case-details-page.png)
+	![](attachments/ht-two-create-datadriven-test-case/test-data-tab-test-case-details-page.png)
 
-    The **Select Data Set** dialog box opens.
+	The **Select Data Set** dialog box opens.
 
 3. Search for the master dataset.
 4. Select the dataset.
 5.  Click **Save**.
 
-    ![](attachments/ht-two-create-datadriven-test-case/select-data-set-dialog-new-expense.png)
+	![](attachments/ht-two-create-datadriven-test-case/select-data-set-dialog-new-expense.png)
 
-    Connect the master dataset to your test case.
+	Connect the master dataset to your test case.
 
-    ![](attachments/ht-two-create-datadriven-test-case/connected-master-data-set-new-expense.png)
+	![](attachments/ht-two-create-datadriven-test-case/connected-master-data-set-new-expense.png)
 
 6. Now you need to connect the dataset fields to the right test steps, so click the **Test Steps** tab.
 7. Select the test step to which you want to connect a dataset field.
 8.  Search for and select the first dataset field:
 
-    ![](attachments/ht-two-create-datadriven-test-case/first-data-set-field-connected-amount.png)
+	![](attachments/ht-two-create-datadriven-test-case/first-data-set-field-connected-amount.png)
 
 Repeat this process for all the dataset fields you want to connect.
 
@@ -237,23 +237,23 @@ The following steps explain how to read and understand the results of a data-dri
 1. Open your app and click the **Test Runs** menu item.
 2.  Click the result of the data-driven test case.
 
-    ![](attachments/ht-two-create-datadriven-test-case/test-runs-data-driven-test-case.png)
+	![](attachments/ht-two-create-datadriven-test-case/test-runs-data-driven-test-case.png)
 
-    This opens the **Result Log** page, where ATS displays the result of each executed record.
+	This opens the **Result Log** page, where ATS displays the result of each executed record.
 
 3.  Click one of the results:
 
-    ![](attachments/ht-two-create-datadriven-test-case/data-driven-test-case-result-log.png)
+	![](attachments/ht-two-create-datadriven-test-case/data-driven-test-case-result-log.png)
 
 4.  To see the record used by this execution, click the **Data Records** tab:
 
-    This displays all the values in the record:
+	This displays all the values in the record:
 
-    ![](attachments/ht-two-create-datadriven-test-case/data-driven-test-case-data-records.png)
+	![](attachments/ht-two-create-datadriven-test-case/data-driven-test-case-data-records.png)
 
-    You can use the breadcrumbs to return to the overview **Result Log**:
+	You can use the breadcrumbs to return to the overview **Result Log**:
 
-    ![](attachments/ht-two-create-datadriven-test-case/result-log-breadcrumb.png)
+	![](attachments/ht-two-create-datadriven-test-case/result-log-breadcrumb.png)
     
 ## 9 Conclusion
 

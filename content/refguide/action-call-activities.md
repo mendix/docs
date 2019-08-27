@@ -5,14 +5,10 @@ menu_order: 30
 tags: ["studio pro", "javascript", "javascript actions"]
 ---
 
-## JavaScript Action Call
+This section contains these documents:
 
-See [JavaScript Action Call](javascript-action-call).
+* [Microflow Call](microflow-call)
+* [Nanoflow Call](nanoflow-call)
+* [Java Action Call](java-action-call)
+* [JavaScript Action Call](javascript-action-call)
 
-## Microflow Call
-
-See [Microflow Call](microflow-call).
-
-## Java Action Call
-
-See [Java Action Call](java-action-call).

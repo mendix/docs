@@ -100,7 +100,7 @@ A user account within a company that has additional permissions. New company adm
 
 | Role | Description |
 | --- | --- |
-| Company manager | Has all of the privileges below. Can also manage company information, other company admins, security groups, security rules, password policies and launchpad settings. |
+| Company manager | Has all of the privileges below. Can also manage company information, other company admins, security groups, security rules, and password policies. |
 | Member manager | Can manage individual users within the company, and modify security group memberships. |
 | Project manager | Can see all Mendix projects within the company, and add or remove users to those projects. |
 | Node manager | Can see all licensed App nodes that are managed by this company, or which relate to this company in any other way. |

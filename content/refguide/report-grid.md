@@ -6,7 +6,11 @@ tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-This shows the reported data in a grid.
+{{% alert type="warning" %}}The report grid widget is not supported on native mobile pages.{{% /alert %}}
+
+This shows the reported data in a grid. 
+
+The difference between a data grid and a report grid is that the data shown in the report grid is not stored in the database. Each time a report is created, the data is retrieved from the database.
 
 ## Data Source Properties
 
@@ -46,4 +50,4 @@ If this property is false, the report grid will not show its data until the user
 
 ### Name, Class, Style
 
-For details, see [Common Widget Properties](common-widget-properties).
+For details, see [Properties Common for Widgets](common-widget-properties).

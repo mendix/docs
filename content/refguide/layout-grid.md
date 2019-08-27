@@ -8,9 +8,13 @@ tags: ["studio pro"]
 
 {{% alert type="warning" %}}The layout grid widget is not supported on native mobile pages.{{% /alert %}}
 
-The layout grid is a widget that gives structure to your pages. A layout grid contains one or more rows and each row contains one to twelve columns. Each column has a weight, a number from 1 to 12, and the weights of the columns in a row must add up to 12\. In the browser the layout grid is implemented by the Bootstrap grid system. Reading the official Bootstrap [documentation on the grid system](http://getbootstrap.com/css/#grid) can help you understand what you can build with this widget.
+## 1 Introduction
 
-## ![](attachments/pages/layout-grid.png)
+The layout grid is a widget that gives structure to your pages. A layout grid makes your page responsive, i.e. a layout grid has a built-in behavior to show how a page will look like on different devices. 
+
+A layout grid contains one or more rows and each row contains one to twelve columns. Each column has a weight (a number from 1 to 12), and the weight of columns in a row must add up to 12. 
+
+In a browser, the layout grid is implemented by the Bootstrap grid system. For more information on the Bootstrap grid system, see the [official Bootstrap documentation](http://getbootstrap.com/css/#grid).
 
 ## Automatic classes
 
@@ -33,15 +37,15 @@ The outermost `div` represents the widget as a whole and gets the one of the fol
 
 The second `div` represents a row and automatically gets the `row` class. The innermost `div` represents a column and automatically gets the weight class `col-md-<weight>`.
 
-## Components
+## 2 Components
 
-### Rows
+### 2.1 Rows
 
-A layout grid contains one or more rows. Each row can be styled with the Class and Style properties. Rows can be made conditionally visible through the property called 'Visible'.
+A layout grid can contain one or more rows. 
 
-Each row in turn contains columns and the number of columns can differ per row.
+Each row contains columns and the number of columns can differ per row.
 
-### Columns
+### 2.2 Columns
 
 A row in a layout grid contains one or more columns. Each column can be styled with the Class and Style properties. Additionally, the Weight property determines how wide the column is. The weights of all columns in a row must add up to 12\. Examples of valid rows are:
 
@@ -51,15 +55,13 @@ A row in a layout grid contains one or more columns. Each column can be styled w
 
 There is rarely a use case for more than four columns in a row.
 
-## Common Properties
+![](attachments/pages/layout-grid.png)
 
-{{% snippet file="refguide/Name+Property.md" %}}
+## 3 Properties
 
-{{% snippet file="refguide/Class+Property.md" %}} 
+### 3.1 Common Section
 
-{{% snippet file="refguide/Style+Property.md" %}}
-
-## General Properties
+### 3.2 General Section
 
 ### Width
 
@@ -76,6 +78,7 @@ As the layout grid responds to the viewport width, and not to the width of its c
 
 {{% /alert %}}
 
-## Visibility Properties
+### 3.3 Visibility Section
 
-{{% snippet file="refguide/Visible+Property.md" %}}
+## Read More
+

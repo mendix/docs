@@ -112,7 +112,7 @@ For more information, see [Async Await](https://basarat.gitbooks.io/typescript/d
 
     A file named `script.js` should appear (or, if you named the original TypeScript file e.g. `app.ts`, then it would be named `app.js`.
 
-    The TypeScript compiler will execute in a single run to compile all files configured in `tsconfig.json`. While developing your script, it can be practical to have the compiler immediately run once you make changes to your code. Use the `--watch` flag for `tsc` to monitor the files configured in the `tsconfig.json` file for changes and immediately run the compiler when you save the file:
+    The TypeScript compiler will execute in a single run to compile all files configured in *tsconfig.json*. While developing your script, it can be practical to have the compiler immediately run once you make changes to your code. Use the `--watch` flag for `tsc` to monitor the files configured in the *tsconfig.json* file for changes and immediately run the compiler when you save the file:
 
     ```bash
     $ tsc --watch

@@ -252,10 +252,10 @@ This is a major release, because it is not fully compatible with older versions 
 {{% /alert %}}
 
 * We added support for custom theming:
-  * You can configure the image on the error screen by adding/replacing `error.png`.
-  * You can configure the colors (background/foreground/text) of the error dialog box, login screen, and pin screen by adjusting `parameters.json`.
-  * You can adjust the HTML and CSS of the loading screen by configuring `loader.html.snippet` and `loader.css.snippet`.
-* We now properly set the page title based on the `name` value in `parameters.json`.
+  * You can configure the image on the error screen by adding/replacing *error.png*.
+  * You can configure the colors (background/foreground/text) of the error dialog box, login screen, and pin screen by adjusting *parameters.json*.
+  * You can adjust the HTML and CSS of the loading screen by configuring *loader.html.snippet* and *loader.css.snippet*.
+* We now properly set the page title based on the `name` value in *parameters.json*.
 
 ### January 31st, 2018 (1.7.4 / 1.4.0)
 
@@ -334,7 +334,7 @@ For this update, we recommend that you download a fresh hybrid app package from 
 ### October 12th, 2017 (1.4.1 / 1.3.0)
 
 * We fixed the wrong application of `Promise.all`, which broke the PIN flow.
-* We fixed the `appbase` command, used internally to build the Phonegap Build *zip* file.
+* We fixed the `appbase` command, used internally to build the Phonegap Build ZIP file.
 
 ### October 11th, 2017 (1.4.0 / 1.3.0)
 

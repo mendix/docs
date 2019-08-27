@@ -4,18 +4,17 @@ parent: "integrate-with-mendix-sso"
 menu_order: 72
 description: "How to manage Mendix SSO in your app so that local users and anonymous users are catered for"
 tags: ["SSO", "Single Sign-on", "AppCloudServices", "Local users", "Anonymous users"]
-#Needs a better description of what it does. Needs rewrite to remove launchpad references
 ---
 
 ## 1 Introduction
 
-After adding the *AppCloudServices* module to your app, users can login automatically with their Mendix account: they start at the launchpad and then click on the logo of your app. This sends them to the OpenId auto-login url, e.g. `https://yourapp.mendixcloud.com/openid/login`, and then they are redirected to the (role-based) home page that is configured in the app model.
+After adding the *AppCloudServices* module to your app, users can login automatically with their Mendix account: they start at the Launchpad and then click on the logo of your app. This sends them to the OpenId auto-login url, e.g. `https://yourapp.mendixcloud.com/openid/login`, and then they are redirected to the (role-based) home page that is configured in the app model.
 
 While this is enough for many users, in some cases, you also want to be able to use the root app url, `https://yourapp.mendixcloud.com/`. However, when users go to that url, they will be presented with the default Mendix login page, which does not provide them the option to log in with their Mendix account. To create a more fluent experience, you should consider two things: (1) whether you need to support non-Mendix account (local) users, and (2) whether you need to support anonymous users in your app.
 
 ## 2 Four Scenarios
 
-As described above, after adding the `AppCloudServices` module to your app, users can automatically login with their Mendix account: they start at the launchpad and then click on the logo of your app. This sends them to the OpenId auto-login url, e.g. `https://yourapp.mendixcloud.com/openid/login`, and then they are redirected to the (role-based) home page that is configured in the app model.
+As described above, after adding the `AppCloudServices` module to your app, users can automatically login with their Mendix account: they start at the Launchpad and then click on the logo of your app. This sends them to the OpenId auto-login url, e.g. `https://yourapp.mendixcloud.com/openid/login`, and then they are redirected to the (role-based) home page that is configured in the app model.
 
 And again, while this is enough for many users, in some cases, you also want to be able to use the root app url, `https://yourapp.mendixcloud.com/`. However, when users go to that url, they will be presented with the default Mendix login page, which does not provide them the option to log in with their Mendix account. To create a more fluent experience, you should consider two things: (1) whether you need to support non-Mendix account (local) users, and (2) whether you need to support anonymous users in your app.
 

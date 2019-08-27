@@ -150,11 +150,11 @@ Now that your repository is connected, follow the steps below to run Native Buil
 
 You can now use your binaries to run your app on testing devices. To publish your apps, though, you will need to get your apps signed. Consult [Enable Build Signing](#signing) below for more information on app signing.
 
-If your build times out (which happens to free App Center users after building for longer than 30 minutes), you can sign your app locally or move to a paid App Center account. This issue is more likely to affect iOS builds than Android builds.
+If your build times out (which happens to free App Center users after building for longer than 30 minutes), you can either sign your app locally or move to a paid App Center account. This build issue is more likely to affect iOS builds than Android builds.
 
-To sign your Android app locally, you could use apksigner by following Google's [apksigner documentation](https://developer.android.com/studio/command-line/apksigner).
+To sign your Android app locally, use apksigner by following Google's [apksigner documentation](https://developer.android.com/studio/command-line/apksigner).
 
-To sign your iOS app locally do the following:
+To sign your iOS app locally, do the following:
 1. Navigate to your built app's folder.
 2. Open the *.xcarchive* file using Xcode.
 3.  Click the **Distribute** button to start the local signing flow:

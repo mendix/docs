@@ -81,7 +81,7 @@ Follow these guidelines and conventions when writing:
 	* Do not use spaces or any other symbols in the file name (for example, `&`), as these will not be accepted
 	* Make sure the image files have names that make sense so it is easy to find them
 	* Save the image files in a sub-folder in the **attachments** folder for the category in which the document is located (this sub-folder should have the same name as the document file name you are working on)
-	* The following image file types are allowed: `.png` (preferred), `.jpg`,  `.gif`
+	* The following image extensions are allowed: *.png* (preferred), *.jpg*, *.gif*
 
 ### 4.3 Submitting Your Work
 

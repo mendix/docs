@@ -228,7 +228,7 @@ For an iOS app, do the following:
    let bundleUrl = AppUrl.forBundle(url: "http://LOCAL_IP_ADDRESS:8080", remoteDebuggingPackagerPort: 8083, isDebuggingRemotely: true)
    ```
 
-4. Locate the **Info.plist** file and replace the value of `Runtime url` with `http://LOCAL_IP_ADDRESS:8080`.
+4. Locate the *Info.plist* file and replace the value of `Runtime url` with `http://LOCAL_IP_ADDRESS:8080`.
 5. Run the app by clicking the **Play** button.
 
 #### 8.4.3 Android

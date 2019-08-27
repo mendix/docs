@@ -895,7 +895,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 * When updating the admin user password in the Mendix Cloud, the password policy description was wrong, which led to confusing situations. We updated the text.
 * When navigating to **Node Security**, the **App Team** tab no longer disappears.
-* Due to a *zip* file encoding change in Mendix 7.5.0, AppServices could not be parsed when deploying to the Mendix Cloud. We fixed this.
+* Due to a ZIP file encoding change in Mendix 7.5.0, AppServices could not be parsed when deploying to the Mendix Cloud. We fixed this.
 * The **View Current Log** button is no longer hidden for Free Apps.
 
 ### July 12th, 2017

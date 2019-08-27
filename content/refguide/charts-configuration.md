@@ -327,7 +327,7 @@ The properties above are common across the chart types. In this section, the pro
 
 Advanced JSON settings can also be added in a global context via the theme folder of your mendix project root directory.
 
-To the theme folder, add a `.json` file named *com.mendix.charts*. The JSON should be in the following format:
+To the theme folder, add a *.json* file named *com.mendix.charts*. The JSON should be in the following format:
 
 ``` json
 {

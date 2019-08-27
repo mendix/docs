@@ -137,7 +137,7 @@ The following steps describe how to start the selenium hub and the node with a J
 
 1.  Create JSON files in the created folder:
 
-	**gridHubConfig.json:**
+	*gridHubConfig.json*:
 	```
 	   {
 		"port": 4444,
@@ -155,7 +155,7 @@ The following steps describe how to start the selenium hub and the node with a J
 	   }
 	```
 	
-	**node.json:**
+	*node.json*:
 
 	```
 	   {

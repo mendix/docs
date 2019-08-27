@@ -11,7 +11,7 @@ If you have been using Desktop Modeler version 7, we advise reading [Moving from
 
 ## 2 Main Documents in This Category
 
-* [System Requirements](system-requirements) – details the system requireements for the various parts of the Mendix Platform, such as the following:
+* [System Requirements](system-requirements) – details the system requirements for the various parts of the Mendix Platform, such as the following:
 
 	* [Mendix Studio Pro](system-requirements#sp)
 	* [Team Server](system-requirements#ts)

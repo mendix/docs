@@ -155,6 +155,7 @@ If your build times out (which happens to free App Center users after building f
 To sign your Android app locally, use apksigner by following Google's [apksigner documentation](https://developer.android.com/studio/command-line/apksigner).
 
 To sign your iOS app locally, do the following:
+
 1. Navigate to your built app's folder.
 2. Open the *.xcarchive* file using Xcode.
 3.  Click the **Distribute** button to start the local signing flow:

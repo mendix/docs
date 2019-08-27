@@ -1,7 +1,8 @@
 ---
 title: "Snippet"
-parent: "pages"
-tags: ["studio pro"]
+parent: "page-resources"
+menu_order: 30
+tags: ["studio pro", "snippet", "page resources"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -19,7 +20,7 @@ The name of the snippet. You can change the name via the project explorer.
 
 {{% snippet file="refguide/Documentation+Property.md" %}}
 
-## Designer Properties
+## Design Properties
 
 ### Canvas width
 

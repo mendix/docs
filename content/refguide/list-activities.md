@@ -1,6 +1,7 @@
 ---
 title: "List Activities"
 parent: "activities"
+menu_order: 20
 tags: ["studio pro"]
 ---
 ## Aggregate

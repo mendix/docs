@@ -4,17 +4,23 @@ parent: "client-activities"
 tags: ["studio pro"]
 ---
 
+{{% alert type="warning" %}}
+This activity can be used in both **Microflows** and **Nanoflows**.
+{{% /alert %}}
+
 ## 1 Introduction
 
 With this action you can show a page to the end user.
 
-{{% alert type="info" %}}
+Note that you can also drag a page from the **Project Explorer** into your microflow directly:
 
-See [Microflow Element Common Properties](microflow-element-common-properties) for properties that all microflow activities share (for example, caption). This page only describes the properties specific to the action.
-
-{{% /alert %}}
+![](attachments/show-page/18580992.gif)
 
 ## 2 Input Properties
+
+{{% alert type="info" %}}
+See [Common Properties](microflow-element-common-properties) for properties that all microflow activities share (for example, caption). This page only describes the properties specific to the action.
+{{% /alert %}}
 
 ### 2.1 Object to pass
 
@@ -26,7 +32,7 @@ Object that will be passed to the opened page. This object will be used by [data
 
 The [page](page) to show to the end user. If the Object to pass is specified, the page must contain a data view connected to the same entity as the passed object (or its generalization).
 
-{{% alert type="success" %}}
+{{% alert type="info" %}}
 
 You can generate a new page to show by clicking 'Select...' and then 'New'. If you have selected an Object to pass Studio Pro will automatically generate a data view to edit that object.
 
@@ -36,7 +42,7 @@ You can generate a new page to show by clicking 'Select...' and then 'New'. If y
 
 By default the title of the page is determined by the page title property of the page. You can replace this title with a custom title if necessary.
 
-{{% alert type="success" %}}
+{{% alert type="info" %}}
 
 This feature allows you to re-use the same page for the New and Edit buttons of a data grid. By simply setting the titles to, for example, 'New customer' and 'Edit customer', you can save yourself the trouble of duplicating the rest of the page.
 

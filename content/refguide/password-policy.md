@@ -1,28 +1,33 @@
 ---
 title: "Password Policy"
 parent: "project-security"
-tags: ["studio pro"]
+menu_order: 50
+tags: ["studio pro", "password policy", "project security", "security"]
 ---
 
+## 1 Introduction
 
-You can specify a number of requirements for passwords. These requirements will be enforced when creating new users or changing passwords of existing users.
+You can specify a number of requirements for passwords. These requirements will be applied when creating new users or changing passwords of existing users.
 
-### Minimum length
+## 2 Password Policy Properties
 
-Specifies the minimum length of passwords.
+To set password policy properties, open **Project Security** > the **Password policy** tab:
 
-### Require digit
+![](attachments/password-policy/password-policy-tab.png)
 
-Specifies whether at least one digit is required in passwords.
+Password policy properties are described in the table below:
 
-### Require mixed case
+| Property           | Description                                                  |
+| ------------------ | ------------------------------------------------------------ |
+| Minimum length     | Specifies the minimum length of a password.                  |
+| Require digit      | Specifies whether at least one digit is required in a password. |
+| Require mixed case | Specifies whether a password must contain at least one lowercase character and one uppercase character. |
+| Require symbol     | Specifies whether passwords must contain at least one special symbol. The following characters are considered symbols: <br /> <code> ` ~ ! @ # $ % ^ & * ( ) - _ = + [ { ] } \ </code> |
 
-Specifies whether passwords must contain at least one lowercase character and one uppercase character.
+## 3 Read More
 
-### Require symbol
-
-Specifies whether passwords must contain at least one special symbol.
-
-The following characters are considered symbols:
-
-` ~ ! @ # $ % ^ & * ( ) - _ = + [ { ] } \ | ; : ' " < , > . / ?
+* [Project Security](project-security)
+* [User Roles](user-roles)
+* [Administrator](administrator)
+* [Demo Users](demo-users)
+* [Anonymous Users](anonymous-users)

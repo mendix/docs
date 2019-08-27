@@ -1,12 +1,12 @@
 ---
 title: "Date Range Field"
-parent: "report-widgets"
+parent: "report-date-parameter"
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 
-A date range field can be placed inside a date range selector to enable the end user to select a period in a date range. The begin and end of the selected period are stored in the from and to field of the date range selector.
+A date range field can be placed inside a [Report date parameter](report-date-parameter) to enable the end user to select a period in a date range. The begin and end of the selected period are stored in the from and to field of the date range selector.
 
 ## Appearance Property
 

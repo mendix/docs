@@ -1,47 +1,35 @@
 ---
 title: "Anonymous Users"
 parent: "project-security"
-tags: ["studio pro"]
+menu_order: 40
+tags: ["studio pro", "anonymous users", "project security", "security"]
 ---
 
-## 1 Allow Anonymous Users
+## 1 Introduction
 
-Here you can configure whether anonymous users are allowed to access your application.
+You can use anonymous users to allow end-users access your application without having to log in. You can restrict the data that anonymous users can view and access by assigning a specific user role to them. 
 
-| Value | Description |
-| --- | --- |
-| Yes | Anonymous users are allowed. End-users do not have to sign in to access the application. If the user clicks a button of which the microflow requires a user role other than the anonymous user role, the user is presented with a sign in screen. |
-| No | Anonymous users are not allowed. End-users have to sign in to access the application. |
+## 2 Anonymous Users Properties
 
-## 2 Anonymous User Role
+Open **Project Security** > the **Anonymous users** tab to access the properties:
 
-This is the user role that end-users of your application have when they are not signed in.
+![](attachments/anonymous-users/anonymous-users-tab.png)
 
-## 3 Sign-In Microflow
+The properties of anonymous users are described in the table below:
 
-When anonymous users are allowed, here you can optionally configure a sign-in microflow. This microflow can be used to transfer data from the anonymous user to the signed-in user. In this microflow the current user is set to the signed-in user.
+| Property              | Description                                                  |
+| --------------------- | ------------------------------------------------------------ |
+| Allow anonymous users | When **Yes** is selected, anonymous users are allowed. End-users do not have to sign in to access the application. <br />When **No** is selected, anonymous users are not allowed. End-users have to sign in to access the application. |
+| Anonymous user role   | The user role that end-users of your application have when they are not signed in. This tells the application which role should be automatically applied to anonymous users who access the app. The **Allow anonymous user role** property should be set to **Yes** to select an anonymous user role. |
 
-The sign-in microflow has two parameters.
+## 3 Read More
 
-| Name | Type | Description |
-| --- | --- | --- |
-| AnonymousUser | Object of entity 'System.User' | The 'User' object of the anonymous user. This object will be automatically deleted after the execution of the sign-in microflow. |
-| SignedInUser | Object of entity 'System.User' | The 'User' object of the signed-in user. |
+* [Project Security](project-security)
+* [User Roles](user-roles)
+* [Administrator](administrator)
+* [Demo Users](demo-users)
+* [Password Policy](password-policy)
 
-{{% alert type="warning" %}}
 
-Clean up objects that were attached to the anonymous user and that you do _not_ transfer to the signed-in user. Since the anonymous user is deleted after running the sign-in microflow, you can use [delete behavior](associations) to automatically clean objects that were attached to the anonymous user.
 
-{{% /alert %}}
 
-The sign-in microflow is executed when an end-user:
-
-1.  Uses your application without signing in (thus as an anonymous user), and then
-2.  clicks a button for which she does not have access, which causes a sign-in screen to appear, and then
-3.  signs in to your application.
-
-{{% alert type="info" %}}
-
-An anonymous user in a web shop adds some items to her shopping cart and then clicks the 'Check out' button. A sign-in screen appears, and the user signs in. The sign-in microflow is executed and transfers the shopping cart of the anonymous user to the signed-in user.
-
-{{% /alert %}}

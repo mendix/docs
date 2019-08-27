@@ -4,20 +4,23 @@ category: "Logic & Business Rules"
 menu_order: 2
 tags: ["microflow", "logic"]
 ---
+
+## 1 Introduction
+
 To add custom logic to your Mendix application you can use microflows. Microflows can be triggered in various ways, i.e. buttons, input fields, scheduled events, and more. This how-to will teach you how to configure the properties and settings of a microflow button placed on a grid or reference set selector. You will start with adding the microflow button to the right widget. Next you will need to configure the right properties and settings of the microflow button. 
 
-## 1 Preparations
+## 2 Prerequisites
 
 Before starting this how-to make sure you complete the following prerequisites:
 
 *   [Creating a basic data layer](../data-models/create-a-basic-data-layer)
 *   [Creating your first two Overview and Detail pages](../front-end/create-your-first-two-overview-and-detail-pages)
 
-## 2 Triggering Logic Using a Page Button
+## 3 Triggering Logic Using a Page Button
 
 In this exercise you will add a microflow button to a grid or a reference set selector and configure it. In this example you will add the button to the Datagrid widget, but this way the settings of the button will apply to the reference set selector and all the grid widgets.
 
-### 2.1 Adding a Button to a Data Grid
+### 3.1 Adding a Button to a Data Grid
 
 1.  Open you project in Mendix Studio Pro.
 2.  Open page with a **Datagrid**.
@@ -31,7 +34,7 @@ In this exercise you will add a microflow button to a grid or a reference set se
 
 You will do more configuration of this button below.
 
-### 2.2 Configuring the Microflow Properties
+### 3.2 Configuring the Microflow Properties
 
 At the moment there is only a button with no microflow behind it yet. In this exercise you will configure the button settings. 
 
@@ -57,19 +60,12 @@ At the moment there is only a button with no microflow behind it yet. In this ex
     | **Name** | This property specifies the name of the microflow in the page builderClass: The class property allows you to specify a cascading style sheet (CSS) class for the widget. This class will be applied to the widget in the browser and the widget will get the corresponding styling. The class should be a class from the theme that is used in the project. It overrules the default styling of the widget. |
     | **Style** | The style property allows you to specify additional CSS styling. If a class is also specified, this styling is applied _after_ the class. |
 
-    {{% alert type="warning" %}}
-
-    The styling is applied in the following order:
-
-    *   Default styling defined by the theme the project uses
-    *   The 'Class' property of the widget
-    *   The 'Style' property of the widget
-
+    {{% alert type="warning" %}}The styling is applied in the following order: 1) Default styling defined by the theme the project uses, 2) the 'Class' property of the widget, 3) the 'Style' property of the widget.
     {{% /alert %}}
 
 5. Click **OK** to save the properties.
 
-### 2.3 Configuring the Microflow Settings
+### 3.3 Configuring the Microflow Settings
 
 The microflow button has been added to the grid and the properties have been set. With the properties you can customize the appearance of the microflow button, in this section you are going to set the 'on click settings', which you can use to customize which parameters to pass to the microflow, whether to show a progress bar and more.
 
@@ -84,17 +80,17 @@ The microflow button has been added to the grid and the properties have been set
 
 3. Configure the sections described below, and then click **OK**.
 
-#### 2.3.1 Microflow Section
+#### 3.3.1 Microflow Section
 
 The **Microflow** is the one that will be executed. Its parameters should match the parameters that are passed to it.
 
 Click **Select** to select another microflow, or **Show** to go to the microflow editor of the selected microflow.
 
-#### 2.3.2 Microflow Arguments Section
+#### 3.3.2 Microflow Arguments Section
 
 The **Service** setting is the data grid that is to be passed to the microflow.
 
-#### 2.3.3 Execution Section
+#### 3.3.3 Execution Section
 
 These are the execution settings:
 
@@ -118,7 +114,7 @@ Set the duration only to asynchronous if you experience problems. Sometimes if a
 
 {{% /alert %}}
 
-#### 2.3.4 Confirmation Section
+#### 3.3.4 Confirmation Section
 
 You have the option to ask for confirmation before proceeding with the microflow. This is useful in cases where an operation modifies or deletes a lot of data or when it takes a lot of time to complete. The user will be prompted with a question whether to continue with this operation.
 
@@ -133,14 +129,14 @@ The title of the confirmation pop-up is determined by a system text (category 'M
 *   **Proceed button caption** – this is the caption for the button that proceeds with the execution of the microflow (for example, "Empty trash can")
 *   **Cancel button caption** – this is the caption for the button that cancels the execution of the microflow (for example, "Cancel")
 
-#### 2.3.5 Advanced Section
+#### 3.3.5 Advanced Section
 
 There are two more advanced settings:
 
 *   **Maintain selection after microflow** – this is only for grid microflow buttons and specifies whether the selection of the data should be maintained after executing the microflow
 *   **Abort on validation errors** – you can choose to abort the microflow on validation errors  here
 
-## 3 Read More
+## 4 Read More
 
 *   [Defining access rules using XPath](define-access-rules-using-xpath)
 *   [Extending Your Application with Custom Java](extending-your-application-with-custom-java)

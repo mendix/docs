@@ -1,7 +1,22 @@
 ---
 title: "Action Call Activities"
 parent: "activities"
-tags: ["studio pro"]
+menu_order: 30
+tags: ["studio pro", "javascript", "javascript actions"]
 ---
 
-For details, see [Microflow Call](microflow-call) and [Java Action Call](java-action-call).
+## Microflow Call
+
+See [Microflow Call](microflow-call).
+
+## Nanoflow Call
+
+See [Nanoflow Call](nanoflow-call).
+
+## Java Action Call
+
+See [Java Action Call](java-action-call).
+
+## JavaScript Action Call
+
+See [JavaScript Action Call](javascript-action-call).

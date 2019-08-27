@@ -111,6 +111,6 @@ API Version 1.
 | EnvironmentUUID | String | Yes | UUID of the requesting environment. This should be the value of the AppCloudServices.EnvironmentUUID constant, which the Mendix Developer Portal will fill in automatically. |
 | EnvironmentPassword | String | Yes | Password of the requesting environment. This should be the value of the AppCloudServices.EnvironmentUUID constant, which the Mendix Developer Portal will fill in automatically. |
 
-#### 2.2.4 Return type
+#### 2.2.4 Return Type
 
 String.

@@ -8,7 +8,7 @@ tags: ["excel", "excel  importer", "app store", "sheet"]
 
 Every now and then a client asks you to import some data. It doesn’t look like a lot of effort at first glance, so you add it as a task and plan to pick it up at the end of the day.
 
-Looking at the sheet later, you realize that there are more than hundred columns that need to be imported into the application. This means manual labour, a lot of it. As every column represents an attribute, creating 100+ new attributes in an import entity would take ages if you did it manually.
+Looking at the sheet later, you realize that there are more than hundred columns that need to be imported into the application. This means manual labor, a lot of it. As every column represents an attribute, creating 100+ new attributes in an import entity would take ages if you did it manually.
 
 The trick is to use XML-to-domain mapping.
 
@@ -77,14 +77,14 @@ To modify your Excel sheet, follow these steps:
 
 ## 4 Preparing Your XSD File
 
-We have used some of the basic functionalities of Excel to help us out creating the first part of our XSD structure. For a proper XSD file, we still need to have a header and a footer. This is where your favourite text editor comes in (for example, Brackets).
+We have used some of the basic functionalities of Excel to help us out creating the first part of our XSD structure. For a proper XSD file, we still need to have a header and a footer. This is where your favorite text editor comes in (for example, Brackets).
 
 To prepare your XSD file, follow these steps:
 
 1.  Open a new file and call it *CountriesImport.xsd*.
 2.  Place this text as the header of your XSD file:
 
-    ```text
+    ```xsd
     <?xml version="1.0"?>
     <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified">
     <xs:element name="CountriesImport">
@@ -95,7 +95,7 @@ To prepare your XSD file, follow these steps:
 3.  Go back to your sheet, copy the content from column **D**, and paste it underneath the header.
 4.  Now it’s time to place the footer, which will complete the XSD file. Place this text as for footer:
 
-    ```text
+    ```xsd
     </xs:sequence>
     </xs:complexType>
     </xs:element>

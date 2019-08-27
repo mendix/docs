@@ -5,6 +5,21 @@ category: "Studio Pro"
 
 To download the Windows Service, go to the Desktop Modeler page in the [Mendix App Store](https://appstore.home.mendix.com/link/modelers) and open **Related downloads**.
 
+## 4.6
+
+**Release date: August 8, 2019**
+
+* We added support for [Studio Pro 8](../studio-pro/8.0).
+* We added the option to download the applicable server distribution on the form where you add or update an app.
+* The default location in the **Browse** window is now selected when uploading or when a temporary files path is not set.
+* We updated the [Newtonsoft Json.NET](https://www.newtonsoft.com/json) library from 5.0.3 to 12.0.2.
+* We updated the [DotNetZip](https://archive.codeplex.com/?p=DotNetZip) library from version 1.11.0 to 1.13.3.
+* We replaced an old version of the [Active Directory Common Dialogs .NET](https://archive.codeplex.com/?p=adui) library with [Tulpep.ActiveDirectoryObjectPicker](https://www.nuget.org/packages/Tulpep.ActiveDirectoryObjectPicker/) 2.3.133.
+
+Known issue:
+
+* If an Oracle Java 8 installation is available, this version will be selected by default for Mendix 8 apps. Please make sure you select JRE or JDK 11 from Oracle or OpenJDK (AdoptOpenJDK). This will be fixed in a future release.
+
 ## 4.5.1
 
 **Release date: June 5, 2018**
@@ -149,7 +164,7 @@ You can safely update the Mendix Service Console. You don't have to stop the cur
 Mendix Service Console 4 manages all your Mendix 3 and 4 apps within one application. The left bar shows all the apps on your server. When you click an app, you can manage that app on the panel at the right side. You can show logging output of all your apps in separate windows.
 Installation
 
-Execute the new installer to install the Mendix Service Console on your system. Do not install it in the locations you earlier extract the Mendix Service Console zip file to. Starting with this version apps no longer have their own service console; this new Mendix Service Console manages all your apps!
+Execute the new installer to install the Mendix Service Console on your system. Do not install it in the locations you earlier extract the Mendix Service Console *zip* file to. Starting with this version apps no longer have their own service console; this new Mendix Service Console manages all your apps!
 Import of old apps
 
 Import all your old apps one by one. All project, log and backup files will remain in the same old locations. Only the settings will be saved to a new location and you have to add Mendix distributions again. Only do a reinstall of the service when the app runs successfully with a normal start. After a reinstall of the service (and if the service starts correctly), the old Mendix Service Console for that app can be removed.
@@ -238,7 +253,7 @@ Now each app has its own license, even if it runs under the same user account as
 * Moved Service panel content to Management panel.
 * Moved Project path and Mendix path from Common Configuration panel to Management panel.
 * Added setting for Backup path.
-* Added possibility to use a Mendix Deployment Archive (MDA file) to update the project. The old project files are backed up to a zip file in the Backup folder.
+* Added possibility to use a Mendix Deployment Archive (MDA file) to update the project. The old project files are backed up to a *zip* file in the Backup folder.
 * Added possibility to use a Mendix Server distribution (tar.gz file) to add a Mendix server version. More versions can be installed side-by-side. Mendix chooses the right version to start the project. The existing Mendix server version from pre-2.1 Mendix Windows Service applications will be kept when using this 2.1 version, but when you installs a new Mendix server version, that version will be used if suitable for the project.
 * Now the application is always started under the specific service user account to simulate the same user environment as when it is started as service. A service user account must be given before a project can be run.
 * Added possibility to select a service user account via a Active Directory picker.

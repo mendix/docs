@@ -1,6 +1,7 @@
 ---
 title: "Domain Model"
 category: "App Modeling"
+menu_order: 30
 tags: ["domain model", "entity", "association", "annotation", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -14,9 +15,9 @@ Here is a domain model that defines customers and orders. The line between them 
 
 ## Components
 
-*   [Entities](entities)
 *   [Associations](associations)
 *   [Annotations](annotations)
+*   [Entities](entities)
 
 ## Technical Appendix
 

@@ -1,10 +1,12 @@
 ---
 title: "Input Reference Set Selector"
 parent: "input-widgets"
+menu_order: 90
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert type="warning" %}}The input reference set selector widget is not supported on native mobile pages.{{% /alert %}}
 
 The input reference set selector is an [input widget](input-widgets) that can be used to display and edit [associations](associations) for which the multiplicity setting is configured to allow multiple parent objects to associate with multiple children. This type of association is also known as a reference set.
 
@@ -32,7 +34,7 @@ If an input reference set selector is not editable under any circumstances, no s
 
 See [Opening Pages](opening-pages). Note that opening select pages in content is prohibited.
 
-{{% alert type="success" %}}
+{{% alert type="info" %}}
 
 You can generate a new page to show by right-clicking the widget and selecting 'Generate select page...'.
 

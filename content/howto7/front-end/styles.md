@@ -2,7 +2,7 @@
 title: "Implement Styles"
 category: "Front-End"
 description: "Presents details on using class names for text colors, buttons, and other style elements."
-menu_order: 45
+menu_order: 40
 tags: ["style", "class name", "user interface", "Front-End"]
 ---
 

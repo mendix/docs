@@ -1,11 +1,16 @@
 ---
 title: "Report Grid"
 parent: "report-widgets"
+menu_order: 10
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-This shows the reported data in a grid.
+{{% alert type="warning" %}}The report grid widget is not supported on native mobile pages.{{% /alert %}}
+
+This shows the reported data in a grid. 
+
+The difference between a data grid and a report grid is that the data shown in the report grid is not stored in the database. Each time a report is created, the data is retrieved from the database.
 
 ## Data Source Properties
 
@@ -25,9 +30,9 @@ If **Use Paging** is true, this property indicates the number of occurrences tha
 
 ### Zoom
 
-This property can refer to a form. When the user double-clicks an occurrence in the report, that form is displayed.
+This property can refer to a page. When the user double-clicks an occurrence in the report, that page is displayed.
 
-If the other form contains a report, the columns of the current report can be mapped to the parameters of the report in the other form.
+If the other page contains a report, the columns of the current report can be mapped to the parameters of the report in the other page.
 
 ### Column Widths
 
@@ -45,4 +50,4 @@ If this property is false, the report grid will not show its data until the user
 
 ### Name, Class, Style
 
-For details, see [Common Widget Properties](common-widget-properties).
+For details, see [Properties Common for Widgets](common-widget-properties).

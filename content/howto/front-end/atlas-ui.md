@@ -1,7 +1,7 @@
 ---
 title: "Atlas UI"
 category: "Front-End"
-menu_order: 9
+menu_order: 5
 tags: ["Atlas", "UI", "UX", "user experience"]
 ---
 
@@ -60,8 +60,9 @@ You can further customize widgets by changing their design properties. Colors, t
 ## 3 Read More
 
 * [Get Started with Atlas UI](get-started-with-atlasui)
-* [Migrate Existing Projects to Atlas UI](migrate-existing-projects-to-atlasui)
+* [Migrate Existing App Projects to Atlas UI](migrate-existing-projects-to-atlasui)
 * [Create Company Atlas UI Resources](create-company-atlas-ui-resources)
 * [Share Company Atlas UI Resources](share-company-atlas-ui-resources)
 * [Create Custom Preview Images for Building Blocks & Page Templates](create-custom-preview-images-for-building-blocks-and-page-templates)
 * [Extend Design Properties to Customize Your Studio Experience](extend-design-properties-to-customize)
+* [Troubleshooting Atlas UI Changes](/refguide/migration-atlas)

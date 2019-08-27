@@ -24,6 +24,6 @@ The return type defines what information the nanoflow returns. The caller of the
 
 ### 4.1 Allowed Roles
 
-These are the [module roles](module-role) the user must have to be able to execute the nanoflow.
+These are the [module roles](module-security#module-role) the user must have to be able to execute the nanoflow.
 
 For more information, see [Module Security](module-security).

@@ -1,6 +1,7 @@
 ---
 title: "Container"
 parent: "container-widgets"
+menu_order: 20
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -42,6 +43,8 @@ The render mode determines which HTML5 tag will be used to show the container in
 | Address   | `address`   |
 
 _Default value:_ Div
+
+{{% alert type="info" %}}Render mode is not supported on native mobile pages.{{% /alert %}}
 
 ## Visibility properties
 

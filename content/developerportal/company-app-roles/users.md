@@ -4,6 +4,7 @@ parent: "companyadmin-settings"
 menu_order: 20
 description: "Describes how a Company Admin can manage an app's users in the Developer Portal."
 tags: ["company","admin", "Company Admin", Developer Portal", "activate", "deactivate", "user"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
@@ -96,7 +97,7 @@ You can perform the following actions on this tab:
         * Members of this security group will be granted access to these apps automatically
         * It is only possible to create access policies for licensed AppCloud-enabled apps
         * Under **Select Environment**, you can select a specific node environment for the app
-        * Under **Select Role(s)**, you can select specific user roles for the app
+        * Under **Select Role(s)**, you can select specific [user roles](/refguide/project-security#user-roles) for the app
 
 ## 4 Security History Tab
 

@@ -76,7 +76,7 @@ To manage custom domains, follow these steps:
 
     ![](attachments/custom-domains/custom-domains-tab.png)
 
-If you already have a signed SSL/TLS certificate, continue with section 5, [Uploading Your Own Custom Domain Certificate](#Uploading).
+If you already have a signed SSL/TLS certificate, continue with [Uploading Your Own Custom Domain Certificate](#Uploading), below.
 
 ## 4 Obtaining a New Signed Certificate
 
@@ -124,7 +124,7 @@ Once you have a signed SSL/TLS certificate, you can upload it by following these
 
     ![](attachments/custom-domains/21168227.png)
 
-You can now configure your custom domain. See section 7, [Configuring a Custom Domain](#Configuring).
+You can now configure your custom domain. See [Configuring a Custom Domain](#Configuring), below.
 
 ## 5 Uploading Your Own Custom Domain Certificate{#Uploading}
 
@@ -156,7 +156,7 @@ To upload the custom domain certificate, follow these steps:
 
     {{% alert type="info" %}}The SSL/TLS private key will be hidden after uploading it. It will be stored in our secure keystore and will not be available for download in order to keep it secure.{{% /alert %}}
 
-You can now configure your custom domain. See section 7, [Configuring a Custom Domain](#Configuring).
+You can now configure your custom domain. See [Configuring a Custom Domain](#Configuring), below.
 
 ## 6 Renewing a Custom Domain Certificate
 
@@ -170,11 +170,11 @@ Custom domain certificates have an expiry date. There are two methods for renewi
 
 You can handle an expiring domain certificate by replacing it with a new one. You can do this in one of two ways:
 
-* generate a new certificate request (for more information, see section 4, [Generating a Certificate Request for Your Custom Domain](#Generating))
+* generate a new certificate request (for more information, see [Generating a Certificate Request for Your Custom Domain](#Generating))
 
-* upload a new custom domain certificate (for more information, see section 5, [Uploading Your Own Custom Domain Certificate](#Uploading)).
+* upload a new custom domain certificate (for more information, see [Uploading Your Own Custom Domain Certificate](#Uploading))
 
-You can now select the new certificate for your custom domain (for more information, see section 7 [Configuring a Custom Domain](#Configuring)).
+You can now select the new certificate for your custom domain (for more information, see [Configuring a Custom Domain](#Configuring)), below.
 
 ### 6.2 Method 2: Renewing by Updating an Existing Custom Domain Certificate
 
@@ -215,7 +215,7 @@ To configure a custom domain for your application environment, follow these step
 
 {{% alert type="info" %}}
 
-Make sure you have configured a CNAME record for your custom domain with your domain registrar/DNS provider (for details, see section 2.2. [Create and Configure a CNAME Record](#DNS)).
+Make sure you have configured a CNAME record for your custom domain with your domain registrar/DNS provider (for details, see [Create and Configure a CNAME Record](#DNS)), above.
 
 {{% /alert %}}
 

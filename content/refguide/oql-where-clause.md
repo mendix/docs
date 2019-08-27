@@ -1,7 +1,7 @@
 ---
 title: "OQL Where Clause"
 parent: "oql"
-tags: ["studio pro"]
+tags: ["studio pro", "queries", "where"]
 ---
 
 
@@ -14,7 +14,7 @@ WHERE <constraint>
 ```
 
 `<constraint>`
-An expression for which the value always equals true. Expressions consist of simple comparables with operators, functions, keywords or system variables.
+An expression for which the value always equals true. Expressions consist of simple comparisons using operators, functions, keywords or system variables.
 
 {{% alert type="info" %}}
 

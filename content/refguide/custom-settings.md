@@ -4,6 +4,7 @@ category: "Mendix Runtime"
 description: "Describes custom settings for server, log file, database, Amazon S3 storage service, IBM Cloud Object Storage, Microsoft Azure, IBM Bluemix object storage, web client, and proxy server in Mendix."
 tags: ["Runtime", "Customization", "Settings", "Configuration", "IBM Cloud", "Amazon S3", "IBM Cloud Object Storage", "Microsoft Azure", "Custom Settings", "Proxy", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+#The anchor #5-amazon-s3-storage-service-settings below is mapped, so it should not be removed or changed.
 ---
 
 ## 1 Custom Runtime Settings
@@ -12,13 +13,13 @@ You can use custom server settings to configure the Runtime beyond the standard 
 
 {{% alert type="warning" %}}
 
-Only use this functionality if you know exactly what you are doing. Wrong values can prevent the Runtime from starting.
+Only use this functionality if you know exactly what you are doing. Incorrect values can prevent Mendix Runtime from starting.
 
 {{% /alert %}}
 
 Each custom setting consists of a name and a value. For example, to enable persistent sessions you add a custom setting with name `PersistentSessions` and value `true`. For a more detailed list of settings and example values please consult the [fully-documented m2ee.yaml](https://github.com/mendix/m2ee-tools/blob/master/examples/full-documented-m2ee.yaml).
 
-If you are running your app on the Mendix Cloud, you can access these settings on the **Runtime Tab** of the *Environment Details*: accessible from the *Environments* page of the Developer Portal. For more information see [Environment Details – Runtime Tab](/developerportal/deploy/environments-details#runtime-tab).
+If you are running your app on the Mendix Cloud, you can access these settings in the Developer Portal via **Environments** > **Environment Details** > **Runtime**. For more information see [Environment Details – Runtime Tab](/developerportal/deploy/environments-details#runtime-tab).
 
 ## 2 General Settings
 
@@ -65,9 +66,14 @@ The settings below influence the behavior of the log files. These settings can o
 | Name | Description | Default value |
 | --- | --- | --- |
 | ClientQueryTimeout | Defines the timeout in seconds for most of the database queries which are executed to load data into client widgets, like data grids. After the duration as specified here, a query will be canceled and an exception will be thrown. |   |
+| DatabaseType | Defines the database engine which is used as the Mendix database. Valid values are<br/>DB2<br/>HSQLDB<br/>MYSQL<br/>ORACLE<br/>POSTGRESQL<br/>SAPHANA<br/>SQLSERVER | |
+| DatabaseUserName | Name required for authentication to the database. | |
+| DatabasePassword | Password for the DatabaseUserName supplied above. | |
+| DatabaseHost | The host name and optionally the TCP port number of the database. Use a colon as separator between host name and port number. Possible values are: db.url.org, db.url.org:1521, 10.0.0.5, 10.0.0.5:1433\. It's possible to use a plain IPv6 address by enclosing it in brackets, like: [::1]:5432 <br/>This will be overridden if you supply **DatabaseJdbcUrl**. | |
+| DatabaseName | The name of the database or schema used by the Mendix app <br/>This will be overridden if you supply **DatabaseJdbcUrl**. | |
 | DatabaseJdbcUrl | Defines the JDBC URL to use for the database connection (which overrides the other database connection settings). This feature is not supported for PostgreSQL databases. |   |
 | DatabaseUseSsl | For PostgreSQL databases, defines whether the connection will be made using SSL. | false |
-| LogMinDurationQuery | Defines whether database queries are logged via the ConnectionBus_Queries log node if they finished after the number of milliseconds specified here. By default, only the relevant SQL query will be logged. Set the log level of the ConnectionBus_Queries log node to TRACE to show more information about the form or the microflow which leads to this query. |   |
+| LogMinDurationQuery | Defines whether database queries are logged via the ConnectionBus_Queries log node if they finished after the number of milliseconds specified here. By default, only the relevant SQL query will be logged. Set the log level of the ConnectionBus_Queries log node to TRACE to show more information about the page or the microflow which leads to this query. |   |
 | OracleServiceName | Defines the SERVICE_NAME when you have a connection with an Oracle DBMS. |   |
 | ReadCommittedSnapshot | Defines whether the READ_COMMITTED_SNAPSHOT option of Microsoft SQL Server must be enabled or not. See for more information: [Using Snapshot Isolation](http://msdn.microsoft.com/en-us/library/tcbchxcb(VS.80).aspx). The value can be true or false. | true |
 | DataStorage.EnableDiagnostics | This setting can be used to generate a uniqueness constraint violation report. | false |
@@ -106,7 +112,7 @@ Possible values: HSQLDB, MYSQL, ORACLE, POSTGRESQL, SQLSERVER |   |
 | SourceDatabaseUserName | The user name for the connection to the source database. |   |
 | SourceOracleServiceName | Defines the SERVICE_NAME when you have a connection with an Oracle DBMS as source. |   |
 
-## 5 S3 Storage Service Settings {#aws-s3}{#s3}
+## 5 S3 Storage Service Settings {#5-amazon-s3-storage-service-settings}
 
 The settings described below influence the behavior of the Amazon S3 Storage Service module. This module can be used for both Amazon S3 Storage and IBM Cloud Object Storage. Using these settings manually in Mendix Cloud is strongly discouraged, as files stored in external systems will not be included in backup creation and restoration.
 
@@ -115,8 +121,9 @@ The settings described below influence the behavior of the Amazon S3 Storage Ser
 | com.mendix.storage.s3.AccessKeyId | Acts as the username to authenticate with the S3 service. |   |
 | com.mendix.storage.s3.SecretAccessKey | Acts as the password to authenticate with the S3 service. |   |
 | com.mendix.storage.s3.BucketName | Name of the bucket where the files are stored on S3. |   |
-| com.mendix.storage.s3.ResourceNameSuffix | Suffix for the keys under which objects are stored. This can be used when buckets are divided into different segments for different users with different credentials (e.g. store objects as "[key].customer1" for customer1 and as "[key].customer2" for customer2) |   |
+| com.mendix.storage.s3.ResourceNameSuffix | Suffix for the keys under which objects are stored. This can be used when S3 buckets are divided into different segments for different users with different credentials (e.g. store objects as "[key].customer1" for customer1 and as "[key].customer2" for customer2) |   |
 | com.mendix.storage.s3.PerformDeleteFromStorage | Deprecated. Use `com.mendix.storage.PerformDeleteFromStorage`.<br/>Defines whether a delete of a Mendix File Document should result in an actual delete in the storage service. A reason to not perform an actual delete in the storage service can be when it's also used as a backup service. | true |
+| <a name="s3-region"></a>com.mendix.storage.s3.Region | Sets the region in which the S3 bucket is located. This will be used to determine the service endpoint, unless overridden in com.mendix.storage.s3.EndPoint. This setting will also be used as the signing region for requests. |
 | com.mendix.storage.s3.EndPoint | Overrides the default endpoint. This setting is required when the storage is on a non-AWS location (for example, IBM Cloud Object Storage). Both the endpoint (for example, `s3.example.com`) or the full URL (including the protocol) are supported (for example, `https://s3.example.com`). Note that when setting a custom endpoint, path style access will be enabled. For more information, see [Class S3ClientOptions](http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/s3/S3ClientOptions.html#withPathStyleAccess(boolean)). |   |
 | com.mendix.storage.s3.UseV2Auth | Let the authentication policy use 'Signature Version 2' instead of the default 'Signature Version 4'. Set this setting to 'true' when the endpoint does not support 'Signature Version 4'. | false |
 | com.mendix.storage.s3.EncryptionKeys | List of keys which can be used to encrypt and decrypt data at rest in S3\. The right key to decrypt the data with is automatically selected depending on with which key it was encrypted. Each encryption key consists of a key id, the encryption algorithm and the actual key (Base64 encoded). Example: ![](attachments/Custom+Settings/code_snippet_2.png) |   |

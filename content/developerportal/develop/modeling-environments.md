@@ -14,7 +14,7 @@ On the **Model** page of the Developer Portal, you have options for opening up y
 
 ## 2 Mendix Studio Pro
 
-In Studio Pro, you can visually model your app’s domain model, UI, logic, and integrations with third-party services and back-end systems. Use the power of Studio Pro to rapidly build enterprise-ready apps.
+In [Studio Pro](/refguide), you can visually model your app’s domain model, UI, logic, and integrations with third-party services and back-end systems. Use the power of Studio Pro to rapidly build enterprise-ready apps.
 
 Click **Edit in Studio Pro** to open your app project in Studio Pro.
 

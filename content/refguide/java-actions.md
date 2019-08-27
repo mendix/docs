@@ -1,6 +1,7 @@
 ---
 title: "Java Actions"
-category: "App Modeling"
+parent: "resources"
+menu_order: 10
 description: "Describes using Java Actions to extend the functionality of your Mendix app."
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -75,7 +76,7 @@ By selecting the **Expose as microflow action** option, it is possible to expose
 
 The caption and category of the microflow action are required, but the icon is optional. When no icon is selected, the default Java action icon is used.
 
-The recommended size for the icon is 16x16.
+The recommended size for the icon is 16x16 pixels.
 
 ## 5 Documentation
 

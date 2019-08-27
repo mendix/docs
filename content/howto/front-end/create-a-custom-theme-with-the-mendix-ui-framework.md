@@ -21,7 +21,7 @@ This how-to presents creating a custom theme with the Mendix UI Framework.
 
 Before starting with this how-to, make sure you have completed the following prerequisites:
 
-* Download the latest version of [Mendix Studio Pro](https://appstore.mendix.com/) (5.18.0 or later)
+* Download the latest version of [Mendix Studio Pro](https://appstore.mendix.com/)
 * Download [Scout](http://mhs.github.io/scout-app/) (or use a different compiler, such as [Sass](http://sass-lang.com/install))
 * Download your preferred text editor (such as [Sublime Text](http://www.sublimetext.com/))
 

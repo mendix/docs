@@ -24,7 +24,7 @@ A newly created version will have the status set to 'Draft' by default. With 'Dr
 
 Once the status is set to 'Consumable', you cannot edit the app service anymore. App service versions are only editable when the version is in 'Draft'. Only one version of app service is allowed to be in 'Draft' status.
 
-{{% alert type="success" %}}
+{{% alert type="info" %}}
 Always remember to set at least one app service version to Consumable before going to production. Only Consumable app service versions will be available in production.
 {{% /alert %}}
 

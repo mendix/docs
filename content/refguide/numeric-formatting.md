@@ -6,31 +6,31 @@ tags: ["studio pro"]
 
 ## 1 Behavior in Your Mendix Application
 
-A number will be translated into XML untouched, except that any trailing zeroes will be stripped and the representation will always be in non-scientific notation. The used rounding mode is configured in the [Project Settings](project-settings).
+A number will be translated into XML untouched, except that any trailing zeroes will be stripped and the representation will always be in non-scientific notation. The rounding mode used is configured in the [Project Settings](project-settings).
 
 ## 2 XML Schema Facets
 
 How numbers in XML should be represented can be specified in an XSD (or WSDL) by using schema facets.
 
-We currently support _totalDigits_ and _fractionDigits_ for numeric elements.
+Mendix currently supports `totalDigits` and `fractionDigits` for numeric elements:
 
-*   totalDigits: defines the maximum number of digits in the number (excluding the dot and minus sign)
-*   fractionDigits: defines the maximum number of digits after the decimal dot
+* `totalDigits` -  defines the maximum number of digits in the number (excluding the dot and minus sign)
+*  `fractionDigits` - defines the maximum number of digits after the decimal dot
 
-This means that if we encounter a number that does not match the required output format, we will round it so it does match. If it is not possible to represent the number correctly by formatting the number then it will simply be put in the XML as is. Example: An XSD specifies a maximum amount of digits of 3 but the number is 1000.
+This means that if a number is encountered that does not match the required output format,  it will be rounded it so it does match. If it is not possible to represent the number correctly by formatting the number, then it will simply be put in the XML as is. For example, an XSD specifies a maximum amount of digits of 3, but the number is 1000.
 
-Mendix does not enforce compliance to these restrictions unless 'validate against wsdl' is enabled in web service calls, or 'validate against schema' is enabled in XML Export actions.
+Mendix does not enforce compliance to these restrictions unless **Validate against WSDL** is enabled in web service calls or **Validate against schema** is enabled in XML export actions.
 
-| Orginal value | Total digits | Fraction digits | Formatted value | Comment |
+| Orginal Value | Total Digits | Fraction Digits | Formatted Value | Comment |
 | --- | --- | --- | --- | --- |
-| 20.0055 | 3 | undefined | 20 |   |
-| 20.0055 | undefined | 3 | 20.006 |   |
-| 0.0 | undefined | undefined | 0 |   |
+| 20.0055 | 3 | Undefined | 20 |   |
+| 20.0055 | Undefined | 3 | 20.006 |   |
+| 0.0 | Undefined | Undefined | 0 |   |
 | 110.9555 | 5 | 3 | 110.96 |   |
 | -110.9555 | 5 | 3 | -110.96 |   |
-| 0.0000001 | undefined | 6 | 0 |   |
-| 99.99 | 3 | undefined | 100 |   |
-| 99.99 | 2 | undefined | 99.99 | Not possible to format correctly, so left untouched. |
-| 999.99 | 2 | 1 | 999.99 | Not possible to format correctly, so left untouched. |
-| 1.19E-17 | undefined | undefined | 0.0000000000000000119 |   |
+| 0.0000001 | Undefined | 6 | 0 |   |
+| 99.99 | 3 | Undefined | 100 |   |
+| 99.99 | 2 | Undefined | 99.99 | Not possible to format correctly, so left untouched |
+| 999.99 | 2 | 1 | 999.99 | Not possible to format correctly, so left untouched |
+| 1.19E-17 | Undefined | Undefined | 0.0000000000000000119 |   |
 

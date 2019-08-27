@@ -82,15 +82,18 @@ Select whether clients need to authenticate or not.
 If authentication is required, you can select which authentication methods you would like to support
 
 * Select **Username and password** to allow clients to authenticate themselves using a username and a password in the **Authorization** header (this is called "basic authentication")
-* Select **Active session** to allow access from JavaScript inside your current application
+*  Select **Active session** to allow access from JavaScript inside your current application
   * Once a user has logged into the browser, the JavaScript in your app can access the REST service using the current user's session
+  * [Offline-first](offline-first) apps cannot use active session authentication, because they do not have sessions that stay active while the app is running
   * To prevent cross-site request forgery, the `X-Csrf-Token` header needs to be set on each request, for example:
 
-    ```var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open("GET", "http://mysite/rest/myservice/myresource", false);
-    xmlHttp.setRequestHeader("X-Csrf-Token", mx.session.getConfig("csrftoken"));
-    xmlHttp.send(null);
-    ```
+  ```javascript
+  var xmlHttp = new XMLHttpRequest();
+  xmlHttp.open("GET", "http://mysite/rest/myservice/myresource", false);
+  xmlHttp.setRequestHeader("X-Csrf-Token", mx.session.getConfig("csrftoken"));
+  xmlHttp.send(null);
+  ```
+
 * Select **Custom** to authenticate using a microflow. This microflow is called every time a user want to access a resource.
 
 Check more than one authentication method to have the service try each of them. It will first try **Custom** authentication, then **Username and password**, and then **Active session**. For more details, see [Published REST Routing](published-rest-routing).
@@ -115,7 +118,7 @@ There are three possible outcomes of the authentication microflow
 
 ### 3.4 Allowed Roles
 
-The allowed roles define which [module role](module-role) a user must have to be able to access the service. This option is only available when **Requires authentication** is set to **Yes**.
+The allowed roles define which [module role](module-security#module-role) a user must have to be able to access the service. This option is only available when **Requires authentication** is set to **Yes**.
 
 {{% alert type="warning" %}}
 Web service users cannot access REST services.

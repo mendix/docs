@@ -2,12 +2,6 @@
 
 <div class="alert alert-info">
 
-Introduced in Mendix 7.15. In prior versions, Decimal mode could not be set and was always Fixed.
-
-</div>
-
-<div class="alert alert-info">
-
 This mode only applies to the Decimal, Float (deprecated), and Currency (deprecated) attribute types.
 
 </div>
@@ -34,7 +28,7 @@ _Default value:_ Fixed
 
 <div class="alert alert-info">
 
-This only applies to the Decimal, Float (deprecated), and Currency (deprecated) attribute types. From Mendix 7.15, this is available only when the Decimal mode is set to Fixed.
+This only applies to the Decimal, Float (deprecated), and Currency (deprecated) attribute types. This is available only when the Decimal mode is set to Fixed.
 
 </div>
 

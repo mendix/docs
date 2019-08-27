@@ -42,7 +42,7 @@ URL: https://deploy.mendix.com/api/1/apps/
 **Example Request**
 
 ```bash
-GET /api/1/apps/ HTTP/1.1
+GET /api/1/apps/ 
 Host: deploy.mendix.com
 Content-Type: application/json
 Mendix-Username: richard.ford51@example.com
@@ -60,7 +60,7 @@ List of objects with the following key-value pairs:
 
 **Example Output**
 
-```bash
+```json
 [{
     "Name": "Calculation App",
     "Url": "https://calc.mendixcloud.com",
@@ -96,7 +96,7 @@ An object with the following key-value pair:
 **Example Request**
 
 ```bash
-POST /api/1/apps/ HTTP/1.1
+POST /api/1/apps/ 
 Host: deploy.mendix.com
 Content-Type: application/json
 Mendix-Username: richard.ford51@example.com
@@ -125,7 +125,7 @@ Response object with the following fields:
 
 **Example Output**
 
-```bash
+```json
 {
     "Name": "Calculation App",
     "Url": "https://calc.mendixcloud.com",
@@ -154,7 +154,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>
 **Example Request**
 
 ```bash
-GET /api/1/apps/calc/ HTTP/1.1
+GET /api/1/apps/calc/ 
 Host: deploy.mendix.com
 Content-Type: application/json
 Mendix-Username: richard.ford51@example.com
@@ -178,7 +178,7 @@ Object with the following key-value pairs:
 
 **Example Output**
 
-```bash
+```json
 {
     "AppId": "calc",
     "ProjectId": "543857rfds-dfsfsd12c5e24-3224d32eg",
@@ -207,7 +207,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/
 **Example Request**
 
 ```bash
-GET /api/ 1 /apps/calc/environments/ HTTP/ 1.1
+GET /api/1/apps/calc/environments/ 
 Host: deploy.mendix.com
 
 Content-Type: application/json
@@ -228,7 +228,7 @@ List of objects with the following key-value pairs:
 
 **Example Output**
 
-```bash
+```json
 [
     {
         "Status" :  "Stopped" ,
@@ -271,7 +271,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>
 **Example Request**
 
 ```bash
-GET /api/1/apps/calc/environments/Acceptance HTTP/1.1
+GET /api/1/apps/calc/environments/Acceptance 
 Host: deploy.mendix.com
 Content-Type: application/json
 Mendix-Username: richard.ford51@example.com
@@ -300,7 +300,7 @@ An object with the following key-value pairs:
 
 **Example Output**
 
-```bash
+```json
 {
      "Status" :  "Stopped" ,
      "Mode" :  "Acceptance",
@@ -333,7 +333,7 @@ An object with the following key-value pair:
 **Example Request**
 
 ```bash
-POST /api/ 1 /apps/calc/environments/Acceptance/start HTTP/ 1.1
+POST /api/1/apps/calc/environments/Acceptance/start 
 Host: deploy.mendix.com
 
 Content-Type: application/json
@@ -363,7 +363,7 @@ An object with the following key-value pairs:
 
 **Example Output**
 
-```bash
+```json
 {
      "JobId" :  "02df2e50-0e79-11e4-9191-0800200c9a66" ,
 }
@@ -385,7 +385,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/start/<Job
 **Example Request**
 
 ```bash
-GET /api/ 1 /apps/calc/environments/Acceptance/start/02df2e50-0e79-11e4- 9191 -0800200c9a66 HTTP/ 1.1
+GET /api/1/apps/calc/environments/Acceptance/start/02df2e50-0e79-11e4-9191-0800200c9a66 
 Host: deploy.mendix.com
 
 Content-Type: application/json
@@ -419,7 +419,7 @@ An object with the following key-value pair:
 
 **Example Output**
 
-```bash
+```json
 {
      "Status" :  "Starting" ,
 }
@@ -441,7 +441,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/stop
 **Example Request**
 
 ```bash
-POST /api/ 1 /apps/calc/environments/Acceptance/stop HTTP/ 1.1
+POST /api/1/apps/calc/environments/Acceptance/stop 
 Host: deploy.mendix.com
 
 Content-Type: application/json
@@ -481,7 +481,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/package
 **Example Request**
 
 ```bash
-GET /api/ 1 /apps/calc/environments/Acceptance/ package HTTP/ 1.1
+GET /api/1/apps/calc/environments/Acceptance/package 
 Host: deploy.mendix.com
 
 Content-Type: application/json
@@ -514,7 +514,7 @@ An object with the following key-value pairs:
 
 **Example Output**
 
-```bash
+```json
 {
      "Status" :  "Succeeded",
      "CreationDate" :  1404990271835,
@@ -552,7 +552,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages/upload
 <!--Check this is correct -->
 
 ```bash
-POST /api/ 1 /apps/calc/packages/upload HTTP/ 1.1
+POST /api/1/apps/calc/packages/upload 
 Host: deploy.mendix.com
 
 Mendix-Username: richard.ford51@example.com
@@ -606,7 +606,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/transport
 **Example Request**
 
 ```bash
-POST /api/ 1 /apps/calc/environments/acceptance/transport HTTP/ 1.1
+POST /api/1/apps/calc/environments/acceptance/transport 
 Host: deploy.mendix.com
 
 Content-Type: application/json
@@ -655,7 +655,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/clean
 **Example Request**
 
 ```bash
-POST /api/ 1 /apps/calc/environments/acceptance/clean HTTP/ 1.1
+POST /api/1/apps/calc/environments/acceptance/clean 
 Host: deploy.mendix.com
 
 Content-Type: application/json
@@ -677,7 +677,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 **Example Output**
 
-```bash
+```json
 [
     {
         "Status": "Stopped",
@@ -708,7 +708,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/settings
 **Example Request**
 
 ```bash
-GET /api/ 1 /apps/calc/environments/acceptance/settings/ HTTP/ 1.1
+GET /api/1/apps/calc/environments/acceptance/settings/ 
 Host: deploy.mendix.com
 
 Content-Type: application/json
@@ -728,7 +728,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 **Example Output**
 
-```bash
+```json
 {
      "Constants" : [{
          "Name" :  "MyFirstModule.BooleanConstant" ,
@@ -771,8 +771,8 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/settings/
 
 **Example Request**
 
-```bash
-GET /api/ 1 /apps/calc/environments/acceptance/settings/ HTTP/ 1.1
+```json
+POST /api/1/apps/calc/environments/acceptance/settings/ 
 Host: deploy.mendix.com
 
 Content-Type: application/json
@@ -816,7 +816,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 **Example Output**
 
-```bash
+```json
 {
      "Constants" : [{
          "Name" :  "MyFirstModule.BooleanConstant" ,
@@ -860,7 +860,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/snapshots
 **Example Request**
 
 ```bash
-GET /api/1/apps/calc/environments/acceptance/snapshots HTTP/ 1.1
+GET /api/1/apps/calc/environments/acceptance/snapshots 
 Host: deploy.mendix.com
 
 Content-Type: application/json
@@ -883,7 +883,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 **Example Output**
 
-```bash
+```json
 [
     {
         "SnapshotID": "c879c6b1-3aa5-4e10-aaab-cb145841862f",
@@ -926,7 +926,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/snapshots/
 **Example Request**
 
 ```bash
-GET /api/1/apps/calc/environments/acceptance/snapshots/201703221355 HTTP/ 1.1
+GET /api/1/apps/calc/environments/acceptance/snapshots/201703221355 
 Host: deploy.mendix.com
 
 Content-Type: application/json
@@ -948,7 +948,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 **Example Output**
 
-```bash
+```json
 {
   "FilesOnly": "https://cloud.home.mendix.com/backups/d4bf9d5d-cf3e-4561-9f7f-31b1c580a3d5",
   "DatabaseOnly": "https://cloud.home.mendix.com/backups/5524ec0b-fdf1-460b-87c2-75bb06ec98ff",
@@ -979,7 +979,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/snapshots
 **Example Request**
 
 ```bash
-POST /api/1/apps/calc/environments/acceptance/snapshots/ HTTP/ 1.1
+POST /api/1/apps/calc/environments/acceptance/snapshots/ 
 Host: deploy.mendix.com
 
 Content-Type: application/json
@@ -1003,7 +1003,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 **Example Output**
 
-```bash
+```json
 {
     "SnapshotID": "0c982ca3-621f-40e9-9c6e-96492934170a",
     "Comment": "My user comment",
@@ -1036,7 +1036,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/restore/<S
 **Example Request**
 
 ```bash
-POST /api/1/apps/calc/environments/acceptance/restore/0c982ca3-621f-40e9-9c6e-96492934170a HTTP/ 1.1
+POST /api/1/apps/calc/environments/acceptance/restore/0c982ca3-621f-40e9-9c6e-96492934170a 
 Host: deploy.mendix.com
 
 Content-Type: application/json
@@ -1058,7 +1058,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 **Example Output**
 
-```bash
+```json
 {
     "SnapshotID": "0c982ca3-621f-40e9-9c6e-96492934170a",
     "Comment": "Manually created snapshot",
@@ -1091,7 +1091,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/scale
 **Example Request**
 
 ```bash
-POST /api/1/apps/calc/environments/acceptance/scale/0c982ca3-621f-40e9-9c6e-96492934170a HTTP/ 1.1
+POST /api/1/apps/calc/environments/acceptance/scale/0c982ca3-621f-40e9-9c6e-96492934170a 
 Host: deploy.mendix.com
 
 Content-Type: application/json
@@ -1118,7 +1118,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 **Example Output**
 
-```bash
+```json
 {
     "Status": "Running",
     "Instances": 2,
@@ -1178,7 +1178,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 **Example Output**
 
-```bash
+```json
 {
     "Tag": "A"
 }
@@ -1224,7 +1224,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 **Example Output**
 
-```bash
+```json
 {
     "Tag": "A"
 }
@@ -1278,7 +1278,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 **Example Output**
 
-```bash
+```json
 []
 ```
 

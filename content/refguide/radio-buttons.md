@@ -1,10 +1,12 @@
 ---
 title: "Radio Buttons"
 parent: "input-widgets"
+menu_order: 50
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert type="warning" %}}The radio buttons widget is not supported on native mobile pages.{{% /alert %}}
 
 The **Radio Buttons** widget is an [input widget](input-widgets) that can be used to display and edit Boolean and enumeration attributes.
 

@@ -56,7 +56,7 @@ If a profile is not enabled, it falls back to another device type as shown in th
 
 It is also possible to force the client to use a specific profile by adding a 'profile' query string parameter to the URL when visiting a Mendix application. The possible values are 'Desktop', 'Tablet', and 'Phone'. For example:
 
-```html
+```http
 https://myapp.mendixcloud.com/index.html?profile=Phone
 
 ```

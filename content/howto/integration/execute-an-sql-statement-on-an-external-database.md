@@ -2,7 +2,7 @@
 title: "Execute an SQL Statement on an External Database"
 category: "Integration"
 menu_order: 17
-tags: ["sql", "database", "external database", "integration"]
+tags: ["SQL", "database", "external database", "integration"]
 ---
 
 ## 1 Introduction

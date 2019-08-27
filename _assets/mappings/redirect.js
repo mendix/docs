@@ -4,7 +4,7 @@ module.exports = {
      * POTENTIALLY TEMPORARY REDIRECTS
      ****************************************************/
 	/****************************************************
-     * From the Web Modeler (potentially temporary until fixed in product, mapped)
+     * From Studio(potentially temporary until fixed in product, mapped)
      ****************************************************/
 	{
       from: "/refguide/web-modeler/domain-models-association-properties-wm",
@@ -26,40 +26,14 @@ module.exports = {
       from: "/refguide/web-modeler/app-settings-wm",
       to: "/studio/settings-widget-overview"
     },	
-	/****************************************************
-     * From the Support Portal (potentially temporary until fixed in product, mapped) 
-     ****************************************************/
-	{
-      from: "/community/app-store-content-support",
-      to: "/developerportal/app-store/app-store-content-support"
-    },
-	{
-      from: "/mendixcloud/custom-domains",
-      to: "/developerportal/deploy/custom-domains"
-    },
-	{
-      from: "/developerportal/howto/how-to-link-app-to-node",
-      to: "/developerportal/deploy/licensing-apps"
-    },
-	{
-      from: "/developerportal/howto/how-to-link-a-different-app-to-a-node",
-      to: "/developerportal/deploy/licensing-apps"
-    },
-	{
-      from: "/developerportal/support/new-app-request-template",
-      to: "/developerportal/support/new-app-node-request-template"
-    },
-	{
-      from: "/developerportal/support/export-a-project-package",
-      to: "/refguide/export-project-package-dialog"
-    },
-  /****************************************************
-   * From App Store Documentation (until documentation edited)
-   ******************************************************/
-  {
-      from: "/developerportal/feedback/use-feedback-widget",
-      to: "/developerportal/collaborate/use-feedback-widget"
-  },
+    {
+      from: "/howto/sap/use-sap-odata-model-creator",
+      to: "/partners/sap/use-sap-odata-model-creator"
+    },	
+    {
+      from: "/refguide/siemens/mindsphere-module-details",
+      to: "/partners/siemens/mindsphere-module-details"
+    },	
 	/****************************************************
      * PERMANENT REDIRECTS
      ****************************************************/
@@ -75,15 +49,18 @@ module.exports = {
       to: "/"
     },
 	/****************************************************
-     * Studio Guide (permanent, unmapped)
+     * Studio Pro Guide (permanent, mapped)
      ****************************************************/
 	{
-      from: "/howto/tutorials/",
-      to: "/studio/general"
+      from: "/refguide/mindsphere/mindsphere-module-details",
+      to: "/partners/siemens/mindsphere-module-details"
     },
+	/****************************************************
+     * Reference Guide version 7 (permanent, unmapped)
+     ****************************************************/	
 	{
-      from: "/howto/tutorials/mendix-tutorials",
-      to: "/studio/general"
+      from: "/refguide/moving-from-6-to-7",
+      to: "/refguide7/moving-from-6-to-7"
     },
 	/****************************************************
      * How-to's (permanent, unmapped)
@@ -110,6 +87,17 @@ module.exports = {
 	{
       from: "/howto7/ux/configuring-your-theme",
       to: "/howto7/front-end/configuring-your-theme"
+    },
+	/****************************************************
+     * Studio Guide (permanent, unmapped)
+     ****************************************************/
+	{
+      from: "/howto/tutorials/",
+      to: "/studio/general"
+    },
+	{
+      from: "/howto/tutorials/mendix-tutorials",
+      to: "/studio/general"
     },
 	/****************************************************
      * Developer Portal Guide (permanent, unmapped) 
@@ -166,10 +154,6 @@ module.exports = {
       from: "/deployment/mendixcloud/sending-email",
       to: "/developerportal/deploy/sending-email"
     },
-	{
-      from: "/howto/deploying-a-mendix-app-to-cloud-foundry",
-      to: "/developerportal/deploy/cloud-foundry-deploy"
-    },
 	/****************************************************
      * From the Developer Portal (permanent, mapped) 
      ****************************************************/
@@ -197,11 +181,11 @@ module.exports = {
       from: "/developerportal/howto/deploying-to-the-cloud",
       to: "/developerportal/deploy/mendix-cloud-deploy"
     },
-  {
+	{
       from: "/deployment/on-premises/deploy-mendix-on-microsoft-windows",
       to: "/developerportal/deploy/deploy-mendix-on-microsoft-windows"
     },
-  {
+	{
       from: "/deployment/on-premises",
       to: "/developerportal/deploy/on-premises-design"
     },
@@ -212,6 +196,10 @@ module.exports = {
 	{
       from: "/refguide/publish-packages-to-mobile-stores",
       to: "/howto/mobile/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores"
+    },
+	{
+      from: "/refguide/team-server",
+      to: "/developerportal/develop/team-server"
     },
 	/****************************************************
      * From the App Store (permanent, mapped)
@@ -247,10 +235,6 @@ module.exports = {
 	{
       from: "/howto/ux/create-a-custom-theme-with-the-mendix-ui-framework",
       to: "/howto/front-end/create-a-custom-theme-with-the-mendix-ui-framework"
-    },
-	{
-      from: "/addons/APM",
-      to: "/apm/"
     },
 	{
       from: "/releasenotes/desktop-modeler/",
@@ -401,6 +385,37 @@ module.exports = {
       to: "/releasenotes/studio-pro/6.0"
     },
 	/****************************************************
+     * From the Support Portal (permanent, mapped) 
+     ****************************************************/
+	{
+      from: "/community/app-store-content-support",
+      to: "/developerportal/app-store/app-store-content-support"
+    },
+	{
+      from: "/mendixcloud/custom-domains",
+      to: "/developerportal/deploy/custom-domains"
+    },
+	{
+      from: "/developerportal/howto/how-to-link-app-to-node",
+      to: "/developerportal/deploy/licensing-apps"
+    },
+	{
+      from: "/developerportal/howto/how-to-link-a-different-app-to-a-node",
+      to: "/developerportal/deploy/licensing-apps"
+    },
+	{
+      from: "/developerportal/support/new-app-request-template",
+      to: "/developerportal/support/new-app-node-request-template"
+    },
+	{
+      from: "/developerportal/support/export-a-project-package",
+      to: "/refguide/export-project-package-dialog"
+    },
+	{
+      from: "/developerportal/support/change-affected-apps",
+      to: "/developerportal/support/prepare-your-project"
+    },
+	/****************************************************
      * From Studio Pro version 8 (permanent as backups, mapped)
      ****************************************************/
 	{
@@ -423,15 +438,15 @@ module.exports = {
       from: "/refguide8/download-from-team-server-dialog",
       to: "/refguide/download-from-version-control-dialog"
     },
-  {
+	{
       from: "/refguide8/open-project-dialog",
       to: "/refguide/open-app-dialog"
     },
-  {
+	{
       from: "/refguide8/upload-to-team-server-dialog",
       to: "/refguide/upload-to-version-control-dialog"
     },
-  {
+	{
       from: "/refguide8/microflow-expressions",
       to: "/refguide/expressions"
     },
@@ -463,6 +478,26 @@ module.exports = {
       from: "/refguide8/Developing+Hybrid+Mobile+Apps",
       to: "/refguide/developing-hybrid-mobile-apps"
     },
+	{
+      from: "/refguide8/enumeration-values",
+      to: "/refguide/enumerations"
+    },
+	{
+      from: "/refguide8/inheritance-split",
+      to: "/refguide/object-type-decision"
+    },
+	{
+      from: "/refguide8/exclusive-split",
+      to: "/refguide/decision"
+	},
+	{
+      from: "/howto/deploying-a-mendix-app-to-cloud-foundry",
+      to: "/developerportal/deploy/cloud-foundry-deploy"
+    },
+	{
+      from: "/refguide8/menu-item",
+      to: "/refguide/menu"
+    },
 	/****************************************************
      * From Desktop Modeler version 7 (permanent, mapped)
      ****************************************************/
@@ -490,15 +525,15 @@ module.exports = {
       from: "/refguide7/download-from-team-server-dialog",
       to: "/refguide7/download-from-version-control-dialog"
     },
-  {
+	{
       from: "/refguide7/open-project-dialog",
       to: "/refguide7/open-app-dialog"
     },
-  {
+	{
       from: "/refguide7/upload-to-team-server-dialog",
       to: "/refguide7/upload-to-version-control-dialog"
     },
-  {
+	{
       from: "/refguide7/microflow-expressions",
       to: "/refguide7/expressions"
     },
@@ -530,6 +565,11 @@ module.exports = {
       from: "/refguide7/Developing+Hybrid+Mobile+Apps",
       to: "/refguide7/developing-hybrid-mobile-apps"
     },
+	{
+      from: "/howto7/deploying-a-mendix-app-to-cloud-foundry",
+      to: "/developerportal/deploy/cloud-foundry-deploy"
+    },
+
 	/****************************************************
      * From Desktop Modeler version 6 (permanent)
      ****************************************************/
@@ -2203,9 +2243,32 @@ module.exports = {
       to: "/howto6/solving-load-and-import-errors"
     },
 	/****************************************************
-     * APM (permanent, unmapped)
+     * Add-on Guides (permanent, mapped)
      ****************************************************/
-    // {
+	{
+	  from: "/apm/installation-guide",
+	  to: "/addons/apm-addon/ig-two"
+	},
+	{
+      from: "/apm/reference-guide/rg-2/reference-guide-2",
+      to: "/addons/apm-addon/rg-two-apm"
+    },
+	{
+	  from: "~*\\\/aqm\\\/",
+	  to: "/addons/aqm-addon/index",
+	  exact: true
+    },
+	{
+	  from: "~*\\\/apm\\\/",
+	  to: "/addons/apm-addon/index",
+	  exact: true
+    },
+	{
+	  from: "~*\\\/ats\\\/",
+	  to: "/addons/ats-addon/index",
+	  exact: true
+    },	
+	// {
     //   from: "~*\\\/apm\\\/use-cases\\\/uc",
     //   to: "/apm/use-cases/",
     //   exact: true

@@ -4,8 +4,8 @@ parent: "object-activities"
 tags: ["studio pro"]
 ---
 
-{{% alert type="info" %}}
-This action can only be used in microflows, not in nanoflows.
+{{% alert type="warning" %}}
+This activity can only be used in **Microflows**.
 {{% /alert %}}
 
 ## 1 Introduction
@@ -14,15 +14,15 @@ Delete object can be used to delete one or more objects.
 
 {{% alert type="info" %}}
 
-See [Microflow Element Common Properties](microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
+See [Common Properties](microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
 
 {{% /alert %}}
 
 ## 2 Input Properties
 
-### 2.1 Variable
+### 2.1 Object or List
 
-The variable that refers to the object or list of objects that will be deleted. If you choose a list, all objects in that list will be deleted.
+The name of the object or list of objects that will be deleted. If you choose a list, all objects in that list will be deleted.
 
 ## 3 Action Properties
 

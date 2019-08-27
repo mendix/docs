@@ -10,15 +10,17 @@ tags: ["Operate", "App", "Developer Portal", "SAP", "V3", "V4"]
 
 From this page of the Developer Portal, you can access the logs produced by your app. What you see depends on the environment to which your app is deployed.
 
-The page is accessed through the **Logs** page under the **Operate** category:
+The page is accessed through the **Logs** menu item under the **Operate** category:
 
 ![Navigate to Logs](attachments/logs/log-menu.png)
 
 ## 2 Apps Deployed to Mendix Cloud Version 4
 
+{{% alert type="info" %}}
 This is the default Mendix deployment for a licensed app.
+{{% /alert %}}
 
-For apps deployed to Mendix Cloud Version 4 (V4), you can select which environment you want logs for. Production logs will require two-step authentication.
+For apps deployed to Mendix Cloud Version 4 (V4), you can select which environment you want logs for. Production logs will require [Two-Factor Authentication](/developerportal/deploy/two-factor-authentication).
 
 You can view the live (current) log, download it, or view and download an archived log.
 
@@ -32,8 +34,8 @@ Logs on Mendix Cloud V4 are rotated and archived every day. The logs are kept fo
 
 Action Button | Performs the Action
 :---|:---
-Download archived log | download a log selected from the list underneath 
-Download today's log file | download today's log
+Download Archived Log | download a log selected from the list underneath 
+Download Current Log | download the log which is currently being written to
 View Live Log | view today's log on the screen
 
 ## 3 Apps Deployed to Mendix Cloud Version 3
@@ -48,12 +50,16 @@ Logs on Mendix Cloud V3 are rotated and archived every 5MB. The logs are kept fo
 
 Action Button | Performs the Action
 :---|:---
-Download archived log | download a log selected from the list underneath
-Fetch current log file | view the current log on the screen and download it, if required
+Download Archived Log | download a log selected from the list underneath
+Download Current Log | view the current log on the screen and download it, if required
 
 ## 4 Apps on SAP Cloud Platform
 
-For apps deployed to SAP Cloud Platform you can see the logs using Kibana. 
+For apps deployed to SAP Cloud Platform you can see the logs using Kibana.
+
+{{% alert type="info" %}}
+To make full use of Kibana and see proper mapping of the log level, multiline log messages, and stack traces, you will need to configure the *SAP Logger Connector* in your app. For more information see [SAP Logger Connector](/partners/sap/sap-logger).
+{{% /alert %}}
 
 The logs page shows all the environments for this app. Click the **Logs** button to open the log in Kibana.
 

@@ -1,21 +1,22 @@
 ---
 title: "Microflow Call"
 parent: "action-call-activities"
+menu_order: 30
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="info" %}}
-This activity can only be used in microflows, not in nanoflows.
+{{% alert type="warning" %}}
+This activity can only be used in **Microflows**.
 {{% /alert %}}
 
 ## 1 Introduction
 
-The Microflow call activity can be used to call another [microflow](microflows). Arguments can be passed to the microflow and the result can be stored in a variable.
+The Microflow call activity can be used to call another [microflow](microflows). Arguments can be passed to the microflow and the result can be stored.
 
 {{% alert type="info" %}}
 
-See [Microflow Element Common Properties](microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
+See [Common Properties](microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
 
 {{% /alert %}}
 
@@ -35,6 +36,6 @@ For each parameter of the microflow you have to supply an argument of the same t
 
 The data type of the result of the called microflow. The return type is defined by the called microflow.
 
-### 3.2 Variable Name
+### 3.2 Variable, Object, or List
 
-The name of the variable that will contain the result of the called microflow.
+The name of the result of the called microflow.

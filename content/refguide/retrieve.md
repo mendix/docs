@@ -5,13 +5,17 @@ tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert type="warning" %}}
+This activity can be used in both **Microflows** and **Nanoflows**.
+{{% /alert %}}
+
 ## 1 Introduction
 
 Retrieve can be used to get one or more objects, either by directly traversing an association of another object, or by retrieving objects from the database.
 
 {{% alert type="info" %}}
 
-See [Microflow Element Common Properties](microflow-element-common-properties) for properties that all microflow activities share (for example, caption). This page only describes the properties specific to the action.
+See [Common Properties](microflow-element-common-properties) for properties that all microflow activities share (for example, caption). This page only describes the properties specific to the action.
 
 {{% /alert %}}
 
@@ -36,7 +40,7 @@ When objects and/or its associations are changed and not committed, the data is 
 
 ### 3.1 Association
 
-This property specifies which association will be followed. The association must be an association from an object that is already available in a variable. Associations can be followed in both directions.
+This property specifies which association will be followed. The association must be an association from an object that is already available to the retrieve activity. Associations can be followed in both directions.
 
 ## 4 Retrieve From Database Properties
 
@@ -76,6 +80,6 @@ Sorting defines the order of the list. The list can be sorted in ascending and d
 
 ## 5 Output Properties
 
-### 5.1 Variable Name
+### 5.1 List or Name
 
-Variable name defines the name of the result list or object variable. It can be used by all activities that follow this activity.
+This is the name of the list or object returned by the Retrieve activity. It can be used by all activities that follow this activity.

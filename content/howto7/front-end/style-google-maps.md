@@ -1,7 +1,7 @@
 ---
 title: "Style Google Maps"
 category: "Front-End"
-menu_order: 65
+menu_order: 60
 tags: []
 ---
 

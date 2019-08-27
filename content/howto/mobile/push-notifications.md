@@ -23,7 +23,7 @@ To use push notifications, make sure you have the following:
 * Mendix Studio Pro from the [App Store](https://appstore.home.mendix.com/link/modeler)
 * The Mendix [Push Notifications Connector](https://appstore.home.mendix.com/link/app/3003/)
 * A mobile device (to get started, we recommend an Android device connected to your development machine via a data cable)
-* A [Adobe PhoneGap Build](https://build.phonegap.com/) account
+* An [Adobe PhoneGap Build](https://build.phonegap.com/) account
 
 ## 3 Supported Platforms
 
@@ -51,7 +51,7 @@ Earlier versions of the Mendix Push Notifications Connector supported Google Clo
 
 For more information on contributing to this repository, see [How to Contribute to a GitHub Repository](../collaboration-requirements-management/contribute-to-a-github-repository).
 
-## 7 Documents in This Sub-Category
+## 7 Documents in This Section
 
 * [Implement Push Notifications](implementation-guide)
 * [Send Push Notifications](sending-push-notifications)

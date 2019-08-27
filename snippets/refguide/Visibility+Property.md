@@ -4,21 +4,15 @@ By default, whether or not an element is displayed in the browser is determined 
 
 #### Context
 
-The widget can be made visible only if the object of the data view that contains the widget satisfies the specificied criteria.
+The widget can be made visible only if the object of the data view that contains the widget satisfies the specified criteria.
 
 A practical example would be a web shop in which the user must submit both billing and delivery information. In this case, you might not wish to bother the user with a second set of address input fields unless they indicate that the billing address and delivery address are not the same. You can accomplish this by making the delivery address fields conditionally visible based on the Boolean attribute `SameBillingAndDeliveryAddress`.
 
 ##### Based on Attribute Value {#visibility-based-on-attribute-value}
 
-When selected, this shows the widget while a particular attribute has a certain value. Only boolean and enumeration attributes can be used for this purpose.
+When selected, this shows the widget while a particular attribute has a certain value. Only Boolean and enumeration attributes can be used for this purpose.
 
 ##### Based on Expression {#visibility-based-on-expression}
-
-<div class="alert alert-info">
-
-Added in Mendix 7.1.
-
-</div>
 
 When selected, this shows the widget while a provided [expression](expressions) evaluates to true. The object of the containing data view is available inside an expression as a `$currentObject` variable.
 

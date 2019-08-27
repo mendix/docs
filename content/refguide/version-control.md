@@ -18,7 +18,7 @@ Version control in Mendix is built on top of [Apache Subversion](https://subvers
 
 ### 2.1 Team Server
 
-The Team Server is where all the committed versions of Mendix apps are stored. If you commit a revision of an app, it is stored on the Team Server.
+[Team Server](/developerportal/develop/team-server) is where all the committed versions of Mendix apps are stored. If you commit a revision of an app, it is stored on the Team Server.
 
 To commit to the Team Server you will need to have a role in the project which allows you to edit the app. For more information, see section [App Team Roles](https://docs.mendix.com/developerportal/company-app-roles/#app-team-roles) in *Company & App Roles*.
 
@@ -43,7 +43,7 @@ For Studio, there is one additional working copy, held in the *cloud*. Only one 
 
 ### 2.5 Merge{#merge}
 
-Merging is the action of taking one *revision* of an app and applying the differences which have been made in a different revision. See section 4.3, [Merging Branches](#merging-branches) for more information.
+Merging is the action of taking one *revision* of an app and applying the differences which have been made in a different revision. See the [Merging Branches](#merging-branches) section for more information.
 
 If any of the differences cannot be applied, then there is a *conflict*.
 
@@ -80,7 +80,7 @@ The Main Line is the initial development line for the app and is usually kept as
 
 A Branch Line is a way of making an independent set of changes which can be tested away from the Main Line.
 
-See section 4, [Branches](#branches), for more information on how branch lines can be used.
+See [Branches](#branches), below, for more information on how branch lines can be used.
 
 ### 2.10 Studio Enabled
 
@@ -103,7 +103,7 @@ A Tag is a way of identifying a commit in addition to the *revision* number. It 
 
 The Repository Service manages communication between Studio or Studio Pro and other supporting services (for example, Team Server). The developer will not generally be aware that they are communicating via the Repository Service.
 
-## 3 Version Control Processes for a Single Branch
+## 3 Version Control Processes for a Single Branch {#vc-single}
 
 The figure below shows how two developers might work on a *Studio enabled* development line of an app. One developer is working in Studio, and one in Studio Pro. They both work on the same development line (for example, the Main Line).
 
@@ -173,7 +173,7 @@ All apps are developed along the main line (also referred to as *trunk*). Here y
 
 ![](attachments/version-control/image7.png)
 
-This is the case for the version control processes described in section 3, Version Control Processes for a Single Branch.
+This is the case for the version control processes described in the section [Version Control Processes for a Single Branch](#vc-single), above.
 
 Initially, developers using Studio only have access to the development line for which Studio is enabled. They can be switched to another development line, however, by a developer using Studio Pro.
 
@@ -198,11 +198,13 @@ You can merge a specific revision of a branch line into your current *working co
 
 ![](attachments/version-control/image9.png)
 
-As with the examples in section 3, Version Control Processes for a Single Branch, there may be conflicts during the merge, and these will have to be resolved before you can commit the changes to your app.
+As with the examples in the [Version Control Processes for a Single Branch](#vc-single) section, there may be conflicts during the merge, and these will have to be resolved before you can commit the changes to your app.
 
 Note that *errors* can be introduced by the *merge* process even if no conflicts are identified during the merge. Errors are inconsistencies which are flagged in Studio and Studio Pro and will prevent the app from being deployed. They could lead to a revision not being deployable, so it is important to check for errors after you have done a merge.
 
 ## 5 Main Documents in This Category
 
-* [Using Version Control in Studio Pro](using-version-control-in-studio-pro)
-* [Team Server](team-server)
+* [Using Version Control in Studio Pro](using-version-control-in-studio-pro) – presents technical details for using version control (theoretical concerns are described above)
+* [Team Server Overview](/developerportal/develop/team-server) – introduces topics relating to Team Server and app development
+* [Collaborative Development](collaborative-development) – describes the process of sharing app model changes when a team of more than one person is working on the app
+* [Team Server Overview](/developerportal/develop/team-server) – presents an overview of viewing Team Server information in the Developer Portal (for example, revision summary and details)

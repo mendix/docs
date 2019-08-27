@@ -126,7 +126,7 @@ To create the import logic, follow these steps:
 
 5. Open the **Toolbox** and drag an **Import with mapping** activity to the line between the start and end event. This inserts a new import XML activity.
 6. Double-click the new activity to open the **Import With Mapping** dialog box and do the following:<br />
-    a. Select the input paramater **XMLDocument** as the **Variable**.<br />
+    a. Select the input parameter **XMLDocument** as the **Variable**.<br />
     b. Select the previously created XML-to-domain mapping **ImportCustomersMapping** as the mapping.<br />
     c. Click **OK** to save the properties.<br />
 
@@ -153,5 +153,5 @@ To import the XML file, follow these steps:
 * [How to Synchronize User Accounts Using the LDAP Module](synchronizing-user-accounts-using-the-ldap-module)
 * [How to Consume a REST Service](consume-a-rest-service)
 * [How to Expose Data to BI Tools Using OData](exposing-data-to-bi-tools-using-odata)
-* [Exporting to a CSV Button](/refguide7/export-to-csv-button)
+* [Exporting to a CSV Button](/refguide/export-to-csv-button)
 

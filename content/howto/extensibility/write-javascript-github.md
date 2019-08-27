@@ -314,7 +314,7 @@ Congratulations! Using the power of JavaScript actions, your app can search for 
 ## 5 Read More
 
 * [Write JavaScript Actions: Part 1 (Basic)](write-javascript-actions)
-* [Mendix Client API](https://apidocs.mendix.com/7/client/)
+* [Mendix Client API](https://apidocs.mendix.com/8/client/)
 * [JavaScript Actions](/refguide/javascript-actions)
 * JavaScript Resources
 	* [JavaScript Basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics)

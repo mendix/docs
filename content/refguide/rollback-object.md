@@ -44,4 +44,4 @@ Rolled back attribute values are always reflected in client. [Data sources](data
 When inside a [nanoflow](nanoflows), the Rollback object action reloads [data sources](data-sources) as if **Refresh in client** was set to *Yes*.
 {{% /alert %}}
 
-_Default value_: No
+*Default value*: No

@@ -94,7 +94,7 @@ The placeholder text is shown when no text has been entered yet. It can be used 
 
 ## Events Properties
 
-{{% snippet file="refguide/On+Change+Event.md" %}}
+{{% snippet file="refguide/on+change+event.md" %}}
 
 {{% snippet file="refguide/On+Enter+event.md" %}}
 
@@ -102,7 +102,7 @@ The placeholder text is shown when no text has been entered yet. It can be used 
 
 ## Common Properties
 
-{{% snippet file="refguide/name-property.md" %}}
+{{% snippet file="refguide/name+property.md" %}}
 
 {{% snippet file="refguide/class+property.md" %}}
 

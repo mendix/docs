@@ -70,7 +70,7 @@ The placeholder text is shown if the date attribute is empty. It can be used to 
 
 ## 7 Events Properties
 
-{{% snippet file="refguide/On+Change+Event.md" %}}
+{{% snippet file="refguide/on+change+event.md" %}}
 
 {{% snippet file="refguide/On+Enter+event.md" %}}
 
@@ -78,7 +78,7 @@ The placeholder text is shown if the date attribute is empty. It can be used to 
 
 ## 8 Common Properties
 
-{{% snippet file="refguide/name-property.md" %}}
+{{% snippet file="refguide/name+property.md" %}}
 
 {{% snippet file="refguide/class+property.md" %}}
 

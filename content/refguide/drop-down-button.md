@@ -21,7 +21,7 @@ Clicking a drop down button shows a list of items. Each item can have an caption
 
 ## Common properties
 
-{{% snippet file="refguide/name-property.md" %}}
+{{% snippet file="refguide/name+property.md" %}}
 
 {{% snippet file="refguide/class+property.md" %}}
 

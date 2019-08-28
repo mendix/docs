@@ -25,7 +25,7 @@ See [Tab page](tab-page).
 
 ## Common properties
 
-{{% snippet file="refguide/name-property.md" %}}
+{{% snippet file="refguide/name+property.md" %}}
 
 {{% snippet file="refguide/class+property.md" %}}
 

@@ -11,7 +11,7 @@ The validation message widget informs the user about authentication failures. It
 
 ## Common Properties
 
-{{% snippet file="refguide/name-property.md" %}}
+{{% snippet file="refguide/name+property.md" %}}
 
 {{% snippet file="refguide/class+property.md" %}}
 

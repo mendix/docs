@@ -54,7 +54,7 @@ Filling out the caption for an empty option improves the user experience of your
 
 ## Events Properties
 
-{{% snippet file="refguide/On+Change+Event.md" %}}
+{{% snippet file="refguide/on+change+event.md" %}}
 
 {{% snippet file="refguide/On+Enter+event.md" %}}
 
@@ -62,7 +62,7 @@ Filling out the caption for an empty option improves the user experience of your
 
 ## Common Properties
 
-{{% snippet file="refguide/name-property.md" %}}
+{{% snippet file="refguide/name+property.md" %}}
 
 {{% snippet file="refguide/class+property.md" %}}
 

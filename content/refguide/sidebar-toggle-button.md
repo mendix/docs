@@ -23,7 +23,7 @@ The sidebar toggle is a button that when pressed will make a region of a [scroll
 
 ## Common properties
 
-{{% snippet file="refguide/name-property.md" %}}
+{{% snippet file="refguide/name+property.md" %}}
 
 {{% snippet file="refguide/class+property.md" %}}
 

@@ -15,7 +15,7 @@ The menu bar widget shows a configured menu in the form of a horizontal bar with
 
 ## 2 Common Properties
 
-{{% snippet file="refguide/name-property.md" %}}
+{{% snippet file="refguide/name+property.md" %}}
 
 {{% snippet file="refguide/class+property.md" %}}
 
@@ -23,4 +23,4 @@ The menu bar widget shows a configured menu in the form of a horizontal bar with
 
 ## 3 General Properties
 
-{{% snippet file="refguide/menu-source-properties.md" %}}
+{{% snippet file="refguide/menu+source+properties.md" %}}

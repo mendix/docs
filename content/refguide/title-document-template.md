@@ -20,5 +20,5 @@ For details, see [Style](style).
 
 ## 3 Common Properties
 
-{{% snippet file="refguide/name-property.md" %}}
+{{% snippet file="refguide/name+property.md" %}}
 

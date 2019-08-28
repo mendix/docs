@@ -13,7 +13,7 @@ It must be placed on a page together with a [login id text box](login-id-text-bo
 
 ## Common Properties
 
-{{% snippet file="refguide/name-property.md" %}}
+{{% snippet file="refguide/name+property.md" %}}
 
 {{% snippet file="refguide/class+property.md" %}}
 

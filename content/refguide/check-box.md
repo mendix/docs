@@ -41,7 +41,7 @@ This check box allows you to change whether someone is subscribed to the newslet
 
 ## Events properties
 
-{{% snippet file="refguide/On+Change+Event.md" %}}
+{{% snippet file="refguide/on+change+event.md" %}}
 
 {{% snippet file="refguide/On+Enter+event.md" %}}
 
@@ -49,7 +49,7 @@ This check box allows you to change whether someone is subscribed to the newslet
 
 ## Common properties
 
-{{% snippet file="refguide/name-property.md" %}}
+{{% snippet file="refguide/name+property.md" %}}
 
 {{% snippet file="refguide/class+property.md" %}}
 

@@ -29,7 +29,7 @@ Disables the action button until the action is completed or failed.
 
 ## 3 Common Properties
 
-{{% snippet file="refguide/name-property.md" %}}
+{{% snippet file="refguide/name+property.md" %}}
 
 {{% snippet file="refguide/class+property.md" %}}
 

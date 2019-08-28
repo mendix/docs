@@ -19,7 +19,7 @@ The scroll container decisions the layout in three parts: a header containing a 
 
 ## Common Properties
 
-{{% snippet file="refguide/name-property.md" %}}
+{{% snippet file="refguide/name+property.md" %}}
 
 {{% snippet file="refguide/class+property.md" %}}
 

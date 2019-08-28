@@ -27,7 +27,7 @@ Disallowing concurrent execution of a microflow is useful if a microflow would i
 | No | It is possible to execute the microflow more than once concurrently. |
 | Yes | It is not possible to execute the microflow more than once concurrently; the user receives a message or another microflow is executed instead. |
 
-_Default value_: No
+*Default value*: No
 
 ### 3.2 Error Message
 

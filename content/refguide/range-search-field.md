@@ -27,7 +27,7 @@ To add a range search field to your data grid, right-click within the search bar
 
 {{% snippet file="refguide/Search+Field+Custom+Date+Format+Property.md" %}}
 
-{{% snippet file="refguide/Custom+Date+Format+Tokens.md" %}}
+{{% snippet file="refguide/custom-date-format-tokens.md" %}}
 
 {{% snippet file="refguide/Search+Field+Placeholder+Property.md" %}}
 
@@ -41,7 +41,7 @@ This attribute (path) determines the lower bound of the range.
 
 The lower bound operator determines whether the comparison with the lower bound is inclusive (>=) or not (>). It can be either 'Greater' or 'Greater or equal'.
 
-_Default value_: Greater.
+*Default value*: Greater.
 
 ### Upper Bound
 
@@ -51,4 +51,4 @@ This attribute (path) determines the upper bound of the range.
 
 The upper bound operator determines whether the comparison with the upper bound is inclusive (<=) or not (<). It can be either 'Smaller' or 'Smaller or equal'.
 
-_Default value_: Smaller
+*Default value*: Smaller

@@ -49,13 +49,13 @@ This property indicates whether the file will be shown in the browser, instead o
 
 _Default value:_ False
 
-{{% snippet file="refguide/Label+Property.md" %}}
+{{% snippet file="refguide/label-property.md" %}}
 
 ## Editability properties
 
-{{% snippet file="refguide/Editable+Property.md" %}}
+{{% snippet file="refguide/editable-property.md" %}}
 
-{{% snippet file="refguide/Condition+Property.md" %}}
+{{% snippet file="refguide/condition-property.md" %}}
 
 ## Visibility properties
 
@@ -65,9 +65,9 @@ _Default value:_ False
 
 ## Common properties
 
-{{% snippet file="refguide/Name+Property.md" %}}
+{{% snippet file="refguide/name-property.md" %}}
 
-{{% snippet file="refguide/Class+Property.md" %}}
+{{% snippet file="refguide/class-property.md" %}}
 
 {{% snippet file="refguide/Style+Property.md" %}}
 

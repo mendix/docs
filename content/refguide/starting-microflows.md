@@ -62,7 +62,7 @@ Set the duration only to asynchronous if you experience problems. Sometimes if a
 | Synchronous | The client waits until the microflow is done executing. |
 | Asynchronous | The client executes the microflow and starts polling to determine whether the microflow is done executing. |
 
-_Default value_: Synchronous
+*Default value*: Synchronous
 
 ### 4.2 Show Progress Bar
 
@@ -88,7 +88,7 @@ Note: the title of the confirmation pop-up is determined by a system text (categ
 
 Here you can specify whether you want to ask for confirmation or not.
 
-_Default value_: No
+*Default value*: No
 
 ### 5.2 Question
 

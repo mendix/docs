@@ -13,7 +13,7 @@ The csv export function relies on a specific data retrieval method. As such, it 
 
 ## Common properties
 
-{{% snippet file="refguide/Class+Property.md" %}}
+{{% snippet file="refguide/class-property.md" %}}
 
 {{% snippet file="refguide/Style+Property.md" %}}
 
@@ -39,15 +39,15 @@ _Default value:_ ;
 
 ## General properties
 
-{{% snippet file="refguide/Caption+Property.md" %}}
+{{% snippet file="refguide/caption-property.md" %}}
 
 {{% snippet file="refguide/Tooltip+Property.md" %}}
 
-{{% snippet file="refguide/Image+Property.md" %}}
+{{% snippet file="refguide/image-property.md" %}}
 
-{{% snippet file="refguide/Button+Style+Property.md" %}}
+{{% snippet file="refguide/button-style-property.md" %}}
 
-{{% snippet file="refguide/Is+default+button+Property.md" %}}
+{{% snippet file="refguide/is-default-button-property.md" %}}
 
 ### Maximum number of rows
 

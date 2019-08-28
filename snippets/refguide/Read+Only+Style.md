@@ -1,4 +1,4 @@
-### Read-only style
+### Read-Only Style
 
 This property determines how the widget is rendered if it is read-only. 
 

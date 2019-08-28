@@ -21,17 +21,17 @@ This check box allows you to change whether someone is subscribed to the newslet
 
 ## Data source properties
 
-{{% snippet file="refguide/Attribute+Path+Property.md" %}}
+{{% snippet file="refguide/attribute-path-property.md" %}}
 
-{{% snippet file="refguide/Label+Property.md" %}}
+{{% snippet file="refguide/label-property.md" %}}
 
 ## Editability properties
 
-{{% snippet file="refguide/Editable+Property.md" %}}
+{{% snippet file="refguide/editable-property.md" %}}
 
 {{% snippet file="refguide/Read+Only+Style.md" %}}
 
-{{% snippet file="refguide/Condition+Property.md" %}}
+{{% snippet file="refguide/condition-property.md" %}}
 
 ## Visibility properties
 
@@ -41,17 +41,17 @@ This check box allows you to change whether someone is subscribed to the newslet
 
 ## Events properties
 
-{{% snippet file="refguide/On+Change+Event.md" %}}
+{{% snippet file="refguide/on-change-event.md" %}}
 
-{{% snippet file="refguide/On+Enter+event.md" %}}
+{{% snippet file="refguide/on-enter-event.md" %}}
 
-{{% snippet file="refguide/On+Leave+Event.md" %}}
+{{% snippet file="refguide/on-leave-event.md" %}}
 
 ## Common properties
 
-{{% snippet file="refguide/Name+Property.md" %}}
+{{% snippet file="refguide/name-property.md" %}}
 
-{{% snippet file="refguide/Class+Property.md" %}}
+{{% snippet file="refguide/class-property.md" %}}
 
 {{% snippet file="refguide/Style+Property.md" %}}
 

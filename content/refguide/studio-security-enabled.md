@@ -37,7 +37,7 @@ To enable single sign-on the following checks and changes are performed:
 1. The AppCloudServices startup microflow is created. For more information on possible outcomes of this process, see the [Project Security Level Set Up](#project-security-level) section.
 2. *index.html* and *login.html* files are checked and changed if necessary. For more information, see the [Files Set Up](#files-set-up) section.
 
-The AppCloudServices module also adds user management to your app, and when you deploy your app in the AppCloud, it will now be automatically added to your [Launchpad](https://home.mendix.com/home/). With user management you can manage app users.
+The AppCloudServices module also adds user management to your app. With user management you can manage app users.
 
 {{% alert type="info" %}}If your project already has the AppCloudServices module installed, you will not be able to enable security from Studio. You can only set security manually in Studio Pro meeting the following requirements: 
 

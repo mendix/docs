@@ -45,7 +45,7 @@ A pluggable widget is distributed as single widget package file with an *.mpk* e
 
 Manually building a widget package can be difficult, so Mendix recommends you use scripts provided by the [Mendix Pluggable Widget Generator](https://www.npmjs.com/package/@mendix/generator-widget). For more information on how to use a generator, see [How To Build a Text Box Pluggable Widget: Part 1](/howto/extensibility/create-a-pluggable-widget-one).
 
-A widget package file is just a *zip* archive containing the following things:
+A widget package file is just a ZIP archive containing the following things:
 
 * A *package.xml* file describing the whole package
 * A widget definition XML file, preferably located in *{widgetName}.xml* where `widdgetName` is the last part of widget [ID](#widget-id)
@@ -179,7 +179,7 @@ This section is represented by the `properties` tag in the widget XML file. It d
     </properties>
 ```
 
-## 6 Property Groups
+## 6 Property Groups {#property-groups}
 
 Before examining properties themselves, it is useful to understand property groups. Property groups are formed by properties wrapped in a `propertyGroup` tag. Studio and Studio Pro use the property groups to render how the widget configuration UI appears in the Studios. Grouping can be used to help the modeling developer understand the configuration of a more complex widget. It is best practice to both use property groups and group properties in the Studios UI based on their purposes. The property groups from the code in [Widget Properties Definition](#properties-definition) above forms the following structure:
 
@@ -215,7 +215,7 @@ Note that the **Common** and **Appearance** tabs are added to your widget config
 
 ## 7 Widget Property
 
-Every `property` tag in the Widget Properties Definition has a shape similar to this:
+This section will explain the shape of the widget property. For more detailed information on widget properties, see [Pluggable Widget Property Types](property-types-pluggable-widgets). Every `property` tag in the Widget Properties Definition has a shape similar to this:
 
 ```xml
     <property key="cardName" type="textTemplate">

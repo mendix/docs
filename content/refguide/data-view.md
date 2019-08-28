@@ -55,7 +55,7 @@ The data view supports the following types of data source: context, microflow, n
 
 ### 3.3 Editability Section {#editability}
 
-#### 3.3.1 Editable
+#### 3.3.1 Editable {#editable}
 
 The editable property indicates whether the data view as a whole is editable or not. If the data view is not editable, no widget inside the data view will be editable. On the other hand, if the data view is editable, each widget is determined to be editable based on its own editable property.
 

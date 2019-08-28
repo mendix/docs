@@ -14,6 +14,19 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deploym
 
 ## 2019
 
+### August 26th, 2019
+
+#### SAP OData Connector Improvements & Fixes
+
+* We updated the **SAP OData Connector** to support the **Edm.Int64** data type. (Ticket #87284)
+* We also fixed a *java.net.SocketException: Broken pipe (Write failed)* exception which occurred when sending a large request to the OData service endpoint. (Ticket #86680)
+
+### August 23rd, 2019
+
+#### Mendix Cloud Improvements
+
+* We improved the performance of the Environments page by reducing the number of remote requests needed.
+
 ### August 9th, 2019
 
 #### App User Management Improvements 
@@ -882,7 +895,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 * When updating the admin user password in the Mendix Cloud, the password policy description was wrong, which led to confusing situations. We updated the text.
 * When navigating to **Node Security**, the **App Team** tab no longer disappears.
-* Due to a *zip* file encoding change in Mendix 7.5.0, AppServices could not be parsed when deploying to the Mendix Cloud. We fixed this.
+* Due to a ZIP file encoding change in Mendix 7.5.0, AppServices could not be parsed when deploying to the Mendix Cloud. We fixed this.
 * The **View Current Log** button is no longer hidden for Free Apps.
 
 ### July 12th, 2017

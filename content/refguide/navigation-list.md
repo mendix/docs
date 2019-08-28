@@ -6,34 +6,41 @@ tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="warning" %}}The navigation list widget is not supported on native mobile pages.{{% /alert %}}
+## 1 Introduction
+
+{{% alert type="warning" %}}
+The navigation list widget is not supported on native mobile pages.
+{{% /alert %}}
 
 A navigation list can be used to attach an action to an entire row. Such a row is called a navigation list item.
 
 {{% alert type="info" %}}
 
 ![](attachments/pages/navigation-list.png)
+
 A navigation list with three empty rows.
 
 {{% /alert %}}
 
-## Common properties
+## 2 Common Properties
 
-{{% snippet file="refguide/Class+Property.md" %}}
+{{% snippet file="refguide/class-property.md" %}}
 
 {{% snippet file="refguide/Style+Property.md" %}}
 
-## Navigation list item
+## 3 Navigation List Item
 
 Each row in the navigation list is a navigation list item. A navigation list item can be associated with an action. Conditional visibility is available for list items.
 
-## General
+## 4 General
 
-### Action
+### 4.1 Action
 
-Action defines what action is performed when a navigation list item is 'clicked'. This can either be opening a page or calling a microflow. For opening a page see [Opening Pages](opening-pages) and for calling a microflow see [Starting Microflows](starting-microflows). Microflows attached to a navigation list item have no Confirmation or Advanced microflow settings.
+Action defines what action is performed when a navigation list item is "clicked." This can either be opening a page or calling a microflow. For details on opening a page, see [Opening Pages](opening-pages). For details on calling a microflow, see [Starting Microflows](starting-microflows). 
 
-## Visibility properties
+Microflows attached to a navigation list item have no **Confirmation** or **Advanced** microflow settings.
+
+## 5 Visibility Properties
 
 {{% snippet file="refguide/Visibility+Property.md" %}}
 

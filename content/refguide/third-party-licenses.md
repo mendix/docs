@@ -10,6 +10,6 @@ Mendix uses various third-party libraries that have their own licenses. All the 
 *   Runtime Server libraries can be found in the folder **runtime\lib**
 *   Studio Pro libraries can be found in the folder **modeler\Licenses**
 *   Client licenses can be found in the following locations:
-	* **modeler\deployment.mxz** – this is a *zip* file where you can navigate to **web\lib\bootstrap\css\bootstrap.css** and to **web\lib\rbootstrap\css\rbootstrap.css** for bootstrap licenses (when you deploy an app, you can also find all these files in your deployment folder)
+	* **modeler\deployment.mxz** – this is a ZIP file where you can navigate to **web\lib\bootstrap\css\bootstrap.css** and to **web\lib\rbootstrap\css\rbootstrap.css** for bootstrap licenses (when you deploy an app, you can also find all these files in your deployment folder)
 	* **runtime\mxclientsystem\mxui.mxui.js** for the dojo license
 

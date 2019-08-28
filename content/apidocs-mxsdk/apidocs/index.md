@@ -59,8 +59,7 @@ Part of the AppCloudServices module.
 
 Understand pluggable widgets, how they extend app functionality, and how they can be built to interact with Mendix's APIs:
 
-* [Pluggable Widgets](pluggable-widgets)
-
+* [Pluggable Widgets API](pluggable-widgets)
 
 ## 10 Profile API
 

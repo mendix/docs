@@ -143,7 +143,7 @@ The form to show when a user hovers over a chart plot point. It has the context 
 
 Advanced JSON settings can also be added in a global context via the theme folder of your mendix project root directory.
 
-To the theme folder, add a `.json` file named *com.mendix.charts*. The JSON should be in the following format:
+To the theme folder, add a *.json* file named *com.mendix.charts*. The JSON should be in the following format:
 
 ``` json
 {

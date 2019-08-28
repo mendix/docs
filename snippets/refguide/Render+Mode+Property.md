@@ -1,4 +1,4 @@
-### Render mode
+### Render Mode
 
 This property indicates how the button is rendered.
 

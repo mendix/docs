@@ -37,12 +37,6 @@ If you made a simple and sound design of the app's domain models, consider the f
 	* Add a non-persistable layer with inheritance that is populated by your business logic.
 * Don't use temporary associations on persistable entities. Use a non-persistable entity for your screen/UI logic here.
 
-{{% alert type="info" %}}
-
-Mendix is said to have optimized the retrieves, so not every association ID is loaded on every retrieve. This needs further investigation.
-
-{{% /alert %}}
-
 ##  3 Index Best Practices
 
 Indexes is a topic with a long history of best practices from the database world. For Mendix apps, the following best practises apply:

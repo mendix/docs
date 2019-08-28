@@ -26,7 +26,7 @@ Before starting, make sure you have a Mendix App with mobile support enabled run
 
 First, open the "Publish for Mobile App Stores" page in the Mendix Developer Portal:
 
-1. Open the Mendix Developer Portal [from your launchpad](https://home.mendix.com/home/).
+1. Open the Mendix Developer Portal.
 2. Go to the project of the Mendix App that you want to publish.
 3.  Go to the **Publish** tab.
 4. Click **Publish for Mobile App Stores**.

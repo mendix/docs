@@ -19,7 +19,7 @@ A text box must be placed in a data view or template grid and connected to an at
 
 ## General Properties
 
-{{% snippet file="refguide/numeric+formatting.md" %}}
+{{% snippet file="refguide/numeric-formatting.md" %}}
 
 ### Show as Password (Only for Attributes of the String or HashString Type)
 
@@ -58,17 +58,17 @@ The placeholder text is shown when no text has been entered yet. It can be used 
 
 ## Data Source Properties
 
-{{% snippet file="refguide/attribute+path+property.md" %}}
+{{% snippet file="refguide/attribute-path-property.md" %}}
 
-{{% snippet file="refguide/label+property.md" %}}
+{{% snippet file="refguide/label-property.md" %}}
 
 ## Editability Properties
 
-{{% snippet file="refguide/editable+property.md" %}}
+{{% snippet file="refguide/editable-property.md" %}}
 
 {{% snippet file="refguide/Read+Only+Style.md" %}}
 
-{{% snippet file="refguide/condition+property.md" %}}
+{{% snippet file="refguide/condition-property.md" %}}
 
 ## Visibility Properties
 
@@ -78,17 +78,17 @@ The placeholder text is shown when no text has been entered yet. It can be used 
 
 ## Events Properties
 
-{{% snippet file="refguide/on+change+event.md" %}}
+{{% snippet file="refguide/on-change-event.md" %}}
 
-{{% snippet file="refguide/on+enter+event.md" %}}
+{{% snippet file="refguide/on-enter-event.md" %}}
 
-{{% snippet file="refguide/On+Leave+Event.md" %}}
+{{% snippet file="refguide/on-leave-event.md" %}}
 
 ## Common Properties
 
-{{% snippet file="refguide/name+property.md" %}}
+{{% snippet file="refguide/name-property.md" %}}
 
-{{% snippet file="refguide/class+property.md" %}}
+{{% snippet file="refguide/class-property.md" %}}
 
 {{% snippet file="refguide/Style+Property.md" %}}
 

@@ -20,9 +20,9 @@ An image viewer must be placed in a data view or template grid.
 
 ## 2 Common Properties
 
-{{% snippet file="refguide/name+property.md" %}}
+{{% snippet file="refguide/name-property.md" %}}
 
-{{% snippet file="refguide/class+property.md" %}}
+{{% snippet file="refguide/class-property.md" %}}
 
 {{% snippet file="refguide/Style+Property.md" %}}
 

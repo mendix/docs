@@ -53,9 +53,9 @@ There is rarely a use case for more than four columns in a row.
 
 ## Common Properties
 
-{{% snippet file="refguide/name+property.md" %}}
+{{% snippet file="refguide/name-property.md" %}}
 
-{{% snippet file="refguide/class+property.md" %}} 
+{{% snippet file="refguide/class-property.md" %}} 
 
 {{% snippet file="refguide/Style+Property.md" %}}
 

@@ -32,17 +32,17 @@ _Default value:_ Horizontal
 
 ## Data Source Properties
 
-{{% snippet file="refguide/attribute+path+property.md" %}}
+{{% snippet file="refguide/attribute-path-property.md" %}}
 
-{{% snippet file="refguide/label+property.md" %}}
+{{% snippet file="refguide/label-property.md" %}}
 
 ## Editability Properties
 
-{{% snippet file="refguide/editable+property.md" %}}
+{{% snippet file="refguide/editable-property.md" %}}
 
 {{% snippet file="refguide/Read+Only+Style.md" %}}
 
-{{% snippet file="refguide/condition+property.md" %}}
+{{% snippet file="refguide/condition-property.md" %}}
 
 ## Visibility Properties
 
@@ -52,13 +52,13 @@ _Default value:_ Horizontal
 
 ## Events Properties
 
-{{% snippet file="refguide/on+change+event.md" %}}
+{{% snippet file="refguide/on-change-event.md" %}}
 
 ## Common Properties
 
-{{% snippet file="refguide/name+property.md" %}}
+{{% snippet file="refguide/name-property.md" %}}
 
-{{% snippet file="refguide/class+property.md" %}} 
+{{% snippet file="refguide/class-property.md" %}} 
 
 {{% snippet file="refguide/Style+Property.md" %}} 
 

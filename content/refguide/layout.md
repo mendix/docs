@@ -32,11 +32,11 @@ As a consequence of this behavior, user experience can be improved significantly
 
 ## 3 Common Properties
 
-{{% snippet file="refguide/document+name+property.md" %}}
+{{% snippet file="refguide/document-name-property.md" %}}
 
-{{% snippet file="refguide/documentation+property.md" %}}
+{{% snippet file="refguide/documentation-property.md" %}}
 
-{{% snippet file="refguide/document+class+property.md" %}}
+{{% snippet file="refguide/document-class-property.md" %}}
 
 {{% snippet file="refguide/Style+Property.md" %}}
 
@@ -44,7 +44,7 @@ As a consequence of this behavior, user experience can be improved significantly
 
 {{% snippet file="refguide/canvas+width+property.md" %}}
 
-{{% snippet file="refguide/canvas+height+property.md" %}}
+{{% snippet file="refguide/canvas-height-property.md" %}}
 
 ## 5 General Properties
 

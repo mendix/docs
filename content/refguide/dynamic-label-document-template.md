@@ -69,7 +69,7 @@ results in the following text:
 
 ## 3 Common Properties
 
-{{% snippet file="refguide/name+property.md" %}}
+{{% snippet file="refguide/name-property.md" %}}
 
 ## 4 Data Source Properties
 

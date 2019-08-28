@@ -13,9 +13,9 @@ It must be placed on a page together with a [login id text box](login-id-text-bo
 
 ## Common Properties
 
-{{% snippet file="refguide/name+property.md" %}}
+{{% snippet file="refguide/name-property.md" %}}
 
-{{% snippet file="refguide/class+property.md" %}}
+{{% snippet file="refguide/class-property.md" %}}
 
 {{% snippet file="refguide/Style+Property.md" %}}
 
@@ -23,15 +23,15 @@ It must be placed on a page together with a [login id text box](login-id-text-bo
 
 ## General Properties
 
-{{% snippet file="refguide/caption+property.md" %}}
+{{% snippet file="refguide/caption-property.md" %}}
 
 {{% snippet file="refguide/Tooltip+Property.md" %}}
 
-{{% snippet file="refguide/image+property.md" %}}
+{{% snippet file="refguide/image-property.md" %}}
 
 {{% snippet file="refguide/Render+Mode+Property.md" %}}
 
-{{% snippet file="refguide/button+style+property.md" %}}
+{{% snippet file="refguide/button-style-property.md" %}}
 
 ### Validation Message Widget
 

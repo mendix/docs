@@ -46,7 +46,7 @@ This defines a property's type. A `type` must be one of the following:
 
 ### 1.2 XML Elements
 
-`<caption>` (required) — This defines the property name visible for the user (not an end-user) while configuring the widget in Studio and Studio Pro.
+`<caption>` (required) — This defines the property name visible for the user (not the end-user) while configuring the widget in Studio and Studio Pro.
 
 `<description>` (required) — This is a description which explains a property's purpose.
 

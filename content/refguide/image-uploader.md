@@ -44,7 +44,7 @@ This property determines the height of the generated thumbnail in pixels. Howeve
 
 ## Editability properties
 
-{{% snippet file="refguide/Editable+Property.md" %}}
+{{% snippet file="refguide/editable-property.md" %}}
 
 {{% snippet file="refguide/condition-property.md" %}}
 

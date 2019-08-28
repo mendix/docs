@@ -5,6 +5,7 @@ tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+## 1 Introduction
 
 An image viewer can be used to display an image or its thumbnail.
 
@@ -17,7 +18,7 @@ This image viewer shows the product image.
 
 An image viewer must be placed in a data view or template grid.
 
-## Common properties
+## 2 Common Properties
 
 {{% snippet file="refguide/Name+Property.md" %}}
 
@@ -25,15 +26,15 @@ An image viewer must be placed in a data view or template grid.
 
 {{% snippet file="refguide/Style+Property.md" %}}
 
-## Data source properties
+## 3 Data Source Properties
 
-### Entity (path)
+### 3.1 Entity (Path)
 
 The entity (path) property specifies which entity will be shown in the image viewer. It starts in the data view entity and must end in System.Image or a specialization thereof. If the data view entity itself is (a specialization of) System.Image you can use this entity on the image viewer as well.
 
-## Events
+## 4 Events
 
-### On click
+### 4.1 On Click
 
 This property specifies what happens when the image is clicked:
 
@@ -47,19 +48,19 @@ _Default value:_ Do nothing
 
 {{% alert type="info" %}}On click events are not supported on native mobile pages.{{% /alert %}}
 
-### Microflow (in the case 'Call microflow')
+### 4.2 Microflow (for Call Microflow)
 
 This property specifies the microflow that will be executed when the image is clicked.
 
-### Microflow settings (in the case 'Call microflow')
+### 4.3 Microflow Settings (for Call Microflow)
 
 The on click settings specify what parameters will be passed to the microflow, whether to show a progress bar or not, and more.
 
 See [Starting Microflows](starting-microflows).
 
-## General properties
+## 5 General Properties
 
-### Default image
+### 5.1 Default Image
 
 This is the image that is displayed if no image is uploaded.
 
@@ -85,19 +86,19 @@ This is the image that is displayed if no image is uploaded.
 
 {{% snippet file="refguide/Image+Responsive.md" %}}
 
-### Show
+### 5.2 Show
 
 This property indicates whether the generated thumbnail is shown or the full image.
 
 _Default value:_ Thumbnail
 
-## Visibility properties
+## 6 Visibility Properties
 
 {{% snippet file="refguide/Visibility+Property.md" %}}
 
 {{% snippet file="refguide/Visibility+Property+With+Module+Roles+Simple.md" %}}
 
-## Related articles
+## 7 Related Articles
 
 *   [Data view](data-view)
 *   [Entities](entities)

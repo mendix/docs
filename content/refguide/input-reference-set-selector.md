@@ -78,7 +78,7 @@ The page has displays a reference selector for the reference to country and an i
 
 ## Editability Properties
 
-{{% snippet file="refguide/Editable+Property.md" %}}
+{{% snippet file="refguide/editable-property.md" %}}
 
 {{% snippet file="refguide/Read+Only+Style.md" %}}
 

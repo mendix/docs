@@ -40,7 +40,7 @@ Filling out the caption for an empty option improves the user experience of your
 
 ## Editability Properties
 
-{{% snippet file="refguide/Editable+Property.md" %}}
+{{% snippet file="refguide/editable-property.md" %}}
 
 {{% snippet file="refguide/Read+Only+Style.md" %}}
 

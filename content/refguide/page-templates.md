@@ -28,7 +28,7 @@ Page template properties are described in the sections below.
 
 {{% snippet file="refguide/document-name-property.md" %}}
 
-{{% snippet file="refguide/Documentation+Property.md" %}}
+{{% snippet file="refguide/documentation-property.md" %}}
 
 {{% snippet file="refguide/Document+class-property.md" %}}
 
@@ -36,7 +36,7 @@ Page template properties are described in the sections below.
 
 ## 4 Design Properties
 
-{{% snippet file="refguide/Canvas+Width+Property.md" %}}
+{{% snippet file="refguide/canvas-width-property.md" %}}
 
 {{% snippet file="refguide/Canvas+Height+Property.md" %}}
 

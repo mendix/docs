@@ -20,11 +20,11 @@ As the purpose of building blocks is to facilitate design rather than functional
 
 {{% snippet file="refguide/document-name-property.md" %}}
 
-{{% snippet file="refguide/Documentation+Property.md" %}}
+{{% snippet file="refguide/documentation-property.md" %}}
 
 ## 3 Design Properties
 
-{{% snippet file="refguide/Canvas+Width+Property.md" %}}
+{{% snippet file="refguide/canvas-width-property.md" %}}
 
 {{% snippet file="refguide/Canvas+Height+Property.md" %}}
 

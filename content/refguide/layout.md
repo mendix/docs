@@ -34,7 +34,7 @@ As a consequence of this behavior, user experience can be improved significantly
 
 {{% snippet file="refguide/document-name-property.md" %}}
 
-{{% snippet file="refguide/Documentation+Property.md" %}}
+{{% snippet file="refguide/documentation-property.md" %}}
 
 {{% snippet file="refguide/Document+class-property.md" %}}
 
@@ -42,7 +42,7 @@ As a consequence of this behavior, user experience can be improved significantly
 
 ## 4 Design Properties
 
-{{% snippet file="refguide/Canvas+Width+Property.md" %}}
+{{% snippet file="refguide/canvas-width-property.md" %}}
 
 {{% snippet file="refguide/Canvas+Height+Property.md" %}}
 

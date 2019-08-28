@@ -27,7 +27,7 @@ This check box allows you to change whether someone is subscribed to the newslet
 
 ## Editability properties
 
-{{% snippet file="refguide/Editable+Property.md" %}}
+{{% snippet file="refguide/editable-property.md" %}}
 
 {{% snippet file="refguide/Read+Only+Style.md" %}}
 

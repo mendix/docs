@@ -64,7 +64,7 @@ The placeholder text is shown when no text has been entered yet. It can be used 
 
 ## Editability Properties
 
-{{% snippet file="refguide/Editable+Property.md" %}}
+{{% snippet file="refguide/editable-property.md" %}}
 
 {{% snippet file="refguide/Read+Only+Style.md" %}}
 

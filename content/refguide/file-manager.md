@@ -53,7 +53,7 @@ _Default value:_ False
 
 ## Editability properties
 
-{{% snippet file="refguide/Editable+Property.md" %}}
+{{% snippet file="refguide/editable-property.md" %}}
 
 {{% snippet file="refguide/condition-property.md" %}}
 

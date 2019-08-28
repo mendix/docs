@@ -56,7 +56,7 @@ The placeholder text is shown if the date attribute is empty. It can be used to 
 
 ## 5 Editability Properties
 
-{{% snippet file="refguide/Editable+Property.md" %}}
+{{% snippet file="refguide/editable-property.md" %}}
 
 {{% snippet file="refguide/Read+Only+Style.md" %}}
 

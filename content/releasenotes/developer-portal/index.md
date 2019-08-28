@@ -16,15 +16,10 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud v3, and other deploym
 
 ### August 29th, 2019
 
-#### Mendix Cloud Improvements
+#### Mendix Cloud Fixes
 
-* Refactored unused libraries in the Developer Portal.
-* We made general improvements.
-
-#### Fixes
-
-* We fixed an issue that caused wrong Technical Contact information on the app's *General* page in the Developer Portal. (Ticket #84852)
-* We added appropriate feedback message when a backup restore is attempted while the backup is still being created.(Ticket #85786)
+* We fixed an issue that caused the wrong Technical Contact information to be shown on the app's *General* page in the Developer Portal. (Ticket #84852)
+* We added a feedback message when you try to restore a backup while the backup is still being created. (Ticket #85786)
 
 ### August 26th, 2019
 

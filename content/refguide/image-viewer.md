@@ -65,23 +65,23 @@ This is the image that is displayed if no image is uploaded.
 
 {{% snippet file="refguide/Image+Width+Unit.md" %}}
 
-_Default value_: Percentage
+*Default value*: Percentage
 
 {{% alert type="info" %}}Not supported on native mobile pages.{{% /alert %}}
 
 {{% snippet file="refguide/Image+Width.md" %}}
 
-_Default value_: 100
+*Default value*: 100
 
 {{% snippet file="refguide/Image+Height+Unit.md" %}}
 
-_Default value_: Auto
+*Default value*: Auto
 
 {{% alert type="info" %}}Not supported on native mobile pages.{{% /alert %}}
 
 {{% snippet file="refguide/Image+Height.md" %}}
 
-_Default value_: not applicable
+*Default value*: not applicable
 
 {{% snippet file="refguide/Image+Responsive.md" %}}
 

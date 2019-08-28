@@ -73,7 +73,7 @@ This property indicates whether the date and time should be localized. By defaul
 
 In technical terms, this property indicates whether the client assumes that the date and time are in a local time zone (Yes) or in UTC (No). In the former case, the date is first converted to UTC before being sent to the server and converted from UTC before being displayed.
 
-_Default value_: Yes
+*Default value*: Yes
 
 ### 3.3 Enumeration (Only for Enumeration Attribute Type)
 

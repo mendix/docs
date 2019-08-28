@@ -13,4 +13,3 @@ Enrich the user interface of your applications by building on top of our web cli
 * [Mendix 8 Client API](https://apidocs.mendix.com/8/client/)
 * [Mendix 7 Client API](https://apidocs.mendix.com/7/client/)
 * [Mendix 6 Client API](https://apidocs.mendix.com/6/client/)
-* [Mendix 5 Client API](https://apidocs.mendix.com/5/client/)

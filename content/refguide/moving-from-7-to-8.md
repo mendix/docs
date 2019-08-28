@@ -35,7 +35,7 @@ If your original project was Mendix version 7.23.2 or below and you want to work
 
 Follow the instructions in [Migration From the Sync Process to Collaborative Development](/refguide7/collaborative-development-migration).
 
-## 3 Making Changes to Your App in Mendix 7 Before Upgrading to Mendix 8
+## 3 Making Changes to Your App Before Upgrading to Mendix 8, Studio Pro
 
 There may be changes which you should make to your app *before* you upgrade it to Mendix 8.
 

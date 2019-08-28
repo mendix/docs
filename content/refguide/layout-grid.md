@@ -74,15 +74,15 @@ A new column is added, the weight 1 is automatically set for it.
 
 In adding to inserting a new row, you can perform the following actions when right-clicking a row:
 
-* **Move up** – moves a row up in the layout grid, you can use a shortcut for it  <kbd>Ctrl</kbd> + <kbd>&#8593</kbd> arrow
-* **Move down** – moves a row down in the layout grid, you can use a shortcut for it  <kbd>Ctrl</kbd> + <kbd>&#8595</kbd> arrow
+* **Move up** – moves a row up in the layout grid, you can use a shortcut for it  <kbd>Ctrl</kbd> + <kbd>Up</kbd> arrow
+* **Move down** – moves a row down in the layout grid, you can use a shortcut for it  <kbd>Ctrl</kbd> + <kbd>Down</kbd> arrow
 
 #### 2.2.3 Performing Other Actions on Columns
 
 In adding to inserting a new column, you can perform the following actions when right-clicking a column:
 
-* **Move left** – moves a column left in the row, you can use a shortcut for it  <kbd>Ctrl</kbd> + <kbd>&#8592</kbd> arrow
-* **Move right** – moves a column right in the row, you can use a shortcut for it  <kbd>Ctrl</kbd> + <kbd>&#8594</kbd> arrow
+* **Move left** – moves a column left in the row, you can use a shortcut for it  <kbd>Ctrl</kbd> + <kbd>Left</kbd> arrow
+* **Move right** – moves a column right in the row, you can use a shortcut for it  <kbd>Ctrl</kbd> + <kbd>Right</kbd> arrow
 * **Row** – allows you to perform actions on the column's row 
 
 ## 3 Properties

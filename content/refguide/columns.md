@@ -6,7 +6,7 @@ tags: ["studio pro"]
 ---
 ## Common Properties
 
-{{% snippet file="refguide/class+property.md" %}}
+{{% snippet file="refguide/class-property.md" %}}
 
 {{% snippet file="refguide/Style+Property.md" %}}
 

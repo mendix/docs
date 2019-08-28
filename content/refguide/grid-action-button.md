@@ -10,23 +10,23 @@ An action button can perform various actions such as calling a microflow or nano
 
 Common properties
 
-{{% snippet file="refguide/class+property.md" %}}
+{{% snippet file="refguide/class-property.md" %}}
 
 {{% snippet file="refguide/Style+Property.md" %}}
 
 ## Events
 
-{{% snippet file="refguide/On+Click+Event+Action.md" %}}
+{{% snippet file="refguide/on-click-event-action.md" %}}
 
 ## General properties
 
-{{% snippet file="refguide/caption+property.md" %}}
+{{% snippet file="refguide/caption-property.md" %}}
 
 {{% snippet file="refguide/Tooltip+Property.md" %}}
 
-{{% snippet file="refguide/image+property.md" %}}
+{{% snippet file="refguide/image-property.md" %}}
 
-{{% snippet file="refguide/button+style+property.md" %}}
+{{% snippet file="refguide/button-style-property.md" %}}
 
 {{% snippet file="refguide/is+default+button+property.md" %}}
 

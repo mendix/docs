@@ -23,7 +23,7 @@ The simple menu bar widget shows a configured menu in the form of a horizontal o
 
 {{% snippet file="refguide/name-property.md" %}}
 
-{{% snippet file="refguide/class+property.md" %}}
+{{% snippet file="refguide/class-property.md" %}}
 
 {{% snippet file="refguide/Style+Property.md" %}}
 

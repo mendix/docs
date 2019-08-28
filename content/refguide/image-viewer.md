@@ -10,8 +10,8 @@ tags: ["studio pro"]
 An image viewer can be used to display an image or its thumbnail.
 
 {{% alert type="info" %}}
-
 ![](attachments/pages/image-viewer.png)
+
 This image viewer shows the product image.
 
 {{% /alert %}}
@@ -68,9 +68,13 @@ This is the image that is displayed if no image is uploaded.
 
 *Default value*: Percentage
 
-{{% alert type="info" %}}Not supported on native mobile pages.{{% /alert %}}
+{{% alert type="info" %}}
+Not supported on native mobile pages.
+{{% /alert %}}
 
-{{% snippet file="refguide/Image+Width.md" %}}
+### Width
+
+The width of the image in pixels or percentage (see width unit). In the case of 'Auto', no value needs to be specified.
 
 *Default value*: 100
 
@@ -94,7 +98,11 @@ The height of the image in pixels or percentage (see height unit). In the case o
 
 *Default value*: not applicable
 
-{{% snippet file="refguide/Image+Responsive.md" %}}
+### Responsive
+
+This property influences how the image scales. If the value is 'Yes', the image will never get bigger than its original size. It can become smaller. If the value is 'No', the image can become both larger and smaller than its original size.
+
+*Default value*: Yes
 
 ### 5.2 Show
 

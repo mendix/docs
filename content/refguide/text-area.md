@@ -104,7 +104,7 @@ The placeholder text is shown when no text has been entered yet. It can be used 
 
 {{% snippet file="refguide/name-property.md" %}}
 
-{{% snippet file="refguide/class-property.md" %}}
+{{% snippet file="refguide/class+property.md" %}}
 
 {{% snippet file="refguide/Style+Property.md" %}}
 

@@ -13,13 +13,13 @@ The excel export function relies on a specific data retrieval method. As such, i
 
 ## Common properties
 
-{{% snippet file="refguide/class-property.md" %}}
+{{% snippet file="refguide/class+property.md" %}}
 
 {{% snippet file="refguide/Style+Property.md" %}}
 
 ## General properties
 
-{{% snippet file="refguide/caption-property.md" %}}
+{{% snippet file="refguide/caption+property.md" %}}
 
 {{% snippet file="refguide/Tooltip+Property.md" %}}
 

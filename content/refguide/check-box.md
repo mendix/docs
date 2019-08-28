@@ -51,7 +51,7 @@ This check box allows you to change whether someone is subscribed to the newslet
 
 {{% snippet file="refguide/name-property.md" %}}
 
-{{% snippet file="refguide/class-property.md" %}}
+{{% snippet file="refguide/class+property.md" %}}
 
 {{% snippet file="refguide/Style+Property.md" %}}
 

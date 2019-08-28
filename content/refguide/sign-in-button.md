@@ -15,7 +15,7 @@ It must be placed on a page together with a [login id text box](login-id-text-bo
 
 {{% snippet file="refguide/name-property.md" %}}
 
-{{% snippet file="refguide/class-property.md" %}}
+{{% snippet file="refguide/class+property.md" %}}
 
 {{% snippet file="refguide/Style+Property.md" %}}
 
@@ -23,7 +23,7 @@ It must be placed on a page together with a [login id text box](login-id-text-bo
 
 ## General Properties
 
-{{% snippet file="refguide/caption-property.md" %}}
+{{% snippet file="refguide/caption+property.md" %}}
 
 {{% snippet file="refguide/Tooltip+Property.md" %}}
 

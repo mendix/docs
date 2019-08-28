@@ -80,7 +80,7 @@ The placeholder text is shown if the date attribute is empty. It can be used to 
 
 {{% snippet file="refguide/name-property.md" %}}
 
-{{% snippet file="refguide/class-property.md" %}}
+{{% snippet file="refguide/class+property.md" %}}
 
 {{% snippet file="refguide/Style+Property.md" %}}
 

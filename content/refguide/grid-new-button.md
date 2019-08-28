@@ -11,7 +11,7 @@ The **Create** button allows the user to create new objects in a grid or referen
 
 ## Common Properties
 
-{{% snippet file="refguide/class-property.md" %}}
+{{% snippet file="refguide/class+property.md" %}}
 
 {{% snippet file="refguide/Style+Property.md" %}}
 
@@ -29,7 +29,7 @@ Let us say you have an entity Vehicle and two specializations, namely Bicycle an
 
 ## General Properties
 
-{{% snippet file="refguide/caption-property.md" %}}
+{{% snippet file="refguide/caption+property.md" %}}
 
 {{% snippet file="refguide/Tooltip+Property.md" %}}
 

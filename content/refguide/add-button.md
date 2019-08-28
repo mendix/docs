@@ -12,13 +12,13 @@ The add button can only be used in the reference set selector. With this button,
 
 ## 2 Common Properties
 
-{{% snippet file="refguide/class-property.md" %}}
+{{% snippet file="refguide/class+property.md" %}}
 
 {{% snippet file="refguide/Style+Property.md" %}}
 
 ## 3 General Properties
 
-{{% snippet file="refguide/caption-property.md" %}}
+{{% snippet file="refguide/caption+property.md" %}}
 
 {{% snippet file="refguide/Tooltip+Property.md" %}}
 

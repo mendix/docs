@@ -13,7 +13,7 @@ The sidebar toggle is a button that when pressed will make a region of a [scroll
 
 ## Button properties
 
-{{% snippet file="refguide/caption-property.md" %}}
+{{% snippet file="refguide/caption+property.md" %}}
 
 {{% snippet file="refguide/image-property.md" %}}
 
@@ -25,7 +25,7 @@ The sidebar toggle is a button that when pressed will make a region of a [scroll
 
 {{% snippet file="refguide/name-property.md" %}}
 
-{{% snippet file="refguide/class-property.md" %}}
+{{% snippet file="refguide/class+property.md" %}}
 
 {{% snippet file="refguide/Style+Property.md" %}}
 

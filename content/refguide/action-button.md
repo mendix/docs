@@ -11,7 +11,7 @@ An action button can perform various actions such as calling a microflow or nano
 
 ## 2 Button Properties
 
-{{% snippet file="refguide/caption-property.md" %}}
+{{% snippet file="refguide/caption+property.md" %}}
 
 {{% snippet file="refguide/Tooltip+Property.md" %}}
 
@@ -31,7 +31,7 @@ Disables the action button until the action is completed or failed.
 
 {{% snippet file="refguide/name-property.md" %}}
 
-{{% snippet file="refguide/class-property.md" %}}
+{{% snippet file="refguide/class+property.md" %}}
 
 {{% snippet file="refguide/Style+Property.md" %}}
 

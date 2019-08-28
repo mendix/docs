@@ -37,19 +37,30 @@ Before starting this how-to, make sure you have completed the following prerequi
 To start the packaging process, follow these steps:
 
 1. Open the [Developer Portal](https://sprintr.home.mendix.com/).
+
 2. Go to the project of the Mendix app that you want to publish.
+
 3. Go to the **Deploy > Mobile app** entry in the side menu of the project.
+
 4. You will be shown the **Publish App for Mobile App Stores** page, where you need to set up some options for your hybrid mobile app.
-5.  On the **App Info** tab set up the following settings for your app:</br>
-	a. Fill in the name that your app will have in the app stores and on the device. The **Name**  should correspond to the name set up in your Apple certificate.</br>
-	b. Set the unique **App Identifier** for your app. The **App Identifier** should correspond to the ones set up in your Apple certificate.</br>
-	c. If your app does not employ push notifications, disable the **Push Notifications** permission by clearing its check box.
+
+   ![mobile app page](attachments/publishing-a-hybrid-app/mobile-app-page.png)
+
+5. On the **App Info** tab set up the following settings for your app:</br>
+   a. Fill in the name that your app will have in the app stores and on the device. The **Name**  should correspond to the name set up in your Apple certificate.</br>
+   b. Set the unique **App Identifier** for your app. The **App Identifier** should correspond to the ones set up in your Apple certificate.</br>
+   c. If your app does not employ push notifications, disable the **Push Notifications** permission by clearing its check box.
+
 6. Select the platforms that you want to support (this how-to assumes that you will choose at least iOS).
+
 7. Optionally, upload custom-branded app icons and splash screens under the tabs for the different platforms. You can find those tabs next to the **App Info** tab.
 
 {{% alert type="info" %}If you do not upload any images, the default Mendix-branded images that are shown will continue to be used.{{% /alert %}}
 
-8. Click **Publish for Mobile App Stores**. You will be presented with the **Build Mobile App Store Packages** page.
+8. Click the green **Publish for Mobile App Stores** button. You will be presented with the **Build Mobile App Store Packages** page:
+
+![build mobile app store packages](attachments/publishing-a-hybrid-app/build-mobile-packages.png)
+
 9. Select where you want to publish:
 
 	* For Free Apps, the only option is **Sandbox**

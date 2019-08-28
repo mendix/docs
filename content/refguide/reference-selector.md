@@ -84,7 +84,7 @@ See [Opening Pages](opening-pages) for more details.
 
 ## Formatting Properties
 
-{{% snippet file="refguide/Numeric+Formatting+Properties.md" %}}
+{{% snippet file="refguide/numeric-formatting.md" %}}
 
 ### Date Format (Only for Attributes of Type Date and Time)
 
@@ -169,15 +169,15 @@ Keep in mind that even though you connect an attribute to the reference selector
 
 {{% /alert %}}
 
-{{% snippet file="refguide/Label+Property.md" %}}
+{{% snippet file="refguide/label-property.md" %}}
 
 ## Editability Properties
 
-{{% snippet file="refguide/Editable+Property.md" %}}
+{{% snippet file="refguide/editable-property.md" %}}
 
 {{% snippet file="refguide/Read+Only+Style.md" %}}
 
-{{% snippet file="refguide/Condition+Property.md" %}}
+{{% snippet file="refguide/condition-property.md" %}}
 
 ## Visibility Properties
 
@@ -187,13 +187,13 @@ Keep in mind that even though you connect an attribute to the reference selector
 
 ## Events Properties
 
-{{% snippet file="refguide/On+Change+Event.md" %}}
+{{% snippet file="refguide/on-change-event.md" %}}
 
 ## Common Properties
 
-{{% snippet file="refguide/Name+Property.md" %}}
+{{% snippet file="refguide/name-property.md" %}}
 
-{{% snippet file="refguide/Class+Property.md" %}}
+{{% snippet file="refguide/class-property.md" %}}
 
 {{% snippet file="refguide/Style+Property.md" %}}
 

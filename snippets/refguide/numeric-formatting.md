@@ -1,4 +1,4 @@
-### Decimal mode
+### Decimal Mode
 
 <div class="alert alert-info">
 

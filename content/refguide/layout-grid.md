@@ -121,7 +121,7 @@ As the layout grid responds to the viewport width, and not to the width of its c
 
 ### 3.3 Visibility Section {#visibility}
 
-{{% snippet file="refguide/visibility+section+link.md" %}}
+{{% snippet file="refguide/visibility-section-link.md" %}}
 
 ## 4 Read More
 

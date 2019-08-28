@@ -83,6 +83,7 @@ In adding to inserting a new column, you can perform the following actions when 
 
 * **Move left** – moves a column left in the row, you can use a shortcut for it  <kbd>Ctrl</kbd> + <kbd>&#8592</kbd> arrow
 * **Move right** – moves a column right in the row, you can use a shortcut for it  <kbd>Ctrl</kbd> + <kbd>&#8594</kbd> arrow
+* **Row** – allows you to perform actions on the column's row 
 
 ## 3 Properties
 

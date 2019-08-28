@@ -11,7 +11,7 @@ The password text box is a widget that can be used to provide a password for aut
 
 ## Common Properties
 
-{{% snippet file="refguide/Name+Property.md" %}}
+{{% snippet file="refguide/name-property.md" %}}
 
 {{% snippet file="refguide/class-property.md" %}}
 

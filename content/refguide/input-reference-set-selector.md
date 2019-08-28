@@ -72,7 +72,7 @@ The page has displays a reference selector for the reference to country and an i
 
 ## Data Source Properties
 
-{{% snippet file="refguide/attribute-path-property.md" %}}
+{{% snippet file="refguide/attribute+path+property.md" %}}
 
 {{% snippet file="refguide/label-property.md" %}}
 
@@ -96,7 +96,7 @@ The page has displays a reference selector for the reference to country and an i
 
 ## Common Properties
 
-{{% snippet file="refguide/Name+Property.md" %}}
+{{% snippet file="refguide/name-property.md" %}}
 
 {{% snippet file="refguide/class-property.md" %}}
 

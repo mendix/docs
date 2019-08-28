@@ -19,7 +19,7 @@ An action button can perform various actions such as calling a microflow or nano
 
 {{% snippet file="refguide/Render+Mode+Property.md" %}}
 
-{{% snippet file="refguide/button-style-property.md" %}}
+{{% snippet file="refguide/button+style+property.md" %}}
 
 ### 2.1 Disable During Action (Only for Microflow Actions)
 
@@ -29,7 +29,7 @@ Disables the action button until the action is completed or failed.
 
 ## 3 Common Properties
 
-{{% snippet file="refguide/Name+Property.md" %}}
+{{% snippet file="refguide/name-property.md" %}}
 
 {{% snippet file="refguide/class-property.md" %}}
 

@@ -19,7 +19,7 @@ A text box must be placed in a data view or template grid and connected to an at
 
 ## General Properties
 
-{{% snippet file="refguide/Numeric+Formatting+Properties.md" %}}
+{{% snippet file="refguide/numeric+formatting+properties.md" %}}
 
 ### Show as Password (Only for Attributes of the String or HashString Type)
 
@@ -58,7 +58,7 @@ The placeholder text is shown when no text has been entered yet. It can be used 
 
 ## Data Source Properties
 
-{{% snippet file="refguide/attribute-path-property.md" %}}
+{{% snippet file="refguide/attribute+path+property.md" %}}
 
 {{% snippet file="refguide/label-property.md" %}}
 
@@ -86,7 +86,7 @@ The placeholder text is shown when no text has been entered yet. It can be used 
 
 ## Common Properties
 
-{{% snippet file="refguide/Name+Property.md" %}}
+{{% snippet file="refguide/name-property.md" %}}
 
 {{% snippet file="refguide/class-property.md" %}}
 

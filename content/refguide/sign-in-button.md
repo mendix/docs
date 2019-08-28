@@ -13,7 +13,7 @@ It must be placed on a page together with a [login id text box](login-id-text-bo
 
 ## Common Properties
 
-{{% snippet file="refguide/Name+Property.md" %}}
+{{% snippet file="refguide/name-property.md" %}}
 
 {{% snippet file="refguide/class-property.md" %}}
 
@@ -31,7 +31,7 @@ It must be placed on a page together with a [login id text box](login-id-text-bo
 
 {{% snippet file="refguide/Render+Mode+Property.md" %}}
 
-{{% snippet file="refguide/button-style-property.md" %}}
+{{% snippet file="refguide/button+style+property.md" %}}
 
 ### Validation Message Widget
 

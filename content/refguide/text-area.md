@@ -74,7 +74,7 @@ The placeholder text is shown when no text has been entered yet. It can be used 
 
 ## Data Source Properties
 
-{{% snippet file="refguide/attribute-path-property.md" %}}
+{{% snippet file="refguide/attribute+path+property.md" %}}
 
 {{% snippet file="refguide/label-property.md" %}}
 
@@ -102,7 +102,7 @@ The placeholder text is shown when no text has been entered yet. It can be used 
 
 ## Common Properties
 
-{{% snippet file="refguide/Name+Property.md" %}}
+{{% snippet file="refguide/name-property.md" %}}
 
 {{% snippet file="refguide/class-property.md" %}}
 

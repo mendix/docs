@@ -34,7 +34,7 @@ Filling out the caption for an empty option improves the user experience of your
 
 ## Data Source Properties
 
-{{% snippet file="refguide/attribute-path-property.md" %}}
+{{% snippet file="refguide/attribute+path+property.md" %}}
 
 {{% snippet file="refguide/label-property.md" %}}
 
@@ -62,7 +62,7 @@ Filling out the caption for an empty option improves the user experience of your
 
 ## Common Properties
 
-{{% snippet file="refguide/Name+Property.md" %}}
+{{% snippet file="refguide/name-property.md" %}}
 
 {{% snippet file="refguide/class-property.md" %}}
 

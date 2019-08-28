@@ -42,9 +42,9 @@ As a consequence of this behavior, user experience can be improved significantly
 
 ## 4 Design Properties
 
-{{% snippet file="refguide/canvas-width-property.md" %}}
+{{% snippet file="refguide/canvas+width+property.md" %}}
 
-{{% snippet file="refguide/canvas-height-property.md" %}}
+{{% snippet file="refguide/canvas+height+property.md" %}}
 
 ## 5 General Properties
 

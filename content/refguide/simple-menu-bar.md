@@ -21,7 +21,7 @@ The simple menu bar widget shows a configured menu in the form of a horizontal o
 
 ## Common Properties
 
-{{% snippet file="refguide/Name+Property.md" %}}
+{{% snippet file="refguide/name-property.md" %}}
 
 {{% snippet file="refguide/class-property.md" %}}
 
@@ -29,7 +29,7 @@ The simple menu bar widget shows a configured menu in the form of a horizontal o
 
 ## General Properties
 
-{{% snippet file="refguide/Menu+Source+Properties.md" %}}
+{{% snippet file="refguide/menu-source-properties.md" %}}
 
 ### Orientation
 

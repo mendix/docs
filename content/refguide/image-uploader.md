@@ -56,7 +56,7 @@ This property determines the height of the generated thumbnail in pixels. Howeve
 
 ## Common properties
 
-{{% snippet file="refguide/Name+Property.md" %}}
+{{% snippet file="refguide/name-property.md" %}}
 
 {{% snippet file="refguide/class-property.md" %}}
 

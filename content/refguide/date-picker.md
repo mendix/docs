@@ -50,7 +50,7 @@ The placeholder text is shown if the date attribute is empty. It can be used to 
 
 ## 4 Data Source Properties
 
-{{% snippet file="refguide/attribute-path-property.md" %}}
+{{% snippet file="refguide/attribute+path+property.md" %}}
 
 {{% snippet file="refguide/label-property.md" %}}
 
@@ -78,7 +78,7 @@ The placeholder text is shown if the date attribute is empty. It can be used to 
 
 ## 8 Common Properties
 
-{{% snippet file="refguide/Name+Property.md" %}}
+{{% snippet file="refguide/name-property.md" %}}
 
 {{% snippet file="refguide/class-property.md" %}}
 

@@ -26,7 +26,7 @@ Static label content `Page [%pageNumber%] of [%totalPageCount%]` will print page
 
 ## 2 Common Properties
 
-{{% snippet file="refguide/Name+Property.md" %}}
+{{% snippet file="refguide/name-property.md" %}}
 
 ## 3 Appearance Properties
 

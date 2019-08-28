@@ -84,7 +84,7 @@ See [Opening Pages](opening-pages) for more details.
 
 ## Formatting Properties
 
-{{% snippet file="refguide/Numeric+Formatting+Properties.md" %}}
+{{% snippet file="refguide/numeric+formatting+properties.md" %}}
 
 ### Date Format (Only for Attributes of Type Date and Time)
 
@@ -191,7 +191,7 @@ Keep in mind that even though you connect an attribute to the reference selector
 
 ## Common Properties
 
-{{% snippet file="refguide/Name+Property.md" %}}
+{{% snippet file="refguide/name-property.md" %}}
 
 {{% snippet file="refguide/class-property.md" %}}
 

@@ -13,7 +13,7 @@ It must be placed on a page together with a [Password text box](password-text-bo
 
 ## Common Properties
 
-{{% snippet file="refguide/Name+Property.md" %}}
+{{% snippet file="refguide/name-property.md" %}}
 
 {{% snippet file="refguide/class-property.md" %}}
 

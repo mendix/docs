@@ -53,4 +53,4 @@ For details, see [Style](style).
 
 ## 4 Common Properties
 
-{{% snippet file="refguide/Name+Property.md" %}}
+{{% snippet file="refguide/name-property.md" %}}

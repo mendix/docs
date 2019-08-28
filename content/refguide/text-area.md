@@ -74,7 +74,7 @@ The placeholder text is shown when no text has been entered yet. It can be used 
 
 ## Data Source Properties
 
-{{% snippet file="refguide/Attribute+Path+Property.md" %}}
+{{% snippet file="refguide/attribute-path-property.md" %}}
 
 {{% snippet file="refguide/Label+Property.md" %}}
 
@@ -84,7 +84,7 @@ The placeholder text is shown when no text has been entered yet. It can be used 
 
 {{% snippet file="refguide/Read+Only+Style.md" %}}
 
-{{% snippet file="refguide/Condition+Property.md" %}}
+{{% snippet file="refguide/condition-property.md" %}}
 
 ## Visibility Properties
 
@@ -104,7 +104,7 @@ The placeholder text is shown when no text has been entered yet. It can be used 
 
 {{% snippet file="refguide/Name+Property.md" %}}
 
-{{% snippet file="refguide/Class+Property.md" %}}
+{{% snippet file="refguide/class-property.md" %}}
 
 {{% snippet file="refguide/Style+Property.md" %}}
 

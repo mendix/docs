@@ -36,7 +36,7 @@ As a consequence of this behavior, user experience can be improved significantly
 
 {{% snippet file="refguide/Documentation+Property.md" %}}
 
-{{% snippet file="refguide/Document+Class+Property.md" %}}
+{{% snippet file="refguide/Document+class-property.md" %}}
 
 {{% snippet file="refguide/Style+Property.md" %}}
 

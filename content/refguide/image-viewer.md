@@ -21,7 +21,7 @@ An image viewer must be placed in a data view or template grid.
 
 {{% snippet file="refguide/Name+Property.md" %}}
 
-{{% snippet file="refguide/Class+Property.md" %}}
+{{% snippet file="refguide/class-property.md" %}}
 
 {{% snippet file="refguide/Style+Property.md" %}}
 

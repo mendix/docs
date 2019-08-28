@@ -10,13 +10,13 @@ The remove button is a button specifically made for the reference set selector. 
 
 ## Common Properties
 
-{{% snippet file="refguide/Class+Property.md" %}}
+{{% snippet file="refguide/class-property.md" %}}
 
 {{% snippet file="refguide/Style+Property.md" %}}
 
 ## General Properties
 
-{{% snippet file="refguide/Caption+Property.md" %}}
+{{% snippet file="refguide/caption-property.md" %}}
 
 {{% snippet file="refguide/Tooltip+Property.md" %}}
 

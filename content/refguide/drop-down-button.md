@@ -9,7 +9,7 @@ Clicking a drop down button shows a list of items. Each item can have an caption
 
 ## Button properties
 
-{{% snippet file="refguide/Caption+Property.md" %}}
+{{% snippet file="refguide/caption-property.md" %}}
 
 {{% snippet file="refguide/Tooltip+Property.md" %}}
 
@@ -23,7 +23,7 @@ Clicking a drop down button shows a list of items. Each item can have an caption
 
 {{% snippet file="refguide/Name+Property.md" %}}
 
-{{% snippet file="refguide/Class+Property.md" %}}
+{{% snippet file="refguide/class-property.md" %}}
 
 {{% snippet file="refguide/Style+Property.md" %}}
 

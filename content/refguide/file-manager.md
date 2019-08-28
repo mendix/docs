@@ -55,7 +55,7 @@ _Default value:_ False
 
 {{% snippet file="refguide/Editable+Property.md" %}}
 
-{{% snippet file="refguide/Condition+Property.md" %}}
+{{% snippet file="refguide/condition-property.md" %}}
 
 ## Visibility properties
 
@@ -67,7 +67,7 @@ _Default value:_ False
 
 {{% snippet file="refguide/Name+Property.md" %}}
 
-{{% snippet file="refguide/Class+Property.md" %}}
+{{% snippet file="refguide/class-property.md" %}}
 
 {{% snippet file="refguide/Style+Property.md" %}}
 

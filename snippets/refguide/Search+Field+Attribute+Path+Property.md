@@ -1,4 +1,4 @@
-### Attribute (path)
+### Attribute (Path)
 
 The text that is entered into the search field is searched for in the given attribute. For each object in the grid, the attribute is inspected to see whether it matches the value that is being searched.
 

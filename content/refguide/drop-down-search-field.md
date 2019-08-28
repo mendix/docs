@@ -11,7 +11,7 @@ To add a drop-down search field to your data grid, right-click within the search
 
 ## Common Properties
 
-{{% snippet file="refguide/Search+Field+Caption+Property.md" %}}
+{{% snippet file="refguide/Search+Field+caption-property.md" %}}
 
 {{% snippet file="refguide/Search+Field+Type+Property.md" %}}
 
@@ -19,7 +19,7 @@ To add a drop-down search field to your data grid, right-click within the search
 
 ## General properties
 
-{{% snippet file="refguide/Search+Field+Attribute+Path+Property.md" %}}
+{{% snippet file="refguide/Search+Field+attribute-path-property.md" %}}
 
 {{% snippet file="refguide/Search+Field+Comparison+Property.md" %}}
 

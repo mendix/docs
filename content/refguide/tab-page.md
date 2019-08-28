@@ -7,7 +7,7 @@ tags: ["studio pro"]
 
 ## General Properties
 
-{{% snippet file="refguide/Caption+Property.md" %}}
+{{% snippet file="refguide/caption-property.md" %}}
 
 ### Default tab page
 

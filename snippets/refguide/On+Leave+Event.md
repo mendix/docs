@@ -1,4 +1,4 @@
-### On leave
+### On Leave
 
 The on-leave property optionally specifies an action that will be executed when leaving the widget, either by using the <kbd>Tab</kbd> key or by clicking another widget.
 
@@ -17,27 +17,27 @@ The on-leave property optionally specifies an action that will be executed when 
 
 _Default value:_ Do nothing
 
-#### Page (Only for "Show a page") {#on-leave-page}
+#### Page (Only for Show a Page) {#on-leave-page}
 
 The [page](page) that should be shown.
 
 For more information, see [Opening Pages](opening-pages).
 
-#### Microflow (Only for "Call a microflow") {#on-leave-microflow}
+#### Microflow (Only for Call a Microflow) {#on-leave-microflow}
 
 The [microflow](microflow) that should be executed.
 
-#### Microflow Settings (Only for "Call a microflow") {#on-leave-microflow-settings}
+#### Microflow Settings (Only for Call a Microflow) {#on-leave-microflow-settings}
 
 The microflow settings specify what parameters will be passed to the microflow, whether to show a progress bar or not, and more.
 
 For more information, see [Starting Microflows](starting-microflows).
 
-#### Nanoflow (Only for "Call a nanoflow") {#on-leave-nanoflow}
+#### Nanoflow (Only for Call a Nanoflow) {#on-leave-nanoflow}
 
 The [nanoflow](nanoflow) that should be executed.
 
-#### Link Type (Only for "Open link") {#on-leave-link-type}
+#### Link Type (Only for Open Link) {#on-leave-link-type}
 
 This specifies the type of action triggered when pressing the button. These are the options:
 
@@ -50,25 +50,25 @@ This specifies the type of action triggered when pressing the button. These are 
 
 _Default value:_ Web
 
-#### Address (Only for "Open link") {#on-leave-address}
+#### Address (Only for Open Link) {#on-leave-address}
 
 Usage of the address property depends on the chosen link type. The property is used either as a URL (Web), as an email address (Email), or as a phone number (Call/Text).
 
 The address can be set to either a literal value or an attribute value.
 
-#### Address Value (Only for "Open link") {#on-leave-address-value}
+#### Address Value (Only for Open Link) {#on-leave-address-value}
 
 If a literal value is chosen for the address, you can enter the value here.
 
-#### Address Attribute (Only for "Open link") {#on-leave-address-attribute}
+#### Address Attribute (Only for Open Link) {#on-leave-address-attribute}
 
 If an attribute is chosen for the address, you can select the attribute here. An address attribute specifies a path to an attribute. The path starts at the entity of the data view in which the link button is contained.
 
-#### Close Page (Only for "Save changes" and "Cancel changes") {#on-leave-close-page}
+#### Close Page (Only for Save Changes & Cancel Changes) {#on-leave-close-page}
 
 This flag indicates whether the current page should be closed.
 
-#### Sync Automatically (Only for "Save changes") {#on-leave-sync-automatically}
+#### Sync Automatically (Only for Save Changes) {#on-leave-sync-automatically}
 
 When an object is saved in a Mendix application running in an offline profile, this information is stored in a local database until it can be synchronized with the server (for more information on the capabilities of offline apps, see [Offline First](offline-first). In practice, this means that uploading a new object to the server requires two distinct actions: saving the object and [syncing it](offline-first#synchronization).
 

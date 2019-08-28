@@ -72,7 +72,7 @@ The page has displays a reference selector for the reference to country and an i
 
 ## Data Source Properties
 
-{{% snippet file="refguide/Attribute+Path+Property.md" %}}
+{{% snippet file="refguide/attribute-path-property.md" %}}
 
 {{% snippet file="refguide/Label+Property.md" %}}
 
@@ -82,7 +82,7 @@ The page has displays a reference selector for the reference to country and an i
 
 {{% snippet file="refguide/Read+Only+Style.md" %}}
 
-{{% snippet file="refguide/Condition+Property.md" %}}
+{{% snippet file="refguide/condition-property.md" %}}
 
 ## Visibility Properties
 
@@ -98,7 +98,7 @@ The page has displays a reference selector for the reference to country and an i
 
 {{% snippet file="refguide/Name+Property.md" %}}
 
-{{% snippet file="refguide/Class+Property.md" %}}
+{{% snippet file="refguide/class-property.md" %}}
 
 {{% snippet file="refguide/Style+Property.md" %}}
 

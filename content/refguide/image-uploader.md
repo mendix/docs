@@ -46,7 +46,7 @@ This property determines the height of the generated thumbnail in pixels. Howeve
 
 {{% snippet file="refguide/Editable+Property.md" %}}
 
-{{% snippet file="refguide/Condition+Property.md" %}}
+{{% snippet file="refguide/condition-property.md" %}}
 
 ## Visibility properties
 
@@ -58,7 +58,7 @@ This property determines the height of the generated thumbnail in pixels. Howeve
 
 {{% snippet file="refguide/Name+Property.md" %}}
 
-{{% snippet file="refguide/Class+Property.md" %}}
+{{% snippet file="refguide/class-property.md" %}}
 
 {{% snippet file="refguide/Style+Property.md" %}}
 

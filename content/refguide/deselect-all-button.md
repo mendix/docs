@@ -11,13 +11,13 @@ This button lets the user deselect all rows in the grid or reference set selecto
 
 ## Common properties
 
-{{% snippet file="refguide/Class+Property.md" %}}
+{{% snippet file="refguide/class-property.md" %}}
 
 {{% snippet file="refguide/Style+Property.md" %}}
 
 ## General properties
 
-{{% snippet file="refguide/Caption+Property.md" %}}
+{{% snippet file="refguide/caption-property.md" %}}
 
 {{% snippet file="refguide/Tooltip+Property.md" %}}
 

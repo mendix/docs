@@ -1,4 +1,4 @@
-### Module roles 
+### Module Roles 
 
 Module role conditional visibility is split into three subcategories.
 

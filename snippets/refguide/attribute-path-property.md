@@ -1,4 +1,4 @@
-### Attribute (path)
+### Attribute (Path)
 
 Many input widgets, like text boxes and drop-down widgets, can be connected to:
 

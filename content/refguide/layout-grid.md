@@ -55,9 +55,9 @@ To add a new row, do the following:
 
 1. Select an existing row in a layout grid.
 
-2. Right-click and select **Insert row above** or **Insert row below**:
+2.  Right-click and select **Insert row above** or **Insert row below**:
 
-   ![Adding a New Row](attachments/container-widgets/adding-row.png)
+    ![Adding a New Row](attachments/container-widgets/adding-row.png)
 
 3. Select a column layout (how many columns should be in a row and what weight columns should have).
 
@@ -69,6 +69,20 @@ To add a new column, do the following:
 2. Right-click and select **Add column left** or **Add column right**.
 
 A new column is added, the weight 1 is automatically set for it. 
+
+#### 2.2.2 Performing Other Actions on Rows
+
+In adding to inserting a new row, you can perform the following actions when right-clicking a row:
+
+* **Move up** – moves a row up in the layout grid, you can use a shortcut for it  <kbd>Ctrl</kbd> + <kbd>&#8593</kbd> arrow
+* **Move down** – moves a row down in the layout grid, you can use a shortcut for it  <kbd>Ctrl</kbd> + <kbd>&#8595</kbd> arrow
+
+#### 2.2.3 Performing Other Actions on Columns
+
+In adding to inserting a new column, you can perform the following actions when right-clicking a column:
+
+* **Move left** – moves a column left in the row, you can use a shortcut for it  <kbd>Ctrl</kbd> + <kbd>&#8592</kbd> arrow
+* **Move right** – moves a column right in the row, you can use a shortcut for it  <kbd>Ctrl</kbd> + <kbd>&#8594</kbd> arrow
 
 ## 3 Properties
 

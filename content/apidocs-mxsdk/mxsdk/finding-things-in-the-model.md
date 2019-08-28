@@ -22,7 +22,31 @@ const customerEntity = domainModel.entities.filter(entity => entity.name === "Cu
 const attributeName = customerEntity.attributes[0].name;
 ```
 
-## 3 The model.allModules Property
+## 3 The model.allXXX() Functions
+
+These functions return the complete collection of a specific type of units. Some unit types are abstract (for example, `allMicroflowBases` returns all microflows and all rules).
+
+So, the example snippet above could also be expressed this way:
+
+```js
+const domainModel = model.allDomainModels()[0];
+const customerEntity = domainModel.entities.filter(entity => entity.name === "Customer")[0]
+
+const attributeName = customerEntity.attributes[0].name;
+```
+
+## 4 The model.findXXXByQualifiedName() Functions
+
+For all the referable concepts in a model (both units, such as a page, as well as elements, such as an entity), a `find` function is exposed through the `model` object. Given a fully-qualified name (for example, `"Customers.Customer.Name"`), it finds the element with that name, or it returns `null` if it doesn't exist.
+
+```js
+const customerEntity = model.findEntityByQualifiedName("Customers.Customer");
+const attributeName = customerEntity.attributes[0].name;
+```
+
+For more information, see [How to Load Units and Elements](loading-units-and-elements).
+
+## 5 The model.allModules Function
 
 Implement this snippet to fetch information on all the App Store modules used in your app project:
 
@@ -39,28 +63,3 @@ model.allModules()
 		})
 	);
 ```
-
-## 4 The model.allXXX() Functions
-
-These functions return the complete collection of a specific type of units. Some unit types are abstract (for example, `allMicroflowBases` returns all microflows and all rules).
-
-So, the example snippet above could also be expressed this way:
-
-```js
-const domainModel = model.allDomainModels()[0];
-const customerEntity = domainModel.entities.filter(entity => entity.name === "Customer")[0]
-
-const attributeName = customerEntity.attributes[0].name;
-```
-
-## 5 The model.findXXXByQualifiedName() Functions
-
-For all the referable concepts in a model (both units, such as a page, as well as elements, such as an entity), a `find` function is exposed through the `model` object. Given a fully-qualified name (for example, `"Customers.Customer.Name"`), it finds the element with that name, or it returns `null` if it doesn't exist.
-
-```js
-const customerEntity = model.findEntityByQualifiedName("Customers.Customer");
-const attributeName = customerEntity.attributes[0].name;
-```
-
-For more information, see [How to Load Units and Elements](loading-units-and-elements).
-

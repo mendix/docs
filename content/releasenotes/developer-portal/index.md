@@ -14,6 +14,18 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud v3, and other deploym
 
 ## 2019
 
+### August 29th, 2019
+
+#### Mendix Cloud Improvements
+
+* Refactored unused libraries in the Developer Portal.
+* We made general improvements.
+
+#### Fixes
+
+* We fixed an issue that caused wrong Technical Contact information on the app's *General* page in the Developer Portal. (Ticket #84852)
+* We added appropriate feedback message when a backup restore is attempted while the backup is still being created.(Ticket #85786)
+
 ### August 26th, 2019
 
 #### SAP OData Connector Improvements & Fixes

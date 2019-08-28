@@ -247,6 +247,36 @@ Then the Studio Pro UI for the component appears like this:
 
 ![](attachments/widget-property-types/image.png)
 
+## 3.3 Widgets {#widgets}
+
+The widgets property allows a user to place multiple widgets inside a pluggable widget, similar to the content of a [container](/refguide/container) widget. It is passed as `ReactElement[]` prop to a client component.
+
+{{% alert type="info" %}}
+This property type was introduced in Mendix 8.3.
+{{% /alert %}}
+
+#### 3.1.1 XML Attributes
+
+| Attribute  | Required | Attribute Type | Description                                                                                                                                                          |
+| ---------- | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `type`     | Yes      | String         | Must be `widgets`                                                                                                                                                       |
+| `key`      | Yes      | String         |See [key](#key) |
+| `required` | No       | Boolean        | Whether a user must provide at least one widget. `true` by default                                                                                                |
+#### 3.1.2 Studio Pro UI
+
+When the component is defined as follows:
+
+```xml
+<property key="content" type="widgets" required="false">
+	<caption>Content</caption>
+	<description>Content of a box</description>
+</property>
+```
+
+Then the Studio Pro UI for the component appears like this:
+
+![](attachments/widget-property-types/widgets.png)
+
 ## 4 Dynamic Properties
 
 ### 4.1 Expression{#expression}

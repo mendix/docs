@@ -16,7 +16,7 @@ Common properties
 
 ## Events
 
-{{% snippet file="refguide/On+Click+Event+Action.md" %}}
+{{% snippet file="refguide/on+click+event+action.md" %}}
 
 ## General properties
 

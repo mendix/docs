@@ -39,7 +39,7 @@ Disables the action button until the action is completed or failed.
 
 ## 4 Events Properties {#events-on-click}
 
-{{% snippet file="refguide/On+Click+Event+Action.md" %}}
+{{% snippet file="refguide/on+click+event+action.md" %}}
 
 ## 5 Visibility Properties
 

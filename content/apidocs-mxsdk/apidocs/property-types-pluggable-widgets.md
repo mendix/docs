@@ -153,7 +153,7 @@ Then the Studio Pro UI for the property appears like this:
 
 ### 2.4 Enumeration{#enumeration}
 
-Enumeration allows a user to select one out of multiple options defined in the *XML*. The `key` of a selected enumeration element is passed as `string` prop to a client component.
+Enumeration allows a user to select one out of multiple options defined in the XML. The `key` of a selected enumeration element is passed as `string` prop to a client component.
 
 #### 2.4.1 XML Attributes
 

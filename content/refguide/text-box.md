@@ -60,7 +60,7 @@ The placeholder text is shown when no text has been entered yet. It can be used 
 
 {{% snippet file="refguide/attribute-path-property.md" %}}
 
-{{% snippet file="refguide/Label+Property.md" %}}
+{{% snippet file="refguide/label-property.md" %}}
 
 ## Editability Properties
 

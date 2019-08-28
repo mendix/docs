@@ -23,7 +23,7 @@ This check box allows you to change whether someone is subscribed to the newslet
 
 {{% snippet file="refguide/attribute-path-property.md" %}}
 
-{{% snippet file="refguide/Label+Property.md" %}}
+{{% snippet file="refguide/label-property.md" %}}
 
 ## Editability properties
 

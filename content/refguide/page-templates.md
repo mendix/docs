@@ -30,7 +30,7 @@ Page template properties are described in the sections below.
 
 {{% snippet file="refguide/documentation-property.md" %}}
 
-{{% snippet file="refguide/Document+class-property.md" %}}
+{{% snippet file="refguide/document-class-property.md" %}}
 
 {{% snippet file="refguide/Style+Property.md" %}}
 

@@ -36,7 +36,7 @@ Filling out the caption for an empty option improves the user experience of your
 
 {{% snippet file="refguide/attribute-path-property.md" %}}
 
-{{% snippet file="refguide/Label+Property.md" %}}
+{{% snippet file="refguide/label-property.md" %}}
 
 ## Editability Properties
 

@@ -37,7 +37,7 @@ Let us say you have an entity Vehicle and two specializations, namely Bicycle an
 
 {{% snippet file="refguide/button-style-property.md" %}}
 
-{{% snippet file="refguide/Is+default+button+Property.md" %}}
+{{% snippet file="refguide/is-default-button-property.md" %}}
 
 ### Edit location
 

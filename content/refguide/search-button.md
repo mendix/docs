@@ -24,7 +24,7 @@ The search button toggles the search bar on and off. It is only present if the '
 
 {{% snippet file="refguide/button-style-property.md" %}}
 
-{{% snippet file="refguide/Is+default+button+Property.md" %}}
+{{% snippet file="refguide/is-default-button-property.md" %}}
 
 ## Visibility Properties
 

@@ -25,4 +25,4 @@ The password text box is a widget that can be used to provide a password for aut
 
 The placeholder text is shown when no text has been entered yet. It can be used to give a hint to the user about what kind of text should be entered.
 
-{{% snippet file="refguide/Login+Label+Properties.md" %}}
+{{% snippet file="refguide/login-label-properties.md" %}}

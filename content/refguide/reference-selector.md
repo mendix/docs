@@ -169,7 +169,7 @@ Keep in mind that even though you connect an attribute to the reference selector
 
 {{% /alert %}}
 
-{{% snippet file="refguide/Label+Property.md" %}}
+{{% snippet file="refguide/label-property.md" %}}
 
 ## Editability Properties
 

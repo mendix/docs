@@ -52,7 +52,7 @@ The placeholder text is shown if the date attribute is empty. It can be used to 
 
 {{% snippet file="refguide/attribute-path-property.md" %}}
 
-{{% snippet file="refguide/Label+Property.md" %}}
+{{% snippet file="refguide/label-property.md" %}}
 
 ## 5 Editability Properties
 

@@ -27,7 +27,7 @@ The excel export function relies on a specific data retrieval method. As such, i
 
 {{% snippet file="refguide/button-style-property.md" %}}
 
-{{% snippet file="refguide/Is+default+button+Property.md" %}}
+{{% snippet file="refguide/is-default-button-property.md" %}}
 
 ### Maximum number of rows
 

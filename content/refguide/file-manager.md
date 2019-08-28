@@ -49,7 +49,7 @@ This property indicates whether the file will be shown in the browser, instead o
 
 _Default value:_ False
 
-{{% snippet file="refguide/Label+Property.md" %}}
+{{% snippet file="refguide/label-property.md" %}}
 
 ## Editability properties
 

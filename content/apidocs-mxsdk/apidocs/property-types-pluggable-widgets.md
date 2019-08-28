@@ -500,7 +500,7 @@ The TabIndex property allows pluggable widgets to implement the **Tab index** se
 Every pluggable widget can be [conditionally hidden](/refguide/conditions). This property can be used to control a position of the widget visibility inputs.
 
 {{% alert type="info" %}}
-This proeprty type was introduced in Mendix 8.1.
+This property type was introduced in Mendix 8.1.
 {{% /alert %}}
 
 ```xml
@@ -512,7 +512,7 @@ This proeprty type was introduced in Mendix 8.1.
 The editability property allows a pluggable widget to have an editable configuration similar to a [core input widget](/refguide/text-box#editability-properties). When a widget is marked as read-only or conditionally editable with condition being false, all [editable values](client-apis-for-pluggable-widgets#editable-value) its client component receives will have `readOnly` flag.
 
 {{% alert type="info" %}}
-This proeprty type was introduced in Mendix 8.1.
+This property type was introduced in Mendix 8.1.
 {{% /alert %}}
 
 ```xml

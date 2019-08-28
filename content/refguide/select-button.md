@@ -22,7 +22,7 @@ The select button confirms the choice of a row of a grid when it is used for sel
 
 {{% snippet file="refguide/Image+Property.md" %}}
 
-{{% snippet file="refguide/Button+Style+Property.md" %}}
+{{% snippet file="refguide/button-style-property.md" %}}
 
 {{% snippet file="refguide/Is+default+button+Property.md" %}}
 

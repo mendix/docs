@@ -26,7 +26,7 @@ Page template properties are described in the sections below.
 
 ## 3 Common Properties
 
-{{% snippet file="refguide/Document+Name+Property.md" %}}
+{{% snippet file="refguide/document-name-property.md" %}}
 
 {{% snippet file="refguide/Documentation+Property.md" %}}
 

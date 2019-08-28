@@ -18,7 +18,7 @@ As the purpose of building blocks is to facilitate design rather than functional
 
 ## 2 Common Properties
 
-{{% snippet file="refguide/Document+Name+Property.md" %}}
+{{% snippet file="refguide/document-name-property.md" %}}
 
 {{% snippet file="refguide/Documentation+Property.md" %}}
 

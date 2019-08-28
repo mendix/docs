@@ -22,7 +22,7 @@ The search button toggles the search bar on and off. It is only present if the '
 
 {{% snippet file="refguide/Image+Property.md" %}}
 
-{{% snippet file="refguide/Button+Style+Property.md" %}}
+{{% snippet file="refguide/button-style-property.md" %}}
 
 {{% snippet file="refguide/Is+default+button+Property.md" %}}
 

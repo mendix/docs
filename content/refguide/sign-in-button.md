@@ -31,7 +31,7 @@ It must be placed on a page together with a [login id text box](login-id-text-bo
 
 {{% snippet file="refguide/Render+Mode+Property.md" %}}
 
-{{% snippet file="refguide/Button+Style+Property.md" %}}
+{{% snippet file="refguide/button-style-property.md" %}}
 
 ### Validation Message Widget
 

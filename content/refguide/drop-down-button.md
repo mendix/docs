@@ -17,7 +17,7 @@ Clicking a drop down button shows a list of items. Each item can have an caption
 
 {{% snippet file="refguide/Render+Mode+Property.md" %}}
 
-{{% snippet file="refguide/Button+Style+Property.md" %}}
+{{% snippet file="refguide/button-style-property.md" %}}
 
 ## Common properties
 

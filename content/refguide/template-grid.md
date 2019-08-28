@@ -47,7 +47,7 @@ Template grid properties consist of the following sections:
 
 ### 3.1 Common Section {#common}
 
-{{% snippet file="refguide/common-section-link.md" %}}
+{{% snippet file="refguide/common+section+link.md" %}}
 
 ### 3.2 Data Source Properties {#data-source}
 

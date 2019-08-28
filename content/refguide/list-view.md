@@ -32,7 +32,7 @@ List view properties consist of the following sections:
 
 ### 2.1 Common Section {#common}
 
-{{% snippet file="refguide/common-section-link.md" %}}
+{{% snippet file="refguide/common+section+link.md" %}}
 
 ### 2.2. Data Source Section {#data-source}
 

@@ -74,15 +74,15 @@ The page has displays a reference selector for the reference to country and an i
 
 {{% snippet file="refguide/attribute+path+property.md" %}}
 
-{{% snippet file="refguide/label-property.md" %}}
+{{% snippet file="refguide/label+property.md" %}}
 
 ## Editability Properties
 
-{{% snippet file="refguide/editable-property.md" %}}
+{{% snippet file="refguide/editable+property.md" %}}
 
 {{% snippet file="refguide/Read+Only+Style.md" %}}
 
-{{% snippet file="refguide/condition-property.md" %}}
+{{% snippet file="refguide/condition+property.md" %}}
 
 ## Visibility Properties
 

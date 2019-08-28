@@ -34,7 +34,7 @@ These are the possible values:
 
 If you choose 'Custom' as the date format (see above) this property determines how the attribute value is formatted. The custom date format is a string that allows for any combination of symbols found in the table below. Any punctuation will be rendered literally.
 
-{{% snippet file="refguide/custom-date-format-tokens.md" %}}
+{{% snippet file="refguide/custom+date+format+tokens.md" %}}
 
 {{% alert type="info" %}}
 Even though a date picker with a custom date format is editable, the calendar drop-down button will not be shown if the custom format does not represent the full date (meaning, the year [`y`-`yyyy`], month [`M`-`MMMM`], or day of month [`d`-`dd`] tokens are missing in the custom format).
@@ -52,15 +52,15 @@ The placeholder text is shown if the date attribute is empty. It can be used to 
 
 {{% snippet file="refguide/attribute+path+property.md" %}}
 
-{{% snippet file="refguide/label-property.md" %}}
+{{% snippet file="refguide/label+property.md" %}}
 
 ## 5 Editability Properties
 
-{{% snippet file="refguide/editable-property.md" %}}
+{{% snippet file="refguide/editable+property.md" %}}
 
 {{% snippet file="refguide/Read+Only+Style.md" %}}
 
-{{% snippet file="refguide/condition-property.md" %}}
+{{% snippet file="refguide/condition+property.md" %}}
 
 ## 6 Visibility Properties
 

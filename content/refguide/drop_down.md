@@ -36,15 +36,15 @@ Filling out the caption for an empty option improves the user experience of your
 
 {{% snippet file="refguide/attribute+path+property.md" %}}
 
-{{% snippet file="refguide/label-property.md" %}}
+{{% snippet file="refguide/label+property.md" %}}
 
 ## Editability Properties
 
-{{% snippet file="refguide/editable-property.md" %}}
+{{% snippet file="refguide/editable+property.md" %}}
 
 {{% snippet file="refguide/Read+Only+Style.md" %}}
 
-{{% snippet file="refguide/condition-property.md" %}}
+{{% snippet file="refguide/condition+property.md" %}}
 
 ## Visibility Properties
 

@@ -26,11 +26,11 @@ Page template properties are described in the sections below.
 
 ## 3 Common Properties
 
-{{% snippet file="refguide/document-name-property.md" %}}
+{{% snippet file="refguide/document+name+property.md" %}}
 
-{{% snippet file="refguide/documentation-property.md" %}}
+{{% snippet file="refguide/documentation+property.md" %}}
 
-{{% snippet file="refguide/document-class-property.md" %}}
+{{% snippet file="refguide/document+class+property.md" %}}
 
 {{% snippet file="refguide/Style+Property.md" %}}
 

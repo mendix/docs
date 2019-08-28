@@ -23,15 +23,15 @@ This check box allows you to change whether someone is subscribed to the newslet
 
 {{% snippet file="refguide/attribute+path+property.md" %}}
 
-{{% snippet file="refguide/label-property.md" %}}
+{{% snippet file="refguide/label+property.md" %}}
 
 ## Editability properties
 
-{{% snippet file="refguide/editable-property.md" %}}
+{{% snippet file="refguide/editable+property.md" %}}
 
 {{% snippet file="refguide/Read+Only+Style.md" %}}
 
-{{% snippet file="refguide/condition-property.md" %}}
+{{% snippet file="refguide/condition+property.md" %}}
 
 ## Visibility properties
 

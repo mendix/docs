@@ -15,7 +15,7 @@ An action button can perform various actions such as calling a microflow or nano
 
 {{% snippet file="refguide/Tooltip+Property.md" %}}
 
-{{% snippet file="refguide/image-property.md" %}}
+{{% snippet file="refguide/image+property.md" %}}
 
 {{% snippet file="refguide/Render+Mode+Property.md" %}}
 

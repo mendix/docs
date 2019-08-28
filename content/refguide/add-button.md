@@ -22,11 +22,11 @@ The add button can only be used in the reference set selector. With this button,
 
 {{% snippet file="refguide/Tooltip+Property.md" %}}
 
-{{% snippet file="refguide/image-property.md" %}}
+{{% snippet file="refguide/image+property.md" %}}
 
 {{% snippet file="refguide/button+style+property.md" %}}
 
-{{% snippet file="refguide/is-default-button-property.md" %}}
+{{% snippet file="refguide/is+default+button+property.md" %}}
 
 ### 3.1 Page
 

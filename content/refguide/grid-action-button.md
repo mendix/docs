@@ -24,11 +24,11 @@ Common properties
 
 {{% snippet file="refguide/Tooltip+Property.md" %}}
 
-{{% snippet file="refguide/image-property.md" %}}
+{{% snippet file="refguide/image+property.md" %}}
 
 {{% snippet file="refguide/button+style+property.md" %}}
 
-{{% snippet file="refguide/is-default-button-property.md" %}}
+{{% snippet file="refguide/is+default+button+property.md" %}}
 
 ## Visibility properties
 

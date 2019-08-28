@@ -47,9 +47,9 @@ See [Columns](columns) for more information.
 
 ## Common Properties
 
-{{% snippet file="refguide/Name+Property.md" %}}
+{{% snippet file="refguide/name-property.md" %}}
 
-{{% snippet file="refguide/Class+Property.md" %}}
+{{% snippet file="refguide/class-property.md" %}}
 
 {{% snippet file="refguide/Style+Property.md" %}}
 
@@ -147,7 +147,7 @@ Using non-persistable entities (NPEs) in a reference set selector is not support
 
 ## Events Properties
 
-{{% snippet file="refguide/On+Change+Event.md" %}}
+{{% snippet file="refguide/on-change-event.md" %}}
 
 ## Selectable Objects Properties
 

@@ -1,18 +1,18 @@
-## Label properties
+## Label Properties
 
 A label can be used to described the purpose of the widget to the user. The label is shown next to the widget in the user interface. If a label is configured, the widget will be rendered in the browser wrapped in a form group. See [Bootstrap documentation](http://getbootstrap.com/css/#forms).
 
-### Show label
+### Show Label
 
 This property determines whether the label is rendered and the widget is wrapped in a form group.
 
 _Default value:_ No
 
-### Label caption
+### Label Caption
 
 This property is shown only when Show label is Yes. This property determines what text is rendered within a label.
 
-#### Text template
+#### Text Template
 
 The template for the label can contain parameters that are written as a number between braces (for example, `{1}`). The first parameter has the number `1`, the second `2`, etc. Note that to use template parameters, the widget must be placed in the context of an entity (for example, inside a data view or list view).
 

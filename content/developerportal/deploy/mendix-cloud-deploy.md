@@ -60,7 +60,7 @@ By default, apps are deployed to the Mendix Cloud **v4**. Features which are cov
 
 ### 1.3 Flexible Environments{#flexible-environments}
 
-In some circumstances, you might find that the two or three standard environments you get with a licensed app are not sufficient. In this case you can request a Mendix Cloud V4 node with *Flexible Environments*. With Flexible Environments you can specify how many environments you want in your node and you can decide what they should be called.
+In some circumstances, you might find that the two or three standard environments you get with a licensed app are not sufficient. In this case you can request a Mendix Cloud v4 node with *Flexible Environments*. With Flexible Environments you can specify how many environments you want in your node and you can decide what they should be called.
 
 ## 2 Deploying an App to the Mendix Cloud
 

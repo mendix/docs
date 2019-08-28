@@ -1,4 +1,4 @@
-### Menu source
+### Menu Source
 
 The items that are shown in the menu widget are determined by the menu source. A menu widget is either filled from a menu configured in the [Navigation](navigation) document or a [Menu](menu) document.
 
@@ -9,7 +9,7 @@ The items that are shown in the menu widget are determined by the menu source. A
 
 _Default value:_ Project navigation
 
-### Menu (only for menu source 'Project navigation')
+### Menu (Only for Project Navigation Menu Source)
 
 If the menu source is 'Project navigation', this property specify which of the three menus that can be configured in the [Navigation](navigation) document will be used to fill the menu widget.
 
@@ -21,6 +21,6 @@ If the menu source is 'Project navigation', this property specify which of the t
 
 _Default value:_ Desktop
 
-### Menu document (only for menu source 'Menu document')
+### Menu Document (Only for Menu Document Menu Source)
 
 If the menu source is 'Menu document', you can select a [Menu](menu) document that will be used to fill the menu widget.

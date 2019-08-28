@@ -19,7 +19,7 @@ A text box must be placed in a data view or template grid and connected to an at
 
 ## General Properties
 
-{{% snippet file="refguide/numeric+formatting+properties.md" %}}
+{{% snippet file="refguide/numeric+formatting.md" %}}
 
 ### Show as Password (Only for Attributes of the String or HashString Type)
 

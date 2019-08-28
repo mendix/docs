@@ -84,7 +84,7 @@ See [Opening Pages](opening-pages) for more details.
 
 ## Formatting Properties
 
-{{% snippet file="refguide/numeric+formatting+properties.md" %}}
+{{% snippet file="refguide/numeric+formatting.md" %}}
 
 ### Date Format (Only for Attributes of Type Date and Time)
 

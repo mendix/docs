@@ -72,7 +72,7 @@ The placeholder text is shown if the date attribute is empty. It can be used to 
 
 {{% snippet file="refguide/on+change+event.md" %}}
 
-{{% snippet file="refguide/On+Enter+event.md" %}}
+{{% snippet file="refguide/on+enter+event.md" %}}
 
 {{% snippet file="refguide/On+Leave+Event.md" %}}
 

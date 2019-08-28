@@ -56,7 +56,7 @@ Filling out the caption for an empty option improves the user experience of your
 
 {{% snippet file="refguide/on+change+event.md" %}}
 
-{{% snippet file="refguide/On+Enter+event.md" %}}
+{{% snippet file="refguide/on+enter+event.md" %}}
 
 {{% snippet file="refguide/On+Leave+Event.md" %}}
 

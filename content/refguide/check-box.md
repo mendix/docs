@@ -43,7 +43,7 @@ This check box allows you to change whether someone is subscribed to the newslet
 
 {{% snippet file="refguide/on+change+event.md" %}}
 
-{{% snippet file="refguide/On+Enter+event.md" %}}
+{{% snippet file="refguide/on+enter+event.md" %}}
 
 {{% snippet file="refguide/On+Leave+Event.md" %}}
 

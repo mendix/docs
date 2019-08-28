@@ -96,7 +96,7 @@ The placeholder text is shown when no text has been entered yet. It can be used 
 
 {{% snippet file="refguide/on+change+event.md" %}}
 
-{{% snippet file="refguide/On+Enter+event.md" %}}
+{{% snippet file="refguide/on+enter+event.md" %}}
 
 {{% snippet file="refguide/On+Leave+Event.md" %}}
 

@@ -74,13 +74,23 @@ This is the image that is displayed if no image is uploaded.
 
 *Default value*: 100
 
-{{% snippet file="refguide/Image+Height+Unit.md" %}}
+### Height Unit
+
+The height of an image can be specified in three ways: pixels, percentage or auto. 
+
+| Value      | Definition                                                   |
+| ---------- | ------------------------------------------------------------ |
+| Pixels     | The height is specified in a number of pixels. If you specify both width and height, the image will be scaled proportionally in the rectangle you define. |
+| Percentage | The height is specified in a percentage of the container of the image. It can be larger than its original height in which case the image is stretched. |
+| Auto       | The height of the given image is used. |
 
 *Default value*: Auto
 
 {{% alert type="info" %}}Not supported on native mobile pages.{{% /alert %}}
 
-{{% snippet file="refguide/Image+Height.md" %}}
+### Height
+
+The height of the image in pixels or percentage (see height unit). In the case of 'Auto', no value needs to be specified.
 
 *Default value*: not applicable
 

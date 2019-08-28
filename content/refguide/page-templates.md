@@ -38,7 +38,7 @@ Page template properties are described in the sections below.
 
 {{% snippet file="refguide/canvas-width-property.md" %}}
 
-{{% snippet file="refguide/Canvas+Height+Property.md" %}}
+{{% snippet file="refguide/canvas-height-property.md" %}}
 
 ## 5 General Properties
 

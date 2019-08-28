@@ -43,7 +43,7 @@ You can see which widgets in a page have styling applied via the style or class 
 
 {{% snippet file="refguide/canvas-width-property.md" %}}
 
-{{% snippet file="refguide/Canvas+Height+Property.md" %}}
+{{% snippet file="refguide/canvas-height-property.md" %}}
 
 ## 4 General Section
 

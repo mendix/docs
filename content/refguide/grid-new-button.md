@@ -33,7 +33,7 @@ Let us say you have an entity Vehicle and two specializations, namely Bicycle an
 
 {{% snippet file="refguide/Tooltip+Property.md" %}}
 
-{{% snippet file="refguide/Image+Property.md" %}}
+{{% snippet file="refguide/image-property.md" %}}
 
 {{% snippet file="refguide/button-style-property.md" %}}
 

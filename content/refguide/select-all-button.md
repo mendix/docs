@@ -20,7 +20,7 @@ The select all button allows the end-user to select all objects in a grid, or re
 
 {{% snippet file="refguide/Tooltip+Property.md" %}}
 
-{{% snippet file="refguide/Image+Property.md" %}}
+{{% snippet file="refguide/image-property.md" %}}
 
 {{% snippet file="refguide/button-style-property.md" %}}
 

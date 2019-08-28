@@ -13,7 +13,7 @@ Clicking a drop down button shows a list of items. Each item can have an caption
 
 {{% snippet file="refguide/Tooltip+Property.md" %}}
 
-{{% snippet file="refguide/Image+Property.md" %}}
+{{% snippet file="refguide/image-property.md" %}}
 
 {{% snippet file="refguide/Render+Mode+Property.md" %}}
 

@@ -34,15 +34,15 @@ To configure the app, perform the following steps:
 
 The session management of SAP Fiori Launchpad and the Mendix App are decoupled so you need to tell SAP Fiori Launchpad that the app is still active. If SAP Fiori Launchpad does not hear from your app for twenty minutes, it will timeout.
 
-To prevent the timeout being activated incorrectly, you need to add the **Fiori Launchpad Session Heartbeat** widget to every page of your app. The widget sends a message to the SAP Fiori Launchpad when the page is opened or refreshed. This extends the timeout by another twenty minutes.
+To prevent the timeout being activated incorrectly, you need to add the **Heart Beat Widget for SAP Fiori launchpad** widget to every page of your app. The widget sends a message to the SAP Fiori Launchpad when the page is opened or refreshed. This extends the timeout by another twenty minutes.
 
 You can add the widget in one of the following ways:
 
 {{% todo %}}[Confirm what is in the starter apps and Fiori UI Package]{{% /todo %}}
 
-#### 2.2.1 Using the Fiori Blank App Template
+#### 2.2.1 Using the Blank App for SAP Fiori themed apps App Template
 
-If you use the **Fiori Blank** app template, the widget is inserted automatically into all the navigation layouts in the **SAP_UI_Resources** module. This means that if you create your pages based on any of the following *navigation layouts*, they will automatically contain the widget:
+If you use the **Blank App for SAP Fiori themed apps** app template, the widget is inserted automatically into all the navigation layouts in the **SAP_UI_Resources** module. This means that if you create your pages based on any of the following *navigation layouts*, they will automatically contain the widget:
 
 * SAP_Default
 * SAP_Default_Letterbox
@@ -54,11 +54,11 @@ If you use the **Fiori Blank** app template, the widget is inserted automaticall
 * SAP_MasterDetail_Letterbox
 * PopupLayout
 
-The **Fiori Blank** app template can chosen when creating a new app, or downloaded from the App Store here – https://appstore.home.mendix.com/link/app/53585/.
+The **Blank App for SAP Fiori themed apps** app template can chosen when creating a new app, or downloaded from the App Store here – https://appstore.home.mendix.com/link/app/53585/.
 
-#### 2.2.2 Adding the SAP Fiori UI Package
+#### 2.2.2 Adding the UI Package for SAP Fiori themed apps
 
-You can add SAP Fiori styling to an existing Mendix app by importing the **SAP Fiori UI Package**. This will add a set of *navigation layouts* in a new **SAP_UI_Resources** module. If you create your pages based on any of the following *navigation layouts*, all the pages will automatically contain the widget:
+You can add SAP Fiori styling to an existing Mendix app by importing the **UI Package for SAP Fiori themed apps**. This will add a set of *navigation layouts* in a new **SAP_UI_Resources** module. If you create your pages based on any of the following *navigation layouts*, all the pages will automatically contain the widget:
 
 * SAP_Default
 * SAP_Default_Letterbox
@@ -74,11 +74,11 @@ You can add SAP Fiori styling to an existing Mendix app by importing the **SAP F
 Your app will still contain the original navigation layouts, such as those in the *Atlas_UI_Resources* module. Unless you add the widget manually (see below), any pages you add based on the layouts from these other modules will **not** contain the widget.
 {{% /alert %}}
 
-The **SAP Fiori UI Package** can be downloaded from the App Store here – https://appstore.home.mendix.com/link/app/107625/.
+The **UI Package for SAP Fiori themed apps** can be downloaded from the App Store here – https://appstore.home.mendix.com/link/app/107625/.
 
-#### 2.2.3 Adding Fiori Launchpad Session Heartbeat Widget Manually
+#### 2.2.3 Adding Heart Beat Widget for SAP Fiori launchpad Widget Manually
 
-You can download the **Fiori Launchpad Session Heartbeat** widget from the App Store here: https://appstore.home.mendix.com/some_link_to_a_widget.
+You can download the **Heart Beat Widget for SAP Fiori launchpad** widget from the App Store here: https://appstore.home.mendix.com/some_link_to_a_widget.
 
 Once it is in your app, you can add it to your pages like any other widget.
 
@@ -90,13 +90,13 @@ Since you will need to put it on every page of your app, it is recommended that 
 
     ![Select Atlas_Default navigation layout from the page breadcrumb](attachments/configure-fiori-launchpad/select-layout.png)
 
-3. Drag the **Fiori Launchpad Session Heartbeat** widget into the layout page header.
+3. Drag the **Heart Beat Widget for SAP Fiori launchpad** widget into the layout page header.
 
     ![Drag widget into navigation layout header](attachments/configure-fiori-launchpad/add-fiori-widget.png)
 
 4. Save the updated navigation layout.
 
-5. Your page, and all other pages based on this navigation layout, now has the *Fiori Launchpad Session Heartbeat* widget which will be activated every time the page is opened or refreshed.
+5. Your page, and all other pages based on this navigation layout, now has the *Heart Beat Widget for SAP Fiori launchpad* widget which will be activated every time the page is opened or refreshed.
 
     ![Fiori widget has been added](attachments/configure-fiori-launchpad/fiori-widget-added.png)
 

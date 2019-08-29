@@ -71,7 +71,7 @@ Currently, there is no direct way of creating and storing a new application in y
 8. When the app project is opened in Studio Pro, select **Team** > **Upload to Team Server...** in the top menu.
 9. In the dialog box that appears, select **Existing repository** and the name of your app project (for example, **MyApp**), and then press 'OK'. The app should now upload to your on-premises SVN server.
 
-## 7 Read More
+## 6 Read More
 
 * [Version Control](/refguide/version-control)
 * [Team Server Overview](/developerportal/develop/team-server)

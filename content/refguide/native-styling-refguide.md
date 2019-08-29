@@ -463,6 +463,14 @@ The widget’s style properties are as follows:
 	application content
 	<bottomBar/>
 <app>
+<progressOverlay>
+	<background>
+		<container>
+			<activityIndicator/>
+			<text/>
+		</container>
+	</background>
+</progressOverlay>
 ```
 
 | Element | Style Properties    | Description |
@@ -478,14 +486,18 @@ The widget’s style properties are as follows:
 | `bottomBar` | `fontSize` | This is the font size of the bottom bar text. |
 | `bottomBar` | `color` | This is the default icon and text color. |
 | `bottomBar` | `selectedColor` | This is the selected icon and text color. |
+| `progressOverlay` | `background` | All ViewStyle properties |
+| `progressOverlay` | `container` | All ViewStyle properties |
+| `progressOverlay` | `activityIndicator` | Same as the [activity indicator](#activity-indicator) widget |
+| `progressOverlay` | `text` | All TextStyle properties |
 
-The default class to style the navigation is named  `navigationStyle`. There is no support to for a custom class styling on navigation.
+The default class to style the navigation is named  `navigationStyle`. There is no support for custom class styling on navigation.
 
 ## 10 Add-On Widgets
 
 Add-on widgets are distributed through the [Native Mobile Resources](https://appstore.home.mendix.com/link/app/109513/) module, and are not shipped with Mendix Studio Pro. Other add-on widgets might also be distributed through starter apps, as well as modules importing pages from other projects. 
 
-### 10.1 Activity Indicator
+### 10.1 Activity Indicator {#activity-indicator}
 
 The activity indicator widget displays a circular loading indicator. This is how an activity indicator widget could look in an app:
 

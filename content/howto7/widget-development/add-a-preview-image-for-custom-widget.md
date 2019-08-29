@@ -1,5 +1,5 @@
 ---
-title: "Make a Preview Image for a Custom Widget"
+title: "Build a Preview Image for a Custom Widget"
 category: "Widget Development"
 tags: ["image", "preview", "widget", "custom"]
 ---

@@ -92,8 +92,7 @@ If authentication is required, you can select which authentication methods you w
 
 Check more than one authentication method to have the service try each of them. It will first try **Custom** authentication, then **Username and password**, and then **Active session**. For more details, see [Published REST Routing](published-rest-routing).
 
-<a name="authentication-microflow"></a>
-### 3.3 Microflow
+### 3.3 Microflow {#authentication-microflow}
 
 Specify which microflow to use for custom authentication.
 

@@ -486,10 +486,10 @@ The widget’s style properties are as follows:
 | `bottomBar` | `fontSize` | This is the font size of the bottom bar text. |
 | `bottomBar` | `color` | This is the default icon and text color. |
 | `bottomBar` | `selectedColor` | This is the selected icon and text color. |
-| `progressOverlay` | `background` | All ViewStyle properties |
-| `progressOverlay` | `container` | All ViewStyle properties |
-| `progressOverlay` | `activityIndicator` | Same as the [activity indicator](#activity-indicator) widget |
-| `progressOverlay` | `text` | All TextStyle properties |
+| `progressOverlay` | `background` | This has all ViewStyle properties. |
+| `progressOverlay` | `container` | This has all ViewStyle properties. |
+| `progressOverlay` | `activityIndicator` | This is the same as the [activity indicator](#activity-indicator) widget. |
+| `progressOverlay` | `text` | This has all TextStyle properties. |
 
 The default class to style the navigation is named  `navigationStyle`. There is no support for custom class styling on navigation.
 

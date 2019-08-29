@@ -193,4 +193,4 @@ Ensure that the user accessing the Mendix App has the required level of access o
 ## 8	Read More
 
 * [OData Connector for SAP Solutions](sap-odata-connector)
-* [SAP XSUAA Connector](sap-xsuaa-connector)
+* [XSUAA Connector for SAP Cloud Platform](sap-xsuaa-connector)

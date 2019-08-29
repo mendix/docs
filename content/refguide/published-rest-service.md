@@ -14,9 +14,7 @@ This document describes the published REST service configuration options shown w
 
 ## 2 General
 
-<a name="service-name"></a>
-
-### 2.1 Service Name
+### 2.1 Service Name {#service-name}
 
 Service name uniquely identifies the service in the app. It is also displayed in [OpenAPI (Swagger) documentation page](open-api).
 
@@ -28,8 +26,7 @@ Version is used to display version information in [OpenAPI (Swagger) documentati
 
 By default, version is set to "1.0.0".
 
-<a name="location"></a>
-### 2.3 Location
+### 2.3 Location {#location}
 
 Location shows URL on which a service can be reached.
 
@@ -95,8 +92,7 @@ If authentication is required, you can select which authentication methods you w
 
 Check more than one authentication method to have the service try each of them. It will first try **Custom** authentication, then **Username and password**, and then **Active session**. For more details, see [Published REST Routing](published-rest-routing).
 
-<a name="authentication-microflow"></a>
-### 3.3 Microflow
+### 3.3 Microflow {#authentication-microflow}
 
 Specify which microflow to use for custom authentication.
 
@@ -104,14 +100,15 @@ Select **Parameters** to see the [list of parameters passed to the authenticatio
 
 The microflow may take an [HttpRequest](http-request-and-response-entities#http-request) as a parameter, so it can inspect the incoming request.
 
-The microflow may also take an [HttpResponse](http-request-and-response-entities#http-response) as a parameter. When the microflow sets the status code of this response to something other then **200**, this value is returned and the operation will not be executed. Any headers set on the response are returned (except when the microflow returns an empty user).
+The microflow may also take an [HttpResponse](http-request-and-response-entities#http-response) as a parameter. When the microflow sets the status code of this response to something other then **200**, this value is returned and the operation will not be executed. In that case, any headers set on the response are returned as well.
 
 The authentication microflow should return a User.
 
-There are three possible outcomes of the authentication microflow
-  * When the status code of the HttpResponse parameter is set to something other then **200**, then this value is returned and the operation will not be executed
-  * Otherwise, when the resulting User is not empty, the operation is executed in the context of that user
-  * Otherwise, when the resulting User is empty, the next authentication method is attempted. When there are no other authentication methods, the result is **404 Not Found**.
+There are three possible outcomes of the authentication microflow:
+
+* When the status code of the HttpResponse parameter is set to something other then **200**, then this value is returned and the operation will not be executed
+* Otherwise, when the resulting User is not empty, the operation is executed in the context of that user
+* Otherwise, when the resulting User is empty, the next authentication method is attempted. When there are no other authentication methods, the result is **404 Not Found**.
 
 ### 3.4 Allowed Roles
 

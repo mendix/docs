@@ -80,7 +80,7 @@ The page has displays a reference selector for the reference to country and an i
 
 {{% snippet file="refguide/editable-property.md" %}}
 
-{{% snippet file="refguide/Read+Only+Style.md" %}}
+{{% snippet file="refguide/read-only-style.md" %}}
 
 {{% snippet file="refguide/condition-property.md" %}}
 

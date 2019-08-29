@@ -11,7 +11,7 @@ To add a comparison search field to your data grid, right-click within the searc
 
 ## Common Properties
 
-{{% snippet file="refguide/Search+Field+Caption+Property.md" %}}
+{{% snippet file="refguide/search-field-caption-property.md" %}}
 
 {{% snippet file="refguide/Search+Field+Type+Property.md" %}}
 
@@ -25,7 +25,7 @@ To add a comparison search field to your data grid, right-click within the searc
 
 ## General Properties
 
-{{% snippet file="refguide/Search+Field+Attribute+Path+Property.md" %}}
+{{% snippet file="refguide/search-field-attribute-path-property.md" %}}
 
 {{% snippet file="refguide/Search+Field+Comparison+Property.md" %}}
 

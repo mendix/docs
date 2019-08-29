@@ -19,7 +19,7 @@ To add a range search field to your data grid, right-click within the search bar
 
 ## Common Properties
 
-{{% snippet file="refguide/Search+Field+Caption+Property.md" %}}
+{{% snippet file="refguide/search-field-caption-property.md" %}}
 
 {{% snippet file="refguide/Search+Field+Type+Property.md" %}}
 

@@ -8,7 +8,7 @@ tags: ["studio pro"]
 
 {{% snippet file="refguide/class-property.md" %}}
 
-{{% snippet file="refguide/Style+Property.md" %}}
+{{% snippet file="refguide/style-property.md" %}}
 
 ## Data Source Properties
 

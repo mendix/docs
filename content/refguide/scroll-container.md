@@ -23,7 +23,7 @@ The scroll container decisions the layout in three parts: a header containing a 
 
 {{% snippet file="refguide/class-property.md" %}}
 
-{{% snippet file="refguide/Style+Property.md" %}}
+{{% snippet file="refguide/style-property.md" %}}
 
 ## General Properties
 

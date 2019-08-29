@@ -12,7 +12,7 @@ Common properties
 
 {{% snippet file="refguide/class-property.md" %}}
 
-{{% snippet file="refguide/Style+Property.md" %}}
+{{% snippet file="refguide/style-property.md" %}}
 
 ## Events
 
@@ -22,7 +22,7 @@ Common properties
 
 {{% snippet file="refguide/caption-property.md" %}}
 
-{{% snippet file="refguide/Tooltip+Property.md" %}}
+{{% snippet file="refguide/tooltip-property.md" %}}
 
 {{% snippet file="refguide/image-property.md" %}}
 
@@ -32,6 +32,6 @@ Common properties
 
 ## Visibility properties
 
-{{% snippet file="refguide/Visibility+Property.md" %}}
+{{% snippet file="refguide/visibility-property.md" %}}
 
-{{% snippet file="refguide/Visibility+Property+With+Module+Roles+Extended.md" %}}
+{{% snippet file="refguide/visibility-property-with-module-roles-extended.md" %}}

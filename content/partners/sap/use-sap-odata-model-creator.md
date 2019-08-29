@@ -160,9 +160,9 @@ You have now created the module. The [Using the Data Model Module in a Mendix Ap
 
 You may want to generate the data model by hand using the `$metadata` file directly. This may, for example, not be in the API Business Hub.
 
-One way to do this is by getting the OData metadata XML file. This file can be download from the OData service URL directly using the `$metadata` suffix. The browser will display the xml and you can use the right mouse button in most browsers to choose to download the xml file. Save the file locally. It is recommended that you save it in the **resources** folder of your Mendix app so that you can find it easily.
+One way to do this is by getting the OData metadata XML file. This file can be download from the OData service URL directly using the `$metadata` suffix. The browser will display the XML and you can use the right mouse button in most browsers to choose to download the XML file. Save the file locally. It is recommended that you save it in the **resources** folder of your Mendix app so that you can find it easily.
 
-1.  Download the xml metadata file to your local drive.
+1.  Download the XML metadata file to your local drive.
 
     ![](attachments/use-sap-odata-model-creator/download-xml.png)
 
@@ -174,9 +174,9 @@ One way to do this is by getting the OData metadata XML file. This file can be d
 
     ![](attachments/use-sap-odata-model-creator/upload_metadata.png)
 
-4. Click **Browse** and navigate to the xml file you want to use.
+4. Click **Browse** and navigate to the XML file you want to use.
 
-5. Select the xml file you want to use.
+5. Select the XML file you want to use.
 
 6. Click **Continue** to see the schemas within the metadata.
 

@@ -77,7 +77,7 @@ A regular expression can contain the following types of subexpressions:
 
 * A literal character – this is a character that does not have a special meaning in the regular expression language and it matches itself. This is effectively any character except `\[](){}^-$?*+|.`. For example:
 
-    * *`space`* in the Dutch zip code example is a literal character that just matches itself
+    * *`space`* in the Dutch ZIP code example is a literal character that just matches itself
 
     If you need to match one of the characters which is not a literal, prefix it with a backslash (`\`).
 

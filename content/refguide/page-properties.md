@@ -41,13 +41,13 @@ You can see which widgets in a page have styling applied via the style or class 
 
 ## 3 Design Section
 
-{{% snippet file="refguide/Canvas+Width+Property.md" %}}
+{{% snippet file="refguide/canvas+width+property.md" %}}
 
-{{% snippet file="refguide/Canvas+Height+Property.md" %}}
+{{% snippet file="refguide/canvas-height-property.md" %}}
 
 ## 4 General Section
 
-### 4.1 Title
+### 4.1 Title {#title}
 
 The title of the page that is shown using the [page title widget](page-title). If the page is shown in a pop-up window, the title appears in the title bar of the pop-up. The title can be overridden from places where forms are opened to make it possible to reuse a page for different purposes. For example, a [grid create button](grid-new-button) and an [action button](action-button) (for editing) can refer to the same page, but they override the titles to **New** and **Edit**, respectively.
 

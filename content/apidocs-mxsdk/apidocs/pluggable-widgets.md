@@ -45,7 +45,7 @@ A pluggable widget is distributed as single widget package file with an *.mpk* e
 
 Manually building a widget package can be difficult, so Mendix recommends you use scripts provided by the [Mendix Pluggable Widget Generator](https://www.npmjs.com/package/@mendix/generator-widget). For more information on how to use a generator, see [How To Build a Text Box Pluggable Widget: Part 1](/howto/extensibility/create-a-pluggable-widget-one).
 
-A widget package file is just a *zip* archive containing the following things:
+A widget package file is just a ZIP archive containing the following things:
 
 * A *package.xml* file describing the whole package
 * A widget definition XML file, preferably located in *{widgetName}.xml* where `widdgetName` is the last part of widget [ID](#widget-id)

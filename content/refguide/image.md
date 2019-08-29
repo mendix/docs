@@ -16,7 +16,7 @@ For example, you can configure an image clicking which a page with customer deta
 
 {{% alert type="info" %}}
 
-If you want to dynamically show different images based on data, please take a look at the [image viewer](image-viewer).
+If you want to dynamically show different images based on data, you need to add [image viewer](image-viewer) on your page.
 
 {{% /alert %}}
 
@@ -59,7 +59,7 @@ The width of an image. Possible values of this property are described in the tab
 | Pixels     | he width is specified in a number of pixels. If you specify both width and height, the image will be scaled automatically: the proportions will be kept, the picture will not be stretched. |
 | Percentage | The width is specified in a percentage of the original width. It can be larger than its original width in which case the image is stretched |
 
-_Default value_: Auto
+*Default value*: Auto
 
 {{% alert type="info" %}}Not supported on native mobile pages.{{% /alert %}}
 
@@ -67,7 +67,7 @@ _Default value_: Auto
 
 Specifies the width of the image in pixels or percentage. This option is displayed only when **Pixels** or **Percentage** are selected for the **Width Unit** described above. 
 
-_Default value_: not applicable
+*Default value*: not applicable
 
 #### 2.3.4 Height Unit
 
@@ -79,7 +79,7 @@ The height of an image. Possible values of this property are described in the ta
 | Pixels     | The height is specified in a number of pixels. If you specify both width and height, the image will be scaled automatically: the proportions will be kept, the picture will not be stretched. |
 | Percentage | The height is specified in a percentage of the original height. It can be larger than its original height in which case the image is stretched. |
 
-_Default value_: Auto
+*Default value*: Auto
 
 {{% alert type="info" %}}Not supported on native mobile pages.{{% /alert %}}
 
@@ -87,7 +87,7 @@ _Default value_: Auto
 
 Specifies the width of the image in pixels or percentage. This option is displayed only when **Pixels** or **Percentage** are selected for the **Width Unit** described above. 
 
-_Default value_: not applicable
+*Default value*: not applicable
 
 #### 2.3.6 Responsive
 

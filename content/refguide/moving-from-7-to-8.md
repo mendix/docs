@@ -35,7 +35,21 @@ If your original project was Mendix version 7.23.2 or below and you want to work
 
 Follow the instructions in [Migration From the Sync Process to Collaborative Development](/refguide7/collaborative-development-migration).
 
-### 2.2 Atlas Compatibility
+## 3 Making Changes to Your App Before Upgrading to Mendix 8, Studio Pro
+
+There may be changes which you should make to your app *before* you upgrade it to Mendix 8.
+
+### 3.1 Java Version, Deprecated & Removed APIs {#deprecated-apis}
+
+Mendix 8 runs on Java 11, whereas Mendix 7 runs on Java 8. Make sure that your Java actions are compatible with Java 11. The official Java 8 to 11 migration guide can be found in the [Migrating From JDK 8 to Later JDK Releases](https://docs.oracle.com/en/java/javase/11/migrate/index.html#JSMIG-GUID-7744EF96-5899-4FB2-B34E-86D49B2E89B6) section of the *Oracle JDK Migration Guide*.
+
+Deprecated Java actions should be fixed in Mendix 7, before you migrate the app project to Mendix 8.
+
+Fix the deprecations in your Java actions by importing your project into your Java IDE (Eclipse, for example) and reviewing and solving all the deprecations.
+
+Details of removed and deprecated APIs will be added to the *Breaking Changes* section of the [Studio Pro 8 release notes](/releasenotes/studio-pro/).
+
+### 3.2 Atlas Compatibility
 
 Before moving to Mendix 8, make sure that you are using the latest Mendix 7 compatible Atlas version 1.2.4. By first updating Atlas to this version, you will prevent several errors related to design properties after your Mendix 8 migration.
 
@@ -48,15 +62,15 @@ How to update to Atlas 1.2.4:
 
 {{% alert type="info" %}} You do not have to move any customized files from **theme_oldest** to **theme** yet, as after migrating to Mx8, you will update Atlas again which will create a new **theme folder**.{{% /alert %}}
 
-## 3 Converting Your App Project{#converting}
+## 4 Converting Your App Project{#converting}
 
 The following sub-sections explain the steps to take in converting your app project from Mendix 7 to Mendix 8.
 
-### 3.1 Backup Your Project
+### 4.1 Backup Your Project
 
 Make sure that you have either committed your latest changes to Team Server, or taken a backup of your local project before you start the conversion.
 
-### 3.2 Upgrade to the Latest Release of Version 7 {#upgrade}
+### 4.2 Upgrade to the Latest Release of Version 7 {#upgrade}
 
 {{% alert type="warning" %}}
 It is technically required for you to upgrade your app project to the latest version of Mendix 7, which is [7.23](/releasenotes/studio-pro/7.23). You can only convert your app project to Mendix 8 from 7.23.x.
@@ -68,13 +82,13 @@ To upgrade to Mendix 7, follow these steps:
 2. Open your app in Desktop Modeler 7.23.x.
 3. Allow it to upgrade the app, if necessary.
 
-### 3.3 Review Your Mendix 7 Project
+### 4.3 Review Your Mendix 7 Project
 
 Review your app project in combination with the sections below and assess if further action needs to be taken before upgrading to Mendix 8.
 
 In particular, it is easier to fix deprecations in Java actions (see [Java Version, Deprecated and Removed APIs](#deprecated-apis)) in Mendix 7 before upgrading to Mendix 8. However, Float and Currency deprecation errors will be easier to fix in Mendix 8 instead (see the section [Elements of Type Float & Currency](#float-currency) below for instructions).
 
-### 3.4 Save Version 7 Project
+### 4.4 Save Version 7 Project
 
 Your app project is now ready to be upgraded to Mendix Version 8.
 
@@ -82,19 +96,19 @@ It is recommended that you backup/commit your project at this point so that you 
 
 You can now close the project in Desktop Modeler version 7.
 
-### 3.5 Upgrade Your App Project to Version 8
+### 4.5 Upgrade Your App Project to Version 8
 
 Mendix will upgrade your app project for you.
 
 Open the project in Mendix Studio Pro version 8 and allow Studio Pro to update your app to version 8.
 
-### 3.6 Review Errors, Warnings & Deprecations in Studio Pro
+### 4.6 Review Errors, Warnings & Deprecations in Studio Pro
 
 Review all error messages and messages about deprecated items and make changes where necessary.
 
 If you are using one, or both, of the deprecated data types Currency and Float you will see errors. See the section [Elements of Type Float & Currency](#float-currency) below for more information.
 
-### 3.7 Upgrade All Widgets
+### 4.7 Upgrade All Widgets
 
 To minimize the chance of problems, you should update all widgets and other App Store models used by your project to the latest version.
 
@@ -102,7 +116,7 @@ Check if there is a newer version of your App Store modules available in the App
 
 In general you should not remove and reimport modules, unless this is recommended in the release notes. If you do remove and reimport them, you may lose data or configuration related to the module.
 
-### 3.8 Review & Test Your App
+### 4.8 Review & Test Your App
 
 Finally, review the sections below and ensure that you have made all the changes necessary.
 
@@ -111,16 +125,6 @@ Test the app for any unexpected results.
 {{% alert type="success" %}}
 Congratulations! Your app has been successfully upgraded to Mendix 8 and you can continue working as normal.
 {{% /alert %}}
-
-## 4 Java Version, Deprecated & Removed APIs {#deprecated-apis}
-
-Mendix 8 runs on Java 11, whereas Mendix 7 runs on Java 8. Make sure that your Java actions are compatible with Java 11. The official Java 8 to 11 migration guide can be found in the [Migrating From JDK 8 to Later JDK Releases](https://docs.oracle.com/en/java/javase/11/migrate/index.html#JSMIG-GUID-7744EF96-5899-4FB2-B34E-86D49B2E89B6) section of the *Oracle JDK Migration Guide*.
-
-Deprecated Java actions should be fixed in Mendix 7, before you migrate the app project to Mendix 8.
-
-Fix the deprecations in your Java actions by importing your project into your Java IDE (Eclipse, for example) and reviewing and solving all the deprecations.
-
-Details of removed and deprecated APIs will be added to the *Breaking Changes* section of the [Studio Pro 8 release notes](/releasenotes/studio-pro/).
 
 ## 5 Elements of Type Float & Currency {#float-currency}
 
@@ -166,7 +170,7 @@ Mendix Studio Pro is a 64-bit application which will **only** run on 64-bit vers
 
 ## 7 Mendix Cloud Version 3
 
-Apps made in Mendix Studio Pro cannot be deployed to *Version 3* of the Mendix Cloud. If you are using a licensed Mendix Cloud V3 node, then we recommend that you upgrade to Mendix Cloud V4. If this is not possible, you will need to continue to use Mendix version 7 to create and maintain your apps.
+Apps made in Mendix Studio Pro cannot be deployed to *Version 3* of the Mendix Cloud. If you are using a licensed Mendix Cloud v3 node, then we recommend that you upgrade to Mendix Cloud v4. If this is not possible, you will need to continue to use Mendix version 7 to create and maintain your apps.
 
 ## 8 Java Code Generation
 

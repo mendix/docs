@@ -9,10 +9,23 @@ These release notes cover changes to various parts of the Mendix Platform access
 {{% /alert %}}
 
 {{% alert type="info" %}}
-For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deployment options, see [Mendix Status](https://status.mendix.com/).
+For updates on the status of Mendix Cloud V4, Mendix Cloud v3, and other deployment options, see [Mendix Status](https://status.mendix.com/).
 {{% /alert %}}
 
 ## 2019
+
+### August 26th, 2019
+
+#### SAP OData Connector Improvements & Fixes
+
+* We updated the **SAP OData Connector** to support the **Edm.Int64** data type. (Ticket #87284)
+* We also fixed a *java.net.SocketException: Broken pipe (Write failed)* exception which occurred when sending a large request to the OData service endpoint. (Ticket #86680)
+
+### August 23rd, 2019
+
+#### Mendix Cloud Improvements
+
+* We improved the performance of the Environments page by reducing the number of remote requests needed.
 
 ### August 9th, 2019
 
@@ -219,7 +232,7 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deploym
 * We have fixed the issue which caused the "Running Since" value in the Environment Details to be updated after transporting an MDA to an environment but where the process was canceled without restarting the environment. (Ticket 76893)
 * We have fixed the issue regarding unclear application version numbering when building an MDA packages. The "App latest tag" and "Branch latest tag" have been replaced with "App highest tag" and "Branch highest tag" respectively to represent the values more precisely. (Ticket 78699)
 * When building a mobile application package for a new project, the default for permissions is now *disabled*. These are the set of permissions that a mobile (Phonegap) app requires and, previously, all permissions were enabled for new projects by default. This caused Push Notifications to fail if no further configuration was provided.
-* We have fixed the issue which meant that license information was displayed incorrectly in the Developer Portal for some Mendix Cloud V3 production environments. (Ticket 78229, 80336)
+* We have fixed the issue which meant that license information was displayed incorrectly in the Developer Portal for some Mendix Cloud v3 production environments. (Ticket 78229, 80336)
 
 ### March 6th, 2019
 
@@ -240,7 +253,7 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deploym
 #### Fixes
 
 * We addressed and fixed an issue which caused some Mendix Cloud V4 backups to be duplicated.
-* We fixed a problem on Mendix Cloud V3 which prevented Path-based Access Restrictions from working with multiple TLS certificate authorities. (Ticket 77282)
+* We fixed a problem on Mendix Cloud v3 which prevented Path-based Access Restrictions from working with multiple TLS certificate authorities. (Ticket 77282)
 * We fixed the problem which prevented users in the Pacific Time Zone from being able to download the current day's logs. (Tickets 78325, 78586, 79119, 79162, 79427)
 * We addressed and solved a problem which meant that some sandboxes could not be resumed after getting stopped.
 * We have fixed the issue that prevented apps with ACS (App Cloud Services) from being deployed using the Web Modeler. (Ticket 76888)
@@ -704,7 +717,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 #### Improvements
 
-* The **Alerts** section in Mendix Cloud V4 apps will now include health check details, just like for Mendix Cloud V3 apps.
+* The **Alerts** section in Mendix Cloud V4 apps will now include health check details, just like for Mendix Cloud v3 apps.
 * It is now possible for you to change the technical contact of your applications by yourself.
 
 ## 2017
@@ -725,7 +738,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 * It's now possible to scale Mendix 6 applications on Cloud V4. Previously, this was only possible with environments that run Mendix 7 apps. With Mendix 6 apps, you can only scale the allocated memory, but not the amount of instances.
 * Big backups are now welcomed on V4 environments, as we fixed an issue that prevented users from uploading backup packages larger than 5 GBs.
-* We fixed an issue where some Mendix Cloud V3 users were not able to set a specified Java version for environments.
+* We fixed an issue where some Mendix Cloud v3 users were not able to set a specified Java version for environments.
 * Hovering over a Mendix Cloud environment status icon will now give more information about the environment's health.
 
 ### December 13th, 2017
@@ -882,7 +895,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 * When updating the admin user password in the Mendix Cloud, the password policy description was wrong, which led to confusing situations. We updated the text.
 * When navigating to **Node Security**, the **App Team** tab no longer disappears.
-* Due to a *zip* file encoding change in Mendix 7.5.0, AppServices could not be parsed when deploying to the Mendix Cloud. We fixed this.
+* Due to a ZIP file encoding change in Mendix 7.5.0, AppServices could not be parsed when deploying to the Mendix Cloud. We fixed this.
 * The **View Current Log** button is no longer hidden for Free Apps.
 
 ### July 12th, 2017

@@ -52,7 +52,7 @@ When inside a [nanoflow](nanoflows), the Create object action reloads [data sour
 
 {{% /alert %}}
 
-_Default value_: No
+*Default value*: No
 
 ### 2.3 Initialize Members
 

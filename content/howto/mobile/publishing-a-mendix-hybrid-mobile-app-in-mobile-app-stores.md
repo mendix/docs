@@ -32,7 +32,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 	* For details on how to obtain app signing keys, see the [iOS](/refguide/managing-app-signing-keys#ios) section of *Managing App Signing Keys*
 * Have Apple iTunes installed on your computer for deploying the iOS package that will be produced on your test device
 
-## 3 Starting the Packaging Process{#starting-the-packaging-process}
+## 3 Starting the Packaging Process {#starting-the-packaging-process}
 
 To start the packaging process, follow these steps:
 
@@ -82,7 +82,7 @@ For publishing to a specific platform, see the subsequent sections of this how-t
 * [Preparing and Publishing for iOS](#publishing-for-ios)
 * [Preparing and Publishing for Android](#publishing-for-android)
 
-## 5 Preparing and Publishing for iOS{#publishing-for-ios}
+## 5 Preparing and Publishing for iOS {#publishing-for-ios}
 
 Apple provides general information on [publishing an iOS app in the Apple App Store](https://developer.apple.com/programs/ios/distribute.html). Before uploading your app, make sure to check the [App Review Guidelines](https://developer.apple.com/app-store/review/) to make sure your app will be accepted. An Apple Developer Account is required. If you do not have one, [register as an Apple Developer](https://developer.apple.com/register/index.action).
 
@@ -136,7 +136,7 @@ Test your app per the [TestFlight beta testing overview](https://help.apple.com/
 
 Publish your app by following Apple's [Overview of publishing an app](https://help.apple.com/app-store-connect/#/dev34e9bbb5a) and the subsequent documents in the left menu's **Publish on the App Store section** category.
 
-## 6 Preparing and Publishing for Android{#publishing-for-android}
+## 6 Preparing and Publishing for Android {#publishing-for-android}
 
 If you plan on publishing an Android app, read Google's overview of [the Android app publishing process](http://developer.android.com/tools/publishing/publishing_overview.html). Before submitting your app to an app store, [review the launch checklist](http://developer.android.com/distribute/tools/launch-checklist.html). Google provides information on [publishing your app in the Google Play Store](http://developer.android.com/distribute/googleplay/index.html).
 

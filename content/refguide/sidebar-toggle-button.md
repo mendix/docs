@@ -17,7 +17,7 @@ The sidebar toggle is a button that when pressed will make a region of a [scroll
 
 {{% snippet file="refguide/image-property.md" %}}
 
-{{% snippet file="refguide/Render+Mode+Property.md" %}}
+{{% snippet file="refguide/render-mode-property.md" %}}
 
 {{% snippet file="refguide/button-style-property.md" %}}
 

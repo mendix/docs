@@ -40,7 +40,7 @@ _Default value:_ Horizontal
 
 {{% snippet file="refguide/editable-property.md" %}}
 
-{{% snippet file="refguide/Read+Only+Style.md" %}}
+{{% snippet file="refguide/read-only-style.md" %}}
 
 {{% snippet file="refguide/condition-property.md" %}}
 

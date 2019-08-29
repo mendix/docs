@@ -82,7 +82,7 @@ The placeholder text is shown when no text has been entered yet. It can be used 
 
 {{% snippet file="refguide/editable-property.md" %}}
 
-{{% snippet file="refguide/Read+Only+Style.md" %}}
+{{% snippet file="refguide/read-only-style.md" %}}
 
 {{% snippet file="refguide/condition-property.md" %}}
 

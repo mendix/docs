@@ -21,15 +21,15 @@ To add a range search field to your data grid, right-click within the search bar
 
 {{% snippet file="refguide/search-field-caption-property.md" %}}
 
-{{% snippet file="refguide/Search+Field+Type+Property.md" %}}
+{{% snippet file="refguide/search-field-type-property.md" %}}
 
-{{% snippet file="refguide/Search+Field+Default+Value+Property.md" %}}
+{{% snippet file="refguide/search-field-default-value-property.md" %}}
 
-{{% snippet file="refguide/Search+Field+Custom+Date+Format+Property.md" %}}
+{{% snippet file="refguide/search-field-custom-date-format-property.md" %}}
 
 {{% snippet file="refguide/custom-date-format-tokens.md" %}}
 
-{{% snippet file="refguide/Search+Field+Placeholder+Property.md" %}}
+{{% snippet file="refguide/search-field-placeholder-property.md" %}}
 
 ## General Properties
 

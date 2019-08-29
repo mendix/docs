@@ -20,33 +20,33 @@ Delivering your Mendix app in multiple languages is an important capability for 
 
 The app project language is the main language of the app when it is run. There must be a default app project language, and **English, United States** is the app project language set automatically by default. You can add as many languages as you like by following these steps:
 
-1.  In the **Project Explorer**, open the app project **Settings** and go to the **Languages** tab.
+1.  In the **Project Explorer**, open the app project's **Settings** and go to the **Languages** tab.
 
-    ![](attachments/Translating+Your+App+Content/01_project_settings.png)
+	![](attachments/Translating+Your+App+Content/01_project_settings.png)
 
 2.  Click **Add**, select the desired language, and click **OK**.
 
-    ![](attachments/Translating+Your+App+Content/02_dutch.png)
+	![](attachments/Translating+Your+App+Content/02_dutch.png)
 
 If you want to set a different language as the default, you can do that in the **Default language** drop-down menu on the **Languages** tab.
 
-Any app project language can be used as a development language in Studio Pro (for details, see [4 Changing the Development Language](#changingthedevelopmentlanguage)).
+Any app project language can be used as a development language in Studio Pro (for details, see the [Changing the Development Language](#changingthedevelopmentlanguage) section below).
 
-## <a name="changingthedevelopmentlanguage"></a>3 Changing the Development Language
+## 3 Changing the Development Language {#changingthedevelopmentlanguage}
 
 The development language is the language used to define translatable texts as you develop your app in Studio Pro. For example, if you select **Dutch, Netherlands** as the development language, any labels that you type during the development of your app in Studio Pro will be added to your app project's Dutch dictionary. The Dutch translation of your app will be seen by users of your app who set Dutch as their preferred language in their profile (if they do not specify a preferred language, the app project default language will be used).
 
-You can change the language setting if desired in Studio Pro by going to: **Language > Current Language**.
+You can change the language setting if desired in Studio Pro by going to: **Language** > **Current Language**.
 
 ![](attachments/Translating+Your+App+Content/04_switch_development_language.png)
 
 Mendix recommends setting your development language at the start of your app project, because all the added text (for example, button labels) will be added to the selected language library (so that it can be reused in other app projects).
 
-After selecting your development language, the pages will display their labels and content in that language. Labels that haven’t yet been translated to the selected language will display the text of the default language (which was set in the app project **Settings**) between angle brackets ("<>").
+After selecting your development language, the pages will display their labels and content in that language. Labels that haven’t yet been translated to the selected language will display the text of the default language (which was set in the app project **Settings**) between angle brackets (`<` `>`).
 
-When your app is deployed with labels that don’t yet have a translation, these labels will also display the default language label (without the angle brackets). You can configure how strict Studio Pro is in checking for a translation in the **Language Operations** settings of your app project (see [3.1 Configuring Language Operations](#toconfigurelanguageoperations)).
+When your app is deployed with labels that don’t yet have a translation, these labels will also display the default language label (without the angle brackets). You can configure how strict Studio Pro is in checking for a translation in the **Language Operations** settings of your app project (see the next section, [Configuring Language Operations](#toconfigurelanguageoperations)).
 
-### <a name="toconfigurelanguageoperations"></a>3.1 Configuring Language Operations
+### 3.1 Configuring Language Operations {#toconfigurelanguageoperations}
 
 To update the language settings in Studio Pro, go to **Language > Language Operations**.
 

@@ -13,11 +13,11 @@ An action button can perform various actions such as calling a microflow or nano
 
 {{% snippet file="refguide/caption-property.md" %}}
 
-{{% snippet file="refguide/Tooltip+Property.md" %}}
+{{% snippet file="refguide/tooltip-property.md" %}}
 
 {{% snippet file="refguide/image-property.md" %}}
 
-{{% snippet file="refguide/Render+Mode+Property.md" %}}
+{{% snippet file="refguide/render-mode-property.md" %}}
 
 {{% snippet file="refguide/button-style-property.md" %}}
 
@@ -33,9 +33,9 @@ Disables the action button until the action is completed or failed.
 
 {{% snippet file="refguide/class-property.md" %}}
 
-{{% snippet file="refguide/Style+Property.md" %}}
+{{% snippet file="refguide/style-property.md" %}}
 
-{{% snippet file="refguide/Tab+index+Property.md" %}}
+{{% snippet file="refguide/tab-index-property.md" %}}
 
 ## 4 Events Properties {#events-on-click}
 
@@ -43,6 +43,6 @@ Disables the action button until the action is completed or failed.
 
 ## 5 Visibility Properties
 
-{{% snippet file="refguide/Visibility+Property.md" %}}
+{{% snippet file="refguide/visibility-property.md" %}}
 
-{{% snippet file="refguide/Visibility+Property+With+Module+Roles+Extended.md" %}}
+{{% snippet file="refguide/visibility-property-with-module-roles-extended.md" %}}

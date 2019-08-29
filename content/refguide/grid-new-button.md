@@ -13,7 +13,7 @@ The **Create** button allows the user to create new objects in a grid or referen
 
 {{% snippet file="refguide/class-property.md" %}}
 
-{{% snippet file="refguide/Style+Property.md" %}}
+{{% snippet file="refguide/style-property.md" %}}
 
 ## Data Source Properties
 
@@ -31,13 +31,13 @@ Let us say you have an entity Vehicle and two specializations, namely Bicycle an
 
 {{% snippet file="refguide/caption-property.md" %}}
 
-{{% snippet file="refguide/Tooltip+Property.md" %}}
+{{% snippet file="refguide/tooltip-property.md" %}}
 
 {{% snippet file="refguide/image-property.md" %}}
 
 {{% snippet file="refguide/button-style-property.md" %}}
 
-{{% snippet file="refguide/is+default+button+property.md" %}}
+{{% snippet file="refguide/is-default-button-property.md" %}}
 
 ### Edit location
 
@@ -57,4 +57,4 @@ See [Opening Pages](opening-pages).
 
 ## Visibility Properties
 
-{{% snippet file="refguide/Visible+Property.md" %}}
+{{% snippet file="refguide/visible-property.md" %}}

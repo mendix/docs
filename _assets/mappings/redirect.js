@@ -498,6 +498,10 @@ module.exports = {
       from: "/refguide8/menu-item",
       to: "/refguide/menu"
     },
+	{
+      from: "/refguide8/Show+Page",
+      to: "/refguide/show-page"
+    },
 	/****************************************************
      * From Desktop Modeler version 7 (permanent, mapped)
      ****************************************************/
@@ -569,7 +573,10 @@ module.exports = {
       from: "/howto7/deploying-a-mendix-app-to-cloud-foundry",
       to: "/developerportal/deploy/cloud-foundry-deploy"
     },
-
+	{
+      from: "/refguide7/Show+Page",
+      to: "/refguide/show-page"
+    },
 	/****************************************************
      * From Desktop Modeler version 6 (permanent)
      ****************************************************/

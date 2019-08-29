@@ -2,7 +2,7 @@
 title: "SAP Destination Service"
 category: "SAP"
 menu_order: 20
-description: "Reference for using SAP Destination Services within the SAP OData Connector."
+description: "Reference for using SAP Destination Services within the OData Connector for SAP solutions."
 tags: ["SAP", "OData Connector", "Destination Service", "Cloud Connector", "Connectivity Service"]
 ---
 
@@ -24,11 +24,11 @@ It is not the aim of this document to explain how to configure destinations. For
 
 ## 3 Including SAP Destination Services in your App
 
-Although you can use the SAP Destination Service on its own, the main use within Mendix is as part of the SAP OData Connector. Therefore, to include the SAP Destination Service in your app, download the SAP OData Connector from the the App Store here: [SAP OData Connector](https://appstore.home.mendix.com/link/app/74525/Mendix/SAP-OData-Connector).
+Although you can use the SAP Destination Service on its own, the main use within Mendix is as part of the OData Connector for SAP solutions. Therefore, to include the SAP Destination Service in your app, download the OData Connector for SAP solutions from the the App Store here: [OData Connector for SAP solutions](https://appstore.home.mendix.com/link/app/74525/Mendix/SAP-OData-Connector).
 
 ## 4 Get Destination Action
 
-There is one action within the SAP OData Connector module which allows you to get information about a destination. This is **Get Destination**, which is in the *SAP Destination Service* category of the microflow toolbox.
+There is one action within the OData Connector for SAP solutions module which allows you to get information about a destination. This is **Get Destination**, which is in the *SAP Destination Service* category of the microflow toolbox.
 
 ![Drag a Get Destination action from the toolbox](attachments/sap-destination-service/drag-get-destination.png)
 
@@ -41,7 +41,7 @@ The **Get Destination** action properties look like this:
 **Variable** is the name of the object of type *SAPODataConnector.Destination* where the details of the destination will be stored.
 
 {{% alert type="warning" %}}
-Owing to an issue with the current version of SAP Destination Services (SAP OData Connector version 4.0.2) the Destination entity is not always populated correctly.
+Owing to an issue with the current version of SAP Destination Services (OData Connector for SAP solutions version 4.0.2) the Destination entity is not always populated correctly.
 
 If you are using proxy type **OnPremise** and **NOT using PrincipalPropagation** for authentication, you will need to use the GetCloudConnectorInfo JAVA action (in **App Store modules > SAPODataConnector > USE_ME > helpers**) to fetch a CloudConnectorInfo object. This will contain data for your ProxyHost, ProxyPort, and SapConnectivityAuthentication (ProxyBearerToken).
 {{% /alert %}}
@@ -138,7 +138,7 @@ All the configuration for this type of authentication is performed in the connec
 This is the type of authentication which you need to implement if you previously used the SAP Cloud Connector.
 {{% /alert %}}
 
-By providing the SAP OData Connector actions (*Get list* for example) with a destination of this type, you can gain access to your on-premises systems which are configured through the SAP Connectivity Service.
+By providing the OData Connector for SAP solutions actions (*Get list* for example) with a destination of this type, you can gain access to your on-premises systems which are configured through the SAP Connectivity Service.
 
 The attributes in the **Destination** entity which are used for *Principal Propogation* are:
 
@@ -168,11 +168,11 @@ The SAP Destination Service does not support running on a local machine. Your ap
 
 If you want to deploy locally, during development or testing for example, you will need to have an endpoint which is accessible from your network and provide any credentials from within your app.
 
-### 6.4 Formatting URLs with a ServiceRoot in SAP OData Connector
+### 6.4 Formatting URLs with a ServiceRoot in OData Connector for SAP Solutions
 
-When you use SAP OData Connector actions, you often have to provide a string containing a URL or query. Without Destination Services this needs to contain the SERVICEROOT, that is: the endpoint of the service being consumed.
+When you use OData Connector for SAP solutions actions, you often have to provide a string containing a URL or query. Without Destination Services this needs to contain the SERVICEROOT, that is: the endpoint of the service being consumed.
 
-With the SAP Destination Service, you should not provide the SERVICEROOT. You should start the query with a slash and the COLLECTIONNAME. Note that you will also need to start the query with the COLLECTIONNAME in the case where the URL is obtained from the object metadata or *Deferred* attribute. See [SAP OData Connector](sap-odata-connector) for more details.
+With the SAP Destination Service, you should not provide the SERVICEROOT. You should start the query with a slash and the COLLECTIONNAME. Note that you will also need to start the query with the COLLECTIONNAME in the case where the URL is obtained from the object metadata or *Deferred* attribute. See [OData Connector for SAP Solutions](sap-odata-connector) for more details.
 
 ## 7	Troubleshooting
 
@@ -192,5 +192,5 @@ Ensure that the user accessing the Mendix App has the required level of access o
 
 ## 8	Read More
 
-* [SAP OData Connector](sap-odata-connector)
-* [SAP XSUAA Connector](sap-xsuaa-connector)
+* [OData Connector for SAP Solutions](sap-odata-connector)
+* [XSUAA Connector for SAP Cloud Platform](sap-xsuaa-connector)

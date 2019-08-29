@@ -1,8 +1,8 @@
 ---
-title: "SAP Leonardo Machine Learning Foundation Connector"
+title: "Connector for SAP Leonardo Machine Learning Foundation"
 category: "SAP"
 menu_order: 60
-description: "Documentation for using the SAP Leonardo Machine Learning Foundation Connector with images and text."
+description: "Documentation for using the Connector for SAP Leonardo Machine Learning Foundation with images and text."
 tags: ["SAP", "Leonardo", "Machine Learning", "AI"]
 ---
 
@@ -10,9 +10,9 @@ tags: ["SAP", "Leonardo", "Machine Learning", "AI"]
 
 SAP Leonardo Machine Learning Foundation is a toolbox of intelligent technologies, services, and industry expertise provided by SAP. It helps companies  transform into Intelligent Enterprises.
 
-The SAP Leonardo Machine Learning Foundation Connector allows you to use a number of the models which are available in the SAP Leonardo Machine Learning Foundation. The connector provides access to pre-trained and customizable models.
+The Connector for SAP Leonardo Machine Learning Foundation allows you to use a number of the models which are available in the SAP Leonardo Machine Learning Foundation. The connector provides access to pre-trained and customizable models.
 
-The models which are supported by the SAP Leonardo Machine Learning Foundation Connector are:
+The models which are supported by the Connector for SAP Leonardo Machine Learning Foundation are:
 
 * Classify Image (Customizable Image Classification)
 * Classify Product from Image (Product Image Classification)
@@ -25,9 +25,9 @@ The models which are supported by the SAP Leonardo Machine Learning Foundation C
 
 ## 2 Prerequisites {#prerequisites}
 
-To use the SAP Leonardo Machine Learning Foundation Connector, you need the following prerequisites:
+To use the Connector for SAP Leonardo Machine Learning Foundation, you need the following prerequisites:
 
-* The SAP Leonardo Machine Learning Foundation Connector downloaded into your app from the Mendix App Store; it can be found here: https://appstore.home.mendix.com/link/app/107221/Mendix/SAP-Leonardo-Machine-Learning-Foundation-Connector
+* The Connector for SAP Leonardo Machine Learning Foundation downloaded into your app from the Mendix App Store; it can be found here: https://appstore.home.mendix.com/link/app/107221/Mendix/SAP-Leonardo-Machine-Learning-Foundation-Connector
 * An API key obtained from the SAP API Business Hub
 
     1. Go to the SAP Leonardo Machine Learning Foundation - Functional Services page here: https://api.sap.com/package/SAPLeonardoMLFunctionalServices.
@@ -46,7 +46,7 @@ To use the SAP Leonardo Machine Learning Foundation Connector, you need the foll
 
 ## 3 Setting up the API Key {#api-key}
 
-The SAP Leonardo Machine Learning Foundation Connector actions are available in your microflows, once you have imported the SAP Leonardo Machine Learning Foundation Connector module from the Mendix App Store.
+The Connector for SAP Leonardo Machine Learning Foundation actions are available in your microflows, once you have imported the Connector for SAP Leonardo Machine Learning Foundation module from the Mendix App Store.
 
 Every call to SAP Leonardo Machine Learning Foundation needs to be authenticated by a valid **API key**. Instructions for obtaining this are in the [Prerequisites](#prerequisites) section above.
 
@@ -56,7 +56,7 @@ The API key needs to be pasted as the value of the constant, **APIKey** which is
 
 ## 4 Microflow Actions
 
-Each action from the SAP Leonardo Machine Learning Foundation Connector is described below.
+Each action from the Connector for SAP Leonardo Machine Learning Foundation is described below.
 
 ### 4.1 ClassifyImage
 

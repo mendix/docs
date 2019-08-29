@@ -201,7 +201,7 @@ In this example we have a Java action called `LogMessage`, which has a parameter
         public java.lang.Boolean executeAction() throws Exception
         {
             // BEGIN USER CODE
-            Core.getLogger("MyLogger").info(this.Message);
+            Core.getLogger("MyLogger").info(this.MessageParameter1);
             // END USER CODE
         }
 ```

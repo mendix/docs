@@ -1,5 +1,5 @@
 ---
-title: "Write JavaScript Actions: Part 2 (Advanced)"
+title: "Build JavaScript Actions: Part 2 (Advanced)"
 parent: "build-javascript-actions"
 description: "This advanced how-to will teach you to make a JavaScript action which can search for GitHub users."
 tags: ["widget", "search", "GitHub", "JavaScript", "API", "JavaScript-API"]
@@ -7,7 +7,7 @@ tags: ["widget", "search", "GitHub", "JavaScript", "API", "JavaScript-API"]
 
 ## 1 Introduction
 
-Mendix has made nanoflows even more powerful with pluggable nanoflow actions – called JavaScript actions – in Mendix 8. [How to Write JavaScript Actions: Part 1 (Basic)](write-javascript-actions) shows you how to create a JavaScript TextToSpeech action, expose it as a nanoflow action, and then use it in a demo. In this advanced how-to you will learn to call a REST service, use a generic return type, and make an API to enhance the power of your JavaScript actions.
+Mendix has made nanoflows even more powerful with pluggable nanoflow actions – called JavaScript actions – in Mendix 8. [How to Build JavaScript Actions: Part 1 (Basic)](write-javascript-actions) shows you how to create a JavaScript TextToSpeech action, expose it as a nanoflow action, and then use it in a demo. In this advanced how-to you will learn to call a REST service, use a generic return type, and make an API to enhance the power of your JavaScript actions.
 
 **This how-to will teach you how to do the following:**
 
@@ -313,7 +313,7 @@ Congratulations! Using the power of JavaScript actions, your app can search for 
 
 ## 5 Read More
 
-* [Write JavaScript Actions: Part 1 (Basic)](write-javascript-actions)
+* [Build JavaScript Actions: Part 1 (Basic)](write-javascript-actions)
 * [Mendix Client API](https://apidocs.mendix.com/8/client/)
 * [JavaScript Actions](/refguide/javascript-actions)
 * JavaScript Resources

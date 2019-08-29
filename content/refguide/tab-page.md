@@ -25,4 +25,4 @@ _Default value:_ True
 
 ## Visibility Properties
 
-{{% snippet file="refguide/Visible+Property.md" %}}
+{{% snippet file="refguide/visible-property.md" %}}

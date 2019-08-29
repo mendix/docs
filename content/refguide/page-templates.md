@@ -32,7 +32,7 @@ Page template properties are described in the sections below.
 
 {{% snippet file="refguide/document-class-property.md" %}}
 
-{{% snippet file="refguide/Style+Property.md" %}}
+{{% snippet file="refguide/style-property.md" %}}
 
 ## 4 Design Properties
 

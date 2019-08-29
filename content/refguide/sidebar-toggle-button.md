@@ -17,7 +17,7 @@ The sidebar toggle is a button that when pressed will make a region of a [scroll
 
 {{% snippet file="refguide/image-property.md" %}}
 
-{{% snippet file="refguide/Render+Mode+Property.md" %}}
+{{% snippet file="refguide/render-mode-property.md" %}}
 
 {{% snippet file="refguide/button-style-property.md" %}}
 
@@ -27,9 +27,9 @@ The sidebar toggle is a button that when pressed will make a region of a [scroll
 
 {{% snippet file="refguide/class-property.md" %}}
 
-{{% snippet file="refguide/Style+Property.md" %}}
+{{% snippet file="refguide/style-property.md" %}}
 
-{{% snippet file="refguide/Tab+index+Property.md" %}}
+{{% snippet file="refguide/tab-index-property.md" %}}
 
 ## General properties
 
@@ -66,6 +66,6 @@ Only applicable if the mode is "Shrink content".
 
 ## Visibility properties
 
-{{% snippet file="refguide/Visibility+Property.md" %}}
+{{% snippet file="refguide/visibility-property.md" %}}
 
-{{% snippet file="refguide/Visibility+Property+With+Module+Roles+Extended.md" %}}
+{{% snippet file="refguide/visibility-property-with-module-roles-extended.md" %}}

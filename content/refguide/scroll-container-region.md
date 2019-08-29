@@ -11,7 +11,7 @@ A scroll container region is part of a [Scroll Container](scroll-container), and
 
 {{% snippet file="refguide/class-property.md" %}}
 
-{{% snippet file="refguide/Style+Property.md" %}}
+{{% snippet file="refguide/style-property.md" %}}
 
 ## General Properties
 

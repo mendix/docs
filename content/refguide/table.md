@@ -37,7 +37,7 @@ Tables allow for a number of keyboard interactions. Examples include navigating 
 
 {{% snippet file="refguide/class-property.md" %}}
 
-{{% snippet file="refguide/Style+Property.md" %}}
+{{% snippet file="refguide/style-property.md" %}}
 
 ## 3 General Properties
 
@@ -65,6 +65,6 @@ Examples:
 
 ## 4 Visibility Properties
 
-{{% snippet file="refguide/Visibility+Property.md" %}}
+{{% snippet file="refguide/visibility-property.md" %}}
 
-{{% snippet file="refguide/Visibility+Property+With+Module+Roles+Simple.md" %}}
+{{% snippet file="refguide/visibility-property-with-module-roles-simple.md" %}}

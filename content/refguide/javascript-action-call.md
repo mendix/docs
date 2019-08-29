@@ -50,6 +50,6 @@ The result of the Javascript action will be given this name. The label indicates
 ## 4 Read More
 
 * [JavaScript Actions](javascript-actions)
-* [Write JavaScript Actions](/howto/extensibility/build-javascript-actions)
+* [Build JavaScript Actions](/howto/extensibility/build-javascript-actions)
 * [Nanoflows](nanoflows)
 * [Java Action Call](java-action-call)

@@ -19,7 +19,7 @@ The menu bar widget shows a configured menu in the form of a horizontal bar with
 
 {{% snippet file="refguide/class-property.md" %}}
 
-{{% snippet file="refguide/Style+Property.md" %}}
+{{% snippet file="refguide/style-property.md" %}}
 
 ## 3 General Properties
 

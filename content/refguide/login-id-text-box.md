@@ -17,9 +17,9 @@ It must be placed on a page together with a [Password text box](password-text-bo
 
 {{% snippet file="refguide/class-property.md" %}}
 
-{{% snippet file="refguide/Style+Property.md" %}}
+{{% snippet file="refguide/style-property.md" %}}
 
-{{% snippet file="refguide/Tab+index+Property.md" %}}
+{{% snippet file="refguide/tab-index-property.md" %}}
 
 ## General Properties
 

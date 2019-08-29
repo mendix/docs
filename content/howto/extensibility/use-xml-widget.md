@@ -1,5 +1,5 @@
 ---
-title: "Make Widgets with XML"
+title: "Build Widgets with XML"
 parent: "widget-development"
 tags: ["xml", "widget"]
 ---

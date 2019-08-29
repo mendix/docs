@@ -30,7 +30,7 @@ Filling out the caption for an empty option improves the user experience of your
 
 ## Validation Properties
 
-{{% snippet file="refguide/Widget+Validation.md" %}}
+{{% snippet file="refguide/widget-validation.md" %}}
 
 ## Data Source Properties
 
@@ -42,15 +42,15 @@ Filling out the caption for an empty option improves the user experience of your
 
 {{% snippet file="refguide/editable-property.md" %}}
 
-{{% snippet file="refguide/Read+Only+Style.md" %}}
+{{% snippet file="refguide/read-only-style.md" %}}
 
 {{% snippet file="refguide/condition-property.md" %}}
 
 ## Visibility Properties
 
-{{% snippet file="refguide/Visibility+Property.md" %}}
+{{% snippet file="refguide/visibility-property.md" %}}
 
-{{% snippet file="refguide/Visibility+Property+With+Module+Roles+Simple.md" %}}
+{{% snippet file="refguide/visibility-property-with-module-roles-simple.md" %}}
 
 ## Events Properties
 
@@ -66,9 +66,9 @@ Filling out the caption for an empty option improves the user experience of your
 
 {{% snippet file="refguide/class-property.md" %}}
 
-{{% snippet file="refguide/Style+Property.md" %}}
+{{% snippet file="refguide/style-property.md" %}}
 
-{{% snippet file="refguide/Tab+index+Property.md" %}}
+{{% snippet file="refguide/tab-index-property.md" %}}
 
 ## Read More
 

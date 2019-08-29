@@ -28,7 +28,7 @@ This is the IP address other servers see when the Mendix application initiates t
 
 Mendix uses the following static IP addresses. If you need further information, please file a support ticket with Mendix Support.
 
-#### 2.2.1 Mendix Cloud V4
+#### 2.2.1 Mendix Cloud v4
 
 | Region | IP Addresses |
 | --- | ---|
@@ -41,7 +41,7 @@ Mendix uses the following static IP addresses. If you need further information, 
 
 <sup><small>*</small></sup> Free Apps cluster
 
-#### 2.2.2 Mendix Cloud V3 (XS4/BIT)
+#### 2.2.2 Mendix Cloud v3 (XS4/BIT)
 
 * `82.94.240.112/28`
 * `2001:888:2177::/48`

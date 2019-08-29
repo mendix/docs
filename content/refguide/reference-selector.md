@@ -80,7 +80,7 @@ See [Opening Pages](opening-pages) for more details.
 
 ## Validation Properties
 
-{{% snippet file="refguide/Widget+Validation.md" %}}
+{{% snippet file="refguide/widget-validation.md" %}}
 
 ## Formatting Properties
 
@@ -175,15 +175,15 @@ Keep in mind that even though you connect an attribute to the reference selector
 
 {{% snippet file="refguide/editable-property.md" %}}
 
-{{% snippet file="refguide/Read+Only+Style.md" %}}
+{{% snippet file="refguide/read-only-style.md" %}}
 
 {{% snippet file="refguide/condition-property.md" %}}
 
 ## Visibility Properties
 
-{{% snippet file="refguide/Visibility+Property.md" %}}
+{{% snippet file="refguide/visibility-property.md" %}}
 
-{{% snippet file="refguide/Visibility+Property+With+Module+Roles+Simple.md" %}}
+{{% snippet file="refguide/visibility-property-with-module-roles-simple.md" %}}
 
 ## Events Properties
 
@@ -195,9 +195,9 @@ Keep in mind that even though you connect an attribute to the reference selector
 
 {{% snippet file="refguide/class-property.md" %}}
 
-{{% snippet file="refguide/Style+Property.md" %}}
+{{% snippet file="refguide/style-property.md" %}}
 
-{{% snippet file="refguide/Tab+index+Property.md" %}}
+{{% snippet file="refguide/tab-index-property.md" %}}
 
 ## Read More
 

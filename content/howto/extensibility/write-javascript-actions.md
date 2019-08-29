@@ -1,5 +1,5 @@
 ---
-title: "Write JavaScript Actions: Part 1 (Basic)"
+title: "Build JavaScript Actions: Part 1 (Basic)"
 parent: "build-javascript-actions"
 description: "This how-to will teach you to create a JavaScript action."
 tags: ["widget", "TexttoSpeech", "SpeechtoText", "JavaScript", "API", "JavaScript-API"]
@@ -150,7 +150,7 @@ To create a JavaScript action that can synthesize text to speech, follow these s
 
 ## 3 Read More{#read-more}
 
-* [Write JavaScript Actions: Part 2 (Advanced)](write-javascript-github)
+* [Build JavaScript Actions: Part 2 (Advanced)](write-javascript-github)
 * [Implement Best Practices for JavaScript Actions](best-practices-javascript-actions)
 * [JavaScript Actions](/refguide/javascript-actions)
 * [Mendix Client API](https://apidocs.mendix.com/8/client/) 

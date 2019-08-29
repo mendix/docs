@@ -30,7 +30,7 @@ If security has already been set to **Prototype/demo** or **Production** in Stud
 
 ## 3 Modules Set Up {#module-set-up}
 
-When security is enabled in Studio, the [AppCloudServices module](/developerportal/deploy/integrate-with-mendix-sso) is set up. This module enables single sign-on and user management in your app.
+When security is enabled in Studio, the AppCloudServices module is set up. This module enables single sign-on and user management in your app.
 
 To enable single sign-on the following checks and changes are performed:
 
@@ -42,7 +42,7 @@ The AppCloudServices module also adds user management to your app. With user man
 {{% alert type="info" %}}If your project already has the AppCloudServices module installed, you will not be able to enable security from Studio. You can only set security manually in Studio Pro meeting the following requirements: 
 
 * Security should be set to **Production** <br/>
-* The AppCloudServices module should be set up to enable single sign on (For more information on how to set the module up, see [Mendix Single Sign On](/developerportal/deploy/integrate-with-mendix-sso) in the *Developer Portal Guide*)
+* The AppCloudServices module should be set up to enable single sign on
 
 {{% /alert %}}
 

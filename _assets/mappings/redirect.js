@@ -502,6 +502,98 @@ module.exports = {
       from: "/refguide8/Show+Page",
       to: "/refguide/show-page"
     },
+	{
+      from: "/refguide8/Validation+Feedback",
+      to: "/refguide/validation-feedback"
+    },
+	{
+      from: "/refguide8/Show+Message",
+      to: "/refguide/show-message"
+    },
+	{
+      from: "/refguide8/Show+Home+Page",
+      to: "/refguide/show-home-page"
+    },
+	{
+      from: "/refguide8/Download+File",
+      to: "/refguide/download-file"
+    },
+	{
+      from: "/refguide8/Close+Form",
+      to: "/refguide/close-page"
+    },
+	{
+      from: "/refguide8/Row+(document+template)",
+      to: "/refguide/row-document-template"
+    },
+	{
+      from: "/refguide8/Table+(document+template",
+      to: "/refguide/table-document-template"
+    },
+	{
+      from: "/refguide8/Cell+(document+template)",
+      to: "/refguide/cell-document-template"
+    },
+	{
+      from: "/refguide8/Static+Image+(document+template)",
+      to: "/refguide/static-image-document-template"
+    },
+	{
+      from: "/refguide8/Title+(document+template)",
+      to: "/refguide/title-document-template"
+    },
+	{
+      from: "/refguide8/Static+label+(document+template)",
+      to: "/refguide/static-label-document-template"
+    },
+	{
+      from: "/refguide8/Page+Break+(document+template)",
+      to: "/refguide/page-break-document-template"
+    },
+	{
+      from: "/refguide8/Line+Break+(document+template)",
+      to: "/refguide/line-break-document-template"
+    },
+	{
+      from: "/refguide8/Header+(document+template)",
+      to: "/refguide/header-document-template"
+    },
+	{
+      from: "/refguide8/Footer+(document+template)",
+      to: "/refguide/footer-document-template"
+    },
+	{
+      from: "/refguide8/Dynamic+label+(document+template)",
+      to: "/refguide/dynamic-label-document-template"
+    },
+	{
+      from: "/refguide8/Template+Grid+(document+template)",
+      to: "/refguide/template-grid-document-template"
+    },
+	{
+      from: "/refguide8/Data+Grid+(document+template)",
+      to: "/refguide/data-grid-document-template"
+    },
+	{
+      from: "/refguide8/Sort+Bar",
+      to: "/refguide/sort-bar"
+    },
+	{
+      from: "/refguide8/Columns+(document+template)",
+      to: "/refguide/columns-document-template"
+    },
+	{
+      from: "/refguide8/Dynamic+Image+(document+template)",
+      to: "/refguide/dynamic-image-document-template"
+    },
+	{
+      from: "/refguide8/Data+View+(document+template)",
+      to: "/refguide/data-view-document-template"
+    },
+	{
+      from: "/refguide8/Document+Templates",
+      to: "/refguide/document-templates"
+    },
 	/****************************************************
      * From Desktop Modeler version 7 (permanent, mapped)
      ****************************************************/
@@ -575,8 +667,100 @@ module.exports = {
     },
 	{
       from: "/refguide7/Show+Page",
-      to: "/refguide/show-page"
+      to: "/refguide7/show-page"
     },
+	{
+      from: "/refguide7/Validation+Feedback",
+      to: "/refguide7/validation-feedback"
+    },
+	{
+      from: "/refguide7/Show+Message",
+      to: "/refguide7/show-message"
+    },
+	{
+      from: "/refguide7/Show+Home+Page",
+      to: "/refguide7/show-home-page"
+    },
+	{
+      from: "/refguide7/Download+File",
+      to: "/refguide7/download-file"
+    },
+	{
+      from: "/refguide7/Close+Form",
+      to: "/refguide7/close-page"
+    },
+	{
+      from: "/refguide7/Row+(document+template)",
+      to: "/refguide7/row-document-template"
+    },
+	{
+      from: "/refguide7/Table+(document+template",
+      to: "/refguide7/table-document-template"
+    },
+	{
+      from: "/refguide7/Cell+(document+template)",
+      to: "/refguide7/cell-document-template"
+    },
+	{
+      from: "/refguide7/Static+Image+(document+template)",
+      to: "/refguide7/static-image-document-template"
+    },
+	{
+      from: "/refguide7/Title+(document+template)",
+      to: "/refguide7/title-document-template"
+    },
+	{
+      from: "/refguide7/Static+label+(document+template)",
+      to: "/refguide7/static-label-document-template"
+    },
+	{
+      from: "/refguide7/Page+Break+(document+template)",
+      to: "/refguide7/page-break-document-template"
+    },
+	{
+      from: "/refguide7/Line+Break+(document+template)",
+      to: "/refguide7/line-break-document-template"
+    },
+	{
+      from: "/refguide7/Header+(document+template)",
+      to: "/refguide7/header-document-template"
+    },
+	{
+      from: "/refguide7/Footer+(document+template)",
+      to: "/refguide7/footer-document-template"
+    },
+	{
+      from: "/refguide7/Dynamic+label+(document+template)",
+      to: "/refguide7/dynamic-label-document-template"
+    },
+	{
+      from: "/refguide7/Template+Grid+(document+template)",
+      to: "/refguide7/template-grid-document-template"
+    },
+	{
+      from: "/refguide7/Data+Grid+(document+template)",
+      to: "/refguide7/data-grid-document-template"
+    },
+	{
+      from: "/refguide7/Sort+Bar",
+      to: "/refguide7/sort-bar"
+    },
+	{
+      from: "/refguide7/Columns+(document+template)",
+      to: "/refguide7/columns-document-template"
+    },
+	{
+      from: "/refguide7/Dynamic+Image+(document+template)",
+      to: "/refguide7/dynamic-image-document-template"
+    },
+	{
+      from: "/refguide7/Data+View+(document+template)",
+      to: "/refguide7/data-view-document-template"
+    },
+	{
+      from: "/refguide7/Document+Templates",
+      to: "/refguide7/document-templates"
+    },	
 	/****************************************************
      * From Desktop Modeler version 6 (permanent)
      ****************************************************/

@@ -3,14 +3,16 @@ title: "Input Element Widgets"
 parent: "page-editor-widgets"
 description: "Describes input widgets in Mendix Studio."
 menu_order: 20
-tags: ["studio", "page editor", "input widgets", "widgets"]
+tags: ["studio", "page editor", "input elements", "input widgets", "widgets"]
 ---
 
 ## 1 Introduction 
 
-**Input Elements** are [widgets](page-editor-widgets) in Mendix Studio that are typically used to allow end-users enter or edit data.  
+**Input Elements** are [widgets](page-editor-widgets) in Mendix Studio that are typically used to allow end-users enter or edit data. For example, a text box below allows users to fill in their full names:
 
-**Input Elements** can only function inside a data container (a list view or a data view). You can either place widget in an existing data container; or click **Wrap with a new data view** in **Properties** to create a data view automatically and place an input element inside it. 
+![](attachments/page-editor-widgets-input-elements/text-box-example.png)
+
+**Input Elements** can only function inside a data container (a data view, a list view, or a data grid). You can either place widget in an existing data container; or click **Wrap with a new data view** in **Properties** to create a data view and place an input element inside it automatically. 
 
 {{% image_container width="350" %}}![](attachments/page-editor-widgets-input-elements/wrap-in-data-view.png)
 {{% /image_container %}}
@@ -36,13 +38,16 @@ Apart from the standard input widgets, you can also [download widgets from the M
 
 ## 3 Properties
 
-Input elements properties consist of the following sections:
+All input elements properties consist of the following sections:
 
-* [Data source](#input-elements-design)
+* [Data source](#input-elements-data-source)
 * [General](#input-elements-general)
+* [Input Validation](#validation)
 * [Design](#input-elements-design)
 
-### 3.1 Data Source {#input-elements-design}
+A date picker has a specific [Format](#format) section.
+
+### 3.1 Data Source Section {#input-elements-data-source}
 
 **Input Elements** need to be linked to an attribute to show data and to allow end-users to edit it. Different input elements require different [types of attributes](domain-models-attributes). You can find the correspondence between the input elements and attribute types in the table below:
 
@@ -67,7 +72,7 @@ Common properties of input elements are described in the table below:
 | Property    | Description                                                  |
 | ----------- | ------------------------------------------------------------ |
 | Show Label  | Enable this property if you want to show a label (name) of a widget to the end-user. <br />*This property is enabled by default.* |
-| Label       | This property only appears if **Show Label** is enabled. Specify the name that will be displayed to the end-users. When you select an attribute, the name of the attribute is filled out as a label. |
+| Label       | This property only appears if **Show Label** is enabled. Specify the name that will be displayed to end-users. <br />When you select an attribute, the name of the attribute is shown in the label in braces. This means that instead of a static text, the value of the attribute is displayed to end-users. |
 | Editability | Editability indicates whether the end-user will be able to change the value displayed by the widget. Possible values are the following: <ul><li>Editable – the value displayed by the widget is editable</li><li>Read-only – the value is in read-only mode</li><li>Conditional – the widget is editable only if specified conditions are met (this option can be configured in Studio Pro only)</li></ul>{{%alert type="info" %}}If an attribute set for the widget's data source is of the AutoNumber type, the widget is set into read-only mode by default and the **Editability** setting itself is disabled, because attributes of this type are generated automatically.<br />{{%/alert %}} |
 
 #### 3.2.2 Specific Properties
@@ -80,7 +85,18 @@ Specific properties of the input elements are described in the table below:
 | Text Area     | Number of Lines    | This property is only displayed when the **Grow Automatically** option is disabled.  The number of lines determine how many lines the text area shows at the same time. If the text in the text area contains more lines you will have to use a scrollbar to see it all. <br />Default value for the **Number of Lines** option: 5 |
 | Radio Buttons | Orientation        | This property defines whether the radio buttons are displayed in your app horizontally or vertically. <br />Default value for **Orientation**: Horizontal. |
 
-## 4 Input Validation Section
+### 3.3 Format Section {#format}
+
+The **Format** section is specific for the **Date Picker** widget only. 
+
+ The **Format** section properties are described in the table below:
+
+| Property       | Description                                                  |
+| -------------- | ------------------------------------------------------------ |
+| Type           | Determines the way date and/or time is displayed to users. Possible values of this property are the following ones: <ul><li>**Date** – users can view or edit a date only</li>**Time** – users can view or edit time only<li></li><li>**Date & Time** – users can view or edit date and time</li><li>**Custom** – custom date and time format, can be configured in Studio Pro only</li></ul><br />Default value for **Type**: Date |
+| Format Example | Displays an example of the selected format type.             |
+
+### 3.4 Input Validation Section {#validation}
 
 In **Input Validation**, you can specify whether the widget's value should be validated. You can set a validation type for an input widget and specify an end-user message in case validation fails. For example, you can mark the **Full name** field as required for new customers and you can add a message saying: "Please specify your name to proceed".
 
@@ -93,11 +109,11 @@ The **Input Validation** section properties are described in the table below:
 | Validation Type                          | This property indicates whether a value filled in a widget should be validated. Possible options are the following:<br /><ul><li>**None** – a value is not required, the widget can be left empty</li><li>**Required** – the widget cannot be empty, end-users need to fill a value in it</li><li>**Custom** – can be set only in Studio Pro. However, if a custom validation has been set in Studio Pro, you can specify or change a [message](#validation-message) for the custom validation</li></ul> |
 | <a name="validation-message"></a>Message | A message that is shown to end-users when **Validation Type** is **Required** or **Custom** and when the validation has failed. |
 
-## 5 Design Section {#input-elements-design}
+### 3.5 Design Section {#input-elements-design}
 
 For information on the **Design** section and its properties, see [Design Section in Widgets](page-editor-widgets-design-section).
 
-## 6 Read More
+## 4 Read More
 
 * [Pages](page-editor) 
 * [Widgets](page-editor-widgets)

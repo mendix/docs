@@ -24,7 +24,7 @@ The app project language is the main language of the app when it is run. There m
 
 	![](attachments/Translating+Your+App+Content/01_project_settings.png)
 
-2.  Click **Add**, select the desired language, and click **OK**.
+2. 	Click **Add**, select the desired language, and click **OK**.
 
 	![](attachments/Translating+Your+App+Content/02_dutch.png)
 
@@ -57,31 +57,31 @@ In the **Selection** section of the dialog window, you can select the documents 
 In the **Operation** section of the dialog box, there are four language operation options, which are described below.
 
 * **Move** – moves the source language to the destination language, which ovewrites all the texts in the destination language with those in the source language
-    * Select the **Source language** and the **Destination language** in their respective drop-down menus for the move language operation
-    * Texts that are absent in the source language will be absent in the desination language
-    * Following this operation, all the texts in the source language will be deleted
+	* Select the **Source language** and the **Destination language** in their respective drop-down menus for the move language operation
+	* Texts that are absent in the source language will be absent in the desination language
+	* Following this operation, all the texts in the source language will be deleted
 * **Copy** – copies the source language to the destination language, which ovewrites all the texts in the desination language with those in the source language
-    * Select the **Source language** and the **Destination language** in their respective drop-down menus for the copy language operation
-    * Texts that were absent in the source language will be absent in the desination language
+	* Select the **Source language** and the **Destination language** in their respective drop-down menus for the copy language operation
+	* Texts that were absent in the source language will be absent in the desination language
 * **Swap** – swaps the source lanauge and the destination language, which moves all the texts in the source lanauge to the destination language and vice versa
-    * Select the **First language** and the **Second language** in their respective drop-down menus for the swap language operation
+	* Select the **First language** and the **Second language** in their respective drop-down menus for the swap language operation
 * **Delete** – deletes all the texts in the language selected in the **Language** drop-down menu
 
 Click **Apply** to apply the selected language operation.
 
 ## 4 Translating Labels
 
-### 4.1 Consolidating Labels and Perform Batch Replace
+### 4.1 Consolidating Labels & Perform Batch Replace
 
 There may be some text in your app that occurs in more than one place, so before you translate, it is best to consolidate similar labels so that they stay the same after the translation. The language in your app will be more consistent if you have a high occurence/text ration, as that means you reuse existing text across your app, which will increase the user experience.
 
 To search for phrases that look similar and replace them as a batch, follow these steps:
 
-1. Go to **Language > Batch Replace**.
+1. Go to **Language** > **Batch Replace**.
 2. In the **Source text contains** field of the **Batch replace** dialog window, enter the word you want to search for.
 3.  The results will appear in the table with the column headers **Text** and **Replace with** (as in the example image below, in which "Schedule" is being searched).
 
-    ![](attachments/Translating+Your+App+Content/08_batch_replace_2.png)
+	![](attachments/Translating+Your+App+Content/08_batch_replace_2.png)
 
 4. Enter the new replacement text under **Replace with**, and then click **Replace**.
 
@@ -100,21 +100,21 @@ You can also filter to specific modules and use the search to find specific labe
 
 To enable batch translation, follow these steps:
 
-1. Go to **Language > Batch Translate**.
+1. Go to **Language** > **Batch Translate**.
 2. Select the **Source language** and **Destination language**.
 3. In the **Source text contains** field of the **Batch translate** dialog box, enter the word you want to search for.
 4.  The results will appear in the table with the column headers **Source** and **Translation** (as in the example image below, in which "Password" is being searched).
 
-    ![](attachments/Translating+Your+App+Content/11_filter_module.png)
+	![](attachments/Translating+Your+App+Content/11_filter_module.png)
 
 5. Enter the translated text for the various results under **Translation**, and then click **Translate**.
 
-#### 4.3.1 Text Occurrence and Context
+#### 4.3.1 Text Occurrence & Context
 
 Because some labels and other texts are in the list multiple times, it’s important to know where in your app they’re being used. You can see this using the **Occurrence** window at the bottom of the **Batch translate** dialog box.
 
 For example, there may be two English labels with the word "address." If you translate this to Dutch, it’s important to know if the word is used in the context of "someone's contact details" or in the context of "talking to a person in a certain way" (for example, in Dutch, the first meaning translates to “adres,” but the second meaning translates to "aanspreken").
 
-## 5 Exporting and Importing Translations
+## 5 Exporting & Importing Translations
 
-If you want to translate a language outside Studio Pro, you can export the translatable texts to the Excel (.xlsx) format by clicking **Export to Excel** on the **Batch translate** dialog box. This produces an Excel file with two columns, one for each language. When you’re done, simply import the Excel file into your app project by clicking **Import from Excel** on the **Batch translate** dialog box.
+If you want to translate a language outside Studio Pro, you can export the translatable texts to the Excel (*.xlsx*) format by clicking **Export to Excel** on the **Batch translate** dialog box. This produces an Excel file with two columns, one for each language. When you’re done, simply import the Excel file into your app project by clicking **Import from Excel** on the **Batch translate** dialog box.

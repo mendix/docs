@@ -5,7 +5,7 @@ parent: "model-sdk"
 
 These are the release notes for the [Model SDK](/apidocs-mxsdk/mxsdk/) version 4.
 
-## 4.23.0 {#423}
+## 4.24.0 {#424}
 
 **Release date: August 29th, 2019**
 

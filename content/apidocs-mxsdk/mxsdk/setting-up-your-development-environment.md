@@ -24,7 +24,7 @@ $ npm install mendixmodelsdk mendixplatformsdk when @types/when --save
 $ tsc --init
 ```
 
-## <a name="setting"></a>3 Setting Up Your Development Tools
+## 3 Setting Up Your Development Tools {#setting}
 
 To set up your development tools, follow these steps:
 

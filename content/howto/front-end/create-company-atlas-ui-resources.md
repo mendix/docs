@@ -1,6 +1,6 @@
 ---
 title: "Create Company Atlas UI Resources"
-parent: "atlas-ui"
+parent: "customize-styling-module"
 menu_order: 30
 tags: ["Atlas", "UI", "UX", "user experience"]
 ---

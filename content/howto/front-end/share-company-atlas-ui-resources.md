@@ -1,6 +1,6 @@
 ---
 title: "Share Company Atlas UI Resources"
-parent: "atlas-ui"
+parent: "customize-styling-module"
 menu_order: 40
 tags: ["Atlas", "UI", "UX", "user experience"]
 ---

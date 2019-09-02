@@ -1,6 +1,6 @@
 ---
 title: "Extend Design Properties to Customize Your Studio Experience"
-parent: "atlas-ui"
+parent: "customize-styling-module"
 menu_order: 60
 tags: ["Atlas", "UI", "UX", "user experience", "Studio", "customize", "custom"]
 ---

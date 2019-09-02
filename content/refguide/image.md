@@ -101,7 +101,18 @@ _Default value:_ Yes
 
 {{% snippet file="refguide/visibility-section-link.md" %}}
 
-## 3 Read More
+## 3 Converting to an Image Viewer
+
+You can convert an image to an image viewer that allows you to display dynamic data. For more information on image viewer and its properties, see [Image Viewer](image-viewer). 
+
+To convert an image widget into an image viewer, do the following:
+
+1. Select the image widget on a page and right-click it.
+2. From the list of actions, select **Convert to image viewer**. 
+
+The image widget is converted to the image viewer and you can configure it. 
+
+## 4 Read More
 
 * [Page](page)
 * [Common Widgets](common-widgets)

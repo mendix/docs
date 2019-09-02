@@ -10,7 +10,7 @@ tags: ["Atlas", "UI", "UX", "user experience"]
 Calypso is a tool which makes it easier for you to customize your Mendix apps' styling. Designers and front-enders, Mac users and Windows users — everyone can easily use this tool without installing any external dependencies. Everything is packaged inside Calypso. You simply need to install Calypso, choose your Mendix app, and start customizing. As you customize, Calypso eases your work by doing the following:
 
 * Checks *SCSS* files for errors
-* Compiles *SCSS* files to*CSS*
+* Compiles *SCSS* files to *CSS*
 * Shows notifications on errors
 * Moves compiled files to deployment folder
 * Injects the compiled *CSS* files into your browser so you can preview changes instantly 

@@ -168,7 +168,7 @@ Enumeration allows a user to select one out of multiple options defined in the X
 `<enumerationValues>` (required) — One `<enumerationValues>` element must be declared with multiple `<enumerationValue>` elements inside in order to define possible enumeration values. A `key` attribute is required for every enumeration value as well as a caption. Enter enumeration values like this:
 
 ```xml
-<enumerationValue key="myEnumOption">My enum option caption</enumerationValue>`
+<enumerationValue key="myEnumOption">My enum option caption</enumerationValue>
 ```
 
 The `key` of a selected element will be passed to the client component. `key` should not be changed since it is used to identify options used in a project.

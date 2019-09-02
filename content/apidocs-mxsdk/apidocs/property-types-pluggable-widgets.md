@@ -71,7 +71,7 @@ String is represented as a simple text input in Studio Pro. It is passed as a `s
 
 #### 2.1.2 Studio Pro UI
 
-When the proprety is defined as follows:
+When the property is defined as follows:
 
 ```xml
 <property key="myString" type="string">
@@ -84,7 +84,7 @@ Then the Studio Pro UI for the property appears like this:
 
 ![](attachments/widget-property-types/string.png)
 
-When the proprety is defined as follows:
+When the property is defined as follows:
 
 ```xml
 <property key="myStringMultiline" type="string" multiline="true">
@@ -111,7 +111,7 @@ Boolean is represented as a toggle in Studio Pro. It is passed as `boolean` prop
 
 #### 2.2.2 Studio Pro UI
 
-When the proprety is defined as follows:
+When the property is defined as follows:
 
 ```xml
 <property key="myBoolean" type="boolean" defaultValue="false">
@@ -138,7 +138,7 @@ Integer is represented as a number input in Studio Pro. It is passed as a `numbe
 
 #### 2.3.2 Studio Pro UI
 
-When the proprety is defined as follows:
+When the property is defined as follows:
 
 ```xml
 <property key="myInteger" type="integer" defaultValue="1000">
@@ -175,7 +175,7 @@ The `key` of a selected element will be passed to the client component. `key` sh
 
 #### 2.4.3 Studio Pro UI
 
-When the proprety is defined as follows:
+When the property is defined as follows:
 
 ```xml
 	<property key="myEnumeration" type="enumeration" defaultValue="red">
@@ -276,7 +276,7 @@ Expression allows a user to configure an [expression](/refguide/expressions), th
 
 #### 4.1.3 Studio Pro UI
 
-When the proprety is defined as follows:
+When the property is defined as follows:
 
 ```xml
 <property key="progressBarColor" type="expression" defaultValue="'red'">

@@ -14,7 +14,7 @@ When running the application on SAP Cloud Platform, or a licensed Mendix Cloud e
 
 For other cloud environments, IBM Cloud Portal or MindSphere for example, the constants can be accessed as *Environment Variables* in, for instance, Cloud Foundry. The constant is exposed with the name **module** + **.** + **constant**. For example `mymodule.myconstant`.
 
-When running the application locally or in a sandbox, the values defined in Studio Pro are used.
+When running the application locally or in a Free App environment, the values defined in Studio Pro are used.
 
 {{% alert type="info" %}}
 The value for a constant can also be overridden in a [Configuration](configuration). This allows you to run locally using different values for one or more constants, without having to change the default value for the constant every time.
@@ -45,4 +45,4 @@ The [data type](data-types) of the constant. This determines what kind of values
 
 ### 4.1 Default value
 
-The default value of the constant. This value is used when running locally or in a sandbox. When running locally, the value can be overridden in the currently selected [Configuration](configuration).
+The default value of the constant. This value is used when running locally or in a Free App environment. When running locally, the value can be overridden in the currently selected [Configuration](configuration).

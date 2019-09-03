@@ -20,7 +20,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Have a [Mendix Cloud](mendix-cloud-deploy) v4 node available (to request a licensed v4 Cloud Node, contact your Customer Success Manager (CSM))
 * Have the [Technical Contact](/developerportal/company-app-roles/technical-contact) role for both your existing v3 and available v4 Cloud Nodes
-* Create a new temporary Free App without a sandbox environment – instructions for unlinking a Free App from a sandbox are here: [Licensing Mendix Cloud Apps](licensing-apps#unlink)
+* Create a new temporary Free App without a Free App environment – instructions for unlinking a Free App from its environment are here: [Licensing Mendix Cloud Apps](licensing-apps#unlink)
 
 ## 3 Migration considerations
 

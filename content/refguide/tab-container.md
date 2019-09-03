@@ -25,11 +25,11 @@ Tab container properties consist of the following sections:
 * Design Properties
 * [Visibility](#visibility)
 
-### 2.1 Common Section
+### 2.1 Common Section {#common}
 
 {{% snippet file="refguide/common-section-link.md" %}}
 
-### 2.2 Visibility Section
+### 2.2 Visibility Section {#visibility}
 
 {{% snippet file="refguide/visibility-section-link.md" %}}
 

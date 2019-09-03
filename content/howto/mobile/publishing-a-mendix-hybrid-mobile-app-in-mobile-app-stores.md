@@ -6,7 +6,7 @@ tags: ["mobile", "app store", "phonegap"]
 ---
 ## 1 Introduction
 
-Once you have finished developing a Mendix hybrid mobile application, you will want to make it available as an app for mobile platforms such as Apple iOS and Google Android. We make it possible to produce platform-specific native apps. For more details on deploying platform-specific apps, see [Mobile App](/developerportal/deploy/mobileapp).
+Once you have finished developing a Mendix hybrid mobile application, you will want to make it available as an app for mobile platforms such as Apple iOS and Google Android. We make it possible to produce platform-specific apps. For more details on deploying platform-specific apps, see [Mobile App](/developerportal/deploy/mobileapp).
 
 The hybrid mobile app packaging process is based on Adobe PhoneGap. We have integrated the [Adobe PhoneGap Build](https://build.phonegap.com/) service into Mendix to provide support for automatically building the required hybrid mobile packages. Instead of worrying about technical details, you can focus on what matters most: rapidly developing an app to support your business processes.
 
@@ -24,13 +24,17 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Have a Mendix app with mobile support running in the Mendix Cloud, either as a free app or on a licensed cloud node
 	* If you require an app to test with, set up the [Company Expenses](https://appstore.home.mendix.com/link/app/240/) app from the Mendix App Store as a free app to try out its mobile features 
 * Have an account for Adobe PhoneGap Build (you can create one for free [here](https://build.phonegap.com/plans/free-adobeid))
-* Have an iOS device (iPhone or iPad) for testing the iOS package that will be produced
+
+To publish your app in the Apple App Store, do the following:
+
 * Register for an [Apple Developer Account](https://developer.apple.com/register/index.action)
+* Have an iOS device (iPhone or iPad) for testing the iOS package that will be produced
 * Have an iOS deployment certificate and a provisioning file for which your test device is activated
 * Have Apple iTunes installed on your computer for deploying the iOS package that will be produced on your test device
+
+To publish your app in the Google Play store, do the following:
+
 * Have an Android device for testing the APK package that will be produced
-	* You need both a *.p12* certificate file and a *.mobileprovision* profile file 
-	* For details on how to obtain app signing keys, see the [iOS](/refguide/managing-app-signing-keys#ios) section of *Managing App Signing Keys*
 
 ## 3 Starting the Packaging Process{#starting-the-packaging-process}
 
@@ -74,8 +78,8 @@ To start the packaging process, follow these steps:
 	![phonegap authorization](attachments/publishing-a-hybrid-app/phonegap-authorization-dialog.png)
 
 12. Start the hybrid mobile app package building process by clicking **Start PhoneGap Build job**, which will initiate the building process. 
-13. The first time you start this process, you will need to authorize the Mendix Developer Portal to act on your behalf with the Adobe PhoneGap Build service. You will be presented with a dialog box asking if you want to start the redirect to Adobe PhoneGap. 
-	a. To build for the authorization, click **Authorize use of Adobe PhoneGap Build**, after which you will be temporarily redirected to the website of your Adobe PhoneGap Build.
+13. The first time you start this process, you will need to authorize the Mendix Developer Portal to act on your behalf with the Adobe PhoneGap Build service. You will be presented with a dialog box asking if you want to start the redirect to Adobe PhoneGap. <br/>
+	a. To build for the authorization, click **Authorize use of Adobe PhoneGap Build**, after which you will be temporarily redirected to the website of your Adobe PhoneGap Build. <br/>
 14. Choose **Yes** on the Adobe PhoneGap Build service page to allow the start of building jobs using your account. You will then be redirected back to the Mendix Developer Portal.
 
 {{% alert type="warning" %}}If you choose **No**, you will be redirected back to the Developer Portal and you will not be able to publish your app.{{% /alert %}}

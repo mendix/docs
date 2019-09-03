@@ -101,7 +101,7 @@ In App Center you can be a member of one or more organizations. If the app needs
 
 #### 5.2.3 --app-name
 
-This parameter is the name of your app. You can see this name when users install your app on a device. It is also used as the app’s name in App Center.
+This parameter is the display name of your app, and can contain any characters you choose. You can see this name when users install your app on a device. It is also used as the app’s name in App Center. For iOS apps this serves as the [CFBundleDisplayName](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html#//apple_ref/doc/uid/20001431-110725). For Android apps this serves as the `android:label` property of the `application` tag in the *AndroidManifest.xml* file.
 
 #### 5.2.4 --app-version
 
@@ -109,7 +109,7 @@ This parameter specifies the version of the app you want to build. See [Semantic
 
 #### 5.2.5 --app-identifier
 
-This parameter serves as a unique identifier for your app, and can be anything you type. Once your app is uploaded to the Apple App Store or the Play Store, the app’s identifier can no longer be modified. If you do modify the identifier after an app is published, it will be treated as a different app by both stores. An app identifier is specified as reverse DNS notation, e.g. {com.mendix.MyAwesomeApp}.
+This parameter serves as a unique identifier for your app, which must conform to Android's [application ID](https://developer.android.com/studio/build/application-id) requirements as well as Apple's [CFBundleIdentifier](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html) requirements. Once your app is uploaded to the Apple App Store or the Play Store, the app’s identifier can no longer be modified. If you do modify the identifier after an app is published, it will be treated as a different app by both stores. An app identifier is specified as reverse DNS notation, e.g. {com.mendix.MyAwesomeApp}.
 
 #### 5.2.6 --app-icon-path
 

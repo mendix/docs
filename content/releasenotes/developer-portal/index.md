@@ -9,10 +9,27 @@ These release notes cover changes to various parts of the Mendix Platform access
 {{% /alert %}}
 
 {{% alert type="info" %}}
-For updates on the status of Mendix Cloud V4, Mendix Cloud v3, and other deployment options, see [Mendix Status](https://status.mendix.com/).
+For updates on the status of Mendix Cloud v4, Mendix Cloud v3, and other deployment options, see [Mendix Status](https://status.mendix.com/).
 {{% /alert %}}
 
 ## 2019
+
+### August 30th, 2019
+
+#### SAP Connectors Rename
+
+* We renamed all the SAP-related connectors and starter apps in the App Store to be consistent. The changes are:
+
+    | Type | Old Name | New Name |
+    | ----- | ----- | -----|
+    | Connector | SAP Cloud Platform XSUAA Connector | XSUAA Connector for SAP Cloud Platform |
+    | Connector | SAP Fiori UI Package | UI Package for SAP Fiori themed apps |
+    | Connector | SAP Leonardo Machine Learning Foundation Connector | Connector for SAP Leonardo Machine Learning Foundation |
+    | Connector | SAP OData Connector | OData Connector for SAP solutions |
+    | Connector | SAP OData Model Creator | OData Model Creator for SAP solutions |
+    | Starter App | Fiori Blank | Blank App for SAP Fiori themed apps |
+    | Starter App | SAP Northwind OData | Northwind OData Service Master-Detail App for SAP solutions |
+    | Starter App | SAP Purchase Order Approval Tutorial | Purchase Order Approval Tutorial for SAP solutions |
 
 ### August 26th, 2019
 
@@ -85,7 +102,7 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud v3, and other deploym
 #### Fixes
 
 * We fixed an issue which prevented the adding of comments to a backup. (Ticket #81993)
-* We updated the **Read documentation** link in the Mendix Cloud V4 metrics page to point to the right document. (Ticket #82130)
+* We updated the **Read documentation** link in the Mendix Cloud v4 metrics page to point to the right document. (Ticket #82130)
 * We added appropriate feedback if you try to upload a client certificate which is unsupported because it is not encoded in PEM. (Ticket #82299)
 * We fixed an issue which prevented the offboarding of a single environment if you wanted to retain other environments in the Mendix Cloud node. (Ticket #83189)
 
@@ -137,9 +154,9 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud v3, and other deploym
 
 #### Mendix Cloud Improvements
 
-* For Mendix Cloud V4, we have extended the range of HTTP Headers which are supported in the Developer Portal. Previously, only *X-Frame-Options* was supported. For more information, see [Environment Details](/developerportal/deploy/environments-details#http-headers).
+* For Mendix Cloud v4, we have extended the range of HTTP Headers which are supported in the Developer Portal. Previously, only *X-Frame-Options* was supported. For more information, see [Environment Details](/developerportal/deploy/environments-details#http-headers).
 	* If you add or change these settings, you will need to redeploy your app before the changes take effect.
-* For Mendix Cloud V4 deployments of Mendix apps version 7.23.1 and above, we now support AdoptOpenJDK, and the relevant Java version is displayed on the Environment Details page.
+* For Mendix Cloud v4 deployments of Mendix apps version 7.23.1 and above, we now support AdoptOpenJDK, and the relevant Java version is displayed on the Environment Details page.
 * We clarified which logs can be downloaded from the Developer Portal by changing the button text from *Download Today's Log* to *Download Current Log*
 
 #### Fixes
@@ -252,7 +269,7 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud v3, and other deploym
 
 #### Fixes
 
-* We addressed and fixed an issue which caused some Mendix Cloud V4 backups to be duplicated.
+* We addressed and fixed an issue which caused some Mendix Cloud v4 backups to be duplicated.
 * We fixed a problem on Mendix Cloud v3 which prevented Path-based Access Restrictions from working with multiple TLS certificate authorities. (Ticket 77282)
 * We fixed the problem which prevented users in the Pacific Time Zone from being able to download the current day's logs. (Tickets 78325, 78586, 79119, 79162, 79427)
 * We addressed and solved a problem which meant that some sandboxes could not be resumed after getting stopped.
@@ -329,7 +346,7 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud v3, and other deploym
 
 #### Fixes
 
-* We fixed an issue in which [custom error pages](/howto/front-end/custom-error-page) did not work for online applications in Mendix Cloud V4.
+* We fixed an issue in which [custom error pages](/howto/front-end/custom-error-page) did not work for online applications in Mendix Cloud v4.
 
 ### November 1st, 2018
 
@@ -365,7 +382,7 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud v3, and other deploym
 #### Improvements
 
 * We have overhauled the scaling user interface to make it more intuitive. (Ticket 67557)
-* It is now possible to pause and resume downloading backups for Mendix Cloud V4 applications.
+* It is now possible to pause and resume downloading backups for Mendix Cloud v4 applications.
 
 #### Fixes
 
@@ -451,7 +468,7 @@ We now configure Destination Service in the scope of XSUAA. This means that we a
 
 #### Improvements
 
-* A new API call for accessing the logs of Mendix Cloud V4 applications is now available. Detailed information can be found in the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api).
+* A new API call for accessing the logs of Mendix Cloud v4 applications is now available. Detailed information can be found in the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api).
 * It is now possible to add custom environment variables via the Developer Portal to set up application metrics with Datadog and Telegraph.
 * All the log levels in the Developer Portal (as in, INFO, ERROR, TRACE, DEBUG, WARNING, CRITICAL) are now also available in Datadog.
 * The Postgres database size can also be observed in Datadog after enabling it in the Developer Portal.
@@ -489,7 +506,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 #### Improvements
 
-* We fixed problems with the uploading, downloading, and restoring of backups with very large databases in Cloud V4.
+* We fixed problems with the uploading, downloading, and restoring of backups with very large databases in Cloud v4.
 * We added alerts on database connections and on internal alerting problems.
 * We fixed the problem wherein 404, 403, and 503 responses to a REST call translated to an HTML error page.
 * We added Telegraf as a sidecar for monitoring.
@@ -532,7 +549,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 #### Improvements
 
-* We added support for client certificate validation in the **Access Restriction Profile** for Mendix Cloud V4 deployments.
+* We added support for client certificate validation in the **Access Restriction Profile** for Mendix Cloud v4 deployments.
 
 #### Fixes
 
@@ -544,13 +561,13 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 #### Improvements
 
-* We added alerts for when an application runs out of memory or otherwise unexpectedly crashes. This is only applicable to Mendix Cloud V4 deployments.
+* We added alerts for when an application runs out of memory or otherwise unexpectedly crashes. This is only applicable to Mendix Cloud v4 deployments.
 
 ### June 8th, 2018
 
 #### Improvements
 
-* We have introduced scaling via API for Mendix Cloud V4. It is now possible to scale Mendix Cloud V4 applications via the Deploy API. For instructions, see the [Deploy API](../../apidocs-mxsdk/apidocs/deploy-api).
+* We have introduced scaling via API for Mendix Cloud v4. It is now possible to scale Mendix Cloud v4 applications via the Deploy API. For instructions, see the [Deploy API](../../apidocs-mxsdk/apidocs/deploy-api).
 *  We have aggregated the health icons for the acceptance and test environments in the **Nodes** dashboard and **Company Admin** screen.
 
 	{{% image_container width="300" %}}![](attachments/CPHealthIcon.png)
@@ -560,8 +577,8 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 #### Fixes
 
-* We fixed an issue in our alerting infrastructure that prevented some Mendix Cloud V4 users from receiving alerts when their apps ran out of memory.
-* We fixed the problem that caused the Mendix Cloud V4 **Metrics** legend to remain on the screen even if the user navigated to a different page.
+* We fixed an issue in our alerting infrastructure that prevented some Mendix Cloud v4 users from receiving alerts when their apps ran out of memory.
+* We fixed the problem that caused the Mendix Cloud v4 **Metrics** legend to remain on the screen even if the user navigated to a different page.
 * We fixed the health icon statuses of the environments so that they reflect the environment health with minimum delay.
 
 ### May 23rd, 2018
@@ -644,7 +661,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 #### Fixes
 
-* Users of Mendix Cloud V4 applications will now see a notification if their environment fails to clean properly.
+* Users of Mendix Cloud v4 applications will now see a notification if their environment fails to clean properly.
 * The health status of newly-created Mendix Cloud v4 applications used to be reflected with a red cross. This has been fixed.
 * The **Deploy** and **Operate** deep links were not available in the **Security** menu for user groups without monitoring access. This has been fixed.
 
@@ -679,7 +696,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 #### Improvements
 
 * We implemented a popular feedback item – the platform will now remember your selected environment while switching between screens.
-* It is now possible to see the database details such as **DB Plan Space**, **Plan Cores**, and **Plan Memory** of a Mendix Cloud V4 application.
+* It is now possible to see the database details such as **DB Plan Space**, **Plan Cores**, and **Plan Memory** of a Mendix Cloud v4 application.
 * Scaling Mendix 7 apps is now simplified and faster.
 
 #### Fixes
@@ -717,7 +734,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 #### Improvements
 
-* The **Alerts** section in Mendix Cloud V4 apps will now include health check details, just like for Mendix Cloud v3 apps.
+* The **Alerts** section in Mendix Cloud v4 apps will now include health check details, just like for Mendix Cloud v3 apps.
 * It is now possible for you to change the technical contact of your applications by yourself.
 
 ## 2017
@@ -736,8 +753,8 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 #### Fixes
 
-* It's now possible to scale Mendix 6 applications on Cloud V4. Previously, this was only possible with environments that run Mendix 7 apps. With Mendix 6 apps, you can only scale the allocated memory, but not the amount of instances.
-* Big backups are now welcomed on V4 environments, as we fixed an issue that prevented users from uploading backup packages larger than 5 GBs.
+* It's now possible to scale Mendix 6 applications on Cloud v4. Previously, this was only possible with environments that run Mendix 7 apps. With Mendix 6 apps, you can only scale the allocated memory, but not the amount of instances.
+* Big backups are now welcomed on v4 environments, as we fixed an issue that prevented users from uploading backup packages larger than 5 GBs.
 * We fixed an issue where some Mendix Cloud v3 users were not able to set a specified Java version for environments.
 * Hovering over a Mendix Cloud environment status icon will now give more information about the environment's health.
 

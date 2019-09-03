@@ -19,7 +19,7 @@ An example of snippet call properties is represented in the image below:
 {{% image_container width="350" %}}![Snippet Call Properties](attachments/common-widgets/snippet-call-properties.png)
 {{% /image_container %}}
 
-Label properties consist of the following sections:
+Snippet call properties consist of the following sections:
 
 * [Common](#common)
 * Design Properties

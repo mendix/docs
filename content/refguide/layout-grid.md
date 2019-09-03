@@ -91,7 +91,7 @@ An example of layout grid properties is represented in the image below:
 
 ![Layout Grid Properties](attachments/container-widgets/layout-grid-properties.png)
 
-Text properties consist of the following sections:
+Layout grid properties consist of the following sections:
 
 * [Common](#common)
 * Design Properties

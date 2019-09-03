@@ -22,12 +22,12 @@ If you want to dynamically show different images based on data, you need to add 
 
 ## 2 Properties
 
-An example of text properties is represented in the image below:
+An example of image properties is represented in the image below:
 
 {{% image_container width="350" %}}![Image Properties](attachments/common-widgets/image-properties.png)
 {{% /image_container %}}
 
-Text properties consist of the following sections:
+Image properties consist of the following sections:
 
 * [Common](#common)
 * Design Properties

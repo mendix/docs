@@ -2,32 +2,40 @@
 title: "Container"
 parent: "container-widgets"
 menu_order: 20
-tags: ["studio pro"]
+tags: ["studio pro", "container", "container widgets", "widget"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-A container widget can be used to style or simultaneously hide a group of widgets. In the browser, it is rendered as a simple `div` element by default. It is also possible to render a container as one of HTML5 sementic elements (for example, `section`, `main`, `article`, `nav`).
+## 1 Introduction
 
-{{% alert type="info" %}}
+A container is a layout element that can be used to simultaneously style, hide, drag, or delete a group of widgets placed in it:
 
-![](attachments/16713858/16843976.png)
-An empty container.
+![Container Example](attachments/container-widgets/container-example.png)
 
-{{% /alert %}}
+In a browser, it is rendered as a simple `div` element by default. It is also possible to render a container as one of HTML5 semantic elements (for example, `section`, `main`, `article`, `nav`).
 
-## Common properties
+## 2 Properties
 
-{{% snippet file="refguide/name-property.md" %}}
+An example of container properties is represented in the image below:
 
-{{% snippet file="refguide/class-property.md" %}}
+![Container Properties](attachments/container-widgets/container-properties.png)
 
-{{% snippet file="refguide/style-property.md" %}}
+Container properties consist of the following sections:
 
-## General properties
+* [Common](#common)
+* Design Properties
+* [General](#general)
+* [Visibility](#visibility)
 
-### Render mode
+### 2.1 Common Section {#common}
 
-The render mode determines which HTML5 tag will be used to show the container in the web browser.
+{{% snippet file="refguide/common-section-link.md" %}}
+
+### 2.2 General Section {#general}
+
+#### 2.2.1 Render Mode
+
+The render mode determines which HTML5 tag will be used to show the container in the web browser. 
 
 | Value     | HTML Tag    |
 | --------- | ----------- |
@@ -46,8 +54,14 @@ _Default value:_ Div
 
 {{% alert type="info" %}}Render mode is not supported on native mobile pages.{{% /alert %}}
 
-## Visibility properties
+### 2.3 Visibility Section {#visibility}
 
-{{% snippet file="refguide/visibility-property.md" %}}
+{{% snippet file="refguide/visibility-section-link.md" %}}
 
-{{% snippet file="refguide/visibility-property-with-module-roles-simple.md" %}}
+## 4 Read More
+
+* [Page](page)
+* [Container Widgets](container-widgets)
+* [Properties Common for Widgets](common-widget-properties)
+
+

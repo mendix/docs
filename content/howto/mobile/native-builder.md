@@ -38,11 +38,12 @@ The sections below describe how to get tokens which allow Native Builder to auth
 
 1. Go to [GitHub](https://github.com/) and sign in.
 2. Go to [Settings](https://github.com/settings/profile) by clicking on your profile picture in the top right.
-3. Navigate to [Personal access tokens](https://github.com/settings/tokens) and then click **Generate new token** to create a new personal access token.
-4. In the **Note** field, write *Native Builder.*
-5. Under **Select scopes**, select **repo**.
-6. Click the **Generate token** button.
-7. Store your token in a secure place. You will not be able to see it again. If you lose it, you will have to create a new token and delete your old one.
+3. Click [Developer settings](https://github.com/settings/apps) at the bottom of the left menu.
+4. Navigate to [Personal access tokens](https://github.com/settings/tokens) and then click **Generate new token** to create a new personal access token.
+5. In the **Note** field, write *Native Builder.*
+6. Under **Select scopes**, select **repo**.
+7. Click the **Generate token** button.
+8. Store your token in a secure place. You will not be able to see it again. If you lose it, you will have to create a new token and delete your old one.
 
 ### 4.2 App Center Token {#appcenter-token}
 
@@ -108,7 +109,7 @@ This parameter specifies the version of the app you want to build. See [Semantic
 
 #### 5.2.5 --app-identifier
 
-This parameter serves as a unique identifier for your app. Once your app is uploaded to the Apple App Store or the Play Store, the app’s identifier can no longer be modified. If you do modify the identifier after an app is published, it will be treated as a different app by both stores. An app identifier is specified as reverse DNS notation, e.g. {com.mendix.MyAwesomeApp}.
+This parameter serves as a unique identifier for your app, and can be anything you type. Once your app is uploaded to the Apple App Store or the Play Store, the app’s identifier can no longer be modified. If you do modify the identifier after an app is published, it will be treated as a different app by both stores. An app identifier is specified as reverse DNS notation, e.g. {com.mendix.MyAwesomeApp}.
 
 #### 5.2.6 --app-icon-path
 

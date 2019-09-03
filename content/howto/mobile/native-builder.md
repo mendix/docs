@@ -59,9 +59,9 @@ The sections below describe how to get tokens which allow Native Builder to auth
 Command-line arguments provide information to the Native Builder, such as where your Mendix project is located. You will now compose a command and parameters, which will start your Native Builder when executed.
 
 1. Open your command line program as an administrator by right-clicking its icon or *.exe* file and selecting **Run as administrator**. 
-2.  Target your Native Builder's directory by typing `cd {your Native Builder *.exe* location}` and pressing `Enter`:
+2.  Target your Native Builder's directory by typing `cd "{your Native Builder *.exe* location}"` and pressing `Enter`:
 
-	todo: ![builder filepath]   (screenshot goes here)
+	![change directory](attachments/native-builder/change-directory.png)
 
 3. Using the parameters in the parameters table below, build a command which features the parameters you need using command line. 
 

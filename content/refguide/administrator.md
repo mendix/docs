@@ -40,7 +40,7 @@ The user role assigned to the Administrator. For more information, see [User Rol
 {{% alert type="info" %}}
 
 The administrator is always created and has the System.Administrator role by default. The System.Administrator role allows users of your application to be managed. 
-On sandboxes the user that created the application automatically has this role by default as well so you can use it to manage your users in that environment.
+For Free Apps, the user that created the application automatically has this role by default as well so you can use it to manage your users in that environment.
 This role may be helpful in case you have exceeded your user license restriction in which case you can use any user that has this System.Administrator role to login to manage your users.
 
 {{% /alert %}}

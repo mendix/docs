@@ -55,7 +55,7 @@ Database migration is handled by Mendix as a normal database synchronization pha
 {{% alert type="warning" %}}
 Before the data copying process starts, the main database structure will be generated based on the source database structure. This is necessary to make sure all the data is copied without any problems, especially in cases where the source database has a larger element value than what the current domain model specifies.
 
-As of version [8.1](/releasenotes/studio-pro/8.0#801), the source database structure and data do not change as part of the migration.
+As of version [8.1](/releasenotes/studio-pro/8.1), the source database structure and data do not change as part of the migration.
 {{% /alert %}}
 
 ## 3 Migrating a Non-PostgreSQL Database to a PostgreSQL Database

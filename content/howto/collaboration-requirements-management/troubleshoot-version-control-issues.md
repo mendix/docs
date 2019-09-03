@@ -92,7 +92,7 @@ You can now commit your app project.
 
 When merging or updating branches, a conflict is sometimes reported on the app project folder rather than on an individual file. This usually means there is a conflict on the `svn:ignore` property.
 
-In the `svn:ignore` property, Subversion records which files should be ignored. These are files that are on disk but should not be on the Team Server.
+In the `svn:ignore` property, Subversion records which files should be ignored. These are files that are on disk but should not be on  Team Server.
 
 For example, the `deployment` directory is necessary for running your project, but it should not be on the Team Server. Each user has their own version of the `deployment` folder on their hard disk.
 

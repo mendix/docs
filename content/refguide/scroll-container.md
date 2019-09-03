@@ -103,21 +103,21 @@ A scroll container region is part of a scroll container, and defines a content a
 
 ### 3.1 Scroll Container Region Specific Properties
 
-#### 3.1.1 Width (only for left and right region)
+#### 3.1.1 Width 
 
-Whether the width value of the region is defined in pixels or as a percentage of its parent's width.
+This property is available only for left and right regions. The **Width** property defines whether the **Width value** of the region is defined in pixels or in percentage.
 
-#### 3.1.2 Width Value (only for left and right region)
+#### 3.1.2 Width Value 
 
-The width of the region, either in pixels or a percentage, depending on the value of the width property.
+This property is available only for left and right regions. It allows you to specify the value of the width, either in pixels or in percentage.
 
-#### 3.1.3 Height (only for top and bottom region)
+#### 3.1.3 Height 
 
-Whether the height value of the region is defined in pixels or as a percentage of its parent's height.
+This property is available only for top and bottom regions. The **Height** property defines whether the **Height value** of the region is defined in pixels or in percentage.
 
-#### 3.1.4 Height Value (only for top and bottom region)
+#### 3.1.4 Height Value 
 
-The height of the region, either in pixels or a percentage, depending on the value of the height property.
+This property is available only for top and bottom regions. It allows you to specify the value of the height, either in pixels or in percentage.
 
 ## 4 Read More
 

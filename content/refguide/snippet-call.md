@@ -25,7 +25,7 @@ Label properties consist of the following sections:
 * Design Properties
 * [General](#general)
 
-### 2.1 Common Properties {#common}
+### 2.1 Common Section {#common}
 
 {{% snippet file="refguide/common-section-link.md" %}}
 
@@ -33,7 +33,14 @@ Label properties consist of the following sections:
 
 This section contains the **Snippet** property, it shows the name of an actual snippet that will be displayed here.
 
-## 3 Read More
+## 3 Performing Specific Actions
+
+To perform actions on a snippet call, select it on a page and right-click it. The list of possible actions opens. While some actions from this list, such as **Select snippet**, are a quick way to set the properties, the following actions are specific actions that you can perform:
+
+* **Show snippet** – opens a snippet selected for a snippet call
+* **Inline snippet** – turns the snippet call into widgets that the selected snippet consists of
+
+## 4 Read More
 
 * [Page](page)
 * [Common Widgets](common-widgets)

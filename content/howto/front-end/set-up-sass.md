@@ -28,10 +28,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 	![](attachments/set-up-sass/gulp.png)
 
-4.  Install Node.js for task-running and automation through gulp. Install the latest LTS version from [Node.js](https://nodejs.org/en/):
-
-	![](attachments/set-up-sass/node.png)
-
+4.  Install Node.js for task-running and automation through gulp. Install the latest LTS version from [Node.js](https://nodejs.org/en/).
 5. Install version **1.12.0** of [TortoiseSVN](https://tortoisesvn.net/downloads.html).
 
 ## 3 Preparing Your App Project
@@ -48,11 +45,11 @@ To prepare your app project, follow these steps:
 
 	![](attachments/set-up-sass/powershell.png)
 
-4.  Copy the address as text from your main project folder and paste it into Powershell:
+4.  Copy the address as text from your main project folder, type `cd` in Powershell, and paste the address into Powershell:
 
 	![](attachments/set-up-sass/copy.png)
 
-5.  Provide the directory for your app project folder in PowerShell: `cd ‘directory for your app project folder’`
+5.  Hit `Enter` to switch directories to your app's folder.
 6.   Write `npm install` or use `npm install gulp-cli -g`:
 
 	![](attachments/set-up-sass/write-install.png)

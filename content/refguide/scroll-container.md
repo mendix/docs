@@ -35,7 +35,7 @@ Scroll container properties consist of the following sections:
 
 {{% snippet file="refguide/common-section-link.md" %}}
 
-### 2.2 General Properties {#general}
+### 2.2 General Section {#general}
 
 #### 2.2.1 Layout Mode
 
@@ -127,9 +127,9 @@ A scroll container region has the following properties in the **General** sectio
 
 | Property     | Property is available for: | Description                                                  |
 | ------------ | -------------------------- | ------------------------------------------------------------ |
-| Width        | Left and right regions     | Defines whether the **Width value** (described below) of the region is defined in pixels or in percentage. |
+| Width        | Left and right regions     | Defines whether the **Width value** (described below) of the region is specified in pixels or in percentage. |
 | Width Value  | Left and right regions     | Allows you to specify the value of the width, either in pixels or in percentage. |
-| Height       | Top and bottom regions     | Defines whether the **Height value** (described below) of the region is defined in pixels or in percentage. |
+| Height       | Top and bottom regions     | Defines whether the **Height value** (described below) of the region is specified in pixels or in percentage. |
 | Height Value | Top and bottom regions     | Allows you to specify the value of the height, either in pixels or in percentage. |
 
 ## 4 Read More

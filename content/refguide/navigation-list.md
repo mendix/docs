@@ -2,46 +2,55 @@
 title: "Navigation List"
 parent: "container-widgets"
 menu_order: 70
-tags: ["studio pro"]
+tags: ["studio pro", "navigation list", "container widget", "widget"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
-
-## 1 Introduction
 
 {{% alert type="warning" %}}
 The navigation list widget is not supported on native mobile pages.
 {{% /alert %}}
 
-A navigation list can be used to attach an action to an entire row. Such a row is called a navigation list item.
+## 1 Introduction
 
-{{% alert type="info" %}}
+A navigation list can be used to attach an action to an entire row. Such a row is called a navigation list item. A navigation list with three empty rows.
 
-![](attachments/pages/navigation-list.png)
+![](attachments/container-widgets/navigation-list.png)
 
-A navigation list with three empty rows.
+## 2 Properties
 
-{{% /alert %}}
+An example of navigation list properties is represented in the image below:
 
-## 2 Common Properties
+Navigation list properties consist of the following sections:
 
-{{% snippet file="refguide/class-property.md" %}}
+* [Common](#common)
+* Design Properties
+* [General](#general)
+* [Visibility](#visibility)
 
-{{% snippet file="refguide/style-property.md" %}}
+### 2.1 Common Section {#common}
 
-## 3 Navigation List Item
+{{% snippet file="refguide/common-section-link.md" %}}
 
-Each row in the navigation list is a navigation list item. A navigation list item can be associated with an action. Conditional visibility is available for list items.
+### 2.2 General Section {#general}
 
-## 4 General
-
-### 4.1 Action
+#### 2.2.1 Action
 
 Action defines what action is performed when a navigation list item is "clicked." This can either be opening a page or calling a microflow. For details on opening a page, see [Opening Pages](opening-pages). For details on calling a microflow, see [Starting Microflows](starting-microflows). 
 
 Microflows attached to a navigation list item have no **Confirmation** or **Advanced** microflow settings.
 
-## 5 Visibility Properties
+### 2.3 Visibility Section {#visibility}
 
 {{% snippet file="refguide/visibility-property.md" %}}
 
 {{% snippet file="refguide/visibility-property-with-module-roles-simple.md" %}}
+
+## 3 Navigation List Item
+
+Each row in the navigation list is a navigation list item. A navigation list item can be associated with an action. Conditional visibility is available for list items.
+
+## 4 Read More
+
+* [Page](page)
+* [Container Widgets](container-widgets)
+* [Properties Common for Widgets](common-widget-properties)

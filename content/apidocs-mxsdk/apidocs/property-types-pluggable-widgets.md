@@ -168,7 +168,7 @@ Enumeration allows a user to select one out of multiple options defined in the X
 `<enumerationValues>` (required) — One `<enumerationValues>` element must be declared with multiple `<enumerationValue>` elements inside in order to define possible enumeration values. A `key` attribute is required for every enumeration value as well as a caption. Enter enumeration values like this:
 
 ```xml
-`<enumerationValue key="myEnumOption">My enum option caption</enumerationValue>`
+<enumerationValue key="myEnumOption">My enum option caption</enumerationValue>
 ```
 
 The `key` of a selected element will be passed to the client component. `key` should not be changed since it is used to identify options used in a project.
@@ -179,13 +179,13 @@ When the property is defined as follows:
 
 ```xml
 	<property key="myEnumeration" type="enumeration" defaultValue="red">
-	<caption>My enumeration</caption>
-	<description>My enumeration setting</description>
-	<enumerationValues>
-		<enumerationValue key="red">Red</enumerationValue>
-		<enumerationValue key="green">Green</enumerationValue>
-		<enumerationValue key="blue">Blue</enumerationValue>
-	</enumerationValues>
+		<caption>My enumeration</caption>
+		<description>My enumeration setting</description>
+		<enumerationValues>
+			<enumerationValue key="red">Red</enumerationValue>
+			<enumerationValue key="green">Green</enumerationValue>
+			<enumerationValue key="blue">Blue</enumerationValue>
+		</enumerationValues>
 	</property>
 ```
 
@@ -446,9 +446,8 @@ When the property is defined as follows:
 		<propertyGroup caption="Object list group">
 			<property key="myObjectBool" type="boolean" defaultValue="true">
 				<caption>My boolean</caption>
-					<description>My boolean setting</description>
+				<description>My boolean setting</description>
 			</property>
-    
 			<property key="myObjectAction" type="action">
 				<caption>My action</caption>
 				<description>My action setting</description>

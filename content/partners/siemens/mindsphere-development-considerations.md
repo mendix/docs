@@ -353,7 +353,7 @@ Alternatively, you can use a separate AWS S3 bucket. See [Configuring External F
 
 There are few limitations on what you call your app within Mendix. However, when you deploy the app to MindSphere, the app name registered in the Developer Cockpit must have the following characteristics:
 
-* Contains only *lowercase* alphanumeric characters and special character -, _ and . are not allowed
+* Contains only *lowercase* alphanumeric characters and special character `-`. (The `_` and `.` characters are not allowed)
 * Starts with a letter
 * Length does not exceed 20 characters
 * Is unique within your tenant

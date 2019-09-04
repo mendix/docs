@@ -12,7 +12,9 @@ The Native Builder takes your Mendix project containing a native profile and pac
 
 ## 2 Prerequisites
 
-* The [Native Builder](https://www.dropbox.com/sh/hpw7sshut9bco68/AABackrr75rPSgW7u5LBMkMra?dl=0) executable (download to a folder of your preference and extract all contents)
+* The Native Builder [executable](https://www.dropbox.com/sh/hpw7sshut9bco68/AABackrr75rPSgW7u5LBMkMra?dl=0) (download to a folder of your preference and extract all contents)
+	* Use v1.0.0 with Mendix 8.0 
+	* Use v2.0.0 with Mendix 8.1.0 or higher 
 * A [GitHub](https://github.com/) account
 * A [Microsoft App Center](https://appcenter.ms/) account
 * Java JDK 11 (if you have Studio Pro installed, you should already have JDK 11 in *C:\Program Files\AdoptOpenJDK*) which can be acquired [here](https://adoptopenjdk.net/) 

@@ -16,11 +16,11 @@ We are heavily invested in streamlining the experience of building your apps and
 
 #### Improvements
 
-* We passed the `--native-packager` flag to MxBuild. This is compatible with Mendix 8.1.0 and higher.
+* We passed the `--native-packager` flag to MxBuild to enable MxBuild compatibility with Mendix 8.1.0 and higher.
 
 #### Known Issues
 
-* Using more than one consecutive space in an app's name is not supported.
+* Using more than one space in an app's name is not supported.
 
 ### August 15th, 2019 (1.0.0)
 

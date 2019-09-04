@@ -16,7 +16,7 @@ Users can enable security from Studio. While the Studio user simply clicks the *
 When security is enabled, a number of checks and changes are done at several levels.
 
 1. Studio checks if security is enabled. If security is set to **Prototype/demo** or **Production**, the process stops. If security is off, steps described below are executed. 
-2. The AppCloudServices module is set up if the project does not have them yet (for more information on this process, see the [Modules Set Up](#module-set-up) section). If the AppCloudServices module has been already installed for this project, the process stops. 
+2. The AppCloudServices module is set up if the project does not have it yet (for more information on this process, see the [Modules Set Up](#module-set-up) section). If the AppCloudServices module has been already installed for this project, the process stops. 
 3. Studio does checks and changes (if necessary) to [demo users](demo-users) , [module roles](module-security) , and [user roles](user-roles) (for more information on this process, see the [Module Roles and Demo Users Set Up](#module-roles-and-demo-users) section).
 4. Studio sets access rules for entities (and their attributes and associations), if entities do not have access rules yet (for more information on this process, see the [Entity Access Set Up](#entity-access) section).
 5. Studio checks if the *login.html* file exists, backs it up, and replaces it with a new version. Also, Studio checks if *index.html* exists, it searches for `document.cookie = "originURI=/login.html";` and replaces it with `document.cookie = "originURI=/openid/login";` (for more information on this process, see the [Files Set Up](#files-set-up) section).
@@ -138,14 +138,14 @@ On the **Project** level, Studio does the following:
 
 Studio Pro security settings are compatible with Studio (that means that roles and permissions can be edited in Studio), when all of the following criteria are met:
 
-* The AppCloudServices module has to be installed
-* The security level must be set to production
-* Demo users have to be enabled
+* The AppCloudServices module has been installed
+* The security level has been be set to production
+* Demo users have been enabled
 * Demo users must have the correct name: identical to the project role name, but with the *demo_* prefix (for example, demo_user)
 * Demo users must have exactly one user role connected to them
 * User roles must have a demo user connected to them
 * User roles must have exactly one module role per module connected to them (Studio does not check System or App Store modules)
-* Module roles may not have more than one user role connected to them
+* Module roles do not have more than one user role connected to them
 
 ## 9 Read More
 

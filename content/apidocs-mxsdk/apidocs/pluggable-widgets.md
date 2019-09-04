@@ -19,6 +19,25 @@ Pluggable widgets can also include a preview component for when they are rendere
 
 Pluggable widgets are the successor to [Custom widgets](/howto/extensibility/widget-development). Pluggable widgets are based on a modern React framework, have access to better APIs in the client, and can use more advanced properties in Studio and Studio Pro. Therefore, pluggable widgets allow you to more easily implement existing front-end libraries, tools, and your own expertise. Pluggable widgets should be used instead of custom widgets whenever possible.
 
+| Widget | Pluggable | Custom | Description |
+| --- | --- | --- | --- |
+| Technology | [React](#3-client-component) | Dojo | Rendering |
+| API | Declarative | Asynchronous | |
+| Data | Receive | Retrieve | Pluggable data is received as properties |
+| [Data attribute](/property-types-pluggable-widgets#attribute) | Yes | Yes | Access the content of the data view |
+| Data source | Planned | Yes | Retrieve data database, association, microflow or nanoflow |
+| Containment | Planned | No | Widget can contain other widgets |
+| [Template Text](property-types-pluggable-widgets#texttemplate) | Yes | No | Custom widget can use translatable strings |
+| [On Change Action](/property-types-pluggable-widgets#attribute) | Yes | No | Trigger a action on attribute change |
+| [Visibility](property-types-pluggable-widgets#visibility) | Yes | No | Will have system property for visibility |
+| [Editability](property-types-pluggable-widgets#editability) | Yes | No | Properties editable, custom widget can not use expressions |
+| [Expression](property-types-pluggable-widgets#expression) | Yes | No | |
+| [Client API](https://apidocs.mendix.com/8/client/) | No | Yes | Use mendix, mxui or mx client API |
+| [Native](#5-2-widget-description) | Yes | No | Build Native Client widgets |
+| File support | No | Yes | Upload, Download open |
+| [Icon](property-types-pluggable-widgets#icon) | Yes | No | Glyph Icon |
+| [Labeled](property-types-pluggable-widgets#label) | Yes | No | Show lable for input |
+
 ## 3 Client Component
 
 The essential part of a pluggable widget is its client component: a React component rendered inside the end-user’s app. Creating this component requires some basic React knowledge. Read React's [tutorial](https://reactjs.org/tutorial/tutorial.html) if you have not worked with React before. Note that if you are building a widget to be used in [Native Mobile](/refguide/mobile#nativemobile) apps, you should use [React Native](https://facebook.github.io/react-native/) instead of React.

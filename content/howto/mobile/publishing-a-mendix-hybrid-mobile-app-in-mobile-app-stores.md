@@ -14,7 +14,7 @@ The hybrid mobile app packaging process is based on Adobe PhoneGap. We have inte
 
 * Set up app signing keys
 * Complete the app-packaging process
-* Install an iOS or Android app on a test device
+* Install an iOS or Android app on a mobile test device
 * Upload your app to the Apple App Store or Google Play Store
 
 ## 2 Prerequisites
@@ -29,8 +29,8 @@ To publish your app in the Apple App Store, do the following:
 
 * Register for an [Apple Developer Account](https://developer.apple.com/register/index.action)
 * Have an iOS device (iPhone or iPad) for testing the iOS package that will be produced
-* Have an iOS deployment certificate and a provisioning file for which your test device is activated
-* Have Apple iTunes installed on your computer for deploying the iOS package that will be produced on your test device
+* Have an iOS deployment certificate and a provisioning file for which your mobile test device is activated
+* Have Apple iTunes installed on your computer for deploying the iOS package that will be produced on your mobile test device
 
 To publish your app in the Google Play store, do the following:
 
@@ -123,19 +123,19 @@ To complete the building process in the Mendix Developer Portal, follow these st
     You will be presented with a page title **Building Mobile App Store Packages**  showing the build status of your apps. It will display the status of **Building** while PhoneGap Build is building your app. Once ready, it will display the status of **Done**, and a button will be available to start the download of your iOS package.
 3. When the build process is done, click **Download iOS package** and save the package (the *.ipa* file) to your computer.
 
-### 6.2 Installing the iOS App on Your Test Device
+### 6.2 Installing the iOS App on Your Mobile Test Device
 
-You can now deploy your app to your test device. You must use a Mac device for this step. An easy way to do this is with Apple iTunes.
+You can now deploy your app to your mobile test device. You must use a Mac mobile test device for this step. An easy way to do this is with Apple iTunes.
 
-To install the iOS app on your test device, follow these steps:
+To install the iOS app on your mobile test device, follow these steps:
 
-1.  Connect your Apple mobile device to your device. Both devices will show dialog boxes which ask you to confirm that you trust the devices. Click **Continue** on your device, and **Trust This Computer?** on your mobile device to proceed.
+1.  Connect your Apple mobile test device to your computer. Both will show dialog boxes which ask you to confirm that you trust the devices. Click **Continue** on your device, and **Trust This Computer?** on your mobile device to proceed.
 
 	![trust dialog](attachments/publishing-a-hybrid-app/appletrust.png)
 
-2. Open iTunes and connect your iOS device to your computer.
-5. Select the *.ipa* package file that you downloaded earlier, and drag it onto your mobile device's **Devices** section on iTunes' left menu. Drop the *.ipa* file there to install it on your mobile device.
-6. If there is an existing version, iTunes will ask if you want to replace that existing version of the app. If there is one, do so. You can also open an *.ipa* file directly with iTunes by double-clicking it.
+2. Open iTunes and connect your iOS mobile test device to your computer.
+5. Select the *.ipa* package file that you downloaded earlier, and drag it onto your mobile test device's **Devices** section on iTunes' left menu. Drop the *.ipa* file there to install it on your mobile test device.
+6. If there is an existing version, iTunes will ask if you want to replace that existing version of the app. If there is one, do so. 
 7. Your app will show up in the list of apps. Click the **Install** button next to your app.
 8. Click **Apply** at the bottom of the screen to execute the actual installation.
 

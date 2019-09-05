@@ -14,6 +14,13 @@ For updates on the status of Mendix Cloud v4, Mendix Cloud v3, and other deploym
 
 ## 2019
 
+### September 19th, 2019
+
+#### Mendix App User Management
+
+* We have removed the old launchpad page as we moved to a new SSO architecture. The old url launchpad.mendix.com now links to your apps overview.
+* We moved the app user management functionality of launchpad to the **App settings** in the developer portal.  To manage your users go to the respective app, select **General** under the header **Settings** and click on the **Manage App Users**  button. For more information, see [Managing App Users](https://docs.mendix.com/developerportal/settings/general-settings#managing-app-users).
+
 ### September 5th, 2019
 
 #### Mendix Cloud Fixes

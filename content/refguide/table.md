@@ -106,7 +106,8 @@ To merge cells to the right, left, up, or down, you can also click the correspon
 
 An example of table properties is represented in the image below:
 
-![Table Properties](attachments/container-widgets/table-properties.png)
+{{% image_container width="300" %}}![Table Properties](attachments/container-widgets/table-properties.png)
+{{% /image_container %}}
 
 Table properties consist of the following sections:
 

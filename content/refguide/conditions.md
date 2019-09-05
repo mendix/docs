@@ -12,7 +12,7 @@ The following elements support conditional visibility:
 
 * All the widgets support
 * [Grid control bar buttons](control-bar)
-* [Table rows](table-row), [tab pages](tab-page), and [layout grid rows](layout-grid)
+* [Table rows](table#row), [tab pages](tab-container#tab-page), and [layout grid rows](layout-grid)
 
 The following elements support conditional editability:
 

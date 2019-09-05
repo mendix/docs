@@ -11,7 +11,7 @@ tags: ["studio pro", "table", "container widget", "widget"]
 
 ## 1 Introduction
 
-Tables can be used to give structure to a page. They contain [rows](table-row), columns, and [cells](table-cell). Each cell can contain widgets. 
+Tables can be used to give structure to a page. They contain [rows](table#row), columns, and [cells](table#cells). Each cell can contain widgets. 
 
 For example, you can create a table with text widgets, a logo, and a data view information as a customer report:
 
@@ -29,7 +29,7 @@ Tables allow for a number of keyboard interactions. Examples include navigating 
 
 A table consist of [rows](#rows), columns, and [cells](#cells). 
 
-### 2.1 Rows {#rows}
+### 2.1 Rows and Their Properties {#rows}
 
 A table can contain one or more rows. Each row contains columns and the number of columns can differ per row.
 
@@ -41,7 +41,7 @@ A row has the following properties:
 
 For more information on properties listed above, see [Properties Common for Widgets](common-widget-properties).
 
-### 2.2 Cells {#cells}
+### 2.2 Cells and Their Properties {#cells}
 
 Each section of a table row or column is called a cell. Cells can contain widgets.
 
@@ -78,7 +78,7 @@ You can perform the following actions:
 * **Move up** – moves a row up
 * **Move down** – moves a row down
 
-### 2.5 Preforming Actions on Cells
+### 2.5 Performing Actions on Cells
 
 To perform an action on a cell, select a cell and right-click it. A list of actions will open. 
 

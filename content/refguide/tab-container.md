@@ -11,13 +11,13 @@ tags: ["studio pro", "tab container", "container widget", "widget"]
 
 Tab containers are used to show information categorized into tabs. This can be very useful if the amount of information that has to be displayed is larger than the amount of space on the screen.
 
-![](attachments/container-widgets/tab-container.png)
+![Tab Container](attachments/container-widgets/tab-container.png)
 
 ## 2 Properties
 
 An example of tab container properties is represented in the image below:
 
-![](attachments/container-widgets/tab-container-properties.png)
+![Tab Container Properties](attachments/container-widgets/tab-container-properties.png)
 
 Tab container properties consist of the following sections:
 

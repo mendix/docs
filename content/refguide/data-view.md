@@ -108,7 +108,15 @@ _Default value:_ empty
 
 {{% snippet file="refguide/visibility-section-link.md" %}}
 
-## 4 Read More
+## 4 Performing Specific Actions
+
+To perform actions on a data view, select it on a page and right-click it. The list of possible actions opens. While some actions from this list, such as **Select data source**, **Edit condition for visible**, are a quick way to set the properties, the following actions are specific actions that you can perform:
+
+* **Go to entity** – opens a domain model and highlights an an entity that is used as the data source 
+* **Go to data source** **microflow **– this action is only displayed when a microflow is set as the data source and opens this microflow 
+* **Go to data source nanoflow** – this action is only displayed when a nanoflow is set as the data source and opens this nanoflow
+
+## 5 Read More
 
 * [Page](page)
 * [Data Widgets](data-widgets)

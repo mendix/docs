@@ -42,7 +42,7 @@ _Default value:_ 0
 
 {{% alert type="info" %}}Tab index is not supported on native mobile pages.{{% /alert %}}
 
-### 3.3 Class
+### 3.3 Class {#class}
 
 The class property allows you to specify one or more cascading style sheet (CSS) classes for the widget. The classes should be separated by a space. The classes will be applied to the widget in the browser and the widget will get the corresponding styling. The classes should be classes in the theme that is used in the project. It overrules the default styling of the widget.
 
@@ -56,7 +56,7 @@ You can see which widgets in a page have styling applied via the class or style 
 
 ![](attachments/common-widgets-properties/show-styles.png)
 
-### 3.4 Style
+### 3.4 Style {#style}
 
 The style property allows you to specify additional CSS styling. If a class is also specified, this styling is applied *after* the class. For example:<br />
 <br />

@@ -105,7 +105,7 @@ For publishing to a specific platform, see the subsequent sections of this how-t
 
 Apple provides general information on [publishing an iOS app in the Apple App Store](https://developer.apple.com/programs/ios/distribute.html). Before uploading your app, make sure to check the [App Review Guidelines](https://developer.apple.com/app-store/review/) to make sure your app will be accepted. An Apple Developer Account is required. If you do not have one, [register as an Apple Developer](https://developer.apple.com/register/index.action).
 
-1. Click the **Signing Keys** tab, and under **iOS**, click **add a key**. 
+1. In PhoneGap Build, click the **Signing Keys** tab, and under **iOS**, click **add a key**. 
 2. A dialog box will prompt you to upload a certificate file and a provisioning profile file. You can get those files from Apple. The certificate is the *.p12* file, and the provisioning profile is the *.mobileprovision* file. For more information, see [Managing App Signing Keys](/refguide/managing-app-signing-keys).
 3. Give the key a title that you can easily recognize, and upload the files.
 4. Click the lock with the yellow background on the same row as your key and enter a passphrase. The key can now be used for builds for the period of an hour. After an hour, the passphrase needs to be entered again.
@@ -144,7 +144,10 @@ The app will now be visible on your device. Open it and log in to the app with a
 ### 6.3 Uploading the iOS App to the App Store
 
 1. Follow Apple's [Add an app to your account](https://help.apple.com/app-store-connect/#/dev2cd126805) tutorial to add an app entry to your account.
-2. After adding a new app to your account, follow Apple's [View and edit app information](https://help.apple.com/app-store-connect/#/dev97865727c) tutorial to describe your new app entry. Consult the other pages under the left menu's **Enter app information** category should they apply to your app.
+2.  After adding a new app to your account, follow Apple's [View and edit app information](https://help.apple.com/app-store-connect/#/dev97865727c) tutorial to describe your new app entry. Consult the other pages under the left menu's **Enter app information** category should they apply to your app:
+
+	![enter app information](attachments/publishing-a-hybrid-app/ios-enter-app-info.png)
+
 3. Follow Apple's [Uploading builds overview](https://help.apple.com/app-store-connect/#/dev82a6a9d79) to upload a build of your app to App Store Connect.
 4. Use Apple's [Choose the build before you submit to review](https://help.apple.com/app-store-connect/#/dev7cbda8c55) to select the build which you will submit to App Review.
 
@@ -154,7 +157,9 @@ Test your app per the [TestFlight beta testing overview](https://help.apple.com/
 
 ### 6.5 Publishing
 
-Publish your app by following Apple's [Overview of publishing an app](https://help.apple.com/app-store-connect/#/dev34e9bbb5a) and the subsequent documents in the left menu's **Publish on the App Store section** category.
+Publish your app by following Apple's [Overview of publishing an app](https://help.apple.com/app-store-connect/#/dev34e9bbb5a) and the subsequent documents in the left menu's **Publish on the App Store** category:
+
+![publish on the app store](attachments/publishing-a-hybrid-app/ios-publishing-an-app.png)
 
 ## 7 Preparing and Publishing for Android{#publishing-for-android}
 

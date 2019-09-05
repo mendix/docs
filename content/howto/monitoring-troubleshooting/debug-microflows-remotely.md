@@ -6,17 +6,31 @@ tags: ["monitoring", "troubleshooting", "debug", "microflow", "remote"]
 
 ## 1 Introduction
 
-It is possible to debug applications that are already in the cloud (either in an acceptance or production environment).
+It is possible to debug applications that are already in a cloud environment.
+
+{{% alert type="info" %}}
+
+These instructions are for apps running in Mendix Cloud v4. There are instructions for running in Mendix Cloud v3 in the previous version of this document here: [Debug Microflows Remotely](/howto7/monitoring-troubleshooting/debug-microflows-remotely).
+
+{{% /alert %}}
+
+{{% alert type="warning" %}}
+
+Debugging in a production environment is not recommended.
+
+If you are debugging in the cloud, be aware of other app end-users. Breakpoints in the debugger will pause processes for all users of the app in this environment.
+
+{{% /alert %}}
 
 **This how-to will teach you how to do the following:**
 
-* Connect your debugger to your cloud environment
+* Connect the debugger in Studio Pro to your cloud environment
 
 ## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Install a Basic, Professional, or Enterprise Mendix edition: [http://www.mendix.com/editions/](http://www.mendix.com/editions/)
+* Deploy a Mendix app to a [licensed](/developerportal/deploy/licensing-apps) Mendix Cloud v4 environment
 
 ## 3 The Basics
 
@@ -24,15 +38,11 @@ To enable the cloud debugging, you need to get a URL and a password from the clo
 
 {{% alert type="info" %}}
 
-The debugger supports only debugging of single-instance environments. Multi-instance environents need to be scaled down to one instance before the debugger can be used.
+The debugger supports only debugging of single-instance environments. Multi-instance environments need to be scaled down to one instance before the debugger can be used.
 
 {{% /alert %}}
 
-{{% alert type="warning" %}}
 
-Debugging in production is not recommended. However, if you are debugging in the cloud, be aware of other system end-users. The debugger will stop processes from moving on for other users.
-
-{{% /alert %}}
 
 <a name="EnablingDebuggingintheCloud"></a>
 ### 3.1 Enabling Debugging in the Cloud

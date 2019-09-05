@@ -14,6 +14,12 @@ For updates on the status of Mendix Cloud v4, Mendix Cloud v3, and other deploym
 
 ## 2019
 
+### September 11th, 2019
+
+#### App Store Improvements
+
+* We added the flexibility to label your App Store content with a custom version number.
+
 ### September 5th, 2019
 
 #### Mendix Cloud Fixes

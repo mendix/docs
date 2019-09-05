@@ -330,4 +330,8 @@ Apps should keep up with new Mendix releases as much as possible.
 
 When introducing a new [Mendix App Store](https://appstore.home.mendix.com/index3.html) component to a project, carefully consider the support level of the component. Using components that are community supported introduces a maintainability and upgrade risk.
 
-App Store modules should **not** be modified. This is because, if an App Store module is modified, updating to a new version becomes much harder because the changes will be overwritten when a new version is downloaded from the App Store. If changing an App Store module is unavoidable, changes should be marked explicitly and clearly, and performed again when the module is updated. To minimize the number of changes in the actual App Store module, it is advisable to combine them in a separate extension module wherever possible.
+App Store modules should **not** be modified. This is because, if an App Store module is modified, updating to a new version becomes much harder because the changes will be overwritten when a new version is downloaded from the App Store. If changing an App Store module is unavoidable, you have two options:
+1. Mark any changes you make explicitly and clearly, and perform them again when the module is updated.
+2. Copy the contents of the App Store module to another module in your App and use that module instead. Remember that your app will no longer reflect updates to the original App Store module.
+
+To minimize the number of changes in the actual App Store module, it is advisable to combine them in a separate extension module wherever possible.

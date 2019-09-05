@@ -165,11 +165,11 @@ Publish your app by following Apple's [Overview of publishing an app](https://he
 
 If you plan on publishing an Android app, read Google's overview of [the Android app publishing process](http://developer.android.com/tools/publishing/publishing_overview.html). Before submitting your app to an app store, [review the launch checklist](http://developer.android.com/distribute/tools/launch-checklist.html). Google provides information on [publishing your app in the Google Play Store](http://developer.android.com/distribute/googleplay/index.html).
 
-If you are just testing your app, you do not need to create a keystore. You can continue with the next section [Download the Resulting Android Binary (APK)](#download-apk) below. 
+If you are just testing your app, you do not need to create a keystore. You can continue with the next section [Enabling your Mobile Test Device for an Android Binary (APK)](#download-apk) below. 
 
 If you want to publish your Android app, you must first complete the [Android](/refguide/managing-app-signing-keys#android) section of *Managing App Signing Keys*. This section explains how to generate a keystore and upload that keystore to PhoneGap Build.
 
-### 7.1 Download the Resulting Android Binary (APK){#download-apk}
+### 7.1 Enabling your Mobile Test Device for an Android Binary (APK){#download-apk}
 
 After you create your build you can download the resulting APK using a download link or a QR code. One way to do this is to use your phone browser to navigate to the PhoneGap install page with your APK on it. To enable APK installations:
 
@@ -186,12 +186,14 @@ To install your APK, you can either download the APK file using your mobile devi
 
 #### 7.2.1 Option 1: Using Your Device's Browser
 
-Go to the PhoneGap install page using your phone browser to continue installation, then follow these instructions:
+Go to the PhoneGap install page using your mobile test device's browser to continue installation, then follow these instructions:
+
 1. Tap the Android link to get the APK.
 2. **Navigate** to your browser’s **Downloads** folder, open it, and tap your downloaded app.
 3. On the next screen, tap the **Install** button to install it.
 
 To install an APK file directly from your Android's **Download** folder:
+
 1. Tap the **Back** button to see your list of apps.
 2. Tap the file manager app you will use to install the APK file.
 3. Tap the **Allow** switch or check box.

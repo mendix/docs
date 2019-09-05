@@ -594,6 +594,10 @@ module.exports = {
       from: "/refguide8/Document+Templates",
       to: "/refguide/document-templates"
     },
+	{
+      from: "/refguide8/tab-page",
+      to: "/refguide/tab-container"
+    },
 	/****************************************************
      * From Desktop Modeler version 7 (permanent, mapped)
      ****************************************************/

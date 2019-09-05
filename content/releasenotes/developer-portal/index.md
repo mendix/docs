@@ -14,6 +14,13 @@ For updates on the status of Mendix Cloud v4, Mendix Cloud v3, and other deploym
 
 ## 2019
 
+### September 5th, 2019
+
+#### Mendix Cloud Fixes
+
+* We fixed an issue that caused the wrong Technical Contact information to be shown on the app's *General* page in the Developer Portal. (Ticket #84852)
+* We added a feedback message when you try to restore a backup while the backup is still being created. (Ticket #85786)
+
 ### August 30th, 2019
 
 #### SAP Connectors Rename

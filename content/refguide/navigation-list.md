@@ -12,42 +12,55 @@ The navigation list widget is not supported on native mobile pages.
 
 ## 1 Introduction
 
-A navigation list can be used to attach an action to an entire row. Such a row is called a navigation list item. A navigation list with three empty rows.
+A navigation list can be used to attach an action to an entire row when a user clicks this row. Such a row is called a navigation list item. 
 
-![](attachments/container-widgets/navigation-list.png)
+For example, clicking one row can open a page, clicking another one can execute a microflow. 
+
+![Navigation List](attachments/container-widgets/navigation-list.png)
 
 ## 2 Properties
 
 An example of navigation list properties is represented in the image below:
 
+![Navigation List Properties](attachments/container-widgets/navigation-list-properties.png)
+
 Navigation list properties consist of the following sections:
 
 * [Common](#common)
 * Design Properties
-* [General](#general)
 * [Visibility](#visibility)
 
 ### 2.1 Common Section {#common}
 
 {{% snippet file="refguide/common-section-link.md" %}}
 
-### 2.2 General Section {#general}
-
-#### 2.2.1 Action
-
-Action defines what action is performed when a navigation list item is "clicked." This can either be opening a page or calling a microflow. For details on opening a page, see [Opening Pages](opening-pages). For details on calling a microflow, see [Starting Microflows](starting-microflows). 
-
-Microflows attached to a navigation list item have no **Confirmation** or **Advanced** microflow settings.
-
 ### 2.3 Visibility Section {#visibility}
 
-{{% snippet file="refguide/visibility-property.md" %}}
-
-{{% snippet file="refguide/visibility-property-with-module-roles-simple.md" %}}
+{{% snippet file="refguide/visibility-section-link.md" %}}
 
 ## 3 Navigation List Item
 
-Each row in the navigation list is a navigation list item. A navigation list item can be associated with an action. Conditional visibility is available for list items.
+A row in a navigation list is a navigation list item. You can set a separate **On click** event for each row of the navigation list. 
+
+### 3.1 Navigation List Item Properties
+
+#### 3.1.1 Common Section
+
+{{% snippet file="refguide/common-section-link.md" %}}
+
+#### 3.1.2 General Section
+
+In the **General** section, you can set a specific on click event for each navigation list item. An on click event defines what action is performed when a user clicks a row. For more information on on click events, see [On Click Event & Events Section](on-click-event).
+
+{{% alert type="info" %}}
+
+Microflows set as an on click event for a navigation list item have no **Execution**, **Confirmation**, or **Advanced** microflow settings. For more information on calling a microflow, see [Starting Microflows](starting-microflows). 
+
+{{% /alert %}}
+
+#### 3.1.3 Visibility Section
+
+{{% snippet file="refguide/visibility-section-link.md" %}}
 
 ## 4 Read More
 

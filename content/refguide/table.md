@@ -11,7 +11,7 @@ tags: ["studio pro", "table", "container widget", "widget"]
 
 ## 1 Introduction
 
-Tables can be used to give structure to a page. They contain [rows](table#row), columns, and [cells](table#cells). Each cell can contain widgets. 
+Tables can be used to give structure to a page. They contain [rows](table#rows), columns, and [cells](table#cells). Each cell can contain widgets. 
 
 For example, you can create a table with text widgets, a logo, and a data view information as a customer report:
 

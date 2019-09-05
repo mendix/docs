@@ -157,7 +157,7 @@ DivContainers, Split Panes, Group Boxes, LayoutGridColumns, ScrollContainerRegio
 
 Studio Pro Guide | Model SDK API docs
 --- | --- |
-[Tab page](/refguide/tab-page) | [TabPage](https://apidocs.mendix.com/modelsdk/latest/classes/pages.tabpage.html)
+[Tab page](/refguide/tab-container#tab-page) | [TabPage](https://apidocs.mendix.com/modelsdk/latest/classes/pages.tabpage.html)
 [Layout grid](/refguide/layout-grid) | [LayoutGrid](https://apidocs.mendix.com/modelsdk/latest/classes/pages.layoutgrid.html)
 [Container](/refguide/container) | [DivContainer](https://apidocs.mendix.com/modelsdk/latest/classes/pages.divcontainer.html)
 [Scroll Container](/refguide/scroll-container) | [SplitPane](https://apidocs.mendix.com/modelsdk/latest/classes/pages.splitpane.html)

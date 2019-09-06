@@ -217,6 +217,7 @@ To delete the entity, attribute or association, do the following:
     {{% image_container width="300" %}}![](attachments/domain-models/deletion.png)
     {{% /image_container %}}
     
+
 {{% alert type="info" %}}
 
 You cannot delete *Name* and *Size* attributes of image and file entities. 

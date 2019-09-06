@@ -92,7 +92,9 @@ The **PhoneGap Build: Signing Key Required** page asks you to go to the PhoneGap
 
 1. Click **Log in to PhoneGap Build**. A new page will be opened on PhoneGap's [apps tab](https://build.phonegap.com/apps). Here you can see the PhoneGap Build app that was created by the Mendix Developer Portal for your app. The app is named as you defined it in the **App Info** in the [Starting the Packaging Process](#starting-the-packaging-process) section above.
 2. Set up the app signing key for your app in your account.
-3. Click the avatar icon at the top-right of the page, and then click **Edit account** to configure how your app will build.
+3.  Click the avatar icon at the top-right of the page, and then click **Edit account** to configure how your app will build:
+
+	![edit account](attachments/publishing-a-hybrid-app/edit-account.png)
 
 ## 5 Preparing and Publishing Your App
 
@@ -108,7 +110,10 @@ Apple provides general information on [publishing an iOS app in the Apple App St
 1. In PhoneGap Build, click the **Signing Keys** tab, and under **iOS**, click **add a key**. 
 2. A dialog box will prompt you to upload a certificate file and a provisioning profile file. You can get those files from Apple. The certificate is the *.p12* file, and the provisioning profile is the *.mobileprovision* file. For more information, see [Managing App Signing Keys](/refguide/managing-app-signing-keys).
 3. Give the key a title that you can easily recognize, and upload the files.
-4. Click the lock with the yellow background on the same row as your key and enter a passphrase. The key can now be used for builds for the period of an hour. After an hour, the passphrase needs to be entered again.
+4.  Click the lock with the yellow background on the same row as your key and enter a passphrase. The key can now be used for builds for the period of an hour. After an hour, the passphrase needs to be entered again:
+
+	![yellow lock](attachments/publishing-a-hybrid-app/yellow-lock.png)
+
 5. Click **Apps** at the top of the page to go to an overview showing your apps. Click  your app's name or logo to see the app's details.
 6. Select the correct key for your app. Next to the text **iOS**, there is a drop-down menu with the **No key selected** option. From the drop-down menu, select the newly uploaded key which should be listed under **unlocked**.
 

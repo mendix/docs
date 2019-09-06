@@ -23,30 +23,42 @@ Calypso is a tool which makes it easier for you to customize your Mendix apps' s
 ## 3 Setting Up Calypso
 
 1. Install Calypso.
-2. Open Calypso. 
-3. In the **Hostname** drop-down menu, select the host name of your Mendix app's device (or put its IP address in manually by clicking **Other** and typing in the IP address). 
-	Most Windows users should select **localhost**. If you are running Windows through a virtual machine, use your virtual machine's IP address as the **Hostname** or you can forward your port from your host machine to your virtual machine. Alternatively you can install Calypso on a virtual machine and choose **localhost**.
-4. If this is your first time using Calypso, you may have to tell your Windows firewall to **Allow access** to use Calypso.
-5. Configure your **Port**. 
-	A Mendix app normally runs on port 8080. However, if you are running multiple Mendix apps, or changed your port configuration, your port number may be different. Find your port information by navigating to **Project {'YourProjectName'}** > **Settings** in your **Project Explorer**, read your port number in **Application root URL** ({host name:port number}), then type that number into Calypso's **Port** field.
-6. In **Apps Collection**, click the **Browse** button and then select the folder which contains all your Mendix apps. Configuring this enables you to switch easily between apps. 
-7. Complete **App Folder** by selecting the folder of the Mendix app you want to work on from the drop-down menu.
-8.  Complete **Watching** to specify which files you want to be processed by Calypso. 
-	Most users will only need to select the **Watching** > **theme/styles** option. However, when you are building custom error pages or are using JavaScript on your pages, you may wish to select the other two folders as well.
 
-	![files to watch](attachments/calypso/calypso-watching.png)
+2. Open Calypso. 
+
+3. In the **Hostname** drop-down menu, select the host name of your Mendix app's device (or put its IP address in manually by clicking **Other** and typing in the IP address). 
+	
+	Most Windows users should select **localhost**. If you are running Windows through a virtual machine, use your virtual machine's IP address as the **Hostname** or you can forward your port from your host machine to your virtual machine. Alternatively you can install Calypso on a virtual machine and choose **localhost**.
+	
+4. If this is your first time using Calypso, you may have to tell your Windows firewall to **Allow access** to use Calypso.
+
+5. Configure your **Port**. 
+
+  A Mendix app normally runs on port 8080. However, if you are running multiple Mendix apps, or changed your port configuration, your port number may be different. Find your port information by navigating to **Project {'YourProjectName'}** > **Settings** in your **Project Explorer**, read your port number in **Application root URL** ({host name:port number}), then type that number into Calypso's **Port** field.
+
+6. In **Apps Collection**, click the **Browse** button and then select the folder which contains all your Mendix apps. Configuring this enables you to switch easily between apps. 
+
+7. Complete **App Folder** by selecting the folder of the Mendix app you want to work on from the drop-down menu.
+
+8. Complete **Watching** to specify which files you want to be processed by Calypso. 
+
+   Most users will only need to select the **Watching** > **theme/styles** option. However, when you are building custom error pages or are using JavaScript on your pages, you may wish to select the other two folders as well.
+
+   ![files to watch](attachments/calypso/calypso-watching.png)
 
 9. Click the sun in the top-right corner to toggle between dark mode and regular mode.
+
 10. Click **Run Locally** in Mendix Studio Pro to use Calypso.
+
 11. Click the **Start** button in Calypso. This will start a browser page which will let you view your running app. The browser address will match the address in Calypso's **Console**:
 
-	Browser address:
+    Browser address:
 
-	![browser address](attachments/calypso/browser-address.png)
+    ![browser address](attachments/calypso/browser-address.png)
 
-	Calypso's **Console**:
+    Calypso's **Console**:
 
-	![console](attachments/calypso/console.png)
+    ![console](attachments/calypso/console.png)
 
 ## 4 Testing Calypso
 

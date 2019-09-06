@@ -3,6 +3,8 @@ title: "Domain Model"
 description: "Describes the domain models in Mendix Studio."
 menu_order: 20
 tags: ["studio", "domain model"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+#The anchor <entity-types> below is mapped, so it should not be removed or changed.
 ---
 
 ## 1 Introduction
@@ -14,8 +16,6 @@ The domain model in Studio consists of the following:
 * [Entities](#entity)
 * [Associations](domain-models-association-properties) 
 
-{{% alert type="info" %}}
-
 Let us say you have a collection of CDs like the one in the table below.
 
 | Title                           | Artist                   |
@@ -24,8 +24,6 @@ Let us say you have a collection of CDs like the one in the table below.
 | Exodus                          | Bob Marley & The Wailers |
 
 The rows in the table are CDs. The type of the two rows is "CD" and this is the entity name. A specific CD like "How to Dismantle an Atomic Bomb" of the band U2 is called an object of the "CD" entity. Characteristics like the "Title" and "Artist" are called attributes.
-
-{{% /alert %}}
 
 To view the **Domain Models** of your app in Studio, click the **Domain Models** icon in the left menu bar of Studio.
 
@@ -48,26 +46,34 @@ The **Auto Arrange** option above the domain model groups and aligns entities by
 
 | Domain model components                                  | Description                                                  | Properties |
 | -------------------------------------------------------- | :----------------------------------------------------------- | ------------------- |
-| Entity<a name="entity"></a>                          | An entity represents a class of real-world objects, such as customers, invoices, work items, etc. <br />If we draw a parallel with databases, the entity is a table. | Name<br />[Persistablity](/refguide/persistability) |
+| Entity<a name="entity"></a>                          | An entity represents a class of real-world objects, such as customers, invoices, work items, etc. <br />If we draw a parallel with databases, the entity is a table. Entities can be of several types. For more information on types of entities, see the [Types of Entities](#entity-types) section below. | Name<br />[Persistablity](/refguide/persistability) |
 | [Attribute](domain-models-attributes) | Attributes are characteristics that describe and/or identify the entity. For example, a *Customer* entity typically has attributes for the name of the customer, an e-mail address, and other personal information. If we draw a parallel with databases, the attribute is a column. | Name<br />Type |
 | [Association](domain-models-association-properties) | An association describes a relation between entities. In the domain model, an association is represented by a line/arrow between two entities. If we draw a parallel with databases, the association is a foreign key. | Name<br />[Multiplicity](domain-models-association-properties#multiplicity)<br />[Delete behavior](domain-models-association-properties#delete-behavior) |
 
 For examples and more technical details, see [Domain Model](/refguide/domain-model), [Entities](/refguide/entities), [Attributes](/refguide/attributes), and [Associations](/refguide/associations) in the *Studio Pro Guide*. 
 
+### 2.1 Types of Entities {#entity-types}
+
+You can add different type of entities to your domain model:
+
+* **Entity** – an entity that can have attributes, associations, and represents a class of real-world objects
+* **Image Entity** – a special type of entity that allows you to store an image in the entity. On pages, it allows you to view and upload images
+* **File Entity** – a special type of entity that allows you to store a file in the entity. On pages, it allows you to upload and download files (for example, a Microsoft Word document, a pdf, a Microsoft Excel Spreadsheet, etc.)
+
 ## 3 Adding New Entities {#adding-new-entities}
 
 You can add new entities in the **Toolbox**. 
 
-{{% image_container width="250" %}}![](attachments/domain-models/toolbox-entity.png)
+{{% image_container width="300" %}}![](attachments/domain-models/toolbox-entity.png)
 {{% /image_container %}}
 
 To add an entity, do the following:
 
 1. Open the **Toolbox** tab of the domain model.
 
-2. Drag and drop **New Entity** to the working area.
+2. Choose the entity type you would like to add, and drag and drop it the working area.
 
-3.  Fill out the name for it and click **Create**:
+3.  Fill out the name for the entity and click **Create**:
 
     ![](attachments/domain-models/create-new-entity-dialog.png)
 
@@ -76,9 +82,32 @@ The new entity is added to the domain model.
 {{% image_container width="250" %}}![](attachments/domain-models/new-entity.png)
 {{% /image_container %}}
 
+### 3.1 Adding New Image or File Entities
+
+While adding new entities from the **Toolbox** works for all types of entities, image and file entities have a specific way of adding them to your domain model.
+
+For example, you have an entity named *Laptop* and you would like to show users a specific image depending on the laptop model on pages of your application. In this case, you need to create an image entity (for example, named *Laptop_Image*). However, to be able to get data and dynamically show the right image per laptop model, the *Laptop_Image* entity should also have a specific connection (a one-to-one association) to the *Laptop* entity. For more information on associations and their properties, see [Association Properties](domain-models-association-properties). 
+
+To create a new image/file entity with the right type of association automatically, follow the process described below:
+
+1. Select an entity of the *Entity* type that will have a connection to the new image or file entity. 
+
+2. Click **New attribute** button.
+
+3. In the **Create New Attribute** dialog window, click **Add image or file** in the bottom-right corner:
+
+   ![Add Image or File](attachments/domain-models/add-image-or-file.png)
+
+4. In the **Image and Files** dialog window, select the type or entity (image or file).
+
+5. In the **Create New Image/File Entity** dialog window, specify the name of the special entity and click **Create**. 
+
+The new image or file entity is created with default *Name* and *Size* attributes and the one-to-one association to the entity that you selected in the first step:
+![Image Entity Example](attachments/domain-models/image-entity-example.png)
+
 ## 4 Adding New Attributes {#adding-new-attributes}
 
-To add attributes in the domain mode, do the following:
+To add attributes in the domain mode, do the following: 
 
 1.  Select a block with entity you want to add attribute to. The **New attribute** option appears:
 
@@ -154,6 +183,12 @@ Fields that are displayed in **Properties** may vary depending on the type of th
 
 {{% /alert %}}
 
+{{% alert type="info" %}}
+
+Properties of *Name* and *Size* attributes of image and file entities are read-only, i.e. you cannot edit them. 
+
+{{% /alert %}}
+
 ### 6.3 Specifying Association Properties
 
 You can manage the following properties of an association:
@@ -171,7 +206,7 @@ If the association type is one-to-many or many-to-many, you can swap direction o
 {{% image_container width="350" %}}![](attachments/domain-models/managing-associations.png)
 {{% /image_container %}}
 
-## 7 Deleting Entities, Attributes or Associations
+## 7 Deleting Entities, Attributes, or Associations
 
 To delete the entity, attribute or association, do the following:
 
@@ -181,6 +216,12 @@ To delete the entity, attribute or association, do the following:
 
     {{% image_container width="300" %}}![](attachments/domain-models/deletion.png)
     {{% /image_container %}}
+    
+{{% alert type="info" %}}
+
+You cannot delete *Name* and *Size* attributes of image and file entities. 
+
+{{% /alert %}}
 
 ## 8 Read More
 

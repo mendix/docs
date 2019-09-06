@@ -41,11 +41,11 @@ Calypso is a tool which makes it easier for you to customize your Mendix apps' s
 
 	Browser address:
 
-	![](attachments/calypso/browser-address.png)
+	![browser address](attachments/calypso/browser-address.png)
 
 	Calypso's **Console**:
 
-	![](attachments/calypso/console.png)
+	![console](attachments/calypso/console.png)
 
 ## 4 Testing Calypso
 
@@ -60,7 +60,7 @@ With your Mendix app and Calypso running, complete the steps below to see how Ca
 	![blue text button](attachments/calypso/blue-button.png)
 
 2. Click **Project** > **Show Project Directory in Explorer**.
-3. Open  *theme\styles\web\sass\app\_custom-variables.scss* .
+3. Open *theme\styles\web\sass\app\_custom-variables.scss* .
 4. Change `$brand-primary: #0595DB;` to `$brand-primary: brown`, then save your changes.
 5.  Look at your app in your browser again. The button's text has switched from blue to brown.
 

@@ -18,7 +18,7 @@ Calypso is a tool which makes it easier for you to customize your Mendix apps' s
 
 ## 2 Prerequisites
 
-* Download Calypso from its [Dropbox folder](https://www.dropbox.com/home/RnD/Widget/Calypso)
+* Download Calypso from its [Dropbox folder](https://www.dropbox.com/sh/46hip6pq8s9ipqp/AAAHBwm-8qcv9bQKSR7BrirCa?dl=0)
 
 ## 3 Setting Up Calypso
 

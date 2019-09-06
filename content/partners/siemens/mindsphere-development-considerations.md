@@ -353,7 +353,7 @@ Alternatively, you can use a separate AWS S3 bucket. See [Configuring External F
 
 There are few limitations on what you call your app within Mendix. However, when you deploy the app to MindSphere, the app name registered in the Developer Cockpit must have the following characteristics:
 
-* Contains only *lowercase* alphanumeric characters and special character -, _ and . are not allowed
+* Contains only *lowercase* alphanumeric characters and special character `-`. (The `_` and `.` characters are not allowed)
 * Starts with a letter
 * Length does not exceed 20 characters
 * Is unique within your tenant
@@ -378,8 +378,9 @@ If the user logs out from MindSphere, the Mendix app will not delete the session
 In some circumstances, this could lead to another user *using the same app in the same browser on the same computer*, picking up the session from the previous user if the cookie has not yet expired.
 {{% /alert %}}
 
-### Native Mobile
-With Mendix Studio Pro V8.0.0 Mendix has released the support of developing native mobile apps. This is currently not yet supported together with MindSphere.
+### 9.5 Native Mobile
+
+With Mendix Studio Pro V8.0.0, Mendix has released the support of developing native mobile apps. This is not currently supported for apps using MindSphere.
 
 ## 10 Read More
 

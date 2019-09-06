@@ -3,7 +3,7 @@ title: "Use Calypso"
 parent: "atlas-ui"
 menu_order: 70
 tags: ["Atlas", "UI", "UX", "user experience"]
-description: This document will teach you to use Calypso, a tool which improves the way you edit styling.
+description: "This document will teach you to use Calypso, a tool which improves the way you edit styling."
 ---
 
 ## 1 Introduction

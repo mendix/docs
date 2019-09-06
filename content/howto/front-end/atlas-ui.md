@@ -66,3 +66,4 @@ You can further customize widgets by changing their design properties. Colors, t
 * [Create Custom Preview Images for Building Blocks & Page Templates](create-custom-preview-images-for-building-blocks-and-page-templates)
 * [Extend Design Properties to Customize Your Studio Experience](extend-design-properties-to-customize)
 * [Troubleshooting Atlas UI Changes](/refguide/migration-atlas)
+* [Use Calypso](calypso)

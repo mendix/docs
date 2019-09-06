@@ -57,3 +57,8 @@ With your Mendix app and Calypso running, complete the steps below to see how Ca
 5. Look at your app in your browser again. The button's text has switched from blue to brown.
 
 	![brown text button](attachments/calypso/brown-button.png)
+
+## 5 Read More
+
+* [Get Started with Atlas UI](get-started-with-atlasui)
+* [Migrate Existing App Projects to Atlas UI](migrate-existing-projects-to-atlasui)

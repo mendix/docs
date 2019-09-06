@@ -6,97 +6,92 @@ tags: ["monitoring", "troubleshooting", "debug", "microflow", "remote"]
 
 ## 1 Introduction
 
-It is possible to debug applications that are already in a cloud environment.
+In addition to debugging a local deployment of your app, it is also possible to debug applications that are already in a cloud environment.
 
 {{% alert type="info" %}}
-
-These instructions are for apps running in Mendix Cloud v4. There are instructions for running in Mendix Cloud v3 in the previous version of this document here: [Debug Microflows Remotely](/howto7/monitoring-troubleshooting/debug-microflows-remotely).
-
+These instructions are for apps running in Mendix Cloud v4. If you are running an older version of Mendix which is deployed to Mendix Cloud v3 you need the previous version of this document here: [Debug Microflows Remotely](/howto7/monitoring-troubleshooting/debug-microflows-remotely).
 {{% /alert %}}
 
 {{% alert type="warning" %}}
-
-Debugging in a production environment is not recommended.
+**Debugging in a production environment is not recommended.**
 
 If you are debugging in the cloud, be aware of other app end-users. Breakpoints in the debugger will pause processes for all users of the app in this environment.
-
 {{% /alert %}}
 
 **This how-to will teach you how to do the following:**
 
-* Connect the debugger in Studio Pro to your cloud environment
+* Connect the debugger in Studio Pro to your Mendix Cloud v4 environment
 
 ## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Deploy a Mendix app to a [licensed](/developerportal/deploy/licensing-apps) Mendix Cloud v4 environment
+* Have access as a team member to a Mendix app deployed to a [licensed](/developerportal/deploy/licensing-apps) Mendix Cloud v4 environment
+* Have **TRANSPORT RIGHTS** to the app environment you want to debug in the app's [node permissions](/developerportal/deploy/node-permissions)
 
 ## 3 The Basics
 
-To enable the cloud debugging, you need to get a URL and a password from the cloud and add that information to Studio Pro. The steps below will explain where you can gather all the necessary information. 
+In Mendix Cloud v4, the debugger is always listening for connections so you cannot turn it on or off. To debug your app in the cloud, you need to get a URL and a password from the app environment and provide that information to Studio Pro. The steps below explain how to do this.
 
 {{% alert type="info" %}}
-
-The debugger supports only debugging of single-instance environments. Multi-instance environments need to be scaled down to one instance before the debugger can be used.
-
+The debugger supports only debugging of single-instance environments. Multi-instance environments need to be scaled down to one instance before the debugger can be used. See [Scaling Your Environment in Mendix Cloud v4](/developerportal/deploy/scale-environment) for more information.
 {{% /alert %}}
 
+### 3.1 Obtain Debugging Credentials
 
+1. Open your app in the [Developer Portal](https://home.mendix.com).
 
-<a name="EnablingDebuggingintheCloud"></a>
-### 3.1 Enabling Debugging in the Cloud
+2. Click **Environments** in the left sidebar.
 
-1. Open your browser, go to [http://home.mendix.com](http://home.mendix.com), and log in with your Mendix ID.
+3. In the **Deploy** tab, click **Details** for the environment which you want to debug:
 
-2. Click **Apps** and navigate to the project that you want to debug:
+    ![](attachments/debug-microflows-remotely/18580051.png)
 
-    ![](attachments/18448576/18580045.png) 
+4. In the **General** tab, click **Show Debugger Information**:
 
-3. Click **Environments** in the left sidebar, and on the **Deploy** tab, click **Details** for the environment:
+    ![](attachments/debug-microflows-remotely/show-debugger-information.png)
 
-    ![](attachments/18448576/18580051.png)
+    This invokes the **Debugger settings** pop-up window which provides a URL (such as `http://yourapp.mendixcloud.com/debugger/`) and a password:
 
-4. On the **Environment Details** screen, click **Enable Debugging**:
+    ![](attachments/debug-microflows-remotely/debugger-settings.png)
 
-    ![](attachments/18448576/18580050.png)
-
-    This invokes the **Debugger settings** pop-up window. Usually this presents a URL (such as `http://yourapp.mendixcloud.com`) and a secure password that changes each time you enable and disable the debugger:
-
-    ![](attachments/18448576/18580049.png)
-
-    If you want to disable the debugger, click **Disable Debugging** on the **Environment Details** screen.
+You will need to provide these credentials to Studio Pro to connect the debugger to the app running in the cloud.
 
 ### 3.2 How to Enable Cloud Debugging in Studio Pro
 
 Once you have the unique URL and password, there are two methods for connecting Studio Pro to the cloud environment. 
 
 {{% alert type="warning" %}}
-
-If you do not see an overview similar to the one below, then you do not have sufficient cloud permissions to deploy packages into the cloud or to debug in the cloud. Contact the technical contact or the project SCRUM Master in your project to get sufficient permissions.
-
+If you do cannot connect the debugger, then you do not have sufficient permissions to your app. Ask the *technical contact* or the project *SCRUM Master* to provide the correct permissions.
 {{% /alert %}}
 
-#### 3.2.1 First Method for Connecting Studio Pro to the Cloud Environment
+1. Open the **Connect Debugger** dialog box – you can do this in two ways within Studio Pro:
 
-1. Go to the **Run** tab and select **Connect debugger...**:
+    * Go to the **Run** menu and select **Connect Debugger…**:
 
-    ![](attachments/18448576/18580048.png)
+        ![](attachments/debug-microflows-remotely/18580048.png)
+        
+    * Click **Connect…** in the **Debugger** pane:
 
-2. In the **Connect Debugger** dialog box, enter the **URL** and the **Password** that you got from the cloud environment (for details, see [3.1 Enabling Debugging in the Cloud](#EnablingDebuggingintheCloud)):
+        ![](attachments/debug-microflows-remotely/debugger-pane.png)
 
-    ![](attachments/18448576/18580047.png)
+2. In the **Connect Debugger** dialog box set the following:
 
-#### 3.2.2 Second Method for Connecting Studio Pro to the Cloud Environment
+    * **Connect to** – select the option *An app running in the Mendix Cloud or on another remote server.*
+    * **URL** – the *URL* from the **Debugger Settings** for your app environment
+    * **Password** – the *Password* from the **Debugger Settings** for your app environment
 
-1. Go to the **Debugger** dock window.
-2. Click **Connect** and enter the URL and password information in the dialog window.
+        ![](attachments/debug-microflows-remotely/18580047.png)
+
+3. Click **OK**.
+
+The debugger is now connected to your app running in the cloud.
 
 ## 4 Read More
 
 * [Find the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
 * [Clear Warning Messages](clear-warning-messages)
-* [Test Web Services Using SoapUI](../testing/testing-web-services-using-soapui)
+* [Test Web Services Using SoapUI](/howto/testing/testing-web-services-using-soapui)
 * [Monitor Mendix Using JMX](monitoring-mendix-using-jmx)
 * [Debug Java Actions Remotely](debug-java-actions-remotely)
 * [Log Levels](log-levels)
@@ -104,4 +99,3 @@ If you do not see an overview similar to the one below, then you do not have suf
 * [Debug Java Actions](debug-java-actions)
 * [Handle Common Mendix SSO Errors](handle-common-mendix-sso-errors)
 * [The Ultimate Debugger](http://www.mendix.com/tech-blog/the-ultimate-debugger/) 
-

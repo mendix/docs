@@ -132,13 +132,11 @@ When a widget expects an object and does not get it, or gets an object of anothe
 
 The most common errors of this type are described in the table below:
 
-| Error Code | Text in the Checks Panel                                     | Cause of an Error                                            | Way to Fix |
-| ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---------- |
-| CE0552     | Microflow {name of the microflow} does not return an object. | The data source of a widget (for example, a data view) is Microflow, but the microflow does not return any object. |            |
-| CE0573     | Parameter {name of the parameter} of the selected microflow does not match available arguments. No arguments available. | You selected a microflow as the data source of a widget (for example, of a data view). |            |
-| CE0573     | Parameter {name of the parameter} of the selected microflow does not match available arguments. Available arguments is object of page parameter {name of the parameter}. |                                                              |            |
-
-
+| Error Code | Text in the Checks Panel                                     | Cause of an Error                                            | Way to Fix                                                   |
+| ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| CE0552     | Microflow {name of the microflow} does not return an object. | The data source of a widget (for example, a data view) is set to **Microflow**, but the microflow does not return any object. | Open the microflow and configure a return value for it.  select its end event, and do the following:<ol><li>1. Select the end event.</li><li>2. In its properties, set **Return Value** from **Nothing** to **Value**.</li><li>3. Set the **Data Type** and set the **Entity** option if needed (whether this option is displayed depends on the selected data type).</li><li> 4. Configure the **Value**.</li> </ol> |
+| CE0573     | Parameter {name of the parameter} of the selected microflow does not match available arguments. No arguments available. | You selected a microflow as an on click action of a widget (for example, of a button) and a microflow contains a parameter, but no object is passed to the widget. | Place the widget in a data container (for example, a data view) and make sure that the object you pass to it matches the parameter of the microflow that is assigned to the widget.<br />If you have a button that calls a microflow (i.e. an on click action of the button is set to *Microflow*), and a microflow contains a parameter *Customer*, you need to place this button in a data container that has a *Customer* object passed to it. For example, you can place this button in a data view, set data view's data source to *Context* and set **Entity** to *Customer*. |
+| CE0573     | Parameter {name of the parameter} of the selected microflow does not match available arguments. Available argument is object/parameter of {name of the parameter}. | You selected a microflow as the data source of a widget (for example, of a data view). | Make sure that the object you are passing to the data view matches the object that the microflow is expecting by either changing the data source of the data container or by changing the parameter of the microflow. |
 
 ## 6 Input Elements Consistency Errors
 

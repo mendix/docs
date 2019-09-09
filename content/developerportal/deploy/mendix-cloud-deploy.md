@@ -3,7 +3,7 @@ title: "Mendix Cloud"
 category: "Deployment"
 menu_order: 20
 description: "Describes how to deploy to the Mendix Cloud."
-tags: ["Deploy","Mendix Cloud","Developer Portal", "Free app", "licensed", "limitations"]
+tags: ["Deploy","Mendix Cloud","Developer Portal", "Free App", "licensed", "limitations"]
 frontpage_featured: true
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -39,7 +39,7 @@ A Free App has a number of limitations compared to a licensed app. The main limi
 <small>More information on the capabilities of different license options is available on [Mendix Platform Pricing](http://www.mendix.com/pricing)</small>
 
 {{% alert type="info" %}}
-Free apps are part of our community edition.
+Free Apps are part of our Free Edition.
 
 If you are not currently a customer but would prefer to use a licensed cloud node you can find more information on our pricing page: [Mendix Platform Pricing](http://www.mendix.com/pricing).
 

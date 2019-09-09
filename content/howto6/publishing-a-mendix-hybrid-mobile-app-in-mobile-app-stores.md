@@ -46,7 +46,7 @@ First, open the "Publish for Mobile App Stores" page in the Mendix Developer Por
 8. Click the green **Publish for Mobile App Stores** button.
     You are then presented with the "Build Mobile App Store Packages" page.
 9. Select the environment that you want to publish.
-    *   For Community Edition apps, the only option is "Sandbox" (for example, Free App)
+    *   For Free Apps, the only option is "Sandbox"
     *   For apps running on a licensed cloud node, you can choose from Test, Acceptance and Production (depending on what is available on your cloud node)
 10. Leave the choice on how to build the package on the default: "Build Mobile App Store packages for me by sending the build configuration to Adobe PhoneGap Build". You can use the alternative option to manually download a PhoneGap Build package, which you can then inspect, modify and upload manually to Adobe PhoneGap Build. See our documentation on [how you can customize the PhoneGap Build package](/refguide6/customizing-phonegap-build-packages). This is unnecessary in almost all scenarios.
 11. Start the actual hybrid mobile app package building process: Click the green "Start PhoneGap Build job" button to initiate the packaging process.

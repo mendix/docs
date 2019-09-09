@@ -1,8 +1,8 @@
 ---
-title: "Use the SAP XSUAA Connector"
+title: "Use the XSUAA Connector for SAP Cloud Platform"
 category: "SAP"
 menu_order: 45
-description: "Describes how to set up the SAP XSUAA Connector."
+description: "Describes how to set up the XSUAA Connector for SAP Cloud Platform."
 tags: ["SAP", "integration", "OData", "SSO"]
 ---
 
@@ -12,7 +12,7 @@ When you deploy an application to SAP Cloud Platform using the SAP deployment fe
 
 A Mendix application is role-based. Using the SAP Cloud Platform cockpit, you can assign the roles within the app to roles within your SAP subaccount. The roles in the SAP subaccount can then be assigned to individual users via the selected IdP (Trust Configuration).
 
-In this document, you will see how to use the SAP XSUAA Connector to provide SSO in an app which has two roles: Supervisor and Inspector. 
+In this document, you will see how to use the XSUAA Connector for SAP Cloud Platform to provide SSO in an app which has two roles: Supervisor and Inspector. 
 
 **This how-to will teach you how to do the following:**
 
@@ -33,11 +33,11 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Ensure the app behaves differently according to the user role, so you can see the effect of setting up the roles in XSUAA. For example, give each role a different starting page as described here: [How To Set Up the Navigation Structure](/howto/general/setting-up-the-navigation-structure)
 
-## 3 Getting the SAP XSUAA Connector Module
+## 3 Getting the XSUAA Connector for SAP Cloud Platform Module
 
-The SAP app may already have the SAP XSUAA Connector installed. Look in **Project... > App Store modules** for the module **SapAuthentication**. This is the XSUAA connector.
+The SAP app may already have the XSUAA Connector for SAP Cloud Platform installed. Look in **Project... > App Store modules** for the module **SapAuthentication**. This is the XSUAA connector.
 
-If the SAP XSUAA Connector is not already in your project, download it from the App Store. It can be found here: [XSUAA Connector for SAP Cloud Platform](https://appstore.home.mendix.com/link/app/78091/).
+If the XSUAA Connector for SAP Cloud Platform is not already in your project, download it from the App Store. It can be found here: [XSUAA Connector for SAP Cloud Platform](https://appstore.home.mendix.com/link/app/78091/).
 
 For more information, see [How to Use App Store Content](/developerportal/app-store/app-store-content).
 
@@ -242,6 +242,6 @@ You can picture the authentication as shown below:
 * [Create a Secure App](/howto/security/create-a-secure-app)
 * [Use App Store Content](/developerportal/app-store/app-store-content)
 * [Project Security](/refguide/project-security)
-* [SAP Cloud Platform XSUAA Connector](https://appstore.home.mendix.com/link/app/78091/)
-* [SAP XSUAA Connector](/partners/sap/sap-xsuaa-connector)
+* [XSUAA Connector for SAP Cloud Platform](https://appstore.home.mendix.com/link/app/78091/)
+* [XSUAA Connector for SAP Cloud Platform](/partners/sap/sap-xsuaa-connector) (documentation)
 * [SAP Cloud Platform cockpit](https://account.hana.ondemand.com/cockpit#/home/allaccounts)

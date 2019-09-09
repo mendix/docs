@@ -64,7 +64,7 @@ When inside a [nanoflow](nanoflows), the Change object action does not have the 
 If **Commit type** is set to *Yes*, the object is refreshed across the client as if **Refresh in client** was set to *Yes*.
 {{% /alert %}}
 
-_Default value_: No
+*Default value*: No
 
 ### 3.3 Change Members
 

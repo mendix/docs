@@ -13,13 +13,13 @@ It must be placed on a page together with a [Password text box](password-text-bo
 
 ## Common Properties
 
-{{% snippet file="refguide/Name+Property.md" %}}
+{{% snippet file="refguide/name-property.md" %}}
 
-{{% snippet file="refguide/Class+Property.md" %}}
+{{% snippet file="refguide/class-property.md" %}}
 
-{{% snippet file="refguide/Style+Property.md" %}}
+{{% snippet file="refguide/style-property.md" %}}
 
-{{% snippet file="refguide/Tab+index+Property.md" %}}
+{{% snippet file="refguide/tab-index-property.md" %}}
 
 ## General Properties
 
@@ -27,4 +27,4 @@ It must be placed on a page together with a [Password text box](password-text-bo
 
 The placeholder text is shown when no text has been entered yet. It can be used to give a hint to the user about what kind of text should be entered.
 
-{{% snippet file="refguide/Login+Label+Properties.md" %}}
+{{% snippet file="refguide/login-label-properties.md" %}}

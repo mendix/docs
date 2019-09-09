@@ -36,7 +36,7 @@ This status information will tell you important information that you either need
 
 Any status that could cause your app to stop functioning will result in an alert. For example, the monitoring information from the image shows that one of the status indicators was **Critical**. When this happens to one of your nodes, all users that are subscribed to alerts will receive an email alert.
 
-## 3 Cloud V4 Alerting Categories and Thresholds
+## 3 Cloud v4 Alerting Categories and Thresholds
 
 There are a number of categories on the status overview that are related to various technical parts of your application environment. Any category that does not display as *OK* needs to be investigated. Each category indicates a different part of the app infrastructure that is monitored.
 
@@ -140,7 +140,7 @@ First actions to take | Check the log files and application metrics for a possib
 
 ### 3.2 CPU Credits on AWS{#burstable}
 
-Apps running on Mendix Cloud V4 use AWS databases to store their data. These databases are classed as *burstable* and *non-burstable*. If a database is **burstable** this means that it has a specified performance baseline. This baseline is different for each sort of database and varies from 5% to 20%.
+Apps running on Mendix Cloud v4 use AWS databases to store their data. These databases are classed as *burstable* and *non-burstable*. If a database is **burstable** this means that it has a specified performance baseline. This baseline is different for each sort of database and varies from 5% to 20%.
 
 From the AWS documentation: *If a burstable performance instance uses fewer CPU resources than is required for baseline performance (such as when it is idle), the unspent CPU credits are accrued in the CPU credit balance. If a burstable performance instance needs to burst above the baseline performance level, it spends the accrued credits. The more credits that a burstable performance instance has accrued, the more time it can burst beyond its baseline when more performance is needed.*
 
@@ -167,9 +167,9 @@ High CPU usage can be triggered by things like:
 
 If you do run into issues with your CPU Credit Balance Status unexpectedly, you can look for anomalies in *Database node CPU usage*, *Application node disk throughput*, and *Application node load* and correlate those with application behavior. You can also move to a different database with a higher baseline performance, or one which is not burstable.
 
-## 4 Cloud V3 Alerting Categories and Thresholds
+## 4 Cloud v3 Alerting Categories and Thresholds
 
-Mendix Cloud V3 also has a number of alerting categories and thresholds. These differ from those in Mendix Cloud V4 and so are documented in this separate section.Again, any category that does not display as *OK* needs to be investigated.
+Mendix Cloud v3 also has a number of alerting categories and thresholds. These differ from those in Mendix Cloud v4 and so are documented in this separate section.Again, any category that does not display as *OK* needs to be investigated.
 
 ### 4.1 Application Status
 

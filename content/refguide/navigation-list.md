@@ -2,46 +2,69 @@
 title: "Navigation List"
 parent: "container-widgets"
 menu_order: 70
-tags: ["studio pro"]
+tags: ["studio pro", "navigation list", "container widget", "widget"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
-
-## 1 Introduction
 
 {{% alert type="warning" %}}
 The navigation list widget is not supported on native mobile pages.
 {{% /alert %}}
 
-A navigation list can be used to attach an action to an entire row. Such a row is called a navigation list item.
+## 1 Introduction
 
-{{% alert type="info" %}}
+A navigation list can be used to attach an action to an entire row when a user clicks this row. Such a row is called a navigation list item. 
 
-![](attachments/pages/navigation-list.png)
+For example, clicking one row can open a page, clicking another one can execute a microflow. 
 
-A navigation list with three empty rows.
+![Navigation List](attachments/container-widgets/navigation-list.png)
 
-{{% /alert %}}
+## 2 Properties
 
-## 2 Common Properties
+An example of navigation list properties is represented in the image below:
 
-{{% snippet file="refguide/Class+Property.md" %}}
+{{% image_container width="350" %}}![Navigation List Properties](attachments/container-widgets/navigation-list-properties.png)
+{{% /image_container %}}
 
-{{% snippet file="refguide/Style+Property.md" %}}
+Navigation list properties consist of the following sections:
+
+* [Common](#common)
+* Design Properties
+* [Visibility](#visibility)
+
+### 2.1 Common Section {#common}
+
+{{% snippet file="refguide/common-section-link.md" %}}
+
+### 2.3 Visibility Section {#visibility}
+
+{{% snippet file="refguide/visibility-section-link.md" %}}
 
 ## 3 Navigation List Item
 
-Each row in the navigation list is a navigation list item. A navigation list item can be associated with an action. Conditional visibility is available for list items.
+A row in a navigation list is a navigation list item. You can set a separate **On click** event for each row of the navigation list. 
 
-## 4 General
+### 3.1 Navigation List Item Properties
 
-### 4.1 Action
+#### 3.1.1 Common Section
 
-Action defines what action is performed when a navigation list item is "clicked." This can either be opening a page or calling a microflow. For details on opening a page, see [Opening Pages](opening-pages). For details on calling a microflow, see [Starting Microflows](starting-microflows). 
+{{% snippet file="refguide/common-section-link.md" %}}
 
-Microflows attached to a navigation list item have no **Confirmation** or **Advanced** microflow settings.
+#### 3.1.2 General Section
 
-## 5 Visibility Properties
+In the **General** section, you can set a specific on click event for each navigation list item. An on click event defines what action is performed when a user clicks a row. For more information on on click events, see [On Click Event & Events Section](on-click-event).
 
-{{% snippet file="refguide/Visibility+Property.md" %}}
+{{% alert type="info" %}}
 
-{{% snippet file="refguide/Visibility+Property+With+Module+Roles+Simple.md" %}}
+Microflows set as an on click event for a navigation list item have no **Execution**, **Confirmation**, or **Advanced** microflow settings. For more information on calling a microflow, see [Starting Microflows](starting-microflows). 
+
+{{% /alert %}}
+
+#### 3.1.3 Visibility Section
+
+{{% snippet file="refguide/visibility-section-link.md" %}}
+
+## 4 Read More
+
+* [Page](page)
+* [Container Widgets](container-widgets)
+* [Properties Common for Widgets](common-widget-properties)

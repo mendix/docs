@@ -156,7 +156,7 @@ You cannot create a new project in an existing repository that is not empty.
 
 Downloading a theme is very similar to downloading a widget. Like a widget, a theme is added to the project structure, in the **theme** folder of your app project. A theme downloaded from the App Store will immediately be set as the active theme for your project. You can find out which theme is active for your project in the app  project **Settings**.
 
-To delete a theme, remove the *zip* file from your project's **theme** folder.
+To delete a theme, remove the ZIP file from your project's **theme** folder.
 
 ## 7 Read More
 

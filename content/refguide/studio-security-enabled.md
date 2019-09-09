@@ -16,7 +16,7 @@ Users can enable security from Studio. While the Studio user simply clicks the *
 When security is enabled, a number of checks and changes are done at several levels.
 
 1. Studio checks if security is enabled. If security is set to **Prototype/demo** or **Production**, the process stops. If security is off, steps described below are executed. 
-2. The AppCloudServices module is set up if the project does not have them yet (for more information on this process, see the [Modules Set Up](#module-set-up) section). If the AppCloudServices module has been already installed for this project, the process stops. 
+2. The AppCloudServices module is set up if the project does not have it yet (for more information on this process, see the [Modules Set Up](#module-set-up) section). If the AppCloudServices module has been already installed for this project, the process stops. 
 3. Studio does checks and changes (if necessary) to [demo users](demo-users) , [module roles](module-security) , and [user roles](user-roles) (for more information on this process, see the [Module Roles and Demo Users Set Up](#module-roles-and-demo-users) section).
 4. Studio sets access rules for entities (and their attributes and associations), if entities do not have access rules yet (for more information on this process, see the [Entity Access Set Up](#entity-access) section).
 5. Studio checks if the *login.html* file exists, backs it up, and replaces it with a new version. Also, Studio checks if *index.html* exists, it searches for `document.cookie = "originURI=/login.html";` and replaces it with `document.cookie = "originURI=/openid/login";` (for more information on this process, see the [Files Set Up](#files-set-up) section).
@@ -30,19 +30,19 @@ If security has already been set to **Prototype/demo** or **Production** in Stud
 
 ## 3 Modules Set Up {#module-set-up}
 
-When security is enabled in Studio, the [AppCloudServices module](/developerportal/deploy/integrate-with-mendix-sso) is set up. This module enables single sign-on and user management in your app.
+When security is enabled in Studio, the AppCloudServices module is set up. This module enables single sign-on and user management in your app.
 
 To enable single sign-on the following checks and changes are performed:
 
 1. The AppCloudServices startup microflow is created. For more information on possible outcomes of this process, see the [Project Security Level Set Up](#project-security-level) section.
 2. *index.html* and *login.html* files are checked and changed if necessary. For more information, see the [Files Set Up](#files-set-up) section.
 
-The AppCloudServices module also adds user management to your app, and when you deploy your app in the AppCloud, it will now be automatically added to your [Launchpad](https://home.mendix.com/home/). With user management you can manage app users.
+The AppCloudServices module also adds user management to your app. With user management you can manage app users.
 
 {{% alert type="info" %}}If your project already has the AppCloudServices module installed, you will not be able to enable security from Studio. You can only set security manually in Studio Pro meeting the following requirements: 
 
 * Security should be set to **Production** <br/>
-* The AppCloudServices module should be set up to enable single sign on (For more information on how to set the module up, see [Mendix Single Sign On](/developerportal/deploy/integrate-with-mendix-sso) in the *Developer Portal Guide*)
+* The AppCloudServices module should be set up to enable single sign on
 
 {{% /alert %}}
 
@@ -138,14 +138,14 @@ On the **Project** level, Studio does the following:
 
 Studio Pro security settings are compatible with Studio (that means that roles and permissions can be edited in Studio), when all of the following criteria are met:
 
-* The AppCloudServices module has to be installed
-* The security level must be set to production
-* Demo users have to be enabled
+* The AppCloudServices module has been installed
+* The security level has been be set to production
+* Demo users have been enabled
 * Demo users must have the correct name: identical to the project role name, but with the *demo_* prefix (for example, demo_user)
 * Demo users must have exactly one user role connected to them
 * User roles must have a demo user connected to them
 * User roles must have exactly one module role per module connected to them (Studio does not check System or App Store modules)
-* Module roles may not have more than one user role connected to them
+* Module roles do not have more than one user role connected to them
 
 ## 9 Read More
 

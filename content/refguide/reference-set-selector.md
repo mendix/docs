@@ -47,13 +47,13 @@ See [Columns](columns) for more information.
 
 ## Common Properties
 
-{{% snippet file="refguide/Name+Property.md" %}}
+{{% snippet file="refguide/name-property.md" %}}
 
-{{% snippet file="refguide/Class+Property.md" %}}
+{{% snippet file="refguide/class-property.md" %}}
 
-{{% snippet file="refguide/Style+Property.md" %}}
+{{% snippet file="refguide/style-property.md" %}}
 
-{{% snippet file="refguide/Tab+index+Property.md" %}}
+{{% snippet file="refguide/tab-index-property.md" %}}
 
 ## Appearance Properties
 
@@ -147,7 +147,7 @@ Using non-persistable entities (NPEs) in a reference set selector is not support
 
 ## Events Properties
 
-{{% snippet file="refguide/On+Change+Event.md" %}}
+{{% snippet file="refguide/on-change-event.md" %}}
 
 ## Selectable Objects Properties
 
@@ -163,9 +163,9 @@ See [Selectable Objects Properties](reference-selector) of the reference selecto
 
 ## Visibility Properties
 
-{{% snippet file="refguide/Visibility+Property.md" %}}
+{{% snippet file="refguide/visibility-property.md" %}}
 
-{{% snippet file="refguide/Visibility+Property+With+Module+Roles+Simple.md" %}}
+{{% snippet file="refguide/visibility-property-with-module-roles-simple.md" %}}
 
 ## Read More
 

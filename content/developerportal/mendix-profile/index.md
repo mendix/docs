@@ -267,7 +267,7 @@ In this section, you can tell the Mendix community about yourself and your work 
 
 Here you can connect  your social accounts for **GitHub**, **Meetup**, **Twitter**, **LinkedIn**, and **Skype**.
 
-### 10.4 Security
+### 10.4 Security {#security}
 
 You can change your password in this section. By default, you are requested to change your password every 90 days. Only a [Company Admin](../company-app-roles/companyadmin-settings) is allowed to change the expiration period.
 

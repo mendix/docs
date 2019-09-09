@@ -12,7 +12,9 @@ The Native Builder takes your Mendix project containing a native profile and pac
 
 ## 2 Prerequisites
 
-* The [Native Builder](https://www.dropbox.com/sh/hpw7sshut9bco68/AABackrr75rPSgW7u5LBMkMra?dl=0) executable (download to a folder of your preference and extract all contents)
+* The Native Builder [executable](https://www.dropbox.com/sh/hpw7sshut9bco68/AABackrr75rPSgW7u5LBMkMra?dl=0) (download to a folder of your preference and extract all contents)
+	* Use v1.0.0 with Mendix 8.0 
+	* Use v2.0.0 with Mendix 8.1.0 or higher 
 * A [GitHub](https://github.com/) account
 * A [Microsoft App Center](https://appcenter.ms/) account
 * Java JDK 11 (if you have Studio Pro installed, you should already have JDK 11 in *C:\Program Files\AdoptOpenJDK*) which can be acquired [here](https://adoptopenjdk.net/) 
@@ -38,11 +40,12 @@ The sections below describe how to get tokens which allow Native Builder to auth
 
 1. Go to [GitHub](https://github.com/) and sign in.
 2. Go to [Settings](https://github.com/settings/profile) by clicking on your profile picture in the top right.
-3. Navigate to [Personal access tokens](https://github.com/settings/tokens) and then click **Generate new token** to create a new personal access token.
-4. In the **Note** field, write *Native Builder.*
-5. Under **Select scopes**, select **repo**.
-6. Click the **Generate token** button.
-7. Store your token in a secure place. You will not be able to see it again. If you lose it, you will have to create a new token and delete your old one.
+3. Click [Developer settings](https://github.com/settings/apps) at the bottom of the left menu.
+4. Navigate to [Personal access tokens](https://github.com/settings/tokens) and then click **Generate new token** to create a new personal access token.
+5. In the **Note** field, write *Native Builder.*
+6. Under **Select scopes**, select **repo**.
+7. Click the **Generate token** button.
+8. Store your token in a secure place. You will not be able to see it again. If you lose it, you will have to create a new token and delete your old one.
 
 ### 4.2 App Center Token {#appcenter-token}
 
@@ -58,7 +61,11 @@ The sections below describe how to get tokens which allow Native Builder to auth
 Command-line arguments provide information to the Native Builder, such as where your Mendix project is located. You will now compose a command and parameters, which will start your Native Builder when executed.
 
 1. Open your command line program as an administrator by right-clicking its icon or *.exe* file and selecting **Run as administrator**. 
-2. Using the parameters in the parameters table below, build a command which features the parameters you need using command line. 
+2.  Target your Native Builder's directory by typing `cd "{your Native Builder *.exe* location}"` and pressing `Enter`:
+
+	![change directory](attachments/native-builder/change-directory.png)
+
+3. Using the parameters in the parameters table below, build a command which features the parameters you need using command line. 
 
 	Your finished product will look like this example (note the double quotes around paths which could contain spaces): 
 
@@ -96,7 +103,7 @@ In App Center you can be a member of one or more organizations. If the app needs
 
 #### 5.2.3 --app-name
 
-This parameter is the name of your app. You can see this name when users install your app on a device. It is also used as the app’s name in App Center.
+This parameter is the display name of your app, and can contain any characters you choose. You can see this name when users install your app on a device. It is also used as the app’s name in App Center. For iOS apps this serves as the [CFBundleDisplayName](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html#//apple_ref/doc/uid/20001431-110725). For Android apps this serves as the `android:label` property of the `application` tag in the *AndroidManifest.xml* file.
 
 #### 5.2.4 --app-version
 
@@ -104,7 +111,7 @@ This parameter specifies the version of the app you want to build. See [Semantic
 
 #### 5.2.5 --app-identifier
 
-This parameter serves as a unique identifier for your app. Once your app is uploaded to the Apple App Store or the Play Store, the app’s identifier can no longer be modified. If you do modify the identifier after an app is published, it will be treated as a different app by both stores. An app identifier is specified as reverse DNS notation, e.g. {com.mendix.MyAwesomeApp}.
+This parameter serves as a unique identifier for your app, which must conform to Android's [application ID](https://developer.android.com/studio/build/application-id) requirements as well as Apple's [CFBundleIdentifier](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html) requirements. Once your app is uploaded to the Apple App Store or the Play Store, the app’s identifier can no longer be modified. If you do modify the identifier after an app is published, it will be treated as a different app by both stores. An app identifier is specified as reverse DNS notation, e.g. {com.mendix.MyAwesomeApp}.
 
 #### 5.2.6 --app-icon-path
 
@@ -149,6 +156,18 @@ Now that your repository is connected, follow the steps below to run Native Buil
 3. When the build succeeds your binaries should have been downloaded for you.
 
 You can now use your binaries to run your app on testing devices. To publish your apps, though, you will need to get your apps signed. Consult [Enable Build Signing](#signing) below for more information on app signing.
+
+If your build times out (which happens to free App Center users after building for longer than 30 minutes), you can either sign your app locally or move to a paid App Center account. This build issue is more likely to affect iOS builds than Android builds.
+
+To sign your Android app locally, use apksigner by following Google's [apksigner documentation](https://developer.android.com/studio/command-line/apksigner).
+
+To sign your iOS app locally, do the following:
+
+1. Navigate to your built app's folder.
+2. Open the *.xcarchive* file using Xcode.
+3.  Click the **Distribute** button to start the local signing flow:
+
+	![distribute xcode](attachments/native-builder/xcode-distribute.png)
 
 {{% alert type="info" %}} In case of failure, the build logs will be downloaded for your convenience. Remember to provide them when filing a ticket with Mendix.{{% /alert %}}
 
@@ -228,7 +247,7 @@ For an iOS app, do the following:
    let bundleUrl = AppUrl.forBundle(url: "http://LOCAL_IP_ADDRESS:8080", remoteDebuggingPackagerPort: 8083, isDebuggingRemotely: true)
    ```
 
-4. Locate the **Info.plist** file and replace the value of `Runtime url` with `http://LOCAL_IP_ADDRESS:8080`.
+4. Locate the *Info.plist* file and replace the value of `Runtime url` with `http://LOCAL_IP_ADDRESS:8080`.
 5. Run the app by clicking the **Play** button.
 
 #### 8.4.3 Android

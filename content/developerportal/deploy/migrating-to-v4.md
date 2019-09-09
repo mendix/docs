@@ -20,20 +20,20 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Have a [Mendix Cloud](mendix-cloud-deploy) v4 node available (to request a licensed v4 Cloud Node, contact your Customer Success Manager (CSM))
 * Have the [Technical Contact](/developerportal/company-app-roles/technical-contact) role for both your existing v3 and available v4 Cloud Nodes
-* Create a new temporary Free App without a sandbox environment – instructions for unlinking a Free App from a sandbox are here: [Licensing Mendix Cloud Apps](licensing-apps#unlink)
+* Create a new temporary Free App without a Free App environment – instructions for unlinking a Free App from its environment are here: [Licensing Mendix Cloud Apps](licensing-apps#unlink)
 
 ## 3 Migration considerations
 
-You will need to take the following into account when planning to migrate to Mendix Cloud V4:
+You will need to take the following into account when planning to migrate to Mendix Cloud v4:
 
 * Your app needs to be on a supported version of Mendix, that is **Mendix version 6.0 or above**
 * If you are using Mendix 7, you might want to split long-running scheduled events into smaller chunks, using a queueing system like the Amazon SQS connector to spread the work out over multiple instances
 * If you use a mail server from your app, you will need to use a third-party email provider – for more information, see [Sending Email](sending-email)
 * If you are currently using a VPN to secure your app, you will have to use one of the recommended methods discussed in [Securing Outgoing Connections from Your Application](securing-outgoing-connections-from-your-application) instead.
 
-To make the most of the features of Mendix Cloud V4, we recommend that your apps are built as [12-factor apps](https://12factor.net/).
+To make the most of the features of Mendix Cloud v4, we recommend that your apps are built as [12-factor apps](https://12factor.net/).
 
-## 3.1 Other Differences Between Mendix Cloud V3 & V4
+## 3.1 Other Differences Between Mendix Cloud v3 & v4
 
 There are a few other differences between the way you develop and deploy apps in Mendix Cloud v4 and Mendix Cloud v3:
 
@@ -61,7 +61,7 @@ First, link the new temporary app to the cloud v4 node.
 
 To learn how to do this, see [Licensing Mendix Cloud Apps](licensing-apps#licensed-node).
 
-### 4.2 Copying the Deployment Package and Data from the V3 Node to the V4 Node
+### 4.2 Copying the Deployment Package and Data from the v3 Node to the v4 Node
 
 Before migrating, you need to copy the data from the v3 node to the v4 node. After copying, test your app and correct errors if needed. Repeat this until all the errors are solved.
 

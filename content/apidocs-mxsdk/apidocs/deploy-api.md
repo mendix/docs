@@ -23,7 +23,7 @@ As APIs are designed for automated systems, the Deploy API does not require the 
 ## 3 API Calls
 
 {{% alert type="info" %}}
-Only _Retrieve apps_, _Create Sandbox_ and _Retrieve app_ API calls are supported for sandbox applications. Please note that most API calls — with the exception of _Upload Package_ — require that the _Content-Type_ header be set to _application/json_.
+Only _Retrieve apps_, _Create Free App Environment_ and _Retrieve app_ API calls are supported for Free Apps. Please note that most API calls — with the exception of _Upload Package_ — require that the _Content-Type_ header be set to _application/json_.
 {{% /alert %}}
 
 ### 3.1 Retrieve Apps
@@ -56,7 +56,7 @@ List of objects with the following key-value pairs:
 *   _AppId_ (String): Sub-domain name of the app.
 *   _Name_ (String): Name of the app.
 *   _ProjectId_ (String): Developer Portal Project identifier.
-*   _Url_ (String): Production or sandbox URL to access your app.
+*   _Url_ (String): Production or Free App URL to access your app.
 
 **Example Output**
 
@@ -74,11 +74,11 @@ List of objects with the following key-value pairs:
 }]
 ```
 
-### 3.2 Create Sandbox
+### 3.2 Create Free App Environment
 
 #### 3.2.1 Description
 
-Creates a sandbox application for a requested project id.
+Creates a Free App for a requested project id.
 
 ```bash
 HTTP Method: POST
@@ -91,7 +91,7 @@ URL: https://deploy.mendix.com/api/1/apps/
 
 An object with the following key-value pair:
 
-*   _ProjectId_ (String) : The Developer Portal project identifier that should be linked to the new sandbox application. This value can be found under **Settings** > **General**, and it is represented as **App ID**.
+*   _ProjectId_ (String) : The Developer Portal project identifier that should be linked to the new Free App. This value can be found under **Settings** > **General**, and it is represented as **App ID**.
 
 **Example Request**
 
@@ -114,7 +114,7 @@ Response object with the following fields:
 *   _AppId_ (String): Sub-domain name of the app.
 *   _Name_ (String): Name of the app.
 *   _ProjectId_ (String): Developer Portal Project identifier.
-*   _Url_ (String): Production or sandbox URL to access your app.
+*   _Url_ (String): Production or Free App URL to access your app.
 
 **Error Codes**
 
@@ -167,7 +167,7 @@ Object with the following key-value pairs:
 
 *   _AppId_ (String): Sub-domain name of the app.
 *   _Name_ (String): Name of the app.
-*   _Url_ (String): Production or sandbox URL to access your app.
+*   _Url_ (String): Production or Free App URL to access your app.
 
 **Error Codes**
 
@@ -588,7 +588,7 @@ curl -v -F "file=@%USERPROFILE%/Documents/Mendix/calc-main/releases/calc_1.0.0.4
 
 Transports a specific deployment package to a specific environment. This action requires the environment to be in the status *NotRunning*.
 
-This call is not available for Free App Sandbox. For a Free App Sandbox, the Build API can be used to trigger a deployment.
+This call is not available for Free App. For a Free App, the Build API can be used to trigger a deployment.
 
 ```bash
 HTTP Method: POST
@@ -1113,7 +1113,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 | 400 | INVALID_REQUEST | You have allocated more memory than is available under your plan. Please contact support to upgrade your plan. |
 | 400 | INVALID_REQUEST | Memory per instance cannot be smaller than 1024MB.|
 | 400 | NOT_ALLOWED| Horizontal scaling (to multiple instances) is only available for apps with Mendix version >=7. Please upgrade to activate this functionality. |
-| 400 | NOT_ALLOWED| Scaling is only available for paid apps on Mendix Cloud V4. Please contact support to upgrade to the V4 Cloud to access this functionality. |
+| 400 | NOT_ALLOWED| Scaling is only available for paid apps on Mendix Cloud v4. Please contact support to upgrade to the v4 Cloud to access this functionality. |
 | 404 | ENVIRONMENT_NOT_FOUND | Environment not found. |
 
 **Example Output**

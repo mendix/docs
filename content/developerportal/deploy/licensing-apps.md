@@ -4,7 +4,7 @@ title: "Licensing Mendix Cloud Apps"
 parent: "mendix-cloud-deploy"
 menu_order: 15
 description: "Licensing apps for production by linking them to a licensed cloud node."
-tags: ["App", "Node", "Developer Portal", "Deploy", "Link", "Unlink", "Licensed", "Sandbox", "Upgrade", "Mendix Cloud", "V3", "V4"]
+tags: ["App", "Node", "Developer Portal", "Deploy", "Link", "Unlink", "Licensed", "Free App", "Upgrade", "Mendix Cloud", "v3", "v4"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -24,7 +24,7 @@ These instructions will not move databases, file storage, or any other environme
 
 ## 2 Basic Concepts and Overview
 
-When you deploy an app to the cloud, whether it is a free app or a licensed app, it will consist of a number of parts:
+When you deploy an app to the cloud, whether it is a Free App or a licensed app, it will consist of a number of parts:
 
 * Mendix Runtime – essentially one or more instances of your app running in a container
 * Routing layer
@@ -36,9 +36,9 @@ This is the Mendix **environment**.
 
 In a **node** in the Mendix Cloud, you may have one, or more, of these environments. For more information about nodes, see [Nodes](/developerportal/company-app-roles/nodes).
 
-For a **Free App**, your app has a single Sandbox environment which allows you to test your app. However, this comes with restrictions on how long it will run. In addition, you cannot scale the app, and the operational capabilities are limited. For more details on the restrictions of a Free App, see [Mendix Cloud](mendix-cloud-deploy#free-app).
+For a **Free App**, your app has a single environment which allows you to test your app. However, this comes with restrictions on how long it will run. In addition, you cannot scale the app, and the operational capabilities are limited. For more details on the restrictions of a Free App, see [Mendix Cloud](mendix-cloud-deploy#free-app).
 
-In a **licensed node** you have everything you need to stage and deploy your app. You can have several different environments to support development: test, acceptance, and production, for example. With [Flexible Environments](mendix-cloud-deploy#flexible-environments) in Mendix Cloud V4, you can even specify the number and names of your environments. You can scale licensed environments by providing more memory or multiple instances, and you can configure and monitor them using the tools in the Developer Portal.
+In a **licensed node** you have everything you need to stage and deploy your app. You can have several different environments to support development: test, acceptance, and production, for example. With [Flexible Environments](mendix-cloud-deploy#flexible-environments) in Mendix Cloud v4, you can even specify the number and names of your environments. You can scale licensed environments by providing more memory or multiple instances, and you can configure and monitor them using the tools in the Developer Portal.
 
 ## 3 Prerequisites
 
@@ -60,7 +60,7 @@ You need to have enabled two-factor authentication. See [Two-Factor Authenticati
 
 ## 4 Linking Your App to a Licensed Node {#licensed-node}
 
-You have deployed an app: either as a free app, or to a licensed node. You now want to link it to a licensed node, or to a different licensed node. There are several steps you need to carry out:
+You have deployed an app: either as a Free App, or to a licensed node. You now want to link it to a licensed node, or to a different licensed node. There are several steps you need to carry out:
 
 * [Back up your data](#backing-up)
 * [Unlink from the current environment](#unlink)
@@ -78,7 +78,7 @@ When you remove an app from its environment you may want to take the data (datab
 For more information on downloading a backup, see [Download a Backup](/developerportal/operate/download-backup). 
 
 {{% alert type="warning" %}}
-When you unlink your Free App from its Sandbox environment, the environment will be permanently deleted. This means that you will not be able to recover any data once the app is unlinked.
+When you unlink your Free App from its environment, the environment will be permanently deleted. This means that you will not be able to recover any data once the app is unlinked.
 
 If you are unlinking from a licensed node, the node is NOT deleted and data is retained in the node.
 {{% /alert %}}
@@ -113,7 +113,7 @@ To unlink a Free App, do the following:
 
 6.  Validate with your [Two-Factor Authentication](two-factor-authentication).
 
-Your app has now been unlinked from the Sandbox environment.
+Your app has now been unlinked from the Free App environment.
 
 ### 4.2.1 Unlinking a Licensed App
 

@@ -11,8 +11,8 @@ One of the strengths of Mendix is that it is easy to connect your Mendix applica
 ## 2 Main Documents in This Category
 
 * [Build Pluggable Widgets](pluggable-widgets) – shows you how to use the new generation of custom-built Mendix widgets based on React
-* [Make Custom Widgets](widget-development) – details how custom widgets bridge the gap between using standard Mendix components and creating very specific components yourself
-* [Write JavaScript Actions](build-javascript-actions) – teaches you to harness the power of pluggable nanoflow actions
+* [Build Custom Widgets](widget-development) – details how custom widgets bridge the gap between using standard Mendix components and creating very specific components yourself
+* [Build JavaScript Actions](build-javascript-actions) – teaches you to harness the power of pluggable nanoflow actions
 * [Implement Best Practices for JavaScript Actions](best-practices-javascript-actions) – illustrates creating high-quality JavaScript actions, using common implementation patterns, designing better APIs, and using JavaScript actions in nanoflows
 * [Explore Connectors & Adapters](explore-connectors-and-adapters) – presents some choice examples from the [Mendix App Store](https://appstore.home.mendix.com/index3.html) to consider for your app development
 * [Build Microflow Actions Using the Mendix Connector Kit](howto-connector-kit) – introduces you to using the Mendix Connector Kit to add powerful microflow actions to your app projects

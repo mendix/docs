@@ -71,7 +71,7 @@ String is represented as a simple text input in Studio Pro. It is passed as a `s
 
 #### 2.1.2 Studio Pro UI
 
-When the proprety is defined as follows:
+When the property is defined as follows:
 
 ```xml
 <property key="myString" type="string">
@@ -84,7 +84,7 @@ Then the Studio Pro UI for the property appears like this:
 
 ![](attachments/widget-property-types/string.png)
 
-When the proprety is defined as follows:
+When the property is defined as follows:
 
 ```xml
 <property key="myStringMultiline" type="string" multiline="true">
@@ -111,7 +111,7 @@ Boolean is represented as a toggle in Studio Pro. It is passed as `boolean` prop
 
 #### 2.2.2 Studio Pro UI
 
-When the proprety is defined as follows:
+When the property is defined as follows:
 
 ```xml
 <property key="myBoolean" type="boolean" defaultValue="false">
@@ -138,7 +138,7 @@ Integer is represented as a number input in Studio Pro. It is passed as a `numbe
 
 #### 2.3.2 Studio Pro UI
 
-When the proprety is defined as follows:
+When the property is defined as follows:
 
 ```xml
 <property key="myInteger" type="integer" defaultValue="1000">
@@ -153,7 +153,7 @@ Then the Studio Pro UI for the property appears like this:
 
 ### 2.4 Enumeration{#enumeration}
 
-Enumeration allows a user to select one out of multiple options defined in the *XML*. The `key` of a selected enumeration element is passed as `string` prop to a client component.
+Enumeration allows a user to select one out of multiple options defined in the XML. The `key` of a selected enumeration element is passed as `string` prop to a client component.
 
 #### 2.4.1 XML Attributes
 
@@ -168,24 +168,24 @@ Enumeration allows a user to select one out of multiple options defined in the *
 `<enumerationValues>` (required) — One `<enumerationValues>` element must be declared with multiple `<enumerationValue>` elements inside in order to define possible enumeration values. A `key` attribute is required for every enumeration value as well as a caption. Enter enumeration values like this:
 
 ```xml
-`<enumerationValue key="myEnumOption">My enum option caption</enumerationValue>`
+<enumerationValue key="myEnumOption">My enum option caption</enumerationValue>
 ```
 
 The `key` of a selected element will be passed to the client component. `key` should not be changed since it is used to identify options used in a project.
 
 #### 2.4.3 Studio Pro UI
 
-When the proprety is defined as follows:
+When the property is defined as follows:
 
 ```xml
 	<property key="myEnumeration" type="enumeration" defaultValue="red">
-	<caption>My enumeration</caption>
-	<description>My enumeration setting</description>
-	<enumerationValues>
-		<enumerationValue key="red">Red</enumerationValue>
-		<enumerationValue key="green">Green</enumerationValue>
-		<enumerationValue key="blue">Blue</enumerationValue>
-	</enumerationValues>
+		<caption>My enumeration</caption>
+		<description>My enumeration setting</description>
+		<enumerationValues>
+			<enumerationValue key="red">Red</enumerationValue>
+			<enumerationValue key="green">Green</enumerationValue>
+			<enumerationValue key="blue">Blue</enumerationValue>
+		</enumerationValues>
 	</property>
 ```
 
@@ -198,6 +198,10 @@ Then the Studio Pro UI for the property appears like this:
 ### 3.1 Icon {#icon}
 
 Icon allows a user to configure an icon similar to one used by an [action button](/refguide/action-button#icon). It is passed as `DynamicValue<IconValue>` prop to a client component.
+
+{{% alert type="info" %}}
+This property type was introduced in Mendix 8.1.
+{{% /alert %}}
 
 #### 3.1.1 XML Attributes
 
@@ -225,6 +229,10 @@ Then the Studio Pro UI for the component appears like this:
 
 Image allows a user to configure a static image from an [image collection](https://docs.mendix.com/refguide/image-collection). It is passed as `DynamicValue<ImageValue>` prop to a client component.
 
+{{% alert type="info" %}}
+This property type was introduced in Mendix 8.1.
+{{% /alert %}}
+
 #### 3.2.1 XML Attributes
 
 | Attribute  | Required | Attribute Type | Description                                                                                                                                                          |
@@ -251,7 +259,7 @@ Then the Studio Pro UI for the component appears like this:
 
 ### 4.1 Expression{#expression}
 
-Expression allows a user to configure an [expression](/refguide/expressions), the result of which  will be passed to the client component as a `DynamicValue<T>` where `T` depends on a return type of the expression.
+Expression allows a user to configure an [expression](/refguide/expressions), the result of which will be passed to the client component as a `DynamicValue<T>` where `T` depends on a return type of the expression.
 
 #### 4.1.1 XML Attributes
 
@@ -276,7 +284,7 @@ Expression allows a user to configure an [expression](/refguide/expressions), th
 
 #### 4.1.3 Studio Pro UI
 
-When the proprety is defined as follows:
+When the property is defined as follows:
 
 ```xml
 <property key="progressBarColor" type="expression" defaultValue="'red'">
@@ -438,9 +446,8 @@ When the property is defined as follows:
 		<propertyGroup caption="Object list group">
 			<property key="myObjectBool" type="boolean" defaultValue="true">
 				<caption>My boolean</caption>
-					<description>My boolean setting</description>
+				<description>My boolean setting</description>
 			</property>
-    
 			<property key="myObjectAction" type="action">
 				<caption>My action</caption>
 				<description>My action setting</description>
@@ -492,6 +499,10 @@ The TabIndex property allows pluggable widgets to implement the **Tab index** se
 
 Every pluggable widget can be [conditionally hidden](/refguide/conditions). This property can be used to control a position of the widget visibility inputs.
 
+{{% alert type="info" %}}
+This property type was introduced in Mendix 8.1.
+{{% /alert %}}
+
 ```xml
 <systemProperty key="Visibility"/>
 ```
@@ -499,6 +510,10 @@ Every pluggable widget can be [conditionally hidden](/refguide/conditions). This
 ### 5.5 Editability {#editability}
 
 The editability property allows a pluggable widget to have an editable configuration similar to a [core input widget](/refguide/text-box#editability-properties). When a widget is marked as read-only or conditionally editable with condition being false, all [editable values](client-apis-for-pluggable-widgets#editable-value) its client component receives will have `readOnly` flag.
+
+{{% alert type="info" %}}
+This property type was introduced in Mendix 8.1.
+{{% /alert %}}
 
 ```xml
 <systemProperty key="Editability"/>

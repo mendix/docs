@@ -72,7 +72,7 @@ For updates on the status of Mendix Cloud v4, Mendix Cloud v3, and other deploym
 
 * We reordered and improved the Trends pages of operating metrics to improve the user experience.
 * We improved the performance of calculating the environment health status.
-* We improved the ability to recover from a failed deployment in the free app cluster.
+* We improved the ability to recover from a failed deployment in the Free App cluster.
 
 #### Fixes
 

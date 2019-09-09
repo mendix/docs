@@ -7,11 +7,20 @@ tags: ["studio pro", "input widgets", "widget"]
 
 ## 1 Introduction
 
-Input widgets are typically used to show data to the user and allow them to edit data. The following list shows the available input widgets.
+Input widgets show data to the user and, optionally, allow them to edit the data.
 
-Input widgets need to be linked to an attribute in order to function. As such, they must be placed within a data widget filled by an object. [Data views](data-view) are the most common input data widget, though a number of other options are available.
+Input widgets need to be linked to an attribute of an entity in order to function. As such, they must be placed within a data widget containing by an object of that entity type.
 
-*   [**Text Box**](text-box) – allows to enter, edit, and display a text
+For example, the input widgets can be placed inside a [data view](data-view):
+
+![Data view containing widgets](attachments/input-widgets/data-view.png)
+
+The Input widgets category contains the following widgets:
+
+*   [**Text Box**](text-box) – displays and, optionally, allows the user to add or edit, text data from a numeric or string attribute:
+
+    ![Text box containing Name attribute](attachments/input-widgets/text-box.png)
+
 *   [**Text Area**](text-area) – allows to enter, edit it, and display a long text
 *   [**Drop-Down**](drop_down) – allows end-users to pick an option from a preset list of options
 *   [**Check Box**](check-box) – allows end-user to mark a value as true or false

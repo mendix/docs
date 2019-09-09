@@ -80,14 +80,13 @@ To start the packaging process, follow these steps:
 	
 10. Leave the default choice of how to build the package **Build Mobile App Store packages for me by sending the build configuration to Adobe PhoneGap Build** selected. 
 	You can use the alternative option to manually download a PhoneGap Build package, which you can then inspect, modify, and upload manually to Adobe PhoneGap Build (for more information, see [Customizing PhoneGap Build Packages](/refguide/customizing-phonegap-build-packages)). This is unnecessary in most scenarios.
-11. Before proceeding, you must link your PhoneGap account to your Mendix account:
+11. Before proceeding, you must link your PhoneGap account to your Mendix account. Start the hybrid mobile app package building process by clicking **Start PhoneGap Build job**, which will initiate the building process:
 
 	![phonegap authorization](attachments/publishing-a-hybrid-app/phonegap-authorization-dialog.png)
 
-12. Start the hybrid mobile app package building process by clicking **Start PhoneGap Build job**, which will initiate the building process. 
-13. The first time you start this process, you will need to authorize the Mendix Developer Portal to act on your behalf with the Adobe PhoneGap Build service. You will be presented with a dialog box asking if you want to start the redirect to Adobe PhoneGap. <br/>
+12. The first time you start this process, you will need to authorize the Mendix Developer Portal to act on your behalf with the Adobe PhoneGap Build service. In PhoneGap Build, you will be presented with a dialog box asking if you want to start the redirect to Adobe PhoneGap. <br/>
 	a. To build for the authorization, click **Authorize use of Adobe PhoneGap Build**, after which you will be temporarily redirected to the website of your Adobe PhoneGap Build. <br/>
-14. Choose **Yes** on the Adobe PhoneGap Build service page to allow the start of building jobs using your account. You will then be redirected back to the Mendix Developer Portal.
+13. Choose **Yes** on the Adobe PhoneGap Build service page to allow the start of building jobs using your account. You will then be redirected back to the Mendix Developer Portal.
 
 {{% alert type="warning" %}}If you choose **No**, you will be redirected back to the Developer Portal and you will not be able to publish your app.{{% /alert %}}
 

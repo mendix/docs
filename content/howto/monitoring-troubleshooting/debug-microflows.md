@@ -76,7 +76,7 @@ Breakpoints are points in a microflow where the application will halt execution.
 
     ![](attachments/18448571/18580008.png)
     
-5. You have the following options on this pane:  
+5. You have the following options on this pane (see available shortcut keys in [Studio Pro Overview](../../refguide/studio-pro-overview#9-debugger-shortcut-keys)):
     * Click **Step into** or **Step over** to move to the next step in the microflow (note that the difference between **Step into** and **Step over** is only noticeable if you run into a call microflow activity or a loop)
         * **Step into** means that the debugger steps into the sub microflow or loop
         * **Step over** moves the debugger to the next step in the same microflow

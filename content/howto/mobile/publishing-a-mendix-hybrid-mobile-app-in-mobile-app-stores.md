@@ -6,7 +6,7 @@ tags: ["mobile", "app store", "phonegap"]
 ---
 ## 1 Introduction
 
-Once you have finished developing a Mendix hybrid mobile application, you will want to make it available as an app for mobile platforms such as Apple iOS and Google Android. We make it possible to produce platform-specific apps. For more details on deploying platform-specific apps, see [Mobile App](/developerportal/deploy/mobileapp).
+Once you have finished developing a Mendix hybrid mobile application, you will want to make it available as an app for mobile platforms such as Apple iOS and Google Android. We make it possible to produce platform-specific installation packages. For more details on deploying platform-specific installation packages, see [Mobile App](/developerportal/deploy/mobileapp).
 
 The hybrid mobile app packaging process is based on Adobe PhoneGap. We have integrated the [Adobe PhoneGap Build](https://build.phonegap.com/) service into Mendix to provide support for automatically building the required hybrid mobile packages. Instead of worrying about technical details, you can focus on what matters most: rapidly developing an app to support your business processes.
 
@@ -62,7 +62,7 @@ To start the packaging process, follow these steps:
    b. Set the unique **App Identifier** for your app. The **App Identifier** should correspond to the ones set up in your Apple certificate.</br>
    c. If your app does not employ push notifications, disable the **Push Notifications** permission by clearing its check box.
 
-6. Select the platforms that you want to support (this how-to assumes that you will choose at least iOS).
+6. Select the platforms that you want to support.
 
 7. Optionally, upload custom-branded app icons and splash screens under the tabs for the different platforms. You can find those tabs next to the **App Info** tab.
 
@@ -110,12 +110,19 @@ For publishing to a specific platform, see the subsequent sections of this how-t
 * [Preparing and Publishing for iOS](#publishing-for-ios)
 * [Preparing and Publishing for Android](#publishing-for-android)
 
-## 6 Preparing and Publishing for iOS{#publishing-for-ios}
+## 7 Preparing and Publishing for iOS{#publishing-for-ios}
 
 Apple provides general information on [publishing an iOS app in the Apple App Store](https://developer.apple.com/programs/ios/distribute.html). Before uploading your app, make sure to check the [App Review Guidelines](https://developer.apple.com/app-store/review/) to make sure your app will be accepted. An Apple Developer Account is required. If you do not have one, [register as an Apple Developer](https://developer.apple.com/register/index.action).
 
-1. In PhoneGap Build, click the **Signing Keys** tab, and under **iOS**, click **add a key**. 
-2. A dialog box will prompt you to upload a certificate file and a provisioning profile file. You can get those files from Apple. The certificate is the *.p12* file, and the provisioning profile is the *.mobileprovision* file. For more information, see [Managing App Signing Keys](/refguide/managing-app-signing-keys).
+1.  In PhoneGap Build, click your avatar icon, then click **Edit account**:
+
+	![edit account](attachments/publishing-a-hybrid-app/edit-account.png)
+
+2.  Click the **Signing Keys** tab, and under **iOS**, click **add a key**: 
+
+	![add a key](attachments/publishing-a-hybrid-app/add-a-key.png)
+
+3. A dialog box will prompt you to upload a certificate file and a provisioning profile file. You can get those files from Apple. The certificate is the *.p12* file, and the provisioning profile is the *.mobileprovision* file. For more information, see [Managing App Signing Keys](/refguide/managing-app-signing-keys).
 3. Give the key a title that you can easily recognize, and upload the files.
 4.  Click the lock with the yellow background on the same row as your key and enter a passphrase. The key can now be used for builds for the period of an hour. After an hour, the passphrase needs to be entered again:
 

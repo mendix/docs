@@ -137,8 +137,8 @@ Your PhoneGap Build account is now ready and you can continue the packaging proc
 To complete the building process in the Mendix Developer Portal, follow these steps:
 
 1. Close your **Adobe PhoneGap Build** page and navigate back to your original **Mendix Developer Platform** page.
-2. Click **Restart build job** to restart the packaging process. 
-	You will see a **Building Mobile App Store Packages** page, which will display a **Building** status while PhoneGap Build is building your app. Once your app is ready, the page's status will show **Done**.
+2. Click **Restart build job** to restart the packaging process.</br> 
+	a. You will see a **Building Mobile App Store Packages** page, which will display a **Building** status while PhoneGap Build is building your app. Once your app is ready, the page's status will show **Done**.
 3. Click the **Download iOS package** button, and save the package (the *.ipa* file) to your computer.
 
 ### 7.2 Installing the iOS App on Your Mobile Test Device

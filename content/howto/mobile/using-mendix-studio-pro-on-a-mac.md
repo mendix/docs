@@ -37,9 +37,9 @@ To configure your Windows virtual machine to work with Mendix Studio Pro, follow
 	{{% image_container width="450" %}}![network in configuration](attachments/using-mendix-studio-pro-on-a-mac/windows-configuration.png){{% /image_container %}}
 
 4. Make sure **Source** is set to **Shared Network**.
-5. Make sure that both **Inbound** bandwidth and **Outbound** bandwidth show `Unlimited`.
+5. Make sure that both the **Inbound** bandwidth and **Outbound** bandwidth show **Unlimited**.
     If this is not the case, either enable **Network Conditioner** and set it to a profile that does not limit bandwidth,
-    or navigation to the **Options** tab and set **Resource usage** to `No limit`.
+    or click the **Options** tab and set **Resource usage** to **No limit**.
 6.  In the Parallels drop-down menu, select **Preferences**:
 
 	{{% image_container width="400" %}}![preferences in parallels](attachments/using-mendix-studio-pro-on-a-mac/preferences-dropdown.png){{% /image_container %}}

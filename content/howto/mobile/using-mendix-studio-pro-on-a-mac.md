@@ -38,8 +38,7 @@ To configure your Windows virtual machine to work with Mendix Studio Pro, follow
 
 4. Make sure **Source** is set to **Shared Network**.
 5. Make sure that both the **Inbound** bandwidth and **Outbound** bandwidth show **Unlimited**.
-    If this is not the case, either enable **Network Conditioner** and set it to a profile that does not limit bandwidth,
-    or click the **Options** tab and set **Resource usage** to **No limit**.
+	If this is not the case, either enable **Network Conditioner** and set it to a profile that does not limit bandwidth, or click the **Options** tab and set **Resource usage** to **No limit**.
 6.  In the Parallels drop-down menu, select **Preferences**:
 
 	{{% image_container width="400" %}}![preferences in parallels](attachments/using-mendix-studio-pro-on-a-mac/preferences-dropdown.png){{% /image_container %}}
@@ -48,7 +47,7 @@ To configure your Windows virtual machine to work with Mendix Studio Pro, follow
 
 	{{% image_container width="450" %}}![network tab](attachments/using-mendix-studio-pro-on-a-mac/parallels-preferences-no-ports.png){{% /image_container %}}
 
-8.  Click the **+** button and add two ports – one for 8080 and one for 8083, both forwarded to your Windows virtual machine (the 8083 port is only necessary for developing native mobile apps):
+8.  Click the **+** button and add two ports — one for 8080 and one for 8083, both forwarded to your Windows virtual machine (the 8083 port is only necessary for developing native mobile apps):
 
 	{{% image_container width="450" %}}![plus button](attachments/using-mendix-studio-pro-on-a-mac/port-setup.png){{% /image_container %}}
 

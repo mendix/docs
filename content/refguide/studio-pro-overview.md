@@ -236,7 +236,7 @@ The following shortcut keys are available for the the debugger:
 
 | Key | Description |
 | --- | --- |
-| <kbd>Alt</kbd> + <kbd>F5</kbd> | *Step into*. Moves the dubugger into the sub microflow or loop.  |
+| <kbd>Alt</kbd> + <kbd>F5</kbd> | *Step into*. Moves the debugger into the sub microflow or loop.  |
 | <kbd>Alt</kbd> + <kbd>F6</kbd> | *Step over*. Moves the debugger to the next step in the same microflow |
 | <kbd>Alt</kbd> + <kbd>F7</kbd> | *Step out*. Instructs the debugger to leave the sub microflow or loop  |
 | <kbd>Alt</kbd> + <kbd>F8</kbd> | *Continue*. Instructs the debugger to continue until it reaches another breakpoint. |

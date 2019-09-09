@@ -229,14 +229,13 @@ The following shortcut keys are available in the microflow editor:
 | <kbd>Shift</kbd> when resizing an activity | When resizing the entity, by holding <kbd>Shift</kbd> , the microflow component will stay centered at its current position and will expand equally in all directions. |
 | <kbd>Ctrl</kbd> when selecting multiple activities | When pressing the <kbd>Ctrl</kbd>, you can select additional microflow components. Clicking a selected component while holding <kbd>Ctrl</kbd> will deselect it. |
 
+## 9 Microflow Debugger Shortcut Keys {##debugger-shortcuts}
 
-## 9 Debugger Shortcut Keys
-
-The following shortcut keys are available for the the debugger:
+The following shortcut keys are available for the the microflow debugger:
 
 | Key | Description |
 | --- | --- |
-| <kbd>Alt</kbd> + <kbd>F5</kbd> | *Step into*. Moves the debugger into the sub microflow or loop.  |
-| <kbd>Alt</kbd> + <kbd>F6</kbd> | *Step over*. Moves the debugger to the next step in the same microflow |
-| <kbd>Alt</kbd> + <kbd>F7</kbd> | *Step out*. Instructs the debugger to leave the sub microflow or loop  |
-| <kbd>Alt</kbd> + <kbd>F8</kbd> | *Continue*. Instructs the debugger to continue until it reaches another breakpoint. |
+| <kbd>Alt</kbd> + <kbd>F5</kbd> | *Step into* – moves the debugger into the sub-microflow or loop.  |
+| <kbd>Alt</kbd> + <kbd>F6</kbd> | *Step over* – moves the debugger to the next step in the same microflow. |
+| <kbd>Alt</kbd> + <kbd>F7</kbd> | *Step out* – instructs the debugger to leave the sub-microflow or loop.  |
+| <kbd>Alt</kbd> + <kbd>F8</kbd> | *Continue* – instructs the debugger to continue until it reaches another breakpoint. |

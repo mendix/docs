@@ -320,7 +320,7 @@ When an XPath needs multiple constraints, each constraint must be put in bracket
 
 The [security](/howto/security/index) overview in Studio Pro must not show any incomplete (yellow) parts. All entity, microflow, and page access must be configured completely.
 
-It is recommended **not** to assign default rights to new members when defining entity access. This will ensure that access is only granted after a conscious decision.
+Assigning default rights to new members when defining entity access is NOT recommended. This will ensure that access is only granted after a conscious decision.
 
 ### 4.6 Mendix Version
 
@@ -330,8 +330,9 @@ Apps should keep up with new Mendix releases as much as possible.
 
 When introducing a new [Mendix App Store](https://appstore.home.mendix.com/index3.html) component to a project, carefully consider the support level of the component. Using components that are community supported introduces a maintainability and upgrade risk.
 
-App Store modules should **not** be modified. This is because, if an App Store module is modified, updating to a new version becomes much harder because the changes will be overwritten when a new version is downloaded from the App Store. If changing an App Store module is unavoidable, you have two options:
-1. Mark any changes you make explicitly and clearly, and perform them again when the module is updated.
-2. Copy the contents of the App Store module to another module in your App and use that module instead. Remember that your app will no longer reflect updates to the original App Store module.
+App Store modules should NOT be modified. If an App Store module is modified, updating to a new version becomes much harder, because the changes will be overwritten when a new version is downloaded from the App Store. If changing an App Store module is unavoidable, you have two options:
+
+* Mark any changes you make explicitly and clearly, and perform them again when the module is updated
+* Copy the contents of the App Store module to another module in your app and use that module instead (remember that your app will no longer reflect updates to the original App Store module)
 
 To minimize the number of changes in the actual App Store module, it is advisable to combine them in a separate extension module wherever possible.

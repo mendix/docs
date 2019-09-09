@@ -18,7 +18,7 @@ For updates on the status of Mendix Cloud v4, Mendix Cloud v3, and other deploym
 
 #### App Store Improvements
 
-* We added the flexibility to label your App Store content with a custom version number.
+* We added the flexibility to label your App Store content with a [custom version number](/developerportal/app-store/share-app-store-content#updating).
 
 ### September 5th, 2019
 

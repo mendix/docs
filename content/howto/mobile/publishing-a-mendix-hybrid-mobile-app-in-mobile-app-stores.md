@@ -66,7 +66,7 @@ To start the packaging process, follow these steps:
 
 7. Optionally, upload custom-branded app icons and splash screens under the tabs for the different platforms. You can find those tabs next to the **App Info** tab.
 
-{{% alert type="info" %}If you do not upload any images, the default Mendix-branded images that are shown will continue to be used.{{% /alert %}}
+{{% alert type="info" %}}If you do not upload any images, the default Mendix-branded images that are shown will continue to be used.{{% /alert %}}
 
 8. Click the green **Publish for Mobile App Stores** button. You will be presented with the **Build Mobile App Store Packages** page:
 

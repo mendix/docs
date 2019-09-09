@@ -182,7 +182,7 @@ Publish your app by following Apple's [Overview of publishing an app](https://he
 
 ## 8 Preparing and Publishing for Android{#publishing-for-android}
 
-If you plan on publishing an Android app, read Google's overview of [the Android app publishing process](http://developer.android.com/tools/publishing/publishing_overview.html). Before submitting your app to an app store, [review the launch checklist](http://developer.android.com/distribute/tools/launch-checklist.html). Google provides information on [publishing your app in the Google Play Store](http://developer.android.com/distribute/googleplay/index.html).
+If you plan on publishing an Android app, read Google's overview of [the Android app publishing process](http://developer.android.com/tools/publishing/publishing_overview.html). Before submitting your app to an app store, [review the launch checklist](http://developer.android.com/distribute/tools/launch-checklist.html). Google provides information on [publishing your app in the Google Play Store](https://developer.android.com/studio/publish).
 
 If you are just testing your app, you do not need to create a keystore. You can continue with the next section [Enabling your Mobile Test Device for an Android Binary (APK)](#download-apk) below. 
 
@@ -190,7 +190,7 @@ If you want to publish your Android app, you must first complete the [Android](/
 
 ### 8.1 Enabling your Mobile Test Device for an Android Binary (APK){#download-apk}
 
-After you create your build you can download the resulting APK using a download link or a QR code. One way to do this is to use your phone browser to navigate to the PhoneGap install page with your APK on it. To enable APK installations:
+After you create your build you can download the resulting APK using a download link or a QR code. To enable APK installations:
 
 1. Open your device's **Settings**.
 2. Open **Apps and notifications,** or on a Samsung Galaxy **Biometrics and Security**.
@@ -235,7 +235,7 @@ Using your new app, ensure all pages, buttons, and functionality work the way yo
 
 Upload your Mendix app to the Play Console by following the instructions on Google's [Upload your app to the Play Console](https://developer.android.com/studio/publish/upload-bundle) site. Before uploading to the Play Console you will have to complete the [signup steps](https://play.google.com/apps/publish/signup/) of signing-in with your Google account, accepting the developer agreement, paying the registration fee, and completing your account details. Once you have satisfied those requirements, you can [upload your app](https://support.google.com/googleplay/android-developer/answer/7159011) to the Play Console.
 
-### 8.5 Create, Review & Roll Out a Release
+### 8.5 Create, Review, and Roll Out a Release
 
 Follow the steps in Google's [Prepare & roll out releases](https://support.google.com/googleplay/android-developer/answer/7159011) to create, prepare, review, and roll out your app release. You can also consult Google's [Run apps on a hardware device](https://developer.android.com/studio/run/device) for detailed instructions on testing your app using a physical Android device instead of an emulator.
 

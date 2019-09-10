@@ -24,7 +24,7 @@ Pluggable widgets are the successor to [Custom widgets](/howto/extensibility/wid
 | UI technology                   | [React](#3-client-component)   | [Dojo](/howto/extensibility/widget-development#3-2-dojo) |
 | Data access                     | Declarative, props-based       | Imperative, callback-based                                                      |
 | Access to the Mendix Client API | No                             | [Yes](https://apidocs.mendix.com/8/client/)                                     |
-| Build Native mobile widgets     | [Yes](#5-2-widget-description) | No                                                                              |
+| Build native mobile widgets     | [Yes](#5-2-widget-description) | No                                                                              |
 
 | Data                                                             | Pluggable widgets                                    | Custom widgets                                                        |
 | ---------------------------------------------------------------- | ---------------------------------------------------- | --------------------------------------------------------------------- |
@@ -32,15 +32,15 @@ Pluggable widgets are the successor to [Custom widgets](/howto/extensibility/wid
 | Retrieve additional data over association, microflow or nanoflow | Planned                                              | [Yes](https://apidocs.mendix.com/8/client/mx.data.html#.get)          |  |
 | Template Text; combine data and translatable text                | [Yes](property-types-pluggable-widgets#texttemplate) | No                                                                    |
 | Expression; logic using data values                              | [Yes](property-types-pluggable-widgets#expression)   | No                                                                    |
-| File support; upload, download and open                          | No                                                   | [Yes](https://apidocs.mendix.com/8/client/mx.data.html#.saveDocument) |
+| File support; upload, download, and open                          | No                                                   | [Yes](https://apidocs.mendix.com/8/client/mx.data.html#.saveDocument) |
 
 | Features                                | Pluggable widgets                                   | Custom widgets |
 | --------------------------------------- | --------------------------------------------------- | -------------- |
 | Set visibility                          | [Yes](property-types-pluggable-widgets#visibility)  | No             |
 | Set editability                         | [Yes](property-types-pluggable-widgets#editability) | No             |
-| Use of Glyph Icon                       | [Yes](property-types-pluggable-widgets#icon)        | No             |
+| Use of glyph icon                       | [Yes](property-types-pluggable-widgets#icon)        | No             |
 | Show input label                        | [Yes](property-types-pluggable-widgets#label)       | No             |
-| Trigger a action on change af attribute | [Yes](property-types-pluggable-widgets#attribute)   | No             |
+| Trigger an action on change of attribute | [Yes](property-types-pluggable-widgets#attribute)   | No             |
 | Widget can contain other widgets        | Planned                                             | No             |
 
 ## 3 Client Component

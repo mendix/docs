@@ -19,22 +19,22 @@ Pluggable widgets can also include a preview component for when they are rendere
 
 Pluggable widgets are the successor to [Custom widgets](/howto/extensibility/widget-development). Pluggable widgets are based on a modern React framework, have access to better APIs in the client, and can use more advanced properties in Studio and Studio Pro. Therefore, pluggable widgets allow you to more easily implement existing front-end libraries, tools, and your own expertise. Pluggable widgets should be used instead of custom widgets whenever possible.
 
-| Concept                         | Pluggable widgets              | Custom widgets                                                                  |
+| Core Capability                         | Pluggable widgets              | Custom widgets                                                                  |
 | ------------------------------- | ------------------------------ | ------------------------------------------------------------------------------- |
 | UI technology                   | [React](#3-client-component)   | [Dojo](/howto/extensibility/widget-development#3-2-dojo) |
 | Data access                     | Declarative, props-based       | Imperative, callback-based                                                      |
 | Access to the Mendix Client API | No                             | [Yes](https://apidocs.mendix.com/8/client/)                                     |
 | Build native mobile widgets     | [Yes](#5-2-widget-description) | No                                                                              |
 
-| Data                                                             | Pluggable widgets                                    | Custom widgets                                                        |
+| Data Capability                                                        | Pluggable widgets                                    | Custom widgets                                                        |
 | ---------------------------------------------------------------- | ---------------------------------------------------- | --------------------------------------------------------------------- |
 | Access to attribute data                                         | [Yes](property-types-pluggable-widgets#attribute)   | Yes                                                                   |
-| Retrieve additional data over association, microflow or nanoflow | Planned                                              | [Yes](https://apidocs.mendix.com/8/client/mx.data.html#.get)          |  |
+| Retrieve additional data over association, microflow, or nanoflow | Planned                                              | [Yes](https://apidocs.mendix.com/8/client/mx.data.html#.get)          |  |
 | Template Text; combine data and translatable text                | [Yes](property-types-pluggable-widgets#texttemplate) | No                                                                    |
 | Expression; logic using data values                              | [Yes](property-types-pluggable-widgets#expression)   | No                                                                    |
 | File support; upload, download, and open                          | No                                                   | [Yes](https://apidocs.mendix.com/8/client/mx.data.html#.saveDocument) |
 
-| Features                                | Pluggable widgets                                   | Custom widgets |
+| Feature                                 | Pluggable widgets                                   | Custom widgets |
 | --------------------------------------- | --------------------------------------------------- | -------------- |
 | Set visibility                          | [Yes](property-types-pluggable-widgets#visibility)  | No             |
 | Set editability                         | [Yes](property-types-pluggable-widgets#editability) | No             |

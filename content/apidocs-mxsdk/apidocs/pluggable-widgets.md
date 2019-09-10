@@ -19,6 +19,28 @@ Pluggable widgets can also include a preview component for when they are rendere
 
 Pluggable widgets are the successor to [Custom widgets](/howto/extensibility/widget-development). Pluggable widgets are based on a modern React framework, have access to better APIs in the client, and can use more advanced properties in Studio and Studio Pro. Therefore, pluggable widgets allow you to more easily implement existing front-end libraries, tools, and your own expertise. Pluggable widgets should be used instead of custom widgets whenever possible.
 
+| Concept      | Pluggable widgets                                                                                     | Custom widgets                                                           |
+| ------------ | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| Framework    | [React](#3-client-component)                                                                          | [Dojo](/howto/extensibility/widget-development#3-2-dojo)                 |
+| Data access  | Declarative, props-based                                                                              | Imperative, callback-based                                               |
+| Data updates | [Receive updates in props](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets#4-2-dynamicvalue) | [Subscribe](https://apidocs.mendix.com/8/client/mx.data.html#.subscribe) |
+| API          | [Pluggable widgets API](/apidocs-mxsdk/apidocs/pluggable-widgets)                                     | [Mendix Client API](https://apidocs.mendix.com/8/client/)                |
+| Platform     | [Web and native](#5-2-widget-description)                                                             | Web                                                                      |
+
+| Feature                                                           | Pluggable widgets                                    | Custom widgets                                                        |
+| ----------------------------------------------------------------- | ---------------------------------------------------- | --------------------------------------------------------------------- |
+| Access to attribute data                                          | [Yes](property-types-pluggable-widgets#attribute)    | Yes                                                                   |
+| Retrieve additional data over associations, microflows, or nanoflows | Planned                                              | [Yes](https://apidocs.mendix.com/8/client/mx.data.html#.get)          |  |
+| Template Text; combine data and translatable text                 | [Yes](property-types-pluggable-widgets#texttemplate) | No                                                                    |
+| Expressions; logic combined with data                             | [Yes](property-types-pluggable-widgets#expression)   | No                                                                    |
+| File support; upload, download, and open                           | No                                                   | [Yes](https://apidocs.mendix.com/8/client/mx.data.html#.saveDocument) |
+| Use conditional visibility                                        | [Yes](property-types-pluggable-widgets#visibility)   | No                                                                    |
+| Use conditional editability                                       | [Yes](property-types-pluggable-widgets#editability)  | No                                                                    |
+| Use glyph icons                                                   | [Yes](property-types-pluggable-widgets#icon)         | No                                                                    |
+| Show input label                                                  | [Yes](property-types-pluggable-widgets#label)        | No                                                                    |
+| Trigger an action on change of attribute                          | [Yes](property-types-pluggable-widgets#attribute)    | No                                                                    |
+| Widgets can contain other widgets                                 | Planned                                              | No                                                                    |
+
 ## 3 Client Component
 
 The essential part of a pluggable widget is its client component: a React component rendered inside the end-user’s app. Creating this component requires some basic React knowledge. Read React's [tutorial](https://reactjs.org/tutorial/tutorial.html) if you have not worked with React before. Note that if you are building a widget to be used in [Native Mobile](/refguide/mobile#nativemobile) apps, you should use [React Native](https://facebook.github.io/react-native/) instead of React.

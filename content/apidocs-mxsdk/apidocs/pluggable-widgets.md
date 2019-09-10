@@ -21,14 +21,14 @@ Pluggable widgets are the successor to [Custom widgets](/howto/extensibility/wid
 
 | Concept                         | Pluggable widgets              | Custom widgets                                                                  |
 | ------------------------------- | ------------------------------ | ------------------------------------------------------------------------------- |
-| UI technology                   | [React](#3-client-component)   | [Dojo](https://docs.mendix.com/howto/extensibility/widget-development#3-2-dojo) |
+| UI technology                   | [React](#3-client-component)   | [Dojo](/howto/extensibility/widget-development#3-2-dojo) |
 | Data access                     | Declarative, props-based       | Imperative, callback-based                                                      |
 | Access to the Mendix Client API | No                             | [Yes](https://apidocs.mendix.com/8/client/)                                     |
 | Build Native mobile widgets     | [Yes](#5-2-widget-description) | No                                                                              |
 
 | Data                                                             | Pluggable widgets                                    | Custom widgets                                                        |
 | ---------------------------------------------------------------- | ---------------------------------------------------- | --------------------------------------------------------------------- |
-| Access to attribute data                                         | [Yes](/property-types-pluggable-widgets#attribute)   | Yes                                                                   |
+| Access to attribute data                                         | [Yes](property-types-pluggable-widgets#attribute)   | Yes                                                                   |
 | Retrieve additional data over association, microflow or nanoflow | Planned                                              | [Yes](https://apidocs.mendix.com/8/client/mx.data.html#.get)          |  |
 | Template Text; combine data and translatable text                | [Yes](property-types-pluggable-widgets#texttemplate) | No                                                                    |
 | Expression; logic using data values                              | [Yes](property-types-pluggable-widgets#expression)   | No                                                                    |

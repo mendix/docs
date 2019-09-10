@@ -233,7 +233,7 @@ While following the instructions below, be sure to replace any instance of `LOCA
 
 For an iOS app, do the following:
 
-1. Open **ios/NativeTemplate.xcworkspace** using **Xcode**.
+1. Open **ios/NativeTemplate.xcworkspace** using Xcode.
 2. Open **NativeTemplate/AppDelegate.swift**.
 3. Replace this section of the code (on line **13**):
 

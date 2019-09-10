@@ -229,7 +229,7 @@ The following shortcut keys are available in the microflow editor:
 | <kbd>Shift</kbd> when resizing an activity | When resizing the entity, by holding <kbd>Shift</kbd> , the microflow component will stay centered at its current position and will expand equally in all directions. |
 | <kbd>Ctrl</kbd> when selecting multiple activities | When pressing the <kbd>Ctrl</kbd>, you can select additional microflow components. Clicking a selected component while holding <kbd>Ctrl</kbd> will deselect it. |
 
-## 9 Microflow Debugger Shortcut Keys {##debugger-shortcuts}
+## 9 Microflow Debugger Shortcut Keys{#debugger-shortcuts}
 
 The following shortcut keys are available for the the microflow debugger:
 

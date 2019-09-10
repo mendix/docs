@@ -39,6 +39,7 @@ Many errors occur if you do not set properties (for example, a data source) for 
 | CE0037     | A variable is required. You can set it in properties.        | Change Variable                                              | You have added a **Change Variable** activity to your microflow but did not specify what variable to change. | Open the properties of **Change Variable** and set a variable in **Data Source**. |
 | CE0038     | 'Value' is required. You can set it in properties.           | Change Variable                                              | You have added a **Change Variable** activity to your microflow but did not specify the new value for the changed variable. | Open the properties of **Change Variable** and set **Value** in **Data Source**. |
 | CE0038     | 'Value' is required. You can set it in properties.           | Create Variable                                              | You have added a **Create Variable** activity to your microflow but did not specify the initial value for the variable. | Open the properties of **Create Variable** and set **Value** in **Data Source**. |
+| CE0573     | Parameter{S_IF_PLURAL} {PARAMETERS} of the selected {NANO_OR_MICROFLOW} {DO_OR_DOES} not match available arguments. |                                                              |                                                              |                                                              |
 
 ## 3 Properties Set Incorrectly Consistency Errors
 

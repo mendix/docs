@@ -2,7 +2,7 @@
 title: "Create the Domain Model"
 parent: "sdk-howtos"
 menu_order: 30
-description: "Explains how to create a domain model with inheritance and what the relation is between the metamodel and the SDK."
+description: "Explains how to create a domain model with inheritance and what the relation is between the Metamodel and the SDK."
 ---
 
 ## 1 Introduction
@@ -12,7 +12,7 @@ You now have your first script up and running, which creates a new app with a si
 In this document, you will learn how to do the following:
 
 * Create a domain model with inheritance
-* Explain the relation between the metamodel and the SDK
+* Explain the relation between the Metamodel and the SDK
 
 After completing this how-to, you will be able to generate apps with the following domain model:
 

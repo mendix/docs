@@ -144,7 +144,7 @@ Make sure any custom or added Sass files are all imported in either *styles/web/
 
 After troubleshooting your issues with the guidance above, complete the following steps to test your migrated app project:
 
-## 2.5 Working with a Modified Custom Folder {#modified}
+### 2.5 Working with a Modified Custom Folder {#modified}
 
 1. Recompile your Sass to CSS.
 2. Test your app project to see if everything works as expected.

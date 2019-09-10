@@ -24,8 +24,8 @@ Pluggable widgets are the successor to [Custom widgets](/howto/extensibility/wid
 | Framework    | [React](#3-client-component)                                                                          | [Dojo](/howto/extensibility/widget-development#3-2-dojo)                 |
 | Data access  | Declarative, props-based                                                                              | Imperative, callback-based                                               |
 | Data updates | [Receive updates in props](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets#4-2-dynamicvalue) | [Subscribe](https://apidocs.mendix.com/8/client/mx.data.html#.subscribe) |
-| API          | [Pluggable Widgets API](/apidocs-mxsdk/apidocs/pluggable-widgets)                                     | [Mendix Client API](https://apidocs.mendix.com/8/client/)                |
-| Platform     | [Web and Native](#5-2-widget-description)                                                             | Web                                                                      |
+| API          | [Pluggable widgets API](/apidocs-mxsdk/apidocs/pluggable-widgets)                                     | [Mendix Client API](https://apidocs.mendix.com/8/client/)                |
+| Platform     | [Web and native](#5-2-widget-description)                                                             | Web                                                                      |
 
 | Feature                                                           | Pluggable widgets                                    | Custom widgets                                                        |
 | ----------------------------------------------------------------- | ---------------------------------------------------- | --------------------------------------------------------------------- |
@@ -36,7 +36,7 @@ Pluggable widgets are the successor to [Custom widgets](/howto/extensibility/wid
 | File support; upload, download and open                           | No                                                   | [Yes](https://apidocs.mendix.com/8/client/mx.data.html#.saveDocument) |
 | Use conditional visibility                                        | [Yes](property-types-pluggable-widgets#visibility)   | No                                                                    |
 | Use conditional editability                                       | [Yes](property-types-pluggable-widgets#editability)  | No                                                                    |
-| Use Glyph Icons                                                   | [Yes](property-types-pluggable-widgets#icon)         | No                                                                    |
+| Use glyph icons                                                   | [Yes](property-types-pluggable-widgets#icon)         | No                                                                    |
 | Show input label                                                  | [Yes](property-types-pluggable-widgets#label)        | No                                                                    |
 | Trigger an action on change of attribute                          | [Yes](property-types-pluggable-widgets#attribute)    | No                                                                    |
 | Widgets can contain other widgets                                 | Planned                                              | No                                                                    |

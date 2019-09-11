@@ -425,10 +425,11 @@ The object property allows to create an arbitrary list of properties.
 #### 4.7.1 XML Attributes
 
 | Attribute | Required | Attribute Type | Description                                                                                                                                                          |
-| --------- | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `type`    | Yes      | String         | Must be `object`                                                                                                                                                     |
-| `key`     | Yes      | String         | See [key](#key) |
-| `isList`  | Yes      | Boolean        | Must be `true`                                                                                                                                                       |
+| ---------- | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `type`     | Yes      | String         | Must be `object`                                                                                                                                                     |
+| `key`      | Yes      | String         | See [key](#key) |
+| `isList`   | Yes      | Boolean        | Must be `true`                                                                                                                                                       |
+| `required` | No       | Boolean        | This decides if the is user is required to specified items in the list (`true` by default). |
 
 #### 4.7.2 XML Elements
 

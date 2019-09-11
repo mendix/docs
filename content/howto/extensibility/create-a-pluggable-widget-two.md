@@ -40,20 +40,16 @@ Right now the input is editable for any user at all times. However, the input sh
 
 To add these restrictions, follow the instructions below:
 
-1. In *TextBox.xml* add the enumeration attribute for `Editable` inside the `propertyGroup` of `Data source` (where you put the attribute inside `propertyGroup` will affect how the attribute renders in the Mendix Studios): 
+1. In *TextBox.xml* add the [system property for `Editability`](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets#editability) inside the `propertyGroup` of `Data source` (where you put the attribute inside `propertyGroup` will affect how the attribute renders in the Mendix Studios): 
 
 	```xml
-	<property key="editable" type="enumeration" defaultValue="default">
-		<caption>Editable</caption>
-		<description/>
-		<enumerationValues>
-			<enumerationValue key="default">Default</enumerationValue>
-			<enumerationValue key="never">Never</enumerationValue>
-		</enumerationValues>
-	</property>
+	<propertyGroup caption="Editability">
+		<systemProperty key="Editability"/>
+	</propertyGroup>
 	```
 
-2. Run `npm run build` to update the TypeScript definitions inside *TextBoxProps.d.ts*. 
+2. Run `npm run build` to update the widget, when viewing in the Studio Pro, Editability property can been seen 
+	{{% image_container width="500" %}}![Editability studio pro](attachments/pluggable-part-two/editability-property-studio-pro.png){{% /image_container %}}
 
 3. Now add read-only functionality to your widget. In *TextBox.tsx*, replace the `render` function with the code below to check if the input should be disabled and pass it to in the `TextInput` component:
 
@@ -66,18 +62,17 @@ To add these restrictions, follow the instructions below:
 			className={this.props.class}
 			tabIndex={this.props.tabIndex}
 			onUpdate={this.onUpdateHandle}
-			disabled={this.isReadOnly()}
+			disabled={this.props.textAttribute.readOnly}
 		/>;
-	}
-	private isReadOnly(): boolean {
-		return this.props.editable === "never" || this.props.textAttribute.readOnly;
 	}
 	```
 
 	Explaining the code:
-	
-	* The `textAttribute` has a property `readOnly`, which will be set to `true` based on entity access or if the containing data view is set to `Editable: No`
-	* The function is not passed to the child component, but executed during rendering – the result of the `isReadOnly` function is passed (therefore, it is not necessary to bind the scope to `this`)
+
+	* The `textAttribute` has a property `readOnly`, which will be set to `true` based on:
+		- entity access is read only; based on the security model
+		- if the containing data view is set to `Editable: No`
+		- if the system property `Editability` is set with a true condition
 
 4. In *components/TextInput.tsx*, add the `disabled` property to the `InputProps` interface and set the HTML input attribute to `disabled`:
 
@@ -114,7 +109,7 @@ To add these restrictions, follow the instructions below:
 		}
 	}
 	```
-	
+
 	After altering this code, do the following to see your changes:<br/>
 		a. Run `npm run build` to update the widget.<br/>
 		b. In Mendix Studio Pro, press <kbd>F4</kbd> to synchronize your project directory.<br/>
@@ -125,7 +120,7 @@ To add these restrictions, follow the instructions below:
 
 	* The property `disabled` in an input element will behave according to the HTML's specifications – it will not respond to user actions, cannot be focused, is removed from the tab order, and will not fire any events
 
-5.  When you select **Never** for your TextBox widget's `Editable` property in Mendix Studio Pro, the widget will function like this: 
+5. When you select **Never** for your TextBox widget's `Editable` property in Mendix Studio Pro, the widget will function like this: 
 
 	{{% image_container width="500" %}}![editable never result](attachments/pluggable-part-two/settonever.png){{% /image_container %}}
 
@@ -172,7 +167,7 @@ This section will teach you to add validation to your TextBox widget. Using micr
 	Alert.displayName = "Alert";
 	Alert.defaultProps = { alertStyle: "danger" };
 	```
-	
+
 	Explaining the code:
 
 	* The `Alert` component does not have a state and can be written as a stateless function component
@@ -205,28 +200,28 @@ This section will teach you to add validation to your TextBox widget. Using micr
 	import { Component, ReactNode, Fragment, createElement } from "react";
 	import { Alert } from "./components/Alert";
 	```
-	
+
 	After altering this code, do the following to see your changes:<br/>
 		a. Run `npm run build` to update the widget.<br/>
 		b. In Mendix Studio Pro, press <kbd>F4</kbd> to synchronize your project directory.<br/>
 		c. Right-click your TextBox widget and select **Update widget**. Then click **Run Locally**.<br/>
 		d. Click **View** to see your changes.
-	
+
 	Explaining the code:
-	
+
 	* React nodes each require a root element – to create a non-rendering element and group the container elements, a `Fragment` can be used
 	* When there is no error the validation will be empty, the `Alert` will not show, and the component will return `null`
-	
+
 	Now, your widget will show validation feedback from its microflow:
-	
+
 	{{% image_container width="350" %}}![validation feedback demo](attachments/pluggable-part-two/microflowwithvalidationfeedback.png){{% /image_container %}}
 
 ### 3.3 Customizing Validation
 
-Validation can come from a modeled microflow or nanoflow, but can also be widget specific. For this sample you will learn to implement a custom, required message which will show when the input is empty.
+Validation can come from a modeled microflow or nanoflow, but can also be widget specific. For this sample you will learn to implement a custom, required (text template)[/apidocs-mxsdk/apidocs/property-types-pluggable-widgets#texttemplate] message which will show when the input is empty.
 
 
-1.  In *TextBox.xml*, add the `requiredMessage` property inside the `propertyGroup` of `Data source`:
+1. In *TextBox.xml*, add the `requiredMessage` property inside the `propertyGroup` of `Data source`:
 
 	```xml
 	<property key="requiredMessage" type="textTemplate" required="false">
@@ -271,7 +266,7 @@ Validation can come from a modeled microflow or nanoflow, but can also be widget
 	* The custom validator is registered to the attribute, and is called after each `setValue` call – the new value is only accepted when the validator returns no string
 	* When the validator returns an error message, it will passed to the attribute, and a re-render is triggered – the standard `this.props.textAttribute.validation` will get the message and display it in the same way as the validation feedback
 
-3.  When entering text and removing all characters, the following error is shown:
+3. When entering text and removing all characters, the following error is shown:
 
 	{{% image_container width="500" %}}![no character error](attachments/pluggable-part-two/nocharerror.png){{% /image_container %}}
 
@@ -279,12 +274,12 @@ Validation can come from a modeled microflow or nanoflow, but can also be widget
 
 Until now the components did not keep any state. Each keystroke passed through the `onUpdate` function, which set the new value. The newly-set value was received through the React lifecycle, which updated the property and called the `render` function. This method can cause many rendering actions to be triggered by all widgets that are using that same attribute, such as a re-render for each keystroke. This pattern also makes it also difficult to trigger an onChange action. The onChange action should only trigger on leaving the input combined with a changed value. 
 
-1.  In *TextBox.xml*, add the `onChange` action inside `properties` and edit the `textAttribute` property by adding a reference to the key of the action :
+1. In *TextBox.xml*, add the `onChangeAction` inside `properties` and edit the `textAttribute` property by adding a reference in the `onChange` attribute to the key of the action :
 
 	```xml
 	<propertyGroup caption="Data source">
 		<property key="textAttribute" type="attribute" onChange="onChangeAction">
-			<caption>Text attribute</caption>
+			<caption>Attribute (path)</caption>
 			<description/>
 			<attributeTypes>
 				<attributeType name="String"/>
@@ -294,12 +289,12 @@ Until now the components did not keep any state. Each keystroke passed through t
 	<!-- ... -->
 	<propertyGroup caption="Events">
 		<property key="onChangeAction" type="action" required="false">
-			<caption>OnChange action</caption>
+			<caption>On change</caption>
 			<description/>
 		</property>
 	</propertyGroup>
 	```
-	
+
 	After altering this code, do the following to see your changes:<br/>
 		a. Run `npm run build` to update the widget.<br/>
 		b. In Mendix Studio Pro, press <kbd>F4</kbd> to synchronize your project directory.<br/>
@@ -311,7 +306,7 @@ Until now the components did not keep any state. Each keystroke passed through t
 	![various actions](attachments/pluggable-part-two/variousactions.png)
 
 2. In *TextBox.tsx*, check if `onChangeAction` is available and call the execute function `onLeave` when the value is changed. When doing this, replace the `onUpdate` function with your new `onLeave` function:
-   
+
 	```tsx
 	class TextBox extends Component<TextBoxContainerProps> {
 		private readonly onLeaveHandle = this.onLeave.bind(this);
@@ -353,11 +348,11 @@ Until now the components did not keep any state. Each keystroke passed through t
 	```
 
 3. In *components/TextInput.tsx*, introduce a state for input changes and use the `onBlur` function to call the `onLeave` function by replacing the `onUpdate` function:
-   
+
 	```tsx
 	import { CSSProperties, Component, ReactNode, createElement, ChangeEvent } from "react";
 	import classNames from "classnames";
-	
+
 	export interface InputProps {
 		value: string;
 		className?: string;
@@ -426,14 +421,14 @@ Until now the components did not keep any state. Each keystroke passed through t
 To make the input widget more accessible for people using screen readers, you will need to provide hints about the input. 
 
 1. In *TextBox.tsx*, replace the `render` function with `id`, `required`, and `hasError` properties:
-   
+
 	```tsx
 	render(): ReactNode {
 		const value = this.props.textAttribute.value || "";
 		const validationFeedback = this.props.textAttribute.validation;
 		const required = !!(this.props.requiredMessage && this.props.requiredMessage.value);
 		return <Fragment>
-			<TextInput		
+			<TextInput
 				id={this.props.id}
 				value={value}
 				style={this.props.style}
@@ -485,9 +480,9 @@ To make the input widget more accessible for people using screen readers, you wi
 		onLeave?: (value: string, changed: boolean) => void;
 	}
 	```
-	
+
 	Then add the `id` and `aria` attributes to be rendered:
-	
+
 	```tsx
 	render(): ReactNode {
 		const className = classNames("form-control", this.props.className);
@@ -509,13 +504,13 @@ To make the input widget more accessible for people using screen readers, you wi
 		/>;
 	}
 	```
-	
+
 	After altering this code, do the following to see your changes:<br/>
 		a. Run `npm run build` to update the widget.<br/>
 		b. In Mendix Studio Pro, press <kbd>F4</kbd> to synchronize your project directory.<br/>
 		c. Right-click your TextBox widget and select **Update widget**. Then click **Run Locally**.<br/>
 		d. Click **View** to see your changes.
-	
+
 	Explaining the code:
 
 	* The `Label` component provided by the platform has a `for` attribute which will have a reference to the widget's ID – you must set the ID for the screen reader, so that it can link the label to the `this` input
@@ -539,7 +534,7 @@ declare function require(name: string): string;
 export class preview extends Component<TextBoxPreviewProps> {
 	render(): ReactNode {
 		const value = `[${this.props.textAttribute}]`;
-		return <TextInput value={value} disabled={this.props.editable === "never"} />;
+		return <TextInput value={value} />;
 	}
 }
 
@@ -552,6 +547,61 @@ Explaining the code:
 
 * The display component `TextInput` can be fully re-used to display the preview
 * There is no need to attach any event handlers for updates 
+
+### 3.6 Grouping and System properties
+All pluggable widgets will automatically benefit from the `Visibilty` property which can be used to set [conditional visibility](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets#visibility) of a widget.
+Within the widget.xml (property groups)[/apidocs-mxsdk/apidocs/pluggable-widgets#property-groups] can be used to move a property to an specific tab and or place them in a grouping.
+The first level group is used for the tabs and the second level group is used for the group boxes within.
+Let us reorganize `properties` section in the `TextBox.xml` to make the properties look like the core text box properties dialog.
+
+```xml
+<properties>
+	<propertyGroup caption="General">
+		<propertyGroup caption="Data source">
+			<property key="textAttribute" type="attribute" onChange="onChangeAction" >
+				<caption>Attribute (path)</caption>
+				<description/>
+				<attributeTypes>
+					<attributeType name="String"/>
+				</attributeTypes>
+			</property>
+		</propertyGroup>
+		<propertyGroup caption="Label">
+			<systemProperty key="Label" />
+		</propertyGroup>
+		<propertyGroup caption="Editability">
+			<systemProperty key="Editability"/>
+		</propertyGroup>
+		<propertyGroup caption="Visibility">
+			<systemProperty key="Visibility"/>
+		</propertyGroup>
+		<propertyGroup caption="Validation">
+			<property key="requiredMessage" type="textTemplate" required="false">
+				<caption>Required message</caption>
+				<description/>
+				<translations>
+					<translation lang="en_US">A input text is required</translation>
+				</translations>
+			</property>
+		</propertyGroup>
+	</propertyGroup>
+	<propertyGroup caption="Common">
+		<systemProperty key="Name"/>
+		<systemProperty key="TabIndex"/>
+	</propertyGroup>
+	<propertyGroup caption="Events">
+		<propertyGroup caption="Events">
+			<property key="onChangeAction" type="action" required="false">
+				<caption>On change</caption>
+				<description/>
+			</property>
+		</propertyGroup>
+	</propertyGroup>
+</properties>
+```
+
+{{% image_container width="500" %}}![property dialog Studio Pro](attachments/pluggable-part-two/property-grouping-studio-pro.png){{% /image_container %}}
+
 
 ## 4 Read More
 

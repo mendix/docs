@@ -40,7 +40,7 @@ Scheduled events can be tested locally, but they will not be run if your app is 
 
 ### Additional information
 
-The platform schedules the scheduled event by fixed intervals. That means that at startup, the platform schedules the next iterations/intervals the scheduled event should run. This is done by retrieving the intervals, and in addition the platform does some calculations. If your app is starting slowly, one of the reasons can be that one or more scheduled events have a Start date/time far in the past. In such a case, it can help to set a more recent Start date/time for these scheduled events.
+The platform schedules the scheduled event by fixed intervals. That means that at startup, the platform schedules the next iterations/intervals the scheduled event should run. This is done by retrieving the intervals, and in addition the platform does some calculations. If your app is starting slowly, one of reason might be that one or more scheduled events have a **Start date/time** far in the past. In such a case, it can help to set a more recent **Start date/time** for these scheduled events.
 
 Seconds, Minutes, Hours, Days, and Weeks are scheduled exactly as configured. However, Months and Years might not be executed as you would expect. A month is interpreted as a 31 day interval, a year as a 365 day interval.
 

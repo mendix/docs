@@ -24,7 +24,7 @@ Pluggable widgets are the successor to [Custom widgets](/howto/extensibility/wid
 | Framework    | [React](#3-client-component)                                                                          | [Dojo](/howto/extensibility/widget-development#3-2-dojo)                 |
 | Data access  | Declarative, props-based                                                                              | Imperative, callback-based                                               |
 | Data updates | [Receive updates in props](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets#4-2-dynamicvalue) | [Subscribe](https://apidocs.mendix.com/8/client/mx.data.html#.subscribe) |
-| API          | [Pluggable widgets API](/apidocs-mxsdk/apidocs/pluggable-widgets)                                     | [Mendix Client API](https://apidocs.mendix.com/8/client/)                |
+| API          | [Pluggable widgets API](/apidocs-mxsdk/apidocs/pluggable-widgets)                                     | [Mendix client API](https://apidocs.mendix.com/8/client/)                |
 | Platform     | [Web and native](#5-2-widget-description)                                                             | Web                                                                      |
 
 | Feature                                                           | Pluggable widgets                                    | Custom widgets                                                        |

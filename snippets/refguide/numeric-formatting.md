@@ -2,7 +2,7 @@
 
 <div class="alert alert-info">
 
-This mode only applies to the Decimal, Float (deprecated), and Currency (deprecated) attribute types.
+This mode only applies to attributes of type Decimal.
 
 </div>
 
@@ -28,7 +28,7 @@ _Default value:_ Fixed
 
 <div class="alert alert-info">
 
-This only applies to the Decimal, Float (deprecated), and Currency (deprecated) attribute types. This is available only when the Decimal mode is set to Fixed.
+This only applies to attributes of type Decimal and is available only when the Decimal mode is set to Fixed.
 
 </div>
 
@@ -38,6 +38,10 @@ _Default value:_ 2
 
 ### Group Digits
 
-For ease of reading, numbers with many digits before the decimal separator may be divided into groups using a delimiter. This property indicates whether the user will see these groups.
+For ease of reading, numbers with many digits before the decimal separator may be divided into groups using a delimiter when they are displayed. If the widget is editable and is the current focus of the page, then the delimiters will *not* be displayed.
 
-_Default value:_ False
+Set **Group digits** to **Yes** to display these groups.
+
+For example, with **Group digits** set to `true`, the number `1100100.01` will be displayed as `1,100,100.01`.
+
+_Default value:_ No

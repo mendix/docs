@@ -26,8 +26,8 @@ For updates on the status of Mendix Cloud v4, Mendix Cloud v3, and other deploym
 
 #### Mendix Cloud Fixes
 
-* We fixed an issue that caused the wrong Technical Contact information to be shown on the app's *General* page in the Developer Portal. (Ticket #84852)
-* We added a feedback message when you try to restore a backup while the backup is still being created. (Ticket #85786)
+* We fixed an issue that caused the wrong Technical Contact information to be shown on the app's *General* page in the Developer Portal. (Ticket 84852)
+* We added a feedback message when you try to restore a backup while the backup is still being created. (Ticket 85786)
 
 ### August 30th, 2019
 
@@ -50,8 +50,8 @@ For updates on the status of Mendix Cloud v4, Mendix Cloud v3, and other deploym
 
 #### SAP OData Connector Improvements & Fixes
 
-* We updated the **SAP OData Connector** to support the **Edm.Int64** data type. (Ticket #87284)
-* We also fixed a *java.net.SocketException: Broken pipe (Write failed)* exception which occurred when sending a large request to the OData service endpoint. (Ticket #86680)
+* We updated the **SAP OData Connector** to support the **Edm.Int64** data type. (Ticket 87284)
+* We also fixed a *java.net.SocketException: Broken pipe (Write failed)* exception which occurred when sending a large request to the OData service endpoint. (Ticket 86680)
 
 ### August 23rd, 2019
 
@@ -84,7 +84,7 @@ For updates on the status of Mendix Cloud v4, Mendix Cloud v3, and other deploym
 
 #### Fixes
 
-* We fixed an issue where updates to decimal constants in the Developer Portal were limited to 2 decimal places. This has been increased to 8 decimal places. (Ticket #85507)
+* We fixed an issue where updates to decimal constants in the Developer Portal were limited to 2 decimal places. This has been increased to 8 decimal places. (Ticket 85507)
 
 ### July 5th, 2019
 
@@ -111,15 +111,15 @@ For updates on the status of Mendix Cloud v4, Mendix Cloud v3, and other deploym
 
 #### Mendix Cloud Improvements
 
-* We added a confirmation dialogue when you delete Custom Headers
-* We made general performance improvements
+* We added a confirmation dialogue when you delete Custom Headers.
+* We made general performance improvements.
 
 #### Fixes
 
-* We fixed an issue which prevented the adding of comments to a backup. (Ticket #81993)
-* We updated the **Read documentation** link in the Mendix Cloud v4 metrics page to point to the right document. (Ticket #82130)
-* We added appropriate feedback if you try to upload a client certificate which is unsupported because it is not encoded in PEM. (Ticket #82299)
-* We fixed an issue which prevented the offboarding of a single environment if you wanted to retain other environments in the Mendix Cloud node. (Ticket #83189)
+* We fixed an issue which prevented the adding of comments to a backup. (Ticket 81993)
+* We updated the **Read documentation** link in the Mendix Cloud v4 metrics page to point to the right document. (Ticket 82130)
+* We added appropriate feedback if you try to upload a client certificate which is unsupported because it is not encoded in PEM. (Ticket 82299)
+* We fixed an issue which prevented the offboarding of a single environment if you wanted to retain other environments in the Mendix Cloud node. (Ticket 83189)
 
 ### June 15th, 2019
 
@@ -176,7 +176,7 @@ For updates on the status of Mendix Cloud v4, Mendix Cloud v3, and other deploym
 
 #### Fixes
 
-* We resolved an issue where some team members were not visible in Node Permissions after an app was relinked (Tickets 70285, 79708, 79824, 80557, 81713, and 82591).
+* We resolved an issue where some team members were not visible in Node Permissions after an app was relinked (Tickets 70285, 79708, 79824, 80557, 81713, 82591).
 
 ### May 3rd, 2019
 

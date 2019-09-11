@@ -88,7 +88,7 @@ Model SDK API docs
 
 The next step is to create an association between the `Customer` and `Invoice` entities to define their relationship: a `Customer` can have zero or more `Invoices`.
 
-The *Studio Pro Guide* explains that [Associations](/refguide/associations) have an owner and are a reference (set). In the metamodel reference guide for the [domain model](domain-model-metamodel), the overview shows that an `Association` inherits from `AssociationBase`, which means that, besides its own properties,  it has all the properties of `AssociationBase`. The metamodel reference documentation graph shows that `Entity` and `Association` are related through `child` and `parent` properties on `Association` (the arrows point from `Association` to `Entity`). The `child` and `parent` properties define the target and source of the association arrows in the domain model editor, respectively.
+The *Studio Pro Guide* explains that [Associations](/refguide/associations) have an owner and are a reference (set). In the Metamodel reference guide for the [domain model](domain-model-metamodel), the overview shows that an `Association` inherits from `AssociationBase`, which means that, besides its own properties,  it has all the properties of `AssociationBase`. The Metamodel reference documentation graph shows that `Entity` and `Association` are related through `child` and `parent` properties on `Association` (the arrows point from `Association` to `Entity`). The `child` and `parent` properties define the target and source of the association arrows in the domain model editor, respectively.
 
 So those two properties need to be set to point to the correct entities. The exact overview of all available properties for associations can be found in the Model SDK API documentation of the relevant object, in this case [`Association`](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.association.html) .
 
@@ -141,7 +141,7 @@ Model SDK API docs
 
 Finally, you want to configure the `Customer` entity to be a specialization of `Administration.Account`, so that customers can log into the app. The *Studio Pro Guide* describes inheritance on the [Entities](/refguide/entities) page. Entities that are a specialization of another entity inherit all its properties and behavior.
 
-The metamodel in the  reference guide contains a section 'Generalization relationships' with a diagram that shows how the metamodel for inheritance is structured.
+The Metamodel in the  reference guide contains a section 'Generalization relationships' with a diagram that shows how the Metamodel for inheritance is structured.
 
 In the Model SDK, the [`Entity.generalization`](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.entity.html#generalization)  property is used to configure this behavior. When it is set to a [`NoGeneralization`](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.nogeneralization.html) instance, the entity does not have a generalization. When it is set to a [`Generalization`](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.generalization.html)  instance, the entity is a specialization of the entity that is set with the  [`Generalization.generalization`](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.generalization.html#generalization) property.
 

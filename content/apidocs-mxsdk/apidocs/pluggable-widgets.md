@@ -263,5 +263,5 @@ Here is how a caption and description look in Studio Pro:
 
 * [Client APIs Available to Pluggable Widgets](client-apis-for-pluggable-widgets)
 * [Pluggable Widget Property Types](property-types-pluggable-widgets)
-* How to [Build Pluggable Widgets](/howto/extensibility/pluggable-widgets)
+* [How to Build Pluggable Widgets](/howto/extensibility/pluggable-widgets)
 

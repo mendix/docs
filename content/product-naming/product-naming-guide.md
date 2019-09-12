@@ -153,7 +153,7 @@ This appears in some Mendix Cloud and Developer Portal documentation. It continu
 Use specific SSO-related terminology instead of "AppCloud."
 {{% /alert %}}
 
-### Atlas UI
+### Atlas UI {#atlas-ui}
 
 {{% alert type="info" %}}
 Do not use just "Atlas."
@@ -517,9 +517,13 @@ Capitalize in all instances of this [role](/developerportal/company-app-roles/te
 
 #### Theme Customizer
 
-Capitalize in all instances, as this is a Mendix (Atlas UI) product and is capitalized in the UI.
+This is part of [Atlas UI](#atlas-ui).
 
-### UI Resources package
+{{% alert type="info" %}}
+Capitalize in all instances.
+{{% /alert %}}
+
+### UI resources package
 
 When talking about the package that is used, write as "UI Resources."
 

@@ -483,16 +483,16 @@ You will also have to provide **Configuration JSON** to enable your app to find 
 
 ```json
 {
-    "adminPassword": "MendixMendix12345",
-    "adminUsername": "MendixMendix12345",
-    "backupRetentionPeriod": 14,
-    "dbEngineMajorVersion": "9.6",
-    "dbInstanceType": "db.t2.micro",
-    "dbName": "mynewdb",
-    "multiAz": true,
-    "resourceTechnicalName": "des_non_prod_aws_rds",
-    "storageEncrypted": false,
-    "storageGb": 20
+   "adminPassword": "AdminPassword",
+   "adminUsername": "AdminUsername",
+   "backupRetentionPeriod": 14,
+   "dbEngineMajorVersion": "9.6",
+   "dbInstanceType": "db.t2.micro",
+   "dbName": "mynewdb",
+   "multiAz": true,
+   "resourceTechnicalName": "aws_account_name",
+   "storageEncrypted": false,
+   "storageGb": 20
 }
 ```
 

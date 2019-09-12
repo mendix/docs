@@ -257,11 +257,14 @@ This term replaces "Mx Assistant" and "Mx Assist." These terms are not to be use
 Capitalize in all instances.
 {{% /alert %}}
 
-### Mendix mobile app
+### Mendix mobile app {#mendix-mobile-app}
 
-This is the app available for Android and iOS for Mendix developers to test hybrid mobile apps using PhoneGap.
+[Mendix](/refguide/getting-the-mendix-app) is the name for the mobile app available for developers to test hybrid mobile apps using PhoneGap.
 
-Use this name as of 7.6 (do not use "Mendix Developer app" or "Mendix Mobile app").
+This term replaces "Mendix Developer app" and "Mendix Mobile app." These terms are not to be used in the product UI or documentation. For more information, see the [Outdated & Incorrect Terminology](#outdated) section below.
+
+{{% alert type="info" %}}
+To avoid confusion with "Mendix" in all its other usages, always use "the Mendix mobile app."
 
 ### Mendix Client
 
@@ -710,6 +713,10 @@ Do not use as of Mendix 7. Use "Desktop Modeler" and "Web Modeler."
 ### Mendix Business Server/Engine
 
 Do not use as of Mendix 7. Use "Mendix Runtime."
+
+### Mendix Developer app, Mendix Mobile app
+
+Do not use. Use [Mendix mobile app](#mendix-mobile-app).
 
 ### Mendix Platform Portal, Mendix Online Platform
 

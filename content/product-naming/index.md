@@ -31,5 +31,5 @@ To update the guide, send a pull request (for more information, see [How to
 Contribute to the Documentation](/developerportal/community-tools/contribute-to-the-mendix-documentation)). Pull requests will be reviewed with relevant stakeholders and necessary documentation updates will be made.
 
 {{% alert type="warning" %}}
-This guide should not give insights into the future product roadmap.
+This guide should not give insights into the product roadmap.
 {{% /alert %}}

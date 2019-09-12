@@ -434,11 +434,15 @@ Mendix needs access to a relational database backend and can run using different
 
 ### 8.1 Running Mendix on PostgreSQL
 
+{{% alert type="warning" %}}
+SAP have deprecated the use of PostgreSQL databases bound via the marketplace. This means that SAP accounts created recently will not be able to directly bind PostgreSQL databases and you will have to use [SAP HANA](#sap-hana) or [AWS RDS PostgreSQL](#aws-rds) databases.
+{{% /alert %}}
+
 When you create your environment on SAP Cloud Platform, you can select a PostgreSQL database. During the creation of the environment, a PostgreSQL service will be added to your space and, when you deploy your app, it will be bound to the PostgreSQL service.
 
 This database service should not be unbound from your environment: see [Services Tab](#binding-services), above, for more information on required services.
 
-### 8.2 Running Mendix on SAP HANA
+### 8.2 Running Mendix on SAP HANA{#sap=hana}
 
 {{% alert type="info" %}}
 You can only use SAP HANA as the Mendix database for Mendix version 7.23.3 and above.
@@ -464,6 +468,33 @@ Please bear the following in mind when using SAP HANA as your Mendix database:
 {{% /alert %}}
 
 If you have issues with your app running on SAP HANA, you will need to use the SAP Cloud Platform cockpit to investigate. The Mendix Developer Portal does not have information on the status or configuration of the SAP HANA service.
+
+### 8.3 Running Mendix on AWS RDS PostgreSQL{#aws-rds}
+
+If you do not have any PostgreSQL databases available to bind in your marketplace, you can still use a PostgreSQL database as your Mendix database.
+
+To do this, you will need to set up a PostgreSQL database on Amazon Web Services (AWS). Instructions for doing this to support an app deployed to SAP Cloud Platform are available on the SAP Help Portal here: [PostgreSQL on Amazon](https://help.sap.com/viewer/b392039670364098a722cad3071c7af9/Cloud/en-US).
+
+To use this database for your Mendix app, you will need to choose **AWS RDS PostgreSQL** when specifying your environment on SAP Cloud Platform.
+
+![](attachments/sap-cloud-platform/aws-rds.png)
+
+You will also have to provide **Configuration JSON** to enable your app to find the database. The configuration file will be similar to the example shown below:
+
+```json
+{
+    "adminPassword": "MendixMendix12345",
+    "adminUsername": "MendixMendix12345",
+    "backupRetentionPeriod": 14,
+    "dbEngineMajorVersion": "9.6",
+    "dbInstanceType": "db.t2.micro",
+    "dbName": "mynewdb",
+    "multiAz": true,
+    "resourceTechnicalName": "des_non_prod_aws_rds",
+    "storageEncrypted": false,
+    "storageGb": 20
+}
+```
 
 ## 9 Issues
 

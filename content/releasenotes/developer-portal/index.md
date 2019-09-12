@@ -14,6 +14,12 @@ For updates on the status of Mendix Cloud v4, Mendix Cloud v3, and other deploym
 
 ## 2019
 
+### September 13th, 2019
+
+#### SAP Cloud Platform Improvements
+
+* We added support for AWS RDS PostgreSQL databases when deploying to SAP Cloud Platform
+
 ### September 11th, 2019
 
 #### App Store Improvements

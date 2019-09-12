@@ -173,6 +173,7 @@ partners:
     - "SAP"
     - "Siemens"
 glossary:
-  space: "Mendix Product Glossary"
+  space: "Glossary"
   priority: false
+  noindex: true
   draft: true

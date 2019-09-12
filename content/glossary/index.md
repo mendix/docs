@@ -1,5 +1,5 @@
 ---
-title: "Mendix Product Glossary"
+title: "Glossary"
 draft: true
 ---
 

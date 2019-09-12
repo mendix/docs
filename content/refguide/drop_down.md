@@ -1,44 +1,55 @@
 ---
-title: "Drop-Down"
+title: "Drop Down"
 parent: "input-widgets"
 menu_order: 30
 tags: ["Drop-down", "input", "page", "widget", "enumeration", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-A drop-down is an [input widget](input-widgets) that can be used to display and edit enumeration attributes. It should not be confused with a reference selector, which is used to select a object with which to fill an [association](associations).
+## 1 Introduction
+
+A **drop down** is used to display and, optionally, allow the end-user to edit the value of an attribute of [data type](data-types) *enumeration*.
+
+A drop down must be placed in a [data widget](data-widgets) and displays an attribute of the object(s) retrieved by that widget. The name of the attribute to be displayed is shown inside the drop down, between square brackets, and colored blue.
 
 {{% alert type="info" %}}
-
- ![](attachments/pages/drop-down.png)
-
-This drop-down widget allows the user to select their favorite color.
-
+A drop down should not be confused with a [reference selector](reference-selector), which is used to select an [association](associations) to another object.
 {{% /alert %}}
 
-## General Properties
+For example, the following drop down allows the end-user to see, and set, the **Region** to which a customer is allocated.
 
-### Empty Option Caption
+![](attachments/drop-down/drop-down.png)
 
-This property represents the caption for the empty option in the drop-down shown to the user. This is a translatable text. For more details, see [Translatable Texts](translatable-texts).
+## 2 Properties
 
-{{% alert type="info" %}}
+An example of drop down properties is represented in the image below:
 
-Filling out the caption for an empty option improves the user experience of your application. It also helps screen-reader users to operate the application easily. For example, the drop-down that represents the color selection for a car could have a caption reading "Select a color".
+{{% image_container width="250" %}}![](attachments/drop-down/drop-down-properties.png)
+{{% /image_container %}}
 
-{{% /alert %}}
+Text box properties consist of the following sections:
 
-## Validation Properties
+* [Common](#common)
+* [Data source](#data-source)
+* [Design Properties](#design-properties)
+* [Editability](#editability)
+* [Events](#events)
+* [General](#general)
+* [Label](#label)
+* [Validation](#validation)
+* [Visibility](#visibility)
 
-{{% snippet file="refguide/widget-validation.md" %}}
+### 2.1 Common Section{#common}
 
-## Data Source Properties
+{{% snippet file="refguide/common-section-link.md" %}}
+
+### 2.2 Data Source Section{#data-source}
 
 {{% snippet file="refguide/attribute-path-property.md" %}}
 
-{{% snippet file="refguide/label-property.md" %}}
+### 2.3 Design Properties Section{#design-properties}
 
-## Editability Properties
+### 2.4 Editability Section{#editability}
 
 {{% snippet file="refguide/editable-property.md" %}}
 
@@ -46,13 +57,7 @@ Filling out the caption for an empty option improves the user experience of your
 
 {{% snippet file="refguide/condition-property.md" %}}
 
-## Visibility Properties
-
-{{% snippet file="refguide/visibility-property.md" %}}
-
-{{% snippet file="refguide/visibility-property-with-module-roles-simple.md" %}}
-
-## Events Properties
+### 2.5 Events Section{#events}
 
 {{% snippet file="refguide/on-change-event.md" %}}
 
@@ -60,15 +65,29 @@ Filling out the caption for an empty option improves the user experience of your
 
 {{% snippet file="refguide/on-leave-event.md" %}}
 
-## Common Properties
+### 2.6 General Section{#general}
 
-{{% snippet file="refguide/name-property.md" %}}
+#### 2.6.1 Empty Option Caption
 
-{{% snippet file="refguide/class-property.md" %}}
+Empty option caption is the text that is shown for the empty option in the drop-down shown to the end-user. This is a translatable text. For more details, see [Translatable Texts](translatable-texts).
 
-{{% snippet file="refguide/style-property.md" %}}
+Adding a caption for the empty option improves the user experience of your application. It also helps end-users using a screen-reader to operate the application easily.
 
-{{% snippet file="refguide/tab-index-property.md" %}}
+For example, the drop-down that allows the end-user to select the region allocated to a customer could have a caption `Select a region`.
+
+![](attachments/drop-down/select-a-region.png)
+
+### 2.7 Label Section{#label}
+
+{{% snippet file="refguide/label-property.md" %}}
+
+### 2.8 Validation Section{#validation}
+
+{{% snippet file="refguide/widget-validation.md" %}}
+
+### 2.9 Visibility Section{#visibility}
+
+{{% snippet file="refguide/visibility-section-link.md" %}}
 
 ## Read More
 

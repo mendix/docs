@@ -8,7 +8,7 @@ tags: ["studio pro"]
 
 ## 1 Introduction
 
-A **text box** is used to display the value of an attribute from an object in a textual form. It can be used to display attributes of the following [data types](data-types):
+A **text box** is used to display and, optionally, allow the end-user to edit the value of an attribute from an object in a textual form. It can be used to display attributes of the following [data types](data-types):
 
 * Autonumber
 * Decimal
@@ -19,7 +19,7 @@ A **text box** is used to display the value of an attribute from an object in a 
 
 A text box must be placed in a [data widget](data-widgets) and displays an attribute of the object(s) retrieved by that widget. The name of the attribute to be displayed is shown inside the text box, between square brackets, and colored blue.
 
-For example, the following text box allows the end-user to see, and set the **Name** of a customer.
+For example, the following text box allows the end-user to see, and set, the **Name** of a customer.
 
 ![](attachments/text-box/text-box.png)
 
@@ -61,7 +61,7 @@ Text box properties consist of the following sections:
 
 {{% snippet file="refguide/condition-property.md" %}}
 
-### 2.5 Events Section{#general}
+### 2.5 Events Section{#events}
 
 {{% snippet file="refguide/on-change-event.md" %}}
 
@@ -88,13 +88,16 @@ Attributes of the data type `String` or `Hashed string` can have their value hid
 | Value | Description |
 | --- | --- |
 | False *(default)*| Normal text box |
-| True | Typed characters are not shown to the end user, instead an asterisk is shown for every typed character |
+| True | Typed characters are not shown to the end-user , instead an asterisk is shown for every typed character |
 
 #### 2.7.2 Input Mask
 
-{{% alert type="info" %}}Input masks are not supported on native mobile pages.{{% /alert %}}
+{{% alert type="info" %}}Input masks are not supported on native mobile pages.
 
-The input mask limits what the user can enter in the text box, following the rules below:
+Input masks are designed for string data types. Be cautious when using them with numeric or hashed string data types.
+{{% /alert %}}
+
+The input mask limits what the end-user can enter in the text box, following the rules below:
 
 | Character | Allows Input of |
 | ----- | ----- |
@@ -110,17 +113,19 @@ For example, the input mask `99-LLL-9999` matches `24-apr-2008`.
 
 #### 2.7.3 Maximum Length
 
-This property indicates the maximum number of characters that can be typed in this text box.
+This property specifies the maximum number of characters that can be typed in this text box.
 
 | Value | Description |
 | --- | --- |
-| Attribute length *(default)* | The maximum number of characters is the same as the maximum length of the connected attribute. |
-| Unlimited | The maximum number of characters is unlimited. |
-| Custom | The maximum number of characters is set by the user. |
+| Attribute length *(default)* | The maximum number of characters is the same as the maximum length of the connected attribute |
+| Unlimited | The maximum number of characters is unlimited |
+| Custom | The maximum number of characters is specified in the widget properties |
 
 #### 2.7.4 Placeholder Text
 
-The placeholder text is shown when no text has been entered yet. It can be used to give a hint to the user what kind of text should be entered.
+The placeholder text is shown when no text has been entered yet, or when a displayed attribute is empty.
+
+It can be used, for example, to give a hint to the end-user what kind of text should be entered.
 
 ### 2.8 Label Section{#label}
 
@@ -132,11 +137,10 @@ The placeholder text is shown when no text has been entered yet. It can be used 
 
 ### 2.10 Visibility Section{#visibility}
 
-{{% snippet file="refguide/visibility-property.md" %}}
-
-{{% snippet file="refguide/visibility-property-with-module-roles-simple.md" %}}
+{{% snippet file="refguide/visibility-section-link.md" %}}
 
 ## Read More
 
-*   [Data view](data-view)
-*   [Attributes](attributes)
+* [Data Types](data-types)  
+* [Data View](data-view)
+* [Attributes](attributes)

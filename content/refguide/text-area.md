@@ -6,79 +6,46 @@ tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-A text area can be used to display and/or edit a long text value that can be split over several lines.
+## 1 Introduction
 
-{{% alert type="info" %}}
+A **text area** is used to display and, optionally, allow the end-user to edit the value of an attribute of [data type](data-types) *String*. It differs from a [text box](text-box) In that the value can be displayed over several lines.
 
-![](attachments/pages/text-area.png)
+A text area must be placed in a [data widget](data-widgets) and displays an attribute of the object(s) retrieved by that widget. The name of the attribute to be displayed is shown inside the text box, between square brackets, and colored blue.
 
-This text area allows the end-user to set the description of the product.
+For example, the following text box allows the end-user to see, and set, the **Notes** about a contact.
 
-{{% /alert %}}
+![](attachments/text-area/text-area.png)
 
-A text area must be placed in a data view or template grid and connected to an attribute of type String. The connected attribute is shown in blue and between brackets inside the text area.
+## 2 Properties
 
-## General Properties
+An example of text area properties is represented in the image below:
 
-### Grow Automatically
+{{% image_container width="250" %}}![](attachments/text-area/text-area-properties.png)
+{{% /image_container %}}
 
-This property defines whether the text area grows automatically depending on the amount of text in it.
+Text box properties consist of the following sections:
 
-_Default value:_ No
+* [Common](#common)
+* [Data source](#data-source)
+* [Design Properties](#design-properties)
+* [Editability](#editability)
+* [Events](#events)
+* [General](#general)
+* [Label](#label)
+* [Validation](#validation)
+* [Visibility](#visibility)
 
-{{% alert type="info" %}}Not supported on native mobile pages. On iOS, the text area will grow automatically.{{% /alert %}}
+### 2.1 Common Section{#common}
 
-### Number of Lines
+{{% snippet file="refguide/common-section-link.md" %}}
 
-The number of lines determine how many lines the text area shows at the same time. If the text in the text area contains more lines you will have to use a scrollbar to see it all. This property is only shown if Grow automatically is set to No.
-
-_Default value:_ 5
-
-### Counter Message
-
-This is the text displayed when typing in the text area. This text has 2 placeholders. The first placeholder shows the number of characters already typed and the second placeholder shows the maximum number of characters.
-
-{{% alert type="info" %}}
-
-You've used {1} characters of the {2} characters that are allowed.
-
-{{% /alert %}}
-
-{{% alert type="info" %}}Not supported on native mobile pages.{{% /alert %}}
-
-### Text Too Long Message
-
-This is the text displayed when the number of typed characters is higher than the maximum allowed number of characters.
-
-{{% alert type="info" %}}Not supported on native mobile pages.{{% /alert %}}
-
-### Maximum Length
-
-This property indicates the maximum number of characters that can be typed in this text box.
-
-| Value | Description |
-| --- | --- |
-| Attribute length | The maximum number of characters is the same as the maximum length of the connected attribute. |
-| Unlimited | The maximum number of characters is unlimited. |
-| Custom | The maximum number of characters is set by the user. |
-
-_Default value: Attribute length_
-
-### Placeholder Text
-
-The placeholder text is shown when no text has been entered yet. It can be used to give a hint to the user what kind of text should be entered.
-
-## Validation Properties
-
-{{% snippet file="refguide/widget-validation.md" %}}
-
-## Data Source Properties
+### 2.2 Data Source Section{#data-source}
 
 {{% snippet file="refguide/attribute-path-property.md" %}}
 
-{{% snippet file="refguide/label-property.md" %}}
+### 2.3 Design Properties Section{#design-properties}
 
-## Editability Properties
+### 2.4 Editability Section{#editability}
 
 {{% snippet file="refguide/editable-property.md" %}}
 
@@ -86,13 +53,7 @@ The placeholder text is shown when no text has been entered yet. It can be used 
 
 {{% snippet file="refguide/condition-property.md" %}}
 
-## Visibility Properties
-
-{{% snippet file="refguide/visibility-property.md" %}}
-
-{{% snippet file="refguide/visibility-property-with-module-roles-simple.md" %}}
-
-## Events Properties
+### 2.5 Events Section{#events}
 
 {{% snippet file="refguide/on-change-event.md" %}}
 
@@ -100,15 +61,68 @@ The placeholder text is shown when no text has been entered yet. It can be used 
 
 {{% snippet file="refguide/on-leave-event.md" %}}
 
-## Common Properties
+### 2.6 General Section(#general)
 
-{{% snippet file="refguide/name-property.md" %}}
+#### 2.6.1 Grow Automatically
 
-{{% snippet file="refguide/class-property.md" %}}
+{{% alert type="info" %}}The grow automatically property does not impact the behavior of native mobile pages. On iOS, the text area will always grow automatically
+{{% /alert %}}
 
-{{% snippet file="refguide/style-property.md" %}}
+This property defines whether the text area grows automatically depending on the amount of text in it.
 
-{{% snippet file="refguide/tab-index-property.md" %}}
+_Default value:_ No
+
+#### 2.6.2 Number of Lines
+
+**Number of lines** determines the size of the text area, based on the height of the lines. If the text in the text area contains more lines, a scrollbar will enable the end-user to see it all. This property is only used if **Grow automatically** is set to *No*.
+
+_Default value:_ 5
+
+#### 2.6.3 Counter Message
+
+{{% alert type="info" %}}Counter message is not supported on native mobile pages.{{% /alert %}}
+
+This is the text displayed when typing in the text area. This text has two [parameters](text#parameters). The first parameter contains the number of characters already typed and the second parameter contains the maximum number of characters.
+
+For example, if you use the counter message `You've used {1} characters of the {2} characters that are allowed.` for your text area, the end-user will see this message displayed below the text area widget:
+
+![](attachments/text-area/counter-message.png)
+
+#### 2.6.4 Text Too Long Message
+
+{{% todo %}}[DOES THIS ACTUALLY DO ANYTHING - HOW CAN IT BE DISPLAYED?]{{% /todo %}}
+
+{{% alert type="info" %}}Text too long message is not supported on native mobile pages.{{% /alert %}}
+
+This is the text displayed when the number of typed characters is higher than the maximum allowed number of characters.
+
+#### 2.6.5 Maximum Length
+
+This property specifies the maximum number of characters that can be typed in this text box.
+
+| Value | Description |
+| --- | --- |
+| Attribute length *(default)* | The maximum number of characters is the same as the maximum length of the connected attribute |
+| Unlimited | The maximum number of characters is unlimited |
+| Custom | The maximum number of characters is specified in the widget properties |
+
+#### 2.6.6 Placeholder Text
+
+The placeholder text is shown when no text has been entered yet, or when a displayed attribute is empty.
+
+It can be used, for example, to give a hint to the end-user what kind of text should be entered.
+
+### 2.7 Label Section{#label}
+
+{{% snippet file="refguide/label-property.md" %}}
+
+### 2.8 Validation Section{#validation}
+
+{{% snippet file="refguide/widget-validation.md" %}}
+
+### 2.9 Visibility Section{#visibility}
+
+{{% snippet file="refguide/visibility-section-link.md" %}}
 
 ## Read More
 

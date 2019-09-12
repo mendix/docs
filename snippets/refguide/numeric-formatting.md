@@ -1,4 +1,4 @@
-### Decimal Mode
+### Decimal Mode{#decimal-mode}
 
 <div class="alert alert-info">
 
@@ -6,7 +6,7 @@ This mode only applies to attributes of type Decimal.
 
 </div>
 
-If set to _Fixed_, the decimal part always will be displayed with the number of places specified in the **Decimal precision** property. The value will be rounded to the nearest decimal if the length of the decimal part in the attribute value exceeds the number of decimal places.
+If set to _Fixed_, the decimal part always will be displayed with the number of places specified in the [Decimal precision](#decimal-precision) property. The value will be rounded using the method defined in the [rounding](project-settings#rounding) section of *Project Settings*.
 
 If set to _Auto_, the whole decimal part of the attribute value will be displayed. No decimal part will be be displayed if the attribute value is an integer.
 
@@ -24,15 +24,17 @@ _Default value:_ Fixed
 
 \* The value is rounded to the nearest decimal with the defined number of decimal places.
 
-### Decimal Precision
+### Decimal Precision{#decimal-precision}
 
 <div class="alert alert-info">
 
-This only applies to attributes of type Decimal and is available only when the Decimal mode is set to Fixed.
+This only applies to attributes of type Decimal and is available only when the <a href="#decimal-mode">Decimal mode</a> is set to <em>Fixed</em>.
 
 </div>
 
-The precision of a value describes the number of digits that are used to express that value. This property indicates the number of decimal places (the number of digits following the point).
+The precision of a value describes the number of decimal places that are used to express that value. This property indicates the number of decimal places (the number of digits following the point).
+
+The way that the number is rounded when displayed is defined in the [rounding](project-settings#rounding) section of *Project Settings*.
 
 _Default value:_ 2
 

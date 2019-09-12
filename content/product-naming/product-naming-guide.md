@@ -15,10 +15,26 @@ Capitalize in all instances, even when just writing "App Store."
 
 ### Mendix Cloud
 
-There are two versions of Mendix Cloud, v3 and v4. For details on how to refer to these, see [version (Mendix Cloud)](#version-mxcloud) below.
-
 {{% alert type="info" %}}
 Capitalize in all instances.
+{{% /alert %}}
+
+There are two versions of Mendix Cloud, v3 and v4:
+
+{{% alert type="info" %}}
+Use a lower-case "v" except when beginning a sentence or heading.
+{{% /alert %}}
+
+{{% alert type="info" %}}
+Use "Mendix Cloud" before the version, except where the context is clear.
+{{% /alert %}}
+
+{{% alert type="success" %}}
+Two Differences Between Mendix Cloud v3 and v4
+{{% /alert %}}
+
+{{% alert type="success" %}}
+V4 has much better security than v3.
 {{% /alert %}}
 
 ### Mendix Developer Portal
@@ -525,25 +541,15 @@ Capitalize in all instances.
 
 ### UI resources package
 
-When talking about the package that is used, write as "UI Resources."
+{{% alert type="info" %}}
+Do not capitalize, as this is a generic term. **Atlas UI Resources** is an example of such a package and is capitalized in the Studio Pro UI.
+{{% /alert %}}
 
-When talking about the contents of such a package, write "resources."
+### version (Mendix, Studio Pro, Runtime)
 
-#### version (Mendix Cloud) {#version-mxcloud}
-
-Use lower-case except when beginning a sentence or heading.
-
-Use _Mendix Cloud_ before the version, except where the context is clear.
-
-**2 Differences Between Mendix Cloud v3 and v4**
-
-V4 has much better security than v3.
-
-### version (Studio Pro and Mendix Runtime)
-
-Either use _Studio Pro 8.1.0_ or _Mendix 8.1.0_. Can also use _version 8.1.0 of Studio Pro_ writing "version" in full.
-
-Do not use lower-case "v" to describe a Studio Pro or Mendix Runtime version – this is reserved for the Mendix Cloud version.
+{{% alert type="info" %}}
+Do not use lower-case "v" to describe a version for Mendix, Studio Pro, or Runtime (this is reserved for the Mendix Cloud version).
+{{% alert type="info" %}}
 
 ### virtual private cloud
 

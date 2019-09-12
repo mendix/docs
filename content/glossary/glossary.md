@@ -5,7 +5,7 @@ draft: true
 
 ## Main Mendix Product Terms
 
-These are branded Mendix terms, but they do not always need &quot;Mendix&quot; in front of them in the documentation.
+These are branded Mendix terms, but they do not always need  "Mendix" in front of them in the documentation.
 
 ### Mendix App Store
 
@@ -825,7 +825,7 @@ Text and descriptions should be taken from [Siemens.com/MindSphere](https://siem
 
 Description of MindSphere: &quot;MindSphere is the cloud-based, open IoT operating system from Siemens&quot;
 
-## Outdated &amp; Incorrect Terminology – Decisions &amp; Usage
+## Outdated & Incorrect Terminology – Decisions & Usage {#decisions}
 
 This section contains terms that are not used or have had their name changed.
 

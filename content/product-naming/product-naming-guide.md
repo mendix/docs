@@ -7,7 +7,7 @@ draft: true
 
 These are branded Mendix product names, but they do not always need  "Mendix" in front of them in the documentation.
 
-### Mendix App Store
+### Mendix App Store {#app-store}
 
 {{% alert type="info" %}}
 Capitalize in all instances, even when just writing "App Store."
@@ -161,10 +161,8 @@ Do not use just "Atlas."
 
 ### Build Server
 
-Described in the [Mendix Platform Evaluation Guide](https://www.mendix.com/evaluation-guide/enterprise-capabilities/platform-architecture).
-
 {{% alert type="info" %}}
-Capitalize in all instances of the Mendix Build Server (to parallel "Team Server"). 
+Capitalize in all instances of the Mendix Build Server (to parallel "Team Server" and "Model Server").
 {{% /alert %}}
 
 ### Business Engineer
@@ -295,6 +293,18 @@ Do not use "the forum," always use "the Mendix Forum."
 Do not capitalize "level."
 {{% /alert %}}
 
+### Mendix Metamodel
+
+{{% alert type="info" %}}
+Capitalize in all instances.
+{{% /alert %}}
+
+### Mendix Model Share
+
+{{% alert type="info" %}}
+Capitalize in all instances.
+{{% /alert %}}
+
 ### Mendix points
 
 {{% alert type="info" %}}
@@ -375,93 +385,43 @@ Capitalize in all instances.
 Capitalize in all instances.
 {{% /alert %}}
 
-### Mendix Metamodel
-
-Capitalize in all instances of referring to the Mendix Metamodel. Write as one word.
-
-Preferably, write as "Mendix Metamodel" for added clarity.
-
-### microflow
-
-### model
-
-The collection of artefacts that make up an app.
-
-### model options
-
 ### Model Server
 
-Capitalize in all instances of the Mendix Model Server (to parallel Team Server). Used in Evaluation Guide.
-
-### Model Share
-
-Capitalize in all instances.
-
-### MxAdmin
-
-### MxBuild
-
-### MxClientSystem
-
-### MxCloud
-
-### MxID
-
-### MXModel
-
-### MxModelReflection
-
-### mxruntime
-
-### nanoflow
-
-Nanoflows make it possible to visually model application logic that runs on your device or in the browser. You can model business logic, and manipulate, store, and retrieve data. Nanoflows are usually short-lived and triggered by a human.
-
-### object
-
-Within the domain model, an object refers to an instance of an entity.
-
-For example, the **Location** _entity_ might contain the **Address** _attribute_. A **Location** _object_ would contain a specific address, for example, "268 Summer Street, Boston, MA 0221" or "Gedempte Zalmhaven 4k, 3011 BT Rotterdam."
-
-Also see entity.
+{{% alert type="info" %}}
+Capitalize in all instances of the Mendix Model Server (to parallel "Team Server" and "Build Server"). 
+{{% /alert %}}
 
 ### on-premises
 
-When we talk about the physical location of hardware that contains Mendix software, we&##39;re referring to a location, or premises. "Premises" means the land and buildings owned by someone, especially by a company or organization.
+When we talk about the physical location of hardware that contains Mendix software, we are referring to a location, or premises. "Premises" means the land and buildings owned by someone, especially by a company or organization.
 
-"Premise" means an idea or theory on which a statement or action is based. For example, "Your claim that Mendix can&##39;t build apps six times faster than traditional development is based on a false premise."
+"Premise" means an idea or theory on which a statement or action is based. For example, "Your claim that you cannot build apps six times faster with Mendix than with traditional development is based on a false premise."
 
+{{% alert type="info" %}}
 Do not use "on-premise," "on premise," "on-prem," or "on prem."
+{{% /alert %}}
 
-On-premises deployment is the process of…
+{{% alert type="success" %}}
+On-premises deployment needs specific security considerations.
+{{% /alert %}}
 
-### one-to-one, one-to-many
+### one-to-one & one-to-many
 
-Types of association.
-
+{{% alert type="info" %}}
 Write as "one-to-one" and "one-to-many," not as "1-1" or "1-to-many."
-
-### open feedback
-
-### OpenID
-
-### Open Project dialog box
-
-### outgoing connections certificates
-
-### package
+{{% /alert %}}
 
 ### Partner Profile
 
+{{% alert type="info" %}}
 Capitalize in all instances.
+{{% /alert %}}
 
-### path
+### persistable & non-persistable
 
-### perpetual license
-
-### persistable &amp; non-persistable
-
+{{% alert type="info" %}}
 Do not use "persistent" or "non-persistent."
+{{% /alert %}}
 
 ### planned maintenance
 
@@ -469,115 +429,91 @@ Do not use "persistent" or "non-persistent."
 
 ### platform APIs
 
-Do not capitalize when using generally. Can also use "Mendix Platform APIs."
+{{% alert type="info" %}}
+Do not capitalize when using generally.
+{{% /alert %}}
+
+{{% alert type="info" %}}
+Write "Mendix Platform APIs" to be more specific about the collection of [Mendix API](/apidocs-mxsdk/apidocs/).
+{{% /alert %}}
 
 ### Platform SDK
 
+{{% alert type="info" %}}
 Capitalize in all instances.
+{{% /alert %}}
 
-### poll
+### private/public Mendix App Store 
 
-### preferred maintenance window
-
-### private/public App Store
-
-In the public App Store, content is available to every developer in the Mendix community. In the private App Store, content is available only to developers in the user&##39;s company (and will not be reviewed by Mendix).
-
+{{% alert type="info" %}}
 Do not capitalize "private" and "public" as qualifiers.
+{{% /alert %}}
 
 ### private cloud
 
-The stateless architecture of the Mendix platform matches perfectly with the container and resource management services in Cloud Foundry. Mendix can be deployed to any Cloud Foundry environment.
-
-### pro license
-
-Does not appear in the documentation.
+{{% alert type="info" %}}
+Do not capitalize.
+{{% /alert %}}
 
 ### Product Owner
 
-This role is the owner of the product/application.
+{{% alert type="info" %}}
+Capitalize in all instances of the [App Team rol](/developerportal/settings#app-team) role.
+{{% /alert %}}
 
 ### production, acceptance, test
 
 Types of environments.
 
+{{% alert type="info" %}}
 Do not capitalize.
+{{% /alert %}}
 
 ### production environment
 
 In this environment of the server, the app is put into operation and is made available for intended use by end-users.
 
-### productivity improvements
-
-Describes features released as R&amp;D "delighters" and features based on community ideas from the Idea Forum.
-
-Used mainly as a heading in the Desktop Modeler release notes.
-
-Do not use "delighters."
-
-#### project management
-
-The [Evaluation Guide](https://www.mendix.com/evaluation-guide/app-lifecycle/requirements-intro) specifies requirements management (or "Agile requirements management") as embedded in the Mendix Platform and not "project management."
-
 ### requirements management
 
 The [Evaluation Guide](https://www.mendix.com/evaluation-guide/app-lifecycle/requirements-intro) specifies "requirements management" (or "Agile requirements management") as embedded in the Mendix Platform and not "project management."
-
-### role
-
-Be sure to differentiate between company roles, app roles, team member roles, module roles, and user roles.
-
-### running now
-
-Running requests are all requests that are currently in progress for this environment.
-
-### runtime
-
-Only use this for the general concept, as opposed to the specific Mendix Runtime.
-
-Also see Mendix Runtime.
-
-Spell as one word.
 
 ### Scrum
 
 An implementation of an Agile framework. It is explained at [Scrum.org](https://www.scrum.org/resources/what-is-scrum).
 
-Scrum should always be capitalized.
+{{% alert type="info" %}}
+Capitalize in all instances.
+{{% /alert %}}
 
 ### SCRUM Master
 
-This is how this role is written in the Developer Portal UI.
+{{% alert type="info" %}}
+"SCRUM" is in all caps for this App Team role in the Developer Portal UI.
+{{% /alert %}}
 
 #### Sprint
 
-A time-boxed event of one month or less, that serves as a container for the other Scrum events and activities. In Mendix, this is often a two-week event.
-
-Sprint should always be capitalized.
+{{% alert type="info" %}}
+Capitalize in all instances.
+{{% /alert %}}
 
 #### sub-microflow
 
-Spell with a hyphen (even though it is used without a hyphen on the UI).
-
-### team
+{{% alert type="info" %}}
+Spell with a hyphen.
+{{% /alert %}}
 
 ### Team Server
 
-Written on top of Subversion and delivered as a plugin to the Developer Portal, the Mendix Team Server is designed to make the life of a Mendix developer easier. Mendix Studio Pro is tightly integrated with the Team Server and actions like creating a new project (including a versioned model repository), updating, committing changes, and merging model versions are all available from within Studio Pro as a single click action.
-
-The Team Server is delivered as a plugin of Developer Portal for a reason: it enables you to manage Team Server access from the Developer Portal, and it enables Mendix to provide you with a revolutionary way to combine requirements, implementation, and feedback! When you commit application model changes to the Team Server from within the Modeler, you can select the user stories (reflecting requirements) that you have been working on. The Team Server will automatically create links between these user stories and the model changes you made, providing you with a way to navigate from commits to the associated requirements. Furthermore, with these links, Mendix creates a link from a user story to a changeset, which can include a link to a form (if you changed a form in the changeset). While feedback also refers to a form, Mendix can create links between feedback, forms, changesets, and user stories.
-
-The Team Server also connects the capture-and-develop phase of the agile application lifecycle. When you start working on the next version of your application, you just open Studio Pro to see the user stories planned for the current sprint and start working on them. If a user story is based on user feedback, you can directly jump to the form mentioned in the metadata of the feedback and start implementing the requested change.
-
+{{% alert type="info" %}}
 Capitalize in all instances.
-
-### Team Server project
+{{% /alert %}}
 
 ### Technical Contact
 
-The Technical Contact role is responsible for license renewal and is the first point of contact for Mendix Support. A Mendix application will always be set up and delivered with a technical contact assigned to it. The Technical Contact needs an _MxID_ before Mendix can activate a license for an application.
-
-Capitalize in all instances.
+{{% alert type="info" %}}
+Capitalize in all instances of this [role](/developerportal/company-app-roles/technical-contact).
+{{% /alert %}}
 
 #### Theme Customizer
 

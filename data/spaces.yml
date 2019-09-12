@@ -175,3 +175,5 @@ partners:
 glossary:
   space: "Glossary"
   priority: false
+  draft: true
+  

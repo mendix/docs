@@ -40,7 +40,7 @@ Right now the input is editable for any user at all times. However, the input sh
 
 To add these restrictions, follow the instructions below:
 
-1. In *TextBox.xml* add the [system property for `Editability`](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets#editability) inside the `propertyGroup` of `Data source` (where you put the attribute inside `propertyGroup` will affect how the attribute renders in the Mendix Studios): 
+1. In *TextBox.xml* add the system property for [`Editability`](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets#editability) inside the `propertyGroup` of `Data source` (where you put the attribute inside `propertyGroup` will affect how the attribute renders in the Mendix Studios): 
 
 	```xml
 	<propertyGroup caption="Editability">
@@ -48,7 +48,8 @@ To add these restrictions, follow the instructions below:
 	</propertyGroup>
 	```
 
-2. Run `npm run build` to update the widget, when viewing in the Studio Pro, Editability property can been seen 
+2.  Run `npm run build` to update the widget, when viewing in the Studio Pro, Editability property can been seen:
+
 	{{% image_container width="500" %}}![Editability studio pro](attachments/pluggable-part-two/editability-property-studio-pro.png){{% /image_container %}}
 
 3. Now add read-only functionality to your widget. In *TextBox.tsx*, replace the `render` function with the code below to check if the input should be disabled and pass it to in the `TextInput` component:
@@ -70,9 +71,9 @@ To add these restrictions, follow the instructions below:
 	Explaining the code:
 
 	* The `textAttribute` has a property `readOnly`, which will be set to `true` based on:
-		- entity access is read only; based on the security model
-		- if the containing data view is set to `Editable: No`
-		- if the system property `Editability` is set with a true condition
+		* If entity access is read only; based on the security model
+		* If the containing data view is set to `Editable: No`
+		* If the system property `Editability` is set with a true condition
 
 4. In *components/TextInput.tsx*, add the `disabled` property to the `InputProps` interface and set the HTML input attribute to `disabled`:
 
@@ -120,7 +121,7 @@ To add these restrictions, follow the instructions below:
 
 	* The property `disabled` in an input element will behave according to the HTML's specifications – it will not respond to user actions, cannot be focused, is removed from the tab order, and will not fire any events
 
-5. When you select **Never** for your TextBox widget's `Editable` property in Mendix Studio Pro, the widget will function like this: 
+5.  When you select **Never** for your TextBox widget's `Editable` property in Mendix Studio Pro, the widget will function like this: 
 
 	{{% image_container width="500" %}}![editable never result](attachments/pluggable-part-two/settonever.png){{% /image_container %}}
 
@@ -266,7 +267,7 @@ Validation can come from a modeled microflow or nanoflow, but can also be widget
 	* The custom validator is registered to the attribute, and is called after each `setValue` call – the new value is only accepted when the validator returns no string
 	* When the validator returns an error message, it will passed to the attribute, and a re-render is triggered – the standard `this.props.textAttribute.validation` will get the message and display it in the same way as the validation feedback
 
-3. When entering text and removing all characters, the following error is shown:
+3.  When entering text and removing all characters, the following error is shown:
 
 	{{% image_container width="500" %}}![no character error](attachments/pluggable-part-two/nocharerror.png){{% /image_container %}}
 

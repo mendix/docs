@@ -264,119 +264,118 @@ Capitalize in all instances.
 This term replaces "Mendix Developer app" and "Mendix Mobile app." These terms are not to be used in the product UI or documentation. For more information, see the [Outdated & Incorrect Terminology](#outdated) section below.
 
 {{% alert type="info" %}}
-To avoid confusion with "Mendix" in all its other usages, always use "the Mendix mobile app."
+To avoid confusion with "Mendix" in all its other usages, always use "the Mendix mobile app" and cross-reference [Getting the Mendix Mobile App](https://docs.mendix.com/refguide/getting-the-mendix-app).
+{{% /alert %}}
 
 ### Mendix Client
 
+{{% alert type="info" %}}
 Capitalize in all instances.
-
-### Mendix Cloud app
-
-### Mendix Cloud application
-
-### Mendix Cloud app environment
-
-### Mendix Cloud database
-
-### Mendix Cloud environment
-
-### Mendix Cloud license
-
-### Mendix Cloud location
-
-### Mendix Cloud node
-
-### Mendix Cloud server
-
-### Mendix Cloud slot
-
-### Mendix Cloud v3
-
-### Mendix Cloud v4
+{{% /alert %}}
 
 ### Mendix Deployment Archive
 
-The name of the _.mda_ package that is stored in the Deployment Package Repository.
-
+{{% alert type="info" %}}
 Capitalize in all instances.
-
-### Mendix developer
-
-### Mendix Developer site
-
-### Mendix Feedback Widget
-
-Available in the [App Store](https://appstore.home.mendix.com/link/app/199/).
-
-Capitalize in all instances.
+{{% /alert %}}
 
 ### Mendix Forum
 
-The Mendix Forum is where the Mendix Community comes together to help each other out with questions and answers and to propose ideas for improving the Mendix platform. The forum is closely integrated with the Community Profile so that Mendix community members can see all the interesting and useful information about who is participating in the forum. It has two tabs:
-
+{{% alert type="info" %}}
 Capitalize in all instances.
+{{% /alert %}}
 
-Write generally as "the forum."
+{{% alert type="info" %}}
+Do not use "the forum," always use "the Mendix Forum."
+{{% /alert %}}
 
 ### Mendix level
 
+{{% alert type="info" %}}
+Do not capitalize "level."
+{{% /alert %}}
+
 ### Mendix points
+
+{{% alert type="info" %}}
+Do not capitalize "points."
+{{% /alert %}}
 
 ### Mendix Platform Evaluation Guide
 
 Published [here](https://www.mendix.com/evaluation-guide/).
 
-Use the full name in the documentation, not just "Evaluation Guide."
+{{% alert type="info" %}}
+Use the full name when referencing, not just "Evaluation Guide."
+{{% /alert %}}
 
-### Mendix Profile
+### Mendix Profile {#profile}
 
-The profile of an individual Mendix community member.
+This term replaces "Developer Profile." This term is not to be used in the product UI or documentation. For more information, see the [Outdated & Incorrect Terminology](#outdated) section below.
 
+{{% alert type="info" %}}
 Capitalize in all instances.
-
-Use instead of "Developer Profile."
+{{% /alert %}}
 
 ### Mendix Runtime
 
-Mendix Runtime = "Mendix Business Server" + "Mendix Client."
+This term replaces "Mendix Business Server" and "Business Engine." These terms are not to be used in the product UI or documentation. For more information, see the [Outdated & Incorrect Terminology](#outdated) section below.
 
-Replaces "Mendix Business Server" and "Mendix Business Engine" as of Mendix 7.
+{{% alert type="info" %}}
+Capitalize in instances when referring to Runtime as part of the Mendix product. The best practice is to use a definite article for additional clarity: "the Mendix Runtime."
+{{% /alert %}}
 
-The best practice is to use a definite article for additional clarity: "the Mendix Runtime."
-
-Capitalize in instances referring to Runtime as part of the Mendix product.
-
+{{% alert type="info" %}}
 Do not capitalize when referring to the generic "runtime" concept.
+{{% /alert %}}
 
-See Terminology Decisions and Usagebelow for comments on this term under "Mendix Business Server."
-
+{{% alert type="success" %}}
 On the Mendix Runtime…
+{{% /alert %}}
 
+{{% alert type="success" %}}
 At runtime,…
+{{% /alert %}}
 
 ### Mendix Server
 
+{{% alert type="info" %}}
 Capitalize in all instances.
+{{% /alert %}}
 
 ### Mendix Service Console
 
+{{% alert type="info" %}}
 Capitalize in all instances.
+{{% /alert %}}
 
 ### Mendix Support
 
-The department within Mendix that deals with customer requests and processes tickets.
-
+{{% alert type="info" %}}
 Do not use "Customer Support," "Mendix Customer Support," or simply "Support."
+{{% /alert %}}
 
+{{% alert type="info" %}}
 Capitalize in all instances.
+{{% /alert %}}
+
+### Mendix Support Portal
+
+{{% alert type="info" %}}
+Do not use "Customer Portal" or "Customer Support Portal."
+{{% /alert %}}
+
+{{% alert type="info" %}}
+Capitalize in all instances.
+{{% /alert %}}
 
 ### Mendix UI Framework
 
-Applicable to the Desktop Modeler.
-
+{{% alert type="info" %}}
 Capitalize in all instances.
+{{% /alert %}}
 
-### Metamodel
+### Mendix Metamodel
 
 Capitalize in all instances of referring to the Mendix Metamodel. Write as one word.
 
@@ -560,14 +559,6 @@ Sprint should always be capitalized.
 
 Spell with a hyphen (even though it is used without a hyphen on the UI).
 
-### Support Portal
-
-The application that is used to submit requests and track tickets. Used by both customers and Mendix employees.
-
-Do not use "Customer Portal" or "Customer Support Portal."
-
-Capitalize in all instances.
-
 ### team
 
 ### Team Server
@@ -689,6 +680,10 @@ This was the name of the R&amp;D development project in early 2018 and started t
 ### Desktop Modeler
 
 Replaced by [Mendix Studio Pro]{#pro} for Mendix 8.
+
+### Developer Profile
+
+Replaced by [Mendix Profile](#profile).
 
 ### launchpad
 

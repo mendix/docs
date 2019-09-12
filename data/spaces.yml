@@ -172,8 +172,3 @@ partners:
     - "IBM"
     - "SAP"
     - "Siemens"
-glossary:
-  space: "Glossary"
-  priority: false
-  noindex: true
-  draft: true

@@ -2,7 +2,7 @@
 title: "Use Calypso"
 parent: "atlas-ui"
 menu_order: 70
-tags: ["Atlas", "UI", "UX", "Calypso"]
+tags: ["Atlas", "UI", "UX", "Calypso", "styling", "CSS"]
 description: "This document will teach you to use Calypso, a tool which improves the way you edit styling."
 ---
 
@@ -18,13 +18,15 @@ Calypso is a tool which makes it easier for you to customize your Mendix apps' s
 
 ## 2 Prerequisites
 
-* Download Calypso from its [Dropbox folder](https://www.dropbox.com/sh/46hip6pq8s9ipqp/AAAHBwm-8qcv9bQKSR7BrirCa?dl=0)
+* Download Calypso [here](https://www.dropbox.com/sh/46hip6pq8s9ipqp/AAAHBwm-8qcv9bQKSR7BrirCa?dl=0)
 
 ## 3 Setting Up Calypso
 
 1. Install Calypso.
 
-2. Open Calypso. 
+2.  Open Calypso:
+
+	![calypso](attachments/calypso/calypso.png)
 
 3. In the **Hostname** drop-down menu, select the host name of your Mendix app's device (or put its IP address in manually by clicking **Other** and typing in the IP address). 
 	
@@ -46,7 +48,9 @@ Calypso is a tool which makes it easier for you to customize your Mendix apps' s
 
 	![files to watch](attachments/calypso/calypso-watching.png)
 
-9. Click the sun in the top-right corner to toggle between dark mode and regular mode.
+9.  Click the sun in the top-right corner to toggle between dark mode and regular mode:
+
+	![dark mode](attachments/calypso/dark-mode.png)
 
 10. Click **Run Locally** in Mendix Studio Pro to use Calypso.
 

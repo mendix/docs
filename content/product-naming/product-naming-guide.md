@@ -1,5 +1,5 @@
 ---
-title: "Product Glossary"
+title: "Product Naming Guide"
 draft: true
 ---
 
@@ -9,11 +9,9 @@ These are branded Mendix terms, but they do not always need  "Mendix" in front o
 
 ### Mendix App Store
 
-The Mendix App Store is a vibrant marketplace containing complete sample apps that can be used right away as well as various add-ons (such as connectors, widgets, and modules) that can be used to build custom apps more quickly. In the App Store, you can browse all the content, get what you need, and share the content you have created.
-
-Also see public/private App Store.
-
-Capitalize in all instances, even when just writing &quot;App Store.&quot;
+{{% alert type="info" %}}
+Capitalize in all instances, even when just writing "App Store."
+{{% /alert %}}
 
 ### Mendix Cloud
 
@@ -825,7 +823,7 @@ Text and descriptions should be taken from [Siemens.com/MindSphere](https://siem
 
 Description of MindSphere: &quot;MindSphere is the cloud-based, open IoT operating system from Siemens&quot;
 
-## Outdated & Incorrect Terminology – Decisions & Usage {#decisions}
+## Outdated & Incorrect Terminology {#outdated}
 
 This section contains terms that are not used or have had their name changed.
 

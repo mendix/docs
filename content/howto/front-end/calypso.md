@@ -2,7 +2,7 @@
 title: "Use Calypso"
 parent: "atlas-ui"
 menu_order: 70
-tags: ["Atlas", "UI", "UX", "Calypso"]
+tags: ["Atlas", "UI", "UX", "Calypso", "styling"]
 description: "This document will teach you to use Calypso, a tool which improves the way you edit styling."
 ---
 

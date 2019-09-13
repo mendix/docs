@@ -16,17 +16,17 @@ Version control in Mendix is built on top of [Apache Subversion](https://subvers
 
 ## 2 Concepts {#concepts}
 
-### 2.1 Team Server{#team-server}
+### 2.1 Team Server {#team-server}
 
 [Team Server](/developerportal/develop/team-server) is where all the committed versions of Mendix apps are stored. If you commit a revision of an app, it is stored on the Team Server.
 
 To commit to the Team Server you will need to have a role in the project which allows you to edit the app. For more information, see section [App Team Roles](https://docs.mendix.com/developerportal/company-app-roles/#app-team-roles) in *Company & App Roles*.
 
-### 2.2 Repository
+### 2.2 Repository {#repository}
 
 Within the [Team Server](#team-server) each app is stored in a repository. This repository contains all the [committed revisions](#commit) for the [Branches](#branches) of the app.
 
-### 2.3 Revision{#revision}
+### 2.3 Revision {#revision}
 
 A revision is the version of your app at a moment in time, stored on the [Team Server](#team-server).
 
@@ -35,19 +35,19 @@ Each revision of your app is given a unique number to identify it and enable you
 * The app is committed to the repository
 * A Studio Pro working copy is updated from a Studio working copy
 
-### 2.4 Working Copy{#working-copy}
+### 2.4 Working Copy {#working-copy}
 
 A working copy is the version of your app which is currently being worked on in Studio Pro or Studio. For Studio Pro, there is one working copy for each development line of the app. This model is held locally, on each computer where development work is taking place.
 
 For Studio, there is one additional working copy, held in the cloud. Only one developer at a time can edit this.
 
-### 2.5 Merge{#merge}
+### 2.5 Merge {#merge}
 
 Merging is the action of taking one [revision](#revision) of an app and applying the differences which have been made in a different revision. See the [Merging Branches](#merging-branches) section for more information.
 
 If any of the differences cannot be applied, then there is a [conflict](#conflict).
 
-### 2.6 Conflict{#conflict}
+### 2.6 Conflict {#conflict}
 
 A conflict occurs when two versions of the app cannot be combined automatically. This happens when the same document has been changed in a Studio Pro working copy and a committed [revision](#revision) and these changes cannot be reconciled. Examples are the following:
 
@@ -62,27 +62,27 @@ Updating is the action, invoked in Studio Pro, which gets the latest revision of
 
 If Studio is enabled for this development line, the process first ensures that the Studio working copy is stored as a new revision.
 
-### 2.8 Commit{#commit}
+### 2.8 Commit {#commit}
 
 Committing is the action, invoked in Studio Pro, of sending all your changes to the [repository](#repository) and making a new [revision](#revision).
 
 If Studio is enabled for this development line, the process first ensures that the Studio working copy is stored as a new revision and merged into the working copy of Studio Pro. If there are not conflicts, the changes are then sent to the repository to make a new revision.
 
-### 2.9 Development Line{#development-line}
+### 2.9 Development Line {#development-line}
 
 Development of an app is done in a Development Line where a set of related changes is made. There are two types of development line: the [Main Line](#main-line) and [Branch Lines](#branch-line).
 
-#### 2.9.1 Main Line{#main-line}
+#### 2.9.1 Main Line {#main-line}
 
 The Main Line is the initial development line for the app and is usually kept as the version which will be deployed to the production environment. Simple apps, and apps which do not require a high degree of collaboration, may only have a main line.
 
-#### 2.9.2 Branch Line{#branch-line}
+#### 2.9.2 Branch Line {#branch-line}
 
 A Branch Line is a way of making an independent set of changes which can be tested away from the Main Line.
 
 See [Branches](#branches), below, for more information on how branch lines can be used.
 
-### 2.10 Studio Enabled{#studio-enabled}
+### 2.10 Studio Enabled {#studio-enabled}
 
 You may enable Studio for one of the development lines. This means that a developer can make changes to the app through Studio and share changes with the team. All changes will be linked to the selected branch and committed as revisions to that branch. Changes made to other development lines will not be available in Studio.
 
@@ -161,7 +161,7 @@ If there are conflicts, the developer using Studio Pro will need to resolve thes
 
 ![](attachments/version-control/image6.png)
 
-## 4 Branches{#branches}
+## 4 Branches {#branches}
 
 With more complex apps, you may want to manage your code in a more sophisticated way. For example, you may want to develop new features separately from the currently deployed version of your app so that you can fix any bugs without having to release all the new features.
 
@@ -185,7 +185,7 @@ In Mendix each revision within a [repository](#repository) is given a unique ver
 
 ![](attachments/version-control/image8.png)
 
-### 4.3 Merging Branches{#merging-branches}
+### 4.3 Merging Branches {#merging-branches}
 
 You may have a branch line which will continue independently and never need to be combined with any other development lines. For example, you may create a branch for a particular release of your app and only ever use it to fix bugs in that release.
 

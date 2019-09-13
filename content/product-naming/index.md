@@ -5,9 +5,9 @@ draft: true
 
 ## Purpose of This Guide
 
-The [Product Naming Guide](product-naming) contains the main Mendix product names, other Mendix terms, and partner terms currently being used by in the Mendix Platform UI, the [Mendix Documentation](https://docs.mendix.com/), and the [Mendix Platform Evaluation Guide](https://www.mendix.com/evaluation-guide/). 
+The [Product Naming Guide](product-naming-guide) contains the main Mendix product names, other Mendix terms, and partner terms currently being used by in the Mendix Platform UI, the [Mendix Documentation](https://docs.mendix.com/), and the [Mendix Platform Evaluation Guide](https://www.mendix.com/evaluation-guide/). 
 
-The purpose of this guide is to provide guidelines on usage, capitalization, and spelling as well as notes on important details and [terminology history](glossary#outdated) where necessary. Accordingly, if there are no specific usage guidelines or decisions on product terms (at least not yet), they are generally not included here.
+The purpose of this guide is to provide guidelines on usage, capitalization, and spelling as well as notes on important details and [terminology history](product-naming-guide#outdated) where necessary. Accordingly, if there are no specific usage guidelines or decisions on product terms (at least not yet), they are generally not included here.
 
 The purpose of this guide is not to provide a definition for each term. Terminology details are only given here for clarification where necessary. Product definitions are found throughout the [Mendix Documentation](https://docs.mendix.com/), and for the sake of maintenance, they are not duplicated in this guide.
 

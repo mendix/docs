@@ -9,14 +9,14 @@ tags: ["Version Control", "Application Lifecycle Management", "Commit", "Collabo
 
 Version Control allows you to manage your app development in two ways:
 
-* Firstly, it allows you to store ([*commit*](#commit)) the current revision of your model and all its resources. You give it an identifier so that you can get that revision again and share it with other team members.
-* Secondly, it allows work to take place on multiple [*development lines*](#development-line) so that several different features can be worked on at once. These development lines can then be [*merged*](#merge) back together so that your *main line* contains all the completed features that have been worked on separately.
+* Firstly, it allows you to store ([commit](#commit)) the current revision of your model and all its resources. You give it an identifier so that you can get that revision again and share it with other team members.
+* Secondly, it allows work to take place on multiple [development lines](#development-line) so that several different features can be worked on at once. These development lines can then be [merged](#merge) back together so that your [Main Line](#main-line) contains all the completed features that have been worked on separately.
 
 Version control in Mendix is built on top of [Apache Subversion](https://subversion.apache.org/) and the concepts will be familiar to Subversion users. Mendix simplifies Subversion commands by building them into Studio Pro, Studio, and the Developer Portal.
 
 ## 2 Concepts {#concepts}
 
-### 2.1 Team Server
+### 2.1 Team Server{#team-server}
 
 [Team Server](/developerportal/develop/team-server) is where all the committed versions of Mendix apps are stored. If you commit a revision of an app, it is stored on the Team Server.
 
@@ -24,32 +24,32 @@ To commit to the Team Server you will need to have a role in the project which a
 
 ### 2.2 Repository
 
-Within the *Team Server* each app is stored in a repository. This repository contains all the *committed revisions* for the *branches* of the app.
+Within the [Team Server](#team-server) each app is stored in a repository. This repository contains all the [committed revisions](#commit) for the [Branches](#branches) of the app.
 
-### 2.3 Revision
+### 2.3 Revision{#revision}
 
-A revision is the version of your app at a moment in time, stored on the *Team Server*.
+A revision is the version of your app at a moment in time, stored on the [Team Server](#team-server).
 
-Each revision of your app is given a unique number to identify it and enable you to find it in future. A new revision is created from *Studio Pro* in two circumstances:
+Each revision of your app is given a unique number to identify it and enable you to find it in future. A new revision is created from Studio Pro in two circumstances:
 
 * The app is committed to the repository
 * A Studio Pro working copy is updated from a Studio working copy
 
-### 2.4 Working Copy
+### 2.4 Working Copy{#working-copy}
 
 A working copy is the version of your app which is currently being worked on in Studio Pro or Studio. For Studio Pro, there is one working copy for each development line of the app. This model is held locally, on each computer where development work is taking place.
 
-For Studio, there is one additional working copy, held in the *cloud*. Only one developer at a time can edit this.
+For Studio, there is one additional working copy, held in the cloud. Only one developer at a time can edit this.
 
 ### 2.5 Merge{#merge}
 
-Merging is the action of taking one *revision* of an app and applying the differences which have been made in a different revision. See the [Merging Branches](#merging-branches) section for more information.
+Merging is the action of taking one [revision](#revision) of an app and applying the differences which have been made in a different revision. See the [Merging Branches](#merging-branches) section for more information.
 
-If any of the differences cannot be applied, then there is a *conflict*.
+If any of the differences cannot be applied, then there is a [conflict](#conflict).
 
-### 2.6 Conflict
+### 2.6 Conflict{#conflict}
 
-A conflict occurs when two versions of the app cannot be combined automatically. This happens when the same document has been changed in a Studio Pro working copy and a committed *revision* and these changes cannot be reconciled. Examples are the following:
+A conflict occurs when two versions of the app cannot be combined automatically. This happens when the same document has been changed in a Studio Pro working copy and a committed [revision](#revision) and these changes cannot be reconciled. Examples are the following:
 
 * the properties of a widget are changed in the revision and the working copy but to different settings
 * a document is moved or deleted in the revision but has been changed in a different way in the working copy.
@@ -58,31 +58,31 @@ When a conflict occurs, a developer has to intervene to decide how it should be 
 
 ### 2.7 Update
 
-Updating is the action, invoked in Studio Pro, which gets the latest revision of the current *development line* from the Team Server repository and merges the differences into the current working copy.
+Updating is the action, invoked in Studio Pro, which gets the latest revision of the current [development line](#development-line) from the Team Server repository and merges the differences into the current working copy.
 
 If Studio is enabled for this development line, the process first ensures that the Studio working copy is stored as a new revision.
 
 ### 2.8 Commit{#commit}
 
-Committing is the action, invoked in Studio Pro, of sending all your changes to the *repository* and making a new *revision*.
+Committing is the action, invoked in Studio Pro, of sending all your changes to the [repository](#repository) and making a new [revision](#revision).
 
 If Studio is enabled for this development line, the process first ensures that the Studio working copy is stored as a new revision and merged into the working copy of Studio Pro. If there are not conflicts, the changes are then sent to the repository to make a new revision.
 
 ### 2.9 Development Line{#development-line}
 
-Development of an app is done in a Development Line where a set of related changes is made. There are two types of development line: the *Main Line* and *Branch Lines*.
+Development of an app is done in a Development Line where a set of related changes is made. There are two types of development line: the [Main Line](#main-line) and [Branch Lines](#branch-line).
 
-#### 2.9.1 Main Line
+#### 2.9.1 Main Line{#main-line}
 
 The Main Line is the initial development line for the app and is usually kept as the version which will be deployed to the production environment. Simple apps, and apps which do not require a high degree of collaboration, may only have a main line.
 
-#### 2.9.2 Branch Line
+#### 2.9.2 Branch Line{#branch-line}
 
 A Branch Line is a way of making an independent set of changes which can be tested away from the Main Line.
 
 See [Branches](#branches), below, for more information on how branch lines can be used.
 
-### 2.10 Studio Enabled
+### 2.10 Studio Enabled{#studio-enabled}
 
 You may enable Studio for one of the development lines. This means that a developer can make changes to the app through Studio and share changes with the team. All changes will be linked to the selected branch and committed as revisions to that branch. Changes made to other development lines will not be available in Studio.
 
@@ -92,11 +92,11 @@ For starter apps created via the Developer Portal, the main line of a new app wi
 
 ### 2.11 Tag
 
-A Tag is a way of identifying a commit in addition to the *revision* number. It is specified by the developer and has four parts:
+A Tag is a way of identifying a commit in addition to the [revision](#revision) number. It is specified by the developer and has four parts:
 
 * Major: used to identify significant new functionality, a new user interface, or other important change
 * Minor: used to identify new functionality which augments the main function of the app
-* Patch: used to identify a *fix* to an error in a previously-released app
+* Patch: used to identify a fix to an error in a previously-released app
 * Revision: this is added automatically and is the revision number of the commit
 
 ### 2.12 Repository Service
@@ -105,7 +105,7 @@ The Repository Service manages communication between Studio or Studio Pro and ot
 
 ## 3 Version Control Processes for a Single Branch {#vc-single}
 
-The figure below shows how two developers might work on a *Studio enabled* development line of an app. One developer is working in Studio, and one in Studio Pro. They both work on the same development line (for example, the Main Line).
+The figure below shows how two developers might work on a [Studio enabled](#studio-enabled) development line of an app. One developer is working in Studio, and one in Studio Pro. They both work on the same development line (for example, the Main Line).
 
 ![](attachments/version-control/image1.png)
 
@@ -127,7 +127,7 @@ The developer can commit this to the Team Server repository at any time to make 
 
 ### 3.3 Work in Studio & Studio Pro
 
-Two developers are working on the same *development line* of the same app at the same time. One is using Studio Pro, the other is using Studio. Changes from Studio Pro and Studio are stored in the respective working copies: on the local machine for Studio Pro and in the cloud for Studio.
+Two developers are working on the same [development line](#development-line) of the same app at the same time. One is using Studio Pro, the other is using Studio. Changes from Studio Pro and Studio are stored in the respective working copies: on the local machine for Studio Pro and in the cloud for Studio.
 
 ![](attachments/version-control/image4.png)
 
@@ -155,7 +155,7 @@ The developer selects to commit, and the following things happen:
 * The Studio working copy is committed as a revision (restore point – state 5)
 * The revision just created (state 5) is merged with the Studio Pro working copy
 
-If there are no merge *conflicts*, the updated Studio Pro working copy is committed as a new revision (state 6) and the Studio working copy is updated to the new revision and unlocked.
+If there are no merge [conflicts](#conflict), the updated Studio Pro working copy is committed as a new revision (state 6) and the Studio working copy is updated to the new revision and unlocked.
 
 If there are conflicts, the developer using Studio Pro will need to resolve these. Studio will be unlocked, without receiving any of the changes from Studio Pro, while they do this. The developer using Studio Pro then needs to commit again, and the process starts from the beginning (Studio is locked ready for a new revision to be committed from the Studio Working Copy).
 
@@ -165,11 +165,11 @@ If there are conflicts, the developer using Studio Pro will need to resolve thes
 
 With more complex apps, you may want to manage your code in a more sophisticated way. For example, you may want to develop new features separately from the currently deployed version of your app so that you can fix any bugs without having to release all the new features.
 
-This is done using *branch lines*.
+This is done using [Branch Lines](#branch-line).
 
 ### 4.1 Main Line
 
-All apps are developed along the main line (also referred to as *trunk*). Here you have all development happening along a single line, with all changes built upon the previous revision:
+All apps are developed along the main line (also referred to as **trunk**). Here you have all development happening along a single line, with all changes built upon the previous revision:
 
 ![](attachments/version-control/image7.png)
 
@@ -179,9 +179,9 @@ Initially, developers using Studio only have access to the development line for 
 
 ### 4.2 Branch Line
 
-When you add a branch line, you take a copy of an existing *revision* and work separately on that copy. Changes made to one branch do not impact any other branches.
+When you add a branch line, you take a copy of an existing [revision](#revision) and work separately on that copy. Changes made to one branch do not impact any other branches.
 
-In Mendix each revision within a *repository* is given a unique version number. This means that version numbers given to revisions along any chosen branch line may not be consecutive.
+In Mendix each revision within a [repository](#repository) is given a unique version number. This means that version numbers given to revisions along any chosen branch line may not be consecutive.
 
 ![](attachments/version-control/image8.png)
 
@@ -194,13 +194,13 @@ On the other hand, you may want to add the features from one branch line into an
 * you develop new features in a branch line and want to include them in your main development line
 * you want to take advantage of a bug fix which was made on another branch line
 
-You can merge a specific revision of a branch line into your current *working copy*. If, for example, you were working on the main line updated to revision 6, you can *merge* revision 5 from another branch line into your working copy. Then you can commit the result to create revision 7. If you want to merge several different committed changes from a branch, you will need to select a range of revisions which includes all the changes.
+You can merge a specific revision of a branch line into your current [working copy](#working-copy). If, for example, you were working on the main line updated to revision 6, you can [merge](#merge) revision 5 from another branch line into your working copy. Then you can commit the result to create revision 7. If you want to merge several different committed changes from a branch, you will need to select a range of revisions which includes all the changes.
 
 ![](attachments/version-control/image9.png)
 
 As with the examples in the [Version Control Processes for a Single Branch](#vc-single) section, there may be conflicts during the merge, and these will have to be resolved before you can commit the changes to your app.
 
-Note that *errors* can be introduced by the *merge* process even if no conflicts are identified during the merge. Errors are inconsistencies which are flagged in Studio and Studio Pro and will prevent the app from being deployed. They could lead to a revision not being deployable, so it is important to check for errors after you have done a merge.
+Note that errors can be introduced by the [merge](#merge) process even if no conflicts are identified during the merge. Errors are inconsistencies which are flagged in Studio and Studio Pro and will prevent the app from being deployed. They could lead to a revision not being deployable, so it is important to check for errors after you have done a merge.
 
 ## 5 Main Documents in This Category
 

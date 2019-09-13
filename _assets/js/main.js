@@ -518,14 +518,14 @@
 
 
     /*****************
-      Table of Contents
+      Table of contents
     ******************/
     var $toc = $('#toc');
     if ($toc.length === 1) {
       var maxLevel = $('#toc') ? $('#toc').data('level') || null : null;
       $('#toc').toc({
         noBackToTopLinks: true,
-        title: '<span class="mx__toc__title">Table of Contents</span>',
+        title: '<span class="mx__toc__title">Table of contents</span>',
         maxLevel: maxLevel,
         showSpeed: '1',
         listType: 'ul',

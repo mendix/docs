@@ -1,5 +1,5 @@
 ---
-title: "Microflows in the Metamodel"
+title: "Microflows in the Mendix Metamodel"
 parent: "understanding-the-metamodel"
 menu_order: 4
 ---

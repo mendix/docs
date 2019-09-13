@@ -172,3 +172,10 @@ partners:
     - "IBM"
     - "SAP"
     - "Siemens"
+product-naming:
+  space: "Mendix Product Naming Guide"
+  priority: false
+  draft: true
+  menu_categories:
+    - "Product Naming Guide"
+    

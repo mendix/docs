@@ -1,5 +1,5 @@
 ---
-title: "Pages in the Metamodel"
+title: "Pages in the Mendix Metamodel"
 parent: "understanding-the-metamodel"
 menu_order: 3
 description: "This page contains detailed explanations on how pages, layouts, and page content is structured. You can use this when you are creating scripts for the SDK or creating or analyzing models."

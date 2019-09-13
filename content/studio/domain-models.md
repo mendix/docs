@@ -9,7 +9,9 @@ tags: ["studio", "domain model"]
 
 ## 1 Introduction
 
-The domain model is a data model that describes the information in your application domain in an abstract way. It is central to the architecture of your application. 
+The Mendix project consists of *modules*. A module is a unit that divides functionality of your project into separate parts. By default, you have one module in Studio called MyFirstModule. 
+
+Each module has its own *domain model*. The domain model is a data model that describes the information in your application domain in an abstract way. It is central to the architecture of your application. 
 
 The domain model in Studio consists of the following:
 
@@ -30,17 +32,11 @@ To view the **Domain Models** of your app in Studio, click the **Domain Models**
 {{% image_container width="350" %}}![](attachments/domain-models/domain-model.png)
 {{% /image_container %}}
 
-After opening a domain model, you will see an overview of all the entities, attribute, and associations of the entities. 
+After opening a domain model, you will see an overview of all the entities, attribute, and associations of the entities. The complexity of your domain model depends on the complexity of your app.
 
 ![](attachments/domain-models/domain-overview.png)
 
-{{% alert type="info" %}}
-
-The complexity of your domain model depends on the complexity of your app. 
-
-{{% /alert %}}
-
-The **Auto Arrange** option above the domain model groups and aligns entities by associations. Entities with no associations will be vertically aligned. 
+The **Auto Arrange** option in the top-left corner groups and aligns entities by associations. Entities with no associations will be vertically aligned. 
 
 ## 2 Components 
 
@@ -57,8 +53,8 @@ For examples and more technical details, see [Domain Model](/refguide/domain-mod
 You can add different type of entities to your domain model:
 
 * **Entity** – an entity that can have attributes, associations, and represents a class of real-world objects
-* **Image Entity** – a special type of entity that allows you to store an image in the entity. On pages, it allows you to view and upload images
-* **File Entity** – a special type of entity that allows you to store a file in the entity. On pages, it allows you to upload and download files (for example, a Microsoft Word document, a pdf, a Microsoft Excel Spreadsheet, etc.)
+* **Image Entity** – a special type of entity that allows you to store an image. For example, on pages, users will be able  to view and upload images with the help of an image entity
+* **File Entity** – a special type of entity that allows you to store a file. For example, on pages, users will be able to upload and download files (such as, a text document, a pdf, a spreadsheet) with the help of a file entity
 
 ## 3 Adding New Entities {#adding-new-entities}
 
@@ -84,11 +80,11 @@ The new entity is added to the domain model.
 
 ### 3.1 Adding New Image or File Entities
 
-While adding new entities from the **Toolbox** works for all types of entities, image and file entities have a specific way of adding them to your domain model.
+While adding new entities from the **Toolbox** works for all types of entities, you can use a specific way of adding image and file entities to your domain model.
 
-For example, you have an entity named *Laptop* and you would like to show users a specific image depending on the laptop model on pages of your application. In this case, you need to create an image entity (for example, named *Laptop_Image*). However, to be able to get data and dynamically show the right image per laptop model, the *Laptop_Image* entity should also have a specific connection (a one-to-one association) to the *Laptop* entity. For more information on associations and their properties, see [Association Properties](domain-models-association-properties). 
+For example, you have an entity named *Laptop* and you want to be able to show users a specific image depending on the laptop model. In this case, you need to create an image entity (for example, named *Product_Image*). However, to get data and dynamically show the right image per laptop model, the *Product_Image* entity should also have a specific connection (an association) to the *Laptop* entity. For more information on associations and their types, see [Association Properties](domain-models-association-properties). 
 
-To create a new image/file entity with the right type of association automatically, follow the process described below:
+To create a new image/file entity with an association automatically, follow the process described below:
 
 1. Select an entity of the *Entity* type that will have a connection to the new image or file entity. 
 
@@ -102,14 +98,14 @@ To create a new image/file entity with the right type of association automatical
 
 5. In the **Create New Image/File Entity** dialog window, specify the name of the special entity and click **Create**. 
 
-The new image or file entity is created with default *Name* and *Size* attributes and the one-to-one association to the entity that you selected in the first step:
+The new image or file entity is created with default *Name* and *Size* attributes and the association to the entity that you selected in the first step:
 ![Image Entity Example](attachments/domain-models/image-entity-example.png)
 
 ## 4 Adding New Attributes {#adding-new-attributes}
 
 To add attributes in the domain mode, do the following: 
 
-1.  Select a block with entity you want to add attribute to. The **New attribute** option appears:
+1.  Select a block with entity you want to add an attribute to. The **New attribute** option appears:
 
     {{% image_container width="250" %}}![](attachments/domain-models/adding-attribute.png)
     {{% /image_container %}}
@@ -120,17 +116,17 @@ To add attributes in the domain mode, do the following:
 
 3. Click **Create**.
 
-New attribute is added to the entity. 
+A new attribute is added to the entity. 
 
 {{% image_container width="250" %}}![](attachments/domain-models/new-attribute.png)
 {{% /image_container %}}
 
 ## 5 Adding New Associations
 
-To add association in the domain model, do the following:
+To add an association in the domain model, do the following:
 
-1. Select a block with entity you want to add association to.
-2.  Click the arrow icon that appears:
+1. Select a block with an entity you want to add an association to.
+2.  Click the arrow icon:
 
     {{% image_container width="250" %}}![](attachments/domain-models/adding-association.png)
     {{% /image_container %}}
@@ -139,15 +135,17 @@ To add association in the domain model, do the following:
 
     ![](attachments/domain-models/new-association.png)
 
+A module name is indicated next to the entity name in brackets. 
+
 {{% alert type="info" %}}
 
-The module is indicated next to the entity name in the brackets. If you select the entity from another module, you will create a cross-  module association. For more information, see section [5 Cross-Module Associations](domain-models-association-properties#cross-module-associations) in *Association Properties*. The entities of the current module are listed first. 
+If you select the entity from another module, you will create a cross-module association. For more information, see the [Cross-Module Associations](domain-models-association-properties#cross-module-associations) section in *Association Properties*. The entities of the current module are listed first. 
 
-{{% /alert %}}  
+{{% /alert %}}
 
 ## 6 Specifying Properties
 
-In the domain model, you can manage the properties of the entities, attributes, and associations on the **Properties** tab.
+In the domain model, you can manage the properties of entities, attributes, and associations on the **Properties** tab.
 
 At the bottom of the tab you can see the **Delete** button.
 
@@ -208,7 +206,7 @@ If the association type is one-to-many or many-to-many, you can swap direction o
 
 ## 7 Deleting Entities, Attributes, or Associations
 
-To delete the entity, attribute or association, do the following:
+To delete an entity, attribute, or association, do the following:
 
 1. Select the entity, attribute or association you want to delete.
 

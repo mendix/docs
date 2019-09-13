@@ -20,7 +20,7 @@ For updates on the status of Mendix Cloud v4, Mendix Cloud v3, and other deploym
 
 * On **September 27th, 2019** we will renew the SSL/TLS certificate for `*.mendixcloud.com`. Browsers like Mozilla Firefox, Microsoft Edge, Google Chrome and Internet Explorer automatically trust the new certificate. In that case there is nothing you have to do.
 
-	**If you run services that connect to a `*.mendixcloud.com` endpoint *and* use a static or outdated trust store, we advise you to update them. The new SSL/TLS certificate can be downloaded [here](attachments/mendixcloud.com-2019-09-12.crt.txt).**
+    **If you run services that connect to a `*.mendixcloud.com` endpoint *and* use a static or outdated trust store, we advise you to update them. The new SSL/TLS certificate can be downloaded [here](attachments/mendixcloud.com-2019-09-12.crt.txt).**
 
     Current certificate details:
     * Subject: *.mendixcloud.com

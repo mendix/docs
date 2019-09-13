@@ -41,7 +41,7 @@ V4 has much better security than v3.
 
 This term is used on the **My Apps** screen in Studio Pro.
 
-This term replaces "Sprintr," "Platform Portal," and "Mendix App Platform." These terms are not to be used in the product UI or documentation. For more information, see the [Outdated & Incorrect Terminology](#outdated) section below.
+This term replaces "Sprintr," "Platform Portal," and "Mendix App Platform." These terms are not to be used in the product UI or documentation. For more information, see the [Terminology History](#outdated) section below.
 
 {{% alert type="info" %}}
 The Developer Portal includes what is sometimes referred to as the "Cloud Portal," which is not an official term and is not used in the product UI or documentation. If you want to refer to deployment facilities in the Developer Portal, refer to the **Environments** section of the Developer Portal or emphasize the action of "deploying an app to the Mendix Cloud."
@@ -55,7 +55,7 @@ Capitalize in all instances.
 
 Describes Mendix as a product and encompasses all products released by Mendix (as in, Studio Pro, Studio, Developer Portal, etc.).
 
-For more information, see the [Outdated & Incorrect Terminology](#outdated) section below.
+For more information, see the [Terminology History](#outdated) section below.
 
 {{% alert type="info" %}}
 Capitalize "Platform" when used in "Mendix Platform."
@@ -265,7 +265,7 @@ Capitalize the name of the app ("Make It Native"), but do not capitalize "app."
 
 ### Mendix Assist {#mendix-assist}
 
-This term replaces "Mx Assistant" and "Mx Assist." These terms are not to be used in the product UI or documentation. For more information, see the [Outdated & Incorrect Terminology](#outdated) section below.
+This term replaces "Mx Assistant" and "Mx Assist." These terms are not to be used in the product UI or documentation. For more information, see the [Terminology History](#outdated) section below.
 
 {{% alert type="info" %}}
 Capitalize in all instances.
@@ -275,7 +275,7 @@ Capitalize in all instances.
 
 [Mendix](/refguide/getting-the-mendix-app) is the name for the mobile app available for developers to test hybrid mobile apps using PhoneGap.
 
-This term replaces "Mendix Developer app" and "Mendix Mobile app." These terms are not to be used in the product UI or documentation. For more information, see the [Outdated & Incorrect Terminology](#outdated) section below.
+This term replaces "Mendix Developer app" and "Mendix Mobile app." These terms are not to be used in the product UI or documentation. For more information, see the [Terminology History](#outdated) section below.
 
 {{% alert type="info" %}}
 To avoid confusion with "Mendix" in all its other usages, always use "the Mendix mobile app" and cross-reference [Getting the Mendix Mobile App](https://docs.mendix.com/refguide/getting-the-mendix-app).
@@ -337,7 +337,7 @@ Use the full name when referencing, not just "Evaluation Guide."
 
 ### Mendix Profile {#profile}
 
-This term replaces "Developer Profile." This term is not to be used in the product UI or documentation. For more information, see the [Outdated & Incorrect Terminology](#outdated) section below.
+This term replaces "Developer Profile." This term is not to be used in the product UI or documentation. For more information, see the [Terminology History](#outdated) section below.
 
 {{% alert type="info" %}}
 Capitalize in all instances.
@@ -345,7 +345,7 @@ Capitalize in all instances.
 
 ### Mendix Runtime
 
-This term replaces "Mendix Business Server" and "Business Engine." These terms are not to be used in the product UI or documentation. For more information, see the [Outdated & Incorrect Terminology](#outdated) section below.
+This term replaces "Mendix Business Server" and "Business Engine." These terms are not to be used in the product UI or documentation. For more information, see the [Terminology History](#outdated) section below.
 
 {{% alert type="info" %}}
 Capitalize in instances when referring to Runtime as part of the Mendix product. The best practice is to use a definite article for additional clarity: "the Mendix Runtime."
@@ -549,7 +549,7 @@ Do not capitalize, as this is a generic term. **Atlas UI Resources** is an examp
 
 {{% alert type="info" %}}
 Do not use lower-case "v" to describe a version for Mendix, Studio Pro, or Runtime (this is reserved for the Mendix Cloud version).
-{{% alert type="info" %}}
+{{% /alert %}}
 
 ### virtual private cloud
 
@@ -603,7 +603,7 @@ Text and descriptions should be taken from [Siemens.com/MindSphere](https://siem
 
 Description of MindSphere: "MindSphere is the cloud-based, open IoT operating system from Siemens"
 
-## Outdated & Incorrect Terminology {#outdated}
+## Terminology History {#outdated}
 
 This section contains terms that are not used or have had their name changed.
 

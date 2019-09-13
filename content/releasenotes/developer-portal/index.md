@@ -12,14 +12,48 @@ These release notes cover changes to various parts of the Mendix Platform access
 For updates on the status of Mendix Cloud v4, Mendix Cloud v3, and other deployment options, see [Mendix Status](https://status.mendix.com/).
 {{% /alert %}}
 
+
+
+## Advance Notice
+
+### Update of `*.mendixcloud.com` SSL/TLS certificate
+
+* On **September 27th, 2019** we will renew the SSL/TLS certificate for `*.mendixcloud.com`. Browsers like Mozilla Firefox, Microsoft Edge, Google Chrome and Internet Explorer automatically trust the new certificate. In that case there is nothing you have to do.
+
+    **If you run services that connect to a `*.mendixcloud.com` endpoint *and* use a static or outdated trust store, we advise you to update them. The new SSL/TLS certificate can be downloaded [here](attachments/mendixcloud.com-2019-09-12.crt.txt).**
+
+    **Current certificate details:**
+
+    * Subject: *.mendixcloud.com
+    * Issuer: C = US, O = DigiCert Inc, OU = www.digicert.com, CN = RapidSSL RSA CA 2018
+    * Validity: Jan 3 00:00:00 2018 GMT - Oct 2 12:00:00 2019 GMT
+    * SHA-256 Fingerprint: F8:FD:79:7A:73:48:E5:B0:9E:70:42:2B:15:D0:8C:D4:5E:F3:66:74:F8:B7:CF:5A:36:16:07:0D:E8:73:BE:8A
+    * SHA-1 Fingerprint: 78:0D:25:B2:86:12:64:BA:A0:F0:0C:C3:DD:88:C8:32:55:BD:C0:F8
+
+    **New certificate details:**
+
+    * Subject: *.mendixcloud.com
+    * Issuer: C = US, O = DigiCert Inc, OU = www.digicert.com, CN = RapidSSL TLS RSA CA G1
+    * Validity: Sep 12 00:00:00 2019 GMT - Nov 10 12:00:00 2021 GMT
+    * SHA-256 Fingerprint: AE:55:1D:88:32:E1:7E:BF:AB:0D:F3:2F:57:57:C8:98:8D:87:3F:E8:F6:5F:A6:09:82:EA:37:F7:12:25:A5:D3
+    * SHA-1 Fingerprint: 5E:4D:05:9B:FE:54:3F:B6:D8:A4:D7:86:7F:3B:50:9A:EE:09:35:8F
+
 ## 2019
+
+### September 11th, 2019
+
+#### App Store Improvements
+
+*  We added the flexibility to label your App Store content with a [custom version number](/developerportal/app-store/share-app-store-content#updating).
+
+    {{% alert type="info" %}}This is based on an [upvoted idea from Andreas Blaesius](https://forum.mendixcloud.com/link/ideas/1324) submitted to the [Mendix Idea Forum](https://forum.mendixcloud.com/index4.html). Thanks, Andreas!{{% /alert %}}
 
 ### September 5th, 2019
 
 #### Mendix Cloud Fixes
 
-* We fixed an issue that caused the wrong Technical Contact information to be shown on the app's *General* page in the Developer Portal. (Ticket #84852)
-* We added a feedback message when you try to restore a backup while the backup is still being created. (Ticket #85786)
+* We fixed an issue that caused the wrong Technical Contact information to be shown on the app's *General* page in the Developer Portal. (Ticket 84852)
+* We added a feedback message when you try to restore a backup while the backup is still being created. (Ticket 85786)
 
 ### August 30th, 2019
 
@@ -42,8 +76,8 @@ For updates on the status of Mendix Cloud v4, Mendix Cloud v3, and other deploym
 
 #### SAP OData Connector Improvements & Fixes
 
-* We updated the **SAP OData Connector** to support the **Edm.Int64** data type. (Ticket #87284)
-* We also fixed a *java.net.SocketException: Broken pipe (Write failed)* exception which occurred when sending a large request to the OData service endpoint. (Ticket #86680)
+* We updated the **SAP OData Connector** to support the **Edm.Int64** data type. (Ticket 87284)
+* We also fixed a *java.net.SocketException: Broken pipe (Write failed)* exception which occurred when sending a large request to the OData service endpoint. (Ticket 86680)
 
 ### August 23rd, 2019
 
@@ -76,7 +110,7 @@ For updates on the status of Mendix Cloud v4, Mendix Cloud v3, and other deploym
 
 #### Fixes
 
-* We fixed an issue where updates to decimal constants in the Developer Portal were limited to 2 decimal places. This has been increased to 8 decimal places. (Ticket #85507)
+* We fixed an issue where updates to decimal constants in the Developer Portal were limited to 2 decimal places. This has been increased to 8 decimal places. (Ticket 85507)
 
 ### July 5th, 2019
 
@@ -103,15 +137,15 @@ For updates on the status of Mendix Cloud v4, Mendix Cloud v3, and other deploym
 
 #### Mendix Cloud Improvements
 
-* We added a confirmation dialogue when you delete Custom Headers
-* We made general performance improvements
+* We added a confirmation dialogue when you delete Custom Headers.
+* We made general performance improvements.
 
 #### Fixes
 
-* We fixed an issue which prevented the adding of comments to a backup. (Ticket #81993)
-* We updated the **Read documentation** link in the Mendix Cloud v4 metrics page to point to the right document. (Ticket #82130)
-* We added appropriate feedback if you try to upload a client certificate which is unsupported because it is not encoded in PEM. (Ticket #82299)
-* We fixed an issue which prevented the offboarding of a single environment if you wanted to retain other environments in the Mendix Cloud node. (Ticket #83189)
+* We fixed an issue which prevented the adding of comments to a backup. (Ticket 81993)
+* We updated the **Read documentation** link in the Mendix Cloud v4 metrics page to point to the right document. (Ticket 82130)
+* We added appropriate feedback if you try to upload a client certificate which is unsupported because it is not encoded in PEM. (Ticket 82299)
+* We fixed an issue which prevented the offboarding of a single environment if you wanted to retain other environments in the Mendix Cloud node. (Ticket 83189)
 
 ### June 15th, 2019
 
@@ -168,7 +202,7 @@ For updates on the status of Mendix Cloud v4, Mendix Cloud v3, and other deploym
 
 #### Fixes
 
-* We resolved an issue where some team members were not visible in Node Permissions after an app was relinked (Tickets 70285, 79708, 79824, 80557, 81713, and 82591).
+* We resolved an issue where some team members were not visible in Node Permissions after an app was relinked (Tickets 70285, 79708, 79824, 80557, 81713, 82591).
 
 ### May 3rd, 2019
 

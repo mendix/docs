@@ -1,5 +1,5 @@
 ---
-title: "Projects in the Metamodel"
+title: "Projects in the Mendix Metamodel"
 parent: "understanding-the-metamodel"
 menu_order: 1
 ---

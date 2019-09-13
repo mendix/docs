@@ -1,5 +1,5 @@
 ---
-title: "Domain Model in the Metamodel"
+title: "Domain Model in the Mendix Metamodel"
 parent: "understanding-the-metamodel"
 menu_order: 2
 ---

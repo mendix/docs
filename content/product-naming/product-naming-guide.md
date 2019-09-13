@@ -3,7 +3,7 @@ title: "Product Naming Guide"
 draft: true
 ---
 
-## Main Mendix Products
+## Main Mendix Product Names
 
 These are branded Mendix product names, but they do not always need  "Mendix" in front of them in the documentation.
 
@@ -37,7 +37,7 @@ Two Differences Between Mendix Cloud v3 and v4
 V4 has much better security than v3.
 {{% /alert %}}
 
-### Mendix Developer Portal
+### Mendix Developer Portal {#devportal}
 
 This term is used on the **My Apps** screen in Studio Pro.
 
@@ -51,7 +51,7 @@ The Developer Portal includes what is sometimes referred to as the "Cloud Portal
 Capitalize in all instances.
 {{% /alert %}}
 
-### Mendix Platform
+### Mendix Platform {#platform}
 
 Describes Mendix as a product and encompasses all products released by Mendix (as in, Studio Pro, Studio, Developer Portal, etc.).
 
@@ -69,7 +69,7 @@ This is the power of the Mendix Platform.
 The platform includes Mendix Studio and our cloud hosting.
 {{% /alert %}}
 
-### Mendix Studio
+### Mendix Studio {#studio}
 
 The rebranded name for the Web Modeler as of Mendix 8.
 
@@ -103,7 +103,7 @@ Where you are describing a feature applicable to both Mendix Studio and Studio P
 When you need to use one general product name in a diagram, it is okay to use just "Studios."
 {{% /alert %}}
 
-## Mendix Terms
+## Other Mendix Terms
 
 This section contains the main Mendix terms that are used in the product UI and documentation.
 
@@ -343,7 +343,7 @@ This term replaces "Developer Profile." This term is not to be used in the produ
 Capitalize in all instances.
 {{% /alert %}}
 
-### Mendix Runtime
+### Mendix Runtime {#runtime}
 
 This term replaces "Mendix Business Server" and "Business Engine." These terms are not to be used in the product UI or documentation. For more information, see the [Terminology History](#outdated) section below.
 
@@ -439,10 +439,6 @@ Capitalize in all instances.
 Do not use "persistent" or "non-persistent."
 {{% /alert %}}
 
-### planned maintenance
-
-### planning
-
 ### platform APIs
 
 {{% alert type="info" %}}
@@ -484,10 +480,6 @@ Types of environments.
 {{% alert type="info" %}}
 Do not capitalize.
 {{% /alert %}}
-
-### production environment
-
-In this environment of the server, the app is put into operation and is made available for intended use by end-users.
 
 ### requirements management
 
@@ -542,66 +534,52 @@ Capitalize in all instances.
 ### UI resources package
 
 {{% alert type="info" %}}
-Do not capitalize, as this is a generic term. **Atlas UI Resources** is an example of such a package and is capitalized in the Studio Pro UI.
+Do not capitalize, as this is a generic term. **Atlas UI Resources** is an example of such a package, and the proper name of this package is capitalized in the Studio Pro UI.
 {{% /alert %}}
 
 ### version (Mendix, Studio Pro, Runtime)
 
 {{% alert type="info" %}}
-Do not use lower-case "v" to describe a version for Mendix, Studio Pro, or Runtime (this is reserved for the Mendix Cloud version).
+Do not use lower-case "v" to describe a version for Mendix, Studio Pro, Studio, or Runtime (this is reserved for the Mendix Cloud version).
 {{% /alert %}}
 
-### virtual private cloud
+## Strategic Partner Terms
 
-If you&##39;re using a virtual private cloud to manage workloads at AWS or Azure, you can easily deploy Mendix in your VPC to leverage the services and resources from your enterprise account. You can buy Mendix from the AWS or Azure marketplace or bring your own license.
-
-### Web Modeler
-
-The Web Modeler was a standalone product on the same level as the Desktop Modeler.
-
-Capitalize in all instances.
-
-Replaced by Mendix Studiofor Mendix 8.
-
-## Other Terms
-
-### Add-on Terms
-
-This section contains terms that do not apply to the general Mendix context.
+### Mansystems (Add-ons)
 
 #### ATS Helper
 
+{{% alert type="info" %}}
 Capitalize in all instances (using full name with "ATS").
+{{% /alert %}}
 
 #### ATS Recorder
 
+{{% alert type="info" %}}
 Capitalize in all instances (using full name with "ATS").
+{{% /alert %}}
 
-### Partner Terms
+### SAP
 
-This section contains terms which are defined by our partners and should be used correctly.
+#### SAP Cloud Platform Rapid Application Development by Mendix
 
-#### SAP
+This is the name of the Mendix product that SAP is selling.
 
-##### SAP Cloud Platform Rapid Application Development by Mendix
+This can sometimes be shortened to "SAP Cloud Platform RAD by Mendix" or "SAP RAD by Mendix."
 
-The name of the Mendix product that SAP is selling.
-
-Sometimes shortened to "SAP Cloud Platform RAD by Mendix" or "SAP RAD by Mendix."
-
-Use this full name in the SAP context.
-
-##### Further Terminology
-
-There is a separate document which contains terms defined by SAP. See [_Mendix &amp; SAP Terminology (Shared)_](https://www.dropbox.com/sh/9hsudc499xmpdlg/AACKhdx-5HlRwc3MwYc2Z-Yha?dl=0).
+{{% alert type="info" %}}
+Use the full name in the SAP context.
+{{% /alert %}}
 
 #### Siemens
 
 ##### MindSphere
 
-Text and descriptions should be taken from [Siemens.com/MindSphere](https://siemens.com/mindsphere).
+Text and descriptions for MindSphere should be taken from [This is MindSphere!](https://siemens.com/mindsphere).
 
-Description of MindSphere: "MindSphere is the cloud-based, open IoT operating system from Siemens"
+{{% alert type="info" %}}
+Note the capitalized "S" in "MindSphere."
+{{% /alert %}}
 
 ## Terminology History {#outdated}
 
@@ -609,27 +587,35 @@ This section contains terms that are not used or have had their name changed.
 
 ### Cloud Portal
 
-This is an internal term and should not be used in the documentation or publicly, as it has not been agreed on or branded. It no longer appears in the documentation or Evaluation Guide.
+This is an internal term and should not be used in the documentation or publicly, as it has not been agreed on or branded. It no longer appears in the Mendix Documentation or *Mendix Platform Evaluation Guide*.
 
-This functionality should be described within the name/context of the Mendix Developer Portal(for example, "deployment via the Developer Portal"). If wanting to refer to deployment facilities in the Developer Portal, avoid the use of any "portal" language and emphasize the action of "deploying an app to the Mendix Cloud."
+Deployment facilities should be described within the name/context of the Mendix Developer Portal (for example, "deployment via the [Developer Portal](#devportal)"). Describing the functionality should avoid using any "portal" language and emphasize the action of "deploying an app to the Mendix Cloud."
 
 ### Community Edition {#community-edition}
 
-For Mendix 5.18 and above the Mendix Community Edition was introduced which included the ability to deploy a Free App. This was replaced by the [Mendix Free Edition (DX Release)](https://www.mendix.com/blog/powering-continuous-innovation-with-the-mendix-free-edition/) in 2015, a move which was reinforced by [announcements at Mendix World 2019](https://www.mendix.com/blog/a-3-step-leap-into-your-digital-future-highlights-from-mendix-world/).
+The Mendix Community Edition was introduced with Mendix 5.18, which included the ability to deploy a Free App. This was replaced by the [Mendix Free Edition (DX Release)](https://www.mendix.com/blog/powering-continuous-innovation-with-the-mendix-free-edition/) in 2015, a move which was reinforced by [announcements at Mendix World 2019](https://www.mendix.com/blog/a-3-step-leap-into-your-digital-future-highlights-from-mendix-world/).
 
-Do not use. Replaced by Free Edition.
+{{% alert type="info" %}}
+Do not use. This has been replaced by the [Free Edition](#free-edition).
+{{% /alert %}}
 
 ### delighters
 
-This was the name of the R&amp;D development project in early 2018 and started to be used in the release notes to describe features released under this project (including features based on community ideas from the Idea Forum). In the release notes/documentation, this has been replaced by the term "Productivity Improvements." However, this term is still used by Marketing.
+{{% alert type="info" %}}
+This should not be used in the release notes/documentation. Use "productivity improvements" if necessary instead.
+{{% /alert %}}
 
-### Desktop Modeler
+### Desktop Modeler {#dm}
 
-Replaced by [Mendix Studio Pro]{#pro} for Mendix 8.
+{{% alert type="info" %}}
+Replaced by [Mendix Studio Pro](#pro) for Mendix 8.
+{{% /alert %}}
 
 ### Developer Profile
 
+{{% alert type="info" %}}
 Replaced by [Mendix Profile](#profile).
+{{% /alert %}}
 
 ### launchpad
 
@@ -637,44 +623,70 @@ The launchpad was part of the AppCloud release described in [this blog post](htt
 
 Access to the launchpad has been removed from the Developer Portal.
 
+{{% alert type="info" %}}
 Do not use.
+{{% /alert %}}
 
 ### Mx Assistant, Mx Assist
 
-Replaced by [Mendix Assist](#mendix-assist).
+{{% alert type="info" %}}
+Do not use. Use [Mendix Assist](#mendix-assist) instead.
+{{% /alert %}}
 
 ### Mendix App Platform, App Platform
 
-Do not use. Use "Mendix Platform" and "Developer Portal."
+{{% alert type="info" %}}
+Do not use. Use [Mendix Platform](#platform) and [Developer Portal](#devportal) instead.
+{{% /alert %}}
 
 ### Mendix Business Modeler
 
-Do not use as of Mendix 7. Use "Desktop Modeler" and "Web Modeler."
+Not in use as of Mendix 7. 
+
+{{% alert type="info" %}}
+Replaced by [Desktop Modeler](#dm).
+{{% /alert %}}
 
 ### Mendix Business Server/Engine
 
-Do not use as of Mendix 7. Use "Mendix Runtime."
+{{% alert type="info" %}}
+Do not use. Use [Mendix Runtime](#runtime) instead.
+{{% /alert %}}
 
 ### Mendix Developer app, Mendix Mobile app
 
-Do not use. Use [Mendix mobile app](#mendix-mobile-app).
+{{% alert type="info" %}}
+Do not use. Use [Mendix mobile app](#mendix-mobile-app) instead.
+{{% /alert %}}
 
 ### Mendix Platform Portal, Mendix Online Platform
 
-Do not use. Use "Developer Portal" instead.
+{{% alert type="info" %}}
+Do not use. Use [Developer Portal](#devportal) instead.
+{{% /alert %}}
 
 ### Run in Sandbox
 
-This button no longer exists in the Modeler. Now it is just **Run**.
+This button no longer exists in the Desktop Modeler or Studio Pro. Now it is just **Run**.
+
+For more information, see [Sandbox](#sandbox).
 
 ### Sandbox {#sandbox}
 
-This referred to free environments used to run a Free App in the Mendix Cloud.
+This referred to the free environments used to run a Free App in the Mendix Cloud.
 
-Do not use. Use Free App or **Free App environment** instead.
+{{% alert type="info" %}}
+Do not use as of Mendix 8. Use [Free App](#free-app) or "Free App environment" instead.
+{{% /alert %}}
 
 ### Sprintr
 
-Do not use. Use Mendix Developer Portal.
+{{% alert type="info" %}}
+Do not use. Use [Developer Portal](#devportal) instead.
+{{% /alert %}}
 
+### Web Modeler
 
+{{% alert type="info" %}}
+Replaced by [Mendix Studio](#studio) for Mendix 8.
+{{% /alert %}}

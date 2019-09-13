@@ -22,14 +22,16 @@ For updates on the status of Mendix Cloud v4, Mendix Cloud v3, and other deploym
 
     **If you run services that connect to a `*.mendixcloud.com` endpoint *and* use a static or outdated trust store, we advise you to update them. The new SSL/TLS certificate can be downloaded [here](attachments/mendixcloud.com-2019-09-12.crt.txt).**
 
-    Current certificate details:
+    **Current certificate details:**
+
     * Subject: *.mendixcloud.com
     * Issuer: C = US, O = DigiCert Inc, OU = www.digicert.com, CN = RapidSSL RSA CA 2018
     * Validity: Jan 3 00:00:00 2018 GMT - Oct 2 12:00:00 2019 GMT
     * SHA-256 Fingerprint: F8:FD:79:7A:73:48:E5:B0:9E:70:42:2B:15:D0:8C:D4:5E:F3:66:74:F8:B7:CF:5A:36:16:07:0D:E8:73:BE:8A
     * SHA-1 Fingerprint: 78:0D:25:B2:86:12:64:BA:A0:F0:0C:C3:DD:88:C8:32:55:BD:C0:F8
 
-    New certificate details:
+    **New certificate details:**
+
     * Subject: *.mendixcloud.com
     * Issuer: C = US, O = DigiCert Inc, OU = www.digicert.com, CN = RapidSSL TLS RSA CA G1
     * Validity: Sep 12 00:00:00 2019 GMT - Nov 10 12:00:00 2021 GMT

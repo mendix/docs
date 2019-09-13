@@ -129,6 +129,12 @@ The full word "application" has a more well-rounded meaning to it (as in, web an
 It is useful to differentiate "app" from "app project" when referring to what the user works on for project management in the Developer Portal. For more information, see [app project](#app-project).
 {{% /alert %}}
 
+### App ID
+
+{{% alert type="info" %}}
+Always capitalize.
+{{% /alert %}}
+
 ### app project {#app-project}
 
 "App" should be used instead of "project" as much as possible in the documentation. However, be aware of potential confusion here when referring to what the user works on for project management in the Developer Portal. A "project" would include the app being developed itself as well as resources from the Developer Portal, deployment, and elsewhere. Thus, "app" as something a Mendix user makes and an end-user uses cannot entirely replace "project" in the documentation.
@@ -139,12 +145,6 @@ It is useful to differentiate "app" from "app project" when referring to what th
 
 {{% alert type="success" %}}
 Enter the email addresses of all the co-workers you want to invite to your app project.
-{{% /alert %}}
-
-### App ID
-
-{{% alert type="info" %}}
-Always capitalize.
 {{% /alert %}}
 
 ### App Team
@@ -443,14 +443,10 @@ Capitalize in all instances.
 Do not use "persistent" or "non-persistent."
 {{% /alert %}}
 
-### platform APIs
+### Platform APIs
 
 {{% alert type="info" %}}
-Do not capitalize when using generally (as in, "the platform API").
-{{% /alert %}}
-
-{{% alert type="info" %}}
-Write "Mendix Platform APIs" to be more specific about the collection of [Mendix APIs](/apidocs-mxsdk/apidocs/).
+Capitalize to refer to the collection of [Mendix APIs](/apidocs-mxsdk/apidocs/).
 {{% /alert %}}
 
 ### Platform SDK
@@ -575,9 +571,9 @@ This can sometimes be shortened to "SAP Cloud Platform RAD by Mendix" or "SAP RA
 Use the full name in the SAP context.
 {{% /alert %}}
 
-#### Siemens
+### Siemens
 
-##### MindSphere
+#### MindSphere
 
 Text and descriptions for MindSphere should be taken from [This is MindSphere!](https://siemens.com/mindsphere).
 
@@ -663,7 +659,7 @@ Do not use. Use [Mendix Runtime](#runtime) instead.
 Do not use. Use [Mendix mobile app](#mendix-mobile-app) instead.
 {{% /alert %}}
 
-### Mendix Platform Portal, Mendix Online Platform
+### Mendix Online Platform, Mendix Platform Portal
 
 {{% alert type="info" %}}
 Do not use. Use [Developer Portal](#devportal) instead.

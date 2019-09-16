@@ -442,7 +442,7 @@ When you create your environment on SAP Cloud Platform, you can select a Postgre
 
 This database service should not be unbound from your environment: see [Services Tab](#binding-services), above, for more information on required services.
 
-### 8.2 Running Mendix on SAP HANA{#sap=hana}
+### 8.2 Running Mendix on SAP HANA{#sap-hana}
 
 {{% alert type="info" %}}
 You can only use SAP HANA as the Mendix database for Mendix version 7.23.3 and above.

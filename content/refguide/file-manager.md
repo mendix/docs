@@ -1,19 +1,17 @@
 ---
-title: "File manager"
+title: "File Manager"
 parent: "file-widgets"
-tags: ["studio pro"]
+tags: ["studio pro", "file manager", "file widget", "widget"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 {{% alert type="warning" %}}The file manager widget is not supported on native mobile pages.{{% /alert %}}
 
+## 1 Introduction
+
 A file manager is used to upload and/or download files.
 
-{{% alert type="info" %}}
-
 ![](attachments/pages/file-manager.png)
-
-{{% /alert %}}
 
 It must be placed inside a data view connected to the entity System.FileDocument or a specialization thereof.
 

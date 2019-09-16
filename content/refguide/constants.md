@@ -22,7 +22,7 @@ The value for a constant can also be overridden in a [Configuration](configurati
 
 Constants can be used in:
 
-*   [Microflow expressions](expressions): by prefixing the full name of the constant with @.
+*   [Expressions](expressions): by prefixing the full name of the constant with @.
 *   [Consumed Web Services](consumed-web-services): in this case the constant is a URL that specifies where the web service is located. This can vary based on the environment in which the application is running, so that you can for example use different web services for development and production.
 
 ## 2 Common Properties
@@ -46,3 +46,18 @@ The [data type](data-types) of the constant. This determines what kind of values
 ### 4.1 Default value
 
 The default value of the constant. This value is used when running locally or in a Free App environment. When running locally, the value can be overridden in the currently selected [Configuration](configuration).
+
+### 4.2 Exposed to client
+
+Exposed to client defines whether the constant is accessible from client side expressions (expressions in Nanoflows and Pages).
+
+| Option | Description |
+| --- | --- |
+| Yes | The constant will be sent to the client, and will be accessible from client side expressions. |
+| No | The constant will not be sent to the client, and will be only accessible from Microflow expressions. |
+
+_Default value:_ No
+
+{{% alert type="warning" %}}
+Please not that when a constant is exposed to client, mendix runtime will send its value to the client so that in addition to Microflows expressions it will be also accessible from Nanoflows and Pages expressions, so **do not use sensitive data or secrets such as passwords when a constant is exposed to the client**.
+{{% /alert %}}

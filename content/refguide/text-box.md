@@ -55,19 +55,29 @@ Text box properties consist of the following sections:
 
 ### 2.4 Editability Section{#editability}
 
-{{% snippet file="refguide/editable-property.md" %}}
-
-{{% snippet file="refguide/read-only-style.md" %}}
-
-{{% snippet file="refguide/condition-property.md" %}}
+{{% snippet file="refguide/editability-section-link.md" %}}
 
 ### 2.5 Events Section{#events}
 
-{{% snippet file="refguide/on-change-event.md" %}}
+#### 2.5.1 On Change
 
-{{% snippet file="refguide/on-enter-event.md" %}}
+The on-change property specifies an action that will be executed when leaving the widget, either by using the <kbd>Tab</kbd> key or by clicking another widget, after the value has been changed.
 
-{{% snippet file="refguide/on-leave-event.md" %}}
+{{% snippet file="refguide/events-section-link.md" %}}
+
+#### 2.5.2 On Enter
+
+The on-enter property specifies an action that will be executed when the widget is entered, either by using the <kbd>Tab</kbd> key or by clicking it with the mouse.
+
+{{% snippet file="refguide/events-section-link.md" %}}
+
+#### 2.5.3 On Leave
+
+The on-leave property specifies an action that will be executed when leaving the widget, either by using the <kbd>Tab</kbd> key or by clicking another widget.
+
+This differs from the [On change](#on-change) property in that the event will always be triggered, even if the value has not been changed.
+
+{{% snippet file="refguide/events-section-link.md" %}}
 
 ### 2.6 Formatting Section{#formatting}
 

@@ -1,12 +1,18 @@
 ---
 title: "Manage User Logins with Mendix SSO"
-parent: "integrate-with-mendix-sso"
-menu_order: 72
+parent: "sso-with-appcloudservices"
+menu_order: 20
 description: "How to manage Mendix SSO in your app so that local users and anonymous users are catered for"
 tags: ["SSO", "Single Sign-on", "AppCloudServices", "Local users", "Anonymous users"]
 ---
 
 ## 1 Introduction
+
+{{% alert type="warning" %}}
+The AppCloudServices module has been deprecated. Enabling single sign on with your Mendix account is now managed by the MendixSSO module. Please see [Mendix Single Sign-On](mendix-sso) for more information.
+
+This documentation is only meant for users with legacy applications which still use AppCloudServices.
+{{% /alert %}}
 
 After adding the AppCloudServices module to your app, users can log in automatically with their Mendix account. When a user opens your app, they are sent to the OpenId auto-login URL (for example, `https://yourapp.mendixcloud.com/openid/login`), and then they are redirected to the (role-based) home page that is configured in the app model.
 

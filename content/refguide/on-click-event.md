@@ -7,6 +7,10 @@ tags: ["studio pro", "events section", "properties", "widget", "on click", "acti
 
 ## 1 Introduction
 
+
+
+## 2 On Click {#on-click}
+
 An **On click** event specifies an event that is executed when a user clicks a widget. Often **On click** property is a part of the **Events** section in properties. For example, you can specify that when a user clicks a customer's profile image, the page with this customer's details will open:
 
 {{% image_container width="350" %}}![](attachments/on-click-event/on-click-event-example.png)
@@ -14,9 +18,13 @@ An **On click** event specifies an event that is executed when a user clicks a w
 
 On click event is common for many widgets, for example, an image, buttons, a list view. 
 
-## 2 On Click {#on-click}
+The **On click** property specifies what [action](#actions) is executed when a user click a widget.
 
-The **On click** property specifies what action is executed when a user click a widget. Possible options are described below:
+## 3 Events
+
+When an event is triggered, you can choose what action is triggered. Possible options are described below.
+
+### 3.1 Event Actions{#actions}
 
 * **Do nothing** – No action is taken. This option is useful for setting up a page without defining the underlying functionality yet.
 
@@ -47,7 +55,7 @@ The **On click** property specifies what action is executed when a user click a 
 * **Synchronize** – synchronizes the data stored locally on your device with the server database.
 * **Sign out** – signs the currently signed-in user out. When no user is signed in, no action is performed.
 
-### 2.1 Link Types {#on-click-link-type}
+### 3.2 Link Types {#on-click-link-type}
 
 The table below described link types available for the **Open link** on click event:
 
@@ -66,7 +74,7 @@ When you configure **Email**, **Call**, or **Text** options, the corresponding d
 
 {{%/alert %}}
 
-## 3 Read More
+## 4 Read More
 
 * [Pages](pages)
 * [Page](page)

@@ -7,71 +7,52 @@ tags: ["studio pro"]
 
 ## 1 Introduction
 
-An image viewer can be used to display an image or its thumbnail.
+An image viewer can be used to display an image or its thumbnail. For example, you can show a profile picture:
 
-{{% alert type="info" %}}
 ![](attachments/pages/image-viewer.png)
 
-This image viewer shows the product image.
+An image viewer must be placed in a data view or a template grid.
 
-{{% /alert %}}
+## 2 Properties
 
-An image viewer must be placed in a data view or template grid.
+An example of image viewer properties is represented in the image below:
 
-## 2 Common Properties
+{{% image_container width="350" %}}![Image Viewer Properties](attachments/file-widgets/image-viewer-properties.png)
+{{% /image_container %}}
 
-{{% snippet file="refguide/name-property.md" %}}
+Image uploader properties consist of the following sections:
 
-{{% snippet file="refguide/class-property.md" %}}
+* [Common](#common) 
+* [Data source](#data-source)
+* Design Properties
+* [Events](#events)
+* [General](#general)
+* [Visibility](visibility)
 
-{{% snippet file="refguide/style-property.md" %}}
+### 2.1 Data Source Section {#data-source}
 
-## 3 Data Source Properties
+#### 2.1.1 Entity (Path)
 
-### 3.1 Entity (Path)
+The **Entity (path)** property specifies which object will be shown in the image viewer. It must be a System.Image or a specialization thereof. If the object in the data view is (a specialization of) System.Image you can use this object in the image viewer as well.
 
-The entity (path) property specifies which entity will be shown in the image viewer. It starts in the data view entity and must end in System.Image or a specialization thereof. If the data view entity itself is (a specialization of) System.Image you can use this entity on the image viewer as well.
+### 2.2  Events Section {#events}
 
-## 4 Events
+{{% snippet file="refguide/events-section-link.md" %}}
 
-### 4.1 On Click
+### 2.3 General Section
 
-This property specifies what happens when the image is clicked:
-
-| Value | Meaning |
-| --- | --- |
-| Do nothing | Nothing happens. |
-| Call microflow | The specified microflow is executed. |
-| Enlarge | The image is shown at full size. |
-
-_Default value:_ Do nothing
-
-{{% alert type="info" %}}On click events are not supported on native mobile pages.{{% /alert %}}
-
-### 4.2 Microflow (for Call Microflow)
-
-This property specifies the microflow that will be executed when the image is clicked.
-
-### 4.3 Microflow Settings (for Call Microflow)
-
-The on click settings specify what parameters will be passed to the microflow, whether to show a progress bar or not, and more.
-
-See [Starting Microflows](starting-microflows).
-
-## 5 General Properties
-
-### 5.1 Default Image
+#### 2.3.1 Default Image
 
 This is the image that is displayed if no image is uploaded.
 
-### Width Unit
+#### 2.3.2 Width Unit {#width-unit}
 
-The width of an image can be specified in three ways: pixels, percentage or auto. 
+The table below describes possible ways to specify the width of an image: 
 
 | Value | Definition |
 | --- | --- |
-| Pixels | The width is specified in a number of pixels. If you specify both width and height, the image will be scaled proportionally in the rectangle you define. |
-| Percentage | The width is specified in a percentage of the container of the image. It can be larger than its original width in which case the image is stretched. |
+| Pixels | The width is specified in a number of pixels. If you specify both width and height, the image will be scaled automatically: the proportions will be kept, the picture will not be stretched. |
+| Percentage | The width is specified in a percentage of the original width. It can be larger than its original width in which case the image is stretched. |
 | Auto | The width of the given image is used. |
 
 *Default value*: Percentage
@@ -80,51 +61,50 @@ The width of an image can be specified in three ways: pixels, percentage or auto
 Not supported on native mobile pages.
 {{% /alert %}}
 
-### Width
+#### 2.3.3 Width 
 
-The width of the image in pixels or percentage (see width unit). In the case of 'Auto', no value needs to be specified.
+This property is displayed only when the [**Width unit**](#width-unit) property is set to *Pixels* or *Percentage*. This property determines the width of the image, either in pixels or a percentage.
 
-*Default value*: 100
+*Default value*: 0
 
-### Height Unit
+#### 2.3.4 Height Unit {#height-unit}
 
-The height of an image can be specified in three ways: pixels, percentage or auto. 
+The table below describes possible ways to specify the height of an image: 
 
 | Value      | Definition                                                   |
 | ---------- | ------------------------------------------------------------ |
-| Pixels     | The height is specified in a number of pixels. If you specify both width and height, the image will be scaled proportionally in the rectangle you define. |
-| Percentage | The height is specified in a percentage of the container of the image. It can be larger than its original height in which case the image is stretched. |
-| Auto       | The height of the given image is used. |
+| Pixels     | The height is specified in a number of pixels. If you specify both width and height, the image will be scaled automatically: the proportions will be kept, the picture will not be stretched. |
+| Percentage | The height is specified in a percentage of the original height. It can be larger than its original height in which case the image is stretched. |
+| Auto       | The height of the given image is used.                       |
 
 *Default value*: Auto
 
 {{% alert type="info" %}}Not supported on native mobile pages.{{% /alert %}}
 
-### Height
+#### 2.3.5 Height
 
-The height of the image in pixels or percentage (see height unit). In the case of 'Auto', no value needs to be specified.
+This property is displayed only when the [**Height unit**](#height-unit) property is set to *Pixels* or *Percentage*. This property determines the height of the image, either in pixels or a percentage.
 
-*Default value*: not applicable
+*Default value*: 0
 
-### Responsive
+#### 2.3.6 Responsive
 
-This property influences how the image scales. If the value is 'Yes', the image will never get bigger than its original size. It can become smaller. If the value is 'No', the image can become both larger and smaller than its original size.
+This property determines how the image scales. If the value is set to *Yes*, the image will never get bigger than its original size, but it can become smaller. If the value is set to *No*, the image can become both larger and smaller than its original size.
 
 *Default value*: Yes
 
-### 5.2 Show
+#### 2.3.7 Show
 
-This property indicates whether the generated thumbnail is shown or the full image.
+This property indicates whether the generated thumbnail or the full image is shown.
 
 _Default value:_ Thumbnail
 
-## 6 Visibility Properties
+### 2.4 Visibility Properties
 
-{{% snippet file="refguide/visibility-property.md" %}}
+{{% snippet file="refguide/visibility-section-link.md" %}}
 
-{{% snippet file="refguide/visibility-property-with-module-roles-simple.md" %}}
+## 3 Read More
 
-## 7 Related Articles
-
-*   [Data view](data-view)
-*   [Entities](entities)
+* [Page](page)
+* [File Widgets](file-widgets)
+* [Properties Common for Widgets](common-widget-properties)

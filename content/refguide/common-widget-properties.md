@@ -156,3 +156,25 @@ This property determines how the widget is rendered if it is read-only.
 | Text                        | Widget is replaced by a textual representation of the value.
 
 {{% alert type="info" %}}Read-only style is not supported on native mobile pages.{{% /alert %}}
+
+## 7 Label Section {#label}
+
+A label can be used to described the purpose of the widget to the user. The label is shown next to the widget in the user interface. If a label is configured, the widget will be rendered in the browser wrapped in a form group. See [Bootstrap documentation](http://getbootstrap.com/css/#forms).
+
+### 7.1 Show Label
+
+This property determines whether the label is rendered and the widget is wrapped in a form group.
+
+_Default value:_ No
+
+### 7.2 Label Caption
+
+This property is shown only when Show label is Yes. This property determines what text is rendered within a label.
+
+#### 7.2.1 Text Template
+
+The template for the label can contain parameters that are written as a number between braces (for example, `{1}`). The first parameter has the number `1`, the second `2`, etc. Note that to use template parameters, the widget must be placed in the context of an entity (for example, inside a data view or list view).
+
+#### 7.2.2 Parameters
+
+For each parameter in the template, you define an attribute of the context entity or a referred entity, of which the value will be inserted at the position of the parameter.

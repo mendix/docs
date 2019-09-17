@@ -22,7 +22,7 @@ An example of file manager properties is represented in the image below:
 {{% image_container width="350" %}}![File Manager Properties](attachments/file-widgets/file-manager-properties.png)
 {{% /image_container %}}
 
-Tab container properties consist of the following sections:
+File manager properties consist of the following sections:
 
 * [Common](#common) 
 
@@ -78,7 +78,7 @@ _Default value:_ False
 
 ### 2.4 Label Section {#label}
 
-{{% snippet file="refguide/label-property.md" %}}
+{{% snippet file="refguide/label-section-link.md" %}}
 
 ### 2.5 Visibility Section {#visibility}
 

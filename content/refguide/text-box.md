@@ -139,7 +139,7 @@ It can be used, for example, to give a hint to the end-user what kind of text sh
 
 ### 2.8 Label Section{#label}
 
-{{% snippet file="refguide/label-property.md" %}}
+{{% snippet file="refguide/label-section-link.md" %}}
 
 ### 2.9 Validation Section{#validation}
 

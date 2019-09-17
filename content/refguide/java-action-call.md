@@ -7,7 +7,7 @@ tags: ["studio pro", "Java"]
 ---
 
 {{% alert type="warning" %}}
-This activity can only be used in **Microflows**.
+This activity can only be used in microflows.
 {{% /alert %}}
 
 ## 1 Introduction

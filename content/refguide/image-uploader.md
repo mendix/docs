@@ -1,7 +1,7 @@
 ---
 title: "Image Uploader"
 parent: "file-widgets"
-tags: ["studio pro", "image uploader, "file widget", "widget] 
+tags: ["studio pro", "image uploader", "file widget", "widget"] 
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -11,7 +11,7 @@ tags: ["studio pro", "image uploader, "file widget", "widget]
 
 An image uploader is used to upload images to the server. It also generates a thumbnail of the uploaded image. The uploaded image or its thumbnail can be displayed by an image viewer. It must be placed inside a data view connected to the entity System.Image or a specialization thereof.
 
-In the example below, an image uploader is placed in a nested data view, while the *Profile* entity is a specialization of System.Image:
+In the example below, an image uploader is placed in a nested data view (the *Profile* entity is a specialization of System.Image):
 
 ![Image Uploader](attachments/file-widgets/image-uploader.png)
 

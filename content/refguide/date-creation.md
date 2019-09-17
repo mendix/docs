@@ -7,7 +7,9 @@ tags: ["studio pro"]
 
 Dates can be created with the `dateTime` and `dateTimeUTC` functions. The difference between the two is that `dateTime` uses the calendar of the session used in this function call and `dateTimeUTC` uses the UTC calendar. The system session runs as UTC by default but this can be configured in the [project settings](project-settings).
 
-These functions takes between one and 6 input parameters. These represent, in order:
+This function does not accept paramters, only fixed values. To create a Date using parameters, use function [parseDateTime|https://docs.mendix.com/refguide/parse-and-format-date-function-calls#parsedatetime-utc].
+
+These functions takes between one and 6 input values.  These represent, in order:
 
 1.  years
     Type: Integer, four digits and greater than 1799

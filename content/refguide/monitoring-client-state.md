@@ -6,6 +6,7 @@ tags: ["studio pro"]
 
 The state is in the client (web browser). This allows the server to be scaled to multiple instances. As the state now resides in the client, it can be useful to monitor what's in the state and why at a given time.
 
+Ctrl-Alt-G does not work (anymore)
 To do this, use the **Ctrl + Alt + G** key combination to dump the state into the browser console. The state is displayed in a JSON object and is grouped by entity type. If the entity is not-persistable, this is indicated with the suffix `[NPE]`.
 
 For each entity type, the IDs of the object instances that are in the state are listed. Every object instance shows the following information:

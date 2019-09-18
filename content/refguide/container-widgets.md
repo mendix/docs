@@ -11,7 +11,7 @@ Container widgets provide structure to your page's content.
 
 * [**Layout grid**](layout-grid) – gives structure to your pages, has a built-in behavior to show how a page will look like on different devices:
 
-    ![Layout Grid Example](attachments/container-widgets/layout-grid.png)
+    ![Layout Grid Example](attachments/container-widgets/layout-grid-example.png)
 
 * [**Container**](container) – a layout element where you can place a widget or a group of widgets and simultaneously style, drag or delete them:
 

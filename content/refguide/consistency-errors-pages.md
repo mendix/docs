@@ -47,8 +47,8 @@ Possible errors that you can get when a page is expecting a context that is unav
 
 | Error Code | Text in the Checks Panel                                     | Cause of an Error                                            | Way to Fix                                                   |
 | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| CE0568     | The selected page {Name of the page} expects an object of type {type of object}, which is not available here. | The page has a data view that expects an object of a particular type to be passed to it. This error occurs when the page is called from another page, which does not have this object available. For a more detailed example, see section [4.1 Error Fix Example 1](#error-example-1). | Make sure that the object is passed to the page that has a configured data view on it. For more information, see section  [4.1 Error Fix Example 1](#error-example-1). |
-| CE0568     | The selected page {Name of page} expects an object of type X, which is not compatible with the object of type Y that is available here. | You have a widget (for example, a button) that opens a page. The page has a data view that expects an object of particular type to be passed to it. However, the widget is placed inside a data container with another type of object. For a detailed example, see section [4.2 Error Fix Example 2](#error-example-2). | Make sure that the button is placed in the correct data container and passes the correct type of object to the page. For more information, see section [4.2 Error Fix Example 2](#error-example-2). |
+| CE1568     | The selected page {Name of the page} expects an object of type {type of object}, which is not available here. | The page has a data view that expects an object of a particular type to be passed to it. This error occurs when the page is called from another page, which does not have this object available. For a more detailed example, see section [4.1 Error Fix Example 1](#error-example-1). | Make sure that the object is passed to the page that has a configured data view on it. For more information, see section  [4.1 Error Fix Example 1](#error-example-1). |
+| CE1569     | The selected page {Name of page} expects an object of type X, which is not compatible with the object of type Y that is available here. | You have a widget (for example, a button) that opens a page. The page has a data view that expects an object of particular type to be passed to it. However, the widget is placed inside a data container with another type of object. For a detailed example, see section [4.2 Error Fix Example 2](#error-example-2). | Make sure that the button is placed in the correct data container and passes the correct type of object to the page. For more information, see section [4.2 Error Fix Example 2](#error-example-2). |
 
 ### 4.1 Error Fix Example 1 {#error-example-1}
 
@@ -134,7 +134,7 @@ One of the most common errors of this type are described in the table below:
 | CE0552     | Microflow {name of the microflow} does not return an object. | The data source of a widget (for example, a data view) is set to **Microflow**, but the microflow does not return any object. | Open the microflow and configure a return value for it. Do the following: <ol><li>Double-click the end event.</li><li>In the **End Event** dialog window, set **Type** from **Nothing** to the data type you would like it to return.</li><li>Set the **Entity** option if needed (whether this option is displayed depends on the selected data type).</li><li> Specify the **Return value**.</li></ol> |
 | CE0551     | Microflow {name of the microflow} does not return a list.    | The data source of a list view is set to **Microflow**, but the microflow does not return a list. | Open the microflow and configure it to return a list. Do the following: <ol><li>Double-click the end event.</li><li> In the **End Event** dialog window, set **Type** from **Nothing** to **List**.</li><li>Set the **Entity** option.</li><li>Specify the **Return value**.</li></ol> |
 
-## 6 Input Widgets Consistency Errors
+## 6 Input Widget Consistency Errors
 
 The most common errors for input widgets, their causes, and ways to fix them are described in the table below. For more information on input widgets, see [Input Widgets](input-widgets). 
 
@@ -220,7 +220,7 @@ To change the ownership, do the following:
 
 You have changed the owner of the association.
 
-## 7 File Widgets Consistency Errors
+## 7 File Widget Consistency Errors
 
 File widgets should be placed in a data container, otherwise you will get consistency errors. Another way to fix consistency errors is to place a file widget to a [snippet](snippet). For more information on file widgets, see [File Widgets](file-widgets). 
 

@@ -48,16 +48,16 @@ Possible errors that you can get when a page is expecting a context that is unav
 
 | Error Code | Text in the Checks Panel                                     | Cause of an Error                                            | Way to Fix                                                   |
 | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| CE0568     | The selected page {Name of the page} expects an object of type {type of object}, which is not available here. | The page has a data view that expects an object of a particular type to be passed to it. This error occurs when the page is opened from another page, which does not have this object available. For a more detailed example, see section [4.1 Error Fix Example 1](#error-example-1). | Make sure that the object is passed to the page which has a configured data view on it. For more information, see section  [4.1 Error Fix Example 1](#error-example-1). |
-| CE0568     | The selected page {Name of page} expects an object of type X, which is not compatible with the object of type Y that is available here. | You have a widget (for example, a button) that opens a page. The page has a data view that expects an object of particular type to be passed to it. However, the widget is placed inside a data container with another type of object. For a detailed example, see section [4.2 Error Fix Example 2](#error-example-2). | Make sure that the button is placed in the correct data container and passes the correct type of object to the page. For more information, see section [4.2 Error Fix Example 2](#error-example-2). |
+| CE1568     | The selected page {Name of the page} expects an object of type {type of object}, which is not available here. | The page has a data view that expects an object of a particular type to be passed to it. This error occurs when the page is opened from another page, which does not have this object available. For a more detailed example, see section [4.1 Error Fix Example 1](#error-example-1). | Make sure that the object is passed to the page which has a configured data view on it. For more information, see section  [4.1 Error Fix Example 1](#error-example-1). |
+| CE1569     | The selected page {Name of page} expects an object of type X, which is not compatible with the object of type Y that is available here. | You have a widget (for example, a button) that opens a page. The page has a data view that expects an object of particular type to be passed to it. However, the widget is placed inside a data container with another type of object. For a detailed example, see section [4.2 Error Fix Example 2](#error-example-2). | Make sure that the button is placed in the correct data container and passes the correct type of object to the page. For more information, see section [4.2 Error Fix Example 2](#error-example-2). |
 | CE0529     | The selected {Name of the page} expects an object of type {type of object} and cannot be used as a home page. Change the page or use a microflow to provide the page with an object. | You have set a page that expects an object to be passed to it (for example, a page with a data view) as the home page. But by default the home page has no object that is passed to it, because it is the starting point for your user. For a more detailed example, see section [2.2 Error Fix When the Home Page Expects an Object](consistency-errors-navigation#home-page-expects-an-object) in *Navigation Consistency Errors*. | Set a different  page as the home page. Alternatively, you can use a microflow that will open the home page and pass a specific object to it. For more information, see section [2.2 Error Fix When the Home Page Expects an Object](consistency-errors-navigation#home-page-expects-an-object) in *Navigation Consistency Errors*. |
 | CE0558     | All data views receiving object from the page parameter must have the same entity. | You have several data view on one page that have different entities as a data source. | Select one and the same entity for all data views, or change the data source for them. |
 
-### 4.1 Error Fix Example 1 {#error-example-1}
+### 4.1 Error Fix Example for CE1568 {#error-example-1}
 
 When a page expects a context that is not passed to it from another page or a microflow, you will get consistency errors. 
 
-Let us study an example: the **Customers** page contains a list view with a list of all customer names (**Customer** is set as **Entity** in the **Data Source** properties), and a **Details** button outside of the list view (placed in a [container](page-editor-widgets-structure#container-overview) only). The **Details** button opens a **Customer Details** page when a user clicks it (the **On Click Action** for the button is set to **Page** and the **Create Object** option is disabled). 
+For example, the **Customers** page contains a list view with a list of all customer names (**Customer** is set as **Entity** in the **Data Source** properties), and a **Details** button outside of the list view (placed in a [container](page-editor-widgets-structure#container-overview) only). The **Details** button opens a **Customer Details** page when a user clicks it (the **On Click Action** for the button is set to **Page** and the **Create Object** option is disabled). 
 
 ![Button Properties on the Customers Page](attachments/consistency-errors-pages/customers-page.png)
 
@@ -106,11 +106,11 @@ If you want to create a new customer and fill in the customer's details on the *
 
 Now when a user clicks this button, the **Customer Details** page will open, and the new *Customer* object will be created. 
 
-### 4.2 Error Fix Example 2 {#error-example-2}
+### 4.2 Error Fix Example for CE1569 {#error-example-2}
 
 If a widget opens a page and this widget is inside a data container of entity X, but the referred page expects entity Y, you will get a consistency error. 
 
-Let us study an example: you have a **New** button on the **Engineers** page that opens the **Tasks** page. 
+For example, you have a **New** button on the **Engineers** page that opens the **Tasks** page. 
 
 {{% image_container width="350" %}}![A Button on Engineers Page](attachments/consistency-errors-pages/engineers-page.png)
 {{% /image_container %}}
@@ -136,8 +136,57 @@ One of the most common errors of this type are described in the table below:
 | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | CE0552     | Microflow {name of the microflow} does not return an object. | The data source of a widget (for example, a data view) is set to **Microflow**, but the microflow does not return any object. | Open the microflow and configure a return value for it. Do the following: <ol><li>Select the end event.</li><li>In its properties, set **Return Value** from **Nothing** to **Value**.</li><li>Set the **Data Type** and set the **Entity** option if needed (whether this option is displayed depends on the selected data type).</li><li> Configure the **Value**.</li></ol> |
 | CE0551     | Microflow {name of the microflow} does not return a list.    | The data source of a list view is set to **Microflow**, but the microflow does not return a list. | Open the microflow and configure it to return a list. Do the following: <ol><li>Select the end event.</li><li> In its properties, set **Return Value** from **Nothing** to **Value**.</li><li>Set the **Data Type**  to *List*.</li><li>Set the **Entity** option.</li><li>Configure the **Value**.</li></ol> |
+| CE1573     | Parameter {Name of the parameter} of the selected microflow is expecting an object {Name of the object} and the page has no objects available. Place a data container on the page and set {Name of the object} as the data source. | You selected a microflow as an on-click action of a widget (for example, of a button) and the microflow contains a parameter, but no object is passed to the microflow. | Place the widget in a data container and make sure that the data source of the data container matches the **Entity** property of the microflow parameter.<br /> For example, if you have a button that calls a microflow (i.e. an **On Click Action** of the button is set to *Microflow*), and this microflow contains a parameter *Customer*, you need to place the button in a data container that has a *Customer* object available. For a more detailed example and a fix for it, see the [Error Fix Example for CE1573](#error-fix-example-3) section. |
+| CE1574     | Parameter {Name of the parameter} of the selected microflow is expecting an object {Name of the object} and an object available in the surrounding data container should be the same. | You selected a microflow as the data source of a widget and the object available for this widget does not match the parameter of the microflow. | Make sure that object available in the data view matches the **Entity** property of the microflow parameter. You can do this by either changing the data source of the data container or by changing the parameter of the microflow. |
 
-## 6 Input Elements Consistency Errors
+### 5.1 Error Fix Example for 1573 {#error-fix-example-3}
+
+When you set a microflow as an on-click action for a widget, and this microflow expects an objects that is not available, this will result in an error. 
+
+For example, on a page called *Customers* you have a button that calls a microflow (i.e. an **On Click Action** of the button is set to *Microflow*):
+
+ ![](attachments/consistency-errors-pages/button-on-click-action.png)
+
+However, the microflow contains a parameter *Customer*:
+
+![](attachments/consistency-errors-pages/microflow-parameter.png)
+
+The microflow's parameter expects an object *Customer*, and since this object is not available on the page where button is located, it results in an error. 
+
+To fix it, do the following:
+
+1.  Open the *Customers* page where the button is located and drag and drop a data container on the page, for example, a data view.
+
+2. Set the data source of the data view to *Context* and set *Customer* as an **Entity**.
+
+    ![](attachments/consistency-errors-pages/data-view-data-source.png)
+
+3. Place the button inside the data view.
+
+Now the *Customer* object is available on the page and it matches the microflow parameter *Customer*. 
+
+### 5.2 Error Fix Example 1574 {#error-fix-example-4}
+
+For example, on a page called *Customers* you have a button that calls a microflow (i.e. an **On Click Action** of the button is set to *Microflow*):
+
+![](attachments/consistency-errors-pages/button-on-click-action.png)
+
+The microflow contains a parameter *Customer*:
+
+![](attachments/consistency-errors-pages/microflow-parameter.png)
+
+On the Customers page you also have a data container, for example, a data view, that has an object *Photo* available. That means that the data source of the data view is set to *Context* and **Entity** is set to *Photo*:
+
+![](attachments/consistency-errors-pages/data-view-photo-data-source.png)
+
+As the microflow has the parameter Customer, and the page has the object Photo available, they are conflicting and resulting into an error.
+
+To best way to fix this error is to do the following: 
+
+1. Open the page *Customers*.
+2. Select the data view and change the **Entity** property from *Photo* to *Customer*.
+
+## 6 Input Element Consistency Errors
 
 The most common errors for [input elements](page-editor-widgets-input-elements) (such as, a text box, a drop-down, a check box, etcetera) , their causes, and ways to fix them are described in the table below. 
 
@@ -146,7 +195,7 @@ The most common errors for [input elements](page-editor-widgets-input-elements) 
 | CE0544     | This widget can only function inside a data container. Move it into a data view, list view or template grid. | You have added an input widget to a page, but it is not inside a data view or a list view. | There are two ways to fix the error: <ul><li>When you do not have a specific data view or list view available yet: open widget's properties > the **Data Source** section and click **Wrap with a new data view**, the input widget will be automatically placed inside a new data view.</li><li>When you already have a data view or a list view which this input element relates to: drag and drop the input element inside the data view or the list view</li></ul> |
 | CE0545     | Select an attribute for this {name of the input element}.    | You have added an input element and it is inside a data container, but the attribute  which this input element is connected to is not selected. | Open widget's properties > the **Data Source** section and select an attribute in the **Attribute** field. |
 
-## 7 Image Widgets Consistency Errors
+## 7 Image Widget Consistency Errors
 
 The most common consistency errors for [static image widgets](page-editor-widgets-images) can occur when you place an image widget on a page, but do not select an actual image for it. 
 

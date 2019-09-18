@@ -11,7 +11,9 @@ tags: ["SSO", "Single Sign-on", "Mendix credentials"]
 
 ## 1 Introduction
 
-{{% todo %}}[Add AppStore Link - several instances
+{{% todo %}}[Change sub-steps to list with letters
+    
+Add AppStore Link - several instances
 
 Check which Starter Apps will be updated and how to tell what version of MendixSSO they have]{{% /todo %}}
 
@@ -72,15 +74,17 @@ You can deactivate Mendix SSO in two simple steps. This will remove the ability 
 The two steps are:
 
 1. Rename the original login file (by default **login.html.old**) in the **theme** folder of your project to **login.html** – this removes the single sign-on button from your sign in screen
-    * Open your project directory in File Explorer by selecting the menu item **Project** > **Show Project Directory in Explorer**
+    <ol type=a>
+    <li>Open your project directory in File Explorer by selecting the menu item <STRONG>Project</STRONG> > <STRONG>Show Project Directory in Explorer</STRONG><br />
 
-        ![Show project directory](attachments/mendix-sso/show-project-directory.png)
+    ![Show project directory](attachments/mendix-sso/show-project-directory.png)</li>
 
-    * Go to the **theme** folder
-    * Rename **login.html** to **login-with-sso.html**
-    * Rename **login-without-sso.html** to **login.html**
+    <li>Go to the <STRONG>theme</STRONG> folder</li>
+    <li>Rename <STRONG>login.html</STRONG> to <STRONG>login-with-sso.html</STRONG></li>
+    <li>Rename <STRONG>login-without-sso.html</STRONG> to <STRONG>login.html</STRONG></li>
+    </ol>
 
-        ![File explorer showing two login files](attachments/mendix-sso/theme-folder-remove.png)
+    ![File explorer showing two login files](attachments/mendix-sso/theme-folder-remove.png)
 
 2. Remove the microflow **AfterStartup_MendixSSO** as the **After startup** microflow.
     * Open **Project Settings** from the **Project Explorer**

@@ -47,7 +47,7 @@ For each environment (for example, myapp running in acceptance), the first time 
 
 You have to click **Authorize** to continue using Mendix SSO with this app.
 
-If you are already signed-in to Mendix, the app will automatically sign you in.
+If you are already signed in to the Mendix platform, the app will now automatically sign you in to the app.
 
 If you are not already signed-in to Mendix, you will need to sign in to Mendix.
 

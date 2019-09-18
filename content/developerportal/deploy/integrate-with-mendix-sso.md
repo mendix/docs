@@ -3,7 +3,7 @@ title: "Single Sign-On Using AppCloudServices"
 parent: "sso-with-appcloudservices"
 menu_order: 10
 description: "Use the AppCloudServices module to add Single Sign-on to your app using the user's Mendix credentials"
-tags: ["AppCloudServices", "SSO", "Single Sign On", "Mendix credentials"]
+tags: ["AppCloudServices", "SSO", "Single Sign-on", "Mendix credentials"]
 #Ownership claimed by Identity Services Team.
 #Needs to be rewritten to remove AppCloud references and just concentrate on SSO. Also needs to be tested.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -12,7 +12,7 @@ tags: ["AppCloudServices", "SSO", "Single Sign On", "Mendix credentials"]
 ## 1 Introduction
 
 {{% alert type="warning" %}}
-The AppCloudServices module has been deprecated. Enabling single sign on with your Mendix account is now managed by the MendixSSO module. Please see [Mendix Single Sign-On](mendix-sso) for more information.
+The AppCloudServices module has been deprecated. Enabling single sign-on with your Mendix account is now managed by the MendixSSO module. Please see [Mendix Single Sign-On](mendix-sso) for more information.
 
 This documentation is only meant for users with legacy applications which still use AppCloudServices.
 {{% /alert %}}

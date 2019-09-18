@@ -3,7 +3,7 @@ title: "Mendix Single Sign-On"
 parent: "mendix-cloud-deploy"
 menu_order: 70
 description: "Use the MendixSSO module to add Single Sign-on to your app using the user's Mendix credentials"
-tags: ["SSO", "Single Sign On", "Mendix credentials"]
+tags: ["SSO", "Single Sign-on", "Mendix credentials"]
 #Ownership claimed by Identity Services Team.
 #Needs to be rewritten to remove AppCloud references and just concentrate on SSO. Also needs to be tested.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -11,13 +11,15 @@ tags: ["SSO", "Single Sign On", "Mendix credentials"]
 
 ## 1 Introduction
 
-{{% todo %}}[Add AppStore Link - several instances]{{% /todo %}}
+{{% todo %}}[Add AppStore Link - several instances
 
-The [MendixSSO module](https://appstore.home.mendix.com) allows you to specify that users of your app can be authenticated using their Mendix account credentials when your app is deployed to Mendix Cloud v4.
+Check which Starter Apps will be updated and how to tell what version of MendixSSO they have]{{% /todo %}}
+
+The [MendixSSO module](https://appstore.home.mendix.com) allows you to specify that users of your app can sign in using their Mendix account credentials when your app is deployed to Mendix Cloud.
 
 Using Mendix accounts means that you do not need a special authorization module to support resetting and changing passwords, and makes it easy to create multiple applications which all use the same sign-on mechanism.
 
-Mendix starter apps come with the Mendix SSO module already available. All you have to do is to set your security level to **Production** and your end-users will be able to sign on.
+Mendix starter apps come with the Mendix SSO module already available. All you have to do is to set your security level to **Production** and your end-users will be able to sign in.
 
 If your app does not have the MendixSSO module, it is available from the Mendix App Store here: [Mendix SSO](https://appstore.home.mendix.com). Follow the instructions in [How To Use App Store Content](/developerportal/app-store/app-store-content) to import it into your app and then follow the instructions in [Setting Up Mendix Single Sign-On](#setting-up), below.
 
@@ -30,7 +32,7 @@ You can see if your app has the Mendix SSO module by looking in the **App Store 
 ## 2 Using Mendix Single Sign-On
 
 {{% alert type="warning" %}}
-Mendix Single Sign-On is activated when your app is deployed to Mendix Cloud v4. When you run your app locally, or on another cloud, you will need to use local credentials.
+Mendix Single Sign-On is only activated when your app is deployed to the Mendix Cloud. When you run your app locally, or on another cloud, you will need to use local credentials.
 {{% /alert %}}
 
 ### 2.1 Signing On as an End-user
@@ -39,7 +41,7 @@ When you start an app as an end-user, and do not have a current token for access
 
 ![Mendix SSO sign-on screen](attachments/mendix-sso/sso-sign-on.png)
 
-For each environment (for example, myapp running in acceptance), the first time you sign on as an end-user using Mendix SSO you will be asked to authorize access. This means that the app can access information held in your Mendix profile.
+For each environment (for example, myapp running in acceptance), the first time you sign in as an end-user using Mendix SSO you will be asked to authorize access. This means that the app can access information held in your Mendix profile.
 
 ![Authorization screen](attachments/mendix-sso/authorize-access.png)
 
@@ -65,11 +67,11 @@ If you have an app which already has Mendix SSO activated, you may wish to remov
 
 ### 3.1 Deactivating Mendix Single Sign-On{#deactivating}
 
-You can deactivate Mendix SSO in two simple steps. This will remove the ability for end-users to sign on with their Mendix account, but will leave the local user administration functions of MendixSSO intact.
+You can deactivate Mendix SSO in two simple steps. This will remove the ability for end-users to sign in with their Mendix account, but will leave the local user administration functions of MendixSSO intact.
 
 The two steps are:
 
-1. Rename the original login file (by default **login.html.old**) in the **theme** folder of your project to **login.html** – this removes the single sign-on button from your login screen
+1. Rename the original login file (by default **login.html.old**) in the **theme** folder of your project to **login.html** – this removes the single sign-on button from your sign in screen
     * Open your project directory in File Explorer by selecting the menu item **Project** > **Show Project Directory in Explorer**
 
         ![Show project directory](attachments/mendix-sso/show-project-directory.png)
@@ -153,7 +155,7 @@ To enable Mendix SSO in your app, if it does not have it set up already, you nee
 
         ![Confirmation of user roles](attachments/mendix-sso/module-user-roles.png)
 
-5. Rename the file **login-with-sso.html** in the **theme** folder of your project to **login.html** – this adds the single sign-on button to your login screen
+5. Rename the file **login-with-sso.html** in the **theme** folder of your project to **login.html** – this adds the single sign-on button to your sign in screen
     * Open your project directory in File Explorer by selecting the menu item **Project** > **Show Project Directory in Explorer**
         ![Show project directory](attachments/mendix-sso/show-project-directory.png)
     * Go to the **theme** folder

@@ -37,7 +37,7 @@ Mendix Single Sign-On is only activated when your app is deployed to the Mendix 
 
 ### 2.1 Signing On as an End-user
 
-When you start an app as an end-user, and do not have a current token for access to Mendix *or* have not signed in to this environment before, you will see the Mendix SSO sign-on screen. You can choose to sign-on with local credentials, but to use Mendix SSO, click **Or sign in with** > **Mendix Account**.
+When you open an app as an end-user, and this is the first time visiting the app environment *or* your previous session was a long time ago, you will see the Mendix SSO sign-on screen. You can still choose to sign-on with local user credentials, but to use your Mendix Account with Mendix SSO, click  the **Mendix Account** button.
 
 ![Mendix SSO sign-on screen](attachments/mendix-sso/sso-sign-on.png)
 

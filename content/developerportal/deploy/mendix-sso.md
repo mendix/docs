@@ -49,7 +49,7 @@ You have to click **Authorize** to continue using Mendix SSO with this app.
 
 If you are already signed in to the Mendix platform, the app will now automatically sign you in to the app.
 
-If you are not already signed-in to Mendix, you will need to sign in to Mendix.
+If you are not already signed in to Mendix, you will need to sign in to the Mendix platform first – this will also signed you in to the app.
 
 ### 2.2 Assigning End-user Roles
 

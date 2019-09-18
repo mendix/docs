@@ -29,7 +29,7 @@ Container widgets provide structure to your page's content.
 
     ![Scroll Container Example](attachments/container-widgets/scroll-container-example.png)
 
-* [**Table**](table) – consists of a number of rows and columns; each table cell can contain widgets. In the example below some table cells contain widgets and some are still empty:
+* [**Table**](table) – consists of a number of rows and columns; each table cell can contain widgets. In the example below, some table cells contain widgets and some are still empty:
 
     ![Table Example](attachments/container-widgets/table-example.png)
 

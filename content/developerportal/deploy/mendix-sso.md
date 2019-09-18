@@ -78,7 +78,7 @@ The two steps are:
 
     * Go to the **theme** folder
     * Rename **login.html** to **login-with-sso.html**
-    * Rename **login.html.old** to **login.html**
+    * Rename **login-without-sso.html** to **login.html**
 
         ![File explorer showing two login files](attachments/mendix-sso/theme-folder-remove.png)
 

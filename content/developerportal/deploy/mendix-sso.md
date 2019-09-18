@@ -45,7 +45,7 @@ For each environment (for example, myapp running in acceptance), the first time 
 
 ![Authorization screen](attachments/mendix-sso/authorize-access.png)
 
-You have to click **Authorize** to continue using Mendix SSO.
+You have to click **Authorize** to continue using Mendix SSO with this app.
 
 If you are already signed-in to Mendix, the app will automatically sign you in.
 

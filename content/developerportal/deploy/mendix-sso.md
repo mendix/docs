@@ -159,7 +159,7 @@ To enable Mendix SSO in your app, if it does not have it set up already, you nee
     * Open your project directory in File Explorer by selecting the menu item **Project** > **Show Project Directory in Explorer**
         ![Show project directory](attachments/mendix-sso/show-project-directory.png)
     * Go to the **theme** folder
-    * Rename **login.html** to something else (for example *login.html.old*)
+    * Rename **login.html** to  **login-without-sso.html**)
     * Rename **login-with-sso.html** to **login.html**
         ![file explorer showing two login files](attachments/mendix-sso/theme-folder.png)
 

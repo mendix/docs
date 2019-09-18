@@ -17,15 +17,25 @@ Container widgets provide structure to your page's content.
 
     ![Container Example](attachments/container-widgets/container-example.png)
 
-* [**Group box**](group-box) – groups widgets together, can be configured to collapse or expand with all elements inside it
+* [**Group box**](group-box) – groups widgets together, can be configured to collapse or expand with all elements inside it:
 
-* [**Tab container**](tab-container) – shows information categorized into tabs
+    ![Group Box Example](attachments/container-widgets/group-box-example.png)
 
-* [**Scroll Container**](scroll-container) – divides layout into regions, such as a header, sidebar, or footer
+* [**Tab container**](tab-container) – shows information categorized into tabs:
 
-* [**Table**](table) – consists of a number of rows and columns; each table cell can contain widgets
+    ![Tab Container Example](attachments/container-widgets/tab-container-example.png)
 
-*   [**Navigation list**](navigation-list) – allows you to select a separate on-click action for each row of this widget
+* [**Scroll Container**](scroll-container) – divides layout into regions, such as a header, sidebar, or footer. In the example below a scroll container is used to structure a pop-up page layout with a header and a footer:
+
+    ![Scroll Container Example](attachments/container-widgets/scroll-container-example.png)
+
+* [**Table**](table) – consists of a number of rows and columns; each table cell can contain widgets. In the example below some table cells contain widgets and some are still empty:
+
+    ![Table Example](attachments/container-widgets/table-example.png)
+
+* [**Navigation list**](navigation-list) – allows you to select a separate on-click action for each row of this widget:
+
+    ![Navigation List Example](attachments/container-widgets/navigation-list-example.png)
 
 ## 2 Performing Basic Functions
 

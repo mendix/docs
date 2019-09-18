@@ -63,7 +63,7 @@ Do not attempt to add or delete Mendix SSO users using administration functions 
 
 If you have an app which already has Mendix SSO activated, you may wish to remove it.
 
-### 3.1 Deactivating Mendix Single Sign-On
+### 3.1 Deactivating Mendix Single Sign-On{#deactivating}
 
 You can deactivate Mendix SSO in two simple steps. This will remove the ability for end-users to sign on with their Mendix account, but will leave the local user administration functions of MendixSSO intact.
 
@@ -89,11 +89,21 @@ The two steps are:
     * Click **OK** to close the **Project Settings**
     {{% alert type="info" %}}If there is a different After startup microflow, you should not remove it, but rather remove the AfterStartup_MendixSSO microflow which is an action in the existing microflow{{% /alert %}}
 
-Mendix SSO is now deactivated.
+Mendix SSO is now deactivated. You can still use it for local end-user administration.
 
 ### 3.2 Removing Mendix Single Sign-On
 
+You can also completely remove Mendix Single Sign-On from your app if you want to use a different method for end-user administration. However, in most cases you can just leave the module in your app and deactivate it as described above.
 
+To completely remove Mendix SSO you should do the following:
+
+1. Perform the two steps described above in [Deactivating Mendix Single Sign-On](#deactivating).
+
+2. Remove any references to the MendixSSO module in the navigation profiles, accessed through the **Navigation** page of the **Project Explorer**.
+
+3. Delete the **MendixSSO** module from **App Store modules**.
+
+4. Review the **Errors** pane for any other references to **MendixSSO** – there will only be additional errors if Mendix SSO has been modified. For example, if you have included snippets into your app's pages as described in [Modifying Mendix SSO](modifying-mendix-sso).
 
 ## 4 Setting Up Mendix Single Sign-On{#setting-up}
 

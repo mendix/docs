@@ -140,7 +140,7 @@ To enable Mendix SSO in your app, if it does not have it set up already, you nee
         * **Icon** – *Glyphicon 'lock'*
         * **On click** – *Show a page* **App Store modules** > **MendixSSO** > **Public** > **Default Implementation** > **Pages** > **Admin** > **UserOverview**
 
-4. Turn on **Production** security level and give **User roles** *User* and *Administrator* access to the **MendixSSO** module.
+4. Turn on **Production** security level and configure **User roles** *User* and *Administrator* to have access to the appropriate **MendixSSO** module roles.
     * Open **Project Security** from the **Project Explorer**
     * Set **Security level** to **Production**
     * Switch to the **User roles** tab

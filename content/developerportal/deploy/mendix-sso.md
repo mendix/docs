@@ -91,7 +91,7 @@ The two steps are:
     * Click **OK** to close the **Project Settings**
     {{% alert type="info" %}}If there is a different After startup microflow, you should not remove it, but rather remove the AfterStartup_MendixSSO microflow which is an action in the existing microflow{{% /alert %}}
 
-Mendix SSO is now deactivated. You can still use it for local end-user administration.
+Mendix SSO will be deactivated the next time you deploy your app. You can still use it for local end-user administration.
 
 ### 3.2 Removing Mendix Single Sign-On
 

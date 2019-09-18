@@ -333,7 +333,7 @@ The widget’s style properties are as follows:
 | `pickerBackdropIOS` | All ViewStyle properties |   |
 | `pickerTopIOS` | All ViewStyle properties |  |
 | `value`  | All TextStyle properties | |
-| `valueDisabled`  | All TextStyle properties | Overrides `value` styles if the drop down is non-editable. |
+| `valueDisabled`  | All TextStyle properties | Overrides `value` styles if the drop down widget is non-editable. |
 | `validationMessage` | All TextStyle properties |    |
 
 The default class to style all drop down inputs is named `DropDown`.

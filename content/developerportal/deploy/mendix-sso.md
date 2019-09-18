@@ -126,7 +126,7 @@ To enable Mendix SSO in your app, if it does not have it set up already, you nee
     * Choose the microflow **App Store modules** > **MendixSSO** > **Public** > **Default Implementation** > **Microflows** > **AfterStartup_MendixSSO** (you can use the filter to find it quickly) and click **Select**
         ![](attachments/mendix-sso/after-startup.png)
     * Click **OK** to close the **Project Settings**
-    {{% alert type="info" %}}If there is already an After startup microflow, you should not replace it, but rather add the AfterStartup_MendixSSO microflow as the first action in the existing microflow{{% /alert %}}
+    {{% alert type="info" %}}If there is already an After startup microflow, you should not replace it, but rather add the AfterStartup_MendixSSO microflow as an action in the existing microflow{{% /alert %}}
 
 3. Add the pages **MyAccountViewEdit** and **UserOverview** to the app navigation.
     * Open **Navigation** from the **Project Explorer**

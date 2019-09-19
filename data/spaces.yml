@@ -172,6 +172,12 @@ partners:
     - "IBM"
     - "SAP"
     - "Siemens"
+app-store-items:
+  space: "App Store Items Guide"
+  priority: false
+  draft: true
+  menu_categories:
+    - "Modules"
 product-naming:
   space: "Mendix Product Naming Guide"
   priority: false

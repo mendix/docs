@@ -89,7 +89,8 @@ In adding to inserting a new column, you can perform the following actions when 
 
 An example of layout grid properties is represented in the image below:
 
-![Layout Grid Properties](attachments/container-widgets/layout-grid-properties.png)
+{{% image_container width="350" %}}![Layout Grid Properties](attachments/container-widgets/layout-grid-properties.png)
+{{% /image_container %}}
 
 Layout grid properties consist of the following sections:
 

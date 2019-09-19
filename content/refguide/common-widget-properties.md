@@ -30,7 +30,7 @@ For example, if an address field is required, the required message for the text 
 
 ## 3 Common Section {#common-properties}
 
-### 3.1 Name
+### 3.1 Name {#name}
 
 The internal name of the widget. You can use this to give sensible names to widgets. The name property also appears in the generated HTML: the widget DOM element automatically includes the class `mx-name-{NAME}`, which can be useful for [Selenium testing](/howto7/integration/selenium-support).
 
@@ -79,7 +79,11 @@ Many input widgets, like text boxes and drop-down widgets, can be connected to:
 
 In the first case we say the widget is connected to an attribute and in the second case to an attribute path.
 
-An input widget connected to an attribute <strong>path</strong> must be read-only. Studio Pro will check this for you.
+{{% alert type="info" %}}
+In Mendix 8.0, an input widget connected to an **attribute path** must be read-only. Studio Pro will check this for you.
+
+In Mendix 8.1 and above, you can edit attributes presented in input widgets over a path.
+{{% /alert %}}
 
 ## 5 Visibility Section {#visibility-properties}
 

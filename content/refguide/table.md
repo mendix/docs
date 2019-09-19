@@ -17,14 +17,6 @@ For example, you can create a table with text widgets, a logo, and a data view i
 
 ![](attachments/container-widgets/table-example.png)
 
-Cells can be merged horizontally and vertically to allow for asymmetric layouts. Only empty cells can be merged. A merge can then be initiated either in a cell's context menu or by clicking the merge button that will automatically appear if you select an eligible cell.
-
-![](attachments/pages/table-merge.png)
-
-Tables can be selected by clicking the white square in the top-left corner.
-
-Tables allow for a number of keyboard interactions. Examples include navigating between rows and columns with the cursor keys and copy-pasting rows and cells.
-
 ## 2 Components
 
 A table consist of [rows](#rows), columns, and [cells](#cells). 

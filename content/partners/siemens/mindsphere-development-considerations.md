@@ -378,9 +378,9 @@ If the user logs out from MindSphere, the Mendix app will not delete the session
 In some circumstances, this could lead to another user *using the same app in the same browser on the same computer*, picking up the session from the previous user if the cookie has not yet expired.
 {{% /alert %}}
 
-### 9.5 Cloud Services Platform
+### 9.5 Native Mobile
 
-Mendix apps can currently only be deployed to MindSphere running on AWS (Amazon Web Services). They cannot currently be deployed to MindSphere running on Microsoft Azure.
+With Mendix Studio Pro V8.0.0, Mendix has released support for developing native mobile apps. This is not currently supported for apps using MindSphere.
 
 ## 10 Read More
 

@@ -1,32 +1,39 @@
 ---
-title: "Image Widgets"
+title: "Image and File Widgets"
 parent: "page-editor-widgets"
-description: "Describes image widgets in Mendix Studio."
+description: "Describes image and file widgets in Mendix Studio."
 menu_order: 30
-tags: ["studio", "page editor", "image", "image widgets", "widgets"]
+tags: ["studio", "page editor", "image", "image widgets", "widgets", "file", "file manager", "file uploader", "file downloader"]
 ---
 
 ## 1 Introduction 
 
 Image [widgets](page-editor-widgets) are used to show images to the users. 
 
-There are two image widgets in Mendix Studio:
+There are the following image and file widgets in Mendix Studio:
 
 * Image – allows you to show a static (non-changing) image in your app
-*  Dynamic image – allows you to show a dynamic image (for example, a relevant profile picture that is different for each customer) in your app
 
-   {{% image_container width="350" %}}![](attachments/page-editor-widgets-images/image-widgets.png)
+*  Dynamic Image – allows you to show a dynamic image (for example, a relevant profile picture that is different for each customer) in your app
+
+*  Image Uploader – allows end-users to upload an image
+
+*  File Manager – allows end-users to upload or/and download a file (in the **Toolbox**, you see  preconfigured file managers: **File Uploader** and **File Downloader**)
+
+   {{% image_container width="350" %}}![](attachments/page-editor-widgets-images/images-and-files.png)
    {{% /image_container %}}
 
-{{% alert type="info" %}}
+## 2 Image and Dynamic Image 
 
-You can switch between static and dynamic image in widget's properties. For more information, see the [General Section](#image-general). 
+An image (or a static image) and a dynamic image allow you to display an image either from a file (statically) or from a database (dynamically).  
 
-{{% /alert %}} 
+You can switch from one widget to another in properties:
 
-## 2 General Section {#image-general}
+![](attachments/page-editor-widgets-images/static-and-dynamic-image.png)
 
-You can switch between static and dynamic image in the **General** section, as well as set the image itself, configure its width and height, etcetera. 
+### 2.1 General Section {#image-general}
+
+In the **General** section, you can switch between static and dynamic image, select an image, configure its width and height, etc. 
 
 Before configuring settings in the **General** section for the **Dynamic Image**, keep in mind that it can only function inside a data container (a list view or a data view). You can either place widget in an existing data container; or click **Wrap with a new data view** in **Properties** to create a data view automatically and place an input element inside it. 
 
@@ -46,21 +53,47 @@ Settings available for **Static Image** and **Dynamic Image** are described in t
 | Height  Unit  | Static and Dynamic Images | The height of an image can be specified in the following ways:  <br /><ul><li>**Auto** – the height of the given image is used.</li><li>**Pixels** – the height is specified in a number of pixels. If you specify both width and height, the image will be scaled automatically: the proportions will be kept, the picture will not be stretched.</li><li>**Percentage** –  the height is specified in a percentage of the original height. It can be larger than its original height in which case the image is stretched.</li></ul><br />Default value for **Height Unit**: Auto |
 | Height        | Static and Dynamic Images | The **Height** option is only displayed when **Pixels** or **Percentage** are selected for the **Height Unit**. It specifies the height of the image in pixels or percentage. |
 
-## 3 Events Section 
+### 2.2 Events Section 
 
 You can choose the **On Click Action** in the **Events** section. The **On Click Action** defines what action is performed when the user clicks an image.
 
-### 3.1 Common Properties
+#### 2.2.1 Common Properties 
 
 The static image and the dynamic image share the properties in the **Events** section, except for one property that is [specific for the dynamic image](#events-dynamic-image). 
 
 For more information on the **Events** section for static and dynamic images, see [Events Section in Widgets](page-editor-widgets-events-section).
 
-### 3.2 Dynamic Image Specific Property {#events-dynamic-image}
+#### 2.2.2 Dynamic Image Specific Property {#events-dynamic-image}
 
 The dynamic image has a specific on-click action **Enlarge on Click**. The full-size image will be displayed when the user clicks it. This property overrides other on-click actions. 
 
-## 4 Design Section
+### 2.3 Design Section
+
+For information on the **Design** section and its properties, see [Design Section in Widgets](page-editor-widgets-design-section).
+
+## 3 Image Uploader and File Manager
+
+An **image uploader** allows end-users to upload images to you app and it generates a thumbnail of the uploaded image. 
+
+{{% alert type="info" %}}
+
+The image uploader must be placed inside a data view or a list view that have an image entity as their data source.  For more information on image entities, see the [Types of Entities](#entity-types) section in *Domain Model*. 
+
+{{% /alert %}}
+
+A **file manager** allows end-users to upload and/or download files.
+
+{{% alert type="info" %}}
+
+The file manager must be placed inside a data view or a list view that have a file entity as their data source.  For more information on file entities, see the [Types of Entities](#entity-types) section in *Domain Model*. 
+
+{{% /alert %}}
+
+### 3.1 Data Source Section
+
+### 3.2 General Section
+
+### 3.3 Design Section
 
 For information on the **Design** section and its properties, see [Design Section in Widgets](page-editor-widgets-design-section).
 

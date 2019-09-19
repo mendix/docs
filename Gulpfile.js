@@ -131,13 +131,8 @@ gulp.task('check', `Test the html and menu`,
 /*************************************************
   JAVASCRIPT
 **************************************************/
-gulp.task('js-watch', `Internal task, don't use`, ['build:js'], function (done) {
-  browserSync.reload();
-  done();
-});
-
 // BUILD
-gulp.task('build:js', `Compress js files`, ['clean:js'], (done) => {
+gulp.task('build:js', `Compress js files`, gulp.series('clean:js', (done) => {
   pump([
     gulp.src(CONFIG.PATHS.scripts.src),
     minify({
@@ -152,12 +147,17 @@ gulp.task('build:js', `Compress js files`, ['clean:js'], (done) => {
     hash.manifest('assetsjs.json', true, 4),
     gulp.dest(CONFIG.DATAFOLDER)
   ], done);
-});
+}));
+
+gulp.task('js-watch', `Internal task, don't use`, gulp.series('build:js', (done) => {
+  browserSync.reload();
+  done();
+}));
 
 /*************************************************
   SASS
 **************************************************/
-gulp.task('build:sass', `Sass build`, ['clean:css'], () => {
+gulp.task('build:sass', `Sass build`, gulp.series('clean:css', () => {
   return gulp
     .src(CONFIG.PATHS.styles.src)
     .pipe(sass({
@@ -168,9 +168,9 @@ gulp.task('build:sass', `Sass build`, ['clean:css'], () => {
     .pipe(gulp.dest(CONFIG.PATHS.styles.dest))
     .pipe(hash.manifest('assetscss.json', true, 4))
     .pipe(gulp.dest(CONFIG.DATAFOLDER));
-});
+}));
 
-gulp.task('dev:sass', `Sass build (dev task, sourcemaps included)`, ['clean:css'], () => {
+gulp.task('dev:sass', `Sass build (dev task, sourcemaps included)`, gulp.series('clean:css', () => {
   return gulp
     .src(CONFIG.PATHS.styles.src)
     .pipe(sourcemaps.init())
@@ -184,7 +184,7 @@ gulp.task('dev:sass', `Sass build (dev task, sourcemaps included)`, ['clean:css'
     .pipe(gulp.dest(CONFIG.PATHS.styles.dest))
     .pipe(hash.manifest('assetscss.json', true, 4))
     .pipe(gulp.dest(CONFIG.DATAFOLDER));
-});
+}));
 
 /*************************************************
   HUGO
@@ -196,7 +196,7 @@ gulp.task('build:hugo', `Build`, [], done => {
 /*************************************************
   MAIN BUILD TASKS
 **************************************************/
-gulp.task('build', `BUILD. Used for production`, gulp.series('clean', 'write:mappings', ['build:menu', 'build:sass', 'build:js'], 'write:assetmappings', 'build:hugo', 'check', (done) => {
+gulp.task('build', `BUILD. Used for production`, gulp.series('clean', 'write:mappings', gulp.parallel('build:menu', 'build:sass', 'build:js'), 'write:assetmappings', 'build:hugo', 'check', (done) => {
   //if any error happened in the previous tasks, exit with a code > 0
   // if (err) {
   //   var exitCode = 2;
@@ -212,7 +212,7 @@ gulp.task('build', `BUILD. Used for production`, gulp.series('clean', 'write:map
 /*************************************************
   MAIN SERVE TASK
 **************************************************/
-gulp.task('dev', ``, ['dev:sass', 'build:js', 'write:menu', 'build:hugo'], done => {
+gulp.task('dev', ``, gulp.series(gulp.parallel('dev:sass', 'build:js', 'write:menu', 'build:hugo'), done => {
   server.spawn(CONFIG.CURRENTFOLDER);
   jsonServer.spawn(CONFIG.CURRENTFOLDER);
   hugo.spawn({
@@ -228,9 +228,9 @@ gulp.task('dev', ``, ['dev:sass', 'build:js', 'write:menu', 'build:hugo'], done 
   gulp.watch(CONFIG.PATHS.styles.src, gulp.series('dev:sass'));
   gulp.watch(CONFIG.PATHS.scripts.src, gulp.series('js-watch'));
   gutil.log(`\n\n*********\nOpen your browser with this address: ${cyan(`localhost:${CONFIG.PORT}`)}\n*********\n`);
-});
+}));
 
-gulp.task('serve', `Serve`, gulp.series('clean', ['build:menu', 'build:sass', 'build:js'], 'dev', done => done()))
+gulp.task('serve', `Serve`, gulp.series('clean', gulp.parallel('build:menu', 'build:sass', 'build:js'), 'dev', done => done()))
 
 /*************************************************
   JSON SERVER

@@ -15,7 +15,7 @@ Tables can be used to give structure to a page. They contain [rows](table#rows),
 
 For example, you can create a table with text widgets, a logo, and a data view information as a customer report:
 
-![](attachments/container-widgets/table-example.png)
+![](attachments/container-widgets/table.png)
 
 ## 2 Components
 

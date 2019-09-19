@@ -6,63 +6,98 @@ tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+## 1 Introduction
+
 {{% alert type="warning" %}}The radio buttons widget is not supported on native mobile pages.{{% /alert %}}
 
 The **Radio Buttons** widget is an [input widget](input-widgets) that can be used to display and edit Boolean and enumeration attributes.
 
-{{% alert type="info" %}}
+**Radio Buttons** are used to display and, optionally, allow the end-user to edit the value of an attribute of [data type](data-types) *Boolean* or *Enumeration*.
 
-![](attachments/pages/radio-buttons.png)
+When the page is displayed to the end-user, all the possible values are listed with a filled-in circle next to the selected value and an empty circle next to the unselected value(s). Only one value can be chosen – choosing another value deselects the current value. For example:
 
-These radio buttons are used to indicate whether the user wants to receive the newsletter (boolean, rendered horizontally) and to select his/her favorite color (enumeration, rendered vertically).
+![](attachments/radio-buttons/radio-buttons-displayed.png)
 
-{{% /alert %}}
+Radio buttons must be placed in a [data widget](data-widgets) and display an attribute of the object(s) retrieved by that widget. The name of the attribute to be displayed is shown inside the text box, between square brackets, and colored blue.
 
-## General Properties
+For example, the following image contains two sets of radio buttons.  The first allows the end-user to see, and set, the value of an enumeration identifying the preferred time to contact this person (**PreferredContact**). The second allows the end-user to see, and set, a Boolean indicating whether this is a **Personal** contact.
 
-### Orientation
+![](attachments/radio-buttons/radio-buttons.png)
 
-This property defines whether the radio buttons are rendered horizontally or vertically.
+## 2 Properties
 
-_Default value:_ Horizontal
+An example of text box properties is represented in the image below:
 
-## Validation Properties
+{{% image_container width="250" %}}![](attachments/radio-buttons/radio-buttons-properties.png)
+{{% /image_container %}}
 
-{{% snippet file="refguide/widget-validation.md" %}}
+Text box properties consist of the following sections:
 
-## Data Source Properties
+* [Common](#common)
+* [Data source](#data-source)
+* [Design Properties](#design-properties)
+* [Editability](#editability)
+* [Events](#events)
+* [General](#general)
+* [Label](#label)
+* [Validation](#validation)
+* [Visibility](#visibility)
+
+### 2.1 Common Section{#common}
+
+{{% snippet file="refguide/common-section-link.md" %}}
+
+### 2.2 Data Source Section{#data-source}
 
 {{% snippet file="refguide/attribute-path-property.md" %}}
 
-{{% snippet file="refguide/label-property.md" %}}
+### 2.3 Design Properties Section{#design-properties}
 
-## Editability Properties
+### 2.4 Editability Section{#editability}
 
-{{% snippet file="refguide/editable-property.md" %}}
+{{% snippet file="refguide/editability-section-link.md" %}}
 
-{{% snippet file="refguide/read-only-style.md" %}}
+### 2.5 Events Section{#events}
 
-{{% snippet file="refguide/condition-property.md" %}}
+#### 2.5.1 On Change
 
-## Visibility Properties
+The on-change property specifies an action that will be executed when leaving the widget, either by using the <kbd>Tab</kbd> key or by clicking another widget, after the value has been changed.
 
-{{% snippet file="refguide/visibility-property.md" %}}
+{{% snippet file="refguide/events-section-link.md" %}}
 
-{{% snippet file="refguide/visibility-property-with-module-roles-simple.md" %}}
+#### 2.5.2 On Enter
 
-## Events Properties
+The on-enter property specifies an action that will be executed when the widget is entered, either by using the <kbd>Tab</kbd> key or by clicking it with the mouse.
 
-{{% snippet file="refguide/on-change-event.md" %}}
+{{% snippet file="refguide/events-section-link.md" %}}
 
-## Common Properties
+#### 2.5.3 On Leave
 
-{{% snippet file="refguide/name-property.md" %}}
+The on-leave property specifies an action that will be executed when leaving the widget, either by using the <kbd>Tab</kbd> key or by clicking another widget.
 
-{{% snippet file="refguide/class-property.md" %}} 
+This differs from the [On change](#on-change) property in that the event will always be triggered, even if the value has not been changed.
 
-{{% snippet file="refguide/style-property.md" %}} 
+{{% snippet file="refguide/events-section-link.md" %}}
 
-{{% snippet file="refguide/tab-index-property.md" %}}
+### 2.6 General Section{#general}
+
+#### 2.6.1 Orientation
+
+This property defines whether the radio buttons are rendered as a **Horizontal** or **Vertical** list.
+
+_Default value:_ Horizontal
+
+### 2.7 Label Section{#label}
+
+{{% snippet file="refguide/label-section-link.md" %}}
+
+### 2.8 Validation Section{#validation}
+
+{{% snippet file="refguide/widget-validation.md" %}}
+
+### 2.9 Visibility Section{#visibility}
+
+{{% snippet file="refguide/visibility-section-link.md" %}}
 
 ## Read More
 

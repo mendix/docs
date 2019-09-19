@@ -6,51 +6,52 @@ tags: [ ]
 draft: true
 ---
 
-LoginForm
+## 1 Introduction
 
-A custom login form which can be used as an alternative to the default Mendix login page.
-Contributing
+The [Login Form](https://appstore.home.mendix.com/link/app/87/) widget is a custom login form that can be used as an alternative to the default Mendix login page.
 
-For more information on contributing to this repository visit Contributing to a GitHub repository!
-Features and limitations
+### 1.1 Features
 
-    Use this widget to login from any page in your Mendix application
-    A link to open a 'Forgot my password' page
+* Log in from any page in your Mendix application
+* Implement a link to open a **Forgot my password** page
 
-Configuration
+## 2 Configuration
 
-    Insert the widget in a page
-    Configure the properties
+To configure this widget, follow these steps:
 
-Properties
-Display
+1. Insert the widget in a page.
+2. Configure the properties described in the next section.
 
-    Username placeholder - Standard text to be displayed in username field
-    Password placeholder - Standard text to be displayed in password field
-    'Login' button caption - Text to be displayed on login button
-    Progress bar caption - Text to display in progress bar, displayed while login request executes
-    Empty username/password message - Feedback message shown when a user didn't provide all credentials
-    'Forgot password' link text - Text to use in Forgot password link
+## 3 Properties {#properties}
 
-Behaviour
+### 3.1 Display
 
-    Show progress bar - Display a progress bar while signing in
-    Forgot password microflow - Microflow being triggered in case of 'forgot password' onclick
-    Focus username input field - Move focus to username field when the form is showed (only use this if it is not done automatically)
+* **Username placeholder** –  the placeholder text to display in the **User name** field
+* **Password placeholder** –  the placeholder text to display in the **Password** field
+* **'Login' button caption** –  the text to display on the login button
+* **Progress bar caption** –  the text to display in the progress bar caption while the login request executes
+* **Empty username/password message** –  the feedback message shown when a user does not provide all the credentials
+* **'Forgot password' link text** –  the text to use in the **Forgot password** page link
 
-Mobile
+### 3.2 Behaviour
 
-    Auto capitalize - Enables/disables auto capitalize functionality on username input field for mobile devices
-    Auto correct - Enables/disables auto correct functionality on username input field for mobile devices
+* **Show progress bar** –  set to display a progress bar while the user signs in
+* **Forgot password microflow** –  the microflow triggered when the user clicks **Forgot password**
+* **Focus username input field** –  moves the ftocus to the **User name** field when the form is shown (only use this if it is not done automatically)
 
-Password
+### 3.3 Mobile
 
-    Show/mask password toggle - Adds a toggle button to show/mask password.*
-    'Show password' button caption - The caption that is used for the show button for the value of the password
-    'Mask password' button caption - The caption that is used for the hide button for the value of the password
-    'Show password' button image - Optional image to be displayed in 'Show password' button
-    'Mask password' button image - Optional image to be displayed in 'Mask password' button
+* **Auto capitalize** –  enables auto-capitalize functionality on the **User name** input field for mobile devices
+* **Auto correct** –  enables auto-correct functionality on the **User name** input field for mobile devices
 
-Known issues
+### 3.4 Password
 
-    Mendix runtime returns no feedback about the existence of a username. This is by design.
+* **Show/mask password toggle** –  adds a toggle button for showing or masking a password
+* **'Show password' button caption** –  the caption used for the show-password button
+* **'Mask password' button caption** –  the caption used for the mask-password button
+* **'Show password' button image** –  the optional image to display on the show-password button
+* **'Mask password' button image** – the optional image to display on the mask-password button
+
+## 4 Known issues
+
+* Mendix Runtime returns no feedback about the existence of a user name; this is by design

@@ -12,7 +12,7 @@ Constants are used to define configuration values. These can differ per environm
 
 When running the application on SAP Cloud Platform or a licensed Mendix Cloud environment, you can configure each environment separately using the [Model Options](/developerportal/deploy/environments-details#model-options) tab of the **Environment Details** page to set your constants.
 
-For other cloud environments – for example, [IBM Cloud](/developerportal/deploy/ibm-cloud) or [MindSphere](partners/siemens/mindsphere) – the constants can be accessed as **Environment Variables** in, for instance, Cloud Foundry. The constant is exposed with the name **module** + **.** + **constant** (for example, `mymodule.myconstant`).
+For other cloud environments – for example, [IBM Cloud](/developerportal/deploy/ibm-cloud) or [MindSphere](/partners/siemens/mindsphere) – the constants can be accessed as **Environment Variables** in, for instance, Cloud Foundry. The constant is exposed with the name **module** + **.** + **constant** (for example, `mymodule.myconstant`).
 
 When running the application locally or in a Free App environment, the values defined in Studio Pro are used.
 

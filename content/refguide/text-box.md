@@ -53,13 +53,14 @@ Text box properties consist of the following sections:
 
 ### 2.3 Design Properties Section{#design-properties}
 
+<a name="editable-properties"></a>
 ### 2.4 Editability Section{#editability}
 
 {{% snippet file="refguide/editability-section-link.md" %}}
 
 ### 2.5 Events Section{#events}
 
-#### 2.5.1 On Change
+#### 2.5.1 On Change{#on-change}
 
 The on-change property specifies an action that will be executed when leaving the widget, either by using the <kbd>Tab</kbd> key or by clicking another widget, after the value has been changed.
 
@@ -137,6 +138,7 @@ The placeholder text is shown when no text has been entered yet, or when a displ
 
 It can be used, for example, to give a hint to the end-user what kind of text should be entered.
 
+<a name="label-properties"></a>
 ### 2.8 Label Section{#label}
 
 {{% snippet file="refguide/label-section-link.md" %}}

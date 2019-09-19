@@ -51,7 +51,7 @@ Check box properties consist of the following sections:
 
 ### 2.5 Events Section{#events}
 
-#### 2.5.1 On Change
+#### 2.5.1 On Change{#on=-change}
 
 The on-change property specifies an action that will be executed when leaving the widget, either by using the <kbd>Tab</kbd> key or by clicking another widget, after the value has been changed.
 

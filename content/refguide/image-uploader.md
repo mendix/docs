@@ -29,7 +29,7 @@ Image uploader properties consist of the following sections:
 * [Editability](#editability)
 * [General](#general)
 * [Label](label)
-* [Visibility](visibility)
+* [Visibility](#visibility)
 
 ### 2.1 Common Section {#common}
 

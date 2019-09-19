@@ -136,8 +136,8 @@ One of the most common errors of this type are described in the table below:
 | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | CE0552     | Microflow {name of the microflow} does not return an object. | The data source of a widget (for example, a data view) is set to **Microflow**, but the microflow does not return any object. | Open the microflow and configure a return value for it. Do the following: <ol><li>Select the end event.</li><li>In its properties, set **Return Value** from **Nothing** to **Value**.</li><li>Set the **Data Type** and set the **Entity** option if needed (whether this option is displayed depends on the selected data type).</li><li> Configure the **Value**.</li></ol> |
 | CE0551     | Microflow {name of the microflow} does not return a list.    | The data source of a list view is set to **Microflow**, but the microflow does not return a list. | Open the microflow and configure it to return a list. Do the following: <ol><li>Select the end event.</li><li> In its properties, set **Return Value** from **Nothing** to **Value**.</li><li>Set the **Data Type**  to *List*.</li><li>Set the **Entity** option.</li><li>Configure the **Value**.</li></ol> |
-| CE1573     | Parameter {Name of the parameter} of the selected microflow is expecting an object {Name of the object} and the page has no objects available. Place a data container on the page and set {Name of the object} as the data source. | You selected a microflow as an on-click action of a widget (for example, of a button) and the microflow contains a parameter, but no object is passed to the microflow. | Place the widget in a data container and make sure that the data source of the data container matches the **Entity** property of the microflow parameter.<br /> For example, if you have a button that calls a microflow (i.e. an **On Click Action** of the button is set to *Microflow*), and this microflow contains a parameter *Customer*, you need to place the button in a data container that has a *Customer* object available. For a more detailed example and a fix for it, see the [Error Fix Example for CE1573](#error-fix-example-3) section. |
-| CE1574     | Parameter {Name of the parameter} of the selected microflow is expecting an object {Name of the object} and an object available in the surrounding data container should be the same. | You selected a microflow as the data source of a widget, but an object available for this widget does not match the parameter of the microflow. | Make sure that object available for the widget matches the **Entity** property of the microflow parameter. For a more detailed example and a fix for it, see the [Error Fix Example for CE1574](#error-fix-example-4) section. |
+| CE1573     | Parameter {Name of the parameter} of the selected microflow is expecting an object {Name of the object} and the page has no objects available. Place a data container on the page and set {Name of the object} as the data source. | You selected a microflow as an on-click action of a widget (for example, of a button) and the microflow contains a parameter, but no object is passed to the microflow. | Place the widget in a data container and make sure that the data source of the data container matches the **Entity** property of the microflow parameter. For a detailed example and a fix for it, see the [Error Fix Example for CE1573](#error-fix-example-3) section. |
+| CE1574     | Parameter {Name of the parameter} of the selected microflow is expecting an object {Name of the object} and an object available in the surrounding data container should be the same. | You selected a microflow as the data source of a widget, but an object available for this widget does not match the parameter of the microflow. | Make sure that object available for the widget matches the **Entity** property of the microflow parameter. For a detailed example and a fix for it, see the [Error Fix Example for CE1574](#error-fix-example-4) section. |
 
 ### 5.1 Error Fix Example for CE1573 {#error-fix-example-3}
 
@@ -155,13 +155,13 @@ The microflow parameter expects an object *Customer*, and since this object is n
 
 To fix it, do the following:
 
-1.  Open the *Customers* page and drag and drop a data container on it. For example, you can drag and drop a data view.
+1.  Open the *Customers* page and drag and drop a data container on it. For example, you can drag and drop a list view.
 
-2.  Set the data source of the data view to *Context* and set **Entity** to *Customer*.
+2.  Set the data source of the list view to *Database* and set **Entity** to *Customer*.
 
-    ![](attachments/consistency-errors-pages/data-view-data-source.png)
+    ![](attachments/consistency-errors-pages/list-view-data-source.png)
 
-3. Place the button inside the data view.
+3. Place the button inside the list view.
 
 Now the *Customer* object is available on the page and it matches the microflow parameter *Customer*. 
 

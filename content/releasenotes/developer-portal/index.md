@@ -24,7 +24,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 
 #### Current Certificate Details
 
-* Subject: *.mendixcloud.com
+* Subject: `*.mendixcloud.com`
 * Issuer: C = US, O = DigiCert Inc, OU = www.digicert.com, CN = RapidSSL RSA CA 2018
 * Validity: Jan 3 00:00:00 2018 GMT - Oct 2 12:00:00 2019 GMT
 * SHA-256 Fingerprint: F8:FD:79:7A:73:48:E5:B0:9E:70:42:2B:15:D0:8C:D4:5E:F3:66:74:F8:B7:CF:5A:36:16:07:0D:E8:73:BE:8A
@@ -32,7 +32,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 
 #### New Certificate Details
 
-* Subject: *.mendixcloud.com
+* Subject: `*.mendixcloud.com`
 * Issuer: C = US, O = DigiCert Inc, OU = www.digicert.com, CN = RapidSSL TLS RSA CA G1
 * Validity: Sep 12 00:00:00 2019 GMT - Nov 10 12:00:00 2021 GMT
 * SHA-256 Fingerprint: AE:55:1D:88:32:E1:7E:BF:AB:0D:F3:2F:57:57:C8:98:8D:87:3F:E8:F6:5F:A6:09:82:EA:37:F7:12:25:A5:D3

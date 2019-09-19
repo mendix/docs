@@ -123,7 +123,18 @@ To fix this error you can do one of the following:
 * Select another page that will not expect any object to be passed to it, or will expect the object of type *Engineer*
 * Change the data source of the data view on the **Tasks** page to entity *Engineer*
 
-## 5 Input Widgets Consistency Errors
+## 5 Data Consistency Errors
+
+When a widget that expects an object from its data source does not get it or gets an object from a different entity type, it causes errors in data consistency. 
+
+One of the most common errors of this type are described in the table below:
+
+| Error Code | Text in the Checks Panel                                     | Cause of an Error                                            | Way to Fix                                                   |
+| ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| CE0552     | Microflow {name of the microflow} does not return an object. | The data source of a widget (for example, a data view) is set to **Microflow**, but the microflow does not return any object. | Open the microflow and configure a return value for it. Do the following: <ol><li>Double-click the end event.</li><li>In the **End Event** dialog window, set **Type** from **Nothing** to the data type you would like it to return.</li><li>Set the **Entity** option if needed (whether this option is displayed depends on the selected data type).</li><li> Specify the **Return value**.</li></ol> |
+| CE0551     | Microflow {name of the microflow} does not return a list.    | The data source of a list view is set to **Microflow**, but the microflow does not return a list. | Open the microflow and configure it to return a list. Do the following: <ol><li>Double-click the end event.</li><li> In the **End Event** dialog window, set **Type** from **Nothing** to **List**.</li><li>Set the **Entity** option.</li><li>Specify the **Return value**.</li></ol> |
+
+## 6 Input Widgets Consistency Errors
 
 The most common errors for input widgets, their causes, and ways to fix them are described in the table below. For more information on input widgets, see [Input Widgets](input-widgets). 
 
@@ -135,7 +146,7 @@ The most common errors for input widgets, their causes, and ways to fix them are
 |            | Association {Name} must be a reference set (not a reference) | You have added a reference set selector or an input reference set selector, but the association you have selected for it is not of reference set type (not many-to-many). | Open your domain model, find the association you have selected for the reference set selector, and change it to a many-to-many association. For more information on how to fix the consistency error for the reference set selector and input reference set selector, see section [5.2 Incorrect Multiplicity for a Reference Set Selector and an Input Reference Set Selector](#incorrect-multiplicity-reference-set) |
 |            | Entity {Name} has no association {Name}                      | You added a reference set selector or an input reference set selector, but you have changed the owner of association. | Open your domain model, select one of the entities and in its properties change the owner of association. For more information on how to fix the consistency error for the reference set selector and input reference set selector, see section [5.3 Incorrect Ownership for a Reference Set Selector and an Input Reference Set Selector](#incorrect-ownership) |
 
-### 5.1 Incorrect Multiplicity for a Reference Selector {#incorrect-multiplicity-reference}
+### 6.1 Incorrect Multiplicity for a Reference Selector {#incorrect-multiplicity-reference}
 
 A reference selector is a widget that is used to display and edit one-to-many associations. For more information on the widget, see [Reference Selector](reference-selector).  
 
@@ -157,7 +168,7 @@ To fix this error, do one the following:
 
 You have changed the association multiplicity and fixed the error. 
 
-### 5.2 Incorrect Multiplicity for a Reference Set Selector and an Input Reference Set Selector {#incorrect-multiplicity-reference-set}
+### 6.2 Incorrect Multiplicity for a Reference Set Selector and an Input Reference Set Selector {#incorrect-multiplicity-reference-set}
 
 Reference set selector and input set selector are widgets that are used to display and edit many-to-many associations. For more information on these widgets, see [Reference Set Selector](reference-set-selector) and [Input Reference Set Selector](input-reference-set-selector). 
 
@@ -179,7 +190,7 @@ To fix the error, do one of the following:
 
 You have changed the multiplicity for the association and fixed the error.
 
-### 5.3 Incorrect Ownership for a Reference Set Selector and an Input Reference Set Selector {#incorrect-ownership}
+### 6.3 Incorrect Ownership for a Reference Set Selector and an Input Reference Set Selector {#incorrect-ownership}
 
 As the reference set selector and the input reference set selector are used to display and edit associations, the ownership is an important property when configuring them. For more information on ownership, see [Associations](associations). 
 
@@ -209,7 +220,7 @@ To change the ownership, do the following:
 
 You have changed the owner of the association.
 
-## 6 File Widgets Consistency Errors
+## 7 File Widgets Consistency Errors
 
 File widgets should be placed in a data container, otherwise you will get consistency errors. Another way to fix consistency errors is to place a file widget to a [snippet](snippet). For more information on file widgets, see [File Widgets](file-widgets). 
 
@@ -219,13 +230,13 @@ File widgets should be placed in a data container, otherwise you will get consis
 |            | An [image uploader](image-uploader) must be placed in a data view or snippet that is connected to entity ‘System.Image’ or a specialization. | You have added an image uploader to a page, but it is not inside a data view or a snippet that is configured properly. | Place this widget into a data container. If you want to place it into a snippet, mind that you need to configure it properly: set System.Image or its specialization as entity for this snippet. |
 |            | Move this widget into a data container, for example a data view or list view. | You have added an [image viewer](image-viewer) to your page, but it is not inside a data view or a list view. | Place this widget inside a data view or a list view.         |
 | CE0489     | Select an entity for the data source of this [image viewer](image-viewer). | You have added an image viewer to a page, it is placed inside a data view or a list view, but an entity for the image viewer is not specified. | Open image viewer's properties > the **Data source** section and select an entity in the **Entity (path)** field. |
-## 7 Image Widget Consistency Errors
+## 8 Image Widget Consistency Errors
 
 When you add an image widget to a page, but do not select an image itself, you will get a consistency error "No image selected" (error code CE0436). 
 
 To fix it, open image properties > the **General** section > the **Image** field and select an image. For more information on an image widget, see [Image](image). 
 
-## 8 On Click Event Consistency Errors 
+## 9 On Click Event Consistency Errors 
 
 You can specify an **On Click Event** for different widgets, for example, for buttons or images. 
 
@@ -235,6 +246,6 @@ To fix the consistency errors, finish configuring the on click event (for exampl
 
 ![On Click Event Example](attachments/consistency-errors-pages/on-click-event.png)
 
-##  9 Read More
+##  10 Read More
 
 * [Pages](pages) 

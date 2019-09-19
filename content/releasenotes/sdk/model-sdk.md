@@ -1,6 +1,7 @@
 ---
 title: "Model SDK"
 category: "SDKs"
+menu_order: 1
 ---
 
 These are the release notes for the Mendix Model SDK:

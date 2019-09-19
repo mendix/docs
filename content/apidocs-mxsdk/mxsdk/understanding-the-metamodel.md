@@ -1,5 +1,5 @@
 ---
-title: "Understanding the Metamodel"
+title: "Understanding the Mendix Metamodel"
 parent: "sdk-refguide"
 menu_order: 1
 ---

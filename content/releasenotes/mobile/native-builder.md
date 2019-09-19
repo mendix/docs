@@ -12,6 +12,20 @@ We are heavily invested in streamlining the experience of building your apps and
 
 ## 2019
 
+### September 3rd, 2019 (2.0.0)
+
+#### Breaking changes
+
+This version only supports Mendix version 8.1.0 and upwards. If you have to stick with Mendix 8.0.0 please consider using Native Builder  v1.0.0.
+
+#### Improvements
+
+* We passed the `--native-packager` flag to MxBuild to enable MxBuild compatibility with Mendix 8.1.0 and higher.
+
+#### Known Issues
+
+* Using more than one space in an app's name is not supported.
+
 ### August 15th, 2019 (1.0.0)
 
 #### Improvements
@@ -22,6 +36,7 @@ We are heavily invested in streamlining the experience of building your apps and
 #### Known Issues
 
 * In case MxBuild fails during the Native Builder process, no clear error message is given and the process continues. This will lead to the previous bundle being used, which means the latest Mendix project model changes are not applied. To mitigate this, delete the **deployment/native/bundle** folder in your Mendix project folder to ensure the previous bundle is not there anymore.
+* Using more than one consecutive space in an app's name is not supported.
 
 ### August 1st, 2019 (0.1.0)
 

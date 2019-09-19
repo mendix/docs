@@ -75,7 +75,6 @@ Each JSON property is composed of a key ("name") and a value ("John"). If the va
 *   true or false. Converted into an attribute of type Boolean.
 *   "1985-04-12T23:20:50.52Z". Converted into an attribute of type DateTime.
 *   12.50\. Converted into an attribute of type Decimal.
-*   null. Converted into an  attribute of type String.
 
 ### 2.2 JSON Arrays
 

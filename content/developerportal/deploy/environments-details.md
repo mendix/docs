@@ -138,8 +138,7 @@ The limitation types are the following:
 * **Concurrent anonymous** – the number of anonymous users that are logged in simultaneously
 * **Named** – the number of named users registered in the database that are allowed to use the application
 
-
-## 3 Model Options Tab
+## 3 Model Options Tab {#model-options}
 
 ![](attachments/environments-details/model-options.png)
 

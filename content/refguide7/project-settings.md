@@ -285,19 +285,19 @@ The option to designate a custom UI resources package was added in Mendix 7.9.0.
 
 {{% /alert %}}
 
-The look and feel of a Mendix application is governed by the [UI Resources package](ui-resources-package). This package supplies the project with all the required theme information accompanied by matching page templates and building blocks. The module which is designated as the UI Resources package is governed by the **UI resources package** setting. Generally, this is automatically updated when a new UI Resources package is imported. However, with this setting, the desired module can also be set manually.
+The look and feel of a Mendix application is governed by the [UI resources package](ui-resources-package). This package supplies the project with all the required theme information accompanied by matching page templates and building blocks. The module which is designated as the UI resources package is governed by the **UI resources package** setting. Generally, this is automatically updated when a new UI resources package is imported. However, with this setting, the desired module can also be set manually.
 
 ### 7.2 Theme ZIP File
 
 {{% alert type="warning" %}}
 
-[Deprecated] The use of a ZIP file to configure a project's theme is deprecated. As of 7.9.0, a [UI Resources package](ui-resources-package) is the preferred method of sharing themes.
+[Deprecated] The use of a ZIP file to configure a project's theme is deprecated. As of 7.9.0, a [UI resources package](ui-resources-package) is the preferred method of sharing themes.
 
 {{% /alert %}}
 
 Older projects may still use a theme ZIP file as the basis for their theme. In this situation, the **Theme ZIP file** setting can be used to switch between any ZIP files found in the **theme** folder. Note that this practice is deprecated and will be removed in a future version.
 
-Switching from a ZIP file to a UI Resources package is straightforward:
+Switching from a ZIP file to a UI resources package is straightforward:
 
 1. Firstly, replace the contents of the theme folder with the contents of the desired ZIP file.
 

@@ -272,8 +272,9 @@ The widget’s style properties are structured as follows:
 | `input` | `placeholderTextColor` | This is the text color of the placeholder string. |
 | `input` | `selectionColor` | This is the highlight and cursor color of the text input. |
 | `input` | `underlineColorAndroid` | This is the color of the `input` underline. |
-| `inputError` | This has the same properties as `input`. |   |
-| `label` | This has all TextStyle properties. |   |
+| `inputError` | This has the same properties as `input` | Overrides `input` styles if there are validation errors. |
+| `inputDisabled` | Same properties as `input` | Overrides `input` styles if the text box is non-editable. |
+| `label` | This has all TextStyle properties |   |
 | `label` | `numberOfLines` | This is the maximum number of lines to wrap the label text. If the text is any longer, it will be cut off with an ellipsis (this defaults to 1). |
 | `validationMessage` | This has all TextStyle properties.   |    |
 
@@ -370,8 +371,9 @@ The widget’s style properties structure is as follows:
 | `input` | `trackColorOff` | Custom color for the switch track when turned off. |
 | `input` | `thumbColorOn` | Color of the foreground switch grip when turned on. If this is set on iOS, the switch grip will lose its drop shadow. |
 | `input` | `thumbColorOff` | Color of the foreground switch grip when turned off. If this is set on iOS, the switch grip will lose its drop shadow. |
-| `inputError` | This has the same properties as `input`. |  |
-| `label` | This has all TextStyle properties.   |  |
+| `inputError` | This has the same properties as `input` | Overrides `input` styles if there are validation errors. |
+| `inputDisabled` | This has the same properties as `input` | Overrides `input` styles if the check box is non-editable. |
+| `label` | This has all TextStyle properties   |  |
 | `label` | `numberOfLines` | The maximum number of lines to wrap the label text. If the text is any longer it will be cut off with an ellipsis. Defaults to `1`. |
 | `validationMessage` | This has all TextStyle properties.   |  |
 
@@ -398,9 +400,11 @@ The widget’s style properties are as follows:
 | `container` | This has all ViewStyle properties. |  |
 | `label` | This has all TextStyle properties. |  |
 | `label`  | `numberOfLines` | This is the maximum number of lines to wrap the label text. If the text is any longer, it will be cut off with an ellipsis ( this defaults to `1`.) |
-| `value` | This has all TextStyle properties. |  |
-| `placeholder` | This has all TextStyle properties. |   |
-| `validationMessage` | This has all TextStyle properties. |  |
+| `value` | This has all TextStyle properties |  |
+| `valueDisabled` | This has all TextStyle properties | Overrides `value` styles if the date picker is non-editable. |
+| `placeholder` | This has all TextStyle properties |   |
+| `placeholderDisabled` | This has all TextStyle properties | Overrides `placeholder` styles if the date picker is non-editable. |
+| `validationMessage` | This has all TextStyle properties |  |
 
 The default class to style all date picker inputs is named `DatePicker`.
 

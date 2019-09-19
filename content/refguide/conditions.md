@@ -12,7 +12,7 @@ The following elements support conditional visibility:
 
 * All the widgets support
 * [Grid control bar buttons](control-bar)
-* [Table rows](table-row), [tab pages](tab-page), and [layout grid rows](layout-grid)
+* [Table rows](table#rows), [tab pages](tab-container#tab-page), and [layout grid rows](layout-grid)
 
 The following elements support conditional editability:
 
@@ -55,7 +55,7 @@ For each value of the attribute, you can specify whether the element is editable
 
 By selecting this option, visibility or editability becomes conditional based on whether the entered [microflow expression](expressions) evaluates to `true` or `false`.
 
-The expression result must be of the Boolean type. The expression can use the object of the enclosing data container available as `$currentObject`.
+The expression result must be of the Boolean type. The expression can use the object of the enclosing data container available as `$currentObject`. In Mendix 8.1 and above, the expression can access objects of all the data containers enclosing that data container widget. These objects are available under the name of the widget they originate from (for example, `$dataView1`).
 
 {{% alert type="warning" %}}
 

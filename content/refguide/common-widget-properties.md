@@ -30,7 +30,7 @@ For example, if an address field is required, the required message for the text 
 
 ## 3 Common Section {#common-properties}
 
-### 3.1 Name
+### 3.1 Name {#name}
 
 The internal name of the widget. You can use this to give sensible names to widgets. The name property also appears in the generated HTML: the widget DOM element automatically includes the class `mx-name-{NAME}`, which can be useful for [Selenium testing](/howto7/integration/selenium-support).
 
@@ -42,7 +42,7 @@ _Default value:_ 0
 
 {{% alert type="info" %}}Tab index is not supported on native mobile pages.{{% /alert %}}
 
-### 3.3 Class
+### 3.3 Class {#class}
 
 The class property allows you to specify one or more cascading style sheet (CSS) classes for the widget. The classes should be separated by a space. The classes will be applied to the widget in the browser and the widget will get the corresponding styling. The classes should be classes in the theme that is used in the project. It overrules the default styling of the widget.
 
@@ -56,7 +56,7 @@ You can see which widgets in a page have styling applied via the class or style 
 
 ![](attachments/common-widgets-properties/show-styles.png)
 
-### 3.4 Style
+### 3.4 Style {#style}
 
 The style property allows you to specify additional CSS styling. If a class is also specified, this styling is applied *after* the class. For example:<br />
 <br />
@@ -79,7 +79,11 @@ Many input widgets, like text boxes and drop-down widgets, can be connected to:
 
 In the first case we say the widget is connected to an attribute and in the second case to an attribute path.
 
-An input widget connected to an attribute <strong>path</strong> must be read-only. Studio Pro will check this for you.
+{{% alert type="info" %}}
+In Mendix 8.0, an input widget connected to an **attribute path** must be read-only. Studio Pro will check this for you.
+
+In Mendix 8.1 and above, you can edit attributes presented in input widgets over a path.
+{{% /alert %}}
 
 ## 5 Visibility Section {#visibility-properties}
 
@@ -99,7 +103,7 @@ When selected, this shows the widget while a particular attribute has a certain 
 
 ##### Based on Expression {#visibility-based-on-expression}
 
-When selected, this shows the widget while a provided [expression](expressions) evaluates to true. The object of the containing data view is available inside an expression as a `$currentObject` variable.
+When selected, this shows the widget while a provided [expression](expressions) evaluates to true. The object of the containing data view is available inside an expression as a `$currentObject` variable. In Mendix 8.1 and above, the expression can access objects of all the data containers enclosing that data container widget. These objects are available under the name of the widget they originate from (for example, `$dataView1`).
 
 Note that the expression is evaluated in the browser, and hence, we advise against using "secret" values (like access keys) in it. In particular, we disallow usages of [constants](constants). Also, client-side expressions currently do not support all the functions that are available in the microflows. Please refer to an autocomplete list to know what functions are supported in your version.
 

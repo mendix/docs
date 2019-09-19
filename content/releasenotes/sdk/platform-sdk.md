@@ -1,6 +1,7 @@
 ---
 title: "Platform SDK"
 category: "SDKs"
+menu_order: 2
 ---
 
 These are the [Platform SDK](/apidocs-mxsdk/mxsdk/) release notes, including all minor versions and patches.

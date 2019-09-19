@@ -9,11 +9,11 @@ tags: ["Backup","Download","Mendix Cloud","Developer Portal"]
 
 ## 1 Introduction
 
-This how-to describes downloading a Sandbox environment backup from a Free App and downloading a licensed cloud node backup.
+This how-to describes downloading a back up from a Free App environment or a licensed cloud node.
 
 **This how-to will teach you how to do the following:**
 
-* Download a full backup of a Sandbox environment
+* Download a full backup of a Free App environment
 * Download a full backup of a licensed cloud node
 
 ## 2 Prerequisites

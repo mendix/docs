@@ -13,7 +13,7 @@ tags: ["Custom Domain","Mendix Cloud","Developer Portal", "certificates"]
 The Mendix Cloud supports adding custom domains such as `https://myapp.mycompany.com/` to your environments. As we only allow HTTPS connections, you have to provide a custom domain certificate (an SSL/TLS certificate). This how-to walks you through the process.
 
 {{% alert type="info" %}}
-This option is provided for licensed apps. You cannot add custom domains to free apps.
+This option is provided for licensed apps. You cannot add custom domains to Free Apps.
 {{% /alert %}}
 
 {{% alert type="warning" %}}

@@ -74,25 +74,23 @@ You can deactivate Mendix SSO in two simple steps. This will remove the ability 
 The two steps are:
 
 1. Rename the original login file (by default **login.html.old**) in the **theme** folder of your project to **login.html** – this removes the single sign-on button from your sign in screen
-    <ol type=a>
-    <li>Open your project directory in File Explorer by selecting the menu item <STRONG>Project</STRONG> > <STRONG>Show Project Directory in Explorer</STRONG><br />
+    1. Open your project directory in File Explorer by selecting the menu item **Project** > **Show Project Directory in Explorer**<br />
 
-    ![Show project directory](attachments/mendix-sso/show-project-directory.png)</li>
+    ![Show project directory](attachments/mendix-sso/show-project-directory.png)
 
-    <li>Go to the <STRONG>theme</STRONG> folder</li>
-    <li>Rename <STRONG>login.html</STRONG> to <STRONG>login-with-sso.html</STRONG></li>
-    <li>Rename <STRONG>login-without-sso.html</STRONG> to <STRONG>login.html</STRONG></li>
-    </ol>
+    1. Go to the **theme** folder
+    1. Rename **login.html** to **login-with-sso.html**
+    1. Rename **login-without-sso.html** to **login.html**
 
     ![File explorer showing two login files](attachments/mendix-sso/theme-folder-remove.png)
 
 2. Remove the microflow **AfterStartup_MendixSSO** as the **After startup** microflow.
-    * Open **Project Settings** from the **Project Explorer**
-    * Click the **Runtime** tab
-    * Click **Select…** for the **After startup** microflow
-    * Click **None**
+    1. Open **Project Settings** from the **Project Explorer**
+    2. Click the **Runtime** tab
+    3. Click **Select…** for the **After startup** microflow
+    4. Click **None**
         ![Setting after startup microflow to none](attachments/mendix-sso/after-startup-remove.png)
-    * Click **OK** to close the **Project Settings**
+    5. Click **OK** to close the **Project Settings**
     {{% alert type="info" %}}If there is a different After startup microflow, you should not remove it, but rather remove the AfterStartup_MendixSSO microflow which is an action in the existing microflow{{% /alert %}}
 
 Mendix SSO will be deactivated the next time you deploy your app. You can still use it for local end-user administration.
@@ -124,47 +122,47 @@ To enable Mendix SSO in your app, if it does not have it set up already, you nee
 1. Import the MendixSSO module from the [Mendix App Store](https://appstore.home.mendix.com).
 
 2. Add the microflow **AfterStartup_MendixSSO** to the **After startup** microflow.
-    * Open **Project Settings** from the **Project Explorer**
-    * Click the **Runtime** tab
-    * Click **Select…** for the **After startup** microflow
-    * Choose the microflow **App Store modules** > **MendixSSO** > **Public** > **Default Implementation** > **Microflows** > **AfterStartup_MendixSSO** (you can use the filter to find it quickly) and click **Select**
+    1. Open **Project Settings** from the **Project Explorer**
+    1. Click the **Runtime** tab
+    1. Click **Select…** for the **After startup** microflow
+    1. Choose the microflow **App Store modules** > **MendixSSO** > **Public** > **Default Implementation** > **Microflows** > **AfterStartup_MendixSSO** (you can use the filter to find it quickly) and click **Select**
         ![](attachments/mendix-sso/after-startup.png)
-    * Click **OK** to close the **Project Settings**
+    1. Click **OK** to close the **Project Settings**
     {{% alert type="info" %}}If there is already an After startup microflow, you should not replace it, but rather add the AfterStartup_MendixSSO microflow as an action in the existing microflow{{% /alert %}}
 
 3. Add the pages **MyAccountViewEdit** and **UserOverview** to the app navigation.
-    * Open **Navigation** from the **Project Explorer**
-    * Click **New item** to add a new navigation item
-    * Enter the following values and click **OK**
+    1. Open **Navigation** from the **Project Explorer**
+    1. Click **New item** to add a new navigation item
+    1. Enter the following values and click **OK**
         * **Caption** – *My Account*
         * **Icon** – *Glyphicon 'user'* (click **Select…** and search for `user`)
         * **On click** – *Show a page* **App Store modules** > **MendixSSO** > **Public** > **Default Implementation** > **Pages** > **User** > **MyAccountViewEdit**
-    * Repeat the above to add another **New item** with the values
+    1. Repeat the above to add another **New item** with the values
         * **Caption** – *User Overview*
         * **Icon** – *Glyphicon 'lock'*
         * **On click** – *Show a page* **App Store modules** > **MendixSSO** > **Public** > **Default Implementation** > **Pages** > **Admin** > **UserOverview**
 
 4. Turn on **Production** security level and configure **User roles** *User* and *Administrator* to have access to the appropriate **MendixSSO** module roles.
-    * Open **Project Security** from the **Project Explorer**
-    * Set **Security level** to **Production**
-    * Switch to the **User roles** tab
-    * Select the **Administrator** user role and click **Edit**
-    * Click **Edit** next to **Module roles**
-    * Select the **Administrator** module role for **App Store modules** > **MendixSSO**
+    1. Open **Project Security** from the **Project Explorer**
+    1. Set **Security level** to **Production**
+    1. Switch to the **User roles** tab
+    1. Select the **Administrator** user role and click **Edit**
+    1. Click **Edit** next to **Module roles**
+    1. Select the **Administrator** module role for **App Store modules** > **MendixSSO**
         ![Set Administrator module role](attachments/mendix-sso/set-module-role.png)
-    * Click **OK** twice to return to **Project Security**
-    * Repeat the steps above to add the MendixSSO.User module role to the **User** user role
+    1. Click **OK** twice to return to **Project Security**
+    1. Repeat the steps above to add the MendixSSO.User module role to the **User** user role
 
         The Project security settings now contains these two additional module roles:
 
         ![Confirmation of user roles](attachments/mendix-sso/module-user-roles.png)
 
 5. Rename the file **login-with-sso.html** in the **theme** folder of your project to **login.html** – this adds the single sign-on button to your sign in screen
-    * Open your project directory in File Explorer by selecting the menu item **Project** > **Show Project Directory in Explorer**
+    1. Open your project directory in File Explorer by selecting the menu item **Project** > **Show Project Directory in Explorer**
         ![Show project directory](attachments/mendix-sso/show-project-directory.png)
-    * Go to the **theme** folder
-    * Rename **login.html** to  **login-without-sso.html**)
-    * Rename **login-with-sso.html** to **login.html**
+    1. Go to the **theme** folder
+    1. Rename **login.html** to  **login-without-sso.html**)
+    1. Rename **login-with-sso.html** to **login.html**
         ![file explorer showing two login files](attachments/mendix-sso/theme-folder.png)
 
 Your app is now configured to use Mendix Single Sign-on when it is deployed to the Cloud.

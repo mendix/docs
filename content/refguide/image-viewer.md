@@ -27,7 +27,7 @@ Image uploader properties consist of the following sections:
 * Design Properties
 * [Events](#events)
 * [General](#general)
-* [Visibility](visibility)
+* [Visibility](#visibility)
 
 ### 2.1 Data Source Section {#data-source}
 

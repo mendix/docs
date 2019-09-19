@@ -178,6 +178,7 @@ app-store-items:
   draft: true
   menu_categories:
     - "Modules"
+    - "Widgets"
 product-naming:
   space: "Mendix Product Naming Guide"
   priority: false

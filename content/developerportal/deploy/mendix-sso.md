@@ -43,7 +43,7 @@ When you open an app as an end-user, and this is the first time visiting the app
 
 ![Mendix SSO sign-on screen](attachments/mendix-sso/sso-sign-on.png)
 
-For each environment (for example, myapp running in acceptance), the first time you sign in as an end-user using Mendix SSO you will be asked to authorize access. This means that the app can access information held in your Mendix profile.
+Every app implementing MendixSSO needs some of your profile information (like your account identifier and your display name) to make it work. So for each environment (for example, myapp running in acceptance), the first time you sign in as an end-user using Mendix SSO the app will ask you to authorize access. This means that the app can access certain information held in your Mendix profile as specified on the authorization page.
 
 ![Authorization screen](attachments/mendix-sso/authorize-access.png)
 
@@ -69,11 +69,11 @@ If you have an app which already has Mendix SSO activated, you may wish to remov
 
 ### 3.1 Deactivating Mendix Single Sign-On{#deactivating}
 
-You can deactivate Mendix SSO in two simple steps. This will remove the ability for end-users to sign in with their Mendix account, but will leave the local user administration functions of MendixSSO intact.
+You can deactivate Mendix SSO in two simple steps. This will remove the ability for end-users to sign in with their Mendix account, but will leave the local user administration functions of the MendixSSO module intact.
 
 The two steps are:
 
-1. Rename the original login file (by default **login.html.old**) in the **theme** folder of your project to **login.html** – this removes the single sign-on button from your sign in screen
+1. Rename the original login file (by default **login-without-sso.html**) in the **theme** folder of your project to **login.html** – this removes the single sign-on button from your sign in screen
     1. Open your project directory in File Explorer by selecting the menu item **Project** > **Show Project Directory in Explorer**<br />
 
     ![Show project directory](attachments/mendix-sso/show-project-directory.png)

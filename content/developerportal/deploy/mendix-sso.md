@@ -11,9 +11,7 @@ tags: ["SSO", "Single Sign-on", "Mendix credentials"]
 
 ## 1 Introduction
 
-{{% todo %}}[Change sub-steps to list with letters
-    
-Add AppStore Link - several instances
+{{% todo %}}[Add AppStore Link - several instances
 
 Check which Starter Apps will be updated and how to tell what version of MendixSSO they have]{{% /todo %}}
 

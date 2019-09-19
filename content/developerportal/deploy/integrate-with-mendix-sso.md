@@ -331,7 +331,6 @@ You can view the implementation by deploying your app to the Mendix Cloud and go
 ## 4 Read More
 
 * [Azure: Deploy](azure-deploy)
-* [Manage User Logins with Mendix SSO](managing-mendix-sso).
 * [Mendix Cloud: Deploy](mendix-cloud-deploy)
 * [Mendix Single Sign-On](integrate-with-mendix-sso)
 * [Sending Email](sending-email)

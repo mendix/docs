@@ -125,6 +125,8 @@ $block: 'mx';
 
       ul, ol { padding-left: 20px; }
 
+      ol ol { list-style-type: lower-alpha;}
+
       h5 {
         font-size: 16px;
       }

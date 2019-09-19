@@ -34,7 +34,7 @@ File manager properties consist of the following sections:
 
 * [Label](label)
 
-* [Visibility](visibility)
+* [Visibility](#visibility)
 
 ### 2.1 Common Section {#common}
 

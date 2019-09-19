@@ -170,7 +170,7 @@ gulp.task('build:sass', `Sass build`, gulp.series('clean:css', () => {
     .pipe(gulp.dest(CONFIG.DATAFOLDER));
 }));
 
-gulp.task('dev:sass', `Sass build (dev task, sourcemaps included)`, gulp.series('clean:css', () => {
+gulp.task('dev:sass', `Sass build (dev task, sourcemaps included)`, () => {
   return gulp
     .src(CONFIG.PATHS.styles.src)
     .pipe(sourcemaps.init())
@@ -184,6 +184,13 @@ gulp.task('dev:sass', `Sass build (dev task, sourcemaps included)`, gulp.series(
     .pipe(gulp.dest(CONFIG.PATHS.styles.dest))
     .pipe(hash.manifest('assetscss.json', true, 4))
     .pipe(gulp.dest(CONFIG.DATAFOLDER));
+});
+
+gulp.task("build:sass:dev", `Sass build (dev task, sourcemaps included)`, gulp.series('clean:css', 'dev:sass'));
+
+gulp.task('sass-watch', `Internal task, don't use`, gulp.series('dev:sass', (done) => {
+  // browserSync.reload();
+  done();
 }));
 
 /*************************************************
@@ -212,9 +219,9 @@ gulp.task('build', `BUILD. Used for production`, gulp.series('clean', 'write:map
 /*************************************************
   MAIN SERVE TASK
 **************************************************/
-gulp.task('dev', ``, gulp.series(gulp.parallel('dev:sass', 'build:js', 'write:menu', 'build:hugo'), done => {
+gulp.task('dev', ``, gulp.series(gulp.parallel('build:sass:dev', 'build:js', 'write:menu', 'build:hugo'), done => {
   server.spawn(CONFIG.CURRENTFOLDER);
-  jsonServer.spawn(CONFIG.CURRENTFOLDER);
+  // jsonServer.spawn(CONFIG.CURRENTFOLDER);
   hugo.spawn({
     watch: true,
     drafts: PUBLISH_DRAFTS
@@ -225,9 +232,10 @@ gulp.task('dev', ``, gulp.series(gulp.parallel('dev:sass', 'build:js', 'write:me
     online: false,
     open: false
   });
-  gulp.watch(CONFIG.PATHS.styles.src, gulp.series('dev:sass'));
+  gulp.watch(CONFIG.PATHS.styles.src, gulp.series('sass-watch'));
   gulp.watch(CONFIG.PATHS.scripts.src, gulp.series('js-watch'));
   gutil.log(`\n\n*********\nOpen your browser with this address: ${cyan(`localhost:${CONFIG.PORT}`)}\n*********\n`);
+  done();
 }));
 
 gulp.task('serve', `Serve`, gulp.series('clean', gulp.parallel('build:menu', 'build:sass', 'build:js'), 'dev', done => done()))
@@ -235,8 +243,8 @@ gulp.task('serve', `Serve`, gulp.series('clean', gulp.parallel('build:menu', 'bu
 /*************************************************
   JSON SERVER
 **************************************************/
-gulp.task('json', `Run JSON export server`, ['dev:sass', 'build:js', 'write:menu', 'build:hugo'], done => {
-  jsonServer.spawn(CONFIG.CURRENTFOLDER);
+gulp.task('json', `Run JSON export server`, ['build:sass:dev', 'build:js', 'write:menu', 'build:hugo'], done => {
+  // jsonServer.spawn(CONFIG.CURRENTFOLDER);
 })
 
 /*************************************************

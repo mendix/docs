@@ -34,7 +34,7 @@ For example, if an address field is required, the required message for the text 
 
 The internal name of the widget. You can use this to give sensible names to widgets. The name property also appears in the generated HTML: the widget DOM element automatically includes the class `mx-name-{NAME}`, which can be useful for [Selenium testing](/howto7/integration/selenium-support).
 
-### 3.2 Tab Index 
+### 3.2 Tab Index{#tab-index}
 
 The tab index influences the order in which the end-user navigates through the page using the tab key. By default tab indices are zero and the tab order is determined automatically by the client system. A value of minus one (-1) means that the widget will be skipped when tabbing through the page.
 
@@ -91,6 +91,8 @@ In Mendix 8.1 and above, you can edit attributes presented in input widgets over
 
 By default, whether or not an element is displayed in the browser is determined by how the page is designed and the user's roles within the application. However, the page can be configured to hide the element unless a certain condition is met.
 
+{{% todo %}}[Investigate the difference between DEFAULT and ALWAYS - If a widget is inside an invisible widget, you cannot make it display by choosing ALWAYS?]{{% /todo %}}
+
 #### 5.1.1 Context
 
 The widget can be made visible only if the object of the data view that contains the widget satisfies the specified criteria.
@@ -111,7 +113,7 @@ Note that the expression is evaluated in the browser, and hence, we advise again
 
 The widget can be made visible to a subset of the user roles available in your application. When activated, this setting will render the widget invisible to all users that are not linked to one of the selected user roles.
 
-## 6 Editability Section
+## 6 Editability Section{#editability}
 
 ### 6.1 Editable
 
@@ -127,6 +129,52 @@ The editable property indicates whether the end user will be able to change the 
 
 ### 6.2 Condition
 
-A widget can be made editable based on the value of an attribute of the enclosing data view. The attribute must be of type Boolean or enumeration. For each value, you specify whether the widget is editable. Upon opening the page and upon changing the condition attribute the edit state of the widget will be updated.
+The widget can be made editable only if the object of the data view that contains the widget satisfies the specified criteria.
 
-Example: you do not have to ask for the marriage date if the end-user indicates that he or she is not married.
+For example, imagine you are creating a personal details form in which the end-user must enter their marital status. In this case, you might wish to disable the input of a marriage date until the end-user indicates that they are married.
+
+#### 6.2.1 Based on Attribute Value
+
+When selected, this enables the widget while a particular attribute has a certain value. Only Boolean and enumeration attributes can be used for this purpose.
+
+#### 6.2.2 Based on Expression
+
+When selected, this enables the widget while a provided [expression](expressions) evaluates to true. The object of the containing data view is available inside an expression as a `$currentObject` variable.
+
+Note that the expression is evaluated in the browser, and hence, we advise against using "secret" values (like access keys) in it. In particular, we disallow usages of [constants](constants). Also, client-side expressions currently do not support all the functions that are available in the microflows. Please refer to an autocomplete list to know what functions are supported in your version.
+
+### 6.2.3 Read-Only Style
+
+This property determines how the widget is rendered if it is read-only. 
+
+| Value                       | Description |
+|-----------------------------|-------------|
+| Based on data view          | Set to `Control` or `Text` by the containing data view. *(Default value for widgets inside a data view)*
+| Not enclosed by a data view | Defaults to `Text`. *(Default value for widgets outside a data view)*
+| Inherited from snippet call | Set to `Control` or `Text` by the containing data view of the snippet call, or `Text` when the snippet call is not enclosed by a data view. *(Default value for widgets outside a data view inside a snippet)*
+| Control                     | Widget is displayed but disabled so the value cannot be modified.
+| Text                        | Widget is replaced by a textual representation of the value.
+
+{{% alert type="info" %}}Read-only style is not supported on native mobile pages.{{% /alert %}}
+
+## 7 Label Section {#label}
+
+A label can be used to described the purpose of the widget to the user. The label is shown next to the widget in the user interface. If a label is configured, the widget will be rendered in the browser wrapped in a form group. See [Bootstrap documentation](http://getbootstrap.com/css/#forms).
+
+### 7.1 Show Label
+
+This property determines whether the label is rendered and the widget is wrapped in a form group.
+
+_Default value:_ No
+
+### 7.2 Label Caption
+
+This property is shown only when Show label is Yes. This property determines what text is rendered within a label.
+
+#### 7.2.1 Text Template
+
+The template for the label can contain parameters that are written as a number between braces (for example, `{1}`). The first parameter has the number `1`, the second `2`, etc. Note that to use template parameters, the widget must be placed in the context of an entity (for example, inside a data view or list view).
+
+#### 7.2.2 Parameters
+
+For each parameter in the template, you define an attribute of the context entity or a referred entity, of which the value will be inserted at the position of the parameter.

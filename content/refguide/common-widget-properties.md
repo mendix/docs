@@ -34,7 +34,7 @@ For example, if an address field is required, the required message for the text 
 
 The internal name of the widget. You can use this to give sensible names to widgets. The name property also appears in the generated HTML: the widget DOM element automatically includes the class `mx-name-{NAME}`, which can be useful for [Selenium testing](/howto7/integration/selenium-support).
 
-### 3.2 Tab Index 
+### 3.2 Tab Index{#tab-index}
 
 The tab index influences the order in which the end-user navigates through the page using the tab key. By default tab indices are zero and the tab order is determined automatically by the client system. A value of minus one (-1) means that the widget will be skipped when tabbing through the page.
 

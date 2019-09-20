@@ -125,6 +125,7 @@ To ensure the best user experience for your Mendix application, follow these bes
 * Because network connections can be slow and unreliable and mobile devices often have limited storage, avoid synchronizing large files or images (for example, by limiting the size of photos)
 * Use an `isDeleted` Boolean attribute for delete functionality so that conflicts can be handled correctly on the server
 * Use before- and after-commit microflows to pre- or post-process data, or perform additional server-side logic using microflows
+* Help your user 'remember' to synchronise his or her data so it processed as soon as possible: you can check for connectivity and automatically syncronise in your 'Save' nanoflows, or remind a user using notification or before logging out to ensure no data is lost or unused
 
 ## 4 Ensuring Your App Is Offline-First {#limitations}
 

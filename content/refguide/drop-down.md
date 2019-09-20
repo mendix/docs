@@ -89,7 +89,7 @@ For example, the drop-down that allows the end-user to select the region allocat
 
 ### 2.7 Label Section{#label}
 
-{{% snippet file="refguide/label-property.md" %}}
+{{% snippet file="refguide/label-section-link.md" %}}
 
 ### 2.8 Validation Section{#validation}
 

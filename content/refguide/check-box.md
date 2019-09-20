@@ -73,7 +73,7 @@ This differs from the [On change](#on-change) property in that the event will al
 
 ### 2.6 Label Section{#label}
 
-{{% snippet file="refguide/label-property.md" %}}
+{{% snippet file="refguide/label-section-link.md" %}}
 
 ### 2.7 Visibility Section{#visibility}
 

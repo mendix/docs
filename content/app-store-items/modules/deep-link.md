@@ -1,5 +1,5 @@
 ---
-title: "Deep-Link"
+title: "Deep Link"
 category: "Modules"
 description: " "
 tags: [ ]
@@ -8,7 +8,7 @@ draft: true
 
 ## 1 Introduction
 
-Use the [Deep-Link](https://appstore.home.mendix.com/link/app/43/) to add request handlers to your app that will trigger microflows.
+Use the [Deep Link](https://appstore.home.mendix.com/link/app/43/) to add request handlers to your app that will trigger microflows.
 
 The typical usage scenario is configuring a link to trigger a microflow like this: `    https://myapp.com/link/resetpassword/DF6345SDF`. The module is design- and runtime-configurable, it respects security, and it supports links for both logged-in and anonymous users.
 
@@ -22,7 +22,8 @@ With this module, you can do the following:
 
 After importing the module into your application you need to configure it.
 
-### 2.1 Initializing the Deep-Link Module on App Startup
+### 2.1 Initializing the Deep 
+Link Module on App Startup
 
 To automatically start this  module, the **DeepLink.Startdeeplink** microflow needs to be set as the startup microflow (via **Project** > **Settings** > **Server** > **After startup**). 
 

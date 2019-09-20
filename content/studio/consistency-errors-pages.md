@@ -136,9 +136,9 @@ The most common errors for [input elements](page-editor-widgets-input-elements) 
 
 ## 6 Image Widgets Consistency Errors
 
-The most common consistency errors for [static image widgets](page-editor-widgets-images) can occur when you place an image widget on a page, but do not select an actual image for it. 
+The most common consistency errors for [static image widgets](page-editor-widgets-images-and-files) can occur when you place an image widget on a page, but do not select an actual image for it. 
 
-[Dynamic images](page-editor-widgets-images) need to be placed inside a data container (a data view or a list view) and an entity should be selected for them. 
+[Dynamic images](page-editor-widgets-images-and-files) need to be placed inside a data container (a data view or a list view) and an entity should be selected for them. 
 
 {{% image_container width="350" %}}![Dynamic Image Properties](attachments/consistency-errors-pages/dynamic-image-properties.png)
 {{% /image_container %}}

@@ -65,26 +65,24 @@ The **Deeplink.CreateDeeplinkConfig** microflow requires the following parameter
 * **Object Type** – This parameter is the fully qualified type of the object that needs to be passed to the microflow. If empty, no arguments are passed to the microflow. An example is `MyFirstModule.Product`.
 * **Object Attribute** – This parameter specifies the attribute used by the deep link to uniquely identify the object that needs to be passed. In the case of this value being configured as empty, GUIDs will be used. For example, when the object type is set to the entity `User` and the object attribute to 'Name', you can use links such as `http://yourhost/link/showuser/[randomUserName]`, where `randomUsername` is the value of the `Name` attribute of the `User` entity.
 * **Allow guests** – This parameter allow anonymous users to use this deep link.
-* **Use as Home** – When requesting a certain deep link the deeplink will be reused when the user reloads the application. This way an alternative dashboard can be presented when the user enters the application by requesting a deeplink. Defaults to 'false'.
-* **Alternative index page** – This causes a deeplink to not use the default index page. Using this property alternative themes can be applied when requesting certain deeplinks. For example 'index-dark.html'.
+* **Use as Home** – This parameter allows a deep link to reused when the user reloads the application after requesting the deep link. This way, an alternative dashboard can be presented when the user enters the application by requesting a deep link. Defaults to `false`.
+* **Alternative index page** – This causes a deep link to not use the default index page. With this property, alternative themes can be applied when requesting certain deep links (for example, `index-dark.html`).
 
-### 2.6 Handling DeepLink Requests
+### 2.6 Handling Deep Link Requests
 
-After handling a request the DeepLink module will redirect to the homepage of your application. The homepage is configured in the navigation.
+After handling a request, this module will redirect to the homepage of your application. The homepage is configured in the app project's [Navigation](/refguide/navigation).
 
-Instead of opening the default homepage the DeepLink module needs to figure out what microflow is associated with the requested deep link. For this you need to change the default homepage in your navigation to a custom microflow.
+To open another page, the module needs to figure out what microflow is associated with the requested deep link. For this, you need to change the default homepage in your navigation to a custom microflow. If the default homepage is already a microflow, you need to modify it.
 
-If default homepage is already a microflow, you should modify it.
+Follow these steps to update this homepage microflow:
 
-The first activity in this custom microflow has to be a Call microflow activity which calls Deeplink.DeeplinkHome. This microflow returns a boolean value which indicates if the deeplink module will start triggering a microflow. Add an exclusive split which handles the result of Deeplink.DeeplinkHome.
-
-* When the result of Deeplink.DeeplinkHome is true the custom microflow should end. The DeepLink module will take of calling the correct microflow.
-  
-* When the result is false the microflow should continue with an Open Page activity which opens the page or microflow which is your default home page.(The original intended behavior).
+1. Make the first activity in this custom microflow a [call microflow](/refguide/microflow-call) activity that calls `Deeplink.DeeplinkHome`. 
+2. Configure the microflow to return a Boolean value that indicates if the module will start triggering a microflow. 
+3. Add an exclusive split that handles the result of `Deeplink.DeeplinkHome`:
+	* When the result of `Deeplink.DeeplinkHome` is true, the custom microflow should end, and the module will then call the correct microflow
+	* When the result is false, the microflow should continue with an [show page](/refguide/show-page) activity that opens the page or microflow that is your default home page (as in, the original intended behavior)
 
 ### 2.7 Constants (Optional)
 
-* IndexPage - In special cases, for example when you want to load a specific theme or bypass a certain single sign on page, you can modify this constant to redirect to another index page like 'index3.html' or 'index-mytheme.html'.
-* LoginLocation - If a user session is required this constant defines the loginpage where the user is supposed to enter the login credentials. This property is useful in single-sign-on environments. If empty, the default Mendix built-in login page is used. If not empty, it is assumed that after login, the user will be redirected to the deeplink again. For this reason the provided url is appended with the original deeplink. For example: 'https://mxid.mendix.com/login?a=MyApp&f=true&cont=' or '../sso/login?f=true&cont='
-
-
+* **IndexPage** – In special cases—for example, when you want to load a specific theme or bypass a certain single sign-on page—you can modify this constant to redirect to another index page like `index3.html` or `index-mytheme.html`.
+* **LoginLocation** – If a user session is required, this constant defines the login page where the user is supposed to enter the login credentials. This property is useful in single-sign-on environments. If empty, the default Mendix built-in login page is used. If not empty, it is assumed that after login, the user will be redirected to the deep link again. For this reason, the provided URL is appended with the original deep link (for example, `https://mxid.mendix.com/login?a=MyApp&f=true&cont=` or `../sso/login?f=true&cont=`).

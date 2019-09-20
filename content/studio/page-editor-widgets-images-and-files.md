@@ -77,11 +77,11 @@ For information on the **Design** section and its properties, see [Design Sectio
 
 An **image uploader** allows end-users to upload images to you app and it generates a thumbnail of the uploaded image. For example, users can upload a picture for their profile.
 
-The image uploader must be placed inside a data view or a list view that have an image entity as their data source.  For more information on image entities, see the [Types of Entities](#entity-types) section in *Domain Model*. 
+The image uploader must be placed inside a data view or a list view that have an image entity as their data source.  For more information on image entities, see the [Types of Entities](domain-models#entity-types) section in *Domain Model*. 
 
 A **file manager** allows end-users to upload and/or download files. For example, users can download a spreadsheet with necessary data. 
 
-The file manager must be placed inside a data view or a list view that have a file entity as their data source.  For more information on file entities, see the [Types of Entities](#entity-types) section in *Domain Model*. 
+The file manager must be placed inside a data view or a list view that have a file entity as their data source.  For more information on file entities, see the [Types of Entities](domain-models#entity-types) section in *Domain Model*. 
 
 The default maximum size of files and images that can be uploaded/downloaded is 5 MB.
 

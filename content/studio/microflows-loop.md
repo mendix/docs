@@ -29,7 +29,7 @@ Loop properties consists of the **Data Source** section and are described below:
 
 ## 3 Loop Example {#loop-example}
 
-Let us study a straightforward use-case, where you retrieve a list of orders from your database, loop over this list, and mark orders as processed as a result. 
+A straightforward use-case is where you retrieve a list of orders from your database, loop over this list, and mark orders as processed as a result. 
 
 ![Loop Example](attachments/microflows-loop/loop-example.png)
 

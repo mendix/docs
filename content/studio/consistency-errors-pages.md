@@ -57,7 +57,7 @@ Possible errors that you can get when a page is expecting a context that is unav
 
 When a page expects a context that is not passed to it from another page or a microflow, you will get consistency errors. 
 
-Let us study an example: the **Customers** page contains a list view with a list of all customer names (**Customer** is set as **Entity** in the **Data Source** properties), and a **Details** button outside of the list view (placed in a [container](page-editor-widgets-structure#container-overview) only). The **Details** button opens a **Customer Details** page when a user clicks it (the **On Click Action** for the button is set to **Page** and the **Create Object** option is disabled). 
+For example, the **Customers** page contains a list view with a list of all customer names (**Customer** is set as **Entity** in the **Data Source** properties), and a **Details** button outside of the list view (placed in a [container](page-editor-widgets-structure#container-overview) only). The **Details** button opens a **Customer Details** page when a user clicks it (the **On Click Action** for the button is set to **Page** and the **Create Object** option is disabled). 
 
 ![Button Properties on the Customers Page](attachments/consistency-errors-pages/customers-page.png)
 
@@ -110,7 +110,7 @@ Now when a user clicks this button, the **Customer Details** page will open, and
 
 If a widget opens a page and this widget is inside a data container of entity X, but the referred page expects entity Y, you will get a consistency error. 
 
-Let us study an example: you have a **New** button on the **Engineers** page that opens the **Tasks** page. 
+For example, you have a **New** button on the **Engineers** page that opens the **Tasks** page. 
 
 {{% image_container width="350" %}}![A Button on Engineers Page](attachments/consistency-errors-pages/engineers-page.png)
 {{% /image_container %}}

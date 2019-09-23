@@ -74,7 +74,7 @@ The two steps are:
 1. Rename the original login file (by default **login-without-sso.html**) in the **theme** folder of your project to **login.html** – this removes the single sign-on button from your sign in screen
     1. Open your project directory in File Explorer by selecting the menu item **Project** > **Show Project Directory in Explorer**<br />
 
-    ![Show project directory](attachments/mendix-sso/show-project-directory.png)
+        ![Show project directory](attachments/mendix-sso/show-project-directory.png)
 
     2. Go to the **theme** folder
     3. Rename **login.html** to **login-with-sso.html**

@@ -291,7 +291,9 @@ This patch fixes an issue with the generation of the `index.html` file.
 
 This patch fixes an issue with an upstream dependency (`com.android.support:support-v4`) that was updated by Google. The issue prevented building *.apk* files, both locally and on Phonegap Build.
 
-### March 9th, 2018 (2.0.0 / 2.0.0)
+### Hybrid App Base 2.0.0 / Hybrid App Template 2.0.0
+
+**Release date: March 9th, 2018**
 
 {{% alert type="info" %}}
 
@@ -305,7 +307,9 @@ This is a major release, because it is not fully compatible with older versions 
   * You can adjust the HTML and CSS of the loading screen by configuring *loader.html.snippet* and *loader.css.snippet*.
 * We now properly set the page title based on the `name` value in *parameters.json*.
 
-### January 31st, 2018 (1.7.4 / 1.4.0)
+### Hybrid App Base 1.7.4 / Hybrid App Template 1.4.0
+
+**Release date: January 31st, 2018**
 
 {{% alert type="info" %}}
 
@@ -318,15 +322,21 @@ For this update, we recommend that you download a fresh hybrid app package from 
 * Example files for the *config.xml.mustache* and the *index.html.mustache* files are now created during NPM install/update.
 * We removed the obsolete dependencies related to webpack.
 
-### January 30th, 2018 (1.7.3 / 1.3.5)
+### Hybrid App Base 1.7.3 / Hybrid App Template 1.3.5
+
+**Release date: January 30th, 2018**
 
 * We removed the Cordova console plugin. This plugin was obsolete and caused issues while building iOS packages.
 
-### January 23rd, 2018 (1.7.2 / 1.3.5)
+### Hybrid App Base 1.7.2 / Hybrid App Template 1.3.5
+
+**Release date: January 23rd, 2018**
 
 * We updated the *package-lock.json* file to fix an issue where an old version of `mendix-hybrid-app-base` was being used.
 
-### January 17th, 2018 (1.7.2 / 1.3.4)
+### Hybrid App Base 1.7.2 / Hybrid App Template 1.3.4
+
+**Release date: January 17th, 2018**
 
 * We added a cachebust to the `synchronizePackage` call so that a fresh copy of the static files is downloaded only when needed.
 * We upgraded the Phonegap CLI version used to 7.1.0.
@@ -335,17 +345,23 @@ For this update, we recommend that you download a fresh hybrid app package from 
 
 ## 2017
 
-### December 22nd, 2017 (1.7.0 / 1.3.3)
+### Hybrid App Base 1.7.0 / Hybrid App Template 1.3.3
+
+**Release date: December 22nd, 2017**
 
 * We renamed the command `prepare` to `prepare:all`, because it conflicted with the **npm** command of the same name.
 * We updated the README with a table of contents and a list of known issues.
 
-### December 2nd, 2017 (1.7.0 / 1.3.2)
+### Hybrid App Base 1.7.0 / Hybrid App Template 1.3.2
+
+**Release date: December 2nd, 2017**
 
 * We updated some of the Cordova plugins to support the new iPhone X screen size/ratio/notch. Please follow the instructions in [iPhone X Support](https://github.com/mendix/hybrid-app-template/blob/master/IPHONEX.md) to configure your hybrid app to look good on an iPhone X.
 * We improved how Android splash screens are configured. The old configuration could lead to memory-related crashes during startup.
 
-### November 16th, 2017 (1.6.0 / 1.3.1)
+### Hybrid App Base 1.6.0 / Hybrid App Template 1.3.1
+
+**Release date: November 16th, 2017**
 
 *  Android icons and splash screens are now properly configured. For projects using the "do it yourself" workflow, apply the following change in *src/config.xml.mustache*:
 
@@ -365,87 +381,123 @@ For this update, we recommend that you download a fresh hybrid app package from 
 * We fixed an issue where static files would synchronize on every startup, when **static resources from disk** was enabled in the Mendix project.
 * In earlier versions, mobile apps with offline mode enabled would show a dialog box when a new version of the Mendix app was available. We changed this behavior to always update on startup. This prevents inconsistencies that can occur when the user decides to update the mobile app at a later moment.
 
-### October 27th, 2017 (1.5.0 / 1.3.1)
+### Hybrid App Base 1.5.0 / Hybrid App Template 1.3.1
+
+**Release date: October 27th, 2017**
 
 * In some cases, it was possible to avoid the PIN login prompt. This release mitigates those cases. For hybrid apps that have PIN login enabled, upgrading to this release is highly recommended.
 
-### October 17th, 2017 (1.4.3 / 1.3.1)
+### Hybrid App Base 1.4.3 / Hybrid App Template 1.3.1
+
+**Release date: October 17th, 2017**
 
 * Support for custom navigation profiles was removed. This affects Mendix apps running on version 7.2 or 7.3. For these apps, upgrading to a newer Mendix version is recommended.
 
-### October 13th, 2017 (1.4.2 / 1.3.1)
+### Hybrid App Base 1.4.2 / Hybrid App Template 1.3.1
+
+**Release date: October 13th, 2017**
 
 * We added extra Phonegap commands (`plugin` and `prepare`).
 * We added a `devDependency` to fix the failing build in some cases.
 * We fixed an issue where some cleanup steps were skipped when the removal of cookies and/or PIN/login tokens failed.
 
-### October 12th, 2017 (1.4.1 / 1.3.0)
+### Hybrid App Base 1.4.1 / Hybrid App Template 1.3.0
+
+**Release date: October 12th, 2017**
 
 * We fixed the wrong application of `Promise.all`, which broke the PIN flow.
 * We fixed the `appbase` command, used internally to build the Phonegap Build ZIP file.
 
-### October 11th, 2017 (1.4.0 / 1.3.0)
+### Hybrid App Base 1.4.0 / Hybrid App Template 1.3.0
+
+**Release date: October 11th, 2017**
 
 * This release improves support for the PIN login feature:
   * We updated the Phonegap CLI version to 7.0.1.
   * We improved support for switching users in combination with the PIN login feature.
   * We fixed an issue with the remaining session data.
 
-### September 25th, 2017 (1.3.0 / 1.3.0)
+### Hybrid App Base 1.3.0 / Hybrid App Template 1.3.0
+
+**Release date: September 25th, 2017**
 
 * Based on feedback from the Mendix community, we decided to iterate on the command set that is at your disposal while building your Mendix hybrid mobile app. For instructions on how to use the updated commands, refer to the [Mendix PhoneGap Build App Template README](https://github.com/mendix/hybrid-app-template/blob/master/README.md).
 
-### September 20th, 2017 (1.3.0 / 1.2.0)
+### Hybrid App Base 1.3.0 / Hybrid App Template 1.2.0
+
+**Release date: September 20th, 2017**
 
 * We added support for iOS 11 (ticket 56209). For existing hybrid apps, you can also update the `cordova-plugin-wkwebview-engine-nextgen plugin` in the *config.xml* to version to 1.1.0 and publish again.
 * We changed the keyboard type on the PIN login page to `tel`. (Ticket 54380)
 
-### August 28th, 2017 (1.2.0 / 1.2.0)
+### Hybrid App Base 1.2.0 / Hybrid App Template 1.2.0
+
+**Release date: August 28th, 2017**
 
 * Whenever a new version of your Mendix application is deployed, the hybrid app will now ask the user to confirm that they are ready to update.
 
-### August 25th, 2017 (1.1.2 / 1.1.1)
+### Hybrid App Base 1.1.2 / Hybrid App Template 1.1.1
+
+**Release date: August 25th, 2017**
 
 * We fixed the "malformed JSON" issue.
 * We removed the dependency on the BlueBird library.
 * We updated to Webpack 3.
 
-### August 1st, 2017 (1.1.0 / 1.1.0)
+### Hybrid App Base 1.1.0 / Hybrid App Template 1.1.0
+
+**Release date: August 1st, 2017**
 
 * You can now automatically log in if credentials are provided.
 * We replaced the SQLite library with our own fork.
 
-### June 13th, 2017 (1.0.7 / 1.0.3)
+### Hybrid App Base 1.0.7 / Hybrid App Template 1.0.3
+
+**Release date: June 13th, 2017**
 
 * The build for Android ARM is now by default.
 
-### June 13th, 2017 (1.0.6 / 1.0.3)
+### Hybrid App Base 1.0.6 / Hybrid App Template 1.0.3
+
+**Release date: June 13th, 2017**
 
 * We now facilitate the overriding of `entry.js`.
 
-### June 13th, 2017 (1.0.5 / 1.0.3)
+### Hybrid App Base 1.0.5 / Hybrid App Template 1.0.3
+
+**Release date: June 13th, 2017**
 
 * We cleaned up the **resources** folder.
 
-### June 13th, 2017 (1.0.4 / 1.0.3)
+### Hybrid App Base 1.0.4 / Hybrid App Template 1.0.3
+
+**Release date: June 13th, 2017**
 
 * We fixed an issue where the *package.json* was removed on cleanup.
 
-### June 13th, 2017 (1.0.3 / 1.0.3)
+### Hybrid App Base 1.0.3 / Hybrid App Template 1.0.3
+
+**Release date: June 13th, 2017**
 
 * `WkWebview` is now enabled by default.
 * We fixed an issue with UglifyJS and added the NPM5 lockfile.
 
-### June 13th, 2017 (1.0.2 / 1.0.2)
+### Hybrid App Base 1.0.2 / Hybrid App Template 1.0.2
+
+**Release date: June 13th, 2017**
 
 * We fixed the resource paths and the debug mode.
 
-### June 13th, 2017 (1.0.1 / 1.0.1)
+### Hybrid App Base 1.0.1 / Hybrid App Template 1.0.1
+
+**Release date: June 13th, 2017**
 
 * There are now more iOS icons.
 * We improved the documentation.
 * We fixed the image URLs in `WkWebview`.
 
-### June 13th, 2017 (1.0.0 / 1.0.0)
+### Hybrid App Base 1.0.0 / Hybrid App Template 1.0.0
+
+**Release date: June 13th, 2017**
 
 * There is now a new Mendix Hybrid App package format.

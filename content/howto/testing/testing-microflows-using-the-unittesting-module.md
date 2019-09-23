@@ -2,7 +2,7 @@
 title: "Test Microflows Using the UnitTesting Module"
 category: "Testing"
 menu_order: 10
-tags: ["test", "testing", "microflow", "unittesting"]
+tags: ["test", "testing", "microflow", "unit testing"]
 ---
 
 To smarten up your app with business logic you can use microflows. To verify that your microflow works as expected you can create unit tests using the UnitTesting module. The UnitTesting module provides an easy to use interface to manage and run unit tests. The module supports unit tests that are created using microflows and unit tests that are created using JUnit.
@@ -91,7 +91,7 @@ In this chapter you will set up the unit testing module and run the example test
 
 ## 3 Creating a Microflow Test
 
-In this chapter you will learn how to create a microflow test. To create a new microflow test in a module, you need to add a microflow with a name that starts with "Test". A test microflow should have no input arguments and a boolean or string as result type. In case of a boolean, true means success, false means the test failed. In case of a string, any non empty string indicates a failed test.
+In this chapter you will learn how to create a microflow test. To create a new microflow test in a module, you need to add a microflow with a name that starts with "Test". A test microflow should have no input arguments and a Boolean or string as result type. In case of a Boolean, true means success, false means the test failed. In case of a string, any non empty string indicates a failed test.
 
 ### 3.1 Creating a Microflow
 

@@ -14,13 +14,13 @@ These are properties that are shared by many widgets. For a complete list of pro
 
 ### 2.1 Required 
 
-This property indicates whether this widget must be filled in by the end user or not. If set to true, this widget can not be left empty and a message will be shown if the end user presses the *Save* button.
+This property indicates whether this widget must be filled in by the end-user or not. If set to true, this widget can not be left empty and a message will be shown if the end-user presses the *Save* button.
 
 _Default value:_ False
 
 ### 2.2 Required Message 
 
-This property determines the message that is shown to the end user if the widget is empty and the *Required* property is set to true. This is a translatable text. For more information,  see [Translatable Texts](translatable-texts).
+This property determines the message that is shown to the end-user if the widget is empty and the *Required* property is set to true. This is a translatable text. For more information,  see [Translatable Texts](translatable-texts).
 
 {{% alert type="info" %}}
 
@@ -117,7 +117,7 @@ The widget can be made visible to a subset of the user roles available in your a
 
 ### 6.1 Editable
 
-The editable property indicates whether the end user will be able to change the value displayed by the widget.
+The editable property indicates whether the end-user will be able to change the value displayed by the widget.
 
 | Value       | Description                                                  |
 | ----------- | ------------------------------------------------------------ |

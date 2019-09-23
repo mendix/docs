@@ -83,7 +83,7 @@ There is an **AppFlow**, **Car**, **Coachwork**, **CarColor**, **CarImage**, **C
 * The image entities are a generalization of **System.Image**, so you can store images for the **Car**, **Coachwork**, and **CarColor** entities
 * The **AppFlow** entity is used to store the state of the flow of the application for each individual user
     * The **AppFlow** entity has an association to Administration.Account
-    * The **HasCar**, **HasCoachwork**, and **HasColorCar** attribute booleans are set by the widget if a selection has been made
+    * The **HasCar**, **HasCoachwork**, and **HasColorCar** attribute Booleans are set by the widget if a selection has been made
     * The many-to-one associations from **AppFlow** to **Car**, **CoachWork**, and **CarColor** will actually save the reference to the **Car**, **Coachwork**, and **CarColor** that the user selected
 
 Notice the icons on the **Car**, **Coachwork**, and **CarColor** entities: ![](attachments/18448566/18579948.png)
@@ -107,7 +107,7 @@ Now let's take a look at what you need to configure in your widget in order to m
 The first thing the widget needs to know is it is active. For the widget that controls the selection of the Car entity, this means that it must always be selectable. For the Coachwork and Color entities, this means setting certain options:
 
 * For Coachwork and Color, **Always active** should be set to **No**
-* **Active on selected** should point to a boolean from the AppFlow (this can be HasCar, HasCoachwork, or HasColorCar)
+* **Active on selected** should point to a Boolean from the AppFlow (this can be HasCar, HasCoachwork, or HasColorCar)
 * **Check if active** should be set to **Yes** for Coachwork and Color
 
 ![](attachments/18448566/18579940.png)

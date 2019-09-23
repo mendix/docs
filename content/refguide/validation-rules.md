@@ -28,7 +28,7 @@ This property defines the attribute to which the validation rule applies. An ent
 
 ### Error message
 
-This property defines the message that is displayed to the end user when the attribute value does not satisfy the condition defined by the validation rule.
+This property defines the message that is displayed to the end-user when the attribute value does not satisfy the condition defined by the validation rule.
 
 ## Rule Properties
 

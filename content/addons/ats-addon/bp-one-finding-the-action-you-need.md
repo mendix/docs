@@ -138,7 +138,7 @@ If the generic action does not work check if there is a specific one.
 
  ATS also has a few specific actions for setting an input widget. To find these use the search term, "Set" in combination with the widget name.
 
-1.  Example, you want to set the value of a checkbox widget, but you want to set it to a specific state. You cannot use the _Set Value_ action because it does not work. The solution is to use the following search term, "Set Checkbox". ATS checks all the actions and returns those that match these words. You see there is an action called [_Set Checkbox Value_](rg-one-set-checkbox-value). The _Set Checkbox Value_ action uses the `mx-name` of the widget and the boolean value you set to check or uncheck the checkbox.
+1.  Example, you want to set the value of a checkbox widget, but you want to set it to a specific state. You cannot use the _Set Value_ action because it does not work. The solution is to use the following search term, "Set Checkbox". ATS checks all the actions and returns those that match these words. You see there is an action called [_Set Checkbox Value_](rg-one-set-checkbox-value). The _Set Checkbox Value_ action uses the `mx-name` of the widget and the Boolean value you set to check or uncheck the checkbox.
 
 	![](attachments/bp-one-finding-the-action-you-need/set-checkbox-value-action-search-1.png)
 
@@ -194,7 +194,7 @@ ATS also has a few specific actions for getting a value from an widget. To find 
 
 	![](attachments/bp-one-finding-the-action-you-need/get-ckeditor-value-action-search-1.png)
 
-3.  Example, you want to get the message displayed in the dialog box widget. You cannot use the _Get Value_ action because there is no `mx-name`. The solution is to use the following search term "Get Dialog".  ATS checks all the actions and returns those that match these words. You see there is an action called [_Get Dialog Message Text_](rg-one-get-dialog-message-text). The  _Get Dialog Message Text_ action uses the dialog as a WebElement to retrieve the message text. You use the _Find/Assert Dialog_ action to get the dialog as a WebEelement.
+3.  Example, you want to get the message displayed in the dialog box widget. You cannot use the _Get Value_ action because there is no `mx-name`. The solution is to use the following search term "Get Dialog".  ATS checks all the actions and returns those that match these words. You see there is an action called [_Get Dialog Message Text_](rg-one-get-dialog-message-text). The  _Get Dialog Message Text_ action uses the dialog as a WebElement to retrieve the message text. You use the _Find/Assert Dialog_ action to get the dialog as a WebElement.
 
 	![](attachments/bp-one-finding-the-action-you-need/get-dialog-message-text-action-search-1.png)
 

@@ -25,7 +25,7 @@ There are the following image and file widgets in Mendix Studio:
 
 ## 2 Image and Dynamic Image 
 
-An image (or a static image) and a dynamic image allow you to display an image either from a file (statically) or from a database (dynamically).  
+An image and a dynamic image widgets allow you to display an image either from a file (statically) or from the database (dynamically).  
 
 You can switch from one widget to another in properties:
 
@@ -46,10 +46,10 @@ Settings available for **Static Image** and **Dynamic Image** are described in t
 
 | Property      | The property applies to   | Description                                                  |
 | ------------- | ------------------------- | ------------------------------------------------------------ |
-| Image Source  | Static and Dynamic Images | Switches between static and dynamic image.                   |
-| Entity        | Dynamic Image             | Specifies which entity will be shown in the dynamic image. You can only set an entity for the dynamic image if the entity has been configured as image in Studio Pro. For more information, see section [General Properties](/refguide/entities#entities-general-properties) in *Entities* in the *Mendix Studio Pro Guide* and [Dynamic Image (document template)](/refguide/dynamic-image-document-template) in the *Mendix Studio Pro Guide*. |
+| Image Source  | Static and Dynamic Images | Switches between static (from a file) and dynamic (from the database) image. |
+| Entity        | Dynamic Image             | Specifies which entity will be shown in the dynamic image. You can only set an entity for the dynamic image if it is an image entity. For more information on image entities, see the [Types of Entities](domain-models#entity-types) section in *Domain Model*. |
 | Image         | Static Image              | Sets an image that will be shown to the end-user.            |
-| Default Image | Dynamic Image             | This is the image that is displayed if no image is uploaded. |
+| Default Image | Dynamic Image             | This is the image that is displayed if is stored in the database. |
 | Width Unit    | Static and Dynamic Images | The width of an image can be specified in the following ways:  <br /><ul><li>**Auto** – the width of the given image is used.</li><li>**Pixels** – the width is specified in a number of pixels. If you specify both width and height, the image will be scaled automatically: the proportions will be kept, the picture will not be stretched.</li><li>**Percentage** –  the width is specified in a percentage of the original width. It can be larger than its original width in which case the image is stretched.</li></ul><br />Default value for **Width Unit**: Auto |
 | Width         | Static and Dynamic Images | The **Width** option is only displayed when **Pixels** or **Percentage** are selected for the **Width Unit**. It specifies the width of the image in pixels or percentage. |
 | Height  Unit  | Static and Dynamic Images | The height of an image can be specified in the following ways:  <br /><ul><li>**Auto** – the height of the given image is used.</li><li>**Pixels** – the height is specified in a number of pixels. If you specify both width and height, the image will be scaled automatically: the proportions will be kept, the picture will not be stretched.</li><li>**Percentage** –  the height is specified in a percentage of the original height. It can be larger than its original height in which case the image is stretched.</li></ul><br />Default value for **Height Unit**: Auto |
@@ -75,15 +75,15 @@ For information on the **Design** section and its properties, see [Design Sectio
 
 ## 3 Image Uploader and File Manager
 
-An **image uploader** allows end-users to upload images to you app and it generates a thumbnail of the uploaded image. For example, users can upload a picture for their profile.
+An **image uploader** allows end-users to upload images to your app and it generates a thumbnail of the uploaded image. For example, users can upload a picture for their profile.
 
-The image uploader must be placed inside a data view or a list view that have an image entity as their data source.  For more information on image entities, see the [Types of Entities](domain-models#entity-types) section in *Domain Model*. 
+The image uploader must be placed inside a data view or a list view that has an image entity as their data source.  For more information on image entities, see the [Types of Entities](domain-models#entity-types) section in *Domain Model*. 
 
 A **file manager** allows end-users to upload and/or download files. For example, users can download a spreadsheet with necessary data. 
 
-The file manager must be placed inside a data view or a list view that have a file entity as their data source.  For more information on file entities, see the [Types of Entities](domain-models#entity-types) section in *Domain Model*. 
+The file manager must be placed inside a data view or a list view that has a file entity as their data source.  For more information on file entities, see the [Types of Entities](domain-models#entity-types) section in *Domain Model*. 
 
-The default maximum size of files and images that can be uploaded/downloaded is 5 MB.
+The default maximum size of files and images that can be uploaded/downloaded is 5 MB. You can change the maximum size in Studio Pro. For more information on properties in Studio Pro, see [File Manager](/refguide/file-manager) and [Image Uploader](/refguide/image-uploader).  
 
 All file extensions are allowed for image uploader and file manager unless specified otherwise in Studio Pro. For more information on properties in Studio Pro, see [File Manager](/refguide/file-manager) and [Image Uploader](/refguide/image-uploader). 
 
@@ -101,7 +101,7 @@ Properties of the **General** section are described in the table below:
 | ----------- | ------------------------------------------------------------ |
 | Show Label  | Enable this property if you want to show a label (name) of a widget to the end-user.  *This property is enabled by default.* |
 | Label       | This property only appears if **Show Label** is enabled. Specify the name that will be displayed to end-users.  When you add an attribute, the name of the attribute is shown in the label in braces. This means that instead of a static text, the value of the attribute is displayed to end-users. |
-| Editability | Editability indicates whether the end-user will be able to change the value displayed by the widget. Possible values are the following: <ul><li>Editable – the value displayed by the widget is editable</li><li>Read-only – the value is in read-only mode</li><li>Conditional – the widget is editable only if specified conditions are met (this option can be configured in Studio Pro only)</li></ul>{{%alert type="info" %}}If an attribute set for the widget's data source is of the AutoNumber type, the widget is set into read-only mode by default and the **Editability** setting itself is disabled, because attributes of this type are generated automatically. {{%/alert %}} |
+| Editability | Editability indicates whether the end-user will be able to change the value displayed by the widget. Possible values are the following: <ul><li>Editable – the value displayed by the widget is editable</li><li>Read-only – the value is in read-only mode</li><li>Conditional – the widget is editable only if specified conditions are met (this option can be configured in Studio Pro only)</li></ul> |
 
 #### 3.1.3 Controls Section
 

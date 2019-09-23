@@ -18,6 +18,6 @@ This is the official release of the Android and iOS versions of the Make It Nati
 
 The apps are not backwards compatible with the Mendix Studio Pro 8.0.0 Beta versions of Mendix Studio Pro. For more information on Mendix Studio Pro 8.0, see the [8.0.0 Release Notes](/releasenotes/studio-pro/8.0).
 
-### Limitations:
+### Limitations
 
 * Clearing data on Android via the start screen does not clear cookies correctly. Using the developer menu option does clear cookies.

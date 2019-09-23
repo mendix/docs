@@ -101,7 +101,7 @@ If you want to create a new customer and fill in the customer's details on the *
 
 Now when a user clicks this button, the **Customer Details** page will open, and the new *Customer* object will be created. 
 
-### 4.2 Error Fix Example 2 {#error-example-2}
+### 4.2 Error Fix Example for CE1569 {#error-example-2}
 
 If a widget opens a page and this widget is inside a data container of entity X, but the referred page expects entity Y, you will get a consistency error. 
 
@@ -133,6 +133,59 @@ One of the most common errors of this type are described in the table below:
 | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | CE0552     | Microflow {name of the microflow} does not return an object. | The data source of a widget (for example, a data view) is set to **Microflow**, but the microflow does not return any object. | Open the microflow and configure a return value for it. Do the following: <ol><li>Double-click the end event.</li><li>In the **End Event** dialog window, set **Type** from **Nothing** to the data type you would like it to return.</li><li>Set the **Entity** option if needed (whether this option is displayed depends on the selected data type).</li><li> Specify the **Return value**.</li></ol> |
 | CE0551     | Microflow {name of the microflow} does not return a list.    | The data source of a list view is set to **Microflow**, but the microflow does not return a list. | Open the microflow and configure it to return a list. Do the following: <ol><li>Double-click the end event.</li><li> In the **End Event** dialog window, set **Type** from **Nothing** to **List**.</li><li>Set the **Entity** option.</li><li>Specify the **Return value**.</li></ol> |
+| CE1573     | Parameter {Name of the parameter} of the selected microflow/nanoflow does not match available arguments. No arguments available to {Name of the widget}. | You selected a microflow or a nanoflow as an on-click event of a widget (for example, of a button) and the microflow/nanoflow contains a parameter, but no arguments (for example, an object) are available for the microflow. | Place the widget in a data container and make sure that the data source of the data container matches the entity selected in **Data type** property of the microflow/nanoflow parameter. For a detailed example and a fix for it, see the [Error Fix Example for CE1573](#error-fix-example-3) section. |
+| CE1574     | Parameter {Name of the parameter} of the selected microflow/nanoflow does not match available arguments. Arguments available to {Name of the widget} are {lust of available arguments}. | You selected a microflow/nanoflow as the data source of a widget, but an argument (or arguments) available for this widget does not match the parameter of the microflow. | Make sure that an argument (for example, an object) available for the widget matches the entity selected in the **Data type** property of the microflow/nanoflow parameter. For a detailed example and a fix for it, see the [Error Fix Example for CE1574](#error-fix-example-4) section. |
+
+### 5.1 Error Fix Example for CE1573 {#error-fix-example-3}
+
+When you set a microflow or a nanoflow as an on-click event for a widget, and this microflow expects an argument (for example, an object) that is not available, this will result in an error. 
+
+For example, on a page named *Customers* you have a button that calls a microflow (i.e. an [**On click** event](on-click-event) of the button is set to *Microflow*):
+
+ ![](attachments/consistency-errors-pages/on-click-event-button.png)
+
+However, the microflow contains a parameter *Customer*:
+
+![](attachments/consistency-errors-pages/microflow-parameter.png)
+
+The microflow parameter expects an argument *Customer*, and since this argument is not available on the page where button is located, it results in an error. 
+
+To fix it, do the following:
+
+1. Open the *Customers* page and drag and drop a data container on it. For example, you can drag and drop a list view.
+
+2.  Set the data source type of the list view to *Database* and set **Entity (path)** to *Customer*.
+
+    ![](attachments/consistency-errors-pages/data-source-list-view.png)
+
+3. Place the button inside the list view.
+
+Now the *Customer* object is available on the page and it matches the microflow parameter *Customer*. 
+
+### 5.2 Error Fix Example CE1574 {#error-fix-example-4}
+
+When you set a microflow/nanoflow as an on-click event for a widget, and this microflow/nanoflow expects a certain argument, but another argument is available on the page, this will result in an error. 
+
+For example, on a page named *Customers* you have a button that calls a microflow (i.e. an [**On click** event](on-click-event) of the button is set to *Microflow*):
+
+ ![](attachments/consistency-errors-pages/on-click-event-button.png)
+
+The microflow contains a parameter *Customer*:
+
+![](attachments/consistency-errors-pages/microflow-parameter.png)
+
+On the *Customers* page you also have a data container, for example, a data view, that has an object *Photo* available. That means that the data source type of the data view is set to *Context* and **Entity (path)** is set to *Photo*:
+
+![](attachments/consistency-errors-pages/data-view-data-source.png)
+
+As the microflow has the parameter *Customer*, and the page has the object *Photo*, they are conflicting and resulting into an error.
+
+The best way to fix this error is to do the following: 
+
+1. Open the page *Customers*.
+2. Select the data view and change the **Entity (path)** property from *Photo* to *Customer*.
+
+Now the object available on the page matches the microflow parameter *Customer*.
 
 ## 6 Input Widget Consistency Errors
 

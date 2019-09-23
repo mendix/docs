@@ -105,7 +105,7 @@ To completely remove Mendix SSO you should do the following:
 
 3. Delete the **MendixSSO** module from **App Store modules**.
 
-4. Review the **Errors** pane for any other references to **MendixSSO** – there will only be additional errors if Mendix SSO has been modified. For example, if you have included snippets into your app's pages as described in [Modifying Mendix SSO](modifying-mendix-sso).
+4. Review the **Errors** pane for any other references to **MendixSSO** – there will only be additional errors if Mendix SSO has been modified.
 
 ## 4 Setting Up Mendix Single Sign-On{#setting-up}
 
@@ -165,10 +165,12 @@ To enable Mendix SSO in your app, if it does not have it set up already, you nee
 
 Your app is now configured to use Mendix Single Sign-on when it is deployed to the Cloud.
 
-## 5 Modifying Mendix Single Sign-On
+{{% todo %}}[Add section and link to modifying - see separate branch]{{% /todo %}}
+
+<!-- ## 5 Modifying Mendix Single Sign-On
 
 The administrative functions provided in the MendixSSO module are sufficient for administering most apps. However, you can create your own administration suite by adapting it.
 
 For more information see [Modifying Mendix SSO](modifying-mendix-sso).
 
-This document also contains more information about token management, to help you to debug any issues and provide information to Mendix support if necessary.
+This document also contains more information about token management, to help you to debug any issues and provide information to Mendix support if necessary. -->

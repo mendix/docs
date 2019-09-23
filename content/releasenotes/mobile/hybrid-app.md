@@ -6,7 +6,7 @@ toc-level: 1
 description: "Mendix Hybrid App Base & Hybrid App Template release notes."
 ---
 
-The version numbers for each release below refer to the [Hybrid App Base](https://github.com/mendix/hybrid-app-base) and [Hybrid App Template](https://github.com/mendix/hybrid-app-template) packages, respectively. If you are building your hybrid mobile app using the regular PhoneGap Build approach from within the Mendix Developer Portal, you do not need to worry about these numbers. Downloading and building a new package will set you up with the latest version.
+If you are building your hybrid mobile app using the regular PhoneGap Build approach from within the Mendix Developer Portal, you do not need to worry about these numbers. Downloading and building a new package will set you up with the latest version.
 
 If you are using the advanced flow, you can get the latest version of the Hybrid App Base by running `npm update` from your hybrid app project directory. To upgrade to the latest version of the Hybrid App Template, either pull in the latest changes from GitHub, or download a new copy from the Mendix Developer Portal ([Developer Portal](https://sprintr.home.mendix.com/index.html) > **DEPLOY**).
 
@@ -16,16 +16,22 @@ For more information on hybrid mobile app development in Mendix, see the [Hybrid
 
 ## 2019
 
-### August 15th, 2019 (4.1.4 / 4.1.3)
+### Hybrid App Base 4.1.4 / Hybrid App Template 4.1.3
+
+**Release date: August 15th, 2019**
 
 * We fixed an issue where Android devices with older WebView versions might get stack in a loading loop.
 * We fixed an unhandled exception with Secure Storage when using a PIN view. Users on devices with no OS-level security features enabled — like pin, password, biometrics — will now be prompted to enable any of them before proceeding to set their app's PIN.
 
-### July 18th, 2019 (4.1.3 / 4.1.3)
+### Hybrid App Base 4.1.3 / Hybrid App Template 4.1.3
+
+**Release date: July 18th, 2019**
 
 * We fixed an issue where, when using a PIN view, Android devices would sometimes offer a QWERTY keyboard instead of a numeric one.
 
-### July 2nd, 2019 (4.1.1 / 4.1.0)
+### Hybrid App Base 4.1.1 / Hybrid App Template 4.1.0
+
+**Release date: July 2nd, 2019**
 
 * We moved the Google Services *.json*, *.plist*, and *build-extras.xml* files to the **/config** folder. Thus, if you have an existing **config.xml** file, make sure that lines `213-214` read as follows:
 
@@ -37,7 +43,9 @@ For more information on hybrid mobile app development in Mendix, see the [Hybrid
 * We changed how the *build-extras.xml* file is included in your app project. Now PhoneGap Build properly includes that file.
 * The build process no longer fails when you do not provide a *GoogleServices-Info.plist* file. This is useful if you use Firebase Cloud Messaging for push notifications on Android, but use the Apple Push Notification service for push notifications on iOS.
 
-### May 14th, 2019 (4.1.0 / 4.1.0)
+### Hybrid App Base 4.1.0 / Hybrid App Template 4.1.0
+
+**Release date: May 14th, 2019**
 
 We updated **Cordova Android** to version 7.1.4.
 
@@ -52,26 +60,36 @@ To enable more control over the target architecture, use the following variants:
 |`$ npm run package:arm`    |           Prepares `build` directory for arm.|
 |`$ npm run package:arm64`  |           Prepares `build` directory for arm64.|
 
-### January 28th, 2019 (4.0.5 / 4.0.0)
+### Hybrid App Base 4.0.5 / Hybrid App Template 4.0.0
+
+**Release date: January 28th, 2019**
 
 We fixed an issue on iOS where the app did not fill the entire screen after the keyboard was hidden.
 
-### January 23rd, 2019 (4.0.4 / 4.0.0)
+### Hybrid App Base 4.0.4 / Hybrid App Template 4.0.0
+
+**Release date: January 23rd, 2019**
 
 We fixed a mistake in the Google Services *.plist* file.
 
-### January 7th, 2019 (4.0.3 / 4.0.0)
+### Hybrid App Base 4.0.3 / Hybrid App Template 4.0.0
+
+**Release date: January 7th, 2019**
 
 * We updated **Cordova Android** to version 7.1.3.
 * We made sure that the Google Play Services files are only copied over when push notifications are enabled.
 * We fixed the location of the *google-services.json* file.
 * We removed some superfluous logic from the webpack configuration (used for creating a hybrid app package).
 
-### January 7th, 2019 (4.0.2 / 4.0.0)
+### Hybrid App Base 4.0.2 / Hybrid App Template 4.0.0
+
+**Release date: January 7th, 2019**
 
 The *build-extras.gradle* file was missing in the published npm package. We added it.
 
-### January 6th, 2019 (4.0.0 / 4.0.0)
+### Hybrid App Base 4.0.0 / Hybrid App Template 4.0.0
+
+**Release date: January 6th, 2019**
 
 {{% alert type="warning" %}}
 As of April 11th, 2019, Google will drop support for sending push notifications through their Google Cloud Messaging (GCM) service. By that time, all clients will need to have migrated to the new Firebase Cloud Messaging (FCM) service. The move from GCM to FCM impacts Mendix apps that employ push notifications through the Mendix [Push Notifications Connector](https://appstore.home.mendix.com/link/app/3003/). Please read the notes below for upgrade instructions
@@ -94,7 +112,9 @@ If your app does not employ push notifications, you can still use the Phonegap B
 
 ## 2018
 
-### November 20th, 2018 (3.0.0 / 3.0.0)
+### Hybrid App Base 3.0.0 / Hybrid App Template 3.0.0
+
+**Release date: November 20th, 2018"
 
 {{% alert type="warning" %}}
 
@@ -171,32 +191,46 @@ The goal of this release is to upgrade all major dependencies to their latest ve
 
 We have tested extensively against real-life projects and commonly used widgets from the [Mendix App Store](https://appstore.home.mendix.com/index3.html).
 
-### October 18th, 2018 (2.3.2 / 2.0.1)
+### Hybrid App Base 2.3.2 / Hybrid App Template 2.0.1
+
+**Release date: October 18th, 2018"
 
 * We inadvertently removed the mechanism to pin the Android support library, which could lead to issues during compilation of the app. We now pin it at SDK version 27 again.
 
-### October 18th, 2018 (2.3.1 / 2.0.1)
+### Hybrid App Base 2.3.1 / Hybrid App Template 2.0.1
+
+**Release date: October 18th, 2018**
 
 * We upgrade the inappbrowser plugin to latest version (3.0.0).
 
-### October 18th, 2018 (2.3.0 / 2.0.1)
+### Hybrid App Base 2.3.0 / Hybrid App Template 2.0.1
+
+**Release date: October 18th, 2018**
 
 * The Cordova inappbrowser plugin does not comply with recent changes in Android API requirements. Specifically, opening a file using the file:// protocol is disallowed. To avoid the issue, links to files (images, pdfs, etc.) are now opened using the default application available on the device.
 
-### August 14th, 2018 (2.2.2 / 2.0.1)
+### Hybrid App Base 2.2.2 / Hybrid App Template 2.0.1
+
+**Release date: August 14th, 2018**
 
 * As part of the signout/cleanup process, we now clear out all locations where authentication tokens might still reside.
 
-### August 13th, 2018 (2.2.1 / 2.0.1)
+### Hybrid App Base 2.2.1 / Hybrid App Template 2.0.1
+
+**Release date: August 13th, 2018**
 
 * For upgraded apps, the recent change to store authentication tokens in file storage instead of localstorage could lead to a loss of the session. To avoid this issue, we added a fallback mechanism to check if a token is still available in localstorage.
 
-### August 13th, 2018 (2.2.0 / 2.0.1)
+### Hybrid App Base 2.2.0 / Hybrid App Template 2.0.1
+
+**Release date: August 13th, 2018**
 
 * We changed how auth tokens are stored, preventing an issue where a session was not reconstructed after an update of the app.
 * We added several default entries to the *config.xml* file, preventing security errors in the web view.
 
-### July 9th, 2018 (2.1.0 / 2.0.1)
+### Hybrid App Base 2.1.0 / Hybrid App Template 2.0.1
+
+**Release date: July 9th, 2018**
 
 {{% alert type="warning" %}}
 
@@ -214,32 +248,46 @@ For this update, we recommend downloading a fresh hybrid app package from the Me
 
 {{% /alert %}}
 
-### July 5th, 2018 (2.0.7 / 2.0.1)
+### Hybrid App Base 2.0.7 / Hybrid App Template 2.0.1
+
+**Release date: July 5th, 2018**
 
 * We fixed the transparency level in the default styling.
 
-### July 3rd, 2018 (2.0.6 / 2.0.1) {#7318}
+### Hybrid App Base 2.0.6 / Hybrid App Template 2.0.1 {#7318}
+
+**Release date: July 3rd, 2018**
 
 * We increased the default server timeout for offline apps. The new timeout is 30 seconds.
 
-### April 20th, 2018 (2.0.5 / 2.0.1)
+### Hybrid App Base 2.0.5 / Hybrid App Template 2.0.1
+
+**Release date: April 20th, 2018**
 
 * We improved the styling of the loader and login screens by making the text on those pages thicker.
 
-### April 19th, 2018 (2.0.4 / 2.0.1)
+### Hybrid App Base 2.0.4 / Hybrid App Template 2.0.1
+
+**Release date: April 19th, 2018**
 
 * We improved the styling of the loader screen.
 * We added backwards compatibility with respect to quality vs. density properties (for Android only).
 
-### March 23rd, 2018 (2.0.3 / 2.0.1)
+### Hybrid App Base 2.0.3 / Hybrid App Template 2.0.1
+
+**Release date: March 23rd, 2018**
 
 This patch fixes an issue with an upstream dependency (`com.google.android.gms:play-services-gcm`) that was updated by Google. The issue prevented building *.apk* files, both locally and on Phonegap Build.
 
-### March 16th, 2018 (2.0.2 / 2.0.0)
+### Hybrid App Base 2.0.2 / Hybrid App Template 2.0.0
+
+**Release date: March 16th, 2018**
 
 This patch fixes an issue with the generation of the `index.html` file.
 
-### March 13th, 2018 (2.0.1 / 2.0.0)
+### Hybrid App Base 2.0.1 / Hybrid App Template 2.0.0
+
+**Release date: March 13th, 2018**
 
 This patch fixes an issue with an upstream dependency (`com.android.support:support-v4`) that was updated by Google. The issue prevented building *.apk* files, both locally and on Phonegap Build.
 

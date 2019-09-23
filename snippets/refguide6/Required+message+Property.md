@@ -1,6 +1,6 @@
 ### Required message
 
-This property determines the message that is shown to the end user if the widget is empty and the 'Required' property is set to true. This is a translable text. See [Translatable Texts](translatable-texts).
+This property determines the message that is shown to the end user if the widget is empty and the 'Required' property is set to true. This is a translatable text. See [Translatable Texts](translatable-texts).
 
 <div class="alert alert-info">
 

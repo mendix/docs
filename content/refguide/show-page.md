@@ -11,7 +11,7 @@ This activity can be used in both **Microflows** and **Nanoflows**.
 
 ## 1 Introduction
 
-With this action you can show a page to the end user.
+With this action you can show a page to the end-user.
 
 Note that you can also drag a page from the **Project Explorer** into your microflow directly:
 
@@ -31,7 +31,7 @@ Object that will be passed to the opened page. This object will be used by [data
 
 ### 3.1 Page
 
-The [page](page) to show to the end user. If the Object to pass is specified, the page must contain a data view connected to the same entity as the passed object (or its generalization).
+The [page](page) to show to the end-user. If the Object to pass is specified, the page must contain a data view connected to the same entity as the passed object (or its generalization).
 
 {{% alert type="info" %}}
 

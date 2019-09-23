@@ -35,7 +35,7 @@ Many input widgets also have properties in common. These are described here.
 | Value | Description |
 | --- | --- |
 | False | Normal text box |
-| True | Typed characters are not shown to the end user. Instead an asterisk is shown for every typed character. |
+| True | Typed characters are not shown to the end-user. Instead an asterisk is shown for every typed character. |
 
 _Default value:_ False
 

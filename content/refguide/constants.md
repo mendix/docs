@@ -33,7 +33,7 @@ The name of the constant. This name is used to refer to it.
 
 ### 2.2 Documentation
 
-This field is for documentation purpose only: end users will never see it, and it doesn't influence the behavior of your application.
+This field is for documentation purpose only: end-users will never see it, and it doesn't influence the behavior of your application.
 
 ## 3 Type Properties
 

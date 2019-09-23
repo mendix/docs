@@ -33,7 +33,7 @@ If the 'drop-down' search field is connected to an attribute of an associated en
 
 {{% alert type="info" %}}
 
-Let us say you have a grid showing bicycles. In the domain model the bicycle has an association to the shops where you can buy those bicycles. You can add a search field to the grid allowing the end user to select a shop by name. The XPath can then be used to limit the shops to those that are in a given country.
+Let us say you have a grid showing bicycles. In the domain model the bicycle has an association to the shops where you can buy those bicycles. You can add a search field to the grid allowing the end-user to select a shop by name. The XPath can then be used to limit the shops to those that are in a given country.
 `[MyWebshop.Bicycle_Shop/MyWebshop.Shop/Country='Netherlands']`
 
 {{% /alert %}}

@@ -45,8 +45,8 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 #### Developer Portal Improvements
 
 * We fixed an issue that would prevent users from inviting email addresses that contain capital letters.
-* We fixed an issue that would occassionally trigger an error message during signup.
-* We made various small performance improvements on the developer portal.
+* We fixed an issue that occassionally triggered an error message during signup.
+* We made various small performance improvements on the Developer Portal.
 
 ### September 19th, 2019
 

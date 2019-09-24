@@ -13,7 +13,9 @@ tags: ["SSO", "Single Sign-on", "Mendix credentials"]
 
 {{% todo %}}[Add AppStore Link - several instances
 
-Check which Starter Apps will be updated and how to tell what version of MendixSSO they have]{{% /todo %}}
+Check which Starter Apps will be updated and how to tell what version of MendixSSO they have
+
+Update Screenshots - new App Name (realistic)]{{% /todo %}}
 
 The [MendixSSO module](https://appstore.home.mendix.com) enables your app users to sign in with their Mendix account when your app is deployed to the Mendix Cloud.
 
@@ -25,7 +27,7 @@ If your app does not have the MendixSSO module, it is available from the Mendix 
 
 If you need a newer version of the Mendix SSO module (for example, to use a new feature), then it is also available from the App Store via the same link.
 
-You can see if your app has the Mendix SSO module by looking in the **App Store modules** section in the **Project Explorer** for your app project.
+You can see if your app has the Mendix SSO module, and which version it has, by looking in the **App Store modules** section in the **Project Explorer** for your app project. The version number is recorded in the **Version** constant within the module.
 
 ![](attachments/mendix-sso/mxsso-app-store-module.png)
 

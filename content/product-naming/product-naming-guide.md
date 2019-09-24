@@ -221,6 +221,12 @@ Capitalize in all instances.
 Capitalize in all instances.
 {{% /alert %}}
 
+### delighters
+
+{{% alert type="info" %}}
+This term can be used again in customer-facing documentation to refer to certain productivity improvements. There is a **Delighters** section in the Studio Pro release notes.
+{{% /alert %}}
+
 ### fast deploy, fast deployment
 
 {{% alert type="info" %}}
@@ -441,6 +447,8 @@ Capitalize in all instances.
 
 {{% alert type="info" %}}
 Do not use "persistent" or "non-persistent."
+
+Also, do not use "transient" as a synonym for "persistable."
 {{% /alert %}}
 
 ### Platform APIs
@@ -493,10 +501,10 @@ This implementation of the Agile framework is explained at [Scrum.org](https://w
 Capitalize in all instances.
 {{% /alert %}}
 
-### SCRUM Master
+### Scrum Master
 
 {{% alert type="info" %}}
-"SCRUM" is written in all caps for this App Team role in the Developer Portal UI.
+This is the correct capitalization for this App Team role.
 {{% /alert %}}
 
 #### Sprint
@@ -597,12 +605,6 @@ The Mendix Community Edition was introduced with Mendix 5.18, which included the
 
 {{% alert type="info" %}}
 Do not use. This has been replaced by the [Free Edition](#free-edition).
-{{% /alert %}}
-
-### delighters
-
-{{% alert type="info" %}}
-This should not be used in the release notes/documentation. Use "productivity improvements" if necessary instead.
 {{% /alert %}}
 
 ### Desktop Modeler {#dm}

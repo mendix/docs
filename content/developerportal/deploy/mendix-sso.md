@@ -19,7 +19,7 @@ The [MendixSSO module](https://appstore.home.mendix.com) enables your app users 
 
 Using Mendix accounts means that you do not need a special authorization module to support resetting and changing passwords, and makes it easy to create multiple applications which all use the same sign-on mechanism.
 
-Mendix starter apps come with the Mendix SSO module already available. All you have to do is to set your security level to **Production** and your end-users will be able to sign in.
+Many Mendix starter apps come with the Mendix SSO module already available. For these, all you have to do is to set your security level to **Production** and your end-users will be able to sign in.
 
 If your app does not have the MendixSSO module, it is available from the Mendix App Store here: [Mendix SSO](https://appstore.home.mendix.com). Follow the instructions in [How To Use App Store Content](/developerportal/app-store/app-store-content) to import it into your app and then follow the instructions in [Setting Up Mendix Single Sign-On](#setting-up), below.
 

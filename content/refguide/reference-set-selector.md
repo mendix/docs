@@ -151,7 +151,7 @@ Using non-persistable entities (NPEs) in a reference set selector is not support
 
 ## Selectable Objects Properties
 
-The selectable objects are determined in the same way as in the reference selector. See the [selectable objects properties](reference-selector) of the reference selector for more information. Note that you cannot use a microflow in a reference set selector.
+The selectable objects are determined in the same way as in the reference selector. See the [Selectable Objects Section](reference-selector#selectable-objects) section of *Reference Selector* for more information. Note that you cannot use a microflow in a reference set selector.
 
 ### XPath Constraint
 

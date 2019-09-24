@@ -154,7 +154,7 @@ It can be used, for example, to give a hint to the end-user what kind of text sh
 
 {{% snippet file="refguide/visibility-section-link.md" %}}
 
-## Read More
+## 3 Read More
 
 * [Data Types](data-types)  
 * [Data View](data-view)

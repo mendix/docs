@@ -79,7 +79,7 @@ This differs from the [On change](#on-change) property in that the event will al
 
 {{% snippet file="refguide/visibility-section-link.md" %}}
 
-## Read More
+## 3 Read More
 
 *   [Data view](data-view)
 *   [Attributes](attributes)

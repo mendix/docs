@@ -12,7 +12,7 @@ A **reference selector** is used to display and, optionally, allow the end-user 
 
 A reference selector must be placed in a [data widget](data-widgets). The object(s) retrieved by that widget must be at the *many* end of a one-to-many association, or at either end of a one-to-one association.
 
-For example, if you have an employee they will work for one company. A company can have many employees. The entities **Employee** and **Company** have a one-to-many association, **Employee_Company**, which you can select from the Employee through the reference selector.  
+For example, if you have an employee they will work for one company. A company can have many employees. The entities **Employee** and **Company** have a one-to-many association, **Employee_Company**, which you can select by choosing a Company from the Employee through the reference selector.  
 
 ![](attachments/reference-selector/reference-selector-domain-model.png)
 
@@ -23,14 +23,14 @@ For example, the following reference allows the end-user to see, and set, the as
 ![](attachments/reference-selector/reference-selector.png)
 
 {{% alert type="info" %}}
-If you only want to _display_ information, you can also use a [text box](text-box). This has the added advantage that you can follow more than one association step.
+If you only want to _display_ information, you can also use a [text box](text-box). This has the added advantage that you can choose an attribute from an object which is linked via several association steps.
 {{% /alert %}}
 
 ## 2 Properties
 
 An example of text area properties is represented in the image below:
 
-{{% image_container width="250" %}}![](attachments/reference-selector/reference-selector-properties.png)
+{{% image_container width="400" %}}![](attachments/reference-selector/reference-selector-properties.png)
 {{% /image_container %}}
 
 Text box properties consist of the following sections:
@@ -91,7 +91,7 @@ The formatting section applies only to the way that numeric attributes are displ
 * Integer
 * Long
 
-{{% todo %}}[   Need to do something about numeric formatting]{{% /todo %}}
+{{% todo %}}[Need to do something about numeric formatting]{{% /todo %}}
 
 {{% snippet file="refguide/numeric-formatting.md" %}}
 
@@ -108,7 +108,7 @@ The reference selector allows the end user to select objects by using either a d
 | Drop-down *(default)* | Select the reference using a drop-down. |
 | Page | Select the reference using a pop-up page. |
 
-* The advantage of a selecting using a drop-down is that it is very efficient – the end-user can choose with fewer keystrokes as all the information is on the same page.
+* The advantage of selecting using a drop-down is that it is very efficient – the end-user can choose with fewer keystrokes as all the information is on the same page.
 * The advantage of selecting using a page is that the end-user can search the objects, and more information about each object can be displayed – if there are a lot of objects (say, more than 20) to select from, we suggest selecting is done using a page.
 
 **Select Using Drop-down**
@@ -139,13 +139,11 @@ This is only displayed if [Select using](#select-using) is set to **Page**. Cons
 
 The select page property determines which page is opened when the select page button is used.
 
-This page can be used to select associated objects from the list of all possible objects. This page should contain a data grid, template grid or list view connected to the same entity as the input reference set selector.
+This page can be used to select an associated object from the list of all possible objects. This page should contain a data grid, template grid or list view connected to the same entity as the input reference set selector.
 
-It is recommended that you generate a new page to show by right-clicking the widget and selecting **Generate select page…**.
+It is recommended that you generate a new page to show by right-clicking the widget and selecting **Generate select page…**. You can then edit the resulting page, if required.
 
 ![Generate a select page by right-clicking the widget](attachments/reference-selector/generate-select-page.png)
-
-You can then edit the resulting page, if required.
 
 See [Opening Pages](opening-pages). Note that opening select pages in content is prohibited.
 
@@ -262,7 +260,7 @@ The sort order specifies the order in which the items in the reference selector 
 A microflow can only be used if the selection is made using a drop-down.
 {{% /alert %}}
 
-If the source is microflow is selected, a microflow is called, and returns the list of objects that the reference selector will show.
+If the source microflow is selected, a microflow is called, and returns the list of objects that the reference selector will show.
 
 **Microflow**
 

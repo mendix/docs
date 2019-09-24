@@ -221,6 +221,12 @@ Capitalize in all instances.
 Capitalize in all instances.
 {{% /alert %}}
 
+### delighters
+
+{{% alert type="info" %}}
+This term can be used again in customer-facing documentation to refer to certain productivity improvements. There is a **Delighters** section in the Studio Pro release notes.
+{{% /alert %}}
+
 ### fast deploy, fast deployment
 
 {{% alert type="info" %}}
@@ -599,12 +605,6 @@ The Mendix Community Edition was introduced with Mendix 5.18, which included the
 
 {{% alert type="info" %}}
 Do not use. This has been replaced by the [Free Edition](#free-edition).
-{{% /alert %}}
-
-### delighters
-
-{{% alert type="info" %}}
-This should not be used in the release notes/documentation. Use "productivity improvements" if necessary instead.
 {{% /alert %}}
 
 ### Desktop Modeler {#dm}

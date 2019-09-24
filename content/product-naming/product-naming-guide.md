@@ -493,10 +493,10 @@ This implementation of the Agile framework is explained at [Scrum.org](https://w
 Capitalize in all instances.
 {{% /alert %}}
 
-### SCRUM Master
+### Scrum Master
 
 {{% alert type="info" %}}
-"SCRUM" is written in all caps for this App Team role in the Developer Portal UI.
+This is the correct capitalization for this App Team role.
 {{% /alert %}}
 
 #### Sprint

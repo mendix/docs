@@ -441,6 +441,8 @@ Capitalize in all instances.
 
 {{% alert type="info" %}}
 Do not use "persistent" or "non-persistent."
+
+Also, do not use "transient" as a synonym for "persistable."
 {{% /alert %}}
 
 ### Platform APIs

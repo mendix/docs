@@ -26,5 +26,5 @@ We want to create a large network of Mendix apps, so let's start integrating!
 * [Expose a Web Service](expose-a-web-service) – details creating a web service and publishing a microflow as a web service operation
 * [Expose Data to BI Tools Using OData](exposing-data-to-bi-tools-using-odata) – presents details on creating a published OData service with resources, adding an OData server to Tableau and Excel, combining resources in Tableau, and creating custom queries
 * [Synchronize User Accounts Using the LDAP Module](synchronizing-user-accounts-using-the-ldap-module) – teaches you how to synchronize user data from your company's LDAP-compatible identity manager to your Mendix app
-* [Configure Selenium Support](selenium-support) – shows you how to use naming conventions and avoid pitfalls that will help you in using Selenium
-
+* [Configure Selenium Support](selenium-support) – shows you how to use naming conventions and avoid pitfalls that will help you in using Selenium  – 
+* [Server-side paging and sorting for microflow data soure](server-side-paging-and-sorting-for-microflow-datasource) teaches how to enable server-side paging and sorting for a data grid with a microflow data source

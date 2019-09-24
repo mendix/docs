@@ -13,12 +13,12 @@ When creating an anonymous user role, always make sure you give it as little acc
 
 **After using this how-to, you will know how to do the following:**  
 
-* Set access to a transient object
+* Set access to a non-persistable object
 * Give anonymous users read and write access
 
-## 2 Transient Objects
+## 2 Non-Persistable Objects
 
-When you set access to a transient object, the security rules you specify should be whatever you functionally need. Transient objects only live in the session cache from the user that created the object; therefore, an anonymous user is never able to access any information that wasn't created specifically for or by them. However, it is a completely different situation for a persistable object.
+When you set access to a non-persistable object, the security rules you specify should be whatever you functionally need. Non-persistable objects only live in the session cache from the user that created the object; therefore, an anonymous user is never able to access any information that wasn't created specifically for or by them. However, it is a completely different situation for a persistable object.
 
 ## 3 Write Access
 

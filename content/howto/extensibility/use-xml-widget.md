@@ -57,7 +57,7 @@ Every property element contains at least the following 3 child elements.
 | --- | --- |
 | Caption | This element is used to add the name of the property. This is how it will show up in the Properties list in Mendix Studio Pro. |
 | Category | This element defines in what category this property will be shown in the Properties list in Mendix Studio Pro. Common categories are “Behavior”, “Appearance” and “Data source”. |
-| Description | This element is used to add a useful description of the property, so the end user knows what it’s for. |
+| Description | This element is used to add a useful description of the property, so the end-user knows what it’s for. |
 
 ### 4.2 Attributes
 

@@ -10,7 +10,7 @@ tags: ["studio pro", "layout grid", "container widget", "grid", "layout"]
 
 ## 1 Introduction
 
-The layout grid is a widget that gives structure to your pages.  A layout grid contains rows and columns: ![Layout Grid Example](attachments/container-widgets/layout-grid-example.png)
+The layout grid is a widget that gives structure to your pages.  A layout grid contains rows and columns: ![Layout Grid Example](attachments/container-widgets/layout-grid.png)
 
 In a browser, the layout grid is based on the Bootstrap grid system. For more information on the Bootstrap grid system, see the [official Bootstrap documentation](http://getbootstrap.com/css/#grid).
 
@@ -47,7 +47,7 @@ A column has the following properties:
 
 In the example below, you can see one column with weight 12 and it takes up the full width, and two columns with weight 6 each:
 
-![Columns Example](attachments/container-widgets/columns-example.png)
+![Columns Example](attachments/container-widgets/columns.png)
 
 #### 2.2.1 Adding a New Row or a Column
 

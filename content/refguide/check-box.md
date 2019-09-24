@@ -6,58 +6,80 @@ tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+## 1 Introduction
 
-A check box is an [input widget](input-widgets) that can be used to display and edit Boolean attributes. It will display a tick if the value is true and remain empty if it is false.
+A **check box** is used to display and, optionally, allow the end-user to edit the value of an attribute of [data type](data-types) *Boolean*. It displays a tick if the value is true and remain empty if it is false.
 
 {{% alert type="info" %}}In native mobile applications, the check box widget is rendered as a toggle.{{% /alert %}}
 
-{{% alert type="info" %}}
+A check box must be placed in a [data widget](data-widgets) and displays an attribute of the object(s) retrieved by that widget. The name of the attribute to be displayed is shown inside the text box, between square brackets, and colored blue.
 
-![](attachments/pages/check-box.png)
+For example, this check box allows you to see, and set, whether someone is subscribed to your newsletter.
 
-This check box allows you to change whether someone is subscribed to the newsletter.
+![](attachments/check-box/check-box.png)
 
-{{% /alert %}}
+## 2 Properties
 
-## Data source properties
+An example of check box properties is represented in the image below:
+
+{{% image_container width="250" %}}![](attachments/check-box/check-box-properties.png)
+{{% /image_container %}}
+
+Check box properties consist of the following sections:
+
+* [Common](#common)
+* [Data source](#data-source)
+* [Design Properties](#design-properties)
+* [Editability](#editability)
+* [Events](#events)
+* [Label](#label)
+* [Visibility](#visibility)
+
+### 2.1 Common Section{#common}
+
+{{% snippet file="refguide/common-section-link.md" %}}
+
+### 2.2 Data Source Section{#data-source}
 
 {{% snippet file="refguide/attribute-path-property.md" %}}
 
+### 2.3 Design Properties Section{#design-properties}
+
+### 2.4 Editability Section{#editability}
+
+{{% snippet file="refguide/editability-section-link.md" %}}
+
+### 2.5 Events Section{#events}
+
+#### 2.5.1 On Change{#on-change}
+
+The on-change property specifies an action that will be executed when leaving the widget, either by using the <kbd>Tab</kbd> key or by clicking another widget, after the value has been changed.
+
+{{% snippet file="refguide/events-section-link.md" %}}
+
+#### 2.5.2 On Enter
+
+The on-enter property specifies an action that will be executed when the widget is entered, either by using the <kbd>Tab</kbd> key or by clicking it with the mouse.
+
+{{% snippet file="refguide/events-section-link.md" %}}
+
+#### 2.5.3 On Leave
+
+The on-leave property specifies an action that will be executed when leaving the widget, either by using the <kbd>Tab</kbd> key or by clicking another widget.
+
+This differs from the [On change](#on-change) property in that the event will always be triggered, even if the value has not been changed.
+
+{{% snippet file="refguide/events-section-link.md" %}}
+
+### 2.6 Label Section{#label}
+
 {{% snippet file="refguide/label-property.md" %}}
 
-## Editability properties
+### 2.7 Visibility Section{#visibility}
 
-{{% snippet file="refguide/editable-property.md" %}}
+{{% snippet file="refguide/visibility-section-link.md" %}}
 
-{{% snippet file="refguide/read-only-style.md" %}}
-
-{{% snippet file="refguide/condition-property.md" %}}
-
-## Visibility properties
-
-{{% snippet file="refguide/visibility-property.md" %}}
-
-{{% snippet file="refguide/visibility-property-with-module-roles-simple.md" %}}
-
-## Events properties
-
-{{% snippet file="refguide/on-change-event.md" %}}
-
-{{% snippet file="refguide/on-enter-event.md" %}}
-
-{{% snippet file="refguide/on-leave-event.md" %}}
-
-## Common properties
-
-{{% snippet file="refguide/name-property.md" %}}
-
-{{% snippet file="refguide/class-property.md" %}}
-
-{{% snippet file="refguide/style-property.md" %}}
-
-{{% snippet file="refguide/tab-index-property.md" %}}
-
-## Related articles
+## Read More
 
 *   [Data view](data-view)
-*   [Attribute](attributes)s
+*   [Attributes](attributes)

@@ -38,7 +38,7 @@ Commit defines the way the object is committed.
 
 {{% alert type="info" %}}
 
-If a flow is triggered from a data view (for example by the 'on change' of an text field) you often do not want to commit the changes you make to the data view object yet. The end user can press the Save or Cancel button to commit or rollback the changes.
+If a flow is triggered from a data view (for example by the 'on change' of an text field) you often do not want to commit the changes you make to the data view object yet. The end-user can press the Save or Cancel button to commit or rollback the changes.
 
 However, if the flow is triggered from a data grid button that just performs an operation on a selection you will want to commit the changes to avoid losing them.
 

@@ -105,7 +105,7 @@ For more information on the **Mendix** mobile app, see [Getting the Mendix Mobil
 * On iOS 11, loading one of the sample apps or loading an app using the QR scanner will crash the application. 
     * Fixed in [4.4.1](#RN441).
 
-## Android 4.3.0 / iOS 4.3.0
+## Android 4.3.0
 
 **Release date: July 10th, 2017**
 

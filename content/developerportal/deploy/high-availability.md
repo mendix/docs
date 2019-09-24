@@ -49,7 +49,7 @@ These are some important details:
 * The keep-alive port, health check, and monitoring – the Mendix runtime admin port can be used for a health check from the load balancer
     * To identify if the server is still available, the load balancer should check the keep-alive port in the configuration (the health-check microflow)
     * An HTTP status code of `200 OK` means the server is still available
-* The IP addresses of end users – Mendix runtime does not require the IP addresses of the end-users
+* The IP addresses of end-users – Mendix runtime does not require the IP addresses of the end-users
     * The application log shows the users who logged in, and it is possible to develop custom logic based on the IP address
     * It is useful to configure the IP address forwarding in the load balancer as well, so that the information is still usable
 * Mendix runtime sessions – in case an instance goes down and that instance was facilitating any end-user sessions, it often isn’t desirable that those users are logged out

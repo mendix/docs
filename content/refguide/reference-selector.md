@@ -10,9 +10,12 @@ The reference selector is an [input widget](input-widgets) that can be used to d
 
 {{% alert type="info" %}}
 
-![](attachments/pages/reference-selector.png)
+![](attachments/reference-selector/reference-selector.png)
+
 This reference selector allows you to select a product for your orderline.
-![](attachments/pages/reference-selector-domain-model.png)
+
+![](attachments/reference-selector/reference-selector-domain-model.png)
+
 To use a reference selector you need a many-to-one association in the domain model.
 
 {{% /alert %}}
@@ -29,7 +32,7 @@ If you only want to _display_ information, you can also use the text box. This h
 
 ### Select Using
 
-The reference selector allows the end user to select objects by using either a drop-down or a pop-up page. If you choose to select using a page, the drop-down functionality will be replaced with a button to the right of the widget that will open a selection pop-up.
+The reference selector allows the end-user to select objects by using either a drop-down or a pop-up page. If you choose to select using a page, the drop-down functionality will be replaced with a button to the right of the widget that will open a selection pop-up.
 
 | Value | Description |
 | --- | --- |
@@ -38,7 +41,7 @@ The reference selector allows the end user to select objects by using either a d
 
 {{% alert type="info" %}}
 
-The advantage of a selecting using a drop-down is that it is very efficient; no page needs to be opened. The advantage of selecting using a page is that the end user can search the objects. If there are a lot of objects (say, more than 20) to select from, selecting using a page is advisable.
+The advantage of a selecting using a drop-down is that it is very efficient; no page needs to be opened. The advantage of selecting using a page is that the end-user can search the objects. If there are a lot of objects (say, more than 20) to select from, selecting using a page is advisable.
 
 {{% /alert %}}
 
@@ -48,7 +51,7 @@ _Default value:_ Drop-down
 
 ### Empty Option Caption
 
-This property represents the caption for the empty option in the drop-down reference selector shown to the user. Setting the caption is not available if the Select Using property set to the Page option. This is a translable text. For more details, see [Translatable Texts](translatable-texts).
+This property represents the caption for the empty option in the drop-down reference selector shown to the user. Setting the caption is not available if the Select Using property set to the Page option. This is a translatable text. For more details, see [Translatable Texts](translatable-texts).
 
 {{% alert type="info" %}}
 Filling out the caption for an empty option increases the user experience of your application. It also helps screen-reader users to operate the application easily.
@@ -68,7 +71,7 @@ You can generate a new page to show by right-clicking the widget and selecting '
 
 ### Go-To Page
 
-The go-to page gives end users quick access to a more detailed overview of the object being selected. This property determines which page is shown to the user. The page should contain a data view with the same entity as the one that is selected by the reference selector.
+The go-to page gives end-users quick access to a more detailed overview of the object being selected. This property determines which page is shown to the user. The page should contain a data view with the same entity as the one that is selected by the reference selector.
 
 {{% alert type="info" %}}Go-to page is not supported on native mobile pages.{{% /alert %}}
 
@@ -94,7 +97,7 @@ _Default value:_ Date
 
 ### Selectable Objects Properties
 
-The properties in the category 'Selectable objects' determine the objects out of which the end user can make a selection. There are two, mutually exclusive, ways of influencing the selectable objects:
+The properties in the category 'Selectable objects' determine the objects out of which the end-user can make a selection. There are two, mutually exclusive, ways of influencing the selectable objects:
 
 1.  A microflow returns the list of selectable objects.
 2.  The list of objects is determined automatically taking into account the context mechanism and the properties that influence that mechanism.
@@ -131,17 +134,18 @@ A reference selector can be constrained by one or more paths. This is typically 
 
 {{% alert type="info" %}}
 
-![](attachments/819203/917938.png)
+![](attachments/reference-selector/917938.png)
 _Domain model_
 
 In the domain model the order line has associations of type reference to both category and product. In this form, these can be edited with two reference selectors. The third association, from product to category, describes the relation between those two entities. Such a 'triangle' shaped part of the domain model is what makes constraining possible.
 
-![](attachments/16713884/16844014.jpg)
+![](attachments/reference-selector/16844014.jpg)
+
 _Form_
 
 The page has two reference selectors, one for category and one for product. The one for product is constrained by the path through the domain model that forms the triangle.
 
-![](attachments/16713884/16844013.jpg)
+![](attachments/reference-selector/16844013.jpg)
 
 {{% /alert %}}
 
@@ -161,7 +165,7 @@ The attribute path specifies which attribute of an associated entity is shown in
 
 {{% alert type="warning" %}}
 
-Order_Customer/Customer/Name will allow the end user to select a user from a list of user names.
+Order_Customer/Customer/Name will allow the end-user to select a user from a list of user names.
 
 {{% /alert %}}{{% alert type="warning" %}}
 

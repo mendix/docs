@@ -94,7 +94,7 @@ It is now possible to specify that certain members of a project in the Developer
 
 {{% alert type="info" %}}
 
-SCRUM Masters in the Developer Portal always keep the administrator role in ATS.
+Scrum Masters in the Developer Portal always keep the administrator role in ATS.
 
 {{% /alert %}}  
 
@@ -104,7 +104,7 @@ We have implemented a functionality to set a default role per app. This role wil
 
 {{% alert type="info" %}}
 
-SCRUM Masters in the Developer Portal get an administrator role in ATS even if the default role is set to **No access** or **Tester**.
+Scrum Masters in the Developer Portal get an administrator role in ATS even if the default role is set to **No access** or **Tester**.
 
 {{% /alert %}}  
 

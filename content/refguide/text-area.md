@@ -122,9 +122,9 @@ The placeholder text is shown when no text has been entered yet, or when a displ
 
 It can be used, for example, to give a hint to the end-user what kind of text should be entered.
 
-### 2.7 Label Section{#label}
+### 2.8 Label Section{#label}
 
-{{% snippet file="refguide/label-property.md" %}}
+{{% snippet file="refguide/label-section-link.md" %}}
 
 ### 2.8 Validation Section{#validation}
 
@@ -134,7 +134,7 @@ It can be used, for example, to give a hint to the end-user what kind of text sh
 
 {{% snippet file="refguide/visibility-section-link.md" %}}
 
-## Read More
+## 3 Read More
 
 *   [Data view](data-view)
 *   [Attributes](attributes)

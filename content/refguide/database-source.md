@@ -52,7 +52,7 @@ If set to true, the grid will remain empty of contents until a search has been p
 
 _Default value:_ false
 
-### Constraints
+### Constraints{#constraints}
 
 Constraints allow for custom, hard-coded limitations on the data displayed. This constraint will be applied after constraints already applied through security. Each constraint consists of an attribute, an operator and a value. Multiple constraints will limit the data even more ("and"). There is no way to create "or" constraints, except by switching to an [XPath data source](xpath-source).
 

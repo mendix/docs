@@ -15,7 +15,7 @@ tags: ["SSO", "Single Sign-on", "Mendix credentials"]
 
 Check which Starter Apps will be updated and how to tell what version of MendixSSO they have]{{% /todo %}}
 
-The [MendixSSO module](https://appstore.home.mendix.com) allows you to specify that users of your app can sign in using their Mendix account credentials when your app is deployed to Mendix Cloud.
+The [MendixSSO module](https://appstore.home.mendix.com) enables your app users to sign in with their Mendix account when your app is deployed to the Mendix Cloud.
 
 Using Mendix accounts means that you do not need a special authorization module to support resetting and changing passwords, and makes it easy to create multiple applications which all use the same sign-on mechanism.
 
@@ -45,11 +45,9 @@ Every app implementing MendixSSO needs some of your profile information (like yo
 
 ![Authorization screen](attachments/mendix-sso/authorize-access.png)
 
-You have to click **Authorize** to continue using Mendix SSO with this app.
+You have to click **Authorize** to continue using Mendix SSO with this app. After authorizing the app you are automatically signed in to the app.
 
-If you are already signed in to the Mendix platform, the app will now automatically sign you in to the app.
 
-If you are not already signed in to Mendix, you will need to sign in to the Mendix platform first – this will also signed you in to the app.
 
 ### 2.2 Assigning End-user Roles
 

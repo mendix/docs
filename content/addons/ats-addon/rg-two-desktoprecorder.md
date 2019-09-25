@@ -40,8 +40,8 @@ The reason for this is that if you encounter an issue, you can still use the *we
 Q: How can I install the desktop recorder?  
 A: The instructions and necessary files can be found in the info 🛈 dialog in ATS?
 
-Q: What platforms are supported for the desktop application?
+Q: What platforms are supported for the desktop application?  
 A: Windows, Mac and Linux are all supported.
 
-Q: Do I need administrative privileges to install the desktop application?
+Q: Do I need administrative privileges to install the desktop application?  
 A: No, the installation does not require that you have administrative privileges.

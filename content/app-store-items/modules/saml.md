@@ -25,14 +25,11 @@ There is no support (yet) for the SOAP binding.SAML1.0 is not supported.
 
 ### 1.3 Dependencies
 
-    Depending on the module version, Mx7, Mx6 or Mx5
-    MxModelReflection
+* MxModelReflection
 
-Installation
+## 2 Installation
 
- 
-
-    Configure the microflow 'Startup' to run as the startup microflow. This microflow will initialize the custom request handler /SSO/, validates all IdP configurations, and prepares any configuration entities required during the configuration.
+Configure the microflow 'Startup' to run as the startup microflow. This microflow will initialize the custom request handler /SSO/, validates all IdP configurations, and prepares any configuration entities required during the configuration.
     Add the microflow 'OpenConfiguration' to the navigation, and allow the administrator to access this page.
     Review/Configure all Constants
         DefaultLoginPage,You could specify another login page here, for example when you configured the index.html page to redirect to '/SSO/'.   This constant is only used in case the login process fails.When the user cannot be authenticated in Mendix, he will be presented with a page. If this constant is specified a button will show up, and by clicking this button it will redirect the user to the default login page. For example index.html or login.html
@@ -40,15 +37,13 @@ Installation
         SSOLandingPage, You could specify a different landing page here, for example: When you would like to redirect all user, accessing the application url, to the Saml login.  This requires you to change the index.html page by adding '<meta http-equiv="refresh" content="0;URL=/SSO/" />', you don't want to end up on 'index.html' again after a login attempt.  By changing this constant to '/index3.html', you'll land on index3.html instead of index.html.  Off course you will need to add an 'index3.html' page to your theme in this case! (You can copy the original index.html into index3.html)
     Login to the application and configure the SAML module.
 
-Configuration
+## 3 Configuration
 
 Before any of the Identity Providers (IdPs) can be configured, you will need to configure the Service Provider (SP). Which is your current application. 
 
 The SP Configuration, allows you to configure some basic information for the SP Metadata file, this allows for some basic information to be available in the IdP for reference of the IdP administrator.
 
 The Entity Id, Organization and Contact person are for you to choose what you want to enter. There are no limitations here. This should be in line with the policies of the IdP, since all this information is for their reference. 
-
- 
 
     Allow IdP DiscoveryWhen using multiplen IdPs, do you allow the users to get a list of all available IdPs if they haven't specified a specific IdP in the login request. When going to /SSO/, if you have only 1 active IdP the module will use the active IdP by default. In case you have multiple IdPs it is required to include the IdP in the URL. This can be done by using the url:  /SSO/login/[IdP Alias]  or with url: /SSO/login?_idp_id=[IdP_Alias]
     Keep log filesAll attempts to login are tracked in the SAMLRequest entity and the SSOLog entity. This attribute configures how long those records are kept before removing them. A scheduled event runs daily to remove all files outside that date range. This value is mandatory, when keeping it 0 all records will be removed daily. 
@@ -57,24 +52,24 @@ The Entity Id, Organization and Contact person are for you to choose what you wa
 
 Accessing the Metadata can be done by downloading the XML file, or you can access the metadata by opening the url:   http://www.app.com/SSO/metadata 
  
-Create a new IdP Configuration
+### 3.1 Create a new IdP Configuration
+
 When creating a new IdP configuration you are guided through a 4-6 step workflow to help you to configure everything required for the IdP configuration.  Each option in the workflow is explained below.
 Upon completing these steps you only need to send the metadata file to the IdP and have them to configure the authentication on their end. 
  
-Configure the IdP specific settings
+### 3.2 Configure the IdP specific settings
 Each IdP (Entity Descriptor) should have its own configuration set. Every IdP can be configured and enabled separately. All changes made in the configuration are immediately applied when you save the configuration. 
  
-General
-
+#### 3.2.1 General
     AliasThe alias will be used in the URL of the application to indicate the IdP configuration that should be used during login. There are no validations on this fields, besides that it's required. But you should make sure that this alias is compatible with usage in an url. So no /, &, ?, or any special character which can get lost in the communication.
     Log SAML requestsShould all requests and login attempts be logged and stored in an entity.
 
-Identity Provider Metadata
+#### 3.2.2 Identity Provider Metadata
 
     IdP Metadata LocationThe module is capable of re-importing all IdP Metadata files on a daily basis. Or you can choose to import the metadata from a file. 
         Metadata overviewThis overview shows all the information that has been found in the IdP metadata information. It's usually not necessary to do anything here, but it can be useful in order to review the possible IdP and SP configuration options.
 
-User Provisioning 
+#### 3.2.3 User Provisioning 
 
     Uses InCommon Federation Standard IdPs that use the InCommon standard often don't specify the Assertion Attributes, when following the InCommon standard a fixed set of Assertion Attributes will be available to choose from later on. 
     Identifying assertion (aka Principal Key) Specifies which of the Assertion Attributes identifies the User Name. (Note: In Mx7 all usernames passing through the SAML module are converted to lowercase before login and creation, so we strongly advise you to convert all existing and new user names to lowercase as well)
@@ -87,9 +82,7 @@ User Provisioning
         Claim
         Mx User attribute
 
- 
-
-Authentication Context
+#### 3.2.4 Authentication Context
 
     Prefered entity descriptorThe IdP Metadata can contain references to many different IdPs or SPs. This option allows you to select which of the IdPs ought to be used when a user tries to login using this IdP configuration.
     IdP authentication propertiesWhen sending out requests the options below have to be configured according to the specification of the IdP server.
@@ -99,17 +92,17 @@ Authentication Context
     Authentication context classesPasses the allowed authentication methods. This has to be whatever the IdP requests, there are no requirements within this module and all options are available. For the SAML protocol the SP is required to pass in the authentication context, however it's not recommendable to pass all options since that leads to significantly bigger (and slower) message exchange.
     Allow Idp Initiated AuthenticationBy default the module does not allow for unsolicited request. That means that every login has to be initiated from the Mendix application, and all messages have to be exchanged using the same RequestID and RelayState. Some IdPs do not allow for the RelayState to be passed or the authentication could be initiated by the IdP instead of at the SP. For all situations where the RelayState is not being generated or passed from the original login action at Mendix this option should be enabled.By default it does not allow for unsolicited requests because that can be considered less secure.
 
- 
-Advanced Configuration
+## 4 Advanced Configuration
+
 The resource folder contains a file called "SAMLConfig.properties". In this file you can optionally override advanced settings from the SAML module. Usage of this file is optional, when the file doesn't exists or when you don't specify a setting the module will keep using it's default behavior. 
 The file contains the documented properties, and example lines show the default values of these options.
 With these settings you can configure the behavior of this module and improve multitentant behavior of your application. For plain SAML authentication it is best to leave this file unchanged. 
  
- 
-Debugging the Configuration
+### 4.1 Debugging the Configuration
+
 When testing and debugging the configuration an option is to view the messages in the log files. A detailed cause of the failure will be printed in case something goes wrong. When enabling the lognode SSO to show trace messages, you can find detailed information from every step in the process. This allows for an easy analysis of where potential configuration errors recite.Enabling Trace messages for the SSO lognode will also allow for detailed response messages to the user trying to login. By default every failed login attempt will always result in the message: "Unable to validate the SAML message!". After enabling Trace logging you can see the exact cause of the failure in the browser. In case of exceptions you can even see the stacktrace.  Obviously you should not have this enable in production, but it does allow for easier and faster testing of the configuration.
  
-Error Messages
+### 4.2 Error Messages
 
     "The application hasn't been properly configured to support Single Sign On."This message indicates an incomplete IdP configuration. In the more detailed error messages (log file) you will be able to see which property in the IdP configuration has not been configured.
     "Unable to complete the request"A message has been received that doesn't have an RelayState / RequestID that matches any of the previously generated Ids (or the message has been answered already). If you get this message you should validate the message communication and confirm that you are not using unsolicited requests. Or if you want to enable that check the box to allow for IdP initiated authentication. 
@@ -123,15 +116,14 @@ Error Messages
 
     "Unable to validate Response, see SAMLRequest overview for detailed response. Error: An error occured while commiting user: p:'johndoe@company.com'/u:'JoHnDoE@CoMpAnY.CoM'" In Mx7 all usernames passing through the SAML module are converted to lowercase, so make sure all existing user names and new user names are also converted to lowercase. We have made this decision because certain systems are not case sensitive (e.g. Active Directory) and also because we do not believe it is a good idea to create two unique users for, for example, "JoHnDoE@CoMpAnY.CoM" and "johndoe@company.com".
 
-URLs
+### 4.3 URLs
 
     /SSO/metadataProvides a point for the IdP to automatically download the Metadata from this SP.
     /SSO/discoveryIn case of multiple active IdP configurations, and if discovery is enabled, this page can give a list of all the IdP configurations and allows the user to click on the correct url to login.
     /SSO/login/[IdP Alias]  /SSO/login?_idp_id=[IdP_Alias]For logging using a specific IdP you have to open either of these two urls, and pass the IdP alias as a parameter in the url.
     /SSO/login/SSO/If you have only 1 active IdP, opening these urls will automatically try to log you in using the active IdP. In case of multiple active IdPs and discovery enable, the user will be redirected to the discovery page.  If discovery is not allowed the user will receive an error message.
 
- 
-Custom Behavior
+## 5 Custom Behavior
 
     evaluateMultipleUserMatches
 
@@ -146,6 +138,6 @@ When choosing in the SSO configuration to run the customUserProvisioning action 
 After a new session is created for the user this microflow can be called to copy any data from the previous session to the new session. This microflow behaves similar to the platform after sign-in microflow, using this microflow it is possible to copy records from the anonymous user to the newly signed-in user.
 
  
-Custom Settings
+## 6 Custom Settings
 
 The resources folder contains the file: SAMLConfig.properties through this file advanced settings can be configured for the module. The property file contains the settings with documentation for each of the settings. Through this file it is possible to alter the urls used, how the application behaves in a multi-tenant environment and it allows to setup several advanced settings.The file specifies all the default values and behavior in more detail.

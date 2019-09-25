@@ -95,7 +95,7 @@ This goes especially for microflows related to integrations: as soon as the mess
 
 ### 7.1 Scenario
 
-Be careful when using non-persistable objects in layouts. Since layouts can be used for many pages in your app, objects in layouts can be on the screen for a long time. If you use non-persistable objects here, they will be sent back and forth between the Mendix Mendix Client and Mendix Runtime very often, since they are always available.
+Be careful when using non-persistable objects in layouts. Since layouts can be used for many pages in your app, objects in layouts can be on the screen for a long time. If you use non-persistable objects here, they will be sent back and forth between the Mendix Client and Mendix Runtime very often, since they are always available.
 
 ### 7.2 Tip
 

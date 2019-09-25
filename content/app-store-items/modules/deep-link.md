@@ -22,8 +22,7 @@ With this module, you can do the following:
 
 After importing the module into your application you need to configure it.
 
-### 2.1 Initializing the Deep 
-Link Module on App Startup
+### 2.1 Initializing the Deep Link Module on App Startup
 
 To automatically start this  module, the **DeepLink.Startdeeplink** microflow needs to be set as the startup microflow (via **Project** > **Settings** > **Server** > **After startup**). 
 

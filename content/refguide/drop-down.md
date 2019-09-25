@@ -16,7 +16,7 @@ A drop down must be placed in a [data widget](data-widgets) and displays an attr
 A drop down should not be confused with a [reference selector](reference-selector), which is used to select an [association](associations) to another object.
 {{% /alert %}}
 
-For example, the following drop down allows the end-user to see, and set, the **Region** to which a customer is allocated.
+For example, the following drop down allows the end-user to see, and set, the **Region** to which a customer is allocated. The possible values for **Region** are held in an enumeration.
 
 ![](attachments/drop-down/drop-down.png)
 
@@ -83,13 +83,13 @@ Empty option caption is the text that is shown for the empty option in the drop-
 
 Adding a caption for the empty option improves the user experience of your application. It also helps end-users using a screen-reader to operate the application easily.
 
-For example, the drop-down that allows the end-user to select the region allocated to a customer could have a caption `Select a region`.
+For example, the drop-down that allows the end-user to select the region allocated to a customer, where the possible values for **Region** are held in an enumeration, could have the caption `Select a region`.
 
 ![](attachments/drop-down/select-a-region.png)
 
 ### 2.7 Label Section{#label}
 
-{{% snippet file="refguide/label-property.md" %}}
+{{% snippet file="refguide/label-section-link.md" %}}
 
 ### 2.8 Validation Section{#validation}
 
@@ -99,7 +99,7 @@ For example, the drop-down that allows the end-user to select the region allocat
 
 {{% snippet file="refguide/visibility-section-link.md" %}}
 
-## Read More
+## 3 Read More
 
 *   [Data View](data-view)
 *   [Attributes](attributes)

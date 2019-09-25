@@ -24,11 +24,10 @@ All examples are for **30th December 2014, at 00:27:16.789**
 | E, EE  | 05 | Day of week number |
 | EEE    | Tue | Day of week abbreviation|
 | EEEE   | Tuesday | Day of week name |
-| z, zz, zzz, zzzz | Pacific Standard Time | Time zone |
 | Z, ZZ, ZZZ | -04:00 | Time zone offset |
-| ZZZZ   | GMT-04:00 | Time zone offset |
+| ZZZZ   | GMT-04:00 | Time zone offset and standard |
 
-<sup><small>*</small></sup>two characters pads with zero
+<sup><small>*</small></sup><em>two characters pads with zero</em>
 
 These are some examples:
 

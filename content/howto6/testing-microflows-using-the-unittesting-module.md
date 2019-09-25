@@ -66,7 +66,7 @@ In this chapter you will set up the unit testing module and run the example test
 
 ## 3\. Create a microflow test
 
-In this chapter you will learn how to create a microflow test. To create a new microflow test in a module, you need to add a microflow with a name that starts with "Test". A test microflow should have no input arguments and a boolean or string as result type. In case of a boolean, true means success, false means the test failed. In case of a string, any non empty string indicates a failed test.
+In this chapter you will learn how to create a microflow test. To create a new microflow test in a module, you need to add a microflow with a name that starts with "Test". A test microflow should have no input arguments and a Boolean or string as result type. In case of a Boolean, true means success, false means the test failed. In case of a string, any non empty string indicates a failed test.
 
 ### 3.1 Create a microflow
 

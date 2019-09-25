@@ -221,6 +221,12 @@ Capitalize in all instances.
 Capitalize in all instances.
 {{% /alert %}}
 
+### delighters
+
+{{% alert type="info" %}}
+This term can be used again in customer-facing documentation to refer to certain productivity improvements. There is a **Delighters** section in the Studio Pro release notes.
+{{% /alert %}}
+
 ### fast deploy, fast deployment
 
 {{% alert type="info" %}}
@@ -285,7 +291,7 @@ This term replaces "Mendix Developer app" and "Mendix Mobile app." These terms a
 To avoid confusion with "Mendix" in all its other usages, always use "the Mendix mobile app" and cross-reference [Getting the Mendix Mobile App](https://docs.mendix.com/refguide/getting-the-mendix-app) where possible.
 {{% /alert %}}
 
-### Mendix Client
+### Mendix Client {#client}
 
 {{% alert type="info" %}}
 Capitalize in all instances.
@@ -369,6 +375,8 @@ At runtime,…
 
 ### Mendix Server
 
+This term is still in use, even though [Mendix Business Server](#business-server) is no longer used as a product name. It can be useful when contrasting with [Mendix Client](#client). In addition, it can be used to cover more than [Mendix Runtime](#runtime).
+
 {{% alert type="info" %}}
 Capitalize in all instances.
 {{% /alert %}}
@@ -441,6 +449,8 @@ Capitalize in all instances.
 
 {{% alert type="info" %}}
 Do not use "persistent" or "non-persistent."
+
+Also, do not use "transient" as a synonym for "persistable."
 {{% /alert %}}
 
 ### Platform APIs
@@ -493,10 +503,10 @@ This implementation of the Agile framework is explained at [Scrum.org](https://w
 Capitalize in all instances.
 {{% /alert %}}
 
-### SCRUM Master
+### Scrum Master
 
 {{% alert type="info" %}}
-"SCRUM" is written in all caps for this App Team role in the Developer Portal UI.
+This is the correct capitalization for this App Team role.
 {{% /alert %}}
 
 #### Sprint
@@ -599,12 +609,6 @@ The Mendix Community Edition was introduced with Mendix 5.18, which included the
 Do not use. This has been replaced by the [Free Edition](#free-edition).
 {{% /alert %}}
 
-### delighters
-
-{{% alert type="info" %}}
-This should not be used in the release notes/documentation. Use "productivity improvements" if necessary instead.
-{{% /alert %}}
-
 ### Desktop Modeler {#dm}
 
 {{% alert type="info" %}}
@@ -639,7 +643,7 @@ Do not use. Use [Mendix Assist](#mendix-assist) instead.
 Do not use. Use [Mendix Platform](#platform) and [Developer Portal](#devportal) instead.
 {{% /alert %}}
 
-### Mendix Business Modeler
+### Mendix Business Modeler {#business-server}
 
 Not in use as of Mendix 7. 
 

@@ -49,7 +49,7 @@ Now when a user clicks the navigation item, a new object of type *ProgramItem* w
 
 If you set a page that expects an object to be passed to it as the home page (for example, a page with a data view), you will get a consistency error.
 
-Let us study an example: in your **Navigation**, you have set **Customer Details** page as the home page. 
+For example, you have set **Customer Details** page as the home page in your **Navigation**. 
 
 ![Navigation Item Properties](attachments/consistency-errors-navigation/navigation-item-properties.png)
 

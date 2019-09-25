@@ -10,11 +10,9 @@ tags: ["studio pro"]
 
 {{% alert type="warning" %}}The radio buttons widget is not supported on native mobile pages.{{% /alert %}}
 
-The **Radio Buttons** widget is an [input widget](input-widgets) that can be used to display and edit Boolean and enumeration attributes.
-
 **Radio Buttons** are used to display and, optionally, allow the end-user to edit the value of an attribute of [data type](data-types) *Boolean* or *Enumeration*.
 
-When the page is displayed to the end-user, all the possible values are listed with a filled-in circle next to the selected value and an empty circle next to the unselected value(s). Only one value can be chosen – choosing another value deselects the current value. For example:
+When the page is displayed to the end-user, all the possible values are listed, with a filled-in circle next to the selected value and an empty circle next to the unselected value(s). Only one value can be chosen – choosing another value deselects the current value. For example:
 
 ![](attachments/radio-buttons/radio-buttons-displayed.png)
 

@@ -23,7 +23,7 @@ When the Mendix company and app roles as well as the contact information are imp
 Before starting this how-to, make sure you have completed the prerequisites described below:
 
 * To add extra Company Admins, you need to be a **Company Admin**
-* To change the App Contact, you need to have a **SCRUM Master** role or possess the App Team **Settings** permission 
+* To change the App Contact, you need to have a **Scrum Master** role or possess the App Team **Settings** permission 
 * To change the Technical Contact, you need to be a **Technical Contact**
 
 ## 3 Adding a Company Admin
@@ -98,7 +98,7 @@ If you are the current Technical Contact for an app, you can make another team m
 
 It is possible to change or add new App Team roles for a specific app or at the company level for all company apps. This depends on your role:
 
-* 	As a SCRUM Master, you can edit roles for the specific app of which you are the SCRUM Master by selecting **Team** > **Manage Team** (which will take you to the **App Team** tab of the **Settings** > **Security** page), clicking **Role settings,** then making your edits or clicking **New role** to create a custom new App Team role for that app
+* 	As a Scrum Master, you can edit roles for the specific app of which you are the Scrum Master by selecting **Team** > **Manage Team** (which will take you to the **App Team** tab of the **Settings** > **Security** page), clicking **Role settings,** then making your edits or clicking **New role** to create a custom new App Team role for that app
 
 	![](attachments/app-roles-edit.png)
 

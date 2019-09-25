@@ -3,7 +3,7 @@ title: "Which Recorder should I use"
 parent: "rg-two-ats"
 ---
 
-## Background
+## Some background
 
 ATS supports recording via a standalone [chrome extension](https://chrome.google.com/webstore/detail/mendix-ats-test-recorder/kblpnkkjafjgehchjgoacgobnbmfegcp) (let's refer to this as the *web* recorder).
 To perform its function, the chrome extension needs you permissions to monitor events triggered by the user on the page that is being recorded as well as gather information about those events.

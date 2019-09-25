@@ -19,13 +19,13 @@ You will also need modeler version 8.2 or higher.
 
 ## 3 Create a microflow datasource
 
-We will use a REST service which provides us with all the characters from the [Rick and Morty](https://www.rickandmorty.com/) cartoon. The REST service url is https://my-json-server.typicode.com/mendix/rickandmorty/characters and we can use this to create an JSON structure and import mapping for this REST service, if you need more information on how to do this you can read up on this in the  [“](../integration/consume-a-rest-service)[Consume a REST Service”](https://docs.mendix.com/howto/integration/consume-a-rest-service) how-to.
+We will use a REST service which provides us with a number of airports. The REST service url is https://my-json-server.typicode.com/mendix/howto-api-data/airports and we can use this to create an JSON structure and import mapping for this REST service, if you need more information on how to do this you can read up on this in the  [“](../integration/consume-a-rest-service)[Consume a REST Service”](https://docs.mendix.com/howto/integration/consume-a-rest-service) how-to.
 
 Once we have that set-up we can start calling the REST service from our microflow datasource. To create a microflow data source which returns a list of characters:
 
 1. Create a new microflow.
 2. From the **Toolbox**, drag a **Call REST service** activity onto the microflow and double-click it.
-3. Press **Edit** to change the location **Template** field to `https://my-json-server.typicode.com/mendix/rickandmorty/characters`. Press **OK** to accept the change.
+3. Press **Edit** to change the location **Template** field to `https://my-json-server.typicode.com/mendix/howto-api-data/airports`. Press **OK** to accept the change.
 4. On the **Response** tab, set **Response handling** to **Apply import mapping.**
 5. Press **Select** and select the import mapping you created.
 6. For **Variable**, enter *Result.*. Press **OK** to accept the changes.
@@ -54,7 +54,7 @@ In the previous step we added the **Paging** input parameter to your microflow. 
 In this step we will use this attribute to retrieve the correct page from the REST service instead of all the characters:
 
 1. Open the the data source microflow.
-2. Double-click the **Call REST service** activity, click **Edit** for the location and change **Template** to `https://my-json-server.typicode.com/mendix/rickandmorty/characters?_limit=5&_page={1}`
+2. Double-click the **Call REST service** activity, click **Edit** for the location and change **Template** to `https://my-json-server.typicode.com/mendix/howto-api-data/airports?_limit=5&_page={1}`
 3. Click **New** for a new parameter and enter the following expression `toString($Paging/PageNumber)` for this parameter. Press **OK** to accept this expression.
 ![](attachments/server-side-logic/paging-support.png)
 4. Press **OK** to accept the changes for the location, and press **OK** once more to accept the changes for the **Call REST service** activity.

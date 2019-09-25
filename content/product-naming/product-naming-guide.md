@@ -291,7 +291,7 @@ This term replaces "Mendix Developer app" and "Mendix Mobile app." These terms a
 To avoid confusion with "Mendix" in all its other usages, always use "the Mendix mobile app" and cross-reference [Getting the Mendix Mobile App](https://docs.mendix.com/refguide/getting-the-mendix-app) where possible.
 {{% /alert %}}
 
-### Mendix Client
+### Mendix Client {#client}
 
 {{% alert type="info" %}}
 Capitalize in all instances.
@@ -374,6 +374,8 @@ At runtime,…
 {{% /alert %}}
 
 ### Mendix Server
+
+This term is still in use, even though [Mendix Business Server](#business-server) is no longer used as a product name. It can be useful when contrasting with [Mendix Client](#client). In addition, it can be used to cover more than [Mendix Runtime](#runtime).
 
 {{% alert type="info" %}}
 Capitalize in all instances.
@@ -641,7 +643,7 @@ Do not use. Use [Mendix Assist](#mendix-assist) instead.
 Do not use. Use [Mendix Platform](#platform) and [Developer Portal](#devportal) instead.
 {{% /alert %}}
 
-### Mendix Business Modeler
+### Mendix Business Modeler {#business-server}
 
 Not in use as of Mendix 7. 
 

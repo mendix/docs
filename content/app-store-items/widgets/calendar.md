@@ -120,7 +120,7 @@ This Boolean let you set if the weekends should be shown on the calendar.
 
 This is an integer to set what the first day of the week is, where 0 = Sunday, 1 = Monday, etc.
 
-#### 2.5.6 Custom Time Format
+#### 2.5.6 Custom Time Format {#custom-time}
 
 The default is **h:mm{ - h:mm}**. For more information, see [timeFormat](http://fullcalendar.io/docs/text/timeFormat/).
 
@@ -134,68 +134,61 @@ This is the header title format shown in the header's title. For more informatio
 
 #### 2.5.9 Month Names Format
 
-A translatable string of all the month names that are used in the calendar.
+This is a translatable string of all the month names used in the calendar.
 
-#### 2.5.10 Month short names format
+#### 2.5.10 Month Short Names Format
 
-A translatable string of all the shorthand month names that are used in the Calendar.
+This is a translatable string of all the shorthand month names used in the calendar.
 
-#### 2.5.11 Day names format
+#### 2.5.11 Day Names Format
 
-A translatable string of all the day names that are used in the Calendar.
+This is a translatable string of all the day names used in the calendar.
 
-#### 2.5.12 Day short names format
+#### 2.5.12 Day Short Names Format
 
-A translatable string of all the shorthand day names that are used in the Calendar.
+This is a translatable string of all the shorthand day names used in the calendar.
 
-#### 2.5.13 Enum for colors
+#### 2.5.13 Enum for Colors {#enum}
 
-You can set an enumeration here (an attribute on the Event Entity) to specify the color for each event. The enumeration key has to match with one of the colors specified under 'Colors'.
+You can set an enumeration here (an attribute on the [Event Entity](#event-entity)) to specify the color for each event. The enumeration key has to match with one of the colors specified under [Colors](#colors).
 
-#### 2.5.14 Colors
+#### 2.5.14 Colors {#colors}
 
-A list of event color combinations and their matching Enumeration key, as set in 'Enum for colors'.
+This is a list of event color combinations with their matching enumeration keys (as set in [Enum for Colors](#enum)).
 
-### 2.6 Extra
+### 2.6 Extra Tab
 
 #### 2.6.1 Agenda Axis Time Format
 
-The format of the vertical axis labels in agenda views (default h(:mm)tt)
+This is the format of the vertical axis labels in agenda views. The default is **h(:mm)tt**.
 
-#### 2.6.2 Slot duration
+#### 2.6.2 Slot Duration
 
-The time interval (in minutes) of day and week calendars. (Default: 30)
+This is the time interval (in minutes) of the day and week calendars. The default is **30**.
 
-#### 2.6.3 Today button caption
+#### 2.6.3 Today Button Caption
 
-Caption on button which jumps to today. Default: Today
+This is the caption on the button that allows the user to jump to the current date. The default is **Today**.
 
-#### 2.6.4 All-day caption
+#### 2.6.4 All-Day Caption
 
-The text titling the "all-day" slot at the top of the calendar. Default: all-day. This option only applies to Agendaweek en AgendaDay views.
+This is the caption text in the **all-day** slot at the top of the calendar. The default is **all-day**. This option only applies to the week and day agenda [views](#views).
 
-#### 2.6.5 Start time
+#### 2.6.5 Start Time
 
-The start time for each day. This property only applies to Agendaweek en AgendaDay views.
+This is the start time for each day. This property only applies to the week and day agenda [views](#views).
 
-#### 2.6.6 End time
+#### 2.6.6 End Time
 
-The end time for each day. This property only applies to Agendaweek en AgendaDay views.
+This is the end time for each day. This property only applies to the week and day agenda [views](#views).
 
-#### 2.6.7 Available views
+#### 2.6.7 Available Views {#views}
 
-A list of which views should be available to the user in the Calendar (Month, Basic Week, Agenda Week, Basic Day, Agenda Day). For more information: http://fullcalendar.io/docs/views/Available_Views/
+This is a list of which views should be available to the user in the calendar (for example, **Month**, **Basic Week**, **Agenda Week**, **Basic Day**, **Agenda Day**).
 
-When you click **New**, on the **Extra** tab:
+When you click **New**, the **Edit Available Views Item** dialog box opens. On the **Extra** tab of this dialog box, you have the following options:
 
-* Custom time format 
-	Default: h:mm{ - h:mm}. Overrides the 'general' custom time format property. For more information: http://arshaw.com/fullcalendar/docs/text/timeFormat/
-
-* Custom date format
-	For more information: http://arshaw.com/fullcalendar/docs/text/columnFormat/
-
-* Custom title format
-	For more information: http://arshaw.com/fullcalendar/docs/text/titleFormat/
-
-* Label
-	Caption used for the 'calendar view' button. For more information: http://fullcalendar.io/docs/text/buttonText/
+* **Custom time format** – the default is **h:mm{ - h:mm}**; this overrides the "general" [Custom Time Format](#custom-time) property; for more information, see [timeFormat](http://arshaw.com/fullcalendar/docs/text/timeFormat/)
+* **Custom date format** – for more information, see [columnFormat](http://arshaw.com/fullcalendar/docs/text/columnFormat/)
+* **Custom title format** – for more information, see [titleFormat](http://arshaw.com/fullcalendar/docs/text/titleFormat/)
+* **Label** – this is the caption used for the calendar view button; for more information, see [buttonText](http://fullcalendar.io/docs/text/buttonText/)

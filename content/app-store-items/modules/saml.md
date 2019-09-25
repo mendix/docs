@@ -12,15 +12,18 @@ The SAML module can be used as a replacement or extension of your supported auth
 
 By configuring the information about all Identity Providers in this module, you will allow the users to login using the correct IdP. There is no limit on the number of different IdentityProviders you can configure. 
 
-## 2 Typical usage scenario
-
+The typical usage scenario is...
 Authenticate agains your Microsoft Active Directory server in a secure manner. The SAML protocol allows for encryption of all the information transferred between the two servers, so no more need for vpn connections and ldap or kerberos authentication. 
-Features and limitations
+
+### 1.1 Features
 
 Configure all options allowed in the SAML2.0 specification. 
 
+### 1.2 Limitations
+
 There is no support (yet) for the SOAP binding.SAML1.0 is not supported.
-Dependencies
+
+### 1.3 Dependencies
 
     Depending on the module version, Mx7, Mx6 or Mx5
     MxModelReflection

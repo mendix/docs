@@ -18,7 +18,7 @@ The policy is to be enacted on **15 October 2019**. The *web* recorder is incomp
 Starting from 26 September 2019 we will release a new recorder (let's refer to it as *desktop* recorder).
 As the name suggests this recorder is a desktop application, which is powered by java.
 The desktop application will run in the background and only when you initiate recording from ATS will it activate.
-Once activated, the recorder will start a new chrome window on your computer and will record your activity in this window and send the recorder events to ATS.
+Once activated, the recorder will start a new chrome window on your computer and will record your activity in this window and send the recorded events back to ATS.
 To make sure that there is no confusion between the two browser windows, the one started by the recorder will display a large banner on top.
 The banner will state very clearly that the chrome window is being controlled by automated test software.
 

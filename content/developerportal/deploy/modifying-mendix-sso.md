@@ -35,3 +35,6 @@ The MendixSSO module is written so that you can make a complete copy of the modu
 
 ## 3 Tokens
 
+Mendix SSO works by providing users with tokens when they are authenticated. If users are having issues with Mendix SSO it can be useful to see the tokens, either for your own debugging or to provide information to Mendix Support.
+
+The 

@@ -1,47 +1,44 @@
 ---
-title: "Which Recorder should I use"
-parent: "rg-two-ats"
+title: "Which Recorder Should I Use?"
+parent: "rg-two-recorder"
 ---
 
-## Some background
+## 1 Introduction
 
-ATS supports recording via a standalone [chrome extension](https://chrome.google.com/webstore/detail/mendix-ats-test-recorder/kblpnkkjafjgehchjgoacgobnbmfegcp) (let's refer to this as the *web* recorder).
-To perform its function, the chrome extension needs you permissions to monitor events triggered by the user on the page that is being recorded as well as gather information about those events.
-For example, ATS would register that you have clicked a button and retrieve the caption and locator for that button. The purpose of the data collection is to prepare an automated test case.
-It is easy to see that without this data the recorder will not be able to function.
+ATS supports recording via the standalone [Mendix ATS Test Recorder](https://chrome.google.com/webstore/detail/mendix-ats-test-recorder/kblpnkkjafjgehchjgoacgobnbmfegcp) Chrome extension (this will be referred to as the "web recorder" throughout this document).
 
-At the end of July 2019, Google has announced a [new extension policy](https://blog.chromium.org/2019/07/project-strobe-updates.html) that limits the ability to gather information.
-The policy is to be enacted on **15 October 2019**. The *web* recorder is incompatible with the new policy and can not function under the new rules.
+To perform its function, the Chrome extension needs permissions to monitor events triggered by the user on the page that is being recorded as well as to gather information about those events. For example, ATS registers that you have clicked a button and then retrieves the caption and locator for that button. The purpose of such data collection is to prepare an automated test case. Without this data, the recorder would not be able to function.
 
-## How do we intend to work around this issue?
+In July 2019, Google announced a [new extension policy](https://blog.chromium.org/2019/07/project-strobe-updates.html) that limits the ability to gather information. This policy is to be enacted on **October 15th, 2019**. The web recorder is incompatible with the new policy and cannot function under the new rules.
 
-Starting from 26 September 2019 we will release a new recorder (let's refer to it as *desktop* recorder).
-As the name suggests this recorder is a desktop application, which is powered by java.
-The desktop application will run in the background and only when you initiate recording from ATS will it activate.
-Once activated, the recorder will start a new chrome window on your computer and will record your activity in this window and send the recorded events back to ATS.
-To make sure that there is no confusion between the two browser windows, the one started by the recorder will display a prominent banner  whcih states that *the chrome window is being controlled by automated test software*.
+## 2 How Do We Intend to Work Around This Issue?
 
-The communication between the desktop application and ATS will commence through a [chrome extension](https://chrome.google.com/webstore/detail/ats-desktop-recorder/bbhjdcfbnbpoffamjgjkfionmnhciife).
-This extension only needs permission to talk to the desktop application mentioned above. Therefore it complies with the new Google extension policy.
+On **September 26th, 2019**, we released a new recorder (this will be referred to as the "desktop recorder" throughout this document). This recorder is a desktop application that is powered by Java. It runs in the background, and it will only activate when you initiate the recording from ATS. Once activated, the recorder starts a new Chrome browser window on your computer, records your activity in this window, and sends the recorded events back to ATS.
 
-To summarize, the desktop recorder consists of two components, a desktop java application and a chrome extension (which is different than the *web* recorder extension).
+To make sure that there is no confusion between the two browser windows, the one started by the desktop recorder will display a prominent banner that states, "The Chrome window is being controlled by automated test software".
 
-## What is our plan going forward?
+The communication between the desktop application and ATS will commence through the [ATS Desktop Recorder](https://chrome.google.com/webstore/detail/ats-desktop-recorder/bbhjdcfbnbpoffamjgjkfionmnhciife) Chrome extension. This extension only needs permission to talk to the desktop recorder, and it therefore complies with the new Google extension policy.
 
-For the time being, we will offer both the *web* and *desktop* recorders. You can freely switch between them at any time in the **Project Preferences**.
-We will try to keep the current i.e. *web* recorder for as long as possible.
-However, it is very likely that from 15 October 2019 it will no longer be available in the chrome web store, at which point the desktop recorder will be the only available option.
+To summarize, the desktop recorder consists of two components: a desktop Java application and the ATS Desktop Recorder Chrome extension (which is different than the web recorder extension).
 
-Therefore we recommend that you switch to the new *desktop* recorder as early as possible.
-The reason for this is that if you encounter an issue, you can still use the *web* recorder while we work on a fix.
+## 3 What Is Our Plan Going Forward?
 
-## FAQ:
+Both the web recorder and the desktop recorder will continue to be offered. You can freely switch between them at any time in the **Project Preferences**.
 
-Q: How can I install the desktop recorder?  
-A: The instructions and necessary files can be found in the info 🛈 dialog in ATS?
+We will try to keep the web recorder available for as long as possible. However, it is very likely that from **October 15th, 2019**, it will no longer be available in the Chrome Web Store, at which point the desktop recorder will be the only available option.
 
-Q: What platforms are supported for the desktop application?  
-A: Windows, Mac and Linux are all supported.
+Therefore, we recommend switching to the new desktop recorder as early as possible. The reason for this is that if you encounter an issue, you can still use the web recorder while we work on a fix.
 
-Q: Do I need administrative privileges to install the desktop application?  
-A: No, the installation does not require that you have administrative privileges.
+## 4 FAQ
+
+### 4.1 How Do I Install the Desktop Recorder?  
+
+The instructions for installation and necessary files can be found via the info (🛈) dialog box in ATS.
+
+### 4.2 What Platforms Are Supported for the Desktop Recorder? 
+
+Windows, Mac, and Linux are all supported.
+
+### 4.3 Do I Need Administrative Privileges to Install the Desktop Recorder?  
+
+No, the installation does not require that you have administrative privileges.

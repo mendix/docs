@@ -24,10 +24,12 @@ These are the release notes for the  [Mendix Metamodel](/apidocs-mxsdk/mxsdk/und
 
 ### NoGeneralization (Element)
 
-* Added the public `hasChangedDate` property.
-* Added the public `hasCreatedDate` property.
-* Added the public `hasOwner` property.
-* Added the public `hasChangedBy` property.
+The following public properties were introduced:
+
+* `hasChangedDate`
+* `hasCreatedDate`
+* `hasOwner`
+* `hasChangedBy`
 
 ### RemoteEntitySourceDocument (ModelUnit)
 

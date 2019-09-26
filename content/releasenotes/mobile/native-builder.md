@@ -4,6 +4,7 @@ category: "Mobile Products"
 menu_order: 11
 toc-level: 1
 description: "Native Builder release notes."
+#ki: "Using more than one space" = NALM-217
 ---
 
 The [Native Builder](/howto/mobile/native-builder) is a command line input tool which helps you build your Mendix native app. After the Native Builder simplifies your build process, you can do what you want most: test and publish your app. The Native Builder uses MxBuild, GitHub, and App Center to simplify the app building process. 

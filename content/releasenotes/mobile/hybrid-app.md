@@ -193,7 +193,7 @@ We have tested extensively against real-life projects and commonly used widgets 
 
 ### Hybrid App Base 2.3.2
 
-**Release date: October 18th, 2018"
+**Release date: October 18th, 2018**
 
 * We inadvertently removed the mechanism to pin the Android support library, which could lead to issues during compilation of the app. We now pin it at SDK version 27 again.
 

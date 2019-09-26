@@ -4,6 +4,7 @@ category: "Mobile Products"
 menu_order: 10
 description: "These release notes showcase each release of the iOS and Android Make It Native app versions."
 tags: ["Native", "Android", "iOS", "Apple", "Android"]
+#ki: "Clearing data on Android" = NALM-153
 ---
 
 {{% alert type="info" %}}
@@ -18,6 +19,6 @@ This is the official release of the Android and iOS versions of the Make It Nati
 
 The apps are not backwards compatible with the Mendix Studio Pro 8.0.0 Beta versions of Mendix Studio Pro. For more information on Mendix Studio Pro 8.0, see the [8.0.0 Release Notes](/releasenotes/studio-pro/8.0).
 
-### Limitations
+### Known Issues
 
 * Clearing data on Android via the start screen does not clear cookies correctly. Using the developer menu option does clear cookies.

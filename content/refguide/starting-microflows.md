@@ -71,8 +71,8 @@ This property indicates whether a progress bar is shown during the execution of 
 | Value | Description |
 | --- | --- |
 | None | No progress bar is shown. |
-| Non-Blocking | A progress bar is shown, but the end user can continue working. |
-| Blocking | A progress bar is shown and the end user must wait until the microflow is done. |
+| Non-Blocking | A progress bar is shown, but the end-user can continue working. |
+| Blocking | A progress bar is shown and the end-user must wait until the microflow is done. |
 
 ### 4.3 Progress Message
 

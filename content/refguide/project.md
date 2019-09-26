@@ -12,7 +12,7 @@ A Mendix project consists of project-level documents and a number of modules. Ea
 
 ## 2 Settings
 
-Project settings include the languages for the end user, project directory and database and server settings.
+Project settings include the languages for the end-user, project directory and database and server settings.
 
 See [Project Settings](project-settings).
 

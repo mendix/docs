@@ -19,4 +19,4 @@ A cell of a row. For more information, see [Cell (Document Template)](cell-docum
 
 ### 3.1 Condition for Visible
 
-The condition for visible, as the name suggests, this property allows you to set a condition on which the row is visible to the end user. These conditions can be enumeration or boolean attributes of the entity of the data view.
+The condition for visible, as the name suggests, this property allows you to set a condition on which the row is visible to the end-user. These conditions can be enumeration or Boolean attributes of the entity of the data view.

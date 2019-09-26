@@ -68,7 +68,7 @@ The database and XPath sources retrieve objects from the database and supports s
 
 #### 3.3.1 Show Control Bar
 
-This property indicates whether the control bar will be visible in the end user interface. The control bar also includes the paging buttons.
+This property indicates whether the control bar will be visible in the end-user interface. The control bar also includes the paging buttons.
 
 {{% alert type="warning" %}}
 

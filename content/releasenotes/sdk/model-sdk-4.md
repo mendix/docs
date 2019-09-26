@@ -5,11 +5,18 @@ parent: "model-sdk"
 
 These are the release notes for the [Model SDK](/apidocs-mxsdk/mxsdk/) version 4.
 
+## 4.25.0 {#425}
+
+**Release date: September 25th, 2019**
+
+* We added support for Mendix [8.2.0](../studio-pro/8).
+* We added support for Mendix Metamodel [8.2.0](metamodel).
+
 ## 4.24.0 {#424}
 
 **Release date: August 29th, 2019**
 
-* We added support for Mendix [8.1.0](../studio-pro/8.0).
+* We added support for Mendix [8.1.0](../studio-pro/8.1).
 * We added support for Mendix Metamodel [8.1.0](metamodel-8.1).
 
 ## 4.23.0 {#423}
@@ -43,7 +50,7 @@ These are the release notes for the [Model SDK](/apidocs-mxsdk/mxsdk/) version 4
 
 **Release date: February 8th, 2019**
 
-*  We added support for Mendix 7.23.0.
+*  We added support for [Mendix 7.23.0](../studio-pro/7.23).
 *  It is now possible to perform operations (such as **delete working copy**) on working copies that have a newer Metamodel version than the one this Model SDK supports. This was not possible before, as we checked the Mendix Metamodel version for every operation. Now, we only check the Mendix Metamodel version when actually opening a working copy.
 
 ## 4.18.0 {#418}

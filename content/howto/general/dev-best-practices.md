@@ -170,7 +170,7 @@ Your [project settings](/refguide/project-settings) provide three events that ca
 
 #### 3.4.8 Unit Test Microflows
 
-Microflows containing [unit tests](/howto/testing/testing-microflows-using-the-unittesting-module) should have the prefix **Test_**.
+Microflows containing unit tests should have the prefix **Test_**.
 
 | Event Type      | Prefix               |
 |-----------------|----------------------|

@@ -78,7 +78,7 @@ Using items in the menu bar of Studio Pro, you can create new projects, deploy a
 | Copy | Copies the selected element to the clipboard. | <kbd>Ctrl</kbd> + <kbd>C</kbd> |
 | Paste | Pastes the contents of the clipboard in the current editor. | <kbd>Ctrl</kbd> + <kbd>V</kbd> |
 | Delete | Deletes the selected element. | <kbd>Delete</kbd> |
-| Find | Searches the model for text. The following texts are searched: all texts that appear in the end user interface (for example captions of labels or buttons); names and documentation of documents; entity, association, and attribute names and documentation; access rule documentation; page widget names; captions and documentation of microflow objects; and names of items in microflows. | <kbd>Ctrl</kbd> + <kbd>F</kbd> |
+| Find | Searches the model for text. The following texts are searched: all texts that appear in the end-user interface (for example captions of labels or buttons); names and documentation of documents; entity, association, and attribute names and documentation; access rule documentation; page widget names; captions and documentation of microflow objects; and names of items in microflows. | <kbd>Ctrl</kbd> + <kbd>F</kbd> |
 | Find Advanced | Opens a dialog box that allows for advanced search operations. Examples are searching for any document type and searching for unused documents. | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd> |
 | Find Usages | Opens the **Find Results** pane and displays usages of the selected object. | <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>F</kbd> |
 | Next Find Result | Highlights the next find result in the **Find Results** pane and open it in an editor. | <kbd>F3</kbd> |

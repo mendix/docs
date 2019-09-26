@@ -12,10 +12,10 @@ The reference set selector allows you to set an association of type reference se
 
 {{% alert type="info" %}}
 
-![](attachments/pages/reference-set-selector.png)
+![](attachments/reference-set-selector/reference-set-selector.png)
 In this data view on customer you can select multiple groups using the reference set selector.
 
-![](attachments/pages/reference-set-selector-domain-model.png)
+![](attachments/reference-set-selector/reference-set-selector-domain-model.png)
 In the domain model there is an association of type reference set from customer to group.
 
 {{% /alert %}}
@@ -59,7 +59,7 @@ See [Columns](columns) for more information.
 
 ### Show Control Bar
 
-This property indicates whether the control bar will be visible in the end user interface. The control bar also includes the paging buttons.
+This property indicates whether the control bar will be visible in the end-user interface. The control bar also includes the paging buttons.
 
 {{% alert type="warning" %}}
 

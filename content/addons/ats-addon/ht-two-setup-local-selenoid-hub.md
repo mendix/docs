@@ -120,7 +120,7 @@ You can start testing by sending your test script to: `http://yourmachinenameorI
 
 In case you want to record your test case as a video follow these steps:
 
-1.  Add a Custom Capability to your Selenium hub configuration: **enableVideo** with a boolean set to **true**
+1.  Add a Custom Capability to your Selenium hub configuration: **enableVideo** with a Boolean set to **true**
 
 	![](attachments/ht-two-setup-local-selenium-index/ht-two-setup-local-selenoid-hub/add_capability.png)
 
@@ -218,7 +218,7 @@ To install a hub with a Portal for "Live-View" you need a different *browsers.js
 	```
 
 5. You can visit your portal on [http://yourmachinenameorIP:8080](http://localhost:8080)
-6.  To enable "Live-View" you need to add another Custom Capability to your Selenium hub configuration: **enableVNC** with boolean set to **true**
+6.  To enable "Live-View" you need to add another Custom Capability to your Selenium hub configuration: **enableVNC** with Boolean set to **true**
 
 	![](attachments/ht-two-setup-local-selenium-index/ht-two-setup-local-selenoid-hub/enable_vnc.png)
 

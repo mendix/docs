@@ -23,7 +23,7 @@ Using third party web services is easy in Mendix. There is a Microflow activity 
 
 ### Published web services
 
-To expose functionality in a Mendix server (thus enabling other systems to make use of certain functions) a Microflow can easily be published as a web service. See [Published Web Services](published-web-services).
+To expose functionality in a Mendix Server (thus enabling other systems to make use of certain functions) a Microflow can easily be published as a web service. See [Published Web Services](published-web-services).
 
 ## XML
 

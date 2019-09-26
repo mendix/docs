@@ -12,14 +12,68 @@ These release notes cover changes to various parts of the Mendix Platform access
 For updates on the status of Mendix Cloud v4, Mendix Cloud v3, and other deployment options, see [Mendix Status](https://status.mendix.com/).
 {{% /alert %}}
 
+## Advance Notice
+
+### Update of `*.mendixcloud.com` SSL/TLS certificate
+
+On **September 27th, 2019** we will renew the SSL/TLS certificate for `*.mendixcloud.com`. Browsers like Mozilla Firefox, Microsoft Edge, Google Chrome, and Internet Explorer automatically trust the new certificate. In those cases, there is nothing you have to do.
+
+{{% alert type="warning" %}}
+If you run services that connect to a `*.mendixcloud.com` endpoint AND use a static or outdated trust store, we advise you to update them. The new SSL/TLS certificate can be downloaded [here](attachments/mendixcloud.com-2019-09-12.crt.txt).
+{{% /alert %}}
+
+#### Current Certificate Details
+
+* Subject: `*.mendixcloud.com`
+* Issuer: C = US, O = DigiCert Inc, OU = www.digicert.com, CN = RapidSSL RSA CA 2018
+* Validity: Jan 3 00:00:00 2018 GMT - Oct 2 12:00:00 2019 GMT
+* SHA-256 Fingerprint: F8:FD:79:7A:73:48:E5:B0:9E:70:42:2B:15:D0:8C:D4:5E:F3:66:74:F8:B7:CF:5A:36:16:07:0D:E8:73:BE:8A
+* SHA-1 Fingerprint: 78:0D:25:B2:86:12:64:BA:A0:F0:0C:C3:DD:88:C8:32:55:BD:C0:F8
+
+#### New Certificate Details
+
+* Subject: `*.mendixcloud.com`
+* Issuer: C = US, O = DigiCert Inc, OU = www.digicert.com, CN = RapidSSL TLS RSA CA G1
+* Validity: Sep 12 00:00:00 2019 GMT - Nov 10 12:00:00 2021 GMT
+* SHA-256 Fingerprint: AE:55:1D:88:32:E1:7E:BF:AB:0D:F3:2F:57:57:C8:98:8D:87:3F:E8:F6:5F:A6:09:82:EA:37:F7:12:25:A5:D3
+* SHA-1 Fingerprint: 5E:4D:05:9B:FE:54:3F:B6:D8:A4:D7:86:7F:3B:50:9A:EE:09:35:8F
+
 ## 2019
 
+### September 24th, 2019
+
+#### Developer Portal Improvements
+
+* We fixed an issue that would prevent users from inviting email addresses that contain capital letters.
+* We fixed an issue that occassionally triggered an error message during signup.
+* We made various small performance improvements on the Developer Portal.
+
+### September 19th, 2019
+
+#### Launchpad Removal & App User Management Update
+
+* We removed the old launchpad page, as we have moved to a new SSO architecture. The old URL `launchpad.mendix.com` now links to your [My Apps](/developerportal/apps-list/) page.
+* We moved the app user management functionality of the launchpad to the **General** app settings in the Developer Portal. For more information, see the [Managing App Users](/developerportal/settings/general-settings#managing-app-users) section of *How to Manage General App Settings*.
+
+### September 13th, 2019
+
+#### SAP Cloud Platform Improvements
+
+* We added support for AWS RDS PostgreSQL databases when deploying to SAP Cloud Platform
+
+### September 11th, 2019
+
+#### App Store Improvements
+
+*  We added the flexibility to label your App Store content with a [custom version number](/developerportal/app-store/share-app-store-content#updating).
+
+    {{% alert type="info" %}}This is based on an [upvoted idea from Andreas Blaesius](https://forum.mendixcloud.com/link/ideas/1324) submitted to the [Mendix Idea Forum](https://forum.mendixcloud.com/index4.html). Thanks, Andreas!{{% /alert %}}
 ### September 5th, 2019
 
 #### Mendix Cloud Fixes
 
-* We fixed an issue that caused the wrong Technical Contact information to be shown on the app's *General* page in the Developer Portal. (Ticket #84852)
-* We added a feedback message when you try to restore a backup while the backup is still being created. (Ticket #85786)
+* We fixed an issue that caused the wrong Technical Contact information to be shown on the app's *General* page in the Developer Portal. (Ticket 84852)
+* We added a feedback message when you try to restore a backup while the backup is still being created. (Ticket 85786)
 
 ### August 30th, 2019
 
@@ -42,8 +96,8 @@ For updates on the status of Mendix Cloud v4, Mendix Cloud v3, and other deploym
 
 #### SAP OData Connector Improvements & Fixes
 
-* We updated the **SAP OData Connector** to support the **Edm.Int64** data type. (Ticket #87284)
-* We also fixed a *java.net.SocketException: Broken pipe (Write failed)* exception which occurred when sending a large request to the OData service endpoint. (Ticket #86680)
+* We updated the **SAP OData Connector** to support the **Edm.Int64** data type. (Ticket 87284)
+* We also fixed a *java.net.SocketException: Broken pipe (Write failed)* exception which occurred when sending a large request to the OData service endpoint. (Ticket 86680)
 
 ### August 23rd, 2019
 
@@ -72,11 +126,11 @@ For updates on the status of Mendix Cloud v4, Mendix Cloud v3, and other deploym
 
 * We reordered and improved the Trends pages of operating metrics to improve the user experience.
 * We improved the performance of calculating the environment health status.
-* We improved the ability to recover from a failed deployment in the free app cluster.
+* We improved the ability to recover from a failed deployment in the Free App cluster.
 
 #### Fixes
 
-* We fixed an issue where updates to decimal constants in the Developer Portal were limited to 2 decimal places. This has been increased to 8 decimal places. (Ticket #85507)
+* We fixed an issue where updates to decimal constants in the Developer Portal were limited to 2 decimal places. This has been increased to 8 decimal places. (Ticket 85507)
 
 ### July 5th, 2019
 
@@ -103,15 +157,15 @@ For updates on the status of Mendix Cloud v4, Mendix Cloud v3, and other deploym
 
 #### Mendix Cloud Improvements
 
-* We added a confirmation dialogue when you delete Custom Headers
-* We made general performance improvements
+* We added a confirmation dialogue when you delete Custom Headers.
+* We made general performance improvements.
 
 #### Fixes
 
-* We fixed an issue which prevented the adding of comments to a backup. (Ticket #81993)
-* We updated the **Read documentation** link in the Mendix Cloud v4 metrics page to point to the right document. (Ticket #82130)
-* We added appropriate feedback if you try to upload a client certificate which is unsupported because it is not encoded in PEM. (Ticket #82299)
-* We fixed an issue which prevented the offboarding of a single environment if you wanted to retain other environments in the Mendix Cloud node. (Ticket #83189)
+* We fixed an issue which prevented the adding of comments to a backup. (Ticket 81993)
+* We updated the **Read documentation** link in the Mendix Cloud v4 metrics page to point to the right document. (Ticket 82130)
+* We added appropriate feedback if you try to upload a client certificate which is unsupported because it is not encoded in PEM. (Ticket 82299)
+* We fixed an issue which prevented the offboarding of a single environment if you wanted to retain other environments in the Mendix Cloud node. (Ticket 83189)
 
 ### June 15th, 2019
 
@@ -168,7 +222,7 @@ For updates on the status of Mendix Cloud v4, Mendix Cloud v3, and other deploym
 
 #### Fixes
 
-* We resolved an issue where some team members were not visible in Node Permissions after an app was relinked (Tickets 70285, 79708, 79824, 80557, 81713, and 82591).
+* We resolved an issue where some team members were not visible in Node Permissions after an app was relinked (Tickets 70285, 79708, 79824, 80557, 81713, 82591).
 
 ### May 3rd, 2019
 
@@ -1058,210 +1112,3 @@ In some cases, you may still experience false positives for the runtime heartbea
 ### January 13th, 2016
 
 * The Technical Contact of an application can now assign other people as the Technical Contact using the Node Security tab in the Project Settings on [https://home.mendix.com/](https://home.mendix.com/).
-
-## 2015
-
-### December 1st, 2015
-
-* The Mendix Cloud switched from the Jetty blocking I/O connector to a selector based non-blocking I/O connector for all applications. Due to a bug in the blocking I/O connector HTTP requests could be fired multiple times for long-running (> 2 minutes) requests, which would result in strange results in the Mendix Debugger (ticket 462699). If you want to apply this fix you can simply restart your application.
-* Fixed bug that occurs when a which contains a large SVN directory is exposed into an Online Working Copy using Mendix Platform SDK.
-
-### November 30th, 2015
-
-* The story details page now provides more context, by showing comments, tasks and feedback when applicable.
-* It is now easier to swap the priority of stories, using the arrow buttons at the left of each story and task.
-
-### October 16th, 2015
-
-#### Improvements
-* Document links in comments will now open in a new tab, preventing loss of context. 
-
-#### Bug fixes
-* Fixed issue which prevented downloading of feedback item attachments.
-* Fixed issue which hid the tooltip explaining password requirements in the password reset screen.
-* Fixed issue causing some messages on the Buzz to be rendered twice when clicking 'Show more'.
-
-### September 17th, 2015
-
-* Fixed issue which caused collapsed/expanded state of sprints and stories to be forgotten when switching between the stories overview of a project and a story's details page.
-
-### September 3rd, 2015
-
-#### New features
-* All expanded items in the backlog can be collapsed at once, by using either the new 'Collapse All' button in the toolbar or the keyboard shortcut <ctrl+space>.
-* New stories can be pre-filled with a default set of tasks, which can be defined as a Story Template on the Capture page (click More>Manage story templates).
-
-#### Improvements
-* The signup process takes less time to complete
-* The 'details' link of each story in the backlog is now always visible, making it easier to access to the story details page.
-
-#### Bug fix
-* Removed the unnecessary confirmation popup at the end of the sign up process.
-
-### August 6th, 2015
-
-* We have rolled out our new project creation flow to all users. When creating a new project from the Portal, you are presented with a set of themes and sample apps that you can use as a basis for your new application.
-
-### July 31st, 2015
-
-#### Improvement
-* Improved project creation performance. Users will now quickly navigate to the project homepage, with the project's Team Server repository being set up in the background.
-
-#### Bug fix
-* Added limits to search input fields in a number of pages.
-
-### July 24th, 2015
-
-#### New functionality
-* The status of stories and tasks can now be changed from the story details page
-
-#### Bug fix
-* Clicking on feedback items on your profile brings you to the proper details page
-
-### July 16th, 2015
-
-* Various small fixes
-
-### July 3rd, 2015
-
-* Improved project creation performance. Creating a new project will now take several seconds less than before.
-
-### June 16th, 2015
-
-* Fixed an issue where in certain cases the input element was not focusable in Internet Explorer, after submitting feedback with the feedback widget  (Ticket #278349)
-
-### June 2nd, 2015
-
-* Various small improvements
-
-### May 29th, 2015
-
-* Some users experienced stability issues when filtering projects on the Buzz. These issues has now been resolved.
-* Several small fixes related to the UI and stability of Sprintr
-
-### April 21st, 2015
-
-* Fixed [home.mendix.com](https://home.mendix.com/) stability issue.
-
-### April 16th, 2015
-
-#### Improvement
-* Added guidance to the Develop page
-
-#### Fixes
-* Images on the wall can also be opened on Mobile interfaces
-* MyProjects overview is once again sorted based on a logic (Tickets #212931, #140834)
-* Various performance fixes
-* Various styling fixes
-
-### March 31st, 2015
-
-#### New features
-* The blue toolbar now contains a button for quickly creating new apps, and a shortcut that leads to the Mendix Developer Portal ([https://developers.mendix.com/](https://developers.mendix.com/)).
-* Guidance balloons guide new users through a few main features of the Mendix Platform.
-* The project dashboard has been extended with Team and Development information.
-    * The Team Box shows all team members within a project, and allows you to easily invite new team members.
-    * The Development Box shows information about the latest main line commit, and provides a shortcut to quickly open the app in the Mendix Modeler.
-
-#### Improvements
-* Several UI improvements, including a new navigation sidebar and a revised Projects page.
-* Story / task detail pages contain buttons to quickly navigate back and forth between all stories / tasks within the same context.
-
-### February 26th, 2015
-
-* Searching for a term on the Capture page no longer causes spaces to be added within the results list.
-* Various small UX fixes.
-
-### February 19th, 2015
-
-* Various small improvements
-
-### February 5th, 2015
-
-* Various small user interface improvements
-
-### January 22nd, 2015
-
-#### Improvement
-* Numerous small user interface improvements
-
-#### New feature
-* For deployment, a new graph was introduced: JVM Process memory usage (read more about this here: [https://tech.mendix.com/linux/2015/01/14/whats-in-my-jvm-memory/](https://tech.mendix.com/linux/2015/01/14/whats-in-my-jvm-memory/))
-
-## 2014
-
-### December 30th, 2014
-
-* The loading time of the Deploy tab of a project has been decreased dramatically.
-* The "Create package from teamserver" button is now always visible. Previously it was only visible for projects that are on Mendix 5, but as most users are on Mendix 5 we dropped this restriction. Users that are not on Mendix 5 or do not have data in their Teamserver repository will be shown a pop up message stating that the feature is only available after an upgrade.
-
-### December 23rd, 2014
-
-#### New features
-* It's now possible to move a user story to a different project from the Story details page. 
-* Trends now include system graphs like disk usage and memory usage; It also includes a new graph with the number of connections to the database.
-* Sandbox users may use publish to mobile
-
-#### Improvements
-
-##### Capture
-* A progress bar will now be shown while a comment is being posted on the Buzz.
-* It's now possible to search for a document based on its labels.
-
-##### Develop
-* Restructured the Develop tab. Each commit now offers an App Store link to the Modeler version with which it was committed. Added a button to open the latest Main line revision in the modeler.
-* The Mendix version used is now tracked for each revision individually, rather than per branch. (Feedback 120751)
-* App Store links to the Modeler from the Develop tab now open in a new browser tab.
-* The details screen of a revision in the Develop tab will now show the exact time of the commit to the Team Server. (Feedback 120300)
-
-##### Feedback
-* Responding to a feedback item as its submitter will no longer mark the item as 'Handled' (Feedback 108318)
-* Added button to manually mark a feedback item as 'Handled', or to mark it as 'Open' again in the feedback details screen. (Feedback 77164)
-* Setting a feedback item to 'Under review' will no longer mark it as 'Handled'
-
-##### Invitations
-* App and Project invites will now expire after 14 days. (Feedback 90894)
-* App and Project invites can now be retracted by the inviter. You can find this functionality in the Pending Invites tab of your Profile. (Feedback 90894)
-* You will now see a progress bar while your App and project invites are being sent. (Feedback 79146)
-* It is now possible to initiate an invite to the Mendix Platform using the Share button on the blue Mendix toolbar.
-
-#### Fixes
-
-##### General
-* Significantly improved robustness of navigating through the Platform Portal. (Feedback 68886, 78020, 78479, 78550, 78638, 94395)
-* Populated lists will no longer erroneously show a message at the bottom stating that they are empty. (Feedback 89679, 89380, 90217, 90532)
-
-##### Profile
-* The tabs in the Profile page will now render correctly irrespective of your browser's width. (Feedback  117232)
-
-##### Capture
-* If you cancel uploading a file, the Platform will no longer attempt to upload the file anyways. (Feedback 112661)
-* Fixed an issue where the first item in the Documents list could not be deselected. (Feedback 115653)
-
-##### Develop
-* The 'Open in modeler' functionality in the Develop tab now works correctly again. (Feedback 106471, 122538)
-
-##### Feedback
-* Fixed issue which prevented users from viewing images in comments posted by other users to a feedback item. (Feedback 117855, 106590, 82013)
-* When opening the details section containing an item's metadata in the Feedback details screen, this will no longer erase a partially typed comment. (Feedback 62772, 107863)
-* Fixed issue which caused the page from which feedback was submitted to not be properly registered for Mendix 5.10 and newer. (Ticket 204384)
-* Removed erroneously displayed resizing tooltip in the feedback widget's Description field. (Feedback 110995)
-* Fixed issue where paging to the last page in the Feedback overview would result in an empty page. (Feedback 69332)
-
-##### Invitations
-* Fixed issue which would sometimes make it impossible to select a role for the invitee during the project or App invitation wizard. (Feedback 113294, 114629)
-* Email addresses will no longer erroneously be considered invalid if they contain an apostrophe. (Feedback 89526)
-
-##### Company Management
-* Fixed issue where creating a security group right after deleting another security group occasionally resulted in an error (Feedback 105421)
-* Clicking on a line in the Company Admins overview of the Company Admin will now only open this user's profile if you click directly on his or her name. (Feedback 57009)
-
-##### APIs
-* The WebService version of the Stories API now supports empty values for the Points attribute of Story. You can download the new WSDL from the [API Documentation](/apidocs-mxsdk/apidocs/index). (Ticket 102035, 204529, Feedback 88517, 94287)
-
-#### Known issues
-* Due to changes in AppService definitions in recent Mendix versions, developers using Mendix 5.10 or newer are recommended to use the WebService versions of the Stories and Feedback APIs. These can be found in the [API Documentation](/apidocs-mxsdk/apidocs/index).
-
-#### Removed features
-* The timeline in the Planning section has been removed.
-* Chat functionality has been discontinued in the Platform Portal. As we have to prioritize features carefully in order to deliver the best software we can, we've come to realize that Mendix users don't use the chat functionality very often. In order to focus our time on more heavily used existing or exciting new features, we've decided to discontinue this functionality.

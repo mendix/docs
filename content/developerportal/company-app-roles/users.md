@@ -34,7 +34,7 @@ If a Mendix user moves to another company or comes from another company that is 
 Before deactivating a user, make sure the following points are true for that user:
 
 * They do not have a **Company Contact**, **App Contact**, or **Technical Contact** role
-* They are not the only **SCRUM Master** in an App Team
+* They are not the only **Scrum Master** in an App Team
 * They are not involved in unsolved support tickets with [Mendix Support](https://support.mendix.com)
 
 For more information, see [How to Manage Company & App Roles](/developerportal/company-app-roles/manage-roles) and [Company & App Roles](/developerportal/company-app-roles/index).

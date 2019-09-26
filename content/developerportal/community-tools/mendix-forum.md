@@ -9,7 +9,7 @@ menu_order: 10
 
 The [Mendix Forum](https://forum.mendixcloud.com/index3.html) is where the Mendix community comes together to help each other with questions and answers and to propose ideas for improving the Mendix Platform.
 
-The forum is closely integrated with the [Mendix Profile](../mendix-profile/index) so that Mendix community members can see all the interesting and useful information about who is participating in the forum. If someone clicks your name anywhere on the forum, your Mendix Profile will open, so make sure you [set your profile to public](../mendix-profile/index#public) so everyone can see your details and progress!
+The forum is closely integrated with the [Mendix Profile](../mendix-profile/index) so that Mendix community members can see all the interesting and useful information about who is participating in the Mendix Forum. If someone clicks your name anywhere on the Mendix Forum, your Mendix Profile will open, so make sure you [set your profile to public](../mendix-profile/index#public) so everyone can see your details and progress!
 
 There are two tabs available in the Mendix Forum: **Questions** and **Ideas**. On each tab, you can see the **Top contributors**, which lists the five Mendix community developers who have the most Mendix Forum points in the last 30 days.
 
@@ -58,7 +58,7 @@ In addition to sorting, you can search the entire forum (both for questions and 
 Notice the following search details:
 
 * The **Source** will be set to **Forum** by default; if you want to search other resources, set the source to **Documentation**
-* You can set the **Type** of search results for the forum to **Question**, **Idea**, or both (default)
+* You can set the **Type** of search results for the Mendix Forum to **Question**, **Idea**, or both (default)
 * You can filter by **Category** to get more refined results
 
 #### 2.1.3 Filtering the Questions
@@ -110,13 +110,13 @@ Below the question details are the answer(s) to the question. Click the up or do
 
 #### 2.2.3 Answering a Question
 
-Below the answer(s), you can contribute to the forum by writing your own answer in the editor and then clicking **Submit answer**:
+Below the answer(s), you can contribute to the Mendix Forum by writing your own answer in the editor and then clicking **Submit answer**:
 
 ![](attachments/mendix-forum/questions_answer_editor.png)
 
 {{% alert type="info" %}}
 
-You can easily upload your images in the forum by dragging them directly into the text editors. In order to resize and position an image, double-click it in the editor or click the image button in the toolbar:
+You can easily upload your images in the Mendix Forum by dragging them directly into the text editors. In order to resize and position an image, double-click it in the editor or click the image button in the toolbar:
 
 ![](attachments/mendix-forum/questions_image_button.png)
 
@@ -126,9 +126,9 @@ You can easily upload your images in the forum by dragging them directly into th
 
 #### 2.3.1 Asking Your Question {#AskingYourQuestion}
 
-It has never been easier to ask a question on the Mendix Forum. But before you submit a new question, be sure to search the forum for similar questions that have already been asked. There may be someone else who has already posted the same question!
+It has never been easier to ask a question on the Mendix Forum. But before you submit a new question, be sure to search the Mendix Forum for similar questions that have already been asked. There may be someone else who has already posted the same question!
 
-To ask your own question on the forum, follow these steps:
+To ask your own question on the Mendix Forum, follow these steps:
 
 1.  Click **Ask a question** on the main page of the [Questions tab](#QuestionsTab):
 

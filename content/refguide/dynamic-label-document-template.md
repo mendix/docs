@@ -39,7 +39,7 @@ _Default value:_ 2
 
 ### 2.4 Group Digits (Only for Numeric Attributes)
 
-For ease of reading, numbers with many digits in front of the decimal separator may be divided into groups using a delimiter. This property defines whether the end user will see these groups, or not.
+For ease of reading, numbers with many digits in front of the decimal separator may be divided into groups using a delimiter. This property defines whether the end-user will see these groups, or not.
 
 _Default value:_ False
 

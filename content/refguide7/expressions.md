@@ -71,8 +71,8 @@ An overview of the possibilities with expressions can be found below.
 * [`endsWith`](string-function-calls)  - Determine whether a string ends with the specified substring
 * [`trim`](string-function-calls) - Remove leading and trailing whitespace
 * [`isMatch`](string-function-calls) - Match regular expression
-* [`replaceAll`](string-function-calls) - Replace occurences of substring
-* [`replaceFirst`](string-function-calls) - Replace first occurence of substring
+* [`replaceAll`](string-function-calls) - Replace occurrences of substring
+* [`replaceFirst`](string-function-calls) - Replace first occurrence of substring
 * [String concatenation ( + )](string-function-calls) - Concatenate strings
 * [`urlEncode`](string-function-calls) - Convert a string to be used in a URL
 * [`urlDecode`](string-function-calls) - Convert a string back from a URL

@@ -64,9 +64,9 @@ String is represented as a simple text input in Studio Pro. It is passed as a `s
 | -------------- | -------- | -------------- | ------------------------------------------------------------ |
 | `type`         | Yes      | String         | Must be `string`                                             |
 | `key`          | Yes      | String         | See [key](#key) |
-| `defaultValue` | No       | String         | Default value for the property.                              |
-| `multiline`    | No       | Boolean        | `true` to enable multiline input in the Studio, `false` otherwise. |
-| `required`     | No       | Boolean        | Whether the property must be specified by the user. `true` by default |
+| `defaultValue` | No       | String         | Default value for the property                              |
+| `multiline`    | No       | Boolean        | `true` to enable multiline input in the Studio, `false` otherwise |
+| `required`     | No       | Boolean        | Whether the property must be specified by the user, `true` by default |
 
 
 #### 2.1.2 Studio Pro UI
@@ -107,7 +107,7 @@ Boolean is represented as a toggle in Studio Pro. It is passed as `boolean` prop
 | -------------- | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `type`         | Yes      | String         | Must be `boolean`                                                                                                                                                    |
 | `key`          | Yes      | String         | See [key](#key) |
-| `defaultValue` | Yes      | Boolean        | Default value for the property. `true` or `false`                                                                                                                    |
+| `defaultValue` | Yes      | Boolean        | Default value for the property, `true` or `false`                                                                                                                    |
 
 #### 2.2.2 Studio Pro UI
 
@@ -134,7 +134,7 @@ Integer is represented as a number input in Studio Pro. It is passed as a `numbe
 | -------------- | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `type`         | Yes      | String         | Must be `integer`                                                                                                                                                    |
 | `key`          | Yes      | String         | See [key](#key) |
-| `defaultValue` | Yes      | Integer        | Default value for the property.                                                                                                                                      |
+| `defaultValue` | Yes      | Integer        | Default value for the property                                                                                                                                      |
 
 #### 2.3.2 Studio Pro UI
 
@@ -161,7 +161,7 @@ Enumeration allows a user to select one out of multiple options defined in the X
 | -------------- | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `type`         | Yes      | String         | Must be `enumeration`                                                                                                                                                |
 | `key`          | Yes      | String         | See [key](#key) |
-| `defaultValue` | Yes      | Integer        | Default value for the property.                                                                                                                                      |
+| `defaultValue` | Yes      | Integer        | Default value for the property                                                                                                                                      |
 
 #### 2.4.2 XML Elements
 
@@ -208,8 +208,8 @@ This property type was introduced in Mendix 8.1.
 | Attribute  | Required | Attribute Type | Description                                                                                                                                                          |
 | ---------- | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `type`     | Yes      | String         | Must be `icon`                                                                                                                                                       |
-| `key`      | Yes      | String         |See [key](#key) |
-| `required` | No       | Boolean        | Whether the property must be specified by the user. `true` by default                                                                                                |
+| `key`      | Yes      | String         | See [key](#key) |
+| `required` | No       | Boolean        | Whether the property must be specified by the user, `true` by default                                                                                                |
 #### 3.1.2 Studio Pro UI
 
 When the component is defined as follows:
@@ -239,7 +239,7 @@ This property type was introduced in Mendix 8.1.
 | ---------- | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `type`     | Yes      | String         | Must be `image`                                                                                                                                                      |
 | `key`      | Yes      | String         | See [key](#key) |
-| `required` | No       | Boolean        | Whether the property must be specified by the user. `true` by default                                                                                                |
+| `required` | No       | Boolean        | Whether the property must be specified by the user, `true` by default                                                                                                |
 #### 3.2.2 Studio Pro UI
 
 When the component is defined as follows:
@@ -267,8 +267,8 @@ Expression allows a user to configure an [expression](/refguide/expressions), th
 | -------------- | -------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `type`         | Yes      | String              | Must be `expression`                                                                                                                                                 |
 | `key`          | Yes      | String              | See [key](#key) |
-| `defaultValue` | No       | String (Expression) | Default value for the property.                                                                                                                                      |
-| `required`     | No       | Boolean             | Whether the property must be specified by the user. `true` by default                                                                                                |
+| `defaultValue` | No       | String (Expression) | Default value for the property                                                                                                                                      |
+| `required`     | No       | Boolean             | Whether the property must be specified by the user, `true` by default                                                                                                |
 
 #### 4.1.2 XML Elements
 
@@ -309,7 +309,7 @@ Then the Studio Pro UI for the property appears like this:
 | `type`      | Yes      | String         | Must be `textTemplate`                                                                                                                                               |
 | `key`       | Yes      | String         | See [key](#key) |
 | `multiline` | No       | Boolean        | `true` to enable multiline input in the Studio, `false` otherwise.                                                                                                   |
-| `required`  | No       | Boolean        | Whether the property must be specified by the user. `true` by default                                                                                                |
+| `required`  | No       | Boolean        | Whether the property must be specified by the user, `true` by default                                                                                                |
 
 
 #### 4.4.2 XML Elements
@@ -346,7 +346,7 @@ The action property allows a user to configure an action to do things like calli
 | ---------- | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `type`     | Yes      | String         | Must be `action`                                                                                                                                                     |
 | `key`      | Yes      | String         | See [key](#key) |
-| `required` | No       | Boolean        | Whether the property must be specified by the user. `true` by default                                                                                                |
+| `required` | No       | Boolean        | Whether the property must be specified by the user, `true` by default                                                                                                |
 #### 4.5.2 Studio Pro UI
 
 When the property is defined as follows:
@@ -372,8 +372,8 @@ The attribute property allows a widget to work directly with entities' attribute
 | ---------- | -------- | -------------- | ------------------------------------------------------------ |
 | `type`     | Yes      | String         | Must be `attribute`                                          |
 | `key`      | Yes      | String         | See [key](#key) |
-| `onChange` | No       | Property Path  | This path to an Action property that will be executed by Mendix platform when value is changed by the widget. |
-| `required` | No       | Boolean        | This decides if the property must be specified by the user (`true` by default). |
+| `onChange` | No       | Property Path  | The path to an Action property that will be executed by Mendix platform when value is changed by the widget |
+| `required` | No       | Boolean        | This decides if the property must be specified by the user, `true` by default |
 
 #### 4.6.2 XML Elements
 
@@ -425,10 +425,11 @@ The object property allows to create an arbitrary list of properties.
 #### 4.7.1 XML Attributes
 
 | Attribute | Required | Attribute Type | Description                                                                                                                                                          |
-| --------- | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `type`    | Yes      | String         | Must be `object`                                                                                                                                                     |
-| `key`     | Yes      | String         | See [key](#key) |
-| `isList`  | Yes      | Boolean        | Must be `true`                                                                                                                                                       |
+| ---------- | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `type`     | Yes      | String         | Must be `object`                                                                                                                                                     |
+| `key`      | Yes      | String         | See [key](#key) |
+| `isList`   | Yes      | Boolean        | Must be `true`                                                                                                                                                       |
+| `required` | No       | Boolean        | This decides if the is user is required to specified items in the list, `true` by default |
 
 #### 4.7.2 XML Elements
 
@@ -489,7 +490,7 @@ Every widget have a name by default. This property can be used to control positi
 
 ### 5.3 TabIndex {#tabindex}
 
-The TabIndex property allows pluggable widgets to implement the **Tab index** setting similar to  a [core input widget](/refguide/text-box#tab-index). Every selectable or input-like widget should opt for this to provide a consistent developing experience and an accessible app for an end-user. A widget’s tab index, when it is not zero, is passed to a client component in a `tabIndex` prop.
+The TabIndex property allows pluggable widgets to implement the **Tab index** setting similar to  a [core input widget](/refguide/common-widget-properties#tab-index). Every selectable or input-like widget should opt for this to provide a consistent developing experience and an accessible app for an end-user. A widget’s tab index, when it is not zero, is passed to a client component in a `tabIndex` prop.
 
 ```xml
 <systemProperty key="TabIndex"/>

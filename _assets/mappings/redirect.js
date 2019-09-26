@@ -460,7 +460,7 @@ module.exports = {
     },
 	{
       from: "/refguide8/drop-down-widget",
-      to: "/refguide/drop_down"
+      to: "/refguide/drop-down"
     },
 	{
       from: "/refguide8/horizontal-split-pane",

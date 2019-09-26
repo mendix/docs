@@ -46,4 +46,4 @@ The contents of the message:
 
 ## Sending Queued Messages
 
-For sending queued messages to work, you need to ensure that the scheduled event `PushQueue` is active. For TAP environments, you need to explicitly activate the scheduled event in the Mendix Cloud Portal. For free apps, the scheduled events feature is not supported, so a queued message won't be sent.
+For sending queued messages to work, you need to ensure that the scheduled event `PushQueue` is active. For TAP environments, you need to explicitly activate the scheduled event in the Mendix Cloud Portal. For Free Apps, the scheduled events feature is not supported, so a queued message won't be sent.

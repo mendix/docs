@@ -67,6 +67,7 @@ If you do cannot connect the debugger, then you do not have sufficient permissio
 
 1. Open the **Connect Debugger** dialog box – you can do this in two ways within Studio Pro:
 
+
     * Go to the **Run** menu and select **Connect Debugger…**:
 
         ![](attachments/debug-microflows-remotely/18580048.png)

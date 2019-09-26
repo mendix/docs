@@ -157,7 +157,7 @@ Now that your repository is connected, follow the steps below to run Native Buil
 
 You can now use your binaries to run your app on testing devices. To publish your apps, though, you will need to get your apps signed. Consult [Enable Build Signing](#signing) below for more information on app signing.
 
-If your build times out (which happens to free App Center users after building for longer than 30 minutes), you can either sign your app locally or move to a paid App Center account. This build issue is more likely to affect iOS builds than Android builds.
+If your build times out (which happens to free App Center users after building for longer than 30 minutes), you can either sign your app locally or move to a paid App Center account. This build issue is more likely to affect iOS builds than Android builds as this is a limitation when signing with an iOS developer profile as opposed to an iOS distribution profile.
 
 To sign your Android app locally, use apksigner by following Google's [apksigner documentation](https://developer.android.com/studio/command-line/apksigner).
 
@@ -233,7 +233,7 @@ While following the instructions below, be sure to replace any instance of `LOCA
 
 For an iOS app, do the following:
 
-1. Open **ios/NativeTemplate.xcworkspace** using **Xcode**.
+1. Open **ios/NativeTemplate.xcworkspace** using Xcode.
 2. Open **NativeTemplate/AppDelegate.swift**.
 3. Replace this section of the code (on line **13**):
 

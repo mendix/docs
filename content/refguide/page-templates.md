@@ -16,7 +16,7 @@ When creating a new page, the user is presented with an overview of all the comp
 
 By mapping out the common design patterns of a project, a great deal of the initial work involved in creating new pages can be mitigated. 
 
-Generally, page templates are stored in the project's [UI Resources package](ui-resources-package). This keeps them in sync with the project theme, as well as providing a handy place to consolidate all design-related data. 
+Generally, page templates are stored in the project's [UI resources package](ui-resources-package). This keeps them in sync with the project theme, as well as providing a handy place to consolidate all design-related data. 
 
 To create a page template, right-click a page in either the **Project Explorer** or an empty section of the canvas and select **Create page template**. The page will be added as a new page template, which will automatically make it available in the **Create Page** wizard.
 
@@ -36,7 +36,7 @@ Page template properties are described in the sections below.
 
 ## 4 Design Properties
 
-{{% snippet file="refguide/canvas+width+property.md" %}}
+{{% snippet file="refguide/canvas-width-property.md" %}}
 
 {{% snippet file="refguide/canvas-height-property.md" %}}
 

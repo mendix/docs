@@ -51,7 +51,7 @@ The upload phase executes the following operations after validation:
 
 ### 2.2 Download Phase {#download}
 
-If the upload phase was succesful, the download phase starts in which the local database is updated with the newest data from the server database. A network request is made to the server per entity.
+If the upload phase was successful, the download phase starts in which the local database is updated with the newest data from the server database. A network request is made to the server per entity.
 
 You can manage which entities are synchronized to the local database by customizing your app's synchronization behavior. For more details on this procedure, see the [Customizable Synchronization](#customizable-synchronization) section below.
 

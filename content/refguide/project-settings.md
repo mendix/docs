@@ -134,7 +134,7 @@ The difference is noticeable when the operation takes less time. So if you expec
 It is important to remember when changing hashing algorithms is that any hashed attribute (like the System$User password attribute) has its algorithm set on hashing. In other words, for the hashing type to take effect, any existing hashed attribute will have to be reset using the new hashing type.
 {{% /alert %}}
 
-### 3.10 Rounding Mode
+### 3.10 Rounding Mode{#rounding}
 
 The rounding mode is used to select how to round numbers when performing calculations.
 
@@ -261,19 +261,19 @@ For background information, see [Transport Layer Security (TLS) Renegotiation Is
 
 ### 6.1 UI Resources Package
 
-The look and feel of a Mendix application is governed by the [UI Resources package](ui-resources-package). This package supplies the project with all the required theme information accompanied by matching page templates and building blocks. The module which is designated as the UI Resources package is governed by the **UI resources package** setting. Generally, this is automatically updated when a new UI Resources package is imported. However, with this setting, the desired module can also be set manually.
+The look and feel of a Mendix application is governed by the [UI resources package](ui-resources-package). This package supplies the project with all the required theme information accompanied by matching page templates and building blocks. The module which is designated as the UI resources package is governed by the **UI resources package** setting. Generally, this is automatically updated when a new UI resources package is imported. However, with this setting, the desired module can also be set manually.
 
 ### 6.2 Theme ZIP File
 
 {{% alert type="warning" %}}
 
-[Deprecated] The use of a ZIP file to configure a project's theme is deprecated. A [UI Resources package](ui-resources-package) is the preferred method of sharing themes.
+[Deprecated] The use of a ZIP file to configure a project's theme is deprecated. A [UI resources package](ui-resources-package) is the preferred method of sharing themes.
 
 {{% /alert %}}
 
 Older projects may still use a theme ZIP file as the basis for their theme. In this situation, the **Theme ZIP file** setting can be used to switch between any ZIP files found in the **theme** folder. Note that this practice is deprecated and will be removed in a future version.
 
-Switching from a ZIP file to a UI Resources package is straightforward:
+Switching from a ZIP file to a UI resources package is straightforward:
 
 1. Firstly, replace the contents of the theme folder with the contents of the desired ZIP file.
 

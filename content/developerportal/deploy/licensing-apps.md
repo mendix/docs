@@ -24,7 +24,7 @@ These instructions will not move databases, file storage, or any other environme
 
 ## 2 Basic Concepts and Overview
 
-When you deploy an app to the cloud, whether it is a free app or a licensed app, it will consist of a number of parts:
+When you deploy an app to the cloud, whether it is a Free App or a licensed app, it will consist of a number of parts:
 
 * Mendix Runtime – essentially one or more instances of your app running in a container
 * Routing layer
@@ -60,7 +60,7 @@ You need to have enabled two-factor authentication. See [Two-Factor Authenticati
 
 ## 4 Linking Your App to a Licensed Node {#licensed-node}
 
-You have deployed an app: either as a free app, or to a licensed node. You now want to link it to a licensed node, or to a different licensed node. There are several steps you need to carry out:
+You have deployed an app: either as a Free App, or to a licensed node. You now want to link it to a licensed node, or to a different licensed node. There are several steps you need to carry out:
 
 * [Back up your data](#backing-up)
 * [Unlink from the current environment](#unlink)

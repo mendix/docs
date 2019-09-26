@@ -78,7 +78,7 @@ Using items in the menu bar of Studio Pro, you can create new projects, deploy a
 | Copy | Copies the selected element to the clipboard. | <kbd>Ctrl</kbd> + <kbd>C</kbd> |
 | Paste | Pastes the contents of the clipboard in the current editor. | <kbd>Ctrl</kbd> + <kbd>V</kbd> |
 | Delete | Deletes the selected element. | <kbd>Delete</kbd> |
-| Find | Searches the model for text. The following texts are searched: all texts that appear in the end user interface (for example captions of labels or buttons); names and documentation of documents; entity, association, and attribute names and documentation; access rule documentation; page widget names; captions and documentation of microflow objects; and names of items in microflows. | <kbd>Ctrl</kbd> + <kbd>F</kbd> |
+| Find | Searches the model for text. The following texts are searched: all texts that appear in the end-user interface (for example captions of labels or buttons); names and documentation of documents; entity, association, and attribute names and documentation; access rule documentation; page widget names; captions and documentation of microflow objects; and names of items in microflows. | <kbd>Ctrl</kbd> + <kbd>F</kbd> |
 | Find Advanced | Opens a dialog box that allows for advanced search operations. Examples are searching for any document type and searching for unused documents. | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd> |
 | Find Usages | Opens the **Find Results** pane and displays usages of the selected object. | <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>F</kbd> |
 | Next Find Result | Highlights the next find result in the **Find Results** pane and open it in an editor. | <kbd>F3</kbd> |
@@ -228,3 +228,14 @@ The following shortcut keys are available in the microflow editor:
 | <kbd>End</kbd> | Highlights and focus on an end event in the current microflow. If there are multiple end events, clicking **End** multiple times will toggle between the different events. |
 | <kbd>Shift</kbd> when resizing an activity | When resizing the entity, by holding <kbd>Shift</kbd> , the microflow component will stay centered at its current position and will expand equally in all directions. |
 | <kbd>Ctrl</kbd> when selecting multiple activities | When pressing the <kbd>Ctrl</kbd>, you can select additional microflow components. Clicking a selected component while holding <kbd>Ctrl</kbd> will deselect it. |
+
+## 9 Microflow Debugger Shortcut Keys{#debugger-shortcuts}
+
+The following shortcut keys are available for the the microflow debugger:
+
+| Key | Description |
+| --- | --- |
+| <kbd>Alt</kbd> + <kbd>F5</kbd> | *Step into* – moves the debugger into the sub-microflow or loop.  |
+| <kbd>Alt</kbd> + <kbd>F6</kbd> | *Step over* – moves the debugger to the next step in the same microflow. |
+| <kbd>Alt</kbd> + <kbd>F7</kbd> | *Step out* – instructs the debugger to leave the sub-microflow or loop.  |
+| <kbd>Alt</kbd> + <kbd>F8</kbd> | *Continue* – instructs the debugger to continue until it reaches another breakpoint. |

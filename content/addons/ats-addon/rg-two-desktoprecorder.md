@@ -9,7 +9,7 @@ ATS supports recording via the standalone [Mendix ATS Test Recorder](https://chr
 
 To perform its function, the Chrome extension needs permissions to monitor events triggered by the user on the page that is being recorded as well as to gather information about those events. For example, ATS registers that you have clicked a button and then retrieves the caption and locator for that button. The purpose of such data collection is to prepare an automated test case. Without this data, the recorder would not be able to function.
 
-In July 2019, Google announced a [new extension policy](https://blog.chromium.org/2019/07/project-strobe-updates.html) that limits the ability to gather information. This policy is to be enacted on **October 15th, 2019**. The web recorder is incompatible with the new policy and cannot function under the new rules.
+In July 2019, Google announced a new extension policy via a blog post entitled [Project Strobe: Updates to Our User Data Policy](https://blog.chromium.org/2019/07/project-strobe-updates.html) that limits the ability to gather information. This policy is to be enacted on **October 15th, 2019**. The web recorder is incompatible with the new policy and cannot function under the new rules.
 
 ## 2 How Do We Intend to Work Around This Issue?
 
@@ -23,7 +23,7 @@ To summarize, the desktop recorder consists of two components: a desktop Java ap
 
 ## 3 What Is Our Plan Going Forward?
 
-Both the web recorder and the desktop recorder will continue to be offered. You can freely switch between them at any time in the **Project Preferences**.
+Both the web recorder and desktop recorder will continue to be offered. You can freely switch between them at any time in the **Project Preferences**.
 
 We will try to keep the web recorder available for as long as possible. However, it is very likely that from **October 15th, 2019**, it will no longer be available in the Chrome Web Store, at which point the desktop recorder will be the only available option.
 

@@ -181,6 +181,7 @@ A container widget can be used to style or hide a group of widgets. This widget 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
 | `container` | All ViewStyle properties |        |
+| `container` | `rippleColor` | This is the color of the ripple on Android, and will be applied only when the container has an on-click action set, otherwise it will be ignored (this defaults to `rgba(0, 0, 0, 0.2)`). |
 
 The default class to style all page titles is named `Container`.
 

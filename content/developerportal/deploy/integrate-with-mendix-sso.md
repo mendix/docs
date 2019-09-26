@@ -1,7 +1,7 @@
 ---
 title: "SSO Using AppCloudServices for Mendix Single Sign-On"
-parent: "mendix-sso"
-menu_order: 20
+parent: "mendix-cloud-deploy"
+menu_order: 99
 description: "Use the AppCloudServices module to add Single Sign-on to your app using the user's Mendix credentials"
 tags: ["AppCloudServices", "SSO", "Single Sign-on", "Mendix credentials"]
 #Ownership claimed by Identity Services Team.

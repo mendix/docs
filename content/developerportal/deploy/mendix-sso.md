@@ -14,9 +14,7 @@ draft: true
 
 {{% todo %}}[Add AppStore Link - several instances
 
-Check which Starter Apps will be updated and how to tell what version of MendixSSO they have
-
-Update Screenshots - new App Name (realistic)]{{% /todo %}}
+Check which Starter Apps will be updated and how to tell what version of MendixSSO they have]{{% /todo %}}
 
 The [MendixSSO module](https://appstore.home.mendix.com) enables your app users to sign in with their Mendix account when your app is deployed to the Mendix Cloud.
 

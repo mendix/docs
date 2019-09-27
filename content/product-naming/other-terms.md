@@ -148,7 +148,7 @@ Do not use "Sandbox." For more information, see [Terminology History](terminolog
 
 This is the package of offerings that users can employ without requiring a paid license.
 
-This replaced [Community Edition](#community-edition) in 2015, and was made a focus of the announcements at [Mendix World 2019](https://www.mendix.com/blog/a-3-step-leap-into-your-digital-future-highlights-from-mendix-world/).
+This replaced [Community Edition](terminology-history#community-edition) in 2015, and was made a focus of the announcements at [Mendix World 2019](https://www.mendix.com/blog/a-3-step-leap-into-your-digital-future-highlights-from-mendix-world/).
 
 {{% alert type="info" %}}
 Use to refer to the whole package of Mendix free offerings (Studio Pro, Studio, and Free Apps), not individual parts of the offering.
@@ -451,5 +451,5 @@ Do not capitalize, as this is a generic term. **Atlas UI Resources** is an examp
 ## version (Mendix, Studio Pro, Runtime)
 
 {{% alert type="info" %}}
-Do not use a lower-case "v" to describe a version for Mendix, Studio Pro, Studio, or Runtime (this is reserved for the [Mendix Cloud version](#mx-cloud-version)).
+Do not use a lower-case "v" to describe a version for Mendix, Studio Pro, Studio, or Runtime (this is reserved for the [Mendix Cloud version](main-product-names#mx-cloud-version)).
 {{% /alert %}}

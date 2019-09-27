@@ -130,15 +130,15 @@ When testing and debugging the configuration an option is to view the messages i
 
 ## 5 Custom Behavior
 
-    evaluateMultipleUserMatches
+### 5.1 evaluateMultipleUserMatches
 
 The module tries to lookup the user that matches the provided username. When multiple System.User records are found this microflow is always executed. It is possible to customize this microflow to determine the correct user. Whichever user instance is returned will be signed in to the application (and passed on to any other microflow).
 
-    CustomUserProvioning {#customuserprovisioning}
+### 5.2 CustomUserProvioning {#customuserprovisioning}
 
 When choosing in the SSO configuration to run the customUserProvisioning action (previously known as CustomLoginLogic) you can update the new or retrieved user with additional information from the assertion.All assertions are passed into the microflow which can be transformed and stored in the user record, or additional roles can be granted to the users based on the AssertionAttributes.
 
-    CustomAfterSigninLogic
+### 5.3 CustomAfterSigninLogic
 
 After a new session is created for the user this microflow can be called to copy any data from the previous session to the new session. This microflow behaves similar to the platform after sign-in microflow, using this microflow it is possible to copy records from the anonymous user to the newly signed-in user.
 

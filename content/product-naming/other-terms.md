@@ -49,7 +49,7 @@ Enter the email addresses of all the co-workers you want to invite to your app p
 ## App Team
 
 {{% alert type="info" %}}
-Capitalize, because **Team** is capitalized in the Developer Portal.
+Capitalize, because **Team** is capitalized in the Developer Portal UI.
 {{% /alert %}}
 
 ## App User
@@ -134,7 +134,7 @@ Do not use "insta-deploy" or "instant redeploy."
 
 ## Free App {#free-app}
 
-A Free App is an app that can be deployed without a license and is therefore free. There are restrictions on the resources available to a Free App, and a Free App environment is not the same thing as a cloud environment, as it does not support complex or large applications. Free Apps are part of the [Mendix Free Edition](#free-edition).
+A Free App is an app that can be deployed without a license and is therefore free. There are restrictions on the resources available to a Free App, and a Free App environment is not the same thing as a cloud environment, as it does not support complex or large applications. Free Apps are part of the [Free Edition](#free-edition).
 
 {{% alert type="info" %}}
 Capitalize in all instances.
@@ -320,6 +320,12 @@ Capitalize in all instances.
 Capitalize in all instances of the Mendix Model Server (to parallel "Team Server" and "Build Server"). 
 {{% /alert %}}
 
+## MxAssure
+
+{{% alert type="info" %}}
+Spell with "Mx" abbreviation as one word.
+{{% /alert %}}
+
 ## on-premises
 
 When we talk about the physical location of hardware that contains Mendix software, we are referring to a location, or premises. "Premises" means the land and buildings owned by someone, especially by a company or organization.
@@ -410,13 +416,13 @@ Capitalize in all instances.
 This is the correct capitalization for this App Team role.
 {{% /alert %}}
 
-### Sprint
+## Sprint
 
 {{% alert type="info" %}}
 Capitalize in all instances.
 {{% /alert %}}
 
-### sub-microflow
+## sub-microflow
 
 {{% alert type="info" %}}
 Spell with a hyphen.
@@ -434,7 +440,7 @@ Capitalize in all instances.
 Capitalize in all instances of this [role](/developerportal/company-app-roles/technical-contact).
 {{% /alert %}}
 
-### Theme Customizer
+## Theme Customizer
 
 This is part of [Atlas UI](#atlas-ui).
 

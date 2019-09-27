@@ -56,7 +56,7 @@ Do not use. Use [Mendix Assist](other-terms#mendix-assist) instead.
 Do not use. Use [Mendix Platform](main-product-names#platform) and [Developer Portal](main-product-names#devportal) instead.
 {{% /alert %}}
 
-## Mendix Business Modeler {#business-server}
+## Mendix Business Modeler 
 
 Not in use as of Mendix 7. 
 
@@ -64,7 +64,7 @@ Not in use as of Mendix 7.
 Replaced by [Desktop Modeler](#dm).
 {{% /alert %}}
 
-## Mendix Business Server/Engine
+## Mendix Business Server/Engine {#business-server}
 
 {{% alert type="info" %}}
 Do not use. Use [Mendix Runtime](other-terms#runtime) instead.

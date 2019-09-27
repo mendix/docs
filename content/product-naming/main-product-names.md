@@ -42,23 +42,23 @@ V4 has much better security than v3.
 
 ## Mendix Developer Portal {#devportal}
 
-This term is used on the **My Apps** page in Studio Pro.
-
-This term replaces "Sprintr," "Platform Portal," and "Mendix App Platform." These terms are not to be used in the product UI or documentation. For more information, see [Terminology History](terminology-history).
+This term appears on the **My Apps** page in Studio Pro.
 
 {{% alert type="info" %}}
-Capitalize in all instances.
+This term replaces "Sprintr," "Platform Portal," and "Mendix App Platform." These terms are not to be used in the product UI or documentation. For more information, see [Terminology History](terminology-history).
 {{% /alert %}}
 
 {{% alert type="info" %}}
 The Developer Portal includes what is sometimes referred to as the "Cloud Portal," which is not an official term and is not used in the product UI or documentation. For more information, see [Terminology History](terminology-history).
 {{% /alert %}}
 
+{{% alert type="info" %}}
+Capitalize in all instances.
+{{% /alert %}}
+
 ## Mendix Platform {#platform}
 
 Describes Mendix as a product and encompasses all the products released by Mendix (as in, Studio Pro, Studio, Developer Portal, etc.).
-
-For more information, see [Terminology History](terminology-history).
 
 {{% alert type="info" %}}
 Capitalize "Platform" when used in "Mendix Platform."

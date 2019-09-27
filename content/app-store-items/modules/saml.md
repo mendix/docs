@@ -64,26 +64,28 @@ Each IdP (entity descriptor) should have its own configuration set. Every IdP ca
 
 #### 3.2.1 General
 
-* AliasThe alias will be used in the URL of the application to indicate the IdP configuration that should be used during login. There are no validations on this fields, besides that it's required. But you should make sure that this alias is compatible with usage in an url. So no /, &, ?, or any special character which can get lost in the communication.
-    Log SAML requestsShould all requests and login attempts be logged and stored in an entity.
+* **Alias** – The alias will be used in the URL of the application to indicate the IdP configuration that should be used during login. There are no validations on this field (besides that it is required). But you should make sure that this alias is compatible with usage in an URL (meaning, no `/`, `&`, `?`, or special character that could get lost in the communication).
+* **Log SAML requests** – Determines whether all requests and login attempts should be logged and stored in an entity.
 
 #### 3.2.2 Identity Provider Metadata
 
-    IdP Metadata LocationThe module is capable of re-importing all IdP Metadata files on a daily basis. Or you can choose to import the metadata from a file. 
-        Metadata overviewThis overview shows all the information that has been found in the IdP metadata information. It's usually not necessary to do anything here, but it can be useful in order to review the possible IdP and SP configuration options.
+* **IdP Metadata Location** – The module is capable of re-importing all IdP metadata files on a daily basis. You can also choose to import the metadata from a file.
+	* **Metadata overview** – This overview shows all the information that has been found in the IdP metadata information. It is usually not necessary to do anything here, but it can be useful in order to review the possible IdP and SP configuration options.
 
 #### 3.2.3 User Provisioning 
 
-    Uses InCommon Federation Standard IdPs that use the InCommon standard often don't specify the Assertion Attributes, when following the InCommon standard a fixed set of Assertion Attributes will be available to choose from later on. 
-    Identifying assertion (aka Principal Key) Specifies which of the Assertion Attributes identifies the User Name. (Note: In Mx7 all usernames passing through the SAML module are converted to lowercase before login and creation, so we strongly advise you to convert all existing and new user names to lowercase as well)
-    User entityThe Mendix entity in which you will store/lookup the user account. Most often something like Administration.Account
-    AttributeOn which attribute you want to do the look-up, this attribute will be compared against the passed 'Identifying Assertion'.
-    User ActionThe module will always search for the user, based on the Identifying Assertion. You can allow the module to create users with a predefined user role. If you allow the module to create users it will automatically create a new user account if the user cannot be found.  If the module is not allowed to create users, it will present a message to the user stating that the login action was successful but no user has been configured. 
-    Default user roleThis role will be assigned to newly created users.
-    Use custom logic in user provisioningIf you want to add your own logic to the user provisioning, enable this function and use the CustomUserProvisioning to point to your custom logic. This microflow will be executed after the user has been created or updated through the default user provisioning provided by the module (using the settings above).
-    Just in time provisioningDuring the login process all fields from the Assertions can be copied into the user account entity. All Claim fields from the Assertion will be copied into the selected Mx User Attribute. 
-        Claim
-        Mx User attribute
+* **Uses InCommon Federation Standard** – IdPs that use the InCommon standard often do not specify the assertion attributes. When following the InCommon standard, a fixed set of assertion attributes will be available to choose from later.
+* **Identifying assertion** (aka "Principal Key") – Specifies which of the assertion attributes identifies the user name.
+	{{% alert type="info" %}}In Mendix version 7,  all user names passing through the SAML module are converted to lower-case before login and creation. We strongly advise you to convert all existing and new user names to lower-case as well.
+	{{% /alert %}}
+* **User entity** – The Mendix entity in which you will store and look up the user account. Most often something like `Administration.Account`.
+* **AttributeOn** – Determines the attribute on which you want to do the lookup. This attribute will be compared against the passed **Identifying Assertion** (see above).
+* **User Action** – The module will always search for the user, based on the **Identifying Assertion**. You can allow the module to create users with a predefined user role. If you allow the module to create users, it will automatically create a new user account if the user cannot be found.  If the module is not allowed to create users, it will present a message to the user stating that the login action was successful but no user has been configured. 
+* **Default user role** – This role will be assigned to newly created users.
+* **Use custom logic in user provisioning** – If you want to add your own logic to the user provisioning, enable this function and use [CustomUserProvisioning](#customuserprovisioning) to point to your custom logic. This microflow will be executed after the user has been created, or it will be updated through the default user provisioning provided by the module (using the settings above).
+* **Just in time provisioning** – During the login process, all fields from the assertions can be copied into the user account entity. All the **Claim** fields from the assertion will be copied into the selected **Mx User Attribute**. 
+	* **Claim**
+	* **Mx User attribute**
 
 #### 3.2.4 Authentication Context
 
@@ -132,7 +134,7 @@ When testing and debugging the configuration an option is to view the messages i
 
 The module tries to lookup the user that matches the provided username. When multiple System.User records are found this microflow is always executed. It is possible to customize this microflow to determine the correct user. Whichever user instance is returned will be signed in to the application (and passed on to any other microflow).
 
-    CustomUserProvioning
+    CustomUserProvioning {#customuserprovisioning}
 
 When choosing in the SSO configuration to run the customUserProvisioning action (previously known as CustomLoginLogic) you can update the new or retrieved user with additional information from the assertion.All assertions are passed into the microflow which can be transformed and stored in the user record, or additional roles can be granted to the users based on the AssertionAttributes.
 

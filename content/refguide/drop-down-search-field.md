@@ -23,7 +23,7 @@ To add a drop-down search field to your data grid, right-click within the search
 
 {{% snippet file="refguide/search-field-comparison-property.md" %}}
 
-There is no limitation on the amount of drop-down selection options, thus the selected attribute can have an unlimited amount of unique values. However, having thousands or more options that need to be retrieved from the server will impact page loading performance considerably on older browsers. Initially hiding the search bar, that contains the drop-down search field, can improve page loading performance on first load.
+There is no limit on the number of drop-down selection options, thus a selected attribute can have an unlimited amount of unique values. However, having thousands of options which must be retrieved from the server will slow page loading considerably on older browsers. Initially hiding the search bar which contains the drop-down search field can improve page loading performance on first load.
 
 ### Allow multi-select
 

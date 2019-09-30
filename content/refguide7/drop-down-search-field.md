@@ -4,7 +4,6 @@ parent: "search-bar"
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-
 ## Common Properties
 
 {{% snippet file="refguide7/Search+Field+Caption+Property.md" %}}
@@ -19,13 +18,15 @@ parent: "search-bar"
 
 {{% snippet file="refguide7/Search+Field+Comparison+Property.md" %}}
 
+There is a limitation of a 1000 on the amount of drop-down selection options, so no more than a 1000 unique values of the selected attribute can be selectable. This limitation has been set to prevent bad page loading performance on older browsers when these options need to be retrieved from the server. In Mendix 8 this limitation has been removed.
+
 ### Allow multi-select
 
 If this property is set to 'Yes', the resulting drop-down allows you to select multiple values instead of just one. When searching all records match for which the corresponding attribute is equal to one of the selected values. For example, you can search for all orders with status 'Submitted' or 'In progress'.
 
 ### XPath Constraint
 
-If the 'drop-down' search field is connected to an attribute of an associated entity (as opposed to the grid entity itself) the XPath constraint can be used to limit  objects shown in the drop-down.
+If the 'drop-down' search field is connected to an attribute of an associated entity (as opposed to the grid entity itself) the XPath constraint can be used to limit objects shown in the drop-down.
 
 {{% alert type="info" %}}
 

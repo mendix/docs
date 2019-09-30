@@ -23,13 +23,15 @@ To add a drop-down search field to your data grid, right-click within the search
 
 {{% snippet file="refguide/search-field-comparison-property.md" %}}
 
+There is no limitation on the amount of drop-down selection options, thus the selected attribute can have an unlimited amount of unique values. However, having thousands or more options that need to be retrieved from the server will impact page loading performance considerably on older browsers. Initially hiding the search bar, that contains the drop-down search field, can improve page loading performance on first load.
+
 ### Allow multi-select
 
 If this property is set to 'Yes', the resulting drop-down allows you to select multiple values instead of just one. When searching all records match for which the corresponding attribute is equal to one of the selected values. For example, you can search for all orders with status 'Submitted' or 'In progress'.
 
 ### XPath Constraint
 
-If the 'drop-down' search field is connected to an attribute of an associated entity (as opposed to the grid entity itself) the XPath constraint can be used to limit  objects shown in the drop-down.
+If the 'drop-down' search field is connected to an attribute of an associated entity (as opposed to the grid entity itself) the XPath constraint can be used to limit objects shown in the drop-down.
 
 {{% alert type="info" %}}
 

@@ -18,7 +18,7 @@ parent: "search-bar"
 
 {{% snippet file="refguide7/Search+Field+Comparison+Property.md" %}}
 
-There is a limitation of a 1000 on the amount of drop-down selection options, so no more than a 1000 unique values of the selected attribute can be selectable. This limitation has been set to prevent bad page loading performance on older browsers when these options need to be retrieved from the server. In Mendix 8 this limitation has been removed.
+The number of drop-down selection options is capped at 1,000. Therefore, no more than 1,000 unique values of a selected attribute can be selectable. This limit has been set to protect page loading performance on older browsers when these options need to be retrieved from the server. In Mendix 8 this limit has been removed.
 
 ### Allow multi-select
 

@@ -75,5 +75,4 @@ Before starting this how-to, make sure you have completed the following prerequi
 *   [How to Set Up Data Validation](setting-up-data-validation)
 *   [How to Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
 *   [Stories](/developerportal/collaborate/stories)
-*   [How to Perform the Scout and Windows 10 Workaround](../front-end/perform-scout-and-windows-10-workaround)
 

@@ -13,6 +13,8 @@ For more information on the Make It Native app, see [Getting the Make It Native 
 
 ## Android 1.1.0
 
+**Release date: September 30th, 2019**
+
 The Make It Native app now has tablet support. Now you can run and test your Mendix application using the Make It Native app on tablets. 
 
 In addition, device orientation is now fully supported. Now you can test your apps in any device orientation.

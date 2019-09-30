@@ -81,7 +81,7 @@ The details page for each add-on and app presents the following item information
 
 	![](attachments/app-store-overview/content_detail_9.png)
 
-### 3.3 Additional Info Section
+### 3.3 Additional Info Section {#additional-info}
 
 {{% image_container width="300" %}}
 ![](attachments/app-store-overview/content_detail_2.png)

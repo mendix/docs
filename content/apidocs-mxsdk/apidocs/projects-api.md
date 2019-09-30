@@ -21,7 +21,7 @@ The following errors might be returned by the service. As this API is implemente
 
 The following operations are available in the Projects API.
 
-### 3.1 CreateNewApp
+### 3.1 CreateNewApp {#createnewapp}
 
 The CreateNewApp operation will create a new app and corresponding project. As parameters it requires a project name, a user name that is linked to a Mendix account, an [API Key](authentication) corresponding to that user account, and a project summary. The project summary may contain a brief description of the project.
 

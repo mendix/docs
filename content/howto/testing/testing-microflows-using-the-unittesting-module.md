@@ -27,8 +27,7 @@ Before you can start with this how-to, make sure you have completed the followin
     | [Community Commons Function Library](https://appstore.home.mendix.com/link/app/170/) | 8.1.0 |
     | [ObjectHandling](https://appstore.home.mendix.com/link/app/37114/) | 3.0.0 |
 
-	{{% alert type="warning" %}}
-	All images, names, and steps in this how-to are based on the App Store item versions listed above. When using later versions of these App Store items, images and/or names on your screen may be different than what is used in this how-to.
+	{{% alert type="warning" %}}All the images, names, and steps in this how-to are based on the App Store item versions listed above. When using later versions of these App Store items, images and/or names on your screen may be different than what is used in this how-to.
 	{{% /alert %}}
 
 ## 3 The UnitTesting Module
@@ -71,9 +70,13 @@ In this chapter you will set up the unit testing module and run the example test
 	![](attachments/18448633/18580341.png)
 
 	On the left side of the page, two buttons are shown. When you click **Run all module tests**, all the unit tests are executed (with check mark icons). When you click **Reset all tests**, the status of the tests change to not executed (with question mark icons).
+
 	Beneath these buttons, the modules that contain unit tests are shown. To begin with and in this scenario, **UnitTesting** is the only module that contains unit tests. When you click a module, all the unit tests of the module are shown.
+
 	If you want to save all the changes made in the microflow to the database, you need to clear the **Rollback microflow tests after execution** box. Keep the box checked if you want to roll back all the changes.
+
 	On the right side of the page, the unit tests of the selected module are shown. In this scenario, five main unit tests are shown. When you click **Run module tests**, all the unit tests are executed. When you click **Run test**next to a unit test, only that unit test is executed.
+
 18. Click **Run Test** for **UnitTesting.Test_ValidUnitTest**. The color of the test case changes to red if failed and to green if passed:
 
 	![](attachments/18448633/18580358.png)
@@ -137,13 +140,15 @@ To create the microflow, follow these steps:
 	**Test_PromoteEmployeeToMedior**:
 
 	<iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/a609f474-dd8c-4315-84fb-1056256ca3fc/unittest-promote-employee-to-medior?embed=true"></iframe>
-**Test_PromoteEmployeeToSenior**:
+
+	**Test_PromoteEmployeeToSenior**:
 	
-  <iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/f247e678-1738-416a-8e6a-77dfdb2cf392/unittest-promote-employee-to-senior?embed=true"></iframe>
+	<iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/f247e678-1738-416a-8e6a-77dfdb2cf392/unittest-promote-employee-to-senior?embed=true"></iframe>
+
 	**Test_PromoteEmployeeWhenAlreadySenior**:
 	
 	<iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/44d6c6be-d35c-403d-ad2f-d89398956a07/unittest-promote-employee-when-already-senior?embed=true"></iframe>
-	
+
 17. Run the app locally and view it. 
 18. Click **UnitTestOverview** in the navigation, and click **MyFirstModule** in the list of modules that contain one or more test cases:
 

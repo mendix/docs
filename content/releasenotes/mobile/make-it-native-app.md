@@ -11,6 +11,20 @@ tags: ["Native", "Android", "iOS", "Apple", "Android"]
 For more information on the Make It Native app, see [Getting the Make It Native App](/refguide/getting-the-make-it-native-app). Click here to download the Make It Native app for [iOS](https://apps.apple.com/app/make-it-native/id1334081181), or here for [Android](https://play.google.com/store/apps/details?id=com.mendix.developerapp).
 {{% /alert %}}
 
+## Android 1.1.0
+
+**Release date: September 30th, 2019**
+
+### New Feature
+
+The Make It Native app now has tablet support. Now you can run and test your Mendix application using the Make It Native app on tablets. 
+
+### Improvements
+
+Device orientation is now fully supported. Now you can test your apps in any device orientation.
+
+We also improved loading performance by optimizing the bundle size when **Dev Mode** is disabled. 
+
 ## Android 1.0.0 / iOS 1.0.2
 
 **Release date: August 1st, 2019**

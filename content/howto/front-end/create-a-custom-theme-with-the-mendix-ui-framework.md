@@ -37,10 +37,6 @@ To create a new app and select a theme from the **New App** selector, follow the
 
 ## 4 Configuring Scout
 
-{{% alert type="info" %}}
-To configure Scout, Windows 10 users need to use the workaround described in [How to Perform the Scout and Windows 10 Workaround](perform-scout-and-windows-10-workaround).
-{{% /alert %}}
-
 To be able to make changes to the theme, Mendix suggests using [Sass](http://sass-lang.com/) instead of traditional CSS. The Mendix UI Framework uses Sass, which relies on Ruby. However, you can install Scout to run Sass in a self-contained Ruby environment, letting you effortlessly manage all of your Sass projects with a handful of clicks. This way you don't have to worry about using the terminal (although you can still do this if you are familiar with Sass and the terminal).
 
 To configure Scout, follow these steps:
@@ -172,7 +168,6 @@ Re-deploy your app to see the shiny new logo:
 
 ## 7 Read More
 
-* [Perform the Scout and Windows 10 Workaround](perform-scout-and-windows-10-workaround)
 * [Layouts and Snippets](layouts-and-snippets)
 * [Set Up Mendix UI Framework with Just CSS](setup-mendix-ui-framework-with-just-css)
 * [Set Up the Navigation Structure](../general/setting-up-the-navigation-structure)

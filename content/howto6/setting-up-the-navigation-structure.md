@@ -93,13 +93,11 @@ Now that you've created a menu structure it's time to start using it on pages.
 
     To prevent repeating the previous steps for every page in your project, the Mendix Modeler supports something called layouts. With layouts you can define a base structure for pages in your project. In a layout you can define where the menu should be rendered and you can simply reuse that layout for the desired pages.
 
-## 6\. Related content
+## 6. Related content
 
-*   [Scout and Windows 10 Workaround](scout-and-windows-10-workaround)
 *   [Layouts and Snippets](layouts-and-snippets)
 *   [Filtering Data on an Overview Page](filtering-data-on-an-overview-page)
 *   [Setup Mendix UI Framework with just CSS](setup-mendix-ui-framework-with-just-css)
-
 *   [Setup Mendix UI Framework](setup-mendix-ui-framework)
 *   [Setting Up the Navigation Structure](setting-up-the-navigation-structure)
 *   [Setup Mendix UI Framework with Koala](setup-mendix-ui-framework-with-koala)

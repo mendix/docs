@@ -40,6 +40,12 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 
 ## 2019
 
+### October 1st, 2019
+
+#### App Store Improvements
+
+* We display the UUID of App Store content on the details page. This will allow you to specify the TemplateUUID when calling the [CreateNewApp operation in the ProjectsAPI](/apidocs-mxsdk/apidocs/projects-api#3-1-createnewapp).
+
 ### September 24th, 2019
 
 #### Developer Portal Improvements

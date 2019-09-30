@@ -95,6 +95,7 @@ In the **Additional Info** section, you can see the following information (depen
 * The type of **License** for the item
 * The type of support Mendix offers for the item (for more information, see [App Store Content Support](app-store-content-support))
 * The **URL** for the item page that you can copy and share
+* The **UUID** of the item. If the app is part of the 'Getting Started' category, this UUID can be used in the [CreateNewApp operation in the ProjectsAPI](/apidocs-mxsdk/apidocs/projects-api#3-1-createnewapp)
 * A **View on GitHub** link, which will take you to the GitHub source files of the content
 * A link to the documentation on how to install App Store item
 

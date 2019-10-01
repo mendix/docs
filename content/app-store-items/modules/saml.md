@@ -12,20 +12,20 @@ The [SAML](https://appstore.home.mendix.com/link/app/1174/) module can be used a
 
 By configuring the information about all identity providers in this module, you will allow the users to log in using the correct identity provider (IdP). There is no limit on the number of different identity providers you can configure.
 
-## 2 Typical Usage Scenario
+### 1.1 Typical Usage Scenarios
 
-Authenticate against your Microsoft Active Directory server in a secure manner. The SAML protocol allows for encryption of all the information transferred between the two servers, so VPN connections, LDAP, or Kerberos authentication are no longer needed.
+With this module, you can authenticate against your Microsoft Active Directory server in a secure manner. The SAML protocol allows for the encryption of all the information transferred between the two servers, so VPN connections, LDAP, or Kerberos authentication are no longer needed.
 
-### 2.1 Features
+### 1.2 Features
 
 * Configure all the options allowed in the SAML 2.0 specification. 
 
-### 2.2 Limitations
+### 1.3 Limitations
 
 * There is no support (yet) for the SOAP binding
 * SAML1.0 is not supported.
 
-### 2.3 Dependencies
+### 1.4 Dependencies
 
 * [MxModelReflection](https://appstore.home.mendix.com/link/app/69/)
 

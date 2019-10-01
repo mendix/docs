@@ -10,9 +10,11 @@ draft: true
 
 Use the [Deep Link](https://appstore.home.mendix.com/link/app/43/) to add request handlers to your app that will trigger microflows.
 
+### 1.1 Typical Usage Scenarios
+
 The typical usage scenario is configuring a link to trigger a microflow like this: `    https://myapp.com/link/resetpassword/DF6345SDF`. The module is design- and runtime-configurable, it respects security, and it supports links for both logged-in and anonymous users.
 
-With this module, you can do the following: 
+### 1.2 Features
 
 * Create persistent links to view only pages, which you can use in emails or on your website
 * Provide a colleague a link to a certain object instead of describing the necessary navigation steps

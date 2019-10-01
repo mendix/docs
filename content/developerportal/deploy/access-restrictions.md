@@ -28,7 +28,7 @@ When configuring an access restriction profile, you need to bear the following t
 
 * When using client certificate restrictions, the client certificate Certificate Authority (CA) in all active profiles must be identical (in other words, it is only possible to use a single CA for the entire application environment)
 
-* Only Root CA verification is supported. Any client certificate with a valid path to the Root CA will be allowed access. Intermediate CA verification is **not** supported. 
+* Only Root CA verification is supported. Any client certificate with a valid path to the Root CA will be allowed access. Certificate mapping is not supported.
 
 ## 3 Applying a Restriction to an Application Environment
 

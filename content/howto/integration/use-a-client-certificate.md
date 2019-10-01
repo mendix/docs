@@ -44,7 +44,7 @@ A complete configuration may look like this:
 
 ![](attachments/use-a-client-certificate/example-custom-settings.png)
 
-You can use an empty path for `ClientCertficateUsages` to specify that you do not want to use a client certificate, even when the server accepts one. To do this, you need to add the **Value** `{"<endpoint>":""}` (replace `<endpoint>` with the actual endpoint).
+You can use an empty path for `ClientCertificateUsages` to specify that you do not want to use a client certificate, even when the server accepts one. To do this, you need to add the **Value** `{"<endpoint>":""}` (replace `<endpoint>` with the actual endpoint).
 
 {{% alert type="info" %}}
 

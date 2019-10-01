@@ -40,6 +40,12 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 
 ## 2019
 
+### October 1st, 2019
+
+#### App Store Improvements
+
+* We now display the UUID of an App Store item in the [Additional Info](/developerportal/app-store/app-store-overview#additional-info) section of its details page. This allows you to specify the `TemplateUUID` when calling the [CreateNewApp operation](/apidocs-mxsdk/apidocs/projects-api#createnewapp) in the *Projects API*.
+
 ### September 24th, 2019
 
 #### Developer Portal Improvements

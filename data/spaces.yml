@@ -179,6 +179,7 @@ app-store-items:
   menu_categories:
     - "Modules"
     - "Widgets"
+    - "Starter Apps"
 product-naming:
   space: "Mendix Product Naming Guide"
   priority: false

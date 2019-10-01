@@ -14,13 +14,13 @@ draft: true
 
 {{% todo %}}[Still need to check which Starter Apps will be updated and how to tell what version of MendixSSO they have]{{% /todo %}}
 
-The [MendixSSO module](https://appstore.home.mendix.com/link/app/111300/mendix/mendixsso-(for-mendix-7)) enables your app users to sign in with their Mendix account when your app is deployed to the Mendix Cloud.
+The [MendixSSO module](https://appstore.home.mendix.com/link/app/111349/Mendix/MendixSSO-(for-Mendix-7)) enables your app users to sign in with their Mendix account when your app is deployed to the Mendix Cloud.
 
 Using Mendix accounts means that you do not need a special authorization module to support resetting and changing passwords, and makes it easy to create multiple applications which all use the same sign-on mechanism.
 
 Many Mendix starter apps come with the Mendix SSO module already available. For these, all you have to do is to set your security level to **Production** and your end-users will be able to sign in.
 
-If your app does not have the MendixSSO module, it is available from the Mendix App Store here: [Mendix SSO](https://appstore.home.mendix.com/link/app/111300/mendix/mendixsso-(for-mendix-7)). Follow the instructions in [How To Use App Store Content](/developerportal/app-store/app-store-content) to import it into your app and then follow the instructions in [Setting Up Mendix Single Sign-On](#setting-up), below.
+If your app does not have the MendixSSO module, it is available from the Mendix App Store here: [Mendix SSO](https://appstore.home.mendix.com/link/app/111349/Mendix/MendixSSO-(for-Mendix-7)). Follow the instructions in [How To Use App Store Content](/developerportal/app-store/app-store-content) to import it into your app and then follow the instructions in [Setting Up Mendix Single Sign-On](#setting-up), below.
 
 If you need a newer version of the Mendix SSO module (for example, to use a new feature), then it is also available from the App Store via the same link.
 
@@ -114,7 +114,7 @@ You do not have to follow these steps for apps (for example, starter apps) which
 
 To enable Mendix SSO in your app, if it does not have it set up already, you need to follow the following steps:
 
-1. Import the MendixSSO module from the [Mendix App Store](https://appstore.home.mendix.com/link/app/111300/mendix/mendixsso-(for-mendix-7)).
+1. Import the MendixSSO module from the [Mendix App Store](https://appstore.home.mendix.com/link/app/111349/Mendix/MendixSSO-(for-Mendix-7)).
 
 2. Add the microflow **AfterStartup_MendixSSO** to the **After startup** microflow.
     1. Open **Project Settings** from the **Project Explorer**

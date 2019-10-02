@@ -34,7 +34,6 @@ function createEntity(domainModel : domainmodels.DomainModel, entityName : strin
     // new attribute (which is by default a string attribute):
     const newAttribute = domainmodels.Attribute.createIn(newEntity);
 	newAttribute.name = attributeName;
-	newEntity.attributes.push(newAttribute);
 }
 ```
 

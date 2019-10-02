@@ -61,7 +61,7 @@ The width of an image. Possible values of this property are described in the tab
 
 *Default value*: Auto
 
-{{% alert type="info" %}}Not supported on native mobile pages.{{% /alert %}}
+{{% alert type="info" %}}This property is not supported on native mobile pages.{{% /alert %}}
 
 #### 2.3.3 Width
 
@@ -81,7 +81,7 @@ The height of an image. Possible values of this property are described in the ta
 
 *Default value*: Auto
 
-{{% alert type="info" %}}Not supported on native mobile pages.{{% /alert %}}
+{{% alert type="info" %}}This property is not supported on native mobile pages.{{% /alert %}}
 
 #### 2.3.5 Height
 
@@ -95,7 +95,7 @@ This property influences how the image scales. If the value is 'Yes', the image 
 
 _Default value:_ Yes
 
-{{% alert type="info" %}}Not supported on native mobile pages.{{% /alert %}}
+{{% alert type="info" %}}This property is not supported on native mobile pages.{{% /alert %}}
 
 ### 2.4 Visibility Section {#visibility}
 

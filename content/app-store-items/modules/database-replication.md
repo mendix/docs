@@ -33,7 +33,7 @@ You can use the [Database Replication](https://appstore.home.mendix.com/link/app
 	* Make sure you remove any older versions of *replication.jar* before installing this module (if you update, you do not need to remove the library anymore)
 	* If you have an old *replication.jar file* and are using the [Excel Importer](https://appstore.home.mendix.com/link/app/72/), update this module as well, since you need Excel Importer 3.0 or higher when using this module
 
-## 2 Configuration
+## 2 Configuring Properties
 
 After downloading the module, you should place the **DatabaseMapping** page in the menu or put both the **Database_Overview** and **TableMapping_Overview** pages in your menu. With these pages, you can create database connections and table mappings. 
 
@@ -69,26 +69,26 @@ Table mappings are created from the **Mappings** page. Each mapping is associate
 
 A descriptive name for your mapping.
 
-#### 2.2.2 Database name, table
+#### 2.2.2 Database Name & Table
 
-The database and table you want to retrieve data from. If you need other tables to create your Mendix object, you can select these later.
+This is the database and table from which you want to retrieve data. If you need other tables to create your Mendix object, you can select these later.
 
-#### 2.2.3 Object type
+#### 2.2.3 Object Type
 
-The Mendix object type this table should be mapped to.
+The Mendix object type to which this table should be mapped.
 
-### 2.3 Defining a mapping
+## 3 Defining the Mappings
 
-Once a mapping has been created, you can use the mapping editor to define various aspects of the mapping. The mapping editor has 4 tabs that will be explained below.
+Once the mapping has been created, you can use the mapping editor to define various aspects of the mapping. The mapping editor tabs are described below.
 
-At the top of the form, you can set the “import action”. This setting controls how mapped objects are added to your application. This option only applies to the object selected on template level, all associations need te be configured separately.
+At the top of the page, you can set the **Import action**. This setting controls how mapped objects are added to your application. This option only applies to the object selected on the template level. All associations need to be configured separately.
 
-    “synchronize and create objects” updates objects that already exist with the values from the database. Objects that cannot be found are created. 
-    “synchronize only existing objects” only updates objects that already exist, but does not create any new objects.
-    “create an object for each row” does not check whether objects already exist. For each row in the sheet a new object is created. 
-    "Only create new objects" searches for any objects with the defined key. If those objects were not found it will create a new object. If the object was found it will be skipped. 
+* **Synchronize and create objects** – updates objects that already exist with the values from the database; objects that cannot be found are created
+* **Synchronize only existing objects** – only updates objects that already exist, but does not create new objects
+* **Create an object for each row** – does not check whether objects already exist; for each row in the sheet, a new object is created
+* **Only create new objects** – searches for any objects with the defined key; if an object is not found, a new object is created; if the object is found, it is skipped
 
-## 3 Tab page Column mappings
+## 3 Tab Page Column mappings
 
 For each attribute or reference on a target Mendix object, you must define a column mapping. This defines which column will be used to get the attribute value. A column mapping has the following properties.
 

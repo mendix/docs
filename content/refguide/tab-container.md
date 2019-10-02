@@ -53,7 +53,7 @@ _Default value:_ False
 
 _Default value:_ True
 
-{{% alert type="info" %}}Not supported on native mobile pages.{{% /alert %}}
+{{% alert type="info" %}}This property is not supported on native mobile pages.{{% /alert %}}
 
 ## 4 Read More
 

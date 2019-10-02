@@ -27,7 +27,6 @@ import {domainmodels} from "mendixmodelsdk";
 function createEntity(domainModel : domainmodels.DomainModel, entityName : string, attributeName : string) {
     const newEntity = domainmodels.Entity.createIn(domainModel);
 	newEntity.name = entityName;
-	domainModel.entities.push(newEntity);
 
 	// location on the canvas in the Mendix Studio Pro:
 	newEntity.location = { 'x': 100, 'y': 100 };

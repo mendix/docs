@@ -10,6 +10,8 @@ draft: true
 
 The [Format String](https://appstore.home.mendix.com/link/app/264/) widget adds a user-defined string to your page, taking object attributes as input parameters.
 
+### 1.1 Typical Usage Scenarios
+
 The typical usage scenario is displaying multiple attributes as a single string.
 
 ### 1.1 Features

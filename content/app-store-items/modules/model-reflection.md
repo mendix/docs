@@ -10,6 +10,8 @@ draft: true
 
 The [Mx Model Reflection](https://appstore.home.mendix.com/link/app/69/) module can be used to show the reflection of the configuration in your domain model. The module creates an object for each entity, attribute, and reference.
 
+### 1.1 Typical Usage Scenarios
+
 The typical usage scenario is selecting and showing entities from your domain model to use for another configuration. 
 
 ## 2 Configuration

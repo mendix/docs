@@ -30,6 +30,6 @@ The how-to's in this category will teach you to perform certain actions to integ
 * [How to Use the XSUAA Connector for SAP Cloud Platform](use-sap-xsuaa-connector)
 * [Use SAP Connectivity Services with REST and SOAP](sap-destination-with-rest)
 
-## 4 Learning Paths
+## 4 Learning Path
 
-If you are getting started with using SAP with Mendix, you may find it helpful to follow the Mendix learning path for building SAP apps: [Learn to Build an SAP App](https://gettingstarted.mendixcloud.com/link/path/32). 
+If you are getting started with using SAP with Mendix, you may find it helpful to follow the [Learn to Build an SAP App](https://gettingstarted.mendixcloud.com/link/path/32) learning path

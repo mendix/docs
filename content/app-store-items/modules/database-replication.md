@@ -41,43 +41,43 @@ To use this module, you need a database connection definition and a table mappin
 
 Once a database and mapping have been defined, you can use the **importByMapping** Java action to run an import. You can also use the **Import by table mapping** button on the mapping overview.
 
-### 2.2 Database Connection Properties
+### 2.1 Database Connection Properties
 
-You can create new database connections from the “Databases” Form. Each connection has a few basic properties. After creating a database connection, you should synchronize the table information using the button on the overview. This makes sure the connection information is correct, and that the replication module has all the table information from your database.
+You can create new database connections from the **Databases** page. Each connection has a few basic properties. After creating a database connection, you should synchronize the table information using the button on the overview. This makes sure the connection information is correct, and that the replication module has all the table information from your database.
 
-#### 2.2.1 Type
+#### 2.1.1 Type
 
-The type of database you want to import.
+This is the type of database you want to import.
 
-#### 2.2.2 URL, Port
+#### 2.1.2 URL & Port
 
-The hostname and port number of the server your database is running on.
+This is the host name and port number of the server on which your database is running.
 
-#### 2.2.3 Name, Instance name
+#### 2.1.3 Name & Instance Name
 
-The name and instance name of the database schema to connect to. Instance name is optional.
+This is the name and instance name of the database schema to connect to. The **Instance name** is optional.
 
-#### 2.2.4 Username, Password
+#### 2.1.4 Username & Password
 
-Credentials necessary to login to the database.
+These are the credentials necessary to log in to the database.
 
-### 2.3 Mapping properties
+### 2.2 Mapping Properties
 
-Table mappings are created from the “Mappings” form. Each mapping is associated to a single database. A mapping is always defined for one main Mendix object type and one corresponding database table. Information that is needed from other tables can be joined in later. The “new mapping” dialog allows you to set these properties.
+Table mappings are created from the **Mappings** page. Each mapping is associated to a single database. A mapping is always defined for one main Mendix object type and one corresponding database table. The information that is needed from other tables can be joined in later. The **New mapping** dialog box enables setting these properties.
 
-#### 2.3.1 Description
+#### 2.2.1 Description
 
 A descriptive name for your mapping.
 
-#### 2.3.2 Database name, table
+#### 2.2.2 Database name, table
 
 The database and table you want to retrieve data from. If you need other tables to create your Mendix object, you can select these later.
 
-#### 2.3.3 Object type
+#### 2.2.3 Object type
 
 The Mendix object type this table should be mapped to.
 
-### 2.4 Defining a mapping
+### 2.3 Defining a mapping
 
 Once a mapping has been created, you can use the mapping editor to define various aspects of the mapping. The mapping editor has 4 tabs that will be explained below.
 

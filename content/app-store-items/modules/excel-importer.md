@@ -78,7 +78,7 @@ You can specify how you want to import your objects in this property.
 
 The following options are available:
 
-* **Synchronize objects** – updates objects that already exist with the values in the Excel sheet; objects that cannot be found are created, and references to other objects are treated the same way.
+* **Synchronize objects** – updates objects that already exist with the values in the Excel sheet; objects that cannot be found are created, and references to other objects are treated the same way
 * **Synchronize only existing objects** – updates objects that already exist, but does not create any new objects
 * **Create an object for each row** – creates a new object for each row in the sheet; it does not check whether objects already exist.
 * **Only create new objects** – searches for any objects with the defined key; if those objects are not found, it will create a new object; if an object is found, it will be skipped

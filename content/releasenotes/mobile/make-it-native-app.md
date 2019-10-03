@@ -4,7 +4,6 @@ category: "Mobile Products"
 menu_order: 10
 description: "These release notes showcase each release of the iOS and Android Make It Native app versions."
 tags: ["Native", "Android", "iOS", "Apple", "Android"]
-#ki: "Clearing data on Android" = NALM-153
 ---
 
 {{% alert type="info" %}}
@@ -25,6 +24,10 @@ Device orientation is now fully supported. Now you can test your apps in any dev
 
 We also improved loading performance by optimizing the bundle size when **Dev Mode** is disabled. 
 
+### Fix
+
+* <a name="153"></a>We fixed an issue where clearing data on Android via the start screen did not clear cookies correctly.
+
 ## Android 1.0.0 / iOS 1.0.2
 
 **Release date: August 1st, 2019**
@@ -36,3 +39,4 @@ The apps are not backwards compatible with the Mendix Studio Pro 8.0.0 Beta vers
 ### Known Issues
 
 * Clearing data on Android via the start screen does not clear cookies correctly. Using the developer menu option does clear cookies.
+	* Fixed in [1.1.0](#153) 

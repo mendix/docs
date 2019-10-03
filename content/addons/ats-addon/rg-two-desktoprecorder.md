@@ -43,6 +43,6 @@ Windows, Mac, and Linux are all supported.
 
 In most cases, administrative privileges are not needed to install the desktop recorder. However, the administrator may have restricted access to `registry eidting`, which is necessary for the installation. If this is the case, the following error will be displayed during installation: "ERROR: Registry editing has been disabled by your administrator." If you see this message, ask your system administrator to complete the installation or temporarily lift the restrictions on registry editing.
 
-## 4.4. Can I use the ATS helper in combination with the Desktop Recorder?
+## 4.4. Can I Use the ATS Helper in Combination with the Desktop Recorder?
 
-Yes. To install the **ATS Helper**, first, you need to start a recording. Then in the new window open ATS and install the ATS Helper from the info dialog by drag and drop.
+Yes. To install the [ATS Helper](rg-two-ats-helper), you first need to start a recording. Then, in the new window, open ATS and install the ATS Helper from the info dialog box via drag-and-drop.

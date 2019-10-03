@@ -289,7 +289,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 
 * We have added the ability to manage *SAP Cloud Platform* Cloud Foundry Marketplace services from within the Mendix Developer Portal.
 
-#### Known Issue
+#### Limitation
 
 * If an app is deployed to SAP from the Desktop Modeler *before it has been started from the Developer Portal*, the deployment will fail because the marketplace services have not been bound. Please ensure that apps are first deployed from the Developer Portal before trying to deploy them from the Desktop Modeler.
 

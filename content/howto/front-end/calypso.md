@@ -41,6 +41,7 @@ Calypso is a tool which makes it easier for you to customize your Mendix apps' s
 6. In **Apps Collection**, click the **Browse** button and then select the folder which contains all your Mendix apps. Configuring this enables you to switch easily between apps. 
 
 7. Complete **App Folder** by selecting the folder of the Mendix app you want to work on from the drop-down menu.
+	{{% alert type="warning" %}}Be sure your Mendix app folder directory contains no spaces in its folders' names. Spaces can interfere with Calypso's ability to parse file locations.{{% /alert %}}
 
 8.  Complete **Watching** to specify which files you want to be processed by Calypso. 
 

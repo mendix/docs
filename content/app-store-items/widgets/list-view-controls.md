@@ -8,15 +8,16 @@ draft: true
 
 ## 1 Introduction
 
-The [List View Controls](https://appstore.home.mendix.com/link/app/87/) widget enables users to filter or search a list view with a data sources Database or XPath
-Available widgets
+The [List View Controls](https://appstore.home.mendix.com/link/app/87/) widget enables filtering and searching a list view with the databas and XPath data sources.
 
-    Check box filter: Filters a list view with various constraints when checked or unchecked
-    Drop down filter: Filters a list view with various options that can be selected from a drop-down
-    Drop down sort: Adds an interactive sort to your list view.
-    Text box search: Adds an interactive search box to all of your list view
-    Pagination: Adds bootstrap like paging to a list view and page numbers similar to in-built data grid
-    Header sort: Add sorting behavior to the headers of a list view.
+These are the available list view widgets:
+
+* **Check box filter** – filters a list view with various constraints when checked or unchecked
+* **Drop down filter** – filters a list view with various options that can be selected from a drop-down
+* **Drop down sort** – Adds an interactive sort to your list view.
+* **Text box search** – Adds an interactive search box to all of your list view
+* **Pagination** – Adds bootstrap like paging to a list view and page numbers similar to in-built data grid
+* **Header sort** – Add sorting behavior to the headers of a list view.
 
 ### 1.1 Demo projects
 

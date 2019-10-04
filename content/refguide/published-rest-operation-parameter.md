@@ -5,7 +5,6 @@ menu_order: 20
 description: "Configure a published REST Operation by adding parameters to an operation "
 tags: ["published REST", "operation", "parameter", "resource", "mapping", "not found", "commit"]
 # If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
-# linked from DM integration - published rest > select resource > add operation for resource > add parameter > help)
 ---
 
 ## 1 Introduction
@@ -60,14 +59,12 @@ You can indicate whether the import mapping should commit the objects that it cr
 * **Yes without events** – commits the changes without triggering events such as validation rules
 * **No** – does not commit the changes, so you can commit them in your microflow. This is useful if you want to add some additional checks in your microflow, and skip the commit if one of those checks fail
 
-## 4 Public documentation
+## 4 Public Documentation
 
-Provide a **description** of the parameter. You can use [GitHub-flavored markdown](gfm-syntax) for rich text.
+Provide a **Description** of the parameter. You can use [GitHub-flavored Markdown](gfm-syntax) for rich text.
 
 This is used in the service's [OpenAPI (Swagger) documentation page](published-rest-services#interactive-documentation).
 
 {{% alert type="info" %}}
-
-The **public documentation** feature was introduced in version 8.3.0.
-
+The public documentation feature was introduced in version 8.3.0.
 {{% /alert %}}

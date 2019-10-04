@@ -88,181 +88,191 @@ At the top of the page, you can set the **Import action**. This setting controls
 * **Create an object for each row** – does not check whether objects already exist; for each row in the sheet, a new object is created
 * **Only create new objects** – searches for any objects with the defined key; if an object is not found, a new object is created; if the object is found, it is skipped
 
-## 3 Tab Page Column mappings
+## 3 Tab Page Column Mappings
 
-For each attribute or reference on a target Mendix object, you must define a column mapping. This defines which column will be used to get the attribute value. A column mapping has the following properties.
+For each attribute or reference on the target Mendix object, you must define a column mapping. This defines which column will be used to get the attribute value. A column mapping has the properties described below.
 
-### 3.1 Mapping type
+### 3.1 Mapping Type
 
-Use this field to indicate as which type object the column should be processed. You can choose an object attribute or an object reference. Depending on your choice, different subsequent options will be available.
+Use this field to indicate which type of object the column should be processed as. You can choose an object attribute or an object reference. Depending on your choice, different subsequent options will be available.
 
-### 3.2 Query type
+### 3.2 Query Type
 
-Whether you want to provide a custom query or use the automatic querying for this field. Usually, you will want the automatic querying, which is the default. Custom queries can be used to merge database fields, evaluate fields or alter their notation. When you choose custom you need to use escape characters, aliases etc. exactly as the database expects it. 
+This field determines whether you want to provide a custom query or use the automatic querying for this field. Usually, you will want the automatic querying, which is the default. Custom queries can be used to merge database fields, evaluate fields, or alter their notation. When you choose custom, you need to use escape characters or aliases exactly as the database expects.
 
-### 3.3 Table alias
+### 3.3 Table Alias
 
-Indicates the table that has the column you want to map. The tables in this dropdown are the ones you joined in in the “include additional tables” tab. The entry “Start object” represents the table you selected when creating the table mapping.
+This indicates the table that has the column you want to map. The tables in this drop-down menu are the ones you joined in in the **include additional tables** tab. The **Start object** entry represents the table you selected when creating the table mapping.
 
-### 3.4 Column name
+### 3.4 Column Name
 
-The name of the column you want to map.
+This is the name of the column you want to map.
 
-### 3.5 Format with microflow
+### 3.5 Format with Microflow
 
-You can use a custom microflow to parse data for an attribute. Such a microflow should have one String input parameter. This will receive the data entry from the database. The microflow should return the value to put in the field you want to map (i.e. a DateTime if mapping to a DateTime attribute).
+You can use a custom microflow to parse data for an attribute. Such a microflow should have one string input parameter. This will receive the data entry from the database. The microflow should return the value to put in the field you want to map (for example, a DateTime if mapping to a DateTime attribute).
 
-### 3.6 Attribute name
+### 3.6 Attribute Name
 
 This field is the name of the attribute you map this column to. This field also has quicksearch functionality. Type in the box to the left of the reference selector and press “tab” to search for the value you typed.
 
-### 3.7 Reference and Object type
+### 3.7 Reference & Object Type
 
 These fields are used to configure referenced objects. You can specify what reference should be followed and what type of object is used. Both fields have a quicksearch box.
 
-### 3.8 Is key
+### 3.8 Is Key
 
 This field determines whether the attribute can uniquely identify its object.
 
-    “No”: No special handling for this column.
-    “Yes” or “Yes, only for the main object ”: The field is a key value (unique) for the object it is mapped to.
-    “Yes, only for the associated object”: The field is a key for the object it is a reference to.
-    “Yes, for both”: The field is a key for both the mapped object and the referenced object.
+The following options are available:
 
-### 3.9 Case sensitive
+* **No** – no special handling for this column
+* **Yes** or **Yes, only for the main object** – the field is a key value (unique) for the object to which it is mapped
+* **Yes, only for the associated object** – the field is a key for the object to which it is a reference
+* **Yes, for both** – the field is a key for both the mapped object and the referenced object
 
-Whether values in this column should be interpreted as case sensitive or not. Keep in mind that this is only possible if the database you are using is case sensitive as well. For example if you’re using MS SQL you can’t use case sensitivity hence Microsoft doesn’t search case sensitive by default.
+### 3.9 Case Sensitive
 
-### 3.10 Custom query
+This determines whether values in this column should be interpreted as case sensitive or not. Keep in mind that this is only possible if the database you are using is case-sensitive as well. For example, if you are using MS SQL, you cannot use case sensitivity, hence Microsoft does not search case-sensitive by default.
 
-If you selected “custom” as a query type, you can enter a custom select value for the field. This enables you to construct a complex value for the mapped field. For instance, you can concatenate multiple database columns together. The “join tokens” table, below the query field, shows tokens representing tables you joined using the “include additional tables” tab. You can insert these into your query and they will be replaced by the proper table names. Keep in mind that this query must be provided in the dialect from the database you are retrieving the data from.
+### 3.10 Custom Query
 
-Example: To map a firstname and lastname column to a fullname object attribute, use a query like this: “[%startobject%].firstname + ‘ ‘ + [%startobject%].lastname” 
+If you selected **Custom** as the query type, you can enter a custom select value for the field. This enables constructing a complex value for the mapped field. For example, you can concatenate multiple database columns together. The **Join tokens** table (below the query field) shows the tokens representing the tables you joined using the **Include additional tables** tab. You can insert these into your query and they will be replaced by the proper table names. Keep in mind that this query must be provided in the dialect from the database from which you are retrieving the data.
 
-## 4 Tab page References
+For example, to map a first name and last name column to a full name object attribute, use a query like this: `“[%startobject%].firstname + ‘ ‘ + [%startobject%].lastname”`.
 
-For each reference that is used in the mapping, you can configure what should happen if a referenced object is not found. There are two options:
+## 4 Tab Page References
 
-    “Create if not found”: If the referenced object is not found, a new one will be created with the values found in the database.
-    “Ignore if not found”: If the referenced object is not found, the reference will not be set and no new object will be created.
-    “create an object for each row” does not check whether objects already exist. For each row in the dataset a new object is created. References between objects are not set. 
-    "Only create new objects" searches for any objects with the defined key. If those objects were not found it will create a new object. If the object was found it will be skipped. 
+For each reference that is used in the mapping, you can configure what should happen if a referenced object is not found. 
 
-### 4.1 Data handling
+The following options are available:
 
-Just like in the modeler the value of a reference(set) can be added to the current values of be overwritten. This property specifies which of those actions is used (<3.0 used overwrite as default)
+* **Create if not found** – if the referenced object is not found, a new one will be created with the values found in the database
+* **Ignore if not found** – if the referenced object is not found, the reference will not be set and no new object will be created
+* **create an object for each row** – does not check whether objects already exist; for each row in the dataset, a new object is created; references between objects are not set. 
+* **Only create new objects** – searches for any objects with the defined key; if those objects were not found, it will create a new object; if the object was found, it will be skipped
 
-    "Overwrite" always uses the contents of the sheet to overwrite the current reference value. In case of an empty cell, the reference will be set to empty as well.
-    "Append" add the new found associated objects to the reference(set). In case of an empty cell the reference remains unchanged.
+### 4.1 Data Handling
 
-### 4.2 Print message when reference is not found
+Like in Studio Pro, the value of a reference (set) can be added to the current values or be overwritten. This property specifies which of those actions is used (< 3.0 used **Overwrite** by default).
 
-Keep track of all the object keys in this association that could not be found. Warning: This consumes a lot of memory since all values need to be remembered.
+* **Overwrite** – always uses the contents of the sheet to overwrite the current reference value; in the case of an empty cell, the reference will be set to empty as well
+* **Append** – adds the new found associated objects to the reference (set); in the case of an empty cell, the reference remains unchanged
 
-### 4.3 Commit unchanged objects
+### 4.2 Print Message When Reference Is Not Found
 
-Even if there aren't any changes to the object still commit the objects in order to execute the events. 
+This keeps track of all the object keys in this association that could not be found.
 
-## 5 Include additional tables
+{{% alert type="warning" %}}
+This consumes a lot of memory, since all the values need to be remembered.
+{{% /alert %}}
 
-Here you can define which additional tables are necessary to get the data for the Mendix object you are mapping. Each additional joined table has the following properties.
+### 4.3 Commit Unchanged Objects
 
-### 5.1 Short name
+Even if there are no changes to the object, this still commits the objects in order to execute the events.
 
-A descriptive name for this table. You will see this name in the “table alias” selector for the column mapping configuration.
+## 5 Including Additional Tables
 
-### 5.2 Join type
+You can define which additional tables are necessary to get the data for the Mendix object you are mapping. Each additional joined table has the properties described below.
 
-The type of join to make. Most standard database join types are supported.
+### 5.1 Short Name
 
-### 5.3 Left, Right table
+This is a descriptive name for this table. You will see this name in the **Table alias** selector for the column mapping configuration.
 
-The tables to join together. The left table is always one that is already included in this table mapping. The right table can be any other table.
+### 5.2 Join Type
 
-### 5.4 Join constraints
+This is the type of join to make. Most standard database join types are supported.
 
-You can specify join constraints. Each constraint specifies that two fields, one from each table, should eb equal to each other. Usually, you will want at least one constraint. If you do not specify any constraints, the join will be a cross join.
+### 5.3 Left & Right Table
 
-## 6 Tab page Settings
+These are the tables to join together. The left table is always the one that is already included in this table mapping. The right table can be any other table.
 
-There are a number of settings that control the behavior of the table mapping as a whole.
+### 5.4 Join Constraints
 
-### 6.1 Custom constraints (Deprecated)
+You can specify join constraints. Each constraint specifies that two fields—one from each table—should be equal to each other. Usually, you will want at least one constraint. If you do not specify any constraints, the join will be a cross join.
 
-You can put a constraint on the rows that are imported from the database. Here, you can insert a custom SQL constraint which will be appended as a WHERE clause to all queries. This means any database rows that do not satisfy this constraint will be ignored by the replication module.
+## 6 Tab Page Settings
 
-### 6.2 Print statistics, not found messages
+There are a number of settings that control the behavior of the table mapping as a whole. These are described below.
+
+### 6.1 Custom Constraints (Deprecated)
+
+You can put a constraint on the rows that are imported from the database. Here, you can insert a custom SQL constraint tjat will be appended as a `WHERE` clause to all queries. This means that any database rows that do not satisfy this constraint will be ignored by the replication module.
+
+### 6.2 Print Statistics & Not Found Messages
 
 These control which kinds of messages are printed on the application console.
 
-### 6.3 Remove unsynced objects
+### 6.3 Remove Unsynced Objects
 
-This option causes objects that are not found in the imported database to be removed from your Mendix database. In other words, objects that are in your Mendix database that do not correspond to any imported database rows (anymore), are deleted. You can use this option if, for example, you want to mirror any changes to a target database and not just import new data.
+This option causes objects that are not found in the imported database to be removed from your Mendix database. In other words, objects that are in your Mendix database that do not correspond to any imported database rows (anymore) are deleted. You can use this option if, for example, you want to mirror any changes to a target database and not just import new data.
 
-This functionality requires your Mendix objects to have an Integer attribute that is used to keep track of which objects to remove. You can specify which attribute to use for this in the selector marked “attribute”. This attribute must not be used by your application in any other way, because this will cause unexpected results. Also note that objects created by your application (i.e. not imported) will be removed on the next import, if this option is used.
+This functionality requires your Mendix objects to have an integer attribute that is used to keep track of which objects to remove. You can specify which attribute to use for this in the selector marked **Attribute**. This attribute must not be used by your application in any other way, because this will cause unexpected results. Also, note that objects created by your application (as in, not imported) will be removed on the next import if this option is used.
 
 ### 6.4 Mode
 
-Setting this to advanced reveals three more options. These should only be modified by users who know what they are doing.
+Setting this to advanced reveals more options. These should only be modified by users who know what they are doing.
 
-    “Import in a new context” Creates a new context for each mapping import. If you uncheck this, you can control the contexts in which imports are done yourself.
-    “Use transactions” controls the use of database transaction functionality by the replication module. Normally, each mapping is imported in its own transaction. Unchecking this places the transaction control in the hand of the application.
-    “Ignore objects with empty keys” means empty values for key fields are not considered valid. Unchecking this allows objects with empty key values to exist.
-    “Reset empty associations” In case there is an empty value found for the associations should the reference be reset.
-    “Commit unchanged objects” Even if there aren't any changes to the object still commit the objects in order to execute the events. 
-    “Print not found messages for main object” keep track of all the object keys that could not be found. Warning: This consumes a lot of memory since all values need to be remembered. (only works in combination with sync option: find ignore)
+* **Import in a new context** – creates a new context for each mapping import; if you clear this, you can control the contexts in which imports are done yourself
+* **Use transactions** – controls the use of database transaction functionality by the replication module; normally, each mapping is imported in its own transaction; clearing this box places the transaction control in the hand of the application
+* **Ignore objects with empty keys** – this means that empty values for key fields are not considered valid; clearing this allows objects with empty key values to exist
+* **Reset empty associations** – this means that if there is an empty value found for the associations, the reference should be reset
+* **Commit unchanged objects** – even if there are no changes to the object, this still commits the objects in order to execute the events
+* **Print not found messages for main object** – keeps track of all the object keys that could not be found; please note that this consumes a lot of memory, since all the values need to be remembered (this only works in combination with the "find ignore" sync option)
 
-## 7 Configure an import call
+## 7 Configuring an Import Call
 
-With an import call you can easily configure your constraints, both static constraints (every call the same value) and dynamic constraints (based on a value from some attribute).
+With an import call, you can easily configure both static constraints (meaning, every call with the same value) and dynamic constraints (meaning, based on a value from an attribute).
 
 ### 7.1 Constraint
 
-This defines the type of constraint, either use normal constraints which result in a constraint with all AND operators. The constraints will be in alphabetical order by the constraint nr.
+This defines the type of constraint. You can use normal constraints that result in a constraint with all `AND` operators. The constraints will be in alphabetical order according to the constraint number.
 
-When selecting advanced you’ll be able to setup the constraints yourself using the tokens of the constraint and you can use braces and all operators supported by the database (AND, OR, IN, NOT, etc). For example [&7&] OR ([&1&] AND [&2&])
+When selecting **Advanced**, you can set up the constraints yourself using the tokens of the constraint. You can use braces and all the operators supported by the database (`AND`, `OR`, `IN`, `NOT`, etc.). For example: `[&7&] OR ([&1&] AND [&2&])`.
 
-### 7.2 Data object 1 / 2
+### 7.2 Data Object 1 / 2
 
-When executing the import using an import call you can optionally provide two Mx objects to use as a constraint. This can be all types of objects (even non-persistent). However if you are using scheduled import actions and you want to use the last successful import date as a constraint you should select ‘ScheduledImportActivity’ as data object 1.
+When executing the import using an import call, you can optionally provide two Mx objects to use as a constraint. This can be all types of objects (even non-persistable). However, if you are using scheduled import actions and you want to use the last successful import date as a constraint, you should select **ScheduledImportActivity** as data object 1.
 
-### 7.3 Constraint type
+### 7.3 Constraint Type
 
-    Dynamic    Use the value from an attribute as a constraint, this can either be an attribute from data object 1 or data object 2.
-    Static        Choose any of the columns and set a static value as the constraint.
+* **Dynamic** – use the value from an attribute as a constraint; this can either be an attribute from data object 1 or data object 2
+* **Static** – choose any of the columns and set a static value as the constraint
 
-### 7.4 Ignore when empty
+### 7.4 Ignore When Empty
 
-Only applicable when selecting constraint mode ‘normal’. When a dynamic value is empty (null), the constraint will be ignore and only the other constraints will be applied to the import action.
+This is only applicable when selecting the constraint mode **Normal**. When a dynamic value is empty (null), the constraint will be ignored, and only the other constraints will be applied to the import action.
 
 ### 7.5 Table
 
-On which of the tables from the mapping does the constraint apply. You can select here all the tables you’ve configured in the mapping (both additional joined tables as well as the main table)
+This determines the tables from the mapping on which the constraint applies. You can select all the tables you have configured in the mapping (both additional joined tables as well as the main table).
 
 ### 7.6 Constraint
 
-The first value to select is any of the columns from the selected table. After which you can select any operator followed by the value you want to constraint. In case you select the Is (not) null operator the value is no longer useful and will be hidden.
+The first value to select is any of the columns from the selected table. After that, you can select any operator followed by the value you want to constrain. In case you select the `Is (not) null` operator, the value is no longer useful and will be hidden.
 
-## 8 Planned import actions
+## 8 Planned Import Asctions
 
-The module supports the configuration of scheduled import actions. When importing multiple tables from a database there are several problems you’ll run into when placing all import activities in one or more microflows. Therefore an option is added to the module which you can use to configure your complete import scheduled event.
+The module supports the configuration of scheduled import actions. When importing multiple tables from a database, there are several problems you will run into when placing all the import activities in one or more microflows. Therefore, an option is added to the module, which you can use to configure your complete import scheduled event.
 
-Each import action can consist of one or multiple import calls. The default scheduled event flow will process all enabled import actions and for each action it will call the import call configuration automatically. This way you’ll be able to configure the complete order and dependency between the import actions.
+Each import action can consist of one or multiple import calls. The default scheduled event flow will process all the enabled import actions, and for each action it will call the import call configuration automatically. This way, you will be able to configure the complete order and the dependency between the import actions.
 
-You’re able to use the date/time from the last successful import as a constraint, this datetime is the start time of the last successful run.
+You can use the DateTime from the last successful import as a constraint. This DateTime is the start time of the last successful run.
 
-Each import action is executed in a single transaction, which means it is able to revert all changes if an exception occurs. When you’ll configure the mapping not to create a new transaction nor a new context.
+Each import action is executed in a single transaction, which means it is able to revert all the changes if an exception occurs. Then, configure the mapping not to create a new transaction nor a new context.
 
-## 9 Import/export file
+## 9 Importing & Exporting a File
 
-You can import and export table mappings to an XML file using this tab. It is a known bug that this functionality is not working at the moment.
+You can import and export table mappings to an XML file using the **Import/export file** tab.
 
-## 10 Q&A
+## 10 Troubleshooting
 
-### 10.1 I selected a table alias, but the column name field doesn’t show anything. 
+### 10.1 I Selected a Table Alias, But the Column Name Field Does Not Show Anything
 
-This is a known issue. Please try selecting the blank option in the table alias selector, and then select your desired table again. This should repopulate the column selector.
+This is a limitation. The workaround is to select the blank option in the table alias selector, and then select your desired table again. This should repopulate the column selector.
 
-How can I map inheritance, for example create a different subtype of a generalization based on a value in a column?
+### 10.2 Mapping Inheritance 
 
-The database importer cannot do this automatically. To do this, map your table to temporary objects containing the fields you need to determine the subtype. Then later, use a microflow to convert each of these to the proper type.
+An example of mapping inheritance would be creating a different sub-type of a generalization based on a value in a column.
+
+The database importer cannot do this automatically. To do this, map your table to temporary objects containing the fields for which you need to determine the sub-type. Then, use a microflow to convert each of these to the proper type.

@@ -25,20 +25,20 @@ https://listviewcontrols.mxapps.io
 
 ## 2 Pagination
 
-Add bootstrap like paging to your list view similar to the built-in data grid. The widget also supports page numbers.
+Add Bootstrap-like paging to your list view, similar to the built-in data grid. The Pagination widget also supports page numbers.
 
 ### 2.1 Features
 
-    Add pagination navigation buttons to the list view ie:
-        First button
-        Last button
-        Next button
-        Previous button
-        Hide unused buttons.
-        Page numbers as buttons
-        Page numbers with text as buttons
-        Page text that can be added to pagination in combination with the follow place holders. {firstItem} {lastItem} {totalItems} {currentPageNumber} {totalPages}
-    Page size: This feature limits the number of items on the list view
+* Add pagination navigation buttons to the list view ie:
+	* First button
+	* Last button
+	* Next button
+	* Previous button
+	* Hide unused buttons.
+	* Page numbers as buttons
+	* Page numbers with text as buttons
+	* Page text that can be added to pagination in combination with the follow place holders: `{firstItem} {lastItem} {totalItems} {currentPageNumber} {totalPages}`
+* Page size: This feature limits the number of items on the list view
 
 ### 2.2 Sample
 

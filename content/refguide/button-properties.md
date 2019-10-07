@@ -13,7 +13,7 @@ A button can perform various actions such as calling a microflow or nanoflow or 
 
 An example of button properties is represented in the image below:
 
-{{% image_container width="300" %}}![Button Properties](attachments/button-widgets/button-properties.png)
+{{% image_container width="280" %}}![Button Properties](attachments/button-widgets/button-properties.png)
 {{% /image_container %}}
 
 Button properties consist of the following sections:
@@ -164,7 +164,6 @@ Each item has the following properties:
 *  **Action** – defines an on-click event performed when the item is clicked (for more information on-click events, see [On Click Event & Events Section](on-click-event))
 
     ![Properties of Items](attachments/button-widgets/items-properties.png)
-
 
 
 #### 2.5.1 Adding New Items

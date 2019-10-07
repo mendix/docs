@@ -13,7 +13,7 @@ This how-to will teach you how to create a data grid with a microflow data sourc
 
 ## 2 Prerequisites
 
-* If you are not familiar with using data from REST services, read [Consume a REST Service](howto/integration/consume-a-rest-service)
+* If you are not familiar with using data from REST services, read [Consume a REST Service](/howto/integration/consume-a-rest-service)
 * Mendix 8.2 and above
 
 ## 3 Creating a Microflow Data Source
@@ -189,5 +189,6 @@ Deploy your app again and navigate to the page with your data grid. The data wil
 
 ## 7 Read More
 
-* [Consume a REST Service](consume-a-rest-service)
-* [JSON Structures](/refguide/json-structures)
+* [Consume a REST Service](/howto/integration/consume-a-rest-service)
+* [JSON Structures Guide](/refguide/json-structures)
+* [Consumed REST Services Guide](/refguide/consumed-rest-services)

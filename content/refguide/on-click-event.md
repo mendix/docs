@@ -67,6 +67,11 @@ No action is taken. This option is useful for setting up a page without defining
 The **Show a page** event opens the specified page. Select the page which opens using the options below:
 
 * **Page** – a [page](page) that should open. For more information opening pages function, see [Opening Pages](opening-pages).
+
+* **Page title** – the page you open can be given a unique title, depending on where you open it from. This option is activated by checking the **Override page title** check box in the **Edit** dialog window:
+
+    ![Page Title Property](attachments/on-click-event/page-title-property.png)
+
 * **Page for specializations** – allows you to configure a different page for each specialization of the context object. If this action is placed inside a data view, it is possible to configure different page(s) for each specialization of the data view object. If this action is placed in a data grid, it is possible to configure different pages for each specialization of the data grid entity. This setting is not shown when there is not a context object or when the context object has no specializations.
 
 ### 3.3 Call a Microflow {#call-microflow}

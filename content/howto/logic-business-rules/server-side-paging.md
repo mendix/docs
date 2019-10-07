@@ -179,13 +179,13 @@ Apps that use a REST service which does not support sorting, or apps which do no
 5.  Select **Member** > **IsSortable (Boolean)** from the drop-down menu.
 6.  Type *false* into **Value**:
 
-	{{% image_container width="500" %}}![value false](attachments/server-side-paging/disable-sort.png){{% /image_container %}}
+	![value false](attachments/server-side-paging/disable-sort.png)
 
 7.  Click **OK** to accept the changes to the member, and click **OK** once more to accept the changes to the **Create object** activity.
 
 Deploy your app again and navigate to the page with your data grid. The data will still be shown ordered by **Name**, but you can no longer change the sorting by clicking the header. Note the lack of an arrow above the **Name** header.
 
-{{% image_container width="500" %}}![sorted but not clickable](attachments/server-side-paging/sorting-disabled.png){{% /image_container %}}
+![sorted but not clickable](attachments/server-side-paging/sorting-disabled.png)
 
 ## 7 Read More
 

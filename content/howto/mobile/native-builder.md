@@ -165,7 +165,7 @@ If your build times out (which happens to free App Center users after building f
 
 When your build succeeds, you can use your binaries to run your app on testing devices. To publish your apps, though, you will need to get your apps signed. Consult [Enable Build Signing](#signing) below for more information on app signing.
 
-### SIGNING APPS LOCALLY - WHERE SHOULD THIS SECTION GO?
+### 5.3 Signing Your App Locally
 
 To sign your Android app locally, use apksigner by following Google's [apksigner documentation](https://developer.android.com/studio/command-line/apksigner).
 

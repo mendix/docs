@@ -8,246 +8,196 @@ draft: true
 
 ## 1 Introduction
 
-The [List View Controls](https://appstore.home.mendix.com/link/app/87/) widget enables filtering and searching a list view with the databas and XPath data sources.
+The [List View Controls](https://appstore.home.mendix.com/link/app/87/) enable filtering and searching a list view with the databas and XPath data sources.
 
 These are the available list view widgets:
 
-* **Check box filter** – filters a list view with various constraints when checked or unchecked
-* **Drop down filter** – filters a list view with various options that can be selected from a drop-down
-* **Drop down sort** – Adds an interactive sort to your list view.
-* **Text box search** – Adds an interactive search box to all of your list view
-* **Pagination** – Adds bootstrap like paging to a list view and page numbers similar to in-built data grid
-* **Header sort** – Add sorting behavior to the headers of a list view.
+* [Check box filter](#check-box-filter) – filters a list view with various constraints when checked or unchecked
+* [Drop-down filter](#drop-down-filter) – filters a list view with various options that can be selected from a drop-down
+* [Drop-down sort](#drop-down-sort) – Adds an interactive sort to your list view.
+* [Header sort](#header-sort) – Add sorting behavior to the headers of a list view.
+* [Pagination](#pagination) – Adds bootstrap like paging to a list view and page numbers similar to in-built data grid
+* [Text box search](#text-box-search) – Adds an interactive search box to all of your list view
 
-### 1.1 Demo projects
+### 1.1 Demo App Project
 
-https://listviewcontrols.mxapps.io
+For a demo app project example that has been deployed with these widgets, see [here](https://listviewcontrols.mxapps.io).
 
-## 2 Pagination
+## 2 Check Box Filter Widget {#check-box-filter}
 
-Add Bootstrap-like paging to your list view, similar to the built-in data grid. The Pagination widget also supports page numbers.
+This widget enables filtering a list view at runtime with various constraints.
 
 ### 2.1 Features
 
-* Add pagination navigation buttons to the list view ie:
-	* First button
-	* Last button
-	* Next button
-	* Previous button
-	* Hide unused buttons.
-	* Page numbers as buttons
-	* Page numbers with text as buttons
-	* Page text that can be added to pagination in combination with the follow place holders: `{firstItem} {lastItem} {totalItems} {currentPageNumber} {totalPages}`
-* Page size: This feature limits the number of items on the list view
+* Filter items by attribute
+* Filter items by XPath
+* Configure filter actions when the widget is checked or unchecked
+* Set a checked check box as default
+* Support for multiple filters on the same list view
 
-### 2.2 Sample
+### 2.2 Configuration
 
-Lower Pagination Default buttons
-    
-Multiple Paginations
+* **General** tab
+	* **List view with entity** – the entity name for the target list view
+* **Checked** and **Unchecked** tabs
+	* **Filter** – start setting up the filter actions to be applied when the widget is checked or unchecked
+		* **Attribute** – select an attribute and input an attribute value by which to filter
+			* **Boolean** data type – use a `true` or `false` string
+			* **Enumeration** data type – use the enumeration name/key (not **caption**)
+		* **XPath** – input a constraint by which to filter (**none** is for an empty option which resets the filter then selected)
 
-Page buttons
+{{% alert type="info" %}}
+The widget connects to the first list view it finds from within its parent container and outer wards.
+{{% /alert %}}
 
-Page size Page size
+### 2.3 Example
 
-### 2.3 Appearance configuration
+![](attachments/list-view-controls/check-box-filter.gif)
 
-Data source
+## 3 Drop-Down Filter Widget {#drop-down-filter}
 
-    On the Hide unused paging option of the Appearance tab, specify if the buttons should be hidden when they are not needed.For example when the records are few.
-    
-    On the Page style option of the Appearance tab, specify how the buttons should look.
-        Default shows the pagination with the looks similar to Mendix data grid paging
-        Page number buttons show the pagination as numbers with default set to seven
-        Custom Allows the pagination to be configured to look the way one desires
-    
-    Page size configuration
-    Page size configuration
-    Page size configuration
-
-## 3 Check Box Filter
-
-Enable users to filter a list view at run time, with various constraints when checked or unchecked
+When placed above a list view, this widget enables filtering the list view at runtime with various options that can be selected from a drop-down menu.
 
 ### 3.1 Features
 
-    Filter items by an attribute
-    Filter items by XPath
-    Configure filter actions when the widget is checked
-    Configure filter actions when the widget is unchecked
-    Set a checked checkbox as default
-    Supports multiple filters on the same list view
+* Filter items by an attribute
+* Filter items by XPath
+* Select a filter from a list of options
+* Set a default filter option
 
-### 3.2 Sample
+### 3.2 Configuration
 
-Sample
+* **General** tab
+	* **List view with entity** – the entity name for the target list view
+	* **Filter options** > **New** – only one empty filter option should be selected
+		* **None** – an empty option that resets the filter then selected; this does not require a caption
+		* **Attribute** – select an attribute and input a value by which to filter
+		* **XPath** – input a constraint by which to filter
 
-### 3.3 Usage
+### 3.3 Example
 
-Configure the widget as below.
+![](attachments/list-view-controls/drop-down-filter.gif)
 
-Provide the entity name for the target list view. General
+## 4 Drop-Down Sort Widget {#drop-down-sort}
 
-Set up filter actions to be applied when the widget is checked. Checked
-
-Set up filter actions to be applied when the widget is unchecked Unchecked
-
-When filtering by Attribute, select an attribute and input an attribute value to filter by.
-
-- For 'Boolean' datatype use `true` or `false` string.
-- For 'Enumeration' datatype use the enumeration name/key not 'caption'
-
-When filtering by XPath, input a constraint to filter by. None is for an empty option which resets the filter then selected.
-
-NB: The widget connects to the first list view it finds from within its parent container and outer wards.
-
-## 4 Drop Down Filter
-
-Enable users to filter a list view at run time, with various options that can be selected from a drop-down
+This widget adds an interactive sort to your list view. It supports sorting on a single field, similar to the built-in list view sort capabilities.
 
 ### 4.1 Features
 
-    Filter items by an attribute
-    Filter items by XPath
-    Select a filter from a list of options
-    Set a default filter option
+* Sort through a single field
+* Specify an option to sort list view items on load (if multiple defaults are selected, the widget will select the first one)
 
-### 4.2 Sample
+### 4.2 Configuration
 
-Sample
+* **Data source** tab
+	* **List view with entity** – select the **entity** property of the list widget you want to sort; this entity must be the one used on the list view.
+	* **Sort attributes** – select the attribute on the list widget entity to be sorted
 
-### 4.3 Usage
+### 4.3 Example
 
-Place the Drop-down filter widget above a list view. Provide the entity name of the target list view in the General tab.
+![](attachments/list-view-controls/drop-down-sort.gif)
 
-General
+## 5 Header Sort Widget {#header-sort}
 
-Add a new filter with a caption and choose comparison type.
+This is an example of the header sort widget:
 
-Filters
+![](attachments/list-view-controls/header-sort.gif)
 
-When filtering by Attribute, select an attribute and input a value to filter by When filtering by XPath, input a constraint to filter by. None is for an empty option which resets the filter then selected.
+## 6 Pagination Widget {#pagination}
 
-NB: The None filter option should always appear at the top of the list and it does not require a caption. Also to note, only one empty filter option should be selected.
-
-XPathConstraint
-
-## 5 Drop Down Sort
-
-Add an interactive sort to your list view. It supports sorting on a single field similar to the built-in list view sort capabilities.
-
-### 5.1 Features
-
-    Sort through a single field
-    Specify an option to sort list view items on load. If multiple defaults are selected, the widget will select the first one.
-
-### 5.2 Demo project
-
-Demo
-
-### 5.3 Usage
-
-#### 5.3.1 Data source configuration
-
-Data source
-
-    On the List view with entity option of the Data source tab, browse and select the "entity" property of the list widget you want to sort. This entity must be the one used on the list view.
-
-Data source
-
-    On the Sort attributes option of the Data source tab, browse and select the attribute on the list widget entity to be sorted.
-
-Data source
-
-## 6 Text Box Search
-
-Add an interactive search box to all of your list-view It supports searching on single field similar to the built-in list view search capabilities.
+With this widget, you can add Bootstrap-like paging to your list view, similar to the built-in data grid. This widget also supports page numbers.
 
 ### 6.1 Features
 
-    Search through a single field with single and multiple attributes
-    Open search in default
+* **Custom** tab > **Items** editor > **Text** tab – text that can be added to pagination in combination with the follow place holders: `{firstItem} {lastItem} {totalItems} {currentPageNumber} {totalPages}`
+* **Page size** tab – this feature limits the number of items on the list view
 
-### 6.2 Sample
+### 6.2 Configuration
 
-Sample
+* **Appearance** tab
+	* **Hide unused paging** – specify if the buttons should be hidden when they are not needed (for example, when the records are few)
+	* **Paging style** – specify how the buttons should look:
+		* **Default** – shows the pagination with the looks similar to Mendix data grid paging
+		* **Page number buttons** – shows the pagination as numbers with the default set to seven
+		* **Custom** – allows the pagination to be configured to look the way one desires
 
-### 6.3 Usage
+### 6.3 Examples
 
-Configure the widget as below.
+* Lower pagination:
 
-General
+	![](attachments/list-view-controls/lower-pagination.gif)
+  
+* Multiple paginations:
 
-    On the List view with entity option of the General tab, select an entity that matches listview entity.
-    
-    On the Attributes option of the General tab, create attributes to be used in the text search.
+	![](attachments/list-view-controls/multiple-pagination.gif)
 
-General
+* Page size:
 
-## 7 Header Sort
+	![](attachments/list-view-controls/page-size.gif)
+	
+## 7 Text Box Search Widget {#text-box-search}
 
-Please follow Header sort guide Demo header sort
+Add an interactive search box to all of your list views with this widget. This supports searching on a single field, similar to the built-in list view search capabilities.
 
-## 8 Issues, suggestions and feature requests
+### 7.1 Features
 
-Please report issues at https://github.com/mendixlabs/list-view-controls/issues.
+* Search through a single field with single and multiple attributes
+* Open the search in default
 
-## 9 Development and contribution
+### 7.2 Configuration
 
-Prerequisite: Install git, node package manager, webpack CLI, grunt CLI, Karma CLI
+* **General** tab
+	* **List view with entity** – select an entity that matches the list view entity
+	* **Attributes** – select the attributes to be used in the text search
 
-To contribute, fork and clone.
+### 7.3 Sample
 
-> git clone https://github.com/mendixlabs/list-view-controls.git
+![](attachments/list-view-controls/text-box-search.gif)	
 
-The code is in typescript. Use a typescript IDE of your choice, like Visual Studio Code or WebStorm.
+## 8 Development & Contribution
 
-To set up the development environment, run:
+The prerequisites for development and contribution are installing the following:
 
-> npm install
+* [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+* [npm](https://www.npmjs.com/)
+* [webpack-cli](https://www.npmjs.com/package/webpack-cli)
+* [grunt cli](https://github.com/gruntjs/grunt-cli)
+* [karma cli](https://www.npmjs.com/package/karma-cli)
 
-Create a folder named dist in the project root.
+To contribute, follow these steps:
 
-Create a Mendix test project in the dist folder and rename its root folder to dist/MxTestProject. Changes to the widget code shall be automatically pushed to this test project. Or get the test project from https://github.com/mendixlabs/list-view-controls/releases/latest
+1. Fork and clone the **mendixlabs / list-view-controls** repo: `git clone https://github.com/mendixlabs/list-view-controls.git`. The code is in typescript. Use a typescript IDE of your choice, like Visual Studio Code or WebStorm.
+2. Set up the development environment by running `npm install`.
+3. Create a folder named *dist* in the project root.
+4. Create a Mendix test project in the *dist* folder and rename its root folder to *dist/MxTestProject*. Changes to the widget code shall be automatically pushed to this test project. Or, you can get the test project from [Releases](https://github.com/mendixlabs/list-view-controls/releases/latest).
+5. To automatically compile, bundle, and push code changes to the running test project, run `npm start`.
+6. To run the project unit tests with code coverage (results can be found at `dist/testresults/coverage/index.html`), run: `npm run test:unit`.
+7. Run the unit test continuously during development via `npm run test:dev`.
+8. Run the end-to-end test during development via `npm run test:e2e:dev`.
 
-To automatically compile, bundle and push code changes to the running test project, run:
+## 9 Scripts
 
-> npm start
+While developing, you will probably rely mostly on `npm start`. However, there are additional scripts at your disposal:
 
-To run the project unit tests with code coverage, results can be found at dist/testresults/coverage/index.html, run:
+| npm run <script> | Description |
+| --- | --- |
+| start | Builds the project, monitors the source and config for changes, and rebuilds. |
+| test | Runs lint, builds, unit tests with Karma, generates a coverage report, deploys, and runs end-to-end test. |
+| test:dev | Runs Karma and watches for changes to re-run tests. Does not generate coverage reports. |
+| test:unit | Runs unit tests with Karma and generates a coverage report. |
+| test:e2e  | Runs end-to-end tests with remote. |
+| test:e2e:dev | Runs end-to-end tests locally on localhost:8080. |
+| deploy | Uses the latest widget build to update the Mendix app project and updates the application to the Mendix node. |
+| build:prod | Builds a widget optimized for production. |
+| build:dev | Builds a widget optimized for debugging. |
+| lint | Lints all *.js* files. |
+| lint:fix | Lints and fixes all *.ts* files. |
 
-> npm run test:unit
+## 10 CI & Remote Testing
 
-Run the unit test continuously during development:
+To enable continuous integration services, copy the *node_modules/mendix-widget-build-script/dist/localSettings.js* file to your project root, and update the settings to run the update deployment from the local source. Do not forget to exclude this file in the *.gitignore* file, as it contains sensitive data.
 
-> npm run test:dev
-
-Run the end to end test during development:
-
-> npm run test:e2e:dev
-
-## 10 Scripts
-
-While developing, you will probably rely mostly on npm start; however, there are additional scripts at your disposal:
-npm run <script> 	Description
-start 	Build the project and monitor source and config for changes and rebuild.
-test 	Runs lint, build, unit tests with Karma and generates a coverage report, deploy and run e2e test
-test:dev 	Runs Karma and watches for changes to re-run tests; does not generate coverage reports.
-test:unit 	Runs unit tests with Karma and generates a coverage report.
-test:e2e 	Runs end 2 end tests with remote.
-test:e2e:dev 	Runs end 2 end tests with locally on localhost:8080
-deploy 	Use latest widget build to update the Mendix project update the application to Mendix node.
-build:prod 	Build widget optimized for production
-build:dev 	Build widget optimized for debugging.
-lint 	Lint all .js files.
-lint:fix 	Lint and fix all .ts files.
-
-## 11 CI and remote testing
-
-To enable the continues integration services. Copy the node_modules/mendix-widget-build-script/dist/localSettings.js to your project root, and update the settings to run the update deployment from local source.
-
-Do not forget to exclude this file in the .gitignore as it contains sensitive data.
-
+```
 exports.settings = {
     appName: "appName",
     key: "xxxxxxxx-xxxx-xxxx-xxxxx-xxxxxxxxxxxx",
@@ -255,5 +205,6 @@ exports.settings = {
     projectId: "xxxxxxxx-xxxx-xxxx-xxxxx-xxxxxxxxxxxx",
     user: "ci@example.com"
 };
+```
 
-More information about the Mendix widget build script.
+For more information, see [Mendix widget build script](https://github.com/FlockOfBirds/mendix-widget-build-script).

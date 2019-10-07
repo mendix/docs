@@ -52,6 +52,6 @@ To configure this widget, follow these steps:
 * **'Show password' button image** –  the optional image to display on the show-password button
 * **'Mask password' button image** – the optional image to display on the mask-password button
 
-## 4 Known issues
+## 4 Limitations
 
 * Mendix Runtime returns no feedback about the existence of a user name; this is by design

@@ -10,6 +10,8 @@ draft: true
 
 The [Mx Model Reflection](https://appstore.home.mendix.com/link/app/69/) module can be used to show the reflection of the configuration in your domain model. The module creates an object for each entity, attribute, and reference.
 
+### 1.1 Typical Usage Scenarios
+
 The typical usage scenario is selecting and showing entities from your domain model to use for another configuration. 
 
 ## 2 Configuration
@@ -20,7 +22,7 @@ After importing the module, add **USE ME** > **MxObjects_Overview** to the navig
 If you have a large app project, the synchronization will take much longer.
 {{% /alert %}}
 
-### 4.1 Token Configuration
+### 3.1 Token Configuration
 
 The token configuration used in the [E-mail Module with Templates](https://appstore.home.mendix.com/link/app/259/) now also allows you to specify the display pattern. This allows you to configure how the attributes are shown rather than relying on the defaults of the module.
 
@@ -34,7 +36,7 @@ For all other attributes, the functions from *java.util.Formatter* are used (for
 
 All the patterns use the locale from the context. Based on the user's language, the pattern will change its behavior if necessary.
 
-### 4.2 Display Pattern Example (Using En_US Lanuage)
+### 3.2 Display Pattern Example (Using En_US Lanuage)
 
 * Long attribute with a thousand separator:
 	* Pattern:  `%,8d%n`
@@ -49,7 +51,7 @@ All the patterns use the locale from the context. Based on the user's language, 
 	* Value: `12345,678`
 	* Result: `12,345.68`
 
-## 5 Read More
+## 4 Read More
 
 * [How to Use the Excel Exporter](https://docs.mendix.com/howto/integration/using-the-excel-exporter)
 * [How to Import Excel Documents](https://docs.mendix.com/howto/integration/importing-excel-documents)

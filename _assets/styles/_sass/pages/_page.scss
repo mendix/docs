@@ -110,7 +110,7 @@ $block: 'mx';
 
       > * {
         //margin-top: 20px;
-        margin-bottom: 10px;
+        //margin-bottom: 10px;
       }
 
       blockquote {
@@ -124,6 +124,26 @@ $block: 'mx';
       }
 
       ul, ol { padding-left: 20px; }
+
+      ol ol { list-style-type: lower-alpha;}
+
+      ul ul {padding-bottom: 3.5ex}
+
+      p, .alert{
+        margin: 0.8em 0 0 0;
+      }
+
+      .alert p {
+        margin: 0;
+      }
+
+      h2{
+        margin: 1.2em 0 0 0;
+      }
+
+      h3, h4{
+        margin: 1em 0 0 0;
+      }
 
       h5 {
         font-size: 16px;

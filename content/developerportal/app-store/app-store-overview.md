@@ -81,7 +81,7 @@ The details page for each add-on and app presents the following item information
 
 	![](attachments/app-store-overview/content_detail_9.png)
 
-### 3.3 Additional Info Section
+### 3.3 Additional Info Section {#additional-info}
 
 {{% image_container width="300" %}}
 ![](attachments/app-store-overview/content_detail_2.png)
@@ -95,6 +95,7 @@ In the **Additional Info** section, you can see the following information (depen
 * The type of **License** for the item
 * The type of support Mendix offers for the item (for more information, see [App Store Content Support](app-store-content-support))
 * The **URL** for the item page that you can copy and share
+* The **UUID** of the item; if the app is part of the **Getting Started** category of App Store items, this UUID can be used in the [CreateNewApp operation](/apidocs-mxsdk/apidocs/projects-api#createnewapp) in the *Projects API*
 * A **View on GitHub** link, which will take you to the GitHub source files of the content
 * A link to the documentation on how to install App Store item
 

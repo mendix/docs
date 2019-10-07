@@ -63,7 +63,6 @@ The Mendix UI Framework uses **Sass**, which relies on Ruby. However, you can in
 
 ## 5\. Related content
 
-*   [Scout and Windows 10 Workaround](scout-and-windows-10-workaround)
 *   [Layouts and Snippets](layouts-and-snippets)
 *   [Filtering Data on an Overview Page](filtering-data-on-an-overview-page)
 *   [Setup Mendix UI Framework with just CSS](setup-mendix-ui-framework-with-just-css)

@@ -43,7 +43,7 @@ _Default value:_ False
 
 The input mask limits what the user can enter in the text box. A '9' means any digit, 'Z' means any letter, 'U' an upper-case letter, 'L' a lower-case letter and '*' a letter or a digit. Other characters will be taken literally. For example, the input mask 99-LLL-9999 matches 24-apr-2008.
 
-{{% alert type="info" %}}Not supported on native mobile pages.{{% /alert %}}
+{{% alert type="info" %}}This property is not supported on native mobile pages.{{% /alert %}}
 
 ### Maximum Length
 

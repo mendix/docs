@@ -13,6 +13,7 @@ This how-to will teach you how to create a data grid with a microflow data sourc
 
 ## 2 Prerequisites
 
+Before starting this how-to, make sure you have completed the following prerequisites:
 * If you are not familiar with using data from REST services, read [Consume a REST Service](/howto/integration/consume-a-rest-service)
 * Mendix 8.2 and above
 
@@ -21,7 +22,6 @@ This how-to will teach you how to create a data grid with a microflow data sourc
 You will use this to create a JSON structure and import mapping for this REST service. To do this, complete the first four sections of [Consume a REST Service](/howto/integration/consume-a-rest-service) — (until **Adding an Input Entity to the Domain Model** is done). You must complete these steps with *one crucial change*: you must use this REST service URL for your JSON snippet: `https://my-json-server.typicode.com/mendix/howto-api-data/airports`.
 
 Once successful, your project should have the following elements:
-
 * A JSON structure based on the airport data:
 
 	{{% image_container width="500" %}}![json structure](attachments/server-side-paging/json-structure.png){{% /image_container %}}

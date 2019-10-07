@@ -13,7 +13,7 @@ A button can perform various actions such as calling a microflow or nanoflow or 
 
 An example of button properties is represented in the image below:
 
-{{% image_container width="350" %}}![Button Properties](attachments/button-widgets/button-properties.png)
+{{% image_container width="300" %}}![Button Properties](attachments/button-widgets/button-properties.png)
 {{% /image_container %}}
 
 Button properties consist of the following sections:
@@ -53,7 +53,7 @@ Parameters are attributes the value of which will be displayed. To view **Parame
 
 * Double-click the button on the page and click **Edit** in the **General** section > **Caption**:
 
-  ![Opening Parameters](attachments/button-widgets/opening-parameters.png) 
+	![Opening Parameters](attachments/button-widgets/opening-parameters.png) 
 
 Parameters have the following settings:
 
@@ -63,7 +63,7 @@ Parameters have the following settings:
 
 * **Format** – a format in which an attribute value will be displayed
 
-  ![Parameter Settings](attachments/button-widgets/button-parameter-settings.png)
+    ![Parameter Settings](attachments/button-widgets/button-parameter-settings.png)
 
 ##### 2.2.2.1 Adding New Parameters
 
@@ -73,15 +73,15 @@ To add parameters, do the following:
 
 2. Double-click the **Caption** setting in the button widget properties.
 
-3. In the **Edit Caption** dialog window > **Parameters** section click **New**:
+3.  In the **Edit Caption** dialog window > **Parameters** section click **New**:
 
-   ![Adding New Parameter](attachments/button-widgets/new-parameter.png)
+    ![Adding New Parameter](attachments/button-widgets/new-parameter.png)
 
 4. In the **Edit Template Parameter** dialog window, click **Select**, choose an attribute and confirm your choice.
 
 5. In the **Caption** setting, write the text you would like to display and type **Index** of the parameter you would like to include. In the example below, to include a name of your customer , you need to use indexes {1} for the *Name* attribute:  
 
-   ![Parameter Example](attachments/button-widgets/button-parameter-example.png)
+    ![Parameter Example](attachments/button-widgets/button-parameter-example.png)
 
 ##### 2.2.2.2 Performing Other Actions on Parameters
 
@@ -95,7 +95,7 @@ In addition to adding new parameters, you can perform the following actions on p
 
 * **Move down** – to move a parameter down in the list of parameters and also to change its index, click **Move down**
 
-  ![Parameter Actions](attachments/button-widgets/button-parameter-actions.png)
+    ![Parameter Actions](attachments/button-widgets/button-parameter-actions.png)
 
 #### 2.4.3 Tooltip
 
@@ -140,9 +140,24 @@ This property is only shown when **Call a microflow** is selected as an on click
 
 ### 2.5 Items Section {#items}
 
-The Items section is only shown for drop-down buttons. 
+{{% alert type="info" %}}
 
-Drop-down buttons contain a list of items. Each item has the following properties:
+The **Items** section is only shown for drop-down buttons. 
+
+{{% /alert %}}
+
+When an end-user clicks a drop-down button, a pop-up window with a list of items opens. Each item performs an event when an end-user clicks this item. Different items can perform different events. For more information on events that can be assigned, see [On Click Event & Events Section](on-click-event).
+
+{{% alert type="info" %}}
+
+* Items with the **Create object** event are only shown when you have sufficient permissions on. For more information, see [Security](security). 
+
+* Items with the **Sign out** event are not shown for anonymous users. For more information on different security levels and anonymous users, see [Project Security](project-security) and [Anonymous Users](anonymous-users). 
+
+
+{{% /alert %}}
+
+Each item has the following properties:
 
 * **Caption** – defines a caption of the item
 
@@ -158,9 +173,9 @@ To add items to a drop-down buttons, do the following:
 
 1. Double-click the **Items** setting in the button widget properties.
 
-2. In the **Edit Items** dialog window, click **New**:
+2.  In the **Edit Items** dialog window, click **New**:
 
-   ![Adding New Item](attachments/button-widgets/adding-new-item.png)
+    ![Adding New Item](attachments/button-widgets/adding-new-item.png)
 
 3. In the **Edit Drop Down Button** Item dialog window, do the following:
    1. Specify the caption for the item.

@@ -26,3 +26,4 @@ With these how-to's, you can learn how to translate your business logic into mic
 * [Extend Your Application with Custom Java](extending-your-application-with-custom-java) – 
 * [Use the Java API](java-api-tutorial) – shows you how to add a Java action, edit it in Eclipse, and call it from a microflow
 * [Find Object Activities](finding-object-activities) – describes how to find changes made in objects based on a certain activity
+* [Set Up Server-Side Paging and Sorting for a Microflow Data Source](server-side-paging) — explains how to create a data grid with a microflow data source which retrieves data from a REST service, and then add server-side paging and sorting to it.

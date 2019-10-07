@@ -73,6 +73,8 @@ The attribute can be of one of the following [data types](data-types):
 
 ### 2.3 Design Properties Section{#design-properties}
 
+{{% snippet file="refguide/design-section-link.md" %}} 
+
 ### 2.4 Editability Section{#editability}
 
 {{% snippet file="refguide/editability-section-link.md" %}}

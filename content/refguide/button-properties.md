@@ -101,7 +101,7 @@ In addition to adding new parameters, you can perform the following actions on p
 
 The **Tooltip** property determines a text end-users will see in the tooltip that appears when they hover over the button. The tooltip text is translatable. For more information on translatable texts, see [Translatable Texts](translatable-texts). If the tooltip is not specified, no tooltip will be shown when hovering over the button.
 
-#### 2.4.4 Icon
+#### 2.4.4 Icon {#icon}
 
 The **Icon** property determines the icon that will be shown in front of the caption of the button. Possible options are: 
 

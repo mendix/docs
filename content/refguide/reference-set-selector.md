@@ -8,7 +8,9 @@ tags: ["studio pro"]
 
 {{% alert type="warning" %}}The **reference set selector** widget is not supported on native mobile pages.{{% /alert %}}
 
-A **reference set selector** is used to allow the end-user to select the value(s) of a many-to-many (reference set) [association](association-properties) by selecting the associated object(s).
+## 1 Introduction
+
+A **reference set selector** is used to allow the end-user to display or select the value(s) of a many-to-many (reference set) [association](association-properties) by selecting the associated object(s).
 
 A reference set selector must be placed in a [data widget](data-widgets).
 
@@ -24,12 +26,11 @@ To allow you to both add a Group to a Customer, and add a Customer to a Group, y
 
 ![The domain model for a reference set selector between Customer (parent) and Group where the owner is 'both' (i.e. the Customer and Group refer to each other)](attachments/reference-set-selector/domain-model-owner-both.png)
 
-In the reference set selector, the related entity and association used to connect it to the entity in the data view are displayed at the top of the reference set selector, and the names of the attributes of the associated objects which will be displayed are shown inside the reference set selector. Each attribute is displayed in a [column](#columns). The association, and related entity and attributes are displayed between square brackets, and colored blue.
+In the reference set selector, the related entity and association used to connect it to the entity in the data view are displayed at the top of the reference set selector, and the names of the attributes of the associated objects which will be displayed are shown inside the reference set selector. Each attribute is displayed in a [column](#columns). The association and related entity and attributes are displayed between square brackets, and colored blue.
 
-For example, using the domain model above, the following reference set selector allows the end-user to set, the association **Customer_Group** by selecting the **Name**(s) of the **Group**(s) associated with the current **Customer**.
+For example, using the domain model above, the following reference set selector allows the end-user to associate a Customer with one or more Groups by setting the association **Customer_Group**. This is done by selecting the **Name**(s) of the **Group**(s) associated with the current **Customer**.
 
 ![](attachments/reference-set-selector/reference-set-selector.png)
-In this data view on customer you can select multiple groups using the reference set selector.
 
 The reference set selector looks a lot like a [data grid](data-grid) and consequently shares many properties with it. The main differences are that the reference set selector lacks a search bar and that it has **Add** and **Remove** buttons instead of **New** and **Delete**. This is because they perform slightly different functions:
 
@@ -69,10 +70,10 @@ There are two additional sets of properties which do not appear in the propertie
 
 {{% snippet file="refguide/attribute-path-property.md" %}}
 
-The attribute path specifies which attribute of an associated entity is shown in the reference selector. The path must follow one association of type reference starting in the entity of the data view.
+The attribute path specifies which attribute(s) of an associated entity is shown in the reference set selector. The path must follow one association of type reference starting in the entity of the data view.
 
 {{% alert type="info" %}}
-In the case of a reference selector you are selecting an association to another object. The attribute should indicate uniquely to the end-user which object is being selected.
+In the case of a reference set selector you are selecting an association to another object. The attribute should indicate uniquely to the end-user which object is being selected.
 {{% /alert %}}
 
 The attribute can be of one of the following [data types](data-types):
@@ -85,9 +86,13 @@ The attribute can be of one of the following [data types](data-types):
 * Long
 * String
 
+{{% alert type="warning" %}}
+You cannot currently use non-persistable entities in a reference set selector.
+{{% /alert %}}
+
 ### 2.3 Design Properties Section{#design-properties}
 
-{{% snippet file="refguide/design-section-link.md" %}} ## Components
+{{% snippet file="refguide/design-section-link.md" %}}
 
 ### 2.4 Events Section{#events}
 
@@ -108,7 +113,7 @@ You can decide how to define the widths of the columns in the reference set sele
 
 The column widths are defined as either percentages or pixels. The value for the columns are separated by semi-colons. For example a narrow column and a wide column could be defined as `20;80`. If the widths are defined in percentages, they have to add up to 100.
 
-If column widths are defined as percentages, you can also change the widths of columns is by dragging the separating line between columns.
+If column widths are defined as percentages, you can also change the widths of columns by dragging the separating line between columns.
 
 #### 2.5.3 Number of Rows
 
@@ -153,13 +158,25 @@ The selection mode determines whether and how the user can select items in the r
 | Value | Description |
 | --- | --- |
 | No selection | The user cannot select items. Of this is chosen, then you cannot have a **Remove** button in your reference set selector|
-| Single selection | The user can select a single item by clicking on it. Clicking another item will make that item the selection. |
-| Multi-selection | The user can select multiple items by clicking the first one and holding the 'Ctrl' key while clicking on other items. Simply clicking an item will deselect all items and make the clicked item the selection. |
-| Simple multi-selection | The user can select multiple items by simply clicking on them. This was the default multi-selection behavior prior to version 3.1.0. |
+| Single selection | The user can select a single item by clicking on it. Clicking another item will make that item the selection. Clicking a selected item will deselect it. |
+| Single selection and maintain | The user can select a single item by clicking on it. The first item is always selected by default. Clicking another item will make that item the selection. Clicking a selected item will not deselect it. |
+| Multi-selection | The user can select multiple items by clicking the first one and holding the <kbd>Ctrl</kbd> key while clicking on other items. Clicking an item without the <kbd>Ctrl</kbd> key will deselect all other selected items and make the clicked item the selection. |
+| Simple multi-selection | The user can select multiple items by clicking on them in turn. |
 
 _Default value:_ Single selection
 
-### Default Button Trigger
+#### 2.5.9 Select first
+
+Specifies whether the first item should be selected by default when the reference set selector is first shown.
+
+Possible values:
+
+* No
+* Yes
+
+_Default value:_ No
+
+#### 2.5.10 Default Button Trigger
 
 The default button can be triggered by a single or a double click on a row.
 
@@ -169,28 +186,6 @@ The default button can be triggered by a single or a double click on a row.
 | Double click | A double click triggers the default button. |
 
 _Default value:_ Double click
-
-### Tooltip Page
-
-A tooltip page is a page that appears when you hover your mouse over a row. The tooltip page should consist of a data view on the same entity as the data grid. On top of creating, and connecting, a tooltip page you also have to specify on which columns the tooltip will appear. See the property 'Show tooltip' of [data grid columns](columns).
-
-## Data Source Properties
-
-### Entity Path
-
-The entity path of a reference set selector is a path following one association of type 'reference set' from the entity of the containing data view to the entity on the other side of that association. In the example above the association Customer_Group from Customer to Group is followed and the path is: Customer_Group/Group.
-
-{{% alert type="warning" %}}
-
-With the reference selector you are editing an association of type reference set (Customer_Group). Adding, and removing, objects using the selector will only add and remove references to those objects; the objects themselves are unchanged.
-
-{{% /alert %}}
-
-{{% alert type="warning" %}}
-
-Using non-persistable entities (NPEs) in a reference set selector is not supported yet. For that reason, selecting an NPE in the entity selector for the reference set selector is not possible.
-
-{{% /alert %}}
 
 ### 2.6 Selectable Objects Section{#selectable-objects}
 

@@ -78,7 +78,6 @@ You should now have an overview page with a data grid like this:
 
 ## 5 Read More
 
-* [Perform the Scout and Windows 10 Workaround](perform-scout-and-windows-10-workaround)
 * [Use Layouts and Snippets](layouts-and-snippets)
 * [Set Up the Mendix UI Framework with Just CSS](setup-mendix-ui-framework-with-just-css)
 * [Set Up the Navigation Structure](../general/setting-up-the-navigation-structure)

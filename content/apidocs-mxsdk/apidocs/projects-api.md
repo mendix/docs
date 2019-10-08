@@ -21,7 +21,7 @@ The following errors might be returned by the service. As this API is implemente
 
 The following operations are available in the Projects API.
 
-### 3.1 CreateNewApp
+### 3.1 CreateNewApp {#createnewapp}
 
 The CreateNewApp operation will create a new app and corresponding project. As parameters it requires a project name, a user name that is linked to a Mendix account, an [API Key](authentication) corresponding to that user account, and a project summary. The project summary may contain a brief description of the project.
 
@@ -35,7 +35,7 @@ The CreateNewApp operation will create a new app and corresponding project. As p
 | ProjectSummary | String | A brief description of the project. May be set to `empty`. |
 | User | String | The <u>email address</u> you use to log into your Mendix account. |
 | ApiKey | String | An [API Key](authentication) associated to the user account of _User_. |
-| TemplateUUID (can be `empty`) | String | UUID which identifies the template with which the project will be created. If left empty, a default blank template will be used instead. |
+| TemplateUUID (can be `empty`) | String | The [UUID](/developerportal/app-store/app-store-overview#additional-info) that identifies the template with which the project will be created. If left empty, a default blank template will be used. |
 
 #### 3.1.2 Output
 

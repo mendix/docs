@@ -73,9 +73,7 @@ Do not create a Tenant object yourself as this is done automatically during logi
 
 ![DS_GetAccessTokenForScheduledEvents](attachments/mindsphere-development-considerations/sample_getAccessTokenForScheduledEvents.png)
 
-{{% alert type="info" %}}
-For more information on how to perform REST calls see the Mendix learning path  [Importing and Exporting Your Data](https://gettingstarted.mendixcloud.com/link/path/44).
-{{% /alert %}}
+For more information on how to perform REST calls see the [Importing and Exporting Your Data](https://gettingstarted.mendixcloud.com/link/path/44) learning path.
 
 ## 3 Cloud Foundry Environment Variables {#cfenvvars}
 

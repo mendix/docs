@@ -4,12 +4,29 @@ category: "Mobile Products"
 menu_order: 10
 description: "These release notes showcase each release of the iOS and Android Make It Native app versions."
 tags: ["Native", "Android", "iOS", "Apple", "Android"]
-#ki: "Clearing data on Android" = NALM-153
 ---
 
 {{% alert type="info" %}}
 For more information on the Make It Native app, see [Getting the Make It Native App](/refguide/getting-the-make-it-native-app). Click here to download the Make It Native app for [iOS](https://apps.apple.com/app/make-it-native/id1334081181), or here for [Android](https://play.google.com/store/apps/details?id=com.mendix.developerapp).
 {{% /alert %}}
+
+## Android 1.1.0 / iOS 1.1.0
+
+**Release date: September 30th, 2019**
+
+### New Feature
+
+The Make It Native app now has tablet support. Now you can run and test your Mendix application using the Make It Native app on tablets. 
+
+### Improvements
+
+Device orientation is now fully supported. Now you can test your apps in any device orientation.
+
+We also improved loading performance by optimizing the bundle size when **Dev Mode** is disabled. 
+
+### Fix
+
+* <a name="153"></a>We fixed an issue where clearing data on Android via the start screen did not clear cookies correctly.
 
 ## Android 1.0.0 / iOS 1.0.2
 
@@ -22,3 +39,4 @@ The apps are not backwards compatible with the Mendix Studio Pro 8.0.0 Beta vers
 ### Known Issues
 
 * Clearing data on Android via the start screen does not clear cookies correctly. Using the developer menu option does clear cookies.
+	* Fixed in [1.1.0](#153) 

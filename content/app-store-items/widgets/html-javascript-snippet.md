@@ -10,13 +10,13 @@ draft: true
 
 The [HTML / JavaScript Snippet](https://appstore.home.mendix.com/link/app/56/) widget is useful for adding a piece of HTML or JavaScript to a page (for example, to embed a YouTube or Flash object). In addition, it can be used to enhance styling by adding arbitrary HTML elements.
 
-These are the typical usage scenarios:
+### 1.1 Typical Usage Scenarios
 
 * Display a predefined HTML document
 * Load a Java applet
 * Manipulate app styling using JavaScript rather than theming
 
-### 1.1 Features
+### 1.2 Features
 
 * Embed raw HTML
 * Embed raw JavaScript

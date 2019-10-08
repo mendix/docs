@@ -139,9 +139,9 @@ Button widgets perform an action when clicked. They can be rendered as a button 
 ![](attachments/15466567/18582314.svg)
 
 Studio Pro Guide | Model SDK API Docs
---- | --- |
+--- | --- 
 [Button Widgets](/refguide/button-widgets) | [Button](https://apidocs.mendix.com/modelsdk/latest/classes/pages.button.html)
-[Action Button](/refguide/action-button) | [ButtonStyle](https://apidocs.mendix.com/modelsdk/latest/classes/pages.buttonstyle.html)
+[Button Properties](/refguide/button-properties) | [ButtonStyle](https://apidocs.mendix.com/modelsdk/latest/classes/pages.buttonstyle.html)
 [Translatable Texts](/refguide/translatable-texts) | [RenderType](https://apidocs.mendix.com/modelsdk/latest/classes/pages.rendertype.html)
 | [Icon](https://apidocs.mendix.com/modelsdk/latest/classes/pages.icon.html)
 | [Text](https://apidocs.mendix.com/modelsdk/latest/classes/texts.text.html)

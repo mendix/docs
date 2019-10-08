@@ -211,7 +211,7 @@ Finally, either start a build for this branch manually or run Native Builder aga
 
 ### 8.2 Custom Native Code
 
-If you have custom native dependencies or code, you can include them in your app by merging your changes to the **master** branch of the GitHub repository which Native Builder is making. Every build branches off from **master** and your changes will be included. Remember to sync your repository occasionally to get the latest changes from Mendix Native template. For more information on syncing your repository, see [When to Sync Your Native Template](#sync-your-repository) below.
+If you have custom native dependencies or code, you can include them in your app by merging your changes to the **master** branch of the GitHub repository which Native Builder is making. Every build branches off from **master** and your changes will be included. Remember to sync your repository occasionally to get the latest changes from Mendix native template. For more information on syncing your repository, see [When to Sync Your Native Template](#sync-your-repository) below.
 
 ### 8.3 Custom App Center Configuration
 
@@ -265,16 +265,16 @@ For an Android app, do the following:
 
 ## 9 When to Sync Your Native Template {#sync-your-repository}
 
-When Mendix updates the Native template, Native Builder will not automatically sync your GitHub repository. You will have to manually sync it yourself. The Native Builder avoids automatic synchronization because of possible merge conflicts with customized apps.
+When Mendix updates the native template, the Native Builder will not automatically sync your GitHub repository. You will have to manually sync it yourself. The Native Builder avoids automatic synchronization because of possible merge conflicts with customized apps.
 
 The following error scenarios could indicate that your repository is out of sync with the latest native template:
 
 * Your App Center build fails
 * Your app crashes while you are testing it after adding a new pluggable widget or JavaScript action
 
-If either of these things happen, make sure that you are using the latest Native template version by consulting the [native-template GitHub page](https://github.com/mendix/native-template).
+If either of these things happen, make sure that you are using the latest native template version by consulting the [native-template GitHub page](https://github.com/mendix/native-template).
 
-If your Native template is not the latest version, synchronize your repository with the latest version of the Native template. For instructions on syncing a GitHub repository, see GitHub's [Syncing a fork](https://help.github.com/en/articles/syncing-a-fork).
+If your native template is not the latest version, synchronize your repository with the latest version of the native template. For instructions on syncing a GitHub repository, see GitHub's [Syncing a fork](https://help.github.com/en/articles/syncing-a-fork).
 
 ## 10 Resolving Errors
 

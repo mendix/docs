@@ -95,5 +95,3 @@ When using Mendix mail servers and a sender address in a domain that has a restr
 *   [Trends in Mendix Cloud v3](/developerportal/operate/trends)
 *   [Mendix Cloud: Deploy](mendix-cloud-deploy)
 *   [Azure: Deploy](azure-deploy)
-*   [Different user logins when integrated with Mendix SSO](managing-mendix-sso)
-*   [Mendix Single Sign-On](integrate-with-mendix-sso)

@@ -147,7 +147,6 @@ Now the application is ready to store redundant data, but you still need to keep
 * [Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
 * [Stories](/developerportal/collaborate/stories)
 * [Define Access Rules Using XPath](../logic-business-rules/define-access-rules-using-xpath)
-* [Perform the Scout and Windows 10 Workaround](../front-end/perform-scout-and-windows-10-workaround)
 * [Attributes](/refguide/attributes)
 * [Event Handlers](/refguide/event-handlers)
 

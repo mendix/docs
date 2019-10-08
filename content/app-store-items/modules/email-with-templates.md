@@ -10,7 +10,24 @@ draft: true
 
 The [E-mail with Templates](https://appstore.home.mendix.com/link/app/259/) module lets you send emails with templates. Email templates can be managed with the possibility of using tokens. With the tokens available in the email template, the attributes and references of an object are filled in automatically and correctly.
 
+### 1.1 Typical Usage Scenarios
+
 The typical usage scenario is sending emails with a template system and using tokens to handle all of your outgoing standard emails.
+
+### 1.2 Dependencies
+
+#### 1.2.1 Mendix Modules
+
+* [Mx Model Reflection](https://appstore.home.mendix.com/link/app/69/)
+* [Encryption](https://appstore.home.mendix.com/link/app/1011/)
+
+#### 1.2.2 Java Libraries
+
+* *commons-codec-1.10.jar*
+* *commons-email-1.3.1*
+* *commons-email-1.4.0.jar*
+* *com.sun.mail.javax.mail-1.4.5.jar*
+* *javax.mail-1.6.0.jar*
 
 ## 2 Configuration
 
@@ -26,21 +43,6 @@ To configure this module, follow these steps:
 	* `Post-deployment` – after deploying, you have to set up your email settings and insert your own email templates using the newly created navigation items under **Administrator**
 6. Go to `MxObjects_Overview` and synchronize the objects. Make sure you do this every time you have added new objects.
 
-## 3 Dependencies
-
-### 3.1 Mendix Modules
-
-* [Mx Model Reflection](https://appstore.home.mendix.com/link/app/69/)
-* [Encryption](https://appstore.home.mendix.com/link/app/1011/)
-
-### 3.2 Java Libraries
-
-* *commons-codec-1.10.jar*
-* *commons-email-1.3.1*
-* *commons-email-1.4.0.jar*
-* *com.sun.mail.javax.mail-1.4.5.jar*
-* *javax.mail-1.6.0.jar*
-
-## 4 Read More
+## 3 Read More
 
 * [Sending Email](/developerportal/deploy/sending-email)

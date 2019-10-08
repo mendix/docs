@@ -28,7 +28,7 @@ The add button can only be used in the reference set selector. With this button,
 
 {{% snippet file="refguide/is-default-button-property.md" %}}
 
-### 3.1 Page
+### 3.7 Page
 
 This property indicates the page that is shown to users after they click this button. The user can use this page to select objects that have to be added to the reference set selector. This page should contain a data grid, template grid, or list view connected to the same entity as the reference set selector.
 

@@ -16,7 +16,7 @@ For example, if you have an employee they will work for one company. A company c
 
 ![](attachments/reference-selector/reference-selector-domain-model.png)
 
-In the reference selector, the name of the attribute of the associated objects which will be  displayed is shown inside the text box, between square brackets, and colored blue.
+In the reference selector, the name of the attribute of the associated objects which will be  displayed is shown inside the reference selector, between square brackets, and colored blue.
 
 For example, the following reference allows the end-user to see, and set, the association **Employee_Company** by selecting the **CompanyName** for the current **Employee**.
 
@@ -28,12 +28,12 @@ If you only want to _display_ information, you can also use a [text box](text-bo
 
 ## 2 Properties
 
-An example of text area properties is represented in the image below:
+An example of reference selector properties is represented in the image below:
 
 {{% image_container width="400" %}}![](attachments/reference-selector/reference-selector-properties.png)
 {{% /image_container %}}
 
-Text box properties consist of the following sections:
+Reference selector properties consist of the following sections:
 
 * [Common](#common)
 * [Data source](#data-source)

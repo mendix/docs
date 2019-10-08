@@ -176,7 +176,26 @@ If you use a Mac laptop, you can open this URL: `http://windows-10:3000`.
 
 You can test this by changing the color of `.pageheader-subtitle` from green to blue in the example above. If you have correctly synced with the browser, you can already see that the subtitle color changes into blue.
 
-## 6 Summary
+## 6 Troubleshooting Your Theming
+
+There are a few common issues users have when theming. This section will help you solve those common issues yourself.
+
+When using the [ux-theming resources](https://github.com/mendix/ux-theming) in Mendix 8, you might incur issues such as infinite loops or folders not being recognized. To remedy these, make sure the following folders are set correctly in your *gulpfile.js* or *gulpfile.ts*:
+
+```javascript
+// What is the name of the style folder in this theme folder?
+var sourceStyleFolder = 'theme/styles/web';
+
+// What is the name of the style folder in the deployment folder?
+var deploymentStyleFolder = 'styles/web';
+```
+
+If you have other issues with SVN or rewriting of your *gulpfile.js* or *gulpfile.ts*, try doing the following:
+
+* Remove *node_modules*, *package.json*, *package-lock.json*, and *gulpfile.js* or *gulpfile.ts*. Replace them with fresh copies of those files from the [ux-theming GitHub repo](https://github.com/mendix/ux-theming).
+* Make sure you are using the latest LTS version of [NodeJS](https://nodejs.org/en/).
+
+## 7 Summary
 
 Practice the routine above a few times and you will master it in no time. In addition, keep the following summary in mind:
 

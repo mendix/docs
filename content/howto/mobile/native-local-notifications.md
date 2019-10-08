@@ -145,7 +145,7 @@ Now you will set up the final piece of your nanoflow's logic.
 
 2.  Drag and drop a **Display Notification** activity and connect it to your merge like this:
 
-	{{% image_container width="500" %}}CHANGE PIC![app settings](attachments/native-push/schedule-notif-merge.png){{% /image_container %}}
+	{{% image_container width="500" %}}![app settings](attachments/native-push/display-notif-merge.png){{% /image_container %}}
 
 4.  Set its **Body**, **Title**, and **Subtitle** to the variables that you created in the same nanoflow:
 
@@ -155,9 +155,9 @@ Now you will set up the final piece of your nanoflow's logic.
 
 	{{% image_container width="500" %}}![app settings](attachments/native-push/sound.png){{% /image_container %}}
 
-6.  Set **Action name**, and **Action guid** to **empty**:
+6.  Set **Action name** and **Action guid** to **empty**:
 
-	{{% image_container width="500" %}}CHANGE PIC TO DELETE NOTIF ID![app settings](attachments/native-push/notif-action-actionguid.png){{% /image_container %}}
+	{{% image_container width="500" %}}![app settings](attachments/native-push/notif-action-actionguid.png){{% /image_container %}}
 	
 7.  Select **Use return value** > **no**:
 
@@ -166,11 +166,11 @@ Now you will set up the final piece of your nanoflow's logic.
 8. Click **OK**, navigate back to your nanoflow.
 9.  Add a final **End event** next to your **Display notification** activity and connect it like this:
 
-	{{% image_container width="500" %}}CHANGE PIC![app settings](attachments/native-push/final-end-event.png){{% /image_container %}}
+	![app settings](attachments/native-push/final-end-event.png)
 
 10. When you are all finished, your nanoflow will look like this:
 
-	{{% image_container width="500" %}}CHANGE PIC![app settings](attachments/native-push/finished-flow.png){{% /image_container %}}
+	{{% image_container width="500" %}}![app settings](attachments/native-push/finished-flow.png){{% /image_container %}}
 
 Now you can run your app and see if your notification works.
 

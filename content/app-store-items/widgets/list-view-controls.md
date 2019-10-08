@@ -154,9 +154,9 @@ Add an interactive search box to all of your list views with this widget. This s
 
 ![](attachments/list-view-controls/text-box-search.gif)	
 
-## 8 Development & Contribution
+## 8 Developing This App Store Item
 
-The prerequisites for development and contribution are installing the following:
+### 8.1 Prerequisites
 
 * [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 * [npm](https://www.npmjs.com/)
@@ -164,7 +164,7 @@ The prerequisites for development and contribution are installing the following:
 * [grunt cli](https://github.com/gruntjs/grunt-cli)
 * [karma cli](https://www.npmjs.com/package/karma-cli)
 
-To contribute, follow these steps:
+### 8.2 Developing
 
 1. Fork and clone the **mendixlabs / list-view-controls** repo: `git clone https://github.com/mendixlabs/list-view-controls.git`. The code is in typescript. Use a typescript IDE of your choice, like Visual Studio Code or WebStorm.
 2. Set up the development environment by running `npm install`.
@@ -175,7 +175,7 @@ To contribute, follow these steps:
 7. Run the unit test continuously during development via `npm run test:dev`.
 8. Run the end-to-end test during development via `npm run test:e2e:dev`.
 
-## 9 Scripts
+### 8.3 Scripts
 
 While developing, you will probably rely mostly on `npm start`. However, there are additional scripts at your disposal:
 
@@ -193,7 +193,7 @@ While developing, you will probably rely mostly on `npm start`. However, there a
 | lint | Lints all *.js* files. |
 | lint:fix | Lints and fixes all *.ts* files. |
 
-## 10 CI & Remote Testing
+### 8.4 CI & Remote Testing
 
 To enable continuous integration services, copy the *node_modules/mendix-widget-build-script/dist/localSettings.js* file to your project root, and update the settings to run the update deployment from the local source. Do not forget to exclude this file in the *.gitignore* file, as it contains sensitive data.
 

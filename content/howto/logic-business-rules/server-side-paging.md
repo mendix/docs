@@ -7,9 +7,12 @@ tags: [ "microflow", "Data Grid", "rest service", "server-side" ]
 
 ## 1 Introduction
 
-A data grid and a microflow can be a powerful way to retrieve and display data from another system. Here you will learn to use a microflow as a data source with sorting and paging enabled. Enhancing your app with this feature will improve its UX and accelerate its performance.
+A data grid and a microflow can be a powerful way to retrieve and display data from another system. Here you will learn to use a microflow as a data source with sorting and paging enabled. Doing so will improve your app's UX and accelerate its performance.
 
-This how-to will teach you how to create a data grid with a microflow data source which retrieves data from a REST service, and then add server-side paging and sorting to it.
+This how-to will teach you how to do the following:
+
+* Create a data grid with a microflow data source which retrieves data from a REST service
+* Add server-side paging and sorting to that data grid
 
 ## 2 Prerequisites
 
@@ -20,7 +23,9 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Creating a Microflow Data Source
 
-You will use this to create a JSON structure and import mapping for this REST service. To do this, complete the first four sections of [Consume a REST Service](/howto/integration/consume-a-rest-service) — (until **Adding an Input Entity to the Domain Model** is done). You must complete these steps with *one crucial change*: you must use this REST service URL for your JSON snippet: `https://my-json-server.typicode.com/mendix/howto-api-data/airports`.
+In this section you will create a JSON structure and import mapping for a REST service. To do this, complete the first four sections of [Consume a REST Service](/howto/integration/consume-a-rest-service) — (until **Adding an Input Entity to the Domain Model** is done). 
+
+You must complete these steps with *one crucial change*: you must use this REST service URL for your JSON snippet: `https://my-json-server.typicode.com/mendix/howto-api-data/airports`.
 
 Once successful, your project should have the following elements:
 
@@ -45,26 +50,23 @@ Now you can start calling the REST service from your microflow data source. To c
 
 	{{% image_container width="500" %}}![edit call rest](attachments/server-side-paging/edit-call-rest.png){{% /image_container %}}
 
-5. In the **Template** field, add `https://my-json-server.typicode.com/mendix/howto-api-data/airports` then click the **OK** button:
+5.  In the **Template** field, add `https://my-json-server.typicode.com/mendix/howto-api-data/airports` then click the **OK** button:
 
 	{{% image_container width="500" %}}![airport template](attachments/server-side-paging/add-airport-url.png){{% /image_container %}}
 
-6. Click the **Response** tab:
+6.  Click the **Response** tab:
 
 	{{% image_container width="500" %}}![response tab](attachments/server-side-paging/response-tab.png){{% /image_container %}}
 
 7. Select **Apply import mapping** from the **Response handling** drop-down menu.
 8. Click **Mapping** > **Select** and select the import mapping you created.
-9. For **Variable Name**, type *Result.* Click **OK** to accept the changes:
+9.  For **Variable Name**, type *Result.* Click **OK** to accept the changes:
 
 	{{% image_container width="500" %}}![variable result](attachments/server-side-paging/call-rest-response.png){{% /image_container %}}
 
 10. From the **Toolbox** drag the **Retrieve** activity onto the microflow and double-click it.
-
 11. Click **Association** > **Select**, click **Expand All**, and select **JsonObject_Summary (List of NativeMobile.JsonObject)**. 
-
 12. Click **OK** to accept this association.
-
 13. Right-click the **Retrieve** activity and select **Set $JsonObjectList as return value**:
 
 	{{% image_container width="500" %}}![set return value](attachments/server-side-paging/call-rest-returned.png){{% /image_container %}}
@@ -100,24 +102,23 @@ In the previous section you added the **Paging** input parameter to your microfl
 
 1. Open the the **CallREST** microflow.
 2. Double-click the **Call REST service** activity. 
-3. Click **Location** > **Edit**
-4. Change **Template** to `https://my-json-server.typicode.com/mendix/howto-api-data/airports?limit=5&_page={1}`:
+3. Click **Location** > **Edit**.
+4.  Change **Template** to `https://my-json-server.typicode.com/mendix/howto-api-data/airports?limit=5&_page={1}`:
 
 	{{% image_container width="500" %}}![add page bit to template](attachments/server-side-paging/template-param-one.png){{% /image_container %}}
 
-5. Click **Parameters** > **New** for a new parameter and enter the following expression `toString($Paging/PageNumber)` for this parameter:
+5.  Click **Parameters** > **New** for a new parameter and enter the following expression `toString($Paging/PageNumber)` for this parameter:
 
 	{{% image_container width="500" %}}![add page number parameter](attachments/server-side-paging/page-parameter.png){{% /image_container %}}
 
 6. Click **OK** to accept this expression.
-
 7. Click **OK** to accept the changes for the location, and click **OK** once more to accept the changes for the **Call REST service** activity. You are now back at your microflow.
 
-Deploy your app and navigate to the page where you added your data grid. You can now use your newly added server side paging by using the paging bar buttons above the data grid. 
+Deploy your app and navigate to the page where you added your data grid. You can now use your newly added server-side paging by using the paging bar buttons above the data grid. 
 
 ## 6 Adding Server-Side Sorting Support to the Microflow Data Source
 
-Now you have service-side paging for our data grid. Next, add server-side sorting to it as well.
+Now you have service-side paging for your data grid. Next, add server-side sorting to it.
 
 Clicking the header on the data grid in the client will update the **Paging** entity by setting the attribute **SortAttribute** to the attribute which is associated to the header you clicked, and the **SortAscending** is set to **true** for ascending and **false** for a descending sort order. 
 
@@ -126,11 +127,11 @@ Use these attributes when calling your REST service:
 1. Open your **Call_REST** microflow.
 2. Double-click the **Call REST Service** activity. 
 3. Click **Location** > **Edit**.
-4. Add `&_sort={2}&_order={3}` to the end of your current **Template** address:
+4.  Add `&_sort={2}&_order={3}` to the end of your current **Template** address:
 
 	{{% image_container width="500" %}}![add sort and order bits to template](attachments/server-side-paging/appended-template.png){{% /image_container %}}
 
-5. Click **Parameters** > **New** to add the second parameter and enter the following expression `toLowerCase($Paging/SortAttribute)`:
+5.  Click **Parameters** > **New** to add the second parameter and enter the following expression `toLowerCase($Paging/SortAttribute)`:
 
 	{{% image_container width="500" %}}![add second parameter](attachments/server-side-paging/second-param.png){{% /image_container %}}
 
@@ -178,12 +179,12 @@ Apps that use a REST service which does not support sorting, or apps which do no
 2. Right-click on the data view surrounding the data grid and select **Go to data source nanoflow**.
 3. Double-click on the **Create object** activity. 
 4. Click **New** to set the value for another member of the **Paging** entity. 
-5.  Select **Member** > **IsSortable (Boolean)** from the drop-down menu.
+5. Select **Member** > **IsSortable (Boolean)** from the drop-down menu.
 6.  Type *false* into **Value**:
 
 	![value false](attachments/server-side-paging/disable-sort.png)
 
-7.  Click **OK** to accept the changes to the member, and click **OK** once more to accept the changes to the **Create object** activity.
+7. Click **OK** to accept the changes to the member, and click **OK** once more to accept the changes to the **Create object** activity.
 
 Deploy your app again and navigate to the page with your data grid. The data will still be shown ordered by **Name**, but you can no longer change the sorting by clicking the header. Note the lack of an arrow above the **Name** header.
 

@@ -1,14 +1,15 @@
 ---
 title: "Other Mendix Terms"
+tags: ["mendix terms", "terms", "terminology", "product name"]
 menu_order: 2
 draft: true
 ---
 
 ## Introduction
 
-This section contains the main Mendix terms that are used in the product UI and documentation.
+This document contains various Mendix terms that are used in the product UI and documentation.
 
-## app
+## application & app
 
 An app can be one of the following:
 
@@ -38,6 +39,13 @@ Always capitalize.
 
 "App" should be used instead of "project" as much as possible in the documentation. However, be aware of potential confusion here when referring to what the user works on for project management in the Developer Portal. A "project" would include the app being developed itself as well as resources from the Developer Portal, deployment, and elsewhere. Thus, "app" as something a Mendix user makes and an end-user uses cannot entirely replace "project" in the documentation.
 
+```
+<!---
+Also the term "project" is used in Studio Pro instead of "app", it appears in the UI.
+I would also add that there is no need to capitalize it unless it is in the beginning of the sentence.  
+-->
+```
+
 {{% alert type="info" %}}
 "App project" should be used to clarify project management-related tasks in the Developer Portal.
 {{% /alert %}}
@@ -62,7 +70,7 @@ Capitalize in all instances.
 
 ## AppCloud
 
-This appears in some Mendix Cloud and Developer Portal documentation. It continues in the name of the [AppCloudServices](https://appstore.home.mendix.com/link/app/934/) module, which provides single sign-on (the original idea of AppCloud can be found in this [press release](https://www.mendix.com/press/new-mendix-appcloud/)).
+This term appears in some Mendix Cloud and Developer Portal documentation. It continues in the name of the [AppCloudServices](https://appstore.home.mendix.com/link/app/934/) module, which provides single sign-on (the original idea of AppCloud can be found in this [press release](https://www.mendix.com/press/new-mendix-appcloud/)).
 
 {{% alert type="info" %}}
 Do not use. Use specific SSO-related terminology instead.
@@ -123,32 +131,36 @@ Capitalize in all instances.
 ## delighters
 
 {{% alert type="info" %}}
-This term can be used again in customer-facing documentation to refer to certain productivity improvements. There is a **Delighters** section in the Studio Pro release notes.
+This term can be used in customer-facing documentation to refer to certain productivity improvements. 
+{{% /alert %}}
+
+{{% alert type="success" %}}
+There is a [**Delighters**](/releasenotes/studio-pro/7.16#delighters) section in the Studio Pro release notes.
 {{% /alert %}}
 
 ## fast deploy, fast deployment
 
 {{% alert type="info" %}}
-Do not use "insta-deploy" or "instant redeploy."
+Do not use "insta-deploy" or "instant redeploy".
 {{% /alert %}}
 
 ## Free App {#free-app}
 
-A Free App is an app that can be deployed without a license and is therefore free. There are restrictions on the resources available to a Free App, and a Free App environment is not the same thing as a cloud environment, as it does not support complex or large applications. Free Apps are part of the [Free Edition](#free-edition).
+A [Free App](/deploy/mendix-cloud-deploy#free-app) is an app that can be deployed without a license and is therefore free. There are restrictions on the resources available to a Free App, and a Free App environment is a cloud environment, but it does not support complex or large applications. Free Apps are part of the [Free Edition](#free-edition).
 
 {{% alert type="info" %}}
 Capitalize in all instances.
 {{% /alert %}}
 
 {{% alert type="info" %}}
-Do not use "Sandbox." For more information, see [Terminology History](terminology-history).
+Do not use "Sandbox". For more information, see [Terminology History](terminology-history).
 {{% /alert %}}
 
 ## Free Edition {#free-edition}
 
 This is the package of offerings that users can employ without requiring a paid license.
 
-This replaced [Community Edition](terminology-history#community-edition) in 2015, and was made a focus of the announcements at [Mendix World 2019](https://www.mendix.com/blog/a-3-step-leap-into-your-digital-future-highlights-from-mendix-world/).
+Free Edition replaced [Community Edition](terminology-history#community-edition) in 2015, and was made a focus of the announcements at [Mendix World 2019](https://www.mendix.com/blog/a-3-step-leap-into-your-digital-future-highlights-from-mendix-world/).
 
 {{% alert type="info" %}}
 Use to refer to the whole package of Mendix free offerings (Studio Pro, Studio, and Free Apps), not individual parts of the offering.
@@ -160,7 +172,7 @@ Capitalize in all instances.
 
 ## guided product introduction tour
 
-Used to describe the user guidance that is built into Mendix Studio. This is a generic term, so it can be applied as more user guidance is built.
+This term is used to describe the user guidance that is built into Mendix Studio. This is a generic term, so it can be applied as more user guidance is built.
 
 It should be qualified by the context/location. In the case of Studio, the generic term is qualified by the context/location in the [Studio Release Notes](/releasenotes/studio/) like this: "A guided product introduction tour is now shown when you select **Start Your First App** from the **Introduction Tour** category when creating an app in the [Mendix Developer Portal](https://sprintr.home.mendix.com/)."
 
@@ -217,7 +229,7 @@ Do not use "the forum," always use "the Mendix Forum."
 ## Mendix level
 
 {{% alert type="info" %}}
-Do not capitalize "level."
+Do not capitalize "level".
 {{% /alert %}}
 
 ## Mendix Metamodel
@@ -258,6 +270,10 @@ Capitalize in all instances.
 
 This term replaces "Mendix Business Server" and "Business Engine." These terms are not to be used in the product UI or documentation. For more information, see [Terminology History](terminology-history).
 
+<!---
+"These terms are not to be used in the product UI or documentation," sounds like a guideline to me.  
+-->
+
 {{% alert type="info" %}}
 Capitalize in instances when referring to Runtime as part of the Mendix Platform. The best practice is to use a definite article for additional clarity: "the Mendix Runtime."
 {{% /alert %}}
@@ -274,9 +290,13 @@ The Mendix Runtime executes the application model that is created in Studio Pro.
 At runtime,…
 {{% /alert %}}
 
+<!---
+I would put a full sentence as an example.   
+-->
+
 ## Mendix Server
 
-This term is still in use, even though [Mendix Business Server](terminology-history#business-server) is no longer used as a product name. It can be useful when contrasting with [Mendix Client](#client). In addition, it can be used to cover more than [Mendix Runtime](#runtime).
+This term is still in use, even though [Mendix Business Server](terminology-history#business-server) is no longer used as a product name. It can be useful when contrasting with [Mendix Client](#client). In addition, it can be used to cover more than [the Mendix Runtime](#runtime).
 
 {{% alert type="info" %}}
 Capitalize in all instances.
@@ -317,8 +337,12 @@ Capitalize in all instances.
 ## Model Server
 
 {{% alert type="info" %}}
-Capitalize in all instances of the Mendix Model Server (to parallel "Team Server" and "Build Server"). 
+Capitalize in all instances (to parallel "Team Server" and "Build Server"). The best practice is to use a definite article "the".
 {{% /alert %}}
+
+<!---
+"Capitalize in all instances of the Mendix Model Server", sounded confusing to me. 
+-->
 
 ## MxAssure
 
@@ -340,10 +364,10 @@ Do not use "on-premise," "on premise," "on-prem," or "on prem."
 On-premises deployment needs specific security considerations.
 {{% /alert %}}
 
-## one-to-one & one-to-many
+## one-to-one & one-to-many associations
 
 {{% alert type="info" %}}
-Write as "one-to-one" and "one-to-many," not as "1-1" or "1-to-many."
+Write as "one-to-one" and "one-to-many," not as "1-1" or "1-to-many." For more information on association properties, see [Associations & Their Properties](association-properties). 
 {{% /alert %}}
 
 ## Partner Profile
@@ -352,13 +376,17 @@ Write as "one-to-one" and "one-to-many," not as "1-1" or "1-to-many."
 Capitalize in all instances.
 {{% /alert %}}
 
-## persistable & non-persistable
+## persistable & non-persistable 
 
 {{% alert type="info" %}}
 Do not use "persistent" or "non-persistent."
 
-Also, do not use "transient" as a synonym for "persistable."
+Also, do not use "transient" as a synonym for "persistable." For more information on persistability of entities, see [Persistability](/refguide/persistability). 
 {{% /alert %}}
+
+<!---
+Here two guidelines are listed in one note box.  
+-->
 
 ## Platform APIs
 
@@ -442,11 +470,13 @@ Capitalize in all instances of this [role](/developerportal/company-app-roles/te
 
 ## Theme Customizer
 
-This is part of [Atlas UI](#atlas-ui).
-
 {{% alert type="info" %}}
 Capitalize in all instances.
 {{% /alert %}}
+
+<!---
+It is part of Studio, but this addition seems to be unnecessary. If we need a definition, I would describe what it does, rather what it is part of.  
+-->
 
 ## UI resources package
 

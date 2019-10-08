@@ -1,6 +1,7 @@
 ---
 title: "Strategic Partner Terms"
 menu_order: 3
+tags: ["terms", "strategic partner terms", "terminology"]
 draft: true
 ---
 
@@ -21,6 +22,12 @@ For more information on strategic partners, see:
 {{% alert type="info" %}}
 Capitalize in all instances (using full name with "ATS").
 {{% /alert %}}
+
+<!---
+
+"using full name with "ATS"", I do not understand what is meant here. Mansystems ATS Helper? Do you mean we should write it like this? 
+
+-->
 
 ### ATS Recorder
 

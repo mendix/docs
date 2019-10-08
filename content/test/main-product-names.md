@@ -2,7 +2,6 @@
 title: "Main Product Names"
 menu_order: 1
 tags: ["product names", "main terms", "mendix terms"]
-draft: true
 ---
 
 ## Introduction

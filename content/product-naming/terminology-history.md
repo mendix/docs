@@ -1,18 +1,25 @@
 ---
 title: "Terminology History"
 menu_order: 4
+tags: ["terms", "old terminology", "terminology history"]
 draft: true
 ---
 
 ## Introduction
 
-This section contains terms that are not used or have had their name changed.
+This document contains terms that are not used or have had their name changed.
 
 ## Cloud Portal {#cloud-portal}
 
-This is an internal term and should not be used in the documentation or publicly, as it has not been agreed on or branded. It no longer appears in the Mendix Documentation or *Mendix Platform Evaluation Guide*.
+This is an internal term and should not be used in the documentation or publicly, as it has not been agreed on or branded. It no longer appears in the Mendix Documentation or Mendix Platform Evaluation Guide.
 
-Deployment facilities should be described within the name/context of the Mendix Developer Portal (for example, "deployment via the Developer Portal"). Describing the functionality should avoid using any "portal" language and emphasize the action of "deploying an app to the Mendix Cloud."
+Deployment facilities should be described within the name/context of the [Mendix Developer Portal](main-product-names##devportal) (for example, "deployment via the Developer Portal"). 
+
+Describing the functionality should avoid using any "portal" language and emphasize the action of "deploying an app to the Mendix Cloud."
+
+<!---
+Two paragraphs above can also be considered guidelines, but are not included into blue boxes. I think it makes the text much easier to read and to focus on it.
+-->
 
 ## Community Edition {#community-edition}
 
@@ -25,20 +32,20 @@ Do not use. This has been replaced by the [Free Edition](other-terms#free-editio
 ## Desktop Modeler {#dm}
 
 {{% alert type="info" %}}
-Replaced by [Mendix Studio Pro](main-product-names#pro) for Mendix 8.
+Replaced by [Mendix Studio Pro](main-product-names#pro) for Mendix 8. The Desktop Modeler term can still be used when referring to Mendix versions below 8. 
 {{% /alert %}}
 
 ## Developer Profile
 
 {{% alert type="info" %}}
-Replaced by [Mendix Profile](other-terms#profile).
+Do not use. Replaced by [Mendix Profile](other-terms#profile).
 {{% /alert %}}
 
 ## launchpad
 
 The launchpad was part of the AppCloud release described in this [press release](https://www.mendix.com/press/new-mendix-appcloud/). This was also the only place where Mendix single sign-on users could be managed.
 
-Access to the launchpad has been removed from the Developer Portal.
+Access to the launchpad has been removed from the Developer Portal and replaced by the the [App User Management](/developerportal/settings/general-settings#managing-app-users).
 
 {{% alert type="info" %}}
 Do not use.
@@ -61,7 +68,7 @@ Do not use. Use [Mendix Platform](main-product-names#platform) and [Developer Po
 Not in use as of Mendix 7. 
 
 {{% alert type="info" %}}
-Replaced by [Desktop Modeler](#dm).
+Replaced by the [Desktop Modeler](#dm).
 {{% /alert %}}
 
 ## Mendix Business Server/Engine {#business-server}
@@ -79,12 +86,12 @@ Do not use. Use [Mendix mobile app](other-terms#mendix-mobile-app) instead.
 ## Mendix Online Platform, Mendix Platform Portal
 
 {{% alert type="info" %}}
-Do not use. Use [Developer Portal](main-product-names#devportal) instead.
+Do not use. Use the [Developer Portal](main-product-names#devportal) instead.
 {{% /alert %}}
 
 ## Run in Sandbox
 
-This button no longer exists in the Desktop Modeler or Studio Pro. Now it is just **Run**.
+This button no longer exists in the Desktop Modeler or Studio Pro. Now it is **Run Locally**.
 
 For more information, see [Sandbox](#sandbox).
 
@@ -99,11 +106,11 @@ Do not use as of Mendix 8. Use [Free App](other-terms#free-app) or "Free App env
 ## Sprintr
 
 {{% alert type="info" %}}
-Do not use. Use [Developer Portal](main-product-names#devportal) instead.
+Do not use. Use the [Developer Portal](main-product-names#devportal) instead.
 {{% /alert %}}
 
 ## Web Modeler
 
 {{% alert type="info" %}}
-Replaced by [Mendix Studio](main-product-names#studio) for Mendix 8.
+Replaced by [Mendix Studio](main-product-names#studio) for Mendix 8. The Web Modeler term can still be used when referring to Mendix versions below 8. 
 {{% /alert %}}

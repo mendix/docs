@@ -1,5 +1,5 @@
 ---
-title: "Charts JS"
+title: "Chart JS"
 category: "Widgets"
 description: " "
 tags: [ ]

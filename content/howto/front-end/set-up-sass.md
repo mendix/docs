@@ -180,9 +180,9 @@ You can test this by changing the color of `.pageheader-subtitle` from green to 
 
 There are a few common issues users have when theming. This section will help you solve those common issues yourself.
 
-When using the [ux-theming resources](https://github.com/mendix/ux-theming) [todo: correct term? referring to github repo yes?] in Mendix 8, you might incur issues such as infinite loops or folders not being recognized. To remedy these, make sure the following folders are set correctly in your Gulpfile [is this a file? if so, bold]:
+When using the [ux-theming resources](https://github.com/mendix/ux-theming) in Mendix 8, you might incur issues such as infinite loops or folders not being recognized. To remedy these, make sure the following folders are set correctly in your *gulpfile.js* or *gulpfile.ts*:
 
-``` [todo:set language]
+```javascript
 // What is the name of the style folder in this theme folder?
 var sourceStyleFolder = 'theme/styles/web';
 
@@ -190,10 +190,9 @@ var sourceStyleFolder = 'theme/styles/web';
 var deploymentStyleFolder = 'styles/web';
 ```
 
-If you have other issues with SVN or rewriting of your **Gulpfile.js**, try doing the following:
+If you have other issues with SVN or rewriting of your *gulpfile.js* or *gulpfile.ts*, try doing the following:
 
-* Remove **node_modules**, **package.json**, **package-lock.json**, and **Gulpfile.js**. Replace them with fresh copies of those files from the [ux-theming GitHub repo](https://github.com/mendix/ux-theming).
-* Ignore both **node_modules** and **Gulpfile.js** [todo: ignore? is that a setting the user applies to these files?]. This means you will have to add **Gulpfile.js** to your project if you download another copy of the project, or if someone from your team downloads a fresh copy to work on [todo: correct phrasing?].
+* Remove *node_modules*, *package.json*, *package-lock.json*, and *gulpfile.js* or *gulpfile.ts*. Replace them with fresh copies of those files from the [ux-theming GitHub repo](https://github.com/mendix/ux-theming).
 * Make sure you are using the latest LTS version of [NodeJS](https://nodejs.org/en/).
 
 ## 7 Summary

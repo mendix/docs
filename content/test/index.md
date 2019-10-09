@@ -1,6 +1,7 @@
 ---
 title: "Mendix Product Naming Guide"
 tags: ["product naming", "terminology", "terms", "mendix platform"]
+draft: true
 ---
 
 ## Purpose of This Guide
@@ -19,7 +20,7 @@ This guide should not give insights into the product roadmap or internal company
 
 ## Sections of This Guide
 
-The *Product Naming Guide* is divided into the following sections:
+The *Product Naming Guide* is divided into the following documents:
 
 * [Main Product Names](main-product-names)
 * [Other Mendix Terms](other-terms)

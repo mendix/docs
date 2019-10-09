@@ -21,7 +21,7 @@ Capitalize in all instances, even when just writing "App Store."
 Capitalize in all instances.
 {{% /alert %}}
 
-## Mendix Cloud Version {#mx-cloud-version}
+## Mendix Cloud version {#mx-cloud-version}
 
 There are two versions of Mendix Cloud, v3 and v4.
 

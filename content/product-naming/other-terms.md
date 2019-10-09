@@ -145,7 +145,7 @@ There is a [**Delighters**](/releasenotes/studio-pro/7.16#delighters) section in
 ## fast deploy, fast deployment
 
 {{% alert type="info" %}}
-Do not use "insta-deploy" or "instant redeploy".
+Do not use "insta-deploy" or "instant redeploy."
 {{% /alert %}}
 
 ## Free App {#free-app}
@@ -161,7 +161,7 @@ Capitalize in all instances.
 {{% /alert %}}
 
 {{% alert type="info" %}}
-Do not use "Sandbox". For more information, see [Terminology History](terminology-history).
+Do not use "Sandbox." For more information, see [Terminology History](terminology-history).
 {{% /alert %}}
 
 ## Free Edition {#free-edition}
@@ -237,7 +237,7 @@ Do not use "the forum," always use "the Mendix Forum."
 ## Mendix level
 
 {{% alert type="info" %}}
-Do not capitalize "level".
+Do not capitalize "level."
 {{% /alert %}}
 
 ## Mendix Metamodel

@@ -17,7 +17,7 @@ Sections below describe the purpose of each control bar button and their specifi
 
 ### 2.1 Search Button {#search-button}
 
-The search button toggles the [search bar](search-bar) on and off. It is only present if the 'Show search bar' property of the grid is either 'With button (initially open)' or 'With button (initially closed)'.
+The **Search bar toggle** button (with default caption **Search**) opens or hides the search bar. It is only present if the **Show search bar** property of the grid is set to either *With button (initially open)* or *With button (initially closed)*.  
 
 {{% alert type="info" %}}
 In a [reference set selector](reference-set-selector) there will be no search fields set by default. See [Search Bar](search-bar) to learn more about search fields. 

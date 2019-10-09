@@ -48,6 +48,6 @@ To log detailed information about interaction with your published REST service, 
 
 ## 6 Example
 
-**How to publish REST natively with Mendix**
+**How to publish REST in Studio Pro 8**
 
 {{% youtube Ff_P84NOcZk %}}

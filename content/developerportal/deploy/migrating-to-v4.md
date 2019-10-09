@@ -43,6 +43,8 @@ There are a few other differences between the way you develop and deploy apps in
     * In Cloud Foundry, short-lived containers ensure standardization and apps are completely isolated from the management network, so the Java security manager is not needed to enforce standardization and act as an additional security layer
 * In Mendix Cloud v4, the number of permitted database connections is tied to the RAM of the database environment, rather than being static.
     * The limit is roughly 100 connections per GB of database RAM – the defaults are perfectly fine for most situations, but you can use the Mendix Runtime settings **ConnectionPoolingMaxActive** and **ConnectionPoolingMaxIdle** to tweak the number of database connections that the Mendix Runtime will set up for each runtime instance.
+* In Mendix Cloud v4, there are some circumstances in which your app can run out of file connections
+    * The default number of file connections is 50, but this can be increased and you may need to ensure that file connections are not being held open unnecessarily – see the [Other Considerations](mxcloudv4#other-considerations) section of *Mendix Cloud v4* for further advice
 * In Mendix Cloud v4, there are some monitoring features which are available in v3 which are not currently available – in particular:
     * File storage usage is not visible
     * Application CPU alerts are not sent

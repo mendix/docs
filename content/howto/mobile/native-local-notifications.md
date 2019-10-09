@@ -227,17 +227,23 @@ Start and load the app on your mobile device and tap the button which calls your
 
 {{% image_container width="500" %}}![badge number on mobile](attachments/native-push/badge-mobile.png){{% /image_container %}}
 
-### 3.3 Set an Action for When a Notification is Tapped or Received
+### 3.3 Set an Action for When a Notification is Tapped
 
-In this section you will learn to call a nanoflow when user receives a notification. You will also learn to make a page open when a user taps a notification.
+In this section you will learn to show a page when a user taps a notification. [TODO: change flow to start with dropping a "notificaitons" activity onto the home page, selecting "open page" on tap action, etc]
 
-1. Create a  native page *NotifPage*.
-2. Create a nanoflow in your module *NotifFlow*[todo: do nanoflows have to start with ACT or something?].
-2. Add a Notifications widget to your home page.
-3. Double click to the widget and add a new Action via clicking **New**. Set the attribute **On open to** > **Show a Page** and select the dummy page you created.
-4. Start and load the app in your mobile device 
-5. Tap the nanoflow button you created in 3.1
-6. Tap the notification to navigate to the page you selected.
+1. Right-click your project module and click  **Add page**.
+2. Click the **Phone (Native)** pane.
+3. Type *NotifPage* into **Page Name**.
+4. Click **Blank** pane on the left and select the **Blank** page template.
+5. Click **OK** to create your native page.
+
+PICK UP WORK FROM HERE
+
+7. Drag and drop a **Notifications** widget to your home page. [TAKE PIC]
+8. Double click to the widget and add a new Action via clicking **New**. Set the attribute **On open to** > **Show a Page** and select **NotifPage**.
+9. Start and load the app in your mobile device 
+10. Tap the nanoflow button you created in 3.1
+11. Tap the notification to navigate to the page you selected.
 
 Now you can show pages after notifications are tapped. Next you will learn to pass data to these pages. 
 
@@ -330,6 +336,8 @@ Explaining the workaround (all the steps/substeps above yes?):
 ## 4 Scheduling a Notification and Cancelling It
 
 Local notifications should rarely notify a user right after they do an action. Here you will learn to configure local notifications to trigger after a period of time. To do this, you will use a JavaScript action called **ScheduleNotification**.
+
+[todo: make sure to cover "on recieved" action in this section because we haven't yet]
 
 We can still use our basic example in 3.1 by doing following changes:
 

@@ -142,7 +142,7 @@ Resources and Operations are appended to [Location](#location) to form a URL on 
 
 **How to publish REST natively with Mendix**
 
-{{% youtube HzrFkv0U4n8 %}}
+{{% youtube Ff_P84NOcZk %}}
 
 ## 8 Read More
 

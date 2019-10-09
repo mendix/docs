@@ -197,33 +197,35 @@ You will need to build badge functionality into your app so that when a user get
 Since we covered how to send a simple local notification, we can also set the badge number by following steps:
 
 1. Open **ACT_CreateAndSendNotification**.
-2. Drag and drop a **Create variable** activity to the right of the three string variables you made:
+2.  Drag and drop a **Create variable** activity to the right of the three string variables you made:
 
-pic here
+	{{% image_container width="500" %}}![new create variable](attachments/native-push/new-variable-badge.png){{% /image_container %}}
 
 3. Double-click the variable activity and select **Data type** > **Integer/Long**.
 
-4. Give the variable an initial value of [1 (type into field under generate)]. 
+4. Type *1* into the expression value field. 
 
-5. Name the variable *badge_number* (field variable).
+5.  Type *badge_number* into the **variable name** field:
 
-6. click OK
+	{{% image_container width="500" %}}![badge number](attachments/native-push/badge-1.png){{% /image_container %}}
 
-7. Drag and drop a **Set badge number** JavaScript action to the right of your merge activity:
+6. Click OK.
 
-   pic here 
+7.  Drag and drop a **Set badge number** JavaScript action to the right of your merge activity:
+
+	![drag set badge number](attachments/native-push/set-badge-act.png)
 
 8. Double click the badge number activity.
 
-9. Set the value of **Badge number** to **$badge_number**
+9.  Set the value of **Badge number** to **$badge_number**
 
-pic
+	![value badge number](attachments/native-push/badge-input.png)
 
-3. Click **OK**.
+10. Click **OK**.
 
-Start and load the app on your mobile device and tap the nanoflow button. You will see a notification. Go to your device's start screen to see the notification badge on your app:
+Start and load the app on your mobile device and tap the button which calls your nanoflow. You will see a notification. Go to your device's start screen to see the notification badge on your app:
 
-pic here (from phone)
+{{% image_container width="500" %}}![badge number on mobile](attachments/native-push/badge-mobile.png){{% /image_container %}}
 
 ### 3.3 Set an Action for When a Notification is Tapped or Received
 

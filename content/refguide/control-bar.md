@@ -7,7 +7,11 @@ tags: ["studio pro", "control bar", "data grid", "template grid", "reference set
 
 ## 1 Introduction
 
-The control bar of the template grid, data grid, and reference set selector allows you to manipulate the objects displayed by means of buttons. By default, both grids will be created with a new, edit, and delete button in the control bar. The control bar can also include a number of selection options and spreadsheet export buttons, as well as microflow buttons for custom actions. 
+The control bar of the template grid, data grid, and reference set selector allows you to manipulate the objects displayed by means of buttons. By default, both grids will be created with **[Search](#search-button)** **[New](#create-button)**, [**Edit**](#grid-action-button), and [**Delete**](#grid-action-button) buttons in the control bar:
+
+![Data Grid Control Bar](attachments/data-widgets/control-bar-example.png)
+
+The control bar can also include a number of selection options and spreadsheet export buttons, as well as microflow buttons for custom actions. 
 
 ## 2 Control Bar Buttons
 
@@ -15,9 +19,9 @@ Most properties of control bar buttons are the same as properties of button widg
 
 Sections below describe the purpose of each control bar button and their specific properties if any. 
 
-### 2.1 Search Button {#search-button}
+### 2.1 Search Bar Toggle Button {#search-button}
 
-The search button toggles the search bar on and off. It is only present if the 'Show search bar' property of the grid is either 'With button (initially open)' or 'With button (initially closed)'.
+The **Search bar toggle** button (with default caption **Search**) opens or hides the search bar. It is only present if the **Show search bar** property of the grid is set to either *With button (initially open)* or *With button (initially closed)*.  
 
 ### 2.2 Add Button {#add-button}
 
@@ -37,25 +41,27 @@ The **Create** button (with the default caption **New**) allows an end-user to c
 
 The **Entity** property determines of which entity this button should create an instance. If the entity that is connected to the grid or reference set selector has no specializations, the page editor will automatically set this property for you. Otherwise, you will have to select one of the specializations yourself.
 
-For example, you have an entity Vehicle and two specializations, namely Bicycle and Car. In a grid on Vehicle you have to specify for the create button whether a Vehicle, a Bicycle or a Car will be created. You can even have three **New** buttons, one for each possibility.
+For example, you have an entity *Vehicle* and two specializations: *Bicycle* and *Car*. In a grid, when you select *Vehicle* as a data source, you have to specify whether a *Vehicle*, a *Bicycle* or a *Car* will be created when the **Create** button is clicked. You can even have three **New** buttons, one for each specialization.
 
 ### 2.4 Action Button {#grid-action-button}
 
-An action button can perform various actions such as calling a microflow or nanoflow or opening a page. 
+An action button is a button that can perform various actions, such as calling a microflow or opening a page. The **Edit** and **Delete** buttons are action buttons created by default in a data grid and template grid control bar. For more information on action buttons, see [Button Widgets](button-widgets). 
 
 ### 2.5 Remove Button {#remove-button}
 
-The remove button is a button specifically made for the reference set selector. With this button the end-user can remove objects that have been added to the reference set selector.
+The **Remove** button is a button specific for the reference set selector. With this button the end-user can remove objects that have been added to the reference set selector. For more information on a reference set selector, see [Reference Set Selector](reference-set-selector). 
 
 ### 2.6 Select Button {#select-button}
 
-The select button confirms the choice of a row of a grid when it is used for selecting an object for a reference selector or reference set selector. For this reason, the select button can only be placed on a grid in a page that is connected to a reference selector or to the **Add** button of a reference set selector.
+The **Select** button confirms the choice of a row of a grid when it is used for selecting an object for a reference selector or reference set selector. For this reason, the **Select** button can only be placed on a grid in a page that is connected to a reference selector or to the **Add** button of a reference set selector.
 
 ### 2.7 Select All Button {#select-all-button}
 
-The select all button allows the end-user to select all objects in a grid or a reference set selector. With the selection type property you can determine whether this button should select the objects on the current page, or the objects on all pages.
+The **Select all** button allows an end-user to select all objects in a grid or a reference set selector. 
 
 #### 2.7.1 Selection Type
+
+The **Selection type** property determines whether the **Select all** button should select the objects on the current page, or the objects on all pages:
 
 | Value       | Description                                                  |
 | ----------- | ------------------------------------------------------------ |
@@ -64,7 +70,9 @@ The select all button allows the end-user to select all objects in a grid or a r
 
 {{% alert type="warning" %}}
 
-Due to technical limitations, a button with the selection type "Select all" cannot be combined with **Remove**, **Delete**, or **Select** buttons. An **Edit** button always behaves as if the selection type is "Select page," regardless of the actual settings of the "Select all" button that had been used to select objects.
+Due to technical limitations, a button with the **Select all** selection type cannot be combined with [**Remove**](#remove-button), [**Delete**](#grid-action-button), or **[Select](#select-button)** buttons. 
+
+An **Edit** button always behaves as if the selection type is **Select page**, regardless of the actual settings of the **Select all** button that had been used to select objects.
 
 {{% /alert %}}
 
@@ -72,73 +80,84 @@ _Default value:_ Select page
 
 ### 2.8 Deselect All Button {#deselect-all-button}
 
-This button lets the user deselect all rows in the grid or a reference set selector.
+The **Deselect all** button lets the user deselect all rows in the grid or a reference set selector.
 
 ### 2.9 Export to Excel Button {#export-to-excel-button}
 
-This button allows end-users to export the contents of the grid or reference set selector to an excel file. Please note that constraints by use of search fields and sorting will also be exported.
+The **Export to Excel** button allows end-users to export the contents of the grid or the reference set selector to an Excel file. 
 
-The excel export function relies on a specific data retrieval method. As such, it is only available in list widgets that use the XPath data source. 
+{{% alert type="info" %}}
 
-#### 2.9.1 Maximum number of rows
+The Excel export function relies on a specific data retrieval method. So, it is only available in list widgets that have the [XPath data source](xpath-source). 
 
-Indicates the maximum number of rows that can be present in the datagrid when exporting. Useful to prevent users from exporting large quantities of data, potentially placing a heavy load on the server.
+Constraints by use of search fields and sorting will also be exported.
 
-#### 2.9.2 Date export format
+{{% /alert %}}
 
-Defines how dates will be exported. When _Date value_ is selected, date values will be exported as real dates, so that it is possible to use Excel date functions like sorting. When _Text_ is selected, date values will be exported exactly as shown in the data grid.
+#### 2.9.1 Maximum Number of Rows
+
+The **Maximum number of rows** property indicates the maximum number of rows that can be present in the data grid when exporting. It can be useful to prevent end-users from exporting large quantities of data, potentially placing a heavy load on the server.
+
+#### 2.9.2 Date Export Format
+
+The **Date export format** property defines the format dates will be exported. The possible options are the following ones:
+
+* **Date value** – date values are exported as real dates, so that it is possible to use Excel date functions like sorting
+* **Text** – date values are exported exactly as shown in the data grid
 
 _Default value:_ Date value
 
 {{% alert type="warning" %}}
 
-When choosing _Date value_, dates will be shown only in the time zone of your Windows account, because Excel does not support defining specific time zones.
+When selecting **Date value**, dates will be shown only in the time zone of your Windows account, because Excel does not support defining specific time zones.
 
 {{% /alert %}}
 
 ### 2.10 Export to CSV Button {#export-to-csv-button}
 
-This button allows end-users to export the contents of the grid or reference set selector to a CSV file. Please note that constraints by use of search fields and sorting will also be exported.
+The **Export to CSV** button allows end-users to export the contents of the grid or the reference set selector to a CSV file. 
 
-The csv export function relies on a specific data retrieval method. As such, it is only available in list widgets that use the XPath data source. 
+{{% alert type="info" %}}
 
-#### 2.10.1 Export to CSV Button Specific Properties
+The export to CSV function relies on a specific data retrieval method. So, it is only available in list widgets that have the [XPath data source](xpath-source). 
 
-| Property                      | Section    | Description                                                  |
-| ----------------------------- | ---------- | ------------------------------------------------------------ |
-| Decimal separator             | Formatting | The string used to separate the fractional part from the whole part in Decimal values. <br />_Default value:_ . |
-| Group separator               | Formatting | The string used to separate groups of digits in large numbers.<br />_Default value:_ , |
-| Delimiter                     | Formatting | The string used to delimit values in the resulting CSV file.<br />_Default value:_ ; |
-| Maximum Number of Rows        | General    | Indicates the maximum number of rows that can be present in the datagrid when exporting. Useful to prevent users from exporting large quantities of data, potentially placing a heavy load on the server. |
-| Generate Excel Separator Hint | General    | If true, adds an extra line to the CSV file header that informs Excel what the seperator character is. This solves compatibility issues with Excel and localization. |
-| Use Grid Date Format          | General    | If true, the date format of the column is used, otherwise a format that is recognized by Excel as a date is used (yyyy-MM-dd). |
+Constraints by use of search fields and sorting will also be exported.
+
+{{% /alert %}}
 
 #### 2.10.1 Decimal Separator
 
-The string used to separate the fractional part from the whole part in Decimal values.
+**Decimal separator** is a string used to separate the fractional part from the whole part in decimal values.
 
 _Default value:_ .
 
 #### 2.10.2 Group Separator
 
-The string used to separate groups of digits in large numbers.
+**Group separator** is a string used to separate groups of digits in large numbers.
 
 _Default value:_ ,
 
 #### 2.10.3 Delimiter
 
-The string used to delimit values in the resulting CSV file.
+**Delimiter** is a string used to delimit values in the resulting CSV file.
 
 _Default value:_ ;
 
 #### 2.10.4 Maximum Number of Rows
 
-Indicates the maximum number of rows that can be present in the datagrid when exporting. Useful to prevent users from exporting large quantities of data, potentially placing a heavy load on the server.
+The **Maximum number of rows** property indicates the maximum number of rows that can be present in the data grid when exporting. It can be useful to prevent end-users from exporting large quantities of data, potentially placing a heavy load on the server.
 
 #### 2.10.5 Generate Excel Separator Hint
 
-If true, adds an extra line to the CSV file header that informs Excel what the seperator character is. This solves compatibility issues with Excel and localization.
+The **Generate Excel separator hint** property adds an extra line to the CSV file header that informs Excel what the separator character is. This solves compatibility issues with Excel and localization.
 
 #### 2.10.6 Use Grid Date Format
 
-If true, the date format of the column is used, otherwise a format that is recognized by Excel as a date is used (yyyy-MM-dd).
+When **Use grid date format property** is enabled, the date format of the column is used. When this property is disabled, a format that is recognized by Excel as a date is used (yyyy-MM-dd).
+
+## 3 Read More
+
+* [Button Properties](button-properties)
+* [Data Grid](data-grid)
+* [Template Grid](template-grid)
+* [Reference Set Selector](reference-set-selector)

@@ -10,7 +10,7 @@ draft: true
 
 Use the [Database Connector](https://appstore.home.mendix.com/link/app/2888/) to incorporate your external data directly in your Mendix application. This connector enables seamlessly connecting to external databases without being limited in your choice of database or SQL dialect.
 
-This section of the *App Store Items Guide* focuses on executing an SQL `SELECT` query and SQL statements on external relational databases.
+This section of the *App Store Components Guide* focuses on executing an SQL `SELECT` query and SQL statements on external relational databases.
 
 The `Execute query` action (which is present in the connector) provides a consistent environment for Mendix app projects to perform an arbitrary `SELECT` SQL query on relational external databases.  A Java database connectivity (JDBC) API (which is a standard Java API) is used when the Java action attempts to connect with a relational database for which a JDBC driver exists.
 

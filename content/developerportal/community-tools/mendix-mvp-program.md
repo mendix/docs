@@ -40,7 +40,7 @@ There are several things we look for when selecting the MVPs. To be nominated, t
 
 * Contribute consistently to the Mendix Forum and demonstrate a will to help the community by providing answers to important questions
 * Stay active on the Mendix Idea Forum by submitting new ideas for the Mendix product roadmap
-* Upload several App Store items a year
+* Upload several App Store components a year
 * Be active on GitHub by helping the community solve issues regarding App Store content repositories and writing [Mendix documentation](https://github.com/mendix/docs)
 * Attend and/or organize Meetups
 * Run a self-maintained blog and publications site and be an active social media contributor about Mendix discussions

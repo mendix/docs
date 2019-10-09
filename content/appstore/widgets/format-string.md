@@ -17,8 +17,8 @@ The typical usage scenario is displaying multiple attributes as a single string.
 ### 1.1 Features
 
 * Multiple attributes supported
-* Retreive attributes one-deep
-  
+* Retrieve attributes one-deep
+
 ### 1.2 Limitations
 
 * Setting the same attribute multiple times using different date/time formatting is not supported

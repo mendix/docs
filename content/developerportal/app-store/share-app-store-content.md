@@ -34,9 +34,9 @@ Submitted App Store content will be reviewed within five working days.
 
 These are some general guidelines for creating new App Store content :
 
-* Set up a separate project to build and maintain your App Store item
+* Set up a separate project to build and maintain your App Store component
 * Use a relatively recent Mendix version when creating the item, not only the latest Mendix version (for example, use Mendix 7.8 and 6.6 )
-* Create multiple versions of your App Store item (for example, for Mendix 7 and 6)
+* Create multiple versions of your App Store component (for example, for Mendix 7 and 6)
 
 Any information the end-user should know about your content can be written on the [Documentation tab](#doc-tab) when you are adding the content to the App Store.
 
@@ -90,7 +90,7 @@ To add content to the App Store, follow these steps:
 	* **Share** – components that can be downloaded using Studio Pro – if you select this option, continue to [step #3](#three) below
 	* **Promote** – a way to advertise a component or solution while not making it downloadable – if you select this option, continue to [step #4](#four) below
 
-	{{% alert type="warning" %}}You can only set this in the initial version of your content. You cannot change this setting by updating the App Store item later.
+	{{% alert type="warning" %}}You can only set this in the initial version of your content. You cannot change this setting by updating the App Store component later.
 	{{% /alert %}}
 
 3.  <a name="three"></a>When adding Studio Pro content, select **your content source**:
@@ -103,7 +103,7 @@ To add content to the App Store, follow these steps:
 		e. Click **Select** on this window when you find the correct *.mpk* file name.<br />
 		f. Select the **release** by clicking **Select**.<br/>
 		If there are various releases of the *.mpk* file available, the system will present them to you in a pop-up window. When you find the correct release, click **Select** on this window.<br />
-		g. Check the **Use GitHub README for documentation** check box if you want the repo's *readme.md* file to be included on the App Store item's [Documentation tab](#doc-tab).<br/>This is useful for including nicely formatted documentation with screenshots for your App Store item.<br />
+		g. Check the **Use GitHub README for documentation** check box if you want the repo's *readme.md* file to be included on the App Store component's [Documentation tab](#doc-tab).<br/>This is useful for including nicely formatted documentation with screenshots for your App Store component.<br />
 		{{% alert type="info" %}}The **Release notes** section is only available for updating a new version of the content (for details see the  [Updating Existing App Store Content](#updating) section below).{{% /alert %}}<br />
 
 		{{% image_container width="400" %}}![](attachments/share-app-store-content/add_content_1.png)
@@ -123,7 +123,7 @@ To add content to the App Store, follow these steps:
 	* **Public App Store (visible for anyone)** – your content will be available to every developer in the Mendix community (this content will have to be reviewed and approved by Mendix before it is available)
 	* <a name="private-app-store"></a>**Private App Store (visible for your company)** – your content will receive the **Company only** label and be available only to the developers in your company as well as [external downloaders](../app-store/app-store-overview#ext); this content will not be reviewed by Mendix
 	
-	{{% alert type="warning" %}}You can only set this in the initial version of your content. You cannot change this setting by updating the App Store item later.
+	{{% alert type="warning" %}}You can only set this in the initial version of your content. You cannot change this setting by updating the App Store component later.
 	{{% /alert %}}
 
 5. In the **Content protection** section, you can choose to **Enable protection** or **Disable protection** for the content. This will determine which members of your company can manage the content. For more information, see the [ Content Managers](app-store-overview#cm) section of *App Store Overview*.
@@ -205,7 +205,7 @@ To add content to the App Store, follow these steps:
 ## 5 Updating Existing App Store Content {#updating}
 
 {{% alert type="info" %}}
-If an existing App Store item is protected, you can only update it if you are a content manager. For more details, see the [Content Managers](app-store-overview#cm) section of *App Store Overview*.
+If an existing App Store component is protected, you can only update it if you are a content manager. For more details, see the [Content Managers](app-store-overview#cm) section of *App Store Overview*.
 {{% /alert %}}
 
 To update content that has already been published, follow these steps:

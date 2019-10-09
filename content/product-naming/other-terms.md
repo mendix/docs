@@ -46,6 +46,14 @@ Always capitalize.
 Enter the email addresses of all the co-workers you want to invite to your app project.
 {{% /alert %}}
 
+## App Store component
+
+This is the generic name of the individual add-on, widget, module, connector, starter app, etc. available in the Mendix App Store.
+
+{{% alert type="info" %}}
+Do not use "App Store item."
+{{% /alert %}}
+
 ## App Team
 
 {{% alert type="info" %}}

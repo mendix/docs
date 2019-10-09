@@ -64,6 +64,10 @@ Capitalize, because **Team** is capitalized in the Developer Portal UI.
 
 The app end-users invited to use your app while it is still being built.
 
+<!---
+For me "app being built" can also mean "app being deployed". Also, you can invite users after your app is ready (so, it is already built), to test it. I would say: The app end-users invited to use your deployed app, test it, and provide feedback.   
+-->
+
 {{% alert type="info" %}}
 Capitalize in all instances.
 {{% /alert %}}
@@ -147,6 +151,10 @@ Do not use "insta-deploy" or "instant redeploy".
 ## Free App {#free-app}
 
 A [Free App](/deploy/mendix-cloud-deploy#free-app) is an app that can be deployed without a license and is therefore free. There are restrictions on the resources available to a Free App, and a Free App environment is a cloud environment, but it does not support complex or large applications. Free Apps are part of the [Free Edition](#free-edition).
+
+<!---
+A Free App environment is a cloud environment.   
+-->
 
 {{% alert type="info" %}}
 Capitalize in all instances.

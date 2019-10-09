@@ -11,7 +11,7 @@ One of the strengths of the Mendix Platform is that it is easy to connect your M
 
 ## 2 Using These Connectors & Adapters
 
-This document does not go into usage details for these specific connectors and adapters. Documentation for using these App Store items is available on the **Documentation** tab on the App Store pages for the items themselves. This App Store documentation includes details on typical usage scenarios, installation, dependencies, and configuration.
+This document does not go into usage details for these specific connectors and adapters. Documentation for using these App Store components is available on the **Documentation** tab on the App Store pages for the items themselves. This App Store documentation includes details on typical usage scenarios, installation, dependencies, and configuration.
 
 For documentation on using more specific connectors and adapters for Siemens, SAP, and IBM, see the [Strategic Partners Guide](/partners/index).
 

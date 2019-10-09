@@ -172,8 +172,8 @@ partners:
     - "IBM"
     - "SAP"
     - "Siemens"
-app-store-items:
-  space: "App Store Items Guide"
+appstore:
+  space: "App Store Components Guide"
   priority: false
   draft: true
   menu_categories:

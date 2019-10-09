@@ -26,7 +26,7 @@ To allow you to both add a Group to a Customer, and add a Customer to a Group, y
 
 ![The domain model for a reference set selector between Customer (parent) and Group where the owner is 'both' (i.e. the Customer and Group refer to each other)](attachments/reference-set-selector/domain-model-owner-both.png)
 
-In the reference set selector, the related entity and association used to connect it to the entity in the data view are displayed at the top of the reference set selector, and the names of the attributes of the associated objects which will be displayed are shown inside the reference set selector. Each attribute is displayed in a [column](#columns). The association and related entity and attributes are displayed between square brackets, and colored blue.
+In the reference set selector, the related entity and association used to connect it to the entity in the data view are displayed at the top of the reference set selector, and the names of the attributes of the associated objects which will be displayed are shown inside the reference set selector. Each attribute is displayed in a [column](columns). The association and related entity and attributes are displayed between square brackets, and colored blue.
 
 For example, using the domain model above, the following reference set selector allows the end-user to associate a Customer with one or more Groups by setting the association **Customer_Group**. This is done by selecting the **Name**(s) of the **Group**(s) associated with the current **Customer**.
 
@@ -54,13 +54,15 @@ Reference set selector properties consist of the following sections:
 * [Selectable Objects](#selectable-objects)
 * [Visibility](#visibility)
 
-There are two additional sets of properties which do not appear in the properties of the reference set selector widget.
+There are three additional sets of properties which do not appear in the properties of the reference set selector widget.
 
-1. The rows of the reference set selector can be sorted using the properties of the sort bar. For more information on using the sort bar, see [Sort Bar](sort-bar).
+1. The control bar contains the buttons needed to search, add, and remove associations. For more information see [Control Bar](control-bar).
+
+2. The rows of the reference set selector can be sorted using the properties of the sort bar. For more information on using the sort bar, see [Sort Bar](sort-bar).
 
     ![](attachments/reference-set-selector/sort-bar.png)
 
-2. Each attribute is displayed in a column. You can find out more about the properties of these columns in [Columns](columns)
+3. Each attribute is displayed in a column. You can find out more about the properties of these columns in [Columns](columns)
 
 ### 2.1 Common Section{#common}
 
@@ -206,16 +208,9 @@ You cannot use a microflow to define selectable objects in a reference set selec
 
 {{% snippet file="refguide/visibility-section-link.md" %}}
 
-## 3 Columns{#columns}
-
-Within the reference set selector, each attribute is displayed in a column. The properties of these columns can be set individually for each column. See [Columns](columns) for more information.
-
-## 4 Sort bar
-
-The rows of the reference set selector can be sorted using the properties of the sort bar. See [Sort Bar](sort-bar) for more information.
-
-## 5 Read More
+## 3 Read More
 
 *   [Data view](data-view)
 *   [Entities](entities)
 *   [Associations](associations)
+* [Control Bar](control-bar)

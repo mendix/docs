@@ -17,7 +17,11 @@ Sections below describe the purpose of each control bar button and their specifi
 
 ### 2.1 Search Button {#search-button}
 
-The search button toggles the search bar on and off. It is only present if the 'Show search bar' property of the grid is either 'With button (initially open)' or 'With button (initially closed)'.
+The search button toggles the [search bar](search-bar) on and off. It is only present if the 'Show search bar' property of the grid is either 'With button (initially open)' or 'With button (initially closed)'.
+
+{{% alert type="info" %}}
+In a [reference set selector](reference-set-selector) there will be no search fields set by default. See [Search Bar](search-bar) to learn more about search fields. 
+{{% /alert %}}
 
 ### 2.2 Add Button {#add-button}
 
@@ -26,6 +30,13 @@ The **Add** button can only be used in the [reference set selector](reference-se
 #### 2.2.1 Page
 
 The **Page** property indicates the page that is shown to users after they click this button. The user can use this page to select objects that have to be added to the reference set selector. This page should contain a data grid, template grid, or list view connected to the same entity as the reference set selector.
+
+You can use an existing page or you can generate the appropriate page by either:
+
+1. Right-clicking the add button and selecting **Generate page…**.
+2. Selecting **New** for the page.
+
+    Both these options allow you to create a page which has the correct format for use by the add button. You can, of course, edit the page to meet your own requirements once it has been generated.
 
 For more information, see [Opening Pages](opening-pages). Note that opening select pages in content is prohibited.
 

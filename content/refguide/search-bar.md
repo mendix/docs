@@ -15,6 +15,8 @@ There are three different types of search fields that can be used for different 
 
 To add a search field to the search bar, right-click within the search bar in your data grid and choose **Add search field >**.
 
+![Add a search field to the search bar](attachments/search-bar/add-search-field.png)
+
 You cannot change the type of a search field, you will need to delete it and then add a new one of a different type.
 
 ### Comparison

@@ -10,7 +10,7 @@ draft: true
 
 The [Microflow Timer](https://appstore.home.mendix.com/link/app/27/) widget can be used to time and execute a microflow or nanoflow as long as a certain page is open. The microflow or nanoflow can be executed once or repeatedly, in which case it will not stop until it returns false or until the page is closed.
 
-### 1.1 Typical Usage Scenario
+### 1.1 Typical Usage Scenarios
 
 * Update a grid or object after a certain amount of time (for example, a message inbox)
 * Close a page with a message automatically after 10 seconds

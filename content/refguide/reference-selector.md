@@ -210,7 +210,7 @@ See the [constraints](database-source#constraints) section of *Database Source* 
 
 The sort order specifies the order in which the items in the reference selector are shown. You can sort on multiple attributes in both directions (ascending and descending). If **(default)** sort order is specified, the reference selector sorts on the displayed attribute.
 
-#### 2.9.2 XPath
+#### 2.9.2 XPath{#xpath-constraints}
 
 If the source is XPath, the list of objects is also taken from the database, but the objects which are displayed are chosen by an XPath Constraint.
 

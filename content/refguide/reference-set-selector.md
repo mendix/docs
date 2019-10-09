@@ -196,7 +196,7 @@ The **Source** property sets the way to define the selectable objects:
 * Database *(default)*
 * XPath
 
-For more information, see the [Selectable Objects Section](reference-selector#selectable-objects) section of *Reference Selector* for more information.
+For more information, see the [Selectable Objects Section](reference-selector#selectable-objects) section of *Reference Selector*.
 
 {{% alert type="info" %}}
 You cannot use a microflow to define selectable objects in a reference set selector.

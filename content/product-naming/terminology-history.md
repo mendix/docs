@@ -18,7 +18,7 @@ Deployment facilities should be described within the name/context of the [Mendix
 Describing the functionality should avoid using any "portal" language and emphasize the action of "deploying an app to the Mendix Cloud."
 
 <!---
-Two paragraphs above can also be considered guidelines, but are not included into blue boxes. I think it makes the text much easier to read and to focus on it.
+Two paragraphs above can also be considered guidelines, but are not included into note boxes. I think big sentences are easier to read when they are written in a paragraph and are not in a note.
 -->
 
 ## Community Edition {#community-edition}

@@ -1,7 +1,7 @@
 ---
 title: "Other Mendix Terms"
-tags: ["mendix terms", "terms", "terminology", "product name"]
 menu_order: 2
+tags: ["mendix terms", "terms", "terminology", "product name"]
 draft: true
 ---
 
@@ -345,7 +345,7 @@ Capitalize in all instances.
 ## Model Server
 
 {{% alert type="info" %}}
-Capitalize in all instances (to parallel "Team Server" and "Build Server"). The best practice is to use a definite article "the".
+Capitalize in all instances (to parallel "Team Server" and "Build Server"). The best practice is to use a definite article "the."
 {{% /alert %}}
 
 <!---

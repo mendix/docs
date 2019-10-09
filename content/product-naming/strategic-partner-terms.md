@@ -24,9 +24,7 @@ Capitalize in all instances (using full name with "ATS").
 {{% /alert %}}
 
 <!---
-
-"using full name with "ATS"", I do not understand what is meant here. Mansystems ATS Helper? Do you mean we should write it like this? 
-
+"using full name with "ATS"", I do not understand what is meant here. ATS Helper? Do you mean we should spell it like this?  
 -->
 
 ### ATS Recorder

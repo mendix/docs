@@ -56,7 +56,7 @@ For information on collaborative development from the Web Modeler perspective, s
 
 ## 4 Desktop Modeler Perspective
 
-When you connect to a project which has collaborative development turned on, you see which development line (the main line or a branch line) the Web Modeler is enabled for. For information on enabling collaborative development, see [Migration From the Sync Process to Collaborative Development](collaborative-development-migration). 
+When you connect to a project which has collaborative development turned on, you see which development line (the main line or a branch line) the Web Modeler is enabled for. 
 
 Click the drop-down to select another line or click **OK** to open the currently selected line. 
 
@@ -168,6 +168,5 @@ You cannot delete the Web Modeler enabled branch. If you need to delete this bra
 ## 6 Read More
 
 * [Version Control](version-control)
-* [Migration From the Sync Process to Collaborative Development](collaborative-development-migration)
 * [Troubleshooting Collaborative Development](collaborative-development-troubleshooting)
 * [Collaborative Development in the Web Modeler](/studio/general-collaborative-development)

@@ -89,4 +89,3 @@ You can do one of the following:
 
 * [Version Control](version-control) 
 * [Collaborative Development in the Web Modeler](/studio/general-collaborative-development)
-* [Migration From the Sync Process to Collaborative Development](collaborative-development-migration)

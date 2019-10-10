@@ -364,34 +364,42 @@ To create your microflow, do the following:
 
 	{{% image_container width="500" %}}![create ds test entity micro](attachments/native-push/ds-testentity-microflow.png){{% /image_container %}}
 
-13. Set this microflow to run after startup: <br />
-   a. Double-click **Settings** in your Project Explorer:<br />
+To make this microflow run after startup, do the following:
+
+1. Double-click **Settings** in your Project Explorer:
 
    {{% image_container width="500" %}}![project explorer](attachments/native-push/pe-settings.png){{% /image_container %}}
 
-   b. Click the **Runtime** tab:<br />
+2. Click the **Runtime** tab:
 
    {{% image_container width="500" %}}![click runtime](attachments/native-push/runtime-tab.png){{% /image_container %}}
 
-   c. Click **After startup** > **Select**: <br />
+3. Click **After startup** > **Select**:
 
    {{% image_container width="500" %}}![select after start up](attachments/native-push/after-startup.png){{% /image_container %}}
 
-   d. Click **DS_TestEntity** then click the **Select** button: <br />
+4. Click **DS_TestEntity** then click the **Select** button:
 
    {{% image_container width="500" %}}![select test entity](attachments/native-push/select-ds-entity.png){{% /image_container %}}
 
-   e. Click **OK**
+5. Click **OK**
 
-   f. Your microflow will look like this:
+To make your page, do the following: [todo: this page is "OnTap_Page". Is that obeying page name guidelines? Do the other pages (NotifPage) obey these guidelines?]
 
-   todo: insert pic
+1. Crete a new blank native page called *OnTap_Page*.
+2. Drag and drop a data view widget onto your new page.
+3. Double-click your data view widget.
+4. In **Data Source**, click **Entity (path)** > **Select**.
+5. Click **TestEntity**.
+6. Click **Select** to see the following:
 
-To make your page, do the following:
+	![entity test entity](attachments/native-push/data-view-source.png)
 
-1. Crete a native page *OnTap_Page* with dataview in it. Set its type to **Context** and entity to **TestEntity**. This will be the page the user sees when they tap the notification:
+7.  Click **OK**. 
+8.  When asked "Do you want to automatically fill the contents of the data view?" click **Yes**.
+9.  This will be the page your user sees when they tap the notification:
 
-	![page with data view](attachments/native-push/pageWithDataView.png)
+	{{% image_container width="500" %}}![page with data view](attachments/native-push/page-with-data-view.png){{% /image_container %}}
 
 Next you will create a workaround which allows data to be passed to pages [todo: correct].
 

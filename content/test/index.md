@@ -1,7 +1,6 @@
 ---
 title: "Mendix Product Naming Guide"
 tags: ["product naming", "terminology", "terms", "mendix platform"]
-draft: true
 ---
 
 ## Purpose of This Guide

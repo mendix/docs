@@ -297,40 +297,54 @@ Several apps make it so that when user taps a notification, the user is taken to
 
 For example, a user could tap a notification about an entity object. They should be brought to a details page which shows an entity object's details. But in order to make that happen, you must set your notification up to pass that particular entity to its details page.
 
-Every item in [todo: a/the?] Mendix database has an unique ID. If you want to pass an object, you must retrieve this GUID and pass it to your local notification. When the notification is tapped, the widget can use the GUID to retrieve and pass that specific object to the action it is configured with. [todo: check this paragraph — it's complicated]
+Every item in [todo: a/the?] Mendix database has an unique ID. If you want to pass an object, you must retrieve its GUID and pass it to your local notification. When the notification is tapped, the widget can use the GUID to retrieve and pass that specific object to the action it is configured with. [todo: check this paragraph — it's complicated]
 
 Currently there is no way for you to use the GUID you passed using the **DisplayNotifcation** JavaScript action in a nanoflow or a page opened from a notification [todo: ask about if this tech will be improved?]. To solve this, you will create a workaround.
 
-You will create:
+You will create the following things to send data to pages:
 
-* 2 entities: *TestEntity* to test how to show particular object, and *Notification* for your workaround
-* 1 page: *DetailTestEntity* which will be shown on tapping a notification
-* 1 microflow: *DS_TestEntity* to create dummy data for testing
+* **Two entities** — *TestEntity* to test how to show particular object, and *Notification* for your workaround
+* **One page** — *DetailTestEntity* which will be shown on tapping a notification
+* **One microflow** — *DS_TestEntity* to create dummy data for testing
+* [todo: One Nanoflow — DS_Notification ??]
 
-1.  Navigate to your Domain Model, then create an entity: 
+To make your two entities, do the following:
 
-	{{% image_container width="500" %}}![app settings](attachments/native-push/new-entity.png){{% /image_container %}}
+1.  Navigate to your domain model.
+2.  Drag and drop a new entity onto your domain model: 
 
-5.  Double-click it and name it *TestEntity*:
+	{{% image_container width="500" %}}![new entity](attachments/native-push/new-entity.png){{% /image_container %}}
 
-	{{% image_container width="500" %}}![app settings](attachments/native-push/test-entity.png){{% /image_container %}}
+2.  Double-click it and name it *TestEntity*:
 
-6. Click **Attributes** > **New**, name it *StringAttribute_1*, and click **OK**:
+	{{% image_container width="500" %}}![test entity](attachments/native-push/test-entity.png){{% /image_container %}}
 
-	{{% image_container width="500" %}}![app settings](attachments/native-push/first-string-attribute.png){{% /image_container %}}
+3. Click **Attributes** > **New**, name it *StringAttribute_1*, and click **OK**:
 
-7. Click **OK** again until you are back at the domain model.
-2. Create an entity *Notification* on your domain model with a string attribute *GUIDString*:
+	{{% image_container width="500" %}}![string attribute](attachments/native-push/first-string-attribute.png){{% /image_container %}}
 
-	{{% image_container width="500" %}}![app settings](attachments/native-push/guid-notification.png){{% /image_container %}}
+4. Click **OK** again until you are back at the domain model.
+5. Create an entity *Notification* on your domain model with a string attribute *GUIDString*:
 
-3. Create a nanoflow *DS_Notification* that creates an empty notification widget and returns this object. To enable your workaround, do this:
-	a. Add an activity which only creates (does not commit) and set this object as return value via right-click context menu for the activity.
-4.  Create a microflow *DS_TestEntity* that creates and commits any TestEntity object. 
+	{{% image_container width="500" %}}![GUID string](attachments/native-push/guid-notification.png){{% /image_container %}}
+
+To create your nanoflow, do the following:
+
+1. Create a nanoflow *DS_Notification* that creates an empty notification widget and returns this object. To enable your workaround, do the following: <br />
+	a. Drag and drop a display notification activity onto your nanoflow.
+	b. Double-click your display notification activity.
+	c. Click **OK** [todo: I had to do this to get the right-click set returnvaluename to work. Why?]
+	c. Right-click your display notification activity and select **Set $ReturnValueName as return value**: <br />
+
+	{{% image_container width="500" %}}![create notification nanoflow](attachments/native-push/create-notif-nano.png){{% /image_container %}}
+
+To create your microflow, do the following
+
+1.  Create a microflow *DS_TestEntity* that creates and commits any TestEntity object. 
 
 	{{% image_container width="500" %}}![app settings](attachments/native-push/ds-testentity-microflow.png){{% /image_container %}}
 
-7. Set this microflow to run after startup: <br />
+2. Set this microflow to run after startup: <br />
 	a. Double-click **Settings** in your Project Explorer:<br />
 	
 	{{% image_container width="500" %}}![app settings](attachments/native-push/pe-settings.png){{% /image_container %}}
@@ -349,7 +363,9 @@ You will create:
 	
 	e. Click **OK**
 
-5. Crete a native page *OnTap_Page* with dataview in it. Set its type to **Context** and entity to **TestEntity**. This will be the page we want to show when user taps the notification:
+To make your page, do the following:
+
+1. Crete a native page *OnTap_Page* with dataview in it. Set its type to **Context** and entity to **TestEntity**. This will be the page we want to show when user taps the notification:
 
 	![](attachments/native-push/pageWithDataView.png)
 
@@ -361,16 +377,16 @@ Next you will create a workaround which allows data to be passed to pages [todo:
 	c. Create 4 string objects: **Title**, **Subtitle**, **Body** and **ActionName**. Name them *title1*, *subtitle1*, *body1*, and *OpenPageWithParams* respectively.
 	d. Add a JavaScript action called *Display notification* and set the title, subtitle, body, actionName and GUID with variables you created in step 6b (**GUIDForFirstObject**) and 6c (**Title**, **Subtitle**, **Body**, and **ActionName**).
 	e. Drag this nanoflow to your homepage to create a button for easy access.
-7. Create a detail page *DetailTestEntity*. Add a dataview with **Context** as a data source and **TestEntity** as an entity path. This page will show when a user taps a notification.
-8. Create a nanoflow *ON_tapNotification* that receives **notificationEntity** as a parameter, retrieves an object via this parameter, and passes the object to a page [todo: same criticism as before with the other numbered item and sub list. Is this an instruction or a preview?]:
+2. Create a detail page *DetailTestEntity*. Add a dataview with **Context** as a data source and **TestEntity** as an entity path. This page will show when a user taps a notification.
+3. Create a nanoflow *ON_tapNotification* that receives **notificationEntity** as a parameter, retrieves an object via this parameter, and passes the object to a page [todo: same criticism as before with the other numbered item and sub list. Is this an instruction or a preview?]:
 	a. Add a parameter with Entity type Notification [todo: check bolding for Entity type Notification] named *notificationEntity*.
 	b. Add a JavaScript action called *Get object by GUIDE*, set its entity to **TestEntity**. Name the object *ReturnedObjectByGUID* [todo: name the object? which object?].
 	c. Add a **Show Page** action with the **Object to pass** set to **ReturnedObjectByGuid**, and the **Page** set to **DetailTestEntity**.
-9. On your home page, do the following:
+4. On your home page, do the following:
 	a. Create an additional **DataView**, set **Nanoflow as Data Source**, and choose **DS_Notification** (created in step 2).
 	b. Move the **Notification** widget inside this dataview.
 	c. Set **GUID** to **Notification.GUIDString**. Create a **New Action** called *OpenPageWithParams*, set **On open: Call a nanoflow**, and set **Nanoflow** to **ON_tapNotification**.
-10. Start and load the app on your mobile device, tap the nanoflow button you created in 3.e, then tap the notification to navigate to the **DetailTestEntity** page with the proper object.
+5. Start and load the app on your mobile device, tap the nanoflow button you created in 3.e, then tap the notification to navigate to the **DetailTestEntity** page with the proper object.
 
 Explaining the workaround (all the steps/substeps above yes?):
 

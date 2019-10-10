@@ -34,7 +34,7 @@ For example, using the domain model above, the following reference set selector 
 
 The reference set selector looks a lot like a [data grid](data-grid) and consequently shares many properties with it. The main differences are that the reference set selector lacks a search bar and that it has **Add** and **Remove** buttons instead of **New** and **Delete**. This is because they perform slightly different functions:
 
-*   The **Add** button adds an association to an existing object. You will need to specify the page which opens when you want to add a new association. For more information, see [Add Button](add-button).
+*   The **Add** button adds an association to an existing object. You will need to specify the page which opens when you want to add a new association. For more information, see [Add Button](control-bar#add-button).
 *   The **Remove** button removes the association to an object, but does not change or delete the object itself
 
 ## 2 Properties

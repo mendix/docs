@@ -9,7 +9,7 @@ title: "Create a native pluggable widget"
 
 ## 1 Introduction
 
-Pluggable widgets enable developers to introduce custom-built widgets in their Mendix applications. Not just for web, but also for native mobile. In this how-to you will learn to create a pluggable widget for native mobile applications.
+Pluggable widgets enable developers to introduce custom-built widgets in their Mendix applications. Not just for web, but also for native mobile. In this how-to you will learn to create a group box pluggable widget for native mobile applications.
 
 **This how-to will teach you how to do the following:**
 
@@ -17,6 +17,10 @@ Pluggable widgets enable developers to introduce custom-built widgets in their M
 - Create...
 - Build...
 - Configure...
+
+**Are you in a hurry?**
+
+Clone this [code sample](https://github.com/mendix/native-group-box-pluggable-widget-sample) from GitHub with all group box features from this how-to already implemented.
 
 ## 2 Prerequisites
 
@@ -33,13 +37,15 @@ npm install -g yo
 - Install Mendix' Pluggable Widget Generator v8.2.0 for Yeoman with the following command:
 
 ```shell
-npm install -g @mendix/generator-widget
+npm install -g @mendix/generator-widget@8.2.0
 ```
 
 - Install an integrated development environment (IDE) of your choice (Mendix recommends [Microsoft Visual Studio Code](https://code.visualstudio.com/))
 - Have a basic understanding of [TypeScript](https://www.typescriptlang.org/) and [React](https://reactjs.org)
 
-## Structure
+## 3 {Title of Section [Use Present Participle Verb/Gerund]}
+
+### TEMP: Structure
 
 - Setting up pluggable widget project directory
 
@@ -62,8 +68,6 @@ npm install -g @mendix/generator-widget
   - Add default styling from modeler
   - Create design property
 
-## 3 {Title of Section [Use Present Participle Verb/Gerund]}
-
 To {do this task}, follow these steps:
 
 1. {Step 1}
@@ -71,7 +75,37 @@ To {do this task}, follow these steps:
 
 ![](attachments/{sub-folder with same name as doc file}/{image filename}.png)
 
-### 3.1 {Title of Sub-Section}
+### 3.1 Scaffolding pluggable widget project
+
+The Pluggable Widget Generator is the quickest way to start developing a pluggable widget. When you run this generator with Yeoman, Yeoman will scaffold your project folder with a folder structure and certain files recommended by Mendix.
+
+To scaffold your project folder for the group box widget, open up a terminal, navigate to the folder where you want to store your project and start the generator by executing the following command:
+
+```shell
+yo @mendix/widget GroupBox
+```
+
+The generator will ask you for some input during setup. Please provide the following information:
+
+1. Widget name: _{Your widget name}_
+2. Widget description: _{Your widget description}_
+3. Organization name: _{Your organization name}_
+4. Copyright: _{Your copyright date}_
+5. License: _{Your license}_
+6. Initial version: _{Your initial version number}_
+7. Author: _{Your author name}_
+8. Mendix Project path: _./test/MxTestProject/_
+9. Programming language: **TypeScript**
+10. Widget type: **For native mobile apps**
+11. Widget template: **Empty widget (recommended for more experienced developers)**
+12. Unit tests: **No**
+
+In the image below you can find an example of what information to provide as input.
+![Pluggable Widget Generator input example](attachments/how-to-create-a-native-pluggable-widget/pluggable-widget-generator-input-example.png)
+
+### 3.2 Creating a Mendix test project
+
+...
 
 ## 4 Read More
 

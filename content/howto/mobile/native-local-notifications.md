@@ -386,9 +386,15 @@ To make your page, do the following: [todo: this page is "OnTap_Page". Is that o
 Next you will create a workaround which allows data to be passed to pages.
 
 1. Create a nanoflow named *ACT_PassGUIDToNotification*. <br />
-	a. Add a retrieve action, set **Source** to **From Database** and **Range** to **First**. [I set the required entity to TestEntity. Correct?]This will be the object that gets the GUID. <br />
-	b. Add a JavaScript action *Get_GUID*. Give the variable the name *GUIDForFirstObject* [todo where is "variable?"]. This JavaScript action is available in the Mendix App Store under the NanoflowCommons module included in the Native Quickstarter template. [todo: will they already have this or not?] <br />
-	c. Create 4 string objects: **Title**, **Subtitle**, **Body** and **ActionName**. Name them *title1*, *subtitle1*, *body1*, and *OpenPageWithParams* respectively. <br />
+	a. Add a retrieve action to your nanoflow, set **Source** to **From Database**, and set **Range** to **First**. Click **Entity** > **Select** and select the **TestEntity**. This will be the object that gets the GUID: <br />
+	
+	![retrieve object](attachments/native-push/retrieve-object.png)
+	
+	b. Right-click your module and add a new **JavaScript action** named *Get_GUID*. Give the variable the name *GUIDForFirstObject* [todo where is "variable?"]. This JavaScript action [todo: do you mean ] is available in the Mendix App Store under the NanoflowCommons module included in the Native Quickstarter template. [todo: will they already have this or not?] <br />
+	c. Create 4 string objects: **Title**, **Subtitle**, **Body** and **ActionName**. Name them *title1*, *subtitle1*, *body1*, and *OpenPageWithParams* respectively: <br />
+	
+	pic
+	
 	d. Add a JavaScript action named *Display notification* and set the title, subtitle, body, actionName and GUID with variables you created in step 6b (**GUIDForFirstObject**) and 6c (**Title**, **Subtitle**, **Body**, and **ActionName**). <br />
 	e. Drag this nanoflow to your homepage to create a button for easy access. <br />
 2. Create a detail page *DetailTestEntity*. Add a dataview with **Context** as a data source and **TestEntity** as an entity path. This page will show when a user taps a notification.

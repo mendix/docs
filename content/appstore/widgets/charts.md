@@ -23,7 +23,7 @@ These are the available charts:
 
 ### 1.1 Demo App Project
 
-For a demo app project example that has been deployed with these widgets, see [here](https://charts102.mxapps.io).
+For a demo app project that has been deployed with these widgets, see [here](https://charts102.mxapps.io).
 
 ## 2 Basic Configuration
 
@@ -197,7 +197,7 @@ Add a *.json* file named *com.mendix.charts* to the **theme** folder. The JSON s
 Use this with caution, as the configs set up here shall be applied to every instance of the charts in your application. Only the advanced configurations set up in the widget itself have a higher precendence.
 {{% /alert %}}
 
-## 4 Developing This App Store Item
+## 4 Developing This App Store Component
 
 For details on development, see [Development](https://raw.githubusercontent.com/mendixlabs/charts/v1.4.4/Development.md).
 

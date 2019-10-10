@@ -215,7 +215,7 @@ Since we covered how to send a simple local notification, we can also set the ba
 
 	![drag set badge number](attachments/native-push/set-badge-act.png)
 
-8. Double click the badge number activity.
+8. Double-click the badge number activity.
 
 9.  Set the value of **Badge number** to **$badge_number**
 
@@ -236,20 +236,32 @@ In this section you will learn to show a page when a user taps a notification. [
 3. Type *NotifPage* into **Page Name**.
 4. Click **Blank** pane on the left and select the **Blank** page template.
 5. Click **OK** to create your native page.
+6. Navigate back to your app's home page.
+7.  Drag and drop a **Notifications** widget onto your home page [todo: check with mehmet -- am I supposed to drop the notifications widget on the Native home page or the Responsive one? Do previous screenshots in this how-to have to be redone? Some have new? feedback widget in the native home page. Some older ones in doc do not]. 
 
-PICK UP WORK FROM HERE
+	{{% image_container width="500" %}}![notifications widget](attachments/native-push/notif-widget.png){{% /image_container %}}
 
-7. Drag and drop a **Notifications** widget to your home page. [TAKE PIC]
-8. Double click to the widget and add a new Action via clicking **New**. Set the attribute **On open to** > **Show a Page** and select **NotifPage**.
-9. Start and load the app in your mobile device 
-10. Tap the nanoflow button you created in 3.1
-11. Tap the notification to navigate to the page you selected.
+8. Double-click the widget.
+9. Name your action *show_page*.
+10. Click **Actions** > **New**. 
+11. Select **On open to** > **Show a Page**.
+12. Click **NotifPage** and click **Select**. Your finished action item should look like this:
+
+	{{% image_container width="500" %}}![notifications widget](attachments/finished-show-a-page.png){{% /image_container %}}
+
+13. Click the two **OK** buttons until you are back at your home page.
+
+Great job. Now test the notification you've made:
+
+1. Start the app on your mobile device 
+2. Tap the nanoflow button you created in 3.1
+3. Tap the notification to navigate to the page you selected. [todo: this didn't work. Is it because I have a blank page selected?]
 
 Now you can show pages after notifications are tapped. Next you will learn to pass data to these pages. 
 
 ### 3.4 Send Data to Pages
 
-One of the common practices when using Notifications on mobile is that, when user clicks to a notification, it leads user to specific page with specific parameters set. For example, if you have details page which shows an entity object's details, you want to pass that particular entity to the details page. You can achieve this by sending data along with a notification.
+One of the common practices when using notifications on mobile is that, when user taps a notification, it leads user to specific page with specific parameters set. For example, if you have details page which shows an entity object's details, you want to pass that particular entity to the details page. You can achieve this by sending data along with a notification.
 
 Every item in [todo: a/the?] Mendix database has an unique ID. If you want to pass an object, you must retrieve this GUID and pass it to your local notification. When the notification is tapped, the widget can use the GUID to retrieve and pass that specific object to the action it is configured with. [todo: check this paragraph — it's complicated]
 
@@ -370,9 +382,9 @@ Simply click the schedule notification button then click the cancel all button. 
 Now we will need to supply a "Notification ID" which needs to be cancelled. For that we need following changes in ACT_CreateAndSendNotification and :
 
 1. Go to ACT_CreateAndSendNotification
-2. Double click the Schedule Notification to change "Notification id" by clicking edit. Then type and arbitrary string: "testId"
+2. Double-click the Schedule Notification to change "Notification id" by clicking edit. Then type and arbitrary string: "testId"
 3. Create nanoflow named "ACT_CancelScheduledNotifications"
-4. Inside this nanoflow create JsAction and choose "Cancel scheduled notification", double click, set the id by clicking edit and type "testId" without quotes.
+4. Inside this nanoflow create JsAction and choose "Cancel scheduled notification", double-click, set the id by clicking edit and type "testId" without quotes.
 5. Drag and drop this nanoflow to your home screen and name the button "cancel specific notification". 
 
 Simply click the schedule notification button then click the cancel specific notification button. You wont see any notifications at the end of the minute.

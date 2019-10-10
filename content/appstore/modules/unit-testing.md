@@ -44,7 +44,7 @@ You can also run a test individually. If a JUnit test class is selected, all tes
 
 When a unit test has been ran, additional details about the unit test result will appear. E.g. success, failure and exception stacktraces.
 
-As an example, try running all unit tests in the UnitTesting module. Those are available by default.
+As an example, try running all unit tests in the Unit Testing module. Those are available by default.
 
 ## 4 Creating Unit Tests
 
@@ -54,7 +54,7 @@ To create a new microflow test in a module, just add a microflow with a name tha
 
 Furthermore it is possible to create a Setup and TearDown microflow per module. Those microflows are invoked once before and after eacht test run (regardless whether the test run consists on one or multiple unit tests).
 
-The UnitTesting module publishes a reportStep microflow that can be used inside your test microflow to track progress inside a test. The last step that was successfully reached in a unit test is reported back in the test result. This makes it easier to inspect where things go wrong. (Albeit using the microflow debugger is usually more insightful)
+The Unit Testing module publishes a reportStep microflow that can be used inside your test microflow to track progress inside a test. The last step that was successfully reached in a unit test is reported back in the test result. This makes it easier to inspect where things go wrong. (Albeit using the microflow debugger is usually more insightful)
 
 ### 4.2 Creating a Java unit tests (with JUNit)
 

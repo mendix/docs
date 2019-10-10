@@ -293,11 +293,13 @@ Now you can show pages after notifications are tapped. Next you will learn to pa
 
 ### 3.4 Send Data to Pages
 
-One of the common practices when using notifications on mobile is that, when user taps a notification, it leads user to specific page with specific parameters set. For example, if you have details page which shows an entity object's details, you want to pass that particular entity to the details page. You can achieve this by sending data along with a notification.
+Several apps make it so that when user taps a notification, the user is taken to specific page with specific parameters set. You can achieve this by sending data along with a notification. 
+
+For example, a user could tap a notification about an entity object. They should be brought to a details page which shows an entity object's details. But in order to make that happen, you must set your notification up to pass that particular entity to its details page.
 
 Every item in [todo: a/the?] Mendix database has an unique ID. If you want to pass an object, you must retrieve this GUID and pass it to your local notification. When the notification is tapped, the widget can use the GUID to retrieve and pass that specific object to the action it is configured with. [todo: check this paragraph — it's complicated]
 
-Currently there is no way for you to use the GUID you passed using the **DisplayNotifcation** JavaScript action in a nanoflow or a page opened from a notification [todo: ask about if this tech will be improved?]. To solve this, you willl create a workaround.
+Currently there is no way for you to use the GUID you passed using the **DisplayNotifcation** JavaScript action in a nanoflow or a page opened from a notification [todo: ask about if this tech will be improved?]. To solve this, you will create a workaround.
 
 You will create:
 

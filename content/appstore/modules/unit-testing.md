@@ -34,55 +34,55 @@ Use the [Unit Testing](https://appstore.home.mendix.com/link/app/390/) module to
 
 ## 3 Usage
 
-To run a unit test, first navigate to the **Test Suite Overview**. On the left side of the page, there is an overview of the available test suites. A test suite reflects all the unit tests that are available in a module of your project. When selecting a testsuite, all unit tests inside the test suite are displayed, including their last result if applicable.
+To run a unit test, first navigate to the test suite overview on the left side of the page. A test suite reflects all the unit tests that are available in a module of your project. When you select  a test suite, all the unit tests inside the suite are displayed, including their last result, if applicable.
 
-Use the Refresh button to have all available unit tests in the project listed.
+Click **Run all module tests** to run all the unit tests in all the suites or all the unit tests in the selected suite. When the unit tests are running, the progress will be tracked.
 
-Use the Run all button to run all unit tests or all unit tests in the selected test suite (module). When unit tests are running, the progress will be tracked.
+You can also run a test individually by clicking **Run test**. If a JUnit test class is selected, all the tests in the test class are run another time.
 
-You can also run a test individually. If a JUnit test class is selected, all tests in the test class are run another time.
-
-When a unit test has been ran, additional details about the unit test result will appear. E.g. success, failure and exception stacktraces.
-
-As an example, try running all unit tests in the Unit Testing module. Those are available by default.
+When a unit test has been run, additional details about the test result will appear (for example, success, failure, and exception stack traces).
 
 ## 4 Creating Unit Tests
 
 ### 4.1 Creating a microflow unit tests
 
-To create a new microflow test in a module, just add a microflow with a name that starts with (case insensitive) "Test_" or "UT_". A test microflow should have no input arguments and either no result type, a boolean result or a string result. For string results, a non empty string is interpreted as error message. A microflow without return type is considered to be successful as long as no exceptions where thrown.
+To create a new microflow test in a module, just add a microflow with a name that starts with **Test** or **UT** (case-insensitive). A test microflow should have no input arguments and either no result type, a Boolean result type, or a string result type. For string results, a non-empty string is interpreted as an error message. A microflow without a return type is considered to be successful as long as no exceptions are thrown.
 
-Furthermore it is possible to create a Setup and TearDown microflow per module. Those microflows are invoked once before and after eacht test run (regardless whether the test run consists on one or multiple unit tests).
+In addition, it is possible to create a **Setup** and **TearDown** microflow per module. Those microflows are invoked once before and after eacht test run (regardless of whether the test run consists of one or multiple unit tests).
 
-The Unit Testing module publishes a reportStep microflow that can be used inside your test microflow to track progress inside a test. The last step that was successfully reached in a unit test is reported back in the test result. This makes it easier to inspect where things go wrong. (Albeit using the microflow debugger is usually more insightful)
+The Unit Testing module publishes a **reportStep** microflow that can be used inside your test microflow to track the progress inside a test. The last step successfully reached in a unit test is reported back in the test result. This makes it easier to inspect where things go wrong (althought using the [microflow debugger](/howto/monitoring-troubleshooting/debug-microflows) is usually more insightful).
 
-### 4.2 Creating a Java unit tests (with JUNit)
+### 4.2 Creating a Java Unit Tests (with JUNit)
 
-The Java unit test runner is driven by junit.org and requires general understanding of junit (version 4). A Junit test method is run if it exists somewhere in the module namespace (that is, it is stored a java class that lives somewhere in the folder javasource/yourmodulename). A java function is recognized as test if it is public, non static, parameterless and annotated with the org.junit.Test annotation. Multiple tests can exists in a single class, but junit does not guarantuee the execution order of the tests.
+The Java unit test runner is driven by [JUnit](https://junit.org/junit5/) and requires a general understanding of JUnit version 4. A JUnit test method is run if it exists somewhere in the module name space (that is, it is stored as a Java class that lives somewhere in the *javasource/yourmodulename* folder). A Java function is recognized as a test if it is public, non-static, parameter-less, and annotated with the `org.junit.Test` annotation. Multiple tests can exists in a single class, but JUnit does not guarantuee the execution order of the tests.
 
-See the files src/javasource/unittesting/UnittestingUnitTest1.java and src/javasource/unittesting/UnittestingUnitTest2.java for some example JUnit unit tests.
+For some example JUnit unit tests, see the *src/javasource/unittesting/UnittestingUnitTest1.java* and *src/javasource/unittesting/UnittestingUnitTest2.java* files.
 
-The AbstractUnitTest class can be used to base unit test classes on. This class provides some time measurement functions (to ignore setup / teardown in the time measure) and the reportStep function. (Which is otherwise accessible through TestManager.instance().reportStep).
+You can base unit test classes on the **AbstractUnitTest** class. This class provides some time measurement functions (for example, to ignore `setup` and `teardown` in the time measure) and the `reportStep` function (which is otherwise accessible through `TestManager.instance().reportStep`).
 
-## 5 Running unit tests through the remote api
+## 5 Running Unit Tests Through the Remote API
 
-Running unit tests through the remote json REST api is pretty trivial. A new test run can be kicked off (if none is running yet) by using the endpoint unittests/start. Example:
+A new test run through the remote JSON REST API can be started by using the endpoint `unittests/start`. Here is an example:
 
+```json
 POST http://localhost:8080/unittests/start
 {
 	"password" : "1"
 }
+```
 
-This request will be responded to with a 204 NO CONTENT response if the test run was started successfully. From that point on, one can pull for the status of the test run by invoking unittests/status. Example:
+This request will be responded to with a `204 NO CONTENT` response if the test run was started successfully. From that point on, you can pull for the status of the test run by invoking `unittests/status`. Here is an example:
 
+```json
 POST http://localhost:8080/unittests/status
-
 {
 	"password" : "1"
 }
+```
 
-Example response:
+This is an example response:
 
+```json
 {
     "failures": 1,
     "tests": 10,
@@ -94,5 +94,8 @@ Example response:
     }],
     "completed": false
 }
+```
 
-Please note that the completed flag will be false as long as the test run isn't finished. The runtime flag will return the total runtime of the suite in milliseconds after the test run has finished.
+{{% alert type="info" %}}
+The completed flag will be `false` as long as the test run is not finished. The `runtime` flag will return the total runtime of the suite in milliseconds after the test run has finished.
+{{% /alert %}}

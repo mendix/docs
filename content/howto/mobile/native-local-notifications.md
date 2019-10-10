@@ -338,36 +338,60 @@ To create your nanoflow, do the following:
 
 	{{% image_container width="500" %}}![create notification nanoflow](attachments/native-push/create-notif-nano.png){{% /image_container %}}
 
-To create your microflow, do the following
+To create your microflow, do the following:
 
-1.  Create a microflow *DS_TestEntity* that creates and commits any TestEntity object. 
+1.  Create a microflow *DS_TestEntity* 
 
-	{{% image_container width="500" %}}![app settings](attachments/native-push/ds-testentity-microflow.png){{% /image_container %}}
+2. Drag and drop a create entity activity onto your microflow.
 
-2. Set this microflow to run after startup: <br />
-	a. Double-click **Settings** in your Project Explorer:<br />
-	
-	{{% image_container width="500" %}}![app settings](attachments/native-push/pe-settings.png){{% /image_container %}}
-	
-	b. Click the **Runtime** tab:<br />
-	
-	{{% image_container width="500" %}}![app settings](attachments/native-push/runtime-tab.png){{% /image_container %}}
-	
-	c. Click **After startup** > **Select**: <br />
-	
-	{{% image_container width="500" %}}![app settings](attachments/native-push/after-startup.png){{% /image_container %}}
-	
-	d. Click **DS_TestEntity** then click the **Select** button: <br />
-	
-	{{% image_container width="500" %}}![app settings](attachments/native-push/select-dsentity.png){{% /image_container %}}
-	
-	e. Click **OK**
+3. Double-click your create entity activity.
+
+4. Click **Entity** > **Select**.
+
+5. Click **NativeMobile.TestEntity**.
+
+6. Click **Select**.
+
+7. Click **OK**.
+
+8. Drag and drop a commit object activity onto your microflow.
+
+9. Double-click your commit object activity.
+
+10. From the **Object or List** drop-down menu, select **NewTestEntity (NativeMobile.TestEntity**.
+
+11. Click **OK** to see your new microflow:
+
+	{{% image_container width="500" %}}![create ds test entity micro](attachments/native-push/ds-testentity-microflow.png){{% /image_container %}}
+
+13. Set this microflow to run after startup: <br />
+   a. Double-click **Settings** in your Project Explorer:<br />
+
+   {{% image_container width="500" %}}![project explorer](attachments/native-push/pe-settings.png){{% /image_container %}}
+
+   b. Click the **Runtime** tab:<br />
+
+   {{% image_container width="500" %}}![click runtime](attachments/native-push/runtime-tab.png){{% /image_container %}}
+
+   c. Click **After startup** > **Select**: <br />
+
+   {{% image_container width="500" %}}![select after start up](attachments/native-push/after-startup.png){{% /image_container %}}
+
+   d. Click **DS_TestEntity** then click the **Select** button: <br />
+
+   {{% image_container width="500" %}}![select test entity](attachments/native-push/select-ds-entity.png){{% /image_container %}}
+
+   e. Click **OK**
+
+   f. Your microflow will look like this:
+
+   todo: insert pic
 
 To make your page, do the following:
 
-1. Crete a native page *OnTap_Page* with dataview in it. Set its type to **Context** and entity to **TestEntity**. This will be the page we want to show when user taps the notification:
+1. Crete a native page *OnTap_Page* with dataview in it. Set its type to **Context** and entity to **TestEntity**. This will be the page the user sees when they tap the notification:
 
-	![](attachments/native-push/pageWithDataView.png)
+	![page with data view](attachments/native-push/pageWithDataView.png)
 
 Next you will create a workaround which allows data to be passed to pages [todo: correct].
 

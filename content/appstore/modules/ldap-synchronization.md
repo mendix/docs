@@ -68,14 +68,14 @@ Clicking **New** or **Edit** in the LDAP servers overview form brings up the LDA
 
 * **Description** – This is a descriptive name for the LDAP connection.
 * **Server address** – This is the address at which the Active Directory domain controller server is located. Either an IP address or host name may be used. The address must begin with `ldap://`.
-* **LDAP root directory** – This is the root of the LDAP directory that will be read. This usually takes on the form of `DC=<organization>,DC=<location>`, where `<organization>` is the LDAP/ActiveDirectory domain name, and `<location>` is something like "local" or "org". At Mendix, it is "DC=MENDIXDOMAIN,DC=local".
-* **Is AD server** – Turn this on if you are authenticating against a Microsoft ActiveDirectory (which is an implementation of LDAP). This enabled some AD specific internal functionality.
+* **LDAP root directory** – This is the root of the LDAP directory that will be read. This usually takes on the form of `DC=<organization>,DC=<location>`, where `<organization>` is the LDAP/Active Directory domain name, and `<location>` is something like `local` or `org`. At Mendix, it is `DC=MENDIXDOMAIN,DC=local`.
+* **Is AD server** – Turn this on if you are authenticating against a Microsoft Active Directory (which is an implementation of LDAP). This enables some AD-specific internal functionality.
 * **Is paged search allowed** – Paged search is useful when retrieving large data sets from LDAP, but some LDAP servers have paged search disabled. Leave this enabled until you run into problems related to paging.
-* **Username** – This is the username that we will use to read the LDAP server information. You can/should use a service account on the LDAP server for this.
-* **Password** – The password matching the username specified in the previous field.
-* **LDAP enabled** – Turns on LDAP authentication for this configuration. This means the configuration will be taken into account when synchronizing and authenticating users. After turning on Use Ldap User authentication for at least one configuration, users cannot login on the system with the credentials stored in the application, except when they have the user role MxAdministrator.
+* **Username** – This is the user name that used to read the LDAP server information. You should use a service account on the LDAP server for this.
+* **Password** – This is the password for the user name specified in the previous field.
+* **LDAP enabled** – This turns on LDAP authentication for this configuration, which means the configuration will be taken into account when synchronizing and authenticating users. After turning on LDAP user authentication for at least one configuration, users cannot log in to the system with the credentials stored in the application unless they have the MxAdministrator user role.
 
-At this point, you can use the ‘Test connection’ button to test connectivity to the LDAP server. This will also tell you if the username/password you entered are accepted by the server.
+At this point, click **Test connection** to test the connectivity to the LDAP server. This will also tell you if the user name and password you entered are accepted by the server.
 
 Paths where to find users
 	

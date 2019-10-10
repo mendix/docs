@@ -57,7 +57,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 	{{% image_container width="500" %}}![app settings](attachments/native-push/call-button.png){{% /image_container %}}
 
-8.  Name the nanoflow called *ACT_CreateAndSendNotification* and click **OK**:
+8.  Name the nanoflow *ACT_CreateAndSendNotification* and click **OK**:
 
 	{{% image_container width="500" %}}![app settings](attachments/native-push/name-nano.png){{% /image_container %}}
 
@@ -202,21 +202,17 @@ Since we covered how to send a simple local notification, we can also set the ba
 	{{% image_container width="500" %}}![new create variable](attachments/native-push/new-variable-badge.png){{% /image_container %}}
 
 3. Double-click the variable activity and select **Data type** > **Integer/Long**.
-
 4. Type *1* into the expression value field. 
-
 5.  Type *badge_number* into the **variable name** field:
 
 	{{% image_container width="500" %}}![badge number](attachments/native-push/badge-1.png){{% /image_container %}}
 
 6. Click OK.
-
 7.  Drag and drop a **Set badge number** JavaScript action to the right of your merge activity:
 
 	![drag set badge number](attachments/native-push/set-badge-act.png)
 
 8. Double-click the badge number activity.
-
 9.  Set the value of **Badge number** to **$badge_number**
 
 	![value badge number](attachments/native-push/badge-input.png)
@@ -252,13 +248,9 @@ In this section you will learn to show a page when a user taps a notification. [
 	{{% image_container width="500" %}}![notifications widget](attachments/native-push/notif-widget.png){{% /image_container %}}
 
 11. Double-click the widget.
-
 12. Name your action *show_page*.
-
 13. Click **Actions** > **New**. 
-
 14. Select **On open to** > **Show a Page**.
-
 15. Click **NotifPage** and click **Select**. Your finished action item should look like this:
 
 	{{% image_container width="500" %}}![notifications widget](attachments/native-push/finished-show-a-page.png){{% /image_container %}}
@@ -340,26 +332,16 @@ To create your nanoflow, do the following:
 
 To create your microflow, do the following:
 
-1.  Create a microflow *DS_TestEntity* 
-
+1. Create a microflow named *DS_TestEntity*.
 2. Drag and drop a create entity activity onto your microflow.
-
 3. Double-click your create entity activity.
-
 4. Click **Entity** > **Select**.
-
 5. Click **NativeMobile.TestEntity**.
-
 6. Click **Select**.
-
 7. Click **OK**.
-
 8. Drag and drop a commit object activity onto your microflow.
-
 9. Double-click your commit object activity.
-
 10. From the **Object or List** drop-down menu, select **NewTestEntity (NativeMobile.TestEntity**.
-
 11. Click **OK** to see your new microflow:
 
 	{{% image_container width="500" %}}![create ds test entity micro](attachments/native-push/ds-testentity-microflow.png){{% /image_container %}}
@@ -386,7 +368,7 @@ To make this microflow run after startup, do the following:
 
 To make your page, do the following: [todo: this page is "OnTap_Page". Is that obeying page name guidelines? Do the other pages (NotifPage) obey these guidelines?]
 
-1. Crete a new blank native page called *OnTap_Page*.
+1. Crete a new blank native page named *OnTap_Page*.
 2. Drag and drop a data view widget onto your new page.
 3. Double-click your data view widget.
 4. In **Data Source**, click **Entity (path)** > **Select**.
@@ -401,23 +383,23 @@ To make your page, do the following: [todo: this page is "OnTap_Page". Is that o
 
 	{{% image_container width="500" %}}![page with data view](attachments/native-push/page-with-data-view.png){{% /image_container %}}
 
-Next you will create a workaround which allows data to be passed to pages [todo: correct].
+Next you will create a workaround which allows data to be passed to pages.
 
-1. Create a nanoflow *ACT_PassGUIDToNotification* that retrieves an object, gets the GUID, and calls *DisplayNotification*: [todo: is 6 an instruction in and of itself, or is it summarizing the steps below it? The former I think. If so, these substeps below need to be reworked as discrete, nonsubsteps]
-	a. Add a retrieve action, set **Source** to **From Database** and **Range** to **First**. [I set the required entity to TestEntity. Correct?]This will be the object that gets the GUID.
-	b. Add a JavaScript action *Get_GUID*. Give the variable the name *GUIDForFirstObject* [todo where is "variable?"]. This JavaScript action is available under the NanoflowCommons module included in the Native Quickstarter template.
-	c. Create 4 string objects: **Title**, **Subtitle**, **Body** and **ActionName**. Name them *title1*, *subtitle1*, *body1*, and *OpenPageWithParams* respectively.
-	d. Add a JavaScript action called *Display notification* and set the title, subtitle, body, actionName and GUID with variables you created in step 6b (**GUIDForFirstObject**) and 6c (**Title**, **Subtitle**, **Body**, and **ActionName**).
-	e. Drag this nanoflow to your homepage to create a button for easy access.
+1. Create a nanoflow named *ACT_PassGUIDToNotification*. <br />
+	a. Add a retrieve action, set **Source** to **From Database** and **Range** to **First**. [I set the required entity to TestEntity. Correct?]This will be the object that gets the GUID. <br />
+	b. Add a JavaScript action *Get_GUID*. Give the variable the name *GUIDForFirstObject* [todo where is "variable?"]. This JavaScript action is available in the Mendix App Store under the NanoflowCommons module included in the Native Quickstarter template. [todo: will they already have this or not?] <br />
+	c. Create 4 string objects: **Title**, **Subtitle**, **Body** and **ActionName**. Name them *title1*, *subtitle1*, *body1*, and *OpenPageWithParams* respectively. <br />
+	d. Add a JavaScript action named *Display notification* and set the title, subtitle, body, actionName and GUID with variables you created in step 6b (**GUIDForFirstObject**) and 6c (**Title**, **Subtitle**, **Body**, and **ActionName**). <br />
+	e. Drag this nanoflow to your homepage to create a button for easy access. <br />
 2. Create a detail page *DetailTestEntity*. Add a dataview with **Context** as a data source and **TestEntity** as an entity path. This page will show when a user taps a notification.
 3. Create a nanoflow *ON_tapNotification* that receives **notificationEntity** as a parameter, retrieves an object via this parameter, and passes the object to a page [todo: same criticism as before with the other numbered item and sub list. Is this an instruction or a preview?]:
 	a. Add a parameter with Entity type Notification [todo: check bolding for Entity type Notification] named *notificationEntity*.
-	b. Add a JavaScript action called *Get object by GUIDE*, set its entity to **TestEntity**. Name the object *ReturnedObjectByGUID* [todo: name the object? which object?].
+	b. Add a JavaScript action named *Get object by GUIDE*, set its entity to **TestEntity**. Name the object *ReturnedObjectByGUID* [todo: name the object? which object?].
 	c. Add a **Show Page** action with the **Object to pass** set to **ReturnedObjectByGuid**, and the **Page** set to **DetailTestEntity**.
 4. On your home page, do the following:
 	a. Create an additional **DataView**, set **Nanoflow as Data Source**, and choose **DS_Notification** (created in step 2).
 	b. Move the **Notification** widget inside this dataview.
-	c. Set **GUID** to **Notification.GUIDString**. Create a **New Action** called *OpenPageWithParams*, set **On open: Call a nanoflow**, and set **Nanoflow** to **ON_tapNotification**.
+	c. Set **GUID** to **Notification.GUIDString**. Create a **New Action** named *OpenPageWithParams*, set **On open: Call a nanoflow**, and set **Nanoflow** to **ON_tapNotification**.
 5. Start and load the app on your mobile device, tap the nanoflow button you created in 3.e, then tap the notification to navigate to the **DetailTestEntity** page with the proper object.
 
 Explaining the workaround (all the steps/substeps above yes?):
@@ -429,7 +411,7 @@ Explaining the workaround (all the steps/substeps above yes?):
 
 ## 4 Scheduling a Notification and Cancelling It
 
-Local notifications should rarely notify a user right after they do an action. Here you will learn to configure local notifications to trigger after a period of time. To do this, you will use a JavaScript action called **ScheduleNotification**.
+Local notifications should rarely notify a user right after they do an action. Here you will learn to configure local notifications to trigger after a period of time. To do this, you will use a JavaScript action named **ScheduleNotification**.
 
 [todo: make sure to cover "on recieved" action in this section because we haven't yet]
 

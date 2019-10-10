@@ -9,22 +9,58 @@ title: "Create a native pluggable widget"
 
 ## 1 Introduction
 
-{Add the introduction text here}
+Pluggable widgets enable developers to introduce custom-built widgets in their Mendix applications. Not just for web, but also for native mobile. In this how-to you will learn to create a pluggable widget for native mobile applications.
 
 **This how-to will teach you how to do the following:**
 
+- Generate a widget structure
 - Create...
 - Build...
 - Configure...
 
 ## 2 Prerequisites
 
-{If there are no prerequisites, leave this section out}
-
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-- {Prerequisite 1}
-- {Prerequisite 2}
+- Install Mendix Studio Pro 8.2.2
+- Install Long Term Support (LTS) v10.16.3 or any higher version of [Node.js](https://nodejs.org)
+- Install latest [Yeoman](https://yeoman.io/) with the following command:
+
+```shell
+npm install -g yo
+```
+
+- Install Mendix' Pluggable Widget Generator v8.2.0 for Yeoman with the following command:
+
+```shell
+npm install -g @mendix/generator-widget
+```
+
+- Install an integrated development environment (IDE) of your choice (Mendix recommends [Microsoft Visual Studio Code](https://code.visualstudio.com/))
+- Have a basic understanding of [TypeScript](https://www.typescriptlang.org/) and [React](https://reactjs.org)
+
+## Structure
+
+- Setting up pluggable widget project directory
+
+  - Using generator
+    - Explain generated code
+  - Creating a test project
+  - Put test project in dist folder
+  - Run sample code from generator in test project
+
+- Transform sample code in groupbox code
+  - Create display component with basic look and header caption
+    - iOS: round corners
+    - Android: sharp corners
+  - Change glue component to passthrough header caption
+  - Add containment
+  - Add toggable functionality
+    - Touchable component (dynamic component)
+  - Add icon property for expand and collapse
+  - Add collapsible property
+  - Add default styling from modeler
+  - Create design property
 
 ## 3 {Title of Section [Use Present Participle Verb/Gerund]}
 

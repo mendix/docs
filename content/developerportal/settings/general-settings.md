@@ -25,16 +25,12 @@ The sections below describe the actions you can perform on this page.
 
 ## 2 Mendix Studio {#web}
 
-In the **Studio** section, you can see whether Studio is enabled for the app. You can also do the following:
+In the **Studio** section, you can see whether Studio is enabled for the app. 
+
+You can enable Studio if it has not been enabled yet by clicking **Enable Studio**
 
 
-*  Enable Studio if it has not been enabled yet by clicking **Enable Studio**
-
-	![](attachments/not-enabled.png)
-
-*  Enable collaborative development with Studio for apps using Mendix version [7.23.3](/releasenotes/studio-pro/7.23#7233) and above by clicking **Enable Now** (for more information on the collaborative development process, see [Collaborative Development](/refguide/collaborative-development))
-
-	![](attachments/enable-new-mode.png)
+![](attachments/not-enabled.png)
 
 ## 3 Editing Cloud Settings
 

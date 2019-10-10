@@ -190,9 +190,4 @@ product-naming:
     - "Other Mendix Terms"
     - "Strategic Partner Terms"
     - "Terminology History"
-test:
-  space: "Mendix Product Naming Guide"
-  priority: false
-  menu_categories:
-    - "Main Product Names"   
-    
+  

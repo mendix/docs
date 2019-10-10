@@ -234,28 +234,60 @@ In this section you will learn to show a page when a user taps a notification. [
 1. Right-click your project module and click  **Add page**.
 2. Click the **Phone (Native)** pane.
 3. Type *NotifPage* into **Page Name**.
-4. Click **Blank** pane on the left and select the **Blank** page template.
-5. Click **OK** to create your native page.
-6. Navigate back to your app's home page.
-7.  Drag and drop a **Notifications** widget onto your home page [todo: check with mehmet -- am I supposed to drop the notifications widget on the Native home page or the Responsive one? Do previous screenshots in this how-to have to be redone? Some have new? feedback widget in the native home page. Some older ones in doc do not]. 
+4. Click **Blank** pane on the left and select the **Blank** page template. 
+5. Click **OK** to create your page.
+6. Drag and drop an **Open page button** widget onto your new native page.
+7. Click your **Home_Native** page:
+
+	![click home page](attachments/native-push/home-native-select.png)
+
+8. Click the **Select** button. Now you have a button which will bring you back to your home screen when you are testing:
+
+	![click home page](attachments/native-push/nav-button.png)
+
+9. Navigate back to your app's home page.
+
+10. Drag and drop a **Notifications** widget onto your native home page. 
 
 	{{% image_container width="500" %}}![notifications widget](attachments/native-push/notif-widget.png){{% /image_container %}}
 
-8. Double-click the widget.
-9. Name your action *show_page*.
-10. Click **Actions** > **New**. 
-11. Select **On open to** > **Show a Page**.
-12. Click **NotifPage** and click **Select**. Your finished action item should look like this:
+11. Double-click the widget.
 
-	{{% image_container width="500" %}}![notifications widget](attachments/finished-show-a-page.png){{% /image_container %}}
+12. Name your action *show_page*.
 
-13. Click the two **OK** buttons until you are back at your home page.
+13. Click **Actions** > **New**. 
 
-Great job. Now test the notification you've made:
+14. Select **On open to** > **Show a Page**.
 
-1. Start the app on your mobile device 
-2. Tap the nanoflow button you created in 3.1
-3. Tap the notification to navigate to the page you selected. [todo: this didn't work. Is it because I have a blank page selected?]
+15. Click **NotifPage** and click **Select**. Your finished action item should look like this:
+
+	{{% image_container width="500" %}}![notifications widget](attachments/native-push/finished-show-a-page.png){{% /image_container %}}
+
+16. Click the two **OK** buttons until you are back at your home page.
+
+Navigate back to your **ACT_CreateAndSendNotification** nanoflow. There you will set up the logic for tapping a notification which brings you to a page. This process requires you set up a string variable. However, because this string variable will never be used with other variables — it will only be used for internal notification functionality — you will not set it up by dragging and dropping a create variable activity like you did before. You will set it up with an expression.
+
+1.  Double-click your **Display Notification** activity:
+
+	![click display notification](attachments/native-push/set-action-name-display.png)
+
+2. Click **Action Name** > **Edit** 
+
+	{{% image_container width="500" %}}![edit action name](attachments/native-push/add-action-name.png){{% /image_container %}}
+
+3. Type `'show_page'` into the expression field:
+
+	{{% image_container width="500" %}}![show page expression](attachments/native-push/show-page-exp.png){{% /image_container %}}
+
+4. Click the **OK** buttons until you are back at your nanoflow.
+
+Great job setting up your notification. Now you can test it:
+
+1. Click **Run Locally** to update your app.
+2. Start the app on your mobile device.
+3. Tap your **Send notification** button.
+4. Tap the notification to navigate to the page you selected.
+5. Tap the **Return to home page** button to navigate back to your home page.
 
 Now you can show pages after notifications are tapped. Next you will learn to pass data to these pages. 
 

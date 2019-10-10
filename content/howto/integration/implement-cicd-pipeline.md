@@ -97,7 +97,7 @@ The sections below show you how to execute unit and ATS (UI) tests remotely. The
 
 #### 3.4.1 Unit Tests
 
-One way of doing unit tests in a Mendix app is by using the [UnitTesting module](https://appstore.home.mendix.com/link/app/390/) available from the Mendix App Store. This module already [exposes an API to execute remote calls](https://appstore.home.mendix.com/link/app/390/#running-unit-tests-through-the-remote-api).
+One way of doing unit tests in a Mendix app is by using the [Unit Testing module](https://appstore.home.mendix.com/link/app/390/) available from the Mendix App Store. This module already [exposes an API to execute remote calls](https://appstore.home.mendix.com/link/app/390/#running-unit-tests-through-the-remote-api).
 
 First, you need to start the tests.
 
@@ -110,7 +110,7 @@ When the tests are completed (check the status for when completed is `true`), yo
 
 {{% alert type="info" %}}
 
-You can also (manually) create a web service that exposes the standard unit structure from the data available in the UnitTesting module.
+You can also (manually) create a web service that exposes the standard unit structure from the data available in the Unit Testing module.
 
 {{% /alert %}}
 

@@ -105,8 +105,33 @@ In the image below you can find an example of what information to provide as inp
 
 ### 3.2 Creating a Mendix test project
 
-...
+In order to test our group box widget we want to create a Mendix application that uses this widget in various ways.
+
+1. Open Mendix Studio Pro v8.2.2 to create a new test project by selecting **File > New Project** from the top menu bar. Select the starter app **Blank**, which is the last option on the last page. Then click the **Use this starting point** button, and fill in the following details in the **App Settings** dialog box:
+
+   - App name: **GroupBoxTestProject**
+   - Enable online services: **No**
+
+   After that, click the **Create app** button.
+
+   Optionally you may remove all unused custom widgets to optimize the debugging process. Select **Project > Show Project Directory in Explorer** from the Mendix Studio Pro menu and open the **widgets** folder. Then, delete all the files in this folder.
+
+   After that, close the project by selecting **File > Close Project** from the top menu bar.
+
+2. Move the contents of the Mendix test project folder into **test/MxTestProject** which is located inside your group box widget project folder.
+
+3. Open the moved Mendix test project by selecting **File > Open Project...** from the top menu bar. In the **Open App** dialog box, select **Locally on disk** and browse to the **GroupBoxTestProject.mpr** file inside your group box widget project folder.
+
+4. Create a test case for the group box widget:
+
+   1. Open **Home_Native** page.
+   2. Copy "Home" container and paste it underneath that container
+   3. Delete the content.
+   4. Search in toolbox for the **Group Box** widget.
+   5. Drag the widget into the new container.
+
+5. Setting up the test project is done. Run the test project locally and use the makeitnative app to view the sample widget code in action.
 
 ## 4 Read More
 
-{Add links to related documents and blog posts; make sure necessary third-party links are contextualized in the above sections, as they should not be put here}
+{Add links to related documents and blog posts; make sure necessary third-party links are contextualizecd ./d in the above sections, as they should not be put here}

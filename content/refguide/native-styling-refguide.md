@@ -463,6 +463,7 @@ The widget’s style properties are as follows:
 
 ```xml
 <app>
+	<statusBar/>
 	<topBar/>
 	application content
 	<bottomBar/>
@@ -479,17 +480,18 @@ The widget’s style properties are as follows:
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
-| `topBar` | `backgroundColor` | This is the color of the background. |
-| `topBar` | `backButtonColor` | This is the text color of the back button. |
-| `topBar` | `titleAlignment` | This is the text alignment of the title. |
-| `topBar` | `titleColor` | This is the text color of the title. |
-| `topBar` | `titleFontFamily` | This is the font type of the title. |
-| `topBar` | `titleFontSize` | This is the font size of the title. |
-| `bottomBar` | `backgroundColor` | This is the color of the background. |
-| `bottomBar` | `fontFamily` | This is the font type of the bottom bar text. |
-| `bottomBar` | `fontSize` | This is the font size of the bottom bar text. |
-| `bottomBar` | `color` | This is the default icon and text color. |
-| `bottomBar` | `selectedColor` | This is the selected icon and text color. |
+| `statusBar` | `barStyle` | The style of the status bar, which can be either `dark-content` (black text) or `light-content` (white text). |
+| `statusBar` | `backgroundColor` | The background color of the status bar (Android only). |
+| `topBar` | `container` | This has all ViewStyle properties. |
+| `topBar` | `title` | This has all TextStyle properties. |
+| `topBar` | `backButtonText` | This has all TextStyle properties. |
+| `topBar` | `backButtonIcon` | This has all ImageStyle properties. |
+| `topBar` | `backButtonIconSource` | ImageRequireSource |
+| `bottomBar` | `container` | This has all ViewStyle properties. |
+| `bottomBar` | `label` | This has all TextStyle properties. |
+| `bottomBar` | `selectedLabel` | This has all TextStyle properties. |
+| `bottomBar` | `icon` | This has all TextStyle properties. |
+| `bottomBar` | `selectedIcon` | This has all TextStyle properties. |
 | `progressOverlay` | `background` | This has all ViewStyle properties. |
 | `progressOverlay` | `container` | This has all ViewStyle properties. |
 | `progressOverlay` | `activityIndicator` | This is the same as the [activity indicator](#activity-indicator) widget. |

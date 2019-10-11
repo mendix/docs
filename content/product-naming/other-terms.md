@@ -6,26 +6,34 @@ draft: true
 
 ## Introduction
 
-This section contains the main Mendix terms that are used in the product UI and documentation.
+This document contains various Mendix terms that are used in the product UI and documentation.
 
-## app
+### Under Each Term
 
-An app can be one of the following:
+Details and cross-references where necessary.
+
+{{% alert type="info" %}}
+Guidelines for usage.
+{{% /alert %}}
+
+{{% alert type="success" %}}
+Example usage.
+{{% /alert %}}
+
+## application & app
+
+An "application" or "app" can be one of the following:
 
 * A local application
 * A [Free App](#free-app)
 * A licensed application hosted on the Mendix Cloud; another cloud such as AWS, SAP Cloud, or IBM Cloud Portal; or on the user's own server
 
 {{% alert type="info" %}}
-Use "app" or "application" when referring to apps in general. Do not capitalize (meaning, do not write "Mendix App").
-{{% /alert %}}
-
-{{% alert type="info" %}}
-The full word "application" has a more well-rounded meaning to it (as in, web and mobile apps), whereas "app" may suggest just mobile apps to the reader. Accordingly, it can be better to use "application" at the beginning of documents and then switch to "app" later on. We want to make it clear that Mendix is not just for building mobile apps, but all kinds of applications.
-{{% /alert %}}
-
-{{% alert type="info" %}}
-It is useful to differentiate "app" from "app project" when referring to what the user works on for project management in the Developer Portal. For more information, see [app project](#app-project).
+Use "app" or "application" when referring to apps in general. Do not capitalize (meaning, do not write "Mendix App").<br />
+<br />
+The full word "application" has a more well-rounded meaning to it (as in, web and mobile apps), whereas "app" may suggest just mobile apps to the reader. Accordingly, it can be better to use "application" at the beginning of documents and then switch to "app" later on. We want to make it clear that Mendix is not just for building mobile apps, but all kinds of applications.<br />
+<br />
+It is useful to differentiate "app" from "app project" when referring to what the user works on for project management. For more information, see [app project](#app-project).
 {{% /alert %}}
 
 ## App ID
@@ -36,10 +44,10 @@ Always capitalize.
 
 ## app project {#app-project}
 
-"App" should be used instead of "project" as much as possible in the documentation. However, be aware of potential confusion here when referring to what the user works on for project management in the Developer Portal. A "project" would include the app being developed itself as well as resources from the Developer Portal, deployment, and elsewhere. Thus, "app" as something a Mendix user makes and an end-user uses cannot entirely replace "project" in the documentation.
+"App" should be used instead of "project" as much as possible in the documentation. However, be aware of potential confusion here when referring to what the user works on for project management in the Developer Portal or accesses in Studio Pro. A "project" would include the app being developed itself as well as resources from the Developer Portal, deployment, Mendix Runtime, etc. Thus, "app" as something a Mendix user makes and an end-user uses cannot entirely replace "project" in the documentation.
 
 {{% alert type="info" %}}
-"App project" should be used to clarify project management-related tasks in the Developer Portal.
+Use "app project" to clarify project management-related tasks in the Developer Portal.
 {{% /alert %}}
 
 {{% alert type="success" %}}
@@ -62,7 +70,7 @@ Capitalize, because **Team** is capitalized in the Developer Portal UI.
 
 ## App User
 
-The app end-users invited to use your app while it is still being built.
+For a definition of this term, see the [Managing App Users](/developerportal/settings/general-settings#managing-app-users) section of the *Developer Portal Guide*.
 
 {{% alert type="info" %}}
 Capitalize in all instances.
@@ -79,10 +87,8 @@ Do not use. Use specific SSO-related terminology instead.
 ## Atlas UI {#atlas-ui}
 
 {{% alert type="info" %}}
-Capitalize in all instances.
-{{% /alert %}}
-
-{{% alert type="info" %}}
+Capitalize in all instances.<br />
+<br />
 Do not use just "Atlas."
 {{% /alert %}}
 
@@ -103,10 +109,8 @@ Capitalize in all instances.
 ## Buzz
 
 {{% alert type="info" %}}
-Use "Buzz" on its own, unless you need to specify "Company Buzz" or "App Buzz" for context.
-{{% /alert %}}
-
-{{% alert type="info" %}}
+Use "Buzz" on its own, unless you need to specify "Company Buzz" or "App Buzz" for context.<br />
+<br />
 Do not use "the Buzz" (unless the context demands it).
 {{% /alert %}}
 
@@ -130,8 +134,10 @@ Capitalize in all instances.
 
 ## delighters
 
+Can be used in customer-facing documentation to refer to certain productivity improvements.
+
 {{% alert type="info" %}}
-This term can be used again in customer-facing documentation to refer to certain productivity improvements. There is a **Delighters** section in the Studio Pro release notes.
+There is a **Delighters** section in the Studio Pro release notes.
 {{% /alert %}}
 
 ## fast deploy, fast deployment
@@ -142,13 +148,11 @@ Do not use "insta-deploy" or "instant redeploy."
 
 ## Free App {#free-app}
 
-A Free App is an app that can be deployed without a license and is therefore free. There are restrictions on the resources available to a Free App, and a Free App environment is not the same thing as a cloud environment, as it does not support complex or large applications. Free Apps are part of the [Free Edition](#free-edition).
+A [Free App](/deploy/mendix-cloud-deploy#free-app) is an app that can be deployed without a license and is therefore free. There are restrictions on the resources available to a Free App. A Free App environment is a cloud environment, but it does not support complex or large applications. Free Apps are part of the [Free Edition](#free-edition).
 
 {{% alert type="info" %}}
-Capitalize in all instances.
-{{% /alert %}}
-
-{{% alert type="info" %}}
+Capitalize in all instances.<br />
+<br />
 Do not use "Sandbox." For more information, see [Terminology History](terminology-history).
 {{% /alert %}}
 
@@ -156,19 +160,17 @@ Do not use "Sandbox." For more information, see [Terminology History](terminolog
 
 This is the package of offerings that users can employ without requiring a paid license.
 
-This replaced [Community Edition](terminology-history#community-edition) in 2015, and was made a focus of the announcements at [Mendix World 2019](https://www.mendix.com/blog/a-3-step-leap-into-your-digital-future-highlights-from-mendix-world/).
+"Free Edition" replaced [Community Edition](terminology-history#community-edition) in 2015, and was made a focus of the announcements at [Mendix World 2019](https://www.mendix.com/blog/a-3-step-leap-into-your-digital-future-highlights-from-mendix-world/).
 
 {{% alert type="info" %}}
-Use to refer to the whole package of Mendix free offerings (Studio Pro, Studio, and Free Apps), not individual parts of the offering.
-{{% /alert %}}
-
-{{% alert type="info" %}}
+Use to refer to the whole package of Mendix free offerings (Studio Pro, Studio, and Free Apps), not individual parts of the offering.<br />
+<br />
 Capitalize in all instances.
 {{% /alert %}}
 
 ## guided product introduction tour
 
-Used to describe the user guidance that is built into Mendix Studio. This is a generic term, so it can be applied as more user guidance is built.
+This describes the user guidance that is built into Mendix Studio. This is a generic term, so it can be applied as more user guidance is built.
 
 It should be qualified by the context/location. In the case of Studio, the generic term is qualified by the context/location in the [Studio Release Notes](/releasenotes/studio/) like this: "A guided product introduction tour is now shown when you select **Start Your First App** from the **Introduction Tour** category when creating an app in the [Mendix Developer Portal](https://sprintr.home.mendix.com/)."
 
@@ -184,7 +186,7 @@ Capitalize the name of the app ("Make It Native"), but do not capitalize "app."
 
 ## Mendix Assist {#mendix-assist}
 
-This is the official term and replaces "Mx Assistant" and "Mx Assist." These terms are not to be used in the product UI or documentation. For more information, see [Terminology History](terminology-history).
+This is the official term and replaces "Mx Assistant" and "Mx Assist" (which are not to be used in the product UI or documentation – for more information, see [Terminology History](terminology-history)).
 
 {{% alert type="info" %}}
 Capitalize in all instances.
@@ -215,10 +217,8 @@ Capitalize in all instances.
 ## Mendix Forum
 
 {{% alert type="info" %}}
-Capitalize in all instances.
-{{% /alert %}}
-
-{{% alert type="info" %}}
+Capitalize in all instances.<br />
+<br />
 Do not use "the forum," always use "the Mendix Forum."
 {{% /alert %}}
 
@@ -267,19 +267,15 @@ Capitalize in all instances.
 This term replaces "Mendix Business Server" and "Business Engine." These terms are not to be used in the product UI or documentation. For more information, see [Terminology History](terminology-history).
 
 {{% alert type="info" %}}
-Capitalize in instances when referring to Runtime as part of the Mendix Platform. The best practice is to use a definite article for additional clarity: "the Mendix Runtime."
-{{% /alert %}}
-
-{{% alert type="info" %}}
+Capitalize in instances when referring to Runtime as part of the Mendix Platform. The best practice is to use a definite article for additional clarity: "the Mendix Runtime."<br />
+<br />
 Do not capitalize when referring to the generic "runtime" concept.
 {{% /alert %}}
 
 {{% alert type="success" %}}
-The Mendix Runtime executes the application model that is created in Studio Pro.
-{{% /alert %}}
-
-{{% alert type="success" %}}
-At runtime,…
+The Mendix Runtime executes the application model that is created in Studio Pro.<br />
+<br />
+This widget enables filtering a list view at runtime with various constraints.
 {{% /alert %}}
 
 ## Mendix Server
@@ -299,20 +295,16 @@ Capitalize in all instances.
 ## Mendix Support
 
 {{% alert type="info" %}}
-Do not use "Customer Support," "Mendix Customer Support," or simply "Support."
-{{% /alert %}}
-
-{{% alert type="info" %}}
+Do not use "Customer Support," "Mendix Customer Support," or simply "Support."<br />
+<br />
 Capitalize in all instances.
 {{% /alert %}}
 
 ## Mendix Support Portal
 
 {{% alert type="info" %}}
-Do not use "Customer Portal" or "Customer Support Portal."
-{{% /alert %}}
-
-{{% alert type="info" %}}
+Do not use "Customer Portal" or "Customer Support Portal."<br />
+<br />
 Capitalize in all instances.
 {{% /alert %}}
 
@@ -325,7 +317,7 @@ Capitalize in all instances.
 ## Model Server
 
 {{% alert type="info" %}}
-Capitalize in all instances of the Mendix Model Server (to parallel "Team Server" and "Build Server"). 
+Capitalize in all instances (to parallel "Team Server" and "Build Server"). 
 {{% /alert %}}
 
 ## MxAssure
@@ -348,7 +340,9 @@ Do not use "on-premise," "on premise," "on-prem," or "on prem."
 On-premises deployment needs specific security considerations.
 {{% /alert %}}
 
-## one-to-one & one-to-many
+## one-to-one & one-to-many associations
+
+For details on association properties, see [Associations & Their Properties](/refguide/association-properties). 
 
 {{% alert type="info" %}}
 Write as "one-to-one" and "one-to-many," not as "1-1" or "1-to-many."
@@ -362,10 +356,12 @@ Capitalize in all instances.
 
 ## persistable & non-persistable
 
-{{% alert type="info" %}}
-Do not use "persistent" or "non-persistent."
+For details on the persistability of entities, see [Persistability](/refguide/persistability). 
 
-Also, do not use "transient" as a synonym for "persistable."
+{{% alert type="info" %}}
+Do not use "persistent" or "non-persistent."<br />
+<br />
+Do not use "transient" as a synonym for "persistable."
 {{% /alert %}}
 
 ## Platform APIs
@@ -449,8 +445,6 @@ Capitalize in all instances of this [role](/developerportal/company-app-roles/te
 {{% /alert %}}
 
 ## Theme Customizer
-
-This is part of [Atlas UI](#atlas-ui).
 
 {{% alert type="info" %}}
 Capitalize in all instances.

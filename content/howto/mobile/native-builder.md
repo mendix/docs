@@ -296,19 +296,19 @@ If your native template is not the latest version, synchronize your repository w
 
 ### 9.1 GitHub Errors
 
-* **Invalid Access Token** — Your access token is invalid. Consult the [GitHub Token](#github-token) section above and provide the access token to Native Builder.
-* **Unable to Create the Repository: the Access Token Needs Access to the Repo Scope** — Your access token is valid, but has too few permissions for Native Builder to work. Native Builder clones a template GitHub repository, creates a branch, and commits files. Consult the [GitHub Token](#github-token) section above and provide the new access token to Native Builder.
-* **Unable to Delete Branch Build/{build number}** — Something went wrong while communicating with GitHub. Verify your connection, check that GitHub is available, and try running Native Builder again.
-* **Unable to Create Branch Build/{build number}** — Something went wrong while communicating with GitHub. Verify your connection, check that GitHub is available, and try running Native Builder again.
-* **Unable to Commit {build number}** — Something went wrong while communicating with GitHub. Verify your connection, check that GitHub is available, and try running Native Builder again.
+* **Invalid Access Token** – Your access token is invalid. Consult the [GitHub Token](#github-token) section above and provide the access token to Native Builder.
+* **Unable to Create the Repository: the Access Token Needs Access to the Repo Scope** – Your access token is valid, but has too few permissions for Native Builder to work. Native Builder clones a template GitHub repository, creates a branch, and commits files. Consult the [GitHub Token](#github-token) section above and provide the new access token to Native Builder.
+* **Unable to Delete Branch Build/{build number}** – Something went wrong while communicating with GitHub. Verify your connection, check that GitHub is available, and try running Native Builder again.
+* **Unable to Create Branch Build/{build number}** – Something went wrong while communicating with GitHub. Verify your connection, check that GitHub is available, and try running Native Builder again.
+* **Unable to Commit {build number}** – Something went wrong while communicating with GitHub. Verify your connection, check that GitHub is available, and try running Native Builder again.
 
 ### 9.2 App Center Errors
 
-* **Invalid API Token** — Your API token is invalid. Follow the [App Center Token](#appcenter-token) section above and provide the API token to Native Builder.
-* **Unable to Configure Build:{explanation}** — Something went wrong while communicating with App Center. Verify your connection, check that App Center is available, and try running Native Builder again.
-* **Build {build number} for App {app number} Has Failed** — The native build on App Center has failed. Read the log file that Native Builder has downloaded. The log file is named *{AppName}-{BuildNumber}.log* and is located in the same folder as your Native Builder executable.
-* **The build configuration is overridden with the default** — While Native Builder is checking to identify if the branch it is building has been manually configured, it may detect false positives. This could lead to your custom configuration getting overridden. If that happens, consider running the build directly using App Center and skip using the Native Builder for this branch.
-* **Unknown Error** — If you do not understand an error, you can sign in to App Center and delete the build configuration for the **master** branch. Then run Native Builder again. The tool will recreate the default build configuration for **master** and your branch.
+* **Invalid API Token** – Your API token is invalid. Follow the [App Center Token](#appcenter-token) section above and provide the API token to Native Builder.
+* **Unable to Configure Build:{explanation}** – Something went wrong while communicating with App Center. Verify your connection, check that App Center is available, and try running Native Builder again.
+* **Build {build number} for App {app number} Has Failed** – The native build on App Center has failed. Read the log file that Native Builder has downloaded. The log file is named *{AppName}-{BuildNumber}.log* and is located in the same folder as your Native Builder executable.
+* **The build configuration is overridden with the default** – While Native Builder is checking to identify if the branch it is building has been manually configured, it may detect false positives. This could lead to your custom configuration getting overridden. If that happens, consider running the build directly using App Center and skip using the Native Builder for this branch.
+* **Unknown Error** – If you do not understand an error, you can sign in to App Center and delete the build configuration for the **master** branch. Then run Native Builder again. The tool will recreate the default build configuration for **master** and your branch.
 
 ## 10 Read More
 

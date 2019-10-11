@@ -302,7 +302,7 @@ If your native template is not the latest version, synchronize your repository w
 * **Unable to Create Branch Build/{build number}** — Something went wrong while communicating with GitHub. Verify your connection, check that GitHub is available, and try running Native Builder again.
 * **Unable to Commit {build number}** — Something went wrong while communicating with GitHub. Verify your connection, check that GitHub is available, and try running Native Builder again.
 
-### 9.2 App Center Errors - CHANGE TO EN DASHES!
+### 9.2 App Center Errors
 
 * **Invalid API Token** — Your API token is invalid. Follow the [App Center Token](#appcenter-token) section above and provide the API token to Native Builder.
 * **Unable to Configure Build:{explanation}** — Something went wrong while communicating with App Center. Verify your connection, check that App Center is available, and try running Native Builder again.

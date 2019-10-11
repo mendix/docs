@@ -36,11 +36,12 @@ To publish your app in the Google Play store, do the following:
 
 * Have an Android device for testing the APK package that will be produced
 
-## 3 Watch a Tutorial Video
+## 3 Tutorial Video
 
 The video below shows how to build a PhoneGap app in the cloud. After showing you how to build mobile app store packages, it explains how to find these packages in PhoneGap and add security keys to them.
 
 **How to build a PhoneGap app in the cloud**
+
 {{% youtube 7ic625u2YJE %}}
 
 ## 4 Starting the Packaging Process{#starting-the-packaging-process}

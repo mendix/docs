@@ -21,7 +21,7 @@ These are the available list view widgets:
 
 ### 1.1 Demo App Project
 
-For a demo app project example that has been deployed with these widgets, see [here](https://listviewcontrols.mxapps.io).
+For a demo app project that has been deployed with these widgets, see [here](https://listviewcontrols.mxapps.io).
 
 ## 2 Check Box Filter Widget {#check-box-filter}
 
@@ -154,7 +154,7 @@ Add an interactive search box to all of your list views with this widget. This s
 
 ![](attachments/list-view-controls/text-box-search.gif)	
 
-## 8 Developing This App Store Item
+## 8 Developing This App Store Component
 
 ### 8.1 Prerequisites
 

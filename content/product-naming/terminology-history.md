@@ -71,7 +71,7 @@ Replaced by [Mendix Platform](main-product-names#platform) and [Developer Portal
 Not in use as of Mendix 7. 
 
 {{% alert type="info" %}}
-Replaced by [Desktop Modeler](#dm).
+Replaced by [Desktop Modeler](#dm) (and eventually [Mendix Studio Pro](main-product-names#pro)).
 {{% /alert %}}
 
 ## Mendix Business Server/Engine {#business-server}
@@ -112,7 +112,7 @@ Use [Free App](other-terms#free-app) or "Free App environment" as of Mendix 8.
 Replaced by [Developer Portal](main-product-names#devportal).
 {{% /alert %}}
 
-## Web Modeler
+## Web Modeler {#wm}
 
 This term should still be used when referring to Mendix versions below 8.
 

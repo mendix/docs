@@ -95,12 +95,12 @@ Do not use just "Atlas."
 ## Build Server
 
 {{% alert type="info" %}}
-Capitalize in all instances of the Mendix Build Server (to parallel "Team Server" and "Model Server").
+Capitalize in all instances (to parallel "Team Server" and "Model Server").
 {{% /alert %}}
 
 ## Business Engineer
 
-This is an app project role. As such, it differs from the term "business developer," which is used in the [Mendix Platform Evaluation Guide](https://www.mendix.com/evaluation-guide/) as a generic role and persona term. Forrester also uses this term.
+This is an app project role. As such, it differs from the term "business developer," which is used in the [Mendix Platform Evaluation Guide](https://www.mendix.com/evaluation-guide/) as a generic role and persona term.
 
 {{% alert type="info" %}}
 Capitalize in all instances.
@@ -137,10 +137,10 @@ Capitalize in all instances.
 Can be used in customer-facing documentation to refer to certain productivity improvements.
 
 {{% alert type="info" %}}
-There is a **Delighters** section in the Studio Pro release notes.
+There is a **Delighters** section in the [Studio Pro release notes](/releasenotes/studio-pro/).
 {{% /alert %}}
 
-## fast deploy, fast deployment
+## fast deploy & fast deployment
 
 {{% alert type="info" %}}
 Do not use "insta-deploy" or "instant redeploy."
@@ -186,9 +186,9 @@ Capitalize the name of the app ("Make It Native"), but do not capitalize "app."
 
 ## Mendix Assist {#mendix-assist}
 
-This is the official term and replaces "Mx Assistant" and "Mx Assist" (which are not to be used in the product UI or documentation – for more information, see [Terminology History](terminology-history)).
-
 {{% alert type="info" %}}
+This replaces "Mx Assistant" and "Mx Assist" (which are not to be used in the product UI or documentation – for more information, see [Terminology History](terminology-history)).<br />
+<br />
 Capitalize in all instances.
 {{% /alert %}}
 
@@ -196,9 +196,9 @@ Capitalize in all instances.
 
 [Mendix](/refguide/getting-the-mendix-app) is the name for the mobile app available for developers to test hybrid mobile apps using PhoneGap.
 
-This term replaces "Mendix Developer app" and "Mendix Mobile app." These terms are not to be used in the product UI or documentation. For more information, see [Terminology History](terminology-history).
-
 {{% alert type="info" %}}
+This term replaces "Mendix Developer app" and "Mendix Mobile app" (which are not to be used in the product UI or documentation – for more information, see [Terminology History](terminology-history)).<br />
+<br />
 To avoid confusion with "Mendix" in all its other usages, always use "the Mendix mobile app" and cross-reference [Getting the Mendix Mobile App](https://docs.mendix.com/refguide/getting-the-mendix-app) where possible.
 {{% /alert %}}
 
@@ -217,9 +217,9 @@ Capitalize in all instances.
 ## Mendix Forum
 
 {{% alert type="info" %}}
-Capitalize in all instances.<br />
+Do not use "the forum," always use "the Mendix Forum."<br />
 <br />
-Do not use "the forum," always use "the Mendix Forum."
+Capitalize in all instances.
 {{% /alert %}}
 
 ## Mendix level
@@ -256,17 +256,17 @@ Use the full name when referencing, not just "Evaluation Guide."
 
 ## Mendix Profile {#profile}
 
-This term replaces "Developer Profile." This term is not to be used in the product UI or documentation. For more information, see [Terminology History](terminology-history).
-
 {{% alert type="info" %}}
+This term replaces "Developer Profile" (which is not to be used in the product UI or documentation – for more information, see [Terminology History](terminology-history)).<br />
+<br />
 Capitalize in all instances.
 {{% /alert %}}
 
 ## Mendix Runtime {#runtime}
 
-This term replaces "Mendix Business Server" and "Business Engine." These terms are not to be used in the product UI or documentation. For more information, see [Terminology History](terminology-history).
-
 {{% alert type="info" %}}
+This term replaces "Mendix Business Server" and "Business Engine" (which are not to be used in the product UI or documentation – for more information, see [Terminology History](terminology-history)).<br />
+<br />
 Capitalize in instances when referring to Runtime as part of the Mendix Platform. The best practice is to use a definite article for additional clarity: "the Mendix Runtime."<br />
 <br />
 Do not capitalize when referring to the generic "runtime" concept.
@@ -280,7 +280,7 @@ This widget enables filtering a list view at runtime with various constraints.
 
 ## Mendix Server
 
-This term is still in use, even though [Mendix Business Server](terminology-history#business-server) is no longer used as a product name. It can be useful when contrasting with [Mendix Client](#client). In addition, it can be used to cover more than [Mendix Runtime](#runtime).
+This term is still in use, even though [Mendix Business Server](terminology-history#business-server) is no longer used. It can be useful when contrasting with [Mendix Client](#client). In addition, it can be used to cover more than [Mendix Runtime](#runtime).
 
 {{% alert type="info" %}}
 Capitalize in all instances.
@@ -394,9 +394,7 @@ Do not capitalize.
 Capitalize in all instances of the [App Team role](/developerportal/settings#app-team).
 {{% /alert %}}
 
-## production, acceptance, test
-
-Types of environments.
+## production, acceptance & test environments
 
 {{% alert type="info" %}}
 Do not capitalize.
@@ -417,7 +415,7 @@ Capitalize in all instances.
 ## Scrum Master
 
 {{% alert type="info" %}}
-This is the correct capitalization for this App Team role.
+This is the correct capitalization for this [App Team role](/developerportal/company-app-roles#app-team-roles)
 {{% /alert %}}
 
 ## Sprint

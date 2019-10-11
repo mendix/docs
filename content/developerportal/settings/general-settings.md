@@ -25,12 +25,9 @@ The sections below describe the actions you can perform on this page.
 
 ## 2 Mendix Studio {#web}
 
-In the **Studio** section, you can see whether Studio is enabled for the app. 
+In the **Mendix Studio** section, you can see information that Studio is enabled for the app and an instruction on how to open the app in Studio:
 
-You can enable Studio if it has not been enabled yet by clicking **Enable Studio**
-
-
-![](attachments/not-enabled.png)
+![Mendix Studio Section](attachments/mendix-studio-section.png) 
 
 ## 3 Editing Cloud Settings
 

@@ -10,7 +10,9 @@ tags: ["desktop modeler", "collaborative development", "troubleshooting", "troub
 
 {{% alert type="info" %}}
 
-Collaborative development with the Web Modeler is only available if your project has Mendix version 7.23.3 or above. If your projects has Mendix version 7.23.2 and below, you cannot sync your changes with the Web Modeler. You will still be able to open your project in the Web Modeler, but the Web Modeler will automatically upgrade it to the latest patch version of 7.23.   
+Collaborative development is only available if your project has Mendix version 7.23.3 or above. You cannot sync your changes with the Web Modeler if your project has Mendix version 7.23.2 or below. 
+
+You will still be able to open your project in the Web Modeler (the Web Modeler will automatically upgrade it to the latest release version of 7.23).  However, to sync changes from the Web Modeler you have to use the Mendix Desktop Modeler version 7.23.3 or above.
 
 {{% /alert %}}
 

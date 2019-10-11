@@ -10,15 +10,17 @@ tags: ["desktop modeler", "collaborative development", "sync"]
 
 {{% alert type="warning" %}}
 
-Collaborative development is only available if your project has Mendix version 7.23.3 or above. You cannot sync your changes with the Web Modeler if your project has Mendix version 7.23.2 or below. You will still be able to open your project in the Web Modeler, but the Web Modeler will automatically upgrade it to the latest patch version of 7.23. 
+Collaborative development is only available if your project has Mendix version 7.23.3 or above. You cannot sync your changes with the Web Modeler if your project has Mendix version 7.23.2 or below. 
+
+You will still be able to open your project in the Web Modeler (the Web Modeler will automatically upgrade it to the latest release version of 7.23).  However, to sync changes from the Web Modeler you have to use the Mendix Desktop Modeler version 7.23.3 or above.
 
 {{% /alert %}}
 
 Collaborative development is the process of sharing app model changes when a team of more than one person is working on the app. Collaborative development allows the team members to work together on one project in the Desktop Modeler and the Web Modeler and easily synchronize changes using [version control](version-control). The Desktop Modeler can be used to work on different branches of an app, while the Web Modeler can be enabled for one of these branches. 
 
-Collaborative development is enabled by default for apps with version 7.23.3 or above. If you have never used the Mendix Web Modeler before, mind that you need to enable a development line for it. For more information on managing development lines, see the [Managing Development Lines in the Desktop Modeler](#managing-branches) section.  
+Collaborative development is enabled by default for apps with version 7.23.3 or above. If you have never used the Mendix Web Modeler before, mind that you need to enable it for a development line first. For more information on managing development lines, see the [Managing Development Lines in the Desktop Modeler](#managing-branches) section.  
 
-If your project is created in Mendix version 7.23.2 and below, you cannot sync your changes with Mendix Studio. 
+If your project is created in Mendix version 7.23.2 and below, upgrade the project to Mendix version 7.23.3 or above to get collaborative development enabled.
 
 ## 2 Collaborative Development Overview
 

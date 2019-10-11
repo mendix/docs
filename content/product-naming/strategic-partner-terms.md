@@ -14,6 +14,18 @@ For more information on strategic partners, see:
 * [Strategic Partners Guide](/partners/index)
 * [Add-on Guides](/addons/index)
 
+### Under Each Term
+
+Details and cross-references where necessary.
+
+{{% alert type="info" %}}
+Guidelines for usage.
+{{% /alert %}}
+
+{{% alert type="success" %}}
+Example usage.
+{{% /alert %}}
+
 ## Mansystems (Add-ons)
 
 ### ATS Helper

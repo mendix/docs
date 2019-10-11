@@ -8,6 +8,18 @@ draft: true
 
 This section contains the main Mendix terms that are used in the product UI and documentation.
 
+### Under Each Term
+
+Details and cross-references where necessary.
+
+{{% alert type="info" %}}
+Guidelines for usage.
+{{% /alert %}}
+
+{{% alert type="success" %}}
+Example usage.
+{{% /alert %}}
+
 ## app
 
 An app can be one of the following:

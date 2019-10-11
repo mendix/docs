@@ -8,6 +8,18 @@ draft: true
 
 This section contains terms that are not used or have had their name changed.
 
+### Under Each Term
+
+Details and cross-references where necessary.
+
+{{% alert type="info" %}}
+Guidelines for usage.
+{{% /alert %}}
+
+{{% alert type="success" %}}
+Example usage.
+{{% /alert %}}
+
 ## Cloud Portal {#cloud-portal}
 
 This is an internal term and should not be used in the documentation or publicly, as it has not been agreed on or branded. It no longer appears in the Mendix Documentation or *Mendix Platform Evaluation Guide*.

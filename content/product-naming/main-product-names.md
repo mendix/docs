@@ -8,6 +8,18 @@ draft: true
 
 These are branded Mendix product names. However, they do not always need "Mendix" in front of them in the documentation.
 
+### Under Each Term
+
+Details and cross-references where necessary.
+
+{{% alert type="info" %}}
+Guidelines for usage.
+{{% /alert %}}
+
+{{% alert type="success" %}}
+Example usage.
+{{% /alert %}}
+
 ## Mendix App Store {#app-store}
 
 {{% alert type="info" %}}

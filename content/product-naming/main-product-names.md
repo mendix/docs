@@ -37,7 +37,7 @@ Capitalize in all instances.
 There are two versions of Mendix Cloud, v3 and v4.
 
 {{% alert type="info" %}}
-Use a lower-case "v" except when beginning a sentence or heading.<br />
+Use a lower-case "v", except when beginning a sentence or heading.<br />
 <br />
 Use "Mendix Cloud" before the version, except where the context is clear.
 {{% /alert %}}
@@ -50,12 +50,12 @@ V4 has much better security than v3.
 
 ## Mendix Developer Portal {#devportal}
 
-This term appears on the **My Apps** page in Studio Pro.
+This term appears on the **My Apps** page in Studio Pro and in the **Back to the Developer Portal** button in Studio.
+
+The Developer Portal includes what is sometimes referred to as the "Cloud Portal," which is not an official term and is not used in the product UI or documentation. For more information, see [Terminology History](terminology-history).
 
 {{% alert type="info" %}}
-This term replaces "Sprintr," "Platform Portal," and "Mendix App Platform." These terms are not to be used in the product UI or documentation. For more information, see [Terminology History](terminology-history).<br />
-<br />
-The Developer Portal includes what is sometimes referred to as the "Cloud Portal," which is not an official term and is not used in the product UI or documentation. For more information, see [Terminology History](terminology-history).
+This term replaces "Sprintr," "Platform Portal," and "Mendix App Platform." These terms are not to be used in the product UI or documentation. For more information, see [Terminology History](terminology-history).
 {{% /alert %}}
 
 {{% alert type="info" %}}
@@ -102,4 +102,6 @@ Capitalize in all instances.
 Where you are describing a feature applicable to both Mendix Studio and Studio Pro, use "Mendix Studio and Studio Pro." However, after you introduce the names of both products once and need to refer to them together again, use "the Mendix Studios."<br />
 <br />
 When you need to use one general product name in a diagram, it is fine to use just "Studios."
+<br />
+Capitalize in all instances.
 {{% /alert %}}

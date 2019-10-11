@@ -19,7 +19,7 @@ This guide should not give insights into the product roadmap or internal company
 
 ## Sections of This Guide
 
-The *Product Naming Guide* is divided into the following sections:
+The *Product Naming Guide* is divided into the following documents:
 
 * [Main Product Names](main-product-names)
 * [Other Mendix Terms](other-terms)
@@ -40,7 +40,4 @@ Example usage.
 
 ## Maintaining & Updating This Guide
 
-This guide can be collaboratively maintained and updated across departments. In that sense, a standard documentation workflow is applied.
-
-To update the guide, send a [pull request](https://github.com/mendix/docs/tree/development/content/product-naming) (for more information, see [How to 
-Contribute to the Documentation](/developerportal/community-tools/contribute-to-the-mendix-documentation)). Pull requests will be reviewed with relevant stakeholders and necessary documentation updates will be made.
+This guide can be collaboratively maintained and updated across departments. In that sense, a standard documentation workflow is applied: to update the guide, send a [pull request](https://github.com/mendix/docs/tree/development/content/product-naming) (for more information, see [How to Contribute to the Documentation](/developerportal/community-tools/contribute-to-the-mendix-documentation)). Pull requests will be reviewed with relevant stakeholders and necessary documentation updates will be made.

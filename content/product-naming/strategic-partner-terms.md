@@ -31,13 +31,13 @@ Example usage.
 ### ATS Helper
 
 {{% alert type="info" %}}
-Capitalize in all instances (using full name with "ATS").
+Use full name (with "ATS") and capitalize in all instances.
 {{% /alert %}}
 
 ### ATS Recorder
 
 {{% alert type="info" %}}
-Capitalize in all instances (using full name with "ATS").
+Use full name (with "ATS") and capitalize in all instances.
 {{% /alert %}}
 
 ## SAP

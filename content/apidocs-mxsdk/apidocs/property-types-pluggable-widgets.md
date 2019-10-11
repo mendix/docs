@@ -177,7 +177,7 @@ When the property is defined as follows:
 
 Then the Studio Pro UI for the property appears like this:
 
-![](attachments/widget-property-types/decimal.png)
+![decimal](attachments/widget-property-types/decimal.png)
 
 ### 2.5 Enumeration{#enumeration}
 

@@ -37,18 +37,14 @@ Capitalize in all instances.
 There are two versions of Mendix Cloud, v3 and v4.
 
 {{% alert type="info" %}}
-Use a lower-case "v" except when beginning a sentence or heading.
-{{% /alert %}}
+Use a lower-case "v" except when beginning a sentence or heading.<br />
 
-{{% alert type="info" %}}
 Use "Mendix Cloud" before the version, except where the context is clear.
 {{% /alert %}}
 
 {{% alert type="success" %}}
-These are the main differences between Mendix Cloud v3 and v4.
-{{% /alert %}}
+These are the main differences between Mendix Cloud v3 and v4.<br />
 
-{{% alert type="success" %}}
 V4 has much better security than v3.
 {{% /alert %}}
 
@@ -57,10 +53,8 @@ V4 has much better security than v3.
 This term appears on the **My Apps** page in Studio Pro.
 
 {{% alert type="info" %}}
-This term replaces "Sprintr," "Platform Portal," and "Mendix App Platform." These terms are not to be used in the product UI or documentation. For more information, see [Terminology History](terminology-history).
-{{% /alert %}}
+This term replaces "Sprintr," "Platform Portal," and "Mendix App Platform." These terms are not to be used in the product UI or documentation. For more information, see [Terminology History](terminology-history).<br />
 
-{{% alert type="info" %}}
 The Developer Portal includes what is sometimes referred to as the "Cloud Portal," which is not an official term and is not used in the product UI or documentation. For more information, see [Terminology History](terminology-history).
 {{% /alert %}}
 
@@ -77,10 +71,8 @@ Capitalize "Platform" when used in "Mendix Platform."
 {{% /alert %}}
 
 {{% alert type="success" %}}
-This is the power of the Mendix Platform.
-{{% /alert %}}
+This is the power of the Mendix Platform.<br />
 
-{{% alert type="success" %}}
 The platform includes Mendix Studio and our cloud hosting.
 {{% /alert %}}
 
@@ -89,10 +81,8 @@ The platform includes Mendix Studio and our cloud hosting.
 The rebranded name for the Web Modeler as of Mendix 8.
 
 {{% alert type="info" %}}
-"Studio" can be used where regular repetition is necessary in a doc. However, where possible, "Mendix" should be added to the product name.
-{{% /alert %}}
+"Studio" can be used where regular repetition is necessary in a doc. However, where possible, "Mendix" should be added to the product name.<br />
 
-{{% alert type="info" %}}
 Capitalize in all instances.
 {{% /alert %}}
 
@@ -101,19 +91,15 @@ Capitalize in all instances.
 The rebranded name for the Desktop Modeler as of Mendix 8.
 
 {{% alert type="info" %}}
-"Studio Pro" can be used where regular repetition is necessary in a doc. However, where possible, "Mendix" should be added to the product name.
-{{% /alert %}}
+"Studio Pro" can be used where regular repetition is necessary in a doc. However, where possible, "Mendix" should be added to the product name.<br />
 
-{{% alert type="info" %}}
 Capitalize in all instances.
 {{% /alert %}}
 
 ## Mendix Studios
 
 {{% alert type="info" %}}
-Where you are describing a feature applicable to both Mendix Studio and Studio Pro, use "Mendix Studio and Studio Pro." However, after you introduce the names of both products once and need to refer to them together again, use "the Mendix Studios."
-{{% /alert %}}
+Where you are describing a feature applicable to both Mendix Studio and Studio Pro, use "Mendix Studio and Studio Pro." However, after you introduce the names of both products once and need to refer to them together again, use "the Mendix Studios."<br />
 
-{{% alert type="info" %}}
 When you need to use one general product name in a diagram, it is fine to use just "Studios."
 {{% /alert %}}

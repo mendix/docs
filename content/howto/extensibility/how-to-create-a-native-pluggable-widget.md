@@ -130,7 +130,9 @@ In order to test our group box widget we want to create a Mendix application tha
    4. Search in toolbox for the **Group Box** widget.
    5. Drag the widget into the new container.
 
-5. Setting up the test project is done. Run the test project locally and use the makeitnative app to view the sample widget code in action.
+5. Setting up the test project is done. Run the test project locally and use the makeitnative app to view the sample widget code in action. If you followed the steps carefully you should see yellow text in your app saying "Hello World".
+
+TODO: Rename widget from "Group Box" to "Group box"
 
 ## 4 Read More
 

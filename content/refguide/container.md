@@ -27,6 +27,7 @@ Container properties consist of the following sections:
 * Design Properties
 * [General](#general)
 * [Visibility](#visibility)
+* [Events](#events)
 
 ### 2.1 Common Section {#common}
 
@@ -58,6 +59,14 @@ _Default value:_ Div
 ### 2.3 Visibility Section {#visibility}
 
 {{% snippet file="refguide/visibility-section-link.md" %}}
+
+### 2.4 Events Section{#events}	
+
+#### 2.4.1 On Click{#on-click}	
+
+The on-click property specifies an action that will be executed when the container is clicked, either clicking it with the mouse or by pressing <kbd>Enter</kbd> or <kbd>Space</kbd> keys when the container has focus.	
+
+{{% snippet file="refguide/events-section-link.md" %}}	
 
 ## 4 Read More
 

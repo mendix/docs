@@ -12,7 +12,7 @@ The [Login Form](https://appstore.home.mendix.com/link/app/87/) widget is a cust
 
 ### 1.1 Features
 
-* Log in from any page in your Mendix application
+* Sign in from any page in your Mendix application
 * Implement a link to open a **Forgot my password** page
 
 ## 2 Configuration

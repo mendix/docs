@@ -260,6 +260,8 @@ Also rename the "HelloWorldSample" component in the render method to "WrappedGro
 
 #### 3.3.2 Adding widget properties
 
+##### Header caption property
+
 We want to let the Mendix developer alter the header caption of our widget. We can reuse the code and configuration of the sample text property we used earlier to alter the "Hello World" output of the sample widget. Open **src/GroupBox.xml** and alter the sample text property, so that it looks like this:
 
 ```xml
@@ -275,7 +277,7 @@ As soon as you save the file, the script running on the background will rebundle
 
 to:
 
-`headerCaption={this.props.headerCaption ? this.props.headerCaption : "World"}`
+`headerCaption={this.props.headerCaption}`
 
 Our display component doesn't receive a headerCaption prop yet, so open **src/components** and replace:
 
@@ -315,6 +317,70 @@ render(): ReactNode {
 
 Go back to Mendix Studio Pro and press <kbd>F4</kbd> or select **Project > Synchronize Project Directory** from the topbar menu to bring your application in sync with the changes we made to the **src/GroupBox.xml** file. You will notice an error occurs telling us to update our widget. Right click on the "Group Box" widget and select "Update widget". Double click the same widget and you will now see our newly created property. Fill in your caption text, click the "OK" button and rerun your app locally to see your caption text in the app.
 
+#### Content property
+
+Besides the header caption, we also want the developer to be able to fill content in the group box like building blocks, snippets or other widgets. Go to **src/GroupBox.xml** and add the following property element above the header caption property, so that your xml file will look like this:
+
+```xml
+<?xml version="1.0" encoding="utf-8" ?>
+<widget id="mendix.groupbox.GroupBox" pluginWidget="true" needsEntityContext="true" offlineCapable="true" supportedPlatform="Native"
+    xmlns="http://www.mendix.com/widget/1.0/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+    <name>Group Box</name>
+    <description>Widget to group building blocks, snippets or other widgets</description>
+    <icon/>
+    <properties>
+        <propertyGroup caption="General">
+            <property key="content" type="widgets" required="false">
+                <caption>Content</caption>
+                <description>Widgets to place inside</description>
+            </property>
+            <property key="headerCaption" type="string" required="false">
+                <caption>Header caption</caption>
+                <description/>
+            </property>
+        </propertyGroup>
+    </properties>
+</widget>
+```
+
+Save the file, go to **src/GroupBox.tsx** and change the render method as follows:
+
+```tsx
+render(): ReactNode {
+  const { content, headerCaption, style } = this.props;
+
+  return (
+      <WrappedGroupBox headerCaption={headerCaption} style={style}>
+          {content}
+      </WrappedGroupBox>
+  );
+}
+```
+
+Save the file, go to **src/components/GroupBox.tsx** and adjust the render method, so that it matches the following:
+
+```tsx
+render(): ReactNode {
+  const { children, headerCaption } = this.props;
+
+  return (
+      <View style={this.styles.container}>
+          <View style={this.styles.header}>
+              <Text style={this.styles.headerContent}>{headerCaption}</Text>
+              <Text style={this.styles.headerContent}>-</Text>
+          </View>
+          <View style={this.styles.content}>
+              {children}
+          </View>
+      </View>
+  );
+}
+```
+
+Go back to Mendix Studio Pro and press <kbd>F4</kbd> or select **Project > Synchronize Project Directory** from the topbar menu to bring your application in sync with the changes we made to the **src/GroupBox.xml** file. Update the "Group Box" widget again. A content area will appear in the page editor. Add button ...
+
+TODO: add step to fill in sample text for sample widget.
 TODO: Rename widget from "Group Box" to "Group box"
 
 ## 4 Read More

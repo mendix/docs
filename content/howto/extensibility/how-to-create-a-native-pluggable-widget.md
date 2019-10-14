@@ -208,6 +208,38 @@ npm run dev
 
 If not done so already, open your Mendix test project in **test/MxTestProject** in Mendix Studio Pro and run the app locally. Use the Make It Native app to check out the changes.
 
+When you build a widget for native mobile, you need to keep in mind that the widget can be used on two platforms: iOS & Android. Both plaforms have their own design language and we want to adhere as much as possible to both of them. In order to do so, we sometimes need to define platform specific styling or use platform specific React Native components.
+
+For the group box widget it would be nice to have square like corners instead of rounded onces on Android devices. We can do so by changing the value for border radius from:
+
+```tsx
+const defaultStyle: CustomStyle = {
+  container: {
+    borderRadius: 4
+  }
+```
+
+to:
+
+```tsx
+const defaultStyle: CustomStyle = {
+  container: {
+    borderRadius: Platform.OS === "ios" ? 4 : 0
+  }
+```
+
+In order to use "Platform", you need to adjust the following import:
+
+```tsx
+import { Text, View } from "react-native";
+```
+
+to:
+
+```tsx
+import { Text, View, Platform } from "react-native";
+```
+
 TODO: Rename widget from "Group Box" to "Group box"
 
 ## 4 Read More

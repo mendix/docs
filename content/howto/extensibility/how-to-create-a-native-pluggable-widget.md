@@ -132,6 +132,82 @@ In order to test our group box widget we want to create a Mendix application tha
 
 5. Setting up the test project is done. Run the test project locally and use the makeitnative app to view the sample widget code in action. If you followed the steps carefully you should see yellow text in your app saying "Hello World".
 
+### 3.3 Building the group box widget
+
+Now that we have seen our project code running in native, it is time to transform our sample widget into an actual group box widget.
+
+Open up your group box widget project folder in your IDE of choice. From now on, all file references will be relative to this project folder. Op
+
+Open the **(YourMendixProject)/CustomWidgets/TextBox** folder in your IDE of choice. From now on, all file references will be relative to this path.
+
+First we will change the display component. A display component represents the widget and doesn't interact with Mendix specific APIs and, therefore, can be used in any React application. The current display component is located in **src/components** and has the filename **HelloWorldSample.tsx**. Open this file and you can see a typical React Native component with a render method. This method returns the Graphical User Inteface (GUI) of the component.
+
+Let's change the output of this method to display a group box. Replace the existing code with the following:
+
+```tsx
+return (
+  <View style={this.styles.container}>
+    <View style={this.styles.header}>
+      <Text style={this.styles.headerContent}>Header caption</Text>
+      <Text style={this.styles.headerContent}>-</Text>
+    </View>
+    <View style={this.styles.content}>Content</View>
+  </View>
+);
+```
+
+To apply a custom style to our structure above, replace the following code representing the default style:
+
+```tsx
+const defaultStyle: CustomStyle = {
+  container: {},
+  label: {
+    color: "#F6BB42"
+  }
+};
+```
+
+with:
+
+```tsx
+const defaultStyle: CustomStyle = {
+  container: {
+    borderColor: "#000",
+    borderRadius: 4,
+    borderWidth: 1,
+    overflow: "hidden"
+  },
+  header: {
+    backgroundColor: "#000",
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    paddingVertical: 10,
+    paddingHorizontal: 15
+  },
+  headerContent: {
+    color: "#FFF",
+    fontSize: 16,
+    fontWeight: "bold"
+  },
+  content: {
+    paddingVertical: 10,
+    paddingHorizontal: 15
+  },
+  label: {
+    color: "#F6BB42"
+  }
+};
+```
+
+Open up a terminal in your project folder and execute the following command to bundle your widget and update the widget code in your Mendix test project everytime you save your files:
+
+```shell
+npm run dev
+```
+
+If not done so already, open your Mendix test project in **test/MxTestProject** in Mendix Studio Pro and run the app locally. Use the Make It Native app to check out the changes.
+
 TODO: Rename widget from "Group Box" to "Group box"
 
 ## 4 Read More

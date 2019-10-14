@@ -1,5 +1,5 @@
 ---
-title: "Association Properties"
+title: "Associations"
 category: "Domain Model"
 description: "Describes the association properties in Mendix Studio."
 tags: ["studio", "domain model"]

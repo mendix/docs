@@ -40,15 +40,15 @@ The **Auto Arrange** option in the top-left corner groups and aligns entities by
 
 ## 2 Components 
 
-| Domain model components                                  | Description                                                  |
-| -------------------------------------------------------- | :----------------------------------------------------------- |
-| Entity<a name="entity"></a>                          | An entity represents a class of real-world objects, such as customers, invoices, work items, etc. <br />If we draw a parallel with databases, the entity is a table. Entities can be of several types. For more information on types of entities, see the [Types of Entities](#entity-types) section below. |
-| [Attribute](domain-models-attributes) | Attributes are characteristics that describe and/or identify the entity. For example, a *Customer* entity typically has attributes for the name of the customer, an e-mail address, and other personal information. If we draw a parallel with databases, the attribute is a column. |
-| [Association](domain-models-association-properties) | An association describes a relation between entities. In the domain model, an association is represented by a line/arrow between two entities. If we draw a parallel with databases, the association is a foreign key. |
+The domain model can contain the following components:
 
-For examples and more technical details, see [Domain Model](/refguide/domain-model), [Entities](/refguide/entities), [Attributes](/refguide/attributes), and [Associations](/refguide/associations) in the *Studio Pro Guide*. 
+* [Entities](#entity-types) – represents a class of real-world objects. Entities can have attributes:
+  * [Attributes](#attributes) – characteristics that describe and/or identify the entity
+* [Associations](#associations) – describes a relation between entities
 
-### 2.1 Types of Entities {#entity-types}
+### 2.1 Entities and Their Types {#entity-types}
+
+ An entity represents a class of real-world objects, such as customers, invoices, work items, etc. If we draw a parallel with databases, the entity is a table.
 
 You can add different type of entities to your domain model:
 
@@ -60,27 +60,39 @@ You can add different type of entities to your domain model:
 
 Entities have the following properties:
 
-* **General** properties:
+* **General** properties define the name of the entity and its [persistability](/refguide/persistability):
 
   * **Name** – defines the name of the entity
 
-  * **Persistable** – defines whether an object of the entity is stored in the database (for more information on persistability, see [Persistability](/refguide/persistability) in *Studio Pro Guide*). 
+  * **Persistable** – defines whether an object of the entity is stored in the database (for more information on persistability, see [Persistability](/refguide/persistability) in *Studio Pro Guide*)
 
-* **Stored Information** properties –  information stored about the entity that can be used in microflow expressions and/or page filters:
+    ![General Properties of an Entity](attachments/domain-models/entity-general-properties.png)
 
-  * Store 'Created by'
+*  **Stored Information** properties define information stored about the entity, such as when the entity was created and when it was last changed.  This information can be used in microflow expressions and/or page filters.  You can toggle the following properties: 
 
-  * Store 'Creation Date'
+  * **Store 'Created by'** – when enabled, the user's name who created the entity is stored in the datsbase
 
-  * Store 'Last Changed by'
+  * **Store 'Creation Date'** – when enabled, the date when the entity was created is stored in the database
 
-  * Store 'Last Changed Date'
+  * **Store 'Last Changed by'**– when enabled, the user's name who was the last to make changes to the entity is stored in the database
+
+  * **Store 'Last Changed Date'** – when enabled, the date when the entity was last changed is stored in the database
+
+    ![Stored Information Properties of an Entity](attachments/domain-models/entity-stored-info.png) <br/>
 
     {{% alert type="info" %}}
 
     You cannot toggle **Stored Information** properties for Image and File entities.
-
+  
     {{% /alert %}}
+
+### 2.3 Attributes {#attributes}
+
+Attributes are characteristics that describe and/or identify the entity. For example, a *Customer* entity typically has attributes for the name of the customer, an e-mail address, and other personal information. If we draw a parallel with databases, the attribute is a column. For more information on attribute types and their properties, see [Attributes](domain-model-attributes). 
+
+### 2.4 Associations {#associations}
+
+An association describes a relation between entities. In the domain model, an association is represented by a line/arrow between two entities. If we draw a parallel with databases, the association is a foreign key. For more information on association types and their properties, see [Associations](domain-model-asscoation-properties).  
 
 ## 3 Adding New Entities {#adding-new-entities}
 
@@ -116,9 +128,9 @@ To create a new image/file entity with an association automatically, follow the 
 
 2. Click **New attribute** button.
 
-3. In the **Create New Attribute** dialog window, click **Add image or file** in the bottom-right corner:
+3.  In the **Create New Attribute** dialog window, click **Add image or file** in the bottom-right corner:
 
-   ![Add Image or File](attachments/domain-models/add-image-or-file.png)
+    ![Add Image or File](attachments/domain-models/add-image-or-file.png)
 
 4. In the **Image and Files** dialog window, select the type or entity (image or file).
 
@@ -240,7 +252,6 @@ To delete an entity, attribute, or association, do the following:
 
     {{% image_container width="300" %}}![](attachments/domain-models/deletion.png)
     {{% /image_container %}}
-    
 
 {{% alert type="info" %}}
 

@@ -136,9 +136,9 @@ In order to test our group box widget we want to create a Mendix application tha
 
 Now that we have seen our project code running in native, it is time to transform our sample widget into an actual group box widget.
 
-Open up your group box widget project folder in your IDE of choice. From now on, all file references will be relative to this project folder. Op
+Open up your group box widget project folder in your IDE of choice. From now on, all file references will be relative to this project folder.
 
-Open the **(YourMendixProject)/CustomWidgets/TextBox** folder in your IDE of choice. From now on, all file references will be relative to this path.
+#### 3.3.1 Creating static UI
 
 First we will change the display component. A display component represents the widget and doesn't interact with Mendix specific APIs and, therefore, can be used in any React application. The current display component is located in **src/components** and has the filename **HelloWorldSample.tsx**. Open this file and you can see a typical React Native component with a render method. This method returns the Graphical User Inteface (GUI) of the component.
 
@@ -239,6 +239,24 @@ to:
 ```tsx
 import { Text, View, Platform } from "react-native";
 ```
+
+As you might have noticed, the display component is still called "HelloWorldSample". Change the classname to "GroupBox" and change the filename to "GroupBox.tsx". These two changes will cause errors in our container component defined in **src/GroupBox.tsx**. The container component will be used by the Mendix client, receives all kind of property data from the client and forwards this data to the display component. The container works like glue between the Mendix application and the display component.
+
+To fix the errors in the container component, replace the following import:
+
+```tsx
+import { HelloWorldSample } from "./components/HelloWorldSample";
+```
+
+with:
+
+```tsx
+import { GroupBox as WrappedGroupBox } from "./components/GroupBox";
+```
+
+Also rename the "HelloWorldSample" component in the render method to "WrappedGroupBox".
+
+#### 3.3.2 Adding widget property for header caption
 
 TODO: Rename widget from "Group Box" to "Group box"
 

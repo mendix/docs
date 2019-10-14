@@ -25,9 +25,15 @@ The sections below describe the actions you can perform on this page.
 
 ## 2 Mendix Studio {#web}
 
-In the **Mendix Studio** section, you can see information that Studio is enabled for the app and an instruction on how to open the app in Studio:
+In the **Mendix Studio** section, you can see whether Studio is enabled for the app. 
 
-![Mendix Studio Section](attachments/mendix-studio-section.png) 
+You can also enable Studio if it has not been enabled yet by clicking **Enable Mendix Studio**:
+
+![](attachments/not-enabled.png)
+
+{{% alert type="info" %}}
+Only Scrum Masters or custom App Team roles with the **App Settings** permission are allowed to enable Studio.
+{{% /alert %}}    
 
 ## 3 Editing Cloud Settings
 

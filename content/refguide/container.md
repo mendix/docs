@@ -23,11 +23,11 @@ An example of container properties is represented in the image below:
 
 Container properties consist of the following sections:
 
-* [Common](#common)
-* Design Properties
 * [General](#general)
 * [Visibility](#visibility)
+* [Common](#common)
 * [Events](#events)
+* Design Properties
 
 ### 2.1 Common Section {#common}
 
@@ -37,7 +37,7 @@ Container properties consist of the following sections:
 
 #### 2.2.1 Render Mode
 
-The render mode determines which HTML5 tag will be used to show the container in the web browser. 
+The **Render mode** determines which HTML5 tag will be used to show the container in the web browser. 
 
 | Value     | HTML Tag    |
 | --------- | ----------- |
@@ -60,11 +60,11 @@ _Default value:_ Div
 
 {{% snippet file="refguide/visibility-section-link.md" %}}
 
-### 2.4 Events Section{#events}	
+### 2.4 Events Section {#events}	
 
-#### 2.4.1 On Click{#on-click}	
+#### 2.4.1 On-Click {#on-click}	
 
-The on-click property specifies an action that will be executed when the container is clicked, either clicking it with the mouse or by pressing <kbd>Enter</kbd> or <kbd>Space</kbd> keys when the container has focus.	
+The **On-click** property specifies the action that will be executed when the user clicks the container (either with with the mouse pointer or by pressing the <kbd>Enter</kbd> or <kbd>Space</kbd> key when the container is in focus).
 
 {{% snippet file="refguide/events-section-link.md" %}}	
 
@@ -73,5 +73,3 @@ The on-click property specifies an action that will be executed when the contain
 * [Page](page)
 * [Container Widgets](container-widgets)
 * [Properties Common for Widgets](common-widget-properties)
-
-

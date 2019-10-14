@@ -6,7 +6,6 @@ description: "Use the MendixSSO module to add Single Sign-on to your app using t
 tags: ["SSO", "Single Sign-on", "Mendix credentials"]
 #draft: true
 #Ownership claimed by Identity Services Team.
-#Needs to be rewritten to remove AppCloud references and just concentrate on SSO. Also needs to be tested.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

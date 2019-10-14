@@ -1,9 +1,9 @@
 ---
-title: "Modifying Mendix SSO"
+title: "Upgrading to Mendix SSO from AppCloudServices"
 parent: "mendix-sso"
-menu_order: 10
-description: "Modify the MendixSSO module to create your own user administration suite, and obtain information for debugging"
-tags: ["SSO", "Single Sign On", "Mendix credentials", "User administration", "debugging"]
+menu_order: 20
+description: "How to upgrade existing apps using AppCloudServices to use MendixSSO"
+tags: ["SSO", "Single Sign On", "Upgrade", "AppCloudServices"]
 #Ownership claimed by Identity Services Team.
 ---
 
@@ -23,8 +23,6 @@ These two ways are described below.
 
 ### 2.1 Using Snippets
 
-![List of snippets in MendixSSO](attachments/modifying-mendix-sso/snippets.png)
-
 ### 2.2 Modifying Mendix SSO
 
 {{% alert type="warning" %}}
@@ -37,22 +35,4 @@ The MendixSSO module is written so that you can make a complete copy of the modu
 
 Mendix SSO works by providing users with tokens when they are authenticated. If users are having issues with Mendix SSO it can be useful to see the tokens, either for your own debugging or to provide information to Mendix Support.
 
-The default Mendix SSO administration module has a number of ways to enable you to see tokens.
-
-{{% alert type="info" %}}
-Tokens contain personal information, as well as authentication information. They should not be exposed routinely, and should only be shared on a need-to-know basis (for example, if you need help resolving an issue with SSO).
-{{% /alert %}}
-
-### 3.1 Displaying Tokens on Pages
-
-Individual users can see their tokens on the MendixSSO.MyTokensOverview page of the default implementation. Administrators may want to see all active tokens – these can be seen on the MendixSSO.TokensOverview page.
-
-![List of pages which show tokens in MendixSSO](attachments/modifying-mendix-sso/token-pages.png)
-
-It is recommended that you add these to the navigation of the app, if you want administrators or end-users to be able to see tokens. This avoids them being included in the main process flows of the app.
-
-![How to add navigation to the tokens overview pages in MendixSSO](attachments/modifying-mendix-sso/token-navigation.png)
-
-### 3.2 Displaying Tokens using Snippets
-
-![List of snippets which manipulate tokens in MendixSSO](attachments/modifying-mendix-sso/token-snippets.png)
+The 

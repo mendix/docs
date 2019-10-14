@@ -27,7 +27,7 @@ An example of drop down properties is represented in the image below:
 {{% image_container width="250" %}}![](attachments/drop-down/drop-down-properties.png)
 {{% /image_container %}}
 
-Text box properties consist of the following sections:
+Drop down properties consist of the following sections:
 
 * [Common](#common)
 * [Data source](#data-source)

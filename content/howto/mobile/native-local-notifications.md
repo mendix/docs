@@ -458,18 +458,26 @@ Next you are going to create a show page action for **ON_tapNotification**.
 3. From the **Object to pass** drop-down menu select **ReturnedObjectByGuid**.
 4. Click **Page** > **Select**, click **DetailTestEntity**, then click **OK**.
 5. Click **OK** to close the **Show Page** activity settings, then navigate to your **Home_Native** page.
-6. On your home page, do the following: <br />
-	a. Drag and drop a **Data View** widget onto your page.
-	b. Double-click your data view.
-	b. Select **Data source** > Type > Nanoflow
-	
-	RESUME HERE
-	
-    c. Click Nanoflow > Select and choose **DS_Notification** (created in step 2). <br />
-	b. Move the **Notification** widget inside this dataview. <br />
-	c. Set **GUID** to **Notification.GUIDString**. Create a **New Action** named *OpenPageWithParams*, set **On open: Call a nanoflow**, and set **Nanoflow** to **ON_tapNotification**.
-	
-5. Start and load the app on your mobile device, tap the nanoflow button you created in 3.e, then tap the notification to navigate to the **DetailTestEntity** page with the proper object.
+
+Now you will set up a data view on your home page.
+
+1. Drag and drop a **Data View** widget on your **Home_Native** page.
+2. Double-click your data view.
+3. Select **Data source** > **Type** > **Nanoflow**.
+4. Click **Nanoflow** > **Select** and choose **DS_Notification**.
+5. Click **OK** to go back to your home page, and click **OK** on the subsequent data view dialog box.
+5. Move the **Notifications** widget inside this data view.
+6. Confirm that the text box in your data flow is using **GUIDString** as its data source:
+
+	{{% image_container width="500" %}}![first guid action](attachments/native-push/GUID-data-source.png){{% /image_container %}}
+
+7. Double-click your notifications widget.
+8. Click **Actions** > **New**.
+9. Create a **New Action** named *OpenPageWithParams*, set **On open** to **Call a nanoflow**, and select **ON_tapNotification**.
+
+	{{% image_container width="500" %}}![notification action](attachments/native-push/notif-action-2.png){{% /image_container %}}
+
+8. Start and load the app on your mobile device, tap the nanoflow button you created in 3.e, then tap the notification to navigate to the **DetailTestEntity** page with the proper object.
 
 Explaining the workaround (all the steps/substeps above yes?):
 

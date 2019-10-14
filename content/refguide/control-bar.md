@@ -99,9 +99,9 @@ The **Export to Excel** button allows end-users to export the contents of the gr
 
 {{% alert type="info" %}}
 
-The Excel export function relies on a specific data retrieval method. So, it is only available in list widgets that have the [XPath data source](xpath-source). 
+The Excel export function is only available in list widgets that have the [XPath data source](xpath-source). 
 
-Constraints by use of search fields and sorting will also be exported.
+Constraints you are using for search fields and sorting will also be exported.
 
 {{% /alert %}}
 
@@ -130,9 +130,9 @@ The **Export to CSV** button allows end-users to export the contents of the grid
 
 {{% alert type="info" %}}
 
-The export to CSV function relies on a specific data retrieval method. So, it is only available in list widgets that have the [XPath data source](xpath-source). 
+The export to CSV function is only available in list widgets that have the [XPath data source](xpath-source). 
 
-Constraints by use of search fields and sorting will also be exported.
+Constraints you are using for search fields and sorting will also be exported.
 
 {{% /alert %}}
 

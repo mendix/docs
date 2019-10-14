@@ -66,11 +66,11 @@ Entities have the following properties:
 
   * **Persistable** – defines whether an object of the entity is stored in the database (for more information on persistability, see [Persistability](/refguide/persistability) in *Studio Pro Guide*)
 
-    ![General Properties of an Entity](attachments/domain-models/entity-general-properties.png)
+		![General Properties of an Entity](attachments/domain-models/entity-general-properties.png)
 
 *  **Stored Information** properties define information stored about the entity, such as when the entity was created and when it was last changed.  This information can be used in microflow expressions and/or page filters.  You can toggle the following properties: 
 
-  * **Store 'Created by'** – when enabled, the user's name who created the entity is stored in the datsbase
+  * **Store 'Created by'** – when enabled, the user's name who created the entity is stored in the database
 
   * **Store 'Creation Date'** – when enabled, the date when the entity was created is stored in the database
 
@@ -78,21 +78,21 @@ Entities have the following properties:
 
   * **Store 'Last Changed Date'** – when enabled, the date when the entity was last changed is stored in the database
 
-    ![Stored Information Properties of an Entity](attachments/domain-models/entity-stored-info.png) <br/>
+		![Stored Information Properties of an Entity](attachments/domain-models/entity-stored-info.png)
 
-    {{% alert type="info" %}}
-
-    You cannot toggle **Stored Information** properties for Image and File entities.
-  
-    {{% /alert %}}
+		{{% alert type="info" %}}You cannot toggle **Stored Information** properties for Image and File entities.{{% /alert %}}
 
 ### 2.3 Attributes {#attributes}
 
-Attributes are characteristics that describe and/or identify the entity. For example, a *Customer* entity typically has attributes for the name of the customer, an e-mail address, and other personal information. If we draw a parallel with databases, the attribute is a column. For more information on attribute types and their properties, see [Attributes](domain-model-attributes). 
+Attributes are characteristics that describe and/or identify the entity. For example, a *Customer* entity typically has attributes for the name of the customer, an e-mail address, and other personal information. If we draw a parallel with databases, the attribute is a column. 
+
+For more information on attribute types and their properties, see [Attributes](domain-model-attributes). 
 
 ### 2.4 Associations {#associations}
 
-An association describes a relation between entities. In the domain model, an association is represented by a line/arrow between two entities. If we draw a parallel with databases, the association is a foreign key. For more information on association types and their properties, see [Associations](domain-model-asscoation-properties).  
+An association describes a relation between entities. In the domain model, an association is represented by a line/arrow between two entities. If we draw a parallel with databases, the association is a foreign key. 
+
+For more information on association types and their properties, see [Associations](domain-model-asscoation-properties).  
 
 ## 3 Adding New Entities {#adding-new-entities}
 

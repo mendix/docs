@@ -240,7 +240,9 @@ to:
 import { Text, View, Platform } from "react-native";
 ```
 
-As you might have noticed, the display component is still called "HelloWorldSample". Change the classname to "GroupBox" and change the filename to "GroupBox.tsx". These two changes will cause errors in our container component defined in **src/GroupBox.tsx**. The container component will be used by the Mendix client, receives all kind of property data from the client and forwards this data to the display component. The container works like glue between the Mendix application and the display component.
+As you might have noticed, the display component is still called "HelloWorldSample". Change the classname to "GroupBox" and change the filename to "GroupBox.tsx". Also rename the "HelloWorldSampleProps" interface to "GroupBoxProps" and adjust the GroupBox class extension code to `extends Component<GroupBoxProps>`.
+
+The first two changes will cause errors in our container component defined in **src/GroupBox.tsx**. The container component will be used by the Mendix client, receives all kind of property data from the client and forwards this data to the display component. The container works like glue between the Mendix application and the display component.
 
 To fix the errors in the container component, replace the following import:
 
@@ -256,7 +258,62 @@ import { GroupBox as WrappedGroupBox } from "./components/GroupBox";
 
 Also rename the "HelloWorldSample" component in the render method to "WrappedGroupBox".
 
-#### 3.3.2 Adding widget property for header caption
+#### 3.3.2 Adding widget properties
+
+We want to let the Mendix developer alter the header caption of our widget. We can reuse the code and configuration of the sample text property we used earlier to alter the "Hello World" output of the sample widget. Open **src/GroupBox.xml** and alter the sample text property, so that it looks like this:
+
+```xml
+<property key="headerCaption" type="string" required="false">
+  <caption>Header caption</caption>
+  <description/>
+</property>
+```
+
+As soon as you save the file, the script running on the background will rebundle the widget and generate new typings in **typings/GroupBoxProps.d.ts** that define the props the container component will receive. Some errors will popup in the container component, because we renamed the property. Open **src/GroupBox.tsx** and change the following line in your render method:
+
+`sampleText={this.props.sampleText ? this.props.sampleText : "World"}`
+
+to:
+
+`headerCaption={this.props.headerCaption ? this.props.headerCaption : "World"}`
+
+Our display component doesn't receive a headerCaption prop yet, so open **src/components** and replace:
+
+```tsx
+export interface GroupBoxProps {
+  sampleText?: string;
+  style: CustomStyle[];
+}
+```
+
+with:
+
+```tsx
+export interface GroupBoxProps {
+  headerCaption?: string;
+  style: CustomStyle[];
+}
+```
+
+We still need to use the "headerCaption" prop in the render method to display the actual text in our header. Adjust the render method like this:
+
+```tsx
+render(): ReactNode {
+  return (
+    <View style={this.styles.container}>
+        <View style={this.styles.header}>
+            <Text style={this.styles.headerContent}>{this.props.headerCaption}</Text>
+            <Text style={this.styles.headerContent}>-</Text>
+        </View>
+        <View style={this.styles.content}>
+            <Text>Content</Text>
+        </View>
+    </View>
+  );
+}
+```
+
+Go back to Mendix Studio Pro and press <kbd>F4</kbd> or select **Project > Synchronize Project Directory** from the topbar menu to bring your application in sync with the changes we made to the **src/GroupBox.xml** file. You will notice an error occurs telling us to update our widget. Right click on the "Group Box" widget and select "Update widget". Double click the same widget and you will now see our newly created property. Fill in your caption text, click the "OK" button and rerun your app locally to see your caption text in the app.
 
 TODO: Rename widget from "Group Box" to "Group box"
 

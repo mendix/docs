@@ -141,7 +141,7 @@ Follow the steps below to run your Native Builder for the first time (it will fa
 	c. Select build on the left panel.<br />
 	d. You will be greeted with a screen that allows you to link your account with a repository service.<br />
 	e. Choose GitHub.<br />
-	f. If you are not logged in already you will be asked to log into your GitHub account.<br />
+	f. If you are not logged in already you will be asked to sign into your GitHub account.<br />
 	g. Select approve in the permission request.<br />
 	h. Select the repository you want to connect to.<br />
 	i. You will be redirected back to your App Center account.<br />

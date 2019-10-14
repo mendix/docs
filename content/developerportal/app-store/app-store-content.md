@@ -28,7 +28,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 To download content from the App Store via Studio Pro, follow these steps:
 
-1. Open Studio Pro and log in with your Mendix credentials.
+1. Open Studio Pro and sign in with your Mendix credentials.
 2. Open the project in which you would like to install a component.
 3. Click the App Store icon in the top menu bar to open it in Studio Pro:
 

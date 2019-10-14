@@ -118,7 +118,7 @@ As the last stage, Studio applies the following changes to *index.html* and *log
 
 2. In the*index.html* file, Studio replaces `document.cookie = "originURI=/login.html";` with `document.cookie = "originURI=/openid/login";`.
 
-This procedure enables single sign-on and allows existing users to automatically log in to your app using their Mendix accounts. 
+This procedure enables single sign-on and allows existing users to automatically sign in to your app using their Mendix accounts. 
 
 ## 7 Project Security Level Set Up {#project-security-level}
 

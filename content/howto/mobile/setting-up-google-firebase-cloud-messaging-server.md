@@ -23,9 +23,9 @@ There are two possible scenarios: you can create a new FCM project, or you can u
 
 To prevent the degraded reliability of push notifications delivery, you should migrate existing GCM projects to FCM and upgrade credentials if needed.
 
-#### 3.1.1 Logging In to the Developers Console
+#### 3.1.1 Signing In to the Developers Console
 
-Open up the [Firebase developers console](https://console.firebase.google.com/) and log in with your Google ID.
+Open up the [Firebase developers console](https://console.firebase.google.com/) and sign in with your Google ID.
 
 #### 3.1.2 Importing the Project
 
@@ -37,9 +37,9 @@ From here, continue with [Configuring APNs Credentials](#configuring) below.
 
 ### 3.2 Creating a New FCM Project
 
-#### 3.2.1 Logging In to the Developers Console
+#### 3.2.1 Signing In to the Developers Console
 
-Open up the [Firebase developers console](https://console.firebase.google.com/) and log in with your Google ID.
+Open up the [Firebase developers console](https://console.firebase.google.com/) and sign in with your Google ID.
 
 #### 3.2.2 Creating the Project
 
@@ -112,7 +112,7 @@ To build the hybrid app package, follow these steps:
 
 ## 8 Configuring FCM in Your Application
 
-Open your Mendix application, log in as an Admin, and open the **PushNotifications_Administration** page. Scroll to the FCM section and create or edit a configuration. 
+Open your Mendix application, sign in as an Admin, and open the **PushNotifications_Administration** page. Scroll to the FCM section and create or edit a configuration. 
 
 Configure FCM as follows:
 

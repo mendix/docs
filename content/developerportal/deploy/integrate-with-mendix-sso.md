@@ -70,9 +70,9 @@ Congratulations! Your app now makes use of the AppCloud services.
 
 ## 3 Managing User Logins with Mendix AppCloudServices SSO{#managing-mendix-sso}
 
-After adding the AppCloudServices module to your app, users can log in automatically with their Mendix account. When a user opens your app, they are sent to the OpenId auto-login URL (for example, `https://yourapp.mendixcloud.com/openid/login`), and then they are redirected to the (role-based) home page that is configured in the app model.
+After adding the AppCloudServices module to your app, users can sign in automatically with their Mendix account. When a user opens your app, they are sent to the OpenId auto-login URL (for example, `https://yourapp.mendixcloud.com/openid/login`), and then they are redirected to the (role-based) home page that is configured in the app model.
 
-While this is enough for many users, in some cases, you also want to be able to use the root app UL (`https://yourapp.mendixcloud.com/`). However, when users go to that URL, they will be presented with the default Mendix login page, which does not provide them the option to log in with their Mendix account. To create a more fluent experience, you should consider two things: 
+While this is enough for many users, in some cases, you also want to be able to use the root app UL (`https://yourapp.mendixcloud.com/`). However, when users go to that URL, they will be presented with the default Mendix login page, which does not provide them the option to sign in with their Mendix account. To create a more fluent experience, you should consider two things: 
 
 * Whether you need to support non-Mendix account (local) users
 * Whether you need to support anonymous users in your app
@@ -81,7 +81,7 @@ This leads to four scenarios, for which different solutions should be implemente
 
 |   | Local users disabled | Local users enabled |
 | --- | --- | --- |
-| Anonymous users disabled | (1) Automatically log in users with their Mendix account | (2) Allow users the option to login with a local account or with a Mendix account |
+| Anonymous users disabled | (1) Automatically sign in users with their Mendix account | (2) Allow users the option to login with a local account or with a Mendix account |
 | Anonymous users enabled | (3) Allow users to login with a Mendix account from an anonymous session | (4) Users can login with a Mendix or local account from an anonymous session |
 
 Based on your need to support local users and/or anonymous users, implement the solution mentioned in the table. The final four sections of this How To each describe one of the solutions.
@@ -140,9 +140,9 @@ If you do not have a custom index.html yet, you can take the one that is generat
 
 Once this is done, after deploying your app in the mendix cloud, you can test the implementation by pointing your browser to `https://yourapp.mendixcloud.com/`, after which you should be automatically redirected to the Mendix Account login page, and then redirected and logged in to your app.
 
-### 3.2 Users Can Log In with a Mendix or Local Account
+### 3.2 Users Can Sign in with a Mendix or Local Account
 
-When users should be able to log in with either a Mendix account or with a local account, the default login page is not sufficient: it only allows users to login with a local account. To solve this, you should create a custom login page, which also allows users to login with their Mendix account. As an example, you could create this page:
+When users should be able to sign in with either a Mendix account or with a local account, the default login page is not sufficient: it only allows users to login with a local account. To solve this, you should create a custom login page, which also allows users to login with their Mendix account. As an example, you could create this page:
 
 ![](attachments/integrate-with-mendix-sso/18581287.png)
 
@@ -308,17 +308,17 @@ label {
 
 ```
 
-To test your implementation, deploy to the Mendix Cloud, and browse to your app, e.g. `https://yourapp.mendixcloud.com/`. You should be redirected to the new login page. Try to login with a local user (e.g. the administrator, if you set it up), log out, and try to log in with a Mendix account by using the link.
+To test your implementation, deploy to the Mendix Cloud, and browse to your app, e.g. `https://yourapp.mendixcloud.com/`. You should be redirected to the new login page. Try to login with a local user (e.g. the administrator, if you set it up), sign out, and try to sign in with a Mendix account by using the link.
 
-### 3.3 Users Can Log In with a Mendix Account from an Anonymous Session
+### 3.3 Users Can Sign in with a Mendix Account from an Anonymous Session
 
 When part of your app targets anonymous users, there are anonymous pages in your app. You need to support the case where users login to your app with their Mendix account from an anonymous page.
 
-To solve this problem, add somewhere in the anonymously accessible part of your app a link to `/openid/login`. Use the HTML/JS snippet widget from the app store to create a link. Set the content of the snippet to: `<a href="/openid/login">Log in with your Mendix account</a>`
+To solve this problem, add somewhere in the anonymously accessible part of your app a link to `/openid/login`. Use the HTML/JS snippet widget from the app store to create a link. Set the content of the snippet to: `<a href="/openid/login">Sign in with your Mendix account</a>`
 
 To try out your implementation, deploy your app to the Mendix Cloud, and go to your app, e.g., `https://yourapp.mendixcloud.com/`. Go to the page where you inserted the link, and click on it. You should be redirected to the Mendix Account login page, and then back to your app, to the (role-based) homepage of the user with which you logged in.
 
-### 3.4 Users Can Log In with a Mendix or Local Account from an Anonymous Session
+### 3.4 Users Can Sign in with a Mendix or Local Account from an Anonymous Session
 
 This scenario is similar to the previous one, except now users need to be able to either login to your app with a Mendix account, or a local account. This can be implemented by adding a link to a custom login page, similar to the one in scenario 2.
 

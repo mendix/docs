@@ -79,7 +79,7 @@ If you have an existing app which was not based on the MindSphere starter app, y
 
 * MindSphere SSO from the Mendix App Store here: [Siemens MindSphere SSO](https://appstore.home.mendix.com/link/app/108805/)
 
-  This module enables users who are logged in to MindSphere to use your app without having to log in again. It also enables you to test your app locally. For more information, see the [Single Sign-On](/partners/siemens/mindsphere-module-details#mssso) section of *MindSphere Module Details*.
+  This module enables users who are logged in to MindSphere to use your app without having to sign in again. It also enables you to test your app locally. For more information, see the [Single Sign-On](/partners/siemens/mindsphere-module-details#mssso) section of *MindSphere Module Details*.
 
 * MindSphere OS Bar Connector from the Mendix App Store here: [Siemens MindSphere OS Bar Connector](https://appstore.home.mendix.com/link/app/108804/)
 
@@ -205,10 +205,10 @@ By default, the deployment package will be created in the *releases* folder of y
 
 To deploy your deployment package, do the following:
 
-1. Log in to MindSphere CF CLI using a one-time code:
+1. Sign in to MindSphere CF CLI using a one-time code:
 
     * Enter `cf login -a https://api.cf.{Region}.{mindsphere-domain} --sso`
-    * Open the URL printed by the CLI and log in using your WebKey credentials to get a One Time Code
+    * Open the URL printed by the CLI and sign in using your WebKey credentials to get a One Time Code
     * Enter the One Time Code in the CLI
 
       {{% alert type="info" %}}If you need to configure proxies for Cloud Foundry, use the Windows `set` command. For example, `set http_proxy=http://my.proxy.ip:1234`.{{% /alert %}}
@@ -386,7 +386,7 @@ Once you have created the scopes for your app, you will need to assign them to t
     ![](attachments/deploying-to-mindsphere/image17.png)
 
 {{% alert type="info" %}}
-The user will have to log out and log in again for this assignment to take effect.
+The user will have to sign out and sign in again for this assignment to take effect.
 {{% /alert %}}
 
 {{% alert type="success" %}}

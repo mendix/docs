@@ -145,7 +145,7 @@ To configure the page and microflow access of a module, follow these steps:
 
 5. Deploy the application.
 6. Create new users with different roles.
-7. Log out and back in in with these users (add a **Sign out** button to your app if necessary).
+7. Sign out and back in in with these users (add a **Sign out** button to your app if necessary).
 8. Test the differences in your application.
 
 ## 5 Setting the Security Level to Production
@@ -234,7 +234,7 @@ To create access roles for the User module role, follow these steps:
     ![](attachments/18448715/18581533.png)
 
 5. Deploy the application.
-6. Log in with the different users and test the differences in your application. 
+6. Sign in with the different users and test the differences in your application. 
 
 ## 6 Defining the Access Rules on the Order Entity Using XPath
 
@@ -281,7 +281,7 @@ An XPath constraint can be used to constrain the set of objects to which the acc
     ![](attachments/18448715/18581521.png)
 
 6. Re-deploy your application.
-7.  If you log in with the Test User account, you will see that only orders with the **Order status** of **Open** are shown in the overview:
+7.  If you sign in with the Test User account, you will see that only orders with the **Order status** of **Open** are shown in the overview:
   
     ![](attachments/18448715/18581520.png)
 

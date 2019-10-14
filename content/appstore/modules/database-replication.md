@@ -59,7 +59,7 @@ This is the name and instance name of the database schema to connect to. The **I
 
 #### 2.1.4 Username & Password
 
-These are the credentials necessary to log in to the database.
+These are the credentials necessary to sign in to the database.
 
 ### 2.2 Mapping Properties
 

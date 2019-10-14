@@ -13,16 +13,16 @@ The [LDAP Synchronization](https://appstore.home.mendix.com/link/app/24/) module
 ### 1.1 Typical Usage Scenarios
 
 * Authenticate and synchronize your app's end-users
-* Retrieve other objects from the Active Directory
+* Retrieve other objects from the Active Directory (AD)
 
 ### 1.2 Features
 
 * Imports users from the LDAP server
 * Only authenticate users against the LDAP server
-* Creates a user the first time they log in after authenticating against the LDAP server
+* Creates a user the first time they sign in after authenticating against the LDAP server
 * The LDAP server is leading, so no changes are submitted to the LDAP server
 * If users are removed from the LDAP server, their accounts are deactivated in your application
-* If LDAP authentication is enabled, users cannot log in with local accounts (except for users with certain specified roles)
+* If LDAP authentication is enabled, users cannot sign in with local accounts (except for users with certain specified roles)
 
 ### 1.3 Dependencies
 
@@ -47,7 +47,7 @@ Newer versions of the module can introduce configuration changes. If you have al
 
 ### 3.1 Basic Configuration
 
-After enabling LDAP in your app project, run the app, log in as *MxAdministrator*, and open your LDAP servers overview. To configure an LDAP connection, click **New** to add a new server configuration. To completely configure a LDAP server, fill in the fields on the tabs in the configuration screen.
+After enabling LDAP in your app project, run the app, sign in as *MxAdministrator*, and open your LDAP servers overview. To configure an LDAP connection, click **New** to add a new server configuration. To completely configure a LDAP server, fill in the fields on the tabs in the configuration screen.
 
 Follow these steps to configure an LDAP connection (note that not all steps will be applicable in every configuration):
 
@@ -64,7 +64,9 @@ When your configuration is complete, click **Sync users for all servers** to run
 
 ### 3.2 Server Configuration
 
-Clicking **New** or **Edit** in the LDAP servers overview form brings up the LDAP configuration form. From top, to bottom, the following fields have to be filled in:
+Clicking **New** or **Edit** in the LDAP servers overview form brings up the LDAP configuration form. 
+
+From top, to bottom, the following properties have to be filled in:
 
 * **Description** – This is a descriptive name for the LDAP connection.
 * **Server address** – This is the address at which the Active Directory domain controller server is located. Either an IP address or host name may be used. The address must begin with `ldap://`.
@@ -73,183 +75,92 @@ Clicking **New** or **Edit** in the LDAP servers overview form brings up the LDA
 * **Is paged search allowed** – Paged search is useful when retrieving large data sets from LDAP, but some LDAP servers have paged search disabled. Leave this enabled until you run into problems related to paging.
 * **Username** – This is the user name that used to read the LDAP server information. You should use a service account on the LDAP server for this.
 * **Password** – This is the password for the user name specified in the previous field.
-* **LDAP enabled** – This turns on LDAP authentication for this configuration, which means the configuration will be taken into account when synchronizing and authenticating users. After turning on LDAP user authentication for at least one configuration, users cannot log in to the system with the credentials stored in the application unless they have the MxAdministrator user role.
+* **LDAP enabled** – This turns on LDAP authentication for this configuration, which means the configuration will be taken into account when synchronizing and authenticating users. After turning on LDAP user authentication for at least one configuration, users cannot sign in to the system with the credentials stored in the application unless they have the MxAdministrator user role.
 
-At this point, click **Test connection** to test the connectivity to the LDAP server. This will also tell you if the user name and password you entered are accepted by the server.
+After you have filled the above properties in, click **Test connection** to test the connectivity to the LDAP server. This will also tell you if the user name and password you entered are accepted by the server.
 
-Paths where to find users
-	
+These are the rest of the properties to fill in:
 
-In this grid you can select the directory from where the users will be imported. Pressing the Browse LDAP button brings up a form which displays the LDAP Root Directory. You can browse for the directory where the users are located now (You may have to click through a number of directories until you find it). If you find a directory which lists the users you want to import as subdirectory, press the Use this directory as import location. It is possible to specify multiple import locations.
+* **Paths where to find users** – In this grid, you can select the directory from where the users will be imported. Clicking **Browse LDAP** brings up a form that displays the LDAP root directory. You can browse for the directory where the users are located (you may have to click through a number of directories until you find it). If you find a directory that lists the users you want to import as a sub-directory, click **Use this directory as import location**. It is possible to specify multiple import locations. If browsing the LDAP does not work, click **Manual add** to specify a DN from which to import users.
+* **LDAP type**<a name="ldap-type"></a> – Set the type of synchronization that should be done. Depending on this type, other relevant configuration options will appear or disappear. These are the type options: 
+	* **Import users** – Import and synchronize all the users based on the configuration. This will make user info available in Mendix.
+	* **Only authenticate users** – This will only authenticate existing Mendix users against the LDAP server, but it will not synchronize any information. If a user is not known in Mendix, they cannot sign in.
+	* **Authenticate and create** – This will not synchronize users. However, if a user that is unknown in Mendix logs in using a valid LDAP authentication, a Mendix user will be created, and the user info will be requested from LDAP at that moment.
+* **Map users to** – This field specifies which objects should be instantiated when creating new users. All the descendants of **System.User** are listed in the drop-down menu.
+* **Domain suffix** – This should be the same as the LDAP root directory fields, only concatenated. It is used to authenticate users and will be concatenated with the Mendix user name to form the LDAP user name. At Mendix, this results in `@mendixdomain.local`.
+* **User roles WITHOUT LDAP authentication** – This property identifies which user roles are not authenticated against LDAP. Users that have at least one of these roles will not be authenticated against LDAP, but will instead use their Mendix app password to sign in. Users with the **Administrator** user role (which can be found under **Project** > **Security** > **Administrator** > **User role**) will never be authenticated against LDAP, regardless of the defined exceptions.
 
-If browsing the LDAP somehow doesn’t work, you can use the Manual add button to specify a DN to import users from.
+### 3.3 User Import Mapping
 
-LDAP type
-	
+The **User import mapping** tab contains some advanced configuration functionality to create a more specialized mapping. This tab is only used when the LDAP type is set to **Import users**. 
 
-Set the type of synchronization that should be done. Depending on this, other relevant configuration options will appear or disappear. The options are:
+The following settings are available:
 
-Import users: Import and synchronize all users based on the configuration. This will make user info available in Mendix
+* **Search filter** – This is the LDAP search filter used to locate users. You will not usually need to change this.
+* **Login name field** – This is the LDAP attribute that will be used as a user login name. This should be an attribute that has a unique value for every user. For AD, this will often be `sAMAccountName`.
+* **Available attributes** – These are the LDAP attributes that are available to map to user attributes. Click **Refresh** to load this list from the LDAP server.
+* **Custom attribute mapping** – You can define the mappings for other attributes of the **User** entity that need to be imported from the LDAP server. For each mapping, you can specify an LDAP attribute, and a User attribute in which the value will be stored. Note that only attributes of the string type can be used as a User attribute.
 
-Only authenticate users: This will only authenticate existing Mendix users against the LDAP server, but will not synchronize any information. If a user is not known in Mendix, he cannot login.
+### 3.4 Authentication Configuration
 
-Authenticate and create: This will not synchronize users, but if a user that is unknown in Mendix logs in using a valid LDAP authentication, a Mendix user will be created and the user info will be requested from LDAP at that moment.
+On the **Authentication configuration** tab, you will find the settings that are used when users must be authenticated in the LDAP server. This tab is only used when the **LDAP type** is set to [Only authenticate users](#ldap-type). 
 
-Map users to
-	
+The following settings are available:
 
-This field specifies which objects should be instantiated when creating new users. All descendants of System.User are listed in the dropdown.
+* **Credentials validation frequency** – This determines when and how often the user information should be validated against the LDAP server.
+* **Credentials search filter** – This the filter that will be used to search for an entered username in the LDAP server. You must always include the `[%Username%]` token in this string, which will be replaced with the user name that was used for the login attempt. For an AD environment, this will usually be `(&(objectclass=user)(sAMAccountName="[%Username%]"))`.
+* **How to handle multiple matches** – This specifies what must be done when multiple objects are found for the credentials search: either validate them all (and all must match) or throw an error.
+* **Login name field** – This LDAP attribute will be used as the user login name. This should be an attribute that has a unique value for every user. For AD, this will often be `sAMAccountName`.
+* **Available attributes** – These are the LDAP attributes available to map to user attributes. These are included here as a reference for the **Login name field** setting. Click **Refresh** to load this list from the LDAP server.
+* **Ignore for user types** – This property identifies which user types are not authenticated against LDAP. Users that are of a sub-type listed here will not be authenticated against LDAP, but will instead use their Mendix app password to sign in.
+* **Ignore for user roles** – This property identifies which user roles are not authenticated against LDAP. Users that have at least one of these roles will not be authenticated against LDAP, but will instead use their Mendix app password to sign in.
 
-Domain suffix
-	
+Users with the Administrator user role (which can be found under **Project** > **Security** > **Administrator** > **User role**) will never be authenticated against LDAP, regardless of the defined exceptions.
 
-This should be the same as the LDAP root directory fields, only concatenated. It is used to authenticate users and will be concatenated with the mendix username to form the LDAP username. At Mendix, this results in "@mendixdomain.local.
+### 3.5 User Authentication Mapping
 
-User roles WITHOUT LDAP authentication
-	
+On the **User authentication mapping** tab, you will find the settings that are used when users must be authenticated and subsequently created from the LDAP server. This tab is only used when the **LDAP type** is set to [Authenticate and create](#ldap-type). 
 
-This property identifies which userroles are not authenticated against ldap. Users that have at least one of these roles will not be authenticated against LDAP, but will instead use their Mendix app password to login.
+The following settings are available:
 
-Users with the Administrator userrole (Which can be found under Project > Security > Administrator > User role) will never be authenticated against LDAP, regardless of the defined exceptions.
+* **Search filter** – This the filter that will be used to search for an entered user name in the LDAP server. You must always include the `[%Username%]` token in this string, which will be replaced with the user name that was used for the login attempt. For an AD environment, this will usually be `(&(objectclass=user)(sAMAccountName="[%Username%]"))`.
+* **How to handle multiple matches** – This specifies what must be done when multiple objects are found for the credentials search: either validate them all (and all must match) or throw an error.
+* **Login name field** – This LDAP attribute will be used as the user login name. This should be an attribute that has a unique value for every user. For AD, this will often be `sAMAccountName`.
+* **Available attributes** – These are the LDAP attributes available to map to user attributes. These are included here as a reference for the **Login name field** setting. Click * **Refresh** to load this list from the LDAP server
+* **Credentials validation frequency** – This determines when and how often the user information should be validated against the LDAP server.
+* **Custom attribute mapping** – You can define the mappings for other attributes of the **User** entity that need to be imported from the LDAP server. For each mapping, you can specify an LDAP attribute, and a User attribute in which the value will be stored. Note that only attributes of the string type can be used as a User attribute.
 
- 
+### 3.6 LDAP Group Mapping
 
-User import mapping
+The **Group mapping** tab allows you to map LDAP group memberships to Mendix user roles. Click **Refresh** to load all available LDAP groups from the server. In the editor for a group, you can select one or more roles that will be assigned to each user that is a member of that group. When a user is removed from an LDAP group, the corresponding roles will be removed from the user on the next synchronization.
 
-The user import mapping tab contains some advanced configuration functionality to create a more specialized mapping. This tab is only used when the LDAP type is set to “import users”. The following settings are available:
+### 3.7 Cached Authentication
 
-Search filter
-	
+For some configuration settings (depending on the validation frequency), user authentication information will be cached. The **Cached authentication** tab contains an overview of cached information for the current LDAP server.
 
-This is the LDAP search filter used to locate users. You won’t usually need to change this.
+### 3.8 Testing & Gathering Data from AD
 
-Login name field
-	
+This tab enables importing and inspecting data from the LDAP server for testing purposes. This allows you to see how Mendix will receive data and can help you in properly configuring the server configuration.
 
-The LDAP attribute that will be used as a user login name. This should be an attribute that has a unique value for every user. For AD, this will often be “sAMAccountName”.
+## 4 Common Errors
 
-Available attributes
-	
+### 4.1 My Users Are Not Authenticated Against LDAP 
 
-The LDAP attributes that are available to map to user attributes. Click ‘refresh’ to load this list from the LDAP server.
+To resolve this error, follow these steps:
 
-Custom attribute mapping
-	
+1. Check your app project's after-startup action (**Project** > **Settings** > **Server** > **After Startup**). It should point (indirectly) to **Ldap.ASu_StartLdap**.
+2. Make sure at least one server configuration exists and the **LDAP enabled** box is checked.
+3. Make sure the user has no Administrator role or any other role that is defined as an exception in one of your server configurations.
 
-You can define mappings for other attributes of the user entity which need to be imported from the LDAP server. For each mapping you can specify an LDAP attribute, and a User attribute in which the value will be stored. Note that only attributes of type String can be used as User attribute.
+### 4.2 The User Entity Drop-Down Menu in the Server Configuration Form Is Empty
 
-Authentication Configuration
+You were probably navigating to **Ldap.LdapServers_Overview** directly instead of using the **Ldap.OpenLdapServersOverview** microflow in your navigation. This microflow makes sure the domain model is analyzed before opening the appropriate forms.
 
-On the authentication configuration tab you will find settings that are used when users must be authenticated in the LDAP server. This tab is only used when the LDAP type is set to “only authenticate users”. The following settings are available:
+### 4.3 Spring LDAP Exceptions
 
-Credentials validation frequency
-	
+For such exceptions, you probably specified an incorrect LDAP root directory:
 
-When and how often the user information should be validated against the LDAP server.
-
-Credentials search filter
-	
-
-The filter that will be used to search for an entered username in the LDAP server. You must always include the “[%Username%]” token in this string, which will be replaced with the username that was used for the login attempt. For an AD environment, this will usually be: “(&(objectclass=user)(sAMAccountName="[%Username%]"))”
-
-How to handle multiple matches
-	
-
-Specify what must be done when multiple objects are found for the credentials search. Either validate them all (and all must match), or throw an error.
-
-Login name field
-	
-
-The LDAP attribute that will be used as a user login name. This should be an attribute that has a unique value for every user. For AD, this will often be “sAMAccountName”.
-
-Available attributes
-	
-
-The LDAP attributes that are available to map to user attributes. Included here as a reference for the “login name field” setting. Click ‘refresh’ to load this list from the LDAP server.
-
-Ignore for user types
-	
-
-This property identifies which user types are not authenticated against ldap. Users that are of a subtype listed here will not be authenticated against LDAP, but will instead use their Mendix app password to login.
-
-Ignore for user roles
-	
-
-This property identifies which userroles are not authenticated against ldap. Users that have at least one of these roles will not be authenticated against LDAP, but will instead use their Mendix app password to login.
-
-Users with the Administrator userrole (Which can be found under Project > Security > Administrator > User role) will never be authenticated against LDAP, regardless of the defined exceptions.
-
-User authentication mapping
-
-On the user authentication mapping tab you will find settings that are used when users must be authenticated and subsequently created from the LDAP server. This tab is only used when the LDAP type is set to “authenticate and create users”. The following settings are available:
-
-Search filter
-	
-
-The filter that will be used to search for an entered username in the LDAP server. You must always include the “[%Username%]” token in this string, which will be replaced with the username that was used for the login attempt. For an AD environment, this will usually be: “(&(objectclass=user)(sAMAccountName="[%Username%]"))”
-
-How to handle multiple matches
-	
-
-Specify what must be done when multiple objects are found for the credentials search. Either validate them all (and all must match), or throw an error.
-
-Login name field
-	
-
-The LDAP attribute that will be used as a user login name. This should be an attribute that has a unique value for every user. For AD, this will often be “sAMAccountName”.
-
-Available attributes
-	
-
-The LDAP attributes that are available to map to user attributes. Included here as a reference for the “login name field” setting. Click ‘refresh’ to load this list from the LDAP server.
-
-Credentials validation frequency
-	
-
-When and how often the user information should be validated against the LDAP server.
-
-Custom attribute mapping
-	
-
-You can define mappings for other attributes of the user entity which need to be imported from the LDAP server. For each mapping you can specify an LDAP attribute, and a User attribute in which the value will be stored. Note that only attributes of type String can be used as User attribute.
-
-LDAP group mapping
-
-The group mapping tab allows you to map LDAP group memberships to Mendix userroles. Click ‘refresh’ to load all available LDAP groups from the server. In the edit screen for a group, you can select one or more roles that will be assigned to each user that is a member of that group. When a user is removed from an LDAP group, the corresponding roles will be removed from the user on the next synchronization.
-
-Cached authentication
-
-For some configuration settings, depending on the validation frequency, user authentication information will be cached. This tab contains an overview of cached information for the current LDAP server.
-
-Test, gather data from AD
-
-This tab allows you to import and inspect data from the LDAP server for testing purposes. This allows you to see how Mendix will receive data and can help you in properly configuring the server configuration.
-
- 
-
-Common Errors
-
- 
-
-My users are not authenticated against LDAP 
-
-1. Check your projects after startup action (Project > Settings > Server > After Startup). It should point (indirectly) to Ldap.ASu_StartLdap.
-
-2. Make sure at least one server configuration exists, and it has a check in the 'LDAP enabled' box.
-
-3. Make sure the user has no Administrator role, or any role which is defined as exception in one of your server configurations.
-
- 
-
-The 'user entity' dropdown in the server configuration form is empty. 
-
-Probably you were navigation to the Ldap.LdapServers_Overview form directly instead of using the  Ldap.OpenLdapServersOverview microflow in your navigation. This microflow makes sure the domain model is analyzed before opening the appropriate forms.
-
- 
-
-Spring LDAP exceptions 
-
+```
 com.mendix.core.CoreException: com.mendix.core.CoreException: com.mendix.core.CoreException: org.springframework.ldap.PartialResultException: [LDAP: error code 10 - 0000202B: RefErr: DSID-031006E0, data 0, 1 access points
     ref 1: 'com.mendix.exchange'
-
-You probably specified an incorrect LDAP Root directory
+```

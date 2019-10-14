@@ -23,7 +23,7 @@ If you want to use your own data in this app, follow these steps:
 5. Accounts where the user role is **Manager** can be used as managers in the drop-down menu view under **Departments**.
 6. Edit the personal details (or add a photo) under **My Details** while logged in with the proper account.
 
-The default password is *welcome* and is automatically generated. To change this, log in and edit it under **My Details**.
+The default password is *welcome* and is automatically generated. To change this, sign in and edit it under **My Details**.
 
 ## 3 User Stories
 
@@ -45,7 +45,7 @@ Accounts consist of the attributes listed below.
 These attributes can be edited by administrators only:
 
 * Full name
-* User name (which will be used to log in)
+* User name (which will be used to sign in)
 * Department
 * Location
 * Entry date

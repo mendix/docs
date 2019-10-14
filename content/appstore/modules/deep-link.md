@@ -52,7 +52,7 @@ You need a custom microflow with [microflow call](/refguide/microflow-call) acti
 
 #### 2.4.2 Runtime
 
-Start the application and log in as a user who has the **Deeplink.Admin** module role associated to one of their user roles. Then, open the page that includes the `DeepLink.DeepLinkConfigurationOverview` snippet (for more information, see [Navigation](#navigation) above). You can manage all the deep link configuration entries on this page.
+Start the application and sign in as a user who has the **Deeplink.Admin** module role associated to one of their user roles. Then, open the page that includes the `DeepLink.DeepLinkConfigurationOverview` snippet (for more information, see [Navigation](#navigation) above). You can manage all the deep link configuration entries on this page.
 
 ### 2.5 Deeplink.CreateDeeplinkConfig Microflow Parameters
 

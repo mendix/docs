@@ -70,7 +70,7 @@ To define the access rules on the Order entity using XPath, follow these steps:
     ![](attachments/18448681/18580995.png)
 
 4. Click **OK** and re-deploy your application.
-5.  When you log in with the **Financial Administrator** account, you will see that only completed orders are shown in the orders overview:
+5.  When you sign in with the **Financial Administrator** account, you will see that only completed orders are shown in the orders overview:
 
     ![](attachments/18448681/18580994.png)
 

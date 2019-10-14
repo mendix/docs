@@ -26,11 +26,11 @@ Your password can be different in your Mendix credentials and your SAP credentia
 
 {{% /alert %}}
 
-### 2.1 Logging in Using Mendix Credentials
+### 2.1 Signing in Using Mendix Credentials
 
 You can enter your **Username** and Mendix **Password** and click **Sign in**. This will authenticate you with the credentials held by Mendix.
 
-### 2.2 Logging in Using SAP Credentials
+### 2.2 Signing in Using SAP Credentials
 
 You can click **SAP** to ask to use your SAP credentials. These are region based, so you will be asked to select a region:
 
@@ -99,7 +99,7 @@ You may get this error if you have chosen the wrong region to deploy your app. C
 
 If you have more than one account with Mendix, check that you have created your app using the correct Mendix account.
 
-If you are using the wrong Mendix account, you will have to log out of Mendix and log in again with the correct account. You will then have to create the app again. Alternatively, you can be invited to join the app as another team member.
+If you are using the wrong Mendix account, you will have to sign out of Mendix and sign in again with the correct account. You will then have to create the app again. Alternatively, you can be invited to join the app as another team member.
 
 {{% alert type="info" %}}
 

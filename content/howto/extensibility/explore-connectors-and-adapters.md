@@ -27,7 +27,7 @@ This module allows you to use SAML to authenticate your users in your cloud appl
 
 [![](attachments/18448690/kerberos.png)](https://appstore.home.mendix.com/link/app/25/)
 
-This module enables the Kerberos-based single sign-on feature in your application. This is useful in Windows Active Directory environments, since this protocol supports Integrated Windows Authentication. As a result, users logged on to the Windows domain do not have to enter their credentials to log in to your application.
+This module enables the Kerberos-based single sign-on feature in your application. This is useful in Windows Active Directory environments, since this protocol supports Integrated Windows Authentication. As a result, users logged on to the Windows domain do not have to enter their credentials to sign in to your application.
 
 [Click to download in the Mendix App Store.](https://appstore.home.mendix.com/link/app/25/)
 

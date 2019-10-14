@@ -22,7 +22,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Have a Mendix Profile (register [here](https://www.mendix.com/try-now/?utm_source=documentation&utm_medium=community&utm_campaign=signup) and see [Mendix Profile](/developerportal/mendix-profile/index))
 
-## 3 Logging In to the Partner Profile
+## 3 Signing In to the Partner Profile
 
 To sign in to the Partner Profile, edit it, and make it public, follow these steps:
 

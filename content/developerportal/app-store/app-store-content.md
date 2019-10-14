@@ -28,7 +28,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 To download content from the App Store via Studio Pro, follow these steps:
 
-1. Open Studio Pro and log in with your Mendix credentials.
+1. Open Studio Pro and sign in with your Mendix credentials.
 2. Open the project in which you would like to install a component.
 3. Click the App Store icon in the top menu bar to open it in Studio Pro:
 
@@ -42,7 +42,7 @@ To download content from the App Store via Studio Pro, follow these steps:
 
     ![](attachments/app-store-content/item_details.png)
 
-6. When you have found the App Store item you want to download into your app, click **Download**:
+6. When you have found the App Store component you want to download into your app, click **Download**:
     * A project will be created on your hard-drive and will be opened in Studio Pro
     * A component will be downloaded directly into your project
 
@@ -56,9 +56,9 @@ In this section, you will learn how to add a widget to your app project. You can
 
 ### 4.1 Adding the Widget
 
-To add the Radiobutton List widget from the App Store via Studio Pro, follow these steps:
+To add the Radio Button List widget from the App Store via Studio Pro, follow these steps:
 
-1. Download the [RadioButton List](https://appstore.home.mendix.com/link/app/20/) widget (for reference, follow the steps in the [Downloading Content from the App Store](#downloading2) section above).
+1. Download the [Radio Button List](https://appstore.home.mendix.com/link/app/20/) widget (for reference, follow the steps in the [Downloading Content from the App Store](#downloading2) section above).
 2.  A widget downloaded from the App Store is placed in your app project structure. You can find the widget and start using it in the following ways:
 
 	* Click **Add widget**, then browse the list of **Add-on widgets**:
@@ -72,7 +72,7 @@ To add the Radiobutton List widget from the App Store via Studio Pro, follow the
 
 	To delete a widget, remove the *.mpk* file from your project's widgets folder.
 
-3.  Select the **Attribute Radiobutton List** widget, which will be placed in your app page:
+3.  Select the **Attribute Radio Button List** widget, which will be placed in your app page:
 
 	![](attachments/app-store-content/18580438.png)
 
@@ -126,7 +126,7 @@ To add the Google Maps module from the App Store via Studio Pro, follow these st
 
 ### 5.2 Using the Module
 
-Each module that you download from the App Store is different, and some modules might lead to errors because they are connected to other modules. For example, if you download the [Excel Importer](https://appstore.home.mendix.com/link/app/72/) module, you will also need to download the Mx Model Reflection module to make the errors disappear. If you run into any problems, always check the **Documentation** tab specific to the App Store item for installation guidelines and details on any dependencies.
+Each module that you download from the App Store is different, and some modules might lead to errors because they are connected to other modules. For example, if you download the [Excel Importer](https://appstore.home.mendix.com/link/app/72/) module, you will also need to download the Mx Model Reflection module to make the errors disappear. If you run into any problems, always check the **Documentation** tab specific to the App Store component for installation guidelines and details on any dependencies.
 
 {{% alert type="warning" %}}
 Sometimes additional widgets are added when you download a module. For example, the Google Maps widget is included when you download the Google Maps module.

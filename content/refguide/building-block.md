@@ -24,7 +24,7 @@ As the purpose of building blocks is to facilitate design rather than functional
 
 ## 3 Design Properties
 
-{{% snippet file="refguide/canvas+width+property.md" %}}
+{{% snippet file="refguide/canvas-width-property.md" %}}
 
 {{% snippet file="refguide/canvas-height-property.md" %}}
 

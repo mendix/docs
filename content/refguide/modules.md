@@ -20,7 +20,7 @@ Furthermore, a module can contain many different types of documents. Each type o
 
 | Document type | Typical elements | Description |
 | --- | --- | --- |
-| [Pages](pages) | [Data view](data-view), [Data grid](data-grid), [Table](table), [Text box](text-box) | Forms are used to create a user interface for the end user. They are composed of components that are called widgets. |
+| [Pages](pages) | [Data view](data-view), [Data grid](data-grid), [Table](table), [Text box](text-box) | Forms are used to create a user interface for the end-user. They are composed of components that are called widgets. |
 | [Microflows](microflows) | [Activities](activities), [Sequence Flow](sequence-flow) | Microflows describe the the logic of your application. They are composed of activities that manipulate objects, interact with the client etcetera. |
 | [Enumerations](enumerations) |   | An enumeration is a set of predefined values, for example: in a webshop, an enumeration called MemberType could have the values Gold and Silver. |
 

@@ -4,10 +4,74 @@
 
     This provides the basic functionality in the docs.mendix.com site. Work-in-progress
   */
+
+  function getAllUrlParams(url) {
+
+    var queryString = url ? url.split('?')[1] : window.location.search.slice(1);
+    var obj = {};
+
+    if (queryString) {
+
+      queryString = queryString.split('#')[0];
+      var arr = queryString.split('&');
+
+      for (var i = 0; i < arr.length; i++) {
+        var a = arr[i].split('=');
+        var paramName = a[0];
+        var paramValue = typeof (a[1]) === 'undefined' ? true : a[1];
+
+        paramName = paramName.toLowerCase();
+        if (typeof paramValue === 'string') paramValue = paramValue.toLowerCase();
+
+        if (paramName.match(/\[(\d+)?\]$/)) {
+
+          var key = paramName.replace(/\[(\d+)?\]/, '');
+          if (!obj[key]) obj[key] = [];
+          if (paramName.match(/\[\d+\]$/)) {
+            var index = /\[(\d+)\]/.exec(paramName)[1];
+            obj[key][index] = paramValue;
+          } else {
+            obj[key].push(paramValue);
+          }
+        } else {
+          if (!obj[paramName]) {
+            obj[paramName] = paramValue;
+          } else if (obj[paramName] && typeof obj[paramName] === 'string'){
+            obj[paramName] = [obj[paramName]];
+            obj[paramName].push(paramValue);
+          } else {
+            obj[paramName].push(paramValue);
+          }
+        }
+      }
+    }
+
+    return obj;
+  }
+
   $(function() {
 
     var $win = $(window);
     var $body = $(document.body);
+    window.__mxDocsInIframe = false;
+
+    // Set class for iframes
+    try {
+      const show = getAllUrlParams().show;
+      const noLinks = getAllUrlParams().nolinks;
+      if (typeof show !== "undefined" && show === "iframe") {
+        window.__mxDocsInIframe = true;
+        $body.addClass("iframe");
+        $body.find('.mx__main').removeClass('col-md-9 col-md-push-3');
+        $body.find('.mx__sidebar').remove();
+        $body.find('.topbar').remove();
+      }
+      if (typeof noLinks !== "undefined" && noLinks === "1") {
+        $body.addClass("nolinks");
+      }
+    } catch (error) {
+      console.warn(error);
+    }
 
     // Make sure external links are opened with _blank
     $(".mx__page__content a").each(function () {
@@ -416,7 +480,7 @@
     var isTest = $('body').hasClass('test');
     var lastBuild = $('meta[property="og:updated_time"]').attr('content');
     var cacheBust = lastBuild ? '?q=' + +(new Date(lastBuild)) : '';
-    if ($menus.length) {
+    if (!window.__mxDocsInIframe && $menus.length) {
       $.get('/json/spaces.json' + (isTest ? cacheBust : ''), function( data ) {
         window.__mxMenuItems = data;
         $menus.each(function () {
@@ -521,7 +585,7 @@
       Table of contents
     ******************/
     var $toc = $('#toc');
-    if ($toc.length === 1) {
+    if (!window.__mxDocsInIframe && $toc.length === 1) {
       var maxLevel = $('#toc') ? $('#toc').data('level') || null : null;
       $('#toc').toc({
         noBackToTopLinks: true,
@@ -694,6 +758,11 @@
       Intercom
     ******************/
     function loadIntercom() {
+      if (window.__mxDocsInIframe) {
+        console.warn('Page in iframe, disabling Intercom');
+        window.Intercom('shutdown');
+        return;
+      }
       if (!window.intercomSettings || !window.intercomSettings.user_id) {
         console.warn('No openID found, so the user might not be logged in. Skipping Intercom');
         window.Intercom('shutdown');
@@ -737,5 +806,6 @@
           loadIntercom();
         });
     }
+
   });
 })(jQuery));

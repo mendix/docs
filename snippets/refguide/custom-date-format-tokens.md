@@ -1,37 +1,41 @@
-| Symbol | No. | Example | Description |
-| --- | --- | --- | --- |
-| G | 1 | AD | The era |
-| y | 1, 3..n | 2010 | Year |
-| y | 2 | 10 | Year |
-| Y | 1, 3..n | 2009 | Week year, use in combination with `w` for [week number](https://en.wikipedia.org/wiki/Week#Week_numbering) formatting |
-| Y | 2 | 09 | Week year, use in combination with `w` for [week number](https://en.wikipedia.org/wiki/Week#Week_numbering) formatting |
-| M | 1..2 | 09 | Month |
-| M | 3 | Sept |
-| M | 4 | September |
-| w | 1..2 | 27 | Week of year, use for [week number](https://en.wikipedia.org/wiki/Week#Week_numbering) formatting |
-| d | 1..2 | 12 | Day of month |
-| D | 1..3 | 93 | Day of year |
-| a | 1 | AM | AM or PM |
-| h | 1..2 | 11 | Hour (1-12) |
-| H | 1..2 | 13 | Hour (0-23) |
-| k | 1..2 | 10 | Hour (1-24) |
-| K | 1..2 | 0 | Hour (0-11) |
-| m | 1..2 | 59 | Minute, use one or two for zero padding |
-| s | 1..2 | 12 | Second, use one or two for zero padding |
-| S | 1..3 | 153 | Milliseconds |
-| E | 1..2 | 05 | Day of week |
-| E | 3 | Thu | Day of week |
-| E | 4 | Thursday | Day of week |
-| z | 1..4 | Pacific Standard Time | Time zone |
-| Z | 1..3 | -04:00 | Time zone offset |
-| Z | 4 | GMT-04:00 | Time zone offset |
+All examples are for **30th December 2014, at 00:27:16.789**
+
+| Symbol | Example | Description |
+| ---    | --- | --- |
+| G      | AD | The era |
+| y, yyy, yyyy, *etc.* | 2014 | Year |
+| yy     | 14 | Year |
+| Y, YYY, YYYY, *etc.* | 2015 | Week year, use in combination with `w` for [week number](https://en.wikipedia.org/wiki/Week#Week_numbering) formatting |
+| YY     | 15 | Week year, use in combination with `w` for [week number](https://en.wikipedia.org/wiki/Week#Week_numbering) formatting |
+| M, MM<sup><small>*</small></sup>  | 12 | Month number |
+| MMM    | Dec | Month abbreviation |
+| MMMM   | December | Month name |
+| w, ww<sup><small>*</small></sup>  | 1 | Week of year, use for [week number](https://en.wikipedia.org/wiki/Week#Week_numbering) formatting |
+| d, dd<sup><small>*</small></sup>  | 30 | Day of month |
+| D, DD, DDD | 364 | Day of year |
+| a      | AM | AM or PM |
+| h, hh<sup><small>*</small></sup>  | 12 | Hour (1-12) |
+| H, HH<sup><small>*</small></sup>  | 00 | Hour (0-23) |
+| k, kk<sup><small>*</small></sup>  | 24 | Hour (1-24) |
+| K, KK<sup><small>*</small></sup>  | 00 | Hour (0-11) |
+| m, mm<sup><small>*</small></sup>  | 27 | Minute  |
+| s, ss<sup><small>*</small></sup>  | 16 | Second |
+| S, SS, SSS | 789 | Milliseconds |
+| E, EE  | 05 | Day of week number |
+| EEE    | Tue | Day of week abbreviation|
+| EEEE   | Tuesday | Day of week name |
+| Z, ZZ, ZZZ | -04:00 | Time zone offset |
+| ZZZZ   | GMT-04:00 | Time zone offset and standard |
+
+<sup><small>*</small></sup><em>two characters pads with zero</em>
 
 These are some examples:
 
 | Format | Example Output |
 | --- | --- |
-| `EEEE d MMMM yyy G, h:mm a ss's` | Tuesday 29 March 2011 AD, 1:37 PM 48s |
-| `h:mm a` | 1:37 PM |
-| `yyy D KK:mm` | 2011 88 01:26 |
-| `EEEE MMMM d yyy` | Tuesday March 29 2011 |
-| `EEE, MMM dd, ''yy` | Wed, Jul 04, '01 |
+| `EEEE d MMMM yyy G, h:mm a ss's'` | Tuesday 30 December 2014 AD, 12:27 AM 16s |
+| `h:mm a` | 12:27 AM |
+| `yyy D KK:mm` | 2014 364 00:27 |
+| `EEEE MMMM d yyy` | Tuesday December 30 2014 |
+| `EEE, MMM dd, ''yy` | Tue, Dec 30, '14 |
+| `EEEE, 'week' ww YYYY`| Tuesday, week 01 2015 |

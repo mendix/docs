@@ -88,6 +88,13 @@ $block: 'mx';
         height: 20px;
         padding: 4px;
       }
+
+      /* .mx__page__header__nav is pushing first h2 element too far down the page, reduce height to zero */
+      .mx__page__header__nav{
+        height: 0;
+        padding: 0;
+      }
+
       @include element('pdf-button') {
         @include clearfix();
         font-size: 12px;
@@ -108,9 +115,10 @@ $block: 'mx';
       margin: 0 0 30px;
       line-height: 24px;
 
+      /* originally gave all the elements space above and below - doesn't give a controllable result */
       > * {
         //margin-top: 20px;
-        margin-bottom: 10px;
+        //margin-bottom: 10px;
       }
 
       blockquote {
@@ -125,9 +133,24 @@ $block: 'mx';
 
       ul, ol { padding-left: 20px; }
 
+      /* ordered lists inside ordered lists will be displayed using letters */
       ol ol { list-style-type: lower-alpha;}
 
-      ul ul {padding-bottom: 3.5ex}
+      /* Standard paragraphs decide how far they are from element above */
+      /* defined as margins rather than padding as this is how the rest of the CSS is written */
+      p, .alert{
+        margin: 0.8em 0 0 0;
+      }
+
+      /* Paragraphs inside alerts don't need the extra space - the alert has the space above */
+      .alert p {
+        margin: 0;
+      }
+
+      /* Headers have a slightly larger space above - to make them a bit more obvious without increasing the font size */
+      h2, h3, h4{
+        margin: 1em 0 0 0;
+      }
 
       h5 {
         font-size: 16px;

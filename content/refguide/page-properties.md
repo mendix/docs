@@ -41,7 +41,7 @@ You can see which widgets in a page have styling applied via the style or class 
 
 ## 3 Design Section
 
-{{% snippet file="refguide/canvas+width+property.md" %}}
+{{% snippet file="refguide/canvas-width-property.md" %}}
 
 {{% snippet file="refguide/canvas-height-property.md" %}}
 
@@ -49,7 +49,7 @@ You can see which widgets in a page have styling applied via the style or class 
 
 ### 4.1 Title {#title}
 
-The title of the page that is shown using the [page title widget](page-title). If the page is shown in a pop-up window, the title appears in the title bar of the pop-up. The title can be overridden from places where forms are opened to make it possible to reuse a page for different purposes. For example, a [grid create button](grid-new-button) and an [action button](action-button) (for editing) can refer to the same page, but they override the titles to **New** and **Edit**, respectively.
+The title of the page that is shown using the [page title widget](page-title). If the page is shown in a pop-up window, the title appears in the title bar of the pop-up. The title can be overridden from places where forms are opened to make it possible to reuse a page for different purposes. For example, a [grid create button](grid-new-button) and an [action button](button-widgets) (for editing) can refer to the same page, but they override the titles to **New** and **Edit**, respectively.
 
 ### 4.2 Layout
 
@@ -71,7 +71,7 @@ In simple e-commerce applications, the URLs can be configured as follows:
 
 ### 5.1 Visible For
 
-These are the module roles for which the page is visible. This has an effect on [menu widgets](menu-widgets) and on buttons that are visible only if allowed (for example, an [action button](action-button) for editing).
+These are the module roles for which the page is visible. This has an effect on [menu widgets](menu-widgets) and on buttons that are visible only if allowed (for example, an [action button](button-widgets) for editing).
 
 For more information, see [Module Security](module-security).
 

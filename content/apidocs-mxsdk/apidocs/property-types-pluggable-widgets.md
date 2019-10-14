@@ -197,7 +197,7 @@ Then the Studio Pro UI for the property appears like this:
 
 ### 3.1 Icon {#icon}
 
-Icon allows a user to configure an icon similar to one used by an [action button](/refguide/action-button#icon). It is passed as `DynamicValue<IconValue>` prop to a client component.
+Icon allows a user to configure an icon similar to one used by a [button](/refguide/button-properties#icon). It is passed as `DynamicValue<IconValue>` prop to a client component.
 
 {{% alert type="info" %}}
 This property type was introduced in Mendix 8.1.
@@ -474,7 +474,7 @@ System properties is a way for a pluggable widget to adopt extended widget funct
 
 ### 5.1 Label {#label}
 
-Label property allows a pluggable widget to have labeling functionality similar to a [core input widget](/refguide/text-box#label-properties). This allows a user to set a label, a label position, and a label width. If a widget has a label configured, its client component will automatically be wrapped into a correct markup.
+Label property allows a pluggable widget to have labeling functionality similar to a [core input widget](/refguide/text-box#label). This allows a user to set a label, a label position, and a label width. If a widget has a label configured, its client component will automatically be wrapped into a correct markup.
 
 ```xml
 <systemProperty key="Label"/>
@@ -490,7 +490,7 @@ Every widget have a name by default. This property can be used to control positi
 
 ### 5.3 TabIndex {#tabindex}
 
-The TabIndex property allows pluggable widgets to implement the **Tab index** setting similar to  a [core input widget](/refguide/text-box#tab-index). Every selectable or input-like widget should opt for this to provide a consistent developing experience and an accessible app for an end-user. A widget’s tab index, when it is not zero, is passed to a client component in a `tabIndex` prop.
+The TabIndex property allows pluggable widgets to implement the **Tab index** setting similar to  a [core input widget](/refguide/common-widget-properties#tab-index). Every selectable or input-like widget should opt for this to provide a consistent developing experience and an accessible app for an end-user. A widget’s tab index, when it is not zero, is passed to a client component in a `tabIndex` prop.
 
 ```xml
 <systemProperty key="TabIndex"/>
@@ -510,7 +510,7 @@ This property type was introduced in Mendix 8.1.
 
 ### 5.5 Editability {#editability}
 
-The editability property allows a pluggable widget to have an editable configuration similar to a [core input widget](/refguide/text-box#editability-properties). When a widget is marked as read-only or conditionally editable with condition being false, all [editable values](client-apis-for-pluggable-widgets#editable-value) its client component receives will have `readOnly` flag.
+The editability property allows a pluggable widget to have an editable configuration similar to a [core input widget](/refguide/text-box#editability). When a widget is marked as read-only or conditionally editable with condition being false, all [editable values](client-apis-for-pluggable-widgets#editable-value) its client component receives will have `readOnly` flag.
 
 {{% alert type="info" %}}
 This property type was introduced in Mendix 8.1.

@@ -55,7 +55,7 @@ Now the application is ready to store redundant data, but you still need to keep
     * Select **Commit** as the **Event**
     * Select **Yes** for **Pass the event object**
     * Click **Select...** to open the microflow selector
- 
+
     ![](attachments/18448743/18582166.png)
 
 4. On the microflow selector, click **New** and enter a name for the new microflow (for example, *Order_AfterCommit*).
@@ -151,7 +151,6 @@ Now the application is ready to store redundant data, but you still need to keep
 * [How to Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
 * [Stories](/developerportal/collaborate/stories)
 * [How to Define Access Rules Using XPath](../logic-business-rules/define-access-rules-using-xpath)
-* [How to Perform the Scout and Windows 10 Workaround](../front-end/perform-scout-and-windows-10-workaround)
 * [Attributes](/refguide7/attributes)
 * [Event Handlers](/refguide7/event-handlers)
 

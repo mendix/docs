@@ -124,8 +124,8 @@ The text widget shows text which can optionally contain parameters. For more inf
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
-| `container` | All ViewStyle properties |                 |
-| `text`      | All TextStyle properties |                 |
+| `container` | This has all ViewStyle properties. |                 |
+| `text`      | This has all TextStyle properties. |                 |
 
 The default class to style all texts is named `Text`.
 
@@ -141,8 +141,8 @@ The image widget can be used to show a predefined image on a page, layout, or sn
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
-| `container` | All ViewStyle properties  |       |
-| `image`     | All ImageStyle properties |       |
+| `container` | This has all ViewStyle properties.  |       |
+| `image`     | This has all ImageStyle properties. |       |
 
 
 The default class to style all static image styles is named `Image`. Please note that images loaded from the model are styled with `NativeDynamicImage` as described in the [Image Viewer](#image-viewer) section below.
@@ -159,8 +159,8 @@ The page title widget shows the title of the page on which it is used. This can 
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
-| `container` | All ViewStyle properties |                 |
-| `text`      | All TextStyle properties |                 |
+| `container` | This has all ViewStyle properties. |                 |
+| `text`      | This has all TextStyle properties. |                 |
 
 The default class to style all page titles is named `PageTitle`.
 
@@ -180,7 +180,7 @@ A container widget can be used to style or hide a group of widgets. This widget 
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
-| `container` | All ViewStyle properties |        |
+| `container` | This has all ViewStyle properties. |        |
 
 The default class to style all page titles is named `Container`.
 
@@ -211,16 +211,16 @@ The widget’s style properties are as follows:
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
-| `container` | All ViewStyle properties |     |
-| `tabBar`    | All ViewStyle properties |     |
+| `container` | This has all ViewStyle properties. |     |
+| `tabBar`    | This has all ViewStyle properties. |     |
 | `tabBar` | `bounces` | This is a Boolean value indicating whether the tab bar bounces when scrolling. |
 | `tabBar` | `pressColor` | This is a color for material ripple (Android only). |
 | `tabBar` | `pressOpacity` | This is opacity for a pressed tab. |
 | `tabBar` | `scrollEnabled` | This is a Boolean value enabling scrollable tabs. |
 | `tabBar` | `tabBarPosition` | This is the position of the tab bar in the tab view, and possible values are `top` and `bottom` (defaults to `top`). |
-| `indicator` | All ViewStyle properties |     |
-| `tab`       | All ViewStyle properties |     |
-| `label`     | All TextStyle properties |     |
+| `indicator` | This has all ViewStyle properties. |     |
+| `tab`       | This has all ViewStyle properties. |     |
+| `label`     | This has all TextStyle properties. |     |
 
 The default class to style all tab containers is named `TabContainer`.
 
@@ -236,7 +236,7 @@ A scroll container is used to make enable scrolling for a part of a page. This w
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
-| `container` | All ViewStyle properties |            |
+| `container` | This has all ViewStyle properties. |            |
 
 The default class to style all scroll containers is named `ScrollContainer`.
 
@@ -266,16 +266,17 @@ The widget’s style properties are structured as follows:
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
-| `container` | All ViewStyle properties   |   |
-| `input` | All TextStyle properties |  |
+| `container` | This has all ViewStyle properties.   |   |
+| `input` | This has all TextStyle properties. |  |
 | `input` | `autoCapitalize` | This automatically capitalizes certain characters when the user types:<br><br>* `characters`: capitalizes all characters<br>* `words`: capitalizes the first letter of each word<br>* `sentences`: capitalizes the first letter of each sentence (default)<br>* `none`: capitalizes nothing |
 | `input` | `placeholderTextColor` | This is the text color of the placeholder string. |
 | `input` | `selectionColor` | This is the highlight and cursor color of the text input. |
 | `input` | `underlineColorAndroid` | This is the color of the `input` underline. |
-| `inputError` | Same properties as `input` |   |
-| `label` | All TextStyle properties |   |
+| `inputError` | This has the same properties as `input` | Overrides `input` styles if there are validation errors. |
+| `inputDisabled` | Same properties as `input` | Overrides `input` styles if the text box is non-editable. |
+| `label` | This has all TextStyle properties |   |
 | `label` | `numberOfLines` | This is the maximum number of lines to wrap the label text. If the text is any longer, it will be cut off with an ellipsis (this defaults to 1). |
-| `validationMessage` | All TextStyle properties   |    |
+| `validationMessage` | This has all TextStyle properties.   |    |
 
 The default class to style all text boxes is named `TextBox`.
 
@@ -324,15 +325,15 @@ The widget’s style properties are as follows:
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
-| `container` | All ViewStyle properties |  |
-| `label` | All TextStyle properties | |
+| `container` | This has all ViewStyle properties. |  |
+| `label` | This has all TextStyle properties. | |
 | `label` | `numberOfLines` | The maximum number of lines to wrap the label text. If the text is any longer it will be cut off with an ellipsis. Defaults to `1`. |
-| `pickerIOS` | All ViewStyle properties |  |
-| `pickerItemIOS` | All TextStyle properties |   |
-| `pickerBackdropIOS` | All ViewStyle properties |   |
-| `pickerTopIOS` | All ViewStyle properties |  |
-| `value`  | All TextStyle properties | |
-| `validationMessage` | All TextStyle properties |    |
+| `pickerIOS` | This has all ViewStyle properties. |  |
+| `pickerItemIOS` | This has all TextStyle properties. |   |
+| `pickerBackdropIOS` | This has all ViewStyle properties. |   |
+| `pickerTopIOS` | This has all ViewStyle properties. |  |
+| `value`  | This has all TextStyle properties. | |
+| `validationMessage` | This has all TextStyle properties. |    |
 
 The default class to style all drop down inputs is named `DropDown`.
 
@@ -364,16 +365,17 @@ The widget’s style properties structure is as follows:
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
-| `container` | All ViewStyle properties   |   |
-| `input` | All TextStyle properties   |   |
+| `container` | This has all ViewStyle properties.   |   |
+| `input` | This has all TextStyle properties.   |   |
 | `input` | `trackColorOn` | Custom color for the switch track when turned on. |
 | `input` | `trackColorOff` | Custom color for the switch track when turned off. |
 | `input` | `thumbColorOn` | Color of the foreground switch grip when turned on. If this is set on iOS, the switch grip will lose its drop shadow. |
 | `input` | `thumbColorOff` | Color of the foreground switch grip when turned off. If this is set on iOS, the switch grip will lose its drop shadow. |
-| `inputError` | Same properties as `input` |  |
-| `label` | All TextStyle properties   |  |
+| `inputError` | This has the same properties as `input` | Overrides `input` styles if there are validation errors. |
+| `inputDisabled` | This has the same properties as `input` | Overrides `input` styles if the check box is non-editable. |
+| `label` | This has all TextStyle properties   |  |
 | `label` | `numberOfLines` | The maximum number of lines to wrap the label text. If the text is any longer it will be cut off with an ellipsis. Defaults to `1`. |
-| `validationMessage` | All TextStyle properties   |  |
+| `validationMessage` | This has all TextStyle properties.   |  |
 
 The default class to style all check box inputs is named `Checkbox`.
 
@@ -395,12 +397,14 @@ The widget’s style properties are as follows:
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
-| `container` | All ViewStyle properties |  |
-| `label` | All TextStyle properties |  |
+| `container` | This has all ViewStyle properties. |  |
+| `label` | This has all TextStyle properties. |  |
 | `label`  | `numberOfLines` | This is the maximum number of lines to wrap the label text. If the text is any longer, it will be cut off with an ellipsis ( this defaults to `1`.) |
-| `value` | All TextStyle properties |  |
-| `placeholder` | All TextStyle properties |   |
-| `validationMessage` | All TextStyle properties |  |
+| `value` | This has all TextStyle properties |  |
+| `valueDisabled` | This has all TextStyle properties | Overrides `value` styles if the date picker is non-editable. |
+| `placeholder` | This has all TextStyle properties |   |
+| `placeholderDisabled` | This has all TextStyle properties | Overrides `placeholder` styles if the date picker is non-editable. |
+| `validationMessage` | This has all TextStyle properties |  |
 
 The default class to style all date picker inputs is named `DatePicker`.
 
@@ -440,10 +444,10 @@ The widget’s style properties are as follows:
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
-| `container` | All ViewStyle properties |    |
+| `container` | This has all ViewStyle properties. |    |
 | `container` | `rippleColor` | This is the color of the ripple on Android (this defaults to `rgba(0, 0, 0, 0.2)`). |
-| `caption` | All TextStyle properties |   |
-| `icon` | All ViewStyle properties |   |
+| `caption` | This has all TextStyle properties. |   |
+| `icon` | This has all ViewStyle properties. |   |
 | `icon` | `size` | This is the size of the button icon (this defaults to `12`). |
 | `icon` | `color` | This is the color of the button icon. |
 
@@ -463,6 +467,14 @@ The widget’s style properties are as follows:
 	application content
 	<bottomBar/>
 <app>
+<progressOverlay>
+	<background>
+		<container>
+			<activityIndicator/>
+			<text/>
+		</container>
+	</background>
+</progressOverlay>
 ```
 
 | Element | Style Properties    | Description |
@@ -478,14 +490,18 @@ The widget’s style properties are as follows:
 | `bottomBar` | `fontSize` | This is the font size of the bottom bar text. |
 | `bottomBar` | `color` | This is the default icon and text color. |
 | `bottomBar` | `selectedColor` | This is the selected icon and text color. |
+| `progressOverlay` | `background` | This has all ViewStyle properties. |
+| `progressOverlay` | `container` | This has all ViewStyle properties. |
+| `progressOverlay` | `activityIndicator` | This is the same as the [activity indicator](#activity-indicator) widget. |
+| `progressOverlay` | `text` | This has all TextStyle properties. |
 
-The default class to style the navigation is named  `navigationStyle`. There is no support to for a custom class styling on navigation.
+The default class to style the navigation is named  `navigationStyle`. There is no support for custom class styling on navigation.
 
 ## 10 Add-On Widgets
 
 Add-on widgets are distributed through the [Native Mobile Resources](https://appstore.home.mendix.com/link/app/109513/) module, and are not shipped with Mendix Studio Pro. Other add-on widgets might also be distributed through starter apps, as well as modules importing pages from other projects. 
 
-### 10.1 Activity Indicator
+### 10.1 Activity Indicator {#activity-indicator}
 
 The activity indicator widget displays a circular loading indicator. This is how an activity indicator widget could look in an app:
 
@@ -527,8 +543,8 @@ The widget’s style properties are as follows:
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
-| `container` | All ViewStyle properties |      |
-| `text` | All TextStyle properties |      |
+| `container` | This has all ViewStyle properties. |      |
+| `text` | This has all TextStyle properties. |      |
 
 The default class to style all badges is named `com_mendix_widget_native_badge_Badge`.
 
@@ -538,7 +554,7 @@ The barcode scanner widget allows your app to scan barcodes and QR codes. This w
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
-| `container` | All ViewStyle properties |  |
+| `container` | This has all ViewStyle properties. |  |
 
 The default class to style all barcode scanner widgets is named `com_mendix_widget_native_barcodescanner_BarcodeScanner`.
 
@@ -552,16 +568,16 @@ The widget’s style properties are as follows:
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
-| `floatingButton` | All ViewStyle properties |    |
-| `dialog` | All ViewStyle properties |  |
-| `title` | All TextStyle properties |  |
-| `textAreaInput` | All TextStyle properties |  |
+| `floatingButton` | This has all ViewStyle properties. |    |
+| `dialog` | This has all ViewStyle properties. |  |
+| `title` | This has all TextStyle properties. |  |
+| `textAreaInput` | This has all TextStyle properties. |  |
 | `textAreaInput` | `placeholderTextColor` | This is the text color of the placeholder string. |
 | `textAreaInput` | `selectionColor` | This is the highlight and cursor color of the text input. |
 | `textAreaInput` | `underlineColorAndroid` | This is the underline color for Android devices. |
 | `textAreaInput` | `numberOfLines` | This is the height of the text area is based on this number of text lines. |
-| `switchLabel` | All TextStyle properties |   |
-| `switchInput` | All TextStyle properties |  |
+| `switchLabel` | This has all TextStyle properties. |   |
+| `switchInput` | This has all TextStyle properties. |  |
 | `switchInput` | `trackColorOn` | This is the custom color for the switch track when turned on. |
 | `switchInput` | `trackColorOff` | This is the custom color for the switch track when turned off. |
 | `switchInput` | `thumbColorOn` | This is the color of the foreground switch grip when turned on. If this is set on iOS, the switch grip will lose its drop shadow. |
@@ -580,16 +596,16 @@ The floating action button widget lets you customize the appearance and function
 
 | Element | Style Properties    | Description |
 | --- | ---| --- |
-| `container` | All ViewStyle properties |  |
-| `button` | All ViewStyle properties  |  |
+| `container` | This has all ViewStyle properties. |  |
+| `button` | This has all ViewStyle properties.  |  |
 | `button` | `size` | This is the radius of the button. |
 | `button` | `rippleColor` | This is the color of the ripple on Android. |
-| `buttonIcon` | All ImageStyle properties |  |
-| `secondaryButton` | All ViewStyle properties  |  |
+| `buttonIcon` | This has all ImageStyle properties. |  |
+| `secondaryButton` | This has all ViewStyle properties.  |  |
 | `secondaryButton` | `size` | This is the radius of the secondary buttons. |
-| `secondaryButtonIcon` | All ImageStyle properties |  |
-| `secondaryButtonCaption` | All TextStyle properties  |  |
-| `secondaryButtonCaptionContainer` | All ViewStyle properties |  |
+| `secondaryButtonIcon` | This has all ImageStyle properties. |  |
+| `secondaryButtonCaption` | This has all TextStyle properties.  |  |
+| `secondaryButtonCaptionContainer` | This has all ViewStyle properties. |  |
 
 The default class to style all floating actions buttons is named `com_mendix_widget_native_floatingactionbutton_FloatingActionButton`.
 
@@ -603,8 +619,8 @@ The widget’s style properties are as follows:
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
-| `container` | All ViewStyle properties |  |
-| `loadingOverlay` | All ViewStyle properties |  |
+| `container` | This has all ViewStyle properties. |  |
+| `loadingOverlay` | This has all ViewStyle properties. |  |
 | `loadingIndicator` | `color` | This is the color of the loading indicator. |
 | `marker` | `color` | This is the color of the location marker. |
 | `marker` | `opacity` | This is the opacity of the location marker. |
@@ -632,10 +648,10 @@ The widget’s style properties are as follows:
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
-| `container` | All ViewStyle properties |  |
-| `bar` | All ViewStyle properties |  |
+| `container` | This has all ViewStyle properties. |  |
+| `bar` | This has all ViewStyle properties. |  |
 | `fill` | `backgroundColor` | This is the background color of the filled progress bar portion. |
-| `validationMessage` | All TextStyle properties |  |
+| `validationMessage` | This has all TextStyle properties. |  |
 
 The default class to style all progress bars is named `com_mendix_widget_native_progressbar_ProgressBar`.
 
@@ -656,15 +672,15 @@ The widget’s style properties are as follows:
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
-| `container` | All ViewStyle properties |  |
+| `container` | This has all ViewStyle properties. |  |
 | `circle` | `size` | This is the radius of the progress circle. |
 | `circle` | `borderWidth` | This is the border width of the progress circle. |
 | `circle` | `borderColor` | This is the color of the progress circle border. |
 | `fill` | `backgroundColor` | This is the color of the circle’s filled portion. |
 | `fill` | `width` | This is the width of the progress circle. |
 | `fill` | `lineCapRounded` | This determines if the rotating line’s front tip is rounded off or not. |
-| `text` | All TextStyle properties |  |
-| `validationMessage` | All TextStyle properties |  |
+| `text` | This has all TextStyle properties. |  |
+| `validationMessage` | This has all TextStyle properties. |  |
 
 The default class to style all progress circles is named `com_mendix_widget_native_progresscircle_ProgressCircle`.
 
@@ -684,7 +700,7 @@ The widget’s style properties are as follows:
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
-| `container` | All ViewStyle properties |   |
+| `container` | This has all ViewStyle properties. |   |
 | `qrcode` | `size` | The size of the QR code. |
 | `qrcode` | `color`| The color of the QR code. |
 | `qrcode` | `backgroundColor` | The background color behind the QR code. |
@@ -713,15 +729,15 @@ The widget’s style properties are as follows:
 
 | Element | Style Properties    | Description |
 | ---| --- | --- |
-| `container` | All ViewStyle properties |    |
-| `track` | All ViewStyle properties |    |
-| `trackDisabled` | All ViewStyle properties |    |
-| `highlight` | All ViewStyle properties |    |
-| `highlightDisabled` | All ViewStyle properties |    |
-| `marker` | All ViewStyle properties |    |
-| `markerActive` | All ViewStyle properties |    |
-| `markerDisabled` | All ViewStyle properties |    |
-| `validationMessage` | All TextStyle properties |    |
+| `container` | This has all ViewStyle properties. |    |
+| `track` | This has all ViewStyle properties. |    |
+| `trackDisabled` | This has all ViewStyle properties. |    |
+| `highlight` | This has all ViewStyle properties. |    |
+| `highlightDisabled` | This has all ViewStyle properties. |    |
+| `marker` | This has all ViewStyle properties. |    |
+| `markerActive` | This has all ViewStyle properties. |    |
+| `markerDisabled` | This has all ViewStyle properties. |    |
+| `validationMessage` | This has all TextStyle properties. |    |
 
 The default class to style all range slider inputs is named `com_mendix_widget_native_rangeslider_RangeSlider`.
 
@@ -755,9 +771,9 @@ The widget’s style properties are as follows:
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
-| `container` | All ViewStyle properties |  |
-| `containerDisabled` | All ViewStyle properties |  |
-| `icon` | All ViewStyle properties |  |
+| `container` | This has all ViewStyle properties. |  |
+| `containerDisabled` | This has all ViewStyle properties. |  |
+| `icon` | This has all ViewStyle properties. |  |
 | `icon` | `size` | The size of the icon. |
 | `icon` | `color` | The color of the icon. |
 | `icon` | `selectedColor` | The color of the icon when selected. |
@@ -790,13 +806,13 @@ The widget’s style properties are as follows:
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
-| `container` | All ViewStyle properties |       |
-| `containerDisabled` | All ViewStyle properties |       |
-| `button` | All ViewStyle properties |       |
-| `text` | All TextStyle properties |       |
-| `activeButton` | All ViewStyle properties |       |
-| `activeButtonText` | All TextStyle properties |       |
-| `validationMessage` | All TextStyle properties |       |
+| `container` | This has all ViewStyle properties. |       |
+| `containerDisabled` | This has all ViewStyle properties. |       |
+| `button` | This has all ViewStyle properties. |       |
+| `text` | This has all TextStyle properties. |       |
+| `activeButton` | This has all ViewStyle properties. |       |
+| `activeButtonText` | This has all TextStyle properties. |       |
+| `validationMessage` | This has all TextStyle properties. |       |
 
 The default class to style all toggle buttons is named `com_mendix_widget_native_togglebuttons_ToggleButtons`.
 
@@ -810,10 +826,10 @@ The widget’s style properties are as follows:
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
-| `container` | All ViewStyle properties |        |
+| `container` | This has all ViewStyle properties. |        |
 | `indicator` | `color` | The loading indicator color. |
-| `video` | All ViewStyle properties |      |
-| `errorMessage` | All TextStyle properties |      |
+| `video` | This has all ViewStyle properties. |      |
+| `errorMessage` | This has all TextStyle properties. |      |
 
 The default class to style all video players is named `com_mendix_widget_native_videoplayer_VideoPlayer`.
 
@@ -823,9 +839,9 @@ The web view widget allows you to embed static or dynamic websites in your app. 
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
-| `container` | All ViewStyle properties |      |
-| `errorContainer` | All ViewStyle properties |      |
-| `errorText` | All TextStyle properties |     |
+| `container` | This has all ViewStyle properties. |      |
+| `errorContainer` | This has all ViewStyle properties. |      |
+| `errorText` | This has all TextStyle properties. |     |
 
 The default class to style all web views is named `com_mendix_widget_native_webview_WebView`. 
 

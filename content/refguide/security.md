@@ -30,7 +30,7 @@ See [Module Security](module-security).
 
 ## 4 User Roles vs. Module Roles
 
-An end user in a Mendix application has one or more user roles. These roles can be assigned from within the client when creating or editing a user. User roles are at the level of a project and can be edited in [Project Security](project-security).
+An end-user in a Mendix application has one or more user roles. These roles can be assigned from within the client when creating or editing a user. User roles are at the level of a project and can be edited in [Project Security](project-security).
 
 See [User Roles](user-roles).
 

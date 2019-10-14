@@ -41,7 +41,7 @@ In the **Studio** section, you can see whether Studio is enabled for the app. Yo
 Click **Cloud Settings** to select the cloud platform on which to deploy your app. The selection of cloud platforms available will depend on the features of your Mendix account.
 
 {{% alert type="info" %}}
-Only users with the **App Settings** permission can change cloud platforms. For default roles, only the **SCRUM Master** has this permission. For more details, see the [App Team Roles](../company-app-roles/index#app-team-roles) section of *Company & App Roles*.
+Only users with the **App Settings** permission can change cloud platforms. For default roles, only the **Scrum Master** has this permission. For more details, see the [App Team Roles](../company-app-roles/index#app-team-roles) section of *Company & App Roles*.
 {{% /alert %}}
 
 ![](attachments/cloudsettings.png)
@@ -67,8 +67,7 @@ After clicking **Manage App Users**, you will see a list of environments for you
 
 * [Mendix Single Sign-On](/developerportal/deploy/mendix-sso) is implemented:
 	* In Studio, SSO is automatically implemented for your app project by enabling security for your app – for details, see the [Enabling Security](/studio/settings-security#enabling-security) section of *Security, Roles & Permissions*
-	{{% todo %}}[Add link to Mendix SSO module in App Store]{{% /todo %}}
-	* In Studio Pro, SSO can implemented via the [AppCloudServices](https://appstore.home.mendix.com/link/app/934/) module – for details, see [Mendix SSO](/developerportal/deploy/mendix-sso)
+	* In Studio Pro, SSO can implemented via the [AppCloudServices](https://appstore.home.mendix.com/link/app/934/) module – for details, see [SSO Using AppCloudServices](/developerportal/deploy/integrate-with-mendix-sso)
 * If you manage user roles from Studio, your app should be published (for more information see the [Managing App Users](/studio/settings-security#managing-app-users) section of *Security, Roles & Permissions* )
 * Your user role allows you to manage other users (for more information, see the [User Management Properties](/refguide/user-roles#user-management) section of *User Roles*)
 

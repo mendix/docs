@@ -124,7 +124,7 @@ User Type | Explanation
 ------------ | -------------
 **named users** | Total number of user accounts.
 **concurrent named user sessions** | Total number of sessions for users using a named login. 
-**concurrent anonymous user sessions** | Total number of sessions for users who are logging in anonymously. 
+**concurrent anonymous user sessions** | Total number of sessions for users who are signing in anonymously. 
 
 ### <a name="Trends-appmxruntimejvmheap"></a>4.4 JVM Object Heap
 

@@ -22,7 +22,7 @@ Scheduled events can be tested locally, but they will not be run if your app is 
 | Property | Description |
 | --- | --- |
 | Name | The name of the scheduled event. This name is stored in the ScheduledEventInformation objects at runtime, so that runs of the scheduled event are recognizable. |
-| Documentation | This field is for documentation purposes only. Its value is not visible to end users and doesn't influence the behavior of your application. |
+| Documentation | This field is for documentation purposes only. Its value is not visible to end-users and doesn't influence the behavior of your application. |
 
 ## 3 Execution Properties
 

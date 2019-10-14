@@ -75,7 +75,7 @@ For this how-to, we will use the publicly available Google Books API (for detail
 
     ![](attachments/18448737/18582036.png)
 
-6. When a user logs into the application and enters a search term, the results are successfully populated via the REST calls.
+6. When a user signs into the application and enters a search term, the results are successfully populated via the REST calls.
 
 The above example demonstrates how a Mendix application can quickly integrate data systems using REST. This basic framework can be built upon to incorporate a wide range of activities. Possible ways to extend this framework include the following: 
 

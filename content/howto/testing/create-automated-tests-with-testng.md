@@ -7,7 +7,7 @@ tags: ["test", "testing", "testng"]
 
 ## 1 Introduction
 
-Automated tests can be created with different tools, depending on the type of tests. Integration tests can be created with [SoapUI](testing-web-services-using-soapui), unit tests with the [UnitTesting module](testing-microflows-using-the-unittesting-module), and UI tests with [Selenium IDE](testing-mendix-applications-using-selenium-ide). With Selenium IDE you can create scripts to aid in automation-aided exploratory testing. If you’re looking to create robust, browser-based tests, you should look into using a testing framework with Selenium.
+Automated tests can be created with different tools, depending on the type of tests. Integration tests can be created with [SoapUI](testing-web-services-using-soapui), unit tests with the [Unit Testing](testing-microflows-using-the-unittesting-module) module, and UI tests with [Selenium IDE](testing-mendix-applications-using-selenium-ide). With Selenium IDE you can create scripts to aid in automation-aided exploratory testing. If you’re looking to create robust, browser-based tests, you should look into using a testing framework with Selenium.
 
 TestNG is a Java testing framework that can be used to drive Selenium. In this how-to you will learn how to create an automated test with TestNG.
 
@@ -194,7 +194,7 @@ This test method will open the URL `http://localhost:8080/index.html` in the Fir
 
 ### 5.5 Add the Second Test Method
 
-Now that you are on the login window, you will want to log in. To add the second test method, follow these steps:
+Now that you are on the login window, you will want to sign in. To add the second test method, follow these steps:
 
 1. Open Firefox and go to `http://localhost:8080/index.html`.
 2. Use the developer tools to inspect the element.
@@ -518,4 +518,4 @@ Happy testing!
 ## 10 Read More
 
 * [Test Mendix Applications Using Selenium IDE](testing-mendix-applications-using-selenium-ide)
-* [Test Microflows Using the UnitTesting Module](testing-microflows-using-the-unittesting-module)
+* [Test Microflows Using the Unit Testing Module](testing-microflows-using-the-unittesting-module)

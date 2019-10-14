@@ -37,7 +37,7 @@ Before you can start with this how-to, please make sure you have completed the f
 The first thing to do when you want to run a Mendix instance on Azure is adding a Mendix version to your Azure account.
 
 1.  Go to [https://portal.azure.com](https://portal.azure.com/).
-2.  **Log in** with your Azure account.
+2.  **Sign in** with your Azure account.
 3.  Select the Azure marketplace from the dashboard:
     ![](attachments/azure-deploy/19398850.png)
 4.  Search for **mendix.**
@@ -83,7 +83,7 @@ The image is now provisioning.
 Now that you've got your Mendix instance up and running, it's time to run an app on it. To do this you need to create a deployment package of your Mendix app and upload it to the Azure instance.
 
 1.  Open **Studio Pro**.
-2.  **Log in** with your Mendix credentials.
+2.  **Sign in** with your Mendix credentials.
 3.  Open a **project** you want to run on the Mendix Azure instance.
 4.  Create a deployment package of your project (**F7**).
     ![](attachments/azure-deploy/19398858.png)

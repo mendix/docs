@@ -194,7 +194,7 @@ This test method will open the URL `http://localhost:8080/index.html` in the Fir
 
 ### 5.5 Add the Second Test Method
 
-Now that you are on the login window, you will want to log in. To add the second test method, follow these steps:
+Now that you are on the login window, you will want to sign in. To add the second test method, follow these steps:
 
 1. Open Firefox and go to `http://localhost:8080/index.html`.
 2. Use the developer tools to inspect the element.

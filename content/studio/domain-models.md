@@ -18,21 +18,21 @@ The domain model in Studio consists of the following:
 * [Entities](#entity)
 * [Associations](domain-models-association-properties) 
 
-Let us say you have a collection of CDs like the one in the table below.
+Let us say you have a collection of CDs like the one in the table below:
 
 | Title                           | Artist                   |
 | ------------------------------- | ------------------------ |
 | How to Dismantle an Atomic Bomb | U2                       |
 | Exodus                          | Bob Marley & The Wailers |
 
-The rows in the table are CDs. The type of the two rows is "CD" and this is the entity name. A specific CD like "How to Dismantle an Atomic Bomb" of the band U2 is called an object of the "CD" entity. Characteristics like the "Title" and "Artist" are called attributes.
+The rows in the table are CDs. So, *CD* is the *entity* name. A specific CD like "How to Dismantle an Atomic Bomb" of the band U2 is called an *object* of the *CD* entity. Characteristics like the "Title" and "Artist" are called *attributes*.
 
 To view the **Domain Models** of your app in Studio, click the **Domain Models** icon in the left menu bar of Studio.
 
 {{% image_container width="350" %}}![](attachments/domain-models/domain-model.png)
 {{% /image_container %}}
 
-After opening a domain model, you will see an overview of all the entities, attribute, and associations of the entities. The complexity of your domain model depends on the complexity of your app.
+After opening a domain model, you will see an overview of all entities, attributes, and associations. The complexity of your domain model depends on the complexity of your app.
 
 ![](attachments/domain-models/domain-overview.png)
 
@@ -42,9 +42,9 @@ The **Auto Arrange** option in the top-left corner groups and aligns entities by
 
 The domain model can contain the following components:
 
-* [Entities](#entity-types) – represents a class of real-world objects. Entities can have attributes:
-  * [Attributes](#attributes) – characteristics that describe and/or identify the entity
-* [Associations](#associations) – describes a relation between entities
+* [Entitiy](#entity-types) – represents a class of real-world objects. Entities can have attributes:
+  * [Attribute](#attributes) – describes and/or identify the entity
+* [Association](#associations) – describes a relation between entities
 
 ### 2.1 Entities and Their Types {#entity-types}
 
@@ -64,11 +64,11 @@ Entities have the following properties:
 
   * **Name** – defines the name of the entity
 
-  * **Persistable** – defines whether an object of the entity is stored in the database (for more information on persistability, see [Persistability](/refguide/persistability) in *Studio Pro Guide*)
+  * **Persistable** – defines whether objects of the entity are stored in the database (for more information on persistability, see [Persistability](/refguide/persistability) in *Studio Pro Guide*)
 
 		![General Properties of an Entity](attachments/domain-models/entity-general-properties.png)
 
-*  **Stored Information** properties define information stored about the entity, such as when the entity was created and when it was last changed.  This information can be used in microflow expressions and/or page filters.  You can toggle the following properties: 
+*  **Stored Information** properties define whether the information about the entity (such as, when the entity was created and when it was last changed) is stored in the database. If the information is stored, it can be retrieved afterwards and can be used, for example, in microflow expressions and/or page filters. You can toggle the following properties: 
 
   * **Store 'Created by'** – when enabled, the user's name who created the entity is stored in the database
 
@@ -90,7 +90,7 @@ For more information on attribute types and their properties, see [Attributes](d
 
 ### 2.4 Associations {#associations}
 
-An association describes a relation between entities. In the domain model, an association is represented by a line/arrow between two entities. If we draw a parallel with databases, the association is a foreign key. 
+An association describes a relation between entities. In the domain model, an association is represented by a line between two entities. If we draw a parallel with databases, the association is a foreign key. 
 
 For more information on association types and their properties, see [Associations](domain-model-asscoation-properties).  
 

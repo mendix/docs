@@ -214,32 +214,48 @@ The **User Groups** menu item and page are visible to all users. However, only [
 
 #### 5.3.1 Members Tab {#members}
 
-On this tab, you can click **Add** to add a member to the user group. User group members can manage the content assigned to the group.
+On this tab, you can enter an email address and click **Add** to add a member to the user group. User group members can manage the content assigned to the group.
 
 Once a member is added, you can select their permission level: **Member** or **Group Admin**. A Group Admin can manage the user group.
 
 {{% todo %}}[**ADD SCREENSHOT**]{{% /todo %}}
 
-Click **Remove** to remove a member from the group.
+To remove a member, click **Remove** next to their name.
 
 #### 5.3.2 Guests
 
-On this page, you can add external downloaders from outside your company who you can share your company's private App Store content with via the [Shared with Others](#shared) page.
+A guest is a Mendix Platform users from outside your company who can download the selected private [Content](#content) of this group. To add a guest, enter their email address in the box and click **Add**:
 
-To add an external downloader, enter their email address in the box and click Add:
+{{% todo %}}[**UPDATE SCREENSHOT**]{{% /todo %}}
 
 ![](attachments/app-store-overview/external-downloaders.png)
 
-{{% todo %}}[**SHARED WITH ME STAYS**]{{% /todo %}}
+{{% todo %}}[**VERIFY BELOW; IF SHARED WITH ME STAYS, WHERE IS IT LOCATED?**]{{% /todo %}}
 
-If the external downloader is registered with Mendix, they will receive an email notifying them of access to private App Store content. They can then see all the private App Store content shared with them in their [Shared with Me](#shared-with-me) page.
+The guest will receive an email notifying them of access to the private content. They can then see all the private App Store content shared with them in their [Shared with Me](#shared-with-me) page.
 
-To remove an external downloader, click **Remove** next to their name.
+To remove a guest, click **Remove** next to their name.
+
+#### 5.3.3 Content {#content}
+
+On this tab, you can assign content to this user group that can only be managed by members of this group. To assign content to a user group, click **Assign Content** and select private App Store content from the dialog box:
+
+{{% todo %}}[**ADD SCREENSHOT**]{{% /todo %}}
+
+Once the content has been added, click **Manage** to manage the content. On the page that opens, you can do the following:
+
+* **Create a new draft version** of the content (for details on how to do this, see the steps in the [Updating Existing App Store Content](#updating) section of *How to Share App Store Content*)
+* **Edit** the content (for details on how to do this, see the steps in the [Adding New App Store Content](share-app-store-content#adding) section of *How to Share App Store Content*)
+* **Unpublish** the content
+
+{{% todo %}}[**ADD SCREENSHOT**]{{% /todo %}}
+
+#### 5.3.4 Settings
+
+On this tab, 
 
 
-
-
-#### 5.3.2 Content Managers {#cm}
+#### Content Managers {#cm}
 
 {{% todo %}}[**CONTENT MANAGERS: GOES AWAY, BECOME GROUP MEMBERS OR GROUP ADMINS; 10.15: STILL AVAILABLE**]{{% /todo %}}
 
@@ -248,12 +264,6 @@ On this page, you can add App Store content managers for your company who will h
 ![](attachments/app-store-overview/content-managers.png)
 
 To remove a content manager, click **Remove** next to their name
-
-
-
-
-
-
 
 ### Shared with Others {#shared}
 

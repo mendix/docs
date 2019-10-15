@@ -9,30 +9,16 @@ tags: ["SSO", "Single Sign On", "Upgrade", "AppCloudServices"]
 
 ## 1 Introduction
 
-The [MendixSSO module](https://appstore.home.mendix.com/link/app/111349/) comes with a default implementation of user administration. This is described in [Mendix Single Sign-on](mendix-sso).
+The AppCloudServices implementation of single sign on (SSO) for Mendix has been deprecated. The [MendixSSO module](https://appstore.home.mendix.com/link/app/111349/) can replace this implementation completely. It comes with a default implementation of user administration which gives you all the tools you need to manage SSO as described in [Mendix Single Sign-on](mendix-sso).
 
-The default administration module is sufficient for most apps. However, you can create your own administration module if you want to do things in a different way.
+MendixSSO has been designed to easily replace the AppCloudServices SSO. How to do this depends on how AppCloudServices was implemented in your app. There are two different situations:
 
-This document also contains some more technical information about the Mendix SSO implementation to help you with modifying the administration module and debugging any issues with Mendix SSO.
+* AppCloudServices was implemented with no additional customization
+* The AppCloudServices domain model has been enhanced with additional attributes and/or associations
 
-## 2 Customizing Mendix SSO
+Dealing with these to situations is described in the two sections below.
 
-There are two ways you can modify the MendixSSO module. You can use snippets from the App Store module MendixSSO in your pages, or you can modify the MendixSSO module in any way you like to support your user administration requirements.
+## 2 Replacing a Standard Implementation of AppCloudServices with Mendix SSO
 
-These two ways are described below.
+## 3 Replacing a Customized Implementation of AppCloudServices with Mendix SSO
 
-### 2.1 Using Snippets
-
-### 2.2 Modifying Mendix SSO
-
-{{% alert type="warning" %}}
-We recommend that you do not modify the version of MendixSSO which is in the App Store modules section of your project. In future, you may wish to import a newer version of the module and this will overwrite any changes you make.
-{{% /alert %}}
-
-The MendixSSO module is written so that you can make a complete copy of the module and use this as the basis of a new administration module.
-
-## 3 Tokens
-
-Mendix SSO works by providing users with tokens when they are authenticated. If users are having issues with Mendix SSO it can be useful to see the tokens, either for your own debugging or to provide information to Mendix Support.
-
-The 

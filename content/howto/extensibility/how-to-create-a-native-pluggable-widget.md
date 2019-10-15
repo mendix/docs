@@ -387,6 +387,48 @@ Navigate to the nanoflow "ACT_ShowMessage" and drag in a "Show message" activity
 
 Run the app locally and verify that your button is triggering a message popup saying "Hello World!".
 
+It would be nice to hide the content area from the widget completely when there is no content to display.
+
+1. Import **Children** in you display component:
+
+   ```tsx
+   import {
+     Children,
+     Component,
+     ReactNode,
+     createElement,
+     ComponentClass
+   } from "react";
+   ```
+
+2. Extract the rendering of the content area from the **render** method to a lambda method called **renderContent**:
+
+   ```tsx
+   private renderContent = (): ReactNode => {
+       if (Children.count(this.props.children) === 0) {
+           return null;
+       }
+
+       return <View style={this.styles.content}>{this.props.children}</View>;
+   };
+   ```
+
+3. Make a call to **renderContent** in the render **render** method:
+
+   ```tsx
+   render(): ReactNode {
+     return (
+         <View style={this.styles.container}>
+             <View style={this.styles.header}>
+                 <Text style={this.styles.headerContent}>{this.props.headerCaption}</Text>
+                 <Text style={this.styles.headerContent}>-</Text>
+             </View>
+             {this.renderContent()}
+         </View>
+     );
+   }
+   ```
+
 ### Making the widget collapsilble
 
 Now that our widget can contain content, the next challange is to hide this content by making it collapsible.
@@ -494,9 +536,19 @@ Let's now make it possible to expand or collapse the group box.
    };
    ```
 
-7. Extract the rendering of the content block from the **render** method to a method called **renderContent**:
+7. Change the **renderContent** method to only render the content when the group box is not collapsed:
 
-TODO: don't render content area when there is nothing inside.
+   ```tsx
+   private renderContent = (): ReactNode => {
+       if (this.state.collapsed || Children.count(this.props.children) === 0) {
+           return null;
+       }
+
+       return <View style={this.styles.content}>{this.props.children}</View>;
+   };
+   ```
+
+8. Check your changes in the Make It Native app.
 
 ## 4 Read More
 

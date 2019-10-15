@@ -519,7 +519,7 @@ Let's now make it possible to expand or collapse the group box.
    };
    ```
 
-6. Let the **Touchable** component execute the **toggleCollapsed** method when it's pressed (clicked) by altering the **renderHeader** method as follows:
+6. Let the **Touchable** component execute the **toggleCollapsed** method when it's pressed (clicked). Also switch between a plus and minus character in the header depending on the state. The **renderHeader** method should look as follows:
 
    ```tsx
    private renderHeader = () => {

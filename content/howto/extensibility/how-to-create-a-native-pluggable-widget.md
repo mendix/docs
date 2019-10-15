@@ -319,14 +319,14 @@ Go back to Mendix Studio Pro and press <kbd>F4</kbd> or select **Project > Synch
 
 #### Content property
 
-Besides the header caption, we also want the developer to be able to fill content in the group box like building blocks, snippets or other widgets. Go to **src/GroupBox.xml** and add the following property element above the header caption property, so that your xml file will look like this:
+Besides the header caption, we also want the developer to be able to fill content in the group box like building blocks, snippets or other widgets. Go to **src/GroupBox.xml** and add a content property element above the header caption property. Also change the name element from "Group Box" to "Group box" to stay in line with naming of other widgets and remove the "needsEntityContext" attribute from the widget element, since this is no longer necessary. After the changes your file should look like this:
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
-<widget id="mendix.groupbox.GroupBox" pluginWidget="true" needsEntityContext="true" offlineCapable="true" supportedPlatform="Native"
+<widget id="mendix.groupbox.GroupBox" pluginWidget="true" offlineCapable="true" supportedPlatform="Native"
     xmlns="http://www.mendix.com/widget/1.0/"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
-    <name>Group Box</name>
+    <name>Group box</name>
     <description>Widget to group building blocks, snippets or other widgets</description>
     <icon/>
     <properties>
@@ -378,10 +378,15 @@ render(): ReactNode {
 }
 ```
 
-Go back to Mendix Studio Pro and press <kbd>F4</kbd> or select **Project > Synchronize Project Directory** from the topbar menu to bring your application in sync with the changes we made to the **src/GroupBox.xml** file. Update the "Group Box" widget again. A content area will appear in the page editor. Add button ...
+Go back to Mendix Studio Pro and press <kbd>F4</kbd> or select **Project > Synchronize Project Directory** from the topbar menu to bring your application in sync with the changes we made to the **src/GroupBox.xml** file. Update the "Group Box" widget again. A content area will appear in the page editor.
+
+Next, drag a "Call nanoflow button" widget into the content area and create a new nanoflow "ACT_ShowMessage". Double click the button and change the caption to "Show message".
+
+Navigate to the nanoflow "ACT_ShowMessage" and drag in a "Show message" activity. Double click the activity and add the text "Hello World!" to the Template. Click the "OK" button.
+
+Run the app locally and verify that your button is triggering a message popup saying "Hello World!".
 
 TODO: add step to fill in sample text for sample widget.
-TODO: Rename widget from "Group Box" to "Group box"
 
 ## 4 Read More
 

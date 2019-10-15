@@ -387,6 +387,57 @@ Navigate to the nanoflow "ACT_ShowMessage" and drag in a "Show message" activity
 
 Run the app locally and verify that your button is triggering a message popup saying "Hello World!".
 
+### Making the widget collapsilble
+
+Now that our widget can contain content, the next challange is to hide this content by making it collapsible.
+
+First we will make the complete header clickable.
+
+1. Navigate to the display component (**src/components/GroupBox.tsx**).
+2. Import the React Native components **TouchableOpacity** and **TouchableNativeFeedback**:
+
+   ```tsx
+   import {
+     Text,
+     View,
+     Platform,
+     TouchableOpacity,
+     TouchableNativeFeedback
+   } from "react-native";
+   ```
+
+3. Create the following lambda method that is resonposible for rendering the clickable header:
+
+   ```tsx
+   private renderHeader = () => {
+       const view = (
+           <View style={this.styles.header}>
+               <Text style={this.styles.headerContent}>{this.props.headerCaption}</Text>
+               <Text style={this.styles.headerContent}>-</Text>
+           </View>
+       );
+
+       const Touchable: ComponentClass<any> = Platform.OS === "ios" ? TouchableOpacity : TouchableNativeFeedback;
+
+       return <Touchable>{view}</Touchable>;
+   };
+   ```
+
+4. Change the render method to make use of **renderHeader**:
+
+   ```tsx
+   render(): ReactNode {
+       return (
+           <View style={this.styles.container}>
+               {this.renderHeader()}
+               <View style={this.styles.content}>{this.props.children}</View>
+           </View>
+       );
+   }
+   ```
+
+5. Reload your test app in the Make It Native app to view the change. Try to click on the header. Note that on Android, the ripple effect is not visible on a black background, so at the moment you can't visually verify it's clickable.
+
 ## 4 Read More
 
 {Add links to related documents and blog posts; make sure necessary third-party links are contextualizecd ./d in the above sections, as they should not be put here}

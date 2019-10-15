@@ -7,6 +7,7 @@ title: "Local notifications for native"
 
 [todo: check that all "actions" are properly bolded]
 [todo: correct all image caption text]
+[todo: test]
 
 ## 1 Introduction
 

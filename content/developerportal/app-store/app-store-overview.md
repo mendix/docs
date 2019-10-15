@@ -134,8 +134,10 @@ On this page, you can see the App Store content for which you have created at le
 
 {{% alert type="info" %}}You may see certain labels on the content:</br>
 * **Protected** – details on this label are described below via the [Enable protection](#protect) button; if the content is protected, only [content managers](#cm) are able to manage it</br>
-* **Company only** – this is your company 's private App Store content (for details on how this is configured, see the [Adding New App Store Content](share-app-store-content#private-app-store) section of *How to Share App Store Content*); this content can be shared with [external downloaders](#ext)</br>
+* **Company only** – this is your company 's private App Store content (for details on how this is configured, see the [Adding New App Store Content](share-app-store-content#private-app-store) section of *How to Share App Store Content*); this content can be shared with [guests](#ext)</br>
 {{% /alert %}}
+
+{{% todo %}}[**ADD LINK TO GUEST**]{{% /todo %}}
 
 Clicking **Manage** opens the content management page:
 
@@ -143,9 +145,11 @@ Clicking **Manage** opens the content management page:
 
 On this page, you will see the following buttons (depending on your permissions):
 
+{{% todo %}}[**ENABLE/DISABLE PROTECTION: GOING AWAY - CONTENT IS ONLY PROTECTED WHEN ADDED TO A GROUP; PROTECTED CONTENT IS ADDED TO CONTENT TAB**]{{% /todo %}}
+
 * <a name="protect"></a>**Enable protection**/**Disable protection** – click this to toggle the protection level for the content
   * Enabling protection assigns the **Protected** label to the content, which means only [content managers](#cm) are able to manage it
-  * This button is only visible to Company Admins with the [Can manage App Store](../company-app-roles/manage-roles#app-store-manager) permission
+  * This button is only visible to Company Admins with the [Can manage Company](../company-app-roles/manage-roles#app-store-manager) permission
 * **Create new draft version** – click this to create a new draft version of the content (for details on creating a draft version, see the [Adding New App Store Content](share-app-store-content#edit) section of *How to Share App Store Content*)
 * **Unpublish** – click this to remove that version from the content
 * **Edit** – click this to edit the content (for details on editing, see step 6 of the [Adding New App Store Content](share-app-store-content#edit) section of *How to Share App Store Content*)
@@ -162,7 +166,9 @@ Click **Delete** to delete a draft.
 
 ### 4.4 Shared with Me {#shared-with-me}
 
-This page contains content shared with you by other companies have marked you as an [external downloader]():
+This page contains content shared with you by other companies who have marked you as a [guest]():
+
+{{% todo %}}[**ADD LINK TO GUEST**]{{% /todo %}}
 
 ![](attachments/app-store-overview/shared-with-me.png)
 
@@ -194,10 +200,65 @@ The **Manage** button is available to you for the following content:
 
 For details on how to manage content, see the [My Content](#content) section above.
 
-### 5.2 Shared with Others {#shared}
+### 5.2 Reviews
+
+This page contains reviews of **Your company's content** as well as **Your company's reviews** that users from your company have written of other content.
+
+![](attachments/app-store-overview/your-company-reviews.png)
+
+### 5.3 User Groups
+
+You can configure user groups for various levels of access to your company's App Store. The available configuration tabs for each user group page are described in the sections below.
+
+The **User Groups** menu item and page are visible to all users. However, only [Company Admins](../company-app-roles/companyadmin-settings) with the [Can manage Company](../company-app-roles/manage-roles#app-store-manager) permission can create and delete user groups. Both [Group admins](#members) and Company Admins can manage user groups.
+
+#### 5.3.1 Members Tab {#members}
+
+On this tab, you can click **Add** to add a member to the user group. User group members can manage the content assigned to the group.
+
+Once a member is added, you can select their permission level: **Member** or **Group Admin**. A Group Admin can manage the user group.
+
+{{% todo %}}[**ADD SCREENSHOT**]{{% /todo %}}
+
+Click **Remove** to remove a member from the group.
+
+#### 5.3.2 Guests
+
+On this page, you can add external downloaders from outside your company who you can share your company's private App Store content with via the [Shared with Others](#shared) page.
+
+To add an external downloader, enter their email address in the box and click Add:
+
+![](attachments/app-store-overview/external-downloaders.png)
+
+{{% todo %}}[**SHARED WITH ME STAYS**]{{% /todo %}}
+
+If the external downloader is registered with Mendix, they will receive an email notifying them of access to private App Store content. They can then see all the private App Store content shared with them in their [Shared with Me](#shared-with-me) page.
+
+To remove an external downloader, click **Remove** next to their name.
+
+
+
+
+#### 5.3.2 Content Managers {#cm}
+
+{{% todo %}}[**CONTENT MANAGERS: GOES AWAY, BECOME GROUP MEMBERS OR GROUP ADMINS; 10.15: STILL AVAILABLE**]{{% /todo %}}
+
+On this page, you can add App Store content managers for your company who will have rights to manage [protected content](#protect). To add a new content manager, enter their email address in the available field and click **Add**:
+
+![](attachments/app-store-overview/content-managers.png)
+
+To remove a content manager, click **Remove** next to their name
+
+
+
+
+
+
+
+### Shared with Others {#shared}
 
 {{% alert type="info" %}}
-This menu item and page are only visible to Company Admins with the [Can manage App Store](../company-app-roles/manage-roles#app-store-manager) permission.
+This menu item and page are only visible to Company Admins with the [Can manage Company](../company-app-roles/manage-roles#app-store-manager) permission.
 {{% /alert %}}
 
 This page contains company-only content that is shared with external downloaders. To set these external downloaders, click **View all people outside your company...** to be taken to the [External Downloaders](#ext) page.
@@ -215,39 +276,12 @@ There are two buttons available for shared content:
 * **Remove** – click this to remove the content from being shared with external downloaders
 * **View** – click this to go to the App Store page for the content
 
-### 5.3 Reviews
 
-This page contains reviews of **Your company's content** as well as **Your company's reviews** that users from your company have written of other content.
 
-![](attachments/app-store-overview/your-company-reviews.png)
 
-### 5.4 User Groups
 
-{{% alert type="info" %}}
-This menu item and page are only visible to Company Admins with the [Can manage App Store](../company-app-roles/manage-roles#app-store-manager) permission.
-{{% /alert %}}
 
-You can configure user groups for various levels of access to your company's App Store. The available user groups are described in the sections below.
 
-#### 5.4.1 Content Managers {#cm}
-
-On this page, you can add App Store content managers for your company who will have rights to manage [protected content](#protect). To add a new content manager, enter their email address in the available field and click **Add**:
-
-![](attachments/app-store-overview/content-managers.png)
-
-To remove a content manager, click **Remove** next to their name
-
-####  5.4.2 External Downloaders {#ext}
-
-On this page, you can add external downloaders from outside your company who you can share your company's private App Store content with via the [Shared with Others](#shared) page.
-
-To add an external downloader, enter their email address in the box and click Add:
-
-![](attachments/app-store-overview/external-downloaders.png)
-
-If the external downloader is registered with Mendix, they will receive an email notifying them of access to private App Store content. They can then see all the private App Store content shared with them in their [Shared with Me](#shared-with-me) page.
-
-To remove an external downloader, click **Remove** next to their name.
 
 ## 6 Read More
 

@@ -7,48 +7,50 @@ tags: ["Studio Pro", "consistency errors", "checks", "errors", "pages"]
 
 ## 1 Introduction 
 
-In this document, we will explain how to solve the most common consistency errors that can occur when configuring pages in Studio Pro. An example of a consistency error is when you do not specify the entity property of a data view on a page. 
+In this document, we explain how to solve the most common consistency errors that can occur when configuring pages in Studio Pro. An example of a consistency error is when you do not specify the entity property of a data view on a page. 
 
 ## 2 List View Consistency Errors 
 
 If you do not configure a [data source](data-sources) for a [list view](list-view) properly, you will get consistency errors. 
 
-The scheme below shows that the data source of the list view has been set to **Database**, but the specific entity that needs to be retrieved from the database has not been set. This results in a consistency error. 
+The scheme below shows that the data source of the list view has been set to **Database**, but the entity that needs to be retrieved from the database has not been specified. This results in a consistency error. 
 
 ![Data Source Consistency Error Scheme](attachments/consistency-errors-pages/list-view-error.png)
 
-The table below describes the most common errors you can come across when configuring a list view,  causes of these errors, and ways to fix them. 
+The table below describes the most common errors which can occur when configuring a list view,  the causes of these errors, and ways to fix them. 
 
-| Error Code | Text in the Checks Panel                                     | Cause of an Error                                            | Way to Fix                                                   |
+| Error Code | Message in the Error Pane                                    | Cause of the Error                                           | Way to Fix                                                   |
 | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| CE0488     | No entity configured for the data source of this list view. Select an entity or change the data source. | The **Database/XPath/Association** option is selected as a data source for a list view, but no entity is specified. | To fix the error, do one of the following: <ul><li>Right-click the list view, click **Select Entity** in the drop-down list, and set an entity</li><li>Open list view's properties > **Data source** and select an entity in the **Entity (path)** field</li></ul>You can also change the type of a data source for the list view. |
-|            | No microflow configured for the data source of this list view. Select a microflow or change the data source. | The data source is set to **Microflow**, but no specific microflow is selected. | Open list view's properties > **Data source** and select a microflow in the **Microflow** field, or change the type of a data source. |
-|            | No nanoflow configured for the data source of this list view. Select a nanoflow or change the data source. | The data source is set to **Nanoflow**, but no specific nanoflow is selected. | Open list view's properties > **Data source** and select a microflow in the **Nanoflow** field, or change the type of a data source. |
-| CE0595     | Attribute {AttributeName} is not an attribute of entity {EntityName}. | You have changed the target entity of a list view without updating its contents. The contents of the list view are filled with attributes of another entity. | Open the widget's properties > **Data source** and select another attribute for **Attribute (path)**. |
+| CE0488     | No entity configured for the data source of this list view. Select an entity or change the data source. | The **Database/XPath/Association** option is selected as a data source for a list view, but no entity is specified. | To fix the error, do one of the following: <ul><li>Open list view's properties > **Data source** and select an entity in the **Entity (path)** field</li></ul>You can also change the type of a data source for the list view. |
+|            | No microflow configured for the data source of this list view. Select a microflow or change the data source. | The data source is set to **Microflow**, but no microflow is specified. | Open list view's properties > **Data source** and select a microflow in the **Microflow** field, or change the type of the data source. |
+|            | No nanoflow configured for the data source of this list view. Select a nanoflow or change the data source. | The data source is set to **Nanoflow**, but no specific nanoflow is selected. | Open list view's properties > **Data source** and select a nanoflow in the **Nanoflow** field, or change the type of the data source. |
+| CE0595     | Attribute {AttributeName} is not an attribute of entity {EntityName}. | You have changed the target entity of a list view without updating its contents. The list view is filled with attributes of another entity. | Open widget's properties > **Data source** and select another attribute for **Attribute (path)**. |
 
 ## 3 Data View Consistency Errors 
 
-Not configuring a [data source](data-sources) for a [data view](data-view) in a proper way results in consistency errors. For example, you have selected **Listen to widget** as a data source, but you have not selected the specific **List widget** you are pointing to.
+If you do not configure a [data source](data-sources) for a [list view](data-view) properly, you will get consistency errors.
+
+For example, you have selected **Listen to widget** as the data source, but you have not selected the specific **List widget** you are listening to.
 
 ![Data View With no List Widget Configured](attachments/consistency-errors-pages/data-view-no-list-widget.png)
 
 The table below describes the most common errors you can come across when configuring a data view,  causes of these errors, and ways to fix them. 
 
-| Error Code | Text in the Checks Panel                                     | Cause of an Error                                            | Way to Fix                                                   |
+| Error Code | Message in the Error Pane                                    | Cause of the Error                                           | Way to Fix                                                   |
 | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| CE0488     | No entity configured for the data source of this data view. Select an entity or change the data source. | **Context** is selected as a data source for a data view, but no entity is specified. | Open data view's properties > the **Data Source** section and select an entity in the **Entity** field, or change the type of a data source. |
-|            | No microflow configured for the data source of this data view. Select a microflow or change the data source | A microflow is selected as a data source, but no specific microflow is selected. | Open data view's properties > the **Data Source** section and select a microflow in the **Microflow** field, or change the type of a data source. |
+| CE0488     | No entity configured for the data source of this data view. Select an entity or change the data source. | **Context** is selected as a data source for a data view, but no entity is specified. | Open data view's properties > the **Data Source** section and select an entity in the **Entity** field, or change the type of the data source. |
+|            | No microflow configured for the data source of this data view. Select a microflow or change the data source | A microflow is selected as a data source, but no microflow is specified. | Open data view's properties > the **Data Source** section and select a microflow in the **Microflow** field, or change the type of the data source. |
 | CE0536     | No list widget configured for the data source of this data view. Select a widget or change the data source. | A **Listen to widget** is configured as a data source for a data view, but the specific list view widget does not exist anymore on the same page. | Create a list view on the same page, configure it, and select it as a list widget for the data view; or change the type of the data source. |
-| CE0558     | All data views receiving object from the page parameter must have the same entity. | You have several data view on one page that have different entities as a data source. | Select one and the same entity for all data views, or change the data source for them. |
+| CE0558     | All data views receiving object from the page parameter must have the same entity. | You have several data views on one page that have different entities as their data sources. | Select the same entity for all data views using the page context, or change the data source for them. |
 
 ## 4 Context Not Available Consistency Errors
 
-Possible errors that you can get when a page is expecting a context that is unavailable are described in the table below. 
+The errors that you can get when a page is expecting a context that is unavailable are described in the table below. 
 
-| Error Code | Text in the Checks Panel                                     | Cause of an Error                                            | Way to Fix                                                   |
+| Error Code | Message in the Error Pane                                    | Cause of the Error                                           | Way to Fix                                                   |
 | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | CE1568     | The selected page {Name of the page} expects an object of type {type of object}, which is not available here. | The page has a data view that expects an object of a particular type to be passed to it. This error occurs when the page is called from another page, which does not have this object available. For a more detailed example, see the [Error Fix Example for CE1568](#error-example-1). | Make sure that the object is passed to the page that has a configured data view on it. For more information, see the [Error Fix Example for CE1568](#error-example-1). |
-| CE1569     | The selected page {Name of page} expects an object of type X, which is not compatible with the object of type Y that is available here. | You have a widget (for example, a button) that opens a page. The page has a data view that expects an object of particular type to be passed to it. However, the widget is placed inside a data container with another type of object. For a detailed example, see the [Error Fix Example for CE1569](#error-example-2) section. | Make sure that the button is placed in the correct data container and passes the correct type of object to the page. For more information, see the [Error Fix Example for CE1569](#error-example-2) section. |
+| CE1569     | The selected page {Name of page} expects an object of type X, which is not compatible with the object of type Y that is available here. | You have a widget (for example, a button) that opens a page. The page has a data view that expects an object of particular type to be passed to it. However, the widget is placed inside a data container with another type of object. For a detailed example, see the [Error Fix Example for CE1569](#error-example-2) section. | Make sure that the button is placed in a data container which passes the correct type of object to the page. For more information, see the [Error Fix Example for CE1569](#error-example-2) section. |
 
 ### 4.1 Error Fix Example for CE1568 {#error-example-1}
 
@@ -66,7 +68,7 @@ As this object is not passed to it from the **Customers** page, you get a consis
 
 ![Example of Error When Context is Unavailable](attachments/consistency-errors-pages/object-error.png)
 
-As the **Details** button to the **Customers** page is outside a data container, it does not know which Customer (object) to pass. The way of fixing this error depends on the following:
+As the **Details** button to the **Customers** page is outside a data container, it does not know which object to pass. The way of fixing this error depends on the following:
 
 * You want to pass a specific *Customer* object from the Customer list to the **Customer Details** page, in other words, the details of a particular customer will be displayed on the **Customer Details** page (for more information, see the [Passing a Specific Object to the Page](#passing-specific-object) section)
 * You want to create a new object of the *Customer* type and pass it to the **Customer Details** page, this means that a new customer will be created (for more information, see the [Creating a New Object and Passing it to the Page](#creating-new-object) section)
@@ -125,22 +127,22 @@ To fix this error you can do one of the following:
 
 ## 5 Data Consistency Errors
 
-When a widget that expects an object from its data source does not get it or gets an object from a different entity type, it causes errors in data consistency. 
+When a widget that expects as object from its data source does not get it or gets an object from a different entity type, it causes errors in data consistency. 
 
-One of the most common errors of this type are described in the table below:
+Some of the most common errors of this type are described in the table below:
 
-| Error Code | Text in the Checks Panel                                     | Cause of an Error                                            | Way to Fix                                                   |
+| Error Code | Message in the Error Pane                                    | Cause of the Error                                           | Way to Fix                                                   |
 | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | CE0552     | Microflow {name of the microflow} does not return an object. | The data source of a widget (for example, a data view) is set to **Microflow**, but the microflow does not return any object. | Open the microflow and configure a return value for it. Do the following: <ol><li>Double-click the end event.</li><li>In the **End Event** dialog window, set **Type** from **Nothing** to the data type you would like it to return.</li><li>Set the **Entity** option if needed (whether this option is displayed depends on the selected data type).</li><li> Specify the **Return value**.</li></ol> |
 | CE0551     | Microflow {name of the microflow} does not return a list.    | The data source of a list view is set to **Microflow**, but the microflow does not return a list. | Open the microflow and configure it to return a list. Do the following: <ol><li>Double-click the end event.</li><li> In the **End Event** dialog window, set **Type** from **Nothing** to **List**.</li><li>Set the **Entity** option.</li><li>Specify the **Return value**.</li></ol> |
-| CE1573     | Parameter {Name of the parameter} of the selected microflow/nanoflow does not match available arguments. No arguments available to {Name of the widget}. | You selected a microflow or a nanoflow as an on-click event of a widget (for example, of a button) and the microflow/nanoflow contains a parameter, but no arguments (for example, an object) are available for the microflow. | Place the widget in a data container and make sure that the data source of the data container matches the entity selected in **Data type** property of the microflow/nanoflow parameter. For a detailed example and a fix for it, see the [Error Fix Example for CE1573](#error-fix-example-3) section. |
-| CE1574     | Parameter {Name of the parameter} of the selected microflow/nanoflow does not match available arguments. Arguments available to {Name of the widget} are {lust of available arguments}. | You selected a microflow/nanoflow as the data source of a widget, but an argument (or arguments) available for this widget does not match the parameter of the microflow. | Make sure that an argument (for example, an object) available for the widget matches the entity selected in the **Data type** property of the microflow/nanoflow parameter. For a detailed example and a fix for it, see the [Error Fix Example for CE1574](#error-fix-example-4) section. |
+| CE1573     | Parameter {Name of the parameter} of the selected microflow/nanoflow does not match available arguments. No arguments available to {Name of the widget}. | You selected a microflow or a nanoflow as an on-click event of a widget (for example, of a button) and the microflow/nanoflow contains a parameter, but no argument (for example, an object) is available for the widget to pass to the microflow. | Place the widget in a data container and make sure that the data source of the data container matches the entity selected in **Data type** property of the microflow/nanoflow parameter. For a detailed example and a fix for it, see the [Error Fix Example for CE1573](#error-fix-example-3) section. |
+| CE1574     | Parameter {Name of the parameter} of the selected microflow/nanoflow does not match available arguments. Arguments available to {Name of the widget} are {list of available arguments}. | You selected a microflow or nanoflow as the data source of a widget, but the argument (or arguments) available for this widget does not match the parameter(s) of the microflow. | Make sure that an argument (for example, an object) available for the widget matches the entity selected in the **Data type** property of the microflow/nanoflow parameter. For a detailed example and a fix for it, see the [Error Fix Example for CE1574](#error-fix-example-4) section. |
 
 ### 5.1 Error Fix Example for CE1573 {#error-fix-example-3}
 
 When you set a microflow or a nanoflow as an on-click event for a widget, and this microflow expects an argument (for example, an object) that is not available, this will result in an error. 
 
-For example, on a page named *Customers* you have a button that calls a microflow (i.e. an [**On click** event](on-click-event) of the button is set to *Microflow*):
+For example, on a page named *Customers* you have a button that calls a microflow (that is an [**On click** event](on-click-event) of the button is set to *Microflow*):
 
  ![](attachments/consistency-errors-pages/on-click-event-button.png)
 
@@ -164,9 +166,9 @@ Now the *Customer* object is available on the page and it matches the microflow 
 
 ### 5.2 Error Fix Example CE1574 {#error-fix-example-4}
 
-When you set a microflow/nanoflow as an on-click event for a widget, and this microflow/nanoflow expects a certain argument, but another argument is available on the page, this will result in an error. 
+When you set a microflow or nanoflow as an on-click event for a widget, and this microflow/nanoflow expects a certain argument, but a different argument is available to the widget, this will result in an error. 
 
-For example, on a page named *Customers* you have a button that calls a microflow (i.e. an [**On click** event](on-click-event) of the button is set to *Microflow*):
+For example, on a page named *Customers* you have a button that calls a microflow (that is an [**On click** event](on-click-event) of the button is set to *Microflow*):
 
  ![](attachments/consistency-errors-pages/on-click-event-button.png)
 
@@ -178,7 +180,7 @@ On the *Customers* page you also have a data container, for example, a data view
 
 ![](attachments/consistency-errors-pages/data-view-data-source.png)
 
-As the microflow has the parameter *Customer*, and the page has the object *Photo*, they are conflicting and resulting into an error.
+As the microflow has the parameter *Customer*, and the data view has the object *Photo*, they are conflicting and resulting into an error.
 
 The best way to fix this error is to do the following: 
 
@@ -191,11 +193,11 @@ Now the object available on the page matches the microflow parameter *Customer*.
 
 The most common errors for input widgets, their causes, and ways to fix them are described in the table below. For more information on input widgets, see [Input Widgets](input-widgets). 
 
-| Error Code | Text in the Checks Panel                                     | Cause of an Error                                            | Way to Fix                                                   |
+| Error Code | Message in the Error Pane                                    | Cause of the Error                                           | Way to Fix                                                   |
 | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| CE0544     | This widget can only function inside a data container. Move it into a data view, list view or template grid. | You have added an input widget to a page, but it is not inside a data container. Input widgets need to refer to an attribute of a specific entity type. And entities are only available via data containers. For more information about input widgets, see [Input Widgets](input-widgets). | Place this widget into a data container: data view, list view, or a template grid. |
+| CE0544     | This widget can only function inside a data container. Move it into a data view, list view or template grid. | You have added an input widget to a page, but it is not inside a data container. Input widgets need to refer to an attribute of a specific entity type. And entities are only available via data containers. For more information about input widgets, see [Input Widgets](input-widgets). | Place this widget into a data container: a data view, list view, or template grid. |
 | CE0545     | Select an attribute for this {widget name}.                  | You have added an input widget, and it is inside a data container, but an attribute is not selected for it. | Right-click the widget, click **Select Attribute** in the drop-down list, and set an attribute; or open widget's properties > the **Data source** section and set an attribute in the **Attribute (path)** field. |
-|            | Association {Name} must be a reference (not a reference set) | You have added a reference selector, but the association you have selected for it is not of reference type (not one-to-many). | Open your domain model, find the association you have selected for the reference selector, and change it to a one-to-many association. For more information on how to fix this error for the reference selector, see section the [Incorrect Multiplicity for a Reference Selector](#incorrect-multiplicity-reference) section |
+|            | Association {Name} must be a reference (not a reference set) | You have added a reference selector, but the association you have selected for it is not of reference type (not one-to-many or one-to-one). | Open your domain model, find the association you have selected for the reference selector, and change it to a one-to-many association. For more information on how to fix this error for the reference selector, see the [Incorrect Multiplicity for a Reference Selector](#incorrect-multiplicity-reference) section |
 |            | Association {Name} must be a reference set (not a reference) | You have added a reference set selector or an input reference set selector, but the association you have selected for it is not of reference set type (not many-to-many). | Open your domain model, find the association you have selected for the reference set selector, and change it to a many-to-many association. For more information on how to fix the consistency error for the reference set selector and input reference set selector, see the [Incorrect Multiplicity for a Reference Set Selector and an Input Reference Set Selector](#incorrect-multiplicity-reference-set) section |
 |            | Entity {Name} has no association {Name}                      | You added a reference set selector or an input reference set selector, but you have changed the owner of association. | Open your domain model, select one of the entities and in its properties change the owner of association. For more information on how to fix the consistency error for the reference set selector and input reference set selector, see the [Incorrect Ownership for a Reference Set Selector and an Input Reference Set Selector](#incorrect-ownership) section |
 
@@ -277,7 +279,7 @@ You have changed the owner of the association.
 
 File widgets should be placed in a data container, otherwise you will get consistency errors. Another way to fix consistency errors is to place a file widget to a [snippet](snippet). For more information on file widgets, see [File Widgets](file-widgets). 
 
-| Error code | Text in the Checks Panel                                     | Cause of an Error                                            | Way to Fix                                                   |
+| Error code | Message in the Error Pane                                    | Cause of the Error                                           | Way to Fix                                                   |
 | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 |            | A [file manager](file-manager) must be placed in a data view or  snippet that is connected to entity ‘System.FileDocument’ or a specialization. | You have added a file manager to a page, but it is not inside a data view or a snippet that is configured properly. | Place this widget into a data container. If you want to place it into a snippet, mind that you need to configure it properly: set System.FileDocument or its specialization as entity for this snippet. |
 |            | An [image uploader](image-uploader) must be placed in a data view or snippet that is connected to entity ‘System.Image’ or a specialization. | You have added an image uploader to a page, but it is not inside a data view or a snippet that is configured properly. | Place this widget into a data container. If you want to place it into a snippet, mind that you need to configure it properly: set System.Image or its specialization as entity for this snippet. |

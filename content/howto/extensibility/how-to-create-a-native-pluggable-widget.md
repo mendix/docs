@@ -406,7 +406,7 @@ First we will make the complete header clickable.
    } from "react-native";
    ```
 
-3. Create the following lambda method that is resonposible for rendering the clickable header:
+3. Create the following lambda method that is resonposible for rendering the clickable header (TODO: explain why two different components and Touchable component = dynamic component):
 
    ```tsx
    private renderHeader = () => {
@@ -436,7 +436,67 @@ First we will make the complete header clickable.
    }
    ```
 
-5. Reload your test app in the Make It Native app to view the change. Try to click on the header. Note that on Android, the ripple effect is not visible on a black background, so at the moment you can't visually verify it's clickable.
+5. Reload your test app in the Make It Native app to view the change. Try to click on the header. Note that on Android, the ripple effect is not visible on a black background, so at the moment you can't visually verify yet whether it's clickable.
+
+Let's now make it possible to expand or collapse the group box.
+
+1. Navigate to the display component (**src/components/GroupBox.tsx**).
+2. Create an **GroupBoxState** interface below the **GroupBoxProps** one:
+
+   ```tsx
+   export interface GroupBoxProps {
+     headerCaption?: string;
+     style: CustomStyle[];
+   }
+
+   export interface GroupBoxState {
+     collapsed: boolean;
+   }
+   ```
+
+3. Change the class definition as follows to give our component a state to keep track on whether it's collapsed or not:
+
+   ```tsx
+   export class GroupBox extends Component<GroupBoxProps, GroupBoxState>
+   ```
+
+4. Set collapsed to false for the initial state by adding the following code inside the class:
+
+   ```tsx
+   readonly state: GroupBoxState = {
+       collapsed: false
+   };
+   ```
+
+5. Add the following lambda method to the class to change the collapsed state:
+
+   ```tsx
+   private toggleCollapsed = (): void => {
+       const collapsed = !this.state.collapsed;
+       this.setState({ collapsed });
+   };
+   ```
+
+6. Let the **Touchable** component execute the **toggleCollapsed** method when it's pressed (clicked) by altering the **renderHeader** method as follows:
+
+   ```tsx
+   private renderHeader = () => {
+       const view = (
+           <View style={this.styles.header}>
+               <Text style={this.styles.headerContent}>{this.props.headerCaption}</Text>
+               <Text style={this.styles.headerContent}>-</Text>
+           </View>
+       );
+
+       const Touchable: ComponentClass<any> = Platform.OS === "ios" ? TouchableOpacity : TouchableNativeFeedback;
+
+       return <Touchable onPress={this.toggleCollapsed}>{view}</Touchable>;
+   };
+   ```
+
+7. Extract the rendering of the content block from the **render** method to a method called **renderContent**:
+
+TODO: don't render content area when there is nothing inside.
 
 ## 4 Read More
 

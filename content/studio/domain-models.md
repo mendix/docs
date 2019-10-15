@@ -120,7 +120,7 @@ The new entity is added to the domain model.
 
 While adding new entities from the **Toolbox** works for all types of entities, you can use a specific way of adding image and file entities to your domain model.
 
-For example, you have an entity named *Laptop* and you want to be able to show users a specific image depending on the laptop model. In this case, you need to create an image entity (for example, named *Product_Image*). However, to get data and dynamically show the right image per laptop model, the *Product_Image* entity should also have a specific connection (an association) to the *Laptop* entity. For more information on associations and their types, see [Association Properties](domain-models-association-properties). 
+For example, you have an entity named *Laptop* and you want to be able to show users a specific image depending on the laptop model. In this case, you need to create an image entity (for example, named *Product_Image*). However, to get data and dynamically show the right image per laptop model, the *Product_Image* entity should also have a specific connection (an association) to the *Laptop* entity. For more information on associations and their types, see [Associations](domain-models-association-properties). 
 
 To create a new image/file entity with an association automatically, follow the process described below:
 
@@ -177,7 +177,7 @@ A module name is indicated next to the entity name in brackets.
 
 {{% alert type="info" %}}
 
-If you select the entity from another module, you will create a cross-module association. For more information, see the [Cross-Module Associations](domain-models-association-properties#cross-module-associations) section in *Association Properties*. The entities of the current module are listed first. 
+If you select the entity from another module, you will create a cross-module association. For more information, see the [Cross-Module Associations](domain-models-association-properties#cross-module-associations) section in *Associations*. The entities of the current module are listed first. 
 
 {{% /alert %}}
 
@@ -233,11 +233,11 @@ You can manage the following properties of an association:
 *   **Multiplicity** of the association
 *   The delete behavior of the objects
 
-For more information, see [Association Properties](domain-models-association-properties). 
+For more information, see [Associations](domain-models-association-properties). 
 
 To change the association, click the line in the domain model. The **Properties** tab for the selected entity is displayed automatically. 
 
-If the association type is one-to-many or many-to-many, you can swap direction of it clicking the corresponding icon. For more information, see section [3 Multiplicity](domain-models-association-properties#multiplicity) in *Association Properties*. 
+If the association type is one-to-many or many-to-many, you can swap direction of it clicking the corresponding icon. For more information, see section [3 Multiplicity](domain-models-association-properties#multiplicity) in *Associations*. 
 
 {{% image_container width="350" %}}![](attachments/domain-models/managing-associations.png)
 {{% /image_container %}}
@@ -261,5 +261,5 @@ You cannot delete *Name* and *Size* attributes of image and file entities.
 
 ## 8 Read More
 
-* [Attribute Types](domain-models-attributes)
-* [Association Properties](domain-models-association-properties) 
+* [Attributes](domain-models-attributes)
+* [Associations](domain-models-association-properties) 

@@ -550,6 +550,158 @@ Let's now make it possible to expand or collapse the group box.
 
 8. Check your changes in the Make It Native app.
 
+### Adding an expand & collapse icon property
+
+The next step is to allow a Mendix developer to use a custom icon in the clickable header.
+
+1. Head to **src/GroupBox.xml** and add two icon properties:
+
+   ```xml
+   <?xml version="1.0" encoding="utf-8" ?>
+   <widget id="mendix.groupbox.GroupBox" pluginWidget="true" offlineCapable="true" supportedPlatform="Native"
+       xmlns="http://www.mendix.com/widget/1.0/"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+       <name>Group box</name>
+       <description>Widget to group building blocks, snippets or other widgets</description>
+       <icon/>
+       <properties>
+           <propertyGroup caption="General">
+               <property key="content" type="widgets" required="false">
+                   <caption>Content</caption>
+                   <description>Widgets to place inside</description>
+               </property>
+               <property key="headerCaption" type="string" required="false">
+                   <caption>Header caption</caption>
+                   <description/>
+               </property>
+               <property key="expandIcon" type="icon" required="false">
+                   <caption>Expand icon</caption>
+                   <description>Icon used to indicate that the group box can be expanded</description>
+               </property>
+               <property key="collapseIcon" type="icon" required="false">
+                   <caption>Collapse icon</caption>
+                   <description>Icon used to indicate that the group box can be collapsed</description>
+               </property>
+           </propertyGroup>
+       </properties>
+   </widget>
+   ```
+
+2. Add property groups around the properties to create a more readable properties window in Mendix Studio Pro:
+
+   ```xml
+   <?xml version="1.0" encoding="utf-8" ?>
+   <widget id="mendix.groupbox.GroupBox" pluginWidget="true" offlineCapable="true" supportedPlatform="Native"
+       xmlns="http://www.mendix.com/widget/1.0/"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+       <name>Group box</name>
+       <description>Widget to group building blocks, snippets or other widgets</description>
+       <icon/>
+       <properties>
+           <propertyGroup caption="General">
+               <propertyGroup caption="General">
+                   <property key="content" type="widgets" required="false">
+                       <caption>Content</caption>
+                       <description>Widgets to place inside</description>
+                   </property>
+               </propertyGroup>
+               <propertyGroup caption="Header">
+                   <property key="headerCaption" type="string" required="false">
+                       <caption>Caption</caption>
+                       <description/>
+                   </property>
+                   <property key="expandIcon" type="icon" required="false">
+                       <caption>Expand icon</caption>
+                       <description>Icon used to indicate that the group box can be expanded</description>
+                   </property>
+                   <property key="collapseIcon" type="icon" required="false">
+                       <caption>Collapse icon</caption>
+                       <description>Icon used to indicate that the group box can be collapsed</description>
+                   </property>
+               </propertyGroup>
+           </propertyGroup>
+       </properties>
+   </widget>
+   ```
+
+3. Save the xml file and head over to the display component.
+
+4. Add two new props for an expand and collapse icon by changing the **GroupBoxProps** interface:
+
+5. Create a lambda method **renderIcon** that uses an supplied icon:
+
+   ```tsx
+   private renderIcon = (): ReactNode => {
+        const { collapseIcon, expandIcon } = this.props;
+
+        if (this.state.collapsed) {
+            return expandIcon ? expandIcon : <Text style={this.styles.headerContent}>+</Text>;
+        }
+
+        return collapseIcon ? collapseIcon : <Text style={this.styles.headerContent}>-</Text>;
+    };
+   ```
+
+6. Change the method **renderHeader** so that it makes use of **renderIcon**:
+
+   ```tsx
+   private renderHeader = () => {
+       const view = (
+           <View style={this.styles.header}>
+               <Text style={this.styles.headerContent}>{this.props.headerCaption}</Text>
+               {this.renderIcon()}
+           </View>
+       );
+
+       const Touchable: ComponentClass<any> = Platform.OS === "ios" ? TouchableOpacity : TouchableNativeFeedback;
+
+       return <Touchable onPress={this.toggleCollapsed}>{view}</Touchable>;
+   };
+   ```
+
+7. Next we have to pass the icons set by the Mendix developer to our display component. If an icon isn't explicitly set, we will pass a default glyph (glyphs are provided by the Mendix client). Go to the container component (**src/GroupBox.tsx**) so we can make the changes.
+
+8. Create two constants outside the class that hold the glyph references:
+
+   ```tsx
+   const defaultCollapseIconGlyph = "glyphicon-minus";
+   const defaultExpandIconGlyph = "glyphicon-plus";
+   ```
+
+9. Do the following imports:
+
+   ```tsx
+   import { DynamicValue, NativeIcon, ValueStatus } from "mendix";
+   import { Icon } from "mendix/components/native/Icon";
+   ```
+
+10. Add a lambda method **renderIcon** to the **GroupBox** class:
+
+    ```tsx
+    private renderIcon = (toBeRenderedIcon: DynamicValue<NativeIcon> | undefined, glyph: string) => {
+        const nativeIcon: NativeIcon =
+            toBeRenderedIcon && toBeRenderedIcon.status === ValueStatus.Available
+                ? toBeRenderedIcon.value
+                : { type: "glyph", iconClass: glyph };
+
+        return (
+            <Icon color={this.styles.headerContent.color} icon={nativeIcon} size={this.styles.headerContent.fontSize} />
+        );
+    };
+    ```
+
+11. Adjust the **render** method so that it makes use of **renderIcon**:
+
+```tsx
+```
+
+TODO:
+
+- import DynamicValue, NativeIcon, Icon
+- renderIcon
+- change render method
+- defaultStyle for icon
+
 ## 4 Read More
 
 {Add links to related documents and blog posts; make sure necessary third-party links are contextualizecd ./d in the above sections, as they should not be put here}

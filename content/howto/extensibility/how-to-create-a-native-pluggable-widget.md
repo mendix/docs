@@ -129,8 +129,9 @@ In order to test our group box widget we want to create a Mendix application tha
    3. Delete the content.
    4. Search in toolbox for the **Group Box** widget.
    5. Drag the widget into the new container.
+   6. Double click the widget and fill in your name as default value.
 
-5. Setting up the test project is done. Run the test project locally and use the makeitnative app to view the sample widget code in action. If you followed the steps carefully you should see yellow text in your app saying "Hello World".
+5. Setting up the test project is done. Run the test project locally and use the makeitnative app to view the sample widget code in action. If you followed the steps carefully you should see yellow text in your app saying "Hello {your name}".
 
 ### 3.3 Building the group box widget
 
@@ -385,8 +386,6 @@ Next, drag a "Call nanoflow button" widget into the content area and create a ne
 Navigate to the nanoflow "ACT_ShowMessage" and drag in a "Show message" activity. Double click the activity and add the text "Hello World!" to the Template. Click the "OK" button.
 
 Run the app locally and verify that your button is triggering a message popup saying "Hello World!".
-
-TODO: add step to fill in sample text for sample widget.
 
 ## 4 Read More
 

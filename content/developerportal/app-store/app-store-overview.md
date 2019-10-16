@@ -30,7 +30,7 @@ Category | Description
 
 To see a detail page for each category, click **View more**.
 
-## 3 Add-On Details Page {#AddonDetailsPage}
+## 3 Add-On Details Page {#details}
 
 Clicking an App Store component in a menu will bring you to the component's details page. The details page presents the sections described below.
 
@@ -77,11 +77,11 @@ The details page for each add-on and app presents the following item information
 
 	![](attachments/app-store-overview/content_detail_8.png)
 	
-*  **Group members** tab – lists the [user group members](#members) if this is a protected App Store component:
+*  **Group members** tab – lists the [user group members](#members) if this is an App Store component assigned to a [user group](#user-groups)
 
 	![](attachments/app-store-overview/content_detail_9.png)
 
-{{% todo %}}[**VERIFY NAME OF GROUP MEMBERS TAB; UPDATE SCREENSHOTS ABOVE FOR NEW TAB NAME**]{{% /todo %}}
+{{% todo %}}[**VERIFY NAME OF GROUP MEMBERS TAB ABOVE; UPDATE SCREENSHOTS FOR NEW TAB NAME ABOVE**]{{% /todo %}}
 
 ### 3.3 Additional Info Section {#additional-info}
 
@@ -132,28 +132,30 @@ The **Dashboard** page presents your App Store activity:
 
 On this page, you can see the App Store components for which you have created at least one version:
 
+{{% todo %}}[**UPDATE SCREENSHOT**]{{% /todo %}}
+
 ![](attachments/app-store-overview/my-content.png)
 
-{{% alert type="info" %}}You may see certain labels on the component:</br>
-* **Protected** – details on this label are described below via the [Enable protection](#protect) button; if the component is protected, only [user group members](#members) are able to manage it</br>
-* **Company only** – this is your company 's private App Store content (for details on how this is configured, see the [Adding New App Store Components](share-app-store-content#private-app-store) section of *How to Share App Store Content*); this content can be shared with [guests](#guests)</br>
+{{% alert type="info" %}}
+You may see the **Company only** label on a component, which means it is your company's private App Store content (for details on how this is configured, see the [Adding New App Store Components](share-app-store-content#private-app-store) section of *How to Share App Store Content*). This content can be shared with [guests](#guests).
 {{% /alert %}}
 
-Clicking **Manage** opens the management page:
+To see the component's [details](#details) page, click **View**.
+
+#### 4.2.1 Managing a Component {#manage}
+
+Click **Manage** to manage the component:
 
 ![](attachments/app-store-overview/content-management.png)
 
-{{% todo %}}[**REVIEW PAGE FOR WHAT MESSAGE SAYS AT TOP WITH "CONTENT MANAGERS"; SHOULD REVIEW ALL SCREENSHOTS FOR STYLING CHANGES**]{{% /todo %}}
+{{% todo %}}[**VERIFY "Unpublish" CONDITIONS IN REVIEW**]{{% /todo %}}
 
-On this page, you will see the following buttons (depending on your permissions):
+On this page, you will see the following buttons:
 
-{{% todo %}}[**ENABLE/DISABLE PROTECTION: GOING AWAY - CONTENT IS ONLY PROTECTED WHEN ADDED TO A GROUP; PROTECTED CONTENT IS ADDED TO CONTENT TAB**]{{% /todo %}}
-
-* <a name="protect"></a>**Enable protection**/**Disable protection** – click this to toggle the protection level for the component
-  * Enabling protection assigns the **Protected** label to the component, which means only [content managers](#cm) are able to manage it
-  * This button is only visible to Company Admins with the [Can manage Company](../company-app-roles/manage-roles#app-store-manager) permission
 * **Create new draft version** – click this to create a new draft version of the component (for details on creating a draft version, see the [Updating Existing App Store Content](share-app-store-content#updating) section of *How to Share App Store Content*)
 * **Unpublish** – click this to remove that version from the component
+	* If the component is not the protected content of a [user group](#user-groups), you can only unpublish a version that you have published yourself
+	* If the component is protected [content](#content) from a user group, a group [member](#members) can unpublish any version
 * **Edit** – click this to edit the component (for details on editing, see the [Adding New App Store Content](share-app-store-content#edit) section of *How to Share App Store Content*)
 
 ### 4.3 Drafts
@@ -170,13 +172,11 @@ Click **Delete** to delete a draft.
 
 This page contains content shared with you by other companies who have marked you as a [guest](#guests):
 
-{{% todo %}}[**ADD LINK TO GUEST**]{{% /todo %}}
-
 ![](attachments/app-store-overview/shared-with-me.png)
 
 ### 4.5 Reviews {#my-reviews}
 
-This page contains reviews of **Your content** by other users as well as **Your reviews** that you have written of other content:
+This page contains reviews of [Your content](#content) by other users as well as **Your reviews** that you have written of other content:
 
 ![](attachments/app-store-overview/your-reviews.png)
 
@@ -192,17 +192,19 @@ This page presents a history of notifications on content you have contributed to
 
 On this page, you can see all the content your company has published:
 
+{{% todo %}}[**UPDATE SCREENSHOT FOR REMOVAL OF "PROTECTED" LABEL**]{{% /todo %}}
+
 ![](attachments/app-store-overview/company-content.png)
 
-The **Manage** button is available to you for the following content:
+The **Manage** button is available to you if one of the following conditions is true:
 
-* Content you have published
-* Your company's content that is not protected
-* Your company's content that is [protected](#protect) for which you are a [user group member](#members)
+* You are the creator of the component and the component is not assigned to any [user groups](#user-groups)
+* The component is assigned to a user group, and you are a [member](#members) of that group
+* You are a Company Admin of the company that published the component
 
-{{% todo %}}[**REVIEW ABOVE FOR "PROTECTED"; UPDATE SCREENSHOT ABOVE FOR "PROTECTED" LABEL - REVIEW USES ELSEWHERE**]{{% /todo %}}
+To manage a component, click **Manage** (for more information, see the [Managing a Component](#manage) section above).
 
-For details on how to manage content, see the [My Content](#content) section above.
+To see the component's [details](#details) page, click **View**.
 
 ### 5.2 Reviews
 
@@ -210,7 +212,7 @@ This page contains reviews of **Your company's content** as well as **Your compa
 
 ![](attachments/app-store-overview/your-company-reviews.png)
 
-### 5.3 User Groups
+### 5.3 User Groups {#user-groups}
 
 You can configure user groups for various levels of access to your company's App Store. The available configuration tabs for each user group page are described in the sections below.
 
@@ -220,7 +222,7 @@ The **User Groups** menu item and page are visible to all users. However, only [
 
 #### 5.3.1 Members Tab {#members}
 
-On this tab, you can enter an email address and click **Add** to add a member to the user group. User group members can manage the content assigned to the group.
+On this tab, you can enter an email address and click **Add** to add a member to the user group. User group members can manage the [content](#content) assigned to the group.
 
 Once a member is added, you can select their permission level: **Member** or **Group Admin**. A Group Admin can manage the user group.
 
@@ -230,15 +232,15 @@ To remove a member, click **Remove** next to their name.
 
 #### 5.3.2 Guests Tab {#guests}
 
-A guest is a Mendix Platform users from outside your company who can download the selected private [Content](#content) of this group. To add a guest, enter their email address in the box and click **Add**:
+A guest is a Mendix Platform user from outside your organization who can download the selected private [Content](#content) of this group. To add a guest, enter their email address in the box and click **Add**:
 
 {{% todo %}}[**UPDATE SCREENSHOT**]{{% /todo %}}
 
-![](attachments/app-store-overview/external-downloaders.png)
+![](attachments/app-store-overview/guests.png)
 
 The guest will receive an email notifying them of access to the private content. They can then see all the private App Store content shared with them in their [Shared with Me](#shared-with-me) page.
 
-To remove a guest, click **Remove** next to their name.
+To remove a guest, click **Remove**.
 
 #### 5.3.3 Content Tab {#content}
 
@@ -246,19 +248,21 @@ On this tab, you can assign content to this user group that can only be managed 
 
 {{% todo %}}[**ADD SCREENSHOT**]{{% /todo %}}
 
-Once the component has been added, click **Manage** to manage the component. On the page that opens, you can do the following:
+![](attachments/app-store-overview/group-content.png)
 
-* **Create a new draft version** of the component (for details on how to do this, see the steps in the [Updating Existing App Store Content](#updating) section of *How to Share App Store Content*)
-* **Edit** the component (for details on how to do this, see the steps in the [Adding New App Store Content](share-app-store-content#adding) section of *How to Share App Store Content*)
-* **Unpublish** the component
+To manage a component assigned to the user group, click **Manage** (for more information, see the [Managing a Component](#manage) section above).
 
-{{% todo %}}[**ADD SCREENSHOT**]{{% /todo %}}
+To see the component's [details](#details) page, click **View**.
+
+To remove a component from the user group, click **Remove**.
+
+If you want [guests](#guests) to be able to download the component, check the **Allow guests to download** box.
 
 #### 5.3.4 Settings Tab
 
 On this tab, you can enter a **Name** and **Description** for the user group.
 
-To delete a group, a Company Admin can click **Delete.**
+To delete a group, a Company Admin can click **Delete Group**.
 
 ## 6 Read More
 

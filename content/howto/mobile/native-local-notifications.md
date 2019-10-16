@@ -344,7 +344,8 @@ To create your microflow, do the following:
 8. Drag and drop a commit object activity onto your microflow.
 9. Double-click your commit object activity.
 10. From the **Object or List** drop-down menu, select **NewTestEntity (NativeMobile.TestEntity**.
-11. Click **OK** to see your new microflow:
+11. Click **OK**.
+12. Double-click the end point, set it as boolean true [todo fix instruciton and screenshot]:
 
 	{{% image_container width="500" %}}![create ds test entity micro](attachments/native-push/ds-testentity-microflow.png){{% /image_container %}}
 
@@ -448,14 +449,28 @@ todo: take pics for the following list
 7. Double-click the JavaScript action call, then click **Select**. 
 8. Type *GetObjectByGuid* into the search field, click that action, then click **Select**. 
 9. Click **Entity** > **Select**.
-10. Click **Notfication** and then click **Select**.
+10. Click **Test Entity** and then click **Select**.
 11. From the **Object guid** click **Edit**.
 12. Type *$NotificationEntity/GUIDString* into your argument field and click **OK**.
+13. Select **Use Return Value** > **Yes**.
 13. In **Object name** write *ReturnedObjectByGUID*:
 
 	![guid settings](attachments/native-push/get-object-by-guid-settings.png)
 
 14. Click **OK** to save and close your JavaScript Action settings.
+15. Right-click this JavaScript Action and click **Set $ReturnedObjectByGUID As Return Value**:
+
+	![guid settings](attachments/native-push/finished-guid-flow.png)
+
+16. Drop a **Change object** activity onto your nanoflow [todo: retake pics]:
+
+pic RESUME HERE
+
+17. Double-click the change object activity.
+18. Select **Object** > **ReturnedObjectByGUID (NativeMobile.TestEntity** from the drop-down menu.
+19. Click **Action** > **New**, make sure **Member** is set to the string attribute, and into **Value** type *Your notificaiton has forwarded you here!*:
+
+![change object action](attachments/native-push/change-object-action.png)
 
 Next you are going to create a show page action for **ON_tapNotification**.
 
@@ -499,7 +514,7 @@ Explaining the workaround (todo: all the steps/substeps above yes?):
 
 Local notifications should rarely notify a user right after they do an action. Here you will learn to configure local notifications to trigger after a period of time. To do this, you will use a JavaScript action named **ScheduleNotification**.
 
-[todo: make sure to cover "on recieved" action in this section because we haven't yet]
+[todo: make sure to cover "on received" action in this section because we haven't yet]
 
 We can still use our basic example in 3.1 by doing following changes:
 
@@ -529,7 +544,7 @@ Simply click the schedule notification button then click the cancel all button. 
 
 ### 4.2 Cancelling a Specific Scheduled Notification
 
-Now we will need to supply a "Notification ID" which needs to be cancelled. For that we need following changes in ACT_CreateAndSendNotification and :
+Now we will need to supply a "Notification ID" which needs to be cancelled. For that we need following changes in ACT_CreateAndSendNotification and [todo: finish this mehmet]:
 
 1. Go to ACT_CreateAndSendNotification
 2. Double-click the Schedule Notification to change "Notification id" by clicking edit. Then type and arbitrary string: "testId"

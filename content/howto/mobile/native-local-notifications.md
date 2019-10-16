@@ -7,7 +7,6 @@ title: "Local notifications for native"
 
 [todo: check that all "actions" are properly bolded]
 [todo: correct all image caption text]
-[todo: test]
 
 ## 1 Introduction
 
@@ -418,7 +417,7 @@ Next you will create a workaround which allows data to be passed to pages.
 	e. Double-click the action call.
 	f. Click **JavaScript action** > **Select**.
 	g. Type *DisplayNotification* into the search field, click the corresponding JavaScript action, and click **Select**.
-	e. Set the **Body**, **Title**, **Subtitle**, **Action name**, and **Action guid** to the corresponding variables you created previously: <br />
+	e. Set the **Body**, **Title**, **Subtitle**, **Action name**, and **Action guid** to the corresponding variables you created previously, and set **Play Sound** to **True**: <br />
 
 	{{% image_container width="500" %}}![first guid action](attachments/native-push/first-guid-action.png){{% /image_container %}}
 
@@ -441,23 +440,32 @@ todo: take pics for the following list
 2. Drag and drop a parameter onto your nanoflow. 
 3. Click **Data Type** > **Select**. Click **Notification**, then click **Select**.
 4. Fill **Name** in as *notificationEntity*.
-5. Click **OK**.
+5. Click **OK**:
+
+![guid button](attachments/native-push/notif-entity.png)
+
 6. Drag and drop a JavaScript action call onto your nanoflow.
 7. Double-click the JavaScript action call, then click **Select**. 
 8. Type *GetObjectByGuid* into the search field, click that action, then click **Select**. 
 9. Click **Entity** > **Select**.
-8. Click **Notfication** and then click **Select**.
-8. From the **Object guid** click **Edit**.
-9. Type *$NotificationEntity/GUIDString* into your argument field and click **OK**.
-9. In **Object name** write *ReturnedObjectByGUID*.
-10. Click **OK** to save and close your JavaScript Action settings.
+10. Click **Notfication** and then click **Select**.
+11. From the **Object guid** click **Edit**.
+12. Type *$NotificationEntity/GUIDString* into your argument field and click **OK**.
+13. In **Object name** write *ReturnedObjectByGUID*:
+
+	![guid settings](attachments/native-push/get-object-by-guid-settings.png)
+
+14. Click **OK** to save and close your JavaScript Action settings.
 
 Next you are going to create a show page action for **ON_tapNotification**.
 
 1. Drag and drop a **Show Page** action onto your nanoflow.
 2. Double click the show page action.
 3. From the **Object to pass** drop-down menu select **ReturnedObjectByGuid**.
-4. Click **Page** > **Select**, click **DetailTestEntity**, then click **OK**.
+4. Click **Page** > **Select**, click **DetailTestEntity**, then click **OK**:
+
+	![guid button](attachments/native-push/show-page-settings.png)
+
 5. Click **OK** to close the **Show Page** activity settings, then navigate to your **Home_Native** page.
 
 Now you will set up a data view on your home page.
@@ -467,20 +475,20 @@ Now you will set up a data view on your home page.
 3. Select **Data source** > **Type** > **Nanoflow**.
 4. Click **Nanoflow** > **Select** and choose **DS_Notification**.
 5. Click **OK** to go back to your home page, and click **OK** on the subsequent data view dialog box.
-5. Move the **Notifications** widget inside this data view.
-6. Confirm that the text box in your data flow is using **GUIDString** as its data source:
+6. Move the **Notifications** widget inside this data view.
+7.  Confirm that the text box in your data flow is using **GUIDString** as its data source:
 
 	{{% image_container width="500" %}}![first guid action](attachments/native-push/GUID-data-source.png){{% /image_container %}}
 
-7. Double-click your notifications widget.
-8. Click **Actions** > **New**.
-9. Create a **New Action** named *OpenPageWithParams*, set **On open** to **Call a nanoflow**, and select **ON_tapNotification**.
+8. Double-click your notifications widget.
+9. Click **Actions** > **New**.
+10. Create a **New Action** named *OpenPageWithParams*, set **On open** to **Call a nanoflow**, and select **ON_tapNotification**.
 
 	{{% image_container width="500" %}}![notification action](attachments/native-push/notif-action-2.png){{% /image_container %}}
 
-8. Start and load the app on your mobile device, tap the nanoflow button you created in 3.e, then tap the notification to navigate to the **DetailTestEntity** page with the proper object.
+11. Start and load the app on your mobile device, tap the nanoflow button you created in 3.e, then tap the notification to navigate to the **DetailTestEntity** page with the proper object. [todo: doesn't work for me -- errors]
 
-Explaining the workaround (all the steps/substeps above yes?):
+Explaining the workaround (todo: all the steps/substeps above yes?):
 
 * Since the Dataview is on your homepage and nanoflow is set as a data source, it creates an empty notification object. This object will be referred to as XwithGUID.
 * We trigger a ACT_PassGuidToNotification: JSAction DisplayNotification creates a notification with respected params: title,subtitle,body,actionName,Guid. This is step happens before displaying notification.

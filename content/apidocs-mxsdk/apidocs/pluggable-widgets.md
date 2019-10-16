@@ -148,24 +148,22 @@ In Mendix Studio Pro, the widget described above would look like this:
 
 ![basic progress card](attachments/pluggable-widgets/basic-widget-progress-card.png)
 
-### 5.3 Help page {#help}
+### 5.3 Help Page {#help}
 
-Additional help information can be provided for the users of the widget via the Help button (F1). This button is positioned left bottom of the popup dialog.
+Provide additional help information to your users with the **Help** button widget, assigned to the <kbd>{F1}</kbd> shortcut key. This button is positioned in the left-bottom corner of the popup dialog:
 
 ![basic widget](attachments/pluggable-widgets/widget-dialog-help-button.png)
 
-The URL can be provided trough the `helpUrl` property:
+A URL can be provided through the `helpUrl` property:
 
 ```xml
     <helpUrl>https://appstore.home.mendix.com/link/app/105695/</helpUrl>
 ```
 
-Or for more complex help pages you can also link to a markdown page on GitHub.
-
-For security reasons URLs are restricted to: 
-- Use `https` protocol
-- Host name ends with `.mendix.com` or `github.com`
-- If host name is `github.com` the full URL has to end with `.md`
+For more complex help pages you can link to a markdown page. For security reasons, URLs have the following restrictions: 
+* Must use HTTPS protocol
+* Host name must end with *.mendix.com* or *github.com*
+* If host name is *github.com* the full URL must end with *.md*
 
 ### 5.4 Widget Properties Definition {#properties-definition}
 

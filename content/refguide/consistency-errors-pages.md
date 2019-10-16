@@ -7,7 +7,19 @@ tags: ["Studio Pro", "consistency errors", "checks", "errors", "pages"]
 
 ## 1 Introduction 
 
-In this document, we explain how to solve the most common consistency errors that can occur when configuring pages in Studio Pro. An example of a consistency error is when you do not specify the entity property of a data view on a page. 
+In this document, we explain how to solve either the common or complicated consistency errors that can occur when configuring pages in Studio Pro. 
+
+{{% alert type="info" %}}
+
+This document does not describe *all* the errors that can occur on pages, as there are many various errors that can occur, some of which are simple and do not need extra explanation, others are rare and/or heavily dependent on a use-case. 
+
+{{% /alert %}}
+
+Some errors have error codes and if they are described in documentation, Studio Pro has a clickable link to the corresponding doc. 
+
+Some do not have an error code, in this case, you can search whether a particular error is described in documentation using the message you see in the **Errors** pane.
+
+An example of a consistency error is when you do not specify the entity property of a data view on a page. 
 
 ## 2 List View Consistency Errors 
 
@@ -21,14 +33,14 @@ The table below describes the most common errors which can occur when configurin
 
 | Error Code | Message in the Error Pane                                    | Cause of the Error                                           | Way to Fix                                                   |
 | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| CE0488     | No entity configured for the data source of this list view. Select an entity or change the data source. | The **Database/XPath/Association** option is selected as a data source for a list view, but no entity is specified. | To fix the error, do one of the following: <ul><li>Open list view's properties > **Data source** and select an entity in the **Entity (path)** field</li></ul>You can also change the type of a data source for the list view. |
-|            | No microflow configured for the data source of this list view. Select a microflow or change the data source. | The data source is set to **Microflow**, but no microflow is specified. | Open list view's properties > **Data source** and select a microflow in the **Microflow** field, or change the type of the data source. |
-|            | No nanoflow configured for the data source of this list view. Select a nanoflow or change the data source. | The data source is set to **Nanoflow**, but no specific nanoflow is selected. | Open list view's properties > **Data source** and select a nanoflow in the **Nanoflow** field, or change the type of the data source. |
-| CE0595     | Attribute {AttributeName} is not an attribute of entity {EntityName}. | You have changed the target entity of a list view without updating its contents. The list view is filled with attributes of another entity. | Open widget's properties > **Data source** and select another attribute for **Attribute (path)**. |
+| CE0488     | No entity configured for the data source of this list view. Select an entity or change the data source. | The **Database/XPath/Association** option is selected as a data source for a list view, but no entity is specified. | Do one of the following: <ul><li>Open the list view's properties > **Data source** and select an entity in the **Entity (path)** field</li><li>Change the type of the data source for the list view</li></ul> |
+|            | No microflow configured for the data source of this list view. Select a microflow or change the data source. | The data source is set to **Microflow**, but no microflow is specified. | Do one of the following: <ul><li>Open the list view's properties > **Data source** and select a microflow in the **Microflow** field</li><li>Change the type of the data source for the list view</li></ul> |
+|            | No nanoflow configured for the data source of this list view. Select a nanoflow or change the data source. | The data source is set to **Nanoflow**, but no specific nanoflow is selected. | Do one of the following: <ul><li>Open the list view's properties > **Data source** and select a microflow in the **Nanoflow** field</li><li>Change the type of the data source for the list view</li></ul> |
+| CE0595     | Attribute {AttributeName} is not an attribute of entity {EntityName}. | You have changed the target entity of a list view without updating its contents. The list view is filled with attributes of another entity. | Open the widget's properties > **Data source** and select another attribute for **Attribute (path)**. |
 
 ## 3 Data View Consistency Errors 
 
-If you do not configure a [data source](data-sources) for a [list view](data-view) properly, you will get consistency errors.
+If you do not configure a [data source](data-sources) for a [data view](data-view) properly, you will get consistency errors.
 
 For example, you have selected **Listen to widget** as the data source, but you have not selected the specific **List widget** you are listening to.
 
@@ -38,8 +50,8 @@ The table below describes the most common errors you can come across when config
 
 | Error Code | Message in the Error Pane                                    | Cause of the Error                                           | Way to Fix                                                   |
 | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| CE0488     | No entity configured for the data source of this data view. Select an entity or change the data source. | **Context** is selected as a data source for a data view, but no entity is specified. | Open data view's properties > the **Data Source** section and select an entity in the **Entity** field, or change the type of the data source. |
-|            | No microflow configured for the data source of this data view. Select a microflow or change the data source | A microflow is selected as a data source, but no microflow is specified. | Open data view's properties > the **Data Source** section and select a microflow in the **Microflow** field, or change the type of the data source. |
+| CE0488     | No entity configured for the data source of this data view. Select an entity or change the data source. | **Context** is selected as a data source for a data view, but no entity is specified. | Open the data view's properties > **Data Source** and select an entity in the **Entity** field, or change the type of the data source. |
+|            | No microflow configured for the data source of this data view. Select a microflow or change the data source | A microflow is selected as a data source, but no microflow is specified. | Open the data view's properties > the **Data Source** section and select a microflow in the **Microflow** field, or change the type of the data source. |
 | CE0536     | No list widget configured for the data source of this data view. Select a widget or change the data source. | A **Listen to widget** is configured as a data source for a data view, but the specific list view widget does not exist anymore on the same page. | Create a list view on the same page, configure it, and select it as a list widget for the data view; or change the type of the data source. |
 | CE0558     | All data views receiving object from the page parameter must have the same entity. | You have several data views on one page that have different entities as their data sources. | Select the same entity for all data views using the page context, or change the data source for them. |
 
@@ -203,7 +215,7 @@ The most common errors for input widgets, their causes, and ways to fix them are
 
 ### 6.1 Incorrect Multiplicity for a Reference Selector {#incorrect-multiplicity-reference}
 
-A reference selector is a widget that is used to display and edit one-to-many associations. For more information on the widget, see [Reference Selector](reference-selector).  
+A reference selector is a widget that is used to display and edit one-to-many or one-to-one associations. For more information on the widget, see [Reference Selector](reference-selector).  
 
 For example, you have several employees who are associated with one city where they work. This is a one-to-many association: multiple *Employees* objects are associated with one *City* object.  Associations that refer to a single object in this manner are *references*, as opposed to *reference sets*, in which multiple objects can refer to multiple other objects. In a reference, the "single object" side of the association is always the association's owner. For more information on associations and their types, see [Associations](associations).
 
@@ -277,12 +289,12 @@ You have changed the owner of the association.
 
 ## 7 File Widget Consistency Errors
 
-File widgets should be placed in a data container, otherwise you will get consistency errors. Another way to fix consistency errors is to place a file widget to a [snippet](snippet). For more information on file widgets, see [File Widgets](file-widgets). 
+File widgets should be placed in a data container, otherwise you will get consistency errors. For more information on file widgets, see [File Widgets](file-widgets). 
 
 | Error code | Message in the Error Pane                                    | Cause of the Error                                           | Way to Fix                                                   |
 | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-|            | A [file manager](file-manager) must be placed in a data view or  snippet that is connected to entity ‘System.FileDocument’ or a specialization. | You have added a file manager to a page, but it is not inside a data view or a snippet that is configured properly. | Place this widget into a data container. If you want to place it into a snippet, mind that you need to configure it properly: set System.FileDocument or its specialization as entity for this snippet. |
-|            | An [image uploader](image-uploader) must be placed in a data view or snippet that is connected to entity ‘System.Image’ or a specialization. | You have added an image uploader to a page, but it is not inside a data view or a snippet that is configured properly. | Place this widget into a data container. If you want to place it into a snippet, mind that you need to configure it properly: set System.Image or its specialization as entity for this snippet. |
+|            | A [file manager](file-manager) must be placed in a data view or  snippet that is connected to the entity ‘System.FileDocument’ or a specialization. | You have added a file manager to a page, but it is not inside a data view or a snippet that is configured properly. | Place this widget into a data container. If you want to place it into a snippet, mind that you need to configure it properly: set System.FileDocument or its specialization as entity for this snippet. |
+|            | An [image uploader](image-uploader) must be placed in a data view or snippet that is connected to the entity ‘System.Image’ or a specialization. | You have added an image uploader to a page, but it is not inside a data view or a snippet that is configured properly. | Place this widget into a data container. If you want to place it into a snippet, mind that you need to configure it properly: set System.Image or its specialization as entity for this snippet. |
 |            | Move this widget into a data container, for example a data view or list view. | You have added an [image viewer](image-viewer) to your page, but it is not inside a data view or a list view. | Place this widget inside a data view or a list view.         |
 | CE0489     | Select an entity for the data source of this [image viewer](image-viewer). | You have added an image viewer to a page, it is placed inside a data view or a list view, but an entity for the image viewer is not specified. | Open image viewer's properties > the **Data source** section and select an entity in the **Entity (path)** field. |
 ## 8 Image Widget Consistency Errors
@@ -295,7 +307,7 @@ To fix it, open image properties > the **General** section > the **Image** field
 
 You can specify an **On Click Event** for different widgets, for example, for buttons or images. 
 
-The most common consistency errors are connected with not configuring the on click event entirely. 
+The most common consistency errors are connected with not configuring the on click event. 
 
 To fix the consistency errors, finish configuring the on click event (for example, for an on click event **Show a page**, select a particular page that should open), or change the on click action. 
 

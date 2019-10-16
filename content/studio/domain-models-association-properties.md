@@ -1,5 +1,5 @@
 ---
-title: "Association Properties"
+title: "Associations"
 category: "Domain Model"
 description: "Describes the association properties in Mendix Studio."
 tags: ["studio", "domain model"]
@@ -8,7 +8,7 @@ tags: ["studio", "domain model"]
 
 ## 1 Introduction 
 
-An association describes a relation between entities. In the domain model, an association is represented by a line or arrow between two entities.
+An association describes a relation between entities. In the domain model, an association is represented by a line or an arrow between two entities.
 
 In Mendix Studio, associations have the following properties:
 

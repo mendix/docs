@@ -88,13 +88,13 @@ Entities have the following properties:
 
 Attributes are characteristics that describe and/or identify the entity. For example, a *Customer* entity typically has attributes for the name of the customer, an e-mail address, and other personal information. If we draw a parallel with databases, the attribute is a column. 
 
-For more information on attribute types and their properties, see [Attributes](domain-model-attributes). 
+For more information on attribute types and their properties, see [Attributes](domain-models-attributes). 
 
 ### 2.4 Associations {#associations}
 
 An association describes a relation between entities. In the domain model, an association is represented by a line between two entities. If we draw a parallel with databases, the association is a foreign key. 
 
-For more information on association types and their properties, see [Associations](domain-model-asscoation-properties).  
+For more information on association types and their properties, see [Associations](domain-models-association-properties).  
 
 ## 3 Adding New Entities {#adding-new-entities}
 

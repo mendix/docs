@@ -221,7 +221,7 @@ To update content that has already been published, follow these steps:
 	* **Major update** – a large change (which will save the content from version 5.0 to version 6.0, for example)
 	* **Minor update** – a medium-sized change (which will save the content from version 6.0 to version 6.1.0, for example)
 	* **Patch** – a small change (which will save the content from 6.1.0 to 6.1.1, for example)
-	* **Custom** – your own version number (which allows you to add minor or patch updates to previous major versions, or to skip versions rather than having to increment by 1. Note that custom versioning is only available if there is or have been a version 1.0.0)
+	* **Custom** – your own version number (which allows you to add minor or patch updates to previous major versions, or to skip versions rather than having to increment by 1; note that custom versioning is only available if there has been a version 1.0.0)
 
 	{{% image_container width="350" %}}![](attachments/share-app-store-content/update_content_2.png)
 	{{% /image_container %}}

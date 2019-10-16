@@ -30,7 +30,7 @@ Customers can make an order from this page. However, if the blocked user tries t
 
 In this example you will create a microflow and configure a decision that opens different order forms depending on the customer grade. 
 
-This use case will require the decision with attribute of the enumeration type (list of predefined values). For more information on types of attributes, see [Attribute Types](domain-models-attributes). 
+This use case will require the decision with attribute of the enumeration type (list of predefined values). For more information on types of attributes, see [Attributes](domain-models-attributes). 
 
 ### 2.1 Adding an Entity and an Attribute to the Domain Model 
 
@@ -124,7 +124,7 @@ If you want to test your microflow by adding it to the pages, see [Configure an 
 
 In this example, you will create a microflow and configure the decision to prevent a blocked customer from making an order. The reasons for blocking the customer can be that customer's credit score is too low, or password has expired. 
 
-This use case will require a decision with an attribute of the Boolean type (true or false). For more information on the types of attributes, see [Attribute Types](domain-models-attributes).
+This use case will require a decision with an attribute of the Boolean type (true or false). For more information on the types of attributes, see [Attributes](domain-models-attributes).
 
 ### 3.1 Adding an Entity and an Attribute to the Domain Model 
 

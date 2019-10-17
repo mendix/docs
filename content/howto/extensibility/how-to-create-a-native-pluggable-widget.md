@@ -1065,6 +1065,34 @@ If the group box should not be collapsible at all, we would have to remove the *
    }
    ```
 
+The last thing we need to do is changing the container component so that the properties get passed to the display component.
+
+1. Navigate to the container component.
+
+2. Change the **render** method to supply the display component with the information from the collapsible prop that the container component receives:
+
+   ```tsx
+       render(): ReactNode {
+           const { collapsible, collapseIcon, expandIcon, content, headerCaption, style } = this.props;
+
+           const isCollapsible = collapsible !== "no";
+
+           const props: WrappedGroupBoxProps = {
+               collapsible: isCollapsible,
+               headerCaption,
+               collapseIcon: this.renderIcon(collapseIcon, defaultCollapseIconGlyph),
+               expandIcon: this.renderIcon(expandIcon, defaultExpandIconGlyph),
+               style
+           };
+
+           if (collapsible) {
+               props.startCollapsed = collapsible === "yesStartCollapsed";
+           }
+
+           return <WrappedGroupBox {...props}>{content}</WrappedGroupBox>;
+       }
+   ```
+
 ## 4 Read More
 
 {Add links to related documents and blog posts; make sure necessary third-party links are contextualizecd ./d in the above sections, as they should not be put here}

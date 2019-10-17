@@ -17,6 +17,7 @@ tags: ["SSO", "Single Sign-on", "Mendix credentials"]
 The [MendixSSO module](https://appstore.home.mendix.com/link/app/111349/Mendix/MendixSSO-(for-Mendix-7)) enables your app users to sign in with their Mendix account when your app is deployed to the Mendix Cloud.
 
 Using Mendix accounts has the following benefits:
+
 * you do not need a special authorization module to support resetting and changing passwords
 * it is easy to create multiple applications which all use the same sign-on mechanism
 

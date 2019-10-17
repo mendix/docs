@@ -804,7 +804,7 @@ Let's fix the issue by introducing a default style for our container component.
 
 ### 3.5 Adding a collapsible property
 
-We are close to a fully featured group box. Though there is one more feature that would be of high use for a Mendix developer: setting the initial state of being collapsed or not.
+We are close to a fully featured group box. Though there are two more features that would be of high use for a Mendix developer: setting whether the group box should be collapsible and setting the initial state of being collapsed or not.
 
 1. Head to **src/GroupBox.xml** and add a **collapsible** property underneath the **content** property:
 
@@ -954,6 +954,115 @@ We are close to a fully featured group box. Though there is one more feature tha
         </propertyGroup>
     </properties>
    </widget>
+   ```
+
+4. Save the xml file and head over to the display component.
+
+5. Let's first add two new props for collapsibility and the initial state of being collapsed or not by adding them to the **GroupBoxProps** interface:
+
+   ```tsx
+   export interface GroupBoxProps {
+     startCollapsed?: boolean;
+     collapsible: boolean;
+     collapseIcon?: ReactNode;
+     expandIcon?: ReactNode;
+     headerCaption?: string;
+     style: CustomStyle[];
+   }
+   ```
+
+6. Change the initilization of the state, so that the collapsed state starts with the value passed through the **startCollapsed** prop:
+
+   ```tsx
+   readonly state: GroupBoxState = {
+        collapsed: !!this.props.startCollapsed
+    };
+   ```
+
+If the group box should not be collapsible at all, we would have to remove the **Touchble** component that wraps the header to prevent toggling the collapsed state. Moreover, we should remove the icons inside the header indicating the group box is collapsible. Let's make those changes.
+
+1. Change the **renderHeader** method so that it doesn't render the Touchable component around the header View component:
+
+   ```tsx
+   private renderHeader = () => {
+       const { collapsible, headerCaption } = this.props;
+
+       const view = (
+           <View style={this.styles.header}>
+               <Text style={this.styles.headerContent}>{headerCaption}</Text>
+               {this.renderIcon()}
+           </View>
+       );
+
+       if (collapsible) {
+           const Touchable: ComponentClass<any> = Platform.OS === "ios" ? TouchableOpacity : TouchableNativeFeedback;
+           return <Touchable onPress={this.toggleCollapsed}>{view}</Touchable>;
+       }
+
+       return view;
+   };
+   ```
+
+2. Also prevent the header View component from being rendered at all when the group box isn't collapsible and there is no header caption, because the header would otherwise be visible as an empty block:
+
+   ```tsx
+   private renderHeader = () => {
+       const { collapsible, headerCaption } = this.props;
+
+       const view = (
+           <View style={this.styles.header}>
+               <Text style={this.styles.headerContent}>{headerCaption}</Text>
+               {this.renderIcon()}
+           </View>
+       );
+
+       if (collapsible) {
+           const Touchable: ComponentClass<any> = Platform.OS === "ios" ? TouchableOpacity : TouchableNativeFeedback;
+           return <Touchable onPress={this.toggleCollapsed}>{view}</Touchable>;
+       } else if (headerCaption) {
+           return view;
+       }
+
+       return null;
+   };
+   ```
+
+3. Change the **renderIcon** method to prevent an icon from being rendered when the group box isn't collapsible by adding a guard that returns null:
+
+   ```tsx
+   private renderIcon = (): ReactNode => {
+       const { collapsible, collapseIcon, expandIcon } = this.props;
+
+       if (!collapsible) {
+           return null;
+       }
+
+       if (this.state.collapsed) {
+           return expandIcon ? expandIcon : <Text style={this.styles.headerContent}>+</Text>;
+       }
+
+       return collapseIcon ? collapseIcon : <Text style={this.styles.headerContent}>-</Text>;
+   };
+   ```
+
+4. Change the **render** method to deal correctly with the situation where there is no header nor content to be rendered by returning null when this situation occurs:
+
+   ```tsx
+   render(): ReactNode {
+       const renderedHeader = this.renderHeader();
+       const renderedContent = this.renderContent();
+
+       if (!renderedHeader && !renderedContent) {
+           return null;
+       }
+
+       return (
+           <View style={this.styles.container}>
+               {renderedHeader}
+               {renderedContent}
+           </View>
+       );
+   }
    ```
 
 ## 4 Read More

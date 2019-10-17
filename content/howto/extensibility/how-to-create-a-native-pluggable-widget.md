@@ -673,6 +673,10 @@ The next step is to allow a Mendix developer to use a custom icon in the clickab
    ```tsx
    import { DynamicValue, NativeIcon, ValueStatus } from "mendix";
    import { Icon } from "mendix/components/native/Icon";
+   import {
+     GroupBox as WrappedGroupBox,
+     GroupBoxProps as WrappedGroupBoxProps
+   } from "./components/GroupBox";
    ```
 
 10. Add a lambda method **renderIcon** to the **GroupBox** class:
@@ -684,16 +688,35 @@ The next step is to allow a Mendix developer to use a custom icon in the clickab
                 ? toBeRenderedIcon.value
                 : { type: "glyph", iconClass: glyph };
 
-        return (
-            <Icon color={this.styles.headerContent.color} icon={nativeIcon} size={this.styles.headerContent.fontSize} />
-        );
+        return <Icon icon={nativeIcon} />;
     };
     ```
 
 11. Adjust the **render** method so that it makes use of **renderIcon**:
 
-```tsx
-```
+    ```tsx
+    render(): ReactNode {
+        const { collapseIcon, expandIcon, content, headerCaption, style } = this.props;
+
+        const props: WrappedGroupBoxProps = {
+            headerCaption,
+            collapseIcon: this.renderIcon(collapseIcon, defaultCollapseIconGlyph),
+            expandIcon: this.renderIcon(expandIcon, defaultExpandIconGlyph),
+            style
+        };
+
+        return <WrappedGroupBox {...props}>{content}</WrappedGroupBox>;
+    }
+    ```
+
+12. Go to Mendix Studio Pro and select for the expand icon property a Euro sign.
+13. Run the app locally and check out your changes.
+
+You should notice that you can't see any icon in the header of the group box. The reason for this is that our background color and text color are both black. Remember that in the **defaultStyle** constant of our display component we defined that text of React Native components that get the **headerContent** style applied to it, should be white. However, we are not explicitly applying this style to our **Icon** component that we pass from our container component to the display component. You could argue to move the creation of the **Icon** component inside your display component, but this will go against the strict seperation of concerns related to the container and display component, since the **Icon** component is Mendix specific. Therefore, it should be part of the container component.
+
+Let's fix the issue by introducing a default style for our container component.
+
+1.
 
 TODO:
 

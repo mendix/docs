@@ -22,7 +22,7 @@ To enable you to find your errors quickly, each error will show you:
 * A **Message** describing the error
 * The name of the page **Element** causing the error
 * The **Document** where this element is
-* The **Module** where the document is.
+* The **Module** where the document is
 
 Double-clicking on the error will take you directly to the element causing the error.
 

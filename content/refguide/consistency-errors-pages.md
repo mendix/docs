@@ -180,7 +180,7 @@ To fix it, do the following:
 
 Now the *Customer* object is available on the page and it matches the microflow parameter *Customer*. 
 
-### 5.2 Error Fix Example CE1574 {#error-fix-example-4}
+### 5.2 Error Fix Example for CE1574 {#error-fix-example-4}
 
 When you set a microflow or nanoflow as an on-click event for a widget, and this microflow/nanoflow expects a certain argument, but a different argument is available to the widget, this will result in an error. 
 

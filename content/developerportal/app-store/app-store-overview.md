@@ -36,6 +36,8 @@ Clicking an App Store component in a menu will bring you to the component's deta
 
 ### 3.1 Header
 
+{{% todo %}}[**UPDATE SCREENSHOT**]{{% /todo %}}
+
 ![](attachments/app-store-overview/content_detail_1.png)
 
 The header for each add-on presents the following details:
@@ -53,6 +55,8 @@ The header for each add-on presents the following details:
 		* The best practice is to download a component from the App Store that is accessible in Studio Pro, because it then downloads directly into Studio Pro (for details on importing downloaded App Store components into Studio Pro, see [How to Import & Export Objects](/howto/integration/importing-and-exporting-objects))
 
 ### 3.2 Tabs
+
+{{% todo %}}[**UPDATE SCREENSHOTS**]{{% /todo %}}
 
 The details page for each add-on and app presents the following item information tabs:
 
@@ -77,13 +81,13 @@ The details page for each add-on and app presents the following item information
 
 	![](attachments/app-store-overview/content_detail_8.png)
 	
-*  **Group members** tab – lists the [user group members](#members) if this is an App Store component assigned to a [user group](#user-groups)
+*  **Group members** tab – if this App Store component is assigned to a [user group](#user-groups), this tab lists the [user group members](#members)
 
 	![](attachments/app-store-overview/content_detail_9.png)
 
-{{% todo %}}[**VERIFY NAME OF GROUP MEMBERS TAB ABOVE; UPDATE SCREENSHOTS FOR NEW TAB NAME ABOVE**]{{% /todo %}}
-
 ### 3.3 Additional Info Section {#additional-info}
+
+{{% todo %}}[**UPDATE SCREENSHOT**]{{% /todo %}}
 
 {{% image_container width="300" %}}
 ![](attachments/app-store-overview/content_detail_2.png)
@@ -102,6 +106,8 @@ In the **Additional Info** section, you can see the following information (depen
 * A link to the documentation on how to install the App Store component
 
 ### 3.4 Developer Info Section
+
+{{% todo %}}[**UPDATE SCREENSHOT**]{{% /todo %}}
 
 {{% image_container width="300" %}}
 ![](attachments/app-store-overview/content_detail_3.png)
@@ -125,6 +131,8 @@ The **Dashboard** page presents your App Store activity:
 * **Notifications** on components you created and favorited
 * Content **Drafts** you have created
 * Your content **Favorites**
+
+{{% todo %}}[**VERFIY SCREENSHOT**]{{% /todo %}}
 
 ![](attachments/app-store-overview/my_app_store.png)
 
@@ -162,6 +170,8 @@ On this page, you will see the following buttons:
 
 This page contains drafts of App Store content you have started:
 
+{{% todo %}}[**UPDATE SCREENSHOT**]{{% /todo %}}
+
 ![](attachments/app-store-overview/drafts.png)
 
 Click the name of an App Store component to be taken to the [DRAFT](share-app-store-content#adding) page, where you can continue editing the component details.
@@ -172,17 +182,23 @@ Click **Delete** to delete a draft.
 
 This page contains content shared with you by other companies who have marked you as a [guest](#guests):
 
+{{% todo %}}[**UPDATE SCREENSHOT**]{{% /todo %}}
+
 ![](attachments/app-store-overview/shared-with-me.png)
 
 ### 4.5 Reviews {#my-reviews}
 
 This page contains reviews of [Your content](#content) by other users as well as **Your reviews** that you have written of other content:
 
+{{% todo %}}[**VERIFY SCREENSHOT**]{{% /todo %}}
+
 ![](attachments/app-store-overview/your-reviews.png)
 
 ### 4.6 Notifications
 
 This page presents a history of notifications on content you have contributed to:
+
+{{% todo %}}[**UPDATE SCREENSHOT**]{{% /todo %}}
 
 ![](attachments/app-store-overview/notifications.png)
 
@@ -192,7 +208,7 @@ This page presents a history of notifications on content you have contributed to
 
 On this page, you can see all the content your company has published:
 
-{{% todo %}}[**UPDATE SCREENSHOT FOR REMOVAL OF "PROTECTED" LABEL**]{{% /todo %}}
+{{% todo %}}[**VERIFY SCREENSHOT AND "Company only" LABEL**]{{% /todo %}}
 
 ![](attachments/app-store-overview/company-content.png)
 
@@ -210,6 +226,8 @@ To see the component's [details](#details) page, click **View**.
 
 This page contains reviews of **Your company's content** as well as **Your company's reviews** that users from your company have written of other content.
 
+{{% todo %}}[**VERIFY SCREENSHOT**]{{% /todo %}}
+
 ![](attachments/app-store-overview/your-company-reviews.png)
 
 ### 5.3 User Groups {#user-groups}
@@ -226,7 +244,9 @@ On this tab, you can enter an email address and click **Add** to add a member to
 
 Once a member is added, you can select their permission level: **Member** or **Group Admin**. A Group Admin can manage the user group.
 
-{{% todo %}}[**ADD SCREENSHOT**]{{% /todo %}}
+{{% todo %}}[**VERIFY SCREENSHOT**]{{% /todo %}}
+
+![](attachments/app-store-overview/members.png)
 
 To remove a member, click **Remove** next to their name.
 
@@ -234,7 +254,7 @@ To remove a member, click **Remove** next to their name.
 
 A guest is a Mendix Platform user from outside your organization who can download the selected private [Content](#content) of this group. To add a guest, enter their email address in the box and click **Add**:
 
-{{% todo %}}[**UPDATE SCREENSHOT**]{{% /todo %}}
+{{% todo %}}[**VERIFY SCREENSHOT**]{{% /todo %}}
 
 ![](attachments/app-store-overview/guests.png)
 
@@ -246,7 +266,7 @@ To remove a guest, click **Remove**.
 
 On this tab, you can assign content to this user group that can only be managed by members of this group. To assign content to a user group, click **Assign Content** and select a private App Store component from the dialog box:
 
-{{% todo %}}[**ADD SCREENSHOT**]{{% /todo %}}
+{{% todo %}}[**VERIFY SCREENSHOT**]{{% /todo %}}
 
 ![](attachments/app-store-overview/group-content.png)
 

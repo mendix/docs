@@ -472,7 +472,7 @@ It would be nice to hide the content area from the widget completely when there 
    }
    ```
 
-### Making the widget collapsilble
+### 3.3 Making the widget collapsilble
 
 Now that our widget can contain content, the next challange is to hide this content by making it collapsible.
 
@@ -593,7 +593,7 @@ Let's now make it possible to expand or collapse the group box.
 
 8. Check your changes in the Make It Native app.
 
-### Adding an expand & collapse icon property
+### 3.4 Adding an expand & collapse icon property
 
 The next step is to allow a Mendix developer to use a custom icon in the clickable header.
 
@@ -801,6 +801,160 @@ Let's fix the issue by introducing a default style for our container component.
    ```
 
 5. Check the app in the Make It Native app and you should see the icons in white and the correct size.
+
+### 3.5 Adding a collapsible property
+
+We are close to a fully featured group box. Though there is one more feature that would be of high use for a Mendix developer: setting the initial state of being collapsed or not.
+
+1. Head to **src/GroupBox.xml** and add a **collapsible** property underneath the **content** property:
+
+   ```xml
+   <?xml version="1.0" encoding="utf-8" ?>
+   <widget id="mendix.groupbox.GroupBox" pluginWidget="true" offlineCapable="true" supportedPlatform="Native"
+       xmlns="http://www.mendix.com/widget/1.0/"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+       <name>Group box</name>
+       <description>Widget to group building blocks, snippets or other widgets</description>
+       <icon/>
+       <properties>
+           <propertyGroup caption="General">
+               <propertyGroup caption="General">
+                   <property key="content" type="widgets" required="false">
+                       <caption>Content</caption>
+                       <description>Widgets to place inside</description>
+                   </property>
+                   <property key="collapsible" type="enumeration" defaultValue="no">
+                       <caption>Collapsible</caption>
+                       <description></description>
+                       <enumerationValues>
+                           <enumerationValue key="no">No</enumerationValue>
+                           <enumerationValue key="yesStartExpanded">Yes (start expanded)</enumerationValue>
+                           <enumerationValue key="yesStartCollapsed">Yes (start collapsed)</enumerationValue>
+                       </enumerationValues>
+                   </property>
+               </propertyGroup>
+               <propertyGroup caption="Header">
+                   <property key="headerCaption" type="string" required="false">
+                       <caption>Caption</caption>
+                       <description/>
+                   </property>
+                   <property key="expandIcon" type="icon" required="false">
+                       <caption>Expand icon</caption>
+                       <description>Icon used to indicate that the group box can be expanded</description>
+                   </property>
+                   <property key="collapseIcon" type="icon" required="false">
+                       <caption>Collapse icon</caption>
+                       <description>Icon used to indicate that the group box can be collapsed</description>
+                   </property>
+               </propertyGroup>
+           </propertyGroup>
+       </properties>
+   </widget>
+   ```
+
+2. Add a property group **Common** below the **Header** property group and include the system properties **Name** and **Visibility** to improve the properties window even more:
+
+   ```xml
+   <?xml version="1.0" encoding="utf-8" ?>
+   <widget id="mendix.groupbox.GroupBox" pluginWidget="true" offlineCapable="true" supportedPlatform="Native"
+       xmlns="http://www.mendix.com/widget/1.0/"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+       <name>Group box</name>
+       <description>Widget to group building blocks, snippets or other widgets</description>
+       <icon/>
+       <properties>
+           <propertyGroup caption="General">
+               <propertyGroup caption="General">
+                   <property key="content" type="widgets" required="false">
+                       <caption>Content</caption>
+                       <description>Widgets to place inside</description>
+                   </property>
+                   <property key="collapsible" type="enumeration" defaultValue="no">
+                       <caption>Collapsible</caption>
+                       <description></description>
+                       <enumerationValues>
+                           <enumerationValue key="no">No</enumerationValue>
+                           <enumerationValue key="yesStartExpanded">Yes (start expanded)</enumerationValue>
+                           <enumerationValue key="yesStartCollapsed">Yes (start collapsed)</enumerationValue>
+                       </enumerationValues>
+                   </property>
+               </propertyGroup>
+               <propertyGroup caption="Header">
+                   <property key="headerCaption" type="string" required="false">
+                       <caption>Caption</caption>
+                       <description/>
+                   </property>
+                   <property key="expandIcon" type="icon" required="false">
+                       <caption>Expand icon</caption>
+                       <description>Icon used to indicate that the group box can be expanded</description>
+                   </property>
+                   <property key="collapseIcon" type="icon" required="false">
+                       <caption>Collapse icon</caption>
+                       <description>Icon used to indicate that the group box can be collapsed</description>
+                   </property>
+               </propertyGroup>
+               <propertyGroup caption="Common">
+                   <systemProperty key="Name" />
+                   <systemProperty key="Visibility" />
+               </propertyGroup>
+           </propertyGroup>
+       </properties>
+   </widget>
+   ```
+
+3. Add the image below as the icon for the widget as a finishing touch.
+
+   ![Group box icon](attachments/how-to-create-a-native-pluggable-widget/GroupBox.png)
+
+   You can do so by adding the Base64 representation of this image to the icon element in the xml file:
+
+   ```xml
+   <?xml version="1.0" encoding="utf-8" ?>
+   <widget id="mendix.groupbox.GroupBox" pluginWidget="true" offlineCapable="true" supportedPlatform="Native"
+    xmlns="http://www.mendix.com/widget/1.0/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+    <name>Group box</name>
+    <description>Widget to group building blocks, snippets or other widgets</description>
+    <icon>iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAAHdbkFIAAAAAXNSR0IArs4c6QAA ArVJREFUeAHtWk12gjAQBl4X9Q72PsVFnxufN+ihegOfG18XtfeRO9gVNBMZDPlx gIAQGDcxmczMN99MQohGkc9nt9sVCWVgChNiAAloKbBuOaU9hTBJDPGjKI7HYyyJ 2u/3aZ7nP24y7BIw8AIiUIZO+v2XFnlhGPrdrmqOYC4i80oVGJLY0JodqH0UdUgW 7er30fEN3LGM9c0njZlI45sEjilpEwXqyEpExffT1Vj7AmJ23q6kp1Lp7lko1gxg yaJBva0qTxFUBhCSImv+tYsy6oxfiYwgirw56KeQmpfcBGfetnUBDEv7WRhxYVc5 QMcowH7frR6oAQAdpqfrRWxua+xTrb6VCUcXoVPpuwJzAsBNlHLskguHt+3eNaEc NwDoFBH63mIDgIsqb0+lAT1A753EFxgDYAaYAXUfyMSSWuvr1HeZsf7kGVAPJLXH 55DIkyTZHA6HM/hQl2H17B7SOdhWrwXUVSD9Lu5paDCA9Lc5ksVJvDl/vMqcor56 JFNzjnJs1RrAMdm2OQ9GefFVU751qpoSObfJ5SwnA/oh0+Lg4VDTWnIy8NB6j0KD gWc/C6bHQNPcdc2CzvDoDDAAZoAZYAaYAWaAGVjsiSjreqBhPWZgbgxU9yMYmPpO i2Mzams/HUNctgdB9U49o8AxFCM24zmAM7Ed+j0R/QzV6u+huh9bBehzZt0nK0CP vs29ma5L9dW/e7jmEnuUscZddnC8fQUk8ScARQN9tdKmsE3ZE5eNMMfmPytllIma vHUFlDehjX4PrnnqqVPervfmv30F9BTIVMyQFUDtolMJpCsOrgCKOT4HUAwFLl/8 EmACAq9gb/hcAd4UBm6AKyDwBHrD5wrwpjBwA1wBgSfQGz5XgDeFgRtYfAXwjZBe wfAXTzFmu3XVp4bWh1tjiI0/zIDCwD+0qr6OmQMSvQAAAABJRU5ErkJggg==</icon>
+    <properties>
+        <propertyGroup caption="General">
+            <propertyGroup caption="General">
+                <property key="content" type="widgets" required="false">
+                    <caption>Content</caption>
+                    <description>Widgets to place inside</description>
+                </property>
+                <property key="collapsible" type="enumeration" defaultValue="no">
+                    <caption>Collapsible</caption>
+                    <description></description>
+                    <enumerationValues>
+                        <enumerationValue key="no">No</enumerationValue>
+                        <enumerationValue key="yesStartExpanded">Yes (start expanded)</enumerationValue>
+                        <enumerationValue key="yesStartCollapsed">Yes (start collapsed)</enumerationValue>
+                    </enumerationValues>
+                </property>
+            </propertyGroup>
+            <propertyGroup caption="Header">
+                <property key="headerCaption" type="string" required="false">
+                    <caption>Caption</caption>
+                    <description/>
+                </property>
+                <property key="expandIcon" type="icon" required="false">
+                    <caption>Expand icon</caption>
+                    <description>Icon used to indicate that the group box can be expanded</description>
+                </property>
+                <property key="collapseIcon" type="icon" required="false">
+                    <caption>Collapse icon</caption>
+                    <description>Icon used to indicate that the group box can be collapsed</description>
+                </property>
+            </propertyGroup>
+            <propertyGroup caption="Common">
+                <systemProperty key="Name" />
+                <systemProperty key="Visibility" />
+            </propertyGroup>
+        </propertyGroup>
+    </properties>
+   </widget>
+   ```
 
 ## 4 Read More
 

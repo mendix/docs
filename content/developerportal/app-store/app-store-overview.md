@@ -8,7 +8,7 @@ tags: ["app store", "widget", "connector", "module", "partner"]
 
 ## 1 Introduction
 
-The [Mendix App Store](https://appstore.home.mendix.com/index3.html) is a vibrant marketplace containing complete sample apps that can be used right away as well as various add-ons (connectors, widgets, and modules) that can be used to build custom apps more quickly. In the Mendix App Store, you can browse all the components, get what you need, and share the components you have created.
+The [Mendix App Store](https://appstore.home.mendix.com/index3.html) is a vibrant marketplace containing complete sample apps that can be used right away as well as various add-ons (connectors, widgets, and modules) that can be used to build custom apps more quickly. In the Mendix App Store, you can browse all the content, get what you need, and share the content you have created.
 
 This document describes the different sections of the Mendix App Store.
 
@@ -20,12 +20,12 @@ The home page of the Mendix App Store presents various content categories:
 
 Category | Description
 --- | ---
-**Featured** | The most important and useful App Store component as determined by Mendix (think of it as a "staff picks" section). 
+**Featured** | The most important and useful App Store content as determined by Mendix (think of it as a "staff picks" section). 
 **Connectors**, **Mobile**, **Widgets**, **Modules** | Add-on categories and sub-categories (for example, Internet-of-Things and Authentication). 
-**New content** | The most recently uploaded components. 
-**Recent updates** | The most recently updated components. 
-**Most popular** | Components that have been downloaded the most in the past seven days. 
-**Reviews** | The most recent component reviews along with the author and date of the review. Clicking the name of the review author will bring you to their [Mendix Profile](../mendix-profile/index). Clicking the title of the component will allow you to see the details of what was reviewed. 
+**New content** | The most recently uploaded content. 
+**Recent updates** | The most recently updated content. 
+**Most popular** | Content that has been downloaded the most in the past seven days. 
+**Reviews** | The most recent content reviews along with the author and date of the review. Clicking the name of the review author will bring you to their [Mendix Profile](../mendix-profile/index). Clicking the title of an App Store component will allow you to see the details of what was reviewed. 
 **Top App Store contributors** | The top 10 App Store contributors of the last 30 days. Clicking the name of the developer will bring you to their Mendix Profile. Clicking **View full leaderboard** will take you to the [Mendix Leaderboards](https://developer.mendixcloud.com/link/topappstore30).
 
 To see a detail page for each category, click **View more**.

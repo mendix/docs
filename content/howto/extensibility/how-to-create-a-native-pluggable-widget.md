@@ -259,6 +259,49 @@ import { GroupBox as WrappedGroupBox } from "./components/GroupBox";
 
 Also rename the "HelloWorldSample" component in the render method to "WrappedGroupBox".
 
+You might have noticed that we aren't using the **label** style anymore in the display component, so we can remove it.
+
+1. Go to **src/components/GroupBox.tsx** and delete the **label** style from the **defaultStyle** constant:
+
+   ```tsx
+   const defaultStyle: CustomStyle = {
+     container: {
+       borderColor: "#000",
+       borderRadius: Platform.OS === "ios" ? 4 : 0,
+       borderWidth: 1,
+       overflow: "hidden"
+     },
+     header: {
+       backgroundColor: "#000",
+       display: "flex",
+       flexDirection: "row",
+       justifyContent: "space-between",
+       paddingVertical: 10,
+       paddingHorizontal: 15
+     },
+     headerContent: {
+       color: "#FFF",
+       fontSize: 16,
+       fontWeight: "bold"
+     },
+     content: {
+       paddingVertical: 10,
+       paddingHorizontal: 15
+     }
+   };
+   ```
+
+2. Go back to **src/GroupBox.tsx**, remove the **label** property from the **CustomStyle** interface and add the new style properties **header**, **headerContent**, **content**:
+
+   ```tsx
+   export interface CustomStyle extends Style {
+     container: ViewStyle;
+     header: ViewStyle;
+     headerContent: TextStyle;
+     content: ViewStyle;
+   }
+   ```
+
 #### 3.3.2 Adding widget properties
 
 ##### Header caption property
@@ -716,14 +759,48 @@ You should notice that you can't see any icon in the header of the group box. Th
 
 Let's fix the issue by introducing a default style for our container component.
 
-1.
+1. Add the following **defaultStyle** constant outside the container component class:
 
-TODO:
+   ```tsx
+   const defaultStyle: CustomStyle = {
+     container: {},
+     header: {},
+     headerContent: {
+       color: "#FFF",
+       fontSize: 16
+     },
+     content: {}
+   };
+   ```
 
-- import DynamicValue, NativeIcon, Icon
-- renderIcon
-- change render method
-- defaultStyle for icon
+2. Import the flattenStyles function:
+
+   ```tsx
+   import { Style, flattenStyles } from "./utils/common";
+   ```
+
+3. Add the following private attribute to the container component:
+
+   ```tsx
+   private readonly styles = flattenStyles(defaultStyle, this.props.style);
+   ```
+
+4. Adjust the **renderIcon** method, so that it returns an **Icon** component with a color and size defined:
+
+   ```tsx
+   private renderIcon = (toBeRenderedIcon: DynamicValue<NativeIcon> | undefined, glyph: string) => {
+        const nativeIcon: NativeIcon =
+            toBeRenderedIcon && toBeRenderedIcon.status === ValueStatus.Available
+                ? toBeRenderedIcon.value
+                : { type: "glyph", iconClass: glyph };
+
+        return (
+            <Icon color={this.styles.headerContent.color} icon={nativeIcon} size={this.styles.headerContent.fontSize} />
+        );
+    };
+   ```
+
+5. Check the app in the Make It Native app and you should see the icons in white and the correct size.
 
 ## 4 Read More
 

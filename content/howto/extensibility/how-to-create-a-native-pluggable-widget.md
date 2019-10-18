@@ -1093,6 +1093,155 @@ The last thing we need to do is changing the container component so that the pro
        }
    ```
 
+### 3.6 Adding custom default style
+
+Although we have an extensively featured group box, we can still improve the styling of the widget. Right now, we apply very basic styling that's baked into our widget code. We can let the Mendix Client override this default styling by defining a custom style for our widget in Atlas UI.
+
+Before we are going to define a custom style, we want to align the widget mpk file name and the widget's deployment folder structure with other Mendix widgets.
+
+1. Navigate to **package.json**
+
+2. Change the **packagePath** value from "mendix" to "com.mendix.widget.native":
+
+   ```json
+   {
+     "name": "groupbox",
+     "widgetName": "GroupBox",
+     "version": "1.0.0",
+     "description": "Widget to group building blocks, snippets or other widgets",
+     "copyright": "Mendix 2019",
+     "author": "Mendix",
+     "config": {
+       "widgetPath": "./test/MxTestProject/widgets",
+       "projectPath": "./test/MxTestProject/"
+     },
+     "packagePath": "com.mendix.widget.native",
+     "scripts": {
+       "start": "npm run dev",
+       "build": "pluggable-widgets-tools build:ts:native",
+       "dev": "pluggable-widgets-tools start:ts:native",
+       "lint": "pluggable-widgets-tools lint",
+       "lint:fix": "pluggable-widgets-tools lint:fix",
+       "prerelease": "npm run lint",
+       "release": "pluggable-widgets-tools release:ts:native"
+     },
+     "license": "Apache-2.0",
+     "bugs": {
+       "url": "https://github.com/Mendix/groupbox/issues"
+     },
+     "devDependencies": {
+       "@mendix/pluggable-widgets-tools": "^8.2.0",
+       "@types/big.js": "^4.0.5",
+       "@types/classnames": "^2.2.6",
+       "@types/jest": "^24.0.0",
+       "@types/react": "^16.8.17",
+       "@types/react-dom": "^16.8.4",
+       "@types/react-native": "^0.57.56"
+     },
+     "dependencies": {
+       "big.js": "^5.2.2"
+     }
+   }
+   ```
+
+3. Save the file.
+
+4. Stop the execution of the `npm run dev` command in your terminal and execute it again to make sure the widget will be bundled again in a new mpk file.
+
+5. Delete the old widget mpk file in the Mendix test project. This file is located at **test/MxTestProject/widgets/mendix.GroupBox.mpk**.
+
+6. Open the file **src/GroupBox.xml**.
+
+7. Change the widget id attribute value from "mendix.groupbox.GroupBox" to "com.mendix.widget.native.groupbox.GroupBox":
+
+   ```xml
+   <?xml version="1.0" encoding="utf-8" ?>
+   <widget id="com.mendix.widget.native.groupbox.GroupBox" pluginWidget="true" offlineCapable="true" supportedPlatform="Native"
+       xmlns="http://www.mendix.com/widget/1.0/"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+       <name>Group box</name>
+       <description>Widget to group building blocks, snippets or other widgets</description>
+       <icon>iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAAHdbkFIAAAAAXNSR0IArs4c6QAA ArVJREFUeAHtWk12gjAQBl4X9Q72PsVFnxufN+ihegOfG18XtfeRO9gVNBMZDPlx gIAQGDcxmczMN99MQohGkc9nt9sVCWVgChNiAAloKbBuOaU9hTBJDPGjKI7HYyyJ 2u/3aZ7nP24y7BIw8AIiUIZO+v2XFnlhGPrdrmqOYC4i80oVGJLY0JodqH0UdUgW 7er30fEN3LGM9c0njZlI45sEjilpEwXqyEpExffT1Vj7AmJ23q6kp1Lp7lko1gxg yaJBva0qTxFUBhCSImv+tYsy6oxfiYwgirw56KeQmpfcBGfetnUBDEv7WRhxYVc5 QMcowH7frR6oAQAdpqfrRWxua+xTrb6VCUcXoVPpuwJzAsBNlHLskguHt+3eNaEc NwDoFBH63mIDgIsqb0+lAT1A753EFxgDYAaYAXUfyMSSWuvr1HeZsf7kGVAPJLXH 55DIkyTZHA6HM/hQl2H17B7SOdhWrwXUVSD9Lu5paDCA9Lc5ksVJvDl/vMqcor56 JFNzjnJs1RrAMdm2OQ9GefFVU751qpoSObfJ5SwnA/oh0+Lg4VDTWnIy8NB6j0KD gWc/C6bHQNPcdc2CzvDoDDAAZoAZYAaYAWaAGVjsiSjreqBhPWZgbgxU9yMYmPpO i2Mzams/HUNctgdB9U49o8AxFCM24zmAM7Ed+j0R/QzV6u+huh9bBehzZt0nK0CP vs29ma5L9dW/e7jmEnuUscZddnC8fQUk8ScARQN9tdKmsE3ZE5eNMMfmPytllIma vHUFlDehjX4PrnnqqVPervfmv30F9BTIVMyQFUDtolMJpCsOrgCKOT4HUAwFLl/8 EmACAq9gb/hcAd4UBm6AKyDwBHrD5wrwpjBwA1wBgSfQGz5XgDeFgRtYfAXwjZBe wfAXTzFmu3XVp4bWh1tjiI0/zIDCwD+0qr6OmQMSvQAAAABJRU5ErkJggg==</icon>
+       <properties>
+           <propertyGroup caption="General">
+               <propertyGroup caption="General">
+                   <property key="content" type="widgets" required="false">
+                       <caption>Content</caption>
+                       <description>Widgets to place inside</description>
+                   </property>
+                   <property key="collapsible" type="enumeration" defaultValue="no">
+                       <caption>Collapsible</caption>
+                       <description></description>
+                       <enumerationValues>
+                           <enumerationValue key="no">No</enumerationValue>
+                           <enumerationValue key="yesStartExpanded">Yes (start expanded)</enumerationValue>
+                           <enumerationValue key="yesStartCollapsed">Yes (start collapsed)</enumerationValue>
+                       </enumerationValues>
+                   </property>
+               </propertyGroup>
+               <propertyGroup caption="Header">
+                   <property key="headerCaption" type="string" required="false">
+                       <caption>Caption</caption>
+                       <description/>
+                   </property>
+                   <property key="expandIcon" type="icon" required="false">
+                       <caption>Expand icon</caption>
+                       <description>Icon used to indicate that the group box can be expanded</description>
+                   </property>
+                   <property key="collapseIcon" type="icon" required="false">
+                       <caption>Collapse icon</caption>
+                       <description>Icon used to indicate that the group box can be collapsed</description>
+                   </property>
+               </propertyGroup>
+               <propertyGroup caption="Common">
+                   <systemProperty key="Name" />
+                   <systemProperty key="Visibility" />
+               </propertyGroup>
+           </propertyGroup>
+       </properties>
+   </widget>
+   ```
+
+8. Save the file to rebundle the widget.
+
+9. Go to Mendix Studio Pro and press <kbd>F4</kbd> or select **Project > Synchronize Project Directory** from the topbar menu to bring your application in sync with the changes we made to the previous two files. You will notice an error saying that the group box widget can't be found. This is due to the fact that we changed the name of the widget mpk file.
+
+10. Take the following steps to fix the error:
+
+    1. Search in toolbox for the **Group Box** widget.
+    2. Drag the widget into the same container as the previous group box widget.
+    3. Apply the same properties as the previous widget to the new widget.
+    4. Drag the button inside the previous widget into the new widget.
+    5. Delete the previous widget.
+
+11. Go back to your widget project and open **test/MxTestProject/theme/styles/native/app/custom.js**. This is the place where we can define a custom default style for our group box widget.
+
+12. Add the following imports and constant to the file to define a default custom style:
+
+    ```js
+    import { brand } from "../core/variables";
+    import shadeblendconvert from "../core/helpers/_functions/shadeblendconvert";
+
+    export const com_mendix_widget_native_groupbox_GroupBox = {
+      container: {
+        borderColor: brand.primary
+      },
+      header: {
+        backgroundColor: shadeblendconvert(0.4, brand.primary)
+      },
+      headerContent: {
+        color: "#000"
+      }
+    };
+    ```
+
+    Note that the name of the constant has to be almost the same as the id of the widget. Only the dots of the widget id need to be underscores. Only with this name the Mendix Client will apply the custom style defined in this constant to the group box widget.
+
+13. Save the file and refresh the your app in the Make It Native app to see your new default style. Also note the ripple effect on the header in Android that was previously not visible.
+
+- Add default styling from modeler
+- Create design property
+
 ## 4 Read More
 
 {Add links to related documents and blog posts; make sure necessary third-party links are contextualizecd ./d in the above sections, as they should not be put here}

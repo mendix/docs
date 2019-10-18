@@ -200,7 +200,7 @@ For integrations, you have the following types of microflow:
 
 #### 3.5.2 Enumerations
 
-[Enumeration](refguide/enumerations) should be identified with a prefix.
+[Enumerations](/refguide/enumerations) should be identified with a prefix.
 
 | Document Type                             | Prefix    |
 |-------------------------------------------|-----------|

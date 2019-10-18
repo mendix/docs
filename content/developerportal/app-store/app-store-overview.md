@@ -146,7 +146,7 @@ On this page, you can see the App Store components for which you have created at
 
 You may see the **Company only** label on a component, which means it is your company's private App Store content (for details on how this is configured, see the [Adding New App Store Components](share-app-store-content#private-app-store) section of *How to Share App Store Content*). This content can be shared with [guests](#guests).
 
-In addition to the **Company only** label, you may see a label on a component name for the [user group](#user-groups) to which the component is assigned as user group [content](#content).
+In addition, you may see a label on a component name for the [user group](#user-groups) to which the component is assigned as user group [content](#content).
 
 To see the component's [details](#details) page, click **View**.
 

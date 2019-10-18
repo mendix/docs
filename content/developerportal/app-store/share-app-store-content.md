@@ -120,11 +120,15 @@ To add content to the App Store, follow these steps:
 
 4.  <a name="four"></a>In the **Publish to** drop-down menu, select the location where you want to publish your content:
 
+	{{% todo %}}[**VERIFY DESCRIPTION FOR PRIVATE APP STORE CONTENT BELOW**]{{% /todo %}}
+
 	* **Public App Store (visible for anyone)** – your content will be available to every developer in the Mendix community (this content will have to be reviewed and approved by Mendix before it is available)
-	* <a name="private-app-store"></a>**Private App Store (visible for your company)** – your content will receive the **Company only** label and be available only to the developers in your company as well as [external downloaders](../app-store/app-store-overview#ext); this content will not be reviewed by Mendix
+	* <a name="private-app-store"></a>**Private App Store (visible for your company)** – your content will receive the **Company only** label and be available only to the developers in your company as well as [user group guests](app-store-overview#guests); this content will not be reviewed by Mendix
 	
 	{{% alert type="warning" %}}You can only set this in the initial version of your content. You cannot change this setting by updating the App Store component later.
 	{{% /alert %}}
+
+{{% todo %}}[**VERIFY BELOW: CONTENT PROTECTION IS DELETED HERE, CORRECT?**]{{% /todo %}}
 
 5. In the **Content protection** section, you can choose to **Enable protection** or **Disable protection** for the content. This will determine which members of your company can manage the content. For more information, see the [ Content Managers](app-store-overview#cm) section of *App Store Overview*.
 6.  <a name="edit"></a>In the bottom half of the **DRAFT** screen, do the following:<br />
@@ -144,30 +148,31 @@ To add content to the App Store, follow these steps:
 	{{% image_container width="400" %}}![](attachments/share-app-store-content/add_content_4.png)
 	{{% /image_container %}}
 
-8.  <a name="doc-tab"></a>On the **Documentation** tab, you can write or edit the documentation that should accompany your app in the editor. You are only able to edit the documentation of your own and your company's content. Note that this is only applicable when the **Use GitHub README for documentation** check box is not checked.
+8. <a name="doc-tab"></a>On the **Documentation** tab, you can write or edit the documentation that should accompany your app in the editor. You are only able to edit the documentation of your own and your company's content. Note that this is only applicable when the **Use GitHub README for documentation** check box is not checked.
 
-	* The documentation template includes the following sections that you must fill out in order to submit your content:
-		* An extended **Description** of the content
-		* The **Typical usage scenario** for the content
-		* The **Features and limitations** for the content
-	* These sections are optional:
-		* Any **Dependencies** (for example, the required Studio Pro version, modules, images, and styles)
-		* The **Installation** steps and details
-		* The **Configuration** steps and details
-		* Any **Known bugs**
-		* Any **Frequently Asked Questions**
+  * The documentation template includes the following sections that you must fill out in order to submit your content:
+  	* An extended **Description** of the content
+  	* The **Typical usage scenario** for the content
+  	* The **Features and limitations** for the content
+  * These sections are optional:
+  	* Any **Dependencies** (for example, the required Studio Pro version, modules, images, and styles)
+  	* The **Installation** steps and details
+  	* The **Configuration** steps and details
+  	* Any **Known bugs**
+  	* Any **Frequently Asked Questions**
 
-	{{% image_container width="450" %}}![](attachments/share-app-store-content/add_content_5.png)
-	{{% /image_container %}}
-	
-	The editor comes with a set of basic formatting tools, such as bold, bullet lists, and URL links.
-	
-	You can attach images to your documentation in one of two ways:
-	
-	* Drag the image from file explorer to the editor (this will upload your image)
-	* Click the Image button in the editor tools and enter a URL which points to an image
-		
-	Uploaded images cannot be resized, but linked images can.
+  {{% image_container width="450" %}}![](attachments/share-app-store-content/add_content_5.png)
+  {{% /image_container %}}
+
+  The editor comes with a set of basic formatting tools, such as bold, bullet lists, and URL links.
+
+  You can attach images to your documentation in one of two ways:
+
+  * Drag the image from file explorer to the editor (this will upload your image)
+  * Click the Image button in the editor tools and enter a URL which points to an image
+  	
+
+  Uploaded images cannot be resized, but linked images can.
 
 9. Note that there is nothing for you to do on the **Statistics** and **All versions** tabs. The **Statistics** tab will chart the downloads of your content over time. The **All versions** tab will list the various versions of your content that have been updated.
 10. In the **Version Details** section on the bottom-right of the screen, do the following:<br />
@@ -205,7 +210,7 @@ To add content to the App Store, follow these steps:
 ## 5 Updating Existing App Store Content {#updating}
 
 {{% alert type="info" %}}
-If an existing App Store component is protected, you can only update it if you are a content manager. For more details, see the [Content Managers](app-store-overview#cm) section of *App Store Overview*.
+If an existing App Store component is assigned to a [user group](app-store-overview#user-groups) as specific user group [content](app-store-overview#content), you can only update the component if you are a member of that group.
 {{% /alert %}}
 
 To update content that has already been published, follow these steps:
@@ -230,4 +235,3 @@ To update content that has already been published, follow these steps:
 
 * [App Store Overview](app-store-overview)
 * [How to Use App Store Content](app-store-content)
-

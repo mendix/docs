@@ -486,12 +486,11 @@ The widget’s style properties are as follows:
 | `topBar` | `title` | This has all TextStyle properties. |
 | `topBar` | `backButtonText` | This has all TextStyle properties. |
 | `topBar` | `backButtonIcon` | This has all ImageStyle properties. |
-| `topBar` | `backButtonIconSource` | ImageRequireSource |
 | `bottomBar` | `container` | This has all ViewStyle properties. |
 | `bottomBar` | `label` | This has all TextStyle properties. |
 | `bottomBar` | `selectedLabel` | This has all TextStyle properties. |
-| `bottomBar` | `icon` | This has all TextStyle properties. |
-| `bottomBar` | `selectedIcon` | This has all TextStyle properties. |
+| `bottomBar` | `icon` | This has all ViewStyle properties. |
+| `bottomBar` | `selectedIcon` | This has all ViewStyle properties. |
 | `progressOverlay` | `background` | This has all ViewStyle properties. |
 | `progressOverlay` | `container` | This has all ViewStyle properties. |
 | `progressOverlay` | `activityIndicator` | This is the same as the [activity indicator](#activity-indicator) widget. |

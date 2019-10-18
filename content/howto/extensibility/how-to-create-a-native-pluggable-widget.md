@@ -1239,8 +1239,105 @@ Before we are going to define a custom style, we want to align the widget mpk fi
 
 13. Save the file and refresh the your app in the Make It Native app to see your new default style. Also note the ripple effect on the header in Android that was previously not visible.
 
-- Add default styling from modeler
-- Create design property
+### 3.7 Adding a design property
+
+It would be nice to provide the developer with some pre-definded styles that he can use for the group box. Let's create three style classes for the group box based on the brand colors success, warning and danger.
+
+1. Open **test/MxTestProject/theme/styles/native/app/custom.js** and append the following constants at the end of the file:
+
+   ```js
+   export const groupBoxSuccess = {
+     container: {
+       borderColor: brand.success
+     },
+     header: {
+       backgroundColor: shadeblendconvert(0.4, brand.success)
+     },
+     headerContent: {
+       color: "#000"
+     }
+   };
+
+   export const groupBoxWarning = {
+     container: {
+       borderColor: brand.warning
+     },
+     header: {
+       backgroundColor: shadeblendconvert(0.4, brand.warning)
+     },
+     headerContent: {
+       color: "#000"
+     }
+   };
+
+   export const groupBoxDanger = {
+     container: {
+       borderColor: brand.danger
+     },
+     header: {
+       backgroundColor: shadeblendconvert(0.4, brand.danger)
+     },
+     headerContent: {
+       color: "#000"
+     }
+   };
+   ```
+
+2. Go to Mendix Studio Pro and double click the group box widget
+3. Head to the appearance section.
+4. In the class field fill in "groupBoxWarning" to apply the warning style to the group box.
+5. Hit "OK" and rerun the app locally to see the warning style.
+
+Defining all the different styles inside **test/MxTestProject/theme/styles/native/app/custom.js** can make your code less readable. To prevent this we can extract the styles specifically for the group box and store them in a seperate file.
+
+1. Create a new file **test/MxTestProject/theme/styles/native/app/group-box.js**.
+2. Move all the code from **test/MxTestProject/theme/styles/native/app/custom.js** into the newly created file.
+3. Add the following import to **test/MxTestProject/theme/styles/native/app/group-box.js**:
+
+   ```js
+   export * from "./group-box";
+   ```
+
+4. Verify the custom warning style is still being applied to the group box widget in the Make It Native app.
+
+The developer needs to know the classnames by hard to apply a certain group box style. By making use of a design property this is no longer necessary.
+
+1. Open **test/MxTestProject/theme/settings-native.json**.
+2. Append after the "com.mendix.widget.native.slider.Slider" property the following property:
+
+   ```json
+   "com.mendix.widget.native.groupbox.GroupBox": [
+       {
+           "name": "Group box style",
+           "type": "Dropdown",
+           "description": "Style of the group box.",
+           "options": [
+               {
+                   "name": "Success",
+                   "class": "groupBoxSuccess"
+               },
+               {
+                   "name": "Warning",
+                   "class": "groupBoxWarning"
+               },
+               {
+                   "name": "Danger",
+                   "class": "groupBoxDanger"
+               }
+           ]
+       }
+   ]
+   ```
+
+3. Go to Mendix Studio Pro and press <kbd>F4</kbd> or select **Project > Synchronize Project Directory** from the topbar menu to bring your application in sync with the changes we made to the previous two files.
+
+4. Double click the group box widget and head to the appearance tab.
+
+5. Verify that there is a design property called "Group box style".
+
+6. Select the success style and hit "OK".
+
+7. Rerun the app locally and verify the new green style in the Make It Native App.
 
 ## 4 Read More
 

@@ -267,7 +267,7 @@ The guest will receive an email notifying them of access to the private content.
 {{% todo %}}[**VERIFY NOTE FOR "granted access" OR "be notified"**]{{% /todo %}}
 
 {{% alert type="info" %}}
-The guest must be a registered Mendix Platform user; otherwise, they will not be granted access.
+The guest must be a registered Mendix Platform user; otherwise, they will not be able to access the shared content.
 {{% /alert %}}
 
 To remove a guest, click **Remove**.

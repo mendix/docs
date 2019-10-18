@@ -81,7 +81,7 @@ The details page for each add-on and app presents the following item information
 
 	![](attachments/app-store-overview/content_detail_8.png)
 	
-*  **Group members** tab – if this App Store component is assigned to a [user group](#user-groups), this tab lists the [user group members](#members)
+*  **Group members** tab – if this App Store component is assigned to a [user group](#user-groups), this tab lists the [user group members](#members) (who are the users that can manage the component)
 
 	![](attachments/app-store-overview/content_detail_9.png)
 
@@ -180,7 +180,7 @@ Click **Delete** to delete a draft.
 
 ### 4.4 Shared with Me {#shared-with-me}
 
-This page contains content shared with you by other companies who have marked you as a [guest](#guests):
+This page contains private content shared with you by other companies who have marked you as a [guest](#guests):
 
 {{% todo %}}[**UPDATE SCREENSHOT**]{{% /todo %}}
 
@@ -208,9 +208,13 @@ This page presents a history of notifications on content you have contributed to
 
 On this page, you can see all the content your company has published:
 
-{{% todo %}}[**VERIFY SCREENSHOT AND "Company only" LABEL**]{{% /todo %}}
+{{% todo %}}[**VERIFY SCREENSHOT]{{% /todo %}}
 
 ![](attachments/app-store-overview/company-content.png)
+
+{{% todo %}}[**VERIFY DESCRIPTION OF LABEL BELOW]{{% /todo %}}
+
+The label under a component names the [user group](#user-groups) to which the component is assigned as user group [content](#content).
 
 The **Manage** button is available to you if one of the following conditions is true:
 
@@ -235,12 +239,12 @@ This page contains reviews of **Your company's content** as well as **Your compa
 You can configure user groups for various levels of access to your company's App Store. The available configuration tabs for each user group page are described in the sections below.
 
 {{% alert type="info" %}}
-The **User Groups** menu item and page are visible to all users. However, only [Company Admins](../company-app-roles/companyadmin-settings) with the [Can manage Company](../company-app-roles/manage-roles#app-store-manager) permission can create and delete user groups. Both [Group admins](#members) and Company Admins can manage user groups.
+The **User Groups** menu item and page are visible to all users. However, only [Company Admins](../company-app-roles/companyadmin-settings) with the [Can manage Company](../company-app-roles/manage-roles#app-store-manager) permission can create and delete user groups. Both [Group Admins](#members) and Company Admins can manage user groups.
 {{% /alert %}}
 
 #### 5.3.1 Members Tab {#members}
 
-On this tab, you can enter an email address and click **Add** to add a member to the user group. User group members can manage the [content](#content) assigned to the group.
+On this tab, you can enter the email address of a Mendix Platform user from your company and click **Add** to add them as a user group member. User group members can manage the [content](#content) assigned to the group.
 
 Once a member is added, you can select their permission level: **Member** or **Group Admin**. A Group Admin can manage the user group.
 
@@ -260,15 +264,25 @@ A guest is a Mendix Platform user from outside your organization who can downloa
 
 The guest will receive an email notifying them of access to the private content. They can then see all the private App Store content shared with them in their [Shared with Me](#shared-with-me) page.
 
+{{% todo %}}[**VERIFY NOTE FOR "granted access" OR "be notified"**]{{% /todo %}}
+
+{{% alert type="info" %}}
+The guest must be a registered Mendix Platform user; otherwise, they will not be granted access.
+{{% /alert %}}
+
 To remove a guest, click **Remove**.
 
 #### 5.3.3 Content Tab {#content}
 
-On this tab, you can assign content to this user group that can only be managed by members of this group. To assign content to a user group, click **Assign Content** and select a private App Store component from the dialog box:
+On this tab, you can assign content to this user group that can only be managed by members of this group. To assign a component to a user group, click **Assign Content** and select a company App Store component from the dialog box:
 
 {{% todo %}}[**VERIFY SCREENSHOT**]{{% /todo %}}
 
 ![](attachments/app-store-overview/group-content.png)
+
+{{% alert type="info" %}}
+A Mendix App Store component can only be assigned to one user group at a time. If a component is already assigned to another user group, it will not appear in this dialog box.
+{{% /alert %}}
 
 To manage a component assigned to the user group, click **Manage** (for more information, see the [Managing a Component](#manage) section above).
 
@@ -277,6 +291,10 @@ To see the component's [details](#details) page, click **View**.
 To remove a component from the user group, click **Remove**.
 
 If you want [guests](#guests) to be able to download the component, check the **Allow guests to download** box.
+
+{{% alert type="info" %}}
+Only [Group Admins](#members) and Company Admins can check or clear the **Allow guests to download** box.
+{{% /alert %}}
 
 #### 5.3.4 Settings Tab
 

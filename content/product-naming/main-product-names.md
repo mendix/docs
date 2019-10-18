@@ -76,7 +76,7 @@ The platform includes Mendix Studio and our cloud hosting.
 
 ## Mendix Studio {#studio}
 
-The rebranded name for the [Web Modeler](#wm) as of Mendix 8.
+The rebranded name for the [Web Modeler](terminology-history#wm) as of Mendix 8.
 
 {{% alert type="info" %}}
 "Studio" can be used where regular repetition is necessary in a doc. However, where possible, "Mendix" should be added to the product name.<br />

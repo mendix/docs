@@ -70,13 +70,13 @@ Entities have the following properties:
 
 *  **Stored Information** properties define whether the information about the entity is stored in the database. If the information is stored, it can be retrieved afterwards and can be used in [page filters](filters). For example, you can add a filter and show only objects that were created by the current user. 
 
-  You can toggle the following properties: 
+  	You can toggle the following properties: 
 
-  * **Store 'Created by'** – when enabled, the user who created the entity is stored in the database
+  	* **Store 'Created by'** – when enabled, the user who created the entity is stored in the database
 
-  * **Store 'Creation Date'** – when enabled, the date and time when the entity was created is stored in the database
+  	* **Store 'Creation Date'** – when enabled, the date and time when the entity was created is stored in the database
 
-  * **Store 'Last Changed by'**– when enabled, the user who was the last to make changes to the entity is stored in the database
+	* **Store 'Last Changed by'**– when enabled, the user who was the last to make changes to the entity is stored in the database
 
 	* **Store 'Last Changed Date'** – when enabled, the date and time when the entity was last changed is stored in the database
 

@@ -82,10 +82,11 @@ To set up a working directory for your script, follow these steps:
 
     ```json
     "dependencies": {
-      "@types/when": "^2.4.28",
-      "mendixmodelsdk": "~4.6.0",
-      "mendixplatformsdk": "~4.0.0",
-      "when": "^2.4.28"
+     "@types/when": "^2.4.33",
+     "mendixmodelsdk": "^4.25.0",
+     "mendixplatformsdk": "^4.1.1",
+     "when": "^3.7.8",
+     "request": "~2.87.0"
     }
     ```
 

@@ -198,7 +198,15 @@ For integrations, you have the following types of microflow:
 | Layout                                    | **Lay_**  |
 | Snippet                                   | **Snip_** |
 
-#### 3.5.2 Pages
+#### 3.5.2 Enumerations
+
+[Enumerations](/refguide/enumerations) should be identified with a prefix.
+
+| Document Type                             | Prefix    |
+|-------------------------------------------|-----------|
+| Enumeration                               | **Enum_** |
+
+#### 3.5.3 Pages
 
 Pages use a **suffix** to indicate their use.
 
@@ -221,7 +229,7 @@ Pages that are used as a tooltip page should have the suffix **_Tooltip**.
 | Select multiple objects | _MultiSelect |
 | Tooltip | _Tooltip |
 
-#### 3.5.3 Integration Documents
+#### 3.5.4 Integration Documents
 
 Documents used to support integration should have the prefixes listed below.
 

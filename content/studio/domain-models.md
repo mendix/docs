@@ -15,7 +15,7 @@ Each module has its own *domain model*. The domain model is a data model that de
 
 The domain model in Studio consists of the following:
 
-* [Entities](#entity)
+* [Entities](#entity-types)
 * [Associations](domain-models-association-properties) 
 
 Let us say you have a collection of CDs like the one in the table below:
@@ -42,13 +42,13 @@ The **Auto Arrange** option in the top-left corner groups and aligns entities by
 
 The domain model can contain the following components:
 
-* [Entitiy](#entity-types) – represents a class of real-world objects. Entities can have attributes:
-  * [Attribute](#attributes) – describes and/or identify the entity
+* [Entity](#entity-types) – represents a class of real-world objects. Entities can have attributes:
+ 	* [Attribute](#attributes) – describes and/or identify the entity
 * [Association](#associations) – describes a relation between entities
 
 ### 2.1 Entities and Their Types {#entity-types}
 
- An entity represents a class of real-world objects, such as customers, invoices, work items, etc. If we draw a parallel with databases, the entity is a table.
+An entity represents a class of real-world objects, such as customers, invoices, work items, etc. If we draw a parallel with databases, the entity is a table.
 
 You can add different type of entities to your domain model:
 

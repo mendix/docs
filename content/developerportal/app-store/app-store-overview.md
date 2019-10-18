@@ -154,9 +154,11 @@ To see the component's [details](#details) page, click **View**.
 
 Click **Manage** to manage the component:
 
+{{% todo %}}[**UPDATE SCREENSHOT**]{{% /todo %}}
+
 ![](attachments/app-store-overview/content-management.png)
 
-{{% todo %}}[**VERIFY "Unpublish" CONDITIONS IN REVIEW**]{{% /todo %}}
+{{% todo %}}[**APP-STORE-TEAM VERIFY: "Unpublish" CONDITIONS**]{{% /todo %}}
 
 On this page, you will see the following buttons:
 
@@ -190,8 +192,6 @@ This page contains private content shared with you by other companies who have m
 
 This page contains reviews of [Your content](#content) by other users as well as **Your reviews** that you have written of other content:
 
-{{% todo %}}[**VERIFY SCREENSHOT**]{{% /todo %}}
-
 ![](attachments/app-store-overview/your-reviews.png)
 
 ### 4.6 Notifications
@@ -208,7 +208,7 @@ This page presents a history of notifications on content you have contributed to
 
 On this page, you can see all the content your company has published:
 
-{{% todo %}}[**VERIFY SCREENSHOT**]{{% /todo %}}
+{{% todo %}}[**DO FINAL VERIFICATION OF SCREENSHOT**]{{% /todo %}}
 
 ![](attachments/app-store-overview/company-content.png)
 
@@ -226,8 +226,6 @@ To see the component's [details](#details) page, click **View**.
 
 This page contains reviews of **Your company's content** as well as **Your company's reviews** that users from your company have written of other content.
 
-{{% todo %}}[**VERIFY SCREENSHOT**]{{% /todo %}}
-
 ![](attachments/app-store-overview/your-company-reviews.png)
 
 ### 5.3 User Groups {#user-groups}
@@ -244,8 +242,6 @@ On this tab, you can enter the email address of a Mendix Platform user from your
 
 Once a member is added, you can select their permission level: **Member** or **Group Admin**. A Group Admin can manage the user group.
 
-{{% todo %}}[**VERIFY SCREENSHOT**]{{% /todo %}}
-
 ![](attachments/app-store-overview/members.png)
 
 To remove a member, click **Remove** next to their name.
@@ -259,8 +255,6 @@ A guest is a Mendix Platform user from outside your organization who can downloa
 ![](attachments/app-store-overview/guests.png)
 
 The guest will receive an email notifying them of access to the private content. They can then see all the private App Store content shared with them in their [Shared with Me](#shared-with-me) page.
-
-{{% todo %}}[**VERIFY NOTE FOR "granted access" OR "be notified"**]{{% /todo %}}
 
 {{% alert type="info" %}}
 The guest must be a registered Mendix Platform user; otherwise, they will not be able to access the shared content.
@@ -286,11 +280,7 @@ To see the component's [details](#details) page, click **View**.
 
 To remove a component from the user group, click **Remove**.
 
-If you want [guests](#guests) to be able to download the component, check the **Allow guests to download** box.
-
-{{% alert type="info" %}}
-Only [Group Admins](#members) and Company Admins can check or clear the **Allow guests to download** box.
-{{% /alert %}}
+[Group Admins](#members) and Company Admins can check the **Allow guests to download** box of this component can be downloaded by [guests](#guests).
 
 #### 5.3.4 Settings Tab
 

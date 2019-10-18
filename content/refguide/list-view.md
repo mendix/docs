@@ -1,62 +1,94 @@
 ---
 title: "List View"
 parent: "data-widgets"
+menu_order: 40
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+## 1 Introduction
 
-The list view is similar to the template grid. The list view shows a list of objects arranged vertically. Each object is shown using a template. During development, the object template is defined by placing a widget inside the list view's dropzone. The list of objects shown is determined by a datasource.
+A list view shows a list of objects. For example, you can display a list of all profiles:
 
-{{% alert type="info" %}}
+![](attachments/data-widgets/list-view-example-profile.png) 
 
-![](attachments/pages/list-view.png)
-A read-only list view showing all profiles.
+Each object is shown using a template. This template is defined by placing widgets inside the list view's drop-zone. The list of objects shown is determined by a [data source](#data-source).
 
-{{% /alert %}}
+## 2 Properties
 
-## Common properties
+An example of list view properties is represented in the image below:
 
-{{% snippet file="refguide/Name+Property.md" %}}
+{{% image_container width="250" %}}![](attachments/data-widgets/list-view-properties.png)
+{{% /image_container %}}
 
-{{% snippet file="refguide/Class+Property.md" %}}
+List view properties consist of the following sections:
 
-{{% snippet file="refguide/Style+Property.md" %}}
+* [Common](#common)
+* [Data source](#data-source)
+* Design Properties
+* [General](#general)
+* [Templates](#templates)
+* [Visibility](#visibility)
 
-## General properties
+### 2.1 Common Section {#common}
 
-### Editable
+{{% snippet file="refguide/common-section-link.md" %}}
 
-If this property is set to 'Yes', items in the list view can be edited. The changes made to list view items can be saved with a save button and reverted with a cancel button. Searching and paging are disabled to avoid confusion about what changes are saved or reverted.
+### 2.2. Data Source Section {#data-source}
 
-### Click action
+The data source determines which objects will be shown in a list view. For general information on data sources, see [Data Sources](data-sources).
 
-The click action defines what action is performed when a list view entry is 'clicked'. This can either be opening a page or calling a microflow. For opening a page see [Opening Pages](opening-pages) and for the microflow settings see [Starting Microflows](starting-microflows). The list view has no Confirmation or Advanced microflow settings.
+#### 2.2.1 Type
 
-### Page size
+The list view supports the following types of data sources: 
 
-With this property you can change the number of containers that will be shown in one page. You cannot set this property when the list view is editable.
+* [Database source](database-source) – objects are retrieved directly form the database. The database source can be used in [offline](offline-first) applications. 
+* [XPath source](xpath-source) – objects are retrieved directly form the database
+* [Microflow source](microflow-source) – calculates the list of objects by executing a microflow
+* Nanoflow source – calculates the list of objects by executing a nanoflow
+* [Association source](association-source) – follows an association to get to objects
 
-## Data source properties
+The database and XPath sources retrieve objects from the database and supports searching and sorting. 
 
-The data source determines which objects will be shown in the list view. For general information about data sources, see [Data Sources](data-sources).
+{{% alert type="warning" %}}Searching is not supported on native mobile pages.{{% /alert %}}
 
-### Type
+### 2.3 General Section {#general}
 
-The list view supports the following types of data sources: database source, XPath source, association source and microflow Source. The database and XPath sources retrieve objects from the database and supports searching and sorting. The database source can also be used in [offline](offline-first) applications. The association source follows an association from the enclosing data view to get to the objects. Finally, the microflow source calculates the list of objects by executing a microflow.
+#### 2.3.1 Editable
 
-### Other properties
+If this property is set to *Yes*, items in the list view can be edited. The changes made to list view items can be saved with a **Save** button and reverted with a **Cancel** button. **On click** and **Page size** properties are not displayed to avoid confusion about what changes are saved or reverted.
 
-See the corresponding data source for its properties:
+#### 2.3.2 On Click 
 
-*   [Database source](database-source)
-*   [XPath source](xpath-source)
-*   [Microflow source](microflow-source)
-*   [Association source](association-source)
+An on-click event defines what action is performed when a user clicks a list view row. For more information on on-click events, see [On Click Event](on-click-event). 
 
-## Templates properties
+#### 2.3.3 Page Size
 
-### Templates
+the number of rows displayed on the page; after the indicated limit is reached, the **Load more...** button is displayed on the page.
+
+#### 2.3.4 Scroll Direction
+
+{{% alert type="info" %}}The scroll direction property is only supported on native mobile pages.{{% /alert %}}
+
+This property determines whether the list view lays out its items vertically (default) or horizontally.
+
+#### 2.3.5 Number of Columns
+
+{{% alert type="info" %}}The number of columns property is only supported on native mobile pages.{{% /alert %}}
+
+With this property you can change the number of items that will be shown next to each other in one row.
+If you set the scroll direction property to horizontal, this property determines the number of items per column.
+
+#### 2.3.6 Pull Down Action
+
+{{% alert type="info" %}}The number of columns property is only supported on native mobile pages.{{% /alert %}}
+
+The pull down action defines what action is performed when you drag downwards on a list view.
+Its common behavior is to update the contents of the list view by synchronizing data.
+
+### 2.4 Templates Section {#templates}
+
+{{% alert type="warning" %}}Templates are not supported on native mobile pages.{{% /alert %}}
 
 If the entity that is connected to the list view has specializations, you can optionally specify templates for each specialization. For each row in the list view the most specific template is shown. The different templates can be selected by clicking the extra header that appears when a specialization template is added.
 
@@ -68,8 +100,21 @@ Now if there is a row of type Bicycle the template specific for bicycles will be
 
 {{% /alert %}}
 
-## Visibility properties
+### 2.5 Visibility Section {#visibility}
 
-{{% snippet file="refguide/Visibility+Property.md" %}}
+{{% snippet file="refguide/visibility-section-link.md" %}}
 
-{{% snippet file="refguide/Visibility+Property+With+Module+Roles+Simple.md" %}}
+## 3 Performing Specific Actions
+
+To perform actions on a list view, select it on a page and right-click it. The list of possible actions opens. While some actions from this list, such as **Select data source**, **Edit condition for visible**, are a quick way to set the properties, the following actions are specific actions that you can perform:
+
+* **Go to entity** – opens a domain model and highlights an an entity that is used as the data source
+* **Go to data source** **microflow **– this action is only displayed when a microflow is set as the data source and opens this microflow 
+* **Go to data source nanoflow** – this action is only displayed when a nanoflow is set as the data source and opens this nanoflow
+
+## 4 Read More
+
+* [Page](page)
+* [Data Widgets](data-widgets)
+* [Data Sources](data-sources)
+* [Properties Common for Widgets](common-widget-properties)

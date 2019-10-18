@@ -87,7 +87,7 @@ You can change the position of the legend by modifying the properties as shown b
 
 **Left:**
 
-Adjust x for long series names or y axis ticks.
+Adjust x for long series names or Y-axis ticks.
 
 ``` json
 {
@@ -113,7 +113,7 @@ Adjust x for long series names or y axis ticks.
 
 **Bottom:**
 
-Adjust y to -0.2 for long x axis ticks.
+Adjust y to -0.2 for long X-axis ticks.
 
 ``` json
 {
@@ -416,7 +416,7 @@ This is the default range mode in charts. Both positive and negative ranges for 
 ![Range mode](attachments/pages/charts/tozero.gif)  
 
 {{% alert type="info" %}}
-When **fill** for the series is set to something other than *none*, the y-axis range is forced to start from zero (*tozero*). For example:
+When **fill** for the series is set to something other than *none*, the Y-axis range is forced to start from zero (*tozero*). For example:
 
 **Layout**
 

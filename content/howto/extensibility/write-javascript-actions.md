@@ -1,5 +1,5 @@
 ---
-title: "Write JavaScript Actions: Part 1 (Basic)"
+title: "Build JavaScript Actions: Part 1 (Basic)"
 parent: "build-javascript-actions"
 description: "This how-to will teach you to create a JavaScript action."
 tags: ["widget", "TexttoSpeech", "SpeechtoText", "JavaScript", "API", "JavaScript-API"]
@@ -127,15 +127,15 @@ To create a JavaScript action that can synthesize text to speech, follow these s
 9. You have just implemented your first JavaScript action! You can start using the action in your nanoflows by adding a **JavaScript action call** and selecting the newly created **SpeechToText** action: 
 
 	![javascript action call](attachments/write-javascript-actions/selectjsactioncall.png)
-
+	
 	![select text to speech action](attachments/write-javascript-actions/selectjsactioncalldetail.png)
-
-	Optionally, you can expose the JavaScript action as a nanoflow action. When you do, you can choose a **Caption**, **Category**, and **Icon**. Note that to choose an icon your image will need to be included in an existing image collection. 
-
+	
+	Optionally, you can expose the JavaScript action as a nanoflow action. When you do, you can choose a **Caption**, **Category**, and **Icon**. Note that to choose an icon your image will need to be included in an existing [image collection](/refguide/image-collection). 
+	
 	![add caption category and icon](attachments/write-javascript-actions/exposeasnanoflow.png)
-
+	
 	It will then appear in the **Toolbox** window when editing a nanoflow: 
-
+	
 	![text to speech in nanoflow](attachments/write-javascript-actions/iconintoolbox.png)
 
 10. Now for a JavaScript action test run! First, make a nanoflow which features your new JavaScript action. Right-click your folder in the **Project Explorer** and click **Add nanoflow**. Then, add an action to your nanoflow, select **call a nanoflow action**, and select your JavaScript action. You will see a window which will let you edit the JavaScript action. Click the **Edit** button of the **Input Text** and type *‘Hello world'*. Then, set **Use return value** to *No* radio button.
@@ -150,10 +150,10 @@ To create a JavaScript action that can synthesize text to speech, follow these s
 
 ## 3 Read More{#read-more}
 
-* [Write JavaScript Actions: Part 2 (Advanced)](write-javascript-github)
+* [Build JavaScript Actions: Part 2 (Advanced)](write-javascript-github)
 * [Implement Best Practices for JavaScript Actions](best-practices-javascript-actions)
 * [JavaScript Actions](/refguide/javascript-actions)
-* [Mendix Client API](https://apidocs.mendix.com/7/client/) 
+* [Mendix Client API](https://apidocs.mendix.com/8/client/) 
 * JavaScript Resources:
 	* [JavaScript basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
 	* [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)

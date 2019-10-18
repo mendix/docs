@@ -38,10 +38,10 @@ In the how-to [Exposing a web service](../integration/expose-a-web-service) you 
 
 1.  Open Studio Pro.
 2.  Open the project you created in the how-to [Exposing a web service](../integration/expose-a-web-service).
-3.  Create a **Microflow** that creates a customer and returns a boolean. 
+3.  Create a **Microflow** that creates a customer and returns a Boolean. 
 
     <iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/27dedcb6-38d2-48e4-a77d-68e1d5bde73a/createcustomer?embed=true"></iframe>
-4.  Create a **Microflow** that deletes a customer and returns a boolean.
+4.  Create a **Microflow** that deletes a customer and returns a Boolean.
 
     <iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/33c17aed-c915-420b-b433-0c22614a0273/deletecustomer?embed=true"></iframe>
 5.  Publish both microflows as web service operation of the **CustomerWebservice** as described in chapter 4 of the how-to [Exposing a web service](../integration/expose-a-web-service).
@@ -72,7 +72,7 @@ In this chapter you will build a testsuite. A testsuite contains one or more tes
 3. Select TestSuite 1 and press **CTRL+N** to create a new TestCase.
    ![](attachments/18448632/18580331.png)
 4. Click **OK**.
-5. Expand Testuite 1 and TestCase 1.
+5. Expand TestSuite 1 and TestCase 1.
 6. Right-click **Test Steps(0)** and select **SOAP Request**.
    ![](attachments/18448632/18580312.png)
 7. Enter _Retrieve Customers_ in the name field.
@@ -101,7 +101,7 @@ In this chapter you will build a testsuite. A testsuite contains one or more tes
 
 14. Press **ALT+Enter** to submit the request. The customers you created in the previous how-to will be shown in the response. The response will look like the code below:
 
-    ```
+    ```xml
     <soap:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tns="http://www.example.com/">
         <soap:Body>
             <tns:GetCustomersResponse>
@@ -163,7 +163,7 @@ In this chapter you will extend your test case with multiple test steps and asse
 
 2.  Change the request into the following value:
 
-    ```java
+    ```xml
     <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:exam="http://www.example.com/">
        <soapenv:Header/>
        <soapenv:Body>

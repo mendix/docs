@@ -17,7 +17,7 @@ Attributes and associations of objects are accessed using a slash (for example, 
 
 Expressions can contain several operations which are applied using standard algebraic rules for precedence and associativity (for example, `1 + 2 + 3`). Brackets can be used to change the precedence and associativity, or for clarity.
 
-### 1.1 An Example
+### 1.1 Example
 
 As an example, imagine an object called **package** with two attributes: `weight` (decimal) and `shippingCosts` (decimal). The rule is that, if the weight of a package is less than one kilogram, there are no shipping costs. Otherwise, the shipping costs are €5.00. The expression for changing the `shippingCosts` attribute is:
 
@@ -26,6 +26,10 @@ if $package/weight < 1.00 then 0.00 else 5.00`
 ```
 
 An overview of the operators which can be used in expressions is shown below.
+
+### 1.2 Regular Expressions
+
+For details on regular expressions, sub-expressions, and quantifiers, see [Regular Expressions](regular-expressions).
 
 ## 2 Unary Expressions
 

@@ -20,7 +20,7 @@ You can also change the value when you configure the following activities:
 * **Change Object** - can be used to change an existing object or properties of this object
 * **Change Variable** - change the value of an existing variable in the current microflow. 
 
-You can also configure a return value for the **End Event** - the location where the microflow will stop.
+You can also configure a return value for the **End Event** – the location where the microflow will stop.
 
 For more information on the functions of these activities, see [Microflows](microflows). 
 
@@ -83,7 +83,7 @@ The functions of these tabs are described in the table below:
 
 | Tab                  | Description                                                  |
 | -------------------- | ------------------------------------------------------------ |
-| Variables/Attributes | Shows variables and attributes that match the type of the attribute, association or variable that you want to create or change. <br />For example, when you select  an attribute of the type Decimal, variables of types Decimal and Integer will be shown in the tab. This happens because decimal can include whole numbers (integer). However, if you pick an attribute of the type Integer, variables of the type Decimal will not be shown, because the whole numbers (integer) cannot contain decimals.  For more information on attribute types, see [Attribute Types](domain-models-attributes).<br />**Note** The attribute of the type Long will be shown as Integer in the microflows. |
+| Variables/Attributes | Shows variables and attributes that match the type of the attribute, association or variable that you want to create or change. <br />For example, when you select  an attribute of the type Decimal, variables of types Decimal and Integer will be shown in the tab. This happens because decimal can include whole numbers (integer). However, if you pick an attribute of the type Integer, variables of the type Decimal will not be shown, because the whole numbers (integer) cannot contain decimals.  For more information on attribute types, see [Attributes](domain-models-attributes).<br />**Note** The attribute of the type Long will be shown as Integer in the microflows. |
 | Constant             | With this tab you can assign a new value selecting  from the values of an attribute of Enumeration type. |
 | Expression           | With this tab you can assign the attribute, association or variable different values, depending on what you write in the expression. For more information, see [Microflow Expressions](microflows-expressions). |
 

@@ -27,7 +27,7 @@ Disallowing concurrent execution of a microflow is useful if a microflow would i
 | No | It is possible to execute the microflow more than once concurrently. |
 | Yes | It is not possible to execute the microflow more than once concurrently; the user receives a message or another microflow is executed instead. |
 
-_Default value_: No
+*Default value*: No
 
 ### 3.2 Error Message
 
@@ -51,17 +51,7 @@ A microflow could return whether or not the committing of an object should conti
 
 ## 5 Security Properties
 
-### 5.1 Allowed Roles
-
-**Allowed roles** defines which [module role](module-security#module-role) the user must have to be able to execute the microflow.
-
-{{% alert type="warning" %}}
-These roles are only checked when the microflow is executed from the client. A microflow is always allowed to call another microflow, and these roles are not checked then.
-{{% /alert %}}
-
-For more information, see [Module Security](module-security).
-
-### 5.2 Apply Entity Access
+### 5.1 Apply Entity Access
 
 This property indicates whether entity access based on the current user is applied when performing operations on objects. Applying entity access limits the objects that are retrieved by the [retrieve action](retrieve) to only those that the current user is allowed to see. Similarly, to reading and writing attributes and associations the entity access of the current user is applied. If entity access is not applied on the other hand, all operations are allowed and all objects are retrieved.
 
@@ -79,6 +69,16 @@ By default entity access is not applied. Set **Apply entity access** to **Yes** 
 {{% /alert %}}
 
 _Default value:_ No
+
+### 5.2 Allowed Roles
+
+**Allowed roles** defines which [module role](module-security#module-role) the user must have to be able to execute the microflow.
+
+{{% alert type="warning" %}}
+These roles are only checked when the microflow is executed from the client. A microflow is always allowed to call another microflow, and these roles are not checked then.
+{{% /alert %}}
+
+For more information, see [Module Security](module-security).
 
 ## 6 Usage Properties
 

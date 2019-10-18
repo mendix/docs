@@ -213,7 +213,7 @@ It is often convenient to have more than one development line. For example, one 
 
 If you want to add some functionality to a deployed application or you want to fix a bug in it, you can do so without interfering with other development.
 
-1. Determine the version of the deployed application. This information is in the Developer Portal. Alternatively, you can find the version in the metadata.json file in the **model** subfolder of your deployment package (mda) archive. For example, `"ModelVersion": "1.0.0.16"`
+1. Determine the version of the deployed application. This information is in the Developer Portal. Alternatively, you can find the version in the *metadata.json* file in the **model** subfolder of your deployment package (mda) archive. For example, `"ModelVersion": "1.0.0.16"`
 2. Choose **Project > More Versioning > Manage Branch Lines...** and create a branch based on the tag with the that version number as its name.
 
     ![](attachments/using-version-control-in-studio-pro/create-from-tag.png)
@@ -331,7 +331,7 @@ We advise you to always commit and update inside Studio Pro because in this way 
 If you are doing more advanced changes to files, like adding Java actions or resources to your project, you will have to install TortoiseSVN on your computer and perform some operations yourself. You can download it for free at [https://tortoisesvn.net/](https://tortoisesvn.net/).
 
 {{% alert type="warning" %}}
-Mendix Studio Pro (version 8.0.0 beta 2 and above) uses the Subversion 1.9 working copy. Previous versions of the Mendix Desktop Modeler used a Subversion 1.7 working copy. These working copy versions **are not compatible**.
+Mendix Studio Pro uses the Subversion 1.9 working copy. Previous versions of the Mendix Desktop Modeler used a Subversion 1.7 working copy. These working copy versions **are not compatible**.
 
 Always use the version of TortoiseSVN which matches your app model. If you open a local model from Mendix version 7.x or 6.x with the latest version of TortoiseSVN **you will no longer be able to open it in Mendix**.
 {{% /alert %}}

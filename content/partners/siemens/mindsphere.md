@@ -13,7 +13,7 @@ Mendix can be used to access Siemens MindSphere data and can also be deployed to
 
 ## 2 Main Documents in This Section
 
-There are three four in this section:
+There are four documents in this section:
 
 * [MindSphere Development Considerations](mindsphere-development-considerations) – covers things which you should address when developing for MindSphere, including the following:
 

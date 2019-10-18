@@ -24,7 +24,7 @@ $ npm install mendixmodelsdk mendixplatformsdk when @types/when --save
 $ tsc --init
 ```
 
-## <a name="setting"></a>3 Setting Up Your Development Tools
+## 3 Setting Up Your Development Tools {#setting}
 
 To set up your development tools, follow these steps:
 
@@ -32,7 +32,7 @@ To set up your development tools, follow these steps:
 
 2.  Open a terminal (on Windows, [Command Prompt](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands)) and run the following command:
 
-    ```text
+    ```bash
     $ node --version
     v8.9.1
     ```
@@ -50,7 +50,7 @@ To set up your development tools, follow these steps:
 
 5.  Use the following command to check the TypeScript compiler version on your PATH:
 
-    ```text
+    ```bash
     $ tsc --version
     Version 2.6.2 (should be the latest 2.* version)
     ```
@@ -61,7 +61,7 @@ To set up your development tools, follow these steps:
 
 To set up a working directory for your script, follow these steps:
 
-1.  First, create a new directory and initialize it for use with the Node.js package manager `npm`. Using `--yes` skips several unimportant questions. This creates a  [`package.json`](https://docs.npmjs.com/files/package.json)with default contents. Through this file you control your `npm` package. 
+1.  First, create a new directory and initialize it for use with the Node.js package manager `npm`. Using `--yes` skips several unimportant questions. This creates a [package.json](https://docs.npmjs.com/files/package.json)with default contents. Through this file you control your `npm` package. 
 
     ```bash
     $ mkdir my-app-generator
@@ -78,7 +78,7 @@ To set up a working directory for your script, follow these steps:
     ```
 
 3.  Add `mendixmodelsdk,` `mendixplatformsdk,` and `when.js` as dependencies. 
-    Dependencies are stored in the `node_modules` directory (which will be automatically created by `npm` if necessary). Open the `package.json` you just created. Add a [`dependencies` block](https://docs.npmjs.com/files/package.json#dependencies) that looks like this:
+    Dependencies are stored in the `node_modules` directory (which will be automatically created by `npm` if necessary). Open the *package.json* you just created. Add a [`dependencies` block](https://docs.npmjs.com/files/package.json#dependencies) that looks like this:
 
     ```json
     "dependencies": {
@@ -98,9 +98,9 @@ To set up a working directory for your script, follow these steps:
     ```
     If you are using version control, make sure to ignore the `node_modules directory`, otherwise you end up committing dependencies.
 
-5.  In Code, create a `[tsconfig.json](https://github.com/Microsoft/TypeScript/wiki/tsconfig.json)` file next to your `package.json`. The `tsconfig.json` file is used by the TypeScript compiler to compile your code in the proper manner to a JS file. Create it with the following contents. 
+5.  In Code, create a [tsconfig.json](https://github.com/Microsoft/TypeScript/wiki/tsconfig.json) file next to your *package.json*. The *tsconfig.json* file is used by the TypeScript compiler to compile your code in the proper manner to a JS file. Create it with the following contents. 
 
-    ```text
+    ```json
     {
     	"compilerOptions" : {
     		"module" : "commonjs",

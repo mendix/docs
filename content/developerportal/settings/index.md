@@ -21,10 +21,10 @@ For more information, see [Manage General App Settings](general-settings).
 
 In **Security**, there are two tabs with app and node permissions, as described below.
 
-### 3.1 App Team
+### 3.1 App Team {#app-team}
 
 {{% alert type="info" %}}
-To view the App Team, you must have the **App Settings** permission or a default **SCRUM Master** role.
+To view the App Team, you must have the **App Settings** permission or a default **Scrum Master** role.
 {{% /alert %}}
 
 The **App Team** tab lets you view and delete the team members that are currently working on the app. Each member has a **Role**. You can change the role of each team member to the following:

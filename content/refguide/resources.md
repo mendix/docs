@@ -1,6 +1,7 @@
 ---
 title: "Resources"
 category: "App Modeling"
+menu_order: 50
 tags: ["studio pro", "resources"]
 ---
 

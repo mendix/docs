@@ -1,5 +1,5 @@
 ---
-title: "Write JavaScript Actions: Part 2 (Advanced)"
+title: "Build JavaScript Actions: Part 2 (Advanced)"
 parent: "build-javascript-actions"
 description: "This advanced how-to will teach you to make a JavaScript action which can search for GitHub users."
 tags: ["widget", "search", "GitHub", "JavaScript", "API", "JavaScript-API"]
@@ -7,7 +7,7 @@ tags: ["widget", "search", "GitHub", "JavaScript", "API", "JavaScript-API"]
 
 ## 1 Introduction
 
-Mendix has made nanoflows even more powerful with pluggable nanoflow actions – called JavaScript actions – in Mendix 8. [How to Write JavaScript Actions: Part 1 (Basic)](write-javascript-actions) shows you how to create a JavaScript TextToSpeech action, expose it as a nanoflow action, and then use it in a demo. In this advanced how-to you will learn to call a REST service, use a generic return type, and make an API to enhance the power of your JavaScript actions.
+Mendix has made nanoflows even more powerful with pluggable nanoflow actions – called JavaScript actions – in Mendix 8. [How to Build JavaScript Actions: Part 1 (Basic)](write-javascript-actions) shows you how to create a JavaScript TextToSpeech action, expose it as a nanoflow action, and then use it in a demo. In this advanced how-to you will learn to call a REST service, use a generic return type, and make an API to enhance the power of your JavaScript actions.
 
 **This how-to will teach you how to do the following:**
 
@@ -52,7 +52,7 @@ To create a JavaScript action that can search for users on GitHub, follow the st
 
 	You can now start creating the API for **SearchGitHubUsers**, an action which consists of parameters and a return type.
 
-3.  Your **SearchGitGubUsers** JavaScript action only requires a single parameter. Create it by clicking **Parameters** > **Add**. Name the parameter *Query,* and add an extended **Description** if desired. 
+3.  Your **SearchGitHubUsers** JavaScript action only requires a single parameter. Create it by clicking **Parameters** > **Add**. Name the parameter *Query,* and add an extended **Description** if desired. 
 
 	![parameter name](attachments/jsactions-advanced/name-query.png)
 
@@ -269,9 +269,9 @@ To create a JavaScript action that can search for users on GitHub, follow the st
 
 	![add javascript action call](attachments/jsactions-advanced/add-jsaction-call.png)
 
-	![select search github users](attachments/jsactions-advanced/select-searchgithub-users.png)
+	![select search GitHub users](attachments/jsactions-advanced/select-searchgithub-users.png)
 
-	Optionally, you can expose the JavaScript action as a nanoflow action. When you do, you can choose a **Caption**, **Category**, and **Icon**. Note that your icon image will need to be in an existing image collection:
+	Optionally, you can expose the JavaScript action as a nanoflow action. When you do, you can choose a **Caption**, **Category**, and **Icon**. Note that your icon image will need to be in an existing [image collection](/refguide/image-collection):
 
 	![nanoflow options](attachments/jsactions-advanced/nanoflow-options.png)
 
@@ -313,8 +313,8 @@ Congratulations! Using the power of JavaScript actions, your app can search for 
 
 ## 5 Read More
 
-* [Write JavaScript Actions: Part 1 (Basic)](write-javascript-actions)
-* [Mendix Client API](https://apidocs.mendix.com/7/client/)
+* [Build JavaScript Actions: Part 1 (Basic)](write-javascript-actions)
+* [Mendix Client API](https://apidocs.mendix.com/8/client/)
 * [JavaScript Actions](/refguide/javascript-actions)
 * JavaScript Resources
 	* [JavaScript Basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics)

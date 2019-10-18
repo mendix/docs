@@ -1,6 +1,7 @@
 ---
 title: "Snippet"
 parent: "page-resources"
+menu_order: 30
 tags: ["studio pro", "snippet", "page resources"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -17,7 +18,7 @@ When an entity is defined on a snippet, any usages of the snippet need to be pla
 
 The name of the snippet. You can change the name via the project explorer.
 
-{{% snippet file="refguide/Documentation+Property.md" %}}
+{{% snippet file="refguide/documentation-property.md" %}}
 
 ## Design Properties
 

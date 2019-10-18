@@ -9,45 +9,13 @@ apidocs-mxsdk:
   menu_categories:
     - "API Documentation"
     - "Mendix Platform SDK"
-aqm:
-  space: "AQM Guide"
+addons:
+  space: "Add-on Guides"
   priority: false
   menu_categories:
-    - "Application Quality Monitor"
-apm:
-  space: "APM Guide"
-  priority: false
-  menu_categories:
-    - "Application Performance Monitor"
-    - "Installation Guide"
-    - "Reference Guide"
-    - "Use Cases"
-ats:
-  space: "ATS Guide"
-  priority: false
-  menu_categories:
-    - "Application Test Suite"
-    - "Reference Guide"
-    - "How-to's"
-    - "Best Practices"
-howto50:
-  space: "Mendix 5 How-to's"
-  priority: false
-  mendix_version: 5
-  noindex: true
-  menu_categories:
-    - "Getting Started"
-    - "Data Models"
-    - "GUIs"
-    - "Logic & Business Rules"
-    - "Mobile"
-    - "Security"
-    - "Integration"
-    - "Extendability"
-    - "Custom Widget Development"
-    - "Testing"
-    - "Monitoring & Troubleshooting"
-    - "Collaboration & Project Management"
+    - "APM Guide"
+    - "AQM Guide"
+    - "ATS Guide"
 howto6:
   space: "Mendix 6 How-to's"
   priority: false
@@ -86,7 +54,7 @@ howto7:
     - "Monitoring & Troubleshooting"
     - "Collaboration & Requirements Management"
 howto:
-  space: "Mendix 8 How-to's"
+  space: "Studio Pro 8 How-to's"
   priority: 7
   mendix_version: 8
   menu_categories:  
@@ -101,24 +69,6 @@ howto:
     - "Security"
     - "Testing"
     - "Monitoring & Troubleshooting"
-    - "SAP"
-    - "Siemens"    
-  banner:
-    type: 'info'
-    text: 'You are browsing the documentation for Mendix 8, which is currently a beta release. For more information, see <a href="/releasenotes/beta-features/index">Mendix Beta Features</a>.'
-refguide5:
-  space: "Mendix 5 Reference Guide"
-  priority: false
-  mendix_version: 5
-  noindex: true
-  menu_categories:
-    - "General"
-    - "Team Server"
-    - "Modeler"
-    - "Runtime"
-    - "Java Programming"
-    - "Mobile"
-    - "Proactive Maintenance"
 refguide6:
   space: "Mendix 6 Reference Guide"
   priority: false
@@ -157,12 +107,6 @@ refguide:
     - "Mendix Runtime"
     - "Mobile"
     - "Java Programming"
-    - "SAP"
-    - "IBM"
-    - "Siemens"
-  banner:
-    type: 'info'
-    text: 'You are browsing the documentation for Mendix 8, which is currently a beta release. For more information, see <a href="/releasenotes/beta-features/index">Mendix Beta Features</a>.'
 releasenotes:
   space: "Release Notes"
   priority: false
@@ -190,7 +134,7 @@ developerportal:
     - "App Store"
     - "Mendix Support"
 studio:
-  space: "Studio Guide"
+  space: "Studio 8 Guide"
   priority: false
   menu_categories:
     - "General Info"
@@ -205,13 +149,22 @@ studio:
     - "Theme Customizer"
     - "Settings"
     - "Starting With Your Own Data"
-best-practices:
-  space: "Expert Best Practices"
+studio7:
+  space: "Mendix 7 Studio Guide"
   priority: false
-  draft: true
   menu_categories:
-    - "Best Practices Overview"
-    - "Architecture"
+    - "General Info"
+    - "Domain Model"
+    - "Pages"
+    - "Navigation Document"
+    - "Microflows"
+    - "Data Filters"
+    - "Previewing & Publishing Your App"
+    - "Checks"
+    - "Consistency Errors"
+    - "Theme Customizer"
+    - "Settings"
+    - "Starting With Your Own Data"
 partners:
   space: "Strategic Partners Guide"
   priority: false
@@ -219,3 +172,22 @@ partners:
     - "IBM"
     - "SAP"
     - "Siemens"
+appstore:
+  space: "App Store Components Guide"
+  priority: false
+  draft: true
+  menu_categories:
+    - "Starter Apps"
+    - "Widgets"
+    - "Modules"
+    - "Connectors"
+product-naming:
+  space: "Mendix Product Naming Guide"
+  priority: false
+  draft: true
+  menu_categories:
+    - "Main Product Names"
+    - "Other Mendix Terms"
+    - "Strategic Partner Terms"
+    - "Terminology History"
+    

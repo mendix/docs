@@ -24,8 +24,8 @@ Before you can start with this how-to, please make sure you have completed the f
 
 *   The **Database Connector** from the App Store
 *   A database **URL** address that points to your database.
-*   The **username** for logging into the database, relative to the database URL address.
-*   The **password** for logging into the database, relative to the database URL address.
+*   The **username** for signing into the database, relative to the database URL address.
+*   The **password** for signing into the database, relative to the database URL address.
 *   The SQL **statement** to execute, relative to the database type (_SQL dialect_ differs for different databases).
 *   The JDBC driver jar, for the database you want to connect to.
 

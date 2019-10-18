@@ -114,7 +114,7 @@ To send an email in a microflow, follow these steps:
 
     ![](attachments/19202956/19398985.png)
 
-    Once a user logs into the application, they are presented with a page where they can write a custom email and send it to a desired address using SMTP within a Mendix application:
+    Once a user signs into the application, they are presented with a page where they can write a custom email and send it to a desired address using SMTP within a Mendix application:
 
     ![](attachments/19202956/19398986.png)
 
@@ -160,5 +160,5 @@ The SMTP email module contains a number of other powerful tools. Some of the enh
 
 ## 7 Read More
 
-* [Use Connectors & Adapters](/howto/extensibility/use-connectors-and-adapters)
+* [Explore Connectors & Adapters](/howto/extensibility/explore-connectors-and-adapters)
 * [Access a Samba Share from the MxCloud](/howto/integration/access-a-samba-share-from-the-mxcloud)

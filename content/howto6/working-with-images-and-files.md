@@ -57,5 +57,4 @@ Before you start with this how-to please follow these prerequisites:
 *   [Setting up data validation](setting-up-data-validation)
 *   [Finding the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
 *   [Managing your Application Requirements with Mendix](/developerportal/collaborate/stories)
-*   [Scout and Windows 10 Workaround](scout-and-windows-10-workaround)
 *   [Creating a chainable Custom Widget](create-a-chainable-custom-widget)

@@ -114,10 +114,10 @@ You need a Web Services Description Language (WSDL) to allow others to interact 
 
 To get a WSDL, follow these steps:
 
-1. Run the application locally or in a sandbox.
+1. Run the application locally or in a Free App environment.
 2. View the application in your browser:
     * If you run the application locally, the application URL should look like this: `http://localhost:8080/index.html`
-    * If you run the application in a sandbox, the application URL should look like this: `https://myfirstapp.mendixcloud.com/index.html`
+    * If you run the application in a Free App environment, the application URL should look like this: `https://myfirstapp.mendixcloud.com/index.html`
 3. In both of the above cases, you can replace `/index.html` with `/ws-doc/` to open the web service documentation page:
 
     ![](attachments/18448728/18581703.png)

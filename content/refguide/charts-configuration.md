@@ -201,7 +201,7 @@ See the following link for more information about plotly.js and the options: htt
 
 #### 2.1.5 Common
 
-These are properties which are common to many widgets. For information see [Common Widget Properties](common-widget-properties#common-properties).
+These are properties which are common to many widgets. For information see [Properties Common for Widgets](common-widget-properties#common-properties).
 
 ## 3 Configuration by Chart Type {#configuration-by-chart-type}
 
@@ -285,7 +285,7 @@ The properties above are common across the chart types. In this section, the pro
 
     * **Border style**: Straight, Curved
 
-    * **Fill area**: Fill area between data points and x-axis: Yes, No
+    * **Fill area**: Fill area between data points and X-axis: Yes, No
 
 2. **Static series** Tab
 
@@ -327,7 +327,7 @@ The properties above are common across the chart types. In this section, the pro
 
 Advanced JSON settings can also be added in a global context via the theme folder of your mendix project root directory.
 
-To the theme folder, add a `.json` file named *com.mendix.charts*. The JSON should be in the following format:
+To the theme folder, add a *.json* file named *com.mendix.charts*. The JSON should be in the following format:
 
 ``` json
 {

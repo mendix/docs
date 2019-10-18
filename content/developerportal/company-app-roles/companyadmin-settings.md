@@ -30,12 +30,10 @@ The Company Admin can manage four categories of settings:
   * Edit the [company](company) profile
   * Edit the company settings (for example, [changing the password expiration](company#company-settings))
   * Add and delete other Company Admins
-  * Manage the Mendix launchpad settings
 * **Users**
   * View all company [users](users)
   * Edit user [security groups](users#security-groups)
   * Activate/deactivate users
-  * Accept company join requests
 * **Apps**
   * View all company [apps](apps)
   * Activate, deactivate, and delete apps

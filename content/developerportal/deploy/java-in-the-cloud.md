@@ -3,7 +3,7 @@ title: "V3: Java in Mendix Cloud"
 parent: "mendix-cloud-deploy"
 menu_order: 60
 description: "A description of the constraints on using Java in Mendix Cloud v3"
-tags: ["Java", "V3", "Mendix Cloud", "Constraints", "Permissions", "security", "Access"]
+tags: ["Java", "v3", "Mendix Cloud", "Constraints", "Permissions", "security", "Access"]
 ---
 
 ## 1 Introduction

@@ -4,7 +4,7 @@ module.exports = {
      * POTENTIALLY TEMPORARY REDIRECTS
      ****************************************************/
 	/****************************************************
-     * From Studio(potentially temporary until fixed in product, mapped)
+     * From Studio(potentially temporary until the support of old bundles stops, mapped)
      ****************************************************/
 	{
       from: "/refguide/web-modeler/domain-models-association-properties-wm",
@@ -237,10 +237,6 @@ module.exports = {
       to: "/howto/front-end/create-a-custom-theme-with-the-mendix-ui-framework"
     },
 	{
-      from: "/addons/APM",
-      to: "/apm/"
-    },
-	{
       from: "/releasenotes/desktop-modeler/",
       to: "/releasenotes/studio-pro/"
     },
@@ -464,7 +460,7 @@ module.exports = {
     },
 	{
       from: "/refguide8/drop-down-widget",
-      to: "/refguide/drop_down"
+      to: "/refguide/drop-down"
     },
 	{
       from: "/refguide8/horizontal-split-pane",
@@ -501,6 +497,158 @@ module.exports = {
 	{
       from: "/refguide8/menu-item",
       to: "/refguide/menu"
+    },
+	{
+      from: "/refguide8/Show+Page",
+      to: "/refguide/show-page"
+    },
+	{
+      from: "/refguide8/Validation+Feedback",
+      to: "/refguide/validation-feedback"
+    },
+	{
+      from: "/refguide8/Show+Message",
+      to: "/refguide/show-message"
+    },
+	{
+      from: "/refguide8/Show+Home+Page",
+      to: "/refguide/show-home-page"
+    },
+	{
+      from: "/refguide8/Download+File",
+      to: "/refguide/download-file"
+    },
+	{
+      from: "/refguide8/Close+Form",
+      to: "/refguide/close-page"
+    },
+	{
+      from: "/refguide8/Row+(document+template)",
+      to: "/refguide/row-document-template"
+    },
+	{
+      from: "/refguide8/Table+(document+template",
+      to: "/refguide/table-document-template"
+    },
+	{
+      from: "/refguide8/Cell+(document+template)",
+      to: "/refguide/cell-document-template"
+    },
+	{
+      from: "/refguide8/Static+Image+(document+template)",
+      to: "/refguide/static-image-document-template"
+    },
+	{
+      from: "/refguide8/Title+(document+template)",
+      to: "/refguide/title-document-template"
+    },
+	{
+      from: "/refguide8/Static+label+(document+template)",
+      to: "/refguide/static-label-document-template"
+    },
+	{
+      from: "/refguide8/Page+Break+(document+template)",
+      to: "/refguide/page-break-document-template"
+    },
+	{
+      from: "/refguide8/Line+Break+(document+template)",
+      to: "/refguide/line-break-document-template"
+    },
+	{
+      from: "/refguide8/Header+(document+template)",
+      to: "/refguide/header-document-template"
+    },
+	{
+      from: "/refguide8/Footer+(document+template)",
+      to: "/refguide/footer-document-template"
+    },
+	{
+      from: "/refguide8/Dynamic+label+(document+template)",
+      to: "/refguide/dynamic-label-document-template"
+    },
+	{
+      from: "/refguide8/Template+Grid+(document+template)",
+      to: "/refguide/template-grid-document-template"
+    },
+	{
+      from: "/refguide8/Data+Grid+(document+template)",
+      to: "/refguide/data-grid-document-template"
+    },
+	{
+      from: "/refguide8/Sort+Bar",
+      to: "/refguide/sort-bar"
+    },
+	{
+      from: "/refguide8/Columns+(document+template)",
+      to: "/refguide/columns-document-template"
+    },
+	{
+      from: "/refguide8/Dynamic+Image+(document+template)",
+      to: "/refguide/dynamic-image-document-template"
+    },
+	{
+      from: "/refguide8/Data+View+(document+template)",
+      to: "/refguide/data-view-document-template"
+    },
+	{
+      from: "/refguide8/Document+Templates",
+      to: "/refguide/document-templates"
+    },
+	{
+      from: "/refguide8/tab-page",
+      to: "/refguide/tab-container"
+    },
+	{
+		from: "/refguide8/action-button",
+      to: "/refguide/button-properties"
+    },
+	{
+		from: "/refguide8/drop-down-button",
+      to: "/refguide/button-properties"
+    },
+	{
+		from: "/refguide8/image-property",
+      to: "/refguide/button-properties"
+    },
+	{
+		from: "/refguide8/grid-action-button",
+      to: "/refguide/control-bar"
+    },
+	{
+		from: "/refguide8/remove-button",
+      to: "/refguide/control-bar"
+    },
+	{
+		from: "/refguide8/select-button",
+      to: "/refguide/control-bar"
+    },
+	{
+		from: "/refguide8/add-button",
+      to: "/refguide/control-bar"
+    },
+	{
+		from: "/refguide8/deselect-all-button",
+      to: "/refguide/control-bar"
+    },
+	{
+		from: "/refguide8/export-to-csv-button",
+      to: "/refguide/control-bar"
+    },
+	{
+		from: "/refguide8/export-to-excel-button",
+      to: "/refguide/control-bar"
+    },
+	{
+		from: "/refguide8/grid-new-button",
+      to: "/refguide/control-bar"
+    },
+	{
+		from: "/refguide8/search-button",
+      to: "/refguide/control-bar"
+    },
+	{
+		from: "/refguide8/select-all-button",
+      to: "/refguide/control-bar"
     },
 	/****************************************************
      * From Desktop Modeler version 7 (permanent, mapped)
@@ -573,7 +721,102 @@ module.exports = {
       from: "/howto7/deploying-a-mendix-app-to-cloud-foundry",
       to: "/developerportal/deploy/cloud-foundry-deploy"
     },
-
+	{
+      from: "/refguide7/Show+Page",
+      to: "/refguide7/show-page"
+    },
+	{
+      from: "/refguide7/Validation+Feedback",
+      to: "/refguide7/validation-feedback"
+    },
+	{
+      from: "/refguide7/Show+Message",
+      to: "/refguide7/show-message"
+    },
+	{
+      from: "/refguide7/Show+Home+Page",
+      to: "/refguide7/show-home-page"
+    },
+	{
+      from: "/refguide7/Download+File",
+      to: "/refguide7/download-file"
+    },
+	{
+      from: "/refguide7/Close+Form",
+      to: "/refguide7/close-page"
+    },
+	{
+      from: "/refguide7/Row+(document+template)",
+      to: "/refguide7/row-document-template"
+    },
+	{
+      from: "/refguide7/Table+(document+template",
+      to: "/refguide7/table-document-template"
+    },
+	{
+      from: "/refguide7/Cell+(document+template)",
+      to: "/refguide7/cell-document-template"
+    },
+	{
+      from: "/refguide7/Static+Image+(document+template)",
+      to: "/refguide7/static-image-document-template"
+    },
+	{
+      from: "/refguide7/Title+(document+template)",
+      to: "/refguide7/title-document-template"
+    },
+	{
+      from: "/refguide7/Static+label+(document+template)",
+      to: "/refguide7/static-label-document-template"
+    },
+	{
+      from: "/refguide7/Page+Break+(document+template)",
+      to: "/refguide7/page-break-document-template"
+    },
+	{
+      from: "/refguide7/Line+Break+(document+template)",
+      to: "/refguide7/line-break-document-template"
+    },
+	{
+      from: "/refguide7/Header+(document+template)",
+      to: "/refguide7/header-document-template"
+    },
+	{
+      from: "/refguide7/Footer+(document+template)",
+      to: "/refguide7/footer-document-template"
+    },
+	{
+      from: "/refguide7/Dynamic+label+(document+template)",
+      to: "/refguide7/dynamic-label-document-template"
+    },
+	{
+      from: "/refguide7/Template+Grid+(document+template)",
+      to: "/refguide7/template-grid-document-template"
+    },
+	{
+      from: "/refguide7/Data+Grid+(document+template)",
+      to: "/refguide7/data-grid-document-template"
+    },
+	{
+      from: "/refguide7/Sort+Bar",
+      to: "/refguide7/sort-bar"
+    },
+	{
+      from: "/refguide7/Columns+(document+template)",
+      to: "/refguide7/columns-document-template"
+    },
+	{
+      from: "/refguide7/Dynamic+Image+(document+template)",
+      to: "/refguide7/dynamic-image-document-template"
+    },
+	{
+      from: "/refguide7/Data+View+(document+template)",
+      to: "/refguide7/data-view-document-template"
+    },
+	{
+      from: "/refguide7/Document+Templates",
+      to: "/refguide7/document-templates"
+    },	
 	/****************************************************
      * From Desktop Modeler version 6 (permanent)
      ****************************************************/
@@ -2247,9 +2490,32 @@ module.exports = {
       to: "/howto6/solving-load-and-import-errors"
     },
 	/****************************************************
-     * APM (permanent, unmapped)
+     * Add-on Guides (permanent, mapped)
      ****************************************************/
-    // {
+	{
+	  from: "/apm/installation-guide",
+	  to: "/addons/apm-addon/ig-two"
+	},
+	{
+      from: "/apm/reference-guide/rg-2/reference-guide-2",
+      to: "/addons/apm-addon/rg-two-apm"
+    },
+	{
+	  from: "~*\\\/aqm\\\/",
+	  to: "/addons/aqm-addon/index",
+	  exact: true
+    },
+	{
+	  from: "~*\\\/apm\\\/",
+	  to: "/addons/apm-addon/index",
+	  exact: true
+    },
+	{
+	  from: "~*\\\/ats\\\/",
+	  to: "/addons/ats-addon/index",
+	  exact: true
+    },	
+	// {
     //   from: "~*\\\/apm\\\/use-cases\\\/uc",
     //   to: "/apm/use-cases/",
     //   exact: true

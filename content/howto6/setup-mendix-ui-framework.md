@@ -30,8 +30,6 @@ In this chapter we will create a new app and select a theme from the New App sel
 
 ## 3\. Configure Scout
 
-**Windows 10 users need to use the following workaround. Click [here](scout-and-windows-10-workaround) for the workaround.**
-
 The Mendix UI Framework uses **Sass**, which relies on Ruby. However, you can install [Scout](http://mhs.github.io/scout-app/) to run Sass in a self-contained Ruby environment, letting you effortlessly manage all of your Sass projects with a handful of clicks. This way you don't have to worry about using the terminal. You can still do this if you are familiar with Sass and terminal.
 
 1.  Open your **App Project Folder** in Scout by clicking on the plus button in the left sidebar all the way at the bottom.
@@ -82,7 +80,6 @@ The Mendix UI Framework uses **Sass**, which relies on Ruby. However, you can in
 
 ## 5\. Related content
 
-*   [Scout and Windows 10 Workaround](scout-and-windows-10-workaround)
 *   [Layouts and Snippets](layouts-and-snippets)
 *   [Filtering Data on an Overview Page](filtering-data-on-an-overview-page)
 *   [Setup Mendix UI Framework with just CSS](setup-mendix-ui-framework-with-just-css)

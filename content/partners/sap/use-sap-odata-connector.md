@@ -1,23 +1,23 @@
 ---
-title: "Use the SAP OData Connector"
+title: "Use the OData Connector for SAP Solutions"
 category: "SAP"
 menu_order: 15
-description: "Describes how to use the SAP OData Connector."
+description: "Describes how to use the OData Connector for SAP solutions."
 tags: ["SAP", "integration", "OData"]
 ---
 
 ## 1 Introduction
 
-The SAP OData Connector is a specific SAP connector for integrating with SAP back-end systems like SAP Business Suite (SAP ERP 6.0), SAP S/4HANA, SAP S/4HANA Cloud, and SAP SuccessFactors.
+The OData Connector for SAP solutions is a specific SAP connector for integrating with SAP back-end systems like SAP Business Suite (SAP ERP 6.0), SAP S/4HANA, SAP S/4HANA Cloud, and SAP SuccessFactors.
 
 **This how-to will teach you how to do the following:**
 
-* Add the SAP OData Connector to your Mendix app
-* Configure the SAP OData Connector
+* Add the OData Connector for SAP solutions to your Mendix app
+* Configure the OData Connector for SAP solutions
 * Display product data from the SAP OData service GWSAMPLE_BASIC in your Mendix app
 
 {{% alert type="warning" %}}
-The SAP OData Connector only supports SAP OData Gateway Services which use OData version 2 or version 3. OData version 4 is not yet supported.
+The OData Connector for SAP solutions only supports SAP OData Gateway Services which use OData version 2 or version 3. OData version 4 is not yet supported.
 {{% /alert %}}
 
 ## 2 Prerequisites{#prerequisites}
@@ -27,9 +27,9 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Create an app in Mendix Studio Pro
 * Get authorization credentials for the [SAP NetWeaver (ES5)](https://sapes5.sapdevcenter.com/)
 
-## 3 Getting the SAP OData Connector Module
+## 3 Getting the OData Connector for SAP Solutions Module
 
-To be able to use the OData Connector; first create your project. Inside, navigate to the Mendix App Store to download the [SAP OData Connector](https://appstore.home.mendix.com/link/app/74525/Mendix/SAP-OData-Connector) module. You will then find this module in your app project's App Store modules.
+To be able to use the OData Connector; first create your project. Inside, navigate to the Mendix App Store to download the [OData Connector for SAP solutions](https://appstore.home.mendix.com/link/app/74525/Mendix/SAP-OData-Connector) module. You will then find this module in your app project's App Store modules.
 
 For more information, see [How to Use App Store Content](/developerportal/app-store/app-store-content).
 
@@ -37,7 +37,7 @@ For more information, see [How to Use App Store Content](/developerportal/app-st
 
 In this example, you will display a list of products from the GWSAMPLE_BASIC OData service. You will need to create an SAP data model module for the GWSAMPLE_BASIC OData service. The module contains a pre-built domain model that you can add to your app.
 
-1. Open the [SAP OData Model Creator](https://sapodatamodelcreator.mendixcloud.com/).
+1. Open the [OData Model Creator for SAP solutions](https://sapodatamodelcreator.mendixcloud.com/).
 
 2. Click **SAP Catalog Service**.
 
@@ -77,9 +77,9 @@ In this example, you will display a list of products from the GWSAMPLE_BASIC ODa
 
     ![](attachments/use-sap-odata-connector/data-model.png)
 
-For more information, see [Use the SAP OData Model Creator](use-sap-odata-model-creator) and [SAP Data Models](/partners/sap/sap-data-models).
+For more information, see [Use the OData Model Creator for SAP Solutions](use-sap-odata-model-creator) and [SAP Data Models](/partners/sap/sap-data-models).
 
-## 3 Using the SAP OData Connector
+## 3 Using the OData Connector for SAP Solutions
 
 In this section, you will learn how to implement the data connector in your Mendix app. These steps assume you are using a blank Mendix app with a module called MyFirstModule.
 
@@ -136,5 +136,5 @@ Congratulations! You can now run your app and see a list of the products availab
 
 ## 4 Read More
 
-* [SAP OData Connector](/partners/sap/sap-odata-connector)
+* [OData Connector for SAP Solutions](/partners/sap/sap-odata-connector)
 * [SAP Data Models](/partners/sap/sap-data-models)

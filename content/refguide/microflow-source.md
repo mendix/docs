@@ -16,7 +16,7 @@ A microflow data source ignores all context. It performs the actions described i
 {{% /alert %}}{{% alert type="info" %}}
 
 ![](attachments/16713836/16843969.jpg)
-The data grid above needs to display a list of potential orders based on the order type. If the OrderType of the encasing Order is set to 'Cars' then the grid should display all Products for which the boolean Motorized is set to true. If the OrderType is 'Bicycles' only objects for which Motorized is false need be shown. If OrderType is empty the data grid should remain empty.
+The data grid above needs to display a list of potential orders based on the order type. If the OrderType of the encasing Order is set to 'Cars' then the grid should display all Products for which the Boolean Motorized is set to true. If the OrderType is 'Bicycles' only objects for which Motorized is false need be shown. If OrderType is empty the data grid should remain empty.
 
 ![](attachments/16713836/16843968.jpg)
 Because of the mismatch in attribute types this cannot be constrained by XPath and a microflow data source is required.

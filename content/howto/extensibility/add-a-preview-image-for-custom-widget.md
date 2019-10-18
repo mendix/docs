@@ -1,5 +1,5 @@
 ---
-title: "Add a Preview Image for a Custom Widget"
+title: "Build a Preview Image for a Custom Widget"
 parent: "widget-development"
 tags: ["image", "preview", "widget", "custom"]
 ---

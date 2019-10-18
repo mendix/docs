@@ -8,7 +8,7 @@ tags: ["studio pro", "module", "modules"]
 
 ## 1 Introduction
 
-A Mendix project consists of modules: a **System** module, a [UI Resources package](ui-resources-package), and one or more user-defined modules. Modules are a way to split the functionality of your application into separate parts. For example, a web shop can put order management in a different module than customer and product management. Studio Pro does not enforce any kind of module structure; it is up to you to choose logical modules for your application.
+A Mendix project consists of modules: a **System** module, a [UI resources package](ui-resources-package), and one or more user-defined modules. Modules are a way to split the functionality of your application into separate parts. For example, a web shop can put order management in a different module than customer and product management. Studio Pro does not enforce any kind of module structure; it is up to you to choose logical modules for your application.
 
 A module always contains exactly one [domain model](domain-model). The domain model is a data model that describes the information in your application domain in an abstract way.
 
@@ -20,7 +20,7 @@ Furthermore, a module can contain many different types of documents. Each type o
 
 | Document type | Typical elements | Description |
 | --- | --- | --- |
-| [Pages](pages) | [Data view](data-view), [Data grid](data-grid), [Table](table), [Text box](text-box) | Forms are used to create a user interface for the end user. They are composed of components that are called widgets. |
+| [Pages](pages) | [Data view](data-view), [Data grid](data-grid), [Table](table), [Text box](text-box) | Forms are used to create a user interface for the end-user. They are composed of components that are called widgets. |
 | [Microflows](microflows) | [Activities](activities), [Sequence Flow](sequence-flow) | Microflows describe the the logic of your application. They are composed of activities that manipulate objects, interact with the client etcetera. |
 | [Enumerations](enumerations) |   | An enumeration is a set of predefined values, for example: in a webshop, an enumeration called MemberType could have the values Gold and Silver. |
 

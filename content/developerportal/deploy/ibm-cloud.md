@@ -36,7 +36,7 @@ Firstly, you create your Mendix app which you wish to deploy.
 
 To start creating a new app, follow these steps:
 
-1.  Log in to your Mendix Account.
+1.  Sign in to your Mendix Account.
 
 2.  Click **Create App** to create a new app.
 
@@ -62,7 +62,7 @@ To set up IBM Cloud, follow these steps:
 
     ![](attachments/ibm-cloud/landing.png)
 
-2.  Log in to IBM Cloud if you are not already logged in.
+2.  Sign in to IBM Cloud if you are not already logged in.
 
     The **App name** name of your project is already filled in. It is recommended that you do not change this; changing this name will not change the name of your app in the Mendix Developer Portal.
 

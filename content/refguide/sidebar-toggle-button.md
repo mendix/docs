@@ -1,6 +1,7 @@
 ---
-title: "Sidebar Toggle Button"
+title: "Sidebar Toggle"
 parent: "layout-widgets"
+menu_order: 30
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -12,23 +13,23 @@ The sidebar toggle is a button that when pressed will make a region of a [scroll
 
 ## Button properties
 
-{{% snippet file="refguide/Caption+Property.md" %}}
+{{% snippet file="refguide/caption-property.md" %}}
 
-{{% snippet file="refguide/Image+Property.md" %}}
+{{% snippet file="refguide/image-property.md" %}}
 
-{{% snippet file="refguide/Render+Mode+Property.md" %}}
+{{% snippet file="refguide/render-mode-property.md" %}}
 
-{{% snippet file="refguide/Button+Style+Property.md" %}}
+{{% snippet file="refguide/button-style-property.md" %}}
 
 ## Common properties
 
-{{% snippet file="refguide/Name+Property.md" %}}
+{{% snippet file="refguide/name-property.md" %}}
 
-{{% snippet file="refguide/Class+Property.md" %}}
+{{% snippet file="refguide/class-property.md" %}}
 
-{{% snippet file="refguide/Style+Property.md" %}}
+{{% snippet file="refguide/style-property.md" %}}
 
-{{% snippet file="refguide/Tab+index+Property.md" %}}
+{{% snippet file="refguide/tab-index-property.md" %}}
 
 ## General properties
 
@@ -65,6 +66,6 @@ Only applicable if the mode is "Shrink content".
 
 ## Visibility properties
 
-{{% snippet file="refguide/Visibility+Property.md" %}}
+{{% snippet file="refguide/visibility-property.md" %}}
 
-{{% snippet file="refguide/Visibility+Property+With+Module+Roles+Extended.md" %}}
+{{% snippet file="refguide/visibility-property-with-module-roles-extended.md" %}}

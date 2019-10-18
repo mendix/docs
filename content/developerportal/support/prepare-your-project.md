@@ -32,7 +32,7 @@ To add users to a project's App Team and give them access to submit tickets for 
 3.  Assign one of the following roles to users you want to give access to creating tickets for the app:
 	* **Business Engineer**
 	* **Product Owner**
-	* **SCRUM Master**
+	* **Scrum Master**
 	
 	These roles have an **Edit** permission set for **Deploy** or **Capture**, thus they can submit/view Support tickets for the app project. For more details on setting permissions, see the [Managing the Team](../collaborate/team#managing) section of *App Team*.
 
@@ -46,7 +46,7 @@ To give existing project members access to submit tickets, follow these steps:
 2.  Change the **ROLE** for the user who needs access to one of the following:
 	* **Business Engineer**
 	* **Product Owner**
-	* **SCRUM Master**
+	* **Scrum Master**
 
 	You can also click **Role settings** to create your own roles and customize the permissions for existing roles. For more information, see the [Editing App Team Roles](../company-app-roles/manage-roles#edit-app-team-roles) section of *How to Manage Company & App Roles*.
 

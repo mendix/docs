@@ -72,7 +72,7 @@ const project = await client.platform().createNewApp(`NewApp-${Date.now()}`);
 const workingCopy = await project.createWorkingCopy();
 ```
 
-The `createNewApp()` call is where you actually kick off the process that will create a new project in the Mendix Platform which will also create a commit in the Team Server repository. By using `await`, you're waiting for the asynchoronous call for creating the app and resuming the code afterwards. The result of this call will be accessible via Studio Pro, but in order to be able to manipulate it using the SDK, you need to expose it as an online working copy. The subsequent call `createWorkingCopy()` will exactly do that.
+The `createNewApp()` call is where you actually kick off the process that will create a new project in the Mendix Platform which will also create a commit in the Team Server repository. By using `await`, you're waiting for the asynchronous call for creating the app and resuming the code afterwards. The result of this call will be accessible via Studio Pro, but in order to be able to manipulate it using the SDK, you need to expose it as an online working copy. The subsequent call `createWorkingCopy()` will exactly do that.
 
 If you create an online working copy from an existing app on the Team Server, be sure your app has been saved using the latest Mendix Studio Pro version. Earlier versions might not be supported!
 
@@ -106,15 +106,15 @@ For more information, see [Async Await](https://basarat.gitbooks.io/typescript/d
 
 1.  Compile the script with the TypeScript compiler into JavaScript using the following command:
 
-    ```java
+    ```bash
     $ tsc
     ```
 
     A file named `script.js` should appear (or, if you named the original TypeScript file e.g. `app.ts`, then it would be named `app.js`.
 
-    The TypeScript compiler will execute in a single run to compile all files configured in `tsconfig.json`. While developing your script, it can be practical to have the compiler immediately run once you make changes to your code. Use the `--watch` flag for `tsc` to monitor the files configured in the `tsconfig.json` file for changes and immediately run the compiler when you save the file:
+    The TypeScript compiler will execute in a single run to compile all files configured in *tsconfig.json*. While developing your script, it can be practical to have the compiler immediately run once you make changes to your code. Use the `--watch` flag for `tsc` to monitor the files configured in the *tsconfig.json* file for changes and immediately run the compiler when you save the file:
 
-    ```java
+    ```bash
     $ tsc --watch
     ```
 

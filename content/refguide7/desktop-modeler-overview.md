@@ -129,6 +129,7 @@ Using items in the menu bar of the Modeler, you can create new projects, deploy 
 | Tools > Batch update button icons | Opens the **Batch Update Button Icons** dialog box so that you can configure the batch update of many button icons at once.  |   |
 | Tools > Batch update layouts | Opens the **Batch Update Layouts** dialog box so that you can configure the batch update of the layouts of many pages at once.  |  |
 | Tools > Batch convert Split panes | Opens the **Batch Convert Split Panes** dialog box so that you can configure the batch update. |  |
+| Tools > Update Widgets (available in version 7.23) | Presents the current versions of the widgets you are using in your app project, what the latest versions of the widgets are, and an update option. |  |
 | Tools > Check Widgets | Checks that the widgets you have implemented in the app project have been built correctly. | |
 | Synchronize Project Directory | If necessary, this action creates folders inside the project directory (resources, widgets, theme, etc.). It also reads the widget packages that are currently inside the widgets folders. For example, if you add widgets to the widgets folder, you needs to synchronize the project directory for them to appear in the form toolbox. | <kbd>F4</kbd> |
 | Show Project Directory in Explorer | Shows the directory that contains the project file (*.mpr*) and other assets such as resources and Java actions in Windows Explorer. |   |

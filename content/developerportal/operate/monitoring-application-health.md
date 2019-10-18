@@ -36,7 +36,7 @@ This status information will tell you important information that you either need
 
 Any status that could cause your app to stop functioning will result in an alert. For example, the monitoring information from the image shows that one of the status indicators was **Critical**. When this happens to one of your nodes, all users that are subscribed to alerts will receive an email alert.
 
-## 3 Cloud V4 Alerting Categories and Thresholds
+## 3 Cloud v4 Alerting Categories and Thresholds
 
 There are a number of categories on the status overview that are related to various technical parts of your application environment. Any category that does not display as *OK* needs to be investigated. Each category indicates a different part of the app infrastructure that is monitored.
 
@@ -73,14 +73,6 @@ Example message | Application container 34234543-6543-6543-6543-153d247b6543 - I
 Warning Threshold | Memory utilization is between 75% and 85%. |
 Critical Threshold | memory utilization is higher than 85%.
 First actions to take | Inspect the trends for **Application node operating system memory** combined with all **Application Statistics** for anomalies and correlate those with application behavior. |
-
-CPU Credit Balance status | |
-:---|:---|
-Description | This only appears if you run into a warning or a critical Credit Balance. See the [CPU Credits on AWS](#burstable) section for a more detailed discussion
-Example message | Application container 34234543-6543-6543-6543-153d247b6543 - Instance Index: 0 has low CPU credit balance: 16.315528
-Warning Threshold | Credit balance goes below 80.0
-Critical Threshold | Credit balance goes below 20.0
-First actions to take | Inspect the trends for **Application node CPU usage** combined with **Application node disk throughput** and **Application node load** for anomalies and correlate those with application behavior.
 
 Critical Logs | |
 :---|:---|
@@ -138,38 +130,9 @@ Warning Threshold | Not used.
 Critical Threshold | If the JVM process has run out of memory and the application's virtual machine crashed.
 First actions to take | Check the log files and application metrics for a possible cause of the crash.
 
-### 3.2 CPU Credits on AWS{#burstable}
+## 4 Cloud v3 Alerting Categories and Thresholds
 
-Apps running on Mendix Cloud V4 use AWS databases to store their data. These databases are classed as *burstable* and *non-burstable*. If a database is **burstable** this means that it has a specified performance baseline. This baseline is different for each sort of database and varies from 5% to 20%.
-
-From the AWS documentation: *If a burstable performance instance uses fewer CPU resources than is required for baseline performance (such as when it is idle), the unspent CPU credits are accrued in the CPU credit balance. If a burstable performance instance needs to burst above the baseline performance level, it spends the accrued credits. The more credits that a burstable performance instance has accrued, the more time it can burst beyond its baseline when more performance is needed.*
-
-For example, if you have a database with a baseline performance of 10%, you can only run the database at over 10% CPU resources for a limited time. How long depends on the CPU credits you have earned during your recent CPU use. After you have used up your credits, the CPU resource usage of your database will be throttled and cannot go above the baseline performance until you have earned more credits by running it below the baseline performance.
-
-The following Mendix database options use burstable databases:
-
-* Strato (t2.micro database)
-* S (t2.micro)
-* M (t2.small)
-* L (t2.medium)
-
-Meso, Iono, Magneto, XL, and XXL databases are *not* burstable.
-
-You can find more details about the credit system, and the different baseline performance percentages for each database type, in the official AWS documentation: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-credits-baseline-concepts.html
-
-If you are using burstable databases, and your database uses a lot of CPU resources over a sustained period, this may impact your app's performance. If you run out of CPU Credits, the **CPU Credit Balance Status** will no longer be shown as **OK**.  You should therefore monitor your database usage carefully if you expect to be using more than the baseline performance level of CPU resources to ensure that there are periods when the CPU credit balance can be restored.
-
-High CPU usage can be triggered by things like:
-
-* populating the database with a large amount of data (for example, during data migration)
-* badly optimized databases
-* app design which has sustained peak load (for example, reports which analyze a lot of data)
-
-If you do run into issues with your CPU Credit Balance Status unexpectedly, you can look for anomalies in *Database node CPU usage*, *Application node disk throughput*, and *Application node load* and correlate those with application behavior. You can also move to a different database with a higher baseline performance, or one which is not burstable.
-
-## 4 Cloud V3 Alerting Categories and Thresholds
-
-Mendix Cloud V3 also has a number of alerting categories and thresholds. These differ from those in Mendix Cloud V4 and so are documented in this separate section.Again, any category that does not display as *OK* needs to be investigated.
+Mendix Cloud v3 also has a number of alerting categories and thresholds. These differ from those in Mendix Cloud v4 and so are documented in this separate section.Again, any category that does not display as *OK* needs to be investigated.
 
 ### 4.1 Application Status
 

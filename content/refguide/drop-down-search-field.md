@@ -11,17 +11,17 @@ To add a drop-down search field to your data grid, right-click within the search
 
 ## Common Properties
 
-{{% snippet file="refguide/Search+Field+Caption+Property.md" %}}
+{{% snippet file="refguide/search-field-caption-property.md" %}}
 
-{{% snippet file="refguide/Search+Field+Type+Property.md" %}}
+{{% snippet file="refguide/search-field-type-property.md" %}}
 
-{{% snippet file="refguide/Search+Field+Default+Value+Property.md" %}}
+{{% snippet file="refguide/search-field-default-value-property.md" %}}
 
 ## General properties
 
-{{% snippet file="refguide/Search+Field+Attribute+Path+Property.md" %}}
+{{% snippet file="refguide/search-field-attribute-path-property.md" %}}
 
-{{% snippet file="refguide/Search+Field+Comparison+Property.md" %}}
+{{% snippet file="refguide/search-field-comparison-property.md" %}}
 
 ### Allow multi-select
 
@@ -33,7 +33,7 @@ If the 'drop-down' search field is connected to an attribute of an associated en
 
 {{% alert type="info" %}}
 
-Let us say you have a grid showing bicycles. In the domain model the bicycle has an association to the shops where you can buy those bicycles. You can add a search field to the grid allowing the end user to select a shop by name. The XPath can then be used to limit the shops to those that are in a given country.
+Let us say you have a grid showing bicycles. In the domain model the bicycle has an association to the shops where you can buy those bicycles. You can add a search field to the grid allowing the end-user to select a shop by name. The XPath can then be used to limit the shops to those that are in a given country.
 `[MyWebshop.Bicycle_Shop/MyWebshop.Shop/Country='Netherlands']`
 
 {{% /alert %}}

@@ -34,8 +34,6 @@ In this chapter we will create a new app based on a starter app from the New App
 
 ## 4 Configuring Scout
 
-**Windows 10 users need to use the following workaround. Click [here](perform-scout-and-windows-10-workaround) for the workaround.**
-
 The Mendix UI Framework uses **Sass**, which relies on Ruby. However, you can install [Scout](http://mhs.github.io/scout-app/) to run Sass in a self-contained Ruby environment, letting you effortlessly manage all of your Sass projects with a handful of clicks. This way you don't have to worry about using the terminal. You can still do this if you are familiar with Sass and terminal.
 
 1.  Open your **App Project Folder** in Scout by clicking on the plus button in the left sidebar all the way at the bottom.
@@ -89,7 +87,6 @@ The Mendix UI Framework uses **Sass**, which relies on Ruby. However, you can in
 *   [Create Your First Two Overview & Detail Pages](create-your-first-two-overview-and-detail-pages)
 *   [Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
 *   [Use Layouts and Snippets](layouts-and-snippets)
-*   [Perform Scout and Windows 10 Workaround](perform-scout-and-windows-10-workaround)
 *   [Set Up the Navigation Structure](../general/setting-up-the-navigation-structure)
 *   [Set Up the Mendix UI Framework with just CSS](setup-mendix-ui-framework-with-just-css)
 *   [Set Up the Mendix UI Framework with Koala](setup-mendix-ui-framework-with-koala)

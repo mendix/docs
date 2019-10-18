@@ -22,7 +22,7 @@ To view widgets in Mendix Studio, do the following:
 
 2. In the displayed list of app pages, select the page you want to open and click it.
 
-3. In the **Toolbox** tab, click **Widgets**.
+3. In the **Toolbox** tab, **Widgets** are opened by default.
 
    ![](attachments/page-editor-widgets/toolbox-widgets.png)
 
@@ -49,19 +49,19 @@ Widgets of Studio are divided into categories that you can see when you open the
 
 Widget categories are described in the table below:
 
-| Widget Category                                      | Description                                                  | Link to More Detailed Documentation                          |
-| ---------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Data Containers                                      | Contains a data view (the starting point for showing the contents of one object),  list view (the starting point for showing the contents of list of objects), and a data grid (shows a list of objects in a table format). | [Data View & List View Properties](page-editor-data-view-list-view)<br />[Data Grid Properties](page-editor-data-grid) |
-| [Input Elements](page-editor-widgets-input-elements) | Contains elements that can be used for inputting data.       | [Input Element Widgets](page-editor-widgets-input-elements)  |
-| [Images](page-editor-widgets-images)                 | Contains image display widgets.                              | [Image Widgets](page-editor-widgets-images)                  |
-| [Text](page-editor-widgets-text)                     | Contains text display widgets.                               | [Text Widgets](page-editor-widgets-text)                     |
-| [Buttons](page-editor-widgets-buttons)               | Contains a variety of buttons for placing on a page.         | [Button Widgets](page-editor-widgets-buttons)                |
-| [Layouts](page-editor-widgets-layouts)               | Contains layouts for controlling the placing widgets.        | [Layout Widgets](page-editor-widgets-layouts)                |
-| [Menus](/refguide/menu-widgets)                      | Contains menu creation widgets. Currently, these widgets can be configured only in Studio Pro. | [Menu Widgets](/refguide/menu-widgets) in the *Mendix Studio Pro Guide* |
-| Display                                              | Contains widgets which display changing elements on a page, for example a map, or a progress bar. This category consists of the App Store widgets. | section [4 Widgets by Origin](#widgets-by-origin)            |
-| Charts                                               | Contains different charts. This category consist of the App Store widgets. | section [4 Widgets by Origin](#widgets-by-origin)            |
-| List view Controls                                   | Contains controls for the list view. This category consist of the App Store widgets. | section [4 Widgets by Origin](#widgets-by-origin)            |
-| Add-ons                                              | Contains all custom widgets previously installed in the app. If widgets cannot be matched to the App Store profile they will be shown in the add-ones. |                                                              |
+| Widget Category                                          | Description                                                  | Link to More Detailed Documentation                          |
+| -------------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Data Containers                                          | Contains a data view (the starting point for showing the contents of one object),  list view (the starting point for showing the contents of list of objects), and a data grid (shows a list of objects in a table format). | [Data View & List View Properties](page-editor-data-view-list-view)<br />[Data Grid Properties](page-editor-data-grid) |
+| [Structure](page-editor-widgets-structure)               | Contains pre-set layout grids with a specific number of columns and widgets for controlling the placing widgets. | [Structure Widgets](page-editor-widgets-structure)           |
+| [Input Elements](page-editor-widgets-input-elements)     | Contains elements that can be used for inputting data.       | [Input Element Widgets](page-editor-widgets-input-elements)  |
+| [Text](page-editor-widgets-text)                         | Contains text display widgets.                               | [Text Widgets](page-editor-widgets-text)                     |
+| [Images and Files](page-editor-widgets-images-and-files) | Contains widgets that help you display images, upload or/and download files and images. | [Image and File Widgets](page-editor-widgets-images-and-files) |
+| [Buttons](page-editor-widgets-buttons)                   | Contains a variety of buttons for placing on a page.         | [Button Widgets](page-editor-widgets-buttons)                |
+| [Menus](/refguide/menu-widgets)                          | Contains menu creation widgets. Currently, these widgets can be configured only in Studio Pro. | [Menu Widgets](/refguide/menu-widgets) in the *Mendix Studio Pro Guide* |
+| Add-ons                                                  | Contains all custom widgets previously installed in the app. If widgets cannot be matched to the App Store profile they will be shown in the add-ons. |                                                              |
+| Charts                                                   | Contains different charts. This category consist of the App Store widgets. | section [4 Widgets by Origin](#widgets-by-origin)            |
+| Display                                                  | Contains widgets which display changing elements on a page, for example a map, or a progress bar. This category consists of the App Store widgets. | section [4 Widgets by Origin](#widgets-by-origin)            |
+| List view Controls                                       | Contains controls for the list view. This category consist of the App Store widgets. | section [4 Widgets by Origin](#widgets-by-origin)            |
 
 ## 5 Widgets by Origin {#widgets-by-origin}
 

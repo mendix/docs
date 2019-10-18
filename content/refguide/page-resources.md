@@ -1,6 +1,7 @@
 ---
 title: "Page Resources"
 parent: "pages"
+menu_order: 12
 tags: ["studio pro", "page resources"]
 ---
 
@@ -10,12 +11,12 @@ The main difference between a page and page resources is that page is an indepen
 
 You can add the following page resources:
 
+* [Image collection](image-collection)
 * [Layout](layout)
 * [Page template](page-templates)
 * [Snippet](snippet)
 * [Building block](building-block) 
 * [Menu](menu)
-* Image collection
 
 ## 2 Adding Page Resources
 

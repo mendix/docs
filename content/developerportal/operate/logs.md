@@ -3,7 +3,7 @@ title: "Logs"
 category: "Operations"
 menu_order: 30
 description: "This page describes the Logs page of the Developer Portal."
-tags: ["Operate", "App", "Developer Portal", "SAP", "V3", "V4"]
+tags: ["Operate", "App", "Developer Portal", "SAP", "v3", "v4"]
 ---
 
 ## 1 Introduction
@@ -20,7 +20,7 @@ The page is accessed through the **Logs** menu item under the **Operate** catego
 This is the default Mendix deployment for a licensed app.
 {{% /alert %}}
 
-For apps deployed to Mendix Cloud Version 4 (V4), you can select which environment you want logs for. Production logs will require [Two-Factor Authentication](/developerportal/deploy/two-factor-authentication).
+For apps deployed to Mendix Cloud Version 4 (v4), you can select which environment you want logs for. Production logs will require [Two-Factor Authentication](/developerportal/deploy/two-factor-authentication).
 
 You can view the live (current) log, download it, or view and download an archived log.
 
@@ -28,9 +28,9 @@ You can view the live (current) log, download it, or view and download an archiv
 The live log is displayed in the local time of the browser. All other logs have timestamps in UTC.
 {{% /alert %}}
  
-Logs on Mendix Cloud V4 are rotated and archived every day. The logs are kept for at least 3 months.
+Logs on Mendix Cloud v4 are rotated and archived every day. The logs are kept for at least 3 months.
 
-![Logs Page V4](attachments/logs/log-v4.png)
+![Logs Page v4](attachments/logs/log-v4.png)
 
 Action Button | Performs the Action
 :---|:---
@@ -40,13 +40,13 @@ View Live Log | view today's log on the screen
 
 ## 3 Apps Deployed to Mendix Cloud Version 3
 
-For apps deployed to Mendix Cloud Version 3 (V3), you can select which environment you want logs for. Production logs will require two-step authentication.
+For apps deployed to Mendix Cloud version 3 (v3), you can select which environment you want logs for. Production logs will require two-step authentication.
 
 You can fetch the current log and download it, or you can view and download an archived log. All timestamps are shown in UTC.
  
-Logs on Mendix Cloud V3 are rotated and archived every 5MB. The logs are kept for at least 3 months.
+Logs on Mendix Cloud v3 are rotated and archived every 5MB. The logs are kept for at least 3 months.
 
-![Logs Page V3](attachments/logs/log-v3.png)
+![Logs Page v3](attachments/logs/log-v3.png)
 
 Action Button | Performs the Action
 :---|:---

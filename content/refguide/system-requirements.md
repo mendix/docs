@@ -20,7 +20,7 @@ The following frameworks are automatically installed (if necessary):
 * Microsoft .NET Framework 4.7.2
 * Microsoft Visual C++ 2010 SP1 Redistributable Package
 * Microsoft Visual C++ 2013 Redistributable Package
-* AdoptOpenJDK 11 or Oracle JDK 11 (the former is installed automatically as of [Mendix 8.0.0 Beta 3](/releasenotes/studio-pro/8.0#800) if you do not have any JDK 11 installed) 
+* AdoptOpenJDK 11 or Oracle JDK 11 (the former is installed automatically as of [Mendix 8.0.0](/releasenotes/studio-pro/8.0#800) if you do not have any JDK 11 installed) 
 
 {{% alert type="info" %}}
 You can choose which JDK is used for building and running locally via the **Edit** > **Preferences** menu item in Studio Pro.
@@ -31,7 +31,7 @@ You can choose which JDK is used for building and running locally via the **Edit
 If you want to use TortoiseSVN in combination with Studio Pro, download the latest version from the [TortoiseSVN](https://tortoisesvn.net/) website.
 
 {{% alert type="warning" %}}
-Mendix Studio Pro (version 8.0.0 beta 2 and above) uses the Subversion 1.9 working copy. Previous versions of the Mendix Desktop Modeler used a Subversion 1.7 working copy. These working copy versions **are not compatible**.
+Mendix Studio Pro uses the Subversion 1.9 working copy. Previous versions of the Mendix Desktop Modeler used a Subversion 1.7 working copy. These working copy versions **are not compatible**.
 
 Always use the version of TortoiseSVN which matches your app model. If you open a local model from Mendix version 7.x or 6.x with the latest version of TortoiseSVN **you will no longer be able to open it in Mendix**.
 {{% /alert %}}
@@ -125,4 +125,10 @@ For Mendix apps and the [Mendix Mobile app](getting-the-mendix-app):
 MxBuild is a Windows and Linux command-line tool that can be used to build a Mendix Deployment Package. For more information, see [MxBuild](mxbuild).
 
 * Mono v5.20.x or .NET v4.7.2
-* JDK 8.
+* JDK 11
+
+## mx Command-Line Tool {#mxtool}
+
+The **mx** command-line tool is a Windows and Linux command-line tool that can be used to do useful things with your Mendix app project. For more information, see [mx Command-Line Tool](mx-command-line-tool).
+
+* Mono v5.20.x or .NET v4.7.2

@@ -15,7 +15,7 @@ OAuth is a standard for access delegation. It is commonly used as a way for user
 
 In other words, OAuth allows a user with an account from one website/application to use those credentials to connect to another website/application. The process generally looks like this:
 
-1. The user goes to the login page of website/application A and clicks the button for logging in with credentials from website/application B.
+1. The user goes to the login page of website/application A and clicks the button for signing in with credentials from website/application B.
 2. The user is asked to authenticate themselves on website/application B.
 3. Website/application B confirms the identity of the user to website/application A.
 

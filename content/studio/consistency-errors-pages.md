@@ -20,11 +20,11 @@ The scheme below shows that the data source of the list view has been set to **D
 
 The table below describes the most common errors you can come across when configuring a list view,  causes of these errors, and ways to fix them. 
 
-| Text in the Checks Panel                                     | Cause of an Error                                            | Way to Fix                                                   |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| No entity configured for the data source of this list view. Select an entity or change the data source. | The **Database** (or **XPath**/**Association**) option is selected as the data source for the list view on the page has been set, but the **Entity** property is not specified. | Open the list view's properties > the **Data Source** section and select an entity in the **Entity** field. |
-| No microflow configured for the data source of this list view. Select a microflow or change the data source. | The data source is set to **Microflow**, but no specific microflow is selected. | Open the list view's properties > the **Data Source** section and select a microflow in the **Microflow** field, or change the type of the data source. |
-| No nanoflow configured for the data source of this list view. Select a nanoflow or change the data source. | A nanoflow is selected as the data source, but no specific nanoflow is selected. | Open Studio Pro and select a nanoflow for this list view, or change the type of the data source. |
+| Error Code | Text in the Checks Panel                                     | Cause of an Error                                            | Way to Fix                                                   |
+| ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| CE0488     | No entity configured for the data source of this list view. Select an entity or change the data source. | The **Database** (or **XPath**/**Association**) option is selected as the data source for the list view on the page has been set, but the **Entity** property is not specified. | Open the list view's properties > the **Data Source** section and select an entity in the **Entity** field. |
+|            | No microflow configured for the data source of this list view. Select a microflow or change the data source. | The data source is set to **Microflow**, but no specific microflow is selected. | Open the list view's properties > the **Data Source** section and select a microflow in the **Microflow** field, or change the type of the data source. |
+|            | No nanoflow configured for the data source of this list view. Select a nanoflow or change the data source. | A nanoflow is selected as the data source, but no specific nanoflow is selected. | Open Studio Pro and select a nanoflow for this list view, or change the type of the data source. |
 
 ## 3 Data View Consistency Errors 
 
@@ -35,28 +35,29 @@ Not configuring a data source for a [data view](page-editor-data-view-list-view#
 
 The table below describes the most common errors you can come across when configuring a data view,  causes of these errors, and ways to fix them. 
 
-| Text in the Checks Panel                                     | Cause of an Error                                            | Way to Fix                                                   |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| No entity configured for the data source of this data view. Select an entity or change the data source. | **Context** is selected as the data source for the data view, but the **Entity** property is not specified. | Open the data view's properties> the **Data Source** section and select an entity in the **Entity** field, or change the type of the data source. |
-| No microflow configured for the data source of this data view. Select a microflow or change the data source | The data source is set to **Microflow**, but no specific microflow is selected. | Open the data view's properties> the **Data Source** section and select a microflow in the **Microflow** field, or change the type of the data source. |
-| No list widget configured for the data source of this data view. Select a widget or change the data source. | The list widget option is configured as the data source for the data view, but you have not selected the specific list you would like the data view to listen to. | Create a list view on the same page, configure it, and select it as a list widget for the data view; or change the type of the data source. |
+| Error Code | Text in the Checks Panel                                     | Cause of an Error                                            | Way to Fix                                                   |
+| ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| CE0488     | No entity configured for the data source of this data view. Select an entity or change the data source. | **Context** is selected as the data source for the data view, but the **Entity** property is not specified. | Open the data view's properties> the **Data Source** section and select an entity in the **Entity** field, or change the type of the data source. |
+|            | No microflow configured for the data source of this data view. Select a microflow or change the data source. | The data source is set to **Microflow**, but no specific microflow is selected. | Open the data view's properties> the **Data Source** section and select a microflow in the **Microflow** field, or change the type of the data source. |
+| CE0536     | No list widget configured for the data source of this data view. Select a widget or change the data source. | The list widget option is configured as the data source for the data view, but you have not selected the specific list you would like the data view to listen to. | Create a list view on the same page, configure it, and select it as a list widget for the data view; or change the type of the data source. |
 
 
 ## 4 Context Not Available Consistency Errors
 
 Possible errors that you can get when a page is expecting a context that is unavailable are described in the table below. 
 
-| Text in the Checks Panel                                     | Cause of an Error                                            | Way to Fix                                                   |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| The selected page {Name of the page} expects an object of type {type of object}, which is not available here. | The page has a data view that expects an object of a particular type to be passed to it. This error occurs when the page is opened from another page, which does not have this object available. For a more detailed example, see section [4.1 Error Fix Example 1](#error-example-1). | Make sure that the object is passed to the page which has a configured data view on it. For more information, see section  [4.1 Error Fix Example 1](#error-example-1). |
-| The selected page {Name of page} expects an object of type X, which is not compatible with the object of type Y that is available here. | You have a widget (for example, a button) that opens a page. The page has a data view that expects an object of particular type to be passed to it. However, the widget is placed inside a data container with another type of object. For a detailed example, see section [4.2 Error Fix Example 2](#error-example-2). | Make sure that the button is placed in the correct data container and passes the correct type of object to the page. For more information, see section [4.2 Error Fix Example 2](#error-example-2). |
-| The selected {Name of the page} expects an object of type {type of object} and cannot be used as a home page. Change the page or use a microflow to provide the page with an object. | You have set a page that expects an object to be passed to it (for example, a page with a data view) as the home page. But by default the home page has no object that is passed to it, because it is the starting point for your user. For a more detailed example, see section [2.2 Error Fix When the Home Page Expects an Object](consistency-errors-navigation#home-page-expects-an-object) in *Navigation Consistency Errors*. | Set a different  page as the home page. Alternatively, you can use a microflow that will open the home page and pass a specific object to it. For more information, see section [2.2 Error Fix When the Home Page Expects an Object](consistency-errors-navigation#home-page-expects-an-object) in *Navigation Consistency Errors*. |
+| Error Code | Text in the Checks Panel                                     | Cause of an Error                                            | Way to Fix                                                   |
+| ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| CE0568     | The selected page {Name of the page} expects an object of type {type of object}, which is not available here. | The page has a data view that expects an object of a particular type to be passed to it. This error occurs when the page is opened from another page, which does not have this object available. For a more detailed example, see section [4.1 Error Fix Example 1](#error-example-1). | Make sure that the object is passed to the page which has a configured data view on it. For more information, see section  [4.1 Error Fix Example 1](#error-example-1). |
+| CE0568     | The selected page {Name of page} expects an object of type X, which is not compatible with the object of type Y that is available here. | You have a widget (for example, a button) that opens a page. The page has a data view that expects an object of particular type to be passed to it. However, the widget is placed inside a data container with another type of object. For a detailed example, see section [4.2 Error Fix Example 2](#error-example-2). | Make sure that the button is placed in the correct data container and passes the correct type of object to the page. For more information, see section [4.2 Error Fix Example 2](#error-example-2). |
+| CE0529     | The selected {Name of the page} expects an object of type {type of object} and cannot be used as a home page. Change the page or use a microflow to provide the page with an object. | You have set a page that expects an object to be passed to it (for example, a page with a data view) as the home page. But by default the home page has no object that is passed to it, because it is the starting point for your user. For a more detailed example, see section [2.2 Error Fix When the Home Page Expects an Object](consistency-errors-navigation#home-page-expects-an-object) in *Navigation Consistency Errors*. | Set a different  page as the home page. Alternatively, you can use a microflow that will open the home page and pass a specific object to it. For more information, see section [2.2 Error Fix When the Home Page Expects an Object](consistency-errors-navigation#home-page-expects-an-object) in *Navigation Consistency Errors*. |
+| CE0558     | All data views receiving object from the page parameter must have the same entity. | You have several data view on one page that have different entities as a data source. | Select one and the same entity for all data views, or change the data source for them. |
 
 ### 4.1 Error Fix Example 1 {#error-example-1}
 
 When a page expects a context that is not passed to it from another page or a microflow, you will get consistency errors. 
 
-Let us study an example: the **Customers** page contains a list view with a list of all customer names (**Customer** is set as **Entity** in the **Data Source** properties), and a **Details** button outside of the list view (placed in a [container](page-editor-widgets-layouts#container-overview) only). The **Details** button opens a **Customer Details** page when a user clicks it (the **On Click Action** for the button is set to **Page** and the **Create Object** option is disabled). 
+For example, the **Customers** page contains a list view with a list of all customer names (**Customer** is set as **Entity** in the **Data Source** properties), and a **Details** button outside of the list view (placed in a [container](page-editor-widgets-structure#container-overview) only). The **Details** button opens a **Customer Details** page when a user clicks it (the **On Click Action** for the button is set to **Page** and the **Create Object** option is disabled). 
 
 ![Button Properties on the Customers Page](attachments/consistency-errors-pages/customers-page.png)
 
@@ -109,7 +110,7 @@ Now when a user clicks this button, the **Customer Details** page will open, and
 
 If a widget opens a page and this widget is inside a data container of entity X, but the referred page expects entity Y, you will get a consistency error. 
 
-Let us study an example: you have a **New** button on the **Engineers** page that opens the **Tasks** page. 
+For example, you have a **New** button on the **Engineers** page that opens the **Tasks** page. 
 
 {{% image_container width="350" %}}![A Button on Engineers Page](attachments/consistency-errors-pages/engineers-page.png)
 {{% /image_container %}}
@@ -125,33 +126,44 @@ This means that data view expects the object of type *SmartTask* passed to it, b
 
 To fix this error you can either place a button within a list view that will pass the correct type of data to the page (place the button inside the list view and set its data source to entity *SmartTask*), or change the data source of the data view on the **Tasks** page to entity *Engineer*. 
 
-## 5 Input Elements Consistency Errors
+## 5 Data Consistency Errors
+
+When a widget that expects an object from its data source does not get it or gets an object from a different entity type, it causes errors in data consistency. 
+
+One of the most common errors of this type are described in the table below:
+
+| Error Code | Text in the Checks Panel                                     | Cause of an Error                                            | Way to Fix                                                   |
+| ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| CE0552     | Microflow {name of the microflow} does not return an object. | The data source of a widget (for example, a data view) is set to **Microflow**, but the microflow does not return any object. | Open the microflow and configure a return value for it. Do the following: <ol><li>Select the end event.</li><li>In its properties, set **Return Value** from **Nothing** to **Value**.</li><li>Set the **Data Type** and set the **Entity** option if needed (whether this option is displayed depends on the selected data type).</li><li> Configure the **Value**.</li></ol> |
+| CE0551     | Microflow {name of the microflow} does not return a list.    | The data source of a list view is set to **Microflow**, but the microflow does not return a list. | Open the microflow and configure it to return a list. Do the following: <ol><li>Select the end event.</li><li> In its properties, set **Return Value** from **Nothing** to **Value**.</li><li>Set the **Data Type**  to *List*.</li><li>Set the **Entity** option.</li><li>Configure the **Value**.</li></ol> |
+
+## 6 Input Elements Consistency Errors
 
 The most common errors for [input elements](page-editor-widgets-input-elements) (such as, a text box, a drop-down, a check box, etcetera) , their causes, and ways to fix them are described in the table below. 
 
-| Text in the Checks Panel                                     | Cause of an Error                                            | Way to Fix                                                   |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| This widget can only function inside a data container. Move it into a data view, list view or template grid. | You have added an input widget to a page, but it is not inside a data view or a list view. | There are two ways to fix the error: <ul><li>When you do not have a specific data view or list view available yet: open widget's properties > the **Data Source** section and click **Wrap with a new data view**, the input widget will be automatically placed inside a new data view.</li><li>When you already have a data view or a list view which this input element relates to: drag and drop the input element inside the data view or the list view</li></ul> |
-| Select an attribute for this {name of the input element}.    | You have added an input element and it is inside a data container, but the attribute  which this input element is connected to is not selected. | Open widget's properties > the **Data Source** section and select an attribute in the **Attribute** field. |
+| Error Code | Text in the Checks Panel                                     | Cause of an Error                                            | Way to Fix                                                   |
+| ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| CE0544     | This widget can only function inside a data container. Move it into a data view, list view or template grid. | You have added an input widget to a page, but it is not inside a data view or a list view. | There are two ways to fix the error: <ul><li>When you do not have a specific data view or list view available yet: open widget's properties > the **Data Source** section and click **Wrap with a new data view**, the input widget will be automatically placed inside a new data view.</li><li>When you already have a data view or a list view which this input element relates to: drag and drop the input element inside the data view or the list view</li></ul> |
+| CE0545     | Select an attribute for this {name of the input element}.    | You have added an input element and it is inside a data container, but the attribute  which this input element is connected to is not selected. | Open widget's properties > the **Data Source** section and select an attribute in the **Attribute** field. |
 
-## 6 Image Widgets Consistency Errors
+## 7 Image Widgets Consistency Errors
 
-The most common consistency errors for [static image widgets](page-editor-widgets-images) can occur when you place an image widget on a page, but do not select an actual image for it. 
+The most common consistency errors for [static image widgets](page-editor-widgets-images-and-files) can occur when you place an image widget on a page, but do not select an actual image for it. 
 
-[Dynamic images](page-editor-widgets-images) need to be placed inside a data container (a data view or a list view) and an entity should be selected for them. 
+[Dynamic images](page-editor-widgets-images-and-files) need to be placed inside a data container (a data view or a list view) and an entity should be selected for them. 
 
 {{% image_container width="350" %}}![Dynamic Image Properties](attachments/consistency-errors-pages/dynamic-image-properties.png)
 {{% /image_container %}}
 
 Errors for static and dynamic images are described in the table below. 
 
-| Text in the Checks Panel                                     | Cause of an Error                                            | Way to Fix                                                   |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| No image selected.                                           | You have added a static image widget on a page, but the image itself is not selected. | Open image properties > the **General** section and click **Select Image**. You can either select a default image or upload your own one. |
-| Move this widget into a data container, for example a data view or list view. | You have added a dynamic image to a page, but it is not inside a data view or a list view. | Open image properties > the **General** section and click **Wrap with a new data view**, the image will be automatically placed inside a new data view. You can also add a list view or a data view to the page and drag and drop a dynamic image inside it. |
-| Select an entity for the data source of this image viewer.   | You have added a dynamic image to a page, the dynamic image is placed inside a data view or a list view, but an entity for the image is not specified. | Open image properties > the **General** section and select an entity in the **Entity** field. |
+| Error Code | Text in the Checks Panel                                     | Cause of an Error                                            | Way to Fix                                                   |
+| ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| CE0436     | No image selected.                                           | You have added a static image widget on a page, but the image itself is not selected. | Open image properties > the **General** section and click **Select Image**. You can either select a default image or upload your own one. |
+|            | Move this widget into a data container, for example a data view or list view. | You have added a dynamic image to a page, but it is not inside a data view or a list view. | Open image properties > the **General** section and click **Wrap with a new data view**, the image will be automatically placed inside a new data view. You can also add a list view or a data view to the page and drag and drop a dynamic image inside it. |
+| CE0489     | Select an entity for the data source of this image viewer.   | You have added a dynamic image to a page, the dynamic image is placed inside a data view or a list view, but an entity for the image is not specified. | Open image properties > the **General** section and select an entity in the **Entity** field. |
 
-## 7 On Click Action Consistency Errors 
+## 8 On Click Action Consistency Errors 
 
 You can specify an **On Click Action** for different widgets, for example, for buttons or images. For more details about on click actions, see [Events Section in Widgets](page-editor-widgets-events-section).
 
@@ -161,7 +173,7 @@ The most common consistency errors appear when you do not configure the on click
 
 To fix the consistency errors, finish configuring the on click action (for example, for an on click action *Page*, select a particular page that should open), or change the on click action to another one. 
 
-##  8 Read More
+##  9 Read More
 
 * [Pages](page-editor)
 * [Navigation Consistency Errors](consistency-errors-navigation)

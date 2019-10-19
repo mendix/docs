@@ -14,6 +14,8 @@ Parses a string value to a decimal value. Takes optional parameters for the form
 
 * Value to parse
     * Type: string
+* Format for the input value based on the Java library `DecimalFormat` (for details, see [Class DecimalFormat](https://docs.oracle.com/javase/8/docs/api/java/text/DecimalFormat.html))
+    * Type: string
 * Default value (optional)
     * Type: decimal or empty
 
@@ -24,6 +26,7 @@ A decimal value that matches the inputted string value. If the value cannot be p
 * `parseDecimal('3.45')` returns 3.45
 * `parseDecimal('noDecimal', 5.05)` returns 5.05
 * `parseDecimal('noDecimal', empty)` returns empty
+* `parseDecimal('3,241.98', '#,###.##)` returns 3241.98
 
 ## formatDecimal
 

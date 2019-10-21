@@ -15,6 +15,7 @@ This how-to will teach you to build local notifications for native applications.
 **This how-to will teach you how to do the following:**
 
 [todo: change some of these "understand" and "learn" verbs to more active, 'doing' verbs]
+[todo: aren't these JSactions already included in the make it native template? that means an item below can be deleted]
 
 * Introduce the native notification module to your project 
 * Configure the native notification module
@@ -30,6 +31,8 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Install the Make it Native app on your mobile device
 
 ## 3 Create a Project and Configure Notifications
+
+In the subsections below you will create a project, send a local native notification, set a badge number for after a notification, and configure your notifications in important ways.
 
 ### 3.1 Display a Local Notification
 

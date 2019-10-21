@@ -120,7 +120,7 @@ To add content to the App Store, follow these steps:
 
 4.  <a name="four"></a>In the **Publish to** drop-down menu, select the location where you want to publish your content:
 
-	{{% todo %}}[**VERIFY DESCRIPTION FOR PRIVATE APP STORE CONTENT BELOW**]{{% /todo %}}
+	{{% todo %}}[**APP-STORE-TEAM VERIFY BELOW: DESCRIPTION FOR PRIVATE APP STORE CONTENT BELOW**]{{% /todo %}}
 
 	* **Public App Store (visible for anyone)** – your content will be available to every developer in the Mendix community (this content will have to be reviewed and approved by Mendix before it is available)
 	* <a name="private-app-store"></a>**Private App Store (visible for your company)** – your content will receive the **Company only** label and be available only to the developers in your company as well as [user group guests](app-store-overview#guests); this content will not be reviewed by Mendix
@@ -128,7 +128,7 @@ To add content to the App Store, follow these steps:
 	{{% alert type="warning" %}}You can only set this in the initial version of your content. You cannot change this setting by updating the App Store component later.
 	{{% /alert %}}
 
-{{% todo %}}[**VERIFY BELOW: CONTENT PROTECTION IS DELETED HERE, CORRECT?**]{{% /todo %}}
+{{% todo %}}[**APP-STORE-TEAM VERIFY BELOW: CONTENT PROTECTION IS DELETED HERE, CORRECT?**]{{% /todo %}}
 
 5. In the **Content protection** section, you can choose to **Enable protection** or **Disable protection** for the content. This will determine which members of your company can manage the content. For more information, see the [ Content Managers](app-store-overview#cm) section of *App Store Overview*.
 6.  <a name="edit"></a>In the bottom half of the **DRAFT** screen, do the following:<br />

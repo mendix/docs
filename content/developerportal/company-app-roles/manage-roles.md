@@ -40,7 +40,7 @@ When you are a Company Admin, you can add extra Company Admins by following thes
 
 2.  Select the **Company Admins** tab:
 
-	![](attachments/companyadmin-overview.png)
+	![](attachments/company-admin-overview.png)
 
 3. Click **Add Company Admin**.
 4.  Select the users that should be changed into Company Admins, then select the permissions:

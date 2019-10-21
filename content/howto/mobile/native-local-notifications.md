@@ -435,8 +435,6 @@ Next you will create a workaround which allows data to be passed to pages.
 
 Good job! When a user taps a notification from the **Pass GUID to Notification** button, they will now be brought to the **DetailTestEntity** page. Next you will create a nanoflow which receives **notificationEntity** as a parameter, retrieves an object via this parameter, and passes the object to a page.
 
-todo: take pics for the following list
-
 1. Make a new nanoflow named *ON_tapNotification*.
 2. Drag and drop a parameter onto your nanoflow. 
 3. Click **Data Type** > **Select**. Click **Notification**, then click **Select**.
@@ -446,40 +444,58 @@ todo: take pics for the following list
 ![guid button](attachments/native-push/notif-entity.png)
 
 6. Drag and drop a JavaScript action call onto your nanoflow.
+
 7. Double-click the JavaScript action call, then click **Select**. 
+
 8. Type *GetObjectByGuid* into the search field, click that action, then click **Select**. 
-9. Click **Entity** > **Select**.
-10. Click **Test Entity** and then click **Select**.
-11. From the **Object guid** click **Edit**.
-12. Type *$NotificationEntity/GUIDString* into your argument field and click **OK**.
-13. Select **Use Return Value** > **Yes**.
+
+9. Click **TestEntity** and then click **Select**.
+
+10. Next to the **Object guid** drop-down menu click **Edit**.
+
+11. Type *$NotificationEntity/GUIDString* into your argument field and click **OK**.
+
+12. Select **Use Return Value** > **Yes**.
+
 13. In **Object name** write *ReturnedObjectByGUID*:
 
 	![guid settings](attachments/native-push/get-object-by-guid-settings.png)
 
-14. Click **OK** to save and close your JavaScript Action settings.
+14. Click **OK** to save and close your JavaScript Action settings:
+
+	![guid activity](attachments/native-push/guid-activity.png)
+
 15. Right-click this JavaScript Action and click **Set $ReturnedObjectByGUID As Return Value**:
 
-	![guid settings](attachments/native-push/finished-guid-flow.png)
+	![guid settings](attachments/native-push/guid-return-value.png)
 
-16. Drop a **Change object** activity onto your nanoflow [todo: retake pics]:
+16. Drop a **Change object** activity onto your nanoflow:
 
-pic RESUME HERE
+	![change object](attachments/native-push/new-change-object.png)
 
 17. Double-click the change object activity.
-18. Select **Object** > **ReturnedObjectByGUID (NativeMobile.TestEntity** from the drop-down menu.
-19. Click **Action** > **New**, make sure **Member** is set to the string attribute, and into **Value** type *Your notificaiton has forwarded you here!*:
+18. Select **Object** > **ReturnedObjectByGUID (NativeMobile.TestEntity)** from the drop-down menu.
+19. Click **Action** > **New**, make sure **Member** is set to the string attribute, and into **Value** type *'Your notification has forwarded you here!'*:
 
-![change object action](attachments/native-push/change-object-action.png)
+	![change object action](attachments/native-push/change-object-action.png)
+
+20. Click **OK**. Check that your dialog box looks like this, then click **OK** again to close it: 
+
+	![change object final](attachments/native-push/change-object-final.png)
 
 Next you are going to create a show page action for **ON_tapNotification**.
 
-1. Drag and drop a **Show Page** action onto your nanoflow.
-2. Double click the show page action.
+1. Drag and drop a **Show Page** action onto your nanoflow:
+
+	![new show page](attachments/native-push/add-show-page.png)
+
+2. Double-click the show page activity.
+
 3. From the **Object to pass** drop-down menu select **ReturnedObjectByGuid**.
+
 4. Click **Page** > **Select**, click **DetailTestEntity**, then click **OK**:
 
-	![guid button](attachments/native-push/show-page-settings.png)
+  ![guid button](attachments/native-push/show-page-settings.png)
 
 5. Click **OK** to close the **Show Page** activity settings, then navigate to your **Home_Native** page.
 
@@ -501,14 +517,14 @@ Now you will set up a data view on your home page.
 
 	{{% image_container width="500" %}}![notification action](attachments/native-push/notif-action-2.png){{% /image_container %}}
 
-11. Start and load the app on your mobile device, tap the nanoflow button you created in 3.e, then tap the notification to navigate to the **DetailTestEntity** page with the proper object. [todo: doesn't work for me -- errors]
+11. Start and load the app on your mobile device, tap the nanoflow button you created in 3.e, then tap the notification to navigate to the **DetailTestEntity** page with the proper object. [todo: doesn't work for me -- errors. Eventually fixed the 2 or 3 small ones, but I'll need someone to validate this whole thing I think.]
 
-Explaining the workaround (todo: all the steps/substeps above yes?):
+Explaining the work-around above:
 
-* Since the Dataview is on your homepage and nanoflow is set as a data source, it creates an empty notification object. This object will be referred to as XwithGUID.
-* We trigger a ACT_PassGuidToNotification: JSAction DisplayNotification creates a notification with respected params: title,subtitle,body,actionName,Guid. This is step happens before displaying notification.
-* User taps the notification, before executing ON_tapNotification(because you set it in 4.b), you pass **XwithGUID** to your widget then set its GUID attribute programatically. Since you set the GUID attribute of the widget to **XwithGUID**, now you can use this in your **ON_tapNotification** nanoflow.
-* Your widget executes **ON_tapNotification** that expects a notification object with GUID, which in this case will be **XwithGUID**. After this, you can safely use **ON_tapNotification**'s notification parameter for retrieval purposes.
+* Since the data view is on your homepage and nanoflow is set as a data source, it creates an empty notification object. This object will be referred to as XwithGUID.
+* We trigger a ACT_PassGuidToNotification. JSAction DisplayNotification creates a notification with correct parameters (title, subtitle, body, Action name, and Action guid). This step happens before a notification is displayed.
+* A user taps the notification. Before executing **ON_tapNotification**, your app passes **XwithGUID** to your widget then sets its GUID attribute programatically. Since you set the GUID attribute of the widget to **XwithGUID**, now you can use this in your **ON_tapNotification** nanoflow.
+* Your widget executes **ON_tapNotification** that expects a notification object with a GUID, which in this case will be **XwithGUID**. After this, you can safely use **ON_tapNotification's** notification parameter for retrieval purposes. [todo: half of these steps are written in "present tense" as a USER is experiencing it. The second half is more written from the dev's perspective as they are building the app. Mehmet, can you please rewrite these steps to be all one or the other? I suspect writing them all from the dev's perspective might be easiest. Also if these are just a collection of notes they can stay bullets. If they are a sequence of things in order, they need to be changed to a numbered list.]
 
 ## 4 Scheduling a Notification and Cancelling It
 

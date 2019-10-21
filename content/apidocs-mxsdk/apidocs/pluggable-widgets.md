@@ -160,7 +160,8 @@ A URL can be provided through the `helpUrl` property:
     <helpUrl>https://appstore.home.mendix.com/link/app/105695/</helpUrl>
 ```
 
-For more complex help pages you can link to a markdown page. For security reasons, URLs have the following restrictions: 
+For more complex help pages you can link to a markdown page. For security reasons, URLs have the following restrictions:
+
 * Must use HTTPS protocol
 * Host name must end with *.mendix.com* or *github.com*
 * If host name is *github.com* the full URL must end with *.md*

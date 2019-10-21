@@ -526,7 +526,7 @@ Explaining the work-around above:
 * A user taps the notification. Before executing **ON_tapNotification**, your app passes **XwithGUID** to your widget then sets its GUID attribute programatically. Since you set the GUID attribute of the widget to **XwithGUID**, now you can use this in your **ON_tapNotification** nanoflow.
 * Your widget executes **ON_tapNotification** that expects a notification object with a GUID, which in this case will be **XwithGUID**. After this, you can safely use **ON_tapNotification's** notification parameter for retrieval purposes. [todo: half of these steps are written in "present tense" as a USER is experiencing it. The second half is more written from the dev's perspective as they are building the app. Mehmet, can you please rewrite these steps to be all one or the other? I suspect writing them all from the dev's perspective might be easiest. Also if these are just a collection of notes they can stay bullets. If they are a sequence of things in order, they need to be changed to a numbered list.]
 
-## 4 Scheduling a Notification and Cancelling It
+## 4 Scheduling a Notification
 
 Local notifications should rarely notify a user right after they do an action. Here you will learn to configure local notifications to trigger after a period of time. To do this, you will use a JavaScript action named **ScheduleNotification**.
 
@@ -546,27 +546,38 @@ To schedule a notification for a specific time, do the following:
 7. For now, set **Notification id** to **empty**.
 8. Set **Action name** and **Action guid** to **empty**.
 9. Click **OK**.
-10. Start and load the app in your mobile device.
-11. Click the nanoflow button.
+10. Start and load the app on your mobile device.
+11. Tap the **Send notification** button, then quickly minimize your app.
 
-The notification should be displayed at the end of the minute. [RESUME: TEST THIS]
+The notification should be displayed at the end of the minute.
 
-Be aware that if the app is in the foreground, it won't show any notification since its against user guidelines of IOS and Android. But it will still trigger onReceive event. This will be enough for us to do custom actions like showing a page with pop-up layout.
+If your app open, it will not show the notification due to iOS and Android user guidelines. However, notifications for open apps can still trigger onReceive events. This allows you to design custom actions for notifications, such as showing a page with pop-up layout.
 
-But what if after scheduling the notification, we want to cancel notification it[todo: cancel after what? can make clearer? DONE] To do this you can use either the **Cancel Scheduled Notification** or **Cancel All Scheduled Notification** JavaScript actions. To cancel a specific notification, provide an identifier of that particular notification to **Cancel Scheduled Notification**. To cancel all notifications, call the **Cancel All Scheduled Notification** JavaScript action.
+But what if you want to cancel a scheduled notification? Read on to learn more.
 
-### 4.1 Cancelling all Scheduled Notifications
+## 5 Cancelling Scheduled Notifications
 
-1. Create a nanoflow named  ACT_CancelAllScheduledNotifications
-2. Create JsAction named "Cancel all scheduled notifications"
-3. Set Use return value => false
-3. Drag and drop this nanoflow to your home screen and name the button "cancel all".
+To cancel a scheduled notificaiton, you can use either the **Cancel Scheduled Notification** or **Cancel All Scheduled Notification** JavaScript actions. To cancel a specific notification, provide an identifier of that particular notification to **Cancel Scheduled Notification**. To cancel all notifications, call the **Cancel All Scheduled Notification** JavaScript action. For further information, see the subsections below.
 
-Now we are set to see the effects of this new nanoflow we created.
+### 5.1 Cancelling all Scheduled Notifications
 
-Simply click the schedule notification button then click the cancel all button. You wont see any notifications at the end of the minute.
+To cancel all scheduled notifications, do the following:
 
-### 4.2 Cancelling a Specific Scheduled Notification
+1. Create a nanoflow named  *ACT_CancelAllScheduledNotifications*.
+2. Create JavaScript action named *Cancel all scheduled notifications*.
+3. Set **Use return value** to **false**
+4. Drag and drop this nanoflow to your home screen and name the button *Cancel all*.
+
+To test your new cancel button, do the following:
+
+1. Start and load the app on your mobile device.
+2. Tap your **Send notification** button.
+3. Tap your **Cancel all** button.
+4. Minimize your app.
+
+You will not see a notification at the end of the minute, proving your cancel action a success!
+
+### 5.2 Cancelling a Specific Scheduled Notification
 
 Now we will need to supply a "Notification ID" which needs to be cancelled. For that we need following changes in ACT_CreateAndSendNotification and [todo: finish this mehmet]:
 

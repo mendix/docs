@@ -5,7 +5,7 @@ description: "Release notes for deployment capabilities managed in the Mendix De
 tags: ["deployment", "cloud environment", "Mendix Cloud", "SAP", "SAP Cloud", "IBM", "on-premises", "free app"]
 ---
 
-These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy) and other deployment options. For updates on the status of Mendix Cloud v4, Mendix Cloud v3, and other deployment options, see [Mendix Status](https://status.mendix.com/). For more information on deploying your Mendix app, see the [Deployment](/developerportal/develop/) section of the *Developer Portal Guide*.
+These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy), other [deployment](/developerportal/deploy/) options, and app [operations](/developerportal/operate/). For updates on the status of Mendix Cloud v4, Mendix Cloud v3, and other deployment options, see [Mendix Status](https://status.mendix.com/).
 
 ## 2019
 
@@ -245,6 +245,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 
 * It is now possible to pause and resume downloading backups for Mendix Cloud v4 applications.
 * We have overhauled the scaling user interface to make it more intuitive. (Ticket 67557)
+* We addressed an issue that caused live logging to freeze from time to time. The fix has been confirmed on all mainstream browsers except for Internet Explorer, which we still are investigating. (Ticket 66418)
 
 #### Fix
 
@@ -263,25 +264,20 @@ We now configure Destination Service in the scope of XSUAA. This means that we a
 * We have fixed a bug that was causing some Mendix Cloud v4 users to unsubscribe from alerting lists after changing environment privilege settings.
 * We have addressed an issue that caused some Mendix Cloud v4 users to not to be able to see their archived logs from previous day.
 
-### August 8th, 2018
-
-#### Improvement
-
-Over the last few months, we have made several improvements to our alerting stack of Mendix Cloud v4 applications to improve the timeliness of alerts. As a consequence, we are reducing the runtime heartbeat timeout from 15 minutes to 3 minutes. We are doing this to ensure that you do not accidentally miss any alerts. We will be monitoring your applications for false positives.
-
-In some cases, you may still experience false positives for the runtime heartbeat alert. If that happens, you can resolve the problem by doing a transport and then a restart of the app.
-
 ### August 13th, 2018
+
+#### Fixes
+
+* We improved the feedback messages in the case of a startup failure.
+* The status page link in alert emails now redirects you to the corresponding alerts page in the Developer Portal.
+* We solved an issue that caused blank error messages during backup creation.
 
 #### Improvements
 
 * A new API call for accessing the logs of Mendix Cloud v4 applications is now available. Detailed information can be found in the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api).
 * It is now possible to add custom environment variables via the Developer Portal to set up application metrics with Datadog and Telegraph.
-
-### August 13th, 2018
-
-#### Improvemen
-
+* All the log levels in the Developer Portal (as in, INFO, ERROR, TRACE, DEBUG, WARNING, CRITICAL) are now also available in Datadog.
+* The Postgres database size can also be observed in Datadog after enabling it in the Developer Portal.
 * The **Environments** breadcrumb in **Deploy** > **Environments** > environment is now a link that redirects you back to the **Environments** page.
 
 ### August 9th, 2018
@@ -289,6 +285,14 @@ In some cases, you may still experience false positives for the runtime heartbea
 #### Improvements
 
 * Alerts are now sent when a Mendix Cloud v3 app or database runs out of system memory.
+
+### August 8th, 2018
+
+#### Improvement
+
+Over the last few months, we have made several improvements to our alerting stack of Mendix Cloud v4 applications to improve the timeliness of alerts. As a consequence, we are reducing the runtime heartbeat timeout from 15 minutes to 3 minutes. We are doing this to ensure that you do not accidentally miss any alerts. We will be monitoring your applications for false positives.
+
+In some cases, you may still experience false positives for the runtime heartbeat alert. If that happens, you can resolve the problem by doing a transport and then a restart of the app.
 
 ### August 7th, 2018
 
@@ -302,6 +306,9 @@ In some cases, you may still experience false positives for the runtime heartbea
 #### Improvement
 
 * We fixed problems with the uploading, downloading, and restoring of backups with very large databases in Cloud v4.
+* We added alerts on database connections and on internal alerting problems.
+* We fixed the problem wherein 404, 403, and 503 responses to a REST call translated to an HTML error page.
+* We added Telegraf as a sidecar for monitoring.
 
 ### July 17th, 2018
 
@@ -316,12 +323,19 @@ In some cases, you may still experience false positives for the runtime heartbea
 #### Fix
 
 * You now get a warning if you try to restore a backup into a small environment. (Ticket 63367)
+* Creating a backup via REST API no longer returns error message 500 when it succeeds. (Ticket 65762)
 
 ### July 3rd, 2018
 
 #### Improvements
 
 * To improve integration and security between Mendix and SAP we now redirect you to SAP to provide your SAP credentials. This means that you need to use the same username (email address) for Mendix and SAP the next time you need to provide your credentials. This is currently implemented only for SAP regions **eu10 (Europe - Frankfurt)** and **us10 (US East - VA)**.
+
+### July 2nd, 2018
+
+#### Improvements
+
+* We improved the stability of the alerting stack.
 
 ### June 15th, 2018
 
@@ -333,6 +347,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 * We fixed the incorrect message that was shown during the scaling of a non-deployed environment. (Ticket 64799)
 * Retrieving an environment package via REST API is no longer broken. (Tickets 65348, 65370)
+* We reintroduced copy privileges for operations.
 
 ### June 11th, 2018
 
@@ -359,6 +374,11 @@ In some cases, you may still experience false positives for the runtime heartbea
 * We fixed the bug in Mendix Cloud v4 that prevented users from using nested custom domains. Now you can have one domain (for example, `app.example.com`) and one on `microservice.app.example.com`.
 
 ### May 5th, 2018
+
+#### Improvements
+
+* It is now possible to add a comment as an optional parameter to the backup while generating one via REST API.
+* It is now possible to see the Mendix Runtime version in response to a "Retrieve Environment Package" API call.
 
 #### Fixes
 
@@ -447,6 +467,11 @@ In some cases, you may still experience false positives for the runtime heartbea
 #### Fix
 
 * The target cloud of a Free App is now shown correctly in the **Environments** section.
+* Happy new year! We addressed an issue where backup downloads were logged as restored backups in the activity log.
+* If you had a **Backups** section of your apps open in multiple tabs, you saw multiple activity log entries for each action taken. That's fixed now.
+* The restart and stop/start activities are now distinctly defined in the **Activity** section.
+* Branches of an application are sorted alphabetically, but **Main Line** is now always on top.
+* The broken styling of the **View Current Log** button for a Free App has been fixed.
 
 #### Improvement
 
@@ -617,6 +642,12 @@ In some cases, you may still experience false positives for the runtime heartbea
 #### Fix
 
 * The Deploy / Operate sections in the Platform Portal were broken on Internet Explorer 11 due to widget incompatibility, introduced in the previous release. This was already hot-patched in production on March 16th.
+
+### March 13th, 2017
+
+#### Fix
+
+* Clicking **Operate -> Backups** resulted in errors for a Free App. This has been fixed.
 
 ### March 10th, 2017
 

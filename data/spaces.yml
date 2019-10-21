@@ -174,7 +174,7 @@ partners:
     - "SAP"
     - "Siemens"
 appstore:
-  space: "App Store Components Guide"
+  space: "App Store Guide"
   priority: false
   draft: true
   menu_categories:

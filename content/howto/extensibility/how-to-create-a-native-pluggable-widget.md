@@ -141,11 +141,19 @@ To test our group box widget we need to use the widget in the Mendix test projec
 
 ### 3.3 Building the group box widget
 
-Now that we have seen our project code running in native, it is time to transform our sample widget into an actual group box widget.
+Now that we have seen our widget sample code running, it is time to transform our sample widget into an actual group box widget. We will do so with the following steps:
 
-Open up your group box widget project folder in your IDE of choice. From now on, all file references will be relative to this project folder.
+1. Creating a static UI
+2. Adding widget properties
+3. Making the widget collapsilble
+4. Adding an expand & collapse icon property
+5. Adding a collapsible property
+6. Adding custom default style
+7. Adding a design property
 
-#### 3.3.1 Creating static UI
+The following paragraphs will elaborate on each of these steps. Open up your group box widget project folder in your IDE of choice. From now on, all file references will be relative to this project folder.
+
+#### 3.3.1 Creating a static UI
 
 First we will change the display component. A display component represents the widget and doesn't interact with Mendix specific APIs and, therefore, can be used in any React application. The current display component is located in **src/components** and has the filename **HelloWorldSample.tsx**. Open this file and you can see a typical React Native component with a render method. This method returns the Graphical User Inteface (GUI) of the component.
 

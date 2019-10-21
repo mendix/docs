@@ -51,7 +51,7 @@ The MendixSSO module is written so that you can make a complete copy of the modu
 
 To make a copy of the module, do the following:
 
-**WHAT IS THE BEST WAY TO DO THIS?**
+{{% todo %}}[WHAT IS THE BEST WAY TO DO THIS?]{{% /todo %}}
 
 ## 3 Tokens
 

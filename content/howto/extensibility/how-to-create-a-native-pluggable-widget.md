@@ -148,7 +148,7 @@ Now that we have seen our widget sample code running, it is time to transform ou
 3. Making the widget collapsilble
 4. Adding an expand & collapse icon property
 5. Adding a collapsible property
-6. Adding custom default style
+6. Adding a custom default style
 7. Adding a design property
 
 The following paragraphs will elaborate on each of these steps. Open up your group box widget project folder in your IDE of choice. From now on, all file references will be relative to this project folder.
@@ -1107,7 +1107,7 @@ The last thing we need to do is changing the container component so that the pro
        }
    ```
 
-#### 3.3.6 Adding custom default style
+#### 3.3.6 Adding a custom default style
 
 Although we have an extensively featured group box, we can still improve the styling of the widget. Right now, we apply very basic styling that's baked into our widget code. We can let the Mendix Client override this default styling by defining a custom default style for our widget in Atlas UI. To define a custom default style, follow these steps:
 

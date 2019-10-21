@@ -15,7 +15,7 @@ This document does not describe *all* the errors, as there are a lot of errors t
 
 {{% /alert %}}
 
-Some errors have error codes and if these errors are described in documentation, Studio Pro has a clickable link to the corresponding doc. Others do not have an error code, in this case, you can manually search whether a particular error is described in documentation (you can search by a message in the **Errors** pane).
+Some errors have error codes and if these errors are described in documentation, Studio Pro has a clickable link to the corresponding doc. Others do not have an error code, in this case, you can manually search whether a particular error is described in documentation (you can search by a message you see in the **Errors** pane).
 
 An example of a consistency error on a page is when you do not specify the entity property of a data view on a page. 
 
@@ -49,8 +49,8 @@ The table below describes the most common errors you can come across when config
 | Error Code | Message in the Error Pane                                    | Cause of the Error                                           | Way to Fix                                                   |
 | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | CE0488     | No entity configured for the data source of this data view. Select an entity or change the data source. | **Context** is selected as a data source for a data view, but no entity is specified. | Do one of the following: <ul><li>Open the data view's properties > **Data Source** and select an entity in the **Entity** field</li><li>Change the type of the data source</li></ul> |
-|            | No microflow configured for the data source of this data view. Select a microflow or change the data source | A microflow is selected as a data source, but no microflow is specified. | Do one of the following: <ul><li>Open the data view's properties > **Data Source** and select a nanoflow in the **Nanoflow** field</li><li>Change the type of the data source</li></ul> |
-|            | No nanoflow configured for the data source of this data view. Select a nanoflow or change the data source | A nanoflow is selected as a data source, but no nanoflow is specified. | Do one of the following: <ul><li>Open the data view's properties > **Data Source** and select a microflow in the **Microflow** field</li><li>Change the type of the data source</li></ul> |
+|            | No microflow configured for the data source of this data view. Select a microflow or change the data source | A microflow is selected as a data source, but no microflow is specified. | Do one of the following: <ul><li>Open the data view's properties > **Data Source** and select a microflow in the **Microflow** field</li><li>Change the type of the data source</li></ul> |
+|            | No nanoflow configured for the data source of this data view. Select a nanoflow or change the data source | A nanoflow is selected as a data source, but no nanoflow is specified. | Do one of the following: <ul><li>Open the data view's properties > **Data Source** and select a nanoflow in the **Nanoflow** field</li><li>Change the type of the data source</li></ul> |
 | CE0536     | No list widget configured for the data source of this data view. Select a widget or change the data source. | A **Listen to widget** is configured as a data source for a data view, but the list view widget specified does not exist anymore on the same page. | Do one of the following: <ul><li>Create a list view on the same page, configure it, and select it as the list widget for the data view</li><li>Change the type of the data source</li></ul> |
 | CE0558     | All data views receiving an object from the page parameter must have the same entity. | You have several data views on one page that have different entities as their data sources. | Do one of the following: <ul><li>Select the same entity for all data views using the page context</li><li>Change the data source for them</li></ul> |
 
@@ -166,7 +166,7 @@ However, the microflow contains a parameter *Customer*:
 
 ![](attachments/consistency-errors-pages/microflow-parameter.png)
 
-The microflow parameter expects an argument *Customer*, and since this argument is not available on the page where button is located, it results in an error. 
+The microflow parameter expects an argument *Customer*, and since this argument is not available on the page where the button is located, it results in an error. 
 
 To fix it, do the following:
 

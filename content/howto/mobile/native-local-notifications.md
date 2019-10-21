@@ -61,7 +61,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 	{{% image_container width="500" %}}![app settings](attachments/native-push/name-nano.png){{% /image_container %}}
 
-9. In **ACT_CreateAndSendNotification**, drag and drop three **Create variable** activities onto your nanoflow and set them as string variables titled *Title*, *Subtitle*, and *Body*:
+9.  In **ACT_CreateAndSendNotification**, drag and drop three **Create variable** activities onto your nanoflow and set them as string variables titled *Title*, *Subtitle*, and *Body*:
 
    {{% image_container width="500" %}}![app settings](attachments/native-push/create-string-variables.png){{% /image_container %}}
 
@@ -233,7 +233,7 @@ In this section you will learn to show a page when a user taps a notification. [
 4. Click **Blank** pane on the left and select the **Blank** page template. 
 5. Click **OK** to create your page.
 6. Drag and drop an **Open page button** widget onto your new native page.
-7. Click your **Home_Native** page:
+7.  Click your **Home_Native** page:
 
 	![click home page](attachments/native-push/home-native-select.png)
 
@@ -267,7 +267,7 @@ Navigate back to your **ACT_CreateAndSendNotification** nanoflow. There you will
 
 	{{% image_container width="500" %}}![edit action name](attachments/native-push/add-action-name.png){{% /image_container %}}
 
-3. Type `'show_page'` into the expression field:
+3.  Type `'show_page'` into the expression field:
 
 	{{% image_container width="500" %}}![show page expression](attachments/native-push/show-page-exp.png){{% /image_container %}}
 
@@ -311,12 +311,12 @@ To make your two entities, do the following:
 
 	{{% image_container width="500" %}}![test entity](attachments/native-push/test-entity.png){{% /image_container %}}
 
-3. Click **Attributes** > **New**, name it *StringAttribute_1*, and click **OK**:
+3.  Click **Attributes** > **New**, name it *StringAttribute_1*, and click **OK**:
 
 	{{% image_container width="500" %}}![string attribute](attachments/native-push/first-string-attribute.png){{% /image_container %}}
 
 4. Click **OK** again until you are back at the domain model.
-5. Create an entity *Notification* on your domain model with a string attribute *GUIDString*:
+5.  Create an entity *Notification* on your domain model with a string attribute *GUIDString*:
 
 	{{% image_container width="500" %}}![GUID string](attachments/native-push/guid-notification.png){{% /image_container %}}
 
@@ -328,7 +328,7 @@ To set up a notification nanoflow, do the following:
 4. Click **Entity** > **Select**.
 5. Click **Notification**, then click **Select**.
 6. Click **OK**.
-5. Right-click your create object activity and select **Set $NewNotification as return value**: <br />
+5.  Right-click your create object activity and select **Set $NewNotification as return value**: <br />
 
 	{{% image_container width="500" %}}![create notification nanoflow](attachments/native-push/create-notif-nano.png){{% /image_container %}}
 
@@ -351,19 +351,19 @@ To create your microflow, do the following:
 
 To make this microflow run after startup, do the following:
 
-1. Double-click **Settings** in your Project Explorer:
+1.  Double-click **Settings** in your Project Explorer:
 
    {{% image_container width="500" %}}![project explorer](attachments/native-push/pe-settings.png){{% /image_container %}}
 
-2. Click the **Runtime** tab:
+2.  Click the **Runtime** tab:
 
    {{% image_container width="500" %}}![click runtime](attachments/native-push/runtime-tab.png){{% /image_container %}}
 
-3. Click **After startup** > **Select**:
+3.  Click **After startup** > **Select**:
 
    {{% image_container width="500" %}}![select after start up](attachments/native-push/after-startup.png){{% /image_container %}}
 
-4. Click **DS_TestEntity** then click the **Select** button:
+4.  Click **DS_TestEntity** then click the **Select** button:
 
    {{% image_container width="500" %}}![select test entity](attachments/native-push/select-ds-entity.png){{% /image_container %}}
 
@@ -376,7 +376,7 @@ To make your page, do the following: [todo: this page is "OnTap_Page". Is that o
 3. Double-click your data view widget.
 4. In **Data Source**, click **Entity (path)** > **Select**.
 5. Click **TestEntity**.
-6. Click **Select** to see the following:
+6.  Click **Select** to see the following:
 
 	![entity test entity](attachments/native-push/data-view-source.png)
 
@@ -388,7 +388,7 @@ To make your page, do the following: [todo: this page is "OnTap_Page". Is that o
 
 Next you will create a workaround which allows data to be passed to pages.
 
-1. Create a nanoflow named *ACT_PassGUIDToNotification*. <br />
+1. Create a nanoflow named *ACT_PassGUIDToNotification*. <br /> [todo: change into numbered list]
 	a. Add a retrieve action to your nanoflow, set **Source** to **From Database**, and set **Range** to **First**. Click **Entity** > **Select** and select the **TestEntity**. In **Object name** type *FirstTestEntityObject*. Then click **OK**. This will be the object that gets the GUID: <br />
 	
 	![retrieve object](attachments/native-push/retrieve-object.png)
@@ -439,7 +439,7 @@ Good job! When a user taps a notification from the **Pass GUID to Notification**
 2. Drag and drop a parameter onto your nanoflow. 
 3. Click **Data Type** > **Select**. Click **Notification**, then click **Select**.
 4. Fill **Name** in as *notificationEntity*.
-5. Click **OK**:
+5.  Click **OK**:
 
 ![guid button](attachments/native-push/notif-entity.png)
 
@@ -485,7 +485,7 @@ Good job! When a user taps a notification from the **Pass GUID to Notification**
 
 Next you are going to create a show page action for **ON_tapNotification**.
 
-1. Drag and drop a **Show Page** action onto your nanoflow:
+1.  Drag and drop a **Show Page** action onto your nanoflow:
 
 	![new show page](attachments/native-push/add-show-page.png)
 
@@ -493,7 +493,7 @@ Next you are going to create a show page action for **ON_tapNotification**.
 
 3. From the **Object to pass** drop-down menu select **ReturnedObjectByGuid**.
 
-4. Click **Page** > **Select**, click **DetailTestEntity**, then click **OK**:
+4.  Click **Page** > **Select**, click **DetailTestEntity**, then click **OK**:
 
   ![guid button](attachments/native-push/show-page-settings.png)
 
@@ -564,14 +564,14 @@ To cancel a scheduled notification, you can use either the **Cancel Scheduled No
 To cancel all scheduled notifications, do the following:
 
 1. Create a nanoflow named  *ACT_CancelAllScheduledNotifications*.
-2. Drag and drop a JavaScript action named **Cancel all scheduled notifications** onto your nanoflow: 
+2.  Drag and drop a JavaScript action named **Cancel all scheduled notifications** onto your nanoflow: 
 
 	![cancel scheduled action](attachments/native-push/cancel-all-action.png)
 
 3. Double-click your new cancel notification action.
 4. Select  **Use return value** > **No**.
 5. Click **OK**.
-6. Drag and drop this nanoflow to your home screen and name its button *Cancel all*.
+6.  Drag and drop this nanoflow to your home screen and name its button *Cancel all*.
 
 	![cancel button](attachments/native-push/cancel-button.png)
 
@@ -591,13 +591,13 @@ To cancel a specific scheduled notification, you will need to supply a notificat
 1. Navigate to **ACT_CreateAndSendNotification**.
 2. Double-click your **Schedule notification** activity.
 3. Click **Notification id** > **Edit**. 
-4. Type *'testID'* into the argument field and click **OK**:
+4.  Type *'testID'* into the argument field and click **OK**:
 
 	![test id argument](attachments/native-push/test-id-arg.png)
 
 5. Click **OK** once more to close the dialog window. 
 4. Create a nanoflow named *ACT_CancelScheduledNotifications*.
-5. Drag and drop a JavaScript Action named **Cancel scheduled notification** onto your nanoflow:
+5.  Drag and drop a JavaScript Action named **Cancel scheduled notification** onto your nanoflow:
 
 	![cancel one notification](attachments/native-push/cancel-scheduled-notif.png)
 
@@ -605,7 +605,7 @@ To cancel a specific scheduled notification, you will need to supply a notificat
 7. Click **Notification id** > **Edit**.
 8. Type *'testID'* into the parameter argument field and click **OK**.
 9. Click **OK** again to close the dialog window.
-7. Drag and drop this nanoflow onto your home screen and name its button *Cancel a specific notification*:
+7.  Drag and drop this nanoflow onto your home screen and name its button *Cancel a specific notification*:
 
 	![cancel one button](attachments/native-push/cancel-specific-button.png)
 

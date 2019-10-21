@@ -94,24 +94,36 @@ To scaffold your project folder for the group box widget, follow these steps:
 
 ### 3.2 Creating a Mendix test project
 
-In order to test our group box widget we want to create a Mendix application that uses this widget in various ways.
+In order to test our group box widget we want to create a Mendix application that uses this widget in various ways. Create a Mendix project for this application by following these steps:
 
-1. Open Mendix Studio Pro v8.2.2 to create a new test project by selecting **File > New Project** from the top menu bar. Select the starter app **Blank**, which is the last option on the last page. Then click the **Use this starting point** button, and fill in the following details in the **App Settings** dialog box:
+1. Open Mendix Studio Pro v8.2.2.
+2. Create a new project by selecting **File > New Project** from the top menu bar.
+3. Select the starter app **Blank**, which is the last option on the last page.
+4. Click the **Use this starting point** button
+5. Fill in the following details in the **App Settings** dialog box:
 
-   - App name: **GroupBoxTestProject**
-   - Enable online services: **No**
+   - App name: _GroupBoxTestProject_
+   - Enable online services: _No_
 
-   After that, click the **Create app** button.
+6. Click the **Create app** button.
 
-   Optionally you may remove all unused custom widgets to optimize the debugging process. Select **Project > Show Project Directory in Explorer** from the Mendix Studio Pro menu and open the **widgets** folder. Then, delete all the files in this folder.
+Optionally you can remove all unused custom widgets to optimize the debugging process. To do so, follow these steps:
 
-   After that, close the project by selecting **File > Close Project** from the top menu bar.
+1. Select **Project > Show Project Directory in Explorer** from the Mendix Studio Pro menu.
+2. Open the **widgets** folder.
+3. Delete all the files in this folder.
 
-2. Move the contents of the Mendix test project folder into **test/MxTestProject** which is located inside your group box widget project folder.
+Now we want to use the created Mendix project as a test project in the group box widget project. Follow these steps to add the Mendix project as test project to our widget project, so that we can start modeling with the new widget:
 
-3. Open the moved Mendix test project by selecting **File > Open Project...** from the top menu bar. In the **Open App** dialog box, select **Locally on disk** and browse to the **GroupBoxTestProject.mpr** file inside your group box widget project folder.
+1. Close the project in Mendix Studio Pro by selecting **File > Close Project** from the top menu bar.
+2. Move the contents of the Mendix project folder into **test/MxTestProject**, which is located inside your group box widget project folder.
 
-4. Create a test case for the group box widget:
+To test our group box widget we need to use the widget in the Mendix test project. Let's create a test case by following these steps:
+
+1. Open the Mendix test project in **test/MxTestProject** in Mendix Studio Pro by selecting **File > Open Project...** from the top menu bar.
+2. In the **Open App** dialog box, select **Locally on disk**.
+3. Open the **GroupBoxTestProject.mpr** file inside your group box widget project folder.
+4. Create a test case for the group box widget with the following steps:
 
    1. Open **Home_Native** page.
    2. Copy "Home" container and paste it underneath that container
@@ -120,7 +132,11 @@ In order to test our group box widget we want to create a Mendix application tha
    5. Drag the widget into the new container.
    6. Double click the widget and fill in your name as default value.
 
-5. Setting up the test project is done. Run the test project locally and use the makeitnative app to view the sample widget code in action. If you followed the steps carefully you should see yellow text in your app saying "Hello {your name}".
+5. Setting up the test project is done. To verify that your Mendix test project is set up correctly, follow these steps:
+
+   1. In Mendix Studio Pro run the test project locally.
+   2. Use the Mendix Make It Native app to open the native mobile application to view the sample widget code in action.
+   3. Verify that the homepage of the application contains a yellow text saying "Hello {your name}".
 
 ### 3.3 Building the group box widget
 

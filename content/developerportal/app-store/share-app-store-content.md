@@ -101,8 +101,7 @@ To add content to the App Store, follow these steps:
 		c. Click **Check** to confirm that this profile is publicly available in GitHub.<br />
 		d. Select the **GitHub repo** from which the content will be uploaded by clicking **Select**.<br/>The system will crawl all of the projects for that GitHub profile and present the Mendix package file (*.mpk*) options to you in a pop-up window.<br/>
 		e. Click **Select** on this window when you find the correct *.mpk* file name.<br />
-		f. Select the **release** by clicking **Select**.<br/>
-		If there are various releases of the *.mpk* file available, the system will present them to you in a pop-up window. When you find the correct release, click **Select** on this window.<br />
+		f. Select the **release** by clicking **Select**. If there are various releases of the *.mpk* file available, the system will present them to you in a pop-up window. When you find the correct release, click **Select** on this window.<br />
 		g. Check the **Use GitHub README for documentation** check box if you want the repo's *readme.md* file to be included on the App Store component's [Documentation tab](#doc-tab).<br/>This is useful for including nicely formatted documentation with screenshots for your App Store component.<br />
 		{{% alert type="info" %}}The **Release notes** section is only available for updating a new version of the content (for details see the  [Updating Existing App Store Content](#updating) section below).{{% /alert %}}<br />
 
@@ -128,9 +127,10 @@ To add content to the App Store, follow these steps:
 	{{% alert type="warning" %}}You can only set this in the initial version of your content. You cannot change this setting by updating the App Store component later.
 	{{% /alert %}}
 
-{{% todo %}}[**APP-STORE-TEAM VERIFY BELOW: CONTENT PROTECTION IS DELETED HERE, CORRECT?**]{{% /todo %}}
-
 5. In the **Content protection** section, you can choose to **Enable protection** or **Disable protection** for the content. This will determine which members of your company can manage the content. For more information, see the [ Content Managers](app-store-overview#cm) section of *App Store Overview*.
+
+	{{% todo %}}[**APP-STORE-TEAM VERIFY ABOVE: CONTENT PROTECTION IS DELETED HERE, CORRECT?**]{{% /todo %}}
+
 6.  <a name="edit"></a>In the bottom half of the **DRAFT** screen, do the following:<br />
 	a. Enter a **Name** for your content.<br />
 	b. Select a category for your content from the **Category** drop-down menu (for example, **Connectors**).<br />
@@ -144,9 +144,6 @@ To add content to the App Store, follow these steps:
 	* Enter an overview **Description** of your content (for example, "Node control is an native Android app that gives a system administrator access to the Mendix Cloud nodes being administered. From the app, the status of the different environments within a node can be monitored and an environment can be started or stopped.")
 	* Upload screenshots by clicking **Add screenshots** and selecting images of the content from your computer
 	* Upload a video by clicking **Add video** and selecting a video that demonstrates using the content from your computer
-
-	{{% image_container width="400" %}}![](attachments/share-app-store-content/add_content_4.png)
-	{{% /image_container %}}
 
 8. <a name="doc-tab"></a>On the **Documentation** tab, you can write or edit the documentation that should accompany your app in the editor. You are only able to edit the documentation of your own and your company's content. Note that this is only applicable when the **Use GitHub README for documentation** check box is not checked.
 

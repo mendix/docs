@@ -29,6 +29,7 @@ Clone this [code sample](https://github.com/mendix/native-group-box-pluggable-wi
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 - Install Mendix Studio Pro 8.2.2
+- Install the Mendix Make It Native app on a mobile device or an emulator.
 - Install Long Term Support (LTS) v10.16.3 or any higher version of [Node.js](https://nodejs.org)
 - Install latest [Yeoman](https://yeoman.io/) with the following command:
 

@@ -12,24 +12,31 @@ The [CKEditor](https://appstore.home.mendix.com/link/app/1715/) gives you a full
 
 ![](attachments/ckeditor/microflow-button.png)
 
+A recommended alternative editor that is also platform-supported is the [Rich Text](https://appstore.home.mendix.com/link/app/74889/) widget.
+
 ### 1.1 Typical Usage Scenario
 
 Use this widget to add a full WYSIWYG editor for your entity attributes. You can also add links to HTML that, when clicked, run microflows.
 
 ## 2 Description
 
-The CKEditor widget comes with the CKEditor viewer. This viewer will enable the posibility to reformat links to microflow links.
+The CKEditor widget comes with the CKEditor viewer. This viewer enables reformatting links to microflow links with the following conditions:
 
-    The viewer needs an entity and attribute where it can get the HTML code.
-    You can style the link as a button or just text.
-    Within the CKEditor widget configure labels that can be placed with the mendix link button.
-    These labels can be configured in the viewer to execute a microflow.
-    The microflow will get the entity from the viewer widget.
+* The viewer needs an entity and attribute where it can get the HTML code
+* You can style the link as a button or just text
+* Within the widget, you can configure the label placed in the link button
+	* This label can be configured in the viewer to execute a microflow, which will get the entity from the viewer widget
 
-Example of the entire editor
+### 2.1 Examples
 
-test
-Example of the end result in mendix.
+This is an example of the editor:
 
-test
-Example of someone clicking the button.
+![](attachments/ckeditor/editor.png)
+
+This is that example as an end-result in Mendix:
+
+![](attachments/ckeditor/end-result.png)
+
+And here is the example of someone clicking the **microflow** button:
+
+![](attachments/ckeditor/click-button.png)

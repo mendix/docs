@@ -1,5 +1,5 @@
 ---
-title: "Attribute Types"
+title: "Attributes"
 category: "Domain Model"
 description: "Describes attribute types in Mendix Studio."
 tags: ["studio", "domain model", "attributes", "attribute types"]
@@ -7,7 +7,7 @@ tags: ["studio", "domain model", "attributes", "attribute types"]
 
 ## 1 Introduction 
 
-This document describes attributes and their types in Mendix Studio. Attributes are characteristics that describe and/or identify the entity. If we compare these to an database table, attributes are the fields of the table. For example, a *Customer* entity typically has attributes for the name of the customer, an e-mail address, and other personal information. 
+This document describes attributes and their types in Mendix Studio. Attributes are characteristics that describe and/or identify the entity. If we compare these to an database table, attributes are columns of the table. For example, a *Customer* entity typically has attributes for the name of the customer, an e-mail address, and other personal information. 
 
 ## 2 Types
 

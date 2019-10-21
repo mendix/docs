@@ -1,5 +1,5 @@
 ---
-title: "Mobile Products"
+title: "Mobile"
 ---
 
 This category includes the following release notes: 

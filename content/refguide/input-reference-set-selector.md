@@ -51,11 +51,11 @@ Reference set selector properties consist of the following sections:
 * [Selectable Objects](#selectable-objects)
 * [Visibility](#visibility)
 
-### 2.1 Common Section{#common}
+### 2.1 Common Section {#common}
 
 {{% snippet file="refguide/common-section-link.md" %}}
 
-### 2.2 Data Source Section{#data-source}
+### 2.2 Data Source Section {#data-source}
 
 {{% snippet file="refguide/attribute-path-property.md" %}}
 
@@ -75,21 +75,21 @@ The attribute can be of one of the following [data types](data-types):
 * Long
 * String
 
-### 2.3 Design Properties Section{#design-properties}
+### 2.3 Design Properties Section {#design-properties}
 
 {{% snippet file="refguide/design-section-link.md" %}}
 
-### 2.4 Editability Section{#editability}
+### 2.4 Editability Section {#editability}
 
 {{% snippet file="refguide/editability-section-link.md" %}}
 
-### 2.5 Events Section{#events}
+### 2.5 Events Section {#events}
 
 The on-change property specifies an action that will be executed when leaving the widget, either by using the <kbd>Tab</kbd> key or by clicking another widget, after the value has been changed.
 
 {{% snippet file="refguide/events-section-link.md" %}}
 
-### 2.6 General Properties
+### 2.6 General Properties {#general}
 
 #### 2.6.1 Select Page
 
@@ -103,11 +103,11 @@ See [Opening Pages](opening-pages). Note that opening select pages in content is
 You can generate a new page to show by right-clicking the widget and selecting **Generate select page…**.
 {{% /alert %}}
 
-### 2.7 Label Section{#label}
+### 2.7 Label Section {#label}
 
 {{% snippet file="refguide/label-section-link.md" %}}
 
-### 2.8 Selectable Objects Section{#selectable-objects}
+### 2.8 Selectable Objects Section {#selectable-objects}
 
 The properties in the Selectable objects section determine the objects from which the end user can make a selection. You can add an **XPath constraint**, or use a **Constrained by** path.
 
@@ -117,6 +117,6 @@ For more information, see the [XPath](reference-selector#xpath-constraints) sect
 You cannot use a microflow to define selectable objects in an input reference set selector.
 {{% /alert %}}
 
-### 2.9 Visibility Section{#visibility}
+### 2.9 Visibility Section {#visibility}
 
 {{% snippet file="refguide/visibility-section-link.md" %}}

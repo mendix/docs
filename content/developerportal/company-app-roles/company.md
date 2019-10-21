@@ -11,9 +11,9 @@ tags: ["company","admin","Developer Portal", "Company Admin", "expiration settin
 You must be a Company Admin to access this page and these settings.
 {{% /alert %}}
 
-There are four tabs on the **Company** page with settings to manage:
+There are three tabs on the **Company** page with settings to manage:
 
-![](attachments/company-profile.png)
+![](attachments/company-profile-tab.png)
 
 ## 2 Company Profile Tab
 
@@ -21,9 +21,12 @@ You can edit various company details on the **Company Profile** tab, such as **C
 
 ## 3 Company Admins Tab
 
-On the **Company Admins** tab, you can add, edit, or remove a Company Admin.
+On the **Company Admins** tab, you can add, edit, or remove a Company Admin:
 
-For more information, see [How to Manage Company & App Roles](/developerportal/company-app-roles/manage-roles).
+![](attachments/company-admins-tab.png)
+
+
+You can set the permissions here for each Company Admin. For more information, see [How to Manage Company & App Roles](/developerportal/company-app-roles/manage-roles).
 
 ## 4 Company Settings Tab {#company-settings}
 

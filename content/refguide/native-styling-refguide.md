@@ -453,7 +453,7 @@ The widget’s style properties are as follows:
 
 The default class to style all actions buttons is named `ActionButton`. However, an action button in a header has the default class `ActionButtonHeader`.
 
-## 9 Navigation Widget 
+## 9 Navigation Widget {#navigation-widget}
 
 The navigation widget allows users to navigate within your app using buttons on the top and bottom bars of your app’s pages. This is how a navigation widget could look in an app:
 

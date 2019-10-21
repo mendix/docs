@@ -13,6 +13,8 @@ Pluggable widgets enable developers to introduce custom-built widgets in their M
 
 **This how-to will teach you how to do the following:**
 
+TODO:
+
 - Generate a widget structure
 - Create...
 - Build...
@@ -43,39 +45,17 @@ npm install -g @mendix/generator-widget@8.2.0
 - Install an integrated development environment (IDE) of your choice (Mendix recommends [Microsoft Visual Studio Code](https://code.visualstudio.com/))
 - Have a basic understanding of [TypeScript](https://www.typescriptlang.org/) and [React](https://reactjs.org)
 
-## 3 {Title of Section [Use Present Participle Verb/Gerund]}
+## 3 Building a native group box widget
 
-### TEMP: Structure
+To build a group box widget for native mobile, there are a several steps to follow:
 
-- Setting up pluggable widget project directory
+1. Scaffolding a pluggable widget project
+2. Creating a Mendix test project
+3. Building the group box widget
 
-  - Using generator
-    - Explain generated code
-  - Creating a test project
-  - Put test project in dist folder
-  - Run sample code from generator in test project
+The following paragraphs will elaborate on each of these steps.
 
-- Transform sample code in groupbox code
-  - Create display component with basic look and header caption
-    - iOS: round corners
-    - Android: sharp corners
-  - Change glue component to passthrough header caption
-  - Add containment
-  - Add toggable functionality
-    - Touchable component (dynamic component)
-  - Add icon property for expand and collapse
-  - Add collapsible property
-  - Add default styling from modeler
-  - Create design property
-
-To {do this task}, follow these steps:
-
-1. {Step 1}
-2. {Step 2}
-
-![](attachments/{sub-folder with same name as doc file}/{image filename}.png)
-
-### 3.1 Scaffolding pluggable widget project
+### 3.1 Scaffolding a pluggable widget project
 
 The Pluggable Widget Generator is the quickest way to start developing a pluggable widget. When you run this generator with Yeoman, Yeoman will scaffold your project folder with a folder structure and certain files recommended by Mendix.
 
@@ -361,7 +341,7 @@ render(): ReactNode {
 
 Go back to Mendix Studio Pro and press <kbd>F4</kbd> or select **Project > Synchronize Project Directory** from the topbar menu to bring your application in sync with the changes we made to the **src/GroupBox.xml** file. You will notice an error occurs telling us to update our widget. Right click on the "Group Box" widget and select "Update widget". Double click the same widget and you will now see our newly created property. Fill in your caption text, click the "OK" button and rerun your app locally to see your caption text in the app.
 
-#### Content property
+##### Content property
 
 Besides the header caption, we also want the developer to be able to fill content in the group box like building blocks, snippets or other widgets. Go to **src/GroupBox.xml** and add a content property element above the header caption property. Also change the name element from "Group Box" to "Group box" to stay in line with naming of other widgets and remove the "needsEntityContext" attribute from the widget element, since this is no longer necessary. After the changes your file should look like this:
 
@@ -472,7 +452,7 @@ It would be nice to hide the content area from the widget completely when there 
    }
    ```
 
-### 3.3 Making the widget collapsilble
+#### 3.3.3 Making the widget collapsilble
 
 Now that our widget can contain content, the next challange is to hide this content by making it collapsible.
 
@@ -593,7 +573,7 @@ Let's now make it possible to expand or collapse the group box.
 
 8. Check your changes in the Make It Native app.
 
-### 3.4 Adding an expand & collapse icon property
+#### 3.3.4 Adding an expand & collapse icon property
 
 The next step is to allow a Mendix developer to use a custom icon in the clickable header.
 
@@ -802,7 +782,7 @@ Let's fix the issue by introducing a default style for our container component.
 
 5. Check the app in the Make It Native app and you should see the icons in white and the correct size.
 
-### 3.5 Adding a collapsible property
+#### 3.3.5 Adding a collapsible property
 
 We are close to a fully featured group box. Though there are two more features that would be of high use for a Mendix developer: setting whether the group box should be collapsible and setting the initial state of being collapsed or not.
 
@@ -1093,7 +1073,7 @@ The last thing we need to do is changing the container component so that the pro
        }
    ```
 
-### 3.6 Adding custom default style
+#### 3.3.6 Adding custom default style
 
 Although we have an extensively featured group box, we can still improve the styling of the widget. Right now, we apply very basic styling that's baked into our widget code. We can let the Mendix Client override this default styling by defining a custom style for our widget in Atlas UI.
 
@@ -1239,7 +1219,7 @@ Before we are going to define a custom style, we want to align the widget mpk fi
 
 13. Save the file and refresh the your app in the Make It Native app to see your new default style. Also note the ripple effect on the header in Android that was previously not visible.
 
-### 3.7 Adding a design property
+### 3.3.7 Adding a design property
 
 It would be nice to provide the developer with some pre-definded styles that he can use for the group box. Let's create three style classes for the group box based on the brand colors success, warning and danger.
 

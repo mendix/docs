@@ -59,29 +59,38 @@ The following paragraphs will elaborate on each of these steps.
 
 The Pluggable Widget Generator is the quickest way to start developing a pluggable widget. When you run this generator with Yeoman, Yeoman will scaffold your project folder with a folder structure and certain files recommended by Mendix.
 
-To scaffold your project folder for the group box widget, open up a terminal, navigate to the folder where you want to store your project and start the generator by executing the following command:
+To scaffold your project folder for the group box widget, follow these steps:
 
-```shell
-yo @mendix/widget GroupBox
-```
+1. Open up a terminal.
+2. Navigate to the folder where you want to store your project.
+3. Start the generator by executing the following command:
 
-The generator will ask you for some input during setup. Please provide the following information:
+   ```shell
+   yo @mendix/widget GroupBox
+   ```
 
-1. Widget name: _{Your widget name}_
-2. Widget description: _{Your widget description}_
-3. Organization name: _{Your organization name}_
-4. Copyright: _{Your copyright date}_
-5. License: _{Your license}_
-6. Initial version: _{Your initial version number}_
-7. Author: _{Your author name}_
-8. Mendix Project path: _./test/MxTestProject/_
-9. Programming language: **TypeScript**
-10. Widget type: **For native mobile apps**
-11. Widget template: **Empty widget (recommended for more experienced developers)**
-12. Unit tests: **No**
+4. The generator will ask you for some input during setup. Please provide the following information:
 
-In the image below you can find an example of what information to provide as input.
-![Pluggable Widget Generator input example](attachments/how-to-create-a-native-pluggable-widget/pluggable-widget-generator-input-example.png)
+   1. Widget name: _GroupBox_
+   2. Widget description: _Widget to group building blocks, snippets or other widgets_
+   3. Organization name: _com.mendix.widget.native_
+   4. Copyright: _Mendix 2019_
+   5. License: _Apache-2.0_
+   6. Initial version: _1.0.0_
+   7. Author: _Mendix_
+   8. Mendix Project path: _./test/MxTestProject/_
+   9. Programming language: _TypeScript_
+   10. Widget type: _For native mobile apps_
+   11. Widget template: _Empty widget (recommended for more experienced developers)_
+   12. Unit tests: _No_
+
+   In the image below you can see how your input should look like in the terminal.
+
+   ![Pluggable Widget Generator input](attachments/how-to-create-a-native-pluggable-widget/pluggable-widget-generator-input.png)
+
+5. Verify that the generator outputs the following message to make sure your project has been scaffolded correctly:
+
+   > Widget successfully built!! Please open Mendix Studio Pro and start playing with your new widget.
 
 ### 3.2 Creating a Mendix test project
 

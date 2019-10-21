@@ -144,7 +144,6 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 * We fixed a memory leak problem that caused Developer Portal to have longer response times.
 * We addressed and fixed an issue that caused some Developer Portal users to see empty dialog boxes instead of error message content. (Tickets 67626, 69363)
-* We addressed an issue that caused live logging to freeze from time to time. The fix has been confirmed on all mainstream browsers except for Internet Explorer, which we still are investigating. (Ticket 66418)
 
 ### October 16th, 2018
 
@@ -166,7 +165,7 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 #### Web Modeler Improvements
 
-The Web Modeler can now be enabled for all types of apps. You can do this on the **Settings** > **General** page of your app. If you have a licensed app, you will also need to choose your deployment environment.
+The Web Modeler can now be enabled for all types of apps. You can do this on the **Settings** > **General** page of your app. If you have a licensed app, you will also need to choose your [deployment](/developerportal/deploy/) environment.
 
 #### Fixes
 
@@ -182,51 +181,12 @@ The Web Modeler can now be enabled for all types of apps. You can do this on the
 
 * We have loosened an unnecessarily strict constraint on email domains during signup. You can now sign up with email domains with single-character sub-domains. (Tickets 68210 , 68386)
 
-### August 13th, 2018
-
-#### Improvements
-
-* All the log levels in the Developer Portal (as in, INFO, ERROR, TRACE, DEBUG, WARNING, CRITICAL) are now also available in Datadog.
-* The Postgres database size can also be observed in Datadog after enabling it in the Developer Portal.
-
-#### Fixes
-
-* We improved the feedback messages in the case of a startup failure.
-* The status page link in alert emails now redirects you to the corresponding alerts page in the Developer Portal.
-* We solved an issue that caused blank error messages during backup creation.
-
-### July 23rd, 2018
-
-#### Improvements
-
-* We added alerts on database connections and on internal alerting problems.
-* We fixed the problem wherein 404, 403, and 503 responses to a REST call translated to an HTML error page.
-* We added Telegraf as a sidecar for monitoring.
-
-### July 17th, 2018
-
-#### Fix
-
-* Creating a backup via REST API no longer returns error message 500 when it succeeds. (Ticket 65762)
-
-### July 2nd, 2018
-
-#### Improvements
-
-* We improved the stability of the alerting stack.
-
 ### June 26th, 2018
 
 #### Improvements
 
 * We implemented the new Mendix header.
 * We fixed the bug that allowed users to start an application during a restore.
-
-### June 15th, 2018
-
-#### Fixes
-
-* We reintroduced copy privileges for operations.
 
 ### June 8th, 2018
 
@@ -264,13 +224,6 @@ The Web Modeler can now be enabled for all types of apps. You can do this on the
 * If there is a lot of activity in a Buzz thread, each notification email now displays the correct thread history, instead of each email containing the same comments.
 * We fixed two documentation links.
 
-### May 5th, 2018
-
-#### Improvements
-
-* It is now possible to add a comment as an optional parameter to the backup while generating one via REST API.
-* It is now possible to see the Mendix Runtime version in response to a "Retrieve Environment Package" API call.
-
 ### April 9th, 2018
 
 #### Fixes
@@ -303,15 +256,7 @@ The Web Modeler can now be enabled for all types of apps. You can do this on the
 
 ### January 25th, 2018
 
-#### Fixes
-
-* Happy new year! We addressed an issue where backup downloads were logged as restored backups in the activity log.
-* If you had a **Backups** section of your apps open in multiple tabs, you saw multiple activity log entries for each action taken. That's fixed now.
-* The restart and stop/start activities are now distinctly defined in the **Activity** section.
-* Branches of an application are sorted alphabetically, but **Main Line** is now always on top.
-* The broken styling of the **View Current Log** button for a Free App has been fixed.
-
-#### Improvements
+#### Improvement
 
 * It is now possible for you to change the technical contact of your applications by yourself.
 
@@ -403,10 +348,11 @@ The Web Modeler can now be enabled for all types of apps. You can do this on the
 
 ### March 13th, 2017
 
+#### Fixes
+
 * The highlighted menu state was fixed, the wrong items were highlighted in some instances.
 * App Store links clicked from within the Deploy/Operate sections now open in the same tab.
 * The **Show Profile** link was broken in some parts of the platform.
-* Clicking **Operate -> Backups** resulted in errors for a Free App. This has been fixed.
 * Various fixes for internal beta program
 
 ### March 9th, 2017

@@ -190,7 +190,32 @@ Deploy your app again and navigate to the page with your data grid. The data wil
 
 ![sorted but not clickable](attachments/server-side-paging/sorting-disabled.png)
 
-## 7 Read More
+## 7 Add Server-Side Searching
+If you are using Mendix 8.3 or above generating controls also generates input fields for all your attributes of the entity the microflow returns.
+These inputs can be used by the end-user to enter search criteria, which can be used to filter the data set on the server. Any data entered in the input
+fields by the end-user is set in the **Paging** entity which is passed to the data source microflow. 
+
+We now only need to used this data in our microflow and pass the search criteria to our REST call to get a filtered set of data. As an example we
+will support filtering on the **Name** attribute but of course you can extend it to support the other attributes as well:
+
+1. Open your **Call_REST** microflow.
+2. Double-click the **Call REST Service** activity.
+3. Click **Location** > **Edit**.
+4. Add `&name_like={4}` to the end of your current **Template** address:
+
+{{% image_container width="500" %}}![add search bits to template](attachments/server-side-paging/template-add-search.png){{% /image_container %}}
+
+5.  Click **Parameters** > **New** to add the fourth parameter and enter the following expression `if $Paging/Name = empty then '' else $Paging/Name`:
+
+{{% image_container width="500" %}}![add fourth parameter](attachments/server-side-paging/fourth-param.png){{% /image_container %}}
+
+6. Click **OK** to accept this expression.
+7. Click **OK** to accept the changes in the location. 
+8. Click **OK** once more to accept the changes in the **Call REST service** activity.
+
+Deploy your app again and navigate to the page with your data grid. Enter a value for a part of the name, e.g. 'International' and click the search button to see your server-side searching in action!
+
+## 8 Read More
 
 * [Consume a REST Service](/howto/integration/consume-a-rest-service)
 * [JSON Structures Guide](/refguide/json-structures)

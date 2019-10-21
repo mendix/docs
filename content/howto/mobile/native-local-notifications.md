@@ -619,3 +619,6 @@ To test your new cancel button, do the following:
 You will not see a notification at the end of the minute, proving your cancel action a success!
 
 ## 6 Read More
+
+* [Implement Push Notifications](implementation-guide)
+* [Build JavaScript Actions](/howto/extensibility/build-javascript-actions)

@@ -191,23 +191,21 @@ Deploy your app again and navigate to the page with your data grid. The data wil
 ![sorted but not clickable](attachments/server-side-paging/sorting-disabled.png)
 
 ## 7 Add Server-Side Searching
-If you are using Mendix 8.3 or above generating controls also generates input fields for all your attributes of the entity the microflow returns.
-These inputs can be used by the end-user to enter search criteria, which can be used to filter the data set on the server. Any data entered in the input
-fields by the end-user is set in the **Paging** entity which is passed to the data source microflow. 
 
-We now only need to used this data in our microflow and pass the search criteria to our REST call to get a filtered set of data. As an example we
-will support filtering on the **Name** attribute but of course you can extend it to support the other attributes as well:
+If you are using Mendix 8.3 or above, generating controls also generates input fields for all your attributes of the entity the microflow returns. These inputs can be used by your user to enter search criteria, which can be used to filter the data set on the server. Any data entered in the input fields by the user is set in the **Paging** entity which is passed to the data source microflow. 
+
+You only need to use this data in your microflow and pass the search criteria to your REST call to get a filtered set of data. As an example, follow the instructions below to filter the **Name** attribute:
 
 1. Open your **Call_REST** microflow.
 2. Double-click the **Call REST Service** activity.
 3. Click **Location** > **Edit**.
-4. Add `&name_like={4}` to the end of your current **Template** address:
+4.  Add `&name_like={4}` to the end of your current **Template** address:
 
-{{% image_container width="500" %}}![add search bits to template](attachments/server-side-paging/template-add-search.png){{% /image_container %}}
+	{{% image_container width="500" %}}![add search bits to template](attachments/server-side-paging/template-add-search.png){{% /image_container %}}
 
 5.  Click **Parameters** > **New** to add the fourth parameter and enter the following expression `if $Paging/Name = empty then '' else $Paging/Name`:
 
-{{% image_container width="500" %}}![add fourth parameter](attachments/server-side-paging/fourth-param.png){{% /image_container %}}
+	{{% image_container width="500" %}}![add fourth parameter](attachments/server-side-paging/fourth-param.png){{% /image_container %}}
 
 6. Click **OK** to accept this expression.
 7. Click **OK** to accept the changes in the location. 

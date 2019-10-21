@@ -155,21 +155,31 @@ The following paragraphs will elaborate on each of these steps. Open up your gro
 
 #### 3.3.1 Creating a static UI
 
-First we will change the display component. A display component represents the widget and doesn't interact with Mendix specific APIs and, therefore, can be used in any React application. The current display component is located in **src/components** and has the filename **HelloWorldSample.tsx**. Open this file and you can see a typical React Native component with a render method. This method returns the Graphical User Inteface (GUI) of the component.
+Let's first define the structure and default style of the group box widget by following these steps:
 
-Let's change the output of this method to display a group box. Replace the existing code with the following:
+1. Open the file located at **src/components/HelloWorldSample.tsx**.
 
-```tsx
-return (
-  <View style={this.styles.container}>
-    <View style={this.styles.header}>
-      <Text style={this.styles.headerContent}>Header caption</Text>
-      <Text style={this.styles.headerContent}>-</Text>
-    </View>
-    <View style={this.styles.content}>Content</View>
-  </View>
-);
-```
+   This file contains the display component of our widget. Display components describe the widget's UI in terms of React Native components and contain all the behavioral logic of the widget. Display components don't interact with Mendix specific APIs and, therefore, should be usable in any React Native application.
+
+2. Replace the **render** method with the following code snippet:
+
+   ```tsx
+   render(): ReactNode {
+     return (
+       <View style={this.styles.container}>
+         <View style={this.styles.header}>
+           <Text style={this.styles.headerContent}>Header caption</Text>
+           <Text style={this.styles.headerContent}>-</Text>
+         </View>
+         <View style={this.styles.content}>Content</View>
+       </View>
+     );
+   }
+   ```
+
+   The render method uses two built-in components from React Native: **\<View>** and **\<Text>**. **\<View>** is a component like a \<div> or \<span> from HTML whereas the **\<Text>** component is used to display some text. To learn more about the built-in components please consult the [React Native website](https://facebook.github.io/react-native/)
+
+TODO: show the result with an image.
 
 To apply a custom style to our structure above, replace the following code representing the default style:
 

@@ -46,7 +46,7 @@ You can fix the delete behavior errors in one of following ways:
 * Set delete behavior of both entities to *Keep {name of entity} object(s)* 
 * Set delete behavior of both entities to *Delete {name of entity} object(s) as well*.
 
-For more information on delete behavior, see section the [Delete Behavior](domain-models-association-properties#delete-behavior) section in *Association Properties*.
+For more information on delete behavior, see section the [Delete Behavior](domain-models-association-properties#delete-behavior) section in *Associations*.
 
 ## 3 Read More
 

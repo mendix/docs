@@ -118,13 +118,13 @@ The decision is added to the microflow.
 
 {{% alert type="info" %}}
 
-The number of options for the check depend on the number of variables of Boolean type in your microflow and on the number of attributes of Boolean type in your domain model. For more information, see [Domain Model](domain-models) and [Attribute Types](domain-models-attributes). You can also add a check if an object exists microflow.
+The number of options for the check depend on the number of variables of Boolean type in your microflow and on the number of attributes of Boolean type in your domain model. For more information, see [Domain Model](domain-models) and [Attributes](domain-models-attributes). You can also add a check if an object exists microflow.
 
 {{% /alert %}}
 
 ### 4.3 Adding a Decision
 
-When you add a decision via Mendix Assist that means you add a decision with attribute of enumeration type to your microflow. For more information, see [Decision](microflows-decision) and [Attribute Types](domain-models-attributes). This means, if you do not have parameters with enumeration data type, **Add decision** will not appear in the suggestions.
+When you add a decision via Mendix Assist that means you add a decision with attribute of enumeration type to your microflow. For more information, see [Decision](microflows-decision) and [Attributes](domain-models-attributes). This means, if you do not have parameters with enumeration data type, **Add decision** will not appear in the suggestions.
 
 To add the decision, do the following:
 
@@ -139,7 +139,7 @@ The decision is added to the microflow.
 
 {{% alert type="info" %}}
 
-The number of options for **Add a decision** depend on the number of parameters with enumeration data type in your microflow. For more information, see [Domain Model in Studio](domain-models) and [Attribute Types](domain-models-attributes).
+The number of options for **Add a decision** depend on the number of parameters with enumeration data type in your microflow. For more information, see [Domain Model in Studio](domain-models) and [Attributes](domain-models-attributes).
 
 {{% /alert %}}
 

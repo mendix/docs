@@ -177,9 +177,23 @@ Let's first define the structure and default style of the group box widget by fo
    }
    ```
 
-   The render method uses two built-in components from React Native: **\<View>** and **\<Text>**. **\<View>** is a component like a \<div> or \<span> from HTML whereas the **\<Text>** component is used to display some text. To learn more about the built-in components please consult the [React Native website](https://facebook.github.io/react-native/)
+   The **render** method uses two built-in components from React Native: **\<View>** and **\<Text>**. **\<View>** is a component like a \<div> or \<span> from HTML whereas the **\<Text>** component is used to display some text. To learn more about the built-in components please consult the [React Native website](https://facebook.github.io/react-native/).
 
-TODO: show the result with an image.
+3. Open up a terminal in your project folder.
+4. Execute the following command to bundle your widget and update the widget bundle in your Mendix test project:
+
+   ```shell
+   npm run dev
+   ```
+
+   The executed script will keep watching your source files and rebundle the widget everytime you save one of these files.
+
+5. Open your Mendix test project in **test/MxTestProject** in Mendix Studio Pro.
+6. Run the project locally.
+7. Verify with the Make It Native app that your app looks like the image below.
+   [INSERT IMAGE]
+
+The UI of our widget doesn't really look like a group box yet. Let's define a default style ...
 
 To apply a custom style to our structure above, replace the following code representing the default style:
 
@@ -224,14 +238,6 @@ const defaultStyle: CustomStyle = {
   }
 };
 ```
-
-Open up a terminal in your project folder and execute the following command to bundle your widget and update the widget code in your Mendix test project everytime you save your files:
-
-```shell
-npm run dev
-```
-
-If not done so already, open your Mendix test project in **test/MxTestProject** in Mendix Studio Pro and run the app locally. Use the Make It Native app to check out the changes.
 
 When you build a widget for native mobile, you need to keep in mind that the widget can be used on two platforms: iOS & Android. Both plaforms have their own design language and we want to adhere as much as possible to both of them. In order to do so, we sometimes need to define platform specific styling or use platform specific React Native components.
 

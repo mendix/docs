@@ -532,18 +532,26 @@ Local notifications should rarely notify a user right after they do an action. H
 
 [todo: make sure to cover "on received" action in this section because we haven't yet]
 
-We can still use our basic example in 3.1 by doing following changes:
+To schedule a notification for a specific time, do the following:
 
-1. Change JavaScript Action **Display Notification** to **Schedule Notification**.
-2. Set the **Date** to **EndOfCurrentMinute**.
-3. Change the **body**, **title**, and **subtitle** to the variables that you created. 
-3. For now, set **Notification id** to empty.
-4. Start and load the app in your mobile device.
-5. Click the nanoflow button.
+1. Navigate to your **ACT_CreateAndSendNotification** nanoflow. 
+2.  Replace your **Display notification** JavaScript action with a new **Schedule notification** action:
 
-The notification should be displayed at the end of the minute. 
+	![schedule action replace](attachments/native-push/new-schedule-action.png)
 
-Be aware that if the app is in the foreground, it won't show any notification since its against user guidelines of IOS and Android. But it will still trigger onRecieve event. This will be enough for us to do custom actions like showing a page with pop-up layout.
+3. Double-click your new **Schedule notification activity**.
+4. Set the **Date** to **EndOfCurrentMinute**.
+5. Change the **body**, **title**, and **subtitle** to the variables that you created.
+6. Set **Play sound** to **true**.
+7. For now, set **Notification id** to **empty**.
+8. Set **Action name** and **Action guid** to **empty**.
+9. Click **OK**.
+10. Start and load the app in your mobile device.
+11. Click the nanoflow button.
+
+The notification should be displayed at the end of the minute. [RESUME: TEST THIS]
+
+Be aware that if the app is in the foreground, it won't show any notification since its against user guidelines of IOS and Android. But it will still trigger onReceive event. This will be enough for us to do custom actions like showing a page with pop-up layout.
 
 But what if after scheduling the notification, we want to cancel notification it[todo: cancel after what? can make clearer? DONE] To do this you can use either the **Cancel Scheduled Notification** or **Cancel All Scheduled Notification** JavaScript actions. To cancel a specific notification, provide an identifier of that particular notification to **Cancel Scheduled Notification**. To cancel all notifications, call the **Cancel All Scheduled Notification** JavaScript action.
 

@@ -49,7 +49,7 @@ The following steps are only relevant for on-premises deployments (skip to [2.2.
 
 ### <a name="CloudFoundry"></a>3.2.1 Cloud Foundry
 
-Follow these build pack instructions to set up New Relic for Cloud Foundry deployments: [https://github.com/mendix/cf-mendix-buildpack#new-relic](https://github.com/mendix/cf-mendix-buildpack#new-relic).
+Follow these buildpack instructions to set up New Relic for Cloud Foundry deployments: [https://github.com/mendix/cf-mendix-buildpack#new-relic](https://github.com/mendix/cf-mendix-buildpack#new-relic).
 
 ### 3.2.2 On Premise Linux & Windows Service Console
 

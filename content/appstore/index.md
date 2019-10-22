@@ -1,5 +1,5 @@
 ---
-title: "App Store Components Guide"
+title: "App Store Guide"
 description: " "
 tags: [ ]
 draft: true

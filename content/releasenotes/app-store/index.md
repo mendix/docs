@@ -8,6 +8,14 @@ These release notes cover changes made to the [Mendix App Store](https://appstor
 
 ## 2019
 
+### October 22nd, 2019
+
+You can now create [user groups](/developerportal/app-store/app-store-overview#user-groups) for your company and assign your company’s App Store content to different groups. Management of user group content is restricted to only the members of the group. You can also add [guest](/developerportal/app-store/app-store-overview#guests) users to these groups and allow them to download selected private company content.
+
+The former App Store **Content Managers** and **External Downloaders** groups have been removed. Members of these groups have been migrated to a new temporary user group called **Migrated Data**. Former “content managers” have been added as user group [members] (/developerportal/app-store/app-store-overview#members), and former “external downloaders” have been added as [guests](/developerportal/app-store/app-store-overview#guests).
+
+Content that was marked as **Protected** as well as content marked as **Shared with Others** has been migrated to the [Content](/developerportal/app-store/app-store-overview#content) tab of the Migrated Data user group. This makes all “externally shared” content protected for that user group.
+
 ### October 1st, 2019
 
 #### Improvements

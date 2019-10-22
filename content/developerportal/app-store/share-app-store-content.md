@@ -139,7 +139,7 @@ To add content to the App Store, follow these steps:
 	* Upload screenshots by clicking **Add screenshots** and selecting images of the content from your computer
 	* Upload a video by clicking **Add video** and selecting a video that demonstrates using the content from your computer
 
-8. <a name="doc-tab"></a>On the **Documentation** tab, you can write or edit the documentation that should accompany your app in the editor. You are only able to edit the documentation of your own and your company's content. Note that this is only applicable when the **Use GitHub README for documentation** check box is not checked.
+7. <a name="doc-tab"></a>On the **Documentation** tab, you can write or edit the documentation that should accompany your app in the editor. You are only able to edit the documentation of your own and your company's content. Note that this is only applicable when the **Use GitHub README for documentation** check box is not checked.
 
   * The documentation template includes the following sections that you must fill out in order to submit your content:
   	* An extended **Description** of the content
@@ -166,18 +166,19 @@ To add content to the App Store, follow these steps:
   Uploaded images cannot be resized, but linked images can.
 
 9. Note that there is nothing for you to do on the **Statistics** and **All versions** tabs. The **Statistics** tab will chart the downloads of your content over time. The **All versions** tab will list the various versions of your content that have been updated.
-10. In the **Version Details** section on the bottom-right of the screen, do the following:<br />
+10. <a name="version-details"></a>In the **Version Details** section on the bottom-right of the screen, do the following:<br />
 	a. Check the **Beta version** check-box if the content is in beta.<br />
 	b. Select the **Mendix Studio Pro version** on which you built the content.<br />
 	c. Select the type of **License** you want applied to your app (if applicable):<br />
+	
 	* **Apache V2** (for more information, see [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0))<br />
 	* **GNU General Public License, version 3** (for more information, see [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html))<br />
 	* **Mendix EULA** (for more information, see [Mendix Terms of Use](https://www.mendix.com/terms-of-use/))<br />
-	* **MIT** (for more information, see [MIT License](https://opensource.org/licenses/MIT))<br />
-
+* **MIT** (for more information, see [MIT License](https://opensource.org/licenses/MIT))<br />
+	
 	{{% image_container width="300" %}}![](attachments/share-app-store-content/add_content_8.png)
-	{{% /image_container %}}
-
+{{% /image_container %}}
+	
 	You can request other license types to be added as **License** options by clicking the **Feedback** button on the right side of the App Store screen.
 11. After entering the information for your content, you can click one of these buttons in the middle of the screen:
 
@@ -193,7 +194,7 @@ To add content to the App Store, follow these steps:
 
 	In this section, you can do the following:
 
-	* In the **Status** section, if applicable, click the **error** link (for example, **(7 error(s))**) to bring up the **Warning** pop-up window that lists the information you need enter or fix before you submit the content
+	* In the **Status** section, if applicable, click the **error(s)** link  bring up the **Warning** pop-up window that lists the information you need enter or fix before you submit the content
 	* Click **Back** to go to the list of content drafts in the **My App Store** tab
 	* Click **Edit** to continue editing the content information
 	* Click **Submit for approval** to submit your App Store content for approval at Mendix
@@ -219,8 +220,9 @@ To update content that has already been published, follow these steps:
 	* **Patch** – a small change (which will save the content from 6.1.0 to 6.1.1, for example)
 	* **Custom** – your own version number (which allows you to add minor or patch updates to previous major versions, or to skip versions rather than having to increment by 1; note that custom versioning is only available if there has been a version 1.0.0)
 
-	{{% image_container width="350" %}}![](attachments/share-app-store-content/update_content_2.png)
-	{{% /image_container %}}
+	![](attachments/share-app-store-content/update_content_2.png)
+	
+	For descriptions of the other fields, see the [version details step above](#version-details).
 
 ## 6 Read More
 

@@ -85,7 +85,7 @@ This data model for the GWSAMPLE_BASIC service can be obtained from the [OData M
 
 * You can create it manually using the OData metadata XML for GWSAMPLE_BASIC, which can be found at [https://sapes5.sapdevcenter.com/sap/opu/odata/iwbep/GWSAMPLE_BASIC/$metadata](https://sapes5.sapdevcenter.com/sap/opu/odata/iwbep/GWSAMPLE_BASIC/$metadata)
 * You can find it in the **SAP Catalog Service** of the [OData Model Creator for SAP solutions](https://sapodatamodelcreator.mendixcloud.com/)
-    * Log in to the server *sapes5.sapdevcenter.com* using your SAP ES5 credentials
+    * Sign in to the server *sapes5.sapdevcenter.com* using your SAP ES5 credentials
     * Search for the GWSAMPLE_BASIC API
     * Use the GWSAMPLE_BASIC Schema
 

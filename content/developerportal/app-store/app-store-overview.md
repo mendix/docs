@@ -32,7 +32,7 @@ To see a detail page for each category, click **View more**.
 
 ## 3 Add-On Details Page {#AddonDetailsPage}
 
-Clicking an App Store item in a menu will bring you to the item's details page. The details page presents the sections described below.
+Clicking an App Store component in a menu will bring you to the item's details page. The details page presents the sections described below.
 
 ### 3.1 Header
 
@@ -67,7 +67,7 @@ The details page for each add-on and app presents the following item information
 
 	![](attachments/app-store-overview/content_detail_6.png)
 
-	* Clicking **Edit documentation** will open a text editor where you can edit the App Store item's documentation
+	* Clicking **Edit documentation** will open a text editor where you can edit the App Store component's documentation
 
 *  **Statistics** tab –  charts the downloads of the item over time:
 
@@ -81,7 +81,7 @@ The details page for each add-on and app presents the following item information
 
 	![](attachments/app-store-overview/content_detail_9.png)
 
-### 3.3 Additional Info Section
+### 3.3 Additional Info Section {#additional-info}
 
 {{% image_container width="300" %}}
 ![](attachments/app-store-overview/content_detail_2.png)
@@ -95,8 +95,9 @@ In the **Additional Info** section, you can see the following information (depen
 * The type of **License** for the item
 * The type of support Mendix offers for the item (for more information, see [App Store Content Support](app-store-content-support))
 * The **URL** for the item page that you can copy and share
+* The **UUID** of the item; if the app is part of the **Getting Started** category of App Store components, this UUID can be used in the [CreateNewApp operation](/apidocs-mxsdk/apidocs/projects-api#createnewapp) in the *Projects API*
 * A **View on GitHub** link, which will take you to the GitHub source files of the content
-* A link to the documentation on how to install App Store item
+* A link to the documentation on how to install App Store component
 
 ### 3.4 Developer Info Section
 
@@ -155,7 +156,7 @@ This page contains drafts of App Store content you have started:
 
 ![](attachments/app-store-overview/drafts.png)
 
-Click the name of the App Store item to be taken to the [DRAFT](share-app-store-content#adding) page, where you can continue editing the content details.
+Click the name of the App Store component to be taken to the [DRAFT](share-app-store-content#adding) page, where you can continue editing the content details.
 
 Click **Delete** to delete a draft.
 

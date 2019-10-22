@@ -85,7 +85,7 @@ Demo users are a demonstration of each [user role](user-roles) existing in your 
 
 ## 7 Anonymous Users {#anonymous-users}
 
-Anonymous users allow end-users access your application without having to log in. You can restrict the data that anonymous users can access by assigning a specific user role to them. For more information, see [Anonymous Users](anonymous-users).
+Anonymous users allow end-users access your application without having to sign in. You can restrict the data that anonymous users can access by assigning a specific user role to them. For more information, see [Anonymous Users](anonymous-users).
 
 ## 8 Password Policy {#password-policy}
 

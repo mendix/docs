@@ -83,7 +83,7 @@ The table below describes possible ways to specify the height of an image:
 
 *Default value*: Auto
 
-{{% alert type="info" %}}Not supported on native mobile pages.{{% /alert %}}
+{{% alert type="info" %}}This property is not supported on native mobile pages.{{% /alert %}}
 
 #### 2.4.5 Height
 

@@ -28,6 +28,8 @@ Before starting this how-to, make sure you have completed the prerequisites desc
 
 ## 3 Adding a Company Admin
 
+If your company does not yet have a Company Admin, submit a [Mendix Support](https://support.mendix.com/hc/en-us) request to assign one.
+
 A company can have multiple Company Admins to manage the company's settings, users, apps, and nodes. 
 
 When you are a Company Admin, you can add extra Company Admins by following these steps:
@@ -38,16 +40,16 @@ When you are a Company Admin, you can add extra Company Admins by following thes
 
 2.  Select the **Company Admins** tab:
 
-	![](attachments/companyadmin-overview.png)
+	![](attachments/company-admin-overview.png)
 
 3. Click **Add Company Admin**.
 4.  Select the users that should be changed into Company Admins, then select the permissions:
 
-	* **Can manage Company** – can manage all the settings of the company
+	* **Can manage Company**<a name="app-store-manager"></a> – can manage all the settings of the company
+		* In addition, this role can specify protected App Store components, add [content owners](../app-store/app-store-overview#cm) to protected items, and configure [external downloaders](../app-store/app-store-overview#ext) for private App Store content; this permission makes the Company Admin the default content owner for all protected App Store components
 	* **Can manage Users** – can manage only the **Users** page of the company settings
 	* **Can manage Apps** – can manage only the **Apps** page of the company settings
 	* **Can manage Nodes** – can manage only the **Nodes** page of the company settings
-	* **Can manage App Store**<a name="app-store-manager"></a> – can specify protected App Store items, add [content owners](../app-store/app-store-overview#cm) to protected items, and configure [external downloaders](../app-store/app-store-overview#ext) for private App Store content; this permission makes the Company Admin the default content owner for all protected App Store items; note that this permission is not currently individually configurable and is only configurable via the **Can manage Company** permission for all company settins
 
 	![](attachments/add-companyadmin.png)
 

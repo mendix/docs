@@ -11,7 +11,7 @@ One of the strengths of the Mendix Platform is that it is easy to connect your M
 
 ## 2 Using These Connectors & Adapters
 
-This document does not go into usage details for these specific connectors and adapters. Documentation for using these App Store items is available on the **Documentation** tab on the App Store pages for the items themselves. This App Store documentation includes details on typical usage scenarios, installation, dependencies, and configuration.
+This document does not go into usage details for these specific connectors and adapters. Documentation for using these App Store components is available on the **Documentation** tab on the App Store pages for the items themselves. This App Store documentation includes details on typical usage scenarios, installation, dependencies, and configuration.
 
 For documentation on using more specific connectors and adapters for Siemens, SAP, and IBM, see the [Strategic Partners Guide](/partners/index).
 
@@ -27,7 +27,7 @@ This module allows you to use SAML to authenticate your users in your cloud appl
 
 [![](attachments/18448690/kerberos.png)](https://appstore.home.mendix.com/link/app/25/)
 
-This module enables the Kerberos-based single sign-on feature in your application. This is useful in Windows Active Directory environments, since this protocol supports Integrated Windows Authentication. As a result, users logged on to the Windows domain do not have to enter their credentials to log in to your application.
+This module enables the Kerberos-based single sign-on feature in your application. This is useful in Windows Active Directory environments, since this protocol supports Integrated Windows Authentication. As a result, users logged on to the Windows domain do not have to enter their credentials to sign in to your application.
 
 [Click to download in the Mendix App Store.](https://appstore.home.mendix.com/link/app/25/)
 

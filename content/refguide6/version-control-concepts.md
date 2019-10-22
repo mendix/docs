@@ -36,7 +36,7 @@ The status of your project is a summary of all the changes in your working copy 
 | Icon | Meaning |
 | --- | --- |
 | ![](attachments/524294/688173.png) | Nothing happened to this item. It is unchanged w.r.t. to the original. |
-| ![](attachments/524294/688172.png) | You modified this item (i.e. document, folder or module). |
+| ![](attachments/524294/688172.png) | You modified this item (as in, document, folder or module). |
 | ![](attachments/524294/688175.png) | You added this item. |
 | ![](attachments/524294/688174.png) | You moved this item to another position in the project tree. |
 | ![](attachments/524294/688164.png) | You deleted this item. |
@@ -65,7 +65,7 @@ A list of sprintr™ stories that relate to the commit. Our advice is to keep co
 
 The Modeler also attaches some information automatically:
 
-*   The author, i.e. the person who committed.
+*   The author, as in, the person who committed.
 *   The date and time of the commit.
 *   The list of changed documents/folder/modules along with the type of the change (modify, add, delete, ...).
 *   The version of the Modeler that was used to commit.

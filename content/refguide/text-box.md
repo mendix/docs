@@ -53,7 +53,7 @@ Text box properties consist of the following sections:
 
 ### 2.3 Design Properties Section{#design-properties}
 
-<a name="editability-properties"></a>
+{{% snippet file="refguide/design-section-link.md" %}} 
 
 ### 2.4 Editability Section{#editability}
 

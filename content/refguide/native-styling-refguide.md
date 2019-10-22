@@ -181,7 +181,6 @@ A container widget can be used to style or hide a group of widgets. This widget 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
 | `container` | This has all ViewStyle properties. |        |
-| `container` | `rippleColor` | This is the color of the ripple on Android, and will be applied only when the container has an on-click action set, otherwise it will be ignored (this defaults to `rgba(0, 0, 0, 0.2)`). |
 
 The default class to style all page titles is named `Container`.
 
@@ -454,7 +453,7 @@ The widget’s style properties are as follows:
 
 The default class to style all actions buttons is named `ActionButton`. However, an action button in a header has the default class `ActionButtonHeader`.
 
-## 9 Navigation Widget 
+## 9 Navigation Widget {#navigation-widget}
 
 The navigation widget allows users to navigate within your app using buttons on the top and bottom bars of your app’s pages. This is how a navigation widget could look in an app:
 

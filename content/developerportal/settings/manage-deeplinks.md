@@ -34,7 +34,7 @@ To create a deep link, you need the App ID, Story ID, or Feedback Item Nr for th
 
 If you want to provide links directly to a specific element in your app project in the Developer Portal, follow these steps:
 
-1. Paste the URL to the Developer in your browser's address bar (i.e., `https://sprintr.home.mendix.com/` or `https://cloud.home.mendix.com/`).
+1. Paste the URL to the Developer in your browser's address bar (as in, `https://sprintr.home.mendix.com/` or `https://cloud.home.mendix.com/`).
 2. Paste the desired App ID, Story ID, or Feedback Item Number after the final slash.
 
 The following deep links can be used:

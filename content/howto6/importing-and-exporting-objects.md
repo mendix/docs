@@ -123,7 +123,7 @@ This part will go through the steps required to export projects.
 
 1.  **Right click** on a module in the Project Explorer, and select **Export module package...**
     ![](attachments/18448739/18582095.png)
-    If your module refers to other modules in the project (i.e., it is not self-contained), you will receive a dialogue box warning you about this.
+    If your module refers to other modules in the project (as in, it is not self-contained), you will receive a dialogue box warning you about this.
 2.  **Right click** on your module in the Project Explorer and select **Find usages of other user modules** to view the references.
     ![](attachments/18448739/18582094.png)
 3.  Click **Continue exporting** and you will see another dialogue box:

@@ -4,7 +4,7 @@ module.exports = {
      * POTENTIALLY TEMPORARY REDIRECTS
      ****************************************************/
 	/****************************************************
-     * From Studio(potentially temporary until fixed in product, mapped)
+     * From Studio(potentially temporary until the support of old bundles stops, mapped)
      ****************************************************/
 	{
       from: "/refguide/web-modeler/domain-models-association-properties-wm",
@@ -597,6 +597,58 @@ module.exports = {
 	{
       from: "/refguide8/tab-page",
       to: "/refguide/tab-container"
+    },
+	{
+		from: "/refguide8/action-button",
+      to: "/refguide/button-properties"
+    },
+	{
+		from: "/refguide8/drop-down-button",
+      to: "/refguide/button-properties"
+    },
+	{
+		from: "/refguide8/image-property",
+      to: "/refguide/button-properties"
+    },
+	{
+		from: "/refguide8/grid-action-button",
+      to: "/refguide/control-bar"
+    },
+	{
+		from: "/refguide8/remove-button",
+      to: "/refguide/control-bar"
+    },
+	{
+		from: "/refguide8/select-button",
+      to: "/refguide/control-bar"
+    },
+	{
+		from: "/refguide8/add-button",
+      to: "/refguide/control-bar"
+    },
+	{
+		from: "/refguide8/deselect-all-button",
+      to: "/refguide/control-bar"
+    },
+	{
+		from: "/refguide8/export-to-csv-button",
+      to: "/refguide/control-bar"
+    },
+	{
+		from: "/refguide8/export-to-excel-button",
+      to: "/refguide/control-bar"
+    },
+	{
+		from: "/refguide8/grid-new-button",
+      to: "/refguide/control-bar"
+    },
+	{
+		from: "/refguide8/search-button",
+      to: "/refguide/control-bar"
+    },
+	{
+		from: "/refguide8/select-all-button",
+      to: "/refguide/control-bar"
     },
 	/****************************************************
      * From Desktop Modeler version 7 (permanent, mapped)

@@ -34,7 +34,6 @@ The Company Admin can manage four categories of settings:
   * View all company [users](users)
   * Edit user [security groups](users#security-groups)
   * Activate/deactivate users
-  * Accept company join requests
 * **Apps**
   * View all company [apps](apps)
   * Activate, deactivate, and delete apps

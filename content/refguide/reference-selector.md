@@ -16,7 +16,7 @@ For example, if you have an employee they will work for one company. A company c
 
 ![](attachments/reference-selector/reference-selector-domain-model.png)
 
-In the reference selector, the name of the attribute of the associated objects which will be  displayed is shown inside the text box, between square brackets, and colored blue.
+In the reference selector, the name of the attribute of the associated objects which will be  displayed is shown inside the reference selector, between square brackets, and colored blue.
 
 For example, the following reference allows the end-user to see, and set, the association **Employee_Company** by selecting the **CompanyName** for the current **Employee**.
 
@@ -28,12 +28,12 @@ If you only want to _display_ information, you can also use a [text box](text-bo
 
 ## 2 Properties
 
-An example of text area properties is represented in the image below:
+An example of reference selector properties is represented in the image below:
 
 {{% image_container width="400" %}}![](attachments/reference-selector/reference-selector-properties.png)
 {{% /image_container %}}
 
-Text box properties consist of the following sections:
+Reference selector properties consist of the following sections:
 
 * [Common](#common)
 * [Data source](#data-source)
@@ -72,6 +72,8 @@ The attribute can be of one of the following [data types](data-types):
 * String
 
 ### 2.3 Design Properties Section{#design-properties}
+
+{{% snippet file="refguide/design-section-link.md" %}} 
 
 ### 2.4 Editability Section{#editability}
 
@@ -208,7 +210,7 @@ See the [constraints](database-source#constraints) section of *Database Source* 
 
 The sort order specifies the order in which the items in the reference selector are shown. You can sort on multiple attributes in both directions (ascending and descending). If **(default)** sort order is specified, the reference selector sorts on the displayed attribute.
 
-#### 2.9.2 XPath
+#### 2.9.2 XPath{#xpath-constraints}
 
 If the source is XPath, the list of objects is also taken from the database, but the objects which are displayed are chosen by an XPath Constraint.
 

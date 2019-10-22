@@ -36,11 +36,12 @@ To publish your app in the Google Play store, do the following:
 
 * Have an Android device for testing the APK package that will be produced
 
-## 3 Watch a Tutorial Video
+## 3 Tutorial Video
 
 The video below shows how to build a PhoneGap app in the cloud. After showing you how to build mobile app store packages, it explains how to find these packages in PhoneGap and add security keys to them.
 
 **How to build a PhoneGap app in the cloud**
+
 {{% youtube 7ic625u2YJE %}}
 
 ## 4 Starting the Packaging Process{#starting-the-packaging-process}
@@ -157,7 +158,7 @@ To install the iOS app on your mobile test device, follow these steps:
 7. Your app will show up in the list of apps. Click the **Install** button next to your app.
 8. Click **Apply** at the bottom of the screen to execute the actual installation.
 
-The app will now be visible on your device. Open it and log in to the app with a regular user account. You can set one up in the Mendix app in your desktop browser if you have not done so yet.
+The app will now be visible on your device. Open it and sign in to the app with a regular user account. You can set one up in the Mendix app in your desktop browser if you have not done so yet.
 
 ### 7.3 Uploading the iOS App to the App Store
 

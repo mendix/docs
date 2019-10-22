@@ -381,7 +381,7 @@ Next you will create a workaround which allows data to be passed to pages. First
 3. Add a JavaScript Action Call activity to your nanoflow.
 4. Double-click the action call activity.
 5. Click **JavaScript Action** > **Select**.
-6. Type *GetGuid* into the search field, click **GetGuid**, and click **Select**. This JavaScript action is available in the Mendix App Store under the NanoflowCommons module included in the Native Quickstarter template. [todo: will they already have this or not?]
+6. Type *GetGuid* into the search field, click **GetGuid**, and click **Select**. This JavaScript action is available in the Mendix App Store under the NanoflowCommons module included in the Native Quickstarter template. [todo: change this to "if you wanna integrate this tech into your existing project outside this howto example and you dont use the native movile quickstart..."]
 7. Click **Entity Object** drop-down and click **$TestEntity**.
 8. In **Variable name** field type **GUIDForFirstObject**.
 9. Click **OK**.
@@ -445,21 +445,17 @@ Good job! When a user taps a notification from the **Pass GUID to Notification**
 
 	![guid activity](attachments/native-push/guid-activity.png)
 
-15. Right-click this JavaScript Action and click **Set $ReturnedObjectByGUID As Return Value**:
-
-	![guid settings](attachments/native-push/guid-return-value.png)
-
-16. Drop a **Change object** activity onto your nanoflow:
+15. Drop a **Change object** activity onto your nanoflow:
 
 	![change object](attachments/native-push/new-change-object.png)
 
-17. Double-click the change object activity.
-18. Select **Object** > **ReturnedObjectByGUID (NativeMobile.TestEntity)** from the drop-down menu.
-19. Click **Action** > **New**, make sure **Member** is set to the string attribute, and into **Value** type *'Your notification has forwarded you here!'*:
+16. Double-click the change object activity.
+17. Select **Object** > **ReturnedObjectByGUID (NativeMobile.TestEntity)** from the drop-down menu.
+18. Click **Action** > **New**, make sure **Member** is set to the string attribute, and into **Value** type *'Your notification has forwarded you here!'*:
 
 	![change object action](attachments/native-push/change-object-action.png)
 
-20. Click **OK**. Check that your dialog box looks like this, then click **OK** again to close it: 
+19. Click **OK**. Check that your dialog box looks like this, then click **OK** again to close it: 
 
 	![change object final](attachments/native-push/change-object-final.png)
 
@@ -497,7 +493,7 @@ Now you will set up a data view on your home page.
 
 	{{% image_container width="500" %}}![notification action](attachments/native-push/notif-action-2.png){{% /image_container %}}
 
-11. Start and load the app on your mobile device, tap the nanoflow button you created in 3.e, then tap the notification to navigate to the **DetailTestEntity** page with the proper object. [todo: initially I had errors but Mehmet and I fixed them. I think this was with a new nanoflow configuration. Confirm the user will not have errors..]
+11. Start and load the app on your mobile device, tap the nanoflow button you created in 3.e, then tap the notification to navigate to the **DetailTestEntity** page with the proper object.
 
 Explaining the work-around above:
 

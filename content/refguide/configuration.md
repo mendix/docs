@@ -9,7 +9,7 @@ tags: ["studio pro", "configurations", "configuration"]
 
 A configuration is a group of settings. To access configurations, open the **Project Explorer** > **Project** > **Settings** > the **Configuration** tab. 
 
-You can define any number of configurations. The active configuration, i.e. the one that will be used when running your application, is determined by the drop-down in the toolbar of Studio Pro.
+You can define any number of configurations. The active configuration, as in, the one that will be used when running your application, is determined by the drop-down in the toolbar of Studio Pro.
 
 You can use configurations to have different database settings for different people working on your project. Maybe one person has SQL Server on their computer and the other has PostgreSQL. You can also have a shared configuration for connecting to a database server that you both have access to.
 

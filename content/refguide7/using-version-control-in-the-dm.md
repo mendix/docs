@@ -59,7 +59,7 @@ The project explorer shows an icon in front of items (documents, folders and mod
 | Icon | Meaning |
 | --- | --- |
 | ![](attachments/524294/688173.png) | Nothing happened to this item. It is unchanged w.r.t. to the original. |
-| ![](attachments/524294/688172.png) | You modified this item (i.e. document, folder or module). |
+| ![](attachments/524294/688172.png) | You modified this item (as in, document, folder or module). |
 | ![](attachments/524294/688175.png) | You added this item. |
 | ![](attachments/524294/688174.png) | You moved this item to another position in the project tree. |
 | ![](attachments/524294/688164.png) | You deleted this item. |

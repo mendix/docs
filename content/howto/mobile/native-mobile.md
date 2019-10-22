@@ -18,4 +18,5 @@ You build Mendix native mobile apps the same way you build web or hybrid apps. Y
 * [Implement Native Styling](native-styling)
 * [Debug Native Apps (Advanced)](native-debug)
 * [Package Native Apps Using Native Builder](native-builder)
+* [Working with vector graphics](native-svg)
 

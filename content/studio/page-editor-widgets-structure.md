@@ -24,7 +24,7 @@ Layout widgets are the following ones:
 
 ## 3 Layout Grid Overview {#layout-grid}
 
-The **Layout Grid** helps you to configure a page and make it responsive immediately. This means that a layout grid has a built-in behavior to show how a page will look like on different devices. Switch **Device** modes in the top bar to see how a page will be displayed on a phone, tablet or desktop.
+The **Layout Grid** helps you to configure a page and make it responsive immediately. This means that a layout grid has a built-in behavior to show how a page will look like on different devices. Switch **Device** modes to see how a page will be displayed on a phone, tablet or desktop:
 
 {{% image_container width="350" %}}![Device Modes](attachments/page-editor-widgets-structure/device-modes.png)
 {{% /image_container %}}

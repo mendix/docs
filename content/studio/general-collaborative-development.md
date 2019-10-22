@@ -17,7 +17,7 @@ Collaborative development is only available if your project has Mendix version 7
 
 Collaborative development is the process that allows team members work together on one project in Mendix Studio Pro and Mendix Studio and easily synchronize changes made by others using [version control](/refguide/version-control). 
 
-If you are working in a team (or switch from Studio to Studio Pro yourself), it is easy to share app model changes. All changes made in Studio are auto-saved. Studio Pro users get these changes when they click **Update** or **Commit**. If they commit, they push their own changes at the same time, so both Studio and Studio Pro are synchronized. For a more technical and detailed process overview, see [Collaborative Development](/refguide/collaborative-development) in *Version Control*. 
+If you are working in a team (or switch from Studio to Studio Pro yourself), it is easy to share app model changes. All changes made in Studio are auto-saved. Studio Pro users get these changes when they click **Update** or **Commit**. If they commit, they push their own changes at the same time, so both Studio and Studio Pro are synchronized. For a more technical and detailed process overview, see [Collaborative Development](/refguide/collaborative-development) in *Studio Pro Guide*. 
 
 Multiple users can view the project in Studio at the same time: one user can edit it and others are in read-only mode. 
 
@@ -46,7 +46,7 @@ As all Studio changes are auto-saved, the collaborative development is indicated
 
     b.  There are project conflicts which should be solved in Studio Pro before the Studio Pro user can commit again. Your screen is unlocked without any changes to your app.  
 
-3.  **Switching Contents** – in Studio Pro, users can change the branch line Studio is enabled for. For more information on managing branches, see section [5 Managing Development Lines](/refguide/collaborative-development#managing-branches) in the *Collaborative Development* in *Version Control*. 
+3.  **Switching Contents** – in Studio Pro, users can change the branch line Studio is enabled for. For more information on managing branches, see the [Managing Development Lines](/refguide/collaborative-development#managing-branches) section in the *Collaborative Development* in *Studio Pro Guide*. 
 	During this process Studio gets locked for a few moments, all changes are auto-saved on the current development line, and a pop-up dialog is shown that the Studio Pro user is changing the branch line for Studio. This means that the contents of your app will change. 
 
 	{{% image_container width="350" %}}![Switching Contents Dialog Box](attachments/general-collaborative-development/switching-branches.png)

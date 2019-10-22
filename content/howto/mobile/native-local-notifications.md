@@ -5,9 +5,6 @@ title: "Set Up Local Notifications"
 #menu_order: 10
 ---
 
-[todo: check that all "actions" are properly bolded]
-[todo: correct all image caption text]
-
 ## 1 Introduction
 
 This how-to will teach you to build local notifications for native applications. Local notifications will only allow you to schedule and send notifications confined to one mobile device. An example of a local notification might be an alarm app which sends a notification after an amount of time has elapsed.
@@ -177,13 +174,12 @@ Now you will set up the final piece of your nanoflow's logic.
 
 Now you can run your app and see if your notification works.
 
-1.  Start and load the app in your mobile device and tap the nanoflow button. [todo fix/elaborate this step]
+1.  Start and load the app in your mobile device, then tap the nanoflow button:
 
 	{{% image_container width="500" %}}![app settings](attachments/native-push/app-1.png){{% /image_container %}}
 
-2. You will be prompted to **Allow notifications**. Click **OK**:
-
-3.  When you allow notifications, you will receive a notification immediately:
+2. When prompted to **Allow notifications** tap **OK**.
+3.  After you allow notifications, you will receive a notification:
 
 	{{% image_container width="500" %}}![app settings](attachments/native-push/basic-notif.png){{% /image_container %}}
 
@@ -335,7 +331,7 @@ To set up a notification nanoflow, do the following:
 
 	{{% image_container width="500" %}}![create notification nanoflow](attachments/native-push/create-notif-nano.png){{% /image_container %}}
 
-To create your microflow, do the following:
+To set up your microflow, do the following:
 
 1. Create a microflow named *DS_TestEntity*.
 2. Drag and drop a create entity activity onto your microflow.
@@ -348,9 +344,9 @@ To create your microflow, do the following:
 9. Double-click your commit object activity.
 10. From the **Object or List** drop-down menu, select **NewTestEntity (NativeMobile.TestEntity**.
 11. Click **OK**.
-12. Double-click the end point, set it as boolean true [todo fix instruciton and screenshot]:
+12. Double-click your end event, make sure its **Type** is **Boolean**, then type *true* into the value field and click **OK**:
 
-	{{% image_container width="500" %}}![create ds test entity micro](attachments/native-push/ds-testentity-microflow.png){{% /image_container %}}
+	{{% image_container width="500" %}}![end event true](attachments/native-push/end-event-true.png){{% /image_container %}}
 
 To make this microflow run after startup, do the following:
 
@@ -389,21 +385,22 @@ To make your page, do the following: [todo: this page is "OnTap_Page". Is that o
 
 	{{% image_container width="500" %}}![page with data view](attachments/native-push/page-with-data-view.png){{% /image_container %}}
 
-Next you will create a workaround which allows data to be passed to pages.
+Next you will create a workaround which allows data to be passed to pages. First, make a nanoflow:
 
-1. Create a nanoflow named *ACT_PassGUIDToNotification*. <br /> [todo: change into numbered list]
-	a. Add a retrieve action to your nanoflow, set **Source** to **From Database**, and set **Range** to **First**. Click **Entity** > **Select** and select the **TestEntity**. In **Object name** type *FirstTestEntityObject*. Then click **OK**. This will be the object that gets the GUID: <br />
+1. Create a nanoflow named *ACT_PassGUIDToNotification*.
+
+2. Add a retrieve action to your nanoflow, set **Source** to **From Database**, and set **Range** to **First**. Click **Entity** > **Select** and select the **TestEntity**. In **Object name** type *FirstTestEntityObject*. Then click **OK**. This will be the object that gets the GUID: 
 	
 	![retrieve object](attachments/native-push/retrieve-object.png)
 	
-	b. Add a JavaScript Action Call activity to your nanoflow.  <br />
-	c. Double-click the action call activity.  <br />
-	d. Click **JavaScript Action** > **Select**.  <br />
-	e. Type *GetGuid* into the search field, click **GetGuid**, and click **Select**. This JavaScript action is available in the Mendix App Store under the NanoflowCommons module included in the Native Quickstarter template. [todo: will they already have this or not?]  <br />
-	f. Click **Entity Object** drop-down and click **$TestEntity**.  <br />
-	g. In **Variable name** field type **GUIDForFirstObject**.  <br />
-	h. Click **OK**.  <br />
-	c. Drag and drop 4 create variable activities onto your nanoflow: *Title*, *Subtitle*, *Body*, and *ActionName*. Give them the values *'title1'*, *'subtitle1'*, *'body1'*, and *'OpenPageWithParams'* respectively: <br />
+3. Add a JavaScript Action Call activity to your nanoflow.
+4. Double-click the action call activity.
+5. Click **JavaScript Action** > **Select**.
+6. Type *GetGuid* into the search field, click **GetGuid**, and click **Select**. This JavaScript action is available in the Mendix App Store under the NanoflowCommons module included in the Native Quickstarter template. [todo: will they already have this or not?]
+7. Click **Entity Object** drop-down and click **$TestEntity**.
+8. In **Variable name** field type **GUIDForFirstObject**.
+9. Click **OK**.
+10. Drag and drop four create variable activities onto your nanoflow: *Title*, *Subtitle*, *Body*, and *ActionName*. Give them the values *'title1'*, *'subtitle1'*, *'body1'*, and *'OpenPageWithParams'* respectively:
 	
 	{{% image_container width="400" %}}![title1](attachments/native-push/title1-activity.png){{% /image_container %}}
 	
@@ -417,24 +414,26 @@ Next you will create a workaround which allows data to be passed to pages.
 	
 	{{% image_container width="500" %}}![actionname](attachments/native-push/guid-nano-with-four-strings.png){{% /image_container %}}
 	
-	d. Drag and drop a JavaScript action call activity onto your nanoflow. 
-	e. Double-click the action call.
-	f. Click **JavaScript action** > **Select**.
-	g. Type *DisplayNotification* into the search field, click the corresponding JavaScript action, and click **Select**.
-	e. Set the **Body**, **Title**, **Subtitle**, **Action name**, and **Action guid** to the corresponding variables you created previously, and set **Play Sound** to **True**: <br />
+11. Drag and drop a JavaScript action call activity onto your nanoflow. 
+12. Double-click the action call.
+13. Click **JavaScript action** > **Select**.
+14. Type *DisplayNotification* into the search field, click the corresponding JavaScript action, and click **Select**.
+15. Set the **Body**, **Title**, **Subtitle**, **Action name**, and **Action guid** to the corresponding variables you created previously, and set **Play Sound** to **True**:
 
 	{{% image_container width="500" %}}![first guid action](attachments/native-push/first-guid-action.png){{% /image_container %}}
 
-	f. Click **OK**.
-	g. Drag and drop this nanoflow onto your app's **Home_Native** page to create a button which calls it, and name the button *Pass GUID to Notification*: <br />
+16. Click **OK**.
+17. Drag and drop this nanoflow onto your app's **Home_Native** page to create a button which calls it, and name the button *Pass GUID to Notification*:
 	
 	{{% image_container width="500" %}}![guid button](attachments/native-push/pass-guid-button.png){{% /image_container %}}
 	
-2. Create a new blank page named *DetailTestEntity*. 
-3. Drag and drop a data view onto this new page. Double-click the data view. 
-4. Confirm **Type** > **Context** is selected, then click **Entity** > **Select**.
-5. Select **TestEntity** as your **Entity (path)**. 
-6. Click **OK**, then click **OK** when prompted about filling the data view. 
+Now set up the remaining pieces for your data-passing notification: 
+
+1. Create a new blank page named *DetailTestEntity*. 
+2. Drag and drop a data view onto this new page. Double-click the data view. 
+3. Confirm **Type** > **Context** is selected, then click **Entity** > **Select**.
+4. Select **TestEntity** as your **Entity (path)**. 
+5. Click **OK**, then click **OK** when prompted about filling the data view. 
 
 Good job! When a user taps a notification from the **Pass GUID to Notification** button, they will now be brought to the **DetailTestEntity** page. Next you will create a nanoflow which receives **notificationEntity** as a parameter, retrieves an object via this parameter, and passes the object to a page.
 
@@ -520,7 +519,7 @@ Now you will set up a data view on your home page.
 
 	{{% image_container width="500" %}}![notification action](attachments/native-push/notif-action-2.png){{% /image_container %}}
 
-11. Start and load the app on your mobile device, tap the nanoflow button you created in 3.e, then tap the notification to navigate to the **DetailTestEntity** page with the proper object. [todo: doesn't work for me -- errors. Eventually fixed the 2 or 3 small ones, but I'll need someone to validate this whole thing I think.]
+11. Start and load the app on your mobile device, tap the nanoflow button you created in 3.e, then tap the notification to navigate to the **DetailTestEntity** page with the proper object. [todo: initially I had errors but Mehmet and I fixed them. I think this was with a new nanoflow configuration. Confirm the user will not have errors..]
 
 Explaining the work-around above:
 

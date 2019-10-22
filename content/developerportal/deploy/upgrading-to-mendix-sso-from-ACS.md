@@ -68,11 +68,13 @@ The first steps you need to take are the same as for a non-customized implementa
 
 {{% todo %}}[WHAT DO WE NEED TO DO HERE?
 
-Should we only be adding a new Domain Model and not copying anything else?]{{% /todo %}}
+Should we only be adding a new Domain Model and not copying anything else?
+
+What about the other admin modules - look at the alternative ]{{% /todo %}}
 
 Now you need to set up a second, customized version of the Mendix SSO module which has the same modifications as the ACS implementation.
 
-1. Create a new MendixSSO module, by importing it from the App Store and using the option **Add as new module**.
+1. Create a new MendixSSO module, ?? by importing it from the App Store and using the option **Add as new module**.
 
     ![Create a second Mendix SSO module with a new name](attachments/upgrading-to-mendix-sso-from-acs/import-custom-mxsso.png)
 

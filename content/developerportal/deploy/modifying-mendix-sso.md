@@ -49,9 +49,63 @@ We recommend that you do not modify the version of MendixSSO which is in the App
 
 The MendixSSO module is written so that you can make a complete copy of the module and use this as the basis of a new administration module.
 
+#### 2.2.1 Copying the Mendix SSO Module{#copying}
+
 To make a copy of the module, do the following:
 
-{{% todo %}}[WHAT IS THE BEST WAY TO DO THIS?]{{% /todo %}}
+1. Add a new module to your app project. In these examples it is called **CustomMendixSSO**.
+
+2. Copy the **MendixSSOUser** entity from the **MendixSSO** module domain model, to the domain model of your new module. In these examples it is called **CustomMendixSSOUser**.
+
+3. Open the **AccountPasswordData** entity in the **MendixSSO** module domain model and associate it with the **MendixSSOUser** entity in your new module.
+
+    ![How to create the association from account password to the new MendixSSOUser entity](attachments/modifying-mendix-sso/associate-accountpassworddata.png)
+
+4. Copy the entire **Public** folder from **MendixSSO** to your new module. You need to this using copy/paste in the **Project Explorer**.
+
+5. Clear all the errors by doing the following:
+
+    1. Create two new **Module roles**, **Administrator** and **User**.
+
+    2. In the **Entity access** tab of security, select each of the **Module roles** and unselect and reselect the appropriate role.
+
+        ![Deselect and re-select entity access roles](attachments/modifying-mendix-sso/entity-access.png)
+
+    3. For each page, open the page and open and close the **Navigation** property to re-select the allowed roles. (You do not have to change any roles, they are already set correctly)
+
+        ![Deselect and re-select entity access roles](attachments/modifying-mendix-sso/reselect-page-role.png)
+    
+    4. For each microflow, open the microflow and open and close the **Allowed roles** property to re-select the allowed microflow roles.
+
+#### 2.2.2 Configuring the Copied Mendix SSO Module
+
+You need to tell the Mendix SSO Module to use your new entity, instead of the default one. To do this, make the following changes to the microflows in your new Mendix SSO Module:
+
+1. Update the **AfterStartup_MendixSSO** microflow in the new, customized, MendixSSO module to use the **CreateMendixSSOUser** and **UpdateMendixSSOUser** microflows from the customized MendixSSO module.
+
+    ![Modify custom afterstartup microflow to use custom create and update microflows](attachments/modifying-mendix-sso/custom-afterstartup-microflow.png)
+
+2. Update the **Create** action in the **CreateMendixSSOUser** microflow in your new module to use your new Mendix SSO user entity, not the original one. You will also need to update all the members which are set during the create.
+
+    ![Edit custom create microflow to use the new entity](attachments/modifying-mendix-sso/create-new-entity.png)
+
+3. Change the **End event** of the microflow to return an object of the correct type.
+
+4. Change the **Retrieve** action in the **UpdateMendixSSOUser** microflow in your new module to use your new Mendix SSO user entity.
+
+5. Change the **Change object** action to set the correct members of the object.
+
+    ![Edit all the members of the entity to match the attributes and associations](attachments/modifying-mendix-sso/edit-members.png)
+
+6. Change the **End event** of the microflow to return an object of the correct type.
+
+7. Set the **After startup** microflow in the **Runtime** tab of **Project > Settings** to be the **AfterStartup_MendixSSO** microflow in your new module.
+
+#### 2.2.3 Using the Copied Mendix SSO Module
+
+Mendix SSO will now use your new entity to administer the users. You can edit the domain model, the snippets, and the pages to customize your user administration completely, bearing in mind that data which comes from the Mendix ID used by end-users who are using SSO will overwrite any changes you make within your app.
+
+{{% todo %}}[Are there other changes which need to be made - all the user-related microflows, for example, still point to the MendixSSO module and not the new module we have just created.]{{% /todo %}}
 
 ## 3 Tokens
 

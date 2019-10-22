@@ -1,6 +1,6 @@
 ---
 title: "Make It Native App"
-category: "Mobile Products"
+category: "Mobile"
 menu_order: 10
 description: "These release notes showcase each release of the iOS and Android Make It Native app versions."
 tags: ["Native", "Android", "iOS", "Apple", "Android"]

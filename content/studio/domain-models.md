@@ -223,7 +223,7 @@ Fields that are displayed in **Properties** may vary depending on the type of th
 
 {{% alert type="info" %}}
 
-Properties of *Name* and *Size* attributes of image and file entities are read-only, i.e. you cannot edit them. 
+Properties of *Name* and *Size* attributes of image and file entities are read-only, as in, you cannot edit them. 
 
 {{% /alert %}}
 

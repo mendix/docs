@@ -69,7 +69,7 @@ Parameters have the following settings:
 
 To add parameters, do the following:
 
-1. Place the **Button** widget must be placed in a context of an entity, i.e. inside a [data widget](data-widgets).
+1. Place the **Button** widget must be placed in a context of an entity, as in, inside a [data widget](data-widgets).
 
 2. Double-click the **Caption** setting in the button widget properties.
 

@@ -71,7 +71,7 @@ If you find that a particular retrieve action is slow, you can work to simplify 
 
 *   Complex XPath
 *   Missing Indexes
-*   Combined Security Rules (i.e. a user with multiple user roles, each with complex security)
+*   Combined Security Rules (as in, a user with multiple user roles, each with complex security)
 
 #### Microflow
 

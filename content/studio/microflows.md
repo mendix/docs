@@ -109,7 +109,7 @@ The **Object Activities** are described in the table below.
 | Commit         | **Commit** saves changes you have not saved in the database yet. For more information, see [Commit](/refguide/committing-objects) in the *Mendix Studio Pro Guide*. |
 | Create Object  | The **Create Object** action can be used to create a data object. For more information, see [Create Object](/refguide/create-object) in the *Mendix Studio Pro Guide*. |
 | Delete         | **Delete Object** can be used to delete one data object or a list of objects. For more information, see [Delete](/refguide/deleting-objects) in the *Mendix Studio Pro Guide*. |
-| Retrieve       | **Retrieve** can be used to get one or more objects, either by directly traversing an [association](domain-models-association-properties) of another object, or by retrieving objects from the database. For more information, see [Retrieve](/refguide/retrieve) in the *Mendix Studio Pro Guide*. |
+| Retrieve       | **Retrieve** can be used to get one or more objects, either by getting another object through an [association](domain-models-association-properties), or by retrieving objects from the database. For more information, see [Retrieve](/refguide/retrieve) in the *Mendix Studio Pro Guide*. |
 
 ### 5.3 Client Activities Section {#microflow-client-activities}
 

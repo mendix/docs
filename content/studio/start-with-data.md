@@ -166,4 +166,4 @@ If **Generate pages for my data** has been selected in the preview page, pages a
 ## 5 Read More
 
 * [Domain Model](domain-models)
-* [Attribute Types](domain-models-attributes) 
+* [Attributes](domain-models-attributes) 

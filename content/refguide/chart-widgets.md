@@ -17,7 +17,7 @@ You can add a wide range of charts to your app pages to display data series visu
 
 With Mendix Charts you can quickly create beautiful charts. The following charts are included:
 
-* **Area** chart – a line chart with a fill to the x axis
+* **Area** chart – a line chart with a fill to the X-axis
 * **Bar** chart – horizontal bars, grouped or stacked
 * **Bubble** chart – add a size dimension to your chart
 * **Column** chart – vertical bars, grouped or stacked

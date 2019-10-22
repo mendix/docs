@@ -116,7 +116,7 @@ There may be several schemas in the packages of an API. Each of these will gener
 
 1. Click **SAP Catalog Service**.
 
-    You will be asked to log in to you SAP Service Catalog. Enter your **User name**, **Password**, and **Server**. Select the correct protocol and **Port** if these are not the default.
+    You will be asked to sign in to you SAP Service Catalog. Enter your **User name**, **Password**, and **Server**. Select the correct protocol and **Port** if these are not the default.
 
     ![](attachments/use-sap-odata-model-creator/model-creator-wizard-2-1-catalog.png)
 

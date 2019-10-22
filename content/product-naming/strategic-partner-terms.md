@@ -14,18 +14,30 @@ For more information on strategic partners, see:
 * [Strategic Partners Guide](/partners/index)
 * [Add-on Guides](/addons/index)
 
+### Under Each Term
+
+Details and cross-references where necessary.
+
+{{% alert type="info" %}}
+Guidelines for usage.
+{{% /alert %}}
+
+{{% alert type="success" %}}
+Example usage.
+{{% /alert %}}
+
 ## Mansystems (Add-ons)
 
 ### ATS Helper
 
 {{% alert type="info" %}}
-Capitalize in all instances (using full name with "ATS").
+Use full name (with "ATS") and capitalize in all instances.
 {{% /alert %}}
 
 ### ATS Recorder
 
 {{% alert type="info" %}}
-Capitalize in all instances (using full name with "ATS").
+Use full name (with "ATS") and capitalize in all instances.
 {{% /alert %}}
 
 ## SAP

@@ -114,8 +114,9 @@ releasenotes:
     - "Studio Pro"
     - "Studio"
     - "Developer Portal"
-    - "Mobile Products"
+    - "App Store"
     - "SDKs"
+    - "Mobile"
     - "Add-ons"
     - "Mendix Beta Features"
 developerportal:
@@ -172,8 +173,8 @@ partners:
     - "IBM"
     - "SAP"
     - "Siemens"
-app-store-items:
-  space: "App Store Items Guide"
+appstore:
+  space: "App Store Guide"
   priority: false
   draft: true
   menu_categories:

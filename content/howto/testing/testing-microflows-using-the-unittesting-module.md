@@ -1,5 +1,5 @@
 ---
-title: "Test Microflows Using the UnitTesting Module"
+title: "Test Microflows Using the Unit Testing Module"
 category: "Testing"
 menu_order: 10
 tags: ["test", "testing", "microflow", "unit testing"]
@@ -7,11 +7,11 @@ tags: ["test", "testing", "microflow", "unit testing"]
 
 ## 1 Introduction
 
-To smarten up your app with business logic you can use microflows. To verify that your microflow works as expected you can create unit tests using the UnitTesting module. The UnitTesting module provides an easy to use interface to manage and run unit tests. The module supports unit tests that are created using microflows and unit tests that are created using JUnit.
+To smarten up your app with business logic you can use microflows. To verify that your microflow works as expected you can create unit tests using the Unit Testing module. The Unit Testing module provides an easy to use interface to manage and run unit tests. The module supports unit tests that are created using microflows and unit tests that are created using JUnit.
 
 **This how-to will teach you how to do the following:**
 
-* Set up the UnitTesting module
+* Set up the Unit Testing module
 * Create a microflow unit test
 
 ## 2 Preparation
@@ -19,23 +19,23 @@ To smarten up your app with business logic you can use microflows. To verify tha
 Before you can start with this how-to, make sure you have completed the following prerequisites:
 
 * Download [Mendix Studio Pro](https://appstore.home.mendix.com/link/modelers/)
-* Review the App Store items used in this how-to:
+* Review the App Store components used in this how-to:
 
     | App Store Item | Version Used in This How-to |
     | --- | --- |
-    | [UnitTesting](https://appstore.home.mendix.com/link/app/390/) | 8.0.0 |
+    | [Unit Testing](https://appstore.home.mendix.com/link/app/390/) | 8.0.0 |
     | [Community Commons Function Library](https://appstore.home.mendix.com/link/app/170/) | 8.1.0 |
     | [ObjectHandling](https://appstore.home.mendix.com/link/app/37114/) | 3.0.0 |
 
-	{{% alert type="warning" %}}All the images, names, and steps in this how-to are based on the App Store item versions listed above. When using later versions of these App Store items, images and/or names on your screen may be different than what is used in this how-to.
+	{{% alert type="warning" %}}All the images, names, and steps in this how-to are based on the App Store component versions listed above. When using later versions of these App Store components, images and/or names on your screen may be different than what is used in this how-to.
 	{{% /alert %}}
 
-## 3 The UnitTesting Module
+## 3 The Unit Testing Module
 
 In this chapter you will set up the unit testing module and run the example tests.
 
 1. Create a new project.
-2. Download the [UnitTesting module](https://appstore.home.mendix.com/link/app/390/).
+2. Download the [Unit Testing module](https://appstore.home.mendix.com/link/app/390/).
 3. Download the [Community Commons Function Library module](https://appstore.home.mendix.com/link/app/170/).
 4. Download the [ObjectHandling module](https://appstore.home.mendix.com/link/app/37114/).
 5.  Open the **Settings** of the project:
@@ -47,7 +47,7 @@ In this chapter you will set up the unit testing module and run the example test
 
 	![](attachments/18448633/18580370.png)
 
-8.  Select the **Startup** microflow from **UnitTesting** > **USE ME** > **Microflows**:
+8.  Select the **Startup** microflow from **Unit Testing** > **USE ME** > **Microflows**:
 
 	![](attachments/18448633/18580369.png)
 
@@ -71,17 +71,17 @@ In this chapter you will set up the unit testing module and run the example test
 
 	On the left side of the page, two buttons are shown. When you click **Run all module tests**, all the unit tests are executed (with check mark icons). When you click **Reset all tests**, the status of the tests change to not executed (with question mark icons).
 
-	Beneath these buttons, the modules that contain unit tests are shown. To begin with and in this scenario, **UnitTesting** is the only module that contains unit tests. When you click a module, all the unit tests of the module are shown.
+	Beneath these buttons, the modules that contain unit tests are shown. To begin with and in this scenario, **Unit Testing** is the only module that contains unit tests. When you click a module, all the unit tests of the module are shown.
 
 	If you want to save all the changes made in the microflow to the database, you need to clear the **Rollback microflow tests after execution** box. Keep the box checked if you want to roll back all the changes.
 
-	On the right side of the page, the unit tests of the selected module are shown. In this scenario, five main unit tests are shown. When you click **Run module tests**, all the unit tests are executed. When you click **Run test**next to a unit test, only that unit test is executed.
+	On the right side of the page, the unit tests of the selected module are shown. In this scenario, five main unit tests are shown. When you click **Run module tests**, all the unit tests are executed. When you click **Run test** next to a unit test, only that unit test is executed.
 
 18. Click **Run Test** for **UnitTesting.Test_ValidUnitTest**. The color of the test case changes to red if failed and to green if passed:
 
 	![](attachments/18448633/18580358.png)
 
-19. Click **Details** for UnitTesting.TestValidUnitTest to see the relevant details of the test case:
+19. Click **Details** for Unit Testing.TestValidUnitTest to see the relevant details of the test case:
 
 	![](attachments/18448633/18580340.png)
   
@@ -159,7 +159,7 @@ To create the microflow, follow these steps:
 19. Verify the **Rollback microflow tests after execution** box is checked.
 20. Click **Run all module tests**. All the test cases should pass.
 
-Congratulations! You created your first unit tests using the UnitTesting module.
+Congratulations! You created your first unit tests using the Unit Testing module.
 
 {{% alert type="info" %}}
 It is possible to create a "Setup" and "TearDown" microflow per module. The "Setup" microflow is invoked once before each test run, and the "TearDown" microflow is invoked once after each test run (regardless of whether the test run consists of one or multiple unit tests).

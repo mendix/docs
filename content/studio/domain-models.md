@@ -15,24 +15,24 @@ Each module has its own *domain model*. The domain model is a data model that de
 
 The domain model in Studio consists of the following:
 
-* [Entities](#entity)
+* [Entities](#entity-types)
 * [Associations](domain-models-association-properties) 
 
-Let us say you have a collection of CDs like the one in the table below.
+Let us say you have a collection of CDs like the one in the table below:
 
 | Title                           | Artist                   |
 | ------------------------------- | ------------------------ |
 | How to Dismantle an Atomic Bomb | U2                       |
 | Exodus                          | Bob Marley & The Wailers |
 
-The rows in the table are CDs. The type of the two rows is "CD" and this is the entity name. A specific CD like "How to Dismantle an Atomic Bomb" of the band U2 is called an object of the "CD" entity. Characteristics like the "Title" and "Artist" are called attributes.
+The rows in the table are CDs. So, *CD* is the *entity* name. A specific CD like "How to Dismantle an Atomic Bomb" of the band U2 is called an *object* of the *CD* entity. Characteristics like the "Title" and "Artist" are called *attributes*.
 
 To view the **Domain Models** of your app in Studio, click the **Domain Models** icon in the left menu bar of Studio.
 
 {{% image_container width="350" %}}![](attachments/domain-models/domain-model.png)
 {{% /image_container %}}
 
-After opening a domain model, you will see an overview of all the entities, attribute, and associations of the entities. The complexity of your domain model depends on the complexity of your app.
+After opening a domain model, you will see an overview of all entities, attributes, and associations. The complexity of your domain model depends on the complexity of your app.
 
 ![](attachments/domain-models/domain-overview.png)
 
@@ -40,21 +40,61 @@ The **Auto Arrange** option in the top-left corner groups and aligns entities by
 
 ## 2 Components 
 
-| Domain model components                                  | Description                                                  | Properties |
-| -------------------------------------------------------- | :----------------------------------------------------------- | ------------------- |
-| Entity<a name="entity"></a>                          | An entity represents a class of real-world objects, such as customers, invoices, work items, etc. <br />If we draw a parallel with databases, the entity is a table. Entities can be of several types. For more information on types of entities, see the [Types of Entities](#entity-types) section below. | Name<br />[Persistablity](/refguide/persistability) |
-| [Attribute](domain-models-attributes) | Attributes are characteristics that describe and/or identify the entity. For example, a *Customer* entity typically has attributes for the name of the customer, an e-mail address, and other personal information. If we draw a parallel with databases, the attribute is a column. | Name<br />Type |
-| [Association](domain-models-association-properties) | An association describes a relation between entities. In the domain model, an association is represented by a line/arrow between two entities. If we draw a parallel with databases, the association is a foreign key. | Name<br />[Multiplicity](domain-models-association-properties#multiplicity)<br />[Delete behavior](domain-models-association-properties#delete-behavior) |
+The domain model can contain the following components:
 
-For examples and more technical details, see [Domain Model](/refguide/domain-model), [Entities](/refguide/entities), [Attributes](/refguide/attributes), and [Associations](/refguide/associations) in the *Studio Pro Guide*. 
+* [Entity](#entity-types) – represents a class of real-world objects. Entities can have attributes:
+ 	* [Attribute](#attributes) – describes and/or identify the entity
+* [Association](#associations) – describes a relation between entities
 
-### 2.1 Types of Entities {#entity-types}
+### 2.1 Entities and Their Types {#entity-types}
+
+An entity represents a class of real-world objects, such as customers, invoices, work items, etc. If we draw a parallel with databases, the entity is a table.
 
 You can add different type of entities to your domain model:
 
 * **Entity** – an entity that can have attributes, associations, and represents a class of real-world objects
 * **Image Entity** – a special type of entity that allows you to store an image. For example, on pages, users will be able  to view and upload images with the help of an image entity
 * **File Entity** – a special type of entity that allows you to store a file. For example, on pages, users will be able to upload and download files (such as, a text document, a pdf, a spreadsheet) with the help of a file entity
+
+### 2.2 Entity Properties
+
+Entities have the following properties:
+
+* **General** properties define the name of the entity and its [persistability](/refguide/persistability):
+
+  * **Name** – defines the name of the entity
+
+  * **Persistable** – defines whether objects of the entity are stored in the database (for more information on persistability, see [Persistability](/refguide/persistability) in *Studio Pro Guide*)
+
+		![General Properties of an Entity](attachments/domain-models/entity-general-properties.png)
+
+*  **Stored Information** properties define whether the information about the entity is stored in the database. If the information is stored, it can be retrieved afterwards and can be used in [page filters](filters). For example, you can add a filter and show only objects that were created by the current user. 
+
+  	You can toggle the following properties: 
+
+  	* **Store 'Created by'** – when enabled, the user who created the entity is stored in the database
+
+  	* **Store 'Creation Date'** – when enabled, the date and time when the entity was created is stored in the database
+
+	* **Store 'Last Changed by'**– when enabled, the user who was the last to make changes to the entity is stored in the database
+
+	* **Store 'Last Changed Date'** – when enabled, the date and time when the entity was last changed is stored in the database
+
+		![Stored Information Properties of an Entity](attachments/domain-models/entity-stored-info.png)
+	
+		{{% alert type="info" %}}You cannot toggle **Stored Information** properties for Image and File entities.{{% /alert %}}
+
+### 2.3 Attributes {#attributes}
+
+Attributes are characteristics that describe and/or identify the entity. For example, a *Customer* entity typically has attributes for the name of the customer, an e-mail address, and other personal information. If we draw a parallel with databases, the attribute is a column. 
+
+For more information on attribute types and their properties, see [Attributes](domain-models-attributes). 
+
+### 2.4 Associations {#associations}
+
+An association describes a relation between entities. In the domain model, an association is represented by a line between two entities. If we draw a parallel with databases, the association is a foreign key. 
+
+For more information on association types and their properties, see [Associations](domain-models-association-properties).  
 
 ## 3 Adding New Entities {#adding-new-entities}
 
@@ -82,7 +122,7 @@ The new entity is added to the domain model.
 
 While adding new entities from the **Toolbox** works for all types of entities, you can use a specific way of adding image and file entities to your domain model.
 
-For example, you have an entity named *Laptop* and you want to be able to show users a specific image depending on the laptop model. In this case, you need to create an image entity (for example, named *Product_Image*). However, to get data and dynamically show the right image per laptop model, the *Product_Image* entity should also have a specific connection (an association) to the *Laptop* entity. For more information on associations and their types, see [Association Properties](domain-models-association-properties). 
+For example, you have an entity named *Laptop* and you want to be able to show users a specific image depending on the laptop model. In this case, you need to create an image entity (for example, named *Product_Image*). However, to get data and dynamically show the right image per laptop model, the *Product_Image* entity should also have a specific connection (an association) to the *Laptop* entity. For more information on associations and their types, see [Associations](domain-models-association-properties). 
 
 To create a new image/file entity with an association automatically, follow the process described below:
 
@@ -90,9 +130,9 @@ To create a new image/file entity with an association automatically, follow the 
 
 2. Click **New attribute** button.
 
-3. In the **Create New Attribute** dialog window, click **Add image or file** in the bottom-right corner:
+3.  In the **Create New Attribute** dialog window, click **Add image or file** in the bottom-right corner:
 
-   ![Add Image or File](attachments/domain-models/add-image-or-file.png)
+    ![Add Image or File](attachments/domain-models/add-image-or-file.png)
 
 4. In the **Image and Files** dialog window, select the type or entity (image or file).
 
@@ -139,7 +179,7 @@ A module name is indicated next to the entity name in brackets.
 
 {{% alert type="info" %}}
 
-If you select the entity from another module, you will create a cross-module association. For more information, see the [Cross-Module Associations](domain-models-association-properties#cross-module-associations) section in *Association Properties*. The entities of the current module are listed first. 
+If you select the entity from another module, you will create a cross-module association. For more information, see the [Cross-Module Associations](domain-models-association-properties#cross-module-associations) section in *Associations*. The entities of the current module are listed first. 
 
 {{% /alert %}}
 
@@ -195,11 +235,11 @@ You can manage the following properties of an association:
 *   **Multiplicity** of the association
 *   The delete behavior of the objects
 
-For more information, see [Association Properties](domain-models-association-properties). 
+For more information, see [Associations](domain-models-association-properties). 
 
 To change the association, click the line in the domain model. The **Properties** tab for the selected entity is displayed automatically. 
 
-If the association type is one-to-many or many-to-many, you can swap direction of it clicking the corresponding icon. For more information, see section [3 Multiplicity](domain-models-association-properties#multiplicity) in *Association Properties*. 
+If the association type is one-to-many or many-to-many, you can swap direction of it clicking the corresponding icon. For more information, see section [3 Multiplicity](domain-models-association-properties#multiplicity) in *Associations*. 
 
 {{% image_container width="350" %}}![](attachments/domain-models/managing-associations.png)
 {{% /image_container %}}
@@ -214,7 +254,6 @@ To delete an entity, attribute, or association, do the following:
 
     {{% image_container width="300" %}}![](attachments/domain-models/deletion.png)
     {{% /image_container %}}
-    
 
 {{% alert type="info" %}}
 
@@ -224,5 +263,5 @@ You cannot delete *Name* and *Size* attributes of image and file entities.
 
 ## 8 Read More
 
-* [Attribute Types](domain-models-attributes)
-* [Association Properties](domain-models-association-properties) 
+* [Attributes](domain-models-attributes)
+* [Associations](domain-models-association-properties) 

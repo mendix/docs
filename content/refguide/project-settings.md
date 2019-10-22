@@ -105,11 +105,11 @@ Mendix believes both algorithms are secure enough to store passwords within Mend
 
 #### 3.9.1 Performance
 
-This performance difference is hardly noticeable to a single user when logging in (the password you enter when logging in is hashed using the selected algorithm), so in general the performance alone is not a reason to choose SSHA256 over BCrypt. This situation can change when dealing with high concurrency of hashing operations. A common example of an area where this occurs is published web services exposing operations that compute quickly, like short-running microflows.
+This performance difference is hardly noticeable to a single user when signing in (the password you enter when signing in is hashed using the selected algorithm), so in general the performance alone is not a reason to choose SSHA256 over BCrypt. This situation can change when dealing with high concurrency of hashing operations. A common example of an area where this occurs is published web services exposing operations that compute quickly, like short-running microflows.
 
 #### 3.9.2 Performance Tests
 
-A (web service) user will log in to execute a web service operation, wait for the operation to finish, and finally get the result back (if any).
+A (web service) user will sign in to execute a web service operation, wait for the operation to finish, and finally get the result back (if any).
 
 Imagine an empty microflow that returns nothing at all exposed as a published web service. We ask one user to execute this operation as many times as he can in one minute (simulated with SoapUI). First we set the hashing algorithm to BCrypt, then we set it to SSHA256. Any extra overhead here (on top of establishing the connection, building the XML message and so forth) is basically the hashing algorithm, as the operation should take near zero milliseconds and there is no result. So that leaves only the login, or, more precisely, the hashing of the password.
 

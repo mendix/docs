@@ -32,7 +32,7 @@ In this section, we will walk through all the steps to configure New Relic so th
 
 The following steps are only relevant for on-premises deployments (skip to [2.2.1 Cloud Foundry](#CloudFoundry) if you are deploying your Mendix application to Cloud Foundry).
 
-1. Log in to New Relic and create a new application:
+1. Sign in to New Relic and create a new application:
 
     ![](attachments/19202674/19398929.png)
 2. Select Java:
@@ -49,7 +49,7 @@ The following steps are only relevant for on-premises deployments (skip to [2.2.
 
 ### <a name="CloudFoundry"></a>3.2.1 Cloud Foundry
 
-Follow these build pack instructions to set up New Relic for Cloud Foundry deployments: [https://github.com/mendix/cf-mendix-buildpack#new-relic](https://github.com/mendix/cf-mendix-buildpack#new-relic).
+Follow these buildpack instructions to set up New Relic for Cloud Foundry deployments: [https://github.com/mendix/cf-mendix-buildpack#new-relic](https://github.com/mendix/cf-mendix-buildpack#new-relic).
 
 ### 3.2.2 On Premise Linux & Windows Service Console
 

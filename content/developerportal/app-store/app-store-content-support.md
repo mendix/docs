@@ -3,7 +3,7 @@ title: "App Store Content Support"
 category: "App Store"
 menu_order: 40
 tags: ["app store", "support", "platform support", "community support"]
-description: "Describes the various levels of support available for using App Store items in your Mendix apps."
+description: "Describes the various levels of support available for using App Store components in your Mendix apps."
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -31,7 +31,7 @@ This means that equal response and resolve times are applicable, and the standar
 Support on content in this category is up to the user or organization providing the content. We recommend contacting the owner of the content in case of questions or issues via the following methods:
 
 * Open an an issue on the GitHub repository associated with the content (for details on GitHub issues, see [Mastering Issues](https://guides.github.com/features/issues/))
-* Contact the owner of the content via the contact details available on the App Store item's detail pages
+* Contact the owner of the content via the contact details available on the App Store component's detail pages
 * Ask a question son the [Mendix Forum](https://mxforum.mendix.com/)
 
 The level of support depends on the availability and effort of the developer and/or the Mendix community.

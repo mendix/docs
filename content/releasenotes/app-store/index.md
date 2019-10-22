@@ -89,8 +89,8 @@ Content that was marked as **Protected** as well as content marked as **Shared w
 #### Improvements
 
 * We created a new App Store menu structure, so it is now easier to navigate through your created content. If you are a [Company Admin](/developerportal/company-app-roles/manage-roles#app-store-manager) with certain permissions, you will see additional menu items to help you manage private and public company content.
-* For App Store administrators, you can now set [content managers](/developerportal/app-store/app-store-overview#cm) who are allowed to manage your company content by marking it as protected.
-* You can now share private App Store content with [external downloaders](/developerportal/app-store/app-store-overview#ext) from other companies.
+* For App Store administrators, you can now set content managers who are allowed to manage your company content by marking it as protected.
+* You can now share private App Store content with external downloaders from other companies.
 
 ### February 15th, 2019
 

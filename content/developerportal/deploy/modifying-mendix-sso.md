@@ -47,7 +47,7 @@ The default Mendix SSO implementation is based on snippets. You can use these sn
 We recommend that you do not modify the version of MendixSSO which is in the App Store modules section of your project. In future, you may wish to import a newer version of the module and this will overwrite any changes you make.
 {{% /alert %}}
 
-The MendixSSO module is written so that you can make a complete copy of the module and use this as the basis of a new administration module.
+The MendixSSO module is written so that you can create a user entity in another module and use this entity to store the user information and as the basis of a new administration module.
 
 #### 2.2.1 Copying the Mendix SSO Module{#copying}
 
@@ -57,25 +57,13 @@ To make a copy of the module, do the following:
 
 2. Copy the **MendixSSOUser** entity from the **MendixSSO** module domain model, to the domain model of your new module. In these examples it is called **CustomMendixSSOUser**.
 
-3. Open the **AccountPasswordData** entity in the **MendixSSO** module domain model and associate it with the **MendixSSOUser** entity in your new module.
+    {{% alert type="info" %}}You can also create an entity from scratch, provided is uses **System.User** as its generalization.{{% /alert %}}
 
-    ![How to create the association from account password to the new MendixSSOUser entity](attachments/modifying-mendix-sso/associate-accountpassworddata.png)
+3. Copy the following microflows from **MendixSSO** to your new module.
 
-4. Copy the entire **Public** folder from **MendixSSO** to your new module. You need to this using copy/paste in the **Project Explorer**.
-
-5. Clear all the errors by doing the following:
-
-    1. Create two new **Module roles**, **Administrator** and **User**.
-
-    2. In the **Entity access** tab of security, select each of the **Module roles** and unselect and reselect the appropriate role.
-
-        ![Deselect and re-select entity access roles](attachments/modifying-mendix-sso/entity-access.png)
-
-    3. For each page, open the page and open and close the **Navigation** property to re-select the allowed roles. (You do not have to change any roles, they are already set correctly)
-
-        ![Deselect and re-select entity access roles](attachments/modifying-mendix-sso/reselect-page-role.png)
-    
-    4. For each microflow, open the microflow and open and close the **Allowed roles** property to re-select the allowed microflow roles.
+    * AfterStartup_MendixSSO
+    * CreateMendixSSOUser
+    * UpdateMendixSSOUser
 
 #### 2.2.2 Configuring the Copied Mendix SSO Module
 
@@ -103,9 +91,11 @@ You need to tell the Mendix SSO Module to use your new entity, instead of the de
 
 #### 2.2.3 Using the Copied Mendix SSO Module
 
-Mendix SSO will now use your new entity to administer the users. You can edit the domain model, the snippets, and the pages to customize your user administration completely, bearing in mind that data which comes from the Mendix ID used by end-users who are using SSO will overwrite any changes you make within your app.
+Mendix SSO will now use your new entity to administer the users. You can edit the domain model and write your own user administration pages and microflows to customize your user administration completely. If you need inspiration or help in designing user administration, you can refer to the default implementation in the Mendix SSO module.
 
-{{% todo %}}[Are there other changes which need to be made - all the user-related microflows, for example, still point to the MendixSSO module and not the new module we have just created.]{{% /todo %}}
+{{% alert type="info" %}}
+Remember that data which comes from the end-user's Mendix ID via SSO (for example, **EmailAddress**) will overwrite any changes you make within your app.
+{{% /alert %}}
 
 ## 3 Tokens
 

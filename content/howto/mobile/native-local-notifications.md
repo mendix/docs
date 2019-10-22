@@ -11,14 +11,13 @@ This how-to will teach you to build local notifications for native applications.
 
 **This how-to will teach you how to do the following:**
 
-[todo: change some of these "understand" and "learn" verbs to more active, 'doing' verbs]
 [todo: aren't these JSactions already included in the make it native template? that means an item below can be deleted]
 
-* Introduce the native notification module to your project 
+* Introduce the native notification module to a Mendix project
 * Configure the native notification module
-* Understand the native notification module's JavaScript actions 
-* Learn the capabilities of the new notification plugin widget for native (is this different than the bullet below?)
-* Build an example app which uses native notifications
+* Build an app which uses native notifications
+* Set up JavaScript actions for the native notification module [todo: if it's already in the product, is it really a "module" or is it better to refer to it as an activity/action?]
+* Learn about the native notification plugin widget for native [todo: it's never referred to again as a plugin widget. We might be able to rewrite this or delete it.]
 
 ## 2 Prerequisites
 
@@ -224,37 +223,28 @@ Start and load the app on your mobile device and tap the button which calls your
 
 ### 3.3 Set an Action for When a Notification is Tapped
 
-In this section you will learn to show a page when a user taps a notification. [TODO: change flow to start with dropping a "notificaitons" activity onto the home page, selecting "open page" on tap action, etc]
+In this section you will learn to show a page when a user taps a notification.
 
-1. Right-click your project module and click  **Add page**.
-2. Click the **Phone (Native)** pane.
-3. Type *NotifPage* into **Page Name**.
-4. Click **Blank** pane on the left and select the **Blank** page template. 
-5. Click **OK** to create your page.
-6. Drag and drop an **Open page button** widget onto your new native page.
-7.  Click your **Home_Native** page:
-
-	![click home page](attachments/native-push/home-native-select.png)
-
-8. Click the **Select** button. Now you have a button which will bring you back to your home screen when you are testing:
-
-	![click home page](attachments/native-push/nav-button.png)
-
-9. Navigate back to your app's home page.
-
-10. Drag and drop a **Notifications** widget onto your native home page. 
+1.  Drag and drop a **Notifications** widget onto your native home page. 
 
 	{{% image_container width="500" %}}![notifications widget](attachments/native-push/notif-widget.png){{% /image_container %}}
 
-11. Double-click the widget.
-12. Name your action *show_page*.
-13. Click **Actions** > **New**. 
-14. Select **On open to** > **Show a Page**.
-15. Click **NotifPage** and click **Select**. Your finished action item should look like this:
+2. Double-click the widget.
+3. Click **Actions** > **New**. 
+4. Name your action *show_page*.
+5. Select **On open to** > **Show a Page**.
+6. Click **New** to make a new page.
+7. Type *NotifPage* into **Page Name**.
+8. Click **Blank** pane on the left and select the **Blank** page template. 
+9. Click **OK** to create your page. 
+10. Drag and drop an **Open page button** widget onto **NotifPage**.
+11. When prompted, click your **Home_Native** page:
 
-	{{% image_container width="500" %}}![notifications widget](attachments/native-push/finished-show-a-page.png){{% /image_container %}}
+	![click home page](attachments/native-push/home-native-select.png)
 
-16. Click the two **OK** buttons until you are back at your home page.
+12. Click the **Select** button. Now you have a button which will bring you back to your home screen when you are testing:
+
+	![click home page](attachments/native-push/nav-button.png)
 
 Navigate back to your **ACT_CreateAndSendNotification** nanoflow. There you will set up the logic for tapping a notification which brings you to a page. This process requires you set up a string variable. However, because this string variable will never be used with other variables — it will only be used for internal notification functionality — you will not set it up by dragging and dropping a create variable activity like you did before. You will set it up with an expression.
 
@@ -427,6 +417,7 @@ Next you will create a workaround which allows data to be passed to pages. First
 	
 	{{% image_container width="500" %}}![guid button](attachments/native-push/pass-guid-button.png){{% /image_container %}}
 	
+
 Now set up the remaining pieces for your data-passing notification: 
 
 1. Create a new blank page named *DetailTestEntity*. 

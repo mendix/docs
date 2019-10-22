@@ -11,13 +11,10 @@ This how-to will teach you to build local notifications for native applications.
 
 **This how-to will teach you how to do the following:**
 
-[todo: aren't these JSactions already included in the make it native template? that means an item below can be deleted]
-
 * Introduce the native notification module to a Mendix project
 * Configure the native notification module
-* Build an app which uses native notifications
-* Set up JavaScript actions for the native notification module [todo: if it's already in the product, is it really a "module" or is it better to refer to it as an activity/action?]
-* Learn about the native notification plugin widget for native [todo: it's never referred to again as a plugin widget. We might be able to rewrite this or delete it.]
+* Build an app which uses the native notifications widget
+* Set up JavaScript actions for native notifications
 
 ## 2 Prerequisites
 
@@ -48,7 +45,7 @@ In the subsections below you will create a project, send a local native notifica
 
 	{{% image_container width="500" %}}![app settings](attachments/native-push/app-settings.png){{% /image_container %}}
 
-6.  Make sure you have a **Native Profile** enabled: [todo:check if this pic is right]
+6.  Make sure you have a **Native phone** profile enabled:
 
 	{{% image_container width="500" %}}![app settings](attachments/native-push/native-profile.png){{% /image_container %}}
 
@@ -278,16 +275,14 @@ Several apps make it so that when user taps a notification, the user is taken to
 
 For example, a user could tap a notification about an entity object. They should be brought to a details page which shows an entity object's details. But in order to make that happen, you must set your notification up to pass that particular entity to its details page.
 
-Every item in [todo: a/the?] Mendix database has an unique ID. If you want to pass an object, you must retrieve its GUID and pass it to your local notification. When the notification is tapped, the widget can use the GUID to retrieve and pass that specific object to the action it is configured with. [todo: check this paragraph — it's complicated]
-
-Currently there is no way for you to use the GUID you passed using the **DisplayNotifcation** JavaScript action in a nanoflow or a page opened from a notification [todo: ask about if this tech will be improved?]. To solve this, you will create a workaround.
+Every entry in the Mendix database has an unique ID. If you want to pass an object, your GetGUID JavaScript action must retrieve that object's GUID and pass it to your local notification. When the notification is tapped, the widget can use the object's GUID to retrieve that object using the GetObjectByGUID JavaScript action. Finally, your object will be passed to the action you specify in your notification.
 
 You will create the following things to send data to pages:
 
 * **Two entities** — *TestEntity* to test how to show particular object, and *Notification* for your workaround
 * **One page** — *DetailTestEntity* which will be shown on tapping a notification
 * **One microflow** — *DS_TestEntity* to create dummy data for testing
-* [todo: One Nanoflow — DS_Notification ??]
+* **Three nanoflows** — *DS_Notification* to create a dummy notification object, *ACT_PassGUIDToNotification* to pass a GUID, and *On_tapNotification* to process data from your notification
 
 To make your two entities, do the following:
 
@@ -332,7 +327,7 @@ To set up your microflow, do the following:
 7. Click **OK**.
 8. Drag and drop a commit object activity onto your microflow.
 9. Double-click your commit object activity.
-10. From the **Object or List** drop-down menu, select **NewTestEntity (NativeMobile.TestEntity**.
+10. From the **Object or List** drop-down menu, select **NewTestEntity (NativeMobile.TestEntity)**.
 11. Click **OK**.
 12. Double-click your end event, make sure its **Type** is **Boolean**, then type *true* into the value field and click **OK**:
 
@@ -358,9 +353,9 @@ To make this microflow run after startup, do the following:
 
 5. Click **OK**
 
-To make your page, do the following: [todo: this page is "OnTap_Page". Is that obeying page name guidelines? Do the other pages (NotifPage) obey these guidelines?]
+To make your page, do the following: 
 
-1. Crete a new blank native page named *OnTap_Page*.
+1. Crete a new blank native page named *DetailTestEntity*.
 2. Drag and drop a data view widget onto your new page.
 3. Double-click your data view widget.
 4. In **Data Source**, click **Entity (path)** > **Select**.
@@ -417,14 +412,6 @@ Next you will create a workaround which allows data to be passed to pages. First
 	
 	{{% image_container width="500" %}}![guid button](attachments/native-push/pass-guid-button.png){{% /image_container %}}
 	
-
-Now set up the remaining pieces for your data-passing notification: 
-
-1. Create a new blank page named *DetailTestEntity*. 
-2. Drag and drop a data view onto this new page. Double-click the data view. 
-3. Confirm **Type** > **Context** is selected, then click **Entity** > **Select**.
-4. Select **TestEntity** as your **Entity (path)**. 
-5. Click **OK**, then click **OK** when prompted about filling the data view. 
 
 Good job! When a user taps a notification from the **Pass GUID to Notification** button, they will now be brought to the **DetailTestEntity** page. Next you will create a nanoflow which receives **notificationEntity** as a parameter, retrieves an object via this parameter, and passes the object to a page.
 

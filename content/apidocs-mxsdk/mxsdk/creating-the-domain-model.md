@@ -171,11 +171,6 @@ const systemUser = workingCopy.model().findEntityByQualifiedName(`Administration
 
 const generalization = domainmodels.Generalization.createIn(customer);
 generalization.generalization = systemUser;
-
-const customer = domainmodels.Entity.createIn(domainModel);
-customer.name = `Customer`;
-customer.location = { x: 100, y: 100 };
-customer.generalization = generalization;
 ```
 
 ### 4.1 Resources

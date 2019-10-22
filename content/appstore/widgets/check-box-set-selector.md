@@ -42,3 +42,7 @@ The [Check Box Set Selector](https://appstore.home.mendix.com/link/app/121/) wid
 * **Attribute** – the attribute that is to be shown
 * **Width** – the width of the column for this display attribute in pixels or percentage
 * **Currency type** – lets you display the attribute as a currency (leave on **None** if not applicable)
+
+## 3 Read More
+
+* [Check Box Set Selector (ATS)](https://docs.mendix.com/addons/ats-addon/rg-one-checkbox-set-selector)

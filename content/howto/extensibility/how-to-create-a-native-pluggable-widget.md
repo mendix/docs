@@ -454,74 +454,87 @@ We want to let the Mendix developer alter the header caption of our widget. We c
 
 ##### Content property
 
-Besides the header caption, we also want the developer to be able to fill content in the group box like building blocks, snippets or other widgets. Go to **src/GroupBox.xml** and add a content property element above the header caption property. Also change the name element from "Group Box" to "Group box" to stay in line with naming of other widgets and remove the "needsEntityContext" attribute from the widget element, since this is no longer necessary. After the changes your file should look like this:
+Besides the header caption, we also want the developer to be able to fill content in the group box like building blocks, snippets or other widgets. Let's create a new property for that:
 
-```xml
-<?xml version="1.0" encoding="utf-8" ?>
-<widget id="mendix.groupbox.GroupBox" pluginWidget="true" offlineCapable="true" supportedPlatform="Native"
-    xmlns="http://www.mendix.com/widget/1.0/"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
-    <name>Group box</name>
-    <description>Widget to group building blocks, snippets or other widgets</description>
-    <icon/>
-    <properties>
-        <propertyGroup caption="General">
-            <property key="content" type="widgets" required="false">
-                <caption>Content</caption>
-                <description>Widgets to place inside</description>
-            </property>
-            <property key="headerCaption" type="string" required="false">
-                <caption>Header caption</caption>
-                <description/>
-            </property>
-        </propertyGroup>
-    </properties>
-</widget>
-```
+1. Open **src/GroupBox.xml**.
+2. Add a content property element above the header caption property. Also change the name element from "Group Box" to "Group box" to stay in line with naming of other widgets and remove the "needsEntityContext" attribute from the widget element, since this is no longer necessary. After the changes your file should look like this:
 
-Save the file, go to **src/GroupBox.tsx** and change the render method as follows:
+   ```xml
+   <?xml version="1.0" encoding="utf-8" ?>
+   <widget id="mendix.groupbox.GroupBox" pluginWidget="true" offlineCapable="true" supportedPlatform="Native"
+       xmlns="http://www.mendix.com/widget/1.0/"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+       <name>Group box</name>
+       <description>Widget to group building blocks, snippets or other widgets</description>
+       <icon/>
+       <properties>
+           <propertyGroup caption="General">
+               <property key="content" type="widgets" required="false">
+                   <caption>Content</caption>
+                   <description>Widgets to place inside</description>
+               </property>
+               <property key="headerCaption" type="string" required="false">
+                   <caption>Header caption</caption>
+                   <description/>
+               </property>
+           </propertyGroup>
+       </properties>
+   </widget>
+   ```
 
-```tsx
-render(): ReactNode {
-  const { content, headerCaption, style } = this.props;
+3. Save the file.
+4. Open **src/GroupBox.tsx**.
+5. Change the **render** method as follows to pass the content (React Native components) to the display component:
 
-  return (
-      <WrappedGroupBox headerCaption={headerCaption} style={style}>
-          {content}
-      </WrappedGroupBox>
-  );
-}
-```
+   ```tsx
+   render(): ReactNode {
+     const { content, headerCaption, style } = this.props;
 
-Save the file, go to **src/components/GroupBox.tsx** and adjust the render method, so that it matches the following:
+     return (
+         <WrappedGroupBox headerCaption={headerCaption} style={style}>
+             {content}
+         </WrappedGroupBox>
+     );
+   }
+   ```
 
-```tsx
-render(): ReactNode {
-  const { children, headerCaption } = this.props;
+6. Save the file.
+7. Open **src/components/GroupBox.tsx**.
+8. Adjust the **render** method to render the content:
 
-  return (
-      <View style={this.styles.container}>
-          <View style={this.styles.header}>
-              <Text style={this.styles.headerContent}>{headerCaption}</Text>
-              <Text style={this.styles.headerContent}>-</Text>
-          </View>
-          <View style={this.styles.content}>
-              {children}
-          </View>
-      </View>
-  );
-}
-```
+   ```tsx
+   render(): ReactNode {
+     const { children, headerCaption } = this.props;
 
-Go back to Mendix Studio Pro and press <kbd>F4</kbd> or select **Project > Synchronize Project Directory** from the topbar menu to bring your application in sync with the changes we made to the **src/GroupBox.xml** file. Update the "Group Box" widget again. A content area will appear in the page editor.
+     return (
+         <View style={this.styles.container}>
+             <View style={this.styles.header}>
+                 <Text style={this.styles.headerContent}>{headerCaption}</Text>
+                 <Text style={this.styles.headerContent}>-</Text>
+             </View>
+             <View style={this.styles.content}>
+                 {children}
+             </View>
+         </View>
+     );
+   }
+   ```
 
-Next, drag a "Call nanoflow button" widget into the content area and create a new nanoflow "ACT_ShowMessage". Double click the button and change the caption to "Show message".
+Let's verify that the new content property works:
 
-Navigate to the nanoflow "ACT_ShowMessage" and drag in a "Show message" activity. Double click the activity and add the text "Hello World!" to the Template. Click the "OK" button.
+1. Go back to Mendix Studio Pro
+2. Press <kbd>F4</kbd> or select **Project > Synchronize Project Directory** from the topbar menu to bring your application in sync with the changes we made to the **src/GroupBox.xml** file.
+3. Update the "Group Box" widget again. A content area will appear in the page editor.
+4. Drag a "Call nanoflow button" widget into the content area.
+5. Create a new nanoflow "ACT_ShowMessage".
+6. Double click the button and change the caption to "Show message".
+7. Navigate to the nanoflow "ACT_ShowMessage".
+8. Drag in a "Show message" activity.
+9. Double click the activity and add the text "Hello World!" to the Template. Click the "OK" button.
+10. ReRun the app locally
+11. Verify with the Make it Native app that your button is inside the group box and is triggering a message popup saying "Hello World!".
 
-Run the app locally and verify that your button is triggering a message popup saying "Hello World!".
-
-It would be nice to hide the content area from the widget completely when there is no content to display.
+It would be nice to hide the content area of the group box completely when there is no content added to the group box in Mendix Studio Pro:
 
 1. Import **Children** in you display component:
 
@@ -547,7 +560,7 @@ It would be nice to hide the content area from the widget completely when there 
    };
    ```
 
-3. Make a call to **renderContent** in the render **render** method:
+3. Make a call to **renderContent** in the **render** method:
 
    ```tsx
    render(): ReactNode {

@@ -1,6 +1,6 @@
 ---
 title: "Function API - Katalon"
-parent: "Function API"
+parent: "ov-function-api"
 menu_order: 3
 ---
 

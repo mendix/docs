@@ -1,5 +1,5 @@
 ---
-title: "Function API"
+title: "Using the Function API"
 parent: "ov"
 menu_order: 5
 ---

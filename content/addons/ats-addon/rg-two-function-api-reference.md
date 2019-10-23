@@ -1,6 +1,6 @@
 ---
 title: "Function API Reference"
-parent: "rg-two-ats"
+parent: "rg-two-function-api"
 ---
 
 ## Categories

@@ -927,7 +927,8 @@ Let's fix the issue by introducing a default style for our container component:
 
 We are close to a fully featured group box. Though there are two more features that would be of high use for a Mendix developer: setting whether the group box should be collapsible and setting the initial state of being collapsed or not.
 
-1. Head to **src/GroupBox.xml** and add a **collapsible** property underneath the **content** property:
+1. Head to **src/GroupBox.xml**.
+2. Add a **collapsible** property underneath the **content** property:
 
    ```xml
    <?xml version="1.0" encoding="utf-8" ?>
@@ -973,7 +974,7 @@ We are close to a fully featured group box. Though there are two more features t
    </widget>
    ```
 
-2. Add a property group **Common** below the **Header** property group and include the system properties **Name** and **Visibility** to improve the properties window even more:
+3. Add a property group **Common** below the **Header** property group and include the system properties **Name** and **Visibility** to improve the properties window even more:
 
    ```xml
    <?xml version="1.0" encoding="utf-8" ?>
@@ -1023,63 +1024,93 @@ We are close to a fully featured group box. Though there are two more features t
    </widget>
    ```
 
-3. Add the image below as the icon for the widget as a finishing touch.
+4. Add the image below as the icon for the widget as a finishing touch.
 
    ![Group box icon](attachments/how-to-create-a-native-pluggable-widget/GroupBox.png)
 
-   You can do so by adding the Base64 representation of this image to the icon element in the xml file:
+   To do so, use the following steps:
 
-   ```xml
-   <?xml version="1.0" encoding="utf-8" ?>
-   <widget id="mendix.groupbox.GroupBox" pluginWidget="true" offlineCapable="true" supportedPlatform="Native"
-    xmlns="http://www.mendix.com/widget/1.0/"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
-    <name>Group box</name>
-    <description>Widget to group building blocks, snippets or other widgets</description>
-    <icon>iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAAHdbkFIAAAAAXNSR0IArs4c6QAA ArVJREFUeAHtWk12gjAQBl4X9Q72PsVFnxufN+ihegOfG18XtfeRO9gVNBMZDPlx gIAQGDcxmczMN99MQohGkc9nt9sVCWVgChNiAAloKbBuOaU9hTBJDPGjKI7HYyyJ 2u/3aZ7nP24y7BIw8AIiUIZO+v2XFnlhGPrdrmqOYC4i80oVGJLY0JodqH0UdUgW 7er30fEN3LGM9c0njZlI45sEjilpEwXqyEpExffT1Vj7AmJ23q6kp1Lp7lko1gxg yaJBva0qTxFUBhCSImv+tYsy6oxfiYwgirw56KeQmpfcBGfetnUBDEv7WRhxYVc5 QMcowH7frR6oAQAdpqfrRWxua+xTrb6VCUcXoVPpuwJzAsBNlHLskguHt+3eNaEc NwDoFBH63mIDgIsqb0+lAT1A753EFxgDYAaYAXUfyMSSWuvr1HeZsf7kGVAPJLXH 55DIkyTZHA6HM/hQl2H17B7SOdhWrwXUVSD9Lu5paDCA9Lc5ksVJvDl/vMqcor56 JFNzjnJs1RrAMdm2OQ9GefFVU751qpoSObfJ5SwnA/oh0+Lg4VDTWnIy8NB6j0KD gWc/C6bHQNPcdc2CzvDoDDAAZoAZYAaYAWaAGVjsiSjreqBhPWZgbgxU9yMYmPpO i2Mzams/HUNctgdB9U49o8AxFCM24zmAM7Ed+j0R/QzV6u+huh9bBehzZt0nK0CP vs29ma5L9dW/e7jmEnuUscZddnC8fQUk8ScARQN9tdKmsE3ZE5eNMMfmPytllIma vHUFlDehjX4PrnnqqVPervfmv30F9BTIVMyQFUDtolMJpCsOrgCKOT4HUAwFLl/8 EmACAq9gb/hcAd4UBm6AKyDwBHrD5wrwpjBwA1wBgSfQGz5XgDeFgRtYfAXwjZBe wfAXTzFmu3XVp4bWh1tjiI0/zIDCwD+0qr6OmQMSvQAAAABJRU5ErkJggg==</icon>
-    <properties>
-        <propertyGroup caption="General">
-            <propertyGroup caption="General">
-                <property key="content" type="widgets" required="false">
-                    <caption>Content</caption>
-                    <description>Widgets to place inside</description>
-                </property>
-                <property key="collapsible" type="enumeration" defaultValue="no">
-                    <caption>Collapsible</caption>
-                    <description></description>
-                    <enumerationValues>
-                        <enumerationValue key="no">No</enumerationValue>
-                        <enumerationValue key="yesStartExpanded">Yes (start expanded)</enumerationValue>
-                        <enumerationValue key="yesStartCollapsed">Yes (start collapsed)</enumerationValue>
-                    </enumerationValues>
-                </property>
-            </propertyGroup>
-            <propertyGroup caption="Header">
-                <property key="headerCaption" type="string" required="false">
-                    <caption>Caption</caption>
-                    <description/>
-                </property>
-                <property key="expandIcon" type="icon" required="false">
-                    <caption>Expand icon</caption>
-                    <description>Icon used to indicate that the group box can be expanded</description>
-                </property>
-                <property key="collapseIcon" type="icon" required="false">
-                    <caption>Collapse icon</caption>
-                    <description>Icon used to indicate that the group box can be collapsed</description>
-                </property>
-            </propertyGroup>
-            <propertyGroup caption="Common">
-                <systemProperty key="Name" />
-                <systemProperty key="Visibility" />
-            </propertyGroup>
-        </propertyGroup>
-    </properties>
-   </widget>
-   ```
+   1. Generate a Base64 representation of the png file:
 
-4. Save the xml file and head over to the display component.
+      - Windows:
 
-5. Let's first add two new props for collapsibility and the initial state of being collapsed or not by adding them to the **GroupBoxProps** interface:
+        1. Open command prompt.
+        2. Change the current working directory to the folder where the "GroupBox.png" is stored.
+        3. Execute the following command to generate the Base64 representation:
+
+           ```cmd
+           certutil -encode GroupBox.png data.b64
+           ```
+
+           The representation can be found in the file "data.b64" that's created in the same folder.
+
+      - Unix:
+
+        1. Open a terminal.
+        2. Change the current working directory to the folder where the "GroupBox.png" is stored.
+        3. Execute the following command to generate the Base64 representation:
+
+           ```shell
+           base64 -i GroupBox.png -o data.b64
+           ```
+
+           The representation can be found in the file "data.b64" that's created in the same folder.
+
+   2. Add the Base64 representation to the icon element in the xml file:
+
+      ```xml
+      <?xml version="1.0" encoding="utf-8" ?>
+      <widget id="mendix.groupbox.GroupBox" pluginWidget="true" offlineCapable="true" supportedPlatform="Native"
+      xmlns="http://www.mendix.com/widget/1.0/"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+      <name>Group box</name>
+      <description>Widget to group building blocks, snippets or other widgets</description>
+      <icon>iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAAHdbkFIAAAAAXNSR0IArs4c6QAA ArVJREFUeAHtWk12gjAQBl4X9Q72PsVFnxufN+ihegOfG18XtfeRO9gVNBMZDPlx gIAQGDcxmczMN99MQohGkc9nt9sVCWVgChNiAAloKbBuOaU9hTBJDPGjKI7HYyyJ 2u/3aZ7nP24y7BIw8AIiUIZO+v2XFnlhGPrdrmqOYC4i80oVGJLY0JodqH0UdUgW 7er30fEN3LGM9c0njZlI45sEjilpEwXqyEpExffT1Vj7AmJ23q6kp1Lp7lko1gxg yaJBva0qTxFUBhCSImv+tYsy6oxfiYwgirw56KeQmpfcBGfetnUBDEv7WRhxYVc5 QMcowH7frR6oAQAdpqfrRWxua+xTrb6VCUcXoVPpuwJzAsBNlHLskguHt+3eNaEc NwDoFBH63mIDgIsqb0+lAT1A753EFxgDYAaYAXUfyMSSWuvr1HeZsf7kGVAPJLXH 55DIkyTZHA6HM/hQl2H17B7SOdhWrwXUVSD9Lu5paDCA9Lc5ksVJvDl/vMqcor56 JFNzjnJs1RrAMdm2OQ9GefFVU751qpoSObfJ5SwnA/oh0+Lg4VDTWnIy8NB6j0KD gWc/C6bHQNPcdc2CzvDoDDAAZoAZYAaYAWaAGVjsiSjreqBhPWZgbgxU9yMYmPpO i2Mzams/HUNctgdB9U49o8AxFCM24zmAM7Ed+j0R/QzV6u+huh9bBehzZt0nK0CP vs29ma5L9dW/e7jmEnuUscZddnC8fQUk8ScARQN9tdKmsE3ZE5eNMMfmPytllIma vHUFlDehjX4PrnnqqVPervfmv30F9BTIVMyQFUDtolMJpCsOrgCKOT4HUAwFLl/8 EmACAq9gb/hcAd4UBm6AKyDwBHrD5wrwpjBwA1wBgSfQGz5XgDeFgRtYfAXwjZBe wfAXTzFmu3XVp4bWh1tjiI0/zIDCwD+0qr6OmQMSvQAAAABJRU5ErkJggg==</icon>
+      <properties>
+          <propertyGroup caption="General">
+              <propertyGroup caption="General">
+                  <property key="content" type="widgets" required="false">
+                      <caption>Content</caption>
+                      <description>Widgets to place inside</description>
+                  </property>
+                  <property key="collapsible" type="enumeration" defaultValue="no">
+                      <caption>Collapsible</caption>
+                      <description></description>
+                      <enumerationValues>
+                          <enumerationValue key="no">No</enumerationValue>
+                          <enumerationValue key="yesStartExpanded">Yes (start expanded)</enumerationValue>
+                          <enumerationValue key="yesStartCollapsed">Yes (start collapsed)</enumerationValue>
+                      </enumerationValues>
+                  </property>
+              </propertyGroup>
+              <propertyGroup caption="Header">
+                  <property key="headerCaption" type="string" required="false">
+                      <caption>Caption</caption>
+                      <description/>
+                  </property>
+                  <property key="expandIcon" type="icon" required="false">
+                      <caption>Expand icon</caption>
+                      <description>Icon used to indicate that the group box can be expanded</description>
+                  </property>
+                  <property key="collapseIcon" type="icon" required="false">
+                      <caption>Collapse icon</caption>
+                      <description>Icon used to indicate that the group box can be collapsed</description>
+                  </property>
+              </propertyGroup>
+              <propertyGroup caption="Common">
+                  <systemProperty key="Name" />
+                  <systemProperty key="Visibility" />
+              </propertyGroup>
+          </propertyGroup>
+      </properties>
+      </widget>
+      ```
+
+[TODO...]
+
+5. Save the xml file and head over to the display component.
+
+6. Let's first add two new props for collapsibility and the initial state of being collapsed or not by adding them to the **GroupBoxProps** interface:
 
    ```tsx
    export interface GroupBoxProps {
@@ -1092,7 +1123,7 @@ We are close to a fully featured group box. Though there are two more features t
    }
    ```
 
-6. Change the initilization of the state, so that the collapsed state starts with the value passed through the **startCollapsed** prop:
+7. Change the initilization of the state, so that the collapsed state starts with the value passed through the **startCollapsed** prop:
 
    ```tsx
    readonly state: GroupBoxState = {

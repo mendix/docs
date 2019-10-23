@@ -141,29 +141,27 @@ To add content to the App Store, follow these steps:
 
 7. <a name="doc-tab"></a>On the **Documentation** tab, you can write or edit the documentation that should accompany your app in the editor. You are only able to edit the documentation of your own and your company's content. Note that this is only applicable when the **Use GitHub README for documentation** check box is not checked.
 
-  * The documentation template includes the following sections that you must fill out in order to submit your content:
-  	* An extended **Description** of the content
-  	* The **Typical usage scenario** for the content
-  	* The **Features and limitations** for the content
-  * These sections are optional:
-  	* Any **Dependencies** (for example, the required Studio Pro version, modules, images, and styles)
-  	* The **Installation** steps and details
-  	* The **Configuration** steps and details
-  	* Any **Known bugs**
-  	* Any **Frequently Asked Questions**
+	* The documentation template includes the following sections that you must fill out in order to submit your content:
+		* An extended **Description** of the content
+		* The **Typical usage scenario** for the content
+		* The **Features and limitations** for the content
+	* These sections are optional:
+		* Any **Dependencies** (for example, the required Studio Pro version, modules, images, and styles)
+		* The **Installation** steps and details
+		* The **Configuration** steps and details
+		* Any **Known bugs**
+		* Any **Frequently Asked Questions**
 
-  {{% image_container width="450" %}}![](attachments/share-app-store-content/add_content_5.png)
-  {{% /image_container %}}
+	{{% image_container width="450" %}}![](attachments/share-app-store-content/add_content_5.png){{% /image_container %}}
 
-  The editor comes with a set of basic formatting tools, such as bold, bullet lists, and URL links.
+	The editor comes with a set of basic formatting tools, such as bold, bullet lists, and URL links.
 
-  You can attach images to your documentation in one of two ways:
+	You can attach images to your documentation in one of two ways:
 
-  * Drag the image from file explorer to the editor (this will upload your image)
-  * Click the Image button in the editor tools and enter a URL which points to an image
-  	
+	* Drag the image from file explorer to the editor (this will upload your image)
+	* Click the Image button in the editor tools and enter a URL which points to an image
 
-  Uploaded images cannot be resized, but linked images can.
+	Uploaded images cannot be resized, but linked images can.
 
 9. Note that there is nothing for you to do on the **Statistics** and **All versions** tabs. The **Statistics** tab will chart the downloads of your content over time. The **All versions** tab will list the various versions of your content that have been updated.
 10. <a name="version-details"></a>In the **Version Details** section on the bottom-right of the screen, do the following:<br />
@@ -176,21 +174,18 @@ To add content to the App Store, follow these steps:
 	* **Mendix EULA** (for more information, see [Mendix Terms of Use](https://www.mendix.com/terms-of-use/))<br />
 * **MIT** (for more information, see [MIT License](https://opensource.org/licenses/MIT))<br />
 	
-	{{% image_container width="300" %}}![](attachments/share-app-store-content/add_content_8.png)
-{{% /image_container %}}
+	{{% image_container width="300" %}}![](attachments/share-app-store-content/add_content_8.png){{% /image_container %}}
 	
 	You can request other license types to be added as **License** options by clicking the **Feedback** button on the right side of the App Store screen.
 11. After entering the information for your content, you can click one of these buttons in the middle of the screen:
 
-	{{% image_container width="300" %}}![](attachments/share-app-store-content/add_content_7.png)
-	{{% /image_container %}}
+	{{% image_container width="300" %}}![](attachments/share-app-store-content/add_content_7.png){{% /image_container %}}
 
 	* Click **Cancel** to cancel your changes to the content information
 	* Click **Delete Draft** to delete the draft of the content information you are working on
 	* Click **Save draft** to save the draft of the content information, which will open the **Draft version** section at the top of the screen:
 
-	{{% image_container width="350" %}}![](attachments/share-app-store-content/add_content_6.png)
-	{{% /image_container %}}
+	{{% image_container width="350" %}}![](attachments/share-app-store-content/add_content_6.png){{% /image_container %}}
 
 	In this section, you can do the following:
 
@@ -220,7 +215,7 @@ To update content that has already been published, follow these steps:
 	* **Patch** – a small change (which will save the content from 6.1.0 to 6.1.1, for example)
 	* **Custom** – your own version number (which allows you to add minor or patch updates to previous major versions, or to skip versions rather than having to increment by 1; note that custom versioning is only available if there has been a version 1.0.0)
 
-	![](attachments/share-app-store-content/update_content_2.png)
+	{{% image_container width="350" %}}![](attachments/share-app-store-content/update_content_2.png){{% /image_container %}}
 	
 	For descriptions of the other fields, see the [version details step above](#version-details).
 

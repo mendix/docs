@@ -21,7 +21,7 @@ The home page of the Mendix App Store presents various content categories:
 Category | Description
 --- | ---
 **Featured** | The most important and useful App Store content as determined by Mendix (think of it as a "staff picks" section). 
-**Connectors**, **Mobile**, **Widgets**, **Modules** | Add-on categories and sub-categories (for example, Internet-of-Things and Authentication). 
+**Connectors**, **Mobile**, **Widgets**, **Modules**, **Themes**, **App Services**, **Add-on Examples**, **Sample Apps** | Add-on categories and sub-categories (for example, **Internet-of-Things** and **Authentication**). 
 **New content** | The most recently uploaded content. 
 **Recent updates** | The most recently updated content. 
 **Most popular** | Content that has been downloaded the most in the past seven days. 
@@ -101,9 +101,7 @@ In the **Additional Info** section, you can see the following information (depen
 
 ### 3.4 Developer Info Section
 
-{{% todo %}}[**UPDATE SCREENSHOT**]{{% /todo %}}
-
-{{% image_container width="300" %}}
+{{% image_container width="350" %}}
 ![](attachments/app-store-overview/content_detail_3.png)
 {{% /image_container %}}
 

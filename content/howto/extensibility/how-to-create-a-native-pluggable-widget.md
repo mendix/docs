@@ -578,9 +578,9 @@ It would be nice to hide the content area of the group box completely when there
 
 #### 3.3.3 Making the widget collapsilble
 
-Now that our widget can contain content, the next challange is to hide this content by making it collapsible.
+Now that our widget can contain content, the next challange is to hide this content by making the group box collapsible.
 
-First we will make the complete header clickable.
+First we will make the complete header clickable:
 
 1. Navigate to the display component (**src/components/GroupBox.tsx**).
 2. Import the React Native components **TouchableOpacity** and **TouchableNativeFeedback**:
@@ -612,7 +612,9 @@ First we will make the complete header clickable.
    };
    ```
 
-4. Change the render method to make use of **renderHeader**:
+   In the method above the **Touchable** constant is a so-called dynamic component. Based on the platform (iOS or Android) on which our app is running, the **Touchable** constant represents either the React Native built-in component **TouchableOpacity** or **TouchableNativeFeedback**. The reason to use different components has to do with achieving different click feedback on both platforms. Clicking on Android causes a so-called ripple effect, whereas on iOS it causes some opacity effect.
+
+4. Change the **render** method to make use of **renderHeader**:
 
    ```tsx
    render(): ReactNode {
@@ -625,7 +627,9 @@ First we will make the complete header clickable.
    }
    ```
 
-5. Reload your test app in the Make it Native app to view the change. Try to click on the header. Note that on Android, the ripple effect is not visible on a black background, so at the moment you can't visually verify yet whether it's clickable.
+5. Make sure all files have been saved.
+6. Reload your test app in the Make it Native app to view the change.
+7. Verify the header is clickable. Note that on Android, the ripple effect is not visible on a black background, so at the moment you can't visually verify yet whether it's clickable.
 
 Let's now make it possible to expand or collapse the group box.
 
@@ -633,11 +637,6 @@ Let's now make it possible to expand or collapse the group box.
 2. Create an **GroupBoxState** interface below the **GroupBoxProps** one:
 
    ```tsx
-   export interface GroupBoxProps {
-     headerCaption?: string;
-     style: CustomStyle[];
-   }
-
    export interface GroupBoxState {
      collapsed: boolean;
    }
@@ -695,7 +694,7 @@ Let's now make it possible to expand or collapse the group box.
    };
    ```
 
-8. Check your changes in the Make it Native app.
+8. Verify in the Make it Native app that you can expand and collapse the group box.
 
 #### 3.3.4 Adding an expand & collapse icon property
 

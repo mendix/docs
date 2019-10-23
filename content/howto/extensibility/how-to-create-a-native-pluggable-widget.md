@@ -927,6 +927,8 @@ Let's fix the issue by introducing a default style for our container component:
 
 We are close to a fully featured group box. Though there are two more features that would be of high use for a Mendix developer: setting whether the group box should be collapsible and setting the initial state of being collapsed or not.
 
+Let's first change the widget property configuration:
+
 1. Head to **src/GroupBox.xml**.
 2. Add a **collapsible** property underneath the **content** property:
 
@@ -1106,11 +1108,12 @@ We are close to a fully featured group box. Though there are two more features t
       </widget>
       ```
 
-[TODO...]
+5. Save the xml file.
 
-5. Save the xml file and head over to the display component.
+Now, let's support the two features with our display component:
 
-6. Let's first add two new props for collapsibility and the initial state of being collapsed or not by adding them to the **GroupBoxProps** interface:
+1. Head over to the display component.
+2. Let's first add two new props for collapsibility and the initial state of being collapsed or not by adding them to the **GroupBoxProps** interface:
 
    ```tsx
    export interface GroupBoxProps {
@@ -1123,7 +1126,7 @@ We are close to a fully featured group box. Though there are two more features t
    }
    ```
 
-7. Change the initilization of the state, so that the collapsed state starts with the value passed through the **startCollapsed** prop:
+3. Change the initilization of the state, so that the collapsed state starts with the value passed through the **startCollapsed** prop:
 
    ```tsx
    readonly state: GroupBoxState = {
@@ -1131,9 +1134,9 @@ We are close to a fully featured group box. Though there are two more features t
     };
    ```
 
-If the group box should not be collapsible at all, we would have to remove the **Touchble** component that wraps the header to prevent toggling the collapsed state. Moreover, we should remove the icons inside the header indicating the group box is collapsible. Let's make those changes.
+If the group box should not be collapsible at all, we would have to remove the **Touchble** component that wraps the header to prevent toggling the collapsed state. Moreover, we should remove the icons inside the header indicating the group box is collapsible. Let's make those changes:
 
-1. Change the **renderHeader** method so that it doesn't render the Touchable component around the header View component:
+1. Change the **renderHeader** method so that it doesn't render the **Touchable** component around the header **View** component:
 
    ```tsx
    private renderHeader = () => {
@@ -1155,7 +1158,7 @@ If the group box should not be collapsible at all, we would have to remove the *
    };
    ```
 
-2. Also prevent the header View component from being rendered at all when the group box isn't collapsible and there is no header caption, because the header would otherwise be visible as an empty block:
+2. Also prevent the header **View** component from being rendered at all when the group box isn't collapsible and there is no header caption, because the header would otherwise be visible as an empty block:
 
    ```tsx
    private renderHeader = () => {
@@ -1217,7 +1220,7 @@ If the group box should not be collapsible at all, we would have to remove the *
    }
    ```
 
-The last thing we need to do is changing the container component so that the properties get passed to the display component.
+The last thing we need to do is change the container component so that the properties get passed to the display component.
 
 1. Navigate to the container component.
 
@@ -1244,6 +1247,11 @@ The last thing we need to do is changing the container component so that the pro
            return <WrappedGroupBox {...props}>{content}</WrappedGroupBox>;
        }
    ```
+
+3. Go to Mendix Studio Pro.
+4. Press <kbd>F4</kbd> or select **Project > Synchronize Project Directory** from the topbar menu to bring your application in sync with the changes we made to the **src/GroupBox.xml** file.
+5. Update the "Group Box" widget.
+6. Verify whether the "Collapsible" property options behave correctly.
 
 #### 3.3.6 Adding a custom default style
 

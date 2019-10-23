@@ -17,7 +17,7 @@ A dialog box opens where you give your test case a name and an optional descript
 
 {{% alert type="info" %}}
 
-Please note that there is an additional switch for **paralell**/**sequential**. This switch is only available for [data driven test cases](rg-two-test-data).
+Please note that there is an additional switch for **paralell**/**sequential**. This switch is only available for [data driven test cases](rg-two-data-driven-testing).
 
 {{% /alert %}}
 
@@ -80,7 +80,7 @@ For more information about the call types of test steps, see [Test Step](rg-two-
 
 ## 4 Test Data
 
-Under the **Test Data** tab, you can set a master dataset for your test case. You can now link the fields of the master dataset to your test steps. Note that the test case runs a separate session for every record in the master dataset. For more information on how to use datasets in your test cases, see [Data Driven Testing](rg-two-test-data).
+Under the **Test Data** tab, you can set a master dataset for your test case. You can now link the fields of the master dataset to your test steps. Note that the test case runs a separate session for every record in the master dataset. For more information on how to use datasets in your test cases, see [Data Driven Testing](rg-two-data-driven-testing).
 
 ## 5 Show Usages
 

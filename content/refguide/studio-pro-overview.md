@@ -86,7 +86,7 @@ Using items in the menu bar of Studio Pro, you can create new projects, deploy a
 | **Previous Error** | Highlights the previous error result in the **Error List** pane and open it in an editor. | <kbd>Shift</kbd> + <kbd>F8</kbd> |
 | **Preferences** | Opens the **Preferences** dialog box, where you can set your general, model, and advanced editing preferences. |  |
 
-### 4.3 View Menu
+### 4.3 View Menu {#view}
 
 | Menu Item | Description | Shortcut Key |
 | --- | --- | --- |

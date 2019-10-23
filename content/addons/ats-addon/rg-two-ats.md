@@ -24,3 +24,5 @@ These are the main documents in this category:
 * [Recorder](rg-two-recorder)
 * [ATS Helper](rg-two-ats-helper)
 * [Selectors](rg-two-selectors)
+* [Function API](rg-two-function-api)
+* [Function API - Reference](rg-two-function-api-reference)

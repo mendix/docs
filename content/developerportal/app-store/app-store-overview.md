@@ -101,9 +101,7 @@ In the **Additional Info** section, you can see the following information (depen
 
 ### 3.4 Developer Info Section
 
-{{% todo %}}[**UPDATE SCREENSHOT**]{{% /todo %}}
-
-{{% image_container width="300" %}}
+{{% image_container width="350" %}}
 ![](attachments/app-store-overview/content_detail_3.png)
 {{% /image_container %}}
 

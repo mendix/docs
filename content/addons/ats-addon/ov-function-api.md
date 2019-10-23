@@ -6,13 +6,13 @@ menu_order: 5
 
 ## 1 Introduction
 
-Some ATS users prefer to use code when writing tests over no-code or graphical solutions. Therefore, the simple web interface of the [Function API](ov-function-api) has been designed to be used with any programming language without the need for external dependencies.
+Some ATS users prefer to use code when writing tests over no-code or graphical solutions. Therefore, the simple web interface of the Function API has been designed to be used with any programming language without the need for external dependencies.
 
 The Function API allows you to execute a single ATS function (for example, `Login`) using an existing Selenium session.
 
 This enables using ATS in combination with other testing tools and programming languages, as long as Selenium is used.
 
-This is high-level overview of the Function API. For more details, see [Function API Reference](rg-two-function-api), [Function API for REST](ov-function-api-rest), [Function API for Java](ov-function-api-java), and [Function API for Katalon](ov-function-api-katalon).
+This is high-level overview of the Function API. For more details, see [How to Use the Function API with REST](ov-function-api-rest), [How to Use the Function API with Java](ov-function-api-java), [How to Use the Function API with Katalon](ov-function-api-katalon), [Function API](rg-two-function-api), and [Function API Reference](rg-two-function-api).
 
 ## 2 Usage Scenarios
 
@@ -57,7 +57,7 @@ The API works according to these basic steps:
     }
     ```
 
-For a more detailed example, see [Function API for REST](ov-function-api-rest).
+For a more detailed example, see [How to Use the Function API with REST](ov-function-api-rest).
 
 ## 4 Clients
 

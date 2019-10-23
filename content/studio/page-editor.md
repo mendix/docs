@@ -53,7 +53,7 @@ To open a page in Studio, do the following:
 
 The selected page is opened. 
 
-### 3.2 Creating a New Page {#creating-new-page}
+### 2.2 Creating a New Page {#creating-new-page}
 
 To create a new page in Studio, do the following:
 
@@ -72,7 +72,7 @@ To create a new page in Studio, do the following:
 
 A new page is created.
 
-### 3.3 Deleting a Page
+### 2.3 Deleting a Page
 
 To delete a page in Studio, do the following:
 
@@ -84,7 +84,14 @@ To delete a page in Studio, do the following:
 
 The selected page is deleted.
 
-### 3.4 Viewing Elements On a Page
+### 2.4 Adding Elements on a Page
+
+To add elements on a page, do the following:
+
+1. In **Toolbox**, open the [**Widgets**](#widgets) tab or the [**Building Blocks**](#building-blocks) tab.
+2. Select an element you would like to add, drag and drop this element on a page. 
+
+### 2.5 Viewing Elements On a Page
 
 There are two ways to view an element and its [properties](#page-editor-properties):
 
@@ -95,6 +102,13 @@ The selected element is indicated with an blue border. Additionally, if the elem
 
 {{% image_container width="400" %}}![](attachments/page-editor/input-widget-example.png)
 {{% /image_container %}}
+
+### 2.6 Deleting Elements from a Page
+
+To delete an element from a page, do one of the following:
+
+* Select this element and press <kbd>Delete</kbd>
+* Open the **Properties** tab of this element and this click **Delete** at the bottom of the tab
 
 ## 3 Breadcrumb {#breadcrumb}
 
@@ -127,7 +141,7 @@ You can update widgets in the [Widget Overview](settings-widget-overview).
 
 ### 4.2 Building Blocks {#building-blocks}
 
-Building blocks consist of pre-set widgets that allow you to build a page faster: you only need to drag-and-drop them to the page.  
+Building blocks consist of pre-set widgets that allow you to build a page faster:  
 
 ![](attachments/page-editor/building-blocks.png)
 
@@ -147,8 +161,6 @@ Building blocks of Studio are divided into the following categories:
 | Wizards        | Use these building blocks for inputting information step by step. |
 | Notifications  | Contain building blocks used for different notifications.    |
 | Alignments     | Use these building blocks to align elements.                 |
-
-To insert a building block, drag and drop the selected building block on the page.
 
 If you want to read documentation on a particular building block and to know more about how and when to use it, click the small icon in the top right corner of the building block.
 
@@ -172,6 +184,6 @@ For example, if you click **Navigation Layout**—which is the layout that you c
 {{% image_container width="300" %}}![](attachments/page-editor/navigation-layout.png)
 {{% /image_container %}}
 
-## 7 Read More
+## 6 Read More
 
 * [Data View & List View Properties](page-editor-data-view-list-view)

@@ -522,7 +522,7 @@ Besides the header caption, we also want the developer to be able to fill conten
 
 Let's verify that the new content property works:
 
-1. Go back to Mendix Studio Pro
+1. Go back to Mendix Studio Pro.
 2. Press <kbd>F4</kbd> or select **Project > Synchronize Project Directory** from the topbar menu to bring your application in sync with the changes we made to the **src/GroupBox.xml** file.
 3. Update the "Group Box" widget again. A content area will appear in the page editor.
 4. Drag a "Call nanoflow button" widget into the content area.
@@ -700,7 +700,10 @@ Let's now make it possible to expand or collapse the group box.
 
 The next step is to allow a Mendix developer to use a custom icon in the clickable header.
 
-1. Head to **src/GroupBox.xml** and add two icon properties:
+Let's first define the properties and adjust the display component so that it can render icons:
+
+1. Head to **src/GroupBox.xml**.
+2. Add two icon properties to set an icon for indicating the actions expand and collapse:
 
    ```xml
    <?xml version="1.0" encoding="utf-8" ?>
@@ -733,7 +736,7 @@ The next step is to allow a Mendix developer to use a custom icon in the clickab
    </widget>
    ```
 
-2. Add property groups around the properties to create a more readable properties window in Mendix Studio Pro:
+3. Add property groups around the properties to create a more readable properties window in Mendix Studio Pro:
 
    ```xml
    <?xml version="1.0" encoding="utf-8" ?>
@@ -770,11 +773,20 @@ The next step is to allow a Mendix developer to use a custom icon in the clickab
    </widget>
    ```
 
-3. Save the xml file and head over to the display component.
+4. Save the xml file.
+5. Head over to the display component.
+6. Add two new props for an expand and collapse icon by changing the **GroupBoxProps** interface:
 
-4. Add two new props for an expand and collapse icon by changing the **GroupBoxProps** interface:
+   ```tsx
+   export interface GroupBoxProps {
+     collapseIcon?: ReactNode;
+     expandIcon?: ReactNode;
+     headerCaption?: string;
+     style: CustomStyle[];
+   }
+   ```
 
-5. Create a lambda method **renderIcon** that uses an supplied icon:
+7. Create a lambda method **renderIcon** that uses the **expandIcon** and **collapseIcon** props:
 
    ```tsx
    private renderIcon = (): ReactNode => {
@@ -788,7 +800,7 @@ The next step is to allow a Mendix developer to use a custom icon in the clickab
     };
    ```
 
-6. Change the method **renderHeader** so that it makes use of **renderIcon**:
+8. Change the method **renderHeader** so that it makes use of **renderIcon**:
 
    ```tsx
    private renderHeader = () => {
@@ -805,16 +817,18 @@ The next step is to allow a Mendix developer to use a custom icon in the clickab
    };
    ```
 
-7. Next we have to pass the icons set by the Mendix developer to our display component. If an icon isn't explicitly set, we will pass a default glyph (glyphs are provided by the Mendix client). Go to the container component (**src/GroupBox.tsx**) so we can make the changes.
+Next we have to pass the icons configured by the Mendix developer to our display component. If an icon isn't explicitly configured, we will pass a default glyph (glyphs are provided by the Mendix Client). Let's glue everything together in the container component:
 
-8. Create two constants outside the class that hold the glyph references:
+1. Go to the container component (**src/GroupBox.tsx**).
+
+2. Create two constants outside the class that hold the glyph references:
 
    ```tsx
    const defaultCollapseIconGlyph = "glyphicon-minus";
    const defaultExpandIconGlyph = "glyphicon-plus";
    ```
 
-9. Do the following imports:
+3. Do the following imports:
 
    ```tsx
    import { DynamicValue, NativeIcon, ValueStatus } from "mendix";
@@ -825,42 +839,44 @@ The next step is to allow a Mendix developer to use a custom icon in the clickab
    } from "./components/GroupBox";
    ```
 
-10. Add a lambda method **renderIcon** to the **GroupBox** class:
+4. Add a lambda method **renderIcon** to the **GroupBox** class:
 
-    ```tsx
-    private renderIcon = (toBeRenderedIcon: DynamicValue<NativeIcon> | undefined, glyph: string) => {
-        const nativeIcon: NativeIcon =
-            toBeRenderedIcon && toBeRenderedIcon.status === ValueStatus.Available
-                ? toBeRenderedIcon.value
-                : { type: "glyph", iconClass: glyph };
+   ```tsx
+   private renderIcon = (toBeRenderedIcon: DynamicValue<NativeIcon> | undefined, glyph: string) => {
+       const nativeIcon: NativeIcon =
+           toBeRenderedIcon && toBeRenderedIcon.status === ValueStatus.Available
+               ? toBeRenderedIcon.value
+               : { type: "glyph", iconClass: glyph };
 
-        return <Icon icon={nativeIcon} />;
-    };
-    ```
+       return <Icon icon={nativeIcon} />;
+   };
+   ```
 
-11. Adjust the **render** method so that it makes use of **renderIcon**:
+5. Adjust the **render** method so that it makes use of **renderIcon**:
 
-    ```tsx
-    render(): ReactNode {
-        const { collapseIcon, expandIcon, content, headerCaption, style } = this.props;
+   ```tsx
+   render(): ReactNode {
+       const { collapseIcon, expandIcon, content, headerCaption, style } = this.props;
 
-        const props: WrappedGroupBoxProps = {
-            headerCaption,
-            collapseIcon: this.renderIcon(collapseIcon, defaultCollapseIconGlyph),
-            expandIcon: this.renderIcon(expandIcon, defaultExpandIconGlyph),
-            style
-        };
+       const props: WrappedGroupBoxProps = {
+           headerCaption,
+           collapseIcon: this.renderIcon(collapseIcon, defaultCollapseIconGlyph),
+           expandIcon: this.renderIcon(expandIcon, defaultExpandIconGlyph),
+           style
+       };
 
-        return <WrappedGroupBox {...props}>{content}</WrappedGroupBox>;
-    }
-    ```
+       return <WrappedGroupBox {...props}>{content}</WrappedGroupBox>;
+   }
+   ```
 
-12. Go to Mendix Studio Pro and select for the expand icon property a Euro sign.
-13. Run the app locally and check out your changes.
+6. Go to Mendix Studio Pro.
+7. Press <kbd>F4</kbd> or select **Project > Synchronize Project Directory** from the topbar menu to bring your application in sync with the changes we made to the **src/GroupBox.xml** file.
+8. Update the "Group Box" widget.
+9. Select for the expand icon property a Euro sign.
+10. Run the app locally.
+11. Check out your changes. You should notice that you can't see any icon in the header of the group box. The reason for this is that our background color and text color are both black. Remember that in the **defaultStyle** constant of our display component we defined that text of React Native components that get the **headerContent** style applied to it, should be white. However, we are not explicitly applying this style to our **Icon** component that we pass from our container component to the display component. You could argue to move the creation of the **Icon** component inside your display component, but this will go against the strict seperation of concerns related to the container and display component, since the **Icon** component is Mendix specific. Therefore, it should be part of the container component.
 
-You should notice that you can't see any icon in the header of the group box. The reason for this is that our background color and text color are both black. Remember that in the **defaultStyle** constant of our display component we defined that text of React Native components that get the **headerContent** style applied to it, should be white. However, we are not explicitly applying this style to our **Icon** component that we pass from our container component to the display component. You could argue to move the creation of the **Icon** component inside your display component, but this will go against the strict seperation of concerns related to the container and display component, since the **Icon** component is Mendix specific. Therefore, it should be part of the container component.
-
-Let's fix the issue by introducing a default style for our container component.
+Let's fix the issue by introducing a default style for our container component:
 
 1. Add the following **defaultStyle** constant outside the container component class:
 
@@ -887,6 +903,8 @@ Let's fix the issue by introducing a default style for our container component.
    ```tsx
    private readonly styles = flattenStyles(defaultStyle, this.props.style);
    ```
+
+   The **flattenStyles** function will take the styling of the **defaultStyle** constant as a starting point and will override this with properties supplied in the **style** prop.
 
 4. Adjust the **renderIcon** method, so that it returns an **Icon** component with a color and size defined:
 

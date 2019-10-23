@@ -65,8 +65,7 @@ As an alternative, you can call ATS functions natively in the tool, like normal 
 
 Currently, there are two clients available: for [Java](ov-function-api-java) and [Katalon](ov-function-api-katalon).
 
-## 5 Useful links
+## 5 Read More
 
-* [Function API for REST](ov-function-api-rest)
 * [Function API](rg-two-function-api)
 * [Function API Reference](rg-two-function-api-reference)

@@ -68,7 +68,7 @@ The first thing to do when you want to run a Mendix app on Azure is to create a 
 
 11.  Select **OK.**
 
-12.  Select the **Size** of the instance, by default D1 is selected.
+12. Select the **Size** of the instance, by default D1 is selected.
 
     ![](attachments/azure-deploy/19398854.png)
 
@@ -80,7 +80,7 @@ The first thing to do when you want to run a Mendix app on Azure is to create a 
 
 16.  A summary is shown, click on **Ok** to continue.
 
-17.  The offer detail is shown. Click **Purchase** to create the instance.
+17. The offer detail is shown. Click **Purchase** to create the instance.
 
     ![](attachments/azure-deploy/19398856.png)
 

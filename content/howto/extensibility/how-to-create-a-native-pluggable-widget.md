@@ -1284,7 +1284,7 @@ Although we have an extensively featured group box, we can still improve the sty
 
 ### 3.3.7 Adding a design property
 
-It would be nice to provide the developer with some pre-definded styles that he can use for the group box. Let's create three style classes for the group box based on the brand colors success, warning and danger.
+It would be nice to provide the developer with some pre-definded styles that can be used for the group box. Let's create three style classes for the group box based on the brand colors success, warning and danger.
 
 1. Open **test/MxTestProject/theme/styles/native/app/custom.js** and append the following constants at the end of the file:
 

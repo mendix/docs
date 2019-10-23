@@ -20,7 +20,7 @@ You should use the Function API in the following scenarios:
 * If you need to leverage a third-party tool for your testing purposes (for example, [Mockito](https://site.mockito.org/))
 * If you prefer code to visual tools
 
-## 4 How Does It Work?
+## 3 How Does It Work?
 
 The API works according to these basic steps:
 
@@ -57,7 +57,7 @@ The API works according to these basic steps:
 
 For a more detailed example, see [Function API for REST](ov-function-api-rest).
 
-## 5 Clients
+## 4 Clients
 
 For certain programing languages and testing tools, ATS provides simple-to-use clients. The benefit of using a client is that it eliminates the need to manually send and parse HTTP requests.
 
@@ -65,7 +65,7 @@ As an alternative, you can call ATS functions natively in the tool, like normal 
 
 Currently, there are two clients available: for [Java](ov-function-api-java) and [Katalon](ov-function-api-katalon).
 
-## 6 Useful links
+## 5 Useful links
 
 * [Function API for REST](ov-function-api-rest)
 * [Function API](rg-two-function-api)

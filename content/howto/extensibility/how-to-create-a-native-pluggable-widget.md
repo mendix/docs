@@ -29,7 +29,7 @@ Clone this [code sample](https://github.com/mendix/native-group-box-pluggable-wi
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 - Install Mendix Studio Pro 8.3
-- Install the Mendix Make It Native app on a mobile device or an emulator.
+- Install the Mendix Make it Native app on a mobile device or an emulator.
 - Install Long Term Support (LTS) v10.16.3 or any higher version of [Node.js](https://nodejs.org)
 - Install latest [Yeoman](https://yeoman.io/) with the following command:
 
@@ -136,7 +136,7 @@ To test our group box widget we need to use the widget in the Mendix test projec
 5. Setting up the test project is done. To verify that your Mendix test project is set up correctly, follow these steps:
 
    1. In Mendix Studio Pro run the test project locally.
-   2. Use the Mendix Make It Native app to open the native mobile application to view the sample widget code in action.
+   2. Use the Mendix Make it Native app to open the native mobile application to view the sample widget code in action.
    3. Verify that the homepage of the application contains a yellow text saying "Hello {your name}".
 
 ### 3.3 Building the group box widget
@@ -191,7 +191,7 @@ Let's first define the structure and default style of the group box widget by fo
 
 6. Open your Mendix test project in **test/MxTestProject** in Mendix Studio Pro.
 7. Run the project locally.
-8. Verify with the Make It Native app that your app looks like the image below.
+8. Verify with the Make it Native app that your app looks like the image below.
    [INSERT IMAGE]
 
 The UI of our widget doesn't really look like a group box yet. Let's apply a default style to make it look like one with the following steps:
@@ -247,7 +247,7 @@ The UI of our widget doesn't really look like a group box yet. Let's apply a def
    - [\<Text> style props](https://facebook.github.io/react-native/docs/text-style-props)
 
 3. Make sure all files are saved, so that rebundling takes place and the deployment folder of our Mendix test project gets updated.
-4. Refresh the Mendix app inside the Make It Native app.
+4. Refresh the Mendix app inside the Make it Native app.
 5. Verify that the group box widget looks like the image below.
    [INSERT IMAGE]
 
@@ -301,7 +301,7 @@ For the group box widget it would be nice to have square like corners instead of
    ```
 
 3. Save all files to rebundle and update the Mendix test project.
-4. Refresh the Mendix app inside the Make It Native app.
+4. Refresh the Mendix app inside the Make it Native app.
 5. Verify that the group box widget looks like the image below.
    [INSERT IMAGE]
 
@@ -381,68 +381,76 @@ You might have noticed that we aren't using the **label** property of the **defa
    ```
 
 5. Save all files to rebundle and update the Mendix test project.
-6. Refresh the Mendix app inside the Make It Native app.
+6. Refresh the Mendix app inside the Make it Native app.
 7. Verify that the group box widget still looks the same (image below) after the refactoring.
    [INSERT IMAGE]
 
 #### 3.3.2 Adding widget properties
 
+Now that we have a basic group box, let's give the Mendix developer the possibility to customize it with the help of widget properties: a header caption and content property.
+
 ##### Header caption property
 
-We want to let the Mendix developer alter the header caption of our widget. We can reuse the code and configuration of the sample text property we used earlier to alter the "Hello World" output of the sample widget. Open **src/GroupBox.xml** and alter the sample text property, so that it looks like this:
+We want to let the Mendix developer alter the header caption of our widget. We can reuse the code and configuration of the "default value" property we used earlier to alter the "Hello World" output of the sample widget. Let's refactor this property:
 
-```xml
-<property key="headerCaption" type="string" required="false">
-  <caption>Header caption</caption>
-  <description/>
-</property>
-```
+1. Open **src/GroupBox.xml**.
+2. Alter the sampleText property (the property shown in Mendix Studio Pro as "default value") to make it look like this:
 
-As soon as you save the file, the script running on the background will rebundle the widget and generate new typings in **typings/GroupBoxProps.d.ts** that define the props the container component will receive. Some errors will popup in the container component, because we renamed the property. Open **src/GroupBox.tsx** and change the following line in your render method:
+   ```xml
+   <property key="headerCaption" type="string" required="false">
+     <caption>Header caption</caption>
+     <description/>
+   </property>
+   ```
 
-`sampleText={this.props.sampleText ? this.props.sampleText : "World"}`
+3. Save the file. When you did this, the script running on the background will rebundle the widget and generate new typings in **typings/GroupBoxProps.d.ts** that define the props the container component will receive. Some errors will popup in the container component, because we renamed the property.
+4. Open **src/GroupBox.tsx**.
+5. Change in the **render** method the reference to the non-existent **sampleText** prop to the **headerCaption** prop and rename the **sampleText** prop of the **WrappedGroupBox** component to "headerCaption":
+   [TODO: include complete render method in code snippet]
 
-to:
+   `sampleText={this.props.sampleText ? this.props.sampleText : "World"}`
 
-`headerCaption={this.props.headerCaption}`
+   to:
 
-Our display component doesn't receive a headerCaption prop yet, so open **src/components** and replace:
+   `headerCaption={this.props.headerCaption}`
 
-```tsx
-export interface GroupBoxProps {
-  sampleText?: string;
-  style: CustomStyle[];
-}
-```
+   Note that our display component doesn't receive a **headerCaption** prop yet.
 
-with:
+6. Open **src/components/GroupBox.tsx**.
+7. Rename the **sampleText** property of the **GroupBoxProps** interface to "headerCaption":
 
-```tsx
-export interface GroupBoxProps {
-  headerCaption?: string;
-  style: CustomStyle[];
-}
-```
+   ```tsx
+   export interface GroupBoxProps {
+     headerCaption?: string;
+     style: CustomStyle[];
+   }
+   ```
 
-We still need to use the "headerCaption" prop in the render method to display the actual text in our header. Adjust the render method like this:
+8. We still need to use the newly defined **headerCaption** prop in the **render** method to display the actual text in our header. Adjust the **render** method by using the **headerCaption** prop:
 
-```tsx
-render(): ReactNode {
-  return (
-    <View style={this.styles.container}>
-        <View style={this.styles.header}>
-            <Text style={this.styles.headerContent}>{this.props.headerCaption}</Text>
-            <Text style={this.styles.headerContent}>-</Text>
-        </View>
-        <View style={this.styles.content}>
-            <Text>Content</Text>
-        </View>
-    </View>
-  );
-}
-```
+   ```tsx
+   render(): ReactNode {
+     return (
+       <View style={this.styles.container}>
+           <View style={this.styles.header}>
+               <Text style={this.styles.headerContent}>{this.props.headerCaption}</Text>
+               <Text style={this.styles.headerContent}>-</Text>
+           </View>
+           <View style={this.styles.content}>
+               <Text>Content</Text>
+           </View>
+       </View>
+     );
+   }
+   ```
 
-Go back to Mendix Studio Pro and press <kbd>F4</kbd> or select **Project > Synchronize Project Directory** from the topbar menu to bring your application in sync with the changes we made to the **src/GroupBox.xml** file. You will notice an error occurs telling us to update our widget. Right click on the "Group Box" widget and select "Update widget". Double click the same widget and you will now see our newly created property. Fill in your caption text, click the "OK" button and rerun your app locally to see your caption text in the app.
+9. Go back to Mendix Studio Pro.
+10. Press <kbd>F4</kbd> or select **Project > Synchronize Project Directory** from the topbar menu to bring your application in sync with the changes we made to the **src/GroupBox.xml** file. You will notice an error occurs telling us to update our widget.
+11. Right click on the "Group Box" widget and select "Update widget".
+12. Double click the same widget and you will now see our newly created property shown as "Header caption".
+13. Fill in your caption text and click the "OK" button
+14. Rerun your app locally.
+15. Use the Make it Native app to see your caption text appear in the group box of the app.
 
 ##### Content property
 
@@ -604,7 +612,7 @@ First we will make the complete header clickable.
    }
    ```
 
-5. Reload your test app in the Make It Native app to view the change. Try to click on the header. Note that on Android, the ripple effect is not visible on a black background, so at the moment you can't visually verify yet whether it's clickable.
+5. Reload your test app in the Make it Native app to view the change. Try to click on the header. Note that on Android, the ripple effect is not visible on a black background, so at the moment you can't visually verify yet whether it's clickable.
 
 Let's now make it possible to expand or collapse the group box.
 
@@ -674,7 +682,7 @@ Let's now make it possible to expand or collapse the group box.
    };
    ```
 
-8. Check your changes in the Make It Native app.
+8. Check your changes in the Make it Native app.
 
 #### 3.3.4 Adding an expand & collapse icon property
 
@@ -883,7 +891,7 @@ Let's fix the issue by introducing a default style for our container component.
     };
    ```
 
-5. Check the app in the Make It Native app and you should see the icons in white and the correct size.
+5. Check the app in the Make it Native app and you should see the icons in white and the correct size.
 
 #### 3.3.5 Adding a collapsible property
 
@@ -1203,7 +1211,7 @@ Although we have an extensively featured group box, we can still improve the sty
 
    Note that the name of the constant has to be almost the same as the id of the widget. Only the dots of the widget id need to be underscores. Only with this name the Mendix Client will apply the custom style defined in this constant to the group box widget.
 
-3. Save the file and refresh the your app in the Make It Native app to see your new default style. Also note the ripple effect on the header in Android that was previously not visible.
+3. Save the file and refresh the your app in the Make it Native app to see your new default style. Also note the ripple effect on the header in Android that was previously not visible.
 
 ### 3.3.7 Adding a design property
 
@@ -1264,7 +1272,7 @@ Defining all the different styles inside **test/MxTestProject/theme/styles/nativ
    export * from "./group-box";
    ```
 
-4. Verify the custom warning style is still being applied to the group box widget in the Make It Native app.
+4. Verify the custom warning style is still being applied to the group box widget in the Make it Native app.
 
 The developer needs to know the classnames by hard to apply a certain group box style. By making use of a design property this is no longer necessary.
 
@@ -1303,7 +1311,7 @@ The developer needs to know the classnames by hard to apply a certain group box 
 
 6. Select the success style and hit "OK".
 
-7. Rerun the app locally and verify the new green style in the Make It Native App.
+7. Rerun the app locally and verify the new green style in the Make it Native App.
 
 ## 4 Read More
 

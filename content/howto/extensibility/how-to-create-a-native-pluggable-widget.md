@@ -44,7 +44,10 @@ npm install -g @mendix/generator-widget@8.2.0
 ```
 
 - Install an integrated development environment (IDE) of your choice (Mendix recommends [Microsoft Visual Studio Code](https://code.visualstudio.com/))
-- Have a basic understanding of [TypeScript](https://www.typescriptlang.org/) and [React](https://reactjs.org)
+- Have a basic understanding of:
+  - Command prompt or the Unix command line
+  - [TypeScript](https://www.typescriptlang.org/)
+  - [React](https://reactjs.org)
 
 ## 3 Building a native group box widget
 

@@ -13,7 +13,7 @@ These are the main documents in this category:
 * [Test Case](rg-two-test-case)
 * [Test Step](rg-two-test-step)
 * [Action](rg-two-action)
-* [Test Data](rg-two-test-data)
+* [Test Data](rg-two-data-driven-testing)
 * [Test Suite](rg-two-test-suite)
 * [Test Run](rg-two-test-run)
 * [Repository](rg-two-repository)

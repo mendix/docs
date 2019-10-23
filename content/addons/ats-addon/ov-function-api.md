@@ -6,6 +6,8 @@ menu_order: 5
 
 ## 1 Introduction
 
+Some ATS users prefer to use code when writing tests over no-code or graphical solutions. Therefore, the simple web interface of the [Function API](ov-function-api) has been designed to be used with any programming language without the need for external dependencies.
+
 The Function API allows you to execute a single ATS function (for example, `Login`) using an existing Selenium session.
 
 This enables using ATS in combination with other testing tools and programming languages, as long as Selenium is used.

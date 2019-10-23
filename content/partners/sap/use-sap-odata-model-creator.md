@@ -25,10 +25,14 @@ There are four ways to create the data model:
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Identify the SAP back-end system and OData service you wish to use
-* Create the app in Mendix Studio Pro
+* Create an app in Mendix Studio Pro (version 7.23.6 or above)
 * Obtain authentication credentials, if needed, for the SAP Catalog Service or SAP back-end system you wish to use
 
 {{% alert type="warning" %}}
+OData Model Creator for SAP solutions will produce a module which is in Mendix version 7.23.6. To use the module you will have to create your app in, or upgrade your app to, Mendix version 7.23.6 or above.
+{{% /alert %}}
+
+{{% alert type="info" %}}
 OData Model Creator for SAP solutions only supports SAP OData Gateway Services which use OData version 2 or version 3. OData version 4 is not yet supported.
 {{% /alert %}}
 
@@ -37,7 +41,7 @@ OData Model Creator for SAP solutions only supports SAP OData Gateway Services w
 The OData Model Creator for SAP solutions is an app in the App Store. Search for it in the Mendix App Store, or find it here: [OData Model Creator for SAP solutions](https://sapodatamodelcreator.mendixcloud.com/). 
 
 {{% alert type="info" %}}
-The OData Model Creator for SAP solutions is not currently available in the App Store within . It can only be run in a browser.
+The OData Model Creator for SAP solutions is not currently available in the App Store within Studio Pro. It can only be run in a browser.
 {{% /alert %}}
 
 1. Open the [OData Model Creator for SAP solutions](https://sapodatamodelcreator.mendixcloud.com/).
@@ -266,11 +270,11 @@ Now you have a Mendix module ready to import into your project.
 Do not change the names of entities, attributes, or associations in the Domain Model of the module; they need to match the names used by the SAP OData service for the OData Connector for SAP solutions to work correctly.
 {{% /alert %}}
 
-For more information on how to use the imported data model together with the OData Connector for SAP solutions, see [How to Use the OData Connector for SAP Solutions](/partners/sap/use-sap-odata-connector).
+For more information on how to use the imported data model together with the OData Connector for SAP solutions, see [How to Use the OData Connector for SAP Solutions](use-sap-odata-connector).
 
 ## 5 Read More
 
 * [Use App Store Content](/developerportal/app-store/app-store-content)
-* [Use the OData Connector for SAP Solutions](/partners/sap/use-sap-odata-connector)
+* [Use the OData Connector for SAP Solutions](use-sap-odata-connector)
 * [OData Connector for SAP solutions](https://appstore.home.mendix.com/link/app/74525/Mendix/SAP-OData-Connector)
 * [OData Model Creator for SAP Solutions](https://sapodatamodelcreator.mendixcloud.com/)

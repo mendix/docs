@@ -1,5 +1,5 @@
 ---
-title: "Data Grid Properties"
+title: "Data Grid"
 parent: "page-editor-widgets"
 description: "Describes a data grid in the page editor of Mendix Studio."
 menu_order: 15
@@ -175,7 +175,7 @@ By default, the data grid will be created with a **Search Bar Toggle Button**, *
 
 You can add more buttons to the data grid and configure them for a specific on-click action. 
 
-In the **On Click Action** section, you can select a data grid specific action for a button (for example, deselect all or export to Excel), or a standard one (for example, execute a microflow or save changes). For more information on buttons and standard on click actions, see [Button Widgets](page-editor-widgets-buttons) and [Events Section in Widgets](page-editor-widgets-events-section).
+In the **On Click Action** section, you can select a data grid specific action for a button (for example, deselect all or export to Excel), or a standard one (for example, execute a microflow or save changes). For more information on buttons and standard on click actions, see [Buttons](page-editor-widgets-buttons) and [Events Section](page-editor-widgets-events-section).
 
 Data grid specific actions are the following ones:
 
@@ -232,7 +232,7 @@ The **Events** section properties are described in the table below:
 
 ### 2.7 Design {#grid-design-section}
 
-For information on the **Design** section and its properties, see [Design Section in Widgets](page-editor-widgets-design-section).
+For information on the **Design** section and its properties, see [Design Section](page-editor-widgets-design-section).
 
 ## 3 Read More
 

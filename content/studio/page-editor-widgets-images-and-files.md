@@ -1,5 +1,5 @@
 ---
-title: "Image and File Widgets"
+title: "Images & Files"
 parent: "page-editor-widgets"
 description: "Describes image and file widgets in Mendix Studio."
 menu_order: 30
@@ -63,7 +63,7 @@ You can choose the **On Click Action** in the **Events** section. The **On Click
 
 The static image and the dynamic image share the properties in the **Events** section, except for one property that is [specific for the dynamic image](#events-dynamic-image). 
 
-For more information on the **Events** section for static and dynamic images, see [Events Section in Widgets](page-editor-widgets-events-section).
+For more information on the **Events** section for static and dynamic images, see [Events Section](page-editor-widgets-events-section).
 
 ##### 2.1.2.2 Dynamic Image Specific Property {#events-dynamic-image}
 
@@ -71,7 +71,7 @@ The dynamic image has a specific on-click action **Enlarge on Click**. The full-
 
 #### 2.1.3 Design Section
 
-For information on the **Design** section and its properties, see [Design Section in Widgets](page-editor-widgets-design-section).
+For information on the **Design** section and its properties, see [Design Section](page-editor-widgets-design-section).
 
 ## 3 Image Uploader and File Manager
 
@@ -119,7 +119,7 @@ The **Show Buttons For** option specifies whether end-users are able to upload a
 
 #### 3.1.4 Design Section
 
-For information on the **Design** section and its properties, see [Design Section in Widgets](page-editor-widgets-design-section).
+For information on the **Design** section and its properties, see [Design Section](page-editor-widgets-design-section).
 
 ## 4 Read More
 

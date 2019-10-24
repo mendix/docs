@@ -1,5 +1,5 @@
 ---
-title: "Data View & List View Properties"
+title: "Data View & List View"
 parent: "page-editor-widgets"
 description: "Describes the data view and list view in the page editor of Mendix Studio."
 menu_order: 10
@@ -49,12 +49,12 @@ The data source determines which object will be shown in the data view. For gene
 
 In the **General** section, you can enable/disable the following options:
 
-* **Read-Only** (disabled by default) – when enabled, all [input widgets](page-editor-widgets-input-elements) (for example, a text area, a check box) in the data view will be in read-only mode
+* **Read-Only** (disabled by default) – when enabled, all [input elements](page-editor-widgets-input-elements) (for example, a text area, a check box) in the data view will be in read-only mode
 * **Show Footer** (enabled by default) – a footer is an area at the bottom of the document, usually containing information common for all pages, such as copyrights  
 
 ### 2.3 Design {#design-section-data-view}
 
-For information on the **Design** section and its properties, see [Design Section in Widgets](page-editor-widgets-design-section).
+For information on the **Design** section and its properties, see [Design Section](page-editor-widgets-design-section).
 
 ## 3 List View Properties {#list-view-properties}
 
@@ -83,7 +83,7 @@ The data source determines which objects will be shown in the list view. For gen
 
  You can choose the **On Click Action** in the **Events** section. The **On Click Action** defines what action is performed when the user clicks a row of the list view. 
 
-For more information on the **Events** section and on click actions, see [Events Section in Widgets](page-editor-widgets-events-section). 
+For more information on the **Events** section and on click actions, see [Events Section](page-editor-widgets-events-section). 
 
 ### 3.3 General {#general-section-list-view}
 
@@ -94,11 +94,11 @@ In the **General** section, you can select the number of rows to be displayed on
 {{% image_container width="400" %}}![](attachments/page-editor-data-view-list-view/load-more-list-view.png)
 {{% /image_container %}}
 
-* **Read-Only** (enabled by default) – when enabled, all [input widgets](page-editor-widgets-input-elements) (for example, a text area, a check box) in the list view will be in read-only mode
+* **Read-Only** (enabled by default) – when enabled, all [input elements](page-editor-widgets-input-elements) (for example, a text area, a check box) in the list view will be in read-only mode
 
 ### 3.4 Design Section {#design-section-list-view}
 
-For information on the **Design** section and its properties, see [Design Section in Widgets](page-editor-widgets-design-section).
+For information on the **Design** section and its properties, see [Design Section](page-editor-widgets-design-section).
 
 ## 4 Read More
 

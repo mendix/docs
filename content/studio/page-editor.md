@@ -186,4 +186,4 @@ For example, if you click **Navigation Layout**—which is the layout that you c
 
 ## 6 Read More
 
-* [Data View & List View Properties](page-editor-data-view-list-view)
+* [Widgets](page-editor-widgets)

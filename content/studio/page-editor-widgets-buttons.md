@@ -1,5 +1,5 @@
 ---
-title: "Button Widgets"
+title: "Buttons"
 parent: "page-editor-widgets"
 description: "Describes button widgets in Mendix Studio."
 menu_order: 50
@@ -46,7 +46,7 @@ You can change preset properties, and make the button perform another action.
 
 {{% /alert %}}
 
-For more information on the **Events** section and on click actions, see [Events Section in Widgets](page-editor-widgets-events-section).
+For more information on the **Events** section and on click actions, see [Events Section](page-editor-widgets-events-section).
 
 ### 2.1 Default Properties in the Events Section {#default-properties}
 
@@ -67,7 +67,7 @@ You can find the list of default actions and properties that need to be configur
 | Cancel Changes | Cancel Changes | None                                                         |
 | Close Page     | Close Page     | None                                                         |
 | Sign Out       | Sign Out       | None                                                         |
-| Open Link      | Open Link      | For **Open Link** you need to configure the following properties: <ul><li>**Link Type** (*Default value*: Web)</li><li>**Source** (*Default value*: Use literal value)</li><li>**Url**</li></ul> For more information on these properties, see section [2.2 Open Link Action](page-editor-widgets-events-section#open-link-action) in *Events Section in Widgets*. |
+| Open Link      | Open Link      | For **Open Link** you need to configure the following properties: <ul><li>**Link Type** (*Default value*: Web)</li><li>**Source** (*Default value*: Use literal value)</li><li>**Url**</li></ul> For more information on these properties, see section [2.2 Open Link Action](page-editor-widgets-events-section#open-link-action) in *Events Section*. |
 
 ## 3 General Section
 
@@ -98,7 +98,7 @@ Properties available in the **General** section are described in the table below
 
 ## 4 Design Section
 
-For information on the **Design** section and its properties, see [Design Section in Widgets](page-editor-widgets-design-section).
+For information on the **Design** section and its properties, see [Design Section](page-editor-widgets-design-section).
 
 ## 5 Read More
 

@@ -1,5 +1,5 @@
 ---
-title: "Input Element Widgets"
+title: "Input Elements"
 parent: "page-editor-widgets"
 description: "Describes input widgets in Mendix Studio."
 menu_order: 20
@@ -111,7 +111,7 @@ The **Input Validation** section properties are described in the table below:
 
 ### 3.5 Design Section {#input-elements-design}
 
-For information on the **Design** section and its properties, see [Design Section in Widgets](page-editor-widgets-design-section).
+For information on the **Design** section and its properties, see [Design Section](page-editor-widgets-design-section).
 
 ## 4 Read More
 

@@ -1,5 +1,5 @@
 ---
-title: "Text Widgets"
+title: "Text"
 parent: "page-editor-widgets"
 description: "Describes typography widgets in Mendix Studio."
 menu_order: 40
@@ -31,7 +31,7 @@ To configure **Content** without adding attributes, you can do one of the follow
 
 To configure **Content** and add attributes to it, do the following:
 
-1. Place the widget (**Text**, **Paragraph**, or **Heading**) inside a data container (a list view or a data view) and set an entity for the list view/data view. For more information, see [Data View & List View Properties](page-editor-data-view-list-view). This is necessary to allow attributes of the selected entity to be inserted into the text. 
+1. Place the widget (**Text**, **Paragraph**, or **Heading**) inside a data container (a list view or a data view) and set an entity for the list view/data view. For more information, see [Data View & List View](page-editor-data-view-list-view). This is necessary to allow attributes of the selected entity to be inserted into the text. 
 
 2.  Open **Properties** of the **Text**, **Paragraph**, or **Heading**, delete the default text in the **General** section > **Content** and start typing the message you want to show to the end-user.  
 
@@ -87,7 +87,7 @@ You can put several **Title** widgets on your page, but they will all display th
 
 ## 4 Design Section {#input-elements-design}
 
-For information on the **Design** section and its properties, see [Design Section in Widgets](page-editor-widgets-design-section).
+For information on the **Design** section and its properties, see [Design Section](page-editor-widgets-design-section).
 
 ## 5 Read More
 

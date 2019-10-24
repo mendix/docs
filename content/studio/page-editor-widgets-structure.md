@@ -1,6 +1,6 @@
 ---
 
-title: "Structure Widgets"
+title: "Structure"
 parent: "page-editor-widgets"
 description: "Describes Structure widgets in Mendix Studio."
 menu_order: 60
@@ -72,7 +72,7 @@ The **General** section of the layout grid contains the **Full Width** property.
 
 #### 2.1.3 Design Section
 
-For information on the **Design** section and its properties, see [Design Section in Widgets](page-editor-widgets-design-section).
+For information on the **Design** section and its properties, see [Design Section](page-editor-widgets-design-section).
 
 ### 2.2 Row and Column Properties {#columns-and-rows}
 
@@ -109,7 +109,7 @@ A **Container** is used as a layout element where you can place a widget or a gr
 {{% image_container width="400" %}}![Container Example](attachments/page-editor-widgets-structure/container.png)
 {{% /image_container %}}
 
-Container properties consist of the **Design** section. For information, see [Design Section in Widgets](page-editor-widgets-design-section).
+Container properties consist of the **Design** section. For information, see [Design Section](page-editor-widgets-design-section).
 
 ## 5 Group Box Overview {#group-box-overview}
 
@@ -120,7 +120,7 @@ A group box is used to group widgets together. The group box can be configured t
 
 ### 5.1 Group Box Properties
 
-Group box properties consist of the **General** section and the **Design** section. For information on the **Design** section and its properties, see [Design Section in Widgets](page-editor-widgets-design-section).
+Group box properties consist of the **General** section and the **Design** section. For information on the **Design** section and its properties, see [Design Section](page-editor-widgets-design-section).
 
 Properties available in the **General** section are described in the table below.
 
@@ -155,7 +155,7 @@ In the **General** section, you can configure the following properties:
 
 ### 6.2 Tab Container Design Properties
 
-For information on the **Design** section and its properties, see [Design Section in Widgets](page-editor-widgets-design-section).
+For information on the **Design** section and its properties, see [Design Section](page-editor-widgets-design-section).
 
 ### 6.3 Tab Properties {#tab-properties}
 

@@ -3,7 +3,7 @@ title: "Function API Reference"
 parent: "rg-two-function-api"
 ---
 
-## 1 Introduction
+## Introduction
 
 These are the categories described in this API reference document:
 
@@ -17,7 +17,7 @@ These are the categories described in this API reference document:
 * [Mouse & Keyboard](#MouseNKeyboard)
 * [Generators](#Generators)
 
-## 2 Widget_Set {#Widget_Set}
+## Widget_Set {#Widget_Set}
 
 For a Mendix widget input a selection, checkbox, number, text value or a date.
 
@@ -36,15 +36,15 @@ For a Mendix widget input a selection, checkbox, number, text value or a date.
 
 ### Set Checkbox Set Selector Value {#SetCheckboxSetSelectorValue}
 
-##### Function Key
+#### Function Key
 
 SetCheckboxSetSelectorValue
 
-##### Description
+#### Description
 
 Checks/clears a check box in a set selector by given entity attribute value.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | --- | --- | --- | --- |
@@ -53,42 +53,42 @@ Checks/clears a check box in a set selector by given entity attribute value.
 | Value | Value | String | _Required_ The entitiy attribute value which is used to find the correct row in the widget. |
 | Checked | Checked | Boolean | _Required_ If true then checks the check box/radio button, otherwise clears it. |
 
-##### Return Value
+#### Return Value
 
 None
 
 ### Set Checkbox Set Selector Value (all) {#SetCheckboxSetSelectorValueAll}
 
-##### Function Key
+#### Function Key
 
 SetCheckboxSetSelectorValueAll
 
-##### Description
+#### Description
 
 Checks/clears the 'select all' check box.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | --- | --- | --- | --- |
 | Widget Name | WidgetName | String | _Required_ The name that was assigned in the modeler to that widget, e.g. 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, e.g. 'dataView1 textBox1'. |
 | Checked | Checked | Boolean | _Required_ If true then checks the check box/radio button, otherwise clears it. |
 
-##### Return value
+#### Return value
 
 None
 
 ### Set Checkbox Value<a name="SetCheckboxValue"></a>
 
-##### Function Key
+#### Function Key
 
 SetCheckboxValue
 
-##### Description
+#### Description
 
 Sets the value of a check box.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | --- | --- | --- | --- |
@@ -96,21 +96,21 @@ Sets the value of a check box.
 | Value | Value | Boolean | _Required_ If true then checks the check box/radio button, otherwise clears it. |
 | Search Context | SearchContext | WebElement | _Optional_ Limits the search of the widget to this web element and its children. Can be used to dynamically restrict the search at runtime,  for instance to a certain template grid item. |
 
-##### Return value
+#### Return value
 
 None
 
 ### Set File Manager<a name="SetFileManager"></a>
 
-##### Function Key
+#### Function Key
 
 SetFileManager
 
-##### Description
+#### Description
 
 Set a file manager to the given file path to upload a file.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | --- | --- | --- | --- |
@@ -118,21 +118,21 @@ Set a file manager to the given file path to upload a file.
 | File Path | FilePath | String | _Required_ Full path to the local file, on the client system, to be uploaded. |
 | Search Context | SearchContext | WebElement | _Optional_ Limits the search of the widget to this web element and its children. Can be used to dynamically restrict the search at runtime,  for instance to a certain template grid item. |
 
-##### Return value
+#### Return value
 
 None
 
 ### Set Grid Selector Checkbox Value<a name="SetGridSelectorCheckboxValue"></a>
 
-##### Function Key
+#### Function Key
 
 SetGridSelectorCheckboxValue
 
-##### Description
+#### Description
 
 Checks/clears a check box for a given column and row caption in a grid selector widget.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | --- | --- | --- | --- |
@@ -141,21 +141,21 @@ Checks/clears a check box for a given column and row caption in a grid selector 
 | Row Caption | RowCaption | String | _Required_ Used to identify a row by it's caption in a grid selector widget. The caption should match the label as shown in the browser. |
 | Checked | Checked | Boolean | _Required_ If true then checks the check box/radio button, otherwise clears it. |
 
-##### Return value
+#### Return value
 
 None
 
 ### Set Grid Selector Radiobutton checked<a name="SetGridSelectorRadiobuttonChecked"></a>
 
-##### Function Key
+#### Function Key
 
 SetGridSelectorRadiobuttonChecked
 
-##### Description
+#### Description
 
 Selects the radio button for a given column and row caption in a grid selector widget.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | --- | --- | --- | --- |
@@ -163,21 +163,21 @@ Selects the radio button for a given column and row caption in a grid selector w
 | Column Caption | ColumnCaption | String | _Required_ Used to identify a column by it's caption in a set/grid selector widget. The caption should match the label as shown in the browser. |
 | Row Caption | RowCaption | String | _Required_ Used to identify a row by it's caption in a grid selector widget. The caption should match the label as shown in the browser. |
 
-##### Return value
+#### Return value
 
 None
 
 ### Set Row Cell Value<a name="SetRowCellValue"></a>
 
-##### Function Key
+#### Function Key
 
 SetRowCellValue
 
-##### Description
+#### Description
 
 Sets the cell value for a particular column in a data grid row.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | --- | --- | --- | --- |
@@ -185,21 +185,21 @@ Sets the cell value for a particular column in a data grid row.
 | Value | Value | String | _Required_ The value to set. |
 | Column Name | ColumnName | String | _Required_ Name of the column as assigned in the Mendix Modeler. This is not the caption of the column. |
 
-##### Return value
+#### Return value
 
 None
 
 ### Set Simple Checkbox Set Selector Value<a name="SetSimpleCheckboxSetSelectorValue"></a>
 
-##### Function Key
+#### Function Key
 
 SetSimpleCheckboxSetSelectorValue
 
-##### Description
+#### Description
 
 Checks/clears the check box for a given entity attribute value.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | --- | --- | --- | --- |
@@ -207,24 +207,24 @@ Checks/clears the check box for a given entity attribute value.
 | Value | Value | String | _Required_ The entitiy attribute value which is used to find the correct row in the widget. |
 | Checked | Checked | Boolean | _Required_ If true then checks the check box/radio button, otherwise clears it. |
 
-##### Return value
+#### Return value
 
 None
 
 ### Set Value<a name="SetValue"></a>
 
-##### Function Key
+#### Function Key
 
 SetValue
 
-##### Description
+#### Description
 
 Sets a value to a widget.   
 Supported widgets: text box, text area, drop down, radio button, date picker, reference selector,
 search input text, search input drop down, OnChange Inputbox, CKEditor For Mendix
 BooleanSlider, BootstrapWysiwygEditor (Bootstrap RTE), InputReferenceSelector, RadiobuttonList.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | --- | --- | --- | --- |
@@ -232,23 +232,23 @@ BooleanSlider, BootstrapWysiwygEditor (Bootstrap RTE), InputReferenceSelector, R
 | Value | Value | String | _Required_ The value to set. The date/time format depends on the device type. For mobile devices the date/time should be formatted in the ISO 8601 standard i.e.      'yyyy-MM-ddTHH:mm' for date and time, or     'yyyy-MM-dd' for date, or      'HH:mm' for just the time. Seconds should be omitted. For desktop devices the string should be formatted so as to match the date/time picker format. This format is locale dependent, for example for the US the format is 'MM/dd/yyyy, hh:mm a'. |
 | Search Context | SearchContext | WebElement | _Optional_ Limits the search of the widget to this web element and its children. Can be used to dynamically restrict the search at runtime,  for instance to a certain template grid item. |
 
-##### Return value
+#### Return value
 
 None
 
 ### Set Value (by index)<a name="SetValueByIndex"></a>
 
-##### Function Key
+#### Function Key
 
 SetValueByIndex
 
-##### Description
+#### Description
 
 Sets the value of drop down widgets by index.   
 
 Supported widgets: drop down, reference selector, search input drop down, EnumSelect.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
@@ -256,7 +256,7 @@ Supported widgets: drop down, reference selector, search input drop down, EnumSe
 | Index | Index | Integer | _Required_ Starts from 0, meaning the first element has index 0, the second element has index 1 etc. |
 | Search Context | SearchContext | WebElement | _Optional_ Limits the search of the widget to this web element and its children. Can be used to dynamically restrict the search at runtime,  for instance to a certain template grid item. |
 
-##### Return Value
+#### Return Value
 
 None.
 
@@ -284,68 +284,68 @@ Read text, dates, numbers and selections from Mendix widgets.
 
 ### Get Validation Message {#GetValidationMessage}
 
-##### Function Key
+#### Function Key
 
 GetValidationMessage
 
-##### Description
+#### Description
 
 Returns the validation message of a widget.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
 | Widget Name | WidgetName | String | _Required_ The name that was assigned in the modeler to that widget, e.g. 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, e.g. 'dataView1 textBox1'. |
 | Search Context | SearchContext | WebElement | _Optional_ Limits the search of the widget to this web element and its children. Can be used to dynamically restrict the search at runtime,  for instance to a certain template grid item. |
 
-##### Return value
+#### Return value
 
 _String_
 
 ### Get Value {#GetValue}
 
-##### Function Key
+#### Function Key
 
 GetValue
 
-##### Description
+#### Description
 
 Returns the current value of all supported widgets.
 
 Supported widgets: text box, text area, drop down, radio button, date picker, reference selector, search input text, search input drop down, label, input reference set selector, OnChange Inputbox, BooleanSlider, BootstrapWysiwygEditor (Bootstrap RTE), CKEditor For Mendix, InputReferenceSelector RadiobuttonList, Switch, AutoComplete, Format String, Custom String.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
 | Widget Name | WidgetName | String | _Required_ The name that was assigned in the modeler to that widget, e.g. 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, e.g. 'dataView1 textBox1'. |
 | Search Context | SearchContext | WebElement | _Optional_ Limits the search of the widget to this web element and its children. Can be used to dynamically restrict the search at runtime,  for instance to a certain template grid item. |
 
-##### Return Value
+#### Return Value
 
 _String_ The value to set.
 
 ### Get Active Tab Name<a name="GetActiveTabName"></a>
 
-##### Function Key
+#### Function Key
 
 GetActiveTabName
 
-##### Description
+#### Description
 
 Returns the name of the active tab page as specified in the modeler.
 
 This is not the same as the caption of the tab which is shown in the browser.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
 | Widget Name | WidgetName | String | _Required_ The name that was assigned in the modeler to that widget, e.g. 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, e.g. 'dataView1 textBox1'. |
 | Search Context | SearchContext | String | _Optional_ Limits the search of the widget to this web element and its children. Can be used to dynamically restrict the search at runtime,  for instance to a certain template grid item. |
 
-##### Return value
+#### Return value
 
 _String_ The name of a tab page as it is specified in the modeler.
 
@@ -353,54 +353,54 @@ This is not the same as the caption of the tab which is shown in the browser.
 
 ### Get Item/Row Index<a name="GetItemRowIndex"></a>
 
-##### Function Key
+#### Function Key
 
 GetItemRowIndex
 
-##### Description
+#### Description
 
 Returns the index of a row in a data grid, or an item in a template grid or list view.   
 
 Indexing is 0 based, meaning the first row/item has index 0, the second row/item has index 1 etc.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
 | Item/Row | ItemRow | WebElement | _Required_ A data grid row or an item from a template grid or a list view. Use the 'Find/Assert DataGrid Row', 'Find Item/Row' or 'Find Item/Row (by child element)' to get a reference to the correct web element. |
 
-##### Return Value
+#### Return Value
 
 _Integer_ Starts from 0, meaning the first element has index 0, the second element has index 1 etc.
 
 ### Get Row Cell Value {#GetRowCellValue}
 
-##### Function Key
+#### Function Key
 
 GetRowCellValue
 
-##### Description
+#### Description
 
 Gets the cell value of a data grid row for a given column name.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
 | Datagrid Row | Datagrid Row | WebElement | _Required_ A data grid row as a web element. You can use the functions 'Find/Assert DataGrid Row' and 'Find Item/Row'  to obtain a reference to the correct web element. |
 | Column Name | ColumnName | String | _Required_ Name of the column as assigned in the Mendix Modeler. This is not the caption of the column. |
 
-##### Return Value
+#### Return Value
 
 _String_ The value to set.
 
 ### Get Total Item/Row Count<a name="GetTotalItemRowCount"></a>
 
-##### Function Key
+#### Function Key
 
 GetTotalItemRowCount
 
-##### Description
+#### Description
 
 Returns the total grid count from the paging status.   
 
@@ -408,66 +408,66 @@ Does not work if pagination is not shown.
 
 Supported widgets: data grid, template grid, list view.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
 | Widget Name | WidgetName | String | _Required_ The name that was assigned in the modeler to that widget, e.g. 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, e.g. 'dataView1 textBox1'. |
 | Search Context | SearchContext | WebElement | _Optional_ Limits the search of the widget to this web element and its children. Can be used to dynamically restrict the search at runtime,  for instance to a certain template grid item. |
 
-##### Return Value
+#### Return Value
 
 _Integer_ Number of Rows/Items.
 
 ### Get Visible Item/Row Count {#GetVisibleItemRowCount}
 
-##### Function Key
+#### Function Key
 
 GetVisibleItemRowCount
 
-##### Description
+#### Description
 
 Returns the number of currently visible items/rows in a data grid, template grid or a list view.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
 | Widget Name | WidgetName | String | _Required_ The name that was assigned in the modeler to that widget, e.g. 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, e.g. 'dataView1 textBox1'. |
 | Search Context | SearchContext | WebElement | _Optional_ Limits the search of the widget to this web element and its children. Can be used to dynamically restrict the search at runtime,  for instance to a certain template grid item. |
 
-##### Return Value
+#### Return Value
 
 _Integer_ Number of Rows/Items.
 
 ### Get Checkbox Value {#GetCheckboxValue}
 
-##### Function Key
+#### Function Key
 
 GetCheckboxValue
 
-##### Description
+#### Description
 
 Returns true if the check box is checked, false otherwise.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
 | Widget Name | WidgetName | String | _Required_ The name that was assigned in the modeler to that widget, e.g. 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, e.g. 'dataView1 textBox1'. |
 | Search Context | SearchContext | WebElement | _Optional_ Limits the search of the widget to this web element and its children. Can be used to dynamically restrict the search at runtime,  for instance to a certain template grid item. |
 
-##### Return Value
+#### Return Value
 
 _Boolean_ Value of the checkbox. True if checked, false if not
 
 ### Get Index {#GetIndex}
 
-##### Function Key
+#### Function Key
 
 GetIndex
 
-##### Description
+#### Description
 
 Gets the index of selected values in a drop-down menu.   
 
@@ -475,51 +475,51 @@ The returned index is 0 based, meaning the first element has index 0, the second
 
 Supported widgets: drop down, reference selector, search input drop down.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
 | Widget Name | WidgetName | String | _Required_ The name that was assigned in the modeler to that widget, e.g. 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, e.g. 'dataView1 textBox1'. |
 | Search Context | SearchContext | WebElement | _Optional_ Limits the search of the widget to this web element and its children. Can be used to dynamically restrict the search at runtime,  for instance to a certain template grid item. |
 
-##### Return Value
+#### Return Value
 
 _Integer_ The index of the selected option. Starts with 0 for the first option
 
 ### Groupbox is Collapsed<a name="GroupboxIsCollapsed"></a>
 
-##### Function Key
+#### Function Key
 
 GroupboxIsCollapsed
 
-##### Description
+#### Description
 
 Returns true if the group box is collapsed, false otherwise.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
 | Widget Name | WidgetName | String | _Required_ The name that was assigned in the modeler to that widget, e.g. 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, e.g. 'dataView1 textBox1'. |
 | Search Context | SearchContext | WebElement | _Optional_ Limits the search of the widget to this web element and its children. Can be used to dynamically restrict the search at runtime,  for instance to a certain template grid item. |
 
-##### Return Value
+#### Return Value
 
 _Boolean_ Collapsed state of the GroupBox. True if it is collapsed, false if not.
 
 ### Get Checkbox Set Selector Value {#GetCheckboxSetSelectorValue}
 
-##### Function Key
+#### Function Key
 
 GetCheckboxSetSelectorValue
 
-##### Description
+#### Description
 
 Finds a check box by column caption and cell value and returns its value.   
 
 The returned value is 'true' when the check box is checked, false otherwise.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
@@ -527,68 +527,68 @@ The returned value is 'true' when the check box is checked, false otherwise.
 | Column Caption | ColumnCaption | String | _Required_ Used to identify a column by it's caption in a set/grid selector widget. The caption should match the label as shown in the browser. |
 | Value | Value | String | _Required_ The entitiy attribute value which is used to find the correct row in the widget. |
 
-##### Return Value
+#### Return Value
 
 _Boolean_ If true then checks the check box/radio button, otherwise clears it.
 
 ### Get Checkbox Set Selector Value (all)<a name="GetCheckboxSetSelectorValueAll"></a>
 
-##### Function Key
+#### Function Key
 
 GetCheckboxSetSelectorValueAll
 
-##### Description
+#### Description
 
 Returns the 'select all' check box value.   
 
 The returned value is 'true' when the check box is checked, false otherwise.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
 | Widget Name | WidgetName | String | _Required_ The name that was assigned in the modeler to that widget, e.g. 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, e.g. 'dataView1 textBox1'. |
 
-##### Return Value
+#### Return Value
 
 _Boolean_ If true then checks the check box/radio button, otherwise clears it.
 
 ### Get Simple Checkbox Set Selector Value {#GetSimpleCheckboxSetSelectorValue}
 
-##### Function Key
+#### Function Key
 
 GetSimpleCheckboxSetSelectorValue
 
-##### Description
+#### Description
 
 Returns the current value of a check box in a set selector widget found by entity attribute value.   
 
 The returned value is 'true' when the check box is checked, false otherwise.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
 | Widget Name | WidgetName | String | _Required_ The name that was assigned in the modeler to that widget, e.g. 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, e.g. 'dataView1 textBox1'. |
 | Value | Value | String | _Required_ The entitiy attribute value which is used to find the correct row in the widget. |
 
-##### Return Value
+#### Return Value
 
 _Boolean_ If true then checks the check box/radio button, otherwise clears it.
 
 ### Get Grid Selector Box Value<a name="GetGridSelectorBoxValue"></a>
 
-##### Function Key
+#### Function Key
 
 GetGridSelectorBoxValue
 
-##### Description
+#### Description
 
 Returns the current value of check box/radio button for a given row and column captions in a grid selector.   
 
 The returned value is 'true' if the check box/radio button is checked, false otherwise.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
@@ -596,27 +596,27 @@ The returned value is 'true' if the check box/radio button is checked, false oth
 | Column Caption | ColumnCaption | String | _Required_ Used to identify a column by it's caption in a set/grid selector widget. The caption should match the label as shown in the browser. |
 | Row Caption | RowCaption | String | _Required_ Used to identify a row by it's caption in a grid selector widget. The caption should match the label as shown in the browser. |
 
-##### Return Value
+#### Return Value
 
 _Boolean_ If true then checks the check box/radio button, otherwise clears it.
 
 ### Get Dialog Message Text {#GetDialogMessageText}
 
-##### Function Key
+#### Function Key
 
 GetDialogMessageText
 
-##### Description
+#### Description
 
 Get the text from message and confirmation dialogs.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
 | Dialog | Dialog | WebElement | _Required_ A Mendix dialog as a web element. Use the 'Find/Assert Dialog' to get a reference to the correct web element. |
 
-##### Return Value
+#### Return Value
 
 _String_ The message or confirmation text to be asserted.
 
@@ -638,15 +638,15 @@ Check if a Mendix widget value such as text and selection match an expected valu
 
 ### Assert Validation Message {#AssertValidationMessageNegetable}
 
-##### Function Key
+#### Function Key
 
 AssertValidationMessageNegetable
 
-##### Description
+#### Description
 
 Asserts that the validation message for a certain widget contains the specified text.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
@@ -655,21 +655,21 @@ Asserts that the validation message for a certain widget contains the specified 
 | Search Context | SearchContext | WebElement | _Optional_ Limits the search of the widget to this web element and its children. Can be used to dynamically restrict the search at runtime,  for instance to a certain template grid item. |
 | Negate | NegateParameter | Boolean | _Required_ Negetes the asssert |
 
-##### Return Value
+#### Return Value
 
 None
 
 ### Assert Active Tab Name {#AssertActiveTabNameNegetable}
 
-##### Function Key
+#### Function Key
 
 AssertActiveTabNameNegetable
 
-##### Description
+#### Description
 
 Assert a certain value for the name of the active tab page.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
@@ -678,21 +678,21 @@ Assert a certain value for the name of the active tab page.
 | Search Context | SearchContext | String | _Optional_ Limits the search of the widget to this web element and its children. Can be used to dynamically restrict the search at runtime,  for instance to a certain template grid item. |
 | Negate | NegateParameter | Boolean | _Required_ Negetes the asssert |
 
-##### Return Value
+#### Return Value
 
 None.
 
 ### Assert Checkbox Value {#AssertCheckboxValueNegetable}
 
-##### Function Key
+#### Function Key
 
 AssertCheckboxValueNegetable
 
-##### Description
+#### Description
 
 Assert the value of a check box.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
@@ -701,23 +701,23 @@ Assert the value of a check box.
 | Search Context | SearchContext | WebElement | _Optional_ Limits the search of the widget to this web element and its children. Can be used to dynamically restrict the search at runtime,  for instance to a certain template grid item. |
 | Negate | NegateParameter | Boolean | _Required_ Negetes the asssert |
 
-##### Return Value
+#### Return Value
 
 None.
 
 ### Assert Value<a name="AssertValueNegetable"></a>
 
-##### Function Key
+#### Function Key
 
 AssertValueNegetable
 
-##### Description
+#### Description
 
 Asserts the current value of all supported widgets.   
 
 Supported widgets: text box, text area, drop down, radio button, date picker, reference selector, search input text, search input drop down, label, input reference set selector, OnChange Inputbox, BooleanSlider, BootstrapWysiwygEditor (Bootstrap RTE), CKEditor For Mendix, InputReferenceSelector, RadiobuttonList,  Switch, AutoComplete, Format String, Custom String.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
@@ -726,23 +726,23 @@ Supported widgets: text box, text area, drop down, radio button, date picker, re
 | Search Context | SearchContext | WebElement | _Optional_ Limits the search of the widget to this web element and its children. Can be used to dynamically restrict the search at runtime,  for instance to a certain template grid item. |
 | Negate | NegateParameter | Boolean | _Required_ Negetes the asssert |
 
-##### Return value
+#### Return value
 
 None.
 
 ### Dropdown has Option {#DropdownHasOption}
 
-##### Function Key
+#### Function Key
 
 DropdownHasOption
 
-##### Description
+#### Description
 
 Returns true if the given value is available in a drop down menu.   
 
 Supported widgets: drop down, reference selector, search input drop down.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
@@ -750,21 +750,21 @@ Supported widgets: drop down, reference selector, search input drop down.
 | Value | Value | String | _Required_ The value of the drop down option that you want to assert. This is the text as shown in the browser, not a technical value or id. |
 | Search Context | SearchContext | WebElement | _Optional_ Limits the search of the widget to this web element and its children. Can be used to dynamically restrict the search at runtime,  for instance to a certain template grid item. |
 
-##### Return Value
+#### Return Value
 
 _Boolean_ True if option with specified value is available in dropdown
 
 ### Assert Checkbox Set Selector Value<a name="AssertCheckboxSetSelectorValue"></a>
 
-##### Function Key
+#### Function Key
 
 AssertCheckboxSetSelectorValue
 
-##### Description
+#### Description
 
 Finds a check box by entity attribute value and asserts that the check box is set to a given value.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
@@ -773,21 +773,21 @@ Finds a check box by entity attribute value and asserts that the check box is se
 | Value | Value | String | _Required_ The entitiy attribute value which is used to find the correct row in the widget. |
 | Checked | Checked | Boolean | _Required_ Expected status of a check box/radio button. A checked check box(radio button corresponds to the value 'true'. |
 
-##### Return Value
+#### Return Value
 
 None.
 
 ### Assert Checkbox Set Selector Value {#AssertCheckboxSetSelectorValueNegetable}
 
-##### Function Key
+#### Function Key
 
 AssertCheckboxSetSelectorValueNegetable
 
-##### Description
+#### Description
 
 Finds a check box by entity attribute value and asserts that the check box is set to a given value.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
@@ -797,21 +797,21 @@ Finds a check box by entity attribute value and asserts that the check box is se
 | Checked | Checked | Boolean | _Required_ Expected status of a check box/radio button. A checked check box(radio button corresponds to the value 'true'. |
 | Negate | NegateParameter | Boolean | _Required_ Negetes the asssert |
 
-##### Return Value
+#### Return Value
 
 None.
 
 ### Assert Simple Checkbox Set Selector Value {#AssertSimpleCheckboxSetSelectorValueNegetable}
 
-##### Function Key
+#### Function Key
 
 AssertSimpleCheckboxSetSelectorValueNegetable
 
-##### Description
+#### Description
 
 Asserts that the check box found by given entity attribute value is checked/cleared.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
@@ -820,21 +820,21 @@ Asserts that the check box found by given entity attribute value is checked/clea
 | Checked | Checked | Boolean | _Required_ Expected status of a check box/radio button. A checked check box(radio button corresponds to the value 'true'. |
 | Negate | NegateParameter | Boolean | _Required_ Negetes the asssert |
 
-##### Return Value
+#### Return Value
 
 None.
 
 ### Assert Grid Selector Value {#AssertGridSelectorValueNegetable}
 
-##### Function Key
+#### Function Key
 
 AssertGridSelectorValueNegetable
 
-##### Description
+#### Description
 
 Asserts the value of check box/radio button for a given column and row captions in a grid selector.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
@@ -844,7 +844,7 @@ Asserts the value of check box/radio button for a given column and row captions 
 | Checked | Checked | Boolean | _Required_ Expected status of a check box/radio button. A checked check box(radio button corresponds to the value 'true'. |
 | Negate | NegateParameter | Boolean | _Required_ Negetes the asssert |
 
-##### Return Value
+#### Return Value
 
 None.
 
@@ -869,11 +869,11 @@ Find Mendix widgets and their child elements in the browser window by identifier
 
 ### Find/Assert Widget Child Node {#FindWidgetChildNodeNegetable}
 
-##### Function Key
+#### Function Key
 
 FindWidgetChildNodeNegetable
 
-##### Description
+#### Description
 
 Find/assert a node within a Mendix widget.
 
@@ -881,7 +881,7 @@ Also matches the widget node itself.
 
 The action is limited to search in only within widgets that are visible.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
@@ -890,21 +890,21 @@ The action is limited to search in only within widgets that are visible.
 | Search Context | SearchContext | WebElement | _Optional_ Limits the search of the widget to this web element and its children. Can be used to dynamically restrict the search at runtime,  for instance to a certain template grid item. |
 | Negate | NegateParameter | Boolean | _Required_ Negetes the asssert |
 
-##### Return Value
+#### Return Value
 
 _WebElement_ The child node of the widget as a web element.
 
 ### Find/Assert Menu Item< {#FindAssertMenuItemNegetable}
 
-##### Function Key
+#### Function Key
 
 FindAssertMenuItemNegetable
 
-##### Description
+#### Description
 
 Finds/asserts a visible menu item in a navigation tree, menu bar, and simple menu bar.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
@@ -913,17 +913,17 @@ Finds/asserts a visible menu item in a navigation tree, menu bar, and simple men
 | Search Context | SearchContext | WebElement | _Optional_ Limits the search of the widget to this web element and its children. Can be used to dynamically restrict the search at runtime,  for instance to a certain template grid item. |
 | Negate | NegateParameter | Boolean | _Required_ Negetes the asssert |
 
-##### Return Value
+#### Return Value
 
 _WebElement_ Menu Item as a Web Element.
 
 ### Find/Assert DataGrid Row {#FindAssertDataGridRowNegetabke}
 
-##### Function Key
+#### Function Key
 
 FindAssertDataGridRowNegetabke
 
-##### Description
+#### Description
 
 Finds/asserts a data grid row by a certain column value(s).   
 
@@ -931,7 +931,7 @@ If no column name/value pair is specified then the first row is returned.
 
 When multiple column name/value pairs are specified then a row must match all of them.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
@@ -945,7 +945,7 @@ When multiple column name/value pairs are specified then a row must match all of
 | Search Context | SearchContext | WebElement | _Optional_ Limits the search of the widget to this web element and its children. Can be used to dynamically restrict the search at runtime,  for instance to a certain template grid item. |
 | Negate | NegateParameter | Boolean | _Required_ Negetes the asssert |
 
-##### Return Value
+#### Return Value
 
 _WebElement_ A data grid row as a web element.
 
@@ -955,15 +955,15 @@ to obtain a reference to the correct web element.
 
 ### Find/Assert Item/Row (by index) {#FindItemRowNegetable}
 
-##### Function Key
+#### Function Key
 
 FindItemRowNegetable
 
-##### Description
+#### Description
 
 Finds/asserts a row/item in a data grid, template grid, or list view by index.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
@@ -972,7 +972,7 @@ Finds/asserts a row/item in a data grid, template grid, or list view by index.
 | Search Context | SearchContext | WebElement | _Optional_ Limits the search of the widget to this web element and its children. Can be used to dynamically restrict the search at runtime,  for instance to a certain template grid item. |
 | Negate | NegateParameter | Boolean | _Required_ Negetes the asssert |
 
-##### Return Value
+#### Return Value
 
 _WebElement_ A data grid row or an item from a template grid or a list view.
 
@@ -980,35 +980,35 @@ Use the 'Find/Assert DataGrid Row', 'Find Item/Row' or 'Find Item/Row (by child 
 
 ### Find Item/Row (by child element) {#FindItemRowByChildElement}
 
-##### Function Key
+#### Function Key
 
 FindItemRowByChildElement
 
-##### Description
+#### Description
 
 Returns a row/item of a template grid, data grid or list view, which contains the specified element.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
 | Widget Child Node | Widget Child Node | WebElement | _Required_ The child node of the widget as a web element. |
 
-##### Return Value
+#### Return Value
 
 _WebElement_ Menu Item as a Web Element.
 
 ### Find/Assert Selected Item/Row {#FindSelectedItemRowNegetable}
 
-##### Function Key
+#### Function Key
 
 FindSelectedItemRowNegetable
 
-##### Description
+#### Description
 
 Finds/asserts the first selected item/row as a web element.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
@@ -1016,7 +1016,7 @@ Finds/asserts the first selected item/row as a web element.
 | Search Context | SearchContext | WebElement | _Optional_ Limits the search of the widget to this web element and its children. Can be used to dynamically restrict the search at runtime,  for instance to a certain template grid item. |
 | Negate | NegateParameter | Boolean | _Required_ Negetes the asssert |
 
-##### Return Value
+#### Return Value
 
 _WebElement_ A data grid row or an item from a template grid or a list view.
 
@@ -1024,15 +1024,15 @@ Use the 'Find/Assert DataGrid Row', 'Find Item/Row' or 'Find Item/Row (by child 
 
 ### Find/Assert Widget {#FindAssertWidgetNegetable}
 
-##### Function Key
+#### Function Key
 
 FindAssertWidgetNegetable
 
-##### Description
+#### Description
 
 Finds/asserts a Mendix widget by its given name and optionally value.   
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
@@ -1043,21 +1043,21 @@ Finds/asserts a Mendix widget by its given name and optionally value.
 | Additional Selector | AdditionalSelector | String | _Optional_ Used to additionaly constrain the matching widgets. For example, use \":contains('foo')\" to find all widget that contain the text 'foo'. Check the ATS reference guide for a complete list of available selectors. |
 | Negate | NegateParameter | Boolean | _Required_ Negetes the asssert |
 
-##### Return Value
+#### Return Value
 
 _WebElement_ The Widget as a Web Element.
 
 ### Find/Assert Checkbox Set Selector {#FindCheckboxSetSelectorNegetable}
 
-##### Function Key
+#### Function Key
 
 FindCheckboxSetSelectorNegetable
 
-##### Description
+#### Description
 
 Finds/asserts a check box by a given cell value and column caption. Returns the first match.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
@@ -1066,41 +1066,41 @@ Finds/asserts a check box by a given cell value and column caption. Returns the 
 | Value | Value | String | _Required_ The entitiy attribute value which is used to find the correct row in the widget. |
 | Negate | NegateParameter | Boolean | _Required_ Negetes the asssert |
 
-##### Return Value
+#### Return Value
 
 _WebElement_
 
 ### Find Checkbox Set Selector (all) {#FindCheckboxSetSelectorAll}
 
-##### Function Key
+#### Function Key
 
 FindCheckboxSetSelectorAll
 
-##### Description
+#### Description
 
 Returns the 'select all' checkbox for a set selector widget.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
 | Widget Name | WidgetName | String | _Required_ The name that was assigned in the modeler to that widget, e.g. 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, e.g. 'dataView1 textBox1'. |
 
-##### Return value
+#### Return value
 
 _WebElement_
 
 ### Find/Assert Simple Checkbox Set Selector<a name="FindSimpleCheckboxSetSelectorNegetable"></a>
 
-##### Function Key
+#### Function Key
 
 FindSimpleCheckboxSetSelectorNegetable
 
-##### Description
+#### Description
 
 Finds/asserts the check box by the given entity attribute value.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
@@ -1108,21 +1108,21 @@ Finds/asserts the check box by the given entity attribute value.
 | Value | Value | String | _Required_ The entitiy attribute value which is used to find the correct row in the widget. |
 | Negate | NegateParameter | Boolean | _Required_ Negetes the asssert |
 
-##### Return Value
+#### Return Value
 
 _WebElement_
 
 ### Find/Assert Grid Selector {#FindGridSelectorNegetable}
 
-##### Function Key
+#### Function Key
 
 FindGridSelectorNegetable
 
-##### Description
+#### Description
 
 Finds/asserts a check box/radio button for a given column and row captions in a grid selector widget.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
@@ -1131,23 +1131,23 @@ Finds/asserts a check box/radio button for a given column and row captions in a 
 | Row Caption | RowCaption | String | _Required_ Used to identify a row by it's caption in a grid selector widget. The caption should match the label as shown in the browser. |
 | Negate | NegateParameter | Boolean | _Required_ Negetes the asssert |
 
-##### Return Value
+#### Return Value
 
 _WebElement_
 
 ### Find/Assert Dialog {#FindAssertDialogNegetable}
 
-##### Function Key
+#### Function Key
 
 FindAssertDialogNegetable
 
-##### Description
+#### Description
 
 Finds/asserts a dialog by title or type.   
 
 Supported widgets: window, dialog message, confirmation dialog.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
@@ -1156,7 +1156,7 @@ Supported widgets: window, dialog message, confirmation dialog.
 | Text | DialogText | String | _Optional_ The message or confirmation text to be asserted. |
 | Negate | NegateParameter | Boolean | _Required_ Negetes the asssert |
 
-##### Return Value
+#### Return Value
 
 _WebElement_ A Mendix dialog as a web element.
 
@@ -1190,15 +1190,15 @@ Interact with data grid controls (e.g. search), menu items and group-boxes. Offe
 
 ### Click DataGrid Row {#ClickDataGridRow}
 
-##### Function Key
+#### Function Key
 
 ClickDataGridRow
 
-##### Description
+#### Description
 
 Clicks a data grid row by a certain column value.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
@@ -1208,61 +1208,61 @@ Clicks a data grid row by a certain column value.
 | Doubleclick | Doubleclick | Boolean | _Optional_ If true performs a doubleclick, otherwise does a single click. Defaults to false. |
 | Search Context | SearchContext | WebElement | _Optional_ Limits the search of the widget to this web element and its children. Can be used to dynamically restrict the search at runtime,  for instance to a certain template grid item. |
 
-##### Return Value
+#### Return Value
 
 None
 
 ### Click Dropdown Div Converter dropdown button<a name="ClickDropdownDivConverterDropdownButton"></a>
 
-##### Function Key
+#### Function Key
 
 ClickDropdownDivConverterDropdownButton
 
-##### Description
+#### Description
 
 Clicks the 'drop down div converter' drop down button.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
 | Widget Name | WidgetName | String | _Required_ The name that was assigned in the modeler to that widget, e.g. 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, e.g. 'dataView1 textBox1'. |
 
-##### Return Value
+#### Return Value
 
 None.
 
 ### Click Dropdown Div Converter split button<a name="ClickDropdownDivConverterSplitButton"></a>
 
-##### Function Key
+#### Function Key
 
 ClickDropdownDivConverterSplitButton
 
-##### Description
+#### Description
 
 Clicks the 'drop down div converter' split button.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
 | Widget Name | WidgetName | String | _Required_ The name that was assigned in the modeler to that widget, e.g. 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, e.g. 'dataView1 textBox1'. |
 
-##### Return Value
+#### Return Value
 
 None.
 
 ### Click Menu Item<a name="ClickMenuItem"></a>
 
-##### Function Key
+#### Function Key
 
 ClickMenuItem
 
-##### Description
+#### Description
 
 Clicks a menu item in a navigation tree, menu bar, and simple menu bar.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
@@ -1270,21 +1270,21 @@ Clicks a menu item in a navigation tree, menu bar, and simple menu bar.
 | Caption | Caption | String | _Required_ Caption of the menu item as shown in the browser. |
 | Search Context | SearchContext | WebElement | _Optional_ Limits the search of the widget to this web element and its children. Can be used to dynamically restrict the search at runtime,  for instance to a certain template grid item. |
 
-##### Return Value
+#### Return Value
 
 None.
 
 ### Click Widget {#ClickWidget}
 
-##### Function Key
+#### Function Key
 
 ClickWidget
 
-##### Description
+#### Description
 
 Clicks a Mendix widget (for example, button, link, image) by its name.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
@@ -1292,21 +1292,21 @@ Clicks a Mendix widget (for example, button, link, image) by its name.
 | Doubleclick | Doubleclick | Boolean | _Optional_ If true performs a doubleclick, otherwise does a single click. Defaults to false. |
 | Search Context | SearchContext | WebElement | _Optional_ Limits the search of the widget to this web element and its children. Can be used to dynamically restrict the search at runtime,  for instance to a certain template grid item. |
 
-##### Return Value
+#### Return Value
 
 None.
 
 ### Click Widget Button<a name="ClickWidgetButton"></a>
 
-##### Function Key
+#### Function Key
 
 ClickWidgetButton
 
-##### Description
+#### Description
 
 Clicks on one of the following special widget buttons: refresh, load more, clear search field (list view), go to, add (reference selector).
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
@@ -1314,104 +1314,104 @@ Clicks on one of the following special widget buttons: refresh, load more, clear
 | Button | Button | Enumeration | _Required_ Defines which widget button to click. |
 | Search Context | SearchContext | WebElement | _Optional_ Limits the search of the widget to this web element and its children. Can be used to dynamically restrict the search at runtime,  for instance to a certain template grid item. |
 
-##### Return Value
+#### Return Value
 
 None.
 
 ### Close GroupBox {#CloseGroupBox}
 
-##### Function Key
+#### Function Key
 
 CloseGroupBox
 
-##### Description
+#### Description
 
 Closes a group box.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
 | Widget Name | WidgetName | String | _Required_ The name that was assigned in the modeler to that widget, e.g. 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, e.g. 'dataView1 textBox1'. |
 | Search Context | SearchContext | WebElement | _Optional_ Limits the search of the widget to this web element and its children. Can be used to dynamically restrict the search at runtime,  for instance to a certain template grid item. |
 
-##### Return Value
+#### Return Value
 
 None.
 
 ### Open GroupBox {#OpenGroupBox}
 
-##### Function Key
+#### Function Key
 
 OpenGroupBox
 
-##### Description
+#### Description
 
 Opens a group box.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
 | Widget Name | WidgetName | String | _Required_ The name that was assigned in the modeler to that widget, e.g. 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, e.g. 'dataView1 textBox1'. |
 | Search Context | SearchContext | WebElement | _Optional_ Limits the search of the widget to this web element and its children. Can be used to dynamically restrict the search at runtime,  for instance to a certain template grid item. |
 
-##### Return Value
+#### Return Value
 
 None.
 
 ### Sort DataGrid {#SortDataGrid}
 
-##### Function Key
+#### Function Key
 
 SortDataGrid
 
-##### Description
+#### Description
 
 Sorts a data grid by a given column.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
 | Widget Name | WidgetName | String | _Required_ The name that was assigned in the modeler to that widget, e.g. 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, e.g. 'dataView1 textBox1'. |
 | Column Name | ColumnName | String | _Required_ Name of the column as assigned in the Mendix Modeler. This is not the caption of the column. |
 
-##### Return Value
+#### Return Value
 
 None.
 
 ### Toggle BooleanSlider Value {#ToggleBooleanSliderValue}
 
-##### Function Key
+#### Function Key
 
 ToggleBooleanSliderValue
 
-##### Description
+#### Description
 
 Toggles the value of a Booleanslider.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
 | Widget Name | WidgetName | String | _Required_ The name that was assigned in the modeler to that widget, e.g. 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, e.g. 'dataView1 textBox1'. |
 
-##### Return Value
+#### Return Value
 
 None.
 
 ### Toggle Checkbox Set Selector<a name="ToggleCheckboxSetSelector"></a>
 
-##### Function Key
+#### Function Key
 
 ToggleCheckboxSetSelector
 
-##### Description
+#### Description
 
 Finds a check box by a given entity attribute and inverses the value.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
@@ -1419,62 +1419,62 @@ Finds a check box by a given entity attribute and inverses the value.
 | Column Caption | ColumnCaption | String | _Required_ Used to identify a column by it's caption in a set/grid selector widget. The caption should match the label as shown in the browser. |
 | Value | Value | String | _Required_ The entitiy attribute value which is used to find the correct row in the widget. |
 
-##### Return Value
+#### Return Value
 
 None.
 
 ### Toggle Checkbox Set Selector (all)<a name="ToggleCheckboxSetSelectorAll"></a>
 
-##### Function Key
+#### Function Key
 
 ToggleCheckboxSetSelectorAll
 
-##### Description
+#### Description
 
 Inverses the 'select all' check box.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
 | Widget Name | WidgetName | String | _Required_ The name that was assigned in the modeler to that widget, e.g. 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, e.g. 'dataView1 textBox1'. |
 
-##### Return Value
+#### Return Value
 
 None
 
 ### Toggle Checkbox Value<a name="ToggleCheckboxValue"></a>
 
-##### Function Key
+#### Function Key
 
 ToggleCheckboxValue
 
-##### Description
+#### Description
 
 Clicks on a check box to toggle its value.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
 | Widget Name | WidgetName | String | _Required_ The name that was assigned in the modeler to that widget, e.g. 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, e.g. 'dataView1 textBox1'. |
 | Search Context | SearchContext | WebElement | _Optional_ Limits the search of the widget to this web element and its children. Can be used to dynamically restrict the search at runtime,  for instance to a certain template grid item. |
 
-##### Return Value
+#### Return Value
 
 None.
 
 ### Toggle Grid Selector Checkbox Value<a name="ToggleGridSelectorCheckboxValue"></a>
 
-##### Function Key
+#### Function Key
 
 ToggleGridSelectorCheckboxValue
 
-##### Description
+#### Description
 
 Inverses the check box found by a given column and row caption.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
@@ -1482,111 +1482,111 @@ Inverses the check box found by a given column and row caption.
 | Column Caption | ColumnCaption | String | _Required_ Used to identify a column by it's caption in a set/grid selector widget. The caption should match the label as shown in the browser. |
 | Row Caption | RowCaption | String | _Required_ Used to identify a row by it's caption in a grid selector widget. The caption should match the label as shown in the browser. |
 
-##### Return Value
+#### Return Value
 
 None.
 
 ### Toggle Simple Checkbox Set Selector Value<a name="ToggleSimpleCheckboxSetSelectorValue"></a>
 
-##### Function Key
+#### Function Key
 
 ToggleSimpleCheckboxSetSelectorValue
 
-##### Description
+#### Description
 
 Inverses the value of the check box found by a given entity attribute value.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
 | Widget Name | WidgetName | String | _Required_ The name that was assigned in the modeler to that widget, e.g. 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, e.g. 'dataView1 textBox1'. |
 | Value | Value | String | _Required_ The entitiy attribute value which is used to find the correct row in the widget. |
 
-##### Return Value
+#### Return Value
 
 None.
 
 ### Cancel Dialog<a name="CancelDialog"></a>
 
-##### Function Key
+#### Function Key
 
 CancelDialog
 
-##### Description
+#### Description
 
 Clicks 'Cancel' on a confirmation dialog.   
 
 The dialog can optionally be constrained by name or type.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
 | Dialog Title | DialogTitle | String | _Optional_ The dialog title as shown in the browser. |
 | Dialog Type | DialogType | Enumeration | _Optional_ Used to distignguish between the different dialogs. For example: info, warning or error. |
 
-##### Return Value
+#### Return Value
 
 None.
 
 ### Close Dialog {#CloseDialog}
 
-##### Function Key
+#### Function Key
 
 CloseDialog
 
-##### Description
+#### Description
 
 Clicks the 'X' button on a confirmation, error, warning or info dialog box.   
 
 The dialog can optionally be constrained by name or type.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
 | Dialog Title | DialogTitle | String | _Optional_ The dialog title as shown in the browser. |
 | Dialog Type | DialogType | Enumeration | _Optional_ Used to distignguish between the different dialogs. For example: info, warning or error. |
 
-##### Return Value
+#### Return Value
 
 None.
 
 ### Confirm Dialog {#ConfirmDialog}
 
-##### Function Key
+#### Function Key
 
 ConfirmDialog
 
-##### Description
+#### Description
 
 Clicks the 'Proceed/Ok' button on a confirmation, error, warning or info dialog box.   
 
 The dialog can optionally be constrained by name or type.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
 | Dialog Title | DialogTitle | String | _Optional_ The dialog title as shown in the browser. |
 | Dialog Type | DialogType | Enumeration | _Optional_ Used to distignguish between the different dialogs. For example: info, warning or error. |
 
-##### Return Value
+#### Return Value
 
 None.
 
 ### Set ListView Search {#SetListViewSearch}
 
-##### Function Key
+#### Function Key
 
 SetListViewSearch
 
-##### Description
+#### Description
 
 Sets the search text for a list view.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
@@ -1594,7 +1594,7 @@ Sets the search text for a list view.
 | Value | Value | String | _Required_ The value to set. |
 | Search Context | SearchContext | WebElement | _Optional_ Limits the search of the widget to this web element and its children. Can be used to dynamically restrict the search at runtime,  for instance to a certain template grid item. |
 
-##### Return Value
+#### Return Value
 
 None
 
@@ -1613,35 +1613,35 @@ Inspect and interact with Mendix elements such as validation messages, dialogs, 
 
 ### Mendix Wait {#MendixWaitCustomTimeout}
 
-##### Function Key
+#### Function Key
 
 MendixWaitCustomTimeout
 
-##### Description
+#### Description
 
 Wait for microflow and UI activities.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
 | Timeout (ms) | Timeout_ms) | Integer | _Optional_ Timeout for implicit wait in milliseconds (defaults to 60 seconds if left empty) |
 
-##### Return Value
+#### Return Value
 
 None.
 
 ### Login {#Login}
 
-##### Function Key
+#### Function Key
 
 Login
 
-##### Description
+#### Description
 
 Logs in to the Mendix application with the standard login page or on the cloud using Mendix single-sign on.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
@@ -1649,17 +1649,17 @@ Logs in to the Mendix application with the standard login page or on the cloud u
 | Password | Password | String | _Required_ Account password. For Mendix SSO this is the same password that is used to access the Mendix cloud portal. |
 | Use MxID | UseMxID | Boolean | _Optional_ If true will use the Mendix single sign on, otherwise the default login page is used. Deafaults to false. |
 
-##### Return Value
+#### Return Value
 
 None.
 
 ### Logout {#Logout}
 
-##### Function Key
+#### Function Key
 
 Logout
 
-##### Description
+#### Description
 
 Triggers the logout/logoff from application via the Client API.
 
@@ -1667,38 +1667,39 @@ Use this keyword in the teardown of your test cases to end the user session.
 
 This function will work regardless of the UI state.
 
-##### Input Parameters
-None
+#### Input Parameters
 
-##### Return Value
+None.
+
+#### Return Value
 
 None.
 
 ### Get Current Page Title {#GetCurrentPageTitle}
 
-##### Function Key
+#### Function Key
 
 GetCurrentPageTitle
 
-##### Description
+#### Description
 
 Returns the current page/form title.
 
-##### Input Parameters
+#### Input Parameters
 
 None
 
-##### Return Value
+#### Return Value
 
 _String_ Title of the current Mendix page. Language dependant.
 
 ### Assert Current Page< {#AssertCurrentPageNegatable}
 
-##### Function Key
+#### Function Key
 
 AssertCurrentPageNegatable
 
-##### Description
+#### Description
 
 Asserts that a certain page is open, by checking the current page title.
 
@@ -1706,34 +1707,34 @@ Note that the page title may depend on the user's language!
 
 For dialog boxes use the Find/Assert Dialog function.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
 | Page Title | PageTitle | String | _Required_ Expected title of the current Mendix page. Language dependant. |
 | Negate | NegateParameter | Boolean | _Required_ Negetes the asssert |
 
-##### Return Value
+#### Return Value
 
 None.
 
 ### Open Mendix Application {#OpenMendixApplication}
 
-##### Function Key
+#### Function Key
 
 OpenMendixApplication
 
-##### Description
+#### Description
 
 Opens a Mendix application at the website URL in a browser with Mendix-specific settings.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
 | URL | URL | String | _Required_ Website URL, must start with 'http://' or 'https://'. |
 
-##### Return Value
+#### Return Value
 
 None.
 
@@ -1778,74 +1779,74 @@ Uses the Selenium web driver to interact with the browser and the native html el
 
 ### Close Window {#CloseWindow}
 
-##### Function Key
+#### Function Key
 
 CloseWindow
 
-##### Description
+#### Description
 
 Closes currently active window. Does not switch to another window automatically.
 
-##### Input Parameters
+#### Input Parameters
 
 None
 
-##### Return value
+#### Return value
 
 None
 
 ### Close Window & Auto-Switch {#CloseWindowAndAutoSwitch}
 
-##### Function Key
+#### Function Key
 
 CloseWindowAndAutoSwitch
 
-##### Description
+#### Description
 
 Closes the currently active window and automatically switches to the next one.
 
-##### Input Parameters
+#### Input Parameters
 
 None.
 
-##### Return Value
+#### Return Value
 
 _String_ Identifier of active window
 
 ### Element Matches Selector {#ElementMatchesSelector}
 
-##### Function Key
+#### Function Key
 
 ElementMatchesSelector
 
-##### Description
+#### Description
 
 Returns whether the given element matches a selector e.g. :contains('foo') or :first-child.   
 
 Check out the reference guide for a complete list of possible selectors.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
 | Element | Element | WebElement | _Required_ Use one of the 'Find element by X' functions to get this object. |
 | Selector | Selector | String | _Required_ CSS/jQuery selector |
 
-##### Return Value
+#### Return Value
 
 _Boolean_
 
 ### Execute Javascript Integer< {#ExecuteJavascriptInteger}
 
-##### Function Key
+#### Function Key
 
 ExecuteJavascriptInteger
 
-##### Description
+#### Description
 
 Executes a JavaScript snippet. Runs asynchronously when a timeout is set. Returns an Integer.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
@@ -1856,21 +1857,21 @@ Executes a JavaScript snippet. Runs asynchronously when a timeout is set. Return
 | Argument 2 | Argument2 | Any | _Optional_  |
 | Argument 3 | Argument3 | Any | _Optional_  |
 
-##### Return Value
+#### Return Value
 
 _Integer_
 
 ### Execute Javascript String {#ExecuteJavascriptString}
 
-##### Function Key
+#### Function Key
 
 ExecuteJavascriptString
 
-##### Description
+#### Description
 
 Executes a Javascript snippet. Runs asynchronously when a timeout is set. Returns a String.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
@@ -1881,21 +1882,21 @@ Executes a Javascript snippet. Runs asynchronously when a timeout is set. Return
 | Argument 2 | Argument2 | Any | _Optional_  |
 | Argument 3 | Argument3 | Any | _Optional_  |
 
-##### Return Value
+#### Return Value
 
 _String_
 
 ### Execute Javascript WebElement<a name="ExecuteJavascriptWebElement"></a>
 
-##### Function Key
+#### Function Key
 
 ExecuteJavascriptWebElement
 
-##### Description
+#### Description
 
 Executes a JavaScript snippet. Runs asynchronously when a timeout is set. Returns a WebElement
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
@@ -1906,22 +1907,22 @@ Executes a JavaScript snippet. Runs asynchronously when a timeout is set. Return
 | Argument 2 | Argument2 | Any | _Optional_  |
 | Argument 3 | Argument3 | Any | _Optional_  |
 
-##### Return Value
+#### Return Value
 
 _WebElement_
 
 ### Find/Assert Element {#FindElementNegetable}
 
-##### Function Key
+#### Function Key
 
 FindElementNegetable
 
-##### Description
+#### Description
 
 Find/assert a web element using a host of selectio techniques. Optionally restrict search to the specified SearchContext element.   
 Occurence lets you specify which element to fetch from the result-list, starting at 1 for the first element (defaults to the first element).
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
@@ -1931,23 +1932,23 @@ Occurence lets you specify which element to fetch from the result-list, starting
 | Occurrence | Occurrence | Integer | _Optional_ Occurrence of the element on the page. 1 corresponds to the first element, 2 to the second elements etc.  Negative number can also be used. -1 corresponds to the last element, -2 to the scond last, etc |
 | Negate | NegateParameter | Boolean | _Required_ Negetes the asssert |
 
-##### Return Value
+#### Return Value
 
 _WebElement_ Use one of the 'Find element by X' functions to get this object.
 
 ### Find/Assert Element by CSS< {#FindElementbyCSSNegetable}
 
-##### Function Key
+#### Function Key
 
 FindElementbyCSSNegetable
 
-##### Description
+#### Description
 
 Find/assert a web element by CSS. Optionally restrict search to the specified SearchContext element.   
 
 Occurence lets you specify which element to fetch from the result-list, starting at 1 for the first element (defaults to the first element).
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
@@ -1956,22 +1957,22 @@ Occurence lets you specify which element to fetch from the result-list, starting
 | Occurrence | Occurrence | Integer | _Optional_ Occurrence of the element on the page. 1 corresponds to the first element, 2 to the second elements etc.  Negative number can also be used. -1 corresponds to the last element, -2 to the scond last, etc |
 | Negate | NegateParameter | Boolean | _Required_ Negetes the asssert |
 
-##### Return Value
+#### Return Value
 
 _WebElement_ Use one of the 'Find element by X' functions to get this object.
 
 ### Find/Assert Element by ID {#FindElementbyIDNegetable}
 
-##### Function Key
+#### Function Key
 
 FindElementbyIDNegetable
 
-##### Description
+#### Description
 
 Find/assert a web element by ID. Optionally restrict search to the specified SearchContext element.   
 Occurence lets you specify which element to fetch from the result-list, starting at 1 for the first element (defaults to the first element).
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
@@ -1980,22 +1981,22 @@ Occurence lets you specify which element to fetch from the result-list, starting
 | Occurrence | Occurrence | Integer | _Optional_ Occurrence of the element on the page. 1 corresponds to the first element, 2 to the second elements etc.  Negative number can also be used. -1 corresponds to the last element, -2 to the scond last, etc |
 | Negate | NegateParameter | Boolean | _Required_ Negetes the asssert |
 
-##### Return Value
+#### Return Value
 
 _WebElement_ Use one of the 'Find element by X' functions to get this object.
 
 ### Find/Assert Element by Sizzle {#FindElementBySizzleNegetable}
 
-##### Function Key
+#### Function Key
 
 FindElementBySizzleNegetable
 
-##### Description
+#### Description
 
 Finds/asserts a web element by Sizzle. Optionally restrict search to the specified SearchContext element.   
 Occurence lets you specify which element to fetch from the result-list, starting at 1 for the first element (defaults to the first element).
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
@@ -2006,23 +2007,23 @@ Occurence lets you specify which element to fetch from the result-list, starting
 | Timeout (ms) | Timeout_ms) | Integer | _Optional_ Timeout for implicit wait in milliseconds (defaults to 10 seconds if left empty) |
 | Negate | NegateParameter | Boolean | _Required_ Negetes the asssert |
 
-##### Return Value
+#### Return Value
 
 _WebElement_ Use one of the 'Find element by X' functions to get this object.
 
 ### Find/Assert Element by XPath<a name="FindElementByXpathNegetable"></a>
 
-##### Function Key
+#### Function Key
 
 FindElementByXpathNegetable
 
-##### Description
+#### Description
 
 Find/assert a web element by XPath. Optionally restrict search to the specified SearchContext element.   
 
 Occurence lets you specify which element to fetch from the result-list, starting at 1 for the first element (defaults to the first element).
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
@@ -2031,344 +2032,344 @@ Occurence lets you specify which element to fetch from the result-list, starting
 | Occurrence | Occurrence | Integer | _Optional_ Occurrence of the element on the page. 1 corresponds to the first element, 2 to the second elements etc.  Negative number can also be used. -1 corresponds to the last element, -2 to the scond last, etc |
 | Negate | NegateParameter | Boolean | _Required_ Negetes the asssert |
 
-##### Return Value
+#### Return Value
 
 _WebElement_ Use one of the 'Find element by X' functions to get this object.
 
 ### Get Property Value<a name="GetPropertyValue"></a>
 
-##### Function Key
+#### Function Key
 
 GetPropertyValue
 
-##### Description
+#### Description
 
 Returns property value from web element.
 
 Does not have access to dojo widget properties.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
 | Element | Element | WebElement | _Required_ Use one of the 'Find element by X' functions to get this object. |
 | Attribute Name | AttributeName | String | _Required_  |
 
-##### Return Value
+#### Return Value
 
 _String_ The value to set.
 
 ### Get Current Window Handle<a name="GetCurrentWindowHandle"></a>
 
-##### Function Key
+#### Function Key
 
 GetCurrentWindowHandle
 
-##### Description
+#### Description
 
 Returns the handle i.e. the identifier of the currently active window.
 
-##### Input Parameters
+#### Input Parameters
 
 None
 
-##### Return Value
+#### Return Value
 
 _String_ identifier of active window
 
 ### Get Selected Option Index {#GetSelectedOptionIndex}
 
-##### Function Key
+#### Function Key
 
 GetSelectedOptionIndex
 
-##### Description
+#### Description
 
 Returns the index of the first selected option in a select element.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
 | Select Element | SelectElement | WebElement | _Required_  |
 
-##### Return Value
+#### Return Value
 
 _Integer_ Starts from 0, meaning the first element has index 0, the second element has index 1 etc.
 
 ### Get Selected Option Value<a name="GetSelectedOptionValue"></a>
 
-##### Function Key
+#### Function Key
 
 GetSelectedOptionValue
 
-##### Description
+#### Description
 
 Returns the value of the first selected option in a select element.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
 | Select Element | SelectElement | WebElement | _Required_  |
 
-##### Return Value
+#### Return Value
 
 _String_
 
 ### Get Selected Option Text<a name="GetSelectedOptionText"></a>
 
-##### Function Key
+#### Function Key
 
 GetSelectedOptionText
 
-##### Description
+#### Description
 
 Returns the text of the first selected option in a select element.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
 | Select Element | SelectElement | WebElement | _Required_  |
 
-##### Return Value
+#### Return Value
 
 _String_
 
 ### Get Text<a name="GetText"></a>
 
-##### Function Key
+#### Function Key
 
 GetText
 
-##### Description
+#### Description
 
 Get the visible, meaning, not hidden by CSS, innerText of this element, including sub-elements, without any leading or trailing whitespace.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
 | Web Element | WebElement | WebElement | _Required_  |
 
-##### Return Value
+#### Return Value
 
 _String_ The value to set.
 
 ### Is Element Displayed {#IsElementDisplayed}
 
-##### Function Key
+#### Function Key
 
 IsElementDisplayed
 
-##### Description
+#### Description
 
 Returns true if an element is displayed, i.e. visible.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
 | Element | Element | WebElement | _Required_ Use one of the 'Find element by X' functions to get this object. |
 
-##### Return Value
+#### Return Value
 
 _Boolean_
 
 ### Is Selected<a name="IsSelected"></a>
 
-##### Function Key
+#### Function Key
 
 IsSelected
 
-##### Description
+#### Description
 
 Check whether a check box is selected.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
 | Checkbox | Checkbox | WebElement | _Required_ The Checkbox element |
 
-##### Return Value
+#### Return Value
 
 _Boolean_
 
 ### Maximize {#Maximize}
 
-##### Function Key
+#### Function Key
 
 Maximize
 
-##### Description
+#### Description
 
 Maximizes the current browser window.
 
-##### Input Parameters
+#### Input Parameters
 
-None
+None.
 
-##### Return value
+#### Return value
 
-None
+None.
 
 ### Switch to Window {#SwitchToWindow}
 
-##### Function Key
+#### Function Key
 
 SwitchToWindow
 
-##### Description
+#### Description
 
 Switch to window via its identifier. An error is thrown if the window is not found.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
 | Window Handle | WindowHandle | String | _Required_ Identifier of active window |
 
-##### Return Value
+#### Return Value
 
 None.
 
 ### Switch to Next Window<a name="SwitchToNextWindow"></a>
 
-##### Function Key
+#### Function Key
 
 SwitchToNextWindow
 
-##### Description
+#### Description
 
 Switch to the next open window. An error is thrown if there is only one window.   
 
 Returns the window handle, meaning, identifier, of the new active window.
 
-##### Input Parameters
+#### Input Parameters
 
 None.
 
-##### Return Value
+#### Return Value
 
 _String_ identifier of active window
 
 ### Set Page Load Timeout {#SetPageLoadTimeout}
 
-##### Function Key
+#### Function Key
 
 SetPageLoadTimeout
 
-##### Description
+#### Description
 
 Sets the amount of time (in milliseconds) to wait for a page load to complete before throwing an error.   
 
 If the timeout is negative, page loads can be indefinite.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
 | Timeout (ms) | Timeout_ms | Integer | _Required_  |
 
-##### Return Value
+#### Return Value
 
 None.
 
 ### Set Size {#SetSize}
 
-##### Function Key
+#### Function Key
 
 SetSize
 
-##### Description
+#### Description
 
 Sets the size of the current browser window.   
 
 This will change the outer window dimension, not just the view port.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
 | Width | Width | Integer | _Required_ width of the browser window |
 | Height | Height | Integer | _Required_ height of the browser window |
 
-##### Return Value
+#### Return Value
 
 None.
 
 ### Select Option By Index {#SelectOptionByIndex}
 
-##### Function Key
+#### Function Key
 
 SelectOptionByIndex
 
-##### Description
+#### Description
 
 Select the option at the given index.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
 | Index | Index | Integer | _Required_ Starts from 0, meaning the first element has index 0, the second element has index 1 etc. |
 | Dropdown | Dropdown | WebElement | _Required_ Input the DropDown as Web Element. |
 
-##### Return Value
+#### Return Value
 
 None.
 
 ### Select Option by Text {#SelectOptionByText}
 
-##### Function Key
+#### Function Key
 
 SelectOptionByText
 
-##### Description
+#### Description
 
 Select all options that display text matching the argument.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
 | Selected Option Text | SelectedOptionText | String | _Required_  |
 | Dropdown | Dropdown | WebElement | _Required_ Input the DropDown as Web Element. |
 
-##### Return Value
+#### Return Value
 
 None.
 
 ### Select Option by Value {#SelectOptionByValue}
 
-##### Function Key
+#### Function Key
 
 SelectOptionByValue
 
-##### Description
+#### Description
 
 Select all options that have a value matching the argument.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
 | Selected Option Value | SelectedOptionValue | String | _Required_  |
 | Dropdown | Dropdown | WebElement | _Required_ Input the DropDown as Web Element. |
 
-##### Return Value
+#### Return Value
 
 None.
 
 ### Wait for Condition {#WaitForCondition}
 
-##### Function Key
+#### Function Key
 
 WaitForCondition
 
-##### Description
+#### Description
 
 Repeatedly runs the condition java script snippet every interval (in milliseconds) until one of the following is fulfilled:
 
@@ -2376,7 +2377,7 @@ Repeatedly runs the condition java script snippet every interval (in millisecond
 * The snippet throws an unignored exception
 * The timeout (in milliseconds) expires
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
@@ -2384,21 +2385,21 @@ Repeatedly runs the condition java script snippet every interval (in millisecond
 | Timeout (ms) | Timeout_ms | Integer | _Required_  |
 | Polling Interval (ms) | PollingInterval_ms | Integer | _Required_  |
 
-##### Return Value
+#### Return Value
 
 None.
 
 ### Wait for Condition JS {#WaitForConditionJS}
 
-##### Function Key
+#### Function Key
 
 WaitForConditionJS
 
-##### Description
+#### Description
 
 Waits until the given expression returns true.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
@@ -2409,41 +2410,41 @@ Waits until the given expression returns true.
 | Argument 1 | Argument1 | Any | _Optional_  |
 | Argument 2 | Argument2 | Any | _Optional_  |
 
-##### Return Value
+#### Return Value
 
 None.
 
 ### Unfocus WebElement {#UnfocusWebElement}
 
-##### Function Key
+#### Function Key
 
 UnfocusWebElement
 
-##### Description
+#### Description
 
 Removes focus from a web element by calling the blur method.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
 | Element | Element | WebElement | _Required_ Use one of the 'Find element by X' functions to get this object. |
 
-##### Return Value
+#### Return Value
 
 None.
 
 ### Assert Element Attribute Equals {#AssertElementAttributeEqualsNegetable}
 
-##### Function Key
+#### Function Key
 
 AssertElementAttributeEqualsNegetable
 
-##### Description
+#### Description
 
 Asserts that an attribute of the given element equals the specified value.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
@@ -2452,21 +2453,21 @@ Asserts that an attribute of the given element equals the specified value.
 | Value | Value | String | _Required_ Expected value. |
 | Negate | NegateParameter | Boolean | _Required_ Negetes the asssert |
 
-##### Return Value
+#### Return Value
 
 None.
 
 ### Assert Element matches Selector {#AssertElementMatchesSelectorNegetable}
 
-##### Function Key
+#### Function Key
 
 AssertElementMatchesSelectorNegetable
 
-##### Description
+#### Description
 
 Mx4/Mx5 - Returns whether given element matches the selector.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
@@ -2474,7 +2475,7 @@ Mx4/Mx5 - Returns whether given element matches the selector.
 | Assert Selector | AssertSelector | String | _Required_ Selector for Assertion |
 | Negate | NegateParameter | Boolean | _Required_ Negetes the asssert |
 
-##### Return Value
+#### Return Value
 
 None.
 
@@ -2497,55 +2498,54 @@ Perform mouse clicks, scrolling and hover, as well as focus on web elements and 
 | [Clear WebElement](#ClearWebElement) | Clear a web element (input or text area). |
 | [Dismiss Browser Alert](#DismissBrowserAlert) | Dismisses the alert available. |
 
-
 ### Hover {#Hover}
 
-##### Function Key
+#### Function Key
 
 Hover
 
-##### Description
+#### Description
 
 Hover a web element.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
 | Element | Element | WebElement | _Required_ Use one of the 'Find element by X' functions to get this object. |
 
-##### Return Value
+#### Return Value
 
 None.
 
 ### Click {#Click}
 
-##### Function Key
+#### Function Key
 
 Click
 
-##### Description
+#### Description
 
 Clicks in the middle of a given web element.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
 | Element | Element | WebElement | _Required_ Web element to click. |
 | Modifier Key Set | ModifierKeySet | String | _Optional_ Simulate that some buttons are depressed during the click. Possible values: 'CONTROL', 'ALT', 'SHIFT' and 'META'. If multiple values are specified they need to be separated by a comma. |
 
-##### Return Value
+#### Return Value
 
 None.
 
 ### Click Coordinates {#ClickCoordinates}
 
-##### Function Key
+#### Function Key
 
 ClickCoordinates
 
-##### Description
+#### Description
 
 Clicks on the given point on the page, described by X and Y Offset.   
 
@@ -2553,7 +2553,7 @@ If no reference element is given, the upper left corner of the page is used as p
 
 Otherwise the upper left corner of the reference element is used.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
@@ -2561,185 +2561,185 @@ Otherwise the upper left corner of the reference element is used.
 | Y Offset | YOffset | Integer | _Required_ The vertical coordinate to move to, from the top left corner of either the page or the given reference element. |
 | Reference Element | ReferenceElement | WebElement | _Optional_ If given, the reference element is used as point of origin for measuring the coordinates. |
 
-##### Return Value
+#### Return Value
 
 None.
 
 ### Send Enter {#SendEnter}
 
-##### Function Key
+#### Function Key
 
 SendEnter
 
-##### Description
+#### Description
 
 Simulates pressing Enter in element, after waiting for any mendix activities to finish.").
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
 | Element | Element | WebElement | _Required_ Use one of the 'Find element by X' functions to get this object. |
 
-##### Return Value
+#### Return Value
 
 None.
 
 ### Send Keys{#SendKeys}
 
-##### Function Key
+#### Function Key
 
 SendKeys
 
-##### Description
+#### Description
 
 Simulates typing Text into a web element, after waiting for any mendix activities to finish.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
 | Element | Element | WebElement | _Required_ Use one of the 'Find element by X' functions to get this object. |
 | Text | Text | String | _Required_ The text to type in. |
 
-##### Return Value
+#### Return Value
 
 None.
 
 ### Doubleclick {#Doubleclick}
 
-##### Function Key
+#### Function Key
 
 Doubleclick
 
-##### Description
+#### Description
 
 Performs a double-click on a web element.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
 | Element | Element | WebElement | _Required_ Web element to click. |
 
-##### Return Value
+#### Return Value
 
 None.
 
 ### Focus and Clear Element Value {#FocusAndClearElementValue}
 
-##### Function Key
+#### Function Key
 
 FocusAndClearElementValue
 
-##### Description
+#### Description
 
 Sets an input element to an empty string, after waiting for mendix activities to finish.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
 | Element | Element | WebElement | _Required_ Use one of the 'Find element by X' functions to get this object. |
 
-##### Return Value
+#### Return Value
 
 None.
 
 ### Focus WebElement {#FocusWebElement}
 
-##### Function Key
+#### Function Key
 
 FocusWebElement
 
-##### Description
+#### Description
 
 Focuses the web element and then waits for Mendix activities.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
 | Element | Element | WebElement | _Required_ Use one of the 'Find element by X' functions to get this object. |
 
-##### Return Value
+#### Return Value
 
 None.
 
 ### Click/Doubleclick {#ClickDoubleclick}
 
-##### Function Key
+#### Function Key
 
 ClickDoubleclick
 
-##### Description
+#### Description
 
 Performs a click or double-click and waits for Mendix activities.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
 | Element | Element | WebElement | _Required_ Web element to click. |
 | Doubleclick | Doubleclick | Boolean | _Optional_ If true performs a doubleclick, otherwise does a single click. Defaults to false. |
 
-##### Return Value
+#### Return Value
 
 None.
 
 ### Accept Browser Alert {#AcceptBrowserAlert}
 
-##### Function Key
+#### Function Key
 
 AcceptBrowserAlert
 
-##### Description
+#### Description
 
 Accepts the alert available.
 
-##### Input Parameters
+#### Input Parameters
 
 None.
 
-##### Return Value
+#### Return Value
 
 None.
 
 ### Clear WebElement {#ClearWebElement}
 
-##### Function Key
+#### Function Key
 
 ClearWebElement
 
-##### Description
+#### Description
 
 Clear a web element (input or text area).
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
 | Element | Element | WebElement | _Required_ Use one of the 'Find element by X' functions to get this object. |
 
-##### Return Value
+#### Return Value
 
 None.
 
 ### Dismiss Browser Alert {#DismissBrowserAlert}
 
-##### Function Key
+#### Function Key
 
 DismissBrowserAlert
 
-##### Description
+#### Description
 
 Dismisses the alert available.
 
-##### Input Parameters
+#### Input Parameters
 
 None.
 
-##### Return Value
+#### Return Value
 
 None.
 
@@ -2776,15 +2776,15 @@ Logical expressions for asserting page elements, text and numbers. Also includes
 
 ### Assert All Not Null {#AssertAllNotNull}
 
-##### Function Key
+#### Function Key
 
 AssertAllNotNull
 
-##### Description
+#### Description
 
 Fails if any of the objects is null.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
@@ -2792,21 +2792,21 @@ Fails if any of the objects is null.
 | Object 2 | Object2 | Any | _Optional_  |
 | Object 3 | Object3 | Any | _Optional_  |
 
-##### Return Value
+#### Return Value
 
 None.
 
 ### Assert at Least One Not Null {#AssertAtLeastOneNotNull}
 
-##### Function Key
+#### Function Key
 
 AssertAtLeastOneNotNull
 
-##### Description
+#### Description
 
 Fails if all objects are null.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
@@ -2814,62 +2814,62 @@ Fails if all objects are null.
 | Object 2 | Object2 | Any | _Optional_  |
 | Object 3 | Object3 | Any | _Optional_  |
 
-##### Return Value
+#### Return Value
 
 None.
 
 ### Assert Both not null {#AssertBothNotNull}
 
-##### Function Key
+#### Function Key
 
 AssertBothNotNull
 
-##### Description
+#### Description
 
 Fails if one or both objects are null.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
 | Object 1 | Object1 | Any | _Optional_  |
 | Object 2 | Object2 | Any | _Optional_  |
 
-##### Return Value
+#### Return Value
 
 None.
 
 ### Assert Condition Fails {#AssertConditionFails}
 
-##### Function Key
+#### Function Key
 
 AssertConditionFails
 
-##### Description
+#### Description
 
 This assert always fails when it is executed. However, if an attached condition fails, instead of failing it is just not executed.   
 
 Use this function to assert that a conditional keyword fails.
 
-##### Input Parameters
+#### Input Parameters
 
 None.
 
-##### Return Value
+#### Return Value
 
 None.
 
 ### Concatenate String {#ConcatenateString}
 
-##### Function Key
+#### Function Key
 
 ConcatenateString
 
-##### Description
+#### Description
 
 Concatenate strings. Any number of the arguments can be null.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
@@ -2879,43 +2879,43 @@ Concatenate strings. Any number of the arguments can be null.
 | String 4 | String4 | String | _Optional_  |
 | String 5 | String5 | String | _Optional_  |
 
-##### Return Value
+#### Return Value
 
 _String_
 
 ### Is Not Null {#IsNotNull}
 
-##### Function Key
+#### Function Key
 
 IsNotNull
 
-##### Description
+#### Description
 
 Returns true if object is not null, false otherwise.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
 | Object | Object | Any | _Optional_  |
 
-##### Return Value
+#### Return Value
 
 _Boolean_
 
 ### Assert containsString {#AssertContainsStringNegetable}
 
-##### Function Key
+#### Function Key
 
 AssertContainsStringNegetable
 
-##### Description
+#### Description
 
 Asserts that the examined string 'Subject' (does not) contains the specified string 'Matcher Parameter' anywhere.   
 
 For example, 'testcasetool' contains 'case'.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
@@ -2923,23 +2923,23 @@ For example, 'testcasetool' contains 'case'.
 | Matcher Parameter | MatcherParameter | Any | _Required_  |
 | Negate | NegateParameter | Boolean | _Required_ Negetes the asssert |
 
-##### Return Value
+#### Return Value
 
 None.
 
 ### Assert endsWith<a name="AssertEndsWithNegetable"></a>
 
-##### Function Key
+#### Function Key
 
 AssertEndsWithNegetable
 
-##### Description
+#### Description
 
 Asserts that Subject ends with string that is equal to Matcher Parameter.   
 
 For example, 'testcase' ends with 'case'.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
@@ -2947,17 +2947,17 @@ For example, 'testcase' ends with 'case'.
 | Matcher Parameter | MatcherParameter | Any | _Required_  |
 | Negate | NegateParameter | Boolean | _Required_ Negetes the asssert |
 
-##### Return Value
+#### Return Value
 
 None.
 
 ### Assert equalTo {#AssertEqualToNegetable}
 
-##### Function Key
+#### Function Key
 
 AssertEqualToNegetable
 
-##### Description
+#### Description
 
 Asserts that the examined object 'Object 1' is logically equal to the specified operand 'Object2'.   
 
@@ -2965,7 +2965,7 @@ Equality is determined by calling the Object.equals method on the examined objec
 
 Examples: `100` is equal to `100` or `house` is equal to `house`.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
@@ -2973,23 +2973,23 @@ Examples: `100` is equal to `100` or `house` is equal to `house`.
 | Object 2 | Object2 | Any | _Required_  |
 | Negate | NegateParameter | Boolean | _Required_ Negetes the asssert |
 
-##### Return Value
+#### Return Value
 
 None.
 
 ### Assert equalToIgnoringCase {#AssertEqualToIgnoringCaseNegetable}
 
-##### Function Key
+#### Function Key
 
 AssertEqualToIgnoringCaseNegetable
 
-##### Description
+#### Description
 
 Asserts that the examined string 'Object 1' is equal to the specified string 'Object 2', ignoring case.   
 
 For example: 'house' is equal to 'House', ignoring case.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
@@ -2997,24 +2997,24 @@ For example: 'house' is equal to 'House', ignoring case.
 | Object 2 | Object2 | Any | _Required_  |
 | Negate | NegateParameter | Boolean | _Required_ Negetes the asssert |
 
-##### Return Value
+#### Return Value
 
 None.
 
 ### Assert equalToIgnoringWhiteSpace {#AssertEqualToIgnoringWhiteSpaceNegetable}
 
-##### Function Key
+#### Function Key
 
 AssertEqualToIgnoringWhiteSpaceNegetable
 
-##### Description
+#### Description
 
 Asserts that the examined string 'Object 1' is equal to the specified string 'Object 2' after the following rules are applied:   
 
 * All leading and trailing whitespaces of both string are removed
 * Any remaining whitespace, appearing within either string, is collapsed to a single space; for example: '   my\tfoo  bar ' is equal to ' my  foo bar', ignoring whitespace
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
@@ -3022,30 +3022,30 @@ Asserts that the examined string 'Object 1' is equal to the specified string 'Ob
 | Object 2 | Object2 | Any | _Required_  |
 | Negate | NegateParameter | Boolean | _Required_ Negetes the asssert |
 
-##### Return Value
+#### Return Value
 
 None.
 
 ### Assert greaterThan {#AssertGreaterThan}
 
-##### Function Key
+#### Function Key
 
 AssertGreaterThan
 
-##### Description
+#### Description
 
 Asserts that the examined number 'Object 1' is greater than the specified number 'Object 2'.   
 
 For example: 2 is greater than 1.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
 | Object 1 | Object1 | Any | _Required_  |
 | Object 2 | Object2 | Any | _Required_  |
 
-##### Return Value
+#### Return Value
 
 None.
 
@@ -3055,82 +3055,82 @@ None.
 
 AssertGreaterThanOrEqualTo
 
-##### Description
+#### Description
 
 Asserts that the examined number 'Object 1' is greater than or equal to the specified number 'Object 2'.   
 
 For example: 1 is greater than or equal to 1.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
 | Object 1 | Object1 | Any | _Required_  |
 | Object 2 | Object2 | Any | _Required_  |
 
-##### Return Value
+#### Return Value
 
 None.
 
 ### Assert lessThan {#AssertLessThan}
 
-##### Function Key
+#### Function Key
 
 AssertLessThan
 
-##### Description
+#### Description
 
 Asserts that the examined number 'object 1' is smaller than the specified number 'object 2'.   
 
 For example: 1 is smaller than 2.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
 | Object 1 | Object1 | Any | _Required_  |
 | Object 2 | Object2 | Any | _Required_  |
 
-##### Return Value
+#### Return Value
 
 None.
 
 ### Assert lessThanOrEqualTo {#AssertLessThanOrEqualTo}
 
-##### Function Key
+#### Function Key
 
 AssertLessThanOrEqualTo
 
-##### Description
+#### Description
 
 Asserts that the examined number 'object 1' is smaller than or equal to the specified number 'object 2'.   
 
 For example: 1 is smaller than or equal to 1.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
 | Object 1 | Object1 | Any | _Required_  |
 | Object 2 | Object2 | Any | _Required_  |
 
-##### Return Value
+#### Return Value
 
 None.
 
 ### Assert startsWith {#AssertStartsWithNegetable}
 
-##### Function Key
+#### Function Key
 
 AssertStartsWithNegetable
 
-##### Description
+#### Description
 
 Asserts that the examined string 'Object 1' starts with the specified string 'Object 2'.   
 
 For example: 'testcase' starts with 'test'.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
@@ -3138,21 +3138,21 @@ For example: 'testcase' starts with 'test'.
 | Object 2 | Object2 | Any | _Required_  |
 | Negate | NegateParameter | Boolean | _Required_ Negetes the asssert |
 
-##### Return Value
+#### Return Value
 
 None.
 
 ### Assert XML equivalent {#AssertXMLEquivalentNegetable}
 
-##### Function Key
+#### Function Key
 
 AssertXMLEquivalentNegetable
 
-##### Description
+#### Description
 
 Assert that two XMLs are equivalent.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
@@ -3161,21 +3161,21 @@ Assert that two XMLs are equivalent.
 | Identifier | Identifier | String | _Required_  |
 | Negate | NegateParameter | Boolean | _Required_ Negetes the asssert |
 
-##### Return Value
+#### Return Value
 
 None.
 
 ### Return First Valid Boolean Object {#ReturnFirstValidBoolean}
 
-##### Function Key
+#### Function Key
 
 ReturnFirstValidBoolean
 
-##### Description
+#### Description
 
 Returns the first Boolean from the parameter list which is not null.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
@@ -3185,21 +3185,21 @@ Returns the first Boolean from the parameter list which is not null.
 | Boolean 4 | Boolean4 | Boolean | _Optional_  |
 | Boolean 5 | Boolean5 | Boolean | _Optional_  |
 
-##### Return Value
+#### Return Value
 
 _Boolean_
 
 ### Return First Valid Integer Object {#ReturnFirstValidInteger}
 
-##### Function Key
+#### Function Key
 
 ReturnFirstValidInteger
 
-##### Description
+#### Description
 
 Returns the first integer from the parameter list which is not null.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
@@ -3209,13 +3209,13 @@ Returns the first integer from the parameter list which is not null.
 | Integer 4 | Integer4 | Integer | _Optional_  |
 | Integer 5 | Integer5 | Integer | _Optional_  |
 
-##### Return Value
+#### Return Value
 
 _Integer_
 
 ### Return First Valid String {#ReturnFirstValidString}
 
-##### Function Key
+#### Function Key
 
 ReturnFirstValidString
 
@@ -3223,7 +3223,7 @@ ReturnFirstValidString
 
 Returns the first string from the parameter list which is not null.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
@@ -3233,21 +3233,21 @@ Returns the first string from the parameter list which is not null.
 | String 4 | String4 | String | _Optional_  |
 | String 5 | String5 | String | _Optional_  |
 
-##### Return Value
+#### Return Value
 
 _String_
 
 ### Return First Valid WebElement {#ReturnFirstValidWebElement}
 
-##### Function Key
+#### Function Key
 
 ReturnFirstValidWebElement
 
-##### Description
+#### Description
 
 Returns the first webelement from the parameter list which is not null.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
@@ -3257,23 +3257,23 @@ Returns the first webelement from the parameter list which is not null.
 | Web Element 4 | WebElement4 | WebElement | _Optional_  |
 | Web Element 5 | WebElement5 | WebElement | _Optional_  |
 
-##### Return Value
+#### Return Value
 
 _WebElement_
 
 ### RegExp Match {#RegExpMatch}
 
-##### Function Key
+#### Function Key
 
 RegExpMatch
 
-##### Description
+#### Description
 
 Return the n'th match of the given Regular Expression in the Search String.
 
 Uses JS string.match.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
@@ -3282,39 +3282,39 @@ Uses JS string.match.
 | Modifier | Modifier | String | _Optional_  |
 | Match Index | MatchIndex | Integer | _Optional_  |
 
-##### Return Value
+#### Return Value
 
 _String_
 
 ### Set Return Value {#SetReturnValue}
 
-##### Function Key
+#### Function Key
 
 SetReturnValue
 
-##### Description
+#### Description
 
 Use this function in custom actions to set the return value of the custom action.   
 
 When using the 'extract action' feature this function call will be added automatically, where applicable.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
 | Value | Value | Any | _Required_ Value to be set as return value |
 
-##### Return Value
+#### Return Value
 
 None.
 
 ### Sleep {#Sleep}
 
-##### Function Key
+#### Function Key
 
 Sleep
 
-##### Description
+#### Description
 
 Waits 'sleep time' milliseconds.
 
@@ -3324,7 +3324,7 @@ Waits 'sleep time' milliseconds.
 | ---- | --- | -------- | ----------- |
 | Sleep time (ms) | SleepTimeMS | Integer | _Required_  |
 
-##### Return Value
+#### Return Value
 
 None.
 
@@ -3341,56 +3341,56 @@ Generate random numbers, UUIDs or pieces of text; or get the current date time.
 
 ### Generate GUID {#GenerateGUID}
 
-##### Function Key
+#### Function Key
 
 GenerateGUID
 
-##### Description
+#### Description
 
 Generates and returns a globally unique identifier.
 
-##### Input Parameters
+#### Input Parameters
 
 None.
 
-##### Return Value
+#### Return Value
 
 _String_ GUID
 
 ### Random Number {#RandomNumber}
 
-##### Function Key
+#### Function Key
 
 RandomNumber
 
-##### Description
+#### Description
 
 Creates a random integer using `Math.floor(Math.random() * (max - min)) + min`.
 
 You need to define the min (included) and max (excluded).
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
 | Min | Min | Integer | _Required_ Lowest possible value for the generated number, inclusive. |
 | Max | Max | Integer | _Required_ Highest possible value for the generated number, exclusive. |
 
-##### Return Value
+#### Return Value
 
 _Integer_ A whole number.
 
 ### Random String {#RandomString}
 
-##### Function Key
+#### Function Key
 
 RandomString
 
-##### Description
+#### Description
 
 Creates a random aphanumerical string using `Math.random().toString(36).slice(2,8)`. Optionally allows to add a prefix or postfix.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
@@ -3398,17 +3398,17 @@ Creates a random aphanumerical string using `Math.random().toString(36).slice(2,
 | Postfix | Postfix | String | _Optional_  |
 | Length | Length | Integer | _Optional_  |
 
-##### Return Value
+#### Return Value
 
 _String_ The text to type in.
 
 ### Get Current DateTime String {#GetCurrentDateTimeString}
 
-##### Function Key
+#### Function Key
 
 GetCurrentDateTimeString
 
-##### Description
+#### Description
 
 Returns the current server date and time UTC in supplied format.
 
@@ -3416,12 +3416,12 @@ The formating language is based on the java date format.
 
 An example of a correct format: 'yyyy-MM-dd HH:mm:ss'.
 
-##### Input Parameters
+#### Input Parameters
 
 | Name | Key | Datatype | Description | 
 | ---- | --- | -------- | ----------- |
 | Date Format | DateFormat | String | _Required_ Based on the SimpleDateFormat by java. Check the official javadocs for details. If left empty, a default pattern is used. |
 
-##### Return Value
+#### Return Value
 
 _String_

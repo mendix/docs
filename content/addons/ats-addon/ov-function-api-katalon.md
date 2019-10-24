@@ -24,7 +24,7 @@ To configure the ATS settings, you need to enter the **Project ID**, **API key**
 
 ![](attachments/ov-function-api/executing.png)
 
-```groovy
+```
 WebUI.openBrowser('')
 
 //go to the URL and wait for the Mendix application to load
@@ -41,7 +41,7 @@ Assert using ATS:
 
 ![](attachments/ov-function-api/assert1.png)
 
-```groovy
+```
 WebUI.openBrowser('')
 
 //go to the URL and wait for the Mendix application to load
@@ -61,7 +61,7 @@ Aternatively, assert values using [Cucumber](https://cucumber.io/):
 
 ![](attachments/ov-function-api/assert2.png)
 
-```groovy
+```
 WebUI.openBrowser('')
         
 // go to the URL and wait for the mendix application to load

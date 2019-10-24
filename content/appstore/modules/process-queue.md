@@ -12,6 +12,10 @@ The [Process Queue](https://appstore.home.mendix.com/link/app/393/) module enabl
 
 With the amount of parallel processes and the number of queues that can be controlled from the runtime, you can see the real-time progress of your application.
 
+{{% alert type="info" %}}
+This module does NOT support a multi-instance setup and as a result should NOT be used in a horizontally scaled environment.
+{{% /alert %}}
+
 ### 1.1 Typical Usage Scenario
 
 * Schedule a job but do not want the job to be executed at a specific time
@@ -35,14 +39,29 @@ Of course, you will want to retrieve the object for which you have created a que
 
 In the microflow you configure in the queue, there should be a QueuedAction input parameter, using this parameter you can retrieve your object. In the **Example / Test** folder, you can find an example of how to queue an action.
 
-## 3 Other
+## 3 Automatic Cleanup
 
-The constant: "FinishedQueuedActionsCleanupInDays" can be used to automatically clean up finished queued actions (through the scheduled event SE_CleanupFinishedQueuedActions): Negative value = disabled.0 = clear all finished actions1 or more = clear all finished actions that completed [1 or more] days ago.
+You can use the `FinishedQueuedActionsCleanupInDays` constant to automatically clean up finished queued actions (through the  **SE_CleanupFinishedQueuedActions** scheduled event) with the following values:
 
-Please note that (when dealing a large amount of actions in a short period of time): -> Create QueuedAction (no commit) -> add to list -> append to queue -> commit list of queued actions is inferior to: -> Create QueuedAction (commit) -> append to queue.
+* Negative value = disabled
+* 0 = clear all finished actions
+* 1 or more = clear all finished actions that completed {1 or more} days ago
 
-However both constructions should work now (tested batch sizes up to 10000 objects in size).
-
-### 3.1 Automatic retry behavior
+## 4 Automatic Retry Behavior
 
 The module will keep retrying exponentially for up to 11 retries. Initial retry will have a delay of 1 second (2^0), the second retry will take (2^1) seconds and the nth retry (2^n-1) seconds for a maximum of 2^10 = 1024 seconds for a combined total of 2047 seconds (=34 minutes) which is excessive but finite on purpose. In tests even adding 10000 actions at once (batch commit) will only take 5 retries (and only the first action is affected). This is basically the time it takes the microflow doing the batch commit (of queued actions) to complete.
+
+## 5 Other
+
+When dealing with a large amount of actions in a short period of time, the following steps should be performed:
+
+1. Create QueuedAction (no commit).
+2. Add to list.
+3. Append to queue.
+
+To commit a list of queued actions that is inferior, the following steps should be performed:
+
+1. Create QueuedAction (commit).
+2. Append to queue.
+
+Both constructions should work, as this was tested with batches of up to 10000 objects in size.

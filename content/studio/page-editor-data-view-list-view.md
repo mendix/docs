@@ -8,8 +8,6 @@ tags: ["studio", "page editor", "pages", "data view", "list view"]
 
 ## 1 Introduction 
 
-This document describes a data view and a list view in the page editor of Mendix Studio.
-
 A *data view* is a starting point for showing the contents of one object on a page.  A data view typically contains input widgets like text boxes. 
 
 For example, if you want to fill out the information on each customer, a data view is the best way to do that.
@@ -23,6 +21,8 @@ A *list view* is a starting point for showing a list of objects. For example, if
 
 {{% image_container width="400" %}}![](attachments/page-editor-data-view-list-view/list-view-example.png)
 {{% /image_container %}}
+
+A data view and list view belong to the **Data Container** category of widgets. For more information on different widget categories, see [Widgets](page-editor-widgets). 
 
 ## 2 Data View Properties {#data-view-properties}
 
@@ -91,7 +91,7 @@ In the **General** section, you can select the number of rows to be displayed on
 
 * **Page Size** – the number of rows displayed on the page; after the indicated limit is reached, the **Load more...** button is displayed on the page.
 
-{{% image_container width="400" %}}![](attachments/page-editor-data-view-list-view/load-more-list-view.png)
+	{{% image_container width="400" %}}![](attachments/page-editor-data-view-list-view/load-more-list-view.png)
 {{% /image_container %}}
 
 * **Read-Only** (enabled by default) – when enabled, all [input elements](page-editor-widgets-input-elements) (for example, a text area, a check box) in the list view will be in read-only mode

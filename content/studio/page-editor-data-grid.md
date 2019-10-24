@@ -8,11 +8,11 @@ tags: ["studio", "page editor", "pages", "data view", "list view"]
 
 ## 1 Introduction 
 
-This document describes a data grid in Mendix Studio.
-
-A data grid shows a list of objects in a table format. For example, a data grid can show all the program items for an event. Using controls, end-users can browse, search, and edit objects in the data grid.
+A *data grid* shows a list of objects in a table format. For example, a data grid can show all the program items for an event. Using controls, end-users can browse, search, and edit objects in the data grid.
 
 ![](attachments/page-editor-data-grid/data-grid-example.png)
+
+A data grid belongs to the **Data Container** category of widgets. For more information on different widget categories, see [Widgets](page-editor-widgets). 
 
 ## 2 Data Grid Properties
 

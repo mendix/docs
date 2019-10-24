@@ -159,11 +159,11 @@ let response = await axios.post(ATS_URL, {
 });
 ```
 
-## 6 Conclusion
+## 7 Conclusion
 
 The Function API is not limited to Node.js. It is a generic web REST and JSON API that can be used from any programing language or tool.
 
-## 7 Read More
+## 8 Read More
 
 * [Function API](rg-two-function-api)
 * [Function API Reference](rg-two-function-api-reference)

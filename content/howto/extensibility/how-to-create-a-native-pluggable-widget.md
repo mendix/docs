@@ -878,9 +878,9 @@ Next you have to pass the icons configured by the Mendix developer to your displ
 8. Update the group box widget. [todo: come to ruling on group box widget casing]
 9. Gor the expand icon property, select a € sign [todo: how? bold sign?].
 10. Run the app locally.
-11. Inspect your changes. Notice that you cannot see any icon in group box's header. This is because your background color and text color are both black. Remember that in the **defaultStyle** constant of your display component you defined that text of React Native components that get the **headerContent** style applied to it should be white. However, we are not explicitly applying this style to our **Icon** component that we pass from our container component to the display component. You could argue to move the creation of the **Icon** component inside your display component, but this will go against the strict seperation of concerns related to the container and display component, since the **Icon** component is Mendix specific. Therefore, it should be part of the container component.
+11. Inspect your changes. Notice that you cannot see any icon in group box's header. This is because your background color and text color are both black. Remember that in the **defaultStyle** constant of your display component you defined that text of React Native components that get the **headerContent** style applied to it should be white. [todo: Isa, can we delete from However to the rest of the paragraph? I wanna tighten this up as much as possible.] However, you are not explicitly applying this style to our **Icon** component that you pass from our container component to the display component. You could argue to move the creation of the **Icon** component inside your display component, but this will go against the strict seperation of concerns related to the container and display component, since the **Icon** component is Mendix specific. Therefore, it should be part of the container component.
 
-Fix your icon issue by introducing a default style for our container component:
+Fix your icon issue by introducing a default style for your container component:
 
 1. Add the following **defaultStyle** constant outside the container component class:
 
@@ -910,7 +910,7 @@ Fix your icon issue by introducing a default style for our container component:
 
    The **flattenStyles** function will take the styling of the **defaultStyle** constant as a starting point and will override this with properties supplied in the **style** prop.
 
-4. Adjust the **renderIcon** method, so that it returns an **Icon** component with a color and size defined:
+4. Adjust the **renderIcon** method so that it returns an **Icon** component with a color and size defined:
 
    ```tsx
    private renderIcon = (toBeRenderedIcon: DynamicValue<NativeIcon> | undefined, glyph: string) => {
@@ -925,15 +925,17 @@ Fix your icon issue by introducing a default style for our container component:
     };
    ```
 
-5. Check the app in the Make it Native app and you should see the icons in white and the correct size.
+5. Check the app in the Make it Native app. You should see the white icons in the correct size:
 
-#### 3.3.5 Adding a collapsible property
+INSERT PIC HERE
 
-We are close to a fully featured group box. Though there are two more features that would be of high use for a Mendix developer: setting whether the group box should be collapsible and setting the initial state of being collapsed or not.
+#### 3.3.5 Adding a Collapsible Property
 
-Let's first change the widget property configuration:
+You are close to completing your group box widget. There are two more features essential for a Mendix developer: setting if the group box should be collapsible and setting the initial state of being collapsed or not.
 
-1. Head to **src/GroupBox.xml**.
+First change the widget property configuration:
+
+1. Navigate to **src/GroupBox.xml**.
 2. Add a **collapsible** property underneath the **content** property:
 
    ```xml
@@ -1030,19 +1032,17 @@ Let's first change the widget property configuration:
    </widget>
    ```
 
-4. Add the image below as the icon for the widget as a finishing touch.
+4. Add this image as a widget icon by following the substeps below:
 
    ![Group box icon](attachments/how-to-create-a-native-pluggable-widget/GroupBox.png)
 
-   To do so, use the following steps:
+   a. Generate a Base64 representation of the *.png* file:
 
-   1. Generate a Base64 representation of the png file:
+      **— For Windows**:
 
-      - Windows:
-
-        1. Open command prompt.
-        2. Change the current working directory to the folder where the "GroupBox.png" is stored.
-        3. Execute the following command to generate the Base64 representation:
+        i. Open command prompt.
+        ii. Change the current working directory to the folder where the *GroupBox.png* is stored.
+        iii. Execute the following command to generate the Base64 representation:
 
            ```cmd
            certutil -encode GroupBox.png data.b64
@@ -1050,11 +1050,11 @@ Let's first change the widget property configuration:
 
            The representation can be found in the file "data.b64" that's created in the same folder.
 
-      - Unix:
+      **— For Unix**:
 
-        1. Open a terminal.
-        2. Change the current working directory to the folder where the "GroupBox.png" is stored.
-        3. Execute the following command to generate the Base64 representation:
+        i. Open a terminal.
+        ii. Change the current working directory to the folder where the "GroupBox.png" is stored.
+        iii. Execute the following command to generate the Base64 representation:
 
            ```shell
            base64 -i GroupBox.png -o data.b64
@@ -1062,7 +1062,7 @@ Let's first change the widget property configuration:
 
            The representation can be found in the file "data.b64" that's created in the same folder.
 
-   2. Add the Base64 representation to the icon element in the xml file:
+   2. Add the Base64 representation to the icon element in the *.xml* file:
 
       ```xml
       <?xml version="1.0" encoding="utf-8" ?>
@@ -1112,12 +1112,12 @@ Let's first change the widget property configuration:
       </widget>
       ```
 
-5. Save the xml file.
+5. Save the *.xml* file.
 
-Now, let's support the two features with our display component:
+Now support this section's two features with our display component:
 
-1. Head over to the display component.
-2. Let's first add two new props for collapsibility and the initial state of being collapsed or not by adding them to the **GroupBoxProps** interface:
+1. Navigate to the display component.
+2. Add a props for collapsibility and a prop for the initial state of being collapsed or not to the **GroupBoxProps** interface:
 
    ```tsx
    export interface GroupBoxProps {
@@ -1130,7 +1130,7 @@ Now, let's support the two features with our display component:
    }
    ```
 
-3. Change the initilization of the state, so that the collapsed state starts with the value passed through the **startCollapsed** prop:
+3. Change the initilization of the state so that the collapsed state starts with the value passed through the **startCollapsed** prop:
 
    ```tsx
    readonly state: GroupBoxState = {
@@ -1138,9 +1138,9 @@ Now, let's support the two features with our display component:
     };
    ```
 
-If the group box should not be collapsible at all, we would have to remove the **Touchble** component that wraps the header to prevent toggling the collapsed state. Moreover, we should remove the icons inside the header indicating the group box is collapsible. Let's make those changes:
+	If the group box should not be collapsible at all, you would have to remove the **Touchble** component that wraps the header to prevent toggling the collapsed state. Moreover, you should remove the icons inside the header indicating the group box is collapsible. Let's make those changes [todo: work with Isa to remove the Would and Should language. Docs stay clear by just telling people what to do (even when they explain reasoning).]:
 
-1. Change the **renderHeader** method so that it doesn't render the **Touchable** component around the header **View** component:
+1. Change the **renderHeader** method so that it does not render the **Touchable** component around the header **View** component:
 
    ```tsx
    private renderHeader = () => {
@@ -1162,7 +1162,7 @@ If the group box should not be collapsible at all, we would have to remove the *
    };
    ```
 
-2. Also prevent the header **View** component from being rendered at all when the group box isn't collapsible and there is no header caption, because the header would otherwise be visible as an empty block:
+2. Prevent the header **View** component from being rendered at all when the group box is not collapsible and there is no header caption. Otherwise, the header would be visible as an empty block:
 
    ```tsx
    private renderHeader = () => {
@@ -1186,7 +1186,7 @@ If the group box should not be collapsible at all, we would have to remove the *
    };
    ```
 
-3. Change the **renderIcon** method to prevent an icon from being rendered when the group box isn't collapsible by adding a guard that returns null:
+3. Change the **renderIcon** method to prevent an icon from being rendered when the group box is not collapsible by adding a guard that returns null:
 
    ```tsx
    private renderIcon = (): ReactNode => {
@@ -1204,7 +1204,7 @@ If the group box should not be collapsible at all, we would have to remove the *
    };
    ```
 
-4. Change the **render** method to deal correctly with the situation where there is no header nor content to be rendered by returning null when this situation occurs:
+4. Change the **render** method to so it can function when there is neither header nor content to be rendered by returning null:
 
    ```tsx
    render(): ReactNode {
@@ -1224,7 +1224,7 @@ If the group box should not be collapsible at all, we would have to remove the *
    }
    ```
 
-The last thing we need to do is change the container component so that the properties get passed to the display component.
+The last thing to do is change the container component so that the properties get passed to the display component:
 
 1. Navigate to the container component.
 
@@ -1253,17 +1253,17 @@ The last thing we need to do is change the container component so that the prope
    ```
 
 3. Go to Mendix Studio Pro.
-4. Press <kbd>F4</kbd> or select **Project > Synchronize Project Directory** from the topbar menu to bring your application in sync with the changes we made to the **src/GroupBox.xml** file.
-5. Update the "Group Box" widget.
-6. Verify whether the "Collapsible" property options behave correctly.
+4. Press <kbd>F4</kbd> or select **Project > Synchronize Project Directory** from the topbar menu to bring your application in sync with the changes you made to the **src/GroupBox.xml** file.
+5. Update the group box widget.
+6. Verify that the collapsible property options behave correctly. [todo: how?]
 
-#### 3.3.6 Adding a custom default style
+#### 3.3.6 Adding a Custom Default Style
 
-Although we have an extensively featured group box, we can still improve the styling of the widget. Right now, we apply very basic styling that's baked into our widget code. We can let the Mendix Client override this default styling by defining a custom default style for our widget in Atlas UI. To define a custom default style, follow these steps:
+Although you have an extensively featured group box widget, you can still improve its styling. Currently, the widget recieves basic styling which has been baked its code. You can make the Mendix Client override this default styling by defining a custom default style for the widget in Atlas UI. To define a custom default style, follow these steps:
 
-1. Open **test/MxTestProject/theme/styles/native/app/custom.js**. This is the place where we can define a custom default style for our group box widget.
+1. Open **test/MxTestProject/theme/styles/native/app/custom.js**. This file will let you define a custom default style for your group box widget.
 
-2. Add the following imports and constant to the file to define a default custom style:
+2. Add the following imports and constant to *custom.js* to define a default custom style:
 
    ```js
    import { brand } from "../core/variables";
@@ -1282,13 +1282,13 @@ Although we have an extensively featured group box, we can still improve the sty
    };
    ```
 
-   Note that the name of the constant has to be almost the same as the id of the widget. Only the dots of the widget id need to be underscores. Only with this name the Mendix Client will apply the custom style defined in this constant to the group box widget.
+   Note that the name of the constant has to be almost the same as the widget id. However, the widget id's periods need to be underscores. Using this convention the Mendix Client can apply the custom style defined in this constant to the group box widget.
 
-3. Save the file and refresh the your app in the Make it Native app to see your new default style. Also note the ripple effect on the header in Android that was previously not visible.
+3. Save the file and refresh the your app in the Make it Native app to see your new default style. Also note the ripple effect on the header in Android that was previously not visible. [todo: should we clarify that testers should test on both platforms after every step?]
 
-### 3.3.7 Adding a design property
+### 3.3.7 Adding a Design Property
 
-It would be nice to provide the developer with some pre-definded styles that can be used for the group box. Let's create three style classes for the group box based on the brand colors success, warning and danger.
+It would be nice to provide the developer with some pre-definded styles that can be used for the group box. Create three style classes for the group box based on the brand colors success, warning, and danger:
 
 1. Open **test/MxTestProject/theme/styles/native/app/custom.js** and append the following constants at the end of the file:
 
@@ -1330,15 +1330,17 @@ It would be nice to provide the developer with some pre-definded styles that can
    };
    ```
 
-2. Go to Mendix Studio Pro and double click the group box widget
-3. Head to the appearance section.
-4. In the class field fill in "groupBoxWarning" to apply the warning style to the group box.
-5. Hit "OK" and rerun the app locally to see the warning style.
+2. In Studio Pro, double-click the group box widget.
+3. Navigate to the appearance section.
+4. In the **Class** field, fill in *groupBoxWarning* to apply the warning style to the group box.
+5. Click **OK** and rerun the app locally to see the warning style:
 
-Defining all the different styles inside **test/MxTestProject/theme/styles/native/app/custom.js** can make your code less readable. To prevent this we can extract the styles specifically for the group box and store them in a seperate file.
+	TODO INSERT PIC
+
+Defining all the different styles inside **test/MxTestProject/theme/styles/native/app/custom.js** can make your code less readable. To prevent this, extract the styles specifically for the group box and store them in a seperate file:
 
 1. Create a new file **test/MxTestProject/theme/styles/native/app/group-box.js**.
-2. Move all the code from **test/MxTestProject/theme/styles/native/app/custom.js** into the newly created file.
+2. Move all the code from **test/MxTestProject/theme/styles/native/app/custom.js** into the new file.
 3. Add the following import to **test/MxTestProject/theme/styles/native/app/group-box.js**:
 
    ```js
@@ -1347,10 +1349,10 @@ Defining all the different styles inside **test/MxTestProject/theme/styles/nativ
 
 4. Verify the custom warning style is still being applied to the group box widget in the Make it Native app.
 
-The developer needs to know the classnames by hard to apply a certain group box style. By making use of a design property this is no longer necessary.
+The developer needs to have the classnames memorized to apply a certain group box style. By using a design property this will no longer be necessary:
 
 1. Open **test/MxTestProject/theme/settings-native.json**.
-2. Append after the "com.mendix.widget.native.slider.Slider" property the following property:
+2. After the "com.mendix.widget.native.slider.Slider" property, add the following property:
 
    ```json
    "com.mendix.widget.native.groupbox.GroupBox": [
@@ -1376,16 +1378,18 @@ The developer needs to know the classnames by hard to apply a certain group box 
    ]
    ```
 
-3. Go to Mendix Studio Pro and press <kbd>F4</kbd> or select **Project > Synchronize Project Directory** from the topbar menu to bring your application in sync with the changes we made to the previous two files.
+3. In Studio Pro click <kbd>F4</kbd> or select **Project > Synchronize Project Directory** from the topbar menu to bring your application in sync with the changes you made to the previous two files.
 
-4. Double click the group box widget and head to the appearance tab.
+4. Double-click the group box widget and navigate to the **Appearance** tab.
 
-5. Verify that there is a design property called "Group box style".
+5. Verify that there is a design property called **Group box style**.
 
-6. Select the success style and hit "OK".
+6. Select the **success** style and click **OK**.
 
-7. Rerun the app locally and verify the new green style in the Make it Native App.
+7. Rerun the app locally and verify the new success style in the Make it Native App:
+
+todo insert pic
 
 ## 4 Read More
 
-{Add links to related documents and blog posts; make sure necessary third-party links are contextualizecd ./d in the above sections, as they should not be put here}
+todo add styling and widget links

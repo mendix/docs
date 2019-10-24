@@ -3,11 +3,13 @@ title: "Function API"
 parent: "rg-two-ats"
 ---
 
-The Function API is a REST API that allows ATS functions to be called from any testing tool or programing environment.
-The function is executed against a selenium session that is specified in the request.
+## 1 Introduction
 
-Lets illustrate this with a simple example of using the *Get Value* function.
-To run this functions one needs to send a POST request to the endpoint `http://ats100.mendixcloud.com/function` with the following body:
+The Function API is a REST API that allows ATS functions to be called from any testing tool or programing environment. The function is executed against a Selenium session that is specified in the request.
+
+## 2 Example Scenario
+
+Let's illustrate using the Function API with a simple example using the `GetValue` function. To run this function, you need to send a `POST` request to the `http://ats100.mendixcloud.com/function` endpoint with the following body:
 
 ```json
 {
@@ -26,15 +28,11 @@ To run this functions one needs to send a POST request to the endpoint `http://a
     }
 }
 ```
-where
 
-**_remoteSeleniumDriver_** - is a reference to a remote selenium session that consists of a selenium driver URL (which needs to be publicly accessible) and a session id.
-ATS will use this session to execute the function specified under
+* `remoteSeleniumDriver` – a reference to the remote Selenium session that consists of a Selenium driver URL (which needs to be publicly accessible) and a session ID; ATS will use this session to execute the function specified under `functionToExecute`
+* `functionToExecute` – defines which ATS function to execute; the function and values are identified by their key (guaranteed to be unique), which can be found in the [Function API Reference](function-api-reference); the order of the values is not relevant, and optional parameters (default to null) are used unless a value is specified
 
-**_functionToExecute_** - defines which ATS function to execute. The function and values are identified by their key (guaranteed to be unique) that can be found [here](function-api-reference.md).
-The order of the values is not relevant and optional parameter (default to null) unless a values is specified.
-
-If the function execution was successful ATS will respond with
+If the function execution is successful, ATS will respond with the following:
 
 ```json
 {
@@ -43,24 +41,24 @@ If the function execution was successful ATS will respond with
 }
 ```
 
-A step-by-step tutorial is available [here](ov-function-api-rest).
+For more details, see [Function API with REST](ov-function-api-rest).
 
-###  Authentication
+### 2.1 Authentication
 
-Uses the [Basic auth](https://tools.ietf.org/html/rfc7617) with the project id as username and an API key as password. 
+Uses the [Basic HTTP Authentication Scheme](https://tools.ietf.org/html/rfc7617) with the project ID as the user name and an API key as the password. 
 
-### Schemas
+### 2.2 Schemas
 
 * [Request](attachments/rg-two-function-api/functions_api_request.schema.json)
 * [Response](attachments/rg-two-function-api/functions_api_response.schema.json)
 
-### Passing web elements
+### 2.3 Passing Web Elements
 
-Web elements are passed by their internal Selenium ID which is in essence a string. To indicate that a parameter or a return value is a web element and not a string the flag `isWebElement` needs to be set to true.
+Web elements are passed by their internal Selenium ID, which in essence is a string. To indicate that a parameter or a return value is a web element and not a string, set the `isWebElement` flag to true.
 
-### Dialects
+### 2.4 Dialects
 
-Modern selenium uses a dialect known as _W3C_ by default to talk to browser drivers. However if for any reason you need to use the old _OSS_ dialect, that needs to be passed explicitly in the call:
+Modern Selenium uses a dialect known as "W3C" by default to talk to browser drivers. However, if for any reason you need to use the old "OSS" dialect, that needs to be passed explicitly in the call:
 
 ```json
 "remoteSeleniumDriver": {
@@ -70,18 +68,20 @@ Modern selenium uses a dialect known as _W3C_ by default to talk to browser driv
 }
 ```
 
-## Clients
+## 3 Clients
 
 Clients are available for the function API for the following tools:
 
-* java
-* Katalon
+* [Java](ov-function-api-java)
+* [Katalon](ov-function-api-katalon)
 
-The clients allow one to use the function API via a simplified interface without having to deal with parsing and formatting json and building http requests. In addition the clients automatically detect the remote session url and id as well as the dialect used so that this does not have to be specified manually.
+The clients allow one to use the function API via a simplified interface without having to deal with parsing and formatting JSON and building HTTP requests. In addition, the clients automatically detect the remote session URL and ID as well as the dialect used so that this does not have to be specified manually.
 
-#### Java
+### 3.1 Java
 
-Add `ats.jar` to the project's build-path. Optionally, configure source and java-doc. Here is a simple example:
+For Java, add `ats.jar` to the project's build path. Alternatively, configure `source` and `java-doc`.
+
+Here is a simple example:
 
 ```java
 ATSSettings atsSettings = new ATSSettings(projectId, apiKey);
@@ -93,12 +93,11 @@ ats.Widget_Set.SetValue("textBox1", "Lorem ipsum", null);
 
 ```
 
+For more details, see [Function API with Java](ov-function-api-java).
 
-A step-by-step tutorial is available [here](ov-function-api-java).
+### 3.2 Katalon
 
-#### Katalon
-
-Add `ats.jar` to the plugins folder. The ATS functions are available as custom keywords and in groovy. The authentication can be configured under ATS Settings.
+For Katalon, add `ats.jar` to the plugins folder. The ATS functions are available as custom keywords and in Groovy. The authentication can be configured under **ATS Settings**.
 
 ```groovy
 WebUI.openBrowser('')
@@ -111,19 +110,16 @@ CustomKeywords.'ats.Widget_Set.SetValue'('textBox1', 'Lorem ipsum', null)
 ats.Widget_Set.SetValue("textBox1", "Lorem ipsum", null);
 ```
 
+For more details, see [Function API with Katalon](ov-function-api-katalon).
 
-A step-by-step tutorial is available [here](ov-function-api-katalon).
+## 4 Limitations
 
-## Limitations
+Only Selenium version 3.141.59 is supported. Other automation technologies (for example, [Cypress](https://www.cypress.io/)) are not supported. 
 
-The Function API is a preview feature. If you are interested in trying it out please contact support. Keep in mind there might be further changes to the functionality.
+A limit of 20 active requests at a given time applies per project. Additionally, excessive usage (for example, one hundred thousands calls per day) is discouraged, as it may lead to revoking the API key.
 
-A limit of 20 active requests at a given time applies per project. Additionally, excessive usage is discouraged and may lead to revoking of the API key (e.g. one hundred thousands calls per day). 
+All HTTP requests are synchronous, meaning they will time out after roughly 1-2 minutes. This is due to the nature of HTTP communication. There is no way to extend this timeout.
 
-All HTTP requests are synchronous meaning that they will time out after roughly 1-2 minutes. This is due to the nature of HTTP communication. There is no way to extend this timeout.
-
-In order for ATS to automate the selenium session the selenium driver must be on a URL that is publicly accessible. In cases where the URL is protected by authentication, the username password should be included in the URL.
-
-Only selenium version 3.141.59 is supported. Other automation technologies such as e.g. cypress are not supported. 
+In order for ATS to automate the Selenium session, the Selenium driver must be on a URL that is publicly accessible. In cases where the URL is protected by authentication, the user name password should be included in the URL.
 
 Mobile testing is not supported.

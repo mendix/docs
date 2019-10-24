@@ -89,6 +89,12 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 * All **HTTP Request Headers** set by the Mendix Cloud which available to app developers are documented in [Mendix Cloud HTTP Request Headers](/developerportal/deploy/mendix-cloud-request-headers).
 * The `X-Client-Certificate` request header that is currently present is deprecated and will be removed in a later stage. Any application relying on this header must switch to the new `SSL-Client-S-DN` header. See the previously mentioned documentation for more information.
 
+### May 17th, 2019
+
+#### Environment Fixes
+
+* We made several changes to our maintenance window management to ensure that environments are completely locked during maintenance.
+
 ### May 16th, 2019
 
 #### Mendix Cloud Improvements
@@ -337,6 +343,12 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 * We improved the stability of the alerting stack.
 
+### June 26th, 2018
+
+#### App Start Fix
+
+* We fixed the bug that allowed users to start an application during a restore.
+
 ### June 15th, 2018
 
 #### Improvement
@@ -357,9 +369,15 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 ### June 8th, 2018
 
-#### Improvement
+#### Improvements
 
 * We have introduced scaling via API for Mendix Cloud v4. It is now possible to scale Mendix Cloud v4 applications via the Deploy API. For instructions, see the [Deploy API](../../apidocs-mxsdk/apidocs/deploy-api).
+*  We have aggregated the health icons for the acceptance and test environments in the **Nodes** dashboard and **Company Admin** screen.
+
+	{{% image_container width="300" %}}![](attachments/CPHealthIcon.png)
+	{{% /image_container %}}
+
+* The health icon will display the health status of the environment that is in the worst condition. This is to prepare for an upcoming release that will support more than three environments per application.
 
 #### Fixes
 

@@ -134,7 +134,7 @@ Properties available in the **General** section are described in the table below
 
 A tab container is a container that is used to show information categorized into tabs. This can be useful if the amount of information that you would like to display is larger than the amount of space on the screen. For example, you can show a list of customers on one tab, and orders on the other one. 
 
-{{% image_container width="400" %}}![Tab Container Example](attachments/page-editor-widgets-structure/tab-container-example.png)
+{{% image_container width="350" %}}![Tab Container Example](attachments/page-editor-widgets-structure/tab-container-example.png)
 {{% /image_container %}}
 
 You can place a widget or a group of widgets inside each tab and configure information in them separately. 

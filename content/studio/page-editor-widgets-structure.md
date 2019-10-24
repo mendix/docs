@@ -1,6 +1,6 @@
 ---
 
-title: "Structure Widgets"
+title: "Structure"
 parent: "page-editor-widgets"
 description: "Describes Structure widgets in Mendix Studio."
 menu_order: 60
@@ -11,7 +11,7 @@ tags: ["studio", "page editor", "layout", "layout widgets", "structure widgets"]
 
 Structure widgets are widgets that allow you to provide structure to your page and group other widgets inside them. 
 
-Layout widgets are the following ones:
+There are the following Structure widgets:
 
 * [Columns and Sidebars](#columns) 
 * [Container](#container-overview)
@@ -24,7 +24,7 @@ Layout widgets are the following ones:
 
 ## 3 Layout Grid Overview {#layout-grid}
 
-The **Layout Grid** helps you to configure a page and make it responsive immediately. This means that a layout grid has a built-in behavior to show how a page will look like on different devices. Switch **Device** modes in the top bar to see how a page will be displayed on a phone, tablet or desktop.
+The **Layout Grid** helps you to configure a page and make it responsive immediately. This means that a layout grid has a built-in behavior to show how a page will look like on different devices. Switch **Device** modes to see how a page will be displayed on a phone, tablet or desktop:
 
 {{% image_container width="350" %}}![Device Modes](attachments/page-editor-widgets-structure/device-modes.png)
 {{% /image_container %}}
@@ -44,7 +44,7 @@ Use a column to align items in a row.  For more information on rows and columns,
 
 ### 2.1 Layout Grid Properties {#layout-grid-properties}
 
-You can access the **Layout Grid** properties through the breadcrumb trail (for more information, see the **[Breadcrumb Trail](page-editor#breadcrumb)** section in *Pages*). 
+You can access the **Layout Grid** properties through the breadcrumb (for more information, see the **[Breadcrumb](page-editor#breadcrumb)** section in *Pages*). 
 Layout grid properties consist of the following sections:
 
 * [Expand](#expand-section) 
@@ -72,7 +72,7 @@ The **General** section of the layout grid contains the **Full Width** property.
 
 #### 2.1.3 Design Section
 
-For information on the **Design** section and its properties, see [Design Section in Widgets](page-editor-widgets-design-section).
+For information on the **Design** section and its properties, see [Design Section](page-editor-widgets-design-section).
 
 ### 2.2 Row and Column Properties {#columns-and-rows}
 
@@ -109,7 +109,7 @@ A **Container** is used as a layout element where you can place a widget or a gr
 {{% image_container width="400" %}}![Container Example](attachments/page-editor-widgets-structure/container.png)
 {{% /image_container %}}
 
-Container properties consist of the **Design** section. For information, see [Design Section in Widgets](page-editor-widgets-design-section).
+Container properties consist of the **Design** section. For information, see [Design Section](page-editor-widgets-design-section).
 
 ## 5 Group Box Overview {#group-box-overview}
 
@@ -120,7 +120,7 @@ A group box is used to group widgets together. The group box can be configured t
 
 ### 5.1 Group Box Properties
 
-Group box properties consist of the **General** section and the **Design** section. For information on the **Design** section and its properties, see [Design Section in Widgets](page-editor-widgets-design-section).
+Group box properties consist of the **General** section and the **Design** section. For information on the **Design** section and its properties, see [Design Section](page-editor-widgets-design-section).
 
 Properties available in the **General** section are described in the table below.
 
@@ -134,7 +134,7 @@ Properties available in the **General** section are described in the table below
 
 A tab container is a container that is used to show information categorized into tabs. This can be useful if the amount of information that you would like to display is larger than the amount of space on the screen. For example, you can show a list of customers on one tab, and orders on the other one. 
 
-{{% image_container width="400" %}}![Tab Container Example](attachments/page-editor-widgets-structure/tab-container-example.png)
+{{% image_container width="350" %}}![Tab Container Example](attachments/page-editor-widgets-structure/tab-container-example.png)
 {{% /image_container %}}
 
 You can place a widget or a group of widgets inside each tab and configure information in them separately. 
@@ -155,7 +155,7 @@ In the **General** section, you can configure the following properties:
 
 ### 6.2 Tab Container Design Properties
 
-For information on the **Design** section and its properties, see [Design Section in Widgets](page-editor-widgets-design-section).
+For information on the **Design** section and its properties, see [Design Section](page-editor-widgets-design-section).
 
 ### 6.3 Tab Properties {#tab-properties}
 

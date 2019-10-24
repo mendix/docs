@@ -61,7 +61,7 @@ Settings available for Mendix Assist are described in the table below:
 | Mendix Assist Is ON/OFF      | Click a slider to enable/disable the tool.                   |
 | Information Dialog Is ON/OFF | Click a slider to enable/disable the information dialog window. **Note** The information dialog window is disabled if Mendix Assist is OFF. |
 
-You can also enable/disable Mendix Assist by clicking the information icon in the top bar of Mendix Studio. 
+You can also enable/disable Mendix Assist by clicking the information icon in the top menu bar of Mendix Studio. 
 
 {{% image_container width="300" %}}![](attachments/mx-assist/info-icon-setting.png)
 {{% /image_container %}}

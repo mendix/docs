@@ -165,7 +165,7 @@ Errors for static and dynamic images are described in the table below.
 
 ## 8 On Click Action Consistency Errors 
 
-You can specify an **On Click Action** for different widgets, for example, for buttons or images. For more details about on click actions, see [Events Section in Widgets](page-editor-widgets-events-section).
+You can specify an **On Click Action** for different widgets, for example, for buttons or images. For more details about on click actions, see [Events Section](page-editor-widgets-events-section).
 
 The most common consistency errors appear when you do not configure the on click action entirely. For example, you select a microflow as an on click action, but do not select the microflow itself. 
 

@@ -523,19 +523,19 @@ Besides the header caption, we also want the developer to be able to fill conten
    }
    ```
 
-Let's verify that the new content property works:
+Verify that the new content property works:
 
 1. Go back to Mendix Studio Pro.
-2. Press <kbd>F4</kbd> or select **Project > Synchronize Project Directory** from the topbar menu to bring your application in sync with the changes we made to the **src/GroupBox.xml** file.
-3. Update the "Group Box" widget again. A content area will appear in the page editor.
-4. Drag a "Call nanoflow button" widget into the content area.
-5. Create a new nanoflow "ACT_ShowMessage".
-6. Double click the button and change the caption to "Show message".
-7. Navigate to the nanoflow "ACT_ShowMessage".
-8. Drag in a "Show message" activity.
-9. Double click the activity and add the text "Hello World!" to the Template. Click the "OK" button.
-10. ReRun the app locally
-11. Verify with the Make it Native app that your button is inside the group box and is triggering a message popup saying "Hello World!".
+2. Press <kbd>F4</kbd> or select **Project > Synchronize Project Directory** to bring your application in sync with the changes to the **src/GroupBox.xml** file.
+3. Update the group box widget again. A content area will appear in the page editor.
+4. Drag and drop a **Call nanoflow button** widget into the content area.
+5. Create a new nanoflow *ACT_ShowMessage*.
+6. Double-click the button and change the caption to *Show message*.
+7. Navigate to **ACT_ShowMessage**.
+8. Drag and drop a **Show message** activity onto your nanoflow.
+9. Double-click the activity and add the text *Hello World!* to the **Template**, then click **OK**.
+10. Rerun the app locally.
+11. With the Make it Native app, verify that your button is inside the group box and is triggering a message popup saying **Hello World!**.
 
 It would be nice to hide the content area of the group box completely when there is no content added to the group box in Mendix Studio Pro:
 
@@ -579,11 +579,11 @@ It would be nice to hide the content area of the group box completely when there
    }
    ```
 
-#### 3.3.3 Making the widget collapsilble
+#### 3.3.3 Making the Widget Collapsilble
 
-Now that our widget can contain content, the next challange is to hide this content by making the group box collapsible.
+Now that your widget can contain content, the next challange is to hide this content by making the group box collapsible.
 
-First we will make the complete header clickable:
+To start, make the complete header clickable:
 
 1. Navigate to the display component (**src/components/GroupBox.tsx**).
 2. Import the React Native components **TouchableOpacity** and **TouchableNativeFeedback**:
@@ -615,7 +615,7 @@ First we will make the complete header clickable:
    };
    ```
 
-   In the method above the **Touchable** constant is a so-called dynamic component. Based on the platform (iOS or Android) on which our app is running, the **Touchable** constant represents either the React Native built-in component **TouchableOpacity** or **TouchableNativeFeedback**. The reason to use different components has to do with achieving different click feedback on both platforms. Clicking on Android causes a so-called ripple effect, whereas on iOS it causes some opacity effect.
+	In the method above, the **Touchable** constant is a dynamic component. Depending on which platform on your app is running, the **Touchable** constant represents either the React Native built-in component **TouchableOpacity** or **TouchableNativeFeedback**. Each platform uses a different component to achieve a different type of tap feedback. Tapping on Android causes a ripple effect, whereas on iOS tapping causes an opacity effect.
 
 4. Change the **render** method to make use of **renderHeader**:
 
@@ -632,9 +632,9 @@ First we will make the complete header clickable:
 
 5. Make sure all files have been saved.
 6. Reload your test app in the Make it Native app to view the change.
-7. Verify the header is clickable. Note that on Android, the ripple effect is not visible on a black background, so at the moment you can't visually verify yet whether it's clickable.
+7. Verify the header is clickable. Note that on Android, the ripple effect is not visible on a black background, so at the moment you cannot verify yet if it's clickable.
 
-Let's now make it possible to expand or collapse the group box.
+Now make it possible to expand or collapse the group box:
 
 1. Navigate to the display component (**src/components/GroupBox.tsx**).
 2. Create an **GroupBoxState** interface below the **GroupBoxProps** one:
@@ -645,13 +645,13 @@ Let's now make it possible to expand or collapse the group box.
    }
    ```
 
-3. Change the class definition as follows to give our component a state to keep track on whether it's collapsed or not:
+3. Change the class definition to give our component a state to keep track on whether it's collapsed or not:
 
    ```tsx
    export class GroupBox extends Component<GroupBoxProps, GroupBoxState>
    ```
 
-4. Set collapsed to false for the initial state by adding the following code inside the class:
+4. Set collapsed to false for the initial state by this inside the class:
 
    ```tsx
    readonly state: GroupBoxState = {
@@ -659,7 +659,7 @@ Let's now make it possible to expand or collapse the group box.
    };
    ```
 
-5. Add the following lambda method to the class to change the collapsed state:
+5. To change the collapsed state, add this lambda method to the class:
 
    ```tsx
    private toggleCollapsed = (): void => {
@@ -668,7 +668,7 @@ Let's now make it possible to expand or collapse the group box.
    };
    ```
 
-6. Let the **Touchable** component execute the **toggleCollapsed** method when it's pressed (clicked). Also switch between a plus and minus character in the header depending on the state. The **renderHeader** method should look as follows:
+6. Let the **Touchable** component execute the **toggleCollapsed** method when it's tapped. Also, switch between a plus and minus character in the header depending on the state [todo keybindings?]. The **renderHeader** method should look as follows:
 
    ```tsx
    private renderHeader = () => {
@@ -697,15 +697,17 @@ Let's now make it possible to expand or collapse the group box.
    };
    ```
 
-8. Verify in the Make it Native app that you can expand and collapse the group box.
+8. Verify in the Make it Native app that you can expand and collapse the group box:
 
-#### 3.3.4 Adding an expand & collapse icon property
+	TODO insert pic/gif here
+
+#### 3.3.4 Adding an Expand and Collapse Icon Property
 
 The next step is to allow a Mendix developer to use a custom icon in the clickable header.
 
-Let's first define the properties and adjust the display component so that it can render icons:
+First, define the properties and adjust the display component so that it can render icons:
 
-1. Head to **src/GroupBox.xml**.
+1. Navigate to **src/GroupBox.xml**.
 2. Add two icon properties to set an icon for indicating the actions expand and collapse:
 
    ```xml
@@ -739,7 +741,7 @@ Let's first define the properties and adjust the display component so that it ca
    </widget>
    ```
 
-3. Add property groups around the properties to create a more readable properties window in Mendix Studio Pro:
+3. Add property groups around the properties to create a more readable properties window in Studio Pro:
 
    ```xml
    <?xml version="1.0" encoding="utf-8" ?>
@@ -776,8 +778,8 @@ Let's first define the properties and adjust the display component so that it ca
    </widget>
    ```
 
-4. Save the xml file.
-5. Head over to the display component.
+4. Save the *.xml* file.
+5. Navigate to the display component.
 6. Add two new props for an expand and collapse icon by changing the **GroupBoxProps** interface:
 
    ```tsx
@@ -820,18 +822,17 @@ Let's first define the properties and adjust the display component so that it ca
    };
    ```
 
-Next we have to pass the icons configured by the Mendix developer to our display component. If an icon isn't explicitly configured, we will pass a default glyph (glyphs are provided by the Mendix Client). Let's glue everything together in the container component:
+Next you have to pass the icons configured by the Mendix developer to your display component. If an icon is not explicitly configured, you will pass a default glyph (glyphs are provided by the Mendix Client). Glue everything together in the container component by doing the following:
 
-1. Go to the container component (**src/GroupBox.tsx**).
-
-2. Create two constants outside the class that hold the glyph references:
+1. Navigate to the container component **src/GroupBox.tsx**.
+2. Create two constants outside the class which hold the glyph references:
 
    ```tsx
    const defaultCollapseIconGlyph = "glyphicon-minus";
    const defaultExpandIconGlyph = "glyphicon-plus";
    ```
 
-3. Do the following imports:
+3. Do the following imports [todo: do?]:
 
    ```tsx
    import { DynamicValue, NativeIcon, ValueStatus } from "mendix";
@@ -872,14 +873,14 @@ Next we have to pass the icons configured by the Mendix developer to our display
    }
    ```
 
-6. Go to Mendix Studio Pro.
-7. Press <kbd>F4</kbd> or select **Project > Synchronize Project Directory** from the topbar menu to bring your application in sync with the changes we made to the **src/GroupBox.xml** file.
-8. Update the "Group Box" widget.
-9. Select for the expand icon property a Euro sign.
+6. Navigate to Studio Pro.
+7. Press <kbd>F4</kbd> or select **Project > Synchronize Project Directory** to bring your application in sync with the changes you made to the **src/GroupBox.xml** file.
+8. Update the group box widget. [todo: come to ruling on group box widget casing]
+9. Gor the expand icon property, select a € sign [todo: how? bold sign?].
 10. Run the app locally.
-11. Check out your changes. You should notice that you can't see any icon in the header of the group box. The reason for this is that our background color and text color are both black. Remember that in the **defaultStyle** constant of our display component we defined that text of React Native components that get the **headerContent** style applied to it, should be white. However, we are not explicitly applying this style to our **Icon** component that we pass from our container component to the display component. You could argue to move the creation of the **Icon** component inside your display component, but this will go against the strict seperation of concerns related to the container and display component, since the **Icon** component is Mendix specific. Therefore, it should be part of the container component.
+11. Inspect your changes. Notice that you cannot see any icon in group box's header. This is because your background color and text color are both black. Remember that in the **defaultStyle** constant of your display component you defined that text of React Native components that get the **headerContent** style applied to it should be white. However, we are not explicitly applying this style to our **Icon** component that we pass from our container component to the display component. You could argue to move the creation of the **Icon** component inside your display component, but this will go against the strict seperation of concerns related to the container and display component, since the **Icon** component is Mendix specific. Therefore, it should be part of the container component.
 
-Let's fix the issue by introducing a default style for our container component:
+Fix your icon issue by introducing a default style for our container component:
 
 1. Add the following **defaultStyle** constant outside the container component class:
 

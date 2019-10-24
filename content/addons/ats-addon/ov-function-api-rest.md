@@ -135,7 +135,7 @@ console.log(response.returnValue);
 
 ## 6 Working with Web Elements
 
-Web elements in Selenium are stored in the session as simple string IDs. Thus, sending and receiving web elements to ATS is just a matter of sending this string ID. In order to distinguish between sending a normal string and sending a string ID for a web element, the `isWebElement` flag is used.
+Web elements in Selenium are stored in the session as simple string IDs. So, sending and receiving web elements with ATS is just a matter of sending this string ID. In order to distinguish between sending a normal string and sending a string ID for a web element, the `isWebElement` flag is used.
 
 ```javascript
 // find an element with selenium and click it with ATS
@@ -161,4 +161,11 @@ let response = await axios.post(ATS_URL, {
 
 ## 6 Conclusion
 
-The Function API is not limited to Node.js. It is a generic web REST+json API that can be used from any programing language or tool. That being said we have a special treat if you are using [Java](ov-function-api-java) or [Katalon](ov-function-api-katalon).
+The Function API is not limited to Node.js. It is a generic web REST and JSON API that can be used from any programing language or tool.
+
+## 7 Read More
+
+* [Function API](rg-two-function-api)
+* [Function API Reference](rg-two-function-api-reference)
+* [Function API with Java](ov-function-api-java)
+* [Function API with Katalon](ov-function-api-katalon)

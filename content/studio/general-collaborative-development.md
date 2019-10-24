@@ -9,9 +9,11 @@ menu_order: 05
 
 ## 1 Introduction
 
-{{% alert type="info" %}}
+{{% alert type="warning" %}}
 
-Collaborative development is only available if your project has Mendix version 7.23.3 or above. For projects that have Mendix version 7.23.2 and below, you need to [do a sync](/refguide7/sync-webmodeler-desktopmodeler).
+Collaborative development is only available if your project has Mendix version 7.23.3 or above. You cannot sync your changes with Studio Pro if your project has Mendix version 7.23.2 or below. 
+
+You will still be able to open your project in Studio. However, to sync changes between Studio and Studio Pro, Studio Pro must be upgraded to version 7.23.3 or above. 
 
 {{% /alert %}}
 

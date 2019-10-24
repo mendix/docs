@@ -9,57 +9,67 @@ draft: true
 ## 1 Introduction
 
 The [Camera](https://appstore.home.mendix.com/link/app/1377/) widget enables PhoneGap native camera functionality within your Mendix mobile application.
-Contributing
 
-For more information on contributing to this repository visit Contributing to a GitHub repository!
-Compatibility
+## 2 Compatibility
 
-The camera widget functions on the latest versions of both iOS and Android. Windows Phone is currently not supported. Additionally, v3.0 drops support for Mendix 5 projects. If you wish to include the widget in an older project, please download v2.5 from the versions tab.
-Offline
+This widget functions on the latest versions of both iOS and Android. Windows Phone is not supported. 
 
-In version 3.0, support for offline profiles was introduced. Functionality remains the same in the new offline profile, with the exception that on save microflows and the Autosave setting will trigger an error in the client when enabled.
-Configuration
+## 3 Offline
 
-Place the widget in a dataview where you want the button to be placed. Make sure this form is reachable from a mobile application.
-Appearance
-Image container class
+Support for offline profiles was introduced in version 3.0 of the widget. The functionality is  the same in the new offline profile, with the exception that on-save microflows and the Autosave setting will trigger an error in the client when enabled.
 
-The class that will be set on the image preview container.
-Width
+## 4 Configuration
 
-The width of the image preview.
-Height
+Place the widget in a data view where you want the button to be placed. Make sure this form is reachable from a mobile application.
 
-The height of the image preview.
-Image Location
+### 4.1  Image Container Class
 
-Where the image preview will be shown relative to the button.
-Button
-Label
+This is the class that will be set on the image preview container.
 
-The label text that is shown on the button.
-Class
+### 4.2 Width
 
-An optional class to be placed directly on the button dom node.
-Behaviour
-On save microflow
+This is the width of the image preview.
 
-An optional microflow that will be triggered when the object is saved.
-On save nanoflow
+### 4.3 Height
 
-An optional nanoflow that will be triggered when the object is saved.
-Autosave
+This is the height of the image preview.
 
-Optional setting to auto-save an image to the contextobject. use the on save mf to commit the object and run further actions.
-Picture Source
+### 4.4 Image Location
 
-Setting that determines where the image will come from: gallery or the camera.
-Image quality
+This is where the image preview will be shown relative to the button.
 
-This will change the image-width and height on output. Be aware that setting this higher will be more taxing and will take longer to upload. If quality width and height are both set to 0, the image will be saved full size.
-Quality width
+### 4.5 Label
 
-Width in pixels to scale image. Must be used with targetHeight. Aspect ratio remains constant.
-Quality height
+This is the label text that is shown on the button.
 
-Height in pixels to scale image. Must be used with targetWidth. Aspect ratio remains constant.
+### 4.6 Class
+
+This is an optional class to be placed directly on the button document object model (DOM) node.
+
+### 4.7 On Save Microflow {#osm}
+
+This is an optional microflow that will be triggered when the object is saved.
+
+### 4.8 On Save Nanoflow
+
+This is an optional nanoflow that will be triggered when the object is saved.
+
+### 4.9 Autosave
+
+This is an optional setting to autosave an image to the context object. Use the [on-save microflow](#osm) to commit the object and run further actions.
+
+### 4.10 Picture Source
+
+Setting this determines where the image will come from: the gallery or the camera.
+
+### 4.11 Image Quality
+
+This will change the image width and height on output. Be aware that setting this higher will be more taxing and will take longer to upload. If quality width and height are both set to `0`, the image will be saved full-size.
+
+### 4.12 Quality Width
+
+This is the width in pixels to scale the image. This must be used with the `targetHeight`. The aspect ratio remains constant.
+
+### 4.13 Quality Height
+
+This is the height in pixels to scale the image. This must be used with `targetWidth`. The aspect ratio remains constant.

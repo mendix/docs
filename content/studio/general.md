@@ -17,18 +17,16 @@ The picture below shows the components of Studio's interface:
 
 ## 2 Opening Studio
 
-You can open Mendix Studio [via the Developer Portal](#opening-studio-via-dev-portal) or [via Studio Pro](#opening-via-studio-pro). 
-
 ### 2.1 Opening Studio via the Developer Portal {#opening-studio-via-dev-portal}
 
-You can edit an app in Mendix Studio by opening your app in the [Developer Portal](https://home.mendix.com) and clicking **Edit App** or choosing the **Edit in Studio** option in the drop-down menu of the **Edit App** button. 
+You can edit an app in Mendix Studio by opening your app in the [Developer Portal](https://home.mendix.com) and clicking **Edit App** or choosing the **Edit in Mendix Studio** option in the drop-down menu of the **Edit App** button. 
 
 {{% image_container width="350" %}}![](attachments/general/edit-app-button.png)
 {{% /image_container %}}
 
 {{% alert type="warning" %}}
 
-The drop-down menu on the **Edit App** button is only available for **Free Apps**. For more information on what Free Apps are, see the [Free App](/developerportal/deploy/mendix-cloud-deploy#free-app) section in *Mendix Cloud*.  
+The drop-down menu on the **Edit App** button is only available for **Free Apps**.
 
 Some apps are not suitable for Studio. The following ones are not suitable to run in Studio:<br />
 
@@ -37,7 +35,7 @@ Some apps are not suitable for Studio. The following ones are not suitable to ru
 
 {{% /alert %}}
 
-When Studio is not enabled, you can click **Edit App** > **Settings**. For more information, see [Developer Portal Settings](../../developerportal/settings/).
+When Studio is not enabled, you can click **Edit App** > **Settings**. For more information on how to enable Studio, see [Developer Portal Settings](../../developerportal/settings#web).
 
 ![](attachments/general/not-enabled.png)
 
@@ -45,11 +43,7 @@ When Studio is not enabled, you can click **Edit App** > **Settings**. For more 
 Only Scrum Masters or custom **App Team roles** with the **App Settings** permission are allowed to enable Studio.
 {{% /alert %}}    
 
-On the **Settings** page, Studio can be enabled by upgrading the existing theme of the app to the [Atlas UI](../../howto/front-end/atlas-ui) theme.
-
-![](attachments/general/enabling.png)
-
-### 2.2 Opening Studio via Studio Pro {#opening-via-studio-pro}
+### 2.2 Opening Studio via Studio Pro
 
 You can also open your app in Studio via Studio Pro. Do the following:
 
@@ -62,14 +56,12 @@ You can also open your app in Studio via Studio Pro. Do the following:
 
 The app opens in Studio.
 
-## 3 Studio Upgrade
+## 3 Upgrading Studio
 
 After clicking **Edit in Studio** you may need to upgrade your app to the latest version.
 
 {{% image_container width="350" %}}![](attachments/general/upgrade.png)
 {{% /image_container %}}
-
-You may also see an orange top bar suggesting an upgrade to the next Mendix version. For more information on Studio upgrades and Mendix versions, see [Studio Ranges & Mendix Versions](general-versions).
 
 {{% alert type="info" %}}
 When you upgrade your app in Studio to the latest  Mendix version, you will need to upgrade your app in the Studio Pro to the same version as well. 
@@ -80,27 +72,23 @@ If you are working in a team with others, it is wise to check with your team mem
 
 ## 4 Switching App Modes
 
-After opening Studio, the home page of the app opens. 
+After opening Studio,  the home page of the app opens. 
 
 You can change the view of your page to different views by clicking the corresponding icons:
 
-* Mobile
+*  Mobile
+*  Tablet
+*  Responsive (Desktop)    
 
-* Tablet
-
-* Responsive (Desktop) 
-
-  {{% image_container width="350" %}}![](attachments/general/view.png)
-  {{% /image_container %}}
+	{{% image_container width="350" %}}![](attachments/general/view.png)
+	{{% /image_container %}}
 
 ## 5 Left Menu Bar
 
-The left menu bar allows you to go back to the Developer Portal, access pages, the domain model, microflows, and the navigation document in Studio, search for different elements in your app, open settings, and customize the look of your app:
+The left menu bar provides the following options:
 
 {{% image_container width="350" %}}![](attachments/general/left-menu-bar.png)
 {{% /image_container %}}
-
-All items of the left menu bar are described in the table below:
 
 | Menu item                            | Shortcut     | Description                                                  |
 | ------------------------------------ | ------------ | ------------------------------------------------------------ |
@@ -111,15 +99,13 @@ All items of the left menu bar are described in the table below:
 | [Navigation Document](navigation)    | 4            | Shows a configured menu in the form of a navigation tree. You can expand the menu structure of the navigation tree up to two levels with an unlimited amount of pages. |
 | Search (magnifying glass) icon       | <kbd>/</kbd> | Helps you search through microflows, entities, and pages. Start typing the name of the item you are looking for and the search feature will return any matches it finds, using exact matches as well as fuzzy matches based on the characters entered. <br />You can also use "/" shortcut to search through your app. |
 | [Settings](settings)                 | None         | **Settings** consists of **Roles and Permissions** and **Widget Overview**. <br />Via **[Roles and Permissions](settings-security)** you can manage access to your app for different type of users.  <br />The [**Widget Overview**](settings-widget-overview) gives you an overview of all widgets and their status. Widgets are user interface elements (alerts, buttons, charts, etc.) that are used to build pages. |
-| [Theme Customizer](theme-customizer) | None         | Allows you to style your app with custom branding, colors, and typography. |
+| [Theme Customizer](theme-customizer) | None         | Here you can style your app with custom branding, colors, and typography. |
 
 ## 6 Toolbox, Properties, and Buzz
 
-The top right menu of Studio consists of the **Toolbox**, **Properties** , and **Buzz** tabs: 
+The top right menu of Studio consists of the **Toolbox**, **Properties** , and **Buzz** tabs. 
 
 ![](attachments/general/toolbox-properties-buzz.png)
-
-The **Toolbox**, **Properties** , and **Buzz** tabs are describes in the table below:
 
 | Tab        | Description                                                  |
 | ---------- | ------------------------------------------------------------ |
@@ -127,27 +113,24 @@ The **Toolbox**, **Properties** , and **Buzz** tabs are describes in the table b
 | Properties | Shows the properties of the selected item.                   |
 | Buzz       | Allows an app development team to make comments to different pages, microflows, domain models, and navigation layouts of Studio, and interact with each other. |
 
-## 7 Top Menu Bar
+## 7 Top Bar
 
-The top menu bar allows to check whether Studio is connected to the internet, undo or redo actions, view your recent documents, preview or publish your app, and view errors in your app (if any). 
+The top bar provides the following options:
 
 ![](attachments/general/top-bar.png)
 
-The top menu bar items are described in the table below: 
-
-| Menu item | Description |
+| Top bar item | Description |
 |------|------|
-| Status icon | Indicates the internet connection status of Studio. If the icon is green, Studio is connected. When grey, Studio is offline. |
-| Undo/Redo actions | There buttons undo or redo the last action. You can also use <kbd>Ctrl</kbd>+<kbd>Z</kbd> and <kbd>Ctrl</kbd>+<kbd>Y</kbd> shortcuts correspondingly. |
-| Recent documents drop-down menu | A document that you are currently viewing is displayed in this option. When you click the drop-down menu, documents that you have recently viewed are displayed in the list. Click the document to open it. |
-| [Preview button](publishing-app) | Shows you what your app will look like after it is published |
-| [Publish button](publishing-app) | You can publish your app with this button. Click **Publish** > **Update** to publish the latest changes you made in Studio. For more information, see [Previewing & Publishing Your App](publishing-app) |
-| [Checks button](checks) | Displays consistency errors (if any) that prevent your app from being previewed and published. For more information on errors, see [Consistency Errors](consistency-errors).<br />You can also use <kbd>C</kbd> shortcut to view the **Checks** panel. |
+| Status icon | Shows the internet connection status of Studio. If  status is green, Studio is connected. When grey, Studio is offline. |
+| Undo/Redo actions | Undo or redo the last action. You can also use Ctrl+Z and Ctrl+Y shortcuts correspondingly. |
+| Recent documents drop-down menu | A document that you are currently viewing is displayed in this option. When you click the drop-down menu, documents that you have recently viewed are displayed in the list. You can click the document to open it. |
+| [Publish button](publishing-app) | Deploy and run the app. Update your app to deploy the latest changes you made in Studio. Once deployed, click **View** to view your app in action. For more information, see [Publishing Your App](publishing-app) |
+| [Checks button](checks) | Shows the errors and warnings currently in your app. If there are any errors in the app, you will not be able to publish your app, until you have solved them. For more information on errors, see [Consistency Errors](consistency-errors).<br />You can also use C shortcut to view the **Checks** panel. |
 | Information icon | Here you can find following information:<ul><li>**About** – shows the information on the [Studio version and Mendix version](general-versions) </li><li>**Keyboard Shortcuts** – opens the list of shortcuts in Studio</li><li>**Take a Product Tour** – starts a  the guided product introduction tour and shows you around Studio</li><li>**Ask the Community** – a link to the [Mendix Forum](https://forum.mendixcloud.com/index4.html) where you can ask questions and explore the knowledge offered by the entire Mendix Community<li>**Check the  Documentation** – a link to the [Studio Guide](index)</li><li>**Contact Mendix Support** – a link to the [Mendix Support Portal](https://support.mendix.com/hc/en-us)<li>**Mendix Academy** – a link to the [Mendix Academy](https://gettingstarted.mendixcloud.com)</li><li>**Mendix Assist Is ON** – a setting that enables/disables [Mendix Assist](mx-assist)</li><li>**Edit in Studio Pro** – opens your app in Studio Pro</li></ul> |
 
 ## 8 Cut/Copy/Paste Function 
 
-Cut/copy/paste function is available in all editors of Studio: pages, microflows, domain models, and navigation document. To cut/copy/paste you can use <kbd>Ctrl</kbd> + <kbd>Z</kbd> /  <kbd>Ctrl</kbd> + <kbd>C</kbd> / <kbd>Ctrl</kbd> + <kbd>V</kbd> or  <kbd>Cmn</kbd> + <kbd>Z</kbd> /  <kbd>Cmd</kbd> + <kbd>C</kbd> / <kbd>Cmd</kbd> + <kbd>V</kbd>. 
+Cut/copy/paste function is available in all editors of Studio: pages, microflows, domain models, and navigation. To cut/copy/paste you can use <kbd>Ctrl</kbd> + <kbd>Z</kbd> /  <kbd>Ctrl</kbd> + <kbd>C</kbd> / <kbd>Ctrl</kbd> + <kbd>V</kbd> or  <kbd>Cmn</kbd> + <kbd>Z</kbd> /  <kbd>Cmd</kbd> + <kbd>C</kbd> / <kbd>Cmd</kbd> + <kbd>V</kbd>. 
 
 Mind the following characteristics when using cut/copy/paste:
 

@@ -7,6 +7,8 @@ title: "Create a native pluggable widget"
 #tags: [Add a maximum of 5-7 tags/keywords; keep them focused on the most important topics of the document, and make sure the tag is used as a word in the actual content (will function best for SEO as a word in a heading); each tag should have quotation marks and be separated by a comma, for example: "Samba", "MxCloud", "cloud", "share"; the tags should be enclosed with brackets and quotation marks]
 ---
 
+[todo: fix all snippets]
+
 ## 1 Introduction
 
 Pluggable widgets enable developers to introduce custom-built widgets in their Mendix applications. Not just for web, but also for native mobile. In this how-to you will learn to create a group box pluggable widget for native mobile applications.
@@ -28,38 +30,38 @@ Clone this [code sample](https://github.com/mendix/native-group-box-pluggable-wi
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-- Install Mendix Studio Pro 8.3
-- Install the Mendix Make it Native app on a mobile device or an emulator.
-- Install Long Term Support (LTS) v10.16.3 or any higher version of [Node.js](https://nodejs.org)
-- Install latest [Yeoman](https://yeoman.io/) with the following command:
+* Install Mendix Studio Pro 8.3
+* Install the Mendix Make it Native app on a mobile device or an emulator.
+* Install Long Term Support (LTS) v10.16.3 or any higher version of [Node.js](https://nodejs.org)
+* Install latest [Yeoman](https://yeoman.io/) with the following command:
 
 ```shell
 npm install -g yo
 ```
 
-- Install Mendix' Pluggable Widget Generator v8.2.0 for Yeoman with the following command:
+* Install Mendix' Pluggable Widget Generator v8.2.0 for Yeoman with the following command:
 
 ```shell
 npm install -g @mendix/generator-widget@8.2.0
 ```
 
-- Install an integrated development environment (IDE) of your choice (Mendix recommends [Microsoft Visual Studio Code](https://code.visualstudio.com/))
-- Have a basic understanding of:
-  - Command prompt or the Unix command line
-  - [TypeScript](https://www.typescriptlang.org/)
-  - [React](https://reactjs.org)
+* Install an integrated development environment (IDE) of your choice (Mendix recommends [Microsoft Visual Studio Code](https://code.visualstudio.com/))
+* Have a basic understanding of:
+  * Command prompt or the Unix command line
+  * [TypeScript](https://www.typescriptlang.org/)
+  * [React](https://reactjs.org)
 
-## 3 Building a native group box widget
+## 3 Building a Native Group Box Widget
 
-To build a group box widget for native mobile, there are a several steps to follow:
+To build a group box widget for native mobile, you will follow these steps:
 
-1. Scaffolding a pluggable widget project
-2. Creating a Mendix test project
-3. Building the group box widget
+1. Scaffold a pluggable widget project.
+2. Creat a Mendix test project.
+3. Build the group box widget.
 
-The following paragraphs will elaborate on each of these steps.
+The following subsections will elaborate on each of these steps.
 
-### 3.1 Scaffolding a pluggable widget project
+### 3.1 Scaffolding a Pluggable Widget Project
 
 The Pluggable Widget Generator is the quickest way to start developing a pluggable widget. When you run this generator with Yeoman, Yeoman will scaffold your project folder with a folder structure and certain files recommended by Mendix.
 
@@ -73,98 +75,92 @@ To scaffold your project folder for the group box widget, follow these steps:
    yo @mendix/widget GroupBox
    ```
 
-4. The generator will ask you for some input during setup. Please provide the following information:
+4. The generator will ask you for some input during setup. Provide this information to the generator:
 
-   1. Widget name: _GroupBox_
-   2. Widget description: _Widget to group building blocks, snippets or other widgets_
-   3. Organization name: _com.mendix.widget.native_
-   4. Copyright: _Mendix 2019_
-   5. License: _Apache-2.0_
-   6. Initial version: _1.0.0_
-   7. Author: _Mendix_
-   8. Mendix Project path: _./test/MxTestProject/_
-   9. Programming language: _TypeScript_
-   10. Widget type: _For native mobile apps_
-   11. Widget template: _Empty widget (recommended for more experienced developers)_
-   12. Unit tests: _No_
+  * Widget name: {*GroupBox*}
+  * Widget description: {*Widget to group building blocks, snippets or other widgets*}
+  * Organization name: {*com.mendix.widget.native*}
+  * Copyright: {*Mendix 2019*}
+  * License: {*Apache-2.0*}
+  * Initial version: {*1.0.0*}
+  * Author: {*Mendix*}
+  * Mendix Project path: {*./test/MxTestProject/*}
+  * Programming language: {**TypeScript**}
+  * Widget type: {**For native mobile apps**}
+  * Widget template: {**Empty widget (recommended for more experienced developers)**}
+  * Unit tests: {**No**}
 
-   In the image below you can see how your input should look like in the terminal.
+  ![Pluggable Widget Generator input](attachments/how-to-create-a-native-pluggable-widget/pluggable-widget-generator-input.png)
 
-   ![Pluggable Widget Generator input](attachments/how-to-create-a-native-pluggable-widget/pluggable-widget-generator-input.png)
+5. Press (todo: enter keybinding). If your project has been scaffolded correctly. you will see the following message:
 
-5. Verify that the generator outputs the following message to make sure your project has been scaffolded correctly:
+`> Widget successfully built!! Please open Mendix Studio Pro and start playing with your new widget.`
 
-   > Widget successfully built!! Please open Mendix Studio Pro and start playing with your new widget.
+### 3.2 Creating a Mendix Test Project
 
-### 3.2 Creating a Mendix test project
+In order to test your group box widget, you will a Mendix application that uses this widget in various ways. Create a Mendix project for this application by following these steps:
 
-In order to test our group box widget we want to create a Mendix application that uses this widget in various ways. Create a Mendix project for this application by following these steps:
-
-1. Open Mendix Studio Pro v8.2.2.
-2. Create a new project by selecting **File > New Project** from the top menu bar.
+1. Open Mendix Studio Pro v8.2.2 or above (todo: check or higher).
+2. Create a new project by selecting **File** > **New Project** from the top menu bar.
 3. Select the starter app **Blank**, which is the last option on the last page.
 4. Click the **Use this starting point** button
 5. Fill in the following details in the **App Settings** dialog box:
+  * App name: _GroupBoxTestProject_
+  * Enable online services: _No_
+6. Click **Create app**.
 
-   - App name: _GroupBoxTestProject_
-   - Enable online services: _No_
+Optionally, you can remove all unused custom widgets to optimize the debugging process. To do so, follow these steps:
 
-6. Click the **Create app** button.
-
-Optionally you can remove all unused custom widgets to optimize the debugging process. To do so, follow these steps:
-
-1. Select **Project > Show Project Directory in Explorer** from the Mendix Studio Pro menu.
+1. Click **Project** > **Show Project Directory in Explorer**.
 2. Open the **widgets** folder.
-3. Delete all the files in this folder.
+3. Delete all files in this folder.
 
-Now we want to use the created Mendix project as a test project in the group box widget project. Follow these steps to add the Mendix project as test project to our widget project, so that we can start modeling with the new widget:
+Follow these steps to add the Mendix project as a test project to your widget project, so that you can start modeling with the new widget:
 
-1. Close the project in Mendix Studio Pro by selecting **File > Close Project** from the top menu bar.
+1. Close the project in Mendix Studio Pro by clicking **File** > **Close Project**.
 2. Move the contents of the Mendix project folder into **test/MxTestProject**, which is located inside your group box widget project folder.
 
-To test our group box widget we need to use the widget in the Mendix test project. Let's create a test case by following these steps:
+Create a test case by following these steps:
 
-1. Open the Mendix test project in **test/MxTestProject** in Mendix Studio Pro by selecting **File > Open Project...** from the top menu bar.
+1. Open the Mendix test project in **test/MxTestProject** by selecting **File** > **Open Project**.
 2. In the **Open App** dialog box, select **Locally on disk**.
-3. Open the **GroupBoxTestProject.mpr** file inside your group box widget project folder.
-4. Create a test case for the group box widget with the following steps:
+3. Open the *GroupBoxTestProject.mpr* file inside your group box widget project folder.
+4. Open **Home_Native** page.
+5. Copy "Home" container and paste it underneath that container. [todo: check home formatting]
+6. Delete the content.
+7. Search in toolbox for the **Group Box** widget.
+8. Drag the widget into the new container.
+9. Double-click the widget and fill in your name as default value.
 
-   1. Open **Home_Native** page.
-   2. Copy "Home" container and paste it underneath that container
-   3. Delete the content.
-   4. Search in toolbox for the **Group Box** widget.
-   5. Drag the widget into the new container.
-   6. Double click the widget and fill in your name as default value.
+You have set up your test project. To verify that your Mendix test project is set up correctly, follow these steps:
 
-5. Setting up the test project is done. To verify that your Mendix test project is set up correctly, follow these steps:
+1. In Studio Pro, run the test project locally.
+2. Use the Make It Native app to open your new app.
+3. Verify that your app's home page contains the yellow text **Hello {your name}**.
 
-   1. In Mendix Studio Pro run the test project locally.
-   2. Use the Mendix Make it Native app to open the native mobile application to view the sample widget code in action.
-   3. Verify that the homepage of the application contains a yellow text saying "Hello {your name}".
+### 3.3 Building the Group Box Widget
 
-### 3.3 Building the group box widget
+Now that your widget sample code is running, it is time to transform your sample widget into an actual group box widget. To do so, you will follow these steps:
 
-Now that we have seen our widget sample code running, it is time to transform our sample widget into an actual group box widget. We will do so with the following steps:
-
-1. Creating a static UI
-2. Adding widget properties
-3. Making the widget collapsilble
-4. Adding an expand & collapse icon property
-5. Adding a collapsible property
-6. Adding a custom default style
-7. Adding a design property
+1. Create a static UI.
+2. Add widget properties.
+3. Make the widget collapsilble.
+4. Add an expand and collapse icon property.
+5. Add a collapsible property.
+6. Add a custom default style.
+7. Add a design property.
 
 The following paragraphs will elaborate on each of these steps. Open up your group box widget project folder in your IDE of choice. From now on, all file references will be relative to this project folder.
 
-#### 3.3.1 Creating a static UI
+#### 3.3.1 Creating a Static UI
 
-Let's first define the structure and default style of the group box widget by following these steps:
+Define the structure and default style of the group box widget with these steps:
 
-1. Open the file located at **src/components/HelloWorldSample.tsx**.
+1. Open **src/components/HelloWorldSample.tsx**.
 
-   This file contains the display component of our widget. Display components describe the widget's UI in terms of React Native components and contain all the behavioral logic of the widget. Display components don't interact with Mendix specific APIs and, therefore, should be usable in any React Native application.
+	This file contains the display component of your widget. Display components describe the widget's UI in terms of React Native components and contain the widget's behavioral logic. Display components do not interact with Mendix-specific APIs and therefore are usable in any React Native application.
 
-2. Replace the **render** method with the following code snippet:
+2. Replace the **render** method with the following code snippet [todo: check render, this snippet formatting, and all numbered list snippet formatting]:
 
    ```tsx
    render(): ReactNode {
@@ -180,8 +176,7 @@ Let's first define the structure and default style of the group box widget by fo
    }
    ```
 
-   The **render** method uses two built-in components from React Native: **\<View>** and **\<Text>**. **\<View>** is a component like a \<div> or \<span> from HTML whereas the **\<Text>** component is used to display some text. To learn more about the built-in components please consult the [React Native website](https://facebook.github.io/react-native/).
-
+	The **render** method uses two built-in components from React Native: **\<View>** and **\<Text>**. **\<View>** is a component like a \<div> or \<span> from HTML, whereas the **\<Text>** component is used to display some text. To learn more about the built-in components, consult the [React Native website](https://facebook.github.io/react-native/). [todo: check style on components. In pluggable 1 components can be files like *TextBox.tsx*??]
 3. Open up a terminal.
 4. Change the current working directory to your project folder.
 5. Execute the following command to bundle your widget and update the widget bundle in your Mendix test project:
@@ -190,16 +185,17 @@ Let's first define the structure and default style of the group box widget by fo
    npm run dev
    ```
 
-   The executed script will keep watching your source files and rebundle the widget everytime you save one of these files.
+	The executed script will keep watching your source files and rebundle the widget everytime you save one of these files.
 
 6. Open your Mendix test project in **test/MxTestProject** in Mendix Studio Pro.
 7. Run the project locally.
-8. Verify with the Make it Native app that your app looks like the image below.
+8. Verify with the Make It Native app that your app looks like the image below:
+
    [INSERT IMAGE]
 
-The UI of our widget doesn't really look like a group box yet. Let's apply a default style to make it look like one with the following steps:
+The UI of our widget does not look like a group box yet. Apply a default style to make it look like one with the following steps:
 
-1. Open **src/components/HelloWorldSample.tsx**.
+1. Open *src/components/HelloWorldSample.tsx*.
 2. Replace the following **defaultStyle** constant:
 
    ```tsx
@@ -211,7 +207,7 @@ The UI of our widget doesn't really look like a group box yet. Let's apply a def
    };
    ```
 
-   with:
+   with this:
 
    ```tsx
    const defaultStyle: CustomStyle = {
@@ -244,21 +240,22 @@ The UI of our widget doesn't really look like a group box yet. Let's apply a def
    };
    ```
 
-   The objects assigned to the properties of **defaultStyle** are passed to the style props of the React Native components that we use in the **render** method. The property names inside the objects are very familiar to the CSS style properties. To learn more about the supported properties and what effect they have, visit the following links:
+	The objects assigned to the properties of **defaultStyle** are passed to the style props of the React Native components that you use in the **render** method. The property names inside the objects are very familiar to the CSS style properties [todo: what?]. To learn more about the supported properties and what effect they have, visit the following links:
 
-   - [\<View> style props](https://facebook.github.io/react-native/docs/view-style-props)
-   - [\<Text> style props](https://facebook.github.io/react-native/docs/text-style-props)
+  * [\<View> style props](https://facebook.github.io/react-native/docs/view-style-props)
+  * [\<Text> style props](https://facebook.github.io/react-native/docs/text-style-props)
 
-3. Make sure all files are saved, so that rebundling takes place and the deployment folder of our Mendix test project gets updated.
-4. Refresh the Mendix app inside the Make it Native app.
-5. Verify that the group box widget looks like the image below.
-   [INSERT IMAGE]
+3.  Save all files to rebundle and update the Mendix test project.
+4. Refresh the Mendix app inside the Make It Native app.
+5. Verify that the group box widget looks like the image below:
 
-When you build a widget for native mobile, you need to keep in mind that the widget can be used on two platforms: iOS & Android. Both plaforms have their own design language and we want to adhere as much as possible to both of them. In order to do so, we sometimes need to define platform specific styling or use platform specific React Native components.
+  [INSERT IMAGE]
 
-For the group box widget it would be nice to have square like corners instead of rounded onces on Android devices. Apply this style behavior with the following steps:
+When you build a widget for native mobile, keep in mind that the widget can be used on both iOS and Android. Both plaforms have their own design language, and you should adhere as much as possible to both languages. To do this, you will sometimes need to define platform-specific styling or use platform-specific React Native components.
 
-1. Change the value of defaultStyle.container.borderRadius from `4` to `Platform.OS === "ios" ? 4 : 0`, so that the initialization of the **defaultStyle** constant look as follows:
+For the group box widget it would be nice to have square corners on Android devices. Apply this style behavior with the following steps:
+
+1. Change the value of defaultStyle.container.borderRadius [todo: bold?] from `4` to `Platform.OS === "ios" ? 4 : 0` so that the initialization of the **defaultStyle** constant look as follows:
 
    ```tsx
    const defaultStyle: CustomStyle = {
@@ -291,35 +288,36 @@ For the group box widget it would be nice to have square like corners instead of
    };
    ```
 
-2. Adjust the following import statement in order to use the **Platform** object:
+2. Adjust the following import statement in order to use the **Platform** object from this:
 
    ```tsx
    import { Text, View } from "react-native";
    ```
 
-   to:
+   to this:
 
    ```tsx
    import { Text, View, Platform } from "react-native";
    ```
 
 3. Save all files to rebundle and update the Mendix test project.
-4. Refresh the Mendix app inside the Make it Native app.
-5. Verify that the group box widget looks like the image below.
+4. Refresh the Mendix app inside the Make It Native app.
+5. Verify that the group box widget looks like the image below:
+
    [INSERT IMAGE]
 
-As you might have noticed, the display component is still called "HelloWorldSample". Let's introduce the term "GroupBox" in our code with the following steps, so that the readability and, thus, quality of our code improves:
+As you might have noticed, the display component is still called **HelloWorldSample**. Next you will introduce the term "GroupBox" in your code:
 
-1. Change the classname from "HelloWorldSample" to "GroupBox".
-2. Change the filename to "GroupBox.tsx".
-3. Rename the **HelloWorldSampleProps** interface to "GroupBoxProps".
-4. Change the GroupBox class declaration to the following:
+1. Change the classname from **HelloWorldSample** to *GroupBox*.
+2. Change the filename to *GroupBox.tsx*.
+3. Rename the **HelloWorldSampleProps** interface to *GroupBoxProps*.
+4. Change the **GroupBox** class declaration to the following:
 
    ```tsx
    export class GroupBox extends Component<GroupBoxProps<CustomStyle>>
    ```
 
-The changes you made in step 1 and 2 causes errors in our container component defined in **src/GroupBox.tsx**. The container component will be used by the Mendix Client, receives all kind of property data from this client and forwards this data to the display component. You could say the container component works like glue between the Mendix application and the display component.
+The changes you made above cause errors in your container component defined in **src/GroupBox.tsx**. The container component are used by the Mendix Client, receive property data from this client, and forwards this data to the display component.
 
 To fix the errors in the container component, use these steps:
 
@@ -330,13 +328,13 @@ To fix the errors in the container component, use these steps:
    import { HelloWorldSample } from "./components/HelloWorldSample";
    ```
 
-   with:
+   with this:
 
    ```tsx
    import { GroupBox as WrappedGroupBox } from "./components/GroupBox";
    ```
 
-3. Rename the **HelloWorldSample** component in the **render** method to "WrappedGroupBox".
+3. Rename the **HelloWorldSample** component in the **render** method to *WrappedGroupBox*.
 
 You might have noticed that we aren't using the **label** property of the **defaultStyle** constant anymore in the **render** method of the display component, so let's remove it:
 

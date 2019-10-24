@@ -86,7 +86,7 @@ public void firstTest() {
 }
 ```
 
-Alternately, values can be asserted using `junit.Assert`:
+Alternatively, values can be asserted using `junit.Assert`:
 
 
 ```java

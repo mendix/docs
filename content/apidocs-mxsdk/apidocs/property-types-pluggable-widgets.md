@@ -249,7 +249,7 @@ Then the Studio Pro UI for the component appears like this:
 
 ## 3.3 Widgets {#widgets}
 
-The widgets property allows a user to place multiple widgets inside a pluggable widget, similar to the content of a [container](/refguide/container) widget. It is passed as `ReactNode` prop to a client component.
+The widgets property allows a user to place multiple widgets inside a pluggable widget, similar to the content of a [container](/refguide/container) widget. It is passed as a `ReactNode` prop to a client component.
 
 {{% alert type="info" %}}
 This property type was introduced in Mendix 8.3.
@@ -273,9 +273,9 @@ When the component is defined as follows:
 </property>
 ```
 
-Then the Studio Pro UI for the component appears like this:
+then the Studio Pro UI for the component appears like this:
 
-![](attachments/widget-property-types/widgets.png)
+![studio pro ui](attachments/widget-property-types/widgets.png)
 
 ## 4 Dynamic Properties
 

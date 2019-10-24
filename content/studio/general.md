@@ -19,7 +19,7 @@ The picture below shows the components of Studio's interface:
 
 ### 2.1 Opening Studio via the Developer Portal {#opening-studio-via-dev-portal}
 
-You can edit an app in Mendix Studio by opening your app in the [Developer Portal](https://home.mendix.com) and clicking **Edit App** or choosing the **Edit in Studio** option in the drop-down menu of the **Edit App** button. 
+You can edit an app in Mendix Studio by opening your app in the [Developer Portal](https://home.mendix.com) and clicking **Edit App** or choosing the **Edit in Mendix Studio** option in the drop-down menu of the **Edit App** button. 
 
 {{% image_container width="350" %}}![](attachments/general/edit-app-button.png)
 {{% /image_container %}}
@@ -35,17 +35,13 @@ Some apps are not suitable for Studio. The following ones are not suitable to ru
 
 {{% /alert %}}
 
-When Studio is not enabled, you can click **Edit App** > **Settings**. For more information, see [Developer Portal Settings](../../developerportal/settings/).
+When Studio is not enabled, you can click **Edit App** > **Settings**. For more information on how to enable Studio, see [Developer Portal Settings](../../developerportal/settings#web).
 
 ![](attachments/general/not-enabled.png)
 
 {{% alert type="info" %}}
 Only Scrum Masters or custom **App Team roles** with the **App Settings** permission are allowed to enable Studio.
 {{% /alert %}}    
-
-On the **Settings** page, Studio can be enabled by upgrading the existing theme of the app to the [Atlas UI](../../howto/front-end/atlas-ui) theme.
-
-![](attachments/general/enabling.png)
 
 ### 2.2 Opening Studio via Studio Pro
 
@@ -60,7 +56,7 @@ You can also open your app in Studio via Studio Pro. Do the following:
 
 The app opens in Studio.
 
-## 3 Studio Upgrade
+## 3 Upgrading Studio
 
 After clicking **Edit in Studio** you may need to upgrade your app to the latest version.
 

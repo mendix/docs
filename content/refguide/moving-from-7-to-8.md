@@ -31,9 +31,7 @@ Developers wanting to upgrade their existing Mendix version 7 Studio apps to Men
 
 ### 2.1 Collaborative Development with Studio
 
-If your original project was Mendix version 7.23.2 or below and you want to work collaboratively with developers using Mendix Studio, you will need to enable collaborative development.
-
-Follow the instructions in [Migration From the Sync Process to Collaborative Development](/refguide7/collaborative-development-migration).
+If your original project was Mendix version 7.23.2 or below and you want to work collaboratively with developers using Mendix Studio, you will need to upgrade your project to Mendix version 7.23.3 or above. You cannot sync your changes with Studio without this upgrade. 
 
 ## 3 Making Changes to Your App Before Upgrading to Mendix 8, Studio Pro
 

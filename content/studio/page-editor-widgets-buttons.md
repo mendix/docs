@@ -10,7 +10,7 @@ tags: ["studio", "page editor", "button", "widgets"]
 
 Button [widgets](page-editor-widgets) allow end-users to perform various actions, for example, saving changes or closing the current page: 
 
-{{% image_container width="300" %}}![](attachments/page-editor-widgets-buttons/button-example.png)
+{{% image_container width="400" %}}![](attachments/page-editor-widgets-buttons/button-example.png)
 {{% /image_container %}}
 
 The following **Buttons** are available in Mendix Studio as default widgets:
@@ -59,7 +59,7 @@ You can find the list of default actions and properties that need to be configur
 
 | Button         | Default Action | Properties to be Configured                                  |
 | -------------- | -------------- | ------------------------------------------------------------ |
-| Open Page      | Page           | **Page** (Select page) <br />If you want to create a new object and pass it as a context to the selected page, enable **Create Object** (disabled by default) and select an **Entity**. For more information on see section [2.1 Create Object Option](page-editor-widgets-events-section#create-object-option) in *Events Section in Widgets*. |
+| Open Page      | Page           | **Page** (Select page) <br />If you want to create a new object and pass it as a context to the selected page, enable **Create Object** (disabled by default) and select an **Entity**. For more information on see section the [Create Object Option](page-editor-widgets-events-section#create-object-option) section in *Events Section*. |
 | Call Microflow | Microflow      | **Microflow** (Select microflow)                             |
 | Create Object  | Create Object  | **Page** (Select page) and **Entity** (Select entity)        |
 | Save Changes   | Save Changes   | None                                                         |

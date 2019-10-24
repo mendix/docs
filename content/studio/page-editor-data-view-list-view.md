@@ -35,7 +35,7 @@ Data view consists of the following properties:
 {{% image_container width="300" %}}![](attachments/page-editor-data-view-list-view/data-view-properties.png)
 {{% /image_container %}}
 
-### 2.1 Data Source {#data-source-data-view} 
+### 2.1 Data Source Section {#data-source-data-view} 
 
 The data source determines which object will be shown in the data view. For general information on data sources, see [Data Sources](/refguide/data-sources) in the *Mendix Studio Pro Guide*. 
 
@@ -45,14 +45,14 @@ The data source determines which object will be shown in the data view. For gene
 | Microflow            | A data source that runs a selected microflow and displays a return value. For more technical information, see [Microflow Source](/refguide/microflow-source) in the *Mendix Studio Pro Guide*. |
 | List widget          | A data source that allows a data view to display detailed information on an object in the list widget (list view) on the same page. For more technical information, see [Listen To Widget Source](/refguide/listen-to-grid-source) in the *Mendix Studio Pro Guide*. |
 
-### 2.2 General {#general-section-data-view}
+### 2.2 General Section {#general-section-data-view}
 
 In the **General** section, you can enable/disable the following options:
 
 * **Read-Only** (disabled by default) – when enabled, all [input elements](page-editor-widgets-input-elements) (for example, a text area, a check box) in the data view will be in read-only mode
 * **Show Footer** (enabled by default) – a footer is an area at the bottom of the document, usually containing information common for all pages, such as copyrights  
 
-### 2.3 Design {#design-section-data-view}
+### 2.3 Design Section{#design-section-data-view}
 
 For information on the **Design** section and its properties, see [Design Section](page-editor-widgets-design-section).
 
@@ -67,7 +67,7 @@ List view consists of the following properties:
 {{% image_container width="300" %}}![](attachments/page-editor-data-view-list-view/list-view-properties.png)
 {{% /image_container %}}
 
-### 3.1 Data Source {#data-source-list-view}
+### 3.1 Data Source Section {#data-source-list-view}
 
 The data source determines which objects will be shown in the list view. For general information about data sources, see [Data Sources](/refguide/data-sources) in the *Mendix Studio Pro Guide*. 
 
@@ -79,13 +79,13 @@ The data source determines which objects will be shown in the list view. For gen
 | Nanoflow             | Currently, this data source can only be configured in Studio Pro. For more information, see [Nanoflows](/refguide/nanoflows). |
 | Association          | Available when a list view is placed inside another data container, for example, a data view. The list view is filled with the objects linked to the data view object by an association. For example, you can show all orders for a customer. |
 
-### 3.2 Events
+### 3.2 Events Section
 
  You can choose the **On Click Action** in the **Events** section. The **On Click Action** defines what action is performed when the user clicks a row of the list view. 
 
 For more information on the **Events** section and on click actions, see [Events Section](page-editor-widgets-events-section). 
 
-### 3.3 General {#general-section-list-view}
+### 3.3 General Section {#general-section-list-view}
 
 In the **General** section, you can select the number of rows to be displayed on the page and set the read-only for the list view:
 

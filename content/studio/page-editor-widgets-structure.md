@@ -11,7 +11,7 @@ tags: ["studio", "page editor", "layout", "layout widgets", "structure widgets"]
 
 Structure widgets are widgets that allow you to provide structure to your page and group other widgets inside them. 
 
-Structure widgets are the following ones:
+There are the following Structure widgets:
 
 * [Columns and Sidebars](#columns) 
 * [Container](#container-overview)

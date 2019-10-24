@@ -1,25 +1,18 @@
 ---
-title: "Function API - Java"
+title: "Function API with Java"
 parent: "ov-function-api"
 menu_order: 2
 ---
 
+## 1 Introduction
 
-## 1 Why Function API?
+Java is the undisputed champion when it comes to automated UI testing (for example, see [Which programming language is most popular for UI test automation in 2019?](https://medium.com/@applitools/which-programming-language-is-most-popular-for-ui-test-automation-in-2019-d8787bb6feb6)). That is why Mansystems decided to build an integration between ATS and Java. This integration allows testers to leverage the power of Java and combine it with the ease-of-use and Mendix-focus of ATS. With this integration, executing an ATS function is as simple as calling a Java method.
 
-Over the years we have seen that some ATS users prefer to use code when writing tests over no-code or graphical solutions. As programmers, we can understand that and we decided to bring ATS to the code world. Therefore we designed a super simple web interface which we call *[Function API](ov-function-api).* The interface can be used from any programming language without the need for external dependencies. In this tutorial, we will showcase how to use the Function API from Java. 
+{{% alert type="info" %}}
+Before you start writing tests, you need to import the ATS Java library. We have made this step painless by packaging all the dependencies in a single *.jar* file.
+{{% /alert %}}
 
-## 2 Why Java?
-
-Java is the undisputed champion when it comes to automated UI testing in 2019 according to data from [Applitools](https://medium.com/@applitools/which-programming-language-is-most-popular-for-ui-test-automation-in-2019-d8787bb6feb6)
-
-That is why we decided to build an integration between ATS and java. This integration allows testers to leverage the power of Java and combine it with the ease of use and Mendix focus of ATS. Thanks to this integration executing an ATS function is a simple as calling a java method.
-
-## 3 Enough talk show me the code
-
-IMPORTANT: Before you start writing tests you need to import the ATS java library. We have made this step painless by packaging all the dependencies in a single fat jar.
-
-### 3.1 Create a driver and connect to ATS
+## 2 Creating a Driver & Connecting to ATS
 
 ```java
 import static org.junit.Assert.*;
@@ -59,9 +52,10 @@ public class FirstTest {
 }
 ```
 
-### 3.2 Execute an ATS function
+## 3 Executing an ATS Function
 
-By calling a java method
+Execute an ATS function by calling a Java method:
+
 ```java
 @Test
 public void firstTest() {
@@ -73,9 +67,10 @@ public void firstTest() {
 }
 ```
 
-### 3.3 Assert
+## 4 Asserting
 
-* Using ATS 
+Assert by using ATS:
+
 ```java
 @Test
 public void firstTest() {
@@ -91,7 +86,7 @@ public void firstTest() {
 }
 ```
 
-* Alternatively values can be asserted using `junit.Assert`
+Alternately, values can be asserted using `junit.Assert`:
 
 
 ```java
@@ -111,9 +106,9 @@ public void firstTest() throws Exception {
 }
 ```
 
-## 4 But wait there is more...
+## 5 Web Elements
 
-The ATS client works with web elements out of the box and does all the conversion for you. This makes it very easy to combine native selenium functions with ATS functions.
+The ATS client works with web elements out of the box and does all the conversion for you. This makes it very easy to combine native Selenium functions with ATS functions.
 
 ```java
 @Test
@@ -127,20 +122,15 @@ public void firstTest() throws Exception {
 }
 ```
 
-Last but not least, the ATS java client comes with built-in documentation and auto-complete.
+## 6 Additional Features
+
+The ATS Java client comes with built-in documentation and auto-complete:
 
 ![](attachments/ov-function-api/java_autocomplete.gif)
 
-## Amazing, right ?!
+## 7 Read More
 
-### I want to try it!😁
-
-The Function API is in a closed preview phase right now. You can request access by sending an email at `info@mansystems.com` or filing a ticket with [Mendix support](https://support.mendix.com/hc/en-us). 
-
-### I want to try it, but I am using a language different from Java  😢
-
-A client is also available for [Katalon](ov-function-api-katalon). If you are using another tool then try the [REST API](ov-function-api-rest). We are working hard on building clients for other languages.
-
-### I am still not convinced 😒
-
-Why not try it for yourself and see how easy it is. If you have ideas on how we can improve it, send an email at `info@mansystems.com` or file a support ticket with Mendix.
+* [Function API](rg-two-function-api)
+* [Function API Reference](rg-two-function-api-reference)
+* [Function API with REST](ov-function-api-rest)
+* [Function API with Katalon](ov-function-api-katalon)

@@ -383,19 +383,20 @@ You might have noticed that we aren't using the **label** property of the **defa
 
 5. Save all files to rebundle and update the Mendix test project.
 6. Refresh the Mendix app inside the Make it Native app.
-7. Verify that the group box widget still looks the same (image below) after the refactoring.
-   [INSERT IMAGE]
+7. Verify that the group box widget still looks the same after the refactoring:
 
-#### 3.3.2 Adding widget properties
+	[INSERT IMAGE]
 
-Now that we have a basic group box, let's give the Mendix developer the possibility to customize it with the help of widget properties: a header caption and content property.
+#### 3.3.2 Adding Widget Properties
 
-##### Header caption property
+Now that you have a basic group box, you will give the Mendix developer the ability to customize it with the widget properties: specifically a header caption and content property.
 
-We want to let the Mendix developer alter the header caption of our widget. We can reuse the code and configuration of the "default value" property we used earlier to alter the "Hello World" output of the sample widget. Let's refactor this property:
+##### 3.3.2.1 Header Caption Property [todo: redo heading number levels to be simpler]
+
+It would be good to let Mendix developers alter the header caption of your widget. You can reuse the code and configuration of the "default value" [todo: formatting] property you used earlier to alter the **Hello World** output of the sample widget. To refactor this property, follow these steps:
 
 1. Open **src/GroupBox.xml**.
-2. Alter the sampleText property (the property shown in Mendix Studio Pro as "default value") to make it look like this:
+2. Alter the sampleText property (the property shown in Mendix Studio Pro as **default value**) to make it look like this:
 
    ```xml
    <property key="headerCaption" type="string" required="false">
@@ -404,10 +405,11 @@ We want to let the Mendix developer alter the header caption of our widget. We c
    </property>
    ```
 
-3. Save the file. When you did this, the script running on the background will rebundle the widget and generate new typings in **typings/GroupBoxProps.d.ts** that define the props the container component will receive. Some errors will popup in the container component, because we renamed the property.
+3. Save the file. 
+	When you did this, the script running on the background will rebundle the widget and generate new typings in **typings/GroupBoxProps.d.ts** that define the props the container component will receive. The container component will incur errors because we renamed the property.
 4. Open **src/GroupBox.tsx**.
-5. Change in the **render** method the reference to the non-existent **sampleText** prop to the **headerCaption** prop and rename the **sampleText** prop of the **WrappedGroupBox** component to "headerCaption":
-   [TODO: include complete render method in code snippet]
+5. In the **render** method, change the reference to the non-existent **sampleText** prop to the **headerCaption** prop and rename the **sampleText** prop of the **WrappedGroupBox** component to *headerCaption*:
+   [TODO: talk to Isa about including complete render method in code snippet]
 
    `sampleText={this.props.sampleText ? this.props.sampleText : "World"}`
 
@@ -415,7 +417,7 @@ We want to let the Mendix developer alter the header caption of our widget. We c
 
    `headerCaption={this.props.headerCaption}`
 
-   Note that our display component doesn't receive a **headerCaption** prop yet.
+   Note that your display component does not receive a **headerCaption** prop yet.
 
 6. Open **src/components/GroupBox.tsx**.
 7. Rename the **sampleText** property of the **GroupBoxProps** interface to "headerCaption":
@@ -427,7 +429,7 @@ We want to let the Mendix developer alter the header caption of our widget. We c
    }
    ```
 
-8. We still need to use the newly defined **headerCaption** prop in the **render** method to display the actual text in our header. Adjust the **render** method by using the **headerCaption** prop:
+8. You still need to use the newly defined **headerCaption** prop in the **render** method to display the actual text in your header. Adjust the **render** method by using the **headerCaption** prop:
 
    ```tsx
    render(): ReactNode {

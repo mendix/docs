@@ -92,7 +92,7 @@ To scaffold your project folder for the group box widget, follow these steps:
 
   ![Pluggable Widget Generator input](attachments/how-to-create-a-native-pluggable-widget/pluggable-widget-generator-input.png)
 
-5. Press (todo: enter keybinding). If your project has been scaffolded correctly. you will see the following message:
+5. Your widget will build. If your project has been scaffolded correctly. you will see the following message:
 
 `> Widget successfully built!! Please open Mendix Studio Pro and start playing with your new widget.`
 
@@ -113,7 +113,7 @@ Optionally, you can remove all unused custom widgets to optimize the debugging p
 
 1. Click **Project** > **Show Project Directory in Explorer**.
 2. Open the **widgets** folder.
-3. Delete all files in this folder.
+3. Delete all files in this folder besides *mendix.GroupBox.mpk* [todo:correct?].
 
 Follow these steps to add the Mendix project as a test project to your widget project, so that you can start modeling with the new widget:
 

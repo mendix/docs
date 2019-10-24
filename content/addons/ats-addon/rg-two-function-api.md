@@ -30,7 +30,7 @@ Let's illustrate using the Function API with a simple example using the `GetValu
 ```
 
 * `remoteSeleniumDriver` – a reference to the remote Selenium session that consists of a Selenium driver URL (which needs to be publicly accessible) and a session ID; ATS will use this session to execute the function specified under `functionToExecute`
-* `functionToExecute` – defines which ATS function to execute; the function and values are identified by their key (guaranteed to be unique), which can be found in the [Function API Reference](function-api-reference); the order of the values is not relevant, and optional parameters (default to null) are used unless a value is specified
+* `functionToExecute` – defines which ATS function to execute; the function and values are identified by their key (guaranteed to be unique), which can be found in the [Function API Reference](rg-two-function-api-reference); the order of the values is not relevant, and optional parameters (default to null) are used unless a value is specified
 
 If the function execution is successful, ATS will respond with the following:
 

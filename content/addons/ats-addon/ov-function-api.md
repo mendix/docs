@@ -67,11 +67,11 @@ As an alternative, you can call ATS functions natively in the tool, like normal 
 
 Currently, there are two clients available: for [Java](ov-function-api-java) and [Katalon](ov-function-api-katalon).
 
-## 5 Conclusion
+## 5 Function API Availability
 
 The Function API is in a closed preview phase right now. You can request access by sending an email to `info@mansystems.com` or sending a request to [Mendix Support](https://support.mendix.com/hc/en-us).
 
-If you have ideas on how we can improve the Function API, send an email to `info@mansystems.com`.
+If you have feedback on the Function API, send an email to `info@mansystems.com`.
 
 ## 6 Read More
 

@@ -69,7 +69,7 @@ Currently, there are two clients available: for [Java](ov-function-api-java) and
 
 ## 5 Function API Availability
 
-The Function API is in a closed preview phase right now. You can request access by sending an email to `info@mansystems.com` or sending a request to [Mendix Support](https://support.mendix.com/hc/en-us).
+The Function API is in a closed preview phase right now. You can request access by sending an email to `info@mansystems.com`.
 
 If you have feedback on the Function API, send an email to `info@mansystems.com`.
 

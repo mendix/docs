@@ -203,7 +203,11 @@ You only need to use this data in your microflow and pass the search criteria to
 
 	{{% image_container width="500" %}}![add search bits to template](attachments/server-side-paging/template-add-search.png){{% /image_container %}}
 
-5.  Click **Parameters** > **New** to add the fourth parameter and enter the following expression `if $Paging/Name = empty then '' else $Paging/Name`:
+5.  Click **Parameters** > **New** to add the fourth parameter and enter the following expression:
+
+	```
+	if $Paging/Name = empty then '' else $Paging/Name
+	```
 
 	{{% image_container width="500" %}}![add fourth parameter](attachments/server-side-paging/fourth-param.png){{% /image_container %}}
 
@@ -211,7 +215,7 @@ You only need to use this data in your microflow and pass the search criteria to
 7. Click **OK** to accept the changes in the location. 
 8. Click **OK** once more to accept the changes in the **Call REST service** activity.
 
-Deploy your app again and navigate to the page with your data grid. Enter a value for a part of the name, e.g. 'International' and click the search button to see your server-side searching in action!
+Deploy your app again and navigate to the page with your data grid. Enter a value for a part of the name, for example *International*, and click **Search** to see your server-side searching in action!
 
 ## 8 Read More
 

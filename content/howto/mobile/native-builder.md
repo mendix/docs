@@ -14,8 +14,8 @@ The Native Builder takes your Mendix project containing a native profile and pac
 
 * The Native Builder [executable](https://www.dropbox.com/sh/hpw7sshut9bco68/AABackrr75rPSgW7u5LBMkMra?dl=0) (download to a folder of your preference and extract all contents)
 	* Use v1.0.0 with Mendix 8.0
-	* Use v2.0.0 with Mendix 8.1.0 or higher
-	* Use v3.0.0 with Mendix 8.3.0 or higher
+	* Use v2.0.0 with Mendix 8.1.0 and above
+	* Use v3.0.0 with Mendix 8.3.0 and above
 * A [GitHub](https://github.com/) account
 * A [Microsoft App Center](https://appcenter.ms/) account
 * Java JDK 11 (if you have Studio Pro installed, you should already have JDK 11 in *C:\Program Files\AdoptOpenJDK*) which can be acquired [here](https://adoptopenjdk.net/) 
@@ -57,153 +57,159 @@ The sections below describe how to get tokens which allow Native Builder to auth
 
 ## 5 Commands {#commands}
 
-Command-line arguments provide information to the Native Builder, such as where your Mendix project is located. You will now compose a command and parameters, which will start your Native Builder when executed.
+Command-line arguments provide information to the Native Builder, such as where your Mendix project is located. You will now compose a command and parameters, which will start your Native Builder when executed:
 
 1. Open your command line program as an administrator by right-clicking its icon or *.exe* file and selecting **Run as administrator**.
-2. Target your Native Builder's directory by typing `cd "{your Native Builder *.exe* location}"` and pressing `Enter`:
+2.  Target your Native Builder's directory by typing `cd "{your Native Builder *.exe* location}"` and pressing <kbd>Enter</kbd>:
 
- ![change directory](attachments/native-builder/change-directory.png)
+	![change directory](attachments/native-builder/change-directory.png)
 
-3. Native Builder has two new commands in `prepare` and `build`. If you wish to continue the using the old flow; you can still just use the build command directly and passing all the required parameters.
-4. The new default still contains a similar number of arguments safe for the very important `--project-name`. This should be kept as unique as possible. The new default (`build`) requires this argument and also requires that `prepare` now be run at least once to set up the project as the default command once did safe for the actual AppCenter build step.
+3. Native Builder has two commands `prepare` and `build`. If you wish to continue the using the old flow, you can still just use the build command directly and passing all the required parameters.
+4. The new default still contains a similar number of arguments safe for the very important `--project-name`. This should be kept as unique as possible. The new default (`build`) requires this argument and also requires that `prepare` be run at least once to set up the project as the default command once did safe for the actual AppCenter build step.
 
 ### 5.1 Prepare
 
-It handles only the creation of the app on both GitHub and AppCenter, sets up Icon assets and splash image and then performs verification for Java, Mendix and Project paths. A configuration file is generated relatively to the user folder to safekeep that information for later use. One can update this configuration using the `prepare` command and passing the arguments he would like to update.
+The `Prepare` command handles the creation of the app on both GitHub and AppCenter, sets up icon assets and splash images, and then performs verification for Java, Mendix and Project paths. A configuration file is generated relative to the user folder to keep that information for later use. You can update this configuration using the `prepare` command and passing the arguments you would like to update.
 
-example:
+An example of a `prepare` command:
 
-```native-builder.exe prepare --github-access-token <token> --app-center-api-token <token> --java-home <absolute-path> --mxbuild-path <absolute-path> --project-path <absolute-path-to-mpr-file> --projectName CoolApp --app-identifier "com.company.myapp" --app-name "My Cool App"```
+```
+native-builder.exe prepare --github-access-token <token> --app-center-api-token <token> --java-home <absolute-path> --mxbuild-path <absolute-path> --project-path <absolute-path-to-mpr-file> --projectName CoolApp --app-identifier "com.company.myapp" --app-name "My Cool App"
+```
 
 | Parameters                  | Description                                                         | Example                                             |
 | --------------------------- | ------------------------------------------------------------------- | --------------------------------------------------- |
-| `--github-access-token`     | GitHub access token                                                 | `c0e1dasf1e102c55ded223dbdebdbe59asf95224`          |
-| `--app-center-api-token`    | App Center API token                                                | `3e18asdfb43f4fe6c85afsd0bf60dde72f134`          |
-| `--app-center-organization` | (Optional) App Center organisation name                             | `my-company`                                        |
-| `--project-name`            | Unique name of the project                                          | `CoolApp`                                           |
-| `--app-name`                | Display name of the App                                             | `My Cool App`                                       |
-| `--app-identifier`          | Unique app identifier                                               | `com.mendix.MyAwesomeApp`                           |
-| `--app-icon-path`           | (Optional) Absolute path to the app icon                            | `C:\MyAppIcon.png`                                  |
-| `--app-round-icon-path`     | (Optional) Absolute path to the app round icon, specific to android | `C:\MyAppRoundIcon.png`                             |
-| `--app-splash-screen-path`  | (Optional) Absolute path to the app splash screen image             | `C:\MyAppSplash.png`                                |
-| `--java-home`               | Absolute path to the directory where Java executable is located     | `C:\Program Files\Java\jdk-11.0.1`                  |
-| `--project-path`            | Absolute path to the Mendix project file                            | `C:\MyApp\MyApp.mpr`                                |
-| `--mxbuild-path`            | Absolute path to MxBuild executable                                 | `C:\Program Files\Mendix\8.0.0\modeler\mxbuild.exe` |
-| `--runtime-url`             | URL of the Mendix runtime                                           | `https://myapp.mendixcloud.com`                     |
+| `--github-access-token`     | GitHub access token.                                                 | `c0e1dasf1e102c55ded223dbdebdbe59asf95224`          |
+| `--app-center-api-token`    | App Center API token.                                                | `3e18asdfb43f4fe6c85afsd0bf60dde72f134`          |
+| `--app-center-organization` | (Optional) App Center organization name.                             | `my-company`                                        |
+| `--project-name`            | Unique name of the project.                                          | `CoolApp`                                           |
+| `--app-name`                | Display name of the app.                                             | `My Cool App`                                       |
+| `--app-identifier`          | Unique app identifier.                                               | `com.mendix.MyAwesomeApp`                           |
+| `--app-icon-path`           | (Optional) Absolute path to the app icon.                            | `C:\MyAppIcon.png`                                  |
+| `--app-round-icon-path`     | (Optional) Absolute path to the app round icon, specific to Android. | `C:\MyAppRoundIcon.png`                             |
+| `--app-splash-screen-path`  | (Optional) Absolute path to the app splash screen image.             | `C:\MyAppSplash.png`                                |
+| `--java-home`               | Absolute path to the directory where Java executable is located.     | `C:\Program Files\Java\jdk-11.0.1`                  |
+| `--project-path`            | Absolute path to the Mendix project file.                            | `C:\MyApp\MyApp.mpr`                                |
+| `--mxbuild-path`            | Absolute path to MxBuild executable.                                 | `C:\Program Files\Mendix\8.0.0\modeler\mxbuild.exe` |
+| `--runtime-url`             | URL of the Mendix runtime.                                           | `https://myapp.mendixcloud.com`                     |
 
 ### 5.2 Build
 
-This now handles only building the JavaScript bundles and assets, creating a build on GitHub and initializing the build on App Center. 
+The `Build` command handles building the JavaScript bundles and assets, creating a build on GitHub, and initializing the build on App Center. 
 
-example, if you already ran `prepare`:
-`native-builder.exe build --projectName "CoolApp" --app-version "1.0.0" --build-number 1`
+If you already ran `prepare`, this is an example of a `build` command:
+
+```
+native-builder.exe build --projectName "CoolApp" --app-version "1.0.0" --build-number 1
+```
 
 | Parameters                  | Description                                                                          | Example                                             |
 | --------------------------- | ------------------------------------------------------------------------------------ | --------------------------------------------------- |
-| `--github-access-token`     | GitHub access token                                                                  | `c0e1dasf1e102c55ded223dbdebdbe59asf95224`          |
-| `--app-center-api-token`    | App Center API token                                                                 | `3e18asdfb43f4fe6c85afsd0bf60dde72f134`             |
-| `--app-center-organization` | (Optional) App Center organisation name                                              | `my-company`                                        |
-| `--project-name`            | Unique name of the project used during `prepare`                                     | `CoolApp`                                           |
-| `--app-name`                | Display name of the App                                                              | `My Cool App`                                       |
-| `--app-identifier`          | Unique app identifier                                                                | `com.mendix.MyAwesomeApp`                           |
-| `--app-icon-path`           | (Optional) Absolute path to the app icon                                             | `C:\MyAppIcon.png`                                  |
-| `--app-round-icon-path`     | (Optional) Absolute path to the app round icon, specific to android                  | `C:\MyAppRoundIcon.png`                             |
-| `--app-splash-screen-path`  | (Optional) Absolute path to the app splash screen image                              | `C:\MyAppSplash.png`                                |
-| `--java-home`               | Absolute path to the directory where Java executable is located                      | `C:\Program Files\Java\jdk-11.0.1`                  |
-| `--project-path`            | Absolute path to the Mendix project file                                             | `C:\MyApp\MyApp.mpr`                                |
-| `--mxbuild-path`            | Absolute path to MxBuild executable                                                  | `C:\Program Files\Mendix\8.0.0\modeler\mxbuild.exe` |
-| `--runtime-url`             | URL of the Mendix runtime                                                            | `https://myapp.mendixcloud.com`                     |
-| `--app-version`             | Version of the app, semantic version only                                            | `1.2.3`                                             |
-| `--output-path`             | (Optional) Absolute path to the location where artefacts should be outputted         | `C:\Downloads`                                      |
-| `--build-number`            | Build number, an arbitrary unique integer value                                      | `1`                                                 |
+| `--github-access-token`     | GitHub access token.                                                                  | `c0e1dasf1e102c55ded223dbdebdbe59asf95224`          |
+| `--app-center-api-token`    | App Center API token.                                                                 | `3e18asdfb43f4fe6c85afsd0bf60dde72f134`             |
+| `--app-center-organization` | (Optional) App Center organisation name.                                              | `my-company`                                        |
+| `--project-name`            | Unique name of the project used during `prepare`.                                     | `CoolApp`                                           |
+| `--app-name`                | Display name of the app.                                                              | `My Cool App`                                       |
+| `--app-identifier`          | Unique app identifier.                                                                | `com.mendix.MyAwesomeApp`                           |
+| `--app-icon-path`           | (Optional) Absolute path to the app icon.                                             | `C:\MyAppIcon.png`                                  |
+| `--app-round-icon-path`     | (Optional) Absolute path to the app round icon, specific to Android.                  | `C:\MyAppRoundIcon.png`                             |
+| `--app-splash-screen-path`  | (Optional) Absolute path to the app splash screen image.                              | `C:\MyAppSplash.png`                                |
+| `--java-home`               | Absolute path to the directory where Java executable is located.                      | `C:\Program Files\Java\jdk-11.0.1`                  |
+| `--project-path`            | Absolute path to the Mendix project file.                                            | `C:\MyApp\MyApp.mpr`                                |
+| `--mxbuild-path`            | Absolute path to MxBuild executable.                                                  | `C:\Program Files\Mendix\8.0.0\modeler\mxbuild.exe` |
+| `--runtime-url`             | URL of the Mendix runtime.                                                            | `https://myapp.mendixcloud.com`                     |
+| `--app-version`             | Version of the app, semantic version only.                                            | `1.2.3`                                             |
+| `--output-path`             | (Optional) Absolute path to the location where artifacts should go.         | `C:\Downloads`                                      |
+| `--build-number`            | Build number, an arbitrary unique integer value.                                      | `1`                                                 |
 | `--platform`                | (Optional) Platform with which to run command for. Defaults to both iOS and Android. | `ios` or `android`                                  |
-| `--deployment-target`       | (Optional) OTA target group. Defaults to `Production`                                | `Staging`                                           |
-| `--skip-mxbuild`            | (Optional) If to bundle JavaScript bundle and assets. Defaults to `false`            | `true` or `false`                                   |
+| `--deployment-target`       | (Optional) OTA target group. Defaults to `Production`.                                | `Staging`                                           |
+| `--skip-mxbuild`            | (Optional) Used if bundling JavaScript bundle and assets. Defaults to `false`.            | `true` or `false`                                   |
 
 ### 5.3 Regenerate
 
-This under-the-hood recreates the project on GitHub with the latest version of `Native Template`, renames the previous app with a new name to preserve changes (if any) and then updates the build configuration of the App Center apps. This also expects that `prepare` has been run at least once for the `--project-name`.
+The under-the-hood `regenerate` command recreates the project on GitHub with the latest version of `Native Template`, renames the previous app with a new name to preserve changes (if any), and then updates the build configuration of the App Center apps. Running `regenerate` also expects that `prepare` has been run at least once for the `--project-name`.
 
-example:
+An example of a `regenerate` command:
 
-```native-builder.exe regenerate --projectName "CoolApp"```
+```
+native-builder.exe regenerate --projectName "CoolApp"
+```
 
 | Parameters            | Description                                                                          | Example            |
 | --------------------- | ------------------------------------------------------------------------------------ | ------------------ |
-| `--project-name`      | Unique name of the project used during `prepare`                                     | `CoolApp`          |
+| `--project-name`      | Unique name of the project used during `prepare`.                                     | `CoolApp`          |
 
-### 5.4 Creating an OTA deployment release
+### 5.4 Creating an Over-the-Air Deployment Release
 
-This handles generating a new JavaScript bundle and assets and deploying that OTA.
+The `release pushUpdate` command generates a new JavaScript bundle and assets and deploys that over the air (OTA).
 
-example:
+An example of creating an OTA deployment release:
 
-```native-builder.exe release pushUpdate --projectName "CoolApp" --target-version "1.0.0" --build-number 1 --rollout-percentage 100 --mandatory true```
+```
+native-builder.exe release pushUpdate --projectName "CoolApp" --target-version "1.0.0" --build-number 1 --rollout-percentage 100 --mandatory true
+```
 
 | Parameters             | Description                                                                                                | Example                                            |
 | ---------------------- | ---------------------------------------------------------------------------------------------------------- | -------------------------------------------------- |
-| `--project-name`       | Unique name of the project used during `prepare`                                                           | `CoolApp`                                          |
+| `--project-name`       | Unique name of the project used during `prepare`.                                                           | `CoolApp`                                          |
 | `--target-version`     | Version or range of versions of the already published app that this update should affect.                  | Semantic version See [Semantic Versioning](https://semver.org/)  |
-| `--rollout-percentage` | Percentage number of users that should get this update. Once set, the value can not be reduced afterwards. | A number between `1` and `100`.                    |
-| `--description`        | (Optional) More info associated with this update that users would see before downloading.                  | Any text message.                                  |
-| `--mandatory`          | Determines if this update should be considered important and forced on the users                           | `true` or `false`                                  |
+| `--rollout-percentage` | Percentage number of users that should get this update. Once set, the value can not be reduced. | A number between `1` and `100`.                    |
+| `--description`        | (Optional) More informantion associated with this update that users would see before downloading.                  | Any text message.                                  |
+| `--mandatory`          | Determines if this update should be considered important and mandatory for the users.                           | `true` or `false`                                  |
 | `--build-number`       | App Center build number that this update should target.                                                    | Any number as defined during `build`               |
 | `--platform`           | (Optional) Platform with which to run command for. Defaults to both iOS and Android.                       | `ios` or `android`                                 |
-| `--deployment-target`  | (Optional) OTA target group. Defaults to `Production`                                                      | `Staging`                                          |
-| `--skip-mxbuild`       | (Optional) If to bundle JS bundle and assets. Defaults to `false`                                          | `true` or `false`                                  |
+| `--deployment-target`  | (Optional) OTA target group. Defaults to `Production`.                                                      | `Staging`                                          |
+| `--skip-mxbuild`       | (Optional) If to bundle JS bundle and assets. Defaults to `false`.                                          | `true` or `false`                                  |
 
-### 5.5 Updating an OTA deployment release metadata
+### 5.5 Updating OTA Deployment Release Metadata
 
-This command allows updating the metadata information of a published update that hasn't been rolled out yet to all users (i.e doesn't have a `rollout-percentage` value of `100`).
+The `release patchUpdate` command allows updating the metadata of a published update that has not been rolled out yet to all users (specifically one which does not have a `rollout-percentage` value of `100`).
 
-example:
+An example of a `release patchUpdate` command:
 
 ```native-builder.exe release patchUpdate --projectName "CoolApp" --target-version  "1.0.1"```
 
 | Parameters             | Description                                                                                                          | Example                                                |
 | ---------------------- | -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------ |
-| `--project-name`       | Unique name of the project used during `prepare`                                                                     | `CoolApp`                                              |
-| `--label`              | Unique label of the update to patch                                                                                  | This can be gotten by using the `release list` command |
+| `--project-name`       | Unique name of the project used during `prepare`.                                                                     | `CoolApp`                                              |
+| `--label`              | Unique label of the update to patch.                                                                                  | This can be gotten by using the `release list` command |
 | `--target-version`     | (Optional) Version or range of versions of the already published app that the update should affect.                  | Semantic versioning See [Semantic Versioning](https://semver.org/)    |
 | `--rollout-percentage` | (Optional) Percentage number of users that should get the update. Once set, the value can not be reduced afterwards. | A number between `1` and `100`.                        |
 | `--description`        | (Optional) More info associated with the update that users would see before downloading.                             | Any text message.                                      |
-| `--mandatory`          | (Optional) Determines if the update should be considered important and forced on the users                           | `true` or `false`                                      |
+| `--mandatory`          | (Optional) Determines if the update should be considered important mandatory for the users.                           | `true` or `false`                                      |
 | `--platform`           | (Optional) Platform with which to run command for. Defaults to both iOS and Android.                                 | `ios` or `android`                                     |
-| `--deployment-target`  | (Optional) OTA target group. Defaults to `Production`                                                                | `Staging`                                              |
+| `--deployment-target`  | (Optional) OTA target group. Defaults to `Production`.                                                                | `Staging`                                              |
 
-### 5.6 Rollback to previous deployment release
+### 5.6 Rollback to Previous Deployment Release
 
-This allows reverting to a previous deployment release with the same target version of the app. This command creates a new deployment using a previous deployment release specified with the `--label` argument.
+The `release rollbackUpdate` command allows reverting to a previous deployment release with the same target version of the app. This command creates a new deployment using a previous deployment release specified with the `--label` argument. Note that if you roll back to a broken release, it will be deployed to the users. The app has the fail safe out of the box to fall back to its bundled release if the new downloaded one crashed. You will then have to either do a new release or roll back to a working release.
 
-example:
+An example of a `release rollbackUpdate` command:
 
 ```native-builder.exe release rollbackUpdate --projectName "CoolApp" --label "v4"```
 
-Notes
-
-1. `--label` needs to point to a previous deployment release only
-2. If you rollback to a broken release, it will be deployed to the users. The app has the fail safe out of the box to fall back to its bundled release if the new downloaded one crashed. You will then have to either do a new release or rollback to a working release.
-
 | Parameters            | Description                                                                          | Example                                                |
 | --------------------- | ------------------------------------------------------------------------------------ | ------------------------------------------------------ |
-| `--project-name`      | Unique name of the project used during `prepare`                                     | `CoolApp`                                              |
-| `--label`             | A unique label of the stable version to rollback to                                  | This can be gotten by using the `release list` command |
+| `--project-name`      | Unique name of the project used during `prepare`.                                     | `CoolApp`                                              |
+| `--label`             | A unique label of the stable version to rollback to (can point to a previous deployment release only).                                  | This can be gotten by using the `release list` command. |
 | `--platform`          | (Optional) Platform with which to run command for. Defaults to both iOS and Android. | `ios` or `android`                                     |
-| `--deployment-target` | (Optional) OTA target group. Defaults to `Production`                                | `Staging`                                              |
+| `--deployment-target` | (Optional) OTA target group. Defaults to `Production`.                                | `Staging`                                              |
 
-### 5.6 List deployment releases
+### 5.6 List Deployment Releases
 
-This displays a pretty printed list of all deployed releases.
+The `release list` command displays a printed list of all deployed releases.
 
-example:
+An example of a `release list` command:
 
-```native-builder.exe release list --projectName "CoolApp"```
+```
+native-builder.exe release list --projectName "CoolApp"
+```
 
 | Parameters            | Description                                                                          | Example            |
 | --------------------- | ------------------------------------------------------------------------------------ | ------------------ |
-| `--project-name`      | Unique name of the project used during `prepare`                                     | `CoolApp`          |
+| `--project-name`      | Unique name of the project used during `prepare`.                                     | `CoolApp`          |
 | `--platform`          | (Optional) Platform with which to run command for. Defaults to both iOS and Android. | `ios` or `android` |
-| `--deployment-target` | (Optional) OTA target group. Defaults to `Production`                                | `Staging`          |
+| `--deployment-target` | (Optional) OTA target group. Defaults to `Production`.                                | `Staging`          |
 
 ### 6 Advanced Parameter Explanation
 
@@ -233,27 +239,27 @@ This parameter serves as a unique identifier for your app, which must conform to
 
 #### 6.7 --deployment-target
 
-Each over-the-air release is carried out for specific release groups we call deployment targets. By default, each app is created with two targets on App Center, `Production` and `Staging`. For Native Builder, the `Production` target is chosen by default for every command. This target has a one-to-one relationship with the builds distributed via the App Store referenced using the `--target-version` parameter. So in order to push over-the-air updates to a build already in production, one has to know what version of it that is in production and the `--deployment-target` used to distribute it.
+Each over-the-air release is carried out for specific release groups called deployment targets. By default, each app is created with two targets on App Center: `Production` and `Staging`. For Native Builder, the `Production` target is chosen by default for every command. This target has a one-to-one relationship with the builds distributed via the App Store referenced using the `--target-version` parameter. So in order to push over-the-air updates to a build already in production, you must know which version of it is in production and the `--deployment-target` used to distribute it.
 
 #### 6.8 --platform
 
-This allows selective builds per specific platform or for both. By default, Native Builder tries to build for both platforms but this can be altered to either "ios" or "android" only, using this parameter.
+This parameter allows selective builds per specific platform or for both. By default, Native Builder tries to build for both platforms but this parameter can limit a build to either iOS or Android only.
 
 #### 6.9 --skip-mxbuild
 
-In very rare edge cases, errors might occur after the bundling process had completed. This process indeed takes the longest time and running it again when no errors occured during its process might be time wasting and hence the need for this parameter to gain some minutes.
+In rare cases, errors might occur after the bundling process had completed. This parameter will allow you to skip MxBuild during testing to save time.
 
 #### 6.10 --mandatory
 
-When this is set to true, it means all users with this version of the app would get this update downloaded by force otherwise, a prompt would be presented to the user to decide on what action to take and they cn indeed choose to ignore an update.
+When this parameter is set to true, all users with this version of the app will get this update downloaded by force. Without this parameter, a prompt would be presented to the user which would let them accept or ignore the update at will.
 
 #### 6.11 --target-version
 
-This determines what versions of the installed apps should get the update. It accepts semantic version ranges like ~0.1.0 which points all versions between 0.1.0 and 0.2.0. More info on this can be found at [Semantic Versioning](https://semver.org/). This value can be changed afterwards with the release patchUpdate command as long as it hasn’t been fully rolled out to all users.
+This parameter determines what versions of the installed apps will recieve the update. It accepts semantic version ranges like ~0.1.0 which points to all versions between 0.1.0 and 0.2.0. More information on this can be found at [Semantic Versioning](https://semver.org/). This value can be changed afterwards with the `release patchUpdate` command as long as the update has not been fully rolled out to all users.
 
 #### 6.12 --rollout-percentage
 
-This determines the volume of users currently on a version of the app that should get this update. Once this value has been set and/or update to a higher value, it can not be reduced to a lower value so it should be handled with importance.
+This parameter determines what percentage of users currently on a version of the app should recieve this update. Once this value has been set or updated to a higher value, it cannot be reduced to a lower value.
 
 #### 6.13 --label
 

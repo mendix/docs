@@ -945,6 +945,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 | 403 | NO_ACCESS | The user does not have access to the backups of this environment. |
 | 404 | ENVIRONMENT_NOT_FOUND | Environment not found. |
 | 404 | SNAPSHOT_NOT_FOUND | Snapshot not found. |
+| 500 | INTERNAL_SERVER_ERROR | This *usually* occurs when you have provided a valid **SnapshotID**, but the snapshot is still being created. Try downloading the backup at a later time |
 
 **Example Output**
 
@@ -957,6 +958,10 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 ```
 
 ### 3.17 Create a Backup of an Environment (Mendix Cloud v4 Only)
+
+{{% alert type="warning" %}}
+This call will trigger the creation of a snapshot and will return the **SnapshotID** immediately. However, the creation of the snapshot takes some time and if the creation hasn't completed you will get a **500 INTERNAL_SERVER_ERROR** response from a request to download the backup (see above). In this case, it is recommended that you periodically retry downloading the backup until the call is successful.
+{{% /alert %}}
 
 #### 3.17.1 Description
 

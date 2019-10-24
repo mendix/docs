@@ -39,12 +39,6 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 * We fixed an issue where updates to decimal constants in the Developer Portal were limited to 2 decimal places. This has been increased to 8 decimal places. (Ticket 85507)
 
-### May 17th, 2019
-
-#### Fixes
-
-* We made several changes to our maintenance window management to ensure that environments are completely locked during maintenance.
-
 ### May 10th, 2019
 
 #### Support Improvements
@@ -183,21 +177,9 @@ The Web Modeler can now be enabled for all types of apps. You can do this on the
 
 ### June 26th, 2018
 
-#### Improvements
+#### Improvement
 
 * We implemented the new Mendix header.
-* We fixed the bug that allowed users to start an application during a restore.
-
-### June 8th, 2018
-
-#### Improvements
-
-*  We have aggregated the health icons for the acceptance and test environments in the **Nodes** dashboard and **Company Admin** screen.
-
-	{{% image_container width="300" %}}![](attachments/CPHealthIcon.png)
-	{{% /image_container %}}
-
-* The health icon will display the health status of the environment that is in the worst condition. This is to prepare for an upcoming release that will support more than three environments per application.
 
 ### May 23rd, 2018
 

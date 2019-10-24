@@ -222,7 +222,7 @@ BooleanSlider, BootstrapWysiwygEditor (Bootstrap RTE), InputReferenceSelector, R
 
 None
 
-### Set Value (by index) {#"SetValueByIndex}
+### Set Value (by index) {#SetValueByIndex}
 
 #### Function Key
 
@@ -3037,7 +3037,7 @@ None.
 
 ### Assert greaterThanOrEqualTo {#AssertGreaterThanOrEqualTo}
 
-##### Function Key
+#### Function Key
 
 AssertGreaterThanOrEqualTo
 

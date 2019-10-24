@@ -37,7 +37,7 @@ Some apps are not suitable for Studio. The following ones are not suitable to ru
 
 {{% /alert %}}
 
-When Studio is not enabled, you can click **Edit App** > **Settings**. For more information on how to enable Studio, see [Developer Portal Settings](../../developerportal/settings#web).
+When Studio is not enabled, you can click **Edit App** > **Settings**. For more information on how to enable Studio, see [Developer Portal Settings](../../developerportal/settings).
 
 ![](attachments/general/not-enabled.png)
 

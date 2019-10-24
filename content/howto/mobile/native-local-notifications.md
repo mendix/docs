@@ -506,8 +506,6 @@ Explaining the work-around above:
 
 Local notifications should rarely notify a user right after they do an action. Here you will learn to configure local notifications to trigger after a period of time. To do this, you will use a JavaScript action named **ScheduleNotification**.
 
-[todo: make sure to cover "on received" action in this section because we haven't yet]
-
 To schedule a notification for a specific time, do the following:
 
 1. Navigate to your **ACT_CreateAndSendNotification** nanoflow. 
@@ -527,7 +525,28 @@ To schedule a notification for a specific time, do the following:
 
 The notification should be displayed at the end of the minute.
 
-If your app open, it will not show the notification due to iOS and Android user guidelines. However, notifications for open apps can still trigger onReceive events. This allows you to design custom actions for notifications, such as showing a page with pop-up layout.
+If your app is open, it will not show the notification due to iOS and Android user guidelines. However, notifications for open apps can still trigger onReceive events. This allows you to design custom actions for notifications, such as showing a page with pop-up layout. Follow these steps to model an onRecieve event:
+
+[todo: this still didn't work for me. Maybe one of the typed-in bits needed single quotes or double quotes?]
+
+1. Make a new nanoflow named *ON_RecieveNotification*.
+2. Drag and drop a **Log message** activity on your nanoflow.
+3. Double-click this activity. 
+4. In **Template** write *I triggered on recieve notification* then click **OK**.
+5. Double-click your home page's notifications widget.
+6. Click **Actions** > **New**.
+7. Create a **New Action** named *TriggerOnRecieve*, set **On receive** to **Call a nanoflow**, and select **ON_RecieveNotification**:
+
+	![on recieve settings](attachments/native-push/on-receive-action.png)
+
+8. Click **OK** then **OK** again.
+8. In **ACT_CreateAndSendNotification**, double-click your schedule notification activity.
+10. Click **Action name** > **Edit**.
+11. Type *'TriggerOnRecieve'* into the argument field and click **OK**.
+11. Click **OK**.
+12. Start and load the app on your mobile device.
+13. Tap the **Send notification** button, and do not minimize your app.
+14. You will see the log **I triggered on recieve notification** in the Studio Pro console.
 
 But what if you want to cancel a scheduled notification? Read on to learn more.
 

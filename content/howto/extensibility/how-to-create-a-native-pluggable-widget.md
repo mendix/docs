@@ -466,7 +466,7 @@ INSERT mobile shot of caption text
 
 You will also want Mendix developers to be able to fill content in the group box like building blocks, snippets, and other widgets. To enable this, do the following:
 
-1. Go to **src/GroupBox.xml** and add a content property element above the header caption property.
+1. In **src/GroupBox.xml**, add a content property element above the header caption property.
 2. Change the name element from **Group Box** to *Group box*. 
 3. Remove the "needsEntityContext" attribute from the widget element, since this is no longer necessary. 
 3. Your file should now look like this:
@@ -534,17 +534,24 @@ You will also want Mendix developers to be able to fill content in the group box
 
 Verify that the new content property works:
 
-1. Go back to Mendix Studio Pro.
+[todo: because we changed the big B into a small b, the old widget in my project was Bbroken. If we want the little b thing for some reason, I need to replace step 3 below probably with "delete your old widget, then drag and drop a Group box" widget.]
+
+1. Go back to Studio Pro.
 2. Press <kbd>F4</kbd> or select **Project > Synchronize Project Directory** to bring your application in sync with the changes to the **src/GroupBox.xml** file.
-3. Update the group box widget again. A content area will appear in the page editor.
+3. Update the group box widget again. A content area will appear in the page editor:
+
+INSERT content-area.png
+
 4. Drag and drop a **Call nanoflow button** widget into the content area.
-5. Create a new nanoflow *ACT_ShowMessage*.
-6. Double-click the button and change the caption to *Show message*.
+5. Click **New** and a new nanoflow *ACT_ShowMessage*.
+6. Double-click the button and change the **Caption** to *Show message*.
 7. Navigate to **ACT_ShowMessage**.
 8. Drag and drop a **Show message** activity onto your nanoflow.
 9. Double-click the activity and add the text *Hello World!* to the **Template**, then click **OK**.
 10. Rerun the app locally.
 11. With the Make it Native app, verify that your button is inside the group box and is triggering a message popup saying **Hello World!**.
+
+Insert mobile hello world pic
 
 It would be nice to hide the content area of the group box completely when there is no content added to the group box in Mendix Studio Pro:
 

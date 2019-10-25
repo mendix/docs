@@ -12,7 +12,7 @@ The [Forgot Password](https://appstore.home.mendix.com/link/app/1296/) module wo
 
 With this module, the end-user can enter their email address, and an email will be sent with a confirmation link. The end-user then opens the link and gets the option to reset their password. 
 
-### 1.1 Dependencies
+### 1.1 Dependencies {#dependencies}
 
 * [Email with Templates](email-with-templates) module
 * [Deep Link](deep-link) module
@@ -21,7 +21,7 @@ With this module, the end-user can enter their email address, and an email will 
 
 ## 2 Configuration
 
-Once you have downloaded all required modules from the App Store, you can reuse the snippets and microflows from the _Use Me folder.
+Once you have downloaded all the required modules (see [Dependencies](#dependencies), you can reuse the snippets and microflows from the **Use Me** folder.
 
 The page ForgotPasswordConfiguration should be accessible to the administrator only, this snippet allows for configuring the email template, deeplink and shows all open reset password requests.
 

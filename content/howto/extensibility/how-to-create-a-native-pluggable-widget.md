@@ -550,7 +550,7 @@ INSERT content-area.png
 10. Rerun the app locally.
 11. With the Make it Native app, verify that your button is inside the group box and is triggering a message popup saying **Hello World!**.
 
-Insert mobile hello world pic
+	Insert mobile hello world pic
 
 It would be nice to hide the content area of the group box completely when there is no content added to the group box in Mendix Studio Pro:
 
@@ -578,7 +578,7 @@ It would be nice to hide the content area of the group box completely when there
    };
    ```
 
-3. Make a call to **renderContent** in the **render** method:
+3. Make a call to **renderContent** in the **render** method. When you do this, your **render** method will look like this:
 
    ```tsx
    render(): ReactNode {
@@ -593,6 +593,12 @@ It would be nice to hide the content area of the group box completely when there
      );
    }
    ```
+
+4. To see your changes, drag and drop a new **Group box** widget onto your home page. Run your project and check to see that your new group box with no content shows no empty white box:
+
+	INSERT PIC OF TWO BLACKBARS WITH CONTENT IN BETWEEN
+
+5. Delete the empty **Group box** widget you created in the previous step.
 
 #### 3.3.3 Making the Widget Collapsilble
 

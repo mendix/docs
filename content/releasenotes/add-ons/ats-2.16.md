@@ -7,7 +7,7 @@ parent: "ats-2"
 
 **Release date: October 16th 2019**
 
-### Mendix 8.2.2 compatibility
+### Mendix 8.2.2 Compatibility
 
 Apps built with [Mendix 8.2.2](/releasenotes/studio-pro/8.2#822) can now be tested using ATS.
 

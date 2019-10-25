@@ -4,7 +4,6 @@ category: "Deployment"
 menu_order: 20
 description: "Describes how to deploy to the Mendix Cloud."
 tags: ["Deploy","Mendix Cloud","Developer Portal", "Free App", "licensed", "limitations"]
-frontpage_featured: true
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

@@ -9,18 +9,24 @@ tags: ["studio pro"]
 
 ## 1 Introduction
 
-The menu bar widget shows a configured menu in the form of a horizontal bar with items. Items can have sub-items in which case the main item can be expanded. Sub-items cannot have sub-items again. In the end a [Menu Item](menu#menu-item) points to either the page or the microflow that will opened or started when the item is clicked.
+The menu bar widget shows a configured menu in the form of a horizontal bar with items. Items can have sub-items in which case the main item can be expanded. Sub-items cannot have sub-items. In the end a [Menu Item](menu#menu-item) points to either the page or the microflow that will opened or started when the item is clicked.
 
-![](attachments/pages/menu-bar.png)
+![](attachments/menu-widgets/menu-bar.png)
 
-## 2 Common Properties
+## 2 Properties
 
-{{% snippet file="refguide/name-property.md" %}}
+An example of menu bar properties is represented in the image below:
 
-{{% snippet file="refguide/class-property.md" %}}
+![](attachments/menu-widgets/menu-bar-properties.png)
 
-{{% snippet file="refguide/style-property.md" %}}
+Menu bar properties consist of the following sections:
 
-## 3 General Properties
+* Common
+* Design properties
+* General
 
-{{% snippet file="refguide/menu-source-properties.md" %}}
+### Common Section
+
+### General Section
+
+## Read More

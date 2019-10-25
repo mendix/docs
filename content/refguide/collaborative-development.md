@@ -2,7 +2,6 @@
 title: "Collaborative Development"
 category: "Version Control"
 description: "Describes the process of collaborative development between the Mendix Studio Pro and the Mendix Studio"
-frontpage_featured: true
 tags: ["studio pro", "studio", "collaborative development", "sync"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---

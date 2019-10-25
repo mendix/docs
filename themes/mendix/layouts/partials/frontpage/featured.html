@@ -1,13 +1,16 @@
 {{- $featuredPages := where .Site.Pages ".Params.frontpage_featured" true -}}
 {{- with $featuredPages -}}
-  <h2 class="frontpage__featured__title">Featured Docs</h2>
-  <ul class="frontpage__featured__list">
-    {{- range . -}}
-      <li class="frontpage__featured__list__item">
-        {{- $newUrl := replace .URL "index.html" "" -}}
-        {{- $newUrl := replace $newUrl ".html" "" -}}
-        <a class="frontpage__featured__link" href="{{ $newUrl }}">{{ .Title }}</a>
-      </li>
-    {{- end -}}
+  <h2 class="frontpage__featured__title">Latest Releases</h2>
+  <ul>
+	<li><a href="https://docs.mendix.com/releasenotes/studio-pro/8.2">Studio Pro 8.2.2</a> – October 15th, 2019</li>
+	<li><a href="https://docs.mendix.com/releasenotes/studio/8.0-and-above">Studio</a> – October 15th, 2019</li>
+	<li><a href="https://docs.mendix.com/releasenotes/developer-portal">Developer Portal</a> – September 24th, 2019</li>
+	<li><a href="https://docs.mendix.com/releasenotes/developer-portal/deployment">Deployment</a> – September 27th, 2019</li>
+	<li><a href="https://docs.mendix.com/releasenotes/app-store">App Store</a> – October 23rd, 2019</li>
+	<li><a href="https://docs.mendix.com/releasenotes/mobile/make-it-native-app">Make It Native app 1.1.0 / 1.1.0</a> – September 30th, 2019</li>
+	<li><a href="https://docs.mendix.com/releasenotes/mobile/native-builder">Native Builder 2.0.0</a> – September 3rd, 2019</li>
+	<li><a href="https://docs.mendix.com/releasenotes/sdk/model-sdk-4">Model SDK 4.25.0</a> – September 25th, 2019</li>
+	<li><a href="https://docs.mendix.com/releasenotes/sdk/platform-sdk">Platform SDK 4.1.1</a> – June 11th, 2019</li>
+	<li><a href="https://docs.mendix.com/releasenotes/sdk/metamodel-8.2">Metamodel 8.2.0</a> – September 25th, 2019</li>
   </ul>
 {{- end -}}

@@ -21,7 +21,7 @@ With this module, the end-user can enter their email address, and an email will 
 
 ## 2 Configuration
 
-Once you have downloaded all the required modules (see [Dependencies](#dependencies), you can reuse the snippets and microflows from the **Use Me** folder.
+Once you have downloaded all the required modules (see [Dependencies](#dependencies)), you can reuse the snippets and microflows from the **Use Me** folder.
 
 The page ForgotPasswordConfiguration should be accessible to the administrator only, this snippet allows for configuring the email template, deeplink and shows all open reset password requests.
 

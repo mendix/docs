@@ -598,7 +598,7 @@ It would be nice to hide the content area of the group box completely when there
 
 	INSERT PIC OF TWO BLACKBARS WITH CONTENT IN BETWEEN
 
-5. Delete the empty **Group box** widget you created in the previous step.
+5. Delete the empty **Group box** widget you created in the previous step, then rerun your app to save your changes.
 
 #### 3.3.3 Making the Widget Collapsilble
 
@@ -607,7 +607,13 @@ Now that your widget can contain content, the next challange is to hide this con
 To start, make the complete header clickable:
 
 1. Navigate to the display component (**src/components/GroupBox.tsx**).
-2. Import the React Native components **TouchableOpacity** and **TouchableNativeFeedback**:
+2. Import the React component **ComponentClass** so that your React imports look like this:
+
+	```tsx
+	import { Children, Component, ReactNode, createElement, ComponentClass } from "react";
+	```
+
+2. Import the React Native components **TouchableOpacity** and **TouchableNativeFeedback** so that your React Native imports look like this:
 
    ```tsx
    import {
@@ -619,7 +625,7 @@ To start, make the complete header clickable:
    } from "react-native";
    ```
 
-3. Create the following lambda method that is resonposible for rendering the clickable header (TODO: explain why two different components and Touchable component = dynamic component):
+3. Create the following lambda method that is responsible for rendering the clickable header:
 
    ```tsx
    private renderHeader = () => {
@@ -645,7 +651,7 @@ To start, make the complete header clickable:
        return (
            <View style={this.styles.container}>
                {this.renderHeader()}
-               <View style={this.styles.content}>{this.props.children}</View>
+               {this.renderContent()}
            </View>
        );
    }
@@ -653,7 +659,7 @@ To start, make the complete header clickable:
 
 5. Make sure all files have been saved.
 6. Reload your test app in the Make it Native app to view the change.
-7. Verify the header is clickable. Note that on Android, the ripple effect is not visible on a black background, so at the moment you cannot verify yet if it's clickable.
+7. Verify the header is clickable by tapping it. You should see a light-up effect on iOS. Note that on Android, the ripple effect is not visible on a black background, so you cannot verify yet if it's clickable.
 
 Now make it possible to expand or collapse the group box:
 
@@ -666,13 +672,13 @@ Now make it possible to expand or collapse the group box:
    }
    ```
 
-3. Change the class definition to give our component a state to keep track on whether it's collapsed or not:
+3. Change the class definition to give our component a state to keep track on whether it is collapsed or not:
 
    ```tsx
    export class GroupBox extends Component<GroupBoxProps, GroupBoxState>
    ```
 
-4. Set collapsed to false for the initial state by this inside the class:
+4. Set collapsed to **false** as the initial state inside the class:
 
    ```tsx
    readonly state: GroupBoxState = {
@@ -689,14 +695,14 @@ Now make it possible to expand or collapse the group box:
    };
    ```
 
-6. Let the **Touchable** component execute the **toggleCollapsed** method when it's tapped. Also, switch between a plus and minus character in the header depending on the state [todo keybindings?]. The **renderHeader** method should look as follows:
+6. Let the **Touchable** component execute the **toggleCollapsed** method when it is tapped. Also, add a switch between a plus and minus character in the header depending on the state. The **renderHeader** method should look as follows:
 
    ```tsx
    private renderHeader = () => {
        const view = (
            <View style={this.styles.header}>
                <Text style={this.styles.headerContent}>{this.props.headerCaption}</Text>
-               <Text style={this.styles.headerContent}>-</Text>
+               <Text style={this.styles.headerContent}>{this.state.collapsed ? "+" : "-"}</Text>
            </View>
        );
 
@@ -718,9 +724,7 @@ Now make it possible to expand or collapse the group box:
    };
    ```
 
-8. Verify in the Make it Native app that you can expand and collapse the group box:
-
-	TODO insert pic/gif here
+8. Verify in the Make it Native app that you can expand and collapse the group box by tapping your widget's header.
 
 #### 3.3.4 Adding an Expand and Collapse Icon Property
 

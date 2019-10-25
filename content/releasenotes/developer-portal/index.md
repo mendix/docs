@@ -13,7 +13,7 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 ## 2019
 
-### September 24th, 2019 {#sept2419}
+### September 24th, 2019
 
 #### Improvements
 

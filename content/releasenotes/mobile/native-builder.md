@@ -16,13 +16,13 @@ We are heavily invested in streamlining the experience of building your apps and
 
 **Release date: September 3rd, 2019**
 
-### Breaking changes
-
-This version only supports Mendix version 8.1.0 and upwards. If you have to stick with Mendix 8.0.0 please consider using Native Builder  v1.0.0.
-
 ### Improvements
 
 * We passed the `--native-packager` flag to MxBuild to enable MxBuild compatibility with Mendix 8.1.0 and higher.
+
+### Breaking Changes
+
+This version only supports Mendix version 8.1.0 and upwards. If you have to stick with Mendix 8.0.0 please consider using Native Builder  v1.0.0.
 
 ### Known Issues
 

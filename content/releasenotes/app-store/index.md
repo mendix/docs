@@ -2,6 +2,7 @@
 title: "App Store"
 description: "Release notes for updates to the Mendix App Store"
 tags: ["app store", "connector", "module", "add on", "widget"]
+frontpage_featured: true
 ---
 
 These release notes cover changes made to the [Mendix App Store](https://appstore.home.mendix.com/index3.html). For more information, see the [App Store](/developerportal/app-store/) section of the *Developer Portal Guide*.

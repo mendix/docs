@@ -728,9 +728,7 @@ Now make it possible to expand or collapse the group box:
 
 #### 3.3.4 Adding an Expand and Collapse Icon Property
 
-The next step is to allow a Mendix developer to use a custom icon in the clickable header.
-
-First, define the properties and adjust the display component so that it can render icons:
+The next step is to allow a Mendix developer to use a custom icon in the clickable header. First, define the properties and adjust the display component so that it can render icons:
 
 1. Navigate to **src/GroupBox.xml**.
 2. Add two icon properties to set an icon for indicating the actions expand and collapse:
@@ -804,7 +802,7 @@ First, define the properties and adjust the display component so that it can ren
    ```
 
 4. Save the *.xml* file.
-5. Navigate to the display component.
+5. Navigate to the display component (**src/components/GroupBox.tsx**).
 6. Add two new props for an expand and collapse icon by changing the **GroupBoxProps** interface:
 
    ```tsx
@@ -857,7 +855,7 @@ Next you have to pass the icons configured by the Mendix developer to your displ
    const defaultExpandIconGlyph = "glyphicon-plus";
    ```
 
-3. Do the following imports [todo: do?]:
+3. Add the following imports:
 
    ```tsx
    import { DynamicValue, NativeIcon, ValueStatus } from "mendix";
@@ -900,14 +898,19 @@ Next you have to pass the icons configured by the Mendix developer to your displ
 
 6. Navigate to Studio Pro.
 7. Press <kbd>F4</kbd> or select **Project > Synchronize Project Directory** to bring your application in sync with the changes you made to the **src/GroupBox.xml** file.
-8. Update the group box widget. [todo: come to ruling on group box widget casing]
-9. Gor the expand icon property, select a € sign [todo: how? bold sign?].
-10. Run the app locally.
-11. Inspect your changes. Notice that you cannot see any icon in group box's header. This is because your background color and text color are both black. Remember that in the **defaultStyle** constant of your display component you defined that text of React Native components that get the **headerContent** style applied to it should be white. [todo: Isa, can we delete from However to the rest of the paragraph? I wanna tighten this up as much as possible.] However, you are not explicitly applying this style to our **Icon** component that you pass from our container component to the display component. You could argue to move the creation of the **Icon** component inside your display component, but this will go against the strict seperation of concerns related to the container and display component, since the **Icon** component is Mendix specific. Therefore, it should be part of the container component.
+8. Update the group box widget.
+9. Double-click your widget.
+10. In the **Icon** described as **Icon used to indicate that the group box can be expanded** click **Edit**.
+11. Click the € sign and click **Select**:
+
+euro-icon.png
+
+10. Click **OK**, then run the app locally.
+11. Inspect your changes. Notice that you cannot see any icon in group box's header. This is because your background color and text color are both black. Remember that in the **defaultStyle** constant of your display component you defined that text of React Native components that get the **headerContent** style applied to it should be white. However, you are not explicitly applying this style to our **Icon** component that you pass from our container component to the display component. You could argue to move the creation of the **Icon** component inside your display component, but this will go against the strict seperation of concerns related to the container and display component, since the **Icon** component is Mendix specific. Therefore, it should be part of the container component.
 
 Fix your icon issue by introducing a default style for your container component:
 
-1. Add the following **defaultStyle** constant outside the container component class:
+1. In **src/GroupBox.tsx** add the following **defaultStyle** constant outside the container component class:
 
    ```tsx
    const defaultStyle: CustomStyle = {
@@ -921,13 +924,13 @@ Fix your icon issue by introducing a default style for your container component:
    };
    ```
 
-2. Import the flattenStyles function:
+2. Import the `flattenStyles` function:
 
    ```tsx
    import { Style, flattenStyles } from "./utils/common";
    ```
 
-3. Add the following private attribute to the container component:
+3. Add the following private attribute to the container component class:
 
    ```tsx
    private readonly styles = flattenStyles(defaultStyle, this.props.style);
@@ -950,9 +953,9 @@ Fix your icon issue by introducing a default style for your container component:
     };
    ```
 
-5. Check the app in the Make it Native app. You should see the white icons in the correct size:
+5. Refresh the app in the Make it Native app. You should see the white icons in the correct size:
 
-INSERT PIC HERE
+INSERT TWO MOBILE ICON IN HEADER PICS HERE
 
 #### 3.3.5 Adding a Collapsible Property
 

@@ -467,31 +467,32 @@ INSERT mobile shot of caption text
 You will also want Mendix developers to be able to fill content in the group box like building blocks, snippets, and other widgets. To enable this, do the following:
 
 1. In **src/GroupBox.xml**, add a content property element above the header caption property.
-2. Change the name element from **Group Box** to *Group box*. 
+2. Change the name element from **Group Box** to *Group box* so its name fits correct conventions. 
 3. Remove the "needsEntityContext" attribute from the widget element, since this is no longer necessary. 
 3. Your file should now look like this:
 
    ```xml
-   <?xml version="1.0" encoding="utf-8" ?>
-   <widget id="mendix.groupbox.GroupBox" pluginWidget="true" offlineCapable="true" supportedPlatform="Native"
-       xmlns="http://www.mendix.com/widget/1.0/"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
-       <name>Group box</name>
-       <description>Widget to group building blocks, snippets or other widgets</description>
-       <icon/>
-       <properties>
-           <propertyGroup caption="General">
-               <property key="content" type="widgets" required="false">
-                   <caption>Content</caption>
-                   <description>Widgets to place inside</description>
-               </property>
-               <property key="headerCaption" type="string" required="false">
-                   <caption>Header caption</caption>
-                   <description/>
-               </property>
-           </propertyGroup>
-       </properties>
-   </widget>
+	<?xml version="1.0" encoding="utf-8" ?>
+	<widget id="com.mendix.widget.native.groupbox.GroupBox" pluginWidget="true" offlineCapable="true"
+		supportedPlatform="Native"
+		xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+	    <name>Group box</name>
+	    <description>Widget to group building blocks, snippets, or other widgets.</description>
+	    <icon/>
+	    <properties>
+		<propertyGroup caption="General">
+		    <property key="content" type="widgets" required="false">
+			   <caption>Content</caption>
+			   <description>Widgets to place inside</description>
+		       </property>
+		    <property key="headerCaption" type="string" required="false">
+			<caption>Header caption</caption>
+			<description/>
+		    </property>
+		</propertyGroup>
+	    </properties>
+	</widget>
    ```
 
 3. Save the file.

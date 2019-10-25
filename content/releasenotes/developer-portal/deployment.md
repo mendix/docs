@@ -9,7 +9,7 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 ## 2019
 
-### September 27th, 2019
+### September 27th, 2019 {#sept-27-19}
 
 #### Update of `*.mendixcloud.com` SSL/TLS certificate
 

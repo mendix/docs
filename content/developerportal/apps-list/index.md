@@ -63,8 +63,6 @@ The actions available depend on the app selected. The actions include
 * **Edit in Mendix Studio**
 * **Edit in Mendix Studio Pro** – for apps where Mendix Studio is not enabled
 * **Project Management** – opens the app [Buzz](/developerportal/collaborate/buzz)
-* **View Production** – opens the production version of the app (the cloud environment of a Free App)
-* **View Acceptance** – opens the acceptance version of the app
 * **App Info** – opens the [general settings](/developerportal/settings/general-settings) of the app
 * **Delete App** – allows you to delete your app, provided you are the only team member (you will be warned of the consequences and asked for confirmation before the app is deleted)
 

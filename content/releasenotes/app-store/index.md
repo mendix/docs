@@ -9,7 +9,7 @@ These release notes cover changes made to the [Mendix App Store](https://appstor
 
 ## 2019
 
-### October 23rd, 2019
+### October 23rd, 2019 {#oct-23-19}
 
 You can now create [user groups](/developerportal/app-store/app-store-overview#user-groups) for your company and assign your company’s App Store content to different groups. Management of user group content is restricted to only the members of the group. You can also add [guest](/developerportal/app-store/app-store-overview#guests) users to these groups and allow them to download selected private company content.
 

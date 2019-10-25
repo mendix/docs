@@ -1,13 +1,11 @@
 {{- $featuredPages := where .Site.Pages ".Params.frontpage_featured" true -}}
 {{- with $featuredPages -}}
-  <h2 class="frontpage__featured__title">Releases</h2>
-  <ul class="frontpage__featured__list">
-    {{- range . -}}
-      <li class="frontpage__featured__list__item">
-        {{- $newUrl := replace .URL "index.html" "" -}}
-        {{- $newUrl := replace $newUrl ".html" "" -}}
-        <a class="frontpage__featured__link" href="{{ $newUrl }}">{{ .Title }}</a>
-      </li>
-    {{- end -}}
+  <h2 class="frontpage__featured__title">New Releases</h2>
+  <ul>
+	<li><a href="https://docs.mendix.com/releasenotes/studio-pro/8.2#822">Studio Pro 8.2.2</a> – October 15th, 2019</li>
+	<li><a href="https://docs.mendix.com/releasenotes/studio/8.0-and-above#oct-15-19">Studio</a> – October 15th, 2019</li>
+	<li><a href="https://docs.mendix.com/releasenotes/developer-portal#sept-24-19">Developer Portal</a> – September 24th, 2019</li>
+	<li><a href="https://docs.mendix.com/releasenotes/developer-portal/deployment#sept-27-19">Deployment</a> – September 27th, 2019</li>
+	<li><a href="https://docs.mendix.com/releasenotes/app-store#oct-23-19">App Store</a> – October 23rd, 2019</li>
   </ul>
 {{- end -}}

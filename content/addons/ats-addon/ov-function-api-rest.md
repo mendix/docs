@@ -14,7 +14,7 @@ Before you start writing tests, install the [selenium-webdriver](https://www.npm
 
 ## 2 Creating a Driver & Getting the sessionId
 
-```javascript
+```JavaScript
 const webdriver = require('selenium-webdriver');
 
 async function setUp() {
@@ -40,7 +40,7 @@ test()
 
 ## 3 Executing an ATS Function
 
-```javascript
+```JavaScript
 const ATS_URL = `https://${PROJECT_ID}:${API_KEY}@ats100.mendixcloud.com/function`;
 
 async function test() {
@@ -76,7 +76,7 @@ async function test() {
 
 ## 4 Asserting
 
-```javascript
+```JavaScript
 /* Assert that a widget with name "textBox1" in the first row of the list with name 
     *  "listView1" has value "foo". Supports text box, area, dropdown, radio buttons, 
     *  reference selectors and many other widgets. All of control mode, read-only and 
@@ -107,7 +107,7 @@ await axios.post(ATS_URL, {
 
 ATS responds to each function call with the result `PASSED` or `FAILED`.  If the function returns a value, that is also included in the response.
 
-```javascript
+```JavaScript
 /* Gets the value of widget with name "textBox1" in the first row of the list
     *  with name "listView1". Supports text box, area, dropdown, radio buttons, 
     *  reference selectors and many other widgets. All of control mode, read-only 
@@ -137,7 +137,7 @@ console.log(response.returnValue);
 
 Web elements in Selenium are stored in the session as simple string IDs. So, sending and receiving web elements with ATS is just a matter of sending this string ID. In order to distinguish between sending a normal string and sending a string ID for a web element, the `isWebElement` flag is used.
 
-```javascript
+```JavaScript
 // find an element with selenium and click it with ATS
 let element = await driver.findElement(webdriver.By.css('confirm-button'));
 let response = await axios.post(ATS_URL, {
@@ -159,11 +159,11 @@ let response = await axios.post(ATS_URL, {
 });
 ```
 
-## 6 Conclusion
+## 7 Conclusion
 
 The Function API is not limited to Node.js. It is a generic web REST and JSON API that can be used from any programing language or tool.
 
-## 7 Read More
+## 8 Read More
 
 * [Function API](rg-two-function-api)
 * [Function API Reference](rg-two-function-api-reference)

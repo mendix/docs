@@ -12,8 +12,6 @@ The Function API allows you to execute a single ATS function (for example, `Logi
 
 This enables using ATS in combination with other testing tools and programming languages, as long as Selenium is used.
 
-This is high-level overview of the Function API. For more details, see [Function API with REST](ov-function-api-rest), [Function API with Java](ov-function-api-java), [Function API with Katalon](ov-function-api-katalon), [Function API](rg-two-function-api), and [Function API Reference](rg-two-function-api).
-
 ## 2 Usage Scenarios
 
 You should use the Function API in the following scenarios:
@@ -75,5 +73,8 @@ If you have feedback on the Function API, send an email to `info@mansystems.com`
 
 ## 6 Read More
 
+* [Function API with REST](ov-function-api-rest)
+* [Function API with Java](ov-function-api-java)
+* [Function API with Katalon](ov-function-api-katalon)
 * [Function API](rg-two-function-api)
 * [Function API Reference](rg-two-function-api-reference)

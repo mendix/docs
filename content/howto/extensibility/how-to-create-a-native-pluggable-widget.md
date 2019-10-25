@@ -535,8 +535,6 @@ You will also want Mendix developers to be able to fill content in the group box
 
 Verify that the new content property works:
 
-[todo: because we changed the big B into a small b, the old widget in my project was Bbroken. If we want the little b thing for some reason, I need to replace step 3 below probably with "delete your old widget, then drag and drop a Group box" widget.]
-
 1. Go back to Studio Pro.
 2. Press <kbd>F4</kbd> or select **Project > Synchronize Project Directory** to bring your application in sync with the changes to the **src/GroupBox.xml** file.
 3. Update the group box widget again. A content area will appear in the page editor:
@@ -556,7 +554,7 @@ Insert mobile hello world pic
 
 It would be nice to hide the content area of the group box completely when there is no content added to the group box in Mendix Studio Pro:
 
-1. Import **Children** in you display component:
+1. In *src/components/GroupBox.tsx* import the `Children` component so your total components look like this:
 
    ```tsx
    import {
@@ -729,7 +727,7 @@ First, define the properties and adjust the display component so that it can ren
 
    ```xml
    <?xml version="1.0" encoding="utf-8" ?>
-   <widget id="com.mendix.widget.native.groupbox.GroupBox" pluginWidget="true" offlineCapable="true" supportedPlatform="Native"
+   <widget id="mendix.groupbox.GroupBox" pluginWidget="true" offlineCapable="true" supportedPlatform="Native"
        xmlns="http://www.mendix.com/widget/1.0/"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
        <name>Group box</name>
@@ -762,7 +760,7 @@ First, define the properties and adjust the display component so that it can ren
 
    ```xml
    <?xml version="1.0" encoding="utf-8" ?>
-   <widget id="com.mendix.widget.native.groupbox.GroupBox" pluginWidget="true" offlineCapable="true" supportedPlatform="Native"
+   <widget id="mendix.groupbox.GroupBox" pluginWidget="true" offlineCapable="true" supportedPlatform="Native"
        xmlns="http://www.mendix.com/widget/1.0/"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
        <name>Group box</name>
@@ -957,7 +955,7 @@ First change the widget property configuration:
 
    ```xml
    <?xml version="1.0" encoding="utf-8" ?>
-   <widget id="com.mendix.widget.native.groupbox.GroupBox" pluginWidget="true" offlineCapable="true" supportedPlatform="Native"
+   <widget id="mendix.groupbox.GroupBox" pluginWidget="true" offlineCapable="true" supportedPlatform="Native"
        xmlns="http://www.mendix.com/widget/1.0/"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
        <name>Group box</name>
@@ -1003,7 +1001,7 @@ First change the widget property configuration:
 
    ```xml
    <?xml version="1.0" encoding="utf-8" ?>
-   <widget id="com.mendix.widget.native.groupbox.GroupBox" pluginWidget="true" offlineCapable="true" supportedPlatform="Native"
+   <widget id="mendix.groupbox.GroupBox" pluginWidget="true" offlineCapable="true" supportedPlatform="Native"
        xmlns="http://www.mendix.com/widget/1.0/"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
        <name>Group box</name>
@@ -1083,7 +1081,7 @@ First change the widget property configuration:
 
       ```xml
       <?xml version="1.0" encoding="utf-8" ?>
-      <widget id="com.mendix.widget.native.groupbox.GroupBox" pluginWidget="true" offlineCapable="true" supportedPlatform="Native"
+      <widget id="mendix.groupbox.GroupBox" pluginWidget="true" offlineCapable="true" supportedPlatform="Native"
       xmlns="http://www.mendix.com/widget/1.0/"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
       <name>Group box</name>

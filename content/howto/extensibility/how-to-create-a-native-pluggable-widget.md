@@ -88,7 +88,7 @@ To scaffold your project folder for the group box widget, follow these steps:
 	* Widget template: {**Empty widget (recommended for more experienced developers)**}
 	* Unit tests: {**No**}
 
-	![Pluggable Widget Generator input](attachments/how-to-create-a-native-pluggable-widget/pluggable-widget-generator-input.png)
+	![Pluggable Widget Generator input](attachments/build-native-widget/pluggable-widget-generator-input.png)
 
 5. Your widget will build. If your project has been scaffolded correctly. you will see the following message:
 
@@ -1072,7 +1072,7 @@ First change the widget property configuration:
 
 	a. Download this image: 
 
-   ![Group box icon](attachments/how-to-create-a-native-pluggable-widget/GroupBox.png)
+   ![Group box icon](attachments/build-native-widget/GroupBox.png)
 
    a. Generate a Base64 representation of the *.png* file:
 

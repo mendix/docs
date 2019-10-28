@@ -28,6 +28,9 @@ On iOS, the status bar should now by default contrast the default Atlas UI theme
 
 The Adnroid app was re-architectured to fix various performance bottlecks that have been identified over time.
 
+### Known Issues
+- When using the `Touchable` option in the inspector overlay the Mendix Native app crashes.
+
 
 ## Android 1.1.0 / iOS 1.1.0
 

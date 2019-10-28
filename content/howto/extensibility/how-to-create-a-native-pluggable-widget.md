@@ -705,32 +705,32 @@ Now make it possible to expand or collapse the group box:
 
 6. Let the **Touchable** component execute the **toggleCollapsed** method when it is tapped. Also, add a switch between a plus and minus character in the header depending on the state. The **renderHeader** method should look as follows:
 
-   ```tsx
-   private renderHeader = () => {
-       const view = (
-           <View style={this.styles.header}>
-               <Text style={this.styles.headerContent}>{this.props.headerCaption}</Text>
-               <Text style={this.styles.headerContent}>{this.state.collapsed ? "+" : "-"}</Text>
-           </View>
-       );
+	```tsx
+	private renderHeader = () => {
+		const view = (
+			<View style={this.styles.header}>
+				<Text style={this.styles.headerContent}>{this.props.headerCaption}</Text>
+				<Text style={this.styles.headerContent}>{this.state.collapsed ? "+" : "-"}</Text>
+			</View>
+		);
 
-       const Touchable: ComponentClass<any> = Platform.OS === "ios" ? TouchableOpacity : TouchableNativeFeedback;
+		const Touchable: ComponentClass<any> = Platform.OS === "ios" ? TouchableOpacity : TouchableNativeFeedback;
 
-       return <Touchable onPress={this.toggleCollapsed}>{view}</Touchable>;
-   };
-   ```
+		return <Touchable onPress={this.toggleCollapsed}>{view}</Touchable>;
+	};
+	```
 
 7. Change the **renderContent** method to only render the content when the group box is not collapsed:
 
-   ```tsx
-   private renderContent = (): ReactNode => {
-       if (this.state.collapsed || Children.count(this.props.children) === 0) {
-           return null;
-       }
+	```tsx
+	private renderContent = (): ReactNode => {
+		if (this.state.collapsed || Children.count(this.props.children) === 0) {
+			return null;
+		}
 
-       return <View style={this.styles.content}>{this.props.children}</View>;
-   };
-   ```
+		return <View style={this.styles.content}>{this.props.children}</View>;
+	};
+	```
 
 8. Verify in the Make It Native app that you can expand and collapse the group box by tapping your widget's header.
 
@@ -741,168 +741,168 @@ The next step is to allow a Mendix developer to use a custom icon in the clickab
 1. Navigate to **src/GroupBox.xml**.
 2. Add two icon properties to set an icon for indicating the actions expand and collapse:
 
-   ```xml
-   <?xml version="1.0" encoding="utf-8" ?>
-   <widget id="com.mendix.widget.native.groupbox.GroupBox" pluginWidget="true" offlineCapable="true" supportedPlatform="Native"
-       xmlns="http://www.mendix.com/widget/1.0/"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
-       <name>Group box</name>
-       <description>Widget to group building blocks, snippets or other widgets</description>
-       <icon/>
-       <properties>
-           <propertyGroup caption="General">
-               <property key="content" type="widgets" required="false">
-                   <caption>Content</caption>
-                   <description>Widgets to place inside</description>
-               </property>
-               <property key="headerCaption" type="string" required="false">
-                   <caption>Header caption</caption>
-                   <description/>
-               </property>
-               <property key="expandIcon" type="icon" required="false">
-                   <caption>Expand icon</caption>
-                   <description>Icon used to indicate that the group box can be expanded</description>
-               </property>
-               <property key="collapseIcon" type="icon" required="false">
-                   <caption>Collapse icon</caption>
-                   <description>Icon used to indicate that the group box can be collapsed</description>
-               </property>
-           </propertyGroup>
-       </properties>
-   </widget>
-   ```
+	```xml
+	<?xml version="1.0" encoding="utf-8" ?>
+	<widget id="com.mendix.widget.native.groupbox.GroupBox" pluginWidget="true" offlineCapable="true" supportedPlatform="Native"
+		xmlns="http://www.mendix.com/widget/1.0/"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+		<name>Group box</name>
+		<description>Widget to group building blocks, snippets or other widgets</description>
+		<icon/>
+		<properties>
+			<propertyGroup caption="General">
+				<property key="content" type="widgets" required="false">
+					<caption>Content</caption>
+					<description>Widgets to place inside</description>
+				</property>
+				<property key="headerCaption" type="string" required="false">
+					<caption>Header caption</caption>
+					<description/>
+				</property>
+				<property key="expandIcon" type="icon" required="false">
+					<caption>Expand icon</caption>
+					<description>Icon used to indicate that the group box can be expanded</description>
+				</property>
+				<property key="collapseIcon" type="icon" required="false">
+					<caption>Collapse icon</caption>
+					<description>Icon used to indicate that the group box can be collapsed</description>
+				</property>
+			</propertyGroup>
+		</properties>
+	</widget>
+	```
 
 3. Add property groups around the properties to create a more readable properties window in Studio Pro:
 
-   ```xml
-   <?xml version="1.0" encoding="utf-8" ?>
-   <widget id="com.mendix.widget.native.groupbox.GroupBox" pluginWidget="true" offlineCapable="true" supportedPlatform="Native"
-       xmlns="http://www.mendix.com/widget/1.0/"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
-       <name>Group box</name>
-       <description>Widget to group building blocks, snippets or other widgets</description>
-       <icon/>
-       <properties>
-           <propertyGroup caption="General">
-               <propertyGroup caption="General">
-                   <property key="content" type="widgets" required="false">
-                       <caption>Content</caption>
-                       <description>Widgets to place inside</description>
-                   </property>
-               </propertyGroup>
-               <propertyGroup caption="Header">
-                   <property key="headerCaption" type="string" required="false">
-                       <caption>Caption</caption>
-                       <description/>
-                   </property>
-                   <property key="expandIcon" type="icon" required="false">
-                       <caption>Expand icon</caption>
-                       <description>Icon used to indicate that the group box can be expanded</description>
-                   </property>
-                   <property key="collapseIcon" type="icon" required="false">
-                       <caption>Collapse icon</caption>
-                       <description>Icon used to indicate that the group box can be collapsed</description>
-                   </property>
-               </propertyGroup>
-           </propertyGroup>
-       </properties>
-   </widget>
-   ```
+	```xml
+	<?xml version="1.0" encoding="utf-8" ?>
+	<widget id="com.mendix.widget.native.groupbox.GroupBox" pluginWidget="true" offlineCapable="true" supportedPlatform="Native"
+		xmlns="http://www.mendix.com/widget/1.0/"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+		<name>Group box</name>
+		<description>Widget to group building blocks, snippets or other widgets</description>
+		<icon/>
+		<properties>
+			<propertyGroup caption="General">
+				<propertyGroup caption="General">
+					<property key="content" type="widgets" required="false">
+						<caption>Content</caption>
+						<description>Widgets to place inside</description>
+					</property>
+				</propertyGroup>
+				<propertyGroup caption="Header">
+					<property key="headerCaption" type="string" required="false">
+						<caption>Caption</caption>
+						<description/>
+					</property>
+					<property key="expandIcon" type="icon" required="false">
+						<caption>Expand icon</caption>
+						<description>Icon used to indicate that the group box can be expanded</description>
+					</property>
+					<property key="collapseIcon" type="icon" required="false">
+						<caption>Collapse icon</caption>
+						<description>Icon used to indicate that the group box can be collapsed</description>
+					</property>
+				</propertyGroup>
+			</propertyGroup>
+		</properties>
+	</widget>
+	```
 
 4. Save the *.xml* file.
 5. Navigate to the display component **src/components/GroupBox.tsx**.
 6. Add two new props for an expand and collapse icon by changing the **GroupBoxProps** interface:
 
-   ```tsx
-   export interface GroupBoxProps {
-     collapseIcon?: ReactNode;
-     expandIcon?: ReactNode;
-     headerCaption?: string;
-     style: CustomStyle[];
-   }
-   ```
+	```tsx
+	export interface GroupBoxProps {
+		collapseIcon?: ReactNode;
+		expandIcon?: ReactNode;
+		headerCaption?: string;
+		style: CustomStyle[];
+	}
+	```
 
 7. Create a property **renderIcon** and assign an arrow function to it that uses the **expandIcon** and **collapseIcon** props:
 
-   ```tsx
-   private renderIcon = (): ReactNode => {
-        const { collapseIcon, expandIcon } = this.props;
+	```tsx
+	private renderIcon = (): ReactNode => {
+		const { collapseIcon, expandIcon } = this.props;
 
-        if (this.state.collapsed) {
-            return expandIcon ? expandIcon : <Text style={this.styles.headerContent}>+</Text>;
-        }
+	if (this.state.collapsed) {
+		return expandIcon ? expandIcon : <Text style={this.styles.headerContent}>+</Text>;
+	}
 
-        return collapseIcon ? collapseIcon : <Text style={this.styles.headerContent}>-</Text>;
-    };
-   ```
+	return collapseIcon ? collapseIcon : <Text style={this.styles.headerContent}>-</Text>;
+	};
+	```
 
 8. Change the method **renderHeader** so that it makes use of **renderIcon**:
 
-   ```tsx
-   private renderHeader = () => {
-       const view = (
-           <View style={this.styles.header}>
-               <Text style={this.styles.headerContent}>{this.props.headerCaption}</Text>
-               {this.renderIcon()}
-           </View>
-       );
+	```tsx
+	private renderHeader = () => {
+		const view = (
+			<View style={this.styles.header}>
+				<Text style={this.styles.headerContent}>			{this.props.headerCaption}</Text>
+				{this.renderIcon()}
+			</View>
+		);
 
-       const Touchable: ComponentClass<any> = Platform.OS === "ios" ? TouchableOpacity : TouchableNativeFeedback;
+		const Touchable: ComponentClass<any> = Platform.OS === "ios" ? TouchableOpacity : TouchableNativeFeedback;
 
-       return <Touchable onPress={this.toggleCollapsed}>{view}</Touchable>;
-   };
-   ```
+		return <Touchable onPress={this.toggleCollapsed}>{view}</Touchable>;
+	};
+	```
 
 Next you have to pass the icons configured by the Mendix developer to your display component. If an icon is not explicitly configured, you will pass a default glyph (glyphs are provided by the Mendix Client). Glue everything together in the container component by doing the following:
 
 1. Navigate to the container component **src/GroupBox.tsx**.
 2. Create two constants outside the class which hold the glyph references:
 
-   ```tsx
-   const defaultCollapseIconGlyph = "glyphicon-minus";
-   const defaultExpandIconGlyph = "glyphicon-plus";
-   ```
+	```tsx
+	const defaultCollapseIconGlyph = "glyphicon-minus";
+	const defaultExpandIconGlyph = "glyphicon-plus";
+	```
 
 3. Add the following imports:
 
-   ```tsx
-   import { DynamicValue, NativeIcon, ValueStatus } from "mendix";
-   import { Icon } from "mendix/components/native/Icon";
-   import {
-     GroupBox as WrappedGroupBox,
-     GroupBoxProps as WrappedGroupBoxProps
-   } from "./components/GroupBox";
-   ```
+	```tsx
+	import { DynamicValue, NativeIcon, ValueStatus } from "mendix";
+	import { Icon } from "mendix/components/native/Icon";
+	import {
+		GroupBox as WrappedGroupBox,
+		GroupBoxProps as WrappedGroupBoxProps
+	} from "./components/GroupBox";
+	```
 
 4. Add a property **renderIcon** to the **GroupBox** class and assign the following arrow function to it:
 
-   ```tsx
-   private renderIcon = (glyph: string, toBeRenderedIcon?: DynamicValue<NativeIcon>) => {
-       const nativeIcon: NativeIcon =
-           toBeRenderedIcon && toBeRenderedIcon.status === ValueStatus.Available
-               ? toBeRenderedIcon.value
-               : { type: "glyph", iconClass: glyph };
+	```tsx
+	private renderIcon = (toBeRenderedIcon: DynamicValue<NativeIcon> | undefined, glyph: string) => {
+		const nativeIcon: NativeIcon =
+			toBeRenderedIcon && toBeRenderedIcon.status === ValueStatus.Available
+				? toBeRenderedIcon.value
+				: { type: "glyph", iconClass: glyph };
 
-       return <Icon icon={nativeIcon} />;
-   };
+		return <Icon icon={nativeIcon} />;
+	};
    ```
 
 5. Adjust the **render** method so that it makes use of **renderIcon**:
 
-   ```tsx
-   render(): ReactNode {
-       const { collapseIcon, expandIcon, content, headerCaption, style } = this.props;
+	```tsx
+	render(): ReactNode {
+		const { collapseIcon, expandIcon, content, headerCaption, style } = this.props;
 
-       const props: WrappedGroupBoxProps = {
-           headerCaption,
-           collapseIcon: this.renderIcon(defaultCollapseIconGlyph, collapseIcon),
-           expandIcon: this.renderIcon(defaultExpandIconGlyph, expandIcon),
-           style
-       };
+		const props: WrappedGroupBoxProps = {
+			headerCaption,
+			collapseIcon: this.renderIcon(collapseIcon, 			defaultCollapseIconGlyph),
+			expandIcon: this.renderIcon(expandIcon, defaultExpandIconGlyph),
+			style
+		};
 
-       return <WrappedGroupBox {...props}>{content}</WrappedGroupBox>;
-   }
-   ```
+		return <WrappedGroupBox {...props}>{content}</WrappedGroupBox>;
+	}
+	```
 
 6. Navigate to Studio Pro.
 7. Press <kbd>F4</kbd> or select **Project > Synchronize Project Directory** to bring your application in sync with the changes you made to the **src/GroupBox.xml** file.
@@ -911,7 +911,7 @@ Next you have to pass the icons configured by the Mendix developer to your displ
 10. In the **Icon** described as **Icon used to indicate that the group box can be expanded** click **Edit**.
 11. Click the € sign and click **Select**:
 
-euro-icon.png
+	![euro](euro-icon.png)
 
 10. Click **OK**, then run the app locally.
 11. Inspect your changes. Notice that you cannot see any icon in group box's header. This is because your background color and text color are both black. Remember that in the **defaultStyle** constant of your display component you defined that text of React Native components that get the **headerContent** style applied to it should be white. However, you are not explicitly applying this style to our **Icon** component that you pass from our container component to the display component. You could argue to move the creation of the **Icon** component inside your display component, but this will go against the strict seperation of concerns related to the container and display component, since the **Icon** component is Mendix specific. Therefore, it should be part of the container component.
@@ -920,46 +920,46 @@ Fix your icon issue by introducing a default style for your container component:
 
 1. In **src/GroupBox.tsx** add the following **defaultStyle** constant outside the container component class:
 
-   ```tsx
-   const defaultStyle: CustomStyle = {
-     container: {},
-     header: {},
-     headerContent: {
-       color: "#FFF",
-       fontSize: 16
-     },
-     content: {}
-   };
-   ```
+	```tsx
+	const defaultStyle: CustomStyle = {
+		container: {},
+		header: {},
+		headerContent: {
+			color: "#FFF",
+			fontSize: 16
+		},
+		content: {}
+	};
+	```
 
 2. Import the `flattenStyles` function:
 
-   ```tsx
-   import { Style, flattenStyles } from "./utils/common";
-   ```
+	```tsx
+	import { Style, flattenStyles } from "./utils/common";
+	```
 
 3. Add the following private attribute to the container component class:
 
-   ```tsx
-   private readonly styles = flattenStyles(defaultStyle, this.props.style);
-   ```
+	```tsx
+	private readonly styles = flattenStyles(defaultStyle, this.props.style);
+	```
 
    The **flattenStyles** function will take the styling of the **defaultStyle** constant as a starting point and will override this with properties supplied in the **style** prop.
 
 4. Adjust the **renderIcon** method so that it returns an **Icon** component with a color and size defined:
 
-   ```tsx
-   private renderIcon = (glyph: string, toBeRenderedIcon?: DynamicValue<NativeIcon>) => {
-        const nativeIcon: NativeIcon =
-            toBeRenderedIcon && toBeRenderedIcon.status === ValueStatus.Available
-                ? toBeRenderedIcon.value
-                : { type: "glyph", iconClass: glyph };
+	```tsx
+	private renderIcon = (toBeRenderedIcon: DynamicValue<NativeIcon> | undefined, glyph: string) => {
+		const nativeIcon: NativeIcon =
+			toBeRenderedIcon && toBeRenderedIcon.status === ValueStatus.Available
+				? toBeRenderedIcon.value
+				: { type: "glyph", iconClass: glyph };
 
-        return (
-            <Icon color={this.styles.headerContent.color} icon={nativeIcon} size={this.styles.headerContent.fontSize} />
-        );
-    };
-   ```
+		return (
+			<Icon color={this.styles.headerContent.color} icon={nativeIcon} size={this.styles.headerContent.fontSize} />
+		);
+	};
+	```
 
 5. Refresh the app in the Make It Native app. You should see the white icons in the correct size:
 
@@ -974,181 +974,182 @@ First change the widget property configuration:
 1. Navigate to **src/GroupBox.xml**.
 2. Add a **collapsible** property underneath the **content** property:
 
-   ```xml
-   <?xml version="1.0" encoding="utf-8" ?>
-   <widget id="com.mendix.widget.native.groupbox.GroupBox" pluginWidget="true" offlineCapable="true" supportedPlatform="Native"
-       xmlns="http://www.mendix.com/widget/1.0/"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
-       <name>Group box</name>
-       <description>Widget to group building blocks, snippets or other widgets</description>
-       <icon/>
-       <properties>
-           <propertyGroup caption="General">
-               <propertyGroup caption="General">
-                   <property key="content" type="widgets" required="false">
-                       <caption>Content</caption>
-                       <description>Widgets to place inside</description>
-                   </property>
-                   <property key="collapsible" type="enumeration" defaultValue="no">
-                       <caption>Collapsible</caption>
-                       <description></description>
-                       <enumerationValues>
-                           <enumerationValue key="no">No</enumerationValue>
-                           <enumerationValue key="yesStartExpanded">Yes (start expanded)</enumerationValue>
-                           <enumerationValue key="yesStartCollapsed">Yes (start collapsed)</enumerationValue>
-                       </enumerationValues>
-                   </property>
-               </propertyGroup>
-               <propertyGroup caption="Header">
-                   <property key="headerCaption" type="string" required="false">
-                       <caption>Caption</caption>
-                       <description/>
-                   </property>
-                   <property key="expandIcon" type="icon" required="false">
-                       <caption>Expand icon</caption>
-                       <description>Icon used to indicate that the group box can be expanded</description>
-                   </property>
-                   <property key="collapseIcon" type="icon" required="false">
-                       <caption>Collapse icon</caption>
-                       <description>Icon used to indicate that the group box can be collapsed</description>
-                   </property>
-               </propertyGroup>
-           </propertyGroup>
-       </properties>
-   </widget>
-   ```
-
+	```xml
+	<?xml version="1.0" encoding="utf-8" ?>
+	<widget id="com.mendix.widget.native.groupbox.GroupBox" pluginWidget="true" offlineCapable="true" supportedPlatform="Native"
+		xmlns="http://www.mendix.com/widget/1.0/"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+		<name>Group box</name>
+		<description>Widget to group building blocks, snippets or other widgets</description>
+		<icon/>
+		<properties>
+			<propertyGroup caption="General">
+				<propertyGroup caption="General">
+					<property key="content" type="widgets" required="false">
+						<caption>Content</caption>
+						<description>Widgets to place inside</description>
+					</property>
+					<property key="collapsible" type="enumeration" defaultValue="no">
+						<caption>Collapsible</caption>
+						<description></description>
+						<enumerationValues>
+							<enumerationValue key="no">No</enumerationValue>
+							<enumerationValue key="yesStartExpanded">Yes (start expanded)</enumerationValue>
+							<enumerationValue key="yesStartCollapsed">Yes (start collapsed)</enumerationValue>
+						</enumerationValues>
+					</property>
+				</propertyGroup>
+				<propertyGroup caption="Header">
+					<property key="headerCaption" type="string" required="false">
+						<caption>Caption</caption>
+						<description/>
+					</property>
+					<property key="expandIcon" type="icon" required="false">
+						<caption>Expand icon</caption>
+						<description>Icon used to indicate that the group box can be expanded</description>
+					</property>
+					<property key="collapseIcon" type="icon" required="false">
+						<caption>Collapse icon</caption>
+						<description>Icon used to indicate that the group box can be collapsed</description>
+					</property>
+				</propertyGroup>
+			</propertyGroup>
+		</properties>
+	</widget>
+	```
+	
 3. Add a property group **Common** below the **Header** property group and include the system properties **Name** and **Visibility** to improve the properties window even more:
 
-   ```xml
-   <?xml version="1.0" encoding="utf-8" ?>
-   <widget id="com.mendix.widget.native.groupbox.GroupBox" pluginWidget="true" offlineCapable="true" supportedPlatform="Native"
-       xmlns="http://www.mendix.com/widget/1.0/"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
-       <name>Group box</name>
-       <description>Widget to group building blocks, snippets or other widgets</description>
-       <icon/>
-       <properties>
-           <propertyGroup caption="General">
-               <propertyGroup caption="General">
-                   <property key="content" type="widgets" required="false">
-                       <caption>Content</caption>
-                       <description>Widgets to place inside</description>
-                   </property>
-                   <property key="collapsible" type="enumeration" defaultValue="no">
-                       <caption>Collapsible</caption>
-                       <description></description>
-                       <enumerationValues>
-                           <enumerationValue key="no">No</enumerationValue>
-                           <enumerationValue key="yesStartExpanded">Yes (start expanded)</enumerationValue>
-                           <enumerationValue key="yesStartCollapsed">Yes (start collapsed)</enumerationValue>
-                       </enumerationValues>
-                   </property>
-               </propertyGroup>
-               <propertyGroup caption="Header">
-                   <property key="headerCaption" type="string" required="false">
-                       <caption>Caption</caption>
-                       <description/>
-                   </property>
-                   <property key="expandIcon" type="icon" required="false">
-                       <caption>Expand icon</caption>
-                       <description>Icon used to indicate that the group box can be expanded</description>
-                   </property>
-                   <property key="collapseIcon" type="icon" required="false">
-                       <caption>Collapse icon</caption>
-                       <description>Icon used to indicate that the group box can be collapsed</description>
-                   </property>
-               </propertyGroup>
-               <propertyGroup caption="Common">
-                   <systemProperty key="Name" />
-                   <systemProperty key="Visibility" />
-               </propertyGroup>
-           </propertyGroup>
-       </properties>
-   </widget>
-   ```
-
+	```xml
+	<?xml version="1.0" encoding="utf-8" ?>
+	<widget id="com.mendix.widget.native.groupbox.GroupBox" pluginWidget="true" offlineCapable="true" supportedPlatform="Native"
+	xmlns="http://www.mendix.com/widget/1.0/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+	<name>Group box</name>
+	<description>Widget to group building blocks, snippets or other 	widgets</description>
+	<icon/>
+	<properties>
+		<propertyGroup caption="General">
+			<propertyGroup caption="General">
+				<property key="content" type="widgets" required="false">
+					<caption>Content</caption>
+					<description>Widgets to place inside</description>
+				</property>
+				<property key="collapsible" type="enumeration" defaultValue="no">
+					<caption>Collapsible</caption>
+					<description></description>
+					<enumerationValues>
+						<enumerationValue key="no">No</enumerationValue>
+						<enumerationValue key="yesStartExpanded">Yes (start expanded)</enumerationValue>
+						<enumerationValue key="yesStartCollapsed">Yes (start collapsed)</enumerationValue>
+					</enumerationValues>
+				</property>
+			</propertyGroup>
+			<propertyGroup caption="Header">
+				<property key="headerCaption" type="string" required="false">
+					<caption>Caption</caption>
+					<description/>
+				</property>
+				<property key="expandIcon" type="icon" required="false">
+					<caption>Expand icon</caption>
+					<description>Icon used to indicate that the group box can be expanded</description>
+				</property>
+				<property key="collapseIcon" type="icon" required="false">
+					<caption>Collapse icon</caption>
+					<description>Icon used to indicate that the group box can be collapsed</description>
+				</property>
+				</propertyGroup>
+				<propertyGroup caption="Common">
+					<systemProperty key="Name" />
+					<systemProperty key="Visibility" />
+				</propertyGroup>
+			</propertyGroup>
+		</properties>
+	</widget>
+	```
+	
 4. Add this image as a widget icon by following the substeps below:
 
 	a. Download this image: 
 
    ![Group box icon](attachments/build-native-widget/GroupBox.png)
 
-   a. Generate a Base64 representation of the *.png* file:
+	b. Generate a Base64 representation of the *.png* file:
 
-      **— For Windows**:
+		**— For Windows**:
 
-        i. Open command prompt.
-        ii. Change your current working directory to the folder where the *GroupBox.png* is stored.
-        iii. Execute the following command to generate the Base64 representation:
+ 		i. Open command prompt.
+		ii. Change your current working directory to the folder where the *GroupBox.png* is stored.
+		iii. Execute the following command to generate the Base64 representation:
+	
+			```cmd
+			certutil -encode GroupBox.png data.b64
+			```
 
-           ```cmd
-           certutil -encode GroupBox.png data.b64
-           ```
+		Upon success, you will see a **data.b64** file in the same location as your original image.
 
-           Upon success, you will see a **data.b64** file in the same location as your original image.
+		**— For Unix**:
 
-      **— For Unix**:
+		i. Open a terminal.
+		ii. Change the current working directory to the folder where the "GroupBox.png" is stored.
+		iii. Execute the following command to generate the Base64 representation:
 
-        i. Open a terminal.
-        ii. Change the current working directory to the folder where the "GroupBox.png" is stored.
-        iii. Execute the following command to generate the Base64 representation:
+			```shell
+			base64 -i GroupBox.png -o data.b64
+			```
 
-           ```shell
-           base64 -i GroupBox.png -o data.b64
-           ```
+           	Upon success, you will see a **data.b64** file in the same location as your original image.
 
-           Upon success, you will see a **data.b64** file in the same location as your original image.
+	c. Add **data.b64** to the icon element in the *.xml* file. For ease, the contents of the file you made is included below. You can simply copy and paste this snippet with its binary Base64 representation included into your *xml* file:
 
-   b. Add **data.b64** to the icon element in the *.xml* file. For ease, the contents of the file you made is included below. You can simply copy and paste this snippet with its binary Base64 representation included into your *xml* file:
-
-      ```xml
-      <?xml version="1.0" encoding="utf-8" ?>
-      <widget id="com.mendix.widget.native.groupbox.GroupBox" pluginWidget="true" offlineCapable="true" supportedPlatform="Native"
-      xmlns="http://www.mendix.com/widget/1.0/"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
-      <name>Group box</name>
-      <description>Widget to group building blocks, snippets or other widgets</description>
-      <icon>iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAAHdbkFIAAAAAXNSR0IArs4c6QAA ArVJREFUeAHtWk12gjAQBl4X9Q72PsVFnxufN+ihegOfG18XtfeRO9gVNBMZDPlx gIAQGDcxmczMN99MQohGkc9nt9sVCWVgChNiAAloKbBuOaU9hTBJDPGjKI7HYyyJ 2u/3aZ7nP24y7BIw8AIiUIZO+v2XFnlhGPrdrmqOYC4i80oVGJLY0JodqH0UdUgW 7er30fEN3LGM9c0njZlI45sEjilpEwXqyEpExffT1Vj7AmJ23q6kp1Lp7lko1gxg yaJBva0qTxFUBhCSImv+tYsy6oxfiYwgirw56KeQmpfcBGfetnUBDEv7WRhxYVc5 QMcowH7frR6oAQAdpqfrRWxua+xTrb6VCUcXoVPpuwJzAsBNlHLskguHt+3eNaEc NwDoFBH63mIDgIsqb0+lAT1A753EFxgDYAaYAXUfyMSSWuvr1HeZsf7kGVAPJLXH 55DIkyTZHA6HM/hQl2H17B7SOdhWrwXUVSD9Lu5paDCA9Lc5ksVJvDl/vMqcor56 JFNzjnJs1RrAMdm2OQ9GefFVU751qpoSObfJ5SwnA/oh0+Lg4VDTWnIy8NB6j0KD gWc/C6bHQNPcdc2CzvDoDDAAZoAZYAaYAWaAGVjsiSjreqBhPWZgbgxU9yMYmPpO i2Mzams/HUNctgdB9U49o8AxFCM24zmAM7Ed+j0R/QzV6u+huh9bBehzZt0nK0CP vs29ma5L9dW/e7jmEnuUscZddnC8fQUk8ScARQN9tdKmsE3ZE5eNMMfmPytllIma vHUFlDehjX4PrnnqqVPervfmv30F9BTIVMyQFUDtolMJpCsOrgCKOT4HUAwFLl/8 EmACAq9gb/hcAd4UBm6AKyDwBHrD5wrwpjBwA1wBgSfQGz5XgDeFgRtYfAXwjZBe wfAXTzFmu3XVp4bWh1tjiI0/zIDCwD+0qr6OmQMSvQAAAABJRU5ErkJggg==</icon>
-      <properties>
-          <propertyGroup caption="General">
-              <propertyGroup caption="General">
-                  <property key="content" type="widgets" required="false">
-                      <caption>Content</caption>
-                      <description>Widgets to place inside</description>
-                  </property>
-                  <property key="collapsible" type="enumeration" defaultValue="no">
-                      <caption>Collapsible</caption>
-                      <description></description>
-                      <enumerationValues>
-                          <enumerationValue key="no">No</enumerationValue>
-                          <enumerationValue key="yesStartExpanded">Yes (start expanded)</enumerationValue>
-                          <enumerationValue key="yesStartCollapsed">Yes (start collapsed)</enumerationValue>
-                      </enumerationValues>
-                  </property>
-              </propertyGroup>
-              <propertyGroup caption="Header">
-                  <property key="headerCaption" type="string" required="false">
-                      <caption>Caption</caption>
-                      <description/>
-                  </property>
-                  <property key="expandIcon" type="icon" required="false">
-                      <caption>Expand icon</caption>
-                      <description>Icon used to indicate that the group box can be expanded</description>
-                  </property>
-                  <property key="collapseIcon" type="icon" required="false">
-                      <caption>Collapse icon</caption>
-                      <description>Icon used to indicate that the group box can be collapsed</description>
-                  </property>
-              </propertyGroup>
-              <propertyGroup caption="Common">
-                  <systemProperty key="Name" />
-                  <systemProperty key="Visibility" />
-              </propertyGroup>
-          </propertyGroup>
-      </properties>
-      </widget>
-      ```
+ 	```xml
+	<?xml version="1.0" encoding="utf-8" ?>
+	<widget id="com.mendix.widget.native.groupbox.GroupBox" pluginWidget="true" offlineCapable="true" supportedPlatform="Native"
+	xmlns="http://www.mendix.com/widget/1.0/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+	<name>Group box</name>
+	<description>Widget to group building blocks, snippets or other widgets</description>
+	
+	<icon>iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAAHdbkFIAAAAAXNSR0IArs4c6QAA ArVJREFUeAHtWk12gjAQBl4X9Q72PsVFnxufN+ihegOfG18XtfeRO9gVNBMZDPlx gIAQGDcxmczMN99MQohGkc9nt9sVCWVgChNiAAloKbBuOaU9hTBJDPGjKI7HYyyJ 2u/3aZ7nP24y7BIw8AIiUIZO+v2XFnlhGPrdrmqOYC4i80oVGJLY0JodqH0UdUgW 7er30fEN3LGM9c0njZlI45sEjilpEwXqyEpExffT1Vj7AmJ23q6kp1Lp7lko1gxg yaJBva0qTxFUBhCSImv+tYsy6oxfiYwgirw56KeQmpfcBGfetnUBDEv7WRhxYVc5 QMcowH7frR6oAQAdpqfrRWxua+xTrb6VCUcXoVPpuwJzAsBNlHLskguHt+3eNaEc NwDoFBH63mIDgIsqb0+lAT1A753EFxgDYAaYAXUfyMSSWuvr1HeZsf7kGVAPJLXH 55DIkyTZHA6HM/hQl2H17B7SOdhWrwXUVSD9Lu5paDCA9Lc5ksVJvDl/vMqcor56 JFNzjnJs1RrAMdm2OQ9GefFVU751qpoSObfJ5SwnA/oh0+Lg4VDTWnIy8NB6j0KD gWc/C6bHQNPcdc2CzvDoDDAAZoAZYAaYAWaAGVjsiSjreqBhPWZgbgxU9yMYmPpO i2Mzams/HUNctgdB9U49o8AxFCM24zmAM7Ed+j0R/QzV6u+huh9bBehzZt0nK0CP vs29ma5L9dW/e7jmEnuUscZddnC8fQUk8ScARQN9tdKmsE3ZE5eNMMfmPytllIma vHUFlDehjX4PrnnqqVPervfmv30F9BTIVMyQFUDtolMJpCsOrgCKOT4HUAwFLl/8 EmACAq9gb/hcAd4UBm6AKyDwBHrD5wrwpjBwA1wBgSfQGz5XgDeFgRtYfAXwjZBe wfAXTzFmu3XVp4bWh1tjiI0/zIDCwD+0qr6OmQMSvQAAAABJRU5ErkJggg==</icon>
+	<properties>
+		<propertyGroup caption="General">
+			<propertyGroup caption="General">
+				<property key="content" type="widgets" required="false">
+					<caption>Content</caption>
+					<description>Widgets to place inside</description>
+				</property>
+				<property key="collapsible" type="enumeration" defaultValue="no">
+					<caption>Collapsible</caption>
+					<description></description>
+					<enumerationValues>
+						<enumerationValue key="no">No</enumerationValue>
+						<enumerationValue key="yesStartExpanded">Yes (start expanded)</enumerationValue>
+						<enumerationValue key="yesStartCollapsed">Yes (start collapsed)</enumerationValue>
+					</enumerationValues>
+				</property>
+			</propertyGroup>
+			<propertyGroup caption="Header">
+				<property key="headerCaption" type="string" required="false">
+					<caption>Caption</caption>
+					<description/>
+				</property>
+				<property key="expandIcon" type="icon" required="false">
+					<caption>Expand icon</caption>
+					<description>Icon used to indicate that the group box can be expanded</description>
+				</property>
+				<property key="collapseIcon" type="icon" required="false">
+					<caption>Collapse icon</caption>
+					<description>Icon used to indicate that the group box can be collapsed</description>
+				</property>
+				</propertyGroup>
+				<propertyGroup caption="Common">
+					<systemProperty key="Name" />
+					<systemProperty key="Visibility" />
+				</propertyGroup>
+			</propertyGroup>
+		</properties>
+	</widget>
+	```
 
 5. Save the *.xml* file.
 
@@ -1157,110 +1158,110 @@ Now support this section's two features with your display component:
 1. Navigate to the display component **src/components/GroupBox.tsx**.
 2. Add a prop for collapsibility and a prop for the initial state of being collapsed or not to the **GroupBoxProps** interface:
 
-   ```tsx
-   export interface GroupBoxProps {
-     startCollapsed?: boolean;
-     collapsible: boolean;
-     collapseIcon?: ReactNode;
-     expandIcon?: ReactNode;
-     headerCaption?: string;
-     style: CustomStyle[];
-   }
-   ```
+	```tsx
+	export interface GroupBoxProps {
+		startCollapsed?: boolean;
+		collapsible: boolean;
+		collapseIcon?: ReactNode;
+		expandIcon?: ReactNode;
+		headerCaption?: string;
+		style: CustomStyle[];
+	}
+	```
 
 3. Change the initilization of the state so that the collapsed state starts with the value passed through the **startCollapsed** prop:
 
-   ```tsx
-   readonly state: GroupBoxState = {
-        collapsed: !!this.props.startCollapsed
-    };
-   ```
+	```tsx
+	readonly state: GroupBoxState = {
+		collapsed: !!this.props.startCollapsed
+	};
+	```
 
 	If you do not want the group box to be collapsible at all, you must remove the **Touchble** component that wraps the header to prevent toggling the collapsed state. Moreover, remove the icons inside the header indicating the group box is collapsible. Enact these changes by following these steps:
 
 1. Change the **renderHeader** method so that it does not render the **Touchable** component around the header **View** component:
 
-   ```tsx
-   private renderHeader = () => {
-       const { collapsible, headerCaption } = this.props;
+	```tsx
+	private renderHeader = () => {
+		const { collapsible, headerCaption } = this.props;
 
-       const view = (
-           <View style={this.styles.header}>
-               <Text style={this.styles.headerContent}>{headerCaption}</Text>
-               {this.renderIcon()}
-           </View>
-       );
+		const view = (
+			<View style={this.styles.header}>
+				<Text style={this.styles.headerContent}>{headerCaption}</Text>
+				{this.renderIcon()}
+			</View>
+		);
 
-       if (collapsible) {
-           const Touchable: ComponentClass<any> = Platform.OS === "ios" ? TouchableOpacity : TouchableNativeFeedback;
-           return <Touchable onPress={this.toggleCollapsed}>{view}</Touchable>;
-       }
+		if (collapsible) {
+			const Touchable: ComponentClass<any> = Platform.OS === "ios" ? TouchableOpacity : TouchableNativeFeedback;
+			return <Touchable onPress={this.toggleCollapsed}>{view}</Touchable>;
+		}
 
-       return view;
-   };
-   ```
+		return view;
+	};
+	```
 
 2. Prevent the header **View** component from being rendered at all when the group box is not collapsible and there is no header caption. Otherwise, the header would be visible as an empty block:
 
-   ```tsx
-   private renderHeader = () => {
-       const { collapsible, headerCaption } = this.props;
+	```tsx
+	private renderHeader = () => {
+		const { collapsible, headerCaption } = this.props;
 
-       const view = (
-           <View style={this.styles.header}>
-               <Text style={this.styles.headerContent}>{headerCaption}</Text>
-               {this.renderIcon()}
-           </View>
-       );
+		const view = (
+			<View style={this.styles.header}>
+				<Text style={this.styles.headerContent}>{headerCaption}</Text>
+				{this.renderIcon()}
+			</View>
+		);
 
-       if (collapsible) {
-           const Touchable: ComponentClass<any> = Platform.OS === "ios" ? TouchableOpacity : TouchableNativeFeedback;
-           return <Touchable onPress={this.toggleCollapsed}>{view}</Touchable>;
-       } else if (headerCaption) {
-           return view;
-       }
+		if (collapsible) {
+			const Touchable: ComponentClass<any> = Platform.OS === "ios" ? TouchableOpacity : TouchableNativeFeedback;
+			return <Touchable onPress={this.toggleCollapsed}>{view}</Touchable>;
+		} else if (headerCaption) {
+			return view;
+		}
 
-       return null;
-   };
-   ```
+		return null;
+	};
+	```
 
 3. Change the **renderIcon** method to prevent an icon from being rendered when the group box is not collapsible by adding a guard that returns null:
 
-   ```tsx
-   private renderIcon = (): ReactNode => {
-       const { collapsible, collapseIcon, expandIcon } = this.props;
+	```tsx
+	private renderIcon = (): ReactNode => {
+		const { collapsible, collapseIcon, expandIcon } = this.props;
 
-       if (!collapsible) {
-           return null;
-       }
+		if (!collapsible) {
+			return null;
+		}
 
-       if (this.state.collapsed) {
-           return expandIcon ? expandIcon : <Text style={this.styles.headerContent}>+</Text>;
-       }
+		if (this.state.collapsed) {
+			return expandIcon ? expandIcon : <Text style={this.styles.headerContent}>+</Text>;
+		}
 
-       return collapseIcon ? collapseIcon : <Text style={this.styles.headerContent}>-</Text>;
-   };
-   ```
+		return collapseIcon ? collapseIcon : <Text style={this.styles.headerContent}>-</Text>;
+	};
+	```
 
 4. Change the **render** method to so it can function when there is neither header nor content to be rendered by returning null:
 
-   ```tsx
-   render(): ReactNode {
-       const renderedHeader = this.renderHeader();
-       const renderedContent = this.renderContent();
+	```tsx
+	render(): ReactNode {
+		const renderedHeader = this.renderHeader();
+		const renderedContent = this.renderContent();
 
-       if (!renderedHeader && !renderedContent) {
-           return null;
-       }
+		if (!renderedHeader && !renderedContent) {
+			return null;
+		}
 
-       return (
-           <View style={this.styles.container}>
-               {renderedHeader}
-               {renderedContent}
-           </View>
-       );
-   }
-   ```
+		return (
+			<View style={this.styles.container}>
+				{renderedHeader}
+				{renderedContent}
+			</View>
+		);
+	}
+	```
 
 The last thing to do is change the container component so that the properties get passed to the display component:
 
@@ -1268,37 +1269,37 @@ The last thing to do is change the container component so that the properties ge
 
 2. Change the **render** method to supply the display component with the information from the collapsible prop that the container component receives:
 
-   ```tsx
-       render(): ReactNode {
-           const { collapsible, collapseIcon, expandIcon, content, headerCaption, style } = this.props;
+	```tsx
+	render(): ReactNode {
+		const { collapsible, collapseIcon, expandIcon, content, headerCaption, style } = this.props;
 
-           const isCollapsible = collapsible !== "no";
+		const isCollapsible = collapsible !== "no";
 
-           const props: WrappedGroupBoxProps = {
-               collapsible: isCollapsible,
-               headerCaption,
-               collapseIcon: this.renderIcon(defaultCollapseIconGlyph, collapseIcon),
-               expandIcon: this.renderIcon(defaultExpandIconGlyph, expandIcon),
-               style
-           };
+		const props: WrappedGroupBoxProps = {
+			collapsible: isCollapsible,
+			headerCaption,
+			collapseIcon: this.renderIcon(collapseIcon, 			defaultCollapseIconGlyph),
+			expandIcon: this.renderIcon(expandIcon, defaultExpandIconGlyph),
+			style
+		};
 
-           if (collapsible) {
-               props.startCollapsed = collapsible === "yesStartCollapsed";
-           }
+		if (collapsible) {
+			props.startCollapsed = collapsible === "yesStartCollapsed";
+		}
 
-           return <WrappedGroupBox {...props}>{content}</WrappedGroupBox>;
-       }
-   ```
+		return <WrappedGroupBox {...props}>{content}</WrappedGroupBox>;
+	}
+	```
 
 3. Navigate to Studio Pro.
 4. Press <kbd>F4</kbd> or select **Project > Synchronize Project Directory** to bring your application in sync with the changes you made to the **src/GroupBox.xml** file.
 5. Update the group box widget. Notice that now your widget has the icon you loaded into its *xml*:
 
-insert pic groupbox-64-icon.png
+	![groupbox 64](groupbox-64-icon.png)
 
 6. Verify that the collapsible property options behave correctly by double-clicking your widget and testing each collapsible property option on your test device:
 
-insert pic collapsible-properties.png
+	![collapsible properties](collapsible-properties.png)
 
 #### 3.3.6 Adding a Custom Default Style
 
@@ -1308,22 +1309,22 @@ Although you have an extensively featured group box widget, you can still improv
 
 2. Add the following imports and constant to *custom.js* to define a default custom style:
 
-   ```js
-   import { brand } from "../core/variables";
-   import shadeblendconvert from "../core/helpers/_functions/shadeblendconvert";
+	```js
+	import { brand } from "../core/variables";
+	import shadeblendconvert from "../core/helpers/_functions/shadeblendconvert";
 
-   export const com_mendix_widget_native_groupbox_GroupBox = {
-     container: {
-       borderColor: brand.primary
-     },
-     header: {
-       backgroundColor: shadeblendconvert(0.4, brand.primary)
-     },
-     headerContent: {
-       color: "#000"
-     }
-   };
-   ```
+	export const com_mendix_widget_native_groupbox_GroupBox = {
+		container: {
+			borderColor: brand.primary
+		},
+		header: {
+			backgroundColor: shadeblendconvert(0.4, brand.primary)
+		},
+		headerContent: {
+			color: "#000"
+		}
+	};
+	```
 
    Note that the name of the constant has to be almost the same as the widget id. However, the widget id's periods need to be underscores. Using this convention, the Mendix Client can apply the custom style defined in this constant to the group box widget.
 
@@ -1337,43 +1338,43 @@ It would be nice to provide the developer with some pre-definded styles that can
 
 1. In **test/MxTestProject/theme/styles/native/app/custom.js**, add the following constants to end of the file:
 
-   ```js
-   export const groupBoxSuccess = {
-     container: {
-       borderColor: brand.success
-     },
-     header: {
-       backgroundColor: shadeblendconvert(0.4, brand.success)
-     },
-     headerContent: {
-       color: "#000"
-     }
-   };
+	```js
+	export const groupBoxSuccess = {
+		container: {
+			borderColor: brand.success
+		},
+		header: {
+			backgroundColor: shadeblendconvert(0.4, brand.success)
+		},
+		headerContent: {
+			color: "#000"
+		}
+	};
 
-   export const groupBoxWarning = {
-     container: {
-       borderColor: brand.warning
-     },
-     header: {
-       backgroundColor: shadeblendconvert(0.4, brand.warning)
-     },
-     headerContent: {
-       color: "#000"
-     }
-   };
+	export const groupBoxWarning = {
+		container: {
+			borderColor: brand.warning
+		},
+		header: {
+			backgroundColor: shadeblendconvert(0.4, brand.warning)
+		},
+		headerContent: {
+			color: "#000"
+		}
+	};
 
-   export const groupBoxDanger = {
-     container: {
-       borderColor: brand.danger
-     },
-     header: {
-       backgroundColor: shadeblendconvert(0.4, brand.danger)
-     },
-     headerContent: {
-       color: "#000"
-     }
-   };
-   ```
+	export const groupBoxDanger = {
+		container: {
+			borderColor: brand.danger
+		},
+		header: {
+			backgroundColor: shadeblendconvert(0.4, brand.danger)
+		},
+		headerContent: {
+			color: "#000"
+		}
+	};
+	```
 
 2. In Studio Pro, double-click the group box widget.
 3. Navigate to the appearance section.
@@ -1388,42 +1389,42 @@ Defining all the different styles inside **test/MxTestProject/theme/styles/nativ
 2. Move all the code from **test/MxTestProject/theme/styles/native/app/custom.js** into the new file.
 3. Add the following import to **test/MxTestProject/theme/styles/native/app/custom.js**:
 
-   ```js
-   export * from "./group-box";
-   ```
+	```js
+	export * from "./group-box";
+	```
 
 4. Refresh your app in the Make It Native app to verify the custom warning style is still being applied to the group box widget.
 
-insert same picture as before
+	insert same picture as before
 
 The developer needs to have the class names memorized to apply a certain group box style. By using a design property this will no longer be necessary:
 
 1. Open **test/MxTestProject/theme/settings-native.json**.
 2. At the bottom after the "com.mendix.widget.native.slider.Slider" property, add the following property:
 
-   ```json
-   "com.mendix.widget.native.groupbox.GroupBox": [
-       {
-           "name": "Group box style",
-           "type": "Dropdown",
-           "description": "Style of the group box.",
-           "options": [
-               {
-                   "name": "Success",
-                   "class": "groupBoxSuccess"
-               },
-               {
-                   "name": "Warning",
-                   "class": "groupBoxWarning"
-               },
-               {
-                   "name": "Danger",
-                   "class": "groupBoxDanger"
-               }
-           ]
-       }
-   ]
-   ```
+	```json
+	"com.mendix.widget.native.groupbox.GroupBox": [
+		{
+			"name": "Group box style",
+			"type": "Dropdown",
+			"description": "Style of the group box.",
+			"options": [
+				{
+					"name": "Success",
+					"class": "groupBoxSuccess"
+				},
+				{
+					"name": "Warning",
+					"class": "groupBoxWarning"
+				},
+				{
+					"name": "Danger",
+					"class": "groupBoxDanger"
+				}
+			]
+		}
+	]
+	```
 
 3. In Studio Pro click <kbd>F4</kbd> or select **Project > Synchronize Project Directory** to bring your application in sync with the changes you made to the previous two files.
 
@@ -1441,4 +1442,6 @@ The developer needs to have the class names memorized to apply a certain group b
 
 ## 4 Read More
 
-todo add styling and widget links
+* [Implement Native Styling](/howto/mobile/native-styling)
+* [Native Styling](/refguide/native-styling-refguide)
+* [Build Pluggable Widgets](/howto/extensibility/pluggable-widgets)

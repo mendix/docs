@@ -3,7 +3,7 @@ title: "8.3"
 parent: "metamodel"
 ---
 
-These are the release notes for the  [Mendix Metamodel](/apidocs-mxsdk/mxsdk/understanding-the-metamodel) version 8.3.
+These are the release notes for the [Mendix Metamodel](/apidocs-mxsdk/mxsdk/understanding-the-metamodel) version 8.3.
 
 ## 8.3.0
 
@@ -14,102 +14,123 @@ These are the release notes for the  [Mendix Metamodel](/apidocs-mxsdk/mxsdk/und
 ### CodeAction (ModelUnit)
 
 #### Property 'actionReturnType'
-* Default value changed
+
+* Changed the default value.
 
 ### VoidType (Element)
-* Introduced;
+
+* Introduced.
 
 ## DomainModels
 
 ### AssociationBase (Element)
 
 #### Property 'remoteSourceDocument'
-* Introduced;
+
+* Introduced.
 
 ## Microflows
 
 ### JavaActionCallAction (Element)
 
 #### Property 'outputVariableNameRuntime'
-* Introduced;
+
+* Introduced.
 
 ### MicroflowCallAction (Element)
 
 #### Property 'outputVariableNameRuntime'
-* Introduced;
+
+* Introduced.
 
 ## Rest
 
 ### PublishedODataService (ModelUnit)
 
 #### Property 'authenticationTypesRuntime'
-* Introduced; "Authentication types supported by this service"
+
+* Introduced for **Authentication types supported by this service**.
 
 ### PublishedRestService (ModelUnit)
 
 #### Property 'authenticationTypesRuntime'
-* Introduced; "Authentication types supported by this service"
+
+* Introduced for **Authentication types supported by this service**.
 
 ### RestOperationParameter (Element)
 
 #### Property 'description'
-* Introduced; "A description of the parameter, to be used in documentation"
+
+* Introduced for **A description of the parameter, to be used in documentation**.
 
 ## CustomWidgets
 
 ### CustomWidgetType (Element)
 
 #### Property 'helpUrl'
-* Introduced;
+
+* Introduced.
 
 ### WidgetValue (Element)
 
 #### Property 'dataSource'
-* Introduced;
+
+* Introduced.
 
 ## Pages
 
 ### BuildingBlock (ModelUnit)
 
 #### Property 'platform'
-* Introduced;
+
+* Introduced.
 
 ### DivContainer (Element)
 
 #### Property 'onClickAction'
-* Introduced;
+
+* Introduced.
 
 ### ClientTemplate (Element)
 
 #### Property 'fallback'
-* Introduced;
+
+* Introduced.
 
 ### LayoutGrid (Element)
 
 #### Property 'rows'
-* Default value changed
+
+* Default value changed.
 
 ### LayoutGridColumn (Element)
 
 #### Property 'tabletWeight'
-* Introduced;
+
+* Introduced.
 
 #### Property 'phoneWeight'
-* Introduced;
+
+* Introduced.
 
 #### Property 'verticalAlignment'
-* Introduced;
+
+* Introduced.
 
 ### LayoutGridRow (Element)
 
 #### Property 'columns'
-* Default value changed
+
+* Changed the Default value.
 
 #### Property 'verticalAlignment'
-* Introduced;
+
+* Introduced.
 
 #### Property 'horizontalAlignment'
-* Introduced;
+
+* Introduced.
 
 #### Property 'spacingBetweenColumns'
-* Introduced;
+
+* Introduced.

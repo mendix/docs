@@ -101,7 +101,7 @@ These are the release notes for the [Mendix Metamodel](/apidocs-mxsdk/mxsdk/unde
 
 #### Property 'rows'
 
-* Default value changed.
+* Changed the default value.
 
 ### LayoutGridColumn (Element)
 
@@ -121,7 +121,7 @@ These are the release notes for the [Mendix Metamodel](/apidocs-mxsdk/mxsdk/unde
 
 #### Property 'columns'
 
-* Changed the Default value.
+* Changed the default value.
 
 #### Property 'verticalAlignment'
 

@@ -7,31 +7,57 @@ tags: ["studio pro"]
 
 {{% alert type="warning" %}}The simple menu bar widget is not supported on native mobile pages.{{% /alert %}}
 
-The simple menu bar widget shows a configured menu in the form of a horizontal or vertical bar with images and captions. Items cannot have subitems; the menu structure can only have one level. The [menu items](menu#menu-item) points to either the page or the microflow that will opened or started when the item is clicked.
+## 1 Introduction
 
-{{% alert type="info" %}}
+A simple menu bar shows a configured menu in the form of a horizontal or vertical bar. Sub-items of menu items are not displayed by this widgets, that means the menu structure can only have one level. For more information on menu items and their properties, see [Menu](menu).
 
-![](attachments/pages/simple-menu-bar-horizontal.png)
+![Simple Menu Bar](attachments/menu-widgets/simple-menu-bar.png)
 
-{{% /alert %}}{{% alert type="info" %}}
+## Properties
 
-![](attachments/pages/simple-menu-bar-vertical.png)
+An example of a simple menu bar properties is represented in the image below:
 
-{{% /alert %}}
+{{% image_container width="350" %}}![Simple Menu Bar Properties](attachments/menu-widgets/simple-menu-bar-properties.png)
+{{% /image_container %}}
 
-## Common Properties
+Menu bar properties consist of the following sections:
 
-{{% snippet file="refguide/name-property.md" %}}
+* [Common](#common)
+* [Design properties](#design)
+* [General](#general)
 
-{{% snippet file="refguide/class-property.md" %}}
+### 2.1 Common Section {#common}
 
-{{% snippet file="refguide/style-property.md" %}}
+{{% snippet file="refguide/common-section-link.md" %}}
 
-## General Properties
+### 2.2 Design Properties Section {#design}
 
-{{% snippet file="refguide/menu-source-properties.md" %}}
+{{% snippet file="refguide/design-section-link.md" %}}
 
-### Orientation
+### 2.3 General Section {#general}
+
+#### 2.3.1 Menu Source {#menu-source}
+
+The items that are shown in the menu widget are determined by the menu source. A menu widget is either filled from a menu configured in the [Navigation](navigation) document or a [Menu](menu) document.
+
+| Value              | Description                                                  |
+| ------------------ | ------------------------------------------------------------ |
+| Project navigation | The menu items are taken from one of the menus defined in the [Navigation](navigation) document. Use this for the main menu of your application. |
+| Menu document      | The menu items are taken from a [Menu](menu) document. Use menu documents for auxiliary menus. |
+
+_Default value:_ Project navigation
+
+#### 2.3.2 Profile 
+
+Only available when the [menu source](#menu-source) is set to **Project navigation**. The **Profile** property specifies what [navigation profile](navigation#profiles) is used for the widget. 
+
+_Default value:_ Responsive
+
+#### 2.3.3 Menu 
+
+Only available when the [menu source](#menu-source) is set to **Menu document**. The **Menu** property specifies what [Menu](menu) document is used for the widget.
+
+#### 2.3.4 Orientation
 
 This property determines how the simple menu bar is laid out.
 
@@ -41,3 +67,9 @@ This property determines how the simple menu bar is laid out.
 | Vertical | The menu items are underneath each other and the images are next to the captions. |
 
 _Default value:_ Horizontal
+
+## 3 Read More
+
+* [Page](page)
+* [Menu Widgets](menu-widgets)
+* [Properties Common for Widgets](common-widget-properties)

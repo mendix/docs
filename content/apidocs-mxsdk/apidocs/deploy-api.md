@@ -30,7 +30,12 @@ Only _Retrieve apps_, _Create Free App Environment_ and _Retrieve app_ API calls
 
 #### 3.1.1 Description
 
-Retrieves all apps to which the authenticated user has access as a regular user. These apps can be found via the *Nodes overview* screen in the Mendix Platform.
+Retrieves all licensed apps and Free Apps to which the authenticated user has access as a regular user.
+
+{{% alert type="info" %}}
+The [Nodes](/developerportal/apps-list/#nodes) screen in the Developer Portal shows all the licensed apps which are returned by this request, but does not show any Free Apps.
+{{% /alert %}}
+
 
 ```bash
 HTTP Method: GET

@@ -92,7 +92,7 @@ You can find a specific app by typing the search term by the magnifying glass ic
 
 ![Example of a search for the word "First"](attachments/search-company-apps.png)
 
-## 4 Nodes
+## 4 Nodes{#nodes}
 
 This shows a list of all the licensed Mendix Cloud nodes to which you have access.
 

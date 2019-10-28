@@ -315,7 +315,7 @@ For the group box widget it would be nice to have square corners on Android devi
 
 As you might have noticed, the display component is still called **HelloWorldSample**. Next you will introduce the term "GroupBox" in your code:
 
-1. In **src/components/HelloWorldSample.tsx** change the classname from `HelloWorldSample` to *GroupBox*.
+1. In **src/components/HelloWorldSample.tsx** change the class name from `HelloWorldSample` to *GroupBox*.
 2. Change the file name to *GroupBox.tsx*.
 3. Rename the **HelloWorldSampleProps** interface to *GroupBoxProps*.
 4. Change the **GroupBox** class declaration to the following:
@@ -324,7 +324,7 @@ As you might have noticed, the display component is still called **HelloWorldSam
    export class GroupBox extends Component<GroupBoxProps>
    ```
 
-The changes you made in steps one and two cause errors in your container component defined in *src/GroupBox.tsx*. The container component are used by the Mendix Client, receive property data from this client, and forwards this data to the display component.
+The changes you made in steps one and two cause errors in your container component defined in *src/GroupBox.tsx*. The container component is used by the Mendix Client, receives property data from this client, and forwards this data to the display component.
 
 To fix the errors in the container component, use these steps:
 
@@ -343,7 +343,7 @@ To fix the errors in the container component, use these steps:
 
 3. Rename the **HelloWorldSample** component in the **render** method to *WrappedGroupBox*.
 
-We are not using the **label** property of the **defaultStyle** constant anymore in the **render** method of the display component. Remove it by doing the following:
+You are not using the **label** property of the **defaultStyle** constant anymore in the **render** method of the display component. Remove it by doing the following:
 
 1. Open **src/components/GroupBox.tsx**.
 2. Remove the **label** property from the **defaultStyle** constant:

@@ -11,6 +11,24 @@ tags: ["Native", "Android", "iOS", "Apple", "Android"]
 For more information on the Make It Native app, see [Getting the Make It Native App](/refguide/getting-the-make-it-native-app). Click here to download the Make It Native app for [iOS](https://apps.apple.com/app/make-it-native/id1334081181), or here for [Android](https://play.google.com/store/apps/details?id=com.mendix.developerapp).
 {{% /alert %}}
 
+## Android 1.2.0 / iOS 1.2.0
+**Release date: Oktober 29th, 2019**
+
+### New Feature
+
+The Make It Native app features a new Toggle Inspector developer menu option, that exposes even more insights on styles and layouts. With this option it is possible to debug styles, change them on the fly and evaluate the results directly in the Make It Native app. We believe that this is a good step towards enhancing the experience of creating feature rich and engaging layouts for your Native Mendix Apps.
+
+In addition the Make It Native app fully supports the newly added Atlas UI Dark Mode feature. 
+
+### Improvements
+
+On iOS, the QR Code Scanner should now perform more consistent. 
+
+On iOS, the status bar should now by default contrast the default Atlas UI theme.
+
+The Adnroid app was re-architectured to fix various performance bottlecks that have been identified over time.
+
+
 ## Android 1.1.0 / iOS 1.1.0
 
 **Release date: September 30th, 2019**

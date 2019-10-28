@@ -26,7 +26,7 @@ This is an XML document that is computer readable. This means that Studio Pro ca
 
 ### Example request/response xml messages
 
-On the "Published webservices" page (`http://localhost:8080/ws-doc/`) you will also find a list of all operations, per published webservice. These link to pages which describe sample messages. Note that you do not need these examples when building a mendix-to-mendix interaction, they are there purely to help people who want to create their own clients.
+On the "Published webservices" page (`http://localhost:8080/ws-doc/`) you will also find a list of all operations, per published webservice. These link to pages which describe sample messages. Note that you do not need these examples when building a Mendix-to-Mendix interaction, they are there purely to help people who want to create their own clients.
 
 ## How does a published webservice call work?
 

@@ -138,7 +138,7 @@ If you do not have a custom index.html yet, you can take the one that is generat
 3.  Open the folder `deployment`, and then the folder `web`.
 4.  Copy the `index.html` file to the `/theme/` folder in the root of your project (two folders up), and update it with the change mentioned above.
 
-Once this is done, after deploying your app in the mendix cloud, you can test the implementation by pointing your browser to `https://yourapp.mendixcloud.com/`, after which you should be automatically redirected to the Mendix Account login page, and then redirected and logged in to your app.
+Once this is done, after deploying your app in the Mendix Cloud, you can test the implementation by pointing your browser to `https://yourapp.mendixcloud.com/`, after which you should be automatically redirected to the Mendix Account login page, and then redirected and logged in to your app.
 
 ### 3.2 Users Can Sign in with a Mendix or Local Account
 

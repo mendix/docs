@@ -54,7 +54,7 @@ You can click the following buttons to execute actions:
 
 ## 4 Cache
 
-Mendix runtime version 6 has an object cache for non-persistable objects. In this tab you can see how many objects of each type currently live in memory. You can also see the number of objects broken down by user session.
+Mendix Runtime version 6 has an object cache for non-persistable objects. In this tab you can see how many objects of each type currently live in memory. You can also see the number of objects broken down by user session.
 
 ![User session cache details](attachments/metrics/cache-summary.png)
 

@@ -396,9 +396,13 @@ We are not using the **label** property of the **defaultStyle** constant anymore
 
 #### 3.3.2 Adding Widget Properties
 
+Now that you have a basic group box, give the Mendix developer the possibility to customize it with the help of widget properties: a header caption and a content property.
+
 #### 3.3.3 Header Caption Property
 
-Next you will allow the Mendix developer to alter the header caption of your widget. You can reuse the code and configuration of the sample text property you used earlier to alter the **Hello World** output of the sample widget. Open **src/GroupBox.xml** and change the sample text property to this:
+Next you will allow the Mendix developer to alter the header caption of your widget. You can reuse the code and configuration of the default value property you used earlier to alter the **Hello World** output of the sample widget. 
+
+1. Open **src/GroupBox.xml** and change the sample text property to this:
 
 ```xml
 <property key="headerCaption" type="string" required="false">
@@ -407,15 +411,19 @@ Next you will allow the Mendix developer to alter the header caption of your wid
 </property>
 ```
 
-As soon as you save the file, the script running in the background will rebundle the widget and generate new typings in **typings/GroupBoxProps.d.ts**. These typings define the props the container component will receive. Some errors will surface in the container component because you renamed the property. Open **src/GroupBox.tsx** and change the following line in your render method:
+2. Save the file. As soon as you save the file, the script running in the background will rebundle the widget and generate new typings in **typings/GroupBoxProps.d.ts**. These typings define the props the container component will receive. Some errors will surface in the container component because you renamed the property. 
+	
+3. Open **src/GroupBox.tsx** and change this line in your render method:
 
-`sampleText={this.props.sampleText ? this.props.sampleText : "World"}`
+	`sampleText={this.props.sampleText ? this.props.sampleText : "World"}`
 
-to:
+	to this:
 
-`headerCaption={this.props.headerCaption}`
+	`headerCaption={this.props.headerCaption}`
 
-Your display component does not receive a headerCaption prop yet, so open **src/components/GroupBox.tsx** and replace:
+	Note that our display component doesn't receive a **headerCaption** prop yet.
+
+4. Your display component does not receive a headerCaption prop yet, so open **src/components/GroupBox.tsx** and replace:
 
 ```tsx
 export interface GroupBoxProps {

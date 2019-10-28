@@ -27,3 +27,7 @@ When uploading the app to the Team Server, you can choose between creating a new
 ### 2.2 Another SVN Server
 
 In the **SVN repository address** field, enter the address of the repository to which you want to upload your app.
+
+## 3 Read More
+
+* [How to Work with an On-Premises Version Control Server](/howto/collaboration-requirements-management/on-premises-svn-howto)

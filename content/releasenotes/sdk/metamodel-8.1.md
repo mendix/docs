@@ -3,7 +3,7 @@ title: "8.1"
 parent: "metamodel"
 ---
 
-These are the release notes for the  [Mendix Metamodel](/apidocs-mxsdk/mxsdk/understanding-the-metamodel) version 8.1.
+These are the release notes for the [Mendix Metamodel](/apidocs-mxsdk/mxsdk/understanding-the-metamodel) version 8.1.
 
 ## 8.1.0
 
@@ -23,4 +23,3 @@ The following properties were introduced:
 #### WidgetObject (Element)
 
 The `labelTemplate` property was deleted and moved to `CustomWidget`.
-

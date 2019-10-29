@@ -4,8 +4,9 @@ category: "Mobile"
 menu_order: 11
 toc-level: 1
 description: "Native Builder release notes."
-#ki: "Using more than one space" = NALM-217
-#ki: "In case Mx Build fails" = NALM-216
+#When updating, remember to update the Latest Mendix Releases file
+#KI: "Using more than one space" = NALM-217
+#KI: "In case Mx Build fails" = NALM-216
 ---
 
 The [Native Builder](/howto/mobile/native-builder) is a command line input tool which helps you build your Mendix native app. After the Native Builder simplifies your build process, you can do what you want most: test and publish your app. The Native Builder uses MxBuild, GitHub, and App Center to simplify the app building process. 
@@ -16,13 +17,13 @@ We are heavily invested in streamlining the experience of building your apps and
 
 **Release date: September 3rd, 2019**
 
-### Breaking changes
-
-This version only supports Mendix version 8.1.0 and upwards. If you have to stick with Mendix 8.0.0 please consider using Native Builder  v1.0.0.
-
 ### Improvements
 
 * We passed the `--native-packager` flag to MxBuild to enable MxBuild compatibility with Mendix 8.1.0 and higher.
+
+### Breaking Changes
+
+This version only supports Mendix version 8.1.0 and upwards. If you have to stick with Mendix 8.0.0 please consider using Native Builder  v1.0.0.
 
 ### Known Issues
 

@@ -8,20 +8,20 @@ draft: true
 
 ## 1 Introduction
 
-The [Forgot Password](https://appstore.home.mendix.com/link/app/1296/) module uses the login widget, email module, and deeplink module to implement the forgot-my-password functions. 
+The [Forgot Password](https://appstore.home.mendix.com/link/app/1296/) module works in conjunction with other modules and widgets to implement forgot-my-password functions. 
 
-With this module, the end-user can enter their email address, and an email will be sent with a confirmation link. The end-user then opens the link using the deeplink module and gets the option to reset their password. 
+With this module, the end-user can enter their email address, and an email will be sent with a confirmation link. The end-user then opens the link and gets the option to reset their password. 
 
-### 1.1 Dependencies
+### 1.1 Dependencies {#dependencies}
 
-* Email module, with Templates
-* Deeplink module
-* Encryption
-* Model reflection
+* [Email with Templates](email-with-templates) module
+* [Deep Link](deep-link) module
+* [Encryption](encryption) module
+* [Model Reflection](model-reflection) module
 
 ## 2 Configuration
 
-Once you have downloaded all required modules from the App Store, you can reuse the snippets and microflows from the _Use Me folder.
+Once you have downloaded all the required modules (see [Dependencies](#dependencies)), you can reuse the snippets and microflows from the **Use Me** folder.
 
 The page ForgotPasswordConfiguration should be accessible to the administrator only, this snippet allows for configuring the email template, deeplink and shows all open reset password requests.
 

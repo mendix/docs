@@ -9,7 +9,7 @@ tags: ["Deployment", "IBM", "IBM Cloud", "Environment"]
 
 ## 1 Introduction
 
-As a Mendix user with an IBM Cloud account you have access to many IBM resources which you want to use in a Mendix app. This how-to shows you how to create a Mendix app on the Mendix platform and then deploy it to IBM Cloud.
+As a Mendix user with an IBM Cloud account you have access to many IBM resources which you want to use in a Mendix app. This how-to shows you how to create a Mendix app on the Developer Portal and then deploy it to IBM Cloud.
 
 **This how-to will teach you how to do the following:**
 

@@ -65,7 +65,7 @@ Currently, there is no direct way of creating and storing a new application in y
 5. Open the folder in which your app project is stored.
 6. Delete the *.svn* and *.mendix-cache* folders (note that these folders may be hidden, in which case you'll need to enable the option in your file explorer to make them visible). By deleting these folders, any references to the Mendix Team Server are removed. Now, your app is ready to be uploaded to your own SVN server.
 7. Double-click the .*mpr* file in the same folder to open the app project again in the Mendix Desktop Modeler. For example, if your app is called **MyApp**, this file will have the name **MyApp.mpr**. Alternatively, you can start the Desktop Modeler, click **My Apps** > **Open App**, and browse to the abovementioned *.mpr* file to open your app project.
-8. When the app project is opened in the Desktop Modeler, select **Team** > **Upload to Team Server...** in the top menu.
+8. When the app project is opened in the Desktop Modeler, select **Project** > **More Versioning** > **Upload to Version Control Server** in the top menu.
 9. In the dialog box that appears, select **Existing repository** and the name of your app project (for example, **MyApp**), and then press 'OK'. The app should now upload to your on-premises SVN server.
 
 ## 7 Read More

@@ -2,7 +2,7 @@
 title: "Build a Pluggable Native Widget"
 category: "Extensibility"
 description: "Describes building a native widget, configuring it, and styling it in a Mendix app."
-menu_order: 9
+menu_order: 2
 tags: ["native","widget","pluggable","react native","extensibility",]
 ---
 
@@ -33,15 +33,15 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Install Long Term Support (LTS) v10.16.3 or any higher version of [Node.js](https://nodejs.org)
 * Install latest [Yeoman](https://yeoman.io/) with the following command:
 
-```shell
-npm install -g yo
-```
+	```shell
+	npm install -g yo
+	```
 
 * Install Mendix' Pluggable Widget Generator v8.2.0 for Yeoman with the following command:
 
-```shell
-npm install -g @mendix/generator-widget@8.2.0
-```
+	```shell
+	npm install -g @mendix/generator-widget@8.2.0
+	```
 
 * Install an integrated development environment (IDE) of your choice (Mendix recommends [Microsoft Visual Studio Code](https://code.visualstudio.com/))
 * Have a basic understanding of:
@@ -140,7 +140,7 @@ You have set up your test project. To verify that your Mendix test project is se
 
 1. In Studio Pro, run the test project locally.
 2. Use the Make It Native app to open your new app.
-3. Verify that your app's home page contains the yellow text **Hello {your name}**.
+3.  Verify that your app's home page contains the yellow text **Hello {your name}**.
 
 	![hello user](attachments/build-native-widget/1-yellow-text-mobile.png)
 
@@ -264,7 +264,7 @@ For the group box widget it would be nice to have square corners on Android devi
 
 1. In **src/components/HelloWorldSample.tsx** change the value of `defaultStyle.container.borderRadius` from `4` to `Platform.OS === "ios" ? 4 : 0` so that the initialization of the **defaultStyle** constant look as follows:
 
-   ```tsx
+	```tsx
    const defaultStyle: CustomStyle = {
      container: {
        borderColor: "#000",
@@ -293,19 +293,19 @@ For the group box widget it would be nice to have square corners on Android devi
        color: "#F6BB42"
      }
    };
-   ```
+	```
 
 2. Adjust the following import statement in order to use the **Platform** object from this:
 
-   ```tsx
+	```tsx
    import { Text, View } from "react-native";
-   ```
+	```
 
-   to this:
+	to this:
 
-   ```tsx
+	```tsx
    import { Text, View, Platform } from "react-native";
-   ```
+	```
 
 3. Save all files to rebundle and update the Mendix test project.
 4. Refresh the Mendix app inside the Make It Native app.
@@ -320,9 +320,9 @@ As you might have noticed, the display component is still called **HelloWorldSam
 3. Rename the **HelloWorldSampleProps** interface to *GroupBoxProps*.
 4. Change the **GroupBox** class declaration to the following:
 
-   ```tsx
+	```tsx
    export class GroupBox extends Component<GroupBoxProps>
-   ```
+	```
 
 The changes you made in steps one and two cause errors in your container component defined in *src/GroupBox.tsx*. The container component is used by the Mendix Client, receives property data from this client, and forwards this data to the display component.
 
@@ -331,15 +331,15 @@ To fix the errors in the container component, use these steps:
 1. Open *src/GroupBox.tsx*.
 2. Replace the following import:
 
-   ```tsx
+	```tsx
    import { HelloWorldSample } from "./components/HelloWorldSample";
-   ```
+	```
 
-   with this:
+	with this:
 
-   ```tsx
+	```tsx
    import { GroupBox as WrappedGroupBox } from "./components/GroupBox";
-   ```
+	```
 
 3. Rename the **HelloWorldSample** component in the **render** method to *WrappedGroupBox*.
 
@@ -348,7 +348,7 @@ You are not using the **label** property of the **defaultStyle** constant anymor
 1. Open **src/components/GroupBox.tsx**.
 2. Remove the **label** property from the **defaultStyle** constant:
 
-   ```tsx
+	```tsx
    const defaultStyle: CustomStyle = {
      container: {
        borderColor: "#000",
@@ -374,19 +374,19 @@ You are not using the **label** property of the **defaultStyle** constant anymor
        paddingHorizontal: 15
      }
    };
-   ```
+	```
 
 3. Open **src/GroupBox.tsx**.
 4. Remove the **label** property from the **CustomStyle** interface and add the new style properties **header**, **headerContent**, **content**:
 
-   ```tsx
+	```tsx
    export interface CustomStyle extends Style {
      container: ViewStyle;
      header: ViewStyle;
      headerContent: TextStyle;
      content: ViewStyle;
    }
-   ```
+	```
 
 5. Save all files to rebundle and update the Mendix test project.
 6. Refresh the Mendix app inside the Make It Native app.
@@ -423,7 +423,7 @@ Next you will allow the Mendix developer to alter the header caption of your wid
 
 	Note that our display component doesn't receive a **headerCaption** prop yet.
 
-4. Your display component does not receive a headerCaption prop yet, so open **src/components/GroupBox.tsx** and replace:
+4. Your display component does not receive a headerCaption prop yet, so open **src/components/GroupBox.tsx** and replace this:
 
 	```tsx
 	export interface GroupBoxProps {
@@ -432,7 +432,7 @@ Next you will allow the Mendix developer to alter the header caption of your wid
 	}
 	```
 
-	with:
+	with this:
 
 	```tsx
 	export interface GroupBoxProps {
@@ -608,7 +608,7 @@ It would be nice to hide the content area of the group box completely when there
 
 5. Delete the empty **Group box** widget you created in the previous step, then rerun your app to save your changes.
 
-#### 3.3.3 Making the Widget Collapsible
+#### 3.3.5 Making the Widget Collapsible
 
 Now that your widget can contain content, the next challenge is to hide this content by making the group box Collapsible.
 
@@ -734,7 +734,7 @@ Now make it possible to expand or collapse the group box:
 
 8. Verify in the Make It Native app that you can expand and collapse the group box by tapping your widget's header.
 
-#### 3.3.4 Adding an Expand and Collapse Icon Property
+#### 3.3.6 Adding an Expand and Collapse Icon Property
 
 The next step is to allow a Mendix developer to use a custom icon in the clickable header. First, define the properties and adjust the display component so that it can render icons:
 
@@ -967,7 +967,7 @@ Fix your icon issue by introducing a default style for your container component:
 	
 	![collapsed with euro](attachments/build-native-widget/8-collapsed-w-euro-sign.png)
 
-#### 3.3.5 Adding a Collapsible Property
+#### 3.3.7 Adding a Collapsible Property
 
 You are close to completing your group box widget. There are two more features essential for a Mendix developer: setting if the group box should be collapsible and setting the initial state of being collapsed or not.
 
@@ -1078,29 +1078,29 @@ First change the widget property configuration:
 
 	b. Generate a Base64 representation of the *.png* file:
 
-		**— For Windows**:
+	**— For Windows**:
 
- 		i. Open command prompt.
-		ii. Change your current working directory to the folder where the *GroupBox.png* is stored.
-		iii. Execute the following command to generate the Base64 representation:
+	i. Open command prompt.<br />
+	ii. Change your current working directory to the folder where *GroupBox.png* is stored.<br />
+	iii. Execute the following command to generate the Base64 representation:<br />
 	
-			```cmd
-			certutil -encode GroupBox.png data.b64
-			```
+	```cmd
+	certutil -encode GroupBox.png data.b64
+	```
 	
-		Upon success, you will see a **data.b64** file in the same location as your original image.
+	Upon success, you will see a **data.b64** file in the same location as your original image.
 	
-		**— For Unix**:
+	**— For Unix**:
 	
-		i. Open a terminal.
-		ii. Change the current working directory to the folder where the "GroupBox.png" is stored.
-		iii. Execute the following command to generate the Base64 representation:
+	i. Open a terminal.<br />
+	ii. Change the current working directory to the folder where the "GroupBox.png" is stored.<br />
+	iii. Execute the following command to generate the Base64 representation:<br />
 	
-			```shell
-			base64 -i GroupBox.png -o data.b64
-			```
+	```shell
+	base64 -i GroupBox.png -o data.b64
+	```
 	
-	       	Upon success, you will see a **data.b64** file in the same location as your original image.
+	Upon success, you will see a **data.b64** file in the same location as your original image.
 	
 	c. Add **data.b64** to the icon element in the *.xml* file. For ease, the contents of the file you made is included below. You can simply copy and paste this snippet with its binary Base64 representation included into your *xml* file:
 
@@ -1303,7 +1303,7 @@ The last thing to do is change the container component so that the properties ge
 
 	![collapsible properties](attachments/build-native-widget/collapsible-properties.png)
 
-#### 3.3.6 Adding a Custom Default Style
+#### 3.3.8 Adding a Custom Default Style
 
 Although you have an extensively featured group box widget, you can still improve its styling. Currently, the widget receives basic styling which has been baked its code. You can make the Mendix Client override this default styling by defining a custom default style for the widget in Atlas UI. To define a custom default style, follow these steps:
 
@@ -1334,7 +1334,7 @@ Although you have an extensively featured group box widget, you can still improv
 
 	![default styling](attachments/build-native-widget/9-default-styling.png)
 
-### 3.3.7 Adding a Design Property
+#### 3.3.9 Adding a Design Property
 
 It would be nice to provide the developer with some pre-defined styles that can be used for the group box. Create three style classes for the group box based on the brand colors success, warning, and danger:
 

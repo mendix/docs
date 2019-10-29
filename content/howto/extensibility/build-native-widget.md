@@ -1,9 +1,9 @@
 ---
-title: "Create a Pluggable Native Widget"
-#category: "Extensibility"
-#menu_order: 10
-#description: "Describes building a native widget, configuring it, and styling it in a Mendix app."
-#tags: ["native","widget","pluggable","react native","extensibility",]
+title: "Build a Pluggable Native Widget"
+category: "Extensibility"
+description: "Describes building a native widget, configuring it, and styling it in a Mendix app."
+menu_order: 9
+tags: ["native","widget","pluggable","react native","extensibility",]
 ---
 
 ## 1 Introduction
@@ -1087,21 +1087,21 @@ First change the widget property configuration:
 			```cmd
 			certutil -encode GroupBox.png data.b64
 			```
-
+	
 		Upon success, you will see a **data.b64** file in the same location as your original image.
-
+	
 		**— For Unix**:
-
+	
 		i. Open a terminal.
 		ii. Change the current working directory to the folder where the "GroupBox.png" is stored.
 		iii. Execute the following command to generate the Base64 representation:
-
+	
 			```shell
 			base64 -i GroupBox.png -o data.b64
 			```
-
-           	Upon success, you will see a **data.b64** file in the same location as your original image.
-
+	
+	       	Upon success, you will see a **data.b64** file in the same location as your original image.
+	
 	c. Add **data.b64** to the icon element in the *.xml* file. For ease, the contents of the file you made is included below. You can simply copy and paste this snippet with its binary Base64 representation included into your *xml* file:
 
  	```xml

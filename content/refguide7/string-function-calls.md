@@ -94,7 +94,7 @@ Retrieves a substring of a string. Note that the first character of a string is 
 
 ### Output
 
-A part of the original string, starting at the start position with a length equal to the desired length. If no desired length is specified, will return a substring starting at the start position and ending at the end of the string.
+A part of the original string, starting at the start position with a length equal to the desired length. It will return a substring starting at the start position and ending at the end of the string.
 
 * Type: string
 
@@ -108,16 +108,22 @@ returns:
 'mystring'
 ```
 
-or, with a third parameter:
+If a third parameter is given it will limit the returned number of characters to that amount:
 
 ```java
-substring('thisismystring', 6,2)
+substring('thisismystring', 6, 2)
 ```
 
 returns:
 
 ```java
 'my'
+```
+
+N.B. If this third parameter is too big, this function will throw an error saying it is out of range, so make sure this does not happen by limiting it. For instance with use of the length function:
+
+```java
+'substring('thisismystring', 0, min(length('thisismystring') - 1, 20))'
 ```
 
 ## find

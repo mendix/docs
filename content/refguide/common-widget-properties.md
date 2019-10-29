@@ -115,9 +115,9 @@ The widget can be made visible to a specific set of user roles available in your
 
 | Value             | Description                                                  |
 | ----------------- | ------------------------------------------------------------ |
-| Applicable roles  | The widget is visible if access rules allow it (i.e. if the user that is signed in has a role for which the target is set to be visible/accessible). |
+| Applicable roles  | The widget is visible if access rules allow it (for example if the user that is signed in has a role for which the target is set to be visible/accessible). |
 | All roles         | The widget is always visible. |
-| Selected roles    | This setting will render the widget invisible to all users that are not linked to one of the selected user roles. |
+| Selected roles    | This setting will render the widget as invisible to all users that are not linked to one of the selected user roles. |
 
 ## 6 Editability Section{#editability}
 

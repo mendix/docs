@@ -49,7 +49,7 @@ Text box properties consist of the following sections:
 
 ### 2.2 Data Source Section{#data-source}
 
-{{% snippet file="refguide/attribute-path-property.md" %}}
+{{% snippet file="refguide/data-source-section-link.md" %}}
 
 ### 2.3 Design Properties Section{#design-properties}
 

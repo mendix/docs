@@ -53,23 +53,9 @@ Reference selector properties consist of the following sections:
 
 ### 2.2 Data Source Section{#data-source}
 
-{{% snippet file="refguide/attribute-path-property.md" %}}
+{{% snippet file="refguide/data-source-section-link.md" %}}
 
 The attribute path specifies which attribute of an associated entity is shown in the reference selector. The path must follow one association of type reference starting in the entity of the data view.
-
-{{% alert type="info" %}}
-In the case of a reference selector you are selecting an association to another object. The attribute should indicate uniquely to the end-user which object is being selected.
-{{% /alert %}}
-
-The attribute can be of one of the following [data types](data-types):
-
-* Autonumber
-* Date and Time
-* Decimal
-* Enumeration
-* Integer
-* Long
-* String
 
 ### 2.3 Design Properties Section{#design-properties}
 

@@ -68,22 +68,58 @@ will result in red text on a blue background:
 
 You can see which widgets in a page have styling applied via the style or class property by clicking the <strong>Show styles</strong> button.
 
-## 4 Data Source Section
+## 4 Data Source Section {#data-source}
 
 ### 4.1 Attribute (Path)
 
-Many input widgets, like text boxes and drop-down widgets, can be connected to:
+#### 4.1.1 Attribute Input Widgets
+
+With the following widgets, the Attribute (Path) specifies the attribute which is being changed (or displayed) by the widget:
+
+*   [Text Box](text-box)
+*   [Text Area](text-area)
+*   [Drop Down](drop-down)
+*   [Check Box](check-box)
+*   [Radio Buttons](radio-buttons)
+*   [Date Picker](date-picker)
+
+The attribute can be one of the following:
 
 1. An attribute of the entity of the data view that contains the widget.
+
 2. An attribute of an entity associated with the data view entity by following one or more associations of type reference through the domain model.
 
-In the first case we say the widget is connected to an attribute and in the second case to an attribute path.
+In the first case we say the widget is connected to an **attribute** and in the second case to an **attribute path**.
 
 {{% alert type="info" %}}
 In Mendix 8.0, an input widget connected to an **attribute path** must be read-only. Studio Pro will check this for you.
 
 In Mendix 8.1 and above, you can edit attributes presented in input widgets over a path.
 {{% /alert %}}
+
+#### 4.1.2 Association Input Widgets
+
+For widgets which manipulate associations, the Attribute (Path) specifies an attribute which is from an entity which is reachable from the current data view using an association. This applies to the following input widgets:
+
+*   [**Reference Selector**](reference-selector)
+*   [**Reference Set Selector**](reference-set-selector)
+*   [**Input Reference Set Selector**](input-reference-set-selector)
+
+For these widgets, only an **Attribute path** can be selected. In other words, the selected attribute must be from an entity associated with the data view entity by following an association, of the type which matches the widget, through the domain model.
+
+{{% alert type="info" %}}
+For these widgets you are selecting an association to another object. The attribute should therefore indicate uniquely to the end-user which object is being selected.
+{{% /alert %}}
+
+The attribute can be of one of the following [data types](data-types):
+
+* Autonumber
+* Date and Time
+* Decimal
+* Enumeration
+* Integer
+* Long
+* String
 
 ## 5 Visibility Section {#visibility-properties}
 

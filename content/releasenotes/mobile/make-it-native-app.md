@@ -5,6 +5,7 @@ menu_order: 10
 description: "These release notes showcase each release of the iOS and Android Make It Native app versions."
 tags: ["Native", "Android", "iOS", "Apple", "Android"]
 #When updating, remember to update the Latest Mendix Releases file
+#KI: "When using the `Touchable` option" = UICORE-417
 ---
 
 {{% alert type="info" %}}

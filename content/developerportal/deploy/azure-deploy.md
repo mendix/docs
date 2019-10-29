@@ -215,7 +215,7 @@ Now that the deployment package is in place you can deploy it on the instance. Y
     m2ee(admin): download_runtime
     ```
 
-    This will download the Mendix runtime.
+    This will download the Mendix Runtime.
 
 10. Execute the following command:
 

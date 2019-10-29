@@ -62,7 +62,7 @@ Enter the correct credentials and you will be signed in to continue the creation
 
 ![](attachments/sap-single-sign-on/go-back.png)
 
-This error happens when working with SAP environments from within the Mendix Developer Portal. As described on the error page, it occurs when you are logged in on the Mendix platform under one username, but logged in to the SAP region in which you are working under a different username.
+This error happens when working with SAP environments from within the Mendix Developer Portal. As described on the error page, it occurs when you are logged in on the Mendix Platform under one username, but logged in to the SAP region in which you are working under a different username.
 
 When you click **Go back to where you originally came from**, you will see a second error message which you will have to clear by clicking **OK**.
 

@@ -78,7 +78,7 @@ Command-line arguments provide information to the Native Builder, such as where 
 |   `--java-home`   |   Absolute path to the directory where Java executable is located   |   `C:\Program Files\Java\jdk-11.0.1`   |
 |   `--project-path`   |   Absolute path to the Mendix project file   | `C:\MyApp\MyApp.mpr`     |
 |   `--mxbuild-path`   |   Absolute path to MxBuild executable   |   `C:\Program Files\Mendix\8.0.0\modeler\mxbuild.exe`   |
-|   `--runtime-url`   |   URL of the Mendix runtime   |   `https://myapp.mendixcloud.com`   |
+|   `--runtime-url`   |   URL of the Mendix Runtime   |   `https://myapp.mendixcloud.com`   |
 |   `--github-access-token`   |   GitHub access token   |   `c0e1dasf1e102c55ded223dbdebdbe59asf95224`   |
 |   `--appcenter-api-token`   |   App Center API token   |   `3e18asdfb43f4fe6c85afsd0bf60dde72f134`   |
 |   `--app-name`   |   Name of the app to build   |   `CoolApp`   |

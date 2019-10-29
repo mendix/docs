@@ -963,7 +963,7 @@ Fix your icon issue by introducing a default style for your container component:
 
 5. Refresh the app in the Make It Native app. You should see the white icons in the correct size:
 
-	![better button](attachments/build-native-widget/7-better-button.png)
+	![better button](attachments/build-native-widget/7-better-button-inside.png)
 	
 	![collapsed with euro](attachments/build-native-widget/8-collapsed-w-euro-sign.png)
 

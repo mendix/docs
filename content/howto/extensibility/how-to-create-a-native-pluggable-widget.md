@@ -54,7 +54,7 @@ npm install -g @mendix/generator-widget@8.2.0
 To build a group box widget for native mobile, you will follow these steps:
 
 1. Scaffold a pluggable widget project.
-2. Creat a Mendix test project.
+2. Create a Mendix test project.
 3. Build the group box widget.
 
 The following subsections will elaborate on each of these steps.
@@ -130,7 +130,7 @@ Create a test case by following these steps:
 
 6. Delete the contents of your new container.
 7. Search in Toolbox for the **Group Box** widget.
-8. Drag and drop the widget into the your empty container:
+8. Drag and drop the widget into your empty container:
 
 	![initial widget](attachments/build-native-widget/initial-widget.png)
 
@@ -150,7 +150,7 @@ Now that your widget sample code is running, it is time to transform your sample
 
 1. Create a static UI.
 2. Add widget properties.
-3. Make the widget collapsilble.
+3. Make the widget collapsible.
 4. Add an expand and collapse icon property.
 5. Add a collapsible property.
 6. Add a custom default style.
@@ -192,7 +192,7 @@ Define the structure and default style of the group box widget with these steps:
 	npm run dev
 	```
 
-	The executed script will keep watching your source files and rebundle the widget everytime you save one of these files.
+	The executed script will keep watching your source files and rebundle the widget every time you save one of these files.
 
 6. Open your Mendix test project in **test/MxTestProject** in Mendix Studio Pro.
 7. Run the project locally.
@@ -258,7 +258,7 @@ The UI of your widget does not look like a group box yet. Apply a default style 
 
 	![black white widget](attachments/build-native-widget/3-bw-header.png)
 
-When you build a widget for native mobile, keep in mind that the widget can be used on both iOS and Android. Both plaforms have their own design language, and you should adhere as much as possible to both languages. To do this, you will sometimes need to define platform-specific styling or use platform-specific React Native components.
+When you build a widget for native mobile, keep in mind that the widget can be used on both iOS and Android. Both platforms have their own design language, and you should adhere as much as possible to both languages. To do this, you will sometimes need to define platform-specific styling or use platform-specific React Native components.
 
 For the group box widget it would be nice to have square corners on Android devices. Apply this style behavior with the following steps:
 
@@ -608,9 +608,9 @@ It would be nice to hide the content area of the group box completely when there
 
 5. Delete the empty **Group box** widget you created in the previous step, then rerun your app to save your changes.
 
-#### 3.3.3 Making the Widget Collapsilble
+#### 3.3.3 Making the Widget Collapsible
 
-Now that your widget can contain content, the next challange is to hide this content by making the group box collapsible.
+Now that your widget can contain content, the next challenge is to hide this content by making the group box Collapsible.
 
 To start, make the complete header clickable:
 
@@ -667,7 +667,7 @@ To start, make the complete header clickable:
 
 5. Make sure all files have been saved.
 6. Reload your test app in the Make it Native app to view the change.
-7. Verify the header is clickable by tapping it. You should see a light-up effect on iOS. Note that on Android, the ripple effect is not visible on a black background, so you cannot verify yet if it's clickable.
+7. Verify the header is clickable by tapping it. You should see a light-up effect on iOS. Note that on Android, the ripple effect is not visible on a black background, so you cannot verify yet if it is clickable.
 
 Now make it possible to expand or collapse the group box:
 
@@ -914,7 +914,7 @@ Next you have to pass the icons configured by the Mendix developer to your displ
 	![euro](attachments/build-native-widget/euro-icon.png)
 
 10. Click **OK**, then run the app locally.
-11. Inspect your changes. Notice that you cannot see any icon in group box's header. This is because your background color and text color are both black. Remember that in the **defaultStyle** constant of your display component you defined that text of React Native components that get the **headerContent** style applied to it should be white. However, you are not explicitly applying this style to our **Icon** component that you pass from our container component to the display component. You could argue to move the creation of the **Icon** component inside your display component, but this will go against the strict seperation of concerns related to the container and display component, since the **Icon** component is Mendix specific. Therefore, it should be part of the container component.
+11. Inspect your changes. Notice that you cannot see any icon in group box's header. This is because your background color and text color are both black. Remember that in the **defaultStyle** constant of your display component you defined that text of React Native components that get the **headerContent** style applied to it should be white. However, you are not explicitly applying this style to our **Icon** component that you pass from our container component to the display component. You could argue to move the creation of the **Icon** component inside your display component, but this will go against the strict separation of concerns related to the container and display component, since the **Icon** component is Mendix specific. Therefore, it should be part of the container component.
 
 Fix your icon issue by introducing a default style for your container component:
 
@@ -1171,7 +1171,7 @@ Now support this section's two features with your display component:
 	}
 	```
 
-3. Change the initilization of the state so that the collapsed state starts with the value passed through the **startCollapsed** prop:
+3. Change the initialization of the state so that the collapsed state starts with the value passed through the **startCollapsed** prop:
 
 	```tsx
 	readonly state: GroupBoxState = {
@@ -1179,7 +1179,7 @@ Now support this section's two features with your display component:
 	};
 	```
 
-	If you do not want the group box to be collapsible at all, you must remove the **Touchble** component that wraps the header to prevent toggling the collapsed state. Moreover, remove the icons inside the header indicating the group box is collapsible. Enact these changes by following these steps:
+	If you do not want the group box to be collapsible at all, you must remove the **Touchable** component that wraps the header to prevent toggling the collapsed state. Moreover, remove the icons inside the header indicating the group box is collapsible. Enact these changes by following these steps:
 
 1. Change the **renderHeader** method so that it does not render the **Touchable** component around the header **View** component:
 
@@ -1305,7 +1305,7 @@ The last thing to do is change the container component so that the properties ge
 
 #### 3.3.6 Adding a Custom Default Style
 
-Although you have an extensively featured group box widget, you can still improve its styling. Currently, the widget recieves basic styling which has been baked its code. You can make the Mendix Client override this default styling by defining a custom default style for the widget in Atlas UI. To define a custom default style, follow these steps:
+Although you have an extensively featured group box widget, you can still improve its styling. Currently, the widget receives basic styling which has been baked its code. You can make the Mendix Client override this default styling by defining a custom default style for the widget in Atlas UI. To define a custom default style, follow these steps:
 
 1. Open **test/MxTestProject/theme/styles/native/app/custom.js**. This file will let you define a custom default style for your group box widget.
 
@@ -1328,7 +1328,7 @@ Although you have an extensively featured group box widget, you can still improv
 	};
 	```
 
-   Note that the name of the constant has to be almost the same as the widget id. However, the widget id's periods need to be underscores. Using this convention, the Mendix Client can apply the custom style defined in this constant to the group box widget.
+   Note that the name of the constant has to be almost the same as the widget ID. However, the widget ID's periods need to be underscores. Using this convention, the Mendix Client can apply the custom style defined in this constant to the group box widget.
 
 3. Save the file and refresh the your app in the Make It Native app to see your new default style. On Android, note the ripple effect on the header that was previously not visible:
 
@@ -1336,7 +1336,7 @@ Although you have an extensively featured group box widget, you can still improv
 
 ### 3.3.7 Adding a Design Property
 
-It would be nice to provide the developer with some pre-definded styles that can be used for the group box. Create three style classes for the group box based on the brand colors success, warning, and danger:
+It would be nice to provide the developer with some pre-defined styles that can be used for the group box. Create three style classes for the group box based on the brand colors success, warning, and danger:
 
 1. In **test/MxTestProject/theme/styles/native/app/custom.js**, add the following constants to end of the file:
 
@@ -1385,7 +1385,7 @@ It would be nice to provide the developer with some pre-definded styles that can
 
 	![warning styling](attachments/build-native-widget/10-warning-styling.png)
 
-Defining all the different styles inside **test/MxTestProject/theme/styles/native/app/custom.js** can make your code less readable. To prevent this, extract the styles specifically for the group box widget and store them in a seperate file:
+Defining all the different styles inside **test/MxTestProject/theme/styles/native/app/custom.js** can make your code less readable. To prevent this, extract the styles specifically for the group box widget and store them in a separate file:
 
 1. Create a new file **test/MxTestProject/theme/styles/native/app/group-box.js**.
 2. Move all the code from **test/MxTestProject/theme/styles/native/app/custom.js** into the new file.

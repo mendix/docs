@@ -198,7 +198,7 @@ Define the structure and default style of the group box widget with these steps:
 7. Run the project locally.
 8. Verify with the Make It Native app that your app looks like the image below:
 
-	![basic app](attachments/build-native-widget/2header-caption-mobile.png)
+	![basic app](attachments/build-native-widget/2-header-caption-mobile.png)
 
 The UI of your widget does not look like a group box yet. Apply a default style to make it look like one with the following steps:
 
@@ -1072,9 +1072,9 @@ First change the widget property configuration:
 	
 4. Add this image as a widget icon by following the substeps below:
 
-	a. Download this image: 
+	a. Download this image:
 
-		![Group box icon](attachments/build-native-widget/GroupBox.png)
+	![Group box icon](attachments/build-native-widget/group-box.png)
 
 	b. Generate a Base64 representation of the *.png* file:
 

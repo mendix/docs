@@ -14,32 +14,35 @@ The [Native Builder](/howto/mobile/native-builder) is a command line input tool 
 We are heavily invested in streamlining the experience of building your apps and are continuously improving upon the tool's capabilities. For more information on using the Native Builder, see [How to Package Native Apps using Native Builder](/howto/mobile/native-builder).
 
 ## 3.0.0
+
 **Release date: October 29th, 2019**
 
 ### Improvements
-This release marks a re-architecure of Native Builder.
 
-In a glimpse: 
-- Native Builder upgrade mechanism
-- More structured command API
-- An upgrade path for your projects
-- Better error messages
+This release marks a re-architecure of the Native Builder.
 
-You can now upgrade Native Builder from the CLI itself. On each startup, Native Builder is evaluating its version against the latest and shows a message when an update is available. If you wish to upgrade call `cli upgrade` and Native Builder will upgrade itself to the latest version. That will allow us to deploy features and fixes faster, while keeping you updated on the latest version at all time.
+Improvements at a glance:
 
-We also rethought the command API for Native Builder. We introduced `prepare` and `build` as the two new commands. The idea is to separate the configuration that belongs in the preparation stage of a build, as are API keys, project name, runtime url etc., from the actual build that technically should only require a build number and version number. To that regard we also introduced a new argument `--project-name` which allows the explicit seperation of a Mendix project from the App's name and that is used as an identifier for the project you are building. When preparing a project with `prepare` all configuration is cached locally, that means that when building the command can now look like as simple as: 
+* Native Builder upgrade mechanism
+* More structured command API
+* An upgrade path for your projects
+* Better error messages
+
+You can now upgrade the Native Builder from your command line interface. On each startup, the Native Builder now evaluates its version against the latest version and shows a message when an update is available. If you wish to upgrade, call `cli upgrade` and the Native Builder will upgrade itself to the latest version. This will allow us to deploy features and fixes faster, while keeping you on the latest version.
+
+We also reworked the command API for the Native Builder. We introduced two new commands: `prepare` and `build`. These commands separate the preparation configuration from your actual build. Specifically, preparation requires several pieces of app information during configuration, while the build process requires only a build number and a version number. To further simplify app building, we also introduced a new argument: `--project-name`. This argument allows for an explicit seperation between a Mendix project and the app's name. When preparing a project with `prepare`, all configuration is cached locally. That means that building the command can look as simple as this: 
 
 `build --project-name "My Mendix Project" --app-version "1.0.0" --build-number 1`
 
-Of course updating any of the configuration is still possible by calling: 
+Updating any of your configuration is still possible by calling this: 
 
 `prepare --project-name "My Mendix Project" --github-api-token "" <the arguments to update with new values>`
 
-In addition two new arguments have been added to build, `--platform` and `--skip-mxbuild`. The first one allows the build for a specific platform, iOS or Android, the later allows the skipping of the project's build and is useful in case of a successful mx build but failed later step.
+In addition, two new arguments have been added to build: `--platform` and `--skip-mxbuild`. The `--platform` argument allows the build for a specific platform, iOS or Android, while `--skip-mxbuild` allows you to skip the project's build. Skipping a build is useful in  the case of a successful MxBuild but a failed later step.
 
-We also invested time into introducing a viable upgrade path for your repositories. Before, Native Builder was unable to notify you of new versions of the Native Template. As part of the re-architectured we initiated a version everything policy. Native Template is from now on versioned. If you wish to update your project's repo, you can use the newly added `regenerate` command. The command does a gracefully update of your repository and Appcenter configuration. Your current repository is renamed with a timestamp as a backup measure and a new one is created for you using the latest release of Native Template, while you Appcenter project's configurations are updated to support the new template.
+We also developed a viable upgrade path for your repositories. Before, the Native Builder was unable to notify you of new versions of the Native Template. As part of new architecture, we initiated a versioning policy across the board. From now on, the Native Template is versioned. If you wish to update your project's repository, you can use the newly added `regenerate` command. The command does a graceful update of your repository and App Center configuration. Your current repository is renamed with a time stamp as a backup measure and a new one is created for you using the latest release of the Native Template while your App Center project's configurations are updated to support the new template.
 
-Finally we worked on the error output of Native Builder. We added error messages where before were missing and updated the ones that were lacking context.
+Finally, we worked on the error output of the Native Builder. We added error messages which had been missing and updated the ones that were lacking context.
 
 ## 2.0.0
 

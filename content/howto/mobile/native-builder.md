@@ -22,7 +22,7 @@ The Native Builder takes your Mendix project containing a native profile and pac
 
 ## 3 About the Native Builder
 
-The Native Builder uses MxBuild, GitHub, and App Center to build your applications. The tool automates the configuration of these processes to streamline your app building experience. The Native builder allows you to create as many apps on GitHub as possible, as long as they are given unique app names using the `--project-name` parameter (for more information, see [Commands](#commands) below). Using the `prepare` and `build` command combination, the Native Builder packages your apps by doing the following:
+The Native Builder uses MxBuild, GitHub, and App Center to build your applications. The tool automates the configuration of these processes to streamline your app building experience. The Native builder allows you to create as many apps on GitHub as possible, as long as they are given unique app names using the `--project-name` parameter (for more information, see the [Commands](#commands) section below). Using the `prepare` and `build` command combination, the Native Builder packages your apps by doing the following:
 
 1. Deploys your Mendix project locally.
 2. Creates a new repository using the Mendix native template repository on GitHub named after the app name provided.
@@ -34,21 +34,22 @@ The Native Builder uses MxBuild, GitHub, and App Center to build your applicatio
 8. Downloads the zipped app if the build succeeded, or the build log file if the build failed.
 
 ### 3.1 Initial Run
-A build with Native builder can be thought as a two step process. First you need to prepare a project to be build. Run `prepare` and pass all required parameters. Let us prepare a build target for Native Builder named Mendix App that will generate an app called New App when build:
+
+A build with the Native Builder can be thought of as a two-step process. First, you need to prepare a project to be built. Run `prepare` and pass all required parameters. Prepare a build target for the Native Builder named Mendix App that will generate an app called New App when built:
 
 `native-builder.exe prepare --java-home "c:\Java" --mxbuild-path "c:\Mendix\mxbuild.exe --project-path "c:\MendixApp\MendixApp.mpr" --github-access-token "12345..." --app-center-api-token "12345..." --project-name "Mendix App" --app-name "New App" --app-identifier "com.mycompany.newapp --runtime-url "https://mendixapp.mendixcloud.com"`
 
-Given that this is our first run the `prepare` command will fail with a warning on the step configuring Appcenter to be able to read your repo. To solve this we would have to consult [Completing Your Initial Run](#7-Completing-Your-Initial-Run) section and then re-run the `prepare` command.
+Because this is your first run, the `prepare` command will fail. It will show a warning while it configures App Center to be able to read your repository. To solve this, consult the [Completing Your Initial Run](#7-Completing-Your-Initial-Run) section and then run the `prepare` command again.
 
-In most cases the `prepare` command has to be ran once, as this configuration is cached localy and can be loaded by Native Builder using the unique project name provided. 
+In most cases the `prepare` command must only be run once, as this configuration is cached locally and can be loaded by the Native Builder using the unique project name provided. 
 
-Hereafter, building your app requires you to call the build command using the project name, the app version and build number: 
+Hereafter, building your app requires you to call the `build` command using the project name, the app version, and build number: 
 
 `native-builder.exe build --project-name "Mendix App" --app-version "1.0.0" --build-number 1`
 
-Optional parameters are duplicated on the `prepare` and the `build` command to allow for flexibility. For instance if the icon or splash screen are still under development for a project, one might choose to not add them as part of the prepare command and directly target them on a per build basis.
+Optional parameters are duplicated on the `prepare` and the `build` command to allow for flexibility. For example, if the icon or splash screen are still under development in a project, you might choose to not add them as part of the `prepare` command and directly target them on a per-build basis.
 
-The commands and the list of arguments supported are extensively explained in the following sections.
+The commands and the list of arguments supported are explained in the following sections.
 
 ## 4 Getting Your Tokens
 
@@ -83,7 +84,7 @@ Command-line arguments provide information to the Native Builder, such as where 
 
 ### 5.1 Prepare
 
-The `Prepare` command handles the creation of the app on both GitHub and AppCenter, sets up icon assets and splash images, and then performs verification for Java, Mendix and Project paths. A configuration file is generated relative to the user folder to keep that information for later use. You can update this configuration using the `prepare` command and passing the arguments you would like to update.
+The `Prepare` command handles the creation of the app on both GitHub and App Center, sets up icon assets and splash images, and then verifies for Java, Mendix, and project paths. A configuration file is generated relative to the user folder to keep that information for later use. You can update this configuration by using the `prepare` command and passing the arguments you would like to update.
 
 An example of a `prepare` command:
 
@@ -109,7 +110,7 @@ native-builder.exe prepare --github-access-token <token> --app-center-api-token 
 
 ### 5.2 Build
 
-The `Build` command handles building the JavaScript bundles and assets, creating a build on GitHub, and initializing the build on App Center. 
+The `Build` command builds the JavaScript bundles and assets, creates a build on GitHub, and initializes the build on App Center. 
 
 If you already ran `prepare`, this is an example of a `build` command:
 
@@ -144,21 +145,21 @@ The `regenerate` command recreates the project on GitHub with the latest version
 
 | Parameter                  | Description                                                                 | Example                                             |
 | -------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------- |
-| `--java-home`              | Absolute path to the directory where Java executable is located             | `C:\Program Files\Java\jdk-11.0.1`                  |
-| `--project-path`           | Absolute path to the Mendix project file                                    | `C:\MyApp\MyApp.mpr`                                |
-| `--mxbuild-path`           | Absolute path to MxBuild executable                                         | `C:\Program Files\Mendix\8.0.0\modeler\mxbuild.exe` |
-| `--runtime-url`            | URL of the Mendix Runtime                                                   | `https://myapp.mendixcloud.com`                     |
-| `--github-access-token`    | GitHub access token                                                         | `c0e1dasf1e102c55ded223dbdebdbe59asf95224`          |
-| `--appcenter-api-token`    | App Center API token                                                        | `3e18asdfb43f4fe6c85afsd0bf60dde72f134`             |
-| `--app-name`               | Name of the app to build                                                    | `CoolApp`                                           |
-| `--app-version`            | Version of the app                                                          | `1.2.3`                                             |
-| `--build-number`           | Build number, an arbitrary unique integer value                             | `1`                                                 |
-| `--app-identifier`         | Unique app identifier                                                       | `com.mendix.MyAwesomeApp`                           |
-| `--app-icon-path`          | (Optional) Absolute path to the app icon                                    | `C:\MyAppIcon.png`                                  |
-| `--app-round-icon-path`    | (Optional) Absolute path to the app round icon, specific to android         | `C:\MyAppRoundIcon.png`                             |
-| `--app-splash-screen-path` | (Optional) Absolute path to the app splash screen image                     | `C:\MyAppSplash.png`                                |
-| `--appcenter-organization` | (Optional) Organization name used in App Center                             | `my-company`                                        |
-| `--output-path`            | (Optional) Absolute path to the location where artifacts should be outputed | `C:\Downloads`                                      |
+| `--java-home`              | Absolute path to the directory where Java executable is located.             | `C:\Program Files\Java\jdk-11.0.1`                  |
+| `--project-path`           | Absolute path to the Mendix project file.                                    | `C:\MyApp\MyApp.mpr`                                |
+| `--mxbuild-path`           | Absolute path to MxBuild executable.                                         | `C:\Program Files\Mendix\8.0.0\modeler\mxbuild.exe` |
+| `--runtime-url`            | URL of the Mendix Runtime.                                                   | `https://myapp.mendixcloud.com`                     |
+| `--github-access-token`    | GitHub access token.                                                         | `c0e1dasf1e102c55ded223dbdebdbe59asf95224`          |
+| `--appcenter-api-token`    | App Center API token.                                                        | `3e18asdfb43f4fe6c85afsd0bf60dde72f134`             |
+| `--app-name`               | Name of the app to build.                                                    | `CoolApp`                                           |
+| `--app-version`            | Version of the app.                                                          | `1.2.3`                                             |
+| `--build-number`           | Build number, an arbitrary unique integer value.                             | `1`                                                 |
+| `--app-identifier`         | Unique app identifier.                                                       | `com.mendix.MyAwesomeApp`                           |
+| `--app-icon-path`          | (Optional) Absolute path to the app icon.                                    | `C:\MyAppIcon.png`                                  |
+| `--app-round-icon-path`    | (Optional) Absolute path to the app round icon, specific to Android.         | `C:\MyAppRoundIcon.png`                             |
+| `--app-splash-screen-path` | (Optional) Absolute path to the app splash screen image.                     | `C:\MyAppSplash.png`                                |
+| `--appcenter-organization` | (Optional) Organization name used in App Center.                             | `my-company`                                        |
+| `--output-path`            | (Optional) Absolute path to the location where artifacts should be outputed. | `C:\Downloads`                                      |
 
 An example of a `regenerate` command:
 
@@ -174,7 +175,7 @@ native-builder.exe regenerate --projectName "CoolApp"
 
 #### 6.1 --project-name
 
-This parameter is the unique name of your app, and can contain any characters you choose. This name is used to persist common parameter configurations like the `--github-access-token` to your machine to improve reusability with other commands that would need it. It is also used as the app’s name in GitHub and App Center.
+This parameter is the unique name of your app, and can contain any characters. This name is used to persist common parameter configurations like `--github-access-token` to your machine. This improves reusability with other commands that would need it. It is also used as the app’s name in GitHub and App Center.
 
 #### 6.2 --runtime-url
 
@@ -198,11 +199,11 @@ This parameter serves as a unique identifier for your app, which must conform to
 
 #### 6.8 --platform
 
-This parameter allows selective builds per specific platform or for both. By default, Native Builder tries to build for both platforms but this parameter can limit a build to either iOS or Android only.
+This parameter allows selective builds per specific platform or for both. By default, the Native Builder tries to build for both platforms but this parameter can limit a build to either iOS or Android only.
 
 #### 6.9 --skip-mxbuild
 
-In rare cases, errors might occur after the bundling process had completed. This parameter will allow you to skip MxBuild during testing to save time.
+In rare cases, errors might occur after the bundling process has completed. This parameter will allow you to skip MxBuild during testing to save time.
 
 #### 6.10 --app-icon-path
 

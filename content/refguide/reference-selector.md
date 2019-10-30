@@ -79,12 +79,9 @@ The formatting section applies only to the way that numeric attributes are displ
 * Integer
 * Long
 
-{{% todo %}}[Need to do something about numeric formatting]{{% /todo %}}
-
-{{% snippet file="refguide/numeric-formatting.md" %}}
+{{% snippet file="refguide/numeric-formatting-link.md" %}}
 
 ### 2.7 General Section{#general}
-
 
 #### 2.7.1 Select Using{#select-using}
 

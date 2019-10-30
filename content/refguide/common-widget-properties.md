@@ -216,3 +216,69 @@ The template for the label can contain parameters that are written as a number b
 #### 7.2.2 Parameters
 
 For each parameter in the template, you define an attribute of the context entity or a referred entity, of which the value will be inserted at the position of the parameter.
+
+## 8 Numeric Formatting{#numeric-formatting}
+
+Numeric formatting describes the way that numeric attributes are displayed. These are attributes of the following data types:
+
+* Decimal
+* Integer
+* Long
+
+When a widget contains a numeric attribute, the **Formatting** section allows you to change the way it is displayed.
+
+There are three options, described below:
+
+* Group Digits
+* Decimal Mode
+* Decimal Precision
+
+### 8.1 Group Digits
+
+For ease of reading, numbers with many digits before the decimal separator may be divided into groups using a delimiter when they are displayed. If the widget is editable and is the current focus of the page, then the delimiters will *not* be displayed.
+
+This setting applies to all three numeric data types.
+
+Set **Group digits** to **Yes** to display these groups.
+
+_Default value:_ No
+
+**Example**
+
+For example, with **Group digits** set to `true`, the number `1100100.01` will be displayed as `1,100,100.01`.
+
+### 8.2 Decimal Mode{#decimal-mode}
+
+{{% alert type="info" %}}
+This mode only applies to attributes of type Decimal.
+{{% /alert %}}
+
+If set to _Fixed_, the decimal part always will be displayed with the number of places specified in the [Decimal precision](#decimal-precision) property. The value will be rounded using the method defined in the [rounding](project-settings#rounding) section of *Project Settings*.
+
+If set to _Auto_, the whole decimal part of the attribute value will be displayed. No decimal part will be be displayed if the attribute value is an integer.
+
+_Default value:_ Fixed
+
+**Examples**
+
+| Value    | Fixed (2)  | Fixed (4)    | Auto     |
+| -------- | ---------- | ------------ | -------- |
+| 19.0     | 19.00      | 19.0000      | 19       |
+| 19.99    | 19.99      | 19.9900      | 19.99    |
+| 19.9944  | 19.99<sup><small>*</small></sup> | 19.9944      | 19.9944  |
+| 19.9999  | 20.00<sup><small>*</small></sup> | 19.9999      | 19.9999  |
+| 19.99999 | 20.00<sup><small>*</small></sup> | 20.0000<sup><small>*</small></sup> | 19.99999 |
+
+<sup><small>*</small></sup>The value is rounded to the nearest decimal with the defined number of decimal places.
+
+### 8.3 Decimal Precision{#decimal-precision}
+
+{{% alert type="info" %}}
+This only applies to attributes of type Decimal and is available only when the [Decimal mode](#decimal-mode) is set to **Fixed**.
+{{% /alert %}}
+
+The precision of a value describes the number of decimal places that are used to express that value. This property indicates the number of decimal places (the number of digits following the point).
+
+The way that the number is rounded when displayed is defined in the [rounding](project-settings#rounding) section of *Project Settings*.
+
+_Default value:_ 2

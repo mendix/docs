@@ -8,9 +8,17 @@ tags: ["studio", "consistency errors", "checks", "errors", "page editor"]
 
 ## 1 Introduction 
 
-In this document, we will explain how to solve the most common consistency errors that can occur you  configure pages in Mendix Studio.
+In this document, we explain how to solve the most common consistency errors that can occur you  configure pages in Mendix Studio. For more information on pages, see [Pages](page-editor).
 
 An example of a consistency error is when you do not specify the entity property of a data view on a page. 
+
+{{% alert type="info" %}}
+
+This document does not describe *all* the errors, as there are a lot of errors that can occur, some of which are simple and do not need extra explanation, others are rare and/or heavily dependent on a use-case. 
+
+{{% /alert %}}
+
+Some errors have error codes and if these errors are described in documentation, Studio has a clickable link to the corresponding document. Others do not have an error code, in this case, you can manually search whether a particular error is described in documentation (you can search by a message you see in the **Checks** panel).
 
 ## 2 List View Consistency Errors 
 

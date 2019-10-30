@@ -20,6 +20,8 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 * In the **Environments** page, when you click the **Details** button for a **Production** environment and successfully complete two-factor authentication you are redirected to the **Acceptance** environment of your app, *not the Production environment*. (Ticket 90999)
 
+    * Workaround – Choose the **Details** for the **Production** environment again and you will be taken to the correct environment.
+
 ### September 27th, 2019
 
 #### Update of `*.mendixcloud.com` SSL/TLS certificate

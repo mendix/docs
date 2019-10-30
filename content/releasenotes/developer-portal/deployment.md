@@ -16,6 +16,10 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 * We have upgraded Mendix Cloud Deployment and Operation. It is now a Mendix 7 app.
 
+**Known Issue**
+
+* In the **Environments** page, when you click the **Details** button for a **Production** environment and successfully complete two-factor authentication you are redirected to the **Acceptance** environment of your app, *not the Production environment*. (Ticket 90999)
+
 ### September 27th, 2019
 
 #### Update of `*.mendixcloud.com` SSL/TLS certificate

@@ -7,9 +7,15 @@ tags: ["Studio Pro", "consistency errors", "checks", "errors", "navigation"]
 
 ## 1 Introduction 
 
-In this document, we will explain how to solve the most common consistency errors that can occur when configuring navigation in Studio Pro. 
+In this document, we explain how to solve the most common consistency errors that can occur when configuring navigation in Studio Pro. An example of a consistency error is when you set a page that has a data view as a menu item. 
 
-An example of a consistency error is when you set a page that has a data view as a menu item. 
+{{% alert type="info" %}}
+
+This document does not describe *all* the errors, as there are a lot of errors that can occur, some of which are simple and do not need extra explanation, others are rare and/or heavily dependent on a use-case. 
+
+{{% /alert %}}
+
+Some errors have error codes and if these errors are described in documentation, Studio Pro has a clickable link to the corresponding document. Others do not have an error code, in this case, you can manually search whether a particular error is described in documentation (you can search by a message you see in the **Errors** pane).
 
 ## 2 Navigation Consistency Errors 
 

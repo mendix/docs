@@ -9,7 +9,9 @@ tags: ["studio pro"]
 
 ## 1 Introduction
 
-A navigation tree displays menu items configured in a [navigation](navigation) or [menu](menu) document in the form of a tree. The menu structure of a navigation tree can have three levels, that means that menu items can have sub-items. For more information on menu items and their properties, see [Menu](menu). 
+A navigation tree displays menu items of a [navigation profile](navigation#profiles) or [menu](menu) document in the form of a tree. These items are determined by the [**Menu source**](#menu-source) and are either configured in the **[Navigation](navigation)** or a **[Menu](menu)**.
+
+The menu structure of a navigation tree can have three levels, that means that menu items can have sub-items. For more information on menu items and their properties, see [Menu](menu). 
 
 ![Navigation Tree](attachments/menu-widgets/navigation-tree.png)
 
@@ -38,11 +40,11 @@ Navigation tree properties consist of the following sections:
 
 #### 2.3.1 Menu Source {#menu-source}
 
-The items that are shown in the menu widget are determined by the menu source. A menu widget is either filled from a menu configured in the [Navigation](navigation) document or a [Menu](menu) document.
+The items that are shown in the menu widget are determined by the **Menu source**. Possible menu sources are described in the table below:
 
 | Value              | Description                                                  |
 | ------------------ | ------------------------------------------------------------ |
-| Project navigation | The menu items are taken from one of profiles defined in the [navigation](navigation) document. |
+| Project navigation | The menu items are taken from one of profiles defined in the [**Navigation**](navigation). |
 | Menu document      | The menu items are taken from a [menu](menu) document.       |
 
 _Default value:_ Project navigation

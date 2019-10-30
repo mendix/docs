@@ -9,7 +9,9 @@ tags: ["studio pro"]
 
 ## 1 Introduction
 
-A menu bar shows menu items configured in a [navigation](navigation) or [menu](menu) document in the form of a horizontal bar with items. Menu bars can go two levels deep, that means menu items can have sub-items. For more information on menu items and their properties, see [Menu](menu).
+A menu bar shows menu items of a [navigation profile](navigation#profiles) or in a [menu](menu) document in the form of a horizontal bar with items. These items are determined by the [**Menu source**](#menu-source) and are either configured in the **[Navigation](navigation)** or a **[Menu](menu)**.
+
+Menu bars can go two levels deep, that means menu items can have sub-items. For more information on menu items and their properties, see [Menu](menu).
 
 ![Menu Bar](attachments/menu-widgets/menu-bar.png)
 
@@ -38,12 +40,12 @@ Menu bar properties consist of the following sections:
 
 #### 2.3.1 Menu Source {#menu-source}
 
-The items that are shown in the menu widget are determined by the menu source. A menu widget is either filled from a menu configured in the [Navigation](navigation) document or a [Menu](menu) document.
+The items that are shown in the menu widget are determined by the **Menu source**. Possible menu sources are described in the table below:
 
 | Value              | Description                                                  |
 | ------------------ | ------------------------------------------------------------ |
-| Project navigation | The menu items are taken from one of profiles defined in the [Navigation](navigation) document. |
-| Menu document      | The menu items are taken from a [Menu](menu) document.       |
+| Project navigation | The menu items are taken from one of profiles defined in the [**Navigation**](navigation#profiles). |
+| Menu document      | The menu items are taken from a [menu](menu) document.       |
 
 _Default value:_ Project navigation
 
@@ -55,7 +57,7 @@ _Default value:_ Responsive
 
 #### 2.3.3 Menu 
 
-Only available when the [menu source](#menu-source) is set to **Menu document**. The **Menu** property specifies what [Menu](menu) document is used for the widget.
+Only available when the [menu source](#menu-source) is set to **Menu document**. The **Menu** property specifies what [menu](menu) document is used for the widget.
 
 ## 3 Read More
 

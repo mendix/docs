@@ -265,7 +265,7 @@ When you build a widget for native mobile, keep in mind that the widget can be u
 For the group box widget it would be nice to have square corners on Android devices. Apply this style behavior with the following steps:
 
 
-1. In **src/components/HelloWorldSample.tsx** we have to adjust import statement in order to use the **Platform** detection feature. Change the import from this:
+1. In **src/components/HelloWorldSample.tsx** you must adjust the import statement in order to use the **Platform** detection feature. Change the import from this:
 
 	```tsx
 	import { Text, View } from "react-native";
@@ -444,7 +444,7 @@ Next you will allow the Mendix developer to alter the header caption of your wid
 	}
 	```
 
-	You still need to use the headerCaption prop in the render method to display the actual text in your header. Adjust the render method like this:
+5. You still need to use the **headerCaption** prop in the render method to display the actual text in your header. Adjust the render method like this:
 
 	```tsx
 	render(): ReactNode {

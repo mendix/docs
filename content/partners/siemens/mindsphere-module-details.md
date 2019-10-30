@@ -230,54 +230,57 @@ In index.html, in the header before the line `{{themecss}}`, the following scrip
 				return "";
 		}
 
-		var xrsfToken = getCookie("XSRF-TOKEN");
 		if (window.fetch) {
-			var originalFetch = window.fetch;
-			window.fetch = function(url, init) {
-				if (!init) {
-					init = {};
-				}
-				if (!init.headers) {
-					init.headers = new Headers();
-				}
-				var tokenAvailable = init.headers.get("x-xsrf-token");
-
-				if (!tokenAvailable) {
-					init.headers.set("x-xsrf-token", xrsfToken);
-				}
-				return originalFetch(url, init);
-			}
-		}
-
-		var originalXMLHttpRequest = window.XMLHttpRequest;
-		window.XMLHttpRequest = function() {
-			var result = new originalXMLHttpRequest(arguments);
-
-			// overwrite setRequestHeader function to make sure to set the x-xsrf-token only once
-			result.setRequestHeader = function(header, value) {
-				if (header){
-					if (header.toLowerCase().indexOf("x-xsrf-token") !== -1) {
-						if (this.xsfrTokenSet === true) {
-							// token is already in place -> so do nothing
-							return;
-						}
-						this.xsfrTokenSet = true;
+				var originalFetch = window.fetch;
+				window.fetch = function(url, init) {
+					if (!init) {
+						init = {};
 					}
+					if (!init.headers) {
+						init.headers = new Headers();
+					}
+					var tokenAvailable = typeof init.headers.get === "function" ? init.headers.get("x-xsrf-token") : init.headers.hasOwnProperty("x-xsrf-token");
+
+					if (!tokenAvailable) {
+						if (typeof init.headers.set === "function") {
+							init.headers.set("x-xsrf-token", xrsfToken);
+						} else {
+							init.headers["x-xsrf-token"] = xrsfToken;
+						}
+					}
+					return originalFetch(url, init);
 				}
-				originalXMLHttpRequest.prototype.setRequestHeader
-						.apply(this, arguments);
-			};
+			} else {
+				var originalXMLHttpRequest = window.XMLHttpRequest;
+				window.XMLHttpRequest = function() {
+					var result = new originalXMLHttpRequest(arguments);
 
-			// overwrite open function to make sure to set the x-xsrf-token at least once
-			result.open = function() {
-				originalXMLHttpRequest.prototype.open
-						.apply(this, arguments);
+					// overwrite setRequestHeader function to make sure to set the x-xsrf-token only once
+					result.setRequestHeader = function(header, value) {
+						if (header){
+							if (header.toLowerCase().indexOf("x-xsrf-token") !== -1) {
+								if (this.xsfrTokenSet === true) {
+									// token is already in place -> so do nothing
+									return;
+								}
+								this.xsfrTokenSet = true;
+							}
+						}
+						originalXMLHttpRequest.prototype.setRequestHeader
+							.apply(this, arguments);
+					};
 
-				this.setRequestHeader("x-xsrf-token", xrsfToken);
+					// overwrite open function to make sure to set the x-xsrf-token at least once
+					result.open = function() {
+						originalXMLHttpRequest.prototype.open
+							.apply(this, arguments);
+
+						this.setRequestHeader("x-xsrf-token", xrsfToken);
+					};
+					return result;
+				};
 			};
-			return result;
-		};
-	})();
+		})();
 	// MindSphere specific part-1: ends
 </script>
 ```

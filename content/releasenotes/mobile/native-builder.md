@@ -22,13 +22,9 @@ We are heavily invested in streamlining the experience of building your apps and
 This release marks a re-architecure of the Native Builder.
 
 Improvements at a glance:
-
-* Native Builder upgrade mechanism
 * More structured command API
 * An upgrade path for your projects
 * Better error messages
-
-You can now upgrade the Native Builder from your command line interface. On each startup, the Native Builder now evaluates its version against the latest version and shows a message when an update is available. If you wish to upgrade, call `cli upgrade` and the Native Builder will upgrade itself to the latest version. This will allow us to deploy features and fixes faster, while keeping you on the latest version.
 
 We also reworked the command API for the Native Builder. We introduced two new commands: `prepare` and `build`. These commands separate the preparation configuration from your actual build. Specifically, preparation requires several pieces of app information during configuration, while the build process requires only a build number and a version number. To further simplify app building, we also introduced a new argument: `--project-name`. This argument allows for an explicit separation between a Mendix project and the app's name. When preparing a project with `prepare`, all configuration is cached locally. That means that building the command can look as simple as this: 
 

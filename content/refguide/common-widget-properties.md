@@ -72,6 +72,8 @@ You can see which widgets in a page have styling applied via the style or class 
 
 ### 4.1 Attribute (Path)
 
+This property identifies an attribute which is used in an input widget.
+
 #### 4.1.1 Attribute Input Widgets
 
 With the following widgets, the Attribute (Path) specifies the attribute which is being changed (or displayed) by the widget:
@@ -85,9 +87,9 @@ With the following widgets, the Attribute (Path) specifies the attribute which i
 
 The attribute can be one of the following:
 
-1. An attribute of the entity of the data view that contains the widget.
+1. An attribute of the entity of the data container that contains the widget.
 
-2. An attribute of an entity associated with the data view entity by following one or more associations of type reference through the domain model.
+2. An attribute of an entity associated with the data container entity by following one or more associations of type reference through the domain model.
 
 In the first case we say the widget is connected to an **attribute** and in the second case to an **attribute path**.
 
@@ -99,13 +101,13 @@ In Mendix 8.1 and above, you can edit attributes presented in input widgets over
 
 #### 4.1.2 Association Input Widgets
 
-For widgets which manipulate associations, the Attribute (Path) specifies an attribute which is from an entity which is reachable from the current data view using an association. This applies to the following input widgets:
+For widgets which manipulate associations, the Attribute (Path) specifies an attribute which is from an entity which is reachable from the current data container using an association. This applies to the following input widgets:
 
-*   [**Reference Selector**](reference-selector)
-*   [**Reference Set Selector**](reference-set-selector)
-*   [**Input Reference Set Selector**](input-reference-set-selector)
+*   [Reference Selector](reference-selector)
+*   [Reference Set Selector](reference-set-selector)
+*   [Input Reference Set Selector](input-reference-set-selector)
 
-For these widgets, only an **Attribute path** can be selected. In other words, the selected attribute must be from an entity associated with the data view entity by following an association, of the type which matches the widget, through the domain model.
+For these widgets, only an **Attribute path** can be selected. In other words, the selected attribute must be from an entity associated with the data container entity by following an association, of the type which matches the widget, through the domain model.
 
 {{% alert type="info" %}}
 For these widgets you are selecting an association to another object. The attribute should therefore indicate uniquely to the end-user which object is being selected.
@@ -131,7 +133,7 @@ By default, whether or not an element is displayed in the browser is determined 
 
 #### 5.1.1 Context
 
-The widget can be made visible only if the object of the data view that contains the widget satisfies the specified criteria.
+The widget can be made visible only if the object of the data container that contains the widget satisfies the specified criteria.
 
 A practical example would be a web shop in which the user must submit both billing and delivery information. In this case, you might not wish to bother the user with a second set of address input fields unless they indicate that the billing address and delivery address are not the same. You can accomplish this by making the delivery address fields conditionally visible based on the Boolean attribute `SameBillingAndDeliveryAddress`.
 
@@ -141,7 +143,7 @@ When selected, this shows the widget while a particular attribute has a certain 
 
 ##### Based on Expression {#visibility-based-on-expression}
 
-When selected, this shows the widget while a provided [expression](expressions) evaluates to true. The object of the containing data view is available inside an expression as a `$currentObject` variable. In Mendix 8.1 and above, the expression can access objects of all the data containers enclosing that data container widget. These objects are available under the name of the widget they originate from (for example, `$dataView1`).
+When selected, this shows the widget while a provided [expression](expressions) evaluates to true. The object of the containing data container is available inside an expression as a `$currentObject` variable. In Mendix 8.1 and above, the expression can access objects of all the data containers enclosing that data container widget. These objects are available under the name of the widget they originate from (for example, `$dataView1`).
 
 Note that the expression is evaluated in the browser, and hence, we advise against using "secret" values (like access keys) in it. In particular, we disallow usages of [constants](constants). Also, client-side expressions currently do not support all the functions that are available in the microflows. Please refer to an autocomplete list to know what functions are supported in your version.
 
@@ -165,7 +167,7 @@ The editable property indicates whether the end-user will be able to change the 
 
 ### 6.2 Condition
 
-The widget can be made editable only if the object of the data view that contains the widget satisfies the specified criteria.
+The widget can be made editable only if the object of the data container that contains the widget satisfies the specified criteria.
 
 For example, imagine you are creating a personal details form in which the end-user must enter their marital status. In this case, you might wish to disable the input of a marriage date until the end-user indicates that they are married.
 
@@ -175,7 +177,7 @@ When selected, this enables the widget while a particular attribute has a certai
 
 #### 6.2.2 Based on Expression
 
-When selected, this enables the widget while a provided [expression](expressions) evaluates to true. The object of the containing data view is available inside an expression as a `$currentObject` variable.
+When selected, this enables the widget while a provided [expression](expressions) evaluates to true. The object of the containing data container is available inside an expression as a `$currentObject` variable.
 
 Note that the expression is evaluated in the browser, and hence, we advise against using "secret" values (like access keys) in it. In particular, we disallow usages of [constants](constants). Also, client-side expressions currently do not support all the functions that are available in the microflows. Please refer to an autocomplete list to know what functions are supported in your version.
 
@@ -185,9 +187,9 @@ This property determines how the widget is rendered if it is read-only.
 
 | Value                       | Description |
 |-----------------------------|-------------|
-| Based on data view          | Set to `Control` or `Text` by the containing data view. *(Default value for widgets inside a data view)*
-| Not enclosed by a data view | Defaults to `Text`. *(Default value for widgets outside a data view)*
-| Inherited from snippet call | Set to `Control` or `Text` by the containing data view of the snippet call, or `Text` when the snippet call is not enclosed by a data view. *(Default value for widgets outside a data view inside a snippet)*
+| Based on data container          | Set to `Control` or `Text` by the containing data container. *(Default value for widgets inside a data container)*
+| Not enclosed by a data container | Defaults to `Text`. *(Default value for widgets outside a data container)*
+| Inherited from snippet call | Set to `Control` or `Text` by the containing data container of the snippet call, or `Text` when the snippet call is not enclosed by a data container. *(Default value for widgets outside a data container inside a snippet)*
 | Control                     | Widget is displayed but disabled so the value cannot be modified.
 | Text                        | Widget is replaced by a textual representation of the value.
 
@@ -209,7 +211,7 @@ This property is shown only when Show label is Yes. This property determines wha
 
 #### 7.2.1 Text Template
 
-The template for the label can contain parameters that are written as a number between braces (for example, `{1}`). The first parameter has the number `1`, the second `2`, etc. Note that to use template parameters, the widget must be placed in the context of an entity (for example, inside a data view or list view).
+The template for the label can contain parameters that are written as a number between braces (for example, `{1}`). The first parameter has the number `1`, the second `2`, etc. Note that to use template parameters, the widget must be placed in the context of an entity (for example, inside a data container).
 
 #### 7.2.2 Parameters
 

@@ -10,6 +10,12 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 ## 2019
 
+### October 30th, 2019
+
+#### Mendix Cloud Deployment Upgrade
+
+* We have upgraded Mendix Cloud Deployment and Operation. It is now a Mendix 7 app.
+
 ### September 27th, 2019
 
 #### Update of `*.mendixcloud.com` SSL/TLS certificate

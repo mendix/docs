@@ -104,8 +104,8 @@ Using items in the menu bar of Studio Pro, you can create new projects, deploy a
 | **Debug Windows** > **Breakpoints** | Opens the dockable window pane [Breakpoints](#dockable-panes). |   |
 | **Debug Windows** > **Debugger** | Opens the dockable window pane [Debugger](#dockable-panes). |   |
 | **Debug Windows** > **Variables** | Opens the dockable window pane [Variables](#dockable-panes). |   |
-| **Full Screen** | Hides the title bar and makes the window fill the entire screen. This version of **Full Screen** was introduced in Studio Pro [8.3.0](/releasenotes/studio-pro/8.3#830); in previous versions, the **Full Screen** mode closed all dockable window panes. | |
-| **Distraction Free Mode** | Same as the **Full Screen** mode above, but also closes all dockable window panes. This was introduced in Studio Pro [8.3.0](/releasenotes/studio-pro/8.3#830). | |
+| **Full Screen** | Hides the title bar and makes the window fill the entire screen. This version of **Full Screen** was introduced in Studio Pro [8.3.0](/releasenotes/studio-pro/8.3#830); in previous versions, the **Full Screen** mode closed all dockable window panes. | <kbd>F11</kbd> |
+| **Distraction Free Mode** | Same as the **Full Screen** mode above, but also closes all dockable window panes. This was introduced in Studio Pro [8.3.0](/releasenotes/studio-pro/8.3#830). | <kbd>Shift</kbd> + <kbd>F11</kbd> |
 | **Reset Layout** | Resets the layout of Studio Pro to factory defaults. |   |
 
 ### 4.4 Project Menu

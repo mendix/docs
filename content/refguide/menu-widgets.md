@@ -8,17 +8,17 @@ tags: ["studio pro", "menu widgets", "navigation", "widget"]
 
 ## 1 Introduction
 
-Menu widgets display a menu (navigation) of your application on a page.
+Menu widgets display menu items configured in the [navigation](navigation) or in a [menu](menu) document.
 
-* [**Menu Bar**](menu-bar) – displays [navigation](navigation) configured for the selected profile in a form of a horizontal bar
+* [**Menu Bar**](menu-bar) – displays a [navigation](navigation) or [menu](menu) document in a form of a horizontal bar
 
     ![Menu Bar Example](attachments/menu-widgets/menu-bar-example.png)
 
-* [**Navigation Tree**](navigation-tree) – displays [navigation](navigation) configured for the selected profile in a form of a tree
+* [**Navigation Tree**](navigation-tree) – displays a [navigation](navigation) or [menu](menu) document in a form of a tree
 
     ![Navigation Tree Example](attachments/menu-widgets/navigation-tree-example.png)
 
-* [**Simple Menu Bar**](simple-menu-bar) – displays [navigation](navigation) configured for the selected profile in a form a horizontal or vertical bar 
+* [**Simple Menu Bar**](simple-menu-bar) – displays a [navigation](navigation) or [menu](menu) document in a form a horizontal or vertical bar 
 
     ![Simple Menu Bar Example](attachments/menu-widgets/simple-menu-bar-example.png)
 

@@ -9,11 +9,11 @@ tags: ["studio pro"]
 
 ## 1 Introduction
 
-A simple menu bar shows a configured menu in the form of a horizontal or vertical bar. Sub-items of menu items are not displayed by this widgets, that means the menu structure can only have one level. For more information on menu items and their properties, see [Menu](menu).
+A simple menu bar shows menu items configured in a [navigation](navigation) or [menu](menu) document in the form of a horizontal or vertical bar. Sub-items of menu items are not displayed by this widgets, that means the menu structure can only have one level. For more information on menu items and their properties, see [Menu](menu).
 
 ![Simple Menu Bar](attachments/menu-widgets/simple-menu-bar.png)
 
-## Properties
+## 2 Properties
 
 An example of a simple menu bar properties is represented in the image below:
 
@@ -42,20 +42,20 @@ The items that are shown in the menu widget are determined by the menu source. A
 
 | Value              | Description                                                  |
 | ------------------ | ------------------------------------------------------------ |
-| Project navigation | The menu items are taken from one of the menus defined in the [Navigation](navigation) document. Use this for the main menu of your application. |
-| Menu document      | The menu items are taken from a [Menu](menu) document. Use menu documents for auxiliary menus. |
+| Project navigation | The menu items are taken from one of the profiles defined in the [Navigation](navigation) document. |
+| Menu document      | The menu items are taken from a [Menu](menu) document.       |
 
 _Default value:_ Project navigation
 
 #### 2.3.2 Profile 
 
-Only available when the [menu source](#menu-source) is set to **Project navigation**. The **Profile** property specifies what [navigation profile](navigation#profiles) is used for the widget. 
+Only available when the [Menu source](#menu-source) is set to **Project navigation**. The **Profile** property specifies what [Navigation profile](navigation#profiles) is used for the widget. 
 
 _Default value:_ Responsive
 
 #### 2.3.3 Menu 
 
-Only available when the [menu source](#menu-source) is set to **Menu document**. The **Menu** property specifies what [Menu](menu) document is used for the widget.
+Only available when the [Menu source](#menu-source) is set to **Menu document**. The **Menu** property specifies what [Menu](menu) document is used for the widget.
 
 #### 2.3.4 Orientation
 

@@ -9,7 +9,7 @@ tags: ["studio pro"]
 
 ## 1 Introduction
 
-The menu bar widget shows a configured menu in the form of a horizontal bar with items. Menu bars can go two levels deep, that means menu items can have sub-items. For more information on menu items and their properties, see [Menu](menu).
+A menu bar shows menu items configured in a [navigation](navigation) or [menu](menu) document in the form of a horizontal bar with items. Menu bars can go two levels deep, that means menu items can have sub-items. For more information on menu items and their properties, see [Menu](menu).
 
 ![Menu Bar](attachments/menu-widgets/menu-bar.png)
 
@@ -42,8 +42,8 @@ The items that are shown in the menu widget are determined by the menu source. A
 
 | Value              | Description                                                  |
 | ------------------ | ------------------------------------------------------------ |
-| Project navigation | The menu items are taken from one of the menus defined in the [Navigation](navigation) document. Use this for the main menu of your application. |
-| Menu document      | The menu items are taken from a [Menu](menu) document. Use menu documents for auxiliary menus. |
+| Project navigation | The menu items are taken from one of profiles defined in the [Navigation](navigation) document. |
+| Menu document      | The menu items are taken from a [Menu](menu) document.       |
 
 _Default value:_ Project navigation
 

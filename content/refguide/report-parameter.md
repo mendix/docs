@@ -30,4 +30,4 @@ If the type of the dataset parameter is an object, this property indicates which
 
 ### Name, Class, Style
 
-For details, see [Common Widget Properties](common-widget-properties).
+For details, see [Properties Common for Widgets](common-widget-properties).

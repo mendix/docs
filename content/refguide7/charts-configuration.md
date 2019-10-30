@@ -285,7 +285,7 @@ The properties above are common across the chart types. In this section, the pro
 
     * **Border style**: Straight, Curved
 
-    * **Fill area**: Fill area between data points and x-axis: Yes, No
+    * **Fill area**: Fill area between data points and X-axis: Yes, No
 
 2. **Static series** Tab
 

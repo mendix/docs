@@ -38,7 +38,7 @@ Commit defines the way the object is committed.
 
 {{% alert type="info" %}}
 
-If a flow is triggered from a data view (for example by the 'on change' of an text field) you often do not want to commit the changes you make to the data view object yet. The end user can press the Save or Cancel button to commit or rollback the changes.
+If a flow is triggered from a data view (for example by the 'on change' of an text field) you often do not want to commit the changes you make to the data view object yet. The end-user can press the Save or Cancel button to commit or rollback the changes.
 
 However, if the flow is triggered from a data grid button that just performs an operation on a selection you will want to commit the changes to avoid losing them.
 
@@ -64,7 +64,7 @@ When inside a [nanoflow](nanoflows), the Change object action does not have the 
 If **Commit type** is set to *Yes*, the object is refreshed across the client as if **Refresh in client** was set to *Yes*.
 {{% /alert %}}
 
-_Default value_: No
+*Default value*: No
 
 ### 3.3 Change Members
 

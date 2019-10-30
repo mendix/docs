@@ -13,7 +13,7 @@ Before starting this how-to make sure you have completed the following prerequis
 *   [Creating a basic data layer](../data-models/create-a-basic-data-layer)
 *   [Creating your first two Overview and Detail pages](../front-end/create-your-first-two-overview-and-detail-pages)
 
-## 2 Setting a Default Home Page
+## 2 Setting a Default Home Page {#home}
 
 This section will explain how to set the default home page. Please note that this setting is overridden by the role based home page if you decide to configure that.
 

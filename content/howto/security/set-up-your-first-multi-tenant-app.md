@@ -49,7 +49,7 @@ Let’s first have a look at the domain model of this module to understand its s
 
 The domain model in the solution supports functions to manage user roles, tenants, and tenant users. There is a **Tenant**, which is the equivalent of an **Organization**.
 
-The TenantUser is the entity that can log in. Attributes are used that look like the attributes of the **System.User** entity. The big difference is that you are now in control! As you can also see, the **TenantUser** is allowed to inherit from **System.User** and not from **Administration.Account**. This is done to prevent a negative impact on the performance of this entity by removing unnecessary levels of depth in the inheritance structure.
+The TenantUser is the entity that can sign in. Attributes are used that look like the attributes of the **System.User** entity. The big difference is that you are now in control! As you can also see, the **TenantUser** is allowed to inherit from **System.User** and not from **Administration.Account**. This is done to prevent a negative impact on the performance of this entity by removing unnecessary levels of depth in the inheritance structure.
 
 In the domain model, one delete prevention rule on the **TenantUser_Tenant** association is also included. This is added to prevent the accidental removal of a tenant.
 

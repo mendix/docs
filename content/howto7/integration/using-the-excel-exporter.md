@@ -153,8 +153,6 @@ To set up a template, run your app, view it, and follow these steps:
 
 In this section, you will learn how to call the newly created Excel export template in your application. 
 
-### 6.1 Retrieving the Excel Template & Generating the Document
-
 To retrieve the template and generate the document, follow these steps:
 
 1. Create a microflow that either takes an inbound parameter of the object that needs to be exported, or retrieve that object into your microflow.

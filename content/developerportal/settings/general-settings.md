@@ -25,23 +25,22 @@ The sections below describe the actions you can perform on this page.
 
 ## 2 Mendix Studio {#web}
 
-In the **Studio** section, you can see whether Studio is enabled for the app. You can also do the following:
+In the **Mendix Studio** section, you can see whether Studio is enabled for the app. 
 
+You can also enable Studio if it has not been enabled yet by clicking **Enable Mendix Studio**:
 
-*  Enable Studio if it has not been enabled yet by clicking **Enable Studio**
+![](attachments/not-enabled.png)
 
-	![](attachments/not-enabled.png)
-
-*  Enable collaborative development with Studio for apps using Mendix version [7.23.3](/releasenotes/studio-pro/7.23#7233) and above by clicking **Enable Now** (for more information on the collaborative development process, see [Collaborative Development](/refguide/collaborative-development))
-
-	![](attachments/enable-new-mode.png)
+{{% alert type="info" %}}
+Only Scrum Masters or custom App Team roles with the **App Settings** permission are allowed to enable Studio.
+{{% /alert %}}    
 
 ## 3 Editing Cloud Settings
 
 Click **Cloud Settings** to select the cloud platform on which to deploy your app. The selection of cloud platforms available will depend on the features of your Mendix account.
 
 {{% alert type="info" %}}
-Only users with the **App Settings** permission can change cloud platforms. For default roles, only the **SCRUM Master** has this permission. For more details, see the [App Team Roles](../company-app-roles/index#app-team-roles) section of *Company & App Roles*.
+Only users with the **App Settings** permission can change cloud platforms. For default roles, only the **Scrum Master** has this permission. For more details, see the [App Team Roles](../company-app-roles/index#app-team-roles) section of *Company & App Roles*.
 {{% /alert %}}
 
 ![](attachments/cloudsettings.png)
@@ -65,9 +64,11 @@ You can also manage app users from Studio, by clicking **Manage Users** on the *
 
 After clicking **Manage App Users**, you will see a list of environments for your app on the **App User Management** page. You will only be able to see environments that satisfy these requirements:
 
-* [Mendix Single Sign-On](../deploy/integrate-with-mendix-sso) is implemented:
+* [Mendix Single Sign-On](/developerportal/deploy/integrate-with-mendix-sso) is implemented:
 	* In Studio, SSO is automatically implemented for your app project by enabling security for your app – for details, see the [Enabling Security](/studio/settings-security#enabling-security) section of *Security, Roles & Permissions*
-	* In Studio Pro, SSO can implemented via the [AppCloudServices](https://appstore.home.mendix.com/link/app/934/) module – for details, see [Mendix Single Sign-On](../deploy/integrate-with-mendix-sso)
+	{{% todo %}}[Change this to link to new Mendix SSO module in App Store once it is published]{{% /todo %}}
+	* In Studio Pro, SSO can implemented via the [AppCloudServices](https://appstore.home.mendix.com/link/app/934/) module – for details, see [SSO Using AppCloudServices](/developerportal/deploy/integrate-with-mendix-sso)
+* If you manage user roles from Studio, your app should be published (for more information see the [Managing App Users](/studio/settings-security#managing-app-users) section of *Security, Roles & Permissions* )
 * Your user role allows you to manage other users (for more information, see the [User Management Properties](/refguide/user-roles#user-management) section of *User Roles*)
 
 ![](attachments/app-user-management-environments.png)

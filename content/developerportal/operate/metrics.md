@@ -45,7 +45,7 @@ You can click the following buttons to execute actions:
 *   **Refresh** refreshes the list of running requests
 
 *   **Kill request** stops the selected request
-    {{% alert type="warning" %}}If you kill a request, it will not complete and the end user may receive an error.{{% /alert %}}
+    {{% alert type="warning" %}}If you kill a request, it will not complete and the end-user may receive an error.{{% /alert %}}
     
 *   **Details** shows you the **Action Stack** for the selected request. An Action Stack displays all the actions currently on the call stack. The bottom action is the one which is currently being performed. It was triggered by the action above it and so forth. The details shown for an Action Stack are:
     *   Name
@@ -54,7 +54,7 @@ You can click the following buttons to execute actions:
 
 ## 4 Cache
 
-Mendix runtime version 6 has an object cache for non-persistable objects. In this tab you can see how many objects of each type currently live in memory. You can also see the number of objects broken down by user session.
+Mendix Runtime version 6 has an object cache for non-persistable objects. In this tab you can see how many objects of each type currently live in memory. You can also see the number of objects broken down by user session.
 
 ![User session cache details](attachments/metrics/cache-summary.png)
 

@@ -49,22 +49,20 @@ These settings can be configured as follows:
 You can migrate databases using either Studio Pro, the Service Console, or m2ee-tools. The Service Console gives you the advantage of seeing a progress bar during the copy process, which is handy if you copy a lot of data which takes a long time to execute.
 
 {{% alert type="info" %}}
-
 Database migration is handled by Mendix as a normal database synchronization phase during the start-up process of an app. As a consequence, it is possible that during the start-up process you will get to see messages like ‘The database has to be synchronized’ or you will see an empty message. In the future, tools like the Service Console and m2ee-tools will recognize this phase better and give more appropriate messages. However, these tools already correctly handle the database migration.
-
 {{% /alert %}}
 
 {{% alert type="warning" %}}
+Before the data copying process starts, the main database structure will be generated based on the source database structure. This is necessary to make sure all the data is copied without any problems, especially in cases where the source database has a larger element value than what the current domain model specifies.
 
-Before the data copy process starts, the source database will also be synchronized with the model, just like the main database. This is necessary to ensure that all data is copyied without problems.
-
+As of version [8.1](/releasenotes/studio-pro/8.1), the source database structure and data do not change as part of the migration.
 {{% /alert %}}
 
 ## 3 Migrating a Non-PostgreSQL Database to a PostgreSQL Database
 
 The Mendix cloud environment only uses PostgreSQL as a database server. The recommended way is to migrate your existing on-premises non-PostgreSQL source database to a new on-premises PostgreSQL target database. 
 
-The source database is the database with the data that you would like to migrate to the cloud. The target PostgreSQL database should be completely empty, i.e. it should not contain any tables. In the Mendix project the active configuration in Settings should point to the target database, and you should add the Custom configuration settings for the source database as explained above in the overview.
+The source database is the database with the data that you would like to migrate to the cloud. The target PostgreSQL database should be completely empty, as in, it should not contain any tables. In the Mendix project the active configuration in Settings should point to the target database, and you should add the Custom configuration settings for the source database as explained above in the overview.
 
 Having configured the Mendix project, just run the application locally and it will automatically migrate the database schema and all the data from the source database to the target database. Before exporting the target database, you should always validate it first by viewing the application in a browser. 
 
@@ -88,6 +86,6 @@ To import a PostgreSQL database using the downloaded database file, refer to eit
 
 ### 4.2 Migrating a PostgreSQL Database To a Non-PostgreSQL Database
 
-The source database is a PostgreSQL database with the downloaded database from the Mendix cloud. The target non-PostgreSQL database should be completely empty, i.e. it should not contain any tables. In the Mendix project the active configuration in Settings should point to the target database, and you should add the Custom configuration settings for the source PostgreSQL database as explained above in the overview.
+The source database is a PostgreSQL database with the downloaded database from the Mendix cloud. The target non-PostgreSQL database should be completely empty, as in, it should not contain any tables. In the Mendix project the active configuration in Settings should point to the target database, and you should add the Custom configuration settings for the source PostgreSQL database as explained above in the overview.
 
 Having configured the Mendix project, just run the application locally and it will automatically migrate the database schema and all the data from the source database to the target database. You should always validate it first by viewing the application in a browser.

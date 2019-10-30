@@ -21,7 +21,7 @@ See [Project Security](project-security).
 
 ## Navigation
 
-In navigation you can configure the menu bar and navigation tree for your application. Also you can specify what the home page is, i.e. the page you see right after signing in.
+In navigation you can configure the menu bar and navigation tree for your application. Also you can specify what the home page is, as in, the page you see right after signing in.
 
 See [Navigation](navigation).
 

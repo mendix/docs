@@ -85,9 +85,4 @@ To deploy an app to the cloud, follow these steps:
 
 ## 8 Read More
 
-* [Build a Simple HRM App 1: Create, Manage, and Deploy the App](build-a-simple-hrm-app-1-create-manage-and-deploy-the-app)
-* [Build a Simple HRM App 2: Perform the First Steps to Build a Rich GUI](build-a-simple-hrm-app-2-first-steps-in-building-a-rich-gui)
-* [Build a Simple HRM App 3: Show Related Data in the GUI](build-a-simple-hrm-app-3-show-related-data-in-the-gui)
-* [Build a Simple HRM App 4: Enrich the GUI with Filter Options](build-a-simple-hrm-app-4-enrich-the-gui-with-filter-options)
-* [Build a Simple HRM App 5: Smarten Up Your App with Business Logic](build-a-simple-hrm-app-5-smarten-up-your-app-with-business-logic)
 * [Test Microflows Using the UnitTesting Module](testing-microflows-using-the-unittesting-module)

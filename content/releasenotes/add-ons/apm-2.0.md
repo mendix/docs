@@ -9,7 +9,7 @@ parent: "apm-2"
 * We fixed an issue in which the agent logged a settings change, even though no changes were made.
 * Captured actions of the **Retrieve by XPath** type now include the entity name.
 * When a timeout occurs between the agent and the manager, the agent now logs it as **INFO**.
-* When a connection is lost with the APM Manager, the agent now delays each subsequent call to the manager until a connection has succesfully been made. The maximum delay is 5 minutes per interval.
+* When a connection is lost with the APM Manager, the agent now delays each subsequent call to the manager until a connection has successfully been made. The maximum delay is 5 minutes per interval.
 * We added the capturing of SQL statements to the performance recorder.
 * We added functionality to put a pause on the agent when the manager is down for maintenance.
 * We made various performance optimizations.

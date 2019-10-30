@@ -8,8 +8,6 @@ tags: ["native", "mobile", "developer", "test"]
 
 ## 1 Introduction
 
-{{% todo %}} With next release, also Mention that also possible using blank app or add to existing app project, and how to (because Atlas needs to be updated) {{% /todo %}}
-
 To use Mendix Studio Pro's native app capabilities, you can use the [Native Mobile Quickstart](https://appstore.home.mendix.com/link/app/109511/) app from the Mendix App Store. This app is optimized to quickly build a native mobile app. Out of the box, this app gives you a native page, a native phone profile to enable native device navigation, a native layout with menus, and native widgets and actions which leverage device capabilities.
 
 The Native Mobile Quickstart app also includes four modules:
@@ -29,7 +27,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Creating a New App Project Based on the Quickstart App{#quickstartapp}
 
-For details on making a Mendix app using the Native Mobile Quickstart app template, download the Make It Native app on either the [Google Play store](https://play.google.com/store/apps/details?id=com.mendix.developerapp) or the [Apple App Store](https://apps.apple.com/us/app/make-it-native/id1334081181). Using the Make It Native app to view the changes to your Mendix app, see the sections below.
+For details on making a Mendix app using the Native Mobile Quickstart app template, download the Make It Native app on either the [Google Play store](https://play.google.com/store/apps/details?id=com.mendix.developerapp) or the [Apple App Store](https://apps.apple.com/us/app/make-it-native/id1334081181). This app template includes the latest version of Atlas UI, as well as the [Native Mobile Resources](https://appstore.home.mendix.com/link/app/109513/) module containing widgets and nanoflow actions for native mobile apps. For more information on building native apps, see the [Build a Native Mobile Inspection App](https://gettingstarted.mendixcloud.com/link/path/66) learning path. Using the Make It Native app to view the changes to your Mendix app, see the sections below.
 
 ### 3.1 Starting a Quickstarter App Project
 
@@ -62,14 +60,6 @@ To start a new app based on a template, follow these steps:
 At this point you have a running native app. To view your app on a mobile device, however, you need to download the Make It Native app.
 
 ### 3.2 Downloading and Installing the Make It Native App
-
-{{% todo %}}The sections below describe two options for doing this. #### Option 2: Using Mendix Studio Pro NOT AVAILABLE YET, SO REMOVE (INCLUDING INTRO)
-
-Alternatively, you can navigate to the Make It Native app using Mendix Studio Pro: 
-
-1. In Mendix Studio Pro, click the drop-down menu next to the **View button**, and then click **View in the Mendix App**.
-2. This will bring up a dialog box. In the **Native mobile** tab, click either **Go to play store** or **Go to app store** to be brought to the Google Play Store or Apple App Store pages for the Make It Native app.
-3. In the Apple or Android app store, you can download the Make It Native app to your device.{{% /todo %}}
 
 #### 3.2.1 Downloading for Android
 

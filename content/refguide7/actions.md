@@ -61,7 +61,7 @@ A button is available for complex types (e.g. an entity from your domain model),
 
 ## Return Type
 
-Defines what kind of object will be returned by the action. This can be a simple type (like an integer or string), or a complex type (i.e. an entity from your entity model)
+Defines what kind of object will be returned by the action. This can be a simple type (like an integer or string), or a complex type (as in, an entity from your entity model)
 
 ### Can be empty
 

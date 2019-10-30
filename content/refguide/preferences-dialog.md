@@ -31,7 +31,7 @@ The auto-check delay is the number of milliseconds that Studio Pro waits after a
 
 This is the directory in which the Java Development Kit (JDK) is located on the computer on which you deploy the application. Usually the correct directory is located automatically.
 
-The JDK is necessary to run Mendix applications because the Mendix runtime is written in Java.
+The JDK is necessary to run Mendix applications because the Mendix Runtime is written in Java.
 
 #### Enable run optimizations
 

@@ -19,6 +19,28 @@ Pluggable widgets can also include a preview component for when they are rendere
 
 Pluggable widgets are the successor to [Custom widgets](/howto/extensibility/widget-development). Pluggable widgets are based on a modern React framework, have access to better APIs in the client, and can use more advanced properties in Studio and Studio Pro. Therefore, pluggable widgets allow you to more easily implement existing front-end libraries, tools, and your own expertise. Pluggable widgets should be used instead of custom widgets whenever possible.
 
+| Concept      | Pluggable widgets                                                                                     | Custom widgets                                                           |
+| ------------ | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| Framework    | [React](#3-client-component)                                                                          | [Dojo](/howto/extensibility/widget-development#3-2-dojo)                 |
+| Data access  | Declarative, props-based                                                                              | Imperative, callback-based                                               |
+| Data updates | [Receive updates in props](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets#4-2-dynamicvalue) | [Subscribe](https://apidocs.mendix.com/8/client/mx.data.html#.subscribe) |
+| API          | [Pluggable widgets API](/apidocs-mxsdk/apidocs/pluggable-widgets)                                     | [Mendix client API](https://apidocs.mendix.com/8/client/)                |
+| Platform     | [Web and native](#5-2-widget-description)                                                             | Web                                                                      |
+
+| Feature                                                           | Pluggable widgets                                    | Custom widgets                                                        |
+| ----------------------------------------------------------------- | ---------------------------------------------------- | --------------------------------------------------------------------- |
+| Access to attribute data                                          | [Yes](property-types-pluggable-widgets#attribute)    | Yes                                                                   |
+| Retrieve additional data over associations, microflows, or nanoflows | Planned                                              | [Yes](https://apidocs.mendix.com/8/client/mx.data.html#.get)          |  |
+| Template Text; combine data and translatable text                 | [Yes](property-types-pluggable-widgets#texttemplate) | No                                                                    |
+| Expressions; logic combined with data                             | [Yes](property-types-pluggable-widgets#expression)   | No                                                                    |
+| File support; upload, download, and open                           | No                                                   | [Yes](https://apidocs.mendix.com/8/client/mx.data.html#.saveDocument) |
+| Use conditional visibility                                        | [Yes](property-types-pluggable-widgets#visibility)   | No                                                                    |
+| Use conditional editability                                       | [Yes](property-types-pluggable-widgets#editability)  | No                                                                    |
+| Use glyph icons                                                   | [Yes](property-types-pluggable-widgets#icon)         | No                                                                    |
+| Show input label                                                  | [Yes](property-types-pluggable-widgets#label)        | No                                                                    |
+| Trigger an action on change of attribute                          | [Yes](property-types-pluggable-widgets#attribute)    | No                                                                    |
+| Widgets can contain other widgets                                 | Planned                                              | No                                                                    |
+
 ## 3 Client Component
 
 The essential part of a pluggable widget is its client component: a React component rendered inside the end-user’s app. Creating this component requires some basic React knowledge. Read React's [tutorial](https://reactjs.org/tutorial/tutorial.html) if you have not worked with React before. Note that if you are building a widget to be used in [Native Mobile](/refguide/mobile#nativemobile) apps, you should use [React Native](https://facebook.github.io/react-native/) instead of React.
@@ -27,7 +49,7 @@ The client component is mainly focused on presentation and interaction with an e
 
 A widget component is [mounted](https://en.reactjs.org/docs/react-component.html#mounting) and [unmounted](https://en.reactjs.org/docs/react-component.html#unmounting) when a widget is shown or hidden — for example when a page is opened or due to [conditional visibility](/refguide/conditions). A component receives [props](https://en.reactjs.org/docs/components-and-props.html) which resemble properties described in its widget definition XML file. A prop's key comes from the [`key`](#key-attribute) attribute, and its value is based on the configuration of the property. Prop values are immutable, but the Mendix Platform re-renders the component passing new values when necessary.
 
-A prop value is often not just a primitive value, but an object whose structure depends on the [`type`](#type-attribute) of its widget's property. A prop's values can expose data, metadata, and associated actions — whatever is applicable for the property. Here is an example of one interface. It is a value for an action property, such as the type you would find in the [On click](/refguide/action-button#events-on-click) property of an action button:
+A prop value is often not just a primitive value, but an object whose structure depends on the [`type`](#type-attribute) of its widget's property. A prop's values can expose data, metadata, and associated actions — whatever is applicable for the property. Here is an example of one interface. It is a value for an action property, such as the type you would find in the [On click](/refguide/on-click-event#on-click) property of an action button:
 
 ```ts
     export interface ActionValue {
@@ -45,7 +67,7 @@ A pluggable widget is distributed as single widget package file with an *.mpk* e
 
 Manually building a widget package can be difficult, so Mendix recommends you use scripts provided by the [Mendix Pluggable Widget Generator](https://www.npmjs.com/package/@mendix/generator-widget). For more information on how to use a generator, see [How To Build a Text Box Pluggable Widget: Part 1](/howto/extensibility/create-a-pluggable-widget-one).
 
-A widget package file is just a *zip* archive containing the following things:
+A widget package file is just a ZIP archive containing the following things:
 
 * A *package.xml* file describing the whole package
 * A widget definition XML file, preferably located in *{widgetName}.xml* where `widdgetName` is the last part of widget [ID](#widget-id)
@@ -126,7 +148,25 @@ In Mendix Studio Pro, the widget described above would look like this:
 
 ![basic progress card](attachments/pluggable-widgets/basic-widget-progress-card.png)
 
-### 5.3 Widget Properties Definition {#properties-definition}
+### 5.3 Help Page {#help}
+
+Provide additional help information to your users with the **Help** button widget, assigned to the <kbd>{F1}</kbd> shortcut key. This button is positioned in the left-bottom corner of the popup dialog:
+
+![basic widget](attachments/pluggable-widgets/widget-dialog-help-button.png)
+
+A URL can be provided through the `helpUrl` property:
+
+```xml
+    <helpUrl>https://appstore.home.mendix.com/link/app/105695/</helpUrl>
+```
+
+For more complex help pages you can link to a markdown page. For security reasons, URLs have the following restrictions:
+
+* Must use HTTPS protocol
+* Host name must end with *.mendix.com* or *github.com*
+* If host name is *github.com* the full URL must end with *.md*
+
+### 5.4 Widget Properties Definition {#properties-definition}
 
 This section is represented by the `properties` tag in the widget XML file. It describes widget properties used in Studio and Studio Pro to configure the widget. Here is an example of a properties definition section for a widget which shows a progress card for a dashboard:
 
@@ -179,7 +219,7 @@ This section is represented by the `properties` tag in the widget XML file. It d
     </properties>
 ```
 
-## 6 Property Groups
+## 6 Property Groups {#property-groups}
 
 Before examining properties themselves, it is useful to understand property groups. Property groups are formed by properties wrapped in a `propertyGroup` tag. Studio and Studio Pro use the property groups to render how the widget configuration UI appears in the Studios. Grouping can be used to help the modeling developer understand the configuration of a more complex widget. It is best practice to both use property groups and group properties in the Studios UI based on their purposes. The property groups from the code in [Widget Properties Definition](#properties-definition) above forms the following structure:
 
@@ -211,11 +251,11 @@ This is how the property group structure is represented in Studio Pro:
 
 When properties are shown in a dialog box, first-level groups (**General** and **Visual**) are represented as tabs. Second-level groups (**Main**, **Action** and **Progress bar**) are represented as boxes. When properties are shown in a pane, first-level groups are ignored and second-level groups are shown as categories.
 
-Note that the **Common** and **Appearance** tabs are added to your widget configuration automatically. These tabs contain properties applicable to all widgets: **Name**, **Class**, **Style**, and **Design Properties**.
+Note that the **Common** and **Appearance** tabs are added to your widget configuration automatically. These tabs contain properties applicable to all widgets: [**Name**](/refguide/common-widget-properties#name), [**Class**](/refguide/common-widget-properties#class), [**Style**](/refguide/common-widget-properties#style), and **Design Properties**.
 
 ## 7 Widget Property
 
-Every `property` tag in the Widget Properties Definition has a shape similar to this:
+This section will explain the shape of the widget property. For more detailed information on widget properties, see [Pluggable Widget Property Types](property-types-pluggable-widgets). Every `property` tag in the Widget Properties Definition has a shape similar to this:
 
 ```xml
     <property key="cardName" type="textTemplate">
@@ -239,4 +279,7 @@ Here is how a caption and description look in Studio Pro:
 
 ## 8 Read More
 
-* [Build a Text Box Pluggable Widget: Part 1](/howto/extensibility/create-a-pluggable-widget-one)
+* [Client APIs Available to Pluggable Widgets](client-apis-for-pluggable-widgets)
+* [Pluggable Widget Property Types](property-types-pluggable-widgets)
+* [How to Build Pluggable Widgets](/howto/extensibility/pluggable-widgets)
+

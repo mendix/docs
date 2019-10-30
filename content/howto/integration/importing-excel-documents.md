@@ -220,6 +220,6 @@ You have now imported a complete import template.
 
 ## 9 Read More
 
-* [Export XML documents](export-xml-documents)
-* [Expose a Web Service](expose-a-web-service)
+* [Export XML Documents](export-xml-documents)
 * [Import XML Documents](importing-xml-documents)
+* [Expose a Web Service](expose-a-web-service)

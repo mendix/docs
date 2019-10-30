@@ -109,7 +109,7 @@ The **Object Activities** are described in the table below.
 | Commit         | **Commit** saves changes you have not saved in the database yet. For more information, see [Commit](/refguide/committing-objects) in the *Mendix Studio Pro Guide*. |
 | Create Object  | The **Create Object** action can be used to create a data object. For more information, see [Create Object](/refguide/create-object) in the *Mendix Studio Pro Guide*. |
 | Delete         | **Delete Object** can be used to delete one data object or a list of objects. For more information, see [Delete](/refguide/deleting-objects) in the *Mendix Studio Pro Guide*. |
-| Retrieve       | **Retrieve** can be used to get one or more objects, either by directly traversing an [association](domain-models-association-properties) of another object, or by retrieving objects from the database. For more information, see [Retrieve](/refguide/retrieve) in the *Mendix Studio Pro Guide*. |
+| Retrieve       | **Retrieve** can be used to get one or more objects, either by getting another object through an [association](domain-models-association-properties), or by retrieving objects from the database. For more information, see [Retrieve](/refguide/retrieve) in the *Mendix Studio Pro Guide*. |
 
 ### 5.3 Client Activities Section {#microflow-client-activities}
 
@@ -122,7 +122,7 @@ The **Client Activities** are described in the table below.
 | Close Page     | This activity closes the currently open page. For more information, see [Close Page](/refguide/close-page) in the *Mendix Studio Pro Guide*. |
 | Show Home Page | The **Show Home Page** action navigates to the home page for the current user. It goes to the same page as the user goes to after signing in and respects role-based home pages. For more information, see [Show Home Page](/refguide/show-home-page) in the *Mendix Studio Pro Guide*. <br />For details on setting the home page, see [Navigation Document](navigation). |
 | Show Message   | With the **Show Message** action you can show a blocking or non-blocking message to the user. (Non-blocking message lets users continue their work in the app with the pop-up open, while the blocking message does not let the user continue work until the pop-up window is closed. ) For more information, see [Show Message](/refguide/show-message) in the *Mendix Studio Pro Guide*. |
-| Show Page      | With this action you can show a page to the end user. For more information, see [Show Page](/refguide/show-page) in the *Mendix Studio Pro Guide*. |
+| Show Page      | With this action you can show a page to the end-user. For more information, see [Show Page](/refguide/show-page) in the *Mendix Studio Pro Guide*. |
 
 ### 5.4 Variable Activities
 
@@ -156,7 +156,7 @@ When configuring the activities of the microflows you will notice icons above or
 | Name                  | Image Example                                                | Description                                                  |
 | --------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | Entity                | ![Entity icon](attachments/microflows/entity-icon.png)       | Indicates that the data source for the activity is an entity. |
-| Value                 | ![Value Icon](attachments/microflows/simple-value-icon.png)  | Indicates that the data source for the activity is a simple value, such as decimal, boolean, date and time, etc. |
+| Value                 | ![Value Icon](attachments/microflows/simple-value-icon.png)  | Indicates that the data source for the activity is a simple value, such as decimal, Boolean, date and time, etc. |
 | Commit                | ![Commit Icon](attachments/microflows/commit-icon.png)       | Indicates that the object will be committed. Committing means that the changes will be saved in the database. This can be useful, for example, when you want an object *NewCustomer* to be saved and updated in the tables that contain information about customers. |
 | Commit without events | ![Commit Without Events Icon](attachments/microflows/commit-with-no-events-icon.png) | Indicates that the object will be committed but without events. This means that the object will be saved in the database, but event handlers will not be triggered. For example, the information about a new customer will be saved, but the tables containing information about new customers will not be updated. |
 | Refresh in Client     | ![Refresh in Client Icon](attachments/microflows/refresh-in-client-icon.png) | Indicates that the result of the activity will be displayed to the end-user. |

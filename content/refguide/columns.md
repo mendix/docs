@@ -6,9 +6,9 @@ tags: ["studio pro"]
 ---
 ## Common Properties
 
-{{% snippet file="refguide/Class+Property.md" %}}
+{{% snippet file="refguide/class-property.md" %}}
 
-{{% snippet file="refguide/Style+Property.md" %}}
+{{% snippet file="refguide/style-property.md" %}}
 
 ## Data Source Properties
 
@@ -35,7 +35,7 @@ _Default value:_ 2
 
 ### Group Digits (Only for Numeric Attributes)
 
-For ease of reading, numbers with many digits before the decimal separator may be divided into groups using a delimiter. This property defines whether the end user will see these groups, or not.
+For ease of reading, numbers with many digits before the decimal separator may be divided into groups using a delimiter. This property defines whether the end-user will see these groups, or not.
 
 _Default value:_ False
 
@@ -90,7 +90,7 @@ The caption of a column is the text that appears as a header above the rows. Thi
 
 ### Editable
 
-The editable property indicates whether the values of the column will be editable in-line, i.e. without opening a page with a data view. In-line editing allows the data grid to behave like you would expect from a spreadsheet application.
+The editable property indicates whether the values of the column will be editable inline, as in, without opening a page with a data view. In-line editing allows the data grid to behave like you would expect from a spreadsheet application.
 
 ### Aggregate Function
 

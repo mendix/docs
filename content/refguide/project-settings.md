@@ -105,11 +105,11 @@ Mendix believes both algorithms are secure enough to store passwords within Mend
 
 #### 3.9.1 Performance
 
-This performance difference is hardly noticeable to a single user when logging in (the password you enter when logging in is hashed using the selected algorithm), so in general the performance alone is not a reason to choose SSHA256 over BCrypt. This situation can change when dealing with high concurrency of hashing operations. A common example of an area where this occurs is published web services exposing operations that compute quickly, like short-running microflows.
+This performance difference is hardly noticeable to a single user when signing in (the password you enter when signing in is hashed using the selected algorithm), so in general the performance alone is not a reason to choose SSHA256 over BCrypt. This situation can change when dealing with high concurrency of hashing operations. A common example of an area where this occurs is published web services exposing operations that compute quickly, like short-running microflows.
 
 #### 3.9.2 Performance Tests
 
-A (web service) user will log in to execute a web service operation, wait for the operation to finish, and finally get the result back (if any).
+A (web service) user will sign in to execute a web service operation, wait for the operation to finish, and finally get the result back (if any).
 
 Imagine an empty microflow that returns nothing at all exposed as a published web service. We ask one user to execute this operation as many times as he can in one minute (simulated with SoapUI). First we set the hashing algorithm to BCrypt, then we set it to SSHA256. Any extra overhead here (on top of establishing the connection, building the XML message and so forth) is basically the hashing algorithm, as the operation should take near zero milliseconds and there is no result. So that leaves only the login, or, more precisely, the hashing of the password.
 
@@ -134,7 +134,7 @@ The difference is noticeable when the operation takes less time. So if you expec
 It is important to remember when changing hashing algorithms is that any hashed attribute (like the System$User password attribute) has its algorithm set on hashing. In other words, for the hashing type to take effect, any existing hashed attribute will have to be reset using the new hashing type.
 {{% /alert %}}
 
-### 3.10 Rounding Mode
+### 3.10 Rounding Mode{#rounding}
 
 The rounding mode is used to select how to round numbers when performing calculations.
 
@@ -209,7 +209,7 @@ The way web services are called has been optimized, which means you can use cust
 
 The default language indicates the language that is used when a user has not chosen a language. The default language is also used as a fall-back language when a certain text is not translated to another language.
 
-### 4.2 Languages
+### 4.2 Languages {#languages}
 
 This is the list of languages in which your application will be available for users.
 
@@ -261,21 +261,21 @@ For background information, see [Transport Layer Security (TLS) Renegotiation Is
 
 ### 6.1 UI Resources Package
 
-The look and feel of a Mendix application is governed by the [UI Resources package](ui-resources-package). This package supplies the project with all the required theme information accompanied by matching page templates and building blocks. The module which is designated as the UI Resources package is governed by the **UI resources package** setting. Generally, this is automatically updated when a new UI Resources package is imported. However, with this setting, the desired module can also be set manually.
+The look and feel of a Mendix application is governed by the [UI resources package](ui-resources-package). This package supplies the project with all the required theme information accompanied by matching page templates and building blocks. The module which is designated as the UI resources package is governed by the **UI resources package** setting. Generally, this is automatically updated when a new UI resources package is imported. However, with this setting, the desired module can also be set manually.
 
-### 6.2 Theme Zip File
+### 6.2 Theme ZIP File
 
 {{% alert type="warning" %}}
 
-[Deprecated] The use of a *zip* file to configure a project's theme is deprecated. A [UI Resources package](ui-resources-package) is the preferred method of sharing themes.
+[Deprecated] The use of a ZIP file to configure a project's theme is deprecated. A [UI resources package](ui-resources-package) is the preferred method of sharing themes.
 
 {{% /alert %}}
 
-Older projects may still use a theme *zip* file as the basis for their theme. In this situation, the **Theme ZIP file** setting can be used to switch between any *zip* files found in the **theme** folder. Note that this practice is deprecated and will be removed in a future version.
+Older projects may still use a theme ZIP file as the basis for their theme. In this situation, the **Theme ZIP file** setting can be used to switch between any ZIP files found in the **theme** folder. Note that this practice is deprecated and will be removed in a future version.
 
-Switching from a *zip* file to a UI Resources package is straightforward:
+Switching from a ZIP file to a UI resources package is straightforward:
 
-1. Firstly, replace the contents of the theme folder with the contents of the desired *zip* file.
+1. Firstly, replace the contents of the theme folder with the contents of the desired ZIP file.
 
 2. Then, use the **UI resources package** setting described above to select a module. Ideally, this module should only contain UI documents, such as page templates and building blocks. This will allow you to export and import the module to other projects without worrying about reference errors.
 

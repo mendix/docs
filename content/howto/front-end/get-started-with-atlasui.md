@@ -7,7 +7,7 @@ tags: ["Atlas", "UI", "UX", "user experience"]
 
 ## 1 Introduction
 
-Mendix Studio is a powerful collaborative tool that lets you build your application in the cloud together with your team. When you log into Mendix Studio for the first time, you get the option to choose a starter app that is powered by Atlas UI. For more information on Mendix Studio, see the [Studio Guide](/studio). 
+Mendix Studio is a powerful collaborative tool that lets you build your application in the cloud together with your team. When you sign into Mendix Studio for the first time, you get the option to choose a starter app that is powered by Atlas UI. For more information on Mendix Studio, see the [Studio Guide](/studio). 
 
 **This how-to will teach you how to do the following:**
 
@@ -64,7 +64,7 @@ Once the page is created, you can customize it.
 
 ## 6 Customizing Your Theme
 
-The **[Theme Customizer](/studio/theme-customizer)** allows you to customize your app in Mendix Studio. For more information on how you can style your app with it, see [Theme Customizer](/studio/theme-customizer) in the *Studio Guide*. 
+The **[Theme Customizer](/studio/theme-customizer)** allows you to customize your app in Mendix Studio. For more information on how you can style your app with it, see [Theme Customizer](/studio/theme-customizer) in the *Studio Guide*. To make your theme customization as easy as possible, see [Use Calypso](calypso).
 
 ## 7 Read More
 

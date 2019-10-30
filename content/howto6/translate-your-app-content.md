@@ -68,7 +68,7 @@ Click **Apply** to apply the selected language operation.
 
 ### 4.1 Consolidating Labels and Perform Batch Replace
 
-There may be some text in your app that occurs in more than one place, so before you translate, it is best to consolidate similar labels so that they stay the same after the translation. The language in your app will be more consistent if you have a high occurence/text ration, as that means you reuse existing text across your app, which will increase the user experience.
+There may be some text in your app that occurs in more than one place, so before you translate, it is best to consolidate similar labels so that they stay the same after the translation. The language in your app will be more consistent if you have a high occurrence/text ration, as that means you reuse existing text across your app, which will increase the user experience.
 
 To search for phrases that look similar and replace them as a batch, follow these steps:
 

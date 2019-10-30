@@ -14,9 +14,7 @@ This document describes the published REST service configuration options shown w
 
 ## 2 General
 
-<a name="service-name"></a>
-
-### 2.1 Service Name
+### 2.1 Service Name {#service-name}
 
 Service name uniquely identifies the service in the app. It is also displayed in [OpenAPI (Swagger) documentation page](open-api).
 
@@ -28,8 +26,7 @@ Version is used to display version information in [OpenAPI (Swagger) documentati
 
 By default, version is set to "1.0.0".
 
-<a name="location"></a>
-### 2.3 Location
+### 2.3 Location {#location}
 
 Location shows URL on which a service can be reached.
 
@@ -58,18 +55,15 @@ Following URL prefixes are reserved and are not allowed to be used in location:
 
 When your application is running, you can click the location to open the [interactive documentation page](published-rest-services#interactive-documentation).
 
-<a name="public-documentation"></a>
-
-### 2.3 Public Documentation
+### 2.3 Public Documentation {#public-documentation}
 
 The public documentation is used in the service's [OpenAPI 2.0 (Swagger) Documentation](open-api). You can use [GitHub-flavored markdown](gfm-syntax) for rich text.
 
-<a name="export-swagger-json"></a>
-### 2.5 Export swagger.json
+### 2.5 Export swagger.json {#export-swagger-json}
 
 To save a service's [OpenAPI (Swagger) documentation](open-api) somewhere on your machine, simply right-click the service in the **Project Explorer** and select **Export swagger.json** (or just click the **Export swagger.json** button, depending on your Studio Pro version). This is a machine-readable file in the [OpenAPI 2.0 file format](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md). Most API tools support this format.
 
-When the app is running, this file is available under `/rest-doc/servicename/swagger.json`.
+When the app is running, this file is available under */rest-doc/servicename/swagger.json*.
 
 ## 3 Security
 
@@ -82,21 +76,23 @@ Select whether clients need to authenticate or not.
 If authentication is required, you can select which authentication methods you would like to support
 
 * Select **Username and password** to allow clients to authenticate themselves using a username and a password in the **Authorization** header (this is called "basic authentication")
-* Select **Active session** to allow access from JavaScript inside your current application
+*  Select **Active session** to allow access from JavaScript inside your current application
   * Once a user has logged into the browser, the JavaScript in your app can access the REST service using the current user's session
+  * [Offline-first](offline-first) apps cannot use active session authentication, because they do not have sessions that stay active while the app is running
   * To prevent cross-site request forgery, the `X-Csrf-Token` header needs to be set on each request, for example:
 
-    ```var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open("GET", "http://mysite/rest/myservice/myresource", false);
-    xmlHttp.setRequestHeader("X-Csrf-Token", mx.session.getConfig("csrftoken"));
-    xmlHttp.send(null);
-    ```
+  ```javascript
+  var xmlHttp = new XMLHttpRequest();
+  xmlHttp.open("GET", "http://mysite/rest/myservice/myresource", false);
+  xmlHttp.setRequestHeader("X-Csrf-Token", mx.session.getConfig("csrftoken"));
+  xmlHttp.send(null);
+  ```
+
 * Select **Custom** to authenticate using a microflow. This microflow is called every time a user want to access a resource.
 
 Check more than one authentication method to have the service try each of them. It will first try **Custom** authentication, then **Username and password**, and then **Active session**. For more details, see [Published REST Routing](published-rest-routing).
 
-<a name="authentication-microflow"></a>
-### 3.3 Microflow
+### 3.3 Microflow {#authentication-microflow}
 
 Specify which microflow to use for custom authentication.
 
@@ -104,14 +100,15 @@ Select **Parameters** to see the [list of parameters passed to the authenticatio
 
 The microflow may take an [HttpRequest](http-request-and-response-entities#http-request) as a parameter, so it can inspect the incoming request.
 
-The microflow may also take an [HttpResponse](http-request-and-response-entities#http-response) as a parameter. When the microflow sets the status code of this response to something other then **200**, this value is returned and the operation will not be executed. Any headers set on the response are returned (except when the microflow returns an empty user).
+The microflow may also take an [HttpResponse](http-request-and-response-entities#http-response) as a parameter. When the microflow sets the status code of this response to something other then **200**, this value is returned and the operation will not be executed. In that case, any headers set on the response are returned as well.
 
 The authentication microflow should return a User.
 
-There are three possible outcomes of the authentication microflow
-  * When the status code of the HttpResponse parameter is set to something other then **200**, then this value is returned and the operation will not be executed
-  * Otherwise, when the resulting User is not empty, the operation is executed in the context of that user
-  * Otherwise, when the resulting User is empty, the next authentication method is attempted. When there are no other authentication methods, the result is **404 Not Found**.
+There are three possible outcomes of the authentication microflow:
+
+* When the status code of the HttpResponse parameter is set to something other then **200**, then this value is returned and the operation will not be executed
+* Otherwise, when the resulting User is not empty, the operation is executed in the context of that user
+* Otherwise, when the resulting User is empty, the next authentication method is attempted. When there are no other authentication methods, the result is **404 Not Found**.
 
 ### 3.4 Allowed Roles
 
@@ -143,9 +140,9 @@ Resources and Operations are appended to [Location](#location) to form a URL on 
 
 ## 7 Example
 
-**How to publish REST natively with Mendix**
+**How to publish REST in Studio Pro 8**
 
-{{% youtube HzrFkv0U4n8 %}}
+{{% youtube Ff_P84NOcZk %}}
 
 ## 8 Read More
 

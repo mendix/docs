@@ -9,7 +9,7 @@ tags: ["community", "mvp"]
 
 ## 1 Introduction
 
-We know our community plays a huge role in the success of the Mendix platform. And with the [Most Valuable Professional (MVP) program](https://developer.mendixcloud.com/link/mvp), we want to recognize our loyal developers for their ongoing contributions and commitment to Mendix.
+We know our community plays a huge role in the success of the Mendix Platform. And with the [Most Valuable Professional (MVP) program](https://developer.mendixcloud.com/link/mvp), we want to recognize our loyal developers for their ongoing contributions and commitment to Mendix.
 
 The MVP program has been designed to empower the community by retaining our top contributors' high level of knowledge, giving them a closer view of the Mendix roadmap, and making them even more important and visible in the Mendix community.
 
@@ -31,7 +31,7 @@ The Mendix MVPs represent the spirit of the Mendix community. They are highly en
 
 These are the labels we use to describe our MVP recognition requirements:
 
-* Active – the developer is highly active, accessible, and well-known in the community while contributing to the forum every week (if not every day), frequently adding new App Store content, organizing Meetups, and writing [blogs on Mendix topics](https://developers.mendix.com/community-blog/)
+* Active – the developer is highly active, accessible, and well-known in the community while contributing to the Mendix Forum every week (if not every day), frequently adding new App Store content, organizing Meetups, and writing [blogs on Mendix topics](https://developers.mendix.com/community-blog/)
 * Expert – the developer knows a lot about the Mendix Platform and is a real [Expert Developer](https://gettingstarted.mendixcloud.com/link/certification/expert), answers more question than they ask, and has proven expertise as well as successful complex implementations
 * Evangelist – the developer is a Mendix advocate, shows a passion for developing Mendix solutions, and is able to think at an abstract level about developments within the software industry
 * Leader – the developer can act as a bridge between Mendix and community developers by being creditable and sharing passion, real-world knowledge, and technical expertise with both the community and Mendix representatives
@@ -40,7 +40,7 @@ There are several things we look for when selecting the MVPs. To be nominated, t
 
 * Contribute consistently to the Mendix Forum and demonstrate a will to help the community by providing answers to important questions
 * Stay active on the Mendix Idea Forum by submitting new ideas for the Mendix product roadmap
-* Upload several App Store items a year
+* Upload several App Store components a year
 * Be active on GitHub by helping the community solve issues regarding App Store content repositories and writing [Mendix documentation](https://github.com/mendix/docs)
 * Attend and/or organize Meetups
 * Run a self-maintained blog and publications site and be an active social media contributor about Mendix discussions

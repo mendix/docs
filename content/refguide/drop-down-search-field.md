@@ -11,17 +11,19 @@ To add a drop-down search field to your data grid, right-click within the search
 
 ## Common Properties
 
-{{% snippet file="refguide/Search+Field+Caption+Property.md" %}}
+{{% snippet file="refguide/search-field-caption-property.md" %}}
 
-{{% snippet file="refguide/Search+Field+Type+Property.md" %}}
+{{% snippet file="refguide/search-field-type-property.md" %}}
 
-{{% snippet file="refguide/Search+Field+Default+Value+Property.md" %}}
+{{% snippet file="refguide/search-field-default-value-property.md" %}}
 
 ## General properties
 
-{{% snippet file="refguide/Search+Field+Attribute+Path+Property.md" %}}
+{{% snippet file="refguide/search-field-attribute-path-property.md" %}}
 
-{{% snippet file="refguide/Search+Field+Comparison+Property.md" %}}
+{{% snippet file="refguide/search-field-comparison-property.md" %}}
+
+There is no limit on the number of drop-down selection options, thus a selected attribute can have an unlimited amount of unique values. However, having thousands of options which must be retrieved from the server will slow page loading considerably on older browsers. Initially hiding the search bar which contains the drop-down search field can improve page loading performance on first load.
 
 ### Allow multi-select
 
@@ -29,11 +31,11 @@ If this property is set to 'Yes', the resulting drop-down allows you to select m
 
 ### XPath Constraint
 
-If the 'drop-down' search field is connected to an attribute of an associated entity (as opposed to the grid entity itself) the XPath constraint can be used to limit  objects shown in the drop-down.
+If the 'drop-down' search field is connected to an attribute of an associated entity (as opposed to the grid entity itself) the XPath constraint can be used to limit objects shown in the drop-down.
 
 {{% alert type="info" %}}
 
-Let us say you have a grid showing bicycles. In the domain model the bicycle has an association to the shops where you can buy those bicycles. You can add a search field to the grid allowing the end user to select a shop by name. The XPath can then be used to limit the shops to those that are in a given country.
+Let us say you have a grid showing bicycles. In the domain model the bicycle has an association to the shops where you can buy those bicycles. You can add a search field to the grid allowing the end-user to select a shop by name. The XPath can then be used to limit the shops to those that are in a given country.
 `[MyWebshop.Bicycle_Shop/MyWebshop.Shop/Country='Netherlands']`
 
 {{% /alert %}}

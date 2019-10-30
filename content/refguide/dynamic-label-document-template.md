@@ -2,6 +2,7 @@
 title: "Dynamic Label (Document Template)"
 parent: "document-templates"
 tags: ["studio pro"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
@@ -11,6 +12,7 @@ A dynamic label is used for the same kind of attributes as a text box from the p
 {{% alert type="info" %}}
 
 ![](attachments/819203/918131.png)
+
 A dynamic label linking to a customer name.
 
 {{% /alert %}}
@@ -19,7 +21,7 @@ A dynamic label linking to a customer name.
 
 ### 2.1 Style
 
-See [Style](style)
+For details, see [Style](style).
 
 ### 2.2 Render XHTML
 
@@ -37,7 +39,7 @@ _Default value:_ 2
 
 ### 2.4 Group Digits (Only for Numeric Attributes)
 
-For ease of reading, numbers with many digits in front of the decimal separator may be divided into groups using a delimiter. This property defines whether the end user will see these groups, or not.
+For ease of reading, numbers with many digits in front of the decimal separator may be divided into groups using a delimiter. This property defines whether the end-user will see these groups, or not.
 
 _Default value:_ False
 
@@ -52,20 +54,23 @@ _Default value:_ Date
 ### 2.6 Custom Date Format (Only for Attributes of the DateTime Type)
 
 If you choose 'Custom' as the date format (see above) the custom date format determines the way date and/or time are formatted. The custom date format is a string that follows the rules described in
-[http://download.oracle.com/javase/6/docs/api/java/text/SimpleDateFormat.html](http://download.oracle.com/javase/6/docs/api/java/text/SimpleDateFormat.html).
+[Class SimpleDateFormat](http://download.oracle.com/javase/6/docs/api/java/text/SimpleDateFormat.html).
 
 {{% alert type="info" %}}
 
-The custom date format
+The custom date format:
+
 `EEE, MMM d, yy`
-results in the following text
+
+results in the following text:
+
 `Wed, Jul 4, 01`
 
 {{% /alert %}}
 
 ## 3 Common Properties
 
-{{% snippet file="refguide/Name+Property.md" %}}
+{{% snippet file="refguide/name-property.md" %}}
 
 ## 4 Data Source Properties
 

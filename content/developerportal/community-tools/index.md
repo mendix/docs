@@ -13,15 +13,15 @@ The Mendix Community site includes the community tools described below.
 
 On the [Mendix Forum](https://forum.mendixcloud.com/index3.html), you can ask questions and explore the knowledge offered by the entire Mendix community. There are questions and answers on various topics as well as a specific **Idea Forum** for the submission of unique ideas on changes and improvements to the Mendix app platform.
 
-The **Forum** section at the top of the Mendix Community site presents the latest questions being asked on the forum along with the author of the question and how long ago it was asked:
+The **Forum** section at the top of the Mendix Community site presents the latest questions being asked on the Mendix Forum along with the author of the question and how long ago it was asked:
 
 {{% image_container width="550" %}}
 ![](attachments/the-community-site/Forum.png)
 {{% /image_container %}}
 
-Click any question to go to that specific question page in the forum. Click **Ask a question** to submit your own question to the forum.
+Click any question to go to that specific question page in the Mendix Forum. Click **Ask a question** to submit your own question to the Mendix Forum.
 
-For more information on the forum, see [Mendix Forum](mendix-forum).
+For more information, see [Mendix Forum](mendix-forum).
 
 ## 3 Monthly Webinar
 

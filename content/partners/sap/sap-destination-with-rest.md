@@ -8,7 +8,7 @@ tags: ["SAP", "Cloud Connector", "Connectivity Service", "Destination Service", 
 
 ## 1 Introduction
 
-The SAP Destination Service is part of the SAP OData Connector and enables OData calls to be made using SAP destinations configured on SAP Cloud Platform. However, you can also use the destination information provided by the SAP Destination Service to make calls to non-OData services using Mendix native actions for consuming REST and SOAP.
+The SAP Destination Service is part of the OData Connector for SAP solutions and enables OData calls to be made using SAP destinations configured on SAP Cloud Platform. However, you can also use the destination information provided by the SAP Destination Service to make calls to non-OData services using Mendix native actions for consuming REST and SOAP.
 
 This how-to will teach you how to configure a REST or SOAP call to use the configuration obtained from the SAP Destination Service.
 
@@ -18,7 +18,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Have a Mendix app which can be deployed to SAP Cloud Platform
 * Configured a **PrincipalPropagation** destination to an *on-premise* REST or SOAP service in your SAP Cloud Platform account; see [SAP Destination Service](/partners/sap/sap-destination-service) for more information
-* Imported an **SAP OData Connector** version higher than 4.0.0 into your app
+* Imported an **OData Connector for SAP solutions** version higher than 4.0.0 into your app
 
 ## 3 Writing Your Microflow
 

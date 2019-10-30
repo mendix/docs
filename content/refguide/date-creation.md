@@ -4,91 +4,90 @@ parent: "expressions"
 tags: ["studio pro"]
 ---
 
+## 1 Introduction
 
-Dates can be created with the `dateTime` and `dateTimeUTC` functions. The difference between the two is that `dateTime` uses the calendar of the session used in this function call and `dateTimeUTC` uses the UTC calendar. The system session runs as UTC by default but this can be configured in the [project settings](project-settings).
+Dates can be created with the `dateTime` and `dateTimeUTC` functions. The difference between the two is that `dateTime` uses the calendar of the session used in the function call, and `dateTimeUTC` uses the UTC calendar. The system session runs as UTC by default, but this can be configured in the [project settings](project-settings).
 
-These functions takes between one and 6 input parameters. These represent, in order:
+This function does not accept parameters, only fixed values. To create a date using parameters, use the [parseDateTime](parse-and-format-date-function-calls#parsedatetime-utc) function.
 
-1.  years
-    Type: Integer, four digits and greater than 1799
-2.  months
-    Type: Integer, between 1 and 12
-3.  days
-    Type: Integer, between 1 and 31
-4.  hours
-    Type: Integer, between 0 and 23
-5.  minutes
-    Type: Integer, between 0 and 59
-6.  seconds
-    Type: Integer, between 0 and 59
+## 2 Values
 
-One parameter:
+These functions takes between one and six input values.  These represent, in order:
+
+1. years (type: integer, four digits and greater than 1799)
+2. months (type: integer, between 1 and 12)
+3. days (type: integer, between 1 and 31)
+4. hours (type: integer, between 0 and 23)
+5. minutes (type: integer, between 0 and 59)
+6. seconds (type: integer, between 0 and 59)
+
+One value:
 
 ```java
 dateTime(2007)
 ```
 
-returns
+returns:
 
 ```java
 "Mon Jan 01 00:00:00 CET 2007"
 ```
 
-Two parameters:
+Two values:
 
 ```java
 dateTime(2007, 1)
 ```
 
-returns
+return:
 
 ```java
 "Mon Jan 01 00:00:00 CET 2007"
 ```
 
-Three parameters:
+Three values:
 
 ```java
 dateTime(2007, 1, 1)
 ```
 
-returns
+return:
 
 ```java
 "Mon Jan 01 00:00:00 CET 2007"
 ```
 
-Four parameters:
+Four values:
 
 ```java
 dateTime(2007, 1, 1, 1)
 ```
 
-returns
+return:
 
 ```java
 "Mon Jan 01 01:00:00 CET 2007"
 ```
 
-Five parameters:
+Five values:
 
 ```java
 dateTime(2007, 1, 1, 1, 1)
 ```
 
-returns
+return:
 
 ```java
 "Mon Jan 01 01:01:00 CET 2007"
 ```
 
-Six parameters:
+Six values:
 
 ```java
 dateTime(2007, 1, 1, 1, 1, 1)
 ```
 
-returns
+return:
 
 ```java
 "Mon Jan 01 01:01:01 CET 2007"

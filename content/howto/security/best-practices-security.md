@@ -144,11 +144,13 @@ There are several scenarios possible for protecting your outgoing connections us
 
 You can add individual certificates in your project’s settings in . Test, acceptance, and production environments require their certificates to be uploaded to the Mendix Cloud (for more information, see [Certificates](/developerportal/deploy/certificates)).
 
-## 11 Preventing Your App from Being Embedded in an IFrame
+## 11 Adding HTTP Headers {#adding-http-header}
 
-Applications that can be embedded within an Iframe can be misused by attackers. By using an overlay, it could trick users into clicking on buttons and make them perform actions within the application on their behalf without knowing it. This approach is called [clickjacking](https://www.owasp.org/index.php/Clickjacking).
+HTTP headers can add an additional layer of security and help you detect certain attacks. For information on how to add HTTP headers, see the [HTTP Headers](/developerportal/deploy/environments-details#http-headers) section in *Environment Details*.  
 
-By sending a header to the user’s browser, it can block the use of the Mendix application within an Iframe, and avoid this type of attack. This header can easily be configured (and is enabled by default) within the Mendix Developer Portal at your node’s environment details at via **Prevent embedding your app in an Iframe**.
+An example of an attack is when an application is embedded in an Iframe. Applications that can be embedded within an Iframe can be misused by attackers. By using an overlay, it could trick users into clicking buttons and make them perform actions within the application on their behalf without knowing it. This approach is called [clickjacking](https://www.owasp.org/index.php/Clickjacking).
+
+By sending a header to the user’s browser, it can block the use of the Mendix application within an Iframe, and avoid this type of attack. This header can easily be configured within the Mendix Developer Portal at your node’s environment details via **HTTP Headers**.
 
 ## 12 Maintaining a High Level of Project Hygiene
 
@@ -170,3 +172,12 @@ Which users and roles are defined within an application is different per app and
   * Some applications have anonymous access enabled, solely to serve a custom login form – this can be replaced by modifying the default *login.html* within your theme (which will also help the user experience with an improved loading time)
 * Roles managing other user roles should be as strict as possible (configured via **User management** within the user role options)
 * The role of the app project’s administrator user (default **MxAdmin**) should only be able to create the actual administrative accounts (or configure SSO)
+
+## 14 Scanning Uploaded Files for Malicious Content {#scanning-for-malicious-content}
+
+Security in Mendix does not include scanning files that end-users upload or download from your application for viruses and malware. 
+
+To scan uploaded files for malicious content, do one of the following:
+
+* Create a custom module and configure the functionality yourself.
+* Check available modules in the [Mendix App Store](https://appstore.home.mendix.com/index3.html). For more information on how to use the Mendix App Store content, see [How to Use the App Store Content](/developerportal/app-store/app-store-content).

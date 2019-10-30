@@ -1,4 +1,4 @@
-version: '3.3'
+version: "3.3"
 services:
   app:
     build: .
@@ -8,3 +8,4 @@ services:
     command: yarn run docker
     ports:
       - "4000:4000"
+      - "3001:3001"

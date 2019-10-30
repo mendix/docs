@@ -1,6 +1,6 @@
 ---
 title: "Enumeration"
-category: "Domain Model"
+parent: "domain-models-attributes"
 description: "Describes an attribute of the enumeration type in Mendix Studio."
 tags: ["studio", "domain model", "attributes", "attribute types", "enumeration"]
 ---
@@ -70,9 +70,9 @@ The existing enumeration is selected for the attribute of the enumeration type.
 
 ## 4 Properties
 
-For details on properties of attributes of the enumeration type, see section [3 Attribute Properties](domain-models-attributes#attribute-properties) in *Attribute Types*. 
+For details on properties of attributes of the enumeration type, see section [3 Attribute Properties](domain-models-attributes#attribute-properties) in *Attributes*. 
 
 ## 5 Read More
 
 * [Domain Model](domain-models)
-* [Attribute Types](domain-models-attributes) 
+* [Attributes](domain-models-attributes) 

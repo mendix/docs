@@ -18,7 +18,7 @@ For more information on the Make It Native app, see [Getting the Make It Native 
 
 ### New Features
 
-This version adds support for [Mendix Studio Pro 8.3](\releasenotes\studio-pro\8.3).
+This version adds support for [Mendix Studio Pro 8.3](/releasenotes/studio-pro/8.3).
 
 The Make It Native app features a new **Toggle Inspector** developer menu option that exposes insights on styles and layouts. With this option you can debug styles, change them easily, and evaluate the results directly in the Make It Native app. We believe this option  greatly enhances the experience of creating feature-rich, engaging layouts for your Native Mendix Apps.
 

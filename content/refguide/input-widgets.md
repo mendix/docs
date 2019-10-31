@@ -8,7 +8,7 @@ tags: ["studio pro", "input widgets", "widget", "reference selector", "reference
 
 ## 1 Introduction
 
-Input widgets show data to the user and, optionally, allow them to edit the data.
+Input widgets show data to the end-user and, optionally, allow them to edit the data.
 
 Input widgets need to be linked to an attribute of an entity in order to function. As such, they must be placed within a data widget containing by an object of that entity type.
 

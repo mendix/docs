@@ -5,12 +5,13 @@ tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+## 1 Introduction
 
 Widgets that display information stored in entities require you to assign a method by which to attain the relevant data. Such methods are collectively known as data sources. Widgets that require a data source include all [data widgets](data-widgets) and [input widgets](input-widgets).
 
 Most simple input widgets derive their content from their context. A text box will, for instance, only allow input for attributes of the target entity. The exceptions are those widgets that require an entire object or a list of objects to function. Below the available data sources are described per widget type.
 
-## Data View
+## 2 Data View
 
 The data view supports the following data sources:
 
@@ -24,7 +25,7 @@ The microflow source is not supported in offline applications because it implies
 
 {{% /alert %}}
 
-## List Widgets (data grid, template grid, list view)
+## 3 Data Grid, Template Grid, List View
 
 List widgets support the data sources listed below. The data source also determines which features of the widget are enabled. For instance, only widgets with a database or XPath data source may contain a search bar, as the search bar relies on a database call to function.
 
@@ -38,3 +39,7 @@ List widgets support the data sources listed below. The data source also determi
 The database source is the only data source that is also supported offline. If a list widget has a database data source in an offline application, the data will come from the database that is situated on the device. This database can be synced with a [button](button-properties) widget for creating a new object.
 
 {{% /alert %}}
+
+## 4 Read More
+
+* [Data Widgets](data-widgets)

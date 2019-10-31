@@ -47,8 +47,6 @@ Hereafter, building your app requires you to call the `build` command using the 
 
 `native-builder.exe build --project-name "Mendix App" --app-version "1.0.0" --build-number 1`
 
-Optional parameters are duplicated on the `prepare` and the `build` command to allow for flexibility. For example, if the icon or splash screen are still under development in a project, you might choose to not add them as part of the `prepare` command and directly target them on a per-build basis.
-
 The commands and the list of arguments supported are explained in the following sections.
 
 ## 4 Getting Your Tokens

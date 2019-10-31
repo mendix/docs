@@ -10,31 +10,15 @@ tags: ["studio pro", "widget properties", "properties", "common", "widget"]
 
 These are properties that are shared by many widgets. For a complete list of properties, take a look at the relevant widget.
 
-## 2 Behavior Section
+## 2 Common Section {#common-properties}
 
-### 2.1 Required 
+![Common Section](attachments/common-widget-properties/common-section.png)
 
-This property indicates whether this widget must be filled in by the end-user or not. If set to true, this widget can not be left empty and a message will be shown if the end-user presses the *Save* button.
-
-_Default value:_ False
-
-### 2.2 Required Message 
-
-This property determines the message that is shown to the end-user if the widget is empty and the *Required* property is set to true. This is a translatable text. For more information,  see [Translatable Texts](translatable-texts).
-
-{{% alert type="info" %}}
-
-For example, if an address field is required, the required message for the text box of the address could be something like "The address is required."
-
-{{% /alert %}}
-
-## 3 Common Section {#common-properties}
-
-### 3.1 Name {#name}
+### 2.1 Name {#name}
 
 The internal name of the widget. You can use this to give sensible names to widgets. The name property also appears in the generated HTML: the widget DOM element automatically includes the class `mx-name-{NAME}`, which can be useful for [Selenium testing](/howto7/integration/selenium-support).
 
-### 3.2 Tab Index{#tab-index}
+### 2.2 Tab Index{#tab-index}
 
 The tab index influences the order in which the end-user navigates through the page using the tab key. By default tab indices are zero and the tab order is determined automatically by the client system. A value of minus one (-1) means that the widget will be skipped when tabbing through the page.
 
@@ -42,7 +26,7 @@ _Default value:_ 0
 
 {{% alert type="info" %}}Tab index is not supported on native mobile pages.{{% /alert %}}
 
-### 3.3 Class {#class}
+### 2.3 Class {#class}
 
 The class property allows you to specify one or more cascading style sheet (CSS) classes for the widget. The classes should be separated by a space. The classes will be applied to the widget in the browser and the widget will get the corresponding styling. The classes should be classes in the theme that is used in the project. It overrules the default styling of the widget.
 
@@ -54,9 +38,9 @@ Styling is applied in the following order:<br />
 
 You can see which widgets in a page have styling applied via the class or style property by clicking the <strong>Show styles</strong> button.
 
-![](attachments/common-widgets-properties/show-styles.png)
+![](attachments/common-widget-properties/show-styles.png)
 
-### 3.4 Style {#style}
+### 2.4 Style {#style}
 
 The style property allows you to specify additional CSS styling. If a class is also specified, this styling is applied *after* the class. For example:<br />
 <br />
@@ -64,17 +48,19 @@ The style property allows you to specify additional CSS styling. If a class is a
 <br />
 will result in red text on a blue background:
 
-![](attachments/common-widgets-properties/style-example.png)
+![](attachments/common-widget-properties/style-example.png)
 
 You can see which widgets in a page have styling applied via the style or class property by clicking the <strong>Show styles</strong> button.
 
-## 4 Data Source Section {#data-source}
+## 3 Data Source Section {#data-source}
 
-### 4.1 Attribute (Path)
+![Data Source Section](attachments/common-widget-properties/data-source-section.png)
+
+### 3.1 Attribute (Path)
 
 This property identifies an attribute which is used in an input widget.
 
-#### 4.1.1 Attribute Input Widgets
+#### 3.1.1 Attribute Input Widgets
 
 With the following widgets, the Attribute (Path) specifies the attribute which is being changed (or displayed) by the widget:
 
@@ -99,7 +85,7 @@ In Mendix 8.0, an input widget connected to an **attribute path** must be read-o
 In Mendix 8.1 and above, you can edit attributes presented in input widgets over a path.
 {{% /alert %}}
 
-#### 4.1.2 Association Input Widgets
+#### 3.1.2 Association Input Widgets
 
 For widgets which manipulate associations, the Attribute (Path) specifies an attribute which is from an entity which is reachable from the current data container using an association. This applies to the following input widgets:
 
@@ -123,71 +109,49 @@ The attribute can be of one of the following [data types](data-types):
 * Long
 * String
 
-## 5 Visibility Section {#visibility-properties}
+## 4 Editability Section{#editability}
 
-### 5.1 Visible
+![Common Section](attachments/common-widget-properties/editability-section.png)
 
-By default, whether or not an element is displayed in the browser is determined by how the page is designed and the user's roles within the application. However, the page can be configured to hide the element unless a certain condition is met.
+### 4.1 Editable
 
-{{% todo %}}[Investigate the difference between DEFAULT and ALWAYS - If a widget is inside an invisible widget, you cannot make it display by choosing ALWAYS?]{{% /todo %}}
-
-#### 5.1.1 Context
-
-The widget can be made visible only if the object of the data container that contains the widget satisfies the specified criteria.
-
-A practical example would be a web shop in which the user must submit both billing and delivery information. In this case, you might not wish to bother the user with a second set of address input fields unless they indicate that the billing address and delivery address are not the same. You can accomplish this by making the delivery address fields conditionally visible based on the Boolean attribute `SameBillingAndDeliveryAddress`.
-
-##### Based on Attribute Value {#visibility-based-on-attribute-value}
-
-When selected, this shows the widget while a particular attribute has a certain value. Only Boolean and enumeration attributes can be used for this purpose.
-
-##### Based on Expression {#visibility-based-on-expression}
-
-When selected, this shows the widget while a provided [expression](expressions) evaluates to true. The object of the containing data container is available inside an expression as a `$currentObject` variable. In Mendix 8.1 and above, the expression can access objects of all the data containers enclosing that data container widget. These objects are available under the name of the widget they originate from (for example, `$dataView1`).
-
-Note that the expression is evaluated in the browser, and hence, we advise against using "secret" values (like access keys) in it. In particular, we disallow usages of [constants](constants). Also, client-side expressions currently do not support all the functions that are available in the microflows. Please refer to an autocomplete list to know what functions are supported in your version.
-
-#### 5.2.1 Module Roles
-
-The widget can be made visible to a subset of the user roles available in your application. When activated, this setting will render the widget invisible to all users that are not linked to one of the selected user roles.
-
-## 6 Editability Section{#editability}
-
-### 6.1 Editable
-
-The editable property indicates whether the end-user will be able to change the value displayed by the widget.
+The editable property indicates whether the end-user will be able to change the value displayed by the widget. The possible values are:
 
 | Value       | Description                                                  |
 | ----------- | ------------------------------------------------------------ |
-| Default     | The value is editable if security allows it (as in, if the user that is signed in has write rights to the selected attribute). |
+| Default     | The value is editable if security allows it (as in, if the user that is signed in has write access to the selected attribute). |
 | Never       | The value is never editable.                                 |
-| Conditional | The value is editable if the specified condition holds. (see below) |
+| Conditionally | The value is editable if the specified condition holds (see below). |
 
 *Default value*: Default
 
-### 6.2 Condition
+### 4.2 Condition
 
-The widget can be made editable only if the object of the data container that contains the widget satisfies the specified criteria.
+If the editable property is set to **Conditionally**, the widget is made editable only if the object of the data container that contains the widget satisfies the specified criteria.
 
 For example, imagine you are creating a personal details form in which the end-user must enter their marital status. In this case, you might wish to disable the input of a marriage date until the end-user indicates that they are married.
 
-#### 6.2.1 Based on Attribute Value
+#### 4.2.1 Based on Attribute Value
 
-When selected, this enables the widget while a particular attribute has a certain value. Only Boolean and enumeration attributes can be used for this purpose.
+When selected, this enables the widget when a particular attribute has a certain value. Only Boolean and enumeration attributes can be used for this purpose.
 
-#### 6.2.2 Based on Expression
+#### 4.2.2 Based on Expression
 
-When selected, this enables the widget while a provided [expression](expressions) evaluates to true. The object of the containing data container is available inside an expression as a `$currentObject` variable.
+When selected, this enables the widget when a provided [expression](expressions) evaluates to true. The object of the containing data container is available inside an expression as the `$currentObject` variable.
 
-Note that the expression is evaluated in the browser, and hence, we advise against using "secret" values (like access keys) in it. In particular, we disallow usages of [constants](constants). Also, client-side expressions currently do not support all the functions that are available in the microflows. Please refer to an autocomplete list to know what functions are supported in your version.
+The expression provided is evaluated in the browser and, currently, does not support all the functions that are available in microflows. The autocomplete function will only list those functions which are supported.
 
-### 6.2.3 Read-Only Style
+{{% alert type="info" %}}
+As the expression is evaluated in the browser, we advise against using "secret" values (like access keys) in it. In particular, we disallow usages of [constants](constants).
+{{% /alert %}}
+
+### 4.3 Read-Only Style
 
 This property determines how the widget is rendered if it is read-only. 
 
 | Value                       | Description |
 |-----------------------------|-------------|
-| Based on data container          | Set to `Control` or `Text` by the containing data container. *(Default value for widgets inside a data container)*
+| Based on data view          | Set to `Control` or `Text` by the containing data container. *(Default value for widgets inside a data container)*
 | Not enclosed by a data container | Defaults to `Text`. *(Default value for widgets outside a data container)*
 | Inherited from snippet call | Set to `Control` or `Text` by the containing data container of the snippet call, or `Text` when the snippet call is not enclosed by a data container. *(Default value for widgets outside a data container inside a snippet)*
 | Control                     | Widget is displayed but disabled so the value cannot be modified.
@@ -195,31 +159,37 @@ This property determines how the widget is rendered if it is read-only.
 
 {{% alert type="info" %}}Read-only style is not supported on native mobile pages.{{% /alert %}}
 
-## 7 Label Section {#label}
+## 5 Label Section {#label}
+
+![Label Section](attachments/common-widget-properties/label-section.png)
 
 A label can be used to described the purpose of the widget to the user. The label is shown next to the widget in the user interface. If a label is configured, the widget will be rendered in the browser wrapped in a form group. See [Bootstrap documentation](http://getbootstrap.com/css/#forms).
 
-### 7.1 Show Label
+{{% alert type="info" %}}
+The position of the label in relation to the widget is configured in the **Form orientation** and **Label width (weight)** properties of the data container.
+{{% /alert %}}
+
+### 5.1 Show Label
 
 This property determines whether the label is rendered and the widget is wrapped in a form group.
 
-_Default value:_ No
+### 5.2 Label Caption
 
-### 7.2 Label Caption
+This property is shown only when Show label is Yes. It specifies what text is rendered within a label.
 
-This property is shown only when Show label is Yes. This property determines what text is rendered within a label.
-
-#### 7.2.1 Text Template
+#### 5.2.1 Text Template
 
 The template for the label can contain parameters that are written as a number between braces (for example, `{1}`). The first parameter has the number `1`, the second `2`, etc. Note that to use template parameters, the widget must be placed in the context of an entity (for example, inside a data container).
 
-#### 7.2.2 Parameters
+#### 5.2.2 Parameters
 
-For each parameter in the template, you define an attribute of the context entity or a referred entity, of which the value will be inserted at the position of the parameter.
+For each parameter in the template, you define an attribute of the context entity or an associated entity. The value of this attribute will be inserted at the position of the parameter.
 
-## 8 Numeric Formatting{#numeric-formatting}
+## 6 Formatting Section{#numeric-formatting}
 
-Numeric formatting describes the way that numeric attributes are displayed. These are attributes of the following data types:
+![Numeric Formatting Section](attachments/common-widget-properties/numeric-formatting-section.png)
+
+Formatting describes the way that numeric attributes are displayed. These are attributes of the following data types:
 
 * Decimal
 * Integer
@@ -229,25 +199,11 @@ When a widget contains a numeric attribute, the **Formatting** section allows yo
 
 There are three options, described below:
 
-* Group Digits
 * Decimal Mode
 * Decimal Precision
+* Group Digits
 
-### 8.1 Group Digits
-
-For ease of reading, numbers with many digits before the decimal separator may be divided into groups using a delimiter when they are displayed. If the widget is editable and is the current focus of the page, then the delimiters will *not* be displayed.
-
-This setting applies to all three numeric data types.
-
-Set **Group digits** to **Yes** to display these groups.
-
-_Default value:_ No
-
-**Example**
-
-For example, with **Group digits** set to `true`, the number `1100100.01` will be displayed as `1,100,100.01`.
-
-### 8.2 Decimal Mode{#decimal-mode}
+### 6.1 Decimal Mode{#decimal-mode}
 
 {{% alert type="info" %}}
 This mode only applies to attributes of type Decimal.
@@ -271,7 +227,7 @@ _Default value:_ Fixed
 
 <sup><small>*</small></sup>The value is rounded to the nearest decimal with the defined number of decimal places.
 
-### 8.3 Decimal Precision{#decimal-precision}
+### 6.2 Decimal Precision{#decimal-precision}
 
 {{% alert type="info" %}}
 This only applies to attributes of type Decimal and is available only when the [Decimal mode](#decimal-mode) is set to **Fixed**.
@@ -282,3 +238,102 @@ The precision of a value describes the number of decimal places that are used to
 The way that the number is rounded when displayed is defined in the [rounding](project-settings#rounding) section of *Project Settings*.
 
 _Default value:_ 2
+
+### 6.3 Group Digits
+
+For ease of reading, numbers with many digits before the decimal separator may be divided into groups using a delimiter when they are displayed. If the widget is editable and is the current focus of the page, then the delimiters will *not* be displayed.
+
+This setting applies to all three numeric data types.
+
+Set **Group digits** to **Yes** to display these groups.
+
+_Default value:_ No
+
+**Example**
+
+For example, with **Group digits** set to `true`, the number `1100100.01` will be displayed as `1,100,100.01`.
+
+## 7 Validation Section{#validation}
+
+![Validation Section](attachments/common-widget-properties/validation-section.png)
+
+Input widgets can include validation to ensure that data is correct before it is used by the app.
+
+There are two settings in the validation section which are described below:
+
+* Type
+* Message
+
+### 7.1 Type
+
+This property indicates whether this widget value should be validated and, if so, how. These are the possible options:
+
+* No validation – the data has to be the correct [data type](data-types) for the widget, but otherwise there is no further validation
+* A [predefined validation](#predefined-validation) – see description below
+* A [custom validation](#custom-validation) – see description below
+
+#### 7.1.1 Predefined Validation{#predefined-validation}
+
+The possible values of a predefined validation are the following:
+
+* **Required** – can be used for attributes of *all* data types
+* **E-mail** – applies to *String* attributes
+* **Positive number** – applies to *Decimal*, *Integer*, and *Long* attributes
+* **Date in the future** – applies to *Date and time* attributes — compares the date *and time* to `[%CurrentDateTime%]`
+* **Date in the past** – applies to *Date and time* attributes — compares the date *and time* to `[%CurrentDateTime%]`
+
+#### 7.1.2 Custom Validation{#custom-validation}
+
+Custom validation is an expression that follows the [Microflow expression](expressions) syntax.
+
+There are a number of variables you can use in your expression:
+* `$currentObject` – the current object
+* `$value` – the current member (attribute or association) value
+
+{{% alert type="info" %}}
+In **Mendix 8.1 and above**, the expression can access objects of **all** the data containers enclosing the input widget. The objects are given the name of the widget they originate from (for example, `$dataView1`).
+{{% /alert %}}
+
+When a validation is set and it fails for this widget, the message you specify will be shown before the user can use the value in the app.
+
+*Default value:* (none)
+
+### 7.2 Message
+
+This property determines the message that is shown to the user if widget validation is enabled and has failed. This is a translatable text (for more information, see [Translatable Texts](translatable-texts)).
+
+For example, if an address field is required, the validation message for the text box of the address could be something like, `The address is required.`
+
+## 8 Visibility Section {#visibility-properties}
+
+![Visibility Section](attachments/common-widget-properties/visibility-section.png)
+
+### 8.1 Visible
+
+By default, whether or not an element is displayed in the browser is determined by how the page is designed and the user's roles within the application. However, the page can be configured to hide the element unless a certain condition is met.
+
+{{% alert type="info" %}}
+You can choose both **Context** conditions and **Module roles** conditions to apply to the widget.
+{{% /alert %}}
+
+{{% todo %}}[Investigate the difference between DEFAULT and ALWAYS - If a widget is inside an invisible widget, you cannot make it display by choosing ALWAYS?]{{% /todo %}}
+
+#### 8.1.1 Context
+
+The widget can be made visible only if the object of the data container that contains the widget satisfies the specified criteria.
+
+A practical example would be a web shop in which the user must submit both billing and delivery information. In this case, you might not wish to bother the user with a second set of address input fields unless they indicate that the billing address and delivery address are not the same. You can accomplish this by making the delivery address fields conditionally visible based on the Boolean attribute `SameBillingAndDeliveryAddress`.
+
+##### Based on Attribute Value {#visibility-based-on-attribute-value}
+
+When selected, this shows the widget while a particular attribute has a certain value. Only Boolean and enumeration attributes can be used for this purpose.
+
+##### Based on Expression {#visibility-based-on-expression}
+
+When selected, this shows the widget while a provided [expression](expressions) evaluates to true. The object of the containing data container is available inside an expression as a `$currentObject` variable. In Mendix 8.1 and above, the expression can access objects of all the data containers enclosing that data container widget. These objects are available under the name of the widget they originate from (for example, `$dataView1`).
+
+Note that the expression is evaluated in the browser, and hence, we advise against using "secret" values (like access keys) in it. In particular, we disallow usages of [constants](constants). Also, client-side expressions currently do not support all the functions that are available in the microflows. Please refer to an autocomplete list to know what functions are supported in your version.
+
+#### 8.1.2 Module Roles
+
+The widget can be made visible to a subset of the user roles available in your application. When activated, this setting will render the widget invisible to all users that are not linked to one of the selected user roles.

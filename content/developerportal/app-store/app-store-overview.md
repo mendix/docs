@@ -188,6 +188,8 @@ This page presents the App Store components you have [favorited](#favorite-heart
 
 ![](attachments/app-store-overview/favorites.png)
 
+If you want to receive an email notification when new versions of your favorite content are published, check the **Subscribe** box.
+
 ## 5 Your Company's App Store
 
 ### 5.1 Company Content

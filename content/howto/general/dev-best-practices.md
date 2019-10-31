@@ -39,7 +39,7 @@ The [user roles](/refguide/user-roles) should have logical names that reflect th
 
 Each user role should correspond to only one module role per module. In other words, a user role should not map to multiple module roles within the same module. This helps to keep the number of applicable module roles for a user to a minimum, which reduces complexity in understanding the security model and reduces the performance impact of complex security rules.
 
-## 3. Naming Conventions
+## 3 Naming Conventions
 
 ### 3.1 Modules
 
@@ -130,7 +130,7 @@ For attributes, you can choose to store the value in the database or to calculat
 |-----------------|----------------------|
 | Calculation     | Cal_{Entity name}\_{Attribute name}    |
 
-#### 3.4.4 Page-Based Microflows
+#### 3.4.3 Page-Based Microflows
 
 [Pages](/refguide/pages) have a number of events that can trigger a microflow. See the following list for the examples and prefixes:
 
@@ -142,7 +142,7 @@ For attributes, you can choose to store the value in the database or to calculat
 | Data source               | DS_{Purpose}    | Data view, list view, data grid, template grid |
 | Microflow/action button   | ACT_{Purpose} or IVK_{Purpose} | Menu item, Navigation item, Microflow and Action button, Drop down button<br />(“IVK_” is used historically) |
 
-### 3.4.5 Validation Microflows
+#### 3.4.4 Validation Microflows
 
 Microflows that are used for [data validation](/howto/data-models/setting-up-data-validation) use the prefix **Val_**.
 
@@ -150,7 +150,7 @@ Microflows that are used for [data validation](/howto/data-models/setting-up-dat
 |-----------------|----------------------|
 | Validation      | Val_                 |
 
-### 3.4.6 Scheduled Event Microflows
+#### 3.4.5 Scheduled Event Microflows
 
 For the microflow that you use in your [scheduled events](/refguide/scheduled-events), use the prefix **ScE_**. The event itself should have a descriptive name since it will be shown in the cloud configuration portal. The scheduled event and the microflow should have the same name.
 
@@ -158,7 +158,7 @@ For the microflow that you use in your [scheduled events](/refguide/scheduled-ev
 |-----------------|----------------------|
 | Scheduled Event | ScE_                 |
 
-#### 3.4.7 Project Microflows
+#### 3.4.6 Project Microflows
 
 Your [project settings](/refguide/project-settings) provide three events that can trigger a microflow. In these cases we advise writing out the purpose as a microflow name. These microflows are defined only once per project and should preferably call sub-microflows to do the actual processing. These sub-microflows should have a prefix indicated below:
 
@@ -168,7 +168,7 @@ Your [project settings](/refguide/project-settings) provide three events that ca
 | Before shutdown | BeforeShutDown | BSd_                 |
 | Health check    | HealthCheck    | HCh_                 |
 
-#### 3.4.8 Unit Test Microflows
+#### 3.4.7 Unit Test Microflows
 
 Microflows containing [unit tests](/howto/testing/testing-microflows-using-the-unittesting-module) should have the prefix **Test_**.
 
@@ -176,7 +176,7 @@ Microflows containing [unit tests](/howto/testing/testing-microflows-using-the-u
 |-----------------|----------------------|
 | Unit Test       | Test_                |
 
-#### 3.4.9 Integration Microflows
+#### 3.4.8 Integration Microflows
 
 For integrations, you have the following types of microflow:
 
@@ -254,7 +254,7 @@ You can define the [home pages](/refguide/show-home-page) per device and role in
 | Role based home page | Tablet  | Home_Tablet_{Userrole}  |
 | Role based home page | Mobile  | Home_Phone_{Userrole}   |
 
-## 4. General Guidelines & Best Practices
+## 4 General Guidelines & Best Practices
 
 ### 4.1 Domain Models
 

@@ -43,7 +43,7 @@ The header for each add-on presents the following details:
 * The **Name** and **Category** of the component
 * The review average (in stars) and the number of reviews
 * The number of times the component has been downloaded
-* A heart for favoriting the component (so it will appear in your list of favorites on the [Dashboard](#dashboard) and on the **Favorites** page)
+* <a name="favorite-heart"></a>A heart for favoriting the component (so it will appear in your list of favorites on the [Dashboard](#dashboard) and on the [Favorites](#favorites) page)
 * The following buttons (depending on the type of component and what the developer added to share):
 	* **Preview** – click this to preview more information or a demo about the component
 		* This is only available if the developer has included a demo URL when sharing the component (for details on sharing components, see [How to Share App Store Content](share-app-store-content))
@@ -119,10 +119,10 @@ In the **Developer Info** section, you can see the following information:
 
 The **Dashboard** page presents your App Store activity:
 
-* Your numbers for **Published Content** and **Submitted Reviews**
-* **Notifications** on components you created and favorited
-* Content **Drafts** you have created
-* Your content **Favorites**
+* Your numbers for [Published Content](#content) and [Submitted Reviews](#my-reviews)
+* [Notifications](#notifications) on components you created and favorited
+* Content [Drafts](#drafts) you have created
+* Your content [Favorites](#favorite-heart)
 
 ![](attachments/app-store-overview/my_app_store.png)
 
@@ -154,7 +154,7 @@ On this page, you will see the following buttons:
 	* If the component is protected [content](#content) from a user group, a group [member](#members) can unpublish any version
 * **Edit** – click this to edit the component (for details on editing, see the [Adding New App Store Content](share-app-store-content#edit) section of *How to Share App Store Content*)
 
-### 4.3 Drafts
+### 4.3 Drafts {#drafts}
 
 This page contains drafts of App Store content you have started:
 
@@ -176,11 +176,17 @@ This page contains reviews of [Your content](#content) by other users as well as
 
 ![](attachments/app-store-overview/your-reviews.png)
 
-### 4.6 Notifications
+### 4.6 Notifications {#notifications}
 
 This page presents a history of notifications on content you have contributed to:
 
 ![](attachments/app-store-overview/notifications.png)
+
+### 4.7 Favorites {#favorites}
+
+This page presents the App Store components you have [favorited](#favorite-heart):
+
+![](attachments/app-store-overview/favorites.png)
 
 ## 5 Your Company's App Store
 

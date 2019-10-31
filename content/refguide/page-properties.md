@@ -31,7 +31,7 @@ Styling is applied in the following order:
 
 You can see which widgets in a page have styling applied via the class or style property by clicking the <strong>Show styles</strong> button in **Structure mode**.
 
-![](attachments/common-widgets-properties/show-styles.png)
+![](attachments/common-widget-properties/show-styles.png)
 
 ### 2.4 Style
 

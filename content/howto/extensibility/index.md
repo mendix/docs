@@ -10,6 +10,7 @@ One of the strengths of Mendix is that it is easy to connect your Mendix applica
 
 ## 2 Main Documents in This Category
 
+* [Build a Pluggable Native Widget](build-native-widget) – teaches you how to build a pluggable native widget (based on React Native), customize it, and style it.
 * [Build Pluggable Widgets](pluggable-widgets) – shows you how to use the new generation of custom-built Mendix widgets based on React
 * [Build Custom Widgets](widget-development) – details how custom widgets bridge the gap between using standard Mendix components and creating very specific components yourself
 * [Build JavaScript Actions](build-javascript-actions) – teaches you to harness the power of pluggable nanoflow actions

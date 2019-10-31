@@ -43,7 +43,7 @@ The header for each add-on presents the following details:
 * The **Name** and **Category** of the component
 * The review average (in stars) and the number of reviews
 * The number of times the component has been downloaded
-* A heart for favoriting the component (so it will appear in your list of favorites on the [Dashboard](#dashboard))
+* A heart for favoriting the component (so it will appear in your list of favorites on the [Dashboard](#dashboard) and on the **Favorites** page)
 * The following buttons (depending on the type of component and what the developer added to share):
 	* **Preview** – click this to preview more information or a demo about the component
 		* This is only available if the developer has included a demo URL when sharing the component (for details on sharing components, see [How to Share App Store Content](share-app-store-content))

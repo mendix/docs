@@ -6,7 +6,7 @@ tags: ["monitoring", "troubleshooting", "java action", "debug"]
 
 ## 1 Introduction
 
-To debug the Java actions used in a Mendix microflow, you need to make some configuration changes to the way you start the Mendix runtime. This how-to will explain how to manage this.
+To debug the Java actions used in a Mendix microflow, you need to make some configuration changes to the way you start the Mendix Runtime. This how-to will explain how to manage this.
 
 **This how-to will teach you how to do the following:**
 

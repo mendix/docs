@@ -101,7 +101,7 @@ To create a JavaScript action that can search for users on GitHub, follow the st
 	}
 	```
 
-	This code uses the Fetch API. Browser compatibility is irrelevant, as this API is provided by the Mendix runtime when unavailable in the browser.
+	This code uses the Fetch API. Browser compatibility is irrelevant, as this API is provided by the Mendix Runtime when unavailable in the browser.
 
 8. Next up is the fun part: making Mendix objects. Create a new function called `createGitHubUser` that returns a `new Promise`. The executor function of the promise should use the Mendix client API to create a new object and set the attributes.
 9. Loop over all results and call your new function. The `githubUsers` variable will hold an array of promises.

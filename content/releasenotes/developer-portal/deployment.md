@@ -10,6 +10,22 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 ## 2019
 
+### October 30th, 2019
+
+#### Mendix Cloud Deployment Upgrade
+
+* We have upgraded Mendix Cloud Deployment and Operation. It is now a Mendix 7 app.
+* You can now mask app constant values so that they cannot be seen in the **Model Options** tab of the **Environment Details**.
+* We now warn you on all **OPERATE** and **DEPLOY** pages if a maintenance window has been created to allow updating of the Mendix Developer Portal.
+
+**Known Issue**
+
+* In the **Environments** page, when you click the **Details** button for a **Production** environment and successfully complete two-factor authentication you are redirected to the **first** environment listed for your app, *not the Production environment*. (Ticket 90999)
+
+    * Workaround – Choose the **Details** for the **Production** environment again and you will be taken to the correct environment.
+
+* When you attempt to open an **OPERATE** or **DEPLOY** page in the Developer Portal, you may see a login page. You will need to force a refresh of your page, or clear your browser cache, in order to access the page.
+
 ### September 27th, 2019
 
 #### Update of `*.mendixcloud.com` SSL/TLS certificate

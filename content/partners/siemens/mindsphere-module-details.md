@@ -250,7 +250,8 @@ In index.html, in the header before the line `{{themecss}}`, the following scrip
 					}
 					return originalFetch(url, init);
 				}
-			} else {
+			}
+			if (!window.fetch || (window.fetch && /Edge/.test(navigator.userAgent))) {
 				var originalXMLHttpRequest = window.XMLHttpRequest;
 				window.XMLHttpRequest = function() {
 					var result = new originalXMLHttpRequest(arguments);

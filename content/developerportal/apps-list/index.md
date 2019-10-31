@@ -60,7 +60,7 @@ The actions available depend on the app selected:
 * **App Info** – opens the [general settings](/developerportal/settings/general-settings) of the app
 * **Delete App** – allows you to delete your app, provided you are the only team member (you will be warned of the consequences and asked for confirmation before the app is deleted)
 
-### 2.4 Favoriting an App
+### 2.4 Favoriting an App {#favoriting}
 
 To favorite an app, click the star so that it turns yellow in the top-left corner of the app's tile:
 

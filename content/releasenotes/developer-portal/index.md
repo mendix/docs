@@ -13,6 +13,12 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 ## 2019
 
+### November 1st, 2019
+
+#### Improvements
+
+* We introduced the ability to favourite your projects from the My Apps page and to filter on only favourite apps. This is helpful when having a large amount of Mendix apps. 
+
 ### September 24th, 2019
 
 #### Improvements

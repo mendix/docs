@@ -17,7 +17,7 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 #### Improvements
 
-* We introduced the ability to favourite your projects from the My Apps page and to filter on only favourite apps. This is helpful when having a large amount of Mendix apps. 
+* We introduced the ability to [favorite](/developerportal/apps-list/index#favoriting) app projects from the **My Apps** page and to filter on only favorite apps. This is helpful when you have a large number of Mendix apps.
 
 ### September 24th, 2019
 

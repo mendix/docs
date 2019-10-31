@@ -64,6 +64,45 @@ results in
 4.0
 ```
 
+### 3.3 Warning
+
+The result of a division is only an approximation if it has an infinite decimal expansion. For example
+
+```java
+3 : 7
+```
+
+results in
+
+```java
+0.4285714285714285714285714285714286
+```
+
+This has the consequence, that if you continue a calculation with results of a division, the results might be unexpected. For example
+
+```java
+(3 : 7) * 7
+```
+
+results in
+
+```java
+3.0000000000000000000000000000000002
+```
+
+and
+
+```java
+ceil((3 : 7) * 7)
+```
+
+in
+
+```java
+4
+```
+
+It is therefore recommended to do division operations last.
 ## 4 Modulo
 
 Calculates the remainder of the division of one number by another. In other words, m modulo n corresponds to: m = p + k*n, where p is the result of the operation m modulo n.

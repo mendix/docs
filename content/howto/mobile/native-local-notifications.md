@@ -527,7 +527,7 @@ The notification should be displayed at the end of the minute.
 
 If your app is open, it will not show the notification due to iOS and Android user guidelines. However, notifications for open apps can still trigger onReceive events. This allows you to design custom actions for notifications, such as showing a page with pop-up layout. Follow these steps to model an onRecieve event:
 
-[todo: this still didn't work for me. Maybe one of the typed-in bits needed single quotes or double quotes?]
+[todo: this still didn't work for me. Maybe one of the typed-in bits needed single quotes or double quotes? it didn't work for Olga either]
 
 1. Make a new nanoflow named *ON_RecieveNotification*.
 2. Drag and drop a **Log message** activity on your nanoflow.
@@ -546,7 +546,7 @@ If your app is open, it will not show the notification due to iOS and Android us
 11. Click **OK**.
 12. Start and load the app on your mobile device.
 13. Tap the **Send notification** button, and do not minimize your app.
-14. You will see the log **I triggered on recieve notification** in the Studio Pro console.
+14. You will see the log **I triggered on receive notification** in the Studio Pro console.
 
 But what if you want to cancel a scheduled notification? Read on to learn more.
 

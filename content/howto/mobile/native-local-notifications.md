@@ -347,7 +347,7 @@ To make this microflow run after startup, do the following:
 
    {{% image_container width="500" %}}![select after start up](attachments/native-push/after-startup.png){{% /image_container %}}
 
-4.  Click **DS_TestEntity** then click the **Select** button:
+4.  Click **DS_TestEntity** then click the **Select** button to achieve this result:
 
    {{% image_container width="500" %}}![select test entity](attachments/native-push/select-ds-entity.png){{% /image_container %}}
 
@@ -382,7 +382,7 @@ Next you will create a workaround which allows data to be passed to pages. First
 4. Double-click the action call activity.
 5. Click **JavaScript Action** > **Select**.
 6. Type *GetGuid* into the search field, click **GetGuid**, and click **Select**. This JavaScript action is available in the Mendix App Store under the NanoflowCommons module included in the Native Quickstarter template. [todo: change this to "if you wanna integrate this tech into your existing project outside this howto example and you dont use the native movile quickstart..."]
-7. Click **Entity Object** drop-down and click **$TestEntity**.
+7. Click **Entity Object** drop-down and click **$FirstTestEntityObject**.
 8. In **Variable name** field type **GUIDForFirstObject**.
 9. Click **OK**.
 10. Drag and drop four create variable activities onto your nanoflow: *Title*, *Subtitle*, *Body*, and *ActionName*. Give them the values *'title1'*, *'subtitle1'*, *'body1'*, and *'OpenPageWithParams'* respectively:
@@ -488,6 +488,11 @@ Now you will set up a data view on your home page.
 	{{% image_container width="500" %}}![first guid action](attachments/native-push/GUID-data-source.png){{% /image_container %}}
 
 8. Double-click your notifications widget.
+9. Click **GUID** > **Select**.
+10. Click **GUIDString (String (200))**, then click **Select**. Your results will look like this:
+
+	{{% image_container width="500" %}}![guid string](attachments/native-push/set-guid-string.png){{% /image_container %}}
+
 9. Click **Actions** > **New**.
 10. Create a **New Action** named *OpenPageWithParams*, set **On open** to **Call a nanoflow**, and select **ON_tapNotification**.
 

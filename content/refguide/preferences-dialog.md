@@ -1,5 +1,5 @@
 ---
-title: "Preferences Dialog"
+title: "Preferences"
 parent: "dialogs"
 tags: ["studio pro"]
 ---

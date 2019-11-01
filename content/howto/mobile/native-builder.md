@@ -39,7 +39,7 @@ A build with the Native Builder can be thought of as a two-step process. First, 
 
 `native-builder.exe prepare --java-home "c:\Java" --mxbuild-path "c:\Mendix\mxbuild.exe --project-path "c:\MendixApp\MendixApp.mpr" --github-access-token "12345..." --app-center-api-token "12345..." --project-name "Mendix App" --app-name "New App" --app-identifier "com.mycompany.newapp --runtime-url "https://mendixapp.mendixcloud.com"`
 
-Because this is your first run, the `prepare` command will fail. It will show a warning while it configures App Center to be able to read your repository. To solve this, consult the [Completing Your Initial Run](#7-Completing-Your-Initial-Run) section and then run the `prepare` command again.
+Because this is your first run, the `prepare` command will fail. It will show a warning while it configures App Center to be able to read your repository. To solve this, consult the [Completing Your Initial Run](#initial-run) section and then run the `prepare` command again.
 
 In most cases the `prepare` command must only be run once, as this configuration is cached locally and can be loaded by the Native Builder using the unique project name provided. 
 
@@ -219,7 +219,7 @@ This parameter specifies an app splash file. The image must be a *.png* file, an
 
 Every build that is scheduled for release should have a unique, incrementing number. This number will be used as the name of the branch in GitHub, such as `branch/120`. The highest integer Android will allow is 2,147,483,647. Consider starting with 1 and incrementing by one with each release. Alternatively, you can use dates in the “YYmmddHHmm” format, such as `2007310950` for a build run on July 31, 2020 at 09:50.
 
-## 7 Completing Your Initial Run
+## 7 Completing Your Initial Run {#initial-run}
 
 Follow the steps below to run your Native Builder for the first time (it will fail this time):
 

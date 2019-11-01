@@ -16,7 +16,7 @@ When the page is displayed to the end-user, all the possible values are listed, 
 
 ![](attachments/radio-buttons/radio-buttons-displayed.png)
 
-Radio buttons must be placed in a [data widget](data-widgets) and display an attribute of the object(s) retrieved by that widget. The name of the attribute to be displayed is shown inside the text box, between square brackets, and colored blue.
+Radio buttons must be placed in a [data widget](data-widgets) and display an attribute of the object(s) retrieved by that widget. The name of the attribute to be displayed is shown inside the radio button widget, between square brackets, and colored blue.
 
 For example, the following image contains two sets of radio buttons.  The first allows the end-user to see, and set, the value of an enumeration identifying the preferred time to contact this person (**PreferredContact**). The second allows the end-user to see, and set, a Boolean indicating whether this is a **Personal** contact.
 
@@ -24,12 +24,12 @@ For example, the following image contains two sets of radio buttons.  The first 
 
 ## 2 Properties
 
-An example of text box properties is represented in the image below:
+An example of radio button properties is represented in the image below:
 
 {{% image_container width="250" %}}![](attachments/radio-buttons/radio-buttons-properties.png)
 {{% /image_container %}}
 
-Text box properties consist of the following sections:
+Radio button properties consist of the following sections:
 
 * [Common](#common)
 * [Data source](#data-source)
@@ -47,7 +47,7 @@ Text box properties consist of the following sections:
 
 ### 2.2 Data Source Section{#data-source}
 
-{{% snippet file="refguide/attribute-path-property.md" %}}
+{{% snippet file="refguide/data-source-section-link.md" %}}
 
 ### 2.3 Design Properties Section{#design-properties}
 
@@ -93,13 +93,13 @@ _Default value:_ Horizontal
 
 ### 2.8 Validation Section{#validation}
 
-{{% snippet file="refguide/widget-validation.md" %}}
+{{% snippet file="refguide/widget-validation-link.md" %}}
 
 ### 2.9 Visibility Section{#visibility}
 
 {{% snippet file="refguide/visibility-section-link.md" %}}
 
-## Read More
+## 3 Read More
 
 *   [Data view](data-view)
 *   [Attributes](attributes)

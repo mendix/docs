@@ -10,7 +10,7 @@ draft: true
 
 The [SAML](https://appstore.home.mendix.com/link/app/1174/) module can be used as a replacement or extension of your supported authentication methods. The module allows you to authenticate your user using SAML 2.0 or the Shibboleth protocol.
 
-By configuring the information about all identity providers in this module, you will allow the users to log in using the correct identity provider (IdP). There is no limit on the number of different identity providers you can configure.
+By configuring the information about all identity providers in this module, you will allow the users to sign in using the correct identity provider (IdP). There is no limit on the number of different identity providers you can configure.
 
 ### 1.1 Typical Usage Scenarios
 
@@ -37,7 +37,7 @@ With this module, you can authenticate against your Microsoft Active Directory s
 	* **DefaultLoginPage** – You can specify another login page here (for example, configuring the *index.html* page to redirect to `/SSO/`). This constant is only used when the login process fails. When the end-user cannot be authenticated in Mendix, they are presented with a page. If this constant is specified, a button will appear, and by clicking this button, you will be redirected to the default login page (for example, *index.html* or *login.html*).
 	* **DefaultLogoutPage** – Removing the sign-out button is recommended, but if you choose to keep it, the end-user will be redirected to a page. You can choose where the end-user is redirected to (for example, back to `/SSO/` or your *login.html* page). Every user signed in via SAML is redirected to this location when they are logged out.
 	* **SSOLandingPage** – You can specify a different landing page here (for example, redirecting each user accessing the application URL to the SAML login). This requires you to change the *index.html* page by adding `<meta http-equiv="refresh" content="0;URL=/SSO/" />` (so the end-user does not end up on *index.html* again after a login attempt).  By changing this constant to `/index3.html`, the end-user will land on *index3.html* instead of *index.html*.  In this case, you will of course need to add an *index3.html* page to your theme (and you can copy the original *index.html* into *index3.html*).
-4. Log in to the application and configure the SAML module.
+4. Sign in to the application and configure the SAML module.
 
 ## 3 Configuration
 
@@ -108,7 +108,7 @@ With these settings, you can configure the behavior of this module and improve m
 
 When testing and debugging the configuration, an option is to view the messages in the log files. A detailed cause of the failure will be printed in case something goes wrong.
 
-When enabling the log node SSO to show trace messages, you can find detailed information from every step in the process. This allows for an easy analysis of where potential configuration errors recite. Enabling trace messages for the SSO log node will also allow for detailed response messages to the user trying to log in. By default, every failed login attempt always results in this message: "Unable to validate the SAML message!" After enabling trace logging, you can see the exact cause of the failure in the browser. In case of exceptions, you can even see the stack trace.  Obviously, you should not have this enabled in production, but it does allow for easier and faster testing of the configuration.
+When enabling the log node SSO to show trace messages, you can find detailed information from every step in the process. This allows for an easy analysis of where potential configuration errors recite. Enabling trace messages for the SSO log node will also allow for detailed response messages to the user trying to sign in. By default, every failed login attempt always results in this message: "Unable to validate the SAML message!" After enabling trace logging, you can see the exact cause of the failure in the browser. In case of exceptions, you can even see the stack trace.  Obviously, you should not have this enabled in production, but it does allow for easier and faster testing of the configuration.
 
 ### 4.2 Error Messages
 
@@ -126,7 +126,7 @@ When enabling the log node SSO to show trace messages, you can find detailed inf
 ### 4.3 URLs
 
 * **/SSO/metadata** – This provides a point for the IdP to automatically download the metadata from this SP.
-* **/SSO/discovery** – If there are multiple active IdP configurations and discovery is enabled, this page can give a list of all the IdP configuration. It also allows the user to click the correct URL to log in.
+* **/SSO/discovery** – If there are multiple active IdP configurations and discovery is enabled, this page can give a list of all the IdP configuration. It also allows the user to click the correct URL to sign in.
 * **/SSO/login/[IdP Alias]  /SSO/login?_idp_id=[IdP_Alias]** – For logging using a specific IdP, you have to open either of these two URLs and pass the IdP alias as a parameter in the URL.
 * **/SSO/login/SSO/** – If you have only one active IdP, opening these URLs will automatically try to log you in using the active IdP. In the case of multiple active IdPs and discovery enabled, the user will be redirected to the discovery page.  If discovery is not allowed, the user will receive an error message.
 

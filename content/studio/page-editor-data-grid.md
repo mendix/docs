@@ -1,5 +1,5 @@
 ---
-title: "Data Grid Properties"
+title: "Data Grid"
 parent: "page-editor-widgets"
 description: "Describes a data grid in the page editor of Mendix Studio."
 menu_order: 15
@@ -8,11 +8,11 @@ tags: ["studio", "page editor", "pages", "data view", "list view"]
 
 ## 1 Introduction 
 
-This document describes a data grid in Mendix Studio.
-
-A data grid shows a list of objects in a table format. For example, a data grid can show all the program items for an event. Using controls, end-users can browse, search, and edit objects in the data grid.
+A *data grid* shows a list of objects in a table format. For example, a data grid can show all the program items for an event. Using controls, end-users can browse, search, and edit objects in the data grid.
 
 ![](attachments/page-editor-data-grid/data-grid-example.png)
+
+A data grid belongs to the **Data Container** category of widgets. For more information on different widget categories, see [Widgets](page-editor-widgets). 
 
 ## 2 Data Grid Properties
 
@@ -36,8 +36,8 @@ The **Data Source** section properties are described in the table below:
 
 | Data Source Property | Description                                                  |
 | -------------------- | ------------------------------------------------------------ |
-| Database             | A data source that determines that the object or objects shown are retrieved directly from the database. You need to select an **Entity** (that you have in the domain model), or create a new entity, if you set database as the data source. <br />When you select an existing entity, the [grid columns](#grid-columns) are automatically created for each attribute of this entity. <br/>**Filter** – limits data in the data grid. You can create a filter only after you specify an entity for the data grid. For more information on data filtering, see [Data Filters](filters).<br />**Sort Order** – the order in which rows in the data grid are shown. You can specify a sort order only after you select an entity for the data grid. You can add multiple sorting rules. For example, you can add two sorting rules: one is to sort item by name in ascending order, and the other one is to sort items by email in descending order. Unique items will be sorted by name in ascending order, but if two or more items have the same name, then these items will be sorted by email. |
-| Microflow            | A data source that runs a selected microflow and displays a return value (i.e. a list of objects). |
+| Database             | A data source that determines that the object or objects shown are retrieved directly from the database. You need to select an **Entity** (that you have in the domain model), or create a new entity, if you set database as the data source. <br />When you select an existing entity, the [grid columns](#grid-columns) are automatically created for each attribute of this entity. However, if the entity has more than eight attributes, you can choose whether you want to generate columns for all of them or select only several attributes. <br/>**Filter** – limits data in the data grid. You can create a filter only after you specify an entity for the data grid. For more information on data filtering, see [Data Filters](filters).<br />**Sort Order** – the order in which rows in the data grid are shown. You can specify a sort order only after you select an entity for the data grid. You can add multiple sorting rules. For example, you can add two sorting rules: one is to sort item by name in ascending order, and the other one is to sort items by email in descending order. Unique items will be sorted by name in ascending order, but if two or more items have the same name, then these items will be sorted by email. |
+| Microflow            | A data source that runs a selected microflow and displays a return value (as in, a list of objects). |
 | XPath                | Currently, this data source can only be configured in Studio Pro. For more information, see [XPath Source](/refguide/xpath-source). |
 | Association          | Available to data grids placed inside a data view or a list view. The data grid is filled with the objects linked to a data view/list view object by an association. Sorting columns and searching is not possible in data widgets with an association data source. |
 
@@ -175,7 +175,7 @@ By default, the data grid will be created with a **Search Bar Toggle Button**, *
 
 You can add more buttons to the data grid and configure them for a specific on-click action. 
 
-In the **On Click Action** section, you can select a data grid specific action for a button (for example, deselect all or export to Excel), or a standard one (for example, execute a microflow or save changes). For more information on buttons and standard on click actions, see [Button Widgets](page-editor-widgets-buttons) and [Events Section in Widgets](page-editor-widgets-events-section).
+In the **On Click Action** section, you can select a data grid specific action for a button (for example, deselect all or export to Excel), or a standard one (for example, execute a microflow or save changes). For more information on buttons and standard on click actions, see [Buttons](page-editor-widgets-buttons) and [Events Section](page-editor-widgets-events-section).
 
 Data grid specific actions are the following ones:
 
@@ -232,7 +232,7 @@ The **Events** section properties are described in the table below:
 
 ### 2.7 Design {#grid-design-section}
 
-For information on the **Design** section and its properties, see [Design Section in Widgets](page-editor-widgets-design-section).
+For information on the **Design** section and its properties, see [Design Section](page-editor-widgets-design-section).
 
 ## 3 Read More
 

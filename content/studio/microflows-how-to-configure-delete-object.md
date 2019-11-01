@@ -19,7 +19,7 @@ This how-to describes the following use case:  you would like to delete the cust
 
 {{% alert type="info" %}}
 
-You can configure the **Delete Object** on click action for such widgets as buttons or a static image. In this how-to, a **Delete** button is used as an example of widget with **Delete Object** on click action. For more information, see the [Delete Object Action](page-editor-widgets-events-section#delete-object-action) section in *Events Section in Widgets*.
+You can configure the **Delete Object** on click action for such widgets as buttons or a static image. In this how-to, a **Delete** button is used as an example of widget with **Delete Object** on click action. For more information, see the [Delete Object Action](page-editor-widgets-events-section#delete-object-action) section in *Events Section*.
 
 {{% /alert %}}
 
@@ -94,7 +94,7 @@ Now you will configure a list view and will add a button with [**Delete Object**
 
     ![](attachments/microflows-how-to-configure-delete-object/delete-button-properties.png)
 
-You have created the page that lists the customers names. If a user clicks **Delete** in one of the lines, the customer who is indicated in this line will be deleted from the app along with the customer's details. For more information, see section [2.3 Delete Object Action](page-editor-widgets-events-section#delete-object-action) in *Events Section in Widgets*.
+You have created the page that lists the customers names. If a user clicks **Delete** in one of the lines, the customer who is indicated in this line will be deleted from the app along with the customer's details. For more information, see section [2.3 Delete Object Action](page-editor-widgets-events-section#delete-object-action) in *Events Section*.
 
 ## 4 Configuring a Delete Object Action in a Data View
 
@@ -164,6 +164,6 @@ The workflow for the **Delete** button in the data view (the red **Delete** butt
 
    ![](attachments/microflows-how-to-configure-delete-object/published-page-example.png)
 
-For more information, see section [2.3 Delete Object Action](page-editor-widgets-events-section#delete-object-action) in *Events Section in Widgets*.
+For more information, see section [2.3 Delete Object Action](page-editor-widgets-events-section#delete-object-action) in *Events Section*.
 
 Congratulations! You have configured **Delete** buttons in a list view and in a data view. 

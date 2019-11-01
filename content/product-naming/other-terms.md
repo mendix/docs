@@ -76,14 +76,6 @@ For a definition of this term, see the [Managing App Users](/developerportal/set
 Capitalize in all instances.
 {{% /alert %}}
 
-## AppCloud
-
-This appears in some Mendix Cloud and Developer Portal documentation. It continues in the name of the [AppCloudServices](https://appstore.home.mendix.com/link/app/934/) module, which provides single sign-on (the original idea of AppCloud can be found in this [press release](https://www.mendix.com/press/new-mendix-appcloud/)).
-
-{{% alert type="info" %}}
-Do not use. Use specific SSO-related terminology instead.
-{{% /alert %}}
-
 ## Atlas UI {#atlas-ui}
 
 {{% alert type="info" %}}
@@ -148,7 +140,7 @@ Do not use "insta-deploy" or "instant redeploy."
 
 ## Free App {#free-app}
 
-A [Free App](/deploy/mendix-cloud-deploy#free-app) is an app that can be deployed without a license and is therefore free. There are restrictions on the resources available to a Free App. A Free App environment is a cloud environment, but it does not support complex or large applications. Free Apps are part of the [Free Edition](#free-edition).
+A [Free App](/developerportal/deploy/mendix-cloud-deploy#free-app) is an app that can be deployed without a license and is therefore free. There are restrictions on the resources available to a Free App. A Free App environment is a cloud environment, but it does not support complex or large applications. Free Apps are part of the [Free Edition](#free-edition).
 
 {{% alert type="info" %}}
 Capitalize in all instances.<br />

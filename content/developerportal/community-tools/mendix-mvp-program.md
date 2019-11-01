@@ -9,7 +9,7 @@ tags: ["community", "mvp"]
 
 ## 1 Introduction
 
-We know our community plays a huge role in the success of the Mendix platform. And with the [Most Valuable Professional (MVP) program](https://developer.mendixcloud.com/link/mvp), we want to recognize our loyal developers for their ongoing contributions and commitment to Mendix.
+We know our community plays a huge role in the success of the Mendix Platform. And with the [Most Valuable Professional (MVP) program](https://developer.mendixcloud.com/link/mvp), we want to recognize our loyal developers for their ongoing contributions and commitment to Mendix.
 
 The MVP program has been designed to empower the community by retaining our top contributors' high level of knowledge, giving them a closer view of the Mendix roadmap, and making them even more important and visible in the Mendix community.
 

@@ -36,7 +36,7 @@ This is an unlimited string attribute which is an attribute of the entity which 
 
 In the image below, the **Source attribute** is the *data* attribute of the *ChartContext* entity which is the data view context in which the Any Chart widget is placed.
 
-![](attachments/pages/charts/any-chart-page-placement.png)
+![](attachments/charts/any-chart-page-placement.png)
 
 The **Source attribute** contains a JSON structure which will merge with, and overwrite, the **Static** data. Commonly, this contains the data which you wish to plot, but it can also overwrite other static elements such as the type of chart, colors of lines, or the orientation of bars in a bar chart.
 
@@ -145,7 +145,7 @@ The form to show when a user hovers over a chart plot point. It has the context 
 
 ## 8 Chart Theming
 
-Advanced JSON settings can also be added in a global context via the theme folder of your mendix project root directory.
+Advanced JSON settings can also be added in a global context via the theme folder of your Mendix project root directory.
 
 To the theme folder, add a *.json* file named *com.mendix.charts*. The JSON should be in the following format:
 

@@ -3,7 +3,7 @@ title: "8.2"
 parent: "metamodel"
 ---
 
-These are the release notes for the  [Mendix Metamodel](/apidocs-mxsdk/mxsdk/understanding-the-metamodel) version 8.2.
+These are the release notes for the [Mendix Metamodel](/apidocs-mxsdk/mxsdk/understanding-the-metamodel) version 8.2.
 
 ## 8.2.0
 
@@ -19,12 +19,12 @@ These are the release notes for the  [Mendix Metamodel](/apidocs-mxsdk/mxsdk/und
 
 ### Entity (Element)
 
-* Added the public `isRemote` property.
+* Made the `isRemote` property public.
 * Introduced the `remoteSourceDocument` (experimental) property, which indicates the source document of the remote entity.
 
 ### NoGeneralization (Element)
 
-The following public properties were introduced:
+The following properties were made public:
 
 * `hasChangedDate`
 * `hasCreatedDate`

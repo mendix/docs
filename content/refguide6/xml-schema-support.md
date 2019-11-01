@@ -82,7 +82,7 @@ Complex types can specify attributes that can occur within the XML tag. These at
 
 ## Simple Types and Complex Types with Simple Content
 
-Mendix fully supports elements with primitive content, i.e., simple types or complex types with simple content. However, Mendix currently does not take restrictions of simple types into account, such as limiting a string to a finite set of possibilities or limiting the range of an integer. In those cases, all possible values of the base type (e.g., string) are allowed.
+Mendix fully supports elements with primitive content, as in, simple types or complex types with simple content. However, Mendix currently does not take restrictions of simple types into account, such as limiting a string to a finite set of possibilities or limiting the range of an integer. In those cases, all possible values of the base type (e.g., string) are allowed.
 
 Usually, elements with primitive content are translated to value elements in the mapping. If for some reason an element with primitive content is translated to an object element in the mapping, for instance because it occurs more than once, or because it has a complex type that also defines attributes, the contents of the element are translated to an extra value element called '(Contents)'.
 

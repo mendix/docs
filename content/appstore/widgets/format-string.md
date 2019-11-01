@@ -12,7 +12,7 @@ The [Format String](https://appstore.home.mendix.com/link/app/264/) widget adds 
 
 ### 1.1 Typical Usage Scenarios
 
-The typical usage scenario is displaying multiple attributes as a single string.
+Use this widget to display multiple attributes as a single string.
 
 ### 1.1 Features
 

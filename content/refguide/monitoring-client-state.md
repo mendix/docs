@@ -8,7 +8,11 @@ tags: ["studio pro"]
 
 The state is in the client (web browser). This allows the server to be scaled to multiple instances. As the state now resides in the client, it can be useful to monitor what's in the state and why at a given time.
 
-To do this, use the **Ctrl + Alt + G** key combination to dump the state into the browser console. The state is displayed in a JSON object and is grouped by entity type. If the entity is not-persistable, this is indicated with the suffix `[NPE]`.
+To do this, use the <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>G</kbd> key combination to dump the state into the browser console. The state is displayed in a JSON object and is grouped by entity type. If the entity is not-persistable, this is indicated with the suffix `[NPE]`.
+
+{{% alert type="info" %}}
+The <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>G</kbd> key combination works in all browsers except Mozilla Firefox in [Parallels](/howto/mobile/using-mendix-studio-pro-on-a-mac).
+{{% /alert %}}
 
 ## 2 Details
 

@@ -16,7 +16,7 @@ For example, if you have an employee they will work for one company. A company c
 
 ![](attachments/reference-selector/reference-selector-domain-model.png)
 
-In the reference selector, the name of the attribute of the associated objects which will be  displayed is shown inside the text box, between square brackets, and colored blue.
+In the reference selector, the name of the attribute of the associated objects which will be  displayed is shown inside the reference selector, between square brackets, and colored blue.
 
 For example, the following reference allows the end-user to see, and set, the association **Employee_Company** by selecting the **CompanyName** for the current **Employee**.
 
@@ -28,12 +28,12 @@ If you only want to _display_ information, you can also use a [text box](text-bo
 
 ## 2 Properties
 
-An example of text area properties is represented in the image below:
+An example of reference selector properties is represented in the image below:
 
 {{% image_container width="400" %}}![](attachments/reference-selector/reference-selector-properties.png)
 {{% /image_container %}}
 
-Text box properties consist of the following sections:
+Reference selector properties consist of the following sections:
 
 * [Common](#common)
 * [Data source](#data-source)
@@ -53,23 +53,9 @@ Text box properties consist of the following sections:
 
 ### 2.2 Data Source Section{#data-source}
 
-{{% snippet file="refguide/attribute-path-property.md" %}}
+{{% snippet file="refguide/data-source-section-link.md" %}}
 
 The attribute path specifies which attribute of an associated entity is shown in the reference selector. The path must follow one association of type reference starting in the entity of the data view.
-
-{{% alert type="info" %}}
-In the case of a reference selector you are selecting an association to another object. The attribute should indicate uniquely to the end-user which object is being selected.
-{{% /alert %}}
-
-The attribute can be of one of the following [data types](data-types):
-
-* Autonumber
-* Date and Time
-* Decimal
-* Enumeration
-* Integer
-* Long
-* String
 
 ### 2.3 Design Properties Section{#design-properties}
 
@@ -93,12 +79,9 @@ The formatting section applies only to the way that numeric attributes are displ
 * Integer
 * Long
 
-{{% todo %}}[Need to do something about numeric formatting]{{% /todo %}}
-
-{{% snippet file="refguide/numeric-formatting.md" %}}
+{{% snippet file="refguide/numeric-formatting-link.md" %}}
 
 ### 2.7 General Section{#general}
-
 
 #### 2.7.1 Select Using{#select-using}
 
@@ -210,7 +193,7 @@ See the [constraints](database-source#constraints) section of *Database Source* 
 
 The sort order specifies the order in which the items in the reference selector are shown. You can sort on multiple attributes in both directions (ascending and descending). If **(default)** sort order is specified, the reference selector sorts on the displayed attribute.
 
-#### 2.9.2 XPath
+#### 2.9.2 XPath{#xpath-constraints}
 
 If the source is XPath, the list of objects is also taken from the database, but the objects which are displayed are chosen by an XPath Constraint.
 
@@ -275,7 +258,7 @@ In microflow settings you can specify what parameters are passed to the microflo
 
 ### 2.10 Validation Section{#validation}
 
-{{% snippet file="refguide/widget-validation.md" %}}
+{{% snippet file="refguide/widget-validation-link.md" %}}
 
 ### 2.11 Visibility Section{#visibility}
 

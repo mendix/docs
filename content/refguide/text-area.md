@@ -10,9 +10,9 @@ tags: ["studio pro"]
 
 A **text area** is used to display and, optionally, allow the end-user to edit the value of an attribute of [data type](data-types) *String*. It differs from a [text box](text-box) In that the value can be displayed over several lines.
 
-A text area must be placed in a [data widget](data-widgets) and displays an attribute of the object(s) retrieved by that widget. The name of the attribute to be displayed is shown inside the text box, between square brackets, and colored blue.
+A text area must be placed in a [data widget](data-widgets) and displays an attribute of the object(s) retrieved by that widget. The name of the attribute to be displayed is shown inside the text area, between square brackets, and colored blue.
 
-For example, the following text box allows the end-user to see, and set, the **Notes** about a contact.
+For example, the following text area allows the end-user to see, and set, the **Notes** about a contact.
 
 ![](attachments/text-area/text-area.png)
 
@@ -23,7 +23,7 @@ An example of text area properties is represented in the image below:
 {{% image_container width="250" %}}![](attachments/text-area/text-area-properties.png)
 {{% /image_container %}}
 
-Text box properties consist of the following sections:
+Text area properties consist of the following sections:
 
 * [Common](#common)
 * [Data source](#data-source)
@@ -41,7 +41,7 @@ Text box properties consist of the following sections:
 
 ### 2.2 Data Source Section{#data-source}
 
-{{% snippet file="refguide/attribute-path-property.md" %}}
+{{% snippet file="refguide/data-source-section-link.md" %}}
 
 ### 2.3 Design Properties Section{#design-properties}
 
@@ -110,7 +110,7 @@ This is the text displayed when the number of typed characters is higher than th
 
 #### 2.6.5 Maximum Length
 
-This property specifies the maximum number of characters that can be typed in this text box.
+This property specifies the maximum number of characters that can be typed in this text area.
 
 | Value | Description |
 | --- | --- |
@@ -130,7 +130,7 @@ It can be used, for example, to give a hint to the end-user what kind of text sh
 
 ### 2.8 Validation Section{#validation}
 
-{{% snippet file="refguide/widget-validation.md" %}}
+{{% snippet file="refguide/widget-validation-link.md" %}}
 
 ### 2.9 Visibility Section{#visibility}
 

@@ -181,6 +181,7 @@ A container widget can be used to style or hide a group of widgets. This widget 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
 | `container` | This has all ViewStyle properties. |        |
+| `container` | `rippleColor` | This is the color of the ripple on Android, and will be applied only when the container has an on-click action set, otherwise it will be ignored (this defaults to `rgba(0, 0, 0, 0.2)`). |
 
 The default class to style all page titles is named `Container`.
 
@@ -453,7 +454,7 @@ The widget’s style properties are as follows:
 
 The default class to style all actions buttons is named `ActionButton`. However, an action button in a header has the default class `ActionButtonHeader`.
 
-## 9 Navigation Widget 
+## 9 Navigation Widget {#navigation-widget}
 
 The navigation widget allows users to navigate within your app using buttons on the top and bottom bars of your app’s pages. This is how a navigation widget could look in an app:
 
@@ -463,6 +464,7 @@ The widget’s style properties are as follows:
 
 ```xml
 <app>
+	<statusBar/>
 	<topBar/>
 	application content
 	<bottomBar/>
@@ -479,17 +481,17 @@ The widget’s style properties are as follows:
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
-| `topBar` | `backgroundColor` | This is the color of the background. |
-| `topBar` | `backButtonColor` | This is the text color of the back button. |
-| `topBar` | `titleAlignment` | This is the text alignment of the title. |
-| `topBar` | `titleColor` | This is the text color of the title. |
-| `topBar` | `titleFontFamily` | This is the font type of the title. |
-| `topBar` | `titleFontSize` | This is the font size of the title. |
-| `bottomBar` | `backgroundColor` | This is the color of the background. |
-| `bottomBar` | `fontFamily` | This is the font type of the bottom bar text. |
-| `bottomBar` | `fontSize` | This is the font size of the bottom bar text. |
-| `bottomBar` | `color` | This is the default icon and text color. |
-| `bottomBar` | `selectedColor` | This is the selected icon and text color. |
+| `statusBar` | `barStyle` | The style of the status bar, which can be either `dark-content` (black text) or `light-content` (white text). |
+| `statusBar` | `backgroundColor` | The background color of the status bar (Android only). |
+| `topBar` | `container` | This has all ViewStyle properties. |
+| `topBar` | `title` | This has all TextStyle properties. |
+| `topBar` | `backButtonText` | This has all TextStyle properties. |
+| `topBar` | `backButtonIcon` | This has all ImageStyle properties. |
+| `bottomBar` | `container` | This has all ViewStyle properties. |
+| `bottomBar` | `label` | This has all TextStyle properties. |
+| `bottomBar` | `selectedLabel` | This has all TextStyle properties. |
+| `bottomBar` | `icon` | This has all ViewStyle properties. |
+| `bottomBar` | `selectedIcon` | This has all ViewStyle properties. |
 | `progressOverlay` | `background` | This has all ViewStyle properties. |
 | `progressOverlay` | `container` | This has all ViewStyle properties. |
 | `progressOverlay` | `activityIndicator` | This is the same as the [activity indicator](#activity-indicator) widget. |

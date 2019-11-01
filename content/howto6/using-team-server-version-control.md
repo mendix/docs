@@ -83,7 +83,7 @@ Our advice is to keep commits small and this means that a commit probably relate
 
 The Modeler also attaches some information automatically:
 
-*   The author, i.e. the person who committed.
+*   The author, as in, the person who committed.
 *   The date and time of the commit.
 *   The list of changed documents/folder/modules along with the type of the change (modify, add, delete, ...).
 *   The version of the Modeler that was used to commit.

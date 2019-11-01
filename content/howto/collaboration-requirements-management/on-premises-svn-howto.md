@@ -72,14 +72,16 @@ To create a new app to store in your on-premises SVN server from the [Developer 
 
 1. Click **Create App** in the [Developer Portal](https://sprintr.home.mendix.com/index.html).
 2. Click the arrow next to **Edit App**, select **Edit in Mendix Studio Pro**, then open the app project in the relevant version. You need to open your app project in Studio Pro in order to download it to your local machine (for more information, see [Version Control](/refguide/version-control)).
-3. Your new app project contains a link to the location of the Mendix Team Server by default. To replace this with the address of your own SVN server, please create a ticket in the [Mendix Support Portal](https://support.mendix.com/hc/en-us) specifying your app project and the address of your SVN server. This address must include the name of the repository you're going to use for your app (for example, `https://svn.example.com:9876/repos/myapp`).
-4. Wait for confirmation from Mendix before continuing the process.
-5. Close all the running instances of Studio Pro.
-6. Open the folder in which your app project is stored.
-7. Delete the **.svn** and **.mendix-cache** folders (note that these folders may be hidden, in which case you'll need to enable the option in your file explorer to make them visible). By deleting these folders, any references to the Mendix Team Server are removed. Now, your app is ready to be uploaded to your own SVN server.
-8. Double-click the .**mpr** file in the same folder to open the app project again in Mendix Studio Pro (for example, if your app is called **MyApp**, this file will have the name **MyApp.mpr**). Alternatively, you can start Studio Pro, click **My Apps** > **Open App**, and browse to the abovementioned **.mpr** file to open your app project.
-9. When the app project is opened in Studio Pro, select **Project** > **More Versioning** >  **Upload to Version Control Server** in the top menu.
-10. In the dialog box that appears, select **Existing Mendix Team Server** and the name of your **Team Server App** (for example, **MyApp**), and then click **OK**. The app should now upload to your on-premises SVN server.
+3. Your app project contains a link to the location of the Mendix Team Server by default. To replace this with the address of your own SVN server, create a ticket in the [Mendix Support Portal](https://support.mendix.com/hc/en-us) specifying your app project and the address of your SVN server. This address must include the name of the repository you are going to use for your app (for example, `https://svn.example.com:9876/repos/myapp`). This will allow Mendix Support to change the URL of your app.
+4. Wait for confirmation from Mendix Support before continuing the process.
+5. With all instances of Studio Pro closed, open the folder in which your app project is stored locally.
+6. Delete the **.svn** and **.mendix-cache** folders (note that these folders may be hidden, in which case you will need to enable the option in your file explorer to make them visible). By deleting these folders, references to the Mendix Team Server are removed. Now, your app is ready to be uploaded to your own SVN server.
+7. Double-click the **.mpr** file in the project folder to open the app project again in Studio Pro (for example, if your app is called **MyApp**, this file will have the name **MyApp.mpr**). Alternatively, you can start Studio Pro, click **My Apps** > **Open App**, and browse to the abovementioned local **.mpr** file to open your app project.
+8. When the app project is opened in Studio Pro, go to the  top menu, select **Edit** > **Preferences** > **Advanced**. and make sure the **Enable private version control** box is checked.
+9. In the top menu, select **Project** > **More Versioning** >  **Upload to Version Control Server**.
+10. In the [Upload to Version Control Server](/refguide/upload-to-version-control-dialog) dialog box, select **Private server**.
+11. In the **App repository address** field, enter the address of your SVN server. This address must include the name of the repository you are going to use for your app (for example, `https://svn.example.com:9876/repos/myapp`).
+12. Click **OK** to connect to the server.
 
 ## 7 Read More
 

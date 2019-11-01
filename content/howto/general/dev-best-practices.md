@@ -1,5 +1,5 @@
 ---
-title: "Implement Best Practices for Development"
+title: "Implement Mendix Best Practices for Development"
 category: "General Info"
 menu_order: 7
 tags: ["best practice", "development", "develop", "reusable", "prefix"]
@@ -113,7 +113,7 @@ The microflows related to such an event handler should have the following prefix
 
 | Event Type      | Prefix               |
 |-----------------|----------------------|
-| Before commit   | BCo_{Entity name} |
+| Before commit   | BCo\_{Entity name} |
 | After commit    | ACo_{Entity name} |
 | Before create   | BCr_{Entity name} |
 | After create    | ACr_{Entity name} |
@@ -195,8 +195,8 @@ For integrations, you have the following types of microflow:
 
 | Document Type                             | Prefix    |
 |-------------------------------------------|-----------|
-| Layout                                    | **Lay_**  |
-| Snippet                                   | **Snip_** |
+| Layout                                    | Lay_  |
+| Snippet                                   | Snip_ |
 
 #### 3.5.2 Enumerations
 
@@ -204,7 +204,7 @@ For integrations, you have the following types of microflow:
 
 | Document Type                             | Prefix    |
 |-------------------------------------------|-----------|
-| Enumeration                               | **Enum_** |
+| Enumeration                               | Enum_ |
 
 #### 3.5.3 Pages
 
@@ -247,12 +247,12 @@ You can define the [home pages](/refguide/show-home-page) per device and role in
 
 | Event Type           | Device  | Page Name                   |
 |----------------------|---------|-----------------------------|
-| Default home page    | Desktop | Home_Desktop_Default      |
-| Default home page    | Tablet  | Home_Tablet_Default       |
-| Default home page    | Mobile  | Home_Phone_Default        |
-| Role based home page | Desktop | Home_Desktop_{Userrole} |
-| Role based home page | Tablet  | Home_Tablet_{Userrole}  |
-| Role based home page | Mobile  | Home_Phone_{Userrole}   |
+| Default home page    | Desktop | Home_Desktop\_Default      |
+| Default home page    | Tablet  | Home_Tablet\_Default       |
+| Default home page    | Mobile  | Home_Phone\_Default        |
+| Role based home page | Desktop | Home_Desktop\_{Userrole} |
+| Role based home page | Tablet  | Home_Tablet\_{Userrole}  |
+| Role based home page | Mobile  | Home_Phone\_{Userrole}   |
 
 ## 4 General Guidelines & Best Practices
 

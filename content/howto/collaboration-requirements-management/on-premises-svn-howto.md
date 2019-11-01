@@ -54,23 +54,34 @@ Mendix Studio Pro uses the Subversion 1.9 working copy. Previous versions of the
 
 This means that, if you use a separate SVN client (for example [TortoiseSVN](https://tortoisesvn.net/)) to work on your Mendix app project, you must always use the version which matches your app model. If you open a local model from Mendix version 7.x or 6.x with the latest version of TortoiseSVN, **you will no longer be able to open it in Mendix**.{{% /alert %}}
 
-## 5 Creating a New Application
+## 5 Creating a New App to Store in an On-Premises SVN Server
 
-Currently, there is no direct way of creating and storing a new application in your on-premises SVN server. To create a new app, follow these steps:
+To create a new app to store in your on-premises SVN server, you must create the app from Studio Pro by following these steps:
 
-1. Create a new Mendix application from either the [Developer Portal](https://sprintr.home.mendix.com/index.html) or in Mendix Studio Pro:
-    * If you create the app from the Developer Portal, open it in Mendix Studio Pro to download it to your local machine (for more information, see [Version Control](/refguide/version-control))
-    * If you create the app from Studio Pro, click **Yes** when asked whether you want to enable the Team Server
-2. The new app project now contains a link to the location of the Mendix Team Server. To replace this with the address of your own SVN server, please create a ticket in the [Mendix Support Portal](https://support.mendix.com/hc/en-us) specifying your app project and the address of your SVN server. This address must include the name of the repository you're going to use for your app (for example, `https://svn.example.com:9876/repos/myapp`).
-3. Wait for confirmation from Mendix before continuing the process.
-4. Close all the running instances of Studio Pro.
-5. Open the folder in which your app project is stored.
-6. Delete the **.svn** and **.mendix-cache** folders (note that these folders may be hidden, in which case you'll need to enable the option in your file explorer to make them visible). By deleting these folders, any references to the Mendix Team Server are removed. Now, your app is ready to be uploaded to your own SVN server.
-7. Double-click the .**mpr** file in the same folder to open the app project again in Mendix Studio Pro (for example, if your app is called **MyApp**, this file will have the name **MyApp.mpr**). Alternatively, you can start Studio Pro, click **My Apps** > **Open App**, and browse to the abovementioned **.mpr** file to open your app project.
-8. When the app project is opened in Studio Pro, select **Project** > **More Versioning** >  **Upload to Version Control Server** in the top menu.
-9. In the dialog box that appears, select **Existing Mendix Team Server** and the name of your **Team SErver App** (for example, **MyApp**), and then click **OK**. The app should now upload to your on-premises SVN server.
+1. Click **New App** on the **My Apps** page.
+2. In the **App Settings** dialog box, click **No** for **Enable online services**.
+3. In the top menu of Studio Pro, go to **Edit** > **Preferences** > **Advanced** and make sure the **Enable private version control** box is checked.
+4. In the top menu, select **Project** > **More Versioning** >  **Upload to Version Control Server**.
+5. In the [Upload to Version Control Server](/refguide/upload-to-version-control-dialog) dialog box, select **Private server**.
+6. In the **App repository address** field, enter the address of your SVN server. This address must include the name of the repository you are going to use for your app (for example, `https://svn.example.com:9876/repos/myapp`).
+7. Click **OK** to connect to the server.
 
-## 6 Read More
+## 6 Moving an App from Mendix Team Server to an SVN Server
+
+To create a new app to store in your on-premises SVN server from the [Developer Portal](/developerportal/indes), follow the steps below:
+
+1. Click **Create App** in the [Developer Portal](https://sprintr.home.mendix.com/index.html).
+2. Click the arrow next to **Edit App**, select **Edit in Mendix Studio Pro**, then open the app project in the relevant version. You need to open your app project in Studio Pro in order to download it to your local machine (for more information, see [Version Control](/refguide/version-control)).
+3. Your new app project contains a link to the location of the Mendix Team Server by default. To replace this with the address of your own SVN server, please create a ticket in the [Mendix Support Portal](https://support.mendix.com/hc/en-us) specifying your app project and the address of your SVN server. This address must include the name of the repository you're going to use for your app (for example, `https://svn.example.com:9876/repos/myapp`).
+4. Wait for confirmation from Mendix before continuing the process.
+5. Close all the running instances of Studio Pro.
+6. Open the folder in which your app project is stored.
+7. Delete the **.svn** and **.mendix-cache** folders (note that these folders may be hidden, in which case you'll need to enable the option in your file explorer to make them visible). By deleting these folders, any references to the Mendix Team Server are removed. Now, your app is ready to be uploaded to your own SVN server.
+8. Double-click the .**mpr** file in the same folder to open the app project again in Mendix Studio Pro (for example, if your app is called **MyApp**, this file will have the name **MyApp.mpr**). Alternatively, you can start Studio Pro, click **My Apps** > **Open App**, and browse to the abovementioned **.mpr** file to open your app project.
+9. When the app project is opened in Studio Pro, select **Project** > **More Versioning** >  **Upload to Version Control Server** in the top menu.
+10. In the dialog box that appears, select **Existing Mendix Team Server** and the name of your **Team Server App** (for example, **MyApp**), and then click **OK**. The app should now upload to your on-premises SVN server.
+
+## 7 Read More
 
 * [Version Control](/refguide/version-control)
 * [Team Server Overview](/developerportal/develop/team-server)

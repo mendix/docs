@@ -1,5 +1,5 @@
 ---
-title: "Implement Best Practices for Development"
+title: "Implement Mendix Best Practices for Development"
 category: "General Info"
 menu_order: 7
 tags: ["best practice", "development", "develop", "reusable", "prefix"]
@@ -113,14 +113,14 @@ The microflows related to such an event handler should have the following prefix
 
 | Event Type      | Prefix               |
 |-----------------|----------------------|
-| Before commit   | BCo_{Entity name} |
-| After commit    | ACo_{Entity name} |
-| Before create   | BCr_{Entity name} |
-| After create    | ACr_{Entity name} |
-| Before delete   | BDe_{Entity name} |
-| After delete    | ADe_{Entity name} |
-| Before rollback | BRo_{Entity name} |
-| After rollback  | ARo_{Entity name} |
+| Before commit   | BCo\_{Entity name} |
+| After commit    | ACo\_{Entity name} |
+| Before create   | BCr\_{Entity name} |
+| After create    | ACr\_{Entity name} |
+| Before delete   | BDe\_{Entity name} |
+| After delete    | ADe\_{Entity name} |
+| Before rollback | BRo\_{Entity name} |
+| After rollback  | ARo\_{Entity name} |
 
 #### 3.4.2 Calculated Attribute Microflows
 
@@ -128,19 +128,19 @@ For attributes, you can choose to store the value in the database or to calculat
 
 | Event Type      | Prefix               |
 |-----------------|----------------------|
-| Calculation     | Cal_{Entity name}\_{Attribute name}    |
+| Calculation     | Cal\_{Entity name}\_{Attribute name}    |
 
 #### 3.4.3 Page-Based Microflows
 
 [Pages](/refguide/pages) have a number of events that can trigger a microflow. See the following list for the examples and prefixes:
 
 | Event Type                | Prefix             | Used In |
-|---------------------------|--------------------|--------------------------------|
-| On enter event            | OEn_{Purpose}   | Input widgets                  |
-| On change event           | OCh_{Purpose}   | Input widgets                  |
-| On leave event            | OLe_{Purpose}   | Input widgets                  |
-| Data source               | DS_{Purpose}    | Data view, list view, data grid, template grid |
-| Microflow/action button   | ACT_{Purpose} or IVK_{Purpose} | Menu item, Navigation item, Microflow and Action button, Drop down button<br />(“IVK_” is used historically) |
+|---------------------------|--------------------|---- |
+| On enter event            | OEn\_{Purpose}   | Input widgets   |
+| On change event           | OCh\_{Purpose}   | Input widgets   |
+| On leave event            | OLe\_{Purpose}   | Input widgets   |
+| Data source               | DS\_{Purpose}    | Data view, list view, data grid, template grid |
+| Microflow/action button   | ACT\_{Purpose} or IVK\_{Purpose} | Menu item, Navigation item, Microflow and Action button, Drop down button<br />(“IVK\_” is used historically) |
 
 #### 3.4.4 Validation Microflows
 
@@ -148,7 +148,7 @@ Microflows that are used for [data validation](/howto/data-models/setting-up-dat
 
 | Event Type      | Prefix               |
 |-----------------|----------------------|
-| Validation      | Val_                 |
+| Validation      | Val\_                 |
 
 #### 3.4.5 Scheduled Event Microflows
 
@@ -156,7 +156,7 @@ For the microflow that you use in your [scheduled events](/refguide/scheduled-ev
 
 | Event Type      | Prefix               |
 |-----------------|----------------------|
-| Scheduled Event | ScE_                 |
+| Scheduled Event | ScE\_                 |
 
 #### 3.4.6 Project Microflows
 
@@ -164,9 +164,9 @@ Your [project settings](/refguide/project-settings) provide three events that ca
 
 | Event Type      | Microflow Name | Sub-microflow Prefix |
 |-----------------|----------------|----------------------|
-| After startup   | AfterStartUp   | ASu_                 |
-| Before shutdown | BeforeShutDown | BSd_                 |
-| Health check    | HealthCheck    | HCh_                 |
+| After startup   | AfterStartUp   | ASu\_                 |
+| Before shutdown | BeforeShutDown | BSd\_                 |
+| Health check    | HealthCheck    | HCh\_                 |
 
 #### 3.4.7 Unit Test Microflows
 
@@ -174,7 +174,7 @@ Microflows containing [unit tests](/howto/testing/testing-microflows-using-the-u
 
 | Event Type      | Prefix               |
 |-----------------|----------------------|
-| Unit Test       | Test_                |
+| Unit Test       | Test\_                |
 
 #### 3.4.8 Integration Microflows
 
@@ -182,10 +182,10 @@ For integrations, you have the following types of microflow:
 
 | Event Type                                | Prefix |
 |-------------------------------------------|--------|
-| Consumed web service operation microflow  | CWS_  |
-| Published web service operation microflow | PWS_  |
-| Published app service operation microflow | PAS_  |
-| Published REST service operation microflow | PRS_  |
+| Consumed web service operation microflow  | CWS\_  |
+| Published web service operation microflow | PWS\_  |
+| Published app service operation microflow | PAS\_  |
+| Published REST service operation microflow | PRS\_  |
 
 ### 3.5 Other Document Types
 
@@ -195,8 +195,8 @@ For integrations, you have the following types of microflow:
 
 | Document Type                             | Prefix    |
 |-------------------------------------------|-----------|
-| Layout                                    | **Lay_**  |
-| Snippet                                   | **Snip_** |
+| Layout                                    | Lay\_  |
+| Snippet                                   | Snip\_ |
 
 #### 3.5.2 Enumerations
 
@@ -204,7 +204,7 @@ For integrations, you have the following types of microflow:
 
 | Document Type                             | Prefix    |
 |-------------------------------------------|-----------|
-| Enumeration                               | **Enum_** |
+| Enumeration                               | Enum\_ |
 
 #### 3.5.3 Pages
 
@@ -220,14 +220,14 @@ Pages that are used as a tooltip page should have the suffix **_Tooltip**.
 
 | Page Purpose                             | Suffix |
 |-------------------------------------------|--------|
-| List objects of a single entity type  | _Overview |
-| Create an object | _New |
-| Update an object | _Edit |
-| Create *or* Update an object | _NewEdit |
-| View an object (read-only) | _View |
-| Select a single object | _Select |
-| Select multiple objects | _MultiSelect |
-| Tooltip | _Tooltip |
+| List objects of a single entity type  | \_Overview |
+| Create an object | \_New |
+| Update an object | \_Edit |
+| Create *or* Update an object | \_NewEdit |
+| View an object (read-only) | \_View |
+| Select a single object | \_Select |
+| Select multiple objects | \_MultiSelect |
+| Tooltip | \_Tooltip |
 
 #### 3.5.4 Integration Documents
 
@@ -235,11 +235,11 @@ Documents used to support integration should have the prefixes listed below.
 
 | Document Type                             | Prefix |
 |-------------------------------------------|--------|
-| Import mapping                            | ImM_  |
-| Export mapping                            | ExM_  |
-| XML schema                                | XSD_  |
-| JSON structure                            | JSON_ |
-| Deeplink                                  | Dl_   |
+| Import mapping                            | ImM\_  |
+| Export mapping                            | ExM\_  |
+| XML schema                                | XSD\_  |
+| JSON structure                            | JSON\_ |
+| Deeplink                                  | Dl\_   |
 
 ### 3.6 Home Pages
 
@@ -247,12 +247,12 @@ You can define the [home pages](/refguide/show-home-page) per device and role in
 
 | Event Type           | Device  | Page Name                   |
 |----------------------|---------|-----------------------------|
-| Default home page    | Desktop | Home_Desktop_Default      |
-| Default home page    | Tablet  | Home_Tablet_Default       |
-| Default home page    | Mobile  | Home_Phone_Default        |
-| Role based home page | Desktop | Home_Desktop_{Userrole} |
-| Role based home page | Tablet  | Home_Tablet_{Userrole}  |
-| Role based home page | Mobile  | Home_Phone_{Userrole}   |
+| Default home page    | Desktop | Home_Desktop\_Default      |
+| Default home page    | Tablet  | Home_Tablet\_Default       |
+| Default home page    | Mobile  | Home_Phone\_Default        |
+| Role based home page | Desktop | Home_Desktop\_{Userrole} |
+| Role based home page | Tablet  | Home_Tablet\_{Userrole}  |
+| Role based home page | Mobile  | Home_Phone\_{Userrole}   |
 
 ## 4 General Guidelines & Best Practices
 

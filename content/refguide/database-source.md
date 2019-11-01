@@ -6,23 +6,21 @@ tags: ["studio pro", "database", "data source"]
 
 ## 1 Introduction
 
-If **Database** is selected as the data source for a widget then an object or objects shown are retrieved directly from the database with a query. This data source is also supported in [offline](offline-first) applications in which case the data will come from the database on the mobile device. 
+If **Database** is selected as the data source for a widget then an object or objects shown are retrieved directly from the database with a query. This data source is also supported in [offline](offline-first) applications in which case the data will come from the database on the mobile device.
 
-{{% alert type="info" %}}
-
-Use access rules whenever possible to limit data in data grids. This way you know that the objects will always be constrained by these rules (as opposed to constraints on a single data grid). The access rules will also be applied when executing microflows which saves you from repeating constraints.
-
-{{% /alert %}}
+You can filter data shown with the help of database [constraints](#constraints). However, if you want to restrict data not for a single widget, but for several, you may want to apply [access rules](access-rules) for entities instead of database constraints. This way you know that the objects will always be constrained by these rules . Access rules will also be applied when executing microflows which saves you from repeating constraints.
 
 ## 2 Properties
 
 ### 2.1 Entity (Path)
 
-The **Entity (path)** property specifies the target of the database query. 
+The **Entity (path)** property specifies the target of the database query. If you have a top-level data widget, **Entity (path)** will get objects of the selected entity directly. If you have a nested data widget, you can also select an entity of a parent data container. In this case objects are retrieved following the association path and the association is parsed as an extra constraint in the database query. 
 
-For example, a top-level data grid is always connected to an entity. A nested data grid can either be connected to an entity or to an entity in the containing data view. In this case the entity path follows one association of type reference in the opposite direction in which the association's arrow is pointing (from * to 1).
+![Data Source Example](attachments/data-widgets/data-source-example.png)
 
-Please note that this differs from the [association data source](association-source) in that the objects are not retrieved from the client cache but directly from the database. The association is simply parsed as an extra constraint in the database query.
+{{% alert type="info" %}}
+
+This differs from the [association data source](association-source) when objects are retrieved from the memory, not database.
 
 ### 2.2 Show Search Bar {#show-search-bar}
 
@@ -47,7 +45,13 @@ _Default value:_ false
 
 ### 2.4 Constraints{#constraints}
 
-Constraints allow for custom, hard-coded limitations on the data displayed. This constraint will be applied after constraints already applied through security. Each constraint consists of an attribute, an operator and a value. Multiple constraints will limit the data even more ("and"). There is no way to create "or" constraints, except by switching to an [XPath data source](xpath-source).
+Constraints allow for custom, hard-coded limitations on the data displayed. This constraint will be applied on top of security constraints. For example, if your entity has an access rule that makes it read-only for the user and/or has an XPath constraint, the XPath constraint will be applied first.
+
+Each constraint consists of an **Attribute**, an **Operator**, and a **Value**:
+
+![Constraint Example](attachments/data-widgets/constraint-example.png)
+
+Multiple constraints will limit the data even more (the logical operator **AND**). There is no way to use the logical operator **OR** in constraints, but you can switch to an [XPath data source](xpath-source).
 
 {{% alert type="warning" %}}
 

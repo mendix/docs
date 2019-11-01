@@ -68,7 +68,7 @@ You can deactivate Mendix SSO in two simple steps. This will remove the end-user
 
 To deactivate Mendix SSO, follow these two steps:
 
-1. Rename the original login file (by default *login-without-sso.html*) in the **theme** folder of your project to *login.html*—this removes the single sign-on button from your sign in screen
+1. Follow the instructions below to rename the original login file (by default *login-without-sso.html*) in the **theme** folder of your project to *login.html* — this removes the single sign-on button from your sign in screen:
     1. Open your project directory in File Explorer by selecting the menu item **Project** > **Show Project Directory in Explorer**.
 
         ![Show project directory](attachments/mendix-sso/show-project-directory.png)
@@ -79,14 +79,14 @@ To deactivate Mendix SSO, follow these two steps:
 
     ![File explorer showing two login files](attachments/mendix-sso/theme-folder-remove.png)
 
-2. Remove the microflow **AfterStartup_MendixSSO** as the **After startup** microflow.
+2. Follow the instructions below to remove the microflow **MendixSSO_AfterStartup** as the **After startup** microflow.
     1. Open **Project Settings** from the **Project Explorer**.
     2. Click the **Runtime** tab.
     3. Click **Select…** for the **After startup** microflow.
     4. Click **None**.
         ![Setting after startup microflow to none](attachments/mendix-sso/after-startup-remove.png)
     5. Click **OK** to close the **Project Settings**.
-    {{% alert type="info" %}}If there is a different **After startup** microflow, you should not remove it. Instead remove the AfterStartup_MendixSSO microflow which is an action in the existing microflow{{% /alert %}}
+    {{% alert type="info" %}}If there is a different **After startup** microflow, you should not remove it. Instead remove the MendixSSO_AfterStartup microflow which is an action in the existing microflow{{% /alert %}}
 
 Mendix SSO will be deactivated the next time you deploy your app. You can still use Mendix SSO for local end-user administration.
 
@@ -116,28 +116,28 @@ To enable Mendix SSO in your app, follow these steps:
 
 1. Import the MendixSSO module from the [Mendix App Store](https://appstore.home.mendix.com/link/app/111349/Mendix/MendixSSO-(for-Mendix-7)).
 
-2. Add the microflow **AfterStartup_MendixSSO** to the **After startup** microflow.
+2. Add the microflow **MendixSSO_AfterStartup** to the **After startup** microflow by performing the following steps:
     1. Open **Project Settings** from the **Project Explorer**.
     2. Click the **Runtime** tab.
     3. Click **Select…** for the **After startup** microflow.
-    4. Choose the microflow **App Store modules** > **MendixSSO** > **Public** > **Default Implementation** > **Microflows** > **AfterStartup_MendixSSO** (you can use the filter to find it quickly) and click **Select**.
+    4. Choose the microflow **App Store modules** > **MendixSSO** > **MOVE_THIS** > **CustomizableMendixSSOMicroflows** > **MendixSSO_AfterStartup** (you can use the filter to find it quickly) and click **Select**.
         ![](attachments/mendix-sso/after-startup.png)
     5. Click **OK** to close the **Project Settings**.
-    {{% alert type="info" %}}If there is already an After startup microflow, you should not replace it, but rather add the AfterStartup_MendixSSO microflow as an action in the existing microflow{{% /alert %}}
+    {{% alert type="info" %}}If there is already an After startup microflow, you should not replace it, but rather add the MendixSSO_AfterStartup microflow as an action in the existing microflow{{% /alert %}}
 
-3. Add the pages **MyAccountViewEdit** and **UserOverview** to the app navigation.
+3. Add the pages **MyAccountViewEdit** and **UserOverview** to the app navigation by performing the following steps:
     1. Open **Navigation** from the **Project Explorer**.
     2. Click **New item** to add a new navigation item.
     3. Enter the following values and click **OK**.
         * **Caption** – *My Account*
         * **Icon** – *Glyphicon 'user'* (click **Select…** and search for `user`)
-        * **On click** – *Show a page* **App Store modules** > **MendixSSO** > **Public** > **Default Implementation** > **Pages** > **User** > **MyAccountViewEdit**
+        * **On click** – *Show a page* **App Store modules** > **MendixSSO** > **Default Implementation** > **Pages** > **User** > **MyAccountViewEdit**
     4. Repeat the above to add another **New item** with the values.
         * **Caption** – *User Overview*
         * **Icon** – *Glyphicon 'lock'*
-        * **On click** – *Show a page* **App Store modules** > **MendixSSO** > **Public** > **Default Implementation** > **Pages** > **Admin** > **UserOverview**
+        * **On click** – *Show a page* **App Store modules** > **MendixSSO** > **Default Implementation** > **Pages** > **Admin** > **UserOverview**
 
-4. Turn on **Production** security level and configure **User roles** *User* and *Administrator* to have access to the appropriate **MendixSSO** module roles.
+4. Turn on **Production** security level and configure **User roles** *User* and *Administrator* to have access to the appropriate **MendixSSO** module roles by performing the following steps:
     1. Open **Project Security** from the **Project Explorer**.
     2. Set **Security level** to **Production**.
     3. Switch to the **User roles** tab.
@@ -152,7 +152,7 @@ To enable Mendix SSO in your app, follow these steps:
 
         ![Confirmation of user roles](attachments/mendix-sso/module-user-roles.png)
 
-5. Rename the file *login-with-sso.html* in the **theme** folder of your project to *login.html*—this adds the single sign-on button to your sign in screen
+5. Rename the file *login-with-sso.html* in the **theme** folder of your project to *login.html* by performing the following steps — this adds the single sign-on button to your sign in screen:
     1. Open your project directory in File Explorer by selecting the menu item **Project** > **Show Project Directory in Explorer**.
         ![Show project directory](attachments/mendix-sso/show-project-directory.png)
     2. Go to the **theme** folder.

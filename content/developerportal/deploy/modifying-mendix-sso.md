@@ -61,25 +61,25 @@ To make a copy of the module, do the following:
 
 3. Copy the following microflows from **MendixSSO** to your new module.
 
-    * AfterStartup_MendixSSO
-    * CreateMendixSSOUser
-    * UpdateMendixSSOUser
+    * MendixSSO_AfterStartup
+    * MendixSSO_CreateUser
+    * MendixSSO_UpdateUser
 
 #### 2.2.2 Configuring the Copied Mendix SSO Module
 
 You need to tell the Mendix SSO Module to use your new entity, instead of the default one. To do this, make the following changes to the microflows in your new Mendix SSO Module:
 
-1. Update the **AfterStartup_MendixSSO** microflow in the new, customized, MendixSSO module to use the **CreateMendixSSOUser** and **UpdateMendixSSOUser** microflows from the customized MendixSSO module.
+1. Update the **MendixSSO_AfterStartup** microflow in the new, customized, MendixSSO module to use the **MendixSSO_CreateUser** and **MendixSSO_UpdateUser** microflows from the customized MendixSSO module.
 
     ![Modify custom afterstartup microflow to use custom create and update microflows](attachments/modifying-mendix-sso/custom-afterstartup-microflow.png)
 
-2. Update the **Create** action in the **CreateMendixSSOUser** microflow in your new module to use your new Mendix SSO user entity, not the original one. You will also need to update all the members which are set during the create.
+2. Update the **Create** action in the **MendixSSO_CreateUser** microflow in your new module to use your new Mendix SSO user entity, not the original one. You will also need to update all the members which are set during the create.
 
     ![Edit custom create microflow to use the new entity](attachments/modifying-mendix-sso/create-new-entity.png)
 
 3. Change the **End event** of the microflow to return an object of the correct type.
 
-4. Change the **Retrieve** action in the **UpdateMendixSSOUser** microflow in your new module to use your new Mendix SSO user entity.
+4. Change the **Retrieve** action in the **MendixSSO_UpdateUser** microflow in your new module to use your new Mendix SSO user entity.
 
 5. Change the **Change object** action to set the correct members of the object.
 
@@ -87,7 +87,7 @@ You need to tell the Mendix SSO Module to use your new entity, instead of the de
 
 6. Change the **End event** of the microflow to return an object of the correct type.
 
-7. Set the **After startup** microflow in the **Runtime** tab of **Project > Settings** to be the **AfterStartup_MendixSSO** microflow in your new module.
+7. Set the **After startup** microflow in the **Runtime** tab of **Project > Settings** to be the **MendixSSO_AfterStartup** microflow in your new module.
 
 #### 2.2.3 Using the Copied Mendix SSO Module
 

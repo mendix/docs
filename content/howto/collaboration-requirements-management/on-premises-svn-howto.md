@@ -68,7 +68,7 @@ To create a new app to store in your on-premises SVN server, you must create the
 
 ## 6 Moving an App from Mendix Team Server to an SVN Server
 
-To create a new app to store in your on-premises SVN server from the [Developer Portal](/developerportal/indes), follow the steps below:
+To create a new app to store in your on-premises SVN server from the [Developer Portal](/developerportal/index), follow the steps below:
 
 1. Click **Create App** in the [Developer Portal](https://sprintr.home.mendix.com/index.html).
 2. Click the arrow next to **Edit App**, select **Edit in Mendix Studio Pro**, then open the app project in the relevant version. You need to open your app project in Studio Pro in order to download it to your local machine (for more information, see [Version Control](/refguide/version-control)).

@@ -26,7 +26,7 @@ When uploading the app to the * [Team Server](/developerportal/develop/team-serv
 ### 2.2 Private Server
 
 {{% alert type="warning" %}}
-Note that this option is only available when support for other servers is enabled in **Preferences** > **Advanced** > [Enable private version control](preferences-dialog#enable)).
+Note that this option is only available when support for other servers is enabled in **Edit** > **Preferences** > **Advanced** > [Enable private version control](preferences-dialog#enable)).
 {{% /alert %}}
 
 If you select **Private server**, enter the address of the repository to which you want to upload your app in the **App repository address** field.

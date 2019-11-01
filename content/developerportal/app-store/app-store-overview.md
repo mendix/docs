@@ -188,7 +188,7 @@ This page presents the App Store components you have [favorited](#favorite-heart
 
 ![](attachments/app-store-overview/favorites.png)
 
-If you want to receive an email notification when new versions of your favorite content are published, check the **Subscribe** box.
+When the **Subscribe** box is checked next to a favorite component, you will receive email notifications when new versions of that component are published. Clear the check box if you do not want to receive these notifications.
 
 ## 5 Your Company's App Store
 

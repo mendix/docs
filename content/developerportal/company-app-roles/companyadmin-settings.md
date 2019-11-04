@@ -10,6 +10,8 @@ tags: ["Company","Admin","Developer Portal"]
 
 Each company using Mendix can set up specific settings for apps, teams, and nodes. The **Company Admin** role can use the Developer Portal to manage the company's settings.
 
+Note: This feature is only available for companies with a paid subscription. 
+
 To see the Company Admin settings, you need to be a Company Admin. To request information about the current Company Admin of your company, contact [Mendix Support](https://support.mendix.com/hc/en-us).
 
 ## 2 Accessing the Company Admin Settings

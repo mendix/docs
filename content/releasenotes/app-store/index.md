@@ -55,12 +55,11 @@ Content that was marked as **Protected** as well as content marked as **Shared w
 * We updated the **SAP OData Connector** to support the **Edm.Int64** data type. (Ticket 87284)
 * We also fixed a *java.net.SocketException: Broken pipe (Write failed)* exception which occurred when sending a large request to the OData service endpoint. (Ticket 86680)
 
-
 ### July 31st, 2019  
 
 #### Improvements 
 
-* We simplified the options available for formatting the Documentation section when creating new app store content.
+* We simplified the options available for formatting the Documentation section when creating new App Store content.
 * We made it possible to upload images into the Documentation editor - you can drag and drop an image from your file explorer into the editor, or link to images via URL (Copy + Paste does *not* work due to browser inconsistencies).
 * We made some user changes and improvements when you create new content using GitHub as the source. For example, an easier-to-use selection screen when choosing your repository.  
 * We also made some other minor bug fixes. 

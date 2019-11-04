@@ -71,7 +71,7 @@ You can specify additional Phonegap/Cordova settings and plugins by adding an XM
 
 For an overview of available elements and settings, refer to [Apache Cordova Phonegap Reference Config.xml](https://cordova.apache.org/docs/en/latest/config_ref/).
 
-## 3 iOS and Android
+## 3 iOS & Android
 
 In these tabs, you will see an overview of all the images that will be used in the app store. The images are divided into two categories:
 

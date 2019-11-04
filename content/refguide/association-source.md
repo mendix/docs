@@ -6,9 +6,15 @@ tags: ["studio pro", "association", "data source"]
 
 ## 1 Introduction
 
-The *association* source is a data source available to nested [data grids](data-grid), [template grids](template-grid), and [list views](list-view). 
+The **Association** source is a data source available to nested [data grids](data-grid), [template grids](template-grid), and [list views](list-view). 
 
-An association data source takes fills the widget with objects linked to another object by an association. To provide the context, the data widget needs to be nested within another data widget.
+{{% alert type="warning" %}}
+
+The **Association** source retrieves objects from memory, not from the database. 
+
+{{% /alert %}}
+
+An **Association** data source fills the widget with objects linked to another object by an association. To provide the context, the data widget needs to be nested within another data widget.
 
 Data widgets that can function as a container for other data widgets are the [template grid](template-grid), [list view](list-view), and [data view](data-view).
 
@@ -22,7 +28,7 @@ Sorting columns and searching is not possible in data widgets with an associatio
 
 ### 2.1 Entity (Path)
 
-The entity (path) property specifies the association by which the widget is populated. The only objects that will appear in the widget are those that are linked to the object in the containing widget by manner of the association selected.
+The **Entity (path)** property specifies the association by which the widget is populated. Only objects that are connected to the object of the surrounding data container by association will appear in the widget. 
 
 ## 3 Read More
 

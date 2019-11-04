@@ -1,7 +1,7 @@
 ---
 title: "Microflow Source"
 parent: "data-sources"
-tags: ["studio pro"]
+tags: ["studio pro", "microflow source", "data source"]
 ---
 
 ## 1 Introduction
@@ -44,7 +44,7 @@ Designates the microflow used to populate the widget. This microflow will be run
 
 ### 3.2 Microflow settings
 
-See [Starting Microflows](starting-microflows).
+**Microflow settings** specify what parameters will be passed to the microflow, whether to show a progress bar or not, etc. For more information on microflow settings, see [Starting Microflows](starting-microflows).
 
 ## 4 Read More
 

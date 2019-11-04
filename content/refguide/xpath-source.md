@@ -15,27 +15,19 @@ The data retrieved can also be limited by the following factors:
 1. The access rules defined in the security section of the project.
 2. An association, if the widget is nested in another data widget and the data path described runs over an association.
 
-If you want to restrict data not for a single widget, but for several, you may want to apply [access rules](access-rules) for entities instead of XPath constraints. This way you know that the objects will always be constrained by these rules . Access rules will also be applied when executing microflows which saves you from repeating constraints.
+If you want to restrict data not for a single widget, but for several, you may want to apply [access rules](access-rules) for entities instead of XPath constraints. This way you know that the objects will always be constrained by these rules. Access rules will also be applied when executing microflows which saves you from repeating constraints.
 
 ## 2 Properties
 
 ### 2.1 Entity (Path)
 
-The **Entity (path)** property specifies the target of the database query. A top-level data grid is always connected to an entity.
+The **Entity (path)** property specifies the target of the database query. If you have a top-level data widget, **Entity (path)** will get objects of the selected entity directly. If you have a nested data widget, you can also select an entity of a parent data container. In this case objects are retrieved following the association path and the association is parsed as an extra constraint in the database query. 
 
-For example, a top-level data grid is always connected to an entity. A nested data grid can either be connected to an entity or to an entity in the containing data view. In this case the entity path follows one association of type reference in the opposite direction in which the association's arrow is pointing (from * to 1).
+![Data Source Example](attachments/data-widgets/data-source-example.png)
 
 {{% alert type="info" %}}
-This differs from the [association data source](association-source) in that the objects are not retrieved from the client cache but directly from the database. The association is simply parsed as an extra constraint in the database query.
+This differs from the [association data source](association-source) when objects are retrieved from the memory, not database.
 {{% /alert %}}
-
-This [domain model](domain-model) describes a database in which an indeterminate number of users can be linked to a single country:
-
-![](attachments/16713835/16843965.jpg)
-
-The data view shown contains a single country. The data grid nested inside will display only those users that are linked to that particular country:
-
-![](attachments/16713835/16843966.jpg)
 
 ### 2.2 Show Search Bar {#show-search-bar}
 
@@ -63,7 +55,7 @@ _Default value:_ false
 The [XPath constraint](xpath-constraints) allows for custom, hard-coded limitations on the data displayed. This constraint will be appended to the constraints (if any) already applied through security and context.
 
 {{% alert type="warning" %}}
-XPath constraints are applied equally to all users and only apply to the data displayed in a single data widget. If the goal is to shield a particular subset of the data from users then [entity access rules](access-rules) are superior in that they can be tailored to each individual user role and that they apply system-wide.
+XPath constraints are applied equally to all users and only apply to the data displayed in a single data widget. If the goal is to restrict access to a particular subset of the data for users then [access rules](access-rules) for entities should be used as they can be applied to an individual user role and they apply system-wide.
 {{% /alert %}}
 
 ## 3 Read More

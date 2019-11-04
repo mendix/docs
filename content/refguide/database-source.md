@@ -22,6 +22,8 @@ The **Entity (path)** property specifies the target of the database query. If yo
 
 This differs from the [association data source](association-source) when objects are retrieved from the memory, not database.
 
+{{% /alert %}}
+
 ### 2.2 Show Search Bar {#show-search-bar}
 
 **Show search bar** is only available for data grids. You can select if and when the **[Search bar](search-bar)** of the data grid is shown.
@@ -51,11 +53,11 @@ Each constraint consists of an **Attribute**, an **Operator**, and a **Value**:
 
 ![Constraint Example](attachments/data-widgets/constraint-example.png)
 
-Multiple constraints will limit the data even more (the logical operator **AND**). There is no way to use the logical operator **OR** in constraints, but you can switch to an [XPath data source](xpath-source).
+Multiple constraints will limit the data even more (the logical operator **AND**). There is no way to use the logical operator **OR** in constraints, but you can switch to an [XPath data source](xpath-source) and create an XPath constraint.
 
 {{% alert type="warning" %}}
 
-Constraints are applied equally to all users and only apply to the data displayed in a single data widget. If the goal is to restrict access to a particular subset of the data for users then [entity access rules](access-rules) should be used as they can be applied to an individual user role and they apply system-wide.
+Constraints are applied equally to all users and only apply to the data displayed in a single data widget. If the goal is to restrict access to a particular subset of the data for users then [access rules](access-rules) for entities should be used as they can be applied to an individual user role and they apply system-wide.
 
 {{% /alert %}}
 

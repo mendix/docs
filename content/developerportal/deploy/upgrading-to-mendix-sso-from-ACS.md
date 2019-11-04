@@ -1,5 +1,5 @@
 ---
-title: "Upgrading to Mendix SSO from AppCloudServices"
+title: "Upgrading to MendixSSO from AppCloudServices"
 parent: "mendix-sso"
 menu_order: 20
 description: "How to upgrade existing apps using AppCloudServices to use MendixSSO"
@@ -16,9 +16,9 @@ MendixSSO has been designed to easily replace the AppCloudServices SSO. How to d
 * AppCloudServices was implemented with no additional customization
 * The AppCloudServices domain model has been enhanced with additional attributes and/or associations
 
-Dealing with these to situations is described in the two sections below.
+Dealing with these two situations is described in the two sections below.
 
-## 2 Replacing a Standard Implementation of AppCloudServices with Mendix SSO
+## 2 Replacing a Standard Implementation of AppCloudServices with MendixSSO
 
 If you have an app which uses AppCloudServices in its default implementation, you can just replace the existing AppCloudServices App Store module with the MendixSSO App Store module.
 
@@ -36,29 +36,31 @@ Perform the following steps to replace AppCloudServices with MendixSSO:
 
 5. Add user administration functions, if required.
 
-    To perform user administration of end-users signing on using the Mendix SSO module, you can include the default implementation supplied with the module. Include the relevant pages — which you can find in **MendixSSO** > **Default Implementation** > **Pages** — in the appropriate places within your app flow.
+    By default, you can use the MendixSSO module to perform user administration of end-users signing on. You can include the default implementation supplied with the module by adding the relevant pages — which you can find in **MendixSSO** > **Default Implementation** > **Pages** — in the appropriate places within your app flow.
     
     If you had local end-users who had access to the app, these will still be available through the **Account** entity in the **Administration** App Store Module. You can continue to administer these end-users through the Administration module
 
     If you wish, you can copy the information about local end-users into the **MendixSSOUser** entity in the MendixSSO module. If you do this, you will need to use the same techniques as described for customized implementations in the next section.
 
+{{% todo %}}[ALSO NEED TO CLEAR OLD JAR LIBRARIES - SEE RONNY]{{% /todo %}}
+
 6. Deploy your app to the Mendix Cloud.
 
 {{% alert type="success" %}}
-You have now upgraded your app to use the MendixSSO module. Because all the end-user information and credentials are held in their Mendix account, the end-users are already known to the app and can continue to use it as before.
+You have now upgraded your app to use the MendixSSO module. Because all the end-user information and credentials are held in their Mendix account, the end-users are already known to the app and can continue to use the app as before.
 {{% /alert %}}
 
-## 3 Replacing a Customized Implementation of AppCloudServices with Mendix SSO{#replacing-customized}
+## 3 Replacing a Customized Implementation of AppCloudServices with MendixSSO{#replacing-customized}
 
-If you have modified the domain model for AppCloudServices (ACS) single sign-on, and you want to keep this information, then you will need to implement Mendix SSO in a different way.
+If you have modified the domain model for AppCloudServices (ACS) single sign-on, and you want to keep this information, then you will need to implement MendixSSO in a different way.
 
 For example, say you have added an attribute, **CustomAttribute** to the end-user information which you are managing through the **CustomACSUser** entity. Additionally, you have associated the **CustomACSAssociatedEntity** entity which contains more information.
 
 ![Modified ACS Domain Model](attachments/upgrading-to-mendix-sso-from-acs/modified-domain-model.png)
 
-This is information which is not available from the Mendix Developer Portal, so if you just delete the AppCloudServices implementation, you will lose this extra information about the end-users. To keep it, you need to ensure that Mendix SSO uses your existing entities, rather than using the default ones.This is described below.
+This is information which is not available from the Mendix Developer Portal, so if you just delete the AppCloudServices implementation, you will lose this extra information about the end-users. To keep it, you need to ensure that MendixSSO uses your existing entities, rather than using the default ones.This is described below.
 
-### 3.1 Adding Mendix SSO to Your App
+### 3.1 Adding MendixSSO to Your App
 
 The first steps you need to take are the same as for a non-customized implementation:
 
@@ -78,9 +80,9 @@ The first steps you need to take are the same as for a non-customized implementa
 
     ![Setting page layout to Atlas_Default](attachments/upgrading-to-mendix-sso-from-acs/change-layouts.png)
 
-### 3.2 Telling Mendix SSO to Use Your ACS Entity
+### 3.2 Configuring MendixSSO to Use Your ACS Entity
 
-By default, Mendix SSO uses its own entities to store user information. However, it is designed to allow you to use your own custom entities instead. To do this, perform the following steps:
+By default, MendixSSO uses its own entities to store user information. However, it is designed to allow you to use your own custom entities instead. To do this, perform the following steps:
 
 1. Move the **MOVE_THIS** folder from **MendixSSO** to existing module containing your customized user administration entity.
 
@@ -100,7 +102,7 @@ By default, Mendix SSO uses its own entities to store user information. However,
 
 3. Change the **End event** of the microflow to return an object of the correct type.
 
-4.  Change the Parameter of the **MendixSSO_UpdateUser** microflow in the module to be your AppCloudServices user entity instead of MendixSSOUser
+4.  Change the Parameter of the **MendixSSO_UpdateUser** microflow in the module to be your AppCloudServices user entity (in this example, **MyACSModule.CustomACSUser**) instead of MendixSSOUser.
 
 5. Change the **Change object** action to set the correct members of the object.
 
@@ -110,27 +112,27 @@ By default, Mendix SSO uses its own entities to store user information. However,
 
 7. Set the **After startup** microflow in the **Runtime** tab of **Project > Settings** to be the **MendixSSO_AfterStartup** microflow in your user administration module.
 
-## 4 Copying Data from AppCloudServices Users to Mendix SSO Users
+## 4 Copying Data from AppCloudServices Users to MendixSSO Users
 
-Since you can re-use your AppCloudServices entities with Mendix SSO, there is no need to copy any data from existing entities to the new Mendix SSO entities.
+Since you can re-use your AppCloudServices entities with MendixSSO, there is no need to copy any data from existing entities to the new MendixSSO entities.
 
-If you decide to re-implement user administration using Mendix SSO rather than keep your existing user administration pages *and* you have additional data which is not available in the default Mendix SSO implementation, then you will need to make your own customized version of Mendix SSO and copy the existing data into it.
+If you decide to re-implement user administration using MendixSSO rather than keep your existing user administration pages *and* you have additional data which is not available in the default MendixSSO implementation, then you will need to make your own customized version of MendixSSO and copy the existing data into it.
 
 You will need to perform the following steps:
 
 1. Set up a new domain model to support the data which is currently held in the ACS user entity. It is recommended that you do this in a new module which you use for user administration.
 
-2. Set up Mendix SSO to support the entity in this new module using the instruction in the [Replacing a Customized Implementation of AppCloudServices with Mendix SSO](#replacing-customized) section, above.
+2. Set up MendixSSO to support the entity in this new module using the instruction in the [Replacing a Customized Implementation of AppCloudServices with MendixSSO](#replacing-customized) section, above.
 
-3. Modify your app to add or update your user administration pages and microflows. You can use the default implementation in the Mendix SSO module as a model.
+3. Modify your app to add or update your user administration pages and microflows. You can use the default implementation in the MendixSSO module as a model.
 
     Having set up the the domain model, and ensuring that the app will use the custom module to save the end-user data, you need to copy the existing data across.
 
-    In the Mendix SSO module, there is an example of a microflow which you can update to copy your existing data to your customized Mendix SSO module.
+    In the MendixSSO module, there is an example of a microflow which you can update to copy your existing data to your customized MendixSSO module.
 
     ![Where to find example migration microflow](attachments/upgrading-to-mendix-sso-from-acs/migration-microflow.png)
 
-4. Copy this microflow and page to your own module to avoid overwriting it when you upgrade the Mendix SSO module.
+4. Copy this microflow (**MigrateAdministrationAccounts**) and the page which calls it (**MigrationPage**) to your own module to avoid overwriting them when you upgrade the MendixSSO module.
 
 5. Update the example microflow to suit your own data structures. As each case will be different, this document is not able to cover the changes which you need to make in your specific circumstances.
 
@@ -139,5 +141,5 @@ You will need to perform the following steps:
 6. Backup your data, test your microflow and then run it.
 
 {{% alert type="success" %}}
-Mendix SSO will now use your new entity to administer the end-users, and your custom Mendix SSO users now have the same values as the old customized ACS users.
+MendixSSO will now use your new entity to administer the end-users, and your custom MendixSSO users now have the same values as the old customized ACS users.
 {{% /alert %}}

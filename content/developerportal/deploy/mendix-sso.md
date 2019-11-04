@@ -11,8 +11,6 @@ tags: ["SSO", "Single Sign-on", "Mendix credentials"]
 
 ## 1 Introduction
 
-{{% todo %}}[Still need to check which Starter Apps will be updated and how to tell what version of MendixSSO they have]{{% /todo %}}
-
 The [MendixSSO module](https://appstore.home.mendix.com/link/app/111349/Mendix/MendixSSO-(for-Mendix-7)) enables your app users to sign in with their Mendix account when your app is deployed to the Mendix Cloud.
 
 Using Mendix accounts has the following benefits:
@@ -20,15 +18,17 @@ Using Mendix accounts has the following benefits:
 * you do not need a special authorization module to support resetting and changing passwords
 * it is easy to create multiple applications which all use the same sign-on mechanism
 
-We are in the process of adding the Mendix SSO module to the Mendix starter apps. Where it has been added, all you have to do is to set your security level to **Production** and your end-users will be able to sign in.
+In addition, the MendixSSO module has a default implementation for user administration. This can be used in any Mendix app, but if you want to implement customized user administration this is also possible. See [Customizing MendixSSO](#customizing), below, for more information.
 
-You can see if your app has the Mendix SSO module, and which version it has, by looking in the **App Store modules** section in the **Project Explorer** for your app project. The version number is recorded in the **Version** constant within the module.
+We are in the process of adding the MendixSSO module to the Mendix starter apps. Where it has been added, all you have to do is to set your security level to **Production** and your end-users will be able to sign in.
+
+You can see if your app has the MendixSSO module, and which version it has, by looking in the **App Store modules** section in the **Project Explorer** for your app project. The version number is recorded in the **Version** constant within the module.
 
 ![](attachments/mendix-sso/mxsso-app-store-module.png)
 
 If your app does not have the MendixSSO module, it is available from the Mendix App Store here: [Mendix SSO](https://appstore.home.mendix.com/link/app/111349/Mendix/MendixSSO-(for-Mendix-7)). Follow the instructions in [How To Use App Store Content](/developerportal/app-store/app-store-content) to import it into your app and then follow the instructions in [Setting Up Mendix Single Sign-On](#setting-up), below.
 
-If you need a newer version of the Mendix SSO module (for example, to use a new feature), then it is also available from the App Store via the same link.
+If you need a newer version of the MendixSSO module (for example, to use a new feature), then it is also available from the App Store via the same link.
 
 ## 2 Using MendixSSO
 
@@ -102,17 +102,17 @@ To completely remove Mendix SSO. do the following:
 
 3. Delete the **MendixSSO** module from **App Store modules**.
 
-4. Review the **Errors** pane for any other references to **MendixSSO**—there will only be additional errors if Mendix SSO has been modified.
+4. Review the **Errors** pane for any other references to **MendixSSO**—there will only be additional errors if MendixSSO has been modified.
 
 ## 4 Setting Up Mendix Single Sign-On{#setting-up}
 
 These instructions are for apps which did not originally have the MendixSSO module. For example, if you have an existing app which did not have the MendixSSO App Store module.
 
 {{% alert type="info" %}}
-You do not have to follow these steps for apps (for example, starter apps) which already have Mendix SSO, or if you are upgrading an existing MendixSSO module to a newer version.
+You do not have to follow these steps for apps (for example, starter apps) which already have MendixSSO, or if you are upgrading an existing MendixSSO module to a newer version.
 {{% /alert %}}
 
-To enable Mendix SSO in your app, follow these steps:
+To enable MendixSSO in your app, follow these steps:
 
 1. Import the MendixSSO module from the [Mendix App Store](https://appstore.home.mendix.com/link/app/111349/Mendix/MendixSSO-(for-Mendix-7)).
 
@@ -123,9 +123,10 @@ To enable Mendix SSO in your app, follow these steps:
     4. Choose the microflow **App Store modules** > **MendixSSO** > **MOVE_THIS** > **CustomizableMendixSSOMicroflows** > **MendixSSO_AfterStartup** (you can use the filter to find it quickly) and click **Select**.
         ![](attachments/mendix-sso/after-startup.png)
     5. Click **OK** to close the **Project Settings**.
+
     {{% alert type="info" %}}If there is already an After startup microflow, you should not replace it, but rather add the MendixSSO_AfterStartup microflow as an action in the existing microflow{{% /alert %}}
 
-3. Add the pages **MyAccountViewEdit** and **UserOverview** to the app navigation by performing the following steps:
+3. To use the *default* user administration pages, add the pages **MyAccountViewEdit** and **UserOverview** to the app navigation by performing the following steps:
     1. Open **Navigation** from the **Project Explorer**.
     2. Click **New item** to add a new navigation item.
     3. Enter the following values and click **OK**.
@@ -136,6 +137,8 @@ To enable Mendix SSO in your app, follow these steps:
         * **Caption** – *User Overview*
         * **Icon** – *Glyphicon 'lock'*
         * **On click** – *Show a page* **App Store modules** > **MendixSSO** > **Default Implementation** > **Pages** > **Admin** > **UserOverview**
+
+    {{% alert type="info" %}}If you want to implement your own administration pages, see [Customizing MendixSSO](#customizing), below, for more information.{{% /alert %}}
 
 4. Turn on **Production** security level and configure **User roles** *User* and *Administrator* to have access to the appropriate **MendixSSO** module roles by performing the following steps:
     1. Open **Project Security** from the **Project Explorer**.
@@ -162,11 +165,9 @@ To enable Mendix SSO in your app, follow these steps:
 
 Your app is now configured to use Mendix Single Sign-on when it is deployed to the Cloud.
 
-## 5 Customizing Mendix SSO
+## 5 Customizing MendixSSO{#customizing}
 
-The [MendixSSO module](https://appstore.home.mendix.com/link/app/111349/) comes with a default implementation of end-user administration. This is described in [Mendix Single Sign-on](mendix-sso).
-
-The default administration module is sufficient for most apps. However, you can create your own administration module if you want to do things in a different way.
+The [MendixSSO module](https://appstore.home.mendix.com/link/app/111349/) comes with a default implementation of end-user administration. The default administration module is sufficient for most apps. However, you can create your own administration module if you want to do things in a different way.
 
 There are two ways you can modify the MendixSSO module. You can use snippets from the App Store module MendixSSO in your pages, or you can modify the MendixSSO module in any way you like to support your end-user administration requirements.
 
@@ -174,7 +175,7 @@ These two ways are described below.
 
 ### 5.1 Using Snippets
 
-The default Mendix SSO implementation is based on snippets. You can use these snippets in your own pages to customize the administration of the end-users. If you look at how they are used in the default implementation, you can see how to use them in your own pages. The snippets are:
+The default MendixSSO implementation is based on snippets. You can use these snippets in your own pages to customize the administration of the end-users. If you look at how they are used in the default implementation, you can see how to use them in your own pages. The snippets are:
 
 ![List of snippets in MendixSSO](attachments/mendix-sso/snippets.png)
 
@@ -192,7 +193,7 @@ The default Mendix SSO implementation is based on snippets. You can use these sn
     * **MyAccountDetailsSnippet** – a page where details of an end-user can be seen—similar to **UserViewEditSnippet** but without the additional administration capabilities
     * **MyTokensOverviewSnippet** – an overview of all the tokens issued to the current end-user of the app
 
-### 5.2 Modifying Mendix SSO
+### 5.2 Modifying MendixSSO
 
 {{% alert type="warning" %}}
 We recommend that you do not modify the version of MendixSSO which is in the App Store modules section of your project. In future, you may wish to import a newer version of the module and this will overwrite any changes you make.
@@ -200,7 +201,7 @@ We recommend that you do not modify the version of MendixSSO which is in the App
 
 The MendixSSO module is written so that you can create a user entity in another module and use this entity to store the user information and as the basis of a new administration module.
 
-#### 5.2.1 Copying the Mendix SSO Module{#copying}
+#### 5.2.1 Copying the MendixSSO Module{#copying}
 
 To make a copy of the module, do the following:
 
@@ -222,9 +223,9 @@ To make a copy of the module, do the following:
     * MendixSSO_CreateUser
     * MendixSSO_UpdateUser
 
-#### 5.2.2 Configuring the Copied Mendix SSO Module
+#### 5.2.2 Configuring the Copied MendixSSO Module
 
-You need to tell the Mendix SSO Module to use your new entity, instead of the default one. To do this, make the following changes to the microflows in your new Mendix SSO Module:
+You need to tell the MendixSSO Module to use your new entity, instead of the default one. To do this, make the following changes to the microflows in your new MendixSSO Module:
 
 1. Update the **MendixSSO_AfterStartup** microflow in the customized user administration module to use the **MendixSSO_CreateUser** and **MendixSSO_UpdateUser** microflows in the same module. If you moved the folder from the **MendixSSO** module the names should have been updated automatically.
 
@@ -246,9 +247,9 @@ You need to tell the Mendix SSO Module to use your new entity, instead of the de
 
 7. Set the **After startup** microflow in the **Runtime** tab of **Project > Settings** to be the **MendixSSO_AfterStartup** microflow in your user administration module.
 
-#### 5.2.3 Using the Copied Mendix SSO Module
+#### 5.2.3 Using the Copied MendixSSO Module
 
-Mendix SSO will now use your new entity to administer the users. You can edit the domain model and write your own user administration pages and microflows to customize your user administration completely. If you need inspiration or help in designing user administration, you can refer to the default implementation in the Mendix SSO module.
+MendixSSO will now use your new entity to administer the users. You can edit the domain model and write your own user administration pages and microflows to customize your user administration completely. If you need inspiration or help in designing user administration, you can refer to the default implementation in the MendixSSO module.
 
 {{% alert type="info" %}}
 Remember that data which comes from the end-user's Mendix ID via SSO (for example, **EmailAddress**) will overwrite any changes you make within your app.
@@ -298,7 +299,7 @@ The page can be used for troubleshooting – the end-user can see the creation a
 
 ### 6.2 Displaying Tokens using Snippets
 
-The default tokens pages in the Mendix SSO module are created using snippets.
+The default tokens pages in the MendixSS module are created using snippets.
 
 ![List of snippets which manipulate tokens in MendixSSO](attachments/mendix-sso/token-snippets.png)
 

@@ -328,11 +328,21 @@ The custom login page can be created in a similar manner as in scenario 2, with 
 
 You can view the implementation by deploying your app to the Mendix Cloud and going to your app, e.g. `https://yourapp.mendixcloud.com/`, and going to the page where you inserted the link. Click on the link, and you should see the custom login page. Test the local account login, and logout. Then test the Mendix account login.
 
+## 4 Troubleshooting Common AppCloudServices SSO Errors
+
+There are a couple of common problems you may encounter when developing an AppCloud-enabled app.
+
+### 4.1 "404 Not Found" Errors When Navigating to `/openid/login`
+
+A frequent cause of "404 not found" errors when navigating to `/openid/login` is that the OpenID request handler is not enabled. It should be enabled on startup.
+
+To fix this, make sure the **AppCloudServices.StartAppCloudServices** microflow is executed during the startup of your application. You can do this by setting it as the app's after-startup microflow or by having the application's existing after-startup microflow trigger it.
+
+### 4.2 Realm Verification Errors
+
+These are commonly caused by compatibility issues with JAR files in the `<projectpath>/userlib` directory of your project. For details on the most common compatibility issues, refer to [Troubleshooting](/refguide/troubleshooting) in the *Mendix Studio Pro Guide*.
+
 ## 4 Read More
 
-* [Azure: Deploy](azure-deploy)
 * [Mendix Cloud: Deploy](mendix-cloud-deploy)
 * [Mendix Single Sign-On](integrate-with-mendix-sso)
-* [Sending Email](sending-email)
-* [Trends in Mendix Cloud v3](/developerportal/operate/trends)
-* [Trends in Mendix Cloud v4](/developerportal/operate/trends-v4)

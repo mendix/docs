@@ -122,7 +122,7 @@ The **Dashboard** page presents your App Store activity:
 * Your numbers for [Published Content](#content) and [Submitted Reviews](#my-reviews)
 * [Notifications](#notifications) on components you created and favorited
 * Content [Drafts](#drafts) you have created
-* Your content [Favorites](#favorite-heart)
+* Your content [Favorites](#favorites)
 
 ![](attachments/app-store-overview/my_app_store.png)
 

@@ -8,86 +8,58 @@ draft: true
 
 ## 1 Introduction
 
-The [Questionnaire](https://appstore.home.mendix.com/link/app/234/) module allows you to configure complex reflexive questionnaires and distribute them to be conducted by your users. Different types of questions (with selectable options, date and number ranges, and free text) can be configured and rendered in different ways (for example, as text boxes, sliders, radio buttons, and check boxes). Depending on the question type, ranges can be configured wherein the answer must lie. Each question can be marked as required.
+The [Questionnaire](https://appstore.home.mendix.com/link/app/234/) module allows you to configure complex reflexive questionnaires and distribute them to users. Different types of questions (for example, with selectable options, date and number ranges, and free text) can be configured and rendered in different ways (for example, as text boxes, sliders, radio buttons, and check boxes). Depending on the question type, ranges can be configured wherein the answer must lie. Each question can be marked as required.
 
-Furthermore the visibility of questions and options can be dependent on earlier given answers. In addition the applicability of a range can also be dependent on an earlier given answer. During the development of the configuration the changes are tracked in revision which can always be restored.
-Installation
+The visibility and applicability of questions and options can be made dependent on earlier given answers. During configuration, changes are tracked in revision, which can always be restored.
 
-See the general instructions under How to Install.
-Implementation
+## 2 Implementation
 
-    Add the module role Administrator to the user roles that need to configure questionnaires.
-    Add the module role User to the user roles that need to conduct questionnaires.
-    Add the forms Connectors/Configurations and Connectors/Publications to your navigation.
+To implement this module, follow these steps:
 
+1. Add the **Administrator** [module role](/refguide/module-security#module-role) to the [user roles](/refguide/user-roles) that need to configure questionnaires.
+2. Add the **User** module role to the user roles that need to conduct questionnaires.
+3. Add the **Connectors/Configurations** and **Connectors/Publications** forms to your navigation.
 
-Idea
+## 3 Usage
 
-Use the Deep Link Module to generate hyper-links to a microflow with the Questionnaire Set number as input which will retrieve the published questionnaire belonging to the set and passes it on to the Connectors/ConductConfiguration microflow.
-User stories
+You can use this module to generate hyperlinks to a microflow with the questionnaire set number as an input. This will retrieve the published questionnaire belonging to the set and pass it to the **Connectors/ConductConfiguration** microflow.
 
-As basis of the functionality that will be implemented in the template user stories are created.  A user story is described like "As a <role> I want <achievement>". For the Questionnaire template the user stories below were created.
+User stories are created as the basis of the functionality implemented in the template.  A user story uses this template: "As a \<role\>, I want to \<goal\>". 
 
-    As an administrator I want to configure questionnaires. [ConfigureQuestionnaire]
-    In these questionnaires an administrator wants to
-        Add a question, instruction text or a next button. [AddElement]
-        Edit or delete these elements. [EditDeleteElement]
-        Define the sequence of the elements. [MoveElement]
-        Configure instruction texts. [ConfigureInstruction]
-        Configure questions that require text as answer. [ConfigureTextQuestion]
-        Configure questions where a date can be filled in and ranges can be defined. [ConfigureDateQuestion]
-        Configure questions where an amount can be filled in and ranges can be configured where the answer needs to be in. [ConfigureAmountQuestion]
-        Configure the dependability of options or elements based on earlier given answers. [ConfigureDependencies]
-        Control all revisions of earlier configurations. [ControlRevisions]
-        Download the results of published revisions. [DownloadResults]
-    As a user I want to be able to conduct a questionnaire. [ConductQuestionnaire]
-    In these questionnaires a user wants to
-        Start a questionnaire based on a configuration. [StartQuestionnaire]
-        Give an answer to a question. [AnswerQuestion]
-        Get a notification when he/she filled in something that is not valid. [ValidateAnswer]
-        See that dependencies are updated. [UpdateDependencies]
-        Navigate to a next or previous page. [NavigateBetweenPages]
+For the Questionnaire template, the following user stories below have been created:
 
-Helpful
+* As an Administrator, I want to configure questionnaires [ConfigureQuestionnaire] and do the following:
+	* Add a question, instruction text, or next button [AddElement]
+	* Edit or delete these elements [EditDeleteElement]
+	* Define the sequence of the elements [MoveElement]
+	* Configure instruction texts [ConfigureInstruction]
+	* Configure questions that require text as answer [ConfigureTextQuestion]
+	* Configure questions where a date can be filled in and ranges can be defined [ConfigureDateQuestion]
+	* Configure questions where an amount can be filled in and ranges can be configured where the answer needs to be [ConfigureAmountQuestion]
+	* Configure the dependability of options or elements based on earlier given answers [ConfigureDependencies]
+	* Control all revisions of earlier configurations [ControlRevisions]
+	* Download the results of published revisions [DownloadResults]
+* As a User, I want to conduct a questionnaire [ConductQuestionnaire] and do the following:
+	* Start a questionnaire based on a configuration [StartQuestionnaire]
+	* Give an answer to a question [AnswerQuestion]
+	* Get a notification when the user filled in something that is not valid [ValidateAnswer]
+	* See that dependencies are updated [UpdateDependencies]
+	* Navigate to a next or previous page [NavigateBetweenPages]
 
-The user stories are quite simple and are not elaborated any further. When you want to dig deeper you can load the template into your project and navigate through it. The folder names in the Mendix Business Modeler in the 'Logic' folder correspond with the names between brackets at the end of each user story. Every microflow has a description with everything explained.
-Known issues
+## 4 Customization
 
- 
+This module is easy to customize. Small customizations will not influence the module behavior, but when new configuration options are added or existing ones are removed, they will most likely have an impact. 
 
-sprintr™ integration
+For insight into where you need to pay attention when making these type of changes, these steps describe how to add different types of questions:
 
-Use the form 'Feedback' in the main folder as startpage to get the sprintr™ feedback functionanility that allows you to send your feedback to Mendix.
-
-
-    Dependencies of options shown in custom widgets are not updated. (ticket #8623 @ support.mendix.com)
-
-Roadmap
-
-The following features are scheduled to be implemented in the future:
-
-    Weights: Assigning weight to questions, group-boxes and pages
-    Group-boxes: Grouping questions to outline them and create options for calculating a group value
-    Templates: Creating question templates which can be easily reused.
-    Crosstable: An extra question type will be added to show a two dimensional table of checkboxes or radiobuttons.
-
-    Sliders: An extra question type will be added where the user can use a slider to select a numerical answer.
-    Integer support: Currently only floats are supported but in the future it will be possible to choose between whole number and decimal.
-
-Adaptations
-
-The module is easy to adapt to your wishes. Small adaptations won't influence the behaviour, but when new configuration options are added or existing are removed it will most likely have impact. To give insight to where you need to pay attention to when doing these type of changes there is a short instruction how different types of questions can be added below.
-
-    Start in the folder 'ConfigureQuestionnaire'
-    Add your type of question to the enumeration 'AddElement/ElementConfigType'
-    Create an entity specialized from ElementConfig for configuring your question type
-    If your question has options/ranges. Create an entity specialized from OptionConfig for configuring the option belonging to your question type
-    Create forms for the just created objects (it is easy to use the existing forms as starting point)
-    Add your just created form to the microflow 'EditDeleteElement/EditElementConfig'
-    Now we move to the folder ' ConductQuestionnaire'
-    Add the render modes belonging to your question type to the enumeration 'StartQuestionnaire/RenderMode'
-    If your question has a new input type. Add the input belonging to your question type to the enumeration 'StartQuestionnaire/InputType'
-    There are attributes for handling text, date and amount answers, but if the answer to your question differs you can add an attribute to the Element entity
-    Add your new question and option type to the microflows 'StartQuestionnaire/CreateElement' and 'StartQuestionnaire/CreateOption'
-    If your question has a new input type. Extend the microflow 'AnswerQuestion/SaveElement' and 'ValidateAnswer/ValidateElement' for handling the new input type
-    If your question has a new input type. Extend the microflow 'DownloadResults/GetAnswer' for handling the new input type when exporting results
+1. In the **ConfigureQuestionnaire** folder, add your question type to the **AddElement/ElementConfigType** enumeration.
+2. Create an entity specialized from **ElementConfig** for configuring your question type.
+3. If your question has options or ranges, create an entity specialized from **OptionConfig** for configuring the options belonging to your question type.
+4. Create forms for the objects you just created, because it is easy to use existing forms as starting points.
+5. Add each form you create to the **EditDeleteElement/EditElementConfig** microflow.
+6. In the **ConductQuestionnaire** folder, add the render modes belonging to your question type to the **StartQuestionnaire/RenderMode** enumeration.
+7. If your question has a new input type, add the input belonging to your question type to the **StartQuestionnaire/InputType** enumeration.
+8. There are attributes for handling text, date, and amount answers, but if the answer to your question needs to be different, add an attribute to the **Element** entity
+9. Add your new question and option type to the **StartQuestionnaire/CreateElement** and **StartQuestionnaire/CreateOption** microflows.
+10. If your question has a new input type, extend the **AnswerQuestion/SaveElement** and **ValidateAnswer/ValidateElement** microflows for handling the new input type.
+11. If your question has a new input type, extend the **DownloadResults/GetAnswer** microflow for handling the new input type when exporting results.

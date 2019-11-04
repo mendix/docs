@@ -38,12 +38,10 @@ You can configure the properties below to determine how the widget will behave i
 * **Tooltip position** – the location of the tooltip relative to the field
 * **Tooltip mode** – when to show the tooltip
 
-### 3.2 Data Source
+### 3.2 Data Source Tab
 
 * **Default text** – the text displayed when no data source microflow is defined
 * **Tooltip source microflow** – the microflow that returns the text to be displayed in the tooltip
-	* **Tooltip source** – the text generated from the microflow or object attribute
-	* **Tooltip source attribute** – contains the text to be displayed in the tooltip
 
 ## 4 Developing This App Store Component
 

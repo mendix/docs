@@ -66,7 +66,9 @@ After clicking **Manage App Users**, you will see a list of environments for you
 
 * [Mendix Single Sign-On](/developerportal/deploy/mendix-sso) is implemented:
 	* In Studio, SSO is automatically implemented for your app project by enabling security for your app – for details, see the [Enabling Security](/studio/settings-security#enabling-security) section of *Security, Roles & Permissions*
-	* In Studio Pro, SSO can implemented via the [AppCloudServices](https://appstore.home.mendix.com/link/app/934/) module – for details, see [SSO Using AppCloudServices](/developerportal/deploy/integrate-with-mendix-sso)
+	* In Studio Pro, SSO can implemented via the [MendixSSO](https://appstore.home.mendix.com/link/app/111349/Mendix/MendixSSO-(for-Mendix-7) module, or the (deprecated) [AppCloudServices](https://appstore.home.mendix.com/link/app/934/) module
+		* for details of the Mendix SSO module, see [Mendix Single Sign-On](/developerportal/deploy/mendix-sso)
+		* for details of the (deprecated) AppCloudServices module, see [SSO Using AppCloudServices](/developerportal/deploy/integrate-with-mendix-sso)
 * If you manage user roles from Studio, your app should be published (for more information see the [Managing App Users](/studio/settings-security#managing-app-users) section of *Security, Roles & Permissions* )
 * Your user role allows you to manage other users (for more information, see the [User Management Properties](/refguide/user-roles#user-management) section of *User Roles*)
 

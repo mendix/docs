@@ -68,7 +68,10 @@ Please do not remove the button with the caption **Device Registration reference
 
 The PushNotifications module contains a microflow named **AfterStartup_PushNotifications** that will start the APNs connector for you. Call this microflow from your **AfterStartup** microflow.
 
-If your project uses Mendix SSO, most likely the **AppCloudServices.StartAppCloudServices** microflow is set to execute after startup (for details, refer to [SSO Using AppCloudServices](/developerportal/deploy/integrate-with-mendix-sso) in the *Mendix Studio Pro Guide*). It is recommended that you change your startup microflow to a new microflow, from which you will call both after the startup microflows.
+If your project already has an AfterStartup microflow configured, it is recommended that you either: 
+
+* create a new microflow, from which you will call both the existing AfterStartup microflow and the AfterStartup_PushNotifications microflow, and then set this as the AfterStartup microflow for your app
+* add a new action to the existing AfterStartup microflow to run the AfterStartup_PushNotifications microflow
 
 <iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/02c590e5-f8bf-4f0e-90d6-3719390ee863/onstartupacsandpushnotifications?embed=true" allowfullscreen=""></iframe>
 

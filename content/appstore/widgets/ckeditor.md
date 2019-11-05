@@ -14,7 +14,7 @@ The [CKEditor](https://appstore.home.mendix.com/link/app/1715/) gives you a full
 
 A recommended alternative editor that is also platform-supported is the [Rich Text](https://appstore.home.mendix.com/link/app/74889/) widget.
 
-### 1.1 Typical Usage Scenario
+### 1.1 Typical Usage Scenarios
 
 Use this widget to add a full WYSIWYG editor for your entity attributes. You can also add links to HTML that, when clicked, run microflows.
 

@@ -17,7 +17,7 @@ A data view supports the following data sources:
 
 *   [Context](context-source) – the data view gets its object from the context:  either from a page parameter or a surrounding data container
 *   [Microflow](microflow-source) – the data view object is determined by the result of calling the selected microflow. The microflow can take objects in the context as parameter and needs to return a single object.
-*   [Nanoflow](nanoflow-source) – objects retrieved are determined by the result of calling the selected nanoflow. The nanoflow can take objects in the context as a parameter and needs to return a list of objects. 
+*   [Nanoflow](nanoflow-source) – objects retrieved are determined by the result of calling the selected nanoflow. The nanoflow can take objects in the context as a parameter and needs to return a single object. 
 *   [Listen to widget](listen-to-grid-source) – the data view object depends on the selection in a list widget (a data grid, template grid, or list view)
 
 {{% alert type="info" %}}

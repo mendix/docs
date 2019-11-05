@@ -12,7 +12,7 @@ When building a native app, you may want to use vector images for icons or other
 
 ## 2 Optimizing SVGs {#optimizing}
 
-When exporting an SVG from an editor, you often get an SVG with several unnecessary elements in it. These elements increase file size,   decrease performance, and can cause unwanted side effects. Therefore it is recommended that you run your SVG through an SVG-optimization tool. 
+When exporting an SVG from an editor, you often get an SVG with several unnecessary elements in it. These elements increase file size, decrease performance, and can cause unwanted side effects. Therefore it is recommended that you run your SVG through an SVG-optimization tool. 
 
 To optimize your SVGs, you can either run them through an online tool such as [SVGOMG](https://jakearchibald.github.io/svgomg/) or use a local tool such as [SVGO](https://github.com/svg/svgo).
 

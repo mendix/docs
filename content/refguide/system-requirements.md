@@ -76,7 +76,7 @@ Current support:
 * [IBM DB2](db2) 11.1
 * [MariaDB](mysql) 5.5, 10.1, 10.2, 10.3
 * [Microsoft SQL Server](/developerportal/deploy/mendix-on-windows-microsoft-sql-server) 2016, 2017
-* Azure SQL v12 (support is not independently verified and is available only through compatible versions of SQL Server)
+* Azure SQL v12, [compatibility mode 130 or higher](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017)
 * [MySQL](mysql) 5.7, 8.0
 * [Oracle Database](oracle) 12c Release 2
 * PostgreSQL 9.5, 9.6, 10, 11

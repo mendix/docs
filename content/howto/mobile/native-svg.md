@@ -18,7 +18,7 @@ To optimize your SVGs, you can either run them through an online tool such as [S
 
 ## 3 Unsupported Elements
 
-SVGs can contain several kinds of elements. Unfortunately, not all of them are supported in native apps. Unsupported elements will have no effect and should be removed. The following SVG elements are unsupported for native mobile apps:
+SVGs can contain several kinds of elements. However, not all of them are supported in native apps. Unsupported elements will have no effect and should be removed. The following SVG elements are unsupported for native mobile apps:
 
 * Complex gradients
 * Animations 

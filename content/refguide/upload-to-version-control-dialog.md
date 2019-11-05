@@ -11,22 +11,25 @@ Use this dialog box to upload an app that is not yet stored in a version control
 
 ## 2 Location
 
-Use this setting to select the location where you want to store your app. This can be either the [Team Server](/developerportal/develop/team-server) or an SVN server other than the Team Server.
-
-{{% alert type="warning" %}}
-This option is only available when support for other SVN servers is enabled in the **Preferences** dialog box.
-{{% /alert %}}
+Use this setting to select the location where you want to store your app. There are three options, which are described below.
 
 ### 2.1 Mendix Team Server
 
-When uploading the app to the Team Server, you can choose between creating a new repository (in which a new Team Server project will also be created) or uploading to an existing one:
+When uploading the app to the * [Team Server](/developerportal/develop/team-server), you can choose between the following:
 
-* When creating a new repository, enter the name for the new Team Server project and repository in the **App name** field
-* To use an existing repository, select the corresponding Team Server app from the list (note that this only works when the existing repository is empty)
+* Create a **New Mendix Team Server** project
+	* For this option, enter the name for the new Team Server project and repository in the **App name** field
+* Upload to an **Existing Mendix Team Server**
+	* For this option, select the corresponding **Team Server App** from the list
+	* This only works when the existing repository is empty
 
-### 2.2 Another SVN Server
+### 2.2 Private Server
 
-In the **SVN repository address** field, enter the address of the repository to which you want to upload your app.
+{{% alert type="warning" %}}
+Note that this option is only available when support for other servers is enabled in **Edit** > **Preferences** > **Advanced** > [Enable private version control](preferences-dialog#enable)).
+{{% /alert %}}
+
+If you select **Private server**, enter the address of the repository to which you want to upload your app in the **App repository address** field.
 
 ## 3 Read More
 

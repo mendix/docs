@@ -75,7 +75,7 @@ Widgets in Studio can be divided by origin as shown in the table below:
 
 ## 6 Adding the App Store Widgets
 
-You can add App Store widgets to your app by downloading them directly in the **Widgets** tab in Studio. These widgets are a subset of all widgets available in the app store: you can only download the ones that are approved for use in Studio. You can also update them if an update is available.
+You can add App Store widgets to your app by downloading them directly in the **Widgets** tab in Studio. These widgets are a subset of all widgets available in the App Store: you can only download the ones that are approved for use in Studio. You can also update them if an update is available.
 
 To add an App Store widget, do the following:
 

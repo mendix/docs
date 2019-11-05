@@ -1,5 +1,5 @@
 ---
-title: "Commit Dialog"
+title: "Commit"
 parent: "dialogs"
 tags: ["studio pro"]
 ---

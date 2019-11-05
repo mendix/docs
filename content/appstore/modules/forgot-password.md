@@ -21,18 +21,12 @@ With this module, the end-user can enter their email address, and an email will 
 
 ## 2 Configuration
 
-Once you have downloaded all the required modules (see [Dependencies](#dependencies)), you can reuse the snippets and microflows from the **Use Me** folder.
+Once you have downloaded the required modules listed in the [Dependencies](#dependencies) section above, you can reuse the snippets and microflows from the **Use Me** folder.
 
-The page ForgotPasswordConfiguration should be accessible to the administrator only, this snippet allows for configuring the email template, deeplink and shows all open reset password requests.
+The configuration page allows you to create the email and deep link templates that are used by this module. You should NOT create your own templates through the configuration of the Email with Templates and Dep Link modules. By clicking **Create**, all the default settings will be there to allow you to reset the password. The only thing you need to do is configure or validate your SMTP settings. 
 
-The configuration page allows you to create the email and deeplink templates that are used by this module. You should NOT create your own templates through the configuration of those modules. By pressing the create button, all default settings will be there to allow you to reset the password. The only thing you still need to do is configure or validate your SMTP settings. 
+Signup and password reset are included into this module. To disable the signup functionality, remove the **Sign up** button from the login snippet and emtpy the content of the **CreateNewUserFromSignUp** microflow.
 
-Sign up and passwordreset are now included into this module.
+The **ForgotPasswordConfiguration** page should be accessible to the administrator only. This snippet allows for configuring the email template and deep link, and it shows all the open password reset requests
 
-To disable sign-up remove the sign-up button from the login snippet and emtpy the content of the microflow CreateNewUserFromSignUp.
-
-The microflow: Nav_GuestHomePage is an example for a home page for the anonymous user, this will either show the page:  LoginPage,  or will trigger the deeplink process.
-
-If you choose to use a different homepage or a different homepage microflow you can use the Step1_ShowForgotPasswordPage microflow to be triggered by the anonymous user. This microflow start the reset password function.
-
-This module has also been reviewed by Expert services to prevent any potential vulnerabilities. 
+The **Nav_GuestHomePage** microflow is an example for a home page for an anonymous user. This microflow will either show the **LoginPage** or trigger the deep link process. If you choose to use a different home page or a different home-page microflow, you can set the **Step1_ShowForgotPasswordPage** microflow to be triggered by the anonymous user. This microflow starts the reset password function.

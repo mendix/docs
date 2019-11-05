@@ -1,5 +1,5 @@
 ---
-title: "Branch Line Manager Dialog"
+title: "Branch Line Manager"
 parent: "dialogs"
 tags: ["studio pro"]
 ---

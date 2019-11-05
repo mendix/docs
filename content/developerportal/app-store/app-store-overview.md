@@ -50,7 +50,7 @@ The header for each add-on presents the following details:
 	* **Open** – click this to open a supplementary page for the component
 	* **Download** – click this to download the component
 		* This is only available for components that have a file attached (meaning, all shared Studio Pro components, but not promotion)
-		* The best practice is to download a component from the App Store that is accessible in Studio Pro, because it then downloads directly into Studio Pro (for details on importing downloaded App Store components into Studio Pro, see [How to Import & Export Objects](/howto/integration/importing-and-exporting-objects))
+		* The best practice is to download a component from the App Store that is accessible in Studio Pro, because it then downloads directly into Studio Pro (for details on importing downloaded App Store content into Studio Pro, see [How to Import & Export Objects](/howto/integration/importing-and-exporting-objects))
 
 ### 3.2 Tabs
 
@@ -95,7 +95,7 @@ In the **Additional Info** section, you can see the following information (depen
 * The type of **License** for the component
 * The type of support Mendix offers for the component (for more information, see [App Store Content Support](app-store-content-support))
 * The **URL** for the component page that you can copy and share
-* The **UUID** of the component; if the component is part of the **Getting Started** category of App Store components, this UUID can be used in the [CreateNewApp operation](/apidocs-mxsdk/apidocs/projects-api#createnewapp) in the *Projects API*
+* The **UUID** of the component; if the component is part of the **Getting Started** category of App Store content, this UUID can be used in the [CreateNewApp operation](/apidocs-mxsdk/apidocs/projects-api#createnewapp) in the *Projects API*
 * A **View on GitHub** link, which will take you to the GitHub source files of the component
 * A link to the documentation on how to install the App Store component
 
@@ -107,7 +107,7 @@ In the **Additional Info** section, you can see the following information (depen
 
 In the **Developer Info** section, you can see the following information:
 
-* The name, job title, and Mendix level of the App Store content developer
+* The name, job title, and Mendix level of the App Store content's developer
 	* Clicking the developer name will bring you to their [Mendix Profile](/developerportal/mendix-profile/index)
 * The numbers for **Added items**, **Updated items**, and **Reviews added** in the Mendix App Store
 * The company for which the developer works
@@ -128,11 +128,11 @@ The **Dashboard** page presents your App Store activity:
 
 ### 4.2 My Content {#content}
 
-On this page, you can see the App Store components for which you have created at least one version:
+On this page, you can see the App Store content for which you have created at least one version:
 
 ![](attachments/app-store-overview/my-content.png)
 
-You may see the **Company only** label on a component, which means it is your company's private App Store content (for details on how this is configured, see the [Adding New App Store Components](share-app-store-content#private-app-store) section of *How to Share App Store Content*). This content can be shared with [guests](#guests).
+You may see the **Company only** label on a component, which means it is your company's private App Store content (for details on how this is configured, see the [Adding New App Store Content](share-app-store-content#private-app-store) section of *How to Share App Store Content*). This content can be shared with [guests](#guests).
 
 In addition, you may see a label on a component name for the [user group](#user-groups) to which the component is assigned as user group [content](#content).
 
@@ -184,7 +184,7 @@ This page presents a history of notifications on content you have contributed to
 
 ### 4.7 Favorites {#favorites}
 
-This page presents the App Store components you have [favorited](#favorite-heart):
+This page presents the App Store content you have [favorited](#favorite-heart):
 
 ![](attachments/app-store-overview/favorites.png)
 

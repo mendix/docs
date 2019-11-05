@@ -94,8 +94,8 @@ To contribute to the development of this widget, follow these steps:
 	* [webpack-cli](https://www.npmjs.com/package/webpack-cli)
 	* [grunt-cli](https://github.com/gruntjs/grunt-cli)
 
-2. Fork and clone [mendixlabs/listview-swipe](https://github.com/mendixlabs/listview-swipe.git).
-3. The code is in typescript. To set up the development environment, run `npm install`.
+2. Fork and clone the [mendixlabs/listview-swipe](https://github.com/mendixlabs/listview-swipe.git) repository. The code is in typescript.
+3. Set up the development environment by running `npm install`.
 4. Create a folder named *dist* in the project root.
 5. Create a Mendix test project in the *dist* folder and rename its root folder to *dist/MxTestProject* (or, get the test project from [mendixlabs/listview-swipe releases](https://github.com/mendixlabs/listview-swipe/releases/latest)). Changes to the widget code are automatically pushed to this test project.
 6. To automatically compile, bundle, and push code changes to the running test project, run `grunt`.

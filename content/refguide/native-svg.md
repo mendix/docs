@@ -32,7 +32,7 @@ We suggest manually removing these elements from your SVGs, or using the tools m
 
 In some cases, you might want to change certain colors in your SVG, for example when making an icon. Mendix allows you to do this by setting the `fill` and `stroke` properties in image's styling. These properties will then be applied to *all* the elements inside the SVG that do not have these properties.
 
-Take the following SVG an an example:
+Take the following SVG as an example:
 
 ```svg
 <svg viewBox="0 0 100 100">

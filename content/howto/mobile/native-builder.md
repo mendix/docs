@@ -37,7 +37,7 @@ The Native Builder uses MxBuild, GitHub, and App Center to build your applicatio
 
 A build with the Native Builder can be thought of as a two-step process. First, you need to prepare a project to be built. Run `prepare` and pass all required parameters. Prepare a build target for the Native Builder named Mendix App that will generate an app called New App when built:
 
-`native-builder.exe prepare --java-home "c:\Java" --mxbuild-path "c:\Mendix\mxbuild.exe --project-path "c:\MendixApp\MendixApp.mpr" --github-access-token "12345..." --app-center-api-token "12345..." --project-name "Mendix App" --app-name "New App" --app-identifier "com.mycompany.newapp --runtime-url "https://mendixapp.mendixcloud.com"`
+`native-builder.exe prepare --java-home "c:\Java" --mxbuild-path "c:\Mendix\mxbuild.exe --project-path "c:\MendixApp\MendixApp.mpr" --github-access-token "12345..." --appcenter-api-token "12345..." --project-name "Mendix App" --app-name "New App" --app-identifier "com.mycompany.newapp --runtime-url "https://mendixapp.mendixcloud.com"`
 
 Because this is your first run, the `prepare` command will fail. It will show a warning while it configures App Center to be able to read your repository. To solve this, consult the [Completing Your Initial Run](#initial-run) section and then run the `prepare` command again.
 
@@ -87,13 +87,13 @@ The `Prepare` command handles the creation of the app on both GitHub and App Cen
 An example of a `prepare` command:
 
 ```
-native-builder.exe prepare --github-access-token <token> --app-center-api-token <token> --java-home <absolute-path> --mxbuild-path <absolute-path> --project-path <absolute-path-to-mpr-file> --projectName CoolApp --app-identifier "com.company.myapp" --app-name "My Cool App"
+native-builder.exe prepare --github-access-token <token> --appcenter-api-token <token> --java-home <absolute-path> --mxbuild-path <absolute-path> --project-path <absolute-path-to-mpr-file> --project-name CoolApp --app-identifier "com.company.myapp" --app-name "My Cool App"
 ```
 
 | Parameters                  | Description                                                          | Example                                             |
 | --------------------------- | -------------------------------------------------------------------- | --------------------------------------------------- |
 | `--github-access-token`     | GitHub access token.                                                 | `c0e1dasf1e102c55ded223dbdebdbe59asf95224`          |
-| `--app-center-api-token`    | App Center API token.                                                | `3e18asdfb43f4fe6c85afsd0bf60dde72f134`             |
+| `--appcenter-api-token`    | App Center API token.                                                | `3e18asdfb43f4fe6c85afsd0bf60dde72f134`             |
 | `--app-center-organization` | (Optional) App Center organization name.                             | `my-company`                                        |
 | `--project-name`            | Unique name of the project.                                          | `CoolApp`                                           |
 | `--app-name`                | Display name of the app.                                             | `My Cool App`                                       |
@@ -113,13 +113,13 @@ The `Build` command builds the JavaScript bundles and assets, creates a build on
 If you already ran `prepare`, this is an example of a `build` command:
 
 ```
-native-builder.exe build --projectName "CoolApp" --app-version "1.0.0" --build-number 1
+native-builder.exe build --project-name "CoolApp" --app-version "1.0.0" --build-number 1
 ```
 
 | Parameters                  | Description                                                                          | Example                                             |
 | --------------------------- | ------------------------------------------------------------------------------------ | --------------------------------------------------- |
 | `--github-access-token`     | GitHub access token.                                                                 | `c0e1dasf1e102c55ded223dbdebdbe59asf95224`          |
-| `--app-center-api-token`    | App Center API token.                                                                | `3e18asdfb43f4fe6c85afsd0bf60dde72f134`             |
+| `--appcenter-api-token`    | App Center API token.                                                                | `3e18asdfb43f4fe6c85afsd0bf60dde72f134`             |
 | `--app-center-organization` | (Optional) App Center organisation name.                                             | `my-company`                                        |
 | `--project-name`            | Unique name of the project used during `prepare`.                                    | `CoolApp`                                           |
 | `--app-name`                | Display name of the app.                                                             | `My Cool App`                                       |
@@ -162,7 +162,7 @@ The `regenerate` command recreates the project on GitHub with the latest version
 An example of a `regenerate` command:
 
 ```
-native-builder.exe regenerate --projectName "CoolApp"
+native-builder.exe regenerate --project-name "CoolApp"
 ```
 
 | Parameters       | Description                                       | Example   |

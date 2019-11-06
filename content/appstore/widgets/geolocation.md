@@ -8,10 +8,8 @@ draft: true
 
 ## 1 Introduction
 
-The [Geolocation](https://appstore.home.mendix.com/link/app/1380/) widget enables PhoneGap native geolocation functionality within your Mendix mobile application. This is a widget that will be functional from Mendix 7.13.1.
-Contributing
+The [Geolocation](https://appstore.home.mendix.com/link/app/1380/) widget enables PhoneGap native geolocation functionality within your Mendix mobile application.
 
-For more information on contributing to this repository visit Contributing to a GitHub repository.
 Configuration
 
 Place the widget in a dataview where you want the button to be placed. Make sure this form is reachable from a mobile application.

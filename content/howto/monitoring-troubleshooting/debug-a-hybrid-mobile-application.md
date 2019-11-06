@@ -47,5 +47,4 @@ You can now navigate to the same address on your local browser to start the debu
 * [Log Levels](log-levels)
 * [Debug Microflows](debug-microflows)
 * [Debug Java Actions](debug-java-actions)
-* [Handle Common Mendix SSO Errors](handle-common-mendix-sso-errors)
 * [Debug Microflows Remotely](debug-microflows-remotely)

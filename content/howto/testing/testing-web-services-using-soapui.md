@@ -228,7 +228,6 @@ Congratulations! You have just created your first automated test with SoapUI.
 *   [Debugging Java actions remotely](../monitoring-troubleshooting/debug-java-actions-remotely)
 *   [Log Levels](../monitoring-troubleshooting/log-levels)
 *   [Debugging Java Actions](../monitoring-troubleshooting/debug-java-actions)
-*   [Common Mendix SSO Errors](../monitoring-troubleshooting/handle-common-mendix-sso-errors)
 *   [Debugging Microflows](../monitoring-troubleshooting/debug-microflows)
 *   [Debugging Microflows Remotely](../monitoring-troubleshooting/debug-microflows-remotely)
 

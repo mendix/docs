@@ -122,7 +122,7 @@ The **Dashboard** page presents your App Store activity:
 * Your numbers for [Published Content](#content) and [Submitted Reviews](#my-reviews)
 * [Notifications](#notifications) on components you created and favorited
 * Content [Drafts](#drafts) you have created
-* Your content [Favorites](#favorite-heart)
+* Your content [Favorites](#favorites)
 
 ![](attachments/app-store-overview/my_app_store.png)
 
@@ -187,6 +187,8 @@ This page presents a history of notifications on content you have contributed to
 This page presents the App Store content you have [favorited](#favorite-heart):
 
 ![](attachments/app-store-overview/favorites.png)
+
+When the **Subscribe** box is checked next to a favorite component, you will receive email notifications when new versions of that component are published. Clear the check box if you do not want to receive these notifications.
 
 ## 5 Your Company's App Store
 

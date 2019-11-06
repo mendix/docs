@@ -99,6 +99,5 @@ For more information on New Relic, see the New Relic documentation here: [https:
 * [Set Log Levels](log-levels)
 * [Debug Microflows](debug-microflows)
 * [Debug Java Actions](debug-java-actions)
-* [Handle Common Mendix SSO Errors](handle-common-mendix-sso-errors)
 * [Solve Load & Import Errors](solving-load-and-import-errors)
 * [Debug Microflows Remotely](debug-microflows-remotely)

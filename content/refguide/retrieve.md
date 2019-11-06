@@ -42,7 +42,7 @@ When objects and/or its associations are changed and not committed, the data is 
 
 This property specifies which association will be followed. The association must be an association from an object that is already available to the retrieve activity. Associations can be followed in both directions.
 
-## 4 Retrieve From Database Properties
+## 4 Retrieve From Database Properties{#from-database}
 
 ### 4.1 Entity
 

@@ -10,6 +10,12 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 ## 2019
 
+### November 7th, 2019
+
+#### Mendix Cloud Deployment Upgrade
+
+* We have improved the stability and performance of Menidx Cloud Deployement and Opertions.
+
 ### October 30th, 2019
 
 #### Mendix Cloud Deployment Upgrade

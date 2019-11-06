@@ -40,6 +40,12 @@ The Mendix Community Edition was introduced with Mendix 5.18, which included the
 Replaced by [Free Edition](other-terms#free-edition).
 {{% /alert %}}
 
+## delighter
+
+{{% alert type="info" %}}
+This term should not be used in release notes, as there is no formal definition and no tracking mechanism for it. However, it can be used in release blog posts.
+{{% /alert %}}
+
 ## Desktop Modeler {#dm}
 
 This term should still be used when referring to Mendix versions below 8.

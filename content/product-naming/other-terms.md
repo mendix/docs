@@ -126,14 +126,6 @@ Capitalize in all instances.
 Capitalize in all instances.
 {{% /alert %}}
 
-## delighters
-
-Can be used in customer-facing documentation to refer to certain productivity improvements.
-
-{{% alert type="info" %}}
-There is a **Delighters** section in the [Studio Pro release notes](/releasenotes/studio-pro/).
-{{% /alert %}}
-
 ## fast deploy & fast deployment
 
 {{% alert type="info" %}}

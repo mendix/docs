@@ -61,24 +61,10 @@ To contribute to the development of this widget, follow these steps:
 
 2. Fork and clone the [mendixlabs/range-slider](https://github.com/mendixlabs/range-slider.git) repository. The code is in Typescript. 
 3. Set up the development environment by running `npm install`.
-
-Create a folder named dist in the project root.
-
-Create a Mendix test project in the dist folder and rename its root folder to dist/MxTestProject. Or get the test project from
-
-https://github.com/MendixLabs/range-slider/releases/latest. Changes to the widget code shall be automatically pushed to this test project.
-
-To automatically compile, bundle and push code changes to the running test project, run:
-
-> grunt
-
-To run the project unit tests with code coverage, results can be found at dist/testresults/coverage/index.html, run:
-
-> npm test
-
-or run the test continuously during development:
-
-> karma start
+4. Create a folder named *dist* in the project root.
+5. Create a Mendix test project in the *dist* folder and rename its root folder to *dist/MxTestProject*, or get the test project from [mendixlabs/range-slider](https://github.com/MendixLabs/range-slider/releases/latest). Changes to the widget code will be automatically pushed to this test project.
+6. To automatically compile, bundle, and push code changes to the running test project, run `grunt`.
+6. To run the project unit tests with code coverage (results can be found at `dist/testresults/coverage/index.html`), run: `npm test`
+7. Run the test continuously during development via `karma start`.
 
 We are actively maintaining this widget. Please report any issues or suggestions for improvement at [mendixlabs/range-slider](https://github.com/mendixlabs/range-slider/issues).
-

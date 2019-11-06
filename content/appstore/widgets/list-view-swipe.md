@@ -32,9 +32,9 @@ The [List View Swipe](https://appstore.home.mendix.com/link/app/47781/) widget m
 
 For a demo app project that has been deployed with this widget, see [here](http://listviewswipeout.mxapps.io).
 
-## 2 Usage
+## 2 Configuration
 
-Follow these steps to use this widget at a basic level:
+Follow these steps to configure this widget at a basic level:
 
 1. Place the widget directly underneath the list view.
 2. Provide the name of the list view in **General** > **Target list view** in the widget editor.

@@ -34,23 +34,11 @@ For a demo app project that has been deployed with this widget, see [here](http:
 
 ## 2 Usage
 
-### 2.1 Basic Usage
-
 Follow these steps to use this widget at a basic level:
 
 1. Place the widget directly underneath the list view.
 2. Provide the name of the list view in **General** > **Target list view** in the widget editor.
 3. Configure a **Swipe to left** or **Swipe to right** action on those respective editor tabs.
-
-### 2.2 Designing the Background
-
-To design the background of the view, follow these steps:
-
-1. Create one to four containers inside the list view item:
-	* The "swipe" container is shown as the foreground and is swiped away – add the `widget-listview-swipe-foreground` class to place this over the background containers
-	* The  "hide" container is sshown after swiping, during the hide animation
-	* It is possible to create a container for left and right swiping, or to share the containers
-2. Add the container names to their respective fields in the widget editor (as in, **Swipe container** and **Hide container** as configured on the **Swipe to left** or **Swipe to right** tabs).
 
 ## 3 Styling
 
@@ -77,8 +65,18 @@ Use the following details for styling:
 	* `.will-accept-swipe`
 	* `.swiping-right`
 	* `.swiping-left`
+	
+### 3.1 Designing the Background
 
-### 3.1 Disabling the Swipe
+To design the background of the view, follow these steps:
+
+1. Create one to four containers inside the list view item:
+	* The "swipe" container is shown as the foreground and is swiped away – add the `widget-listview-swipe-foreground` class to place this over the background containers
+	* The  "hide" container is sshown after swiping, during the hide animation
+	* It is possible to create a container for left and right swiping, or to share the containers
+2. Add the container names to their respective fields in the widget editor (as in, **Swipe container** and **Hide container** as configured on the **Swipe to left** or **Swipe to right** tabs).
+
+### 3.2 Disabling the Swipe
 
 In some scenarios, swiping should be (conditionally) disabled. To disable a single swipe item, add the `.widget-listview-swipe-disabled`, `.widget-listview-swipe-disabled-left`, or `.widget-listview-swipe-disabled-right` CSS class to the list view item. To disable all the swipe actions, add the class to the list view .
 

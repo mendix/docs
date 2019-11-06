@@ -32,7 +32,7 @@ The most commonly used custom settings for database migration are:
 *   SourceDatabaseUserName
 *   SourceDatabasePassword
 
-For more information on the full list of available settings, see [Custom Settings](/refguide/custom-settings).
+For more information on the full list of available settings, see [Runtime Customization](/refguide/custom-settings).
 
 These settings can be configured as follows:
 

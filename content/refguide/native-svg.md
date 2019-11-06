@@ -42,15 +42,15 @@ Take the following SVG as an example:
 
 Setting the `fill` property on this image's styling will turn the rectangle (`rect` element) to the color provided. Setting the `stroke` property will result in no changes, since the `stroke` has already been set.
 
-This is how an SVG can look without the `fill` property:
+Here is an SVG without the `fill` property:
 
 ![before](attachments/native-svg/before.png)
 
-This is how an SVG can look with the `fill` property:
+Here is an SVG with the `fill` property:
 
 ![after](attachments/native-svg/after.png)
 
-## 5 Usage in Pluggable Native Widgets
+## 5 Using SVGs in Pluggable Native Widgets
 
 To use an SVG in a pluggable native widget's image property, we recommend using the provided `Image` component. This will allow a static image of any supported format to be used within your pluggable widget, including SVGs.
 

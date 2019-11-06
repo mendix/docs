@@ -54,10 +54,10 @@ To contribute to the development of this widget, follow these steps:
 
 1. Install following:
 	* [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-	* node package manager
+	* [npm](https://www.npmjs.com/)
 	* [webpack-cli](https://www.npmjs.com/package/webpack-cli)
 	* [grunt-cli](https://github.com/gruntjs/grunt-cli)
-	* Karma CLI
+ 	* [karma-cli](https://www.npmjs.com/package/karma-cli)
 
 2. Fork and clone the [mendixlabs/range-slider](https://github.com/mendixlabs/range-slider.git) repository. The code is in Typescript. 
 3. Set up the development environment by running `npm install`.

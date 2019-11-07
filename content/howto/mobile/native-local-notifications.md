@@ -24,11 +24,11 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Review the differences between local notifications and push notifications
 * Install the Make it Native app on your mobile device
 
-## 3 Create a Project and Configure Notifications
+## 3 Creating a Project and Configuring Notifications
 
 In the subsections below you will create a project, send a local native notification, set a badge number for after a notification, and configure your notifications in important ways.
 
-### 3.1 Display a Local Notification
+### 3.1 Displaying a Local Notification
 
 1. Open Mendix Studio Pro.
 
@@ -184,13 +184,13 @@ Now you can run your app and see if your notification works.
 
 Congratulations! You can now see local notifications on your device. Next, you will learn how to configure an action when a user taps on a notification.
 
-### 3.2 Set a Badge Number
+### 3.2 Setting a Badge Number
 
-Badges are crucial for many apps on both iOS and Android. Badge numbers can indicate important information in various applications. For example with messaging applications, it is good practice to indicate how many messages are unread.
+Badges are crucial for many apps on both iOS and Android. Badges also differ in appearance based on platform. Badges can indicate important information in various applications. For example with messaging applications, it is good practice to employ badges which alert the user to new messages.
 
 You will need to build badge functionality into your app so that when a user gets a notification, the app shows a badge number on its app's icon. Also, badge numbers are *not automatically decreased or removed* when a user checks an app. These two things must be handled manually by a developer.
 
-Since we covered how to send a simple local notification, we can also set the badge number by following steps:
+Since you know how to send a simple local notification, you can now set the badge number by following these steps:
 
 1. Open **ACT_CreateAndSendNotification**.
 2.  Drag and drop a **Create variable** activity to the right of the three string variables you made:
@@ -219,7 +219,7 @@ Start and load the app on your mobile device and tap the button which calls your
 
 {{% image_container width="500" %}}![badge number on mobile](attachments/native-push/badge-mobile.png){{% /image_container %}}
 
-### 3.3 Set an Action for When a Notification is Tapped
+### 3.3 Setting an Action for When a Notification is Tapped
 
 In this section you will learn to show a page when a user taps a notification.
 
@@ -270,7 +270,7 @@ Great job setting up your notification. Now you can test it:
 
 Now you can show pages after notifications are tapped. Next you will learn to pass data to these pages. 
 
-### 3.4 Send Data to Pages
+### 3.4 Sending Data to Pages
 
 Several apps make it so that when user taps a notification, the user is taken to specific page with specific parameters set. You can achieve this by sending data along with a notification. 
 

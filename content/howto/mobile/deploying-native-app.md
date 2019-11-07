@@ -21,7 +21,7 @@ Every Native Builder project has configurations, some unique and required and so
 * It is expected that you have gone through the [Getting Started with Native Mobile](https://docs.mendix.com/howto/mobile/getting-started-with-native-mobile) guide and know how to create, style and debug an Application using the latest version of the Studio Pro.
 * It is expected you have deployed your Native Application to the cloud via Studio pro and have the cloud address of your deployed application available.
 * It is expected you have at least basic knowledge on how to use the Command Line Interface program on Windows called `cmd`.
-* Have at least read up on more infomation on the various parameters found on the [Reference Guide](https://docs.mendix.com/howto/mobile/native-builder#commands) reference guide as this would not be explaining all of them.
+* Have at least read up on more information on the various parameters found on the [Reference Guide](https://docs.mendix.com/refguide/native-builder#commands) reference guide as this would not be explaining all of them.
 * To deploy your app for test on an iOS device, do the following:
   * Register for an Apple Developer Account.
   * Have an iOS device for testing the iOS package that will be produced.
@@ -56,7 +56,18 @@ This is part of App Center's security policy that requires manual access to circ
 ![App Center Applications](attachments/deploying-native-app/appcenter-apps.png)
 *App Center Dashboard*
 
-More steps on how to resolve this can be found on [Completing Your Initial Run](https://docs.mendix.com/howto/mobile/native-builder#7-Completing-Your-Initial-Run).
+To fix this, complete the following steps. You must repeat them for both your iOS and Android apps if you have one of each:
+
+* Navigate to App Center.
+* Select your newly created app.
+* Select build on the left panel.
+* You will be greeted with a screen that allows you to link your account with a repository service.
+* Choose GitHub.
+* If you are not logged in already you will be asked to sign into your GitHub account.
+* Select approve in the permission request.
+* Select the repository you want to connect to.
+* You will be redirected back to your App Center account.
+* Your repository’s branches are now listed in the build page.
 
 ## 4. Making your first build
 
@@ -68,7 +79,7 @@ Below is a quick example:
 native-builder.exe build --project-name CoolApp --build-number 1 --app-version 0.1.0
 ```
 
-> For more info on the parameters and what they are used for, See the [Reference Guide](https://docs.mendix.com/howto/mobile/native-builder#commands).
+> For more info on the parameters and what they are used for, See the [Reference Guide](https://docs.mendix.com/refguide/native-builder#commands).
 
 The example above would initiate a new build for the already-prepared project *CoolApp* using a [Semantic version](https://semver.org/) *0.1.0* for the build, unique version build number *1*  and performing an dual-platform (Android and iOS) build. For a single-platform build, the `--platform` parameter can be used with `android` or `ios` with an example below.
 
@@ -145,6 +156,10 @@ This allows Native Builder to build again using the same keys already configured
 *Successful and Downloaded iOS build*
 
 At this point, the downloaded *.zip* archives can be retrieved from the path provided by Native Builder.
+
+> As earlier stated, If your build times out (which happens to free App Center users after building for longer than 30 minutes), you can either sign your app locally described in [Android Local Signing](#511-local-signing) and [iOS Local Signing](#521-local-signing) below or upgrade to a paid App Center account. This build issue is more likely to affect iOS builds than Android builds as this is a limitation when signing with an iOS developer profile as opposed to an iOS distribution profile.
+
+> In case of failure, the build logs will be downloaded for your convenience. Remember to provide them when filing a ticket with Mendix.
 
 ## 5. Distributing
 

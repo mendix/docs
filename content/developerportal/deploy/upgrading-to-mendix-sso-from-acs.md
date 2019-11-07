@@ -136,7 +136,7 @@ You will need to perform the following steps:
 
 5. Update the example microflow to suit your own data structures. As each case will be different, this document is not able to cover the changes which you need to make in your specific circumstances.
 
-    {{% alert type="info" %}}The sample microflow is written to work on batches of users, retrieved using a custom range, rather than all users in a single pass. This improves performance. For more information on retrieving using custom ranges, see the [Retrieve from Database Properties](/refguide/retrieve#4-retrieve-from-database) section of *Retrieve*.{{% /alert %}}
+    {{% alert type="info" %}}The sample microflow is written to work on batches of users, retrieved using a custom range, rather than all users in a single pass. This improves performance. For more information on retrieving using custom ranges, see the [Retrieve from Database Properties](/refguide/retrieve#from-database) section of *Retrieve*.{{% /alert %}}
 
 6. Backup your data, test your microflow and then run it.
 

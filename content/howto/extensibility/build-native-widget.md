@@ -2,7 +2,7 @@
 title: "Build a Pluggable Native Widget"
 category: "Extensibility"
 description: "Describes building a native widget, configuring it, and styling it in a Mendix app."
-menu_order: 2
+menu_order: 10
 tags: ["native","widget","pluggable","react native","extensibility",]
 ---
 
@@ -178,7 +178,9 @@ Define the structure and default style of the group box widget with these steps:
 						<Text style={this.styles.headerContent}>Header caption</Text>
 						<Text style={this.styles.headerContent}>-</Text>
 					</View>
-					<View style={this.styles.content}>Content</View>
+					<View style={this.styles.content}>
+						<Text>Content</Text>
+					</View>
 				</View>
 			);
 		}

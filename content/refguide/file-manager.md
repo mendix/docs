@@ -32,7 +32,7 @@ File manager properties consist of the following sections:
 
 * [General](#general)
 
-* [Label](label)
+* [Label](#label)
 
 * [Visibility](#visibility)
 

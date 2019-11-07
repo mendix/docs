@@ -1,46 +1,54 @@
 ---
 title: "Sign In Button"
 parent: "authentication-widgets"
-tags: ["studio pro"]
+tags: ["studio pro", "sign-in button", "sign in", "authentication widget", "authentication" ]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="warning" %}}The sign in button widget is not supported on native mobile pages.{{% /alert %}}
+{{% alert type="warning" %}}The **Sign-in button** is not supported on native mobile pages.{{% /alert %}}
 
-The sign in button sends a user's login id and password to the server for authentication. Any errors are displayed in a [validation message widget](validation-message) or in a pop-up window. 
+## 1 Introduction
 
-It must be placed on a page together with a [login id text box](login-id-text-box) and a [password text box](password-text-box).
+The **Sign-in button** sends a user's login id and password to the server for authentication. Any errors are displayed in a [validation message widget](validation-message) or in a pop-up window. 
 
-## Common Properties
+The **Sign-in button** should be placed on a page together with a [Login ID text box](login-id-text-box) and a [Password text box](password-text-box).
 
-{{% snippet file="refguide/name-property.md" %}}
+## 2 Properties
 
-{{% snippet file="refguide/class-property.md" %}}
+An example of sign-in button properties is represented in the image below:
 
-{{% snippet file="refguide/style-property.md" %}}
+{{% image_container width="350" %}}![]()
+{{% /image_container %}}
 
-{{% snippet file="refguide/tab-index-property.md" %}}
+Sign-in properties consist of the following sections:
 
-## General Properties
+* [Common](#common) 
+* [Design Properties](#design-properties)
+* [General](#general)
+* [Visibility](#visibility)
 
-{{% snippet file="refguide/caption-property.md" %}}
+### 2.1 Common Section {#common}
 
-{{% snippet file="refguide/tooltip-property.md" %}}
+{{% snippet file="refguide/common-section-link.md" %}}
 
-{{% snippet file="refguide/image-property.md" %}}
+### 2.2 Design Properties Section {#design-properties}
 
-{{% snippet file="refguide/render-mode-property.md" %}}
+{{% snippet file="refguide/design-section-link.md" %}}
 
-{{% snippet file="refguide/button-style-property.md" %}}
+###2.3 General Section {#general}
 
-### Validation Message Widget
+#### Validation Message Widget
 
 Designates the [validation message widget](validation-message) that should display authentication failure messages. By default no widget is selected, which results in authentication messages being displayed in a pop-up window.
 
 Default value: None
 
-## Visibility Properties
+### 2.4 Visibility Section {#visibility}
 
-{{% snippet file="refguide/visibility-property.md" %}}
+{{% snippet file="refguide/visibility-section-link.md" %}}
 
-{{% snippet file="refguide/visibility-property-with-module-roles-extended.md" %}}
+## 3 Read More
+
+* [Page](page)
+* [Login ID Text Box](login-id-text-box)
+* [Password Text Box](password-text-box)

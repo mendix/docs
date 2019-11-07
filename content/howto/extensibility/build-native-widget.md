@@ -178,7 +178,9 @@ Define the structure and default style of the group box widget with these steps:
 						<Text style={this.styles.headerContent}>Header caption</Text>
 						<Text style={this.styles.headerContent}>-</Text>
 					</View>
-					<View style={this.styles.content}>Content</View>
+					<View style={this.styles.content}>
+						<Text>Content</Text>
+					</View>
 				</View>
 			);
 		}

@@ -8,7 +8,7 @@ description: A tutorial for setting up local push notifications which do not use
 
 ## 1 Introduction
 
-This how-to will teach you to build local notifications for native applications. Local notifications will only allow you to schedule and send notifications confined to one mobile device, and do not use an internet connection. An example of a local notification might be an alarm app which sends a notification after an amount of time has elapsed.
+This how-to will teach you to build local notifications for native applications. Local notifications will only allow you to schedule and send notifications confined to one mobile device. These notifications do not use an internet connection. One use of a local notification might be an alarm app which sends a notification after an amount of time has elapsed.
 
 **This how-to will teach you how to do the following:**
 
@@ -21,12 +21,12 @@ This how-to will teach you to build local notifications for native applications.
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Review the differences between local notifications and push notifications
+* Review the [basic differences](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/) between local notifications and push notifications
 * Install the Make it Native app on your mobile device
 
 ## 3 Creating a Project and Configuring Notifications
 
-In the subsections below you will create a project, send a local native notification, set a badge number for after a notification, and configure your notifications in important ways.
+In the subsections below you will create a project, send a local native notification, set a badge number for after a notification, and configure your notifications.
 
 ### 3.1 Displaying a Local Notification
 
@@ -50,7 +50,7 @@ In the subsections below you will create a project, send a local native notifica
 
 	{{% image_container width="500" %}}![app settings](attachments/native-push/native-profile.png){{% /image_container %}}
 
-7.  Drag and drop a **Call nanoflow button** onto your app's home page, then click **New** to make a new nanoflow (note: you may wish to rename this button **Send Notification** later): 
+7.  Drag and drop a **Call nanoflow button** onto your app's home page, then click **New** to make a new nanoflow (note: you may wish to rename this button *Send Notification*): 
 
 	{{% image_container width="500" %}}![app settings](attachments/native-push/call-button.png){{% /image_container %}}
 
@@ -62,7 +62,7 @@ In the subsections below you will create a project, send a local native notifica
 
    {{% image_container width="500" %}}![app settings](attachments/native-push/create-string-variables.png){{% /image_container %}}
 
-10.  Double-click your **Title** activity and then configure the activity:<br />
+10.  Double-click your **Title** activity and then configure it:<br />
 	a. Make sure **Data type** is set to **String**.<br />
 	b. Click **Generate**.<br />
 	c. Type *Title* into the **Constant** field.<br />
@@ -75,7 +75,7 @@ In the subsections below you will create a project, send a local native notifica
 
 12. Double-click your **Body** activity and configure it as your did your **Title** activity.
 
-At this stage you will set up the final logic necessary to display a notification. You must account for the fact that if an app user has not given permission to that app to send notifications, it cannot send them. You must include a **Request notification permission** activity in your nanoflow to account for this, as well as a few other activities.
+At this stage you will set up the final logic necessary for your app to display a notification. A user must give permission for an app to send notifications. You will include a **Request notification permission** activity in your nanoflow to account for this, as well as a few other activities.
 
 1.  Drag and drop a **Has notification permission** activity onto your nanoflow:
 

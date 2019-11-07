@@ -421,7 +421,7 @@ Good job! When a user taps a notification from the **Pass GUID to Notification**
 4. Fill **Name** in as *notificationEntity*.
 5.  Click **OK**:
 
-![guid button](attachments/native-push/notif-entity.png)
+	![guid button](attachments/native-push/notif-entity.png)
 
 6. Drag and drop a JavaScript action call onto your nanoflow.
 

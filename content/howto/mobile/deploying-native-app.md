@@ -2,13 +2,13 @@
 title: "Deploying Your First Mendix Native App"
 parent: "native-mobile"
 menu_order: 70
-description: A reference guide for deploying your first Mendix Native App with Native Builder.
+description: A tutorial for deploying your first Mendix Native App with Native Builder.
 tags: ["native", "mobile", "deploy", "native-builder", "builder", "appcenter"]
 ---
 
 ## 1. Introduction
 
-This reference guide would teach you how to go from blank slate to an app running on a device.
+This tutorial will teach you how to go from a blank slate to an app running on a device.
 
 Every Native Builder project has configurations, some unique and required and some others necessary. These configurations are useful for preparing the app and creating builds on App Center and GitHub respectively. It is also important for making updates to apps already delivered to production devices.
 
@@ -81,7 +81,7 @@ This command does the following:
 * Generates a Javascript deployment bundle and images of the Native App from Studio pro.
 * Creates a new build branch on GitHub and kickstarts a build process on App Center.
 
-### 4.1 Signed builds
+### 4.1 Signed Builds
 
 > For Android, If you do not intend to publish the app to the Play Store, this step can be skipped. For iOS, this step prepares an already installable *iOS App Store Package* (.ipa). Otherwise, a unsigned version of the app *(.xcarchive)* would be produced which would then need to be signed manually using Xcode in order to deploy on either a device or in the App Store.
 
@@ -157,7 +157,11 @@ For distributing a specific platform, see the subsequent sections below:
 
 ### 5.1 Distributing for Android
 
-#### 5.1.1 Installing on a device
+#### 5.1.1 Local Signing
+
+> This step can be skipped if [App Center Signing](#412-signing-android) was carried out. To sign your Android app locally, use apksigner by following Google's [apksigner documentation](https://developer.android.com/studio/command-line/apksigner).
+
+#### 5.1.2 Installing on a device
 
 The *app-debug.apk* or *app-release.apk* can readily be installed on any device by sending the file over via any available means eg USB.
 
@@ -172,7 +176,7 @@ To install your app via USB, connect your device to a machine via USB. To Instal
 
 > You can also consult Google's [Run apps on a hardware device](https://developer.android.com/studio/run/device) for detailed instructions on testing your app using a physical Android device instead of an emulator.
 
-#### 5.1.2 Uploading to Play Store
+#### 5.1.3 Uploading to Play Store
 
 This section and the next only applies when the build was [Signed](#41-signed-builds) earlier and contains an *app-release.apk* build, read Google's overview of [the Android app publishing process](http://developer.android.com/tools/publishing/publishing_overview.html). Before submitting your app to an app store, you will have to complete the [signup steps](https://play.google.com/apps/publish/signup/) of signing-in with your Google account, accepting the developer agreement, paying the registration fee, and completing your account details. Also, [review the launch checklist](http://developer.android.com/distribute/tools/launch-checklist.html). Google provides information on [publishing your app in the Google Play Store](https://developer.android.com/studio/publish). Once you have satisfied those requirements, you can [Upload your app to the Play Console](https://developer.android.com/studio/publish/upload-bundle) to the Play Console. Then, Follow the steps in Google's [Prepare & roll out releases](https://support.google.com/googleplay/android-developer/answer/7159011) to create, prepare, review, and roll out your app release.
 

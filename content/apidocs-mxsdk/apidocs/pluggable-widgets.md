@@ -154,7 +154,7 @@ Provide additional help information to your users with the **Help** button widge
 
 ![basic widget](attachments/pluggable-widgets/widget-dialog-help-button.png)
 
-A URL can be provided through the `helpUrl` property after `description` tag:
+A URL can be provided through the `helpUrl` property after the `description` tag:
 
 ```xml
     <helpUrl>https://appstore.home.mendix.com/link/app/105695/</helpUrl>

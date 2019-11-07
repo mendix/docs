@@ -147,10 +147,10 @@ $block: 'mx';
         margin: 0;
       }
 
-      /* but a curve around the border of a search and make the search field 80% instead of 100 */
+      /* but a curve around the border of the search and changes to 90% to align with featured lists*/
       .input-group .form-control {
         border-radius: 4px;
-        max-width: 80%;
+        max-width: 90%;
       }
 
       /* Headers have a slightly larger space above - to make them a bit more obvious without increasing the font size */

@@ -279,7 +279,7 @@ Every entry in the Mendix database has an unique ID. If you want to pass an obje
 
 You will create the following things to send data to pages:
 
-* **Two entities** — *TestEntity* to test how to show particular object, and *Notification* for your workaround
+* **Two entities** — *TestEntity* to test how to show particular object, and *Notification* to help pass data to your page
 * **One page** — *DetailTestEntity* which will be shown on tapping a notification
 * **One microflow** — *DS_TestEntity* to create dummy data for testing
 * **Three nanoflows** — *DS_Notification* to create a dummy notification object, *ACT_PassGUIDToNotification* to pass a GUID, and *On_tapNotification* to process data from your notification
@@ -370,7 +370,7 @@ To make your page, do the following:
 
 	{{% image_container width="500" %}}![page with data view](attachments/native-push/page-with-data-view.png){{% /image_container %}}
 
-Next you will create a workaround which allows data to be passed to pages. First, make a nanoflow:
+Next you will learn how to pass data to pages after you have tapped a notification. First, make a nanoflow:
 
 1. Create a nanoflow named *ACT_PassGUIDToNotification*.
 
@@ -381,7 +381,7 @@ Next you will create a workaround which allows data to be passed to pages. First
 3. Add a JavaScript Action Call activity to your nanoflow.
 4. Double-click the action call activity.
 5. Click **JavaScript Action** > **Select**.
-6. Type *GetGuid* into the search field, click **GetGuid**, and click **Select**. This JavaScript action is available in the Mendix App Store under the NanoflowCommons module included in the Native Quickstarter template. [todo: change this to "if you wanna integrate this tech into your existing project outside this howto example and you dont use the native movile quickstart..."]
+6. Type *GetGuid* into the search field, click **GetGuid**, and click **Select**. (You are able to find the GetGuid JavaScript action because it is included in the NanoflowCommons module inside the Native Quickstarter template.)
 7. Click **Entity Object** drop-down and click **$FirstTestEntityObject**.
 8. In **Variable name** field type **GUIDForFirstObject**.
 9. Click **OK**.
@@ -500,13 +500,6 @@ Now you will set up a data view on your home page.
 
 11. Start and load the app on your mobile device, tap the nanoflow button you created in 3.e, then tap the notification to navigate to the **DetailTestEntity** page with the proper object.
 
-Explaining the work-around above:
-
-* Since the data view is on your homepage and nanoflow is set as a data source, it creates an empty notification object. This object will be referred to as XwithGUID.
-* We trigger a ACT_PassGuidToNotification. JSAction DisplayNotification creates a notification with correct parameters (title, subtitle, body, Action name, and Action guid). This step happens before a notification is displayed.
-* A user taps the notification. Before executing **ON_tapNotification**, your app passes **XwithGUID** to your widget then sets its GUID attribute programatically. Since you set the GUID attribute of the widget to **XwithGUID**, now you can use this in your **ON_tapNotification** nanoflow.
-* Your widget executes **ON_tapNotification** that expects a notification object with a GUID, which in this case will be **XwithGUID**. After this, you can safely use **ON_tapNotification's** notification parameter for retrieval purposes. [todo: half of these steps are written in "present tense" as a USER is experiencing it. The second half is more written from the dev's perspective as they are building the app. Mehmet, can you please rewrite these steps to be all one or the other? I suspect writing them all from the dev's perspective might be easiest. Also if these are just a collection of notes they can stay bullets. If they are a sequence of things in order, they need to be changed to a numbered list.]
-
 ## 4 Scheduling a Notification
 
 Local notifications should rarely notify a user right after they do an action. Here you will learn to configure local notifications to trigger after a period of time. To do this, you will use a JavaScript action named **ScheduleNotification**.
@@ -532,8 +525,6 @@ The notification should be displayed at the end of the minute.
 
 If your app is open, it will not show the notification due to iOS and Android user guidelines. However, notifications for open apps can still trigger onReceive events. This allows you to design custom actions for notifications, such as showing a page with pop-up layout. Follow these steps to model an onRecieve event:
 
-[todo: this still didn't work for me. Maybe one of the typed-in bits needed single quotes or double quotes? it didn't work for Olga either]
-
 1. Make a new nanoflow named *ON_RecieveNotification*.
 2. Drag and drop a **Log message** activity on your nanoflow.
 3. Double-click this activity. 
@@ -550,7 +541,7 @@ If your app is open, it will not show the notification due to iOS and Android us
 11. Type *'TriggerOnRecieve'* into the argument field and click **OK**.
 11. Click **OK**.
 12. Start and load the app on your mobile device.
-13. Tap the **Send notification** button, and do not minimize your app.
+13. Tap the **Send notification** button, and *do not* minimize your app.
 14. You will see the log **I triggered on receive notification** in the Studio Pro console.
 
 But what if you want to cancel a scheduled notification? Read on to learn more.

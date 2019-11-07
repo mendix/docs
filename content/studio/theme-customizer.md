@@ -67,7 +67,9 @@ The **Widget View** previews the style on an individual widget or UI elements as
 {{% alert type="info" %}} The **Page View** feature is in beta. This means there might be changes to this feature. For more information on beta features, see [Mendix Beta Features](/releasenotes/beta-features/).
 {{% /alert %}}
 
-In the **Page View**, you can select any page from your app to preview changes on it. To do so, select a page from a drop-down menu in the top-bar. 
+In the **Page View**, you can select any page from your app to preview changes on it. You can select a page from a drop-down menu in the top bar. You can also switch the Device modes to see how your style looks on the **Phone**, **Tablet**, or **Responsive view**.  
+
+![Top Bar](attachments/theme-customizer/top-bar.png)
 
 ## 5 Performing Basic Actions
 

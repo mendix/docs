@@ -102,7 +102,7 @@ At this stage you will set up the final logic necessary to display a notificatio
 
 7.  Double-click your **Request notification permission** activity and set **Output** > **Variable** to *PermissionGranted*:
 
-	{{% image_container width="500" %}}![app settings](attachments/native-push/set-variable.png){{% /image_container %}}
+	{{% image_container width="500" %}}![app settings](attachments/native-push/permission-granted.png){{% /image_container %}}
 
 8.  Drag and drop a decision next to your **Request notification permission** activity.
 

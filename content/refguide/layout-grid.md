@@ -44,10 +44,28 @@ A column has the following properties:
   * One column with weight 12
   * Two columns with weight 6 each
   * One column with weight 3 and one column with weight 9
-
+ 
 In the example below, you can see one column with weight 12 and it takes up the full width, and two columns with weight 6 each:
 
 ![Columns Example](attachments/container-widgets/columns.png)
+
+{{% alert type="info" %}}
+
+In version 8.3.0, the **weight** property has been replaced by the following three properties, allowing
+easier creation of responsive layout grids.
+
+{{% /alert %}}
+
+* **Desktop Size** - The size of the column for desktop devices.
+* **Tablet Size** - The size of the column for tablet devices.
+* **Phone Size** - The size of the column for phone devices.
+
+The desktop sizes of all column in a row must add up to 12. However, this restriction does not apply to
+the tablet or phone sizes, allowing you to wrap columns on smaller devices. For example:  
+
+* 4 columns with size 3 on desktop
+* 4 columns with size 6 on tablet (creating a 2 by 2 grid)
+* 4 columns with size 12 on phone (showing all columns as a separate row)
 
 #### 2.2.1 Adding a New Row or a Column
 

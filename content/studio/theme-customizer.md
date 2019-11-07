@@ -26,6 +26,8 @@ In the left-hand side, the Theme Customizer contains settings that you can chang
 
 You can switch between the modes by clicking the corresponding button in the top-bar:
 
+![Preview Modes](attachments/theme-customizer/preview-modes.png)
+
 
 ## 2 Settings
 

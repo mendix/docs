@@ -22,10 +22,13 @@ The **Authentication widgets** category contains the following widgets:
     ![Password Text Box Example](attachments/authentication-widgets/password-text-box-example.png)
 
 * [**Sign-in button**](sign-in-button) – sends a user’s login id and password to the server for authentication
+    ![Sign-In Button Example](attachments/authentication-widgets/sign-in-button-example.png)
 
-* **Sign-out button** – signs the currently signed-in user out. The sign-out button is a button with an on-click event set to **Sign out**. For more information on on-click events, see the [On Click Event & Events Section](on-click-event). 
+* **Sign-out button** – signs the currently signed-in user out. The sign-out button is a button with an on-click event set to **Sign out**. For more information on on-click events, see the [On Click Event & Events Section](on-click-event). For details on button properties. see [Button Properties](button-properties).
 
 * [**Validation message**](validation-message) – informs a user about authentication failures if any
+
+    ![Validation Message Example](attachments/authentication-widgets/validation-message-example.png)
 
 ## 2 Performing Basic Functions
 

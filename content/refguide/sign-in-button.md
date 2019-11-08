@@ -17,7 +17,7 @@ The **Sign-in button** should be placed on a page together with a [Login ID text
 
 An example of sign-in button properties is represented in the image below:
 
-{{% image_container width="350" %}}![]()
+{{% image_container width="250" %}}![](../releasenotes/studio/attachments/8.0/sign-in-button-properties.png)
 {{% /image_container %}}
 
 Sign-in properties consist of the following sections:
@@ -37,11 +37,14 @@ Sign-in properties consist of the following sections:
 
 ###2.3 General Section {#general}
 
-#### Validation Message Widget
+Most properties of a sign-in button are the same as properties of button widgets. For more information on button properties in the **General** section, see the [General Section](button-properties#general) in *Button Properties*.
 
-Designates the [validation message widget](validation-message) that should display authentication failure messages. By default no widget is selected, which results in authentication messages being displayed in a pop-up window.
+#### 2.3.1 Validation Message Widget
 
-Default value: None
+**Validation message widget** is a specific property of a sign-in button. It defines the [Validation message widget](validation-message) that displays authentication failure messages on a page. If no widget is selected in this property, authentication failure messages will be displayed in a pop-up window:
+![Validation Failure](../releasenotes/studio/attachments/8.0/validation-failure.png)
+
+*Default value*: None
 
 ### 2.4 Visibility Section {#visibility}
 
@@ -52,3 +55,4 @@ Default value: None
 * [Page](page)
 * [Login ID Text Box](login-id-text-box)
 * [Password Text Box](password-text-box)
+* [Validation Message Widget](validation-message)

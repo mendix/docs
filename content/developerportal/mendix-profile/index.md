@@ -8,7 +8,7 @@ tags: ["profile", "Developer Portal", "settings", "badge", "point", "connection"
 
 ## 1 Introduction
 
-Your Mendix Profile is your main point of contact with members of the Mendix community, as it displays your activities on the Mendix Platform as well as details about your background. There are plenty of ways to get more involved with the Mendix community, and your profile is the best place to start!
+Your Mendix Profile is your main point of contact with members of the Mendix community, as it displays your activities on the Mendix Platform as well as details about your background and plans for the future. There are plenty of ways to get more involved with the Mendix community, and your profile is the best place to start!
 
 To access your Mendix Profile, hover over your picture on the right side of the Developer Portal navigation bar and select **My Profile** from the context menu.
 

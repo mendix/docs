@@ -20,68 +20,56 @@ End-users can do the following with this module:
 
 ## 2 Configuration
 
-    The module is pre-configured to use the ImageCrop entity, you can choose to inherit from this entity, set an association to the entity or copy the actions you want to have.
+This module is pre-configured to use the **ImageCrop** entity. You can choose to inherit from this entity, set an association to the entity or copy the actions you want to have.
 
-    The Cropper widget and Java actions are compatible with any subclass of System.Image as long as it has the following attributes of type integer with the following given names (must be identical) crop_x1 , crop_x2 , crop_y1 , crop_y2 , crop_height , crop_width.
+The [Cropper](#cropper) widget and Java actions are compatible with any sub-class of **System.Image** as long as it has attributes of the integer type with the following given names (which must be identical):
 
-    Once you have decided on the entities and relationships in the domain models, you can either use the existing pages or use your own pages.
+* crop_x1
+* crop_x2
+* crop_y1
+* crop_y2
+* crop_height
+* crop_width
 
-Default functionality
+Once you have decided on the entities and relationships in the domain models, you can either use the existing pages or use your own pages.
 
-The CropImage_Overview snippet allows you to upload new images using a simple new/edit button.
+## 3 Default Properties
 
-After uploading the image you can edit the image. Pressing the button Edit Image will create a new draft copy of the original image and opens page CropImage_Crop.
+The **CropImage_Overview** snippet allows you to upload new images using a simple New or Edit button.
 
-The page CropImage_Crop allows you to edit the draft image.
+After uploading the image, the end-user can edit the image. Pressing **Edit Image** creates a new draft copy of the original image and opens the **CropImage_Crop** page. This page enables editing the draft image:
 
-    Crop changes the image. This will crop the area outside the box.
+* **Crop** – changes the image by removing the area outside the box
+* **Resize** – changes the image to the size of the selection box
+* **Grayscale** – converts the image to an image in black and white (grayscale)
+* **Aspect Ratio** – enables changing the aspect ratio of the image and forcing the selection to be in a specific ratio (for example, 4:3, or blank/0 for a free selection shape)
+* **Apply Changes** – copies the image as seen in the draft back into the original **CropImage**, closes the page, and removes the draft
+* **Revert Changes** – reverts all changes and re-copies the image from the original image and allows you to start over again
+* **ThumbnailSize** – changes the size of the thumbnail that is created after altering an image; each button forces the thumbnail to be re-created in this size; please note that if you change this constant, changing the thumbnail size on the image upload widget with the same value is also recommended in order to keep all the thumbnails consistently in the same size
 
-    Resize changes the image to the size of the selection box.
+## 4 Customization
 
-    Grayscale converts the image to an image in black/white (grayscale).
+If you want to use your own entity or alter the implementation, you can choose to change the widget or the Java actions.
 
-    Aspect Ratio clicking on the aspect ratio allows the user to change the Aspect Ratio and force the selection to be in a specific ratio.
+### 4.1 Cropper Widget {#cropper}
 
-Clicking the button opens a popup and allows the user to change the ratio to a valid ratio such as 4:3 or reset it to blank or 0 for a free selection shape.
+These are the **Cropper** widget properties:
 
-    Apply Changes copies the image as you see it in the draft back into the original CropImage. The page is closed, and the draft is being removed.
+* **Max width** and **Max height** – the maximum width and height to which cropping the view port will stretch; use *0* for no maximum width or no maximum height
+	* If both **Max width** and **Max height** are set to *0*, the cropping view port will be set to the true natural image size
+	* When dealing with large images, setting at least **Max width** or **Max height** is recommended
+* **Start height** – the initial height of the cropping window
+* **Start width** – the initial width of the cropping window
+* **Aspect ratio** – the aspect ratio that will be applied on the cropping window.
 
-    Revert Changes reverts all changes and re-copies the image from the original image and allows you to start over again.
+### 4.2 Java Action Parameters
 
-    ThumbnailSize this changes the size of the thumbnail that will be created after altering an image. Any of the buttons will force the thumbnail to be re-created in this size.
+* **cropImgObj** – the object that has the neccessary attributes to be resized
+* **newWidth** and **newHeight** – make sure these match the **Aspect ratio** used in the [Cropper Widget](#cropper) to make sure the image does not get transformed inconsistently
+	* If either **newWidth** or **newHeight** are set to *0*, the image will be scaled based on the entered value while keeping the aspect ratio
+	* If both **Max width** and **Max height** are set to *0*, the width and height set by the end-user with the widget will be used
+* **thumbnailWidth** and **thumbnailHeight** – this is the size of the thumbnail, which is editable so that you can keep this in or near the same aspect ratio as the new image; the default implementation uses the tumbnail size as configured in **Configuration/ThumbnailSize** unless the image is smaller than the thumbnail
 
-    Please Note: If you change this constant it is recommended to change the thumbnail size on the image upload widget as well with the same value. This keeps all thumbnails consistently in the same size.
+## 5 Developing This App Store Component
 
-If you choose to use your own entity or if you want to alter the implementation you can choose to change the widget or the Java actions.
-Widget - Cropper
-Widget properties:
-
-    Max width: The maximum width that cropping viewport will stretch to. Use 0 for no maximum width.
-
-    Max height: The maximum height that cropping viewport will stretch to. Use 0 for no maximum height.
-
-    If both Max width and Max height are set to 0 the cropping viewport will be set to the true/natural image size.
-
-IMPORTANT NOTE: When dealing with large images it is recommended to set at least one of the above mentioned properties.
-
-    Start height: The initial height of the cropping window.
-
-    Start width: The initial width of the cropping window.
-
-    Aspect Ratio: The aspect ratio that will be applied on the cropping window.
-
-Java actions parameters & configuration:
-
-    cropImgObj : the object (that has the neccessary attributes) to be resized.
-
-    new Width/Height : Make sure your newWidth and newHeight match the aspect ratio used in the widget to make sure the image doesn't get transformed inconsistently.
-
-    If you set either the newWidth or the newHeight to 0, it will scale the image based on the filled in value whilst keeping the aspect ratio.
-
-    If you set both on 0 it will use the width and height set by the user with the widget.
-
-    thumbnail Width/Height : The size of the thumbnail, editable so you can keep this on or near the same aspect ratio as the new image. The default implementation will use the tumbnail size as configured in the Configuration/ThumbnailSize unless the image is smaller than the thumbnail.
-
-Issues
-
-If you encounter any issue while using this module/widget, yopu can report it here.
+We are actively maintaining this widget. Please report any issues or suggestions for improvement at [mendixlabs/ImageCropModule](https://github.com/mendix/ImageCropModule).

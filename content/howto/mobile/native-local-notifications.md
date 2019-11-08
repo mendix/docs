@@ -22,13 +22,15 @@ This how-to will teach you to build local notifications for native applications.
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Review the [basic differences](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/) between local notifications and push notifications
-* Install the Make it Native app on your mobile device
+* Install the [Make it Native](/refguide/getting-the-make-it-native-app) app on your mobile device
 
 ## 3 Creating a Project and Configuring Notifications
 
 In the subsections below you will create a project, send a local native notification, set a badge number for after a notification, and configure your notifications.
 
 ### 3.1 Displaying a Local Notification
+
+Follow the instructions below to set up your first local notification:
 
 1. Open Mendix Studio Pro.
 
@@ -71,11 +73,11 @@ In the subsections below you will create a project, send a local native notifica
 
 	{{% image_container width="500" %}}![app settings](attachments/native-push/title-activity.png){{% /image_container %}}
 
-11. Double-click your **Subtitle** activity and configure it as you did your **Title** activity.
+11. Double-click your **Subtitle** activity and configure similarly to your **Title** activity.
 
-12. Double-click your **Body** activity and configure it as your did your **Title** activity.
+12. Double-click your **Body** activity and configure similarly to your **Title** activity.
 
-At this stage you will set up the final logic necessary for your app to display a notification. A user must give permission for an app to send notifications. You will include a **Request notification permission** activity in your nanoflow to account for this, as well as a few other activities.
+Now you will set up the final logic necessary for your app to display a notification. A user must give permission for an app to send notifications. You will include a **Request notification permission** activity in your nanoflow to account for this, and include a few other activities.
 
 1.  Drag and drop a **Has notification permission** activity onto your nanoflow:
 
@@ -109,11 +111,11 @@ At this stage you will set up the final logic necessary for your app to display 
 
 	{{% image_container width="500" %}}![app settings](attachments/native-push/decision-1.png){{% /image_container %}}
 
-9.  Connect your activities and decisions, and set those connections' values, like this:
+9.  Connect your activities and decisions, and set those connections' values like so:
 
 	{{% image_container width="500" %}}![app settings](attachments/native-push/connections-1.png){{% /image_container %}}
 
-10. Double-click the decision, then set the **Caption** as *Permission?*:
+10. Double-click the decision, then set the **Caption** as *Permission?*.
 11. Click **Expression wizard**
 12. Select **Value** > **Variable** > **Permission (Boolean)** from the drop-down menu. When finished, your **Decision** should look like this:
 
@@ -127,8 +129,8 @@ At this stage you will set up the final logic necessary for your app to display 
 
 15.  Double-click your **Show message** activity, then do the following:<br />
 	a. Select **Type** > **Error** from the drop-down menu.<br />
-	b. Into **Template** type *No notfication permissions, go to your app permission settings to grant permission.*.<br />
-	Click **OK**.
+	b. Into **Template** type *No notification permissions, go to your app permission settings to grant permission*.<br />
+	c. Click **OK**.
 
 16. Drag and drop an **End event** under your **Show message** and connect them like this:
 
@@ -160,7 +162,7 @@ Now you will set up the final piece of your nanoflow's logic.
 
 	![app settings](attachments/native-push/return-no.png)
 
-8. Click **OK**, navigate back to your nanoflow.
+8. Click **OK**, then navigate back to your nanoflow.
 9.  Add a final **End event** next to your **Display notification** activity and connect it like this:
 
 	![app settings](attachments/native-push/final-end-event.png)
@@ -171,24 +173,24 @@ Now you will set up the final piece of your nanoflow's logic.
 
 Now you can run your app and see if your notification works.
 
-1.  Start and load the app in your mobile device, then tap the nanoflow button:
+1.  Start and load your app in your mobile device, then tap **Send Notification**:
 
 	{{% image_container width="500" %}}![app settings](attachments/native-push/app-1.png){{% /image_container %}}
 
-2. When prompted to **Allow notifications** tap **OK**.
+2. When prompted to **Allow notifications**, tap **OK**.
 3.  After you allow notifications, you will receive a notification:
 
 	{{% image_container width="500" %}}![app settings](attachments/native-push/basic-notif.png){{% /image_container %}}
 
-	If you did not see a notification, try clicking **Run Locally** to reload your app, then tap the **Send Notification** button again.
+	If you did not see a notification, try clicking **Run Locally** to reload your app. Then, tap the **Send Notification** button again.
 
 Congratulations! You can now see local notifications on your device. Next, you will learn how to configure an action when a user taps on a notification.
 
 ### 3.2 Setting a Badge Number
 
-Badges are crucial for many apps on both iOS and Android. Badges also differ in appearance based on platform. Badges can indicate important information in various applications. For example with messaging applications, it is good practice to employ badges which alert the user to new messages.
+Badges are crucial for many apps on iOS and Android. Badges differ in appearance based on platform, and often indicate important information in applications. For example with messaging applications, it is good practice to employ badges which alert users to new messages.
 
-You will need to build badge functionality into your app so that when a user gets a notification, the app shows a badge number on its app's icon. Also, badge numbers are *not automatically decreased or removed* when a user checks an app. These two things must be handled manually by a developer.
+You will need to build badge functionality into your app so that when a user gets a notification, the app shows a badge on its app's icon. Also, badges are *not automatically decreased or removed* when a user checks an app. These two functions must be built manually by a developer.
 
 Since you know how to send a simple local notification, you can now set the badge number by following these steps:
 

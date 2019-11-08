@@ -52,7 +52,7 @@ The following keyboard shortcuts can be used when editing:
 * <kbd>-</kbd> + <kbd>space</kbd> – start list
 * <kbd>tab</kbd> – indent the content when <kbd>tab</kbd> is configured to indent from the widget XML; otherwise, move the focus to the next element
 
-## 4 Development
+## 4 Developing This App Store Component
 
 To contribute to the development of this widget, follow these steps:
 

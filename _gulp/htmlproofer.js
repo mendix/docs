@@ -319,11 +319,16 @@ const writeUpdateFeed = files => new Promise(async (resolve, reject) => {
       const title = file.seoTitle.replace(' | Mendix Documentation', '');
       const basePath = file.basePath.replace('index.html', '').replace('.html','');
       const url = 'https://' + normalizeSafe(`docs.mendix.com${basePath}`);
+      const m = moment(file.time, 'YYYY-DD-MMTHH:mm:ssZZ');
+
+      const updateDate =  m._isValid ? m.toDate() : null;
+
       return {
         id: `docs-${sha1(url)}`,
         title,
-        url
-      }
+        url,
+        date: updateDate
+      };
     });
   const updateFiles = _.chain(files)
     .filter(file => file.time !== null && !!file.seoTitle)

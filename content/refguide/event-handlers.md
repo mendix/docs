@@ -22,7 +22,7 @@ Event handlers are not triggered in a particular order. So, make sure events do 
 
 #### 2.1.1 Moment {#moment}
 
-This property defines whether the microflow is executed **Before** or **After*8 the specified event occurs.
+This property defines whether the microflow is executed **Before** or **After** the specified event occurs.
 
 #### 2.1.2 Event
 
@@ -37,7 +37,13 @@ This property defines the event that triggers execution of the microflow.
 
 ### 2.2 What
 
-#### 2.2.1 Microflow
+#### 2.2.1 Pass Event Object
+
+This option defines if the configured microflow (see **Microflow** below) for this event will have the object (which has been or will be created, committed, deleted, or rolled back) as an argument. This is useful if you want to do some checks in your event handler on the object being committed, for example. 
+
+If you set this to **No**, you can only specify a microflow with no parameters.
+
+#### 2.2.2 Microflow
 
 This property defines the microflow that is executed for the specified event. The microflow is required to have a certain parameter and return type depending on the moment and event of the event handler:
 
@@ -55,7 +61,7 @@ This property defines the microflow that is executed for the specified event. Th
 | Before | Rollback | Yes | Yes |
 | After | Rollback | Yes | No |
 
-#### 2.2.2 Raise an Error When the Microflow Returns False
+#### 2.2.3 Raise an Error When the Microflow Returns False
 
 This is only relevant if the [Moment](#moment) is set as **Before**.
 

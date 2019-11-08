@@ -11,7 +11,7 @@ Given an entity that contains a range, this search field is used to find all ent
 
 Example: given an entity 'Festival' that has a 'Start' and an 'End' date, which Festivals take place at day X?
 
-Data types supported by this search field are: Integer, Decimal, DateTime, AutoNumber, Long.
+Data types supported by this search field are: Integer, Decimal, Date and time, AutoNumber, Long.
 
 You can specify whether the range boundaries are inclusive or exclusive using the Lower- and Upper bound operator.
 

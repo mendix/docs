@@ -108,7 +108,7 @@ Take note of the following things when using **Calculated** attributes:
 
 If the value is a computation, the **Microflow** property defines which microflow defines this computation to calculate the value of the attribute when the object is retrieved. The microflow should have a parameter of the type of the entity of the attribute and it should return a value with the same type as the attribute.
 
-In a webshop, you want to show the total expenses for each customer. These are calculated by retrieving all orders associated with the customer and adding their totals.
+For example, in a web shop, you want to show the total expenses for each customer. These are calculated by retrieving all orders associated with the customer and adding their totals.
 
 ![](attachments/domain-model-editor/917570.png)
 
@@ -116,15 +116,15 @@ In a webshop, you want to show the total expenses for each customer. These are c
 
 The **Default value** property defines the value of this attribute when an object is created. The default value should be compatible with the type of the attribute.
 
-| Type of Attribute | Default Value Property | Additional Comments |
+| Type of Attribute | Default Value When Not Specified | Additional Comments |
 | --- | --- | --- |
-| AutoNumber | 1 | Starting value of the increment. If there are already rows in the table, the AutoNumber values will be based on the right 32 bits of the id column value. This can cause gaps in the AutoNumber ranges with jumps of 100, because id values are reserved by the Runtime in blocks of 100. |
+| AutoNumber | 1 | Starting value of this attribute. If there are already objects of this entity, the AutoNumber values will be based on the right 32 bits of the id column value. This can cause gaps in the AutoNumber ranges with jumps of 100, because id values are reserved by the Runtime in blocks of 100. |
 | Binary | N/A |   |
 | Boolean | False |   |
-| DateTime | (empty) | The default value should either comply with the format year-month-day (eventually postfixed by hour:minute, eventually postfixed by :second), or be `[%CurrentDateTime%]` (which means that when an object is created the value of this attribute is the date and time when the object is created). |
+| Date and time | (empty) | The default value can either be a UTC date with the format `year-month-day` (suffixed optionally by ` hour:minute`, or ` hours:minute:second`), or `[%CurrentDateTime%]` (which sets the value of this attribute to the date and time when the object is created). |
 | Decimal | 0 |   |
-| Enum | (empty) |   |
-| HashString | (empty) |   |
+| Enumeration | (empty) |   |
+| Hashed string | (empty) |   |
 | Integer | 0 |   |
 | Long | 0 |   |
 | String | (empty) |   |

@@ -32,7 +32,7 @@ For ease of reading, numbers with many digits before the decimal separator may b
 
 _Default value:_ False
 
-### 1.5 Date Format (Only for Attributes of the DateTime Type)
+### 1.5 Date Format (Only for Attributes of Type **Date and time**)
 
 The date format determines whether the date part, the time part or both are shown. How the date and time parts are formatted depends on the localization of the user using the application. Alternatively, as of version 2.5.3 you can completely customize the format of the date and/or time by supplying a date format string.
 
@@ -40,7 +40,7 @@ Possible values: 'Date', 'Time', 'Date and time' and in 2.5.3 'Custom'.
 
 _Default value:_ Date
 
-### 1.6 Custom Date Format (Only for Attributes of the DateTime Type)
+### 1.6 Custom Date Format (Only for Attributes of Type **Date and time**)
 
 If you choose 'Custom' as the date format (see above) the custom date format determines the way date and/or time are formatted. The custom date format is a string that follows the rules described in
 [http://download.oracle.com/javase/6/docs/api/java/text/SimpleDateFormat.html](http://download.oracle.com/javase/6/docs/api/java/text/SimpleDateFormat.html).

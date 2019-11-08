@@ -15,18 +15,18 @@ Use this setting to select the location where you want to store your app. There 
 
 ### 2.1 Mendix Team Server
 
-When uploading the app to the * [Team Server](/developerportal/develop/team-server), you can choose between the following:
+When uploading the app to [Mendix Team Server](/developerportal/develop/team-server), you can choose between the following:
 
 * Create a **New Mendix Team Server** project
-	* For this option, enter the name for the new Team Server project and repository in the **App name** field
+	* Enter the name for the new Team Server project and repository in the **App name** field
 * Upload to an **Existing Mendix Team Server**
-	* For this option, select the corresponding **Team Server App** from the list
+	* Select the corresponding **Team Server App** from the list
 	* This only works when the existing repository is empty
 
 ### 2.2 Private Server
 
 {{% alert type="warning" %}}
-Note that this option is only available when support for other servers is enabled in **Edit** > **Preferences** > **Advanced** > [Enable private version control](preferences-dialog#enable)).
+This option is only available when support for other servers is enabled in **Edit** > **Preferences** > **Advanced** > [Enable private version control](preferences-dialog#enable)).
 {{% /alert %}}
 
 If you select **Private server**, enter the address of the repository to which you want to upload your app in the **App repository address** field.

@@ -9,27 +9,41 @@ tags: ["studio pro"]
 
 Use this dialog box to upload an app that is not yet stored in a version control server.
 
+![Upload to Version Control Server… menu option](attachments/upload-to-version-control/upload-to-version-control-server.png)
+
 ## 2 Location
 
 Use this setting to select the location where you want to store your app. There are three options, which are described below.
 
-### 2.1 Mendix Team Server
+### 2.1 New Mendix Team Server
 
-When uploading the app to [Mendix Team Server](/developerportal/develop/team-server), you can choose between the following:
+You can create a new app on [Mendix Team Server](/developerportal/develop/team-server).
 
-* Create a **New Mendix Team Server** project
-	* Enter the name for the new Team Server project and repository in the **App name** field
-* Upload to an **Existing Mendix Team Server**
-	* Select the corresponding **Team Server App** from the list
-	* This only works when the existing repository is empty
+* Select **New Mendix Team Server**
+* Enter the name for the new Team Server project and repository in the **App name** field
 
-### 2.2 Private Server
+	![Enter App name for New mendix Team Server](attachments/upload-to-version-control/new-team-server-app.png)
+
+### 2.2 Existing Mendix Team Server
 
 {{% alert type="warning" %}}
-This option is only available when support for other servers is enabled in **Edit** > **Preferences** > **Advanced** > [Enable private version control](preferences-dialog#enable)).
+You can only upload to an existing repository if the repository is currently empty
 {{% /alert %}}
 
+* Select **Existing Mendix Team Server**
+* Select the **Team Server App** from the list
+
+	![Select existing mendix Team Server](attachments/upload-to-version-control/existing-team-server-app.png)
+
+### 2.3 Private Server
+
+This option is only available when support for other servers is enabled in **Edit** > **Preferences** > **Advanced** > [Enable private version control](preferences-dialog#enable)).
+
+![Enable private version control in advanced preferences](attachments/upload-to-version-control/enable-private-version-control.png)
+
 If you select **Private server**, enter the address of the repository to which you want to upload your app in the **App repository address** field.
+
+![Enable private version control in advanced preferences](attachments/upload-to-version-control/private-server-app.png)
 
 ## 3 Read More
 

@@ -49,13 +49,13 @@ In this example, you can see one column with weight 12 (which takes up the full 
 
 ![Columns Example](attachments/container-widgets/columns.png)
 
-Starting with Studio Pro version [8.3.0](/releasenotes/studio-pro/8.3#830), the **weight** property has been replaced by the following three properties, which allow for the easier creation of responsive layout grids:
+Starting with Studio Pro version [8.3.0](/releasenotes/studio-pro/8.3#830), the **Weight** property has been replaced by the following three properties, which allow for the easier creation of responsive layout grids:
 
 * **Desktop Size** – the size of the column for desktop devices
 * **Tablet Size** – the size of the column for tablet devices
 * **Phone Size** – the size of the column for phone devices
 
-The desktop sizes of all column in a row must add up to 12. This restriction does not apply to tablet or phone sizes, which enables wrapping columns on smaller devices. Here is an example configuration:
+The desktop sizes of all columns in a row must add up to 12. This restriction does not apply to tablet or phone sizes, which enables wrapping columns on smaller devices. Here is an example configuration:
 
 * 4 columns with size 3 on desktop
 * 4 columns with size 6 on tablet (creating a 2x2 grid)

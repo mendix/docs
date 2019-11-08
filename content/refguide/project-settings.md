@@ -94,7 +94,7 @@ If you run on-premises, then you can select the time zone to which the server is
 
 ### 3.9 Hash Algorithm
 
-The hash algorithm is used to generate hash values for attributes of the HashString type, such as the password of a user. Mendix offers two recommended hashing algorithms:
+The hash algorithm is used to generate hash values for attributes of the **Hashed string** type, such as the password of a user. Mendix offers two recommended hashing algorithms:
 
 | Option | Description |
 | --- | --- |

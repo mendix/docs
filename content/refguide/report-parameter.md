@@ -12,7 +12,7 @@ Note that if you have a report parameter widget on the page, you must also add a
 
 {{% alert type="warning" %}}
 
-A drop-down menu can be used for a dataset parameter of any type except DateTime. DataTime parameters can be filtered by a [Report Date Parameter](report-date-parameter).
+A drop-down menu can be used for a dataset parameter of any type except DateTime. DateTime parameters can be filtered by a [Report Date Parameter](report-date-parameter).
 
 {{% /alert %}}
 

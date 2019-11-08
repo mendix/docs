@@ -39,7 +39,7 @@ For ease of reading, numbers with many digits before the decimal separator may b
 
 _Default value:_ False
 
-### Date Format (Only for Attributes of the Type DateTime)
+### Date Format (Only for Attributes of the Type **Date and time**)
 
 The date format determines whether the date part, the time part or both are shown. How the date and time parts are formatted depends on the localization of the user using the application.
 

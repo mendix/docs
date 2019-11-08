@@ -18,7 +18,7 @@ You can choose between seeing your apps, your company's apps, and licensed nodes
 
 See below for a description of these lists and the options for each list.
 
-## 2 My Apps
+## 2 My Apps{#my-apps}
 
 You will see all the apps of which you are a team member.
 

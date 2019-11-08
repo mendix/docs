@@ -59,9 +59,9 @@ The ID should be unique for every customer, so this attribute has type AutoNumbe
 
 The photo will be represented by an association to an entity that specializes Image. You do not use a Binary attribute for this purpose.
 
-Level has three possible values: High, Medium and Low. This is stored in an attribute of type Enum.
+Level has three possible values: High, Medium and Low. This is stored in an attribute of type Enumeration.
 
-The password itself should not be stored, but only its hash value, thus it is stored in an attribute of type HashString.
+The password itself should not be stored, but only its hash value, thus it is stored in an attribute of type **Hashed string**.
 
 A customer can be active or inactive, which is stored in an attribute named 'Active' of type Boolean.
 

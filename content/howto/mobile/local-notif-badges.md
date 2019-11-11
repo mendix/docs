@@ -55,20 +55,20 @@ Start and load the app on your mobile device and tap the button which calls your
 
 To make your badge disappear after your user opens your app, follow the instructions below.
 
-1. Drop an **App events** widget onto **Home_Native**. You have this widget because it is included in the Native Mobile Quickstart app template.:
+1. Drop an **App events** widget onto **Home_Native**. You have this widget because it is included in the Native Mobile Quickstart app:
 
 	![app event widget](app-events.png)
 
 2. Double-click your **App events** widget.
 3. Select **On load** > **Call a nanoflow**.
 4. Click **New** and make a new nanoflow: *ACT_ClearBadge*.
-5. Go to **ACT_ClearBadge**
+5. Go to **ACT_ClearBadge**.
 6. Drag and drop a **Set badge number** activity onto your nanoflow:
 
 	![set badge activity](attachments/native-push/clear-set-badge.png)
 
 7. Double-click your **Set badge number** activity.
-8. Click **Badge number** > **Edit**
+8. Click **Badge number** > **Edit**.
 9. Type *0* and click **OK**.
 10. Set **Use Return Value** to **No**:
 

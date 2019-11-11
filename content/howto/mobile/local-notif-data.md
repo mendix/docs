@@ -24,7 +24,13 @@ You will create the following things to send data to pages:
 
 ## 2 Prerequisites
 
-### 3 Sending Data to Pages
+Before starting this how-to, make sure you have completed the following prerequisites:
+
+* Review the [basic differences](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/) between local notifications and push notifications
+* Install the [Make it Native](/refguide/getting-the-make-it-native-app) app on your mobile device
+* Complete the preceeding how-to's in this [Use Local Notifications](local-notif-parent) series
+
+## 3 Sending Data to Pages
 
 To make your two entities, do the following:
 

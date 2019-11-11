@@ -13,6 +13,12 @@ Local notifications should rarely notify a user right after they do an action. H
 
 ## 2 Prerequisites
 
+Before starting this how-to, make sure you have completed the following prerequisites:
+
+* Review the [basic differences](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/) between local notifications and push notifications
+* Install the [Make it Native](/refguide/getting-the-make-it-native-app) app on your mobile device
+* Complete the preceeding how-to's in this [Use Local Notifications](local-notif-parent) series
+
 ## 3 Scheduling a Notification
 
 To schedule a notification for a specific time, do the following:

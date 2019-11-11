@@ -11,7 +11,13 @@ tags: ["mobile", "push notification", "local", "push", "notification"]
 
 ## 2 Prerequisites
 
-### 3 Setting an Action for When a Notification is Tapped
+Before starting this how-to, make sure you have completed the following prerequisites:
+
+* Review the [basic differences](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/) between local notifications and push notifications
+* Install the [Make it Native](/refguide/getting-the-make-it-native-app) app on your mobile device
+* Complete the preceeding how-to's in this [Use Local Notifications](local-notif-parent) series
+
+## 3 Setting an Action for When a Notification is Tapped
 
 In this section you will learn to show a page when a user taps a notification.
 

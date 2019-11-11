@@ -15,6 +15,12 @@ You will need to build badge functionality into your app so that when a user get
 
 ## 2 Prerequisites 
 
+Before starting this how-to, make sure you have completed the following prerequisites:
+
+* Review the [basic differences](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/) between local notifications and push notifications
+* Install the [Make it Native](/refguide/getting-the-make-it-native-app) app on your mobile device
+* Complete the preceeding how-to's in this [Use Local Notifications](local-notif-parent) series
+
 ## 3 Setting a Badge Number
 
 Since you know how to send a simple local notification, you can now set the badge number by following these steps:

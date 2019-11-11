@@ -25,7 +25,7 @@ To schedule a notification for a specific time, do the following:
 1. Navigate to your **ACT_CreateAndSendNotification** nanoflow. 
 2.  Replace your **Display notification** JavaScript action with a new **Schedule notification** action:
 
-	![schedule action replace](attachments/native-push/new-schedule-action.png)
+	{{% image_container width="500" %}}![schedule action replace](attachments/native-push/new-schedule-action.png){{% /image_container %}}
 
 3. Double-click your new **Schedule notification activity**.
 4. Set the **Date** to **EndOfCurrentMinute**.
@@ -49,7 +49,7 @@ If your app is open, it will not show the notification due to iOS and Android us
 6. Click **Actions** > **New**.
 7. Create a **New Action** named *TriggerOnRecieve*, set **On receive** to **Call a nanoflow**, and select **ON_RecieveNotification**:
 
-	![on recieve settings](attachments/native-push/on-receive-action.png)
+	{{% image_container width="500" %}}![on recieve settings](attachments/native-push/on-receive-action.png){{% /image_container %}}
 
 8. Click **OK** then **OK** again.
 8. In **ACT_CreateAndSendNotification**, double-click your schedule notification activity.
@@ -73,14 +73,14 @@ To cancel all scheduled notifications, do the following:
 1. Create a nanoflow named  *ACT_CancelAllScheduledNotifications*.
 2.  Drag and drop a JavaScript action named **Cancel all scheduled notifications** onto your nanoflow: 
 
-	![cancel scheduled action](attachments/native-push/cancel-all-action.png)
+	{{% image_container width="500" %}}![cancel scheduled action](attachments/native-push/cancel-all-action.png){{% /image_container %}}
 
 3. Double-click your new cancel notification action.
 4. Select  **Use return value** > **No**.
 5. Click **OK**.
 6.  Drag and drop this nanoflow to your home screen and name its button *Cancel all*.
 
-	![cancel button](attachments/native-push/cancel-button.png)
+	{{% image_container width="500" %}}![cancel button](attachments/native-push/cancel-button.png){{% /image_container %}}
 
 To test your new cancel button, do the following:
 
@@ -103,18 +103,18 @@ To cancel a specific scheduled notification, you will need to supply a notificat
 	![test id argument](attachments/native-push/test-id-arg.png)
 
 5. Click **OK** once more to close the dialog window. 
-4. Create a nanoflow named *ACT_CancelScheduledNotifications*.
-5.  Drag and drop a JavaScript Action named **Cancel scheduled notification** onto your nanoflow:
+6. Create a nanoflow named *ACT_CancelScheduledNotifications*.
+7.  Drag and drop a JavaScript Action named **Cancel scheduled notification** onto your nanoflow:
 
 	![cancel one notification](attachments/native-push/cancel-scheduled-notif.png)
 
-6. Double-click your new cancel notification action.
-7. Click **Notification id** > **Edit**.
-8. Type *'testID'* into the parameter argument field and click **OK**.
-9. Click **OK** again to close the dialog window.
-7.  Drag and drop this nanoflow onto your home screen and name its button *Cancel a specific notification*:
+8. Double-click your new cancel notification action.
+9. Click **Notification id** > **Edit**.
+10. Type *'testID'* into the parameter argument field and click **OK**.
+11. Click **OK** again to close the dialog window.
+12. Drag and drop this nanoflow onto your home screen and name its button *Cancel a specific notification*:
 
-	![cancel one button](attachments/native-push/cancel-specific-button.png)
+	{{% image_container width="500" %}}![cancel one button](attachments/native-push/cancel-specific-button.png){{% /image_container %}}
 
 To test your new cancel button, do the following:
 

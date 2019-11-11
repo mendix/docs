@@ -1,7 +1,8 @@
 {{- $featuredPages := where .Site.Pages ".Params.frontpage_featured" true -}}
 {{- with $featuredPages -}}
-<div style="float: left; width: 45%; margin-right: 5%; ">
-  <h2 class="frontpage__featured__title"><smaller>Latest Releases</smaller></h2>
+<div style="display: flex; flex-wrap: wrap; margin: 0 -20px;">
+<div style="padding: 0 20px;">
+  <h2 class="frontpage__featured__title">Latest Releases</h2>
   <ul style="list-style-type:circle;">
 	<li><a href="https://docs.mendix.com/releasenotes/studio-pro/8.2">Studio Pro 8.3.0</a> – Oct 29th, 2019</li>
 	<li><a href="https://docs.mendix.com/releasenotes/studio/8.0-and-above">Studio</a> – Oct 25th, 2019</li>
@@ -14,8 +15,8 @@
 	<li><a href="https://docs.mendix.com/releasenotes/sdk/platform-sdk">Platform SDK 4.1.1</a> – June 11th, 2019</li>
 	<li><a href="https://docs.mendix.com/releasenotes/sdk/metamodel-8.2">Metamodel 8.3.0</a> – Oct 25th, 2019</li>
   </ul>
- </div> 
- <div style="float: right; width: 45%; margin-left: 5% ">
+ </div>
+ <div style="padding: 0 20px;">
   <h2 class="frontpage__featured__title">Getting Started</h2>
   <ul style="list-style-type:circle; ">
     <li><a href="https://docs.mendix.com/studio/">Introduction to Studio</a></li>
@@ -25,5 +26,6 @@
 	<li><a href="https://docs.mendix.com/developerportal/">What is the Developer Portal?</a></li>
 	<li><a href="https://docs.mendix.com/partners/">Strategic Partners: IBM, SAP, Siemens</a></li>
 </ul>
+</div>
  </div> 
 {{- end -}}

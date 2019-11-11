@@ -8,7 +8,7 @@ tags: ["mobile", "push notification", "local", "push", "notification"]
 
 ## 1 Introduction
 
-Several apps which use push notifications will also need actions to trigger after a user taps a notification. This step-by-step guide will teach you to set up a common action: after a notification is tapped, it will show a specific page.
+Several apps which use push notifications will also need actions to trigger after a user taps a notification. This step-by-step guide will teach you to make a tapped notification show a specific page.
 
 ## 2 Prerequisites
 

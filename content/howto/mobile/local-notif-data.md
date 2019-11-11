@@ -112,7 +112,7 @@ To make your page, do the following:
 	![entity test entity](attachments/native-push/data-view-source.png)
 
 7.  Click **OK**. 
-8.  When asked "Do you want to automatically fill the contents of the data view?" click **Yes**.
+8.  When asked **"Do you want to automatically fill the contents of the data view?"** click **Yes**.
 9.  This will be the page your user sees when they tap the notification:
 
 	{{% image_container width="500" %}}![page with data view](attachments/native-push/page-with-data-view.png){{% /image_container %}}
@@ -244,8 +244,14 @@ Now you will set up a data view on your home page.
 10. Create a **New Action** named *OpenPageWithParams*, set **On open** to **Call a nanoflow**, and select **ON_tapNotification**.
 
 	{{% image_container width="500" %}}![notification action](attachments/native-push/notif-action-2.png){{% /image_container %}}
+	
+Great job! Now you will test your data notification functionality.
 
-11. Start and load the app on your mobile device, tap the nanoflow button you created in 3.e, then tap the notification to navigate to the **DetailTestEntity** page with the proper object.
+1. Start and load the app on your mobile device.
+2. Tap the button which sends a notification.
+3. Tap the notification to navigate to the **DetailTestEntity** page with the proper object.
+
+Congratulations! You have harnessed the power of data to enhance your push notifications.
 
 ## 4 Read More
 

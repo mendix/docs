@@ -9,7 +9,7 @@ tags: ["mobile", "push notification", "local", "push", "notification"]
 
 ## 1 Introduction
 
-Local notifications should rarely notify a user right after they do an action. Here you will learn to configure local notifications to trigger after a period of time. To do this, you will use a JavaScript action named **ScheduleNotification**.
+Local notifications should rarely notify a user right after they do an action. Here you will learn to configure local notifications to trigger after a period of time. To do this, you will use a JavaScript action named **ScheduleNotification**. After that, you will learn how to cancel scheduled notifications.
 
 ## 2 Prerequisites
 

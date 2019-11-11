@@ -4,6 +4,7 @@ category: "native"
 parent: "local-notif-parent"
 menu_order: 20
 description: A tutorial for setting up badges for local push notifications.
+tags: ["mobile", "push notification", "local", "push", "notification"]
 ---
 
 ## 1 Introduction

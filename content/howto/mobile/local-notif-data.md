@@ -4,6 +4,7 @@ category: "native"
 parent: "local-notif-parent"
 menu_order: 40
 description: A tutorial for integrating data into your push notifications.
+tags: ["mobile", "push notification", "local", "push", "notification"]
 ---
 
 ##  1 Introduction

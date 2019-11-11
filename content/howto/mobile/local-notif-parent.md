@@ -4,6 +4,7 @@ category: "native"
 parent: "native-mobile"
 menu_order: 10
 description: Tutorials for setting up local push notifications which do not use an internet connection.
+tags: ["mobile", "push notification", "local", "push", "notification"]
 ---
 
 These how-to's will teach you to build local notifications for native applications. Local notifications will only allow you to schedule and send notifications confined to one mobile device. These notifications do not use an internet connection. One use of a local notification might be an alarm app which sends a notification after an amount of time has elapsed.

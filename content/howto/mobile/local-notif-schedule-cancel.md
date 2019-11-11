@@ -4,6 +4,7 @@ category: "native"
 parent: "local-notif-parent"
 menu_order: 50
 description: A tutorial for scheduling and cancelling push notifications.
+tags: ["mobile", "push notification", "local", "push", "notification"]
 ---
 
 ## 1 Introduction

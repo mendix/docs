@@ -4,6 +4,7 @@ category: "native"
 parent: "local-notif-parent"
 menu_order: 30
 description: A tutorial for making your push notifications trigger actions when tapped.
+tags: ["mobile", "push notification", "local", "push", "notification"]
 ---
 
 ## 1 Introduction

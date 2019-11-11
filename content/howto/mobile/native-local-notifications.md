@@ -138,7 +138,7 @@ Now you will set up the final logic necessary for your app to display a notifica
 
 Now you will set up the final piece of your nanoflow's logic. 
 
-1.  Delete your upper end event, drag and drop a **Merge** in its place, and rebuild your connections:
+1.  Delete the end event in the top-right corner of your nanoflow, drag and drop a **Merge** in its place, and rebuild your connections:
 
 	{{% image_container width="500" %}}![app settings](attachments/native-push/merge.png){{% /image_container %}}
 
@@ -242,7 +242,7 @@ In this section you will learn to show a page when a user taps a notification.
 
 	![click home page](attachments/native-push/home-native-select.png)
 
-12. Click the **Select** button. Now you have a button which will bring you back to your home screen when you are testing:
+12. Click **Select**. Now you have a button which will bring you back to your home screen when you are testing:
 
 	![click home page](attachments/native-push/nav-button.png)
 
@@ -442,31 +442,31 @@ Good job! When a user taps a notification from the **Pass GUID to Notification**
 
 13. In **Object name** write *ReturnedObjectByGUID*:
 
-	![guid settings](attachments/native-push/get-object-by-guid-settings.png)
+	{{% image_container width="500" %}}![guid settings](attachments/native-push/get-object-by-guid-settings.png){{% /image_container %}}
 
 14. Click **OK** to save and close your JavaScript Action settings:
 
-	![guid activity](attachments/native-push/guid-activity.png)
+	{{% image_container width="500" %}}![guid activity](attachments/native-push/guid-activity.png){{% /image_container %}}
 
 15. Drop a **Change object** activity onto your nanoflow:
 
-	![change object](attachments/native-push/new-change-object.png)
+	{{% image_container width="500" %}}![change object](attachments/native-push/new-change-object.png){{% /image_container %}}
 
 16. Double-click the change object activity.
 17. Select **Object** > **ReturnedObjectByGUID (NativeMobile.TestEntity)** from the drop-down menu.
 18. Click **Action** > **New**, make sure **Member** is set to the string attribute, and into **Value** type *'Your notification has forwarded you here!'*:
 
-	![change object action](attachments/native-push/change-object-action.png)
+	{{% image_container width="500" %}}![change object action](attachments/native-push/change-object-action.png){{% /image_container %}}
 
 19. Click **OK**. Check that your dialog box looks like this, then click **OK** again to close it: 
 
-	![change object final](attachments/native-push/change-object-final.png)
+	{{% image_container width="500" %}}![change object final](attachments/native-push/change-object-final.png){{% /image_container %}}
 
 Next you are going to create a show page action for **ON_tapNotification**.
 
 1.  Drag and drop a **Show Page** action onto your nanoflow:
 
-	![new show page](attachments/native-push/add-show-page.png)
+	{{% image_container width="500" %}}![new show page](attachments/native-push/add-show-page.png){{% /image_container %}}
 
 2. Double-click the show page activity.
 
@@ -474,7 +474,7 @@ Next you are going to create a show page action for **ON_tapNotification**.
 
 4.  Click **Page** > **Select**, click **DetailTestEntity**, then click **OK**:
 
-  ![guid button](attachments/native-push/show-page-settings.png)
+	{{% image_container width="500" %}}![guid button](attachments/native-push/show-page-settings.png){{% /image_container %}}
 
 5. Click **OK** to close the **Show Page** activity settings, then navigate to your **Home_Native** page.
 

@@ -1,6 +1,18 @@
-## 4 Scheduling a Notification
+---
+title: "Use Local Notifications: Part 5 (Scheduling)"
+category: "native"
+parent: "local-notif-parent"
+menu_order: 50
+description: A tutorial for scheduling and cancelling push notifications.
+---
+
+## 1 Introduction
 
 Local notifications should rarely notify a user right after they do an action. Here you will learn to configure local notifications to trigger after a period of time. To do this, you will use a JavaScript action named **ScheduleNotification**.
+
+## 2 Prerequisites
+
+## 3 Scheduling a Notification
 
 To schedule a notification for a specific time, do the following:
 
@@ -44,11 +56,11 @@ If your app is open, it will not show the notification due to iOS and Android us
 
 But what if you want to cancel a scheduled notification? Read on to learn more.
 
-## 5 Cancelling Scheduled Notifications
+## 4 Cancelling Scheduled Notifications
 
 To cancel a scheduled notification, you can use either the **Cancel Scheduled Notification** or **Cancel All Scheduled Notification** JavaScript actions. To cancel a specific notification, provide an identifier of that particular notification to **Cancel Scheduled Notification**. To cancel all notifications, call the **Cancel All Scheduled Notification** JavaScript action. For further information, see the subsections below.
 
-### 5.1 Cancelling all Scheduled Notifications
+### 4.1 Cancelling all Scheduled Notifications
 
 To cancel all scheduled notifications, do the following:
 
@@ -73,7 +85,7 @@ To test your new cancel button, do the following:
 
 You will not see a notification at the end of the minute, proving your cancel action a success!
 
-### 5.2 Cancelling a Specific Scheduled Notification
+### 4.2 Cancelling a Specific Scheduled Notification
 
 To cancel a specific scheduled notification, you will need to supply a notification ID for the notification you wish to cancel. 
 
@@ -107,7 +119,7 @@ To test your new cancel button, do the following:
 
 You will not see a notification at the end of the minute, proving your cancel action a success!
 
-## 6 Read More
+## 5 Read More
 
 * [Implement Push Notifications](implementation-guide)
 * [Build JavaScript Actions](/howto/extensibility/build-javascript-actions)

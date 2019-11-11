@@ -1,4 +1,16 @@
-### 3.3 Setting an Action for When a Notification is Tapped
+---
+title: "Use Local Notifications: Part 3 (Actions)"
+category: "native"
+parent: "local-notif-parent"
+menu_order: 30
+description: A tutorial for making your push notifications trigger actions when tapped.
+---
+
+## 1 Introduction
+
+## 2 Prerequisites
+
+### 3 Setting an Action for When a Notification is Tapped
 
 In this section you will learn to show a page when a user taps a notification.
 
@@ -47,4 +59,9 @@ Great job setting up your notification. Now you can test it:
 4. Tap the notification to navigate to the page you selected.
 5. Tap the **Return to home page** button to navigate back to your home page.
 
-Now you can show pages after notifications are tapped. Next you will learn to pass data to these pages. 
+Now you can show pages after notifications are tapped. Next you will learn to pass data to these pages.
+
+## 4 Read More
+
+* [Implement Push Notifications](implementation-guide)
+* [Build JavaScript Actions](/howto/extensibility/build-javascript-actions)

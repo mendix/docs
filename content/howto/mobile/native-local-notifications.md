@@ -1,5 +1,5 @@
 ---
-title: "Set Up Local Notifications"
+title: "Use Local Notifications: Part 1"
 category: "native"
 parent: "local-notif-parent"
 menu_order: 10

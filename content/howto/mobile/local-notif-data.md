@@ -1,4 +1,12 @@
-### 3.4 Sending Data to Pages
+---
+title: "Use Local Notifications: Part 4 (Data)"
+category: "native"
+parent: "local-notif-parent"
+menu_order: 40
+description: A tutorial for integrating data into your push notifications.
+---
+
+##  1 Introduction
 
 Several apps make it so that when user taps a notification, the user is taken to specific page with specific parameters set. You can achieve this by sending data along with a notification. 
 
@@ -12,6 +20,10 @@ You will create the following things to send data to pages:
 * **One page** — *DetailTestEntity* which will be shown on tapping a notification
 * **One microflow** — *DS_TestEntity* to create dummy data for testing
 * **Three nanoflows** — *DS_Notification* to create a dummy notification object, *ACT_PassGUIDToNotification* to pass a GUID, and *On_tapNotification* to process data from your notification
+
+## 2 Prerequisites
+
+### 3 Sending Data to Pages
 
 To make your two entities, do the following:
 
@@ -228,3 +240,8 @@ Now you will set up a data view on your home page.
 	{{% image_container width="500" %}}![notification action](attachments/native-push/notif-action-2.png){{% /image_container %}}
 
 11. Start and load the app on your mobile device, tap the nanoflow button you created in 3.e, then tap the notification to navigate to the **DetailTestEntity** page with the proper object.
+
+## 4 Read More
+
+* [Implement Push Notifications](implementation-guide)
+* [Build JavaScript Actions](/howto/extensibility/build-javascript-actions)

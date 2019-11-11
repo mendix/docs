@@ -10,7 +10,9 @@ tags: ["mobile", "push notification", "local", "push", "notification"]
 
 Badges are crucial for many apps on iOS and Android. Badges differ in appearance based on platform, and often indicate important information in applications. For example with messaging applications, it is good practice to employ badges which alert users to new messages.
 
-You will need to build badge functionality into your app so that when a user gets a notification, the app shows a badge on its app's icon. Also, badges are *not automatically decreased or removed* when a user checks an app. These two functions must be built manually by a developer.
+You will need to build badge functionality into your app so that when a user gets a notification, the app shows a badge on its app's icon. Also, badges are *not automatically decreased or removed* when a user checks an app. These two functions must be built manually by a developer. 
+
+In this document you will learn to add badge functionality to your app, as well as how to remove a badge.
 
 ## 2 Prerequisites 
 
@@ -18,7 +20,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Review the [basic differences](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/) between local notifications and push notifications
 * Install the [Make it Native](/refguide/getting-the-make-it-native-app) app on your mobile device
-* Complete the preceding tutorials in this [Use Local Notifications](local-notif-parent) series
+* Complete the preceding tutorial in this [Use Local Notifications](local-notif-parent) series
 
 ## 3 Setting a Badge Number
 
@@ -35,7 +37,7 @@ Since you know how to send a simple local notification, you can now set the badg
 
 	{{% image_container width="500" %}}![badge number](attachments/native-push/badge-1.png){{% /image_container %}}
 
-6. Click OK.
+6. Click **OK**.
 7.  Drag and drop a **Set badge number** JavaScript action to the right of your merge activity:
 
 	![drag set badge number](attachments/native-push/set-badge-act.png)
@@ -49,13 +51,13 @@ Since you know how to send a simple local notification, you can now set the badg
 
 Start and load the app on your mobile device and tap the button which calls your nanoflow. You will see a notification. Go to your device's start screen to see the notification badge on your app:
 
-{{% image_container width="500" %}}![badge number on mobile](attachments/native-push/badge-mobile.png){{% /image_container %}}
+{{% image_container width="100" %}}![badge number on mobile](attachments/native-push/badge-mobile.png){{% /image_container %}}
 
 ## 4 Reducing a Badge Number
 
 To make your badge disappear after your user opens your app, follow the instructions below.
 
-1. Drop an **App events** widget onto **Home_Native**. You have this widget because it is included in the Native Mobile Quickstart app:
+1. Drop an **App events** widget onto **Home_Native** (you have this widget because it is included in the Native Mobile Quickstart app):
 
 	![app event widget](attachments/native-push/app-events.png)
 
@@ -99,7 +101,7 @@ You can now test your badge clearing.
 
 	![cleared-badge-icon.png](attachments/native-push/cleared-badge-icon.png)
 
-5. Check your Studio Pro Console to read the **Your notification has been cleared** text you set up.
+5. Check your Studio Pro **Console** to read the **Your notification has been cleared** text you set up.
 
 Congratulations! You successfully implemented basic badge clearing.
 

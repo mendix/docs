@@ -58,9 +58,9 @@ Follow the instructions below to set up your first local notification:
 
 9.  In **ACT_CreateAndSendNotification**, drag and drop three **Create variable** activities onto your nanoflow and set them as string variables titled *Title*, *Subtitle*, and *Body*:
 
-   {{% image_container width="500" %}}![app settings](attachments/native-push/create-string-variables.png){{% /image_container %}}
+	{{% image_container width="500" %}}![app settings](attachments/native-push/create-string-variables.png){{% /image_container %}}
 
-10.  Double-click your **Title** activity and then configure it:<br />
+10. Double-click your **Title** activity and then configure it:<br />
 	a. Make sure **Data type** is set to **String**.<br />
 	b. Click **Generate**.<br />
 	c. Type *Title* into the **Constant** field.<br />

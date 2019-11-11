@@ -84,19 +84,19 @@ To make this microflow run after startup, do the following:
 
 1.  Double-click **Settings** in your Project Explorer:
 
-   {{% image_container width="500" %}}![project explorer](attachments/native-push/pe-settings.png){{% /image_container %}}
+	{{% image_container width="500" %}}![project explorer](attachments/native-push/pe-settings.png){{% /image_container %}}
 
 2.  Click the **Runtime** tab:
 
-   {{% image_container width="500" %}}![click runtime](attachments/native-push/runtime-tab.png){{% /image_container %}}
+	{{% image_container width="500" %}}![click runtime](attachments/native-push/runtime-tab.png){{% /image_container %}}
 
 3.  Click **After startup** > **Select**:
 
-   {{% image_container width="500" %}}![select after start up](attachments/native-push/after-startup.png){{% /image_container %}}
+	{{% image_container width="500" %}}![select after start up](attachments/native-push/after-startup.png){{% /image_container %}}
 
 4.  Click **DS_TestEntity** then click the **Select** button to achieve this result:
 
-   {{% image_container width="500" %}}![select test entity](attachments/native-push/select-ds-entity.png){{% /image_container %}}
+	{{% image_container width="500" %}}![select test entity](attachments/native-push/select-ds-entity.png){{% /image_container %}}
 
 5. Click **OK**
 

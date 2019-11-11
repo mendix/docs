@@ -51,13 +51,13 @@ Since you know how to send a simple local notification, you can now set the badg
 
 Start and load the app on your mobile device and tap the button which calls your nanoflow. You will see a notification. Go to your device's start screen to see the notification badge on your app:
 
-{{% image_container width="100" %}}![badge number on mobile](attachments/native-push/badge-mobile.png){{% /image_container %}}
+{{% image_container width="400" %}}![badge number on mobile](attachments/native-push/badge-mobile.png){{% /image_container %}}
 
 ## 4 Reducing a Badge Number
 
 To make your badge disappear after your user opens your app, follow the instructions below.
 
-1. Drop an **App events** widget onto **Home_Native** (you have this widget because it is included in the Native Mobile Quickstart app):
+1. Drop an **App events** widget onto **Home_Native** (you have this widget because it is included in the [Native Mobile Quickstart app](https://appstore.home.mendix.com/link/app/109511/)):
 
 	![app event widget](attachments/native-push/app-events.png)
 
@@ -85,7 +85,7 @@ To make your badge disappear after your user opens your app, follow the instruct
 14. Make sure **Page load** > **On load** is set to **Call a nanoflow**, and specify that nanoflow as **ACT_ClearBadge**. This will make sure your badge clears on page load.
 15. Set **App resume** > **On resume** is set to **Call a nanoflow**, and specify that nanoflow as **ACT_ClearBadge**. This will make sure your badge clears when your app is resumed:
 
-	![app event final settings](attachments/native-push/app-event-final-settings.png)
+	{{% image_container width="500" %}}![app event final settings](attachments/native-push/app-event-final-settings.png){{% /image_container %}}
 
 16. Click **OK** and save your changes.
 
@@ -94,12 +94,12 @@ You can now test your badge clearing.
 1. Start and load the app on your mobile device and tap the button which calls your nanoflow. You will see a notification. 
 2. Go to your device's start screen to see the notification badge on your app:
 
-	{{% image_container width="500" %}}![badge number on mobile](attachments/native-push/badge-mobile.png){{% /image_container %}}
+	{{% image_container width="400" %}}![badge number on mobile](attachments/native-push/badge-mobile.png){{% /image_container %}}
 
 3. Tap your app again to open it.
 4. Navigate to your device's home screen and see that your Make It Native app has no more badge:
 
-	![cleared-badge-icon.png](attachments/native-push/cleared-badge-icon.png)
+	{{% image_container width="400" %}}![cleared-badge-icon.png](attachments/native-push/cleared-badge-icon.png){{% /image_container %}}
 
 5. Check your Studio Pro **Console** to read the **Your notification has been cleared** text you set up.
 

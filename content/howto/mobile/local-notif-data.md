@@ -1,6 +1,5 @@
 ---
 title: "Use Local Notifications: Part 4 (Data)"
-category: "native"
 parent: "local-notif-parent"
 menu_order: 40
 description: A tutorial for integrating data into your push notifications.

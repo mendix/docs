@@ -1,6 +1,5 @@
 ---
 title: "Use Local Notifications: Part 3 (Actions)"
-category: "native"
 parent: "local-notif-parent"
 menu_order: 30
 description: A tutorial for making your push notifications trigger actions when tapped.

@@ -8,9 +8,19 @@ tags: ["studio pro"]
 
 {{% alert type="warning" %}}The report grid widget is not supported on native mobile pages.{{% /alert %}}
 
-This shows the reported data in a grid. 
+## 1 Introduction
 
-The difference between a data grid and a report grid is that the data shown in the report grid is not stored in the database. Each time a report is created, the data is retrieved from the database.
+A **Report grid** shows data retrieved from the database in a [Dataset](datasets) in a grid format. Each time a report is created, the data is retrieved from the database.
+
+The difference between a data grid and a report grid is that you can use a data grid to edit the data shown. A report grid will only display data. However, in a report grid, you can create additional information by merging and processing attributes when you define the dataset which retrieves the data.
+
+The report grid is shown with the data set source shown between square brackets and colored blue. The data fields returned by the dataset are shown in the report grid columns, under the column captions.
+
+![Report grid in structure mode](attachments/report-widgets/report-grid.png)
+
+## 2 Report Grid Properties
+
+![Report grid in structure mode](attachments/report-widgets/report-grid-properties.png)
 
 ## Data Source Properties
 
@@ -51,3 +61,11 @@ If this property is false, the report grid will not show its data until the user
 ### Name, Class, Style
 
 For details, see [Properties Common for Widgets](common-widget-properties).
+
+## 3 Report Grid Column Properties
+
+![Report grid in structure mode](attachments/report-widgets/report-grid-column-properties.png)
+
+## 4 Report Grid Column Data Source
+
+Drag from the Connector Pane...

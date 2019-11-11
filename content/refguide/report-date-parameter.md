@@ -10,6 +10,8 @@ With the report date parameter, the user can specify the DateTime parameter of t
 
 In the report date parameter you can add [Date Range Fields](date-range-field) to make it easier for an end-user to select a data range. To do this, right-click the widget and choose **Add field** from the pop-up menu.
 
+Note that if you have a report parameter widget on the page, you must also add a [Report Button](report-button) widget so that it is possible for the user to regenerate the report after specifying the parameter.
+
 ## General Properties
 
 ### Parameter

@@ -6,7 +6,7 @@ tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-
+ However, you must also add a [Generate report button](report-button) widget so that it is possible to regenerate the report after specifying the parameter.
 If a report pane has parameter widgets, it should also have a generate report button.
 
 The reports are generated at the moment when the end-user clicks the generate report button.

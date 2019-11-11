@@ -57,7 +57,7 @@ To make your badge disappear after your user opens your app, follow the instruct
 
 1. Drop an **App events** widget onto **Home_Native**. You have this widget because it is included in the Native Mobile Quickstart app:
 
-	![app event widget](app-events.png)
+	![app event widget](attachments/native-push/app-events.png)
 
 2. Double-click your **App events** widget.
 3. Select **On load** > **Call a nanoflow**.

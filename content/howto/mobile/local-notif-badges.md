@@ -18,7 +18,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Review the [basic differences](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/) between local notifications and push notifications
 * Install the [Make it Native](/refguide/getting-the-make-it-native-app) app on your mobile device
-* Complete the preceeding how-to's in this [Use Local Notifications](local-notif-parent) series
+* Complete the preceding tutorials in this [Use Local Notifications](local-notif-parent) series
 
 ## 3 Setting a Badge Number
 
@@ -51,7 +51,59 @@ Start and load the app on your mobile device and tap the button which calls your
 
 {{% image_container width="500" %}}![badge number on mobile](attachments/native-push/badge-mobile.png){{% /image_container %}}
 
-## 4 Read More
+## 4 Reducing a Badge Number
+
+To make your badge disappear after your user opens your app, follow the instructions below.
+
+1. Drop an **App events** widget onto **Home_Native**. You have this widget because it is included in the Native Mobile Quickstart app template.:
+
+	![app event widget](app-events.png)
+
+2. Double-click your **App events** widget.
+3. Select **On load** > **Call a nanoflow**.
+4. Click **New** and make a new nanoflow: *ACT_ClearBadge*.
+5. Go to **ACT_ClearBadge**
+6. Drag and drop a **Set badge number** activity onto your nanoflow:
+
+	![set badge activity](attachments/native-push/clear-set-badge.png)
+
+7. Double-click your **Set badge number** activity.
+8. Click **Badge number** > **Edit**
+9. Type *0* and click **OK**.
+10. Set **Use Return Value** to **No**:
+
+	![return value](attachments/native-push/clear-badge-settings.png)
+
+11. Drag and drop a **Log message** activity onto your microflow.
+12. Double-click your **Log message** activity, write *Your notification has been cleared* into **Template**, and click **OK**:
+
+	![clear text](attachments/native-push/clear-text-log.png)
+
+13. Go back to your **Home_Native** page and double-click your **App events** activity.
+14. Make sure **Page load** > **On load** is set to **Call a nanoflow**, and specify that nanoflow as **ACT_ClearBadge**. This will make sure your badge clears on page load.
+15. Set **App resume** > **On resume** is set to **Call a nanoflow**, and specify that nanoflow as **ACT_ClearBadge**. This will make sure your badge clears when your app is resumed:
+
+	![app event final settings](attachments/native-push/app-event-final-settings.png)
+
+16. Click **OK** and save your changes.
+
+You can now test your badge clearing.
+
+1. Start and load the app on your mobile device and tap the button which calls your nanoflow. You will see a notification. 
+2. Go to your device's start screen to see the notification badge on your app:
+
+	{{% image_container width="500" %}}![badge number on mobile](attachments/native-push/badge-mobile.png){{% /image_container %}}
+
+3. Tap your app again to open it.
+4. Navigate to your device's home screen and see that your Make It Native app has no more badge:
+
+	![cleared-badge-icon.png](attachments/native-push/cleared-badge-icon.png)
+
+5. Check your Studio Pro Console to read the **Your notification has been cleared** text you set up.
+
+Congratulations! You successfully implemented basic badge clearing.
+
+## 5 Read More
 
 * [Implement Push Notifications](implementation-guide)
 * [Build JavaScript Actions](/howto/extensibility/build-javascript-actions)

@@ -1,8 +1,8 @@
 ---
 title: "Data Grid"
-parent: "data-widgets"
-menu_order: 20
-tags: ["studio pro"]
+parent: "grids"
+menu_order: 10
+tags: ["studio pro", "data grid", "grid", "data widget"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -19,10 +19,11 @@ Using controls provided by the data grid you can browse, search, and edit those 
 
 A data grid contains the following components: 
 
-* [Columns](columns) – allows you to set properties for a data grid column
-* [Control bar](control-bar) – allows you to control the objects displayed in the data grid by means of buttons
-* [Search bar](search-bar) – allows end-users to search for objects in the data grid
-* [Sort bar](sort-bar) – allows you to sort items in the data grid 
+1. [Search bar](search-bar) – allows end-users to search for objects in the data grid
+2. [Search bar](search-bar) – allows end-users to search for objects in the data grid
+3. [Sort bar](sort-bar) – allows you to sort items in the data grid 
+4.  [Columns](columns) – allows you to set properties for a data grid column
+	![](attachments/data-widgets/data-grid-components.png)
 
 ## 3 Properties
 

@@ -174,11 +174,11 @@ $block: 'mx';
         table-layout: auto;          
         font-size: 12px;
 
-      /* This should not let a table cell to be too tiny*/
+      /* This should not let a table cell to be too tiny. But the width should not be any wider than 8rem, otherwise it becomes too wide on mobile.*/
         td:before {
           content: '';
           display: block; 
-          width: 10em;
+          width: 8rem;
         }
 
         th.has-expand {

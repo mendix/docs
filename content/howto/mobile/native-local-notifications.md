@@ -12,10 +12,8 @@ This how-to will teach you to build local notifications for native applications.
 
 **This how-to will teach you how to do the following:**
 
-* Introduce the native notification module to a Mendix project
-* Configure the native notification module
-* Build an app which uses the native notifications widget
-* Set up JavaScript actions for native notifications
+* Build a button connected to a nanoflow which calls a local notification
+* Make your notification nanoflow request device permission for local notifications
 
 ## 2 Prerequisites
 

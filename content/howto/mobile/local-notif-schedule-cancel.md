@@ -47,7 +47,7 @@ If your app is open, it will not show the notification due to iOS and Android us
 4. In **Template** write *I triggered on recieve notification* then click **OK**.
 5. Double-click your home page's notifications widget.
 6. Click **Actions** > **New**.
-7. Create a **New Action** named *TriggerOnRecieve*, set **On receive** to **Call a nanoflow**, and select **ON_RecieveNotification**:
+7.  Create a **New Action** named *TriggerOnRecieve*, set **On receive** to **Call a nanoflow**, and select **ON_RecieveNotification**:
 
 	{{% image_container width="500" %}}![on recieve settings](attachments/native-push/on-receive-action.png){{% /image_container %}}
 
@@ -80,7 +80,7 @@ To cancel all scheduled notifications, do the following:
 5. Click **OK**.
 6.  Drag and drop this nanoflow to your home screen and name its button *Cancel all*.
 
-	{{% image_container width="500" %}}![cancel button](attachments/native-push/cancel-button.png){{% /image_container %}}
+	{{% image_container width="300" %}}![cancel button](attachments/native-push/cancel-button.png){{% /image_container %}}
 
 To test your new cancel button, do the following:
 
@@ -114,7 +114,7 @@ To cancel a specific scheduled notification, you will need to supply a notificat
 11. Click **OK** again to close the dialog window.
 12. Drag and drop this nanoflow onto your home screen and name its button *Cancel a specific notification*:
 
-	{{% image_container width="500" %}}![cancel one button](attachments/native-push/cancel-specific-button.png){{% /image_container %}}
+	{{% image_container width="300" %}}![cancel one button](attachments/native-push/cancel-specific-button.png){{% /image_container %}}
 
 To test your new cancel button, do the following:
 

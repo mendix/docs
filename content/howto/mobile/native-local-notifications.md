@@ -46,11 +46,11 @@ Follow the instructions below to set up your first local notification:
 
 7.  Drag and drop a **Call nanoflow button** onto your app's home page, then click **New** to make a new nanoflow (note: you may wish to rename this button *Send Notification*): 
 
-	{{% image_container width="500" %}}![app settings](attachments/native-push/call-button.png){{% /image_container %}}
+	{{% image_container width="400" %}}![app settings](attachments/native-push/call-button.png){{% /image_container %}}
 
 8.  Name the nanoflow *ACT_CreateAndSendNotification* and click **OK**:
 
-	{{% image_container width="500" %}}![app settings](attachments/native-push/name-nano.png){{% /image_container %}}
+	{{% image_container width="400" %}}![app settings](attachments/native-push/name-nano.png){{% /image_container %}}
 
 9.  In **ACT_CreateAndSendNotification**, drag and drop three **Create variable** activities onto your nanoflow and set them as string variables titled *Title*, *Subtitle*, and *Body*:
 
@@ -63,7 +63,7 @@ Follow the instructions below to set up your first local notification:
 	d. Type *Title* into **Output** > **Variable**.<br />
 	e. Click **OK**:
 
-	{{% image_container width="500" %}}![app settings](attachments/native-push/title-activity.png){{% /image_container %}}
+	{{% image_container width="400" %}}![app settings](attachments/native-push/title-activity.png){{% /image_container %}}
 
 11. Double-click your **Subtitle** activity and configure similarly to your **Title** activity.
 
@@ -101,23 +101,23 @@ Now you will set up the final logic necessary for your app to display a notifica
 
 8.  Drag and drop a decision next to your **Request notification permission** activity.
 
-	{{% image_container width="500" %}}![app settings](attachments/native-push/decision-1.png){{% /image_container %}}
+	{{% image_container width="400" %}}![app settings](attachments/native-push/decision-1.png){{% /image_container %}}
 
 9.  Connect your activities and decisions, and set those connections' values like so:
 
-	{{% image_container width="500" %}}![app settings](attachments/native-push/connections-1.png){{% /image_container %}}
+	{{% image_container width="400" %}}![app settings](attachments/native-push/connections-1.png){{% /image_container %}}
 
 10. Double-click the decision, then set the **Caption** as *Permission?*.
 11. Click **Expression wizard**
 12. Select **Value** > **Variable** > **Permission (Boolean)** from the drop-down menu. When finished, your **Decision** should look like this:
 
-	{{% image_container width="500" %}}![app settings](attachments/native-push/decision-1-config.png){{% /image_container %}}
+	{{% image_container width="400" %}}![app settings](attachments/native-push/decision-1-config.png){{% /image_container %}}
 
 13. Navigate back to your nanoflow.
 
 14. Drag and drop a **Show message** activity on your nanoflow and connect it like this: 
 
-	{{% image_container width="500" %}}![app settings](attachments/native-push/show-message.png){{% /image_container %}}
+	{{% image_container width="400" %}}![app settings](attachments/native-push/show-message.png){{% /image_container %}}
 
 15.  Double-click your **Show message** activity, then do the following:<br />
 	a. Select **Type** > **Error** from the drop-down menu.<br />
@@ -126,17 +126,17 @@ Now you will set up the final logic necessary for your app to display a notifica
 
 16. Drag and drop an **End event** under your **Show message** and connect them like this:
 
-	{{% image_container width="500" %}}![app settings](attachments/native-push/error-end-event.png){{% /image_container %}}
+	{{% image_container width="400" %}}![app settings](attachments/native-push/error-end-event.png){{% /image_container %}}
 
 Now you will set up the final piece of your nanoflow's logic. 
 
 1.  Delete the end event in the top-right corner of your nanoflow, drag and drop a **Merge** in its place, and rebuild your connections:
 
-	{{% image_container width="500" %}}![app settings](attachments/native-push/merge.png){{% /image_container %}}
+	{{% image_container width="400" %}}![app settings](attachments/native-push/merge.png){{% /image_container %}}
 
 2.  Drag and drop a **Display Notification** activity and connect it to your merge like this:
 
-	{{% image_container width="500" %}}![app settings](attachments/native-push/display-notif-merge.png){{% /image_container %}}
+	{{% image_container width="400" %}}![app settings](attachments/native-push/display-notif-merge.png){{% /image_container %}}
 
 4.  Set its **Body**, **Title**, and **Subtitle** to the variables that you created in the same nanoflow:
 
@@ -167,12 +167,12 @@ Now you can run your app and see if your notification works.
 
 1.  Start and load your app in your mobile device, then tap **Send Notification**:
 
-	{{% image_container width="500" %}}![app settings](attachments/native-push/app-1.png){{% /image_container %}}
+	{{% image_container width="400" %}}![app settings](attachments/native-push/app-1.png){{% /image_container %}}
 
 2. When prompted to **Allow notifications**, tap **OK**.
 3.  After you allow notifications, you will receive a notification:
 
-	{{% image_container width="500" %}}![app settings](attachments/native-push/basic-notif.png){{% /image_container %}}
+	{{% image_container width="400" %}}![app settings](attachments/native-push/basic-notif.png){{% /image_container %}}
 
 	If you did not see a notification, try clicking **Run Locally** to reload your app. Then, tap the **Send Notification** button again.
 

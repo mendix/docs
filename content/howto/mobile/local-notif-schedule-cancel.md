@@ -8,7 +8,7 @@ tags: ["mobile", "push notification", "local", "push", "notification"]
 
 ## 1 Introduction
 
-Local notifications should rarely notify a user right after they do an action. Here you will learn to configure local notifications to trigger after a period of time. To do this, you will use a JavaScript action named **ScheduleNotification**. After that, you will learn how to cancel scheduled notifications.
+Local notifications should rarely notify a user right after they perform an action. Here you will learn to configure local notifications to trigger after a period of time. To do this, you will use a JavaScript action named **ScheduleNotification**. After that, you will learn how to cancel scheduled notifications.
 
 ## 2 Prerequisites
 
@@ -123,7 +123,7 @@ To test your new cancel button, do the following:
 3. Tap your **Cancel a specific notification** button.
 4. Minimize your app.
 
-You will not see a notification at the end of the minute, proving your cancel action a success!
+You will not see a notification at the end of the minute, proving your cancel action a success! Congratulations on completing this series and mastering the power of local notifications.
 
 ## 5 Read More
 

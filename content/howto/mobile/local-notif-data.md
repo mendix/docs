@@ -33,7 +33,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 To make your two entities, do the following:
 
-1.  Navigate to your domain model.
+1. Navigate to your domain model.
 2.  Drag and drop a new entity onto your domain model: 
 
 	{{% image_container width="500" %}}![new entity](attachments/native-push/new-entity.png){{% /image_container %}}
@@ -47,7 +47,7 @@ To make your two entities, do the following:
 	{{% image_container width="500" %}}![string attribute](attachments/native-push/first-string-attribute.png){{% /image_container %}}
 
 4. Click **OK** again until you are back at the domain model.
-5.  Create an entity *Notification* on your domain model with a string attribute *GUIDString*:
+5.  Create an entity named *Notification* on your domain model with a string attribute *GUIDString*:
 
 	{{% image_container width="500" %}}![GUID string](attachments/native-push/guid-notification.png){{% /image_container %}}
 
@@ -76,7 +76,7 @@ To set up your microflow, do the following:
 9. Double-click your commit object activity.
 10. From the **Object or List** drop-down menu, select **NewTestEntity (NativeMobile.TestEntity)**.
 11. Click **OK**.
-12. Double-click your end event, make sure its **Type** is **Boolean**, then type *true* into the value field and click **OK**:
+12. Double-click your end event, make sure its **Type** is **Boolean**, type *true* into the value field, and click **OK**:
 
 	{{% image_container width="500" %}}![end event true](attachments/native-push/end-event-true.png){{% /image_container %}}
 
@@ -115,7 +115,7 @@ To make your page, do the following:
 8.  When asked **"Do you want to automatically fill the contents of the data view?"** click **Yes**.
 9.  This will be the page your user sees when they tap the notification:
 
-	{{% image_container width="500" %}}![page with data view](attachments/native-push/page-with-data-view.png){{% /image_container %}}
+	{{% image_container width="400" %}}![page with data view](attachments/native-push/page-with-data-view.png){{% /image_container %}}
 
 Next you will learn how to pass data to pages after you have tapped a notification. First, make a nanoflow:
 
@@ -244,14 +244,14 @@ Now you will set up a data view on your home page.
 10. Create a **New Action** named *OpenPageWithParams*, set **On open** to **Call a nanoflow**, and select **ON_tapNotification**.
 
 	{{% image_container width="500" %}}![notification action](attachments/native-push/notif-action-2.png){{% /image_container %}}
-	
+
 Great job! Now you will test your data notification functionality.
 
 1. Start and load the app on your mobile device.
 2. Tap the button which sends a notification.
 3. Tap the notification to navigate to the **DetailTestEntity** page with the proper object.
 
-Congratulations! You have harnessed the power of data to enhance your push notifications.
+Congratulations! You have harnessed the power of data to enhance your push notifications. Next, in [Use Local Notifications: Part 5 (Scheduling)](local-notif-schedule-cancel), you will learn how to schedule notifications for specific times and cancel them.
 
 ## 4 Read More
 

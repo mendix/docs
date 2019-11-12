@@ -10,62 +10,131 @@ tags: ["studio pro"]
 
 ## 1 Introduction
 
-A **Report grid** shows data retrieved from the database in a [Dataset](datasets) in a grid format. Each time a report is created, the data is retrieved from the database.
+A **Report grid** shows data retrieved from the database in a [Data set](data-sets) in a grid format. Each row in the grid displays a single result from the data set. Each time a report is created, the data is retrieved from the database.
 
-The difference between a data grid and a report grid is that you can use a data grid to edit the data shown. A report grid will only display data. However, in a report grid, you can create additional information by merging and processing attributes when you define the dataset which retrieves the data.
+The difference between a data grid and a report grid is that you can use a data grid to edit the data shown. A report grid will only display data. However, in a report grid, you can create additional information by merging and processing attributes when you define the data set which retrieves the data.
 
-The report grid is shown with the data set source shown between square brackets and colored blue. The data fields returned by the dataset are shown in the report grid columns, under the column captions.
+The report grid is displayed in structure mode with the data set source shown between square brackets and colored blue. The data fields returned by the data set are shown in the report grid columns, under the column captions.
 
 ![Report grid in structure mode](attachments/report-widgets/report-grid.png)
 
 ## 2 Report Grid Properties
 
-![Report grid in structure mode](attachments/report-widgets/report-grid-properties.png)
+An example of report grid properties is represented in the image below:
 
-## Data Source Properties
+{{% image_container width="250" %}}![Report grid in structure mode](attachments/report-widgets/report-grid-properties.png)
+{{% /image_container %}}
 
-### Data Set
+Report grid properties consist of the following sections:
 
-This is the dataset that determines the data that will be shown in the report grid.
+* [Common](#common)
+* [Data source](#data-source)
+* [Design Properties](#design-properties)
+* [General](#general)
 
-## General Properties
+Each column in a report grid also has properties: see [Report Grid Column Properties](#column-properties), below.
 
-### Use Paging
+### 2.1 Common Section{#common}
 
-If the expected quantity of the data is too large to be displayed at once, **Use Paging** should be true so that the data is distributed over different pages.
+{{% snippet file="refguide/common-section-link.md" %}}
 
-### Page Size
+### 2.2 Data Source Section{#data-source}
 
-If **Use Paging** is true, this property indicates the number of occurrences that is displayed on one page.
+#### 2.2.1 Data Set
 
-### Zoom
+**Data set** specifies the [Data set](data-sets) which defines the data that will be shown in the report grid. Any of the selected attributes or aggregations (for example totals or averages) from the data set can be dragged into a data grid column from the **Connector** pane: see [Report Grid Column Data Source](#column-data-source), below.
 
-This property can refer to a page. When the user double-clicks an occurrence in the report, that page is displayed.
+### 2.3 Design Properties Section{#design-properties}
 
-If the other page contains a report, the columns of the current report can be mapped to the parameters of the report in the other page.
+{{% snippet file="refguide/design-section-link.md" %}} 
 
-### Column Widths
+### 2.4 General Section{#general}
 
-The widths of the columns are expressed as a percentage of the total width of the basic report. You can edit this property by dragging the border between the columns.
+#### 2.4.1 Use Paging
 
-### Show Export Button
+Set **Use paging** to **Yes** if you expect more data than you can display on one page. This splits the results into several pages.
 
-If this property is true, the **Export to Excel** button will be available for the user on the report grid.
+#### 2.4.2 Page Size
 
-### Generate Report on Page Load
+**Page size** specifies the number of results which are displayed on one page if **Use paging** is yes.
 
-If this property is false, the report grid will not show its data until the user presses the [Report Button](report-button). This is especially useful if the report uses parameters that should be specified by the user. 
+#### 2.4.3 Zoom {#zoom}
 
-## Common Properties
+**Zoom** specifies a page which will be displayed when the end-user double-clicks a result in the report, that page is displayed.
 
-### Name, Class, Style
+If the selected page contains a report, the columns of the current report can be mapped to the parameters of the data set which is the basis of the report in the other page.
 
-For details, see [Properties Common for Widgets](common-widget-properties).
+![Zoom configuration showing columns being passed as parameters](attachments/report-widgets/report-zoom.png)
 
-## 3 Report Grid Column Properties
+#### 2.4.4 Column Widths
 
-![Report grid in structure mode](attachments/report-widgets/report-grid-column-properties.png)
+The widths of the columns are expressed as a percentage of the total width of the basic report. You can edit this property in two ways:
 
-## 4 Report Grid Column Data Source
+* by dragging the border between the columns:
 
-Drag from the Connector Pane...
+    ![Drag column widths](attachments/report-widgets/drag-column-width.png)
+
+* by entering the percentages explicitly
+
+    ![Enter column widths](attachments/report-widgets/enter-column-widths.png)
+
+Each column in a report grid also has properties: see [Report Grid Column Properties](#column-properties), below.
+
+The data source for each column can be dragged into the column from the **Connector** pane: see [Report Grid Column Data Source](#column-data-source), below.
+
+#### 2.4.5 Show Export Button
+
+Set **Show export button** to **Yes** to display the **Export to Excel** button to the end-user on the report grid.
+
+![Add the Export to Excel button](attachments/report-widgets/export-to-excel.png)
+
+When the end-user clicks this button, the report is exported as a `Microsoft Excel 97-2003 Worksheet` which the end-user can download or view, depending on their browser's settings.
+
+#### 2.4.6 Generate on Page Load
+
+If **Generate on page load** is set to **No**, the report grid will not show any data until the end-user presses the [Generate report button](report-button). This is especially useful if the report uses parameters that should first be specified by the end-user. 
+
+## 3 Report Grid Column Properties{#column-properties}
+
+An example of report grid properties is represented in the image below:
+
+{{% image_container width="250" %}}![Report grid column properties](attachments/report-widgets/report-grid-column-properties.png)
+{{% /image_container %}}
+
+Report grid properties consist of a single section, [General](#column-general).
+
+### 3.1 General Section{#column-general}
+
+#### 3.1.1 Caption
+
+**Caption** contains the text which appears at the top of each column of the report grid.
+
+#### 3.1.2 Alignment
+
+**Alignment** sets the alignment of the caption and data displayed in this column. The values are:
+
+* Left
+* Center
+* Right
+
+#### 3.1.3 Format
+
+**Format** allows you to convert a numeric value in the column to a month or day name. If the value in the column is not a number, **Default** format will be used.
+
+The possible values are:
+
+* Default – the data will be displayed in the default string format
+* Month name – a numeric value will be interpreted as a month name (for example **8** is displayed as **August**)
+* Weekday name – a numeric value will be interpreted as a day of the week (for example **4** is displayed as **Wednesday**)
+
+#### 3.1.4 Visible
+
+If **Visible** is set to **No** then this column will not be displayed in the report.
+
+This can be used to add a value to the report which can be passed to a report on a page specified with [Zoom](#zoom) without displaying it as part of the report.
+
+## 4 Report Grid Column Data Source{#column-data-source}
+
+To add data to a column, select the column, open the **Connector** pane, and drag one of the results into the column. You will need to select the report grid, or part of it, to see the results of the data set in the connector pane.
+
+![Drag value from Connector pane into a column](attachments/report-widgets/drag-column-value.png)

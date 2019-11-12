@@ -44,7 +44,7 @@ To make your two entities, do the following:
 
 3.  Click **Attributes** > **New**, name it *StringAttribute_1*, and click **OK**:
 
-	{{% image_container width="500" %}}![string attribute](attachments/native-push/first-string-attribute.png){{% /image_container %}}
+	{{% image_container width="400" %}}![string attribute](attachments/native-push/first-string-attribute.png){{% /image_container %}}
 
 4. Click **OK** again until you are back at the domain model.
 5.  Create an entity named *Notification* on your domain model with a string attribute *GUIDString*:
@@ -84,11 +84,11 @@ To make this microflow run after startup, do the following:
 
 1.  Double-click **Settings** in your Project Explorer:
 
-	{{% image_container width="500" %}}![project explorer](attachments/native-push/pe-settings.png){{% /image_container %}}
+	{{% image_container width="400" %}}![project explorer](attachments/native-push/pe-settings.png){{% /image_container %}}
 
 2.  Click the **Runtime** tab:
 
-	{{% image_container width="500" %}}![click runtime](attachments/native-push/runtime-tab.png){{% /image_container %}}
+	{{% image_container width="400" %}}![click runtime](attachments/native-push/runtime-tab.png){{% /image_container %}}
 
 3.  Click **After startup** > **Select**:
 
@@ -115,7 +115,7 @@ To make your page, do the following:
 8.  When asked **"Do you want to automatically fill the contents of the data view?"** click **Yes**.
 9.  This will be the page your user sees when they tap the notification:
 
-	{{% image_container width="400" %}}![page with data view](attachments/native-push/page-with-data-view.png){{% /image_container %}}
+	{{% image_container width="300" %}}![page with data view](attachments/native-push/page-with-data-view.png){{% /image_container %}}
 
 Next you will learn how to pass data to pages after you have tapped a notification. First, make a nanoflow:
 
@@ -200,11 +200,11 @@ Good job! When a user taps a notification from the **Pass GUID to Notification**
 17. Select **Object** > **ReturnedObjectByGUID (NativeMobile.TestEntity)** from the drop-down menu.
 18. Click **Action** > **New**, make sure **Member** is set to the string attribute, and into **Value** type *'Your notification has forwarded you here!'*:
 
-	{{% image_container width="500" %}}![change object action](attachments/native-push/change-object-action.png){{% /image_container %}}
+	{{% image_container width="400" %}}![change object action](attachments/native-push/change-object-action.png){{% /image_container %}}
 
 19. Click **OK**. Check that your dialog box looks like this, then click **OK** again to close it: 
 
-	{{% image_container width="500" %}}![change object final](attachments/native-push/change-object-final.png){{% /image_container %}}
+	{{% image_container width="400" %}}![change object final](attachments/native-push/change-object-final.png){{% /image_container %}}
 
 Next you are going to create a show page action for **ON_tapNotification**.
 
@@ -218,7 +218,7 @@ Next you are going to create a show page action for **ON_tapNotification**.
 
 4.  Click **Page** > **Select**, click **DetailTestEntity**, then click **OK**:
 
-	{{% image_container width="500" %}}![guid button](attachments/native-push/show-page-settings.png){{% /image_container %}}
+	{{% image_container width="400" %}}![guid button](attachments/native-push/show-page-settings.png){{% /image_container %}}
 
 5. Click **OK** to close the **Show Page** activity settings, then navigate to your **Home_Native** page.
 

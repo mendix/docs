@@ -39,7 +39,7 @@ Sign-in button properties consist of the following sections:
 
 {{% snippet file="refguide/design-section-link.md" %}}
 
-###2.3 General Section {#general}
+### 2.3 General Section {#general}
 
 Most properties of a sign-in button are the same as properties of button widgets. For more information on button properties in the **General** section, see the [General Section](button-properties#general) in *Button Properties*.
 

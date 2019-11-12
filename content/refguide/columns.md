@@ -1,14 +1,16 @@
 ---
 title: "Columns"
 parent: "data-grid"
-tags: ["studio pro"]
+tags: ["studio pro", "data grid", "column"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
-## Common Properties
+## 1 Introduction
 
-{{% snippet file="refguide/class-property.md" %}}
+Columns allow you to set properties for a data gird column. 
 
-{{% snippet file="refguide/style-property.md" %}}
+## Properties
+
+
 
 ## Data Source Properties
 

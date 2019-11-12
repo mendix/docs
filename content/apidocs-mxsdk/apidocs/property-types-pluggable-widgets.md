@@ -227,10 +227,10 @@ Then the Studio Pro UI for the component appears like this:
 
 ### 3.2 Image {#image}
 
-Image allows a user to configure a static image from an [image collection](https://docs.mendix.com/refguide/image-collection). It is passed as `DynamicValue<ImageValue>` prop to a client component.
+Image allows a user to configure a static image from an [image collection](https://docs.mendix.com/refguide/image-collection) as well as an image from an object which is a specialization of System.Image. It is passed as `DynamicValue<ImageValue>` prop to a client component.
 
 {{% alert type="info" %}}
-This property type was introduced in Mendix 8.1.
+This property type was introduced in Mendix 8.1. Support for dynamic images was introduced in Mendix 8.4.
 {{% /alert %}}
 
 #### 3.2.1 XML Attributes

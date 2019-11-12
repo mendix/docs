@@ -176,7 +176,7 @@ Now you can run your app and see if your notification works.
 
 	If you did not see a notification, try clicking **Run Locally** to reload your app. Then, tap the **Send Notification** button again.
 
-Congratulations! You can now see local notifications on your device. Next, in [Use Local Notifications: Part 2 (Badges)](local-notif-badges), you will learn how to configure a JavaScript action when a user taps on a notification.
+Congratulations! You can now see local notifications on your device. Next, in [Use Local Notifications: Part 2 (Badges)](local-notif-badges), you will learn how to configure notification badges.
 
 ## 4 Read More
 

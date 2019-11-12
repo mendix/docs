@@ -103,7 +103,7 @@ You can now test your badge clearing.
 
 5. Check your Studio Pro **Console** to read the **Your notification has been cleared** text you set up.
 
-Congratulations! You successfully implemented basic badge clearing.
+Congratulations! You successfully implemented basic badge clearing. Next, in [Use Local Notifications: Part 3 (Actions)](local-notif-action), you will learn how to configure a notification so that when a user taps a notification, they are brought to a page.
 
 ## 5 Read More
 

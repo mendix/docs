@@ -27,9 +27,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 Follow the instructions below to set up your first local notification:
 
 1. Open Mendix Studio Pro.
-
 2. Select **File** > **New Project**.
-
 3.  Select the **Native Mobile Quickstart** app (also available online [here](https://appstore.home.mendix.com/link/app/109511/)):
 
 	![native mobile quickstart app](attachments/native-push/quickstart.png)
@@ -77,7 +75,7 @@ Now you will set up the final logic necessary for your app to display a notifica
 
 	{{% image_container width="500" %}}![app settings](attachments/native-push/has-notif.png){{% /image_container %}}
 
-2.  Double-click your **Has notification permission** activity, enter *NotificationPermission* into **Variable**, then click **OK**:
+2.  Double-click your **Has notification permission** activity, type *NotificationPermission* into **Variable**, then click **OK**:
 
 	{{% image_container width="500" %}}![app settings](attachments/native-push/set-haspermission-variable.png){{% /image_container %}}
 
@@ -178,7 +176,7 @@ Now you can run your app and see if your notification works.
 
 	If you did not see a notification, try clicking **Run Locally** to reload your app. Then, tap the **Send Notification** button again.
 
-Congratulations! You can now see local notifications on your device. Next, you will learn how to configure an action when a user taps on a notification.
+Congratulations! You can now see local notifications on your device. Next, in [Use Local Notifications: Part 2 (Badges)](local-notif-badges), you will learn how to configure a JavaScript action when a user taps on a notification.
 
 ## 4 Read More
 

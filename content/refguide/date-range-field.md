@@ -7,7 +7,7 @@ tags: ["studio pro"]
 
 ## 1 Introduction
 
-A **Date range field** can be placed inside a [Report date parameter](report-date-parameter) to make it easier for an end-user to select a data range, rather than having to specify a from and to date. The from and to dates of the selected period are then stored in the from and to field of the date range selector.
+A **Date range field** can be placed inside a [Report date parameter](report-date-parameter) to make it easier for an end-user to select a date range, rather than having to specify a from and to date. The report date parameter is then updated with the from and to dates of the selected period.
 
 To add a date range field, right-click the widget and choose **Add field** from the pop-up menu.
 
@@ -20,7 +20,7 @@ An example of date range field properties is represented in the image below:
 {{% image_container width="250" %}}![Date range field in structure mode](attachments/report-widgets/date-range-field-properties.png)
 {{% /image_container %}}
 
-Report parameter properties have only a [General](#general) section.
+Date range field properties have only a [General](#general) section.
 
 ### 2.1 General Section{#general}
 
@@ -38,14 +38,9 @@ The **Label** property specifies the text that is displayed beside the date rang
 | Quarter<sup><small>[2]</small></sup> | Allows the end-user to select a quarter of the year. | 2019 > 2 | 1 April 2019 to 30 June 2019 |
 | Month<sup><small>[2]</small></sup> | Allows the end-user to select a month of the year. | 2019 > May | 1 May 2019 to 31 May 2019 |
 | Week<sup><small>[2]</small></sup> | Allows the end-user to select a week of the year. | 2019 > Week 19 | 5 May 2019 to 12 May 2019 |
-| Period<sup><small>[2]</small></sup> | Allows the end-user to select one of the following periods: last week, this week, next week, last month, this month, next month, last quarter, this quarter, next quarter. | | |
+| Period<sup><small>[2]</small></sup> | Allows the end-user to select one of the following periods: last&nbsp;week, this&nbsp;week, next&nbsp;week, last&nbsp;month, this&nbsp;month, next&nbsp;month, last&nbsp;quarter, this&nbsp;quarter, next&nbsp;quarter. | | |
 
-<ul style="list-style-type:none">
-<li><sup><small>[1]</small></sup> The year will be between the **Min. year** and **Max. year** specified in the [report date parameter](report-date-parameter) widget.</li>
-<li><sup><small>[2]</small></sup> You also need to add a **Year** date range field if you use a date range field of this type.
-<ul style="list-style-type:none">
-    <li>The end-user will need to choose the year before they can choose a date range field of this type.</li>
-    <li>The end-user can only choose one of these types, plus the year.</li>
-</ul>
-</li>
-</ul>
+| **Notes** |
+| --- |
+| <sup><small>[1]</small></sup> The year will be between the **Min. year** and **Max. year** (inclusive) specified in the [report date parameter](report-date-parameter) widget. |
+| <sup><small>[2]</small></sup> You also need to add a **Year** date range field if you use a date range field of this type.<br />– The end-user will need to choose the year before they can choose a date range field of this type.<br />– The end-user can only choose one of these types, plus the year. |

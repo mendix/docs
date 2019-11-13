@@ -10,11 +10,11 @@ tags: ["studio pro"]
 
 ## 1 Introduction
 
-A **Report grid** shows data retrieved from the database in a [Data set](data-sets) in a grid format. Each row in the grid displays a single result from the data set. Each time a report is created, the data is retrieved from the database.
+A **Report grid** shows data retrieved from the database using a [Data set](data-sets) in a grid format. Each row in the grid displays a single result from the data set. Each time a report is created, the data is retrieved from the database.
 
 The difference between a data grid and a report grid is that you can use a data grid to edit the data shown. A report grid will only display data. However, in a report grid, you can create additional information by merging and processing attributes when you define the data set which retrieves the data.
 
-The report grid is displayed in structure mode with the data set source shown between square brackets and colored blue. The data fields returned by the data set are shown in the report grid columns, under the column captions.
+The report grid is displayed in structure mode with the data set source shown between square brackets and colored blue. The data fields returned by the data set are shown in the report grid columns, under the column captions. See [Report Grid Column Data Source](#column-data-source) for information on how to assign a data field to a column.
 
 ![Report grid in structure mode](attachments/report-widgets/report-grid.png)
 
@@ -60,7 +60,7 @@ Set **Use paging** to **Yes** if you expect more data than you can display on on
 
 #### 2.4.3 Zoom {#zoom}
 
-**Zoom** specifies a page which will be displayed when the end-user double-clicks a result in the report, that page is displayed.
+**Zoom** specifies a page which will be displayed when the end-user double-clicks a result in the report.
 
 If the selected page contains a report, the columns of the current report can be mapped to the parameters of the data set which is the basis of the report in the other page.
 

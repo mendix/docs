@@ -51,4 +51,4 @@ Report parameter properties consist of the following sections:
 
 #### 2.3.2 Displayed Attribute
 
-**Displayed attribute** is only available if the data set parameter is an object. Displayed attribute specifies which attribute of the corresponding entity is shown in the drop-down menu.
+**Displayed attribute** is only available if the data set parameter is an object. Displayed attribute specifies which attribute of the corresponding entity is shown in the drop-down selection.

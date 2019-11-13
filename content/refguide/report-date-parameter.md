@@ -53,7 +53,7 @@ Report date parameter properties consist of the following sections:
 
 #### 2.3.2 Fields Per Row
 
-**Fields per row** specifies how many [date range fields](date=range-field) can be placed beside each other in a row. There are always two rows available for data range fields. See [Additional Report Date Parameter Fields](#additional-fields), below, for more information.
+**Fields per row** specifies how many [date range fields](date-range-field) can be placed beside each other in a row. There are always two rows available for data range fields. See [Additional Report Date Parameter Fields](#additional-fields), below, for more information.
 
 #### 2.3.3 From Caption
 
@@ -63,23 +63,23 @@ Report date parameter properties consist of the following sections:
 
 **To** specifies the text that is displayed against the **to** date selector, where the end-user can choose the end of the period for which data should be shown in the report.
 
-#### 2.3.4 Show From/To
+#### 2.3.5 Show From/To
 
 Set **Show from/to** to **Yes** if the **from** and **to** field results should be shown on the report page.
 
-Set this to **No** if the **from** and **to** field results should not be shown. In this case, the filter must be set using [date range fields](date=range-field) added to the report date parameter.
+Set this to **No** if the **from** and **to** field results should not be shown. In this case, the filter must be set using [date range fields](date-range-field) added to the report date parameter.
 
-#### 2.3.5 Min. Year
+#### 2.3.6 Min. Year
 
-**Min. year** is the earliest year that the end-user can choose in the **Year** [date range field](date=range-field).
+**Min. year** is the earliest year that the end-user can choose in the **Year** [date range field](date-range-field).
 
 {{% alert type="warning" %}}
 The value in **Min. year** will not prevent an end-user from choosing an earlier date in the **From** or **To** fields of the report date parameter widget. It only applies to the *year* date range field.
 {{% /alert %}}
 
-#### 2.3.6 Max. year
+#### 2.3.7 Max. year
 
-**Max. year** is the latest year that the end-user can choose in the **Year** [date range field](date=range-field).
+**Max. year** is the latest year that the end-user can choose in the **Year** [date range field](date-range-field).
 
 {{% alert type="warning" %}}
 The value in **Max. year** will not prevent an end-user from choosing a later date in the **From** or **To** fields of the report date parameter widget. It only applies to the *year* date range field.
@@ -87,4 +87,4 @@ The value in **Max. year** will not prevent an end-user from choosing a later da
 
 ## 3 Additional Report Date Parameter Fields{#additional-fields}
 
-You can add extra fields to allow the end-user to easily select date ranges without needing to enter both the **From** and **To** dates. For more information, see [Date Range Field](date=range-field).
+You can add extra fields to allow the end-user to easily select date ranges without needing to enter both the **From** and **To** dates. For more information, see [Date Range Field](date-range-field).

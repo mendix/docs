@@ -13,6 +13,10 @@ Indexes are ordered. This means that when creating an index on two or more attri
 
 {{% alert type="warning" %}}
 
+For the entity's system members 'owner' and 'changedBy' if they are selected, an index will get created. This is not so for system members 'createdDate' and 'changedDate'. Also an index will get created for the automatically generated attribute 'id'
+
+{{% /alert %}}{{% alert type="warning" %}}
+
 Only persistable entities can define indexes as they are database concepts. Indexes are disabled for non-persistable entities.
 
 {{% /alert %}}{{% alert type="warning" %}}

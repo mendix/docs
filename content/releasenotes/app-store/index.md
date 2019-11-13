@@ -11,52 +11,11 @@ These release notes cover changes made to the [Mendix App Store](https://appstor
 
 ### November 14th, 2019
 
-We have deprecated the following content from **Platform support** to **Community support**:
+#### Content Support Update
 
-* [Administration](https://appstore.home.mendix.com/link/app/23513/)
-* [Administration for App Cloud Services](https://appstore.home.mendix.com/link/app/14510/)
-* [App Cloud Default Project](https://appstore.home.mendix.com/link/app/933/)
-* [App Cloud Navigation](https://appstore.home.mendix.com/link/app/2715/)
-* [Blue Wave Theme](https://appstore.home.mendix.com/link/app/2196/)
-* [Bootstrap WYSIWYG Editor](https://appstore.home.mendix.com/link/app/902/)
-* Build a Logistics IoT App - DOES NOT OPEN
-* [Build a Mobile To-Do App](https://appstore.home.mendix.com/link/app/70763/)
-* [Calendar](https://appstore.home.mendix.com/link/app/248/)
-* [ChartJS](https://appstore.home.mendix.com/link/app/1712/)
-* [CK Editor](https://appstore.home.mendix.com/link/app/1715/)
-* Company Expenses - DOES NOT OPEN
-* [Conflict Resolution](https://appstore.home.mendix.com/link/app/66614/)
-* EICAR Virus Upload Test - DOES NOT EXIST
-* [Employee Directory](https://appstore.home.mendix.com/link/app/257/)
-* [Geolocation](https://appstore.home.mendix.com/link/app/1380/)
-* [Google Maps](https://appstore.home.mendix.com/link/app/48911/)
-* [iCalendar](https://appstore.home.mendix.com/link/app/315/)
-* [Kerberos Single Sign-On](https://appstore.home.mendix.com/link/app/25/)
-* [Lab](https://appstore.home.mendix.com/link/app/2644/)
-* [Lab Theme](https://appstore.home.mendix.com/link/app/2643/)
-* [LDAP Provisioning Agent](https://appstore.home.mendix.com/link/app/1218/)
-* [Login Form](https://appstore.home.mendix.com/link/app/87/)
-* [Materialism Theme](https://appstore.home.mendix.com/link/app/2202/)
-* [Mendix](https://appstore.home.mendix.com/link/app/2182/)
-* [Mendix App Switcher](https://appstore.home.mendix.com/link/app/2448/)
-* [Mendix Profile Menu](https://appstore.home.mendix.com/link/app/2447/)
-* [Mendix Theme](https://appstore.home.mendix.com/link/app/2199/)
-* [Mendix 5 Layout](https://appstore.home.mendix.com/link/app/478/)
-* [Mont Blanc Theme](https://appstore.home.mendix.com/link/app/2206/)
-* [Navigation Layout](https://appstore.home.mendix.com/link/app/23446/)
-* [Navigation Layout for App Cloud Services](https://appstore.home.mendix.com/link/app/14511/)
-* Offline Search - DOES NOT EXIST, DEPRECATED
-* [Questionnaire](https://appstore.home.mendix.com/link/app/234/)
-* [REST Services](https://appstore.home.mendix.com/link/app/997/)
-* [Signature Widget](https://appstore.home.mendix.com/link/app/343/)
-* [Silver Linings](https://appstore.home.mendix.com/link/app/2179/)
-* [Silver Linings Theme](https://appstore.home.mendix.com/link/app/2200/)
-* [Start Your First App](https://appstore.home.mendix.com/link/app/70845/)
-* [Survey Builder](https://appstore.home.mendix.com/link/app/2191/)
-* Time Series - DOES NOT EXIST, DEPRECATED
-* [Zen Theme](https://appstore.home.mendix.com/link/app/2204/)
+We are invested in maintaining Mendix App Store content to make it easier for you to find and use the widgets and modules that you need. To that end, we have cleaned up old App Store content where Mendix support is no longer possible and changed the support level from **Platform support** to **Community support**.
 
-For details on these support levels, see [App Store Content Support](/developerportal/app-store/app-store-content-support).
+For more information on these support levels, see [App Store Content Support](/developerportal/app-store/app-store-content-support).
 
 ### November 6th, 2019
 

@@ -8,7 +8,7 @@ tags: ["studio pro", "control bar", "data grid", "template grid", "reference set
 
 ## 1 Introduction
 
-The control bar of the template grid, data grid, and reference set selector allows you to manipulate the objects displayed by means of buttons. By default, both grids will be created with **[Search](#search-button)** **[New](#create-button)**, [**Edit**](#grid-action-button), and [**Delete**](#grid-action-button) buttons in the control bar:
+A control bar of a [template grid](template-grid), [data grid](data-grid), and [reference set selector](reference-set-selector) allows you to manipulate the objects displayed by means of buttons. By default, both grids will be created with **[Search](#search-button)** **[New](#create-button)**, [**Edit**](#grid-action-button), and [**Delete**](#grid-action-button) buttons in the control bar:
 
 ![Data Grid Control Bar](attachments/data-widgets/control-bar-example.png)
 

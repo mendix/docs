@@ -6,7 +6,7 @@ tags: ["studio pro", "column", "grid column", "data grid"]
 ---
 ## 1 Introduction
 
-Grid columns allow you to set properties for a data grid column. 
+Grid columns allow you to set properties for a [data grid](data-grid) or [reference set selector](reference-set-selector) column. 
 
 ## 2 Properties
 

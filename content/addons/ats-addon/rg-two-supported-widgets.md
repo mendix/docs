@@ -46,18 +46,18 @@ Besides the default widgets, ATS supports the most commonly used widgets from th
 | Name | Supported in Execution | Supported in Recording |
 | ---- | :--------------------: | :--------------------: |
 
-| AutoComplete |  ![](attachments/supported-widgets/green.png) Yes | ![](attachments/supported-widgets/green.png) Yes|
+| AutoComplete |  ![](attachments/rg-two-supported-widgets/green.png) Yes | ![](attachments/supported-widgets/green.png) Yes|
 | BooleanSlider |  ![](attachments/rg-two-supported-widgets/green.png) Yes | ![](attachments/rg-two-supported-widgets/green.png) Yes|
 | BootStrapRTE | ![](attachments/rg-two-supported-widgets/green.png) Yes | ![](attachments/rg-two-supported-widgets/red.png) No |
 | CheckboxSetSelector | ![](attachments/rg-two-supported-widgets/green.png) Yes | ![](attachments/rg-two-supported-widgets/green.png) Yes |
 | CKEditor | ![](attachments/rg-two-supported-widgets/green.png) Yes | ![](attachments/rg-two-supported-widgets/red.png) No |
-| CustomString | ![](attachments/supported-widgets/green.png) Yes | ![](attachments/supported-widgets/green.png) Yes |
+| CustomString | ![](attachments/rg-two-supported-widgets/green.png) Yes | ![](attachments/supported-widgets/green.png) Yes |
 | DropdownDivConverter | ![](attachments/rg-two-supported-widgets/green.png) Yes | ![](attachments/rg-two-supported-widgets/green.png) Yes|
-| FormatString | ![](attachments/supported-widgets/green.png) Yes | ![](attachments/supported-widgets/green.png) Yes |
+| FormatString | ![](attachments/rg-two-supported-widgets/green.png) Yes | ![](attachments/supported-widgets/green.png) Yes |
 | GridSelector | ![](attachments/rg-two-supported-widgets/green.png) Yes | ![](attachments/rg-two-supported-widgets/green.png) Yes |
 | InputReferenceSelector | ![](attachments/rg-two-supported-widgets/green.png) Yes | ![](attachments/rg-two-supported-widgets/red.png) No |
 | OnChangeInputbox | ![](attachments/rg-two-supported-widgets/green.png) Yes | ![](attachments/rg-two-supported-widgets/green.png) Yes |
 | Radiobutton List | ![](attachments/rg-two-supported-widgets/green.png) Yes | ![](attachments/rg-two-supported-widgets/green.png) Yes |
 | SimpleCheckboxSetSelector | ![](attachments/rg-two-supported-widgets/green.png) Yes | ![](attachments/rg-two-supported-widgets/green.png) Yes |
 | SimpleMenuBar | ![](attachments/rg-two-supported-widgets/green.png) Yes | ![](attachments/rg-two-supported-widgets/green.png) Yes |
-| Switch | ![](attachments/supported-widgets/green.png) Yes | ![](attachments/supported-widgets/green.png) Yes |
+| Switch | ![](attachments/rg-two-supported-widgets/green.png) Yes | ![](attachments/supported-widgets/green.png) Yes |

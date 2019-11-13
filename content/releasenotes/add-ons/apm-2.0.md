@@ -25,7 +25,7 @@ The Mendix 6 version of the agent in release 2.0.3, which contains the Mendix 7 
 * In case of an error while transmitting data to the APM Manager, logging the full JSON messages now default disabled.
 * In case the Browser Agent is disabled per configuration on the APM Manager, the agent no longer log an error when a user opens the application.
 
-## 2.0
+## 2.0.0
 
 This major release of APM deals with cloud, end-user measurements, and simplicity.
 

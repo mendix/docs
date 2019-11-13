@@ -26,11 +26,14 @@ The implementation of this module is based on an [iCal4j](https://github.com/ica
 
 ## 2 Configuration
 
-1. Add the **SMTPSettings** snippet to the navigation
-2. Add 'Appointment_Overview' Snippet to a page
-3. As an administrator, set SMTP settings while being 'in runtime'
-4. Other 'Sub-microflows' in the Use Me folder can be used to control appointments
-5. Navigate to 'Appointment_Overview' to create/change appointments
-6. To implement this functionality in your own project you can use the sub microflows in Use Me folder
-7. When creating/updating appointments notifications will be sent when pressing the 'save' button.
-8. If the appointment is re-scheduled or recipients has been changed there will be automatically sent updates through mail on 'save'.
+1. Add the **SMTPSettings** snippet to your app's navigation.
+2. Add the **'Appointment_Overview** snippet to a page.
+3. As an administrator, set the **SMTP settings** while **in runtime**.
+4. Use other **Sub-microflows** in the **Use Me** folder to control appointments. 
+5. Navigate to **Appointment_Overview** to create and change appointments.
+
+To implement this functionality in your own app project, you can use the sub-microflows in **Use Me** folder.
+
+When creating and updating appointments, notifications will be sent when **Save** is clicked.
+
+If an appointment is rescheduled or recipients have been changed, updates will be automatically sent through mail when **Save** is clicked.

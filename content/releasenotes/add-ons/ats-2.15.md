@@ -5,12 +5,12 @@ parent: "ats-2"
 
 ## 2.15
 
-**Release date: September 26th 2019**
+**Release date: September 26th, 2019**
 
-### Desktop recorder
+### Desktop Recorder
 
-A new recorder has come to ATS. Please read the [following document](https://docs.mendix.com/addons/ats-addon/rg-two-desktoprecorder) to understand why this is released and how does it affect you .
+A new recorder has been released for  ATS. For details on this release and how it affects you, see [Which Recorder Should I Use?](/addons/ats-addon/rg-two-desktoprecorder).
 
 ### Improvements
 
-When deleting an action that is being used somewhere else, we now show a warning in the confirm-delete dialog.
+When deleting an action that is being used somewhere else, a warning is now shown in the **Confirm Delete** pop-up window.

@@ -7,7 +7,7 @@ tags: ["studio pro"]
 
 Functions to parse datetimes from strings, using a specified pattern, or produce a string from a datetime.
 
-See [http://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html](http://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html) for all pattern possibilities.
+See [https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/text/SimpleDateFormat.html](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/text/SimpleDateFormat.html) for all pattern possibilities.
 
 ## parseDateTime[UTC]
 

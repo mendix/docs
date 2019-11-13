@@ -29,23 +29,23 @@ Most of the time, tests assert the presence of elements on a page and assert tha
 
 This is a complete list of all the functions that can be negated:
 
-* Logic
+* `Logic`
     * `Assert Contains String`
     * `Assert endsWith`
     * `Assert startsWith`
     * `Assert equalTo` – `Assert not equalTo`, `assert null`, `assert not null`, `assert not true`, and `assert not false` have all been deprecated in favor of `Assert equalTo`; if these functions were used in a test case or action, they have been automatically replaced with an `Assert equalTo` with the correct `Negate` value
     * `Assert equalToIgnoringCase`
     * `Assert equalToIgnoringWhitespace`
-* Web
+* `Web`
     * `Assert Element Attribute Equals`
     * `Assert Element Matches Selector`
     * `Find Element`
     * `Find Element By Id`
     * `Find Element By CSS`
     * `Find Element By Sizzle`
-* Mendix
+* `Mendix`
     * `Assert Current Page Title`
-* Widget:Find
+* `Widget:Find`
     * `Find Checkbox Set Selector`
     * `Find DataGrid Row`
     * `Find/Assert Dialog`
@@ -55,7 +55,7 @@ This is a complete list of all the functions that can be negated:
     * `Find Selected Item/Row`
     * `Find Widget Child Node`
     * `Find/Assert Widget`
-* Widget:Assert
+* `Widget:Assert`
     * `Assert Active Tab Name`
     * `Assert Checkbox Set Selector Value`
     * `Assert Checkbox Value`

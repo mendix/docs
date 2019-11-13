@@ -3,9 +3,9 @@ title: "2.12"
 parent: "ats-2"
 ---
 
-## 2.12
+## 2.12.0
 
-**Release date: July 21th 2019**
+**Release date: July 21st, 2019**
 
 ### Test Step Settings
 

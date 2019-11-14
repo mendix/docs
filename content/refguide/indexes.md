@@ -6,36 +6,30 @@ tags: ["domain model", "entity", "attribute", "index", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+## 1 Introduction
 
-Indexes are lists of attributes for which a database index is created on the underlying database table of the entity. Indexes improve the speed of retrieving objects if the indexed attributes are used in a search field or XPath constraint of a data grid or template grid, or in a WHERE clause of an OQL query. However, search fields of which the Comparison property has value 'Contains' do not take advantage of the improved performance.
+Indexes are lists of attributes for which a database index is created on the underlying database table of the entity. Indexes improve the speed of retrieving objects if the indexed attributes are used in a search field, XPath constraint of a data grid or template grid, or in a `WHERE` clause of an OQL query. However, search fields of which the `Comparison` property has value `Contains` do not take advantage of the improved performance.
 
-Indexes are ordered. This means that when creating an index on two or more attributes, it is important to consider the order of the attributes. When performing a search or query on multiple attributes, these attributes should be in the same order as those in the index to take advantage of the improved performance. By extension, when the retrieval is constrained by only one attribute, the improved performance is only achieved if this is the first attribute in the index.
+## 2 Important Considerations
 
-{{% alert type="warning" %}}
+Indexes are ordered, which means that when you create an index on two or more attributes, it is important to consider the order of the attributes. When performing a search or query on multiple attributes, these attributes should be in the same order as those in the index to take advantage of the improved performance. By extension, when the retrieval is constrained by only one attribute, the improved performance is only achieved if this is the first attribute in the index.
 
-For the entity's system members 'owner' and 'changedBy' if they are selected, an index will get created. This is not so for system members 'createdDate' and 'changedDate'. Also an index will get created for the automatically generated attribute 'id'
+If an entity's `owner` and `changedBy` system members are selected, an index is created. This is not so for the `createdDate` and `changedDate` system members. In addition, an index is created for the automatically generated attribute `id`.
 
-{{% /alert %}}{{% alert type="warning" %}}
+Only persistable entities can define indexes, as they are database concepts. Indexes are disabled for non-persistable entities.
 
-Only persistable entities can define indexes as they are database concepts. Indexes are disabled for non-persistable entities.
+Changing and deleting objects of an entity with indexes takes longer, because the index needs to be updated in addition to the actual data. Therefore, for attributes that are seldomly used as criteria in a search or query, only create an index if the increase in retrieval performance justifies the decrease in update performance.
 
-{{% /alert %}}{{% alert type="warning" %}}
+## 3 Example
 
-Changing and deleting objects of an entity with indexes takes longer, because the index needs to be updated in addition to the actual data. Therefore, for attributes which are seldomly used as criteria in a search or query, only create an index if the increase in retrieval performance justifies the decrease in update performance.
-
-{{% /alert %}}{{% alert type="info" %}}
-
-Customers are usually retrieved by a combination of zipcode and housenumber, so _one_ index is set on the combination of the attributes.
+Customers are usually retrieved by a combination of ZIP code and house number. So, *one* index is set on the combination of the attributes:
 
 ![](attachments/domain-model-editor/917548.png)
 
-The objects are retrieved by the following OQL query. Pay attention to the order of the attributes in the WHERE clause.
+The objects are retrieved by the following OQL query – pay attention to the order of the attributes in the `WHERE` clause:
 
 ```sql
 FROM Module.Customer AS c
 WHERE c.zipcode = $ParameterZipCode AND c.housenumber = $ParameterHouseNumber
 SELECT c.name AS CustomerName
-
 ```
-
-{{% /alert %}}

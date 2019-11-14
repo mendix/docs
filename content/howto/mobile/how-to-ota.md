@@ -8,13 +8,13 @@ title: "How to use over the air updates to update your app"
 
 ## 1 Introduction
 
-With Native Builder 3.0 and Mendix Studio 8.3 we officially introduced the ability to update your Mendix Native Apps over the air.
-Over the air updates are a fast and painless way of updating things like layouts, pages and assets. 
+With Native Builder 3.0 and Mendix Studio 8.4 we officially introduced the ability to update your Mendix Native Apps over the air (OTA).
+OTA updates are a fast and painless way of updating things like layouts, pages and assets. 
 
 **This how-to will teach you how to do the following:**
 
-* Push an over the air update for a release app
-* Rollback and update
+* Push an OTA update for a release app
+* Rollback an update
 * Configure an already pushed update 
 
 ## 2 Prerequisites
@@ -24,6 +24,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Have followed the How to Deploy your first Mendix Native App
 * Have at least one build successfully ran with Native Builder v3.0.0 and Native Template v2.0.0
 * Have your app installed on test device or emulator
+* Have read and understood the [Offline First]("/refguide/offline-first.md") reference guide
 
 ## 3 Deploy An Over The Air Update
 Let us assume we did a new release but realised there is a major typo in our welcome screen. Before over the air updates we would have to make a new release and go through the whole ordeal with the app stores. But over the air makes that a breeze.
@@ -34,11 +35,11 @@ To push a new version to be released via OTA, follow these steps:
 
 1. Change the title and message as follow: 
    
-![Make some changes ](attachments/how-to-ota/modeller-correct.png)
+![Make some changes](attachments/how-to-ota/modeller-correct.png)
 
-2. Save the changes
-3. Note the version and build number of the build you want to update. For this how-to we assume you app version is 1.0.0 and build number 1.
-4. Open a Command Prompt
+2. Save the changes.
+3. Note the version and build number of the app build you want to update. For this how-to we assume you app version is 1.0.0 and build number 1.
+4. Open a Command Prompt.
 5. Navigate to the directory of Native Builder, for example:
    
    `cd C:\<path to Native Builder>`
@@ -49,20 +50,20 @@ To push a new version to be released via OTA, follow these steps:
 
    This command does the following:
    - Runs Mx Build to build your project
-   - Packages your project to be puhed as a new update
-   - Pushes the new update package for the App's version 1.0.0
+   - Packages your project to be pushed as a new update
+   - Pushes the new update package for the app's version 1.0.0
    - Sets the rollout percentage to 100% (all app users)
-   - Marks the update as mandatory for the App's users to install
+   - Marks the update as mandatory for the app's users to install
 
-7. Wait for Native Builder to complete
+7. Wait for Native Builder to complete.
 8. Restart the app on the device. You should be greeted with the following message:
 
-![Make some changes ](attachments/how-to-ota/phone-update-prompt.png)
+![Update available prompt](attachments/how-to-ota/phone-update-prompt.png)
 
-9.  Confirm the "update available" popup
-10.  The app should reload and greet you with the following popup:
+9.  Confirm the "update available" popup.
+10. The app should reload and greet you with the following popup:
 
-![Make some changes ](attachments/how-to-ota/phone-success-prompt.png)
+![Update success prompt](attachments/how-to-ota/phone-success-prompt.png)
 
 
 ## 4 How to roll back updates
@@ -98,21 +99,45 @@ When ready to fully rollout the update, simply run:
 
 `patch-update` is a commnd that allows you to modify a pushed updated. You can modify things like rollout percentage or make a release mandatory.
 
-## 4 When to use over the air updates
-Over the air updates can be used safely in cases like: 
+## 4 When OTA updates are safe to use without redeploying a new Mendix App
+
+Over the air updates can be used without redeploying of a new Mendix App in cases like: 
 
 - Style changes
 - Static assets changes, static images, text etc. 
 - Layout changes
 
-## 5 When to not use over the air updates
-Over the air updates should be avoided when runtime changes have occured. 
+If domain changes have occured you will have to redeploy a new Mendix App and release a new OTA update for your clients. The order in this case is: 
 
-- Navigation profile changes have occured
-- Model changes have occured, in example entity name changes
+1) Deploy your Mendix App to the cloud.
+2) Push a new update to your clients using Native Builder.
 
-In this case
+## 5 Think twice before doing destructive changes to your Model
+
+Please read and understand the [Offline First]("/refguide/offline-first.md") reference guide. It is important to understand the implications of offline first.
+
+Mendix Native Apps are offline first. **That means that you have to be extra cautious or avoid at all, doing changles such as:** 
+
+- Changing the navigation profile
+- Changing an offline first entity, in example entity name changes, new entity relationships etc.
+
+**As rule of thumb you should avoid doing destructive changes to offline synced entities at any cost!**
+
+In the rare cases this is unavoidable, releasing new app version or doing over the air updates, might put your app's users in a unrecoverable state. 
+
+### A lesson hard learned
+
+Say your Mendix developers were hard at work on optimizing the data store entity structure to speed up sync operations. They are quite happy with their results and feel confident releasing that morning. So they do. They push a new runtime, convieniently doing so by pressing the "Run" button in Mendix Studio Pro and run Native Builder to push a new update for the apps. All seem to work fine. 
+
+That morning you engineers were hard at work gathering field data in a remote area. Later that afternoon the engineers are back and attempt to sync their data using the app's built in sync button. But it fails! They just do the only thing they can think of, which is, restarting the app. When the app starts they are greeted with the "Update available" screen; they hit the continue button; get updated and then their data is lost or partially synced.
+
+### So what happened?
+
+As a disclaimer this issue is independent from over the air updates and specific to offline apps. Your offline app runs a snapshot of your runtimes model locally. So as a Mendix Developer we have to think twice before doing major chages that might make the app's state unrecoverable. In this case the entity model has changed and when the app attempts to sync it fails.
+This can create unrecoverable situations that will require a re-installation of the app and can lead to data loss for unsynced data.
 
 ## 5 Read More
 
-https://docs.microsoft.com/en-us/appcenter/distribution/codepush/using-ui
+- [Offline First reference guide]("/refguide/offline-first.md")
+- [Codepush Introduction](https://docs.microsoft.com/en-us/appcenter/distribution/codepush/)
+- [Using the CodePush UI](https://docs.microsoft.com/en-us/appcenter/distribution/codepush/using-ui)

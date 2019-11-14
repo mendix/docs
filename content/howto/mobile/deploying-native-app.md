@@ -24,56 +24,53 @@ The following configurations are required:
 * Deploy your native app to the cloud via Studio Pro and have the cloud address of your deployed application available
 * Have basic knowledge on how to use Windows' Command Line Interface program `cmd`
 * Read up on the various parameters found in the [Nnative Builder guide](https://docs.mendix.com/refguide/native-builder#commands)
-* If you plan to deploy your app for test on an iOS device, do the following:
+* If you plan to deploy your app for testing on an iOS device, do the following:
   * Register for an Apple Developer Account
   * Have an iOS device for testing the iOS package that will be produced
   * Have an iOS deployment certificate and a provisioning file for which your device is activated
   * Have Xcode installed on your computer for deploying the iOS package to your test device
-* To deploy your app for test on an Android device, it is expected to have an Android device available
+* To deploy your app for testing on an Android device, it is expected to have an Android device available
 
-## 3. Preparing your project
+## 3. Preparing Your Project
 
-Below is a quick example:
+The native builder uses the `prepare` command, as well as a line of parameters, in your CLI to specify the details of your build. Below is a quick example of a complete set of paramaters:
 
 ```bash
 native-builder.exe prepare --project-name CoolApp --java-home "C:\Program Files\Java\jdk-11.0.3" --project-path "Y:\Documents\Mendix\CoolApp\CoolApp.mpr" --mxbuild-path "C:\Program Files\Mendix\8.3.0.61600\modeler\mxbuild.exe" --github-access-token b609183aa226a8c2d962700be7a387bd7776e986 --appcenter-api-token 440725eb1311ddfced62894a4d23fc90843370c7 --appcenter-organization "cool-organization" --runtime-url "https://coolapp.mendixcloud.com" --app-name "My Cool App" --app-identifier com.mendix.coolapp
 ```
 
-This command does the following:
+The `prepare` command  does the following:
 
-* Generates a private GitHub repository which would house the project's source code and configurations.
-* Generates two different projects on App Center for Android and iOS respectively.
-* Modifies the default App Icons and Splash screen if any is provided.
-* Modifies the Application's name and identifier for both Android and iOS if any is provided.
-* Modifies the Runtime Url for both Android and iOS if any is provided.
+* Generates a private GitHub repository which will house the project's source code and configurations
+* Generates two different projects on App Center for Android and iOS respectively
+* Modifies the default app icons and splash screen if any are provided
+* Modifies the application's name and identifier for both Android and iOS if any are provided
+* Modifies the Runtime URL for both Android and iOS if any are provided
 
-> Also, this command can be run multiple times to modify any of the aforementioned parameters
-
-Running this the first time, would produce the warning below:
+The `prepare` command can be run multiple times to modify any of the aforementioned parameters. Running `prepare` the first time will produce this warning:
 
 ![App Center authentication failure](attachments/deploying-native-app/native-builder-authentication-failure.png)
 
-This is part of App Center's security policy that requires manual access to circumvent. On visiting App Center's dashboard, you could already see the applications created by Native Builder.
+This warning is part of App Center's security policy which you must solve on their site. On visiting App Center's dashboard, you will already see the applications created by Native Builder:
 
 ![App Center Applications](attachments/deploying-native-app/appcenter-apps.png)
 *App Center Dashboard*
 
-To fix this, complete the following steps. You must repeat them for both your iOS and Android apps if you have one of each:
+To address the warning, complete the following steps (you must repeat them for both your iOS and Android apps if you have one of each):
 
-* Navigate to App Center.
-* Select your newly created app.
-* Select build on the left panel.
-* You will be greeted with a screen that allows you to link your account with a repository service.
-* Choose GitHub.
-* If you are not logged in already you will be asked to sign into your GitHub account.
-* Select approve in the permission request.
-* Select the repository you want to connect to.
-* You will be redirected back to your App Center account.
-* Your repository’s branches are now listed in the build page.
+1. Navigate to [App Center](https://appcenter.ms/).
+2. Select your newly created app.
+3. Select **Build** on the left panel.
+4. You will be greeted with a screen that allows you to link your account with a repository service.
+5. Choose **GitHub**.
+6. If you are not logged in already you will be asked to sign into your GitHub account. If asked, do so.
+7. Select approve in the permission request.
+8. Select the repository you want to connect to.
+9. You will be redirected back to your App Center account. Your repository’s branches are now listed in the build page.
 
-## 4. Making your first build
+## 4. Making your First Build
 
-> By default, App Center builds are unsigned and not releasable on either of the the platform app stores. To be able release your apps, you would have to provide your signature keys on App Center. Signature keys prove the authenticity of your app and prevent forgeries. For more information to how to acquire these keys, See [Managing App Signing Keys](https://docs.mendix.com/refguide/managing-app-signing-keys) as the steps listed there even though directed at Hybrid applications also apply to Native applications as well. Also, Android and iOS applications require different types of keys as that document explains.
+By default, App Center builds are unsigned and not releasable on either of the the platform app stores. To release your apps, you would have to provide your signature keys on App Center. Signature keys prove the authenticity of your app and prevent forgeries. For more information to how to acquire these keys, See [Managing App Signing Keys](https://docs.mendix.com/refguide/managing-app-signing-keys) as the steps listed there even though directed at Hybrid applications also apply to Native applications as well. Also, Android and iOS applications require different types of keys as that document explains.
 
 Below is a quick example:
 

@@ -2,7 +2,7 @@
 title: "Search Bar"
 parent: "grids"
 menu_order: 40
-tags: ["studio pro"]
+tags: ["studio pro", "search bar", "grid"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -40,7 +40,11 @@ Properties depend on the type of the search field.
 
 #### 3.2.1 Attribute (Path)
 
+{{% alert type="info" %}}
+
 This property is available for **Comparison** and **Drop-down** search fields. 
+
+{{% /alert %}}
 
 Many input widgets (like text boxes and drop-down widgets) can be connected to the following:
 
@@ -59,7 +63,11 @@ In Mendix 8.1 and above, you can edit attributes presented in input widgets over
 
 #### 3.2.2 Comparison
 
+{{% alert type="info" %}}
+
 This property is available for **Comparison** and **Drop-down** search fields. 
+
+{{% /alert %}}
 
 The value entered by the end user (or the default value in the case of hidden and read-only search fields) is compared to the value of the attribute of each of the objects in the grid. If the match succeeds, the object will be part of the search result. There are different ways in which the attribute value and the entered value can be compared. In the third column below you see the type of search field for which the comparison operator is allowed.
 
@@ -94,13 +102,21 @@ It is possible to search on date attributes using equality. What happens with th
 
 #### 3.3 Allow Multi-Select
 
+{{% alert type="info" %}}
+
 This property is available for **Drop-down** search fields. 
+
+{{% /alert %}}
 
 If this property is set to 'Yes', the resulting drop-down allows you to select multiple values instead of just one. When searching all records match for which the corresponding attribute is equal to one of the selected values. For example, you can search for all orders with status 'Submitted' or 'In progress'.
 
 #### 3.4 XPath Constraint
 
+{{% alert type="info" %}}
+
 This property is available for **Drop-down** search fields. 
+
+{{% /alert %}}
 
 If the 'drop-down' search field is connected to an attribute of an associated entity (as opposed to the grid entity itself) the XPath constraint can be used to limit objects shown in the drop-down.
 
@@ -113,7 +129,11 @@ Let us say you have a grid showing bicycles. In the domain model the bicycle has
 
 #### 3.5 Sort Order
 
+{{% alert type="info" %}}
+
 This property is available for **Drop-down** search fields. 
+
+{{% /alert %}}
 
 The sort order specifies the order in which the items in the drop-down search field are shown. You can sort on multiple attributes in both directions (ascending and descending). If no sort order is specified, the drop-down search field sorts on the displayed attribute.
 
@@ -121,13 +141,21 @@ _Default value:_ No sort order
 
 #### 3.6 Lower Bound
 
+{{% alert type="info" %}}
+
 This property is available for **Range** search fields. 
+
+{{% /alert %}}
 
 This attribute (path) determines the lower bound of the range.
 
 #### 3.7 Lower Bound Operator
 
+{{% alert type="info" %}}
+
 This property is available for **Range** search fields. 
+
+{{% /alert %}}
 
 The lower bound operator determines whether the comparison with the lower bound is inclusive (>=) or not (>). It can be either 'Greater' or 'Greater or equal'.
 
@@ -135,13 +163,21 @@ The lower bound operator determines whether the comparison with the lower bound 
 
 #### 3.8 Upper Bound
 
+{{% alert type="info" %}}
+
 This property is available for **Range** search fields. 
+
+{{% /alert %}}
 
 This attribute (path) determines the upper bound of the range.
 
 #### 3.9 Upper Bound Operator
 
+{{% alert type="info" %}}
+
 This property is available for **Range** search fields. 
+
+{{% /alert %}}
 
 The upper bound operator determines whether the comparison with the upper bound is inclusive (<=) or not (<). It can be either 'Smaller' or 'Smaller or equal'.
 

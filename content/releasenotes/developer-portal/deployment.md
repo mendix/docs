@@ -211,7 +211,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 * We fixed a problem on Mendix Cloud v3 which prevented Path-based Access Restrictions from working with multiple TLS certificate authorities. (Ticket 77282)
 * We fixed the problem which prevented users in the Pacific Time Zone from being able to download the current day's logs. (Tickets 78325, 78586, 79119, 79162, 79427)
 * We addressed and solved a problem which meant that some sandboxes could not be resumed after getting stopped.
-* We have fixed the issue that prevented apps with ACS (App Cloud Services) from being deployed using the Web Modeler. (Ticket 76888)
+* We have fixed the issue that prevented apps with ACS (AppCloudServices) from being deployed using the Web Modeler. (Ticket 76888)
 
 ### January 28th, 2019
 

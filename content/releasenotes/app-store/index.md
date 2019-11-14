@@ -9,6 +9,14 @@ These release notes cover changes made to the [Mendix App Store](https://appstor
 
 ## 2019
 
+### November 14th, 2019
+
+#### Content Support Update
+
+We are invested in maintaining Mendix App Store content to make it easier for you to find and use the widgets and modules that you need. To that end, we have cleaned up old App Store content where Mendix support is no longer possible and changed the support level from **Platform support** to **Community support**.
+
+For more information on these support levels, see [App Store Content Support](/developerportal/app-store/app-store-content-support).
+
 ### November 6th, 2019
 
 #### Improvement

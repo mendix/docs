@@ -66,7 +66,7 @@ These steps use the [Company Expenses](https://appstore.home.mendix.com/link/app
 
 	{{% alert type="info" %}}If this microflow is not called during startup, your users will encounter **404 Not Found** errors when trying to navigate to your app.{{% /alert %}}
 
-Congratulations! Your app now makes use of the AppCloud services.
+Congratulations! Your app now makes use of the AppCloudServices.
 
 ## 3 Managing User Logins with Mendix AppCloudServices SSO{#managing-mendix-sso}
 

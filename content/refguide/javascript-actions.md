@@ -70,7 +70,6 @@ This setting handles the parameter's name. A name is required. Names must start 
 |   Enumeration   |  The enumeration parameter type allows you to pass a enumeration value to a JavaScript action. In the generated JavaScript action code, this type will be represented as a string.  |
 |   Integer/Long   |  The integer/long parameter type allows you to pass a decimal value to a JavaScript action. In the generated JavaScript action code, this type will be represented as a [Big](https://www.npmjs.com/package/big-js) object.  |
 |   String   |  The string parameter type allows you to pass a string value to a JavaScript action. |
-|   Return   |   The return parameter type determines the type of data a JavaScript action returns. Because many APIs are asynchronous, you can also return a `Promise` object which resolves to this type. The return value of the JavaScript action can be given a name and stored so it can be used in the nanoflow where it is called. In any type you can use for parameters, you can also use a return type.   |
 
 #### 2.2.3 Category
 
@@ -79,6 +78,10 @@ Use categories to keep parameters apart in a [JavaScript Action Call](javascript
 #### 2.2.4 Description
 
 For projects with several parameters, descriptions serve as useful reminders of parameters' exact purposes. Descriptions also allow you to describe your parameters to project collaborators. Descriptions may contain both upper- and lower-case letters, numbers, and symbols.
+
+### 2.3 Return type
+
+The return parameter type determines the type of data a JavaScript action returns. Because many APIs are asynchronous, you can also return a `Promise` object which resolves to this type. The return value of the JavaScript action can be given a name and stored so it can be used in the nanoflow where it is called. All types you can use for parameters, you can also use a return type. In addition there is return type 'Nothing' which can be used if no data should return from the action.
 
 ## 3 Type Parameter Settings
 
@@ -120,9 +123,9 @@ Documentation is visible in the **Code** tab. Your documentation also is copied 
 
 {{% image_container width="450" %}}![documentation js file](attachments/javascript-actions/documentation-js-file.png){{% /image_container %}}
 
-## 6 Code Settings
+## 6 Code
 
-In the **Code** tab, you can edit the JavaScript action code without leaving Studio Pro. The editor is based on the [Monaco Editor](https://microsoft.github.io/monaco-editor/index.html). It offers features such as syntax highlighting and code completion.
+In the **Code** tab, you can edit the JavaScript action code without leaving Studio Pro. The editor is based on the [Monaco Editor](https://microsoft.github.io/monaco-editor/index.html). It offers features such as syntax highlighting and code completion. Starting from Mendix version 8.3, the code could be written in moddern JavaScript (ES8 / ES2017) and could use functions alike `async` with `await` and `Promise`. The code will be transpiled and polifilled for you to run even on Internet Explorer 11. 
 
 ## 7 Read More
 

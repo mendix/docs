@@ -10,24 +10,26 @@ tags: ["native", "mobile", "deploy", "native-builder", "builder", "appcenter"]
 
 This tutorial will teach you how to go from a blank slate to an app running on a device.
 
-Every Native Builder project has configurations, some unique and required and some others necessary. These configurations are useful for preparing the app and creating builds on App Center and GitHub respectively. It is also important for making updates to apps already delivered to production devices.
+Every Native Builder project has configurations. These configurations are useful for preparing your app, and then creating builds on App Center and GitHub respectively. Configurations are also critical for making updates to apps already delivered to production devices.
 
-* Project name (`--project-name`) is one of those unique and required configuration parameters. This identifies what name should be given to the project on App Center and GitHub as well as locally on your machine for later reference
+The following configurations are required:
 
-* The build number (`--build-number`) is required and also needs to be unique. This represents the version build number for the release builds for both Android and iOS. Also serves as the branch name on both App Center and GitHub would during build would recreate the branch name even if it already exists. For over-the-air updates, each build is associated with a particular release group (`--deployment-target`)  to whom would get the update. By default, this value is set to "Production" and wouldn't need to change unless necessary and if that should be the case, the value should be noted as only devices running on that environment would get future updates to it.
+* Project name (`--project-name`) This unique configuration identifies what name should be given to the project on App Center and GitHub as well as locally on your machine for later reference
+
+* The build number (`--build-number`) This unique configuration represents the version build number for the release builds for both Android and iOS. It also serves as the branch name on both App Center and GitHub. For over-the-air updates, each build is associated with a particular release group (`--deployment-target`)  which would get the update. By default, this value is set to **Production** and should usually be kept this way. If changed, the new value should be noted as only devices running on that environment would get updates.
 
 ## 2. Prerequisites
 
-* It is expected that you have gone through the [Getting Started with Native Mobile](https://docs.mendix.com/howto/mobile/getting-started-with-native-mobile) guide and know how to create, style and debug an Application using the latest version of the Studio Pro.
-* It is expected you have deployed your Native Application to the cloud via Studio pro and have the cloud address of your deployed application available.
-* It is expected you have at least basic knowledge on how to use the Command Line Interface program on Windows called `cmd`.
-* Have at least read up on more information on the various parameters found on the [Reference Guide](https://docs.mendix.com/refguide/native-builder#commands) reference guide as this would not be explaining all of them.
-* To deploy your app for test on an iOS device, do the following:
-  * Register for an Apple Developer Account.
-  * Have an iOS device for testing the iOS package that will be produced.
-  * Have an iOS deployment certificate and a provisioning file for which your device is activated.
-  * Have Xcode installed on your computer for deploying the iOS package to your test device.
-* To deploy your app for test on an Android device, it is expected to have an Android device available.
+* Read the [Getting Started with Native Mobile](https://docs.mendix.com/howto/mobile/getting-started-with-native-mobile) guide and learn how to create, style and debug an application with Mendix Studio Pro
+* Deploy your native app to the cloud via Studio Pro and have the cloud address of your deployed application available
+* Have basic knowledge on how to use Windows' Command Line Interface program `cmd`
+* Read up on the various parameters found in the [Nnative Builder guide](https://docs.mendix.com/refguide/native-builder#commands)
+* If you plan to deploy your app for test on an iOS device, do the following:
+  * Register for an Apple Developer Account
+  * Have an iOS device for testing the iOS package that will be produced
+  * Have an iOS deployment certificate and a provisioning file for which your device is activated
+  * Have Xcode installed on your computer for deploying the iOS package to your test device
+* To deploy your app for test on an Android device, it is expected to have an Android device available
 
 ## 3. Preparing your project
 

@@ -70,15 +70,15 @@ To address the warning, complete the following steps (you must repeat them for b
 
 ## 4. Making your First Build
 
-By default, App Center builds are unsigned and not releasable on either of the the platform app stores. To release your apps, you would have to provide your signature keys on App Center. Signature keys prove the authenticity of your app and prevent forgeries. For more information to how to acquire these keys, See [Managing App Signing Keys](https://docs.mendix.com/refguide/managing-app-signing-keys) as the steps listed there even though directed at Hybrid applications also apply to Native applications as well. Also, Android and iOS applications require different types of keys as that document explains.
+By default, App Center builds are unsigned and not releasable on Google Play or the App Store. To release your apps, you must provide your signature keys to App Center. Signature keys prove the authenticity of your app and prevent forgeries. For more information to how to acquire these keys, See [Managing App Signing Keys](/refguide/managing-app-signing-keys). 
 
-Below is a quick example:
+This is an example build:
 
 ```bash
 native-builder.exe build --project-name CoolApp --build-number 1 --app-version 0.1.0
 ```
 
-> For more info on the parameters and what they are used for, See the [Reference Guide](https://docs.mendix.com/refguide/native-builder#commands).
+For more info on the parameters and what they are used for, see the [Commands](/refguide/native-builder#commands) section in the *Native Builder* guide.
 
 The example above would initiate a new build for the already-prepared project *CoolApp* using a [Semantic version](https://semver.org/) *0.1.0* for the build, unique version build number *1*  and performing an dual-platform (Android and iOS) build. For a single-platform build, the `--platform` parameter can be used with `android` or `ios` with an example below.
 
@@ -88,8 +88,8 @@ native-builder.exe build --project-name CoolApp --build-number 1 --app-version 0
 
 This command does the following:
 
-* Generates a Javascript deployment bundle and images of the Native App from Studio pro.
-* Creates a new build branch on GitHub and kickstarts a build process on App Center.
+* Generates a Javascript deployment bundle and images of the Native App from Studio pro
+* Creates a new build branch on GitHub and starts a build process on App Center
 
 ### 4.1 Signed Builds
 

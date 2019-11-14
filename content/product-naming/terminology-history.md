@@ -16,7 +16,7 @@ Details and cross-references where necessary.
 Guidelines for usage.
 {{% /alert %}}
 
-## AppCloud
+## AppCloud & AppCloudServices
 
 This was used to described a large part of the functionality of the Developer Portal. The original idea of AppCloud can be found in this [press release](https://www.mendix.com/press/new-mendix-appcloud/). It is no longer used in describing the product.
 

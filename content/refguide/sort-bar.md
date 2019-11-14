@@ -2,7 +2,7 @@
 title: "Sort Bar"
 parent: "grids"
 menu_order: 50
-tags: ["studio pro", "sort bar, "sort-bar", "grid"]
+tags: ["studio pro", "sort bar", "grid"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

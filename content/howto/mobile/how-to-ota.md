@@ -71,27 +71,26 @@ This command does the following:<br />
 
    ![Update success prompt](attachments/how-to-ota/phone-success-prompt.png)
 
-
 ## 4 Rolling Back Updates
 
-Let us assume that we want to rollback an update. Maybe we released it to early or something is wrong with the latest update.
+If you released an update too early or something is wrong with it, you may wish to roll back the update. To roll back an update, follow these steps:
 
-Todo so: 
-1. First get the list of available releases. Run the following command: 
+1. Get your list of available releases by running the following command: 
 
-    `native-builder.exe release list --project-name "CoolApp"`
+   `native-builder.exe release list --project-name "CoolApp"`
 
-  ![List of available release](attachments/how-to-ota/release-list.png)
+   ![List of available release](attachments/how-to-ota/release-list.png)
 
-2. To now rollback v2 to v1 type the following command: 
+2. To roll back from {v2} to {v1} type the following command: 
 
-    `native-builder.exe release rollback-update --project-name "CoolApp" --label "v1"`
+   `native-builder.exe release rollback-update --project-name "CoolApp" --label "v1"`
 
-  ![Output of rollback command](attachments/how-to-ota/rollback-result.png)
+   ![Output of rollback command](attachments/how-to-ota/rollback-result.png)
 
-3. Next time you open the app you should be greeted with the "Update available" prompt
+3. Next time you open your app, you should be greeted with the **Update available** dialog box. Tap **Confirm** to roll your app back on your device.
 
-## 5 Partial initial rollout
+## 5 Partial Initial Rollout
+
 Is it for A/B testing or just to test stability it is good sometimes to test releases on a small number of your user base before fully rolling them out.
 
 Todo so, run: 

@@ -27,48 +27,53 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Have your app installed on a test device or emulator
 * Have read the [Offline First]("/refguide/offline-first.md") reference guide
 
-## 3 Deploy An Over The Air Update
+## 3 Deploying An Over The Air Update
 
-Let us assume we did a new release but realised there is a major typo in our welcome screen. Before over the air updates we would have to make a new release and go through the whole ordeal with the app stores. But over the air makes that a breeze.
+Over the air updates let you correct mistakes in your published apps without issuing a new release. For example, imagine you issued a new release and later found a major typo on your welcome screen:
 
 ![Typo in welcome screen](attachments/how-to-ota/phone-error-text.png)
 
-To push a new version to be released via OTA, follow these steps:
+Before over the air updates, you would have to make a new release and configure it in the app stores. But over the air updates make fixing such a mistake easy.
 
-1. Change the title and message as follow: 
+To release a new version OTA, follow these steps:
+
+1. Change the title and message as follows [to do: check picture and write out]: 
    
 ![Make some changes](attachments/how-to-ota/modeller-correct.png)
 
-2. Save the changes.
-3. Note the version and build number of the app build you want to update. For this how-to we assume you app version is 1.0.0 and build number 1.
-4. Open a Command Prompt.
-5. Navigate to the directory of Native Builder, for example:
-   
+2. Save your changes.
+3. Note the version and build number of the app build you want to update. This how-to assumes an app version of 1.0.0 and a build number of 1.
+4. Open a command line interface (CLI) such as Command Prompt.
+5. Navigate to the directory of your Native Builder: (todo: change code below to an actual example filepath)
+
    `cd C:\<path to Native Builder>`
 
 6. Run the following command to build and push a new update: 
    
    `native-builder.exe release push-update --project-name "CoolApp" --target-version "1.0.0" --build-number 1 --rollout-percentage 100 --mandatory`
 
-   This command does the following:
-   - Runs Mx Build to build your project
-   - Packages your project to be pushed as a new update
-   - Pushes the new update package for the app's version 1.0.0
-   - Sets the rollout percentage to 100% (all app users)
-   - Marks the update as mandatory for the app's users to install
+   {{% alert type="info" %}}Text...
+This command does the following:<br />
+* Runs Mx Build to build your project<br />
+* Packages your project to be pushed as a new update<br />
+* Pushes the new update package for the app's version 1.0.0<br />
+* Sets the rollout percentage to 100% (all app users)<br />
+* Marks the update as mandatory for the app's users to install
+   {{% /alert %}}
 
 7. Wait for Native Builder to complete.
-8. Restart the app on the device. You should be greeted with the following message:
+8. Restart the app on your testing device. You should be greeted with the following message:
 
-![Update available prompt](attachments/how-to-ota/phone-update-prompt.png)
+   ![Update available prompt](attachments/how-to-ota/phone-update-prompt.png)
 
-9.  Confirm the "update available" popup.
-10. The app should reload and greet you with the following popup:
+9.  Tap **Confirm** to update your app.
+10. The app should reload and greet you with the following dialog box:
 
-![Update success prompt](attachments/how-to-ota/phone-success-prompt.png)
+   ![Update success prompt](attachments/how-to-ota/phone-success-prompt.png)
 
 
-## 4 How to roll back updates
+## 4 Rolling Back Updates
+
 Let us assume that we want to rollback an update. Maybe we released it to early or something is wrong with the latest update.
 
 Todo so: 

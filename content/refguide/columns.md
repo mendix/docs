@@ -25,7 +25,7 @@ Grid column properties consist of the following sections:
 
 {{% snippet file="refguide/common-section-link.md" %}}
 
-### 2.2 Data Source Section
+### 2.2 Data Source Section {#data-source}
 
 #### 2.2.1 Attribute (Path)
 
@@ -93,7 +93,7 @@ These are some examples:
 | `h:mm a` | 1:37 PM |
 | `yyy D KK:mm` | 2011 88 01:26 |
 
-### 2.4 General Section
+### 2.4 General Section {#general}
 
 #### 2.4.1 Caption
 

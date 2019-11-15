@@ -174,7 +174,7 @@ Studio Pro Guide | Model SDK API docs
 [Reference selector](/refguide/reference-selector) | [PageSettings](https://apidocs.mendix.com/modelsdk/latest/classes/pages.pagesettings.html)
 [Reference set selector](/refguide/reference-set-selector) | [MicroflowSettings](https://apidocs.mendix.com/modelsdk/latest/classes/pages.microflowsettings.html)
 [Starting Microflows](/refguide/starting-microflows) |
-[Opening Pages](/refguide/opening-pages) |
+[Pages](/refguide/pages) |
 
 ## 10 Read More
 

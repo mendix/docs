@@ -66,9 +66,11 @@ No action is taken. This option is useful for setting up a page without defining
 
 The **Show a page** event opens the specified page. Select the page which opens using the options below:
 
-* **Page** – a [page](page) that should open. For more information opening pages function, see [Opening Pages](opening-pages).
+* **Page** – a [page](page) that should open.
 
-* **Page title** – the page you open can be given a unique title, depending on where you open it from. This option is activated by checking the **Override page title** check box in the **Edit** dialog window:
+* **Page title** – the page you open can be given a unique title, depending on where you open it from. This allows you to re-use the same page for different purposes. For example, by setting the title to **New Customer** from one button and **Edit Customer** from another, you can use the same page for editing new and existing customers.
+
+    This option is activated by checking the **Override page title** check box in the **Edit** dialog window:
 
     ![Page Title Property](attachments/on-click-event/page-title-property.png)
 

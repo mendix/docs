@@ -1,32 +1,34 @@
 ---
-title: "How to use over the air updates to update your app"
+title: "Use Over The Air Updates"
 #parent: "native-mobile"
 #menu_order: 71
-#description: "A how to push over the air update (OTA), roll it back or modify it"
+#description: "A tutorial for pushing over the air updates (OTA), rolling them back, and modifying them."
 #tags: ["native", "mobile", "ota", "native-builder", "over the air"]
 ---
 
 ## 1 Introduction
 
-With Native Builder 3.0 and Mendix Studio 8.4 we officially introduced the ability to update your Mendix Native Apps over the air (OTA).
-OTA updates are a fast and painless way of updating things like layouts, pages and assets. 
+Using Native Builder 3.0 and Mendix Studio 8.4, you can update your Mendix Native Apps over the air (OTA).
+OTA updates are the fast and easy way to update things like layouts, pages and assets. 
 
 **This how-to will teach you how to do the following:**
 
-* Push an OTA update for a release app
+* Push an OTA update for a released app
 * Rollback an update
 * Configure an already pushed update 
 
 ## 2 Prerequisites
+
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Have Native Builder 3.0.0 or higher
-* Have followed the How to Deploy your first Mendix Native App
-* Have at least one build successfully ran with Native Builder v3.0.0 and Native Template v2.0.0
-* Have your app installed on test device or emulator
-* Have read and understood the [Offline First]("/refguide/offline-first.md") reference guide
+* Install Native Builder 3.0.0 or higher
+* Have completed [How to Deploy your First Mendix Native App](LINK HERE)
+* Completed at least one successful build using Native Builder v3.0.0 and Native Template v2.0.0
+* Have your app installed on a test device or emulator
+* Have read the [Offline First]("/refguide/offline-first.md") reference guide
 
 ## 3 Deploy An Over The Air Update
+
 Let us assume we did a new release but realised there is a major typo in our welcome screen. Before over the air updates we would have to make a new release and go through the whole ordeal with the app stores. But over the air makes that a breeze.
 
 ![Typo in welcome screen](attachments/how-to-ota/phone-error-text.png)

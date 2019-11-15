@@ -650,6 +650,18 @@ module.exports = {
 		from: "/refguide8/select-all-button",
       to: "/refguide/control-bar"
     },
+	{
+		from: "/refguide8/comparison-search-field",
+      to: "/refguide/search-bar"
+    },
+	{
+		from: "/refguide8/drop-down-search-field",
+      to: "/refguide/search-bar"
+    },
+	{
+		from: "/refguide8/range-search-field",
+      to: "/refguide/search-bar"
+    },
 	/****************************************************
      * From Desktop Modeler version 7 (permanent, mapped)
      ****************************************************/

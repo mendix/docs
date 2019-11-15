@@ -97,7 +97,7 @@ There are two **Find Results** panes. If you lock the results of the first pane,
 
 #### 5.1.7 Project Explorer
 
-The [Project Explorer](project-explorer) pane displays the complete structure of your app project, including all the documents inside the modules. By default, the active document is always selected, so you can quickly see where the document you are editing is in the tree. You can change this behavior in **Edit** > [Preferences](preferences).
+The [Project Explorer](project-explorer) pane displays the complete structure of your app project, including all the documents inside the modules. By default, the active document is always selected, so you can quickly see where the document you are editing is in the tree. You can change this behavior in **Edit** > [Preferences](preferences-dialog).
 
 #### 5.1.8 Properties
 

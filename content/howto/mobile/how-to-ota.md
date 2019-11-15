@@ -1,9 +1,9 @@
 ---
 title: "How to use over the air updates to update your app"
-#parent: "native-mobile"
-#menu_order: 71
-#description: "A how to push over the air update (OTA), roll it back or modify it"
-#tags: ["native", "mobile", "ota", "native-builder", "over the air"]
+parent: "native-mobile"
+menu_order: 71
+description: "A how to push over the air update (OTA), roll it back or modify it"
+tags: ["native", "mobile", "ota", "native-builder", "over the air"]
 ---
 
 ## 1 Introduction
@@ -84,7 +84,15 @@ Todo so:
 
 3. Next time you open the app you should be greeted with the "Update available" prompt
 
-## 5 Partial initial rollout
+## 5 Configure an already pushed update
+You might want to reconfigure an already pushed update for the following reasons: 
+
+- You did a partial rollout and want to up the number
+- You want to make a update mandatory
+
+To do so you will need to use the `patch-update` command.
+
+### 5.1 Partial initial rollout
 Is it for A/B testing or just to test stability it is good sometimes to test releases on a small number of your user base before fully rolling them out.
 
 Todo so, run: 
@@ -97,7 +105,14 @@ When ready to fully rollout the update, simply run:
 
   `native-builder.exe release patch-update --project-name "CoolApp" --target-version "1.0.0" --build-number 1 --rollout-percentage 100`
 
-`patch-update` is a commnd that allows you to modify a pushed updated. You can modify things like rollout percentage or make a release mandatory.
+### 5.2 Making an update mandatory
+As an extension of `rollout-percentage` you can make builds optional. 
+To do so do: 
+  
+  `native-builder.exe release push-update --project-name "CoolApp" --target-version "1.0.0" --build-number 1 --rollout-percentage 100 --mandatory false`
+
+Instead of a contine
+
 
 ## 4 When OTA updates are safe to use without redeploying a new Mendix App
 
@@ -107,12 +122,13 @@ Over the air updates can be used without redeploying of a new Mendix App in case
 - Static assets changes, static images, text etc. 
 - Layout changes
 
+## 5 When you will need to redeploy your Mendix App
 If domain changes have occured you will have to redeploy a new Mendix App and release a new OTA update for your clients. The order in this case is: 
 
 1) Deploy your Mendix App to the cloud.
 2) Push a new update to your clients using Native Builder.
 
-## 5 Think twice before doing destructive changes to your Model
+## 6 Think twice before doing destructive changes to your Model
 
 Please read and understand the [Offline First]("/refguide/offline-first.md") reference guide. It is important to understand the implications of offline first.
 
@@ -136,7 +152,7 @@ That morning you engineers were hard at work gathering field data in a remote ar
 As a disclaimer this issue is independent from over the air updates and specific to offline apps. Your offline app runs a snapshot of your runtimes model locally. So as a Mendix Developer we have to think twice before doing major chages that might make the app's state unrecoverable. In this case the entity model has changed and when the app attempts to sync it fails.
 This can create unrecoverable situations that will require a re-installation of the app and can lead to data loss for unsynced data.
 
-## 5 Read More
+## 7 Read More
 
 - [Offline First reference guide]("/refguide/offline-first.md")
 - [Codepush Introduction](https://docs.microsoft.com/en-us/appcenter/distribution/codepush/)

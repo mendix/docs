@@ -129,7 +129,7 @@ Mendix Native Apps are offline first. This means you should be cautious when cha
 
 Generally, you should avoid doing destructive changes to offline-synced entities. In the rare cases this is unavoidable, releasing a new app version or doing over the air updates might put your app's users in an unrecoverable state. 
 
-### 5.1 Example of an Offline App's Data Loss Scenario
+### 5.1 Offline Apps and Data Loss
 
 Data loss can occur when OTA updates or new releases coincide with apps being offline (todo: check tech). For example, imagine your Mendix developers were hard at work optimizing the data store entity structure to speed up sync operations. They are quite happy with their results and release that morning. They push a new runtime by pressing the **Run** button in Studio Pro, and then run the Native Builder to push a new update to the apps. All seems to work fine. 
 

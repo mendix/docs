@@ -30,15 +30,39 @@ You cannot change the type of a search field, you will need to delete it and the
 
 ## 3 Search Field Properties {#search-field-properties}
 
-Properties depend on the type of the search field. 
+Search field properties depend on the type of the search field. 
+
+An example of drop-down search field properties properties is represented in the image below:
+
+{{% image_container width="250" %}}![Search Field Properties](attachments/data-widgets/search-field-properties.png)
+{{% /image_container %}}
+
+Search field properties consist of the following sections:
+
+* [Common](#common)
+* [General](#general)
 
 ### 3.1 Common Section {#common}
 
-{{% snippet file="refguide/common-section-link.md" %}}
+Properties as **Name**, **Caption**, and **Type** are common for most of the widgets. {{% snippet file="refguide/common-section-link.md" %}}
 
-### 3.2 General Section
+However, there are additional properties that are described in the sections below.
 
-#### 3.2.1 Attribute (Path)
+#### 3.1.1 Custom Date Format
+
+**Custom date format** is only available when you select an attribute of *Date and Time* type in the [**Attribute (path)**](#attribute-path) property. This property determines how the attribute value is formatted. The custom date format is a string that allows for any combination of symbols found in the table below. Any punctuation will be rendered literally. The **Format example** will show you a date example. 
+
+ {{% snippet file="refguide/custom-date-format-tokens.md" %}} 
+
+#### 3.1.2 Placeholder Text
+
+**Placeholder text** is only available when you select an attribute of *Date and Time* type in the [**Attribute (path)**](#attribute-path) property.  
+
+The placeholder text is shown if the date attribute is empty. It can be used to give the end-user a hint as to the expected format.
+
+### 3.2 General Section {#general}
+
+#### 3.2.1 Attribute (Path) {#attribute-path}
 
 {{% alert type="info" %}}
 
@@ -90,7 +114,7 @@ For **Drop-down** search fields:  there is no limit on the number of drop-down s
 
 {{% /alert %}}
 
-##### 3.2.2.1 Date comparisons and the influence of the default value
+**Date comparisons and the influence of the default value**
 
 It is possible to search on date attributes using equality. What happens with the time component belonging to the date is dependent on the default value of the comparison search field.
 

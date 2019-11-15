@@ -125,6 +125,8 @@ All MindSphere apps must integrate the MindSphere OS Bar. This unifies the UI of
 
 You can see how the MindSphere OS Bar Integration works in [MindSphere OS Bar Integration](https://developer.mindsphere.io/resources/osbar/resources-osbar-getting-started.html#mindsphere-os-bar-integration), on the MindSphere developer website.
 
+The MindSphereOSBarConfig module provides a constant **OSBarURL** for specifying the OS Bar URL. See [getting the MindSphere OS Bar](https://design.mindsphere.io/osbar/introduction.html#tab1anchor0) for a list of available URL locations.
+
 The MindSphereOSBarConfig module creates an endpoint which is used by the MindSphere OS Bar to provide tenant context and information about the application. The MindSphereOSBarConfig module is included in the MindSphere starter app, or can be downloaded from the Mendix App Store here: [MindSphere OS Bar Connector](https://appstore.home.mendix.com/link/app/108804/).
 
 {{% alert type="info" %}}
@@ -318,40 +320,56 @@ For the OS Bar to work correctly in your Mendix app, the following script has to
 {{% /alert %}}
 
 ```javascript
-<script>
-	// MindSphere specific part-3: OS Bar related code
-	(function(d1, script1) {
-		script1 = d1.createElement('script');
-		script1.type = 'text/javascript';
-		script1.async = true;
-		script1.onload = function() {
-			_mdsp.init({
-				appId : 'content',
-				appInfoPath : "/rest/os-bar/v1/config",
-				initialize : true
-			});
-
+   <script>
+		// MindSphere specific part-3: OS Bar related code
+		var loadMendix = function() {
 			// dojoConfig needs to be defined before loading mxui.js
 			dojoConfig = {
-				isDebug : false,
-				baseUrl : "mxclientsystem/dojo/",
-				cacheBust : "{{cachebust}}",
-				rtlRedirect : "index-rtl.html"
+				isDebug: false,
+				baseUrl: 'mxclientsystem/dojo/',
+				cacheBust: '{{cachebust}}',
+				rtlRedirect: 'index-rtl.html',
 			};
-
-			// make sure that the mxui.js is loaded after osbar/v4/js/main.min.js to prevent problems with the height calculation of some elements
+			// make sure that the mxui.js is loaded after /rest/os-bar/v1/loader to prevent problems with the height calculation of some elements
 			(function(d2, script2) {
 				script2 = d2.createElement('script');
 				script2.src = 'mxclientsystem/mxui/mxui.js?{{cachebust}}';
 				script2.async = true;
 				d2.getElementsByTagName('body')[0].appendChild(script2);
-			}(document));
+			})(document);
 		};
-		script1.src = 'https://static.eu1.mindsphere.io/osbar/v4/js/main.min.js';
-		d1.getElementsByTagName('head')[0].appendChild(script1);
-	}(document));
-	// MindSphere specific part-3: ends
-</script>
+
+		(function(d1, script1) {
+			script1 = d1.createElement('script');
+			script1.type = 'text/javascript';
+			script1.async = true;
+			script1.onload = function() {
+				_mdsp.init({
+					appId: 'content',
+					appInfoPath: '/rest/os-bar/v1/config',
+					initialize: true,
+				});
+				loadMendix();
+			};
+			script1.onerror = function() {
+				var body = d1.getElementsByTagName('body')[0];
+				var html =
+					'<osbar-root id="OSBarErrorText" class="mdsp_osbf_outer">' +
+						'<div class="mdsp_osbf_inner">MindSphere OSBar could not be loaded. Please check your ' +
+							'<a title="Proxy Settings" class="mdsp_osbf_link" target="_blank" rel="noopener" href="https://docs.mendix.com/partners/siemens/mindsphere-development-considerations#localtesting"> proxy settings</a>' +
+							'<span> or the OSBarURL in the MindSphereOSBarConnector</span>' +
+						'</div>' +
+					'</osbar-root>';
+
+				body.insertAdjacentHTML('afterbegin', html);
+				body.className = body.className + " mdsp_osbf_body"
+				loadMendix();
+			};
+			script1.src = '/rest/os-bar/v1/osbar.loader.js';
+			d1.getElementsByTagName('head')[0].appendChild(script1);
+		})(document);
+		// MindSphere specific part-3: ends
+	</script>
 ```
 
 ### 5.2 mindspherelogin.html{#mindspherelogin}

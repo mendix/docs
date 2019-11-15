@@ -89,21 +89,21 @@ If you released an update too early or something is wrong with it, you may wish 
 
 3. Next time you open your app, you should be greeted with the **Update available** dialog box. Tap **Confirm** to roll your app back on your device.
 
-## 5 Partial Initial Rollout
+## 5 Initiating a Partial Initial Rollout
 
-Is it for A/B testing or just to test stability it is good sometimes to test releases on a small number of your user base before fully rolling them out.
+if you are doing A/B testing or testing your app's stability, you might want to test releases on a small number of users before fully rolling your app out.
 
-Todo so, run: 
+To roll out your app to only *some* of your users, run this command: 
   
-  `native-builder.exe release push-update --project-name "CoolApp" --target-version "1.0.0" --build-number 1 --rollout-percentage 50 --mandatory`
+   `native-builder.exe release push-update --project-name "CoolApp" --target-version "1.0.0" --build-number 1 --rollout-percentage 50 --mandatory`
 
-Instead of passing a rollout percentage of 100% we are passing 50%. That means the update will be distributed over 50% of the app's user base. This number can be an arbitary integer from 1 and 100, representing 1% up to 100% of the user base.
+Instead of passing a rollout percentage of 100%, you are passing 50%. This means the update will be distributed to 50% of the app's user base. This number can be an any integer from 1 to 100, representing the percentage of your user base which will recieve the update.
 
-When ready to fully rollout the update, simply run: 
+To fully roll out the update, run this command: 
 
-  `native-builder.exe release patch-update --project-name "CoolApp" --target-version "1.0.0" --build-number 1 --rollout-percentage 100`
+   `native-builder.exe release patch-update --project-name "CoolApp" --target-version "1.0.0" --build-number 1 --rollout-percentage 100`
 
-`patch-update` is a commnd that allows you to modify a pushed updated. You can modify things like rollout percentage or make a release mandatory.
+The key here is `patch-update`. The `patch-update` command allows you to modify a pushed updated. You can modify things like a rollout percentage, or you can choose to make a release mandatory.
 
 ## 4 When OTA updates are safe to use without redeploying a new Mendix App
 

@@ -12,7 +12,11 @@ A **Report parameter** allows the end-user to select a parameter for the [data s
 
 For example, a report may show order data for a customer and the report parameter can be used to specify which customer's data should be displayed.
 
+<<<<<<< HEAD
+A drop-down menu can be used for a dataset parameter of any type except DateTime. DateTime parameters can be filtered by a [Report Date Parameter](report-date-parameter).
+=======
 The report parameter is displayed in structure mode with the data set parameter name (and the attribute to be displayed if the parameter is an object) shown between square brackets and colored blue.
+>>>>>>> MvM-Maria-StudioProReference
 
 ![Report parameter in structure mode](attachments/report-widgets/report-parameter.png)
 

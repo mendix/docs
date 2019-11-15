@@ -25,7 +25,7 @@ Grid column properties consist of the following sections:
 
 {{% snippet file="refguide/common-section-link.md" %}}
 
-### 2.2 Data Source Section {#data-source}
+### 2.2 Data Source Section
 
 #### 2.2.1 Attribute (Path)
 
@@ -54,9 +54,13 @@ Only for Numeric Attributes. For ease of reading, numbers with many digits befor
 
 _Default value:_ False
 
+<<<<<<< HEAD
+### Date Format (Only for Attributes of the Type **Date and time**)
+=======
 #### 2.3.4 Date Format
+>>>>>>> MvM-Maria-StudioProReference
 
-Only for Attributes of the Type Date and Time. The date format determines whether the date part, the time part or both are shown. How the date and time parts are formatted depends on the localization of the user using the application.
+Only for Attributes of the Type DateTime. The date format determines whether the date part, the time part or both are shown. How the date and time parts are formatted depends on the localization of the user using the application.
 
 These are the possible values:
 * **Date** (this is the default)
@@ -93,7 +97,7 @@ These are some examples:
 | `h:mm a` | 1:37 PM |
 | `yyy D KK:mm` | 2011 88 01:26 |
 
-### 2.4 General Section {#general}
+### 2.4 General Section
 
 #### 2.4.1 Caption
 

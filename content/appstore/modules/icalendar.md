@@ -32,8 +32,6 @@ The implementation of this module is based on an [iCal4j](https://github.com/ica
 4. Use other **Sub-microflows** in the **Use Me** folder to control appointments. 
 5. Navigate to **Appointment_Overview** to create and change appointments.
 
-To implement this functionality in your own app project, you can use the sub-microflows in **Use Me** folder.
+To implement this functionality in your own app project, you can use the sub-microflows in the **Use Me** folder. 
 
-When creating and updating appointments, notifications will be sent when **Save** is clicked.
-
-If an appointment is rescheduled or recipients have been changed, updates will be automatically sent through mail when **Save** is clicked.
+When creating and updating appointments, notifications will be sent when **Save** is clicked. If an appointment is rescheduled or recipients have been changed, updates will be automatically sent through mail when **Save** is clicked.

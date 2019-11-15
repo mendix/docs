@@ -105,45 +105,43 @@ To fully roll out the update, run this command:
 
 The key here is `patch-update`. The `patch-update` command allows you to modify a pushed updated. You can modify things like a rollout percentage, or you can choose to make a release mandatory.
 
-## 4 When OTA updates are safe to use without redeploying a new Mendix App
+## 4 Using OTA instead of Redeploying a New Mendix App
 
-Over the air updates can be used without redeploying of a new Mendix App in cases like: 
+Over the air updates can be used without redeploying a new Mendix App. OTA is safe and preferable to use when you have changed the following parts of your app: 
 
-- Style changes
-- Static assets changes, static images, text etc. 
-- Layout changes
+* Styling
+* Static assets, static images, text and more
+* Layout
 
-If domain changes have occured you will have to redeploy a new Mendix App and release a new OTA update for your clients. The order in this case is: 
+If domain changes have occured, you will have to redeploy a new Mendix App and release a new OTA update for your clients. In this case, do the following:
 
 1) Deploy your Mendix App to the cloud.
-2) Push a new update to your clients using Native Builder.
+2) Push a new update to your clients using the Native Builder.
 
-## 5 Think twice before doing destructive changes to your Model
+## 5 Preserving the Integrity of your Model
 
 Please read and understand the [Offline First]("/refguide/offline-first.md") reference guide. It is important to understand the implications of offline first.
 
-Mendix Native Apps are offline first. **That means that you have to be extra cautious or avoid at all, doing changles such as:** 
+Mendix Native Apps are offline first. This means you should be cautious when changing the following elements, and should avoid changing them if possible: 
 
-- Changing the navigation profile
-- Changing an offline first entity, in example entity name changes, new entity relationships etc.
+* The navigation profile
+* An offline first entity, for example entity name changes, new entity relationships, and more
 
-**As rule of thumb you should avoid doing destructive changes to offline synced entities at any cost!**
+Generally, you should avoid doing destructive changes to offline-synced entities. In the rare cases this is unavoidable, releasing a new app version or doing over the air updates might put your app's users in an unrecoverable state. 
 
-In the rare cases this is unavoidable, releasing new app version or doing over the air updates, might put your app's users in a unrecoverable state. 
-
-### A lesson hard learned
+### 5.1 A lesson hard learned
 
 Say your Mendix developers were hard at work on optimizing the data store entity structure to speed up sync operations. They are quite happy with their results and feel confident releasing that morning. So they do. They push a new runtime, convieniently doing so by pressing the "Run" button in Mendix Studio Pro and run Native Builder to push a new update for the apps. All seem to work fine. 
 
 That morning you engineers were hard at work gathering field data in a remote area. Later that afternoon the engineers are back and attempt to sync their data using the app's built in sync button. But it fails! They just do the only thing they can think of, which is, restarting the app. When the app starts they are greeted with the "Update available" screen; they hit the continue button; get updated and then their data is lost or partially synced.
 
-### So what happened?
+### 5.2 So what happened?
 
 As a disclaimer this issue is independent from over the air updates and specific to offline apps. Your offline app runs a snapshot of your runtimes model locally. So as a Mendix Developer we have to think twice before doing major chages that might make the app's state unrecoverable. In this case the entity model has changed and when the app attempts to sync it fails.
 This can create unrecoverable situations that will require a re-installation of the app and can lead to data loss for unsynced data.
 
 ## 5 Read More
 
-- [Offline First reference guide]("/refguide/offline-first.md")
-- [Codepush Introduction](https://docs.microsoft.com/en-us/appcenter/distribution/codepush/)
-- [Using the CodePush UI](https://docs.microsoft.com/en-us/appcenter/distribution/codepush/using-ui)
+* [Offline First reference guide]("/refguide/offline-first.md")
+* [Codepush Introduction](https://docs.microsoft.com/en-us/appcenter/distribution/codepush/)
+* [Using the CodePush UI](https://docs.microsoft.com/en-us/appcenter/distribution/codepush/using-ui)

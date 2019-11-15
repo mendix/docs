@@ -72,7 +72,7 @@ A photo can also be uploaded.
 The conjunct user rights consist of the following:
 
 * Viewing an overall list of employees
-* Viewing their location on a [Google Maps widget](https://appstore.home.mendix.com/link/app/39/)
+* Viewing their location on [Google Maps](https://appstore.home.mendix.com/link/app/48911/)
 * Viewing a more detailed info block for an employee
 * Generating a PDF file of any employee.
 

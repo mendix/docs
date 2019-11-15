@@ -75,5 +75,4 @@ For more details on all the properties, see here: [http://jcifs.samba.org/src/do
 
 ## 6 Read More
 
-* [How to Explore Our Connectors and Adapters](explore-the-connectors-and-adapters)
 * [How to Access a Samba Share from the MxCloud](access-a-samba-share-from-the-mxcloud)

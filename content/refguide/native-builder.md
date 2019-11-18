@@ -11,13 +11,13 @@ The Native Builder takes your Mendix project containing a native profile and pac
 
 ## 2 Prerequisites
 
-* The Native Builder [executable](https://www.dropbox.com/sh/hpw7sshut9bco68/AABackrr75rPSgW7u5LBMkMra?dl=0) (download to a folder of your preference and extract all contents)
+* Download the Native Builder [executable](https://www.dropbox.com/sh/hpw7sshut9bco68/AABackrr75rPSgW7u5LBMkMra?dl=0) to a folder of your preference and extract all contents
 	* Use v1.0.0 with Mendix 8.0
 	* Use v2.0.0 with Mendix 8.1.0 and above
 	* Use v3.0.0 with Mendix 8.3.0 and above
-* A [GitHub](https://github.com/) account
-* A [Microsoft App Center](https://appcenter.ms/) account
-* Java JDK 11 (if you have Studio Pro installed, you should already have JDK 11 in *C:\Program Files\AdoptOpenJDK*) which can be acquired [here](https://adoptopenjdk.net/) 
+* Make a [GitHub](https://github.com/) account
+* Make a [Microsoft App Center](https://appcenter.ms/) account
+* Install [Java JDK 11](https://adoptopenjdk.net/) (if you have Studio Pro installed, you should already have JDK 11 in *C:\Program Files\AdoptOpenJDK*)
 
 ## 3 About the Native Builder
 
@@ -34,7 +34,7 @@ The Native Builder uses MxBuild, GitHub, and App Center to build your applicatio
 
 ## 4 Getting Your Tokens
 
-The sections below describe how to get tokens which allow Native Builder to authenticate with GitHub and App Center. If you already have tokens for your GitHub and App Center, you do not need to repeat these sections.
+The sections below describe how to get tokens which allow the Native Builder to authenticate with GitHub and App Center. If you already have tokens for your GitHub and App Center, you do not need to repeat these sections.
 
 ### 4.1 GitHub Token {#github-token}
 
@@ -50,9 +50,9 @@ The sections below describe how to get tokens which allow Native Builder to auth
 ### 4.2 App Center Token {#appcenter-token}
 
 1. Go to [App Center](https://appcenter.ms/apps) and sign in.
-3. Click your profile icon in the top right corner, then click **Settings**, and then **Account Settings**.
-4. In the **API Tokens** tab, click the **New API token** button.
-5. Add a description of your token, select **Full Access**, then click **Add new API token**, and then **New API Token**. Store this token in a secure place as well. You will not be able to see it again. If you lose it, you will have to create a new token and delete your old one.
+2. Click your profile icon in the top right corner, then click **Settings**, and then **Account Settings**.
+3. In the **API Tokens** tab, click the **New API token** button.
+4. Add a description of your token, select **Full Access**, then click **Add new API token**, and then **New API Token**. Store this token in a secure place as well. You will not be able to see it again. If you lose it, you will have to create a new token and delete your old one.
 
 ## 5 Commands {#commands}
 
@@ -152,7 +152,7 @@ native-builder.exe regenerate --projectName "CoolApp"
 | ---------------- | ------------------------------------------------- | --------- |
 | `--project-name` | Unique name of the project used during `prepare`. | `CoolApp` |
 
-### 6 Advanced Parameter Explanation
+### 6 Expanded Parameter Explanations
 
 #### 6.1 --project-name
 
@@ -160,7 +160,7 @@ This parameter is the unique name of your app, and can contain any characters. T
 
 #### 6.2 --runtime-url
 
-This parameter should point to the runtime you want to run your app against. If testing against a locally deployed app, use your machine's IP address (for example, `http://192.168.1.12:8080`). If testing against a Mendix Cloud-deployed app, use the fully qualified runtime URL of your deployement server (for example, `https://myapp.mendixcloud.com`). The correct protocol needs to be appended, otherwise the URL will be prefixed by default with `http://`.
+This parameter should point to the runtime you want to run your app against. If testing against a locally deployed app, use your machine's IP address (for example, {http://192.168.1.12:8080}). If testing against a Mendix Cloud-deployed app, use the fully qualified runtime URL of your deployement server (for example, {https://myapp.mendixcloud.com}). The correct protocol needs to be appended, otherwise the URL will be prefixed by default with `http://`.
 
 #### 6.3 --appcenter-organization
 
@@ -176,7 +176,7 @@ This parameter specifies the version of the app you want to build. See [Semantic
 
 #### 6.6 --app-identifier
 
-This parameter serves as a unique identifier for your app, which must conform to Android's [application ID](https://developer.android.com/studio/build/application-id) requirements as well as Apple's [CFBundleIdentifier](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html) requirements. Once your app is uploaded to the Apple App Store or the Play Store, the app’s identifier can no longer be modified. If you do modify the identifier after an app is published, it will be treated as a different app by both stores. An app identifier is specified as reverse DNS notation, e.g. {com.mendix.MyAwesomeApp}.
+This parameter serves as a unique identifier for your app, which must conform to Android's [application ID](https://developer.android.com/studio/build/application-id) requirements as well as Apple's [CFBundleIdentifier](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html) requirements. Once your app is uploaded to the Apple App Store or the Play Store, the app’s identifier can no longer be modified. If you do modify the identifier after an app is published, it will be treated as a different app by both stores. An app identifier is specified as reverse DNS notation, for example {com.mendix.MyAwesomeApp}.
 
 #### 6.8 --platform
 
@@ -200,7 +200,7 @@ This parameter specifies an app splash file. The image must be a *.png* file, an
 
 #### 6.13 --build-number
 
-Every build that is scheduled for release should have a unique, incrementing number. This number will be used as the name of the branch in GitHub, such as `branch/120`. The highest integer Android will allow is 2,147,483,647. Consider starting with 1 and incrementing by one with each release. Alternatively, you can use dates in the “YYmmddHHmm” format, such as `2007310950` for a build run on July 31, 2020 at 09:50.
+Every build that is scheduled for release should have a unique, incrementing number. This number will be used as the name of the branch in GitHub, such as `branch/120`. The highest integer Android will allow is 2,147,483,647. Consider starting with 1 and incrementing by one with each release. Alternatively, you can use dates in the “YYmmddHHmm” format, such as {2007310950} for a build run on July 31, 2020 at 09:50.
 
 ## 7 Advanced Usage
 
@@ -216,12 +216,12 @@ In App Center you can configure your builds at the branch level. If no configura
 
 Advanced users might wish to connect to a local running instance of Studio Pro. Be aware that if you make the changes described in this section to your template, you must revert all those changes to use the Native Builder with your template.
 
-While following the instructions below, be sure to replace any instance of `LOCAL_IP_ADDRESS` with *your* local IP address ({10.0.0.2} for example).
+While following the instructions below, be sure to replace any instance of `LOCAL_IP_ADDRESS` with *your* local IP address (for example, {10.0.0.2}).
 
 #### 7.3.1 Getting Started
 
 1. Clone your repository locally from GitHub.
-2. Switch to the latest branch created by Native Builder ({build/1} for example)
+2. Switch to the latest branch created by Native Builder (for example, {build/1})
 3. Follow this [guide](https://github.com/mendix/native-template#21-install-dependencies) to install your dependencies.
 
 #### 7.3.2 iOS
@@ -242,7 +242,7 @@ For an iOS app, do the following:
    let bundleUrl = AppUrl.forBundle(url: "http://LOCAL_IP_ADDRESS:8080", remoteDebuggingPackagerPort: 8083, isDebuggingRemotely: true)
    ```
 
-4. Locate the *Info.plist* file and replace the value of `Runtime url` with `http://LOCAL_IP_ADDRESS:8080`.
+4. Locate the *Info.plist* file and replace the value of `Runtime url` with *http://LOCAL_IP_ADDRESS:8080*.
 5. Run the app by clicking the **Play** button.
 
 #### 7.3.3 Android
@@ -253,9 +253,9 @@ For an Android app, do the following:
 
 1. Open the `android` directory using Android Studio.
 2. Open **app/src/main/java/com/mendix/nativetemplate/MainApplication.java**.
-3. On line **36** replace `false` with `true`.
+3. On line **36** replace `false` with *true*.
 4. Open **app/src/main/res/raw/runtime_url**.
-5. Replace the file's contents with `http://LOCAL_IP_ADDRESS:8080`.
+5. Replace the file's contents with *http://LOCAL_IP_ADDRESS:8080*.
 6. Run the app by clicking the **Play** button.
 
 ## 8 When to Sync Your Native Template {#sync-your-repository}

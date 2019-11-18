@@ -9,13 +9,13 @@ tags: ["native", "mobile", "ota", "native-builder", "over the air"]
 ## 1 Introduction
 
 Using Native Builder 3.0 and Mendix Studio 8.4, you can update your Mendix Native Apps over the air (OTA).
-OTA updates are a fast and painless way of updating things like layouts, pages, assets or even you app's business logic as are nanoflows and javascript actions.
+OTA updates are a fast and painless way of updating things like layouts, pages, assets or even you app's business logic (such as nanoflows and JavaScript actions).
 
-To support, Mendix Native Apps seperate the app in two parts. A wrapper that is basically a Native iOS or Android app and a bundle that is being loaded dynamically by said wrapper. Things like you business logic and static assets are part of this bundle that is dynamically interchangable.
+Native Apps are seperated in two parts: a wrapper that is basically a Native iOS or Android app and a bundle that is being loaded dynamically by said wrapper. Things like your business logic and static assets are part of this dynamically-loaded bundle.
 
-When you have changes you want to deploy, Mendix Native Builder can bundle them in a new updated bundle and painlessly deploy them. On the next app restart your app's users will be updated to the latest version and continue their business as usual.
+When you have changes you want to deploy, the Native Builder can bundle them in a new, updated bundle and painlessly deploy them. On the next app restart, your app's users will be updated to the latest version and continue their business as usual.
 
-OTA are bound to a specific app version and build number. That allows you to target specific updates to specific versions of you app. Therefor you can push an update for version 1.0.0, that might be a legacy version that support older devices and also push an update for your 2.0.0 version of your app that might include more features.
+OTA updates are bound to a specific app version and build number. This allows you to target specific updates to specific versions of your app. Therefore you can push an update for version 1.0.0 that might be a legacy version that supports older devices, and also push an update for the 2.0.0 version of your app that might include more features.
 
 **This how-to will teach you how to do the following:**
 
@@ -41,14 +41,14 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 Over the air updates can be used without redeploying of a new Mendix App in cases like: 
 
-- Style changes
-- Static assets changes, static images, text etc. 
-- Layout changes
-- Javascript action changes
-- Nanoflow changes
-- Widgets shipped with Mendix added or removed
-- A new custom javascript only widget or module was added
-- Non destructive model changes (see: [Offline First]("/refguide/offline-first.md"))
+* Style changes
+* Changes to static images, text, or other static assets
+* Layout changes
+* JaveScript action changes
+* Nanoflow changes
+* Widgets shipped with Mendix added or removed
+* A new custom Javascript-only widget or module was added
+* Non-destructive model changes (see: [Offline First](/refguide/offline-first.md))
 
 ### 3.2 When you will need to orchestrate a redeploy of your Mendix App before OTA
 
@@ -64,11 +64,11 @@ As a rule of thumb, if you have done any changes directly to the iOS or Android 
 the changes to take effect, you will have to fully redeploy you app to the app stores.
 In addition over the air updates cannot be performend in the following cases: 
 
-- You radically changed the app's functionality. This is a App Store limitation and will require a re-release and re-review of your app by Apple. Your app might be removed if you do not comply.
-- A new native module has been added
-- The app has been renamed
-- The app's launcher icons have been changed
-- The splash screen has been changed
+* You radically changed the app's functionality. This is a App Store limitation and will require a re-release and re-review of your app by Apple. Your app might be removed if you do not comply.
+* A new native module has been added
+* The app has been renamed
+* The app's launcher icons have been changed
+* The splash screen has been changed
 
 ## 4 Deploying An Over The Air Update
 
@@ -80,9 +80,9 @@ Before over the air updates, you would have to make a new release and configure 
 
 To release a new version OTA, follow these steps:
 
-1. Change the title and message as follows [to do: check picture and write out]: 
+1.  Change the title and message as follows [to do: check picture and write out]: 
    
-![Make some changes](attachments/how-to-ota/modeller-correct.png)
+   ![Make some changes](attachments/how-to-ota/modeller-correct.png)
 
 2. Save your changes.
 3. Note the version and build number of the app build you want to update. This how-to assumes an app version of 1.0.0 and a build number of 1.

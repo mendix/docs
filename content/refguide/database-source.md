@@ -2,6 +2,7 @@
 title: "Database Source"
 parent: "data-sources"
 tags: ["studio pro", "database", "data source"]
+menu_order: 10
 ---
 
 ## 1 Introduction

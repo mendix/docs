@@ -183,7 +183,7 @@ For distributing a specific platform, see the subsequent sections below:
 
 #### 5.1.1 Local Signing
 
-> This step can be skipped if [App Center Signing](#412-signing-android) was carried out. To sign your Android app locally, use apksigner by following Google's [apksigner documentation](https://developer.android.com/studio/command-line/apksigner).
+You can skip this section if you completed [App Center Signing](#412-signing-android). To sign your Android app locally, use apksigner by following Google's [apksigner documentation](https://developer.android.com/studio/command-line/apksigner).
 
 #### 5.1.2 Installing on a device
 
@@ -191,14 +191,14 @@ The *app-debug.apk* or *app-release.apk* can readily be installed on any device 
 
 To install your app via USB, connect your device to a machine via USB. To Install an APK from your device's file manager app this way:
 
-1. Follow the instructions on Google’s [Transfer files between your computer & Android device](https://support.google.com/android/answer/9064445?hl=en) to get the APK onto your device. Remember which folder you transfer the APK into.
-2. Open your phone’s file manager, navigate to the folder you transferred your APK to, then tap the APK file to open it.
+1. Follow the instructions on Google’s [Transfer files between your computer & Android device](https://support.google.com/android/answer/9064445?hl=en) to get the APK onto your device. Note which folder you transfer the APK into.
+2. Open your phone’s file manager, navigate to the folder containing your APK, then tap the APK file to open it.
 3. Tap the **Install** button.
 4. Tap the **Done** button when prompted. You should now be able to access your installed app via your **App Drawer**, as well as by tapping the **Open** button after the installation completes.
 
 <img alt="Android Application" src="attachments/deploying-native-app/android-app-launch.gif" height="520" />
 
-> You can also consult Google's [Run apps on a hardware device](https://developer.android.com/studio/run/device) for detailed instructions on testing your app using a physical Android device instead of an emulator.
+You can also consult Google's [Run apps on a hardware device](https://developer.android.com/studio/run/device) for detailed instructions on testing your app using a physical Android device instead of an emulator.
 
 #### 5.1.3 Uploading to Play Store
 
@@ -208,11 +208,11 @@ This section and the next only applies when the build was [Signed](#41-signed-bu
 
 #### 5.2.1 Local Signing
 
-> This step can be skipped if [App Center Signing](#411-signing-ios) was carried out. The assumption here is that you just want to be able to test the app on a device and/or you don't have a Distribution certificate and run out of build minutes on App Center when signing with a Developer certificate.
+You can skip this section if you completed [App Center Signing](#411-signing-ios). The assumption here is that you just want to be able to test the app on a device and/or you don't have a Distribution certificate and run out of build minutes on App Center when signing with a Developer certificate.
 
 In order to deploy the *nativeTemplate.xcarchive* on a device or on the App Store, an Apple developer account and a Development team is required. If one is available, do the following:
 
-* For an Xcode version less than version 11, double-click on the *nativeTemplate.xcarchive* file and it should open with the in-built *Application Loader* software.
+* For an Xcode version less than version 11, double-click on the *nativeTemplate.xcarchive* file and it should open with the built0in *Application Loader* software.
 
 * Click the *Distribute App* button to start the local signing flow.
 ![Xcode Application loader](attachments/deploying-native-app/xcode-app-loader-1.png)

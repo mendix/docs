@@ -93,7 +93,7 @@ This command does the following:
 
 ### 4.1 Signed Builds
 
-For Android, If you do not intend to publish the app to the Play Store, you can skip this section. For iOS, this step prepares an already installable *iOS App Store Package* (*.ipa*). Otherwise, an unsigned version of the app (*.xcarchive*) would be produced which would then need to be signed manually using Xcode in order to deploy on a device or in the App Store.
+For Android, If you do not intend to publish your app to the Google Play Store, you can skip this section. For iOS, this step prepares an already installable iOS App Store Package (*.ipa*). Without this section's instructions, an unsigned version of an iOS app (*.xcarchive*) would need to be signed manually using Xcode in order to deploy on a device or in the App Store.
 
 To sign your app using App Center, do the following:
 
@@ -149,24 +149,31 @@ This allows the Native Builder to build again using the same keys already config
 
 ### 4.2 Native Builder and App Center Build Phase
 
-![Native Builder starting a build](attachments/deploying-native-app/native-builder-starting-build.png)
-*Native Builder starting a build*
+After your start your Native Builder build, you will see some or all of the following:
 
-![App Center starting a build](attachments/deploying-native-app/appcenter-building.png)
-*App Center starting a build*
+* The Native Builder starting a build:
 
-![Successful App Center build](attachments/deploying-native-app/appcenter-successful.png)
-*Successful App Center build*
+ ![Native Builder starting a build](attachments/deploying-native-app/native-builder-starting-build.png)
 
-![Successful and Downloaded Android build](attachments/deploying-native-app/native-builder-successful-android.png)
-*Successful and Downloaded Android build*
+* App Center starting a build:
 
-![Successful and Downloaded iOS build](attachments/deploying-native-app/native-builder-successful-ios.png)
-*Successful and Downloaded iOS build*
+ ![App Center starting a build](attachments/deploying-native-app/appcenter-building.png)
+
+* A successful app center build:
+
+ ![Successful App Center build](attachments/deploying-native-app/appcenter-successful.png)
+
+* A successful and downloaded Android build:
+
+ ![Successful and Downloaded Android build](attachments/deploying-native-app/native-builder-successful-android.png)
+
+* A successful and downloaded iOS build:
+
+ ![Successful and Downloaded iOS build](attachments/deploying-native-app/native-builder-successful-ios.png)
 
 At this point, the downloaded *.zip* archives can be retrieved from the path provided by Native Builder.
 
-If your build times out, you can either sign your app locally as described in [Android Local Signing](#511-local-signing) and [iOS Local Signing](#521-local-signing) below or upgrade to a paid App Center account. This build issue is more likely to affect iOS builds than Android builds as this is a limitation when signing with an iOS developer profile.
+If your build times out, you can either sign your app locally as described in [Android Local Signing](#511-local-signing) and [iOS Local Signing](#521-local-signing) below, or upgrade to a paid App Center account. This build issue is more likely to affect iOS builds than Android builds as this is a limitation when signing with an iOS developer profile.
 
 In case of failure, the build logs will be downloaded for your convenience. Please provide them when filing a [support ticket](/developerportal/support/submit-support-request) with Mendix.
 

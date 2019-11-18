@@ -212,16 +212,35 @@ You can skip this section if you completed [App Center Signing](#411-signing-ios
 
 In order to deploy the *nativeTemplate.xcarchive* on a device or on the App Store, an Apple developer account and a Development team is required. If one is available, do the following:
 
-* For an Xcode version less than version 11, double-click on the *nativeTemplate.xcarchive* file and it should open with the built0in *Application Loader* software.
+1. For an Xcode version less than version 11, double-click on the *nativeTemplate.xcarchive* file and it should open with the built-in *Application Loader* software.
 
-* Click the *Distribute App* button to start the local signing flow.
-![Xcode Application loader](attachments/deploying-native-app/xcode-app-loader-1.png)
-![Xcode Application loader](attachments/deploying-native-app/xcode-app-loader-2.png)
-![Xcode Application loader](attachments/deploying-native-app/xcode-app-loader-3.png)
-![Xcode Application loader](attachments/deploying-native-app/xcode-app-loader-4.png)
-![Xcode Application loader](attachments/deploying-native-app/xcode-app-loader-5.png)
-![Xcode Application loader](attachments/deploying-native-app/xcode-app-loader-6.png)
-![Xcode Application loader](attachments/deploying-native-app/xcode-app-loader-7.png)
+2.  Click the *Distribute App* button to start the local signing flow.:
+
+ ![Xcode Application loader](attachments/deploying-native-app/xcode-app-loader-1.png)
+
+3.  Select **Development**:
+
+ ![Xcode Application loader](attachments/deploying-native-app/xcode-app-loader-2.png)
+ 
+4. Choose a **Development Team**:
+
+ ![Xcode Application loader](attachments/deploying-native-app/xcode-app-loader-3.png)
+
+5. Configure your **Development distribution options**:
+
+ ![Xcode Application loader](attachments/deploying-native-app/xcode-app-loader-4.png)
+
+6. Select a re-signing option:
+
+ ![Xcode Application loader](attachments/deploying-native-app/xcode-app-loader-5.png)
+
+7. Review your *.ipa* content and click **Export**:
+
+ ![Xcode Application loader](attachments/deploying-native-app/xcode-app-loader-6.png)
+
+8. Congratulations. You now have a signed *.ipa* file:
+
+ ![Xcode Application loader](attachments/deploying-native-app/xcode-app-loader-7.png)
 
 ### 5.2.2 Installing on a device
 

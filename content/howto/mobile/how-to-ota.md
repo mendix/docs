@@ -114,8 +114,10 @@ This command does the following:<br />
 
    ![Update success prompt](attachments/how-to-ota/phone-success-prompt.png)
 
-## 5 How to roll back updates
+## 5 Rolling Back Updates
+
 Sometimes and update might not perform as expected. Out of the box, when an update has failed, the auto update mechanism will try to recover by switching back to the bundle packaged with your app's binary. Non the less you will want to update your bundle by either fixing the issue and pushing a new update or by rolling back to the previous version.
+
 Let us assume that we want to rollback an update. Maybe we released it to early or something is wrong with the latest update.
 
 1. Get your list of available releases by running the following command: 
@@ -134,22 +136,22 @@ Let us assume that we want to rollback an update. Maybe we released it to early 
 
 ## 5 Initiating a Partial Initial Rollout
 
-### 5.1 When is it safe to roll back an update
+### 5.1 When is it Safe to Rollback an Update?
 
-Please see [When OTA updates are safe to do without redeploying a new Mendix App ](#safeToUpdate)
+Please see [When OTA updates are safe to do without redeploying a new Mendix App](#safeToUpdate).
 
-## 6 Configure an already pushed update
+## 6 Configuring an Already Pushed Update
 
 You might want to reconfigure an already pushed update for the following reasons: 
 
-- You did a partial rollout and want to raise the number
-- You want to make a update mandatory
+* You did a partial rollout and want to raise the number
+* You want to make a update mandatory
 
 The key here is `patch-update`. The `patch-update` command allows you to modify a pushed updated. You can modify things like a rollout percentage, or you can choose to make a release mandatory.
 
-### 6.1 Partial initial rollout
+### 6.1 Doing a Partial Rollout
 
-Say you wanted to test the stability of the new update. In this case it is good practice to test releases on a small number of your user base before fully rolling them out.
+Say you wanted to test the stability of the new update. In this case, it is good practice to test releases on a small number of your user base before fully rolling them out.
 
 To roll out your app to only *some* of your users, run this command: 
   
@@ -161,14 +163,13 @@ To fully roll out the update, run this command:
 
    `native-builder.exe release patch-update --project-name "CoolApp" --target-version "1.0.0" --build-number 1 --rollout-percentage 100`
 
-### 6.2 Releasing an optional update
+### 6.2 Releasing an Optional Update
 
-As an extension of `rollout-percentage` you can make builds optional. 
-To do so do: 
+Using a modification of `rollout-percentage` you can make builds optional. To do so, run this command: 
   
   `native-builder.exe release push-update --project-name "CoolApp" --target-version "1.0.0" --build-number 1 --rollout-percentage 100 --mandatory false`
 
-Instead of the mandatory update popup, you app's users should now be greeted with a optional popup, allowing them to choose if they want to install the update or not. 
+Instead of the mandatory update dialog window, you app's users should now be greeted with a optional dialog window. This window will allow them to choose to install the update or not. 
 
 ## 7 Preserving your Model's Integrity 
 

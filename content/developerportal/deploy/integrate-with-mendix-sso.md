@@ -340,7 +340,7 @@ To fix this, make sure the **AppCloudServices.StartAppCloudServices** microflow 
 
 ### 4.2 Realm Verification Errors
 
-These are commonly caused by compatibility issues with JAR files in the `<projectpath>/userlib` directory of your project. For details on the most common compatibility issues, refer to [Troubleshooting](/refguide/troubleshooting) in the *Mendix Studio Pro Guide*.
+These are commonly caused by compatibility issues with JAR files in the `<projectpath>/userlib` directory of your project. For details on the most common compatibility issues, refer to [Troubleshooting](/refguide/troubleshooting) in the *Studio Pro Guide*.
 
 ## 4 Read More
 

@@ -26,7 +26,7 @@ On the **App Service** page, you can see a list of the available app services, w
 
 ![](attachments/app-services/publish-appservice.png)
 
-For more information, see [Published App Services](/refguide/published-app-services) in the *Mendix Studio Pro Guide*.
+For more information, see [Published App Services](/refguide/published-app-services) in the *Studio Pro Guide*.
 
 ### 2.1 Settings
 

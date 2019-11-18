@@ -421,7 +421,7 @@ Replaces all occurrences of a regular expression with another string.
 
 {{% alert type="warning" %}}
 
-Please note that this function call uses a [regular expression](regular-expression) language provided by the current platform:
+Please note that this function call uses a [regular expression](regular-expressions) language provided by the current platform:
 
 * When used inside [microflows](microflows) – Java's regular expressions (for details, see [Class Pattern](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html))
 * When used in the client – JavaScript's regular expressions (for details, see [Regular Expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions))

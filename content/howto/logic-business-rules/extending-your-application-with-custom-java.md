@@ -166,8 +166,8 @@ To edit the Java action in Eclipse, follow these steps:
 
 If you get an `UnsupportedClassVersionError` error when running your app, follow these steps:
 
-1. Clean your app project's **deployment** folder.
-2. Add the same JDK version to Eclipse as that which you are using in Studio Pro (this direction of version correlation is recommended). For details on JDK requirements, see the [Mendix Studio Pro](/refguide/system-requirements#sp) section of *System Requirements*.
+1. Clean your app project's **deployment** folder by selecting **Project** > **Clean Deployment Directory**.
+2. Add the same JDK version to Eclipse as that which you are using in Studio Pro (this is the recommended version correlation). For details on JDK requirements, see the [Mendix Studio Pro](/refguide/system-requirements#sp) section of *System Requirements*.
 
 ## 8 Read More
 

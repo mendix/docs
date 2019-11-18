@@ -65,7 +65,7 @@ The documents you view and edit are shown in tabs. You can have a number of tabs
 
 Studio Pro supports a number of dockable window panes. You can close some panes to just show the ones you need at the moment, but you can always reopen them via the **View** menu. 
 
-#### 5.1.1 Changes
+#### 5.1.1 Changes {#changes}
 
 For [Team Server](/developerportal/develop/team-server) app projects, this pane shows the local changes to the app project since the last commit. You can commit changes, update to the latest revision, and view the history from here. 
 

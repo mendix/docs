@@ -97,45 +97,55 @@ For Android, If you do not intend to publish the app to the Play Store, you can 
 
 To sign your app using App Center, do the following:
 
-* Navigate to [App Center](https://appcenter.ms/apps).
-* Select the application you wish to configure.
-* Select *Build* on the left panel.
-* Select the *branch* you would like to configure from the list.
+1. Navigate to [App Center](https://appcenter.ms/apps).
+2. Select the application you wish to configure.
+3. Select *Build* on the left panel.
+4. Select the *branch* you would like to configure from the list.
 
 The next steps differ depending on the type of app you want to configure.
 
-#### 4.1.1 Signing iOS
+#### 4.1.1 Signing a Build for iOS
 
-* Select the *Wrench icon* in the top-right corner to open the *Build configuration* panel.
-![Build Wrench](attachments/deploying-native-app/ios-build-wrench.png)
-* Turn the *Sign builds* toggle on.
-![iOS sign upload](attachments/deploying-native-app/ios-sign-upload.png)
-* Upload your mobile provisioning profile. A Distribution profile is prefered as App Center has a hard limit on 30 minutes for free accounts signing with a Developer profile.
-* Upload your *.p12* certificate.
-* Provide the password you used when exporting the *.p12* certificate.
-* Click *Save*, or *Save and build* if you wish to build immediately.
+1.  Click the **Wrench icon** in the top-right corner to open the **Build configuration** panel:
 
-#### 4.1.2 Signing Android
+ ![Build Wrench](attachments/deploying-native-app/ios-build-wrench.png)
 
-* Select the *Wrench icon* in the top-right corner to open the *Build configuration* panel.
-![Build Wrench](attachments/deploying-native-app/android-build-wrench.png)
-* In the *Build Variant* drop-down menu, select *release*
-![Android release variant](attachments/deploying-native-app/android-release-variant.png)
-* Select *Sign builds*
-![Android sign upload](attachments/deploying-native-app/android-sign-upload.png)
-* Upload your keystore file.
-* Provide the password to your keystore.
-* Provide the name of your key’s alias.
-* Provide the password of the key’s alias.
-* Click *Save*, or *Save and build* if you wish to build immediately.
+2.  Turn the **Sign builds** toggle on:
 
-Finally, either start a build for this branch manually or run the `build` command again with the same *Build number* as before:
+ ![iOS sign upload](attachments/deploying-native-app/ios-sign-upload.png)
+
+3. Upload your mobile provisioning profile. A **Distribution** profile is best, as App Center has a 30 minute limit for free accounts signing with a **Developer** profile.
+4. Upload your *.p12* certificate.
+5. Provide the password you used when exporting the *.p12* certificate.
+6. Click **Save**, or **Save and build** if you wish to build immediately.
+
+#### 4.1.2 Signing a Build for Android
+
+1. Select the *Wrench icon* in the top-right corner to open the *Build configuration* panel:
+
+ ![Build Wrench](attachments/deploying-native-app/android-build-wrench.png)
+
+2. In the *Build Variant* drop-down menu, select *release*:
+
+ ![Android release variant](attachments/deploying-native-app/android-release-variant.png)
+
+3. Select *Sign builds*:
+
+ ![Android sign upload](attachments/deploying-native-app/android-sign-upload.png)
+
+4. Upload your keystore file.
+5. Provide the password to your keystore.
+6. Provide the name of your key’s alias.
+7. Provide the password of the key’s alias.
+8. Click **Save**, or **Save and build** if you wish to build immediately.
+
+Finally, either start a build for this branch manually or run the `build` command again with the same build number as before:
 
 ```bash
 native-builder.exe build --project-name CoolApp --build-number 1 --app-version 0.1.0
 ```
 
-This allows Native Builder to build again using the same keys already configured on App Center.
+This allows the Native Builder to build again using the same keys already configured on App Center.
 
 ### 4.2 Native Builder and App Center Build Phase
 
@@ -156,9 +166,9 @@ This allows Native Builder to build again using the same keys already configured
 
 At this point, the downloaded *.zip* archives can be retrieved from the path provided by Native Builder.
 
-> As earlier stated, If your build times out (which happens to free App Center users after building for longer than 30 minutes), you can either sign your app locally described in [Android Local Signing](#511-local-signing) and [iOS Local Signing](#521-local-signing) below or upgrade to a paid App Center account. This build issue is more likely to affect iOS builds than Android builds as this is a limitation when signing with an iOS developer profile as opposed to an iOS distribution profile.
+If your build times out, you can either sign your app locally as described in [Android Local Signing](#511-local-signing) and [iOS Local Signing](#521-local-signing) below or upgrade to a paid App Center account. This build issue is more likely to affect iOS builds than Android builds as this is a limitation when signing with an iOS developer profile.
 
-> In case of failure, the build logs will be downloaded for your convenience. Remember to provide them when filing a ticket with Mendix.
+In case of failure, the build logs will be downloaded for your convenience. Please provide them when filing a [support ticket](/developerportal/support/submit-support-request) with Mendix.
 
 ## 5. Distributing
 

@@ -119,11 +119,11 @@ And in the Mendix example app they will be mapped to these roles:
 
 ![Mendix Project Security dialog](attachments/mindsphere-module-details/image9.png)
 
-## 3 MindSphere OS Bar{#msosbar}
+## 3 MindSphere OS Bar {#msosbar}
 
 All MindSphere apps must integrate the MindSphere OS Bar. This unifies the UI of all MindSphere apps. It is used for showing the app name, routing back to the Launchpad, and signing out from MindSphere easily. Apps without the MindSphere OS Bar will not be validated for deployment to a MindSphere production environment.
 
-You can see how the MindSphere OS Bar Integration works in [MindSphere OS Bar Integration](https://developer.mindsphere.io/resources/osbar/resources-osbar-getting-started.html#mindsphere-os-bar-integration), on the MindSphere developer website.
+You can see how the MindSphere OS Bar Integration works in [MindSphere OS Bar](https://design.mindsphere.io/osbar/introduction.html), on the MindSphere developer website.
 
 The MindSphereOSBarConfig module creates an endpoint which is used by the MindSphere OS Bar to provide tenant context and information about the application. The MindSphereOSBarConfig module is included in the MindSphere starter app, or can be downloaded from the Mendix App Store here: [MindSphere OS Bar Connector](https://appstore.home.mendix.com/link/app/108804/).
 

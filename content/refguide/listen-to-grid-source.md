@@ -2,6 +2,7 @@
 title: "Listen to Widget Source"
 parent: "data-sources"
 tags: ["studio pro", "listen to widget", "data source"]
+menu_order: 70
 ---
 
 ## 1 Introduction

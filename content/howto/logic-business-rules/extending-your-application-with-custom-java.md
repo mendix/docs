@@ -162,7 +162,15 @@ To edit the Java action in Eclipse, follow these steps:
 	{{% image_container width="600" %}}![](attachments/extend-custom-java/app2.png)
 	{{% /image_container %}}
 
-## 7 Read More
+## 7 Troubleshooting {#troubleshooting}
+
+If you get an 'unsupportedclassversionerror' error specifying that you are trying to compile with a newer version of Java than that which you are running in Studio Pro, follow these steps:
+
+1. Clean your app project's **deployment** folder.
+2. Add the same JDK version to Studio Pro as that which you are using in Eclipse. 
+3. -or- Add the same JDK version to Eclipse as that which you are using in Studio Pro.
+
+## 8 Read More
 
 * [Define Access Rules Using XPath](define-access-rules-using-xpath)
 * [Trigger Logic Using Microflows](triggering-logic-using-microflows)

@@ -127,7 +127,7 @@ This tool can be used to debug your application.
 
 In this pane, you can view the current values of variables, lists, and objects when debugging your application.
 
-### 5.2 Other View Menu Items
+### 5.2 Other View Menu Items {#other-view}
 
 | Menu Item | Description | Shortcut Key |
 | --- | --- | --- |

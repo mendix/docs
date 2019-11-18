@@ -202,7 +202,15 @@ You can also consult Google's [Run apps on a hardware device](https://developer.
 
 #### 5.1.3 Uploading to Play Store
 
-This section and the next only applies when the build was [Signed](#41-signed-builds) earlier and contains an *app-release.apk* build, read Google's overview of [the Android app publishing process](http://developer.android.com/tools/publishing/publishing_overview.html). Before submitting your app to an app store, you will have to complete the [signup steps](https://play.google.com/apps/publish/signup/) of signing-in with your Google account, accepting the developer agreement, paying the registration fee, and completing your account details. Also, [review the launch checklist](http://developer.android.com/distribute/tools/launch-checklist.html). Google provides information on [publishing your app in the Google Play Store](https://developer.android.com/studio/publish). Once you have satisfied those requirements, you can [Upload your app to the Play Console](https://developer.android.com/studio/publish/upload-bundle) to the Play Console. Then, Follow the steps in Google's [Prepare & roll out releases](https://support.google.com/googleplay/android-developer/answer/7159011) to create, prepare, review, and roll out your app release.
+This section details publishing a signed Android app to the Google Play store. This section can only be be started if you done the following:
+
+* Completed the [Signed](#41-signed-builds) section above
+* Produced an *app-release.apk* build
+* Read Google's overview of [the Android app publishing process](http://developer.android.com/tools/publishing/publishing_overview.html). 
+
+Before submitting your app to an app store, you will have to complete Google's [signup steps](https://play.google.com/apps/publish/signup/). Also, [review the launch checklist](http://developer.android.com/distribute/tools/launch-checklist.html) before publishing your app. Beyond the launch checklist information, check Google's [Preparing your app for release](https://developer.android.com/studio/publish) for information on edge cases to resolve before publishing. 
+
+Once you have satisfied those requirements, you can [Upload your app to the Play Console](https://developer.android.com/studio/publish/upload-bundle). Then, follow the steps in Google's [Prepare & roll out releases](https://support.google.com/googleplay/android-developer/answer/7159011) to create, prepare, review, and roll out your app release.
 
 ### 5.2 Distributing for iOS
 

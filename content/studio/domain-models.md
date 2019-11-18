@@ -64,7 +64,7 @@ Entities have the following properties:
 
   * **Name** – defines the name of the entity
 
-  * **Persistable** – defines whether objects of the entity are stored in the database (for more information on persistability, see [Persistability](/refguide/persistability) in *Studio Pro Guide*)
+  * **Persistable** – defines whether objects of the entity are stored in the database (for more information on persistability, see [Persistability](/refguide/persistability) in the *Studio Pro Guide*)
 
 		![General Properties of an Entity](attachments/domain-models/entity-general-properties.png)
 

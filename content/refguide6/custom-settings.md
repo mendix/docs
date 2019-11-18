@@ -154,8 +154,8 @@ These settings can be used to store files using the Microsoft Azure blob storage
 | com.mendix.storage.azure.AccountKey | Account key to authenticate with the azure blob storage service |   |
 | com.mendix.storage.azure.Container | Name of the container containing the blob. The container is created in case it does not exist yet. |   |
 | com.mendix.storage.azure.ParallelismFactor | Maximum number of parallel multi-part file uploads / downloads. We advise not to change this setting unless you experience slow file transfers for large files. Choosing larger values will lead to higher memory usage. | 5 |
-| com.mendix.storage.azure.TimeoutIntervalInMs | Sets the amount of time (in milliseconds) to allow a call to the storage service to complete. For more information, see [the Azure Libraries](https://azure.github.io/azure-sdk-for-java/com/microsoft/azure/storage/RequestOptions.html#setTimeoutIntervalInMs-java.lang.Integer-). | No timeout |
-| com.mendix.storage.azure.MaximumExecutionTimeInMs | Sets the maximum execution time (in milliseconds) to use when making this request. For more information, see [the Azure Libraries](https://azure.github.io/azure-sdk-for-java/com/microsoft/azure/storage/RequestOptions.html#setMaximumExecutionTimeInMs-java.lang.Integer-). | No maximum time |
+| com.mendix.storage.azure.TimeoutIntervalInMs | Sets the amount of time (in milliseconds) to allow a call to the storage service to complete. For more information, see [the Azure Libraries](https://azure.github.io/azure-sdk-for-java/storage.html). | No timeout |
+| com.mendix.storage.azure.MaximumExecutionTimeInMs | Sets the maximum execution time (in milliseconds) to use when making this request. For more information, see [the Azure Libraries](https://azure.github.io/azure-sdk-for-java/storage.html). | No maximum time |
 
 ## <a name="ibm"></a>8 IBM Bluemix Object Storage Settings
 

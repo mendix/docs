@@ -157,7 +157,7 @@ In order to receive Mendix points for your contributions to Mendix GitHub reposi
 | Activity | Points | Max. per Day |
 | --- | --- | --- |
 | Pass the [Expert Developer Certification](https://gettingstarted.mendixcloud.com/link/certification/expert) exam | 100 | N/A |
-| Pass the [Advanced Developer](https://gettingstarted.mendixcloud.com/link/certificatioN/Advanced) exam | 50 | N/A |
+| Pass the [Advanced Developer](https://gettingstarted.mendixcloud.com/link/certification/advanced) exam | 50 | N/A |
 | Give a presentation on Mendix | 25 | N/A |
 | Write a blog post that is featured on the Mendix [Community Blog](https://developers.mendix.com/community-blog/) | 25 | N/A |
 | Pass the [Rapid Developer Certification](https://gettingstarted.mendixcloud.com/link/certification/rapid) exam | 25 | N/A |

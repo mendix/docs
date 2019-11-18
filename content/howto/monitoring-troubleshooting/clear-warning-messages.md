@@ -178,4 +178,4 @@ Variable ‘Variable’ is never used.
 * [Debug Java Actions](debug-java-actions)
 * [Debug Microflows Remotely](debug-microflows-remotely)
 
-Several warnings relate to improper security. For more information on this, see [Project Security](/refguide/project-security) in the *Mendix Studio Pro Guide*.
+Several warnings relate to improper security. For more information on this, see [Project Security](/refguide/project-security) in the *Studio Pro Guide*.

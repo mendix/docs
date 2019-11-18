@@ -16,6 +16,11 @@ For more information on hybrid mobile app development in Mendix, see the [Hybrid
 
 ## 2019
 
+### Hybrid App Base 4.1.7
+**Release date: November 18th, 2019**
+
+* We fixed an issue with missing build scripts
+
 ### Hybrid App Base 4.1.6
 
 **Release date: November 12th, 2019**

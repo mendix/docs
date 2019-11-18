@@ -2,7 +2,7 @@
 title: "Extend Your Application with Custom Java"
 category: "Logic & Business Rules"
 menu_order: 12
-tags: ["microflow", "logic", "java", "extend"]
+tags: ["microflow", "logic", "java", "extend", "jdk", "custom"]
 ---
 
 ## 1 Introduction

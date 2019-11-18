@@ -20,7 +20,7 @@ For more information on hybrid mobile app development in Mendix, see the [Hybrid
 
 **Release date: November 12th, 2019**
 
-* We fixed an issue that would stop an app from loading on iPads running iOS 13.
+* We fixed an issue that would stop apps from loading on iPads running iOS 13.
 
 ### Hybrid App Base 4.1.5 
 **Release date: November 12th, 2019**

@@ -2,6 +2,7 @@
 title: "XPath Source"
 parent: "data-sources"
 tags: ["studio pro", "xpath", "xpath source", "data source"]
+menu_order: 20
 ---
 
 ## 1 Introduction

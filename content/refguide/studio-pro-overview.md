@@ -77,7 +77,7 @@ This pane has two levels, so when you zoom into a changed document, you can revi
 
 This pane displays elements that can be connected to the currently selected element. For example, when a button is a selected, the **Connector** shows microflows that you can drag onto the button to connect them.
 
-#### 5.1.3 Console
+#### 5.1.3 Console {#console}
 
 This pane displays the output of the [Mendix Runtime](runtime) while running an application.
 

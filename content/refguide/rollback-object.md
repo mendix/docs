@@ -24,7 +24,7 @@ See [Common Properties](microflow-element-common-properties) for properties that
 
 {{% /alert %}}
 
-If the microflow is called from the client, [input widgets](input-widgets) showing the rolled back object's attributes are refreshed automatically. This includes updating their visibility and editability [conditions](conditions).
+If the microflow is called from the client, [input widgets](input-widgets) showing the rolled back object's attributes are refreshed automatically. This includes updating their visibility and editability [properties](common-widget-properties).
 
 ## 2 Input Properties
 

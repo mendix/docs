@@ -3,6 +3,7 @@ title: "On Click Event & Events Section"
 parent: "pages"
 menu_order: 130
 tags: ["studio pro", "events section", "properties", "widget", "on click", "action", "on click event"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
@@ -66,9 +67,11 @@ No action is taken. This option is useful for setting up a page without defining
 
 The **Show a page** event opens the specified page. Select the page which opens using the options below:
 
-* **Page** – a [page](page) that should open. For more information opening pages function, see [Opening Pages](opening-pages).
+* **Page** – a [page](page) that should open.
 
-* **Page title** – the page you open can be given a unique title, depending on where you open it from. This option is activated by checking the **Override page title** check box in the **Edit** dialog window:
+* **Page title** – the page you open can be given a unique title, depending on where you open it from. This allows you to re-use the same page for different purposes. For example, by setting the title to **New Customer** from one button and **Edit Customer** from another, you can use the same page for editing new and existing customers.
+
+    This option is activated by checking the **Override page title** check box in the **Edit** dialog window:
 
     ![Page Title Property](attachments/on-click-event/page-title-property.png)
 
@@ -78,13 +81,97 @@ The **Show a page** event opens the specified page. Select the page which opens 
 
 The **Call a microflow** event executes the specified microflow. The following settings are specific for this event:
 
-* **Microflow** – a [microflow](microflow) that should be executed.
+#### 3.3.1 Microflow{#microflow}
 
-* **Microflow settings** – specify what parameters will be passed to the microflow, whether to show a progress bar or not, etc. For more information on microflow settings, see [Starting Microflows](starting-microflows).
+The [microflow](microflow) that should be executed.
+
+#### 3.3.2 Microflow Settings
+
+**Microflow settings** opens a dialog box enabling you to specify what parameters will be passed to the microflow and how the microflow will be run.
+
+![Microflow settings dialog](attachments/on-click-event/microflow-settings.png)
+
+##### 3.3.2.1 Microflow
+
+This duplicates the [Microflow](#microflow) specified above.
+
+##### 3.3.2.2 Microflow Arguments
+
+**Microflow arguments** are automatically configured based on the parameters of the selected microflow and the available arguments. In general arguments are taken from any enclosing data widget. If the data widget enclosing the widget calling a microflow is inside another (nested) data widget, then objects from that data widget and any others in which it is nested can also be passed.
+
+If the microflow is triggered within a grid and has an object list parameter, the objects which are passed in the list depend on the selection mode of the grid. Simple multi-selection allows for either all rows or  selection, and defaults to selection. This can be configured via the drop-down in the microflow settings page.
+
+##### 3.3.2.3 Microflow Call Type
+
+**Microflow call type** specifies whether the microflow is executed synchronously or asynchronously.
+
+* **Synchronous** *(default)* – The client waits until the microflow is done executing
+
+* **Asynchronous**
+
+    * The client executes the microflow but does not wait for the result
+
+    * The client checks the server every ten seconds to see whether the microflow is done executing
+
+    * Only set the call type to asynchronous if you experience problems — sometimes, if a request takes too long to handle, the request will be sent again by an (impatient) proxy server
+
+##### 3.3.2.4 Show Progress Bar
+
+**Show progress bar** specifies whether a progress bar is shown during the execution of the microflow. The message shown in the progress bar can be set with the 'Progress message' property.
+
+| Value | Description |
+| --- | --- |
+| None | No progress bar is shown. |
+| Non-Blocking | A progress bar is shown, but the end-user can continue working. |
+| Blocking | A progress bar is shown and the end-user must wait until the microflow is done. |
+
+##### 3.3.2.5 Progress Message
+
+If a progress bar is shown, **Progress message** is the text which is shown next to the progress bar.
+
+##### 3.3.2.6 Ask Confirmation
+
+If **Ask Confirmation** is set to **Yes**, the end-user will be asked for confirmation before proceeding with the microflow. This is useful in cases where an operation modifies or deletes a lot of data or when it takes a lot of time to complete.
+
+The user will be prompted with the text set in [Question](#question), below. The window title of the confirmation pop-up is determined by a system text (category 'Message dialog title').
+
+The default value is **No**.
+
+##### 3.3.2.7 Question
+
+If **Ask confirmation** is set to yes, **Question** is what is shown to the user. Ensure that the question asked is clear and that the captions set on the buttons are unambiguous.
+
+For example, *Are you sure you want to empty the trash can?*
+
+##### 3.3.2.8 Proceed Button Caption
+
+If **Ask confirmation** is set to yes, this is the caption for the button that proceeds with the execution of the microflow.
+
+For example, *Empty it*.
+
+##### 3.3.2.9 Cancel Button Caption
+
+If **Ask confirmation** is set to yes, this is the caption for the button that cancels the execution of the microflow.
+
+For example, *Do not empty*.
+
+##### 3.3.2.10 Maintain Selection After Microflow
+
+For buttons which call a microflow from inside a grid, **Maintain selection after microflow** specifies whether the current selection of rows in the grid should be maintained after executing the microflow.
+
+##### 3.3.2.11 Abort on Validation Errors
+
+For microflows that are used within a data widget, setting **Abort on Validation Errors** to **Yes** forces widget validations to be performed _before_ executing the microflow. If the validations fail, the microflow will not be executed.
+
+| Value | Description |
+| --- | --- |
+| Yes *(default)*| This will prevent the microflow from executing if there are any validation errors on the page. |
+| Only for this widget | This will prevent the microflow from executing if there are validation errors in the current widget. |
+| No | The microflow will always be executed. |
 
 ### 3.4 Call a Nanoflow {#call-nanoflow}
 
-The **Call a microflow** event executes the specified nanoflow. 
+The **Call a nanoflow** event executes the specified nanoflow. 
 
 Set the **Nanoflow** property to specify a [nanoflow](nanoflow) that should be executed.
 

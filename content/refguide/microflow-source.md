@@ -2,6 +2,7 @@
 title: "Microflow Source"
 parent: "data-sources"
 tags: ["studio pro", "microflow source", "data source"]
+menu_order: 40
 ---
 
 ## 1 Introduction
@@ -16,7 +17,7 @@ A microflow data source ignores all context. It performs the actions described i
 When **Microflow** is selected as the data source, this is regarded as "indirect usage." This means that you cannot also select an **Entity (path)** as you can with the **Database**, **XPath**, or **Association** data source types.
 {{% /alert %}}
 
-## 2 Microflow Data Source Scenario
+## 2 Microflow Data Source Example
 
 In this scenario, you have a data grid that needs to display a list of potential orders based on the order type:
 
@@ -38,19 +39,24 @@ This microflow does the following:
 2. It then splits on the **OrderType** attribute and retrieves a different set of products for each enumeration value. 
 3. It returns a list of products, and each end event is configured to return a list. Note that the **empty** path also requires a value, wherein **empty** is also a value. 
 
-## 3 Properties for Microflow Type
+## 3 Properties
 
-###  3.1 Microflow
+###  3.1 Microflow{#microflow}
 
 This designates the microflow to be used to populate the data widget. This microflow will be run whenever the data widget is loaded into the browser or refreshed. The microflow must have a return value of either an object or a list of objects, depending on the data widget being used.
 
 ### 3.2 Microflow Settings
 
-Depending on the **Microflow** selected, this specifies what parameters will be passed to the microflow, whether to show a progress bar, etc.
+**Microflow settings** opens a dialog box enabling you to specify what parameters will be passed to the microflow.
 
-For more information on microflow settings, see [Starting Microflows](starting-microflows).
+#### 3.2.1 Microflow
+
+This duplicates the [Microflow](#microflow) specified above.
+
+#### 3.2.2 Microflow Arguments
+
+**Microflow arguments** are automatically configured based on the parameters of the selected microflow and the available arguments. In general arguments are taken from any enclosing data widget. If the data widget enclosing the widget calling a microflow is inside another (nested) data widget, then objects from that data widget and any others in which it is nested can also be passed.
 
 ## 4 Read More
 
-* [Starting Microflows](starting-microflows)
 * [Data Widgets](data-widgets)

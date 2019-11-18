@@ -93,7 +93,7 @@ This command does the following:
 
 ### 4.1 Signed Builds
 
-> For Android, If you do not intend to publish the app to the Play Store, this step can be skipped. For iOS, this step prepares an already installable *iOS App Store Package* (.ipa). Otherwise, a unsigned version of the app *(.xcarchive)* would be produced which would then need to be signed manually using Xcode in order to deploy on either a device or in the App Store.
+For Android, If you do not intend to publish the app to the Play Store, you can skip this section. For iOS, this step prepares an already installable *iOS App Store Package* (*.ipa*). Otherwise, an unsigned version of the app (*.xcarchive*) would be produced which would then need to be signed manually using Xcode in order to deploy on a device or in the App Store.
 
 To sign your app using App Center, do the following:
 

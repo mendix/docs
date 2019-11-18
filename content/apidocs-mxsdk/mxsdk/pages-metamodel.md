@@ -173,7 +173,7 @@ Studio Pro Guide | Model SDK API docs
 [Input Widgets](/refguide/input-widgets) | [ReferenceSetSelector](https://apidocs.mendix.com/modelsdk/latest/classes/pages.referencesetselector.html)
 [Reference selector](/refguide/reference-selector) | [PageSettings](https://apidocs.mendix.com/modelsdk/latest/classes/pages.pagesettings.html)
 [Reference set selector](/refguide/reference-set-selector) | [MicroflowSettings](https://apidocs.mendix.com/modelsdk/latest/classes/pages.microflowsettings.html)
-[Starting Microflows](/refguide/starting-microflows) |
+[Call a Microflow](/refguide/on-click-event#call-microflow) |
 [Pages](/refguide/pages) |
 
 ## 10 Read More

@@ -3,6 +3,7 @@ title: "On Click Event & Events Section"
 parent: "pages"
 menu_order: 130
 tags: ["studio pro", "events section", "properties", "widget", "on click", "action", "on click event"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
@@ -98,7 +99,7 @@ This duplicates the [Microflow](#microflow) specified above.
 
 **Microflow arguments** are automatically configured based on the parameters of the selected microflow and the available arguments. In general arguments are taken from any enclosing data widget. If the data widget enclosing the widget calling a microflow is inside another (nested) data widget, then objects from that data widget and any others in which it is nested can also be passed.
 
-If the microflow is triggered within a grid and has an object list parameter, the objects which are passed in the list depend on the selection mode of the grid. Simple multi-selection allows for either all rows or  selection, and defaults to selection. This can be configured via the drop-down menu in the microflow settings page.
+If the microflow is triggered within a grid and has an object list parameter, the objects which are passed in the list depend on the selection mode of the grid. Simple multi-selection allows for either all rows or  selection, and defaults to selection. This can be configured via the drop-down in the microflow settings page.
 
 ##### 3.3.2.3 Microflow Call Type
 
@@ -112,7 +113,7 @@ If the microflow is triggered within a grid and has an object list parameter, th
 
     * The client checks the server every ten seconds to see whether the microflow is done executing
 
-    * Only set the duration to asynchronous if you experience problems — Sometimes if a request takes too long to handle, the request will be sent again by an (impatient) proxy server
+    * Only set the call type to asynchronous if you experience problems — sometimes, if a request takes too long to handle, the request will be sent again by an (impatient) proxy server
 
 ##### 3.3.2.4 Show Progress Bar
 
@@ -140,19 +141,19 @@ The default value is **No**.
 
 If **Ask confirmation** is set to yes, **Question** is what is shown to the user. Ensure that the question asked is clear and that the captions set on the buttons are unambiguous.
 
-For example, *Are you sure you want to empty the trash can?*.
+For example, *Are you sure you want to empty the trash can?*
 
 ##### 3.3.2.8 Proceed Button Caption
 
 If **Ask confirmation** is set to yes, this is the caption for the button that proceeds with the execution of the microflow.
 
-For example, *Empty trash can*.
+For example, *Empty it*.
 
 ##### 3.3.2.9 Cancel Button Caption
 
 If **Ask confirmation** is set to yes, this is the caption for the button that cancels the execution of the microflow.
 
-For example, *Do not empty trash can*.
+For example, *Do not empty*.
 
 ##### 3.3.2.10 Maintain Selection After Microflow
 
@@ -164,11 +165,11 @@ For microflows that are used within a data widget, setting **Abort on Validation
 
 | Value | Description |
 | --- | --- |
-| Yes *(default)*| This will prevent the microflow from executing on all validation errors. |
-| Only for this widget | This will prevent the microflow from executing on validation errors of the specific widget. |
+| Yes *(default)*| This will prevent the microflow from executing if there are any validation errors on the page. |
+| Only for this widget | This will prevent the microflow from executing if there are validation errors in the current widget. |
 | No | The microflow will always be executed. |
 
-## 3.4 Call a Nanoflow {#call-nanoflow}
+### 3.4 Call a Nanoflow {#call-nanoflow}
 
 The **Call a nanoflow** event executes the specified nanoflow. 
 

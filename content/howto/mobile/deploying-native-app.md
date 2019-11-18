@@ -110,7 +110,7 @@ The next steps differ depending on the type of app you want to configure.
 
  ![Build Wrench](attachments/deploying-native-app/ios-build-wrench.png)
 
-2.  Turn the **Sign builds** toggle on:
+2.  Switch the **Sign builds** toggle on:
 
  ![iOS sign upload](attachments/deploying-native-app/ios-sign-upload.png)
 
@@ -121,15 +121,15 @@ The next steps differ depending on the type of app you want to configure.
 
 #### 4.1.2 Signing a Build for Android
 
-1. Select the *Wrench icon* in the top-right corner to open the *Build configuration* panel:
+1. Select the **Wrench icon** in the top-right corner to open the **Build configuration** panel:
 
  ![Build Wrench](attachments/deploying-native-app/android-build-wrench.png)
 
-2. In the *Build Variant* drop-down menu, select *release*:
+2. In the **Build Variant** drop-down menu, select **release**:
 
  ![Android release variant](attachments/deploying-native-app/android-release-variant.png)
 
-3. Select *Sign builds*:
+3. Select **Sign builds**:
 
  ![Android sign upload](attachments/deploying-native-app/android-sign-upload.png)
 
@@ -229,29 +229,28 @@ You can now deploy your app to your device. An easy way to do this is with Apple
 
 To install the *ipa* on your device, follow these steps:
 
-1. Connect your Apple device to your computer. Both will show dialog boxes which ask you to confirm that you trust the devices. Click **Continue** on your device, and **Trust This Computer?** on your mobile device to proceed.
+1.  Connect your Apple device to your computer. Both will show dialog boxes which ask you to confirm that you trust the devices. Tap **Continue** on your device, and **Trust This Computer?** on your mobile device to proceed:
 
-![trust dialog](attachments/deploying-native-app/appletrust.png)
+ ![trust dialog](attachments/deploying-native-app/appletrust.png)
 
-1. Open iTunes and connect your iOS device to your computer.
-2. Select the *.ipa* package file that you downloaded earlier, and drag it onto your device's **Devices** section on iTunes' left menu. Drop the *.ipa* file there to install it on your device.
-3. If there is an existing version, iTunes will ask if you want to replace that existing version of the app. If there is one, do so.
-4. Your app will show up in the list of apps. Click the **Install** button next to your app.
-5. Click **Apply** at the bottom of the screen to execute the actual installation.
+2. Open iTunes and connect your iOS device to your computer.
+3. Select the *.ipa* package file that you downloaded earlier, and drag it onto your device's **Devices** section on iTunes' left menu. Drop the *.ipa* file there to install it on your device.
+4. If there is an existing version, iTunes will ask if you want to replace that existing version of the app. If there is one, do so.
+5. Your app will show up in the list of apps. Click the **Install** button next to your app.
+6. Click **Apply** at the bottom of the screen to execute the actual installation.
 
 ### 5.2.3 Uploading to App Store
 
 This section and the next only applies when the build was [Signed](#41-signed-builds) for the Apple Store earlier.
 
 1. Follow Apple's [Add an app to your account](https://help.apple.com/app-store-connect/#/dev2cd126805) tutorial to add an app entry to your account.
-2. After adding a new app to your account, follow Apple's [View and edit app information](https://help.apple.com/app-store-connect/#/dev97865727c) tutorial to describe your new app entry. Consult the other pages under the left menu's **Enter app information** category should they apply to your app:
+2.  After adding a new app to your account, follow Apple's [View and edit app information](https://help.apple.com/app-store-connect/#/dev97865727c) tutorial to describe your new app entry. Consult the other pages under the left menu's **Enter app information** category should they apply to your app:
 
-![enter app information](attachments/deploying-native-app/ios-enter-app-info.png)
+ ![enter app information](attachments/deploying-native-app/ios-enter-app-info.png)
 
 1. Follow Apple's [Uploading builds overview](https://help.apple.com/app-store-connect/#/dev82a6a9d79) to upload a build of your app to App Store Connect.
 2. Use Apple's [Upload tools guide](https://help.apple.com/app-store-connect/#/devb1c185036) to upload your *ipa*.
 3. Use Apple's [Choose the build before you submit to review](https://help.apple.com/app-store-connect/#/dev7cbda8c55) to select the build which you will submit to App Review.
+4.  Publish your app by following Apple's [Overview of publishing an app](https://help.apple.com/app-store-connect/#/dev34e9bbb5a) and the subsequent documents in the left menu's **Publish on the App Store** category:
 
-Publish your app by following Apple's [Overview of publishing an app](https://help.apple.com/app-store-connect/#/dev34e9bbb5a) and the subsequent documents in the left menu's **Publish on the App Store** category:
-
-![publish on the app store](attachments/deploying-native-app/ios-publishing-an-app.png)
+ ![publish on the app store](attachments/deploying-native-app/ios-publishing-an-app.png)

@@ -163,25 +163,30 @@ A new attribute is added to the entity.
 
 ## 5 Adding New Associations
 
-To add an association in the domain model, do the following:
+There are several ways of adding an association in the domain model.  
 
-1. Select a block with an entity you want to add an association to.
-2.  Click the arrow icon:
+Do one of the following:
+
+1. Select a block with an entity you want to add an association to and do one of the following:
+
+2. Click the dot icon that appears:
+
+3. ![](attachments/domain-models/adding-association-dot-icon.png)
+
+4. Click the arrow icon:
 
     {{% image_container width="250" %}}![](attachments/domain-models/adding-association.png)
     {{% /image_container %}}
-   
-3.  Select a second entity for the new association from the list of existing entities and click **Select**. You can also create a new entity for the association from the dialog box. 
 
-    ![](attachments/domain-models/new-association.png)
+    1. Select a second entity for the new association from the list of existing entities and click **Select**. You can also create a new entity for the association from the dialog box. A module name is indicated next to the entity name in brackets. 
 
-A module name is indicated next to the entity name in brackets. 
+        ![](attachments/domain-models/new-association.png)
 
-{{% alert type="info" %}}
+    {{% alert type="info" %}}
 
-If you select the entity from another module, you will create a cross-module association. For more information, see the [Cross-Module Associations](domain-models-association-properties#cross-module-associations) section in *Associations*. The entities of the current module are listed first. 
+    If you select the entity from another module, you will create a cross-module association. For more information, see the [Cross-Module Associations](domain-models-association-properties#cross-module-associations) section in *Associations*. The entities of the current module are listed first. 
 
-{{% /alert %}}
+    {{% /alert %}}
 
 ## 6 Specifying Properties
 

@@ -164,7 +164,7 @@ To edit the Java action in Eclipse, follow these steps:
 
 ## 7 Troubleshooting {#troubleshooting}
 
-If you get an 'unsupportedclassversionerror' error specifying that you are trying to compile with a newer version of Java than that which you are running in Studio Pro, follow these steps:
+If you get an 'UnsupportedClassVersionError' error when running your app, follow these steps:
 
 1. Clean your app project's **deployment** folder.
 2. Add the same JDK version to Studio Pro as that which you are using in Eclipse. 

@@ -59,7 +59,7 @@ Changed attribute values are *always* reflected in the client. If the object is 
 {{% /alert %}}
 
 {{% alert type="warning" %}}
-When inside a [nanoflow](nanoflows), the Change object action does not have the **Refresh in client** option available, and the refresh behavior depends on the **Commit type** option. It always reflects the changed attribute values in the client, including [conditions](conditions).
+When inside a [nanoflow](nanoflows), the Change object action does not have the **Refresh in client** option available, and the refresh behavior depends on the **Commit type** option. It always reflects the changed attribute values in the client, including [visibility](common-widget-properties#visibility-properties).
 
 If **Commit type** is set to *Yes*, the object is refreshed across the client as if **Refresh in client** was set to *Yes*.
 {{% /alert %}}

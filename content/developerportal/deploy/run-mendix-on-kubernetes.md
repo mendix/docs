@@ -9,7 +9,7 @@ tags: ["kubernetes", "cloud", "deployment"]
 
 This how-to describes what is needed to deploy your Mendix app to [Kubernetes](https://kubernetes.io/) following Mendix best practices. Kubernetes extends Mendix's support for Docker by providing a platform to automate deployments and scale apps with high availability.
 
-This how-to uses [Minikube](https://kubernetes.io/docs/getting-started-guides/minikube/), which is a way to run Kubernetes locally. Many of the operations you perform on Minikube are the same as those on a hosted environment, and it provides a low-level entry to Kubernetes. For more information, see [Turn-key Cloud Solutions](https://kubernetes.io/docs/setup/pick-right-solution/).
+This how-to uses [Minikube](https://kubernetes.io/docs/getting-started-guides/minikube/), which is a way to run Kubernetes locally. Many of the operations you perform on Minikube are the same as those on a hosted environment, and it provides a low-level entry to Kubernetes. For more information, see [Picking the Right Solution](https://v1-13.docs.kubernetes.io/docs/setup/pick-right-solution/).
 
 For more details on Kubernetes, see [Kubernetes Documentation](https://kubernetes.io/docs/home/).
 

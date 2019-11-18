@@ -71,7 +71,7 @@ Mendix Runtime automatically redirects users to the home page of the appropriate
 | Android&#124;iPad | Tablet |
 | _(other)_ | Responsive |
 
-To configure the regular expressions used to match phone or tablet users, see [Custom Settings](custom-settings).
+To configure the regular expressions used to match phone or tablet users, see [Runtime Customization](custom-settings).
 
 It is also possible to force the client to use a specific profile by adding a `profile` query string parameter to the URL when visiting a Mendix application. The possible values are the names of the profiles, which are Responsive, Tablet, Phone, HybridTablet, and HybridPhone. For example:
 

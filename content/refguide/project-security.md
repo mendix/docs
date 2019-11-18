@@ -30,7 +30,7 @@ The security level defines if security is switched off or on for the project and
 | Production | Full security is applied. | Administrator and anonymous access, user roles, security for forms, microflows, entities, and reports. |
 
 {{% alert type="warning" %}}
-Security levels **Off** and **Prototype/demo** are only allowed in the development and test environments. For acceptance and production you need to use the **Production** security level and configure all security settings accordingly.
+For all licensed Mendix Cloud nodes, you need to use the **Production** security level and configure all security settings accordingly. Security levels **Off** and **Prototype/demo** are only allowed when testing locally, when deploying a Free App, and in cloud environments outside the Mendix Cloud which are specifically set up with **Development mode**. 
 {{% /alert %}}
 
 ### 2.1 Settings Availability for Different Security Levels

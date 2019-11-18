@@ -26,7 +26,7 @@ To allow you to both add a Group to a Customer, and add a Customer to a Group, y
 
 ![The domain model for a reference set selector between Customer (parent) and Group where the owner is 'both' (as in, the Customer and Group refer to each other)](attachments/reference-set-selector/domain-model-owner-both.png)
 
-In the reference set selector, the related entity and association used to connect it to the entity in the data view are displayed at the top of the reference set selector, and the names of the attributes of the associated objects which will be displayed are shown inside the reference set selector. Each attribute is displayed in a [column](columns). The association and related entity and attributes are displayed between square brackets, and colored blue.
+In the reference set selector, the related entity and association used to connect it to the entity in the data view are displayed at the top of the reference set selector, and the names of the attributes of the associated objects which will be displayed are shown inside the reference set selector. Each attribute is displayed in a [grid column](columns). The association and related entity and attributes are displayed between square brackets, and colored blue.
 
 For example, using the domain model above, the following reference set selector allows the end-user to associate a Customer with one or more Groups by setting the association **Customer_Group**. This is done by selecting the **Name**(s) of the **Group**(s) associated with the current **Customer**.
 
@@ -62,7 +62,7 @@ There are three additional sets of properties which do not appear in the propert
 
     ![](attachments/reference-set-selector/sort-bar.png)
 
-3. Each attribute is displayed in a column. You can find out more about the properties of these columns in [Columns](columns)
+3. Each attribute is displayed in a column. You can find out more about the properties of these columns in [Grid Columns](columns)
 
 ### 2.1 Common Section{#common}
 
@@ -70,23 +70,9 @@ There are three additional sets of properties which do not appear in the propert
 
 ### 2.2 Data Source Section{#data-source}
 
-{{% snippet file="refguide/attribute-path-property.md" %}}
+{{% snippet file="refguide/data-source-section-link.md" %}}
 
-The attribute path specifies which attribute(s) of an associated entity is shown in the reference set selector. The path must follow one association of type reference starting in the entity of the data view.
-
-{{% alert type="info" %}}
-In the case of a reference set selector you are selecting an association to another object. The attribute should indicate uniquely to the end-user which object is being selected.
-{{% /alert %}}
-
-The attribute can be of one of the following [data types](data-types):
-
-* Autonumber
-* Date and Time
-* Decimal
-* Enumeration
-* Integer
-* Long
-* String
+The attribute path specifies which attribute(s) of an associated entity is shown in the reference set selector. The path must follow one association of type reference set starting in the entity of the data view.
 
 {{% alert type="warning" %}}
 You cannot currently use non-persistable entities in a reference set selector.
@@ -133,7 +119,7 @@ _Default value:_ False
 
 A tooltip page is a page that appears when you hover your mouse over a row. The tooltip page must contain a data view on the same entity as the data grid.
 
-The tooltip will only be shown for the columns you specify. The default for each column is that the tooltip will _not_ appear. See [Columns](columns) for more information.
+The tooltip will only be shown for the columns you specify. The default for each column is that the tooltip will _not_ appear. See [Grid Columns](columns) for more information.
 
 #### 2.5.6 Show Control Bar
 

@@ -5,7 +5,6 @@ menu_order: 20
 description: "Configure a published REST Operation by adding parameters to an operation "
 tags: ["published REST", "operation", "parameter", "resource", "mapping", "not found", "commit"]
 # If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
-# linked from DM integration - published rest > select resource > add operation for resource > add parameter > help)
 ---
 
 ## 1 Introduction
@@ -42,20 +41,30 @@ Specify the microflow parameter that will be filled with the value from this ope
 
 The mapping group is only shown for body parameters.
 
-## 3.1 Import Mapping
+### 3.1 Import Mapping
 
 Specify the import mapping that converts the body of the request (JSON or XML) into an Object or a List.
 
 You can use an import mapping that takes a primitive parameter (string, integer, etcetera) if the operation has no more than one path parameter with that type. The value of that path parameter will be passed to the microflow. If there is no path parameter, and empty value will be passed to the import mapping.
 
-## 3.2 If No Object Was Found
+### 3.2 If No Object Was Found
 
 You can indicate what should happen **if no object was found** when the import mapping has checked the box **decide this at the place where the mapping gets used**. Typically this is **Create** for **POST** operations and **Error** for **PUT** and **PATCH** operations.
 
-## 3.3 Commit
+### 3.3 Commit
 
 You can indicate whether the import mapping should commit the objects that it creates or changes. You can choose between the following:
 
 * **Yes** – commits the changes and triggers events such as validation rules
 * **Yes without events** – commits the changes without triggering events such as validation rules
 * **No** – does not commit the changes, so you can commit them in your microflow. This is useful if you want to add some additional checks in your microflow, and skip the commit if one of those checks fail
+
+## 4 Public Documentation
+
+Provide a **Description** of the parameter. You can use [GitHub-flavored Markdown](gfm-syntax) for rich text.
+
+This is used in the service's [OpenAPI (Swagger) documentation page](published-rest-services#interactive-documentation).
+
+{{% alert type="info" %}}
+The public documentation feature was introduced in version 8.3.0.
+{{% /alert %}}

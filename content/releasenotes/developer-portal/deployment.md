@@ -10,6 +10,28 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 ## 2019
 
+### November 7th, 2019
+
+#### Mendix Cloud Deployment Upgrade
+
+* We have improved the stability and performance of Mendix Cloud Deployment and Operations.
+
+### October 30th, 2019
+
+#### Mendix Cloud Deployment Upgrade
+
+* We have upgraded Mendix Cloud Deployment and Operation. It is now a Mendix 7 app.
+* You can now mask app constant values so that they cannot be seen in the **Model Options** tab of the **Environment Details**.
+* We now warn you on all **OPERATE** and **DEPLOY** pages if a maintenance window has been created to allow updating of the Mendix Developer Portal.
+
+**Known Issue**
+
+* In the **Environments** page, when you click the **Details** button for a **Production** environment and successfully complete two-factor authentication you are redirected to the **first** environment listed for your app, *not the Production environment*. (Ticket 90999)
+
+    * Workaround – Choose the **Details** for the **Production** environment again and you will be taken to the correct environment.
+
+* When you attempt to open an **OPERATE** or **DEPLOY** page in the Developer Portal, you may see a login page. You will need to force a refresh of your page, or clear your browser cache, in order to access the page.
+
 ### September 27th, 2019
 
 #### Update of `*.mendixcloud.com` SSL/TLS certificate
@@ -189,7 +211,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 * We fixed a problem on Mendix Cloud v3 which prevented Path-based Access Restrictions from working with multiple TLS certificate authorities. (Ticket 77282)
 * We fixed the problem which prevented users in the Pacific Time Zone from being able to download the current day's logs. (Tickets 78325, 78586, 79119, 79162, 79427)
 * We addressed and solved a problem which meant that some sandboxes could not be resumed after getting stopped.
-* We have fixed the issue that prevented apps with ACS (App Cloud Services) from being deployed using the Web Modeler. (Ticket 76888)
+* We have fixed the issue that prevented apps with ACS (AppCloudServices) from being deployed using the Web Modeler. (Ticket 76888)
 
 ### January 28th, 2019
 

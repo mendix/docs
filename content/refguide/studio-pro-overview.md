@@ -17,38 +17,11 @@ This documentation describes the graphical user interface of Studio Pro. The res
 Press <kbd>F1</kbd> while in Studio Pro to quickly jump to the right page in the documentation.
 {{% /alert %}}
 
-## 2 Dockable Window Panes {#dockable-panes}
+## 2 Document Tabs
 
-Studio Pro supports a number of dockable window panes. You can close some panes to just show the ones you need at the moment, but you can always reopen them via the **View** menu. 
+The documents you view and edit are shown in tabs. You can have a number of tabs open, just like in a modern web browser. They can be closed, reordered, and shown side by side. Each document has its own save state, history, and future, so undo and redo actions are unlimited.
 
-The table below describes all the available dockable window panes.
-
-| Pane | Description |
-| --- | --- |
-| **Breakpoints** (via **Debug Windows**) | Shows all breakpoints in the project. You can enable/disable breakpoints from here. |
-| **Changes** | For [Team Server](/developerportal/develop/team-server) projects, this pane shows the local changes to the project since the last commit. You can commit changes, update to the latest revision and view the history from here. |
-| **Connector** | Shows what elements can be connected to the currently selected element. For example, when a button is a selected, the connector will show microflows that you can drag and drop onto the button to connect them. |
-| **Console** | Shows the output of the Mendix Runtime while running an application. |
-| **Debugger** (via **Debug Windows**) | This can be used to debug your application. |
-| **Documentation** | Shows the documentation for the currently selected element (if applicable). |
-| **Error List** | Shows the errors and warning currently in your project. |
-| **Find Results** | Shows the results of the latest find action. You can search for text, for usages of an element (for example, attribute) and for unused items. There are two **Find Results** panes. If you lock the results of the first pane, the second one will be used for subsequent find operations until you unlock it. |
-| **Get Started** | Shows useful resources for getting started with Studio Pro. |
-| **Project Explorer** | Shows the complete structure of your project including all documents inside the modules. By default the active document is always selected in the project explorer so you can quickly see where the document you are editing is in the tree. You can change this behavior in the **Edit** > **Preferences** window pane. |
-| **Properties** | Shows properties of the currently selected element. This is where a lot of editing in Studio Pro takes place. |
-| **Stories** | For [Team Server](/developerportal/develop/team-server) enabled projects, this pane shows the stories of the current Sprint. |
-| **Toolbox** | Shows the tools that can be used in the current editor. For example, in a page you can insert all kinds of widgets (for example, text box and data view) by dragging them from the **Toolbox** to your page. |
-| **Variables** (via **Debug Windows**) | You can view the current values of variables, lists, and objects here when debugging your application. |
-
-## 3 Document Tabs
-
-Documents that you are viewing and/or editing at the moment are shown in tabs. You can have a number of tabs open, just like in a modern web browser. They can be closed, reordered, and shown side by side. Each document has its own save state and history/future. Undo and redo actions are unlimited.
-
-## 4 Menus {#menus}
-
-Using items in the menu bar of Studio Pro, you can create new projects, deploy and run them, search for text, and more.
-
-### 4.1 File Menu
+## 3 File Menu {#menus}
 
 | Menu Item | Description | Shortcut Key |
 | --- | --- | --- |
@@ -66,7 +39,7 @@ Using items in the menu bar of Studio Pro, you can create new projects, deploy a
 | **Import Project Package** | Imports a project package that was created with the **Export Project Package** menu item. |   |
 | **Exit** | Closes Studio Pro | |
 
-### 4.2 Edit Menu
+## 4 Edit Menu
 
 | Menu Item | Description | Shortcut Key |
 | --- | --- | --- |
@@ -86,28 +59,83 @@ Using items in the menu bar of Studio Pro, you can create new projects, deploy a
 | **Previous Error** | Highlights the previous error result in the **Error List** pane and open it in an editor. | <kbd>Shift</kbd> + <kbd>F8</kbd> |
 | **Preferences** | Opens the **Preferences** dialog box, where you can set your general, model, and advanced editing preferences. |  |
 
-### 4.3 View Menu {#view}
+## 5 View Menu {#view}
+
+### 5.1 Dockable Window Pane Menu Items {#dockable-panes}
+
+Studio Pro supports a number of dockable window panes. You can close some panes to just show the ones you need at the moment, but you can always reopen them via the **View** menu. 
+
+#### 5.1.1 Changes {#changes}
+
+For [Team Server](/developerportal/develop/team-server) app projects, this pane shows the local changes to the app project since the last commit. You can commit changes, update to the latest revision, and view the history from here. 
+
+This pane has two levels, so when you zoom into a changed document, you can review all the changes within that document without going back and forth between levels. The zoomed-in level of the pane is split into two grids, with elements on the left and properties on the right. Selecting an element on the left presents the changed properties on the right. To go back to the list of changed documents, click **Back**.
+
+![](attachments/studio-pro-overview/changes.gif)
+
+#### 5.1.2 Connector
+
+This pane displays elements that can be connected to the currently selected element. For example, when a button is a selected, the **Connector** shows microflows that you can drag onto the button to connect them.
+
+#### 5.1.3 Console
+
+This pane displays the output of the [Mendix Runtime](runtime) while running an application.
+
+#### 5.1.4 Documentation
+
+This pane dispalys the documentation for the currently selected element (if applicable).
+
+#### 5.1.5 Error List
+
+This pane displays the [errors](consistency-errors) and warnings that exist in your app project.
+
+#### 5.1.6 Find Results
+
+This pane displays the results of the latest find action. You can search for text, usages of an element (for example, an attribute), and unused items.
+
+There are two **Find Results** panes. If you lock the results of the first pane, the second one is used for subsequent find operations until you unlock the first one.
+
+#### 5.1.7 Project Explorer
+
+The [Project Explorer](project-explorer) pane displays the complete structure of your app project, including all the documents inside the modules. By default, the active document is always selected, so you can quickly see where the document you are editing is in the tree. You can change this behavior in **Edit** > [Preferences](preferences-dialog).
+
+#### 5.1.8 Properties
+
+This pane displays the properties of the currently selected element. This is where a lot of editing in Studio Pro takes place.
+
+#### 5.1.9 Stories
+
+For [Team Server](/developerportal/develop/team-server) app projects, this pane shows the [stories](/developerportal/collaborate/stories) of the current [Sprint](/developerportal/develop/planning-development)
+
+#### 5.1.10 Toolbox
+
+This pane displays the tools that can be used in the current editor. For example, in a page you can insert all kinds of widgets (for example, [data widgets](data-widgets)) by dragging them from the **Toolbox** to your page.
+
+#### 5.1.11 Debug Windows
+
+For more information on debugging, see [How to Debug Microflows](/howto/monitoring-troubleshooting/debug-microflows).
+
+##### 5.1.11.1 Breakpoints
+
+This pane shows all the breakpoints in your app project. You can enable and disable breakpoints from here.
+
+##### 5.1.11.2 Debugger
+
+This tool can be used to debug your application.
+
+##### 5.1.11.3  Variables
+
+In this pane, you can view the current values of variables, lists, and objects when debugging your application.
+
+### 5.2 Other View Menu Items
 
 | Menu Item | Description | Shortcut Key |
 | --- | --- | --- |
-| **Changes** | Opens the dockable window pane [Changes](#dockable-panes). |   |
-| **Connector** | Opens the dockable window pane [Connector](#dockable-panes). |   |
-| **Console** | Opens the dockable window pane [Console](#dockable-panes). |   |
-| **Documentation** | Opens the dockable window pane [Documentation](#dockable-panes). |   |
-| **Error List** | Opens the dockable window pane [Error List](#dockable-panes). |   |
-| **Find Results 1** | Opens the dockable window pane [Find Results 1](#dockable-panes). |   |
-| **Find Results 2** | Opens the dockable window pane [Find Results 2](#dockable-panes). |   |
-| **Project Explorer** | Opens the dockable window pane [Project Explorer](#dockable-panes). |   |
-| **Properties** | Opens the dockable window pane [Properties](#dockable-panes). |   |
-| **Stories** | Opens the dockable window pane [Stories](#dockable-panes). |   |
-| **Toolbox** | Opens the dockable window pane [Toolbox](#dockable-panes). |   |
-| **Debug Windows** > **Breakpoints** | Opens the dockable window pane [Breakpoints](#dockable-panes). |   |
-|  **Debug Windows** > **Debugger** | Opens the dockable window pane [Debugger](#dockable-panes). |   |
-|  **Debug Windows** > **Variables** | Opens the dockable window pane [Variables](#dockable-panes). |   |
-| **Full Screen** | Temporarily hides all dockable window panes so that the tabbed documents can be shown in full screen. |<kbd>F11</kbd> |
+| **Full Screen** | Hides the title bar and makes the window fill the entire screen. This version of **Full Screen** was introduced in Studio Pro [8.3.0](/releasenotes/studio-pro/8.3#830); in previous versions, the **Full Screen** mode closed all dockable window panes. | <kbd>F11</kbd> |
+| **Distraction Free Mode** | Same as the **Full Screen** mode above, but also closes all dockable window panes. This was introduced in Studio Pro [8.3.0](/releasenotes/studio-pro/8.3#830). | <kbd>Shift</kbd> + <kbd>F11</kbd> |
 | **Reset Layout** | Resets the layout of Studio Pro to factory defaults. |   |
 
-### 4.4 Project Menu
+## 6 Project Menu
 
 | Menu Item | Description | Shortcut Key |
 | --- | --- | --- |
@@ -133,7 +161,7 @@ Using items in the menu bar of Studio Pro, you can create new projects, deploy a
 | **Clean Deployment Directory** | Cleans the deployment directory. |   |
 | **Deploy to Licensed Cloud Node** | Deploys the latest committed revision of a Team Server project to the associated Mendix Cloud node. | <kbd>Ctrl</kbd> + <kbd>F5</kbd> |
 
-### 4.5 Run Menu
+## 7 Run Menu
 
 | Menu Item | Description | Shortcut Key |
 | --- | --- | --- |
@@ -151,7 +179,7 @@ Using items in the menu bar of Studio Pro, you can create new projects, deploy a
 | **Hybrid Phone App Online** | Views the app as a phone app online. | |
 | **View in the Mendix App** | Views the app via the [Mendix Mobile app](getting-the-mendix-app). | |
 
-### 4.6 Language Menu
+## 8 Language Menu
 
 | Menu Item | Description | Shortcut Key |
 | --- | --- | --- |
@@ -161,7 +189,7 @@ Using items in the menu bar of Studio Pro, you can create new projects, deploy a
 | **Batch Translate** | Opens a dialog window in which you can quickly translate many texts from one language to another. |   |
 | **Language Operations** | Opens a dialog window in which you can copy, move, swap, or delete all translations in a given language for selected modules. |   |
 
-### 4.7 Help Menu
+## 9 Help Menu
 
 | Menu Item | Description | Shortcut Key |
 | --- | --- | --- |
@@ -171,7 +199,9 @@ Using items in the menu bar of Studio Pro, you can create new projects, deploy a
 | **Open Log File Directory** | Opens the log files for your app project locally. |   |
 | **About Mendix Studio Pro** | Shows information about the current version of Mendix Studio Pro. |   |
 
-## 5 General Shortcut Keys
+## 10 Shortcut Keys
+
+### 10.1 General Shortcut Keys
 
 In the main window pane, <kbd>Ctrl</kbd> + <kbd>Tab</kbd> can be used to navigate between all open documents. Other shortcut keys that can be used in the main window pane can be found next to their relevant menu item in the [Menus](#menus) section above.
 
@@ -192,7 +222,7 @@ In most edit grids (such as the list of attributes in the entity properties), th
 | <kbd>Enter</kbd> | Edits the currently selected item. |
 | <kbd>Delete</kbd> | Deletes the currently selected item(s). |
 
-## 6 Domain Model Editor Shortcut Keys
+### 10.2 Domain Model Editor Shortcut Keys
 
 The following shortcut keys are available in the domain model editor:
 
@@ -202,7 +232,7 @@ The following shortcut keys are available in the domain model editor:
 | <kbd>Ctrl</kbd> + <kbd>A</kbd> | Selects all entities. |
 | <kbd>Esc</kbd> | Clears selection. |
 
-## 7 Page Editor Shortcut Keys
+### 10.3 Page Editor Shortcut Keys
 
 The following shortcut keys are available in the page editor:
 
@@ -213,7 +243,7 @@ The following shortcut keys are available in the page editor:
 | <kbd>Enter</kbd> | Edits the properties of the currently selected object in a dialog box. |
 | <kbd>F2</kbd> | Edits the caption of a label or button inline on the page. You can also just start typing a letter or a digit and the caption will be replaced by what you type. |
 
-## 8 Microflow Editor Shortcut Keys
+### 10.4 Microflow Editor Shortcut Keys
 
 The following shortcut keys are available in the microflow editor:
 
@@ -228,7 +258,7 @@ The following shortcut keys are available in the microflow editor:
 | <kbd>Shift</kbd> when resizing an activity | When resizing the entity, by holding <kbd>Shift</kbd> , the microflow component will stay centered at its current position and will expand equally in all directions. |
 | <kbd>Ctrl</kbd> when selecting multiple activities | When pressing the <kbd>Ctrl</kbd>, you can select additional microflow components. Clicking a selected component while holding <kbd>Ctrl</kbd> will deselect it. |
 
-## 9 Microflow Debugger Shortcut Keys{#debugger-shortcuts}
+### 10.5 Microflow Debugger Shortcut Keys {#debugger-shortcuts}
 
 The following shortcut keys are available for the the microflow debugger:
 

@@ -62,8 +62,9 @@ The pattern from which the arguments are derived that are passed to the file com
 
 ### Version control
 
-#### Enable support for SVN servers other than the Mendix Team Server.
-Select this option when you want to work on an app that's not stored in the Team Server, but in another SVN server you have access to. This will allow you to specify the location of the app in the SVN server when, for example, opening or downloading an app, when managing branch lines, and when importing a project package.
+#### Enable private version control
+
+Select this option when you want to work on an app that’s not stored in the Team Server, but in another SVN server to which you have access. This will allow you to specify the location of the app in the SVN server when, for example, opening or downloading an app, managing branch lines, or importing an app project package.
 
 ### Proxy server
 

@@ -9,23 +9,21 @@ tags: ["Runtime", "Customization", "Settings", "Configuration", "IBM Cloud", "Am
 
 ## 1 Custom Runtime Settings
 
-You can use custom server settings to configure the Runtime beyond the standard possibilities offered by Studio Pro.
+You can use custom server settings to configure Mendix Runtime beyond the standard possibilities offered by Studio Pro.
 
 {{% alert type="warning" %}}
-
 Only use this functionality if you know exactly what you are doing. Incorrect values can prevent Mendix Runtime from starting.
-
 {{% /alert %}}
 
-Each custom setting consists of a name and a value. For example, to enable persistent sessions you add a custom setting with name `PersistentSessions` and value `true`. For a more detailed list of settings and example values please consult the [fully-documented m2ee.yaml](https://github.com/mendix/m2ee-tools/blob/master/examples/full-documented-m2ee.yaml).
+Each custom setting consists of a name and a value. For example, to enable persistent sessions you add a custom setting with name `PersistentSessions` and value `true`. For a more detailed list of settings and example values, consult [full-documented-m2ee.yaml](https://github.com/mendix/m2ee-tools/blob/master/examples/full-documented-m2ee.yaml).
 
-If you are running your app on the Mendix Cloud, you can access these settings in the Developer Portal via **Environments** > **Environment Details** > **Runtime**. For more information see [Environment Details – Runtime Tab](/developerportal/deploy/environments-details#runtime-tab).
+If you are running your app on the Mendix Cloud, you can access these settings in the Developer Portal via **Environments** > **Environment Details** > **Runtime** > **Custom Runtime Settings**. For more information see the [Runtime Tab](/developerportal/deploy/environments-details#runtime-tab) section of *Environment Details*.
 
 ## 2 General Settings
 
 The following custom settings can be configured:
 
-| Name | Description | Default value |
+| Name | Description | Default Value |
 | --- | --- | --- |
 | TempPath | The location of the temporary files. | [deployment folder]\data\tmp |
 | UploadedFilesPath | The location of the uploaded files. A valid path can be: \\FileServer\CustomerPortalFiles. | [deployment folder]\data\files |
@@ -43,7 +41,7 @@ The following custom settings can be configured:
 | SessionTimeout | Defines after how much time session becomes invalid (in milliseconds). After that timeout a session becomes applicable for removal. The session won't be destroyed until the next time the cluster manager evaluates the active sessions. | 600000 |
 | http.client.MaxConnectionsPerRoute | The [maximum number of connections for a route](https://hc.apache.org/httpcomponents-client-ga/httpclient/apidocs/org/apache/http/impl/client/HttpClientBuilder.html#setMaxConnPerRoute(int)) for Call REST and Call Web Service actions. | 2 |
 | http.client.MaxConnectionsTotal | The [maximum number of connections allowed across all routes](https://hc.apache.org/httpcomponents-client-ga/httpclient/apidocs/org/apache/http/impl/client/HttpClientBuilder.html#setMaxConnTotal(int)) for Call REST and Call Web Service actions. | 20 |
-| http.client.CleanupAfterSeconds | For Call REST and Call Web Service actions, the first request to a new host wil create an HTTP client that will handle subsequent requests. When there are no new requests to the host for the specified time, the HTTP client will be cleaned up. Default value: 12 * 60 * 60 (12 hours). A value of 0 means no cleanup. |
+| http.client.CleanupAfterSeconds | For Call REST and Call Web Service actions, the first request to a new host wil create an HTTP client that will handle subsequent requests. When there are no new requests to the host for the specified time, the HTTP client will be cleaned up. Default Value: 12 * 60 * 60 (12 hours). A value of 0 means no cleanup. |
 | ClusterManagerActionInterval | The interval (in milliseconds) used for performing all cluster manager actions. These actions include, unblocking users, and removing invalid sessions. If nothing is specified the interval is half the SessionTimeout. | 300000 |
 | com.mendix.core.StorageService | Defines which storage service module will be used. The storage service module takes care of storing the actual files associated with 'System.FileDocument' objects, such as uploaded files. Possible values are 'com.mendix.storage.localfilesystem', 'com.mendix.storage.s3', 'com.mendix.storage.azure', and 'com.mendix.storage.swift'. | com.mendix.storage.localfilesystem |
 | com.mendix.storage.PerformDeleteFromStorage | Defines whether a delete of a Mendix file document should result in an actual delete in the storage service. A reason to not perform an actual delete in the storage service can be when it is also used as a backup service. | true |
@@ -51,9 +49,9 @@ The following custom settings can be configured:
 
 ## 3 Log File Settings
 
-The settings below influence the behavior of the log files. These settings can only be used on-premises. In the cloud these settings do not change any behavior.
+The settings below influence the behavior of the log files. These settings can only be used on premises. In the cloud, these settings do not change any behavior.
 
-| Name | Description | Default value |
+| Name | Description | Default Value |
 | --- | --- | --- |
 | LogFileName | The name of the log file. The log files (actual log file plus back-up files) will be placed in the folder specified by the setting Log Path. | Application.log |
 | MaxLogFileSize | The maximum size per log file. When the log file reaches this maximum size, the log file will be backed up and a new empty log file will be used. | 2097152 (2 MB) |
@@ -63,7 +61,7 @@ The settings below influence the behavior of the log files. These settings can o
 
 ### 4.1 Common Settings
 
-| Name | Description | Default value |
+| Name | Description | Default Value |
 | --- | --- | --- |
 | ClientQueryTimeout | Defines the timeout in seconds for most of the database queries which are executed to load data into client widgets, like data grids. After the duration as specified here, a query will be canceled and an exception will be thrown. |   |
 | DatabaseType | Defines the database engine which is used as the Mendix database. Valid values are<br/>DB2<br/>HSQLDB<br/>MYSQL<br/>ORACLE<br/>POSTGRESQL<br/>SAPHANA<br/>SQLSERVER | |
@@ -80,9 +78,9 @@ The settings below influence the behavior of the log files. These settings can o
 
 ### 4.2 Connection Pooling
 
-The settings below are used to define the database connection pooling behavior. The Runtime uses a pool of reusable database connections. You can for example define how many connections can be used. Connection pooling is implemented using the [Apache Commons Object-pooling API](http://commons.apache.org/pool/) .
+The settings below are used to define the database connection pooling behavior. Mendix Runtime uses a pool of reusable database connections. You can, for example, define how many connections can be used. Connection pooling is implemented using the [Apache Commons Object-pooling API](http://commons.apache.org/pool/) .
 
-| Name | Value | Default value |
+| Name | Value | Default Value |
 | --- | --- | --- |
 | ConnectionPoolingMaxWait | When the maximum number of "active" objects has been reached, the pool is said to be 'exhausted'. The "when exhausted" action used by the Connection Bus is WHEN_EXHAUSTED_BLOCK. Sets the maximum amount of time (in milliseconds) the borrowObject() method should block before throwing an exception when the pool is exhausted. When less than or equal to 0, the borrowObject() method may block indefinitely. (!) | 10000 |
 | ConnectionPoolingMaxActive | Sets the cap on the total number of active instances from the pool. | 50 |
@@ -98,7 +96,7 @@ The settings below are used to define the source database from which all data sh
 
 Before the data copy process starts, the source database will also be brought in line with the model, like the main database. This is necessary to make it possible to copy all the data without problems.
 
-| Name | Value | Default value |
+| Name | Value | Default Value |
 | --- | --- | --- |
 | SourceBuiltInDatabasePath | Defines the file location of the built-in source database. This setting is only necessary if a non-default location of the built-in database has to be used to copy the data from.  | [deployment folder]/data/database |
 | SourceDatabaseHost | The host name and optionally the TCP port number of the source database. Use a colon as separator between host name and port number. Possible values are: db.url.org, db.url.org:1521, 10.0.0.5, 10.0.0.5:1433\. It's possible to use a plain IPv6 address by enclosing it in brackets, like: [::1]:5432 |   |
@@ -116,7 +114,7 @@ Possible values: HSQLDB, MYSQL, ORACLE, POSTGRESQL, SQLSERVER |   |
 
 The settings described below influence the behavior of the Amazon S3 Storage Service module. This module can be used for both Amazon S3 Storage and IBM Cloud Object Storage. Using these settings manually in Mendix Cloud is strongly discouraged, as files stored in external systems will not be included in backup creation and restoration.
 
-| Name | Description | Default value |
+| Name | Description | Default Value |
 | --- | --- | --- |
 | com.mendix.storage.s3.AccessKeyId | Acts as the username to authenticate with the S3 service. |   |
 | com.mendix.storage.s3.SecretAccessKey | Acts as the password to authenticate with the S3 service. |   |
@@ -137,9 +135,9 @@ The settings described below influence the behavior of the Amazon S3 Storage Ser
 
 These settings can be changed to use a Microsoft Azure SQL database for your Mendix application.
 
-First you need to create an Azure SQL database (for information on how to do this, see this [SQL Database Tutorial](https://azure.microsoft.com/en-us/documentation/articles/sql-database-get-started/)). Make sure your Azure firewall settings allow your Mendix application to reach the Azure SQL database (by default, the Azure firewall doesn't allow external connections).
+First, you need to create an Azure SQL database (for information on how to do this, see this [SQL Database Tutorial](https://azure.microsoft.com/en-us/documentation/articles/sql-database-get-started/)). Make sure your Azure firewall settings allow your Mendix application to reach the Azure SQL database (by default, the Azure firewall does not allow external connections).
 
-| Name | Description | Default value |
+| Name | Description | Default Value |
 | --- | --- | --- |
 | DatabaseType | SQLSERVER |   |
 | DatabaseHost | "your-database-host.database.windows.net:1433" |   |
@@ -149,9 +147,9 @@ First you need to create an Azure SQL database (for information on how to do thi
 
 ## 7 Microsoft Azure Blob Storage Settings
 
-These settings can be used to store files using the Microsoft Azure blob storage service. Server side encryption can be configured through the Azure Portal (see [https://azure.microsoft.com/en-us/documentation/articles/storage-service-encryption/](https://azure.microsoft.com/en-us/documentation/articles/storage-service-encryption/)).
+These settings can be used to store files using the Microsoft Azure blob storage service. Server-side encryption can be configured through the Azure Portal (for more information, see [Azure Storage encryption for data at rest](https://azure.microsoft.com/en-us/documentation/articles/storage-service-encryption/)).
 
-| Name | Description | Default value |
+| Name | Description | Default Value |
 | --- | --- | --- |
 | com.mendix.core.StorageService | Has to be set to 'com.mendix.storage.azure' to select Azure as the storage service |   |
 | com.mendix.storage.azure.AccountName | Account name to authenticate with the azure blob storage service |   |
@@ -161,8 +159,8 @@ These settings can be used to store files using the Microsoft Azure blob storage
 | com.mendix.storage.azure.Container | Name of the container containing the blob. The container is created if it does not exist yet. |   |
 | com.mendix.storage.azure.ParallelismFactor | Maximum number of parallel multi-part file uploads / downloads. We advise you not to change this setting unless you experience slow file transfers for large files. Choosing larger values will lead to higher memory usage. | 5 |
 |com.mendix.storage.azure.UseHttps| For enabling or disabling secure connections using HTTPS. Can be `true` or `false`. | `true` |
-| com.mendix.storage.azure.TimeoutIntervalInMs | Sets the amount of time (in milliseconds) to allow a call to the storage service to complete. For more information, see [the Azure Libraries](https://azure.github.io/azure-sdk-for-java/com/microsoft/azure/storage/RequestOptions.html#setTimeoutIntervalInMs-java.lang.Integer-). | No timeout |
-| com.mendix.storage.azure.MaximumExecutionTimeInMs | Sets the maximum execution time (in milliseconds) to use when making this request. For more information, see [the Azure Libraries](https://azure.github.io/azure-sdk-for-java/com/microsoft/azure/storage/RequestOptions.html#setMaximumExecutionTimeInMs-java.lang.Integer-). | No maximum time |
+| com.mendix.storage.azure.TimeoutIntervalInMs | Sets the amount of time (in milliseconds) to allow a call to the storage service to complete. For more information, see the [Azure libraries](https://azure.github.io/azure-sdk-for-java/storage.html). | No timeout |
+| com.mendix.storage.azure.MaximumExecutionTimeInMs | Sets the maximum execution time (in milliseconds) to use when making this request. For more information, see the [Azure libraries](https://azure.github.io/azure-sdk-for-java/storage.html). | No maximum time |
 
 {{% alert type="warning" %}}
 
@@ -174,11 +172,13 @@ Azure blob storage's default connection protocol is HTTPS in order to encourage 
 
 These settings can be used to store files using the IBM Cloud object storage service.
 
-Mendix supports unscoped authentication of OpenStack Identity (Keystone) v3\. The credentials related settings must be filled with the corresponding values which can be found in the Service Credentials section of your object storage service.
+Mendix supports unscoped authentication of OpenStack Identity (Keystone) v3. The credentials related settings must be filled with the corresponding values which can be found in the Service Credentials section of your object storage service.
 
-Note that unlike other storage services, IBM Cloud does not provide server-side encryption.
+{{% alert type="info" %}}
+Unlike other storage services, IBM Cloud does not provide server-side encryption.
+{{% /alert %}}
 
-| Name | Description | Default value |
+| Name | Description | Default Value |
 | --- | --- | --- |
 | com.mendix.core.StorageService | Has to be set to 'com.mendix.storage.swift' to select IBM Cloud as the storage service |   |
 | com.mendix.storage.swift.Container | Container name of the object storage service |   |
@@ -191,9 +191,9 @@ Note that unlike other storage services, IBM Cloud does not provide server-side 
 
 ## 9 Web Client Settings
 
-The following settings influence the behavior of the Mendix web client.
+The settings below influence the behavior of the Mendix web client.
 
-| Name | Description | Default value |
+| Name | Description | Default Value |
 | --- | --- | --- |
 | EnableKeepAlive | Defines whether the web client sends a keep alive request every SessionTimeout/2 milliseconds, to prevent a session timeout. Each click in the browser also acts as KeepAlive. Disabling this property will result in a user being logged out automatically after 10 minutes of inactivity, even if the browser remains open. | true |
 | PhoneUserAgentRegEx | Defines the regular expression that is used to determine whether a user is visiting a Mendix application from a phone. The regular expression is matched against the User-Agent header sent by the client's web browser. | Android, Mobile (iPhone, iPod, BlackBerry) |
@@ -204,9 +204,9 @@ The following settings influence the behavior of the Mendix web client.
 
 ## 10 Proxy Settings
 
-The following settings allow you to use a proxy.
+The settings below allow you to use a proxy.
 
-| Name | Description | Default value |
+| Name | Description | Default Value |
 | --- | --- | --- |
 | http.proxyHost | Defines the hostname of the proxyserver |  |
 | http.proxyPort | Defines the portnumber of the proxyserver |  |

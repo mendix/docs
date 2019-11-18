@@ -148,7 +148,25 @@ In Mendix Studio Pro, the widget described above would look like this:
 
 ![basic progress card](attachments/pluggable-widgets/basic-widget-progress-card.png)
 
-### 5.3 Widget Properties Definition {#properties-definition}
+### 5.3 Help Page {#help}
+
+Provide additional help information to your users with the **Help** button widget, assigned to the <kbd>{F1}</kbd> shortcut key. This button is positioned in the left-bottom corner of the popup dialog:
+
+![basic widget](attachments/pluggable-widgets/widget-dialog-help-button.png)
+
+A URL can be provided through the `helpUrl` property after the `description` tag:
+
+```xml
+    <helpUrl>https://appstore.home.mendix.com/link/app/105695/</helpUrl>
+```
+
+For more complex help pages you can link to a markdown page. For security reasons, URLs have the following restrictions:
+
+* Must use HTTPS protocol
+* Host name must end with *.mendix.com* or *github.com*
+* If host name is *github.com* the full URL must end with *.md*
+
+### 5.4 Widget Properties Definition {#properties-definition}
 
 This section is represented by the `properties` tag in the widget XML file. It describes widget properties used in Studio and Studio Pro to configure the widget. Here is an example of a properties definition section for a widget which shows a progress card for a dashboard:
 

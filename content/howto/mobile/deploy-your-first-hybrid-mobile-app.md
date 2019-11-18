@@ -18,7 +18,7 @@ Besides boasting native functionality, another major advantage of a hybrid mobil
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Install the hybrid Mendix mobile app on you device, which makes it easy to see a hybrid application in action without the need to get it approved in the Mendix App Store (for details and download links, see [Getting the Mendix App](/refguide/getting-the-mendix-app) in the *Mendix Studio Pro Guide*)
+* Install the hybrid Mendix mobile app on you device, which makes it easy to see a hybrid application in action without the need to get it approved in the Mendix App Store (for details and download links, see [Getting the Mendix App](/refguide/getting-the-mendix-app) in the *Studio Pro Guide*)
 
 ## 3 Opening a Hybrid Example App
 

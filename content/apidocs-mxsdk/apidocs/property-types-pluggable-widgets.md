@@ -46,7 +46,7 @@ This defines a property's type. A `type` must be one of the following:
 
 ### 1.2 XML Elements
 
-`<caption>` (required) — This defines the property name visible for the user (not an end-user) while configuring the widget in Studio and Studio Pro.
+`<caption>` (required) — This defines the property name visible for the user (not the end-user) while configuring the widget in Studio and Studio Pro.
 
 `<description>` (required) — This is a description which explains a property's purpose.
 
@@ -255,6 +255,36 @@ Then the Studio Pro UI for the component appears like this:
 
 ![](attachments/widget-property-types/image.png)
 
+### 3.3 Widgets {#widgets}
+
+The widgets property allows a user to place multiple widgets inside a pluggable widget, similar to the content of a [container](/refguide/container) widget. It is passed as a `ReactNode` prop to a client component.
+
+{{% alert type="info" %}}
+This property type was introduced in Mendix 8.3.
+{{% /alert %}}
+
+#### 3.1.1 XML Attributes
+
+| Attribute  | Required | Attribute Type | Description                                                                                                                                                          |
+| ---------- | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `type`     | Yes      | String         | Must be `widgets`                                                                                                                                                       |
+| `key`      | Yes      | String         | See [key](#key) |
+| `required` | No       | Boolean        | Whether a user must provide at least one widget. `true` by default                                                                                                |
+#### 3.1.2 Studio Pro UI
+
+When the component is defined as follows:
+
+```xml
+<property key="content" type="widgets" required="false">
+	<caption>Content</caption>
+	<description>Content of a box</description>
+</property>
+```
+
+then the Studio Pro UI for the component appears like this:
+
+![studio pro ui](attachments/widget-property-types/widgets.png)
+
 ## 4 Dynamic Properties
 
 ### 4.1 Expression{#expression}
@@ -346,7 +376,7 @@ The action property allows a user to configure an action to do things like calli
 | ---------- | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `type`     | Yes      | String         | Must be `action`                                                                                                                                                     |
 | `key`      | Yes      | String         | See [key](#key) |
-| `required` | No       | Boolean        | Whether the property must be specified by the user, `true` by default                                                                                                |
+
 #### 4.5.2 Studio Pro UI
 
 When the property is defined as follows:

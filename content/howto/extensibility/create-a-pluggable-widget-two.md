@@ -1,5 +1,5 @@
 ---
-title: "Build a Text Box Pluggable Widget: Part 2 (Advanced)"
+title: "Build a Pluggable Web Widget: Part 2 (Advanced)"
 parent: "pluggable-widgets"
 menu_order: 20
 description: "This how-to will teach you how to add advanced features to your TextBox input widget."
@@ -8,7 +8,7 @@ tags: ["mobile", "javascript", "widget"]
 
 ## 1 Introduction
 
-The new pluggable widget API makes building feature-complete widgets much easier. This how-to will go beyond [How to Create a Pluggable Widget Part 1](create-a-pluggable-widget-one) and teach you how to add advanced features to your TextBox input widget.
+The new pluggable widget API makes building feature-complete widgets much easier. This how-to will go beyond [How to Build a Pluggable Web Widget: Part 1](create-a-pluggable-widget-one) and teach you how to add advanced features to your TextBox input widget.
 
 **This how-to will teach you how to do the following:**
 
@@ -23,7 +23,7 @@ The new pluggable widget API makes building feature-complete widgets much easier
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Complete [Build a Text Box Pluggable Widget: Part 1](create-a-pluggable-widget-one)
+* Complete [Build a Pluggable Web Widget: Part 1](create-a-pluggable-widget-one)
 
 ## 3 Adding Advanced Features to Your TextBox Input Widget
 
@@ -549,8 +549,9 @@ Explaining the code:
 * The display component `TextInput` can be fully re-used to display the preview
 * There is no need to attach any event handlers for updates 
 
-### 3.7 Grouping and System properties
-All pluggable widgets will automatically benefit from the `Visibilty` property, which can be used to set a widget's [conditional visibility](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets#visibility). Within the *widget.xml*, (property groups)[/apidocs-mxsdk/apidocs/pluggable-widgets#property-groups] can be used to move a property to a specific tab or place them in a grouping. The first level group is used for the tabs, while the second level group is used for the group boxes within. 
+### 3.7 Grouping and System Properties
+
+All pluggable web widgets will automatically benefit from the `Visibilty` property, which can be used to set a widget's [conditional visibility](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets#visibility). Within the *widget.xml*, [property groups](/apidocs-mxsdk/apidocs/pluggable-widgets#property-groups) can be used to move a property to a specific tab or place them in a grouping. The first level group is used for the tabs, while the second level group is used for the group boxes within. 
 
 Reorganize the `properties` section in *TextBox.xml* to make the properties look like the core text box properties:
 
@@ -605,7 +606,7 @@ Reorganize the `properties` section in *TextBox.xml* to make the properties look
 
 ## 4 Read More
 
-* [Build a Text Box Pluggable Widget: Part 1](create-a-pluggable-widget-one)
+* [Build aPluggable Web Widget: Part 1](create-a-pluggable-widget-one)
 * [Pluggable Widgets API](/apidocs-mxsdk/apidocs/pluggable-widgets)
 * [Client APIs Available to Pluggable Widgets](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets)
 * [Pluggable Widget Property Types](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets)

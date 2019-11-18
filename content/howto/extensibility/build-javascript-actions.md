@@ -1,7 +1,7 @@
 ---
 title: "Build JavaScript Actions"
 category: "Extensibility"
-menu_order: 3
+menu_order: 40
 tags: ["widget", "pluggable", "JavaScript", "API", "JavaScript-API"]
 ---
 

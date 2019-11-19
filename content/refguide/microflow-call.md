@@ -28,7 +28,7 @@ The microflow that is called by this activity.
 
 ### 2.2 Arguments
 
-For each parameter of the microflow you have to supply an argument of the same type. The values of the arguments are expressed using [expressions](expressions). Variables are passed as value (not changeable via sub microflow), Lists are passed by reference (if the list is changed in sub microflow, the original list is altered).
+For each parameter of the microflow, you have to supply an argument of the same type. The values of the arguments are expressed using [expressions](expressions). Variables (strings, numbers, etc.) are passed as values (meaning, they are immutable, and not changeable via sub-microflows). Lists and objects are passed as references (meaning, if the list/object is changed in a sub-microflow, the original list/object is altered).
 
 ## 3 Output Properties
 

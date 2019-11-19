@@ -34,10 +34,10 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Have read the [Offline First]("/refguide/offline-first.md") reference guide
 
 
-## 3 When to use over the air updates and when not
+## 3 When to Use Over the Air Updates
 
 
-### 3.1 When OTA updates are safe to do without redeploying a new Mendix App {#safeToUpdate}
+### 3.1 Safely Pushing OTA Updates Without Redeploying a New Mendix App {#safeToUpdate}
 
 Over the air updates can be used without redeploying of a new Mendix App in cases like: 
 
@@ -48,9 +48,9 @@ Over the air updates can be used without redeploying of a new Mendix App in case
 * Nanoflow changes
 * Widgets shipped with Mendix added or removed
 * A new custom Javascript-only widget or module was added
-* Non-destructive model changes (see: [Offline First](/refguide/offline-first.md))
+* Non-destructive model changes (see the [Offline First](/refguide/offline-first.md) guide)
 
-### 3.2 When you will need to orchestrate a redeploy of your Mendix App before OTA
+### 3.2 When You Must Redeploy Your Mendix App Before an OTA Update
 
 Over the air updates are only for native client specific changes. It does not replace a Mendix deploy action.
 Therefor, you will still need to redeploy you Mendix App to Mendix cloud as usual. In these cases please follow the following order of deploying your app.
@@ -58,7 +58,7 @@ Therefor, you will still need to redeploy you Mendix App to Mendix cloud as usua
 1) Deploy your Mendix App to the cloud.
 2) Push a new **mandatory** update to your clients using Native Builder.
 
-### 3.3 When you will have to do a full release
+### 3.3 When You Must Do a Full Release
 
 As a rule of thumb, if you have done any changes directly to the iOS or Android project, for 
 the changes to take effect, you will have to fully redeploy you app to the app stores.
@@ -136,7 +136,7 @@ Let us assume that we want to rollback an update. Maybe we released it to early 
 
 ## 5 Initiating a Partial Initial Rollout
 
-### 5.1 When is it Safe to Rollback an Update?
+### 5.1 When is it Safe to Rollback an Update
 
 Please see [When OTA updates are safe to do without redeploying a new Mendix App](#safeToUpdate).
 

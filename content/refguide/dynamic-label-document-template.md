@@ -45,28 +45,20 @@ _Default value:_ False
 
 ### 2.5 Date Format (Only for Attributes of Type **Date and time**)
 
-The date format determines whether the date part, the time part or both are shown. How the date and time parts are formatted depends on the localization of the user using the application. Alternatively, as of version 2.5.3 you can completely customize the format of the date and/or time by supplying a date format string.
+The date format determines whether the date part, the time part or both are shown. How the date and time parts are formatted depends on the localization of the user using the application.
 
-Possible values: 'Date', 'Time', 'Date and time' and in 2.5.3 'Custom'.
+These are the possible values:
 
-_Default value:_ Date
+* **Date** *(default)*
+* **Time**
+* **Date and time**
+* **Custom** (see below for more details)
 
 ### 2.6 Custom Date Format (Only for Attributes of Type **Date and time**)
 
-If you choose 'Custom' as the date format (see above) the custom date format determines the way date and/or time are formatted. The custom date format is a string that follows the rules described in
-[Class SimpleDateFormat](http://download.oracle.com/javase/6/docs/api/java/text/SimpleDateFormat.html).
+If you choose **Custom** as the date format (see above), this property determines how the attribute value is formatted. The custom date format is a string that allows for any combination of symbols found in the table below. Any punctuation will be rendered literally.
 
-{{% alert type="info" %}}
-
-The custom date format:
-
-`EEE, MMM d, yy`
-
-results in the following text:
-
-`Wed, Jul 4, 01`
-
-{{% /alert %}}
+{{% snippet file="refguide/custom-date-format-tokens.md" %}}
 
 ## 3 Common Properties
 

@@ -83,7 +83,7 @@ The format chosen here does not affect how data is stored; in all cases both a d
 
 The possible values for date format are shown below:
 
-* **Date** (this is the default)
+* **Date** *(default)*
 * **Time**
 * **Date and time**
 * **Custom** (see below for more details)

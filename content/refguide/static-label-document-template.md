@@ -9,21 +9,13 @@ tags: ["studio pro"]
 
 A static label shows a line of static text. You can use it to place custom text inside a data view, template grid or table.
 
-{{% alert type="info" %}}
+For example, a label with text 'Customer name' will be look like this:
 
 ![](attachments/819203/918130.png)
 
-A label with text 'Customer name'.
-
-{{% /alert %}}
-
 If you want to insert the current page number or the total page count in your document, you can use a token inside a static label (and only in a static label).
 
-Before version 2.5.4, spaces were automatically inserted on either side of the token. This is no longer the case.
-
-{{% alert type="info" %}}
-Static label content `Page [%pageNumber%] of [%totalPageCount%]` will print page 2 of 4.
-{{% /alert %}}
+For example, static label content `Page [%pageNumber%] of [%totalPageCount%]` will print **Page 2 of 4**.
 
 ## 2 Common Properties
 

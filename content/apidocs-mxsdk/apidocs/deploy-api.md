@@ -30,7 +30,12 @@ Only _Retrieve apps_, _Create Free App Environment_ and _Retrieve app_ API calls
 
 #### 3.1.1 Description
 
-Retrieves all apps to which the authenticated user has access as a regular user. These apps can be found via the *Nodes overview* screen in the Mendix Platform.
+Retrieves all licensed apps and Free Apps to which the authenticated user has access as a regular user.
+
+{{% alert type="info" %}}
+The [Nodes](/developerportal/apps-list/#nodes) screen in the Developer Portal shows all the licensed apps which are returned by this request, but does not show any Free Apps, while the [My Apps](/developerportal/apps-list/#my-apps) screen shows both licensed apps and Free Apps.
+{{% /alert %}}
+
 
 ```bash
 HTTP Method: GET
@@ -1304,7 +1309,13 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/logs/<Date
 
 - _AppId_ (String): Subdomain name of an app.
 - _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy#flexible-environments).
-- _Date_ (String): Date of the desired log (YYYY-MM-DD). Inserting a future date will provide the logs for the current day.
+- _Date_ (String): Date of the desired log (YYYY-MM-DD).
+
+* If *Date* is tomorrow or after, or before the date the app was created, the log will contain the response `[No data found in file and no logging heartbeat detected]`
+
+{{% alert type="info" %}}
+* Under some circumstances, if *Date* is tomorrow's date the log will be *empty* and the **REST response** will contain `[No data found in file and no logging heartbeat detected]` — the cause of this is being investigated
+{{% /alert %}}
 
 **Example Request**
 

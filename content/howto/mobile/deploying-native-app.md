@@ -24,6 +24,12 @@ Every Native Builder project has configurations. These configurations are useful
   * Have an iOS deployment certificate and a provisioning file for which your device is activated
   * Have Xcode installed on your computer for deploying the iOS package to your test device
 * To deploy your app for testing on an Android device, it is expected to have an Android device available
+* Install [Java JDK 11](https://adoptopenjdk.net/) (if you have Studio Pro installed, you should already have JDK 11 in *C:\Program Files\AdoptOpenJDK*)
+* Download the Native Builder [executable](https://www.dropbox.com/sh/hpw7sshut9bco68/AABackrr75rPSgW7u5LBMkMra?dl=0) to a folder of your preference and extract all contents
+ * Use v1.0.0 with Mendix 8.0
+ * Use v2.0.0 with Mendix 8.1.0 and above
+ * Use v3.0.0 with Mendix 8.3.0 and above
+
 
 ## 3. Preparing Your Project
 

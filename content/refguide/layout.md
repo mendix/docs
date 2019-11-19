@@ -20,9 +20,21 @@ This chain can be as long as is necessary, with a generic layout used throughout
 
 When opening a new page in the browser, the content found in the layouts is not reloaded if the layout is re-used by the new page. That is, if a user transitions from page A to page B, both of which use layout X, the placeholder content is refreshed, but the layout content is unaffected. This allows for navigation between pages without losing valuable input or performing a costly refresh on elements that do not require one. Example scenarios include a tab container that does not require the user to select the correct tab every time a new page is opened, or a sidebar menu with user input that should not be cleared after every single refresh. 
 
-Mendix will intelligently detect if pages share a layout, so no user input is required. This also applies for nested layouts. If two pages have different layouts but those layouts share a common master layout, the sub-layout will reload, but the master layout will remain static. 
+Mendix will intelligently detect if pages share a layout, so no user input is required. This also applies for nested layouts. If two pages have different layouts but those layouts share a common master layout, the sub-layout will reload, but the master layout will remain static.
 
-## 2 Placeholder Management<a name="phm"></a>
+## 2 Layout Widgets
+
+Layouts can contain the following widgets:
+
+*   [Layout grid](layout-grid)
+*   [Scroll container](scroll-container)
+*   [Placeholder](placeholder)
+*   [Header](header)
+*   [Sidebar toggle](sidebar-toggle-button)
+
+Placeholder, header, and sidebar toggle are unique to layouts, whilst Layout grids and scroll containers can also be used on pages.
+
+## 3 Placeholder Management<a name="phm"></a>
 
 A layout contains one or more placeholders. One of these placeholders must be named **Main**, and it can be differentiated from the others by a darker shade of blue. Unlike most other widgets, the name of a placeholder carries a special significance. When a user switches a page from one layout to another, the placeholder names will be used to map the content of the page to the new layout. For every placeholder that has content in the current layout, Studio Pro will search for a placeholder with the same name in the new one. As the Main placeholder is mandatory, the user can always be assured that at least some of the page content will be salvaged. Any content found in placeholders not present in the new layout will be moved above the canvas, where it can easily be redistributed over the new placeholders.
 

@@ -12,17 +12,11 @@ This tutorial will teach you how to go from a blank slate to an app running on a
 
 Every Native Builder project has configurations. These configurations are useful for preparing your app, and then creating builds on App Center and GitHub respectively. Configurations are also critical for making updates to apps already delivered to production devices.
 
-The following configurations are required:
-
-* Project name (`--project-name`) This unique configuration identifies what name should be given to the project on App Center and GitHub as well as locally on your machine for later reference
-
-* The build number (`--build-number`) This unique configuration represents the version build number for the release builds for both Android and iOS. It also serves as the branch name on both App Center and GitHub. For over-the-air updates, each build is associated with a particular release group (`--deployment-target`)  which would get the update. By default, this value is set to **Production** and should usually be kept this way. If changed, the new value should be noted as only devices running on that environment would get updates.
-
 ## 2. Prerequisites
 
 * Read the [Getting Started with Native Mobile](https://docs.mendix.com/howto/mobile/getting-started-with-native-mobile) guide and learn how to create, style and debug an application with Mendix Studio Pro
 * Deploy your native app to the cloud via Studio Pro and have the cloud address of your deployed application available
-* Have basic knowledge on how to use Windows' Command Line Interface program `cmd`
+* Have basic knowledge on how to use Windows' command line interface (CLI) program `cmd`
 * Read up on the various parameters found in the [Nnative Builder guide](https://docs.mendix.com/refguide/native-builder#commands)
 * If you plan to deploy your app for testing on an iOS device, do the following:
   * Register for an Apple Developer Account
@@ -72,7 +66,15 @@ To address the warning, complete the following steps (you must repeat them for b
 
 By default, App Center builds are unsigned and not releasable on Google Play or the App Store. To release your apps, you must provide your signature keys to App Center. Signature keys prove the authenticity of your app and prevent forgeries. For more information to how to acquire these keys, See [Managing App Signing Keys](/refguide/managing-app-signing-keys). 
 
-This is an example build:
+To initiate your first build in the Native Builder, you will execute a command in CLI with various parameters included. Some are optional and tailored to your specific app. A few parameters, however, are required.
+
+The following configurations are required:
+
+* Project name (`--project-name`) This unique configuration identifies what name should be given to the project on App Center and GitHub as well as locally on your machine for later reference
+
+* The build number (`--build-number`) This unique configuration represents the version build number for the release builds for both Android and iOS. It also serves as the branch name on both App Center and GitHub. For over-the-air updates, each build is associated with a particular release group (`--deployment-target`)  which would get the update. By default, this value is set to **Production** and should usually be kept this way. If changed, the new value should be noted as only devices running on that environment would get updates.
+
+This is an example build using the aformentioned command:
 
 ```bash
 native-builder.exe build --project-name CoolApp --build-number 1 --app-version 0.1.0

@@ -103,7 +103,7 @@ native-builder.exe build --projectName "CoolApp" --app-version "1.0.0" --build-n
 | --------------------------- | ------------------------------------------------------------------------------------ | --------------------------------------------------- |
 | `--github-access-token`     | GitHub access token.                                                                 | `c0e1dasf1e102c55ded223dbdebdbe59asf95224`          |
 | `--app-center-api-token`    | App Center API token.                                                                | `3e18asdfb43f4fe6c85afsd0bf60dde72f134`             |
-| `--app-center-organization` | (Optional) App Center organisation name.                                             | `my-company`                                        |
+| `--app-center-organization` | (Optional) App Center organization name.                                             | `my-company`                                        |
 | `--project-name`            | Unique name of the project used during `prepare`.                                    | `CoolApp`                                           |
 | `--app-name`                | Display name of the app.                                                             | `My Cool App`                                       |
 | `--app-identifier`          | Unique app identifier.                                                               | `com.mendix.MyAwesomeApp`                           |
@@ -160,7 +160,7 @@ This parameter is the unique name of your app, and can contain any characters. T
 
 #### 6.2 --runtime-url
 
-This parameter should point to the runtime you want to run your app against. If testing against a locally deployed app, use your machine's IP address (for example, {http://192.168.1.12:8080}). If testing against a Mendix Cloud-deployed app, use the fully qualified runtime URL of your deployement server (for example, {https://myapp.mendixcloud.com}). The correct protocol needs to be appended, otherwise the URL will be prefixed by default with `http://`.
+This parameter should point to the runtime you want to run your app against. If testing against a locally deployed app, use your machine's IP address (for example, {http://192.168.1.12:8080}). If testing against a Mendix Cloud-deployed app, use the fully qualified runtime URL of your deployment server (for example, {https://myapp.mendixcloud.com}). The correct protocol needs to be appended, otherwise the URL will be prefixed by default with `http://`.
 
 #### 6.3 --appcenter-organization
 

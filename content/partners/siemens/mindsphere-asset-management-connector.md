@@ -15,7 +15,7 @@ This module contains a Mendix domain model which maps the data structure of Mind
 * Get all assets
 * Get asset type by id
 
-These implement the *GET /assets* and *GET /assettypes/{id}* APIs described in the MindSphere documentation [Asset Management Service – API Specification Europe 1](https://developer.mindsphere.io/apis/advanced-assetmanagement/api-assetmanagement-api-swagger-3-9-0.html).
+These implement the *GET /assets* and *GET /assettypes/{id}* APIs described in the MindSphere documentation [Asset Management Service – API Specification Europe 1](https://developer.mindsphere.io/apis/advanced-assetmanagement/api-assetmanagement-api.html).
 
 {{% alert type="info" %}}
 To use these actions, the app must have at least the core role *mdsp:core:assetmanagement.standarduser* to allow it to read or update assets and images, and to read asset types and aspect types in the Asset Management Service.

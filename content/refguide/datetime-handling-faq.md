@@ -76,4 +76,4 @@ A scheduled event also needs a time zone to operate in, just like when a user wo
 
 ### How are DateTimes in XML that have no timezone information treated?
 
-If a DateTime is encountered in XML that is processed using an XML-To-Domain mapping and specifies no timezone, before Mendix 5.13 the DateTime would be interpreted as if it was in the server's timezone. After Mendix 5.13 this DateTime is interpreted as if it was in UTC, making it more inline with all the other DateTime operations and less error prone. The location of the machine running the server won't affect any operations anymore. This may however change behavior.
+If a DateTime is encountered in XML that is processed using an XML-To-Domain mapping and specifies no timezone, this DateTime is interpreted as if it is UTC. The location of the machine running the server won't affect any operations.

@@ -33,9 +33,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Have your app installed on a test device or emulator
 * Have read the [Offline First]("/refguide/offline-first.md") reference guide
 
-
 ## 3 When to Use Over the Air Updates
-
 
 ### 3.1 Safely Pushing OTA Updates Without Redeploying a New Mendix App {#safeToUpdate}
 
@@ -60,9 +58,7 @@ Therefor, you will still need to redeploy you Mendix App to Mendix cloud as usua
 
 ### 3.3 When You Must Do a Full Release
 
-As a rule of thumb, if you have done any changes directly to the iOS or Android project, for 
-the changes to take effect, you will have to fully redeploy you app to the app stores.
-In addition over the air updates cannot be performend in the following cases: 
+If you have done any changes directly to the iOS or Android project, for the changes to take effect you will have to fully redeploy you app to the app stores. OTA updates do not suffice, and a full release is required, in the following cases: 
 
 * You radically changed the app's functionality. This is a App Store limitation and will require a re-release and re-review of your app by Apple. Your app might be removed if you do not comply.
 * A new native module has been added
@@ -76,7 +72,7 @@ Over the air updates let you correct mistakes in your published apps without iss
 
 ![Typo in welcome screen](attachments/how-to-ota/phone-error-text.png)
 
-Before over the air updates, you would have to make a new release and configure it in the app stores. But over the air updates make fixing such a mistake easy.
+Before over the air updates, you would have to make a new release and configure it in the app stores. But OTA updates make fixing such a mistake easy.
 
 To release a new version OTA, follow these steps:
 
@@ -87,9 +83,9 @@ To release a new version OTA, follow these steps:
 2. Save your changes.
 3. Note the version and build number of the app build you want to update. This how-to assumes an app version of 1.0.0 and a build number of 1.
 4. Open a command line interface (CLI) such as Command Prompt.
-5. Navigate to the directory of your Native Builder: (todo: change code below to an actual example filepath)
+5. Navigate to the directory of your Native Builder:
 
-   `cd C:\<path to Native Builder>`
+   `cd {path to Native Builder executable file}`
 
 6. Run the following command to build and push a new update: 
    
@@ -104,7 +100,7 @@ This command does the following:<br />
 * Marks the update as mandatory for the app's users to install
    {{% /alert %}}
 
-7. Wait for Native Builder to complete.
+7. Wait for the Native Builder to complete.
 8. Restart the app on your testing device. You should be greeted with the following message:
 
    ![Update available prompt](attachments/how-to-ota/phone-update-prompt.png)
@@ -116,9 +112,9 @@ This command does the following:<br />
 
 ## 5 Rolling Back Updates
 
-Sometimes and update might not perform as expected. Out of the box, when an update has failed, the auto update mechanism will try to recover by switching back to the bundle packaged with your app's binary. Non the less you will want to update your bundle by either fixing the issue and pushing a new update or by rolling back to the previous version.
+Sometimes and update might not perform as expected. Out of the box, when an update has failed, the automatic update mechanism will try to recover by switching back to the bundle packaged with your app's binary. Nonetheless you will want to update your bundle by either fixing the issue and pushing a new update or by rolling back to the previous version.
 
-Let us assume that we want to rollback an update. Maybe we released it to early or something is wrong with the latest update.
+Imagine you want to rollback an update. Maybe you released it too early or something is wrong with it.
 
 1. Get your list of available releases by running the following command: 
 

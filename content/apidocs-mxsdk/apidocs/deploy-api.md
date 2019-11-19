@@ -1311,9 +1311,10 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/logs/<Date
 - _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy#flexible-environments).
 - _Date_ (String): Date of the desired log (YYYY-MM-DD).
 
+* If *Date* is tomorrow or after, or before the date the app was created, the log will contain the response `[No data found in file and no logging heartbeat detected]`
+
 {{% alert type="info" %}}
-* If *Date* is after tomorrow, or before the date the app was created, the log will contain the response `[No data found in file and no logging heartbeat detected]`
-* If *Date* is tomorrow's date the log will be *empty* and the **REST response** will contain `[No data found in file and no logging heartbeat detected]`
+* Under some circumstances, if *Date* is tomorrow's date the log will be *empty* and the **REST response** will contain `[No data found in file and no logging heartbeat detected]` — the cause of this is being investigated
 {{% /alert %}}
 
 **Example Request**

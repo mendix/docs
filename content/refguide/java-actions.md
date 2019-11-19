@@ -58,7 +58,11 @@ The **Import mapping** parameter type allows users of Java actions to pass an im
 
 The **Export mapping** parameter type allows users of Java Actions to pass an export mapping into a Java action. In the generated Java action template code, this type is represented as a string (the name of the export mapping).
 
-#### 2.2.5 Return Type
+#### 2.2.5 String Template Type
+
+The **String Template** parameter type allows user of Java Actions to pass a string template into a Java Action. In the generated Java action template code, this type is represented as a string. 
+
+#### 2.2.6 Return Type
 
 The return type determines the type of the data that the Java action returns. It corresponds with the return type of the `executeAction()` method in the *.java* file of the Java action. You can use the result of a Java action in the microflow in which you call it. See [Data Types](data-types) for the possible return types.
 

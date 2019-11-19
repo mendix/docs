@@ -64,7 +64,7 @@ Entities have the following properties:
 
   * **Name** – defines the name of the entity
 
-  * **Persistable** – defines whether objects of the entity are stored in the database (for more information on persistability, see [Persistability](/refguide/persistability) in *Studio Pro Guide*)
+  * **Persistable** – defines whether objects of the entity are stored in the database (for more information on persistability, see [Persistability](/refguide/persistability) in the *Studio Pro Guide*)
 
 		![General Properties of an Entity](attachments/domain-models/entity-general-properties.png)
 
@@ -163,25 +163,33 @@ A new attribute is added to the entity.
 
 ## 5 Adding New Associations
 
-To add an association in the domain model, do the following:
+There are several ways to add an association in the domain model. You can do one of the following:
 
-1. Select a block with an entity you want to add an association to.
-2.  Click the arrow icon:
+1. Click the dot icon that appears and do one the following:
 
-    {{% image_container width="250" %}}![](attachments/domain-models/adding-association.png)
-    {{% /image_container %}}
-   
-3.  Select a second entity for the new association from the list of existing entities and click **Select**. You can also create a new entity for the association from the dialog box. 
+    ![](attachments/domain-models/adding-association-dot-icon.png)
 
-    ![](attachments/domain-models/new-association.png)
+    1. To create an association with an existing entity, drag the dot to the second entity. 
 
-A module name is indicated next to the entity name in brackets. 
+    2.  To create an association with a new entity, click and hold the dot icon for a couple of seconds until a plus icon appears. By clicking the plus icon you can create a new entity with an association from the first entity:
 
-{{% alert type="info" %}}
+        ![](attachments/domain-models/plus-icon.png)
 
-If you select the entity from another module, you will create a cross-module association. For more information, see the [Cross-Module Associations](domain-models-association-properties#cross-module-associations) section in *Associations*. The entities of the current module are listed first. 
+4. Select a block with an entity you want to add an association to do the following:
 
-{{% /alert %}}
+    1.  Click the arrow icon:
+    
+        {{% image_container width="250" %}}![](attachments/domain-models/adding-association.png)
+        {{% /image_container %}}
+
+    2.  Select a second entity for the new association from the list of existing entities and click **Select**. You can also create a new entity for the association from the dialog box. 
+
+        ![](attachments/domain-models/new-association.png)
+
+        A module name is indicated next to the entity name in brackets. 
+    
+        {{% alert type="info" %}} If you select the entity from another module, you will create a cross-module association. For more information, see the [Cross-Module Associations](domain-models-association-properties#cross-module-associations) section in *Associations*. The entities of the current module are listed first.     
+        {{% /alert %}}
 
 ## 6 Specifying Properties
 

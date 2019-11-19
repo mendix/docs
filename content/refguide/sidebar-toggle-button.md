@@ -56,7 +56,7 @@ Determines how the region will be toggled.
 
 | Mode | Effect |
 | --- | --- |
-| Push content aside | The sidebar moves the rest of the content off-screen (only available mode in Mendix 5.17 and older). |
+| Push content aside | The sidebar moves the rest of the content off-screen. |
 | Slide over content | The sidebar moves over the content. |
 | Shrink content | The content shrinks to make space for the sidebar. |
 

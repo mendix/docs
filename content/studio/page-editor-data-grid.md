@@ -64,14 +64,16 @@ In the **Grid Column** properties, you can select the attribute, change the name
 
 The properties are described in the table below:
 
-| Property        | Description                                                  |
-| --------------- | ------------------------------------------------------------ |
-| Attribute       | Determines which attribute of the object will be displayed in this column. Note that you need to configure the grid's data source first to select an attribute. For more information, see section [2 Data Source](#grid-data-source). |
-| Caption         | Defines which caption will be shown in the column header.    |
-| Width           | Displayed for **Column Width In** set to *Percentages*. Determines how much space in percentage the column should take. |
-| Fixed Width     | Displayed for **Column Width In** set to *Pixels*. Determines if this column should have a fixed width or use the available space. When enabled, you can type in the fixed width in **Width In Pixels** (see below). |
-| Width In Pixels | Displayed only when **Fixed Width** is enabled. You can type in the value in this setting for the fixed column width. |
-| Editable        | When enabled, clicking fields in this column will allow end-users to edit values directly, without the need for an edit form. <br />Only available if **Database** is selected as the data source of the grid. For more information on data source, see section [2 Data Source](#grid-data-source). |
+| Property           | Description                                                  |
+| ------------------ | ------------------------------------------------------------ |
+| Attribute          | Determines which attribute of the object will be displayed in this column. Note that you need to configure the grid's data source first to select an attribute. For more information, see section [2 Data Source](#grid-data-source). |
+| Caption            | Defines which caption will be shown in the column header.    |
+| Width              | Displayed for **Column Width In** set to *Percentages*. Determines how much space in percentage the column should take. |
+| Fixed Width        | Displayed for **Column Width In** set to *Pixels*. Determines if this column should have a fixed width or use the available space. When enabled, you can type in the fixed width in **Width In Pixels** (see below). |
+| Width In Pixels    | Displayed only when **Fixed Width** is enabled. You can type in the value in this setting for the fixed column width. |
+| Editable           | When enabled, clicking fields in this column will allow end-users to edit values directly, without the need for an edit form. <br />Only available if **Database** is selected as the data source of the grid. For more information on data source, see section [2 Data Source](#grid-data-source). |
+| Aggregate Function | With this property, you can calculate a sum, count, average, minimum, or maximum value that will be calculated and shown at the bottom of the data grid column. For example, you can display the total number of orders of a customer.<br />Only available for columns with attributes of type Decimal, Integer, and Long. |
+| Aggregate Caption  | Displayed only when **Aggregate Function** is selected. Defines which caption will be shown at the bottom of the grid column. |
 
 ### 2.3 Rows {#grid-rows}
 

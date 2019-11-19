@@ -137,7 +137,7 @@ The user will be prompted with the text set in [Question](#question), below. The
 
 The default value is **No**.
 
-##### 3.3.2.7 Question
+##### 3.3.2.7 Question {#question}
 
 If **Ask confirmation** is set to yes, **Question** is what is shown to the user. Ensure that the question asked is clear and that the captions set on the buttons are unambiguous.
 

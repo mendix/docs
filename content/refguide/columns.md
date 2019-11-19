@@ -59,39 +59,15 @@ _Default value:_ False
 Only for Attributes of the Type Date and Time. The date format determines whether the date part, the time part or both are shown. How the date and time parts are formatted depends on the localization of the user using the application.
 
 These are the possible values:
-* **Date** (this is the default)
+
+* **Date** *(default)*
 * **Time**
 * **Date and time**
 * **Custom** (see below for more details)
 
-_Default value:_ Date
+If you choose **Custom** as the date format (see above), this property determines how the attribute value is formatted. The custom date format is a string that allows for any combination of symbols found in the table below. Any punctuation will be rendered literally.
 
-If you choose **Custom** as the date format, the custom date format determines the way date and/or time are formatted. The custom date format is a string that follows the rules in this table:
-
-| Symbol | Number of Symbols | Example | Example Result | Description |
-| --- | --- | --- | --- | --- |
-| G | 1 | G | AD | Era |
-| y | 1–n | y | 2010 | Year |
-| M | 1–2 | MM | 09 | Month (number) |
-| M | 3 | MMM | Sept | Month (abbreviation) |
-| M | 4 | MMMM | September | Month (full) |
-| w | 1–2 | w | 27 | Week of year |
-| D | 1–3 | DD | 083 | Day of year |
-| a | 1 | a | AM | AM or PM |
-| h | 1–2 | h | 11 | Hour (1-12) |
-| H | 1–2 | HH | 09 | Hour (0-23) |
-| k | 1–2 | k | 10 | Hour (1-24) |
-| K | 1–2 | KK | 05 | Hour (0-11) |
-| m | 1–2 | m | 59 | Minute |
-| s | 1–2 | ss | 06 | Second |
-
-These are some examples:
-
-| Format | Example output |
-| --- | --- |
-| `EEEE d MMMM yyy G, h:mm a ss's` | Tuesday 29 March 2011 AD, 1:37 PM 48s |
-| `h:mm a` | 1:37 PM |
-| `yyy D KK:mm` | 2011 88 01:26 |
+{{% snippet file="refguide/custom-date-format-tokens.md" %}}
 
 ### 2.4 General Section {#general}
 

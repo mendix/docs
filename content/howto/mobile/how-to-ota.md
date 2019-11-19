@@ -33,7 +33,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Install your app on a test device or emulator
 * Read the [Offline First]("/refguide/offline-first.md") reference guide
 
-## 3 When to Use Over the Air Updates
+## 3 When to Use OTA Updates
 
 ### 3.1 Safely Pushing OTA Updates Without Redeploying a New Mendix App {#safeToUpdate}
 

@@ -2,7 +2,7 @@
 title: "Extend Your Application with Custom Java"
 category: "Logic & Business Rules"
 menu_order: 12
-tags: ["microflow", "logic", "java", "extend"]
+tags: ["microflow", "logic", "java", "extend", "jdk", "custom", "UnsupportedClassVersionError"]
 ---
 
 ## 1 Introduction
@@ -164,7 +164,7 @@ To edit the Java action in Eclipse, follow these steps:
 
 ## 7 Troubleshooting {#troubleshooting}
 
-If you get an `UnsupportedClassVersionError` error when running your app, follow these steps:
+If you get an `UnsupportedClassVersionError` when running your app, follow these steps:
 
 1. Clean your app project's **deployment** folder by selecting **Project** > **Clean Deployment Directory**.
 2. Add the same JDK version to Eclipse as that which you are using in Studio Pro (this is the recommended version correlation). For details on JDK requirements, see the [Mendix Studio Pro](/refguide/system-requirements#sp) section of *System Requirements*.

@@ -528,7 +528,7 @@ The TabIndex property allows pluggable widgets to implement the **Tab index** se
 
 ### 5.4 Visibility {#visibility}
 
-Every pluggable widget can be [conditionally hidden](/refguide/conditions). This property can be used to control a position of the widget visibility inputs.
+Every pluggable widget can be [conditionally hidden](/refguide/common-widget-properties#visibility-properties). This property can be used to control a position of the widget visibility inputs.
 
 {{% alert type="info" %}}
 This property type was introduced in Mendix 8.1.

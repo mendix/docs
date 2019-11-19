@@ -131,7 +131,7 @@ It is recommended that you generate a new page to show by right-clicking the wid
 
 ![Generate a select page by right-clicking the widget](attachments/reference-selector/generate-select-page.png)
 
-See [Opening Pages](opening-pages). Note that opening select pages in content is prohibited.
+See the [Show a Page](on-click-event#show-page) section of *On Click Event & Events Section*. Note that select pages must have a [pop-up layout](layout#layout-type).
 
 **Page title**
 

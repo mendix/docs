@@ -662,7 +662,16 @@ module.exports = {
 		from: "/refguide8/range-search-field",
       to: "/refguide/search-bar"
     },
-	/****************************************************
+    {
+      from: "/refguide8/opening-pages",
+        to: "/refguide/pages"
+      },
+    {
+      from: "/refguide8/starting-microflows",
+        to: "/refguide/on-click-event"
+      },
+  
+    /****************************************************
      * From Desktop Modeler version 7 (permanent, mapped)
      ****************************************************/
 	{

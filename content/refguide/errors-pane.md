@@ -1,7 +1,7 @@
 ---
-title: "Consistency Errors"
-parent: "errors-pane"
-menu_order: 10
+title: "Errors Pane"
+category: "App Modeling"
+menu_order: 105
 description: "Describes consistency errors in Mendix Studio Pro and the way to fix them."
 tags: ["Studio Pro", "consistency errors", "checks", "errors"]
 ---

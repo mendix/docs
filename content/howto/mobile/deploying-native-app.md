@@ -17,7 +17,7 @@ Every Native Builder project has configurations. These configurations are useful
 * Read the [Getting Started with Native Mobile](https://docs.mendix.com/howto/mobile/getting-started-with-native-mobile) guide and learn how to create, style and debug an application with Mendix Studio Pro
 * Deploy your native app to the cloud via Studio Pro and have the cloud address of your deployed application available
 * Have basic knowledge on how to use Windows' command line interface (CLI) program `cmd`
-* Read up on the various parameters found in the [Nnative Builder guide](https://docs.mendix.com/refguide/native-builder#commands)
+* Read up on the various parameters found in the [Native Builder guide](https://docs.mendix.com/refguide/native-builder#commands)
 * If you plan to deploy your app for testing on an iOS device, do the following:
   * Register for an Apple Developer Account
   * Have an iOS device for testing the iOS package that will be produced
@@ -33,7 +33,7 @@ Every Native Builder project has configurations. These configurations are useful
 
 ## 3. Preparing Your Project
 
-The native builder uses the `prepare` command, as well as a line of parameters, in your CLI to specify the details of your build. Below is a quick example of a complete set of paramaters:
+The native builder uses the `prepare` command, as well as a line of parameters, in your CLI to specify the details of your build. Below is a quick example of a complete set of parameters:
 
 ```bash
 native-builder.exe prepare --project-name CoolApp --java-home "C:\Program Files\Java\jdk-11.0.3" --project-path "Y:\Documents\Mendix\CoolApp\CoolApp.mpr" --mxbuild-path "C:\Program Files\Mendix\8.3.0.61600\modeler\mxbuild.exe" --github-access-token b609183aa226a8c2d962700be7a387bd7776e986 --appcenter-api-token 440725eb1311ddfced62894a4d23fc90843370c7 --appcenter-organization "cool-organization" --runtime-url "https://coolapp.mendixcloud.com" --app-name "My Cool App" --app-identifier com.mendix.coolapp
@@ -80,7 +80,7 @@ The following configurations are required:
 
 * The build number (`--build-number`) This unique configuration represents the version build number for the release builds for both Android and iOS. It also serves as the branch name on both App Center and GitHub. For over-the-air updates, each build is associated with a particular release group (`--deployment-target`)  which would get the update. By default, this value is set to **Production** and should usually be kept this way. If changed, the new value should be noted as only devices running on that environment would get updates.
 
-This is an example build using the aformentioned command:
+This is an example build using the aforementioned command:
 
 ```bash
 native-builder.exe build --project-name CoolApp --build-number 1 --app-version 0.1.0
@@ -96,7 +96,7 @@ native-builder.exe build --project-name CoolApp --build-number 1 --app-version 0
 
 This command does the following:
 
-* Generates a Javascript deployment bundle and images of the Native App from Studio pro
+* Generates a JavaScript deployment bundle and images of the Native App from Studio pro
 * Creates a new build branch on GitHub and starts a build process on App Center
 
 ### 4.1 Signed Builds
@@ -217,7 +217,7 @@ You can also consult Google's [Run apps on a hardware device](https://developer.
 
 #### 5.1.3 Uploading to Play Store
 
-This section details publishing a signed Android app to the Google Play store. This section can only be be started if you done the following:
+This section details publishing a signed Android app to the Google Play store. This section can only be started if you done the following:
 
 * Completed the [Signed](#41-signed-builds) section above
 * Produced an *app-release.apk* build

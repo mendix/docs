@@ -59,7 +59,6 @@ These are the possible values:
 If you choose **Custom** as the date format (see above), this property determines how the attribute value is formatted. The custom date format is a string that allows for any combination of symbols found in the table below. Any punctuation will be rendered literally.
 
 {{% snippet file="refguide/custom-date-format-tokens.md" %}}
-{{% /alert %}}
 
 ## 3 Common Properties
 

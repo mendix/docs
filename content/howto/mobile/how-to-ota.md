@@ -11,7 +11,7 @@ tags: ["native", "mobile", "ota", "native-builder", "over the air"]
 Using Native Builder 3.0 and Mendix Studio 8.4, you can update your Mendix Native Apps over the air (OTA).
 OTA updates are a fast and painless way of updating things like layouts, pages, assets or even you app's business logic (such as nanoflows and JavaScript actions).
 
-Native Apps are seperated in two parts: a wrapper that is basically a Native iOS or Android app and a bundle that is being loaded dynamically by said wrapper. Things like your business logic and static assets are part of this dynamically-loaded bundle.
+Native apps are separated in two parts: a wrapper that is basically a native iOS or Android app and a bundle that is being loaded dynamically by said wrapper. Things like your business logic and static assets are part of this dynamically-loaded bundle.
 
 When you have changes you want to deploy, the Native Builder can bundle them in a new, updated bundle and painlessly deploy them. On the next app restart, your app's users will be updated to the latest version and continue their business as usual.
 
@@ -28,10 +28,10 @@ OTA updates are bound to a specific app version and build number. This allows yo
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Install Native Builder 3.0.0 or higher
-* Have completed [How to Deploy your First Mendix Native App](LINK HERE)
-* Completed at least one successful build using Native Builder v3.0.0 and Native Template v2.0.0
-* Have your app installed on a test device or emulator
-* Have read the [Offline First]("/refguide/offline-first.md") reference guide
+* Complete [How to Deploy your First Mendix Native App](LINK HERE)
+* Complete at least one successful build using Native Builder v3.0.0 and Native Template v2.0.0
+* Install your app on a test device or emulator
+* Read the [Offline First]("/refguide/offline-first.md") reference guide
 
 ## 3 When to Use Over the Air Updates
 
@@ -50,8 +50,7 @@ Over the air updates can be used without redeploying of a new Mendix App in case
 
 ### 3.2 When You Must Redeploy Your Mendix App Before an OTA Update
 
-Over the air updates are only for native client specific changes. It does not replace a Mendix deploy action.
-Therefor, you will still need to redeploy you Mendix App to Mendix cloud as usual. In these cases please follow the following order of deploying your app.
+Over the air updates are only for native client specific changes. They do not replace a Mendix deploy action. Therefore, you will still need to redeploy you Mendix App to Mendix cloud as usual. In these cases please follow the following order of deploying your app.
 
 1) Deploy your Mendix App to the cloud.
 2) Push a new **mandatory** update to your clients using Native Builder.
@@ -68,11 +67,11 @@ If you have done any changes directly to the iOS or Android project, for the cha
 
 ## 4 Deploying An Over The Air Update
 
-Over the air updates let you correct mistakes in your published apps without issuing a new release. For example, imagine you issued a new release and later found a major typo on your welcome screen:
+Over the air updates let you correct mistakes in your published apps without issuing a new release. For example, imagine you issued a new release and later found a spelling mistake on your welcome screen:
 
 ![Typo in welcome screen](attachments/how-to-ota/phone-error-text.png)
 
-Before over the air updates, you would have to make a new release and configure it in the app stores. But OTA updates make fixing such a mistake easy.
+Before OTA updates, you would have to make a new release and configure it in the app stores. But OTA updates make fixing such a mistake easy.
 
 To release a new version OTA, follow these steps:
 
@@ -112,9 +111,9 @@ This command does the following:<br />
 
 ## 5 Rolling Back Updates
 
-Sometimes and update might not perform as expected. Out of the box, when an update has failed, the automatic update mechanism will try to recover by switching back to the bundle packaged with your app's binary. Nonetheless you will want to update your bundle by either fixing the issue and pushing a new update or by rolling back to the previous version.
+Sometimes and update might not perform as expected. Out of the box, when an update fails, the automatic update mechanism will try to recover by switching back to the bundle packaged with your app's binary. In cases such as these, you should update your bundle by either fixing the issue and pushing a new update or by rolling back to the previous version.
 
-Imagine you want to rollback an update. Maybe you released it too early or something is wrong with it.
+Imagine you want to rollback an update. Maybe you released it too early or something is wrong with it. Rollback an update by following these steps:
 
 1. Get your list of available releases by running the following command: 
 
@@ -132,7 +131,7 @@ Imagine you want to rollback an update. Maybe you released it too early or somet
 
 ## 5 Initiating a Partial Initial Rollout
 
-### 5.1 When is it Safe to Rollback an Update
+### 5.1 When it is Safe to Rollback an Update
 
 Please see [When OTA updates are safe to do without redeploying a new Mendix App](#safeToUpdate).
 
@@ -180,9 +179,9 @@ Generally, you should avoid doing destructive changes to offline-synced entities
 
 ### 7.1 Offline Apps and Data Loss
 
-Data loss can occur when OTA updates or new releases coincide with apps being offline. For example, imagine your Mendix developers were hard at work optimizing the data store entity structure to speed up sync operations. They are quite happy with their results and release that morning. They push a new runtime by pressing the **Run** button in Studio Pro, and then run the Native Builder to push a new update to the apps. All seems to work fine. 
+Data loss can occur when OTA updates or new releases coincide with apps being offline. For example, imagine your Mendix developers were hard at work optimizing the data store entity structure to speed up sync operations. They release that morning. They push a new runtime by pressing the **Run** button in Studio Pro, and then run the Native Builder to push a new update to the apps. All seems to work fine. 
 
-That same morning however, your engineers were hard at work gathering field data in a remote area. Later that afternoon the engineers return back to the city and attempt to synchronize their data using the app's built-in synchronize button. Their synchronization fails. They  do the only thing they can think of: restart the app. When the app starts they are greeted with the **Update Available** screen. They hit the continue button, get updated, and their data is lost or partially synchronized.
+That same morning however, your engineers were hard at work gathering field data in a remote area. Later that afternoon the engineers return back to the city and attempt to synchronize their data using the app's built-in synchronize button. Their synchronization fails. They do the only thing they can think of: restart the app. When the app starts they are greeted with the **Update Available** screen. They hit the continue button, get updated, and their data is lost or partially synchronized.
 
 This issue is independent from OTA updates and specific to offline apps. Your offline app runs a snapshot of your runtime's model locally. So as a Mendix Developer, you have to think twice before doing major chages that might make the app's state unrecoverable. In the example above the entity model was changed, and when the app attempted to synchronize it failed. This can create unrecoverable situations that will require a re-installation of the app, and can lead to data loss for unsynced data.
 

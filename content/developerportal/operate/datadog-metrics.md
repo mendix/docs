@@ -187,7 +187,7 @@ You pass the configuration to the metrics agent by adding a *Custom Runtime Sett
 
 1. Go to the **Environments** page of your app.
 2. Click **Details** next to the environment you have configured for Datadog.
-3.  Add the **Custom Runtime Setting** *MetricsAgentConfig* with the value of the JSON required for your configuration.
+3. Add a **Custom Environment Variable** *METRICS_AGENT_CONFIG* with the value of the JSON required for your configuration.
 
 	![](attachments/datadog-metrics/metrics-agent-config.png)
 

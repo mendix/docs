@@ -41,15 +41,23 @@ When calling a web service using a call-web-service activity, the location of th
 
 ### 2.4 Use Timeout on Request
 
-This can be used to throw an exception when the web service takes too long to respond after connecting. After a set amount of time, an exception will be thrown and the microflow will roll back or go into your custom error handler. Note that this does not change the connection timeout.
+This can be used to throw an exception when the web service takes too long to respond after connecting. After a set amount of time, an exception will be thrown and the microflow will roll back or go into your custom error handler.
 
-_Default value:_ No
+_Default value:_ Yes
+
+{{% alert type="info" %}}
+The default value is _Yes_ since version 8.5.0. In earlier versions, the default value was _No_.
+{{% /alert %}}
 
 ### 2.5 Timeout
 
 **Timeout** specifies the timeout value in seconds.
 
-_Default value:_ 30
+_Default value:_ 300
+
+{{% alert type="info" %}}
+The default value is _30_ since version 8.5.0. In earlier versions, the default value was _30_
+{{% /alert %}}
 
 ### 2.6 Validate Against WSDL
 

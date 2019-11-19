@@ -13,10 +13,10 @@ Headers consist of three distinct elements: a left drop-zone, a right drop-zone,
 
 {{% alert type="info" %}}
 
-![](attachments/pages/header-layout.png)
+![](attachments/layout/header-layout.png)
 A basic lay-out utilizing a header to give the page structure.
 
-![](attachments/pages/header-page.png)
+![](attachments/layout/header-page.png)
 An edit page derived from the lay-out above. The page title it automatically adjusted to match that of the page and the [placeholders](placeholder) have been used to add a save and cancel button, replacing the need to add a control bar to the data view.
 
 {{% /alert %}}

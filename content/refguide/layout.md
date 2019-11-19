@@ -14,7 +14,7 @@ A layout consists of content and [placeholders](placeholder). The content is eve
 
 Layouts can be based on other layouts, in which case the generic layout is referred to as the master layout. If a layout has a master layout, it can use the placeholders defined in the master to create a more specialized configuration. If a page is based on this specialized layout, it makes use of the placeholders defined in the new layout, ignoring those of the master layout. 
 
-![](attachments/16713875/16843991.png)
+![](attachments/layout/16843991.png)
 
 This chain can be as long as is necessary, with a generic layout used throughout the project  as a master layout for a more specific data input layout which is, in turn, used as a master layout for a specialized edit user layout. 
 

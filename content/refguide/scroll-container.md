@@ -116,13 +116,15 @@ A scroll container region is part of a scroll container, and defines a content a
 
 You can add and remove all the regions listed above except the center one. 
 
-### 3.1 Scroll Container Region Properties
+### 3.1 Scroll Container Region Properties{#region}
 
 #### 3.1.1 Common Section
 
 {{% snippet file="refguide/common-section-link.md" %}}
 
 #### 3.1.2 General Section
+
+##### 3.1.2.1 Width or Height
 
 A scroll container region has the following properties in the **General** section:
 
@@ -132,6 +134,18 @@ A scroll container region has the following properties in the **General** sectio
 | Width Value  | Left and right regions     | Allows you to specify the value of the width, either in pixels or in percentage. |
 | Height       | Top and bottom regions     | Defines whether the **Height value** (described below) of the region is specified in pixels or in percentage. |
 | Height Value | Top and bottom regions     | Allows you to specify the value of the height, either in pixels or in percentage. |
+
+##### 3.1.2.2 Toggle Mode (Layouts Only)
+
+One (left or right) scroll container region within a layout can be set to toggle using a [sidebar toggle button](sidebar-toggle-button). This setting determines which region (here called a sidebar) will be toggled, and how the toggling is implemented.
+
+| Mode | Effect |
+| --- | --- |
+| None *(default)* | This sidebar is not affected by the sidebar toggle button. |
+| Push content aside | The sidebar moves the rest of the content off-screen. |
+| Slide over content | The sidebar moves over the content. |
+| Shrink content (initially open) | The content is initially shrunk and the sidebar is displayed. The content expands when the sidebar is toggled. |
+| Shrink content (initially closed) | The sidebar is initially hidden and the content shrinks to make space for it when it is toggled. |
 
 ## 4 Read More
 

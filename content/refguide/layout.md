@@ -22,7 +22,69 @@ When opening a new page in the browser, the content found in the layouts is not 
 
 Mendix will intelligently detect if pages share a layout, so no user input is required. This also applies for nested layouts. If two pages have different layouts but those layouts share a common master layout, the sub-layout will reload, but the master layout will remain static.
 
-## 2 Layout Widgets
+## 2 Properties
+
+An example of layout properties is represented in the image below:
+
+{{% image_container width="250" %}}![Example of the layout properties pane](attachments/layout/layout-properties.png)
+{{% /image_container %}}
+
+Layout properties consist of the following sections:
+
+* [Common](#common)
+* [Designer](#designer)
+* [General](#general)
+
+### 2.1 Common Section{#common}
+
+{{% snippet file="refguide/common-section-link.md" %}}
+
+### 2.2 Designer Section{#designer}
+
+#### 2.2.1 Canvas Width
+
+**Canvas width** defines the width in pixels of the page in the page editor. It is purely used for editing purposes; this property has no effect on the width of the page in the actual application.
+
+Default value: *800*
+
+#### 2.2.2 Canvas Height
+
+**Canvas height** defines the preferred minimum height in pixels of the page in the page editor. It is purely used for editing purposes; this property has no effect on the height of the page in the actual application.
+
+Default value: *600*
+
+### 2.3 General Properties{#general}
+
+#### 2.3.1 Platform
+
+**Platform** can only be set when a layout is created.
+
+![Dialog for adding a new layout](attachments/layout/add-layout.png)
+
+The values for the platform property are:
+
+* Web *(default)* – these layouts are used for pages which are going to be displayed in a browser or hybrid mobile app
+* Native – these layouts are used for pages which are going to be displayed in a native mobile app
+
+For existing layouts, the value is read-only.
+
+#### 2.3.2 Master Layout
+
+**Master layout** specifies a layout on which this layout is based. If no master layout is specified, the layout contains a single widget (for example, a [scroll container](scroll-container)) that defines the structure of pages based on this layout. If a master layout is specified, this layout fills the gaps defined by the master layout. You can introduce new gaps in this layout by using [placeholders](placeholder).
+
+#### 2.3.3 Layout Type<a name="layout-type"></a>
+
+The **layout type**, determines the purpose of the layout and how a page using the layout is opened.
+
+| Layout Type | Description |
+| --- | --- |
+| **Responsive** | Pages that will work fine on all types of devices. |
+| **Tablet specific** | Pages to be displayed on a tablet because the responsive option does not provide a good user interface on a tablet. |
+| **Phone specific** | Pages to be displayed on a phone because the responsive option does not provide a good user interface on a phone. |
+| **Modal pop-up** | Pages that appear as [modal pop-up windows](https://www.wikiwand.com/en/Modal_window). |
+| **Pop-up** | Pages that appear as *modeless* pop-up windows. |
+
+## 3 Layout Widgets
 
 Layouts can contain the following widgets:
 
@@ -33,46 +95,3 @@ Layouts can contain the following widgets:
 *   [Sidebar toggle](sidebar-toggle-button)
 
 Placeholder, header, and sidebar toggle are unique to layouts, whilst Layout grids and scroll containers can also be used on pages.
-
-## 3 Placeholder Management<a name="phm"></a>
-
-A layout contains one or more placeholders. One of these placeholders must be named **Main**, and it can be differentiated from the others by a darker shade of blue. Unlike most other widgets, the name of a placeholder carries a special significance. When a user switches a page from one layout to another, the placeholder names will be used to map the content of the page to the new layout. For every placeholder that has content in the current layout, Studio Pro will search for a placeholder with the same name in the new one. As the Main placeholder is mandatory, the user can always be assured that at least some of the page content will be salvaged. Any content found in placeholders not present in the new layout will be moved above the canvas, where it can easily be redistributed over the new placeholders.
-
-The placeholder naming scheme also has an impact on [page templates](page-templates). When creating a new page, the template will map its content based on the names of the placeholders in its preview layout. Consequently, a template might describe the content for a placeholder that is not available in the selected layout. To prevent this, a compatible layout is automatically pre-selected when clicking a page template in the create new page dialog. If an incompatible layout is then selected manually, all the content for the missing placeholders will be discarded. 
-
-As a consequence of this behavior, user experience can be improved significantly if all of a project's layouts adhere to the same or a similar naming scheme. This will ensure layouts can be alternated freely without having to consider the effect on the content of each individual placeholder. 
-
-## 3 Common Properties
-
-{{% snippet file="refguide/document-name-property.md" %}}
-
-{{% snippet file="refguide/documentation-property.md" %}}
-
-{{% snippet file="refguide/document-class-property.md" %}}
-
-{{% snippet file="refguide/style-property.md" %}}
-
-## 4 Design Properties
-
-{{% snippet file="refguide/canvas-width-property.md" %}}
-
-{{% snippet file="refguide/canvas-height-property.md" %}}
-
-## 5 General Properties
-
-### 5.1 Master Layout
-
-This property specifies the master layout on which the layout is based. If no master layout is specified, the layout contains a single widget (for example, a [scroll container](scroll-container)) that defines the structure of pages based on this layout. If a master layout is specified, this layout fills the gaps defined by the master layout. You can introduce new gaps in this layout by using [placeholders](placeholder).
-
-### 5.1 Layout Type<a name="layout-type"></a>
-
-Every layout has a layout type, which determines the purpose of the layout and how a page using the layout is opened.
-
-| Layout Type | Description |
-| --- | --- |
-| **Responsive** | Use this layout for pages that will work fine on all types of devices. The [layout grid](layout-grid) and other widgets make it possible to create responsive pages. |
-| **Tablet specific** | Use this layout for pages on a tablet if the responsive option is not sufficient (for example, if different use cases with different user interfaces have to be supported). |
-| **Phone specific** | Use this layout for pages on a phone if the responsive option is not sufficient (for example, if different use cases with different user interfaces have to be supported). |
-| **Modal pop-up** | Use this layout for pages that should appear as [modal pop-up windows](https://www.wikiwand.com/en/Modal_window). |
-| **Pop-up** | Use this layout for pages that should appear as modeless pop-up windows. |
-

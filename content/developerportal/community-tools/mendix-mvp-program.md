@@ -17,10 +17,9 @@ The MVP program has been designed to empower the community by retaining our top 
 
 Mendix selects a limited number of developers who receive the year-long MVP status. This is awarded after a thorough review of their online and offline contributions to the Mendix community in the past year.
 
-There are a few simple guidelines in the selection process:
+There are a few simple guidelines for the selection process:
 
-* MVPs may be selected based on a nomination that includes a statement of motivations
-    * You can nominate yourself or someone else
+* You can nominate yourself or someone else to be an MVP – visit [Mendix MVP Program](https://www.mendix.com/mvp-program/) to make a nomination
 * Mendix selects MVPs twice a year (in January and July)
 * The title of MVP is valid for 1 year, until the new MVPs are selected
     * You can be re-elected in subsequent years, depending on your contributions

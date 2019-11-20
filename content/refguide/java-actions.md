@@ -12,11 +12,9 @@ tags: ["studio pro"]
 With Java actions you can extend the functionality of your application in situations where it would be hard to implement this functionality in microflows. You can call a Java action from a microflow using the [Java Action Call](java-action-call).
 
 {{% alert type="info" %}}
-
 Each Java action defined in Studio Pro corresponds to a file *{name of Java action}.java* in the subdirectory *javasource{module name}/actions* of the project directory.
 
 The skeletons of these *.java* files are generated automatically when you deploy for Eclipse (in the **Project** menu). For more information about creating the Java code in these files, see [Java Programming](java-programming).
-
 {{% /alert %}}
 
 ## 2 General
@@ -52,15 +50,15 @@ The **Microflow** parameter type allows users of Java actions to pass a microflo
 
 #### 2.2.3 Import Mapping Type
 
-The **Import mapping** parameter type allows users of Java actions to pass an import mapping into a Java action. In the generated Java action template code, this type is represented as a string (as in, the name of the import mapping).
+The **Import mapping** parameter type allows you to pass an import mapping into a Java action. In the generated Java action template code, this type is represented as a string (as in, the name of the import mapping).
 
 #### 2.2.4 Export Mapping Type
 
-The **Export mapping** parameter type allows users of Java Actions to pass an export mapping into a Java action. In the generated Java action template code, this type is represented as a string (the name of the export mapping).
+The **Export mapping** parameter type allows you to pass an export mapping into a Java action. In the generated Java action template code, this type is represented as a string (the name of the export mapping).
 
 #### 2.2.5 String Template Type
 
-The **String Template** parameter type allows user of Java Actions to pass a string template into a Java Action. In the generated Java action template code, this type is represented as a string. 
+The **String template** parameter type allows you to pass a string template into a Java action. In the generated Java action template code, this type is represented as a string. 
 
 #### 2.2.6 Return Type
 

@@ -14,10 +14,11 @@ Every Native Builder project has configurations. These configurations are useful
 
 ## 2. Prerequisites
 
-* Read the [Getting Started with Native Mobile](https://docs.mendix.com/howto/mobile/getting-started-with-native-mobile) guide and learn how to create, style and debug an application with Mendix Studio Pro
-* Deploy your native app to the cloud via Studio Pro and have the cloud address of your deployed application available
-* Have basic knowledge on how to use Windows' command line interface (CLI) program `cmd`
-* Read up on the various parameters found in the [Native Builder guide](https://docs.mendix.com/refguide/native-builder#commands)
+* Read these resources: 
+ * Read the [Getting Started with Native Mobile](https://docs.mendix.com/howto/mobile/getting-started-with-native-mobile) guide and learn how to create, style and debug an application with Mendix Studio Pro
+ * Deploy your native app to the cloud via Studio Pro and have the cloud address of your deployed application available
+ * Learn how to use Windows' command line interface (CLI) program `cmd`
+ * Read up on the various parameters found in the [Native Builder guide](https://docs.mendix.com/refguide/native-builder#commands)
 * If you plan to deploy your app for testing on an iOS device, do the following:
   * Register for an Apple Developer Account
   * Have an iOS device for testing the iOS package that will be produced
@@ -30,10 +31,9 @@ Every Native Builder project has configurations. These configurations are useful
  * Use v2.0.0 with Mendix 8.1.0 and above
  * Use v3.0.0 with Mendix 8.3.0 and above
 
-
 ## 3. Preparing Your Project
 
-The native builder uses the `prepare` command, as well as a line of parameters, in your CLI to specify the details of your build. Below is a quick example of a complete set of parameters:
+The native builder uses the `prepare` command as well as a line of parameters in your CLI to specify the details of your build. Below is a quick example of a complete set of parameters:
 
 ```bash
 native-builder.exe prepare --project-name CoolApp --java-home "C:\Program Files\Java\jdk-11.0.3" --project-path "Y:\Documents\Mendix\CoolApp\CoolApp.mpr" --mxbuild-path "C:\Program Files\Mendix\8.3.0.61600\modeler\mxbuild.exe" --github-access-token b609183aa226a8c2d962700be7a387bd7776e986 --appcenter-api-token 440725eb1311ddfced62894a4d23fc90843370c7 --appcenter-organization "cool-organization" --runtime-url "https://coolapp.mendixcloud.com" --app-name "My Cool App" --app-identifier com.mendix.coolapp
@@ -47,16 +47,15 @@ The `prepare` command  does the following:
 * Modifies the application's name and identifier for both Android and iOS if any are provided
 * Modifies the Runtime URL for both Android and iOS if any are provided
 
-The `prepare` command can be run multiple times to modify any of the aforementioned parameters. Running `prepare` the first time will produce this warning:
+1.  The `prepare` command can be run multiple times to modify any of the aforementioned parameters. Run `prepare` for the first time, which will produce this warning:
 
-![App Center authentication failure](attachments/deploying-native-app/native-builder-authentication-failure.png)
+ ![App Center authentication failure](attachments/deploying-native-app/native-builder-authentication-failure.png)
 
-This warning is part of App Center's security policy which you must solve on their site. On visiting App Center's dashboard, you will already see the applications created by Native Builder:
+2.  This warning is part of App Center's security policy which you must solve on their site. Visit App Center's dashboard to see your applications created by the Native Builder:
 
-![App Center Applications](attachments/deploying-native-app/appcenter-apps.png)
-*App Center Dashboard*
+ ![App Center Applications](attachments/deploying-native-app/appcenter-apps.png)
 
-To address the warning, complete the following steps (you must repeat them for both your iOS and Android apps if you have one of each):
+To address the warning, complete the following steps (you must do them for both your iOS and Android apps if you have one of each):
 
 1. Navigate to [App Center](https://appcenter.ms/).
 2. Select your newly created app.
@@ -68,11 +67,11 @@ To address the warning, complete the following steps (you must repeat them for b
 8. Select the repository you want to connect to.
 9. You will be redirected back to your App Center account. Your repository’s branches are now listed in the build page.
 
-## 4. Making your First Build
+## 4. Making Your First Build
 
 By default, App Center builds are unsigned and not releasable on Google Play or the App Store. To release your apps, you must provide your signature keys to App Center. Signature keys prove the authenticity of your app and prevent forgeries. For more information to how to acquire these keys, See [Managing App Signing Keys](/refguide/managing-app-signing-keys). 
 
-To initiate your first build in the Native Builder, you will execute a command in CLI with various parameters included. Some are optional and tailored to your specific app. A few parameters, however, are required.
+To initiate your first build in the Native Builder, you will execute a command in CLI with various parameters included. For more info on the parameters and what they are used for, see the [Commands](/refguide/native-builder#commands) section in the *Native Builder* guide. Some parameters are optional and tailored to your specific app. A few parameters, however, are required.
 
 The following configurations are required:
 
@@ -86,9 +85,7 @@ This is an example build using the aforementioned command:
 native-builder.exe build --project-name CoolApp --build-number 1 --app-version 0.1.0
 ```
 
-For more info on the parameters and what they are used for, see the [Commands](/refguide/native-builder#commands) section in the *Native Builder* guide.
-
-The example above would initiate a new build for the already-prepared project *CoolApp* using a [Semantic version](https://semver.org/) *0.1.0* for the build, unique version build number *1*  and performing an dual-platform (Android and iOS) build. For a single-platform build, the `--platform` parameter can be used with `android` or `ios` with an example below.
+The example above would initiate a new build for the already-prepared project *CoolApp* using a [semantic](https://semver.org/) app version of *0.1.0*, the unique version build number of *1*,  and will create a dual-platform (Android and iOS) build. For a single-platform build, the `--platform` parameter can be used with `android` or `ios` with an example below.
 
 ```bash
 native-builder.exe build --project-name CoolApp --build-number 1 --app-version 0.1.0 --platform android
@@ -99,9 +96,11 @@ This command does the following:
 * Generates a JavaScript deployment bundle and images of the Native App from Studio pro
 * Creates a new build branch on GitHub and starts a build process on App Center
 
+Now it is time for you to make your own first build. Using the information above, enter a tailored `build` command in your CLI and run it.
+
 ### 4.1 Signed Builds
 
-For Android, If you do not intend to publish your app to the Google Play Store, you can skip this section. For iOS, this step prepares an already installable iOS App Store Package (*.ipa*). Without this section's instructions, an unsigned version of an iOS app (*.xcarchive*) would need to be signed manually using Xcode in order to deploy on a device or in the App Store.
+For Android, if you do not intend to publish your app to the Google Play Store, you can skip this section. For iOS, this step prepares an already installable iOS App Store Package (*.ipa*). Without this section's instructions, an unsigned version of an iOS app (*.xcarchive*) would need to be signed manually using Xcode in order to deploy on a device or in the App Store.
 
 To sign your app using App Center, do the following:
 

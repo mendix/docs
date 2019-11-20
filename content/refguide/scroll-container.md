@@ -8,13 +8,13 @@ tags: ["studio pro", "scroll container", "container widget", "widget"]
 
 ## 1 Introduction
 
-A scroll container is used to divide the layout in regions (for details on regions, see the [Scroll Container Region](#scroll-container-region)section) such as the header, sidebar, or footer. A scroll container must be the only top-level widget. Apart from that, a scroll container can only be placed directly in another scroll container.
+A scroll container is used to divide the layout in regions (for details on regions, see the [Scroll Container Region](#scroll-container-region) section) such as the header, sidebar, or footer. A scroll container must be the only top-level widget. Apart from that, a scroll container can only be placed directly in another scroll container.
 
 Scroll containers may be placed on navigation layouts as well as on pages.
 
 The scroll container example below divides the layout in three parts: a header containing a logo, a content part with a placeholder and a footer:
 
-![Scroll Container](attachments/container-widgets/scroll-container.PNG)
+![Scroll Container](attachments/container-widgets/scroll-container.png)
 
 
 A scroll container can consist of several scroll container regions. For more information on scroll container regions and their properties, see the [Scroll Container Region](#scroll-container-region) section. 
@@ -87,6 +87,10 @@ _Default value:_ Center
 {{% alert type="info" %}}Regions are not supported on native mobile pages.{{% /alert %}}
 
 Regions define the content area of a scroll container. For more information see the [Scroll Container Region](#scroll-container-region) section.
+
+{{% alert type="info" %}}
+If you add regions in a [layout](layout), they will automatically be filled with [placeholders](placeholder).
+{{% /alert %}}
 
 #### 2.3.1 Enable Top
 

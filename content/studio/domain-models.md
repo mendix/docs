@@ -171,7 +171,7 @@ There are several ways to add an association in the domain model. You can do one
 
     1. To create an association with an existing entity, drag the dot to the second entity. 
 
-    2.  To create an association with a new entity, click and hold the dot icon for a couple of seconds until a plus icon appears. By clicking the plus icon you can create a new entity with an association from the first entity:
+    2.  To create an association with a new entity, drag the dot icon and hold it for a couple of seconds until it turns into a plus icon. By dropping the plus icon, you can create a new entity with an association from the first entity:
 
         ![](attachments/domain-models/plus-icon.png)
 

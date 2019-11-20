@@ -83,11 +83,11 @@ This pane displays the output of the [Mendix Runtime](runtime) while running an 
 
 #### 5.1.4 Documentation
 
-This pane dispalys the documentation for the currently selected element (if applicable).
+This pane displays the documentation for the currently selected element (if applicable).
 
 #### 5.1.5 Error List
 
-This pane displays the [errors](consistency-errors) and warnings that exist in your app project.
+The [**Errors** pane](errors-pane) displays the [errors](consistency-errors), warnings, and deprecations that exist in your app project.
 
 #### 5.1.6 Find Results
 

@@ -51,7 +51,7 @@ Limits the messages displayed in the pane to the current document.
 To enable you to find your errors, deprecations, and warnings quickly, each message shows you the following:
 
 * Icon – indicates the [type of the message](#message-type)
-* Index number – an index number assigned to each message, so that every message is counted 
+* Index number – an index number assigned to each message 
 * **Error Code** – a unique code that is specific for the errors only; warning and deprecation do not have  error codes
 * **Message** –  description/explanation of the check failure
 * **Element** – an element causing the check failure
@@ -68,9 +68,9 @@ Right-clicking the message line opens a drop-down menu:
 
 The following actions are available in the drop-down menu:
 
-* **Go to {the name of the element}** – does the same as double-clicking the message; takes you to the element causing the check failure.
+* **Go to {the name of the element}** – does the same as double-clicking the message, takes you to the element causing the check failure.
 * **View documentation about {an error code or the name of the element}** – opens the corresponding document that describes this check failure and gives instructions on how to fix it; if there is no documentation on the current message, the option is greyed-out
-* Message-specific actions – actions that depend on the message, for example, you can remove the microflow parameter that is not used in the project
+* Message-specific actions – actions that depend on the message, in the example above, you can remove the microflow parameter that is not used in the project
 
 ##  4 Read More
 

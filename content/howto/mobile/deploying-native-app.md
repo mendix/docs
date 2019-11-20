@@ -106,8 +106,8 @@ To sign your app using App Center, do the following:
 
 1. Navigate to [App Center](https://appcenter.ms/apps).
 2. Select the application you wish to configure.
-3. Select *Build* on the left panel.
-4. Select the *branch* you would like to configure from the list.
+3. Select **Build** on the left panel.
+4. Select the **branch** you would like to configure from the list.
 
 The next steps differ depending on the type of app you want to configure.
 
@@ -166,27 +166,27 @@ After your start your Native Builder build, you will see some or all of the foll
 
  ![App Center starting a build](attachments/deploying-native-app/appcenter-building.png)
 
-* A successful app center build:
+* A successful App Center build:
 
  ![Successful App Center build](attachments/deploying-native-app/appcenter-successful.png)
 
-* A successful and downloaded Android build:
+* A successful, downloaded Android build:
 
  ![Successful and Downloaded Android build](attachments/deploying-native-app/native-builder-successful-android.png)
 
-* A successful and downloaded iOS build:
+* A successful, downloaded iOS build:
 
  ![Successful and Downloaded iOS build](attachments/deploying-native-app/native-builder-successful-ios.png)
 
-At this point, the downloaded *.zip* archives can be retrieved from the path provided by Native Builder.
-
-If your build times out, you can either sign your app locally as described in [Android Local Signing](#511-local-signing) and [iOS Local Signing](#521-local-signing) below, or upgrade to a paid App Center account. This build issue is more likely to affect iOS builds than Android builds as this is a limitation when signing with an iOS developer profile.
+If your build times out, you can either sign your app locally as described in [Android Local Signing](#511-local-signing) and [iOS Local Signing](#521-local-signing) below, or upgrade to a paid App Center account. This build issue is more likely to affect iOS builds because of how long signing takes with an iOS developer profile.
 
 In case of failure, the build logs will be downloaded for your convenience. Please provide them when filing a [support ticket](/developerportal/support/submit-support-request) with Mendix.
 
+Afer your build succeeds, retrieve the downloaded *.zip* archives at the path provided by Native Builder.
+
 ## 5. Distributing
 
-Unless [Signed](#41-signed-builds), the downloaded archives, `CoolApp-Android-1.zip` and `CoolApp-iOS-1.zip` would contain *non-release* builds, `app-debug.apk` and `nativeTemplate.xcarchive`. Otherwise, it would contain `app-release.apk` and `nativeTemplate.ipa` for Android and iOS platforms respectively.
+Unless [signed](#41-signed-builds), the downloaded archives `CoolApp-Android-1.zip` and `CoolApp-iOS-1.zip` will contain *non-release* builds, `app-debug.apk` and `nativeTemplate.xcarchive`. When signed, they will contain `app-release.apk` and `nativeTemplate.ipa` files for Android and iOS platforms respectively.
 
 For distributing a specific platform, see the subsequent sections below:
 

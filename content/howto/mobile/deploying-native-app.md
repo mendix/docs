@@ -186,9 +186,9 @@ Afer your build succeeds, retrieve the downloaded *.zip* archives at the path pr
 
 ## 5. Distributing
 
-Unless [signed](#41-signed-builds), the downloaded archives `CoolApp-Android-1.zip` and `CoolApp-iOS-1.zip` will contain *non-release* builds, `app-debug.apk` and `nativeTemplate.xcarchive`. When signed, they will contain `app-release.apk` and `nativeTemplate.ipa` files for Android and iOS platforms respectively.
+If your builds **are not signed**, the downloaded archives `CoolApp-Android-1.zip` and `CoolApp-iOS-1.zip` will contain *non-release* builds, `app-debug.apk` and `nativeTemplate.xcarchive`. If your builds **are signed**, they will contain `app-release.apk` and `nativeTemplate.ipa` files for Android and iOS platforms respectively.
 
-For distributing a specific platform, see the subsequent sections below:
+For distributing to a specific platform, see the subsequent sections below:
 
 * [Distributing for Android](#51-distributing-for-android)
 * [Distributing for iOS](#52-distributing-for-ios)
@@ -199,7 +199,7 @@ For distributing a specific platform, see the subsequent sections below:
 
 You can skip this section if you completed [App Center Signing](#412-signing-android). To sign your Android app locally, use apksigner by following Google's [apksigner documentation](https://developer.android.com/studio/command-line/apksigner).
 
-#### 5.1.2 Installing on a device
+#### 5.1.2 Installing on a Device
 
 The *app-debug.apk* or *app-release.apk* can readily be installed on any device by sending the file over via any available means eg USB.
 
@@ -214,7 +214,7 @@ To install your app via USB, connect your device to a machine via USB. To Instal
 
 You can also consult Google's [Run apps on a hardware device](https://developer.android.com/studio/run/device) for detailed instructions on testing your app using a physical Android device instead of an emulator.
 
-#### 5.1.3 Uploading to Play Store
+#### 5.1.3 Uploading to the Google Play Store
 
 This section details publishing a signed Android app to the Google Play store. This section can only be started if you done the following:
 
@@ -224,7 +224,7 @@ This section details publishing a signed Android app to the Google Play store. T
 
 Before submitting your app to an app store, you will have to complete Google's [signup steps](https://play.google.com/apps/publish/signup/). Also, [review the launch checklist](http://developer.android.com/distribute/tools/launch-checklist.html) before publishing your app. Beyond the launch checklist information, check Google's [Preparing your app for release](https://developer.android.com/studio/publish) for information on edge cases to resolve before publishing. 
 
-Once you have satisfied those requirements, you can [Upload your app to the Play Console](https://developer.android.com/studio/publish/upload-bundle). Then, follow the steps in Google's [Prepare & roll out releases](https://support.google.com/googleplay/android-developer/answer/7159011) to create, prepare, review, and roll out your app release.
+Once you have satisfied those requirements, you can follow Google's [Upload your app to the Play Console](https://developer.android.com/studio/publish/upload-bundle). Then, follow Google's [Prepare & roll out releases](https://support.google.com/googleplay/android-developer/answer/7159011) to create, prepare, review, and roll out your app release.
 
 ### 5.2 Distributing for iOS
 
@@ -264,7 +264,7 @@ In order to deploy the *nativeTemplate.xcarchive* on a device or on the App Stor
 
  ![Xcode Application loader](attachments/deploying-native-app/xcode-app-loader-7.png)
 
-### 5.2.2 Installing on a device
+### 5.2.2 Installing on a Device
 
 You can now deploy your app to your device. An easy way to do this is with Apple iTunes.
 
@@ -280,7 +280,7 @@ To install the *ipa* on your device, follow these steps:
 5. Your app will show up in the list of apps. Click the **Install** button next to your app.
 6. Click **Apply** at the bottom of the screen to execute the actual installation.
 
-### 5.2.3 Uploading to App Store
+### 5.2.3 Uploading to the iOS App Store
 
 This section and the next only applies when the build was [Signed](#41-signed-builds) for the Apple Store earlier.
 

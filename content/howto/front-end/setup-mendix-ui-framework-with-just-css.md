@@ -12,11 +12,11 @@ In this how-to we will go through how to setup the [Mendix UI Framework](https:/
 These instructions are for apps which are based on the [Mendix UI Framework](https://ux.mendix.com/). They do not apply to apps which use the [Mendix Atlas UI](https://atlas.mendix.com/).
 {{% /alert %}}
 
-**After completing this how-to you will know:**
+**This how-to will teach you how to do the following:**
 
-*   How to create a new App
-*   How to create your own theme with just CSS
-*   How to make your first styling changes
+* Create a new app
+* Create your own theme with just CSS
+* Make your first styling changes
 
 ## 2 Preparation
 
@@ -36,7 +36,6 @@ In this chapter we will create a new app and select a theme from the New App sel
 
 3. Click **Download** to start using this theme.
 4. Select **Run Locally** to deploy your app.
-
 
 ## 4 Opening Your Project in the Text Editor
 

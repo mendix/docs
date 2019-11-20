@@ -232,6 +232,7 @@ In index.html, in the header before the line `{{themecss}}`, the following scrip
 				return "";
 		}
 
+		var xrsfToken = getCookie("XSRF-TOKEN");
 		if (window.fetch) {
 				var originalFetch = window.fetch;
 				window.fetch = function(url, init) {

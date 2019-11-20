@@ -16,7 +16,7 @@ When a consistency check is not met, Studio Pro will notify you about this on th
 
 To display the **Errors** pane, open the menu option **View > Error list**.
 
-## 2 Types of Messages {#message-type}
+## 2 Types of Messages {#message-types}
 
 There are three types of messages, each having its own button and icon:
 

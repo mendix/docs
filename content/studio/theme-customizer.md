@@ -31,13 +31,13 @@ You can switch between the modes by clicking the corresponding button in the top
 
 ## 2 Settings
 
-You can change the way your app looks using different settings in right-hand side of the **Theme Customizer**, that are divided in the following sections:
+You can change the way your app looks using different settings in left-hand side of the **Theme Customizer**, that are divided in the following sections:
 
 ### 2.1 Upload Logo
 
 In the **Upload Logo** section, you can upload a picture that will be used as a logo in your app. You can upload  images with extensions png, jpg, jpeg, gif, svg. For more information on how to upload the logo, see the [Uploading a Logo](#uploading-logo) section.  
 
-Once the logo is uploaded, a color palette is generated basing on the logo colors. You can then select **Logo Colors** in color-pickers of different settings and align your app style with the style of your logo:
+Once the logo is uploaded, a color palette is generated based on the logo colors. You can then select **Logo Colors** in color-pickers of different settings and align your app style with the style of your logo:
 
 {{% image_container width="250" %}}![Logo Colors](attachments/theme-customizer/logo-colors.png)
 {{% /image_container %}}
@@ -56,7 +56,10 @@ In the **UI Customization** section, you can adjust the style and color of the m
 
 ### 2.4 Typography
 
-In the **Typography** section, you can override the text styles and text colors for your app, such as colors and size of headings and hyperlinks in your app. 
+In the **Typography** section, you can override the text styles and text colors for your app, such as colors and size of headings and hyperlinks in your app:
+
+{{% image_container width="250" %}}![Widget View](attachments/theme-customizer/widget-view.png)
+{{% /image_container %}}
 
 ## 3 Widget View {#widget-view}
 

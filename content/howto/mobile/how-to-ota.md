@@ -59,6 +59,7 @@ Over the air updates are only for native client specific changes. They do not re
 
 If you have done any changes directly to the iOS or Android project, for the changes to take effect you will have to fully redeploy you app to the app stores. OTA updates do not suffice, and a full release is required, in the following cases: 
 
+* The initial release of your app
 * You radically changed the app's functionality. This is a App Store limitation and will require a re-release and re-review of your app by Apple. Your app might be removed if you do not comply.
 * A new native module has been added
 * The app has been renamed

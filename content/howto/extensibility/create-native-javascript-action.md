@@ -97,12 +97,17 @@ For you information your settings are stored in a file `C:\Users\mendix.tech.wri
 }
 ```
 3. To build the app for the first time we can run the following command: `$ native-builder.exe build --project-name "Native NFC App" --app-version "1.0.0" --build-number 1` The project names should match the project names from the prepare command of step 1. The build might take a while and progress is given via the console. As a result a `build/1` branches is created in the GitHub repository. And the output is a mpk file which is now available in the `C:\native-builder\builds\Native-NFC-App-Android-1.zip`.
+{{% alert type="info" %}}
+
+The free version of the App Center, is will cancel/timeout the build if it exceeds 30 minutes.
+
+{{% /alert %}}
 4. Install the app on your device. Unzip the build artefact, in the unzipped file your will find the `build\app-debug.apk`. Transfer the apk onto your device and install it. You might get some message Blocked by Play Protect, where you have to select `INSTALL ANYWAY`
 5. Open your app and you should see the homepage of the native app. Well done!
 
 {{% alert type="info" %}}
 
-The native builder  will locally run mxbuild. When failing, the output of the native bundler van be found `C:\MendixProjects\NativeNFC\deployment\log\native_packager_bundle_android_log.txt`
+The native builder will locally run mxbuild. When failing, the output of the native bundler van be found `C:\MendixProjects\NativeNFC\deployment\log\native_packager_bundle_android_log.txt`
 
 {{% /alert %}}
 

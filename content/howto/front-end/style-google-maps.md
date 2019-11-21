@@ -83,7 +83,7 @@ Supporting communities is cool. Therefore I will also show you how to upload you
 
 ## 4 Read More
 
-*   [Create a custom theme with the Mendix UI Framework](create-a-custom-theme-with-the-mendix-ui-framework)
+* [Atlas UI](atlas-ui)
 *   [Layouts and Snippets](layouts-and-snippets)
 *   [Setup Mendix UI Framework with Scout](setup-mendix-ui-framework-with-scout)
 *   [Setting Up the Navigation Structure](../general/setting-up-the-navigation-structure)

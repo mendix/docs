@@ -39,7 +39,7 @@ To create the NFC JavaScript actions, follow these steps:
 
 {{% alert type="info" %}}
 
-In this tutorial we will work with an Android device. At a later stage we might update this how-to with the iOS instructions.
+In this tutorial we will work with an Android device. At a later stage we might update this how-to with the iOS instructions. [TODO validate on iOS]
 For the commands we assumes your Git working folder is `c:\github\`, the native builder is available in `C:\native-builder\` and the modeler is installed in `C:\Program Files\Mendix\8.3.0.61600\` and Mendix project are stored folder `C:\MendixProjects\`. Please substitute them when you are using difference paths on your machine.
 
 {{% /alert %}}
@@ -75,7 +75,6 @@ $ native-builder.exe prepare --java-home "C:\Program Files\AdoptOpenJDK\jdk-11.0
 ```
 
 As a result of the prepare command your app is created in [App Center](https://appcenter.ms/apps):
-
 ![App Center apps](attachments/create-native-javascript-action/app-center-apps.png)
 
 A new repository is created in your GitHub account:
@@ -128,21 +127,16 @@ The dependency is split into two parts: the native OS part, and the client JavaS
 In the section below we user `react-native link` this command is used vor React Native version <0.60. And is will be replace in >=0.60 with auto linking. Auto linking does not require any linking or code changes. However both process are not without flaws and not every module does support it. For demonstration purposes we will document how to linking manual. (replacing step 6 and 7)
 
 For Android:
-1. [TODO: check if step needed]To allow the app to use the NFC capabilities we have request permission. We do this by adding it in the file `C:\github\native-nfc-app\android\app\src\main\AndroidManifest.xml`
-``` xml
-<uses-permission android:name="android.permission.NFC" />
-<uses-feature android:name="android.hardware.nfc" android:required="false" />
-```
-2. To expose the the library to the template we have to link it via gradle. Open the file `C:\github\native-nfc-app\android/settings.gradle` and add the include and project at the end on the file before the the `include` `**':app'**``,` `**':mendixnative-release'**`.
+1. To expose the the library to the template we have to link it via gradle. Open the file `C:\github\native-nfc-app\android\settings.gradle` and add the include and project at the end on the file before the the `include` `**':app'**``,` `**':mendixnative-release'**`.
 ``` gradle
 include ':react-native-nfc-manager'
 project(':react-native-nfc-manager').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-nfc-manager/android')
 ```
-3. To use the new gradle module in the `C:\github\native-nfc-app\android\app\build.gradle` file, in the list of dependencies add:
+2. To use the new gradle module in the `C:\github\native-nfc-app\android\app\build.gradle` file, in the list of dependencies add:
 ``` gradle
 implementation project(":react-native-nfc-manager")
 ```
-4. Now the main application need to initialize NFC manager, in the `C:\github\native-nfc-app\android\app\src\main\java\com\mendix\nativetemplate\MainApplication.java` file add an item to the `Arrays.<ReactPackage>asList`, add a comma after the other dependency and add the `new NfcManagerPackage()`
+3. Now the main application need to initialize NFC manager, in the `C:\github\native-nfc-app\android\app\src\main\java\com\mendix\nativetemplate\MainApplication.java` file add an item to the `Arrays.<ReactPackage>asList`, add a comma after the other dependency and add the `new NfcManagerPackage()`
 ``` java
 new NfcManagerPackage()
 ```

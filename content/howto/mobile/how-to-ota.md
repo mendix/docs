@@ -35,15 +35,15 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 When to Use OTA Updates
 
-### 3.1 Safely Pushing OTA Updates Without Redeploying a New Mendix App {#safeToUpdate}
+### 3.1 Safely Pushing OTA Updates Without Redeploying Your Mendix App {#safeToUpdate}
 
-Over the air updates can be used without redeploying of a new Mendix App in cases like: 
+It is good practice to always redeploy your Mendix App before pushing a new over the air update. For educational reason we list here the cases that might be safe to release an over the air update without redeploying of your Mendix App to Mendix Cloud:
 
 * Style changes
 * Changes to static images, text, or other static assets
 * Layout changes
-* JaveScript action changes
 * Nanoflow changes
+* JaveScript action changes
 * Widgets shipped with Mendix added or removed
 * A new custom Javascript-only widget or module was added
 * Non-destructive model changes (see the [Offline First](/refguide/offline-first.md) guide)
@@ -55,7 +55,7 @@ Over the air updates are only for native client specific changes. They do not re
 1) Deploy your Mendix App to the cloud.
 2) Push a new **mandatory** update to your clients using Native Builder.
 
-### 3.3 When You Must Do a Full Release
+### 3.3 When Over the Air Updates are not applicable
 
 If you have done any changes directly to the iOS or Android project, for the changes to take effect you will have to fully redeploy you app to the app stores. OTA updates do not suffice, and a full release is required, in the following cases: 
 
@@ -91,7 +91,7 @@ To release a new version OTA, follow these steps:
    
    `native-builder.exe release push-update --project-name "CoolApp" --target-version "1.0.0" --build-number 1 --rollout-percentage 100 --mandatory`
 
-   {{% alert type="info" %}}Text...
+   {{% alert type="info" %}}
 This command does the following:<br />
 * Runs Mx Build to build your project<br />
 * Packages your project to be pushed as a new update<br />
@@ -100,13 +100,13 @@ This command does the following:<br />
 * Marks the update as mandatory for the app's users to install
    {{% /alert %}}
 
-7. Wait for the Native Builder to complete.
-8. Restart the app on your testing device. You should be greeted with the following message:
+1. Wait for the Native Builder to complete.
+2. Restart the app on your testing device. You should be greeted with the following message:
 
    ![Update available prompt](attachments/how-to-ota/phone-update-prompt.png)
 
-9.  Tap **Confirm** to update your app.
-10. The app should reload and greet you with the following dialog box:
+3.  Tap **Confirm** to update your app.
+4.  The app should reload and greet you with the following dialog box:
 
    ![Update success prompt](attachments/how-to-ota/phone-success-prompt.png)
 

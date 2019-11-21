@@ -85,7 +85,5 @@ Supporting communities is cool. Therefore I will also show you how to upload you
 
 * [Atlas UI](atlas-ui)
 *   [Layouts and Snippets](layouts-and-snippets)
-*   [Setup Mendix UI Framework with Scout](setup-mendix-ui-framework-with-scout)
 *   [Setting Up the Navigation Structure](../general/setting-up-the-navigation-structure)
-*   [Setup Mendix UI Framework with Koala](setup-mendix-ui-framework-with-koala)
 *   [Creating your first two Overview and Detail pages](create-your-first-two-overview-and-detail-pages)

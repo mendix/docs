@@ -1,7 +1,7 @@
 ---
 title: "Changes Pane"
-category: "App Modeling"
-menu_order: 25
+parent: view-menu
+menu_order: 10
 description: "Describes the Changes pane in Mendix Studio Pro."
 tags: ["Studio Pro", "changes", "changes pane"]
 ---

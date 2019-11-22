@@ -66,17 +66,14 @@ To set up a notification nanoflow, do the following:
 To set up your microflow, do the following:
 
 1. Create a microflow named *DS_TestEntity*.
-2. Drag and drop a create entity activity onto your microflow.
-3. Double-click your create entity activity.
+2. Drag and drop a create object activity onto your microflow.
+3. Double-click your create object activity.
 4. Click **Entity** > **Select**.
 5. Click **NativeMobile.TestEntity**.
 6. Click **Select**.
-7. Click **OK**.
-8. Drag and drop a commit object activity onto your microflow.
-9. Double-click your commit object activity.
-10. From the **Object or List** drop-down menu, select **NewTestEntity (NativeMobile.TestEntity)**.
-11. Click **OK**.
-12. Double-click your end event, make sure its **Type** is **Boolean**, type *true* into the value field, and click **OK**:
+7. Check **Commit** 
+8. Click **OK**.
+9. Double-click your end event, make sure its **Type** is **Boolean**, type *true* into the value field, and click **OK**:
 
 	{{% image_container width="500" %}}![end event true](attachments/native-push/end-event-true.png){{% /image_container %}}
 

@@ -1,7 +1,7 @@
 ---
 title: "Changes Pane"
 category: "App Modeling"
-menu_order: 35
+menu_order: 25
 description: "Describes the Changes pane in Mendix Studio Pro."
 tags: ["Studio Pro", "changes", "changes pane"]
 ---
@@ -12,17 +12,17 @@ For [Team Server](/developerportal/develop/team-server) app projects, the **Chan
 
 This pane consists of the following:
 
-* The *top bar* contains various buttons, such as **Back**, **Go to**, **Tasks**, etc. 
-* The *top level* shows you the document that was changed, for example, a page where a widget was deleted
-* The *zoomed-in level* of the pane is split into two grids, with elements on the left and changed properties on the right
+* The [top bar](#top-bar) contains various buttons, such as **Back**, **Go to**, **Tasks**, etc. 
+* The [top level](top-level) shows you the document that was changed, for example, a page where a widget was deleted
+* The [zoomed-in level](#zommed-in-level) of the pane is split into two grids, with elements on the left and changed properties on the right
 
-## 2 Top Bar
+## 2 Top Bar {#top-bar}
 
 The top bar of the **Changes** pane consists of the following buttons:
 
 * **Back** – takes you back to the top level if you were on the zoomed-in level
 
-* **Go to** – on the top level, opens a zoomed-in level; on the zoomed-in level, takes you to the changes element 
+* **Go to** – opens a zoomed-in level or takes you directly to the changed element 
 
 * **Tasks** – allows you to perform specific actions such as reverting the change to the latest commit, or solving conflicts
 
@@ -34,13 +34,13 @@ The top bar of the **Changes** pane consists of the following buttons:
 
 * **Show Conflicts** – available only for a zoomed-in level, shows details of a conflict
 
-* **Changes in mine** – available only for a zoomed-in level, shows changes to an element on a current development line (for more information on how to solve conflicts, see the [Dealing With Conflicts](using-version-control-in-studio-pro#conflicts) section in *Using Version Control in Studio Pro*)
+* **Changes in mine** – available only for a zoomed-in level, shows changes to a document on a current development line (for more information on how to solve conflicts, see the [Dealing With Conflicts](using-version-control-in-studio-pro#conflicts) section in *Using Version Control in Studio Pro*)
 
-* **Changes in theirs** – available only for a zoomed-in level, shows incoming changes from another development line (for more information on how to solve conflicts, see the [Dealing With Conflicts](using-version-control-in-studio-pro#conflicts) section in *Using Version Control in Studio Pro*)
+* **Changes in theirs** – available only for a zoomed-in level, shows incoming changes to a document from another development line (for more information on how to solve conflicts, see the [Dealing With Conflicts](using-version-control-in-studio-pro#conflicts) section in *Using Version Control in Studio Pro*)
 
 	![Top Bar of the Changes Pane](attachments/changes-pane/changes-top-bar.png)
 
-## 3 Top Level
+## 3 Top Level {#top-level}
 
 The top level of the **Changes** pane is a grid listing changes to a specific document, for example, a page or a nanoflow:
 
@@ -49,22 +49,44 @@ The top level of the **Changes** pane is a grid listing changes to a specific do
 The grid contains information on the following items:
 
 * **Status** – shows the type of changes applied to the document. The status can be one of the following:
-  * **Added** – a new document was created; indicated by a green circle
-  * **Modified** – changes to an existing document were made, such as adding or deleting elements or changing element properties; indicated by a yellow circle
-  * **Deleted** – a document was deleted; indicated by a red circle with a minus sign
-  * **Conflicted** – a document contains conflicting changes; indicated by a red circle with an exclamation mark
+  * **Added** – a new document was created; indicated with a green circle
+  * **Modified** – changes to an existing document were made, such as adding or deleting elements or changing element properties; indicated with a yellow circle
+  * **Deleted** – a document was deleted; indicated with a red circle with a minus
+  * **Conflicted** – a document contains conflicting changes; indicated with a red circle with an exclamation mark
 * **Item** – indicates the document that contains changes
 * **Module** – a module where the changed document is
 * **Details** – can contain details on the status, for example, when you have conflicting changes 
 
-## 4 Zoomed-In Level
+## 4 Zoomed-In Level {#zoomed-in-level}
 
 You can zoom into a changed document, double-clicking a line in the grid on the top level or clicking the **Go to** button. 
 
-The zoomed-in level is split into two grids, with elements on the left and changed properties on the right. If no properties were changed for an element, for example, when an element was *added* or *deleted*, the left-hand grid will be empty:
+The zoomed-in level is split into two grids, with elements on the left and changed properties on the right. If no properties were changed for an element, for example, when an element was *added* or *deleted*, the leftgrid will be empty:
 
-![](attachments/changes-pane/element-added.png)
+![No Properties to Show](attachments/changes-pane/element-added.png)
 
+The grid on the left can contain the following columns:
+
+* **Element** – the name of the modified element
+
+* **Mine** – indicates the status of the change on the current development line
+
+* **Theirs** – only displayed for conflicts; indicates the status of the incoming change on another development line
+
+	![Left Grid](attachments/changes-pane/zoomed-in-level-left-grid.png)
+	
+
+The grid on the right can contain the following columns:
+
+* **Property** – the property that was modified
+
+* **Original** – the original property setting
+
+* **Mine** – the change to the property that was made on the current development line
+
+* **Theirs** – only displayed for conflicts; the change to the property that was made on the another development line
+
+	![Rigth Grid](attachments/changes-pane/zoomed-in-level-right-grid.png)
 
 ##  5 Read More
 

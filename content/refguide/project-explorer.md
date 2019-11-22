@@ -1,7 +1,7 @@
 ---
 title: "Project Explorer"
-category: "App Modeling"
-menu_order: 20
+parent: view-mode
+menu_order: 80
 tags: ["studio pro", "project explorer"]
 ---
 

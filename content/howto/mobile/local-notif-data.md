@@ -72,8 +72,8 @@ To set up your microflow, do the following:
 5. Click **NativeMobile.TestEntity**.
 6. Click **Select**.
 7. Check **Commit** 
-7. Click **OK**.
-12. Double-click your end event, make sure its **Type** is **Boolean**, type *true* into the value field, and click **OK**:
+8. Click **OK**.
+9. Double-click your end event, make sure its **Type** is **Boolean**, type *true* into the value field, and click **OK**:
 
 	{{% image_container width="500" %}}![end event true](attachments/native-push/end-event-true.png){{% /image_container %}}
 

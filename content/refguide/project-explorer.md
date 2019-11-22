@@ -30,7 +30,7 @@ In the **Project Explorer**, you can do the following:
 * **Expand all documents** – click the plus icon in the top-left corner of the **Project Explorer** to expand all document and see the whole structure of your project
 * **Collapse all documents** – click the minus icon in the top-left corner of the **Project Explorer** to collapse all documents
 * **Expand or collapse an individual folder** – to expand/collapse documents in an individual folder click the plus/minus icon or double-click the folder 
-* **Perform actions specific to the selected folder** – right-click the selected folder to see what functions you can perform. The list of functions depends on the folder, for example, when right-clicking the **System** module, you can only find usages of this module, while when right-clicking **MyFirstModule** you can add a page, add a microflow, rename the module, export the module package, copy-paste documents, and much more.
+* **Perform actions specific to the selected folder** – right-click the selected folder to see what functions you can perform. The list of functions depends on the folder, for example, when right-clicking the **System** module, you can only find usages of this module, while when right-clicking **MyFirstModule** you can add a page, add a microflow, rename the module, export the module package, cut/copy/paste documents, and much more.
 
 ## 3 Read More
 

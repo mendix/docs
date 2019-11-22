@@ -8,7 +8,7 @@ These are the release notes for the [Mendix Metamodel](/apidocs-mxsdk/mxsdk/unde
 
 ## 8.4.0
 
-**Release date: November 22th, 2019**
+**Release date: November 22nd, 2019**
 
 ## CodeActions
 

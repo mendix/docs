@@ -12,9 +12,9 @@ This dialog box contains Studio Pro-wide user-specific settings.
 
 ### 2.1 Interface
 
-#### 2.1.1 Keep Active Document Selected in Project Explorer
+#### 2.1.1 Keep Active Document Selected in the Project Explorer
 
-If checked, the document selection in **Project Explorer** automatically follows the document that is currently active in the document pane. Otherwise, the selection in the Project Explorer remains unchanged when the active document changes.
+When enabled, **Project Explorer** automatically highlights the document that is currently active. When this property is disabled, the selection in the **Project Explorer** remains unchanged when the active document changes.
 
 ### 2.2 Error List
 

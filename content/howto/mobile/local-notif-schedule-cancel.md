@@ -1,5 +1,5 @@
 ---
-title: "Use Local Notifications: Part 5 (Scheduling)"
+title: "Part 5: Scheduling"
 parent: "local-notif-parent"
 menu_order: 50
 description: A tutorial for scheduling and cancelling push notifications.

@@ -65,7 +65,7 @@ Select this option when you want to work on an app that is not stored in [Mendix
 
 Sometimes the computer running Studio Pro cannot access the internet directly, but has to connect to a proxy server that requires authentication. If this is the case, then these settings can be used to specify the user name and password to connect to the proxy server.
 
-## 5 New Features
+## 5 New Features {#new-features}
 
 ### 5.1 Project Explorer
 

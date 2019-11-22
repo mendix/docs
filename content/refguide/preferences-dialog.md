@@ -65,19 +65,23 @@ Select this option when you want to work on an app that is not stored in [Mendix
 
 Sometimes the computer running Studio Pro cannot access the internet directly, but has to connect to a proxy server that requires authentication. If this is the case, then these settings can be used to specify the user name and password to connect to the proxy server.
 
-## 5 New features
+## 5 New Features
 
 ### 5.1 Project Explorer
 
-#### 5.1.1 Project Explorer (requires restart)
+#### 5.1.1 Project Explorer
 
 Select this option when you want to enable the new version of the Project Explorer. Should you find any issues in the new version, you can switch back to the old version by unselecting this option.
 
-### 5.2 Diffing and merging
+This option requires a restart.
 
-#### 5.2.1 New version of the Changes pane (requires restart)
+### 5.2 Diffing and Merging
 
-Select this option when you want to enable the new version of the Changes pane. Should you find any issues in the new version, you can switch back to the old version by unselecting this option.
+#### 5.2.1 New Version of the Changes Pane {#new-changes}
+
+Select this option when you want to enable the new version of the [Changes](studio-pro-overview#changes) pane. Should you find any issues in the new version, you can switch back to the old version by clearing this check box.
+
+This option requires a restart.
 
 ## 6 Read More
 

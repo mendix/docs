@@ -13,118 +13,145 @@ These are the release notes for the [Mendix Metamodel](/apidocs-mxsdk/mxsdk/unde
 ## CodeActions
 
 ### StringTemplateParameterType (Element)
-* Introduced;
+
+* Introduced.
 
 ## JavaScriptActions
 
 ### NanoflowJavaScriptActionParameterType (Element)
-* Introduced;
+
+* Introduced.
 
 ## Microflows
 
 ### JavaActionParameterMapping (Element)
 
 #### Property 'argumentRuntime'
-* Deleted;
+
+* Deleted.
 
 ### JavaScriptActionCallAction (Element)
-* Removed experimental
+
+* Removed experimental status.
 
 ### JavaScriptActionParameterMapping (Element)
-* Removed experimental
+
+* Removed experimental status.
 
 ### StringTemplateParameterValue (Element)
-* Introduced;
+
+* Introduced.
 
 ### ExpressionBasedCodeActionParameterValue (Element)
 
 #### Property 'valueExpression'
-* Introduced;
+
+* Introduced.
 
 ### PushToClientAction (Element)
-* Introduced;
+
+* Introduced.
 
 ## Nanoflows
 
 ### NanoflowParameterValue (Element)
-* Introduced;
+
+* Introduced.
 
 ## Rest
 
 ### PublishedODataService (ModelUnit)
 
 #### Property 'summary'
-* Introduced; "A one-line summary description of the service"
+
+* Introduced as a one-line summary description of the service.
 
 #### Property 'description'
-* Introduced; "A multi-line description of the service"
+
+* Introduced as a multi-line description of the service.
 
 ### ConsumedODataService (ModelUnit)
 
 #### Property 'headersMicroflow'
-* Introduced; "Microflow that provides headers to pass to the service"
+
+* Introduced as a microflow that provides headers to pass to the service.
 
 ## CustomWidgets
 
 ### WidgetValueType (Element)
 
 #### Property 'dataSourceProperty'
-* Introduced;
+
+* Introduced.
 
 ## Navigation
 
 ### NavigationDocument (ModelUnit)
 
 #### Property 'schemas'
-* Deleted;
+
+* Deleted.
 
 ## Pages
 
 ### BuildingBlock (ModelUnit)
 
 #### Property 'platform'
-* Added public
+
+* Added public.
 
 ### MicroflowParameterMapping (Element)
 
 #### Property 'variable'
-* Introduced;
+
+* Introduced.
 
 #### Property 'widget'
-* Deleted; "Use variable instead"
+
+* Deleted. Use variable instead (see above).
 
 #### Property 'useAllPages'
-* Deleted; "Use variable instead"
+
+* Deleted. Use variable instead (see above).
 
 ### NanoflowParameterMapping (Element)
 
 #### Property 'variable'
-* Introduced;
+
+* Introduced.
 
 #### Property 'widget'
-* Deleted; "Use variable instead"
+
+* Deleted. Use variable instead (see above).
 
 #### Property 'useAllPages'
-* Deleted; "Use variable instead"
+
+* Deleted. Use variable instead (see above).
 
 ### PageVariable (Element)
-* Introduced;
+
+* Introduced.
 
 ### Snippet (ModelUnit)
 
 #### Property 'type'
-* Added public
+
+* Added as public.
 
 ### RetrievalSchema (Element)
-* Deleted;
+
+* Deleted.
 
 ### RetrievalQuery (Element)
 
 #### Property 'widgetName'
-* Introduced;
+
+* Introduced.
 
 #### Property 'usedAssociations'
-* Introduced;
+
+* Introduced.
 
 #### Property 'schemaId'
-* Deleted;
+
+* Deleted.

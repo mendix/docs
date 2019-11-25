@@ -85,7 +85,7 @@ This is an example build using the aforementioned command:
 native-builder.exe build --project-name CoolApp --build-number 1 --app-version 0.1.0
 ```
 
-The example above would initiate a new build for the already-prepared project *CoolApp* using a [semantic](https://semver.org/) app version of *0.1.0*, the unique version build number of *1*,  and will create a dual-platform (Android and iOS) build. For a single-platform build, the `--platform` parameter can be used with `android` or `ios` with an example below.
+The example above would initiate a new build for the already-prepared project *CoolApp* using a [semantic](https://semver.org/) app version of *0.1.0*, the unique version build number of *1*,  and will create a dual-platform (Android and iOS) build. For a single-platform build, the `--platform` parameter can be used with `android` or `ios` such as the example below.
 
 ```bash
 native-builder.exe build --project-name CoolApp --build-number 1 --app-version 0.1.0 --platform android

@@ -1,6 +1,6 @@
 ---
 title: "Project Explorer"
-parent: view-mode
+parent: view-menu
 menu_order: 80
 tags: ["studio pro", "project explorer"]
 ---

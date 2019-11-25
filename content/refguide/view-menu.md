@@ -8,13 +8,15 @@ tags: ["Studio Pro", "view menu", "top bar"]
 
 ## 1 Introduction
 
-Studio Pro supports a number of dockable window panes. You can close some panes to just show the ones you need at the moment, but you can always reopen them via the **View** menu. 
+Studio Pro supports a number of dockable window panes, such as the **Changes** or **Errors** panes. You can close some panes to just show the ones you need at the moment, but you can always reopen them via the **View** menu. 
+
+Via this menu you can also enable/disables the [full screen mode](#full-screen) and also [reset the layout](#reset-layout) of your project to default.  
 
 ## 2 Changes {#changes}
 
-For [Team Server](/developerportal/develop/team-server) app projects, this pane shows the local changes to the app project since the last commit. You can commit changes, update to the latest revision, and view the history from here. 
+For [Team Server](/developerportal/develop/team-server) app projects, the [Changes pane](changes-pane) shows the local changes to the app project since the last commit. You can commit changes, update to the latest revision, and view the history from here. 
 
-This pane has two levels, so when you zoom into a changed document, you can review all the changes within that document without going back and forth between levels. The zoomed-in level of the pane is split into two grids, with elements on the left and properties on the right. Selecting an element on the left presents the changed properties on the right. To go back to the list of changed documents, click **Back**.
+This pane has two levels, so when you zoom into a changed document, you can review all the changes within that document without going back and forth between levels. The zoomed-in level of the pane is split into two grids, with elements on the left and properties on the right. Selecting an element on the left presents the changed properties on the right:
 
 ![](attachments/studio-pro-overview/changes.gif)
 
@@ -32,7 +34,7 @@ This pane displays the documentation for the currently selected element (if appl
 
 ## 6 Error List
 
-The [**Errors** pane](errors-pane) displays the [errors](consistency-errors), warnings, and deprecations that exist in your app project.
+The [Errors pane](errors-pane) displays the [errors](consistency-errors), warnings, and deprecations that exist in your app project.
 
 ## 7 Find Results
 
@@ -50,7 +52,7 @@ This pane displays the properties of the currently selected element. This is whe
 
 ## 10 Stories
 
-For [Team Server](/developerportal/develop/team-server) app projects, this pane shows the [stories](/developerportal/collaborate/stories) of the current [Sprint](/developerportal/develop/planning-development)
+For [Team Server](/developerportal/develop/team-server) app projects, this pane shows the [stories](/developerportal/collaborate/stories) of the current [Sprint](/developerportal/develop/planning-development).
 
 ## 11 Toolbox
 
@@ -72,12 +74,20 @@ This tool can be used to debug your application.
 
 In this pane, you can view the current values of variables, lists, and objects when debugging your application.
 
-## 13 Other View Menu Items {#other-view}
+## 13 Full Screen Mode {#full-screen}
 
-| Menu Item | Description | Shortcut Key |
-| --- | --- | --- |
-| **Full Screen** | Hides the title bar and makes the window fill the entire screen. This version of **Full Screen** was introduced in Studio Pro [8.3.0](/releasenotes/studio-pro/8.3#830); in previous versions, the **Full Screen** mode closed all dockable window panes. | <kbd>F11</kbd> |
-| **Distraction Free Mode** | Same as the **Full Screen** mode above, but also closes all dockable window panes. This was introduced in Studio Pro [8.3.0](/releasenotes/studio-pro/8.3#830). | <kbd>Shift</kbd> + <kbd>F11</kbd> |
-| **Reset Layout** | Resets the layout of Studio Pro to factory defaults. |   |
+Hides the title bar and makes the window fill the entire screen. This version of **Full Screen** was introduced in Studio Pro [8.3.0](/releasenotes/studio-pro/8.3#830); in previous versions, the **Full Screen** mode closed all dockable window panes. 
+Shortcut key: <kbd>F11</kbd>
 
+## 14 Distraction Free Mode
+
+Same as the **Full Screen** mode above, but also closes all dockable window panes. This was introduced in Studio Pro [8.3.0](/releasenotes/studio-pro/8.3#830).
+
+Shortcut key: <kbd>Shift</kbd> + <kbd>F11</kbd>
+
+## 15 Reset Layout {#reset-layout}
+
+Resets the layout of dockable window panes to factory defaults.
+
+## 16 Read More
 

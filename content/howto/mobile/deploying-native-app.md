@@ -230,11 +230,11 @@ Once you have satisfied those requirements, you can follow Google's [Upload your
 
 #### 5.2.1 Local Signing
 
-You can skip this section if you completed [App Center Signing](#411-signing-ios). The assumption here is that you just want to be able to test the app on a device and/or you don't have a Distribution certificate and run out of build minutes on App Center when signing with a Developer certificate.
+You can skip this section if you completed [App Center Signing](#411-signing-ios). Local signing is useful if you only want to test your app on a device, or you do not have a distribution certificate and have run out of build minutes on App Center when signing with a developer certificate.
 
-In order to deploy the *nativeTemplate.xcarchive* on a device or on the App Store, an Apple developer account and a Development team is required. If one is available, do the following:
+In order to deploy the *nativeTemplate.xcarchive* on a device or on the App Store, an Apple developer account and a development team is required. If one is available, do the following:
 
-1. For an Xcode version less than version 11, double-click on the *nativeTemplate.xcarchive* file and it should open with the built-in *Application Loader* software.
+1. Using an Xcode version below 11, double-click on the *nativeTemplate.xcarchive* file and it should open with the built-in *Application Loader* software.
 
 2.  Click the *Distribute App* button to start the local signing flow.:
 

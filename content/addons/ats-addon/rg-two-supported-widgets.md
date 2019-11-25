@@ -7,7 +7,9 @@ parent: "rg-two-ats"
 
 The following table shows an overview of all the supported widgets in ATS.
 
-IMPORTANT: ATS does not support customized versions of app store widgets. Also, ATS does not support using javascript that changes the behavior/apperance of standard or app store widgets.
+{{% alert type="warning" %}}
+ATS does not support customized versions of Mendix App Store widgets. Also, ATS does not support using JavaScript that changes the behavior or apperance of standard or App Store widgets.
+{{% /alert %}}
 
 ## 2 Standard Widgets
 

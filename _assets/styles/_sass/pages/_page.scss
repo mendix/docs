@@ -272,7 +272,7 @@ $block: 'mx';
 
     @include element('frontpage-block') {
       display: block;
-      /* The margin and padding were using frontpage-search-block-margins, I changes them to instead of 20 in margin and 40 in padding, the sections on the front page should be closer to each other */
+      /* The margin and padding were using frontpage-search-block-margins for margin and padding, I changed them for the sections on the front page to be closer to each other */
       margin: 20px 0 0;
       padding: 0 0 40px;
       /* a line on the front page is not needed, we can divide elements with margins and paddings */
@@ -280,7 +280,7 @@ $block: 'mx';
       @include element('404-title') {
         margin: 0 auto;
         display: block;
-        text-align: center;
+        text-align: center;        
       }
     }
 

@@ -63,7 +63,6 @@ You will be taken to the IBM authentication page to enter your IBM credentials
 
 You will now be asked to provide the final details for IBM Cloud development environment.
 
-{{% todo %}}[Picture!]{{% /todo %}}
 ![](attachments/ibm-cloud/create-development.png)
 
 You will be able to choose a Domain, Organization, and Space which is configured for you in this region.
@@ -359,7 +358,6 @@ This could be caused by exceeding your organization quota limit for a service wh
 
 2. Click **Details** on the error message at the top of the page.
 
-    {{% todo %}}[Picture!]{{% /todo %}}
     ![](attachments/ibm-cloud/failed-more-details.png)
 
 A more detailed description of the reason why the environment creation failed will be displayed.

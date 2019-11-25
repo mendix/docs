@@ -45,7 +45,7 @@ You must place the JDBC driver *.jar* files for the databases to which you want 
 
 For example, if you want to connect to an Amazon RDS PostgreSQL database (for example, `jdbc:postgresql://xyz-rds-instance.ccnapcvoeosh.eu-west-1.rds.amazonaws.com:5432/postgres`), you need to place the PostgreSQL Jdbc driver *.jar* file inside the userlib folder.
 
-## 4 Using the ExecuteStatement Action in a Microflow
+## 4 Using the Execute Statement Action in a Microflow
 
 To use an ExecuteStatement action in a microflow, follow these steps:
 

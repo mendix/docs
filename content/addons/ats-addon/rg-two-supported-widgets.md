@@ -7,6 +7,8 @@ parent: "rg-two-ats"
 
 The following table shows an overview of all the supported widgets in ATS.
 
+IMPORTANT: ATS does not support customized versions of app store widgets. Also, ATS does not support using javascript that changes the behavior/apperance of standard or app store widgets.
+
 ## 2 Standard Widgets
 
 We support all the widgets that are included in Mendix Studio Pro:

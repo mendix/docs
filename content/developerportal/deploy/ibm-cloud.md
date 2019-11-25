@@ -73,7 +73,6 @@ If you select **Yes** for **Custom database?**, you will be asked for the Name a
 
 After the environment has been created successfully, you will see the following page:
 
-{{% todo %}}[Picture!]{{% /todo %}}
 ![](attachments/ibm-cloud/02-ibm-configured-for-use.png)
 
 Your development environment is now configured and you can now develop your app.

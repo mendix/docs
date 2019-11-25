@@ -147,10 +147,14 @@ $block: 'mx';
         margin: 0;
       }
 
-      /* but a curve around the border of the search and changes to 90% to align with featured lists*/
+      /* but a curve around the border of the search and changes to 85% to align with featured lists and added a minimum width with @media for it to be 100% on smaller screens*/
       .input-group .form-control {
-        border-radius: 4px;
-        max-width: 90%;
+        border-radius: 4px;  
+              
+        @media (min-width: 1200px) {
+          max-width: 85%;
+          
+        }
       }
 
       /* Headers have a slightly larger space above - to make them a bit more obvious without increasing the font size */
@@ -166,13 +170,15 @@ $block: 'mx';
         font-weight: bold;
       }
 
-      /* Changed layout from fixed to auto */
+      /* Changed layout from fixed to auto and added the minimum width with @media to set it back to auto and not to wrap paragraphs as it does without this setting*/
       table {
         width: 100%;
         max-width: 100%;
         border: 1px solid $color-table-border;
         table-layout: auto;          
         font-size: 12px;
+        @media (min-width: 1200px) {
+          table-layout: auto;
 
       /* This should not let a table cell to be too tiny. But the width should not be any wider than 8rem, otherwise it becomes too wide on mobile.*/
         td:before {
@@ -266,7 +272,7 @@ $block: 'mx';
 
     @include element('frontpage-block') {
       display: block;
-      /* The margin and padding were using frontpage-search-block-margins instead of 10 in margin and 40 in padding (I also added 40 to margin), the sections on the front page should be closer to each other */
+      /* The margin and padding were using frontpage-search-block-margins, I changes them to instead of 20 in margin and 40 in padding, the sections on the front page should be closer to each other */
       margin: 20px 0 0;
       padding: 0 0 40px;
       /* a line on the front page is not needed, we can divide elements with margins and paddings */

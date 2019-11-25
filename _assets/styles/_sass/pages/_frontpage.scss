@@ -17,6 +17,11 @@ $block: 'frontpage';
     @include element('link'){
       color: $color-darker-grey-2;
     }
+    @include element('container') {
+    @media (min-width: 1200px) {
+      padding: 0 0 0 64px;        
+    }
+  }
   }
 }
 

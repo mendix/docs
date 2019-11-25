@@ -179,6 +179,7 @@ $block: 'mx';
         font-size: 12px;
         @media (min-width: 1200px) {
           table-layout: auto;
+        }
 
       /* This should not let a table cell to be too tiny. But the width should not be any wider than 8rem, otherwise it becomes too wide on mobile.*/
         td:before {

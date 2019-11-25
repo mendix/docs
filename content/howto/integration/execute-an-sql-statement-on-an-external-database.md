@@ -51,8 +51,8 @@ The Execute statement action's result is either an Integer or a Long value which
 
 ## 5 Remarks
 
-*   This database connector can be used for CREATE, INSERT, UPDATE, STORED PROCEDURE, DELETE or DDL SQL statements.
-*   This database connector should not be used for SELECT SQL queries.
-*   The jdbcUrl argument, in the Execute statement connector, must specify a database URL that points to your relational database and is dependent upon the particular database and JDBC driver. It will always begin with "jdbc:" protocol text, but the rest is up to particular vendor. For example 'jdbc:<a rel="nofollow">mysql://hostname/databaseName'</a> jdbcUrl format can be used for MySQL databases.
-*   Proper security must be applied as this action can allow SQL Injection in your Mendix application.
+* This database connector can be used for CREATE, INSERT, UPDATE, STORED PROCEDURE, DELETE or DDL SQL statements.
+* This database connector should not be used for SELECT SQL queries.
+* The jdbcUrl argument, in the Execute statement connector, must specify a database URL that points to your relational database and is dependent upon the particular database and JDBC driver. It will always begin with "jdbc:" protocol text, but the rest is up to particular vendor. For example 'jdbc:<a rel="nofollow">mysql://hostname/databaseName'</a> jdbcUrl format can be used for MySQL databases.
+* Proper security must be applied as this action can allow SQL injection in your Mendix application. Among others things, do not use user-supplied or environment-supplied variables in your SQL statement; if possible, you should prefer them to be static.
 

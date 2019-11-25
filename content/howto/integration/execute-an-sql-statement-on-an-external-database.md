@@ -10,7 +10,7 @@ tags: ["SQL", "database", "external database", "integration"]
 The Mendix Platform offers many ways to integrate with external data, but integrating with external databases has not been a seamless experience until now. The **Database connector** module can be used to seamlessly connect to external databases without limiting you in your choice of database or SQL dialect, enabling you to incorporate your external data directly in your Mendix application.
 This document will focus on executing an SQL (_Structured Query Language_) _Statement_ on **relational external databases**.
 
-The **Execute statement** action (present in the Database Connector module) provides a consistent environment for Mendix projects to perform an arbitrary SQL _Statement_ on relational external databases.
+The **executeStatement** action (present in the Database Connector module) provides a consistent environment for Mendix projects to perform an arbitrary SQL _Statement_ on relational external databases.
 JDBC (_Java Database Connectivity_) API, a standard Java API, is used when this Java action attempts to connect with a Relational Database for which a JDBC driver exists.
 
 **After completing this how-to you will know how to do the following:**
@@ -53,11 +53,6 @@ The Execute statement action's result is either an Integer or a Long value which
 
 *   This database connector can be used for CREATE, INSERT, UPDATE, STORED PROCEDURE, DELETE or DDL SQL statements.
 *   This database connector should not be used for SELECT SQL queries.
-*   The jdbcUrl argument, in the Execute statement connector, must specify a database URL that points to your relational database and is dependent upon the particular database and JDBC driver. It will always begin with "jdbc:" protocol text, but the rest is up to particular vendor.
-    For example 'jdbc:<a rel="nofollow">mysql://hostname/databaseName'</a> jdbcUrl format can be used for MySQL databases.
-
+*   The jdbcUrl argument, in the Execute statement connector, must specify a database URL that points to your relational database and is dependent upon the particular database and JDBC driver. It will always begin with "jdbc:" protocol text, but the rest is up to particular vendor. For example 'jdbc:<a rel="nofollow">mysql://hostname/databaseName'</a> jdbcUrl format can be used for MySQL databases.
 *   Proper security must be applied as this action can allow SQL Injection in your Mendix application.
 
-## 6 Read More
-
-*   [Execute an SQL Statement on an External Database](execute-an-sql-statement-on-an-external-database)

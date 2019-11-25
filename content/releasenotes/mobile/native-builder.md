@@ -19,7 +19,7 @@ We are heavily invested in streamlining the experience of building your apps and
 
 ### Improvements
 
-This release marks a re-architecure of the Native Builder.
+This release marks a re-architecture of the Native Builder.
 
 Improvements at a glance:
 * More structured command API

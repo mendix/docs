@@ -63,6 +63,7 @@ You will be taken to the IBM authentication page to enter your IBM credentials
 
 You will now be asked to provide the final details for IBM Cloud development environment.
 
+{{% todo %}}[Picture!]{{% /todo %}}
 ![](attachments/ibm-cloud/create-development.png)
 
 You will be able to choose a Domain, Organization, and Space which is configured for you in this region.
@@ -219,8 +220,9 @@ When the package is ready to be deployed, a green tick will be shown next to the
 6. Click **Start Application** to start the application on IBM Cloud.
 
     ![](attachments/ibm-cloud/start-application.png)
-
+	
     {{% alert type="info" %}}This will bind any services which are in the status **Services To Be Bound**.{{% /alert %}}
+
  
 7. When the application has been started you will receive a confirmation message. Click **OK** and you will be taken to the Environment Details page for the selected environment. See [Environment Details](#EnvironmentDetails), below.
 
@@ -341,9 +343,11 @@ This tab displays Cloud Foundry services which are bound to the app, waiting to 
 {{% /image_container %}}
 
 {{% alert type="warning" %}}
-**If you unbind the database (compose-for-postgreSQL) service, your app will probably stop working**
+There are a number of services which your Mendix app requires. **If you unbind any of these services, your app will probably stop working**:
 
-Other services should be selected, bound, and unbound through this **Services** page. Changes made in the IBM Cloud Portal will *not* be reflected in the Mendix Developer Portal.
+* database (PostgreSQL)
+
+Services should be selected, bound, and unbound through this **Services** page. Changes made in the IBM Cloud Platform Cockpit will *not* be reflected in the Mendix Developer Portal.
 {{% /alert %}}
 
 {{% alert type="info" %}}
@@ -365,12 +369,10 @@ To connect a service in the section **Available Services**
 
     The services you have selected will be added as **Services To Be Bound**. Now, you can upload JSON **File** with a configuration that will be applied to the service binding. 
 
-**Uploading Configuration File**
-
-To upload the JSON **File** to configure the service being bound, follow these steps:
+To upload the JSON **File** for service binding, follow these steps:
 
 1. Select the service in the **Service To Be Bound** section.
-2. Click the ellipsis (**…**) next to the service for which you want to upload the file.
+2. Click the ellipsis (**...**) next to the service for which you want to upload the file.
 3. Select **Add Binding Configuration**.
 4. Select the JSON **File** to upload.
 5. Click **Save**.
@@ -389,7 +391,7 @@ If you no longer require a service you can unbind it or remove it from your app.
 
 **Unbinding a Service**
 
-1. Click the ellipsis (**…**) next to the service you want to unbind in the **Bound Services** section.
+1. Click the ellipsis (**...**) next to the service you want to unbind in the **Bound Services** section.
 2. Select **Unbind Service**.
 
     ![](attachments/ibm-cloud/service-unbind.png)
@@ -435,6 +437,7 @@ This could be caused by exceeding your organization quota limit for a service wh
 
 2. Click **Details** on the error message at the top of the page.
 
+    {{% todo %}}[Picture!]{{% /todo %}}
     ![](attachments/ibm-cloud/failed-more-details.png)
 
 A more detailed description of the reason why the environment creation failed will be displayed.
@@ -482,6 +485,7 @@ If you use the Developer Portal to look at the details of the environment to whi
 ![](attachments/ibm-cloud/error-not-bound.png)
 
 Start the app from the Developer Portal to bind the services. Once they are bound, you can deploy your app from Studio Pro, as usual.
+
 
 ## 10 Status of IBM Cloud Deployment
 

@@ -18,8 +18,9 @@ $block: 'frontpage';
       color: $color-darker-grey-2;
     }
     @include element('container') {
-    @media (min-width: 1200px) {
-      padding: 0 0 0 64px;        
+      padding: 0 20px;
+      @media (min-width: 1200px) {
+      padding-left: 64px;        
     }
   }
   }

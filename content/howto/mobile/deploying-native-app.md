@@ -131,7 +131,7 @@ This command does the following:
 * Generates a JavaScript deployment bundle and images of the Native App from Studio pro
 * Creates a new build branch on GitHub and starts a build process on App Center
 
-### 5.1 Signed Builds
+### 5.1 Signing a Build {#signing-a-build}
 
 By default, App Center builds are unsigned and cannot be released on the Google Play Store or the Apple App Store. To release your apps, you must provide your signature keys to App Center. Signature keys prove the authenticity of your app and prevent forgeries. For more information to how to acquire these keys, See [Managing App Signing Keys](/refguide/managing-app-signing-keys). 
 
@@ -234,7 +234,7 @@ For distributing to a specific platform, see the subsequent sections below:
 
 #### 6.1.1 Local Signing
 
-You can skip this section if you completed [App Center Signing](#412-signing-android). To sign your Android app locally, use apksigner by following Google's [apksigner documentation](https://developer.android.com/studio/command-line/apksigner).
+You can skip this section if you completed [Signing a Build](#signing-a-build). To sign your Android app locally, use apksigner by following Google's [apksigner documentation](https://developer.android.com/studio/command-line/apksigner).
 
 #### 6.1.2 Installing on a Device
 
@@ -267,7 +267,7 @@ Once you have satisfied those requirements, you can follow Google's [Upload your
 
 #### 6.2.1 Local Signing
 
-You can skip this section if you completed [App Center Signing](#411-signing-ios). Local signing is useful if you only want to test your app on a device, or you do not have a distribution certificate and have run out of build minutes on App Center when signing with a developer certificate.
+You can skip this section if you completed [Signing a Build](#signing-a-build). Local signing is useful if you only want to test your app on a device, or you do not have a distribution certificate and have run out of build minutes on App Center when signing with a developer certificate.
 
 In order to deploy the *nativeTemplate.xcarchive* on a device or on the App Store, an Apple developer account and a development team is required. If one is available, do the following:
 

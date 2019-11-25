@@ -78,7 +78,7 @@ Command-line arguments provide information to the Native Builder, such as where 
 1. Open your command line program as an administrator by right-clicking its icon or *.exe* file and selecting **Run as administrator**.
 2.  Target your Native Builder's directory by typing `cd "{your Native Builder *.exe* location}"` and pressing <kbd>Enter</kbd>:
 
-	![change directory](attachments/native-builder/change-directory.png)
+	![change directory](attachments/deploying-native-app/change-directory.png)
 
 ### 5.1 Prepare
 
@@ -257,7 +257,7 @@ To sign your iOS app locally, do the following:
 2. Open the *.xcarchive* file using Xcode.
 3.  Click the **Distribute** button to start the local signing flow:
 
-	![distribute xcode](attachments/native-builder/xcode-distribute.png)
+	![distribute xcode](attachments/deploying-native-app/xcode-distribute.png)
 
 {{% alert type="info" %}} In case of failure, the build logs will be downloaded for your convenience. Remember to provide them when filing a ticket with Mendix.{{% /alert %}}
 

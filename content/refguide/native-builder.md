@@ -281,5 +281,5 @@ If your native template is not the latest version, synchronize your repository w
 
 ## 9 Read More
 
-* [Get Started with Native Mobile](getting-started-with-native-mobile)
-* [Style Your Mendix Native App](how-to-use-native-styling)
+* [Get Started with Native Mobile](/howto/mobile/getting-started-with-native-mobile)
+* [Style Your Mendix Native App](/howto/mobile/how-to-use-native-styling)

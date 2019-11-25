@@ -1,5 +1,5 @@
 ---
-title: "Use Local Notifications: Part 4 (Data)"
+title: "Part 4: Data"
 parent: "local-notif-parent"
 menu_order: 40
 description: A tutorial for integrating data into your push notifications.
@@ -248,7 +248,7 @@ Great job! Now you will test your data notification functionality.
 2. Tap the button which sends a notification.
 3. Tap the notification to navigate to the **DetailTestEntity** page with the proper object.
 
-Congratulations! You have harnessed the power of data to enhance your push notifications. Next, in [Use Local Notifications: Part 5 (Scheduling)](local-notif-schedule-cancel), you will learn how to schedule notifications for specific times and cancel them.
+Congratulations! You have harnessed the power of data to enhance your push notifications. Next, in [How to Use Local Notifications Part 5: Scheduling](local-notif-schedule-cancel), you will learn how to schedule notifications for specific times and cancel them.
 
 ## 4 Read More
 

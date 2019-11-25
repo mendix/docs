@@ -36,7 +36,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Install latest [Yeoman](https://yeoman.io/) with the following command:
 
 	```shell
-	npm install -g yo
+	$ npm install yo -g
 	```
 
 * Install Mendix' Pluggable Widget Generator v8.2.0 for Yeoman with the following command:

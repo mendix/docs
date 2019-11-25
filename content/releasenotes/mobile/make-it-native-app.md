@@ -12,6 +12,24 @@ tags: ["Native", "Android", "iOS", "Apple", "Android"]
 For more information on the Make It Native app, see [Getting the Make It Native App](/refguide/getting-the-make-it-native-app). Click here to download the Make It Native app for [iOS](https://apps.apple.com/app/make-it-native/id1334081181), or here for [Android](https://play.google.com/store/apps/details?id=com.mendix.developerapp).
 {{% /alert %}}
 
+## Android 1.2.1 / iOS 1.2.2
+
+**Release date: October 26th, 2019**
+
+With this version we added support for Mendix Studio Pro 8.4 SVG images feature.
+
+On Android:
+
+* We fixed an issue where the app might open a cached version of an older project if the packeger does not respond in time.
+
+## Android 1.2.0 / iOS 1.2.1
+
+**Release date: October 6th, 2019**
+
+On iOS:
+
+* Fixed an issue where Make It Native could crash on particular iOS 13 devices.
+
 ## Android 1.2.0 / iOS 1.2.0
 
 **Release date: October 29th, 2019**

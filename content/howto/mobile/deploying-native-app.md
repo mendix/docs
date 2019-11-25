@@ -69,36 +69,34 @@ To address the warning, complete the following steps (you must do them for both 
 
 ## 4. Making Your First Build
 
-By default, App Center builds are unsigned and not releasable on Google Play or the App Store. To release your apps, you must provide your signature keys to App Center. Signature keys prove the authenticity of your app and prevent forgeries. For more information to how to acquire these keys, See [Managing App Signing Keys](/refguide/managing-app-signing-keys). 
+To initiate your first build in the Native Builder, you will execute a command in CLI with various parameters included. For more information on parameters, see the [Commands](/refguide/native-builder#commands) section in the *Native Builder* guide. While some parameters are optional, two are required: the `--project-name` parameter and the `--build-number` parameter.
 
-To initiate your first build in the Native Builder, you will execute a command in CLI with various parameters included. For more info on the parameters and what they are used for, see the [Commands](/refguide/native-builder#commands) section in the *Native Builder* guide. Some parameters are optional and tailored to your specific app. A few parameters, however, are required.
-
-The following configurations are required:
-
-* Project name (`--project-name`) This unique configuration identifies what name should be given to the project on App Center and GitHub as well as locally on your machine for later reference
-
-* The build number (`--build-number`) This unique configuration represents the version build number for the release builds for both Android and iOS. It also serves as the branch name on both App Center and GitHub. For over-the-air updates, each build is associated with a particular release group (`--deployment-target`)  which would get the update. By default, this value is set to **Production** and should usually be kept this way. If changed, the new value should be noted as only devices running on that environment would get updates.
-
-This is an example build using the aforementioned command:
+This is an example build command using the the two required parameters mentioned above, as well as the optional `--app-version` command (it is best practice to include a [new app version](https://semver.org/) with each release):
 
 ```bash
 native-builder.exe build --project-name CoolApp --build-number 1 --app-version 0.1.0
 ```
 
-The example above would initiate a new build for the already-prepared project *CoolApp* using a [semantic](https://semver.org/) app version of *0.1.0*, the unique version build number of *1*,  and will create a dual-platform (Android and iOS) build. For a single-platform build, the `--platform` parameter can be used with `android` or `ios` such as the example below.
+Now it is time for you to make your own first build:
 
-```bash
-native-builder.exe build --project-name CoolApp --build-number 1 --app-version 0.1.0 --platform android
-```
+1. Open your CLI.
+2. Make sure you are in still in your Native Builder directory.
+3. Write this command, with your own information replacing the example text:
+
+ ```
+ native-builder.exe build --project-name {ExampleName} --build-number {1} --app-version {0.1.0}
+ ```
+
+4. Run the command.
 
 This command does the following:
 
 * Generates a JavaScript deployment bundle and images of the Native App from Studio pro
 * Creates a new build branch on GitHub and starts a build process on App Center
 
-Now it is time for you to make your own first build. Using the information above, enter a tailored `build` command in your CLI and run it.
-
 ### 4.1 Signed Builds
+
+By default, App Center builds are unsigned and cannot be released on the Google Play Store or the Apple App Store. To release your apps, you must provide your signature keys to App Center. Signature keys prove the authenticity of your app and prevent forgeries. For more information to how to acquire these keys, See [Managing App Signing Keys](/refguide/managing-app-signing-keys). 
 
 For Android, if you do not intend to publish your app to the Google Play Store, you can skip this section. For iOS, this step prepares an already installable iOS App Store Package (*.ipa*). Without this section's instructions, an unsigned version of an iOS app (*.xcarchive*) would need to be signed manually using Xcode in order to deploy on a device or in the App Store.
 

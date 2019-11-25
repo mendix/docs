@@ -14,26 +14,33 @@ Every Native Builder project has configurations. These configurations are useful
 
 ## 2. Prerequisites
 
+Before starting this how-to, make sure you have completed the following prerequisites:
+
 * Read these resources: 
- * Read the [Getting Started with Native Mobile](https://docs.mendix.com/howto/mobile/getting-started-with-native-mobile) guide and learn how to create, style and debug an application with Mendix Studio Pro
+ * Read the [Getting Started with Native Mobile How To](https://docs.mendix.com/howto/mobile/getting-started-with-native-mobile) to see how to create, style and debug an application with Mendix Studio Pro
  * Deploy your native app to the cloud via Studio Pro and have the cloud address of your deployed application available
  * Learn how to use Windows' command line interface (CLI) program `cmd`
  * Read up on the various parameters found in the [Native Builder guide](https://docs.mendix.com/refguide/native-builder#commands)
-* If you plan to deploy your app for testing on an iOS device, do the following:
-  * Register for an Apple Developer Account
-  * Have an iOS device for testing the iOS package that will be produced
-  * Have an iOS deployment certificate and a provisioning file for which your device is activated
-  * Have Xcode installed on your computer for deploying the iOS package to your test device
-* To deploy your app for testing on an Android device, it is expected to have an Android device available
 * Install [Java JDK 11](https://adoptopenjdk.net/) (if you have Studio Pro installed, you should already have JDK 11 in *C:\Program Files\AdoptOpenJDK*)
 * Download the Native Builder [executable](https://www.dropbox.com/sh/hpw7sshut9bco68/AABackrr75rPSgW7u5LBMkMra?dl=0) to a folder of your preference and extract all contents
  * Use v1.0.0 with Mendix 8.0
  * Use v2.0.0 with Mendix 8.1.0 and above
  * Use v3.0.0 with Mendix 8.3.0 and above
 
+### 2.1 Platform-Specific Prerequisites
+
+If you plan to deploy your app for testing on an iOS device, make sure you have completed the following prerequisites:
+
+* Register for an Apple Developer Account
+* Have an iOS device for testing the iOS package that will be produced
+* Have an iOS deployment certificate and a provisioning file for which your device is activated
+* Have Xcode installed on your computer for deploying the iOS package to your test device
+
+If you plan to deploy your app for testing on an Android device, make sure you have an Android device available.
+
 ## 3. Preparing Your Project
 
-The native builder uses the `prepare` command as well as a line of parameters in your CLI to specify the details of your build. Below is a quick example of a complete set of parameters:
+The native builder uses the `prepare` command as well as a line of parameters in your CLI to specify the details of your build. Below is an example of a `prepare` command with a complete set of parameters:
 
 ```bash
 native-builder.exe prepare --project-name CoolApp --java-home "C:\Program Files\Java\jdk-11.0.3" --project-path "Y:\Documents\Mendix\CoolApp\CoolApp.mpr" --mxbuild-path "C:\Program Files\Mendix\8.3.0.61600\modeler\mxbuild.exe" --github-access-token b609183aa226a8c2d962700be7a387bd7776e986 --appcenter-api-token 440725eb1311ddfced62894a4d23fc90843370c7 --appcenter-organization "cool-organization" --runtime-url "https://coolapp.mendixcloud.com" --app-name "My Cool App" --app-identifier com.mendix.coolapp
@@ -47,11 +54,17 @@ The `prepare` command  does the following:
 * Modifies the application's name and identifier for both Android and iOS if any are provided
 * Modifies the Runtime URL for both Android and iOS if any are provided
 
-1.  The `prepare` command can be run multiple times to modify any of the aforementioned parameters. Run `prepare` for the first time, which will produce this warning:
+Now you will run your first `prepare` command:
+
+1. Open your CLI.
+2. Change directory to the folder you extracted the Native Builder contents to.
+3.  Run `prepare` for the first time, which will produce this warning:
 
  ![App Center authentication failure](attachments/deploying-native-app/native-builder-authentication-failure.png)
-
-2.  This warning is part of App Center's security policy which you must solve on their site. Visit App Center's dashboard to see your applications created by the Native Builder:
+ 
+ This warning is part of App Center's security policy. 
+ 
+2. Visit App Center's [dashboard](https://appcenter.ms/) to see your applications created by the Native Builder:
 
  ![App Center Applications](attachments/deploying-native-app/appcenter-apps.png)
 
@@ -66,6 +79,8 @@ To address the warning, complete the following steps (you must do them for both 
 7. Select approve in the permission request.
 8. Select the repository you want to connect to.
 9. You will be redirected back to your App Center account. Your repository’s branches are now listed in the build page.
+
+You have successfully prepared your app, and in the next section will make a build from it.
 
 ## 4. Making Your First Build
 

@@ -14,12 +14,13 @@ This document will focus on executing an SQL on relational external databases.
 The **Execute statement** action (present in the Database Connector  provides a consistent environment for Mendix app projects to perform an arbitrary SQL statement on relational external databases. A Java database connectivity (JDBC) API is used when this Java action attempts to connect with a relational database for which a JDBC driver exists.
 
 The Database Connector can be used for the following SQL statements:
-	* `CREATE`
-	* `INSERT`
-	* `UPDATE`
-	* `STORED PROCEDURE`
-	* `DELETE`
-	* `DDL`
+
+* `CREATE`
+* `INSERT`
+* `UPDATE`
+* `STORED PROCEDURE`
+* `DELETE`
+* `DDL`
 
 The connector should not be used for `SELECT SQL` queries.
 
@@ -44,7 +45,7 @@ You must place the JDBC driver *.jar* files for the databases to which you want 
 
 For example, if you want to connect to an Amazon RDS PostgreSQL database (for example, `jdbc:postgresql://xyz-rds-instance.ccnapcvoeosh.eu-west-1.rds.amazonaws.com:5432/postgres`), you need to place the PostgreSQL Jdbc driver *.jar* file inside the userlib folder.
 
-## 4 Using the ExecuteStatement Action in a Microflow
+## 4 Using the Execute Statement Action in a Microflow
 
 To use an ExecuteStatement action in a microflow, follow these steps:
 

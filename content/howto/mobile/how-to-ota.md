@@ -1,5 +1,5 @@
 ---
-title: "Use Over The Air Updates"
+title: "Use Over the Air Updates"
 parent: "native-mobile"
 menu_order: 71
 description: "A how to push over the air update (OTA), roll it back or modify it"

@@ -24,7 +24,7 @@ The Native Builder uses MxBuild, GitHub, and App Center to build your applicatio
 
 ## 1 Commands {#commands}
 
-Command-line arguments provide information to the Native Builder, such as where your Mendix project is located. You will now compose a command and parameters, which will start your Native Builder when executed:
+Command-line arguments provide information to the Native Builder, such as where your Mendix project is located. Commands are configured using parameters, shown below. Some of these parameters are required or strongly recommended. The rest of them are optional, and should be used if pertain to your app. You will now compose a command and parameters, which will start your Native Builder when executed:
 
 1. Open your command line program as an administrator by right-clicking its icon or *.exe* file and selecting **Run as administrator**.
 2.  Target your Native Builder's directory by typing `cd "{your Native Builder *.exe* location}"` and pressing <kbd>Enter</kbd>:
@@ -45,13 +45,13 @@ native-builder.exe prepare --github-access-token <token> --app-center-api-token 
 | --------------------------- | -------------------------------------------------------------------- | --------------------------------------------------- |
 | `--github-access-token`     | GitHub access token.                                                 | `c0e1dasf1e102c55ded223dbdebdbe59asf95224`          |
 | `--app-center-api-token`    | App Center API token.                                                | `3e18asdfb43f4fe6c85afsd0bf60dde72f134`             |
-| `--app-center-organization` | (Optional) App Center organization name.                             | `my-company`                                        |
-| `--project-name`            | Unique name of the project.                                          | `CoolApp`                                           |
+| `--app-center-organization` | App Center organization name.                             | `my-company`                                        |
+| `--project-name`            | Unique name of the project. (Required)                                         | `CoolApp`                                           |
 | `--app-name`                | Display name of the app.                                             | `My Cool App`                                       |
 | `--app-identifier`          | Unique app identifier.                                               | `com.mendix.MyAwesomeApp`                           |
-| `--app-icon-path`           | (Optional) Absolute path to the app icon.                            | `C:\MyAppIcon.png`                                  |
-| `--app-round-icon-path`     | (Optional) Absolute path to the app round icon, specific to Android. | `C:\MyAppRoundIcon.png`                             |
-| `--app-splash-screen-path`  | (Optional) Absolute path to the app splash screen image.             | `C:\MyAppSplash.png`                                |
+| `--app-icon-path`           | Absolute path to the app icon.                            | `C:\MyAppIcon.png`                                  |
+| `--app-round-icon-path`     | Absolute path to the app round icon, specific to Android. | `C:\MyAppRoundIcon.png`                             |
+| `--app-splash-screen-path`  | Absolute path to the app splash screen image.             | `C:\MyAppSplash.png`                                |
 | `--java-home`               | Absolute path to the directory where Java executable is located.     | `C:\Program Files\Java\jdk-10.0.1`                  |
 | `--project-path`            | Absolute path to the Mendix project file.                            | `C:\MyApp\MyApp.mpr`                                |
 | `--mxbuild-path`            | Absolute path to MxBuild executable.                                 | `C:\Program Files\Mendix\8.0.0\modeler\mxbuild.exe` |
@@ -75,18 +75,18 @@ native-builder.exe build --projectName "CoolApp" --app-version "1.0.0" --build-n
 | `--project-name`            | Unique name of the project used during `prepare`.                                    | `CoolApp`                                           |
 | `--app-name`                | Display name of the app.                                                             | `My Cool App`                                       |
 | `--app-identifier`          | Unique app identifier.                                                               | `com.mendix.MyAwesomeApp`                           |
-| `--app-icon-path`           | (Optional) Absolute path to the app icon.                                            | `C:\MyAppIcon.png`                                  |
-| `--app-round-icon-path`     | (Optional) Absolute path to the app round icon, specific to Android.                 | `C:\MyAppRoundIcon.png`                             |
-| `--app-splash-screen-path`  | (Optional) Absolute path to the app splash screen image.                             | `C:\MyAppSplash.png`                                |
+| `--app-icon-path`           | Absolute path to the app icon.                                            | `C:\MyAppIcon.png`                                  |
+| `--app-round-icon-path`     | Absolute path to the app round icon, specific to Android.                 | `C:\MyAppRoundIcon.png`                             |
+| `--app-splash-screen-path`  | Absolute path to the app splash screen image.                             | `C:\MyAppSplash.png`                                |
 | `--java-home`               | Absolute path to the directory where Java executable is located.                     | `C:\Program Files\Java\jdk-10.0.1`                  |
 | `--project-path`            | Absolute path to the Mendix project file.                                            | `C:\MyApp\MyApp.mpr`                                |
 | `--mxbuild-path`            | Absolute path to MxBuild executable.                                                 | `C:\Program Files\Mendix\8.0.0\modeler\mxbuild.exe` |
 | `--runtime-url`             | URL of the Mendix runtime.                                                           | `https://myapp.mendixcloud.com`                     |
-| `--app-version`             | Version of the app, semantic version only.                                           | `1.2.3`                                             |
-| `--output-path`             | (Optional) Absolute path to the location where artifacts should go.                  | `C:\Downloads`                                      |
-| `--build-number`            | Build number, an arbitrary unique integer value.                                     | `1`                                                 |
-| `--platform`                | (Optional) Platform with which to run command for. Defaults to both iOS and Android. | `ios` or `android`                                  |
-| `--skip-mxbuild`            | (Optional) Used if bundling JavaScript bundle and assets. Defaults to `false`.       | `true` or `false`                                   |
+| `--app-version`             | Version of the app, semantic version only.  (Strongly recommended)                                         | `1.2.3`                                             |
+| `--output-path`             | Absolute path to the location where artifacts should go.                  | `C:\Downloads`                                      |
+| `--build-number`            | Build number, an arbitrary unique integer value. (Required)                                    | `1`                                                 |
+| `--platform`                | Platform with which to run command for. Defaults to both iOS and Android. | `ios` or `android`                                  |
+| `--skip-mxbuild`            | Used if bundling JavaScript bundle and assets. Defaults to `false`.       | `true` or `false`                                   |
 
 ### 1.3 Regenerate
 
@@ -104,11 +104,11 @@ The `regenerate` command recreates the project on GitHub with the latest version
 | `--app-version`            | Version of the app.                                                          | `1.2.3`                                             |
 | `--build-number`           | Build number, an arbitrary unique integer value.                             | `1`                                                 |
 | `--app-identifier`         | Unique app identifier.                                                       | `com.mendix.MyAwesomeApp`                           |
-| `--app-icon-path`          | (Optional) Absolute path to the app icon.                                    | `C:\MyAppIcon.png`                                  |
-| `--app-round-icon-path`    | (Optional) Absolute path to the app round icon, specific to Android.         | `C:\MyAppRoundIcon.png`                             |
-| `--app-splash-screen-path` | (Optional) Absolute path to the app splash screen image.                     | `C:\MyAppSplash.png`                                |
-| `--appcenter-organization` | (Optional) Organization name used in App Center.                             | `my-company`                                        |
-| `--output-path`            | (Optional) Absolute path to the location where artifacts should be outputed. | `C:\Downloads`                                      |
+| `--app-icon-path`          | Absolute path to the app icon.                                    | `C:\MyAppIcon.png`                                  |
+| `--app-round-icon-path`    | Absolute path to the app round icon, specific to Android.         | `C:\MyAppRoundIcon.png`                             |
+| `--app-splash-screen-path` | Absolute path to the app splash screen image.                     | `C:\MyAppSplash.png`                                |
+| `--appcenter-organization` | Organization name used in App Center.                             | `my-company`                                        |
+| `--output-path`            | Absolute path to the location where artifacts should be outputed. | `C:\Downloads`                                      |
 
 An example of a `regenerate` command:
 

@@ -5,8 +5,6 @@ menu_order: 11
 toc-level: 1
 description: "Native Builder release notes."
 #When updating, remember to update the Latest Mendix Releases file
-#KI: "Using more than one space" = NALM-217
-#KI: "In case Mx Build fails" = NALM-216
 ---
 
 The [Native Builder](/howto/mobile/native-builder) is a command line input tool which helps you build your Mendix native app. After the Native Builder simplifies your build process, you can do what you want most: test and publish your app. The Native Builder uses MxBuild, GitHub, and App Center to simplify the app building process. 
@@ -22,6 +20,7 @@ We are heavily invested in streamlining the experience of building your apps and
 This release marks a re-architecure of the Native Builder.
 
 Improvements at a glance:
+
 * More structured command API
 * An upgrade path for your projects
 * Better error messages
@@ -39,6 +38,11 @@ In addition, two new arguments have been added to the `build` command: `--platfo
 We also developed a viable upgrade path for your repositories. Before, the Native Builder was unable to notify you of new versions of the Native Template. As part of new architecture, we initiated a versioning policy across the board. From now on, the Native Template is versioned. If you wish to update your project's repository, you can use the newly added `regenerate` command. The command does a graceful update of your repository and App Center configuration. Your current repository is renamed with a time stamp as a backup measure and a new one is created for you using the latest release of the Native Template while your App Center project's configurations are updated to support the new template.
 
 Finally, we worked on the error output of the Native Builder. We added error messages which had been missing and updated the ones that were lacking context.
+
+### Fixes
+
+* <a name="nalm-217"></a>Using more than one consecutive space in an app's name is now supported.
+* <a name="nalm-215"></a>MxBuild no longer fails without error messages during the build process.
 
 ## 2.0.0
 

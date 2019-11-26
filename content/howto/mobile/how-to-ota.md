@@ -27,10 +27,10 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Install Native Builder 3.0.0 or higher
 * Install Mendix Studio Pro 8.4 or higher
-* Complete [How to Deploy your First Mendix Native App](LINK HERE)
+* Complete [How to Deploy your First Mendix Native App](/howto/mobile/deploying-native-app)
 * Complete at least one successful build using Native Builder v3.0.0 and Native Template v2.0.0
 * Install your app on a test device or emulator
-* Read the [Offline First]("/refguide/offline-first.md") reference guide
+* Read the [Offline First Reference Guide](/refguide/offline-first.md)
 
 ## 3 When to Use OTA Updates
 
@@ -45,7 +45,7 @@ It is good practice to always redeploy your Mendix App before pushing a new over
 * JaveScript action changes
 * Widgets shipped with Mendix added or removed
 * A new custom Javascript-only widget or module was added
-* Non-destructive model changes (see the [Offline First](/refguide/offline-first.md) guide)
+* Non-destructive model changes (for more information, see the [Offline First Reference Guide](/refguide/offline-first.md))
 
 ### 3.2 When You Must Redeploy Your Mendix App Before an OTA Update
 
@@ -133,7 +133,7 @@ Imagine you want to rollback an update. Maybe you released it too early or somet
 
 ### 5.1 When it is Safe to Rollback an Update
 
-Please see [Safely Pushing OTA Updates Without Redeploying Your Mendix App](#safeToUpdate) above.
+For information on rollbacks, see [Safely Pushing OTA Updates Without Redeploying Your Mendix App](#safeToUpdate) above.
 
 ## 6 Configuring a Pushed Update
 
@@ -187,6 +187,7 @@ This issue is independent from OTA updates and specific to offline apps. Your of
 
 ## 8 Read More
 
-* [Offline First reference guide]("/refguide/offline-first.md")
+* [How to Deploy Your First Mendix Native App](/howto/mobile/deploying-native-app)
+* [Offline First Reference Guide](/refguide/offline-first.md)
 * [Codepush Introduction](https://docs.microsoft.com/en-us/appcenter/distribution/codepush/)
 * [Using the CodePush UI](https://docs.microsoft.com/en-us/appcenter/distribution/codepush/using-ui)

@@ -230,7 +230,7 @@ Then the Studio Pro UI for the component appears like this:
 Image allows a user to configure a static image from an [image collection](/refguide/image-collection). It also allows a user to configure an image from an object that is a specialization of **System.Image**. It is passed as `DynamicValue<ImageValue>` prop to a client component. See [Images](https://docs.mendix.com/refguide/images) for more information about supported image formats.
 
 {{% alert type="info" %}}
-This property type was introduced in Mendix 8.1. Support for dynamic images was introduced in Mendix 8.4.0.
+This property type was introduced in Mendix 8.1. Support for dynamic images was introduced in Mendix [8.4.0](/releasenotes/studio-pro/8.4).
 {{% /alert %}}
 
 {{% alert type="info" %}}

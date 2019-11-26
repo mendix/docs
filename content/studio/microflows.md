@@ -10,7 +10,7 @@ tags: ["studio", "microflow"]
 
 Mendix Studio has a lot of built-in logic that works out of the box (for example, buttons). But if you want to add custom logic, you need to create microflows.
 
-Microflows is a visual way of expressing what traditionally ends up in textual program code.  A microflow can perform actions such as creating and changing objects, showing pages, and making choices. 
+*Microflows* is a visual way of expressing a textual program code.  A microflow can perform actions such as creating and changing objects, showing pages, and making choices. 
 
 You need to use microflows for the following cases:
 
@@ -20,8 +20,8 @@ You need to use microflows for the following cases:
 
 Examples of using microflows can be the following:
 
-*  You check the values that a user has entered, and you either show the user an error message or  another page
-*  You're creating a to-do list and you want to use custom logic when the status of the item on the list has changed
+*  You check the values that an end-user has entered, and you either show the end-user an error message or another page
+*  You are creating a to-do list and you want to use custom logic when the status of an item on the list has changed
 
 To view the microflows of your app in Studio, click the **Microflows** icon in the left menu bar:
 
@@ -30,7 +30,9 @@ To view the microflows of your app in Studio, click the **Microflows** icon in t
 
 ## 2 Concepts and Definitions 
 
-A microflow is like a flow chart. On a new microflow the start event (a starting point of the microflow represented by a green dot) and the end event (an endpoint of the microflow represented by a red dot) exist by default. They are also connected by a sequence flow (a line with an arrow), where you can add new events and activities. For more information, see section [3 Creating a New Microflow](#creating-new-microflow). If Mendix Assist is on, it will be represented with a blue dot in the middle. For more information, see [Mendix Assist](mx-assist).
+A microflow looks like a flow chart. On a new microflow a *start event* (a starting point of the microflow represented by a *green* dot) and an *end event* (an endpoint of the microflow represented by a *red* dot) are created by default. 
+
+Start and end events are connected by a *sequence flow* (a line with an arrow), where you can add new events and activities. For more information, see the [Creating a New Microflow](#creating-new-microflow) section. If [Mendix Assist](mendix-assist) is on, it will be represented with a blue dot in the middle (for more information on what Mendix Assist is, see [Mendix Assist](mx-assist)).
 
 ![New Microflow](attachments/microflows/new-microflow-created.png)
 
@@ -38,9 +40,9 @@ Before you start configuring microflows, familiarize yourself with the concepts 
 
 | Concept    | Description                                                  |
 | ---------- | ------------------------------------------------------------ |
-| Activities | Blue boxes performing different functions. For example, with the help of an activity you can show users a home page. For more information, see section [5 Toolbox](#microflows-toolbox). |
-| Flows      | Arrows that connect microflow events and activities. For more information, see section [6 Flows](#flows). |
-| Events     | Other things placed in a flow not in a shape of a blue box are events. Decision is an example of the event. For more information, see section [5.1 General](#microflow-general-section). |
+| Activities | Blue boxes performing different functions. For example, with the help of an activity you can show end-users a home page. For more information on activities, see section the [Toolbox](#microflows-toolbox) section. |
+| Flows      | Arrows that connect microflow events and activities. For more information on flows, see section the [Flows](#flows) section. |
+| Events     | Other elements placed in a flow that are not a blue box. [Decision](microflows-decision) is an example of an event. For more information on events, see the [General](#microflow-general-section) sections. |
 | Variable   | A variable is a temporary storage for data. Variables are used to store information and refer to it when needed. For this purpose variables should have a unique name. <br />In a microflow you can add a variable, assign a value to it and then use it in microflow activities. You can then change this value later if necessary. For example, you can create variable **$Discount** and assign it a value 0.5, and use it to calculate a price for a customer. <br />You can use the variable only in the microflow where it was created. |
 | Parameter  | Parameters contain global variables, which means that you can use one and the same parameter in different microflows. |
 

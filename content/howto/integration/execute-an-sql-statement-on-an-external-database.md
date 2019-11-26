@@ -63,7 +63,7 @@ To use an ExecuteStatement action in a microflow, follow these steps:
 3. Configure the statement:
 	* Provide all the valid arguments to the statement action
 	* The **Jdbc url** argument must specify a database URL that points to your relational database and is dependent upon the particular database and JDBC driver
-		* It will always begin with `jdbc:` protocol text, but the rest is up to the particular vendor; for example, the `jdbc:<a rel="nofollow">mysql://hostname/databaseName'</a>` JDBC URL format can be used for MySQL databases)
+		* It will always begin with `jdbc:` protocol text, but the rest is up to the particular vendor (for example, the `jdbc:<a rel="nofollow">mysql://hostname/databaseName'</a>` JDBC URL format can be used for MySQL databases)
 	* Specify the **Output Variable name**
 		* In the example below, the variable is **amountOfUpdatedRows**, which is the  output of the SQL statement; this is also the output of the SQL statement provided for the **Sql** argument within the connector
 

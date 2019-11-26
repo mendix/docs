@@ -28,6 +28,10 @@ Before you can manage your IBM Cloud environment using the Developer Portal, you
 
 In this scenario, you have an existing app which is running in another environment: for instance, on the Mendix Cloud. To change this, go to the Cloud Settings tab of the General Settings in the Development Portal.
 
+{{% alert type="warning" %}}
+If you have an app running on SAP Cloud Platform, deploying it to IBM Cloud will not be successful because of the customization done within SAP Mendix apps.
+{{% /alert %}}
+
 ![](attachments/ibm-cloud/cloud-setting.png)
 
 Click **Set up IBM Cloud** and you will be taken to IBM Cloud welcome page.

@@ -9,13 +9,13 @@ tags: ["studio pro", "project explorer"]
 
 The **Project Explorer** shows the complete structure of your project including all documents inside the modules:
 
-{{% image_container width="350" %}}![](attachments/project-explorer/project-explorer.png)
+{{% image_container width="250" %}}![](attachments/project-explorer/project-explorer.png)
 {{% /image_container %}}
 
 The **Project Explorer** consists of the following:
 
-* **Project** folder – contains settings and documents that apply to your project as a whole. For more information, see [Projects](project).
-* **Modules**  – contain settings and documents, such as pages, microflows, a domain model, that apply to this module. For more information, see [Modules](modules). 
+* **Project** folder – contains settings and documents that apply to your project as a whole (for more information, see [Projects](project))
+* **Modules**  – contain settings and documents, such as pages, microflows, a domain model, that apply to this module (for more information, see [Modules](modules)) 
 
 ## 2 Performing Basic Functions
 

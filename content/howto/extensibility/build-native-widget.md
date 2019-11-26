@@ -39,7 +39,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 	$ npm install yo -g
 	```
 
-* Install latest Mendix Pluggable Widget Generator for Yeoman with the following command:
+* Install the latest Mendix Pluggable Widget Generator for Yeoman with the following command:
 
 	```shell
 	npm install -g @mendix/generator-widget

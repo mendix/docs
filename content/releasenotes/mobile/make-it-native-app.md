@@ -18,7 +18,7 @@ For more information on the Make It Native app, see [Getting the Make It Native 
 
 ### New Features
 
-With this version we added support for Mendix Studio Pro 8.4 SVG images feature.
+With this version we added support for the Mendix Studio Pro 8.4 SVG images feature.
 
 On Android:
 

@@ -68,9 +68,9 @@ Before OTA updates, you would have to make a new release and configure it in the
 
 To release a new version OTA, follow these steps:
 
-1.  Change the title and message as follows [to do: check picture and write out]: 
+1.  Correct the title and message as follows: 
    
-   ![Make some changes](attachments/how-to-ota/modeller-correct.png)
+   {{% image_container width="300" %}}![Make some changes](attachments/how-to-ota/modeller-correct.png){{% /image_container %}}
 
 2. Save your changes.
 3. Note the version and build number of the app build you want to update. This how-to assumes an app version of 1.0.0 and a build number of 1.
@@ -95,12 +95,12 @@ This command does the following:<br />
 1. Wait for the Native Builder to complete.
 2. Restart the app on your testing device. You should be greeted with the following message:
 
-   ![Update available prompt](attachments/how-to-ota/phone-update-prompt.png)
+   {{% image_container width="300" %}}![Update available prompt](attachments/how-to-ota/phone-update-prompt.png){{% /image_container %}}
 
 3.  Tap **Confirm** to update your app.
 4.  The app should reload and greet you with the following dialog box:
 
-   ![Update success prompt](attachments/how-to-ota/phone-success-prompt.png)
+   {{% image_container width="300" %}}![Update success prompt](attachments/how-to-ota/phone-success-prompt.png){{% /image_container %}}
 
 ## 5 Rolling Back Updates
 
@@ -118,7 +118,7 @@ Imagine you want to rollback an update. Maybe you released it too early or somet
 
    `native-builder.exe release rollback-update --project-name "CoolApp" --label "v1"`
 
-   ![Output of rollback command](attachments/how-to-ota/rollback-result.png)
+   {{% image_container width="300" %}}![Output of rollback command](attachments/how-to-ota/rollback-result.png){{% /image_container %}}
 
 3. Next time you open your app, you should be greeted with the **Update available** dialog box. Tap **Confirm** to roll your app back on your device.
 

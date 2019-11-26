@@ -1,5 +1,5 @@
 ---
-title: "Deploying Your First Mendix Native App"
+title: "Deploy Your First Mendix Native App"
 parent: "native-mobile"
 menu_order: 70
 description: A tutorial for deploying your first Mendix Native App with Native Builder.
@@ -10,24 +10,22 @@ tags: ["native", "mobile", "deploy", "native-builder", "builder", "appcenter"]
 
 This tutorial will teach you how to go from a blank slate to an app running on a device.
 
-Every Native Builder project has configurations. These configurations are useful for preparing your app, and then creating builds on App Center and GitHub respectively. Configurations are also critical for making updates to apps already delivered to production devices.
+Every Native Builder project has configurations. These configurations are useful for preparing your app, and then creating builds on App Center and GitHub respectively. Configurations are also critical for making updates to apps already delivered to production devices. For more information on the Native Builder's capabilities, see the [Native Builder Reference Guide](/refguide/native-builder).
 
-## 2. Prerequisites
+## 1. Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Read these resources: 
- * Read the [Getting Started with Native Mobile How To](https://docs.mendix.com/howto/mobile/getting-started-with-native-mobile) to see how to create, style and debug an application with Mendix Studio Pro
- * Deploy your native app to the cloud via Studio Pro and have the cloud address of your deployed application available
- * Learn how to use Windows' command line interface (CLI) program `cmd`
- * Read up on the various parameters found in the [Native Builder guide](https://docs.mendix.com/refguide/native-builder#commands)
+* Read [How to Get Started with Native Mobile](/howto/mobile/getting-started-with-native-mobile) to see how to create, style and debug an application with Mendix Studio Pro
+* Deploy your native app to the cloud via Studio Pro and have the cloud address of your deployed application available
+* Learn how to use Windows' command line interface (CLI) program `cmd`
 * Install [Java JDK 11](https://adoptopenjdk.net/) (if you have Studio Pro installed, you should already have JDK 11 in *C:\Program Files\AdoptOpenJDK*)
 * Download the Native Builder [executable](https://www.dropbox.com/sh/hpw7sshut9bco68/AABackrr75rPSgW7u5LBMkMra?dl=0) to a folder of your preference and extract all contents
  * Use v1.0.0 with Mendix 8.0
  * Use v2.0.0 with Mendix 8.1.0 and above
  * Use v3.0.0 with Mendix 8.3.0 and above
 
-### 2.1 Platform-Specific Prerequisites
+### 1.1 Platform-Specific Prerequisites
 
 If you plan to deploy your app for testing on an iOS device, make sure you have completed the following prerequisites:
 
@@ -38,11 +36,11 @@ If you plan to deploy your app for testing on an iOS device, make sure you have 
 
 If you plan to deploy your app for testing on an Android device, make sure you have an Android device available.
 
-## 3 Getting Your Tokens
+## 1 Getting Your Tokens
 
 To use the Native Builder, you will first need to get tokens to authenticate with GitHub and App Center. If you already have tokens for your GitHub and App Center, you do not need to repeat these sections.
 
-### 3.1 GitHub Token {#github-token}
+### 1.1 GitHub Token {#github-token}
 
 1. Go to [GitHub](https://github.com/) and sign in.
 2. Go to [Settings](https://github.com/settings/profile) by clicking on your profile picture in the top right.
@@ -53,14 +51,14 @@ To use the Native Builder, you will first need to get tokens to authenticate wit
 7. Click the **Generate token** button.
 8. Store your token in a secure place. You will not be able to see it again. If you lose it, you will have to create a new token and delete your old one.
 
-### 3.2 App Center Token {#appcenter-token}
+### 1.2 App Center Token {#appcenter-token}
 
 1. Go to [App Center](https://appcenter.ms/apps) and sign in.
 2. Click your profile icon in the top right corner, then click **Settings**, and then **Account Settings**.
 3. In the **API Tokens** tab, click the **New API token** button.
 4. Add a description of your token, select **Full Access**, then click **Add new API token**, and then **New API Token**. Store this token in a secure place as well. You will not be able to see it again. If you lose it, you will have to create a new token and delete your old one.
 
-## 4. Preparing Your Project
+## 1. Preparing Your Project
 
 The native builder uses the `prepare` command as well as a line of parameters in your CLI to specify the details of your build. Below is an example of a `prepare` command with a complete set of parameters:
 
@@ -104,7 +102,7 @@ To address the warning, complete the following steps (you must do them for both 
 
 You have successfully prepared your app, and in the next section will make a build from it.
 
-## 5. Making Your First Build
+## 1. Making Your First Build
 
 To initiate your first build in the Native Builder, you will execute a command in CLI with various parameters included. For more information on parameters, see the [Commands](/refguide/native-builder#commands) section in the *Native Builder* guide. While some parameters are optional, two are required: the `--project-name` parameter and the `--build-number` parameter.
 
@@ -131,7 +129,7 @@ This command does the following:
 * Generates a JavaScript deployment bundle and images of the Native App from Studio pro
 * Creates a new build branch on GitHub and starts a build process on App Center
 
-### 5.1 Signing a Build {#signing-a-build}
+### 1.1 Signing a Build {#signing-a-build}
 
 By default, App Center builds are unsigned and cannot be released on the Google Play Store or the Apple App Store. To release your apps, you must provide your signature keys to App Center. Signature keys prove the authenticity of your app and prevent forgeries. For more information to how to acquire these keys, See [Managing App Signing Keys](/refguide/managing-app-signing-keys). 
 
@@ -146,7 +144,7 @@ To sign your app using App Center, do the following:
 
 The next steps differ depending on the type of app you want to configure.
 
-#### 5.1.1 Signing a Build for iOS
+#### 1.1.1 Signing a Build for iOS
 
 1.  Click the **Wrench icon** in the top-right corner to open the **Build configuration** panel:
 
@@ -161,7 +159,7 @@ The next steps differ depending on the type of app you want to configure.
 5. Provide the password you used when exporting the *.p12* certificate.
 6. Click **Save**, or **Save and build** if you wish to build immediately.
 
-#### 5.1.2 Signing a Build for Android
+#### 1.1.2 Signing a Build for Android
 
 1. Select the **Wrench icon** in the top-right corner to open the **Build configuration** panel:
 
@@ -189,7 +187,7 @@ native-builder.exe build --project-name CoolApp --build-number 1 --app-version 0
 
 This allows the Native Builder to build again using the same keys already configured on App Center.
 
-### 5.2 Native Builder and App Center Build Phase
+### 1.2 Native Builder and App Center Build Phase
 
 After your start your Native Builder build, you will see some or all of the following:
 
@@ -219,7 +217,7 @@ In case of failure, the build logs will be downloaded for your convenience. Plea
 
 Afer your build succeeds, note the downloaded *.zip* archives at the path provided by Native Builder.
 
-## 6. Distributing
+## 1. Distributing
 
 If your builds are not signed, the downloaded archives `CoolApp-Android-1.zip` and `CoolApp-iOS-1.zip` will contain *non-release* builds, `app-debug.apk` and `nativeTemplate.xcarchive`. 
 
@@ -230,13 +228,13 @@ For distributing to a specific platform, see the subsequent sections below:
 * [Distributing for Android](#51-distributing-for-android)
 * [Distributing for iOS](#52-distributing-for-ios)
 
-### 6.1 Distributing for Android
+### 1.1 Distributing for Android
 
-#### 6.1.1 Local Signing
+#### 1.1.1 Local Signing
 
 You can skip this section if you completed [Signing a Build](#signing-a-build). To sign your Android app locally, use apksigner by following Google's [apksigner documentation](https://developer.android.com/studio/command-line/apksigner).
 
-#### 6.1.2 Installing on a Device
+#### 1.1.1 Installing on a Device
 
 The *app-debug.apk* or *app-release.apk* can readily be installed on any device by sending the file over via any available means eg USB.
 
@@ -251,7 +249,7 @@ To install your app via USB, connect your device to a machine via USB. To Instal
 
 You can also consult Google's [Run apps on a hardware device](https://developer.android.com/studio/run/device) for detailed instructions on testing your app using a physical Android device instead of an emulator.
 
-#### 6.1.3 Uploading to the Google Play Store
+#### 1.1.1 Uploading to the Google Play Store
 
 This section details publishing a signed Android app to the Google Play store. This section can only be started if you done the following:
 
@@ -263,9 +261,9 @@ Before submitting your app to an app store, you will have to complete Google's [
 
 Once you have satisfied those requirements, you can follow Google's [Upload your app to the Play Console](https://developer.android.com/studio/publish/upload-bundle). Then, follow Google's [Prepare & roll out releases](https://support.google.com/googleplay/android-developer/answer/7159011) to create, prepare, review, and roll out your app release.
 
-### 6.2 Distributing for iOS
+### 1.1 Distributing for iOS
 
-#### 6.2.1 Local Signing
+#### 1.1.1 Local Signing
 
 You can skip this section if you completed [Signing a Build](#signing-a-build). Local signing is useful if you only want to test your app on a device, or you do not have a distribution certificate and have run out of build minutes on App Center when signing with a developer certificate.
 
@@ -301,7 +299,7 @@ In order to deploy the *nativeTemplate.xcarchive* on a device or on the App Stor
 
  ![Xcode Application loader](attachments/deploying-native-app/xcode-app-loader-7.png)
 
-### 6.2.2 Installing on a Device
+### 1.1.1 Installing on a Device
 
 You can now deploy your app to your device. An easy way to do this is with Apple iTunes.
 
@@ -317,7 +315,7 @@ To install the *ipa* on your device, follow these steps:
 5. Your app will show up in the list of apps. Click the **Install** button next to your app.
 6. Click **Apply** at the bottom of the screen to execute the actual installation.
 
-### 6.2.3 Uploading to the iOS App Store
+### 1.1.1 Uploading to the iOS App Store
 
 This section and the next only applies when the build was [Signed](#41-signed-builds) for the Apple Store earlier.
 
@@ -332,3 +330,8 @@ This section and the next only applies when the build was [Signed](#41-signed-bu
 4.  Publish your app by following Apple's [Overview of publishing an app](https://help.apple.com/app-store-connect/#/dev34e9bbb5a) and the subsequent documents in the left menu's **Publish on the App Store** category:
 
  ![publish on the app store](attachments/deploying-native-app/ios-publishing-an-app.png)
+ 
+## 1 Read More
+
+* [Native Builder Reference Guide](/refguide/native-builder)
+* [How To Get Started with Native Mobile](/howto/mobile/getting-started-with-native-mobile)

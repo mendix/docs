@@ -1,5 +1,5 @@
 ---
-title: "Native Builder Reference Guide"
+title: "Native Builder"
 parent: "native-mobile"
 menu_order: 70
 tags: ["native", "mobile", "deploy", "native-builder", "builder", "appcenter"]

@@ -7,11 +7,9 @@ tags: ["database connector", SQL", "database", "external database", "integration
 
 ## 1 Introduction
 
-The Mendix Platform offers many ways to integrate with external data, but integrating with external databases has not been a seamless experience until now. The [Database connector](https://appstore.home.mendix.com/link/app/2888/) can be used to seamlessly connect to external databases without limiting you in your choice of database or SQL dialect, thus enabling you to incorporate external data directly in your Mendix application.
+The Mendix Platform offers many ways to integrate with external data, but integrating with external databases has not been a seamless experience until now. The [Database connector](https://appstore.home.mendix.com/link/app/2888/) can be used to seamlessly connect to external databases without limiting you in your choice of database or SQL dialect, thus enabling you to incorporate external data directly in your Mendix application. Two actions are available via the connector: [Execute statement](#statement) and **Execute query**.
 
-This document will focus on executing an SQL on relational external databases.
-
-The **Execute statement** action (present in the Database Connector  provides a consistent environment for Mendix app projects to perform an arbitrary SQL statement on relational external databases. A Java database connectivity (JDBC) API is used when this Java action attempts to connect with a relational database for which a JDBC driver exists.
+The **Execute statement** action provides a consistent environment for Mendix app projects to perform an arbitrary SQL statement on relational external databases. A Java database connectivity (JDBC) API is used when this Java action attempts to connect with a relational database for which a JDBC driver exists.
 
 The Database Connector can be used for the following SQL statements:
 
@@ -21,8 +19,13 @@ The Database Connector can be used for the following SQL statements:
 * `STORED PROCEDURE`
 * `DELETE`
 * `DDL`
+* `SELECT` (only with the **Execute query** action, not with **Execute statement**)
 
-The connector should not be used for `SELECT SQL` queries.
+{{% alert type="info" %}}
+Automatic mapping is currently not possible.
+{{% /alert %}}
+
+This document will focus on executing an SQL on relational external databases.
 
 **This how-to will teach you how to do the following:**
 
@@ -45,7 +48,7 @@ You must place the JDBC driver *.jar* files for the databases to which you want 
 
 For example, if you want to connect to an Amazon RDS PostgreSQL database (for example, `jdbc:postgresql://xyz-rds-instance.ccnapcvoeosh.eu-west-1.rds.amazonaws.com:5432/postgres`), you need to place the PostgreSQL Jdbc driver *.jar* file inside the userlib folder.
 
-## 4 Using the Execute Statement Action in a Microflow
+## 4 Using the Execute Statement Action in a Microflow {#statement}
 
 To use an ExecuteStatement action in a microflow, follow these steps:
 
@@ -60,7 +63,7 @@ To use an ExecuteStatement action in a microflow, follow these steps:
 3. Configure the statement:
 	* Provide all the valid arguments to the statement action
 	* The **Jdbc url** argument must specify a database URL that points to your relational database and is dependent upon the particular database and JDBC driver
-		* It will always begin with `jdbc:` protocol text, but the rest is up to particular vendor; for example, the `jdbc:<a rel="nofollow">mysql://hostname/databaseName'</a> jdbcUrl` format can be used for MySQL databases)
+		* It will always begin with `jdbc:` protocol text, but the rest is up to the particular vendor (for example, the `jdbc:<a rel="nofollow">mysql://hostname/databaseName'</a>` JDBC URL format can be used for MySQL databases)
 	* Specify the **Output Variable name**
 		* In the example below, the variable is **amountOfUpdatedRows**, which is the  output of the SQL statement; this is also the output of the SQL statement provided for the **Sql** argument within the connector
 

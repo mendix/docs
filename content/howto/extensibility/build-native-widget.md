@@ -39,10 +39,10 @@ Before starting this how-to, make sure you have completed the following prerequi
 	$ npm install yo -g
 	```
 
-* Install Mendix' Pluggable Widget Generator v8.2.0 for Yeoman with the following command:
+* Install latest Mendix Pluggable Widget Generator for Yeoman with the following command:
 
 	```shell
-	npm install -g @mendix/generator-widget@8.2.0
+	npm install -g @mendix/generator-widget
 	```
 
 * Install an integrated development environment (IDE) of your choice (Mendix recommends [Microsoft Visual Studio Code](https://code.visualstudio.com/))
@@ -437,7 +437,7 @@ Next you will allow the Mendix developer to alter the header caption of your wid
 	```tsx
 	export interface GroupBoxProps {
 		sampleText?: string;
-		style: CustomStyle[];
+		style: Array<Partial<CustomStyle>>;
 	}
 	```
 
@@ -446,7 +446,7 @@ Next you will allow the Mendix developer to alter the header caption of your wid
 	```tsx
 	export interface GroupBoxProps {
 		headerCaption?: string;
-		style: CustomStyle[];
+		style: Array<Partial<CustomStyle>>;
 	}
 	```
 
@@ -827,7 +827,7 @@ The next step is to allow a Mendix developer to use a custom icon in the clickab
 		collapseIcon?: ReactNode;
 		expandIcon?: ReactNode;
 		headerCaption?: string;
-		style: CustomStyle[];
+		style: Array<Partial<CustomStyle>>;
 	}
 	```
 
@@ -1175,7 +1175,7 @@ Now support this section's two features with your display component:
 		collapseIcon?: ReactNode;
 		expandIcon?: ReactNode;
 		headerCaption?: string;
-		style: CustomStyle[];
+		style: Array<Partial<CustomStyle>>;
 	}
 	```
 

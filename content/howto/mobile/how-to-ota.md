@@ -36,7 +36,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ### 3.1 Safely Pushing OTA Updates Without Redeploying Your Mendix App {#safeToUpdate}
 
-It is good practice to always redeploy your Mendix App before pushing a new over the air update. Releasing  an over the air update without redeploying your Mendix App to Mendix Cloud in these cases is usually safe:
+It is good practice to *always* redeploy your Mendix App before pushing a new over the air update. However, releasing an OTA update without redeploying your Mendix App to Mendix Cloud in these cases is usually safe:
 
 * Style changes
 * Changes to static images, text, or other static assets
@@ -47,14 +47,7 @@ It is good practice to always redeploy your Mendix App before pushing a new over
 * A new custom Javascript-only widget or module was added
 * Non-destructive model changes (for more information, see the [Offline First Reference Guide](/refguide/offline-first))
 
-### 3.2 When You Must Redeploy Your Mendix App Before an OTA Update
-
-Over the air updates are only for native client specific changes. They do not replace a Mendix deploy action. Therefore, you will still need to redeploy you Mendix App to Mendix cloud as usual. In these cases please follow the following order of deploying your app.
-
-1) Deploy your Mendix App to the cloud.
-2) Push a new **mandatory** update to your clients using Native Builder.
-
-### 3.3 When a Full Release Is Required
+### 3.2 When a Full Release Is Required
 
 If you have made any changes directly to your iOS or Android project, you will have to fully redeploy you app to the app stores for the changes to take effect. OTA updates do not suffice, and a full release is required, in the following cases: 
 
@@ -179,7 +172,7 @@ Generally, you should avoid doing destructive changes to offline-synced entities
 
 ### 7.1 Offline Apps and Data Loss
 
-Data loss can occur when OTA updates or new releases coincide with apps being offline. For example, imagine your Mendix developers were hard at work optimizing the data store entity structure to speed up sync operations. They release that morning. They push a new runtime by pressing the **Run** button in Studio Pro, and then run the Native Builder to push a new update to the apps. All seems to work fine. 
+Data loss can occur when OTA updates or new releases coincide with apps being offline. For example, imagine your Mendix developers were hard at work optimizing the data store entity structure by consolidating entities to speed up sync operations. They release that morning. They push a new runtime by pressing the **Run** button in Studio Pro, and then run the Native Builder to push a new update to the apps. All seems to work fine. 
 
 That same morning however, your engineers were hard at work gathering field data in a remote area. Later that afternoon the engineers return back to the city and attempt to synchronize their data using the app's built-in synchronize button. Their synchronization fails. They do the only thing they can think of: restart the app. When the app starts they are greeted with the **Update Available** screen. They hit the continue button, get updated, and their data is lost or partially synchronized.
 

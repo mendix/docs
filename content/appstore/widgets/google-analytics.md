@@ -8,24 +8,17 @@ draft: true
 
 ## 1 Introduction
 
-The [Google Analytics](https://appstore.home.mendix.com/link/app/105/) widget enables tracking pageviews and custom event with Google Analytics. If you have an e-commerce application, you can also use this widget to keep track of your transactions.
-Contributing
+The [Google Analytics](https://appstore.home.mendix.com/link/app/105/) widget enables tracking page views and custom events with Google Analytics. If you have an e-commerce application, you can also use this widget to keep track of your transactions.
 
-For more information on contributing to this repository visit Contributing to a GitHub repository!
+### 1.1 Typical Usage Scenario
 
-### 1.1 Typical usage scenario
+You want to track how often a product is viewed and inspect it in Google Analytics, and you want a detailed overview of all transactions.
 
-You want to track how often a product is viewed and inspect it in Google Analytics. You want a detailed overview of all transactions
-
-### 1.2 Features 
-
-    Track custom events
-    Track pageviews
-    Track transactions
+With this widget, you can track custom events, page views, and transactions.
 
 ## 2 Configuration
 
-Insert the widget in a form. Configure the properties of the widget you have added to your page. Please use a valid UA-XXXX-XX code in order to track traffic on your web application.
+Insert the widget in a form, then configure the properties of the widget you have added to your page. Please use a valid UA-XXXX-XX code in order to track traffic on your web application.
 
 ## 3 Properties
 
@@ -74,5 +67,4 @@ This widget will place a META verification tag inside the html tag. So that the 
     You can remove the following line from your index.html
 
 <script type="text/javascript" src="widgets/analytics/lib/Tracker.js" uanumber="UA-XXXXXXXX-X"></script>
-
     Remove Analytics.mpk from your [%projectdir%]/widgets directory.

@@ -62,45 +62,49 @@ If you have made any changes directly to your iOS or Android project, you will h
 
 Over the air updates let you correct mistakes in your published apps without issuing a new release. For example, imagine you issued a new release and later found a spelling mistake on your welcome screen:
 
-![Typo in welcome screen](attachments/how-to-ota/phone-error-text.png)
+{{% image_container width="300" %}}![Typo in welcome screen](attachments/how-to-ota/phone-error-text.png){{% /image_container %}}
 
 Before OTA updates, you would have to make a new release and configure it in the app stores. But OTA updates make fixing such a mistake easy.
 
 To release a new version OTA, follow these steps:
 
 1.  Correct the title and message as follows: 
-   
-   {{% image_container width="300" %}}![Make some changes](attachments/how-to-ota/modeller-correct.png){{% /image_container %}}
+
+	{{% image_container width="300" %}}![Make some changes](attachments/how-to-ota/modeller-correct.png){{% /image_container %}}
 
 2. Save your changes.
 3. Note the version and build number of the app build you want to update. This how-to assumes an app version of 1.0.0 and a build number of 1.
 4. Open a command line interface (CLI) such as Command Prompt.
 5. Navigate to the directory of your Native Builder:
 
-   `cd {path to Native Builder executable file}`
+	```
+	cd {path to Native Builder executable file}`
+	```
 
 6. Run the following command to build and push a new update: 
-   
-   `native-builder.exe release push-update --project-name "CoolApp" --target-version "1.0.0" --build-number 1 --rollout-percentage 100 --mandatory`
 
-   {{% alert type="info" %}}
-This command does the following:<br />
+	```
+	native-builder.exe release push-update --project-name "CoolApp" --target-version "1.0.0" --build-number 1 --rollout-percentage 100 --mandatory
+	```
+
+	{{% alert type="info" %}}
+	This command does the following:<br />
 * Runs Mx Build to build your project<br />
 * Packages your project to be pushed as a new update<br />
 * Pushes the new update package for the app's version 1.0.0<br />
 * Sets the rollout percentage to 100% (all app users)<br />
 * Marks the update as mandatory for the app's users to install
-   {{% /alert %}}
+	{{% /alert %}}
 
 1. Wait for the Native Builder to complete.
 2. Restart the app on your testing device. You should be greeted with the following message:
 
-   {{% image_container width="300" %}}![Update available prompt](attachments/how-to-ota/phone-update-prompt.png){{% /image_container %}}
+	{{% image_container width="300" %}}![Update available prompt](attachments/how-to-ota/phone-update-prompt.png){{% /image_container %}}
 
 3.  Tap **Confirm** to update your app.
 4.  The app should reload and greet you with the following dialog box:
 
-   {{% image_container width="300" %}}![Update success prompt](attachments/how-to-ota/phone-success-prompt.png){{% /image_container %}}
+	{{% image_container width="300" %}}![Update success prompt](attachments/how-to-ota/phone-success-prompt.png){{% /image_container %}}
 
 ## 5 Rolling Back Updates
 
@@ -142,7 +146,7 @@ The key here is `patch-update`. The `patch-update` command allows you to modify 
 In case you want to test the stability of a new update, it is good practice to test releases on a small number of users before fully rolling them out.
 
 To roll out your app to only *some* of your users, run this command: 
-  
+
    `native-builder.exe release push-update --project-name "CoolApp" --target-version "1.0.0" --build-number 1 --rollout-percentage 50 --mandatory`
 
 Instead of passing a rollout percentage of 100%, you are passing 50%. This means the update will be distributed to 50% of the app's user base. This number can be an any integer from 1 to 100, representing the percentage of your user base which will recieve the update.
@@ -154,7 +158,7 @@ To fully roll out the update, run this command:
 ### 6.2 Releasing an Optional Update
 
 Using a modification of `rollout-percentage` you can make builds optional. To do so, run this command: 
-  
+
   `native-builder.exe release push-update --project-name "CoolApp" --target-version "1.0.0" --build-number 1 --rollout-percentage 100 --mandatory false`
 
 Instead of the mandatory update dialog window, you app's users should now be greeted with a optional dialog window. This window will allow them to choose to install the update or not. 

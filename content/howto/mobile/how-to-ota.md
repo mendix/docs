@@ -45,7 +45,7 @@ It is good practice to always redeploy your Mendix App before pushing a new over
 * JaveScript action changes
 * Widgets shipped with Mendix added or removed
 * A new custom Javascript-only widget or module was added
-* Non-destructive model changes (for more information, see the [Offline First Reference Guide](/refguide/offline-first.md))
+* Non-destructive model changes (for more information, see the [Offline First Reference Guide](/refguide/offline-first))
 
 ### 3.2 When You Must Redeploy Your Mendix App Before an OTA Update
 
@@ -168,7 +168,7 @@ Instead of the mandatory update dialog window, you app's users should now be gre
 
 ## 7 Preserving your Model's Integrity 
 
-Before issuing OTA updates or releasing new versions, please read and understand the [Offline First]("/refguide/offline-first.md") reference guide. It is important to understand the implications of offline first.
+Before issuing OTA updates or releasing new versions, please read and understand the [Offline First](/refguide/offline-first) reference guide. It is important to understand the implications of offline first.
 
 Mendix Native Apps are offline first. This means you should be cautious when changing the following elements, and should avoid changing them if possible: 
 
@@ -189,6 +189,6 @@ This issue is independent from OTA updates and specific to offline apps. Your of
 
 * [How to Deploy Your First Mendix Native App](/howto/mobile/deploying-native-app)
 * [Native Builder Reference Guide](/refguide/native-builder)
-* [Offline First Reference Guide](/refguide/offline-first.md)
+* [Offline First Reference Guide](/refguide/offline-first)
 * [Codepush Introduction](https://docs.microsoft.com/en-us/appcenter/distribution/codepush/)
 * [Using the CodePush UI](https://docs.microsoft.com/en-us/appcenter/distribution/codepush/using-ui)

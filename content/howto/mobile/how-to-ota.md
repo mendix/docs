@@ -30,7 +30,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Complete [How to Deploy your First Mendix Native App](/howto/mobile/deploying-native-app)
 * Complete at least one successful build using Native Builder v3.0.0 and Native Template v2.0.0
 * Install your app on a test device or emulator
-* Read the [Offline First Reference Guide](/refguide/offline-first.md)
+* Read the [Offline First Reference Guide](/refguide/offline-first)
 
 ## 3 When to Use OTA Updates
 
@@ -188,6 +188,7 @@ This issue is independent from OTA updates and specific to offline apps. Your of
 ## 8 Read More
 
 * [How to Deploy Your First Mendix Native App](/howto/mobile/deploying-native-app)
+* [Native Builder Reference Guide](/refguide/native-builder)
 * [Offline First Reference Guide](/refguide/offline-first.md)
 * [Codepush Introduction](https://docs.microsoft.com/en-us/appcenter/distribution/codepush/)
 * [Using the CodePush UI](https://docs.microsoft.com/en-us/appcenter/distribution/codepush/using-ui)

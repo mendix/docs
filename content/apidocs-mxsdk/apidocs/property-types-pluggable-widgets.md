@@ -33,6 +33,7 @@ This defines a property's type. A `type` must be one of the following:
 	* [string](#string)
 	* [boolean](#boolean)
 	* [integer](#integer)
+	* [decimal](#decimal)
 	* [enumeration](#enumeration)
 * Component Properties
 	* [icon](#icon)
@@ -151,11 +152,38 @@ Then the Studio Pro UI for the property appears like this:
 
 ![](attachments/widget-property-types/integer.png)
 
-### 2.4 Enumeration{#enumeration}
+### 2.4 Decimal{#decimal}
+
+Decimal is represented as a number input in Studio Pro. It is passed as a `Big` prop to a client component.
+
+#### 2.4.1 XML Attributes
+
+| Attribute      | Required | Attribute Type | Description                                                                                                                                                          |
+| -------------- | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `type`         | Yes      | String         | Must be `decimal`                                                                                                                                                    |
+| `key`          | Yes      | String         | See [key](#key) |
+| `defaultValue` | Yes      | Integer        | Default value for the property                                                                                                                                      |
+
+#### 2.3.2 Studio Pro UI
+
+When the property is defined as follows:
+
+```xml
+<property key="myDecimal" type="decimal" defaultValue="50.4">
+	<caption>My decimal</caption>
+	<description>My decimal setting</description>
+</property>
+```
+
+Then the Studio Pro UI for the property appears like this:
+
+![decimal](attachments/widget-property-types/decimal.png)
+
+### 2.5 Enumeration{#enumeration}
 
 Enumeration allows a user to select one out of multiple options defined in the XML. The `key` of a selected enumeration element is passed as `string` prop to a client component.
 
-#### 2.4.1 XML Attributes
+#### 2.5.1 XML Attributes
 
 | Attribute      | Required | Attribute Type | Description                                                                                                                                                          |
 | -------------- | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -163,7 +191,7 @@ Enumeration allows a user to select one out of multiple options defined in the X
 | `key`          | Yes      | String         | See [key](#key) |
 | `defaultValue` | Yes      | Integer        | Default value for the property                                                                                                                                      |
 
-#### 2.4.2 XML Elements
+#### 2.5.2 XML Elements
 
 `<enumerationValues>` (required) — One `<enumerationValues>` element must be declared with multiple `<enumerationValue>` elements inside in order to define possible enumeration values. A `key` attribute is required for every enumeration value as well as a caption. Enter enumeration values like this:
 
@@ -173,7 +201,7 @@ Enumeration allows a user to select one out of multiple options defined in the X
 
 The `key` of a selected element will be passed to the client component. `key` should not be changed since it is used to identify options used in a project.
 
-#### 2.4.3 Studio Pro UI
+#### 2.5.3 Studio Pro UI
 
 When the property is defined as follows:
 

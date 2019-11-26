@@ -231,6 +231,11 @@ To deploy your deployment package, do the following:
 
     For more information see [Using the a9s PostgreSQL](https://developer.mindsphere.io/paas/a9s-postgresql/using.html) on the MindSphere developers site.
 
+
+    {{% alert type="warning" %}}
+    Each mendix app needs its own database. Do not bind more than one app to a database as both apps will not work properly. Create a new database instance instead.
+    {{% /alert %}}
+
 4.  Depending on your infrastructure and service broker usage, it may take several minutes to create the service instance. Check if your PostgreSQL service has been created successfully using the following command:
     `cf services`
     Your service should be listed, and the last operation should be ‘create succeeded’.
@@ -249,6 +254,10 @@ To deploy your deployment package, do the following:
     ```
 
     {{% alert type="info" %}}`disk_quota_size` and `memory_size` must be at least **512M** to enable a Mendix app to run.<br />See the *Cloud Foundry* [App Manifest Attribute Reference](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest-attributes.html) for more information on valid specifications for memory and disk quota sizes.{{% /alert %}}
+
+    {{% alert type="warning" %}}
+    Each mendix app needs its own database. Do not bind more than one app to a database as both apps will not work properly. Create a new database instance instead.
+    {{% /alert %}}
 
     For more information on the configuration of manifest files, see [Configuring the manifest file](https://developer.mindsphere.io/howto/howto-cf-single-manifest.html#configuring-the-manifest-file) on the MindSphere developers site.
 

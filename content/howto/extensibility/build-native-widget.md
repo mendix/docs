@@ -33,7 +33,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Install Mendix Studio Pro 8.3
 * Install the Mendix Make it Native app on a mobile device or an emulator.
 * Install Long Term Support (LTS) v10.16.3 or any higher version of [Node.js](https://nodejs.org)
-* Install latest [Yeoman](https://yeoman.io/) with the following command:
+* Install the latest [Yeoman](https://yeoman.io/) with the following command:
 
 	```shell
 	$ npm install yo -g

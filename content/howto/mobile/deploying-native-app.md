@@ -80,13 +80,13 @@ Now you will run your first `prepare` command:
 2. Change directory to the folder you extracted the Native Builder contents to.
 3.  Run `prepare` for the first time, which will produce this warning:
 
- ![App Center authentication failure](attachments/deploying-native-app/native-builder-authentication-failure.png)
+	![App Center authentication failure](attachments/deploying-native-app/native-builder-authentication-failure.png)
 
- This warning is part of App Center's security policy. 
+	This warning is part of App Center's security policy. 
 
 2. Visit App Center's [dashboard](https://appcenter.ms/) to see your applications created by the Native Builder:
 
- ![App Center Applications](attachments/deploying-native-app/appcenter-apps.png)
+	![App Center Applications](attachments/deploying-native-app/appcenter-apps.png)
 
 To address the warning, complete the following steps (you must do them for both your iOS and Android apps if you have one of each):
 

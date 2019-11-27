@@ -245,7 +245,7 @@ To install your app via USB, connect your device to a machine via USB. To Instal
 3. Tap the **Install** button.
 4. Tap the **Done** button when prompted. You should now be able to access your installed app via your **App Drawer**, as well as by tapping the **Open** button after the installation completes.
 
-<img alt="Android Application" src="attachments/deploying-native-app/android-app-launch.gif" height="520" />
+	{{% image_container width="300" %}}![android app launch](attachments/deploying-native-app/android-app-launch.gif){{% /image_container %}}
 
 You can also consult Google's [Run apps on a hardware device](https://developer.android.com/studio/run/device) for detailed instructions on testing your app using a physical Android device instead of an emulator.
 

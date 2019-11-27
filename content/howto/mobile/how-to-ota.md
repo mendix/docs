@@ -2,7 +2,7 @@
 title: "Use Over the Air Updates"
 parent: "native-mobile"
 menu_order: 71
-description: "A how to push over the air update (OTA), roll it back or modify it"
+description: A tutorial for pushing over the air updates (OTA).
 tags: ["native", "mobile", "ota", "native-builder", "over the air"]
 ---
 
@@ -117,7 +117,7 @@ Imagine you want to rollback an update. Maybe you released it too early or somet
 	```
 	`native-builder.exe release list --project-name "CoolApp"`
 	```
-
+	
 	![List of available release](attachments/how-to-ota/release-list.png)
 
 2. To roll back from {v2} to {v1} type the following command: 
@@ -125,7 +125,7 @@ Imagine you want to rollback an update. Maybe you released it too early or somet
 	```
 	native-builder.exe release rollback-update --project-name "CoolApp" --label "v1"
 	```
-
+	
 	{{% image_container width="300" %}}![Output of rollback command](attachments/how-to-ota/rollback-result.png){{% /image_container %}}
 
 3. Next time you open your app, you should be greeted with the **Update available** dialog box. Tap **Confirm** to roll your app back on your device.

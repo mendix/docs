@@ -9,52 +9,54 @@ draft: true
 ## 1 Introduction
 
 The [Carousel](https://appstore.home.mendix.com/link/app/47784/) widget displays images in a carousel.
-Features
 
-    Supports different data sources:
-        Set static images in the Modeler
-        Retrieve images from the database via XPath
-        Retrieve images via a microflow
-    Image from mendix System.Images or from a URL
-    Navigate to the next or the previous image
-    Execute a microflow or open a page when an image is clicked
-    Execute a nanoflow or open a page when an image is clicked
-    Swipe through the images on mobile devices
+### 1.1 Features
 
-Dependencies
+* Supports different data sources:
+	* Set static images in the Modeler
+	* Retrieve images from the database via XPath
+	* Retrieve images via a microflow
+* Image from mendix System.Images or from a URL
+* Navigate to the next or the previous image
+* Execute a microflow or open a page when an image is clicked
+* Execute a nanoflow or open a page when an image is clicked
+* Swipe through the images on mobile devices
 
-Mendix 7.13.1
-Test project
+### 1.3 Test Project
 
 https://carousel.mxapps.io/
-Usage
+
+## 2 Usage
 
 The widget requires a context.
-Data source: Static
+
+### 2.1 Data source: Static
 
     On the Data source option of the Data source tab, select the static option if its not already selected by default.
     On the Static images option of the same tab, click new to add static images from the modeler and also configure an onclick action.
     For the on click options, configure only one of the two (either calling a microflow or a page).
     Configuring both options will only trigger the microflow.
 
-Data source: XPath
+### 2.2 Data source: XPath
 
     On the Data source option of the Data source tab, select the XPath option.
     Specify the image entity and the XPath constraint (if any).
     In the behavior tab, you can configure on click behavior i.e Do nothing, call microflow or show page.
     For options call microflow and show page, a microflow or page must be specified respectively.
 
-Data source: Microflow
+### 2.3 Data source: Microflow
 
     On the Data source option of the Data source tab, select the Microflow option.
     Specify the image entity and the microflow to retrieve the carousel images from (both required).
     Refer to the XPath section for configuring click behavior.
 
 For the microflow and XPath data source options, specifying a URL attribute will make the value of the URL attribute the priority.
-Issues, suggestions and feature requests
+
+## 3 Issues, suggestions and feature requests
 
 We are actively maintaining this widget, please report any issues or suggestion for improvement at https://github.com/mendixlabs/carousel/issues.
-Development
+
+### 3.1 Development
 
 Prerequisite: Install git, node package manager, webpack CLI, grunt CLI, Karma CLI
 

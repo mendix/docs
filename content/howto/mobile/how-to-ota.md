@@ -86,9 +86,9 @@ To release a new version OTA, follow these steps:
 	```
 	native-builder.exe release push-update --project-name "CoolApp" --target-version "1.0.0" --build-number 1 --rollout-percentage 100 --mandatory
 	```
-
+	
 	{{% alert type="info" %}}
-	This command does the following:<br />
+This command does the following:<br />
 * Runs Mx Build to build your project<br />
 * Packages your project to be pushed as a new update<br />
 * Pushes the new update package for the app's version 1.0.0<br />
@@ -114,15 +114,19 @@ Imagine you want to rollback an update. Maybe you released it too early or somet
 
 1. Get your list of available releases by running the following command: 
 
-   `native-builder.exe release list --project-name "CoolApp"`
+	```
+	`native-builder.exe release list --project-name "CoolApp"`
+	```
 
-   ![List of available release](attachments/how-to-ota/release-list.png)
+	![List of available release](attachments/how-to-ota/release-list.png)
 
 2. To roll back from {v2} to {v1} type the following command: 
 
-   `native-builder.exe release rollback-update --project-name "CoolApp" --label "v1"`
+	```
+	native-builder.exe release rollback-update --project-name "CoolApp" --label "v1"
+	```
 
-   {{% image_container width="300" %}}![Output of rollback command](attachments/how-to-ota/rollback-result.png){{% /image_container %}}
+	{{% image_container width="300" %}}![Output of rollback command](attachments/how-to-ota/rollback-result.png){{% /image_container %}}
 
 3. Next time you open your app, you should be greeted with the **Update available** dialog box. Tap **Confirm** to roll your app back on your device.
 
@@ -147,19 +151,25 @@ In case you want to test the stability of a new update, it is good practice to t
 
 To roll out your app to only *some* of your users, run this command: 
 
-   `native-builder.exe release push-update --project-name "CoolApp" --target-version "1.0.0" --build-number 1 --rollout-percentage 50 --mandatory`
+```
+`native-builder.exe release push-update --project-name "CoolApp" --target-version "1.0.0" --build-number 1 --rollout-percentage 50 --mandatory`
+```
 
 Instead of passing a rollout percentage of 100%, you are passing 50%. This means the update will be distributed to 50% of the app's user base. This number can be an any integer from 1 to 100, representing the percentage of your user base which will recieve the update.
 
 To fully roll out the update, run this command: 
 
-   `native-builder.exe release patch-update --project-name "CoolApp" --target-version "1.0.0" --build-number 1 --rollout-percentage 100`
+```
+native-builder.exe release patch-update --project-name "CoolApp" --target-version "1.0.0" --build-number 1 --rollout-percentage 100
+```
 
 ### 6.2 Releasing an Optional Update
 
 Using a modification of `rollout-percentage` you can make builds optional. To do so, run this command: 
 
-  `native-builder.exe release push-update --project-name "CoolApp" --target-version "1.0.0" --build-number 1 --rollout-percentage 100 --mandatory false`
+```
+native-builder.exe release push-update --project-name "CoolApp" --target-version "1.0.0" --build-number 1 --rollout-percentage 100 --mandatory false
+```
 
 Instead of the mandatory update dialog window, you app's users should now be greeted with a optional dialog window. This window will allow them to choose to install the update or not. 
 

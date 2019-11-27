@@ -130,13 +130,13 @@ Imagine you want to rollback an update. Maybe you released it too early or somet
 
 3. Next time you open your app, you should be greeted with the **Update available** dialog box. Tap **Confirm** to roll your app back on your device.
 
-## 5 Initiating a Partial Initial Rollout
+## 6 Initiating a Partial Initial Rollout
 
-### 5.1 When it is Safe to Rollback an Update
+### 6.1 When it is Safe to Rollback an Update
 
 For information on rollbacks, see [Safely Pushing OTA Updates Without Redeploying Your Mendix App](#safeToUpdate) above.
 
-## 6 Configuring a Pushed Update
+## 7 Configuring a Pushed Update
 
 You might want to reconfigure an update which has already been pushed for the following reasons: 
 
@@ -145,7 +145,7 @@ You might want to reconfigure an update which has already been pushed for the fo
 
 The key here is `patch-update`. The `patch-update` command allows you to modify a pushed updated. You can modify things like a rollout percentage, or you can choose to make a release mandatory.
 
-### 6.1 Doing a Partial Rollout
+### 7.1 Doing a Partial Rollout
 
 In case you want to test the stability of a new update, it is good practice to test releases on a small number of users before fully rolling them out.
 
@@ -163,7 +163,7 @@ To fully roll out the update, run this command:
 native-builder.exe release patch-update --project-name "CoolApp" --target-version "1.0.0" --build-number 1 --rollout-percentage 100
 ```
 
-### 6.2 Releasing an Optional Update
+### 7.2 Releasing an Optional Update
 
 Using a modification of `rollout-percentage` you can make builds optional. To do so, run this command: 
 
@@ -173,7 +173,7 @@ native-builder.exe release push-update --project-name "CoolApp" --target-version
 
 Instead of the mandatory update dialog window, you app's users should now be greeted with a optional dialog window. This window will allow them to choose to install the update or not. 
 
-## 7 Preserving your Model's Integrity 
+## 8 Preserving your Model's Integrity 
 
 Before issuing OTA updates or releasing new versions, please read and understand the [Offline First](/refguide/offline-first) reference guide. It is important to understand the implications of offline first.
 
@@ -184,7 +184,7 @@ Mendix Native Apps are offline first. This means you should be cautious when cha
 
 Generally, you should avoid doing destructive changes to offline-synced entities. In the rare cases this is unavoidable, releasing a new app version or doing over the air updates might put your app's users in an unrecoverable state. 
 
-### 7.1 Offline Apps and Data Loss
+### 8.1 Offline Apps and Data Loss
 
 Data loss can occur when OTA updates or new releases coincide with apps being offline. For example, imagine your Mendix developers were hard at work optimizing the data store entity structure by consolidating entities to speed up sync operations. They release that morning. They push a new runtime by pressing the **Run** button in Studio Pro, and then run the Native Builder to push a new update to the apps. All seems to work fine. 
 
@@ -192,7 +192,7 @@ That same morning however, your engineers were hard at work gathering field data
 
 This issue is independent from OTA updates and specific to offline apps. Your offline app runs a snapshot of your runtime's model locally. So as a Mendix Developer, you have to think twice before doing major chages that might make the app's state unrecoverable. In the example above the entity model was changed, and when the app attempted to synchronize it failed. This can create unrecoverable situations that will require a re-installation of the app, and can lead to data loss for unsynced data.
 
-## 8 Read More
+## 9 Read More
 
 * [How to Deploy Your First Mendix Native App](/howto/mobile/deploying-native-app)
 * [Native Builder Reference Guide](/refguide/native-builder)

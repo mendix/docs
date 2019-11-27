@@ -35,16 +35,16 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Install Mendix Studio Pro 8.3
 * Install the Mendix Make it Native app on a mobile device or an emulator.
 * Install Long Term Support (LTS) v10.16.3 or any higher version of [Node.js](https://nodejs.org)
-* Install latest [Yeoman](https://yeoman.io/) with the following command:
+* Install the latest [Yeoman](https://yeoman.io/) with the following command:
 
 	```shell
 	$ npm install yo -g
 	```
 
-* Install Mendix' Pluggable Widget Generator v8.2.0 for Yeoman with the following command:
+* Install the latest Mendix Pluggable Widget Generator for Yeoman with the following command:
 
 	```shell
-	npm install -g @mendix/generator-widget@8.2.0
+	npm install -g @mendix/generator-widget
 	```
 
 * Install an integrated development environment (IDE) of your choice (Mendix recommends [Microsoft Visual Studio Code](https://code.visualstudio.com/))

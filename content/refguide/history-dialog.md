@@ -1,6 +1,6 @@
 ---
 title: "History"
-parent: "dialogs"
+parent: "project-menu"
 tags: ["studio pro"]
 ---
 ## 1 Introduction

@@ -1,6 +1,6 @@
 ---
 title: "Commit"
-parent: "dialogs"
+parent: "project-menu"
 tags: ["studio pro"]
 ---
 

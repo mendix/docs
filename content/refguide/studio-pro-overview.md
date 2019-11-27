@@ -61,7 +61,7 @@ The documents you view and edit are shown in tabs. You can have a number of tabs
 
 ## 5 View Menu {#view}
 
-For more information on the **View** menu and its items, see [View Menu](view-menu).
+The **View** menu allows you to view dockable panes, to enable the full screen mode, and reset the project layout. For more information on the **View** menu and its items, see [View Menu](view-menu).
 
 ## 6 Project Menu
 

@@ -91,6 +91,7 @@ Resets the layout of dockable window panes to factory defaults.
 
 ## 16 Read More
 
-* [Errors Pane](errors-pane)
 * [Changes Pane](changes-pane)
+* [Errors Pane](errors-pane)
+* [Project Explorer](project-explorer)
 * [Studio Pro Overview](studio-pro-overview)

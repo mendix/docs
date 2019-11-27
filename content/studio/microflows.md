@@ -32,7 +32,7 @@ To view the microflows of your app in Studio, click the **Microflows** icon in t
 
 A microflow looks like a flow chart. On a new microflow a *start event* (a starting point of the microflow represented by a *green* dot) and an *end event* (an endpoint of the microflow represented by a *red* dot) are created by default. 
 
-Start and end events are connected by a *sequence flow* (a line with an arrow), where you can add new events and activities. For more information, see the [Creating a New Microflow](#creating-new-microflow) section. If [Mendix Assist](mendix-assist) is on, it will be represented with a blue dot in the middle (for more information on what Mendix Assist is, see [Mendix Assist](mx-assist)).
+Start and end events are connected by a *sequence flow* (a line with an arrow), where you can add new events and activities. For more information, see the [Creating a New Microflow](#creating-new-microflow) section. If [Mendix Assist](mx-assist) is on, it will be represented with a blue dot in the middle (for more information on what Mendix Assist is, see [Mendix Assist](mx-assist)).
 
 ![New Microflow](attachments/microflows/new-microflow-created.png)
 

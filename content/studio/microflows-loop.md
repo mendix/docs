@@ -8,7 +8,7 @@ tags: ["studio", "microflow", "loop", "loops"]
 
 ## 1 Introduction 
 
-A loop is used to iterate over a list of object and perform actions on each item of the list when building [microflows](microflows). For example, you can retrieve a list of orders from your database, then loop over this list and mark orders as processed. For more details on use cases, see the [Loop Example](#loop-example) section.
+A loop is used to iterate over a list of object and perform actions on each item of the list when building [microflows](microflows). For example, you can retrieve a list of orders from your database, then loop over this list and mark orders as processed. For more details on use cases, see the [Configuring a Loop](#loop-example) section.
 
 The loop is visualized as a frame. The flow inside the loop is executed for each object. That means, if you add more than one activity to the loop, the full flow gets executed on each item. For example, you can add a loop that will prevent orders from processing if the order is not paid:
 
@@ -27,7 +27,7 @@ Loop properties consists of the **Data Source** section and are described below:
 	{{% image_container width="350" %}}![Data Source Properties of a Loop](attachments/microflows-loop/loop-properties.png)
 	{{% /image_container %}}
 
-## 3 Loop Example {#loop-example}
+## 3 Configuring a Loop {#loop-example}
 
 A straightforward use-case is where you retrieve a list of orders from your database, loop over this list, and mark orders as processed as a result. 
 

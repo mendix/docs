@@ -68,11 +68,11 @@ If you want to write the expression manually, pay attention to the following:
 * Attributes and associations of object variables are accessed using a slash. For example, *$Customer/Name*, *$Customer/Grade* refer to the attributes Name and Grade of the entity Customer 
 * Unary, Boolean, and relational types of expressions are available in Studio (for more information, see the [Expression Types](#expression-types) section)
 
-## 3 Expression Examples
+### 2.3  Expression Examples
 
 Below are two examples that illustrate how expressions can be used. 
 
-### 3.1 Example 1
+#### 2.3.1 Example 1
 
 You have a **[Decision](microflows-decision)** and you want to write an expression that checks whether the customer grade is gold and the price of the order is more than 100 (you can configure a discount after the **Decision** that is allowed if this expression is true):
 
@@ -82,17 +82,17 @@ The expression will look the following way:
 
 ![](attachments/microflows-expressions/expression-decision.png)
 
-### 3.2 Example 2
+#### 2.3.2 Example 2
 
 You add a **[Decision](microflows-decision)** to check if an object (in the example below the object is *Customer*) exists. And you also check if the Customer's name matches a particular one (in the example below Customer's name is *Mendix*). The expression will look the following way:
 
 ![](attachments/microflows-expressions/customer-empty-and-name-example.png)
 
-## 4 Expression Types {#expression-types}
+## 3 Expression Types {#expression-types}
 
 A list of the operators you can use in expressions in Studio can be found below:
 
-### 4.1 Relational Expressions
+### 3.1 Relational Expressions
 
 You can use the following relational expressions:
 
@@ -103,14 +103,14 @@ You can use the following relational expressions:
 * [Is equal to ( = )](/refguide/relational-expressions)
 * [Is not equal to ( != )](/refguide/relational-expressions)
 
-### 4.2 Boolean Expressions
+### 3.2 Boolean Expressions
 
 You can use the following Boolean expressions:
 
 * [and](/refguide/boolean-expressions)
 * [or](/refguide/boolean-expressions)
 
-## 5 Read More
+## 4 Read More
 
 * [Microflows](microflows)
 * [Set & Change a Value for Different Activities in the Microflows](microflows-setting-and-changing-value)

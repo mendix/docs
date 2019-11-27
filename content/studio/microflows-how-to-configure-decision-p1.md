@@ -10,7 +10,7 @@ tags: ["studio", "microflows", "decision", "domain model"]
 
 This how-to explains how you can configure a decision in the microflow editor of Mendix Studio. 
 
-A decision is an activity which is used to model conditions in your app logic. For more information on the decision, see [Decision](microflows-decision). 
+A decision is an activity which is used to model conditions in your app logic. For more information on what Decision is and how to configure it, see [Decision](microflows-decision). 
 
 **This how-to will teach you how to do the following:**
 
@@ -24,7 +24,7 @@ You have an online shopping app. You will create a page where you can manage you
 
 You will also create a page with the list of customers. Upon clicking a specific button on this page, different pages (order forms) will be shown to customers with different grades: Bronze, Silver, and Gold. 
 
-Customers can make an order from this page. However, if the blocked user tries to make the order, the app will show them an error message and close the current page.  
+Customers can make an order from this page. However, if a blocked customer tries to make an order, the app will show them an error message and close the current page.  
 
 ## 2 Configuring the Decision with the Attribute of the Enumeration Type  
 
@@ -37,8 +37,8 @@ This use case will require the decision with attribute of the enumeration type (
 The app will open the corresponding page depending on the grade of a customer, for this you need to create a new entity and a new attribute first. To create the new entity and attribute, do the following:
 
 1. Open your [domain model](domain-models).
-2. Create entity *Customer*. For more information on how to create the entity, see section [3 Adding New Entities](domain-models) in *Domain Models Overview*.
-3.  For the **Customer** entity, create attribute (for more information on how to create the attribute, see section [4 Adding New Attributes](domain-models)) and do the following:<br />
+2. Create entity *Customer*. For more information on how to create a new entity, see the [Adding New Entities](domain-models) section in *Domain Models Overview*.
+3.  For the **Customer** entity, create an attribute (for more information on how to create the attribute, see the [Adding New Attributes](domain-models) section) and do the following:<br />
     a. Set the attribute **Name** to *Grade*.<br />
     b. Set the [**Type**](domain-models-attributes) to **Enumeration**.<br />
     c. Click **Select enumeration** to create a new enumeration.<br />d. In the **Select enumeration** dialog window, click **New**.<br/>
@@ -46,16 +46,16 @@ The app will open the corresponding page depending on the grade of a customer, f
 
     ![](attachments/microflows-how-to-configure-decision/new-enumeration-add-item.png) <br />
 
-    f. Enter *Bronze* for the **Caption** (**Name** is filled out as *Bronze* automatically as well).<br />
+    f. Enter *Bronze* for the **Caption** (**Name** is filled out as *Bronze* automatically).<br />
 
     ![](attachments/microflows-how-to-configure-decision/new-enumeration-add-item-bronze.png)<br />
 
     g. Click **Add Item** and repeat the step above to create the **Silver** and **Gold** grades.<br />
-    h. Click **Create** to close the dialog windows and create the new attribute.
+    h. Click **Create** to close the dialog windows and create the attribute.
 
     ![](attachments/microflows-how-to-configure-decision/new-enumeration-bronze-silver-gold.png)
 
-The new attribute is created.
+The attribute is created.
 
 ![](attachments/microflows-how-to-configure-decision/grade-attribute.png)
 
@@ -69,7 +69,7 @@ To configure the decision with the attribute or parameter of the enumeration typ
 
     ![](attachments/microflows-how-to-configure-decision/microflow-not-set-parameter.png)
 
-4.  In this example, logic you are adding should apply to the single customer that is selected in the page. Hence, you need to add the customer as a parameter. Change the following properties of the **Parameter**:<br />
+4.  In this example, logic you are adding should apply to the single customer that is selected in a page. Hence, you need to add the customer as a parameter. Change the following properties of the **Parameter**:<br />
     a. Set **Data Type** to **Object**.<br />
     b. Set **Entity** to **Customer**.
 
@@ -81,13 +81,13 @@ To configure the decision with the attribute or parameter of the enumeration typ
     ![](attachments/microflows-how-to-configure-decision/configure-condition-grade.png)
 
     Caption **Grade?** is added automatically to the decision according to the attribute name to indicate which condition the decision is based on. 
-7.  You need to add different logic for each value of the **Grade** attribute. To do this, in the **Properties** tab, set cases for the decision doing the following:<br />
+7.  You need to add different logic for each value of the **Grade** attribute. To do this, in the **Properties** tab, set cases for the decision:<br />
     a. Select **Edit** in the **(not set)** field.<br />
 
     ![](attachments/microflows-how-to-configure-decision/setting-cases.png) <br/>
    
     b. Set **Bronze** in the **Select Value** drop-down menu.<br />
-    c. Click the **Go back** icon to return to the decision properties.<br />
+    c. Click the **Go back** icon to return to decision properties.<br />
 
     ![](attachments/microflows-how-to-configure-decision/go-back-button.png) <br/>
    
@@ -104,25 +104,25 @@ To configure the decision with the attribute or parameter of the enumeration typ
 
     ![](attachments/microflows-how-to-configure-decision/show-page-select-page.png) <br />
    
-    c. In **Data Source**>**Object to Pass**, set **Customer** to get the data on customers and their grade. 
+    c. In **Data Source** > **Object to Pass**, set **Customer** to get the data on customers and their grade. 
 10. Repeat steps 8-9 for customers of Silver and Gold grades, creating the order form pages for silver and gold customers respectively.
-11. For the customers with no grade indicated you will show an error message. To do so, select **Show Message** in the **Toolbox**, and add it to the flow labelled **(empty)** in the microflow. 
+11. For the customers with no grade indicated you will show an error message. To do so, select **Show Message** in the **Toolbox**, and add it to the flow labelled **(empty)** in the microflow: 
 
     ![](attachments/microflows-how-to-configure-decision/microflow-empty-flow-show-message.png)
 
 12. In the **Properties** tab for the **Show message** activity, do the following:<br />
     a. Select **Error** as the message type.<br />
-    b. Fill out the **Template** that will be shown to users when this message pops up (in this example: Please select the customer grade first).<br />
-    c. Leave the **Blocking** property for the message enabled, which prevents the user continue work until the pop-up window is closed.  
+    b. Fill out the **Template** that will be shown to end-users when this message pops up (in this example: *Please select the customer grade first*).<br />
+    c. Leave the **Blocking** property for the message enabled, it prevents the user continue work until the pop-up window is closed.  
     ![](attachments/microflows-how-to-configure-decision/empty-customer-grade-message.png)
 
 Congratulations! You have now created the microflow that will open different order forms for customers with different grades, or show an error message when the customer has no grade.
 
-If you want to test your microflow by adding it to the pages, see [Configure an decision Step 2: Embed the Microflow in Your App](microflows-how-to-configure-decision-p2).
+If you want to test your microflow by adding it to pages, see [Configure an decision Step 2: Embed the Microflow in Your App](microflows-how-to-configure-decision-p2).
 
 ## 3 Configuring the Decision with Attribute of the Boolean Type  
 
-In this example, you will create a microflow and configure the decision to prevent a blocked customer from making an order. The reasons for blocking the customer can be that customer's credit score is too low, or password has expired. 
+In this example, you will create a microflow and configure a decision to prevent a blocked customer from making an order. The reasons for blocking the customer can be that customer's credit score is too low, or password has expired. 
 
 This use case will require a decision with an attribute of the Boolean type (true or false). For more information on the types of attributes, see [Attributes](domain-models-attributes).
 
@@ -131,14 +131,14 @@ This use case will require a decision with an attribute of the Boolean type (tru
 As you will verify customers by their statuses, you need to create a corresponding attribute for the entity first. For this, do the following:
 
 1. Open your [domain model](domain-models).
-2.  For the Customer entity, create attribute (for more information on how to create the attribute, see section [3 Adding New Attributes](domain-models)),  and do the following: <br />
+2.  For the Customer entity, create an attribute (for more information on how to create attributes, see the [Adding New Attributes](domain-models) section),  and do the following: <br />
     a. Set name to *Blocked*. <br />
     b. Set the [**Type**](domain-models-attributes) to **Boolean**. <br />
     c. Click **Create**. 
 
     ![](attachments/microflows-how-to-configure-decision/new-attribute-create-dialog.png)
 
-The new attribute for the **Customer** entity is created.
+The attribute for the **Customer** entity is created.
 
 ![](attachments/microflows-how-to-configure-decision/blocked-attribute.png)
 
@@ -153,7 +153,7 @@ To configure the decision with the attribute of the Boolean type, follow these s
 
     ![](attachments/microflows-how-to-configure-decision/microflow-not-set-parameter.png)
 
-4.  In this example, logic you are adding should apply to the status of the customer. Hence, you need to add the customer as the parameter. In the **Properties** tab for the **Parameter**, do the following:<br />
+4.  In this example, logic you are adding should apply to the status of the customer. Hence, you need to add the Customer as the parameter. In the **Properties** tab for the **Parameter**, do the following:<br />
     a. Set **Data Type** to **Object** <br />
     b. Set **Entity** to **Customer**.
 
@@ -168,10 +168,10 @@ To configure the decision with the attribute of the Boolean type, follow these s
 
     ![](attachments/microflows-how-to-configure-decision/true-false-flows-microflow.png)
 
-8. To show an error message to the blocked customers, select **Show message** in the **Toolbox**, and add it to the **true** flow in the microflow. 
+8. To show an error message to the blocked customer, select **Show message** in the **Toolbox**, and add it to the **true** flow in the microflow. 
 9.  In the **Properties** tab for the **Show message** activity, do the following:<br/>
     a. Select **Error** as the message type.<br/>
-    b. Fill out the **Template** that will be shown to users when this message pops up (In this example: Sorry, you can't proceed with the order). <br/>
+    b. Fill out the **Template** that will be shown to end-users when this message pops up (In this example: *Sorry, you can't proceed with the order*). <br/>
     c. Leave the **Blocking** property for the message enabled, which prevents the user continue work until the pop-up window is closed.
 
     ![](attachments/microflows-how-to-configure-decision/show-message-properties-true-flow.png) 
@@ -180,6 +180,6 @@ To configure the decision with the attribute of the Boolean type, follow these s
 
     ![](attachments/microflows-how-to-configure-decision/microflow-blocked-completed.png)
 
-Congratulations! You have now created a microflow that will show an error message and close the current page if the customer is blocked.
+Congratulations! You have now created the microflow that will show the error message and close the current page if the customer is blocked.
 
-If you want to embed your microflow to the pages, see [Step 2: Embed the Microflow in Your App](microflows-how-to-configure-decision-p2).
+If you want to embed your microflow to pages, see [Step 2: Embed the Microflow in Your App](microflows-how-to-configure-decision-p2).

@@ -3,7 +3,7 @@ title: "Microflow Expressions"
 category: "Microflows"
 menu_order: 40
 description: "Describes the microflow expressions available in Mendix Studio."
-tags: ["studio", "microflow", "set value", "variable"]
+tags: ["studio", "microflow", "expressions", "expression", "set value", "variable"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -22,21 +22,21 @@ The **Expression** tab is available for the following activities in a microflow:
 
 ![](attachments/microflows-expressions/expression-tab.png)
 
-For more information on setting and changing values for microflow activities, see [How to Set & Change a Value for Different Activities in the Microflows](microflows-setting-and-changing-value).
+For more information on setting and changing values for microflow activities, see [Set & Change a Value for Different Activities in the Microflows](microflows-setting-and-changing-value).
 
 ## 2 Writing an Expression
 
 There are two ways of writing an expression:
 
-* Using suggestions
-* Writing expressions manually
+* [Using suggestions](#suggestions)
+* [Writing expressions manually](#manually)
 
-If an error appears in the expression, hints with an explanation will be displayed. 
+If an error appears in the expression, error messages with explanations will be displayed. 
 
 {{% image_container width="350" %}}![](attachments/microflows-expressions/expression-error.png)
 {{% /image_container %}}
 
-### 2.1 Writing an Expression Using Suggestions
+### 2.1 Writing an Expression Using Suggestions {#suggestions}
 
 When you start typing your expression, a list of suggestions appears divided into the following categories:
 
@@ -60,7 +60,7 @@ To call the list of suggestions, press <kbd>Ctrl</kbd> + <kbd>Space</kbd>
 
 {{% /alert %}}
 
-### 2.2 Writing an Expression Manually
+### 2.2 Writing an Expression Manually {#manually}
 
 If you want to write the expression manually, pay attention to the following:
 
@@ -68,11 +68,11 @@ If you want to write the expression manually, pay attention to the following:
 * Attributes and associations of object variables are accessed using a slash. For example, *$Customer/Name*, *$Customer/Grade* refer to the attributes Name and Grade of the entity Customer 
 * Unary, Boolean, and relational types of expressions are available in Studio (for more information, see the [Expression Types](#expression-types) section)
 
-## 3 Expression Examples
+### 2.3  Expression Examples
 
 Below are two examples that illustrate how expressions can be used. 
 
-### 3.1 Example 1
+#### 2.3.1 Example 1
 
 You have a **[Decision](microflows-decision)** and you want to write an expression that checks whether the customer grade is gold and the price of the order is more than 100 (you can configure a discount after the **Decision** that is allowed if this expression is true):
 
@@ -82,17 +82,19 @@ The expression will look the following way:
 
 ![](attachments/microflows-expressions/expression-decision.png)
 
-### 3.2 Example 2
+#### 2.3.2 Example 2
 
 You add a **[Decision](microflows-decision)** to check if an object (in the example below the object is *Customer*) exists. And you also check if the Customer's name matches a particular one (in the example below Customer's name is *Mendix*). The expression will look the following way:
 
 ![](attachments/microflows-expressions/customer-empty-and-name-example.png)
 
-## 4 Expression Types {#expression-types}
+## 3 Expression Types {#expression-types}
 
 A list of the operators you can use in expressions in Studio can be found below:
 
-### 4.1 Relational Expressions
+### 3.1 Relational Expressions
+
+You can use the following relational expressions:
 
 * [Less than ( < )](/refguide/relational-expressions)
 * [Greater than ( > )](/refguide/relational-expressions)
@@ -101,12 +103,14 @@ A list of the operators you can use in expressions in Studio can be found below:
 * [Is equal to ( = )](/refguide/relational-expressions)
 * [Is not equal to ( != )](/refguide/relational-expressions)
 
-### 4.2 Boolean Expressions
+### 3.2 Boolean Expressions
+
+You can use the following Boolean expressions:
 
 * [and](/refguide/boolean-expressions)
 * [or](/refguide/boolean-expressions)
 
-## 5 Read More
+## 4 Read More
 
 * [Microflows](microflows)
 * [Set & Change a Value for Different Activities in the Microflows](microflows-setting-and-changing-value)

@@ -147,7 +147,7 @@ $block: 'mx';
         margin: 0;
       }
 
-      /* but a curve around the border of the search and changes to 85% to align with featured lists and added a minimum width with @media for it to be 100% on smaller screens*/
+      /* but a curve around the border of the search and changes to 82% to align with featured lists and added a minimum width with @media for it to be 100% on smaller screens*/
       .input-group .form-control {
         border-radius: 4px;  
               
@@ -170,23 +170,12 @@ $block: 'mx';
         font-weight: bold;
       }
 
-      /* Changed layout from fixed to auto and added the minimum width with @media to set it back to auto and not to wrap paragraphs as it does without this setting*/
       table {
         width: 100%;
         max-width: 100%;
         border: 1px solid $color-table-border;
-        table-layout: auto;          
+        table-layout: fixed;
         font-size: 12px;
-        @media (min-width: 1200px) {
-          table-layout: auto;
-        }
-
-      /* This should not let a table cell to be too tiny. But the width should not be any wider than 8rem, otherwise it becomes too wide on mobile.*/
-        td:before {
-          content: '';
-          display: block; 
-          width: 8rem;
-        }
 
         th.has-expand {
           position: relative;

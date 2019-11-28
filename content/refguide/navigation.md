@@ -17,7 +17,7 @@ A user's home page can vary based on their [user roles](user-roles).
 
 ## 2 Profiles {#profiles}
 
-At the heart of the navigation model in Mendix, there are seven types of profiles:
+At the heart of the navigation model in Mendix, these are the available profiles:
 
 * Responsive
 * Hybrid tablet app online
@@ -34,7 +34,7 @@ The device type of the currently logged-in user is available in [microflows](mic
 
 ### 2.1 Responsive
 
-Every app always has one profile of a Responsive type which cannot be deleted. This is the default profile used by a Mendix app.
+Every app always has one profile of a Responsive type which cannot be deleted. This is the default profile used by a Mendix app. This profile can be used to make web applications.
 
 ### 2.2 Hybrid Profiles {#hybrid-profiles}
 
@@ -51,11 +51,11 @@ Four different hybrid profiles are available:
 
 ### 2.3 Tablet Browser
 
-All the users accessing a Mendix app from a browser on a tablet will automatically be redirected to a profile of the Tablet browser type. If no profile exists of that type, the user will be redirected to the Responsive profile.
+All the users accessing a Mendix app from a browser on a tablet will automatically be redirected to a profile of the Tablet browser type. If no profile exists of that type, the user will be redirected to the Responsive profile. This profile can be used to make web applications.
 
 ### 2.4 Phone Browser
 
-All the users accessing the Mendix app from a browser on a phone will automatically be redirected to a profile of the Phone browser type. If no profile exists of that type, the user will be redirected to the Responsive profile.
+All the users accessing the Mendix app from a browser on a phone will automatically be redirected to a profile of the Phone browser type. If no profile exists of that type, the user will be redirected to the Responsive profile. This profile can be used to make web applications.
 
 ### 2.5 Native Phone
 

@@ -16,7 +16,7 @@ When a consistency check is not met, Studio Pro will notify you about this on th
 
 To display the **Errors** pane, open the menu option **View > Error list**.
 
-## 2 Types of Messages {#message-type}
+## 2 Types of Messages {#message-types}
 
 There are three types of messages, each having its own button and icon:
 
@@ -50,7 +50,7 @@ Limits the messages displayed in the pane to the current document.
 
 To enable you to find your errors, deprecations, and warnings quickly, each message shows you the following:
 
-* Icon – indicates the [type of the message](#message-type)
+* Icon – indicates the [type of the message](#message-types)
 * Index number – an index number assigned to each message 
 * **Error Code** – a unique code that is specific for the errors only; warning and deprecation do not have  error codes
 * **Message** –  description/explanation of the check failure

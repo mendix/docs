@@ -1,5 +1,5 @@
 ---
-title: "Use Local Notifications: Part 4 (Data)"
+title: "Part 4: Data"
 parent: "local-notif-parent"
 menu_order: 40
 description: A tutorial for integrating data into your push notifications.
@@ -66,17 +66,14 @@ To set up a notification nanoflow, do the following:
 To set up your microflow, do the following:
 
 1. Create a microflow named *DS_TestEntity*.
-2. Drag and drop a create entity activity onto your microflow.
-3. Double-click your create entity activity.
+2. Drag and drop a create object activity onto your microflow.
+3. Double-click your create object activity.
 4. Click **Entity** > **Select**.
 5. Click **NativeMobile.TestEntity**.
 6. Click **Select**.
-7. Click **OK**.
-8. Drag and drop a commit object activity onto your microflow.
-9. Double-click your commit object activity.
-10. From the **Object or List** drop-down menu, select **NewTestEntity (NativeMobile.TestEntity)**.
-11. Click **OK**.
-12. Double-click your end event, make sure its **Type** is **Boolean**, type *true* into the value field, and click **OK**:
+7. Check **Commit** 
+8. Click **OK**.
+9. Double-click your end event, make sure its **Type** is **Boolean**, type *true* into the value field, and click **OK**:
 
 	{{% image_container width="500" %}}![end event true](attachments/native-push/end-event-true.png){{% /image_container %}}
 
@@ -251,7 +248,7 @@ Great job! Now you will test your data notification functionality.
 2. Tap the button which sends a notification.
 3. Tap the notification to navigate to the **DetailTestEntity** page with the proper object.
 
-Congratulations! You have harnessed the power of data to enhance your push notifications. Next, in [Use Local Notifications: Part 5 (Scheduling)](local-notif-schedule-cancel), you will learn how to schedule notifications for specific times and cancel them.
+Congratulations! You have harnessed the power of data to enhance your push notifications. Next, in [How to Use Local Notifications Part 5: Scheduling](local-notif-schedule-cancel), you will learn how to schedule notifications for specific times and cancel them.
 
 ## 4 Read More
 

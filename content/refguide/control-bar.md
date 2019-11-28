@@ -8,7 +8,7 @@ tags: ["studio pro", "control bar", "data grid", "template grid", "reference set
 
 ## 1 Introduction
 
-A control bar of a [template grid](template-grid), [data grid](data-grid), and [reference set selector](reference-set-selector) allows you to manipulate the objects displayed by means of buttons. By default, both grids will be created with **[Search](#search-button)** **[New](#create-button)**, [**Edit**](#grid-action-button), and [**Delete**](#grid-action-button) buttons in the control bar:
+A control bar of a [template grid](template-grid), [data grid](data-grid), and [reference set selector](reference-set-selector) allows you to manipulate the objects displayed by means of buttons. By default, both grids will be created with [Search](#search-button), [New](#create-button), [Edit](#grid-action-button), and [Delete](#grid-action-button) buttons in the control bar:
 
 ![Data Grid Control Bar](attachments/data-widgets/control-bar-example.png)
 
@@ -82,7 +82,7 @@ The **Selection type** property determines whether the **Select all** button sho
 
 {{% alert type="warning" %}}
 
-Due to technical limitations, a button with the **Select all** selection type cannot be combined with [**Remove**](#remove-button), [**Delete**](#grid-action-button), or **[Select](#select-button)** buttons. 
+Due to technical limitations, a button with the **Select all** selection type cannot be combined with [Remove](#remove-button), [Delete](#grid-action-button), or [Select](#select-button) buttons. 
 
 An **Edit** button always behaves as if the selection type is **Select page**, regardless of the actual settings of the **Select all** button that had been used to select objects.
 

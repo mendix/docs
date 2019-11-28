@@ -26,19 +26,11 @@ Page template properties are described in the sections below.
 
 ## 3 Common Properties
 
-{{% snippet file="refguide/document-name-property.md" %}}
+{{% snippet file="refguide/common-section-link.md" %}}
 
-{{% snippet file="refguide/documentation-property.md" %}}
+## 4 Designer Properties
 
-{{% snippet file="refguide/document-class-property.md" %}}
-
-{{% snippet file="refguide/style-property.md" %}}
-
-## 4 Design Properties
-
-{{% snippet file="refguide/canvas-width-property.md" %}}
-
-{{% snippet file="refguide/canvas-height-property.md" %}}
+{{% snippet file="refguide/designer-properties.md" %}}
 
 ## 5 General Properties
 

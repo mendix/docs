@@ -5,13 +5,11 @@ menu_order: 11
 toc-level: 1
 description: "Native Builder release notes."
 #When updating, remember to update the Latest Mendix Releases file
-#KI: "Using more than one space" = NALM-217
-#KI: "In case Mx Build fails" = NALM-216
 ---
 
-The [Native Builder](/howto/mobile/native-builder) is a command line input tool which helps you build your Mendix native app. After the Native Builder simplifies your build process, you can do what you want most: test and publish your app. The Native Builder uses MxBuild, GitHub, and App Center to simplify the app building process. 
+The [Native Builder](/refguide/native-builder) is a command line input tool which helps you build your Mendix native app. After the Native Builder simplifies your build process, you can do what you want most: test and publish your app. The Native Builder uses MxBuild, GitHub, and App Center to simplify the app building process. 
 
-We are heavily invested in streamlining the experience of building your apps and are continuously improving upon the tool's capabilities. For more information on using the Native Builder, see [How to Package Native Apps using Native Builder](/howto/mobile/native-builder).
+We are heavily invested in streamlining the experience of building your apps and are continuously improving upon the tool's capabilities. For more information on using the Native Builder, see [Deploying Native Apps using Native Builder](/howto/mobile/deploying-native-app).
 
 ## 3.0.0
 
@@ -19,9 +17,10 @@ We are heavily invested in streamlining the experience of building your apps and
 
 ### Improvements
 
-This release marks a re-architecure of the Native Builder.
+This release marks a re-architecture of the Native Builder.
 
 Improvements at a glance:
+
 * More structured command API
 * An upgrade path for your projects
 * Better error messages
@@ -40,6 +39,11 @@ We also developed a viable upgrade path for your repositories. Before, the Nativ
 
 Finally, we worked on the error output of the Native Builder. We added error messages which had been missing and updated the ones that were lacking context.
 
+### Fixes
+
+* <a name="nalm-217"></a>Using more than one consecutive space in an app's name is now supported.
+* <a name="nalm-215"></a>MxBuild no longer fails without error messages during the build process.
+
 ## 2.0.0
 
 **Release date: September 3rd, 2019**
@@ -55,7 +59,9 @@ This version only supports Mendix version 8.1.0 and upwards. If you have to stic
 ### Known Issues
 
 * In case MxBuild fails during the Native Builder process, no clear error message is given and the process continues. This will lead to the previous bundle being used, which means the latest Mendix project model changes are not applied. To mitigate this, delete the **deployment/native/bundle** folder in your Mendix project folder to ensure the previous bundle is not there anymore.
+	* Fixed in [3.0.0](#nalm-215) 
 * Using more than one space in an app's name is not supported.
+	* Fixed in [3.0.0](#nalm-217) 
 
 ## 1.0.0
 
@@ -69,7 +75,9 @@ This version only supports Mendix version 8.1.0 and upwards. If you have to stic
 ### Known Issues
 
 * In case MxBuild fails during the Native Builder process, no clear error message is given and the process continues. This will lead to the previous bundle being used, which means the latest Mendix project model changes are not applied. To mitigate this, delete the **deployment/native/bundle** folder in your Mendix project folder to ensure the previous bundle is not there anymore.
+	* Fixed in [3.0.0](#nalm-215) 
 * Using more than one consecutive space in an app's name is not supported.
+	* Fixed in [3.0.0](#nalm-217) 
 
 ## 0.1.0
 

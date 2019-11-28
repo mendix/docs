@@ -12,7 +12,9 @@ Pluggable widgets, introduced in Mendix 8, enable developers to create new widge
 
 In this how-to, you will learn to create a group box pluggable widget for native mobile applications with React Native.
 
-This how-to will teach you core widget concepts by having you build configure, and style a group box widget. A group box can be used to visually group related widgets together. Group boxes are displayed as a frame around nested widgets with an optional header. Group boxes can be configured to collapse and expand dynamically, and look like this:
+This how-to will teach you core widget concepts by having you build configure, and style a group box widget. For more information on customizing pluggable widgets, see the [Pluggable Widgets API Documentation](/apidocs-mxsdk/apidocs/pluggable-widgets).
+
+A group box can be used to visually group related widgets together. Group boxes are displayed as a frame around nested widgets with an optional header. Group boxes can be configured to collapse and expand dynamically, and look like this:
 
 ![final widget](attachments/build-native-widget/group-box-tease.png)
 
@@ -33,16 +35,16 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Install Mendix Studio Pro 8.3
 * Install the Mendix Make it Native app on a mobile device or an emulator.
 * Install Long Term Support (LTS) v10.16.3 or any higher version of [Node.js](https://nodejs.org)
-* Install latest [Yeoman](https://yeoman.io/) with the following command:
+* Install the latest [Yeoman](https://yeoman.io/) with the following command:
 
 	```shell
-	npm install -g yo
+	$ npm install yo -g
 	```
 
-* Install Mendix' Pluggable Widget Generator v8.2.0 for Yeoman with the following command:
+* Install the latest Mendix Pluggable Widget Generator for Yeoman with the following command:
 
 	```shell
-	npm install -g @mendix/generator-widget@8.2.0
+	npm install -g @mendix/generator-widget
 	```
 
 * Install an integrated development environment (IDE) of your choice (Mendix recommends [Microsoft Visual Studio Code](https://code.visualstudio.com/))
@@ -1452,6 +1454,7 @@ The developer needs to have the class names memorized to apply a certain group b
 	
 ## 4 Read More
 
-* [Implement Native Styling](/howto/mobile/native-styling)
-* [Native Styling](/refguide/native-styling-refguide)
-* [Build Pluggable Widgets](/howto/extensibility/pluggable-widgets)
+* [Pluggable Widgets API Documentation](/apidocs-mxsdk/apidocs/pluggable-widgets)
+* [How to Implement Native Styling](/howto/mobile/native-styling)
+* [Native Styling Reference Guide](/refguide/native-styling-refguide)
+* [How to Build Pluggable Widgets](/howto/extensibility/pluggable-widgets)

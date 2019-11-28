@@ -14,7 +14,7 @@ Scroll containers may be placed on navigation layouts as well as on pages.
 
 The scroll container example below divides the layout in three parts: a header containing a logo, a content part with a placeholder and a footer:
 
-![Scroll Container](attachments/container-widgets/scroll-container.png)
+![Scroll Container](attachments/container-widgets/scroll-container.PNG)
 
 
 A scroll container can consist of several scroll container regions. For more information on scroll container regions and their properties, see the [Scroll Container Region](#scroll-container-region) section. 
@@ -74,11 +74,11 @@ _Default value:_ Full width
 
 #### 2.2.4 Width Value
 
-This property is displayed only when the [**Width**](#width) property is set to *Pixels* or *Percentage*. This property determines the width of the scroll container, either in pixels or a percentage.
+This property is displayed only when the [Width](#width) property is set to *Pixels* or *Percentage*. This property determines the width of the scroll container, either in pixels or a percentage.
 
 #### 2.2.5 Alignment 
 
-This property is displayed only when the [**Width**](#width) property is set to *Pixels* or *Percentage*. The scroll container can be aligned to the left, to the right, or in the middle of its parent widget.
+This property is displayed only when the [Width](#width) property is set to *Pixels* or *Percentage*. The scroll container can be aligned to the left, to the right, or in the middle of its parent widget.
 
 _Default value:_ Center
 

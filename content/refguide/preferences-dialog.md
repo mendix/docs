@@ -12,9 +12,9 @@ This dialog box contains Studio Pro-wide user-specific settings.
 
 ### 2.1 Interface
 
-#### 2.1.1 Keep Active Document Selected in Project Explorer
+#### 2.1.1 Keep Active Document Selected in the Project Explorer
 
-If checked, the document selection in **Project Explorer** automatically follows the document that is currently active in the document pane. Otherwise, the selection in the project explorer is remains unchanged when the active document changes.
+When enabled, **Project Explorer** automatically highlights the document that is currently active. When this property is disabled, the selection in the **Project Explorer** remains unchanged when the active document changes.
 
 ### 2.2 Error List
 
@@ -65,7 +65,29 @@ Select this option when you want to work on an app that is not stored in [Mendix
 
 Sometimes the computer running Studio Pro cannot access the internet directly, but has to connect to a proxy server that requires authentication. If this is the case, then these settings can be used to specify the user name and password to connect to the proxy server.
 
-## 5 Read More
+## 5 New Features Tab {#new-features}
+
+### 5.1 Project Explorer
+
+#### 5.1.1 Project Explorer
+
+Select this option when you want to enable the new version of the [Project Explorer](project-explorer). Should you find any issues in the new version, you can switch back to the old version by unselecting this option.
+
+{{% alert type="info" %}}
+This option requires a restart.
+{{% /alert %}}
+
+### 5.2 Diffing and Merging
+
+#### 5.2.1 New Version of the Changes Pane {#new-changes}
+
+Select this option when you want to enable the new version of the [Changes](studio-pro-overview#changes) pane. Should you find any issues in the new version, you can switch back to the old version by unselecting this option.
+
+{{% alert type="info" %}}
+This option requires a restart.
+{{% /alert %}}
+
+## 6 Read More
 
 * [Upload to Version Control Server](upload-to-version-control-dialog)
 * [How to Work with an On-Premises Version Control Server](/howto/collaboration-requirements-management/on-premises-svn-howto)

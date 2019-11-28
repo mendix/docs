@@ -234,7 +234,11 @@ module.exports = {
     },
 	{
       from: "/howto/ux/create-a-custom-theme-with-the-mendix-ui-framework",
-      to: "/howto/front-end/create-a-custom-theme-with-the-mendix-ui-framework"
+      to: "/howto/front-end/atlas-ui"
+    },
+	{
+      from: "/howto/front-end/create-a-custom-theme-with-the-mendix-ui-framework",
+      to: "/howto/front-end/atlas-ui"
     },
 	{
       from: "/releasenotes/desktop-modeler/",

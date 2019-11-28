@@ -116,7 +116,7 @@ Table properties consist of the following sections:
 
 #### 3.2.1 Width Unit
 
-The **Width Unit** defines whether the [**Column widths**](#column-widths) property is set in percentage or in pixels. 
+The **Width Unit** defines whether the [Column widths](#column-widths) property is set in percentage or in pixels. 
 
 | Value | Description |
 | --- | --- |

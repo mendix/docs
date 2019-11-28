@@ -52,6 +52,10 @@ will result in red text on a blue background:
 
 You can see which widgets in a page have styling applied via the style or class property by clicking the <strong>Show styles</strong> button.
 
+### 2.5 Documentation {#documentation}
+
+Some widgets, for example snippets and building blocks, have a **Documentation** property which can be used to store developer documentation. This can be used to explain to other developers how to use these widgets. End-users will never see this documentation.
+
 ## 3 Data Source Section {#data-source}
 
 ![Data Source Section](attachments/common-widget-properties/data-source-section.png)

@@ -134,18 +134,9 @@ Imagine you want to rollback an update. Maybe you released it too early or somet
 
 ### 6.1 When it is Safe to Rollback an Update
 
-For information on rollbacks, see [Safely Pushing OTA Updates Without Redeploying Your Mendix App](#safeToUpdate) above.
+For information on rollbacks, see [Safely Pushing OTA Updates Without Redeploying Your Mendix App](#safeToUpdate) above. The cases listed there also apply to rolling back safely.
 
-## 7 Configuring a Pushed Update
-
-You might want to reconfigure an update which has already been pushed for the following reasons: 
-
-* You did a partial rollout and want to raise the number
-* You want to make a update mandatory
-
-The key here is `patch-update`. The `patch-update` command allows you to modify a pushed updated. You can modify things like a rollout percentage, or you can choose to make a release mandatory.
-
-### 7.1 Doing a Partial Rollout
+### 6.2 Doing a Partial Rollout
 
 In case you want to test the stability of a new update, it is good practice to test releases on a small number of users before fully rolling them out.
 
@@ -163,7 +154,16 @@ To fully roll out the update, run this command:
 native-builder.exe release patch-update --project-name "CoolApp" --target-version "1.0.0" --build-number 1 --rollout-percentage 100
 ```
 
-### 7.2 Releasing an Optional Update
+## 7 Configuring a Pushed Update
+
+You might want to reconfigure an update which has already been pushed for the following reasons: 
+
+* You did a partial rollout and want to raise the number
+* You want to make a update mandatory
+
+The key here is `patch-update`. The `patch-update` command allows you to modify a pushed updated. You can modify things like a rollout percentage, or you can choose to make a release mandatory.
+
+### 7.1 Releasing an Optional Update
 
 Using a modification of `rollout-percentage` you can make builds optional. To do so, run this command: 
 

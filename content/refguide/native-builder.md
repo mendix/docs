@@ -120,6 +120,79 @@ native-builder.exe regenerate --projectName "CoolApp"
 | ---------------- | ------------------------------------------------- | --------- |
 | `--project-name` | Unique name of the project used during `prepare`. | `CoolApp` |
 
+### 3.4 Creating an OTA deployment release
+
+This handles generating a new JavaScript bundle and assets and deploying that OTA.
+
+example:
+
+```native-builder.exe release pushUpdate --projectName "CoolApp" --target-version "1.0.0" --build-number 1 --rollout-percentage 100 --mandatory true```
+
+| Parameters             | Description                                                                                                | Example                                            |
+| ---------------------- | ---------------------------------------------------------------------------------------------------------- | -------------------------------------------------- |
+| `--project-name`       | Unique name of the project used during `prepare`                                                           | `CoolApp`                                          |
+| `--target-version`     | Version or range of versions of the already published app that this update should affect.                  | Semantic version See [Semantic Versioning](https://semver.org/)  |
+| `--rollout-percentage` | Percentage number of users that should get this update. Once set, the value can not be reduced afterwards. | A number between `1` and `100`.                    |
+| `--description`        | (Optional) More info associated with this update that users would see before downloading.                  | Any text message.                                  |
+| `--mandatory`          | Determines if this update should be considered important and forced on the users                           | `true` or `false`                                  |
+| `--build-number`       | App Center build number that this update should target.                                                    | Any number as defined during `build`               |
+| `--platform`           | (Optional) Platform with which to run command for. Defaults to both iOS and Android.                       | `ios` or `android`                                 |
+| `--deployment-target`  | (Optional) OTA target group. Defaults to `Production`                                                      | `Staging`                                          |
+| `--skip-mxbuild`       | (Optional) If to bundle JS bundle and assets. Defaults to `false`                                          | `true` or `false`                                  |
+
+### 3.5 Updating an OTA deployment release metadata
+
+This command allows updating the metadata information of a published update that hasn't been rolled out yet to all users (i.e doesn't have a `rollout-percentage` value of `100`).
+
+example:
+
+```native-builder.exe release patchUpdate --projectName "CoolApp" --target-version  "1.0.1"```
+
+| Parameters             | Description                                                                                                          | Example                                                |
+| ---------------------- | -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------ |
+| `--project-name`       | Unique name of the project used during `prepare`                                                                     | `CoolApp`                                              |
+| `--label`              | Unique label of the update to patch                                                                                  | This can be gotten by using the `release list` command |
+| `--target-version`     | (Optional) Version or range of versions of the already published app that the update should affect.                  | Semantic versioning See [Semantic Versioning](https://semver.org/)    |
+| `--rollout-percentage` | (Optional) Percentage number of users that should get the update. Once set, the value can not be reduced afterwards. | A number between `1` and `100`.                        |
+| `--description`        | (Optional) More info associated with the update that users would see before downloading.                             | Any text message.                                      |
+| `--mandatory`          | (Optional) Determines if the update should be considered important and forced on the users                           | `true` or `false`                                      |
+| `--platform`           | (Optional) Platform with which to run command for. Defaults to both iOS and Android.                                 | `ios` or `android`                                     |
+| `--deployment-target`  | (Optional) OTA target group. Defaults to `Production`                                                                | `Staging`                                              |
+
+### 3.6 Rollback to previous deployment release
+
+This allows reverting to a previous deployment release with the same target version of the app. This command creates a new deployment using a previous deployment release specified with the `--label` argument.
+
+example:
+
+```native-builder.exe release rollbackUpdate --projectName "CoolApp" --label "v4"```
+
+Notes
+
+1. `--label` needs to point to a previous deployment release only
+2. If you rollback to a broken release, it will be deployed to the users. The app has the fail safe out of the box to fall back to its bundled release if the new downloaded one crashed. You will then have to either do a new release or rollback to a working release.
+
+| Parameters            | Description                                                                          | Example                                                |
+| --------------------- | ------------------------------------------------------------------------------------ | ------------------------------------------------------ |
+| `--project-name`      | Unique name of the project used during `prepare`                                     | `CoolApp`                                              |
+| `--label`             | A unique label of the stable version to rollback to                                  | This can be gotten by using the `release list` command |
+| `--platform`          | (Optional) Platform with which to run command for. Defaults to both iOS and Android. | `ios` or `android`                                     |
+| `--deployment-target` | (Optional) OTA target group. Defaults to `Production`                                | `Staging`                                              |
+
+### 3.7 List deployment releases
+
+This displays a pretty printed list of all deployed releases.
+
+example:
+
+```native-builder.exe release list --projectName "CoolApp"```
+
+| Parameters            | Description                                                                          | Example            |
+| --------------------- | ------------------------------------------------------------------------------------ | ------------------ |
+| `--project-name`      | Unique name of the project used during `prepare`                                     | `CoolApp`          |
+| `--platform`          | (Optional) Platform with which to run command for. Defaults to both iOS and Android. | `ios` or `android` |
+| `--deployment-target` | (Optional) OTA target group. Defaults to `Production`                                | `Staging`          |
+
 ### 4 Expanded Parameter Explanations
 
 #### 4.1 --project-name

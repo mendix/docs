@@ -52,6 +52,12 @@ This query retrieves all customers who live in Rotterdam or Losdun:
 //Sales.Customer[Sales.Customer_Address/Sales.Address[City = 'Rotterdam' or City = 'Losdun']]
 ```
 
+This query retrieves all users that have the role Administrator:
+
+```java
+//Sales.User[id = '[%UserRole_Administrator%]']]
+```
+
 This query retrieves all customers who live in New Amsterdam, Guyana (as opposed to those that live in, for example, New Amsterdam, Indiana):
 
 ```java
@@ -65,3 +71,4 @@ Avoid the use of the same path more than once in a single constraint. For exampl
 ```
 
 However, this query is executed inefficiently and will thus significantly slow down the query process.
+

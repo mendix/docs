@@ -59,7 +59,7 @@ The data view supports the following types of data source: context, microflow, n
 
 The editable property indicates whether the data view as a whole is editable or not. If the data view is not editable, no widget inside the data view will be editable. On the other hand, if the data view is editable, each widget is determined to be editable based on its own editable property.
 
-_Default value:_ True
+Default: *True*
 
 #### 3.3.2 Read-Only Style
 
@@ -67,10 +67,8 @@ This property determines how input widgets are rendered if they are read-only.
 
 | Value   | Description                                                  |
 | ------- | ------------------------------------------------------------ |
-| Control | The widget is displayed but disabled, so the value cannot be modified. |
+| Control *(default)*  | The widget is displayed but disabled, so the value cannot be modified. |
 | Text    | The widget is replaced by a textual representation of the value. |
-
-*Default value:* Control
 
 {{% alert type="info" %}}Read-only style is not supported on native mobile pages.{{% /alert %}}
 
@@ -82,19 +80,19 @@ With this property, you can specify the position of the input widget labels insi
 
 Note that form groups are responsive and the labels may be placed above input widgets, even if the orientation is set to horizontal, depending on the viewport size. Also, note that a data view with a vertical orientation cannot be nested inside a data view with a horizontal orientation. In that case, the form groups will be rendered horizontally, regardless of the value of the orientation property.
 
-_Default value:_ Horizontal
+Default: *Horizontal*
 
 #### 3.4.2. Label Width (Weight)
 
 If the form orientation is set to horizontal, this property can be used to specify the width of the input widget labels inside the data view. The width is specified using column weights from the [Bootstrap grid system](http://getbootstrap.com/css/#grid). For more details, see [Layout Grid](layout-grid).
 
-_Default value:_ 3
+Default: *3*
 
 #### 3.4.3 Show Footer
 
 With this property, you can specify whether you want the footer of the data view to be visible. The footer of nested data views is always invisible, regardless of the value of this property.
 
-_Default value:_ True
+Default: *True*
 
 #### 3.4.4 Empty Entity Message
 
@@ -102,7 +100,7 @@ If this message is specified, a data view that receives no source data will show
 
 There are a number of ways a data view can end up without source data. For instance, a data view with a **Listen to widget** data source will remain empty until an object is selected in the target grid. In this scenario, **Empty entity message** can be used to guide the user to select an item from the grid.
 
-_Default value:_ empty
+Default: *empty*
 
 ### 3.5 Visibility Section {#visibility}
 

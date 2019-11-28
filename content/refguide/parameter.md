@@ -28,4 +28,4 @@ Name refers to the value of the parameter.
 
 The data type of a flow parameter defines the type of the value that it expects. See [Data Types](data-types) for the possible data types.
 
-_Default value:_ Object
+*Default value*: Object

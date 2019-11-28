@@ -54,7 +54,7 @@ Generating select pages | The page templates is available when the user generate
 
 This setting may also place extra restrictions on the template. Page templates intended as new or edit pages require exactly one top-level data view be present. Page templates intended as Select pages require exactly one list view, data grid, or template grid. 
 
-*Default value:* Creating new pages
+*Default value*: Creating new pages
 
 ### 5.4 Layout Type
 

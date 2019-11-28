@@ -30,12 +30,10 @@ The log level defines the severity of the log message. In the Studio Pro **Conso
 | --- | --- | --- |
 | Trace |   | Used for detailed execution traces. |
 | Debug |   | Used to debug execution. |
-| Info |   | Used to log informative messages. |
+| Info  *(default)*  |   | Used to log informative messages. |
 | Warning | ![](attachments/819203/917893.png) | Used to log warnings. These messages appear in orange. |
 | Error | ![](attachments/819203/917894.png) | Used to log error messages. These messages appear in red. |
 | Critical | ![](attachments/819203/917895.png) | Used to log critical errors. These messages appear in  white on red  . |
-
-_Default value:_ Info
 
 ### 2.2 Log Node Name
 

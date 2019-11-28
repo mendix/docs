@@ -80,10 +80,10 @@ Delete behavior defines what should happen to the associated object when an obje
 | Value | Description |
 | --- | --- |
 | delete {name of entity} object but keep {name of other entity} object(s) | When an object is deleted, the associated object(s) are not deleted. |
-| delete {name of entity> object and {name of other entity} object(s) as well | When an object is deleted, the associated object(s) are also deleted. |
-| delete {name of entity> object only if it is not associated with {name of other entity} object(s) | An object can only be deleted if it is not associated with any other object(s). |
+| delete {name of entity} object and {name of other entity} object(s) as well | When an object is deleted, the associated object(s) are also deleted. |
+| delete {name of entity} object only if it is not associated with {name of other entity} object(s) | An object can only be deleted if it is not associated with any other object(s). |
 
-* *Default value*: delete {name of entity} object but keep {name of other entity} object(s)
+Default: *delete {name of entity} object but keep {name of other entity} object(s)*
 
 This delete behavior is used if you want to delete any associated **Profile** when a **Customer** is deleted:
 

@@ -29,10 +29,8 @@ This property defines whether an association is a reference (single) or a refere
 
 | Value | Description |
 | --- | --- |
-| Reference | Single: an object of the owning entity refers to zero or one objects of the other entity. |
+| Reference *(default)* | Single: an object of the owning entity refers to zero or one objects of the other entity. |
 | Reference set | Plural: an object of the owning entity refers to zero or more objects of the other entity. |
-
-* *Default value*: Reference
 
 {{% alert type="info" %}}
 
@@ -46,10 +44,8 @@ This property defines whether an association has one or two owners. If there is 
 
 | Value | Description |
 | --- | --- |
-| Default | Only one entity is the owner (the parent). |
+| Default *(default)* | Only one entity is the owner (the parent). |
 | Both | Both entities are owners. |
-
-* *Default value*: Default
 
 Ownership is important as it defines two aspects of an association:
 

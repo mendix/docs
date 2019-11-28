@@ -107,13 +107,13 @@ If column widths are defined as percentages, you can also change the widths of c
 
 With this property you can change the number of rows that will be shown in one page. See also the property 'Show empty rows'.
 
-_Default value:_ 5
+*Default value*: 5
 
 #### 2.5.4 Show Empty Rows
 
 If you choose to show empty rows there will always be the grid that shows the same number of rows (see 'Number of rows') even if there are fewer objects to show on the page.
 
-_Default value:_ False
+*Default value*: False
 
 #### 2.5.5 Tooltip page
 
@@ -131,13 +131,13 @@ Even if the control bar is invisible there can still be a default button that is
 
 {{% /alert %}}
 
-_Default value:_ True
+*Default value*: True
 
 #### 2.5.7 Show Paging Buttons
 
 This property indicates whether the buttons to page through the information in the grid are visible or not. Only hide these buttons if you are sure that there will never be more objects than the number of rows of the grid. Note that hiding the control bar also hides the paging buttons.
 
-_Default value:_ True
+*Default value*: True
 
 #### 2.5.8 Selection Mode
 
@@ -151,7 +151,7 @@ The selection mode determines whether and how the user can select items in the r
 | Multi-selection | The user can select multiple items by clicking the first one and holding the <kbd>Ctrl</kbd> key while clicking on other items. Clicking an item without the <kbd>Ctrl</kbd> key will deselect all other selected items and make the clicked item the selection. |
 | Simple multi-selection | The user can select multiple items by clicking on them in turn. |
 
-_Default value:_ Single selection
+*Default value*: Single selection
 
 #### 2.5.9 Select first
 
@@ -162,7 +162,7 @@ Possible values:
 * No
 * Yes
 
-_Default value:_ No
+*Default value*: No
 
 #### 2.5.10 Default Button Trigger
 
@@ -173,7 +173,7 @@ The default button can be triggered by a single or a double click on a row.
 | Single click | A single click triggers the default button. This cannot be used in combination with allowing the user to select rows. |
 | Double click | A double click triggers the default button. |
 
-_Default value:_ Double click
+*Default value*: Double click
 
 ### 2.6 Selectable Objects Section{#selectable-objects}
 

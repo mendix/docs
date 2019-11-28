@@ -43,15 +43,13 @@ Decimal | A positive or negative number that can have digits after the decimal p
 Enumeration | A list of predefined attributes. For more information, see [Enumerations](enumerations). 
 Integer | A whole number that can be positive (maximum 2<sup>31</sup>-1, thus 2147483647), negative (minimum -2<sup>31</sup>, thus -2147483648), or zero.
 Long | A whole number that can be positive (maximum 2<sup>63</sup>-1), negative (minimum -2<sup>63</sup>), or zero.
-String | A text containing letters, spaces, numbers and other characters.
+String *(default)* | A text containing letters, spaces, numbers and other characters.
 
 The maximum size that can approximately be stored in an attribute of type binary depends on the database:
 
 | HSQLDB | PostgreSQL | SQL Server | Oracle |
 | --- | --- | --- | --- |
 | 1 MB | 1 GB | 2 GB | 128 TB or limited by hard disk of server |
-
-_Default value:_ String
 
 In a web shop, you want to store the id, profile photo, level (for service quality), user name, password, activity, total of minutes spent online, year of subscription, date of birth, total amount of expenses and the standard amount of discount for a customer.
 
@@ -73,7 +71,7 @@ This property indicates whether the date and time should be localized. By defaul
 
 In technical terms, this property indicates whether the client assumes that the date and time are in a local time zone (Yes) or in UTC (No). In the former case, the date is first converted to UTC before being sent to the server and converted from UTC before being displayed.
 
-*Default value*: Yes
+Default: *Yes*
 
 ### 3.3 Enumeration (Only for Enumeration Attribute Type)
 
@@ -83,13 +81,13 @@ The enumeration property indicates which enumeration defines the possible values
 
 This property specifies whether the length of a String is limited to a maximum or unlimited. In the case of a limited length, the 'Max length' property specifies the maximum (see below).
 
-_Default value:_ Limited
+Default: *Limited*
 
 ### 3.5 Max Length (Only for String Attribute Type)
 
 The 'Max length' property specifies the number of characters that can be stored in the attribute.
 
-_Default value:_ 200
+Default: *200*
 
 ## 4 Value
 

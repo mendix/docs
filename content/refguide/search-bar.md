@@ -106,7 +106,7 @@ The value entered by the end user (or the default value in the case of hidden an
 | Smaller or equal | Is the attribute value smaller than or equal to the entered value? | Text, Date                              |
 | Smaller          | Is the attribute value smaller than the entered value?       | Text, Date                              |
 
-_Default value:_ Equal
+*Default value*: Equal
 
 {{% alert type="info" %}}
 
@@ -161,7 +161,7 @@ This property is available for **Drop-down** search fields.
 
 The sort order specifies the order in which the items in the drop-down search field are shown. You can sort on multiple attributes in both directions (ascending and descending). If no sort order is specified, the drop-down search field sorts on the displayed attribute.
 
-_Default value:_ No sort order
+*Default value*: No sort order
 
 #### 3.6 Lower Bound
 

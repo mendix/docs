@@ -45,7 +45,7 @@ The rule defines which condition an attribute should satisfy.
 | Regular expression | The attribute needs to match a [regular expression](regular-expressions). |
 | Maximum length | The attribute may have no more than the specified number of characters. |
 
-_Default value:_ Required
+*Default value*: Required
 
 {{% alert type="warning" %}}
 

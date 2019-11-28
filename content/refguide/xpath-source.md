@@ -41,7 +41,7 @@ This differs from the [association data source](association-source) when objects
 | With button (initially closed) | The user can open and close the search bar using the search button; the search bar is initially closed. |
 | Always                         | The search bar is always visible and cannot be close, nor is there a search button. |
 
-_Default value:_ With button (initially closed)
+*Default value*: With button (initially closed)
 
 ### 2.3 Wait for Search
 
@@ -49,7 +49,7 @@ The **Wait for search** property is available if **[Show search bar](#show-searc
 
 When **Wait for search** is set to *Yes*, the grid will remain empty of contents the end-user initiates a search. This can be useful if the target entity contains an extremely large set of objects but most mutations only require a subset of the data. Waiting for search will ensure that no database query is performed until the desired subset is specified, thus skipping the initial loading period associated with major data retrievals.
 
-_Default value:_ false
+*Default value*: false
 
 ### 2.4 XPath Constraint {#xpath-constraints}
 

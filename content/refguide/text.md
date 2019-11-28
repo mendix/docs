@@ -102,7 +102,7 @@ The render mode determines how the text will be displayed.
 | Paragraph | The text will be rendered as a separate paragraph (`<p>` tag in HTML). |
 | Heading 1 - Heading 6 | The text will be rendered as a selected heading (for example, `<h1>` tag in HTML). **Heading 1** is the largest type of heading, **Heading 6** is the smallest one. |
 
-_Default value:_ Text
+*Default value*: Text
 
 ### 2.4 Visibility Section {#visibility}
 

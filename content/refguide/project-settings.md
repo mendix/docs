@@ -78,7 +78,7 @@ The first day of the week setting determines the first day of the week in the da
 | Friday | Use Friday as first day of the week in date picker widgets. |
 | Saturday | Use Saturday as first day of the week in date picker widgets. |
 
-*Default value:* Default (based on locale)
+*Default value*: Default (based on locale)
 
 ### 3.7 Default Time Zone
 
@@ -155,7 +155,7 @@ This table presents the results of rounding the input to one digit with the give
 | -2.5 | -3 | -2 |
 | -5.5 | -6 | -6 |
 
-*Default value:* Half away from zero
+*Default value*: Half away from zero
 
 ### 3.11 Multiple Sessions per User
 

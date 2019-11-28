@@ -82,13 +82,13 @@ This differs from the [On change](#on-change) property in that the event will al
 
 This property defines whether the text area grows automatically depending on the amount of text in it.
 
-_Default value:_ No
+*Default value*: No
 
 #### 2.6.2 Number of Lines
 
 **Number of lines** determines the size of the text area, based on the height of the lines. If the text in the text area contains more lines, a scrollbar will enable the end-user to see it all. This property is only used if **Grow automatically** is set to *No*.
 
-_Default value:_ 5
+*Default value*: 5
 
 #### 2.6.3 Counter Message
 

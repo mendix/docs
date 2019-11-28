@@ -77,7 +77,7 @@ The **Selection type** property determines whether the **Select all** button sho
 
 | Value       | Description                                                  |
 | ----------- | ------------------------------------------------------------ |
-| Select page | Clicking this button selects all objects on the current page. |
+| Select page *(default)* | Clicking this button selects all objects on the current page. |
 | Select all  | Clicking this button selects all objects.                    |
 
 {{% alert type="warning" %}}
@@ -87,8 +87,6 @@ Due to technical limitations, a button with the **Select all** selection type ca
 An **Edit** button always behaves as if the selection type is **Select page**, regardless of the actual settings of the **Select all** button that had been used to select objects.
 
 {{% /alert %}}
-
-_Default value:_ Select page
 
 ### 2.8 Deselect All Button {#deselect-all-button}
 
@@ -114,10 +112,8 @@ The **Maximum number of rows** property indicates the maximum number of rows tha
 
 The **Date export format** property defines the format dates will be exported. The possible options are the following ones:
 
-* **Date value** – date values are exported as real dates, so that it is possible to use Excel date functions like sorting
+* **Date value** *(default)*  – date values are exported as real dates, so that it is possible to use Excel date functions like sorting
 * **Text** – date values are exported exactly as shown in the data grid
-
-_Default value:_ Date value
 
 {{% alert type="warning" %}}
 
@@ -141,19 +137,19 @@ Constraints you are using for search fields and sorting will also be exported.
 
 **Decimal separator** is a string used to separate the fractional part from the whole part in decimal values.
 
-_Default value:_ .
+Default: *.*
 
 #### 2.10.2 Group Separator
 
 **Group separator** is a string used to separate groups of digits in large numbers.
 
-_Default value:_ ,
+Default: *,*
 
 #### 2.10.3 Delimiter
 
 **Delimiter** is a string used to delimit values in the resulting CSV file.
 
-_Default value:_ ;
+Default: *;*
 
 #### 2.10.4 Maximum Number of Rows
 

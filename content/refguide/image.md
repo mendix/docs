@@ -55,11 +55,9 @@ The width of an image. Possible values of this property are described in the tab
 
 | Value      | Definition                                                   |
 | ---------- | ------------------------------------------------------------ |
-| Auto       | The width of the given image is used.                        |
+| Auto  *(default)*       | The width of the given image is used.                        |
 | Pixels     | he width is specified in a number of pixels. If you specify both width and height, the image will be scaled automatically: the proportions will be kept, the picture will not be stretched. |
 | Percentage | The width is specified in a percentage of the original width. It can be larger than its original width in which case the image is stretched |
-
-*Default value*: Auto
 
 {{% alert type="info" %}}This property is not supported on native mobile pages.{{% /alert %}}
 
@@ -67,7 +65,7 @@ The width of an image. Possible values of this property are described in the tab
 
 Specifies the width of the image in pixels or percentage. This option is displayed only when **Pixels** or **Percentage** are selected for the **Width Unit** described above. 
 
-*Default value*: not applicable
+Default: *not applicable*
 
 #### 2.3.4 Height Unit
 
@@ -75,11 +73,9 @@ The height of an image. Possible values of this property are described in the ta
 
 | Value      | Definition                                                   |
 | ---------- | ------------------------------------------------------------ |
-| Auto       | The height of the given image is used.                       |
+| Auto  *(default)*       | The height of the given image is used.                       |
 | Pixels     | The height is specified in a number of pixels. If you specify both width and height, the image will be scaled automatically: the proportions will be kept, the picture will not be stretched. |
 | Percentage | The height is specified in a percentage of the original height. It can be larger than its original height in which case the image is stretched. |
-
-*Default value*: Auto
 
 {{% alert type="info" %}}This property is not supported on native mobile pages.{{% /alert %}}
 
@@ -87,13 +83,13 @@ The height of an image. Possible values of this property are described in the ta
 
 Specifies the width of the image in pixels or percentage. This option is displayed only when **Pixels** or **Percentage** are selected for the **Width Unit** described above. 
 
-*Default value*: not applicable
+Default: *not applicable*
 
 #### 2.3.6 Responsive
 
 This property influences how the image scales. If the value is 'Yes', the image will never get bigger than its original size. It can become smaller. If the value is 'No', the image can become both larger and smaller than its original size.
 
-_Default value:_ Yes
+Default: *Yes*
 
 {{% alert type="info" %}}This property is not supported on native mobile pages.{{% /alert %}}
 

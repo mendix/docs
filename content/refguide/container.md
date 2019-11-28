@@ -41,7 +41,7 @@ The **Render mode** determines which HTML5 tag will be used to show the containe
 
 | Value     | HTML Tag    |
 | --------- | ----------- |
-| Div       | `div`       |
+| Div *(default)*      | `div`       |
 | Section   | `section`   |
 | Article   | `article`   |
 | Header    | `header`    |
@@ -51,8 +51,6 @@ The **Render mode** determines which HTML5 tag will be used to show the containe
 | Aside     | `aside`     |
 | Hgroup    | `hgroup`    |
 | Address   | `address`   |
-
-_Default value:_ Div
 
 {{% alert type="info" %}}Render mode is not supported on native mobile pages.{{% /alert %}}
 

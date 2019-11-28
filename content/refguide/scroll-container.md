@@ -47,7 +47,7 @@ This property determines in which mode the scroll container operates.
 | Headline | The top and bottom regions extend the entire width of the container and the remaining regions are placed in the middle. |
 | Sidebar | The side panels extend the full height of the container. |
 
-_Default value:_ Headline
+*Default value*: Headline
 
 {{% alert type="info" %}}This property is not supported on native mobile pages.{{% /alert %}}
 
@@ -60,7 +60,7 @@ This property determines what happens when the content of a region does not fit 
 | Per region | Every region will show its own scroll bar in case its content does not fit. |
 | Full widget | The scroll container will grow to fit its contents and will leave scrolling to its parent. |
 
-_Default value:_ Per region
+*Default value*: Per region
 
 {{% alert type="info" %}}This property is not supported on native mobile pages.{{% /alert %}}
 
@@ -68,7 +68,7 @@ _Default value:_ Per region
 
 By default the scroll container will extend the full width of its parent widget. It can also be given a specific width, which can be defined either in pixels or percentage of its parent widget.
 
-_Default value:_ Full width
+*Default value*: Full width
 
 {{% alert type="info" %}}This property is not supported on native mobile pages.{{% /alert %}}
 
@@ -80,7 +80,7 @@ This property is displayed only when the [Width](#width) property is set to *Pix
 
 This property is displayed only when the [Width](#width) property is set to *Pixels* or *Percentage*. The scroll container can be aligned to the left, to the right, or in the middle of its parent widget.
 
-_Default value:_ Center
+*Default value*: Center
 
 ### 2.3 Regions Section
 

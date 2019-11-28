@@ -47,13 +47,13 @@ The items that are shown in the menu widget are determined by the **Menu source*
 | Project navigation | The menu items are taken from one of the profiles defined in the [**Navigation**](navigation). |
 | Menu document      | The menu items are taken from a [menu](menu) document.       |
 
-_Default value:_ Project navigation
+*Default value*: Project navigation
 
 #### 2.3.2 Profile 
 
 Only available when the [Menu source](#menu-source) is set to **Project navigation**. The **Profile** property specifies what [Navigation profile](navigation#profiles) is used for the widget. 
 
-_Default value:_ Responsive
+*Default value*: Responsive
 
 #### 2.3.3 Menu 
 
@@ -68,7 +68,7 @@ This property determines how the simple menu bar is laid out.
 | Horizontal | The menu items are next to each other and the images are above the captions. |
 | Vertical | The menu items are underneath each other and the images are next to the captions. |
 
-_Default value:_ Horizontal
+*Default value*: Horizontal
 
 ## 3 Read More
 

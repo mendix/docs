@@ -48,7 +48,7 @@ However, if the flow is triggered from a data grid button that just performs an 
 Nanoflows do not support committing changes without events. Committing while running in an online app sends a commit request to the Mendix Runtime and runs the events. If a change object action is used in an offline app, the changes are committed to the offline database.
 {{% /alert %}}
 
-_Default value:_ No
+Default: *No*
 
 ### 3.2 Refresh in Client
 
@@ -64,7 +64,7 @@ When inside a [nanoflow](nanoflows), the Change object action does not have the 
 If **Commit type** is set to *Yes*, the object is refreshed across the client as if **Refresh in client** was set to *Yes*.
 {{% /alert %}}
 
-*Default value*: No
+Default: *No*
 
 ### 3.3 Change Members
 

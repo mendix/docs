@@ -85,7 +85,7 @@ This differs from the [On change](#on-change) property in that the event will al
 
 This property defines whether the radio buttons are rendered as a **Horizontal** or **Vertical** list.
 
-_Default value:_ Horizontal
+*Default value*: Horizontal
 
 ### 2.7 Label Section{#label}
 

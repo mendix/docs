@@ -45,7 +45,7 @@ Image uploader properties consist of the following sections:
 
 **Max file size (MB)** determines the maximum size of files (in megabytes) that can be uploaded.
 
-_Default value:_ 5
+Default: *5*
 
 #### 2.3.2 Allowed Extensions
 

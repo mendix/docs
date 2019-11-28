@@ -7,9 +7,17 @@ tags: ["studio", "consistency errors", "checks", "errors", "navigation"]
 
 ## 1 Introduction 
 
-In this document, we will explain how to solve the most common consistency errors that can occur when configuring navigation in Mendix Studio. For more information on navigation, see [Navigation Document](navigation).
+In this document, we explain how to solve the most common consistency errors that can occur when configuring navigation in Mendix Studio. For more information on navigation, see [Navigation Document](navigation).
 
 An example of a consistency error is when you set a page that has a data view as a menu item. 
+
+{{% alert type="info" %}}
+
+This document does not describe *all* the errors, as there are a lot of errors that can occur, some of which are simple and do not need extra explanation, others are rare and/or heavily dependent on a use-case. 
+
+{{% /alert %}}
+
+Some errors have error codes and if these errors are described in documentation, Studio has a clickable link to the corresponding document. Others do not have an error code, in this case, you can manually search whether a particular error is described in documentation (you can search by a message you see in the **Checks** panel).
 
 ## 2 Navigation Consistency Errors 
 
@@ -19,7 +27,7 @@ The most common errors you can come across when configuring a navigation item ar
 | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | CE0568     | The selected page {Name of the page} expects an object of type {type of object}, which is not available here. | Property 'On click' of menu item {name of the menu item}.    | You have set a page that expects an object to be passed to it (for example, a page with a data view) as a menu item. | Pass an object to the page: open properties>the **Events** section, set the on-click action to **Page**, and enable the **Create Object** option and select an **Entity**. For more information, see the [Error Fix Example for CE0568](#page-expects-an-object) section |
 | CE0529     | The selected {Name of the page} expects an object of type {type of object} and cannot be used as a home page. Change the page or use a microflow to provide the page with an object. | Property 'On click' of menu item 'Home'                      | You have set a page that expects an object to be passed to it (for example, a page with a data view) as the home page. But by default the home page has no object that is passed to it, because it is the starting point for your user. | Set a different  page as the home page. Alternatively, you can use a microflow that will open the home page and pass a specific object to it. For more information, see the [Error Fix Example for CE0529](#home-page-expects-an-object) section. |
-| CE0529     | The selected {Name of the page} expects an object of type {type of object} and cannot be used as a home page. Change the page or use a microflow to provide the page with an object. | Default home page of navigation profile 'Hybrid_tablet_app_online'/ 'Hybrid_phone_app_online' | In Studio Pro, you can configure several navigation profiles, while only the responsive navigation profile is shown and can be configured in Studio. The home page of the responsive profile is by default set as the home page for the Hybrid app navigation profiles, which can be configured in Studio Pro only. <br />For more information on profiles, see [Navigation](/refguide/navigation) in the *Mendix Studio Pro Guide*. | Switch to Studio Pro and change the home page for the navigation profile of **Hybrid tablet app online** or **Hybrid phone app online** in **Navigation**. |
+| CE0529     | The selected {Name of the page} expects an object of type {type of object} and cannot be used as a home page. Change the page or use a microflow to provide the page with an object. | Default home page of navigation profile 'Hybrid_tablet_app_online'/ 'Hybrid_phone_app_online' | In Studio Pro, you can configure several navigation profiles, while only the responsive navigation profile is shown and can be configured in Studio. The home page of the responsive profile is by default set as the home page for the Hybrid app navigation profiles, which can be configured in Studio Pro only. <br />For more information on profiles, see [Navigation](/refguide/navigation) in the *Studio Pro Guide*. | Switch to Studio Pro and change the home page for the navigation profile of **Hybrid tablet app online** or **Hybrid phone app online** in **Navigation**. |
 | CE0548     | Items with subitems cannot have an action themselves.        | A menu item that has a sub-item.                             | You assigned an on-click action to a menu item that has a sub-item, when menu items that have sub-items cannot have on-click actions assigned to  them. | You need to either set the on-click action of the menu item to *Nothing*, or delete/move the sub-item. |
 
 ### 2.1 Error Fix Example for CE0568 {#page-expects-an-object}

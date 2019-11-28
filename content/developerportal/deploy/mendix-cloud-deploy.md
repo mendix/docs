@@ -141,27 +141,29 @@ The app is now deployed and the administrative account can be configured.
 
 ## 5 Deploying a Free App to the Mendix Cloud
 
-With a Free App, it's only possible to deploy your app to the Mendix cloud using Studio or Studio Pro. There are two methods to do that.
+With a Free App, it's only possible to deploy your app to the Mendix cloud using Studio or Studio Pro. There are three methods to do that.
 
-### 5.1 Method 1
+### 5.1 From Studio Pro – Method 1
 
 Once you have created and worked on your App, you will want to share it with others in the Free App. You can deploy your Free App to an environment by clicking **Run > Run** at the top of Studio Pro. This will automatically deploy your app to a Free App environment.
 
 ![](attachments/mendix-cloud-deploy/runapp2.jpg)
 
-### 5.2 Method 2
+### 5.2 From Studio Pro – Method 2
 
 If you want to choose whether you want to run your app locally or in a Free App environment in the Mendix cloud, you can enable the Free App environment option by clicking **Run**:
 
 ![](attachments/mendix-cloud-deploy/runapp.jpg)
+
+### 5.3 From Studio
+
+Click the **Publish** button in Studio. For more information see the [Publishing Your App](/studio/publishing-app#publishing-your-app) section of *Previewing & Publishing Your App*.
 
 ## 6 Status of Deployment
 
 The Mendix status page ([https://status.mendix.com/](https://status.mendix.com/)) shows the current status of Mendix services. If you have issues with deployment, you can check the Mendix status page to see if deployment is operational (under **Mendix Services**) or if there are other Mendix issues which may be affecting your deployment.
 
 ## 7 Read More
-
-**AppCloudServices** module allows your app to integrate with services on the Mendix Cloud
 
 * [Custom Domains](custom-domains)
 * [Licensing Mendix Cloud Apps](licensing-apps)

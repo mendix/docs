@@ -23,7 +23,7 @@ menu_order: 2
 | ATS version | Supported Browser Version | Notes |
 | --- | --- | --- |
 | 1.5 - 1.8 | 44, 45, 38 ESR, 45 ESR |  |
-| 2.x | 58 |  |
+| 2.x | 68 |  |
 
 ### 2.2 Chrome
 
@@ -31,7 +31,7 @@ menu_order: 2
 | --- | --- | --- |
 | 1.5, 1.6 | 46-50 |  |
 | 1.7, 1.8 | 51-53 |   |
-| 2.x | 64 |  |
+| 2.x | 75 |  |
 
 ### 2.3 Internet Explorer
 

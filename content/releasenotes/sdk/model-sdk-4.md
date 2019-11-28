@@ -6,6 +6,13 @@ parent: "model-sdk"
 
 These are the release notes for the [Model SDK](/apidocs-mxsdk/mxsdk/) version 4.
 
+## 4.27.0 {#427}
+
+**Release date: November 22nd, 2019**
+
+* We added support for Mendix [8.4.0](../studio-pro/8).
+* We added support for Mendix Metamodel [8.4.0](metamodel-8.4).
+
 ## 4.26.0 {#426}
 
 **Release date: October 25th, 2019**

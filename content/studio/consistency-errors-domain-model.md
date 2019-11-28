@@ -7,9 +7,17 @@ tags: ["studio", "consistency errors", "errors", "domain model"]
 
 ## 1 Introduction 
 
-In this document, we will explain how to solve the most common consistency errors that can occur when configuring the domain model in Mendix Studio. For more information on domain models, see [Domain Model](domain-models).
+In this document, we explain how to solve the most common consistency errors that can occur when configuring the domain model in Mendix Studio. For more information on domain models, see [Domain Model](domain-models).
 
 An example of a consistency error is having the same name for two entities.
+
+{{% alert type="info" %}}
+
+This document does not describe *all* the errors, as there are a lot of errors that can occur, some of which are simple and do not need extra explanation, others are rare and/or heavily dependent on a use-case. 
+
+{{% /alert %}}
+
+Some errors have error codes and if these errors are described in documentation, Studio has a clickable link to the corresponding document. Others do not have an error code, in this case, you can manually search whether a particular error is described in documentation (you can search by a message you see in the **Checks** panel).
 
 ## 2 Domain Model Consistency Errors
 
@@ -17,7 +25,7 @@ The most common errors you can come across when configuring a domain model are d
 
 | Error Code | Message in the Checks Panel                                  | Cause of the Error                                           | Way to Fix                                                   |
 | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| CE0001     | An association between a persistable entity and a non-persistable entity must start in the non-persistable entity and have owner 'Default'. | You created an association between a persistable and non-persistable entity, and the association is drawn from the persistable entity to non-persistable one (thus, the owner of association is the persistable entity). Persistable entities are stored in the database, and non-persistable entities are stored in memory. You can point from the memory to the database but not other way around. For more technical information, see [Persistability](/refguide/persistability) in the *Mendix Studio Pro Guide*. | Open association properties and swap the direction of the association thus changing the owner of association; or change the persistability of one of the entities in entity properties. |
+| CE0001     | An association between a persistable entity and a non-persistable entity must start in the non-persistable entity and have owner 'Default'. | You created an association between a persistable and non-persistable entity, and the association is drawn from the persistable entity to non-persistable one (thus, the owner of association is the persistable entity). Persistable entities are stored in the database, and non-persistable entities are stored in memory. You can point from the memory to the database but not other way around. For more technical information, see [Persistability](/refguide/persistability) in the *Studio Pro Guide*. | Open association properties and swap the direction of the association thus changing the owner of association; or change the persistability of one of the entities in entity properties. |
 | CE0017     | Invalid [delete behavior](domain-models-association-properties#delete-behavior). | This error occurs when delete behavior of entities in the association contradict each other. For more information on the cases when this error occurs, see the [Delete Behavior Consistency Errors and Ways to Fix](#delete-behavior) section. | For information on how to fix this error, see the [Delete Behavior Consistency Errors and Ways to Fix](#delete-behavior) section. |
 | CE0021     | Attributes of type {attribute type} are only supported in persistable entities. | A non-persistable entity has an attribute of type Autonumber or Binary. These types of attributes need to be stored in the database. | Make the entity persistable by enabling the corresponding option in properties; or change the attribute type. |
 | CE0065     | Duplicate name {name of the entity} in module {name of the module}. Entities, associations and enumerations cannot share names. | You have several entities with one and the same name in your domain model. | Rename one of the entities; all entity names should be unique. |

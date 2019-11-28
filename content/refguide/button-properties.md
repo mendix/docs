@@ -65,11 +65,11 @@ Parameters have the following settings:
 
     ![Parameter Settings](attachments/button-widgets/button-parameter-settings.png)
 
-##### 2.2.2.1 Adding New Parameters
+##### 2.4.2.1 Adding New Parameters
 
 To add parameters, do the following:
 
-1. Place the **Button** widget must be placed in a context of an entity, as in, inside a [data widget](data-widgets).
+1. Place the **Button** widget in the context of an entity, as in, inside a [data widget](data-widgets).
 
 2. Double-click the **Caption** setting in the button widget properties.
 
@@ -83,7 +83,7 @@ To add parameters, do the following:
 
     ![Parameter Example](attachments/button-widgets/button-parameter-example.png)
 
-##### 2.2.2.2 Performing Other Actions on Parameters
+##### 2.4.2.2 Performing Other Actions on Parameters
 
 In addition to adding new parameters, you can perform the following actions on parameters:
 

@@ -7,7 +7,7 @@ tags: ["Studio Pro", "consistency errors", "checks", "errors", "pages"]
 
 ## 1 Introduction 
 
-In this document, we explain how to solve the most common or complicated consistency errors that can occur when configuring pages in Studio Pro. 
+In this document, we explain how to solve the most common or complicated consistency errors that can occur when configuring pages in Studio Pro. An example of a consistency error on a page is when you do not specify the entity property of a data view on a page. 
 
 {{% alert type="info" %}}
 
@@ -15,9 +15,7 @@ This document does not describe *all* the errors, as there are a lot of errors t
 
 {{% /alert %}}
 
-Some errors have error codes and if these errors are described in documentation, Studio Pro has a clickable link to the corresponding doc. Others do not have an error code, in this case, you can manually search whether a particular error is described in documentation (you can search by a message you see in the **Errors** pane).
-
-An example of a consistency error on a page is when you do not specify the entity property of a data view on a page. 
+Some errors have error codes and if these errors are described in documentation, Studio Pro has a clickable link to the corresponding document. Others do not have an error code, in this case, you can manually search whether a particular error is described in documentation (you can search by a message you see in the **Errors** pane).
 
 ## 2 List View Consistency Errors 
 

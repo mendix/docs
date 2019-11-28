@@ -110,10 +110,10 @@ An attribute property has an extra required child element: a list of attributeTy
 *   AutoNumber
 *   Binary
 *   Boolean
-*   DateTime
+*   Date and time
 *   Decimal
-*   Enum
-*   HashString
+*   Enumeration
+*   Hashed String
 *   Integer
 *   Long
 *   String
@@ -246,7 +246,7 @@ Possible return types are shown below:
 *   Void
 *   Boolean
 *   Integer
-*   DateTime
+*   Date and time
 *   String
 *   Object
 
@@ -274,7 +274,7 @@ Possible return types:
 *   Void
 *   Boolean
 *   Integer
-*   DateTime
+*   Date and time
 *   String
 *   Object
 

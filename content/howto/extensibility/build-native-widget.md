@@ -2,15 +2,19 @@
 title: "Build a Pluggable Native Widget"
 category: "Extensibility"
 description: "Describes building a native widget, configuring it, and styling it in a Mendix app."
-menu_order: 2
+menu_order: 10
 tags: ["native","widget","pluggable","react native","extensibility",]
 ---
 
 ## 1 Introduction
 
-Pluggable native widgets enable developers to introduce custom-built widgets in their Mendix applications for versions of Mendix Studio Pro 8.3 and above. Pluggable native widgets work for both web *and* native mobile, offering you unique power and flexibility. In this how-to you will learn to create a group box pluggable widget for native mobile applications.
+Pluggable widgets, introduced in Mendix 8, enable developers to create new widgets beyond the core widgets shipped with Mendix Studio Pro. The pluggable widgets API works for both web and native mobile, offering you unique power and flexibility. For the web platform, the rendering is based on React and the React DOM. For mobile, the rendering uses the React Native framework.
 
-A group box can be used to visually group related widgets together. Group boxes are displayed as a frame around nested widgets with an optional header. Group boxes can be configured to collapse and expand dynamically:
+In this how-to, you will learn to create a group box pluggable widget for native mobile applications with React Native.
+
+This how-to will teach you core widget concepts by having you build configure, and style a group box widget. For more information on customizing pluggable widgets, see the [Pluggable Widgets API Documentation](/apidocs-mxsdk/apidocs/pluggable-widgets).
+
+A group box can be used to visually group related widgets together. Group boxes are displayed as a frame around nested widgets with an optional header. Group boxes can be configured to collapse and expand dynamically, and look like this:
 
 ![final widget](attachments/build-native-widget/group-box-tease.png)
 
@@ -31,16 +35,16 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Install Mendix Studio Pro 8.3
 * Install the Mendix Make it Native app on a mobile device or an emulator.
 * Install Long Term Support (LTS) v10.16.3 or any higher version of [Node.js](https://nodejs.org)
-* Install latest [Yeoman](https://yeoman.io/) with the following command:
+* Install the latest [Yeoman](https://yeoman.io/) with the following command:
 
 	```shell
-	npm install -g yo
+	$ npm install yo -g
 	```
 
-* Install Mendix' Pluggable Widget Generator v8.2.0 for Yeoman with the following command:
+* Install the latest Mendix Pluggable Widget Generator for Yeoman with the following command:
 
 	```shell
-	npm install -g @mendix/generator-widget@8.2.0
+	npm install -g @mendix/generator-widget
 	```
 
 * Install an integrated development environment (IDE) of your choice (Mendix recommends [Microsoft Visual Studio Code](https://code.visualstudio.com/))
@@ -67,6 +71,10 @@ To scaffold your project folder for the group box widget, follow these steps:
 
 1. Open up a terminal.
 2. Change the current working directory to the folder where you want to store your widget project.
+
+	{{% alert type="info" %}}Make sure to store your widget project in a folder not connected to Dropbox. Dropbox blocks files from being watched, which will prevent you from completing this document. 
+	{{% /alert %}}
+
 3. Start the generator by executing the following command:
 
 	```shell
@@ -107,7 +115,7 @@ In order to test your group box widget, you will a Mendix application that uses 
 	* Enable online services: *No*
 6. Click **Create app**.
 
-Optionally, you can remove all unused custom widgets to optimize the debugging process. To do so, follow these steps:
+Optionally, you can remove all unused widgets to optimize the debugging process. To do so, follow these steps:
 
 1. Click **Project** > **Show Project Directory in Explorer**.
 2. Open the **widgets** folder.
@@ -176,9 +184,11 @@ Define the structure and default style of the group box widget with these steps:
 						<Text style={this.styles.headerContent}>Header caption</Text>
 						<Text style={this.styles.headerContent}>-</Text>
 					</View>
-				<View style={this.styles.content}>Content</View>
-			</View>
-		);
+					<View style={this.styles.content}>
+						<Text>Content</Text>
+					</View>
+				</View>
+			);
 		}
 	```
 
@@ -206,12 +216,12 @@ The UI of your widget does not look like a group box yet. Apply a default style 
 2. Replace the following **defaultStyle** constant:
 
 	```tsx
-		const defaultStyle: CustomStyle = {
-			container: {},
-				label: {
-					color: "#F6BB42"
-				}
-			};
+	const defaultStyle: CustomStyle = {
+		container: {},
+		label: {
+			color: "#F6BB42"
+		}
+	};
 	```
 
 	with this:
@@ -219,13 +229,13 @@ The UI of your widget does not look like a group box yet. Apply a default style 
 	```tsx
 	const defaultStyle: CustomStyle = {
 		container: {
-			borderColor: "#000",
+			borderColor: "#000000",
 			borderRadius: 4,
 			borderWidth: 1,
 			overflow: "hidden"
 		},
 		header: {
-			backgroundColor: "#000",
+			backgroundColor: "#000000",
 			display: "flex",
 			flexDirection: "row",
 			justifyContent: "space-between",
@@ -233,7 +243,7 @@ The UI of your widget does not look like a group box yet. Apply a default style 
 			paddingHorizontal: 15
 		},
 		headerContent: {
-			color: "#FFF",
+			color: "#FFFFFF",
 			fontSize: 16,
 			fontWeight: "bold"
 		},
@@ -241,7 +251,7 @@ The UI of your widget does not look like a group box yet. Apply a default style 
 			paddingVertical: 10,
 			paddingHorizontal: 15
 		},
-			label: {
+		label: {
 			color: "#F6BB42"
 		}
 	};
@@ -262,49 +272,50 @@ When you build a widget for native mobile, keep in mind that the widget can be u
 
 For the group box widget it would be nice to have square corners on Android devices. Apply this style behavior with the following steps:
 
-1. In **src/components/HelloWorldSample.tsx** change the value of `defaultStyle.container.borderRadius` from `4` to `Platform.OS === "ios" ? 4 : 0` so that the initialization of the **defaultStyle** constant look as follows:
+
+1. In **src/components/HelloWorldSample.tsx** you must adjust the import statement in order to use the **Platform** detection feature. Change the import from this:
 
 	```tsx
-   const defaultStyle: CustomStyle = {
-     container: {
-       borderColor: "#000",
-       borderRadius: Platform.OS === "ios" ? 4 : 0,
-       borderWidth: 1,
-       overflow: "hidden"
-     },
-     header: {
-       backgroundColor: "#000",
-       display: "flex",
-       flexDirection: "row",
-       justifyContent: "space-between",
-       paddingVertical: 10,
-       paddingHorizontal: 15
-     },
-     headerContent: {
-       color: "#FFF",
-       fontSize: 16,
-       fontWeight: "bold"
-     },
-     content: {
-       paddingVertical: 10,
-       paddingHorizontal: 15
-     },
-     label: {
-       color: "#F6BB42"
-     }
-   };
-	```
-
-2. Adjust the following import statement in order to use the **Platform** object from this:
-
-	```tsx
-   import { Text, View } from "react-native";
+	import { Text, View } from "react-native";
 	```
 
 	to this:
 
 	```tsx
-   import { Text, View, Platform } from "react-native";
+	import { Text, View, Platform } from "react-native";
+	```
+
+2. Change the value of `defaultStyle.container.borderRadius` from `4` to `Platform.OS === "ios" ? 4 : 0` so that the initialization of the **defaultStyle** constant look as follows:
+
+	```tsx
+	const defaultStyle: CustomStyle = {
+		container: {
+			borderColor: "#000000",
+			borderRadius: Platform.OS === "ios" ? 4 : 0,
+			borderWidth: 1,
+			overflow: "hidden"
+		},
+		header: {
+			backgroundColor: "#000000",
+			display: "flex",
+			flexDirection: "row",
+			justifyContent: "space-between",
+			paddingVertical: 10,
+			paddingHorizontal: 15
+		},
+		headerContent: {
+			color: "#FFFFFF",
+			fontSize: 16,
+			fontWeight: "bold"
+		},
+		content: {
+			paddingVertical: 10,
+			paddingHorizontal: 15
+		},
+		label: {
+			color: "#F6BB42"
+		}
+	};
 	```
 
 3. Save all files to rebundle and update the Mendix test project.
@@ -321,7 +332,7 @@ As you might have noticed, the display component is still called **HelloWorldSam
 4. Change the **GroupBox** class declaration to the following:
 
 	```tsx
-   export class GroupBox extends Component<GroupBoxProps>
+	export class GroupBox extends Component<GroupBoxProps>
 	```
 
 The changes you made in steps one and two cause errors in your container component defined in *src/GroupBox.tsx*. The container component is used by the Mendix Client, receives property data from this client, and forwards this data to the display component.
@@ -332,13 +343,13 @@ To fix the errors in the container component, use these steps:
 2. Replace the following import:
 
 	```tsx
-   import { HelloWorldSample } from "./components/HelloWorldSample";
+	import { HelloWorldSample } from "./components/HelloWorldSample";
 	```
 
 	with this:
 
 	```tsx
-   import { GroupBox as WrappedGroupBox } from "./components/GroupBox";
+	import { GroupBox as WrappedGroupBox } from "./components/GroupBox";
 	```
 
 3. Rename the **HelloWorldSample** component in the **render** method to *WrappedGroupBox*.
@@ -349,43 +360,43 @@ You are not using the **label** property of the **defaultStyle** constant anymor
 2. Remove the **label** property from the **defaultStyle** constant:
 
 	```tsx
-   const defaultStyle: CustomStyle = {
-     container: {
-       borderColor: "#000",
-       borderRadius: Platform.OS === "ios" ? 4 : 0,
-       borderWidth: 1,
-       overflow: "hidden"
-     },
-     header: {
-       backgroundColor: "#000",
-       display: "flex",
-       flexDirection: "row",
-       justifyContent: "space-between",
-       paddingVertical: 10,
-       paddingHorizontal: 15
-     },
-     headerContent: {
-       color: "#FFF",
-       fontSize: 16,
-       fontWeight: "bold"
-     },
-     content: {
-       paddingVertical: 10,
-       paddingHorizontal: 15
-     }
-   };
+	const defaultStyle: CustomStyle = {
+		container: {
+			borderColor: "#000000",
+			borderRadius: Platform.OS === "ios" ? 4 : 0,
+			borderWidth: 1,
+			overflow: "hidden"
+		},
+		header: {
+			backgroundColor: "#000000",
+			display: "flex",
+			flexDirection: "row",
+			justifyContent: "space-between",
+			paddingVertical: 10,
+			paddingHorizontal: 15
+		},
+		headerContent: {
+			color: "#FFFFFF",
+			fontSize: 16,
+			fontWeight: "bold"
+		},
+		content: {
+			paddingVertical: 10,
+			paddingHorizontal: 15
+		}
+	};
 	```
 
 3. Open **src/GroupBox.tsx**.
 4. Remove the **label** property from the **CustomStyle** interface and add the new style properties **header**, **headerContent**, **content**:
 
 	```tsx
-   export interface CustomStyle extends Style {
-     container: ViewStyle;
-     header: ViewStyle;
-     headerContent: TextStyle;
-     content: ViewStyle;
-   }
+	export interface CustomStyle extends Style {
+		container: ViewStyle;
+		header: ViewStyle;
+		headerContent: TextStyle;
+		content: ViewStyle;
+	}
 	```
 
 5. Save all files to rebundle and update the Mendix test project.
@@ -407,7 +418,7 @@ Next you will allow the Mendix developer to alter the header caption of your wid
 	```xml
 	<property key="headerCaption" type="string" required="false">
 		<caption>Header caption</caption>
-		<description/>
+		<description />
 	</property>
 	```
 
@@ -441,7 +452,7 @@ Next you will allow the Mendix developer to alter the header caption of your wid
 	}
 	```
 
-You still need to use the headerCaption prop in the render method to display the actual text in your header. Adjust the render method like this:
+5. You still need to use the **headerCaption** prop in the render method to display the actual text in your header. Adjust the render method like this:
 
 	```tsx
 	render(): ReactNode {
@@ -485,20 +496,20 @@ You will also want Mendix developers to be able to fill content in the group box
 		supportedPlatform="Native"
 		xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
-	    <name>Group box</name>
-		<description>Widget to group building blocks, snippets, or other widgets.</description>
-		<icon/>
+		<name>Group box</name>
+		<description />
+		<icon />
 		<properties>
-		<propertyGroup caption="General">
-			<property key="content" type="widgets" required="false">
-				<caption>Content</caption>
-				<description>Widgets to place inside</description>
+			<propertyGroup caption="General">
+				<property key="content" type="widgets" required="false">
+					<caption>Content</caption>
+					<description>Widgets to place inside.</description>
+					</property>
+				<property key="headerCaption" type="string" required="false">
+					<caption>Header caption</caption>
+					<description />
 				</property>
-			<property key="headerCaption" type="string" required="false">
-				<caption>Header caption</caption>
-				<description/>
-			</property>
-		</propertyGroup>
+			</propertyGroup>
 		</properties>
 	</widget>
 	```
@@ -533,10 +544,10 @@ You will also want Mendix developers to be able to fill content in the group box
 					<Text style={this.styles.headerContent}>{headerCaption}</Text>
 					<Text style={this.styles.headerContent}>-</Text>
 				</View>
-			<View style={this.styles.content}>
-				{children}
+				<View style={this.styles.content}>
+					{children}
+				</View>
 			</View>
-		</View>
 		);
 	}
 	```
@@ -747,25 +758,25 @@ The next step is to allow a Mendix developer to use a custom icon in the clickab
 		xmlns="http://www.mendix.com/widget/1.0/"
 		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
 		<name>Group box</name>
-		<description>Widget to group building blocks, snippets or other widgets</description>
-		<icon/>
+		<description />
+		<icon />
 		<properties>
 			<propertyGroup caption="General">
 				<property key="content" type="widgets" required="false">
 					<caption>Content</caption>
-					<description>Widgets to place inside</description>
+					<description>Widgets to place inside.</description>
 				</property>
 				<property key="headerCaption" type="string" required="false">
 					<caption>Header caption</caption>
-					<description/>
+					<description />
 				</property>
 				<property key="expandIcon" type="icon" required="false">
 					<caption>Expand icon</caption>
-					<description>Icon used to indicate that the group box can be expanded</description>
+					<description>Icon used to indicate that the group box can be expanded.</description>
 				</property>
 				<property key="collapseIcon" type="icon" required="false">
 					<caption>Collapse icon</caption>
-					<description>Icon used to indicate that the group box can be collapsed</description>
+					<description>Icon used to indicate that the group box can be collapsed.</description>
 				</property>
 			</propertyGroup>
 		</properties>
@@ -780,28 +791,28 @@ The next step is to allow a Mendix developer to use a custom icon in the clickab
 		xmlns="http://www.mendix.com/widget/1.0/"
 		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
 		<name>Group box</name>
-		<description>Widget to group building blocks, snippets or other widgets</description>
-		<icon/>
+		<description />
+		<icon />
 		<properties>
 			<propertyGroup caption="General">
 				<propertyGroup caption="General">
 					<property key="content" type="widgets" required="false">
 						<caption>Content</caption>
-						<description>Widgets to place inside</description>
+						<description>Widgets to place inside.</description>
 					</property>
 				</propertyGroup>
 				<propertyGroup caption="Header">
 					<property key="headerCaption" type="string" required="false">
 						<caption>Caption</caption>
-						<description/>
+						<description />
 					</property>
 					<property key="expandIcon" type="icon" required="false">
 						<caption>Expand icon</caption>
-						<description>Icon used to indicate that the group box can be expanded</description>
+						<description>Icon used to indicate that the group box can be expanded.</description>
 					</property>
 					<property key="collapseIcon" type="icon" required="false">
 						<caption>Collapse icon</caption>
-						<description>Icon used to indicate that the group box can be collapsed</description>
+						<description>Icon used to indicate that the group box can be collapsed.</description>
 					</property>
 				</propertyGroup>
 			</propertyGroup>
@@ -828,11 +839,11 @@ The next step is to allow a Mendix developer to use a custom icon in the clickab
 	private renderIcon = (): ReactNode => {
 		const { collapseIcon, expandIcon } = this.props;
 
-	if (this.state.collapsed) {
-		return expandIcon ? expandIcon : <Text style={this.styles.headerContent}>+</Text>;
-	}
+		if (this.state.collapsed) {
+			return expandIcon ? expandIcon : <Text style={this.styles.headerContent}>+</Text>;
+		}
 
-	return collapseIcon ? collapseIcon : <Text style={this.styles.headerContent}>-</Text>;
+		return collapseIcon ? collapseIcon : <Text style={this.styles.headerContent}>-</Text>;
 	};
 	```
 
@@ -885,7 +896,7 @@ Next you have to pass the icons configured by the Mendix developer to your displ
 
 		return <Icon icon={nativeIcon} />;
 	};
-   ```
+	```
 
 5. Adjust the **render** method so that it makes use of **renderIcon**:
 
@@ -925,7 +936,7 @@ Fix your icon issue by introducing a default style for your container component:
 		container: {},
 		header: {},
 		headerContent: {
-			color: "#FFF",
+			color: "#FFFFFF",
 			fontSize: 16
 		},
 		content: {}
@@ -944,7 +955,7 @@ Fix your icon issue by introducing a default style for your container component:
 	private readonly styles = flattenStyles(defaultStyle, this.props.style);
 	```
 
-   The **flattenStyles** function will take the styling of the **defaultStyle** constant as a starting point and will override this with properties supplied in the **style** prop.
+	The **flattenStyles** function will take the styling of the **defaultStyle** constant as a starting point and will override this with properties supplied in the **style** prop.
 
 4. Adjust the **renderIcon** method so that it returns an **Icon** component with a color and size defined:
 
@@ -982,18 +993,18 @@ First change the widget property configuration:
 		xmlns="http://www.mendix.com/widget/1.0/"
 		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
 		<name>Group box</name>
-		<description>Widget to group building blocks, snippets or other widgets</description>
-		<icon/>
+		<description />
+		<icon />
 		<properties>
 			<propertyGroup caption="General">
 				<propertyGroup caption="General">
 					<property key="content" type="widgets" required="false">
 						<caption>Content</caption>
-						<description>Widgets to place inside</description>
+						<description>Widgets to place inside.</description>
 					</property>
 					<property key="collapsible" type="enumeration" defaultValue="no">
 						<caption>Collapsible</caption>
-						<description></description>
+						<description />
 						<enumerationValues>
 							<enumerationValue key="no">No</enumerationValue>
 							<enumerationValue key="yesStartExpanded">Yes (start expanded)</enumerationValue>
@@ -1004,15 +1015,15 @@ First change the widget property configuration:
 				<propertyGroup caption="Header">
 					<property key="headerCaption" type="string" required="false">
 						<caption>Caption</caption>
-						<description/>
+						<description />
 					</property>
 					<property key="expandIcon" type="icon" required="false">
 						<caption>Expand icon</caption>
-						<description>Icon used to indicate that the group box can be expanded</description>
+						<description>Icon used to indicate that the group box can be expanded.</description>
 					</property>
 					<property key="collapseIcon" type="icon" required="false">
 						<caption>Collapse icon</caption>
-						<description>Icon used to indicate that the group box can be collapsed</description>
+						<description>Icon used to indicate that the group box can be collapsed.</description>
 					</property>
 				</propertyGroup>
 			</propertyGroup>
@@ -1028,18 +1039,18 @@ First change the widget property configuration:
 	xmlns="http://www.mendix.com/widget/1.0/"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
 	<name>Group box</name>
-	<description>Widget to group building blocks, snippets or other 	widgets</description>
-	<icon/>
+	<description />
+	<icon />
 	<properties>
 		<propertyGroup caption="General">
 			<propertyGroup caption="General">
 				<property key="content" type="widgets" required="false">
 					<caption>Content</caption>
-					<description>Widgets to place inside</description>
+					<description>Widgets to place inside.</description>
 				</property>
 				<property key="collapsible" type="enumeration" defaultValue="no">
 					<caption>Collapsible</caption>
-					<description></description>
+					<description />
 					<enumerationValues>
 						<enumerationValue key="no">No</enumerationValue>
 						<enumerationValue key="yesStartExpanded">Yes (start expanded)</enumerationValue>
@@ -1050,15 +1061,15 @@ First change the widget property configuration:
 			<propertyGroup caption="Header">
 				<property key="headerCaption" type="string" required="false">
 					<caption>Caption</caption>
-					<description/>
+					<description />
 				</property>
 				<property key="expandIcon" type="icon" required="false">
 					<caption>Expand icon</caption>
-					<description>Icon used to indicate that the group box can be expanded</description>
+					<description>Icon used to indicate that the group box can be expanded.</description>
 				</property>
 				<property key="collapseIcon" type="icon" required="false">
 					<caption>Collapse icon</caption>
-					<description>Icon used to indicate that the group box can be collapsed</description>
+					<description>Icon used to indicate that the group box can be collapsed.</description>
 				</property>
 				</propertyGroup>
 				<propertyGroup caption="Common">
@@ -1107,42 +1118,41 @@ First change the widget property configuration:
  	```xml
 	<?xml version="1.0" encoding="utf-8" ?>
 	<widget id="com.mendix.widget.native.groupbox.GroupBox" pluginWidget="true" offlineCapable="true" supportedPlatform="Native"
-	xmlns="http://www.mendix.com/widget/1.0/"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
-	<name>Group box</name>
-	<description>Widget to group building blocks, snippets or other widgets</description>
-	
-	<icon>iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAAHdbkFIAAAAAXNSR0IArs4c6QAA ArVJREFUeAHtWk12gjAQBl4X9Q72PsVFnxufN+ihegOfG18XtfeRO9gVNBMZDPlx gIAQGDcxmczMN99MQohGkc9nt9sVCWVgChNiAAloKbBuOaU9hTBJDPGjKI7HYyyJ 2u/3aZ7nP24y7BIw8AIiUIZO+v2XFnlhGPrdrmqOYC4i80oVGJLY0JodqH0UdUgW 7er30fEN3LGM9c0njZlI45sEjilpEwXqyEpExffT1Vj7AmJ23q6kp1Lp7lko1gxg yaJBva0qTxFUBhCSImv+tYsy6oxfiYwgirw56KeQmpfcBGfetnUBDEv7WRhxYVc5 QMcowH7frR6oAQAdpqfrRWxua+xTrb6VCUcXoVPpuwJzAsBNlHLskguHt+3eNaEc NwDoFBH63mIDgIsqb0+lAT1A753EFxgDYAaYAXUfyMSSWuvr1HeZsf7kGVAPJLXH 55DIkyTZHA6HM/hQl2H17B7SOdhWrwXUVSD9Lu5paDCA9Lc5ksVJvDl/vMqcor56 JFNzjnJs1RrAMdm2OQ9GefFVU751qpoSObfJ5SwnA/oh0+Lg4VDTWnIy8NB6j0KD gWc/C6bHQNPcdc2CzvDoDDAAZoAZYAaYAWaAGVjsiSjreqBhPWZgbgxU9yMYmPpO i2Mzams/HUNctgdB9U49o8AxFCM24zmAM7Ed+j0R/QzV6u+huh9bBehzZt0nK0CP vs29ma5L9dW/e7jmEnuUscZddnC8fQUk8ScARQN9tdKmsE3ZE5eNMMfmPytllIma vHUFlDehjX4PrnnqqVPervfmv30F9BTIVMyQFUDtolMJpCsOrgCKOT4HUAwFLl/8 EmACAq9gb/hcAd4UBm6AKyDwBHrD5wrwpjBwA1wBgSfQGz5XgDeFgRtYfAXwjZBe wfAXTzFmu3XVp4bWh1tjiI0/zIDCwD+0qr6OmQMSvQAAAABJRU5ErkJggg==</icon>
-	<properties>
-		<propertyGroup caption="General">
+		xmlns="http://www.mendix.com/widget/1.0/"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+		<name>Group box</name>
+		<description />
+		<icon>iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAAHdbkFIAAAAAXNSR0IArs4c6QAA ArVJREFUeAHtWk12gjAQBl4X9Q72PsVFnxufN+ihegOfG18XtfeRO9gVNBMZDPlx gIAQGDcxmczMN99MQohGkc9nt9sVCWVgChNiAAloKbBuOaU9hTBJDPGjKI7HYyyJ 2u/3aZ7nP24y7BIw8AIiUIZO+v2XFnlhGPrdrmqOYC4i80oVGJLY0JodqH0UdUgW 7er30fEN3LGM9c0njZlI45sEjilpEwXqyEpExffT1Vj7AmJ23q6kp1Lp7lko1gxg yaJBva0qTxFUBhCSImv+tYsy6oxfiYwgirw56KeQmpfcBGfetnUBDEv7WRhxYVc5 QMcowH7frR6oAQAdpqfrRWxua+xTrb6VCUcXoVPpuwJzAsBNlHLskguHt+3eNaEc NwDoFBH63mIDgIsqb0+lAT1A753EFxgDYAaYAXUfyMSSWuvr1HeZsf7kGVAPJLXH 55DIkyTZHA6HM/hQl2H17B7SOdhWrwXUVSD9Lu5paDCA9Lc5ksVJvDl/vMqcor56 JFNzjnJs1RrAMdm2OQ9GefFVU751qpoSObfJ5SwnA/oh0+Lg4VDTWnIy8NB6j0KD gWc/C6bHQNPcdc2CzvDoDDAAZoAZYAaYAWaAGVjsiSjreqBhPWZgbgxU9yMYmPpO i2Mzams/HUNctgdB9U49o8AxFCM24zmAM7Ed+j0R/QzV6u+huh9bBehzZt0nK0CP vs29ma5L9dW/e7jmEnuUscZddnC8fQUk8ScARQN9tdKmsE3ZE5eNMMfmPytllIma vHUFlDehjX4PrnnqqVPervfmv30F9BTIVMyQFUDtolMJpCsOrgCKOT4HUAwFLl/8 EmACAq9gb/hcAd4UBm6AKyDwBHrD5wrwpjBwA1wBgSfQGz5XgDeFgRtYfAXwjZBe wfAXTzFmu3XVp4bWh1tjiI0/zIDCwD+0qr6OmQMSvQAAAABJRU5ErkJggg==</icon>
+		<properties>
 			<propertyGroup caption="General">
-				<property key="content" type="widgets" required="false">
-					<caption>Content</caption>
-					<description>Widgets to place inside</description>
-				</property>
-				<property key="collapsible" type="enumeration" defaultValue="no">
-					<caption>Collapsible</caption>
-					<description></description>
-					<enumerationValues>
-						<enumerationValue key="no">No</enumerationValue>
-						<enumerationValue key="yesStartExpanded">Yes (start expanded)</enumerationValue>
-						<enumerationValue key="yesStartCollapsed">Yes (start collapsed)</enumerationValue>
-					</enumerationValues>
-				</property>
-			</propertyGroup>
-			<propertyGroup caption="Header">
-				<property key="headerCaption" type="string" required="false">
-					<caption>Caption</caption>
-					<description/>
-				</property>
-				<property key="expandIcon" type="icon" required="false">
-					<caption>Expand icon</caption>
-					<description>Icon used to indicate that the group box can be expanded</description>
-				</property>
-				<property key="collapseIcon" type="icon" required="false">
-					<caption>Collapse icon</caption>
-					<description>Icon used to indicate that the group box can be collapsed</description>
-				</property>
+				<propertyGroup caption="General">
+					<property key="content" type="widgets" required="false">
+						<caption>Content</caption>
+						<description>Widgets to place inside.</description>
+					</property>
+					<property key="collapsible" type="enumeration" defaultValue="no">
+						<caption>Collapsible</caption>
+						<description />
+						<enumerationValues>
+							<enumerationValue key="no">No</enumerationValue>
+							<enumerationValue key="yesStartExpanded">Yes (start expanded)</enumerationValue>
+							<enumerationValue key="yesStartCollapsed">Yes (start collapsed)</enumerationValue>
+						</enumerationValues>
+					</property>
+				</propertyGroup>
+				<propertyGroup caption="Header">
+					<property key="headerCaption" type="string" required="false">
+						<caption>Caption</caption>
+						<description />
+					</property>
+					<property key="expandIcon" type="icon" required="false">
+						<caption>Expand icon</caption>
+						<description>Icon used to indicate that the group box can be expanded.</description>
+					</property>
+					<property key="collapseIcon" type="icon" required="false">
+						<caption>Collapse icon</caption>
+						<description>Icon used to indicate that the group box can be collapsed.</description>
+					</property>
 				</propertyGroup>
 				<propertyGroup caption="Common">
 					<systemProperty key="Name" />
@@ -1323,12 +1333,12 @@ Although you have an extensively featured group box widget, you can still improv
 			backgroundColor: shadeblendconvert(0.4, brand.primary)
 		},
 		headerContent: {
-			color: "#000"
+			color: "#000000"
 		}
 	};
 	```
 
-   Note that the name of the constant has to be almost the same as the widget ID. However, the widget ID's periods need to be underscores. Using this convention, the Mendix Client can apply the custom style defined in this constant to the group box widget.
+	Note that the name of the constant has to be almost the same as the widget ID. However, the widget ID's periods need to be underscores. Using this convention, the Mendix Client can apply the custom style defined in this constant to the group box widget.
 
 3. Save the file and refresh the your app in the Make It Native app to see your new default style. On Android, note the ripple effect on the header that was previously not visible:
 
@@ -1349,7 +1359,7 @@ It would be nice to provide the developer with some pre-defined styles that can 
 			backgroundColor: shadeblendconvert(0.4, brand.success)
 		},
 		headerContent: {
-			color: "#000"
+			color: "#000000"
 		}
 	};
 
@@ -1361,7 +1371,7 @@ It would be nice to provide the developer with some pre-defined styles that can 
 			backgroundColor: shadeblendconvert(0.4, brand.warning)
 		},
 		headerContent: {
-			color: "#000"
+			color: "#000000"
 		}
 	};
 
@@ -1373,7 +1383,7 @@ It would be nice to provide the developer with some pre-defined styles that can 
 			backgroundColor: shadeblendconvert(0.4, brand.danger)
 		},
 		headerContent: {
-			color: "#000"
+			color: "#000000"
 		}
 	};
 	```
@@ -1444,6 +1454,7 @@ The developer needs to have the class names memorized to apply a certain group b
 	
 ## 4 Read More
 
-* [Implement Native Styling](/howto/mobile/native-styling)
-* [Native Styling](/refguide/native-styling-refguide)
-* [Build Pluggable Widgets](/howto/extensibility/pluggable-widgets)
+* [Pluggable Widgets API Documentation](/apidocs-mxsdk/apidocs/pluggable-widgets)
+* [How to Implement Native Styling](/howto/mobile/native-styling)
+* [Native Styling Reference Guide](/refguide/native-styling-refguide)
+* [How to Build Pluggable Widgets](/howto/extensibility/pluggable-widgets)

@@ -1,5 +1,5 @@
 ---
-title: "History Dialog"
+title: "History"
 parent: "dialogs"
 tags: ["studio pro"]
 ---

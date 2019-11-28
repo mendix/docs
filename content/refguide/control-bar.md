@@ -1,13 +1,14 @@
 ---
 title: "Control Bar"
-parent: "data-grid"
+parent: "grids"
+menu_order: 30
 tags: ["studio pro", "control bar", "data grid", "template grid", "reference set selector", "control bar buttons"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
-The control bar of the template grid, data grid, and reference set selector allows you to manipulate the objects displayed by means of buttons. By default, both grids will be created with **[Search](#search-button)** **[New](#create-button)**, [**Edit**](#grid-action-button), and [**Delete**](#grid-action-button) buttons in the control bar:
+A control bar of a [template grid](template-grid), [data grid](data-grid), and [reference set selector](reference-set-selector) allows you to manipulate the objects displayed by means of buttons. By default, both grids will be created with **[Search](#search-button)** **[New](#create-button)**, [**Edit**](#grid-action-button), and [**Delete**](#grid-action-button) buttons in the control bar:
 
 ![Data Grid Control Bar](attachments/data-widgets/control-bar-example.png)
 
@@ -42,7 +43,7 @@ You can use an existing page or you can generate the appropriate page by either:
 
 Both these options allow you to create a page which has the correct format for use by the add button. You can, of course, edit the page to meet your own requirements once it has been generated.
 
-For more information, see [Opening Pages](opening-pages). Note that opening select pages in content is prohibited.
+See the [Show a Page](on-click-event#show-page) section of *On Click Event & Events Section*. Note that select pages must have a [pop-up layout](layout#layout-type).
 
 ### 2.3 Create Button {#create-button}
 

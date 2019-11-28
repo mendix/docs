@@ -166,10 +166,10 @@ Add an interactive search box to all of your list views with this widget. This s
 
 ### 8.2 Developing
 
-1. Fork and clone the **mendixlabs / list-view-controls** repo: `git clone https://github.com/mendixlabs/list-view-controls.git`. The code is in typescript. Use a typescript IDE of your choice, like Visual Studio Code or WebStorm.
+1. Fork and clone the [mendixlabs/list-view-controls](https://github.com/mendixlabs/list-view-controls.git) repository. The code is in Typescript.
 2. Set up the development environment by running `npm install`.
 3. Create a folder named *dist* in the project root.
-4. Create a Mendix test project in the *dist* folder and rename its root folder to *dist/MxTestProject*. Changes to the widget code shall be automatically pushed to this test project. Or, you can get the test project from [Releases](https://github.com/mendixlabs/list-view-controls/releases/latest).
+4. Create a Mendix test project in the *dist* folder and rename its root folder to *dist/MxTestProject*, or get the test project from [mendixlabs/list-view-controls](https://github.com/mendixlabs/list-view-controls/releases/latest). Changes to the widget code will be automatically pushed to this test project.
 5. To automatically compile, bundle, and push code changes to the running test project, run `npm start`.
 6. To run the project unit tests with code coverage (results can be found at `dist/testresults/coverage/index.html`), run: `npm run test:unit`.
 7. Run the unit test continuously during development via `npm run test:dev`.

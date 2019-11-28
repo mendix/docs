@@ -57,23 +57,9 @@ Reference set selector properties consist of the following sections:
 
 ### 2.2 Data Source Section {#data-source}
 
-{{% snippet file="refguide/attribute-path-property.md" %}}
+{{% snippet file="refguide/data-source-section-link.md" %}}
 
-The attribute path specifies which attribute(s) of an associated entity is shown in the reference set selector. The path must follow one association of type reference starting in the entity of the data view.
-
-{{% alert type="info" %}}
-In the case of a reference set selector you are selecting an association to another object. The attribute should indicate uniquely to the end-user which object is being selected.
-{{% /alert %}}
-
-The attribute can be of one of the following [data types](data-types):
-
-* Autonumber
-* Date and Time
-* Decimal
-* Enumeration
-* Integer
-* Long
-* String
+The attribute path specifies which attribute(s) of an associated entity is shown in the reference set selector. The path must follow one association, of type reference set, starting in the entity of the data view.
 
 ### 2.3 Design Properties Section {#design-properties}
 
@@ -97,7 +83,7 @@ The select page property determines which page is displayed when the input refer
 
 If an input reference set selector is never editable, a select page is not required.
 
-See [Opening Pages](opening-pages). Note that opening select pages in content is prohibited.
+See the [Show a Page](on-click-event#show-page) section of *On Click Event & Events Section*. Note that select pages must have a [pop-up layout](layout#layout-type).
 
 {{% alert type="info" %}}
 You can generate a new page to show by right-clicking the widget and selecting **Generate select page…**.

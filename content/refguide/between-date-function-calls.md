@@ -11,9 +11,9 @@ Functions for calculating the differences between two dates.
 ## 2 millisecondsBetween
 
 *   First date
-    Type: DateTime
+    Type: Date and time
 *   Second date
-    Type: DateTime
+    Type: Date and time
 
 ### 2.1 Output
 
@@ -34,9 +34,9 @@ results in
 ## 3 secondsBetween
 
 *   First date
-    Type: DateTime
+    Type: Date and time
 *   Second date
-    Type: DateTime
+    Type: Date and time
 
 ### 3.1 Output
 
@@ -57,9 +57,9 @@ results in
 ## 4 minutesBetween
 
 *   First date
-    Type: DateTime
+    Type: Date and time
 *   Second date
-    Type: DateTime
+    Type: Date and time
 
 ### 4.1 Output
 
@@ -80,9 +80,9 @@ results in
 ## 5 hoursBetween
 
 *   First date
-    Type: DateTime
+    Type: Date and time
 *   Second date
-    Type: DateTime
+    Type: Date and time
 
 ### 5.1 Output
 
@@ -103,9 +103,9 @@ results in
 ## 6 daysBetween
 
 *   First date
-    Type: DateTime
+    Type: Date and time
 *   Second date
-    Type: DateTime
+    Type: Date and time
 
 ### 6.1 Output
 
@@ -126,9 +126,9 @@ results in
 ## 7 weeksBetween
 
 *   First date
-    Type: DateTime
+    Type: Date and time
 *   Second date
-    Type: DateTime
+    Type: Date and time
 
 ### 7.1 Output
 

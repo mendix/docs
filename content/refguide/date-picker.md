@@ -41,7 +41,7 @@ Date picker properties consist of the following sections:
 
 ### 2.2 Data Source Section{#data-source}
 
-{{% snippet file="refguide/attribute-path-property.md" %}}
+{{% snippet file="refguide/data-source-section-link.md" %}}
 
 ### 2.3 Design Properties Section{#design-properties}
 
@@ -83,7 +83,7 @@ The format chosen here does not affect how data is stored; in all cases both a d
 
 The possible values for date format are shown below:
 
-* **Date** (this is the default)
+* **Date** *(default)*
 * **Time**
 * **Date and time**
 * **Custom** (see below for more details)
@@ -112,7 +112,7 @@ Placeholder text will not be displayed if a native date picker is available (tha
 
 ### 2.8 Validation Section{#validation}
 
-{{% snippet file="refguide/widget-validation.md" %}}
+{{% snippet file="refguide/widget-validation-link.md" %}}
 
 ### 2.9 Visibility Section{#visibility}
 

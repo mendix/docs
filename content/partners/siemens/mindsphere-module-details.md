@@ -119,11 +119,13 @@ And in the Mendix example app they will be mapped to these roles:
 
 ![Mendix Project Security dialog](attachments/mindsphere-module-details/image9.png)
 
-## 3 MindSphere OS Bar{#msosbar}
+## 3 MindSphere OS Bar {#msosbar}
 
 All MindSphere apps must integrate the MindSphere OS Bar. This unifies the UI of all MindSphere apps. It is used for showing the app name, routing back to the Launchpad, and signing out from MindSphere easily. Apps without the MindSphere OS Bar will not be validated for deployment to a MindSphere production environment.
 
-You can see how the MindSphere OS Bar Integration works in [MindSphere OS Bar Integration](https://developer.mindsphere.io/resources/osbar/resources-osbar-getting-started.html#mindsphere-os-bar-integration), on the MindSphere developer website.
+You can see how the MindSphere OS Bar Integration works in [MindSphere OS Bar](https://design.mindsphere.io/osbar/introduction.html), on the MindSphere developer website.
+
+The MindSphereOSBarConfig module provides a constant **OSBarURL** for specifying the OS Bar URL. See [getting the MindSphere OS Bar](https://design.mindsphere.io/osbar/introduction.html#tab1anchor0) for a list of available URL locations.
 
 The MindSphereOSBarConfig module creates an endpoint which is used by the MindSphere OS Bar to provide tenant context and information about the application. The MindSphereOSBarConfig module is included in the MindSphere starter app, or can be downloaded from the Mendix App Store here: [MindSphere OS Bar Connector](https://appstore.home.mendix.com/link/app/108804/).
 
@@ -232,52 +234,57 @@ In index.html, in the header before the line `{{themecss}}`, the following scrip
 
 		var xrsfToken = getCookie("XSRF-TOKEN");
 		if (window.fetch) {
-			var originalFetch = window.fetch;
-			window.fetch = function(url, init) {
-				if (!init) {
-					init = {};
-				}
-				if (!init.headers) {
-					init.headers = new Headers();
-				}
-				var tokenAvailable = init.headers.get("x-xsrf-token");
-
-				if (!tokenAvailable) {
-					init.headers.set("x-xsrf-token", xrsfToken);
-				}
-				return originalFetch(url, init);
-			}
-		}
-
-		var originalXMLHttpRequest = window.XMLHttpRequest;
-		window.XMLHttpRequest = function() {
-			var result = new originalXMLHttpRequest(arguments);
-
-			// overwrite setRequestHeader function to make sure to set the x-xsrf-token only once
-			result.setRequestHeader = function(header, value) {
-				if (header){
-					if (header.toLowerCase().indexOf("x-xsrf-token") !== -1) {
-						if (this.xsfrTokenSet === true) {
-							// token is already in place -> so do nothing
-							return;
-						}
-						this.xsfrTokenSet = true;
+				var originalFetch = window.fetch;
+				window.fetch = function(url, init) {
+					if (!init) {
+						init = {};
 					}
+					if (!init.headers) {
+						init.headers = new Headers();
+					}
+					var tokenAvailable = typeof init.headers.get === "function" ? init.headers.get("x-xsrf-token") : init.headers.hasOwnProperty("x-xsrf-token");
+
+					if (!tokenAvailable) {
+						if (typeof init.headers.set === "function") {
+							init.headers.set("x-xsrf-token", xrsfToken);
+						} else {
+							init.headers["x-xsrf-token"] = xrsfToken;
+						}
+					}
+					return originalFetch(url, init);
 				}
-				originalXMLHttpRequest.prototype.setRequestHeader
-						.apply(this, arguments);
-			};
+			}
+			if (!window.fetch || (window.fetch && /Edge/.test(navigator.userAgent))) {
+				var originalXMLHttpRequest = window.XMLHttpRequest;
+				window.XMLHttpRequest = function() {
+					var result = new originalXMLHttpRequest(arguments);
 
-			// overwrite open function to make sure to set the x-xsrf-token at least once
-			result.open = function() {
-				originalXMLHttpRequest.prototype.open
-						.apply(this, arguments);
+					// overwrite setRequestHeader function to make sure to set the x-xsrf-token only once
+					result.setRequestHeader = function(header, value) {
+						if (header){
+							if (header.toLowerCase().indexOf("x-xsrf-token") !== -1) {
+								if (this.xsfrTokenSet === true) {
+									// token is already in place -> so do nothing
+									return;
+								}
+								this.xsfrTokenSet = true;
+							}
+						}
+						originalXMLHttpRequest.prototype.setRequestHeader
+							.apply(this, arguments);
+					};
 
-				this.setRequestHeader("x-xsrf-token", xrsfToken);
+					// overwrite open function to make sure to set the x-xsrf-token at least once
+					result.open = function() {
+						originalXMLHttpRequest.prototype.open
+							.apply(this, arguments);
+
+						this.setRequestHeader("x-xsrf-token", xrsfToken);
+					};
+					return result;
+				};
 			};
-			return result;
-		};
-	})();
+		})();
 	// MindSphere specific part-1: ends
 </script>
 ```
@@ -314,40 +321,56 @@ For the OS Bar to work correctly in your Mendix app, the following script has to
 {{% /alert %}}
 
 ```javascript
-<script>
-	// MindSphere specific part-3: OS Bar related code
-	(function(d1, script1) {
-		script1 = d1.createElement('script');
-		script1.type = 'text/javascript';
-		script1.async = true;
-		script1.onload = function() {
-			_mdsp.init({
-				appId : 'content',
-				appInfoPath : "/rest/os-bar/v1/config",
-				initialize : true
-			});
-
+   <script>
+		// MindSphere specific part-3: OS Bar related code
+		var loadMendix = function() {
 			// dojoConfig needs to be defined before loading mxui.js
 			dojoConfig = {
-				isDebug : false,
-				baseUrl : "mxclientsystem/dojo/",
-				cacheBust : "{{cachebust}}",
-				rtlRedirect : "index-rtl.html"
+				isDebug: false,
+				baseUrl: 'mxclientsystem/dojo/',
+				cacheBust: '{{cachebust}}',
+				rtlRedirect: 'index-rtl.html',
 			};
-
-			// make sure that the mxui.js is loaded after osbar/v4/js/main.min.js to prevent problems with the height calculation of some elements
+			// make sure that the mxui.js is loaded after /rest/os-bar/v1/loader to prevent problems with the height calculation of some elements
 			(function(d2, script2) {
 				script2 = d2.createElement('script');
 				script2.src = 'mxclientsystem/mxui/mxui.js?{{cachebust}}';
 				script2.async = true;
 				d2.getElementsByTagName('body')[0].appendChild(script2);
-			}(document));
+			})(document);
 		};
-		script1.src = 'https://static.eu1.mindsphere.io/osbar/v4/js/main.min.js';
-		d1.getElementsByTagName('head')[0].appendChild(script1);
-	}(document));
-	// MindSphere specific part-3: ends
-</script>
+
+		(function(d1, script1) {
+			script1 = d1.createElement('script');
+			script1.type = 'text/javascript';
+			script1.async = true;
+			script1.onload = function() {
+				_mdsp.init({
+					appId: 'content',
+					appInfoPath: '/rest/os-bar/v1/config',
+					initialize: true,
+				});
+				loadMendix();
+			};
+			script1.onerror = function() {
+				var body = d1.getElementsByTagName('body')[0];
+				var html =
+					'<osbar-root id="OSBarErrorText" class="mdsp_osbf_outer">' +
+						'<div class="mdsp_osbf_inner">MindSphere OSBar could not be loaded. Please check your ' +
+							'<a title="Proxy Settings" class="mdsp_osbf_link" target="_blank" rel="noopener" href="https://docs.mendix.com/partners/siemens/mindsphere-development-considerations#localtesting"> proxy settings</a>' +
+							'<span> or the OSBarURL in the MindSphereOSBarConnector</span>' +
+						'</div>' +
+					'</osbar-root>';
+
+				body.insertAdjacentHTML('afterbegin', html);
+				body.className = body.className + " mdsp_osbf_body"
+				loadMendix();
+			};
+			script1.src = '/rest/os-bar/v1/osbar.loader.js';
+			d1.getElementsByTagName('head')[0].appendChild(script1);
+		})(document);
+		// MindSphere specific part-3: ends
+	</script>
 ```
 
 ### 5.2 mindspherelogin.html{#mindspherelogin}

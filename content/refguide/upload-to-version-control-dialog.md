@@ -9,24 +9,41 @@ tags: ["studio pro"]
 
 Use this dialog box to upload an app that is not yet stored in a version control server.
 
+![Upload to Version Control Server… menu option](attachments/upload-to-version-control/upload-to-version-control-server.png)
+
 ## 2 Location
 
-Use this setting to select the location where you want to store your app. This can be either the [Team Server](/developerportal/develop/team-server) or an SVN server other than the Team Server.
+Use this setting to select the location where you want to store your app. There are three options, which are described below.
+
+### 2.1 New Mendix Team Server
+
+You can create a new app on [Mendix Team Server](/developerportal/develop/team-server).
+
+* Select **New Mendix Team Server**
+* Enter the name for the new Team Server project and repository in the **App name** field
+
+	![Enter App name for New mendix Team Server](attachments/upload-to-version-control/new-team-server-app.png)
+
+### 2.2 Existing Mendix Team Server
 
 {{% alert type="warning" %}}
-This option is only available when support for other SVN servers is enabled in the **Preferences** dialog box.
+You can only upload to an existing repository if the repository is currently empty
 {{% /alert %}}
 
-### 2.1 Mendix Team Server
+* Select **Existing Mendix Team Server**
+* Select the **Team Server App** from the list
 
-When uploading the app to the Team Server, you can choose between creating a new repository (in which a new Team Server project will also be created) or uploading to an existing one:
+	![Select existing mendix Team Server](attachments/upload-to-version-control/existing-team-server-app.png)
 
-* When creating a new repository, enter the name for the new Team Server project and repository in the **App name** field
-* To use an existing repository, select the corresponding Team Server app from the list (note that this only works when the existing repository is empty)
+### 2.3 Private Server
 
-### 2.2 Another SVN Server
+This option is only available when support for other servers is enabled in **Edit** > **Preferences** > **Advanced** > [Enable private version control](preferences-dialog#enable)).
 
-In the **SVN repository address** field, enter the address of the repository to which you want to upload your app.
+![Enable private version control in advanced preferences](attachments/upload-to-version-control/enable-private-version-control.png)
+
+If you select **Private server**, enter the address of the repository to which you want to upload your app in the **App repository address** field.
+
+![Enable private version control in advanced preferences](attachments/upload-to-version-control/private-server-app.png)
 
 ## 3 Read More
 

@@ -8,7 +8,7 @@ tags: ["studio pro"]
 
 This is a reference for adding a time unit to a date. 
 
-The first input can be either a new dateTime (depicted in all examples), a variable of the DateTime type, or an attribute of a domain entity of the DateTime type.
+The first input can be either a new dateTime (depicted in all examples), a variable of type **Date and time**, or an attribute of a domain entity of type **Date and time**.
 
 ## 2 addMilliseconds
 
@@ -17,13 +17,13 @@ Add a number of milliseconds to a date.
 ### 2.1 Input Parameters
 
 * Initial date
-	* Type: DateTime
+	Type: Date and time
 * The amount of milliseconds to be added
     Type: Integer
 
 ### 2.2 Output
 
-A result of type DateTime that corresponds to the initial date plus x milliseconds.
+A result of type **Date and time** that corresponds to the initial date plus x milliseconds.
 
 {{% alert type="info" %}}
 
@@ -48,13 +48,13 @@ Add a number of seconds to a date.
 ### 3.1 Input Parameters
 
 *   Initial date
-    Type: DateTime
+    Type: Date and time
 *   The amount of seconds to be added
     Type: Integer
 
 ### 3.2 Output
 
-A result of type DateTime that corresponds to the initial date plus x seconds.
+A result of type **Date and time** that corresponds to the initial date plus x seconds.
 
 {{% alert type="info" %}}
 
@@ -79,13 +79,13 @@ Add a number of minutes to a date.
 ### 4.1 Input Parameters
 
 *   Initial date
-    Type: DateTime
+    Type: Date and time
 *   The amount of minutes to be added
     Type: Integer
 
 ### 4.2 Output
 
-A result of type DateTime that corresponds to the initial date plus x minutes.
+A result of type **Date and time** that corresponds to the initial date plus x minutes.
 
 {{% alert type="info" %}}
 
@@ -110,13 +110,13 @@ Add a number of hours to a date.
 ### 5.1 Input Parameters
 
 *   Initial date
-    Type: DateTime
+    Type: Date and time
 *   The amount of hours to be added
     Type: Integer
 
 ### 5.2 Output
 
-A result of type DateTime that corresponds to the initial date plus x hours.
+A result of type **Date and time** that corresponds to the initial date plus x hours.
 
 {{% alert type="info" %}}
 
@@ -141,13 +141,13 @@ Add a number of days to a date. `addDays` uses the server's calendar and `addDay
 ### 6.1 Input Parameters
 
 *   Initial date
-    Type: DateTime
+    Type: Date and time
 *   The amount of days to be added
     Type: Integer
 
 ### 6.2 Output
 
-A result of type DateTime that corresponds to the initial date plus x days.
+A result of type **Date and time** that corresponds to the initial date plus x days.
 
 {{% alert type="info" %}}
 
@@ -172,13 +172,13 @@ Add a number of weeks to a date. `addWeeks` uses the server's calendar and `addW
 ### 7.1 Input Parameters
 
 *   Initial date
-    Type: DateTime
+    Type: Date and time
 *   The amount of weeks to be added
     Type: Integer
 
 ### 7.2 Output
 
-A result of type DateTime that corresponds to the initial date plus x weeks.
+A result of type **Date and time** that corresponds to the initial date plus x weeks.
 
 {{% alert type="info" %}}
 
@@ -203,13 +203,13 @@ Add a number of months to a date. `addMonths` uses the server's calendar and `ad
 ### 8.1 Input Parameters
 
 *   Initial date
-    Type: DateTime
+    Type: Date and time
 *   The amount of months to be added
     Type: Integer
 
 ### 8.2 Output
 
-A result of type DateTime that corresponds to the initial date plus x months.
+A result of type **Date and time** that corresponds to the initial date plus x months.
 
 {{% alert type="info" %}}
 
@@ -234,13 +234,13 @@ Add a number of years to a date. `addYears` uses the server's calendar and `addY
 ### 9.1 Input Parameters
 
 *   Initial date
-    Type: DateTime
+    Type: Date and time
 *   The amount of years to be added
     Type: Integer
 
 ### 9.2 Output
 
-A result of type DateTime that corresponds to the initial date plus x years.
+A result of type **Date and time** that corresponds to the initial date plus x years.
 
 {{% alert type="info" %}}
 

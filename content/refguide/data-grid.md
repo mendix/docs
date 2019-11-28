@@ -1,8 +1,8 @@
 ---
 title: "Data Grid"
-parent: "data-widgets"
-menu_order: 20
-tags: ["studio pro"]
+parent: "grids"
+menu_order: 10
+tags: ["studio pro", "data grid", "grid", "data widget"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -19,10 +19,11 @@ Using controls provided by the data grid you can browse, search, and edit those 
 
 A data grid contains the following components: 
 
-* [Columns](columns) – allows you to set properties for a data grid column
-* [Control bar](control-bar) – allows you to control the objects displayed in the data grid by means of buttons
-* [Search bar](search-bar) – allows end-users to search for objects in the data grid
-* [Sort bar](sort-bar) – allows you to sort items in the data grid 
+1. [Search bar](search-bar) – allows end-users to search for objects in the data grid
+2. [Search bar](search-bar) – allows end-users to search for objects in the data grid
+3. [Sort bar](sort-bar) – allows end-users to sort items in the data grid 
+4.  [Grid Columns](columns) – allows end-users to set properties for a data grid column
+	![](attachments/data-widgets/data-grid-components.png)
 
 ## 3 Properties
 
@@ -100,7 +101,7 @@ The selection mode determines whether and how the user can select items in the g
 | Single selection | The user can select a single item by clicking on it. Clicking another item will make that item the selection. |
 | Single selection and maintain | The user can select one item at a time by clicking on it. Users cannot deselect an item. By default the first item will be selected and removing a selected item will autoselect a subsequent item. |
 | Multi-selection | The user can select multiple items by clicking the first one and holding the 'Ctrl' key while clicking on other items. Simply clicking an item will deselect all items and make the clicked item the selection. |
-| Simple multi-selection | The user can select multiple items by simply clicking on them. This was the default multi-selection behavior prior to version 3.1.0. |
+| Simple multi-selection | The user can select multiple items by simply clicking on them. |
 
 _Default value:_ Single selection
 
@@ -140,7 +141,7 @@ A tooltip page is a page that appears when you hover your mouse over a row. The 
 To perform actions on a data grid, select it on a page and right-click it. The list of possible actions opens. While some actions from this list, such as **Select data source**, **Edit condition for visible**, are a quick way to set the properties, the following actions are specific actions that you can perform:
 
 * **Go to entity** – opens a domain model and highlights an an entity that is used as the data source 
-* **Go to data source microflow **– this action is only displayed when a microflow is set as the data source and opens this microflow 
+* **Go to data source microflow** – this action is only displayed when a microflow is set as the data source and opens this microflow 
 * **Go to tooltip page** – opens a page select as the [tooltip page](#tooltip-page) in properties
 
 ## 5 Read More
@@ -149,4 +150,4 @@ To perform actions on a data grid, select it on a page and right-click it. The l
 * [Data Widgets](data-widgets)
 * [Data Sources](data-sources)
 * [Properties Common for Widgets](common-widget-properties)
-* [Columns](columns) 
+* [Grid Columns](columns) 

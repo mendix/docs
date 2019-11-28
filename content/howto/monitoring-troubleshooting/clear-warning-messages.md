@@ -176,7 +176,6 @@ Variable ‘Variable’ is never used.
 * [Configure Log Levels](log-levels)
 * [Debug Microflows](debug-microflows)
 * [Debug Java Actions](debug-java-actions)
-* [Handle Common Mendix SSO Errors](handle-common-mendix-sso-errors)
 * [Debug Microflows Remotely](debug-microflows-remotely)
 
-Several warnings relate to improper security. For more information on this, see [Project Security](/refguide/project-security) in the *Mendix Studio Pro Guide*.
+Several warnings relate to improper security. For more information on this, see [Project Security](/refguide/project-security) in the *Studio Pro Guide*.

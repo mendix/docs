@@ -72,24 +72,25 @@ The way you can add an element on a page depends on a mode you are editing your 
 
 In **Structure mode**, there are several ways to add an element on a page:
 
-1.  Through the **Toolbox**: <br/>
-    a. Open the **Toolbox** and select **Widgets** or **Building blocks** tab there. <br/>
+1.  Through the **Toolbox**:
+
+    1. Open the **Toolbox** and select **Widgets** or **Building blocks** tab there.
     
-    ![](attachments/page/toolbox.png)<br/>
+        ![](attachments/page/toolbox.png)
    
-    c. Select an element you would like to add and drag and drop this element on your page. <br/>
+    2. Select an element you would like to add and drag and drop this element on your page.
    
-2. Though the menu at the top of the page: <br/>
+2. Though the menu at the top of the page:
 
-    a.  Do one of the following:<br/>
+    1. Do one of the following:
 
-    ​	i. Select frequently-used widgets (a data view, a data grid, a template grid, or a list view).<br/>
+        i. Select frequently-used widgets (a data view, a data grid, a template grid, or a list view).
 
-    ​	ii. Click **Add widget**  or **Add building block**, find an element in a list and click **Select**.<br/>
+        ii. Click **Add widget**  or **Add building block**, find an element in a list and click **Select**.
 
-    ​	![](attachments/page/top-menu.png)
-
-    b. Click a drop-zone on a page to position an element.  <br/>
+        ![](attachments/page/top-menu.png)
+        
+    2. Click a drop-zone on a page to position an element.
 
 3. By right-clicking a drop-zone:<br/>
 

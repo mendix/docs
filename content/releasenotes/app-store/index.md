@@ -9,7 +9,23 @@ These release notes cover changes made to the [Mendix App Store](https://appstor
 
 ## 2019
 
+### November 14th, 2019
+
+#### Content Support Update
+
+We are invested in maintaining Mendix App Store content to make it easier for you to find and use the widgets and modules that you need. To that end, we have cleaned up old App Store content where Mendix support is no longer possible and changed the support level from **Platform support** to **Community support**.
+
+For more information on these support levels, see [App Store Content Support](/developerportal/app-store/app-store-content-support).
+
+### November 6th, 2019
+
+#### Improvement
+
+You can now subscribe to receive emails when new versions of your [favorite](/developerportal/app-store/app-store-overview#favorites) App Store content are published.
+
 ### October 23rd, 2019
+
+#### New Features
 
 You can now create [user groups](/developerportal/app-store/app-store-overview#user-groups) for your company and assign your company’s App Store content to different groups. Management of user group content is restricted to only the members of the group. You can also add [guest](/developerportal/app-store/app-store-overview#guests) users to these groups and allow them to download selected private company content.
 
@@ -19,35 +35,35 @@ Content that was marked as **Protected** as well as content marked as **Shared w
 
 ### October 1st, 2019
 
-#### Improvements
+#### Improvement
 
-* We now display the UUID of an App Store component in the [Additional Info](/developerportal/app-store/app-store-overview#additional-info) section of its details page. This allows you to specify the `TemplateUUID` when calling the [CreateNewApp operation](/apidocs-mxsdk/apidocs/projects-api#createnewapp) in the *Projects API*.
+We now display the UUID of an App Store component in the [Additional Info](/developerportal/app-store/app-store-overview#additional-info) section of its details page. This allows you to specify the `TemplateUUID` when calling the [CreateNewApp operation](/apidocs-mxsdk/apidocs/projects-api#createnewapp) in the *Projects API*.
 
 ### September 11th, 2019
 
-#### Improvements
+#### Improvement
 
-*  We added the flexibility to label your App Store content with a [custom version number](/developerportal/app-store/share-app-store-content#updating).
+We added the flexibility to label your App Store content with a [custom version number](/developerportal/app-store/share-app-store-content#updating).
 
-	{{% alert type="info" %}}This is based on an [upvoted idea from Andreas Blaesius](https://forum.mendixcloud.com/link/ideas/1324) submitted to the [Mendix Idea Forum](https://forum.mendixcloud.com/index4.html). Thanks, Andreas!{{% /alert %}}
+{{% alert type="info" %}}This is based on an [upvoted idea from Andreas Blaesius](https://forum.mendixcloud.com/link/ideas/1324) submitted to the [Mendix Idea Forum](https://forum.mendixcloud.com/index4.html). Thanks, Andreas!{{% /alert %}}
 
 ### August 30th, 2019
 
 #### SAP Connector Renaming
 
-* We renamed all the SAP-related connectors and starter apps in the App Store to be consistent. The changes are:
+We renamed all the SAP-related connectors and starter apps in the App Store to be consistent. The changes are:
 
-	| Type | Old Name | New Name |
-	| ----- | ----- | -----|
-	| Connector | SAP Cloud Platform XSUAA Connector | XSUAA Connector for SAP Cloud Platform |
-	| Connector | SAP Fiori UI Package | UI Package for SAP Fiori themed apps |
-	| Connector | SAP Leonardo Machine Learning Foundation Connector | Connector for SAP Leonardo Machine Learning Foundation |
-	| Connector | SAP OData Connector | OData Connector for SAP solutions |
-	| Connector | SAP OData Model Creator | OData Model Creator for SAP solutions |
-	| Starter App | Fiori Blank | Blank App for SAP Fiori themed apps |
-	| Starter App | SAP Northwind OData | Northwind OData Service Master-Detail App for SAP solutions |
-	| Starter App | SAP Purchase Order Approval Tutorial | Purchase Order Approval Tutorial for SAP solutions |
-  
+ Type | Old Name | New Name |
+ ----- | ----- | -----|
+ Connector | SAP Cloud Platform XSUAA Connector | XSUAA Connector for SAP Cloud Platform |
+ Connector | SAP Fiori UI Package | UI Package for SAP Fiori themed apps |
+ Connector | SAP Leonardo Machine Learning Foundation Connector | Connector for SAP Leonardo Machine Learning Foundation |
+ Connector | SAP OData Connector | OData Connector for SAP solutions |
+ Connector | SAP OData Model Creator | OData Model Creator for SAP solutions |
+ Starter App | Fiori Blank | Blank App for SAP Fiori themed apps |
+ Starter App | SAP Northwind OData | Northwind OData Service Master-Detail App for SAP solutions |
+ Starter App | SAP Purchase Order Approval Tutorial | Purchase Order Approval Tutorial for SAP solutions |
+
 ### August 26th, 2019
 
 #### SAP OData Connector Improvements & Fixes
@@ -55,28 +71,27 @@ Content that was marked as **Protected** as well as content marked as **Shared w
 * We updated the **SAP OData Connector** to support the **Edm.Int64** data type. (Ticket 87284)
 * We also fixed a *java.net.SocketException: Broken pipe (Write failed)* exception which occurred when sending a large request to the OData service endpoint. (Ticket 86680)
 
-
 ### July 31st, 2019  
 
 #### Improvements 
 
-* We simplified the options available for formatting the Documentation section when creating new app store content.
+* We simplified the options available for formatting the Documentation section when creating new App Store content.
 * We made it possible to upload images into the Documentation editor - you can drag and drop an image from your file explorer into the editor, or link to images via URL (Copy + Paste does *not* work due to browser inconsistencies).
 * We made some user changes and improvements when you create new content using GitHub as the source. For example, an easier-to-use selection screen when choosing your repository.  
 * We also made some other minor bug fixes. 
 
 ### July 5th, 2019
 
-#### SAP Logging Connector Update
+#### SAP Logging Connector Updates
 
 * We updated the **SAP Logging Connector** to allow the log level to be set via a constant instead of an enumeration. This means that you can change the log level with a restart, without needing to fully redeploy your app.
 * We also solved an issue where the SAP Logging Connector had conflicts with the Community Commons module.
 
 ### June 28th, 2019
 
-#### SAP Logging Improvements
+#### SAP Logging Improvement
 
-* We added a component in the App Store which, when configured in your app, allows you to use the logging format supported by SAP Kibana. For more information, see [SAP Logging Connector](/partners/sap/sap-logger).
+We added a component in the App Store which, when configured in your app, allows you to use the logging format supported by SAP Kibana. For more information, see [SAP Logging Connector](/partners/sap/sap-logger).
 
 ### June 6th, 2019
 
@@ -112,17 +127,17 @@ Content that was marked as **Protected** as well as content marked as **Shared w
 
 ### January 21st, 2019
 
-#### App Store Fixes
+#### Fix
 
-* The **Reviews** section at the bottom of the [App Store main page](https://appstore.home.mendix.com/index3.html) presents the latest published user reviews. We fixed an issue where clicking on a user's name to view their profile caused an internal server error. You will now be redirected to the expected user.
+The **Reviews** section at the bottom of the [App Store main page](https://appstore.home.mendix.com/index3.html) presents the latest published user reviews. We fixed an issue where clicking on a user's name to view their profile caused an internal server error. You will now be redirected to the expected user.
 
 ## 2018
 
 ### December 17th, 2018
 
-#### App Store Improvements
+#### Improvement
 
-* We have noticed that when searching in the App Store (via the **Search Mendix** search bar), users frequently use keywords like **Mendix**, **Modeler**, **Desktop**, and **Download** as well as different Desktop Modeler versions. The search results did not provide the expected results based on these keywords (as in, they did not show the Modeler download page). With this update, it is now possible to search for the Modeler and all of its versions in the **Search Mendix** search bar, which will redirect you to the [Desktop Modeler page](https://appstore.home.mendix.com/link/modelers/) in the Mendix App Store.
+We have noticed that when searching in the App Store (via the **Search Mendix** search bar), users frequently use keywords like **Mendix**, **Modeler**, **Desktop**, and **Download** as well as different Desktop Modeler versions. The search results did not provide the expected results based on these keywords (as in, they did not show the Modeler download page). With this update, it is now possible to search for the Modeler and all of its versions in the **Search Mendix** search bar, which will redirect you to the [Desktop Modeler page](https://appstore.home.mendix.com/link/modelers/) in the Mendix App Store.
 
 ### October 1st, 2018
 
@@ -146,12 +161,12 @@ The SAP Leonardo Machine Learning Foundation Connector is available in the App S
 
 The existing SAP Blank starter app has been replaced by a new Fiori Blank starter app. This new Fiori Blank starter app has a new Fiori UI Package included. This is based on Atlas UI, which means that you can use either the Web Modeler or Desktop Modeler to build applications which give the Fiori UI experience.
 
-#### Breaking Changes
+#### Breaking Change
 
-* The new **SAP OData Connector** will break existing projects which are using the SAP Cloud Connector. The SAP OData Connector no longer supports the “Use Cloud Connector” attribute. This is now embedded in the destination service configuration. See [SAP Destination Service](/partners/sap/sap-destination-service) for more details.
+The new **SAP OData Connector** will break existing projects which are using the SAP Cloud Connector. The SAP OData Connector no longer supports the “Use Cloud Connector” attribute. This is now embedded in the destination service configuration. See [SAP Destination Service](/partners/sap/sap-destination-service) for more details.
 
 ## 2017
 
 ### June 21st, 2017
 
-* Private company App Store content is now indicated in the **Template** browser with a lock icon.
+Private company App Store content is now indicated in the **Template** browser with a lock icon.

@@ -54,7 +54,7 @@ Only the selenium server version that is delivered as part of the ATS installati
 
 ATS Version | Supported Selenium version | Download |Required Java version
 ---|---|---|---
-2.9	| 3.8.1 |	[Download here](http://selenium-release.storage.googleapis.com/3.8/selenium-server-standalone-3.8.1.jar) | JRE 8
+2.9	| 3.141.59 |	[Download here](http://selenium-release.storage.googleapis.com/3.141/selenium-server-standalone-3.141.59.jar) | JRE 8
 
 ### 3.6 Chrome Driver
 
@@ -62,7 +62,7 @@ Only the Chrome driver version that is delivered as part of the ATS installation
 
 ATS Version	| Supported Chrome driver version | Download 
 ---|---|---
-2.9 | 2.35 | [Download here](http://chromedriver.storage.googleapis.com/index.html?path=2.35/)
+2.9 | 75 | [Download here](https://chromedriver.storage.googleapis.com/index.html?path=75.0.3770.140/)
 
 ### 3.7 Firefox (Gecko) Driver
 
@@ -70,7 +70,7 @@ Only the Gecko driver version that is delivered as part of the ATS installation 
 
 ATS Version	| Supported Gecko driver version | Download 
 ---|---|---
-2.9 | 0.19.1 | [Download here](https://github.com/mozilla/geckodriver/releases/tag/v0.19.1)
+2.9 | 0.24.0 | [Download here](https://github.com/mozilla/geckodriver/releases/tag/v0.24.0)
 
 ### 3.8 Internet Explorer Driver
 
@@ -84,7 +84,7 @@ ATS Version	| Supported Gecko driver version | Download
 
 The following browsers are supported to operate ATS (on their supported OS):
 
-* Firefox 17 (ESR) or higher
+* Firefox 75 (ESR) or higher
 * Google Chrome 22 or higher
 
 ## 4 Web Servers

@@ -1,8 +1,8 @@
 ---
 title: "Template Grid"
-parent: "data-widgets"
-menu_order: 30
-tags: ["studio pro", "template grid", "data widgets"]
+parent: "grids"
+menu_order: 20
+tags: ["studio pro", "grid", "template grid", "data widgets"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

@@ -14,7 +14,7 @@ Mendix Assist was built using machine learning analysis of over twelve million a
 
 ## 2 Mendix Assist Overview
 
-Mendix Assist is enabled by default and is displayed as a blue dot in the flow of a [microflow](microflows). A bow-tie appears on the dot when you hover over it. 
+Mendix Assist is enabled by default and is displayed as a blue dot in a flow of a [microflow](microflows). A bow-tie appears on the dot when you hover over it. 
 
 ![](attachments/mx-assist/mendix-assist-icon.png)
 
@@ -24,12 +24,12 @@ It is possible to add activities in a regular way without using Mendix Assist.
 
 {{% /alert %}}
 
-Click the bow-tie to see Mendix Assist recommendations. 
+Click the bow-tie to view Mendix Assist recommendations. 
 
 {{% image_container width="350" %}}![](attachments/mx-assist/mx-assist-recommendations.png)
 {{% /image_container %}}
 
-Mendix Assist lists the top five recommendations from the most probable to less probable ones for the particular microflow. Click the suggestion to proceed with it and insert it into a microflow. For more information, see section [4 Adding Activities and Elements with Mendix Assist](#add-activities).
+Mendix Assist lists the top five recommendations from the most probable to less probable ones for the particular microflow. Click the suggestion to proceed with it and insert it into a microflow. For more information, see the [Adding Activities and Elements with Mendix Assist](#add-activities) section.
 
 {{% alert type="info" %}}
 
@@ -58,10 +58,10 @@ Settings available for Mendix Assist are described in the table below:
 
 | Setting                      | Description                                                  |
 | ---------------------------- | ------------------------------------------------------------ |
-| Mendix Assist Is ON/OFF      | Click a slider to enable/disable the tool.                   |
-| Information Dialog Is ON/OFF | Click a slider to enable/disable the information dialog window. **Note** The information dialog window is disabled if Mendix Assist is OFF. |
+| Mendix Assist Is ON/OFF      | Toggling the setting enables/disables the tool.              |
+| Information Dialog Is ON/OFF | Toggling the setting enables/disables the information dialog window. **Note** The information dialog window is disabled if Mendix Assist is OFF. |
 
-You can also enable/disable Mendix Assist by clicking the information icon in the top menu bar of Mendix Studio. 
+You can also enable/disable Mendix Assist by clicking the information icon in the top menu bar of Mendix Studio: 
 
 {{% image_container width="300" %}}![](attachments/mx-assist/info-icon-setting.png)
 {{% /image_container %}}
@@ -72,7 +72,7 @@ If you disable Mendix Assist, the information dialog will be disabled as well. O
 
 ## 4 Adding Activities and Elements with Mendix Assist {#add-activities}
 
-You can add various activities using Mendix Assist. Depending on the complexity of the microflow and on the element/activity, it can be inserted right away, or you will need to provide Mendix Assist with additional information. For example, if you are adding a check, you need to specify what object or variable will be checked, and what condition exactly will be checked: for example, if the object exists, or if the object is true. For more information, see section [4.2 Adding a Check](#add-check).
+You can add various activities using Mendix Assist. Depending on the complexity of the microflow and on the element/activity, it can be inserted right away, or you will need to provide Mendix Assist with additional information. For example, if you are adding a check, you need to specify what object or variable will be checked, and what condition exactly will be checked: if the object exists, or if the object is true. For more information, see the [Adding a Check](#add-check) section.
 
 ### 4.1 Adding an Activity
 

@@ -55,7 +55,7 @@ In the **General** section, you can set a specific on click event for each navig
 
 {{% alert type="info" %}}
 
-Microflows set as an on click event for a navigation list item have no **Execution**, **Confirmation**, or **Advanced** microflow settings. For more information on calling a microflow, see [Starting Microflows](starting-microflows). 
+Microflows set as an on click event for a navigation list item have no **Execution**, **Confirmation**, or **Advanced** microflow settings. For more information on calling a microflow, see [On Click Event & Events Section](on-click-event#call-microflow). 
 
 {{% /alert %}}
 

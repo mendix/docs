@@ -1,6 +1,7 @@
 ---
 title: "History"
 parent: "project-menu"
+menu_order: 50
 tags: ["studio pro"]
 ---
 ## 1 Introduction

@@ -14,7 +14,8 @@ A snippet is indicated by a blue bar above a drop-zone. The blue bar has the sni
 
 In the example below, the snippet is used in the context of the **Orders.Order** entity.
 
-![Example of a snippet](attachments/page-resources/snippet.png)
+{{% image_container width="400" %}}![Example of a snippet](attachments/page-resources/snippet.png)
+{{% /image_container %}}
 
 ## 2 Properties
 

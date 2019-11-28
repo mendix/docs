@@ -24,7 +24,7 @@ If you want to dynamically show different images based on data, you need to add 
 
 An example of image properties is represented in the image below:
 
-{{% image_container width="350" %}}![Image Properties](attachments/common-widgets/image-properties.png)
+{{% image_container width="300" %}}![Image Properties](attachments/common-widgets/image-properties.png)
 {{% /image_container %}}
 
 Image properties consist of the following sections:

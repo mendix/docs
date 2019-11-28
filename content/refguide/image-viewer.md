@@ -67,7 +67,7 @@ Not supported on native mobile pages.
 
 #### 2.4.3 Width 
 
-This property is displayed only when the [**Width unit**](#width-unit) property is set to *Pixels* or *Percentage*. This property determines the width of the image, either in pixels or a percentage.
+This property is displayed only when the [Width unit](#width-unit) property is set to *Pixels* or *Percentage*. This property determines the width of the image, either in pixels or a percentage.
 
 *Default value*: 0
 
@@ -87,7 +87,7 @@ The table below describes possible ways to specify the height of an image:
 
 #### 2.4.5 Height
 
-This property is displayed only when the [**Height unit**](#height-unit) property is set to *Pixels* or *Percentage*. This property determines the height of the image, either in pixels or a percentage.
+This property is displayed only when the [Height unit](#height-unit) property is set to *Pixels* or *Percentage*. This property determines the height of the image, either in pixels or a percentage.
 
 *Default value*: 0
 

@@ -162,7 +162,7 @@ The **Control Bar** section properties are described below:
 
 * **Show Buttons** – determines whether the buttons defined in the **Buttons** section are shown. If disabled, none of the buttons will be accessible in any way, other than the one designated as the **On Click Action**. For more information, see sections [2.5.1 Grid Action Button](#grid-action-button) and [2.6 Events](#grid-events)
 
-*  **Buttons** – lists buttons in the control bar. A button set as **On Click Action** in the **Events** section will be indicated as *On Click Action.* This means that even if buttons are hidden, when the end-user clicks or double clicks (depending on settings in the [**Events**](#grid-events) section) the grid item, the default button (action) will be triggered
+*  **Buttons** – lists buttons in the control bar. A button set as **On Click Action** in the **Events** section will be indicated as *On Click Action.* This means that even if buttons are hidden, when the end-user clicks or double clicks (depending on settings in the [Events](#grid-events) section) the grid item, the default button (action) will be triggered
 
     ![](attachments/page-editor-data-grid/control-bar-default-button.png)
 
@@ -189,7 +189,7 @@ Data grid specific actions are the following ones:
 
 * **Select** – confirms the choice of a row of the grid when it is used for selecting an object for a drop-down with an association selected as a data source or reference set selector. For this reason, the select button can only be placed on a grid that is connected to a drop-down with an association as a data source or a reference set selector
 
-* **Select All** – allows the end-user to select all objects in the grid; can only be used if you set **[Selection Mode](#selection-mode)** to **Multi-selection** or **One-click multi-selection** (for more information, see section [2.6 Events](#grid-events))
+* **Select All** – allows the end-user to select all objects in the grid; can only be used if you set [Selection Mode](#selection-mode) to **Multi-selection** or **One-click multi-selection** (for more information, see section [2.6 Events](#grid-events))
 
 * **Deselect All** – deselects all selected objects in the grid
 

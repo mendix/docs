@@ -44,7 +44,7 @@ Use a column to align items in a row.  For more information on rows and columns,
 
 ### 2.1 Layout Grid Properties {#layout-grid-properties}
 
-You can access the **Layout Grid** properties through the breadcrumb (for more information, see the **[Breadcrumb](page-editor#breadcrumb)** section in *Pages*). 
+You can access the **Layout Grid** properties through the breadcrumb (for more information, see the [Breadcrumb](page-editor#breadcrumb) section in *Pages*). 
 Layout grid properties consist of the following sections:
 
 * [Expand](#expand-section) 

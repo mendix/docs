@@ -78,7 +78,7 @@ Note that only recording the association on one of the entities does not affect 
 
 ## 5 Type and Owner Relation to Multiplicity and Navigability
 
-**Type** and **Owner** properties of an entity are related to **[Multiplicity](association-properties#multiplicity)** and **[Navigability](association-properties#navigability)** properties of an association. When you change **Type** or **Owner**, you change **Multiplicity** and **Navigability** as well. 
+**Type** and **Owner** properties of an entity are related to [Multiplicity](association-properties#multiplicity) and [Navigability](association-properties#navigability) properties of an association. When you change **Type** or **Owner**, you change **Multiplicity** and **Navigability** as well. 
 
 You can find correspondence between **Type**/**Owner** and **Multiplicity**/**Navigability** in the table below.
 

@@ -74,7 +74,7 @@ Below are two examples that illustrate how expressions can be used.
 
 #### 2.3.1 Example 1
 
-You have a **[Decision](microflows-decision)** and you want to write an expression that checks whether the customer grade is gold and the price of the order is more than 100 (you can configure a discount after the **Decision** that is allowed if this expression is true):
+You have a [Decision](microflows-decision) and you want to write an expression that checks whether the customer grade is gold and the price of the order is more than 100 (you can configure a discount after the **Decision** that is allowed if this expression is true):
 
 ![](attachments/microflows-expressions/example-decision.png) 
 
@@ -84,7 +84,7 @@ The expression will look the following way:
 
 #### 2.3.2 Example 2
 
-You add a **[Decision](microflows-decision)** to check if an object (in the example below the object is *Customer*) exists. And you also check if the Customer's name matches a particular one (in the example below Customer's name is *Mendix*). The expression will look the following way:
+You add a [Decision](microflows-decision) to check if an object (in the example below the object is *Customer*) exists. And you also check if the Customer's name matches a particular one (in the example below Customer's name is *Mendix*). The expression will look the following way:
 
 ![](attachments/microflows-expressions/customer-empty-and-name-example.png)
 

@@ -39,11 +39,9 @@ The style property allows you to specify additional CSS styling. If a class is a
 
 You can see which widgets in a page have styling applied via the style or class property by clicking the <strong>Show styles</strong> button in **Structure mode**.
 
-## 3 Design Section
+## 3 Designer Section
 
-{{% snippet file="refguide/canvas-width-property.md" %}}
-
-{{% snippet file="refguide/canvas-height-property.md" %}}
+{{% snippet file="refguide/designer-properties.md" %}}
 
 ## 4 General Section
 

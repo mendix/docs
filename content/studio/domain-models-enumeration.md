@@ -29,7 +29,7 @@ To create a new enumeration, do the following:
 
 3.  To create a new attribute of the enumeration type, click **New attribute** and do the following:<br />
     a. Set the attribute **Name**. In our example, the name of the attribute is *Grade*.<br />
-    b. Set the [**Type**](domain-models-attributes) to **Enumeration**.<br />
+    b. Set the [Type](domain-models-attributes) to **Enumeration**.<br />
     c. Click **Select enumeration** to create a new enumeration.<br />d. In the **Select enumeration** dialog window, click **New**.<br/>
     e. In the **Create new enumeration** dialog window, click **Add Item** to add possible options of the enumeration (**Name** is filled out automatically and is the same as the attribute name).<br />
 
@@ -57,7 +57,7 @@ You can also set an existing enumeration for attributes of the enumeration type.
 3.  To create a new attribute of the enumeration type, click **New attribute** and do the following:<br />
 
     a. Set the attribute **Name**. In our example, the name of the attribute is *Grade*.<br />
-    b. Set the [**Type**](domain-models-attributes) to **Enumeration**.<br />
+    b. Set the [Type](domain-models-attributes) to **Enumeration**.<br />
     c. Click **Select enumeration** to create a new enumeration.<br />
 
     ![](attachments/domain-models-enumeration/new-attribute-select-enumeration.png) <br/>

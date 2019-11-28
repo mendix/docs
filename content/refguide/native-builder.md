@@ -45,7 +45,7 @@ native-builder.exe prepare --github-access-token <token> --app-center-api-token 
 | --------------------------- | -------------------------------------------------------------------- | --------------------------------------------------- |
 | `--github-access-token`     | GitHub access token.                                                 | `c0e1dasf1e102c55ded223dbdebdbe59asf95224`          |
 | `--app-center-api-token`    | App Center API token.                                                | `3e18asdfb43f4fe6c85afsd0bf60dde72f134`             |
-| `--app-center-organization` | App Center organization name.                             | `my-company`                                        |
+| `--appcenter-organization` | App Center organization name.                             | `my-company`                                        |
 | `--project-name`            | Unique name of the project. (Required)                                         | `CoolApp`                                           |
 | `--app-name`                | Display name of the app.                                             | `My Cool App`                                       |
 | `--app-identifier`          | Unique app identifier.                                               | `com.mendix.MyAwesomeApp`                           |
@@ -71,7 +71,7 @@ native-builder.exe build --projectName "CoolApp" --app-version "1.0.0" --build-n
 | --------------------------- | ------------------------------------------------------------------------------------ | --------------------------------------------------- |
 | `--github-access-token`     | GitHub access token.                                                                 | `c0e1dasf1e102c55ded223dbdebdbe59asf95224`          |
 | `--app-center-api-token`    | App Center API token.                                                                | `3e18asdfb43f4fe6c85afsd0bf60dde72f134`             |
-| `--app-center-organization` | (Optional) App Center organization name.                                             | `my-company`                                        |
+| `--appcenter-organization` | (Optional) App Center organization name.                                             | `my-company`                                        |
 | `--project-name`            | Unique name of the project used during `prepare`.                                    | `CoolApp`                                           |
 | `--app-name`                | Display name of the app.                                                             | `My Cool App`                                       |
 | `--app-identifier`          | Unique app identifier.                                                               | `com.mendix.MyAwesomeApp`                           |
@@ -205,13 +205,13 @@ For an iOS app, do the following:
 3. Replace this section of the code (on line **13**):
 
 	```swift
-let bundleUrl = ReactNative.instance.getJSBundleFile()
+	let bundleUrl = ReactNative.instance.getJSBundleFile()
 	```
 
-   with the following code:
+	with the following code:
 
 	```swift
-let bundleUrl = AppUrl.forBundle(url: "http://LOCAL_IP_ADDRESS:8080", remoteDebuggingPackagerPort: 8083, isDebuggingRemotely: true)
+	let bundleUrl = AppUrl.forBundle(url: "http://LOCAL_IP_ADDRESS:8080", remoteDebuggingPackagerPort: 8083, isDebuggingRemotely: false, isDevModeEnabled: false)
 	```
 
 4. Locate the *Info.plist* file and replace the value of `Runtime url` with *http://LOCAL_IP_ADDRESS:8080*.

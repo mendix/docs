@@ -214,7 +214,7 @@ To change the entity properties, click the entity in the domain model. The **Pro
 You can manage the following properties of an attribute:
 
 *   The **Name** of the attribute
-*   The [**Type**](domain-models-attributes)  of the attribute
+*   The [Type](domain-models-attributes)  of the attribute
 
 	![](attachments/domain-models/attribute-properties.png)
 

@@ -40,7 +40,7 @@ The app will open the corresponding page depending on the grade of a customer, f
 2. Create entity *Customer*. For more information on how to create a new entity, see the [Adding New Entities](domain-models) section in *Domain Models Overview*.
 3.  For the **Customer** entity, create an attribute (for more information on how to create the attribute, see the [Adding New Attributes](domain-models) section) and do the following:<br />
     a. Set the attribute **Name** to *Grade*.<br />
-    b. Set the [**Type**](domain-models-attributes) to **Enumeration**.<br />
+    b. Set the [Type](domain-models-attributes) to **Enumeration**.<br />
     c. Click **Select enumeration** to create a new enumeration.<br />d. In the **Select enumeration** dialog window, click **New**.<br/>
     e. In the **Create new enumeration** dialog window, click **Add Item** (*Grade* is filled out automatically for the **Name**).<br />
 
@@ -133,7 +133,7 @@ As you will verify customers by their statuses, you need to create a correspondi
 1. Open your [domain model](domain-models).
 2.  For the Customer entity, create an attribute (for more information on how to create attributes, see the [Adding New Attributes](domain-models) section),  and do the following: <br />
     a. Set name to *Blocked*. <br />
-    b. Set the [**Type**](domain-models-attributes) to **Boolean**. <br />
+    b. Set the [Type](domain-models-attributes) to **Boolean**. <br />
     c. Click **Create**. 
 
     ![](attachments/microflows-how-to-configure-decision/new-attribute-create-dialog.png)

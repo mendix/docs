@@ -8,7 +8,7 @@ tags: ["studio", "microflows", "decision", "pages"]
 
 ## 1 Introduction 
 
-You have configured microflows and decisions with enumeration attribute type and Boolean attribute type, now you can validate the microflows by adding them to pages. This how-to explains how you can add microflows with decisions to pages in Mendix Studio. 
+In the [previous step](microflows-how-to-configure-decision-p1), you have configured microflows and decisions with enumeration attribute type and Boolean attribute type, now you can validate the microflows by adding them to pages. This how-to explains how you can add microflows with decisions to pages in Mendix Studio. 
 
 **This how-to will teach you how to do the following:**
 
@@ -28,8 +28,8 @@ After microflows are created, you can add them to pages to run them in your app.
 
 To embed the microflow with a decision (the attribute of the enumeration type) to pages, do the following:
 
-1. Create a page for the existing customers details and name it *Customer_details*. For more information on creating pages, see section [3.2 Creating a New Page](page-editor) in *Pages*.
-2.  In **Toolbox**>**Widgets** >**Data Containers**, find **Data View**.
+1. Create a page for the existing customers details and name it *Customer_details*. For more information on creating pages, see the [Creating a New Page](page-editor) section in *Pages*.
+2.  In **Toolbox** > **Widgets** > **Data Containers**, find **Data View**.
 
     ![](attachments/microflows-how-to-configure-decision/data-view.png)
 
@@ -56,7 +56,7 @@ To embed the microflow with a decision (the attribute of the enumeration type) t
     The page with customer details is generated.
 7. Return to the **Customer_details** page, and in **Toolbox**>**Widgets** >**Data Containers**, find **List View**, drag and drop it to the page.
 8. Open **Properties** for the list view and set **Customer** as **Data Source**>**Entity**.
-9.  In the **Toolbox**>**Building Blocks**>**Lists** select **List 4**, drag and drop it to the list view. 
+9.  In the **Toolbox** > **Building Blocks** > **Lists** select **List 4**, drag and drop it to the list view. 
 
     ![](attachments/microflows-how-to-configure-decision/list-view-list4.png) 
 
@@ -69,22 +69,22 @@ To embed the microflow with a decision (the attribute of the enumeration type) t
 
     ![](attachments/microflows-how-to-configure-decision/details-button-microflow.png) 
 
-Congratulations! Now when the user clicks **Details**, the form for the corresponding customer grade will be opened. 
+Congratulations! Now when the end-user clicks **Details**, the form for the corresponding customer grade will be opened. 
 
-You can now publish and view your app.
+You can now [preview your app](publishing-app) or publish it.
 
 ### 3.2 Embedding the Microflow Having a Decision with the Attribute of the Boolean Type 
 
 To embed the microflow with a decision (the attribute of the Boolean type), do the following:
 
-1. You need to add an option to mark customer as blocked. To do this, open the **New_customer** page created in the previous section. For more information, see [Embedding the Microflow Having a Decision with Attribute of the Enumeration Type](#embedding-decision-enumeration).
-2. In **Toolbox**>**Widgets** >**Input Elements** select **Radio Buttons**, drag and drop it into the **Data view** container.
-3.  In the **Properties** for the radio buttons, click **Data Source**>**Attribute** and select **Blocked Boolean**. 
+1. You need to add an option to mark a customer as blocked. To do this, open the **New_customer** page created in the previous section. For more information, see [Embedding the Microflow Having a Decision with Attribute of the Enumeration Type](#embedding-decision-enumeration).
+2. In **Toolbox** > **Widgets** > **Input Elements** select **Radio Buttons**, drag and drop this widget into the **Data view** container.
+3.  In the **Properties** for the radio buttons, click **Data Source** > **Attribute** and select **Blocked Boolean**. This is how it should look like on your page: 
 
     ![](attachments/microflows-how-to-configure-decision/new-customer-page-blocked-attribute.png)
 
 4. Now you will add the microflow to pages. Open the page **Order_form_for_bronze_customers.**
-5.  In **Toolbox**>**Widgets** >**Data Containers**, find **Data View**. 
+5.  In **Toolbox** > **Widgets** > **Data Containers**, find **Data View**. 
 
     ![](attachments/microflows-how-to-configure-decision/data-view.png)
 
@@ -111,6 +111,6 @@ To embed the microflow with a decision (the attribute of the Boolean type), do t
 12. Open the page **Order_form_for_silver_customers** and repeat steps 4-11.
 13. Open the page **Order_form_for_gold_customers** and repeat steps 4-11.
 
-Congratulations! Now when the user clicks **Place order**, only the customers who are not blocked will be able to proceed. If the user is blocked, he will get an error message. 
+Congratulations! Now when the end-user clicks **Place order**, only customers who are not blocked will be able to proceed. If a customer is blocked, they will get an error message. 
 
-You can preview and publish. For more information, see [Previewing & Publishing Your App](publishing-app).
+You can preview and/or publish your app. For more information on how to preview and publish an app, see [Previewing & Publishing Your App](publishing-app).

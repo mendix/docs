@@ -14,21 +14,22 @@ With report widgets, you can create reports from the database data. Reporting is
 
 The **Report widgets** category contains the following widgets:
 
-* [**Report grid**](report-grid) – displays data in a form of a table; the data for the reporting widgets is provided by a [Data set](data-sets)
+* [Report grid](report-grid) – displays data in a form of a table; the data for the reporting widgets is provided by a [Data set](data-sets)
 
     ![Example report grid](attachments/report-widgets/report-grid-example.png)
 
-* [**Report parameter**](report-parameter) – allows the end-user to specify a parameter of a [Data set](data-sets) that is then used for filtering the data displayed in a report
+* [Report parameter](report-parameter) – allows the end-user to specify a parameter of a [Data set](data-sets) that is then used for filtering the data displayed in a report
 
     ![Example report parameter](attachments/report-widgets/report-parameter-example.png)
 
-* [**Report date parameter**](report-date-parameter) – allows the end-user to specify the DateTime parameter of a [data set](data-sets), which is then used for filtering the data displayed in a report
+* [Report date parameter](report-date-parameter) – allows the end-user to specify the DateTime parameter of a [data set](data-sets), which is then used for filtering the data displayed in a report
 
     ![Example report date parameter](attachments/report-widgets/report-date-parameter-example.png)
 
-* [**Generate report button**](report-button) – generates a report when the end-user clicks the button
+* [Generate report button](report-button) – generates a report when the end-user clicks the button
 
     ![Example generate report button](attachments/report-widgets/generate-report-button-example.png)
+
 
 ## 2 Performing Basic Functions
 

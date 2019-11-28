@@ -28,7 +28,6 @@ You can switch between the modes by clicking the corresponding button in the top
 
 ![Preview Modes](attachments/theme-customizer/preview-modes.png)
 
-
 ## 2 Settings
 
 You can change the way your app looks using different settings in left-hand side of the **Theme Customizer**, that are divided in the following sections:

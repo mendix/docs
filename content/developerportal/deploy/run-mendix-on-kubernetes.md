@@ -7,7 +7,11 @@ tags: ["kubernetes", "cloud", "deployment"]
 
 ## 1 Introduction
 
-This how-to describes what is needed to deploy your Mendix app to [Kubernetes](https://kubernetes.io/) following Mendix best practices. Kubernetes extends Mendix's support for Docker by providing a platform to automate deployments and scale apps with high availability.
+This how-to describes what is needed to deploy your Mendix app to [Kubernetes](https://kubernetes.io/) following Mendix best practices. Kubernetes is the standard Docker orchistration platfrom supported by Mendix. For details on supported version of Kubernetes see [Mendix System Requirements](../../refguide/system-requirements). 
+
+A Mendix Application needs as a minumum a database to run. In this example we provision a PostgresSQL database within the Kubernetes cluster. In production scenario's the database is most of the time provided as a service by the cloud provider. Like AWS RDS, or Azure SQL. For supported database see [Mendix System Requirements](../../refguide/system-requirements). 
+
+In case the application makes use of FileDocument or FileImage a storage service needs to be attached as well. See [Mendix System Requirements](../../refguide/system-requirements) for supported external storage services. In this how-to we use a node-bound storage volume as an example. See also chapter [Architecture overview](#3-Architecture-Overview).   
 
 This how-to uses [Minikube](https://kubernetes.io/docs/getting-started-guides/minikube/), which is a way to run Kubernetes locally. Many of the operations you perform on Minikube are the same as those on a hosted environment, and it provides a low-level entry to Kubernetes. For more information, see [Picking the Right Solution](https://v1-13.docs.kubernetes.io/docs/setup/pick-right-solution/).
 
@@ -295,4 +299,4 @@ Congratulations! You have deployed your first Mendix app in Kubernetes.
 
 * [Docker: Deploy](docker-deploy)
 * [Mendix Docker Buildpack](https://github.com/mendix/docker-mendix-buildpack)
-* [Mendix Azure ACS Kubernetes Reference Implementation](https://github.com/mendix/azure-kubernetes-cicd-reference-impl)
+

@@ -13,6 +13,8 @@ You can deploy your Mendix app using a *Bring Your Own License* on Microsoft Azu
 
 This page guides you through the steps you need to follow to get your Mendix app up and running. It will teach you how to do the following:
 
+Support provided on an Azure images is simular to standard on-premises server support. 
+
 *   Add a Mendix image to Microsoft Azure
 
 *   Configure a Mendix Instances in Azure

@@ -11,7 +11,7 @@ tags: ["Cloud Foundry", "Pivotal", "Deploy", "Bind"]
 
 Mendix apps can be deployed to a variety of different environments, for example Mendix Cloud, On-premises, or Kubernetes.
 
-Mendix apps can also be deployed to any cloud platform which supports Cloud Foundry. This includes Pivotal Web Services, On-premises Cloud Foundry, SAP Cloud Platform, and IBM Cloud Portal (formerly Bluemix).
+Mendix apps can also be deployed to any cloud platform which supports Cloud Foundry. 
 
 The advantages of Cloud Foundry are:
 
@@ -24,7 +24,7 @@ The advantages of Cloud Foundry are:
 * Extending to more software architectures via custom buildpacks
 * Automatic health monitoring and recovery
 
-Mendix is compatible with all known versions of Cloud Foundry as long as there are compatible database services (for example, PostgreSQL or MySQL) and custom buildpacks can be used. Cloud Foundry is supported in Mendix Studio Pro and external file store support for FileDocuments can be set up with Amazon S3 or compatible systems.
+For a Mendix application to run within Cloud Foundry it is required to have a supported version of Cloud Foundry, Database and cloud storage. See for specific versions [Mendix System Requirements](../../refguide/system-requirements)
 
 For more information on running Mendix apps on Cloud Foundry, see the [Mendix Cloud Foundry BuildPack](https://github.com/mendix/cf-mendix-buildpack). This Git also explains how Mendix apps can also be deployed to Cloud Foundry environments using command line instructions.
 
@@ -37,7 +37,7 @@ For more information on running Mendix apps on Cloud Foundry, see the [Mendix Cl
 
 ### 1.1 Cloud Foundry on SAP and IBM
 
-Mendix provides deployment tools in the Developer Portal for deploying apps to Cloud Foundry on the SAP Cloud Platform and IBM Cloud Portal. It is recommended that for these platforms you use the following documentation:
+Cloud Foundry providers like SAP and IBM are made available within the Mendix Cloud portal. It is recommended to use for these clouds the portal for deploying your application. See below detailed documentation.  
 
 * [SAP Cloud Platform](sap-cloud-platform)
 * [IBM Cloud](ibm-cloud)
@@ -146,7 +146,7 @@ Once you have configured the database, you can deploy your app, provided there a
 
 FileDocuments in your application (for example, binary objects such as images) are not stored in the database. If you use them in your app, and want them to persist between sessions, they need to be stored in persistent file storage.
 
-This is a service which you need to attach to your application in the same way as the database, above. Supported File Stores are S3 Object Stores (such as Amazon S3), IBM Swift, or Azure Blob store.
+This is a service which you need to attach to your application in the same way as the database, above. See for supported File Cloud Storage service [Mendix System Requirements](../../refguide/system-requirements)
 
 {{% alert type="info" %}}
 Some trial accounts may not include object storage. 

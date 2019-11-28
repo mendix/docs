@@ -10,18 +10,7 @@ tags: ["Docker", "Cloud", "container", "CI/CD"]
 
 Docker is an open source container technology that is used broadly in the market in highly scalable solutions and automated delivery pipelines (CI/CD).
 
-This how-to explains how to run a Mendix Docker image created using the Mendix Docker Buildpack. A Mendix Docker image is uniquely created for each release of a project using this buildpack. To run such a docker image, you need access to one of the following Docker container services:
-
-* Kubernetes
-* DC/OS
-* Docker
-* Docker Swarm
-* Azure Container Services
-* IBM Kubernetes
-* AWS Beanstalk
-* Google Container Engine
-* Docker Enterprise
-* Redhat Openshift
+This how-to explains how to run a Mendix Docker image created using the Mendix Docker Buildpack. A Mendix Docker image is uniquely created for each release of a project using this buildpack. To run such a docker image, you need access to a docker orchistration platforms. See [System Requirements](../../refguide/system-requirements) for official supported orchistration platforms. 
 
 **This how-to will teach you how to do the following:**
 
@@ -63,4 +52,3 @@ docker run -it \
 
 * [Docker: Deploy](docker-deploy)
 * [Mendix Docker Buildpack ](https://github.com/mendix/docker-mendix-buildpack)
-* [Mendix Azure ACS Kubernetes Reference Implementation](https://github.com/mendix/docker-mendix-buildpack)

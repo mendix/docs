@@ -52,22 +52,44 @@ The [Team Server](/developerportal/develop/team-server) is implemented using Sub
 The browser you use needs to have JavaScript turned on.
 {{% /alert %}}
 
-## 5 Server
+## 5 Cloud Foundry
+The  Mendix Cloud Foundry Buildpack supports 
+- Cloud Foundry versions v9 and higher. 
 
-### 5.1 Operating System
+## 6 Docker
+Mendix Docker buildpack supports:
+- Docker version 18.09.0 and higher. 
+
+
+### 6.1 Kubernetes
+The Mendix Docker Buildpack supports 
+- Kubernetes version v1.12 and higher.
+- Redhat Openshift v3.11 and v4.2 and higher.   
+
+## 7 Server
+
+### 7.1 Operating System
 
 * Microsoft Windows Server 2008 SP2 and above
 * Debian 8 (Jessie) and above
 * Red Hat Enterprise Linux 6, Red Hat Enterprise Linux 7
 * CentOS 6, CentOS 7
 
-### 5.2 Web Server
+### 7.2 Web Server
 
 * Microsoft Internet Information Services 7 and above
 * Nginx (tested with versions included in Debian Jessie and Debian Jessie Backports)
 * Apache
 
-### 5.3 Database Server
+### 7.3 Java
+
+When running Mendix on a server, you will need Java Runtime Environment (JRE) 11. To download an OpenJDK distribution from AdoptOpenJDK, see [AdoptOpenJDK Installation](https://adoptopenjdk.net/installation.html). To download a commercial Oracle distribution, see [Java SE Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
+
+{{% alert type="info" %}}
+There is an issue since Java 7 that causes timeouts when using web services with a certain amount of data. You can circumvent this issue by adding the VM params `-Djava.net.preferIPv4Stack=true`. Mendix Studio Pro will do this for you, but if you are running Mendix on premises on a Windows server, you will need to do this yourself. For more information about this issue, see [HotSpot (64bit server) hangs on socket read (JVM 1.7 bug?) - updated](http://blog.bielu.com/2011/11/hotspot-64bit-server-hangs-on-socket.html) and [Possible Bug in Java 7](https://forums.oracle.com/forums/thread.jspa?messageID=9985748).
+{{% /alert %}}
+
+## 8 Databases
 
 Mendix tries to support the most recent and patched database server versions from database vendors. We aim to add support for a new vendor version two minor Mendix versions after the vendor has released it. Dropping support for a database will be announced in the release notes at the date the vendor drops support. We will drop support two minor Mendix versions later.
 
@@ -86,21 +108,30 @@ Current support:
 Each app should have its own database. Mendix apps cannot share data by sharing the same database. 
 {{% /alert %}}
 
-### 5.4 Java
+## 9 File Storage
 
-When running Mendix on a server, you will need Java Runtime Environment (JRE) 11. To download an OpenJDK distribution from AdoptOpenJDK, see [AdoptOpenJDK Installation](https://adoptopenjdk.net/installation.html). To download a commercial Oracle distribution, see [Java SE Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
+### 9.1 Storage Services for Containers
+For Container based deployments using Docker, Kubernetes or Cloud Foundry the following Storage services are supported:
 
-{{% alert type="info" %}}
-There is an issue since Java 7 that causes timeouts when using web services with a certain amount of data. You can circumvent this issue by adding the VM params `-Djava.net.preferIPv4Stack=true`. Mendix Studio Pro will do this for you, but if you are running Mendix on premises on a Windows server, you will need to do this yourself. For more information about this issue, see [HotSpot (64bit server) hangs on socket read (JVM 1.7 bug?) - updated](http://blog.bielu.com/2011/11/hotspot-64bit-server-hangs-on-socket.html) and [Possible Bug in Java 7](https://forums.oracle.com/forums/thread.jspa?messageID=9985748).
-{{% /alert %}}
+- AWS S3
+- Azure Blob Storage
+- IBM Cloud Object Storage
+- SAP AWS S3 Object Storage
+- SAP Azure Blob Storage
 
-### 5.5 Application Server
+#### 9.1.1 Kubernetes
+For Container mounted storage, provided by an external storage class. See also [Run Mendix on Kubernetes](run-mendix-on-kubernetes)
 
-Jetty is built into the [Mendix Runtime](runtime), so an application server is not required.
+###  9.2 Storage types for Servers
+For Server based installations the following storage types mounted to the OS will be supported 
+- NAS 
+- SAN 
+- GFS
+- Local Storage 
 
-## 6 Browsers {#browsers}
+## 10 Browsers {#browsers}
 
-### 6.1 Desktop Browsers
+### 10.1 Desktop Browsers
 
 * Google Chrome
 * Mozilla Firefox 
@@ -108,30 +139,30 @@ Jetty is built into the [Mendix Runtime](runtime), so an application server is n
 * Microsoft Edge
 * Microsoft Internet Explorer 11
 
-### 6.2 Mobile Browsers
+### 10.2 Mobile Browsers
 
 * iOS 12 and above (Safari)
 * Android 5.0 and above
 
-### 6.3 Hybrid Preview
+### 10.3 Hybrid Preview
 
 Using a hybrid preview is not the same as using an emulator. A hybrid preview only shows a resized view of an app to give an impression of what that app might look like on a mobile device. Some hybrid app functionality will not be supported in this browser view. Full tests always need to be done on a device or emulator. Offline apps can only be previewed in Google Chrome.
 
-## 7 Mobile Operating Systems {#mobileos}
+## 11 Mobile Operating Systems {#mobileos}
 
 For Mendix apps and the [Mendix Mobile app](getting-the-mendix-app):
 
 * iOS 12 and above
 * Android 5.0 and above
 
-## 8 MxBuild {#mxbuild}
+## 12 MxBuild {#mxbuild}
 
 MxBuild is a Windows and Linux command-line tool that can be used to build a Mendix Deployment Package. For more information, see [MxBuild](mxbuild).
 
 * Mono v5.20.x or .NET v4.7.2
 * JDK 11
 
-## 9 mx Command-Line Tool {#mxtool}
+## 13 mx Command-Line Tool {#mxtool}
 
 The **mx** command-line tool is a Windows and Linux command-line tool that can be used to do useful things with your Mendix app project. For more information, see [mx Command-Line Tool](mx-command-line-tool).
 

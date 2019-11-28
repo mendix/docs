@@ -42,7 +42,7 @@ It is good practice to *always* redeploy your Mendix App before pushing a new ov
 * Changes to static images, text, or other static assets
 * Layout changes
 * Nanoflow changes
-* JaveScript action changes
+* JavaScript action changes
 * Widgets shipped with Mendix added or removed
 * A new custom Javascript-only widget or module was added
 * Non-destructive model changes (for more information, see the [Offline First Reference Guide](/refguide/offline-first))

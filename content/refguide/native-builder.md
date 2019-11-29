@@ -187,7 +187,7 @@ Be aware of the following:
 
 ### 3.7 Listing Deployment Releases
 
-The `list` command displays a printed list of all deployed releases.
+The `list` command displays a pretty-printed list of all deployed releases.
 
 Here is an example of a command featuring `list`:
 
@@ -201,7 +201,7 @@ native-builder.exe release list --projectName "CoolApp"
 | `--platform`          | (Optional) Platform with which to run command for. Defaults to both iOS and Android. | `ios` or `android` |
 | `--deployment-target` | (Optional) OTA target group. Defaults to `Production`                                | `Staging`          |
 
-### 4 Expanded Parameter Explanations
+## 4 Expanded Parameter Explanations
 
 #### 4.1 --project-name
 

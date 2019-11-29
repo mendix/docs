@@ -39,7 +39,7 @@ Pluggable widgets are the successor to [Custom widgets](/howto/extensibility/wid
 | Use glyph icons                                                   | [Yes](property-types-pluggable-widgets#icon)         | No                                                                    |
 | Show input label                                                  | [Yes](property-types-pluggable-widgets#label)        | No                                                                    |
 | Trigger an action on change of attribute                          | [Yes](property-types-pluggable-widgets#attribute)    | No                                                                    |
-| Widgets can contain other widgets                                 | Planned                                              | No                                                                    |
+| Widgets can contain other widgets                                 | [Yes](property-types-pluggable-widgets#widgets)      | No                                                                    |
 
 ## 3 Client Component
 

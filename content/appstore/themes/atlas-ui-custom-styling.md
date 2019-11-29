@@ -16,10 +16,6 @@ Use this theme to quickly brand your app with your own styling. This app contain
 
 With this theme, there is no need to create all your app pages by yourself!
 
-
-
- 
-
 Add '/index-phone-preview.html' behind your url to view the app in a phone wrapper.
 
 Add '/index-tablet-preview.html' behind your url to view the app in a tablet wrapper.

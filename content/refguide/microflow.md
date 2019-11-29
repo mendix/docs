@@ -1,7 +1,7 @@
 ---
 title: "Microflow Properties"
 parent: "microflows"
-tags: ["studio pro"]
+tags: ["microflow", "entity access"]
 ---
 
 ## 1 Introduction

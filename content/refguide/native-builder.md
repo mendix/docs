@@ -122,34 +122,34 @@ native-builder.exe regenerate --projectName "CoolApp"
 
 ### 3.4 Creating an Over the Air Deployment Release
 
-The `pushUpdate` command handles generating a new JavaScript bundle and assets, and deploying that over the air (OTA) update.
+The `push-update` command handles generating a new JavaScript bundle and assets, and deploying that over the air (OTA) update.
 
-Here is an example of a command featuring `pushUpdate`:
+Here is an example of a command featuring `push-update`:
 
+```bash
+native-builder.exe release push-update --projectName "CoolApp" --target-version "1.0.0" --build-number 1 --rollout-percentage 100
 ```
-native-builder.exe release pushUpdate --projectName "CoolApp" --target-version "1.0.0" --build-number 1 --rollout-percentage 100 --mandatory true
-```
 
-| Parameters             | Description                                                                                                | Example                                            |
-| ---------------------- | ---------------------------------------------------------------------------------------------------------- | -------------------------------------------------- |
-| `--project-name`       | Unique name of the project used during `prepare`                                                           | `CoolApp`                                          |
-| `--target-version`     | Version or range of versions of the already published app that this update should affect.                  | Semantic version See [Semantic Versioning](https://semver.org/)  |
-| `--rollout-percentage` | Percentage number of users that should get this update. Once set, the value can not be reduced afterwards. | A number between `1` and `100`.                    |
-| `--description`        | (Optional) More info associated with this update that users would see before downloading.                  | Any text message.                                  |
-| `--mandatory`          | Determines if this update should be considered important and forced on the users                           | `true` or `false`                                  |
-| `--build-number`       | App Center build number that this update should target.                                                    | Any number as defined during `build`               |
-| `--platform`           | (Optional) Platform with which to run command for. Defaults to both iOS and Android.                       | `ios` or `android`                                 |
-| `--deployment-target`  | (Optional) OTA target group. Defaults to `Production`                                                      | `Staging`                                          |
-| `--skip-mxbuild`       | (Optional) If to bundle JS bundle and assets. Defaults to `false`                                          | `true` or `false`                                  |
+| Parameters             | Description                                                                                                    | Example            |
+| ---------------------- | -------------------------------------------------------------------------------------------------------------- | ------------------ |
+| `--project-name`       | Unique name of the project used during `prepare`                                                               | `CoolApp`          |
+| `--target-version`     | Version or range of versions of the already published app that this update should affect.                      | Semantic version See [Semantic Versioning](https://semver.org/)  |
+| `--rollout-percentage` | Percentage number of users that should get this update. Once set, the value can not be reduced afterwards.     | A number between `1` and `100`. |
+| `--build-number`       | App Center build number that this update should target.                                                        | Any number as defined during `build`  |
+| `--description`        | (Optional) More info associated with this update that users would see before downloading.                      | Any text message.                     |
+| `--mandatory`          | (Optional) Determines if this update should be considered important and forced on the users. Defaults to true. | `true` or `false`  |
+| `--platform`           | (Optional) Platform with which to run command for. Defaults to both iOS and Android.                           | `ios` or `android`     |
+| `--deployment-target`  | (Optional) OTA target group. Defaults to `Production`                                                          | `Staging`          |
+| `--skip-mxbuild`       | (Optional) Used if bundling JavaScript bundle and assets. Defaults to `false`                                  | `true` or `false`   |
 
 ### 3.5 Updating an OTA Deployment Release's Metadata
 
-The `patchUpdate` command allows you to update the metadata of a published update that has not been rolled out to all users (in technical terms, an update which does not have a `rollout-percentage` value of `100`).
+The `patch-update` command allows you to update the metadata of a published update that has not been rolled out to all users (in technical terms, an update which does not have a `rollout-percentage` value of `100`).
 
-Here is an example of a command featuring `patchUpdate`:
+Here is an example of a command featuring `patch-update`:
 
-```
-native-builder.exe release patchUpdate --projectName "CoolApp" --target-version  "1.0.1"
+```bash
+native-builder.exe release patch-update --projectName "CoolApp" --target-version  "1.0.1"
 ```
 
 | Parameters             | Description                                                                                                          | Example                                                |
@@ -165,12 +165,12 @@ native-builder.exe release patchUpdate --projectName "CoolApp" --target-version 
 
 ### 3.6 Rolling Back to a Previous Deployment Release
 
-The `rollbackUpdate` command allows you to revert to a previous deployment release with the same target version of your app. This command creates a new deployment using a previous deployment release specified with the `--label` argument.
+The `rollback-update` command allows you to revert to a previous deployment release with the same target version of your app. This command creates a new deployment using a previous deployment release specified with the `--label` argument.
 
-Here is an example of a command featuring `rollbackUpdate`:
+Here is an example of a command featuring `rollback-update`:
 
-```
-native-builder.exe release rollbackUpdate --projectName "CoolApp" --label "v4"
+```bash
+native-builder.exe release rollback-update --projectName "CoolApp" --label "v4"
 ```
 
 Be aware of the following:
@@ -191,7 +191,7 @@ The `list` command displays a printed list of all deployed releases.
 
 Here is an example of a command featuring `list`:
 
-```
+```bash
 native-builder.exe release list --projectName "CoolApp"
 ```
 

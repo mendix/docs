@@ -120,13 +120,15 @@ native-builder.exe regenerate --projectName "CoolApp"
 | ---------------- | ------------------------------------------------- | --------- |
 | `--project-name` | Unique name of the project used during `prepare`. | `CoolApp` |
 
-### 3.4 Creating an OTA deployment release
+### 3.4 Creating an Over the Air Deployment Release
 
-This handles generating a new JavaScript bundle and assets and deploying that OTA.
+The `pushUpdate` command handles generating a new JavaScript bundle and assets, and deploying that over the air (OTA) update.
 
-example:
+Here is an example of a command featuring `pushUpdate`:
 
-```native-builder.exe release pushUpdate --projectName "CoolApp" --target-version "1.0.0" --build-number 1 --rollout-percentage 100 --mandatory true```
+```
+native-builder.exe release pushUpdate --projectName "CoolApp" --target-version "1.0.0" --build-number 1 --rollout-percentage 100 --mandatory true
+```
 
 | Parameters             | Description                                                                                                | Example                                            |
 | ---------------------- | ---------------------------------------------------------------------------------------------------------- | -------------------------------------------------- |
@@ -140,13 +142,15 @@ example:
 | `--deployment-target`  | (Optional) OTA target group. Defaults to `Production`                                                      | `Staging`                                          |
 | `--skip-mxbuild`       | (Optional) If to bundle JS bundle and assets. Defaults to `false`                                          | `true` or `false`                                  |
 
-### 3.5 Updating an OTA deployment release metadata
+### 3.5 Updating an OTA Deployment Release Metadata
 
-This command allows updating the metadata information of a published update that hasn't been rolled out yet to all users (i.e doesn't have a `rollout-percentage` value of `100`).
+The `patchUpdate` command allows updating the metadata information of a published update that hasn't been rolled out yet to all users (for example, and update which does not have a `rollout-percentage` value of `100`).
 
-example:
+Here is an example of a command featuring `patchUpdate`:
 
-```native-builder.exe release patchUpdate --projectName "CoolApp" --target-version  "1.0.1"```
+```
+native-builder.exe release patchUpdate --projectName "CoolApp" --target-version  "1.0.1"
+```
 
 | Parameters             | Description                                                                                                          | Example                                                |
 | ---------------------- | -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------ |
@@ -159,18 +163,20 @@ example:
 | `--platform`           | (Optional) Platform with which to run command for. Defaults to both iOS and Android.                                 | `ios` or `android`                                     |
 | `--deployment-target`  | (Optional) OTA target group. Defaults to `Production`                                                                | `Staging`                                              |
 
-### 3.6 Rollback to previous deployment release
+### 3.6 Rollback to a Previous Deployment Release
 
-This allows reverting to a previous deployment release with the same target version of the app. This command creates a new deployment using a previous deployment release specified with the `--label` argument.
+The `rollbackUpdate` command allows you to revert to a previous deployment release with the same target version of your app. This command creates a new deployment using a previous deployment release specified with the `--label` argument.
 
-example:
+Here is an example of a command featuring `rollbackUpdate`:
 
-```native-builder.exe release rollbackUpdate --projectName "CoolApp" --label "v4"```
+```
+native-builder.exe release rollbackUpdate --projectName "CoolApp" --label "v4"
+```
 
-Notes
+Be aware of the following:
 
-1. `--label` needs to point to a previous deployment release only
-2. If you rollback to a broken release, it will be deployed to the users. The app has the fail safe out of the box to fall back to its bundled release if the new downloaded one crashed. You will then have to either do a new release or rollback to a working release.
+* The `--label` parameter can point to a previous deployment release only
+* If you rollback to a broken release, it will be deployed to the users. To fix this situation, you will then have to either do a new release or rollback to a working release.
 
 | Parameters            | Description                                                                          | Example                                                |
 | --------------------- | ------------------------------------------------------------------------------------ | ------------------------------------------------------ |
@@ -179,13 +185,15 @@ Notes
 | `--platform`          | (Optional) Platform with which to run command for. Defaults to both iOS and Android. | `ios` or `android`                                     |
 | `--deployment-target` | (Optional) OTA target group. Defaults to `Production`                                | `Staging`                                              |
 
-### 3.7 List deployment releases
+### 3.7 List Deployment Releases
 
-This displays a pretty printed list of all deployed releases.
+The `list` command displays a printed list of all deployed releases.
 
-example:
+Here is an example of a command featuring `list`:
 
-```native-builder.exe release list --projectName "CoolApp"```
+```
+native-builder.exe release list --projectName "CoolApp"
+```
 
 | Parameters            | Description                                                                          | Example            |
 | --------------------- | ------------------------------------------------------------------------------------ | ------------------ |

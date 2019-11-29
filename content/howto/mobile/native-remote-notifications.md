@@ -57,7 +57,7 @@ The `IOS bundle ID` and `Android package name` will be the same [todo: what does
 
 `<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.mendix.nativetemplate">`
 
-Because you are using the Native Template, your package's  name is `com.mendix.nativetemplate`.
+Because you are using the Native Template, your package's name is `com.mendix.nativetemplate`.
 
 Download the `google-services.json` and `GoogleService-Info.plist` file to your computer since you will use it in your generated native app later.
 
@@ -65,13 +65,13 @@ Navigate to the **Service Accounts** tab.
 
 Create a private key and save it as *dontshareThis.json* in a place you will not lose it.
 
-## 3 Setting up Native Builder Customizations
+## 5 Setting up Native Builder Customizations
 
 Out of the box, native builder will create ios and android part of the code. We will do different customizations for different platforms.
 
-### 3.1 Customizing Android part
+### 5.1 Customizing Android part
 
-- Change `android/app/build.gradle`s with following additions
+1. Change `android/app/build.gradle`s with following additions
 
 ```diff
 @@ -101,6 +101,10 @@ dependencies {
@@ -85,9 +85,9 @@ Out of the box, native builder will create ios and android part of the code. We 
  }
 ```
 
-- add downloaded `google-services.json` inside of `android/app` so it will look like  `android/app/google-services.json`
+2. add downloaded `google-services.json` inside of `android/app` so it looks like this: `android/app/google-services.json`
 
-- Change `android/app/src/main/AndroidManifest.xml`
+3. Change `android/app/src/main/AndroidManifest.xml`
 We will be testing our implementation against local mendix instance, that means we wont using `https` which means we have to add `android:usesCleartextTraffic="true"` please remove this change afterwards.
 
 ```diff
@@ -137,7 +137,8 @@ We will be testing our implementation against local mendix instance, that means 
  </manifest>
 ```
 
-- Change `android/app/src/main/java/com/mendix/nativetemplate/MainApplication.java`
+4. Change `android/app/src/main/java/com/mendix/nativetemplate/MainApplication.java`
+
 ```diff
  import fr.greweb.reactnativeviewshot.RNViewShotPackage;
  import io.invertase.firebase.RNFirebasePackage;
@@ -175,21 +176,17 @@ We will be testing our implementation against local mendix instance, that means 
      }
 ```
 
-- Change the `android/app/src/main/res/raw/runtime_url`
+5. Change the `android/app/src/main/res/raw/runtime_url`
+6. Add your local ip
+7. Commit and push changes to master. This will trigger an App Center build. Or you can run it locally.
 
-Simply add your local ip
+### 3.1 Customizing iOS part
 
+Remote notifications on Simulator [todo: Simulator?] will not work. Open `app/ios/yourProjectName.xcworkspace` in Xcode to add files to this project and change its capabilities.
 
-Commit and push changes to master. This will trigger an Appcenter build. Or you can run it locally.
+1. Add `GoogleService-Info.plist` to NativeTemplate folder, it should be at the same level as `Info.plist`
 
-
-### 3.1 Customizing IOS part
-
-Please remember that remote notifications on Simulator wont work. Open `app/ios/yourProjectName.xcworkspace` in Xcode since we have to add files and change capabilities of the project.
-
-- Add `GoogleService-Info.plist` to NativeTemplate folder, it should be at the same level as `Info.plist`
-
-- Change `/ios/AppDelegate.swift`
+2. Change `/ios/AppDelegate.swift`
 
 Please note that we are adding our own local ip because we want to test against local mendix instance.
 
@@ -231,7 +228,7 @@ Please note that we are adding our own local ip because we want to test against 
  }
 ```
 
-- Add `ios/Podfile` if the following lines exists, otherwise add:
+3. Add `ios/Podfile` if the following lines exists, otherwise add:
 
 ```
   pod 'RNFirebase', :path => '../node_modules/react-native-firebase/ios'
@@ -239,65 +236,63 @@ Please note that we are adding our own local ip because we want to test against 
   pod 'Firebase/Messaging', '~> 5.15.0'
 ```
 
-- Change `Info.plist` runtime Url to your local ip
+4. Change `Info.plist` runtime URL to your local IP address.
 
-- Add capabilities
-![Capabilities](attachments/native-remote-push/iosCustomizations.png)
+5.  Add capabilities
+     ![Capabilities](attachments/native-remote-push/iosCustomizations.png)
 
 ## 4 Mendix project setup
 
 Create a Native starter project.
 
+### 4.1 Module installation
 
-### Module installation 
-- Add Community commons
-- Add encryption
-     - Set the private key
+1. Add Community commons
+2. Add encryption
+     2.1 Set the private key
+     
      ![Capabilities](attachments/native-remote-push/modeler/setEncryption.png)
-- Add push notification module
 
+3. Add push notification module
 
-### Push notification modeler work
+### 4.2 Push Notification Modeler Work
 
+#### 4.2.1 Set Up Notification Widget
 
-#### Set up Notification widget
-
-1) Drag and drop an App events to your home page and set:
-    - Page load / on load to `PushNotifications.OnPageLoad_RegisterPushNotifications`
-    - App resume / on resume `PushNotifications.OnPageLoad_RegisterPushNotifications`
+1. Drag and drop an App events [todo: check] to your home page and configure the following:
+     1.1 Page load / on load to `PushNotifications.OnPageLoad_RegisterPushNotifications`
+     1.2 App resume / on resume `PushNotifications.OnPageLoad_RegisterPushNotifications`
     
-![AppEvents](attachments/native-remote-push/modeler/AppEvents.png)    
+     ![AppEvents](attachments/native-remote-push/modeler/AppEvents.png)    
 
-This will allow devices to register automatically when they opened the mendix app
+     This will allow devices to register automatically when they opened the mendix app
 
-2) Create an entity called `NativePush` in your domain modal with one field:
-    - objectGUID
+2. Create an entity called `NativePush` in your domain model with one `- objectGUID` field:
 
-![NotificationEntity](attachments/native-remote-push/modeler/NotificationEntity.png)
+     ![NotificationEntity](attachments/native-remote-push/modeler/NotificationEntity.png)
 
-3) Create `DS_Notification` nanoflow where it creates a `NativePush` entity object then returns it.
+3. Create a new *DS_Notification* nanoflow which creates a *NativePush* entity object and then returns it:
 
-![DS_Notification](attachments/native-remote-push/modeler/DS_Notification.png)
+     ![DS_Notification](attachments/native-remote-push/modeler/DS_Notification.png)
 
-4) Drag and drop a Dataview to your homepage, set:
-    - its Source to Nanoflow=> DS_Notification
+4. Drag and drop a Dataview [todo check] onto your homepage.
 
-![Dataview](attachments/native-remote-push/modeler/Dataview.png)
+5.  Set its **Source** to **Nanoflow** > **DS_Notification**:
 
-5) Inside of the Dataview drag and drop the Notifications widget, set its GUID
- to NotificationEntity/objectGUID
+     ![Dataview](attachments/native-remote-push/modeler/Dataview.png)
 
-![NotificationsGUID](attachments/native-remote-push/modeler/NotificationsGUID.png)
+5. Drag and drop a Notifications widget inside of the dataview [todo check]
+6. Set its **GUID** to **NotificationEntity/objectGUID**:
 
-This will allow us to pass objects with notification
+     ![NotificationsGUID](attachments/native-remote-push/modeler/NotificationsGUID.png)
 
-- Add one more Show page item to your responsive profile navigation => PushNotification/_USE ME/Administration
+     This will allow you to pass objects with your push notifications
 
-![ProfileHomePage](attachments/native-remote-push/modeler/ProfileHomePage.png)
+7. Add one more Show page item [todo check] to your responsive profile navigation: PushNotification/_USE ME/Administration
 
+     ![ProfileHomePage](attachments/native-remote-push/modeler/ProfileHomePage.png)
 
-
-#### Add actions to your notification widget
+#### 4.2.2 Add Actions to Your Notification Widget
 
 - Create two nanoflows (`ACT_OnRecieve`,`ACT_OnOpen`) which will simply two different logs => "onRecieve triggered" - "onOpen triggered"
 
@@ -310,7 +305,8 @@ This will allow us to pass objects with notification
 
 ![LogitAction](attachments/native-remote-push/modeler/logitAction.png)
 
-#### Add firebase configuration  
+#### 4.2.3 Add Firebase Configurations
+
 Deploy the project and head for the administartion screen of the push notifications, we will add configurations
 
 - add new FCM configuration
@@ -329,7 +325,7 @@ Deploy the project and head for the administartion screen of the push notificati
 
 Lets test the implementation
 
-#### Sending simple push notification
+#### Sending a Push Notification
 
 - Reload the app in the phone
 - Put the app in the background 
@@ -350,7 +346,7 @@ When you tap the notification you will recieve a log in your modeler console  `o
 
 When the app is in the foreground you wont see that notification but you will recieve a log in your modeler console  `onRecieve triggered` 
 
-## Sending data via push notification
+## 5 Sending Data Using Push Notifications
 
 Lets imagine we have bunch of products and we want to send A product to a user via administration module interface.  
 

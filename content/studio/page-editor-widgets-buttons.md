@@ -67,7 +67,7 @@ You can find the list of default actions and properties that need to be configur
 | Cancel Changes | Cancel Changes | None                                                         |
 | Close Page     | Close Page     | None                                                         |
 | Sign Out       | Sign Out       | None                                                         |
-| Open Link      | Open Link      | For **Open Link** you need to configure the following properties: <ul><li>**Link Type** (*Default value*: Web)</li><li>**Source** (*Default value*: Use literal value)</li><li>**Url**</li></ul> For more information on these properties, see the [Open Link Action](page-editor-widgets-events-section#open-link-action) section in *Events Section*. |
+| Open Link      | Open Link      | For **Open Link** you need to configure the following properties: <ul><li>**Link Type** (Default: *Web*)</li><li>**Source** (Default: *Use literal value*)</li><li>**Url**</li></ul> For more information on these properties, see the [Open Link Action](page-editor-widgets-events-section#open-link-action) section in *Events Section*. |
 
 ## 3 General Section
 
@@ -77,8 +77,8 @@ Properties available in the **General** section are described in the table below
 | ----------- | ------------------------------------------------------------ |
 | Caption     | Defines the text that will be shown on the button. Buttons have preset captions depending on the action they perform. |
 | Icon        | Determines the icon that will be shown in front of the caption of the button. |
-| Render Mode | Defines the way the button will be shown to the end-user. Possible options are the following: <ul><li>**Button** – the widget will be rendered as a button</li><li>**Link** – the widget will be rendered as a hyperlink</li></ul>Default render mode: Button |
-| Style       | Applies a predefined styling to the button. Possible options are the following: <ul><li>Default</li><li>Inverse</li><li>Primary</li><li>Info</li><li>Success</li><li>Warning</li><li>Danger</li></ul>Default value for all buttons except the **Save Changes** button: Default<br />Default value for the **Save Changes** button: Success<br />The color for each style depends on your settings in the **Theme Customizer**. For details, see [Theme Customizer](theme-customizer). |
+| Render Mode | Defines the way the button will be shown to the end-user. Possible options are the following: <ul><li>Button  *(default)*  – the widget will be rendered as a button</li><li>Link – the widget will be rendered as a hyperlink</li></ul> |
+| Style       | Applies a predefined styling to the button. Possible options are the following: <ul><li>Default <em>(default for all buttons except **Save Changes**)</em></li><li>Inverse</li><li>Primary</li><li>Info</li><li>Success <em>(default for the **Save Changes** button)</em></li><li>Warning</li><li>Danger</li></ul>The color for each style depends on your settings in the **Theme Customizer**. For details, see [Theme Customizer](theme-customizer). |
 
 ## 4 Design Section
 

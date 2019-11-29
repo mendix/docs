@@ -81,25 +81,25 @@ The pop-up properties are only relevant for pop-up pages (as opposed to content 
 
 This specifies the pop-up width in pixels. When set to 0, the width is determined automatically.
 
-*Default value*: 0
+Default: *0*
 
 ### 6.2 Height (Pixels)
 
 Specifies the pop-up height in pixels. When set to 0, the height is determined automatically.
 
-*Default value*: 0
+Default: *0*
 
 ### 6.3 Resizable
 
 Specifies whether the pop-up is resizable (Yes) or fixed-size (No).
 
-*Default value*: Yes
+Default: *Yes*
 
 ### 6.4 Close Action
 
 Configures the behavior of the popup close button (the little cross in the top-right corner). The default behavior of the popup close button is to rollback any changes and close the popup. If you want to customize the behavior of the popup close button, you can point to a button on the page. When the popup close button is clicked, it will then act as if the selected button is clicked. If the selected button is not available the popup close button will revert back to the default behavior.
 
-*Default value*: Default (cancel)
+Default: *Default (cancel)*
 
 ## 7 Usage Section
 

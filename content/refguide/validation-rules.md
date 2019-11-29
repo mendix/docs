@@ -38,14 +38,12 @@ The rule defines which condition an attribute should satisfy.
 
 | Option | Description |
 | --- | --- |
-| Required | The attribute needs to have a value. It cannot be empty. |
+| Required *(default)*  | The attribute needs to have a value. It cannot be empty. |
 | Unique | The attribute should have a value that is unique compared to the values of this attribute in all other objects of the same same entity. |
 | Equals | The attribute value needs to be equal to a specified value or equal to the value of another attribute of the same object. |
 | Range | The attribute value needs to be in a range between specified values or between the values of other attributes of the same object. |
 | Regular expression | The attribute needs to match a [regular expression](regular-expressions). |
 | Maximum length | The attribute may have no more than the specified number of characters. |
-
-*Default value*: Required
 
 {{% alert type="warning" %}}
 

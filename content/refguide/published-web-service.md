@@ -24,7 +24,7 @@ See [Operations](operations).
 
 If set to 'yes', incoming requests will be validated against the WSDL.
 
-*Default value*: Yes
+Default: *Yes*
 
 ### 3.2 Authentication
 

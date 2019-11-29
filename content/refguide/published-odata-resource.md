@@ -43,7 +43,7 @@ This also applies to attributes and associations. In the **Exposed attributes an
 
 For associations, the exposed name is the name given to the navigation property (which is the property referring to the associated object(s)). You can also specify the name of the association using the **exposed association name** column. By default, the name is the same as the name of the association in the domain model.
 
-When these names have been overriden, the name of the entity, attribute or association as defined in your domain model will not be exposed to the outside world, for all OData communication the exposed name will be used.
+When these names have been overridden, the name of the entity, attribute or association as defined in your domain model will not be exposed to the outside world, for all OData communication the exposed name will be used.
 
 These features make it easier to refactor your domain model without affecting external APIs.
 
@@ -51,7 +51,7 @@ These features make it easier to refactor your domain model without affecting ex
 
 Use the **Exposed set name** field to set the name of the entity set. This is the last part of the URL of the resource.
 
-*Default value*: Entity name + s
+Default: *{Entity name}s*
 
 ## 5 Use Paging
 
@@ -59,10 +59,10 @@ If you enable this option, you can set a maximum number of objects per response,
 
 **Note that enabling this does mean that retrieved data can be inconsistent**, because you're no longer retrieving data within a single transaction. For example, you are sorting on an Age attribute in an entity called Customer and retrieving customers with 1000 objects per page. Now a customer gets deleted in between two calls, it means that the customer with Age 23 at position 1001 now moves to position 1000, meaning that this object that you _would_ have gotten on the next page now moves to the first page and is not retrieved anymore. The other way around with data inserts in between calls can cause you to see duplicates. So only use this option when this kind of inconsistency is acceptable.
 
-*Default value*: No
+Default: *No*
 
 ## 6 Page Size
 
 When Use paging is set to Yes, you can set the amount of objects per page here.
 
-*Default value*: 10000
+Default: *10000*

@@ -101,12 +101,10 @@ The value entered by the end user (or the default value in the case of hidden an
 | Starts with      | Does the attribute value start with the entered value?       | Text (attribute must be of type String) |
 | Greater          | Is the attribute value greater than the entered value?       | Text, Date                              |
 | Greater or equal | Is the attribute value greater than or equal to the entered value? | Text, Date                              |
-| Equal            | Is the attribute value the same as the entered value?        | Text, Date, Drop-down                   |
+| Equal  *(default)*            | Is the attribute value the same as the entered value?        | Text, Date, Drop-down                   |
 | Not equal        | Is the attribute value not the same as the entered value?    | Text, Date, Drop-down                   |
 | Smaller or equal | Is the attribute value smaller than or equal to the entered value? | Text, Date                              |
 | Smaller          | Is the attribute value smaller than the entered value?       | Text, Date                              |
-
-*Default value*: Equal
 
 {{% alert type="info" %}}
 
@@ -161,7 +159,7 @@ This property is available for **Drop-down** search fields.
 
 The sort order specifies the order in which the items in the drop-down search field are shown. You can sort on multiple attributes in both directions (ascending and descending). If no sort order is specified, the drop-down search field sorts on the displayed attribute.
 
-*Default value*: No sort order
+Default: *No sort order*
 
 #### 3.6 Lower Bound
 
@@ -183,7 +181,7 @@ This property is available for **Range** search fields.
 
 The lower bound operator determines whether the comparison with the lower bound is inclusive (>=) or not (>). It can be either 'Greater' or 'Greater or equal'.
 
-*Default value*: Greater.
+Default: *Greater*
 
 #### 3.8 Upper Bound
 
@@ -205,7 +203,7 @@ This property is available for **Range** search fields.
 
 The upper bound operator determines whether the comparison with the upper bound is inclusive (<=) or not (<). It can be either 'Smaller' or 'Smaller or equal'.
 
-*Default value*: Smaller
+Default: *Smaller*
 
 ## 4 Read More
 

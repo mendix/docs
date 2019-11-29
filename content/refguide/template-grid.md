@@ -76,25 +76,25 @@ Even if the control bar is invisible there can still be a default button that is
 
 {{% /alert %}}
 
-*Default value*: True
+Default: *True*
 
 #### 3.3.2 Show Paging Buttons
 
 This property indicates with the buttons to page through the information in the grid are visible. Only hide these buttons if you are sure that there will never be more objects than the number of rows of the grid. Note that hiding the control bar also hides the paging buttons.
 
-*Default value*: True
+Default: *True*
 
 #### 3.3.3 Number of Rows
 
 With this property you can change the number of rows of templates that will be shown on one page.
 
-*Default value*: 3
+Default: *3*
 
 #### 3.3.4 Number of Columns
 
 With this property you can change the number of templates that will be shown next to each other in one row.
 
-*Default value*: 2
+Default: *2*
 
 #### 3.3.5 Style Template
 
@@ -107,18 +107,16 @@ The selection mode determines whether and how the user can select items in the g
 | Value | Description |
 | --- | --- |
 | No selection | The user cannot select items. |
-| Single selection | The user can select a single item by clicking on it. Clicking another item will make that item the selection. |
+| Single selection  *(default)* | The user can select a single item by clicking on it. Clicking another item will make that item the selection. |
 | Single selection and maintain | The user can select one item at a time by clicking on it. Users cannot deselect an item. By default the first item will be selected and removing a selected item will autoselect a subsequent item. |
 | Multi-selection | The user can select multiple items by clicking the first one and holding the 'Ctrl' key while clicking on other items. Simply clicking an item will deselect all items and make the clicked item the selection. |
 | Simple multi-selection | The user can select multiple items by simply clicking on them. |
-
-*Default value*: Single selection
 
 #### 3.3.7 Select First
 
 This property indicates whether the first item will be selected initially. This is especially useful if there is a data view listening to this grid.
 
-*Default value*: False
+Default: *False*
 
 #### 3.3.8 Default Button Trigger
 
@@ -127,15 +125,13 @@ The default button can be triggered by a single or a double click on a row.
 | Value | Description |
 | --- | --- |
 | Single click | A single click triggers the default button. This cannot be used in combination with allowing the user to select rows. |
-| Double click | A double click triggers the default button. |
-
-*Default value*: Double click
+| Double click *(default)* | A double click triggers the default button. |
 
 #### 3.3.9 Refresh Time (in Seconds)
 
 If the refresh time is non-zero, the template grid will refresh its contents every given number of seconds. For example, a task list could be refreshed every minute so that you know when new tasks arrive. By default the refresh time is zero and this means that the grid will not automatically refresh itself.
 
-*Default value*: 0
+Default: *0*
 
 ### 3.4 Visibility Section {#visibility}
 

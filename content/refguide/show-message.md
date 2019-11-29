@@ -27,11 +27,9 @@ Type defines the color scheme and icon of the message.
 
 There are three message options:
 
-* Information
+* Information *(default)* 
 * Warning
 * Error 
-
-*Default value*: Information
 
 ### 2.2 Template
 
@@ -53,7 +51,5 @@ Blocking defines whether the message appears with a hover on top of the existing
 
 | Option | Description |
 | --- | --- |
-| Yes | The message appears in a pop-up in the center of the screen on a blocking overlay, rendering the background inaccessible until the pop-up is closed. |
+| Yes *(default)* | The message appears in a pop-up in the center of the screen on a blocking overlay, rendering the background inaccessible until the pop-up is closed. |
 | No | The message appears in a pop-up in the center of the screen but does not block the rest of the window, allowing the user to continue what they were doing with the pop-up open. |
-
-*Default value*: Yes

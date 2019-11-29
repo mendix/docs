@@ -45,13 +45,13 @@ A tab container contains one or more tab pages where you place widgets. For exam
 
 **Default tab page** defines which tab is displayed when the page is opened. If no tab is set as the default one, the first tab page will be shown. 
 
-*Default value*: False
+Default: *False*
 
 #### 3.1.2 Refresh on Show
 
 **Refresh on show** indicates whether the contents of the tab page should be refreshed when the tab page is shown. Set this property to *No* if you know that nothing will affect the information on the tab page.
 
-*Default value*: True
+Default: *True*
 
 {{% alert type="info" %}}This property is not supported on native mobile pages.{{% /alert %}}
 

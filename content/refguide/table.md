@@ -120,10 +120,8 @@ The **Width Unit** defines whether the [Column widths](#column-widths) property 
 
 | Value | Description |
 | --- | --- |
-| Percentage | The **Column widths** property is specified in percentages. When resizing, columns will become wider/narrower while keeping the same relative widths. |
+| Percentage  *(default)* | The **Column widths** property is specified in percentages. When resizing, columns will become wider/narrower while keeping the same relative widths. |
 | Pixels | The **Column widths** property is specified in pixels. When resizing, the pixel width columns will keep the same size; auto columns will become wider/narrower. |
-
-*Default value*: Percentage
 
 #### 3.2.2 Column Widths {#column-widths}
 

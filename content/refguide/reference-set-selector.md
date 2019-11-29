@@ -107,13 +107,13 @@ If column widths are defined as percentages, you can also change the widths of c
 
 With this property you can change the number of rows that will be shown in one page. See also the property 'Show empty rows'.
 
-*Default value*: 5
+Default: *5*
 
 #### 2.5.4 Show Empty Rows
 
 If you choose to show empty rows there will always be the grid that shows the same number of rows (see 'Number of rows') even if there are fewer objects to show on the page.
 
-*Default value*: False
+Default: *False*
 
 #### 2.5.5 Tooltip page
 
@@ -131,13 +131,13 @@ Even if the control bar is invisible there can still be a default button that is
 
 {{% /alert %}}
 
-*Default value*: True
+Default: *True*
 
 #### 2.5.7 Show Paging Buttons
 
 This property indicates whether the buttons to page through the information in the grid are visible or not. Only hide these buttons if you are sure that there will never be more objects than the number of rows of the grid. Note that hiding the control bar also hides the paging buttons.
 
-*Default value*: True
+Default: *True*
 
 #### 2.5.8 Selection Mode
 
@@ -146,12 +146,10 @@ The selection mode determines whether and how the user can select items in the r
 | Value | Description |
 | --- | --- |
 | No selection | The user cannot select items. Of this is chosen, then you cannot have a **Remove** button in your reference set selector|
-| Single selection | The user can select a single item by clicking on it. Clicking another item will make that item the selection. Clicking a selected item will deselect it. |
+| Single selection  *(default)* | The user can select a single item by clicking on it. Clicking another item will make that item the selection. Clicking a selected item will deselect it. |
 | Single selection and maintain | The user can select a single item by clicking on it. The first item is always selected by default. Clicking another item will make that item the selection. Clicking a selected item will not deselect it. |
 | Multi-selection | The user can select multiple items by clicking the first one and holding the <kbd>Ctrl</kbd> key while clicking on other items. Clicking an item without the <kbd>Ctrl</kbd> key will deselect all other selected items and make the clicked item the selection. |
 | Simple multi-selection | The user can select multiple items by clicking on them in turn. |
-
-*Default value*: Single selection
 
 #### 2.5.9 Select first
 
@@ -159,10 +157,8 @@ Specifies whether the first item should be selected by default when the referenc
 
 Possible values:
 
-* No
+* No *(default)* 
 * Yes
-
-*Default value*: No
 
 #### 2.5.10 Default Button Trigger
 
@@ -171,9 +167,7 @@ The default button can be triggered by a single or a double click on a row.
 | Value | Description |
 | --- | --- |
 | Single click | A single click triggers the default button. This cannot be used in combination with allowing the user to select rows. |
-| Double click | A double click triggers the default button. |
-
-*Default value*: Double click
+| Double click  *(default)* | A double click triggers the default button. |
 
 ### 2.6 Selectable Objects Section{#selectable-objects}
 

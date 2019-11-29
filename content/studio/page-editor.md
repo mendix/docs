@@ -179,9 +179,9 @@ The **Properties** tab displays the properties of the currently selected element
 {{% image_container width="300" %}}![](attachments/page-editor/properties.png)
 {{% /image_container %}}
 
-For example, if you click **Navigation Layout**—which is the layout that you choose when [creating a page](#creating-new-page)—in the breadcrumb, properties will display reference information on page-related actions that you can perform, such as changing the page title and customizing pages' look: 
+For example, if you click **Layout**—which is the layout that you choose when [creating a page](#creating-new-page)—in the breadcrumb, properties will display reference information on page-related actions that you can perform, such as changing the page title and customizing pages' look: 
 
-{{% image_container width="300" %}}![](attachments/page-editor/navigation-layout.png)
+{{% image_container width="300" %}}![](attachments/page-editor/layout.png)
 {{% /image_container %}}
 
 ## 6 Read More

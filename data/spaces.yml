@@ -182,7 +182,6 @@ appstore:
     - "Widgets"
     - "Modules"
     - "Connectors"
-    - "Themes"
 product-naming:
   space: "Mendix Product Naming Guide"
   priority: false

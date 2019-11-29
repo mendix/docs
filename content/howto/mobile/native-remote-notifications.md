@@ -6,38 +6,40 @@ title: "Native Remote notification"
 #description: "Instructions on how to set up native push notifications with Native builder"
 #tags: ["mobile", "push notification", "remote", "push", "notification"]
 ---
-​
-## 1 Introduction
-​
-We can divide our work on four main with order (its important):
 
-1) Native app creation with Native Builder, 
-2) Firebase setup, 
+## 1 Introduction
+
+Setting up remote native push notifications occurs over four major steps:
+
+1) Native app creation with Native Builder
+2) Firebase setup
 3) Native Builder app customization (We need the files from firebase setup) 
 4) Mendix project setup
-​
+
 **This how-to will teach you how to do the following:**
-​
+
 [TODO]
 * Create...
 * Build...
 * Configure...
-​
+
 ## 2 Prerequisites
-​
+
 Before starting this how-to, make sure you have completed the following prerequisites:
-​
+
 * How to create native app via [Native Builder](https://docs.mendix.com/howto/mobile/native-builder#1-introduction) 
 * How to create simple mendix app from Mendix template
 * How to work with GIT
 
-## 1 Native builder app creation
+## 3 Native Builder App Creation
 
-Please follow https://docs.mendix.com/howto/mobile/native-builder#1-introduction in order to create your own native builder. We recommend you to follow Native Builder 3.0.0 which requires Mendix 8.3.0 and above. Although it wont affect the customizations which we will do.
+Please follow [Deploy Your First Mendix Native App](deploying-native-app) all the way through section X [todo: how far must they go?]. Once you finish this, you will have a x and can y [todo: Connor will fill in after Mehmet explains previous todo].  We recommend you to follow Native Builder 3.0.0 which requires Mendix 8.3.0 and above. Although it wont affect the customizations which we will do [todo: then why are you recommending it?].
 
-Clone the generated repo to your computer since we will do customizations.
+Clone the generated repository to your computer to enable customizations later.
 
-## 2 Firebase setup
+## 4 Firebase Setup
+
+[todo: rewrite this section to be have more numbered list instructions]
 
 FILES WILL BE USED LATER: 
 `google-services.json`
@@ -47,28 +49,27 @@ FILES WILL BE USED LATER:
 ID's will be used later:
 Project ID: `yourProjectIdFromFirebase`
 
+Complete *Creating a New FCM Project* in [How to Set Up the Google Firebase Cloud Messaging Server](setting-up-google-firebase-cloud-messaging-server) to create a new FCM project. During this process, be sure to enable both Android and iOS app builds, since this how to will use both platforms [todo: where does the user add these apps in the process?]. 
 
-Please follow   https://docs.mendix.com/howto/mobile/setting-up-google-firebase-cloud-messaging-server#1-introduction
+The `IOS bundle ID` and `Android package name` will be the same [todo: what does this have to do with anything?]. You can find these values in the cloned repo:
 
-We will create a new FCM project so please follow section `3.2`
-
-Make sure to add Android App and IOS App since we will use both platforms. The `IOS bundle ID` and `Android package name` will be the same. You can find this value in the cloned repo:
-
-`android/app/src/main/AndroidManifest.xml`:
+`android/app/src/main/AndroidManifest.xml`
 
 `<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.mendix.nativetemplate">`
 
-in our case it is `com.mendix.nativetemplate`.
+Because you are using the Native Template, your package's  name is `com.mendix.nativetemplate`.
 
-Download the `google-services.json` and `GoogleService-Info.plist` file to your computer since we will use it in our generated native app.
+Download the `google-services.json` and `GoogleService-Info.plist` file to your computer since you will use it in your generated native app later.
 
-- Service Accounts tab create a private key and store it as `dontshareThis.json`
+Navigate to the **Service Accounts** tab.
 
-## 3 Setting up Native Builder customizations
-​
+Create a private key and save it as *dontshareThis.json* in a place you will not lose it.
+
+## 3 Setting up Native Builder Customizations
+
 Out of the box, native builder will create ios and android part of the code. We will do different customizations for different platforms.
-​
-### 3.1 Customizing android part
+
+### 3.1 Customizing Android part
 
 - Change `android/app/build.gradle`s with following additions
 

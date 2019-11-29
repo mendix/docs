@@ -10,7 +10,8 @@ tags: ["Studio Pro", "project menu", "top bar"]
 
 In the **Project** menu you can view and/or manipulate settings that are connected to the version control or deployment. For example, you can view the history of the current development line or create a deployment package.
 
-![Project Menu](attachments/project-menu/project-menu.png)
+{{% image_container width="300" %}}![Project Menu](attachments/project-menu/project-menu.png)
+{{% /image_container %}}
 
 ## 2 Update
 
@@ -20,17 +21,21 @@ Updates the local app to the latest revision that was committed to the version c
 
 Commits all local changes made to the app since the previous commit to the version control server. For more information, see [Commit](commit-dialog).
 
-##4 Show Changes on Disk
+## 4 Show Changes on Disk
 
 Opens a dialog that shows which files on disk have been changed since the last commit.  
 
 ## 5 More Versioning
 
-###5.1 History
+Under **Project** > **More versioning**, you can find settings that are related to the version control, for example, you can manage branch lines. 
+
+![More Versioning](attachments/project-menu/more-versioning.png)
+
+### 5.1 History
 
 Shows the history of committed revisions of the app. For more information on what is displayed in **History**, see [History](history-dialog).
 
-###5.2 Download from Version Control Server
+### 5.2 Download from Version Control Server
 
 Downloads an app from the Team Server or another SVN server. This creates a local working copy of the app for development. For more information on what settings are displayed in the **Download from Version Control Server** dialog window, see [Download from Version Control Server](download-from-version-control-dialog).
 
@@ -38,23 +43,27 @@ Downloads an app from the Team Server or another SVN server. This creates a loca
 
 Uploads a local app to a new or existing Team Server repository, or to another SVN server. This is only possible if the app is not yet version controlled. For more information on what settings are displayed in the **Upload from Version Control Server** dialog window, see [Upload from Version Control Server](upload-from-version-control-dialog).
 
-###5.4 Manage Branch Lines
+### 5.4 Manage Branch Lines
 
 Manages branch lines on the version control server that can be used to develop functionality separately from the main line. For more information on the Branch Line Manager and creating a new branch line, see [Branch Line Manager](branch-line-manager-dialog) and [Create Branch Line](create-branch-line-dialog). 
 
-###5.6 Merge Changes Here
+### 5.5 Merge Changes Here
 
 Merges changes that were committed in another development line to the development line that is currently opened in Studio Pro.
 
-### 5.7 Reverse Merge Changes
+### 5.6 Reverse Merge Changes
 
 Allows locally rolling back changes that were committed to the version control repository. These local changes can then be committed as a new revision.
 
-###5.8 Add Snapshot of Data
+###5.7 Add Snapshot of Data
 
 Creates a snapshot of the built-in database and adds that to the version control repository. This is especially useful for adding test data to your app or for demo purposes.
 
 ## 6 Tools
+
+Under **Project** > **Tools**, you can find settings on updating widgets, button icons, and layouts, checking widgets, and converting your classes to the **Design** properties.  
+
+![Tools](attachments/project-menu/tools.png)
 
 ### 6.1 Batch update button icons
 

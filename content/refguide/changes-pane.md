@@ -8,13 +8,13 @@ tags: ["Studio Pro", "changes", "changes pane"]
 
 ## 1 Introduction 
 
-For [Team Server](/developerportal/develop/team-server) app projects, the **Changes** pane shows the local changes to the app project since the last commit. You can commit changes, update to the latest revision, and view the history from it. 
+For version control enabled projects (projects with Team Server or other SVN servers), the **Changes** pane shows the local changes to the app project since the last commit. You can commit changes, update to the latest revision, and view the history from it. 
 
 This pane consists of the following:
 
 * The [top bar](#top-bar) contains various buttons, such as **Back**, **Go to**, **Tasks**, etc. 
-* The [top level](top-level) shows you the document that was changed, for example, a page where a widget was deleted
-* The [zoomed-in level](#zommed-in-level) of the pane is split into two grids, with elements on the left and changed properties on the right
+* The [top level](top-level) shows you a list of documents that were changed, for example, a page where a widget was deleted
+* The [zoomed-in level](#zommed-in-level) of the pane is split into two grids, with elements in the left grid and changed properties of the selected element in the right grid
 
 ## 2 Top Bar {#top-bar}
 
@@ -30,19 +30,19 @@ The top bar of the **Changes** pane consists of the following buttons:
 
 * **Commit** – commits your changes to the repository and starts a new revision; for more information on the commit concept, see the [Commit](version-control#commit) section in *Version Control*
 
-* **History** – opens the **History** dialog window that shows the changes made on the development line of the project; for more information on history, see [History](history-dialog)
+* **History** – opens the **History** dialog window that shows the changes made on the current development line of the project; for more information on history, see [History](history-dialog)
 
-* **Show Conflicts** – available only for a zoomed-in level, shows details of a conflict
+* **Conflicts** – available only for a zoomed-in level, shows details of a conflict
 
-* **Changes in mine** – available only for a zoomed-in level, shows changes to a document on a current development line (for more information on how to solve conflicts, see the [Dealing With Conflicts](using-version-control-in-studio-pro#conflicts) section in *Using Version Control in Studio Pro*)
+* **Changes in mine** – available only for a zoomed-in level of a conflicted document, shows changes to a document on a current development line (for more information on how to solve conflicts, see the [Dealing With Conflicts](using-version-control-in-studio-pro#conflicts) section in *Using Version Control in Studio Pro*)
 
-* **Changes in theirs** – available only for a zoomed-in level, shows incoming changes to a document from another development line (for more information on how to solve conflicts, see the [Dealing With Conflicts](using-version-control-in-studio-pro#conflicts) section in *Using Version Control in Studio Pro*)
+* **Changes in theirs** – available only for a zoomed-in level of a conflicted document, shows incoming changes to a document from another development line (for more information on how to solve conflicts, see the [Dealing With Conflicts](using-version-control-in-studio-pro#conflicts) section in *Using Version Control in Studio Pro*)
 
 	![Top Bar of the Changes Pane](attachments/changes-pane/changes-top-bar.png)
 
 ## 3 Top Level {#top-level}
 
-The top level of the **Changes** pane is a grid listing changes to a specific document, for example, a page or a nanoflow:
+The top level of the **Changes** pane is a grid listing changed documents, for example, a page or a nanoflow:
 
 ![Top Level of the Changes Pane](attachments/changes-pane/changes-top-level.png)
 
@@ -61,7 +61,7 @@ The grid contains information on the following items:
 
 You can zoom into a changed document, double-clicking a line in the grid on the top level or clicking the **Go to** button. 
 
-The zoomed-in level is split into two grids, with elements on the left and changed properties on the right. If no properties were changed for an element, for example, when an element was *added* or *deleted*, the leftgrid will be empty:
+The zoomed-in level is split into two grids, with elements on the left and changed properties on the right. If no properties were changed for an element, for example, when an element was *added* or *deleted*, the right grid will be empty:
 
 ![No Properties to Show](attachments/changes-pane/element-added.png)
 

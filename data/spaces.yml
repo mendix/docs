@@ -170,9 +170,9 @@ partners:
   space: "Strategic Partners Guide"
   priority: false
   menu_categories:
-    - "IBM"
-    - "SAP"
     - "Siemens"
+    - "SAP"
+    - "IBM"
 appstore:
   space: "App Store Guide"
   priority: false

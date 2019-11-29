@@ -8,7 +8,9 @@ tags: ["Studio Pro", "project menu", "top bar"]
 
 ## 1 Introduction
 
-In the Project menu you can update view and/or control things that are connected to the version control or deployment. For example, you can view the history of the current development line or create a deployment package.
+In the **Project** menu you can view and/or manipulate settings that are connected to the version control or deployment. For example, you can view the history of the current development line or create a deployment package.
+
+![Project Menu](attachments/project-menu/project-menu.png)
 
 ## 2 Update
 

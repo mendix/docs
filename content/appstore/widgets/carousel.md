@@ -13,77 +13,64 @@ The [Carousel](https://appstore.home.mendix.com/link/app/47784/) widget displays
 ### 1.1 Features
 
 * Supports different data sources:
-	* Set static images in the Modeler
+	* Set static images in Studio Pro
 	* Retrieve images from the database via XPath
 	* Retrieve images via a microflow
-* Image from mendix System.Images or from a URL
-* Navigate to the next or the previous image
-* Execute a microflow or open a page when an image is clicked
-* Execute a nanoflow or open a page when an image is clicked
-* Swipe through the images on mobile devices
+* Use images from **System.Images** or from a URL
+* Navigate to the next or previous image
+* Execute a microflow or nanoflow or open a page when an image is clicked
+* Swipe through images on mobile devices
 
-### 1.3 Test Project
+### 1.3 Demo App Project
 
-https://carousel.mxapps.io/
+For a demo app project that has been deployed with this widget, see [here](https://carousel.mxapps.io/).
 
 ## 2 Usage
 
-The widget requires a context.
+The widget requires a context configured on the **Data Source** tab. The possible data sources are described below.
 
-### 2.1 Data source: Static
+### 2.1 Static Data Source
 
-    On the Data source option of the Data source tab, select the static option if its not already selected by default.
-    On the Static images option of the same tab, click new to add static images from the modeler and also configure an onclick action.
-    For the on click options, configure only one of the two (either calling a microflow or a page).
-    Configuring both options will only trigger the microflow.
+When this option is selected, do the following:
 
-### 2.2 Data source: XPath
+* In the **Static images** section, click **New** to add static images from Studio Pro and also configure an on-click action
+* On the **On click action** tab of the **Edit Static Images Item** dialog box, configure only one of option:: **Microflow**, **Nanoflow**, or **Page**
 
-    On the Data source option of the Data source tab, select the XPath option.
-    Specify the image entity and the XPath constraint (if any).
-    In the behavior tab, you can configure on click behavior i.e Do nothing, call microflow or show page.
-    For options call microflow and show page, a microflow or page must be specified respectively.
+### 2.2 Database Data Source
 
-### 2.3 Data source: Microflow
+When this option is selected, do the following:
 
-    On the Data source option of the Data source tab, select the Microflow option.
-    Specify the image entity and the microflow to retrieve the carousel images from (both required).
-    Refer to the XPath section for configuring click behavior.
+* Specify the **Images entity** and the **XPath** constraint (if any)
+* On the **Behavior** tab, configure the **On click** behavior
+	* For the **Call microflow**, **Call nanoflow**, and **Show page** options, specify the respective microflow, nanoflow, or page
+* Specifying a **URL attribute** will make the value of the URL attribute the priority
 
-For the microflow and XPath data source options, specifying a URL attribute will make the value of the URL attribute the priority.
+### 2.3 Microflow Data Source
 
-## 3 Issues, suggestions and feature requests
+When this option is selected, do the following:
 
-We are actively maintaining this widget, please report any issues or suggestion for improvement at https://github.com/mendixlabs/carousel/issues.
+* Specify the **Images entity** and the **Microflow** from which the carousel images will be retrieved (both are required)
+* On the **Behavior** tab, configure the **On click** behavior
+	* For the **Call microflow**, **Call nanoflow**, and **Show page** options, specify the respective microflow, nanoflow, or page
+* Specifying a **URL attribute** will make the value of the URL attribute the priority
 
-### 3.1 Development
+## 3 Developing This App Store Component
 
-Prerequisite: Install git, node package manager, webpack CLI, grunt CLI, Karma CLI
 
-To contribute, fork and clone.
+To contribute to the development of this widget, follow these steps:
 
-git clone https://github.com/FlockOfBirds/carousel.git
+1. Install the following:
+	* [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+	* [npm](https://www.npmjs.com/)
+	* [webpack-cli](https://www.npmjs.com/package/webpack-cli)
+	* [grunt-cli](https://github.com/gruntjs/grunt-cli)
+	* [karma-cli](https://www.npmjs.com/package/karma-cli)
+2. Fork and clone the [mendixlabs/carousel](https://github.com/mendixlabs/carousel) repository. The code is in Typescript.
+3. Set up the development environment by running `npm install`.
+4. Create a folder named *dist* in the project root.
+5. Create a Mendix test project in the *dist* folder and rename its root folder to *dist/MxTestProject*, or get the test project from [mendixlabs/carousel](https://github.com/MendixLabs/carousel/releases/latest)). Changes to the widget code will be automatically pushed to this test project.
+6. To automatically compile, bundle, and push code changes to the running test project, run `grunt`.
+7. To run the project unit tests with code coverage (results can be found at `dist/testresults/coverage/index.html`), run: `npm test`.
+8. Run the unit test continuously during development via `karma start`.
 
-The code is in typescript. Use a typescript IDE of your choice, like Visual Studio Code or WebStorm.
-
-To set up the development environment, run:
-
-npm install
-
-Create a folder named dist in the project root.
-
-Create a Mendix test project in the dist folder and rename its root folder to MxTestProject. Changes to the widget code shall be automatically pushed to this test project. Or get the test project from https://github.com/MendixLabs/carousel/releases/latest
-
-dist/MxTestProject
-
-To automatically compile, bundle and push code changes to the running test project, run:
-
-grunt
-
-To run the project unit tests with code coverage, results can be found at dist/testresults/coverage/index.html, run:
-
-npm test
-
-or run the test continuously during development:
-
-karma start
+We are actively maintaining this widget. Please report any issues or suggestions for improvement at [mendixlabs/carousel](https://github.com/mendixlabs/carousel/issues).

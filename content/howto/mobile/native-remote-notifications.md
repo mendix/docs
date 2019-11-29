@@ -9,258 +9,24 @@ title: "Native Remote notification"
 
 ## 1 Introduction
 
-Setting up remote native push notifications occurs over four major steps:
-
-1) Native app creation with Native Builder
-2) Firebase setup
-3) Native Builder app customization (We need the files from firebase setup) 
-4) Mendix project setup
-
-**This how-to will teach you how to do the following:**
-
-[TODO]
-* Create...
-* Build...
-* Configure...
-
 ## 2 Prerequisites
 
-Before starting this how-to, make sure you have completed the following prerequisites:
+If you want to use push notifications with custom apps which created with native builder, make sure you have completed the following prerequisites:
 
-* How to create native app via [Native Builder](https://docs.mendix.com/howto/mobile/native-builder#1-introduction) 
-* How to create simple mendix app from Mendix template
-* How to work with GIT
-
-## 3 Native Builder App Creation
-
-Please follow [Deploy Your First Mendix Native App](deploying-native-app) all the way through section X [todo: how far must they go?]. Once you finish this, you will have a x and can y [todo: Connor will fill in after Mehmet explains previous todo].  We recommend you to follow Native Builder 3.0.0 which requires Mendix 8.3.0 and above. Although it wont affect the customizations which we will do [todo: then why are you recommending it?].
-
-Clone the generated repository to your computer to enable customizations later.
-
-## 4 Firebase Setup
-
-[todo: rewrite this section to be have more numbered list instructions]
-
-FILES WILL BE USED LATER: 
-`google-services.json`
-`GoogleService-Info.plist`
-`FirebasePrivateKey.json`
-
-ID's will be used later:
-Project ID: `yourProjectIdFromFirebase`
-
-Complete *Creating a New FCM Project* in [How to Set Up the Google Firebase Cloud Messaging Server](setting-up-google-firebase-cloud-messaging-server) to create a new FCM project. During this process, be sure to enable both Android and iOS app builds, since this how to will use both platforms [todo: where does the user add these apps in the process?]. 
-
-The `IOS bundle ID` and `Android package name` will be the same [todo: what does this have to do with anything?]. You can find these values in the cloned repo:
-
-`android/app/src/main/AndroidManifest.xml`
-
-`<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.mendix.nativetemplate">`
-
-Because you are using the Native Template, your package's  name is `com.mendix.nativetemplate`.
-
-Download the `google-services.json` and `GoogleService-Info.plist` file to your computer since you will use it in your generated native app later.
-
-Navigate to the **Service Accounts** tab.
-
-Create a private key and save it as *dontshareThis.json* in a place you will not lose it.
-
-## 3 Setting up Native Builder Customizations
-
-Out of the box, native builder will create ios and android part of the code. We will do different customizations for different platforms.
-
-### 3.1 Customizing Android part
-
-- Change `android/app/build.gradle`s with following additions
-
-```diff
-@@ -101,6 +101,10 @@ dependencies {
-     implementation fileTree(dir: "libs", include: ["*.jar"])
-     implementation "com.facebook.react:react-native:+"  // From node_modules
-     implementation "org.webkit:android-jsc:r245459"
-+    implementation "com.google.android.gms:play-services-base:16.1.0"
-+    implementation "com.google.firebase:firebase-core:16.0.9"
-+    implementation "com.google.firebase:firebase-messaging:18.0.0"
-+    implementation 'me.leolin:ShortcutBadger:1.1.21@aar'
- }
-```
-
-- add downloaded `google-services.json` inside of `android/app` so it will look like  `android/app/google-services.json`
-
-- Change `android/app/src/main/AndroidManifest.xml`
-We will be testing our implementation against local mendix instance, that means we wont using `https` which means we have to add `android:usesCleartextTraffic="true"` please remove this change afterwards.
-
-```diff
---- a/android/app/src/main/AndroidManifest.xml
-+++ b/android/app/src/main/AndroidManifest.xml
-@@ -2,9 +2,11 @@
-   package="com.mendix.nativetemplate">
-
-     <uses-permission android:name="android.permission.INTERNET" />
--
-+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-+    <uses-permission android:name="android.permission.VIBRATE" />
-     <application
-       android:name=".MainApplication"
-+      android:usesCleartextTraffic="true"
-       android:label="@string/app_name"
-       android:icon="@mipmap/ic_launcher"
-       android:roundIcon="@mipmap/ic_launcher_round"
-@@ -13,6 +15,7 @@
-       <activity
-         android:name=".MainActivity"
-         android:label="@string/app_name"
-+        android:launchMode="singleTop"
-         android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
-         android:windowSoftInputMode="adjustResize">
-         <intent-filter>
-@@ -21,6 +24,20 @@
-         </intent-filter>
-       </activity>
-       <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
-+        <receiver android:name="io.invertase.firebase.notifications.RNFirebaseNotificationReceiver"/>
-+        <receiver android:enabled="true" android:exported="true"  android:name="io.invertase.firebase.notification
-+            <intent-filter>
-+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
-+                <action android:name="android.intent.action.QUICKBOOT_POWERON"/>
-+                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON"/>
-+                <category android:name="android.intent.category.DEFAULT" />
-+            </intent-filter>
-+        </receiver>
-+        <service android:name="io.invertase.firebase.messaging.RNFirebaseMessagingService">
-+            <intent-filter>
-+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-+            </intent-filter>
-+        </service>
-     </application>
-
- </manifest>
-```
-
-- Change `android/app/src/main/java/com/mendix/nativetemplate/MainApplication.java`
-```diff
- import fr.greweb.reactnativeviewshot.RNViewShotPackage;
- import io.invertase.firebase.RNFirebasePackage;
-+import io.invertase.firebase.messaging.RNFirebaseMessagingPackage;
-+import io.invertase.firebase.notifications.RNFirebaseNotificationsPackage;
-
- public class MainApplication extends MendixReactApplication {
-   @Override
-   public boolean getUseDeveloperSupport() {
--    return false;
-+    return true;
-   }
-
-   @Override
-@@ -53,6 +55,8 @@ public class MainApplication extends MendixReactApplication {
-             new ImagePickerPackage(),
-             new RNGeocoderPackage(),
-             new RNFirebasePackage(),
-+            new RNFirebaseMessagingPackage(),
-+            new RNFirebaseNotificationsPackage(),
-             new RNDeviceInfo(),
-             new RNCameraPackage(),
-             new CalendarEventsPackage(),
-```
-- Change `android/build.gradle`
-```diff
-        }
-     }
-     dependencies {
--        classpath("com.android.tools.build:gradle:3.4.0")
-+        classpath("com.android.tools.build:gradle:3.4.1")
-+        classpath 'com.google.gms:google-services:4.2.0'
-         // NOTE: Do not place your application dependencies here; they belong
-         // in the individual module build.gradle files
-     }
-```
-
-- Change the `android/app/src/main/res/raw/runtime_url`
-
-Simply add your local ip
-
-
-Commit and push changes to master. This will trigger an Appcenter build. Or you can run it locally.
-
-
-### 3.1 Customizing IOS part
-
-Please remember that remote notifications on Simulator wont work. Open `app/ios/yourProjectName.xcworkspace` in Xcode since we have to add files and change capabilities of the project.
-
-- Add `GoogleService-Info.plist` to NativeTemplate folder, it should be at the same level as `Info.plist`
-
-- Change `/ios/AppDelegate.swift`
-
-Please note that we are adding our own local ip because we want to test against local mendix instance.
-
-```diff
- import Foundation
- import UIKit
- import MendixNative
-+import Firebase
-+
-
- @UIApplicationMain
- class AppDelegate: UIResponder, UIApplicationDelegate {
-@@ -10,11 +12,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
-     guard let url = Bundle.main.object(forInfoDictionaryKey: "Runtime url") as? String, let runTimeUrl = AppUrl.forRuntime(url: url) else {
-       fatalError("Missing the 'Runtime url' configuration within the Info.plist file")
-     }
--    guard let bundleUrl = ReactNative.instance.getJSBundleFile() else {
-+    guard let bundleUrl = AppUrl.forBundle(url: "http://LOCALIP:8080", remoteDebuggingPackagerPort: 8083, isDebuggingRemotely: true, isDevModeEnabled: true) else {
-       fatalError("Could not properly load JS bundle file")
-     }
--
-+    FirebaseApp.configure()
-+    RNFirebaseNotifications.configure()
-     ReactNative.instance.start(MendixApp(bundleUrl: bundleUrl, runtimeUrl: runTimeUrl, warningsFilter: WarningsFilter.none))
-     return true
-   }
-+
-+  func application(_ application: UIApplication, didReceive notification: UILocalNotification) {
-+    RNFirebaseNotifications.instance().didReceive(notification)
-+  }
-+
-+  func application(_ application: UIApplication, RemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
-+    RNFirebaseNotifications.instance().didReceiveRemoteNotification(userInfo, fetchCompletionHandler: completionHandler)
-+  }
-+
-+  func application(_ application: UIApplication, didRegister notificationSettings: UIUserNotificationSettings) {
-+    RNFirebaseMessaging.instance().didRegister(notificationSettings)
-+  }
- }
-```
-
-- Add `ios/Podfile` if the following lines exists, otherwise add:
-
-```
-  pod 'RNFirebase', :path => '../node_modules/react-native-firebase/ios'
-  pod 'Firebase/Core' 
-  pod 'Firebase/Messaging', '~> 5.15.0'
-```
-
-- Change `Info.plist` runtime Url to your local ip
-
-- Add capabilities
-![Capabilities](attachments/native-remote-push/iosCustomizations.png)
+* Setting up native push notifications with native builder [Native Builder](https://docs.mendix.com/howto/mobile/native-builder#1-introduction) 
 
 ## 4 Mendix project setup
 
 Create a Native starter project.
 
-
 ### Module installation 
 - Add Community commons
 - Add encryption
      - Set the private key
-     ![Capabilities](attachments/native-remote-push/modeler/setEncryption.png)
+![Capabilities](attachments/native-remote-push/modeler/setEncryption.png)
 - Add push notification module
 
-
-### Push notification modeler work
-
-
-#### Set up Notification widget
+### Set up Notification widget
 
 1) Drag and drop an App events to your home page and set:
     - Page load / on load to `PushNotifications.OnPageLoad_RegisterPushNotifications`
@@ -296,8 +62,7 @@ This will allow us to pass objects with notification
 ![ProfileHomePage](attachments/native-remote-push/modeler/ProfileHomePage.png)
 
 
-
-#### Add actions to your notification widget
+## Add actions to your notification widget
 
 - Create two nanoflows (`ACT_OnRecieve`,`ACT_OnOpen`) which will simply two different logs => "onRecieve triggered" - "onOpen triggered"
 
@@ -310,7 +75,7 @@ This will allow us to pass objects with notification
 
 ![LogitAction](attachments/native-remote-push/modeler/logitAction.png)
 
-#### Add firebase configuration  
+## Add firebase configuration  
 Deploy the project and head for the administartion screen of the push notifications, we will add configurations
 
 - add new FCM configuration
@@ -329,7 +94,7 @@ Deploy the project and head for the administartion screen of the push notificati
 
 Lets test the implementation
 
-#### Sending simple push notification
+## Sending simple push notification
 
 - Reload the app in the phone
 - Put the app in the background 

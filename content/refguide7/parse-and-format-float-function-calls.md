@@ -26,7 +26,7 @@ Parses a String value to a Float value. Takes optional parameters for format and
 
 ### Output
 
-A Float value that matches the input String value. If the value cannot be parsed (i.e. does not match the format parameter or contains illegal characters) the default value will be returned. If no default value was provided, an error occurs.
+A Float value that matches the input String value. If the value cannot be parsed (as in, does not match the format parameter or contains illegal characters) the default value will be returned. If no default value was provided, an error occurs.
 
 ```java
 parseFloat('3.45')

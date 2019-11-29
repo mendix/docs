@@ -16,7 +16,7 @@ Details and cross-references where necessary.
 Guidelines for usage.
 {{% /alert %}}
 
-## AppCloud
+## AppCloud & AppCloudServices
 
 This was used to described a large part of the functionality of the Developer Portal. The original idea of AppCloud can be found in this [press release](https://www.mendix.com/press/new-mendix-appcloud/). It is no longer used in describing the product.
 
@@ -38,6 +38,12 @@ The Mendix Community Edition was introduced with Mendix 5.18, which included the
 
 {{% alert type="info" %}}
 Replaced by [Free Edition](other-terms#free-edition).
+{{% /alert %}}
+
+## delighter
+
+{{% alert type="info" %}}
+This term should not be used in release notes, as there is no formal definition and no tracking mechanism for it. However, it can be used in release blog posts.
 {{% /alert %}}
 
 ## Desktop Modeler {#dm}

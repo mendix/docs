@@ -27,7 +27,7 @@ A complete list with detailed access information can be found [here](https://doc
 
 Exceptions on these restrictions are:
 
-*   Calls to the Mendix runtime codebase (for example, using the `com.mendix.modules.webservices.WebserviceModule` class to call a web service socket access) are allowed
+*   Calls to the Mendix Runtime codebase (for example, using the `com.mendix.modules.webservices.WebserviceModule` class to call a web service socket access) are allowed
 *   Granted sockets
 *   Reading files in the temp folder or its subfolders (`%PROJECT_DEPLOYMENT_DIR%/data/tmp/`)
 *   Writing files in the temp folder or its subfolders (`%PROJECT_DEPLOYMENT_DIR%/data/tmp/`)

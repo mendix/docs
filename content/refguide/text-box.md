@@ -49,7 +49,7 @@ Text box properties consist of the following sections:
 
 ### 2.2 Data Source Section{#data-source}
 
-{{% snippet file="refguide/attribute-path-property.md" %}}
+{{% snippet file="refguide/data-source-section-link.md" %}}
 
 ### 2.3 Design Properties Section{#design-properties}
 
@@ -89,9 +89,7 @@ The formatting section applies only to the way that numeric attributes are displ
 * Integer
 * Long
 
-{{% todo %}}[   Need to do something about numeric formatting]{{% /todo %}}
-
-{{% snippet file="refguide/numeric-formatting.md" %}}
+{{% snippet file="refguide/numeric-formatting-link.md" %}}
 
 ### 2.7 General Section{#general}
 
@@ -148,7 +146,7 @@ It can be used, for example, to give a hint to the end-user what kind of text sh
 
 ### 2.9 Validation Section{#validation}
 
-{{% snippet file="refguide/widget-validation.md" %}}
+{{% snippet file="refguide/widget-validation-link.md" %}}
 
 ### 2.10 Visibility Section{#visibility}
 

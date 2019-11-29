@@ -67,7 +67,7 @@ The following steps describe how to start the Selenium hub:
 	11:30:28.395 INFO - Selenium Grid hub is up and running
 	```
 
-3.  Check with the following link if the hub works: `http://localhost:4444/grid/console`
+3.  Check with the following link if the hub works: `http://localhost:4444/grid/console`.
 
 	![](attachments/ht-two-setup-local-selenium-index/ht-two-setup-local-selenium-hub/grid_hub.png)
 
@@ -117,7 +117,7 @@ The following steps describe how to start the node with three Chrome and three F
 	13:12:19.416 INFO - The node is registered to the hub and ready to use
 	```
 
-3.  Check in the console whether your Selenium hub node is active [http://localhost:4444/grid/console](http://localhost:4444/grid/console):
+3.  Check in the console whether your Selenium hub node is active `http://localhost:4444/grid/console`:
 
 	![](attachments/ht-two-setup-local-selenium-index/ht-two-setup-local-selenium-hub/grid_nodes.png)
 

@@ -21,13 +21,13 @@ Before you can start with this how-to, make sure you have completed the followin
 * Download [Mendix Studio Pro](https://appstore.home.mendix.com/link/modelers/)
 * Review the App Store components used in this how-to:
 
-    | App Store Item | Version Used in This How-to |
+    | Component | Version Used in This How-to |
     | --- | --- |
     | [Unit Testing](https://appstore.home.mendix.com/link/app/390/) | 8.0.0 |
     | [Community Commons Function Library](https://appstore.home.mendix.com/link/app/170/) | 8.1.0 |
     | [ObjectHandling](https://appstore.home.mendix.com/link/app/37114/) | 3.0.0 |
 
-	{{% alert type="warning" %}}All the images, names, and steps in this how-to are based on the App Store component versions listed above. When using later versions of these App Store components, images and/or names on your screen may be different than what is used in this how-to.
+	{{% alert type="warning" %}}All the images, names, and steps in this how-to are based on the App Store component versions listed above. When using later versions of this content, images and/or names on your screen may be different than what is used in this how-to.
 	{{% /alert %}}
 
 ## 3 The Unit Testing Module

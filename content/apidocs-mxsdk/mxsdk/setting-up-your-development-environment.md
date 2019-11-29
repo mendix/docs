@@ -21,7 +21,7 @@ $ cd my-app-generator
 $ npm init --yes
 $ npm install -g typescript
 $ npm install mendixmodelsdk mendixplatformsdk when @types/when --save
-$ tsc --init
+$ tsc --init --target es6
 ```
 
 ## 3 Setting Up Your Development Tools {#setting}
@@ -34,7 +34,7 @@ To set up your development tools, follow these steps:
 
     ```bash
     $ node --version
-    v8.9.1
+    v10.13.0
     ```
 
     For Debian-based Linux distributions such as Ubuntu, please refer to [this article](https://github.com/nodesource/distributions#user-content-installation-instructions) to properly set up your apt-get sources.
@@ -52,7 +52,7 @@ To set up your development tools, follow these steps:
 
     ```bash
     $ tsc --version
-    Version 2.6.2 (should be the latest 2.* version)
+    Version 3.6.3 (or higher)
     ```
 
     If the version number is much lower, it could be that you also have an outdated TypeScript SDK on your system, left over from a previous installation. You can either uninstall the old TypeScript SDK, or bypass it by removing the old TypeScript SDK from your system's PATH environment variable.
@@ -82,14 +82,14 @@ To set up a working directory for your script, follow these steps:
 
     ```json
     "dependencies": {
-      "@types/when": "^2.4.28",
-      "mendixmodelsdk": "~4.6.0",
-      "mendixplatformsdk": "~4.0.0",
-      "when": "^2.4.28"
+      "@types/when": "^2.4.33",
+      "mendixmodelsdk": "~4.25.0",
+      "mendixplatformsdk": "~4.1.1",
+      "when": "^3.7.8"
     }
     ```
 
-    When a new major or minor version of the Mendix SDK is released (i.e. 1.0.0 to 2.0.0 or 1.0.0 to 1.1.0) and you run `npm update` in your project folder, the `~` in front of the version number makes sure that installed version of the SDK won't be upgraded automatically. Only patch releases (i.e. 1.0.1) of the SDK will be automatically upgraded, otherwise your script could inadvertently be broken. You may, of course, edit the dependency by hand yourself.
+    When a new major or minor version of the Mendix SDK is released (as in, 1.0.0 to 2.0.0 or 1.0.0 to 1.1.0) and you run `npm update` in your project folder, the `~` in front of the version number makes sure that installed version of the SDK won't be upgraded automatically. Only patch releases (as in, 1.0.1) of the SDK will be automatically upgraded, otherwise your script could inadvertently be broken. You may, of course, edit the dependency by hand yourself.
 
 4.  Save your changes and then execute the following to install the dependencies:
 

@@ -4,7 +4,7 @@ parent: "project-settings"
 ---
 
 
-A configuration is a group of settings with a name. You can define any number of configurations. The active configuration, i.e. the one that will be used when running your application, is determined by the drop-down in the toolbar of the Modeler.
+A configuration is a group of settings with a name. You can define any number of configurations. The active configuration, as in, the one that will be used when running your application, is determined by the drop-down in the toolbar of the Modeler.
 
 You can use configurations to have different database settings for different people working on your project. Maybe one person has SQL Server on their computer and the other Postgres. You can also have a shared configuration for connecting to a database server that you both have access to.
 

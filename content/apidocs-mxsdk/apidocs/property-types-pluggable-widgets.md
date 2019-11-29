@@ -33,6 +33,7 @@ This defines a property's type. A `type` must be one of the following:
 	* [string](#string)
 	* [boolean](#boolean)
 	* [integer](#integer)
+	* [decimal](#decimal)
 	* [enumeration](#enumeration)
 * Component Properties
 	* [icon](#icon)
@@ -46,7 +47,7 @@ This defines a property's type. A `type` must be one of the following:
 
 ### 1.2 XML Elements
 
-`<caption>` (required) — This defines the property name visible for the user (not an end-user) while configuring the widget in Studio and Studio Pro.
+`<caption>` (required) — This defines the property name visible for the user (not the end-user) while configuring the widget in Studio and Studio Pro.
 
 `<description>` (required) — This is a description which explains a property's purpose.
 
@@ -151,11 +152,38 @@ Then the Studio Pro UI for the property appears like this:
 
 ![](attachments/widget-property-types/integer.png)
 
-### 2.4 Enumeration{#enumeration}
+### 2.4 Decimal{#decimal}
+
+Decimal is represented as a number input in Studio Pro. It is passed as a `Big` prop to a client component.
+
+#### 2.4.1 XML Attributes
+
+| Attribute      | Required | Attribute Type | Description                                                                                                                                                          |
+| -------------- | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `type`         | Yes      | String         | Must be `decimal`                                                                                                                                                    |
+| `key`          | Yes      | String         | See [key](#key) |
+| `defaultValue` | Yes      | Integer        | Default value for the property                                                                                                                                      |
+
+#### 2.3.2 Studio Pro UI
+
+When the property is defined as follows:
+
+```xml
+<property key="myDecimal" type="decimal" defaultValue="50.4">
+	<caption>My decimal</caption>
+	<description>My decimal setting</description>
+</property>
+```
+
+Then the Studio Pro UI for the property appears like this:
+
+![decimal](attachments/widget-property-types/decimal.png)
+
+### 2.5 Enumeration{#enumeration}
 
 Enumeration allows a user to select one out of multiple options defined in the XML. The `key` of a selected enumeration element is passed as `string` prop to a client component.
 
-#### 2.4.1 XML Attributes
+#### 2.5.1 XML Attributes
 
 | Attribute      | Required | Attribute Type | Description                                                                                                                                                          |
 | -------------- | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -163,7 +191,7 @@ Enumeration allows a user to select one out of multiple options defined in the X
 | `key`          | Yes      | String         | See [key](#key) |
 | `defaultValue` | Yes      | Integer        | Default value for the property                                                                                                                                      |
 
-#### 2.4.2 XML Elements
+#### 2.5.2 XML Elements
 
 `<enumerationValues>` (required) — One `<enumerationValues>` element must be declared with multiple `<enumerationValue>` elements inside in order to define possible enumeration values. A `key` attribute is required for every enumeration value as well as a caption. Enter enumeration values like this:
 
@@ -173,7 +201,7 @@ Enumeration allows a user to select one out of multiple options defined in the X
 
 The `key` of a selected element will be passed to the client component. `key` should not be changed since it is used to identify options used in a project.
 
-#### 2.4.3 Studio Pro UI
+#### 2.5.3 Studio Pro UI
 
 When the property is defined as follows:
 
@@ -227,10 +255,18 @@ Then the Studio Pro UI for the component appears like this:
 
 ### 3.2 Image {#image}
 
-Image allows a user to configure a static image from an [image collection](https://docs.mendix.com/refguide/image-collection). It is passed as `DynamicValue<ImageValue>` prop to a client component.
+Image allows a user to configure a static image from an [image collection](/refguide/image-collection). It also allows a user to configure an image from an object that is a specialization of **System.Image**. It is passed as `DynamicValue<ImageValue>` prop to a client component. See [Images](https://docs.mendix.com/refguide/images) for more information about supported image formats.
 
 {{% alert type="info" %}}
-This property type was introduced in Mendix 8.1.
+This property type was introduced in Mendix 8.1. Support for dynamic images was introduced in Mendix [8.4.0](/releasenotes/studio-pro/8.4).
+{{% /alert %}}
+
+{{% alert type="info" %}}
+Support for SVG images in native apps was introduced in Mendix [8.4.0](/releasenotes/studio-pro/8.4).
+{{% /alert %}}
+
+{{% alert type="warning" %}}
+GIF images are not supported in native apps on Android devices.
 {{% /alert %}}
 
 #### 3.2.1 XML Attributes
@@ -254,6 +290,36 @@ When the component is defined as follows:
 Then the Studio Pro UI for the component appears like this:
 
 ![](attachments/widget-property-types/image.png)
+
+### 3.3 Widgets {#widgets}
+
+The widgets property allows a user to place multiple widgets inside a pluggable widget, similar to the content of a [container](/refguide/container) widget. It is passed as a `ReactNode` prop to a client component.
+
+{{% alert type="info" %}}
+This property type was introduced in Mendix 8.3.
+{{% /alert %}}
+
+#### 3.1.1 XML Attributes
+
+| Attribute  | Required | Attribute Type | Description                                                                                                                                                          |
+| ---------- | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `type`     | Yes      | String         | Must be `widgets`                                                                                                                                                       |
+| `key`      | Yes      | String         | See [key](#key) |
+| `required` | No       | Boolean        | Whether a user must provide at least one widget. `true` by default                                                                                                |
+#### 3.1.2 Studio Pro UI
+
+When the component is defined as follows:
+
+```xml
+<property key="content" type="widgets" required="false">
+	<caption>Content</caption>
+	<description>Content of a box</description>
+</property>
+```
+
+then the Studio Pro UI for the component appears like this:
+
+![studio pro ui](attachments/widget-property-types/widgets.png)
 
 ## 4 Dynamic Properties
 
@@ -346,7 +412,7 @@ The action property allows a user to configure an action to do things like calli
 | ---------- | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `type`     | Yes      | String         | Must be `action`                                                                                                                                                     |
 | `key`      | Yes      | String         | See [key](#key) |
-| `required` | No       | Boolean        | Whether the property must be specified by the user, `true` by default                                                                                                |
+
 #### 4.5.2 Studio Pro UI
 
 When the property is defined as follows:
@@ -498,7 +564,7 @@ The TabIndex property allows pluggable widgets to implement the **Tab index** se
 
 ### 5.4 Visibility {#visibility}
 
-Every pluggable widget can be [conditionally hidden](/refguide/conditions). This property can be used to control a position of the widget visibility inputs.
+Every pluggable widget can be [conditionally hidden](/refguide/common-widget-properties#visibility-properties). This property can be used to control a position of the widget visibility inputs.
 
 {{% alert type="info" %}}
 This property type was introduced in Mendix 8.1.

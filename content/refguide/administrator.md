@@ -23,19 +23,19 @@ In the **Administrator** tab the following properties are available:
 
 The user name is used to sign into the application as the Administrator.
 
-*Default value*: MxAdmin
+Default: *MxAdmin*
 
 ### 2.2 Password {#password}
 
 The password is used to sign into the application as the Administrator. Click **Show password** to see the password. 
 
-*Default value*: 1
+Default: *1*
 
 ### 2.3 User Role {#user-role}
 
 The user role assigned to the Administrator. For more information, see [User Roles](user-roles). 
 
-*Default value*: Administrator
+Default: *Administrator*
 
 {{% alert type="info" %}}
 

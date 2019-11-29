@@ -234,7 +234,11 @@ module.exports = {
     },
 	{
       from: "/howto/ux/create-a-custom-theme-with-the-mendix-ui-framework",
-      to: "/howto/front-end/create-a-custom-theme-with-the-mendix-ui-framework"
+      to: "/howto/front-end/atlas-ui"
+    },
+	{
+      from: "/howto/front-end/create-a-custom-theme-with-the-mendix-ui-framework",
+      to: "/howto/front-end/atlas-ui"
     },
 	{
       from: "/releasenotes/desktop-modeler/",
@@ -650,7 +654,28 @@ module.exports = {
 		from: "/refguide8/select-all-button",
       to: "/refguide/control-bar"
     },
-	/****************************************************
+	{
+		from: "/refguide8/comparison-search-field",
+      to: "/refguide/search-bar"
+    },
+	{
+		from: "/refguide8/drop-down-search-field",
+      to: "/refguide/search-bar"
+    },
+	{
+		from: "/refguide8/range-search-field",
+      to: "/refguide/search-bar"
+    },
+    {
+      from: "/refguide8/opening-pages",
+        to: "/refguide/pages"
+      },
+    {
+      from: "/refguide8/starting-microflows",
+        to: "/refguide/on-click-event"
+      },
+  
+    /****************************************************
      * From Desktop Modeler version 7 (permanent, mapped)
      ****************************************************/
 	{
@@ -663,15 +688,19 @@ module.exports = {
     },
 	{
       from: "/refguide7/desktop-webmodeler",
-      to: "/refguide7/sync-webmodeler-desktopmodeler"
+      to: "/refguide7/collaborative-development"
     },
 	{
       from: "/web-modeler/general-sync-webmodeler-desktopmodeler-wm",
-      to: "/refguide7/sync-webmodeler-desktopmodeler"
+      to: "/refguide7/collaborative-development"
     },
 	{
       from: "/howto/web-modeler/syncing-webmodeler-desktop",
-      to: "/refguide7/sync-webmodeler-desktopmodeler"
+      to: "/refguide7/collaborative-development"
+    },
+	{
+      from: "/refguide7/sync-webmodeler-desktopmodeler",
+      to: "/refguide7/collaborative-development"
     },
 	{
       from: "/refguide7/download-from-team-server-dialog",

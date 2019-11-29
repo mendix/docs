@@ -13,9 +13,9 @@ addons:
   space: "Add-on Guides"
   priority: false
   menu_categories:
+    - "ATS Guide"
     - "APM Guide"
     - "AQM Guide"
-    - "ATS Guide"
 howto6:
   space: "Mendix 6 How-to's"
   priority: false
@@ -115,8 +115,8 @@ releasenotes:
     - "Studio"
     - "Developer Portal"
     - "App Store"
-    - "SDKs"
     - "Mobile"
+    - "SDKs"
     - "Add-ons"
     - "Mendix Beta Features"
 developerportal:
@@ -170,9 +170,9 @@ partners:
   space: "Strategic Partners Guide"
   priority: false
   menu_categories:
-    - "IBM"
-    - "SAP"
     - "Siemens"
+    - "SAP"
+    - "IBM"
 appstore:
   space: "App Store Guide"
   priority: false

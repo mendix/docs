@@ -20,7 +20,7 @@ There are three kinds of conditions:
 *   Module roles. For each module you specify whether the element is visible or not.
 *   Ignore security. Buttons are automatically hidden if security would prevent the user from executing the action. You can ignore this and show the button anyway. This is useful for application with anonymous users. Clicking a button for which you do not have the rights will then trigger a sign in page.
 
-Module role conditions can only be used for visibility of table rows and tab pages. They cannot be used to make an input widget read-only or to hide buttons. To make an input widget conditionally editable based on roles, use security to give roles read/write access to attributes. For example, by not giving a role write access to an attribute the corresponding input widget will automatically turn read-only (i.e. not editable). To hide a button based on roles configure security of the underlying page or action. For example, by not giving a role create access 'New' buttons will be hidden.
+Module role conditions can only be used for visibility of table rows and tab pages. They cannot be used to make an input widget read-only or to hide buttons. To make an input widget conditionally editable based on roles, use security to give roles read/write access to attributes. For example, by not giving a role write access to an attribute the corresponding input widget will automatically turn read-only (as in, not editable). To hide a button based on roles configure security of the underlying page or action. For example, by not giving a role create access 'New' buttons will be hidden.
 
 ## Attribute
 

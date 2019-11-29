@@ -29,13 +29,15 @@ A module role has the following properties:
 
 ## 2 Page Access
 
-**Page Access** defines which pages each module role can access. The menu bar is optimized so that it only shows pages and microflows that the user has access to.
+**Page Access** defines which pages are visible to each role. The **Page access** tab is displayed as a matrix showing pages and modules roles.
 
-The **Page access** tab is displayed as a matrix showing pages and modules roles. 
+![page access tab](attachments/module-security/page-access-tab.png)
 
-![](attachments/module-security/page-access-tab.png)
+For each combination you can indicate whether or not the page is visible for the module role. You can also edit this information in a page using the **Visible for** property.
 
-For each combination you can indicate whether or not the module role has access to the page. You can also edit this information in a [page](page) using the **Visible for** property.
+A page that is not visible for a specific role will not show up in navigation structures, and **Open Page** buttons leading to that page will not be rendered by default.
+
+Page access settings do not restrict users from navigating to a page through other means, for example through a deeplink or through a button that is forced to be visible (for more information, see [Common Widget Properties](common-widget-properties)). If you want to ensure that specific roles cannot access parts of your data or logic, than this must be expressed through **entity access** and **microflow access** constraints.
 
 ## 3 Microflow Access
 

@@ -54,7 +54,7 @@ To create a published web service, follow these steps:
 
         ![](attachments/18448728/18581713.png)
 
-    * On the **Settings** tab, you can configure the other settings. Do change them before publishing your web service, especially the **Target namespace** (for details on these settings, see [Published Web Service](/refguide/published-web-service) in the *Mendix Studio Pro Guide*):
+    * On the **Settings** tab, you can configure the other settings. Do change them before publishing your web service, especially the **Target namespace** (for details on these settings, see [Published Web Service](/refguide/published-web-service) in the *Studio Pro Guide*):
 
         ![](attachments/18448728/18581712.png)
 
@@ -146,7 +146,7 @@ Mendix enables creating your own user management functionality as long as your o
 
 When exposing a web service, consider the following things:
 
-* In Studio Pro some words are reserved for Mendix use (for example, type, enum)
+* In Studio Pro some words are reserved for Mendix use (for example, type, Enumeration)
 * Because you may not want to publish a "_type" attribute with an underscore ("`_`") in front of it, you can change the WSDL name by changing the last column in the selected attribute window
 * If an attribute is renamed after it is published, the name in the WSDL does not automatically change (because that would break the customer's implementation)
 

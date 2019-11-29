@@ -59,7 +59,9 @@ Enter the email addresses of all the co-workers you want to invite to your app p
 This is the generic name of the individual add-on, widget, module, connector, starter app, etc. available in the Mendix App Store.
 
 {{% alert type="info" %}}
-Do not use "App Store item."
+Do not use "App Store item."<br />
+<br />
+Use "App Store content" (and not "App Store components") to describe in general what is available in the Mendix App Store.
 {{% /alert %}}
 
 ## App Team
@@ -124,14 +126,6 @@ Capitalize in all instances.
 Capitalize in all instances.
 {{% /alert %}}
 
-## delighters
-
-Can be used in customer-facing documentation to refer to certain productivity improvements.
-
-{{% alert type="info" %}}
-There is a **Delighters** section in the [Studio Pro release notes](/releasenotes/studio-pro/).
-{{% /alert %}}
-
 ## fast deploy & fast deployment
 
 {{% alert type="info" %}}
@@ -140,7 +134,7 @@ Do not use "insta-deploy" or "instant redeploy."
 
 ## Free App {#free-app}
 
-A [Free App](/deploy/mendix-cloud-deploy#free-app) is an app that can be deployed without a license and is therefore free. There are restrictions on the resources available to a Free App. A Free App environment is a cloud environment, but it does not support complex or large applications. Free Apps are part of the [Free Edition](#free-edition).
+A [Free App](/developerportal/deploy/mendix-cloud-deploy#free-app) is an app that can be deployed without a license and is therefore free. There are restrictions on the resources available to a Free App. A Free App environment is a cloud environment, but it does not support complex or large applications. Free Apps are part of the [Free Edition](#free-edition).
 
 {{% alert type="info" %}}
 Capitalize in all instances.<br />

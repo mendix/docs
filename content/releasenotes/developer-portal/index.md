@@ -2,6 +2,7 @@
 title: "Developer Portal"
 description: "Release notes for all project management parts of the Mendix Developer Portal"
 tags: ["developer portal", "buzz", "mendix profile"]
+#When updating, remember to update the Latest Mendix Releases file
 ---
 
 These release notes cover changes to the app project management functionality and other features of the Mendix Developer Portal. For more information, see the [Developer Portal Guide](/developerportal/index).
@@ -11,6 +12,18 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 {{% /alert %}}
 
 ## 2019
+
+### November 21st, 2019
+
+#### Fixes
+
+* We fixed an issue that prevented the **Edit in Studio Pro** functionality in the Developer Portal from opening Studio Pro.
+
+### November 1st, 2019
+
+#### Improvements
+
+* We introduced the ability to [favorite](/developerportal/apps-list/index#favoriting) app projects from the **My Apps** page and to filter on favorite apps. This is helpful when you have a large number of Mendix apps.
 
 ### September 24th, 2019
 
@@ -38,12 +51,6 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 #### Fixes
 
 * We fixed an issue where updates to decimal constants in the Developer Portal were limited to 2 decimal places. This has been increased to 8 decimal places. (Ticket 85507)
-
-### May 17th, 2019
-
-#### Fixes
-
-* We made several changes to our maintenance window management to ensure that environments are completely locked during maintenance.
 
 ### May 10th, 2019
 
@@ -183,21 +190,9 @@ The Web Modeler can now be enabled for all types of apps. You can do this on the
 
 ### June 26th, 2018
 
-#### Improvements
+#### Improvement
 
 * We implemented the new Mendix header.
-* We fixed the bug that allowed users to start an application during a restore.
-
-### June 8th, 2018
-
-#### Improvements
-
-*  We have aggregated the health icons for the acceptance and test environments in the **Nodes** dashboard and **Company Admin** screen.
-
-	{{% image_container width="300" %}}![](attachments/CPHealthIcon.png)
-	{{% /image_container %}}
-
-* The health icon will display the health status of the environment that is in the worst condition. This is to prepare for an upcoming release that will support more than three environments per application.
 
 ### May 23rd, 2018
 

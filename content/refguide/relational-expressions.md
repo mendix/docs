@@ -17,7 +17,7 @@ The values be any of the following types, but the two values should be in the sa
 
 *   String
 *   Numeric (Integer/Long, Decimal)
-*   DateTime
+*   Date and time
 
 ```java
 4<3
@@ -39,7 +39,7 @@ The values be any of the following types, but the two values should be in the sa
 
 *   String
 *   Numeric (Integer/Long, Decimal)
-*   DateTime
+*   Date and time
 
 ```java
 4>3
@@ -61,7 +61,7 @@ The values be any of the following types, but the two values should be in the sa
 
 *   String
 *   Numeric (Integer/Long, Decimal)
-*   DateTime
+*   Date and time
 
 ```java
 6<=3
@@ -96,7 +96,7 @@ The values be any of the following types, but the two values should be in the sa
 
 *   String
 *   Numeric (Integer/Long, Decimal)
-*   DateTime
+*   Date and time
 
 ```java
 4>=3
@@ -119,7 +119,7 @@ The values be any of the following types, but the two values should be in the sa
 
 *   String
 *   Numeric (Integer/Long, Decimal)
-*   DateTime
+*   Date and time
 *   Domain Entity. Equality is checked based on the ID of the object.
 
 ```java
@@ -132,7 +132,7 @@ returns:
 False
 ```
 
-or with a DateTime:
+or with a Date and time:
 
 ```java
 dateTime(2007) = dateTime(2007)
@@ -155,7 +155,7 @@ The values be any of the following types, but the two values should be in the sa
 
 *   String
 *   Numeric (Integer/Long, Decimal)
-*   DateTime
+*   Date and time
 *   Object. Equality is checked based on the ID of the object.
 
 ```java

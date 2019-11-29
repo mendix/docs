@@ -142,9 +142,9 @@ native-builder.exe release pushUpdate --projectName "CoolApp" --target-version "
 | `--deployment-target`  | (Optional) OTA target group. Defaults to `Production`                                                      | `Staging`                                          |
 | `--skip-mxbuild`       | (Optional) If to bundle JS bundle and assets. Defaults to `false`                                          | `true` or `false`                                  |
 
-### 3.5 Updating an OTA Deployment Release Metadata
+### 3.5 Updating an OTA Deployment Release's Metadata
 
-The `patchUpdate` command allows updating the metadata information of a published update that hasn't been rolled out yet to all users (for example, and update which does not have a `rollout-percentage` value of `100`).
+The `patchUpdate` command allows you to update the metadata of a published update that has not been rolled out to all users (in technical terms, an update which does not have a `rollout-percentage` value of `100`).
 
 Here is an example of a command featuring `patchUpdate`:
 
@@ -163,7 +163,7 @@ native-builder.exe release patchUpdate --projectName "CoolApp" --target-version 
 | `--platform`           | (Optional) Platform with which to run command for. Defaults to both iOS and Android.                                 | `ios` or `android`                                     |
 | `--deployment-target`  | (Optional) OTA target group. Defaults to `Production`                                                                | `Staging`                                              |
 
-### 3.6 Rollback to a Previous Deployment Release
+### 3.6 Rolling Back to a Previous Deployment Release
 
 The `rollbackUpdate` command allows you to revert to a previous deployment release with the same target version of your app. This command creates a new deployment using a previous deployment release specified with the `--label` argument.
 
@@ -185,7 +185,7 @@ Be aware of the following:
 | `--platform`          | (Optional) Platform with which to run command for. Defaults to both iOS and Android. | `ios` or `android`                                     |
 | `--deployment-target` | (Optional) OTA target group. Defaults to `Production`                                | `Staging`                                              |
 
-### 3.7 List Deployment Releases
+### 3.7 Listing Deployment Releases
 
 The `list` command displays a printed list of all deployed releases.
 

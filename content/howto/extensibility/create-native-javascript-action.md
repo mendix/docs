@@ -9,7 +9,7 @@ tags: ["NFC", "Near Field Communication", "JavaScript", "native", "mobile"]
 
 ## 1 Introduction
 
-The true power of a native app is the performance and the ability to use hardware features of the devices. With a Near Field Communication JavaScript actions your Mendix application even more powerful when they can read NFC tags.
+The true power of a native app is the performance and the ability to use hardware features of the devices. With a Near Field Communication JavaScript actions your Mendix application even more powerful when they can read NFC tags. This tutorial can also be used as an example, when you would like to use other third party modules.
 
 **This how-to will teach you how to do the following:**
 

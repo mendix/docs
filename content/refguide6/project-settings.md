@@ -10,7 +10,7 @@ The following setting categories are available:
 
 ## Configurations
 
-A configuration is a group of settings with a name. You can define any number of configurations. The active configuration, i.e. the one that will be used when running your application, is determined by the drop-down in the toolbar of the Modeler.
+A configuration is a group of settings with a name. You can define any number of configurations. The active configuration, as in, the one that will be used when running your application, is determined by the drop-down in the toolbar of the Modeler.
 
 See [Configuration](configuration) for the settings in a configuration.
 

@@ -28,7 +28,7 @@ Mansystems APM is based on Wikipedia's definition of [Application Performance Ma
 
 * APM is the "monitoring and management of performance and availability of software applications"
 * APM strives "to detect and diagnose complex application performance problems to maintain an expected level of service"
-* APM is "the translation of IT metrics into business meaning (i.e., value)"
+* APM is "the translation of IT metrics into business meaning (as in, value)"
 
 Of course, you need the basic infrastructure probes to measure hardware parts like the CPU, memory, and disk as well as components like the database and the web server. However, for higher quality support, you should also look at the application and how it is performing, especially linking this to the user’s business perspective.
 

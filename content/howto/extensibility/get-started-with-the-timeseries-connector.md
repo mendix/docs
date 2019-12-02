@@ -1,13 +1,13 @@
 ---
 title: "Get Started with the TimeSeries Connector"
 category: "Extensibility"
-menu_order: 8
+menu_order: 100
 tags: ["iot", "connector", "timeseries", "big data", "analytics", "extensibility"]
 ---
 
 ## 1 Introduction
 
-This how-to is focussed on implementing and understanding the TimeSeries Connector and the TimeSeries Analytics platform. The TimeSeries Connector is especially useful when your application needs to handle large amounts of data. 
+This how-to is focused on implementing and understanding the TimeSeries Connector and the TimeSeries Analytics platform. The TimeSeries Connector is especially useful when your application needs to handle large amounts of data. 
 
 When looking at the IoT trend recently, one hundred sensors that send data each minute will send 144.000 objects to your database per day, one hundred and fifty will send 216.000 objects. See how these numbers start to add up once you add a few more sensors? Now imagine having your standard relational database handle this amount of data, let alone perform analysis on it. The TimeSeries Analytics platform is designed specifically to handle these amounts of data.
 
@@ -62,7 +62,7 @@ There are three constants that you can configure. Follow these steps to configur
 
 ### 4.2 Available Enumerations
 
-These are the available enumarations in the TimeSeriesConnector module:
+These are the available enumerations in the TimeSeriesConnector module:
 
 * **Enum_AggregationInterval** – `INTERVAL` or `REGISTER` – these are determined by the TimeSeries platform and are the supported interval types for aggregation calls
 * **Enum_AggregationPeriod** – hourly, daily, weekly, monthly, and yearly are the supported time periods
@@ -98,7 +98,6 @@ You start the implementation by creating an asset object in a page, or directly 
 After having set the **Asset name**, we trigger some validation, call the **Create asset** action, and save the **Asset ID** for later references.
 
 <iframe width='100%' height='491px' frameborder='0' src='https://modelshare.mendix.com/models/12613211-22be-4c65-aac9-bb7d821ed99e/timeseries-connector-create-asset?embed=true'></iframe>
-
 You can find this microflow in the *TimerSeriesConnector* module under **1. Assets > CreateAsset > IVK_CreateAsset**.
 
 ### 5.2 Creating a Channel
@@ -120,10 +119,9 @@ In our example implementation we have created a page with a *Channel* object, on
 
 ![](attachments/how-to-get-started-with-the-timeseries-connector/CreateChannel.png)
 
-After having set the necessary attributes and associations, we trigger some validation and call the **Add channel** action. This action will return a boolean, specifying if the action was successful.
+After having set the necessary attributes and associations, we trigger some validation and call the **Add channel** action. This action will return a Boolean, specifying if the action was successful.
 
 <iframe width='100%' height='491px' frameborder='0' src='https://modelshare.mendix.com/models/d0dc163e-9741-4efc-986e-00bcbbf86ce7/timeseries-connector-create-channel?embed=true'></iframe>
-
 You can find this microflow in the *TimerSeriesConnector* module under **2. Channels > AddChannel > IVK_AddChannel**.
 
 ### 5.3 Storing Measurement(s)
@@ -145,11 +143,10 @@ In our example implementation we have created a page with a *measurement* object
 
 ![](attachments/how-to-get-started-with-the-timeseries-connector/StoreMeasurement.png)
 
-After having set the necessary attributes and associations, we trigger some validation and call the **Store measurement** action. This action will return a boolean, which is not used. 
+After having set the necessary attributes and associations, we trigger some validation and call the **Store measurement** action. This action will return a Boolean, which is not used. 
 
 <iframe width='100%' height='491px' frameborder='0' src='https://modelshare.mendix.com/models/ab003bd9-159a-4b76-8fbe-42512951c28b/timeseries-connector-store-measurement?embed=true'></iframe>
-
-You can find this microflow in the *TimerSeriesConnector* module under **3. Measuremenets > StoreMeasurements > IVK_StoreMeasurement**.
+You can find this microflow in the *TimerSeriesConnector* module under **3. Measurements > StoreMeasurements > IVK_StoreMeasurement**.
 
 ### 5.4 Aggregating Your Data
 

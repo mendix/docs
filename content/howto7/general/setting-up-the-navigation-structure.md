@@ -97,9 +97,7 @@ Now that you've created a menu structure it's time to start using it on pages.
 
 ## 6 Read More
 
+* [Atlas UI](../front-end/atlas-ui)
 * [How to Create Your First Two Overview & Detail Pages](../front-end/create-your-first-two-overview-and-detail-pages)
-* [How to Set Up the Mendix UI Framework with Just CSS](../front-end/setup-mendix-ui-framework-with-just-css)
-* [How to Set Up the Mendix UI Framework with Koala](../front-end/setup-mendix-ui-framework-with-koala)
-* [How to Set Up the Mendix UI Framework with Scout](../front-end/setup-mendix-ui-framework-with-scout)
 * [How to Use Layouts and Snippets](../front-end/layouts-and-snippets)
 * [How to Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)

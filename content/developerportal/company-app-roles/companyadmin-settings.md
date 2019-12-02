@@ -10,7 +10,11 @@ tags: ["Company","Admin","Developer Portal"]
 
 Each company using Mendix can set up specific settings for apps, teams, and nodes. The **Company Admin** role can use the Developer Portal to manage the company's settings.
 
-To see the Company Admin settings, you be a Company Admin. To request information about the current Company Admin of your company, contact [Mendix Support](https://support.mendix.com/hc/en-us).
+{{% alert type="info" %}}
+The Company Admin feature is only available if your company has a paid Mendix subscription. 
+{{% /alert %}}
+
+To see the Company Admin settings, you need to be a Company Admin. To request information about the current Company Admin of your company, contact [Mendix Support](https://support.mendix.com/hc/en-us).
 
 ## 2 Accessing the Company Admin Settings
 
@@ -30,12 +34,10 @@ The Company Admin can manage four categories of settings:
   * Edit the [company](company) profile
   * Edit the company settings (for example, [changing the password expiration](company#company-settings))
   * Add and delete other Company Admins
-  * Manage the Mendix launchpad settings
 * **Users**
   * View all company [users](users)
   * Edit user [security groups](users#security-groups)
   * Activate/deactivate users
-  * Accept company join requests
 * **Apps**
   * View all company [apps](apps)
   * Activate, deactivate, and delete apps

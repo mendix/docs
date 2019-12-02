@@ -1,7 +1,7 @@
 ---
 title: "Implement Best Practices for JavaScript Actions"
 category: "Extensibility"
-menu_order: 4
+menu_order: 60
 description: "This set of best practices will help you get the most out of your JavaScript actions."
 tags: ["JavaScript", "API", "nanoflow"]
 ---
@@ -409,7 +409,7 @@ Explaining the Promise API code:
 
 * As this is a part of a promise already, it does not need to call a `resolve` function or return a promise itself — this makes error handling on promises easier, as a single error function can be used to catch errors at all three steps: fetch, parse JSON, and accessing the data (for a more detailed explanation, see the [MDN promise documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise))
 
-* For more information on building a JavaScript action rest consume function, see [Write JavaScript Actions: Part 2 (Advanced)](write-javascript-github).
+* For more information on building a JavaScript action rest consume function, see [Build JavaScript Actions: Part 2 (Advanced)](write-javascript-github).
 
 #### 2.3.3 Understanding Common Promise Functions
 
@@ -528,7 +528,7 @@ Not all capabilities are recommended for use. Consider the side effects that an 
 
 ## 7 Read More
 
-* [Write JavaScript Actions](/howto/extensibility/build-javascript-actions)
+* [Build JavaScript Actions](/howto/extensibility/build-javascript-actions)
 * [JavaScript Actions](/refguide/javascript-actions)
 * [Mendix Client API](https://apidocs.mendix.com/7/client/)
 * JavaScript basics:

@@ -11,5 +11,5 @@ These are the activities which can be used to change the values of primitive var
 
 ## 2 Main Documents in This Section
 
-* [Create Variable](create-variable).
-* [Change Variable](change-variable).
+* [Create Variable](create-variable)
+* [Change Variable](change-variable)

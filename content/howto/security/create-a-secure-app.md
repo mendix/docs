@@ -23,7 +23,7 @@ Before starting with this how-to, make sure you have completed the following pre
 * Know how to create a domain model (for details, see [How to Create a Basic Data Layer](../data-models/create-a-basic-data-layer))
 * Know how to create overview and detail pages (for details, see [How to Create Your First Two Overview and Details Pages](../front-end/create-your-first-two-overview-and-detail-pages))
 * Know how to create menu items (for details, see [How to Set Up the Navigation Structure](../general/setting-up-the-navigation-structure))
-* Know how to add action buttons (for details, see [Action Button](/refguide/action-button))
+* Know how to add action buttons (for details, see [Button Widgets](/refguide/button-widgets))
 
 ## 3 Preparing the Data Structure, GUI, and Example Data
 
@@ -145,7 +145,7 @@ To configure the page and microflow access of a module, follow these steps:
 
 5. Deploy the application.
 6. Create new users with different roles.
-7. Log out and back in in with these users (add a **Sign out** button to your app if necessary).
+7. Sign out and back in in with these users (add a **Sign out** button to your app if necessary).
 8. Test the differences in your application.
 
 ## 5 Setting the Security Level to Production
@@ -234,13 +234,13 @@ To create access roles for the User module role, follow these steps:
     ![](attachments/18448715/18581533.png)
 
 5. Deploy the application.
-6. Log in with the different users and test the differences in your application. 
+6. Sign in with the different users and test the differences in your application. 
 
 ## 6 Defining the Access Rules on the Order Entity Using XPath
 
 In the previous section you set some access rules on your domain model. In this section you you will define the access rules on the Order entity so that orders can only be viewed by a user if the payment status of the order is set to open. You will do this by adding an XPath constraint to the Order entity for the User module role. 
 
-An XPath constraint can be used to constrain the set of objects to which the access rule applies. If the XPath constraint is empty, the rule applies to all the objects of the entity. For more information, see [XPath Constraints](/refguide/xpath-constraints) in the *Mendix Studio Pro Guide*.
+An XPath constraint can be used to constrain the set of objects to which the access rule applies. If the XPath constraint is empty, the rule applies to all the objects of the entity. For more information, see [XPath Constraints](/refguide/xpath-constraints) in the *Studio Pro Guide*.
 
 ### 6.1 Adding an Account with the User User Role
 
@@ -281,7 +281,7 @@ An XPath constraint can be used to constrain the set of objects to which the acc
     ![](attachments/18448715/18581521.png)
 
 6. Re-deploy your application.
-7.  If you log in with the Test User account, you will see that only orders with the **Order status** of **Open** are shown in the overview:
+7.  If you sign in with the Test User account, you will see that only orders with the **Order status** of **Open** are shown in the overview:
   
     ![](attachments/18448715/18581520.png)
 

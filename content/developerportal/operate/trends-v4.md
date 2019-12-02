@@ -10,10 +10,10 @@ tags: ["Trends","v4","Mendix Cloud","Developer Portal"]
 
 ## 1 Introduction
 
-To track the usage growth of your app, and to debug performance problems, the Mendix Cloud includes detailed graphs of both your app and its environment. These graphs show performance trends of your apps in the paid editions of the Mendix Platform. If you experience issues with your app, always check the **Alerts** and **Trends** in the **Developer Portal** under **Operate**.
+To track the usage growth of your app, and to debug performance problems, the Mendix Cloud includes detailed graphs of both your app and its environment. These graphs show performance trends of your apps in the paid editions of the Mendix Cloud. If you experience issues with your app, always check the **Alerts** and **Trends** in the **Developer Portal** under **Operate**.
 
 {{% alert type="info" %}}
-This document describes the trends graphs available in Mendix Cloud V4. If your app is deployed to Mendix Cloud V3, please refer to [Trends in Mendix Cloud V3](trends).
+This document describes the trends graphs available in Mendix Cloud v4. If your app is deployed to Mendix Cloud v3, please refer to [Trends in Mendix Cloud v3](trends).
 
 If you don't know which Mendix Cloud version you are using, you can find out by following the instructions in [Cloud Version and Region in the Mendix Cloud](/developerportal/deploy/cloud-version-region).
 {{% /alert %}}
@@ -125,7 +125,7 @@ User Type | Explanation
 ------------ | -------------
 **named users** | Total number of user accounts.
 **concurrent named user sessions** | Total number of sessions for users using a named login. 
-**concurrent anonymous user sessions** | Total number of sessions for users who are logging in anonymously. 
+**concurrent anonymous user sessions** | Total number of sessions for users who are signing in anonymously. 
 
 ### <a name="Trends-appmxruntimejvmheap"></a>4.4 JVM Object Heap
 
@@ -154,7 +154,7 @@ This **JVM Process Memory Usage** graph is similar to the previous graph, *JVM O
 
 This graph is primarily present to provide more insight in situations where the part of the real used memory *outside* the JVM Object Heap is growing too much, causing problems with memory shortage in the operating system.
 
-More information on this graph is available in a Tech Blog post: [What's in my JVM memory?](https://tech.mendix.com/linux/2015/01/14/whats-in-my-jvm-memory/).
+More information on this graph is available in a Tech Blog post: [What's in my JVM memory?](https://www.mendix.com/blog/whats-jvm-memory/).
 
 These are the types:
 

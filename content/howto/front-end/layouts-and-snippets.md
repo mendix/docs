@@ -203,11 +203,8 @@ In addition, a snippet can define an entity that serves as a context for the wid
 
 ## 7 Read More
 
-* [Perform the Scout and Windows 10 Workaround](perform-scout-and-windows-10-workaround)
+* [Atlas UI](atlas-ui)
 * [Use Layouts and Snippets](layouts-and-snippets)
-* [Set Up the Mendix UI Framework with Scout](setup-mendix-ui-framework-with-scout)
-* [Set Up the Mendix UI Framework with Koala](setup-mendix-ui-framework-with-koala)
-* [Set Up the Mendix UI Framework with Just CSS](setup-mendix-ui-framework-with-just-css)
 * [Set Up the Navigation Structure](../general/setting-up-the-navigation-structure)
 * [Create Your First Two Overview & Detail Pages](create-your-first-two-overview-and-detail-pages)
 * [Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)

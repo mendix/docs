@@ -79,7 +79,7 @@ If you have an existing app which was not based on the MindSphere starter app, y
 
 * MindSphere SSO from the Mendix App Store here: [Siemens MindSphere SSO](https://appstore.home.mendix.com/link/app/108805/)
 
-  This module enables users who are logged in to MindSphere to use your app without having to log in again. It also enables you to test your app locally. For more information, see the [Single Sign-On](/partners/siemens/mindsphere-module-details#mssso) section of *MindSphere Module Details*.
+  This module enables users who are logged in to MindSphere to use your app without having to sign in again. It also enables you to test your app locally. For more information, see the [Single Sign-On](/partners/siemens/mindsphere-module-details#mssso) section of *MindSphere Module Details*.
 
 * MindSphere OS Bar Connector from the Mendix App Store here: [Siemens MindSphere OS Bar Connector](https://appstore.home.mendix.com/link/app/108804/)
 
@@ -205,10 +205,10 @@ By default, the deployment package will be created in the *releases* folder of y
 
 To deploy your deployment package, do the following:
 
-1. Log in to MindSphere CF CLI using a one-time code:
+1. Sign in to MindSphere CF CLI using a one-time code:
 
     * Enter `cf login -a https://api.cf.{Region}.{mindsphere-domain} --sso`
-    * Open the URL printed by the CLI and log in using your WebKey credentials to get a One Time Code
+    * Open the URL printed by the CLI and sign in using your WebKey credentials to get a One Time Code
     * Enter the One Time Code in the CLI
 
       {{% alert type="info" %}}If you need to configure proxies for Cloud Foundry, use the Windows `set` command. For example, `set http_proxy=http://my.proxy.ip:1234`.{{% /alert %}}
@@ -231,6 +231,8 @@ To deploy your deployment package, do the following:
 
     For more information see [Using the a9s PostgreSQL](https://developer.mindsphere.io/paas/a9s-postgresql/using.html) on the MindSphere developers site.
 
+    {{% alert type="warning" %}}Each Mendix app needs its own database. Do not bind more than one app to a database as both apps will not work properly. Create a new database instance instead.{{% /alert %}}
+
 4.  Depending on your infrastructure and service broker usage, it may take several minutes to create the service instance. Check if your PostgreSQL service has been created successfully using the following command:
     `cf services`
     Your service should be listed, and the last operation should be ‘create succeeded’.
@@ -249,6 +251,8 @@ To deploy your deployment package, do the following:
     ```
 
     {{% alert type="info" %}}`disk_quota_size` and `memory_size` must be at least **512M** to enable a Mendix app to run.<br />See the *Cloud Foundry* [App Manifest Attribute Reference](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest-attributes.html) for more information on valid specifications for memory and disk quota sizes.{{% /alert %}}
+
+    {{% alert type="warning" %}}Each Mendix app needs its own database. Do not bind more than one app to a database as both apps will not work properly. Create a new database instance instead.{{% /alert %}}
 
     For more information on the configuration of manifest files, see [Configuring the manifest file](https://developer.mindsphere.io/howto/howto-cf-single-manifest.html#configuring-the-manifest-file) on the MindSphere developers site.
 
@@ -329,12 +333,22 @@ To create a new app in the MindSphere launchpad, do the following:
       If your app is running on MindSphere on **AWS** use Region `eu1`:
 
       ```code
-      default-src 'self' 'unsafe-inline' 'unsafe-eval' static.eu1.mindsphere.io sprintr.home.mendix.com; font-src 'self' static.eu1.mindsphere.io fonts.gstatic.com; style-src * 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval' static.eu1.mindsphere.io sprintr.home.mendix.com; img-src * data:;
+      default-src 'self' 'unsafe-inline' 'unsafe-eval' static.eu1.mindsphere.io feedback-static.mendix.com home.mendix.com;
+      font-src 'self' static.eu1.mindsphere.io fonts.gstatic.com;
+      script-src 'self' 'unsafe-inline' 'unsafe-eval' static.eu1.mindsphere.io feedback-static.mendix.com home.mendix.com;
+      style-src 'self' 'unsafe-inline' static.eu1.mindsphere.io feedback-static.mendix.com home.mendix.com fonts.googleapis.com;
+      img-src * data:;
+      connect-src 'self' 'unsafe-inline'  *;
       ```
       If your app is running on Mindsphere on **Azure** use Region `eu2`:
 
       ```code
-      default-src 'self' 'unsafe-inline' 'unsafe-eval' static.eu1.mindsphere.io sprintr.home.mendix.com; img-src 'self' static.eu1.mindsphere.io sprintr.home.mendix.com data: uistorageaccountprod.blob.core.windows.net; font-src 'self' data: *.eu2.mindsphere.io uistorageaccountprod.blob.core.windows.net static.eu1.mindsphere.io; style-src 'self' 'unsafe-inline' *.eu2.mindsphere.io uistorageaccountprod.blob.core.windows.net static.eu1.mindsphere.io sprintr.home.mendix.com home.mendix.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' *.eu2.mindsphere.io uistorageaccountprod.blob.core.windows.net static.eu1.mindsphere.io sprintr.home.mendix.com home.mendix.com; connect-src 'self' 'unsafe-inline' *;
+      default-src 'self' 'unsafe-inline' 'unsafe-eval' static.eu1.mindsphere.io feedback-static.mendix.com home.mendix.com;
+      font-src 'self' data: *.eu2.mindsphere.io uistorageaccountprod.blob.core.windows.net static.eu1.mindsphere.io fonts.gstatic.com;
+      script-src 'self' 'unsafe-inline' 'unsafe-eval' *.eu2.mindsphere.io uistorageaccountprod.blob.core.windows.net static.eu1.mindsphere.io feedback-static.mendix.com home.mendix.com;
+      style-src 'self' 'unsafe-inline' *.eu2.mindsphere.io uistorageaccountprod.blob.core.windows.net static.eu1.mindsphere.io feedback-static.mendix.com home.mendix.com fonts.googleapis.com;
+      img-src 'self' static.eu1.mindsphere.io feedback-static.mendix.com home.mendix.com sprintr.home.mendix.com data: uistorageaccountprod.blob.core.windows.net;
+      connect-src 'self' 'unsafe-inline' *;
       ```
 
       {{% alert type="info" %}}These content security policy (CSP) settings are needed to ensure that the MindSphere OS Bar and the [Mendix Feedback Widget](https://appstore.home.mendix.com/link/app/199/) are loaded correctly. You may need to set additional CSP settings if you make additional calls to other domains (for example, if you use Google maps from maps.googleapi.com).{{% /alert %}}
@@ -386,7 +400,7 @@ Once you have created the scopes for your app, you will need to assign them to t
     ![](attachments/deploying-to-mindsphere/image17.png)
 
 {{% alert type="info" %}}
-The user will have to log out and log in again for this assignment to take effect.
+The user will have to sign out and sign in again for this assignment to take effect.
 {{% /alert %}}
 
 {{% alert type="success" %}}

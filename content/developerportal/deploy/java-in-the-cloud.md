@@ -3,7 +3,7 @@ title: "V3: Java in Mendix Cloud"
 parent: "mendix-cloud-deploy"
 menu_order: 60
 description: "A description of the constraints on using Java in Mendix Cloud v3"
-tags: ["Java", "V3", "Mendix Cloud", "Constraints", "Permissions", "security", "Access"]
+tags: ["Java", "v3", "Mendix Cloud", "Constraints", "Permissions", "security", "Access"]
 ---
 
 ## 1 Introduction
@@ -27,7 +27,7 @@ A complete list with detailed access information can be found [here](https://doc
 
 Exceptions on these restrictions are:
 
-*   Calls to the Mendix runtime codebase (for example, using the `com.mendix.modules.webservices.WebserviceModule` class to call a web service socket access) are allowed
+*   Calls to the Mendix Runtime codebase (for example, using the `com.mendix.modules.webservices.WebserviceModule` class to call a web service socket access) are allowed
 *   Granted sockets
 *   Reading files in the temp folder or its subfolders (`%PROJECT_DEPLOYMENT_DIR%/data/tmp/`)
 *   Writing files in the temp folder or its subfolders (`%PROJECT_DEPLOYMENT_DIR%/data/tmp/`)

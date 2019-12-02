@@ -29,10 +29,8 @@ This property defines whether an association is a reference (single) or a refere
 
 | Value | Description |
 | --- | --- |
-| Reference | Single: an object of the owning entity refers to zero or one objects of the other entity. |
+| Reference *(default)* | Single: an object of the owning entity refers to zero or one objects of the other entity. |
 | Reference set | Plural: an object of the owning entity refers to zero or more objects of the other entity. |
-
-* *Default value*: Reference
 
 {{% alert type="info" %}}
 
@@ -46,35 +44,58 @@ This property defines whether an association has one or two owners. If there is 
 
 | Value | Description |
 | --- | --- |
-| Default | Only one entity is the owner (the parent). |
+| Default *(default)* | Only one entity is the owner (the parent). |
 | Both | Both entities are owners. |
 
-* *Default value*: Default
+Ownership is important as it defines two aspects of an association:
+
+* how cardinality (many or one) is controlled
+* where the association is recorded
+
+### 4.1 Cardinality
+
+Cardinality refers to counting the number of associations an object can have. To ensure that an object can count the occurrences of a particular association it needs to have ownership of the association.
+
+So, for a one-to-many association the *many* end owns the association to ensure that it can only associate with *one* object. For a one-to-one association, both ends own the association. For a many-to-many relationship cardinality is not important.
+
+### 4.2 Association Recording
+
+An association is recorded in the object which owns it. If both objects own the association, then the association is recorded with both objects. You can see examples of where the associations are recorded in the [Association Examples](#examples) section, below.
+
+Where the association is recorded has an important impact on the user of reference and reference set selectors in your app. The selector can only be inside a data view containing the _owning_ object. This is because it is only when you commit the owning object that the association is recorded.
+
+For example, imagine you have a many-to-many association, **Customer_Group**, between **Customer** and **Group** owned by the Customer entity. You can put an input reference set selector to select Groups from within a Customer data view. However you _cannot_ put an input reference set selector to select Customers from within a Group data view.
+
+![Selecting Group objects through an input reference set selector in a Customer data view](attachments/associations/input-reference-set-selector.png)
+
+If both ends own the association, you can overcome this limitation. However, this has to be balanced by the overhead associated with having to commit all entities where the association is recorded. Therefore, it is recommended that many-to-many relationships are owned by the **Default** entity, unless there is a strong business reason for needing to add the association from either end in your Mendix app.
+
+Note that only recording the association on one of the entities does not affect your ability to navigate the association from both ends. However, it may be slower to navigate from the non-owning end.
 
 ## 5 Type and Owner Relation to Multiplicity and Navigability
 
-**Type** and **Owner** properties of an entity are related to **[Multiplicity](association-properties#multiplicity)** and **[Navigability](association-properties#navigability)** properties of an association. When you change **Type** or **Owner**, you change **Multiplicity** and **Navigability** as well. 
+**Type** and **Owner** properties of an entity are related to [Multiplicity](association-properties#multiplicity) and [Navigability](association-properties#navigability) properties of an association. When you change **Type** or **Owner**, you change **Multiplicity** and **Navigability** as well. 
 
 You can find correspondence between **Type**/**Owner** and **Multiplicity**/**Navigability** in the table below.
 
-|                                                              | Type          | Owner   |
-| ------------------------------------------------------------ | ------------- | ------- |
-| **Multiplicity**: one-to-one <br />**Navigability**: not available | Reference     | Both    |
-| **Multiplicity**: one-to-many <br />**Navigability**: not available | Reference     | Default |
-| **Multiplicity**: many-to-many <br />**Navigability**: X objects refer to Y objects | Reference set | Default |
-| **Multiplicity**: many-to-many <br />**Navigability**: X and Y objects refer to each other | Reference set | Both    |
+| **Multiplicity** | **Navigability** | Type          | Owner   |
+| -----------------|----------------- | ------------- | ------- |
+| one-to-one     | —      | Reference     | Both    |
+| one-to-many     | —     | Reference     | Default |
+| many-to-many     | X objects refer to Y objects | Reference set | Default |
+| many-to-many     | X and Y objects refer to each other | Reference set | Both    |
 
-For more information on multiplicity and navigability, see section [2.3 Multiplicity](association-properties#multiplicity) and section [2.4 Navigability](association-properties#navigability) in *Associations and Their Properties*.
+For more information on multiplicity and navigability, see the [Multiplicity](association-properties#multiplicity) and [Navigability](association-properties#navigability) sections in *Associations and Their Properties*.
 
 ## 6 Parent/Child {#parent-child}
 
-Parent and child settings show you the direction of the association. Parent defines an entity the association starts from, and child defines an entity the association ends with.
+Parent and child settings show you the direction of the association. Parent defines the entity the association starts from, and child defines the entity the association ends with.
 
-## 7 Association Examples
+## 7 Association Examples{#examples}
 
 Drawing an association from the **Order** entity to the **Customer** entity results in the following:
 
-![](attachments/domain-model-editor/918217.png)
+![](attachments/associations/918217.png)
 
 The type property has its default value `Reference`. In this example, a customer can have multiple orders, and an order can only have one customer.
 
@@ -99,7 +120,7 @@ A many-to-many association with default ownership is created by drawing an assoc
 
 In this example, a **Customer** can have multiple **Groups**, and a **Group** can have multiple **Customers**:
 
-![](attachments/domain-model-editor/918127.png)
+![](attachments/associations/918127.png)
 
 In XML, instances of these entities and their associations look as follows (note that the association is only stored in the **Customer** element):
 
@@ -125,7 +146,7 @@ A one-to-one association is created by setting the owner property to `Both` (whi
 
 In this example, a **Customer** can have one **Profile**, and a **Profile** can have one **Customer**:
 
-![](attachments/domain-model-editor/918128.png)
+![](attachments/associations/918128.png)
 
 In XML, instances of these entities and their associations look as follows (note that the association is stored both in the **Profile** element and the **Customer** element):
 
@@ -150,7 +171,7 @@ A many-to-many association where both entities are owners is created by setting 
 
 In this example, an **Accountant** can have multiple **Groups** and a **Group** can have multiple **Accountants**:
 
-{{% image_container width="500" %}}![](attachments/domain-model-editor/918125.png)
+{{% image_container width="500" %}}![](attachments/associations/918125.png)
 {{% /image_container %}}
 
 In XML, instances of these entities and their association look as follows (note that the association is stored both in the **Accountant** element and the **Group** element):

@@ -27,9 +27,9 @@ The following components are needed to set up a local Selenoid hub:
 
 The following steps describe how to install the hub and nodes with Docker-Compose:
 
-1. Create a folder or a directory to place your docker-compose.yml and browsers.json files.
+1. Create a folder or a directory to place your *docker-compose.yml* and *browsers.json* files.
 2. Create a folder or directory to place your video files.
-3.  Create a browsers.json in your folder/directory (/docker)
+3.  Create a *browsers.json* in your folder/directory (/docker)
 
 	```
       {
@@ -120,7 +120,7 @@ You can start testing by sending your test script to: `http://yourmachinenameorI
 
 In case you want to record your test case as a video follow these steps:
 
-1.  Add a Custom Capability to your Selenium hub configuration: **enableVideo** with a boolean set to **true**
+1.  Add a Custom Capability to your Selenium hub configuration: **enableVideo** with a Boolean set to **true**
 
 	![](attachments/ht-two-setup-local-selenium-index/ht-two-setup-local-selenoid-hub/add_capability.png)
 
@@ -133,9 +133,9 @@ After executing the test case, don't forget to download the video file or give i
 
 ## 6 Optional: Installing a Hub with a Portal with "Live-View"
 
-To install a hub with a Portal for "Live-View" you need a different browsers.json and docker-compose.yml file. To add a "Live-View" follow these steps:
+To install a hub with a Portal for "Live-View" you need a different *browsers.json* and *docker-compose.yml* file. To add a "Live-View" follow these steps:
 
-1.  Create a browsers.json with VNC browser image:
+1.  Create a *browsers.json* with VNC browser image:
 
 	```
    {
@@ -218,7 +218,7 @@ To install a hub with a Portal for "Live-View" you need a different browsers.jso
 	```
 
 5. You can visit your portal on [http://yourmachinenameorIP:8080](http://localhost:8080)
-6.  To enable "Live-View" you need to add another Custom Capability to your Selenium hub configuration: **enableVNC** with boolean set to **true**
+6.  To enable "Live-View" you need to add another Custom Capability to your Selenium hub configuration: **enableVNC** with Boolean set to **true**
 
 	![](attachments/ht-two-setup-local-selenium-index/ht-two-setup-local-selenoid-hub/enable_vnc.png)
 

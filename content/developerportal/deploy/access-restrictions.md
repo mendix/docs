@@ -28,6 +28,8 @@ When configuring an access restriction profile, you need to bear the following t
 
 * When using client certificate restrictions, the client certificate Certificate Authority (CA) in all active profiles must be identical (in other words, it is only possible to use a single CA for the entire application environment)
 
+* Only Root CA verification is supported. Any client certificate with a valid path to the Root CA will be allowed access. Certificate mapping is not supported.
+
 ## 3 Applying a Restriction to an Application Environment
 
 To apply a restriction to a specific application environment, follow these steps:
@@ -48,7 +50,7 @@ To apply a restriction to a specific application environment, follow these steps
 
 {{% /alert %}}
 
-### 4.1 Default Settings
+### 3.1 Default Settings
 
 These are the default settings:
 
@@ -56,11 +58,11 @@ These are the default settings:
 * All paths ending in `-doc` will have a preset **Deny all access** profile set by default
 * All the remaining paths will have no restriction applied by default
 
-## 5 Use Cases for Access Restrictions
+## 4 Use Cases for Access Restrictions
 
 The two scenarios in which you can use access restrictions are described below.
 
-### 5.1 Example Scenario 1 – Restricting Access Based on an IP Range
+### 4.1 Example Scenario 1 – Restricting Access Based on an IP Range
 
 An example scenario in which a basic IP range restriction could be used is when an app running in the Mendix Cloud is only to be accessed from a single office. The interactive web browser interface of the app should only be accessible to employees in the office of the company running the app. From the rest of the internet, the login screen of the application should not even be visible.
 
@@ -94,7 +96,7 @@ To restrict access to the app to an IP range, follow these steps:
 
 10. Select your access restriction profile as the **New Restriction Profile**, and **Save** it.
 
-### 5.2 Example Scenario 2 – Backend Administration with Third-Party Web Service Integrations
+### 4.2 Example Scenario 2 – Backend Administration with Third-Party Web Service Integrations
 
 This second scenario is an extended version of the first scenario.
 
@@ -132,7 +134,7 @@ If the `/ws/` path should still be reachable from the office location *without* 
 
 {{% /alert %}}
 
-## 6 Read More
+## 5 Read More
 
 * [Certificates](certificates)
 * [Deploy and Manage](/developerportal/deploy)

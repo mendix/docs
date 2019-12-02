@@ -7,7 +7,7 @@ tags: ["microflow", "logic", "access rule", "xpath"]
 
 ## 1 Introduction
 
-The access rules of an entity define what a user is allowed to do with the objects of the entity. Users can be allowed to create and/or delete objects and to view and/or edit member values. A member is an attribute or an association of an entity. Furthermore, the set of objects available for viewing, editing, and removing can be limited by means of an XPath constraint (for details, see [XPath Constraints](/refguide/xpath-constraints) in the *Mendix Studio Pro Guide*). For more information on access rules, see [Access Rules](/refguide/access-rules) in the *Mendix Studio Pro Guide*.
+The access rules of an entity define what a user is allowed to do with the objects of the entity. Users can be allowed to create and/or delete objects and to view and/or edit member values. A member is an attribute or an association of an entity. Furthermore, the set of objects available for viewing, editing, and removing can be limited by means of an XPath constraint (for details, see [XPath Constraints](/refguide/xpath-constraints) in the *Studio Pro Guide*). For more information on access rules, see [Access Rules](/refguide/access-rules) in the *Studio Pro Guide*.
 
 In this how-to, you will prepare a data structure (including security), a GUI, and some example data for customers, orders, and a financial administrator account. After this preparation, you will define the access rules for the Order entity using XPath on the payment status. The XPath will constrain the order so it can only be seen by a financial administrator when the payment status of the order is set to "paid."
 
@@ -70,7 +70,7 @@ To define the access rules on the Order entity using XPath, follow these steps:
     ![](attachments/18448681/18580995.png)
 
 4. Click **OK** and re-deploy your application.
-5.  When you log in with the **Financial Administrator** account, you will see that only completed orders are shown in the orders overview:
+5.  When you sign in with the **Financial Administrator** account, you will see that only completed orders are shown in the orders overview:
 
     ![](attachments/18448681/18580994.png)
 

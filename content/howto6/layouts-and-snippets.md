@@ -162,13 +162,11 @@ Additionally, a snippet can define an entity that serves as a context for the wi
 
 ![](attachments/18448710/18581449.jpg)
 
-## 6\. Related content
+## 6. Related content
 
-*   [Scout and Windows 10 Workaround](scout-and-windows-10-workaround)
 *   [Layouts and Snippets](layouts-and-snippets)
 *   [Filtering Data on an Overview Page](filtering-data-on-an-overview-page)
 *   [Setup Mendix UI Framework with just CSS](setup-mendix-ui-framework-with-just-css)
-
 *   [Setting Up the Navigation Structure](setting-up-the-navigation-structure)
 *   [Setup Mendix UI Framework](setup-mendix-ui-framework)
 *   [Setup Mendix UI Framework with Koala](setup-mendix-ui-framework-with-koala)

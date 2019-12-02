@@ -44,7 +44,7 @@ _Default value:_ Drop-down
 
 ### Empty Option Caption
 
-This property represents the caption for the empty option in the drop-down reference selector shown to the user. Setting the caption is not available if the Select Using property set to the Page option. This is a translable text. For more details, see [Translatable Texts](translatable-texts).
+This property represents the caption for the empty option in the drop-down reference selector shown to the user. Setting the caption is not available if the Select Using property set to the Page option. This is a translatable text. For more details, see [Translatable Texts](translatable-texts).
 
 {{% alert type="info" %}}
 

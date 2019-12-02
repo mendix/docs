@@ -1,7 +1,7 @@
 ---
 title: "Microflow Properties"
 parent: "microflows"
-tags: ["studio pro"]
+tags: ["microflow", "entity access"]
 ---
 
 ## 1 Introduction
@@ -24,10 +24,8 @@ Disallowing concurrent execution of a microflow is useful if a microflow would i
 
 | Option | Description |
 | --- | --- |
-| No | It is possible to execute the microflow more than once concurrently. |
+| No *(default)*  | It is possible to execute the microflow more than once concurrently. |
 | Yes | It is not possible to execute the microflow more than once concurrently; the user receives a message or another microflow is executed instead. |
-
-_Default value_: No
 
 ### 3.2 Error Message
 
@@ -62,13 +60,11 @@ Microflows that apply entity access have an **Entity Access** tag in the editor.
 | Option | Description |
 | --- | --- |
 | Yes | Entity access is applied to retrieving and manipulating objects. The rights of current user are taken into account. |
-| No | Entity access is not applied. |
+| No  *(default)*  | Entity access is not applied. |
 
 {{% alert type="info" %}}
 By default entity access is not applied. Set **Apply entity access** to **Yes** if you want to perform some actions that respect the access rights of the current user.
 {{% /alert %}}
-
-_Default value:_ No
 
 ### 5.2 Allowed Roles
 
@@ -86,9 +82,9 @@ For more information, see [Module Security](module-security).
 
 You can search for unused items (<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd>, then select **Unused items** in the **Search for** drop-down menu) in Studio Pro. Microflows that are only called from Java code will be listed as unused, because Studio Pro cannot look inside Java source code.
 
-By setting the propery **Mark as used** to **Yes**, you specify that the document is used implicitly and Studio Pro will no longer list it when searching for unused items.
+By setting the property **Mark as used** to **Yes**, you specify that the document is used implicitly and Studio Pro will no longer list it when searching for unused items.
 
-_Default value:_ No
+Default: *No*
 
 ### 7 Expose as Microflow Action
 

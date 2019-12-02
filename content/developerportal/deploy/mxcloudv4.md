@@ -1,20 +1,20 @@
 ---
-title: "Mendix Cloud V4"
+title: "Mendix Cloud v4"
 parent: "mendix-cloud-deploy"
 menu_order: 50
-description: "Frequently asked questions about Mendix Cloud V4"
-tags: ["Cloud", "Mendix Cloud", "V4", "Version 4", "FAQ", "V3", "AWS", "Amazon Web Services"]
+description: "Frequently asked questions about Mendix Cloud v4"
+tags: ["Cloud", "Mendix Cloud", "v4", "Version 4", "FAQ", "v3", "AWS", "Amazon Web Services"]
 ---
 
 ## 1 What Is Mendix Cloud v4?
 
 Mendix Cloud v4 is the current version of the Mendix Cloud: where licensed Mendix apps are deployed to a scalable, enterprise-grade cloud platform.
 
-Apps deployed to V4 run in Cloud Foundry clusters that are deployed on highly available Amazon Web Services (AWS) regions. They can be deployed from Studio Pro and the Mendix Developer Portal or via our [APIs](/apidocs-mxsdk/apidocs/deploy-api). Apps can run in the EU, US, Japan, or the UK.
+Apps deployed to v4 run in Cloud Foundry clusters that are deployed on highly available Amazon Web Services (AWS) regions. They can be deployed from Studio Pro and the Mendix Developer Portal or via our [APIs](/apidocs-mxsdk/apidocs/deploy-api). Apps can run in the EU, US, Japan, or the UK.
 
 Mendix Cloud v4 is a mature product, launched in Q1 2017, and has a number of improvements over previous versions of Mendix Cloud:
 
-* It is more secure as you can use [HTTP Headers](environments-details#http-headers) and [client certificates](certificates), and have [TLS v1.2 or higher enforced](/releasenotes/developer-portal/#january-28th-2019)
+* It is more secure as you can use [HTTP Headers](environments-details#http-headers) and [client certificates](certificates), and have [TLS v1.2 or higher enforced](/releasenotes/developer-portal/deployment#tls)
 * It runs on faster hardware
 * It is still being actively developed and improved, with new features regularly being introduced (for example [flexible environments](mendix-cloud-deploy#flexible-environments))
 * It uses industry-standard techniques for scalability and maintainability
@@ -65,7 +65,7 @@ We add regions based on customer demand. If you would like a different region, c
 
 You can also consider running your Mendix app using your own AWS account in a different AWS region. You can do this using Docker, and there is information on how to do this in the [Docker](docker-deploy) documentation. If you do this, however, you will not receive all the benefits of running in the Mendix Cloud.
 
-## 7 What Other Considerations Are There When Running My App in Mendix Cloud V4?
+## 7 What Other Considerations Are There When Running My App in Mendix Cloud v4?{#other-considerations}
 
 There are a few other considerations to bear in mind when you are running in Mendix Cloud v4:
 

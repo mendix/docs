@@ -46,7 +46,7 @@ You are required to explicitly configure the application to be able to connect f
 
 ## 7 Letting the HTTP Reverse Proxy Serve Static Content
 
-Mendix strongly recommends configuring the reverse proxy to directly serve static content from the `web` directory on the root location of the application URL and the Mendix client system (located in the correct version to be used of the installed Mendix runtime distribution) on `/mxclientsystem`. The application process itself should only handle dynamic content (like the `/xas/` and `/ws/` sub-URLs).
+Mendix strongly recommends configuring the reverse proxy to directly serve static content from the `web` directory on the root location of the application URL and the Mendix client system (located in the correct version to be used of the installed Mendix Runtime distribution) on `/mxclientsystem`. The application process itself should only handle dynamic content (like the `/xas/` and `/ws/` sub-URLs).
 
 ## 8 Securing Access to the Admin Port (for m2ee-tools and Windows Service Console Access)
 

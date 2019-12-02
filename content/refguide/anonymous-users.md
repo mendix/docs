@@ -7,7 +7,7 @@ tags: ["studio pro", "anonymous users", "project security", "security"]
 
 ## 1 Introduction
 
-You can use anonymous users to allow end-users access your application without having to log in. You can restrict the data that anonymous users can view and access by assigning a specific user role to them. 
+You can use anonymous users to allow end-users access your application without having to sign in. You can restrict the data that anonymous users can view and access by assigning a specific user role to them. 
 
 ## 2 Anonymous Users Properties
 

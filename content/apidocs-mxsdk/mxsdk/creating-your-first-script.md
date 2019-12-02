@@ -112,7 +112,7 @@ For more information, see [Async Await](https://basarat.gitbooks.io/typescript/d
 
     A file named `script.js` should appear (or, if you named the original TypeScript file e.g. `app.ts`, then it would be named `app.js`.
 
-    The TypeScript compiler will execute in a single run to compile all files configured in `tsconfig.json`. While developing your script, it can be practical to have the compiler immediately run once you make changes to your code. Use the `--watch` flag for `tsc` to monitor the files configured in the `tsconfig.json` file for changes and immediately run the compiler when you save the file:
+    The TypeScript compiler will execute in a single run to compile all files configured in *tsconfig.json*. While developing your script, it can be practical to have the compiler immediately run once you make changes to your code. Use the `--watch` flag for `tsc` to monitor the files configured in the *tsconfig.json* file for changes and immediately run the compiler when you save the file:
 
     ```bash
     $ tsc --watch
@@ -132,7 +132,7 @@ For more information, see [Async Await](https://basarat.gitbooks.io/typescript/d
     Closed connection to Model API successfully.
     Committing changes in online working copy [...] to team server project [...] branch null base revision -1
     Successfully committed changes to team server: revision 3 on branch null
-    Successfully committed revision: 3\. Done.
+    Successfully committed revision: 3. Done.
     ```
 
 Note that the steps for project creation (line 3) and committing to the Team Server (line 10) can take some time, so please be patient. Be aware that 'revision -1' refers to the latest revision, and that 'branch null' is equal to mainline.

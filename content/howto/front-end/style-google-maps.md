@@ -19,7 +19,7 @@ Google Maps is a very powerful addition to your applications. You can use it to 
 
 Before you start this how-to, please make sure you have completed the following prerequisites.
 
-*   Have the latest version of the Google Maps widget in your application: [Google Maps Widget](https://appstore.home.mendix.com/link/app/39/)
+*   Have the latest version of the [Google Maps](https://appstore.home.mendix.com/link/app/48911/) widget in your app
 
 {{% alert type="warning" %}}
 These instructions are for the Google Maps widget which you can download from the App Store. The Google Maps widget within the Atlas UI template has different options.
@@ -83,9 +83,7 @@ Supporting communities is cool. Therefore I will also show you how to upload you
 
 ## 4 Read More
 
-*   [Create a custom theme with the Mendix UI Framework](create-a-custom-theme-with-the-mendix-ui-framework)
+* [Atlas UI](atlas-ui)
 *   [Layouts and Snippets](layouts-and-snippets)
-*   [Setup Mendix UI Framework with Scout](setup-mendix-ui-framework-with-scout)
 *   [Setting Up the Navigation Structure](../general/setting-up-the-navigation-structure)
-*   [Setup Mendix UI Framework with Koala](setup-mendix-ui-framework-with-koala)
 *   [Creating your first two Overview and Detail pages](create-your-first-two-overview-and-detail-pages)

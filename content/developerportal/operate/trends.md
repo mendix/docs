@@ -1,5 +1,5 @@
 ---
-title: "Trends in Mendix Cloud V3"
+title: "Trends in Mendix Cloud v3"
 parent: "metrics"
 menu_order: 10
 description: "Describes how to interpret various graphs and trends in the Mendix Cloud v3."
@@ -10,10 +10,10 @@ tags: ["Trends","v3","Mendix Cloud","Developer Portal"]
 
 ## 1 Introduction
 
-To track the usage growth of your app, and to debug performance problems, the Mendix Cloud includes detailed graphs of both your app and its environment. These graphs show performance trends of your apps in the paid editions of the Mendix Platform. If you experience issues with your app, always check the **Alerts** and **Trends** in the **Developer Portal** under **Operate**.
+To track the usage growth of your app, and to debug performance problems, the Mendix Cloud includes detailed graphs of both your app and its environment. These graphs show performance trends of your apps in the paid editions of the Mendix Cloud. If you experience issues with your app, always check the **Alerts** and **Trends** in the **Developer Portal** under **Operate**.
 
 {{% alert type="info" %}}
-This document describes the trends graphs available in Mendix Cloud V3. If your app is deployed to Mendix Cloud V4, please refer to [Trends in Mendix Cloud V4](trends-v4).
+This document describes the trends graphs available in Mendix Cloud v3. If your app is deployed to Mendix Cloud v4, please refer to [Trends in Mendix Cloud v4](trends-v4).
 
 If you don't know which Mendix Cloud version you are using, you can find out by following the instructions in [Cloud Version and Region in the Mendix Cloud](/developerportal/deploy/cloud-version-region).
 {{% /alert %}}
@@ -124,7 +124,7 @@ User Type | Explanation
 ------------ | -------------
 **named users** | Total number of user accounts.
 **concurrent named user sessions** | Total number of sessions for users using a named login. 
-**concurrent anonymous user sessions** | Total number of sessions for users who are logging in anonymously. 
+**concurrent anonymous user sessions** | Total number of sessions for users who are signing in anonymously. 
 
 ### <a name="Trends-appmxruntimejvmheap"></a>4.4 JVM Object Heap
 
@@ -150,7 +150,7 @@ This **JVM Process Memory Usage** graph is similar to the previous graph, *JVM O
 
 This graph is primarily present to provide more insight in situations where the part of the real used memory *outside* the JVM Object Heap is growing too much, causing problems with memory shortage in the operating system.
 
-More information on this graph is available in a Tech Blog post: [What's in my JVM memory?](https://tech.mendix.com/linux/2015/01/14/whats-in-my-jvm-memory/)
+More information on this graph is available in a Tech Blog post: [What's in my JVM memory?](https://www.mendix.com/blog/whats-jvm-memory/)
 
 ### <a name="Trends-appmemory"></a>4.6 Application Node Operating System Memory
 
@@ -370,4 +370,4 @@ This graph should be interpreted in combination with other graphs. See [Combinin
 * [Migrate to Mendix Cloud v4](/developerportal/deploy/migrating-to-v4)
 * [How to Receive Environment Status Alerts](receive-alerts)
 * [Cloud Version and Region in the Mendix Cloud](/developerportal/deploy/cloud-version-region)
-* [Mendix Cloud V4](/developerportal/deploy/mxcloudv4)
+* [Mendix Cloud v4](/developerportal/deploy/mxcloudv4)

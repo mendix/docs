@@ -19,15 +19,11 @@ Or as shown in the Mendix Cloud:
 
 ![](attachments/mendix-runtime-java/4.jpg)
 
-### 2.2 PermGen
-
-The [Permanent Generation](https://docs.oracle.com/javase/7/docs/webnotes/tsg/TSG-VM/html/tooldescr.html#gblmm) (PermGen) holds classes and libraries, which are only loaded into the PermGen when they are actually used. It is not part of the Java Heap space and in Java8 it no longer exists and is replaced by something called Metadata. These concepts mostly relate to the libraries you add in the userlib directory of your project. Once they are used somewhere in a microflow (through a Java call) they will be added to the PermGen (Java 7 and prior) or the Metadata (Java 8). So if you see any errors related to these two terms, you know where to start looking.
-
-### 2.3 Stack
+### 2.2 Stack
 
 Another interesting area is the Stack. This is what holds, among other things, all information about microflows, domain models and other Mendix specific information. Any microflow that is executed will also end up in the stack (see *thread stacks* in the graph above).
 
-### 2.4 Heap, Garbage Collector and OOM Errors
+### 2.3 Heap, Garbage Collector and OOM Errors
 
 Next up is the heap space (Heap). But before we go into that, let’s briefly discuss another important part of the JVM: the Garbage Collector (GC).
 
@@ -55,7 +51,7 @@ You can see this quite well in the following JVM Object Heap graph taken from th
 
 The purple and green spikes are minor garbage collections. The large drops in the red part are major garbage collections. This is a healthy looking Heap.
 
-### 2.5 Application Server
+### 2.4 Application Server
 
 And finally a Mendix Cloud graph where all of the above comes together:
 
@@ -65,7 +61,7 @@ The green part (apps) is basically the JVM in which the Mendix application is ru
 
 ## 3 Read More
 
-* [Transient Objects & Garbage Collecting](transient-objects-garbage-collecting)
+* [Non-Persistable Objects & Garbage Collecting](transient-objects-garbage-collecting)
 * [Java Memory Usage](java-memory-usage)
 * [Common Runtime & Java Errors](runtime-java-errors)
 

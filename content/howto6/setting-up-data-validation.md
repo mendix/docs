@@ -33,7 +33,7 @@ Please note that a _required_ validation rule on entity level overrules this pro
 
 ## 3\. Advanced Data Validation with the 'Before Commit' Event
 
-Validation rules are great for simple validations, but Mendix also offers ways to handle more complex validations. The domain model allows you to define event handlers on entity level. The 'Before Commit' and 'After Commit' events are always triggered when an object is committed to the database. The 'After Commit' is most commonly used to calculate values of de-normalised data. With the 'Before Commit' event you can execute a microflow that must return a boolean value. If the microflow returns 'false', the entire commit is aborted otherwise the object is stored in the database. This mechanism is great for data validation. This section will explain how you can validate data by use of the 'Before Commit' event.
+Validation rules are great for simple validations, but Mendix also offers ways to handle more complex validations. The domain model allows you to define event handlers on entity level. The 'Before Commit' and 'After Commit' events are always triggered when an object is committed to the database. The 'After Commit' is most commonly used to calculate values of de-normalized data. With the 'Before Commit' event you can execute a microflow that must return a Boolean value. If the microflow returns 'false', the entire commit is aborted otherwise the object is stored in the database. This mechanism is great for data validation. This section will explain how you can validate data by use of the 'Before Commit' event.
 
 1.  Open a **domain model** in the Mendix Modeler.
 2.  Double click an entity to open its **properties**.
@@ -48,7 +48,7 @@ Validation rules are great for simple validations, but Mendix also offers ways t
 9.  Click **OK** to save the event handler and open the created Microflow. It should look similar to this:
     ![](attachments/18448742/18582145.png)
 
-As long as this Microflow returns a boolean value, you are free to add any logic to determine if the data is valid or not. If the Microflow returns 'false', the commit is cancelled. Returning 'true' will commit the object. If you don't know how to work with microflows, take a look at how-to.
+As long as this Microflow returns a Boolean value, you are free to add any logic to determine if the data is valid or not. If the Microflow returns 'false', the commit is cancelled. Returning 'true' will commit the object. If you don't know how to work with microflows, take a look at how-to.
 
 ## 4\. Advanced Validation with a Custom 'Save' Button
 
@@ -94,5 +94,4 @@ Validating user input can also be achieved by overriding the default save button
 *   [Setting up data validation](setting-up-data-validation)
 *   [Finding the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
 *   [Managing your Application Requirements with Mendix](/developerportal/collaborate/stories)
-*   [Scout and Windows 10 Workaround](scout-and-windows-10-workaround)
 *   [Creating a chainable Custom Widget](create-a-chainable-custom-widget)

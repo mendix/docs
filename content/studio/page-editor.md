@@ -7,7 +7,7 @@ tags: ["studio", "page editor", "pages"]
 
 ## 1 Introduction 
 
-The page editor allows a user to define the end-user interface of a Mendix application. 
+Pages define the end-user interface of a Mendix application. Pages are created and edited in the *page editor*.
 
 To view the **Pages** of your app in Mendix Studio, click the **Pages** icon in the left menu bar of Studio.
 
@@ -20,20 +20,25 @@ Studio supports apps based on the Atlas UI framework only. For details on Atlas 
 
 {{% /alert %}}
 
-## 2 Components
+Every page is *based on* a layout and a template:
 
-Pages of Studio consist of the following components:
+* **Layout** – a frame you put your page in. Every page is based on a layout. For example, **Atlas_Default** or **PopupLayout** are types of layouts you can choose when creating a page. Layouts define a position and look of such UI elements as a page header and menu bars. 
+* **Template** – a starting point for a new page. Every time you create a new page, you select a template depending on data you want to display on your page and the way you want to display it: a list, a dashboard, a form. Depending on your choice, a page template can have a number of predefined elements on it, such as lists with images, forms. For example, **Dashboard Action Tiles**, **List Default**, **Master Detail** are types of templates. 
 
-* **Layouts** structure your pages. Every page is based on a layout. For example, **Atlas_Default** or **PopupLayout** are types of layouts you can choose when creating a page.
-* **Templates** – a starting point for creating new pages. Every time you create a new page, you select a template depending on data you want to display on your page and the way you want to display it: a list, a dashboard, a form. For example, **Dashboard Action Tiles**, **List Default**, **Master Detail** are types of templates. 
-* **Widgets** – single user-interface elements. For more information, see section [5.2. Widgets](#widgets) and [Widgets](page-editor-widgets).
-* **Building blocks** – pre-configured  set of elements that speeds up the process of building your page and styling it. For more information, see section [5.1 Building Blocks](#building-blocks). 
+*Look and structure* of a page is defined by the following elements:
 
-The components described above are powered by Atlas UI. For more information, see [Atlas UI](../../howto/front-end/atlas-ui). 
+* **Widgets** – single user-interface elements. For more information, see the [Widgets](#widgets) section and [Widgets](page-editor-widgets).
+* **Building blocks** – pre-configured set of *widgets* that speeds up the process of building your page and styling it. For more information, see the [Building Blocks](#building-blocks) section. 
 
-## 3 Performing Basic Functions {#page-editor-basic-functions}
+The diagram below explains function of layouts, templates, and widgets:
 
-### 3.1 Opening Pages
+![](attachments/page-editor/page-structure.png)
+
+All elements described above (layouts, templates, widgets, and building blocks) are powered by Atlas UI. For more information on what Atlas UI is, see [Atlas UI](../../howto/front-end/atlas-ui). 
+
+## 2 Performing Basic Functions {#page-editor-basic-functions}
+
+### 2.1 Opening Pages
 
 After opening Studio, it automatically opens the home page of the app.
 
@@ -48,24 +53,26 @@ To open a page in Studio, do the following:
 
 The selected page is opened. 
 
-### 3.2 Creating a New Page {#creating-new-page}
+### 2.2 Creating a New Page {#creating-new-page}
 
 To create a new page in Studio, do the following:
 
 1. Click the **Pages** icon.
+
 2.  Click **New** in the top right corner of the displayed side panel.
 
     {{% image_container width="400" %}}![](attachments/page-editor/new-page.png)
     {{% /image_container %}}
 
-3. In the **Create new page** dialog window, fill out the title of the page, select the layout and the page template.  
-4.  Click **Create**.
+3.  In the **Create new page** dialog window, fill out the title of the page, select a layout and a page template.  
 
-    ![](attachments/page-editor/create-new-page-dialog.png)
+	![](attachments/page-editor/create-new-page-dialog.png)
+
+5. Click **Create**.
 
 A new page is created.
 
-### 3.3 Deleting a Page
+### 2.3 Deleting a Page
 
 To delete a page in Studio, do the following:
 
@@ -75,42 +82,47 @@ To delete a page in Studio, do the following:
 
     ![](attachments/page-editor/page-delete.png)
 
-   The selected page is deleted.
+The selected page is deleted.
 
-### 3.4 Viewing Elements On a Page
+### 2.4 Adding Elements on a Page
 
-To view an element and its [properties](#page-editor-properties), click this element. 
+To add elements on a page, do the following:
 
-The selected element is indicated with an blue border. Additionally, if the element is inside a data container (data view or a list view), it will be indicated with a data container icon.
+1. In **Toolbox**, open the [Widgets](#widgets) tab or the [Building Blocks](#building-blocks) tab.
+2. Select an element you would like to add, drag and drop this element on a page. 
+
+### 2.5 Viewing Elements On a Page
+
+There are two ways to view an element and its [properties](#page-editor-properties):
+
+* Clicking the element on a page itself
+* Clicking the element in a breadcrumb (for more information, see the [Breadcrumb](#breadcrumb) section)
+
+The selected element is indicated with an blue border. Additionally, if the element is inside a data container (data view or a list view), it will be indicated with a data container icon:
 
 {{% image_container width="400" %}}![](attachments/page-editor/input-widget-example.png)
 {{% /image_container %}}
 
-## 4 Breadcrumb Trail {#breadcrumb}
+### 2.6 Deleting Elements from a Page
 
-When you select an item on your page, there appears a breadcrumb trail in the left bottom corner of Studio.
+To delete an element from a page, do one of the following:
 
-The breadcrumb trail serves two functions:
+* Select this element and press <kbd>Delete</kbd>
+* Open the **Properties** tab of this element and this click **Delete** at the bottom of the tab
 
-* Shows a bottom-up layering of a selected item on a page
-* Allows the user to select an element on the page and view its properties 
+## 3 Breadcrumb {#breadcrumb}
 
-For example, when you select a button on a page, you will see that it is placed in a container, which is in a column.  Whereas, the column is in a row, and this row is placed in a layout grid on the page.
+A breadcrumb is displayed on every page in the left bottom corner of Studio.
 
-![](attachments/page-editor/breadcrumb.png)
+The breadcrumb serves two functions:
 
-To view information on the element click this element in the breadcrumb trail and its properties are displayed automatically.
+* Shows a bottom-up layering of a selected item on a page. For example, when you select a button on a page, you will see that it is placed in a container, which is in a column.  Whereas, the column is in a row, and this row is placed in a layout grid on the page:
 
-### 4.1 Viewing the Navigation Layout Information with the Breadcrumb Trail
+  ![](attachments/page-editor/breadcrumb.png)
 
-You can also view the information on Navigation layout by clicking it in the breadcrumb trail.
+* Allows you to select an element on the page and view its properties. To navigate to an element on a page and view element's properties, click this element in the breadcrumb.
 
-The following options will be displayed in the **Properties** tab:
-
-{{% image_container width="300" %}}![](attachments/page-editor/navigation-layout.png)
-{{% /image_container %}}
-
-## 5 Toolbox Tab
+## 4 Toolbox Tab
 
 The **Toolbox** shows the tools that can be used on pages. 
 
@@ -119,19 +131,17 @@ This tab consists of the following:
 * [Widgets](#widgets)
 * [Building Blocks](#building-blocks)
 
-### 5.1 Widgets {#widgets}
+### 4.1 Widgets {#widgets}
 
-Widgets are single user-interface elements that can be configured. You can [quickly configure](page-editor-widgets#quick-config) most of the non-custom widgets when adding them on a page. For more information, see [Widgets](page-editor-widgets). 
+Widgets are single user-interface elements that can be configured. 
 
-{{% alert type="info" %}}
+You can [quickly configure](page-editor-widgets#quick-config) most of the non-custom widgets when adding them on a page. For more information on how to configure widgets, see [Widgets](page-editor-widgets). 
 
 You can update widgets in the [Widget Overview](settings-widget-overview). 
 
-{{% /alert %}}
+### 4.2 Building Blocks {#building-blocks}
 
-### 5.2 Building Blocks {#building-blocks}
-
-Building blocks consist of pre-set widgets that allow you to build a page faster: you only need to drag-and-drop them to the page.  
+Building blocks consist of pre-set widgets that allow you to build a page faster:  
 
 ![](attachments/page-editor/building-blocks.png)
 
@@ -152,36 +162,28 @@ Building blocks of Studio are divided into the following categories:
 | Notifications  | Contain building blocks used for different notifications.    |
 | Alignments     | Use these building blocks to align elements.                 |
 
-To insert a building block, drag and drop the selected building block on the page.
-
 If you want to read documentation on a particular building block and to know more about how and when to use it, click the small icon in the top right corner of the building block.
 
 ![](attachments/page-editor/info-icon-building-blocks.png)
 
 {{% alert type="info" %}}
 
-Building Blocks categories may differ because Atlas UI can be customized using Studio Pro.
+Building blocks categories may differ because Atlas UI can be customized using Studio Pro.
 
 {{% /alert %}}
 
-### 5.2 Widgets {#widgets}
+## 5 Properties Tab {#page-editor-properties}
 
-Widgets are single user-interface elements that can be configured. You can [quickly configure](page-editor-widgets#quick-config) most of the non-custom widgets when adding them on a page. For more information, see [Widgets](page-editor-widgets). 
-
-{{% alert type="info" %}}
-
-You can update widgets in the [Widget Overview](settings-widget-overview). 
-
-{{% /alert %}}
-
-## 6 Properties Tab {#page-editor-properties}
-
-The **Properties** tab displays the properties of the currently selected element and differs depending on this element. 
+The **Properties** tab displays the properties of the currently selected element and can differ per element. 
 
 {{% image_container width="300" %}}![](attachments/page-editor/properties.png)
 {{% /image_container %}}
 
+For example, if you click **Layout**—which is the layout that you choose when [creating a page](#creating-new-page)—in the breadcrumb, properties will display reference information on page-related actions that you can perform, such as changing the page title and customizing pages' look: 
 
-## 7 Read More
+{{% image_container width="300" %}}![](attachments/page-editor/layout.png)
+{{% /image_container %}}
 
-* [Data View & List View Properties](page-editor-data-view-list-view)
+## 6 Read More
+
+* [Widgets](page-editor-widgets)

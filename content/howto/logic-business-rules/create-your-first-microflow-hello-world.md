@@ -62,10 +62,7 @@ To edit the new microflow, follow these steps:
 
     ![](attachments/18448678/18580970.png)
 
-6.  Run the application locally and click **View** to see the application in your default browser:
-
-    ![](attachments/18448678/18580968.png)
-
+6.  Click **Run Locally** and then **View** to see the application in your default browser.
 7. Locate the new navigation item in the menu bar and click it to see the message.
 
 ## 4 Read More

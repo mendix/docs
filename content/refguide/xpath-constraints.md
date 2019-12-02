@@ -46,6 +46,12 @@ With parentheses, constraints can be grouped to define priorities. This query re
 
 In some cases, it might also be useful define sub-constraints to restrict the data that is being constrained. This is easily achieved by adding a sub-constraint within the brackets of the original constraint. Do not confuse this with two separate constraints, as the sub-constraint only applies to the meta-constraint, not the actual query. As such, the brackets are not opened and closed one after the other; the sub-constraint should be entirely within the meta-constraint. In sufficiently complicated queries, this can result in confusion regarding where one constraint ends and the other begins. Make sure you keep careful track of bracket sets to prevent this from happening.
 
+This query retrieves all users that have the role Administrator:
+
+```java
+//Sales.User[id = '[%UserRole_Administrator%]']]
+```
+
 This query retrieves all customers who live in Rotterdam or Losdun:
 
 ```java
@@ -65,3 +71,4 @@ Avoid the use of the same path more than once in a single constraint. For exampl
 ```
 
 However, this query is executed inefficiently and will thus significantly slow down the query process.
+

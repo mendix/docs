@@ -39,7 +39,7 @@ module.exports = {
      ****************************************************/
 	{
       from: "/apidocs-mxsdk/mxsdk/reference-documentation",
-      to: "/apidocs-mxsdk/mxsdk/"
+      to: "/apidocs-mxsdk/mxsdk/sdk-refguide"
     },
 	{
       from: "/apidocs-mxsdk/mxsdk/faq",

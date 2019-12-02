@@ -150,7 +150,7 @@ In Mendix Studio Pro, the widget described above would look like this:
 
 #### 5.2.1 Help Page {#help}
 
-You can provide additional help information to users of a widget in a form of a help web page. If you do so, a widget configuration screen will get a **Help** button, assigned to the <kbd>{F1}</kbd> shortcut key, that opens a specified page. This button is positioned in the left-bottom corner of the popup dialog:
+You can provide additional help information to widget users by using a help page. If you do so, a widget configuration screen will get a **Help** button, assigned to the <kbd>{F1}</kbd> shortcut key, that opens a specified page. This button is positioned in the left-bottom corner of the popup dialog:
 
 ![basic widget](attachments/pluggable-widgets/widget-dialog-help-button.png)
 

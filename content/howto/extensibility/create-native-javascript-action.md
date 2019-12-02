@@ -100,15 +100,15 @@ For your information; the settings are stored in a file `C:\Users\mendix.tech.wr
 ``` json
 {
 	"Native NFC App": {
-	"gitHubAccessToken": "a1f422...",
-	"appCenterApiToken": "a1b95a...",
-	"projectName": "Native NFC App",
-	"appName": "Native NFC App",
-	"appIdentifier": "com.mendix.howto.nativenfc",
-	"javaHome": "C:\\Program Files\\AdoptOpenJDK\\jdk-11.0.3.7-hotspot",
-	"projectPath": "C:\\MendixProjects\\NativeNFC\\NativeNFC.mpr",
-	"mxbuildPath": "C:\\Program Files\\Mendix\\8.4.1.63369\\modeler\\mxbuild.exe",
-	"runtimeUrl": "https://nativenfc-sandbox.mxapps.io/"
+		"gitHubAccessToken": "a1f422...",
+		"appCenterApiToken": "a1b95a...",
+		"projectName": "Native NFC App",
+		"appName": "Native NFC App",
+		"appIdentifier": "com.mendix.howto.nativenfc",
+		"javaHome": "C:\\Program Files\\AdoptOpenJDK\\jdk-11.0.3.7-hotspot",
+		"projectPath": "C:\\MendixProjects\\NativeNFC\\NativeNFC.mpr",
+		"mxbuildPath": "C:\\Program Files\\Mendix\\8.4.1.63369\\modeler\\mxbuild.exe",
+		"runtimeUrl": "https://nativenfc-sandbox.mxapps.io/"
 	}
 }
 ```

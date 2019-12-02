@@ -92,7 +92,9 @@ This property defines whether the entity contains the system attribute 'changedD
 | True | Entity contains the system attribute 'changedDate'. |
 | False  *(default)* | Entity does not contain the system attribute 'changedDate'. |
 
-Note that 'changedDate' is only updated on real changes; simply changing/committing an entity with the same attribute values does not update 'changedDate'.
+{{% alert type="info" %}}
+The 'changedDate' property is only updated on real changes. Simply changing and committing an entity with the same attribute values does not update 'changedDate'.
+{{% /alert %}}
 
 #### 3.5.3 Store 'owner'
 

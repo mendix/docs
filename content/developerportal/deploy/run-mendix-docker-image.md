@@ -10,7 +10,7 @@ tags: ["Docker", "Cloud", "container", "CI/CD"]
 
 Docker is an open source container technology that is used broadly in the market in highly scalable solutions and automated delivery pipelines (CI/CD).
 
-This how-to explains how to run a Mendix Docker image created using the Mendix Docker Buildpack. A Mendix Docker image is uniquely created for each release of a project using this buildpack. To run the Docker image, you need access to a Docker orchestration platforms. See [System Requirements](../../refguide/system-requirements) for official supported orchestration platforms. 
+This how-to explains how to run a Mendix Docker image created using the Mendix Docker Buildpack. A Mendix Docker image is uniquely created for each release of a project using this buildpack. To run the Docker image, you need access to a Docker orchestration platforms. See [System Requirements](/refguide/system-requirements) for official supported orchestration platforms. 
 
 **This how-to will teach you how to do the following:**
 

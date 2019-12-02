@@ -53,18 +53,16 @@ The browser you use needs to have JavaScript turned on.
 {{% /alert %}}
 
 ## 5 Cloud Foundry
-The  Mendix Cloud Foundry Buildpack supports 
-- Cloud Foundry versions v9 and higher. 
+The Mendix Cloud Foundry Buildpack supports Cloud Foundry versions v9 and above. 
 
 ## 6 Docker
-Mendix Docker buildpack supports:
-- Docker version 18.09.0 and higher. 
-
+Mendix Docker buildpack supports Docker version 18.09.0 and above. 
 
 ### 6.1 Kubernetes
-The Mendix Docker Buildpack supports 
-- Kubernetes version v1.12 and higher.
-- Redhat Openshift v3.11 and v4.2 and higher.   
+The Mendix Docker Buildpack supports the following Kubernetes versions: 
+
+* Kubernetes version v1.12 and above
+* Redhat Openshift v3.11 and v4.2 and above
 
 ## 7 Server
 
@@ -111,23 +109,25 @@ Each app should have its own database. Mendix apps cannot share data by sharing 
 ## 9 File Storage
 
 ### 9.1 Storage Services for Containers
-For Container based deployments using Docker, Kubernetes or Cloud Foundry the following Storage services are supported:
 
-- AWS S3
-- Azure Blob Storage
-- IBM Cloud Object Storage
-- SAP AWS S3 Object Storage
-- SAP Azure Blob Storage
+For container-based deployments using Docker, Kubernetes, or Cloud Foundry, the following storage services are supported:
 
-#### 9.1.1 Kubernetes
-For Container mounted storage, provided by an external storage class. See also [Run Mendix on Kubernetes](run-mendix-on-kubernetes)
+* AWS S3
+* Azure Blob Storage
+* IBM Cloud Object Storage
+* SAP AWS S3 Object Storage
+* SAP Azure Blob Storage
+
+For container-mounted storage in Kubernetes, provided by an external storage class, see also [Run Mendix on Kubernetes](/developerportal/deploy/run-mendix-on-kubernetes)
 
 ###  9.2 Storage types for Servers
-For Server based installations the following storage types mounted to the OS will be supported 
-- NAS 
-- SAN 
-- GFS
-- Local Storage 
+
+For server-based installations, the following storage types mounted by the OS are supported:
+
+* NAS 
+* SAN 
+* GFS
+* Local Storage 
 
 ## 10 Browsers {#browsers}
 

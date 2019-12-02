@@ -19,50 +19,53 @@ If you want to use push notifications with custom apps which created with native
 
 Create a Native starter project.
 
-### Module installation 
-- Add Community commons
-- Add encryption
-     - Set the private key
-![Capabilities](attachments/native-remote-push/modeler/setEncryption.png)
-- Add push notification module
+### 4.1 Module installation 
 
-### Set up Notification widget
+1. Add Community commons
+2. Add encryption
 
-1) Drag and drop an App events to your home page and set:
-    - Page load / on load to `PushNotifications.OnPageLoad_RegisterPushNotifications`
-    - App resume / on resume `PushNotifications.OnPageLoad_RegisterPushNotifications`
+    2.1 Set the private key
+
+    ![Capabilities](attachments/native-remote-push/modeler/setEncryption.png)
+
+3. Add push notification module
+
+### 4.2 Set Up Notification Widget
+
+1. Drag and drop an App events to your home page and set:
+
+    1.1 Page load / on load to `PushNotifications.OnPageLoad_RegisterPushNotifications`
+
+    1.2 App resume / on resume `PushNotifications.OnPageLoad_RegisterPushNotifications`
     
-![AppEvents](attachments/native-remote-push/modeler/AppEvents.png)    
+    ![AppEvents](attachments/native-remote-push/modeler/AppEvents.png)
 
 This will allow devices to register automatically when they opened the mendix app
 
-2) Create an entity called `NativePush` in your domain modal with one field:
-    - objectGUID
+2. Create an entity called `NativePush` in your domain modal with one `objectGUID` field:
 
-![NotificationEntity](attachments/native-remote-push/modeler/NotificationEntity.png)
+    ![NotificationEntity](attachments/native-remote-push/modeler/NotificationEntity.png)
 
-3) Create `DS_Notification` nanoflow where it creates a `NativePush` entity object then returns it.
+3. Create a new `DS_Notification` nanoflow which creates a *NativePush* entity object and then returns it:
 
-![DS_Notification](attachments/native-remote-push/modeler/DS_Notification.png)
+    ![DS_Notification](attachments/native-remote-push/modeler/DS_Notification.png)
 
-4) Drag and drop a Dataview to your homepage, set:
-    - its Source to Nanoflow=> DS_Notification
+4. Drag and drop a Dataview [todo check] to your homepage, set its Source to `Nanoflow=> DS_Notification`
 
-![Dataview](attachments/native-remote-push/modeler/Dataview.png)
+    ![Dataview](attachments/native-remote-push/modeler/Dataview.png)
 
-5) Inside of the Dataview drag and drop the Notifications widget, set its GUID
- to NotificationEntity/objectGUID
+5. Inside of the Dataview drag and drop the Notifications widget [todo check], set its GUID to `NotificationEntity/objectGUID`
 
-![NotificationsGUID](attachments/native-remote-push/modeler/NotificationsGUID.png)
+    ![NotificationsGUID](attachments/native-remote-push/modeler/NotificationsGUID.png)
 
 This will allow us to pass objects with notification
 
-- Add one more Show page item to your responsive profile navigation => PushNotification/_USE ME/Administration
+6.  Add one more Show page item to your responsive profile navigation [todo check]: `PushNotification/_USE ME/Administration`
 
 ![ProfileHomePage](attachments/native-remote-push/modeler/ProfileHomePage.png)
 
 
-## Add actions to your notification widget
+### 4.3 Add actions to your notification widget
 
 - Create two nanoflows (`ACT_OnRecieve`,`ACT_OnOpen`) which will simply two different logs => "onRecieve triggered" - "onOpen triggered"
 
@@ -75,7 +78,7 @@ This will allow us to pass objects with notification
 
 ![LogitAction](attachments/native-remote-push/modeler/logitAction.png)
 
-## Add firebase configuration  
+### 4.4 Add firebase configuration  
 Deploy the project and head for the administartion screen of the push notifications, we will add configurations
 
 - add new FCM configuration
@@ -94,7 +97,7 @@ Deploy the project and head for the administartion screen of the push notificati
 
 Lets test the implementation
 
-## Sending simple push notification
+### 4.5 Sending a Push Notification
 
 - Reload the app in the phone
 - Put the app in the background 
@@ -115,15 +118,14 @@ When you tap the notification you will recieve a log in your modeler console  `o
 
 When the app is in the foreground you wont see that notification but you will recieve a log in your modeler console  `onRecieve triggered` 
 
-## Sending data via push notification
+## 5 Sending Data Using Push notifications
 
 Lets imagine we have bunch of products and we want to send A product to a user via administration module interface.  
-
 In this section we will cover a scenario where we will:
 - Show push notification to a user if app is in the backgroud, when user taps it, it will go to a proper product page.
 - Show a small view to a user if app is in the foreground for X amount of seconds, when user taps the button in the animation, it will go to a proper product page.
 
-### Setup example entity
+### 5.1 Setup example entity
 
 - Add `Product` entity with `ProductName` attribute and right click to generate overview pages  => `Product_NewEdit`, `Product_Overview`
 
@@ -137,7 +139,7 @@ In this section we will cover a scenario where we will:
 
 ![NativeProductOverview](attachments/native-remote-push/modeler/NativeProductOverview.png)
 
-#### Sync the unused entities in the native side
+### 5.2 Sync the unused entities in the native side
 
 In mendix we do smart syncing, meaning if an Entity has not been retrieved in native side, it wont be there. This situation wont occur in 90% of the apps since we DO retrieve entities that we want show. 
 
@@ -147,7 +149,7 @@ But for our case, we dont retrieve any products in any of the pages, this could 
 
 ![SyncConfig](attachments/native-remote-push/modeler/SyncConfig.png)
 
-### Get the GUIDs of the objects in Edit view
+### 5.3 Get the GUIDs of the objects in Edit view
 
 For an example we want to keep the things simple:
 
@@ -162,7 +164,7 @@ For an example we want to keep the things simple:
 
 ![getGUIdAndLogButton](attachments/native-remote-push/modeler/getGUIdAndLogButton.png)
 
-### Create a nanoflow which will handle data passing for notification
+### 5.4 Create a nanoflow which will handle data passing for notification
 
 Create a nanoflow `ACT_GetProductAndShowPage` which has:
 - Notification object as a parameter
@@ -176,7 +178,7 @@ Go to your Home_Native/ Notification widget and create new action named `sendPro
 
 ![pushSendProduct](attachments/native-remote-push/modeler/pushSendProduct.png)
 
-#### Testing the implementation
+### 5.5 Testing the implementation
 
 - Get a Product GUID by clicking the button that we created in `Get the GUIDs of the objects in Edit view`
 

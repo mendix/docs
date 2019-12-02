@@ -42,13 +42,13 @@ Please follow [Setting up google firebase cloud messaging server](setting-up-goo
 - `GoogleService-Info.plist`
 - `yourPrivateKey.json`
 
-## 3 Setting up Native Builder Customizations
+## 5 Setting up Native Builder Customizations
 
 Out of the box, native builder will create ios and android part of the code. We will do different customizations for different platforms.
 
-### 3.1 Customizing Android part
+### 5.1 Customizing Android part
 
-- Change `android/app/build.gradle`s with following additions
+1. Change `android/app/build.gradle`s with following additions
 
 ```diff
 @@ -101,6 +101,10 @@ dependencies {
@@ -62,9 +62,9 @@ Out of the box, native builder will create ios and android part of the code. We 
  }
 ```
 
-- add downloaded `google-services.json` inside of `android/app` so it will look like  `android/app/google-services.json`
+2. add downloaded `google-services.json` inside of `android/app` so it will look like  `android/app/google-services.json`
 
-- Change `android/app/src/main/AndroidManifest.xml`
+3. Change `android/app/src/main/AndroidManifest.xml`
 We will be testing our implementation against local mendix instance, that means we wont using `https` which means we have to add `android:usesCleartextTraffic="true"` please remove this change afterwards.
 
 ```diff
@@ -114,7 +114,7 @@ We will be testing our implementation against local mendix instance, that means 
  </manifest>
 ```
 
-- Change `android/app/src/main/java/com/mendix/nativetemplate/MainApplication.java`
+4. Change `android/app/src/main/java/com/mendix/nativetemplate/MainApplication.java`
 ```diff
  import fr.greweb.reactnativeviewshot.RNViewShotPackage;
  import io.invertase.firebase.RNFirebasePackage;
@@ -152,21 +152,24 @@ We will be testing our implementation against local mendix instance, that means 
      }
 ```
 
-- Change the `android/app/src/main/res/raw/runtime_url`
-
-Simply add your local ip
-
-
-Commit and push changes to master. This will trigger an Appcenter build. Or you can run it locally.
+5. Change the `android/app/src/main/res/raw/runtime_url` and add your local ip
+6. Commit and push changes to master. This will trigger an Appcenter build. Or you can run it locally.
 
 
-### 3.2 Customizing IOS part
+### 5.2 Customizing IOS part
 
-Please remember that remote notifications on Simulator wont work. Open `app/ios/yourProjectName.xcworkspace` in Xcode since we have to add files and change capabilities of the project.
 
-- Add `GoogleService-Info.plist` to NativeTemplate folder, it should be at the same level as `Info.plist`
+{{% alert type="info" %}}
 
-- Change `/ios/AppDelegate.swift`
+Remote notifications will not work with IOS simulator
+
+{{% /alert %}}
+
+Open `app/ios/yourProjectName.xcworkspace` in Xcode since we have to add files and change capabilities of the project.
+
+1. Add `GoogleService-Info.plist` to NativeTemplate folder, it should be at the same level as `Info.plist`
+
+2. Change `/ios/AppDelegate.swift`
 
 Please note that we are adding our own local ip because we want to test against local mendix instance.
 
@@ -208,7 +211,7 @@ Please note that we are adding our own local ip because we want to test against 
  }
 ```
 
-- Add `ios/Podfile` if the following lines exists, otherwise add:
+3. Add `ios/Podfile` if the following lines exists, otherwise add:
 
 ```
   pod 'RNFirebase', :path => '../node_modules/react-native-firebase/ios'
@@ -216,14 +219,14 @@ Please note that we are adding our own local ip because we want to test against 
   pod 'Firebase/Messaging', '~> 5.15.0'
 ```
 
-- Change `Info.plist` runtime Url to your local ip
+4. Change `Info.plist` runtime Url to your local ip
 
-- Add capabilities
-![Capabilities](attachments/native-remote-push/iosCustomizations.png)
+5. Add capabilities
+     ![Capabilities](attachments/native-remote-push/iosCustomizations.png)
 
 Congrulations you finished setting up customizations for your custom native app, please follow the links in read more to implement local and remote notifications.
 
-## 7 Read More
+## 6 Read More
 
 * [Implement native remote push notifications](native-remote-notifications)
 * [Implement native local push notifications](native-local-notifications)

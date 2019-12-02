@@ -10,148 +10,148 @@ These are the release notes for the [Mendix Metamodel](/apidocs-mxsdk/mxsdk/unde
 
 **Release date: November 22nd, 2019**
 
-## CodeActions
+### CodeActions
 
-### StringTemplateParameterType (Element)
+#### StringTemplateParameterType (Element)
 
 * Introduced.
 
-## JavaScriptActions
+### JavaScriptActions
 
 ### NanoflowJavaScriptActionParameterType (Element)
 
 * Introduced.
 
-## Microflows
+### Microflows
 
-### JavaActionParameterMapping (Element)
+#### JavaActionParameterMapping (Element)
 
-#### Property 'argumentRuntime'
+##### Property 'argumentRuntime'
 
 * Deleted.
 
-### JavaScriptActionCallAction (Element)
+#### JavaScriptActionCallAction (Element)
 
 * Removed experimental status.
 
-### JavaScriptActionParameterMapping (Element)
+#### JavaScriptActionParameterMapping (Element)
 
 * Removed experimental status.
 
-### StringTemplateParameterValue (Element)
+#### StringTemplateParameterValue (Element)
 
 * Introduced.
 
-### ExpressionBasedCodeActionParameterValue (Element)
+#### ExpressionBasedCodeActionParameterValue (Element)
 
-#### Property 'valueExpression'
-
-* Introduced.
-
-### PushToClientAction (Element)
+##### Property 'valueExpression'
 
 * Introduced.
 
-## Nanoflows
-
-### NanoflowParameterValue (Element)
+#### PushToClientAction (Element)
 
 * Introduced.
 
-## Rest
+### Nanoflows
 
-### PublishedODataService (ModelUnit)
+#### NanoflowParameterValue (Element)
 
-#### Property 'summary'
+* Introduced.
+
+### Rest
+
+#### PublishedODataService (ModelUnit)
+
+##### Property 'summary'
 
 * Introduced as a one-line summary description of the service.
 
-#### Property 'description'
+##### Property 'description'
 
 * Introduced as a multi-line description of the service.
 
-### ConsumedODataService (ModelUnit)
+#### ConsumedODataService (ModelUnit)
 
-#### Property 'headersMicroflow'
+##### Property 'headersMicroflow'
 
 * Introduced as a microflow that provides headers to pass to the service.
 
-## CustomWidgets
+### CustomWidgets
 
-### WidgetValueType (Element)
+#### WidgetValueType (Element)
 
-#### Property 'dataSourceProperty'
+##### Property 'dataSourceProperty'
 
 * Introduced.
 
-## Navigation
+### Navigation
 
-### NavigationDocument (ModelUnit)
+#### NavigationDocument (ModelUnit)
 
-#### Property 'schemas'
+##### Property 'schemas'
 
 * Deleted.
 
-## Pages
+### Pages
 
-### BuildingBlock (ModelUnit)
+#### BuildingBlock (ModelUnit)
 
-#### Property 'platform'
+##### Property 'platform'
 
 * Added public.
 
-### MicroflowParameterMapping (Element)
+#### MicroflowParameterMapping (Element)
 
-#### Property 'variable'
-
-* Introduced.
-
-#### Property 'widget'
-
-* Deleted. Use variable instead (see above).
-
-#### Property 'useAllPages'
-
-* Deleted. Use variable instead (see above).
-
-### NanoflowParameterMapping (Element)
-
-#### Property 'variable'
+##### Property 'variable'
 
 * Introduced.
 
-#### Property 'widget'
+##### Property 'widget'
 
 * Deleted. Use variable instead (see above).
 
-#### Property 'useAllPages'
+##### Property 'useAllPages'
 
 * Deleted. Use variable instead (see above).
 
-### PageVariable (Element)
+#### NanoflowParameterMapping (Element)
+
+##### Property 'variable'
 
 * Introduced.
 
-### Snippet (ModelUnit)
+##### Property 'widget'
 
-#### Property 'type'
+* Deleted. Use variable instead (see above).
+
+##### Property 'useAllPages'
+
+* Deleted. Use variable instead (see above).
+
+#### PageVariable (Element)
+
+* Introduced.
+
+#### Snippet (ModelUnit)
+
+##### Property 'type'
 
 * Added as public.
 
-### RetrievalSchema (Element)
+#### RetrievalSchema (Element)
 
 * Deleted.
 
-### RetrievalQuery (Element)
+#### RetrievalQuery (Element)
 
-#### Property 'widgetName'
-
-* Introduced.
-
-#### Property 'usedAssociations'
+##### Property 'widgetName'
 
 * Introduced.
 
-#### Property 'schemaId'
+##### Property 'usedAssociations'
+
+* Introduced.
+
+##### Property 'schemaId'
 
 * Deleted.

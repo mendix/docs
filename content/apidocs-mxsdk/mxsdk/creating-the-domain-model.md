@@ -158,18 +158,15 @@ const generalization = domainmodels.Generalization.createIn(customer);
 generalization.generalization = systemUser;
 ```
 
-New entities by default have a `NoGeneralization` set, so the `generalization` property for the `Customer` entity needs to be updated:
-
-```ts
-customer.generalization = generalization;
-```
-
 Together, the creation of the `Customer` entity will look like the following code snippet. Replace the creation of the `customer` entity instance in the script with the following snippet:
 
 ```ts
-const systemUser = workingCopy.model().findEntityByQualifiedName(`Administration.Account`);
+const customer = domainmodels.Entity.createIn(domainModel);
+customer.name = `Customer`;
+customer.location = { x: 100, y: 100 };
 
 const generalization = domainmodels.Generalization.createIn(customer);
+const systemUser = workingCopy.model().findEntityByQualifiedName(`Administration.Account`);
 generalization.generalization = systemUser;
 ```
 

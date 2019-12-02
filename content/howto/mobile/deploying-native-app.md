@@ -2,7 +2,7 @@
 title: "Deploy Your First Mendix Native App"
 parent: "native-mobile"
 menu_order: 70
-description: A tutorial for deploying your first Mendix Native App with Native Builder.
+description: Describes how to deploy your first Mendix Native App with the Native Builder.
 tags: ["native", "mobile", "deploy", "native-builder", "builder", "appcenter"]
 ---
 
@@ -43,20 +43,21 @@ To use the Native Builder, you will first need to get tokens to authenticate wit
 ### 3.1 GitHub Token {#github-token}
 
 1. Go to [GitHub](https://github.com/) and sign in.
-2. Go to [Settings](https://github.com/settings/profile) by clicking on your profile picture in the top right.
+2. Go to [Settings](https://github.com/settings/profile) by clicking your profile picture in the top-right corner of the page.
 3. Click [Developer settings](https://github.com/settings/apps) at the bottom of the left menu.
 4. Navigate to [Personal access tokens](https://github.com/settings/tokens) and then click **Generate new token** to create a new personal access token.
 5. In the **Note** field, write *Native Builder.*
 6. Under **Select scopes**, select **repo**.
-7. Click the **Generate token** button.
+7. Click **Generate token**.
 8. Store your token in a secure place. You will not be able to see it again. If you lose it, you will have to create a new token and delete your old one.
 
 ### 3.2 App Center Token {#appcenter-token}
 
 1. Go to [App Center](https://appcenter.ms/apps) and sign in.
 2. Click your profile icon in the top right corner, then click **Settings**, and then **Account Settings**.
-3. In the **API Tokens** tab, click the **New API token** button.
-4. Add a description of your token, select **Full Access**, then click **Add new API token**, and then **New API Token**. Store this token in a secure place as well. You will not be able to see it again. If you lose it, you will have to create a new token and delete your old one.
+3. In the **API Tokens** tab, click **New API token**.
+4. Add a description of your token, select **Full Access**, then click **Add new API token**, and then **New API Token**.
+5. Store this token in a secure place as well. You will not be able to see it again. If you lose it, you will have to create a new token and delete your old one.
 
 ## 4 Preparing Your Project
 

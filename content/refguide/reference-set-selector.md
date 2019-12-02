@@ -41,7 +41,7 @@ The reference set selector looks a lot like a [data grid](data-grid) and consequ
 
 An example of reference set selector properties is represented in the image below:
 
-{{% image_container width="400" %}}![](attachments/reference-set-selector/reference-set-selector-properties.png)
+{{% image_container width="250" %}}![](attachments/reference-set-selector/reference-set-selector-properties.png)
 {{% /image_container %}}
 
 Reference set selector properties consist of the following sections:

@@ -56,7 +56,7 @@ A conflict occurs when two versions of the app cannot be combined automatically.
 
 When a conflict occurs, a developer has to intervene to decide how it should be resolved before it can be committed to the Team Server as a new revision.
 
-### 2.7 Update
+### 2.7 Update {#update}
 
 Updating is the action, invoked in Studio Pro, which gets the latest revision of the current [development line](#development-line) from the Team Server repository and merges the differences into the current working copy.
 

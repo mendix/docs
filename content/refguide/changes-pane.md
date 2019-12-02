@@ -13,7 +13,7 @@ For version control enabled projects (projects with Team Server or other SVN ser
 This pane consists of the following:
 
 * The [top bar](#top-bar) contains various buttons, such as **Back**, **Go to**, **Tasks**. 
-* The [top level](top-level) shows you a list of documents that were changed, for example, a page where a widget was deleted
+* The [top level](#top-level) shows you a list of documents that were changed, for example, a page where a widget was deleted
 * The [zoomed-in level](#zommed-in-level) of the pane is split into two grids, with elements in the left grid and changed properties of the selected element in the right grid
 
 ## 2 Top Bar {#top-bar}

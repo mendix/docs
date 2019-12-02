@@ -41,7 +41,7 @@ The **Download from Version Control Server** option downloads an app from the Te
 
 ### 5.3 Upload to Version Control Server
 
-The **Upload to Version Control Server** option uploads a local app to a new or existing Team Server repository, or to another SVN server. This is only possible if the app is not yet version controlled. For more information on what settings are displayed in the **Upload from Version Control Server** dialog window, see [Upload from Version Control Server](upload-from-version-control-dialog).
+The **Upload to Version Control Server** option uploads a local app to a new or existing Team Server repository, or to another SVN server. This is only possible if the app is not yet version controlled. For more information on what settings are displayed in the **Upload to Version Control Server** dialog window, see [Upload to Version Control Server](upload-to-version-control-dialog).
 
 ### 5.4 Manage Branch Lines
 

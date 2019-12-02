@@ -16,24 +16,24 @@ The [IMAP/POP3 Incoming Email](https://appstore.home.mendix.com/link/app/1042/) 
 
 ### 1.2 Features
 
-    Configuration of multiple accounts.
-    Supported protocols:
-        POP3 / POP3S
-        IMAP / IMAPS
-    Actions to be performed after receiving emails:
-        Deleted from server
-        Move to a folder (e.g. archive).
+* Configuration of multiple accounts.
+* Supported protocols:
+	* POP3 and POP3S
+	* IMAP and IMAPS
+* Actions to be performed after receiving emails:
+	* Delete from server
+	* Move to a folder (for example, an archive)
 
-Limitations
+### 1.3 Limitations
 
-    Does not retrieve meeting requests (.ics).
+* Does not retrieve meeting requests (*.ics*)
 
-Installation
+### 1.4 Dependencies
 
-This module depends on the following modules:
+* [Encryption](encryption) module (used to encrypt passwords of the email accounts)
 
-    Encryption v2.0.0 (used to encrypt passwords of the email accounts)
+## 2 Configuration
 
-Configuration
+The basic setup and reception of emails can be done using the **EmailAccount_Overview** example page.
 
-Basic setup and receive of emails can be done using the EmailAccount_Overview. To invoke receiving emails from an account you can call DS_ReceiveEmails.
+To invoke receiving emails from an account, you can call the **DS_ReceiveEmails** microflow.

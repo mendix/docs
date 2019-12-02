@@ -66,7 +66,7 @@ For more information on debugging, see [How to Debug Microflows](/howto/monitori
 
 The **Breakpoints** pane shows all the breakpoints in your app project. You can enable and disable breakpoints from here.
 
-### 12.2 Debugger
+### 12.2 Debugger {#debugger}
 
 The **Debugger** tool can be used to debug your application.
 
@@ -79,7 +79,7 @@ In the **Variables** pane, you can view the current values of variables, lists, 
 The **Full Screen** mode hides the title bar and makes the window fill the entire screen. This version of **Full Screen** was introduced in Studio Pro [8.3.0](/releasenotes/studio-pro/8.3#830); in previous versions, the **Full Screen** mode closed all dockable window panes. 
 Shortcut key: <kbd>F11</kbd>
 
-## 14 Distraction Free Mode
+## 14 Distraction Free Mode {#distraction-free}
 
 The **Distraction Free Mode** does the same as the **Full Screen** mode above, but also closes all dockable window panes. This was introduced in Studio Pro [8.3.0](/releasenotes/studio-pro/8.3#830).
 

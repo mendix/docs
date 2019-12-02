@@ -78,7 +78,7 @@ In the **Project** menu, you can view and/or manipulate settings that are connec
 | **Stop** | Stops the currently running project. | <kbd>Shift</kbd> + <kbd>F5</kbd> |
 | **onfiguration** | Sets the configuration level (**Default**). | |
 | **efault log level** | Allows setting the default log level before running the project locally. The options are **Trace**, **Debug**, **Info** (default), **Warning**, **Error**, **Critical**. |   |
-| **Debug** | Allows you to connect the [Debugger](#dockable-panes). | |
+| **Debug** | Allows you to connect the [Debugger](view-menu#debugger). | |
 | **Responsive Browser** | Shows the web client for the currently running project in the browser. | <kbd>F9</kbd> |
 | **Tablet Browser** | Shows the tablet mobile client for the currently running project in the browser. | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F9</kbd> |
 | **Phone Browser** | Shows the mobile client for the currently running project in the browser. | <kbd>Ctrl</kbd> + <kbd>F9</kbd> |

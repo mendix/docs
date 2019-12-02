@@ -81,7 +81,7 @@ This option requires a restart.
 
 #### 5.2.1 New Version of the Changes Pane {#new-changes}
 
-Select this option when you want to enable the new version of the [Changes](studio-pro-overview#changes) pane. Should you find any issues in the new version, you can switch back to the old version by unselecting this option.
+Select this option when you want to enable the new version of the [Changes](changes-pane) pane. Should you find any issues in the new version, you can switch back to the old version by unselecting this option.
 
 {{% alert type="info" %}}
 This option requires a restart.

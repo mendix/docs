@@ -269,7 +269,7 @@ In App Center you can configure your builds at the branch level. If no configura
 
 Advanced users might wish to connect to a local running instance of Studio Pro. Be aware that if you make the changes described in this section to your template, you must revert all those changes to use the Native Builder with your template.
 
-While following the instructions below, be sure to replace any instance of `LOCAL_IP_ADDRESS` with *your* local IP address (for example, {10.0.0.2}) and when your Studio Pro is running on an other port that `8080` make sure you replace that too.
+While following the instructions below, be sure to replace any instance of `LOCAL_IP_ADDRESS` with *your* local IP address (for example, {10.0.0.2}). If you are running Studio Pro on a port other than 8080, make sure to replace that too.
 
 #### 5.3.1 Getting Started
 

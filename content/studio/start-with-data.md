@@ -111,7 +111,7 @@ A column can be used to create an association **from** it once only. If an assoc
 
 {{% /alert %}}
 
-####4.1.2 Managing Attribute Types
+#### 4.1.2 Managing Attribute Types
 
 At the bottom of each column (that will be turned into an attribute) an attribute type is automatically identified and indicated. Click the drop-down menu to change the attribute type. For more information on how Excel data types correspond to attribute types, see [Correspondence between Excel Data Types and Attribute Types](#excel-type-attribute-type).
 
@@ -166,4 +166,4 @@ If **Generate pages for my data** has been selected in the preview page, pages a
 ## 5 Read More
 
 * [Domain Model](domain-models)
-* [Attribute Types](domain-models-attributes) 
+* [Attributes](domain-models-attributes) 

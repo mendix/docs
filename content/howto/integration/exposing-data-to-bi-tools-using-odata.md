@@ -12,7 +12,7 @@ Mendix apps encourage the application of a services-oriented architecture, with 
 
 One important aspect of services is that all access to data and logic is handled by the service operations. Direct access to databases used for storing the service data is discouraged, because this would bypass the business rules and security handled by the service. This creates a challenge for generic reporting, data warehousing, and ETL tooling.
 
-A new standard called OData being adopted more and more, as this enables generic data access within a services-oriented architecture. [OData](http://www.odata.org) is “an open protocol to allow the creation and consumption of queryable and interoperable Restful APIs in a simple and standard way.". In other words, it enables tools to use any REST/OData service by providing metadata that describes the data being provided and by standardizing the messages exchanged with the OData services.
+A new standard called OData is being adopted more and more, as this enables generic data access within a services-oriented architecture. [OData](http://www.odata.org) is “an open protocol to allow the creation and consumption of queryable and interoperable Restful APIs in a simple and standard way.". In other words, it enables tools to use any REST/OData service by providing metadata that describes the data being provided and by standardizing the messages exchanged with the OData services.
 
 A reporting tool like Tableau or Excel can discover what data and functionality is available in an OData service and provide a generic way for users to build new queries for the data.
 
@@ -52,7 +52,7 @@ A published OData service can be used by third-party applications to read data f
 
 	![](attachments/18448736/18582024.png)
 
-	Security in OData is managed by the **Project Security** settings and the entity-level access rules; therefore, if you have already configured access rules in your app, you don not have to configure security separately for OData.
+	Security in OData is managed by the **Project Security** settings and the entity-level access rules; therefore, if you have already configured access rules in your app, you do not have to configure security separately for OData.
 
 6.  Repeat steps 4 and 5 for the **Engineer** entity:
 

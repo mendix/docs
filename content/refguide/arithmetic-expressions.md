@@ -40,35 +40,75 @@ Divides two numbers. You can use either the `div` or colon ( : ) syntax, as can 
 
 If any of the two inputs is of type Decimal, the result is of type Decimal.
 
-"div" syntax:
+`div` syntax:
 
 ```java
 3 div 5
 ```
 
-results in
+results in:
 
 ```java
 0.6
 ```
 
-":" syntax:
+`:` syntax:
 
 ```java
 12 : 3
 ```
 
-results in
+results in:
 
 ```java
 4.0
 ```
 
+### 3.3 Warning
+
+The result of a division is only an approximation if it has an infinite decimal expansion. For example:
+
+```java
+3 : 7
+```
+
+results in:
+
+```java
+0.4285714285714285714285714285714286
+```
+
+The consequence of this is that if you continue a calculation with the results of a division, the results might be unexpected. For example:
+
+```java
+(3 : 7) * 7
+```
+
+results in:
+
+```java
+3.0000000000000000000000000000000002
+```
+
+and:
+
+```java
+ceil((3 : 7) * 7)
+```
+
+in:
+
+```java
+4
+```
+
+It is therefore recommended to do division operations last.
+
 ## 4 Modulo
 
 Calculates the remainder of the division of one number by another. In other words, m modulo n corresponds to: m = p + k*n, where p is the result of the operation m modulo n.
 
-### 4.1 Input parameters
+### 4.1 Input Parameters
 
 *   First number
     Type: Integer/Long, Decimal
@@ -85,7 +125,7 @@ If any of the two inputs is of type Decimal, the result is of type Decimal.
 23 mod 5
 ```
 
-results in an Integer/Long with value
+results in an Integer/Long with value:
 
 ```java
 3
@@ -94,11 +134,7 @@ results in an Integer/Long with value
 
 Adds two numbers.
 
-{{% alert type="info" %}}
-
-See [String function calls](string-function-calls) for more information.
-
-{{% /alert %}}
+For more information, see [String function calls](string-function-calls).
 
 ### 5.1 Input Parameters
 
@@ -117,7 +153,7 @@ If any of the two inputs is of type Decimal, the result is of type Decimal.
 -3 + 4
 ```
 
-results in an Integer/Long with value
+results in an Integer/Long with value:
 
 ```java
 1
@@ -144,7 +180,7 @@ If any of the two inputs is of type Decimal, the result is of type Decimal.
 5 - 4
 ```
 
-results in an Integer/Long with value
+results in an Integer/Long with value:
 
 ```java
 1

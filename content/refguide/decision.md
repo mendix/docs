@@ -22,7 +22,7 @@ Type defines whether an expression or a rule is used to define the condition of 
 
 ### 2.2 Expression
 
-If the property 'Type' is set to 'Expression' the expression field can be used to define the condition of the decision. The condition can be entered as an [expression](expressions). The expression should result in a boolean or an enumeration.
+If the property 'Type' is set to 'Expression' the expression field can be used to define the condition of the decision. The condition can be entered as an [expression](expressions). The expression should result in a Boolean or an enumeration.
 
 {{% alert type="info" %}}
 

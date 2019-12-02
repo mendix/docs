@@ -2,68 +2,124 @@
 title: "Layout Grid"
 parent: "container-widgets"
 menu_order: 10
-tags: ["studio pro"]
+tags: ["studio pro", "layout grid", "container widget", "grid", "layout"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 {{% alert type="warning" %}}The layout grid widget is not supported on native mobile pages.{{% /alert %}}
 
-The layout grid is a widget that gives structure to your pages. A layout grid contains one or more rows and each row contains one to twelve columns. Each column has a weight, a number from 1 to 12, and the weights of the columns in a row must add up to 12\. In the browser the layout grid is implemented by the Bootstrap grid system. Reading the official Bootstrap [documentation on the grid system](http://getbootstrap.com/css/#grid) can help you understand what you can build with this widget.
+## 1 Introduction
 
-## ![](attachments/pages/layout-grid.png)
+The layout grid is a widget that gives structure to your pages.  A layout grid contains rows and columns: ![Layout Grid Example](attachments/container-widgets/layout-grid.png)
 
-## Automatic classes
+In a browser, the layout grid is based on the Bootstrap grid system. For more information on the Bootstrap grid system, see the [official Bootstrap documentation](http://getbootstrap.com/css/#grid).
 
-The layout grid is exported as nested div elements. In addition to the classes you specify in the various Class properties, a number of classes are added automatically.
+## 2 Components
 
-```
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-md-6"> ... </div>
-    <div class="col-md-6"> ... </div>
-  </div>
-  ...
-</div> 
-```
+### 2.1 Rows
 
-The outermost `div` represents the widget as a whole and gets the one of the following classes:
+A layout grid can contain one or more rows. Each row contains [columns](#columns) and the number of columns can differ per row.
 
-*   `container-fluid` when width is set to full width
-*   `container` when width is set to fixed width
+A row has the following properties:
 
-The second `div` represents a row and automatically gets the `row` class. The innermost `div` represents a column and automatically gets the weight class `col-md-<weight>`.
+* **Class** – allows you to specify one or more cascading style sheet (CSS) classes
 
-## Components
+* **Style** – allows you to specify additional CSS styling
 
-### Rows
+*  **Visible** – allows you to hide an element from a page
 
-A layout grid contains one or more rows. Each row can be styled with the Class and Style properties. Rows can be made conditionally visible through the property called 'Visible'.
+    ![Row Properties](attachments/container-widgets/row-properties.png)
 
-Each row in turn contains columns and the number of columns can differ per row.
+For more information on properties listed above, see [Properties Common for Widgets](common-widget-properties).
 
-### Columns
+### 2.2 Columns {#columns}
 
-A row in a layout grid contains one or more columns. Each column can be styled with the Class and Style properties. Additionally, the Weight property determines how wide the column is. The weights of all columns in a row must add up to 12\. Examples of valid rows are:
+A row in a layout grid can contain one or more columns.   
 
-*   one column with weight 12
-*   two columns, both with weight 6
-*   a column with weight 3 and a column with weight 9. 
+A column has the following properties:
 
-There is rarely a use case for more than four columns in a row.
+* **Class** – allows you to specify one or more cascading style sheet (CSS) classes (for more information on this property, see [Properties Common for Widgets](common-widget-properties))
+* **Style** – allows you to specify additional CSS styling (for more information on this property, see [Properties Common for Widgets](common-widget-properties))
+* **Weight** – determines how wide the column is, weight of all columns in a row must add up to 12. Examples of rows with valid column width are the following ones:
+  * One column with weight 12
+  * Two columns with weight 6 each
+  * One column with weight 3 and one column with weight 9
+ 
+In this example, you can see one column with weight 12 (which takes up the full width) and two columns with weight 6 each:
 
-## Common Properties
+![Columns Example](attachments/container-widgets/columns.png)
 
-{{% snippet file="refguide/Name+Property.md" %}}
+Starting with Studio Pro version [8.3.0](/releasenotes/studio-pro/8.3#830), the **Weight** property has been replaced by the following three properties, which allow for the easier creation of responsive layout grids:
 
-{{% snippet file="refguide/Class+Property.md" %}} 
+* **Desktop Size** – the size of the column for desktop devices
+* **Tablet Size** – the size of the column for tablet devices
+* **Phone Size** – the size of the column for phone devices
 
-{{% snippet file="refguide/Style+Property.md" %}}
+The desktop sizes of all columns in a row must add up to 12. This restriction does not apply to tablet or phone sizes, which enables wrapping columns on smaller devices. Here is an example configuration:
 
-## General Properties
+* 4 columns with size 3 on desktop
+* 4 columns with size 6 on tablet (creating a 2x2 grid)
+* 4 columns with size 12 on phone (showing all columns as a separate row)
 
-### Width
+#### 2.2.1 Adding a New Row or a Column
 
-This property determines the width of the layout grid. 
+To add a new row, do the following:
+
+1. Select an existing row in a layout grid.
+
+2.  Right-click and select **Insert row above** or **Insert row below**:
+
+    ![Adding a New Row](attachments/container-widgets/adding-row.png)
+
+3. Select a column layout (how many columns should be in a row and what weight columns should have).
+
+A new row is added to the layout grid.
+
+To add a new column, do the following:
+
+1. Select a column next to which you want to add a new one.
+2. Right-click and select **Add column left** or **Add column right**.
+
+A new column is added, the weight 1 is automatically set for it. 
+
+#### 2.2.2 Performing Other Actions on Rows
+
+In adding to inserting a new row, you can perform the following actions when right-clicking a row:
+
+* **Move up** – moves a row up in the layout grid, you can use a shortcut for it  <kbd>Ctrl</kbd> + <kbd>↑</kbd> 
+* **Move down** – moves a row down in the layout grid, you can use a shortcut for it  <kbd>Ctrl</kbd> + <kbd>↓</kbd> 
+
+#### 2.2.3 Performing Other Actions on Columns
+
+In adding to inserting a new column, you can perform the following actions when right-clicking a column:
+
+* **Move left** – moves a column left in the row, you can use a shortcut for it  <kbd>Ctrl</kbd> + <kbd>←</kbd> 
+* **Move right** – moves a column right in the row, you can use a shortcut for it  <kbd>Ctrl</kbd> + <kbd>→</kbd> 
+* **Row** – allows you to perform actions on the column's row 
+
+## 3 Properties
+
+An example of layout grid properties is represented in the image below:
+
+{{% image_container width="350" %}}![Layout Grid Properties](attachments/container-widgets/layout-grid-properties.png)
+{{% /image_container %}}
+
+Layout grid properties consist of the following sections:
+
+* [Common](#common)
+* Design Properties
+* [General](#general)
+* [Visibility](#visibility)
+
+### 3.1 Common Section {#common}
+
+{{% snippet file="refguide/common-section-link.md" %}}
+
+### 3.2 General Section {#general}
+
+#### 3.2.1 Width
+
+The **General** section contains the **Width** property, which determines the width of the layout grid. 
 
 | Value | Description |
 | --- | --- |
@@ -76,6 +132,12 @@ As the layout grid responds to the viewport width, and not to the width of its c
 
 {{% /alert %}}
 
-## Visibility Properties
+### 3.3 Visibility Section {#visibility}
 
-{{% snippet file="refguide/Visible+Property.md" %}}
+{{% snippet file="refguide/visibility-section-link.md" %}}
+
+## 4 Read More
+
+* [Page](page)
+* [Container Widgets](container-widgets)
+* [Properties Common for Widgets](common-widget-properties)

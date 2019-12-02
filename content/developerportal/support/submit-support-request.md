@@ -123,7 +123,7 @@ You can add large attachments such as project files to the request. Please note 
 
 ### 5.5 App Store Content Problems & Module, Widget & Theme Issues
 
-* Name of the App Store item
+* Name of the App Store component
 * Mendix version
 * Test project (for details, see [How To Export A Mendix Project Package](/refguide/export-project-package-dialog))
 * Reproducible steps

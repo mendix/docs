@@ -1,5 +1,5 @@
 ---
-title: "Deploy To The Cloud Dialog"
+title: "Deploy to the Cloud"
 parent: "dialogs"
 tags: ["studio pro"]
 ---

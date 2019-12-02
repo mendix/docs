@@ -46,14 +46,15 @@ The example location gives an example of a URL on which the operation can be rea
 
 An operation has different parameters:
 
- * [Path parameters](published-rest-path-parameters), which are part of the path of the URL
  * [Query parameters](published-rest-query-parameters), which are at the end of the URL in the form of `?name1=value1&name2=value2` (when a microflow parameter is not in the path and is not object, then it's considered a query parameter)
+ * [Path parameters](published-rest-path-parameters), which are part of the path of the URL
+ * A body parameter (optional), which is in the body of the request to the operation (the 'GET', 'HEAD', and 'DELETE' operations do not have a body parameter)
  * Header parameters, which come from the HTTP headers of the request
- * A body parameter (optional), which is in the body of the request to the operation (the 'GET', 'HEAD', and 'DELETE' operations do not have a body parameter). Only body parameters parameters can have a *List* or *Object* type.
+ * A form parameter (optional), which is a part of the body of a multipart form request
 
 A microflow for an operation takes these operation parameters as input.
 
-A microflow parameter that has the *list* or *object* type indicates a body parameter. You can specify an import mapping to convert the incoming JSON or XML. If the parameter is a file document or inherits from a file document, an import mapping is not needed.
+A microflow parameter that has the *List* or *Object* type indicates a body parameter. You can specify an import mapping to convert the incoming JSON or XML. A parameter of the *FileDocument* type (or that inherits from a *FileDocument*) is special: It can also be used for form parameters, and an import mapping is not needed.
 
 An operation microflow may also take an [HttpRequest](http-request-and-response-entities#http-request) parameter. You can add this parameter if you would like to inspect the requested URL and headers.
 

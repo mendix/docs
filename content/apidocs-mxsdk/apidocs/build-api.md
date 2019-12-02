@@ -231,7 +231,7 @@ Error codes
 
 ### 2.5 Start Building Deployment Package {#start-building-deployment-package}
 
-Start the process to build a deployment package, based on the team server project of a specific app that the authenticated user has access to as a regular user. This package can be found if you click **Details** on an app in the **Nodes** screen in the Mendix Platform. For a Sandbox, this will also trigger a deployment of the new package.
+Start the process to build a deployment package, based on the team server project of a specific app that the authenticated user has access to as a regular user. This package can be found if you click **Details** on an app in the **Nodes** screen in the Mendix Platform. For a Free App, this will also trigger a deployment of the new package.
 
 ```http
 HTTP Method: POST

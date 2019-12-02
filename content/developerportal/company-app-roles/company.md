@@ -11,9 +11,9 @@ tags: ["company","admin","Developer Portal", "Company Admin", "expiration settin
 You must be a Company Admin to access this page and these settings.
 {{% /alert %}}
 
-There are four tabs on the **Company** page with settings to manage:
+There are three tabs on the **Company** page with settings to manage:
 
-![](attachments/company-profile.png)
+![](attachments/company-profile-tab.png)
 
 ## 2 Company Profile Tab
 
@@ -21,11 +21,14 @@ You can edit various company details on the **Company Profile** tab, such as **C
 
 ## 3 Company Admins Tab
 
-On the **Company Admins** tab, you can add, edit, or remove a Company Admin.
+On the **Company Admins** tab, you can add, edit, or remove a Company Admin:
 
-For more information, see [How to Manage Company & App Roles](/developerportal/company-app-roles/manage-roles).
+![](attachments/company-admins-tab.png)
 
-## 4 Company Settings Tab{#company-settings}
+
+You can set the permissions here for each Company Admin. For more information, see [How to Manage Company & App Roles](/developerportal/company-app-roles/manage-roles).
+
+## 4 Company Settings Tab {#company-settings}
 
 On the **Company Settings** tab, you can change the password expiration settings (number of days). To do this, set the password expiration (in days) and click **Save**. Note that a value of zero or lower indicates that passwords never expire.
 
@@ -33,11 +36,7 @@ On the **Company Settings** tab, you can change the password expiration settings
 
 You can also view the company email domains. This is important for verifying the domains of Mendix users assigned to your company. If the domain list contains incorrect domains or does not contain some of your company's email domains, contact [Mendix Support](mailto:support@mendix.com).
 
-## 5 Launchpad Settings Tab
-
-On the **Launchpad Settings** tab, you can select the background image for the [Mendix launchpad](https://home.mendix.com/home/).
-
-## 6 Read More
+## 5 Read More
 
 * [Company Admin Settings](companyadmin-settings)
 * [Users](nodes)

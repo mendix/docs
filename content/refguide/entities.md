@@ -72,48 +72,40 @@ Define whether instances of this entity can be stored in the database. See [pers
 
 {{% /alert %}}
 
-## 3.5 System Members Properties
+### 3.5 System Members Properties
 
-### 3.5.1 Store 'createdDate'
+#### 3.5.1 Store 'createdDate'
 
-This property defines whether the entity contains the system attribute 'createdDate'. This is an attribute of type DateTime that stores the date and time when the object was created. The value of this attribute is automatically set by the server upon creating an object.
+This property defines whether the entity contains the system attribute 'createdDate'. This is an attribute of type **Date and time** that stores the date and time when the object was created. The value of this attribute is automatically set by the server upon creating an object.
 
 | Option | Description |
 | --- | --- |
 | True | Entity contains the system attribute 'createdDate'. |
-| False | Entity does not contain the system attribute 'createdDate'. |
+| False  *(default)* | Entity does not contain the system attribute 'createdDate'. |
 
-_Default value:_ False
+#### 3.5.2 Store 'changedDate'
 
-### 3.5.2 Store 'changedDate'
-
-This property defines whether the entity contains the system attribute 'changedDate'. This is an attribute of type DateTime that stores the most recent date and time when the object was changed.
+This property defines whether the entity contains the system attribute 'changedDate'. This is an attribute of type **Date and time** that stores the most recent date and time when the object was changed.
 
 | Option | Description |
 | --- | --- |
 | True | Entity contains the system attribute 'changedDate'. |
-| False | Entity does not contain the system attribute 'changedDate'. |
+| False  *(default)* | Entity does not contain the system attribute 'changedDate'. |
 
-_Default value:_ False
-
-### 3.5.3 Store 'owner'
+#### 3.5.3 Store 'owner'
 
 This property defines whether the entity has the system association 'owner'. This is an association to the system entity 'User' that (initially) stores a reference to the user that created the object. This association is automatically set by the server upon creating an object.
 
 | Option | Description |
 | --- | --- |
 | True | Entity has the system association 'owner'. |
-| False | Entity does not have the system association 'owner'. |
+| False  *(default)* | Entity does not have the system association 'owner'. |
 
-_Default value:_ False
-
-### 3.5.4 Store 'changedBy'
+#### 3.5.4 Store 'changedBy'
 
 This property defines whether the entity has the system association 'changedBy'. This is an association to the system entity 'User' that stores a reference to the user that most recently changed the object.
 
 | Option | Description |
 | --- | --- |
 | True | Entity has the system association 'changedBy'. |
-| False | Entity does not have the system association 'changedBy'. |
-
-_Default value:_ False
+| False *(default)*  | Entity does not have the system association 'changedBy'. |

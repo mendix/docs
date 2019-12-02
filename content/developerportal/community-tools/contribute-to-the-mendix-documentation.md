@@ -1,7 +1,6 @@
 ---
 title: "Contribute to the Documentation"
 category: "Community Tools"
-frontpage_featured: true
 menu_order: 20
 description: "Describes how to add and edit Mendix documentation as a Mendix community member."
 tags: ["documentation", "community"]
@@ -10,7 +9,7 @@ tags: ["documentation", "community"]
 
 ## 1 Introduction
 
-The documentation is open to the Mendix community, which means you can make changes and add to it in ways that you see necessary. Do you see a how-to that is inaccurate or a section of the Mendix Studio Pro Guide that needs to be updated? You can easily help us improve the documentation for the whole Mendix community!
+The documentation is open to the Mendix community, which means you can make changes and add to it in ways that you see necessary. Do you see a how-to that is inaccurate or a section of the *Studio Pro Guide* that needs to be updated? You can easily help us improve the documentation for the whole Mendix community!
 
 All the Mendix documentation is stored in a [GitHub repository](https://github.com/mendix/docs). With a GitHub account, you can edit all existing documentation. You can also write a new how-to on an awesome topic of your choice and submit it.
 
@@ -62,10 +61,10 @@ The sections below present the key steps in writing new documentation for Mendix
 
 ### 4.1 Using a Template
 
-To submit a new how-to or Mendix Studio Pro Guide page to the Mendix documentation, start with a Mendix documentation template:
+To submit a new how-to or *Studio Pro Guide* page to the Mendix documentation, start with a Mendix documentation template:
 
 * To get the how-to template, right-click this link and save the file locally: [How-to Template](https://raw.githubusercontent.com/mendix/docs/development/templates/the-how-to-template.md)
-* To get the Mendix Studio Pro Guide page template, right-click this link and save the file locally: [Mendix Studio Pro Guide Page Template](https://raw.githubusercontent.com/mendix/docs/development/templates/the-reference-guide-page-template.md)
+* To get the *Studio Pro Guide* page template, right-click this link and save the file locally: [Mendix Studio Pro Guide Page Template](https://raw.githubusercontent.com/mendix/docs/development/templates/the-reference-guide-page-template.md)
 
 ### 4.2 Guidelines & Conventions {#naming}
 
@@ -81,7 +80,7 @@ Follow these guidelines and conventions when writing:
 	* Do not use spaces or any other symbols in the file name (for example, `&`), as these will not be accepted
 	* Make sure the image files have names that make sense so it is easy to find them
 	* Save the image files in a sub-folder in the **attachments** folder for the category in which the document is located (this sub-folder should have the same name as the document file name you are working on)
-	* The following image file types are allowed: `.png` (preferred), `.jpg`,  `.gif`
+	* The following image extensions are allowed: *.png* (preferred), *.jpg*, *.gif*
 
 ### 4.3 Submitting Your Work
 

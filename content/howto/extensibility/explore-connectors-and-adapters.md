@@ -1,7 +1,7 @@
 ---
 title: "Explore Connectors & Adapters"
 category: "Extensibility"
-menu_order: 5
+menu_order: 70
 tags: ["extensibility", "connector", "adapter", "extensibility"]
 ---
 
@@ -9,13 +9,11 @@ tags: ["extensibility", "connector", "adapter", "extensibility"]
 
 One of the strengths of the Mendix Platform is that it is easy to connect your Mendix application with other systems. The [Mendix App Store](https://appstore.home.mendix.com/index3.html) is filled with all kinds of connectors and adapters. This document presents an overview of some of our connectors.
 
-## 2 Using These Connectors & Adapters
-
-This document does not go into usage details for these specific connectors and adapters. Documentation for using these App Store items is available on the **Documentation** tab on the App Store pages for the items themselves. This App Store documentation includes details on typical usage scenarios, installation, dependencies, and configuration.
+This document does not go into usage details for these specific connectors and adapters. Documentation for using this App Store content is available on the **Documentation** tab on the App Store pages for the items themselves. This App Store documentation includes details on typical usage scenarios, installation, dependencies, and configuration.
 
 For documentation on using more specific connectors and adapters for Siemens, SAP, and IBM, see the [Strategic Partners Guide](/partners/index).
 
-## 3 SAML
+## 2 SAML
 
 [![](attachments/18448690/SAML.png)](https://appstore.home.mendix.com/link/app/1174/)
 
@@ -23,15 +21,7 @@ This module allows you to use SAML to authenticate your users in your cloud appl
 
 [Click to download in the Mendix App Store.](https://appstore.home.mendix.com/link/app/1174/)
 
-## 4 Kerberos Single Sign-On
-
-[![](attachments/18448690/kerberos.png)](https://appstore.home.mendix.com/link/app/25/)
-
-This module enables the Kerberos-based single sign-on feature in your application. This is useful in Windows Active Directory environments, since this protocol supports Integrated Windows Authentication. As a result, users logged on to the Windows domain do not have to enter their credentials to log in to your application.
-
-[Click to download in the Mendix App Store.](https://appstore.home.mendix.com/link/app/25/)
-
-## 5 Excel Importer
+## 3 Excel Importer
 
 [![](attachments/18448690/excel_importer.png)](https://appstore.home.mendix.com/link/app/72/)
 
@@ -39,7 +29,7 @@ With this module, you can import all the Excel files you want!
 
 [Click to download in the Mendix App Store.](https://appstore.home.mendix.com/link/app/72/)
 
-## 6 Excel Exporter
+## 4 Excel Exporter
 
 [![](attachments/18448690/excel_exporter.png)](https://appstore.home.mendix.com/link/app/726/)
 
@@ -47,7 +37,7 @@ This module enables creating templates that export data from your Mendix applica
 
 [Click to download in the Mendix App Store.](https://appstore.home.mendix.com/link/app/726/)
 
-## 7 Google Maps
+## 5 Google Maps
 
 [![](attachments/18448690/google_maps.png)](https://appstore.home.mendix.com/link/app/48911/)
 
@@ -55,7 +45,7 @@ This widget enables bringing the world into your application via Google Maps!
 
 [Click to download in the Mendix App Store.](https://appstore.home.mendix.com/link/app/48911/)
 
-## 8 IMAP/POP3 Incoming Email
+## 6 IMAP/POP3 Incoming Email
 
 [![](attachments/18448690/imap.png)](https://appstore.home.mendix.com/link/app/1042/)
 
@@ -63,7 +53,7 @@ This module enables your project to retrieve emails from POP3, POP3S, IMAP, and 
 
 [Click to download in the Mendix App Store.](https://appstore.home.mendix.com/link/app/1042/)
 
-## 9 Google Analytics
+## 7 Google Analytics
 
 [![](attachments/18448690/google_analytics.png)](https://appstore.home.mendix.com/link/app/105/)
 
@@ -71,7 +61,7 @@ You can now add Google Analytics-tracking to your Mendix application! This widge
 
 [Click to download in the Mendix App Store.](https://appstore.home.mendix.com/link/app/105/)
 
-## 10 Amazon S3 Connector
+## 8 Amazon S3 Connector
 
 [![](attachments/18448690/19399077.png)](https://appstore.home.mendix.com/link/app/2074/Mendix/Amazon-S3-Connector)
 

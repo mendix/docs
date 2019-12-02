@@ -57,7 +57,7 @@ Widget categories are described in the table below:
 | [Text](page-editor-widgets-text)                     | Contains text display widgets.                               | [Text Widgets](page-editor-widgets-text)                     |
 | [Images](page-editor-widgets-images)                 | Contains image display widgets.                              | [Image Widgets](page-editor-widgets-images)                  |
 | [Buttons](page-editor-widgets-buttons)               | Contains a variety of buttons for placing on a page.         | [Button Widgets](page-editor-widgets-buttons)                |
-| [Menus](/refguide/menu-widgets)                      | Contains menu creation widgets. Currently, these widgets can be configured only in Studio Pro. | [Menu Widgets](/refguide/menu-widgets) in the *Mendix Studio Pro Guide* |
+| [Menus](/refguide/menu-widgets)                      | Contains menu creation widgets. Currently, these widgets can be configured only in Studio Pro. | [Menu Widgets](/refguide/menu-widgets) in the *Studio Pro Guide* |
 | Add-ons                                              | Contains all custom widgets previously installed in the app. If widgets cannot be matched to the App Store profile they will be shown in the add-ons. |                                                              |
 | Charts                                               | Contains different charts. This category consist of the App Store widgets. | section [4 Widgets by Origin](#widgets-by-origin)            |
 | Display                                              | Contains widgets which display changing elements on a page, for example a map, or a progress bar. This category consists of the App Store widgets. | section [4 Widgets by Origin](#widgets-by-origin)            |
@@ -75,7 +75,7 @@ Widgets in Studio can be divided by origin as shown in the table below:
 
 ## 6 Adding the App Store Widgets
 
-You can add App Store widgets to your app by downloading them directly in the **Widgets** tab in Studio. These widgets are a subset of all widgets available in the app store: you can only download the ones that are approved for use in Studio. You can also update them if an update is available.
+You can add App Store widgets to your app by downloading them directly in the **Widgets** tab in Studio. These widgets are a subset of all widgets available in the App Store: you can only download the ones that are approved for use in Studio. You can also update them if an update is available.
 
 To add an App Store widget, do the following:
 

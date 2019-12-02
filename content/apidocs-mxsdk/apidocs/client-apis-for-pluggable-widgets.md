@@ -28,11 +28,11 @@ In Mendix Studio and Mendix Studio Pro, every widget must have a name configured
 
 ### 3.2 Class
 
-A user can specify multiple classes for every widget. They can do this either directly by configuring a [class](/refguide/container#class) property in the Studios, or by using design properties. In web apps, the Mendix platform creates a *CSS* class string from the configuration and passes it as a `string` `class` prop to every client component. Unfortunately, React Native does not have similar support for classes. Therefore in native apps a component will not receive `class` prop, but a `style` prop instead.
+A user can specify multiple classes for every widget. They can do this either directly by configuring a [class](/refguide/common-widget-properties#class) property in the Studios, or by using design properties. In web apps, the Mendix platform creates a CSS class string from the configuration and passes it as a `string` `class` prop to every client component. Unfortunately, React Native does not have similar support for classes. Therefore in native apps a component will not receive `class` prop, but a `style` prop instead.
 
 ### 3.3 Style
 
-A user can specify a custom *CSS* for every widget on a web page by using the [style](/refguide/container#style) property. This styling is passed to a client component through an optional `style` prop of the type `CSSProperties`.
+A user can specify a custom CSS for every widget on a web page by using the [style](/refguide/common-widget-properties#style) property. This styling is passed to a client component through an optional `style` prop of the type `CSSProperties`.
 
 On native pages, the meaning of a `style` prop is very different. First of all, a user cannot specify the aforementioned inline styles for widgets on a native page. So a `style` prop is used to pass styles computed based on configured classes. A client component will receive an array of [style objects](/refguide/native-styling-refguide#2-style-objects).
 
@@ -44,7 +44,7 @@ If a widget uses a TabIndex prop [system property](property-types-pluggable-widg
 
 ### 4.1 ActionValue
 
-ActionValue is used to represent actions, like the [On click](/refguide/action-button#events-on-click) property of an action button. For any action except **Do nothing**, your component will receive a value adhering to the following interface. For **Do nothing** it will receive `undefined`. The `ActionValue` prop appears like this:
+ActionValue is used to represent actions, like the [On click](/refguide/on-click-event#on-click) property of an action button. For any action except **Do nothing**, your component will receive a value adhering to the following interface. For **Do nothing** it will receive `undefined`. The `ActionValue` prop appears like this:
 
 ```ts
 export interface ActionValue {
@@ -197,7 +197,7 @@ For react-native Mendix exposes a single version: 0.59.9. Mendix also includes t
 
 ### 6.2 Big.js
 
-The Mendix platform uses [big.js](https://www.npmjs.com/package/react-native) to represent and operate on numbers. Mendix 8.0 re-exports version 5.2.
+The Mendix platform uses [big.js](https://www.npmjs.com/package/big-js) to represent and operate on numbers. Mendix 8.0 re-exports version 5.2.
 
 ## 7 Read More
 

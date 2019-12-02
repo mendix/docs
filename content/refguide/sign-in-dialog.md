@@ -1,5 +1,5 @@
 ---
-title: "Sign In Dialog"
+title: "Sign In"
 parent: "dialogs"
 tags: ["studio pro"]
 ---

@@ -24,7 +24,7 @@ The security level defines how security is applied and which security settings n
 
 {{% alert type="warning" %}}
 
-Security levels 'Off' and 'Prototype / demo' are only allowed in development and test. For acceptance and production you need to use the 'Production' security level and configure all security settings accordingly.
+For all licensed Mendix Cloud nodes, you need to use the **Production** security level and configure all security settings accordingly. Security levels **Off** and **Prototype/demo** are only allowed when testing locally, when deploying a Free App, and in cloud environments outside the Mendix Cloud which are specifically set up with **Development mode**. 
 
 {{% /alert %}}{{% alert type="info" %}}
 

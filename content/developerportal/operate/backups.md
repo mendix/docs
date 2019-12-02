@@ -39,9 +39,9 @@ This will automatically generate a backup from your application data. See [Creat
 
 The sections below present details on uploading data in recent Mendix Cloud versions.
 
-#### 3.2.1 Uploading Data in Mendix Cloud V4
+#### 3.2.1 Uploading Data in Mendix Cloud v4
 
-In **Mendix Cloud V4**, the upload will create a new backup item in your backup list, which you can then restore via the regular restore process. This will ensure less downtime for your application. 
+In **Mendix Cloud v4**, the upload will create a new backup item in your backup list, which you can then restore via the regular restore process. This will ensure less downtime for your application. 
 
 Anything you can download you can also upload again, which means you can upload the following:
 
@@ -53,7 +53,7 @@ Anything you can download you can also upload again, which means you can upload 
 Uploading a **Files Only** archive will result in a backup item with an exclamation mark and a warning message. Since the archive does not contain a database, it is not possible to restore it. This functionality can be used to move file documents from one environment to another (especially useful if you have a lot of file documents). It will still be necessary to upload a **Database Only** archive to make sure the database can be restored.
 {{% /alert %}}
 
-#### 3.2.2 Uploading Data in Mendix Cloud V3
+#### 3.2.2 Uploading Data in Mendix Cloud v3
 
 {{% alert type="warning" %}}
 In **Mendix Cloud v3**, this will *not* add a backup to the backup list but directly update the application with the newly uploaded data.
@@ -89,7 +89,7 @@ You can choose the **destination** environment to which you want to restore the 
 If you restore a backup that was originally deployed with an older Mendix version, you will get a warning. You can still restore the backup, but you will have to deploy the older model later on. 
 
 {{% alert type="info" %}}
-In Mendix Cloud V4, if the restore takes too long, the system will show a timeout message. The restore will continue behind the scenes, and you can track the progress of the restore by inspecting your database free disk space graphs. While the database free disk space keeps decreasing, the restore is still in progress. If the database free disk space is constant, the restore has stopped and you can try to start your application. If this happens regularly, consider upgrading to a database plan with more CPU cores, so that the restore can be executed faster.
+In Mendix Cloud v4, if the restore takes too long, the system will show a timeout message. The restore will continue behind the scenes, and you can track the progress of the restore by inspecting your database free disk space graphs. While the database free disk space keeps decreasing, the restore is still in progress. If the database free disk space is constant, the restore has stopped and you can try to start your application. If this happens regularly, consider upgrading to a database plan with more CPU cores, so that the restore can be executed faster.
 {{% /alert %}}
 
 See [Restore a Backup](restore-backup) for more information.
@@ -100,20 +100,20 @@ When you click **Details**, you can view the following details:
 
 Backup Details | Cloud Version | Description
 :---|:---|:---
-**Origin of Environment** | V3 | From which environment this backup was made
-**Status** | V3 & V4 | The status of the backup. Backups can have the status of **Queued**, **Running**, **Failed**, and **Completed**
-**Created by**/ <br /> **Type** | V3 <br /> V4 | The name of the person who created the backup. Automated system backups are named **Nightly**
-**ID**/ <br /> **Snapshot id** | V3 <br /> V4 | Unique identifier for the backup *snapshot*
-**Date**/ <br /> **Created on** | V3 <br /> V4 | The creation date of the backup
-**Expires on** | V3 & V4 | The date on which the backup will be removed from the system
-**Mendix version** | V3 & V4 | The version of the deployment package used during backup creation
-**Comment** | V3 & V4 | A specific comment added to the backup
+**Origin of Environment** | v3 | From which environment this backup was made
+**Status** | v3 & v4 | The status of the backup. Backups can have the status of **Queued**, **Running**, **Failed**, and **Completed**
+**Created by**/ <br /> **Type** | v3 <br /> v4 | The name of the person who created the backup. Automated system backups are named **Nightly**
+**ID**/ <br /> **Snapshot id** | v3 <br /> v4 | Unique identifier for the backup *snapshot*
+**Date**/ <br /> **Created on** | v3 <br /> v4 | The creation date of the backup
+**Expires on** | v3 & v4 | The date on which the backup will be removed from the system
+**Mendix version** | v3 & v4 | The version of the deployment package used during backup creation
+**Comment** | v3 & v4 | A specific comment added to the backup
 
 At the bottom of the screen, you can click **Delete** to delete this particular backup.
 
 ## 4 Known issues
 
-**Mendix Cloud V4** backups that contain a very large number of files (that is, greater than about 50,000) will experience slow performance for _all_ backup operations (create, download, restore, and upload). This is because of the inherent overhead associated with each file; as the number of files increases, this overhead becomes quite significant, and can be in the order of hours.
+**Mendix Cloud v4** backups that contain a very large number of files (that is, greater than about 50,000) will experience slow performance for _all_ backup operations (create, download, restore, and upload). This is because of the inherent overhead associated with each file; as the number of files increases, this overhead becomes quite significant, and can be in the order of hours.
 
 ## 5 Read More
 

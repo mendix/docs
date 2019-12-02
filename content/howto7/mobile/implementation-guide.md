@@ -74,7 +74,7 @@ Please do not remove the button with the caption **Device Registration reference
 
 The PushNotifications module contains a microflow named **AfterStartup_PushNotifications** that will start the APNs connector for you. Call this microflow from your **AfterStartup** microflow.
 
-If your project uses Mendix SSO, most likely the **AppCloudServices.StartAppCloudServices** microflow is set to execute after startup (for details, refer to [Integrate Your App with Mendix SSO](/developerportal/deploy/integrate-with-mendix-sso) in the Mendix Reference Guide). We suggest that you change your startup microflow to a new microflow, from which you will call both after the startup microflows.
+If your project uses Mendix SSO, most likely the **AppCloudServices.StartAppCloudServices** microflow is set to execute after startup (for details, refer to [SSO Using AppCloudServices for Mendix Single Sign-On](/developerportal/deploy/integrate-with-mendix-sso) in the Mendix Reference Guide). We suggest that you change your startup microflow to a new microflow, from which you will call both after the startup microflows.
 
 <iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/02c590e5-f8bf-4f0e-90d6-3719390ee863/onstartupacsandpushnotifications?embed=true" allowfullscreen=""></iframe>
 
@@ -102,11 +102,11 @@ On the **User roles** tab of the **Project Security** dialog box, include the fo
 
 ## 9 Deploying Your App
 
-At this point, all the implementation steps are done and you can deploy your application to the Mendix Cloud. If you are using a free app, simply click **Run**.
+At this point, all the implementation steps are done and you can deploy your application to the Mendix Cloud. If you are using a Free App, simply click **Run**.
 
 {{% alert type="warning" %}}
 
-Make sure that the `Encryption.EncryptionKey` constant has a value before you start the application. If the value is not set, you will get a NullPointerException when you try to send a notification to APNs. If you are using a free app, set a default value for the constant in the model. Otherwise, configure the constant value in the Mendix Developer Portal.
+Make sure that the `Encryption.EncryptionKey` constant has a value before you start the application. If the value is not set, you will get a NullPointerException when you try to send a notification to APNs. If you are using a Free App, set a default value for the constant in the model. Otherwise, configure the constant value in the Mendix Developer Portal.
 
 {{% /alert %}}
 

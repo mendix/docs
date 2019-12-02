@@ -1,7 +1,7 @@
 ---
 title: "Microflow Call"
 parent: "action-call-activities"
-menu_order: 30
+menu_order: 1
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -28,7 +28,9 @@ The microflow that is called by this activity.
 
 ### 2.2 Arguments
 
-For each parameter of the microflow you have to supply an argument of the same type. The values of the arguments are expressed using [expressions](expressions).
+For each parameter of the microflow, you have to supply an argument of the same type. The values of the arguments are expressed using [expressions](expressions). There is a difference in the way argument values are passed to a sub-microflow:
+  * Lists and objects are passed as references (meaning, if the list/object is changed in a sub-microflow, the original list/object is altered)
+  * Primitive types (strings, numbers, etc.) are passed as values (meaning, they are immutable, and not changeable via sub-microflows)
 
 ## 3 Output Properties
 

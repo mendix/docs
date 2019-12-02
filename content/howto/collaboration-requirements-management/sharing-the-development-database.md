@@ -90,7 +90,7 @@ To import a data snapshot into the model, the app project has to be updated sinc
 
     ![](attachments/18448637/18580419.png)
 
-2.  To implement the data snapshot, the database has to be extracted from a *zip* file to the deployment directory
+2.  To implement the data snapshot, the database has to be extracted from a ZIP file to the deployment directory
 
     ![](attachments/18448637/18580417.png)
 

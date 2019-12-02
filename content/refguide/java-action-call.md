@@ -1,13 +1,13 @@
 ---
 title: "Java Action Call"
 parent: "action-call-activities"
-menu_order: 40
+menu_order: 3
 tags: ["studio pro", "Java"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 {{% alert type="warning" %}}
-This activity can only be used in **Microflows**.
+This activity can only be used in microflows.
 {{% /alert %}}
 
 ## 1 Introduction

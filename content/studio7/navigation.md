@@ -18,7 +18,7 @@ Open the **Navigation Document** by clicking the corresponding icon in the left 
 
 {{% alert type="info" %}}
 
-In Studio, you are viewing and editing a Responsive type of the navigation profile, while there are more types of profiles in Studio Pro. For more information on profiles in Studio Pro, see section [2 Profiles](/refguide/navigation#profiles) in *Navigation in Mendix 7.4 & Above* in the *Mendix Studio Pro Guide*. 
+In Studio, you are viewing and editing a Responsive type of the navigation profile, while there are more types of profiles in Studio Pro. For more information on profiles in Studio Pro, see section [2 Profiles](/refguide/navigation#profiles) in *Navigation in Mendix 7.4 & Above* in the *Studio Pro Guide*. 
 
 {{% /alert %}}
 
@@ -61,7 +61,7 @@ The properties that can be configured in the **General** section, are described 
 | --------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | Caption         | Fill out the name of the menu item here.                     | Nothing                                                      |
 | Icon            | Set the icon for the menu item here.                         | Nothing                                                      |
-| Set As Homepage | Allows you to set the menu icon as a homepage, i.e. the first page that the user sees when opening your app. | **On Click Action**, available only when a page or a microflow is selected as an **On Click Action**. For more information, see [Events Section](#events-section-navigation). |
+| Set As Homepage | Allows you to set the menu icon as a homepage, as in, the first page that the user sees when opening your app. | **On Click Action**, available only when a page or a microflow is selected as an **On Click Action**. For more information, see [Events Section](#events-section-navigation). |
 
 ## 3 Creating a Menu Item
 

@@ -24,15 +24,14 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 To create the example project you will use in the next sections for publishing your REST service, follow these steps:
 
-1. Create a new project in .
-2. Rename the **MyFirstModule** module to **RESTExample**.
-3. Open the domain model of the RESTExample module.
-4.  Create entities with an association like this:
+1. Create a new app project and rename the **MyFirstModule** module to **RESTExample**.
+2. Open the domain model of the RESTExample module.
+3.  Create entities with an association like this:
 
 	![](attachments/publish-rest-service/domainmodel.png)
 
-5. You need pages for entering order data, so create an overview page for the **Order** entity In the RESTExample module.
-6. Create a **NewEdit** page for the orders, then add a data grid to the **Order_NewEdit** page that displays the **OrderItems** over an association.
+4. You need pages for entering order data, so create an overview page for the **Order** entity In the RESTExample module.
+5. Create a **NewEdit** page for the orders, then add a data grid to the **Order_NewEdit** page that displays the **OrderItems** over an association.
 
 Your page should now look like this:
 
@@ -135,7 +134,7 @@ To be able to use the data from your model in the REST service, you need to crea
 
 To view and try out your app, follow these steps:
 
-1. Run your app and open it in the browser via this URL: http://localhost:8080/rest-doc/.
+1. Run your app and open it in the browser via this URL: `http://localhost:8080/rest-doc/`.
 2.  You will see a page with the documentation of all your published REST services:
 
 	![](attachments/publish-rest-service/RESTTestOverview.png)
@@ -203,6 +202,12 @@ To add the error handling for those situations when the OrderID parameter is fil
 
 3. Test your new error responses as you did with the app in section [4.3 Viewing the App](#viewing).
 
-## 6 Read More
+## 6 Example
+
+**How to publish REST in Studio Pro 8**
+
+{{% youtube Ff_P84NOcZk %}}
+
+## 7 Read More
 
 * For more information on creating published REST services in Mendix (including GET, POST, and DELETE operations), see [Published REST Services](/refguide/published-rest-services)

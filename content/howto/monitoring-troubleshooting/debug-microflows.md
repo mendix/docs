@@ -68,7 +68,7 @@ Breakpoints are points in a microflow where the application will halt execution.
 
     ![](attachments/18448571/18580010.png)
 
-4. Open the **Debugger** pane from the **View** menu:
+4.  Open the **Debugger** pane from the **View** menu:
 
     ![](attachments/18448571/18580009.png)
 
@@ -76,12 +76,14 @@ Breakpoints are points in a microflow where the application will halt execution.
 
     ![](attachments/18448571/18580008.png)
     
-5. You have the following options on this pane:  
+5. You have the following options on this pane:
     * Click **Step into** or **Step over** to move to the next step in the microflow (note that the difference between **Step into** and **Step over** is only noticeable if you run into a call microflow activity or a loop)
         * **Step into** means that the debugger steps into the sub microflow or loop
         * **Step over** moves the debugger to the next step in the same microflow
     * Click **Step out** to instruct the debugger to leave the sub microflow or loop (this is basically the opposite of **Step Into**)
     * Click **Continue** to instruct the debugger to continue until it reaches another breakpoint
+    
+For details on available shortcut keys, see the [Debugger Shortcut Keys](/refguide/studio-pro-overview#debugger-shortcuts) section of *Studio Pro Overview*.
 
 ## 6 Variables Viewer
 
@@ -121,6 +123,5 @@ To use breakpoint conditions, follow these steps:
 * [Debug Java Actions Remotely](debug-java-actions-remotely)
 * [Log Levels](log-levels)
 * [Debug Java Actions](debug-java-actions)
-* [Handle Common Mendix SSO Errors](handle-common-mendix-sso-errors)
 * [Debug Microflows Remotely](debug-microflows-remotely)
 * [Common Properties](/refguide/microflow-element-common-properties)

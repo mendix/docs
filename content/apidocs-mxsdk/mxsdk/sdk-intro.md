@@ -68,6 +68,6 @@ For more information, see [Use Case Examples](sdk-use-cases#modifying).
 
 ## 4 Openness
 
-The Mendix Model SDK provides you with a whole new way of interacting with your app. Through this API, you get full access to all the aspects of your app model, enabling you to both read from and write to it. We have opened up our metamodel, which is a detailed description of how all Mendix app models are structured.
+The Mendix Model SDK provides you with a whole new way of interacting with your app. Through this API, you get full access to all the aspects of your app model, enabling you to both read from and write to it. We have opened up our Mendix Metamodel, which is a detailed description of how all Mendix app models are structured.
 
 To explore the inner-workings of Mendix apps, see the [Mendix Platform SDK Reference Documentation](sdk-refguide). 

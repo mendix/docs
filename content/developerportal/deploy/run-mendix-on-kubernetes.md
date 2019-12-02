@@ -7,11 +7,11 @@ tags: ["kubernetes", "cloud", "deployment"]
 
 ## 1 Introduction
 
-This how-to describes what is needed to deploy your Mendix app to [Kubernetes](https://kubernetes.io/) following Mendix best practices. Kubernetes is the standard Docker orchistration platfrom supported by Mendix. For details on supported version of Kubernetes see [Mendix System Requirements](../../refguide/system-requirements). 
+This how-to describes what is needed to deploy your Mendix app to [Kubernetes](https://kubernetes.io/) following Mendix best practices. Kubernetes is the standard Docker orchestration platfrom supported by Mendix. For details on supported version of Kubernetes see [Mendix System Requirements](/refguide/system-requirements). 
 
-A Mendix Application needs as a minumum a database to run. In this example we provision a PostgresSQL database within the Kubernetes cluster. In production scenario's the database is most of the time provided as a service by the cloud provider. Like AWS RDS, or Azure SQL. For supported database see [Mendix System Requirements](../../refguide/system-requirements). 
+A Mendix Application needs, as a minumum, a database to run. In this example you provision a PostgresSQL database within the Kubernetes cluster. In production scenarios, the database is usually provided as a service by the cloud provider, like AWS RDS or Azure SQL. For supported databases see [Mendix System Requirements](/refguide/system-requirements). 
 
-In case the application makes use of FileDocument or FileImage a storage service needs to be attached as well. See [Mendix System Requirements](../../refguide/system-requirements) for supported external storage services. In this how-to we use a node-bound storage volume as an example. See also chapter [Architecture overview](#3-Architecture-Overview).   
+If the application makes use of FileDocument or FileImage entities, a storage service needs to be attached as well. See [Mendix System Requirements](refguide/system-requirements) for supported external storage services. In this how-to you use a node-bound storage volume as an example. For more information, see [Architecture overview](#architecture), below.
 
 This how-to uses [Minikube](https://kubernetes.io/docs/getting-started-guides/minikube/), which is a way to run Kubernetes locally. Many of the operations you perform on Minikube are the same as those on a hosted environment, and it provides a low-level entry to Kubernetes. For more information, see [Picking the Right Solution](https://v1-13.docs.kubernetes.io/docs/setup/pick-right-solution/).
 
@@ -40,7 +40,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 The how-to is based on working with a Unix-like system. The commands for Windows may be slightly different.
 
-## 3 Architecture Overview
+## 3 Architecture Overview{#architecture}
 
 This section explains the components needed for Mendix app deployment. This architecture overview shows all the components in the deployment:
 

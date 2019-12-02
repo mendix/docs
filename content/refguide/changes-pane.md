@@ -12,13 +12,17 @@ For version control enabled projects (projects with Team Server or other SVN ser
 
 This pane consists of the following:
 
-* The [top bar](#top-bar) contains various buttons, such as **Back**, **Go to**, **Tasks**, etc. 
+* The [top bar](#top-bar) contains various buttons, such as **Back**, **Go to**, **Tasks**. 
 * The [top level](top-level) shows you a list of documents that were changed, for example, a page where a widget was deleted
 * The [zoomed-in level](#zommed-in-level) of the pane is split into two grids, with elements in the left grid and changed properties of the selected element in the right grid
 
 ## 2 Top Bar {#top-bar}
 
-The top bar of the **Changes** pane consists of the following buttons:
+The top bar of the **Changes** pane consists of various buttons:
+
+![Top Bar of the Changes Pane](attachments/changes-pane/changes-top-bar.png)
+
+Buttons allow you to perform the following actions:
 
 * **Back** – takes you back to the top level if you were on the zoomed-in level
 
@@ -26,19 +30,20 @@ The top bar of the **Changes** pane consists of the following buttons:
 
 * **Tasks** – allows you to perform specific actions such as reverting the change to the latest commit, or solving conflicts
 
-* **Update** – retrieves latest changes from the repository, for more information on the update concept, see the [Update](version-control#update) section in *Version Control* 
+* **Update** – retrieves latest changes from the repository, (for more information on the update concept, see the [Update](version-control#update) section in *Version Control*) 
 
-* **Commit** – commits your changes to the repository and starts a new revision; for more information on the commit concept, see the [Commit](version-control#commit) section in *Version Control*
+* **Commit** – commits your changes to the repository and starts a new revision (for more information on the commit concept, see the [Commit](version-control#commit) section in *Version Control*)
 
-* **History** – opens the **History** dialog window that shows the changes made on the current development line of the project; for more information on history, see [History](history-dialog)
+* **History** – opens the **History** dialog window that shows the changes made on the current development line of the project (for more information on history, see [History](history-dialog))
 
-* **Conflicts** – available only for a zoomed-in level, shows details of a conflict
+* **Show Conflicts** – available only for a zoomed-in level of a conflicted document, shows details of a conflict
 
-* **Changes in mine** – available only for a zoomed-in level of a conflicted document, shows changes to a document on a current development line (for more information on how to solve conflicts, see the [Dealing With Conflicts](using-version-control-in-studio-pro#conflicts) section in *Using Version Control in Studio Pro*)
+* **Show Changes in mine** – available only for a zoomed-in level of a conflicted document, shows changes to a document on a current development line (for more information on how to solve conflicts, see the [Dealing With Conflicts](using-version-control-in-studio-pro#conflicts) section in *Using Version Control in Studio Pro*)
 
-* **Changes in theirs** – available only for a zoomed-in level of a conflicted document, shows incoming changes to a document from another development line (for more information on how to solve conflicts, see the [Dealing With Conflicts](using-version-control-in-studio-pro#conflicts) section in *Using Version Control in Studio Pro*)
+* **Show Changes in theirs** – available only for a zoomed-in level of a conflicted document, shows incoming changes to a document from another development line (for more information on how to solve conflicts, see the [Dealing With Conflicts](using-version-control-in-studio-pro#conflicts) section in *Using Version Control in Studio Pro*)
 
-	![Top Bar of the Changes Pane](attachments/changes-pane/changes-top-bar.png)
+* **Show purely visual changes** – shows visual changes, such as dragging an entity to a new location in the domain model
+
 
 ## 3 Top Level {#top-level}
 
@@ -53,13 +58,19 @@ The grid contains information on the following items:
   * **Modified** – changes to an existing document were made, such as adding or deleting elements or changing element properties; indicated with a yellow circle
   * **Deleted** – a document was deleted; indicated with a red circle with a minus
   * **Conflicted** – a document contains conflicting changes; indicated with a red circle with an exclamation mark
-* **Item** – indicates the document that contains changes
+* **Item** – indicates a name of the changes document
 * **Module** – a module where the changed document is
 * **Details** – can contain details on the status, for example, when you have conflicting changes 
 
 ## 4 Zoomed-In Level {#zoomed-in-level}
 
-You can zoom into a changed document, double-clicking a line in the grid on the top level or clicking the **Go to** button. 
+You can zoom into a changed document, by doing one of the following:
+
+* Double-click a line in the grid on the top level 
+* Click the **Go to** button
+* Press <kbd>Enter</kbd>
+
+To exit the zoomed-in level, click the **Back** button or press <kbd>Backspace</kbd>.
 
 The zoomed-in level is split into two grids, with elements on the left and changed properties on the right. If no properties were changed for an element, for example, when an element was *added* or *deleted*, the right grid will be empty:
 
@@ -91,3 +102,4 @@ The grid on the right can contain the following columns:
 ##  5 Read More
 
 * [Studio Pro Overview](studio-pro-overview)
+* [Version Control](version-control) 

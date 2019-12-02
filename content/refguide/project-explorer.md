@@ -21,7 +21,7 @@ The **Project Explorer** consists of the following:
 
 In the **Project Explorer**, you can do the following:
 
-* **Filter** - enter the name of a module, folder, or document into the **Filter** field to filter documents of the project and highlight entered text within the **Project Explorer**. When filtering by a module or folder name, all content of matching modules and/or folders is displayed. In addition, while focused on the **Filter** field, it is possible to do the following:
+* **Filter** – enter the name of a module, folder, or document into the **Filter** field to filter documents of the project and highlight entered text within the **Project Explorer**. When filtering by a module or folder name, all content of matching modules and/or folders is displayed. In addition, while focused on the **Filter** field, it is possible to do the following:
   * Navigate the **Project Explorer** using <kbd>↑</kbd> and <kbd>↓</kbd> keys 
   * Expand a folder or open a document by pressing <kbd>Enter</kbd> 
   * Clear the filter query by pressing <kbd>Esc</kbd>

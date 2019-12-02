@@ -6,6 +6,12 @@ parent: "model-sdk"
 
 These are the release notes for the [Model SDK](/apidocs-mxsdk/mxsdk/) version 4.
 
+## 4.27.1 {#4271}
+
+**Release date: November 29th, 2019**
+
+* We restored the original behavior of `exportMpk` (for providing the raw response body when `outFilePath` is empty), which had beeen changed in [4.26.0](#426).
+
 ## 4.27.0 {#427}
 
 **Release date: November 22nd, 2019**

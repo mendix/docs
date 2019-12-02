@@ -8,58 +8,74 @@ draft: true
 
 ## 1 Introduction
 
-The [Grid Selector](https://appstore.home.mendix.com/link/app/266/) creates a grid, consisting of a list of objects to the left and one at the top. The checkboxes can then be used to set the reference connecting the two. It lets you quickly set a lot of references over/for a lot of objects
+The [Grid Selector](https://appstore.home.mendix.com/link/app/266/) creates a grid that consists of a list of objects to the left and one at the top. The check boxes can be used to set the reference connecting the objects. The widget thus enables quickly setting a lot of references over or for a lot of objects.
 
-Supports both references (radiobuttons) and referencesets (checkboxes).
-Contributing
+### 1.1 Features
 
-For more information on contributing to this repository visit Contributing to a GitHub repository!
-Features
+* Supports both references (radio buttons) and reference sets (check boxes)
+* An on-change action that is triggered for each change
+* Constraints for both entities
+* Paging on the left entities
+* Keyboard support with the arrow keys for navigating and the spacebar for clearing a selection
 
-Has an on change that is triggered for each change Constraints for both entities Paging on the left entities Keyboard support with the arrow keys and spacebar to (de)select
-Configuration
+## 2 Configuration
 
-The onchange microflow should be set up to commit the object if a commit is required. The widget does not commit anything itself. Use the Radiobutton version for setting references and the Checkbox version for setting referencesets.
-Properties
-Onchange microfow
+The on-change microflow should be set up to commit the object if a commit is required. The widget does not commit anything itself. Use the radio-button version for setting references and the check-box version for setting reference sets.
 
-The microflow that is executed when a checkbox or radiobutton is (de)selected. Receives the left entity as input parameter.
-Items per page
+## 3 Properties
+
+### 3.1 On Change Microfow
+
+This is the microflow that is executed when a check box or radio button is cleared. This receives the left entity as an input parameter.
+
+### 3.2 Items per Page
 
 Amount of items that should be shown on the left for paging. You can use 0 to disable paging and show all objects.
-Read-only
+
+### 3.3 Read-Only
 
 Sets the entire grid to a read-only view.
-Left entity
+
+### 3.4 Left Entity
 
 The entity of the objects that will be displayed on the left side of the grid.
-Left constraint
+
+### 3.5 Left Constraint
 
 The constraint to apply to these objects.
-Left display attribute
+
+### 3.6 Left Display Attribute
 
 The attribute that is displayed for each object.
-Left sort attribute
+
+### 3.7 Left Sort Attribute
 
 The attribute that the objects are sorted on.
-Left sort order
+
+### 3.8 Left Sort Order
 
 The order the objects are sorted on.
-Width in percentage
+
+### 3.9 Width in Percentage
 
 You can set the width of the first left column here. Using 0 makes it resizes with the other columns.
-Top entity
+
+### 3.10 Top Entity
 
 The reference or reference set that is used.
-Top constraint
+
+### 3.11 Top Constraint
 
 The constraint to apply to these objects.
-Top display attribute
+
+### 3.12 Top Display Attribute
 
 The attribute that is displayed for each object.
-Top sort attribute
+
+### 3.13 Top Sort Attribute
 
 The attribute that the objects are sorted on.
-Top sort order
+
+### 3.14 Top Sort Order
 
 The order the objects are sorted on.

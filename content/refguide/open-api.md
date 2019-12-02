@@ -8,13 +8,13 @@ tags: ["swagger", "swagger.json", "open api 2.0", "documentation", "paths", "ope
 
 ## 1 Introduction 
 
-Every [published REST service](published-rest-service) is automatically documented. The system generates a *swagger.json* file that conforms to the [OpenAPI 2.0 specification](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md) (formerly known as the "swagger specification"). This file can be [saved from Studio Pro](published-rest-service#export-swagger-json) or downloaded from `/rest-doc/servicename/swagger.json`.
+Every [published REST service](published-rest-service) is automatically documented. The system generates a *swagger.json* file that conforms to the [OpenAPI 2.0 specification](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md) (formerly known as the "swagger specification"). This file can be [saved from Studio Pro](published-rest-service#export-swagger-json) or downloaded from */rest-doc/servicename/swagger.json*.
 
 If you need to communicate with the service from another app, you can use the *swagger.json* file to generate an API in many different systems, including Microsoft Visual Studio, React, Angular, and Java. This makes it easy to communicate between your different apps.
 
 Many of the popular API tools support OpenAPI 2.0, including [SoapUI](https://www.soapui.org/), [Postman](https://www.getpostman.com/), and [Swagger UI](https://swagger.io/swagger-ui/) (for a longer list of supported tools, see [swagger.io/commercial-tools](https://swagger.io/commercial-tools/)). This means that you can easily test your published service from any of these tools.
 
-A technical description is presented below of which parts of the `swagger.json` file are generated.
+A technical description is presented below of which parts of the *swagger.json* file are generated.
 
 ## 2 Schema
 

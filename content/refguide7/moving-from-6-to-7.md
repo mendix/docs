@@ -58,7 +58,7 @@ Verify that during the migration steps listed above, no modules are replaced by 
 
 ## 4 Breaking Changes
 
-### 4.1 Stateless Runtime
+### 4.1 Stateless Runtime {#stateless}
 
 An earlier version of Mendix enabled applications to move sessions to the database and files to an external file storage facility (for example, S3 or Azure Blob Storage). In Mendix 7, the server object state has been moved to the client, which means that the server is now completely stateless and can be scaled horizontally at will.
 

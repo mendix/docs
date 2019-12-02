@@ -32,15 +32,13 @@ The entity of which you want to create an object.
 | --- | --- |
 | Yes with event handlers | The object is saved in the database and the [event handlers](event-handlers) are triggered. |
 | Yes without event handlers | The object is saved in the database, but the [event handlers](event-handlers) are not triggered. |
-| No | The object is changed without being saved in the database. |
+| No *(default)*  | The object is changed without being saved in the database. |
 
 {{% alert type="warning" %}}
 
 Nanoflows do not support committing changes without events. Committing while running in an online app sends a commit request to the Mendix Runtime and runs the events. If a Create object action is used in an offline app, the changes are committed to the offline database.
 
 {{% /alert %}}
-
-_Default value:_ No
 
 ### 2.3 Refresh in Client
 
@@ -52,7 +50,7 @@ When inside a [nanoflow](nanoflows), the Create object action reloads [data sour
 
 {{% /alert %}}
 
-_Default value_: No
+Default: *No*
 
 ### 2.3 Initialize Members
 

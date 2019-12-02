@@ -1,5 +1,5 @@
 ---
-title: "Make Widgets with XML"
+title: "Build Widgets with XML"
 parent: "widget-development"
 tags: ["xml", "widget"]
 ---
@@ -57,7 +57,7 @@ Every property element contains at least the following 3 child elements.
 | --- | --- |
 | Caption | This element is used to add the name of the property. This is how it will show up in the Properties list in Mendix Studio Pro. |
 | Category | This element defines in what category this property will be shown in the Properties list in Mendix Studio Pro. Common categories are “Behavior”, “Appearance” and “Data source”. |
-| Description | This element is used to add a useful description of the property, so the end user knows what it’s for. |
+| Description | This element is used to add a useful description of the property, so the end-user knows what it’s for. |
 
 ### 4.2 Attributes
 
@@ -110,10 +110,10 @@ An attribute property has an extra required child element: a list of attributeTy
 *   AutoNumber
 *   Binary
 *   Boolean
-*   DateTime
+*   Date and time
 *   Decimal
-*   Enum
-*   HashString
+*   Enumeration
+*   Hashed String
 *   Integer
 *   Long
 *   String
@@ -246,7 +246,7 @@ Possible return types are shown below:
 *   Void
 *   Boolean
 *   Integer
-*   DateTime
+*   Date and time
 *   String
 *   Object
 
@@ -274,7 +274,7 @@ Possible return types:
 *   Void
 *   Boolean
 *   Integer
-*   DateTime
+*   Date and time
 *   String
 *   Object
 

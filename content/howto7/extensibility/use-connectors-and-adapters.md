@@ -49,23 +49,7 @@ This module allows you to use SAML to authenticate your users in your cloud appl
 
 [Click to download in the Mendix App Store.](https://appstore.home.mendix.com/link/app/1174/Mendix/SAML)
 
-## 7 Kerberos Single Sign-On
-
-[![](attachments/18448690/kerberos.png)](https://appstore.home.mendix.com/link/app/25/Mendix/Kerberos-Single-Sign-On)
-
-This module enables the Kerberos-based single sign-on feature in your application. This is useful in Windows Active Directory environments, since this protocol supports Integrated Windows Authentication. As a result, users logged on to the Windows domain do not have to enter their credentials to log in to your application.
-
-[Click to download in the Mendix App Store.](https://appstore.home.mendix.com/link/app/25/Mendix/Kerberos-Single-Sign-On)
-
-## 8 LDAP
-
-[![](attachments/18448690/ldap.png)](https://appstore.home.mendix.com/link/app/1218/Mendix/LDAP-Provisioning-Agent)
-
-The LDAP provisioning agent is used to synchronize the users available in your directory server to the Mendix Platform using the LDAP protocol.
-
-[Click to download in the Mendix App Store.](https://appstore.home.mendix.com/link/app/1218/Mendix/LDAP-Provisioning-Agent)
-
-## 9 Excel Importer
+## 7 Excel Importer
 
 [![](attachments/18448690/excel_importer.png)](https://appstore.home.mendix.com/link/app/72/Mendix/Excel-importer)
 
@@ -73,7 +57,7 @@ With this module, you can import all the Excel files you want!
 
 [Click to download in the Mendix App Store.](https://appstore.home.mendix.com/link/app/72/Mendix/Excel-importer)
 
-## 10 Excel Exporter
+## 8 Excel Exporter
 
 [![](attachments/18448690/excel_exporter.png)](https://appstore.home.mendix.com/link/app/726/Mendix/Excel-exporter)
 
@@ -81,7 +65,7 @@ This module enables creating templates that export data from your Mendix applica
 
 [Click to download in the Mendix App Store.](https://appstore.home.mendix.com/link/app/726/Mendix/Excel-exporter)
 
-## 11 Lync
+## 9 Lync
 
 [![](attachments/18448690/lync.png)](https://appstore.home.mendix.com/link/app/1313/Mendix/Lync)
 
@@ -89,15 +73,7 @@ This module enables launching a new (or existing) Lync conversation directly fro
 
 [Click to download in the Mendix App Store.](https://appstore.home.mendix.com/link/app/1313/Mendix/Lync)
 
-## 12 Google Maps
-
-[![](attachments/18448690/google_maps.png)](https://appstore.home.mendix.com/link/app/39/Mendix/Google-Maps-Widget)
-
-This module enables bringing the world into your application with the Google Maps widget!
-
-[Click to download in the Mendix App Store.](https://appstore.home.mendix.com/link/app/39/Mendix/Google-Maps-Widget)
-
-## 13 IMAP/POP3 incoming email
+## 10 IMAP/POP3 incoming email
 
 [![](attachments/18448690/imap.png)](https://appstore.home.mendix.com/link/app/1042/Mendix/IMAP/POP3-incoming-email)
 
@@ -105,7 +81,7 @@ This module enables your project to retrieve emails from POP3, POP3S, IMAP, and 
 
 [Click to download in the Mendix App Store.](https://appstore.home.mendix.com/link/app/1042/Mendix/IMAP/POP3-incoming-email)
 
-## 14 MxSMTP Module
+## 11 MxSMTP Module
 
 [![](attachments/18448690/mxsmtp.png)](https://appstore.home.mendix.com/link/app/256/Mendix/MxSMTP-Module)
 
@@ -113,7 +89,7 @@ This module lets your application run a mail server. It will process any message
 
 [Click to download in the Mendix App Store.](https://appstore.home.mendix.com/link/app/256/Mendix/MxSMTP-Module)
 
-## 15 SFTP Connection
+## 12 SFTP Connection
 
 [![](attachments/18448690/sftp.png)](https://appstore.home.mendix.com/link/app/368/SFTP-Connection)
 
@@ -121,7 +97,7 @@ This component enables exchanging FileDocuments with an SFTP server. It allows f
 
 [Click to download in the Mendix App Store.](https://appstore.home.mendix.com/link/app/368/SFTP-Connection)
 
-## 16 Simple CSV Exporter
+## 13 Simple CSV Exporter
 
 [![](attachments/18448690/csv.png)](https://appstore.home.mendix.com/link/app/1573/Appronto/Simple-CSV-Exporter)
 
@@ -129,7 +105,7 @@ This module is used for exporting to CSV from a microflow.
 
 [Click to download in the Mendix App Store.](https://appstore.home.mendix.com/link/app/1573/Appronto/Simple-CSV-Exporter)
 
-## 17 Uber Integration
+## 14 Uber Integration
 
 [![](attachments/18448690/uber.png)](https://appstore.home.mendix.com/link/app/2590/Mendix/Uber-Integration)
 
@@ -137,7 +113,7 @@ This module provides integration with Uber's APIs for logging in, viewing profil
 
 [Click to download in the Mendix App Store.](https://appstore.home.mendix.com/link/app/2590/Mendix/Uber-Integration)
 
-## 18 Google Analytics
+## 15 Google Analytics
 
 [![](attachments/18448690/google_analytics.png)](https://appstore.home.mendix.com/link/app/105/Mendix/Google-Analytics)
 
@@ -145,6 +121,6 @@ You can now add Google Analytics-tracking to your Mendix application! This widge
 
 [Click to download in the Mendix App Store.](https://appstore.home.mendix.com/link/app/105/Mendix/Google-Analytics)
 
-## 19 Read More
+## 16 Read More
 
 * [How to Access a Samba Share from the MxCloud](access-a-samba-share-from-the-mxcloud)

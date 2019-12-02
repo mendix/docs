@@ -94,7 +94,7 @@ You can use PhoneGap Build to build the native application and tell it to initia
 
       ![phonegap-4](./attachments/debug-a-mobile-app/phonegap-4.png)
 
-5. Extract the contents of the **phonegap.zip** file and open the `www/settings.json` file:
+5. Extract the contents of the **phonegap.zip** file and open the *www/settings.json* file:
 
       ![phonegap-5](./attachments/debug-a-mobile-app/phonegap-5.png)
 
@@ -147,7 +147,7 @@ You can now take advantage of all the debugging tools you know and love with Men
 
 In order to build (and debug) a Mendix iOS app, you need to ensure that you have the right setup in your Apple Developer Account. You will need a Developer Provisioning Profile that includes your device ID and a Signing Certificate. If you already have an iOS Development provisioning profile, you can continue with [5.2 PhoneGap Configuration](#PhonegapConfiguration). Follow these steps to set up an iOS provisioning profile:
 
-1. Go to [developer.apple.com](https://developer.apple.com/) and log in to your account.
+1. Go to [developer.apple.com](https://developer.apple.com/) and sign in to your account.
 2. Click **Certificates, IDs & Profiles** in the left-hand navigation.
 3. Click the `+` button to create a new certificate.
 4. Select **iOS Development** and click **Continue**:
@@ -356,11 +356,11 @@ You can use PhoneGap Build to build the native application and tell it to intial
 
    ![phonegap-3](./attachments/debug-a-mobile-app/phonegap-3.png)
 
-5. Unzip the downloaded package and navigate to the `/dist/phonegap.zip` file:
+5. Unzip the downloaded package and navigate to the */dist/phonegap.zip* file:
 
    ![phonegap-4](./attachments/debug-a-mobile-app/phonegap-4-1162839.png)
 
-6. Extract the contents of this file and find `www/settings.json`:
+6. Extract the contents of this file and find *www/settings.json*:
 
    ![phonegap-5](./attachments/debug-a-mobile-app/phonegap-5-1162847.png)
 

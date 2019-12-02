@@ -25,9 +25,9 @@ Before starting this how-to, make sure you have completed the following prerequi
 * For information on device requirements, see [System Requirements](/refguide/system-requirements)
 * If you wish to use an emulator for Android mobile testing, install a product such as [Bluestacks](https://www.bluestacks.com/nl/index.html) or [Genymotion](https://www.genymotion.com/) (your emulator must have Google Play services supported)
 
-## 3 Creating a New App Project Based on the Quickstart App{#quickstartapp}
+## 3 Creating a New App Project Based on the Quickstart App {#quickstartapp}
 
-For details on making a Mendix app using the Native Mobile Quickstart app template, download the Make It Native app on either the [Google Play store](https://play.google.com/store/apps/details?id=com.mendix.developerapp) or the [Apple App Store](https://apps.apple.com/us/app/make-it-native/id1334081181). This app template includes the latest version of Atlas UI, as well as the [Native Mobile Resources](https://appstore.home.mendix.com/link/app/109513/) module containing widgets and nanoflow actions for native mobile apps. Using the Make It Native app to view the changes to your Mendix app, see the sections below.
+For details on making a Mendix app using the Native Mobile Quickstart app template, download the Make It Native app on either the [Google Play store](https://play.google.com/store/apps/details?id=com.mendix.developerapp) or the [Apple App Store](https://apps.apple.com/us/app/make-it-native/id1334081181). This app template includes the latest version of Atlas UI, as well as the [Native Mobile Resources](https://appstore.home.mendix.com/link/app/109513/) module containing widgets and nanoflow actions for native mobile apps. For more information on building native apps, see the [Build a Native Mobile Inspection App](https://gettingstarted.mendixcloud.com/link/path/66) learning path. Using the Make It Native app to view the changes to your Mendix app, see the sections below.
 
 ### 3.1 Starting a Quickstarter App Project
 
@@ -45,10 +45,7 @@ To start a new app based on a template, follow these steps:
 
 	{{% image_container width="500" %}}![create app button](attachments/getting-started-with-native-mobile/create-app.png){{% /image_container %}}
 
-4.  Click **Run Locally** to see the app in action:
-
-	![run locally button](attachments/getting-started-with-native-mobile/run-locally.png)
-
+4.  Click **Run Locally** to see the app in action.
 5.  After running your app, you may see a Windows Security Alert dialog box. Accept the permissions selected by default and click **Allow access** to close the dialog box: 
 
 	{{% image_container width="500" %}}![firewall dialog box](attachments/getting-started-with-native-mobile/firewall-dialog.png){{% /image_container %}}

@@ -84,7 +84,7 @@ For example, you can use one instance with 4GiB RAM. The remaining 12GiB in your
 * [Environment Details](environments-details)
 * [Manage Company & App Roles](/developerportal/company-app-roles/manage-roles)
 * [Mendix Cloud](mendix-cloud-deploy)
-* [Mendix Cloud V4](mxcloudv4)
+* [Mendix Cloud v4](mxcloudv4)
 * [Migrate to Mendix Cloud v4](migrating-to-v4)
 * [Company & App Roles](/developerportal/company-app-roles/index)
 * [Node Permissions](/developerportal/deploy/node-permissions)

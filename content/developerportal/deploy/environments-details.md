@@ -34,9 +34,9 @@ The view of the **General** tab depends on the Mendix Cloud version on which the
 * **Custom domains** – the custom domains of the app
 * **Java Version** – Oracle version 1.8 or AdoptOpenJDK version 8
 * **Studio Target** – whether this environment is the one where apps will be deployed from Studio - see [Studio Deployment Settings](studio-deployment-settings) for more information
-* **Plan** – (*Cloud V4 only*) the type of plan covered by this license
-* **Instances** – (*Cloud V4 only*) A summary of the number and memory allocation of *instances* of this environment: see [Scaling...](#scaling) for more information
-* **Database Status** – (*Cloud V3 only*) this is **Running** by default
+* **Plan** – (*Cloud v4 only*) the type of plan covered by this license
+* **Instances** – (*Cloud v4 only*) A summary of the number and memory allocation of *instances* of this environment: see [Scaling...](#scaling) for more information
+* **Database Status** – (*Cloud v3 only*) this is **Running** by default
 * **Database Version** – the PostgreSQL version that is supporting the database
 * **Region** - the region where the app is hosted
 * **Mendix Cloud Version** – Mendix Cloud v3/Mendix Cloud v4
@@ -138,8 +138,7 @@ The limitation types are the following:
 * **Concurrent anonymous** – the number of anonymous users that are logged in simultaneously
 * **Named** – the number of named users registered in the database that are allowed to use the application
 
-
-## 3 Model Options Tab
+## 3 Model Options Tab {#model-options}
 
 ![](attachments/environments-details/model-options.png)
 
@@ -303,7 +302,7 @@ Use the Custom Runtime Settings section to perform the following actions:
 * **Edit** the runtime setting
 * **Delete** the runtime settings
 
-For more information about runtime settings, read the [Custom Settings](/refguide/custom-settings) and [Tricky Custom Settings in Mendix Runtime](/refguide/tricky-custom-runtime-settings) documentation.
+For more information about runtime settings, read the [Runtime Customization](/refguide/custom-settings) and [Tricky Custom Settings in Mendix Runtime](/refguide/tricky-custom-runtime-settings) documentation.
 
 The Mendix Cloud uses runtime settings to configure the included systems for logs, backups, and database. Therefore, the following settings are **not** configurable by users:
 

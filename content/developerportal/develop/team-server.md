@@ -55,11 +55,11 @@ Related stories will only appear if you select them in the **Commit** dialog box
 
 ## 5 Team Server FAQ
 
-### 5.2 How Much Storage Space Is Provided with Team Server?
+### 5.1 How Much Storage Space Is Provided with Team Server?
 
 Storage space is unlimited for app projects connected to a commercial license. 1 GB of free storage is provided for your company account for app projects not (yet) connected to a commercial license.
 
-### 5.3 What Happens with My Valuable & Confidential Data?
+### 5.2 What Happens with My Valuable & Confidential Data?
 
 Mendix adheres to strict security standards and considers you the sole owner of your data. Only Mendix Cloud Infrastructure Engineers can access data and will only do so for trouble shooting. Your data is backed up for one year, and the backups are retained for one year after project deletion. You can get a backup of your data at any time by using default Subversion tools, or, if your project was deleted, by filing a [Mendix Support](https://support.mendix.com/hc/en-us) ticket.
 

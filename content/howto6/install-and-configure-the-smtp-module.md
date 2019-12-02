@@ -42,7 +42,7 @@ In this chapter we will install the SMTP Email module and integrate it into an e
 ### 2.2 Exposing the configuration page
 
 1.  Create a new page called EmailAdmin.
-2.  Drop in the snippit SMTPEmailModule.Administration to give you access to those pages.
+2.  Drop in the snippet SMTPEmailModule.Administration to give you access to those pages.
 3.  Add the EmailAdmin page to your Admin navigation
 4.  ![Add the page to user navigation](attachments/19202956/19398976.png)
 
@@ -97,7 +97,7 @@ Making an e-mail is as simple as generating an Email object, populating the valu
     {{% /alert %}}
 5.  In the microflow IVK_UserManualEmailSend, call the IVK_SendEmail subflow in the SMTP module and then close the page.
     ![Call the IVK_SendEmail included in the app store module](attachments/19202956/19398984.png)
-6.  Because users are only editing the Plain Text of the email on the previous page, we need to change the Email so that the ‘UseOnlyPlainText’ Boolean is set to true.  In the Microflow IVK_UserManualEmailSend, edit the change action to set the boolean to true as shown below.
+6.  Because users are only editing the Plain Text of the email on the previous page, we need to change the Email so that the ‘UseOnlyPlainText’ Boolean is set to true.  In the Microflow IVK_UserManualEmailSend, edit the change action to set the Boolean to true as shown below.
 
     ![](attachments/19202956/19398985.png)
 
@@ -106,7 +106,7 @@ Making an e-mail is as simple as generating an Email object, populating the valu
 
 ## 4\. Setting up the Email Queue
 
-Beyond simply creating and sending e-mails, the SMTP module comes with a functioning email queue that is easy to set up.  Having an email queue can be very useful to control the email load colume or send nightly updates for users to read first thing in the morning.   The basic process for an email queue is as follows:
+Beyond simply creating and sending e-mails, the SMTP module comes with a functioning email queue that is easy to set up.  Having an email queue can be very useful to control the email load volume or send nightly updates for users to read first thing in the morning.   The basic process for an email queue is as follows:
 
 1. Create an email
 2. Instead of sending, add that Email to the queue

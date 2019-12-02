@@ -1,5 +1,5 @@
 ---
-title: "Create Branch Line Dialog"
+title: "Create Branch Line"
 parent: "dialogs"
 tags: ["studio pro"]
 ---

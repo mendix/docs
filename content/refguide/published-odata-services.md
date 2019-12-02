@@ -124,4 +124,4 @@ For details on how to filter the OData response, refer to [OData Query Options](
 
 For details on how Mendix attributes are represented in OData, refer to [OData Representation](odata-representation).
 
-When exposing entities through OData, the entities are retrieved from the Mendix database in a streaming fashion, to avoid out-of-memory errors in the Mendix runtime.
+When exposing entities through OData, the entities are retrieved from the Mendix database in a streaming fashion, to avoid out-of-memory errors in the Mendix Runtime.

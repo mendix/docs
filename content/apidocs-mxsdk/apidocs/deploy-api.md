@@ -23,14 +23,19 @@ As APIs are designed for automated systems, the Deploy API does not require the 
 ## 3 API Calls
 
 {{% alert type="info" %}}
-Only _Retrieve apps_, _Create Sandbox_ and _Retrieve app_ API calls are supported for sandbox applications. Please note that most API calls — with the exception of _Upload Package_ — require that the _Content-Type_ header be set to _application/json_.
+Only _Retrieve apps_, _Create Free App Environment_ and _Retrieve app_ API calls are supported for Free Apps. Please note that most API calls — with the exception of _Upload Package_ — require that the _Content-Type_ header be set to _application/json_.
 {{% /alert %}}
 
 ### 3.1 Retrieve Apps
 
 #### 3.1.1 Description
 
-Retrieves all apps to which the authenticated user has access as a regular user. These apps can be found via the *Nodes overview* screen in the Mendix Platform.
+Retrieves all licensed apps and Free Apps to which the authenticated user has access as a regular user.
+
+{{% alert type="info" %}}
+The [Nodes](/developerportal/apps-list/#nodes) screen in the Developer Portal shows all the licensed apps which are returned by this request, but does not show any Free Apps, while the [My Apps](/developerportal/apps-list/#my-apps) screen shows both licensed apps and Free Apps.
+{{% /alert %}}
+
 
 ```bash
 HTTP Method: GET
@@ -56,7 +61,7 @@ List of objects with the following key-value pairs:
 *   _AppId_ (String): Sub-domain name of the app.
 *   _Name_ (String): Name of the app.
 *   _ProjectId_ (String): Developer Portal Project identifier.
-*   _Url_ (String): Production or sandbox URL to access your app.
+*   _Url_ (String): Production or Free App URL to access your app.
 
 **Example Output**
 
@@ -74,11 +79,11 @@ List of objects with the following key-value pairs:
 }]
 ```
 
-### 3.2 Create Sandbox
+### 3.2 Create Free App Environment
 
 #### 3.2.1 Description
 
-Creates a sandbox application for a requested project id.
+Creates a Free App for a requested project id.
 
 ```bash
 HTTP Method: POST
@@ -91,7 +96,7 @@ URL: https://deploy.mendix.com/api/1/apps/
 
 An object with the following key-value pair:
 
-*   _ProjectId_ (String) : The Developer Portal project identifier that should be linked to the new sandbox application. This value can be found under **Settings** > **General**, and it is represented as **App ID**.
+*   _ProjectId_ (String) : The Developer Portal project identifier that should be linked to the new Free App. This value can be found under **Settings** > **General**, and it is represented as **App ID**.
 
 **Example Request**
 
@@ -114,7 +119,7 @@ Response object with the following fields:
 *   _AppId_ (String): Sub-domain name of the app.
 *   _Name_ (String): Name of the app.
 *   _ProjectId_ (String): Developer Portal Project identifier.
-*   _Url_ (String): Production or sandbox URL to access your app.
+*   _Url_ (String): Production or Free App URL to access your app.
 
 **Error Codes**
 
@@ -167,7 +172,7 @@ Object with the following key-value pairs:
 
 *   _AppId_ (String): Sub-domain name of the app.
 *   _Name_ (String): Name of the app.
-*   _Url_ (String): Production or sandbox URL to access your app.
+*   _Url_ (String): Production or Free App URL to access your app.
 
 **Error Codes**
 
@@ -588,7 +593,7 @@ curl -v -F "file=@%USERPROFILE%/Documents/Mendix/calc-main/releases/calc_1.0.0.4
 
 Transports a specific deployment package to a specific environment. This action requires the environment to be in the status *NotRunning*.
 
-This call is not available for Free App Sandbox. For a Free App Sandbox, the Build API can be used to trigger a deployment.
+This call is not available for Free App. For a Free App, the Build API can be used to trigger a deployment.
 
 ```bash
 HTTP Method: POST
@@ -919,8 +924,8 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/snapshots/
 
 **Request Parameters**
 
-*   _AppId_ (String): Subdomain name of an app.
-*   _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy#flexible-environments).
+*   _AppId_ (String): Subdomain name of the app. This is the production subdomain, do not add the mode (for example, do not add `-accp` for acceptance – see the example below)
+*   _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy#flexible-environments)
 *   _SnapshotId_ (String): Identifier of the backup
 
 **Example Request**
@@ -945,6 +950,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 | 403 | NO_ACCESS | The user does not have access to the backups of this environment. |
 | 404 | ENVIRONMENT_NOT_FOUND | Environment not found. |
 | 404 | SNAPSHOT_NOT_FOUND | Snapshot not found. |
+| 500 | INTERNAL_SERVER_ERROR | This *usually* occurs when you have provided a valid **SnapshotID**, but the snapshot is still being created. Try downloading the backup at a later time |
 
 **Example Output**
 
@@ -957,6 +963,10 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 ```
 
 ### 3.17 Create a Backup of an Environment (Mendix Cloud v4 Only)
+
+{{% alert type="warning" %}}
+This call will trigger the creation of a snapshot and will return the **SnapshotID** immediately. However, the creation of the snapshot takes some time and if the creation hasn't completed you will get a **500 INTERNAL_SERVER_ERROR** response from a request to download the backup (see above). In this case, it is recommended that you periodically retry downloading the backup until the call is successful.
+{{% /alert %}}
 
 #### 3.17.1 Description
 
@@ -1113,7 +1123,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 | 400 | INVALID_REQUEST | You have allocated more memory than is available under your plan. Please contact support to upgrade your plan. |
 | 400 | INVALID_REQUEST | Memory per instance cannot be smaller than 1024MB.|
 | 400 | NOT_ALLOWED| Horizontal scaling (to multiple instances) is only available for apps with Mendix version >=7. Please upgrade to activate this functionality. |
-| 400 | NOT_ALLOWED| Scaling is only available for paid apps on Mendix Cloud V4. Please contact support to upgrade to the V4 Cloud to access this functionality. |
+| 400 | NOT_ALLOWED| Scaling is only available for paid apps on Mendix Cloud v4. Please contact support to upgrade to the v4 Cloud to access this functionality. |
 | 404 | ENVIRONMENT_NOT_FOUND | Environment not found. |
 
 **Example Output**
@@ -1299,7 +1309,13 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/logs/<Date
 
 - _AppId_ (String): Subdomain name of an app.
 - _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy#flexible-environments).
-- _Date_ (String): Date of the desired log (YYYY-MM-DD). Inserting a future date will provide the logs for the current day.
+- _Date_ (String): Date of the desired log (YYYY-MM-DD).
+
+* If *Date* is tomorrow or after, or before the date the app was created, the log will contain the response `[No data found in file and no logging heartbeat detected]`
+
+{{% alert type="info" %}}
+* Under some circumstances, if *Date* is tomorrow's date the log will be *empty* and the **REST response** will contain `[No data found in file and no logging heartbeat detected]` — the cause of this is being investigated
+{{% /alert %}}
 
 **Example Request**
 

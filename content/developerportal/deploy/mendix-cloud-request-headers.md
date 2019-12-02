@@ -50,6 +50,6 @@ The following headers are set by the Mendix Cloud, but are deprecated and will b
 
 Deprecating and removing a request header is a process consisting of several stages:
 
-* Stage 1: Deprecation. The dates on which stage 2 and 3 will be executed are communicated. The announcement will be documented in the [Mendix Developer Portal Release Notes](/releasenotes/developer-portal/) document.
+* Stage 1: Deprecation. The dates on which stage 2 and 3 will be executed are communicated. The announcement will be documented in the [Deployment Portal Release Notes](/releasenotes/developer-portal/deployment).
 * Stage 2: Invalidation. The header value will be forced to an invalid value. All running customer applications that still rely on this header will experience problems.
 * Stage 3: Removal. The header is not set or overwritten by the Mendix Cloud any more. This also means that any value for it can now be set by the HTTP client.

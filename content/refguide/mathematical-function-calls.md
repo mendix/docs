@@ -204,7 +204,7 @@ Calculates the exponent of a number to a certain power.
 
 ### 7.2 Output
 
-The number to the power, i.e. n^p. The result will be of the most precise type necessary.
+The number to the power, as in, n^p. The result will be of the most precise type necessary.
 
 Type: Integer/Long or Decimal
 

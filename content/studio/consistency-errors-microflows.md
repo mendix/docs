@@ -7,11 +7,20 @@ tags: ["studio", "consistency errors", "checks", "errors", "microflow"]
 
 ## 1 Introduction 
 
-In this document, we will explain how to solve the most common consistency errors that can occur when configuring microflows in Mendix Studio. For more information on microflows, see [Microflows](microflows).
+In this document, we explain how to solve the most common consistency errors that can occur when configuring microflows in Mendix Studio. For more information on microflows, see [Microflows](microflows).
 
 An example of a consistency error is when you set a drag and drop a **Create Object** activity to the microflow, but do not specify what entity should be used as a data source to create the object. 
 
 ![Microflow Error Example](attachments/consistency-errors-microflows/microflow-error-example.png)
+
+{{% alert type="info" %}}
+
+This document does not describe all the errors, as there are a lot of errors that can occur, some of which are simple and do not need extra explanation, others are rare and/or heavily dependent on a use-case. 
+
+{{% /alert %}}
+
+Some errors have error codes and if these errors are described in documentation, Studio has a clickable link to the corresponding document. Others do not have an error code, in this case, you can manually search whether a particular error is described in documentation (you can search by a message you see in the **Checks** panel).
+
 
 ## 2 Properties Not Set Consistency Errors 
 
@@ -39,6 +48,7 @@ Many errors occur if you do not set properties (for example, a data source) for 
 | CE0037     | A variable is required. You can set it in properties.        | Change Variable                                              | You have added a **Change Variable** activity to your microflow but did not specify what variable to change. | Open the properties of **Change Variable** and set a variable in **Data Source**. |
 | CE0038     | 'Value' is required. You can set it in properties.           | Change Variable                                              | You have added a **Change Variable** activity to your microflow but did not specify the new value for the changed variable. | Open the properties of **Change Variable** and set **Value** in **Data Source**. |
 | CE0038     | 'Value' is required. You can set it in properties.           | Create Variable                                              | You have added a **Create Variable** activity to your microflow but did not specify the initial value for the variable. | Open the properties of **Create Variable** and set **Value** in **Data Source**. |
+| CE0573     | Parameter{S_IF_PLURAL} {PARAMETERS} of the selected {NANO_OR_MICROFLOW} {DO_OR_DOES} not match available arguments. |                                                              |                                                              |                                                              |
 
 ## 3 Properties Set Incorrectly Consistency Errors
 
@@ -61,7 +71,7 @@ Some consistency errors may be connected with settings in Mendix Studio Pro. The
 | Error Code | Text in the Checks Panel                                     | Element/ Activity | Cause of an Error                                            | Way to Fix                                                   |
 | ---------- | ------------------------------------------------------------ | ----------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 |            | The selected microflow {name of the microflow} no longer exists. | Microflow         | You have deleted a microflow that is selected in Studio Pro > **Project Settings** > **Runtime** > **After startup** or **Before shutdown** options. For more information on **After startup** /**Before shutdown** microflows, see section [7 After-Startup and Before-Shutdown Microflows](/refguide/clustered-mendix-runtime#startup-shutdown-microflows) in Clustered Mendix Runtime in the *Runtime category*. | There two ways to fix the error: <ul><li>In Studio: create a microflow with the same name</li><li>In Studio Pro: open **Project** > **Settings**, in the **Project Settings** pop-up dialog  open the **Runtime** tab and either select a different microflow for **After startup** / **Before shutdown** options, or set these options to **None**.</li></ul> |
-| CE0142     | After startup microflow should return a boolean.             | Microflow         | This microflow is selected in Studio Pro > **Project Settings** > **Runtime** > **After startup** or **Before shutdown** options, and should return a Boolean. For more information on **After startup** /**Before shutdown** microflows, see section [7 After-Startup and Before-Shutdown Microflows](/refguide/clustered-mendix-runtime#startup-shutdown-microflows) in Clustered Mendix Runtime in *Runtime category*. | Open the properties of the microflow's end event > the **Return Value** section, select **Value** option > set **Data Type** to Boolean and configure the **Value**. |
+| CE0142     | After startup microflow should return a Boolean.             | Microflow         | This microflow is selected in Studio Pro > **Project Settings** > **Runtime** > **After startup** or **Before shutdown** options, and should return a Boolean. For more information on **After startup** /**Before shutdown** microflows, see section [7 After-Startup and Before-Shutdown Microflows](/refguide/clustered-mendix-runtime#startup-shutdown-microflows) in Clustered Mendix Runtime in *Runtime category*. | Open the properties of the microflow's end event > the **Return Value** section, select **Value** option > set **Data Type** to Boolean and configure the **Value**. |
 
 ## 5 Read More
 

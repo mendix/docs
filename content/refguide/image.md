@@ -22,12 +22,12 @@ If you want to dynamically show different images based on data, you need to add 
 
 ## 2 Properties
 
-An example of text properties is represented in the image below:
+An example of image properties is represented in the image below:
 
 {{% image_container width="350" %}}![Image Properties](attachments/common-widgets/image-properties.png)
 {{% /image_container %}}
 
-Text properties consist of the following sections:
+Image properties consist of the following sections:
 
 * [Common](#common)
 * Design Properties
@@ -55,19 +55,17 @@ The width of an image. Possible values of this property are described in the tab
 
 | Value      | Definition                                                   |
 | ---------- | ------------------------------------------------------------ |
-| Auto       | The width of the given image is used.                        |
+| Auto  *(default)*       | The width of the given image is used.                        |
 | Pixels     | he width is specified in a number of pixels. If you specify both width and height, the image will be scaled automatically: the proportions will be kept, the picture will not be stretched. |
 | Percentage | The width is specified in a percentage of the original width. It can be larger than its original width in which case the image is stretched |
 
-_Default value_: Auto
-
-{{% alert type="info" %}}Not supported on native mobile pages.{{% /alert %}}
+{{% alert type="info" %}}This property is not supported on native mobile pages.{{% /alert %}}
 
 #### 2.3.3 Width
 
 Specifies the width of the image in pixels or percentage. This option is displayed only when **Pixels** or **Percentage** are selected for the **Width Unit** described above. 
 
-_Default value_: not applicable
+Default: *not applicable*
 
 #### 2.3.4 Height Unit
 
@@ -75,33 +73,42 @@ The height of an image. Possible values of this property are described in the ta
 
 | Value      | Definition                                                   |
 | ---------- | ------------------------------------------------------------ |
-| Auto       | The height of the given image is used.                       |
+| Auto  *(default)*       | The height of the given image is used.                       |
 | Pixels     | The height is specified in a number of pixels. If you specify both width and height, the image will be scaled automatically: the proportions will be kept, the picture will not be stretched. |
 | Percentage | The height is specified in a percentage of the original height. It can be larger than its original height in which case the image is stretched. |
 
-_Default value_: Auto
-
-{{% alert type="info" %}}Not supported on native mobile pages.{{% /alert %}}
+{{% alert type="info" %}}This property is not supported on native mobile pages.{{% /alert %}}
 
 #### 2.3.5 Height
 
 Specifies the width of the image in pixels or percentage. This option is displayed only when **Pixels** or **Percentage** are selected for the **Width Unit** described above. 
 
-_Default value_: not applicable
+Default: *not applicable*
 
 #### 2.3.6 Responsive
 
 This property influences how the image scales. If the value is 'Yes', the image will never get bigger than its original size. It can become smaller. If the value is 'No', the image can become both larger and smaller than its original size.
 
-_Default value:_ Yes
+Default: *Yes*
 
-{{% alert type="info" %}}Not supported on native mobile pages.{{% /alert %}}
+{{% alert type="info" %}}This property is not supported on native mobile pages.{{% /alert %}}
 
 ### 2.4 Visibility Section {#visibility}
 
 {{% snippet file="refguide/visibility-section-link.md" %}}
 
-## 3 Read More
+## 3 Converting to an Image Viewer
+
+You can convert an image to an image viewer that allows you to display dynamic data. For more information on image viewer and its properties, see [Image Viewer](image-viewer). 
+
+To convert an image widget into an image viewer, do the following:
+
+1. Select the image widget on a page and right-click it.
+2. From the list of actions, select **Convert to image viewer**. 
+
+The image widget is converted to the image viewer and you can configure it. 
+
+## 4 Read More
 
 * [Page](page)
 * [Common Widgets](common-widgets)

@@ -28,12 +28,12 @@ As a recovery model, Mendix only requires the **Simple** mode. The functionality
 
 ![](attachments/setting-up-a-new-sql-server-database/18580675.png)
 
-After the database is created, the Mendix Platform can initiate the initial setup and prepare all the tables and functions for usage by the platform. Some of these queries require `sysadmin` privileges. The `sysadmin` role can be temporarily assigned to the user, or these queries can be executed by the administrator. Other queries need privileges which are implicitly assigned to the `db_owner` role. If the user used by the Mendix runtime does not have enough permissions for any of these queries, you can run them manually – see below for more information.
+After the database is created, the Mendix Runtime can initiate the initial setup and prepare all the tables and functions for usage by the platform. Some of these queries require `sysadmin` privileges. The `sysadmin` role can be temporarily assigned to the user, or these queries can be executed by the administrator. Other queries need privileges which are implicitly assigned to the `db_owner` role. If the user used by the Mendix Runtime does not have enough permissions for any of these queries, you can run them manually – see below for more information.
 
 ## 3 Configuring the Read Committed Snapshot Isolation Level
 
 {{% alert type="info" %}}
-You only need to follow these steps if the database user used by the Mendix runtime does not have enough permission to issue the `ALTER DATABASE` command (usually the `sysadmin` role).
+You only need to follow these steps if the database user used by the Mendix Runtime does not have enough permission to issue the `ALTER DATABASE` command (usually the `sysadmin` role).
 {{% /alert %}}
 
 The database schema needs to be configured so that the **Read Committed Snapshot** feature is enabled. This can be achieved by executing the following command on the database:
@@ -86,7 +86,7 @@ CREATE FUNCTION [dbo].[mx_toLocalDateTime] (@utcDateTime datetime, @dstTimeZone 
 #### 4.2.2 Create Procedure usp_nextsequencevalue
 
 {{% alert type="info" %}}
-This is normally executed automatically by the Mendix runtime so long as the database user used by Mendix has permission to create procedures.
+This is normally executed automatically by the Mendix Runtime so long as the database user used by Mendix has permission to create procedures.
 {{% /alert %}}
 
 ```

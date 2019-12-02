@@ -147,7 +147,7 @@ if ($latestBuiltRevision -eq $branch.LatestRevisionNumber) {
 }
 
 $versionWithoutRevision = $branch.LatestTaggedVersion.Remove($branch.LatestTaggedVersion.LastIndexOf('.'))
-$packageId = Start-Build $headers $url $appName $branchName $latestBuiltRevision $versionWithoutRevision
+$packageId = Start-Build $headers $url $appName $branchName $branch.LatestRevisionNumber $versionWithoutRevision
 $built = Wait-For-Built $headers $url $appName $packageId 600
 
 if($built -eq $false) {

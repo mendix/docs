@@ -76,11 +76,15 @@ Current support:
 * [IBM DB2](db2) 11.1
 * [MariaDB](mysql) 5.5, 10.1, 10.2, 10.3
 * [Microsoft SQL Server](/developerportal/deploy/mendix-on-windows-microsoft-sql-server) 2016, 2017
-* Azure SQL v12 (support is not independently verified and is available only through compatible versions of SQL Server)
+* [Azure SQL](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017) v12 compatibility mode 130 or higher
 * [MySQL](mysql) 5.7, 8.0
 * [Oracle Database](oracle) 12c Release 2
 * PostgreSQL 9.5, 9.6, 10, 11
 * [SAP HANA](saphana) 2.00.040.00.1545918182
+
+{{% alert type="warning" %}}
+Each app should have its own database. Mendix apps cannot share data by sharing the same database. 
+{{% /alert %}}
 
 ### 5.4 Java
 
@@ -126,3 +130,9 @@ MxBuild is a Windows and Linux command-line tool that can be used to build a Men
 
 * Mono v5.20.x or .NET v4.7.2
 * JDK 11
+
+## 9 mx Command-Line Tool {#mxtool}
+
+The **mx** command-line tool is a Windows and Linux command-line tool that can be used to do useful things with your Mendix app project. For more information, see [mx Command-Line Tool](mx-command-line-tool).
+
+* Mono v5.20.x or .NET v4.7.2

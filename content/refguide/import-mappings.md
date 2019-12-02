@@ -11,7 +11,7 @@ Please refer to [Mapping Documents](mapping-documents) for an introduction.
 
 Figure 1 depicts an example of an Import Mapping document in which two elements from an XML Schema have been selected using the **Select elements...** dialog. Following this the ReceivedPartners and ReceivedClient entities were added, and mapped to the Result and Client schema elements. Each time the Import Mapping is invoked, a new ReceivedPartners object is created.
 
-![](attachments/16713727/16843942.png)
+![](attachments/import-mappings/16843942.png)
 
 **Figure 1**
 
@@ -19,7 +19,7 @@ Figure 1 depicts an example of an Import Mapping document in which two elements 
 
 For each XML or JSON object, a Mendix object needs to be obtained. You can create one or you can find an existing object in the database. Alternatively, you can use a custom microflow that returns an object. You can see how a Mendix object is obtained in the window depicted in figure 2, which is shown after double clicking a specific mapping element.
 
-![](attachments/16713727/16843943.png)
+![](attachments/import-mappings/16843943.png)
 
 **Figure 2**
 
@@ -35,15 +35,17 @@ For each XML or JSON object, a Mendix object needs to be obtained. You can creat
 
 #### 1.2.2 If No Object Was Found
 
-This is the action that the runtime will perform when an error occurred in the specified **To obtain an object** action.
+This is the action that the runtime will perform when an error occurred in the specified **Obtain Mendix Object** action.
+
+![](attachments/import-mappings/no-object-found.png)
 
 | Property | Description |
 | --- | --- |
-| **Create** | Create a domain entity to map to. |
+| **Create** | Create an object of the correct entity to map to. |
 | **Ignore** | Don't map this element and continue parsing the rest of the XML. |
 | **Error** | Explicitly stop parsing the XML and throw an error. This error needs to be handled in the calling microflow. |
 
-At the top level of the mapping, you can choose to decide this at the place where the mapping gets used. In that case, the option **if no object was found** shows up whenever you use the mapping, for instance in an [import mapping action](import-mapping-action) or a [call REST service action](call-rest-action).
+If this is the top level of the mapping, you can check **Decide this at the place where the mapping gets used**. If this is checked the option **if no object was found** can be set whenever you use the mapping, for instance in an [import mapping action](import-mapping-action) or a [call REST service action](call-rest-action).
 
 ### 1.3 Setting Associations
 
@@ -59,13 +61,13 @@ Be aware that lists are not stored ordered in the Mendix database. XML Schema ca
 
 Each selected XML or JSON element needs to be mapped to an attribute in the domain entity. If you don't want to map certain elements, simply uncheck them in the **Select elements...** dialog box. Configuring how to map the attributes is done in the screen depicted in figure 3, which is shown after double clicking a specific mapping element.
 
-![](attachments/16713727/16843943.png)
+![](attachments/import-mappings/16843943.png)
 
 **Figure 3**
 
 Having defined the mappings for the attributes, these mappings are also shown in the mapping document. When a specific attribute is selected the schema element is also selected. This works the other way around too. An example of this is shown in figure 4, where the **dati** attribute is selected in both the Entity and the schema element (in this case dati is mapped to dati).
 
-![](attachments/16713727/16843944.png)
+![](attachments/import-mappings/16843944.png)
 
 **Figure 4**
 

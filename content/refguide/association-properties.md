@@ -15,7 +15,7 @@ The [multiplicity](#multiplicity) (or number of referred objects) of an associat
 
 In the example below, the arrow indicates that **Order** is the owner of the association, and the `1` and `*` indicate that one customer is associated with many orders:
 
-![](attachments/domain-model-editor/918217.png)
+![](attachments/association-properties/918217.png)
 
 {{% alert type="info" %}}
 
@@ -52,18 +52,26 @@ Multiplicity defines the number of possible referred objects. It is indicated by
 
 Multiplicity can be of the following types:
 
-* One-to-one – one X object is associated with one Y object
-* One-to-many – one X object is associated with multiple Y object
-* Many-to-many – multiple X objects are associated with multiple Y objects
+| Multiplicity | means | is the equivalent of |
+| --- | --- | --- |
+| One-to-one | one X object is associated with one Y object |  an association of type **Reference** with owner set to **Both** |
+| One-to-many | one X object is associated with multiple Y object |  an association of type **Reference** with owner set to **Default** |
+| Many-to-many | multiple X objects are associated with multiple Y objects |  an association of type **Reference set** – in this case ownership is set by the **Navigability** property |
 
-Multiplicity shows the owner and the direction of association if the association is of the one-to-many or many-to-many type. In case the association is one-to-one, both entities are owners. For more information about ownership, see section [4 Owner](associations#owner) in *Associations*.
+For more information about association types, see the [Type](associations#type) section in *Associations*, and for information on ownership, see the [Owner](associations#owner) section in *Associations*.
 
 ### 2.4 Navigability {#navigability}
 
 Navigability changes the owner of many-to-many associations. Navigability has the following options:
 
-* X objects refer to Y objects  – the owner of the association is X
-* X and Y objects refer to each other – both entities are owners
+| Navigability | means | is the equivalent of |
+| --- | --- | --- |
+| X objects refer to Y objects | the owner of the association is X | an association of type **Reference set** with owner set to **Default** |
+| X and Y objects refer to each other | both entities are owners | an association of type **Reference set** with owner set to **Both** |
+
+This corresponds to the **Owner** property for **Reference sets** as described in the [Owner](associations#owner) section of *Associations*.
+
+Despite it's name, navigability is usually only important when changing associations. Making one object owner of an association does not prevent you reading the association from the non-owner end.
 
 ### 2.5 Delete Behavior {#delete-behavior}
 
@@ -72,18 +80,18 @@ Delete behavior defines what should happen to the associated object when an obje
 | Value | Description |
 | --- | --- |
 | delete {name of entity} object but keep {name of other entity} object(s) | When an object is deleted, the associated object(s) are not deleted. |
-| delete {name of entity> object and {name of other entity} object(s) as well | When an object is deleted, the associated object(s) are also deleted. |
-| delete {name of entity> object only if it is not associated with {name of other entity} object(s) | An object can only be deleted if it is not associated with any other object(s). |
+| delete {name of entity} object and {name of other entity} object(s) as well | When an object is deleted, the associated object(s) are also deleted. |
+| delete {name of entity} object only if it is not associated with {name of other entity} object(s) | An object can only be deleted if it is not associated with any other object(s). |
 
-* *Default value*: delete {name of entity} object but keep {name of other entity} object(s)
+Default: *delete {name of entity} object but keep {name of other entity} object(s)*
 
 This delete behavior is used if you want to delete any associated **Profile** when a **Customer** is deleted:
 
-![](attachments/domain-model-editor/918143.png)
+![](attachments/association-properties/918143.png)
 
 This delete behavior is used if you want to be able to delete a **Customer** only if it is not associated with any **Order**:
 
-![](attachments/domain-model-editor/918146.png)
+![](attachments/association-properties/918146.png)
 
 ## 3 Read More
 

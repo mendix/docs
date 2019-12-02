@@ -60,7 +60,7 @@ This determines whether the export action should validate the outgoing XML again
 
 Setting this to yes can greatly decrease performance!
 
-*Default value:* No
+Default: *No*
 
 ### 3.2 Optional and Nillable
 

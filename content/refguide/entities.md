@@ -92,6 +92,10 @@ This property defines whether the entity contains the system attribute 'changedD
 | True | Entity contains the system attribute 'changedDate'. |
 | False  *(default)* | Entity does not contain the system attribute 'changedDate'. |
 
+{{% alert type="info" %}}
+The 'changedDate' property is only updated on real changes. Simply changing and committing an entity with the same attribute values does not update 'changedDate'.
+{{% /alert %}}
+
 #### 3.5.3 Store 'owner'
 
 This property defines whether the entity has the system association 'owner'. This is an association to the system entity 'User' that (initially) stores a reference to the user that created the object. This association is automatically set by the server upon creating an object.

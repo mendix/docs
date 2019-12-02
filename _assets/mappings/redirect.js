@@ -45,6 +45,10 @@ module.exports = {
       from: "/apidocs-mxsdk/mxsdk/faq",
       to: "/apidocs-mxsdk/mxsdk/sdk-faq"
     },
+	{
+      from: "/apidocs-mxsdk/mxsdk/use-case-examples",
+      to: "/apidocs-mxsdk/mxsdk/sdk-intro"
+    },
 	/****************************************************
      * PERMANENT REDIRECTS
      ****************************************************/

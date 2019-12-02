@@ -211,7 +211,7 @@ After your start your Native Builder build, you will see some or all of the foll
 
 	{{% image_container width="400" %}}![Successful and Downloaded iOS build](attachments/deploying-native-app/native-builder-successful-ios.png){{% /image_container %}}
 
-If your build times out, you can either sign your app locally as described in [Android Local Signing](#511-local-signing) and [iOS Local Signing](#521-local-signing) below, or upgrade to a paid App Center account. This build issue is more likely to affect iOS builds because of how long signing takes with an iOS developer profile.
+If your build times out, you can either sign your app locally as described in [Android Local Signing](#android-local-signing) and [iOS Local Signing](#ios-local-signing) below, or upgrade to a paid App Center account. This build issue is more likely to affect iOS builds because of how long signing takes with an iOS developer profile.
 
 In case of failure, the build logs will be downloaded for your convenience. Please provide them when filing a [support ticket](/developerportal/support/submit-support-request) with Mendix.
 
@@ -225,12 +225,12 @@ If your builds are signed, they will contain `app-release.apk` and `nativeTempla
 
 For distributing to a specific platform, see the subsequent sections below:
 
-* [Distributing for Android](#51-distributing-for-android)
-* [Distributing for iOS](#52-distributing-for-ios)
+* [Distributing for Android](#android-distributing)
+* [Distributing for iOS](#ios-distributing)
 
-### 6.1 Distributing for Android
+### 6.1 Distributing for Android {#android-distributing}
 
-#### 6.1.1 Local Signing
+#### 6.1.1 Local Signing {#android-local-signing}
 
 You can skip this section if you completed [Signing a Build](#signing-a-build). To sign your Android app locally, use apksigner by following Google's [apksigner documentation](https://developer.android.com/studio/command-line/apksigner).
 
@@ -253,7 +253,7 @@ You can also consult Google's [Run apps on a hardware device](https://developer.
 
 This section details publishing a signed Android app to the Google Play store. This section can only be started if you done the following:
 
-* Completed the [Signed](#41-signed-builds) section above
+* Completed the [Signing a Build](#signing-a-build) section above
 * Produced an *app-release.apk* build
 * Read Google's overview of [the Android app publishing process](http://developer.android.com/tools/publishing/publishing_overview.html). 
 
@@ -261,9 +261,9 @@ Before submitting your app to an app store, you will have to complete Google's [
 
 Once you have satisfied those requirements, you can follow Google's [Upload your app to the Play Console](https://developer.android.com/studio/publish/upload-bundle). Then, follow Google's [Prepare & roll out releases](https://support.google.com/googleplay/android-developer/answer/7159011) to create, prepare, review, and roll out your app release.
 
-### 6.2 Distributing for iOS
+### 6.2 Distributing for iOS {#ios-distributing}
 
-#### 6.2.1 Local Signing
+#### 6.2.1 Local Signing {#ios-local-signing}
 
 You can skip this section if you completed [Signing a Build](#signing-a-build). Local signing is useful if you only want to test your app on a device, or you do not have a distribution certificate and have run out of build minutes on App Center when signing with a developer certificate.
 
@@ -299,7 +299,7 @@ In order to deploy the *nativeTemplate.xcarchive* on a device or on the App Stor
 
 	![Xcode Application loader](attachments/deploying-native-app/xcode-app-loader-7.png)
 
-### 6.2.2 Installing on a Device
+#### 6.2.2 Installing on a Device
 
 You can now deploy your app to your device. An easy way to do this is with Apple iTunes.
 
@@ -315,19 +315,19 @@ To install the *ipa* on your device, follow these steps:
 5. Your app will show up in the list of apps. Click the **Install** button next to your app.
 6. Click **Apply** at the bottom of the screen to execute the actual installation.
 
-### 6.2.3 Uploading to the iOS App Store
+#### 6.2.3 Uploading to the Apple App Store
 
-This section and the next only applies when the build was [Signed](#41-signed-builds) for the Apple Store earlier.
+To upload your app to the iOS App Store, follow these instructions (to continue, you must have completed the [Signing a Build](#signing-a-build) section above and recieved a build signed for the Apple Store):
 
 1. Follow Apple's [Add an app to your account](https://help.apple.com/app-store-connect/#/dev2cd126805) tutorial to add an app entry to your account.
 2.  After adding a new app to your account, follow Apple's [View and edit app information](https://help.apple.com/app-store-connect/#/dev97865727c) tutorial to describe your new app entry. Consult the other pages under the left menu's **Enter app information** category should they apply to your app:
 
 	![enter app information](attachments/deploying-native-app/ios-enter-app-info.png)
 
-1. Follow Apple's [Uploading builds overview](https://help.apple.com/app-store-connect/#/dev82a6a9d79) to upload a build of your app to App Store Connect.
-2. Use Apple's [Upload tools guide](https://help.apple.com/app-store-connect/#/devb1c185036) to upload your *ipa*.
-3. Use Apple's [Choose the build before you submit to review](https://help.apple.com/app-store-connect/#/dev7cbda8c55) to select the build which you will submit to App Review.
-4.  Publish your app by following Apple's [Overview of publishing an app](https://help.apple.com/app-store-connect/#/dev34e9bbb5a) and the subsequent documents in the left menu's **Publish on the App Store** category:
+3. Follow Apple's [Uploading builds overview](https://help.apple.com/app-store-connect/#/dev82a6a9d79) to upload a build of your app to App Store Connect.
+4. Use Apple's [Upload tools guide](https://help.apple.com/app-store-connect/#/devb1c185036) to upload your *ipa*.
+5. Use Apple's [Choose the build before you submit to review](https://help.apple.com/app-store-connect/#/dev7cbda8c55) to select the build which you will submit to App Review.
+6.  Publish your app by following Apple's [Overview of publishing an app](https://help.apple.com/app-store-connect/#/dev34e9bbb5a) and the subsequent documents in the left menu's **Publish on the App Store** category:
 
 	![publish on the app store](attachments/deploying-native-app/ios-publishing-an-app.png)
 

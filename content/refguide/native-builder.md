@@ -340,7 +340,7 @@ If your native template is not the latest version, synchronize your repository w
 
 ### 7.2 App Center Errors
 
-**Invalid API Token** — Your API token is invalid. Follow the [App Center Token](/howto/mobile/-deploying-native-app#appcenter-token) section in *How to Deploy Your First Mendix Native App* and provide the API token to Native Builder.
+**Invalid API Token** — Your API token is invalid. Follow the [App Center Token](/howto/mobile/deploying-native-app#appcenter-token) section in *How to Deploy Your First Mendix Native App* and provide the API token to Native Builder.
 
 **Unable to Configure Build:{explanation}** — Something went wrong while communicating with App Center. Verify your connection, check that App Center is available, and try running Native Builder again.
 

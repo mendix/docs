@@ -52,19 +52,27 @@ Here is how an SVG with the `fill` property looks:
 
 ### 4.1 Coloring SVG Icons
 
-Icons can only be set for buttons and bottom bar items. For most icon collections you download, your SVG will automatically conform to its corresponding button's text color. This is because SVGs use the `currentColor` value to determine their color from context. 
+Icons can only be set for buttons and bottom bar items. When you integrate an SVG icon into a button or bottom bar item, you will have to set the SVG's color and styling yourself.
 
-Take the following SVG as an example:
+For example, the following code:
 
 ```svg
-<svg viewBox="0 0 100 100">
-    <rect x="10" y="10" width="80" height="80" fill="currentColor"/>
-</svg>
+export const DemoButton = {
+	container: {
+		backgroundColor: 'green'
+	},
+	caption: {
+		color: 'orange'
+	},
+	icon: {
+		color: 'blue'
+	}
+}
 ```
 
-If this SVG's button text was blue, its `currentColor` value would make the SVG blue as well. That could look like this:
+Would produce the following button and SVG:
 
-INSERT IMAGE
+![blue svg](attachments/native-svg/blue-svg.png)
 
 ## 5 Using SVGs in Pluggable Native Widgets
 
@@ -83,7 +91,21 @@ export const PluggableWidget = () => (
 
 Here is an example of using the `Icon` component:
 
-INSERT EXAMPLE CODE
+```jsx
+import { createElement } from "react";
+import { Icon } from "mendix/components/native/Icon";
+
+export const PluggableWidget = () => (
+    <Icon 
+        icon={{
+            type: "image",
+            iconUrl: "PUT_SOURCE_HERE"
+        }}
+        size={20}
+        color="blue"
+    />
+);
+```
 
 If you want to use SVG elements directly in your pluggable widget, see the [react-native-svg](https://github.com/react-native-community/react-native-svg) library.
 

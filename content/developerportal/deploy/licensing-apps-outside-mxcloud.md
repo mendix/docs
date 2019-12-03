@@ -21,7 +21,7 @@ The app will check for a license each time it is started.
 
 ## 2 Obtaining a Mendix License
 
-For all deployment options, you will need to obtain a Mendix license from Mendix support. 
+You can obtain a Mendix license from Mendix support. 
 
 If you need a *Subscription Secret* to deploy to SAP Cloud Platform or IBM Cloud, you will need to create a ticket with [Mendix Support](https://support.mendix.com).
 

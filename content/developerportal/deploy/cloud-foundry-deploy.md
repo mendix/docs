@@ -35,7 +35,7 @@ For more information on running Mendix apps on Cloud Foundry, see the [Mendix Cl
 
 ### 1.1 Cloud Foundry on SAP and IBM
 
-Cloud Foundry providers like SAP and IBM are made available within the Mendix Developer Portal. It is recommended that you use the Developer Portal deploying your application to these clouds. See below detailed documentation.  
+Cloud Foundry providers like SAP and IBM are made available within the Mendix Developer Portal. It is recommended that you use the Developer Portal for deploying your application to these clouds. See the detailed documentation for the following targets:  
 
 * [SAP Cloud Platform](sap-cloud-platform)
 * [IBM Cloud](ibm-cloud)
@@ -144,7 +144,7 @@ Once you have configured the database, you can deploy your app, provided there a
 
 FileDocuments in your application (for example, binary objects such as images) are not stored in the database. If you use them in your app, and want them to persist between sessions, they need to be stored in persistent file storage.
 
-This is a service which you need to attach to your application in the same way as the database, above. For supported cloud file storage services see the [Mendix System Requirements](../../refguide/system-requirements).
+This is a service which you need to attach to your application in the same way as the database, above. For supported cloud file storage services see the [Mendix System Requirements](/refguide/system-requirements).
 
 {{% alert type="info" %}}
 Some trial accounts may not include object storage. 

@@ -63,7 +63,7 @@ todo: which platforms?
 
 ### 5.1 Customizing Android todo: android what? Android app?
 
-1. Change `android/app/build.gradle`s with following additions
+1. Add the following code to *android/app/build.gradle*:
 
 ```diff
 @@ -101,6 +101,10 @@ dependencies {
@@ -80,7 +80,7 @@ todo: which platforms?
 2. Add [todo: add should be move?]the *google-services.json* file you downloaded inside *android/app* so it [todo: what's it? the code? the folder?] will look like *android/app/google-services.json*.
 
 3. Change *android/app/src/main/AndroidManifest.xml*
-We will be testing our implementation against local mendix instance, that means we wont using `https` which means we have to add `android:usesCleartextTraffic="true"` please remove this change afterwards.
+We will be testing our implementation against local mendix instance, that means we wont using `https` which means we have to add `android:usesCleartextTraffic="true"` please remove this change afterwards. [todo: clarify this info, give a clear instruction]
 
 ```diff
 --- a/android/app/src/main/AndroidManifest.xml
@@ -129,7 +129,8 @@ We will be testing our implementation against local mendix instance, that means 
  </manifest>
 ```
 
-4. Change `android/app/src/main/java/com/mendix/nativetemplate/MainApplication.java`
+4. Change *android/app/src/main/java/com/mendix/nativetemplate/MainApplication.java*:
+
 ```diff
  import fr.greweb.reactnativeviewshot.RNViewShotPackage;
  import io.invertase.firebase.RNFirebasePackage;
@@ -154,7 +155,9 @@ We will be testing our implementation against local mendix instance, that means 
              new RNCameraPackage(),
              new CalendarEventsPackage(),
 ```
-- Change `android/build.gradle`
+
+5. Change *android/build.gradle*:
+
 ```diff
         }
      }
@@ -167,11 +170,10 @@ We will be testing our implementation against local mendix instance, that means 
      }
 ```
 
-5. Change the `android/app/src/main/res/raw/runtime_url` and add your local ip
-6. Commit and push changes to master. This will trigger an Appcenter build. Or you can run it locally.
+6. Open *android/app/src/main/res/raw/runtime_url* and add your local IP address. [todo: where?]
+7. Commit and push your changes to master. This will either trigger an App Center build, or you can run it locally.
 
-
-### 5.2 Customizing IOS part
+### 5.2 Customizing iOS [todo: customize what?]
 
 
 {{% alert type="info" %}}

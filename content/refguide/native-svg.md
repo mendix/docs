@@ -56,7 +56,7 @@ Icons can only be set for buttons and bottom bar items. When you integrate an SV
 
 For example, the following code:
 
-```svg
+```jsx
 export const DemoButton = {
 	container: {
 		backgroundColor: 'green'

@@ -38,6 +38,7 @@ This defines a property's type. A `type` must be one of the following:
 * Component Properties
 	* [icon](#icon)
 	* [image](#image)
+	* [widgets](#widgets)
 * Dynamic Properties
 	* [expression](#expression)
 	* [textTemplate](#texttemplate)
@@ -299,14 +300,18 @@ The widgets property allows a user to place multiple widgets inside a pluggable 
 This property type was introduced in Mendix 8.3.
 {{% /alert %}}
 
-#### 3.1.1 XML Attributes
+{{% alert type="warning" %}}
+Some widgets are not yet supported inside pluggable widgets. Placing unsupported widgets inside a pluggable widget results in a consistency error in Studio and Studio Pro.
+{{% /alert %}}
+
+#### 3.3.1 XML Attributes
 
 | Attribute  | Required | Attribute Type | Description                                                                                                                                                          |
 | ---------- | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `type`     | Yes      | String         | Must be `widgets`                                                                                                                                                       |
 | `key`      | Yes      | String         | See [key](#key) |
 | `required` | No       | Boolean        | Whether a user must provide at least one widget. `true` by default                                                                                                |
-#### 3.1.2 Studio Pro UI
+#### 3.3.2 Studio Pro UI
 
 When the component is defined as follows:
 

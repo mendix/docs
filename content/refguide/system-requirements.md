@@ -82,6 +82,10 @@ Current support:
 * PostgreSQL 9.5, 9.6, 10, 11
 * [SAP HANA](saphana) 2.00.040.00.1545918182
 
+{{% alert type="warning" %}}
+Each app should have its own database. Mendix apps cannot share data by sharing the same database. 
+{{% /alert %}}
+
 ### 5.4 Java
 
 When running Mendix on a server, you will need Java Runtime Environment (JRE) 11. To download an OpenJDK distribution from AdoptOpenJDK, see [AdoptOpenJDK Installation](https://adoptopenjdk.net/installation.html). To download a commercial Oracle distribution, see [Java SE Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
@@ -127,7 +131,7 @@ MxBuild is a Windows and Linux command-line tool that can be used to build a Men
 * Mono v5.20.x or .NET v4.7.2
 * JDK 11
 
-## mx Command-Line Tool {#mxtool}
+## 9 mx Command-Line Tool {#mxtool}
 
 The **mx** command-line tool is a Windows and Linux command-line tool that can be used to do useful things with your Mendix app project. For more information, see [mx Command-Line Tool](mx-command-line-tool).
 

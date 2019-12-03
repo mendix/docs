@@ -26,19 +26,11 @@ Page template properties are described in the sections below.
 
 ## 3 Common Properties
 
-{{% snippet file="refguide/document-name-property.md" %}}
+{{% snippet file="refguide/common-section-link.md" %}}
 
-{{% snippet file="refguide/documentation-property.md" %}}
+## 4 Designer Properties
 
-{{% snippet file="refguide/document-class-property.md" %}}
-
-{{% snippet file="refguide/style-property.md" %}}
-
-## 4 Design Properties
-
-{{% snippet file="refguide/canvas-width-property.md" %}}
-
-{{% snippet file="refguide/canvas-height-property.md" %}}
+{{% snippet file="refguide/designer-properties.md" %}}
 
 ## 5 General Properties
 
@@ -56,13 +48,11 @@ Depending on the context in which a page is created, the user is presented with 
 
 Value | Description
 --- | ---
-Creating new pages | The page template is available when creating new pages from most contexts, such as from the Project Explorer.
+Creating new pages *(default)* | The page template is available when creating new pages from most contexts, such as from the Project Explorer.
 Generating edit pages | The page template is available when a user generates a new page from a new or edit button.
 Generating select pages | The page templates is available when the user generates a new page from a select button.
 
 This setting may also place extra restrictions on the template. Page templates intended as new or edit pages require exactly one top-level data view be present. Page templates intended as Select pages require exactly one list view, data grid, or template grid. 
-
-*Default value:* Creating new pages
 
 ### 5.4 Layout Type
 

@@ -16,7 +16,7 @@ Category | Description
 Platform support | Mendix supports all the content in this category when you are equipped with an SLA (**Platform**, **Gold**, or **Platinum**) with Mendix. Content in this category is proactively incorporated into Mendix R&D test cycles as part of our platform release management. Please note that this category replaces the former **Extended** category, which has been deprecated. 
 Community support | Content is provided as-is by members of the Mendix community, and support depends on the availability and effort of the owner. 
 
-## 2 Support Category &Feedback Process
+## 2 Support Category & Feedback Process
 
 We are always curious about and grateful for your feedback. The way you communicate your feedback to us depends on the support category of the content.
 

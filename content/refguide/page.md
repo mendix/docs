@@ -47,7 +47,8 @@ To create a new page, do the following:
 
 1.  In the [Project Explorer](project-explorer), right-click the module or a folder you want to create a page in and select **Add page**:
 
-    ![](attachments/page/add-page.png)
+    {{% image_container width="350" %}}![](attachments/page/add-page.png)
+    {{% /image_container %}}
 
 2.  In the **Create Page** dialog window, fill in the **Page name** and select a **Navigation layout**.
 
@@ -72,24 +73,25 @@ The way you can add an element on a page depends on a mode you are editing your 
 
 In **Structure mode**, there are several ways to add an element on a page:
 
-1.  Through the **Toolbox**: <br/>
-    a. Open the **Toolbox** and select **Widgets** or **Building blocks** tab there. <br/>
+1.  Through the **Toolbox**:
+
+    1. Open the **Toolbox** and select **Widgets** or **Building blocks** tab there.
     
-    ![](attachments/page/toolbox.png)<br/>
+        ![](attachments/page/toolbox.png)
+      
+    2. Select an element you would like to add and drag and drop this element on your page.
    
-    c. Select an element you would like to add and drag and drop this element on your page. <br/>
-   
-2. Though the menu at the top of the page: <br/>
+2. Though the menu at the top of the page:
 
-    a.  Do one of the following:<br/>
+    1. Do one of the following:
 
-    ​	i. Select frequently-used widgets (a data view, a data grid, a template grid, or a list view).<br/>
+        i. Select frequently-used widgets (a data view, a data grid, a template grid, or a list view).
 
-    ​	ii. Click **Add widget**  or **Add building block**, find an element in a list and click **Select**.<br/>
+        ii. Click **Add widget**  or **Add building block**, find an element in a list and click **Select**.
 
-    ​	![](attachments/page/top-menu.png)
-
-    b. Click a drop-zone on a page to position an element.  <br/>
+        ![](attachments/page/top-menu.png)
+        
+    2. Click a drop-zone on a page to position an element.
 
 3. By right-clicking a drop-zone:<br/>
 
@@ -97,7 +99,8 @@ In **Structure mode**, there are several ways to add an element on a page:
 
     b. Select between adding a widget or a building block.<br/>
 
-    ![](attachments/page/adding-widget-in-drop-zone.png)<br/>
+    {{% image_container width="400" %}}![](attachments/page/adding-widget-in-drop-zone.png)
+    {{% /image_container %}}<br/>
 
     c. Select an element you would like to add and confirm your choice by clicking **Select**.
 
@@ -116,7 +119,10 @@ To view properties of an element, do one of the following:
 
 ### 2.6 Arranging Elements on a Page {#arrange-elements}
 
-To cut/copy/paste you can use <kbd>Ctrl</kbd> + <kbd>Z</kbd> /  <kbd>Ctrl</kbd> + <kbd>C</kbd> / <kbd>Ctrl</kbd> + <kbd>V</kbd> or  <kbd>Cmd</kbd> + <kbd>Z</kbd> /  <kbd>Cmd</kbd> + <kbd>C</kbd> / <kbd>Cmd</kbd> + <kbd>V</kbd>.
+To cut/copy/paste you can use the following shortcuts:
+
+* <kbd>Ctrl</kbd> + <kbd>Z</kbd> /  <kbd>Ctrl</kbd> + <kbd>C</kbd> / <kbd>Ctrl</kbd> + <kbd>V</kbd>  
+* <kbd>Cmd</kbd> + <kbd>Z</kbd> /  <kbd>Cmd</kbd> + <kbd>C</kbd> / <kbd>Cmd</kbd> + <kbd>V</kbd>
 
 {{% alert type="info" %}}
 

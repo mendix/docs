@@ -19,7 +19,7 @@ Menu bars can go two levels deep, that means menu items can have sub-items. For 
 
 An example of menu bar properties is represented in the image below:
 
-{{% image_container width="350" %}}![](attachments/menu-widgets/menu-bar-properties.png)
+{{% image_container width="300" %}}![](attachments/menu-widgets/menu-bar-properties.png)
 {{% /image_container %}}
 
 Menu bar properties consist of the following sections:
@@ -44,16 +44,14 @@ The items that are shown in the menu widget are determined by the **Menu source*
 
 | Value              | Description                                                  |
 | ------------------ | ------------------------------------------------------------ |
-| Project navigation | The menu items are taken from one of profiles defined in the [**Navigation**](navigation#profiles). |
+| Project navigation  *(default)* | The menu items are taken from one of profiles defined in the [**Navigation**](navigation#profiles). |
 | Menu document      | The menu items are taken from a [menu](menu) document.       |
-
-_Default value:_ Project navigation
 
 #### 2.3.2 Profile 
 
 Only available when the [menu source](#menu-source) is set to **Project navigation**. The **Profile** property specifies what [navigation profile](navigation#profiles) is used for the widget. 
 
-_Default value:_ Responsive
+Default: *Responsive*
 
 #### 2.3.3 Menu 
 

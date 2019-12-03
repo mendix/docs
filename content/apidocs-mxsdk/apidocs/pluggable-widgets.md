@@ -39,7 +39,7 @@ Pluggable widgets are the successor to [Custom widgets](/howto/extensibility/wid
 | Use glyph icons                                                   | [Yes](property-types-pluggable-widgets#icon)         | No                                                                    |
 | Show input label                                                  | [Yes](property-types-pluggable-widgets#label)        | No                                                                    |
 | Trigger an action on change of attribute                          | [Yes](property-types-pluggable-widgets#attribute)    | No                                                                    |
-| Widgets can contain other widgets                                 | Planned                                              | No                                                                    |
+| Widgets can contain other widgets                                 | [Yes](property-types-pluggable-widgets#widgets)      | No                                                                    |
 
 ## 3 Client Component
 
@@ -148,13 +148,13 @@ In Mendix Studio Pro, the widget described above would look like this:
 
 ![basic progress card](attachments/pluggable-widgets/basic-widget-progress-card.png)
 
-### 5.3 Help Page {#help}
+#### 5.2.1 Help Page {#help}
 
-Provide additional help information to your users with the **Help** button widget, assigned to the <kbd>{F1}</kbd> shortcut key. This button is positioned in the left-bottom corner of the popup dialog:
+You can provide additional help information to widget users by using a help page. If you do so, a widget configuration screen will get a **Help** button, assigned to the <kbd>{F1}</kbd> shortcut key, that opens a specified page. This button is positioned in the left-bottom corner of the popup dialog:
 
 ![basic widget](attachments/pluggable-widgets/widget-dialog-help-button.png)
 
-A URL can be provided through the `helpUrl` property after the `description` tag:
+A URL of a help page can be provided through the `helpUrl` property after the `description` tag:
 
 ```xml
     <helpUrl>https://appstore.home.mendix.com/link/app/105695/</helpUrl>
@@ -166,7 +166,7 @@ For more complex help pages you can link to a markdown page. For security reason
 * Host name must end with *.mendix.com* or *github.com*
 * If host name is *github.com* the full URL must end with *.md*
 
-### 5.4 Widget Properties Definition {#properties-definition}
+### 5.3 Widget Properties Definition {#properties-definition}
 
 This section is represented by the `properties` tag in the widget XML file. It describes widget properties used in Studio and Studio Pro to configure the widget. Here is an example of a properties definition section for a widget which shows a progress card for a dashboard:
 
@@ -251,7 +251,7 @@ This is how the property group structure is represented in Studio Pro:
 
 When properties are shown in a dialog box, first-level groups (**General** and **Visual**) are represented as tabs. Second-level groups (**Main**, **Action** and **Progress bar**) are represented as boxes. When properties are shown in a pane, first-level groups are ignored and second-level groups are shown as categories.
 
-Note that the **Common** and **Appearance** tabs are added to your widget configuration automatically. These tabs contain properties applicable to all widgets: [**Name**](/refguide/common-widget-properties#name), [**Class**](/refguide/common-widget-properties#class), [**Style**](/refguide/common-widget-properties#style), and **Design Properties**.
+Note that the **Common** and **Appearance** tabs are added to your widget configuration automatically. These tabs contain properties applicable to all widgets: [Name](/refguide/common-widget-properties#name), [Class](/refguide/common-widget-properties#class), [Style](/refguide/common-widget-properties#style), and **Design Properties**.
 
 ## 7 Widget Property
 

@@ -18,7 +18,7 @@ If you start typing in any empty container, Studio Pro will automatically genera
 
 An example of text properties is represented in the image below:
 
-{{% image_container width="350" %}}![Text Properties](attachments/common-widgets/text-properties.png)
+{{% image_container width="300" %}}![Text Properties](attachments/common-widgets/text-properties.png)
 {{% /image_container %}}
 
 Text properties consist of the following sections:
@@ -98,11 +98,9 @@ The render mode determines how the text will be displayed.
 
 | Value     | Description |
 | --------- | ----------- |
-| Text      | The text will be rendered inline with the previous/next texts on a page (`<span>` tag in HTML). |
+| Text  *(default)*      | The text will be rendered inline with the previous/next texts on a page (`<span>` tag in HTML). |
 | Paragraph | The text will be rendered as a separate paragraph (`<p>` tag in HTML). |
 | Heading 1 - Heading 6 | The text will be rendered as a selected heading (for example, `<h1>` tag in HTML). **Heading 1** is the largest type of heading, **Heading 6** is the smallest one. |
-
-_Default value:_ Text
 
 ### 2.4 Visibility Section {#visibility}
 

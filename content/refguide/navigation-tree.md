@@ -19,7 +19,7 @@ The menu structure of a navigation tree can have three levels, that means that m
 
 An example of navigation tree properties is represented in the image below:
 
-{{% image_container width="350" %}}![Navigation Tree Properties](attachments/menu-widgets/navigation-tree-properties.png)
+{{% image_container width="300" %}}![Navigation Tree Properties](attachments/menu-widgets/navigation-tree-properties.png)
 {{% /image_container %}}
 
 Navigation tree properties consist of the following sections:
@@ -44,16 +44,14 @@ The items that are shown in the menu widget are determined by the **Menu source*
 
 | Value              | Description                                                  |
 | ------------------ | ------------------------------------------------------------ |
-| Project navigation | The menu items are taken from one of profiles defined in the [**Navigation**](navigation). |
+| Project navigation *(default)*  | The menu items are taken from one of profiles defined in the [**Navigation**](navigation). |
 | Menu document      | The menu items are taken from a [menu](menu) document.       |
-
-_Default value:_ Project navigation
 
 #### 2.3.2 Profile 
 
 Only available when the [menu source](#menu-source) is set to **Project navigation**. The **Profile** property specifies what [navigation profile](navigation#profiles) is used for the widget. 
 
-_Default value:_ Responsive
+Default: *Responsive*
 
 #### 2.3.3 Menu 
 

@@ -85,7 +85,7 @@ In the previous section you have set up a basic data structure and created some 
 
 You should see a microflow like this:
 
-    ![](attachments/18448686/18581087.png)
+![](attachments/18448686/18581087.png)
 
 ## 4 Iterate Over a List of Objects
 

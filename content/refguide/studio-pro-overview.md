@@ -61,105 +61,11 @@ The documents you view and edit are shown in tabs. You can have a number of tabs
 
 ## 5 View Menu {#view}
 
-### 5.1 Dockable Window Pane Menu Items {#dockable-panes}
-
-Studio Pro supports a number of dockable window panes. You can close some panes to just show the ones you need at the moment, but you can always reopen them via the **View** menu. 
-
-#### 5.1.1 Changes {#changes}
-
-For [Team Server](/developerportal/develop/team-server) app projects, this pane shows the local changes to the app project since the last commit. You can commit changes, update to the latest revision, and view the history from here. 
-
-This pane has two levels, so when you zoom into a changed document, you can review all the changes within that document without going back and forth between levels. The zoomed-in level of the pane is split into two grids, with elements on the left and properties on the right. Selecting an element on the left presents the changed properties on the right. To go back to the list of changed documents, click **Back**.
-
-![](attachments/studio-pro-overview/changes.gif)
-
-#### 5.1.2 Connector
-
-This pane displays elements that can be connected to the currently selected element. For example, when a button is a selected, the **Connector** shows microflows that you can drag onto the button to connect them.
-
-#### 5.1.3 Console {#console}
-
-This pane displays the output of the [Mendix Runtime](runtime) while running an application.
-
-#### 5.1.4 Documentation
-
-This pane dispalys the documentation for the currently selected element (if applicable).
-
-#### 5.1.5 Error List
-
-This pane displays the [errors](consistency-errors) and warnings that exist in your app project.
-
-#### 5.1.6 Find Results
-
-This pane displays the results of the latest find action. You can search for text, usages of an element (for example, an attribute), and unused items.
-
-There are two **Find Results** panes. If you lock the results of the first pane, the second one is used for subsequent find operations until you unlock the first one.
-
-#### 5.1.7 Project Explorer
-
-The [Project Explorer](project-explorer) pane displays the complete structure of your app project, including all the documents inside the modules. By default, the active document is always selected, so you can quickly see where the document you are editing is in the tree. You can change this behavior in **Edit** > [Preferences](preferences-dialog).
-
-#### 5.1.8 Properties
-
-This pane displays the properties of the currently selected element. This is where a lot of editing in Studio Pro takes place.
-
-#### 5.1.9 Stories
-
-For [Team Server](/developerportal/develop/team-server) app projects, this pane shows the [stories](/developerportal/collaborate/stories) of the current [Sprint](/developerportal/develop/planning-development)
-
-#### 5.1.10 Toolbox
-
-This pane displays the tools that can be used in the current editor. For example, in a page you can insert all kinds of widgets (for example, [data widgets](data-widgets)) by dragging them from the **Toolbox** to your page.
-
-#### 5.1.11 Debug Windows
-
-For more information on debugging, see [How to Debug Microflows](/howto/monitoring-troubleshooting/debug-microflows).
-
-##### 5.1.11.1 Breakpoints
-
-This pane shows all the breakpoints in your app project. You can enable and disable breakpoints from here.
-
-##### 5.1.11.2 Debugger
-
-This tool can be used to debug your application.
-
-##### 5.1.11.3  Variables
-
-In this pane, you can view the current values of variables, lists, and objects when debugging your application.
-
-### 5.2 Other View Menu Items {#other-view}
-
-| Menu Item | Description | Shortcut Key |
-| --- | --- | --- |
-| **Full Screen** | Hides the title bar and makes the window fill the entire screen. This version of **Full Screen** was introduced in Studio Pro [8.3.0](/releasenotes/studio-pro/8.3#830); in previous versions, the **Full Screen** mode closed all dockable window panes. | <kbd>F11</kbd> |
-| **Distraction Free Mode** | Same as the **Full Screen** mode above, but also closes all dockable window panes. This was introduced in Studio Pro [8.3.0](/releasenotes/studio-pro/8.3#830). | <kbd>Shift</kbd> + <kbd>F11</kbd> |
-| **Reset Layout** | Resets the layout of Studio Pro to factory defaults. |   |
+The **View** menu allows you to view dockable panes, to enable the full screen mode, and reset the project layout. For more information on the **View** menu and its items, see [View Menu](view-menu).
 
 ## 6 Project Menu
 
-| Menu Item | Description | Shortcut Key |
-| --- | --- | --- |
-| **Update** | Updates the local app to the latest revision that was committed to the version control server. |  |
-| **Commit** | Commits all local changes made to the app since the previous commit to the version control server. |  |
-| **Show Changes on Disk** | Opens a dialog that shows which files on disk have been changed since the last commit. |  |
-| **More Versioning** > **History** | Shows the history of committed revisions of the app. |   |
-| **More Versioning** > **Download from Version Control Server** | Downloads an app from the Team Server or another SVN server. This creates a local working copy of the app for development. |   |
-| **More Versioning** > **Upload to Version Control Server** | Uploads a local app to a new or existing Team Server repository, or to another SVN server. This is only possible if the app is not yet version controlled. |   |
-| **More Versioning** > **Manage Branch Lines** | Manages branch lines on the version control server that can be used to develop functionality separately from the main line. |   |
-| **More Versioning** > **Merge Changes Here** | Merges changes that were committed in another development line to the development line that is currently opened in Studio Pro. |   |
-| **More Versioning** > **Reverse Merge Changes** | Allows locally rolling back changes that were committed to the version control repository. These local changes can then be committed as a new revision. |   |
-| **More Versioning** > **Add Snapshot of Data** | Creates a snapshot of the built-in database and adds that to the version control repository. This is especially useful for adding test data to your app or for demo purposes. |   |
-| **Tools** > **Batch update button icons** | Opens the **Batch Update Button Icons** dialog box so that you can configure the batch update of many button icons at once.  |   |
-| **Tools** > **Batch update layouts** | Opens the **Batch Update Layouts** dialog box so that you can configure the batch update of the layouts of many pages at once.  |  |
-| **Tools** > **Batch convert Split panes** | Opens the **Batch Convert Split Panes** dialog box so that you can configure the batch update. |  |
-| **Tools** > **Update Widgets** | Presents the current versions of the widgets you are using in your app project, what the latest versions of the widgets are, and an update option. | |
-| **Tools** > **Check Widgets** | Checks that the widgets you have implemented in the app project have been built correctly. | |
-| **Synchronize Project Directory** | If necessary, this action creates folders inside the project directory (resources, widgets, theme, etc.). It also reads the widget packages that are currently inside the widgets folders. For example, if you add widgets to the widgets folder, you needs to synchronize the project directory for them to appear in the **Toolbox**. | <kbd>F4</kbd> |
-| **Show Project Directory in Explorer** | Shows the directory that contains the project file (*.mpr*) and other assets such as resources and Java actions in Windows Explorer. |   |
-| **Deploy for Eclipse** | Deploys the project to the deployment directory. The Java stubs are generated so that you can start editing them in Eclipse. This action does not compile the Java actions. Use this if you are writing Java actions and you want to compile and debug them through Eclipse. | <kbd>F6</kbd> |
-| **Create Deployment Package** | Creates a Mendix Deployment Archive package (*.mda*) that contains all necessary files to run the project. This can be used if you want to deploy your project on a Windows server or on a custom Mendix Cloud. | <kbd>F7</kbd> |
-| **Clean Deployment Directory** | Cleans the deployment directory. |   |
-| **Deploy to Licensed Cloud Node** | Deploys the latest committed revision of a Team Server project to the associated Mendix Cloud node. | <kbd>Ctrl</kbd> + <kbd>F5</kbd> |
+In the **Project** menu, you can view and/or manipulate settings that are connected to the version control or deployment. For more information on the **Project** menu, see [Project Menu](project-menu).
 
 ## 7 Run Menu
 
@@ -172,7 +78,7 @@ In this pane, you can view the current values of variables, lists, and objects w
 | **Stop** | Stops the currently running project. | <kbd>Shift</kbd> + <kbd>F5</kbd> |
 | **onfiguration** | Sets the configuration level (**Default**). | |
 | **efault log level** | Allows setting the default log level before running the project locally. The options are **Trace**, **Debug**, **Info** (default), **Warning**, **Error**, **Critical**. |   |
-| **Debug** | Allows you to connect the [Debugger](#dockable-panes). | |
+| **Debug** | Allows you to connect the [Debugger](view-menu#debugger). | |
 | **Responsive Browser** | Shows the web client for the currently running project in the browser. | <kbd>F9</kbd> |
 | **Tablet Browser** | Shows the tablet mobile client for the currently running project in the browser. | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F9</kbd> |
 | **Phone Browser** | Shows the mobile client for the currently running project in the browser. | <kbd>Ctrl</kbd> + <kbd>F9</kbd> |

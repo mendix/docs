@@ -25,7 +25,6 @@ Place the widget in the context of an object that has a value attribute.
 
 On the **General** tab, specifying the **Value attribute**  is optional. If this is not set, a static **Default value** should be specified. 
 
-
 ## 3 Developing This App Store Component
 
 We are actively maintaining this widget. Please report any issues or suggestions for improvement at [mendixlabs/badge](https://github.com/mendixlabs/badge/issues).

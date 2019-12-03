@@ -63,7 +63,7 @@ When consuming a WSDL that uses encoding, turning on validation will lead to a c
 
 Schema validation is not supported when you configure the [consumed web service](consumed-web-service) to send binary data as attachments.
 
-_Default value:_ No
+Default: *No*
 
 ### 2.7 Proxy Configuration
 
@@ -129,7 +129,7 @@ This option can be used when all children of the XML element of the request part
 
 If a primitive request parameter is both optional and nillable, you need to select whether or not to send the empty values.
 
-_Default:_ do not send the empty values.
+*Default value*::_ do not send the empty values.
 
 {{% /alert %}}
 

@@ -48,7 +48,7 @@ Most properties of a sign-in button are the same as properties of button widgets
 **Validation message widget** is a specific property of a sign-in button. It defines the [Validation message widget](validation-message) that displays authentication failure messages on a page. If no widget is selected in this property, authentication failure messages will be displayed in a pop-up window:
 ![Validation Failure](attachments/authentication-widgets/validation-failure.png)
 
-*Default value*: None
+Default: *None*
 
 ### 2.4 Visibility Section {#visibility}
 

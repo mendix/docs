@@ -54,9 +54,7 @@ This property defines whether the constant is accessible from client-side expres
 | Option | Description |
 | --- | --- |
 | Yes | The constant will be sent to the client and will be accessible from client-side expressions |
-| No | The constant will not be sent to the client and will be only accessible from [microflow](microflows) expressions |
-
-_Default value:_ No
+| No *(default)* | The constant will not be sent to the client and will be only accessible from [microflow](microflows) expressions |
 
 {{% alert type="warning" %}}
 When a constant is exposed to the client, Mendix Runtime sends its value to the client so that in addition to microflow expressions, it will also be accessible from nanoflows and page expressions. This means that you should not use sensitive data or secrets such as passwords when a constant is exposed to the client.

@@ -38,7 +38,7 @@ Indicates whether the header and/or footer are also shown on the first page.
 You must use a page break widget to indicate you're no longer on the first page. This cannot be calculated while generating content.
 {{% /alert %}}
 
-*Default value*: True.
+Default: *True.*
 
 ### 2.7 Enable Header
 

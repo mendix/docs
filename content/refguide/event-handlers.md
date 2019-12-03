@@ -67,7 +67,7 @@ This is only relevant if the [Moment](#moment) is set as **Before**.
 
 If this option is enabled, the event handler raises an error when the microflow returns false. You can then use error handling to detect whether the event handler returned false. This makes **Before** + **Commit** event handlers more like native validation. If this option is disabled, a **Before** + **Commit** event handler can only stop the commit from happening, but the rest of the microflow will still be executed.
 
-_Default value:_ Yes
+Default: *Yes*
 
 ## 3 Read More
 

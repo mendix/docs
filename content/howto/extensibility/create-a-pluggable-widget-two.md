@@ -606,7 +606,7 @@ Reorganize the `properties` section in *TextBox.xml* to make the properties look
 
 ## 4 Read More
 
-* [Build aPluggable Web Widget: Part 1](create-a-pluggable-widget-one)
+* [Build a Pluggable Web Widget: Part 1](create-a-pluggable-widget-one)
 * [Pluggable Widgets API](/apidocs-mxsdk/apidocs/pluggable-widgets)
 * [Client APIs Available to Pluggable Widgets](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets)
 * [Pluggable Widget Property Types](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets)

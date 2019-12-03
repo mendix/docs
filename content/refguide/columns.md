@@ -12,7 +12,8 @@ Grid columns allow you to set properties for a [data grid](data-grid) or [refere
 
  An example of grid column properties is represented in the image below: 
 
-![](attachments/data-widgets/column-properties.png)
+{{% image_container width="250" %}}![](attachments/data-widgets/column-properties.png)
+{{% /image_container %}}
 
 Grid column properties consist of the following sections:
 
@@ -46,13 +47,13 @@ Only for Attributes of the Enumeration Type. A column connected to an attribute 
 
 Only for Decimal Attributes.  The precision of a value is defined the number of digits that is used to express that value. This property indicates the number of decimal places (the number of digits following the decimal point).
 
-_Default value:_ 2
+Default: *2*
 
 #### 2.3.3 Group Digits
 
 Only for Numeric Attributes. For ease of reading, numbers with many digits before the decimal separator may be divided into groups using a delimiter. This property defines whether the end-user will see these groups, or not.
 
-_Default value:_ False
+Default: *False*
 
 #### 2.3.4 Date Format
 
@@ -112,7 +113,7 @@ The aggregate caption is the text that appears in front of the computed value. T
 
 This property determines whether the tooltip page is shown as the mouse is hovered over this column. The tooltip page can be configured on the [Data grid](data-grid).
 
-_Default value:_ False
+Default: *False*
 
 ## 3 Read More
 

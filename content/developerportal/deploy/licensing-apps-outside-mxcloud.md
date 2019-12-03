@@ -21,9 +21,9 @@ The app will check for a license each time it is started.
 
 ## 2 Obtaining a Mendix License
 
-For all deployment options, apart from [IBM Cloud Portal](#ibm), you will need to obtain a Mendix license from Mendix support. See [IBM Cloud Portal](#ibm), below, for more information on how to license apps deployed to the IBM Cloud Portal.
+You can obtain a Mendix license from Mendix support. 
 
-If you need a *Subscription Secret* to deploy to SAP Cloud Platform you will need to create a ticket with [Mendix Support](https://support.mendix.com).
+If you need a *Subscription Secret* to deploy to SAP Cloud Platform or IBM Cloud, you will need to create a ticket with [Mendix Support](https://support.mendix.com).
 
 If you want to create a new licensed node in the Mendix Cloud and your contract does not allow for more licensed nodes, please contact your Customer Success Manager (CSM) first.
 
@@ -51,13 +51,13 @@ An example LicenseId is aab8a0a1-1370-467e-918d-3a243b0ae160. LicenseKey is a ve
 
 To run Mendix apps in production on the Mendix Cloud, they must be linked to a licensed node in the Mendix Cloud. This process is described in a separate document: [Licensing Mendix Cloud Apps](licensing-apps).
 
-### 3.2 SAP Cloud Platform
+### 3.2 SAP Cloud Platform & IBM Cloud
 
-To license a Mendix app on SAP Cloud Platform, you need to supply a *Subscription Secret* which is linked to your app.
+To license a Mendix app on SAP Cloud Platform or IBM Cloud, you need to supply a *Subscription Secret* which is linked to your app.
 
 You can add this subscription secret as part of creating an environment on SAP Cloud Platform. You can also add, or change, the subscription secret on the *Environment Details* page of the environment you wish to license.
 
-For more information, see [SAP Cloud Platform - deploy](sap-cloud-platform).
+For more information, see [SAP Cloud Platform - deploy](sap-cloud-platform) or [IBM Cloud](ibm-cloud).
 
 ### 3.3 Siemens MindSphere
 
@@ -111,12 +111,6 @@ To license a Mendix app on Linux, or another Unix-like operating system, you nee
 4. Activate your license on the server using the m2ee command `activate_license`.
 
 More instructions on how to do this can be found in [Unix Deployment](unix-like).
-
-### 3.8 IBM Cloud Portal{#ibm}
-
-To license a Mendix app on IBM Cloud Portal, you need to bind the [Mendix Platform Service](https://cloud.ibm.com/catalog/services/mendix-platform-service) on the IBM Cloud Portal to your app.
-
-This process needs to be done through the IBM Cloud Portal and is documented in [Mendix Platform](https://cloud.ibm.com/docs/services/Mendix-Rapid-Application-Development-Platform) in the *IBM Cloud* documentation.
 
 ## 4 Read More
 

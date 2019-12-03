@@ -1,16 +1,18 @@
 ---
-title: "Native builder push notification customization"
+title: "Use Remote Notifications"
 #category: "Native Mobile"
 #parent: "native-mobile"
 #menu_order: 11
-#description: "Instructions on how to set up native push notifications with Native builder"
+#description: "Learn how to set up remote push notifications for native apps."
 #tags: ["mobile", "push notification", "remote", "push", "notification"]
 ---
 
 ## 1 Introduction
 
+todo: delete alert at top, flesh out intro
+
 {{% alert type="info" %}}
-If you want to use local or remote push notifications with Make it Native app, only step you have to perform is [Firebase setup](#4-firebase-setup)
+If you want to use local or remote push notifications with Make it Native app, the only step you have to perform is [Firebase setup](#4-firebase-setup)
 {{% /alert %}}
 
 Setting up remote native push notifications occurs over four major steps:
@@ -19,34 +21,47 @@ Setting up remote native push notifications occurs over four major steps:
 2) Firebase setup
 3) Native Builder app customization (We need the files from firebase setup) 
 
+todo: where is the fourth step?
+
 **This how-to will teach you how to do the following:**
 
-Customize native template in order to work with push notifications.
+* Customize your native template so it can use remote push notifications
 
 ## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* How to create native app via [Native Builder](https://docs.mendix.com/howto/mobile/native-builder#1-introduction) 
-* How to work with GIT
+* Create a native app by completing [How to Deploy Your First Mendix Native App](deploying-native-app) 
+* Learn the basics of [Git](https://www.atlassian.com/git)
 
-## 3 Native Builder App Creation
+## 3 Creating a Native Builder App
 
-Please follow [Deploy Your First Mendix Native App](deploying-native-app) all the way through section `4 Preparing Your Project`. Once you finish this, you will have a generated github repo with all the files needed. Clone the generated repository to your computer to enable customizations later which will be done in section [Setting up Native Builder Customizations](#setting-up-native-builder-customizations)
+To make a native app for this how to, do the following:
 
-## 4 Firebase Setup
+1. Complete [How to Deploy Your First Mendix Native App](deploying-native-app) through the end of the *Preparing Your Project* section. Once you finish this, you will have a generated a GitHub repository with all the files you will need. 
 
-Please follow [Setting up google firebase cloud messaging server](setting-up-google-firebase-cloud-messaging-server). Add both ios and android apps. At the end you must end up with 3 files:
+2. Clone the generated repository to your computer. This will enable customizations later.
 
-- `google-services.json`
-- `GoogleService-Info.plist`
-- `yourPrivateKey.json`
+## 4 Setting up Firebase Cloud Messaging Service
+
+todo: remote notifications require firebase because xyz.
+
+To set up the Firebase cloud messaging server, complete [Setting up Google Firebase Cloud Messaging Server](setting-up-google-firebase-cloud-messaging-server), and be sure to make both an iOS and an Android app. At the end you will end up with three files:
+
+* *google-services.json*
+* *GoogleService-Info.plist*
+* *yourPrivateKey.json*
+
+todo: These files are your xyz
 
 ## 5 Setting up Native Builder Customizations
 
-Out of the box, native builder will create ios and android part of the code. We will do different customizations for different platforms.
+Out of the box, the Native Builder will create iOS and Android part of the code. Continue to implement customizations for different platforms.
 
-### 5.1 Customizing Android part
+todo: change "part of the code" to something more specific."
+todo: which platforms?
+
+### 5.1 Customizing Android todo: android what? Android app?
 
 1. Change `android/app/build.gradle`s with following additions
 
@@ -62,9 +77,9 @@ Out of the box, native builder will create ios and android part of the code. We 
  }
 ```
 
-2. add downloaded `google-services.json` inside of `android/app` so it will look like  `android/app/google-services.json`
+2. Add [todo: add should be move?]the *google-services.json* file you downloaded inside *android/app* so it [todo: what's it? the code? the folder?] will look like *android/app/google-services.json*.
 
-3. Change `android/app/src/main/AndroidManifest.xml`
+3. Change *android/app/src/main/AndroidManifest.xml*
 We will be testing our implementation against local mendix instance, that means we wont using `https` which means we have to add `android:usesCleartextTraffic="true"` please remove this change afterwards.
 
 ```diff

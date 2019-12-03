@@ -30,7 +30,7 @@ We suggest manually removing these elements from your SVGs, or using the tools m
 
 ## 4 Styling SVGs
 
-You might want to change certain colors in your SVG, for example when making an icon. Mendix allows you to do this by setting the `fill` and `stroke` properties in image's styling. These properties will then be applied to *all* the elements inside the SVG that do not have these properties.
+You might want to change certain colors in your SVG, for example when adding an image. Mendix allows you to do this by setting the `fill` and `stroke` properties in image's styling. These properties will then be applied to *all* the elements inside the SVG that do not have these properties.
 
 Take the following SVG as an example:
 
@@ -42,17 +42,41 @@ Take the following SVG as an example:
 
 Setting the `fill` property on this image's styling will turn the rectangle (`rect` element) to the color provided. Setting the `stroke` property will result in no changes, since the `stroke` has already been set.
 
-Here is an SVG without the `fill` property:
+Here is how an SVG without the `fill` property looks:
 
 ![before](attachments/native-svg/before.png)
 
-Here is an SVG with the `fill` property:
+Here is how an SVG with the `fill` property looks:
 
 ![after](attachments/native-svg/after.png)
 
+### 4.1 Coloring SVG Icons
+
+Icons can only be set for buttons and bottom bar items. When you integrate an SVG icon into a button or bottom bar item, you will have to set the SVG's color yourself. When using an app which employs Atlas UI, by default the colors are all white. For more information on styling, see the [Native Styling reference guide](/refguide/native-styling-refguide).
+
+For example, the following code:
+
+```jsx
+export const DemoButton = {
+	container: {
+		backgroundColor: 'green'
+	},
+	caption: {
+		color: 'orange'
+	},
+	icon: {
+		color: 'blue'
+	}
+}
+```
+
+Would produce the following button and SVG:
+
+![blue svg](attachments/native-svg/blue-svg.png)
+
 ## 5 Using SVGs in Pluggable Native Widgets
 
-To use an SVG in a pluggable native widget's image property, we recommend using the provided `Image` component. This will allow a static image of any supported format to be used within your pluggable widget, including SVGs.
+To use an SVG in a pluggable native widget's image property, we recommend using the provided `Image` or `Icon` component. This will allow a static image of any supported format to be used within your pluggable widget, including SVGs.
 
 Here is an example of using the `Image` component:
 
@@ -62,6 +86,24 @@ import { Image } from "mendix/components/native/Image";
 
 export const PluggableWidget = () => (
     <Image source="PUT_SOURCE_HERE" style={{ fill: 'blue' }} />
+);
+```
+
+Here is an example of using the `Icon` component:
+
+```jsx
+import { createElement } from "react";
+import { Icon } from "mendix/components/native/Icon";
+
+export const PluggableWidget = () => (
+    <Icon 
+        icon={{
+            type: "image",
+            iconUrl: "PUT_SOURCE_HERE"
+        }}
+        size={20}
+        color="blue"
+    />
 );
 ```
 

@@ -59,9 +59,9 @@ This version only supports Mendix version 8.1.0 and upwards. If you have to stic
 ### Known Issues
 
 * In case MxBuild fails during the Native Builder process, no clear error message is given and the process continues. This will lead to the previous bundle being used, which means the latest Mendix project model changes are not applied. To mitigate this, delete the **deployment/native/bundle** folder in your Mendix project folder to ensure the previous bundle is not there anymore.
-	* Fixed in [3.0.0](#nalm-215) 
+	* Fixed in [3.0.0](#nalm-215).
 * Using more than one space in an app's name is not supported.
-	* Fixed in [3.0.0](#nalm-217) 
+	* Fixed in [3.0.0](#nalm-217).
 
 ## 1.0.0
 
@@ -75,9 +75,9 @@ This version only supports Mendix version 8.1.0 and upwards. If you have to stic
 ### Known Issues
 
 * In case MxBuild fails during the Native Builder process, no clear error message is given and the process continues. This will lead to the previous bundle being used, which means the latest Mendix project model changes are not applied. To mitigate this, delete the **deployment/native/bundle** folder in your Mendix project folder to ensure the previous bundle is not there anymore.
-	* Fixed in [3.0.0](#nalm-215) 
+	* Fixed in [3.0.0](#nalm-215).
 * Using more than one consecutive space in an app's name is not supported.
-	* Fixed in [3.0.0](#nalm-217) 
+	* Fixed in [3.0.0](#nalm-217).
 
 ## 0.1.0
 

@@ -103,6 +103,8 @@ To address the warning, complete the following steps (you must do them for both 
 
 You have successfully prepared your app, and in the next section will make a build from it.
 
+In case you run into errors while running the prepare command, try running the CLI as administrator.
+
 ## 5 Making Your First Build
 
 To initiate your first build in the Native Builder, you will execute a command in CLI with various parameters included. For more information on parameters, see the [Commands](/refguide/native-builder#commands) section in the *Native Builder* guide. While some parameters are optional, two are required: the `--project-name` parameter and the `--build-number` parameter.
@@ -129,6 +131,8 @@ This command does the following:
 
 * Generates a JavaScript deployment bundle and images of the Native App from Studio pro
 * Creates a new build branch on GitHub and starts a build process on App Center
+
+In case the build command fails with remarks on version conflicts on certain java classes, try clearing your deployment directory and do an new build from the modeler, before rerunning the build command.
 
 ### 5.1 Signing a Build {#signing-a-build}
 

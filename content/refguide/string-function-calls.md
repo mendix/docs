@@ -112,13 +112,13 @@ returns:
 or, with a third parameter:
 
 ```java
-substring('thisismystring', 6,2)
+substring('mendixapp', 6,3)
 ```
 
 returns:
 
 ```java
-'my'
+'app'
 ```
 
 ## find

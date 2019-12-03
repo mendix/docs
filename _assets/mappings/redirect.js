@@ -35,21 +35,6 @@ module.exports = {
       to: "/partners/siemens/mindsphere-module-details"
     },
 	/****************************************************
-     * From https://developers.mendix.com/sdk/ (potentially temporary until page is taken down)
-     ****************************************************/
-	{
-      from: "/apidocs-mxsdk/mxsdk/reference-documentation",
-      to: "/apidocs-mxsdk/mxsdk/sdk-refguide"
-    },
-	{
-      from: "/apidocs-mxsdk/mxsdk/faq",
-      to: "/apidocs-mxsdk/mxsdk/sdk-faq"
-    },
-	{
-      from: "/apidocs-mxsdk/mxsdk/use-case-examples",
-      to: "/apidocs-mxsdk/mxsdk/sdk-intro"
-    },
-	/****************************************************
      * PERMANENT REDIRECTS
      ****************************************************/
 	 /****************************************************

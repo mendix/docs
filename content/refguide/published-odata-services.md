@@ -108,6 +108,10 @@ There are three possible outcomes of the authentication microflow:
 
 The allowed roles define which [module role](module-security#module-role) a user must have to be able to access the service. This option is only available when **Requires authentication** is set to **Yes**.
 
+{{% alert type="warning" %}}
+Web service users cannot access OData services.
+{{% /alert %}}
+
 ## 4 Runtime Considerations
 
 Once your OData-enabled app is running, an overview of exposed OData resources is available on the root URL followed by `/odata-doc/`. For example, `http://localhost:8080/odata-doc/` You can copy and paste the links into for instance Excel to establish a link between your OData resources and Excel.

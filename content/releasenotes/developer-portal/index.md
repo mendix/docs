@@ -13,6 +13,14 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 ## 2019
 
+### December 5th, 2019
+
+#### Improvements
+
+* Minor styles improvements on the Buzz page.
+* Beta release of new Story page. Only accessible to users with beta feature enabled. 
+* We introduced the ability to add private cloud target. 
+
 ### November 21st, 2019
 
 #### Fixes

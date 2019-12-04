@@ -63,6 +63,8 @@ todo: which platforms?
 
 ### 5.1 Customizing Android todo: android what? Android app?
 
+todo: intro text here. Why are we customizing? What business use case might the reader be able to apply here?
+
 1. Add the following code to *android/app/build.gradle*:
 
 ```diff
@@ -175,20 +177,19 @@ We will be testing our implementation against local mendix instance, that means 
 
 ### 5.2 Customizing iOS [todo: customize what?]
 
+todo: intro text needed
 
 {{% alert type="info" %}}
 
-Remote notifications will not work with IOS simulator
+Remote notifications will not work with an iOS simulator [todo: emulator?]
 
 {{% /alert %}}
 
-Open `app/ios/yourProjectName.xcworkspace` in Xcode since we have to add files and change capabilities of the project.
+To change the capabilities of your app, open *app/ios/yourProjectName.xcworkspace* in Xcode:
 
-1. Add `GoogleService-Info.plist` to NativeTemplate folder, it should be at the same level as `Info.plist`
+1. Add *GoogleService-Info.plist* to your *NativeTemplate* folder (it should be at the same level as *Info.plist*).
 
-2. Change `/ios/AppDelegate.swift`
-
-Please note that we are adding our own local ip because we want to test against local mendix instance.
+2. Change */ios/AppDelegate.swift* (here you add your local IP to test against a local Mendix instance):
 
 ```diff
  import Foundation
@@ -228,7 +229,7 @@ Please note that we are adding our own local ip because we want to test against 
  }
 ```
 
-3. Add `ios/Podfile` if the following lines exists, otherwise add:
+3. Make sure *ios/Podfile* contains the following lines:
 
 ```
   pod 'RNFirebase', :path => '../node_modules/react-native-firebase/ios'
@@ -236,12 +237,13 @@ Please note that we are adding our own local ip because we want to test against 
   pod 'Firebase/Messaging', '~> 5.15.0'
 ```
 
-4. Change `Info.plist` runtime Url to your local ip
+4. Change the *Info.plist* runtime URL to your local IP.
 
-5. Add capabilities
+5. Add capabilities: [todo: add more here when validating]
+
      ![Capabilities](attachments/native-remote-push/iosCustomizations.png)
 
-Congrulations you finished setting up customizations for your custom native app, please follow the links in read more to implement local and remote notifications.
+Congrulations, you finished setting up customizations for your custom native app!
 
 ## 6 Read More
 

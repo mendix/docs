@@ -69,7 +69,7 @@ Sometimes the computer running Studio Pro cannot access the internet directly, b
 
 ### 5.1 Project Explorer
 
-#### 5.1.1 Project Explorer
+#### 5.1.1 New Version of the Project Explorer
 
 Select this option when you want to enable the new version of the [Project Explorer](project-explorer). Should you find any issues in the new version, you can switch back to the old version by unselecting this option.
 

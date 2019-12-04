@@ -27,7 +27,7 @@ Use the **version** field to assign a version number to the service. This number
 
 In OData, the namespace is used to refer to data types. On the **Settings** tab, you can customize this namespace. You can change it to any value which starts with a letter followed by letters, digits, or dots with a maximum length of 512 characters.
 
-## 2.4 Resources
+### 2.4 Resources
 
 A [resource](published-odata-resource) is a network-accessible data object representing an entity, identified by a URI.
 

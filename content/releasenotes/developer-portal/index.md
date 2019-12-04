@@ -17,9 +17,9 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 #### Improvements
 
-* Minor styling improvements on the Buzz page.
-* Private beta release of new Stories UI (Only accessible to users with beta feature enabled).
-* We replaced the on-premise deployment target with the private cloud target. 
+* We made a private beta release of the new Stories UI (which is only accessible to users with the beta feature enabled).
+* We replaced the on-premises deployment target with the private cloud target.
+* We made some minor styling improvements on [Buzz](/developerportal/collaborate/buzz).
 
 ### November 21st, 2019
 

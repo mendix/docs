@@ -1,6 +1,6 @@
 ---
 title: "Branch Line Manager"
-parent: "project-menu"
+parent: "version-control-menu"
 menu_order: 80
 tags: ["studio pro"]
 ---

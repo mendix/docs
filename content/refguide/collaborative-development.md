@@ -80,7 +80,7 @@ Your changes will be sent to Studio automatically if there are no conflicts. For
 
 ### 4.3 Viewing History of Commits
 
-You can see all the changes committed to the current development line via **Project** > **More Versioning** > **History**
+You can see all the changes committed to the current development line via **Version Control** > **History**
 
 ![History Dialog Box](attachments/collaborative-development/history.png)
 
@@ -105,7 +105,7 @@ Whether Studio is enabled for a development line by default, depends on your pro
 
 To enable Studio for a development line or switch it to another development line, do the following: 
 
-1.  Click **Project** > **More Versioning** > **Manage Branch Lines**. In the **Branch Line Manager** dialog window, you can see that the development line that Studio is enabled for (if any) is marked with a globe icon in the first column.<br/> 
+1.  Click **Version Control** > **Manage Branch Lines**. In the **Branch Line Manager** dialog window, you can see that the development line that Studio is enabled for (if any) is marked with a globe icon in the first column.<br/> 
 
 	![Globe Icon in the Branch Line Manager](attachments/collaborative-development/globe-icon.png)<br/>
 
@@ -121,7 +121,7 @@ When you switch Studio to another development line, Studio gets locked for a few
 
 To create a new branch line, do the following: 
 
-1. Click **Project** > **More Versioning** > **Manage Branch Lines**. 
+1. Click **Version Control** > **Manage Branch Lines**. 
 
 2.  In the **Branch Line Manager** dialog window, you see the list of existing development lines. Click **New** to create a branch line. <br/>
 
@@ -143,7 +143,7 @@ You have created a new branch line.
 
 To delete a branch line, do the following:
 
-1. Click **Project** > **More Versioning** > **Manage Branch Lines**. 
+1. Click **Version Control** > **Manage Branch Lines**. 
 
 2.  In the **Branch Line Manager** dialog window, select the branch you would like to delete, click **Delete** and confirm deletion. 
 

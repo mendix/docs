@@ -61,7 +61,7 @@ To create a new app to store in your on-premises SVN server, you must create the
 1. Click **New App** on the **My Apps** page.
 2. In the **App Settings** dialog box, click **No** for **Enable online services**.
 3. In the top menu of Studio Pro, go to **Edit** > **Preferences** > **Advanced** and make sure the **Enable private version control** box is checked.
-4. In the top menu, select **Project** > **More Versioning** >  **Upload to Version Control Server**.
+4. In the top menu, select **Version Control** > **Upload to Version Control Server**.
 5. In the [Upload to Version Control Server](/refguide/upload-to-version-control-dialog) dialog box, select **Private server**.
 6. In the **App repository address** field, enter the address of your SVN server. This address must include the name of the repository you are going to use for your app (for example, `https://svn.example.com:9876/repos/myapp`).
 7. Click **OK** to connect to the server.
@@ -82,7 +82,7 @@ For the purpose of creating an app to store in your on-premises SVN server, this
 6. Delete the **.svn** and **.mendix-cache** folders (note that these folders may be hidden, in which case you will need to enable the option in your file explorer to make them visible). By deleting these folders, references to the Mendix Team Server are removed. Now, your app is ready to be uploaded to your own SVN server.
 7. Double-click the **.mpr** file in the project folder to open the app project again in Studio Pro (for example, if your app is called **MyApp**, this file will have the name **MyApp.mpr**). Alternatively, you can start Studio Pro, click **My Apps** > **Open App**, and browse to the abovementioned local **.mpr** file to open your app project.
 8. When the app project is opened in Studio Pro, go to the  top menu, select **Edit** > **Preferences** > **Advanced**. and make sure the **Enable private version control** box is checked.
-9. In the top menu, select **Project** > **More Versioning** >  **Upload to Version Control Server**.
+9. In the top menu, select **Version Control** > **Upload to Version Control Server**.
 10. In the [Upload to Version Control Server](/refguide/upload-to-version-control-dialog) dialog box, select **Private server**.
 11. In the **App repository address** field, enter the address of your SVN server. This address must include the name of the repository you are going to use for your app (for example, `https://svn.example.com:9876/repos/myapp`).
 12. Click **OK** to connect to the server.

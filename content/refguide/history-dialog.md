@@ -1,6 +1,6 @@
 ---
 title: "History"
-parent: "project-menu"
+parent: "version-control-menu"
 menu_order: 50
 tags: ["studio pro"]
 ---

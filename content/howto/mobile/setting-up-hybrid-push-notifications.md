@@ -1,29 +1,31 @@
 ---
-title: "Hybrid app push notification setup"
+title: "Set Up Hybrid Push Notifications"
 #category: "Hybrid Mobile"
 #parent: "hybrid-mobile"
 #menu_order: 11
-#description: "Instructions on how to set up native push notifications with Native builder"
+#description: "Learn how to set up hybrid push notifications with Phonegap Build."
 #tags: ["mobile", "push notification", "remote", "push", "notification"]
 ---
 
 ## 1 Introduction
 
-In this how to we will setup hybrid push notifications.
+todo: improve
+
+In this how to we will set up hybrid push notifications.
 
 **This how-to will teach you how to do the following:**
 
-Customize hybrid template in order to work with push notifications.
+* Customize your hybrid template to enable push notifications
 
 ## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* [Firebase setup](setting-up-google-firebase-cloud-messaging-server)
+* Complete [How to Set Up the Google Firebase Cloud Messaging Server](setting-up-google-firebase-cloud-messaging-server)
 
 ## 3 Building Your Mobile Application
 
-If your app supports push notifications, you are now required to set up a Firebase account for your app and include Google service description files (*google-services.json* and *GoogleService-Info.plist*) in your hybrid app.
+If your app supports push notifications, you are required to set up a Firebase account for your app and include Google service description files (*google-services.json* and *GoogleService-Info.plist*) in your hybrid app.
 
 As a result of this, Mendix hybrid apps that employ push notifications can no longer be built directly using the Phonegap Build flow in the Mendix Developer Portal. Instead, you will need to prepare the hybrid app package locally. You can use the generated hybrid app package to build your Android and iOS apps locally, or upload them to Phonegap Build manually.
 
@@ -39,7 +41,7 @@ To build the hybrid app package, follow these steps:
 
     ![](attachments/implement-sso/download-hybrid-app-package-step2.png)
 
-    This package you just downloaded is a customizable hybrid app package for your specific Mendix app. You can make changes to it, build a new PhoneGap Build package, and then upload it to PhoneGap Build to create the binaries (for example, APK for Android and IPA for iOS). To better understand the structure of what you just downloaded, see the **Folder Structure** section in the [Mendix PhoneGap Build App Template documentation](https://github.com/mendix/hybrid-app-template#folder-structure).
+    This package you just downloaded is a customizable hybrid app package for your specific Mendix app. You can make changes to it, build a new PhoneGap Build package, and then upload it to PhoneGap Build to create the binaries (*.apk* for Android and *.ipa* for iOS). To better understand the structure of what you just downloaded, see the **Folder Structure** section in the [Mendix PhoneGap Build App Template documentation](https://github.com/mendix/hybrid-app-template#folder-structure).
 
 5.  Unzip the hybrid app package.
 6.  Copy and paste the *google-services.json* and *GoogleService-Info.plist* config files you downloaded before into the `config` folder.

@@ -33,17 +33,18 @@ We will move Platform Supported content into this category when we consider the 
 
 Support on content in this category is up to Mendix and will be decided on a case-by-case basis. You can still follow the standard support process using the [Mendix Support Portal](https://support.mendix.com), however the Mendix SLA no longer applies. 
 
-### 2.2 Community Support Category {#community-category}
+### 2.3 Community Support Category {#community-category}
 
 Support on content in this category is up to the user or organization providing the content. We recommend contacting the owner of the content in case of questions or issues via the following methods:
 
 * Open an an issue on the GitHub repository associated with the content (for details on GitHub issues, see [Mastering Issues](https://guides.github.com/features/issues/))
 * Contact the owner of the content via the contact details available on the App Store component's detail pages
 * Ask a question son the [Mendix Forum](https://mxforum.mendix.com/)
+* Contribute 
 
 The level of support depends on the availability and effort of the developer and/or the Mendix community.
 
-### 2.3 Support Category & Feedback Process Summary
+### 2.4 Support Category & Feedback Process Summary
 
 | Support Category  | Gold/Platinum SLA | Platform SLA | No SLA |
 | --- | --- | --- | --- |

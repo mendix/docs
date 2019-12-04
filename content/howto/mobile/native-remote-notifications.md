@@ -1,9 +1,9 @@
 ---
-title: "Native Remote notification"
+title: "Use Remote Notifications"
 #category: "Native Mobile"
 #parent: "native-mobile"
 #menu_order: 11
-#description: "Instructions on how to set up native push notifications with Native builder"
+#description: "Learn to set up native push notifications with the Native builder."
 #tags: ["mobile", "push notification", "remote", "push", "notification"]
 ---
 
@@ -15,70 +15,70 @@ If you want to use push notifications with custom apps which created with native
 
 * Setting up native push notifications with native builder [Native Builder](https://docs.mendix.com/howto/mobile/native-builder#1-introduction) 
 
-## 4 Mendix project setup
+## 4 Setting Up Your Mendix Project
 
-Create a Native starter project.
+Create a Native starter project. [todo: do you mean start from the Native Mobile Quickstart starter app?]
 
-### 4.1 Module installation 
+### 4.1 Installing Your Module 
 
-1. Add Community commons
-2. Add encryption
+1. Add the [Community Commons](https://appstore.home.mendix.com/link/app/170/) module to your app project.
+2. Add encryption [todo: how?]
 
     2.1 Set the private key
 
     ![Capabilities](attachments/native-remote-push/modeler/setEncryption.png)
 
-3. Add push notification module
+3. Add the [Push Notifications Connector](https://appstore.home.mendix.com/link/app/3003/) module to your app project.
 
-### 4.2 Set Up Notification Widget
+### 4.2 Set Up a Notification Widget
 
-1. Drag and drop an App events to your home page and set:
-
-    1.1 Page load / on load to `PushNotifications.OnPageLoad_RegisterPushNotifications`
-
-    1.2 App resume / on resume `PushNotifications.OnPageLoad_RegisterPushNotifications`
+1. Drag and drop an app events widget onto your app's home page, double-click it, and do the following:<br />
+    a. Page load / on load to `PushNotifications.OnPageLoad_RegisterPushNotifications`<br />
+    b. App resume / on resume `PushNotifications.OnPageLoad_RegisterPushNotifications`<br />
     
     ![AppEvents](attachments/native-remote-push/modeler/AppEvents.png)
 
-This will allow devices to register automatically when they opened the mendix app
+    This will allow devices to register automatically when they opened the mendix app
 
-2. Create an entity called `NativePush` in your domain modal with one `objectGUID` field:
+2. Create an entity called *NativePush* in your domain model with one `objectGUID` field:
 
     ![NotificationEntity](attachments/native-remote-push/modeler/NotificationEntity.png)
 
-3. Create a new `DS_Notification` nanoflow which creates a *NativePush* entity object and then returns it:
+3. Create a new *DS_Notification* nanoflow which creates a *NativePush* entity object and then returns it:
 
     ![DS_Notification](attachments/native-remote-push/modeler/DS_Notification.png)
 
-4. Drag and drop a Dataview [todo check] to your homepage, set its Source to `Nanoflow=> DS_Notification`
+4. Drag and drop a data view [todo check] onto your homepage, set its **Source** to **Nanoflow** > **DS_Notification**:
 
     ![Dataview](attachments/native-remote-push/modeler/Dataview.png)
 
-5. Inside of the Dataview drag and drop the Notifications widget [todo check], set its GUID to `NotificationEntity/objectGUID`
+5. Inside of the data view, drag and drop a notifications widget [todo check]
+
+6. Set the notifications widget's GUID to **NotificationEntity/objectGUID**:
 
     ![NotificationsGUID](attachments/native-remote-push/modeler/NotificationsGUID.png)
 
-This will allow us to pass objects with notification
+    This will allow you to pass objects with notifications.
 
-6.  Add one more Show page item to your responsive profile navigation [todo check]: `PushNotification/_USE ME/Administration`
+7.  In *PushNotification/_USE ME/Administration* add one more **Show page** item to your responsive profile navigation [todo check]: 
 
-![ProfileHomePage](attachments/native-remote-push/modeler/ProfileHomePage.png)
+    ![ProfileHomePage](attachments/native-remote-push/modeler/ProfileHomePage.png)
 
+### 4.3 Adding Actions to Your Notifications Widget
 
-### 4.3 Add actions to your notification widget
+1. Create two nanoflows (`ACT_OnRecieve`,`ACT_OnOpen`) which will create two different logs => "onRecieve triggered" - "onOpen triggered"
 
-- Create two nanoflows (`ACT_OnRecieve`,`ACT_OnOpen`) which will simply two different logs => "onRecieve triggered" - "onOpen triggered"
+    ![ACT_OnRecieve](attachments/native-remote-push/modeler/ACT_OnRecieve.png)
 
-![ACT_OnRecieve](attachments/native-remote-push/modeler/ACT_OnRecieve.png)
+2. Double-click your notifications widget and do the following::<br />
+    a. add an action called `logIt`:<br />
+    b. on recieve select the nanoflow `ACT_OnRecieve`:<br />
+    c. on open select the nanoflow `ACT_OnOpen`
 
-- Go to your Notification widget/ 
-     - add an action called `logIt`
-     - on recieve select the nanoflow `ACT_OnRecieve`
-     - on open select the nanoflow `ACT_OnOpen`
+    ![LogitAction](attachments/native-remote-push/modeler/logitAction.png)
 
-![LogitAction](attachments/native-remote-push/modeler/logitAction.png)
+### 4.4 Adding Firebase Configurations
 
-### 4.4 Add firebase configuration  
 Deploy the project and head for the administartion screen of the push notifications, we will add configurations
 
 - add new FCM configuration

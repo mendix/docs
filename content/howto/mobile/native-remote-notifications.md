@@ -81,34 +81,34 @@ Create a Native starter project. [todo: do you mean start from the Native Mobile
 
 Deploy the project and head for the administartion screen of the push notifications, we will add configurations
 
-- add new FCM configuration
-- check enabled
-- Give a random name
-- Set it as Development / it wont affect any functionality, it is a helper (TODO: How ?)
-- Set the project id to the project id we referred in [here](#2-firebase-setup)
-- upload the private key
+1. add new FCM configuration
+2. check enabled
+3. Give a random name
+4. Set it as Development / it wont affect any functionality, it is a helper (TODO: How ?)
+5. Set the project id to the project id we referred in [here](#2-firebase-setup)
+6.  upload the private key
 
-![FCMConfig](attachments/native-remote-push/modeler/FCMConfig.png)
+    ![FCMConfig](attachments/native-remote-push/modeler/FCMConfig.png)
 
-- Set the messaging service settings in the dropdown for both ios and adroid
-- Set the messaging service type for ios and android for FCM
+7. Set the messaging service settings in the dropdown for both ios and adroid
+8.  Set the messaging service type for ios and android for FCM
 
-![FCMConfig2](attachments/native-remote-push/modeler/FCMConfig2.png)
+    ![FCMConfig2](attachments/native-remote-push/modeler/FCMConfig2.png)
 
-Lets test the implementation
+Next you will test the implementation of your configurations.
 
 ### 4.5 Sending a Push Notification
 
-- Reload the app in the phone
-- Put the app in the background 
-- Go to devices tab in the admin module
+1. Reload the app in the phone
+2. Put the app in the background 
+3. Go to devices tab in the admin module
 
 Now you should be able to see registered devices
 
-- Select device and click new message
-- Set title-body and action name to `logIt`
+1. Select device and click new message
+2.  Set title-body and action name to `logIt`
 
-![SimpleMessage](attachments/native-remote-push/modeler/SimpleMessage.png)
+    ![SimpleMessage](attachments/native-remote-push/modeler/SimpleMessage.png)
 
 When the app is in the background you will see that notification is handled by OS and shown a message. 
 

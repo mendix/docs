@@ -549,11 +549,11 @@ Explaining the code:
 * The display component `TextInput` can be fully re-used to display the preview
 * There is no need to attach any event handlers for updates 
 
-### 3.6 Grouping and System properties
-All pluggable widgets will automatically benefit from the `Visibilty` property which can be used to set [conditional visibility](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets#visibility) of a widget.
-Within the widget.xml (property groups)[/apidocs-mxsdk/apidocs/pluggable-widgets#property-groups] can be used to move a property to an specific tab and or place them in a grouping.
-The first level group is used for the tabs and the second level group is used for the group boxes within.
-Let us reorganize `properties` section in the `TextBox.xml` to make the properties look like the core text box properties dialog.
+### 3.7 Grouping and System Properties
+
+All pluggable widgets will automatically benefit from the `Visibilty` property, which can be used to set the [conditional visibility](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets#visibility) of a widget. Within *widget.xml*, (property groups)[/apidocs-mxsdk/apidocs/pluggable-widgets#property-groups] can be used to move a property to a specific tab or place properties in a group. Furthermore, first-level groups correspond to the tabs, while second-level groups correspond to the group boxes within.
+
+To put this information into practice, reorganize the `properties` section in *TextBox.xml* to make the properties look like the core text box properties (which you can see after double-clicking the widget):
 
 ```xml
 <properties>
@@ -601,7 +601,7 @@ Let us reorganize `properties` section in the `TextBox.xml` to make the properti
 </properties>
 ```
 
-{{% image_container width="500" %}}![property dialog Studio Pro](attachments/pluggable-part-two/property-grouping-studio-pro.png){{% /image_container %}}
+	{{% image_container width="500" %}}![property dialog Studio Pro](attachments/pluggable-part-two/property-grouping-studio-pro.png){{% /image_container %}}
 
 
 ## 4 Read More

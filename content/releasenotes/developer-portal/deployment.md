@@ -10,6 +10,12 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 ## 2019
 
+### December 5th, 2019
+
+#### Improvements
+
+* We replaced the on-premises deployment target with the private cloud target.
+
 ### November 26th, 2019
 
 #### IBM Cloud Portal Deployment

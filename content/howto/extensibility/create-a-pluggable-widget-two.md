@@ -40,7 +40,7 @@ Right now the input is editable for any user at all times. However, the input sh
 
 To add these restrictions, follow the instructions below:
 
-1. In *TextBox.xml* add the [system property for `Editability`](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets#editability) inside the `propertyGroup` of `Data source` (where you put the attribute inside `propertyGroup` will affect how the attribute renders in the Mendix Studios): 
+1. In *TextBox.xml* add the [system property](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets#editability)  for `Editability` inside the `propertyGroup` of `Data source` (where you put the attribute inside `propertyGroup` will affect how the attribute renders in the Mendix Studios): 
 
 	```xml
 	<propertyGroup caption="Editability">
@@ -48,7 +48,8 @@ To add these restrictions, follow the instructions below:
 	</propertyGroup>
 	```
 
-2. Run `npm run build` to update the widget, when viewing in the Studio Pro, Editability property can been seen 
+2. Run `npm run build` to update the widget. When viewing in Studio Pro, the `Editability` property can been seen here:
+	
 	{{% image_container width="500" %}}![Editability studio pro](attachments/pluggable-part-two/editability-property-studio-pro.png){{% /image_container %}}
 
 3. Now add read-only functionality to your widget. In *TextBox.tsx*, replace the `render` function with the code below to check if the input should be disabled and pass it to in the `TextInput` component:

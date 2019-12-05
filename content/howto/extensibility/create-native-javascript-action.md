@@ -261,23 +261,23 @@ JavaScript actions for the web and native platform are similar. With the differe
 
 ### 3.6 Use NFC JavaScript actions
 
-1. Let us make a Nanoflow to use the actions that we just created. [TODO update screenshot with icons, should we add progress dialog too?]
+Let us make a Nanoflow to use the actions that we just created.
 ![Scan tag nanoflow](attachments/create-native-javascript-action/scan-tag-nanoflow.png)
 
-	1. Create a Nanoflow and name is `ATC_ScanTag`
-	3. Add the **Has NFC Support** action. [TODO is this named action or activity?]
-	4. On the action, right click and select `Set error handling...` and set the type to `Custom without rollback`.
-	5. Create a `Show message` action and set the template: `Error occur while checking NFC support: {1}` Use `$lastError` as the parameter.
-	6. Connect the **Has NFC Support** activity with the `Show message`, and right click on it, selecting `Set as error handler`.
-	7. Add a **Decision** action. In the Expression check for the return variable **$HasNFCSupport** of the HasNFCSupport action.
-	8. If not supported show a message of type warning with the text. Create a `Show message` action with template `Sorry, your device does not support NFC`.
-	9. If supported add the **Read NFC Tag** action and store the response in the variable `TagValue`.
-	10. On the **Read NFC Tag** action, right click and select `Set error handling...` and set the type to `Custom without rollback`.
-	11. Create a `Show message` action and set the template: `Error occur while reading a NFC tag: {1}` use `$lastError` as parameter.
-	12. Connect the **Read NFC Tag** activity with the `Show message`, and right click on it, selecting `Set as error handler`.
-	13. Use the read value in the information message. `Your NFC tags says: {1}` and use `TagValue` as parameter.
-4. Add a Nanoflow button to home page of your app. You can right click to **Add widget** and select **Call nanoflow button** and select `ATC_ScanTag` nanoflow. Or drag the `ATC_ScanTag` nanoflow onto the page. Set the caption of the button `Scan NFC tag`.
-5. Deploy the app to the sandbox.
+1. Open the Nanoflow `ATC_ScanTag` which was create in test project (#3.1)
+3. Add the **Has NFC Support** action. [TODO is this named action or activity?]
+4. On the action, right click and select `Set error handling...` and set the type to `Custom without rollback`.
+5. Create a `Show message` action and set the template: `Error occur while checking NFC support: {1}` Use `$lastError` as the parameter.
+6. Connect the **Has NFC Support** activity with the `Show message`, and right click on it, selecting `Set as error handler`.
+7. Add a **Decision** action. In the Expression check for the return variable **$HasNFCSupport** of the HasNFCSupport action.
+8. If not supported show a message of type warning with the text. Create a `Show message` action with template `Sorry, your device does not support NFC`.
+9. If supported add the **Read NFC Tag** action and store the response in the variable `TagValue`.
+10. On the **Read NFC Tag** action, right click and select `Set error handling...` and set the type to `Custom without rollback`.
+11. Create a `Show message` action and set the template: `Error occur while reading a NFC tag: {1}` use `$lastError` as parameter.
+12. Connect the **Read NFC Tag** activity with the `Show message`, and right click on it, selecting `Set as error handler`.
+13. Use the read value in the information message. `Your NFC tags says: {1}` and use `TagValue` as parameter.
+14. Optional you can `Show progress` during scanning the NFC tag. This action can be found in the `Nanoflow Commons` module.
+15. Deploy the app to the sandbox.
 
 ### 3.7 Write NFC tag
 

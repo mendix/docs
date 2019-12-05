@@ -551,9 +551,9 @@ Explaining the code:
 
 ### 3.7 Grouping and System Properties
 
-All pluggable widgets will automatically benefit from the `Visibilty` property, which can be used to set the [conditional visibility](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets#visibility) of a widget. Within *widget.xml*, (property groups)[/apidocs-mxsdk/apidocs/pluggable-widgets#property-groups] can be used to move a property to a specific tab or place properties in a group. Furthermore, first-level groups correspond to the tabs, while second-level groups correspond to the group boxes within.
+All pluggable widgets will automatically benefit from the `Visibility` property, which can be used to set the [conditional visibility](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets#visibility) of a widget. Within *widget.xml*, property groups can be used to move a property to a specific tab or place properties in a group. For more detailed information on property groups, see the (Property Groups)[/apidocs-mxsdk/apidocs/pluggable-widgets#property-groups] section of the *Pluggable Widgets API Documentation*.
 
-To put this information into practice, reorganize the `properties` section in *TextBox.xml* to make the properties look like the core text box properties (which you can see after double-clicking the widget):
+To apply this knowledge, reorganize the `properties` section in *TextBox.xml* to make the properties look like the core text box properties (which you can see after double-clicking the widget):
 
 ```xml
 <properties>

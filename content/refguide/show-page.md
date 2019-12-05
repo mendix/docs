@@ -15,7 +15,7 @@ With this action you can show a page to the end-user.
 
 Note that you can also drag a page from the **Project Explorer** into your microflow directly:
 
-![](attachments/show-page/18580992.gif)
+![](attachments/show-page/show-home-page.gif)
 
 ## 2 Input Properties
 

@@ -71,11 +71,11 @@ There is only room for one icon and if a document is both modified and moved it 
 
 For example, say that the microflow *ChangePassword* has been modified. Also a new folder called 'Flows' was added and all microflows were moved inside this folder. In the screenshot you can see that the folders and modules containing changes are depicted with a yellow icon, and the microflows which have been moved have a blue icon. This helps you to quickly see where in the project the changes are.
 
-![](attachments/using-version-control-in-studio-pro/2018-02-21_13-27-21.png)
+![](attachments/using-version-control-in-studio-pro/project-explorer-documents.png)
 
 You can see the same information in the **Changes** dock. In this case there is an entry for each *change* to an item. If a document is both modified and moved there are *two* lines for that document. The dock also shows items that were deleted, something the project explorer cannot do.
 
-![](attachments/using-version-control-in-studio-pro/2018-02-21_13-41-50.png)
+![](attachments/using-version-control-in-studio-pro/changes-pane.png)
 
 {{% alert type="info" %}}
 When you successfully commit your project, this becomes the new original and all the change information is removed from the project explorer and the changes dock.
@@ -260,7 +260,7 @@ Development lines other than the main line are called branch lines. Our advice w
 
 You can create branch lines from the Branch Line Manager which you can find at **Version Control > Manage Branch Lines...**.
 
-![](attachments/using-version-control-in-studio-pro/2018-02-21_14-16-20.png)
+![](attachments/using-version-control-in-studio-pro/create-branch-line.png)
 
 #### 7.2.2 Merging
 

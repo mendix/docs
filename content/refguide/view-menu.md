@@ -18,7 +18,7 @@ For version control enabled projects (projects with [Team Server](/developerport
 
 This pane has two levels, so when you zoom into a changed document, you can review all the changes within that document without going back and forth between levels. The zoomed-in level of the pane is split into two grids, with elements on the left and properties on the right. Selecting an element on the left presents the changed properties on the right:
 
-![](attachments/studio-pro-overview/changes.gif)
+![](attachments/view-menu/changes.gif)
 
 ## 3 Connector
 

@@ -86,7 +86,7 @@ You can see all the changes committed to the current development line via **Vers
 
 ## 5 Managing Development Lines in Studio Pro {#managing-branches}
 
-In Studio Pro, you can enable Studio for a development line (the main line or a branch line). You can also create and delete branch lines. 
+In Studio Pro, you can enable or disable Studio for a development line (the main line or a branch line). You can also create and delete branch lines. 
 
 For collaborative development you need to enable Studio for one of development lines. 
 
@@ -116,6 +116,26 @@ To enable Studio for a development line or switch it to another development line
 The development line for Studio has been selected.   
 
 When you switch Studio to another development line, Studio gets locked for a few moments during this process, a pop-up dialog is shown to its users that the Studio Pro user is changing the line for Studio. All changes from Studio are committed to the current development line, and only after that is the line changed. 
+
+### 5.2 Disabling Studio for a Development Line
+
+If Studio is enabled for a development line, you can disable it. 
+
+ {{% alert type="info" %}}
+
+If you disable Studio for a development line it was enabled for and do not enable it for any other development line, you will not be able to use collaborative development.
+
+{{% /alert %}}
+
+To disable Studio, do the following:
+
+1. Select the branch that is enabled for Studio.
+
+2. Click the **Disable doe Mendix Studio** button:
+
+   ![Disable for Mendix Studio](attachments/collaborative-development/disable-for-studio.png)
+
+Studio is disabled for your project.
 
 ### 5.2 Creating a New Branch Line
 

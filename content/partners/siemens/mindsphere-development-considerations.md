@@ -73,9 +73,7 @@ Do not create a Tenant object yourself as this is done automatically during logi
 
 ![DS_GetAccessTokenForScheduledEvents](attachments/mindsphere-development-considerations/sample_getAccessTokenForScheduledEvents.png)
 
-{{% alert type="info" %}}
-For more information on how to perform REST calls see the Mendix learning path  [Importing and Exporting Your Data](https://gettingstarted.mendixcloud.com/link/path/44).
-{{% /alert %}}
+For more information on how to perform REST calls see the [Importing and Exporting Your Data](https://gettingstarted.mendixcloud.com/link/path/44) learning path.
 
 ## 3 Cloud Foundry Environment Variables {#cfenvvars}
 
@@ -202,7 +200,7 @@ This should be the tenant that the user has access to in a multi-tenant environm
 
 ### 5.4 User Roles
 
-If you are testing different roles in your app, do not use the demo users. If you switch between demo users, this will not correctly populate the tenant and role information from MindSphere. To test different roles, allocate the role to MxAdmin, redeploy, and log in again.
+If you are testing different roles in your app, do not use the demo users. If you switch between demo users, this will not correctly populate the tenant and role information from MindSphere. To test different roles, allocate the role to MxAdmin, redeploy, and sign in again.
 
 The MxAdmin role is found In the **Administrator** tab of the *Security* settings of your app.
 
@@ -370,7 +368,7 @@ There is a more detailed discussion of MindSphere and Mendix roles and scopes in
 
 ### 9.4 Logout from MindSphere
 
-If the user logs out from MindSphere, the Mendix app will not delete the session cookie.
+If the user signs out from MindSphere, the Mendix app will not delete the session cookie.
 
 ![](attachments/mindsphere-development-considerations/image18.png)
 

@@ -1,5 +1,5 @@
 ---
-title: "Build a Text Box Pluggable Widget: Part 2 (Advanced)"
+title: "Build a Pluggable Web Widget: Part 2 (Advanced)"
 parent: "pluggable-widgets"
 menu_order: 20
 description: "This how-to will teach you how to add advanced features to your TextBox input widget."
@@ -8,7 +8,7 @@ tags: ["mobile", "javascript", "widget"]
 
 ## 1 Introduction
 
-The new pluggable widget API makes building feature-complete widgets much easier. This how-to will go beyond [How to Create a Pluggable Widget Part 1](create-a-pluggable-widget-one) and teach you how to add advanced features to your TextBox input widget.
+The new pluggable widget API makes building feature-complete widgets much easier. This how-to will go beyond [How to Build a Pluggable Web Widget: Part 1](create-a-pluggable-widget-one) and teach you how to add advanced features to your TextBox input widget.
 
 **This how-to will teach you how to do the following:**
 
@@ -23,7 +23,7 @@ The new pluggable widget API makes building feature-complete widgets much easier
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Complete [Build a Text Box Pluggable Widget: Part 1](create-a-pluggable-widget-one)
+* Complete [Build a Pluggable Web Widget: Part 1](create-a-pluggable-widget-one)
 
 ## 3 Adding Advanced Features to Your TextBox Input Widget
 
@@ -71,9 +71,9 @@ To add these restrictions, follow the instructions below:
 	Explaining the code:
 
 	* The `textAttribute` has a property `readOnly`, which will be set to `true` based on:
-		- entity access is read only; based on the security model
-		- if the containing data view is set to `Editable: No`
-		- if the system property `Editability` is set with a true condition
+		* If entity access is read only; based on the security model
+		* If the containing data view is set to `Editable: No`
+		* If the system property `Editability` is set with a true condition
 
 4. In *components/TextInput.tsx*, add the `disabled` property to the `InputProps` interface and set the HTML input attribute to `disabled`:
 
@@ -603,10 +603,9 @@ To apply this knowledge, reorganize the `properties` section in *TextBox.xml* to
 
 	{{% image_container width="500" %}}![property dialog Studio Pro](attachments/pluggable-part-two/property-grouping-studio-pro.png){{% /image_container %}}
 
-
 ## 4 Read More
 
-* [Build a Text Box Pluggable Widget: Part 1](create-a-pluggable-widget-one)
+* [Build a Pluggable Web Widget: Part 1](create-a-pluggable-widget-one)
 * [Pluggable Widgets API](/apidocs-mxsdk/apidocs/pluggable-widgets)
 * [Client APIs Available to Pluggable Widgets](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets)
 * [Pluggable Widget Property Types](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets)

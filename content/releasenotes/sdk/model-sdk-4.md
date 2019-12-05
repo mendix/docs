@@ -1,16 +1,44 @@
 ---
 title: "4"
 parent: "model-sdk"
+#When updating, remember to update the Latest Mendix Releases file
 ---
 
 These are the release notes for the [Model SDK](/apidocs-mxsdk/mxsdk/) version 4.
+
+## 4.27.1 {#4271}
+
+**Release date: November 29th, 2019**
+
+* We restored the original behavior of `exportMpk` (for providing the raw response body when `outFilePath` is empty), which had beeen changed in [4.26.0](#426).
+
+## 4.27.0 {#427}
+
+**Release date: November 22nd, 2019**
+
+* We added support for Mendix [8.4.0](../studio-pro/8).
+* We added support for Mendix Metamodel [8.4.0](metamodel-8.4).
+
+## 4.26.0 {#426}
+
+**Release date: October 25th, 2019**
+
+* We added support for Mendix [8.3.0](../studio-pro/8.3).
+* We added support for Mendix Metamodel [8.3.0](metamodel-8.3).
+
+## 4.25.0 {#425}
+
+**Release date: September 25th, 2019**
+
+* We added support for Mendix [8.2.0](../studio-pro/8.2).
+* We added support for Mendix Metamodel [8.2.0](metamodel-8.2).
 
 ## 4.24.0 {#424}
 
 **Release date: August 29th, 2019**
 
-* We added support for Mendix [8.1.0](../studio-pro/8.0).
-* We added support for Metamodel [8.1.0](metamodel-8.1).
+* We added support for Mendix [8.1.0](../studio-pro/8.1).
+* We added support for Mendix Metamodel [8.1.0](metamodel-8.1).
 
 ## 4.23.0 {#423}
 
@@ -43,8 +71,8 @@ These are the release notes for the [Model SDK](/apidocs-mxsdk/mxsdk/) version 4
 
 **Release date: February 8th, 2019**
 
-*  We added support for Mendix 7.23.0.
-*  It is now possible to perform operations (such as **delete working copy**) on working copies that have a newer metamodel version than the one this Model SDK supports. This was not possible before, as we checked the metamodel version for every operation. Now, we only check the metamodel version when actually opening a working copy.
+*  We added support for [Mendix 7.23.0](../studio-pro/7.23).
+*  It is now possible to perform operations (such as **delete working copy**) on working copies that have a newer Metamodel version than the one this Model SDK supports. This was not possible before, as we checked the Mendix Metamodel version for every operation. Now, we only check the Mendix Metamodel version when actually opening a working copy.
 
 ## 4.18.0 {#418}
 
@@ -173,14 +201,14 @@ These are the release notes for the [Model SDK](/apidocs-mxsdk/mxsdk/) version 4
 
 | Story | Impact | Description |
 |---|---|---|
-| MS-461 | None | Made the `EntityType.entity` and `EnumerationType.enumeration` properties in the new DataType metamodel public, so that they can be read without loading the model unit that contains the DataType instance. |
+| MS-461 | None | Made the `EntityType.entity` and `EnumerationType.enumeration` properties in the new DataType Metamodel public, so that they can be read without loading the model unit that contains the DataType instance. |
 
 ## 4.5.0
 
 | Story | Impact | Description |
 |------|-----|---|
-| MS-461 | Medium | Defined the new metamodel for DataType. From Mendix [7.9.0](../studio-pro/7) onwards, the new properties of the DataType type should be used instead of the old properties of the String type. |
-| MS-328 | None | Defined the new metamodel for microflow expressions (experimental). |
+| MS-461 | Medium | Defined the new Metamodel for DataType. From Mendix [7.9.0](../studio-pro/7) onwards, the new properties of the DataType type should be used instead of the old properties of the String type. |
+| MS-328 | None | Defined the new Metamodel for microflow expressions (experimental). |
 
 ## 4.4.0
 

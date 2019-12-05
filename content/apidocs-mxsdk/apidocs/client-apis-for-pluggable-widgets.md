@@ -44,7 +44,7 @@ If a widget uses a TabIndex prop [system property](property-types-pluggable-widg
 
 ### 4.1 ActionValue
 
-ActionValue is used to represent actions, like the [On click](/refguide/action-button#events-on-click) property of an action button. For any action except **Do nothing**, your component will receive a value adhering to the following interface. For **Do nothing** it will receive `undefined`. The `ActionValue` prop appears like this:
+ActionValue is used to represent actions, like the [On click](/refguide/on-click-event#on-click) property of an action button. For any action except **Do nothing**, your component will receive a value adhering to the following interface. For **Do nothing** it will receive `undefined`. The `ActionValue` prop appears like this:
 
 ```ts
 export interface ActionValue {
@@ -197,7 +197,7 @@ For react-native Mendix exposes a single version: 0.59.9. Mendix also includes t
 
 ### 6.2 Big.js
 
-The Mendix platform uses [big.js](https://www.npmjs.com/package/react-native) to represent and operate on numbers. Mendix 8.0 re-exports version 5.2.
+The Mendix platform uses [big.js](https://www.npmjs.com/package/big-js) to represent and operate on numbers. Mendix 8.0 re-exports version 5.2.
 
 ## 7 Read More
 

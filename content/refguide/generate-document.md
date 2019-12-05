@@ -40,11 +40,9 @@ The language in which the titles and labels of the document should appear.
 
 | Option | Description |
 | --- | --- |
-| Current user | Use the language of the current user. |
+| Current user *(default)*  | Use the language of the current user. |
 | Project default | Use the default language that is specified in the [Project Settings](project-settings). |
 | Variable | Use the language stored in the selected object, which must be of type System.Language. |
-
-_Default value:_ Current user
 
 ### 3.2 Document Type{#document-type}
 

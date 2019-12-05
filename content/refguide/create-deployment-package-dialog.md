@@ -1,6 +1,6 @@
 ---
-title: "Create Deployment Package Dialog"
-parent: "dialogs"
+title: "Create Deployment Package"
+parent: "project-menu"
 tags: ["studio pro"]
 ---
 

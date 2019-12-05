@@ -15,7 +15,7 @@ Tables can be used to give structure to a page. They contain [rows](table#rows),
 
 For example, you can create a table with text widgets, a logo, and a data view information as a customer report:
 
-![](attachments/container-widgets/table-example.png)
+![](attachments/container-widgets/table.png)
 
 ## 2 Components
 
@@ -116,14 +116,12 @@ Table properties consist of the following sections:
 
 #### 3.2.1 Width Unit
 
-The **Width Unit** defines whether the [**Column widths**](#column-widths) property is set in percentage or in pixels. 
+The **Width Unit** defines whether the [Column widths](#column-widths) property is set in percentage or in pixels. 
 
 | Value | Description |
 | --- | --- |
-| Percentage | The **Column widths** property is specified in percentages. When resizing, columns will become wider/narrower while keeping the same relative widths. |
+| Percentage  *(default)* | The **Column widths** property is specified in percentages. When resizing, columns will become wider/narrower while keeping the same relative widths. |
 | Pixels | The **Column widths** property is specified in pixels. When resizing, the pixel width columns will keep the same size; auto columns will become wider/narrower. |
-
-*Default value*: Percentage
 
 #### 3.2.2 Column Widths {#column-widths}
 

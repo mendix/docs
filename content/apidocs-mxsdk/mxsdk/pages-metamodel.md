@@ -1,5 +1,5 @@
 ---
-title: "Pages in the Metamodel"
+title: "Pages in the Mendix Metamodel"
 parent: "understanding-the-metamodel"
 menu_order: 3
 description: "This page contains detailed explanations on how pages, layouts, and page content is structured. You can use this when you are creating scripts for the SDK or creating or analyzing models."
@@ -139,9 +139,9 @@ Button widgets perform an action when clicked. They can be rendered as a button 
 ![](attachments/15466567/18582314.svg)
 
 Studio Pro Guide | Model SDK API Docs
---- | --- |
+--- | --- 
 [Button Widgets](/refguide/button-widgets) | [Button](https://apidocs.mendix.com/modelsdk/latest/classes/pages.button.html)
-[Action Button](/refguide/action-button) | [ButtonStyle](https://apidocs.mendix.com/modelsdk/latest/classes/pages.buttonstyle.html)
+[Button Properties](/refguide/button-properties) | [ButtonStyle](https://apidocs.mendix.com/modelsdk/latest/classes/pages.buttonstyle.html)
 [Translatable Texts](/refguide/translatable-texts) | [RenderType](https://apidocs.mendix.com/modelsdk/latest/classes/pages.rendertype.html)
 | [Icon](https://apidocs.mendix.com/modelsdk/latest/classes/pages.icon.html)
 | [Text](https://apidocs.mendix.com/modelsdk/latest/classes/texts.text.html)
@@ -173,8 +173,8 @@ Studio Pro Guide | Model SDK API docs
 [Input Widgets](/refguide/input-widgets) | [ReferenceSetSelector](https://apidocs.mendix.com/modelsdk/latest/classes/pages.referencesetselector.html)
 [Reference selector](/refguide/reference-selector) | [PageSettings](https://apidocs.mendix.com/modelsdk/latest/classes/pages.pagesettings.html)
 [Reference set selector](/refguide/reference-set-selector) | [MicroflowSettings](https://apidocs.mendix.com/modelsdk/latest/classes/pages.microflowsettings.html)
-[Starting Microflows](/refguide/starting-microflows) |
-[Opening Pages](/refguide/opening-pages) |
+[Call a Microflow](/refguide/on-click-event#call-microflow) |
+[Pages](/refguide/pages) |
 
 ## 10 Read More
 

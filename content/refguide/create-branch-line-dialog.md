@@ -1,6 +1,7 @@
 ---
-title: "Create Branch Line Dialog"
-parent: "dialogs"
+title: "Create Branch Line"
+parent: "project-menu"
+menu_order: 90
 tags: ["studio pro"]
 ---
 

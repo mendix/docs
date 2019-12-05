@@ -1,5 +1,5 @@
 ---
-title: "Install the ATS Helper and the ATS Recorder"
+title: "Install ATS Helper & ATS Recorder"
 parent: "ht-two"
 description: "Describes how to install the ATS Helper and the ATS Recorder tool."
 tags: ["ATS", "testing"]

@@ -1,14 +1,14 @@
 ---
-title: "Build a Text Box Pluggable Widget: Part 1"
+title: "Build a Pluggable Web Widget: Part 1"
 parent: "pluggable-widgets"
 menu_order: 10
-description: "This how-to will teach you to create a pluggable widget."
+description: "This how-to will teach you to create a pluggable web widget."
 tags: ["widget", "pluggable", "JavaScript", "API", "JavaScript-API"]
 ---
 
 ## 1 Introduction
 
-Pluggable widgets are the new generation of custom-built widgets. These widgets are based on React and use a different architecture than the older custom widgets based on Dojo. With pluggable widgets, you can develop powerful tools in simple, precise ways. In the first part of this series, you will learn to create a text input widget step by step.
+Pluggable web widgets are the new generation of custom-built widgets. These widgets are based on React and use a different architecture than the older custom widgets based on Dojo. With pluggable web widgets, you can develop powerful tools in simple, precise ways. In the first part of this series, you will learn to create a text input widget.
 
 **This how-to will teach you how to do the following:**
 
@@ -129,6 +129,7 @@ Open the **(YourMendixProject)/CustomWidgets/TextBox** folder in your IDE of cho
 	* The property `pluginWidget=true` will make the widget work with the new widget API
 	* The property `needsEntityContext=true` is set up to allow the attribute to be taken from context
 	* The property of the [type attribute](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets#attribute) only allows the selection of string attributes from the domain model
+  
 3. The typescript typing based on the XML will be generated automatically. Start the development process with the following command: `$ npm run dev`.
 
 	This process will bundle the widget and generate the properties into *typings/TextBoxProperties.d.ts*.
@@ -205,7 +206,8 @@ Open the **(YourMendixProject)/CustomWidgets/TextBox** folder in your IDE of cho
 	}
 	```
 
-	Before moving on from this step, you should remove the import lines concerning "Hello World" sample text from *TextBox.webmodeler.tsx* and *TextBox.tsx*, as these lines are no longer in use.
+	Before moving on from this step, you should remove the import lines concerning the **Hello World** sample text from *TextBox.webmodeler.tsx* and *TextBox.tsx*, as these lines are no longer in use.
+
 7.  Add a test widget to the project home page:<br />
 	a. To find your widget for the first time you need to refresh from the files system. Use <kbd>F4</kbd> or select **Project > Synchronize Project Directory** from the Mendix Studio Pro menu.<br />
 	b. Navigate to **Home > Add widget** in the editor menu.<br />
@@ -218,7 +220,7 @@ Open the **(YourMendixProject)/CustomWidgets/TextBox** folder in your IDE of cho
 	![](attachments/pluggable-part-one/updateallwidgets.png)
 
 	{{% alert type="info" %}}The widgets in Studio and Studio Pro are not automatically updated. To refresh them press <kbd>F4</kbd> or select **Project > Synchronize Project Directory** from the Mendix Studio Pro menu to reload the widgets from the file system. Then right-click the widget and select **Update all widgets** to update the newly-changed properties in the widget.{{% /alert %}}
-8.  When running the project, the new widget is already functional. The first text box is a standard Text box widget and the second is your pluggable widget. When data is changed in the first input and the cursor is moved to the next widget, the data of your widget is also updated: 
+8.  When running the project, the new widget is already functional. The first text box is a standard Text box widget and the second is your pluggable web widget. When data is changed in the first input and the cursor is moved to the next widget, the data of your widget is also updated: 
 
 	![two text widgets](attachments/pluggable-part-one/twotextwidgets.png)
 
@@ -379,7 +381,8 @@ Continue with the next tutorial to learn how to add validation feedback, custom 
 
 ## 4 Read More
 
-* [Build a Text Box Pluggable Widget: Part 2 (Advanced)](create-a-pluggable-widget-two)
+
+* [Build a Pluggable Web Widget: Part 2 (Advanced)](create-a-pluggable-widget-two)
 * [Pluggable Widgets API](/apidocs-mxsdk/apidocs/pluggable-widgets)
 * [Client APIs Available to Pluggable Widgets](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets)
 * [Pluggable Widget Property Types](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets)

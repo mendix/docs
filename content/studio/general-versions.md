@@ -13,7 +13,7 @@ The **Mendix Studio version** is a build number of the Studio user interface.
 
 The **Mendix version** is the version of the app project you are editing. **Mendix version** correlates to **Mendix Studio Pro version**, but is broader, as the Mendix version is the version of the whole platform including Mendix Studio Pro and Mendix Runtime. 
 
-The **Mendix Studio version** and the **Mendix version** can be viewed by clicking the info icon **About** in the top-right corner of Studio.
+The **Mendix Studio version** and the **Mendix version** can be viewed by clicking the info icon > **About** in the top-right corner of Studio.
 
 {{% image_container width="500" %}}![](attachments/general-versions/about-dialog.png)
 {{% /image_container %}}
@@ -26,7 +26,7 @@ Studio introduces a new range when there are breaking changes in a model that pr
 
 ## 3 Upgrading to the Next Version
 
-The *Studio version* is updated continuously (even daily), which will provide you with the latest user interface features for editing your app. No action is required from you, these updates are done automatically. However, when there is a new *Mendix version*, an orange top-bar is displayed, informing you that you can upgrade your app to the next version.  
+The *Studio version* is updated continuously (even daily), which will provide you with the latest user interface features for editing your app. No action is required from you, these updates are done automatically. However, when there is a new *Mendix version*, an orange top bar is displayed, informing you that you can upgrade your app to the next version.  
 
 ![](attachments/general-versions/top-bar-upgrade.png)
 

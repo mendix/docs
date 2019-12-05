@@ -4,7 +4,7 @@ module.exports = {
      * POTENTIALLY TEMPORARY REDIRECTS
      ****************************************************/
 	/****************************************************
-     * From Studio(potentially temporary until fixed in product, mapped)
+     * From Studio(potentially temporary until the support of old bundles stops, mapped)
      ****************************************************/
 	{
       from: "/refguide/web-modeler/domain-models-association-properties-wm",
@@ -33,7 +33,7 @@ module.exports = {
     {
       from: "/refguide/siemens/mindsphere-module-details",
       to: "/partners/siemens/mindsphere-module-details"
-    },	
+    },
 	/****************************************************
      * PERMANENT REDIRECTS
      ****************************************************/
@@ -234,7 +234,11 @@ module.exports = {
     },
 	{
       from: "/howto/ux/create-a-custom-theme-with-the-mendix-ui-framework",
-      to: "/howto/front-end/create-a-custom-theme-with-the-mendix-ui-framework"
+      to: "/howto/front-end/atlas-ui"
+    },
+	{
+      from: "/howto/front-end/create-a-custom-theme-with-the-mendix-ui-framework",
+      to: "/howto/front-end/atlas-ui"
     },
 	{
       from: "/releasenotes/desktop-modeler/",
@@ -460,7 +464,7 @@ module.exports = {
     },
 	{
       from: "/refguide8/drop-down-widget",
-      to: "/refguide/drop_down"
+      to: "/refguide/drop-down"
     },
 	{
       from: "/refguide8/horizontal-split-pane",
@@ -598,7 +602,80 @@ module.exports = {
       from: "/refguide8/tab-page",
       to: "/refguide/tab-container"
     },
-	/****************************************************
+	{
+		from: "/refguide8/action-button",
+      to: "/refguide/button-properties"
+    },
+	{
+		from: "/refguide8/drop-down-button",
+      to: "/refguide/button-properties"
+    },
+	{
+		from: "/refguide8/image-property",
+      to: "/refguide/button-properties"
+    },
+	{
+		from: "/refguide8/grid-action-button",
+      to: "/refguide/control-bar"
+    },
+	{
+		from: "/refguide8/remove-button",
+      to: "/refguide/control-bar"
+    },
+	{
+		from: "/refguide8/select-button",
+      to: "/refguide/control-bar"
+    },
+	{
+		from: "/refguide8/add-button",
+      to: "/refguide/control-bar"
+    },
+	{
+		from: "/refguide8/deselect-all-button",
+      to: "/refguide/control-bar"
+    },
+	{
+		from: "/refguide8/export-to-csv-button",
+      to: "/refguide/control-bar"
+    },
+	{
+		from: "/refguide8/export-to-excel-button",
+      to: "/refguide/control-bar"
+    },
+	{
+		from: "/refguide8/grid-new-button",
+      to: "/refguide/control-bar"
+    },
+	{
+		from: "/refguide8/search-button",
+      to: "/refguide/control-bar"
+    },
+	{
+		from: "/refguide8/select-all-button",
+      to: "/refguide/control-bar"
+    },
+	{
+		from: "/refguide8/comparison-search-field",
+      to: "/refguide/search-bar"
+    },
+	{
+		from: "/refguide8/drop-down-search-field",
+      to: "/refguide/search-bar"
+    },
+	{
+		from: "/refguide8/range-search-field",
+      to: "/refguide/search-bar"
+    },
+    {
+      from: "/refguide8/opening-pages",
+        to: "/refguide/pages"
+      },
+    {
+      from: "/refguide8/starting-microflows",
+        to: "/refguide/on-click-event"
+      },
+  
+    /****************************************************
      * From Desktop Modeler version 7 (permanent, mapped)
      ****************************************************/
 	{
@@ -611,15 +688,19 @@ module.exports = {
     },
 	{
       from: "/refguide7/desktop-webmodeler",
-      to: "/refguide7/sync-webmodeler-desktopmodeler"
+      to: "/refguide7/collaborative-development"
     },
 	{
       from: "/web-modeler/general-sync-webmodeler-desktopmodeler-wm",
-      to: "/refguide7/sync-webmodeler-desktopmodeler"
+      to: "/refguide7/collaborative-development"
     },
 	{
       from: "/howto/web-modeler/syncing-webmodeler-desktop",
-      to: "/refguide7/sync-webmodeler-desktopmodeler"
+      to: "/refguide7/collaborative-development"
+    },
+	{
+      from: "/refguide7/sync-webmodeler-desktopmodeler",
+      to: "/refguide7/collaborative-development"
     },
 	{
       from: "/refguide7/download-from-team-server-dialog",

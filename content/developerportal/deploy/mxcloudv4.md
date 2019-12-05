@@ -14,7 +14,7 @@ Apps deployed to v4 run in Cloud Foundry clusters that are deployed on highly av
 
 Mendix Cloud v4 is a mature product, launched in Q1 2017, and has a number of improvements over previous versions of Mendix Cloud:
 
-* It is more secure as you can use [HTTP Headers](environments-details#http-headers) and [client certificates](certificates), and have [TLS v1.2 or higher enforced](/releasenotes/developer-portal/#january-28th-2019)
+* It is more secure as you can use [HTTP Headers](environments-details#http-headers) and [client certificates](certificates), and have [TLS v1.2 or higher enforced](/releasenotes/developer-portal/deployment#tls)
 * It runs on faster hardware
 * It is still being actively developed and improved, with new features regularly being introduced (for example [flexible environments](mendix-cloud-deploy#flexible-environments))
 * It uses industry-standard techniques for scalability and maintainability
@@ -65,7 +65,7 @@ We add regions based on customer demand. If you would like a different region, c
 
 You can also consider running your Mendix app using your own AWS account in a different AWS region. You can do this using Docker, and there is information on how to do this in the [Docker](docker-deploy) documentation. If you do this, however, you will not receive all the benefits of running in the Mendix Cloud.
 
-## 7 What Other Considerations Are There When Running My App in Mendix Cloud v4?
+## 7 What Other Considerations Are There When Running My App in Mendix Cloud v4?{#other-considerations}
 
 There are a few other considerations to bear in mind when you are running in Mendix Cloud v4:
 

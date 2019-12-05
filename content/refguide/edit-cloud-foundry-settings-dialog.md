@@ -1,5 +1,5 @@
 ---
-title: "Edit Cloud Foundry Settings Dialog"
+title: "Edit Cloud Foundry Settings"
 parent: "dialogs"
 tags: ["Cloud Foundry", "Deploy", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.

@@ -45,7 +45,7 @@ Your company might already have a centralized identity management solution in pl
 In this chapter you will run the application and complete the LDAP configuration in the application itself.
 
 1.  **Deploy/run** the application locally and open it in your browser.
-2.  Log into the app using the default administrator account (usually "MxAdmin").
+2.  Sign into the app using the default administrator account (usually "MxAdmin").
 3.  Navigate to the **LDAP Configuration** screen you added in the previous chapter. You will see the following screen:
 
     ![](attachments/18448733/18581927.png)
@@ -106,8 +106,8 @@ The next step is to configure how to handle the user information.
     | Field | Description | Example |
     | --- | --- | --- |
     | Map users to | The Mendix entity that represents users in your app. | _Administration.Account_ |
-    | Domain suffix | In Active directory user names are often suffixed with the domain of the company. If you want users to be able to log in using just their user name, enter the domain here. It will be stripped from the full user name, leaving just the actual account name as a username. | _@companydomain.local_ |
-    | Userroles WITHOUT ldap authentication | In most cases, certain user roles (usually administrators) should not be authenticated against LDAP. This can be, for example, because the corresponding users or roles don't exist in the LDAP server, or because the users should be able to log in when LDAP is not available for some reason. In most cases, you should enter an administrator role with access to the LDAP configuration. | _Administrator_ |
+    | Domain suffix | In Active directory user names are often suffixed with the domain of the company. If you want users to be able to sign in using just their user name, enter the domain here. It will be stripped from the full user name, leaving just the actual account name as a username. | _@companydomain.local_ |
+    | Userroles WITHOUT ldap authentication | In most cases, certain user roles (usually administrators) should not be authenticated against LDAP. This can be, for example, because the corresponding users or roles don't exist in the LDAP server, or because the users should be able to sign in when LDAP is not available for some reason. In most cases, you should enter an administrator role with access to the LDAP configuration. | _Administrator_ |
 
 ## 6 Configuring User Mappings
 
@@ -167,7 +167,7 @@ Now that you have configured the LDAP module it's time to synchronize the users.
 
 ## 8 Next Steps
 
-After synchronizing the user information users can not sign in yet. This is because their passwords have been set to random values. For security reasons it is not possible to synchronize LDAP passwords. You can only synchronize user information. You can allow users to log in by assigning new passwords to the accounts. You can create a Microflow to reset passwords automatically.
+After synchronizing the user information users can not sign in yet. This is because their passwords have been set to random values. For security reasons it is not possible to synchronize LDAP passwords. You can only synchronize user information. You can allow users to sign in by assigning new passwords to the accounts. You can create a Microflow to reset passwords automatically.
 
 If you want to allow users to sign in using their LDAP account passwords, you can set the "LDAP type" setting to a value that includes authentication. An explanation of how to configure this is beyond the scope this how-to, however, additional information can be found in the App Store documentation of the LDAP module.
 

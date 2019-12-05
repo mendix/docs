@@ -216,7 +216,7 @@ The setup of the agents depends on your provider.
 Selenium Service | Agent Name          | Setup Instructions
 ---------------- | ------------------- | ------------------
 BrowserStack     | BrowserStack Local  | [Here](https://www.browserstack.com/local-testing)
-SauceLabs        | Sauce Connect Proxy | [Here](https://wiki.saucelabs.com/display/DOCS/Setting+Up+Sauce+Connect+Proxy)
+SauceLabs        | Sauce Connect Proxy | [Here](https://wiki.saucelabs.com/display/DOCS/Getting+Started+with+Sauce+Connect+Proxy)
 
 ### 6.4 Customer-Hosted Selenium {#customer-hosted-selenium}
 

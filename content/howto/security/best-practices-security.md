@@ -98,7 +98,6 @@ Mendix offers a range of App Store modules that enable your application to be co
 
 * [SAML](https://appstore.home.mendix.com/link/app/1174/Mendix/SAML)
 * [LDAP](https://appstore.home.mendix.com/link/app/24/Mendix/LDAP-Synchronization-module)
-* [Kerberos](https://appstore.home.mendix.com/link/app/25/Mendix/Kerberos-Single-Sign-On)
 
 Your application can gain the following benefits from using an identity provider:
 

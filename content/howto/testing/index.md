@@ -9,7 +9,7 @@ Testing is a vital component when creating a Mendix application. In this categor
 
 ## 2 Main Documents in This Category
 
-* [Test Microflows Using the UnitTesting Module](testing-microflows-using-the-unittesting-module) – shows you how to set up the UnitTesting module and create a microflow unit test
+* [Test Microflows Using the Unit Testing Module](testing-microflows-using-the-unittesting-module) – shows you how to set up the Unit Testing module and create a microflow unit test
 * [Test with Application Test Suite (ATS)](testing-with-application-test-suite) – introduces you to the documentation for the [ATS](/addons/ats-addon/index) suite of tools
 * [Test Web Services Using SoapUI](testing-web-services-using-soapui) – presents details on creating a SOAP project with SoapUI, creating assertions in SoapUI, and building an automated test using SoapUI
 * [Test Mendix Applications Using Selenium IDE](testing-mendix-applications-using-selenium-ide) – demonstrates how to download and install Selenium IDE as a Mozilla Firefox plugin

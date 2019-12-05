@@ -107,4 +107,3 @@ To set the level of custom log messages that you have created via a microflow, f
 * [Debug Microflows Remotely](debug-microflows-remotely)
 * [Debug Java Actions](debug-java-actions)
 * [Debug Java Actions Remotely](debug-java-actions-remotely)
-* [Handle Common Mendix SSO Errors](handle-common-mendix-sso-errors)

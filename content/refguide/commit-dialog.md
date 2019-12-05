@@ -1,6 +1,7 @@
 ---
-title: "Commit Dialog"
-parent: "dialogs"
+title: "Commit"
+parent: "project-menu"
+menu_order: 20
 tags: ["studio pro"]
 ---
 

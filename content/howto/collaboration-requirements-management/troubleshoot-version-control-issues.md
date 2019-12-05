@@ -32,7 +32,7 @@ The proxy settings can be changed in Studio Pro by selecting **Edit** > **Prefer
 
 ### 2.2 Getting an Error Containing Another `SharpSvn.SvnAuthenticationException`
 
-This should be resolved if you log out of Studio Pro and then log back in.
+This should be resolved if you sign out of Studio Pro and then log back in.
 
 ### 2.3 Getting an Error with the Message `Connection timed out`
 

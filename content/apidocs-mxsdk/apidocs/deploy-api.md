@@ -30,7 +30,12 @@ Only _Retrieve apps_, _Create Free App Environment_ and _Retrieve app_ API calls
 
 #### 3.1.1 Description
 
-Retrieves all apps to which the authenticated user has access as a regular user. These apps can be found via the *Nodes overview* screen in the Mendix Platform.
+Retrieves all licensed apps and Free Apps to which the authenticated user has access as a regular user.
+
+{{% alert type="info" %}}
+The [Nodes](/developerportal/apps-list/#nodes) screen in the Developer Portal shows all the licensed apps which are returned by this request, but does not show any Free Apps, while the [My Apps](/developerportal/apps-list/#my-apps) screen shows both licensed apps and Free Apps.
+{{% /alert %}}
+
 
 ```bash
 HTTP Method: GET
@@ -919,8 +924,8 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/snapshots/
 
 **Request Parameters**
 
-*   _AppId_ (String): Subdomain name of an app.
-*   _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy#flexible-environments).
+*   _AppId_ (String): Subdomain name of the app. This is the production subdomain, do not add the mode (for example, do not add `-accp` for acceptance – see the example below)
+*   _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy#flexible-environments)
 *   _SnapshotId_ (String): Identifier of the backup
 
 **Example Request**
@@ -945,6 +950,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 | 403 | NO_ACCESS | The user does not have access to the backups of this environment. |
 | 404 | ENVIRONMENT_NOT_FOUND | Environment not found. |
 | 404 | SNAPSHOT_NOT_FOUND | Snapshot not found. |
+| 500 | INTERNAL_SERVER_ERROR | This *usually* occurs when you have provided a valid **SnapshotID**, but the snapshot is still being created. Try downloading the backup at a later time |
 
 **Example Output**
 
@@ -957,6 +963,10 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 ```
 
 ### 3.17 Create a Backup of an Environment (Mendix Cloud v4 Only)
+
+{{% alert type="warning" %}}
+This call will trigger the creation of a snapshot and will return the **SnapshotID** immediately. However, the creation of the snapshot takes some time and if the creation hasn't completed you will get a **500 INTERNAL_SERVER_ERROR** response from a request to download the backup (see above). In this case, it is recommended that you periodically retry downloading the backup until the call is successful.
+{{% /alert %}}
 
 #### 3.17.1 Description
 
@@ -1299,7 +1309,13 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/logs/<Date
 
 - _AppId_ (String): Subdomain name of an app.
 - _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy#flexible-environments).
-- _Date_ (String): Date of the desired log (YYYY-MM-DD). Inserting a future date will provide the logs for the current day.
+- _Date_ (String): Date of the desired log (YYYY-MM-DD).
+
+* If *Date* is tomorrow or after, or before the date the app was created, the log will contain the response `[No data found in file and no logging heartbeat detected]`
+
+{{% alert type="info" %}}
+* Under some circumstances, if *Date* is tomorrow's date the log will be *empty* and the **REST response** will contain `[No data found in file and no logging heartbeat detected]` — the cause of this is being investigated
+{{% /alert %}}
 
 **Example Request**
 

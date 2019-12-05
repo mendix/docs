@@ -5,7 +5,7 @@ parent: "rg-two-ats"
 
 ## 1 Introduction
 
-The repository is the heart of ATS, as it allows you to create and manage folders, test suites, test cases, drop-down menus, and actions. You can also create test data for data-driven testing. For more information on how to use data-driven testing in ATS, see [Test Data](rg-two-test-data).
+The repository is the heart of ATS, as it allows you to create and manage folders, test suites, test cases, drop-down menus, and actions. You can also create test data for data-driven testing. For more information on how to use data-driven testing in ATS, see [Test Data](rg-two-data-driven-testing).
 
 You can access the repository by clicking **Test Cases** in the navigation menu.
 

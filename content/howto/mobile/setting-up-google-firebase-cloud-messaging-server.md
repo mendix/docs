@@ -23,9 +23,9 @@ There are two possible scenarios: you can create a new FCM project, or you can u
 
 To prevent the degraded reliability of push notifications delivery, you should migrate existing GCM projects to FCM and upgrade credentials if needed.
 
-#### 3.1.1 Logging In to the Developers Console
+#### 3.1.1 Signing In to the Developers Console
 
-Open up the [Firebase developers console](https://console.firebase.google.com/) and log in with your Google ID.
+Open up the [Firebase developers console](https://console.firebase.google.com/) and sign in with your Google ID.
 
 #### 3.1.2 Importing the Project
 
@@ -37,9 +37,9 @@ From here, continue with [Configuring APNs Credentials](#configuring) below.
 
 ### 3.2 Creating a New FCM Project
 
-#### 3.2.1 Logging In to the Developers Console
+#### 3.2.1 Signing In to the Developers Console
 
-Open up the [Firebase developers console](https://console.firebase.google.com/) and log in with your Google ID.
+Open up the [Firebase developers console](https://console.firebase.google.com/) and sign in with your Google ID.
 
 #### 3.2.2 Creating the Project
 
@@ -104,15 +104,15 @@ To build the hybrid app package, follow these steps:
     {{% alert type="warning" %}} Only paste the *GoogleService-Info.plist* config file when you plan on using FCM for sending push notifications to iOS devices. If you plan on keeping using APNS to send push notifications to iOS devices, do not paste the *GoogleService-Info.plist* config file.{{% /alert %}}
 7.  Create the PhoneGap Build package by following the instructions in the [Through Uploading to PhoneGap Build](https://github.com/mendix/hybrid-app-template#through-uploading-to-phonegap-build) section of the *Mendix PhoneGap Build App Template* documentation. Be sure to read the **Prerequisites** and **Build on PhoneGap** sections of this documentation as well. This is an overview of the steps:<br />
     a. Install the latest stable version of [Node.js](https://nodejs.org/en/download/).<br />
-    b. In the hybrid app root folder, execute `npm install`.<br />
-    c. In the hybrid app root folder execute `npm run package`.
+    b. In the unzipped hybrid app package folder, execute `npm install`.<br />
+    c. In the same folder execute `npm run package`.<br />
 8.  Create an APK or iOS package from the PhoneGap Build package. You can upload the new PhoneGap Build package (in the **dist** folder) to PhoneGap to build the APK or iOS binary.
 
     ![](attachments/implement-sso/build.phonegap.com.png)
 
 ## 8 Configuring FCM in Your Application
 
-Open your Mendix application, log in as an Admin, and open the **PushNotifications_Administration** page. Scroll to the FCM section and create or edit a configuration. 
+Open your Mendix application, sign in as an Admin, and open the **PushNotifications_Administration** page. Scroll to the FCM section and create or edit a configuration. 
 
 Configure FCM as follows:
 

@@ -27,7 +27,7 @@ Use the **version** field to assign a version number to the service. This number
 
 In OData, the namespace is used to refer to data types. On the **Settings** tab, you can customize this namespace. You can change it to any value which starts with a letter followed by letters, digits, or dots with a maximum length of 512 characters.
 
-## 2.4 Resources
+### 2.4 Resources
 
 A [resource](published-odata-resource) is a network-accessible data object representing an entity, identified by a URI.
 
@@ -41,8 +41,7 @@ You can choose how you want to represent associations. For more information, see
 
 You can configure security for the OData service when [Project Security](project-security) is enabled.
 
-<a name="authentication"></a>
-#### 3.2.1 Requires Authentication
+#### 3.2.1 Requires Authentication {#authentication}
 
 {{% alert type="info" %}}
 
@@ -66,8 +65,7 @@ If authentication is required, you can select which authentication methods you w
 
 Check more than one authentication method to have the service try each of them. It will first try **Custom** authentication, then **Username and password**, and then **Active session**.
 
-<a name="username-password"></a>
-##### 3.2.2.1 Username and Password
+##### 3.2.2.1 Username & Password {#username-password}
 
 Authentication can be done by including basic authentication in the HTTP header of the call. To do this you need to construct a header called **Authorization** and its content should be constructed as follows:
 
@@ -77,8 +75,7 @@ Authentication can be done by including basic authentication in the HTTP header 
 
 This result is a header which looks like `Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==`.
 
-<a name="authentication-active-session"></a>
-##### 3.2.2.2 Active session
+##### 3.2.2.2 Active Session {#authentication-active-session}
 
 When you check this authentication method, the JavaScript in your app can access the REST service using the current user's session.
 
@@ -91,8 +88,7 @@ xmlHttp.setRequestHeader("X-Csrf-Token", mx.session.getConfig("csrftoken"));
 xmlHttp.send(null);
 ```
 
-<a name="authentication-microflow"></a>
-##### 3.2.2.3 Custom
+##### 3.2.2.3 Custom {#authentication-microflow}
 
 Specify which microflow to use for custom authentication.
 
@@ -112,7 +108,11 @@ There are three possible outcomes of the authentication microflow:
 
 The allowed roles define which [module role](module-security#module-role) a user must have to be able to access the service. This option is only available when **Requires authentication** is set to **Yes**.
 
-### 5 Runtime considerations
+{{% alert type="warning" %}}
+Web service users cannot access OData services.
+{{% /alert %}}
+
+## 4 Runtime Considerations
 
 Once your OData-enabled app is running, an overview of exposed OData resources is available on the root URL followed by `/odata-doc/`. For example, `http://localhost:8080/odata-doc/` You can copy and paste the links into for instance Excel to establish a link between your OData resources and Excel.
 
@@ -124,4 +124,4 @@ For details on how to filter the OData response, refer to [OData Query Options](
 
 For details on how Mendix attributes are represented in OData, refer to [OData Representation](odata-representation).
 
-When exposing entities through OData, the entities are retrieved from the Mendix database in a streaming fashion, to avoid out-of-memory errors in the Mendix runtime.
+When exposing entities through OData, the entities are retrieved from the Mendix database in a streaming fashion, to avoid out-of-memory errors in the Mendix Runtime.

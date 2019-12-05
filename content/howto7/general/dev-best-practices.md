@@ -330,7 +330,7 @@ It is recommended **not** to assign default rights to new members when defining 
 
 Apps should keep up with new Mendix releases as much as possible.
 
-### 4.7 App Store Components
+### 4.7 App Store Content
 
 When introducing a new [Mendix App Store](https://appstore.home.mendix.com/index3.html) component to a project, carefully consider the support level of the component. Using components that are community supported introduces a maintainability and upgrade risk.
 

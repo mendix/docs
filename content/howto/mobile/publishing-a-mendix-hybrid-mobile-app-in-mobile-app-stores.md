@@ -22,7 +22,7 @@ The hybrid mobile app packaging process is based on Adobe PhoneGap. We have inte
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Have a Mendix app with mobile support running in the Mendix Cloud, either as a Free App or on a licensed cloud node
-	* If you require an app to test with, set up the [Company Expenses](https://appstore.home.mendix.com/link/app/240/) app from the Mendix App Store as a Free App to try out its mobile features 
+	* If you require an app to test with, set up the [Event App](https://appstore.home.mendix.com/link/app/36793/) from the Mendix App Store as a Free App to try out its mobile features 
 * Have an account for Adobe PhoneGap Build (you can create one for free [here](https://build.phonegap.com/plans/free-adobeid))
 
 To publish your app in the Apple App Store, do the following:
@@ -36,11 +36,12 @@ To publish your app in the Google Play store, do the following:
 
 * Have an Android device for testing the APK package that will be produced
 
-## 3 Watch a Tutorial Video
+## 3 Tutorial Video
 
 The video below shows how to build a PhoneGap app in the cloud. After showing you how to build mobile app store packages, it explains how to find these packages in PhoneGap and add security keys to them.
 
 **How to build a PhoneGap app in the cloud**
+
 {{% youtube 7ic625u2YJE %}}
 
 ## 4 Starting the Packaging Process{#starting-the-packaging-process}
@@ -121,7 +122,7 @@ Apple provides general information on [publishing an iOS app in the Apple App St
 
 	![add a key](attachments/publishing-a-hybrid-app/add-a-key.png)
 
-3. A dialog box will prompt you to upload a certificate file and a provisioning profile file. You can get those files from Apple. The certificate is the *.p12* file, and the provisioning profile is the *.mobileprovision* file. For more information, see [Managing App Signing Keys](/refguide/managing-app-signing-keys).
+3. A dialog box will prompt you to upload a certificate file and a provisioning profile file. You can get those files from Apple. The certificate is the *.p12* file, and the provisioning profile is the *.mobileprovision* file. For more information, see the [Managing App Signing Keys Reference Guide](/refguide/managing-app-signing-keys).
 3. Give the key a title that you can easily recognize, and upload the files.
 4.  Click the lock with the yellow background on the same row as your key and enter a passphrase. The key can now be used for builds for the period of an hour. After an hour, the passphrase needs to be entered again:
 
@@ -157,7 +158,7 @@ To install the iOS app on your mobile test device, follow these steps:
 7. Your app will show up in the list of apps. Click the **Install** button next to your app.
 8. Click **Apply** at the bottom of the screen to execute the actual installation.
 
-The app will now be visible on your device. Open it and log in to the app with a regular user account. You can set one up in the Mendix app in your desktop browser if you have not done so yet.
+The app will now be visible on your device. Open it and sign in to the app with a regular user account. You can set one up in the Mendix app in your desktop browser if you have not done so yet.
 
 ### 7.3 Uploading the iOS App to the App Store
 

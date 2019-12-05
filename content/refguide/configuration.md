@@ -9,7 +9,7 @@ tags: ["studio pro", "configurations", "configuration"]
 
 A configuration is a group of settings. To access configurations, open the **Project Explorer** > **Project** > **Settings** > the **Configuration** tab. 
 
-You can define any number of configurations. The active configuration, i.e. the one that will be used when running your application, is determined by the drop-down in the toolbar of Studio Pro.
+You can define any number of configurations. The active configuration, as in, the one that will be used when running your application, is determined by the drop-down in the toolbar of Studio Pro.
 
 You can use configurations to have different database settings for different people working on your project. Maybe one person has SQL Server on their computer and the other has PostgreSQL. You can also have a shared configuration for connecting to a database server that you both have access to.
 
@@ -45,9 +45,9 @@ The **Database** tab has the following settings:
 The **Server** tab has the following settings:
 
 * **Application root URL** – this URL points to the root of your application as it should be accessible by end-users. This setting is also used in the published WSDL files for the address where your published web services can be called.
-* **Runtime port** – in this setting you can fill in the HTTP port through which a browser accesses the server on which your application is running. Multiple concurrently running servers on the same computer should use different HTTP port numbers. *Default value*: 8080
+* **Runtime port** – in this setting you can fill in the HTTP port through which a browser accesses the server on which your application is running. Multiple concurrently running servers on the same computer should use different HTTP port numbers. Default: *8080*
 * **Runtime port security** – determines whether the runtime HTTP port will be open to other machines or just to the current machine (localhost).
-* **Admin port** – this port number is used to communicate with the server. Multiple concurrently running servers on the same computer should use different server admin port numbers. *Default value*: 8090
+* **Admin port** – this port number is used to communicate with the server. Multiple concurrently running servers on the same computer should use different server admin port numbers. Default: *8090*
 * **Admin port security** –  determines whether the admin port will be open to other machines or just to the current machine (localhost).
 * **Java heap** – in this setting you can specify the maximum Java heap memory size. There following options are available:
   * **Default** – use the default heap memory size of the installed Java virtual machine.
@@ -71,7 +71,7 @@ Only use this functionality if you know exactly what you are doing. Wrong values
 
 Each custom setting consists of a name and a value. For example, to enable persistent sessions you add a custom setting with name `PersistentSessions` and value `true`.
 
-For settings overview, see [Custom Settings](custom-settings).
+For settings overview, see [Runtime Customization](custom-settings).
 
 ## 3 Read More
 

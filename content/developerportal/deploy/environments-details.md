@@ -138,8 +138,7 @@ The limitation types are the following:
 * **Concurrent anonymous** – the number of anonymous users that are logged in simultaneously
 * **Named** – the number of named users registered in the database that are allowed to use the application
 
-
-## 3 Model Options Tab
+## 3 Model Options Tab {#model-options}
 
 ![](attachments/environments-details/model-options.png)
 
@@ -303,7 +302,7 @@ Use the Custom Runtime Settings section to perform the following actions:
 * **Edit** the runtime setting
 * **Delete** the runtime settings
 
-For more information about runtime settings, read the [Custom Settings](/refguide/custom-settings) and [Tricky Custom Settings in Mendix Runtime](/refguide/tricky-custom-runtime-settings) documentation.
+For more information about runtime settings, read the [Runtime Customization](/refguide/custom-settings) and [Tricky Custom Settings in Mendix Runtime](/refguide/tricky-custom-runtime-settings) documentation.
 
 The Mendix Cloud uses runtime settings to configure the included systems for logs, backups, and database. Therefore, the following settings are **not** configurable by users:
 

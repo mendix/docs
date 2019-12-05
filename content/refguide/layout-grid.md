@@ -10,7 +10,7 @@ tags: ["studio pro", "layout grid", "container widget", "grid", "layout"]
 
 ## 1 Introduction
 
-The layout grid is a widget that gives structure to your pages.  A layout grid contains rows and columns: ![Layout Grid Example](attachments/container-widgets/layout-grid-example.png)
+The layout grid is a widget that gives structure to your pages.  A layout grid contains rows and columns: ![Layout Grid Example](attachments/container-widgets/layout-grid.png)
 
 In a browser, the layout grid is based on the Bootstrap grid system. For more information on the Bootstrap grid system, see the [official Bootstrap documentation](http://getbootstrap.com/css/#grid).
 
@@ -28,7 +28,8 @@ A row has the following properties:
 
 *  **Visible** – allows you to hide an element from a page
 
-    ![Row Properties](attachments/container-widgets/row-properties.png)
+    {{% image_container width="300" %}}![Row Properties](attachments/container-widgets/row-properties.png)
+    {{% /image_container %}}
 
 For more information on properties listed above, see [Properties Common for Widgets](common-widget-properties).
 
@@ -45,9 +46,21 @@ A column has the following properties:
   * Two columns with weight 6 each
   * One column with weight 3 and one column with weight 9
 
-In the example below, you can see one column with weight 12 and it takes up the full width, and two columns with weight 6 each:
+In this example, you can see one column with weight 12 (which takes up the full width) and two columns with weight 6 each:
 
-![Columns Example](attachments/container-widgets/columns-example.png)
+![Columns Example](attachments/container-widgets/columns.png)
+
+Starting with Studio Pro version [8.3.0](/releasenotes/studio-pro/8.3#830), the **Weight** property has been replaced by the following three properties, which allow for the easier creation of responsive layout grids:
+
+* **Desktop Size** – the size of the column for desktop devices
+* **Tablet Size** – the size of the column for tablet devices
+* **Phone Size** – the size of the column for phone devices
+
+The desktop sizes of all columns in a row must add up to 12. This restriction does not apply to tablet or phone sizes, which enables wrapping columns on smaller devices. Here is an example configuration:
+
+* 4 columns with size 3 on desktop
+* 4 columns with size 6 on tablet (creating a 2x2 grid)
+* 4 columns with size 12 on phone (showing all columns as a separate row)
 
 #### 2.2.1 Adding a New Row or a Column
 

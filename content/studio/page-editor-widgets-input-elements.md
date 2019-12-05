@@ -1,5 +1,5 @@
 ---
-title: "Input Element Widgets"
+title: "Input Elements"
 parent: "page-editor-widgets"
 description: "Describes input widgets in Mendix Studio."
 menu_order: 20
@@ -10,7 +10,8 @@ tags: ["studio", "page editor", "input elements", "input widgets", "widgets"]
 
 **Input Elements** are [widgets](page-editor-widgets) in Mendix Studio that are typically used to allow end-users enter or edit data. For example, a text box below allows users to fill in their full names:
 
-![](attachments/page-editor-widgets-input-elements/text-box-example.png)
+{{% image_container width="350" %}}![](attachments/page-editor-widgets-input-elements/text-box-example.png)
+{{% /image_container %}}
 
 **Input Elements** can only function inside a data container (a data view, a list view, or a data grid). You can either place widget in an existing data container; or click **Wrap with a new data view** in **Properties** to create a data view and place an input element inside it automatically. 
 
@@ -26,13 +27,13 @@ You can find the description of input elements available in Studio in the table 
 | Text Box      | A text box is used to allow end-users to enter, edit, and display a text. For example, end-users will be able to enter their names. |
 | Text Area     | A text area is used to enter, edit, and display a long text that can take several lines, for example, the description of a product. |
 | Date Picker   | A date picker is used to allow end-users select a date in a calendar, for example, when selecting a day for a delivery. |
-| Drop Down     | A drop-down widget is used to allow end-users pick an option from the preset list of options. For example, users can select a color of a product.<br />You can also use this widget to display and select associations. You need a many-to-one association in the domain model (for more information, see [Association Properties](domain-models-association-properties)). For example, if a customer has several addresses, the user can select a delivery address from them. In this example, several addresses can be associated with one customer (many-to-one association). |
+| Drop Down     | A drop-down widget is used to allow end-users pick an option from the preset list of options. For example, users can select a color of a product.<br />You can also use this widget to display and select associations. You need a many-to-one association in the domain model (for more information, see [Associations](domain-models-association-properties)). For example, if a customer has several addresses, the user can select a delivery address from them. In this example, several addresses can be associated with one customer (many-to-one association). |
 | Check Box     | A check box widget is used to allow users to mark a value as true or false. For example, users can tick a box to sign up for the newsletter. |
 | Radio Buttons | Radio buttons are used to allow users select the option from a number of preset ones. For example, users can select from several possible locations for picking an order up. |
 
 {{% alert type="info" %}}
 
-Apart from the standard input widgets, you can also [download widgets from the Mendix App Store](https://appstore.home.mendix.com/index3.html) to your app. For more information, see section [4 Widgets by Origin](page-editor-widgets#widgets-by-origin) in *Widgets*.
+Apart from the standard input widgets, you can also [download widgets from the Mendix App Store](https://appstore.home.mendix.com/index3.html) to your app. For more information, see the [Widgets by Origin](page-editor-widgets#widgets-by-origin) section in *Widgets*.
 
 {{% /alert %}}
 
@@ -111,7 +112,7 @@ The **Input Validation** section properties are described in the table below:
 
 ### 3.5 Design Section {#input-elements-design}
 
-For information on the **Design** section and its properties, see [Design Section in Widgets](page-editor-widgets-design-section).
+For information on the **Design** section and its properties, see [Design Section](page-editor-widgets-design-section).
 
 ## 4 Read More
 

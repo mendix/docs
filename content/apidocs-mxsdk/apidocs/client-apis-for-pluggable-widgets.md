@@ -175,6 +175,16 @@ export type ImageValue = WebImage | NativeImage;
 
 `NativeImage` can be passed as a source of React Native’s [Image](https://facebook.github.io/react-native/docs/image) component, and `WebImage`  can be passed  to react-dom’s `img`.
 
+### 4.6 FileValue{#filevalue}
+
+`DynamicValue<FileValue>` is used to represent files. A file can be configured only through an [file](property-types-pluggable-widgets#file) property. `FileValue` is defined as follows:
+
+```ts
+export interface FileValue {
+    uri: string;
+}
+```
+
 ## 5 Exposed Modules
 
 ### 5.1 Icon {#icon}

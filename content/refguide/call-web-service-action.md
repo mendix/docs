@@ -43,13 +43,13 @@ When calling a web service using a call-web-service activity, the location of th
 
 This can be used to throw an exception when the web service takes too long to respond after connecting. After a set amount of time, an exception will be thrown and the microflow will roll back or go into your custom error handler.
 
-_Default value:_ Yes (as of Studio Pro [8.5.0](/releasenotes/studio-pro/8.5#850); in earlier versions, the default value was No)
+Default value: *Yes* (as of Studio Pro [8.5.0](/releasenotes/studio-pro/8.5#850); in earlier versions, the default value was No)
 
 ### 2.5 Timeout
 
 **Timeout** specifies the timeout value in seconds.
 
-_Default value:_ 300 (as of Studio Pro [8.5.0](/releasenotes/studio-pro/8.5#850); in earlier versions, the default value was 30)
+Default value: *300* (as of Studio Pro [8.5.0](/releasenotes/studio-pro/8.5#850); in earlier versions, the default value was 30)
 
 ### 2.6 Validate Against WSDL
 

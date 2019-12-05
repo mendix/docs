@@ -13,6 +13,12 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 ## 2019
 
+### December 5th, 2019
+
+#### Improvements
+
+* We made some minor styling improvements on [Buzz](/developerportal/collaborate/buzz).
+
 ### November 21st, 2019
 
 #### Fixes

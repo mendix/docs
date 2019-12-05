@@ -53,13 +53,13 @@ The browser you use needs to have JavaScript turned on.
 {{% /alert %}}
 
 ## 5 Cloud Foundry
-The Mendix Cloud Foundry Buildpack supports Cloud Foundry versions v9 and above. 
+The [Mendix Cloud Foundry buildpack](https://github.com/mendix/cf-mendix-buildpack) supports Cloud Foundry versions v9 and above. 
 
 ## 6 Docker
-Mendix Docker buildpack supports Docker version 18.09.0 and above. 
+The [Mendix Docker buildpack](https://github.com/mendix/docker-mendix-buildpack) supports Docker version 18.09.0 and above. 
 
 ### 6.1 Kubernetes
-The Mendix Docker Buildpack supports the following Kubernetes versions: 
+The Mendix Docker buildpack supports the following Kubernetes versions: 
 
 * Kubernetes version v1.12 and above
 * Redhat Openshift v3.11 and v4.2 and above

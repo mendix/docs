@@ -27,7 +27,7 @@ The **HTTP method** property defines the HTTP method to use when calling a REST 
 
 Set **Use timeout on request** to **Yes** to be able specify how long the Call REST activity should wait for the REST endpoint to respond. If the REST endpoint has not responded after the number of seconds in **Timeout (s)**, an exception will occur and the microflow will roll back or go into your custom error handler.
 
-_Default value:_ Yes, 30 seconds (as of Studio Pro [8.5.0](/releasenotes/studio-pro/8.5#850); in earlier versions, the default value was No)
+Default value: *Yes, 30 seconds* (as of Studio Pro [8.5.0](/releasenotes/studio-pro/8.5#850); in earlier versions, the default value was No)
 
 ### 2.3 Proxy Configuration
 

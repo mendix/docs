@@ -56,7 +56,7 @@ The **Import mapping** parameter type allows you to pass an import mapping into 
 
 The **Export mapping** parameter type allows you to pass an export mapping into a Java action. In the generated Java action template code, this type is represented as a string (the name of the export mapping).
 
-#### 2.2.5 String Template Type
+#### 2.2.5 String Template Type {#string-template-type}
 
 The **String template** parameter type allows you to pass a string template into a Java action. In the generated Java action template code, this type is represented as a [IStringTemplate](https://apidocs.mendix.com/8/runtime/com/mendix/systemwideinterfaces/javaactions/parameters/IStringTemplate.html)
 

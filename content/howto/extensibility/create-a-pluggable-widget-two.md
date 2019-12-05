@@ -601,6 +601,8 @@ To apply this knowledge, reorganize the `properties` section in *TextBox.xml* to
 </properties>
 ```
 
+Your code alterations will produce the following result:
+
 	{{% image_container width="500" %}}![property dialog Studio Pro](attachments/pluggable-part-two/property-grouping-studio-pro.png){{% /image_container %}}
 
 ## 4 Read More

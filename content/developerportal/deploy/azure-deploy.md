@@ -9,7 +9,9 @@ tags: ["Deployment", "Azure", "Microsoft", "Environment"]
 
 ## 1 Introduction
 
-You can deploy your Mendix app using a *Bring Your Own License* on Microsoft Azure. This gives you an environment over which you have full control.
+The Mendix Azure Marketplace solution is based on a standard Server based deployment. The pre-configured virutal server is not in maintenance by Mendix. This means it can be used for a quick setup, but applying latest patches is the responbility of the customer. Mendix will threath the use of this image as a standard linux server based on-premises deployment. 
+
+Also a license needs to be applied for production use. In case of production, it is adviced to select a external, production scaled database. The image comes standard with an embedded Postgres instance, which can be used for development purposes. 
 
 This page guides you through the steps you need to follow to get your Mendix app up and running. It will teach you how to do the following:
 

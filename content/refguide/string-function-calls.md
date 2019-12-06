@@ -414,7 +414,7 @@ Replaces all occurrences of a regular expression with another string.
 
 * The string to search in
     * Type: string
-* The regular expression to match (if you want to search for a literal string, enclose it between \G and \E. For example, `\GPaul S. Mueller\E` will search for the string `Paul S. Mueller`, without interpreting the dot as a wildcard)
+* The regular expression to match; if you want to search for a literal string, enclose it between `\Q` and `\E` (for example, `\QPaul S. Mueller\E` will search for the string `Paul S. Mueller`, without interpreting the dot as a wildcard)
     * Type: string
 * The string to be substituted for each match (this does not support backreferences, substitutions, or captures)
     * Type: string
@@ -465,7 +465,7 @@ Replaces the first occurrence of the regular expression with a replacement strin
 * The string to search in
     * Type: string
 * The regular expression to match
-    * Type: string (if you want to search for a literal string, enclose it between \G and \E. For example, `\GPaul S. Mueller\E` will search for the string `Paul S. Mueller`, without interpreting the dot as a wildcard)
+    * Type: string; if you want to search for a literal string, enclose it between `\Q` and `\E` (for example, `\QPaul S. Mueller\E` will search for the string `Paul S. Mueller`, without interpreting the dot as a wildcard)
 * The string to be substituted for the first match (this does not support backreferences, substitutions, or captures)
     * Type: string
 

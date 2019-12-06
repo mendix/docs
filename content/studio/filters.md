@@ -9,21 +9,23 @@ tags: ["studio", "microflow", "filter", "filters", "filtering", "data", "data fi
 
 In Mendix Studio, you can filter data in pages and microflows.
 
-*In a microflow*, you can filter the retrieved data by creating filters for the **Retrieve** activity. To add a filter objects should be retrieved from the database.
+*In a microflow*, you can filter the retrieved data by creating filters for the **Retrieve** activity. To add a filter objects should be retrieved from the database:
 
 ![](attachments/filters/retrieve-from-database.png)
 
-*In a page*, you can add a filter to a list view and a data grid. The data source of the list view or the data grid should be **Database**. 
+*In a page*, you can add a filter to a list view or a data grid. Mind that the data source of the list view or the data grid should be **Database**: 
 
 ![](attachments/filters/page-database.jpg)
 
-A filter consists of conditions and groups. A *condition* is an expression that restricts the retrieved data. For example, you can retrieve all customers that do not have an email filled out.
+A filter consists of conditions and groups. 
+
+A *condition* is an expression that restricts the retrieved data. For example, you can retrieve all customers who do not have an email filled out.
 
 ![](attachments/filters/filter-condition.png)
 
 *Groups* are sets of conditions that are connected with `and`  or `or` logic.
 
-When you have more than one condition, `and` and `or` operators are used. For conditions, operators define if all (`and` operator) or only one of conditions (`or` operator) should be met. In the example below all three conditions should be satisfied the data to be retrieved.
+When you have more than one condition, `and` and `or` operators are used. For conditions, operators define if all (`and` operator) or only one of conditions (`or` operator) should be met. In the example below all three conditions should be satisfied for the data to be retrieved:
 
 ![](attachments/filters/and-operator-in-conditions.png)
 
@@ -92,7 +94,7 @@ To create a new filter, do the following:
     ![](attachments/filters/add-new-condition.png)<br/>
 
     b. If needed, change the `and` operator to `or` operator clicking the drop-down arrow. <br/>
-    c.   If you want to change the order of conditions, click the icon on the left (appears when you hover over it) and drag it.<br/>
+    c.  If you want to change the order of conditions, click the icon on the left (appears when you hover over it) and drag it.<br/>
 
     ![](attachments/filters/change-order.png)<br/>
 

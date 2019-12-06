@@ -534,10 +534,9 @@ Then the Studio Pro UI for the property appears like this:
 
 ![](attachments/widget-property-types/object.png)
 
-### 4.6 File{#file}
+### 4.6 File {#file}
 
-It also allows a user to configure a file from an object that is a specialization of **System.File**.
-It is passed as a [`DynamicValue<FileValue>`](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets#filevalue) prop to a client component.
+The file property allows a user to configure a file from an object that is a specialization of *System.File*. It is passed as a [`DynamicValue<FileValue>`](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets#filevalue) prop to a client component.
 
 #### 4.6.1 XML Attributes
 

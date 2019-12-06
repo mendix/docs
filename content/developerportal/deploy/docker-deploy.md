@@ -56,4 +56,3 @@ Next, you need to push the image to a registry. This can be a public registry or
 
 * [How to Run a Mendix Docker Image](run-mendix-docker-image)
 * [Mendix Docker Buildpack](https://github.com/mendix/docker-mendix-buildpack)
-

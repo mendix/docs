@@ -21,9 +21,9 @@ The app will check for a license each time it is started.
 
 ## 2 Obtaining a Mendix License
 
-For all deployment options you will need to obtain a Mendix license from Mendix support. 
+You can obtain a Mendix license from Mendix support. 
 
-If you need a *Subscription Secret* to deploy to SAP Cloud Platform or IBM Cloud you will need to create a ticket with [Mendix Support](https://support.mendix.com).
+If you need a *Subscription Secret* to deploy to SAP Cloud Platform or IBM Cloud, you will need to create a ticket with [Mendix Support](https://support.mendix.com).
 
 If you want to create a new licensed node in the Mendix Cloud and your contract does not allow for more licensed nodes, please contact your Customer Success Manager (CSM) first.
 
@@ -53,7 +53,7 @@ To run Mendix apps in production on the Mendix Cloud, they must be linked to a l
 
 ### 3.2 SAP Cloud Platform & IBM Cloud
 
-To license a Mendix app on SAP Cloud Platform or IBM Cloud you need to supply a *Subscription Secret* which is linked to your app.
+To license a Mendix app on SAP Cloud Platform or IBM Cloud, you need to supply a *Subscription Secret* which is linked to your app.
 
 You can add this subscription secret as part of creating an environment on SAP Cloud Platform. You can also add, or change, the subscription secret on the *Environment Details* page of the environment you wish to license.
 

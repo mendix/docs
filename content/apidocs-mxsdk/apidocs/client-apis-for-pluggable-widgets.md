@@ -211,6 +211,6 @@ The Mendix platform uses [big.js](https://www.npmjs.com/package/big-js) to repre
 
 ## 7 Read More
 
-* [Pluggable Widgets API](pluggable-widgets)
-* [Pluggable Widget Property Types](property-types-pluggable-widgets)
-* [Build Pluggable Widgets](/howto/extensibility/pluggable-widgets)
+* [Pluggable Widgets API Documentation](pluggable-widgets)
+* [Pluggable Widget Property Types Documentation](property-types-pluggable-widgets)
+* [How to Build Pluggable Widgets](/howto/extensibility/pluggable-widgets)

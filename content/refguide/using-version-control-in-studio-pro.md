@@ -349,3 +349,7 @@ Make sure you use the SVN export feature of TortoiseSVN if you are copying a dir
 If you delete a file from your project, Studio Pro will automatically also delete it from the Team Server.
 
 If you want to delete a whole directory, you will have to use the delete command of TortoiseSVN. You can execute this command by right-clicking the directory and choosing 'TortoiseSVN > Delete'.
+
+### 9.4 Branching
+
+Do not perform branching outside of Studio Pro; free deployment to the Mendix Cloud stops working after a branch is created outside of Studio Pro.

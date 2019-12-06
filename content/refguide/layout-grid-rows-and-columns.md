@@ -5,8 +5,6 @@ tags: ["studio pro", "layout grid", "column", "row"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="warning" %}}The layout grid widget is not supported on native mobile pages.{{% /alert %}}
-
 ## 1 Introduction
 
 Layout grid rows and columns are components of a [layout grid](). You can define the number of columns in a row, their size and alignment per a device.
@@ -40,7 +38,7 @@ The **General** section of a row contains the following properties:
   
   * **Top** – columns are aligned to the top of the layout grid
   
-  * **Center** – columns are centered
+  * **Center** – columns are aligned to the center of the layout grid
   
   * **Bottom** – columns are aligned to the bottom of the layout grid
   
@@ -55,7 +53,7 @@ The **General** section of a row contains the following properties:
 
 ## 3 Columns and Their Properties{#columns}
 
-A row in a layout grid can contain one or more columns.  
+Columns form a row of a layout grid.  
 
  An example of layout grid column properties is represented in the image below:
 
@@ -76,24 +74,24 @@ Layout grid column properties consist of the following sections:
 
 **Desktop/Tablet/Phone Width** allows you to set a width for the corresponding device. You can choose the following options:
 
-* **Auto-fill** – equally divides width of the columns in the space available
+* **Auto-fill** – equally divides width of each column in available space
 * **Auto-fit content** – automatically fits the size of the column to its content
-* **Manual** – you can manually set the size of the columns by setting the [Desktop/Tablet/Phone size](#column-size) option 
+* **Manual** – allows you to manually set the size of the columns by setting the [Desktop/Tablet/Phone size](#column-size) option 
 
-For example, you have a layout grid with one row consisting and four columns. The columns have the following settings for the Desktop:
+For example, you have a layout grid with one row consisting of four columns. The columns have the following settings for the Desktop:
 
 1. Column one: **Desktop Width** is set to *Auto-fill*
 2. Column two: **Desktop Width** is set to *Manual*, [Desktop size](#column-size) is set to 8
 3. Column three: **Desktop Width** is set *Auto-fill*
 4. Column four: **Desktop Width** is set *Auto-fit to content*
 
-The layout grid will look the following way in an app:
-
-
-
 #### 3.2.2 **Desktop/Tablet/Phone Size** {#column-size}
 
 The **Desktop/Tablet/Phone Size** option is displayed only if [Desktop/Tablet/Phone width](#column-width) is set to **Manual**. width allows you to select size of the column for the corresponding devices.
+
+#### 3.2.3 Layout Examples
+
+
 
 ## 4 Performing Basic Actions
 

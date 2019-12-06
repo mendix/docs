@@ -6,8 +6,6 @@ tags: ["studio pro", "layout grid", "container widget", "grid", "layout"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="warning" %}}The layout grid widget is not supported on native mobile pages.{{% /alert %}}
-
 ## 1 Introduction
 
 The layout grid is a widget that gives structure to your pages.  A layout grid contains rows and columns: ![Layout Grid Example](attachments/container-widgets/layout-grid.png)

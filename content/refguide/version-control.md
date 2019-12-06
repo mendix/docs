@@ -3,6 +3,7 @@ title: "Version Control"
 description: "This document gives definitions and explains the version control  process"
 tags: ["Version Control", "Application Lifecycle Management", "Commit", "Collaborate"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+#This document is mapped on the landing page, update the link there if renaming or moving it.
 ---
 
 ## 1 Introduction

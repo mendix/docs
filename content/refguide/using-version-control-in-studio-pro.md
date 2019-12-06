@@ -350,6 +350,10 @@ If you delete a file from your project, Studio Pro will automatically also delet
 
 If you want to delete a whole directory, you will have to use the delete command of TortoiseSVN. You can execute this command by right-clicking the directory and choosing 'TortoiseSVN > Delete'.
 
-### 9.4 Branching
+### 9.4 Branching & Deploying
 
-Do not perform branching outside of Studio Pro; free deployment to the Mendix Cloud stops working after a branch is created outside of Studio Pro.
+If you perform branching outside of Studio Pro, you will not be able to immediately deploy to Mendix Cloud. That is because Studio Pro adds metadata about the Mendix version of your app project to each revision when you commit or create a branch, which is needed by the Mendix Cloud deployment. Branching outside of Studio Pro means that metadata is missing from your branch, thus your app cannot successfully be deployed.
+
+To fix this, make a small commit on your branch in Studio Pro (for example, changing a documentation field). Studio Pro will then add the metadata that Mendix Cloud deployment requires, and you will be able to deploy your app.
+
+

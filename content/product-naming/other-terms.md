@@ -128,6 +128,14 @@ Capitalize in all instances.
 Capitalize in all instances.
 {{% /alert %}}
 
+### Fallback
+
+The name of the Mendix *high-availability* option which allows databases to be replicated via streaming between availability zones.
+
+{{% alert type="info" %}}
+Capitalize in all instances.
+{{% /alert %}}
+
 ### fast deploy & fast deployment
 
 {{% alert type="info" %}}

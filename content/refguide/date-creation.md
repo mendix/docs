@@ -6,7 +6,7 @@ tags: ["studio pro"]
 
 ## 1 Introduction
 
-Dates can be created with the `dateTime` and `dateTimeUTC` functions. The difference between the two is that `dateTime` uses the calendar of the session used in the function call, and `dateTimeUTC` uses the UTC calendar. The system session runs always as UTC by default, except for scheduled events which can be configured in the [project settings](project-settings).
+Dates can be created with the `dateTime` and `dateTimeUTC` functions. The difference between the two is that `dateTime` uses the calendar of the session used in the function call, and `dateTimeUTC` uses the UTC calendar. The system session runs as UTC by default, except for scheduled events, which can be configured in the [Scheduled Event Time Zone](project-settings#scheduled) section of **Project Settings**.
 
 This function does not accept parameters, only fixed values. To create a date using parameters, use the [parseDateTime](parse-and-format-date-function-calls#parsedatetime-utc) function.
 

@@ -17,31 +17,33 @@ In Mendix Studio, you can filter data in pages and microflows.
 
 ![](attachments/filters/page-database.jpg)
 
+## 2 Conditions and Groups
+
 A filter consists of conditions and groups. 
 
 A *condition* is an expression that restricts the retrieved data. For example, you can retrieve all customers who do not have an email filled out.
 
 ![](attachments/filters/filter-condition.png)
 
-*Groups* are sets of conditions that are connected with `and`  or `or` logic.
-
-When you have more than one condition, `and` and `or` operators are used. For conditions, operators define if all (`and` operator) or only one of conditions (`or` operator) should be met. In the example below all three conditions should be satisfied for the data to be retrieved:
+When you have more than one condition, `and` and `or` operators are used. For *conditions*, operators define if all (`and` operator) or only one of conditions (`or` operator) should be met. In the example below all three conditions should be satisfied for the data to be retrieved:
 
 ![](attachments/filters/and-operator-in-conditions.png)
 
-For groups, operators define the following:
+*Groups* are sets of conditions that are connected with `and`  or `or` logic.
+
+For *groups*, operators define the following:
 
 * `and` – all groups of conditions should be met 
 * `or` – only one (or more) of the groups of conditions should be met when filtering the data
 
-In the example below, only program items that meet the following conditions are retrieved in two cases:
+In the example below, only program items that meet the following conditions are retrieved:
 
 * If the full name is empty, the description is filled in, and email contains "mendix.com"
 * If the full name is empty, the description is filled in, and email contains "siemens.com"
 
 ![](attachments/filters/operators-between-groups.png)
 
-## 2 Operators
+## 3 Operators Used in Conditions
 
 While `and` and `or` operators are used between conditions and groups, other operators are used to define the condition itself.  
 
@@ -63,7 +65,7 @@ Available operators depend on the attribute type you have selected in the left p
 | greater than or equal to | the value of the attribute data should equal or exceed the given value | CustomerNumber greater than or equal to 10 |
 | in same quarter as       | the value (a date) of the attribute data falls into the same quarter of the year as the given value | Last Changed Date in same quarter as Today |
 
-## 3 Creating a New Filter
+## 4 Creating a New Filter
 
 To create a new filter, do the following:
 
@@ -110,7 +112,7 @@ To create a new filter, do the following:
 
 The new filter is added. In the properties, you can see the total amount of conditions in the filter.
 
-## 4 Deleting a Filter
+## 5 Deleting a Filter
 
 To delete a filter, do the following:
 
@@ -130,7 +132,7 @@ All conditions in the filter are deleted.
 If you want to delete just one condition and not all of them, click the trash bin icon on the right. 
 {{% /alert %}}
 
-## 5 Read More
+## 6 Read More
 
 * [Microflows](microflows)
 * [Pages](page-editor)

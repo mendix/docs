@@ -758,6 +758,8 @@ The widget’s style properties are as follows:
 | --- | --- | --- |
 | `container` | This has all ViewStyle properties. |        |
 
+Note that container styling will only be applied to the safe area.
+
 The default class to style all safe area views is named `com_mendix_widget_native_safeareaview_SafeAreaView`.
 
 ### 10.14 Slider

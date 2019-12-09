@@ -11,7 +11,7 @@ title: "Setting Up Remote Notifications"
 
 todo: move this text to a parent intro doc or the local notifs one --> If you want to use local push notifications with Make it Native app, the only step you have to perform is [Firebase setup](#4-firebase-setup)
 
-Remote push notifications are what most people think of when they think of push notifications: a developer triggers a SOMETHING which makes a server push notifications to app users' devices. For example, if you are tracking a package through an app, you might recieve a push notification from their servers when they know your package has arrived at your doorstep.
+Remote push notifications allow you to remotely trigger small text messages, sounds, and more on your users' devices. For more information on notifications, see Apple's [APNs Overview](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html) or Google's [Notifications Overview](https://developer.android.com/guide/topics/ui/notifiers/notifications).
 
 Native remote push notifications have the same capabilities as [hybrid push notifications](link here). However, native push notifications require a unique setup method:
 
@@ -29,7 +29,6 @@ Follow the sections below to complete these three tasks and enable native remote
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Create a native app by completing [How to Deploy Your First Mendix Native App](deploying-native-app) 
 * Learn the basics of [Git](https://www.atlassian.com/git)
 
 ## 3 Creating a Native Builder App
@@ -37,43 +36,39 @@ Before starting this how-to, make sure you have completed the following prerequi
 To make a native app for this how to, do the following:
 
 1. Complete [How to Deploy Your First Mendix Native App](deploying-native-app) through the end of the *Preparing Your Project* section. Once you finish this, you will have a generated a GitHub repository with all the files you will need. 
-
 2. Clone the generated repository to your computer. This will enable customizations later.
 
 ## 4 Setting up Firebase Cloud Messaging Service
 
-todo: remote notifications require firebase because xyz.
+Google's Firebase service supports both Android and Apple push notifications. Because APNs can require more work from you during customization steps, this document will teach you to set up your push notifications using Firebase.
 
-To set up the Firebase cloud messaging server, complete [Setting up Google Firebase Cloud Messaging Server](setting-up-google-firebase-cloud-messaging-server), and be sure to make both an iOS and an Android app. At the end you will end up with three files:
+To set up the Firebase cloud messaging server, complete [Setting up Google Firebase Cloud Messaging Server](setting-up-google-firebase-cloud-messaging-server). During that document's *Adding an Android and iOS App* section, be sure to add both an iOS and an Android app to your Firebase configuration. After you complete that tutorial, you will have these files:
 
 * *google-services.json*
 * *GoogleService-Info.plist*
 * *yourPrivateKey.json*
 
-todo: These files are your xyz
+You will use these later to complete your work with the Native Builder and with Firebase.
 
 ## 5 Setting up Native Builder Customizations
 
-Out of the box, the Native Builder will create iOS and Android part of the code. Continue to implement customizations for different platforms.
+After you run the `prepare` command, the Native Builder will create iOS and Android source code. To enable push notifications, you will customize these platforms' source code files.
 
-todo: change "part of the code" to something more specific."
-todo: which platforms?
+### 5.1 Customizing Android Source Code
 
-### 5.1 Customizing Android todo: android what? Android app?
+To customize your Android source code and enable push notifications, do the following steps:
 
-todo: intro text here. Why are we customizing? What business use case might the reader be able to apply here?
-
-1. Add the following code to *android/app/build.gradle*:
+1. Change the code in *android/app/build.gradle* until it looks like this:
 
 ```diff
 @@ -101,6 +101,10 @@ dependencies {
      implementation fileTree(dir: "libs", include: ["*.jar"])
      implementation "com.facebook.react:react-native:+"  // From node_modules
      implementation "org.webkit:android-jsc:r245459"
-+    implementation "com.google.android.gms:play-services-base:16.1.0"
-+    implementation "com.google.firebase:firebase-core:16.0.9"
-+    implementation "com.google.firebase:firebase-messaging:18.0.0"
-+    implementation 'me.leolin:ShortcutBadger:1.1.21@aar'
+     implementation "com.google.android.gms:play-services-base:16.1.0"
+     implementation "com.google.firebase:firebase-core:16.0.9"
+     implementation "com.google.firebase:firebase-messaging:18.0.0"
+     implementation 'me.leolin:ShortcutBadger:1.1.21@aar'
  }
 ```
 
@@ -83,18 +78,15 @@ todo: intro text here. Why are we customizing? What business use case might the 
 We will be testing our implementation against local mendix instance, that means we wont using `https` which means we have to add `android:usesCleartextTraffic="true"` please remove this change afterwards. [todo: clarify this info, give a clear instruction]
 
 ```diff
---- a/android/app/src/main/AndroidManifest.xml
-+++ b/android/app/src/main/AndroidManifest.xml
 @@ -2,9 +2,11 @@
    package="com.mendix.nativetemplate">
 
      <uses-permission android:name="android.permission.INTERNET" />
--
-+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-+    <uses-permission android:name="android.permission.VIBRATE" />
+     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+     <uses-permission android:name="android.permission.VIBRATE" />
      <application
        android:name=".MainApplication"
-+      android:usesCleartextTraffic="true"
+       android:usesCleartextTraffic="true"
        android:label="@string/app_name"
        android:icon="@mipmap/ic_launcher"
        android:roundIcon="@mipmap/ic_launcher_round"
@@ -102,7 +94,7 @@ We will be testing our implementation against local mendix instance, that means 
        <activity
          android:name=".MainActivity"
          android:label="@string/app_name"
-+        android:launchMode="singleTop"
+         android:launchMode="singleTop"
          android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
          android:windowSoftInputMode="adjustResize">
          <intent-filter>
@@ -110,20 +102,20 @@ We will be testing our implementation against local mendix instance, that means 
          </intent-filter>
        </activity>
        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
-+        <receiver android:name="io.invertase.firebase.notifications.RNFirebaseNotificationReceiver"/>
-+        <receiver android:enabled="true" android:exported="true"  android:name="io.invertase.firebase.notification
-+            <intent-filter>
-+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
-+                <action android:name="android.intent.action.QUICKBOOT_POWERON"/>
-+                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON"/>
-+                <category android:name="android.intent.category.DEFAULT" />
-+            </intent-filter>
-+        </receiver>
-+        <service android:name="io.invertase.firebase.messaging.RNFirebaseMessagingService">
-+            <intent-filter>
-+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-+            </intent-filter>
-+        </service>
+         <receiver android:name="io.invertase.firebase.notifications.RNFirebaseNotificationReceiver"/>
+         <receiver android:enabled="true" android:exported="true"  android:name="io.invertase.firebase.notification
+             <intent-filter>
+                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                 <action android:name="android.intent.action.QUICKBOOT_POWERON"/>
+                 <action android:name="com.htc.intent.action.QUICKBOOT_POWERON"/>
+                 <category android:name="android.intent.category.DEFAULT" />
+             </intent-filter>
+         </receiver>
+         <service android:name="io.invertase.firebase.messaging.RNFirebaseMessagingService">
+             <intent-filter>
+                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
+             </intent-filter>
+         </service>
      </application>
 
  </manifest>
@@ -134,14 +126,13 @@ We will be testing our implementation against local mendix instance, that means 
 ```diff
  import fr.greweb.reactnativeviewshot.RNViewShotPackage;
  import io.invertase.firebase.RNFirebasePackage;
-+import io.invertase.firebase.messaging.RNFirebaseMessagingPackage;
-+import io.invertase.firebase.notifications.RNFirebaseNotificationsPackage;
+ import io.invertase.firebase.messaging.RNFirebaseMessagingPackage;
+ import io.invertase.firebase.notifications.RNFirebaseNotificationsPackage;
 
  public class MainApplication extends MendixReactApplication {
    @Override
    public boolean getUseDeveloperSupport() {
--    return false;
-+    return true;
+     return true;
    }
 
    @Override
@@ -149,8 +140,8 @@ We will be testing our implementation against local mendix instance, that means 
              new ImagePickerPackage(),
              new RNGeocoderPackage(),
              new RNFirebasePackage(),
-+            new RNFirebaseMessagingPackage(),
-+            new RNFirebaseNotificationsPackage(),
+             new RNFirebaseMessagingPackage(),
+             new RNFirebaseNotificationsPackage(),
              new RNDeviceInfo(),
              new RNCameraPackage(),
              new CalendarEventsPackage(),
@@ -162,9 +153,8 @@ We will be testing our implementation against local mendix instance, that means 
         }
      }
      dependencies {
--        classpath("com.android.tools.build:gradle:3.4.0")
-+        classpath("com.android.tools.build:gradle:3.4.1")
-+        classpath 'com.google.gms:google-services:4.2.0'
+         classpath("com.android.tools.build:gradle:3.4.1")
+         classpath 'com.google.gms:google-services:4.2.0'
          // NOTE: Do not place your application dependencies here; they belong
          // in the individual module build.gradle files
      }

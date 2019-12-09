@@ -9,11 +9,16 @@ title: "Setting Up Remote Notifications"
 
 ## 1 Introduction
 
-todo: delete alert at top, flesh out intro
+todo: move this text to a parent intro doc or the local notifs one --> If you want to use local push notifications with Make it Native app, the only step you have to perform is [Firebase setup](#4-firebase-setup)
 
-todo: change alert to fleshed out explanation in intro {{% alert type="info" %}}
-If you want to use local push notifications with Make it Native app, the only step you have to perform is [Firebase setup](#4-firebase-setup)
-{{% /alert %}}
+Remote push notifications are what most people think of when they think of push notifications: a developer triggers a SOMETHING which makes a server push notifications to app users' devices. For example, if you are tracking a package through an app, you might recieve a push notification from their servers when they know your package has arrived at your doorstep.
+
+Native remote push notifications require a bundled app, a configured firebase setup, and Z.
+
+* are DEFINITION. For example, BUSINESS USE CASE.
+* do not work with make it native app
+* require a bundled app
+* 
 
 Setting up remote native push notifications occurs over four major steps:
 

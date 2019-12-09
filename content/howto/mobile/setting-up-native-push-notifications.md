@@ -13,20 +13,13 @@ todo: move this text to a parent intro doc or the local notifs one --> If you wa
 
 Remote push notifications are what most people think of when they think of push notifications: a developer triggers a SOMETHING which makes a server push notifications to app users' devices. For example, if you are tracking a package through an app, you might recieve a push notification from their servers when they know your package has arrived at your doorstep.
 
-Native remote push notifications require a bundled app, a configured firebase setup, and Z.
+Native remote push notifications have the same capabilities as [hybrid push notifications](link here). However, native push notifications require a unique setup method:
 
-* are DEFINITION. For example, BUSINESS USE CASE.
-* do not work with make it native app
-* require a bundled app
-* 
+1. Generate an app using the Native Builder.
+2. Configure your Firebase setup.
+3. Customize your native template.
 
-Setting up remote native push notifications occurs over four major steps:
-
-1) Native app creation with Native Builder
-2) Firebase setup
-3) Native Builder app customization (We need the files from firebase setup) 
-
-todo: where is the fourth step?
+Follow the sections below to complete these three tasks and enable native remote push notifications. After you have completed this document, see [How To Use Native Push Notifications](link here) for instructions on implementing native push notifications.
 
 **This how-to will teach you how to do the following:**
 

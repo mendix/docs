@@ -11,8 +11,8 @@ title: "Use Remote Notifications"
 
 todo: delete alert at top, flesh out intro
 
-{{% alert type="info" %}}
-If you want to use local or remote push notifications with Make it Native app, the only step you have to perform is [Firebase setup](#4-firebase-setup)
+todo: change alert to fleshed out explanation in intro {{% alert type="info" %}}
+If you want to use local push notifications with Make it Native app, the only step you have to perform is [Firebase setup](#4-firebase-setup)
 {{% /alert %}}
 
 Setting up remote native push notifications occurs over four major steps:

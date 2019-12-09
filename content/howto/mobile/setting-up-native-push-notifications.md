@@ -185,8 +185,8 @@ To change the capabilities of your app, open *app/ios/yourProjectName.xcworkspac
  import Foundation
  import UIKit
  import MendixNative
-+import Firebase
-+
+ import Firebase
+
 
  @UIApplicationMain
  class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -194,28 +194,26 @@ To change the capabilities of your app, open *app/ios/yourProjectName.xcworkspac
      guard let url = Bundle.main.object(forInfoDictionaryKey: "Runtime url") as? String, let runTimeUrl = AppUrl.forRuntime(url: url) else {
        fatalError("Missing the 'Runtime url' configuration within the Info.plist file")
      }
--    guard let bundleUrl = ReactNative.instance.getJSBundleFile() else {
-+    guard let bundleUrl = AppUrl.forBundle(url: "http://LOCALIP:8080", remoteDebuggingPackagerPort: 8083, isDebuggingRemotely: true, isDevModeEnabled: true) else {
+     guard let bundleUrl = AppUrl.forBundle(url: "http://LOCALIP:8080", remoteDebuggingPackagerPort: 8083, isDebuggingRemotely: true, isDevModeEnabled: true) else {
        fatalError("Could not properly load JS bundle file")
      }
--
-+    FirebaseApp.configure()
-+    RNFirebaseNotifications.configure()
+     FirebaseApp.configure()
+     RNFirebaseNotifications.configure()
      ReactNative.instance.start(MendixApp(bundleUrl: bundleUrl, runtimeUrl: runTimeUrl, warningsFilter: WarningsFilter.none))
      return true
    }
-+
-+  func application(_ application: UIApplication, didReceive notification: UILocalNotification) {
-+    RNFirebaseNotifications.instance().didReceive(notification)
-+  }
-+
-+  func application(_ application: UIApplication, RemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
-+    RNFirebaseNotifications.instance().didReceiveRemoteNotification(userInfo, fetchCompletionHandler: completionHandler)
-+  }
-+
-+  func application(_ application: UIApplication, didRegister notificationSettings: UIUserNotificationSettings) {
-+    RNFirebaseMessaging.instance().didRegister(notificationSettings)
-+  }
+
+   func application(_ application: UIApplication, didReceive notification: UILocalNotification) {
+     RNFirebaseNotifications.instance().didReceive(notification)
+   }
+
+   func application(_ application: UIApplication, RemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+     RNFirebaseNotifications.instance().didReceiveRemoteNotification(userInfo, fetchCompletionHandler: completionHandler)
+   }
+
+   func application(_ application: UIApplication, didRegister notificationSettings: UIUserNotificationSettings) {
+     RNFirebaseMessaging.instance().didRegister(notificationSettings)
+   }
  }
 ```
 
@@ -228,14 +226,20 @@ To change the capabilities of your app, open *app/ios/yourProjectName.xcworkspac
 ```
 
 4. Change the *Info.plist* runtime URL to your local IP.
+5. In **Signing & Capabilities** tab, add **push notifications** capabilities to your app by doing the following:
 
-5. Add capabilities: [todo: add more here when validating]
+     a. Click **nativeTemplate** in the left-hand file explorer.
+     b. Click the **Signing & Capabilities** tab.
+     c. Click **Targets** > **nativeTemplate**.
+     d. Click **Capability**, type *push* in the dialog box, then select **Push Notifications**. 
+     e. Click **Capability**, type *background* in the dialog box, then select **Background Modes**.
+     f. Select **Background Modes** > **Remote Notifications**.
 
      ![Capabilities](attachments/native-remote-push/iosCustomizations.png)
 
-Congrulations, you finished setting up customizations for your custom native app!
+Congratulations, you finished setting up customizations for your custom native app! To implement remote push notifications on a test device, see [Use Remote Push Notifications](native-remote-notifications).
 
 ## 6 Read More
 
-* [Implement native remote push notifications](native-remote-notifications)
-* [Implement native local push notifications](native-local-notifications)
+* [How to Use Local Notifications](local-notif-parent)
+* [Native Builder Reference Guide](/refguide/native-builder)

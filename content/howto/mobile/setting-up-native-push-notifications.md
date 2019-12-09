@@ -72,10 +72,8 @@ To customize your Android source code and enable push notifications, do the foll
  }
 ```
 
-2. Add [todo: add should be move?]the *google-services.json* file you downloaded inside *android/app* so it [todo: what's it? the code? the folder?] will look like *android/app/google-services.json*.
-
-3. Change *android/app/src/main/AndroidManifest.xml*
-We will be testing our implementation against local mendix instance, that means we wont using `https` which means we have to add `android:usesCleartextTraffic="true"` please remove this change afterwards. [todo: clarify this info, give a clear instruction]
+2. Move *google-services.json* inside your **android/app** folder.
+3. Change *android/app/src/main/AndroidManifest.xml* to this:
 
 ```diff
 @@ -2,9 +2,11 @@
@@ -121,7 +119,11 @@ We will be testing our implementation against local mendix instance, that means 
  </manifest>
 ```
 
-4. Change *android/app/src/main/java/com/mendix/nativetemplate/MainApplication.java*:
+{{% alert type="info" %}}
+You will test your implementation against a local Mendix instance, which requires the line `android:usesCleartextTraffic="true"` above. After you complete this tutorial remove this line, as it can cause a vulnerability.
+{{% /alert %}}
+
+4. Change *android/app/src/main/java/com/mendix/nativetemplate/MainApplication.java* to this:
 
 ```diff
  import fr.greweb.reactnativeviewshot.RNViewShotPackage;
@@ -147,7 +149,7 @@ We will be testing our implementation against local mendix instance, that means 
              new CalendarEventsPackage(),
 ```
 
-5. Change *android/build.gradle*:
+5. Change *android/build.gradle* to this:
 
 ```diff
         }
@@ -160,10 +162,10 @@ We will be testing our implementation against local mendix instance, that means 
      }
 ```
 
-6. Open *android/app/src/main/res/raw/runtime_url* and add your local IP address. [todo: where?]
-7. Commit and push your changes to master. This will either trigger an App Center build, or you can run it locally.
+6. Open *android/app/src/main/res/raw/runtime_url* and replace its one line with your local IP address.
+7. Commit and push your changes to master. This will automatically trigger an App Center build.
 
-### 5.2 Customizing iOS [todo: customize what?]
+### 5.2 Customizing iOS Source Code
 
 todo: intro text needed
 

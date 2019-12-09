@@ -40,7 +40,7 @@ Place the widget in the context of an object that has attributes for **Value att
 4. Create a folder named *dist* in the project root.
 5. Create a Mendix test project in the *dist* folder and rename its root folder to *dist/MxTestProject*, or get the test project from [mendixlabs/progress-circle](https://github.com/mendixlabs/progress-circle/releases/latest). Changes to the widget code will be automatically pushed to this test project.
 6. To automatically compile, bundle, and push code changes to the running test project, run `grunt`.
-6. To run the project unit tests with code coverage (results can be found at `dist/testresults/coverage/index.html`), run: `npm test`
-7. Run the test continuously during development via `karma start`.
+7. To run the project unit tests with code coverage (results can be found at `dist/testresults/coverage/index.html`), run: `npm test`
+8. Run the test continuously during development via `karma start`.
 
 We are actively maintaining this widget. Please report any issues or suggestions for improvement at [mendixlabs/progress-circle](https://github.com/mendixlabs/progress-circle/issues).

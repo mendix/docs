@@ -185,6 +185,47 @@ export interface FileValue {
 }
 ```
 
+### 4.6 ListValue{#listvalue}
+
+`ListValue` is used to represent list of objects for [datasource](property-types-pluggable-widgets#datasource) property.
+
+```ts
+export interface ListItem {
+    id: GUID;
+}
+
+export interface ListValue {
+    status: ValueStatus;
+    items: ListItem[];
+    totalCount: Option<number>;
+    amount: number;
+    setAmount: (Option<number>) => void;
+    offset: number;
+    setOffset: (number) => void;
+}
+```
+
+
+When `datasource` property with `isList="true"` is configured for a widget, the client component is getting list of objects represented as a `ListValue`. This type allows accessing information about data source as well as control amount and offset of items represented in the list.
+
+Hovewer, it is not possible to access domain data directly from `ListValue` as every object is represent only by GUID in the `items` array. Instead list of items may be used in combination with other properties a `datasource` property is tied to with `dataSource` attibute on that property.
+
+Example of using `ListValue` together with property of type `widgets`:
+
+When `widgets` property named `myWidgets` is configured to be tied to a `datasource` named `myDataSource` the client component props as following:
+```ts
+interface MyListWidgetsProps {
+    myDataSource: ListValue;
+    myWidgets: (ListItem) => ReactNode;
+}
+```
+
+then client component may render every instance of widgets with a specific item from the list as follows:
+
+```ts
+this.props.myDataSource.items.map(i => this.props.myWidgets(i));
+```
+
 ## 5 Exposed Modules
 
 ### 5.1 Icon {#icon}

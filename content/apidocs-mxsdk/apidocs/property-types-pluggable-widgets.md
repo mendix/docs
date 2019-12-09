@@ -295,10 +295,14 @@ Then the Studio Pro UI for the component appears like this:
 
 ### 3.3 Widgets {#widgets}
 
-The widgets property allows a user to place multiple widgets inside a pluggable widget, similar to the content of a [container](/refguide/container) widget. It is passed as a `ReactNode` prop to a client component.
+The widgets property allows a user to place multiple widgets inside a pluggable widget, similar to the content of a [container](/refguide/container) widget. It is passed as a `ReactNode` prop to a client component if a `dataSource` attribute is not specified. Otherwise it is passed as a function that expects an `ListItem` and returns a `ReactNode`: `(item: ListItem) => ReactNode`. See (`datasource`)[#datasource].
 
 {{% alert type="info" %}}
 This property type was introduced in Mendix 8.3.
+{{% /alert %}}
+
+{{% alert type="info" %}}
+Support for `dataSource` attribute was introduced in Mendix 8.6.
 {{% /alert %}}
 
 {{% alert type="warning" %}}
@@ -307,14 +311,16 @@ Some widgets are not yet supported inside pluggable widgets. Placing unsupported
 
 #### 3.3.1 XML Attributes
 
-| Attribute  | Required | Attribute Type | Description                                                                                                                                                          |
-| ---------- | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `type`     | Yes      | String         | Must be `widgets`                                                                                                                                                       |
-| `key`      | Yes      | String         | See [key](#key) |
-| `required` | No       | Boolean        | Whether a user must provide at least one widget. `true` by default                                                                                                |
+| Attribute    | Required | Attribute Type | Description |
+| ------------ | -------- | -------------- | ----------- |
+| `type`       | Yes      | String         | Must be `widgets` |
+| `key`        | Yes      | String         | See [key](#key) |
+| `dataSource` | No       | Property Path  | Specifies path to a [`datasource`](#datasource) property linked to this widgets property |
+| `required`   | No       | Boolean        | Whether a user must provide at least one widget. `true` by default |
+
 #### 3.3.2 Studio Pro UI
 
-When the component is defined as follows:
+When the component is defined without the `dataSource` attribute as follows:
 
 ```xml
 <property key="content" type="widgets" required="false">
@@ -326,6 +332,19 @@ When the component is defined as follows:
 then the Studio Pro UI for the component appears like this:
 
 ![studio pro ui](attachments/widget-property-types/widgets.png)
+
+When the component is defined with the `dataSource` attribute as follows:
+
+```xml
+<property key="content" type="widgets" required="false" dataSource="myDataSource">
+	<caption>Content</caption>
+	<description>Widgets using data source</description>
+</property>
+```
+
+where the `myDataSource` is a [`datasource`](#datasource) property then the Studio Pro UI for the component appears like this:
+
+![studio pro ui](attachments/widget-property-types/widgets_with_ds.png)
 
 ## 4 Dynamic Properties
 
@@ -501,7 +520,7 @@ The object property allows to create an arbitrary list of properties.
 | `type`     | Yes      | String         | Must be `object`                                                                                                                                                     |
 | `key`      | Yes      | String         | See [key](#key) |
 | `isList`   | Yes      | Boolean        | Must be `true`                                                                                                                                                       |
-| `required` | No       | Boolean        | This decides if the is user is required to specified items in the list, `true` by default |
+| `required` | No       | Boolean        | This decides if the user is required to specify items in the list, `true` by default |
 
 #### 4.5.2 XML Elements
 
@@ -545,14 +564,14 @@ The file property allows a user to configure a file from an object that is a spe
 | `type`     | Yes      | String         | Must be `file` |
 | `key`      | Yes      | String         | See [key](#key)  |
 
-#### 4.6.3 Studio Pro UI
+#### 4.6.2 Studio Pro UI
 
 When the property is defined as follows:
 
 ```xml
+
 <property key="file" type="file" required="false">
 	<caption>File</caption>
-	<category>General</category>
 	<description>Sample text file</description>
 </property>
 ```
@@ -560,6 +579,43 @@ When the property is defined as follows:
 Then the Studio Pro UI for the property appears like this:
 
 ![](attachments/widget-property-types/file.png)
+
+
+### 4.7 Datasource{#datasource}
+
+Datasource property allows widgets to work with object lists. The client component will receive value prop of type [`ListValue`](client-apis-for-pluggable-widgets#listvalue) and may be used with [`widgets`](#widgets) property.
+
+{{% alert type="info" %}}
+Support for `datasource` property type was introduced in Mendix 8.6.
+{{% /alert %}}
+
+{{% alert type="warning" %}}
+Currently only list datasources are supported. Hence specifying `isList="true"` is required.
+{{% /alert %}}
+
+#### 4.7.1 XML Attributes
+
+| Attribute  | Required | Attribute Type | Description |
+| ---------- | -------- | -------------- | ----------- |
+| `type`     | Yes      | String         | Must be `datasource` |
+| `key`      | Yes      | String         | See [key](#key) |
+| `isList`   | Yes      | Boolean        | Must be `true` |
+| `required` | No       | Boolean        | This decides if the user is required to specify a datasource, `true` by default |
+
+#### 4.7.2 Studio Pro UI
+
+When the property is defined as follows:
+
+```xml
+<property key="data" type="datasource" isList="true" required="false">
+	<caption>Data source</caption>
+	<description />
+</property>
+```
+
+Then the Studio Pro UI for the property appears like this:
+
+![](attachments/widget-property-types/datasource.png)
 
 ## 5 System Properties {#system-properties}
 

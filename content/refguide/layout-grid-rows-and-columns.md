@@ -74,16 +74,9 @@ Layout grid column properties consist of the following sections:
 
 **Desktop/Tablet/Phone Width** allows you to set a width for the corresponding device. You can choose the following options:
 
-* **Auto-fill** – equally divides width of each column in available space
+* **Auto-fill** – takes the available space for a column (for example, if there is one column, it will span the column for the whole row, and for two columns, it will divide the space equally between them)
 * **Auto-fit content** – automatically fits the size of the column to its content
 * **Manual** – allows you to manually set the size of the columns by setting the [Desktop/Tablet/Phone size](#column-size) option 
-
-For example, you have a layout grid with one row consisting of four columns. The columns have the following settings for the Desktop:
-
-1. Column one: **Desktop Width** is set to *Auto-fill*
-2. Column two: **Desktop Width** is set to *Manual*, [Desktop size](#column-size) is set to 8
-3. Column three: **Desktop Width** is set *Auto-fill*
-4. Column four: **Desktop Width** is set *Auto-fit to content*
 
 #### 3.2.2 **Desktop/Tablet/Phone Size** {#column-size}
 
@@ -91,7 +84,15 @@ The **Desktop/Tablet/Phone Size** option is displayed only if [Desktop/Tablet/Ph
 
 #### 3.2.3 Layout Examples
 
+The width and size properties described above can be used to make your layout more flexible and adaptive to different types of devices.
 
+For example, you have a layout grid with one row and two columns: a customer's profile picture in one column, and a text with details in another.
+
+For the desktop, set Auto-fit content and Auto-fill.
+
+For tablet,
+
+For phone, 
 
 ## 4 Performing Basic Actions
 

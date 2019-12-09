@@ -1,5 +1,5 @@
 ---
-title: "Use Remote Notifications"
+title: "Setting Up Remote Notifications"
 #category: "Native Mobile"
 #parent: "native-mobile"
 #menu_order: 11

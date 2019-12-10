@@ -22,9 +22,8 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Review the [basic differences](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/) between local notifications and push notifications
 * Install the [Make it Native](/refguide/getting-the-make-it-native-app) app on your mobile device
 
-
 {{% alert type="info" %}}
-If you want to use push notifications with custom apps which created with native builder, make sure you have completed [setting up native push notifications with native builder](https://docs.mendix.com/howto/mobile/native-builder#1-introduction) 
+To use push notifications with custom apps created with the Native Builder, make sure you have completed [How To Deploy Your First Mendix Native App](deploying-native-app) 
 {{% /alert %}}
 
 

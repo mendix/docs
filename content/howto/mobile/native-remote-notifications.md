@@ -17,12 +17,12 @@ If you want to use push notifications with custom apps which created with native
 
 ## 4 Setting Up Your Mendix Project
 
-Create a Native starter project. [todo: do you mean start from the Native Mobile Quickstart starter app?]
+Create a Native starter project. [todo: the Native Mobile Quickstart starter app?]
 
 ### 4.1 Installing Your Module 
 
 1. Add the [Community Commons](https://appstore.home.mendix.com/link/app/170/) module to your app project.
-2. Add encryption [todo: how?]
+2. Add encryption to your module [todo: how? if this is one step, delete this step and replace it with 2.1]
 
     2.1 Set the private key
 
@@ -66,32 +66,32 @@ Create a Native starter project. [todo: do you mean start from the Native Mobile
 
 ### 4.3 Adding Actions to Your Notifications Widget
 
-1. Create two nanoflows (`ACT_OnRecieve`,`ACT_OnOpen`) which will create two different logs => "onRecieve triggered" - "onOpen triggered"
+1. Create two nanoflows (*ACT_OnRecieve* and *ACT_OnOpen*) which will create two different logs (**onRecieve triggered** and **onOpen triggered**):
 
     ![ACT_OnRecieve](attachments/native-remote-push/modeler/ACT_OnRecieve.png)
 
 2. Double-click your notifications widget and do the following::<br />
-    a. add an action called `logIt`:<br />
-    b. on recieve select the nanoflow `ACT_OnRecieve`:<br />
-    c. on open select the nanoflow `ACT_OnOpen`
+    a. Add an action called *logIt*.<br />
+    b. For **on recieve** select **ACT_OnRecieve**.<br />
+    c. For **on open** select **ACT_OnOpen**:
 
     ![LogitAction](attachments/native-remote-push/modeler/logitAction.png)
 
 ### 4.4 Adding Firebase Configurations
 
-Deploy the project and head for the administartion screen of the push notifications, we will add configurations
+[todo: add link] Deploy your project and open Google Firebase's [administration page]() . Do the following:
 
-1. add new FCM configuration
-2. check enabled
-3. Give a random name
-4. Set it as Development / it wont affect any functionality, it is a helper (TODO: How ?)
-5. Set the project id to the project id we referred in [here](#2-firebase-setup)
-6.  upload the private key
+1. add new FCM configuration.
+2. check enabled.
+3. Give a random name.
+4. Set it as Development / it wont affect any functionality, it is a helper (TODO: How ?).
+5. Set the project id to the project id we referred in [here](#2-firebase-setup).
+6.  upload the private key:
 
     ![FCMConfig](attachments/native-remote-push/modeler/FCMConfig.png)
 
-7. Set the messaging service settings in the dropdown for both ios and adroid
-8.  Set the messaging service type for ios and android for FCM
+7. Set the messaging service settings in the dropdown for both iOS and Android.
+8.  Set the messaging service type for ios and android for FCM:
 
     ![FCMConfig2](attachments/native-remote-push/modeler/FCMConfig2.png)
 
@@ -99,47 +99,47 @@ Next you will test the implementation of your configurations.
 
 ### 4.5 Sending a Push Notification
 
-1. Reload the app in the phone
-2. Put the app in the background 
-3. Go to devices tab in the admin module
+1. Reload the app in the phone.
+2. Put the app in the background.
+3. Go to devices tab in the admin module.
 
 Now you should be able to see registered devices
 
-1. Select device and click new message
-2.  Set title-body and action name to `logIt`
+1. Select **device** and click **new message**.
+2.  Set title-body and action name to *logIt*:
 
     ![SimpleMessage](attachments/native-remote-push/modeler/SimpleMessage.png)
 
-When the app is in the background you will see that notification is handled by OS and shown a message. 
+3.  [todo: change this to imperative? "put your app in the background, then send the notif"?]When the app is in the background, you will see your notification be handled by your OS then see this message:
 
-![PushRecieved](attachments/native-remote-push/modeler/PushRecieved.png)
+    ![PushRecieved](attachments/native-remote-push/modeler/PushRecieved.png)
 
-When you tap the notification you will recieve a log in your modeler console  `onOpen triggered` 
-
-When the app is in the foreground you wont see that notification but you will recieve a log in your modeler console  `onRecieve triggered` 
+4. Tap the notification. You will see a log message in your modeler console: **onOpen triggered**.
+5. Now send and tap a notification while keeping the app open. You will see a different log in your modeler console: **onRecieve triggered**. 
 
 ## 5 Sending Data Using Push notifications
 
-Lets imagine we have bunch of products and we want to send A product to a user via administration module interface.  
-In this section we will cover a scenario where we will:
-- Show push notification to a user if app is in the backgroud, when user taps it, it will go to a proper product page.
-- Show a small view to a user if app is in the foreground for X amount of seconds, when user taps the button in the animation, it will go to a proper product page.
+Imagine your business has several products, and you want to send one product to a user via an administration module interface. How would you achieve this goal?
 
-### 5.1 Setup example entity
+In this section you will learn the following:
+* How to show a push notification to a user if app is in the backgroud — when a user taps it, they will be brought to a product page
+* How to show a small view to a user if app is in the foreground a certain amount of time — when a user taps the button in the animation, they will be brought to a product page
 
-- Add `Product` entity with `ProductName` attribute and right click to generate overview pages  => `Product_NewEdit`, `Product_Overview`
+### 5.1 Setting Up an Example Entity
 
-![GeneratePages](attachments/native-remote-push/modeler/GeneratePages.png)
+1. Add `Product` entity with `ProductName` attribute 
+2.  Right-click `ProductName` [todo: redo language to match product]to generate overview pages  => `Product_NewEdit`, `Product_Overview`
 
-![GeneratePages](attachments/native-remote-push/modeler/GeneratePages2.png)
+    ![GeneratePages](attachments/native-remote-push/modeler/GeneratePages.png)
 
-- Drag and drop `Product_Overview` to your homepage so it can be accessible
+    ![GeneratePages](attachments/native-remote-push/modeler/GeneratePages2.png)
 
-- Create a native page called `NativeProductOverview` that has a dataview which listens contexts with entity: Product. Fill the contents => This page will be opened with proper product when user taps the notification
+3. Drag and drop `Product_Overview` onto your app's homepage to make it more accessible. [todo: do you mean easier to nav to?]
+4. Create a native page called `NativeProductOverview` that has a dataview which listens contexts with entity: Product. Fill the contents => This page will be opened with proper product when user taps the notification
 
 ![NativeProductOverview](attachments/native-remote-push/modeler/NativeProductOverview.png)
 
-### 5.2 Sync the unused entities in the native side
+### 5.2 Synchronizing the unused entities in the native side [todo clarify]
 
 In mendix we do smart syncing, meaning if an Entity has not been retrieved in native side, it wont be there. This situation wont occur in 90% of the apps since we DO retrieve entities that we want show. 
 

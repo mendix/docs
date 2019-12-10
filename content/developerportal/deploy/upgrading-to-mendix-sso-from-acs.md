@@ -42,7 +42,7 @@ Perform the following steps to replace AppCloudServices with MendixSSO:
 
     If you wish, you can copy the information about local end-users into the **MendixSSOUser** entity in the MendixSSO module. If you do this, you will need to use the same techniques as described for customized implementations in the next section.
 
-{{% todo %}}[ALSO NEED TO CLEAR OLD JAR LIBRARIES - SEE RONNY]{{% /todo %}}
+    {{% todo %}}[ALSO NEED TO CLEAR OLD JAR LIBRARIES - SEE RONNY]{{% /todo %}}
 
 6. Deploy your app to the Mendix Cloud.
 

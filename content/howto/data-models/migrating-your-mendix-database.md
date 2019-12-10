@@ -73,6 +73,9 @@ To do this, perform the following steps:
 4. On the **Database** tab, set the following values:
 	* **Type** – **PostgreSQL**
 	* **Database name** – *default*
+	* **URL** – the URL for your local PostgreSQL server
+	* **User name** – the user name of a database administrator in your local PostgreSQL
+	* **Password** – the password for the user specified above
 
 	![](attachments/migrating/postgresql-config.png)
 

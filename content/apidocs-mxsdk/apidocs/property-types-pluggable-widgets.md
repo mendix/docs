@@ -350,7 +350,7 @@ Where the `myDataSource` is a [`datasource`](#datasource) property, the Studio P
 
 ### 4.1 Expression{#expression}
 
-Expression allows a user to configure an [expression](/refguide/expressions), the result of which will be passed to the client component as a `DynamicValue<T>` where `T` depends on a return type of the expression.
+The expression property allows a user to configure an [expression](/refguide/expressions), the result of which will be passed to the client component as a `DynamicValue<T>` where `T` depends on a return type of the expression.
 
 #### 4.1.1 XML Attributes
 
@@ -391,7 +391,7 @@ Then the Studio Pro UI for the property appears like this:
 
 ### 4.2 TextTemplate{#texttemplate}
 
-`TextTemplate` allows a user to configure translatable text template similar to the [Caption](/refguide/text#caption) of a text widget. The interpolated string will be passed to the client component as `DynamicValue<string>`.
+The TextTemplate property allows a user to configure translatable text template similar to the [Caption](/refguide/text#caption) of a text widget. The interpolated string will be passed to the client component as `DynamicValue<string>`.
 
 #### 4.2.1 XML Attributes
 
@@ -583,14 +583,14 @@ Then the Studio Pro UI for the property appears like this:
 
 ### 4.7 Datasource {#datasource}
 
-Datasource property allows widgets to work with object lists. The client component will receive value prop of type [`ListValue`](client-apis-for-pluggable-widgets#listvalue) and may be used with [`widgets`](#widgets) property.
+The datasource property allows widgets to work with object lists. The client component will receive value prop of type [`ListValue`](client-apis-for-pluggable-widgets#listvalue) and may be used with the [`widgets`](#widgets) property.
 
 {{% alert type="info" %}}
-Support for `datasource` property type was introduced in Mendix 8.6.
+Support for the datasource property type was introduced in Mendix 8.6.
 {{% /alert %}}
 
 {{% alert type="warning" %}}
-Currently only list datasources are supported. Hence specifying `isList="true"` is required.
+Only list datasources are supported, therefore specifying `isList="true"` is required.
 {{% /alert %}}
 
 #### 4.7.1 XML Attributes

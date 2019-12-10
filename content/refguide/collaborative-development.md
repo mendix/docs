@@ -64,13 +64,13 @@ To merge the latest changes stored in the Team Server (from both Studio users an
 
 ![Update Option](attachments/collaborative-development/update-button.png)
 
-### 4.2 Merging Latest Changes
+### 4.2 Committing Latest Changes
 
 To commit your latest project changes and make them available to other users, open **Changes** and click **Commit**. The process of deploying your app (when you click the **Run** button) will also trigger a commit. 
 
 {{% alert type="info" %}}
 
-We recommend you update your project and commit changes often to avoid multiple conflicts in your project. 
+We recommend you update your project and commit changes often to avoid multiple conflicts in your project.  
 
 {{% /alert %}}
 

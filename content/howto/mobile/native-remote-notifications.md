@@ -81,12 +81,12 @@ Create a Native starter project. [todo: the Native Mobile Quickstart starter app
 
 [todo: add link] Deploy your project and open Google Firebase's [administration page]() . Do the following:
 
-1. add new FCM configuration.
-2. check enabled.
-3. Give a random name.
-4. Set it as Development / it wont affect any functionality, it is a helper (TODO: How ?).
-5. Set the project id to the project id we referred in [here](#2-firebase-setup).
-6.  upload the private key:
+1. Add new FCM configuration.
+2. Select **Enabled**.
+3. Name your configuration.
+4. Set it as **Development** / it wont affect any functionality, it is a helper (TODO: what? Maybe just delete extra info).
+5. Set the project id to the project id you set in [here](#2-firebase-setup) [todo: fix link].
+6.  Upload the private key:
 
     ![FCMConfig](attachments/native-remote-push/modeler/FCMConfig.png)
 
@@ -99,7 +99,7 @@ Next you will test the implementation of your configurations.
 
 ### 4.5 Sending a Push Notification
 
-1. Reload the app in the phone.
+1. Reload the app on your phone.
 2. Put the app in the background.
 3. Go to devices tab in the admin module.
 
@@ -139,92 +139,97 @@ In this section you will learn the following:
 
 ![NativeProductOverview](attachments/native-remote-push/modeler/NativeProductOverview.png)
 
-### 5.2 Synchronizing the unused entities in the native side [todo clarify]
+### 5.2 Synchronizing Unused Entities [todo clarify title and section]
 
-In mendix we do smart syncing, meaning if an Entity has not been retrieved in native side, it wont be there. This situation wont occur in 90% of the apps since we DO retrieve entities that we want show. 
+Studio Pro does smart data syncing, meaning if an entity has not been retrieved in native side, it will not be there. This situation will not occur in most apps since Studio Pro does retrieve entities which you want to show. [todo: add link to relavant doc link. Offline First?]
 
-But for our case, we dont retrieve any products in any of the pages, this could be fixed in two easy cases:
-1) Create a list of `Products` in one of the native pages. Datasource doesnt matter since it is bound to retrieve the Entities
-2) Change Navigation/Native mobile/ Sync config/ Product => Download All Object
+Your case does not retrieve any products in any of the pages [todo "which means you risk not seeing X"]. Fix this by doing the following:
 
-![SyncConfig](attachments/native-remote-push/modeler/SyncConfig.png)
+1. Create a list of `Products` [todo: is this a list of data objects?] in one of your app's native pages. The data source does not matter since the list is bound to retrieve the entities
+2. Change Navigation/Native mobile/ Sync config/ Product => Download All Object
 
-### 5.3 Get the GUIDs of the objects in Edit view
+    ![SyncConfig](attachments/native-remote-push/modeler/SyncConfig.png)
+
+### 5.3 Getting the GUIDs of the Objects in Edit View
 
 For an example we want to keep the things simple:
 
-- Create a nanoflow `ACT_GetGUIDAndLog` which has:
-    - Product object as a parameter
-    - Javascript action Get guid, set the object the Parameter object
-    - Log the returned value
+1.  Create a nanoflow `ACT_GetGUIDAndLog` following these steps:<br />
+    a. Product object as a parameter.<br />
+    b. Javascript action Get guid, set the object the Parameter object.<br />
+    c. Log the returned value:
     
-![ACT_GetGUIDAndLog](attachments/native-remote-push/modeler/ACT_GetGUIDAndLog.png)
+    ![ACT_GetGUIDAndLog](attachments/native-remote-push/modeler/ACT_GetGUIDAndLog.png)
 
-- Drag and drop this nanoflow to the `Product_NewEdit` inside of the Dataview
+2.  Drag and drop this nanoflow to the `Product_NewEdit` inside of the Dataview:
 
-![getGUIdAndLogButton](attachments/native-remote-push/modeler/getGUIdAndLogButton.png)
+    ![getGUIdAndLogButton](attachments/native-remote-push/modeler/getGUIdAndLogButton.png)
 
-### 5.4 Create a nanoflow which will handle data passing for notification
+### 5.4 Creating a Data Passing Nanoflow
 
-Create a nanoflow `ACT_GetProductAndShowPage` which has:
-- Notification object as a parameter
-![getGUIdAndLogButton](attachments/native-remote-push/modeler/ACT_GetProductAndShowPage.png)
-- JS action `get object from a GUID` where `Entity type` is `Product` and GUID is `parameter/objectGUID` name the return value to `ProductObject`
-![getGUIdAndLogButton](attachments/native-remote-push/modeler/ACT_GetProductAndShowPage2.png)
-- Show `NativeProductOverview` page with passed object: `ProductObject`
-![getGUIdAndLogButton](attachments/native-remote-push/modeler/ACT_GetProductAndShowPage3.png)
+1.  Create a nanoflow `ACT_GetProductAndShowPage` following these steps:<br />
+    a. Notification object as a parameter<br />
+    
+    ![getGUIdAndLogButton](attachments/native-remote-push/modeler/ACT_GetProductAndShowPage.png)
+    
+    b. JS action `get object from a GUID` where `Entity type` is `Product` and GUID is `parameter/objectGUID` name the return value to `ProductObject`<br />
+    
+    ![getGUIdAndLogButton](attachments/native-remote-push/modeler/ACT_GetProductAndShowPage2.png)
+    
+    c. Show `NativeProductOverview` page with passed object: `ProductObject`
+    
+    ![getGUIdAndLogButton](attachments/native-remote-push/modeler/ACT_GetProductAndShowPage3.png)
 
-Go to your Home_Native/ Notification widget and create new action named `sendProduct`, on open triggers `ACT_GetProductAndShowPage`
+2.  Go to your Home_Native/ Notification widget and create new action named `sendProduct`, on open triggers `ACT_GetProductAndShowPage`
 
-![pushSendProduct](attachments/native-remote-push/modeler/pushSendProduct.png)
+    ![pushSendProduct](attachments/native-remote-push/modeler/pushSendProduct.png)
 
-### 5.5 Testing the implementation
+### 5.5 Testing the Implementation
 
-- Get a Product GUID by clicking the button that we created in `Get the GUIDs of the objects in Edit view`
+1. Get a Product GUID by clicking the button [todo: rename to "click X"?] you created in [Get the GUIDs of the objects in Edit view](todo: set anchor link)
 
-Follow the steps for sending [simple push notification](#sending-simple-push-notification). This time we will set:
-- action name to `sendProduct`
-- set `Context object guid` to the GUID we got
+2. Follow the steps in the [simple push notification](#sending-simple-push-notification) section above again, but with the following changes:<br />
+    a. Set the action name to `sendProduct`<br />
+    b. Set `Context object guid` to the GUID you got
 
-![openProductPage](attachments/native-remote-push/modeler/openProductPage.png)
+    ![openProductPage](attachments/native-remote-push/modeler/openProductPage.png)
 
-Put the app in the backgorund and send the message, when we tap the notification, it will navigate to the `NativeProductOverview` page with proper object.
+3. Put the app in the backgorund, send the message, and tap the notification. This will navigate to the `NativeProductOverview` page with the proper object.
 
+## 6 Now lets cover when the app is in the foreground [todo: fix title, check if section is subsection equal to one above]
 
-## Now lets cover when the app is in the foreground
+1.  Add one more `boolean` field named `showNotification` to the `NativePush`:
 
-- Add one more `boolean` field named `showNotification` to the `NativePush`  
+    ![showNotification](attachments/native-remote-push/modeler/showNotification.png)
 
-![showNotification](attachments/native-remote-push/modeler/showNotification.png)
+2. In your `Home_Native` page inside of the NativeNotification Dataview:<br />
+    a. add a Container.<br />
+    b. Sets its visibility to `NativeNotification/showNotification`.<br />
+    c. Add a text field saying `You have recieved a product`.<br />
+    d. Drag and drop `ACT_GetProductAndShowPage` nanoflow next to it.
 
-- In your `Home_Native` page inside of the NativeNotification Dataview:
-    - add a Container
-    - Sets its visibility to `NativeNotification/showNotification`
-    - Add a text field saying `You have recieved a product`
-    - Drag and drop `ACT_GetProductAndShowPage` nanoflow next to it
+    ![ContainerVisibility](attachments/native-remote-push/modeler/ContainerVisibility.png)
 
-![ContainerVisibility](attachments/native-remote-push/modeler/ContainerVisibility.png)
-
-- Create a nanoflow called `ACT_ShowNotificationOnRecieve` which will be responsible for switching `NativeNotification/showNotification` attribute:
+3. Create a nanoflow called `ACT_ShowNotificationOnRecieve` which will be responsible for switching `NativeNotification/showNotification` attribute:<br />
 ![ACT_ShowNotificationOnRecieve](attachments/native-remote-push/modeler/ACT_ShowNotificationOnRecieve.png)
-    - NativeNotification as a param
-    - Change the `NativeNotification/showNotification` to `true`, without committing
-    - Javascript action `Wait` for `5000` ms
-    - Change the `NativeNotification/showNotification` to `false`, without committing
+    a. NativeNotification as a parameter.<br />
+    b. Change the `NativeNotification/showNotification` to `true`, without committing.<br />
+    c. Javascript action `Wait` for `5000` ms.<br />
+    d. Change the `NativeNotification/showNotification` to `false`, without committing.
 
-- Home_Native/ Notification widget => Change action named `sendProduct`, on recieve triggers `ACT_ShowNotificationOnRecieve`
+4. Home_Native/ Notification widget => Change action named `sendProduct`, on recieve triggers `ACT_ShowNotificationOnRecieve`
 
-![sendProductOnRecieve](attachments/native-remote-push/modeler/sendProductOnRecieve.png)
+    ![sendProductOnRecieve](attachments/native-remote-push/modeler/sendProductOnRecieve.png)
 
 Follow steps for the previous sections in [here](###testing-the-implementation) but this time put the app in the foreground. You will see the the text with a button for 5 seconds.
 
 ![onRecieveShowDV](attachments/native-remote-push/modeler/onRecieveShowDV.png)
 
-#### Sending notifications programetcally via Push Notifications API (This section can be split from the rest)
+#### Sending notifications programetcally via Push Notifications API (This section can be split from the rest) [todo fix title and number]
 
 What if we want to send messages to all devices, and doesn't want to handle the GUID retrieval. In this section we will cover this scenario where we will send a product from web to all devices with a single button click.
 
-##### Create a microflow which will send particular product to all devices
+##### Create a microflow which will send particular product to all devices [todo fix title and number]
 
 - Create a microflow `ACT_SendProductToAllDevices` which has:
 ![SendProductToAll](attachments/native-remote-push/modeler/SendProductToAll.png)

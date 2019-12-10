@@ -237,7 +237,7 @@ To change the capabilities of your app, open *app/ios/yourProjectName.xcworkspac
 
      ![Capabilities](attachments/native-remote-push/iosCustomizations.png)
 
-Congratulations, you finished setting up customizations for your custom native app! To implement remote push notifications on a test device, see [Use Remote Push Notifications](native-remote-notifications).
+Congratulations, you finished setting up customizations for your custom native app! To implement remote push notifications on a test device, see [Use Remote Notifications](native-remote-notifications).
 
 ## 6 Read More
 

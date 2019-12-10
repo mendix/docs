@@ -115,10 +115,10 @@ Open your Mendix application, sign in as an Admin, and open the **PushNotificati
 
 Configure FCM as follows:
 
-* Select the **Enabled** checkbox
-* Choose a name for the new configuration
-* Enter your Firebase project ID (find this on the Firebase console website)
-* Upload the private key you downloaded earlier when you created a service account
+1. Select the **Enabled** checkbox.
+2. Choose a name for the new configuration.
+3. Enter your Firebase project ID (located on the Firebase console website).
+4. Upload your private key (which you downloaded when you created a service account).
 
 {{% alert type="warning" %}}
 Make sure the **Encryption.EncryptionKey** constant has a valid value before you start the application. If the value is not set, the private key will not be stored correctly, and you will get a `NullPointerException` error when you try to send a notification to FCM. If you get the `NullPointerException` error, please double-check the value of the **Encryption.EncryptionKey** constant, restart your app, and upload the private key again.

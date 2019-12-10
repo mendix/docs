@@ -295,7 +295,7 @@ Then the Studio Pro UI for the component appears like this:
 
 ### 3.3 Widgets {#widgets}
 
-The widgets property allows a user to place multiple widgets inside a pluggable widget, similar to the content of a [container](/refguide/container) widget. It is passed as a `ReactNode` prop to a client component if a `dataSource` attribute is not specified. Otherwise it is passed as a function that expects a `ListItem` and returns a `ReactNode`: `(item: ListItem) => ReactNode`. For more information, see the [datasource](#datasource) section below.
+The widgets property allows a user to place multiple widgets inside a pluggable widget, similar to the content of a [container](/refguide/container) widget. It is passed as a `ReactNode` prop to a client component if a `dataSource` attribute is not specified or if attribute is specified, but the data source is not configured by the user. Otherwise it is passed as a function that expects a `ListItem` and returns a `ReactNode`: `(item: ListItem) => ReactNode`. For more information, see the [datasource](#datasource) section below.
 
 {{% alert type="info" %}}
 This property type was introduced in Mendix 8.3.
@@ -333,7 +333,7 @@ then the Studio Pro UI for the component appears like this:
 
 ![studio pro ui](attachments/widget-property-types/widgets.png)
 
-When the component is defined with the `dataSource` attribute as follows:
+When the component is defined with the `dataSource` attribute. Assuming `myDataSource` is key of a [`datasource`](#datasource) property defined elsewhere for this widget:
 
 ```xml
 <property key="content" type="widgets" required="false" dataSource="myDataSource">
@@ -342,7 +342,7 @@ When the component is defined with the `dataSource` attribute as follows:
 </property>
 ```
 
-Where the `myDataSource` is a [`datasource`](#datasource) property, the Studio Pro UI for the component appears like this:
+then the Studio Pro UI for the component appears like this:
 
 ![studio pro ui](attachments/widget-property-types/widgets_with_ds.png)
 

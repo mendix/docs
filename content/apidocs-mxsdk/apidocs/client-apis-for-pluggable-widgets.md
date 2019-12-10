@@ -187,7 +187,7 @@ export interface FileValue {
 
 ### 4.6 ListValue{#listvalue}
 
-`ListValue` is used to represent list of objects for [datasource](property-types-pluggable-widgets#datasource) property.
+`ListValue` is used to represent a list of objects for the [datasource](property-types-pluggable-widgets#datasource) property.
 
 ```ts
 export interface ListItem {
@@ -206,13 +206,12 @@ export interface ListValue {
 ```
 
 
-When `datasource` property with `isList="true"` is configured for a widget, the client component is getting list of objects represented as a `ListValue`. This type allows accessing information about data source as well as control amount and offset of items represented in the list.
+When a `datasource` property with `isList="true"` is configured for a widget, the client component gets a list of objects represented as a `ListValue`. This type allows detailed access to a data source, and enables control over the amount and offset of items represented in the list.
 
-Hovewer, it is not possible to access domain data directly from `ListValue` as every object is represent only by GUID in the `items` array. Instead list of items may be used in combination with other properties a `datasource` property is tied to with `dataSource` attibute on that property.
+However it is not possible to access domain data directly from `ListValue`, as every object is represented only by GUID in the `items` array. Instead, a list of items may be used in combination with other properties so long as a `datasource` property is tied to with the `dataSource` attribute on that property.
 
-Example of using `ListValue` together with property of type `widgets`:
+For clarity, consider the following example using `ListValue` together with the `widgets` property type. When the `widgets` property named `myWidgets` is configured to be tied to a `datasource` named `myDataSource`, the client component props appear as follows:
 
-When `widgets` property named `myWidgets` is configured to be tied to a `datasource` named `myDataSource` the client component props as following:
 ```ts
 interface MyListWidgetsProps {
     myDataSource: ListValue;
@@ -220,7 +219,7 @@ interface MyListWidgetsProps {
 }
 ```
 
-then client component may render every instance of widgets with a specific item from the list as follows:
+Because of the above configurations, the client component may render every instance of widgets with a specific item from the list like this:
 
 ```ts
 this.props.myDataSource.items.map(i => this.props.myWidgets(i));

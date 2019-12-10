@@ -225,44 +225,52 @@ Follow steps for the previous sections in [here](###testing-the-implementation) 
 
 ![onRecieveShowDV](attachments/native-remote-push/modeler/onRecieveShowDV.png)
 
-#### Sending notifications programetcally via Push Notifications API (This section can be split from the rest) [todo fix title and number]
+#### Sending notifications programetcally via Push Notifications API (This section can be split from the rest) [todo fix title and number, also clarify what the advantage of this approach is]
 
-What if we want to send messages to all devices, and doesn't want to handle the GUID retrieval. In this section we will cover this scenario where we will send a product from web to all devices with a single button click.
+What if you want to send messages to all your users' devices, but you do nott want to handle the GUID retrieval? The section below will illustrate this example. Specifically, you will send a [todo check rest of this sentence] product from web to all devices with a single button click.
 
-##### Create a microflow which will send particular product to all devices [todo fix title and number]
+##### Creating a microflow which will send particular product to all devices [todo fix title and number]
 
-- Create a microflow `ACT_SendProductToAllDevices` which has:
+Create a microflow *ACT_SendProductToAllDevices* with the following elements [todo check where pics should go]:
+
 ![SendProductToAll](attachments/native-remote-push/modeler/SendProductToAll.png)
 
-     - Product as a parameter
-     - Retrieve list of devices from database: `PushNotifications.Device`
-     ![retrieveDevices](attachments/native-remote-push/modeler/retrieveDevices.png)
-     - PrepareMessageData Microflow from `PushNotifications/_USE ME/API`
-          - title: myTitle
-          - body: myBody
-          - time to live: 0 
-          - badge: 0
-          - actionName `sendProduct`
-          - ContextObjectGuid to `empty`
-     ![prepareMessageData](attachments/native-remote-push/modeler/prepareMessageData.png)
+1. Product as a parameter
+2. Retrieve list of devices from database: `PushNotifications.Device`:
 
-     As you can see we set the ContextObjectGuid to empty since we will pass the object itself to the SendMessageToDevices Java action where it will be retrieved automatically for us. 
+    ![retrieveDevices](attachments/native-remote-push/modeler/retrieveDevices.png)
+    
+3. PrepareMessageData Microflow from `PushNotifications/_USE ME/API`:<br />
+	a. title: myTitle.<br />
+	b. body: myBody.<br />
+	c. time to live: 0.<br />
+	d. badge: 0.<br />
+	e. actionName `sendProduct`.<br />
+	f. ContextObjectGuid to `empty`:
+	
+	![prepareMessageData](attachments/native-remote-push/modeler/prepareMessageData.png)
 
-     - SendMessageToDevices Java Action in `PushNotifications/_USE ME/API`
-          - Message data param: $MessageToBeSent
-          - Device param: $Devices
-          - Context object: $Product
-     ![sendMessagesJava](attachments/native-remote-push/modeler/sendMessagesJava.png)
-     
-- Go to `Product_NewEdit`, drag and drop the `ACT_SendProductToAllDevices` inside of dataview so that we can trigger this microflow
+	**ContextObjectGuid** is set to empty since you will pass the object itself to the **SendMessageToDevices** Java action where it will be retrieved automatically. 
 
-![sendProductToAllButton](attachments/native-remote-push/modeler/sendProductToAllButton.png)
+4. SendMessageToDevices Java Action in `PushNotifications/_USE ME/API`:<br />
+	a. Message data param: $MessageToBeSent.<br />
+	b. Device param: $Devices.<br />
+	c. Context object: $Product:
+	
+	![sendMessagesJava](attachments/native-remote-push/modeler/sendMessagesJava.png)
+  
+5. Go to `Product_NewEdit`, drag and drop the `ACT_SendProductToAllDevices` inside of dataview so that we can trigger this microflow
 
-##### Test the implementation
+	![sendProductToAllButton](attachments/native-remote-push/modeler/sendProductToAllButton.png)
 
-Now run the app
-- Put the Native app in the background
-- In web go to a particular product and press `ACT_SendProductToAllDevices` microflow button. This will send notification to all available devices and when the user taps the notification it will be redirected to the particular product page that we modeled.
+##### Testing the Implementation [todo is this title used elsewhere?]
+
+Now run the app by doing the following:
+
+1, Put the Native app in the background
+2. In web go to a particular product and press `ACT_SendProductToAllDevices` microflow button. 
+
+This will send notification to all available devices and when the user taps the notification it will be redirected to the particular product page that we modeled.
 
 ## 4 Read More
 
@@ -272,7 +280,7 @@ All JAVA actions which is available in Push notifications module with small expl
 
 This allows users to create their own user interface in order to alter and create a push notification message. 
 
-### ​SendMessageToDevice & ​SendMessageToDevices Java Action
+### SendMessageToDevice & SendMessageToDevices Java Action
 
 We covered this Java action in this documentation. Params:
 - `MessageDataParam` (PushNotifications.MessageData): This param can be generated by the PrepareMessageData microflow.
@@ -284,4 +292,3 @@ We covered this Java action in this documentation. Params:
 Every user is allowed to have more than one device. In case of sending push notifications to every device of a particular user `SendMessageToUser` can be used.
 
 In case of sending a push notification to all users `SendMessageToUsers` can be used.
-

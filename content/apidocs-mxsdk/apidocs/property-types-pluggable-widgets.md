@@ -295,14 +295,14 @@ Then the Studio Pro UI for the component appears like this:
 
 ### 3.3 Widgets {#widgets}
 
-The widgets property allows a user to place multiple widgets inside a pluggable widget, similar to the content of a [container](/refguide/container) widget. It is passed as a `ReactNode` prop to a client component if a `dataSource` attribute is not specified. Otherwise it is passed as a function that expects an `ListItem` and returns a `ReactNode`: `(item: ListItem) => ReactNode`. See (`datasource`)[#datasource].
+The widgets property allows a user to place multiple widgets inside a pluggable widget, similar to the content of a [container](/refguide/container) widget. It is passed as a `ReactNode` prop to a client component if a `dataSource` attribute is not specified. Otherwise it is passed as a function that expects a `ListItem` and returns a `ReactNode`: `(item: ListItem) => ReactNode`. For more information, see the [datasource](#datasource) section below.
 
 {{% alert type="info" %}}
 This property type was introduced in Mendix 8.3.
 {{% /alert %}}
 
 {{% alert type="info" %}}
-Support for `dataSource` attribute was introduced in Mendix 8.6.
+Support for the `dataSource` attribute was introduced in Mendix 8.6.
 {{% /alert %}}
 
 {{% alert type="warning" %}}
@@ -315,8 +315,8 @@ Some widgets are not yet supported inside pluggable widgets. Placing unsupported
 | ------------ | -------- | -------------- | ----------- |
 | `type`       | Yes      | String         | Must be `widgets` |
 | `key`        | Yes      | String         | See [key](#key) |
-| `dataSource` | No       | Property Path  | Specifies path to a [`datasource`](#datasource) property linked to this widgets property |
-| `required`   | No       | Boolean        | Whether a user must provide at least one widget. `true` by default |
+| `dataSource` | No       | Property Path  | Specifies path to a [`datasource`](#datasource) property linked to this widget's property |
+| `required`   | No       | Boolean        | Whether a user must provide at least one widget, `true` by default |
 
 #### 3.3.2 Studio Pro UI
 
@@ -342,7 +342,7 @@ When the component is defined with the `dataSource` attribute as follows:
 </property>
 ```
 
-where the `myDataSource` is a [`datasource`](#datasource) property then the Studio Pro UI for the component appears like this:
+Where the `myDataSource` is a [`datasource`](#datasource) property, the Studio Pro UI for the component appears like this:
 
 ![studio pro ui](attachments/widget-property-types/widgets_with_ds.png)
 
@@ -581,7 +581,7 @@ Then the Studio Pro UI for the property appears like this:
 ![](attachments/widget-property-types/file.png)
 
 
-### 4.7 Datasource{#datasource}
+### 4.7 Datasource {#datasource}
 
 Datasource property allows widgets to work with object lists. The client component will receive value prop of type [`ListValue`](client-apis-for-pluggable-widgets#listvalue) and may be used with [`widgets`](#widgets) property.
 

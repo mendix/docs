@@ -9,6 +9,12 @@ tags: ["studio pro", "layout grid", "column", "row"]
 
 Layout grid rows and columns are components of a [layout grid](). You can define the number of columns in a row, their size and alignment per a device.
 
+{{% alert type="info" %}}
+
+Row and column properties described below are not available if your project has Atlas UI version is below  2.4.0.
+
+{{% /alert %}}
+
 ## 2 Rows and Their Properties
 
 A layout grid can contain one or more rows. Each row contains [columns](#columns) and the number of columns can differ per row.
@@ -82,17 +88,29 @@ Layout grid column properties consist of the following sections:
 
 The **Desktop/Tablet/Phone Size** option is displayed only if [Desktop/Tablet/Phone width](#column-width) is set to **Manual**. width allows you to select size of the column for the corresponding devices.
 
-#### 3.2.3 Layout Examples
+The **Desktop/Tablet/Phone Size** and [Width](#column-width) properties can be used to make your layout more flexible and adaptive to different types of devices.
 
-The width and size properties described above can be used to make your layout more flexible and adaptive to different types of devices.
+For example, you have a layout grid with one row and two columns: a picture is in one column, and a text with details is in another.
 
-For example, you have a layout grid with one row and two columns: a customer's profile picture in one column, and a text with details in another.
+For the *desktop*, you might want to set the first column with a picture to **Auto-fit content** and and the second one to **Auto-fill**, this way the first column will adjust to the size of the picture, while the second one will take the rest of the row:
 
-For the desktop, set Auto-fit content and Auto-fill.
+![Layout Example, Desktop](attachments/container-widgets/layout-example-desktop.png)
 
-For tablet,
+For *tablet*, you can set both columns to **Auto-fill** and you will get two equal columns:
 
-For phone, 
+![Layout Example, Tablet](attachments/container-widgets/layout-example-tablet.png)
+
+For *phone*, it can be a good idea to place two columns one under another, setting them to **Manual** width of *12*. In this case, the second column will be automatically wrapped to another line:
+
+ ![Layout Example, Phone](attachments/container-widgets/layout-example-phone.png)
+
+On the picture below you can see the settings for two column described above:
+
+![](attachments/container-widgets/column-settings-example.png)
+
+#### 3.2.3 Align Vertically
+
+The **Align vertically** property overrides the **Align columns vertically** property on the row and sets alignment for an individual column.  
 
 ## 4 Performing Basic Actions
 

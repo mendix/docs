@@ -25,7 +25,7 @@ SVGs can contain several kinds of elements. However, not all of them are support
 * Video
 * JavaScript code 
 * CDATA elements
-* `<style />` tags and `style` attributes, please use regular properties instead
+* `<style />` tags and `style` attributes (please use regular properties instead)
 
 We suggest manually removing these elements from your SVGs, or using the tools mentioned in [Optimizing SVGs](#optimizing) above to ensure their compatibility. 
 

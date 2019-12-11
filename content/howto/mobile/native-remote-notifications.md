@@ -135,78 +135,78 @@ In this section you will learn the following:
 * How to show a push notification to a user if their app is in the backgroud — when a user taps it, they will be brought to a product page
 * How to show a small view to a user if their app is in the foreground — when a user taps the button in the animation, they will be brought to a product page
 
-### 4.1 Push notificaiton when app is in background
+### 4.1 Push Notifications for an App in the Background
 
 #### 4.1.1 Setting Up an Example Entity
 
-1. Add `Product` entity with `ProductName` attribute 
-2.  Right-click `ProductName` [todo: redo language to match product]to generate overview pages  => `Product_NewEdit`, `Product_Overview`
+1. In the **Domain Model**, add a *Product* entity with a *ProductName* attribute.
+2.  Right-click **Product** > **Generate overview pages**
+3. Make sure the **Navigation layouts** are Atlas layouts. Click **OK** which will make the pages **Product_NewEdit** and **Product_Overview**:
 
     ![GeneratePages](attachments/native-remote-push/modeler/GeneratePages.png)
 
     ![GeneratePages](attachments/native-remote-push/modeler/GeneratePages2.png)
 
-3. Drag and drop `Product_Overview` onto your app's homepage to make it more accessible. [todo: do you mean easier to nav to?]
-4. Create a native page called `NativeProductOverview` that has a dataview which listens contexts with entity: Product. Fill the contents => This page will be opened with proper product when user taps the notification
+3. Drag and drop **Product_Overview** onto your app's home page to make a button which navigates to your new page.
+4. Create a native page *NativeProductOverview* that has a data view with the **Data source** set to **Context** and Entity set to **Product**. Click **Ok** and then **Accept**. Now when you tap a notification, a page will be opened using the proper product object:
 
-![NativeProductOverview](attachments/native-remote-push/modeler/NativeProductOverview.png)
+	![NativeProductOverview](attachments/native-remote-push/modeler/NativeProductOverview.png)
 
 #### 4.1.2 Synchronizing Unused Entities [todo clarify title and section]
 
-Studio Pro does smart data syncing, meaning if an entity has not been retrieved in native side, it will not be there. This situation will not occur in most apps since Studio Pro does retrieve entities which you want to show. [todo: add link to relavant doc link. Offline First?]
+Studio Pro does smart data syncing, meaning if an entity has not been retrieved in native side, it will not be there. This situation will not occur since most Mendix native apps do retrieve entities which you want to show. For more information, see the [Sychronization](refguide/offline-first#sychronization) section of the *Offline First Reference Guide*.
 
-Your case does not retrieve any products in any of the pages [todo "which means you risk not seeing X"]. Fix this by doing the following:
+Your app does not retrieve any products in any of its pages. Fix this by doing the following:
 
-1. Create a list of `Products` [todo: is this a list of data objects?] in one of your app's native pages. The data source does not matter since the list is bound to retrieve the entities
-2. Change Navigation/Native mobile/ Sync config/ Product => Download All Object
+1. In **Navigation** > **Native mobile**, click **Sync configuration**.
+2. Change **Product** to download **All Objects**:
 
     ![SyncConfig](attachments/native-remote-push/modeler/SyncConfig.png)
 
-#### 4.1.3 Getting the GUIDs of the Objects in Edit View
+#### 4.1.3 Getting the GUIDs of the Objects in Edit View {#guid-objects}
 
-For an example we want to keep the things simple:
+In order to send a particular object to a page, first the object's GUID must be determined and sent using a push notification. For the sake of simplicity, you will log the object GUID to your Mendix Studio Pro's console (this will be used in [Testing the Implementation](#testing-guid) below):
 
-1.  Create a nanoflow `ACT_GetGUIDAndLog` following these steps:<br />
-    a. Product object as a parameter.<br />
-    b. Javascript action Get guid, set the object the Parameter object.<br />
-    c. Log the returned value:
+1.  Create a nanoflow *ACT_GetGUIDAndLog* which does the following:<br />
+    a. Accepts **Product** object as a parameter.<br />
+    b. Uses a JavaScript action **Get guid**, which sets the object as **$Product**.<br />
+    c. Logs the returned value:
     
     ![ACT_GetGUIDAndLog](attachments/native-remote-push/modeler/ACT_GetGUIDAndLog.png)
 
-2.  Drag and drop this nanoflow to the `Product_NewEdit` inside of the Dataview:
+2.  Drag and drop this nanoflow inside **Product_NewEdit**'s data view:
 
-    ![getGUIdAndLogButton](attachments/native-remote-push/modeler/getGUIdAndLogButton.png)
+    ![getGUIdAndLogButton](attachments/native-remote-push/modeler/getGUIDAndLogButton.png)
 
 #### 4.1.4 Creating a Data Passing Nanoflow
 
-1.  Create a nanoflow `ACT_GetProductAndShowPage` following these steps:<br />
-    a. Notification object as a parameter<br />
+1.  Create a nanoflow *ACT_GetProductAndShowPage* which does the following:<br />
+    a. Accepts a **Notification** object as a parameter:<br />
     
     ![getGUIdAndLogButton](attachments/native-remote-push/modeler/ACT_GetProductAndShowPage.png)
     
-    b. JS action `get object from a GUID` where `Entity type` is `Product` and GUID is `parameter/objectGUID` name the return value to `ProductObject`<br />
+    b. Uses a JavaScript action **Get object by guid**, which sets **Entity** as **Product**, the **Object guid** as **parameter/objectGUID**, and the **Object Name** to *ProductObject*:<br />
     
-    ![getGUIdAndLogButton](attachments/native-remote-push/modeler/ACT_GetProductAndShowPage2.png)
+    ![GetProductAndShowPage2](attachments/native-remote-push/modeler/ACT_GetProductAndShowPage2.png)
     
-    c. Show `NativeProductOverview` page with passed object: `ProductObject`
+    c. Shows the **NativeProductOverview** page using the passed object **ProductObject**:
     
-    ![getGUIdAndLogButton](attachments/native-remote-push/modeler/ACT_GetProductAndShowPage3.png)
+    ![GetProductAndShowPage3](attachments/native-remote-push/modeler/ACT_GetProductAndShowPage3.png)
 
-2.  Go to your Home_Native/ Notification widget and create new action named `sendProduct`, on open triggers `ACT_GetProductAndShowPage`
+2.  In the notification widget on **Home_Native**, create a new action named *sendProduct* which **On open** triggers **ACT_GetProductAndShowPage**:
 
     ![pushSendProduct](attachments/native-remote-push/modeler/pushSendProduct.png)
 
-#### 4.1.5 Testing the Implementation
+#### 4.1.5 Testing the Implementation {#testing-guid}
 
-1. Get a Product GUID by clicking the button [todo: rename to "click X"?] you created in [Get the GUIDs of the objects in Edit view](todo: set anchor link)
-
-2. Follow the steps in the [simple push notification](#sending-simple-push-notification) section above again, but with the following changes:<br />
-    a. Set the action name to `sendProduct`<br />
-    b. Set `Context object guid` to the GUID you got
+1. Click the nanoflow button you created in [Get the GUIDs of the objects in Edit view](#guid-objects) to log the object's GUID (which you can see in your Studio Pro Console).
+2. Follow the steps in the [Simple push notification](#sending-simple-push-notification) section above again, but with the following changes:<br />
+    a. Set the action name to *sendProduct*.<br />
+    b. Set **Context object guid** to the GUID you just logged:
 
     ![openProductPage](attachments/native-remote-push/modeler/openProductPage.png)
 
-3. Put the app in the backgorund, send the message, and tap the notification. This will navigate to the `NativeProductOverview` page with the proper object.
+3. Put your app in the background, send the notification, and tap it. This will navigate to the **NativeProductOverview** page with the proper object.
 
 ## 4.2 Now lets cover when the app is in the foreground [todo: fix title]
 

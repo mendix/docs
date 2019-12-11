@@ -9,62 +9,67 @@ title: "Use Remote Notifications"
 
 ## 1 Introduction
 
+remote notifications only work with apps created through the Native Builder. You cannot send notifications to an app inside the Make it Native app.
+
 ## 2 Prerequisites
 
 If you want to use push notifications with custom apps which created with native builder, make sure you have completed the following prerequisites:
 
 * Setting up native push notifications with native builder [Native Builder](https://docs.mendix.com/howto/mobile/native-builder#1-introduction) 
 
-## 4 Setting Up Your Mendix Project
+## 3 Setting Up Your Mendix Project
 
-Create a Native starter project. [todo: the Native Mobile Quickstart starter app?]
+Create a Mendix project using the Native Mobile Quickstart starter app. [todo add link]
 
-### 4.1 Installing Your Module 
+### 3.1 Installing Your Module 
 
 1. Add the [Community Commons](https://appstore.home.mendix.com/link/app/170/) module to your app project.
-2. Add encryption to your module [todo: how? if this is one step, delete this step and replace it with 2.1]
+2. Add the [Encryption] module to your module [todo add link].
+3. Set the encryption private key by doing the following:<br />
+	a. Double-click **Settings**.<br />
+	b. Click **Edit**.<br />
+	c. Click **Constants**.<br />
+	d. Click **New**.<br />
+	e. Type *encryptionkey*, select it, and add a 16 character **Value**:
 
-    2.1 Set the private key
-
-    ![Capabilities](attachments/native-remote-push/modeler/setEncryption.png)
+	![Capabilities](attachments/native-remote-push/modeler/setEncryption.png)
 
 3. Add the [Push Notifications Connector](https://appstore.home.mendix.com/link/app/3003/) module to your app project.
 
-### 4.2 Set Up a Notification Widget
+### 3.2 Set Up a Notification Widget
 
 1. Drag and drop an app events widget onto your app's home page, double-click it, and do the following:<br />
-    a. Page load / on load to `PushNotifications.OnPageLoad_RegisterPushNotifications`<br />
-    b. App resume / on resume `PushNotifications.OnPageLoad_RegisterPushNotifications`<br />
+    a. Set **Page load** > **On load** to **Call a nanoflow**, then specify **PushNotifications.OnPageLoad_RegisterPushNotifications**.<br />
+    b. Set **App resume** > **On resume** to **Call a nanoflow**, then specify **PushNotifications.OnPageLoad_RegisterPushNotifications**:<br />
     
     ![AppEvents](attachments/native-remote-push/modeler/AppEvents.png)
 
-    This will allow devices to register automatically when they opened the mendix app
+    This configured app events widget will allow for user devices to register with your notification interface, so that you can choose who to send push notifications to. Specifically it will register devices when they open the app or resume the app.
 
-2. Create an entity called *NativePush* in your domain model with one `objectGUID` field:
+2. Create an entity called *NativeNotification* in your domain model with one `objectGUID` field:
 
     ![NotificationEntity](attachments/native-remote-push/modeler/NotificationEntity.png)
 
-3. Create a new *DS_Notification* nanoflow which creates a *NativePush* entity object and then returns it:
+3. Create a new *DS_Notification* nanoflow which creates a **NativeNotification** entity object and then returns it:
 
     ![DS_Notification](attachments/native-remote-push/modeler/DS_Notification.png)
 
-4. Drag and drop a data view [todo check] onto your homepage, set its **Source** to **Nanoflow** > **DS_Notification**:
+4. Drag and drop a data view widget onto your home page, set its **Data source** > **Nanoflow** to **DS_Notification**:
 
     ![Dataview](attachments/native-remote-push/modeler/Dataview.png)
 
-5. Inside of the data view, drag and drop a notifications widget [todo check]
-
-6. Set the notifications widget's GUID to **NotificationEntity/objectGUID**:
+5. Inside of this data view, drag and drop a notifications widget.
+6. Set the notifications widget's GUID to **NativeNotification.objectGUID**:
 
     ![NotificationsGUID](attachments/native-remote-push/modeler/NotificationsGUID.png)
 
     This will allow you to pass objects with notifications.
 
-7.  In *PushNotification/_USE ME/Administration* add one more **Show page** item to your responsive profile navigation [todo check]: 
+7.  Open **Navigation**, in the **Responsive** pane click **New Item**, then add a new **Show page** item **PushNotifications/_USE ME/Administration**: 
 
     ![ProfileHomePage](attachments/native-remote-push/modeler/ProfileHomePage.png)
 
-### 4.3 Adding Actions to Your Notifications Widget
+### 3.3 Adding Actions to Your Notifications Widget
 
 1. Create two nanoflows (*ACT_OnRecieve* and *ACT_OnOpen*) which will create two different logs (**onRecieve triggered** and **onOpen triggered**):
 
@@ -72,12 +77,12 @@ Create a Native starter project. [todo: the Native Mobile Quickstart starter app
 
 2. Double-click your notifications widget and do the following::<br />
     a. Add an action called *logIt*.<br />
-    b. For **on recieve** select **ACT_OnRecieve**.<br />
-    c. For **on open** select **ACT_OnOpen**:
+    b. For **On recieve** select **ACT_OnRecieve**.<br />
+    c. For **On open** select **ACT_OnOpen**:
 
     ![LogitAction](attachments/native-remote-push/modeler/logitAction.png)
 
-### 4.4 Adding Firebase Configurations
+### 3.4 Adding Firebase Configurations
 
 [todo: add link] Deploy your project and open Google Firebase's [administration page]() . Do the following:
 
@@ -97,7 +102,7 @@ Create a Native starter project. [todo: the Native Mobile Quickstart starter app
 
 Next you will test the implementation of your configurations.
 
-### 4.5 Sending a Push Notification
+### 3.5 Sending a Push Notification
 
 1. Reload the app on your phone.
 2. Put the app in the background.
@@ -117,7 +122,7 @@ Now you should be able to see registered devices
 4. Tap the notification. You will see a log message in your modeler console: **onOpen triggered**.
 5. Now send and tap a notification while keeping the app open. You will see a different log in your modeler console: **onRecieve triggered**. 
 
-## 5 Sending Data Using Push notifications
+## 4 Sending Data Using Push notifications
 
 Imagine your business has several products, and you want to send one product to a user via an administration module interface. How would you achieve this goal?
 
@@ -125,7 +130,7 @@ In this section you will learn the following:
 * How to show a push notification to a user if app is in the backgroud — when a user taps it, they will be brought to a product page
 * How to show a small view to a user if app is in the foreground a certain amount of time — when a user taps the button in the animation, they will be brought to a product page
 
-### 5.1 Setting Up an Example Entity
+### 4.1 Setting Up an Example Entity
 
 1. Add `Product` entity with `ProductName` attribute 
 2.  Right-click `ProductName` [todo: redo language to match product]to generate overview pages  => `Product_NewEdit`, `Product_Overview`
@@ -139,7 +144,7 @@ In this section you will learn the following:
 
 ![NativeProductOverview](attachments/native-remote-push/modeler/NativeProductOverview.png)
 
-### 5.2 Synchronizing Unused Entities [todo clarify title and section]
+### 4.2 Synchronizing Unused Entities [todo clarify title and section]
 
 Studio Pro does smart data syncing, meaning if an entity has not been retrieved in native side, it will not be there. This situation will not occur in most apps since Studio Pro does retrieve entities which you want to show. [todo: add link to relavant doc link. Offline First?]
 
@@ -150,7 +155,7 @@ Your case does not retrieve any products in any of the pages [todo "which means 
 
     ![SyncConfig](attachments/native-remote-push/modeler/SyncConfig.png)
 
-### 5.3 Getting the GUIDs of the Objects in Edit View
+### 4.3 Getting the GUIDs of the Objects in Edit View
 
 For an example we want to keep the things simple:
 
@@ -165,7 +170,7 @@ For an example we want to keep the things simple:
 
     ![getGUIdAndLogButton](attachments/native-remote-push/modeler/getGUIdAndLogButton.png)
 
-### 5.4 Creating a Data Passing Nanoflow
+### 4.4 Creating a Data Passing Nanoflow
 
 1.  Create a nanoflow `ACT_GetProductAndShowPage` following these steps:<br />
     a. Notification object as a parameter<br />
@@ -184,7 +189,7 @@ For an example we want to keep the things simple:
 
     ![pushSendProduct](attachments/native-remote-push/modeler/pushSendProduct.png)
 
-### 5.5 Testing the Implementation
+### 4.5 Testing the Implementation
 
 1. Get a Product GUID by clicking the button [todo: rename to "click X"?] you created in [Get the GUIDs of the objects in Edit view](todo: set anchor link)
 
@@ -196,7 +201,7 @@ For an example we want to keep the things simple:
 
 3. Put the app in the backgorund, send the message, and tap the notification. This will navigate to the `NativeProductOverview` page with the proper object.
 
-## 6 Now lets cover when the app is in the foreground [todo: fix title, check if section is subsection equal to one above]
+## 5 Now lets cover when the app is in the foreground [todo: fix title, check if section is subsection equal to one above]
 
 1.  Add one more `boolean` field named `showNotification` to the `NativePush`:
 

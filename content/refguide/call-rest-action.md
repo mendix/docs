@@ -27,6 +27,12 @@ The **HTTP method** property defines the HTTP method to use when calling a REST 
 
 Set **Use timeout on request** to **Yes** to be able specify how long the Call REST activity should wait for the REST endpoint to respond. If the REST endpoint has not responded after the number of seconds in **Timeout (s)**, an exception will occur and the microflow will roll back or go into your custom error handler.
 
+{{% alert type="warning" %}}
+It is recommended that you set this to *Yes*.
+
+Most cloud deployments (including those on Mendix Cloud) will close connections if there is no traffic. If **Use timeout on request** is set to *No* and the connection is closed, this activity will continue indefinitely.
+{{% /alert %}}
+
 ### 2.3 Proxy Configuration
 
 In almost all cases, you can ignore this setting. **Use project settings** is a good default value.

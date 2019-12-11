@@ -72,7 +72,7 @@ If both ends own the association, you can overcome this limitation. However, thi
 
 Note that only recording the association on one of the entities does not affect your ability to navigate the association from both ends. However, it may be slower to navigate from the non-owning end.
 
-## 5 Type and Owner Relation to Multiplicity and Navigability
+## 5 Type & Owner Relation to Multiplicity & Navigability {#types}
 
 **Type** and **Owner** properties of an entity are related to [Multiplicity](association-properties#multiplicity) and [Navigability](association-properties#navigability) properties of an association. When you change **Type** or **Owner**, you change **Multiplicity** and **Navigability** as well. 
 

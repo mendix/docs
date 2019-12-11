@@ -86,7 +86,7 @@ To set up actions which will occur after tapping or receiving a notification, do
 
 ### 3.4 Adding Firebase Configurations
 
-Deploy your project and open your administration page. Do the following:
+Deploy your project and open your administration page in a web browser. Do the following:
 
 1. Add a new FCM configuration.
 2. Select **Enabled**.
@@ -107,32 +107,37 @@ Next you will test the implementation of your configurations.
 ### 3.5 Sending a Push Notification
 
 1. Reload the app on your phone.
-2. Put the app in the background.
-3. Go to devices tab in the admin module.
+2. Put the app in the background by returning to your phone's home screen.
+3. On your desktop browser, open the **Administration** page and click the **Devices** tab.
 
-Now you should be able to see registered devices
+Now you should be able to see registered devices (which is probably only one: your testing device):
 
-1. Select **device** and click **new message**.
-2.  Set title-body and action name to *logIt*:
+1. Click your device listed under **Registered Devices** and click **New Message**.
+2.  Type some text into **Title** and **Body** fields, and in **Action name** type *logIt*:
 
     ![SimpleMessage](attachments/native-remote-push/modeler/SimpleMessage.png)
 
-3.  [todo: change this to imperative? "put your app in the background, then send the notif"?]When the app is in the background, you will see your notification be handled by your OS then see this message:
+3. Click **Send**.
+
+You will see your notification with the text you configured:
 
     ![PushRecieved](attachments/native-remote-push/modeler/PushRecieved.png)
 
-4. Tap the notification. You will see a log message in your modeler console: **onOpen triggered**.
-5. Now send and tap a notification while keeping the app open. You will see a different log in your modeler console: **onRecieve triggered**. 
+1. Tap the notification. You will see a log message in your modeler console: **onOpen triggered**.
+2. Now send and tap a notification while keeping the app open. You will see a different log in your modeler console: **onRecieve triggered**. 
 
-## 4 Sending Data Using Push notifications
+## 4 Sending Data Using Push Notifications
 
-Imagine your business has several products, and you want to send one product to a user via an administration module interface. How would you achieve this goal?
+Imagine your business has several products, and you want to send one product to a user using an administration module interface. How would you achieve this goal?
 
 In this section you will learn the following:
-* How to show a push notification to a user if app is in the backgroud — when a user taps it, they will be brought to a product page
-* How to show a small view to a user if app is in the foreground a certain amount of time — when a user taps the button in the animation, they will be brought to a product page
 
-### 4.1 Setting Up an Example Entity
+* How to show a push notification to a user if their app is in the backgroud — when a user taps it, they will be brought to a product page
+* How to show a small view to a user if their app is in the foreground — when a user taps the button in the animation, they will be brought to a product page
+
+### 4.1 Push notificaiton when app is in background
+
+#### 4.1.1 Setting Up an Example Entity
 
 1. Add `Product` entity with `ProductName` attribute 
 2.  Right-click `ProductName` [todo: redo language to match product]to generate overview pages  => `Product_NewEdit`, `Product_Overview`
@@ -146,7 +151,7 @@ In this section you will learn the following:
 
 ![NativeProductOverview](attachments/native-remote-push/modeler/NativeProductOverview.png)
 
-### 4.2 Synchronizing Unused Entities [todo clarify title and section]
+#### 4.1.2 Synchronizing Unused Entities [todo clarify title and section]
 
 Studio Pro does smart data syncing, meaning if an entity has not been retrieved in native side, it will not be there. This situation will not occur in most apps since Studio Pro does retrieve entities which you want to show. [todo: add link to relavant doc link. Offline First?]
 
@@ -157,7 +162,7 @@ Your case does not retrieve any products in any of the pages [todo "which means 
 
     ![SyncConfig](attachments/native-remote-push/modeler/SyncConfig.png)
 
-### 4.3 Getting the GUIDs of the Objects in Edit View
+#### 4.1.3 Getting the GUIDs of the Objects in Edit View
 
 For an example we want to keep the things simple:
 
@@ -172,7 +177,7 @@ For an example we want to keep the things simple:
 
     ![getGUIdAndLogButton](attachments/native-remote-push/modeler/getGUIdAndLogButton.png)
 
-### 4.4 Creating a Data Passing Nanoflow
+#### 4.1.4 Creating a Data Passing Nanoflow
 
 1.  Create a nanoflow `ACT_GetProductAndShowPage` following these steps:<br />
     a. Notification object as a parameter<br />
@@ -191,7 +196,7 @@ For an example we want to keep the things simple:
 
     ![pushSendProduct](attachments/native-remote-push/modeler/pushSendProduct.png)
 
-### 4.5 Testing the Implementation
+#### 4.1.5 Testing the Implementation
 
 1. Get a Product GUID by clicking the button [todo: rename to "click X"?] you created in [Get the GUIDs of the objects in Edit view](todo: set anchor link)
 
@@ -203,7 +208,7 @@ For an example we want to keep the things simple:
 
 3. Put the app in the backgorund, send the message, and tap the notification. This will navigate to the `NativeProductOverview` page with the proper object.
 
-## 5 Now lets cover when the app is in the foreground [todo: fix title, check if section is subsection equal to one above]
+## 4.2 Now lets cover when the app is in the foreground [todo: fix title]
 
 1.  Add one more `boolean` field named `showNotification` to the `NativePush`:
 
@@ -232,11 +237,11 @@ Follow steps for the previous sections in [here](###testing-the-implementation) 
 
 ![onRecieveShowDV](attachments/native-remote-push/modeler/onRecieveShowDV.png)
 
-#### Sending notifications programetcally via Push Notifications API (This section can be split from the rest) [todo fix title and number, also clarify what the advantage of this approach is]
+## 5 Sending notifications programetcally via Push Notifications API [todo fix title and number, also clarify what the advantage of this approach is]
 
 What if you want to send messages to all your users' devices, but you do nott want to handle the GUID retrieval? The section below will illustrate this example. Specifically, you will send a [todo check rest of this sentence] product from web to all devices with a single button click.
 
-##### Creating a microflow which will send particular product to all devices [todo fix title and number]
+### 5.1 Creating a microflow which will send particular product to all devices [todo fix title and number]
 
 Create a microflow *ACT_SendProductToAllDevices* with the following elements [todo check where pics should go]:
 
@@ -270,7 +275,7 @@ Create a microflow *ACT_SendProductToAllDevices* with the following elements [to
 
 	![sendProductToAllButton](attachments/native-remote-push/modeler/sendProductToAllButton.png)
 
-##### Testing the Implementation [todo is this title used elsewhere?]
+### 5.2 Testing the Implementation [todo is this title used elsewhere?]
 
 Now run the app by doing the following:
 
@@ -279,23 +284,26 @@ Now run the app by doing the following:
 
 This will send notification to all available devices and when the user taps the notification it will be redirected to the particular product page that we modeled.
 
-## 4 Read More
+### 5.3 More Java Action Explanations
 
 All JAVA actions which is available in Push notifications module with small explanations:
 
-### PrepareMessageData Microflow
+#### 5.3.1 PrepareMessageData Microflow
 
 This allows users to create their own user interface in order to alter and create a push notification message. 
 
-### SendMessageToDevice & SendMessageToDevices Java Action
+#### 5.3.2 SendMessageToDevice & SendMessageToDevices Java Action
 
 We covered this Java action in this documentation. Params:
 - `MessageDataParam` (PushNotifications.MessageData): This param can be generated by the PrepareMessageData microflow.
 - `DeviceParam` (List of PushNotifications.Device): Can be used to send same message for a list of devices.
 - `ContextObject`: Any mendix object which will be passed to the notification as GUID string.
 
-### SendMessageToUsers & SendMessageToUser Java Action
+#### 5.3.3 SendMessageToUsers & SendMessageToUser Java Action
 
 Every user is allowed to have more than one device. In case of sending push notifications to every device of a particular user `SendMessageToUser` can be used.
 
 In case of sending a push notification to all users `SendMessageToUsers` can be used.
+
+## 6 Read More
+

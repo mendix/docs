@@ -71,11 +71,13 @@ Create a Mendix project using the Native Mobile Quickstart starter app. [todo ad
 
 ### 3.3 Adding Actions to Your Notifications Widget
 
+To set up actions which will occur after tapping or receiving a notification, do the following:
+
 1. Create two nanoflows (*ACT_OnRecieve* and *ACT_OnOpen*) which will create two different logs (**onRecieve triggered** and **onOpen triggered**):
 
     ![ACT_OnRecieve](attachments/native-remote-push/modeler/ACT_OnRecieve.png)
 
-2. Double-click your notifications widget and do the following::<br />
+2. Double-click your notifications widget and do the following:<br />
     a. Add an action called *logIt*.<br />
     b. For **On recieve** select **ACT_OnRecieve**.<br />
     c. For **On open** select **ACT_OnOpen**:
@@ -84,19 +86,19 @@ Create a Mendix project using the Native Mobile Quickstart starter app. [todo ad
 
 ### 3.4 Adding Firebase Configurations
 
-[todo: add link] Deploy your project and open Google Firebase's [administration page]() . Do the following:
+Deploy your project and open your administration page. Do the following:
 
-1. Add new FCM configuration.
+1. Add a new FCM configuration.
 2. Select **Enabled**.
 3. Name your configuration.
-4. Set it as **Development** / it wont affect any functionality, it is a helper (TODO: what? Maybe just delete extra info).
-5. Set the project id to the project id you set in [here](#2-firebase-setup) [todo: fix link].
-6.  Upload the private key:
+4. Set it as **Development** (this will not affect any functionality, it is only a label).
+5. Set the **Project id** to the project id you set in the [Native Apps] section of *How to Set Up the Google Firebase Cloud Messaging Server* [todo: fix link].
+6.  Upload your private key (which you got in the [SOMETHING] section of *Setting up Remote Push Notifications* [todo: fix link]:
 
     ![FCMConfig](attachments/native-remote-push/modeler/FCMConfig.png)
 
-7. Set the messaging service settings in the dropdown for both iOS and Android.
-8.  Set the messaging service type for ios and android for FCM:
+7. For both your Android and iOS **Messaging service settings**, select your FCM configuration.
+8.  For the Android and iOS **Messaging service types**, select FCM:
 
     ![FCMConfig2](attachments/native-remote-push/modeler/FCMConfig2.png)
 

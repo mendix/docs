@@ -67,10 +67,10 @@ The method `execute` triggers the action. It returns nothing and does not guaran
 DynamicValue is used to represent values that can change over time and is used by many property types. It is defined as follows:
 
 ```ts
-export type DynamicValue<T> =
-    | { readonly status: ValueStatus.Available; readonly value: T }
+export type DynamicValue<X> =
+    | { readonly status: ValueStatus.Available; readonly value: X }
     | { readonly status: ValueStatus.Unavailable; readonly value: undefined }
-    | { readonly status: ValueStatus.Loading; readonly value: T | undefined };
+    | { readonly status: ValueStatus.Loading; readonly value: X | undefined };
     
 export const enum ValueStatus {
     Loading = "loading",

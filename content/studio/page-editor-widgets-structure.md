@@ -40,7 +40,7 @@ A column is a cell inside a row. You can place one or several elements inside a 
 {{% image_container width="400" %}}![Column Example](attachments/page-editor-widgets-structure/column-example.png)
 {{% /image_container %}}
 
-Use a column to align items in a row.  For more information on rows and columns, see section [2.2 Row and Column Properties](#columns-and-rows). 
+Use a column to align items in a row.  For more information on rows and columns, see section the [Row and Column Properties](#columns-and-rows) sections. 
 
 ### 2.1 Layout Grid Properties {#layout-grid-properties}
 
@@ -60,47 +60,74 @@ The **Expand** section > **Add Row** allows you to add a row above or below the 
 
 To add a row, select a row in the layout grid and click one of the buttons in **Add Row**. A row identical to the selected one will be inserted.
 
-{{% alert type="info" %}}
-
-**Row** and **Column** also have the **Expand** section with the same properties.  
-
-{{% /alert %}}
-
 #### 2.1.2 General Section {#general-section}
 
-The **General** section of the layout grid contains the **Full Width** property. When this property is enabled, the layout grid takes the whole width of a container it is placed in. When disabled, the layout  grid will have a fixed size in the center of your page, adjusted automatically according to your device.
+In the **General** section, you can set the width of the layout. You can choose one of the following:
+
+* **Full Width** – the layout grid takes the whole width of a container it is placed in. 
+* **Fixed Width** –  the layout  grid will have a fixed size in the center of your page, adjusted automatically according to your device
 
 #### 2.1.3 Design Section
 
 For information on the **Design** section and its properties, see [Design Section](page-editor-widgets-design-section).
 
-### 2.2 Row and Column Properties {#columns-and-rows}
+### 2.2 Row Properties {#row}
 
-**Row** and **Column** properties consist of the following sections:
+**Row** properties consist of the following sections:
 
-* [Expand](#expand-section) 
-* [Row Layout](#row-layout)
+* [Container Settings](#container-settings) 
+* [General](#general-section-row)
 
-{{% image_container width="300" %}}![Row and Column Properties](attachments/page-editor-widgets-structure/row-and-column-sections.png)
+{{% image_container width="300" %}}![Row Properties](attachments/page-editor-widgets-structure/row-sections.png)
 {{% /image_container %}}
 
-#### 2.2.1 Expand Section
+#### 2.2.1 Container Settings {#container-settings}
 
-The **Expand** section for **Column** and **Row** has the same properties and functions as the **Expand** section of a layout grid. For details, see the [Expand Section](#expand-section) in the *Layout Grid Overview*.
+In the **Container Settings** section, you can set the width for the grid and choose between full width or fixed width. This property is the same as the property in the [General Section](#general-section) of the layout grid. For details, see the [General Section](#general-section).
 
-#### 2.2.2 Row Layout Section {#row-layout}
+#### 2.2.2 General Section
 
-In the **Row Layout** section you can change the way columns in a row are arranged, for example, change the number of columns and select the way they will be displayed on a desktop, a tablet, and a phone.  
+In the **General** section of a row you can set number of columns in it, align columns and add spacing between them.
 
-| Property | Description                                                  |
-| -------- | ------------------------------------------------------------ |
-| Desktop  | Changes the number and width of columns for a desktop.       |
-| Tablet   | Changes the number and width of columns for a tablet. Options available for the **Tablet** layout depend on the option selected for the **Desktop**. |
-| Phone    | Changes the number and width of columns for a phone. Options available for the **Phone** layout depend on the option selected for the **Desktop**. |
+* **Columns** – sets the number of columns in the row
 
-In the example below, you can see that you can select different row layouts for different types of devices and check the way the layout is shown in your app. 
+* **Align Columns Vertically** – this property aligns all columns in a row vertically. You can select the following options:
 
-![Row Layouts for Different Devices](attachments/page-editor-widgets-structure/row-layout-scheme.png)
+  ![](attachments/page-editor-widgets-structure/align-columns.png)
+
+* **Spacing Between Columns** – when enabled, adds spacing between columns
+
+### 2.3 Column Properties
+
+#### 2.3.1 General Section
+
+In the **General** section of the column properties, you can set the column width and align an individual column. 
+
+##### 2.3.1.1 Width
+
+**Width** – you can set the column width for desktop, tablet, or phone layout by choosing the corresponding device mode:
+
+![](attachments/page-editor-widgets-structure/width-per-device.png)
+
+You can choose the following options:
+
+* **Auto-fill** – takes the available space for a column (for example, if there is one column, it will span the column for the whole row, and for two columns, it will divide the space equally between them)
+
+* **Auto-fit content** – automatically fits the size of the column to its content
+
+* **Manual** – allows you to manually set the size of the columns 
+
+  * When you select **Manual** the slider appears that allows you to set the width of the column from 1 to 12:
+
+    ![](attachments/page-editor-widgets-structure/column-size.png)
+
+The **Width** property can be used to make your layout more flexible and adaptive to different types of devices.
+
+For example, you have a layout grid with one row and two columns: a picture is in one column, and a text with details is in another.
+
+##### 2.3.1.2 Align Vertically
+
+The **Align Vertically** property overrides the [Align Columns Vertically](#align-columns) property on the row and sets alignment for an individual column.  
 
 ## 4 Container Overview {#container-overview}
 
@@ -139,7 +166,7 @@ A tab container is a container that is used to show information categorized into
 
 You can place a widget or a group of widgets inside each tab and configure information in them separately. 
 
-### 6.1 Tab Container General Properties
+### 6.1 General Section
 
 In the **General** section, you can configure the following properties:
 
@@ -153,7 +180,7 @@ In the **General** section, you can configure the following properties:
 	{{% image_container width="300" %}}![](attachments/page-editor-widgets-structure/add-new-tab.png)
 	{{% /image_container %}}
 
-### 6.2 Tab Container Design Properties
+### 6.2 Design Section
 
 For information on the **Design** section and its properties, see [Design Section](page-editor-widgets-design-section).
 

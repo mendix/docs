@@ -7,11 +7,11 @@ tags: ["studio pro", "layout grid", "column", "row"]
 
 ## 1 Introduction
 
-Layout grid rows and columns are components of a [layout grid](). You can define the number of columns in a row, their size and alignment per a device.
+Layout grid rows and columns are components of a [layout grid](). You can define the number of columns in a row, their size and alignment.
 
 {{% alert type="info" %}}
 
-Row and column properties described below are not available if your project has Atlas UI version is below  2.4.0.
+Row and column properties described below are available if your project has [Mendix version 8.5](/release) or above  and Atlas UI Resources version 2.4.0 or above. 
 
 {{% /alert %}}
 
@@ -38,9 +38,9 @@ Row properties consist of the following sections:
 The **General** section of a row contains the following properties:
 
 * **Columns** – sets the number of columns in the row
-* **Align columns vertically** – This property aligns all columns in a row vertically. You can select the following options:
+* **Align columns vertically** – this property aligns all columns in a row vertically. You can select the following options:
   
-  * **Not set** – columns are not aligned
+  * **Not set** – alignment is not set
   
   * **Top** – columns are aligned to the top of the layout grid
   
@@ -76,19 +76,23 @@ Layout grid column properties consist of the following sections:
 
 ### 3.2 General Section
 
-#### 3.2.1 **Desktop/Tablet/Phone Width** {#column-width}
+#### 3.2.1 **Width** {#column-width}
 
-**Desktop/Tablet/Phone Width** allows you to set a width for the corresponding device. You can choose the following options:
+You can set the column width for desktop, tablet, or phone by using the corresponding property: **Desktop Width**, **Tablet Width**, **Phone Width**. 
+
+{{% alert type="info" %}}
+
+Setting width per device is unavailable for Native pages. 
+
+{{% /alert %}}
+
+You can choose the following options:
 
 * **Auto-fill** – takes the available space for a column (for example, if there is one column, it will span the column for the whole row, and for two columns, it will divide the space equally between them)
 * **Auto-fit content** – automatically fits the size of the column to its content
-* **Manual** – allows you to manually set the size of the columns by setting the [Desktop/Tablet/Phone size](#column-size) option 
+* **Manual** – allows you to manually set the size of the columns by setting the [size](#column-size) option 
 
-#### 3.2.2 **Desktop/Tablet/Phone Size** {#column-size}
-
-The **Desktop/Tablet/Phone Size** option is displayed only if [Desktop/Tablet/Phone width](#column-width) is set to **Manual**. width allows you to select size of the column for the corresponding devices.
-
-The **Desktop/Tablet/Phone Size** and [Width](#column-width) properties can be used to make your layout more flexible and adaptive to different types of devices.
+The [Width](#column-width) property can be used to make your layout more flexible and adaptive to different types of devices.
 
 For example, you have a layout grid with one row and two columns: a picture is in one column, and a text with details is in another.
 
@@ -100,13 +104,19 @@ For *tablet*, you can set both columns to **Auto-fill** and you will get two equ
 
 ![Layout Example, Tablet](attachments/container-widgets/layout-example-tablet.png)
 
-For *phone*, it can be a good idea to place two columns one under another, setting them to **Manual** width of *12*. In this case, the second column will be automatically wrapped to another line:
+For *phone*, it can be a good idea to place two columns one under another, setting them to **Manual** width of *12* (for more information on the column size property, see the [Size](#column-size) section). In this case, the second column will be automatically wrapped to another line:
 
  ![Layout Example, Phone](attachments/container-widgets/layout-example-phone.png)
 
 On the picture below you can see the settings for two column described above:
 
 ![](attachments/container-widgets/column-settings-example.png)
+
+#### 3.2.2 **Size** {#column-size}
+
+The **Size** option is displayed only if the [width](#column-width) is set to **Manual**. 
+
+This setting allows you to manually set the column size for desktop, tablet, or phone by using the corresponding property: **Desktop Size**, **Tablet Size**, **Phone Size**. 
 
 #### 3.2.3 Align Vertically
 

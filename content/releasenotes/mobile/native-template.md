@@ -4,6 +4,7 @@ category: "Mobile"
 menu_order: 12
 toc-level: 1
 description: "Native Template release notes."
+draft: true 
 ---
 
 {{% alert type="info" %}}

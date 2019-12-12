@@ -11,6 +11,29 @@ The [Native Builder](/refguide/native-builder) is a command line input tool whic
 
 We are heavily invested in streamlining the experience of building your apps and are continuously improving upon the tool's capabilities. For more information on using the Native Builder, see [Deploying Native Apps using Native Builder](/howto/mobile/deploying-native-app).
 
+## 3.1.0
+
+**Release date: December 17th, 2019**
+
+### Improvement
+
+We realized that there are a few unknown factors, as for instance 3rd party services' stability, that might crash the Native Builder with no visible errors.
+For this purpose we introduces the global `--verbose` argument. If provided, Native Builder will output an extended stack trace in case of an error.
+
+Some of our users have been hard at work going the extra mile when using Native Builder. To simplify custom build we introduced the `bundle` command.
+With the bundle command you can easily generate a javasctipt bundle without having to go through the whole process of building.
+This command will generate an iOS or/and an Android javascript bundle and all the required assets and output it in the provided path.
+
+As the product matures, we will be introducing new dependencies or requirements that might not fare well with older versions.
+For this reason we introduced the mandatory `--mendix-version` arguments for the `regenerate` and `prepare` command.
+By providing the Mendix Studio Pro version the project is built with, Native Builder knows to select the correct version of Native Template when generating the project.
+
+### Fixes
+
+- The `regenerate` command should now correctly update Appcenter to point to the correct Github repository on each run.
+- The `regenerate` command should now consistently generate githube repositories with the correct name.
+- The log should now correctly report the name of the github owner using the login username rather than the user's name parameter.
+
 ## 3.0.0
 
 **Release date: October 29th, 2019**

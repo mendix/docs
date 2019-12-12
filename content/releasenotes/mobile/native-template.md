@@ -4,7 +4,6 @@ category: "Mobile"
 menu_order: 12
 toc-level: 1
 description: "Native Template release notes."
-draft: true 
 ---
 
 {{% alert type="info" %}}
@@ -85,7 +84,7 @@ iOS
 
 ### Fix
 
-* Fixed an issue where a smaller than than the display resolution splash screen would break the viewport of the app.
+* Fixed an issue where a using smaller splash screen image than the splash screen's display resolution would break the viewport of the app.
 
 ## 1.0.1
 

@@ -222,7 +222,23 @@ When you return to your app project in the Developer Portal, you will see the ne
 
 Changing the status of a story or updating story points automatically synchronizes the updates between the Developer Portal and Studio Pro!
 
-## 5 Read More
+## 5 Beta Version Changes
+
+We are introducing a redesigned UI beta version for the Stories functionality. To switch to the new version, simply click on the "Enable new UI" button. 
+
+![](attachments/stories-enable-new-ui)
+
+![](attachments/stories-new-ui)
+
+The new UI fixes many of the bugs encountered in the previous version, and we also improved the overall stability. Please note this is a beta version and not all functionalities found in the previous versions are implemented. See section 5.1 for the missing features. 
+
+### 5.1 Missing features in the beta version
+
+Some features are not implemented in the beta version. Here are the list of missing features : 
+
+- 
+
+## 6 Read More
 
 * [Buzz](buzz)
 * [App Team](team)

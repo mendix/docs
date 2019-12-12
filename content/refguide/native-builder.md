@@ -36,24 +36,26 @@ The `Prepare` command handles the creation of the app on both GitHub and App Cen
 An example of a `prepare` command:
 
 ```
-native-builder.exe prepare --github-access-token <token> --app-center-api-token <token> --java-home <absolute-path> --mxbuild-path <absolute-path> --project-path <absolute-path-to-mpr-file> --projectName CoolApp --app-identifier "com.company.myapp" --app-name "My Cool App"
+native-builder.exe prepare --github-access-token <token> --appcenter-api-token <token> --java-home <absolute-path> --mxbuild-path <absolute-path> --project-path <absolute-path-to-mpr-file> --project-name CoolApp --app-identifier "com.company.myapp" --app-name "My Cool App"
 ```
 
 | Parameters                  | Description                                                          | Example                                             |
 | --------------------------- | -------------------------------------------------------------------- | --------------------------------------------------- |
 | `--github-access-token`     | GitHub access token.                                                 | `c0e1dasf1e102c55ded223dbdebdbe59asf95224`          |
-| `--app-center-api-token`    | App Center API token.                                                | `3e18asdfb43f4fe6c85afsd0bf60dde72f134`             |
-| `--appcenter-organization` | App Center organization name.                             | `my-company`                                        |
-| `--project-name`            | Unique name of the project. (Required)                                         | `CoolApp`                                           |
+| `--appcenter-api-token`     | App Center API token.                                                | `3e18asdfb43f4fe6c85afsd0bf60dde72f134`             |
+| `--appcenter-organization`  | App Center organization name.                                        | `my-company`                                        |
+| `--project-name`            | Unique name of the project. (Required)                               | `CoolApp`                                           |
 | `--app-name`                | Display name of the app.                                             | `My Cool App`                                       |
 | `--app-identifier`          | Unique app identifier.                                               | `com.mendix.MyAwesomeApp`                           |
-| `--app-icon-path`           | Absolute path to the app icon.                            | `C:\MyAppIcon.png`                                  |
-| `--app-round-icon-path`     | Absolute path to the app round icon, specific to Android. | `C:\MyAppRoundIcon.png`                             |
-| `--app-splash-screen-path`  | Absolute path to the app splash screen image.             | `C:\MyAppSplash.png`                                |
+| `--app-icon-path`           | Absolute path to the app icon.                                       | `C:\MyAppIcon.png`                                  |
+| `--app-round-icon-path`     | Absolute path to the app round icon, specific to Android.            | `C:\MyAppRoundIcon.png`                             |
+| `--app-splash-screen-path`  | Absolute path to the app splash screen image.                        | `C:\MyAppSplash.png`                                |
 | `--java-home`               | Absolute path to the directory where Java executable is located.     | `C:\Program Files\Java\jdk-10.0.1`                  |
 | `--project-path`            | Absolute path to the Mendix project file.                            | `C:\MyApp\MyApp.mpr`                                |
 | `--mxbuild-path`            | Absolute path to MxBuild executable.                                 | `C:\Program Files\Mendix\8.0.0\modeler\mxbuild.exe` |
 | `--runtime-url`             | URL of the Mendix runtime.                                           | `https://myapp.mendixcloud.com`                     |
+| `--mendix-version`          | The Mendix Studio Pro version the project is using. (Required)       | `8.5.0` or `8.5`                                    |
+
 
 ### 2.2 Build
 
@@ -62,29 +64,29 @@ The `Build` command builds the JavaScript bundles and assets, creates a build on
 If you already ran `prepare`, this is an example of a `build` command:
 
 ```
-native-builder.exe build --projectName "CoolApp" --app-version "1.0.0" --build-number 1
+native-builder.exe build --project-name "CoolApp" --app-version "1.0.0" --build-number 1
 ```
 
 | Parameters                  | Description                                                                          | Example                                             |
 | --------------------------- | ------------------------------------------------------------------------------------ | --------------------------------------------------- |
-| `--github-access-token`     | GitHub access token.                                                                 | `c0e1dasf1e102c55ded223dbdebdbe59asf95224`          |
-| `--app-center-api-token`    | App Center API token.                                                                | `3e18asdfb43f4fe6c85afsd0bf60dde72f134`             |
-| `--appcenter-organization` | (Optional) App Center organization name.                                             | `my-company`                                        |
 | `--project-name`            | Unique name of the project used during `prepare`.                                    | `CoolApp`                                           |
-| `--app-name`                | Display name of the app.                                                             | `My Cool App`                                       |
-| `--app-identifier`          | Unique app identifier.                                                               | `com.mendix.MyAwesomeApp`                           |
-| `--app-icon-path`           | Absolute path to the app icon.                                            | `C:\MyAppIcon.png`                                  |
-| `--app-round-icon-path`     | Absolute path to the app round icon, specific to Android.                 | `C:\MyAppRoundIcon.png`                             |
-| `--app-splash-screen-path`  | Absolute path to the app splash screen image.                             | `C:\MyAppSplash.png`                                |
-| `--java-home`               | Absolute path to the directory where Java executable is located.                     | `C:\Program Files\Java\jdk-10.0.1`                  |
-| `--project-path`            | Absolute path to the Mendix project file.                                            | `C:\MyApp\MyApp.mpr`                                |
-| `--mxbuild-path`            | Absolute path to MxBuild executable.                                                 | `C:\Program Files\Mendix\8.0.0\modeler\mxbuild.exe` |
-| `--runtime-url`             | URL of the Mendix runtime.                                                           | `https://myapp.mendixcloud.com`                     |
-| `--app-version`             | Version of the app, semantic version only.  (Strongly recommended)                                         | `1.2.3`                                             |
-| `--output-path`             | Absolute path to the location where artifacts should go.                  | `C:\Downloads`                                      |
-| `--build-number`            | Build number, an arbitrary unique integer value. (Required)                                    | `1`                                                 |
-| `--platform`                | Platform with which to run command for. Defaults to both iOS and Android. | `ios` or `android`                                  |
-| `--skip-mxbuild`            | Used if bundling JavaScript bundle and assets. Defaults to `false`.       | `true` or `false`                                   |
+| `--app-version`             | Version of the app, semantic version only.  (Strongly recommended)                   | `1.2.3`                                             |
+| `--build-number`            | Build number, an arbitrary unique integer value. (Required)                          | `1`                                                 |
+| `--github-access-token`     | (Optional) GitHub access token.                                                      | `c0e1dasf1e102c55ded223dbdebdbe59asf95224`          |
+| `--appcenter-api-token`     | (Optional) App Center API token.                                                     | `3e18asdfb43f4fe6c85afsd0bf60dde72f134`             |
+| `--appcenter-organization`  | (Optional) App Center organization name.                                             | `my-company`                                        |
+| `--app-name`                | (Optional) Display name of the app.                                                  | `My Cool App`                                       |
+| `--app-identifier`          | (Optional) Unique app identifier.                                                    | `com.mendix.MyAwesomeApp`                           |
+| `--app-icon-path`           | (Optional) Absolute path to the app icon.                                            | `C:\MyAppIcon.png`                                  |
+| `--app-round-icon-path`     | (Optional) Absolute path to the app round icon, specific to Android.                 | `C:\MyAppRoundIcon.png`                             |
+| `--app-splash-screen-path`  | (Optional) Absolute path to the app splash screen image.                             | `C:\MyAppSplash.png`                                |
+| `--java-home`               | (Optional) Absolute path to the directory where Java executable is located.          | `C:\Program Files\Java\jdk-10.0.1`                  |
+| `--project-path`            | (Optional) Absolute path to the Mendix project file.                                 | `C:\MyApp\MyApp.mpr`                                |
+| `--mxbuild-path`            | (Optional) Absolute path to MxBuild executable.                                      | `C:\Program Files\Mendix\8.0.0\modeler\mxbuild.exe` |
+| `--runtime-url`             | (Optional) URL of the Mendix runtime.                                                | `https://myapp.mendixcloud.com`                     |
+| `--output-path`             | (Optional) Absolute path to the location where artifacts should go.                  | `C:\Downloads`                                      |
+| `--platform`                | (Optional) Platform with which to run command for. Defaults to both iOS and Android. | `ios` or `android`                                  |
+| `--skip-mxbuild`            | (Optional) Used if bundling JavaScript bundle and assets. Defaults to `false`.       | `true` or `false`                                   |
 
 ### 2.3 Regenerate
 
@@ -92,26 +94,13 @@ The `regenerate` command recreates the project on GitHub with the latest version
 
 | Parameter                  | Description                                                                 | Example                                             |
 | -------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------- |
-| `--java-home`              | Absolute path to the directory where Java executable is located.             | `C:\Program Files\Java\jdk-10.0.1`                  |
-| `--project-path`           | Absolute path to the Mendix project file.                                    | `C:\MyApp\MyApp.mpr`                                |
-| `--mxbuild-path`           | Absolute path to MxBuild executable.                                         | `C:\Program Files\Mendix\8.0.0\modeler\mxbuild.exe` |
-| `--runtime-url`            | URL of the Mendix Runtime.                                                   | `https://myapp.mendixcloud.com`                     |
-| `--github-access-token`    | GitHub access token.                                                         | `c0e1dasf1e102c55ded223dbdebdbe59asf95224`          |
-| `--appcenter-api-token`    | App Center API token.                                                        | `3e18asdfb43f4fe6c85afsd0bf60dde72f134`             |
-| `--app-name`               | Name of the app to build.                                                    | `CoolApp`                                           |
-| `--app-version`            | Version of the app.                                                          | `1.2.3`                                             |
-| `--build-number`           | Build number, an arbitrary unique integer value.                             | `1`                                                 |
-| `--app-identifier`         | Unique app identifier.                                                       | `com.mendix.MyAwesomeApp`                           |
-| `--app-icon-path`          | Absolute path to the app icon.                                    | `C:\MyAppIcon.png`                                  |
-| `--app-round-icon-path`    | Absolute path to the app round icon, specific to Android.         | `C:\MyAppRoundIcon.png`                             |
-| `--app-splash-screen-path` | Absolute path to the app splash screen image.                     | `C:\MyAppSplash.png`                                |
-| `--appcenter-organization` | Organization name used in App Center.                             | `my-company`                                        |
-| `--output-path`            | Absolute path to the location where artifacts should be outputed. | `C:\Downloads`                                      |
+| `--project-name`           | (Optional) Absolute path to the directory where Java executable is located. | `My Cool App`                                       |
+| `--mendix-version`          | The Mendix Studio Pro version the project is using. (Required)                   | `8.5.0` or `8.5`                              |
 
 An example of a `regenerate` command:
 
 ```
-native-builder.exe regenerate --projectName "CoolApp"
+native-builder.exe regenerate --project-name "CoolApp" --mendix-version "8.5.0"
 ```
 
 | Parameters       | Description                                       | Example   |
@@ -125,20 +114,20 @@ The `push-update` command handles generating a new JavaScript bundle and assets,
 Here is an example of a command featuring `push-update`:
 
 ```bash
-native-builder.exe release push-update --projectName "CoolApp" --target-version "1.0.0" --build-number 1 --rollout-percentage 100
+native-builder.exe release push-update --project-name "CoolApp" --target-version "1.0.0" --build-number 1 --rollout-percentage 100
 ```
 
-| Parameters             | Description                                                                                                    | Example            |
-| ---------------------- | -------------------------------------------------------------------------------------------------------------- | ------------------ |
-| `--project-name`       | Unique name of the project used during `prepare`                                                               | `CoolApp`          |
+| Parameters             | Description                                                                                                    | Example                                                          |
+| ---------------------- | -------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
+| `--project-name`       | Unique name of the project used during `prepare`                                                               | `CoolApp`                                                        |
 | `--target-version`     | Version or range of versions of the already published app that this update should affect.                      | Semantic version See [Semantic Versioning](https://semver.org/)  |
-| `--rollout-percentage` | Percentage number of users that should get this update. Once set, the value can not be reduced afterwards.     | A number between `1` and `100`. |
-| `--build-number`       | App Center build number that this update should target.                                                        | Any number as defined during `build`  |
-| `--description`        | (Optional) More info associated with this update that users would see before downloading.                      | Any text message.                     |
-| `--mandatory`          | (Optional) Determines if this update should be considered important and forced on the users. Defaults to true. | `true` or `false`  |
-| `--platform`           | (Optional) Platform with which to run command for. Defaults to both iOS and Android.                           | `ios` or `android`     |
-| `--deployment-target`  | (Optional) OTA target group. Defaults to `Production`                                                          | `Staging`          |
-| `--skip-mxbuild`       | (Optional) Used if bundling JavaScript bundle and assets. Defaults to `false`                                  | `true` or `false`   |
+| `--rollout-percentage` | Percentage number of users that should get this update. Once set, the value can not be reduced afterwards.     | A number between `1` and `100`.                                  |
+| `--build-number`       | App Center build number that this update should target.                                                        | Any number as defined during `build`                             |
+| `--description`        | (Optional) More info associated with this update that users would see before downloading.                      | Any text message.                                                |
+| `--mandatory`          | (Optional) Determines if this update should be considered important and forced on the users. Defaults to true. | `true` or `false`                                                |
+| `--platform`           | (Optional) Platform with which to run command for. Defaults to both iOS and Android.                           | `ios` or `android`                                               |
+| `--deployment-target`  | (Optional) OTA target group. Defaults to `Production`                                                          | `Staging`                                                        |
+| `--skip-mxbuild`       | (Optional) Used if bundling JavaScript bundle and assets. Defaults to `false`                                  | `true` or `false`                                                |
 
 ### 2.5 Updating an OTA Deployment Release's Metadata
 
@@ -147,7 +136,7 @@ The `patch-update` command allows you to update the metadata of a published upda
 Here is an example of a command featuring `patch-update`:
 
 ```bash
-native-builder.exe release patch-update --projectName "CoolApp" --target-version  "1.0.1"
+native-builder.exe release patch-update --project-name "CoolApp" --target-version  "1.0.1"
 ```
 
 | Parameters             | Description                                                                                                          | Example                                                |
@@ -168,7 +157,7 @@ The `rollback-update` command allows you to revert to a previous deployment rele
 Here is an example of a command featuring `rollback-update`:
 
 ```bash
-native-builder.exe release rollback-update --projectName "CoolApp" --label "v4"
+native-builder.exe release rollback-update --project-name "CoolApp" --label "v4"
 ```
 
 Be aware of the following:
@@ -190,7 +179,7 @@ The `list` command displays a pretty-printed list of all deployed releases.
 Here is an example of a command featuring `list`:
 
 ```bash
-native-builder.exe release list --projectName "CoolApp"
+native-builder.exe release list --project-name "CoolApp"
 ```
 
 | Parameters            | Description                                                                          | Example            |
@@ -198,6 +187,22 @@ native-builder.exe release list --projectName "CoolApp"
 | `--project-name`      | Unique name of the project used during `prepare`                                     | `CoolApp`          |
 | `--platform`          | (Optional) Platform with which to run command for. Defaults to both iOS and Android. | `ios` or `android` |
 | `--deployment-target` | (Optional) OTA target group. Defaults to `Production`                                | `Staging`          |
+
+### 2.8 Generating only the app bundles
+
+The `bundle` command can be used to only run the MXBuild step and skip the Appcenter build. This command's output are zip archives with the javascript bundle and the resources for each platform.
+
+Here is an example of a command featuring `bundle`:
+
+```bash
+native-builder.exe bundle --project-name "CoolApp" --output-path "C:\bundles"
+```
+
+| Parameters            | Description                                                                          | Example            |
+| --------------------- | ------------------------------------------------------------------------------------ | ------------------ |
+| `--project-name`      | Unique name of the project used during `prepare`                                     | `CoolApp`          |
+| `--output-path` | The absolute output path for the zip archives                                              | `C:\bundles`       |
+| `--platform`          | (Optional) Platform with which to run command for. Defaults to both iOS and Android. | `ios` or `android` |
 
 ## 3 Expanded Parameter Explanations
 
@@ -253,11 +258,15 @@ For over-the-air updates, each build is associated with a particular release gro
 
 The highest integer Android will allow is 2,147,483,647. Consider starting with 1 and incrementing by one with each release. Alternatively, you can use dates in the “YYmmddHHmm” format, such as {2007310950} for a build run on July 31, 2020 at 09:50.
 
+### 3.13 --verbose
+
+If used, in case of an error Native Builder will output a complete stack trace of the error. This is usefull for cases where Native Builder might fail with an unknown error.
+
 ## 4 Advanced Usage
 
 ### 4.1 Custom Native Code
 
-If you have custom native dependencies or code, you can include them in your app by merging your changes to the **master** branch of the GitHub repository which Native Builder is making. Every build branches off from **master** and your changes will be included. Remember to sync your repository occasionally to get the latest changes from Mendix native template. 
+If you have custom native dependencies or code, you can include them in your app by merging your changes to the **master** branch of the GitHub repository which Native Builder is making. Every build branches off from **master** and your changes will be included. Remember to sync your repository occasionally to get the latest changes from Mendix native template.
 
 For more information on syncing your repository, see [When to Sync Your Native Template](#sync-your-repository) below.
 
@@ -349,6 +358,11 @@ If your native template is not the latest version, synchronize your repository w
 **The Build Configuration is Overridden with the Default** — While Native Builder is checking to identify if the branch it is building has been manually configured, it may detect false positives. This could lead to your custom configuration getting overridden. If that happens, consider running the build directly using App Center and skip using the Native Builder for this branch.
 
 **Unknown Error** — If you do not understand an error, you can sign in to App Center and delete the build configuration for the **master** branch. Then run Native Builder again. The tool will recreate the default build configuration for **master** and your branch.
+
+### 6.3 Unknown Errors
+
+If for any reason Native Builder fails to complete a run and no error is provided, consider using the global `--verbose` argument, to get a full stack trace of the error.
+When communicating an issue with support it is always handy to supply these extra logs, together with build logs, it they exist, for further analysis.
 
 ## 7 Read More
 

@@ -82,7 +82,7 @@ You can set the column width for desktop, tablet, or phone by using the correspo
 
 {{% alert type="info" %}}
 
-Setting width per device is unavailable for Native pages. 
+You can set width per device for Responsive navigation profiles only. Setting width per device is unavailable for Native pages. 
 
 {{% /alert %}}
 

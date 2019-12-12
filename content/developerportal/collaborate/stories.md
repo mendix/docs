@@ -252,8 +252,9 @@ Some features are not implemented in the beta version. Here are temporary workar
 
 - **add a task**: Go to the **details page** by clicking on the title of the story. Here you can add task by clicking the **add** button. If a story already contains a task, a clickable icon will be displayed. 
 
+- **contextual menu**: When you select a story, a contextual menu will appear with the ability to **Move**, **Assign Label** and **Delete** a story. Those actions also support multi-selection. 
+
 ![](attachments/stories-contextual-menu.png)
--**contextual menu**: When you select a story, a contextual menu will appear with the ability to **Move**, **Assign Label** and **Delete** a story. Those actions also support multi-selection. 
 
 ## 6 Read More
 

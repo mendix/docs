@@ -8,7 +8,7 @@ tags: ["Stories", "Sprint", "Developer Portal"]
 
 ## 1 Introduction
 
-[Story beta](story#adding) section of *Beta Version Changes*)
+[Story beta](#story-beta)
 
 In **Stories**, you are able to manage Sprints, stories, and labels for your app project. These components are often used in an Agile development environment, in which teams work in short development cycles (Sprints) of 2–4 weeks.
 
@@ -224,7 +224,7 @@ When you return to your app project in the Developer Portal, you will see the ne
 
 Changing the status of a story or updating story points automatically synchronizes the updates between the Developer Portal and Studio Pro!
 
-## 5 Beta Version Changes(#story#adding)
+## 5 Beta Version Changes{#story-beta}
 
 We are introducing a redesigned UI beta version for the Stories functionality. To switch to the new version, simply click on the "Enable new UI" button. 
 

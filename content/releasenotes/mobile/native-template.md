@@ -17,11 +17,11 @@ For more information on native mobile app development, see the [native-template 
 
 ### Improvement
 
-* Introduced a more consistent Keyboard Avoiding behavior on iOS
+* Introduced a more consistent keyboard-avoiding behavior on iOS.
 
-### Breaking Changes
+### Breaking Change
 
-The new keyboard avoiding behavior may introduce visual artifacts for apps built against Mendix Studio Pro versions earlier than 8.5.0.
+* The new keyboard-avoiding behavior may introduce visual artifacts for apps built against Mendix Studio Pro versions earlier than 8.5.0.
 
 ## 2.0.2
 

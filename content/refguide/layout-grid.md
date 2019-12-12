@@ -135,21 +135,19 @@ Layout grid column properties consist of the following sections:
 
 #### 4.2.1 **Width** {#column-width}
 
-You can set the column width for desktop, tablet, or phone by using the corresponding property: **Desktop Width**, **Tablet Width**, **Phone Width**. 
+This property allows you to define the column width. 
 
-{{% alert type="info" %}}
+For *web* pages, it is divided into **Desktop Width**, **Tablet Width**,and **Phone Width** which allows you to define column width per device type.
 
-You can set width per device for web pages, not for native mobile or hybrid pages. For more information on different types of navigation profiles that pages are based on, see [Navigation](navigation).
+For *native* pages, you will see one property called **Width**.
 
-{{% /alert %}}
-
-You can choose the following options:
+The **Width** property contains the following options:
 
 * **Auto-fill** – takes the available space for a column (for example, if there is one column, it will span the column for the whole row, and for two columns, it will divide the space equally between them)
 * **Auto-fit content** – automatically fits the size of the column to its content
-* **Manual** – allows you to manually set the size of the columns by setting the [size](#column-size) option 
+* **Manual** – allows you to manually set the size of the columns
 
-The [Width](#column-width) property can be used to make your layout more flexible and adaptive to different types of devices.
+Column width can be used to make your layout more flexible and adaptive to different types of devices.
 
 For example, you have a layout grid with one row and two columns: a picture is in one column, and a text with details is in another.
 

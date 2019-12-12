@@ -30,7 +30,7 @@ Set **Use timeout on request** to **Yes** to be able specify how long the Call R
 {{% alert type="warning" %}}
 It is recommended that you set this to *Yes*.
 
-Most cloud deployments (including those on Mendix Cloud) will close connections if there is no traffic. If **Use timeout on request** is set to *No* and the connection is closed, this activity will continue indefinitely.
+Most cloud infrastructure services (including those used by the Mendix Cloud) will close HTTP connections automatically if there is no traffic for a few minutes, even if your activity is still waiting for a response. This means that, if your activity calls a web service which takes a long time to respond, the connection may be closed without the activity being aware of this and your activity will not receive a response. Under these circumstances, if **Use timeout on request** is set to *No*, your activity will get stuck waiting indefinitely for data to arrive.
 {{% /alert %}}
 
 ### 2.3 Proxy Configuration

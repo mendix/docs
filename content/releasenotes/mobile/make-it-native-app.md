@@ -14,9 +14,9 @@ For more information on the Make It Native app, see [Getting the Make It Native 
 
 ## Android 1.2.1 / iOS 1.2.3
 
-**Release date: December 12th, 2019**
+**Release date: December 17th, 2019**
 
-With this version we introduced a better keyboard avoiding behavior on iOS.
+With this version we introduced a better keyboard-avoiding behavior on iOS.
 
 ### Known Issues
 

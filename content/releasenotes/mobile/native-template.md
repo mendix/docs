@@ -11,6 +11,18 @@ draft: true
 For more information on native mobile app development, see the [native-template repository](https://github.com/mendix/native-template/) and [How to Deploy Your First Mendix Native App](/howto/mobile/deploying-native-app) .
 {{% /alert %}}
 
+## 2.1.0 
+
+**Release date: December 17, 2019**
+
+### Improvement
+
+* Introduced a more consistent Keyboard Avoiding behavior on iOS
+
+### Breaking Changes
+
+The new keyboard avoiding behavior may introduce visual artifacts for apps built against Mendix Studio Pro versions earlier than 8.5.0.
+
 ## 2.0.2
 
 **Release date: November 25th, 2019**

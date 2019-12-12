@@ -43,6 +43,12 @@ When calling a web service using a call-web-service activity, the location of th
 
 This can be used to throw an exception when the web service takes too long to respond after connecting. After a set amount of time, an exception will be thrown and the microflow will roll back or go into your custom error handler. Note that this does not change the connection timeout.
 
+{{% alert type="warning" %}}
+It is recommended that you set this to *Yes*.
+
+Most cloud infrastructure services (including those used by the Mendix Cloud) will close HTTP connections automatically if there is no traffic for a few minutes, even if your activity is still waiting for a response. This means that, if your activity calls a web service which takes a long time to respond, the connection may be closed without the activity being aware of this and your activity will not receive a response. Under these circumstances, if **Use timeout on request** is set to *No*, your activity will get stuck waiting indefinitely for data to arrive.
+{{% /alert %}}
+
 Default: *No*
 
 ### 2.5 Timeout

@@ -226,17 +226,21 @@ Changing the status of a story or updating story points automatically synchroniz
 
 We are introducing a redesigned UI beta version for the Stories functionality. To switch to the new version, simply click on the "Enable new UI" button. 
 
-![](attachments/stories-enable-new-ui)
-
-![](attachments/stories-new-ui)
+![](attachments/stories-enable-new-ui.png)
 
 The new UI fixes many of the bugs encountered in the previous version, and we also improved the overall stability. Please note this is a beta version and not all functionalities found in the previous versions are implemented. See section 5.1 for the missing features. 
 
-### 5.1 Missing features in the beta version
+![](attachments/stories-new-ui.png)
 
-Some features are not implemented in the beta version. Here are the list of missing features : 
+### 5.1 Missing features or differences in the beta version
 
-- 
+Some features are not implemented in the beta version. Here are temporary workarounds for the missing features. 
+
+- **active sprint**: represents the sprint that is currently marked as active. 
+
+- **add or remove a label on a project**: click on "More" then click "Manage Labels". On that page you will be able to add or remove a label at a project level. 
+
+- **add or remove label for a story**: to assign existing labels to a story or multiple stories, you can select the stories and click on "Assign Label" from the contextual menu. 
 
 ## 6 Read More
 

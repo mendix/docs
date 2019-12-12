@@ -13,6 +13,12 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 ## 2019
 
+### December 13th, 2019 
+
+#### Improvements
+
+* We redesigned the Stories functionality (beta version) in Sprintr with a brand new UI and improved stability. The redesigned Stories UI can be accessed by toggling the "enable new UI" button visible in the Stories page. 
+
 ### December 5th, 2019
 
 #### Improvements

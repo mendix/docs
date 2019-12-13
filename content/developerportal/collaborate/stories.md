@@ -222,7 +222,28 @@ When you return to your app project in the Developer Portal, you will see the ne
 
 Changing the status of a story or updating story points automatically synchronizes the updates between the Developer Portal and Studio Pro!
 
-## 5 Read More
+## 5 Redesigned UI (Beta) {#beta}
+
+A redesigned Stories UI has been introduced in a [beta version](/releasenotes/beta-features/). To switch to the new version, click **Enable new UI**: 
+
+![](attachments/stories-enable-new-ui.png)
+
+![](attachments/stories-new-ui.png)
+
+Some features previously available are not implemented in this beta version. This list describes the changed functionality and describes and describes temporary workarounds for the missing features:
+
+* **Active sprint** – represents the sprint that is currently marked as active
+* **Add or remove a label on a project** – click **More** and then **Manage Labels** to open a page where you can add or remove a label at the project level
+* **Add label for stories** – to assign existing labels to a story (or multiple stories), select the story and click **Assign Label**
+* **Remove label from a story** – click a story title to open the **Details** page, then click **Edit** to edit the story and add or remove a label from the story
+* **Edit a story** – click a story title to open the **Details** page, then click **Edit** to edit the story
+* **Add a comment** – when there is no comment on a story, click a story title to open the **Details** page, then click the **Comments** tab (if a story already contains a comment, the story displays a comment icon; clicking this icon will take you directly to the **Comments** tab)
+* **Add a task** – click a story title to open the **Details** page, where you can add a task by clicking **Add** (if a story already contains a task, a clickable icon is displayed)
+* **Contextual menu** – when you select a story, a contextual menu appears with options to **Move**, **Assign Label**, and **Delete** a story (these actions support multi-selection)
+
+![](attachments/stories-contextual-menu.png)
+
+## 6 Read More
 
 * [Buzz](buzz)
 * [App Team](team)

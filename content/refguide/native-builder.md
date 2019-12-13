@@ -36,15 +36,15 @@ The `Prepare` command handles the creation of the app on both GitHub and App Cen
 An example of a `prepare` command:
 
 ```
-native-builder.exe prepare --github-access-token <token> --appcenter-api-token <token> --java-home <absolute-path> --mxbuild-path <absolute-path> --project-path <absolute-path-to-mpr-file> --project-name CoolApp --app-identifier "com.company.myapp" --app-name "My Cool App"
+native-builder.exe prepare --github-access-token <token> --appcenter-api-token <token> --java-home <absolute-path> --mxbuild-path <absolute-path> --project-path <absolute-path-to-mpr-file> --projectName CoolApp --app-identifier "com.company.myapp" --app-name "My Cool App"
 ```
 
 | Parameters                  | Description                                                          | Example                                             |
 | --------------------------- | -------------------------------------------------------------------- | --------------------------------------------------- |
 | `--github-access-token`     | GitHub access token.                                                 | `c0e1dasf1e102c55ded223dbdebdbe59asf95224`          |
-| `--appcenter-api-token`     | App Center API token.                                                | `3e18asdfb43f4fe6c85afsd0bf60dde72f134`             |
-| `--appcenter-organization`  | App Center organization name.                                        | `my-company`                                        |
-| `--project-name`            | Unique name of the project. (Required)                               | `CoolApp`                                           |
+| `--appcenter-api-token`    | App Center API token.                                                | `3e18asdfb43f4fe6c85afsd0bf60dde72f134`             |
+| `--appcenter-organization` | App Center organization name.                                        | `my-company`                                        |
+| `--project-name`            | Unique name of the project. (Required)                              | `CoolApp`                                           |
 | `--app-name`                | Display name of the app.                                             | `My Cool App`                                       |
 | `--app-identifier`          | Unique app identifier.                                               | `com.mendix.MyAwesomeApp`                           |
 | `--app-icon-path`           | Absolute path to the app icon.                                       | `C:\MyAppIcon.png`                                  |
@@ -69,6 +69,7 @@ native-builder.exe build --project-name "CoolApp" --app-version "1.0.0" --build-
 
 | Parameters                  | Description                                                                          | Example                                             |
 | --------------------------- | ------------------------------------------------------------------------------------ | --------------------------------------------------- |
+=======
 | `--project-name`            | Unique name of the project used during `prepare`.                                    | `CoolApp`                                           |
 | `--app-version`             | Version of the app, semantic version only.  (Strongly recommended)                   | `1.2.3`                                             |
 | `--build-number`            | Build number, an arbitrary unique integer value. (Required)                          | `1`                                                 |

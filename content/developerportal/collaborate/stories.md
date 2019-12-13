@@ -8,8 +8,6 @@ tags: ["Stories", "Sprint", "Developer Portal"]
 
 ## 1 Introduction
 
-[Story beta](#story-beta)
-
 In **Stories**, you are able to manage Sprints, stories, and labels for your app project. These components are often used in an Agile development environment, in which teams work in short development cycles (Sprints) of 2–4 weeks.
 
 By adding your Sprints to Mendix, you will have a clear overview of your tasks and can easily view the status of the development of your app project. You can create, refine, and prioritize user stories collaboratively using the stories' conversation threads. User stories can be estimated and organized into Sprints which can be monitored using Scrum boards and burndown charts.
@@ -224,35 +222,24 @@ When you return to your app project in the Developer Portal, you will see the ne
 
 Changing the status of a story or updating story points automatically synchronizes the updates between the Developer Portal and Studio Pro!
 
-## 5 Beta Version Changes{#story-beta}
+## 5 Redesigned UI (Beta) {#beta}
 
-We are introducing a redesigned UI beta version for the Stories functionality. To switch to the new version, simply click on the "Enable new UI" button. 
+A redesigned Stories UI has been introduced in a [beta version](/releasenotes/beta-features/). To switch to the new version, click **Enable new UI**: 
 
 ![](attachments/stories-enable-new-ui.png)
 
-The new UI fixes many of the bugs encountered in the previous version, and we also improved the overall stability. Please note this is a beta version and not all functionalities found in the previous versions are implemented. See section 5.1 for the missing features. 
-
 ![](attachments/stories-new-ui.png)
 
-### 5.1 Missing features or differences in the beta version
+Some features previously available are not implemented in this beta version. This list describes the changed functionality and describes and describes temporary workarounds for the missing features:
 
-Some features are not implemented in the beta version. Here are temporary workarounds for the missing features or description of changed functionalities. 
-
-- **active sprint**: represents the sprint that is currently marked as active. 
-
-- **add or remove a label on a project**: click on **More** then click **Manage Labels**. On that page you will be able to add or remove a label at a project level. 
-
-- **add label for stories**: to assign existing labels to a story or multiple stories, you can select the stories and click on **Assign Label** from the contextual menu. 
-
-- **remove label from a story**: Click on the story title to go to the **details page** then click on the **edit** button to edit the story. There you can add or remove a label from a story. 
-
-- **edit a story**: click on the story title to go to the **details page** then click on the **edit** button to edit the story.
-
-- **add a comment**: when there is no comment on a story, click on story title to go to the **details page** and then click the **comments** tab. If a story already contains a comment, the story will display a comment icon. Clicking this icon will take you directly to the **comments** tab. 
-
-- **add a task**: Go to the **details page** by clicking on the title of the story. Here you can add task by clicking the **add** button. If a story already contains a task, a clickable icon will be displayed. 
-
-- **contextual menu**: When you select a story, a contextual menu will appear with the ability to **Move**, **Assign Label** and **Delete** a story. Those actions also support multi-selection. 
+* **Active sprint** – represents the sprint that is currently marked as active
+* **Add or remove a label on a project** – click **More** and then **Manage Labels** to open a page where you can add or remove a label at the project level
+* **Add label for stories** – to assign existing labels to a story (or multiple stories), select the story and click **Assign Label**
+* **Remove label from a story** – click a story title to open the **Details** page, then click **Edit** to edit the story and add or remove a label from the story
+* **Edit a story** – click a story title to open the **Details** page, then click **Edit** to edit the story
+* **Add a comment** – when there is no comment on a story, click a story title to open the **Details** page, then click the **Comments** tab (if a story already contains a comment, the story displays a comment icon; clicking this icon will take you directly to the **Comments** tab)
+* **Add a task** – click a story title to open the **Details** page, where you can add a task by clicking **Add** (if a story already contains a task, a clickable icon is displayed)
+* **Contextual menu** – when you select a story, a contextual menu appears with options to **Move**, **Assign Label**, and **Delete** a story (these actions support multi-selection)
 
 ![](attachments/stories-contextual-menu.png)
 

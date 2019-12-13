@@ -15,24 +15,19 @@ We are heavily invested in streamlining the experience of building your apps and
 
 **Release date: December 17th, 2019**
 
-### Improvement
+### Improvements
 
-We realized that there are a few unknown factors, as for instance 3rd party services' stability, that might crash the Native Builder with no visible errors.
-For this purpose we introduces the global `--verbose` argument. If provided, Native Builder will output an extended stack trace in case of an error.
+* A few factors, such as third-party services' stability, might crash the Native Builder with no visible errors. To give you more information during such a crash, we introduced the global `--verbose` argument. If provided, the Native Builder will output an extended stack trace in case of an error.
 
-Some of our users have been hard at work going the extra mile when using Native Builder. To simplify custom build we introduced the `bundle` command.
-With the bundle command you can easily generate a javasctipt bundle without having to go through the whole process of building.
-This command will generate an iOS or/and an Android javascript bundle and all the required assets and output it in the provided path.
+* To simplify custom builds we introduced the `bundle` command. With the `bundle` command, you can easily generate a JavaScript bundle without having to go through the whole build process. This command will generate an iOS or an Android JavaScript bundle and all the required assets, then output the bundle to the provided path.
 
-As the product matures, we will be introducing new dependencies or requirements that might not fare well with older versions.
-For this reason we introduced the mandatory `--mendix-version` arguments for the `regenerate` and `prepare` command.
-By providing the Mendix Studio Pro version the project is built with, Native Builder knows to select the correct version of Native Template when generating the project.
+* As Mendix Studio Pro and the Native Builders mature, we will be introducing new dependencies or requirements that might not fare well with older versions. For this reason we introduced the mandatory `--mendix-version` arguments for the `regenerate` and `prepare` commands. When you provide the Studio Pro version your Mendix project is built with, the Native Builder knows to select the correct version of the Native Template when generating the project.
 
 ### Fixes
 
-- The `regenerate` command should now correctly update Appcenter to point to the correct Github repository on each run.
-- The `regenerate` command should now consistently generate githube repositories with the correct name.
-- The log should now correctly report the name of the github owner using the login username rather than the user's name parameter.
+* The `regenerate` command correctly updates App Center to point to the correct GitHub repository on each run.
+* The `regenerate` command consistently generates GitHub repositories with the correct name.
+* The log correctly reports the name of the GitHub owner using their login username rather than the user's name parameter.
 
 ## 3.0.0
 

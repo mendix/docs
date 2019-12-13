@@ -54,7 +54,7 @@ You can also perform various actions to [manage labels](#manage-labels).
 
 ## 3 More Actions
 
-Via the **More** button, you can perform the actions described below.
+Using the **More** button, you can perform the actions described below.
 
 ### 3.1 Delete Selection
 
@@ -220,7 +220,7 @@ When you return to your app project in the Developer Portal, you will see the ne
 
 Changing the status of a story or updating story points automatically synchronizes the updates between the Developer Portal and Studio Pro!
 
-## 5 Redesigned UI (Beta) {#beta}
+## 5 New UI Option (Beta) {#beta}
 
 A redesigned Stories UI has been introduced in a [beta version](/releasenotes/beta-features/). To switch to the new version, click **Enable new UI**: 
 
@@ -247,27 +247,7 @@ When you select a story, you can perform the following actions (these actions su
 * **Assign Label** – click this to assign existing labels to a story
 * **Delete** – click this to delete a story
 
-### 5.1 Story Details
-
-When you click a story title, the **Story Details** page opens:
-
-![](attachments/stories-story-details1.png)
-
-There are various tabs on this page where you can do the following:
-
-* **Tasks** –  view tasks and click **Add** to add a new task to the story
-* **Comments** – view comments and add a comment on the story in the box
-* **Feedback** – view the feedback items linked to the story (for details, see the [Adding a Feedback Item to Your Backlog](feedback#adding) section of *Feedback Management*)
-
-Click **Edit** to open the **Story Details** page:
-
-![](attachments/stories-story-details2.png)
-
-This page allows you to do the following:
-
-* Edit the story's **Title**, **Description**, **Story type**, **Story points**, and **Status** 
-* Add or remove **Labels** from a story
-* Click **View history** to view the story's [history](#history)
+When you click a story title, the **Story Details** page opens. The functionality on this page can be navigated according to the [Story Details](#accessing-details) section above.
 
 ## 6 Read More
 

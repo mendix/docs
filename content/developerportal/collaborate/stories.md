@@ -70,7 +70,7 @@ You will receive this confirmation message, so make sure you are able to confirm
 
 ![](attachments/complete-verify.png)
 
-### 3.3 Import / Export
+### 3.3 Import / Export {#import-export}
 
 Click **Import / Export** to import stories from or export stories to Excel:
 
@@ -115,12 +115,10 @@ Only team members with sufficient rights can manage story templates.
 
 ### 3.6 History {#history}
 
-Click **History** to view the history of collaboration actions for the app.
+Click **History** to view the history of collaboration actions for the app. On this page, you can click the following:
 
-On this page you can:
-
-* Click **Show item** to see details of a story
-* Click **Revert change** to revert changes
+* **Show related story** – presents the details of the story
+* **Revert change** – reverts changes
 
 ![](attachments/history.png)
 
@@ -228,20 +226,48 @@ A redesigned Stories UI has been introduced in a [beta version](/releasenotes/be
 
 ![](attachments/stories-enable-new-ui.png)
 
+This is the main page of new UI:
+
 ![](attachments/stories-new-ui.png)
 
-Some features previously available are not implemented in this beta version. This list describes the changed functionality and describes and describes temporary workarounds for the missing features:
+* **Active sprint** – this label is applied to the sprint that is currently marked as active
+* **New Sprint** – click this to create a new sprint
+* **New Story** – click this to create a new sprint
+* **More** – click this to access the following options:
+	* **Import / Export to Excel** – opens the [Import / Export to Excel](#import-export) page
+	* **Manage Labels** – opens a page where you can add or remove a label at the project level
+	* **Archived Sprints** – opens a page where sprints that have been completed are archived
+	* **History** – opens the [History](#history) page
 
-* **Active sprint** – represents the sprint that is currently marked as active
-* **Add or remove a label on a project** – click **More** and then **Manage Labels** to open a page where you can add or remove a label at the project level
-* **Add label for stories** – to assign existing labels to a story (or multiple stories), select the story and click **Assign Label**
-* **Remove label from a story** – click a story title to open the **Details** page, then click **Edit** to edit the story and add or remove a label from the story
-* **Edit a story** – click a story title to open the **Details** page, then click **Edit** to edit the story
-* **Add a comment** – when there is no comment on a story, click a story title to open the **Details** page, then click the **Comments** tab (if a story already contains a comment, the story displays a comment icon; clicking this icon will take you directly to the **Comments** tab)
-* **Add a task** – click a story title to open the **Details** page, where you can add a task by clicking **Add** (if a story already contains a task, a clickable icon is displayed)
-* **Contextual menu** – when you select a story, a contextual menu appears with options to **Move**, **Assign Label**, and **Delete** a story (these actions support multi-selection)
+When you select a story, you can perform the following actions (these actions support multi-selection of stories):
 
 ![](attachments/stories-contextual-menu.png)
+
+* **Move** –  click this to move a story to another sprint
+* **Assign Label** – click this to assign existing labels to a story
+* **Delete** – click this to delete a story
+
+### 5.1 Story Details
+
+When you click a story title, the **Story Details** page opens:
+
+![](attachments/stories-story-details1.png)
+
+There are various tabs on this page where you can do the following:
+
+* **Tasks** –  view tasks and click **Add** to add a new task to the story
+* **Comments** – view comments and add a comment on the story in the box
+* **Feedback** – view the feedback items linked to the story (for details, see the [Adding a Feedback Item to Your Backlog](feedback#adding) section of *Feedback Management*)
+
+Click **Edit** to open the **Story Details** page:
+
+![](attachments/stories-story-details2.png)
+
+This page allows you to do the following:
+
+* Edit the story's **Title**, **Description**, **Story type**, **Story points**, and **Status** 
+* Add or remove **Labels** from a story
+* Click **View history** to view the story's [history](#history)
 
 ## 6 Read More
 

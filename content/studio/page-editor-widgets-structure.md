@@ -20,9 +20,9 @@ There are the following Structure widgets:
 
 ## 2 Columns and Sidebars{#columns}
 
-**Column** and **Sidebar** widgets are widgets with a pre-set number of columns. All widgets in this category are based on a [layout grid](#layout-grid) – an element that structures your page with rows and columns. 
+**Column** and **Sidebar** widgets are based on a [layout grid](#layout-grid) – a widget that structures your page with rows and columns. **Columns and Sidebars** are layout grid configurations with a pre-set number of columns. 
 
-## 3 Layout Grid {#layout-grid}
+## 3 Layout Grid Overview {#layout-grid}
 
 The **Layout Grid** helps you to structure a page and make it responsive immediately. This means that a layout grid has a built-in behavior to show how a page will look like on different devices. Switch **Device** modes to see how a page will be displayed on a phone, tablet, or desktop:
 
@@ -40,9 +40,9 @@ A column is a cell inside a row. You can place one or several widgets inside a c
 {{% image_container width="400" %}}![Column Example](attachments/page-editor-widgets-structure/column-example.png)
 {{% /image_container %}}
 
-For more information on rows and columns, see section the [Row Properties](#row) and [Column Properties](#column) sections. 
+For more information on rows and columns, see [Row Properties](#row) and [Column Properties](#column) sections. 
 
-### 2.1 Layout Grid Properties {#layout-grid-properties}
+### 3.1 Layout Grid Properties {#layout-grid-properties}
 
 You can access the **Layout Grid** properties through the breadcrumb (for more information, see the [Breadcrumb](page-editor#breadcrumb) section in *Pages*). 
 Layout grid properties consist of the following sections:
@@ -56,39 +56,52 @@ Layout grid properties consist of the following sections:
     {{% image_container width="300" %}}![Layout Grid Properties](attachments/page-editor-widgets-structure/layout-grid-properties.png)
     {{% /image_container %}}
 
-#### 2.1.1 Expand Section {#expand-section}
+#### 3.1.1 Expand Section {#expand-section}
 
-The **Expand** section > **Add Row** allows you to add a row above or below the selected one to create more space to place widgets in. 
+The **Expand** section > **Add Row** allows you to add a row above or below the selected one to create more space to place widgets in.
 
-To add a new row, do the following:
+{{% alert type="info" %}} 
 
-1. Select the layout grid in the breadcrumb. 
-2. In **Properties** > **Add Row**, click one of the buttons to insert the row above or below. 
+A [row](#row) also has the **Expand** section with the same setting.
 
-An empty row identical to the one you selected in step 1 will be inserted.
+{{% /alert %}}
 
-#### 2.1.2 General Section {#general-section}
+To add a new row, do one of the following:
+
+1. Select the layout grid in the breadcrumb and in its **Properties** > **Add Row**, click one of the buttons to insert the row above or below. 
+2. Select the row and in its **Properties** > **Add Row**, click one of the buttons to insert the row above or below. 
+
+An empty row will be inserted.
+
+#### 3.1.2 General Section {#general-section}
 
 In the **General** section, you can set the width of the layout grid. You can choose one of the following:
 
 * **Full Width** – the layout grid takes the whole width of a container it is placed in
 * **Fixed Width** –  the layout  grid will have a fixed size in the center of your page, adjusted automatically according to your device
 
-#### 2.1.3 Design Section
+#### 3.1.3 Design Section
 
 For information on the **Design** section and its properties, see [Design Section](page-editor-widgets-design-section).
 
-### 2.2 Row Properties {#row}
+### 3.2 Row Properties {#row}
 
 *Row* properties consist of the following sections:
 
+* [Expand](#expand-section-row)
+
 * [Container Settings](#container-settings) 
+
 * [General](#general-section-row)
 
 	{{% image_container width="300" %}}![Row Properties](attachments/page-editor-widgets-structure/row-sections.png)
 	{{% /image_container %}}
 
-#### 2.2.1 Container Settings Section {#container-settings}
+#### 3.2.1 Expand Section {#expand-section-row}
+
+The **Expand** section for a **Row** has the same properties and functions as the **Expand** section of a layout grid. For details, see the [Expand Section](https://docs.mendix.com/studio/page-editor-widgets-structure#expand-section) of the *layout grid*.
+
+#### 3.2.2 Container Settings Section {#container-settings}
 
 In the **Container Settings** section, you can set the width for the layout grid and choose between full width or fixed width. 
 
@@ -98,7 +111,7 @@ This property is the same as the property in the [General Section](#general-sect
 
 {{% /alert %}}
 
-#### 2.2.2 General Section
+#### 3.2.3 General Section {#general-section-row}
 
 In the **General** section of a row you can select the number of columns in it, align columns and add spacing between them. This section contain the following settings:
 
@@ -115,11 +128,22 @@ In the **General** section of a row you can select the number of columns in it, 
 
 * **Spacing Between Columns** – when enabled, adds spacing between columns
 
-### 2.3 Column Properties {#column}
+### 3.3 Column Properties {#column}
 
-*Column* properties consist of the **General** section, where you can set the column [width](#column-width) and [align](#align-column) an individual column. 
+Column properties consist of the following sections:
 
-#### 2.3.1 Width {#column-width}
+* [Expand](#expand-section-column)
+* [General](#general-section-column)
+
+#### 3.3.1 Expand Section {#expand-section-column}
+
+The **Expand** section > **Add Column** allows you to add a column to the left or to the right of the selected one.
+
+#### 3.3.2 General Section
+
+In the **General** section, you can set the column [width](#column-width) and [align](#align-column) an individual column. 
+
+##### 3.3.2.1 Width {#column-width}
 
 You can set the column width for desktop, tablet, or phone by choosing the corresponding device mode:
 
@@ -153,7 +177,7 @@ For *phone*, it can be a good idea to place two columns one under another, setti
 
  ![Layout Example, Phone](attachments/page-editor-widgets-structure/layout-example-phone.png)
 
-#### 2.3.2 Align Vertically {#align-column}
+##### 3.3.2.2 Align Vertically {#align-column}
 
 The **Align Vertically** property overrides the [Align Columns Vertically](#align-columns) property on the row and sets alignment for an individual column. 
 

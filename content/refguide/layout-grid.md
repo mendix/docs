@@ -151,13 +151,9 @@ Column width can be used to make your layout more flexible and adaptive to diffe
 
 For example, you have a layout grid with one row and two columns: a picture is in one column, and a text with details is in another.
 
-For the *desktop*, you might want to set the first column with a picture to **Auto-fit content** and and the second one to **Auto-fill**, this way the first column will adjust to the size of the picture, while the second one will take the rest of the row:
+For the *desktop* and *tablet*, you might want to set the first column with a picture to **Auto-fit content** and and the second one to **Auto-fill**, this way the first column will adjust to the size of the picture, while the second one will take the rest of the row:
 
 ![Layout Example, Desktop](attachments/container-widgets/layout-example-desktop.png)
-
-For *tablet*, you can set both columns to **Auto-fill** and you will get two equal columns:
-
-![Layout Example, Tablet](attachments/container-widgets/layout-example-tablet.png)
 
 For *phone*, it can be a good idea to place two columns one under another, setting them to **Manual** width of *12* (for more information on the column size property, see the [Size](#column-size) section). In this case, the second column will be automatically wrapped to another line:
 

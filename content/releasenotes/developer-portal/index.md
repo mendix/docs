@@ -13,6 +13,12 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 ## 2019
 
+### December 13th, 2019 
+
+#### Improvements
+
+* We redesigned the [Stories](/developerportal/collaborate/stories#beta) page with a brand new UI and improved stability. The new UI can be accessed by clicking **Enable new UI**. This is a [beta version](/releasenotes/beta-features/).
+
 ### December 5th, 2019
 
 #### Improvements

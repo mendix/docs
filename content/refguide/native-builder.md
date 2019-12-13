@@ -25,7 +25,7 @@ The Native Builder uses MxBuild, GitHub, and App Center to build your applicatio
 Command-line arguments provide information to the Native Builder, such as where your Mendix project is located. Commands are configured using parameters, shown below. Some of these parameters are required or strongly recommended. The rest of them are optional, and should be used when they pertain to your app. To compose a command with parameters — which will start your Native Builder when executed — do the following:
 
 1. Open your command line program as an administrator by right-clicking its icon or *.exe* file and selecting **Run as administrator**.
-2.  Target your Native Builder's directory by typing `cd "{your Native Builder *.exe* location}"` and pressing <kbd>Enter</kbd>:
+2.  Target your Native Builder's directory by typing `cd "{your Native Builder .exe location}"` and pressing <kbd>Enter</kbd>:
 
 	![change directory](attachments/native-builder/change-directory.png)
 
@@ -36,13 +36,13 @@ The `Prepare` command handles the creation of the app on both GitHub and App Cen
 An example of a `prepare` command:
 
 ```
-native-builder.exe prepare --github-access-token <token> --app-center-api-token <token> --java-home <absolute-path> --mxbuild-path <absolute-path> --project-path <absolute-path-to-mpr-file> --projectName CoolApp --app-identifier "com.company.myapp" --app-name "My Cool App"
+native-builder.exe prepare --github-access-token <token> --appcenter-api-token <token> --java-home <absolute-path> --mxbuild-path <absolute-path> --project-path <absolute-path-to-mpr-file> --projectName CoolApp --app-identifier "com.company.myapp" --app-name "My Cool App"
 ```
 
 | Parameters                  | Description                                                          | Example                                             |
 | --------------------------- | -------------------------------------------------------------------- | --------------------------------------------------- |
 | `--github-access-token`     | GitHub access token.                                                 | `c0e1dasf1e102c55ded223dbdebdbe59asf95224`          |
-| `--app-center-api-token`    | App Center API token.                                                | `3e18asdfb43f4fe6c85afsd0bf60dde72f134`             |
+| `--appcenter-api-token`    | App Center API token.                                                | `3e18asdfb43f4fe6c85afsd0bf60dde72f134`             |
 | `--appcenter-organization` | App Center organization name.                             | `my-company`                                        |
 | `--project-name`            | Unique name of the project. (Required)                                         | `CoolApp`                                           |
 | `--app-name`                | Display name of the app.                                             | `My Cool App`                                       |
@@ -68,7 +68,7 @@ native-builder.exe build --projectName "CoolApp" --app-version "1.0.0" --build-n
 | Parameters                  | Description                                                                          | Example                                             |
 | --------------------------- | ------------------------------------------------------------------------------------ | --------------------------------------------------- |
 | `--github-access-token`     | GitHub access token.                                                                 | `c0e1dasf1e102c55ded223dbdebdbe59asf95224`          |
-| `--app-center-api-token`    | App Center API token.                                                                | `3e18asdfb43f4fe6c85afsd0bf60dde72f134`             |
+| `--appcenter-api-token`    | App Center API token.                                                                | `3e18asdfb43f4fe6c85afsd0bf60dde72f134`             |
 | `--appcenter-organization` | (Optional) App Center organization name.                                             | `my-company`                                        |
 | `--project-name`            | Unique name of the project used during `prepare`.                                    | `CoolApp`                                           |
 | `--app-name`                | Display name of the app.                                                             | `My Cool App`                                       |
@@ -346,7 +346,7 @@ If your native template is not the latest version, synchronize your repository w
 
 **Build {build number} for App {app number} Has Failed** — The native build on App Center has failed. Read the log file that Native Builder has downloaded. The log file is named *{AppName}-{BuildNumber}.log* and is located in the same folder as your Native Builder executable.
 
-**The build configuration is overridden with the default** — While Native Builder is checking to identify if the branch it is building has been manually configured, it may detect false positives. This could lead to your custom configuration getting overridden. If that happens, consider running the build directly using App Center and skip using the Native Builder for this branch.
+**The Build Configuration is Overridden with the Default** — While Native Builder is checking to identify if the branch it is building has been manually configured, it may detect false positives. This could lead to your custom configuration getting overridden. If that happens, consider running the build directly using App Center and skip using the Native Builder for this branch.
 
 **Unknown Error** — If you do not understand an error, you can sign in to App Center and delete the build configuration for the **master** branch. Then run Native Builder again. The tool will recreate the default build configuration for **master** and your branch.
 

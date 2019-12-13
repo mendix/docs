@@ -24,58 +24,58 @@ The on-change microflow should be set up to commit the object if a commit is req
 
 ## 3 Properties
 
-### 3.1 On Change Microfow
+### 3.1 On Change Microflow
 
-This is the microflow that is executed when a check box or radio button is cleared. This receives the left entity as an input parameter.
+This is the microflow executed when a check box or radio button is cleared. This receives the left entity as an input parameter.
 
 ### 3.2 Items per Page
 
-Amount of items that should be shown on the left for paging. You can use 0 to disable paging and show all objects.
+This is the amount of items that should be shown on the left for paging. Use **0** to disable paging and show all the objects.
 
 ### 3.3 Read-Only
 
-Sets the entire grid to a read-only view.
+This sets the entire grid to a read-only view.
 
 ### 3.4 Left Entity
 
-The entity of the objects that will be displayed on the left side of the grid.
+This is the entity of the objects that will be displayed on the left side of the grid.
 
 ### 3.5 Left Constraint
 
-The constraint to apply to these objects.
+This is the constraint to apply to these objects.
 
 ### 3.6 Left Display Attribute
 
-The attribute that is displayed for each object.
+This is the attribute displayed for each object.
 
 ### 3.7 Left Sort Attribute
 
-The attribute that the objects are sorted on.
+This is the attribute on which the objects are sorted.
 
 ### 3.8 Left Sort Order
 
-The order the objects are sorted on.
+This is the order on which the objects are sorted.
 
 ### 3.9 Width in Percentage
 
-You can set the width of the first left column here. Using 0 makes it resizes with the other columns.
+You can set the width of the first left column here. Using **0** makes it resize with the other columns.
 
 ### 3.10 Top Entity
 
-The reference or reference set that is used.
+This is the reference or reference set that is used.
 
 ### 3.11 Top Constraint
 
-The constraint to apply to these objects.
+This is the constraint to apply to these objects.
 
 ### 3.12 Top Display Attribute
 
-The attribute that is displayed for each object.
+This is the attribute displayed for each object.
 
 ### 3.13 Top Sort Attribute
 
-The attribute that the objects are sorted on.
+This is the attribute on which the objects are sorted.
 
 ### 3.14 Top Sort Order
 
-The order the objects are sorted on.
+This is the order on which the objects are sorted.

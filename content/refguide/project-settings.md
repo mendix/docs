@@ -82,7 +82,7 @@ The first day of the week setting determines the first day of the week in the da
 
 The default time zone determines the time zone for newly created users. If your application is only used in one time zone, setting this default will make sure that users of your application never have to worry about setting their time zone.
 
-### 3.8 Scheduled Event Time Zone
+### 3.8 Scheduled Event Time Zone {#scheduled}
 
 The scheduled event time zone defines under which timezone scheduled events run. The default is UTC and this has been the case since 3.0. If you would like to run scheduled events under another time zone (such as the time zone of the company office or the project default timezone), you can select it here.
 

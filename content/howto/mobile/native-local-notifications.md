@@ -111,7 +111,7 @@ Now you will set up the final logic necessary for your app to display a notifica
 11. Click **Expression wizard**
 12. Select **Value** > **Variable** > **Permission (Boolean)** from the drop-down menu. When finished, your **Decision** should look like this:
 
-	{{% image_container width="400" %}}![app settings](attachments/native-push/decision-1-config.png){{% /image_container %}}
+	{{% image_container width="400" %}}![app settings](attachments/native-push/decision-1-config-new.png){{% /image_container %}}
 
 13. Navigate back to your nanoflow.
 

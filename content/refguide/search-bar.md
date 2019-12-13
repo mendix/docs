@@ -122,7 +122,7 @@ It is possible to search on date attributes using equality. What happens with th
 | [%CurrentDateTime%]   | Search field shows the current date. Represents a 24 hour date range starting at the _current time_. |      | Search between August 4, <current time> and August 5, <current time> |
 | [%BeginOfCurrentDay%] | Search field shows the current date. Represents a 24 hour date range starting at midnight of the specified date. |      | Search between August 4, 0:00 - August 5, 0:00               |
 
-#### 3.3 Allow Multi-Select
+### 3.3 Allow Multi-Select
 
 {{% alert type="info" %}}
 
@@ -132,7 +132,7 @@ This property is available for **Drop-down** search fields.
 
 If this property is set to 'Yes', the resulting drop-down allows you to select multiple values instead of just one. When searching all records match for which the corresponding attribute is equal to one of the selected values. For example, you can search for all orders with status 'Submitted' or 'In progress'.
 
-#### 3.4 XPath Constraint
+### 3.4 XPath Constraint
 
 {{% alert type="info" %}}
 
@@ -149,7 +149,7 @@ Let us say you have a grid showing bicycles. In the domain model the bicycle has
 
 {{% /alert %}}
 
-#### 3.5 Sort Order
+### 3.5 Sort Order
 
 {{% alert type="info" %}}
 
@@ -161,7 +161,7 @@ The sort order specifies the order in which the items in the drop-down search fi
 
 Default: *No sort order*
 
-#### 3.6 Lower Bound
+### 3.6 Lower Bound
 
 {{% alert type="info" %}}
 
@@ -171,7 +171,7 @@ This property is available for **Range** search fields.
 
 This attribute (path) determines the lower bound of the range.
 
-#### 3.7 Lower Bound Operator
+### 3.7 Lower Bound Operator
 
 {{% alert type="info" %}}
 
@@ -183,7 +183,7 @@ The lower bound operator determines whether the comparison with the lower bound 
 
 Default: *Greater*
 
-#### 3.8 Upper Bound
+### 3.8 Upper Bound
 
 {{% alert type="info" %}}
 
@@ -193,7 +193,7 @@ This property is available for **Range** search fields.
 
 This attribute (path) determines the upper bound of the range.
 
-#### 3.9 Upper Bound Operator
+### 3.9 Upper Bound Operator
 
 {{% alert type="info" %}}
 

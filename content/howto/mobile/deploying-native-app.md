@@ -101,6 +101,10 @@ To address the warning, complete the following steps (you must do them for both 
 8. Select the repository you want to connect to.
 9. You will be redirected back to your App Center account. Your repository’s branches are now listed in the build page.
 
+{{% alert type="info" %}}
+If you run into errors while running the `prepare` command, try running your CLI as an administrator.
+{{% /alert %}}
+
 You have successfully prepared your app, and in the next section will make a build from it.
 
 ## 5 Making Your First Build
@@ -129,6 +133,12 @@ This command does the following:
 
 * Generates a JavaScript deployment bundle and images of the Native App from Studio pro
 * Creates a new build branch on GitHub and starts a build process on App Center
+
+If your `build` command fails citing version conflicts on Java classes, try the following:
+
+1. Clear your deployment directory.
+2. Complete a new build in Studio Pro.
+3. Run the `build` command again in the Native Builder.
 
 ### 5.1 Signing a Build {#signing-a-build}
 

@@ -24,18 +24,18 @@ There are the following Structure widgets:
 
 ## 3 Layout Grid {#layout-grid}
 
-The **Layout Grid** helps you to configure a page and make it responsive immediately. This means that a layout grid has a built-in behavior to show how a page will look like on different devices. Switch **Device** modes to see how a page will be displayed on a phone, tablet, or desktop:
+The **Layout Grid** helps you to structure a page and make it responsive immediately. This means that a layout grid has a built-in behavior to show how a page will look like on different devices. Switch **Device** modes to see how a page will be displayed on a phone, tablet, or desktop:
 
 {{% image_container width="350" %}}![Device Modes](attachments/page-editor-widgets-structure/device-modes.png)
 {{% /image_container %}}
 
 Layout grid contains [columns and rows](#columns-and-rows). 
 
-A row consists of items that are placed next to each other in a responsive (desktop) view. 
+A row consists of one or more columns that are placed next to each other in a responsive (desktop) view. 
 
 ![Row Example](attachments/page-editor-widgets-structure/row-example.png)
 
-A column is a cell inside a row. You can place one or several elements inside a column, for example, you can place two buttons inside it.
+A column is a cell inside a row. You can place one or several widgets inside a column, for example, you can place two buttons inside it.
 
 {{% image_container width="400" %}}![Column Example](attachments/page-editor-widgets-structure/column-example.png)
 {{% /image_container %}}
@@ -62,10 +62,10 @@ The **Expand** section > **Add Row** allows you to add a row above or below the 
 
 To add a new row, do the following:
 
-1. Select a row in the layout grid and 
+1. Select the layout grid in the breadcrumb. 
 2. In **Properties** > **Add Row**, click one of the buttons to insert the row above or below. 
 
-A row identical to the one you selected in step 1 will be inserted.
+An empty row identical to the one you selected in step 1 will be inserted.
 
 #### 2.1.2 General Section {#general-section}
 
@@ -137,23 +137,17 @@ You can choose the following options:
     
 	    ![](attachments/page-editor-widgets-structure/column-size.png)
 
-{{% alert type="info" %}}
-
 You can also resize columns manually in the working area: drag the column border to change its size. 
 
-{{% /alert %}}
+![Resizing Column](attachments/page-editor-widgets-structure/resizing-column.png)
 
 The **Width** property can be used to make your layout more flexible and adaptive to different types of devices.
 
 For example, you have a layout grid with one row and two columns: a picture is in one column, and a text with details is in another.
 
-For the *desktop*, you might want to set the first column with a picture to **Auto-fit content** and and the second one to **Auto-fill**, this way the first column will adjust to the size of the picture, while the second one will take the rest of the row:
+For the *desktop* and *tablet*, you might want to set the first column with a picture to **Auto-fit content** and and the second one to **Auto-fill**, this way the first column will adjust to the size of the picture, while the second one will take the rest of the row:
 
 ![Layout Example, Desktop](attachments/page-editor-widgets-structure/layout-example-desktop.png)
-
-For *tablet*, you can set both columns to **Auto-fill** and you will get two equal columns:
-
-![Layout Example, Tablet](attachments/page-editor-widgets-structure/layout-example-tablet.png)
 
 For *phone*, it can be a good idea to place two columns one under another, setting them to **Manual** width of *12*. In this case, the second column will be automatically wrapped to another line:
 

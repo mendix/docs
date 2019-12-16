@@ -54,7 +54,7 @@ native-builder.exe prepare --github-access-token <token> --appcenter-api-token <
 | `--project-path`            | Absolute path to the Mendix project file.                            | `C:\MyApp\MyApp.mpr`                                |
 | `--mxbuild-path`            | Absolute path to MxBuild executable.                                 | `C:\Program Files\Mendix\8.0.0\modeler\mxbuild.exe` |
 | `--runtime-url`             | URL of the Mendix runtime.                                           | `https://myapp.mendixcloud.com`                     |
-| `--mendix-version`          | The Mendix Studio Pro version the project is using. (Required)       | `8.5.0` or `8.5`                                    |
+| `--mendix-version`          | The Mendix Studio Pro version your Mendix project is using. (Required)       | `8.5.0` or `8.5`                                    |
 
 
 ### 2.2 Build

@@ -151,4 +151,4 @@ One (left or right) scroll container region within a layout can be set to toggle
 
 * [Page](page)
 * [Container Widgets](container-widgets)
-* [Properties Common for Widgets](common-widget-properties)
+* [Properties Common in the Page Editor](common-widget-properties)

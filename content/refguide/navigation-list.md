@@ -67,4 +67,4 @@ Microflows set as an on click event for a navigation list item have no **Executi
 
 * [Page](page)
 * [Container Widgets](container-widgets)
-* [Properties Common for Widgets](common-widget-properties)
+* [Properties Common in the Page Editor](common-widget-properties)

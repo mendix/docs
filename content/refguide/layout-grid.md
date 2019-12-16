@@ -31,7 +31,7 @@ A row has the following properties:
     {{% image_container width="300" %}}![Row Properties](attachments/container-widgets/row-properties.png)
     {{% /image_container %}}
 
-For more information on properties listed above, see [Properties Common for Widgets](common-widget-properties).
+For more information on properties listed above, see [Properties Common in the Page Editor](common-widget-properties).
 
 ### 2.2 Columns {#columns}
 
@@ -39,8 +39,8 @@ A row in a layout grid can contain one or more columns.
 
 A column has the following properties:
 
-* **Class** – allows you to specify one or more cascading style sheet (CSS) classes (for more information on this property, see [Properties Common for Widgets](common-widget-properties))
-* **Style** – allows you to specify additional CSS styling (for more information on this property, see [Properties Common for Widgets](common-widget-properties))
+* **Class** – allows you to specify one or more cascading style sheet (CSS) classes (for more information on this property, see [Properties Common in the Page Editor](common-widget-properties))
+* **Style** – allows you to specify additional CSS styling (for more information on this property, see [Properties Common in the Page Editor](common-widget-properties))
 * **Weight** – determines how wide the column is, weight of all columns in a row must add up to 12. Examples of rows with valid column width are the following ones:
   * One column with weight 12
   * Two columns with weight 6 each
@@ -141,4 +141,4 @@ As the layout grid responds to the viewport width, and not to the width of its c
 
 * [Page](page)
 * [Container Widgets](container-widgets)
-* [Properties Common for Widgets](common-widget-properties)
+* [Properties Common in the Page Editor](common-widget-properties)

@@ -123,4 +123,4 @@ To perform actions on a data view, select it on a page and right-click it. The l
 * [Page](page)
 * [Data Widgets](data-widgets)
 * [Data Sources](data-sources)
-* [Properties Common for Widgets](common-widget-properties)
+* [Properties Common in the Page Editor](common-widget-properties)

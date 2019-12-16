@@ -189,9 +189,9 @@ native-builder.exe release list --project-name "CoolApp"
 | `--platform`          | (Optional) Platform with which to run command for. Defaults to both iOS and Android. | `ios` or `android` |
 | `--deployment-target` | (Optional) OTA target group. Defaults to `Production`                                | `Staging`          |
 
-### 2.8 Generating only the app bundles
+### 2.8 Generating Only the App Bundles
 
-The `bundle` command can be used to only run the MXBuild step and skip the Appcenter build. This command's output are zip archives with the javascript bundle and the resources for each platform.
+When used, the `bundle` command will only run the MXBuild step (skipping the App Center build step). This command outputs *ZIP* archives with the corresponding JavaScript bundle and resources for each platform.
 
 Here is an example of a command featuring `bundle`:
 
@@ -259,9 +259,9 @@ For over-the-air updates, each build is associated with a particular release gro
 
 The highest integer Android will allow is 2,147,483,647. Consider starting with 1 and incrementing by one with each release. Alternatively, you can use dates in the “YYmmddHHmm” format, such as {2007310950} for a build run on July 31, 2020 at 09:50.
 
-### 3.13 --verbose
+### 3.13 --verbose {#verbose}
 
-If used, in case of an error Native Builder will output a complete stack trace of the error. This is usefull for cases where Native Builder might fail with an unknown error.
+This parameter provides additional details when the Native Builder incurs errors. When `--verbose` is used and the Native Builder errors, the Native Builder will output a complete stack trace of the error. This is useful for cases where the Native Builder fails with an unknown error.
 
 ## 4 Advanced Usage
 
@@ -362,8 +362,7 @@ If your native template is not the latest version, synchronize your repository w
 
 ### 6.3 Unknown Errors
 
-If for any reason Native Builder fails to complete a run and no error is provided, consider using the global `--verbose` argument, to get a full stack trace of the error.
-When communicating an issue with support it is always handy to supply these extra logs, together with build logs, it they exist, for further analysis.
+If the Native Builder fails to complete a run and no error is provided, consider using the [--verbose](#verbose) parameter to get a full stack trace of the error. When communicating an issue with support it is always handy to supply these extra logs, together with build logs, to achieve timely solutions.
 
 ## 7 Read More
 

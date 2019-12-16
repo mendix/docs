@@ -36,13 +36,13 @@ Select from which revision of the main line or a branch line you want to create 
 
 ## 4 Branch Line 
 
-This settings is only available when you select [Branch line](#branch-line) in **Create branch from**. 
+This setting is only available when you select [Branch line](#branch-line) in **Create branch from**. 
 
 Select from which branch line you want to create another branch line. We recommend that you make branch lines only from the main line but in some cases branching a branch line can be useful.
 
 ## 5 Tagged Version
 
-This settings is only available when you select [Tagged version](#tagged-version) in **Create branch from**.  
+This setting is only available when you select [Tagged version](#tagged-version) in **Create branch from**.  
 
 Select from which tagged version you want to create a branch line. Every time you create a deployment archive a tag is created so that you can always refer back to that version of the project.
 
@@ -50,7 +50,7 @@ Select from which tagged version you want to create a branch line. Every time yo
 
 Enter a name of the new branch line. 
 
-## 7 Existing Branch Line
+## 7 Existing Branch Lines
 
 Since branch line names must be unique, this option shows the existing branch lines, so that you do not accidentally create a branch line with the same name.
 

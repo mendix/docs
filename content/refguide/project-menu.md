@@ -8,7 +8,7 @@ tags: ["Studio Pro", "project menu", "top bar"]
 
 ## 1 Introduction
 
-In the **Project** menu you can view and/or manipulate settings that are connected to the your project and deployment. For example, you create a deployment package.
+In the **Project** menu you can view and/or manipulate settings that are connected to your project and deployment. For example, you can create a deployment package.
 
 {{% image_container width="300" %}}![Project Menu](attachments/project-menu/project-menu.png)
 {{% /image_container %}}

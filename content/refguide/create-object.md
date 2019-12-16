@@ -58,6 +58,6 @@ You can initialize members (attributes and associations) of the newly created ob
 
 ## 3 Output Properties
 
-### 3.1 Name
+### 3.1 Object Name
 
 This is the name of the resulting object which can be used by all activities that follow this activity.

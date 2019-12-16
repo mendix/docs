@@ -38,6 +38,10 @@ For each parameter of the microflow, you have to supply an argument of the same 
 
 The data type of the result of the called microflow. The return type is defined by the called microflow.
 
-### 3.2 Variable, Object, or List
+### 3.2 Use Return Value
+
+If **User return value** is set to *Yes* you will be asked to give the return value a name.
+
+### 3.3 Variable Name, Object Name, or List Name
 
 The name of the result of the called microflow.

@@ -30,7 +30,7 @@ For more information on how to manage branch lines, see the [Managing Developmen
 
 ## 3 Revision 
 
-This settings is only available when you select the [Main line](#main-line) or [Branch line](#branch-line) in **Create branch from**. 
+This setting is only available when you select the [Main line](#main-line) or [Branch line](#branch-line) in **Create branch from**. 
 
 Select from which revision of the main line or a branch line you want to create a branch line. Often, you would want to choose the most recent version.
 

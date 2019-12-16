@@ -14,41 +14,41 @@ These are the release notes for the [Mendix Metamodel](/apidocs-mxsdk/mxsdk/unde
 
 ### StringTemplateParameterType (Element)
 
-- Removed experimental
+* Removed experimental.
 
 ## Microflows
 
 ### StringTemplateParameterValue (Element)
 
-- Removed experimental
+* Removed experimental.
 
 ### WebServiceCallAction (Element)
 
 #### Property 'useRequestTimeOut'
 
-- Default value changed
+* Default value changed.
 
 #### Property 'timeOutModel'
 
-- Default value changed
+* Default value changed.
 
 #### Property 'timeOutExpression'
 
-- Default value changed
+* Default value changed.
 
 ### RestCallAction (Element)
 
 #### Property 'useRequestTimeOut'
 
-- Default value changed
+* Default value changed.
 
 #### Property 'timeOutModel'
 
-- Default value changed
+* Default value changed.
 
 #### Property 'timeOutExpression'
 
-- Default value changed
+* Default value changed.
 
 ## Projects
 
@@ -56,7 +56,7 @@ These are the release notes for the [Mendix Metamodel](/apidocs-mxsdk/mxsdk/unde
 
 #### Property 'isReusableComponent'
 
-- Introduced;
+* Introduced.
 
 ## Rest
 
@@ -64,11 +64,11 @@ These are the release notes for the [Mendix Metamodel](/apidocs-mxsdk/mxsdk/unde
 
 #### Property 'timeoutModel'
 
-- Introduced; "A timeout for http requests"
+* Introduced – a timeout for http requests.
 
 #### Property 'timeoutExpression'
 
-- Introduced; "A timeout for http requests"
+* Introduced – a timeout for http requests.
 
 ## WebServices
 
@@ -76,41 +76,41 @@ These are the release notes for the [Mendix Metamodel](/apidocs-mxsdk/mxsdk/unde
 
 #### Property 'summary'
 
-- Introduced; "A short summary of the association that is being exposed"
+* Introduced – a short summary of the association that is being exposed.
 
 #### Property 'description'
 
-- Introduced; "A long description of the association that is being exposed"
+* Introduced – a long description of the association that is being exposed.
 
 ### DataAttribute (Element)
 
 #### Property 'summary'
 
-- Introduced; "A short summary of the attribute that is being exposed"
+* Introduced – a short summary of the attribute that is being exposed.
 
 #### Property 'description'
 
-- Introduced; "A long description of the attribute that is being exposed"
+* Introduced – a long description of the attribute that is being exposed.
 
 ### SystemIdDataAttribute (Element)
 
 #### Property 'summary'
 
-- Introduced; "A short summary of the system id that is being exposed"
+* Introduced – a short summary of the system id that is being exposed.
 
 #### Property 'description'
 
-- Introduced; "A long description of the system id that is being exposed"
+* Introduced – a long description of the system id that is being exposed.
 
 ## CustomWidgets
 
 ### CustomWidgetDatabaseSource (Element)
 
-- Introduced;
+* Introduced.
 
 ### CustomWidgetXPathSource (Element)
 
-- Introduced;
+* Introduced.
 
 ## Pages
 
@@ -118,12 +118,12 @@ These are the release notes for the [Mendix Metamodel](/apidocs-mxsdk/mxsdk/unde
 
 #### Property 'layoutType'
 
-- Introduced;
+* Introduced.
 
 #### Property 'sidebar'
 
-- Introduced;
+* Introduced.
 
 #### Property 'sidebarWidgets'
 
-- Introduced;
+* Introduced.

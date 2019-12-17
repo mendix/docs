@@ -222,18 +222,21 @@ In order to send a particular object to a page, first an object's GUID must be d
 
     ![ContainerVisibility](attachments/native-remote-push/modeler/ContainerVisibility.png)
 
-3. Create a nanoflow called *ACT_ShowNotificationOnRecieve* which will be responsible for switching `NativeNotification/showNotification` attribute:<br />
-![ACT_ShowNotificationOnRecieve](attachments/native-remote-push/modeler/ACT_ShowNotificationOnRecieve.png)
-    a. NativeNotification as a parameter.<br />
-    b. Change the `NativeNotification/showNotification` to `true`, without committing.<br />
-    c. Javascript action `Wait` for `5000` ms.<br />
-    d. Change the `NativeNotification/showNotification` to `false`, without committing.
+3. Create a nanoflow called *ACT_ShowNotificationOnRecieve* which will be responsible for toggling the **NativeNotification/showNotification** attribute:<br />
+    a. Set **NativeNotification** as a parameter.<br />
+    b. Change **NativeNotification/showNotification** to **true** without committing.<br />
+    c. Drag and drop a **Wait** JavaScript action, and set it for *5000* ms.<br />
+    d. Change the **NativeNotification/showNotification** to **false** without committing.
+    
+	![ACT_ShowNotificationOnRecieve](attachments/native-remote-push/modeler/ACT_ShowNotificationOnRecieve.png)
 
-4. Home_Native/ Notification widget => Change action named `sendProduct`, on recieve triggers `ACT_ShowNotificationOnRecieve`
+4. Navigate to your **Home_Native** page and do the following:<br />
+	a. Double-click your notification widget<br />
+	b. Change **sendProduct** so that on recieve it triggers **ACT_ShowNotificationOnRecieve**.
 
-    ![sendProductOnRecieve](attachments/native-remote-push/modeler/sendProductOnRecieve.png)
+	![sendProductOnRecieve](attachments/native-remote-push/modeler/sendProductOnRecieve.png)
 
-Follow steps for the previous sections in [here](###testing-the-implementation) but this time put the app in the foreground. You will see the the text with a button for a five seconds.
+Now repeat the steps in [Testing the Implementation](#testing-the-implementation), but this time put your app in the foreground. You will see a notification with your text and a button for five seconds.
 
 ![onRecieveShowDV](attachments/native-remote-push/modeler/onRecieveShowDV.png)
 
@@ -243,7 +246,7 @@ What if you want to send messages to all your users' devices with a single butto
 
 ### 5.1 Creating a Microflow to Send a Data Object Push Notification 
 
-Create a microflow *ACT_SendProductToAllDevices* with the following elements [todo check where pics should go]:
+Create a microflow *ACT_SendProductToAllDevices* with the following elements:
 
 ![SendProductToAll](attachments/native-remote-push/modeler/SendProductToAll.png)
 

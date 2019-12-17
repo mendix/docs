@@ -104,7 +104,7 @@ Deploy your project and open your administration page in a web browser. Do the f
 
 Next you will test the implementation of your configurations.
 
-### 3.5 Sending a Push Notification
+### 3.5 Sending a Push Notification to a Single Device
 
 1. Reload the app on your phone.
 2. Put the app in the background by returning to your phone's home screen.
@@ -152,7 +152,7 @@ In this section you will learn the following:
 
 	![NativeProductOverview](attachments/native-remote-push/modeler/NativeProductOverview.png)
 
-#### 4.1.2 Synchronizing Unused Entities [todo clarify title and section]
+#### 4.1.2 Synchronizing Unused Entities
 
 Studio Pro does smart data syncing, meaning if an entity has not been retrieved in native side, it will not be there. This situation will not occur since most Mendix native apps do retrieve entities which you want to show. For more information, see the [Sychronization](refguide/offline-first#sychronization) section of the *Offline First Reference Guide*.
 
@@ -210,19 +210,19 @@ In order to send a particular object to a page, first an object's GUID must be d
 
 ## 4.2 Push Notifications for an App in the Foreground
 
-1.  Add one more `boolean` field named `showNotification` to the `NativePush`:
+1.  Add one more **boolean** field named *showNotification* to the **NativeNotification** entity:
 
     ![showNotification](attachments/native-remote-push/modeler/showNotification.png)
 
-2. In your `Home_Native` page inside of the NativeNotification Dataview:<br />
-    a. add a Container.<br />
-    b. Sets its visibility to `NativeNotification/showNotification`.<br />
-    c. Add a text field saying `You have recieved a product`.<br />
-    d. Drag and drop `ACT_GetProductAndShowPage` nanoflow next to it.
+2. In your **Home_Native** page inside of the **NativeNotification** data view, do the following:<br />
+    a. Add a container.<br />
+    b. Sets its visibility to **NativeNotification/showNotification**.<br />
+    c. Add a text field saying *You have recieved a product*.<br />
+    d. Drag and drop your **ACT_GetProductAndShowPage** nanoflow next to it.
 
     ![ContainerVisibility](attachments/native-remote-push/modeler/ContainerVisibility.png)
 
-3. Create a nanoflow called `ACT_ShowNotificationOnRecieve` which will be responsible for switching `NativeNotification/showNotification` attribute:<br />
+3. Create a nanoflow called *ACT_ShowNotificationOnRecieve* which will be responsible for switching `NativeNotification/showNotification` attribute:<br />
 ![ACT_ShowNotificationOnRecieve](attachments/native-remote-push/modeler/ACT_ShowNotificationOnRecieve.png)
     a. NativeNotification as a parameter.<br />
     b. Change the `NativeNotification/showNotification` to `true`, without committing.<br />
@@ -237,9 +237,9 @@ Follow steps for the previous sections in [here](###testing-the-implementation) 
 
 ![onRecieveShowDV](attachments/native-remote-push/modeler/onRecieveShowDV.png)
 
-## 5 Sending Notifications Programmatically [todo: check info below, second sentence long]
+## 5 Sending Notifications to Multiple Devices
 
-What if you want to send messages to all your users' devices, but you do not want to handle the GUID retrieval? The section below will illustrate this. Specifically, you will send a push notification containing a data object to your users' devices via the Push Notifications API.
+What if you want to send messages to all your users' devices with a single button push, but you do not want to handle the GUID retrieval? The section below will illustrate this. Specifically, you will send a push notification containing a data object to your users' devices via the Push Notifications API.
 
 ### 5.1 Creating a Microflow to Send a Data Object Push Notification 
 
@@ -247,63 +247,65 @@ Create a microflow *ACT_SendProductToAllDevices* with the following elements [to
 
 ![SendProductToAll](attachments/native-remote-push/modeler/SendProductToAll.png)
 
-1. Product as a parameter
-2. Retrieve list of devices from database: `PushNotifications.Device`:
+1. Add a *Product* data parameter to your microflow.
+2. Retrieve the *PushNotifications.Device* entity list from a database:
 
     ![retrieveDevices](attachments/native-remote-push/modeler/retrieveDevices.png)
     
-3. PrepareMessageData Microflow from `PushNotifications/_USE ME/API`:<br />
-	a. title: myTitle.<br />
-	b. body: myBody.<br />
-	c. time to live: 0.<br />
-	d. badge: 0.<br />
-	e. actionName `sendProduct`.<br />
-	f. ContextObjectGuid to `empty`:
+3. Drag and drop the **PrepareMessageData** microflow from *PushNotifications/_USE ME/API* onto **ACT_SendProductToAllDevices** and configure the following:<br />
+	a. Title: *myTitle*.<br />
+	b. Body: *myBody*.<br />
+	c. TimeToLive: *0*.<br />
+	d. Badge: *0*.<br />
+	e. ActionName: *sendProduct*.<br />
+	f. ContextObjectGuid: *empty*:
 	
 	![prepareMessageData](attachments/native-remote-push/modeler/prepareMessageData.png)
 
 	**ContextObjectGuid** is set to empty since you will pass the object itself to the **SendMessageToDevices** Java action where it will be retrieved automatically. 
 
-4. SendMessageToDevices Java Action in `PushNotifications/_USE ME/API`:<br />
-	a. Message data param: $MessageToBeSent.<br />
-	b. Device param: $Devices.<br />
-	c. Context object: $Product:
+4. Drag and drop the **SendMessageToDevices** Java action from `PushNotifications/_USE ME/API` onto **ACT_SendProductToAllDevices** and configure the following:<br />
+	a. Message data param: **$MessageToBeSent**.<br />
+	b. Device param: **$Devices**.<br />
+	c. Context object: **$Product**:
 	
 	![sendMessagesJava](attachments/native-remote-push/modeler/sendMessagesJava.png)
   
-5. Go to `Product_NewEdit`, drag and drop the `ACT_SendProductToAllDevices` inside of dataview so that we can trigger this microflow
+5. Go to **Product_NewEdit**, drag and drop **ACT_SendProductToAllDevices** inside of that page's data view:
 
 	![sendProductToAllButton](attachments/native-remote-push/modeler/sendProductToAllButton.png)
 
-### 5.2 Testing the Implementation [todo is this title used elsewhere?]
+### 5.2 Testing the Implementation
 
-Now run the app by doing the following:
+Test your new push notificaiton capabilities by doing the following:
 
-1, Put the Native app in the background
-2. In web go to a particular product and press `ACT_SendProductToAllDevices` microflow button. 
+1. Run your native app in the background.
+2. In your web browser, go to **Product_NewEdit** and click your **ACT_SendProductToAllDevices** microflow button. 
 
-This will send notification to all available devices and when the user taps the notification it will be redirected to the particular product page that we modeled.
+This will send a notification to all available devices and when you tap the notification you will be redirected to the particular product page you modeled.
 
 ### 5.3 More Java Action Explanations
 
-All JAVA actions which is available in Push notifications module with small explanations:
+For more detail on Java actions available in the Push notifications module, see the subsections below.
 
 #### 5.3.1 PrepareMessageData Microflow
 
-This allows users to create their own user interface in order to alter and create a push notification message. 
+This allows users to create their own user interfaces in order to alter and create a push notification message. 
 
-#### 5.3.2 SendMessageToDevice & SendMessageToDevices Java Action
+#### 5.3.2 SendMessageToDevice and SendMessageToDevices Java Actions
 
-We covered this Java action in this documentation. Params:
-- `MessageDataParam` (PushNotifications.MessageData): This param can be generated by the PrepareMessageData microflow.
-- `DeviceParam` (List of PushNotifications.Device): Can be used to send same message for a list of devices.
-- `ContextObject`: Any mendix object which will be passed to the notification as GUID string.
+These Java actions have the following parameters:
 
-#### 5.3.3 SendMessageToUsers & SendMessageToUser Java Action
+* **MessageDataParam** (PushNotifications.MessageData): This parameter can be generated by the **PrepareMessageData** microflow
+* **DeviceParam** (List of PushNotifications.Device or PushNotification.Device): This parameter can be used to send the same message to a list of devices
+* **ContextObject**: This parameter will allow any Mendix object to be passed to the notification
 
-Every user is allowed to have more than one device. In case of sending push notifications to every device of a particular user `SendMessageToUser` can be used.
+#### 5.3.3 SendMessageToUsers and SendMessageToUser Java Actions
 
-In case of sending a push notification to all users `SendMessageToUsers` can be used.
+Every user is allowed to have more than one device. When sending push notifications to every device of a particular user, use  the **SendMessageToUser** Java action.
+
+To send a push notification to all users, use the **SendMessageToUsers** Java action.
 
 ## 6 Read More
 
+todo add links (firebase, local notifs)

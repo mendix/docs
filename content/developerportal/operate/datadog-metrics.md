@@ -14,7 +14,7 @@ tags: ["Datadog", "Mendix Cloud", "v4", "monitoring", "analysis"]
 Datadog logging is supported in Mendix version 7.15 and above.
 {{% /alert %}}
 
-This document explains how to configure your Mendix Cloud v4 app to send data to Datadog.
+This document explains how to configure your Mendix Cloud v4 app to send data to Datadog. If you want to know more about the capabilities of Datadog and, in particular, using Datadog with Mendix, have a look at the Mendix blog [Monitor Your Mendix Apps with Datadog](https://www.mendix.com/blog/monitor-your-mendix-apps-with-datadog/).
 
 {{% alert type="warning" %}}
 Datadog is not supported in Mendix Cloud v3, nor in default deployment buildpacks for other cloud platforms.
@@ -194,9 +194,31 @@ You pass the configuration to the metrics agent by adding a *Custom Runtime Sett
 4. Click **Save**.
 5. Restart your app to apply the new settings.
 
-## 5 Additional Information
+## 5 Tagging Metrics for Datadog
 
-### 5.1 Log Levels
+To identify the metrics for your app and environment in Datadog, it is recommended that you add tags for the app name and environment. Our recommendation is that you use the following tags:
+
+* app:{app_name} – this enables you to identify all metrics sent from your app (for example, **app:customermanagement**)
+* env:{environment_name} – this enables you to identify metrics sent from a particular environment so you can separate out production metrics from test metrics (for example, **env:accp**)
+
+To set these tags, do the following:
+
+1. Go to the **Environments** page of your app in the *Developer Portal*.
+2. Click **Details** to select an environment you are monitoring with Datadog. 
+3. Open the **Tags** tab.
+4. Add a **Tag** – this is the string which is sent to Datadog as a tag.
+  ![Example metric showing tags in Datadog](attachments/datadog-metrics/set-tags.png)
+5. **Restart** the application.
+
+Setting these values for your app means that all metrics from this environment of your app will have these tags. For example, the tags for mx.microflow.time.avg for this set of metrics include **app:customermanagement** and **env:accp**.
+
+![Example metric showing tags in Datadog](attachments/datadog-metrics/datadog-summary-tags.png)
+
+You can add more tags if you want, but note that Datadog's charges include an element for [custom metrics](https://docs.datadoghq.com/developers/metrics/custom_metrics/) as described on the Datadog site.
+
+## 6 Additional Information
+
+### 6.1 Log Levels
 
 The valid values for **DD_LOG_LEVEL** are:
 
@@ -206,16 +228,16 @@ The valid values for **DD_LOG_LEVEL** are:
 * INFO
 * DEBUG
 
-### 5.2 Datadog Events Log
+### 6.2 Datadog Events Log
 
 The Datadog Events log contains events which come from your app: those are the same events that would appear in the Mendix Console. It does not contain events from the environment.
 
 ![Example events log](attachments/datadog-metrics/datadog-event-log.png)
 
-### 5.3 Datadog Issues
+### 6.3 Datadog Issues
 
 If you have any issues related to accessing Datadog, please contact their support here: [Support | Datadog](https://www.datadoghq.com/support/), or by email at [support@datadoghq.com](mailto:support@datadoghq.com).
 
-## 6 Read More
+## 7 Read More
 
 * [Metrics](metrics)

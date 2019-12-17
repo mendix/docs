@@ -13,18 +13,18 @@ These are the release notes for the [Mendix Metamodel](/apidocs-mxsdk/mxsdk/unde
 
 ### Constant (ModelUnit)
 
-* Introduced the `exposedToClient` property.
+* We introduced the `exposedToClient` property.
 
 ## DomainModels
 
 ### Entity (Element)
 
-* Made the `isRemote` property public.
-* Introduced the `remoteSourceDocument` (experimental) property, which indicates the source document of the remote entity.
+* We made the `isRemote` property public.
+* We introduced the `remoteSourceDocument` (experimental) property, which indicates the source document of the remote entity.
 
 ### NoGeneralization (Element)
 
-The following properties were made public:
+We made the following properties public:
 
 * `hasChangedDate`
 * `hasCreatedDate`
@@ -33,16 +33,16 @@ The following properties were made public:
 
 ### RemoteEntitySourceDocument (ModelUnit)
 
-* Introduced this experimental property, which indicates a source document of a remote entity.
+* We introduced this experimental property, which indicates a source document of a remote entity.
 
 ## CustomWidgets
 
 ### WidgetValue (Element)
 
-* Introduced the `widgets` property.
+* we introduced the `widgets` property.
 
 ## Pages
 
 ### NativeLayoutContent (Element)
 
-* Introduced the `showBottomBar` property.
+* We introduced the `showBottomBar` property.

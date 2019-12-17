@@ -14,124 +14,71 @@ These are the release notes for the [Mendix Metamodel](/apidocs-mxsdk/mxsdk/unde
 
 #### CodeAction (ModelUnit)
 
-##### Property 'actionReturnType'
-
-* Changed the default value.
+* We changed the default value of the `actionReturnType` property.
 
 #### VoidType (Element)
 
-* Introduced.
+* We introduced this element.
 
 ### DomainModels
 
 #### AssociationBase (Element)
 
-##### Property 'remoteSourceDocument'
-
-* Introduced.
+* We introduced the `remoteSourceDocument` property.
 
 ### Microflows
 
 #### JavaActionCallAction (Element)
 
-##### Property 'outputVariableNameRuntime'
-
-* Introduced.
+* We introduced the `outputVariableNameRuntime` property.
 
 #### MicroflowCallAction (Element)
 
-##### Property 'outputVariableNameRuntime'
-
-* Introduced.
+* We introduced the `outputVariableNameRuntime` property.
 
 ### Rest
 
-#### PublishedODataService (ModelUnit)
+#### PublishedODataService (ModelUnit) & PublishedRestService (ModelUnit)
 
-##### Property 'authenticationTypesRuntime'
-
-* Introduced for **Authentication types supported by this service**.
-
-#### PublishedRestService (ModelUnit)
-
-##### Property 'authenticationTypesRuntime'
-
-* Introduced for **Authentication types supported by this service**.
+* We introduced the `authenticationTypesRuntime` property for **Authentication types supported by this service**.
 
 #### RestOperationParameter (Element)
 
-##### Property 'description'
-
-* Introduced for **A description of the parameter, to be used in documentation**.
+* We Introduced the `description` property for **A description of the parameter, to be used in documentation**.
 
 ### CustomWidgets
 
 #### CustomWidgetType (Element)
 
-##### Property 'helpUrl'
-
-* Introduced.
+* We introduced the `helpUrl` property.
 
 #### WidgetValue (Element)
 
-##### Property 'dataSource'
-
-* Introduced.
+* We introduced the `dataSource` property.
 
 ### Pages
 
 #### BuildingBlock (ModelUnit)
 
-##### Property 'platform'
-
-* Introduced.
+* We introduced the `platform` property.
 
 #### DivContainer (Element)
 
-##### Property 'onClickAction'
-
-* Introduced.
+* We introduced the `onClickAction` property.
 
 #### ClientTemplate (Element)
 
-##### Property 'fallback'
-
-* Introduced.
+* We introduced the `fallback` property.
 
 #### LayoutGrid (Element)
 
-##### Property 'rows'
-
-* Changed the default value.
+* We changed the default value of the `rows` property.
 
 #### LayoutGridColumn (Element)
 
-##### Property 'tabletWeight'
-
-* Introduced.
-
-##### Property 'phoneWeight'
-
-* Introduced.
-
-##### Property 'verticalAlignment'
-
-* Introduced.
+* We introduced the `tabletWeight`, `phoneWeight`, and `verticalAlignment` properties.
 
 #### LayoutGridRow (Element)
 
-##### Property 'columns'
-
-* Changed the default value.
-
-##### Property 'verticalAlignment'
-
-* Introduced.
-
-##### Property 'horizontalAlignment'
-
-* Introduced.
-
-##### Property 'spacingBetweenColumns'
-
-* Introduced.
+* We changed the default value of the `columns` property.
+* We introduced the `verticalAlignment`, `horizontalAlignment`, and `spacingBetweenColumns` properties.

@@ -175,11 +175,10 @@ Remote notifications will not work with an iOS simulator [todo: emulator?]
 
 {{% /alert %}}
 
-To change the capabilities of your app, open *app/ios/yourProjectName.xcworkspace* in Xcode:
+To change your app's capabilities, open *app/ios/yourProjectName.xcworkspace* in Xcode:
 
-1. Add *GoogleService-Info.plist* to your *NativeTemplate* folder (it should be at the same level as *Info.plist*).
-
-2. Change */ios/AppDelegate.swift* (here you add your local IP to test against a local Mendix instance):
+1. Add *GoogleService-Info.plist* to your *NativeTemplate* folder on the same level as *Info.plist*.
+2. Change */ios/AppDelegate.swift* so that you add your local IP to test against a local Mendix instance:
 
 ```diff
  import Foundation

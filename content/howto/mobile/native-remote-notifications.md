@@ -208,7 +208,7 @@ In order to send a particular object to a page, first an object's GUID must be d
 
 3. With your app running in the background, send a notification and tap it. This will navigate to the **NativeProductOverview** page with the proper object.
 
-## 4.2 Now lets cover when the app is in the foreground [todo: fix title]
+## 4.2 Push Notifications for an App in the Foreground
 
 1.  Add one more `boolean` field named `showNotification` to the `NativePush`:
 
@@ -233,15 +233,15 @@ In order to send a particular object to a page, first an object's GUID must be d
 
     ![sendProductOnRecieve](attachments/native-remote-push/modeler/sendProductOnRecieve.png)
 
-Follow steps for the previous sections in [here](###testing-the-implementation) but this time put the app in the foreground. You will see the the text with a button for 5 seconds.
+Follow steps for the previous sections in [here](###testing-the-implementation) but this time put the app in the foreground. You will see the the text with a button for a five seconds.
 
 ![onRecieveShowDV](attachments/native-remote-push/modeler/onRecieveShowDV.png)
 
-## 5 Sending notifications programetcally via Push Notifications API [todo fix title and number, also clarify what the advantage of this approach is]
+## 5 Sending Notifications Programmatically [todo: check info below, second sentence long]
 
-What if you want to send messages to all your users' devices, but you do nott want to handle the GUID retrieval? The section below will illustrate this example. Specifically, you will send a [todo check rest of this sentence] product from web to all devices with a single button click.
+What if you want to send messages to all your users' devices, but you do not want to handle the GUID retrieval? The section below will illustrate this. Specifically, you will send a push notification containing a data object to your users' devices via the Push Notifications API.
 
-### 5.1 Creating a microflow which will send particular product to all devices [todo fix title and number]
+### 5.1 Creating a Microflow to Send a Data Object Push Notification 
 
 Create a microflow *ACT_SendProductToAllDevices* with the following elements [todo check where pics should go]:
 

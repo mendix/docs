@@ -18,6 +18,8 @@ parent: "search-bar"
 
 {{% snippet file="refguide6/Search+Field+Comparison+Property.md" %}}
 
+The number of drop-down selection options is capped at 1,000. Therefore, no more than 1,000 unique values of a selected attribute can be selectable. This limit has been set to protect page loading performance on older browsers when these options need to be retrieved from the server.
+
 ### Allow multi-select
 
 If this property is set to 'Yes', the resulting drop-down allows you to select multiple values instead of just one. When searching all records match for which the corresponding attribute is equal to one of the selected values. For example, you can search for all orders with status 'Submitted' or 'In progress'.

@@ -1,6 +1,6 @@
 ---
 title: "Preferences"
-parent: "dialogs"
+parent: "edit-menu"
 tags: ["studio pro"]
 ---
 

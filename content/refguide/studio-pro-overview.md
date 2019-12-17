@@ -42,23 +42,7 @@ The documents you view and edit are shown in tabs. You can have a number of tabs
 
 ## 4 Edit Menu
 
-| Menu Item | Description | Shortcut Key |
-| --- | --- | --- |
-| **Undo** | Undoes the last action in a document tab. Undo and redo actions are unlimited. | <kbd>Ctrl</kbd> + <kbd>Z</kbd> |
-| **Redo** | Redoes the last action that was undone in a document tab. | <kbd>Ctrl</kbd> + <kbd>Y</kbd> |
-| **Cut** | Copies the selected element to the clipboard and delete it. | <kbd>Ctrl</kbd> + <kbd>X</kbd> |
-| **Copy** | Copies the selected element to the clipboard. | <kbd>Ctrl</kbd> + <kbd>C</kbd> |
-| **Paste** | Pastes the contents of the clipboard in the current editor. | <kbd>Ctrl</kbd> + <kbd>V</kbd> |
-| **Delete** | Deletes the selected element. | <kbd>Delete</kbd> |
-| **Find** | Searches the model for text. The following texts are searched: all texts that appear in the end-user interface (for example captions of labels or buttons); names and documentation of documents; entity, association, and attribute names and documentation; access rule documentation; page widget names; captions and documentation of microflow objects; and names of items in microflows. | <kbd>Ctrl</kbd> + <kbd>F</kbd> |
-| **Find Advanced** | Opens a dialog box that allows for advanced search operations. Examples are searching for any document type and searching for unused documents. | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd> |
-| **Find Usages** | Opens the **Find Results** pane and displays usages of the selected object. | <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>F</kbd> |
-| **Next Find Result** | Highlights the next find result in the **Find Results** pane and open it in an editor. | <kbd>F3</kbd> |
-| **Previous Find Result** | Highlights the previous find result in the **Find Results** pane and open it in an editor. | <kbd>Shift</kbd> + <kbd>F3</kbd> |
-| **Go to** | Quickly navigates to any document or domain model element in the project by typing a few letters and pressing <kbd>Enter</kbd>. | <kbd>Ctrl</kbd> + <kbd>G</kbd> |
-| **Next Error** | Highlights the next error in the **Error List** pane and open it in an editor. | <kbd>F8</kbd> |
-| **Previous Error** | Highlights the previous error result in the **Error List** pane and open it in an editor. | <kbd>Shift</kbd> + <kbd>F8</kbd> |
-| **Preferences** | Opens the **Preferences** dialog box, where you can set your general, model, and advanced editing preferences. |  |
+The **Edit** menu allows you to perform various actions, such as cut/copy/paste. You can also set preferences for yourself via this menu. For more information on the **Edit** menu, see  [Edit Menu](edit-menu).
 
 ## 5 View Menu {#view}
 

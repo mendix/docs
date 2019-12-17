@@ -10,128 +10,128 @@ These are the release notes for the [Mendix Metamodel](/apidocs-mxsdk/mxsdk/unde
 
 **Release date: October 25th, 2019**
 
-## CodeActions
+### CodeActions
 
-### CodeAction (ModelUnit)
+#### CodeAction (ModelUnit)
 
-#### Property 'actionReturnType'
+##### Property 'actionReturnType'
 
 * Changed the default value.
 
-### VoidType (Element)
+#### VoidType (Element)
 
 * Introduced.
 
-## DomainModels
+### DomainModels
 
-### AssociationBase (Element)
+#### AssociationBase (Element)
 
-#### Property 'remoteSourceDocument'
-
-* Introduced.
-
-## Microflows
-
-### JavaActionCallAction (Element)
-
-#### Property 'outputVariableNameRuntime'
+##### Property 'remoteSourceDocument'
 
 * Introduced.
 
-### MicroflowCallAction (Element)
+### Microflows
 
-#### Property 'outputVariableNameRuntime'
+#### JavaActionCallAction (Element)
+
+##### Property 'outputVariableNameRuntime'
 
 * Introduced.
 
-## Rest
+#### MicroflowCallAction (Element)
 
-### PublishedODataService (ModelUnit)
+##### Property 'outputVariableNameRuntime'
 
-#### Property 'authenticationTypesRuntime'
+* Introduced.
+
+### Rest
+
+#### PublishedODataService (ModelUnit)
+
+##### Property 'authenticationTypesRuntime'
 
 * Introduced for **Authentication types supported by this service**.
 
-### PublishedRestService (ModelUnit)
+#### PublishedRestService (ModelUnit)
 
-#### Property 'authenticationTypesRuntime'
+##### Property 'authenticationTypesRuntime'
 
 * Introduced for **Authentication types supported by this service**.
 
-### RestOperationParameter (Element)
+#### RestOperationParameter (Element)
 
-#### Property 'description'
+##### Property 'description'
 
 * Introduced for **A description of the parameter, to be used in documentation**.
 
-## CustomWidgets
+### CustomWidgets
 
-### CustomWidgetType (Element)
+#### CustomWidgetType (Element)
 
-#### Property 'helpUrl'
-
-* Introduced.
-
-### WidgetValue (Element)
-
-#### Property 'dataSource'
+##### Property 'helpUrl'
 
 * Introduced.
 
-## Pages
+#### WidgetValue (Element)
 
-### BuildingBlock (ModelUnit)
-
-#### Property 'platform'
+##### Property 'dataSource'
 
 * Introduced.
 
-### DivContainer (Element)
+### Pages
 
-#### Property 'onClickAction'
+#### BuildingBlock (ModelUnit)
 
-* Introduced.
-
-### ClientTemplate (Element)
-
-#### Property 'fallback'
+##### Property 'platform'
 
 * Introduced.
 
-### LayoutGrid (Element)
+#### DivContainer (Element)
 
-#### Property 'rows'
+##### Property 'onClickAction'
+
+* Introduced.
+
+#### ClientTemplate (Element)
+
+##### Property 'fallback'
+
+* Introduced.
+
+#### LayoutGrid (Element)
+
+##### Property 'rows'
 
 * Changed the default value.
 
-### LayoutGridColumn (Element)
+#### LayoutGridColumn (Element)
 
-#### Property 'tabletWeight'
-
-* Introduced.
-
-#### Property 'phoneWeight'
+##### Property 'tabletWeight'
 
 * Introduced.
 
-#### Property 'verticalAlignment'
+##### Property 'phoneWeight'
 
 * Introduced.
 
-### LayoutGridRow (Element)
+##### Property 'verticalAlignment'
 
-#### Property 'columns'
+* Introduced.
+
+#### LayoutGridRow (Element)
+
+##### Property 'columns'
 
 * Changed the default value.
 
-#### Property 'verticalAlignment'
+##### Property 'verticalAlignment'
 
 * Introduced.
 
-#### Property 'horizontalAlignment'
+##### Property 'horizontalAlignment'
 
 * Introduced.
 
-#### Property 'spacingBetweenColumns'
+##### Property 'spacingBetweenColumns'
 
 * Introduced.

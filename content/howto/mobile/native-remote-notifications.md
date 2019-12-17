@@ -163,9 +163,9 @@ Your app does not retrieve any products in any of its pages. Fix this by doing t
 
     ![SyncConfig](attachments/native-remote-push/modeler/SyncConfig.png)
 
-#### 4.1.3 Getting the GUIDs of the Objects in Edit View {#guid-objects}
+#### 4.1.3 Determining GUIDs {#guid-objects}
 
-In order to send a particular object to a page, first the object's GUID must be determined and sent using a push notification. For the sake of simplicity, you will log the object GUID to your Mendix Studio Pro's console (this will be used in [Testing the Implementation](#testing-guid) below):
+In order to send a particular object to a page, first an object's GUID must be determined and sent using a push notification. To begin this process, you will log the object GUID to your Mendix Studio Pro's console (to be used later in the [Testing the Implementation](#testing-guid) section):
 
 1.  Create a nanoflow *ACT_GetGUIDAndLog* which does the following:<br />
     a. Accepts **Product** object as a parameter.<br />
@@ -199,14 +199,14 @@ In order to send a particular object to a page, first the object's GUID must be 
 
 #### 4.1.5 Testing the Implementation {#testing-guid}
 
-1. Click the nanoflow button you created in [Get the GUIDs of the objects in Edit view](#guid-objects) to log the object's GUID (which you can see in your Studio Pro Console).
-2. Follow the steps in the [Simple push notification](#sending-simple-push-notification) section above again, but with the following changes:<br />
+1. Click the nanoflow button you created in [Determining GUIDs](#guid-objects) to log the object's GUID (which you can see in your Studio Pro Console).
+2. Follow the steps in the [Simple Push Notification](#sending-simple-push-notification) section again, but with the following changes:<br />
     a. Set the action name to *sendProduct*.<br />
     b. Set **Context object guid** to the GUID you just logged:
 
     ![openProductPage](attachments/native-remote-push/modeler/openProductPage.png)
 
-3. Put your app in the background, send the notification, and tap it. This will navigate to the **NativeProductOverview** page with the proper object.
+3. With your app running in the background, send a notification and tap it. This will navigate to the **NativeProductOverview** page with the proper object.
 
 ## 4.2 Now lets cover when the app is in the foreground [todo: fix title]
 

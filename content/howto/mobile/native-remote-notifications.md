@@ -5,6 +5,7 @@ title: "Use Remote Notifications"
 #menu_order: 11
 #description: "Learn to set up native push notifications with the Native builder."
 #tags: ["mobile", "push notification", "remote", "push", "notification"]
+draft: true
 ---
 
 ## 1 Introduction

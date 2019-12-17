@@ -15,7 +15,7 @@ remote notifications only work with apps created through the Native Builder. You
 
 If you want to use push notifications with custom apps which created with native builder, make sure you have completed the following prerequisites:
 
-* Setting up native push notifications with native builder [Native Builder](https://docs.mendix.com/howto/mobile/native-builder#1-introduction) 
+* Setting up native push notifications with native builder [Native Builder](/howto/mobile/native-builder#1-introduction) 
 
 ## 3 Setting Up Your Mendix Project
 
@@ -104,7 +104,7 @@ Deploy your project and open your administration page in a web browser. Do the f
 
 Next you will test the implementation of your configurations.
 
-### 3.5 Sending a Push Notification to a Single Device
+### 3.5 Sending a Push Notification to a Single Device {#sending-single}
 
 1. Reload the app on your phone.
 2. Put the app in the background by returning to your phone's home screen.
@@ -154,7 +154,7 @@ In this section you will learn the following:
 
 #### 4.1.2 Synchronizing Unused Entities
 
-Studio Pro does smart data syncing, meaning if an entity has not been retrieved in native side, it will not be there. This situation will not occur since most Mendix native apps do retrieve entities which you want to show. For more information, see the [Sychronization](refguide/offline-first#sychronization) section of the *Offline First Reference Guide*.
+Studio Pro does smart data syncing, meaning if an entity has not been retrieved in native side, it will not be there. This situation will not occur since most Mendix native apps do retrieve entities which you want to show. For more information, see the [Sychronization](/refguide/offline-first#sychronization) section of the *Offline First Reference Guide*.
 
 Your app does not retrieve any products in any of its pages. Fix this by doing the following:
 
@@ -200,7 +200,7 @@ In order to send a particular object to a page, first an object's GUID must be d
 #### 4.1.5 Testing the Implementation {#testing-guid}
 
 1. Click the nanoflow button you created in [Determining GUIDs](#guid-objects) to log the object's GUID (which you can see in your Studio Pro Console).
-2. Follow the steps in the [Simple Push Notification](#sending-simple-push-notification) section again, but with the following changes:<br />
+2. Follow the steps in the [Sending a Push Notification to a Single Device](#sending-single) section again, but with the following changes:<br />
     a. Set the action name to *sendProduct*.<br />
     b. Set **Context object guid** to the GUID you just logged:
 
@@ -236,7 +236,7 @@ In order to send a particular object to a page, first an object's GUID must be d
 
 	![sendProductOnRecieve](attachments/native-remote-push/modeler/sendProductOnRecieve.png)
 
-Now repeat the steps in [Testing the Implementation](#testing-the-implementation), but this time put your app in the foreground. You will see a notification with your text and a button for five seconds.
+Now repeat the steps in [Testing the Implementation](#testing-guid), but this time put your app in the foreground. You will see a notification with your text and a button for five seconds.
 
 ![onRecieveShowDV](attachments/native-remote-push/modeler/onRecieveShowDV.png)
 

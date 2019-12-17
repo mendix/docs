@@ -13,9 +13,9 @@ This tutorial will teach you to configure and test remote notifications. Remote 
 
 ## 2 Prerequisites
 
-If you want to use push notifications with custom apps which created with native builder, make sure you have completed the following prerequisites:
+If you want to use push notifications with custom apps which created with native builder, make sure you have completed the following prerequisite:
 
-* Setting up native push notifications with native builder [Native Builder](/howto/mobile/native-builder) 
+* Complete [How to Deploy Your First Mendix Native App](/howto/mobile/deploying-native-app) through the end of the *Making Your First Build* section
 
 ## 3 Setting Up Your Mendix Project
 

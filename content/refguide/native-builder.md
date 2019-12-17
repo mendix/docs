@@ -36,15 +36,15 @@ The `Prepare` command handles the creation of the app on both GitHub and App Cen
 An example of a `prepare` command:
 
 ```
-native-builder.exe prepare --github-access-token <token> --appcenter-api-token <token> --java-home <absolute-path> --mxbuild-path <absolute-path> --project-path <absolute-path-to-mpr-file> --projectName CoolApp --app-identifier "com.company.myapp" --app-name "My Cool App"
+native-builder.exe prepare --github-access-token <token> --appcenter-api-token <token> --java-home <absolute-path> --mxbuild-path <absolute-path> --project-path <absolute-path-to-mpr-file> --projectName CoolApp --app-identifier "com.company.myapp" --app-name "My Cool App" --mendix-version 8.5.0
 ```
 
 | Parameters                  | Description                                                          | Example                                             |
 | --------------------------- | -------------------------------------------------------------------- | --------------------------------------------------- |
 | `--github-access-token`     | GitHub access token.                                                 | `c0e1dasf1e102c55ded223dbdebdbe59asf95224`          |
-| `--appcenter-api-token`    | App Center API token.                                                | `3e18asdfb43f4fe6c85afsd0bf60dde72f134`             |
-| `--appcenter-organization` | App Center organization name.                                        | `my-company`                                        |
-| `--project-name`            | Unique name of the project. (Required)                              | `CoolApp`                                           |
+| `--appcenter-api-token`     | App Center API token.                                                | `3e18asdfb43f4fe6c85afsd0bf60dde72f134`             |
+| `--appcenter-organization`  | App Center organization name.                                        | `my-company`                                        |
+| `--project-name`            | Unique name of the project.                                          | `CoolApp`                                           |
 | `--app-name`                | Display name of the app.                                             | `My Cool App`                                       |
 | `--app-identifier`          | Unique app identifier.                                               | `com.mendix.MyAwesomeApp`                           |
 | `--app-icon-path`           | Absolute path to the app icon.                                       | `C:\MyAppIcon.png`                                  |
@@ -54,7 +54,7 @@ native-builder.exe prepare --github-access-token <token> --appcenter-api-token <
 | `--project-path`            | Absolute path to the Mendix project file.                            | `C:\MyApp\MyApp.mpr`                                |
 | `--mxbuild-path`            | Absolute path to MxBuild executable.                                 | `C:\Program Files\Mendix\8.0.0\modeler\mxbuild.exe` |
 | `--runtime-url`             | URL of the Mendix runtime.                                           | `https://myapp.mendixcloud.com`                     |
-| `--mendix-version`          | The Mendix Studio Pro version your Mendix project is using. (Required)       | `8.5.0` or `8.5`                                    |
+| `--mendix-version`          | The Mendix Studio Pro version your Mendix project is using.          | `8.5.0`                                             |
 
 
 ### 2.2 Build
@@ -101,7 +101,7 @@ The `regenerate` command recreates the project on GitHub with the latest version
 An example of a `regenerate` command:
 
 ```
-native-builder.exe regenerate --project-name "CoolApp" --mendix-version "8.5.0"
+native-builder.exe regenerate --project-name "CoolApp" --mendix-version 8.5.0
 ```
 
 | Parameters       | Description                                       | Example   |
@@ -259,9 +259,14 @@ For over-the-air updates, each build is associated with a particular release gro
 
 The highest integer Android will allow is 2,147,483,647. Consider starting with 1 and incrementing by one with each release. Alternatively, you can use dates in the “YYmmddHHmm” format, such as {2007310950} for a build run on July 31, 2020 at 09:50.
 
-### 3.13 --verbose {#verbose}
+### 3.13 --mendix-version
+
+This parameter is used to allow Native Builder to pick a compatible version of Native Template for the provided Mendix Studio Pro version. This parameter needs to be a valid semantic version, i.e. 8.5.1. The version provided, needs to be as specific as possible, as even patch versions might include fixes that might not be compatible with all Native Templates available. To find out the mendix version you are using check the `about` page or on the splash screen of the Mendix Studio Pro you are using for your current project.
+
+### 3.14 --verbose {#verbose}
 
 This parameter provides additional details when the Native Builder incurs errors. When `--verbose` is used and the Native Builder errors, the Native Builder will output a complete stack trace of the error. This is useful for cases where the Native Builder fails with an unknown error.
+
 
 ## 4 Advanced Usage
 

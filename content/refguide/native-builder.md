@@ -44,7 +44,7 @@ native-builder.exe prepare --github-access-token <token> --appcenter-api-token <
 | `--github-access-token`     | GitHub access token.                                                 | `c0e1dasf1e102c55ded223dbdebdbe59asf95224`          |
 | `--appcenter-api-token`     | App Center API token.                                                | `3e18asdfb43f4fe6c85afsd0bf60dde72f134`             |
 | `--appcenter-organization`  | App Center organization name.                                        | `my-company`                                        |
-| `--project-name`            | Unique name of the project.                                          | `CoolApp`                                           |
+| `--project-name`            | Unique name of the project. (Required)                               | `CoolApp`                                           |
 | `--app-name`                | Display name of the app.                                             | `My Cool App`                                       |
 | `--app-identifier`          | Unique app identifier.                                               | `com.mendix.MyAwesomeApp`                           |
 | `--app-icon-path`           | Absolute path to the app icon.                                       | `C:\MyAppIcon.png`                                  |

@@ -67,9 +67,8 @@ If you already ran `prepare`, this is an example of a `build` command:
 native-builder.exe build --project-name "CoolApp" --app-version "1.0.0" --build-number 1
 ```
 
-| Parameters                  | Description                                                                          | Example                                             |
-| --------------------------- | ------------------------------------------------------------------------------------ | --------------------------------------------------- |
-=======
+| Parameters                  | Description                                                          | Example                                             |
+| --------------------------- | -------------------------------------------------------------------- | --------------------------------------------------- |
 | `--project-name`            | Unique name of the project used during `prepare`.                                    | `CoolApp`                                           |
 | `--app-version`             | Version of the app, semantic version only.  **(Strongly recommended)**                   | `1.2.3`                                             |
 | `--build-number`            | Build number, an arbitrary unique integer value. **(Required)**                          | `1`                                                 |

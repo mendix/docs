@@ -9,13 +9,13 @@ title: "Use Remote Notifications"
 
 ## 1 Introduction
 
-remote notifications only work with apps created through the Native Builder. You cannot send notifications to an app inside the Make it Native app.
+This tutorial will teach you to configure and test remote notifications. Remote notifications only work with apps created through the Native Builder. You cannot send notifications to an app inside the Make it Native app.
 
 ## 2 Prerequisites
 
 If you want to use push notifications with custom apps which created with native builder, make sure you have completed the following prerequisites:
 
-* Setting up native push notifications with native builder [Native Builder](/howto/mobile/native-builder#1-introduction) 
+* Setting up native push notifications with native builder [Native Builder](/howto/mobile/native-builder) 
 
 ## 3 Setting Up Your Mendix Project
 
@@ -154,7 +154,7 @@ In this section you will learn the following:
 
 #### 4.1.2 Synchronizing Unused Entities
 
-Studio Pro does smart data syncing, meaning if an entity has not been retrieved in native side, it will not be there. This situation will not occur since most Mendix native apps do retrieve entities which you want to show. For more information, see the [Sychronization](/refguide/offline-first#sychronization) section of the *Offline First Reference Guide*.
+Studio Pro does smart data syncing, meaning if an entity has not been retrieved in native side, it will not be there. This situation will not occur since most Mendix native apps do retrieve entities which you want to show. For more information, see the [Sychronization](/refguide/offline-first#sychronization) section of the *Offline-First Reference Guide*.
 
 Your app does not retrieve any products in any of its pages. Fix this by doing the following:
 

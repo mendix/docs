@@ -13,6 +13,12 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 ## 2019
 
+### December 18th, 2019
+
+#### Improvements
+
+* We made some minor improvements to the style of the [Stories](/developerportal/collaborate/stories#beta) beta version. This release fixes issues regarding batch actions.
+
 ### December 13th, 2019 
 
 #### Improvements

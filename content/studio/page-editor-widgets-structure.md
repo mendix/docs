@@ -62,7 +62,7 @@ The **Expand** section > **Add Row** allows you to add a row above or below the 
 
 {{% alert type="info" %}} 
 
-A [row](#row) also has the **Expand** section with the same setting.
+A [row](#row) and a [column](#column) have the **Expand** section with the same setting.
 
 {{% /alert %}}
 
@@ -70,6 +70,7 @@ To add a new row, do one of the following:
 
 1. Select the layout grid in the breadcrumb and in its **Properties** > **Add Row**, click one of the buttons to insert the row above or below. 
 2. Select the row and in its **Properties** > **Add Row**, click one of the buttons to insert the row above or below. 
+3. Select the column and in its **Properties** > **Add Row**, click one of the buttons to insert the row above or below. 
 
 An empty row will be inserted.
 
@@ -99,7 +100,7 @@ For information on the **Design** section and its properties, see [Design Sectio
 
 #### 3.2.1 Expand Section {#expand-section-row}
 
-The **Expand** section for a **Row** has the same properties and functions as the **Expand** section of a layout grid. For details, see the [Expand Section](https://docs.mendix.com/studio/page-editor-widgets-structure#expand-section) of the *layout grid*.
+The **Expand** section > **Add Row** allows you to add a row above or below the selected one. For more details, see the [Expand Section](#expand-section) of the *layout grid*.
 
 #### 3.2.2 Container Settings Section {#container-settings}
 
@@ -133,11 +134,24 @@ In the **General** section of a row you can select the number of columns in it, 
 Column properties consist of the following sections:
 
 * [Expand](#expand-section-column)
+
 * [General](#general-section-column)
+
+	{{% image_container width="300" %}}![Column Sections](attachments/page-editor-widgets-structure/column-sections.png)
+	{{% /image_container %}}
 
 #### 3.3.1 Expand Section {#expand-section-column}
 
-The **Expand** section > **Add Column** allows you to add a column to the left or to the right of the selected one.
+The Expand section of a column allows you to add a row or a column.
+
+
+##### 3.3.1.1 Add Row
+
+**Add Row** allows you to add a row above or below the selected one. For more details, see the [Expand Section](#expand-section) of the *layout grid*.
+
+##### 3.3.1.2 Add Column
+
+**Add Column** allows you to add a column to the left or to the right of the selected one.
 
 #### 3.3.2 General Section
 

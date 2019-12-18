@@ -34,4 +34,4 @@ If the microflow is called from the client, the deletion is not reflected in the
 Deletions are always reflected in the client. [Data sources](data-sources) are only reloaded if **Refresh in client** is set to *Yes*.
 {{% /alert %}}
 
-*Default value*: No
+Default: *No*

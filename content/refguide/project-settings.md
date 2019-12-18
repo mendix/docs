@@ -69,7 +69,7 @@ The first day of the week setting determines the first day of the week in the da
 
 | Option | Description |
 | --- | --- |
-| Default (based on locale) | The first day of the week in date picker widgets is based on the locale of the user. |
+| Default (based on locale)  *(default)* | The first day of the week in date picker widgets is based on the locale of the user. |
 | Sunday | Use Sunday as first day of the week in date picker widgets. |
 | Monday | Use Monday as first day of the week in date picker widgets. |
 | Tuesday | Use Tuesday as first day of the week in date picker widgets. |
@@ -78,13 +78,11 @@ The first day of the week setting determines the first day of the week in the da
 | Friday | Use Friday as first day of the week in date picker widgets. |
 | Saturday | Use Saturday as first day of the week in date picker widgets. |
 
-*Default value:* Default (based on locale)
-
 ### 3.7 Default Time Zone
 
 The default time zone determines the time zone for newly created users. If your application is only used in one time zone, setting this default will make sure that users of your application never have to worry about setting their time zone.
 
-### 3.8 Scheduled Event Time Zone
+### 3.8 Scheduled Event Time Zone {#scheduled}
 
 The scheduled event time zone defines under which timezone scheduled events run. The default is UTC and this has been the case since 3.0. If you would like to run scheduled events under another time zone (such as the time zone of the company office or the project default timezone), you can select it here.
 
@@ -142,7 +140,7 @@ The rounding methods **Half away from zero** and **Half to the nearest even numb
 
 This table presents the results of rounding the input to one digit with the given rounding mode:
 
-| Input Number | Half Away from Zero | Half to the Nearest Even Number |
+| Input Number | Half Away from Zero  *(default)* | Half to the Nearest Even Number |
 | --- | --- | --- |
 | 5.5 | 6 | 6 |
 | 2.5 | 3 | 2 |
@@ -155,8 +153,6 @@ This table presents the results of rounding the input to one digit with the give
 | -2.5 | -3 | -2 |
 | -5.5 | -6 | -6 |
 
-*Default value:* Half away from zero
-
 ### 3.11 Multiple Sessions per User
 
 If this option is enabled, users can sign in multiple times through different clients (for example, desktop browser and tablet). Otherwise, an existing session for a user is signed out when the user signs in somewhere else.
@@ -167,7 +163,7 @@ In production, this only works with licenses based on concurrent users.
 
 {{% /alert %}}
 
-*Default value*: Yes
+Default: *Yes*
 
 ### 3.12 Uniqueness Validation
 

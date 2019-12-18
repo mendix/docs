@@ -144,8 +144,6 @@ Click **Manage** to manage the component:
 
 ![](attachments/app-store-overview/content-management.png)
 
-{{% todo %}}[**APP-STORE-TEAM VERIFY: "Unpublish" CONDITIONS**]{{% /todo %}}
-
 On this page, you will see the following buttons:
 
 * **Create new draft version** – click this to create a new draft version of the component (for details on creating a draft version, see the [Updating Existing App Store Content](share-app-store-content#updating) section of *How to Share App Store Content*)

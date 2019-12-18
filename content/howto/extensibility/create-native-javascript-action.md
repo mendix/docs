@@ -253,6 +253,7 @@ JavaScript actions for the web and native platform are similar. With the differe
 	});
 	```
 	We return a promise, that will resolve a string value. In this way the nanoflow will wait till we call the resolve function. With the registration we start listening for tag that are picked up by the reader. The callback function is executed when a tag is found, we un-register to stop listening for other tags. The payload is decoded from a byte array into text. When the resolve function is called with the text parameter that nanoflow will receive this value as the return parameter.
+	
 	5. Optional, **Expose as nanoflow action** add a nice icon if you would like.
 
 ![Read NFC tag action settings](attachments/create-native-javascript-action/action-read-nfc-tag-settings.png)

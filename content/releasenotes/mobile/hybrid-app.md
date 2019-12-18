@@ -16,6 +16,13 @@ For more information on hybrid mobile app development in Mendix, see the [Hybrid
 
 ## 2019
 
+### Hybrid App Base 4.1.8
+
+**Release date: December 17th, 2019**
+
+* We fixed a regression with the keyboard-avoiding behavior in iOS.
+* We fixed an issue with SSO failing to load on iOS 13 devices.
+
 ### Hybrid App Base 4.1.7
 
 **Release date: November 18th, 2019**

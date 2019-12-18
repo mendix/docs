@@ -4,13 +4,53 @@ category: "Mobile"
 menu_order: 10
 description: "These release notes showcase each release of the iOS and Android Make It Native app versions."
 tags: ["Native", "Android", "iOS", "Apple", "Android"]
-#When updating, remember to update the Latest Mendix Releases file
+#This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 #KI: "When using the `Touchable` option" = UICORE-417
 ---
 
 {{% alert type="info" %}}
 For more information on the Make It Native app, see [Getting the Make It Native App](/refguide/getting-the-make-it-native-app). Click here to download the Make It Native app for [iOS](https://apps.apple.com/app/make-it-native/id1334081181), or here for [Android](https://play.google.com/store/apps/details?id=com.mendix.developerapp).
 {{% /alert %}}
+
+## Android 1.2.1 / iOS 1.2.3
+
+**Release date: December 17th, 2019**
+
+With this version we introduced a better keyboard-avoiding behavior on iOS.
+
+### Known Issues
+
+* When using the **Touchable** option in the inspector overlay, the Mendix Native app crashes
+
+## Android 1.2.1 / iOS 1.2.2
+
+**Release date: November 26th, 2019**
+
+### New Features
+
+With this version we added support for the Mendix Studio Pro 8.4 SVG images feature.
+
+On Android:
+
+* We fixed an issue where the app might open a cached version of an older project if the packeger does not respond in time.
+
+### Known Issues
+
+* When using the **Touchable** option in the inspector overlay, the Mendix Native app crashes.
+
+## Android 1.2.0 / iOS 1.2.1
+
+**Release date: November 6th, 2019**
+
+### Improvements
+
+On iOS:
+
+* Fixed an issue where Make It Native could crash on particular iOS 13 devices.
+
+### Known Issues
+
+* When using the **Touchable** option in the inspector overlay, the Mendix Native app crashes.
 
 ## Android 1.2.0 / iOS 1.2.0
 

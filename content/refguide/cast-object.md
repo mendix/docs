@@ -22,7 +22,7 @@ For the properties that all the activities share (for example, a caption), see [
 
 ## 2 Output Properties
 
-### 2.1 Name
+### 2.1 Object Name
 
 This is the name for the result of the cast. It can be used by all activities that follow this activity.
 

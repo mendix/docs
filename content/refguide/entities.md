@@ -81,9 +81,7 @@ This property defines whether the entity contains the system attribute 'createdD
 | Option | Description |
 | --- | --- |
 | True | Entity contains the system attribute 'createdDate'. |
-| False | Entity does not contain the system attribute 'createdDate'. |
-
-_Default value:_ False
+| False  *(default)* | Entity does not contain the system attribute 'createdDate'. |
 
 #### 3.5.2 Store 'changedDate'
 
@@ -92,9 +90,11 @@ This property defines whether the entity contains the system attribute 'changedD
 | Option | Description |
 | --- | --- |
 | True | Entity contains the system attribute 'changedDate'. |
-| False | Entity does not contain the system attribute 'changedDate'. |
+| False  *(default)* | Entity does not contain the system attribute 'changedDate'. |
 
-_Default value:_ False
+{{% alert type="info" %}}
+The 'changedDate' property is only updated on real changes. Simply changing and committing an entity with the same attribute values does not update 'changedDate'.
+{{% /alert %}}
 
 #### 3.5.3 Store 'owner'
 
@@ -103,9 +103,7 @@ This property defines whether the entity has the system association 'owner'. Thi
 | Option | Description |
 | --- | --- |
 | True | Entity has the system association 'owner'. |
-| False | Entity does not have the system association 'owner'. |
-
-_Default value:_ False
+| False  *(default)* | Entity does not have the system association 'owner'. |
 
 #### 3.5.4 Store 'changedBy'
 
@@ -114,6 +112,4 @@ This property defines whether the entity has the system association 'changedBy'.
 | Option | Description |
 | --- | --- |
 | True | Entity has the system association 'changedBy'. |
-| False | Entity does not have the system association 'changedBy'. |
-
-_Default value:_ False
+| False *(default)*  | Entity does not have the system association 'changedBy'. |

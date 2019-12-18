@@ -61,6 +61,6 @@ These unary operations have a list as input and either an object or another list
 
 ## 3 Output Properties
 
-### 3.1 Name
+### 3.1 List Name, Object Name, or Variable Name
 
 This is the name of the resulting List, Object or Boolean. The result can be used by all activities that follow this activity.

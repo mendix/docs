@@ -52,4 +52,4 @@ When committing a large number of objects, we recommend that you do not enable '
 When inside a [nanoflow](nanoflows), the object is refreshed across the client as if **Refresh in client** was set to *Yes*.
 {{% /alert %}}
 
-*Default value*: No
+Default: *No*

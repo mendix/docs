@@ -14,8 +14,6 @@ Looking to create great user experiences and a user-friendly graphical user inte
 * [Create Your First Two Overview & Detail Pages](create-your-first-two-overview-and-detail-pages)
 * [Use Layouts & Snippets](layouts-and-snippets)
 * [Set Up the Navigation Structure](../general/setting-up-the-navigation-structure)
-* [Set Up the Mendix UI Framework](setup-mendix-ui-framework)
-* [Create a Custom Theme with the Mendix UI Framework](create-a-custom-theme-with-the-mendix-ui-framework)
 * [Implement Styles](styles)
 * [Start Styling with Gulp & Sass](style-with-gulp-and-sass)
 * [Create Custom Error Pages](custom-error-page)

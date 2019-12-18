@@ -13,7 +13,7 @@ A button can perform various actions such as calling a microflow or nanoflow or 
 
 An example of button properties is represented in the image below:
 
-{{% image_container width="280" %}}![Button Properties](attachments/button-widgets/button-properties.png)
+{{% image_container width="250" %}}![Button Properties](attachments/button-widgets/button-properties.png)
 {{% /image_container %}}
 
 Button properties consist of the following sections:
@@ -136,7 +136,7 @@ The **Button style** property applies a predefined styling to the button. Possib
 
 This property is only shown when **Call a microflow** is selected as an on click event. For more information on click events, see [On Click Event & Events Section](on-click-event). The **Disable during action** disables the button until the action is completed or failed.
 
-*Default value*: true.
+Default: *true*
 
 ### 2.5 Items Section {#items}
 

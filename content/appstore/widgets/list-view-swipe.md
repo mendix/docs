@@ -72,7 +72,7 @@ To design the background of the view, follow these steps:
 
 1. Create one to four containers inside the list view item:
 	* The "swipe" container is shown as the foreground and is swiped away – add the `widget-listview-swipe-foreground` class to place this over the background containers
-	* The  "hide" container is sshown after swiping, during the hide animation
+	* The  "hide" container is shown after swiping, during the hide animation
 	* It is possible to create a container for left and right swiping, or to share the containers
 2. Add the container names to their respective fields in the widget editor (as in, **Swipe container** and **Hide container** as configured on the **Swipe to left** or **Swipe to right** tabs).
 

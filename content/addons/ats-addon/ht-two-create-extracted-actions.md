@@ -75,7 +75,7 @@ To use this custom action in other test cases follow these steps:
 
 ### 3.2 Create an extracted action by creating a new action 
 
-The following steps describe how to create an extracted action for deleting an expense in the company expenses app:
+The following steps describe how to create an extracted action for deleting an expense in a company expenses app:
 
 ![](attachments/ht-two-create-extracted-actions/Deleting_an_expense.png)
 

@@ -17,7 +17,7 @@ A user's home page can vary based on their [user roles](user-roles).
 
 ## 2 Profiles {#profiles}
 
-At the heart of the navigation model in Mendix, there are seven types of profiles:
+At the heart of the navigation model in Mendix, these are the available profiles:
 
 * Responsive
 * Hybrid tablet app online

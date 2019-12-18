@@ -8,7 +8,7 @@ tags: ["studio", "page editor", "typography", "text widgets", "widgets"]
 
 ## 1 Introduction 
 
-Text is a group of [widgets](page-editor-widgets) that consists of **[Text, Paragraph, Headings (H1-H6)](#text-widget)**, and the [**Page Title**](#page-title-widget). They are used to display textual information to the end-user. For example, you can display a text paragraph:
+Text is a group of [widgets](page-editor-widgets) that consists of [Text, Paragraph, Headings (H1-H6)](#text-widget), and the [Page Title](#page-title-widget). They are used to display textual information to the end-user. For example, you can display a text paragraph:
 
 {{% image_container width="350" %}}![](attachments/page-editor-widgets-text/paragraph-example.png)
 {{% /image_container %}}

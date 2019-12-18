@@ -57,7 +57,7 @@ To import module packages, follow these steps:
 
 1. Right-click your project in the **Project Explorer** and select **Import Module Package**.
 
-    ![](attachments/18448739/18582115.png)
+    ![](attachments/18448739/import-package.png)
 
 2. Select your Mendix module package file and click **Open**. The **Import Module** dialog box will open.
 

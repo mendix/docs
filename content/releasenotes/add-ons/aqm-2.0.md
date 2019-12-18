@@ -1,6 +1,6 @@
 ---
 title: "2.0"
-parent: "aqm-2"
+parent: "aqm"
 ---
 
 ## 2.0.0

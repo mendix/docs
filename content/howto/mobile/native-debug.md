@@ -41,7 +41,24 @@ Your browser's debugging tools should be pointing to your app project. Now, you 
 
 Outside of Chrome, other tools can help you debug Mendix apps (such as React Developer Tools). Regardless of which tool you use, remember that Mendix uses a different port (8083) than a default React Native installation would (8080).
 
-## 3 Read More
+## 3 Debugging Your Styling
+
+With the Make It Native app, you can examine your styling and the structure of your pages. This makes it easier to debug, test, and inspect styling. Inspect and debug your styling by doing the following:
+
+1. Install the LTS of [node.js](https://nodejs.org/en/).
+2. Open your command line interface (CLI).
+3. Run `npm i -g react-devtools@3` to install the React developer tools.
+4. Run `react-devtools`.
+
+After running `react-devtools` you will see the React developer tools GUI. To use the tools to debug your styling, do the following:
+
+1. Open your app in the Make It Native app with **Enable dev mode** selected.
+2. When running your app, shake your device to open developer settings.
+3. Tap **Toggle Element Inspector** to start inspecting. 
+4. Tap any styled element in your app (like a text element) to see its style information on your device and inspect and debug it in your React developer tools GUI.
+5. Shake your device and tap **Toggle Element Inspector** to turn off the inspector off.
+
+## 4 Read More
 
 * [Get Started with Native Mobile](getting-started-with-native-mobile)
 * [Debug a Mobile App with Mendix](debug-a-mobile-app)

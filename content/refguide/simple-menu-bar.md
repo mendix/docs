@@ -19,7 +19,7 @@ Sub-items of menu items are not displayed by this widgets, that means the menu s
 
 An example of a simple menu bar properties is represented in the image below:
 
-{{% image_container width="350" %}}![Simple Menu Bar Properties](attachments/menu-widgets/simple-menu-bar-properties.png)
+{{% image_container width="300" %}}![Simple Menu Bar Properties](attachments/menu-widgets/simple-menu-bar-properties.png)
 {{% /image_container %}}
 
 Menu bar properties consist of the following sections:
@@ -44,16 +44,14 @@ The items that are shown in the menu widget are determined by the **Menu source*
 
 | Value              | Description                                                  |
 | ------------------ | ------------------------------------------------------------ |
-| Project navigation | The menu items are taken from one of the profiles defined in the [**Navigation**](navigation). |
+| Project navigation  *(default)* | The menu items are taken from one of the profiles defined in the [**Navigation**](navigation). |
 | Menu document      | The menu items are taken from a [menu](menu) document.       |
-
-_Default value:_ Project navigation
 
 #### 2.3.2 Profile 
 
 Only available when the [Menu source](#menu-source) is set to **Project navigation**. The **Profile** property specifies what [Navigation profile](navigation#profiles) is used for the widget. 
 
-_Default value:_ Responsive
+Default: *Responsive*
 
 #### 2.3.3 Menu 
 
@@ -65,10 +63,8 @@ This property determines how the simple menu bar is laid out.
 
 | Orientation | Description |
 | --- | --- |
-| Horizontal | The menu items are next to each other and the images are above the captions. |
+| Horizontal  *(default)* | The menu items are next to each other and the images are above the captions. |
 | Vertical | The menu items are underneath each other and the images are next to the captions. |
-
-_Default value:_ Horizontal
 
 ## 3 Read More
 

@@ -43,13 +43,19 @@ When calling a web service using a call-web-service activity, the location of th
 
 This can be used to throw an exception when the web service takes too long to respond after connecting. After a set amount of time, an exception will be thrown and the microflow will roll back or go into your custom error handler. Note that this does not change the connection timeout.
 
-_Default value:_ No
+{{% alert type="warning" %}}
+It is recommended that you set this to *Yes*.
+
+Most cloud infrastructure services (including those used by the Mendix Cloud) will close HTTP connections automatically if there is no traffic for a few minutes, even if your activity is still waiting for a response. This means that, if your activity calls a web service which takes a long time to respond, the connection may be closed without the activity being aware of this and your activity will not receive a response. Under these circumstances, if **Use timeout on request** is set to *No*, your activity will get stuck waiting indefinitely for data to arrive.
+{{% /alert %}}
+
+Default: *No*
 
 ### 2.5 Timeout
 
 **Timeout** specifies the timeout value in seconds.
 
-_Default value:_ 30
+Default: *30*
 
 ### 2.6 Validate Against WSDL
 
@@ -63,7 +69,7 @@ When consuming a WSDL that uses encoding, turning on validation will lead to a c
 
 Schema validation is not supported when you configure the [consumed web service](consumed-web-service) to send binary data as attachments.
 
-_Default value:_ No
+Default: *No*
 
 ### 2.7 Proxy Configuration
 
@@ -129,7 +135,7 @@ This option can be used when all children of the XML element of the request part
 
 If a primitive request parameter is both optional and nillable, you need to select whether or not to send the empty values.
 
-_Default:_ do not send the empty values.
+*Default value*::_ do not send the empty values.
 
 {{% /alert %}}
 

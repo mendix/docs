@@ -4,6 +4,5 @@ parent: "apm"
 menu_order: 20
 ---
 
-These are the release notes for APM version 1:
+The release notes for APM version 1 are divided into the pages below.
 
-{{% number_child_pages sort="desc" %}}

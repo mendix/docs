@@ -25,7 +25,7 @@ The example of how spacing works on a button is schematically shown on an image 
 
 ![](attachments/page-editor-widgets-design-section/design-section-scheme.png)
 
-## 2 Specific Properties
+## 3 Specific Properties
 
 The following widgets have specific properties:
 
@@ -34,7 +34,7 @@ The following widgets have specific properties:
 * [Buttons](#button-design-properties) (all Button widgets)
 * [Text](#text-design-properties) (a Text widget)
 
-### 2.1 List View Specific Properties {#list-view-design-properties}
+### 3.1 List View Specific Properties {#list-view-design-properties}
 
 Specific properties for **List View** are described in the table below:
 
@@ -43,7 +43,7 @@ Specific properties for **List View** are described in the table below:
 | Style       | Changes the appearance of lines in the list view.            | Possible values for **Style** are the following:<ul><li>None</li><li>Striped</li><li>Bordered</li><li>Lined</li><li>No Styling</li></ul> |
 | Hover Style | Highlights a row when hovering over it. Only useful if the row is clickable. | Enabled/Disabled                                             |
 | Row Size    | Changes the size of the row.                                 | Possible values for **Row Size** are the following:<ul><li>None</li><li>Small</li><li>Large</li></ul> |
-### 2.2 Container Specific Properties {#container-design-properties}
+### 3.2 Container Specific Properties {#container-design-properties}
 
 Specific properties for the **Container** widget are described in the table below:
 
@@ -52,7 +52,7 @@ Specific properties for the **Container** widget are described in the table belo
 | Align Content    | Aligns content inside a container. | Possible values for **Align Content** are the following:<ul><li>None</li><li>Left align as a row</li><li>Center align as row</li><li>Right align as row</li><li>Left align as column</li><li>Center align as column</li><li>Right align as column</li></ul><br />When aligning content as a column, elements inside a container will be aligned one under another; when aligning content as a row, elements inside a container will be aligned next to each other. |
 | Background color | Applies a background color.        | Possible values for **Background color** are the following:<ul><li>None – color defined in **Backgrounds** > **Default** of the **UI Customization** section of the [Theme Customizer](theme-customizer)</li><li>Default</li><li>Primary</li><li>Inverse</li><li>Success</li><li>Warning</li><li>Danger</li></ul><br />The color for each value depends on your settings in the **Theme Customizer**. For details, see [Theme Customizer](theme-customizer). |
 
-### 2.3 Button Specific Properties {#button-design-properties}
+### 3.3 Button Specific Properties {#button-design-properties}
 
 Specific properties for **Buttons** are described in the table below:
 
@@ -63,19 +63,19 @@ Specific properties for **Buttons** are described in the table below:
 | Bordered   | Changes the style of the button to a button with a transparent background, a colored border, and a colored text. Color of the border and the text are inverted from the background color, that means, if the button background is red, the background will become transparent, but the border and text will become red.<br />{{%alert type="info" %}}This option has no effect on buttons which are rendered as links.<br />{{%/alert %}} | Enabled/Disabled                                             |
 | Align Icon | Moves an icon (if any) to the right of the text or on top of it. | Possible values for **Align Icon** are the following:<ul><li>None – icon is to the left of the text</li><li>Right – icon is moved to the right side of the button or link</li><li>Top – icon is centered above the button text for *button* style and left-justified above the button text for *link* style (for more information on button styles, see [Buttons](page-editor-widgets-buttons))</li></ul> |
 
-### 2.4 Text Specific Properties {#text-design-properties}
+### 3.4 Text Specific Properties {#text-design-properties}
 
 Specific properties for the **Text** widget are described in the table below:
 
 | Property     | Description                          | Possible Values                                              |
 | ------------ | ------------------------------------ | ------------------------------------------------------------ |
-| Weight       | Changes the weight of the font       | Possible values for **Weight** are the following:<ul><li>None</li><li>Light</li><li>Normal (this is the default if weight is set to **None**)</li><li>Semibold</li><li>Bold</li></ul> |
+| Weight       | Changes the weight of the font       | Possible values for **Weight** are the following:<ul><li>None</li><li>Light</li><li>Normal <em>(used if weight is set to **None**)</em></li><li>Semibold</li><li>Bold</li></ul> |
 | Color        | Changes the color of the text        | Possible values for **Color** are the following:<ul><li>Header color</li><li>Detail color (light-gray color)</li><li>Default – note that this is the default text color, not the default button color</li><li>Primary</li><li>Inverse</li><li>Success</li><li>Warning</li><li>Danger</li></ul><br />{{%alert type="info" %}}The color for each value depends on your settings in the **Theme Customizer**. For details, see [Theme Customizer](theme-customizer).<br />{{%/alert %}} |
 | Alignment    | Aligns the text                      | Possible values for **Alignment** are the following:<ul><li>None</li><li>Left</li><li>Center</li><li>Right</li></ul> |
 | Transform    | Changes letter case of the text      | Possible values for **Transform** are the following:<ul><li>None</li><li>Lowercase</li><li>Uppercase</li><li>Capitalize</li></ul> |
 | Wrap Options | Wrap a long text into multiple lines | Possible values for **Wrap Options** are the following:<ul><li>None – text is not wrapped</li><li>Wrap</li><li>No Wrap</li></ul> |
 
 
-## 3 Read More
+## 4 Read More
 
 * [Widgets](page-editor-widgets)

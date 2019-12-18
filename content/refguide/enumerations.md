@@ -25,7 +25,7 @@ To create a new enumeration, do the following:
 
 3.  In the **Enumeration** dialog window, click **New** to create enumeration values:
 
-    a.  Fill out **Name** and **Caption** for an enumeration value. You can set **Image** for it if necessary. For more information on enumeration properties, see the **[Enumeration Properties](#enum-properties)** section. <br />
+    a.  Fill out **Name** and **Caption** for an enumeration value. You can set **Image** for it if necessary. For more information on enumeration properties, see the [Enumeration Properties](#enum-properties) section. <br />
 
     ![](attachments/enumerations/add-enum-value.png)
 

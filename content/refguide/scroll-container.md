@@ -44,10 +44,8 @@ This property determines in which mode the scroll container operates.
 
 | Value | Description |
 | --- | --- |
-| Headline | The top and bottom regions extend the entire width of the container and the remaining regions are placed in the middle. |
+| Headline  *(default)* | The top and bottom regions extend the entire width of the container and the remaining regions are placed in the middle. |
 | Sidebar | The side panels extend the full height of the container. |
-
-_Default value:_ Headline
 
 {{% alert type="info" %}}This property is not supported on native mobile pages.{{% /alert %}}
 
@@ -57,10 +55,8 @@ This property determines what happens when the content of a region does not fit 
 
 | Value | Description |
 | --- | --- |
-| Per region | Every region will show its own scroll bar in case its content does not fit. |
+| Per region *(default)*  | Every region will show its own scroll bar in case its content does not fit. |
 | Full widget | The scroll container will grow to fit its contents and will leave scrolling to its parent. |
-
-_Default value:_ Per region
 
 {{% alert type="info" %}}This property is not supported on native mobile pages.{{% /alert %}}
 
@@ -68,19 +64,19 @@ _Default value:_ Per region
 
 By default the scroll container will extend the full width of its parent widget. It can also be given a specific width, which can be defined either in pixels or percentage of its parent widget.
 
-_Default value:_ Full width
+Default: *Full width*
 
 {{% alert type="info" %}}This property is not supported on native mobile pages.{{% /alert %}}
 
 #### 2.2.4 Width Value
 
-This property is displayed only when the [**Width**](#width) property is set to *Pixels* or *Percentage*. This property determines the width of the scroll container, either in pixels or a percentage.
+This property is displayed only when the [Width](#width) property is set to *Pixels* or *Percentage*. This property determines the width of the scroll container, either in pixels or a percentage.
 
 #### 2.2.5 Alignment 
 
-This property is displayed only when the [**Width**](#width) property is set to *Pixels* or *Percentage*. The scroll container can be aligned to the left, to the right, or in the middle of its parent widget.
+This property is displayed only when the [Width](#width) property is set to *Pixels* or *Percentage*. The scroll container can be aligned to the left, to the right, or in the middle of its parent widget.
 
-_Default value:_ Center
+Default: *Center*
 
 ### 2.3 Regions Section
 

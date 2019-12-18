@@ -3,12 +3,31 @@ title: "Deployment"
 category: "Developer Portal"
 description: "Release notes for deployment capabilities managed in the Mendix Developer Portal"
 tags: ["deployment", "cloud environment", "Mendix Cloud", "SAP", "SAP Cloud", "IBM", "on-premises", "free app"]
-#When updating, remember to update the Latest Mendix Releases file
+#This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
 These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy), other [deployment](/developerportal/deploy/) options, and app [operations](/developerportal/operate/). For updates on the status of Mendix Cloud v4, Mendix Cloud v3, and other deployment options, see [Mendix Status](https://status.mendix.com/).
 
 ## 2019
+
+### December 5th, 2019
+
+#### Improvements
+
+* On the *General* page of App Buzz, we added a **Private Cloud** target. This will currently take you to a closed beta test that allows you to connect your private cluster to Mendix. You can ask to join the beta program, but places are currently limited.
+
+### November 26th, 2019
+
+#### IBM Cloud Portal Deployment
+
+* We have updated the process for deploying to IBM Cloud Portal - see [IBM Cloud](/developerportal/deploy/ibm-cloud) to see the new process.
+* We have also added the ability to manage IBM Cloud Portal Cloud Foundry Marketplace services from within the Mendix Developer Portal.
+
+### November 21st, 2019
+
+#### Mendix Cloud Deployment Upgrade
+
+* We implemented a number of improvements to enable Mendix Support to provide better support if there are deployment issues
 
 ### November 7th, 2019
 

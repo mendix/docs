@@ -11,7 +11,7 @@ This document explains how the Custom Action App works. All custom action how-to
 
 ## 2 Login Information
 
-The Custom Action App is a modified Company Expenses sample app. You need the following information to gain access:
+The Custom Action App is a modified company expenses app. You need the following information to gain access:
 
 * **URL** – [https://customactionapp.mxapps.io](https://customactionapp.mxapps.io)
 * **User name** – customaction

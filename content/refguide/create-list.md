@@ -26,6 +26,6 @@ The entity of the objects list. All objects in the list should be of the same ty
 
 ## 3 Output Properties
 
-### 3.1 List
+### 3.1 List Name
 
 This is the name of the list which can be used by all activities that follow this activity.

@@ -14,6 +14,8 @@ The Mendix Cloud supports adding custom domains such as `https://myapp.mycompany
 
 {{% alert type="info" %}}
 This option is provided for licensed apps. You cannot add custom domains to Free Apps.
+
+This documentation is describing certificates for *incoming* connections. For information on setting up certificates for *outgoing* connections, see [Certificates](certificates).
 {{% /alert %}}
 
 {{% alert type="warning" %}}

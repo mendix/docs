@@ -101,12 +101,10 @@ The value entered by the end user (or the default value in the case of hidden an
 | Starts with      | Does the attribute value start with the entered value?       | Text (attribute must be of type String) |
 | Greater          | Is the attribute value greater than the entered value?       | Text, Date                              |
 | Greater or equal | Is the attribute value greater than or equal to the entered value? | Text, Date                              |
-| Equal            | Is the attribute value the same as the entered value?        | Text, Date, Drop-down                   |
+| Equal  *(default)*            | Is the attribute value the same as the entered value?        | Text, Date, Drop-down                   |
 | Not equal        | Is the attribute value not the same as the entered value?    | Text, Date, Drop-down                   |
 | Smaller or equal | Is the attribute value smaller than or equal to the entered value? | Text, Date                              |
 | Smaller          | Is the attribute value smaller than the entered value?       | Text, Date                              |
-
-_Default value:_ Equal
 
 {{% alert type="info" %}}
 
@@ -124,7 +122,7 @@ It is possible to search on date attributes using equality. What happens with th
 | [%CurrentDateTime%]   | Search field shows the current date. Represents a 24 hour date range starting at the _current time_. |      | Search between August 4, <current time> and August 5, <current time> |
 | [%BeginOfCurrentDay%] | Search field shows the current date. Represents a 24 hour date range starting at midnight of the specified date. |      | Search between August 4, 0:00 - August 5, 0:00               |
 
-#### 3.3 Allow Multi-Select
+### 3.3 Allow Multi-Select
 
 {{% alert type="info" %}}
 
@@ -134,7 +132,7 @@ This property is available for **Drop-down** search fields.
 
 If this property is set to 'Yes', the resulting drop-down allows you to select multiple values instead of just one. When searching all records match for which the corresponding attribute is equal to one of the selected values. For example, you can search for all orders with status 'Submitted' or 'In progress'.
 
-#### 3.4 XPath Constraint
+### 3.4 XPath Constraint
 
 {{% alert type="info" %}}
 
@@ -151,7 +149,7 @@ Let us say you have a grid showing bicycles. In the domain model the bicycle has
 
 {{% /alert %}}
 
-#### 3.5 Sort Order
+### 3.5 Sort Order
 
 {{% alert type="info" %}}
 
@@ -161,9 +159,9 @@ This property is available for **Drop-down** search fields.
 
 The sort order specifies the order in which the items in the drop-down search field are shown. You can sort on multiple attributes in both directions (ascending and descending). If no sort order is specified, the drop-down search field sorts on the displayed attribute.
 
-_Default value:_ No sort order
+Default: *No sort order*
 
-#### 3.6 Lower Bound
+### 3.6 Lower Bound
 
 {{% alert type="info" %}}
 
@@ -173,7 +171,7 @@ This property is available for **Range** search fields.
 
 This attribute (path) determines the lower bound of the range.
 
-#### 3.7 Lower Bound Operator
+### 3.7 Lower Bound Operator
 
 {{% alert type="info" %}}
 
@@ -183,9 +181,9 @@ This property is available for **Range** search fields.
 
 The lower bound operator determines whether the comparison with the lower bound is inclusive (>=) or not (>). It can be either 'Greater' or 'Greater or equal'.
 
-*Default value*: Greater.
+Default: *Greater*
 
-#### 3.8 Upper Bound
+### 3.8 Upper Bound
 
 {{% alert type="info" %}}
 
@@ -195,7 +193,7 @@ This property is available for **Range** search fields.
 
 This attribute (path) determines the upper bound of the range.
 
-#### 3.9 Upper Bound Operator
+### 3.9 Upper Bound Operator
 
 {{% alert type="info" %}}
 
@@ -205,7 +203,7 @@ This property is available for **Range** search fields.
 
 The upper bound operator determines whether the comparison with the upper bound is inclusive (<=) or not (<). It can be either 'Smaller' or 'Smaller or equal'.
 
-*Default value*: Smaller
+Default: *Smaller*
 
 ## 4 Read More
 

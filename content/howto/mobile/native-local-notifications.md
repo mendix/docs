@@ -1,5 +1,5 @@
 ---
-title: "Use Local Notifications: Part 1"
+title: "Part 1: Local Notifications"
 parent: "local-notif-parent"
 menu_order: 10
 description: A tutorial for setting up local push notifications which do not use an internet connection.
@@ -111,7 +111,7 @@ Now you will set up the final logic necessary for your app to display a notifica
 11. Click **Expression wizard**
 12. Select **Value** > **Variable** > **Permission (Boolean)** from the drop-down menu. When finished, your **Decision** should look like this:
 
-	{{% image_container width="400" %}}![app settings](attachments/native-push/decision-1-config.png){{% /image_container %}}
+	{{% image_container width="400" %}}![app settings](attachments/native-push/decision-1-config-new.png){{% /image_container %}}
 
 13. Navigate back to your nanoflow.
 
@@ -176,7 +176,7 @@ Now you can run your app and see if your notification works.
 
 	If you did not see a notification, try clicking **Run Locally** to reload your app. Then, tap the **Send Notification** button again.
 
-Congratulations! You can now see local notifications on your device. Next, in [Use Local Notifications: Part 2 (Badges)](local-notif-badges), you will learn how to configure notification badges.
+Congratulations! You can now see local notifications on your device. Next, in [How to Use Local Notifications Part 2: Badges](local-notif-badges), you will learn how to configure notification badges.
 
 ## 4 Read More
 

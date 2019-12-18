@@ -31,6 +31,6 @@ Defines the initial value of the variable. The value is entered using an [expres
 
 ## 3 Output Properties
 
-### 3.1 Variable
+### 3.1 Variable Name
 
 Variable defines the name of the resulting variable. The variable can be used by all activities following this activity in the flow.

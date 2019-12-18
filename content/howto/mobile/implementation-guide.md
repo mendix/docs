@@ -74,13 +74,13 @@ If your project already has an AfterStartup microflow configured, it is recommen
 * add a new action to the existing AfterStartup microflow to run the AfterStartup_PushNotifications microflow
 
 <iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/02c590e5-f8bf-4f0e-90d6-3719390ee863/onstartupacsandpushnotifications?embed=true" allowfullscreen=""></iframe>
-
 ## 6 Setting Up the Administration Pages {#setting}
 
 Add the **PushNotifications_Administration** page to the project navigation, so it can be reached after you deploy your app. This page contains three tabs:
+
 * **Pending Messages** – shows all the messages that are queued either because they were sent using the QueueMessage action or because previous attempts to send them failed
 * **Devices** – contains a list of all the devices registered with the application and is useful for testing purposes
-* **Configuration** – used to configure your application so that it can reach the respective services (APNs and FCM) later on
+* **Configuration** – configures your application so that it can reach the respective services (APNs and FCM) later on
 
 {{% alert type="warning" %}}
 

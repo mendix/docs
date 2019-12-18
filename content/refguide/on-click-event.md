@@ -190,12 +190,10 @@ The table below described link types available for the **Open link** on click ev
 
 | Value     | Description                                          | Example                                   |
 | --------- | ---------------------------------------------------- | ----------------------------------------- |
-| **Web**   | Navigate to a website URL                            | `https://mysubdomain.mydomain.tld/mypage` |
-| **Email** | Specifies an email address to which to send an email | `firstname.secondname@mailprovider.tld`   |
-| **Call**  | Starts a phone call to this number                   | `+1-202-555-0165`                         |
-| **Text**  | Specifies a number to which to send a text message   | `+1-202-555-0112`                         |
-
-_Default value:_ Web
+| Web   *(default)*  | Navigate to a website URL                            | `https://mysubdomain.mydomain.tld/mypage` |
+| Email | Specifies an email address to which to send an email | `firstname.secondname@mailprovider.tld`   |
+| Call  | Starts a phone call to this number                   | `+1-202-555-0165`                         |
+| Text  | Specifies a number to which to send a text message   | `+1-202-555-0112`                         |
 
 {{%alert type="info" %}}
 

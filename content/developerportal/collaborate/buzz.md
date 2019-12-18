@@ -14,7 +14,7 @@ Located in the Developer Portal, Buzz lets you see Mendix app activity in your c
 
 Company Buzz is the landing page when you first sign in to the Developer Portal:
 
-![](attachments/buzz.jpg)
+![](attachments/buzz.png)
 
 Initially, you will see the Buzz activity for **All** apps for which you are a team member *plus* all Buzz activity for your company.
 
@@ -24,7 +24,7 @@ You can choose to see only activity for your company by selecting the company na
 
 Below the company name is a list of apps for which you are a team member. Clicking on the app name will take you to the [App Buzz](#app-buzz) for that app, described below.
 
-### 1.2 App Buzz{#app-buzz}
+### 1.2 App Buzz {#app-buzz}
 
 App Buzz is Buzz for a specific app. It is the landing page when you open that app project:
 

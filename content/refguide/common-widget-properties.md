@@ -22,7 +22,7 @@ The internal name of the widget. You can use this to give sensible names to widg
 
 The tab index influences the order in which the end-user navigates through the page using the tab key. By default tab indices are zero and the tab order is determined automatically by the client system. A value of minus one (-1) means that the widget will be skipped when tabbing through the page.
 
-_Default value:_ 0
+Default: *0*
 
 {{% alert type="info" %}}Tab index is not supported on native mobile pages.{{% /alert %}}
 
@@ -51,6 +51,10 @@ will result in red text on a blue background:
 ![](attachments/common-widget-properties/style-example.png)
 
 You can see which widgets in a page have styling applied via the style or class property by clicking the <strong>Show styles</strong> button.
+
+### 2.5 Documentation {#documentation}
+
+Some widgets, for example snippets and building blocks, have a **Documentation** property which can be used to store developer documentation. This can be used to explain to other developers how to use these widgets. End-users will never see this documentation.
 
 ## 3 Data Source Section {#data-source}
 
@@ -119,11 +123,9 @@ The editable property indicates whether the end-user will be able to change the 
 
 | Value       | Description                                                  |
 | ----------- | ------------------------------------------------------------ |
-| Default     | The value is editable if security allows it (as in, if the user that is signed in has write access to the selected attribute). |
+| Default *(default)*    | The value is editable if security allows it (as in, if the user that is signed in has write access to the selected attribute). |
 | Never       | The value is never editable.                                 |
 | Conditionally | The value is editable if the specified condition holds (see below). |
-
-*Default value*: Default
 
 ### 4.2 Condition
 
@@ -213,7 +215,7 @@ If set to _Fixed_, the decimal part always will be displayed with the number of 
 
 If set to _Auto_, the whole decimal part of the attribute value will be displayed. No decimal part will be be displayed if the attribute value is an integer.
 
-_Default value:_ Fixed
+Default: *Fixed*
 
 **Examples**
 
@@ -237,7 +239,7 @@ The precision of a value describes the number of decimal places that are used to
 
 The way that the number is rounded when displayed is defined in the [rounding](project-settings#rounding) section of *Project Settings*.
 
-_Default value:_ 2
+Default: *2*
 
 ### 6.3 Group Digits
 
@@ -247,7 +249,7 @@ This setting applies to all three numeric data types.
 
 Set **Group digits** to **Yes** to display these groups.
 
-_Default value:_ No
+Default: *No*
 
 **Example**
 
@@ -296,7 +298,7 @@ In **Mendix 8.1 and above**, the expression can access objects of **all** the da
 
 When a validation is set and it fails for this widget, the message you specify will be shown before the user can use the value in the app.
 
-*Default value:* (none)
+Default: *(none)*
 
 ### 7.2 Message
 

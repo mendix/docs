@@ -109,8 +109,8 @@ Now you will build a native app and install it on your phone. If you do not have
 
 	The settings are stored in *C:\Users\mendix.tech.writer\.native_builder* and looks like this:
 
-```json
-{
+	```json
+	{
 	"Native NFC App": {
 		"gitHubAccessToken": "a1f422...",
 		"appCenterApiToken": "a1b95a...",
@@ -123,9 +123,11 @@ Now you will build a native app and install it on your phone. If you do not have
 		"runtimeUrl": "https://nativenfc-sandbox.mxapps.io/"
 	}
 }
-```
+	```
 
-3. To build the app for the first time we can run the following command: `$ native-builder.exe build --project-name "Native NFC App" --app-version "1.0.0" --build-number 1` The project names should match the project names from the prepare command of step 1. The build might take a while and progress is given via the console. As a result, a `build/1` branches is created in the GitHub repository. And the output is now available in the `C:\native-builder\builds\` where you find `Native-NFC-App-Android-1.zip` for Android and `Native-NFC-App-iOS-1.zip` for iOS.
+3. To build the app for the first time we can run this `build` command 
+`$ native-builder.exe build --project-name "Native NFC App" --app-version "1.0.0" --build-number 1`. 
+	The project names should match the project names from your `prepare` command. This build will make a `build/1` branch in your GitHub repository. Its output is now available in the *C:\native-builder\builds\* folder, where you will find *Native-NFC-App-Android-1.zip* for an Android app and *Native-NFC-App-iOS-1.zip* for an iOS app.
 
 {{% alert type="info" %}}
 
@@ -134,7 +136,7 @@ Now you will build a native app and install it on your phone. If you do not have
 
 {{% /alert %}}
 
-4. It is recommended to validated if the local part of the build succeeded via the log files found in `C:\MendixProjects\NativeNFC\deployment\log\`.
+4. Validate that your local build succeeded by checking the log files in *C:\MendixProjects\NativeNFC\deployment\log\*.
 5. Install the app on your device. If you require some help at this step, please check the how to [Deploying native app, distribution section](/howto/mobile/deploying-native-app#6-distributing).
 [TODO You might get some message blocked by Play Protect, where you have to select `INSTALL ANYWAY` this should be added to https://docs.mendix.com/howto/mobile/deploying-native-app#6-1-2-installing-on-a-device]
 ![Github template repo](attachments/create-native-javascript-action/install-blocked-by-play-protect.jpg)

@@ -3,14 +3,23 @@ title: "Menus"
 category: "App Modeling"
 description: "Describes Studio Pro menus."
 menu_order: 12
-tags: ["Studio Pro"]
+tags: ["Studio Pro", "menu", "top bar"]
 ---
 
 ## 1 Introduction
 
+The top-bar of Studio Pro contains the following menus:
 
+* [File](#file) – allows you to manage documents and projects
+* [Edit](#edit) – allows you to edit documents
+* [View](#view) – allows you to view dockable panes
+* [Project](#project) – contains project-wide settings
+* [Run](#run) – contains actions on deploying your app or actions on the app that has been deployed 
+* [Version Control](#version-control) – contains settings on version control
+* [Language](#language) – contains language and translation settings
+* [Help](#help)  – allows you to view documentation, [Mendix Forum](https://forum.mendixcloud.com/index4.html), open log file directory, or view information on  the current information of Studio Pro
 
-## 3 File Menu 
+## 2 File Menu {#file}
 
 | Menu Item | Description | Shortcut Key |
 | --- | --- | --- |
@@ -28,41 +37,27 @@ tags: ["Studio Pro"]
 | **Import Project Package** | Imports a project package that was created with the **Export Project Package** menu item. |   |
 | **Exit** | Closes Studio Pro | |
 
-## 4 Edit Menu
+## 3 Edit Menu {#edit}
 
-The **Edit** menu allows you to perform various actions, such as cut/copy/paste. You can also set preferences for yourself via this menu. For more information on the **Edit** menu, see  [Edit Menu](edit-menu).
+The **Edit** menu allows you to perform various actions, such as cut/copy/paste. You can also set preferences via this menu. For more information on the **Edit** menu, see  [Edit Menu](edit-menu).
 
-## 5 View Menu {#view}
+## 4 View Menu {#view}
 
 The **View** menu allows you to view dockable panes, to enable the full screen mode, and reset the project layout. For more information on the **View** menu and its items, see [View Menu](view-menu).
 
-## 6 Project Menu
+## 5 Project Menu {#project}
 
 In the **Project** menu, you can view and/or manipulate settings that are connected to your project and deployment. For more information on the **Project** menu, see [Project Menu](project-menu).
 
-## 7 Run Menu
+## 6 Run Menu {#run}
 
-| Menu Item | Description | Shortcut Key |
-| --- | --- | --- |
-| **Run** | Deploys and run the project locally. The **Console** pane is activated and this shows the output of the server that runs the project. | <kbd>F5</kbd> |
-| **Run on Cloud Foundry** | Opens the **Edit Cloud Foundry Settings** dialog box so you can run your app on Cloud Foundry. | |
-| **Edit Cloud Foundry Settings** | Opens the **Edit Cloud Foundry Settings** dialog box so you can edit your Cloud Foundry settings. | |
-| **Run Locally** | Runs the project locally so you can view the app. | <kbd>F5</kbd> |
-| **Stop** | Stops the currently running project. | <kbd>Shift</kbd> + <kbd>F5</kbd> |
-| **onfiguration** | Sets the configuration level (**Default**). | |
-| **efault log level** | Allows setting the default log level before running the project locally. The options are **Trace**, **Debug**, **Info** (default), **Warning**, **Error**, **Critical**. |   |
-| **Debug** | Allows you to connect the [Debugger](view-menu#debugger). | |
-| **Responsive Browser** | Shows the web client for the currently running project in the browser. | <kbd>F9</kbd> |
-| **Tablet Browser** | Shows the tablet mobile client for the currently running project in the browser. | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F9</kbd> |
-| **Phone Browser** | Shows the mobile client for the currently running project in the browser. | <kbd>Ctrl</kbd> + <kbd>F9</kbd> |
-| **Hybrid Phone App Online** | Views the app as a phone app online. | |
-| **View in the Mendix App** | Views the app via the [Mendix Mobile app](getting-the-mendix-app). | |
+Via the **Run** menu, you can deploy your app (**Run** or **Run locally**), or perform various actions on the deployed app. For more information on **Run** menu items. see [Run Menu](run-menu). 
 
-## 8 Version Control Menu
+## 7 Version Control Menu {#version-control}
 
-In the Version Control menu, you can view and/or manipulate settings on the version control. More information on the **Version Control** menu, see [Version Control Menu](version-control-menu).
+In the **Version Control** menu, you can view and/or manipulate settings on the version control. More information on the **Version Control** menu, see [Version Control Menu](version-control-menu).
 
-## 9 Language Menu
+## 8 Language Menu {#language}
 
 | Menu Item | Description | Shortcut Key |
 | --- | --- | --- |
@@ -72,7 +67,7 @@ In the Version Control menu, you can view and/or manipulate settings on the vers
 | **Batch Translate** | Opens a dialog window in which you can quickly translate many texts from one language to another. |   |
 | **Language Operations** | Opens a dialog window in which you can copy, move, swap, or delete all translations in a given language for selected modules. |   |
 
-## 10 Help Menu
+## 9 Help Menu {#help}
 
 | Menu Item | Description | Shortcut Key |
 | --- | --- | --- |
@@ -82,4 +77,6 @@ In the Version Control menu, you can view and/or manipulate settings on the vers
 | **Open Log File Directory** | Opens the log files for your app project locally. |   |
 | **About Mendix Studio Pro** | Shows information about the current version of Mendix Studio Pro. |   |
 
-## Read More
+## 10 Read More
+
+* [Studio Pro Overview](studio-pro-overview)

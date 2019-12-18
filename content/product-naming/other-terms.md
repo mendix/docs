@@ -424,6 +424,14 @@ This is the correct capitalization for this [App Team role](/developerportal/com
 Capitalize in all instances.
 {{% /alert %}}
 
+### Studio Pro landing page
+
+The Studio Pro landing page refers to the page that contains **My Apps**, **App Store**, and **Developer Portal** tabs. 
+
+{{% alert type="info" %}}
+Capitalize "Studio Pro".
+{{% /alert %}}
+
 ### sub-microflow
 
 {{% alert type="info" %}}

@@ -12,5 +12,5 @@ These are the release notes for the [Mendix Metamodel](/apidocs-mxsdk/mxsdk/unde
 The release notes include all minor versions and patches.
 {{% /alert %}}
 
-For more information, see the [Model SDK](../model-sdk) release notes.
+For more information, see the [Model SDK](model-sdk) release notes.
 

@@ -30,19 +30,15 @@ These are the release notes for the [Mendix Metamodel](/apidocs-mxsdk/mxsdk/unde
 
 #### JavaScriptActionCallAction & JavaScriptActionParameterMapping (Elements)
 
-* We removed experimental status of these elements.
+* We removed the experimental status of these elements.
 
-#### StringTemplateParameterValue (Element)
+#### StringTemplateParameterValue & PushToClientAction (Elements)
 
-* We introduced this element.
+* We introduced these elements.
 
 #### ExpressionBasedCodeActionParameterValue (Element)
 
 * We introduced the `valueExpression` property.
-
-#### PushToClientAction (Element)
-
-* We introduced this element.
 
 ### Nanoflows
 
@@ -55,7 +51,7 @@ These are the release notes for the [Mendix Metamodel](/apidocs-mxsdk/mxsdk/unde
 #### PublishedODataService (ModelUnit)
 
 * We introduced the `summary` property as a one-line summary description of the service.
-* We ntroduced the `description` property as a multi-line description of the service.
+* We introduced the `description` property as a multi-line description of the service.
 
 #### ConsumedODataService (ModelUnit)
 
@@ -65,7 +61,7 @@ These are the release notes for the [Mendix Metamodel](/apidocs-mxsdk/mxsdk/unde
 
 #### WidgetValueType (Element)
 
-* We introduced tghe `dataSourceProperty` property.
+* We introduced the `dataSourceProperty` property.
 
 ### Navigation
 
@@ -79,16 +75,10 @@ These are the release notes for the [Mendix Metamodel](/apidocs-mxsdk/mxsdk/unde
 
 * We added the public `platform` property.
 
-#### MicroflowParameterMapping (Element)
-
-* We introduced the `variable` property,
-* We deleted the `widget` property. Use the `variable` property instead.
-* We deleted the `useAllPages` property. Use `variable` instead.
-
-#### NanoflowParameterMapping (Element)
+#### MicroflowParameterMapping & NanoflowParameterMapping (Elements)
 
 * We introduced the `variable` property.
-* We deleted the `widget` property. Use `variable` instead.
+* We deleted the `widget` property. Use the `variable` property instead.
 * We deleted the `useAllPages` property. Use `variable` instead.
 
 #### PageVariable (Element)
@@ -105,5 +95,5 @@ These are the release notes for the [Mendix Metamodel](/apidocs-mxsdk/mxsdk/unde
 
 #### RetrievalQuery (Element)
 
-* We ntroduced the `widgetName` and `usedAssociations` prorperties.
+* We introduced the `widgetName` and `usedAssociations` properties.
 * We deleted the `schemaId` property.

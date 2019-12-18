@@ -10,120 +10,64 @@ These are the release notes for the [Mendix Metamodel](/apidocs-mxsdk/mxsdk/unde
 
 **Release date: December 13th, 2019**
 
-## CodeActions
+### CodeActions
 
-### StringTemplateParameterType (Element)
+#### StringTemplateParameterType (Element)
 
-* Removed experimental.
+* We removed the experimental status of this element.
 
-## Microflows
+### Microflows
 
-### StringTemplateParameterValue (Element)
+#### StringTemplateParameterValue (Element)
 
-* Removed experimental.
+* We removed the experimental status of this element.
 
-### WebServiceCallAction (Element)
+#### WebServiceCallAction (Element)
 
-#### Property 'useRequestTimeOut'
+* We changed the default value of  the `useRequestTimeOut`, `timeOutModel`, and `timeOutExpression` properties.
 
-* Default value changed.
+#### RestCallAction (Element)
 
-#### Property 'timeOutModel'
+* We changed the default value of  the `useRequestTimeOut`, `timeOutModel`, and `timeOutExpression` properties.
 
-* Default value changed.
+### Projects
 
-#### Property 'timeOutExpression'
+#### Module (StructuralUnit)
 
-* Default value changed.
+* We introduced the `isReusableComponent` property.
 
-### RestCallAction (Element)
+### Rest
 
-#### Property 'useRequestTimeOut'
+#### ConsumedODataService (ModelUnit)
 
-* Default value changed.
+* We introduced the `timeoutModel` property for a timeout for HTTP requests.
+* We introduced the `timeoutExpression` property for a timeout for HTTP requests.
 
-#### Property 'timeOutModel'
+### WebServices
 
-* Default value changed.
+#### DataAssociation (Element)
 
-#### Property 'timeOutExpression'
+* We introduced the `summary` property as a short summary of the association that is being exposed.
+* We introduced the `description` property as a long description of the association that is being exposed.
 
-* Default value changed.
+#### DataAttribute (Element)
 
-## Projects
+* We introduced the `summary` property as a short summary of the attribute that is being exposed.
+* We introduced the `description` property as a long description of the attribute that is being exposed.
 
-### Module (StructuralUnit)
+#### SystemIdDataAttribute (Element)
 
-#### Property 'isReusableComponent'
+* We introduced the `summary` property as a short summary of the system ID that is being exposed.
+* We introduced the `description` property as a long description of the system ID that is being exposed.
 
-* Introduced.
+### CustomWidgets
 
-## Rest
+#### CustomWidgetDatabaseSource & CustomWidgetXPathSource (Elements)
 
-### ConsumedODataService (ModelUnit)
+* We introduced these elements.
 
-#### Property 'timeoutModel'
+### Pages
 
-* Introduced – a timeout for http requests.
+#### NativeLayoutContent (Element)
 
-#### Property 'timeoutExpression'
-
-* Introduced – a timeout for http requests.
-
-## WebServices
-
-### DataAssociation (Element)
-
-#### Property 'summary'
-
-* Introduced – a short summary of the association that is being exposed.
-
-#### Property 'description'
-
-* Introduced – a long description of the association that is being exposed.
-
-### DataAttribute (Element)
-
-#### Property 'summary'
-
-* Introduced – a short summary of the attribute that is being exposed.
-
-#### Property 'description'
-
-* Introduced – a long description of the attribute that is being exposed.
-
-### SystemIdDataAttribute (Element)
-
-#### Property 'summary'
-
-* Introduced – a short summary of the system id that is being exposed.
-
-#### Property 'description'
-
-* Introduced – a long description of the system id that is being exposed.
-
-## CustomWidgets
-
-### CustomWidgetDatabaseSource (Element)
-
-* Introduced.
-
-### CustomWidgetXPathSource (Element)
-
-* Introduced.
-
-## Pages
-
-### NativeLayoutContent (Element)
-
-#### Property 'layoutType'
-
-* Introduced.
-
-#### Property 'sidebar'
-
-* Introduced.
-
-#### Property 'sidebarWidgets'
-
-* Introduced.
+* We introduced the `layoutType`, `sidebar`, and `sidebarWidgets` properties.

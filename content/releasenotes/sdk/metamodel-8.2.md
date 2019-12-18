@@ -39,7 +39,7 @@ We made the following properties public:
 
 ### WidgetValue (Element)
 
-* we introduced the `widgets` property.
+* We introduced the `widgets` property.
 
 ## Pages
 

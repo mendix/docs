@@ -28,17 +28,13 @@ These are the release notes for the [Mendix Metamodel](/apidocs-mxsdk/mxsdk/unde
 
 ### Microflows
 
-#### JavaActionCallAction (Element)
-
-* We introduced the `outputVariableNameRuntime` property.
-
-#### MicroflowCallAction (Element)
+#### JavaActionCallAction & MicroflowCallAction (Elements)
 
 * We introduced the `outputVariableNameRuntime` property.
 
 ### Rest
 
-#### PublishedODataService (ModelUnit) & PublishedRestService (ModelUnit)
+#### PublishedODataService & PublishedRestService (ModelUnits)
 
 * We introduced the `authenticationTypesRuntime` property for **Authentication types supported by this service**.
 

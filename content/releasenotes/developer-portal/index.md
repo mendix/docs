@@ -17,7 +17,7 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 #### Improvements
 
-* We made some minor improvements to the style of the Stories Beta release. The issues regarding batch actions on this Stories Beta page are also fixed with this release.
+* We made some minor improvements to the style of the [Stories](/developerportal/collaborate/stories#beta) beta version. This release fixes issues regarding batch actions.
 
 ### December 13th, 2019 
 

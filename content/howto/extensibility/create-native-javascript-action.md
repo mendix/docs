@@ -9,7 +9,7 @@ tags: ["NFC", "Near Field Communication", "JavaScript", "native", "mobile"]
 
 ## 1 Introduction
 
-The true power of a native app is the performance and the ability to use hardware features of the devices. With a Near Field Communication JavaScript actions your Mendix application even more powerful when they can read NFC tags. This tutorial can also be used as an example, when you would like to use other third party modules.
+The true power of a native application is the performance and the ability to use hardware features of the devices. With a Near Field Communication JavaScript actions your Mendix application even more powerful when they can read NFC tags. This tutorial can also be used as an example, when you would like to use other third party modules.
 
 **This how-to will teach you how to do the following:**
 
@@ -117,8 +117,8 @@ For your information; the settings are stored in a file `C:\Users\mendix.tech.wr
 
 {{% alert type="info" %}}
 
-a) The free version of the App Center will cancel/timeout the build if it exceeds 30 minutes.
-b) By default, it builds both an iOS and Android app. If you like to build for one platform specific; you can add the parameter `--platform android` or `--platform ios` to the build command.
+1. The free version of the App Center will cancel/timeout the build if it exceeds 30 minutes.
+2. By default, it builds both an iOS and Android app. If you like to build for one platform specific; you can add the parameter `--platform android` or `--platform ios` to the build command.
 
 {{% /alert %}}
 

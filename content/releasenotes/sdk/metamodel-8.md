@@ -3,4 +3,10 @@ title: "8"
 parent: "metamodel" 
 ---
 
-The release notes for the [Mendix Metamodel](/apidocs-mxsdk/mxsdk/understanding-the-metamodel) version 8 are divided into the pages below.
+These are the release notes for the [Mendix Metamodel](/apidocs-mxsdk/mxsdk/understanding-the-metamodel) version 8:
+
+* [8.5](metamodel-8.5)
+* [8.4](metamodel-8.4)
+* [8.3](metamodel-8.3)
+* [8.2](metamodel-8.2)
+* [8.1](metamodel-8.1)

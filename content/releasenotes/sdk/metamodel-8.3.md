@@ -1,7 +1,6 @@
 ---
 title: "8.3"
-parent: "8"
-#When updating, remember to update the Latest Mendix Releases file
+parent: "metamodel-8"
 ---
 
 These are the release notes for the [Mendix Metamodel](/apidocs-mxsdk/mxsdk/understanding-the-metamodel) version 8.3.

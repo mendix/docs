@@ -1,6 +1,6 @@
 ---
 title: "8.1"
-parent: "metamodel"
+parent: "8"
 ---
 
 These are the release notes for the [Mendix Metamodel](/apidocs-mxsdk/mxsdk/understanding-the-metamodel) version 8.1.

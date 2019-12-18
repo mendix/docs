@@ -1,6 +1,6 @@
 ---
 title: "8.5"
-parent: "metamodel"
+parent: "8"
 #When updating, remember to update the Latest Mendix Releases file
 ---
 

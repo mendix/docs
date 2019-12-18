@@ -6,7 +6,7 @@ menu_order: 3
 
 These are the release notes for the [Mendix Metamodel](/apidocs-mxsdk/mxsdk/understanding-the-metamodel):
 
-{{% number_child_pages sort="desc" %}}
+* [8](metamodel-8)
 
 {{% alert type="info" %}}
 The release notes include all minor versions and patches.

@@ -3,7 +3,7 @@ title: "Use Over the Air Updates"
 parent: "native-mobile"
 menu_order: 71
 description: A tutorial for pushing over the air updates (OTA).
-tags: ["native", "mobile", "ota", "native-builder", "over the air"]
+tags: ["native", "mobile", "ota", "native-builder", "over the air", "update"]
 ---
 
 ## 1 Introduction

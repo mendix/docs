@@ -137,7 +137,7 @@ Now you will build a native app and install it on your phone. If you do not have
 {{% /alert %}}
 
 4. Validate that your local build succeeded by checking the log files in *C:\MendixProjects\NativeNFC\deployment\log\*.
-5. Install the app on your device. If you require some help at this step, please check the how to [Deploying native app, distribution section](/howto/mobile/deploying-native-app#6-distributing).
+5. Install the app on your device. If you require some help at this step, please check the [Distributing](/howto/mobile/deploying-native-app#distributing) section of *How to Deploy Your First Mendix Native App*.
 [TODO You might get some message blocked by Play Protect, where you have to select `INSTALL ANYWAY` this should be added to https://docs.mendix.com/howto/mobile/deploying-native-app#6-1-2-installing-on-a-device]
 ![Github template repo](attachments/create-native-javascript-action/install-blocked-by-play-protect.jpg)
 

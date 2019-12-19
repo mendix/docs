@@ -19,6 +19,10 @@ In the company [Buzz](collaborate/buzz), you can communicate with colleagues, Ap
 
 ![](attachments/developerportal-buzz.png)
 
+To start a new app project click **Create App**, which will open a page where you can choose a starting pointing for your new app:
+
+![](attachments/create-app.png)
+
 ## 3 Apps
 
 In [Apps](/developerportal/apps-list/index), you can find your free and licensed apps, nodes, and other apps created by your company:

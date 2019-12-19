@@ -65,6 +65,6 @@ This property defines the order of the list. The list can be sorted in ascending
 
 ## 5 Output Properties
 
-### 5.1 List or Object Name
+### 5.1 List Name or Object Name
 
 This is the name of the list or object returned by the activity. It can be used by all the activities that follow this activity.

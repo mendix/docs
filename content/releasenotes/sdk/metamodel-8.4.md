@@ -1,10 +1,7 @@
 ---
 title: "8.4"
-parent: "metamodel"
-#When updating, remember to update the Latest Mendix Releases file
+parent: "metamodel-8"
 ---
-
-These are the release notes for the [Mendix Metamodel](/apidocs-mxsdk/mxsdk/understanding-the-metamodel) version 8.4.
 
 ## 8.4.0
 
@@ -14,144 +11,86 @@ These are the release notes for the [Mendix Metamodel](/apidocs-mxsdk/mxsdk/unde
 
 #### StringTemplateParameterType (Element)
 
-* Introduced.
+* We introduced this element.
 
 ### JavaScriptActions
 
-### NanoflowJavaScriptActionParameterType (Element)
+#### NanoflowJavaScriptActionParameterType (Element)
 
-* Introduced.
+* We introduced this element.
 
 ### Microflows
 
 #### JavaActionParameterMapping (Element)
 
-##### Property 'argumentRuntime'
+* We deleted the `argumentRuntime` property.
 
-* Deleted.
+#### JavaScriptActionCallAction & JavaScriptActionParameterMapping (Elements)
 
-#### JavaScriptActionCallAction (Element)
+* We removed the experimental status of these elements.
 
-* Removed experimental status.
+#### StringTemplateParameterValue & PushToClientAction (Elements)
 
-#### JavaScriptActionParameterMapping (Element)
-
-* Removed experimental status.
-
-#### StringTemplateParameterValue (Element)
-
-* Introduced.
+* We introduced these elements.
 
 #### ExpressionBasedCodeActionParameterValue (Element)
 
-##### Property 'valueExpression'
-
-* Introduced.
-
-#### PushToClientAction (Element)
-
-* Introduced.
+* We introduced the `valueExpression` property.
 
 ### Nanoflows
 
 #### NanoflowParameterValue (Element)
 
-* Introduced.
+* We introduced this element.
 
 ### Rest
 
 #### PublishedODataService (ModelUnit)
 
-##### Property 'summary'
-
-* Introduced as a one-line summary description of the service.
-
-##### Property 'description'
-
-* Introduced as a multi-line description of the service.
+* We introduced the `summary` property as a one-line summary description of the service.
+* We introduced the `description` property as a multi-line description of the service.
 
 #### ConsumedODataService (ModelUnit)
 
-##### Property 'headersMicroflow'
-
-* Introduced as a microflow that provides headers to pass to the service.
+* We introduced the `headersMicroflow` property as a microflow that provides headers to pass to the service.
 
 ### CustomWidgets
 
 #### WidgetValueType (Element)
 
-##### Property 'dataSourceProperty'
-
-* Introduced.
+* We introduced the `dataSourceProperty` property.
 
 ### Navigation
 
 #### NavigationDocument (ModelUnit)
 
-##### Property 'schemas'
-
-* Deleted.
+* We deleted the `schemas` property.
 
 ### Pages
 
 #### BuildingBlock (ModelUnit)
 
-##### Property 'platform'
+* We added the public `platform` property.
 
-* Added public.
+#### MicroflowParameterMapping & NanoflowParameterMapping (Elements)
 
-#### MicroflowParameterMapping (Element)
-
-##### Property 'variable'
-
-* Introduced.
-
-##### Property 'widget'
-
-* Deleted. Use variable instead (see above).
-
-##### Property 'useAllPages'
-
-* Deleted. Use variable instead (see above).
-
-#### NanoflowParameterMapping (Element)
-
-##### Property 'variable'
-
-* Introduced.
-
-##### Property 'widget'
-
-* Deleted. Use variable instead (see above).
-
-##### Property 'useAllPages'
-
-* Deleted. Use variable instead (see above).
+* We introduced the `variable` property.
+* We deleted the `widget` property. Use the `variable` property instead.
+* We deleted the `useAllPages` property. Use `variable` instead.
 
 #### PageVariable (Element)
 
-* Introduced.
+* We introduced this element.
 
 #### Snippet (ModelUnit)
 
-##### Property 'type'
-
-* Added as public.
+* We added the `type` property as public.
 
 #### RetrievalSchema (Element)
 
-* Deleted.
+* We deleted this element.
 
 #### RetrievalQuery (Element)
 
-##### Property 'widgetName'
-
-* Introduced.
-
-##### Property 'usedAssociations'
-
-* Introduced.
-
-##### Property 'schemaId'
-
-* Deleted.
+* We introduced the `widgetName` and `usedAssociations` properties.
+* We deleted the `schemaId` property.

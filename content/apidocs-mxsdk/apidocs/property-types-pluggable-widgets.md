@@ -45,6 +45,7 @@ This defines a property's type. A `type` must be one of the following:
 	* [action](#action)
 	* [attribute](#attribute)
 	* [object](#object)
+	* [file](#file)
 
 ### 1.2 XML Elements
 
@@ -532,6 +533,33 @@ When the property is defined as follows:
 Then the Studio Pro UI for the property appears like this:
 
 ![](attachments/widget-property-types/object.png)
+
+### 4.6 File {#file}
+
+The file property allows a user to configure a file from an object that is a specialization of **System.File**. It is passed as a [`DynamicValue<FileValue>`](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets#filevalue) prop to a client component.
+
+#### 4.6.1 XML Attributes
+
+| Attribute  | Required | Attribute Type | Description |
+| ---------- | -------- | -------------- | ----------- |
+| `type`     | Yes      | String         | Must be `file` |
+| `key`      | Yes      | String         | See [key](#key)  |
+
+#### 4.6.3 Studio Pro UI
+
+When the property is defined as follows:
+
+```xml
+<property key="file" type="file" required="false">
+	<caption>File</caption>
+	<category>General</category>
+	<description>Sample text file</description>
+</property>
+```
+
+Then the Studio Pro UI for the property appears like this:
+
+![](attachments/widget-property-types/file.png)
 
 ## 5 System Properties {#system-properties}
 

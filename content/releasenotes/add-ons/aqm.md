@@ -1,5 +1,5 @@
 ---
-title: "Application Quality Monitor"
+title: "AQM"
 category: "Add-ons"
 menu_order: 30
 ---

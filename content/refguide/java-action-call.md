@@ -40,6 +40,6 @@ The return type is the [data type](data-types) of the result of the Java action.
 
 If **User return value** is set to *Yes* you will be asked to give the return value a name.
 
-### 3.3 Variable, Object, or List
+### 3.3 Variable Name, Object Name, or List Name
 
 The result of the Java action will be given this name. The label indicates whether the result is a variable, object, or list. If it is an object or list, the **Return type** will indicate the entity which is being returned.

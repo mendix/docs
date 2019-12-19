@@ -5,7 +5,7 @@ menu_order: 2
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
-These are the [Platform SDK](/apidocs-mxsdk/mxsdk/) release notes, including all minor versions and patches.
+These are the [Mendix Platform SDK](/apidocs-mxsdk/mxsdk/) release notes, including all minor versions and patches.
 
 ## 4.1.1
 

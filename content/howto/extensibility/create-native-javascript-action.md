@@ -238,45 +238,61 @@ For information about linking, see the following resources:
 
 The dependency is split into two parts: the native device part, and the client JavaScript part. In this section we will add the dependency JavaScript for the client bundle. For the bundling we need add the dependency builder can add the `react-native-nfc-manager` JavaScript code.
 
-1. Open in the command line tool the folder of the module containing your javascript action. `$ cd C:\MendixProjects\NativeNFC\javascriptsource\nativenfc\actions`
-2. In this folder you will find the file *HasNFCSupport.js* that contains the code of the javascript action.
+1. In your CLI, open the module folder which contains your JavaScript action:
+
+	```
+	$ cd C:\MendixProjects\NativeNFC\javascriptsource\nativenfc\actions
+	```
+
+2. In this folder, locate *HasNFCSupport.js* which the JavaScript action's code.
 4. Install the dependency with the command `$ npm install react-native-nfc-manager@1.2.2`.
 
-{{% alert type="warn" %}}
+{{% alert type="info" %}}
 
-This will create a **node_module** folder inside your **actions** folder. It is a known issue, when you try to commit the node_modules folder via SVN could give some trouble when it contains an excessive number of files. If necessary, you could remove superfluous files.
+This will create a **node_module** folder inside your **actions** folder. There is a known issue that when you try to commit the *node_modules* folder using Apache Subversion there coule be issues if your commit contains an excessive number of files. To solve this, try removing unnecessary files.
 
 {{% /alert %}}
 
-### 3.5 Create NFC JavaScript actions
+### 3.5 Create NFC JavaScript Actions
 
-JavaScript actions for the web and native platform are similar. With the difference that they have their own set of dependencies they can build on.
+JavaScript actions for the web and native platforms are similar. However, they have their own set of dependencies which they can build on.
 
-1. Let's first built an action to check if the device has support for NFC.
-	1. Open a JavaScript action `HasNFCSupport` action, created in step chapter 3.1.
-	2. Change the **Return type** to `Boolean`.
-	3. Add the import above the EXTRA CODE block.
+Build an action to check if a device supports NFC:
+
+1. Open a JavaScript action `HasNFCSupport` action, created in step chapter 3.1.
+2. Change the **Return type** to `Boolean`.
+3. Add the import above the EXTRA CODE block.
+	
 	``` javascript
 	import NfcManager from "react-native-nfc-manager";
 	```
-	4. Add the following code to the USER CODE block.
+	
+4. Add the following code to the USER CODE block.
+	
 	``` javascript
 	return NfcManager.isSupported();
 	```
+
 	The NfcManager is imported from our newly added module. The `isSupported` functions checks if NFC is supported by the hardware. It returns a *Promise* that will resolved to a boolean value to indicate whether NFC is supported.
 
-	5. Optional **Expose as nanoflow action** and a nice icon if you like.
-![has NFC support action settings](attachments/create-native-javascript-action/action-has-nfc-support-settings.png)
-![has NFC support action code](attachments/create-native-javascript-action/action-has-nfc-support-code.png)
+	5. Optional **Expose as nanoflow action** and a nice icon:
+	
+	![has NFC support action settings](attachments/create-native-javascript-action/action-has-nfc-support-settings.png)
 
-2. Now we can make an action to read the NFC tag information.
-	1. Create an action named `ReadNFCTag`
-	2. Select the **Return type** `String`.
-	3. Add the import above the EXTRA CODE block.
+	![has NFC support action code](attachments/create-native-javascript-action/action-has-nfc-support-code.png)
+
+Now make an action to read the NFC tag information:
+	
+1. Create an action named `ReadNFCTag`
+2. Select the **Return type** `String`.
+3. Add the import above the EXTRA CODE block.
+
 	``` javascript
 	import NfcManager, { Ndef } from "react-native-nfc-manager";
 	```
-	4. Add the following code to the USER CODE block.
+	
+4. Add the following code to the USER CODE block:
+
 	``` javascript
 	return new Promise(resolve => {
 		NfcManager.registerTagEvent(tag => {
@@ -286,7 +302,8 @@ JavaScript actions for the web and native platform are similar. With the differe
 		});
 	});
 	```
-	We return a promise, that will resolve a string value. In this way the nanoflow will wait till we call the resolve function. With the registration we start listening for tag that are picked up by the reader. The callback function is executed when a tag is found, we un-register to stop listening for other tags. The payload is decoded from a byte array into text. When the resolve function is called with the text parameter that nanoflow will receive this value as the return parameter.
+
+	We return a promise, that will resolve a string value. In this way the nanoflow will wait until we call the resolve function. With the registration we start listening for tag that are picked up by the reader. The callback function is executed when a tag is found, we un-register to stop listening for other tags. The payload is decoded from a byte array into text. When the resolve function is called with the text parameter that nanoflow will receive this value as the return parameter.
 	
 	5. Optional, **Expose as nanoflow action** add a nice icon if you would like.
 

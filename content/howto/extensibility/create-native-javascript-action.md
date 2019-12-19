@@ -131,8 +131,8 @@ Now you will build a native app and install it on your phone. If you do not have
 
 {{% alert type="info" %}}
 
-1. The free version of the App Center will cancel/timeout the build if it exceeds 30 minutes.
-2. By default, it builds both an iOS and Android app. If you like to build for one platform specific; you can add the parameter `--platform android` or `--platform ios` to the build command.
+1. During a build, the free version of the App Center will time out if the build exceeds 30 minutes.
+2. By default, App Center builds both an iOS and Android app. To build for one platform specifically, add the parameter `--platform android` or `--platform ios` to the `build` command.
 
 {{% /alert %}}
 

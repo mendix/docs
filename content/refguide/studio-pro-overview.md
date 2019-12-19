@@ -28,9 +28,9 @@ In the Studio Pro top bar, you can see several menus, such as [Edit](edit-menu),
 
 For more information on menus, see [Menus](menus). 
 
-## 3 Shortcut Keys
+## 4 Shortcut Keys
 
-### 3.1 General Shortcut Keys
+### 4.1 General Shortcut Keys
 
 In the main window pane, <kbd>Ctrl</kbd> + <kbd>Tab</kbd> can be used to navigate between all open documents. Other shortcut keys that can be used in the main window pane can be found next to their relevant menu item in  [Menus](#menus).
 
@@ -51,7 +51,7 @@ In most edit grids (such as the list of attributes in the entity properties), th
 | <kbd>Enter</kbd> | Edits the currently selected item. |
 | <kbd>Delete</kbd> | Deletes the currently selected item(s). |
 
-### 3.2 Domain Model Editor Shortcut Keys
+### 4.2 Domain Model Editor Shortcut Keys
 
 The following shortcut keys are available in the domain model editor:
 
@@ -61,7 +61,7 @@ The following shortcut keys are available in the domain model editor:
 | <kbd>Ctrl</kbd> + <kbd>A</kbd> | Selects all entities. |
 | <kbd>Esc</kbd> | Clears selection. |
 
-### 3.3 Page Editor Shortcut Keys
+### 4.3 Page Editor Shortcut Keys
 
 The following shortcut keys are available in the page editor:
 
@@ -72,7 +72,7 @@ The following shortcut keys are available in the page editor:
 | <kbd>Enter</kbd> | Edits the properties of the currently selected object in a dialog box. |
 | <kbd>F2</kbd> | Edits the caption of a label or button inline on the page. You can also just start typing a letter or a digit and the caption will be replaced by what you type. |
 
-### 3.4 Microflow Editor Shortcut Keys
+### 4.4 Microflow Editor Shortcut Keys
 
 The following shortcut keys are available in the microflow editor:
 
@@ -87,7 +87,7 @@ The following shortcut keys are available in the microflow editor:
 | <kbd>Shift</kbd> when resizing an activity | When resizing the entity, by holding <kbd>Shift</kbd> , the microflow component will stay centered at its current position and will expand equally in all directions. |
 | <kbd>Ctrl</kbd> when selecting multiple activities | When pressing the <kbd>Ctrl</kbd>, you can select additional microflow components. Clicking a selected component while holding <kbd>Ctrl</kbd> will deselect it. |
 
-### 3.5 Microflow Debugger Shortcut Keys {#debugger-shortcuts}
+### 4.5 Microflow Debugger Shortcut Keys {#debugger-shortcuts}
 
 The following shortcut keys are available for the the microflow debugger:
 

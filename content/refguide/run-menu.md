@@ -1,8 +1,8 @@
 ---
-title: "Menus"
-category: "App Modeling"
+title: "Run Menu"
+parent: "menus"
 description: "Describes the Run menu in Mendix Studio Pro."
-menu_order: 12
+menu_order: 35
 tags: ["Studio Pro", "run", "run menu"]
 ---
 

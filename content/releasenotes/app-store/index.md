@@ -5,7 +5,7 @@ tags: ["app store", "connector", "module", "add on", "widget"]
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
-These release notes cover changes made to the [Mendix App Store](https://appstore.home.mendix.com/index3.html). For more information, see the [App Store](/developerportal/app-store/) section of the *Developer Portal Guide*.
+These release notes cover changes made to the [Mendix App Store](/developerportal/app-store/).
 
 ## 2019
 

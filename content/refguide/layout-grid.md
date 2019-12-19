@@ -77,7 +77,8 @@ A layout grid can contain one or more rows. Each row contains [columns](#columns
 
 An example of layout grid row properties is represented in the image below:
 
-{{% image_container width="300" %}}![Row Properties](attachments/container-widgets/row-properties.png)
+{{% image_container width="400" %}}![Row Properties](attachments/container-widgets/row-properties.png)
+{{% /image_container %}}
 
 Row properties consist of the following sections:
 
@@ -105,8 +106,8 @@ The **General** section of a row contains the following properties:
 
   * **Bottom** – columns are aligned to the bottom of the layout grid
 
-    {{% alert type="info" %}}This setting can be overridden by the **Align vertically** setting of an individual column.
-    {{% /alert %}}
+{{% alert type="info" %}}This setting can be overridden by the **Align vertically** setting of an individual column.
+{{% /alert %}}
 
 * **Spacing between columns** – when set to *Yes*, adds spacing between columns
 

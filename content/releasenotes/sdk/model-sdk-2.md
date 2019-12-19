@@ -3,8 +3,6 @@ title: "2"
 parent: "model-sdk"
 ---
 
-These are the release notes for the Model SDK version 2.
-
 ## 2.9.1
 
 | Impact | Description                                                  |

@@ -230,10 +230,7 @@ This test method contains the following test steps:
 
 Now that you are logged in, you will want to navigate to the **Expenses** tab. To add the third test method, follow these steps:
 
-1.  Open , and in the **Project Explorer**, open the **Desktop_AdminMenu** page:
-  
-    ![](attachments/18448634/18580390.png)
-
+1.  Open , and in the **Project Explorer**, open the **Desktop_AdminMenu** page.
 2.  Select the **Expenses** tab:
   
     ![](attachments/18448634/18580389.png)

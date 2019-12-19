@@ -1,6 +1,6 @@
 ---
 title: "Commit"
-parent: "project-menu"
+parent: "version-control-menu"
 menu_order: 20
 tags: ["studio pro"]
 ---

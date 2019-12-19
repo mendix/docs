@@ -66,7 +66,7 @@ The **View** menu allows you to view dockable panes, to enable the full screen m
 
 ## 6 Project Menu
 
-In the **Project** menu, you can view and/or manipulate settings that are connected to the version control or deployment. For more information on the **Project** menu, see [Project Menu](project-menu).
+In the **Project** menu, you can view and/or manipulate settings that are connected to your project and deployment. For more information on the **Project** menu, see [Project Menu](project-menu).
 
 ## 7 Run Menu
 
@@ -86,7 +86,11 @@ In the **Project** menu, you can view and/or manipulate settings that are connec
 | **Hybrid Phone App Online** | Views the app as a phone app online. | |
 | **View in the Mendix App** | Views the app via the [Mendix Mobile app](getting-the-mendix-app). | |
 
-## 8 Language Menu
+## 8 Version Control Menu
+
+In the Version Control menu, you can view and/or manipulate settings on the version control. More information on the **Version Control** menu, see [Version Control Menu](version-control-menu).
+
+## 9 Language Menu
 
 | Menu Item | Description | Shortcut Key |
 | --- | --- | --- |
@@ -96,7 +100,7 @@ In the **Project** menu, you can view and/or manipulate settings that are connec
 | **Batch Translate** | Opens a dialog window in which you can quickly translate many texts from one language to another. |   |
 | **Language Operations** | Opens a dialog window in which you can copy, move, swap, or delete all translations in a given language for selected modules. |   |
 
-## 9 Help Menu
+## 10 Help Menu
 
 | Menu Item | Description | Shortcut Key |
 | --- | --- | --- |
@@ -106,9 +110,9 @@ In the **Project** menu, you can view and/or manipulate settings that are connec
 | **Open Log File Directory** | Opens the log files for your app project locally. |   |
 | **About Mendix Studio Pro** | Shows information about the current version of Mendix Studio Pro. |   |
 
-## 10 Shortcut Keys
+## 11 Shortcut Keys
 
-### 10.1 General Shortcut Keys
+### 11.1 General Shortcut Keys
 
 In the main window pane, <kbd>Ctrl</kbd> + <kbd>Tab</kbd> can be used to navigate between all open documents. Other shortcut keys that can be used in the main window pane can be found next to their relevant menu item in the [Menus](#menus) section above.
 
@@ -129,7 +133,7 @@ In most edit grids (such as the list of attributes in the entity properties), th
 | <kbd>Enter</kbd> | Edits the currently selected item. |
 | <kbd>Delete</kbd> | Deletes the currently selected item(s). |
 
-### 10.2 Domain Model Editor Shortcut Keys
+### 11.2 Domain Model Editor Shortcut Keys
 
 The following shortcut keys are available in the domain model editor:
 
@@ -139,7 +143,7 @@ The following shortcut keys are available in the domain model editor:
 | <kbd>Ctrl</kbd> + <kbd>A</kbd> | Selects all entities. |
 | <kbd>Esc</kbd> | Clears selection. |
 
-### 10.3 Page Editor Shortcut Keys
+### 11.3 Page Editor Shortcut Keys
 
 The following shortcut keys are available in the page editor:
 
@@ -150,7 +154,7 @@ The following shortcut keys are available in the page editor:
 | <kbd>Enter</kbd> | Edits the properties of the currently selected object in a dialog box. |
 | <kbd>F2</kbd> | Edits the caption of a label or button inline on the page. You can also just start typing a letter or a digit and the caption will be replaced by what you type. |
 
-### 10.4 Microflow Editor Shortcut Keys
+### 11.4 Microflow Editor Shortcut Keys
 
 The following shortcut keys are available in the microflow editor:
 
@@ -165,7 +169,7 @@ The following shortcut keys are available in the microflow editor:
 | <kbd>Shift</kbd> when resizing an activity | When resizing the entity, by holding <kbd>Shift</kbd> , the microflow component will stay centered at its current position and will expand equally in all directions. |
 | <kbd>Ctrl</kbd> when selecting multiple activities | When pressing the <kbd>Ctrl</kbd>, you can select additional microflow components. Clicking a selected component while holding <kbd>Ctrl</kbd> will deselect it. |
 
-### 10.5 Microflow Debugger Shortcut Keys {#debugger-shortcuts}
+### 11.5 Microflow Debugger Shortcut Keys {#debugger-shortcuts}
 
 The following shortcut keys are available for the the microflow debugger:
 

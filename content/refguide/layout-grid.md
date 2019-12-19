@@ -16,7 +16,7 @@ In a browser, the layout grid is based on the Bootstrap grid system. For more in
 
 {{% alert type="info" %}}
 
-Row and column properties described below are available if your project has [Mendix version 8.5](/release) or above  and [Atlas UI Resources](https://appstore.home.mendix.com/link/app/104730/) version 2.4.0 or above. 
+Row and column properties described below are available if your project has [Mendix version 8.5](/releasenotes/studio-pro/8.5) or above  and [Atlas UI Resources](https://appstore.home.mendix.com/link/app/104730/) version 2.4.0 or above. 
 
 For more information on row and column properties, see the [Rows and Their Properties](#rows) and [Columns and Their Properties](#columns) sections. 
 
@@ -64,12 +64,6 @@ As the layout grid responds to the viewport width, and not to the width of its c
 ### 2.4 Visibility Section {#visibility}
 
 {{% snippet file="refguide/visibility-section-link.md" %}}
-
-{{% alert type="info" %}}
-
-Row and column properties described below are available if your project has [Mendix version 8.5](/release) or above  and Atlas UI Resources version 2.4.0 or above. 
-
-{{% /alert %}}
 
 ## 3 Rows and Their Properties {#rows}
 
@@ -128,11 +122,11 @@ Layout grid column properties consist of the following sections:
 * [Common](#column-common)
 * [General](#column-general)
 
-### 4.1 Common Section
+### 4.1 Common Section {#column-common}
 
 {{% snippet file="refguide/common-section-link.md" %}}
 
-### 4.2 General Section
+### 4.2 General Section {#column-general}
 
 #### 4.2.1 **Width** {#column-width}
 

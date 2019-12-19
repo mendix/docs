@@ -29,7 +29,7 @@ The **Layout Grid** helps you to structure a page and make it responsive immedia
 {{% image_container width="350" %}}![Device Modes](attachments/page-editor-widgets-structure/device-modes.png)
 {{% /image_container %}}
 
-Layout grid contains [columns and rows](#columns-and-rows). 
+Layout grid contains [columns](#column) and [rows](#row). 
 
 A row consists of one or more columns that are placed next to each other in a responsive (desktop) view. 
 
@@ -122,7 +122,7 @@ In the **General** section of a row you can select the number of columns in it, 
 
         ![Adding New Column](attachments/page-editor-widgets-structure/adding-new-column.png)
 
-* **Align Columns Vertically** – aligns all columns in the row vertically, you can select the following options:
+* <a name="align-columns"></a>**Align Columns Vertically** – aligns all columns in the row vertically, you can select the following options:
 
     {{% image_container width="280" %}}![](attachments/page-editor-widgets-structure/align-columns.png)
     {{% /image_container %}}
@@ -153,7 +153,7 @@ The Expand section of a column allows you to add a row or a column.
 
 **Add Column** allows you to add a column to the left or to the right of the selected one.
 
-#### 3.3.2 General Section
+#### 3.3.2 General Section {#general-section-column}
 
 In the **General** section, you can set the column [width](#column-width) and [align](#align-column) an individual column. 
 

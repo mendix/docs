@@ -4,4 +4,8 @@ parent: "ats"
 menu_order: 20
 ---
 
-The release notes for ATS version 1 are divided into the pages below.
+These are the release notes for Mendix Application Test Suite version 1:
+
+* [1.8](ats-1.8)
+* [1.6](ats-1.6)
+* [1.5](ats-1.5)

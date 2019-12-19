@@ -4,4 +4,6 @@ parent: "apm"
 menu_order: 10
 ---
 
-The release notes for APM version 2 are divided into the pages below.
+These are the release notes for Mendix Application Performance Monitor version 2:
+
+* [2.0](apm-2.0)

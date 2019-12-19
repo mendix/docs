@@ -3,7 +3,7 @@ title: "8"
 parent: "metamodel" 
 ---
 
-These are the release notes for the [Mendix Metamodel](/apidocs-mxsdk/mxsdk/understanding-the-metamodel) version 8:
+These are the release notes for the Mendix Metamodel version 8:
 
 * [8.5](metamodel-8.5)
 * [8.4](metamodel-8.4)

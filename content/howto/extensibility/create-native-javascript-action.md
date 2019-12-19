@@ -137,17 +137,16 @@ Now you will build a native app and install it on your phone. If you do not have
 {{% /alert %}}
 
 4. Validate that your local build succeeded by checking the log files in *C:\MendixProjects\NativeNFC\deployment\log\*.
-5. Install the app on your device. If you require some help at this step, please check the [Distributing](/howto/mobile/deploying-native-app#distributing) section of *How to Deploy Your First Mendix Native App*.
-[TODO You might get some message blocked by Play Protect, where you have to select `INSTALL ANYWAY` this should be added to https://docs.mendix.com/howto/mobile/deploying-native-app#6-1-2-installing-on-a-device]
-![Github template repo](attachments/create-native-javascript-action/install-blocked-by-play-protect.jpg)
+5. Install the app on your device. For more information on installing, please check the [Distributing](/howto/mobile/deploying-native-app#distributing) section of *How to Deploy Your First Mendix Native App*.
+	On Android, you might see a dialog box warning you against installing. Tap **INSTALL ANYWAY**.
+	
+	![Github template repo](attachments/create-native-javascript-action/install-blocked-by-play-protect.jpg)
 
-6. Open your app and you should see the homepage of the native app. 
-
-The result in the running app could look like this:
+6. Open your app, which could look like this:
 
 	![native nfc app home](attachments/create-native-javascript-action/native-nfc-app-home-android.jpg)
 
-When clicking on the button you will receive an error **JavaScript action was not implemented**. You will implement your action later.
+7. Tap your NFC button. You will incur this error: **JavaScript action was not implemented**. You will implement your action later.
 
 {{% alert type="info" %}}
 
@@ -155,18 +154,21 @@ The Native Builder will locally run Mxbuild. The output is a *bundles.js* file w
 
 {{% /alert %}}
 
-### 3.3 Installing a Dependency in the App
+### 3.3 Installing a Dependency in Your App
 
-With the help of an external library, [react-native-nfc-manager](https://www.npmjs.com/package/react-native-nfc-manager), adding NFC capacities is made easier. At the current moment, the Mendix native client is based on *React Native version 0.59*, which will have an impact on the selected version of the library. All changes we will make to the `master` branch, for each build a new branch is creates `build/{number}` from `master` with the latest change.
-The dependency is split into two parts: the native OS part, and the client JavaScript part. In this section we will add the dependency for the app.
+Using an external library, specifically [react-native-nfc-manager](https://www.npmjs.com/package/react-native-nfc-manager), makes adding NFC capacities easier. At the current moment, the Mendix native client is based on *React Native version 0.59*, which will have an impact on the selected version of the library [todo: can we delete this sentence? it is a dependency]. You will make all changes to the **master** branch, because with each build a new branch is created (`build/{number}`) from **master** with your latest changes.
 
-1. Let's open the folder where our GitHub project could be stored. Open a command line tool and change directory: `$ cd C:/github/`
-2. Use your repository URL to clone the files on your machine with the command `$ git clone https://github.com/user-name/native-nfc-app`
-3. Open the folder where the code is cloned into: `$ cd native-nfc-app`
-4. To install all its current dependencies use the command `$ npm install`
-5. Now we will install the required library as a dependency. `$ npm install --save react-native-nfc-manager@1.2.2`. Please note the version after the @ sign. Version 2 and higher are not supported on Mendix 8.3.
-6. To integrate the module into the template, some code changes need to be done, with the help op the `link` we can do most of it automatically. Install react native CLI via the command `npm install -g react-native-cli@2.0.1`
-7. Now link the new module with the command `$ react-native link react-native-nfc-manager`. Sometimes linking will fail. To validate success you could go the [manual linking](# 3.3.1 Linking manual) steps. (Some times the `import` described in step 3 and 4 is not done automatically).
+The dependency is split into two parts: the native OS part, and the client JavaScript part. In this section you will add the dependency for the app.
+
+1. Open a command line interface (CLI) and change directory to the folder your GitHub project will be stored in: `$ cd C:/github/`.
+2. Use your repository URL to clone the files on your machine with the command `$ git clone https://github.com/user-name/native-nfc-app`.
+3. Open the folder where the code is cloned into: `$ cd native-nfc-app`.
+4. To install all its current dependencies, use the command `$ npm install`.
+5. Now install the required library as a dependency: `$ npm install --save react-native-nfc-manager@1.2.2`. 
+	Note the version after the `@` sign. Version 2 and higher are not supported on Mendix Studio Pro 8.3.
+6. To integrate the module into the template, some code changes need to be done. Using `link` you can do most changes automatically. Install react native CLI via the command `npm install -g react-native-cli@2.0.1`.
+7. Now link the new module with the command `$ react-native link react-native-nfc-manager`. 
+	Sometimes linking will fail. To validate success, consult the [Manual Linking](#manual-linking) section below. Errors can occur when the `import` is not done automatically.
 8. For Android we have set the *uses permission* in the `android/app/src/main/AndroidManifest.xml` file. Add the following section before the line with <application`
 ``` xml
 <uses-permission android:name="android.permission.NFC" />
@@ -180,7 +182,7 @@ The dependency is split into two parts: the native OS part, and the client JavaS
 11. Let's commit the files with the command `$ git commit -m "Add NFC Manager dependency"`.
 12. Now the files are committed but they are only stored locally on your machine. Let us push them to your repository with the command `$ git push`. This will make the changes available for the Native Builder to create a new app with NFC support.
 
-#### 3.3.1 Manual linking
+#### 3.3.1 Manual linking {#manual-linking}
 In the section below we user `react-native link` this command is used for React Native version <0.60. And will be replace in >=0.60 with auto linking. Auto linking does not require any linking or code changes. However, both processes are not without flaws and not every module does support it.
 
 {{% alert type="info" %}}

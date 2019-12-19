@@ -3,8 +3,6 @@ title: "8.3"
 parent: "metamodel-8"
 ---
 
-These are the release notes for the [Mendix Metamodel](/apidocs-mxsdk/mxsdk/understanding-the-metamodel) version 8.3.
-
 ## 8.3.0
 
 **Release date: October 25th, 2019**

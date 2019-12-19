@@ -4,8 +4,6 @@ parent: "metamodel-8"
 #When updating, remember to update the Latest Mendix Releases file
 ---
 
-These are the release notes for the [Mendix Metamodel](/apidocs-mxsdk/mxsdk/understanding-the-metamodel) version 8.5.
-
 ## 8.5.0
 
 **Release date: December 13th, 2019**

@@ -4,7 +4,7 @@ category: "SDKs"
 menu_order: 1
 ---
 
-These are the release notes for the Mendix Model SDK:
+These are the release notes for the [Mendix Model SDK](/apidocs-mxsdk/mxsdk/sdk-intro):
 
 * [4](model-sdk-4)
 * [3](model-sdk-3)

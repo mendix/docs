@@ -8,9 +8,9 @@ tags: ["Native", "Android", "iOS", "Apple", "Android"]
 #KI: "When using the `Touchable` option" = UICORE-417
 ---
 
-{{% alert type="info" %}}
-For more information on the Make It Native app, see [Getting the Make It Native App](/refguide/getting-the-make-it-native-app). Click here to download the Make It Native app for [iOS](https://apps.apple.com/app/make-it-native/id1334081181), or here for [Android](https://play.google.com/store/apps/details?id=com.mendix.developerapp).
-{{% /alert %}}
+For more information on the Make It Native app, see [Getting the Make It Native App](/refguide/getting-the-make-it-native-app).
+
+You can download the Make It Native app for [iOS](https://apps.apple.com/app/make-it-native/id1334081181) or [Android](https://play.google.com/store/apps/details?id=com.mendix.developerapp).
 
 ## Android 1.2.1 / iOS 1.2.3
 

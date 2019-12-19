@@ -24,6 +24,7 @@ Before starting this how-to, make sure you have completed the following prerequi
  * Use v1.0.0 with Mendix 8.0
  * Use v2.0.0 with Mendix 8.1.0 and above
  * Use v3.0.0 with Mendix 8.3.0 and above
+ * Use v3.1.0 with Mendix 8.5.0 and above
 
 ### 2.1 Platform-Specific Prerequisites
 

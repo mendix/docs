@@ -22,7 +22,7 @@ While styling Mendix apps users often face a situation when they have to apply s
 
 Design properties is a special set of settings shipped together with a Mendix theme module. This way design properties are shared among Mendix apps which use that theme module. The user can see design properties available for a widget in Properties pane or in the settings dialog of the widget under **Appearance** tab. 
 
-![Design properties from AtlasUI for a button widget](attachments/desing-properties/desing_properties_teaser.png)
+![Design properties from AtlasUI for a button widget](attachments/design-properties/design_properties_teaser.png)
 
 ## 4 Design property types
 
@@ -114,7 +114,7 @@ An example of a **Toggle** design property is as follows
 ```
 
 And screenshots showing how this design property appears:
-![Toggle property in Studio Pro](attachments/desing-properties/design_property_toggle_studio_pro.png)
+![Toggle property in Studio Pro](attachments/design-properties/design_property_toggle_studio_pro.png)
 
 An example of a **Dropdown** design property is as follows
 ```js
@@ -136,8 +136,8 @@ An example of a **Dropdown** design property is as follows
 ```
 
 And screenshots showing how this design property appears:
-![Dropdown property in Studio Pro](attachments/desing-properties/design_property_dropdown_studio_pro.png)
-![Dropdown property options in Studio Pro](attachments/desing-properties/design_property_dropdown_open_studio_pro.png)
+![Dropdown property in Studio Pro](attachments/design-properties/design_property_dropdown_studio_pro.png)
+![Dropdown property options in Studio Pro](attachments/design-properties/design_property_dropdown_open_studio_pro.png)
 
 
 #### 5.1.1 Common fields

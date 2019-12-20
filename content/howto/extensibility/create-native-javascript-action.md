@@ -21,7 +21,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Install Mendix 8.4.1 (Build 63369) see [App Store](https://appstore.home.mendix.com/link/modelers/)
 * Install the [Git](https://git-scm.com/downloads) command line tool
-* Install npm's [node js](https://nodejs.org) [todo: correct?]
+* Install npm through [node js](https://nodejs.org)
 * Have a fiscal [NFC NDEF](https://www.dummies.com/consumer-electronics/nfc-data-exchange-format-ndef/) tag for testing
 * Have a device with NFC capabilities
 
@@ -64,7 +64,7 @@ Follow the instructions below to set up your NFC project:
 
 	![app settings](attachments/create-native-javascript-action/app-settings.png)
 
-8. Rename the module **NativeMobile** to *NativeNFC*. In this module add our implementation [todo: what?].
+8. Rename the module **NativeMobile** to *NativeNFC*. You will be working in that module from now on.
 7. Create a empty JavaScript action named *HasNFCSupport*. Right-click on the module and select **Add other** > **JavaScript action**. Name the new JavaScript action *HasNFCSupport*. You will create the implementation later in this tutorial.
 8. Open the **Home_Native** page and add some welcome text for you test app.
 9. Add an action button with caption *Scan NFC Tag* on your home page. <br />
@@ -86,13 +86,13 @@ Follow the instructions below to set up your NFC project:
 
 	![native nfc app home](attachments/create-native-javascript-action/native-nfc-app-home-studio-pro.png)
 
-### 3.2 Building a Native App [TODO: is this names shell app?]
+### 3.2 Building a Native App
 
 todo: how much of this can I replace with "Go to Deploy doc and follow sections 1-6?"
 
 Now you will build a native app and install it on your phone. If you do not have your GitHub and App Center keys, follow [How to Deploy Your First Mendix Native App](/howto/mobile/deploying-native-app) explaining how get your authentication codes. When you like to know more about the native builder commands and parameter you could check out the [Native builder reference guide](/refguide/native-builder) for further help.
 
-1. Open a command line tool. [TODO discuss use of suggested command line tool, cmd.exe or power shell]
+1. Open your command line interface (CLI) of choice.
 2. Prepare all build settings and execute the command with your substitute parameters with correct paths and URLs:
 
 	``` shell
@@ -156,7 +156,11 @@ The Native Builder will locally run Mxbuild. The output is a *bundles.js* file w
 
 ### 3.3 Installing a Dependency in Your App
 
-Using an external library, specifically [react-native-nfc-manager](https://www.npmjs.com/package/react-native-nfc-manager), makes adding NFC capacities easier. At the current moment, the Mendix native client is based on *React Native version 0.59*, which will have an impact on the selected version of the library [todo: can we delete this sentence? it is a dependency]. You will make all changes to the **master** branch, because with each build a new branch is created (`build/{number}`) from **master** with your latest changes.
+Using an external library, specifically [react-native-nfc-manager](https://www.npmjs.com/package/react-native-nfc-manager), makes adding NFC capacities easier. You will make all changes to the **master** branch, because with each build a new branch is created (`build/{number}`) from **master** with your latest changes.
+
+{{% alert type="info" %}}
+Currently the Mendix Native Template is based on *React Native version 0.59*. This will impact the selected version of the library. Therefore you must select a compatible version of the library.
+{{% /alert %}}
 
 The dependency is split into two parts: the native OS part, and the client JavaScript part. In this section you will add the dependency for the app.
 
@@ -179,7 +183,7 @@ The dependency is split into two parts: the native OS part, and the client JavaS
 
 For iOS we have to add NFC capabilities for signing signing process. 
 
-10. Open your project in xCode [todo: switch to "app"?]:<br />
+10. Open your Native Template project in xCode:<br />
 	a. In **Signing & Capabilities**, click **+ Capability** and select **Near Field Communication Tag Reading**.<br />
 	
 	![ios capabilities](attachments/create-native-javascript-action/xcode-capabilities-nfc.png)
@@ -317,8 +321,8 @@ Make a Nanoflow to use your new actions:
 
 	![Scan tag nanoflow](attachments/create-native-javascript-action/scan-tag-nanoflow.png)
 
-1. Open the **ATC_ScanTag** nanoflow which was created in test project 3.1. [todo: was it? not named elsewhere in doc]
-3. Add the **Has NFC Support** action. [TODO is this named action or activity?]
+1. Open **ACT_ReadNFCTag** nanoflow which was created in your Mendix project.
+3. Add the **Has NFC Support** action.
 4. On the action, right-click and select **Set error handling** and set the type to **Custom without rollback**.
 5. Create a **Show message** action and set the template as: *Error occur while checking NFC support: {1}*. Use *$lastError* as the parameter.
 6. Connect the **Has NFC Support** activity with the **Show message** activity. Right-click it, and select **Set as error handler**.
@@ -453,7 +457,7 @@ At the begin of the action, you check on the Android platform if the NFC tag rea
 
 For Android you add a lister for the *hardware back button*. When pressed you will stop listening for tags, and cancel the execution by calling the `reject` function. This way the nanoflow will receive an error that is caught by the error handler. 
 
-During the period that you are listening for a tag, the user can switch off the NFC function in Android. This will cause a *state change* that you will catch and cause a rejection to the promise.  [todo: check]
+During the period that you are listening for a tag, the user can switch off the NFC function in Android. This will cause a state change that you will catch and cause a rejection to the promise. 
 
 The second parameter of the `registerTagEvent` function is the instruction text shows in the iOS `Ready to Scan` dialog box. After the tag is found by the reader, you have to `stop` the NFC manager. This way you stop listening for state changes on Android, and you stop listening for the session to close in iOS.
 

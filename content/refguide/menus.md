@@ -11,11 +11,11 @@ tags: ["Studio Pro", "menu", "top bar"]
 The top-bar of Studio Pro contains the following menus:
 
 * [File](#file) – allows you to manage documents and projects
-* [Edit](#edit) – allows you to edit documents
-* [View](#view) – allows you to view dockable panes
+* [Edit](#edit) – allows you to perform editing functions such as search or copy within Studio Pro
+* [View](#view) – allows you to choose how Studio Pro and dockable panes within Studio Pro are displayed
 * [Project](#project) – contains project-wide settings
-* [Run](#run) – contains actions on deploying your app or actions on the app that has been deployed 
-* [Version Control](#version-control) – contains settings on version control
+* [Run](#run) – contains actions for deploying and monitoring your app. 
+* [Version Control](#version-control) – contains setting for version control
 * [Language](#language) – contains language and translation settings
 * [Help](#help)  – allows you to view documentation, [Mendix Forum](https://forum.mendixcloud.com/index4.html), open log file directory, or view information on  the current information of Studio Pro
 
@@ -51,7 +51,7 @@ In the **Project** menu, you can view and/or manipulate settings that are connec
 
 ## 6 Run Menu {#run}
 
-Via the **Run** menu, you can deploy your app (**Run** or **Run locally**), or perform various actions on the deployed app. For more information on **Run** menu items. see [Run Menu](run-menu). 
+The **Run** menu contains actions for deploying and monitoring your app, such as **Run**, **Run locally**, or **Debugger**. For more information on **Run** menu items, see [Run Menu](run-menu). 
 
 ## 7 Version Control Menu {#version-control}
 

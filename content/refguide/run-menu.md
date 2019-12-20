@@ -8,7 +8,7 @@ tags: ["Studio Pro", "run", "run menu"]
 
 ## 1 Introduction
 
-Via the **Run** menu you can perform actions on deploying your app (for example, **Run** or **Run locally**) or actions on the app that has already been deployed (for example, you can view the currently running project in the web client). 
+The **Run** menu allows you to deploy and monitor your app:
 
 ![Run Menu](attachments/run-menu/run-menu.png)
 

@@ -125,12 +125,14 @@ The feedback feature requires the following properties to be set:
 * **Advanced** tab > **Feedback server location** – the URL of the Developer Portal server (usually `https://sprintr.home.mendix.com`)
 * **Project** tab > **App ID** – the unique identifier of your app project available in your app's [General](../settings/general-settings) settings in the Developer Portal
 
-The App Switcher feature requires the MendixSSO module to be implemented and the following properties to be set:
+The App Switcher feature requires the Mendix SSO module to be implemented and the following properties to be set:
 
 * **Advanced** tab > **ID token provider** - Microflow that will return the current ID token from the MendixSSO module
-* **Advanced** tab > **Access token provider** - Microflow that will return the current access from the MendixSSO module
-* **Advanced** tab > **Access token provider** - Microflow that renews the access token when the current one has expired
 * **Advanced** tab > **Show App Switcher button** 
+
+To retreive the ID token, you need to create a microflow in your app that returns the string value of the decrypted ID token from the Mendix SSO module. That obtain the token the microflow needs to call the *DS_GetCurrentIdToken* microflow from the Mendix SSO module:
+
+![](attachments/feedback/example-id-token-microflow.png)
 
 In the properties, you can configure the widget for certain actions in your app project, for example:
 

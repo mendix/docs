@@ -13,6 +13,16 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 ## 2019
 
+### December 23th, 2019
+
+#### Improvements
+
+* We made minor improvements to the process of creating a new app.
+
+#### Fixes
+
+* We fixed an issue where you were redirected to the **Comments** page from the **Stories** page.
+
 ### December 18th, 2019
 
 #### Improvements

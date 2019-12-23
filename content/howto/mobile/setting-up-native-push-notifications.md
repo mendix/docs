@@ -101,7 +101,7 @@ To customize your Android source code and enable push notifications, do the foll
        </activity>
        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
          <receiver android:name="io.invertase.firebase.notifications.RNFirebaseNotificationReceiver"/>
-         <receiver android:enabled="true" android:exported="true"  android:name="io.invertase.firebase.notification
+         <receiver android:enabled="true" android:exported="true"  android:name="io.invertase.firebase.notifications.RNFirebaseNotificationsRebootReceiver">
              <intent-filter>
                  <action android:name="android.intent.action.BOOT_COMPLETED"/>
                  <action android:name="android.intent.action.QUICKBOOT_POWERON"/>
@@ -160,10 +160,20 @@ You will test your implementation against a local Mendix instance, which require
          // NOTE: Do not place your application dependencies here; they belong
          // in the individual module build.gradle files
      }
+
+    apply plugin: 'com.google.gms.google-services'
+    com.google.gms.googleservices.GoogleServicesPlugin.config.disableVersionCheck = true
 ```
 
-6. Open *android/app/src/main/res/raw/runtime_url* and replace its one line with your local IP address.
-7. Commit and push your changes to master. This will automatically trigger an App Center build.
+6. Add *android/build.gradle* following lines:
+
+```diff
+include ':react-native-firebase'
+project(':react-native-firebase').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-firebase/android')
+```
+
+7. Open *android/app/src/main/res/raw/runtime_url* and replace its one line with your local IP address.
+8. Commit and push your changes to master. This will automatically trigger an App Center build.
 
 ### 5.2 Customizing iOS Source Code
 

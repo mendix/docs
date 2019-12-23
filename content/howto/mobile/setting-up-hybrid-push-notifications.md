@@ -9,8 +9,6 @@ title: "Set Up Hybrid Push Notifications"
 
 ## 1 Introduction
 
-todo: improve
-
 In this how to we will set up hybrid push notifications.
 
 **This how-to will teach you how to do the following:**
@@ -54,7 +52,7 @@ To build the hybrid app package, follow these steps:
 
     ![](attachments/implement-sso/build.phonegap.com.png)
 
-## 9 Read More
+## 4 Read More
 
 * [Implement Push Notifications](implementation-guide)
 * [Publish a Mendix Hybrid Mobile App in Mobile App Stores](publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)

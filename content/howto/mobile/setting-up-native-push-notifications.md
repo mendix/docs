@@ -9,17 +9,17 @@ title: "Setting Up Remote Notifications"
 
 ## 1 Introduction
 
-todo: move this text to a parent intro doc or the local notifs one --> If you want to use local push notifications with Make it Native app, the only step you have to perform is [Firebase setup](#4-firebase-setup)
-
 Remote push notifications allow you to remotely trigger small text messages, sounds, and more on your users' devices. For more information on notifications, see Apple's [APNs Overview](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html) or Google's [Notifications Overview](https://developer.android.com/guide/topics/ui/notifiers/notifications).
 
-Native remote push notifications have the same capabilities as [hybrid push notifications](link here). However, native push notifications require a unique setup method:
+Native remote push notifications have the more capabilities than hybrid push notifications. Native push notifications also require a unique setup method:
 
 1. Generate an app using the Native Builder.
 2. Configure your Firebase setup.
 3. Customize your native template.
 
-Follow the sections below to complete these three tasks and enable native remote push notifications. After you have completed this document, see [How To Use Native Push Notifications](link here) for instructions on implementing native push notifications.
+Follow the sections below to complete these three tasks and enable native remote push notifications. After you have completed this document, see [How To Use Native Push Notifications](/howto/mobile/native-remote-notifications) for instructions on implementing native push notifications.
+
+If you want to use local push notifications with the Make it Native app, the only step you have to perform is [Setting up Firebase Cloud Messaging Service (#4-firebase-setup)
 
 **This how-to will teach you how to do the following:**
 
@@ -38,7 +38,7 @@ To make a native app for this how to, do the following:
 1. Complete [How to Deploy Your First Mendix Native App](deploying-native-app) through the end of the *Preparing Your Project* section. Once you finish this, you will have a generated a GitHub repository with all the files you will need. 
 2. Clone the generated repository to your computer. This will enable customizations later.
 
-## 4 Setting up Firebase Cloud Messaging Service
+## 4 Setting up Firebase Cloud Messaging Service {#firebase-setup}
 
 Google's Firebase service supports both Android and Apple push notifications. Because APNs can require more work from you during customization steps, this document will teach you to set up your push notifications using Firebase.
 
@@ -177,11 +177,11 @@ project(':react-native-firebase').projectDir = new File(rootProject.projectDir, 
 
 ### 5.2 Customizing iOS Source Code
 
-todo: intro text needed
+In order for your generated template to work with push notifications, make the following changes to your iOS source code.
 
 {{% alert type="info" %}}
 
-Remote notifications will not work with an iOS simulator [todo: emulator?]
+Remote notifications will not work with iOS Simulator.
 
 {{% /alert %}}
 

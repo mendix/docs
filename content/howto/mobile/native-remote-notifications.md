@@ -5,17 +5,18 @@ title: "Use Remote Notifications"
 #menu_order: 11
 #description: "Learn to set up native push notifications with the Native builder."
 #tags: ["mobile", "push notification", "remote", "push", "notification"]
+draft: true
 ---
 
 ## 1 Introduction
 
-remote notifications only work with apps created through the Native Builder. You cannot send notifications to an app inside the Make it Native app.
+This tutorial will teach you to configure and test remote notifications. Remote notifications only work with apps created through the Native Builder. You cannot send notifications to an app inside the Make it Native app.
 
 ## 2 Prerequisites
 
-If you want to use push notifications with custom apps which created with native builder, make sure you have completed the following prerequisites:
+If you want to use push notifications with custom apps which created with native builder, make sure you have completed the following prerequisite:
 
-* Setting up native push notifications with native builder [Native Builder](https://docs.mendix.com/howto/mobile/native-builder#1-introduction) 
+* Complete [How to Deploy Your First Mendix Native App](/howto/mobile/deploying-native-app) through the end of the *Making Your First Build* section
 
 ## 3 Setting Up Your Mendix Project
 
@@ -104,7 +105,7 @@ Deploy your project and open your administration page in a web browser. Do the f
 
 Next you will test the implementation of your configurations.
 
-### 3.5 Sending a Push Notification to a Single Device
+### 3.5 Sending a Push Notification to a Single Device {#sending-single}
 
 1. Reload the app on your phone.
 2. Put the app in the background by returning to your phone's home screen.
@@ -154,7 +155,7 @@ In this section you will learn the following:
 
 #### 4.1.2 Synchronizing Unused Entities
 
-Studio Pro does smart data syncing, meaning if an entity has not been retrieved in native side, it will not be there. This situation will not occur since most Mendix native apps do retrieve entities which you want to show. For more information, see the [Sychronization](refguide/offline-first#sychronization) section of the *Offline First Reference Guide*.
+Studio Pro does smart data syncing, meaning if an entity has not been retrieved in native side, it will not be there. This situation will not occur since most Mendix native apps do retrieve entities which you want to show. For more information, see the [Sychronization](/refguide/offline-first#sychronization) section of the *Offline-First Reference Guide*.
 
 Your app does not retrieve any products in any of its pages. Fix this by doing the following:
 
@@ -200,7 +201,7 @@ In order to send a particular object to a page, first an object's GUID must be d
 #### 4.1.5 Testing the Implementation {#testing-guid}
 
 1. Click the nanoflow button you created in [Determining GUIDs](#guid-objects) to log the object's GUID (which you can see in your Studio Pro Console).
-2. Follow the steps in the [Simple Push Notification](#sending-simple-push-notification) section again, but with the following changes:<br />
+2. Follow the steps in the [Sending a Push Notification to a Single Device](#sending-single) section again, but with the following changes:<br />
     a. Set the action name to *sendProduct*.<br />
     b. Set **Context object guid** to the GUID you just logged:
 
@@ -222,18 +223,21 @@ In order to send a particular object to a page, first an object's GUID must be d
 
     ![ContainerVisibility](attachments/native-remote-push/modeler/ContainerVisibility.png)
 
-3. Create a nanoflow called *ACT_ShowNotificationOnRecieve* which will be responsible for switching `NativeNotification/showNotification` attribute:<br />
-![ACT_ShowNotificationOnRecieve](attachments/native-remote-push/modeler/ACT_ShowNotificationOnRecieve.png)
-    a. NativeNotification as a parameter.<br />
-    b. Change the `NativeNotification/showNotification` to `true`, without committing.<br />
-    c. Javascript action `Wait` for `5000` ms.<br />
-    d. Change the `NativeNotification/showNotification` to `false`, without committing.
+3. Create a nanoflow called *ACT_ShowNotificationOnRecieve* which will be responsible for toggling the **NativeNotification/showNotification** attribute:<br />
+    a. Set **NativeNotification** as a parameter.<br />
+    b. Change **NativeNotification/showNotification** to **true** without committing.<br />
+    c. Drag and drop a **Wait** JavaScript action, and set it for *5000* ms.<br />
+    d. Change the **NativeNotification/showNotification** to **false** without committing.
+    
+	![ACT_ShowNotificationOnRecieve](attachments/native-remote-push/modeler/ACT_ShowNotificationOnRecieve.png)
 
-4. Home_Native/ Notification widget => Change action named `sendProduct`, on recieve triggers `ACT_ShowNotificationOnRecieve`
+4. Navigate to your **Home_Native** page and do the following:<br />
+	a. Double-click your notification widget<br />
+	b. Change **sendProduct** so that on recieve it triggers **ACT_ShowNotificationOnRecieve**.
 
-    ![sendProductOnRecieve](attachments/native-remote-push/modeler/sendProductOnRecieve.png)
+	![sendProductOnRecieve](attachments/native-remote-push/modeler/sendProductOnRecieve.png)
 
-Follow steps for the previous sections in [here](###testing-the-implementation) but this time put the app in the foreground. You will see the the text with a button for a five seconds.
+Now repeat the steps in [Testing the Implementation](#testing-guid), but this time put your app in the foreground. You will see a notification with your text and a button for five seconds.
 
 ![onRecieveShowDV](attachments/native-remote-push/modeler/onRecieveShowDV.png)
 
@@ -243,7 +247,7 @@ What if you want to send messages to all your users' devices with a single butto
 
 ### 5.1 Creating a Microflow to Send a Data Object Push Notification 
 
-Create a microflow *ACT_SendProductToAllDevices* with the following elements [todo check where pics should go]:
+Create a microflow *ACT_SendProductToAllDevices* with the following elements:
 
 ![SendProductToAll](attachments/native-remote-push/modeler/SendProductToAll.png)
 

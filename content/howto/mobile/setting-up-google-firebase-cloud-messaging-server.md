@@ -1,6 +1,6 @@
 ---
 title: "Set Up the Google Firebase Cloud Messaging Server"
-parent: "push-notifications"
+parent: "mobile"
 menu_order: 40
 tags: ["mobile", "push notification", "google", "firebase", "server"]
 ---
@@ -47,33 +47,33 @@ Click **Create new project** and fill in the project name and region for your ap
 
 ![](attachments/Setting+up+Google+Firebase+Cloud+Messaging+Server/Create_Firebase_Project.png)
 
-## 4 Adding Android/Ios app
+## 4 Adding an Android or iOS App
 
-1) Click the cogwheel and select project settings
+Before you add an app to FCM, you must retrieve your app's bundle ID. Its location depends on your type of app.
 
-![](attachments/push-server/firebase/project_settings.png)
+For a native app, you can find this ID in your generated GitHub repo. Open  *android/app/src/main/AndroidManifest.xml* and consult your manifest tag's `package` property to find your ID. This package name will be the same when adding iOS app.
 
-2) Go to general tab and press add app
+![](attachments/push-server/firebase/android_manifest.png)
 
-![](attachments/push-server/firebase/add_app.png)
-
-3) Select android and fill in the bundle_id. 
-
-![](attachments/push-server/firebase/android_setup.png)
-
-Bundle id must be matching with your package id. Make sure to repeat this step for IOS aswell.
-
-### Hybrid apps
-
-For adding push notifications in hybrid apps, you can find this id in: your sprintr project => Deploy => Mobile App =>
+For a hybrid app, you can find this ID in your Project Dashboard. Click **Deploy**, then **Mobile App**. Your ID is listed as **App Identifier**:
 
 ![](attachments/push-server/firebase/hybrid_app_identifier.png)
 
-### Native apps
+Do the following to add your app to FCM:
 
-For adding push notifications with native builder, you can find this id in: your generated github repo =>  `android/app/src/main/AndroidManifest.xml` => `manifest tag's package property`. This package name will be the same for adding IOS app.
+1. Click the **Project Overview** cogwheel and select **Project settings**:
 
-![](attachments/push-server/firebase/android_manifest.png)
+  ![](attachments/push-server/firebase/project_settings.png)
+
+2. Go to the **General** tab and click **Add app**:
+
+  ![](attachments/push-server/firebase/add_app.png)
+
+3. Select Android and fill in the bundle_id. 
+
+  ![](attachments/push-server/firebase/android_setup.png)
+
+Bundle id must be matching with your package id. Make sure to repeat this step for IOS aswell.
 
 ## 5 Configuring APNs Credentials (Optional) {#configuring}
 
@@ -83,7 +83,7 @@ Navigate to the **Cloud messaging** tab.
 
 ![](attachments/push_notifications_cloud_messaging.png)
 
-On this tab, upload either your APNs key or your APNs certificate(s). Check [Setting up apple push notification server](setting-up-apple-push-notification-server##3-option-B:-using-an-sSL-certificate)
+On this tab, upload either your APNs key or your APNs certificate(s). For more information on APN SSL certificates, see [How to Set up the Apple Push Notification Server](setting-up-apple-push-notification-server).
 
 ## 6 Setting Up a Service Account
 
@@ -95,7 +95,7 @@ On this page, press **Generate new private key**. Store the resulting file in a 
 
 The file you just created gives API access to all available Firebase services for your app. If you want a more restrictive service account, click **Manage all service accounts** in the top-right of the screen, then create a service account that is restricted to using the Cloud Messaging functionality.
 
-## 6 Downloading the Google Services Config Files {#downloading-the-google-services-config-files}
+## 7 Downloading the Google Services Config Files {#downloading-the-google-services-config-files}
 
 In addition to the back-end configuration set up in the previous steps, you will need additional files that will be bundled as part of your mobile application. To obtain these, again click the cogwheel in the top-left of the screen and select **Project settings**. Then navigate to the **General** tab.
 
@@ -107,7 +107,7 @@ The list at the bottom shows the Android and iOS applications that you have conf
 Only create an iOS application in your Firebase project when you plan on using FCM for sending push notifications to iOS devices. If you plan on keeping using APNS to send push notifications to iOS devices, you do not have to create an iOS application in your Firebase project, and you do not have to download a *GoogleService-Info.plist* config file.
 {{% /alert %}}
 
-## 7 Read More
+## 8 Read More
 
 * [Implement Push Notifications](implementation-guide)
 * [Setting up hybrid push notifications](setting-up-hybrid-push-notifications)

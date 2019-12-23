@@ -10,6 +10,13 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 ## 2019
 
+
+### December 23rd, 2019
+
+#### Improvements
+
+We have improved the stability and performance of Mendix Cloud Deployment(Ticket#86800, 92241, 92426)
+
 ### December 5th, 2019
 
 #### Improvements

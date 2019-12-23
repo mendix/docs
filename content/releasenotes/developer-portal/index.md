@@ -13,6 +13,12 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 ## 2019
 
+### December 23th, 2019
+
+### Improvements
+
+* We made improvements to the create new app flow and the issue of going to the comments tab on the story details page is addressed. This release improves the performance of the create new app flow and it fixes the redirecting to the comments page from the stories page.
+
 ### December 18th, 2019
 
 #### Improvements

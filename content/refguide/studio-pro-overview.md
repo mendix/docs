@@ -22,7 +22,7 @@ Press <kbd>F1</kbd> while in Studio Pro to quickly jump to the right page in the
 
 The documents you view and edit are shown in tabs. You can have a number of tabs open, just like in a modern web browser. They can be closed, reordered, and shown side by side. Each document has its own save state, history, and future, so undo and redo actions are unlimited.
 
-## 3 Menus
+## 3 Menus 
 
 In the Studio Pro top bar, you can see several menus, such as [Edit](edit-menu), [View](view-menu), or [Version Control](version-control-menu) menus. Each menu contains menu items that allow you to perform various actions, for example, to [create a deployment package](create-deployment-package-dialog), set [preferences](preferences-dialog), or view the [Errors](errors-pane) pane. 
 
@@ -32,7 +32,7 @@ For more information on menus, see [Menus](menus).
 
 ### 4.1 General Shortcut Keys
 
-In the main window pane, <kbd>Ctrl</kbd> + <kbd>Tab</kbd> can be used to navigate between all open documents. Other shortcut keys that can be used in the main window pane can be found next to their relevant menu item in  [Menus](#menus).
+In the main window pane, <kbd>Ctrl</kbd> + <kbd>Tab</kbd> can be used to navigate between all open documents. Other shortcut keys that can be used in the main window pane can be found next to their relevant menu item in  [Menus](menus).
 
 In most dialog boxes for editing properties, the following shortcut keys can be used:
 

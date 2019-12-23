@@ -110,4 +110,4 @@ The render mode determines how the text will be displayed.
 
 * [Page](page)
 * [Common Widgets](common-widgets)
-* [Properties Common for Widgets](common-widget-properties)
+* [Properties Common in the Page Editor](common-widget-properties)

@@ -112,6 +112,6 @@ The image widget is converted to the image viewer and you can configure it.
 
 * [Page](page)
 * [Common Widgets](common-widgets)
-* [Properties Common for Widgets](common-widget-properties)
+* [Properties Common in the Page Editor](common-widget-properties)
 
 

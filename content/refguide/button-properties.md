@@ -193,7 +193,7 @@ To add items to a drop-down buttons, do the following:
 
 * [Page](page)
 * [Button Widgets](button-widgets)
-* [Properties Common for Widgets](common-widget-properties)
+* [Properties Common in the Page Editor](common-widget-properties)
 * [On Click Event & Events Section](on-click-event)
 
 

@@ -1,8 +1,8 @@
 ---
 title: "View Menu"
-category: "App Modeling"
+parent: "menus"
 description: "Describes the View Menu in Studio Pro."
-menu_order: 15
+menu_order: 20
 tags: ["Studio Pro", "view menu", "top bar"]
 ---
 

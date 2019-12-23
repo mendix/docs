@@ -61,4 +61,4 @@ Only available when the [menu source](#menu-source) is set to **Menu document**.
 
 * [Page](page)
 * [Menu Widgets](menu-widgets)
-* [Properties Common for Widgets](common-widget-properties)
+* [Properties Common in the Page Editor](common-widget-properties)

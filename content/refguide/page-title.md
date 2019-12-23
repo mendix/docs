@@ -43,4 +43,4 @@ Page title properties consist of the following sections:
 
 * [Page](page)
 * [Common Widgets](common-widgets)
-* [Properties Common for Widgets](common-widget-properties)
+* [Properties Common in the Page Editor](common-widget-properties)

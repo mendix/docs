@@ -44,4 +44,4 @@ To perform actions on a snippet call, select it on a page and right-click it. Th
 
 * [Page](page)
 * [Common Widgets](common-widgets)
-* [Properties Common for Widgets](common-widget-properties)
+* [Properties Common in the Page Editor](common-widget-properties)

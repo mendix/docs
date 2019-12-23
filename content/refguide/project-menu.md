@@ -1,14 +1,14 @@
 ---
 title: "Project Menu"
-category: "App Modeling"
+parent: "menus"
 description: "Describes the Project Menu in Studio Pro."
-menu_order: 18
+menu_order: 30
 tags: ["Studio Pro", "project menu", "top bar"]
 ---
 
 ## 1 Introduction
 
-In the **Project** menu you can view and/or manipulate settings that are connected to your project and deployment. For example, you can create a deployment package.
+In the **Project** menu, you can view and/or manipulate settings that are connected to your project and deployment. For example, you can create a deployment package.
 
 {{% image_container width="300" %}}![Project Menu](attachments/project-menu/project-menu.png)
 {{% /image_container %}}

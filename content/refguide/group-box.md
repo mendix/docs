@@ -64,6 +64,6 @@ Possible values of this property are the following:
 
 * [Page](page)
 * [Container Widgets](container-widgets)
-* [Properties Common for Widgets](common-widget-properties)
+* [Properties Common in the Page Editor](common-widget-properties)
 
 

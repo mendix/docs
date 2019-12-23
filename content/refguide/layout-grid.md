@@ -140,4 +140,4 @@ As the layout grid responds to the viewport width, and not to the width of its c
 
 * [Page](page)
 * [Container Widgets](container-widgets)
-* [Properties Common for Widgets](common-widget-properties)
+* [Properties Common in the Page Editor](common-widget-properties)

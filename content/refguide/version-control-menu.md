@@ -1,8 +1,8 @@
 ---
 title: "Version Control Menu"
-category: "App Modeling"
+parent: "menus"
 description: "Describes the Project Menu in Studio Pro."
-menu_order: 20
+menu_order: 40
 tags: ["Studio Pro", "project menu", "top bar"]
 ---
 

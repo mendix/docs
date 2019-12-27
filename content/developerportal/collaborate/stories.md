@@ -13,7 +13,7 @@ In **Stories**, you are able to manage Sprints, stories, and labels for your app
 By adding your Sprints to Mendix, you will have a clear overview of your tasks and can easily view the status of the development of your app project. You can create, refine, and prioritize user stories collaboratively using the stories' conversation threads. User stories can be estimated and organized into Sprints which can be monitored using Scrum boards and burndown charts.
 
 {{% alert type="info" %}}
-You can also manage the progress of tasks and Sprints from within Mendix Studio Pro.
+You can also manage the progress of tasks and Sprints from within Mendix Studio Pro via the [Stories Pane](/refguide/stories-pane).
 {{% /alert %}}
 
 ![](attachments/stories/stories.png)
@@ -212,11 +212,13 @@ To change the status of a story in Studio Pro, click the current status. For exa
 
 ![](attachments/stories/stories-to-do.png)
 
+For more information on how to change the status of your story, see the [Changing the Status of a Story or a Task](/refguide/stories-pane#changing-status) section in *Stories Pane*.  
+
 When you return to your app project in the Developer Portal, you will see the new story status:
 
 ![](attachments/stories/status-update.png)
 
-Changing the status of a story or updating story points automatically synchronizes the updates between the Developer Portal and Studio Pro!
+Changing the status of a story or updating story points automatically synchronizes the updates between the Developer Portal and Studio Pro! 
 
 ## 5 New UI Option (Beta) {#beta}
 

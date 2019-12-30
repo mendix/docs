@@ -212,13 +212,13 @@ To change the status of a story in Studio Pro, click the current status. For exa
 
 ![](attachments/stories/stories-to-do.png)
 
-For more information on how to change the status of your story, see the [Changing the Status of a Story or a Task](/refguide/stories-pane#changing-status) section in *Stories Pane*.  
-
 When you return to your app project in the Developer Portal, you will see the new story status:
 
 ![](attachments/stories/status-update.png)
 
 Changing the status of a story or updating story points automatically synchronizes the updates between the Developer Portal and Studio Pro! 
+
+For more information on how to change the status of your story, see the [Changing the Status of a Story or a Task](/refguide/stories-pane#changing-status) section in *Stories Pane*.  
 
 ## 5 New UI Option (Beta) {#beta}
 

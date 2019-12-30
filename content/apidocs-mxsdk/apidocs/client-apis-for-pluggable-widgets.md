@@ -190,25 +190,27 @@ export interface FileValue {
 `ListValue` is used to represent a list of objects for the [datasource](property-types-pluggable-widgets#datasource) property.
 
 ```ts
-export interface ListItem {
+export interface ObjectItem {
     id: GUID;
 }
 
 export interface ListValue {
     status: ValueStatus;
-    items: ListItem[];
-    totalCount: Option<number>;
-    amount: number;
-    setAmount: (Option<number>) => void;
     offset: number;
+    limit: number;
     setOffset: (number) => void;
+    setLimit: (Option<number>) => void;
+    items?: ObjectItem[];
+    hasMoreItems?: boolean;
+    totalCount: Option<number>;
+    version?: number;
 }
 ```
 
 
-When a `datasource` property with `isList="true"` is configured for a widget, the client component gets a list of objects represented as a `ListValue`. This type allows detailed access to a data source, and enables control over the amount and offset of items represented in the list.
+When a `datasource` property with `isList="true"` is configured for a widget, the client component gets a list of objects represented as a `ListValue`. This type allows detailed access to a data source, and enables control over the limit and offset of items represented in the list.
 
-However it is not possible to access domain data directly from `ListValue`, as every object is represented only by GUID in the `items` array. Instead, a list of items may be used in combination with other properties so long as a `datasource` property is tied to with the `dataSource` attribute on that property.
+However it is not possible to access domain data directly from `ListValue`, as every object is represented only by GUID in the `items` array. Instead, a list of items may be used in combination with other properties, for example with a property of type [`widgets`](property-types-pluggable-widgets#widgets). The `dataSource` attribute on that property should refference a `datasource` property.
 
 For clarity, consider the following example using `ListValue` together with the `widgets` property type. When the `widgets` property named `myWidgets` is configured to be tied to a `datasource` named `myDataSource`, the client component props appear as follows:
 

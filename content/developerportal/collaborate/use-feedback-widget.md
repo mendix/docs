@@ -87,7 +87,7 @@ You can add as many email addresses as you like and email your app to colleagues
 {{% alert type="info" %}}
 This feature is available when the following conditions are met:<br />
 * You are using version 7.0.7 or above of the widget<br />
-* The widget is configured to show the App Switcher (for details, see the [Configuring the Widget](#configuring) section below)<br />
+* You have configured the widget to show the App Switcher (for details, see the [Configuring the Widget](#configuring) section below)<br />
 * Your app uses [Mendix single sign-on](/developerportal/deploy/mendix-sso)
 {{% /alert %}}
 

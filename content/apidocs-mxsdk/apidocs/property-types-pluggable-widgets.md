@@ -46,6 +46,7 @@ This defines a property's type. A `type` must be one of the following:
 	* [attribute](#attribute)
 	* [object](#object)
 	* [file](#file)
+	* [datasource](#datasource)
 
 ### 1.2 XML Elements
 

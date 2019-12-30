@@ -82,14 +82,21 @@ When you click the **Share** icon on the widget, a pop-up window appears for sha
 
 You can add as many email addresses as you like and email your app to colleagues for further collaboration and feedback.
 
-#### 3.1.5 Switching between Apps (Requires Widget Version 7.0.7 and higher)
+#### 3.1.5 Switching Between Apps
 
-When you click the **App Switcher** button, a pop-up window appears with a list of other Mendix SSO-enabled Apps that you have access to:
+{{% alert type="info" %}}
+This feature is available when the following conditions are met:<br />
+* You are using version 7.0.7 or above of the widget<br />
+* The widget is configured to show the App Switcher (for details, see the [Configuring the Widget](#configuring) section below)<br />
+* Your app uses [Mendix single sign-on](/developerportal/deploy/mendix-sso)
+{{% /alert %}}
+
+When you click the **App Switcher** button, a pop-up window appears with a list of other Mendix SSO-enabled apps that you have access to:
 
 {{% image_container width="450" %}}![](attachments/feedback/app-switcher.png)
 {{% /image_container %}}
 
-When you click one of the apps you will be redirected to it. Note that feature is only available if the feedback widget is both configured to show the App Switcher and if your app implements Mendix SSO.
+After you click an app, you will be redirected to it. 
 
 ### 3.2 Adding & Configuring the Widget
 
@@ -114,7 +121,7 @@ To ensure you have the latest version of the widget included in your app, follow
 
 	![](attachments/feedback/feedback-collaboration-widget.png)
 
-#### 3.2.2 Configuring the Widget
+#### 3.2.2 Configuring the Widget {#configuring}
 
 All the configuration properties are explained on the various tabs of the properties dialog box for the widget:
 
@@ -125,14 +132,13 @@ The feedback feature requires the following properties to be set:
 * **Advanced** tab > **Feedback server location** – the URL of the Developer Portal server (usually `https://sprintr.home.mendix.com`)
 * **Project** tab > **App ID** – the unique identifier of your app project available in your app's [General](../settings/general-settings) settings in the Developer Portal
 
-The App Switcher feature requires the Mendix SSO module to be implemented and the following properties to be set:
+The App Switcher feature requires the [MendixSSO](/developerportal/deploy/mendix-sso) module to be implemented and the following properties to be set:
 
-* **Advanced** tab > **ID token provider** - Microflow that will return the current ID token from the MendixSSO module
-* **Advanced** tab > **Show App Switcher button** 
+*  **Advanced** tab > **ID token provider** – the microflow that will return the current ID token via the string value of the decrypted ID token from the MendixSSO module; to obtain the token, the microflow needs to call the **DS_GetCurrentIdToken** microflow from the MendixSSO module:
 
-To retreive the ID token, you need to create a microflow in your app that returns the string value of the decrypted ID token from the Mendix SSO module. That obtain the token the microflow needs to call the *DS_GetCurrentIdToken* microflow from the Mendix SSO module:
+	![](attachments/feedback/example-id-token-microflow.png)
 
-![](attachments/feedback/example-id-token-microflow.png)
+* **Advanced** tab > **Show App Switcher button** – set to **Yes**
 
 In the properties, you can configure the widget for certain actions in your app project, for example:
 

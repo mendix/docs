@@ -56,7 +56,6 @@ When this option is selected, do the following:
 
 ## 3 Developing This App Store Component
 
-
 To contribute to the development of this widget, follow these steps:
 
 1. Install the following:

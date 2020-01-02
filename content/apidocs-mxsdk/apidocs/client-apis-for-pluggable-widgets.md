@@ -217,7 +217,7 @@ For clarity, consider the following example using `ListValue` together with the 
 ```ts
 interface MyListWidgetsProps {
     myDataSource: ListValue;
-    myWidgets: (ListItem) => ReactNode;
+    myWidgets: (i: ObjectItem) => ReactNode;
 }
 ```
 

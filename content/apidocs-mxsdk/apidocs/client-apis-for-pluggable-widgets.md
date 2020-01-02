@@ -198,11 +198,11 @@ export interface ListValue {
     status: ValueStatus;
     offset: number;
     limit: number;
-    setOffset: (number) => void;
-    setLimit: (Option<number>) => void;
+    setOffset: (offset: number) => void;
+    setLimit: (limit: Option<number>) => void;
     items?: ObjectItem[];
     hasMoreItems?: boolean;
-    totalCount: Option<number>;
+    totalCount?: number;
     version?: number;
 }
 ```

@@ -44,9 +44,11 @@ If auto-zoom is enabled, the map uses bounds zoom; otherwise, it uses the custom
 
 ## 3 Usage
 
-* To add basic a map to your application select new under the Map properties tab
-* Under the Data source tab Select data source context
-* Select the Locations entity, latitude and longitude attributes
+To add a basic map to your application, follow these steps:
+
+1. On the **Map properties** tab, select **New**. 
+2. On the **Data source** tab of the dialog box that opens, select **Context** for **Data source**.
+3. Set the **Locations entity**, **Latitude attribute**, and **Longitude attribute**.s
 * Under the Map properties tab, select a Map provider
 * Add Access token if Map provider is not Open street
 * Run the application and add some locations

@@ -33,7 +33,7 @@ Pluggable widgets are the successor to [Custom widgets](/howto/extensibility/wid
 | Retrieve additional data over associations, microflows, or nanoflows | Planned                                              | [Yes](https://apidocs.mendix.com/8/client/mx.data.html#.get)          |  |
 | Template Text; combine data and translatable text                 | [Yes](property-types-pluggable-widgets#texttemplate) | No                                                                    |
 | Expressions; logic combined with data                             | [Yes](property-types-pluggable-widgets#expression)   | No                                                                    |
-| File support; upload, download, and open                           | No                                                   | [Yes](https://apidocs.mendix.com/8/client/mx.data.html#.saveDocument) |
+| File support; upload, download, and open                           | [Yes](property-types-pluggable-widgets#file) (download an open only)      | [Yes](https://apidocs.mendix.com/8/client/mx.data.html#.saveDocument) |
 | Use conditional visibility                                        | [Yes](property-types-pluggable-widgets#visibility)   | No                                                                    |
 | Use conditional editability                                       | [Yes](property-types-pluggable-widgets#editability)  | No                                                                    |
 | Use glyph icons                                                   | [Yes](property-types-pluggable-widgets#icon)         | No                                                                    |

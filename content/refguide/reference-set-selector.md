@@ -37,6 +37,8 @@ The reference set selector looks a lot like a [data grid](data-grid) and consequ
 *   The **Add** button adds an association to an existing object. You will need to specify the page which opens when you want to add a new association. For more information, see [Add Button](control-bar#add-button).
 *   The **Remove** button removes the association to an object, but does not change or delete the object itself
 
+Note that you will need to have a **Save** button surrounding your reference set selector to save the association changes.  
+
 ## 2 Properties
 
 An example of reference set selector properties is represented in the image below:

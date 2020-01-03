@@ -41,7 +41,6 @@ The reference set selector looks a lot like a [data grid](data-grid) and consequ
 You must explicitly commit the object in the data view containing your reference set selector to save the association changes. This can be done, for example, by having a **Save** button for the object in the data view (as shown for the *Customer* entity in the picture above).
 {{% /alert %}}
 
-
 ## 2 Properties
 
 An example of reference set selector properties is represented in the image below:

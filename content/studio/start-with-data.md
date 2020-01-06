@@ -88,10 +88,7 @@ In the table below, you can see how the Excel data corresponds to the attribute 
 
 #### 4.1.1 Previewing Associations
 
-After you upload the spreadsheet, worksheets that have relations (associations) are identified:  
-
-{{% image_container width="400" %}}![](attachments/start-with-data/relations-identified.png)
-{{% /image_container %}}
+After you upload the spreadsheet, worksheets that have relations (associations) are identified.  
 
 In the **Data Preview**, you can check the spreadsheet data before the actual import is completed. You can review tables and columns and untick the ones that you do not want to import. Tables that have relations (associations) detected are indicated with a link icon:
 

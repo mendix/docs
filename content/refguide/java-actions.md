@@ -62,9 +62,9 @@ The **String template** parameter type allows you to pass a string template into
 
 The template can contain parameters that are written as a number between braces (for example, `{1}`). The first parameter has the number `1`, the second `2`, and so on.
 
-For each parameter in the template, define a microflow expression, of which the value will be inserted at the position of the parameter. 
+For each parameter in the template, define a microflow expression, the value of which will be inserted at the position of the parameter. 
 
-In the generated code, the [IStringTemplate](https://apidocs.mendix.com/8/runtime/com/mendix/systemwideinterfaces/javaactions/parameters/IStringTemplate.html) type provides methods for evaluation of the passed string template using the default or custom logic. 
+In the generated code, the [IStringTemplate](https://apidocs.mendix.com/8/runtime/com/mendix/systemwideinterfaces/javaactions/parameters/IStringTemplate.html) type provides methods for the evaluation of the passed string template using default or custom logic. 
 
 #### 2.2.6 Return Type
 

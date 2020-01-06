@@ -8,7 +8,9 @@ tags: ["native", "mobile", "developer", "native-builder", "developer app", "make
 
 ## 1 Introduction
 
-With your project maturing, you will want to expand the functionality and even introduce custom widgets or logic that will require new native dependencies. An example of that could be a NFC module. While the MakeItNative app is a nice first touch with the platform and supports all common flows that come with the latest version of Mendix Studio Pro, it falls short when it comes to fascilitating custom dependencies, as are custom native widgets, fonts or other.
+With your project maturing, you will want to expand the functionality and even introduce custom widgets or logic that will require new native dependencies. An example of that could be a NFC module. 
+
+While the MakeItNative app is a nice first touch with the platform and supports all common flows that come with the latest version of Mendix Studio Pro, it falls short when it comes to fascilitating custom dependencies, as are custom native widgets, fonts or other.
 
 For this purpose we introduced Custom Developer Apps. Custom Developer Apps are apps you can generate yourself using your current project structure, your custom modules and any other requirements to accompany the ever growing needs of your app. Custom Developer Apps, feature the same functionality as the MakeItNative app, but are tailored to your needs, by you.
 
@@ -35,7 +37,7 @@ For this purpose we introduced Custom Developer Apps. Custom Developer Apps are 
 
 4. Wait for the Native Builder to complete.
 
-As with a release build, when Native Builder is done building, you should have 2 archives for each build, iOS and Android, respectively. These archives can be found under the build output path `{build output path}/dev-app`. The default `{build output path}` is the `./builds` folder relative to `native-builder.exe` location.
+As with a release build, when Native Builder is done building, you should have 2 archives for each build, iOS and Android, respectively. These archives can be found under the build output path `{build output path}` with **Dev** prepended to their name. The default `{build output path}` is the `./builds` folder relative to `native-builder.exe` location.
 
 ## 2 Installing Your Developer App
 
@@ -83,7 +85,7 @@ The signed output of iOS build is an IPA. If correctly signed IPAs can be instal
 
 - Mac OSX machine
 - Rescent NodeJs and NPM version
-- Cocoapods
+- Cocoapods ([installation instructions](https://cocoapods.org/#install))
 - Latest XCode version
 
 
@@ -114,7 +116,7 @@ Todo so:
     ![Dev target selection](attachments/how-to-devapps/xcode-target-selection.png)
 9. Press the play button.
 
-#### 2.2.2 Device
+#### 2.2.2 Distributing the Custom Developer App
 
-To run on an device you will have to sign the Developer App with your certificates.
+To run on an non test device you will have to sign the Developer App with your certificates.
 For local builds, follow the [Local Signing](deploying-native-app.md#ios-local-signing) guide to sign the xcarchive. If you want Native Builder to sign your developer app, follow the app signing steps in [Signing your build](deploying-native-app.md#signing-a-build).

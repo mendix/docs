@@ -46,53 +46,19 @@ If auto-zoom is enabled, the map uses bounds zoom; otherwise, it uses the custom
 
 To add a basic map to your application, follow these steps:
 
-1. On the **Map properties** tab, select **New**. 
-2. On the **Data source** tab of the dialog box that opens, select **Context** for **Data source**.
-3. Set the **Locations entity**, **Latitude attribute**, and **Longitude attribute**.s
-* Under the Map properties tab, select a Map provider
-* Add Access token if Map provider is not Open street
-* Run the application and add some locations
-* For Here maps add app ID, app code respectively.
+1. On the **Map properties** tab, select **New** for **Locations**.
+2. On the **Data source** tab of the **Edit Locations Item** dialog box, select **Context** for **Data source**.
+3. Set the **Locations entity**, **Latitude attribute**, and **Longitude attribute**.
+4. On the **Markers** tab of the **Edit Locations Item** dialog box, you can configure a marker icon:
+	* **Default** – displays the widget-bundled marker
+	* **Static** – upload a static **Image** (for best results, use a PNG file at 32px width and 32px height where the bottom pin is at the center of the image)
+	* **System image** – add a **System image path** that is a reference to the locations enity (the entity selected should inherit from **System.Image**, because an error will be displayed otherwise); upload an image into the database to view the system image marker at runtime
+	* **Marker list** – add an enumeration containing the name and caption of the markers to your app project and assign that enumeration to the locations entity; then, on the **Marker image list** tab back on the **Edit Maps** dialog box, click **New** for **Images** to specify the enumeration key **Value** and the **Image**
+5. Back on the **Map properties** tab, select a **Map provider**.
+6. Fill in the **Access token** field according to the following scenarios;
+	* For **Mapbox** and **Google Maps**, add an access token
+	* For **HERE maps**, add an app ID and app code
 
-Locations
-Data source: Static
+## 4 Developing This App Store Component
 
-    On the Map properties tab, select new on the locations option
-    Under Data source tab, Select Static
-    On the Static tab add new static locations
-
-static
-Data source: Xpath
-
-    On the Map properties tab, select new on the locations option
-    Select Database, Add the locations entity
-    Add the Latitude and Longitude attributes
-    Add an XPath Constraint Optional
-
-Custom Markers
-
-NOTE
-
-For best results (see image), your custom marker must be
-
-    PNG
-    32px width 32px height
-    The bottom pin must be on the center of the image
-
-customMarker
-
-    It is used to configure how the marker icon should be look.
-    Under locations option on the Map properties tab, select the Markers tab
-    For the Default option, the widget bundled marker will be displayed
-    For the Static option, upload a static image
-    For the System image option, add a system image path, which is a reference to the locations enity. The entity selected should inherit from System.Image otherwise it will display an error.
-    Upload an image into the database to view the system image marker at runtime
-    Markers can also be created based on enumeration. Select the Marker list option, then add an enumeration containing the name and caption of the markers to your project and assign that enumeration to the Locations entity.
-    Markers
-    From the Marker image list tab, the enumeration key and image is then specified under Images
-    Enumeration markers
-
-Issues, suggestions and feature requests
-
-We are actively maintaining this widget, please report any issues or suggestion for improvement at
-https://github.com/mendix/maps/issues.
+We are actively maintaining this widget. Please report any issues or suggestions for improvement at [mendix/maps](https://github.com/mendix/maps/issues).

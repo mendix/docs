@@ -35,7 +35,7 @@ The `Prepare` command handles the creation of the app on both GitHub and App Cen
 
 An example of a `prepare` command:
 
-```
+```bash
 native-builder.exe prepare --github-access-token <token> --appcenter-api-token <token> --java-home <absolute-path> --mxbuild-path <absolute-path> --project-path <absolute-path-to-mpr-file> --projectName CoolApp --app-identifier "com.company.myapp" --app-name "My Cool App" --mendix-version 8.5.0
 ```
 
@@ -63,7 +63,7 @@ The `Build` command builds the JavaScript bundles and assets, creates a build on
 
 If you already ran `prepare`, this is an example of a `build` command:
 
-```
+```bash
 native-builder.exe build --project-name "CoolApp" --app-version "1.0.0" --build-number 1
 ```
 
@@ -99,7 +99,7 @@ The `regenerate` command recreates the project on GitHub with the latest version
 
 An example of a `regenerate` command:
 
-```
+```bash
 native-builder.exe regenerate --project-name "CoolApp" --mendix-version 8.5.0
 ```
 
@@ -136,7 +136,7 @@ The `patch-update` command allows you to update the metadata of a published upda
 Here is an example of a command featuring `patch-update`:
 
 ```bash
-native-builder.exe release patch-update --project-name "CoolApp" --target-version  "1.0.1"
+native-builder.exe release patch-update --project-name "CoolApp" --label "v4" --target-version  "1.0.1"
 ```
 
 | Parameters             | Description                                                                                                          | Example                                                |

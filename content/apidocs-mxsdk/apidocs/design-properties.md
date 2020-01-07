@@ -79,7 +79,7 @@ A simplified example of a theme settings file with design properties is as follo
 
 ### 5.1 Design Property Structure
 
-In the example above you can see that design properties are defined as a JSON object under key `designProperties` inside of a theme settings file. That object's structure is as follows:
+In the example above design properties are defined as a JSON object under key `designProperties` inside of a theme settings file. That object's structure is as follows:
 
 ```js
 {
@@ -142,7 +142,7 @@ This is how the **Dropdown** design property appears:
 
 #### 5.1.1 Common Fields
 
-As you see from examples above fields `name` and `description` define UI for the user, the name of a form control in Studio Pro and the description under it. Those are arbitrary string values naming and describing a design property. Field `type` on the other hand defines the type of a property and can only take one of the two string values, either `Toggle` or `Dropdown`.
+As you see from examples above, the fields `name` and `description` define the UI, the name of a form control in Studio Pro, and the description under it. They are arbitrary string values naming and describing a design property. Field `type`, on the other hand, defines the type of a property and can only take one of the two string values: `Toggle` or `Dropdown`.
 
 {{% alert type="warning" %}}
 Name your design property and its options carefully. Those names cannot be changed easily when there are projects already using them. If you want to rename a design property which is already being used in a project, see the [Renaming Design Properties](#oldNames) section below.
@@ -150,15 +150,15 @@ Name your design property and its options carefully. Those names cannot be chang
 
 #### 5.1.2 Toggle Specific Fields
 
-When type of design property is **Toggle** it should contain `class` field on the top level of property definition. This field defines arbitrary class name to be applied if option is toggled on for a widget. In the example above, the class to be applied is `hereMyClass`.
+When a type of design property is **Toggle** it should contain a `class` field on the top level of its property definition. This field defines an arbitrary class name to be applied if the option is toggled on for a widget. In the example above, the class to be applied is `hereMyClass`.
 
 #### 5.1.3 Dropdown Specific Fields
 
-When type of design property is **Dropdown** it should contain `options` field which is an array of possible options for this design property. Every option must be an object with fields `name` and `class`. In the example above there are two options named **Styling option 1** and **Styling option 2**. They have `stylingClassOne` and `stylingClassTwo` classes respectively.
+When a type of design property is **Dropdown** it should contain an `options` field which is an array of possible options for the design property. Every option must be an object with `name` and `class` fields. In the example above there are two options named **Styling option 1** and **Styling option 2**. They have `stylingClassOne` and `stylingClassTwo` classes respectively.
 
 ## 6 Widget Types
 
-When defining design properties in the theme settings you must specify widget type to which widget this property applies as some of the design properties may be useful only for some widgets.
+When defining design properties in the theme settings you must specify widget type to which widget this property applies, as some of the design properties may be useful only for some widgets.
 
 {{% alert type="info" %}}
 Having a property that applies a table appearance style like **Stripped**, **Bordered**, **Lined** only makes sense for widget that actually contain tables, for example data grid widget. And this property doesn’t make sense on other widgets.

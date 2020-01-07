@@ -161,22 +161,26 @@ When a type of design property is **Dropdown** it should contain an `options` fi
 When defining design properties in the theme settings you must specify widget type to which widget this property applies, as some of the design properties may be useful only for some widgets.
 
 {{% alert type="info" %}}
-Having a property that applies a table appearance style like **Stripped**, **Bordered**, **Lined** only makes sense for widget that actually contain tables, for example data grid widget. And this property doesn’t make sense on other widgets.
+Having a property that applies a table appearance style like **Stripped**, **Bordered**, or **Lined** only makes sense for widgets that contain tables, for example a data grid widget.
 {{% /alert %}}
 
-Widget types are types defined in the [Model SDK](https://apidocs.mendix.com/modelsdk/latest/modules/pages.html) documentation. Every type which is a direct or an indirect subtype of type [`Widget`](https://apidocs.mendix.com/modelsdk/latest/classes/pages.widget.html) can be used to attach design properties to. If a property is defined on a widget then every subtypes if this widget will have this property. For example if a property is defined on a `Widget` type, which is it the highest type in the hierarchy, then every widget will have this design property available.
+Widget types are types defined in the [Model SDK](https://apidocs.mendix.com/modelsdk/latest/modules/pages.html) documentation. Every type which is a direct or an indirect subtype of type [`Widget`](https://apidocs.mendix.com/modelsdk/latest/classes/pages.widget.html) can be used to attach design properties to. If a property is defined on a widget, then every subtype of this widget will have that property. For example if a property is defined on a `Widget` type, which is it the highest type in the hierarchy, then every widget will have this design property available.
 
 
-### 6.1 Widget types for pluggable widgets
+### 6.1 Widget Types for Pluggable Widgets
 
-When creating design properties for [pluggable widgets](https://docs.mendix.com/apidocs-mxsdk/apidocs/pluggable-widgets) their widget type is determined by [widget id](https://docs.mendix.com/apidocs-mxsdk/apidocs/pluggable-widgets#widget-id).
+When creating design properties for [Pluggable Widgets](pluggable-widgets), their widget type is determined by [widget id](https://docs.mendix.com/apidocs-mxsdk/apidocs/pluggable-widgets#widget-id).
 
 
-## 7 Renaming design properties{#oldNames}
+## 7 Renaming Design Properties{#oldNames}
 
-Sometimes it is necessary to rename design properties or their options that are already in use. For example it is needed to better reflect purpose of a property or fix a spelling error. As design properties are identified by name internally this rename may be a breaking change for projects that already using those design properties. To prevent errors and offer users simple upgrade path it is advised to use `oldNames` field. This field must be of type array and contain old names a particular property or an option was known and used before. For instance if a property was renamed two times the `oldNames` should contain both previous names.
+Sometimes you must rename design properties or their options which are already in use. As design properties are identified by names internally, renaming one may be a breaking change for projects that are already using those design properties. 
 
-Example of property and options that was renamed:
+To prevent errors and offer users simple upgrade path, use an `oldNames` field. This field must be of type array and contain old names, a particular property, or an option that was known and used before. The order of old names in an `oldNames` list does not matter. 
+For instance, if a property was renamed two times, the `oldNames` should contain both previous names.
+
+Example of a property and options that were renamed:
+
 ```js
 {
     "name": "My Dropdown Property",
@@ -197,11 +201,9 @@ Example of property and options that was renamed:
 }
 ```
 
-As you can see the design property itself was renamed from **my Dropdown Propery** to **My Dropdown Property**. Also the second option, now named **Styling option two** was renamed twice, old names are **Stling option 2** and **Styling option 2**.
+As you can see the design property itself was renamed from **my Dropdown Propery** to **My Dropdown Property**. Also **Styling option two** was renamed twice from the old names **Stling option 2** and **Styling option 2**.
 
-{{% alert type="info" %}}
-It doesn't matter in which order old names of a property or an option appear in the `oldNames` list.
-{{% /alert %}}
+## 8 Read More
 
-
-TODO: Link this document from https://docs.mendix.com/howto/mobile/how-to-use-native-styling
+* [How to Style Your Mendix App](/howto/mobile/how-to-use-native-styling)
+* [Native Styling Reference Guide](/refguide/native-styling-refguide)

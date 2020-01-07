@@ -21,6 +21,8 @@ The top-bar of Studio Pro contains the following menus:
 
 ## 2 File Menu {#file}
 
+The **File** menu allows you to . For more information on the **File** menu, see [File Menu](file-menu).
+
 | Menu Item | Description | Shortcut Key |
 | --- | --- | --- |
 | **New Document** | Creates a new document within the project that is currently open. You can choose the name, location and type of the document. | <kbd>Ctrl</kbd> + <kbd>N</kbd> |
@@ -39,7 +41,7 @@ The top-bar of Studio Pro contains the following menus:
 
 ## 3 Edit Menu {#edit}
 
-The **Edit** menu allows you to perform editing functions, such as cut/copy/paste. You can also set [preferences](preferences-dialog) via this menu. For more information on the **Edit** menu, see  [Edit Menu](edit-menu).
+The **Edit** menu allows you to perform editing functions, such as cut/copy/paste. You can also set [preferences](preferences-dialog) via this menu. For more information on the **Edit** menu, see [Edit Menu](edit-menu).
 
 ## 4 View Menu {#view}
 

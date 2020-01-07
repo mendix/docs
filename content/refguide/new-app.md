@@ -8,7 +8,7 @@ tags: ["studio pro", "create app", "new app", "new project"]
 
 ## 1 Introduction
 
-When creating a new app, the App Settings dialog lets you specify an app name, whether or not to enable the online services provided by the Mendix Platform, the default language, and the location on disk where the project files for your app are stored. These settings are optional. Clicking Create app will create your app with the default settings.
+When creating a new app, the **App Settings** dialog lets you specify an app name, whether or not to enable the online services provided by the Mendix Platform, the default language, and the location on disk where the project files for your app are stored. These settings are optional. Clicking Create app will create your app with the default settings.
 
 ## 2 Name
 

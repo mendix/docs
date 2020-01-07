@@ -674,6 +674,10 @@ module.exports = {
       from: "/refguide8/starting-microflows",
         to: "/refguide/on-click-event"
       },
+	  {
+      from: "/refguide8/app-settings-dialog",
+        to: "/refguide/new-app"
+      },
   
     /****************************************************
      * From Desktop Modeler version 7 (permanent, mapped)

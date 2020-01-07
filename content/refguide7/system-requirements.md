@@ -60,7 +60,7 @@ The browser you use needs to have JavaScript turned on.
 
 ### 5.3 Database Server
 
-* [IBM DB2](db2) 11.1
+* [IBM DB2](db2) 11.1 for Linux, Unix and Windows
 * [MariaDB](mysql) 5.5, 10.0, 10.1
 * [Microsoft SQL Server](/developerportal/deploy/mendix-on-windows-microsoft-sql-server) 2008, 2008 R2, 2012, 2014, 2016, 2017
 * Azure SQL v12 (support is not independently verified and is available only through compatible versions of SQL Server)

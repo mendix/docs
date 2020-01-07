@@ -8,8 +8,15 @@ tags: ["deployment", "cloud environment", "Mendix Cloud", "SAP", "SAP Cloud", "I
 
 These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy), other [deployment](/developerportal/deploy/) options, and app [operations](/developerportal/operate/). For updates on the status of Mendix Cloud v4, Mendix Cloud v3, and other deployment options, see [Mendix Status](https://status.mendix.com/).
 
-## 2019
+## 2020
 
+### January 3rd, 2020
+
+#### SAP Cloud Platform Deployment
+
+* We added support for using the HANA trial database available in new SAP Cloud Platform trial accounts. See the [Running Mendix on SAP HANA](/developerportal/deploy/sap-cloud-platform#sap-hana) section of the *SAP Cloud Platform* deployment document for more details.
+
+## 2019
 
 ### December 23rd, 2019
 

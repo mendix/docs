@@ -2,12 +2,12 @@
 title: "Design Properties"
 category: "API Documentation"
 description: "This guide outlines how design properties work and can help you create custom design properties."
-tags: [ ]
+tags: ["styling", "design", "classes", "design properties"]
 ---
 
 ## 1 Introduction
 
-This guide outlines how design properties work and can help you create custom design properties. Many projects can simply use the Atlas UI theme and its included set of design properties to satisfy their styling needs. These included design properties are robust enough to serve a majority of use cases. But if you want to customize your styling more deeply, you will have to modify your design properties to fit your needs.
+This guide outlines how design properties work and can help you create custom design properties. Many projects can simply use the Atlas UI theme and its included set of design properties to satisfy their styling needs. Atlas UI provides design properties that are built on top of the functionality described in this guide. So while design properties from Atlas UI are used as examples below, design properties themselves are not only for the Atlas UI theme. In fact, if you want to customize your styling more deeply, you will have to create your own custom design properties.
 
 Design properties are a special set of settings shipped together with a Mendix theme module. Design properties are shared among all the Mendix apps which use a specific theme module. You can see which design properties are available for a widget either in the **Properties** pane or in the widget's settings dialog box under the **Appearance** tab. 
 
@@ -94,7 +94,7 @@ In the previous section's example, design properties are defined as a *JSON* obj
 }
 ```
 
-As you can see from the structure above, design properties are defined as a *JSON* object where keys (`DivContainer`, `Button`, etc) are widget types and values are *JSON* arrays containing sets of design properties applicable for that widget type. To learn more about this subject, see the [Widget Types Reference Guide](#widget-types). Note that you can add multiple class names in a property.
+As you can see from the structure above, design properties are defined as a *JSON* object where keys (`DivContainer`, `Button`, etc) are widget types and values are *JSON* arrays containing sets of design properties applicable for that widget type. To learn more about this subject, see the [Widget Types](#widget-types) section below. Note that you can add multiple class names in a property.
 
 Every design property from the array is also represented as a *JSON* object. As described earlier there are two types of design properties: **Toggle** and **Dropdown**. Both types share common fields such as `name`, `type`, and `description`. Those names determine how a design property appears to a user in Mendix Studio and Mendix Studio Pro. Below you can look at examples of design properties of both types and check how they look in the Studios.
 
@@ -149,15 +149,15 @@ Field `type` defines the type of a property and can only take one of the two str
 Name your design property and its options carefully. Those names cannot be changed easily when there are projects already using them. If you want to rename a design property which is already being used in a project, see the [Renaming Design Properties](#old-names) section below.
 {{% /alert %}}
 
-#### 5.1.2 Toggle Specific Fields
+#### 5.1.2 Toggle-Specific Fields
 
 When a type of design property is **Toggle** it should contain a `class` field on the top level of its property definition. This field defines an arbitrary class name to be applied if the option is toggled on for a widget. In the example above, the class to be applied is `hereMyClass`.
 
-#### 5.1.3 Dropdown Specific Fields
+#### 5.1.3 Dropdown-Specific Fields
 
 When a type of design property is **Dropdown** it should contain an `options` field which is an array of possible options for the design property. Every option must be an object with `name` and `class` fields. In the example above there are two options named **Styling option 1** and **Styling option 2**. They have the `stylingClassOne` and `stylingClassTwo` classes respectively.
 
-## 6 Widget Types
+## 6 Widget Types{#widget-types}
 
 When defining design properties in your theme settings you must specify which widget your properties apply to, as some design properties may only work with certain widgets.
 

@@ -477,7 +477,7 @@ Associated with each of the classifier objects will be zero or more **Classifier
 
 ### 7.2 Visual Recognition – Create Classifier{#createClassifier}
 
-This action allows you to train a new classifier for the Visual Recognition service by uploading zip files containing images.
+This action allows you to train a new classifier for the Visual Recognition service by uploading ZIP files containing images.
 
 ![Configuration dialog for the Visual Recognition - Create Classifier action](attachments/ibm-watson-connector/visualrecognition-createclassifier.png)
 
@@ -487,7 +487,7 @@ One file contains negative examples: images which are visually similar to the po
 
 For example, if you want to have a classifier to identify different sorts of mammal, you could upload positive class image files "dog", "cat", "pig", and "horse", and a negative one containing images of reptiles.
 
-Each zip file must
+Each ZIP file must
 
 * have a maximum size of 100MB
 * contain at least 10 images in jpg or png format (minimum recommended image resolution is 32X32 pixels)
@@ -518,8 +518,8 @@ This is a string containing the URL assigned to the Visual Recognition service i
 
 This is an object of type Classifier. This is associated with the following objects.
 
-* one or more TrainingImagesZipFile objects via the association Classifier_positiveTrainingImagesZipFile; the positive example files described above
-* one TrainingImagesZipFile object via the association Classifier_negativeTrainingImagesZipFile; the negative example file described above
+* One or more TrainingImagesZipFile objects via the association Classifier_positiveTrainingImagesZipFile; the positive example files described above
+* One TrainingImagesZipFile object via the association Classifier_negativeTrainingImagesZipFile; the negative example file described above
 
 The **Name** attribute of the Classifier is the name of the classifier which will be created by Watson. For example "Mammals" for a classifier identifying mammals.
 
@@ -578,10 +578,10 @@ The image must
 * have a pixel density of at least 32X32 pixels per inch
 * be less that 10MB
 * be in one of the following formats
-  * png
-  * jpg
-  * gif
-  * tiff
+  * *.png*
+  * *.jpg*
+  * *.gif*
+  * *.tiff*
 
 #### 7.4.4 Variable (List of Face)
 

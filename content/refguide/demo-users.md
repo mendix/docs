@@ -11,7 +11,7 @@ Demo users are a demonstration of each [user role](user-roles) existing in your 
 
 When the application is started for the first time, the specified demo users are created automatically.
 
-The demo users are only created and shown when running your application locally on your development machine, or when running in a sandbox.
+The demo users are only created and shown when running your application locally on your development machine, or when running in a Free App environment.
 
 To access demo users and their properties, open **Project Security** > the**Demo users** tab:
 

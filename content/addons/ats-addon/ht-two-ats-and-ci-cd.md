@@ -127,7 +127,7 @@ The CI/CD in ATS is using a webservice with authentication. Please use the stand
 
 Using the CI/CD API key and the unique ID of the CI/CD template you can execute a test case from your CI/CD pipeline. In this section, you find an example for Jenkins.
 
-## 5.1 Prerequisites
+### 5.1 Prerequisites
 
 * Have some Jenkins experience
 * Know how to configure CI/CD in ATS:
@@ -135,7 +135,7 @@ Using the CI/CD API key and the unique ID of the CI/CD template you can execute 
   * Create the CI/CD API key in ATS
   * Find your AppID in the Mendix Developer Portal
 
-## 5.2 Adding an Extra Step in Jenkins on a Linux Server
+### 5.2 Adding an Extra Step in Jenkins on a Linux Server
 
 This is only an example for Jenkins on Linux in shell scripting and can be written in another scripting language of your choice like for example Powershell (for Windows) or Groovy.
 
@@ -183,7 +183,7 @@ echo EMAILTEXT="Test Run Status is ${RESULT}" >> email.txt
 ```
 The last API call results in a "Passed" or "Failed", you can email this result or for example use the outcome in a conditional step for continuing deploying on different environments or failing this build. 
 
-## 5.3 Adding an Extra Step in Jenkins on a Windows Server
+### 5.3 Adding an Extra Step in Jenkins on a Windows Server
 
 This is only a PowerShell example for Jenkins on Windows, and it can be written in another scripting language of your choice.
 

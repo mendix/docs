@@ -25,7 +25,7 @@ If you get the following error you have to set a execution policy:
 
 To run any scripts that you wrote yourself, or to run scripts downloaded from internet (signed by a trusted publisher), open a PowerShell prompt as administrator and execute:
 
-```java
+```powershell
 Set-ExecutionPolicy RemoteSigned
 ```
 
@@ -33,9 +33,9 @@ Set-ExecutionPolicy RemoteSigned
 
 This example shows how to create your own continuous deployment script using our APIs. Most functions in this example you may recognize from our Dev Center. The idea of this example is to create a new build of the latest revision every night. You can of course run this as often as you want. If the latest revision has not been built yet our buildserver will create a new build for you, otherwise nothing needs to be done for continuous deployment. While our buildserver is creating a new build for you, you can poll the result of the buildjob using the jobId parameter.
 
-After the buildserver is the environment is cleaned to have a clean start. First the application needs to be stopped before the environment can be cleaned. When that's done you can transport the package created by the buildserver to the cleaned environment. Because starting can take a while, it stars asynchronous. You can poll to see if the application has been started with the _startJobId_. When the application has been started you can use the application for your tests.
+After the buildserver is the environment is cleaned to have a clean start. First the application needs to be stopped before the environment can be cleaned. When that's done you can transport the package created by the buildserver to the cleaned environment. Because starting can take a while, it starts asynchronously. You can poll to see if the application has been started with the _startJobId_. When the application has been started you can use the application for your tests.
 
-```java
+```powershell
 Function Get-Branch($headers, $url, $appName, $branchName) {
     irm -Headers $headers ${url}apps/$appName/branches/$branchName
 }
@@ -147,7 +147,7 @@ if ($latestBuiltRevision -eq $branch.LatestRevisionNumber) {
 }
 
 $versionWithoutRevision = $branch.LatestTaggedVersion.Remove($branch.LatestTaggedVersion.LastIndexOf('.'))
-$packageId = Start-Build $headers $url $appName $branchName $latestBuiltRevision $versionWithoutRevision
+$packageId = Start-Build $headers $url $appName $branchName $branch.LatestRevisionNumber $versionWithoutRevision
 $built = Wait-For-Built $headers $url $appName $packageId 600
 
 if($built -eq $false) {

@@ -1,5 +1,5 @@
 ---
-title: "Export an App Project Package"
+title: "Export an App Project"
 parent: "dialogs"
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -41,7 +41,7 @@ There are two snapshot options in the export dialog box:
 
 * **Existing snapshot** – will include the existing database snapshot in the export
 	* This option is only available when a snapshot is already present
-	* Snapshots can be created via **Project** > **More Versioning** > **Add Snapshot of Data**
+	* Snapshots can be created via **Version Control** > **Add Snapshot of Data**
 * **New snapshot from current database** – will create a new snapshot from the database and include it in the export
 	* This option becomes available after you run the app locally at least once, because a local database will be created when running the app for the first time.
 

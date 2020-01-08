@@ -1,6 +1,7 @@
 ---
 title: "Test Case Documentation"
 parent: "rg-one-test-development"
+menu_order: 9
 ---
 
 You can export the structure of your test case by pressing **PDF**:

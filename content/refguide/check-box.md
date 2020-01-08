@@ -1,60 +1,87 @@
 ---
 title: "Check Box"
 parent: "input-widgets"
+menu_order: 40
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+## 1 Introduction
 
-A check box is an [input widget](input-widgets) that can be used to display and edit Boolean attributes. It will display a tick if the value is true and remain empty if it is false.
+A **check box** is used to display and, optionally, allow the end-user to edit the value of an attribute of [data type](data-types) *Boolean*. It displays a tick if the value is true and remain empty if it is false.
 
-{{% alert type="info" %}}
+{{% alert type="info" %}}In native mobile applications, the check box widget is rendered as a toggle.{{% /alert %}}
 
-![](attachments/pages/check-box.png)
+A check box must be placed in a [data widget](data-widgets) and displays an attribute of the object(s) retrieved by that widget. The name of the attribute to be displayed is shown inside the check box widget, between square brackets, and colored blue.
 
-This check box allows you to change whether someone is subscribed to the newsletter.
+For example, this check box allows you to see, and set, whether someone is subscribed to your newsletter.
 
-{{% /alert %}}
+![](attachments/check-box/check-box.png)
 
-## Data source properties
+## 2 Properties
 
-{{% snippet file="refguide/Attribute+Path+Property.md" %}}
+An example of check box properties is represented in the image below:
 
-{{% snippet file="refguide/Label+Property.md" %}}
+{{% image_container width="250" %}}![](attachments/check-box/check-box-properties.png)
+{{% /image_container %}}
 
-## Editability properties
+Check box properties consist of the following sections:
 
-{{% snippet file="refguide/Editable+Property.md" %}}
+* [Common](#common)
+* [Data source](#data-source)
+* [Design Properties](#design-properties)
+* [Editability](#editability)
+* [Events](#events)
+* [Label](#label)
+* [Visibility](#visibility)
 
-{{% snippet file="refguide/Read+Only+Style.md" %}}
+### 2.1 Common Section{#common}
 
-{{% snippet file="refguide/Condition+Property.md" %}}
+{{% snippet file="refguide/common-section-link.md" %}}
 
-## Visibility properties
+### 2.2 Data Source Section{#data-source}
 
-{{% snippet file="refguide/Visibility+Property.md" %}}
+{{% snippet file="refguide/data-source-section-link.md" %}}
 
-{{% snippet file="refguide/Visibility+Property+With+Module+Roles+Simple.md" %}}
+### 2.3 Design Properties Section{#design-properties}
 
-## Events properties
+{{% snippet file="refguide/design-section-link.md" %}} 
 
-{{% snippet file="refguide/On+Change+Event.md" %}}
+### 2.4 Editability Section{#editability}
 
-{{% snippet file="refguide/On+Enter+event.md" %}}
+{{% snippet file="refguide/editability-section-link.md" %}}
 
-{{% snippet file="refguide/On+Leave+Event.md" %}}
+### 2.5 Events Section{#events}
 
-## Common properties
+#### 2.5.1 On Change{#on-change}
 
-{{% snippet file="refguide/Name+Property.md" %}}
+The on-change property specifies an action that will be executed when leaving the widget, either by using the <kbd>Tab</kbd> key or by clicking another widget, after the value has been changed.
 
-{{% snippet file="refguide/Class+Property.md" %}}
+{{% snippet file="refguide/events-section-link.md" %}}
 
-{{% snippet file="refguide/Style+Property.md" %}}
+#### 2.5.2 On Enter
 
-{{% snippet file="refguide/Tab+index+Property.md" %}}
+The on-enter property specifies an action that will be executed when the widget is entered, either by using the <kbd>Tab</kbd> key or by clicking it with the mouse.
 
-## Related articles
+{{% snippet file="refguide/events-section-link.md" %}}
+
+#### 2.5.3 On Leave
+
+The on-leave property specifies an action that will be executed when leaving the widget, either by using the <kbd>Tab</kbd> key or by clicking another widget.
+
+This differs from the [On change](#on-change) property in that the event will always be triggered, even if the value has not been changed.
+
+{{% snippet file="refguide/events-section-link.md" %}}
+
+### 2.6 Label Section{#label}
+
+{{% snippet file="refguide/label-section-link.md" %}}
+
+### 2.7 Visibility Section{#visibility}
+
+{{% snippet file="refguide/visibility-section-link.md" %}}
+
+## 3 Read More
 
 *   [Data view](data-view)
-*   [Attribute](attributes)s
+*   [Attributes](attributes)

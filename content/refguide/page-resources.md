@@ -11,12 +11,12 @@ The main difference between a page and page resources is that page is an indepen
 
 You can add the following page resources:
 
+* [Image collection](image-collection)
 * [Layout](layout)
 * [Page template](page-templates)
 * [Snippet](snippet)
 * [Building block](building-block) 
 * [Menu](menu)
-* [Image collection](image-collection)
 
 ## 2 Adding Page Resources
 
@@ -26,7 +26,7 @@ To add a resource document, do the following:
 
     ![](attachments/page-resources/project-explorer-page-resources.png)
 
-2. In the **Page Resources** category, select the document you would like to add to your project.
+2. Select the document you would like to add to your project.
 
 ## 3 Read More
 

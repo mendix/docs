@@ -228,7 +228,7 @@ The following table shows the data contained in the response of the **Get Job St
 | Name | Description |
 | --- | --- |
 | ExecutionStatus| Status of the execution: **Running** or **Queued**. |
-| ErrorMessage | Contains the error message if the test failed to start. Empty if the test started succesfully. |
+| ErrorMessage | Contains the error message if the test failed to start. Empty if the test started successfully. |
 | ExecutionResult | Result of the execution: **Passed** or **Failed**. |
 | ExecutionFlags¹ | Status of the canceled and warning flags for the job. |
 | ExecutionResultBreakdown¹ | Number of test cases in this job that passed, failed, and were not executed. |

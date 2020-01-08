@@ -2,15 +2,15 @@
 title: "Studio Pro"
 toc-level: 1
 description: "Presents all of the available release notes for Mendix Studio Pro."
+frontpage_featured: true
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-These are the Mendix Studio Pro major version release notes:
+These are the [Mendix Studio Pro](/refguide/index) major version release notes:
 
 * [8](8)
 * [7](7)
 * [6](6)
-* [5](5)
 
 {{% alert type="info" %}}
 With Mendix 8, the product has been renamed from **Mendix Desktop Modeler** to **Mendix Studio Pro**.

@@ -23,7 +23,7 @@ Using third party web services is easy in Mendix. There is a Microflow activity 
 
 ### Published web services
 
-To expose functionality in a Mendix server (thus enabling other systems to make use of certain functions) a Microflow can easily be published as a web service. See [Published Web Services](published-web-services).
+To expose functionality in a Mendix Server (thus enabling other systems to make use of certain functions) a Microflow can easily be published as a web service. See [Published Web Services](published-web-services).
 
 ## XML
 
@@ -60,7 +60,7 @@ An XSD (XML Schema Definition) document is a document that describes how the XML
 A WSDL (Web Service Definition Language) document is a document that describes how a client can interact with the server that publishes it. It describes the types of messages (incoming and outgoing) and where the messages must be sent to (an endpoint URL).
 
 Using imported web services, you can import a web service from an external application so they can be used in your own application. You can import web services from third parties (such as the
-[w3schools example service](http://www.w3schools.com/xml/tempconvert.asmx?WSDL)) or from other mendix projects.
+[w3schools example service](http://www.w3schools.com/xml/tempconvert.asmx?WSDL)) or from other Mendix projects.
 
 To actually use these imported web services in a microflow, see [Call Web Service Action](call-web-service-action).
 

@@ -1,7 +1,7 @@
 ---
 title: "Implement Best Practices for JavaScript Actions"
 category: "Extensibility"
-menu_order: 4
+menu_order: 60
 description: "This set of best practices will help you get the most out of your JavaScript actions."
 tags: ["JavaScript", "API", "nanoflow"]
 ---
@@ -238,20 +238,12 @@ Below is an example of using an external dependency based on [Noty](https://gith
 3. In *theme/index.html*, do the following: <br/>
 	a. Add a link to the style sheets after *mxui.css*. <br/>
 	b. Add a script tag for the library after *mxui.js*. <br/>
-	c. Put the following code in *theme/index.html* to handle external dependencies:
+	c. Add a `script` tag after **mxui.js** in *theme/index.html* to add an external JavaScript:
 
-	```javascript
+	```html
 	<!doctype html>
 	<html>
-		<head>
-			<!-- ... --->
-			<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css?{{cachebust}}">
-			<link rel="stylesheet" href="mxclientsystem/mxui/ui/mxui.css?{{cachebust}}">
-			<link rel="stylesheet" href="noty/noty.css?{{cachebust}}">
-			<link rel="stylesheet" href="noty/themes/bootstrap-v3.css?{{cachebust}}">
-			{{themecss}}
-			<!-- ... --->
-		</head>
+		<!-- ... --->
 		<body dir="ltr">
 			<div id="content"></div>
 			<!-- ... --->
@@ -260,10 +252,24 @@ Below is an example of using an external dependency based on [Noty](https://gith
 		</body>
 	</html>
 	```
-
+	
+	d. Add the following links in the `cssFiles` array of the *theme/settings.json* to add external styling:
+	
+	```json
+	{
+	    // ...
+	    "cssFiles": [
+	    	"styles/web/css/main.css",
+		"noty/noty.css"
+		"noty/themes/bootstrap-v3.css"
+	    ],
+	    // ...
+	}
+	```
+	
 4. To support hybrid mobile apps, add the script and CSS to *theme/components.json*: 
 
-	```javascript
+	```json
 	{
 		"files": {
 			"css": [
@@ -399,11 +405,11 @@ function GetUserNameSampleRest(userID) {
 
 Explaining the Promise API code:
 
-* The URL refers to a sample API that returns a JSON object `{ id: string, name: string }`. Fetch is a browser API for retrieving data which returns a promise (see the [MDI Fetch API documentation](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API). The response is a promise that is converted into data with the `.json()` function. The name is accessed and returned. 
+* The URL refers to a sample API that returns a JSON object `{ id: string, name: string }`, and `fetch` is a browser API for retrieving data which returns a promise (see the [MDI Fetch API documentation](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) — the response is a promise that is converted into data with the `.json()` function (the name is accessed and returned)
 
-* As this is a part of a promise already, it does not need to call a `resolve` function or return a promise itself. This makes error handling on promises easier, as a single error function can be used to catch errors at all three steps: fetch, parse JSON, and accessing the data. For a more detailed explanation, see the [MDN promise documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+* As this is a part of a promise already, it does not need to call a `resolve` function or return a promise itself — this makes error handling on promises easier, as a single error function can be used to catch errors at all three steps: fetch, parse JSON, and accessing the data (for a more detailed explanation, see the [MDN promise documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise))
 
-* For more information on building a JavaScript action rest consume function, see [Write JavaScript Actions: Part 2 (Advanced)](write-javascript-github).
+* For more information on building a JavaScript action rest consume function, see [Build JavaScript Actions: Part 2 (Advanced)](write-javascript-github).
 
 #### 2.3.3 Understanding Common Promise Functions
 
@@ -522,7 +528,7 @@ Not all capabilities are recommended for use. Consider the side effects that an 
 
 ## 7 Read More
 
-* [Make JavaScript Actions](/howto/extensibility/build-javascript-actions)
+* [Build JavaScript Actions](/howto/extensibility/build-javascript-actions)
 * [JavaScript Actions](/refguide/javascript-actions)
 * [Mendix Client API](https://apidocs.mendix.com/7/client/)
 * JavaScript basics:

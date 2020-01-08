@@ -17,7 +17,7 @@ With Mendix 8, you have the capacity to alter design properties with Mendix Stud
 
 ### 3 Customizing the Quickstart App
 
-The [Native Mobile Quickstart](https://appstore.home.mendix.com/link/app/109511/) app is styled using an Atlas UI Resources package. This package consists of:
+The [Native Mobile Quickstart](https://appstore.home.mendix.com/link/app/109511/) app is styled using an Atlas UI resources package. This package consists of:
 
 * Widgets
 * Building blocks
@@ -30,29 +30,25 @@ These resources let you style your app with a wide variety of interface parts. H
 
 	![button](attachments/how-to-use-native-styling/button-one.png)
 
-2.  Click **Run locally** and then click **View** to see your app: 
-
-	![run locally](attachments/how-to-use-native-styling/run-locally.png)
-
-	The button is white with blue text: its default styling. 
+2.  Click **Run Locally** and then click **View** to see your app. The button will be white with blue text, which is its default styling:
 
 	![default button](attachments/how-to-use-native-styling/default-button.png)
 
-3. Open *theme/styles/mobile/custom/custom-variables.js* using your IDE of choice.
+3. Open *theme/styles/native/app/custom-variables.js* using your IDE of choice.
 4. Change the `brand.primary` from **#0595DB** to *rosybrown*:
 
 	```javascript
 	//Brand Style
 	export const brand = {
-		primary: 'rosybrown',
-		success: '#76CA02',
-		warning: '#f99b1d',
-		danger: '#ed1c24',
+		primary: "rosybrown",
+		success: "#76CA02",
+		warning: "#f99b1d",
+		danger: "#ed1c24",
 	};
 	```
 
 5. Save your file.
-6.  Click **Run locally** to apply your changes:
+6.  Click **Run Locally** to apply your changes:
 
 	![rosybrown button](attachments/how-to-use-native-styling/brand-primary-rosybrown.png)
 
@@ -98,8 +94,8 @@ When you have specific design requirements, you will need to build custom classe
 1. Place a fourth button widget on your app's home page.
 2. Navigate to your Mendix app's folder using your IDE.
 3. Open the **theme** folder of your app.
-4. Open *styles/mobile/app/custom.js*.
-5. Copy this code snippet into *styles/mobile/custom/custom.js*:
+4. Open *styles/native/app/custom.js*.
+5. Copy this code snippet into *styles/native/app/custom.js*:
 
 	```javascript
 	export const className = {
@@ -116,7 +112,7 @@ When you have specific design requirements, you will need to build custom classe
 	
 	To alter a class on your own, consult [Native Styling](/refguide/native-styling-refguide) to understand widget structures.
 
-6. Apply a transparent background color to customize the the default button widget:
+6. Now you will edit the code you pasted. Apply a transparent background color to customize the the default button widget:
 
 	```javascript
 	export const className = {
@@ -153,17 +149,17 @@ When you have specific design requirements, you will need to build custom classe
 In this section you will learn to turn the class you made into a design property, so that it can be easily used by other people.
 
 1. Place a fifth button widget on your app's home page.
-2. Open *settings-native.json* in your IDE.
+2. Open *theme/settings-native.json* in your IDE.
 3. Find the `ActionButton` class. There are already design properties in `ActionButton`. Next, you will add some of your own.
 4. Place this object under the first one in `ActionButton`:
 
-	```javascript
+	```json
 	{
 		"name": "Bordered",
 		"type": "Toggle",
 		"description": "Create a bordered button.",
 		"class": "btnBordered"
-	}
+	},
 	```
 4. In Mendix Studio Pro, press <kbd>F4</kbd> to synchronize your project directory.
 5.  Select the fifth button. In **Properties** > **Design Properties**, your **Bordered** design property should now be visible:

@@ -102,7 +102,7 @@ This section pertains to the return type of the microflow and how it is transfor
 
 ### Type
 
-Defines what kind of object will be returned by the microflow. If the returned type is a complex type (i.e. something from your entity model) you can use the Members button to select which members will be returned in the same way as parameters.
+Defines what kind of object will be returned by the microflow. If the returned type is a complex type (as in, something from your entity model) you can use the Members button to select which members will be returned in the same way as parameters.
 
 ### Name
 

@@ -49,7 +49,7 @@ In this chapter you will set up the unit testing module and run the example test
 13.  Click **OK**.
     ![](attachments/18448633/18580362.png)
 14.  Run the project locally.
-15.  Go to **http://localhost:8080/index.html**.
+15.  Go to `http://localhost:8080/index.html`.
 16.  Click on **UnitTestOverview** in the navigation.
     ![](attachments/18448633/18580341.png)
     At the left side 2 buttons are shown. When you click on the Run all button, all unit tests will be executed. When you click on the Reset button, the status of all tests will change to not executed (question mark icon). Beneath the buttons all modules which contains unit tests are shown. In this case UnitTesting is the only module which contains unit tests. When you click on UnitTesting, all unit tests of this module are shown.
@@ -66,7 +66,7 @@ In this chapter you will set up the unit testing module and run the example test
 
 ## 3\. Create a microflow test
 
-In this chapter you will learn how to create a microflow test. To create a new microflow test in a module, you need to add a microflow with a name that starts with "Test". A test microflow should have no input arguments and a boolean or string as result type. In case of a boolean, true means success, false means the test failed. In case of a string, any non empty string indicates a failed test.
+In this chapter you will learn how to create a microflow test. To create a new microflow test in a module, you need to add a microflow with a name that starts with "Test". A test microflow should have no input arguments and a Boolean or string as result type. In case of a Boolean, true means success, false means the test failed. In case of a string, any non empty string indicates a failed test.
 
 ### 3.1 Create a microflow
 
@@ -127,7 +127,7 @@ In this chapter you will learn how to create a microflow test. To create a new m
 
       <iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/44d6c6be-d35c-403d-ad2f-d89398956a07/unittest-promote-employee-when-already-senior?embed=true"></iframe>
 29.   Run the project locally.
-30.   Go to **http://localhost:8080/index.html**.
+30.   Go to `http://localhost:8080/index.html`.
 31.   Click on **UnitTestOverview** in the navigation. **MyFirstModule** will be shown in the list with modules that contain one or more testcases.
       ![](attachments/18448633/18580348.png)
 32.   Click on **MyFirstModule**. All testcases of module MyFirstModule will be shown.

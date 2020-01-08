@@ -1,28 +1,28 @@
 ---
-title: "Transient Objects & Garbage Collecting"
+title: "Non-Persistable Objects & Garbage Collecting"
 parent: "runtime-java"
 menu_order: 1
 description: "This page will explain the life cycle of both persistable and non-persistable objects, and how they flow through the platform memory."
-tags: ["persistable", "non-persistable", "transient", "objects", "garbage", "collecing"]
+tags: ["persistable", "non-persistable", "objects", "garbage", "collecing"]
 ---
 
 ## 1 Introduction
 
-This page will explain the life cycle of both persistable and non-persistable objects, and how they flow through the platform memory. In order to understand the behavior of transient objects there are a few facts that you need to be aware off:
+This page will explain the life cycle of both persistable and non-persistable objects, and how they flow through the platform memory. In order to understand the behavior of non-persistable objects there are a few facts that you need to be aware off:
 
-*   A transient object (also known as a non-persistable object) is an object that is considered temporary and only exists in memory
-*   Changed persistable objects that are not committed only exist in memory and behave similar to transient objects
+*   A non-persistable object is an object that is considered temporary and only exists in memory
+*   Changed persistable objects that are not committed only exist in memory and behave similar to non-persistable objects
 *   The Mendix Platform will remove objects automatically when they are no longer "used" (the definition of "used" will be explained later)
 
 ## 2 Behavior
 
-Transient objects are not kept in the Mendix Platform cache on the server's side, but maintained in the client. This means server-side garbage collection no longer takes place. This simplifies the handling of objects on the server side because an object will not be garbage collected while it exists on the server.
+Non-persistable objects are not kept in the Mendix Platform cache on the server's side, but maintained in the client. This means server-side garbage collection no longer takes place. This simplifies the handling of objects on the server side because an object will not be garbage collected while it exists on the server.
 
 Objects will be returned to the client with the response of a request. Objects created outside the context of a request (like Scheduled Event execution) will automatically be discarded when the scheduled event has finished.
 
 ### 2.1 Influencing the Impact on Response Size
 
-As the objects that are still available are returned with the server call automatically, it is possible to reduce the response size by deleting Transient Objects that are not useful for the client or subsequent requests. This can happen by deleting non-persistable objects or rolling back changed persistable objects.
+As the objects that are still available are returned with the server call automatically, it is possible to reduce the response size by deleting non-persistable objects that are not useful for the client or subsequent requests. This can happen by deleting non-persistable objects or rolling back changed persistable objects.
 
 ## 3 Client Side Garbage Collection
 

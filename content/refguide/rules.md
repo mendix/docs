@@ -8,7 +8,7 @@ tags: ["Microflow", "Nanoflow", "Decision", "Logic"]
 
 ## 1 Introduction
 
-A rule is a special kind of microflow. Its result should be an enumeration or a boolean and it can be used in a [decision](decision) to make a decision based on that result. The idea is that complicated decisions can be consolidated in rules and reused in various places.
+A rule is a special kind of microflow. Its result should be an enumeration or a Boolean and it can be used in a [decision](decision) to make a decision based on that result. The idea is that complicated decisions can be consolidated in rules and reused in various places.
 
 ## 2 Differences from Microflows
 

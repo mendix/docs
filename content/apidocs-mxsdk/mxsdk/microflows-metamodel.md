@@ -1,5 +1,5 @@
 ---
-title: "Microflows in the Metamodel"
+title: "Microflows in the Mendix Metamodel"
 parent: "understanding-the-metamodel"
 menu_order: 4
 ---
@@ -51,7 +51,7 @@ Studio Pro Guide | Model SDK API docs
 [Loop](/refguide/loop)s, with [Break](/refguide/break-event) and [Continue](/refguide/continue-event) events | [LoopedActivity](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.loopedactivity.html), [BreakEvent](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.breakevent.html), [ContinueEvent](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.continueevent.html)
 [Annotation](/refguide/annotation) | [Annotation](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.annotation.html)
 
-### 1.4 <a name="Flows"></a>Flows
+### 1.4 Flows {#flows}
 
 A microflow consists of objects that are connected by flows, specifically, `SequenceFlow`s. A flow has an origin and a destination, with which the order of objects in the microflow is defined.
 
@@ -98,7 +98,7 @@ Studio Pro Guide | Model SDK API docs
 |[RuleCall](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.rulecall.html)
 |[RuleCallParameterMapping](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.rulecallparametermapping.html)
 
-## 2 Microflow activities
+## 2 Microflow Activities
 
 ### 2.1 Working with Objects
 

@@ -78,7 +78,7 @@ Determines whether the import action should validate the incoming XML against th
 
 Setting this to _yes_ can greatly decrease performance!
 
-*Default value:* No
+Default: *No*
 
 ## 5 Output
 

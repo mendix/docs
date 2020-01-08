@@ -1,7 +1,7 @@
 ---
-title: "Make Custom Widgets"
+title: "Build Custom Widgets"
 category: "Extensibility"
-menu_order: 2
+menu_order: 30
 tags: ["widget", "develop widget", "customize"]
 ---
 
@@ -53,7 +53,7 @@ Widgets have the ability to get data from the Runtime, manipulate objects, show 
 
 Mendix has a specific way of configuring your widget through the use of an XML file. For more information and an example, see [WidgetName](https://github.com/mendix/AppStoreWidgetBoilerplate/blob/master/src/WidgetName/WidgetName.xml) in the AppStoreWidgetBoilerplate repository.
 
-For the full reference on writing a widget XML, see the [How to Use XML in Widget Development](use-xml-widget).
+For the full reference on writing a widget XML, see the [Build Widgets with XML](use-xml-widget).
 
 ### 3.6 Boilerplate
 
@@ -81,5 +81,5 @@ Within the Mendix Community of developers, there are plenty of widget developers
 
 ## 5 Main Documents in This Category
 
-* [Add a Preview Image for a Custom Widget](add-a-preview-image-for-custom-widget)
-* [Use XML in Widget Development](use-xml-widget)
+* [Build a Preview Image for a Custom Widget](add-a-preview-image-for-custom-widget)
+* [Build Widgets with XML](use-xml-widget)

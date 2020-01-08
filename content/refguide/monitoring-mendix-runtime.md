@@ -3,11 +3,12 @@ title: "Monitoring Mendix Runtime"
 category: "Mendix Runtime"
 description: "Describes the supported Mendix Runtime monitoring actions."
 tags: ["runtime", "json", "studio pro", "on-premises", "local"]
+#The anchor request-handlers below is mapped, so it should not be removed or changed.
 ---
 
 ## 1 Introduction
 
-For on-premises and local deployments of Mendix, the Mendix runtime monitoring actions can be called by sending a JSON request to the admin handler. This is accomplished by sending a request to the admin port which is specified in the application configuration (the default port is 8090).
+For on-premises and local deployments of Mendix, the Mendix Runtime monitoring actions can be called by sending a JSON request to the admin handler. This is accomplished by sending a request to the admin port which is specified in the application configuration (the default port is 8090).
 
 {{% alert type="info" %}}
 This is only available for local and on-premises deployments of your app.
@@ -215,7 +216,7 @@ This request returns the current executions of actions known by the Mendix Runti
 
 ### 3.3 Return Values
 
-#### 3.3.1 Requests
+#### 3.3.1 Requests{#request-handlers}
 
 Displays information about the request per handler:
 

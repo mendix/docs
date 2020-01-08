@@ -1,7 +1,7 @@
 ---
-title: "Create Deployment Package Dialog"
-parent: "dialogs"
-tags: ["studio pro"]
+title: "Create Deployment Package"
+parent: "project-menu"
+tags: ["studio pro", "project menu", "deployment package"]
 ---
 
 ## 1 Introduction

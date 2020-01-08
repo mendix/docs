@@ -1,198 +1,270 @@
 ---
 title: "Reference Selector"
 parent: "input-widgets"
+menu_order: 70
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-The reference selector is an [input widget](input-widgets) that can be used to display and edit [associations](associations).
+## 1 Introduction
+
+A **reference selector** is used to display and, optionally, allow the end-user to select the value of a one-to-one or one-to-many [association](association-properties) by selecting the associated object.
+
+A reference selector must be placed in a [data widget](data-widgets). The object(s) retrieved by this data widget must be at the *many* end of a one-to-many association, or at either end of a one-to-one association.
+
+For example, if you have an employee they will work for one company. A company can have many employees. The entities **Employee** and **Company** have a one-to-many association, **Employee_Company**, which you can select by choosing a Company from the Employee through the reference selector.  
+
+![](attachments/reference-selector/reference-selector-domain-model.png)
+
+In the reference selector, the name of the attribute of the associated objects which will be  displayed is shown inside the reference selector, between square brackets, and colored blue.
+
+For example, the following reference allows the end-user to see, and set, the association **Employee_Company** by selecting the **CompanyName** for the current **Employee**.
+
+![](attachments/reference-selector/reference-selector.png)
 
 {{% alert type="info" %}}
-
-![](attachments/pages/reference-selector.png)
-This reference selector allows you to select a product for your orderline.
-![](attachments/pages/reference-selector-domain-model.png)
-To use a reference selector you need a many-to-one association in the domain model.
-
+If you only want to _display_ information, you can also use a [text box](text-box). This has the added advantage that you can choose an attribute from an object which is linked via several association steps.
 {{% /alert %}}
 
-The reference selector is similar to a [Report Parameter](report-parameter) except that it allows users to choose from a list of objects with which to fill an association rather than items listed in an enumeration. The selector requires you to choose an entity with which the parent object shares a reference. It will also require you to choose which attribute from that referenced entity you wish to display in the selector.
+## 2 Properties
 
-{{% alert type="info" %}}
+An example of reference selector properties is represented in the image below:
 
-If you only want to _display_ information, you can also use the text box. This has the added advantage that you can follow more than one association step.
+{{% image_container width="400" %}}![](attachments/reference-selector/reference-selector-properties.png)
+{{% /image_container %}}
 
-{{% /alert %}}
+Reference selector properties consist of the following sections:
 
-## General Properties
+* [Common](#common)
+* [Data source](#data-source)
+* [Design Properties](#design-properties)
+* [Editability](#editability)
+* [Events](#events)
+* [Formatting](#formatting)
+* [General](#general)
+* [Label](#label)
+* [Selectable Objects](#selectable-objects)
+* [Validation](#validation)
+* [Visibility](#visibility)
 
-### Select Using
+### 2.1 Common Section{#common}
+
+{{% snippet file="refguide/common-section-link.md" %}}
+
+### 2.2 Data Source Section{#data-source}
+
+{{% snippet file="refguide/data-source-section-link.md" %}}
+
+The attribute path specifies which attribute of an associated entity is shown in the reference selector. The path must follow one association of type reference starting in the entity of the data view.
+
+### 2.3 Design Properties Section{#design-properties}
+
+{{% snippet file="refguide/design-section-link.md" %}} 
+
+### 2.4 Editability Section{#editability}
+
+{{% snippet file="refguide/editability-section-link.md" %}}
+
+### 2.5 Events Section{#events}
+
+The on-change property specifies an action that will be executed when leaving the widget, either by using the <kbd>Tab</kbd> key or by clicking another widget, after the value has been changed.
+
+{{% snippet file="refguide/events-section-link.md" %}}
+
+### 2.6 Formatting Section{#formatting}
+
+The formatting section applies only to the way that numeric attributes are displayed. These are attributes of the following data types:
+
+* Decimal
+* Integer
+* Long
+
+{{% snippet file="refguide/numeric-formatting-link.md" %}}
+
+### 2.7 General Section{#general}
+
+#### 2.7.1 Select Using{#select-using}
+
+{{% alert type="warning" %}}The **Select using** property is not shown for native mobile pages. Native mobile pages only support the **Drop-down** method of selection{{% /alert %}}
 
 The reference selector allows the end user to select objects by using either a drop-down or a pop-up page. If you choose to select using a page, the drop-down functionality will be replaced with a button to the right of the widget that will open a selection pop-up.
 
 | Value | Description |
 | --- | --- |
+| Drop-down *(default)* | Select the reference using a drop-down. |
 | Page | Select the reference using a pop-up page. |
-| Drop-down | Select the reference using a drop-down. |
+
+* The advantage of selecting using a drop-down is that it is very efficient – the end-user can choose with fewer keystrokes as all the information is on the same page.
+* The advantage of selecting using a page is that the end-user can search the objects, and more information about each object can be displayed – if there are a lot of objects (say, more than 20) to select from, we suggest selecting is done using a page.
+
+**Select Using Drop-down**
+
+The drop-down reference selector is similar to a [drop down](drop-down) for an enumeration, except that it allows users to choose from a list of objects which can be associated with the current object, rather than a list of values from an enumeration.
+
+The reference selector displays an attribute from the objects which can be linked to the current entity via an association. The chosen attribute should be unique for each object which can be associated, otherwise the end-user will have difficulty choosing the correct one. For example, you should display a company _name_ (which will hopefully be unique) rather than the company _region_ (which will probably not be unique to a company).
+
+**Select Using Page**
+
+Select using a page, links a button to the right of the widget with a pop-up page which is used to make the selection. You must choose the page to be displayed using the [Select Page](#select-page) property.
+
+#### 2.7.2 Empty Option Caption
 
 {{% alert type="info" %}}
-
-The advantage of a selecting using a drop-down is that it is very efficient; no page needs to be opened. The advantage of selecting using a page is that the end user can search the objects. If there are a lot of objects (say, more than 20) to select from, selecting using a page is advisable.
-
+This is only displayed if [Select using](#select-using) is set to **Drop-down**.
 {{% /alert %}}
 
-_Default value:_ Drop-down
+This property specifies the caption for the empty option in the drop-down reference selector shown to the end-user. This is a [translatable text](translatable-texts).
 
-### Empty Option Caption
+Filling out the caption for an empty option improves the user experience of your application. It also helps end-users using screen-reader to operate the application easily.
 
-This property represents the caption for the empty option in the drop-down reference selector shown to the user. Setting the caption is not available if the Select Using property set to the Page option. This is a translable text. For more details, see [Translatable Texts](translatable-texts).
+#### 2.7.3 Select Page{#select-page}
 
 {{% alert type="info" %}}
-Filling out the caption for an empty option increases the user experience of your application. It also helps screen-reader users to operate the application easily.
+This is only displayed if [Select using](#select-using) is set to **Page**. Consequently, select page is not supported on native mobile pages.
 {{% /alert %}}
 
-### Select Page
+The select page property determines which page is opened when the select page button is used.
 
-The select page property determines which page is opened when the select page button is used. This page can be used to select associated objects from the list of all possible objects. This page should contain a data grid, template grid or list view connected to the same entity as the input reference set selector.
+This page can be used to select an associated object from the list of all possible objects. This page should contain a data grid, template grid or list view connected to the same entity as the input reference set selector.
 
-See [Opening Pages](opening-pages). Note that opening select pages in content is prohibited.
+It is recommended that you generate a new page to show by right-clicking the widget and selecting **Generate select page…**. You can then edit the resulting page, if required.
+
+![Generate a select page by right-clicking the widget](attachments/reference-selector/generate-select-page.png)
+
+See the [Show a Page](on-click-event#show-page) section of *On Click Event & Events Section*. Note that select pages must have a [pop-up layout](layout#layout-type).
+
+**Page title**
 
 {{% alert type="info" %}}
-You can generate a new page to show by right-clicking the widget and selecting 'Generate select page...'.
+**Page title** is only available in the **Properties** dialog box, not in the **Properties** pane.
 {{% /alert %}}
 
-### Go-To Page
+You can override the title of the page you open to, for example, indicate where you are opening it from.
 
-The go-to page gives end users quick access to a more detailed overview of the object being selected. This property determines which page is shown to the user. The page should contain a data view with the same entity as the one that is selected by the reference selector.
+This is activated by checking the **Override page title** check box.
 
-### Go-To Page Settings
+#### 2.7.4 Go-To Page
 
-These settings specify how the page is opened.
+{{% alert type="warning" %}}Go-to page is not supported on native mobile pages.{{% /alert %}}
 
-See [Opening Pages](opening-pages) for more details.
+The go-to page gives end users quick access to a more detailed overview of the currently selected object.
 
-## Validation Properties
+This property determines which page is shown to the user. The page should contain a data view with the data source **Type** set to **Context** and the same **Entity (path)** as the one that is selected by the reference selector.
 
-{{% snippet file="refguide/Widget+Validation.md" %}}
+It is recommended that you generate a new go-to page by right-clicking the widget and selecting **Generate go-to page…**. You can then edit the resulting page, if required.
 
-## Formatting Properties
+**Page title**
 
-{{% snippet file="refguide/Numeric+Formatting+Properties.md" %}}
+{{% alert type="info" %}}
+**Page title** is only available in the **Properties** dialog box, not in the **Properties** pane.
+{{% /alert %}}
 
-### Date Format (Only for Attributes of Type Date and Time)
+You can override the title of the page you open to, for example, indicate where you are opening it from.
 
-The date format determines whether the reference selector displays the date, time, date and time, or a custom variation of the linked attribute. How the date and/or time are formatted depend on the localization of the user viewing the data.
+This is activated by checking the **Override page title** check box.
 
-_Default value:_ Date
+### 2.8 Label Section{#label}
 
-### Selectable Objects Properties
+{{% snippet file="refguide/label-section-link.md" %}}
 
-The properties in the category 'Selectable objects' determine the objects out of which the end user can make a selection. There are two, mutually exclusive, ways of influencing the selectable objects:
+### 2.9 Selectable Objects Section{#selectable-objects}
 
-1.  A microflow returns the list of selectable objects.
-2.  The list of objects is determined automatically taking into account the context mechanism and the properties that influence that mechanism.
+The properties in the Selectable objects section determine the objects from which the end user can make a selection.
 
-### Microflow
+The **Source** property sets which of the three ways to define the selectable objects is used:
 
-If a microflow is selected, the microflow will be called to compute the list of objects that the reference selector will show. A microflow can only be used if the selection is made using a drop-down.
+* Database *(default)*
+* XPath
+* Microflow
+
+#### 2.9.1 Database
+
+Database is the default source for the selectable objects. By default, all database objects of the correct entity type will be selectable.
+
+**Constraints**
+
+You can limit the objects presented to the end-user by adding constraints. You will be guided through making constraints in the **Edit Constraints** dialog box:
+
+![Edit constraints dialog box](attachments/reference-selector/database-constraints.png)
+
+See the [constraints](database-source#constraints) section of *Database Source* for more information.
+
+**Sort Order**
+
+The sort order specifies the order in which the items in the reference selector are shown. You can sort on multiple attributes in both directions (ascending and descending). If **(default)** sort order is specified, the reference selector sorts on the displayed attribute.
+
+#### 2.9.2 XPath{#xpath-constraints}
+
+If the source is XPath, the list of objects is also taken from the database, but the objects which are displayed are chosen by an XPath Constraint.
+
+**XPath Constraint**
+
+The XPath constraint limits the list of objects that can be selected.
+
+For example, the XPath constraint `[InStock = true()]` on a reference selector for products will ensure that only products that are in stock are selectable.
+
+See [XPath Constraints](xpath-constraints) for more information on XPath constraints.
+
+**Constrained By**
+
+A reference selector can be constrained by one or more paths. This is typically used to make one reference selector dependent on another. The best way to explain this is through an example.
+
+Imagine you have an ordering system where the products are sorted into categories – for example, food products and drink products. On a page where you can edit an order line, a product selector can be constrained by a category selector. After selecting a category (*food*, for example), the product selector is constrained by this category and shows only products in the category.
+
+_Example Domain model_
+![](attachments/reference-selector/orderline-domain-model.png)
+
+In the domain model the order line has many-to-one associations to both category and product. These associations can be be edited using reference selectors. A third association, from product to category, describes the relation between those two entities – that is, that every product has an associated category.
+
+{{% alert type="info" %}}
+Such a triangle-shaped part of the domain model is what makes using **constrained by** possible.
+{{% /alert %}}
+
+On the form, you have two reference selectors: one for **Category** and one for **Product**.
+
+![](attachments/reference-selector/orderline-reference-selectors.png)
+
+Without a constraint, the reference set selector will offer all the products:
+
+![List of all products, food and drink](attachments/reference-selector/orderline-no-constraint.png)
+
+However, because of the structure of the domain model, you can add a constraint which means that only the products of the previously selected category will be chosen. This is set by the **Constrained by** property.
+
+![](attachments/reference-selector/orderline-constrained-by.png)
+
+Now the end-user will only see products in the selected category:
+
+![List of just products in the drink category](attachments/reference-selector/orderline-with-constraint.png)
+
+**Sort Order**
+
+The sort order specifies the order in which the items in the reference selector are shown. You can sort on multiple attributes in both directions (ascending and descending). If **(default)** sort order is specified, the reference selector sorts on the displayed attribute.
+
+#### 2.9.3 Microflow
 
 {{% alert type="warning" %}}
-
-Note that the other properties in this category have no effect when using a microflow!
-
+A microflow can only be used if the selection is made using a drop-down.
 {{% /alert %}}
 
-### Microflow Settings
+If the source microflow is selected, a microflow is called, and returns the list of objects that the reference selector will show.
 
-In the microflow settings you can specify what parameters to pass to the microflow.
+**Microflow**
 
-### XPath Constraint
+Microflow specifies the microflow which is run to return the list of objects.
 
-With the XPath constraint you can add a manual constraint to limit the list of objects that can be selected.
+**Microflow Settings**
 
-{{% alert type="info" %}}
+In microflow settings you can specify what parameters are passed to the microflow, depending on the parameters specified in the microflow itself.
 
-The XPath constraint `[InStock = true()]` on a reference selector for products will ensure that only products that are in stock are selectable.
+### 2.10 Validation Section{#validation}
 
-{{% /alert %}}
+{{% snippet file="refguide/widget-validation-link.md" %}}
 
-This property has no effect if a microflow is used to fill the reference selector.
+### 2.11 Visibility Section{#visibility}
 
-### Constrained By
+{{% snippet file="refguide/visibility-section-link.md" %}}
 
-A reference selector can be constrained by one or more paths. This is typically used to make one reference selector dependent on another. For example, in page where you can edit an order line, a product selector can be constrained by a category selector. After selecting a category, the product selector is constrained by this category and shows only products in the category.
-
-{{% alert type="info" %}}
-
-![](attachments/819203/917938.png)
-_Domain model_
-
-In the domain model the order line has associations of type reference to both category and product. In this form, these can be edited with two reference selectors. The third association, from product to category, describes the relation between those two entities. Such a 'triangle' shaped part of the domain model is what makes constraining possible.
-
-![](attachments/16713884/16844014.jpg)
-_Form_
-
-The page has two reference selectors, one for category and one for product. The one for product is constrained by the path through the domain model that forms the triangle.
-
-![](attachments/16713884/16844013.jpg)
-
-{{% /alert %}}
-
-This property has no effect if a microflow is used to fill the reference selector.
-
-### Sort Order
-
-The sort order specifies the order in which the items in the reference selector are shown. You can sort on multiple attributes in both directions (ascending and descending). If no sort order is specified, the reference selector sorts on the displayed attribute.
-
-_Default value:_ No sort order
-
-## Data Source Properties
-
-### Attribute Path
-
-The attribute path specifies which attribute of an associated entity is shown in the reference selector. The path must follow one association of type reference starting in the entity of the data view.
-
-{{% alert type="warning" %}}
-
-Order_Customer/Customer/Name will allow the end user to select a user from a list of user names.
-
-{{% /alert %}}{{% alert type="warning" %}}
-
-Keep in mind that even though you connect an attribute to the reference selector you are actually selecting an object. The attribute is just there to provide a visualization of the object. In this respect, the reference selector is different from other widgets like check boxes and text boxes. In those widgets you edit the value of the attribute. In the reference selector you edit an association of type reference.
-
-{{% /alert %}}
-
-{{% snippet file="refguide/Label+Property.md" %}}
-
-## Editability Properties
-
-{{% snippet file="refguide/Editable+Property.md" %}}
-
-{{% snippet file="refguide/Read+Only+Style.md" %}}
-
-{{% snippet file="refguide/Condition+Property.md" %}}
-
-## Visibility Properties
-
-{{% snippet file="refguide/Visibility+Property.md" %}}
-
-{{% snippet file="refguide/Visibility+Property+With+Module+Roles+Simple.md" %}}
-
-## Events Properties
-
-{{% snippet file="refguide/On+Change+Event.md" %}}
-
-## Common Properties
-
-{{% snippet file="refguide/Name+Property.md" %}}
-
-{{% snippet file="refguide/Class+Property.md" %}}
-
-{{% snippet file="refguide/Style+Property.md" %}}
-
-{{% snippet file="refguide/Tab+index+Property.md" %}}
-
-## Read More
+## 3 Read More
 
 *   [Data view](data-view)
 *   [Entities](entities)

@@ -51,9 +51,8 @@ In this chapter we will create a new app and select a theme from the New App sel
     ![](attachments/18448709/18581426.png) 
 8.  Congratulations, you made your first theme change.
 
-## 4\. Read More
+## 4. Read More
 
-*   [Scout and Windows 10 Workaround](scout-and-windows-10-workaround)
 *   [Layouts and Snippets](layouts-and-snippets)
 *   [Filtering Data on an Overview Page](filtering-data-on-an-overview-page)
 *   [Setup Mendix UI Framework with just CSS](setup-mendix-ui-framework-with-just-css)

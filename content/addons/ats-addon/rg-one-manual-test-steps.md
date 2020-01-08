@@ -1,6 +1,7 @@
 ---
 title: "Manual Test Steps"
 parent: "rg-one-test-development"
+menu_order: 3
 ---
 
 Manual test steps are the process to search and select required actions to manually create a test case in ATS. In this way the test case will be created by selecting the actions manually.

@@ -1,6 +1,7 @@
 ---
 title: "Dialog Boxes"
 category: "App Modeling"
+menu_order: 100
 tags: ["studio pro"]
 ---
 
@@ -8,8 +9,7 @@ The following pages describe the various dialog boxes present in Studio Pro:
 
 General
 
-*   [Preferences Dialog](preferences-dialog)
-*   [Sign In Dialog](sign-in-dialog)
+*   [Preferences Dialog](preferences-dialog) 
 
 Managing apps
 

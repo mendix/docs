@@ -13,7 +13,7 @@ Before starting this how-to make sure you have completed the following prerequis
 *   [Creating a basic data layer](../data-models/create-a-basic-data-layer)
 *   [Creating your first two Overview and Detail pages](../front-end/create-your-first-two-overview-and-detail-pages)
 
-## 2 Setting a Default Home Page
+## 2 Setting a Default Home Page {#home}
 
 This section will explain how to set the default home page. Please note that this setting is overridden by the role based home page if you decide to configure that.
 
@@ -97,9 +97,7 @@ Now that you've created a menu structure it's time to start using it on pages.
 
 ## 6 Read More
 
+* [Atlas UI](/howto/front-end/atlas-ui)
 * [Create Your First Two Overview & Detail Pages](../front-end/create-your-first-two-overview-and-detail-pages)
-* [Set Up the Mendix UI Framework with Just CSS](../front-end/setup-mendix-ui-framework-with-just-css)
-* [Set Up the Mendix UI Framework with Koala](../front-end/setup-mendix-ui-framework-with-koala)
-* [Set Up the Mendix UI Framework with Scout](../front-end/setup-mendix-ui-framework-with-scout)
 * [Use Layouts and Snippets](../front-end/layouts-and-snippets)
 * [Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)

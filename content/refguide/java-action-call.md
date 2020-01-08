@@ -1,13 +1,13 @@
 ---
 title: "Java Action Call"
 parent: "action-call-activities"
-menu_order: 40
+menu_order: 3
 tags: ["studio pro", "Java"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 {{% alert type="warning" %}}
-This activity can only be used in **Microflows**.
+This activity can only be used in microflows.
 {{% /alert %}}
 
 ## 1 Introduction
@@ -40,6 +40,6 @@ The return type is the [data type](data-types) of the result of the Java action.
 
 If **User return value** is set to *Yes* you will be asked to give the return value a name.
 
-### 3.3 Variable, Object, or List
+### 3.3 Variable Name, Object Name, or List Name
 
 The result of the Java action will be given this name. The label indicates whether the result is a variable, object, or list. If it is an object or list, the **Return type** will indicate the entity which is being returned.

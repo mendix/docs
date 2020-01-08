@@ -2,59 +2,116 @@
 title: "Image"
 parent: "common-widgets"
 menu_order: 20
-tags: ["studio pro"]
+tags: ["studio pro", "image", "image widget"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+## 1 Introduction
 
-The image widget can be used to show a predefined image on a page, layout or snippet.
+The image widget can be used to show a static image on a page, layout, or snippet.
+
+For example, you can configure an image clicking which a page with customer details opens:
+
+![Image Example](attachments/common-widgets/image-example.png)
 
 {{% alert type="info" %}}
 
-If you want to dynamically show different images based on data, please take a look at the [image viewer](image-viewer).
+If you want to dynamically show different images based on data, you need to add [image viewer](image-viewer) on your page.
 
 {{% /alert %}}
 
-## Common properties
+## 2 Properties
 
-{{% snippet file="refguide/Name+Property.md" %}}
+An example of image properties is represented in the image below:
 
-{{% snippet file="refguide/Class+Property.md" %}}
+{{% image_container width="300" %}}![Image Properties](attachments/common-widgets/image-properties.png)
+{{% /image_container %}}
 
-{{% snippet file="refguide/Style+Property.md" %}}
+Image properties consist of the following sections:
 
-## Events properties
+* [Common](#common)
+* Design Properties
+* [Events](events)
+* [General](#general)
+* [Visibility](#visibility)
 
-{{% snippet file="refguide/On+Click+Event+Action.md" %}}
+### 2.1 Common Section {#common}
 
-## General properties
+{{% snippet file="refguide/common-section-link.md" %}}
 
-### Image
+### 2.2 Events Section {#events}
 
-The actual image that this widget shows.
+For information on the Events section and its properties, see [On Click Event & Events Section](on-click-event). 
 
-See [Images](images).
+### 2.3 General Section {#general}
 
-{{% snippet file="refguide/Image+Width+Unit.md" %}}
+#### 2.3.1 Image
 
-_Default value_: Auto
+The file name that this widget shows. For more information on when to use images and supported formats, see [Images](images).
 
-{{% snippet file="refguide/Image+Width.md" %}}
+#### 2.3.2 Width Unit
 
-_Default value_: not applicable
+The width of an image. Possible values of this property are described in the table below:
 
-{{% snippet file="refguide/Image+Height+Unit.md" %}}
+| Value      | Definition                                                   |
+| ---------- | ------------------------------------------------------------ |
+| Auto  *(default)*       | The width of the given image is used.                        |
+| Pixels     | he width is specified in a number of pixels. If you specify both width and height, the image will be scaled automatically: the proportions will be kept, the picture will not be stretched. |
+| Percentage | The width is specified in a percentage of the original width. It can be larger than its original width in which case the image is stretched |
 
-_Default value_: Auto
+{{% alert type="info" %}}This property is not supported on native mobile pages.{{% /alert %}}
 
-{{% snippet file="refguide/Image+Height.md" %}}
+#### 2.3.3 Width
 
-_Default value_: not applicable
+Specifies the width of the image in pixels or percentage. This option is displayed only when **Pixels** or **Percentage** are selected for the **Width Unit** described above. 
 
-{{% snippet file="refguide/Image+Responsive.md" %}}
+Default: *not applicable*
 
-### Visibility properties
+#### 2.3.4 Height Unit
 
-{{% snippet file="refguide/Visibility+Property.md" %}}
+The height of an image. Possible values of this property are described in the table below: 
 
-{{% snippet file="refguide/Visibility+Property+With+Module+Roles+Simple.md" %}}
+| Value      | Definition                                                   |
+| ---------- | ------------------------------------------------------------ |
+| Auto  *(default)*       | The height of the given image is used.                       |
+| Pixels     | The height is specified in a number of pixels. If you specify both width and height, the image will be scaled automatically: the proportions will be kept, the picture will not be stretched. |
+| Percentage | The height is specified in a percentage of the original height. It can be larger than its original height in which case the image is stretched. |
+
+{{% alert type="info" %}}This property is not supported on native mobile pages.{{% /alert %}}
+
+#### 2.3.5 Height
+
+Specifies the width of the image in pixels or percentage. This option is displayed only when **Pixels** or **Percentage** are selected for the **Width Unit** described above. 
+
+Default: *not applicable*
+
+#### 2.3.6 Responsive
+
+This property influences how the image scales. If the value is 'Yes', the image will never get bigger than its original size. It can become smaller. If the value is 'No', the image can become both larger and smaller than its original size.
+
+Default: *Yes*
+
+{{% alert type="info" %}}This property is not supported on native mobile pages.{{% /alert %}}
+
+### 2.4 Visibility Section {#visibility}
+
+{{% snippet file="refguide/visibility-section-link.md" %}}
+
+## 3 Converting to an Image Viewer
+
+You can convert an image to an image viewer that allows you to display dynamic data. For more information on image viewer and its properties, see [Image Viewer](image-viewer). 
+
+To convert an image widget into an image viewer, do the following:
+
+1. Select the image widget on a page and right-click it.
+2. From the list of actions, select **Convert to image viewer**. 
+
+The image widget is converted to the image viewer and you can configure it. 
+
+## 4 Read More
+
+* [Page](page)
+* [Common Widgets](common-widgets)
+* [Properties Common in the Page Editor](common-widget-properties)
+
+

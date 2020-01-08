@@ -13,7 +13,9 @@ tags: ["Custom Domain","Mendix Cloud","Developer Portal", "certificates"]
 The Mendix Cloud supports adding custom domains such as `https://myapp.mycompany.com/` to your environments. As we only allow HTTPS connections, you have to provide a custom domain certificate (an SSL/TLS certificate). This how-to walks you through the process.
 
 {{% alert type="info" %}}
-This option is provided for licensed apps. You cannot add custom domains to free apps.
+This option is provided for licensed apps. You cannot add custom domains to Free Apps.
+
+This documentation is describing certificates for *incoming* connections. For information on setting up certificates for *outgoing* connections, see [Certificates](certificates).
 {{% /alert %}}
 
 {{% alert type="warning" %}}
@@ -52,7 +54,7 @@ Create a CNAME (Canonical Name) record and point it to `[YOUR-CUSTOM-DOMAIN].cna
 
 {{% alert type="info" %}}
 
-It is not possible to create a CNAME record for an apex/naked domain (meaning, a domain without a subdomain, like `mycompany.com`). If you want to use a custom apex/naked domain you should redirect it to a subdomain (for example, `subdomain.mycompany.com`) in your DNS and create a CNAME for the subdomain instead.
+It is not possible to create a CNAME record for an apex/naked domain (meaning, a domain without a subdomain, like `mycompany.com`). If you want to use a custom apex/naked domain you should redirect it to a subdomain (for example, `subdomain.mycompany.com`) and create a CNAME for the subdomain instead.
 
 {{% /alert %}}
 

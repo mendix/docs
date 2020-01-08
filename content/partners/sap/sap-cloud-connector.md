@@ -10,7 +10,7 @@ frontpage_featured: false
 ## 1 Introduction
 
 {{% alert type="info" %}}
-From SAP OData Connector version 4.0.0, Cloud Connector functionality is provided by SAP Destination Services.
+From OData Connector for SAP solutions version 4.0.0, Cloud Connector functionality is provided by SAP Destination Services.
 {{% /alert %}}
 
 A challenge when running an application in the cloud is to be able to access your on-premises systems in a secure way.
@@ -24,18 +24,18 @@ For more information, see [Cloud Connector](https://help.sap.com/viewer/cca91383
 
 ## 2 Setup
 
-As is shown in the diagram above, a Mendix Application will automatically bind to a connectivity service after deployment on the SAP Cloud Platform. This service contains the secure credentials of the SAP Cloud Connector. With this configuration, it becomes possible  for the SAP OData Connector to get access to an on-premises SAP system.
+As is shown in the diagram above, a Mendix Application will automatically bind to a connectivity service after deployment on the SAP Cloud Platform. This service contains the secure credentials of the SAP Cloud Connector. With this configuration, it becomes possible  for the OData Connector for SAP solutions to get access to an on-premises SAP system.
 
 An important dependency for the SAP Cloud Connector is the JWT token received from the SAP XSUAA service. This means that a Mendix app can only get access to the SAP Cloud Connector if the app has a XSUAA-authenticated user.
 
 ## 3 Usage
 
-When the SAP XSUAA Connector and Cloud Connector are set up, the only thing a developer needs to do to use it is enable the **Use SAP cloud connector** flag on one of the SAP OData Connector operators (such as Get List, Create, or Delete).
+When the XSUAA Connector for SAP Cloud Platform and Cloud Connector are set up, the only thing a developer needs to do to use it is enable the **Use SAP cloud connector** flag on one of the OData Connector for SAP solutions operators (such as Get List, Create, or Delete).
 
 ![](attachments/sap-cloud-connector/cloud-connector.png)
 
 ## 4 Read More
 
-* [SAP XSUAA Connector](sap-xsuaa-connector)
-* [How to Set Up the SAP XSUAA Connector](/partners/sap/use-sap-xsuaa-connector)
-* [How to Use the SAP OData Connector](/partners/sap/use-sap-odata-connector)
+* [XSUAA Connector for SAP Cloud Platform](sap-xsuaa-connector)
+* [How to Use the XSUAA Connector for SAP Cloud Platform](/partners/sap/use-sap-xsuaa-connector)
+* [How to Use the OData Connector for SAP Solutions](/partners/sap/use-sap-odata-connector)

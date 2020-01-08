@@ -5,93 +5,106 @@ tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+## 1 Introduction
 
-An image viewer can be used to display an image or its thumbnail.
-
-{{% alert type="info" %}}
+An image viewer can be used to display an image or its thumbnail. For example, you can show a profile picture:
 
 ![](attachments/pages/image-viewer.png)
-This image viewer shows the product image.
 
-{{% /alert %}}
+An image viewer must be placed in a data view or a template grid.
 
-An image viewer must be placed in a data view or template grid.
+## 2 Properties
 
-## Common properties
+An example of image viewer properties is represented in the image below:
 
-{{% snippet file="refguide/Name+Property.md" %}}
+{{% image_container width="250" %}}![Image Viewer Properties](attachments/file-widgets/image-viewer-properties.png)
+{{% /image_container %}}
 
-{{% snippet file="refguide/Class+Property.md" %}}
+Image viewer properties consist of the following sections:
 
-{{% snippet file="refguide/Style+Property.md" %}}
+* [Common](#common) 
+* [Data source](#data-source)
+* Design Properties
+* [Events](#events)
+* [General](#general)
+* [Visibility](#visibility)
 
-## Data source properties
+### 2.1 Common Section{#common}
 
-### Entity (path)
+{{% snippet file="refguide/common-section-link.md" %}}
 
-The entity (path) property specifies which entity will be shown in the image viewer. It starts in the data view entity and must end in System.Image or a specialization thereof. If the data view entity itself is (a specialization of) System.Image you can use this entity on the image viewer as well.
+### 2.2 Data Source Section {#data-source}
 
-## Events
+#### 2.2.1 Entity (Path)
 
-### On click
+The **Entity (path)** property specifies which object will be shown in the image viewer. It must be a System.Image or a specialization thereof. If the object in the data view is (a specialization of) System.Image you can use this object in the image viewer as well.
 
-This property specifies what happens when the image is clicked:
+### 2.3  Events Section {#events}
 
-| Value | Meaning |
-| --- | --- |
-| Do nothing | Nothing happens. |
-| Call microflow | The specified microflow is executed. |
-| Enlarge | The image is shown at full size. |
+{{% snippet file="refguide/events-section-link.md" %}}
 
-_Default value:_ Do nothing
+### 2.4 General Section{#general}
 
-### Microflow (in the case 'Call microflow')
-
-This property specifies the microflow that will be executed when the image is clicked.
-
-### Microflow settings (in the case 'Call microflow')
-
-The on click settings specify what parameters will be passed to the microflow, whether to show a progress bar or not, and more.
-
-See [Starting Microflows](starting-microflows).
-
-## General properties
-
-### Default image
+#### 2.4.1 Default Image
 
 This is the image that is displayed if no image is uploaded.
 
-{{% snippet file="refguide/Image+Width+Unit.md" %}}
+#### 2.4.2 Width Unit {#width-unit}
 
-_Default value_: Percentage
+The table below describes possible ways to specify the width of an image: 
 
-{{% snippet file="refguide/Image+Width.md" %}}
+| Value | Definition |
+| --- | --- |
+| Pixels | The width is specified in a number of pixels. If you specify both width and height, the image will be scaled automatically: the proportions will be kept, the picture will not be stretched. |
+| Percentage  *(default)* | The width is specified in a percentage of the original width. It can be larger than its original width in which case the image is stretched. |
+| Auto | The width of the given image is used. |
 
-_Default value_: 100
+{{% alert type="info" %}}
+Not supported on native mobile pages.
+{{% /alert %}}
 
-{{% snippet file="refguide/Image+Height+Unit.md" %}}
+#### 2.4.3 Width 
 
-_Default value_: Auto
+This property is displayed only when the [Width unit](#width-unit) property is set to *Pixels* or *Percentage*. This property determines the width of the image, either in pixels or a percentage.
 
-{{% snippet file="refguide/Image+Height.md" %}}
+Default: *0*
 
-_Default value_: not applicable
+#### 2.3.4 Height Unit {#height-unit}
 
-{{% snippet file="refguide/Image+Responsive.md" %}}
+The table below describes possible ways to specify the height of an image: 
 
-### Show
+| Value      | Definition                                                   |
+| ---------- | ------------------------------------------------------------ |
+| Pixels     | The height is specified in a number of pixels. If you specify both width and height, the image will be scaled automatically: the proportions will be kept, the picture will not be stretched. |
+| Percentage | The height is specified in a percentage of the original height. It can be larger than its original height in which case the image is stretched. |
+| Auto  *(default)*       | The height of the given image is used.                       |
 
-This property indicates whether the generated thumbnail is shown or the full image.
+{{% alert type="info" %}}This property is not supported on native mobile pages.{{% /alert %}}
 
-_Default value:_ Thumbnail
+#### 2.4.5 Height
 
-## Visibility properties
+This property is displayed only when the [Height unit](#height-unit) property is set to *Pixels* or *Percentage*. This property determines the height of the image, either in pixels or a percentage.
 
-{{% snippet file="refguide/Visibility+Property.md" %}}
+Default: *0*
 
-{{% snippet file="refguide/Visibility+Property+With+Module+Roles+Simple.md" %}}
+#### 2.4.6 Responsive
 
-## Related articles
+This property determines how the image scales. If the value is set to *Yes*, the image will never get bigger than its original size, but it can become smaller. If the value is set to *No*, the image can become both larger and smaller than its original size.
 
-*   [Data view](data-view)
-*   [Entities](entities)
+Default: *Yes*
+
+#### 2.4.7 Show
+
+This property indicates whether the generated thumbnail or the full image is shown.
+
+Default: *Thumbnail*
+
+### 2.5 Visibility Properties{#visibility}
+
+{{% snippet file="refguide/visibility-section-link.md" %}}
+
+## 3 Read More
+
+* [Page](page)
+* [File Widgets](file-widgets)
+* [Properties Common in the Page Editor](common-widget-properties)

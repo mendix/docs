@@ -48,7 +48,7 @@ To set up AppDynamics, follow these steps:
 
 ### 3.2.1 Cloud Foundry
 
-Follow the the build-pack instructions to set up AppDynamics for Cloud Foundry deployments that are described here: [https://github.com/mendix/cf-mendix-buildpack#appdynamics](https://github.com/mendix/cf-mendix-buildpack#appdynamics).
+Follow the the buildpack instructions to set up AppDynamics for Cloud Foundry deployments that are described here: [https://github.com/mendix/cf-mendix-buildpack#appdynamics](https://github.com/mendix/cf-mendix-buildpack#appdynamics).
 
 ### 3.2.2 On-Premises Linux & Windows Service Console
 
@@ -172,6 +172,5 @@ For more information on AppDynamics, see the AppDynamics documentation here: [ht
 * [Set Log Levels](log-levels)
 * [Debug Microflows](debug-microflows)
 * [Debug Java Actions](debug-java-actions)
-* [Handle Common Mendix SSO Errors](handle-common-mendix-sso-errors)
 * [Solve Load & Import Errors](solving-load-and-import-errors)
 * [Debug Microflows Remotely](debug-microflows-remotely)

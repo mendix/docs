@@ -1,17 +1,25 @@
 ---
 title: "Pages"
 category: "App Modeling"
+menu_order: 30
 tags: ["Pages", "Widgets", "Studio Pro", "page structure"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+#This document also has a redirect from opening-pages (which has been deleted)
 ---
 
 ## 1 Introduction
 
-A page is an end-user interface of a Mendix application. Pages are created, edited, manipulated in the page editor. 
+A page is the basic end-user interface of a Mendix application. It is used to display information to the end-user, allow end-users to create and edit information, and enable end-users to trigger additional automated processing.
 
-Every page is based on a page layout and a page template. A layout is a frame you put your page in. A page template is a basis with predefined elements (widgets).  
+Pages are created, edited, and manipulated in the page editor. 
+
+Every page is based on a page [layout](layout) and a page template. A layout is a frame you put your page in. A page template is a basis with predefined elements (widgets).  
 
 ![](attachments/pages/page-structure.png)
+
+Pages can be linked, so that one page can open another page. If this second page contains a [data widget](data-widgets) with a page parameter data source, then an object or objects can be passed from the current page to the new page. For information on opening pages, and triggering other sorts of event, see [On Click Event & Events Section](on-click-event).
+
+Pages are opened either in the current pane of the browser or in a pop-up, child, window. Where the page is opened depends on its [layout type](layout#layout-type). Mendix performs navigation as efficiently as possible. If a new page uses the same layout as the old one, only the data on the page will refresh rather than the whole page being built from scratch.
 
 For more information on page properties, see [Page](page).
 

@@ -15,29 +15,29 @@ This how-to explains how you can configure a delete object action in Mendix Stud
 * configure the **Delete Object** action in a [list view](page-editor-data-view-list-view#list-view-properties)
 * configure the **Delete Object** action in a [data view](page-editor-data-view-list-view#data-view-properties)
 
-This how-to describes the following use case:  you want to be able to delete the customer's name from the list of customers. 
+This how-to describes the following use case:  you would like to delete the customer's name from a list of customers. 
 
 {{% alert type="info" %}}
 
-You can configure the **Delete Object** on click action for such widgets as buttons or a static image. In this how-to we use a **Delete** button as an example of widget with **Delete Object** on click action. For more information, see the [Delete Object Action](page-editor-widgets-events-section#delete-object-action) section in *Events Section in Widgets*.
+You can configure the **Delete Object** on click action for such widgets as buttons or a static image. In this how-to, a **Delete** button is used as an example of a widget with **Delete Object** on click action. For more information, see the [Delete Object Action](page-editor-widgets-events-section#delete-object-action) section in *Events Section*.
 
 {{% /alert %}}
 
 ## 2 Configuring the Domain Model and Creating a Page
 
-To list customers' names and to show a more detailed information under the list, we need to create an entity *Customer*, add attributes *Name* and *Address* to it, and then create a page where we will list names of customers. 
+To list customers' names and to show a more detailed information under the list, you need to create an entity *Customer*, add attributes *Name* and *Address* to it, and then create a page where you will list names of customers. 
 
-To configure the domain model and create the page, do the following:
+To configure the domain model and create a page, do the following:
 
 1. Open your [domain model](domain-models).
 
-2. Create entity *Customer*. For more information on how to create the entity, see section [3 Adding New Entities](domain-models) in *Domain Models Overview*.
+2. Create an entity *Customer*. For more information on how to create an entity, see the [Adding New Entities](domain-models) section in *Domain Models Overview*.
 
-3.  For the **Customer** entity, create an attribute (for more information on how to create an attribute, see section [4 Adding New Attributes](domain-models) in *Domain Models Overview*) and do the following:<br/>
+3.  For the **Customer** entity, create an attribute (for more information on how to create an attribute, see the [Adding New Attributes](domain-models) section in *Domain Models Overview*) and do the following:<br/>
 
     a. Set the **Name** of the attribute to *Name*.<br/>
     
-    b. Set the [**Type**](domain-models-attributes) to **String**.<br/>
+    b. Set the [Type](domain-models-attributes) to **String**.<br/>
 
     ![](attachments/microflows-how-to-configure-delete-object/name-attribute.png)<br/>    
     c. Click **Create** to add the new attribute.<br/>
@@ -46,7 +46,7 @@ To configure the domain model and create the page, do the following:
 
 4. Repeat step 3 to create an attribute *Address* of string type.
 
-5.  Now we need a page where customers' names will be listed. Create a blank page and name it *Customers*. For more information on creating pages, see section [3.2 Creating a New Page](page-editor) in *Pages*.<br/>
+5.  Now you need a page where customers' names will be listed. Create a blank page and name it *Customers*. For more information on creating pages, see the [Creating a New Page](page-editor) section in *Pages*.<br/>
 
     ![](attachments/microflows-how-to-configure-delete-object/create-page.png)
 
@@ -56,7 +56,7 @@ A new blank page is created.
 
 ## 3 Configuring a Delete Object Action in a List View
 
-Now we will configure a list view and will add a button with [**Delete Object** action](page-editor-widgets-events-section#delete-object-action) that deletes the corresponding customer when a user clicks the button. Do the following:
+Now you will configure a list view and will add a button with [**Delete Object** action](page-editor-widgets-events-section#delete-object-action) that deletes the corresponding customer when a user clicks the button. Do the following:
 
 1. Open the page *Customers* that you have created.
 
@@ -64,7 +64,7 @@ Now we will configure a list view and will add a button with [**Delete Object** 
 
     ![](attachments/microflows-how-to-configure-delete-object/list-1.png)
 
-3.  Now we need to configure the list view. Open the list view properties and do the following: <br/>
+3.  Now you need to configure the list view. Open the list view properties and do the following: <br/>
 
     a.  Select **Database** as **Data Source**.<br/>
 
@@ -80,9 +80,9 @@ Now we will configure a list view and will add a button with [**Delete Object** 
     b. Click **Add attribute** (or press <kbd>Ctrl</kbd> + <kbd>Space</kbd>) and select the **Name** attribute. <br/>
 
     ![](attachments/microflows-how-to-configure-delete-object/text-content.png)<br/>
-    Now the text widget is connected to the **Name** attribute, and will show us the customers names in a list.<br/>
+    Now the text widget is connected to the **Name** attribute, and will show you customers' names in a list.<br/>
 
-5.  Click the button displayed as arrow and delete it.
+5.  Click the button displayed as an arrow and delete it.
 
     ![](attachments/microflows-how-to-configure-delete-object/arrow-button.png)
 
@@ -94,23 +94,23 @@ Now we will configure a list view and will add a button with [**Delete Object** 
 
     ![](attachments/microflows-how-to-configure-delete-object/delete-button-properties.png)
 
-We have created the page that lists the customers names. If a user clicks **Delete** in one of the lines, the customer who is indicated in this line will be deleted from the app along with the customer's details. For more information, see section [2.3 Delete Object Action](page-editor-widgets-events-section#delete-object-action) in *Events Section in Widgets*.
+You have created the page that lists customers' names. When an end-user clicks **Delete** in one of the lines, the customer who is selected in this line will be deleted from the app along with the customer's details. For more information, see the [Delete Object Action](page-editor-widgets-events-section#delete-object-action) section in *Events Section*.
 
 ## 4 Configuring a Delete Object Action in a Data View
 
-We can also configure the [**Delete Object** action](page-editor-widgets-events-section#delete-object-action) in a data view. In this case **Delete Object** will delete the connected object. To configure the data view and the **Delete** button on your page, do the following:
+You can also configure the [**Delete Object** action](page-editor-widgets-events-section#delete-object-action) in a data view. In this case **Delete Object** will delete the connected object. To configure the data view and the **Delete** button on your page, do the following:
 
-1.  On the page named *Customers*, open the **Layout Grid** properties (use a breadcrumb at the bottom of the screen to find the layout grid).
+1.  On the page named *Customers*, open the **Layout Grid** properties (use a breadcrumb at the bottom of the screen to select the layout grid).
 
     ![](attachments/microflows-how-to-configure-delete-object/breadcrumb.png)
 
-2.  In **Properties** > **Add Row**, click the button that adds a row below that we need to place the data view there. 
+2.  In **Properties** > **Add Row**, click the button that adds a row below. You will use this row to place a data view there. 
 
     ![](attachments/microflows-how-to-configure-delete-object/add-row.png)
 
-3. In **Toolbox** > **Widgets** > **Data Containers**, find data view, drag and drop it inside the column (that was added together with a new row).
+3. In **Toolbox** > **Widgets** > **Data Containers**, find the data view widget, drag and drop it inside the column (that was added together with a new row).
 
-4.  Now we need to configure the data view. In **Properties** of the data view, do the following: <br/>
+4.  Now you need to configure the data view. In **Properties** of the data view, do the following: <br/>
 
     a. Set **Data Source** to **List widget**.<br/>
 
@@ -118,9 +118,9 @@ We can also configure the [**Delete Object** action](page-editor-widgets-events-
 
     ![](attachments/microflows-how-to-configure-delete-object/data-view-list-widget.png)
 
-5. We need to fill the data view with data. In **Toolbox** >**Widgets** > **Typography**, select **Text**, drag and drop it inside data view content. 
+5. You need to fill the data view with data. In **Toolbox** >**Widgets** > **Typography**, select **Text**, drag and drop it inside the data view. 
 
-6.  We will make a heading out of the **Text** widget we have just added. Open the **Properties** of the **Text** and do the following:<br/>
+6.  You will make a heading out of the **Text** widget you have just added. Open the **Properties** of the **Text** and do the following:<br/>
 
     a. In **Content**, delete the word *Text* and type *Customer Details*.<br/>
 
@@ -128,7 +128,7 @@ We can also configure the [**Delete Object** action](page-editor-widgets-events-
 
     ![](attachments/microflows-how-to-configure-delete-object/text-heading4.png)<br/>
 
-7. Now we will add a text box to display details of the selected customer. In **Widgets** > **Input Elements**, select **Text Box**, drag and drop it inside the data view content. 
+7. Now you will add a text box to display details of the selected customer. In **Widgets** > **Input Elements**, select **Text Box**, drag and drop it inside the data view content. 
 
 8.  Open the **Properties** of the **Text Box**, and in **Data Source**, set **Attribute** to **Name** (the label for the text box will be changed to **Name** automatically).  
 
@@ -142,19 +142,19 @@ We can also configure the [**Delete Object** action](page-editor-widgets-events-
 
 11. In **Toolbox** > **Widgets** > **Buttons** find **Delete Object**, drag and drop it inside the data view. 
 
-12. The button is already preconfigured: its **On Click Action** is set to **Delete Object**, and **Caption** is set to **Delete**. But we will add some styling to it. Do the following:<br/>
+12. The button is already preconfigured: its **On Click Action** is set to **Delete Object**, and **Caption** is set to **Delete**. But you will add some styling to it. Do the following:<br/>
 
     a. In the **General** section, set **Style** to **Danger**.<br/>
 
     b. In the **Design** section, set **Align Self** to **Right**.<br/>
 
-Now we have configured the data view that will show you the customer's name and address once you select this customer in a list. 
+You have configured the data view that will show you the customer's name and address once you select this customer in the list:
 
 ![](attachments/microflows-how-to-configure-delete-object/configured-page.png)
 
 The workflow for the **Delete** button in the data view (the red **Delete** button) is the following:
 
-1. A user selects a name of the customer in a list.
+1. An end-user selects a customer's name in the list.
 
 2. The customer's details (name and address) are shown in the data view below. 
 
@@ -164,6 +164,6 @@ The workflow for the **Delete** button in the data view (the red **Delete** butt
 
    ![](attachments/microflows-how-to-configure-delete-object/published-page-example.png)
 
-For more information, see section [2.3 Delete Object Action](page-editor-widgets-events-section#delete-object-action) in *Events Section in Widgets*.
+For more information on the delete object action, see the [Delete Object Action](page-editor-widgets-events-section#delete-object-action) section in *Events Section*.
 
-Congratulations! You have configured **Delete** buttons in a list view and in a data view. 
+Congratulations! You have configured **Delete** buttons in the list view and in the data view. 

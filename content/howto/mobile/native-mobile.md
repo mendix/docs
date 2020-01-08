@@ -17,4 +17,6 @@ You build Mendix native mobile apps the same way you build web or hybrid apps. Y
 * [Work with Parallels](using-mendix-studio-pro-on-a-mac)
 * [Implement Native Styling](native-styling)
 * [Debug Native Apps (Advanced)](native-debug)
+* [Deploy Your First Mendix Native App](deploying-native-app)
+* [Use Local Notifications](local-notif-parent)
 

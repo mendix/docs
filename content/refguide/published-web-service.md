@@ -24,9 +24,7 @@ See [Operations](operations).
 
 If set to 'yes', incoming requests will be validated against the WSDL.
 
-Note that when this property was introduced in Mendix 5.8.0, behavior changed slightly in this respect. Primitive values already used to be validated in all cases, but now we're validating the entire incoming XML message. To not break old web service requests that may not validate against the WSDL but that did not cause actual issues, we do not turn this feature on by default when converting projects made in older versions. This does however mean that if you want to validate primitives again, you must turn this feature on.
-
-_Default value:_ Yes
+Default: *Yes*
 
 ### 3.2 Authentication
 

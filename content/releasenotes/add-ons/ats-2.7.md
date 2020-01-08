@@ -52,10 +52,9 @@ The same holds for the function parameters.
 
 ### Data driven test cases
 
-* We added the option to sequentially execute data driven test cases (DDTC). Until now DDTCs were always executed in parallel. We have now made it possible to chose if you want to execute DDTCs parallel or sequentially, i.e. one-by-one. The selection works in exactly the way it works for test suites, but it is only available for test cases that are related to a dataset. This overcomes issues where DDTC could be interfering with each other because they were always running in parallel.
+* We added the option to sequentially execute data driven test cases (DDTC). Until now DDTCs were always executed in parallel. We have now made it possible to chose if you want to execute DDTCs parallel or sequentially, as in, one-by-one. The selection works in exactly the way it works for test suites, but it is only available for test cases that are related to a dataset. This overcomes issues where DDTC could be interfering with each other because they were always running in parallel.
 * We have also added the screenshot feature to data driven test cases. Whenever a data driven test case fails for a given record in the dataset, a screen shot will be recorded and will be accessible in the logs. This will work in the same way as it is working now for standard test cases.
 * Selecting a dataset for a test case now uses the sidebar search dialog.
-
 
 ### Improvements
 

@@ -42,7 +42,7 @@ Authentication can be done by including basic authentication in the HTTP header 
 
 1.  Username and password are combined into a string "username:password"
 2.  The resulting string is then encoded using the [RFC2045-MIME](https://tools.ietf.org/html/rfc2045) variant of Base64, except not limited to 76 char/line
-3.  The authorization method and a single space i.e. "Basic " is then put before the encoded string.
+3.  The authorization method and a single space as in, "Basic " is then put before the encoded string.
 
 This result is a header which looks like _Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==_
 

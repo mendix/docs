@@ -21,10 +21,10 @@ $ cd my-app-generator
 $ npm init --yes
 $ npm install -g typescript
 $ npm install mendixmodelsdk mendixplatformsdk when @types/when --save
-$ tsc --init
+$ tsc --init --target es6
 ```
 
-## <a name="setting"></a>3 Setting Up Your Development Tools
+## 3 Setting Up Your Development Tools {#setting}
 
 To set up your development tools, follow these steps:
 
@@ -32,9 +32,9 @@ To set up your development tools, follow these steps:
 
 2.  Open a terminal (on Windows, [Command Prompt](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands)) and run the following command:
 
-    ```text
+    ```bash
     $ node --version
-    v8.9.1
+    v10.13.0
     ```
 
     For Debian-based Linux distributions such as Ubuntu, please refer to [this article](https://github.com/nodesource/distributions#user-content-installation-instructions) to properly set up your apt-get sources.
@@ -50,9 +50,9 @@ To set up your development tools, follow these steps:
 
 5.  Use the following command to check the TypeScript compiler version on your PATH:
 
-    ```text
+    ```bash
     $ tsc --version
-    Version 2.6.2 (should be the latest 2.* version)
+    Version 3.6.3 (or higher)
     ```
 
     If the version number is much lower, it could be that you also have an outdated TypeScript SDK on your system, left over from a previous installation. You can either uninstall the old TypeScript SDK, or bypass it by removing the old TypeScript SDK from your system's PATH environment variable.
@@ -61,7 +61,7 @@ To set up your development tools, follow these steps:
 
 To set up a working directory for your script, follow these steps:
 
-1.  First, create a new directory and initialize it for use with the Node.js package manager `npm`. Using `--yes` skips several unimportant questions. This creates a  [`package.json`](https://docs.npmjs.com/files/package.json)with default contents. Through this file you control your `npm` package. 
+1.  First, create a new directory and initialize it for use with the Node.js package manager `npm`. Using `--yes` skips several unimportant questions. This creates a [package.json](https://docs.npmjs.com/files/package.json)with default contents. Through this file you control your `npm` package. 
 
     ```bash
     $ mkdir my-app-generator
@@ -78,18 +78,18 @@ To set up a working directory for your script, follow these steps:
     ```
 
 3.  Add `mendixmodelsdk,` `mendixplatformsdk,` and `when.js` as dependencies. 
-    Dependencies are stored in the `node_modules` directory (which will be automatically created by `npm` if necessary). Open the `package.json` you just created. Add a [`dependencies` block](https://docs.npmjs.com/files/package.json#dependencies) that looks like this:
+    Dependencies are stored in the `node_modules` directory (which will be automatically created by `npm` if necessary). Open the *package.json* you just created. Add a [`dependencies` block](https://docs.npmjs.com/files/package.json#dependencies) that looks like this:
 
     ```json
     "dependencies": {
-      "@types/when": "^2.4.28",
-      "mendixmodelsdk": "~4.6.0",
-      "mendixplatformsdk": "~4.0.0",
-      "when": "^2.4.28"
+      "@types/when": "^2.4.33",
+      "mendixmodelsdk": "~4.25.0",
+      "mendixplatformsdk": "~4.1.1",
+      "when": "^3.7.8"
     }
     ```
 
-    When a new major or minor version of the Mendix SDK is released (i.e. 1.0.0 to 2.0.0 or 1.0.0 to 1.1.0) and you run `npm update` in your project folder, the `~` in front of the version number makes sure that installed version of the SDK won't be upgraded automatically. Only patch releases (i.e. 1.0.1) of the SDK will be automatically upgraded, otherwise your script could inadvertently be broken. You may, of course, edit the dependency by hand yourself.
+    When a new major or minor version of the Mendix SDK is released (as in, 1.0.0 to 2.0.0 or 1.0.0 to 1.1.0) and you run `npm update` in your project folder, the `~` in front of the version number makes sure that installed version of the SDK won't be upgraded automatically. Only patch releases (as in, 1.0.1) of the SDK will be automatically upgraded, otherwise your script could inadvertently be broken. You may, of course, edit the dependency by hand yourself.
 
 4.  Save your changes and then execute the following to install the dependencies:
 
@@ -98,9 +98,9 @@ To set up a working directory for your script, follow these steps:
     ```
     If you are using version control, make sure to ignore the `node_modules directory`, otherwise you end up committing dependencies.
 
-5.  In Code, create a `[tsconfig.json](https://github.com/Microsoft/TypeScript/wiki/tsconfig.json)` file next to your `package.json`. The `tsconfig.json` file is used by the TypeScript compiler to compile your code in the proper manner to a JS file. Create it with the following contents. 
+5.  In Code, create a [tsconfig.json](https://github.com/Microsoft/TypeScript/wiki/tsconfig.json) file next to your *package.json*. The *tsconfig.json* file is used by the TypeScript compiler to compile your code in the proper manner to a JS file. Create it with the following contents. 
 
-    ```text
+    ```json
     {
     	"compilerOptions" : {
     		"module" : "commonjs",

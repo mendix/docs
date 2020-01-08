@@ -17,7 +17,7 @@ A user's home page can vary based on their [user roles](user-roles).
 
 ## 2 Profiles {#profiles}
 
-At the heart of the navigation model in Mendix, there are seven types of profiles:
+At the heart of the navigation model in Mendix, these are the available profiles:
 
 * Responsive
 * Hybrid tablet app online
@@ -34,13 +34,13 @@ The device type of the currently logged-in user is available in [microflows](mic
 
 ### 2.1 Responsive
 
-Every app always has one profile of a Responsive type which cannot be deleted. This is the default profile used by a Mendix app.
+Every app always has one profile of a Responsive type which cannot be deleted. This is the default profile used by a Mendix app. This profile can be used to make web applications.
 
 ### 2.2 Hybrid Profiles {#hybrid-profiles}
 
 A Mendix app can be installed on a tablet or phone as an app by creating a PhoneGap hybrid package. Hybrid profiles can be accessed from such a PhoneGap app. Hybrid app profiles are determined by device type (phone or tablet) and by the offline accessibility feature enabled (online or offline). If no profile exists with the requested combination, an error will be displayed in the app.
 
-Hybrid offline apps are designed to allow users to continue using their Mendix app even when they have no internet connection. However, certain restrictions apply. For an overview of the ramifications of running an offline device profile, see [Offline first](offline-first).
+Hybrid offline apps are designed to allow users to continue using their Mendix app even when they have no internet connection. However, certain restrictions apply. For an overview of the ramifications of running an offline device profile, see [Offline First](offline-first).
 
 Four different hybrid profiles are available:
 
@@ -51,11 +51,11 @@ Four different hybrid profiles are available:
 
 ### 2.3 Tablet Browser
 
-All the users accessing a Mendix app from a browser on a tablet will automatically be redirected to a profile of the Tablet browser type. If no profile exists of that type, the user will be redirected to the Responsive profile.
+All the users accessing a Mendix app from a browser on a tablet will automatically be redirected to a profile of the Tablet browser type. If no profile exists of that type, the user will be redirected to the Responsive profile. This profile can be used to make web applications.
 
 ### 2.4 Phone Browser
 
-All the users accessing the Mendix app from a browser on a phone will automatically be redirected to a profile of the Phone browser type. If no profile exists of that type, the user will be redirected to the Responsive profile.
+All the users accessing the Mendix app from a browser on a phone will automatically be redirected to a profile of the Phone browser type. If no profile exists of that type, the user will be redirected to the Responsive profile. This profile can be used to make web applications.
 
 ### 2.5 Native Phone
 
@@ -71,7 +71,7 @@ Mendix Runtime automatically redirects users to the home page of the appropriate
 | Android&#124;iPad | Tablet |
 | _(other)_ | Responsive |
 
-To configure the regular expressions used to match phone or tablet users, see [Custom Settings](custom-settings).
+To configure the regular expressions used to match phone or tablet users, see [Runtime Customization](custom-settings).
 
 It is also possible to force the client to use a specific profile by adding a `profile` query string parameter to the URL when visiting a Mendix application. The possible values are the names of the profiles, which are Responsive, Tablet, Phone, HybridTablet, and HybridPhone. For example:
 
@@ -112,9 +112,7 @@ If the sign-in page is set to none, a built-in pop-up window will appear instead
 Each device type contains a default menu. You can use these menus in [menu widgets](menu-widgets). Defining the menu for a device type works the same as when editing a menu document. For more details, see [Menu](menu).
 
 {{% alert type="warning" %}}
-
 If [security](project-security) is enabled, the menu will only show the items to which the user has access.
-
 {{% /alert %}}
 
 ### 4.3 Profile Buttons

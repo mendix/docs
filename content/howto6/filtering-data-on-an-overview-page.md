@@ -122,7 +122,7 @@ To filter the list of orders for the minimum total price using XPath, follow the
     `_[TotalPrice >= 50]`
 
     ![](attachments/18448705/18581367.png)
- 
+
 2. When you run your application, you will see the following result set:
 
     ![](attachments/18448705/18581368.png)
@@ -179,7 +179,6 @@ In the example activity of this section, you will filter the orders by their ass
 
 ## 8 Read More
 
-* [How to Configure the Scout and Windows 10 Workaround](scout-and-windows-10-workaround)
 * [How to Set Up Layouts & Snippets](layouts-and-snippets)
 * [How to Set Up the Mendix UI Framework](setup-mendix-ui-framework)
 * [How to Set Up the Mendix UI Framework with Just CSS](setup-mendix-ui-framework-with-just-css)

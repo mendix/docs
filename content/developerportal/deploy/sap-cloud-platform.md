@@ -50,11 +50,11 @@ Once the app has been created you can continue with [Set Up Region](#SetUpRegion
 
 You are now prompted with an SAP Cloud Platform login screen. Select the region where your SAP Cloud Platform is located.
 
-Make sure that you have enough quota in this region for your organization to run a Mendix app. You will need enough quota to create:
+Make sure that you have enough quota in this region for your organization to run a Mendix app. You will need enough quota to create the following:
 
-* a database
-* a route
-* a binding to XSUAA
+* Database
+* Route
+* Binding to XSUAA
 
 ![](attachments/sap-cloud-platform/01-sap-select-region.png)
 
@@ -62,9 +62,8 @@ If you have already logged on to SAP and your SAP session has not expired, you w
 
 You may be asked to provide your credentials in one of two ways:
 
-1. You will be taken to the SAP authentication page to enter your credentials. In this case, your SAP username (email address) must be the same as your Mendix username.
-
-2. The Developer Portal will ask for your credentials which it will then use to obtain an access token from SAP. The Developer Portal will then use the access token. It will not store your credentials. *This method is being deprecated*.
+* You will be taken to the SAP authentication page to enter your credentials – in this case, your SAP user name (email address) must be the same as your Mendix user name
+* The Developer Portal will ask for your credentials, which it will then use to obtain an access token from SAP – the Developer Portal will then use the access token, but it will not store your credentials (please note this method is being deprecated)
 
 {{% alert type="info" %}}
 If you have issues using SAP authentication, please refer to the reference [SAP Single Sign On](/partners/sap/sap-single-sign-on).
@@ -76,7 +75,7 @@ You will now be asked to provide the final details for the SAP Cloud Platform de
 
 You will be able to choose a Domain, Organization, and Space which is configured for you in this region.
 
-If you do not choose a Custom database, you will still be able to choose from a range of different databases, PostgreSQL and SAP HANA for example. Please ensure that the database you choose is supported by your quota plan for this region and organization. See [Databases in SAP Cloud Platform](#databases), below, for important information on using SAP HANA as your database.
+If you do not choose a Custom database, you will still be able to choose from a range of different databases, PostgreSQL and SAP HANA for example. Please ensure that the database you choose is supported by your quota plan for this region and organization. See [Databases in SAP Cloud Platform](#databases), below, for important information on selecting the correct database for your app.
 
 If you select **Yes** for **Custom database?**, you will be asked for the Name and the Plan.
 
@@ -128,7 +127,7 @@ This is done from the **Environments** page of the Developer Portal:
 
 7.  Set **Development Mode** to Yes if you want the application to run with the Mendix security level of Prototype/demo, or Off (no security). This is not recommended for acceptance or production environments.
 
-8.  Select the database you would like to use. Be aware that even if a specific database is part of the Marketplace it could still be unavailable because of limitations imposed by the quota of your Organization. See [Databases in SAP Cloud Platform](#databases), below, for important information on using SAP HANA as your database.
+8.  Select the database you would like to use. Be aware that even if a specific database is part of the Marketplace it could still be unavailable because of limitations imposed by the quota of your Organization. See [Databases in SAP Cloud Platform](#databases), below, for for important information on selecting the correct database for your app.
 
     If you choose **Custom database** you will need to enter a name for the database and the plan.
 
@@ -155,11 +154,11 @@ At any time, you can create a new deployment package from a committed version of
 {{% alert type="info" %}}
 You can also deploy your app (the steps in sections 4 and 5.1 of this How-To) automatically from Studio Pro. However, you will then have less control over the deployment.
 
-If you click **Run** in Studio Pro this will automatically:
+If you click **Run** in Studio Pro, this will automatically do the following:
 
-* commit the project
-* generate a deployment package
-* deploy the deployment package to the first available environment (this will replace any app which is currently running in this environment)
+1. Commit the project.
+2. Generate a deployment package.
+3. Deploy the deployment package to the first available environment (this will replace any app which is currently running in this environment).
 {{% /alert %}}
 
 {{% alert type="warning" %}}
@@ -378,7 +377,17 @@ To connect a service in the section **Available Services**
 
     ![](attachments/sap-cloud-platform/service-connect.png)
 
-    The services you have selected will be added as **Services To Be Bound**. They will not actually be bound until you stop and start the application.
+    The services you have selected will be added as **Services To Be Bound**. Now, you can upload JSON **File** with a configuration that will be applied to the service binding. 
+
+To upload the JSON **File** for service binding, follow these steps:
+
+1. Select the service in the **Service To Be Bound** section.
+2. Click the ellipsis (**...**) next to the service for which you want to upload the file.
+3. Select **Add Binding Configuration**.
+4. Select the JSON **File** to upload.
+5. Click **Save**.
+
+The service bindings will be created with the provided configurations when you restart the application. 
 
 {{% alert type="info" %}}
 If you receive an error, and the service fails to bind please check all aspects of your SAP account. The error message may not provide full information about, for example, which plans you are allowed to choose for a particular service.
@@ -392,7 +401,7 @@ If you no longer require a service you can unbind it or remove it from your app.
 
 **Unbinding a Service**
 
-1. Click the ellipsis next to the service you want to unbind in the **Bound Services** section.
+1. Click the ellipsis (**...**) next to the service you want to unbind in the **Bound Services** section.
 2. Select **Unbind Service**.
 
     ![](attachments/sap-cloud-platform/service-unbind.png)
@@ -425,17 +434,23 @@ Mendix needs access to a relational database backend and can run using different
 
 ### 8.1 Running Mendix on PostgreSQL
 
+{{% alert type="warning" %}}
+SAP have deprecated the use of PostgreSQL databases bound via the marketplace. This means that SAP accounts created recently will not be able to directly bind PostgreSQL databases and you will have to use [SAP HANA](#sap-hana) or [AWS RDS PostgreSQL](#aws-rds) databases.
+{{% /alert %}}
+
 When you create your environment on SAP Cloud Platform, you can select a PostgreSQL database. During the creation of the environment, a PostgreSQL service will be added to your space and, when you deploy your app, it will be bound to the PostgreSQL service.
 
 This database service should not be unbound from your environment: see [Services Tab](#binding-services), above, for more information on required services.
 
-### 8.2 Running Mendix on SAP HANA
+### 8.2 Running Mendix on SAP HANA{#sap-hana}
 
 {{% alert type="info" %}}
 You can only use SAP HANA as the Mendix database for Mendix version 7.23.3 and above.
 
 There are also some differences in the way that Mendix can be used with SAP HANA compared to PostgreSQL databases – see [SAP HANA – Known Issues](/refguide/saphana).
 {{% /alert %}}
+
+#### 8.2.1 SAP HANA Configuration for Full Accounts
 
 SAP HANA works in a different way to PostgreSQL.
 
@@ -455,6 +470,45 @@ Please bear the following in mind when using SAP HANA as your Mendix database:
 {{% /alert %}}
 
 If you have issues with your app running on SAP HANA, you will need to use the SAP Cloud Platform cockpit to investigate. The Mendix Developer Portal does not have information on the status or configuration of the SAP HANA service.
+
+#### 8.2.2 SAP HANA Configuration for Trial Accounts
+
+{{% alert type="info" %}}
+If you are using a trial account, the SAP HANA Schema is only available if your account was created after November 2019. If you have a trial account which was created before then, you will not be able to use the hanatrial-schema database.
+{{% /alert %}}
+
+For trial accounts which support it, generally those created after November 2019, you can bind your Mendix app to a trial SAP HANA database. Just choose **hanatrial-schema** from the dropdown of supported databases.
+
+![](attachments/sap-cloud-platform/hanatrial-schema.png)
+
+If your trial account does not include the hanatrial schema, you will get an error when you try to deploy your Mendix app saying that *provisioning has failed because service hanatrial with plan schema is not found*.
+
+### 8.3 Running Mendix on AWS RDS PostgreSQL{#aws-rds}
+
+If you do not have any PostgreSQL databases available to bind in your marketplace, you can still use a PostgreSQL database as your Mendix database.
+
+To do this, you will need to set up a PostgreSQL database on Amazon Web Services (AWS). Instructions for doing this to support an app deployed to SAP Cloud Platform are available on the SAP Help Portal here: [PostgreSQL on Amazon](https://help.sap.com/viewer/b392039670364098a722cad3071c7af9/Cloud/en-US).
+
+To use this database for your Mendix app, you will need to choose **AWS RDS PostgreSQL** when specifying your environment on SAP Cloud Platform.
+
+![](attachments/sap-cloud-platform/aws-rds.png)
+
+You will also have to provide **Configuration JSON** to enable your app to find the database. The configuration file will be similar to the example shown below:
+
+```json
+{
+   "adminPassword": "AdminPassword",
+   "adminUsername": "AdminUsername",
+   "backupRetentionPeriod": 14,
+   "dbEngineMajorVersion": "9.6",
+   "dbInstanceType": "db.t2.micro",
+   "dbName": "mynewdb",
+   "multiAz": true,
+   "resourceTechnicalName": "aws_account_name",
+   "storageEncrypted": false,
+   "storageGb": 20
+}
+```
 
 ## 9 Issues
 

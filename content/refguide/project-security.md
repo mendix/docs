@@ -4,6 +4,7 @@ parent: "security"
 menu_order: 10
 tags: ["studio pro", "security", "project security"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+#The anchor password-policy below is mapped, so it should not be removed or changed
 ---
 
 ## 1 Introduction
@@ -29,7 +30,7 @@ The security level defines if security is switched off or on for the project and
 | Production | Full security is applied. | Administrator and anonymous access, user roles, security for forms, microflows, entities, and reports. |
 
 {{% alert type="warning" %}}
-Security levels **Off** and **Prototype/demo** are only allowed in the development and test environments. For acceptance and production you need to use the **Production** security level and configure all security settings accordingly.
+For all licensed Mendix Cloud nodes, you need to use the **Production** security level and configure all security settings accordingly. Security levels **Off** and **Prototype/demo** are only allowed when testing locally, when deploying a Free App, and in cloud environments outside the Mendix Cloud which are specifically set up with **Development mode**. 
 {{% /alert %}}
 
 ### 2.1 Settings Availability for Different Security Levels
@@ -84,7 +85,7 @@ Demo users are a demonstration of each [user role](user-roles) existing in your 
 
 ## 7 Anonymous Users {#anonymous-users}
 
-Anonymous users allow end-users access your application without having to log in. You can restrict the data that anonymous users can access by assigning a specific user role to them. For more information, see [Anonymous Users](anonymous-users).
+Anonymous users allow end-users access your application without having to sign in. You can restrict the data that anonymous users can access by assigning a specific user role to them. For more information, see [Anonymous Users](anonymous-users).
 
 ## 8 Password Policy {#password-policy}
 

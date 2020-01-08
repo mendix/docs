@@ -676,7 +676,7 @@ module.exports = {
       },
 	  {
       from: "/refguide8/app-settings-dialog",
-        to: "/refguide/new-app"
+        to: "/refguide/new-project"
       },
   
     /****************************************************

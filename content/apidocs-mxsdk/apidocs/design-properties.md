@@ -21,23 +21,19 @@ Design properties can make this work easier and safer. By configuring your own c
 
 ## 4 Design Property Types
 
-There are two types of design properties: **Toggle** and **Dropdown**. By default design properties have no effect on widgets. Styling is only applied when a **Toggle** property is toggled on (switched on, set, put to Yes?) for a widget, or when one of the options is selected for a **Dropdown** property is selected.
+There are two types of design properties: **Toggle** and **Dropdown**. By default design properties have no effect on widgets. Styling is only applied when a **Toggle** property is turned on for a widget, or when one of the options is selected for a **Dropdown** property.
 
-A design property of type **Toggle** is a simple property which may be set (switched on?) for a widget. When this property is set, then configured classes applied to a widget automatically.
+A **Toggle** design property is a simple property which may be turned on for a widget. When this property is set, configured classes are applied to a widget automatically. For example, a **Toggle** property may be a **Full width** property for Atlas UI button widgets. When this property is set for a button, then the `btn-clock` CSS class is applied. No additional classes are applied if property is not set.
 
-For example, a **Toggle** property may be **Full width** property for button widgets from Atlas UI. When this property is set for a button, then `btn-clock` CSS class is applied. No additional classes applied when property is not set.
-
-A design property of type **Dropdown** defines set of options with separate classes per option. When one of the options is selected, respective classes are applied to a widget.
-
-For example, a **Dropdown** property may be **Align self** property from Atlas UI. It contains two options, **Left** and **Right**. When one of the options is selected then CSS class `pull-left` or `pull-right` is applied respectively. 
+A design property of type **Dropdown** defines a set of options with separate classes per option. When one of the options is selected, the respective classes are applied to a widget. For example, a **Dropdown** property may be an Atlas UI **Align self** property. It contains two options: **Left** and **Right**. When one of these options is selected, then either the `pull-left` or `pull-right` CSS class is applied. 
 
 ## 5 Design Properties Definitions
 
-Design properties are defined as a part of the theme settings inside of your app's **theme** folder. Since styling works differently for web and native platforms design properties for them are also different and defined in two separate files. For web it is *settings.json*. For native it is *settings-native.json*.
+Design properties are defined as a part of the theme settings inside your app's **theme** folder. Since styling works differently for web and native platforms, each platform's design properties are different and defined in two separate files. Web styling is defined in the *settings.json* file. Native styling is defined in the *settings-native.json* file.
 
-Since both *settings.json* and *settings-native.json* are JSON files hence design properties are also defined in JSON format as a part of those files.
+Since both *settings.json* and *settings-native.json* are *JSON* files, their design properties are defined in the *JSON* format as a part of those files.
 
-A simplified example of a theme settings file with design properties is as follows:
+Here is a simplified example of a theme settings file with design properties:
 
 ```js
 {
@@ -76,7 +72,7 @@ A simplified example of a theme settings file with design properties is as follo
 
 ### 5.1 Design Property Structure
 
-In the example above design properties are defined as a JSON object under key `designProperties` inside of a theme settings file. That object's structure is as follows:
+In the previous section's example, design properties are defined as a *JSON* object under key `designProperties` inside of a theme settings file. That object's structure is as follows:
 
 ```js
 {
@@ -94,7 +90,7 @@ In the example above design properties are defined as a JSON object under key `d
 }
 ```
 
-As you can see from the structure above, design properties are defined as an JSON object where keys (`DivContainer`, `Button`, etc) are widget types, and values are JSON arrays containing set of design properties applicable for that widget type. See more about [Widget Types](#widget-types). Every design property from the array is also represented as a JSON object. As described earlier there are two types of design properties: **Toggle** and **Dropdown**. Both types share common fields as `name`, `type` and `description`. Those names determine how design property appears to a user in Studio and Studio Pro. Lets look at examples of design properties of both types and check how they look in Studios.
+As you can see from the structure above, design properties are defined as a *JSON* object where keys (`DivContainer`, `Button`, etc) are widget types and values are *JSON* arrays containing sets of design properties applicable for that widget type. To learn more about this subject, see the [Widget Types Reference Guide](#widget-types). Every design property from the array is also represented as a *JSON* object. As described earlier there are two types of design properties: **Toggle** and **Dropdown**. Both types share common fields such as `name`, `type`, and `description`. Those names determine how a design property appears to a user in Mendix Studio and Mendix Studio Pro. Below you can look at examples of design properties of both types and check how they look in the Studios.
 
 Here is an example of a **Toggle** design property:
 

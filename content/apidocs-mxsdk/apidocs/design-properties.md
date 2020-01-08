@@ -19,11 +19,15 @@ While styling Mendix apps, users must often apply the same set of CSS or native 
 
 Design properties can make this work easier and safer. By configuring your own custom design properties, a certain styling can be applied to a widget in a few clicks.
 
+{{% alert type="info" %}}
+Mendix Studio does not have any class editing interface. This means that in Studio, design properties are the only way to alter the visual behaviour of a certain element.
+{{% /alert %}}
+
 ## 4 Design Property Types
 
 There are two types of design properties: **Toggle** and **Dropdown**. By default design properties have no effect on widgets. Styling is only applied when a **Toggle** property is turned on for a widget, or when one of the options is selected for a **Dropdown** property.
 
-A **Toggle** design property is a simple property which may be turned on for a widget. When this property is set, configured classes are applied to a widget automatically. For example, a **Toggle** property may be a **Full width** property for Atlas UI button widgets. When this property is set for a button, then the `btn-clock` CSS class is applied. No additional classes are applied if property is not set.
+A **Toggle** design property is a simple property which may be turned on for a widget. When this property is set, configured classes are applied to a widget automatically. For example, a **Toggle** property may be a **Full width** property for Atlas UI button widgets. When this property is set for a button, then the `btn-block` CSS class is applied. No additional classes are applied if property is not set.
 
 A design property of type **Dropdown** defines a set of options with separate classes per option. When one of the options is selected, the respective classes are applied to a widget. For example, a **Dropdown** property may be an Atlas UI **Align self** property. It contains two options: **Left** and **Right**. When one of these options is selected, then either the `pull-left` or `pull-right` CSS class is applied. 
 
@@ -90,7 +94,9 @@ In the previous section's example, design properties are defined as a *JSON* obj
 }
 ```
 
-As you can see from the structure above, design properties are defined as a *JSON* object where keys (`DivContainer`, `Button`, etc) are widget types and values are *JSON* arrays containing sets of design properties applicable for that widget type. To learn more about this subject, see the [Widget Types Reference Guide](#widget-types). Every design property from the array is also represented as a *JSON* object. As described earlier there are two types of design properties: **Toggle** and **Dropdown**. Both types share common fields such as `name`, `type`, and `description`. Those names determine how a design property appears to a user in Mendix Studio and Mendix Studio Pro. Below you can look at examples of design properties of both types and check how they look in the Studios.
+As you can see from the structure above, design properties are defined as a *JSON* object where keys (`DivContainer`, `Button`, etc) are widget types and values are *JSON* arrays containing sets of design properties applicable for that widget type. To learn more about this subject, see the [Widget Types Reference Guide](#widget-types). Note that you can add multiple class names in a property.
+
+Every design property from the array is also represented as a *JSON* object. As described earlier there are two types of design properties: **Toggle** and **Dropdown**. Both types share common fields such as `name`, `type`, and `description`. Those names determine how a design property appears to a user in Mendix Studio and Mendix Studio Pro. Below you can look at examples of design properties of both types and check how they look in the Studios.
 
 Here is an example of a **Toggle** design property:
 

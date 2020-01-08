@@ -1,30 +1,27 @@
 ---
 title: "Design Properties"
 category: "API Documentation"
-description: ""
+description: "This guide outlines how design properties work and can help you create custom design properties."
 tags: [ ]
 ---
 
-
-
 ## 1 Introduction
 
-This guide explains design properties in details. Mendix ships Atlas UI theme together with extensive set of mostly used design properties. They cover many scenarios and cover majority of use cases.
-Use this document if you want to create custom design properties or you are interested in how design properties work.
+This guide outlines how design properties work and can help you create custom design properties. Many projects can simply use the Atlas UI theme and its included set of design properties to satisfy their styling needs. These included design properties are robust enough to serve a majority of use cases. But if you want to customize your styling more deeply, you will have to modify your design properties to fit your needs.
 
-Design properties is a special set of settings shipped together with a Mendix theme module. This way design properties are shared among Mendix apps which use that theme module. The user can see design properties available for a widget in Properties pane or in the settings dialog of the widget under **Appearance** tab. 
+Design properties are a special set of settings shipped together with a Mendix theme module. Design properties are shared among all the Mendix apps which use a specific theme module. You can see which design properties are available for a widget either in the **Properties** pane or in the widget's settings dialog box under the **Appearance** tab. 
 
 ![Design properties from AtlasUI for a button widget](attachments/design-properties/design_properties_teaser.png)
 
 ## 2 Using Design Properties
 
-While styling Mendix apps users often face a situation when they have to apply same set of CSS or native styling classes to widgets on different pages again and again. This work is time consuming and it also error prone as the user has to edit text fields in order to apply classes to a widget. 
+While styling Mendix apps, users must often apply the same set of CSS or native styling classes to widgets on different pages again and again. This work is time consuming and vulnerable to human error as you edit text fields in order to apply classes to a widget.
 
-For example if during a maintenance the app has to be restyled to make some widgets look differently then certain classes have to be added, removed or replaced manually. Design properties can make this work much easier. With per-configured design properties a certain styling can be applied to a widget in a few mouse clicks.
+Design properties can make this work easier and safer. By configuring your own custom design properties, a certain styling can be applied to a widget in a few clicks.
 
 ## 4 Design Property Types
 
-There are two types of design properties, **Toggle** and **Dropdown**. By default design properties have no effect on widgets, styling is only applied when a **Toggle** property is toggled on(switched on, set, put to Yes?) for a widget; or when one of the options is selected for a **Dropdown** property is selected.
+There are two types of design properties: **Toggle** and **Dropdown**. By default design properties have no effect on widgets. Styling is only applied when a **Toggle** property is toggled on (switched on, set, put to Yes?) for a widget, or when one of the options is selected for a **Dropdown** property is selected.
 
 A design property of type **Toggle** is a simple property which may be set (switched on?) for a widget. When this property is set, then configured classes applied to a widget automatically.
 

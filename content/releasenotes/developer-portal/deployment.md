@@ -14,7 +14,7 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 #### 3DES Ciphers Disabled for Mendix Cloud v3
 
-* We have implemented a change on our Mendix Cloud v3 infrastructure so that incoming SSL connections do not support 3DES ciphers. 3DES ciphers are considered insecure.
+* We have implemented a change to our Mendix Cloud v3 infrastructure so that incoming SSL connections no longer support 3DES ciphers. 3DES ciphers are considered insecure.
 
 ### January 3rd, 2020
 

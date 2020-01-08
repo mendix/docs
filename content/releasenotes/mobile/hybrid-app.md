@@ -19,7 +19,7 @@ For more information on hybrid mobile app development in Mendix, see the [Hybrid
 **Release date: January 3rd, 2020**
 
 * We fixed an issue with race conditions in asynchronous hooks.
-* We introduced a new *onBeforeSynchonization* hook.
+* We introduced a new **onBeforeSynchonization** hook.
 
 ### Hybrid App Base 4.1.8
 

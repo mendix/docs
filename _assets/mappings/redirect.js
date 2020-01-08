@@ -7,6 +7,10 @@ module.exports = {
      * From Studio(potentially temporary until the support of old bundles stops, mapped)
      ****************************************************/
 	{
+      from: "mendix.com/Protocols/MendixData",
+      to: "/studio/domain-models-association-properties"
+    },
+	{
       from: "/refguide/web-modeler/domain-models-association-properties-wm",
       to: "/studio/domain-models-association-properties"
     },

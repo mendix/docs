@@ -135,10 +135,12 @@ This is how the **Dropdown** design property appears:
 
 #### 5.1.1 Common Fields
 
-As you see from examples above, the fields `name` and `description` define the UI, the name of a form control in Studio Pro, and the description under it. They are arbitrary string values naming and describing a design property. Field `type`, on the other hand, defines the type of a property and can only take one of the two string values: `Toggle` or `Dropdown`.
+The examples above show that the fields `name` and `description` define the UI, the name of a form control in Studio Pro, and the description under it. They are arbitrary string values naming and describing a design property. 
+
+Field `type` defines the type of a property and can only take one of the two string values: `Toggle` or `Dropdown`.
 
 {{% alert type="warning" %}}
-Name your design property and its options carefully. Those names cannot be changed easily when there are projects already using them. If you want to rename a design property which is already being used in a project, see the [Renaming Design Properties](#oldNames) section below.
+Name your design property and its options carefully. Those names cannot be changed easily when there are projects already using them. If you want to rename a design property which is already being used in a project, see the [Renaming Design Properties](#old-names) section below.
 {{% /alert %}}
 
 #### 5.1.2 Toggle Specific Fields
@@ -147,30 +149,27 @@ When a type of design property is **Toggle** it should contain a `class` field o
 
 #### 5.1.3 Dropdown Specific Fields
 
-When a type of design property is **Dropdown** it should contain an `options` field which is an array of possible options for the design property. Every option must be an object with `name` and `class` fields. In the example above there are two options named **Styling option 1** and **Styling option 2**. They have `stylingClassOne` and `stylingClassTwo` classes respectively.
+When a type of design property is **Dropdown** it should contain an `options` field which is an array of possible options for the design property. Every option must be an object with `name` and `class` fields. In the example above there are two options named **Styling option 1** and **Styling option 2**. They have the `stylingClassOne` and `stylingClassTwo` classes respectively.
 
 ## 6 Widget Types
 
-When defining design properties in the theme settings you must specify widget type to which widget this property applies, as some of the design properties may be useful only for some widgets.
+When defining design properties in your theme settings you must specify which widget your properties apply to, as some design properties may only work with certain widgets.
 
 {{% alert type="info" %}}
 Having a property that applies a table appearance style like **Stripped**, **Bordered**, or **Lined** only makes sense for widgets that contain tables, for example a data grid widget.
 {{% /alert %}}
 
-Widget types are types defined in the [Model SDK](https://apidocs.mendix.com/modelsdk/latest/modules/pages.html) documentation. Every type which is a direct or an indirect subtype of type [`Widget`](https://apidocs.mendix.com/modelsdk/latest/classes/pages.widget.html) can be used to attach design properties to. If a property is defined on a widget, then every subtype of this widget will have that property. For example if a property is defined on a `Widget` type, which is it the highest type in the hierarchy, then every widget will have this design property available.
-
+Widget types are types defined in the [Model SDK](https://apidocs.mendix.com/modelsdk/latest/modules/pages.html) documentation. Every type which is a direct or an indirect subtype of type [`Widget`](https://apidocs.mendix.com/modelsdk/latest/classes/pages.widget.html) can have design properties attached to it. If a property is defined on a widget, then every subtype of this widget will have that property. For example if a property is defined on a `Widget` type, which is it the highest type in the hierarchy, then every widget will have this design property available.
 
 ### 6.1 Widget Types for Pluggable Widgets
 
 When creating design properties for [Pluggable Widgets](pluggable-widgets), their widget type is determined by [widget id](https://docs.mendix.com/apidocs-mxsdk/apidocs/pluggable-widgets#widget-id).
 
-
-## 7 Renaming Design Properties{#oldNames}
+## 7 Renaming Design Properties{#old-names}
 
 Sometimes you must rename design properties or their options which are already in use. As design properties are identified by names internally, renaming one may be a breaking change for projects that are already using those design properties. 
 
-To prevent errors and offer users simple upgrade path, use an `oldNames` field. This field must be of type array and contain old names, a particular property, or an option that was known and used before. The order of old names in an `oldNames` list does not matter. 
-For instance, if a property was renamed two times, the `oldNames` should contain both previous names.
+To prevent errors and offer users simple upgrade paths, use an `oldNames` field. This field must be of type array and contain old names, a particular property, or an option that was known and used before. The order of old names in an `oldNames` list does not matter. For instance, if a property was renamed twice, the `oldNames` field should contain both previous names.
 
 Example of a property and options that were renamed:
 
@@ -194,7 +193,7 @@ Example of a property and options that were renamed:
 }
 ```
 
-As you can see the design property itself was renamed from **my Dropdown Propery** to **My Dropdown Property**. Also **Styling option two** was renamed twice from the old names **Stling option 2** and **Styling option 2**.
+The design property above was renamed from **my Dropdown Propery** to **My Dropdown Property**. Also **Styling option two** was renamed twice from the old names **Stling option 2** and **Styling option 2**.
 
 ## 8 Read More
 

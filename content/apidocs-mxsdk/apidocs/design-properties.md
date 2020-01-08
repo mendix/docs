@@ -11,7 +11,13 @@ This guide outlines how design properties work and can help you create custom de
 
 Design properties are a special set of settings shipped together with a Mendix theme module. Design properties are shared among all the Mendix apps which use a specific theme module. You can see which design properties are available for a widget either in the **Properties** pane or in the widget's settings dialog box under the **Appearance** tab. 
 
-{{% image_container width="400" %}}![Design properties from AtlasUI for a button widget](attachments/design-properties/design_properties_teaser.png){{% /image_container %}}
+Design properties in the **Properties** pane:
+
+![Design properties in pane](attachments/design-properties/design-properties-in-pane.png)
+
+Design properties in a widget's settings dialog box under the **Appearance** tab:
+
+{{% image_container width="400" %}}![Design properties in settings](attachments/design-properties/design_properties_teaser.png){{% /image_container %}}
 
 ## 2 Using Design Properties
 

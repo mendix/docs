@@ -64,7 +64,7 @@ The `Build` command builds the JavaScript bundles and assets, creates a build on
 If you already ran `prepare`, this is an example of a `build` command:
 
 ```bash
-native-builder.exe build --project-name "CoolApp" --app-version "1.0.0" --build-number 1
+native-builder.exe build --runtime-url "https://app.mendixcloud.com" --project-name "CoolApp" --app-version "1.0.0" --build-number 1
 ```
 
 | Parameters                  | Description                                                          | Example                                             |
@@ -80,7 +80,7 @@ native-builder.exe build --project-name "CoolApp" --app-version "1.0.0" --build-
 | `--app-icon-path`           | Absolute path to the app icon.                                            | `C:\MyAppIcon.png`                                  |
 | `--app-round-icon-path`     | Absolute path to the app round icon, specific to Android.                 | `C:\MyAppRoundIcon.png`                             |
 | `--app-splash-screen-path`  | Absolute path to the app splash screen image.                             | `C:\MyAppSplash.png`                                |
-| `--java-home`               | Absolute path to the directory where Java executable is located.          | `C:\Program Files\Java\jdk-10.0.1`                  |
+| `--java-home`               | Absolute path to the directory where Java executable is located.          | `C:\Program Files\AdoptOpenJDK\jdk-11.0.3.7-hotspot`                  |
 | `--project-path`            | Absolute path to the Mendix project file.                                 | `C:\MyApp\MyApp.mpr`                                |
 | `--mxbuild-path`            | Absolute path to MxBuild executable.                                      | `C:\Program Files\Mendix\8.0.0\modeler\mxbuild.exe` |
 | `--runtime-url`             | URL of the Mendix runtime.                                                | `https://myapp.mendixcloud.com`                     |

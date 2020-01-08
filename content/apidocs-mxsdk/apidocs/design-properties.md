@@ -20,10 +20,10 @@ While styling Mendix apps, users must often apply the same set of CSS or native 
 Design properties can make this work easier and safer. By configuring your own custom design properties, a certain styling can be applied to a widget in a few clicks.
 
 {{% alert type="info" %}}
-Mendix Studio does not have any class editing interface. This means that in Studio, design properties are the only way to alter the visual behaviour of a certain element.
+Mendix Studio does not have any class editing interface. This means that in Studio, design properties are the only way to alter the visual behavior of a certain element.
 {{% /alert %}}
 
-## 4 Design Property Types
+## 3 Design Property Types
 
 There are two types of design properties: **Toggle** and **Dropdown**. By default design properties have no effect on widgets. Styling is only applied when a **Toggle** property is turned on for a widget, or when one of the options is selected for a **Dropdown** property.
 
@@ -31,7 +31,7 @@ A **Toggle** design property is a simple property which may be turned on for a w
 
 A design property of type **Dropdown** defines a set of options with separate classes per option. When one of the options is selected, the respective classes are applied to a widget. For example, a **Dropdown** property may be an Atlas UI **Align self** property. It contains two options: **Left** and **Right**. When one of these options is selected, then either the `pull-left` or `pull-right` CSS class is applied. 
 
-## 5 Design Properties Definitions
+## 4 Design Properties Definitions
 
 Design properties are defined as a part of the theme settings inside your app's **theme** folder. Since styling works differently for web and native platforms, each platform's design properties are different and defined in two separate files. Web styling is defined in the *settings.json* file. Native styling is defined in the *settings-native.json* file.
 
@@ -74,7 +74,7 @@ Here is a simplified example of a theme settings file with design properties:
 }
 ```
 
-### 5.1 Design Property Structure
+### 4.1 Design Property Structure
 
 In the previous section's example, design properties are defined as a *JSON* object under key `designProperties` inside of a theme settings file. That object's structure is as follows:
 
@@ -94,7 +94,7 @@ In the previous section's example, design properties are defined as a *JSON* obj
 }
 ```
 
-As you can see from the structure above, design properties are defined as a *JSON* object where keys (`DivContainer`, `Button`, etc) are widget types and values are *JSON* arrays containing sets of design properties applicable for that widget type. To learn more about this subject, see the [Widget Types](#widget-types) section below. Note that you can add multiple class names in a property.
+As you can see from the structure above, design properties are defined as a *JSON* object where keys (`DivContainer` and `Button` for example) are widget types and values are *JSON* arrays containing sets of design properties applicable for that widget type. To learn more about this subject, see the [Widget Types](#widget-types) section below. Note that you can add multiple class names in a property.
 
 Every design property from the array is also represented as a *JSON* object. As described earlier there are two types of design properties: **Toggle** and **Dropdown**. Both types share common fields such as `name`, `type`, and `description`. Those names determine how a design property appears to a user in Mendix Studio and Mendix Studio Pro. Below you can look at examples of design properties of both types and check how they look in the Studios.
 
@@ -139,7 +139,7 @@ This is how the **Dropdown** design property appears:
 
 ![Dropdown property options in Studio Pro](attachments/design-properties/design_property_dropdown_open_studio_pro.png)
 
-#### 5.1.1 Common Fields
+#### 4.1.1 Common Fields
 
 The examples above show that the fields `name` and `description` define the UI, the name of a form control in Studio Pro, and the description under it. They are arbitrary string values naming and describing a design property. 
 
@@ -149,15 +149,15 @@ Field `type` defines the type of a property and can only take one of the two str
 Name your design property and its options carefully. Those names cannot be changed easily when there are projects already using them. If you want to rename a design property which is already being used in a project, see the [Renaming Design Properties](#old-names) section below.
 {{% /alert %}}
 
-#### 5.1.2 Toggle-Specific Fields
+#### 4.1.2 Toggle-Specific Fields
 
 When a type of design property is **Toggle** it should contain a `class` field on the top level of its property definition. This field defines an arbitrary class name to be applied if the option is toggled on for a widget. In the example above, the class to be applied is `hereMyClass`.
 
-#### 5.1.3 Dropdown-Specific Fields
+#### 4.1.3 Dropdown-Specific Fields
 
 When a type of design property is **Dropdown** it should contain an `options` field which is an array of possible options for the design property. Every option must be an object with `name` and `class` fields. In the example above there are two options named **Styling option 1** and **Styling option 2**. They have the `stylingClassOne` and `stylingClassTwo` classes respectively.
 
-## 6 Widget Types{#widget-types}
+## 5 Widget Types{#widget-types}
 
 When defining design properties in your theme settings you must specify which widget your properties apply to, as some design properties may only work with certain widgets.
 
@@ -167,11 +167,11 @@ Having a property that applies a table appearance style like **Stripped**, **Bor
 
 Widget types are types defined in the [Model SDK](https://apidocs.mendix.com/modelsdk/latest/modules/pages.html) documentation. Every type which is a direct or an indirect subtype of type [`Widget`](https://apidocs.mendix.com/modelsdk/latest/classes/pages.widget.html) can have design properties attached to it. If a property is defined on a widget, then every subtype of this widget will have that property. For example if a property is defined on a `Widget` type, which is it the highest type in the hierarchy, then every widget will have this design property available.
 
-### 6.1 Widget Types for Pluggable Widgets
+### 5.1 Widget Types for Pluggable Widgets
 
 When creating design properties for [Pluggable Widgets](pluggable-widgets), their widget type is determined by [widget id](https://docs.mendix.com/apidocs-mxsdk/apidocs/pluggable-widgets#widget-id).
 
-## 7 Renaming Design Properties{#old-names}
+## 6 Renaming Design Properties{#old-names}
 
 Sometimes you must rename design properties or their options which are already in use. As design properties are identified by names internally, renaming one may be a breaking change for projects that are already using those design properties. 
 
@@ -201,7 +201,7 @@ Example of a property and options that were renamed:
 
 The design property above was renamed from **my Dropdown Propery** to **My Dropdown Property**. Also **Styling option two** was renamed twice from the old names **Stling option 2** and **Styling option 2**.
 
-## 8 Read More
+## 7 Read More
 
 * [How to Style Your Mendix App](/howto/mobile/how-to-use-native-styling)
 * [Native Styling Reference Guide](/refguide/native-styling-refguide)

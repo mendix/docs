@@ -16,26 +16,29 @@ For this purpose we introduced Custom Developer Apps. Custom Developer Apps are 
 
 ## 2 Prerequisites
 
-- Have finished the [How to Get Started with Native Mobile](/howto/mobile/getting-started-with-native-mobile)
+* Complete [How to Get Started with Native Mobile](/howto/mobile/getting-started-with-native-mobile)
 
-## 3 Build your developer app
+## 3 Build Your Developer App
 
 1. Open a command line interface (CLI) such as Command Prompt.
 2. Navigate to the directory of your Native Builder:
 
-   `cd {path to Native Builder executable file}`
+   ```
+   cd {path to Native Builder executable file}
+   ```
 
 3. Run the following command to build your project's developer app:
 
-   `native-builder.exe build dev-app --project-name {your project's name}`
+   ```
+   native-builder.exe build dev-app --project-name {your project's name}
+   ```
 
-   Replace `{your project's name}` with your actual project name.
    This command does the following:
 
-   - Creates a branch named `developer` based on the commited changes to your `master`
-   - Starts a build using the developer app flavors for your project
+   * Creates a branch named `developer` based on the commited changes to your `master`
+   * Starts a build using the developer app flavors for your project
 
-4. Wait for the Native Builder to complete.
+4. Wait until the Native Builder completes your builds.
 
 As with a release build, when Native Builder is done building, you should have 2 archives for each build, iOS and Android, respectively. These archives can be found under the build output path `{build output path}` with **Dev** prepended to their name. The default `{build output path}` is the `./builds` folder relative to `native-builder.exe` location.
 
@@ -47,16 +50,15 @@ By default your Custom Developer App will be unsigned. If you instead wish to ge
 
 For Android the output of the build is an APK file. APK files can be directly installed on devices or emulators.
 
-#### 2.1.1 Emulator
+#### 2.1.1 Installing on an Emulator
 
-Given you have an emulator up and running.
-To install on an emulator:
+Given you have an emulator up and running. To install on an emulator, do the following:
 
 1. Drag & drop the APK onto the emulator's window.
 2. Wait for the installation to be done.
 3. Open the app from the launcher.
 
-#### 2.1.2 Device
+#### 2.1.2 Installing on a Device
 
 There are various ways to get an app installed to a device we are just listing one for educational purposes. Feel free to ignore our suggestion if you already know how.
 
@@ -81,40 +83,45 @@ The unsigned output of an iOS build is an XCArchive. XCArchives require manual s
 
 The signed output of iOS build is an IPA. If correctly signed IPAs can be installed on physical devices.
 
-#### Prequisites
+#### Prerequisites
 
-- Mac OSX machine
-- Rescent NodeJs and NPM version
-- Cocoapods ([installation instructions](https://cocoapods.org/#install))
-- Latest XCode version
+* Mac OSX machine
+* Rescent NodeJs and NPM version
+* Cocoapods ([installation instructions](https://cocoapods.org/#install))
+* Latest XCode version
 
 
-#### 2.2.1 Emulator
+#### 2.2.1 Installing on an Emulator
 
-Builds with Native Builder are stripped of simulator artifacts.
-Therfor, to run on an iOS Simulator, you will have to build the developer branch locally from source.
+Builds with Native Builder are stripped of simulator artifacts. Therfore, to run on an iOS Simulator you will have to build the developer branch locally from source by completing these steps:
 
-Todo so:
+1. Navigate to your GitHub repo.
+2. Switch to your **developer** branch:
+    
+   ![Switch branch on Github](attachments/how-to-devapps/github-branch-switching.png)
+    
+3. Click the "Clone or Download" button and "Download ZIP":
 
-1. Navigate to your GitHub repo
-2. Switch to your **developer** branch.
-    ![Switch branch on Github](attachments/how-to-devapps/github-branch-switching.png)
-3. Click the "Clone or Download" button and "Download ZIP".
    ![Download repository](attachments/how-to-devapps/github-download-branch.png)
+   
 4. Unzip the donwloaded archive.
 5. Open a terminal and change directory into the folder.
-6. Run:
+6. Run this command:
 
-   `npm i && cd ios && pod install`
-
+   ```
+   npm i && cd ios && pod install
+   ```
+ 
    This will install the node module dependencies and the iOS Dependencies
-7. In the **ios** folder, open the **NativeTemplate.xcworkspace** file
+7. In the **ios** folder, open the **NativeTemplate.xcworkspace** file:
 
    ![iOS folder structure](attachments/how-to-devapps/ios-folder.png)
 
-8. In XCode select the **Dev** target and the emulator you want to build your Developer App for
-    ![Dev target selection](attachments/how-to-devapps/xcode-target-selection.png)
-9. Press the play button.
+8. In XCode select the **Dev** target and the emulator you want to build your Developer App for:
+
+   ![Dev target selection](attachments/how-to-devapps/xcode-target-selection.png)
+
+9. Click **Play**.
 
 #### 2.2.2 Distributing the Custom Developer App
 

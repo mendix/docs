@@ -3,7 +3,8 @@ title: "Build a Pluggable Native Widget"
 category: "Extensibility"
 description: "Describes building a native widget, configuring it, and styling it in a Mendix app."
 menu_order: 10
-tags: ["native","widget","pluggable","react native","extensibility",]
+tags: ["native","widget","pluggable","react native","extensibility"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
@@ -1437,6 +1438,8 @@ The developer needs to have the class names memorized to apply a certain group b
 		}
 	]
 	```
+
+	Note that the property name must be the same as the widget ID. This will ensure this design property can be configured for your group box widget in Studio Pro.
 
 3. In Studio Pro click <kbd>F4</kbd> or select **Project > Synchronize Project Directory** to bring your application in sync with the changes you made to the previous two files.
 

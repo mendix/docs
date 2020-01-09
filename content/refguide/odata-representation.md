@@ -10,7 +10,7 @@ This document describes how entities are represented in a published OData servic
 
 | Mendix Data Type | Edm Type | Attribute Value | Atom XML Representation |
 | --- | --- | --- | --- |
-| Id <sup>1,2</sup> | Edm.Int64 | 3940649673954387 | 3940649673954387 |
+| Id <sup>1</sup> <sup>2</sup>| Edm.Int64 | 3940649673954387 | 3940649673954387 |
 | Autonumber | Edm.Int64 | 1 | 1 |
 | Binary (not supported) <sup>3</sup> |   |   |   |
 | Boolean | Edm.Boolean | true | true |
@@ -22,15 +22,9 @@ This document describes how entities are represented in a published OData servic
 | Long <sup>2</sup> | Edm.Int64 | 3940649673954387 | 3940649673954387 |
 | String | Edm.String | John | John |
 
-<sup>1</sup>In the service's metadata, Ids are marked with `isAttribute="false"` (using a Mendix-specific XML attribute in namespace `http://www.mendix.com/Protocols/MendixData`), to indicate that these are not attributes that appear in the domain model.
-
-{{% alert type="info" %}}
-The `isAttribute="false"` feature was introduced in version 8.6.0.
-{{% /alert %}}
-
-<sup>2</sup>When using Excel to import an OData source, long numbers may seem cut off. This is due to a restriction in the data type Microsoft uses. See [https://support.microsoft.com/en-us/kb/269370](https://support.microsoft.com/en-us/kb/269370) for more information.
-
-<sup>3</sup>Even though the binary data type is not supported, the FileDocument and Image system entities are supported and represented as Base64-encoded strings with the `Edm.Binary` type.<br />
+<sup>1</sup>In the service's metadata, IDs are marked with `isAttribute="false"` (using a Mendix-specific XML attribute in the `http://www.mendix.com/Protocols/MendixData` namespace) in order to indicate that these are not attributes that appear in the domain model. Note: the `isAttribute="false"` feature was introduced in Studio Pro [8.6.0](/releasenotes/studio-pro/8.6#860).<br />
+<sup>2</sup>When using Excel to import an OData source, long numbers may seem cut off. This is due to a restriction in the data type Microsoft uses. For more information, see [Last digits are changed to zeroes when you type long numbers in cells of Excel](https://support.microsoft.com/en-us/kb/269370).<br />
+<sup>3</sup>Even though the binary data type is not supported, the FileDocument and Image system entities are supported and represented as Base64-encoded strings with the `Edm.Binary` type.
 
 Additionally, the `updated` field for an entry in OData comes from the system changedDate attribute of an entity. If this attribute is not available (because it is not exposed, the user does not have access rights, or it is empty in database), the default date (1-1-1970) will be used.
 

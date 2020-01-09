@@ -7,48 +7,37 @@ tags: ["studio pro", "export an app project", "export project package"]
 ---
 
 ## 1 Introduction
-You can export a project package (*.mpk*) from Mendix Studio Pro for backup purposes or to share it with other Mendix developers. This is useful if you want to give someone the entire app, or if you  need to provide a test app when submitting a ticket.
+You can export a project package (*.mpk*) from Mendix Studio Pro for backup purposes or to share it with other Mendix developers. This is useful if you want to give someone the entire app, or if you need to provide a test app when submitting a ticket.
 
 Project packages can be imported again into a new app using the [Import Project Package](import-project-package-dialog).
 
-## 2 Exporting a Project Package
+To export the package, open the **File** menu > **Export Project Package** and select the relevant options in the **Export Project Package** dialog window:
 
-Mendix project packages can be exported to a Mendix package file (*.mpk*). To download a project package, see the sections below.
+![Export Project Package Dialog Window](attachments/file-menu/export-project-package.png)
 
-### 2.1 Exporting with No Data
+ For more information on what options you can select, see the sections below. 
 
-You can choose to include data from the built-in database in the Mendix package. To download a package without data, follow these steps:
+## 2 Destination
 
-1. Open your project in Mendix Studio Pro.
-2. Go to **File** and select **Export Project Package...**:
+You can specify the folder to export the package to. The default location is a folder named *packages* inside the project directory.
 
-	![](attachments/export-a-project-package/exportpp.png)
+## 3 Export Data
 
-4. Select the **Package destination** (the default location is a folder named *packages* inside the project directory).
-5. In the **Export Data** section, select **No data**.
-6. Click **Export**.
+Mendix project packages can be exported to a Mendix package file (*.mpk*).  You can choose to export the built-in deployment database and uploaded files as well, or export with no data. You can choose one of the following options:
 
-The package will be exported to the selected package destination.
+* **No data** – the package will be exported without data.
 
-### 2.2 Exporting with a Snapshot
-
-There are two snapshot options in the export dialog box:
-
-* **Existing snapshot** – will include the existing database snapshot in the export
-	* This option is only available when a snapshot is already present
-	* Snapshots can be created via **Version Control** > **Add Snapshot of Data**
+* **Existing snapshot** – this option will include the existing database snapshot in the export project package
+  
+	{{% alert type="info" %}}This option is only available when a snapshot is already created. Snapshots can be created via **Version Control** > **Add Snapshot of Data**.
+	{{% /alert %}}
+  
 * **New snapshot from current database** – will create a new snapshot from the database and include it in the export
-	* This option becomes available after you run the app locally at least once, because a local database will be created when running the app for the first time.
 
-To export with a snapshot, follow these steps:
+	{{% alert type="info" %}}This option is available after you run the app locally at least once, because a local database will be created when running the app for the first time.
+	{{% /alert %}}
 
-1. In your app project in Studio Pro, select **File** > **Export Project Package**:
-2. Select the **Package destination**.
-3. Select **New snapshot from current database**.
-4. Click **Export**.
-
-![](attachments/export-a-project-package/snapshotincluded.png)
-
-## 3 Read More
+## 4 Read More
 
 * [Import Project Package](import-project-package-dialog)
+* [Version Control Menu](version-control-menu)

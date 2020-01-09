@@ -189,7 +189,7 @@ export interface FileValue {
 
 ### 5.1 Icon {#icon}
 
-Mendix platform exposes two versions of an `Icon` react component: `mendix/componets/web/Icon` and `mendix/components/native/Icon`. Both components are useful helpers to render `WebIcon` and `NativeIcon` values respectively. They should be passed through an `icon` prop. The native `Icon` component additionally accepts `color` (`string`) and `size` (`number`) props.
+Mendix platform exposes two versions of an `Icon` react component: `mendix/components/web/Icon` and `mendix/components/native/Icon`. Both components are useful helpers to render `WebIcon` and `NativeIcon` values respectively. They should be passed through an `icon` prop. The native `Icon` component additionally accepts `color` (`string`) and `size` (`number`) props.
 
 ## 6 Exposed Libraries {#exposed-libraries}
 

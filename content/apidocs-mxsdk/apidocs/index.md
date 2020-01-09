@@ -32,11 +32,11 @@ Manage application environments in our public cloud. Retrieve status, start, and
 
 * [Deploy API](deploy-api)
 
-## 6 Design Properties
+## 6 Design Properties API
 
-Understand how design properties work in Atlas UI and beyond. Then, make your own custom design properties.
+Learn how design properties work in Atlas UI and beyond. Then, make your own custom design properties.
 
-* [Design Properties](design-properties)
+* [Design Properties API](design-properties)
 
 ## 7 Feedback API
 

@@ -12,6 +12,8 @@ Studio Pro supports a number of dockable window panes, such as the **Changes** o
 
 Via this menu you can also enable/disables the [full screen mode](#full-screen) and also [reset the layout](#reset-layout) of your project to default.  
 
+![View Menu](attachments/view-menu/view-menu.png)
+
 ## 2 Changes {#changes}
 
 For version control enabled projects (projects with [Team Server](/developerportal/develop/team-server) or other SVN servers), the [Changes pane](changes-pane) shows the local changes to the app project since the last commit. You can commit changes, update to the latest revision, and view the history from here. 
@@ -74,7 +76,7 @@ The **Debugger** tool can be used to debug your application.
 
 In the **Variables** pane, you can view the current values of variables, lists, and objects when debugging your application.
 
-## 13 Full Screen Mode {#full-screen}
+## 13 Full Screen {#full-screen}
 
 The **Full Screen** mode hides the title bar and makes the window fill the entire screen. This version of **Full Screen** was introduced in Studio Pro [8.3.0](/releasenotes/studio-pro/8.3#830); in previous versions, the **Full Screen** mode closed all dockable window panes. 
 Shortcut key: <kbd>F11</kbd>

@@ -23,15 +23,15 @@ Under **Project** > **Tools**, you can find settings on updating widgets, button
 
 This option opens the **Batch Update Button Icons** dialog box so that you can configure the batch update of many button icons at once.
 
-###2.2 Batch Update Layouts
+### 2.2 Batch Update Layouts
 
 This option opens the **Batch Update Layouts** dialog box so that you can configure the batch update of the layouts of many pages at once.
 
-###2.3 Batch Convert Split Panes
+### 2.3 Batch Convert Split Panes
 
 This option opens the **Batch Convert Split Panes** dialog box so that you can configure the batch update.
 
-###2.4 Update Widgets
+### 2.4 Update Widgets
 
 The **Update Widgets** option presents the current versions of the widgets you are using in your app project, what the latest versions of the widgets are, and an update option.
 
@@ -55,7 +55,7 @@ The **Deploy for Eclipse** option deploys the project to the deployment director
 
 Shortcut key: <kbd>F6</kbd>
 
-##6 Create Deployment Package
+## 6 Create Deployment Package
 
 The **Create Deployment Package** option creates a Mendix Deployment Archive package (*.mda*) that contains all necessary files to run the project. This can be used if you want to deploy your project on a Windows server or on a custom Mendix Cloud.
 
@@ -63,7 +63,7 @@ Shortcut key:  <kbd>F7</kbd>
 
 For more information on settings displayed on the Create Deployment Package dialog window, see [Create Deployment Package](create-deployment-package-dialog).
 
-##7 Clean Deployment Directory
+## 7 Clean Deployment Directory
 
 The **Clean Deployment Directory** option cleans the deployment directory.
 

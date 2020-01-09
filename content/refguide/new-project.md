@@ -49,7 +49,7 @@ The default language is the language of the user interface of your project. Choo
 
 ### 2.4 Project Directory
 
-Specify the project directory in which the files for your app are stored. If you enable the online services for the new app, you will see that the suffix "-main" will be appended to the directory name automatically. This is to indicate that the directory contains the main branch line of your project. While working on your app, you can create new branches and download these to other directories. For more information on the branch line management, see [Branch Line Manager](branch-line-manager-dialog).
+Specify the project directory in which the files for your app are stored. If you enable the online services for the new app, you will see that the suffix *-main* will be appended to the directory name automatically. This is to indicate that the directory contains the main branch line of your project. While working on your app, you can create new branches and download these to other directories. For more information on the branch line management, see [Branch Line Manager](branch-line-manager-dialog).
 
 ## 3 Read More
 

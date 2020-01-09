@@ -14,7 +14,7 @@ For more information on native mobile app development, see the [native-template 
 
 ### Improvement
 
-* Introduced a more consistent keyboard-avoiding behavior on iOS.
+* We introduced a more consistent keyboard-avoiding behavior on iOS.
 
 ### Breaking Change
 
@@ -26,20 +26,20 @@ For more information on native mobile app development, see the [native-template 
 
 ### Improvement
 
-* Added support for Scalable Vector Graphic (SVG) files in Mendix apps.
+* We added support for Scalable Vector Graphic (SVG) files in Mendix apps.
 
 ### Fixes
 
 Android:
 
-* Fixed an issue that would not allow apps to work in offline mode.
-* Updated SVG library.
-* Added all required but missing permissions.
+* We fixed an issue that would not allow apps to work in offline mode.
+* We updated the SVG library.
+* We added all required but missing permissions.
 
 iOS
 
-* Fixed a configuration issue that would make Firebase a mandatory for barcode scanner functionality.
-* Compiled libraries for XCode 11.2.1 and latest Swift version.
+* We fixed a configuration issue that would make Firebase a mandatory for barcode scanner functionality.
+* We compiled libraries for XCode 11.2.1 and latest Swift version.
 
 ## 2.0.1
 
@@ -47,12 +47,12 @@ iOS
 
 ### Improvements
 
-* Included support for developer mode.
+* We included support for developer mode.
 
 ### Fixes
 
-* Removed the RNFirebase package, as it breaks remote debugging when not configured.
-* Disable development-mode handler in release mode.
+* We removed the RNFirebase package, as it breaks remote debugging when not configured.
+* We disabled development-mode handler in release mode.
 
 ## 2.0.0
 
@@ -60,10 +60,10 @@ iOS
 
 ### Improvements
 
-* Added support for Android 10's Dark theme and iOS 13's Dark Mode.
-* Added over the air update support (for details, see [How to Use Over the Air Updates](/howto/mobile/how-to-ota)).
-* Migrated iOS project to Xcode 11.
-* Switch App Center build platform to standard ReactNative.
+* We added support for Android 10's Dark theme and iOS 13's Dark Mode.
+* We added over the air update support (for details, see [How to Use Over the Air Updates](/howto/mobile/how-to-ota)).
+* We migrated iOS project to Xcode 11.
+* We switched the App Center build platform to standard ReactNative.
 
 ## 1.1.0
 
@@ -71,14 +71,14 @@ iOS
 
 ### Improvements
 
-* Pinned risky modules to specific versions.
-* Introduced project-based App Center build configurations.
+* We pinned risky modules to specific versions.
+* We introduced project-based App Center build configurations.
 
 ### Fixes
 
-* Locked device rotation to portrait only.
-* Fixed reload handler for Android.
-* Fixed **jitpack.io** dependency repository.
+* We locked device rotation to portrait only.
+* We fixed the reload handler for Android.
+* We fixed the **jitpack.io** dependency repository.
 
 ## 1.0.3
 
@@ -94,7 +94,7 @@ iOS
 
 ### Fix
 
-* Fixed an issue where a using smaller splash screen image than the splash screen's display resolution would break the viewport of the app.
+* We fixed an issue where a using smaller splash screen image than the splash screen's display resolution would break the viewport of the app.
 
 ## 1.0.1
 
@@ -102,7 +102,7 @@ iOS
 
 ### Fix
 
-* Fixed an issue where projects with no resources would crash the App Center build.
+* We fixed an issue where projects with no resources would crash the App Center build.
 
 ## 1.0.0
 

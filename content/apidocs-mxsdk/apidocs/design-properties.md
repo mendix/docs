@@ -1,5 +1,5 @@
 ---
-title: "Design Properties"
+title: "Design Properties API"
 category: "API Documentation"
 description: "This guide outlines how design properties work and can help you create custom design properties."
 tags: ["styling", "design", "classes", "design properties"]
@@ -7,24 +7,17 @@ tags: ["styling", "design", "classes", "design properties"]
 
 ## 1 Introduction
 
+The Mendix Design Properties API allows you to make custom design properties for your Mendix projects.
+
+To use the API, you need to alter the *JSON* files in your application's **theme** folder. This process is described in the [Design Properties Definitions](#design-properties-definitions) section below.
+
 This guide outlines how design properties work and can help you create custom design properties. Many projects can simply use the Atlas UI theme and its included set of design properties to satisfy their styling needs. Atlas UI provides design properties that are built on top of the functionality described in this guide. So while design properties from Atlas UI are used as examples below, design properties themselves are not only for the Atlas UI theme. In fact, if you want to customize your styling more deeply, you will have to create your own custom design properties.
 
 Design properties are a special set of settings shipped together with a Mendix theme module. Design properties are shared among all the Mendix apps which use a specific theme module. 
 
-
 In Studio Pro, you can see which design properties are available for a widget either in the **Properties** pane or in the widget's settings dialog box under the **Appearance** tab. 
 
-Design properties in the **Properties** pane:
-
-![Design properties in pane](attachments/design-properties/design-properties-in-pane.png)
-
-Design properties in a widget's settings dialog box under the **Appearance** tab:
-
-{{% image_container width="400" %}}![Design properties in settings](attachments/design-properties/design_properties_teaser.png){{% /image_container %}}
-
-In Studio, you can see design properties in the **Design** section of a widget's properties pane (for more information, see the [Design Section Reference Guide](/studio/page-editor-widgets-design-section)):
-
-![Design properties in studio pane](attachments/design-properties/studio-design-props.png)
+In Studio, you can see design properties in the **Design** section of a widget's properties pane (for more information, see the [Design Section Reference Guide](/studio/page-editor-widgets-design-section)).
 
 ## 2 Using Design Properties
 
@@ -44,7 +37,7 @@ A **Toggle** design property is a simple property which may be turned on for a w
 
 A design property of type **Dropdown** defines a set of options with separate classes per option. When one of the options is selected, the respective classes are applied to a widget. For example, a **Dropdown** property may be an Atlas UI **Align self** property. It contains two options: **Left** and **Right**. When one of these options is selected, then either the `pull-left` or `pull-right` CSS class is applied. 
 
-## 4 Design Properties Definitions
+## 4 Design Properties Definitions {#design-properties-definitions}
 
 Design properties are defined as a part of the theme settings inside your app's **theme** folder. Since styling works differently for web and native platforms, each platform's design properties are different and defined in two separate files. Web styling is defined in the *settings.json* file. Native styling is defined in the *settings-native.json* file.
 
@@ -218,3 +211,4 @@ The design property above was renamed from **my Dropdown Propery** to **My Dropd
 
 * [How to Style Your Mendix App](/howto/mobile/how-to-use-native-styling)
 * [Native Styling Reference Guide](/refguide/native-styling-refguide)
+* [How to Extend Design Properties to Customize Your Studio Experience](/howto/front-end/extend-design-properties-to-customize)

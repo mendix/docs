@@ -38,7 +38,7 @@ We are heavily invested in streamlining the experience of building your apps and
 	* The Native Builder now provides an upgrade path for your projects.
 	* The Native Builder now supplies better error messages.
 
-#### A More Structured Command API
+#### Command API Improvements
 
 * We reworked the command API for the Native Builder. We introduced two new commands: `prepare` and `build`. These commands separate the preparation configuration from your actual build. Specifically, preparation requires several pieces of app information during configuration, while the build process requires only a build number and a version number. To further simplify app building, we also introduced a new argument: `--project-name`. This argument allows for an explicit separation between a Mendix project and the app's name. When preparing a project with `prepare`, all configuration is cached locally. That means that building the command can look as simple as this: 
 	* `build --project-name "My Mendix Project" --app-version "1.0.0" --build-number 1`
@@ -46,11 +46,11 @@ We are heavily invested in streamlining the experience of building your apps and
 	* `prepare --project-name "My Mendix Project" --github-api-token "" <the arguments to update with new values>`
 * In addition, two new arguments have been added to the `build` command: `--platform` and `--skip-mxbuild`. The `--platform` argument allows the build for a specific platform, iOS or Android, while `--skip-mxbuild` allows you to skip the project's build. Skipping a build is useful in  the case of a successful MxBuild but a failed later step.
 
-#### A Viable Upgrade Path for Repositories
+#### Upgrade Path Improvements
 
 * We also developed a viable upgrade path for your repositories. Before, the Native Builder was unable to notify you of new versions of the Native Template. As part of new architecture, we initiated a versioning policy across the board. From now on, the Native Template is versioned. If you wish to update your project's repository, you can use the newly added `regenerate` command. The command does a graceful update of your repository and App Center configuration. Your current repository is renamed with a time stamp as a backup measure and a new one is created for you using the latest release of the Native Template while your App Center project's configurations are updated to support the new template.
 
-#### Improved Error Messages
+#### Error Message Improvements
 
 * Finally, we worked on the error output of the Native Builder. We added error messages which had been missing and updated the ones that were lacking context.
 

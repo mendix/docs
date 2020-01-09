@@ -108,5 +108,5 @@ iOS
 
 **Release date: August 1st, 2019**
 
-Official release of the Native Template with support for Mendix Studio Pro 8.0
+* This is the official release of the Native Template with support for Mendix Studio Pro 8.0
 

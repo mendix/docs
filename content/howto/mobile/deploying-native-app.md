@@ -139,7 +139,7 @@ If your `build` command fails citing version conflicts on Java classes, try the 
 1. Clear your deployment directory.
 2. Complete a new build in Studio Pro.
 3. Run the `build` command again in the Native Builder.
-4. Compare your Java Built path with the version used in Studio Pro
+4. Make sure your Java file path provided in `--java-home` matches with the version being used in Studio Pro.
 
 ### 5.1 Signing a Build {#signing-a-build}
 

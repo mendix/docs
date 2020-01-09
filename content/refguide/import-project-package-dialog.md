@@ -17,7 +17,7 @@ To import a project package, do the following:
 
 3.  Select the relevant options in the **Import Project Package** dialog window and click **OK**. For more information on what options you can select, see the sections below. 
 
-   ![Import Project Package Dialog Window](attachments/file-menu/import-project-package.png)
+    ![Import Project Package Dialog Window](attachments/file-menu/import-project-package.png)
 
 Project packages can be created using [Export Project Package](export-project-package-dialog).
 

@@ -10,7 +10,7 @@ For more information on native mobile app development, see the [native-template 
 
 ## 3.0.0 
 
-**Release date: Jnauary 10th, 2019**
+**Release date: January 10th, 2019**
 
 ### New Feature
 

@@ -22,43 +22,25 @@ TestNG is a Java testing framework that can be used to drive Selenium. In this h
 Before starting with this how-to, make sure you have completed the following prerequisites:
 
 * Download and install [Eclipse](http://www.eclipse.org/downloads/)
-*  Download [Selenium Client & WebDriver](http://www.seleniumhq.org/download/):
-   ![](attachments/18448634/18580399.png) 
-* Open the [Company Expenses app](https://appstore.home.mendix.com/link/app/240/Mendix/Company-Expenses) in Studio Pro and run it locally
+* Download the [Selenium Client & WebDriver](http://www.seleniumhq.org/download/) for Java
+* Open the [Event](https://appstore.home.mendix.com/link/app/36793/) starter app in Studio Pro and run it locally
 
 ## 3 Creating a Java Project
 
 In this chapter you will install the TestNG plug-in and create a Java project in Eclipse including the TestNG and Selenium libraries:
 
-1.  Open Eclipse and select **Help** > **Eclipse Marketplace...**:
+1.  Open Eclipse and select **Help** > **Eclipse Marketplace**.
+2. Search for "MoreUnit" and then install this plugin Eclipse:
   
-    ![](attachments/18448634/18580411.png)
+    ![](attachments/18448634/more-unit.png)
 
-2. In the **Find** section of the **Eclipse Marketplace** dialog box, enter *TestNG* and click **Go**. "TestNG for Eclipse" will be shown in the search results. 
-3.  Click **Install** to install the TestNG plug-in for Eclipse:
-  
-    ![](attachments/18448634/18580410.png)
-
-4.  Click **Confirm** to confirm the features:
-  
-    ![](attachments/18448634/18580408.png)
-
-5.  Review the licenses and click **Finish**. The plug-in will be installed:
-  
-    ![](attachments/18448634/18580407.png)
-6. Restart Eclipse for changes to take effect.
-7.  Click the **New** icon:
-  
-    ![](attachments/18448634/18580406.png)
-
-8.  Select **Java Project** and click **Next**:
-
-    ![](attachments/18448634/18580404.png)
-
-9. Enter *MyFirstTestNGProject* as the project name and click **Next**.
-10. Select the **Libraries** tab.
-11. Click **Add Library...**.
-12. Select **TestNG** and click **Next**.
+3.  Click **Confirm** to confirm the features to be installed.
+4.  Review the licenses and click **Finish** to install the plugin.
+5. Restart Eclipse for changes to take effect.
+6. Select **File** > **New** > **Java Project**.
+7. Enter *MyFirstTestNGProject* for the **Project name** and click **Next**.
+8. Select the **Libraries** tab and click **Add Library**.
+12. Select **TestNG** and click **Next**. [**STUCK HERE, OPTION NOT AVAILABLE**]
 13. Click **Finish** to set the default TestNG library to this project.
 14. Click **Add External JARs...** and navigate to where you saved the Selenium JAR files.
 15. Add all the JAR files inside the **selenium-[version]** and **libs** folders:

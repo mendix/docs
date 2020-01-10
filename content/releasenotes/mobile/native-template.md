@@ -14,7 +14,7 @@ For more information on native mobile app development, see the [native-template 
 
 ### New Feature
 
-* We added support for generating custom developer applications. When your app uses custom assets and outgrows the Make It Native testing app, you will need a custom developer app. To make a custom developer app, see LINK.
+* We added support for generating custom developer applications. When your app uses custom assets and outgrows the Make It Native testing app, you will need a custom developer app. To make a custom developer app, see [How to Create a Custom Developer App](/howto/mobile/how-to-devapps).
 
 ## 2.1.0 
 

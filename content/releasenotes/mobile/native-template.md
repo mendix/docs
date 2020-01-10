@@ -12,9 +12,9 @@ For more information on native mobile app development, see the [native-template 
 
 **Release date: Jnauary 10th, 2019**
 
-### Improvement
+### New Feature
 
-* We added support for generating custom developer applications per Mendix App and per Studio Pro versions.
+* We added support for generating custom developer applications. When your app uses custom assets and outgrows the Make It Native testing app, you will need a custom developer app. To make a custom developer app, see LINK.
 
 ## 2.1.0 
 

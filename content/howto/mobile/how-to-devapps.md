@@ -8,9 +8,9 @@ tags: ["native", "mobile", "developer", "native-builder", "developer app", "make
 
 ## 1 Introduction
 
-As your Mendix app project matures, you may want to expand its functionality such as introducing custom widgets or logic that will require new native dependencies. One example of that could be adding a near-field communication (NFC) module to your app project. While the Make It Native app suffices for testing basic apps, as your app adds custom dependencies — like custom native widgets or fonts — you will need a more tailored developer app.
+As your Mendix app project matures, you may want to expand its functionality (such as by introducing custom widgets or logic that will require new native dependencies). One such customization could be adding a near-field communication (NFC) module to your app project. While the Make It Native app suffices for testing basic apps, as your app adds custom dependencies — like custom native widgets or fonts — you will need a more tailored developer app.
 
-Custom developer apps fill this role. Custom developer apps are apps you can generate yourself using your current project structure, your custom modules and any other requirements to accompany the ever-growing needs of your app. Custom developer apps feature the same functionality as the Make It Native app but are tailored to your needs.
+Custom developer apps fill this role. Custom developer apps are apps you can generate yourself using your current project structure, your custom modules, and any other requirements to test your evolving app. Custom developer apps feature the same functionality as the Make It Native app but are tailored to your needs.
 
 ## 2 Prerequisites
 

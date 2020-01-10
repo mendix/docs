@@ -2,7 +2,7 @@
 title: "Create a Custom Developer App"
 parent: "native-mobile"
 menu_order: 72
-description: A tutorial for creating custom tailored Developer Apps.
+description: A tutorial for creating custom developer apps.
 tags: ["native", "mobile", "developer", "native-builder", "developer app", "make it native"]
 ---
 

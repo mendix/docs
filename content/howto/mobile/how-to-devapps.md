@@ -46,7 +46,7 @@ As with a release build, when Native Builder is done building, you should have 2
 
 ### 2.1 Android
 
-By default your Custom Developer App will be unsigned. If you instead wish to get a signed IPA please follow the steps in [Signing your build](deploying-native-app.md#signing-a-build). Your Custom Developer App branch is plainly called **developer**.
+By default your Custom Developer App will be unsigned. To get a signed IPA, follow the steps in the [Signing Your Build](deploying-native-app.md#signing-a-build) section of *How to Deploy Your First Mendix Native App*. Your Custom Developer App branch is plainly called **developer**.
 
 For Android the output of the build is an APK file. APK files can be directly installed on devices or emulators.
 
@@ -77,7 +77,7 @@ To install the APK:
 
 ### 2.2 iOS
 
-By default your Custom Developer App will be unsigned. If you instead wish to get a signed IPA please follow the steps in [Signing your build](deploying-native-app.md#signing-a-build). Your Custom Developer App branch is plainly called **developer**.
+By default your Custom Developer App will be unsigned. To get a signed IPA, follow the steps in the [Signing Your Build](deploying-native-app.md#signing-a-build) section of *How to Deploy Your First Mendix Native App*. Your Custom Developer App branch is plainly called **developer**.
 
 The unsigned output of an iOS build is an XCArchive. XCArchives require manual signing before they are ready to be installed on a device.
 
@@ -126,4 +126,4 @@ Builds with Native Builder are stripped of simulator artifacts. Therfore, to run
 #### 2.2.2 Distributing the Custom Developer App
 
 To run on an non test device you will have to sign the Developer App with your certificates.
-For local builds, follow the [Local Signing](deploying-native-app.md#ios-local-signing) guide to sign the xcarchive. If you want Native Builder to sign your developer app, follow the app signing steps in [Signing your build](deploying-native-app.md#signing-a-build).
+For local builds, follow the [Local Signing](deploying-native-app.md#ios-local-signing) guide to sign the xcarchive. If you want Native Builder to sign your developer app, follow the steps in the [Signing Your Build](deploying-native-app.md#signing-a-build) section of *How to Deploy Your First Mendix Native App*.

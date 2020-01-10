@@ -8,11 +8,9 @@ tags: ["native", "mobile", "developer", "native-builder", "developer app", "make
 
 ## 1 Introduction
 
-With your project maturing, you will want to expand the functionality and even introduce custom widgets or logic that will require new native dependencies. An example of that could be a NFC module. 
+As your Mendix app project matures, you may want to expand its functionality such as introducing custom widgets or logic that will require new native dependencies. One example of that could be adding a near-field communication (NFC) module to your app project. While the Make It Native app suffices for testing basic apps, as your app adds custom dependencies — like custom native widgets or fonts — you will need a more tailored developer app.
 
-While the MakeItNative app is a nice first touch with the platform and supports all common flows that come with the latest version of Mendix Studio Pro, it falls short when it comes to fascilitating custom dependencies, as are custom native widgets, fonts or other.
-
-For this purpose we introduced Custom Developer Apps. Custom Developer Apps are apps you can generate yourself using your current project structure, your custom modules and any other requirements to accompany the ever growing needs of your app. Custom Developer Apps, feature the same functionality as the MakeItNative app, but are tailored to your needs, by you.
+Custom developer apps fill this role. Custom developer apps are apps you can generate yourself using your current project structure, your custom modules and any other requirements to accompany the ever-growing needs of your app. Custom developer apps feature the same functionality as the Make It Native app but are tailored to your needs.
 
 ## 2 Prerequisites
 
@@ -27,84 +25,80 @@ For this purpose we introduced Custom Developer Apps. Custom Developer Apps are 
    cd {path to Native Builder executable file}
    ```
 
-3. Run the following command to build your project's developer app:
+3. Run the following command to build your project's custom developer app:
 
    ```
    native-builder.exe build dev-app --project-name {your project's name}
    ```
 
-   This command does the following:
-
-   * Creates a branch named `developer` based on the commited changes to your `master`
-   * Starts a build using the developer app flavors for your project
+   This command does the following: <br />
+   a. Creates a branch named `developer` based on the commited changes to your `master` <br />
+   b. Starts a build using the developer app flavors for your project
 
 4. Wait until the Native Builder completes your builds.
 
-As with a release build, when Native Builder is done building, you should have 2 archives for each build, iOS and Android, respectively. These archives can be found under the build output path `{build output path}` with **Dev** prepended to their name. The default `{build output path}` is the `./builds` folder relative to `native-builder.exe` location.
+As with a release build, when the Native Builder is done building you should have two archives for each build: an iOS and an Android build. These archives can be found under the build output path `{build output path}` with **Dev** prepended to their name. The default `{build output path}` is the `./builds` folder relative to your `native-builder.exe` location.
 
-## 2 Installing Your Developer App
+## 2 Installing Your Customer Developer App
 
 ### 2.1 Android
 
-By default your Custom Developer App will be unsigned. To get a signed IPA, follow the steps in the [Signing Your Build](deploying-native-app#signing-a-build) section of *How to Deploy Your First Mendix Native App*. Your Custom Developer App branch is plainly called **developer**.
+By default your custom developer app will be unsigned. To get a signed IPA, follow the steps in the [Signing Your Build](deploying-native-app#signing-a-build) section of *How to Deploy Your First Mendix Native App*. Your Custom developer app branch is named **developer**.
 
-For Android the output of the build is an APK file. APK files can be directly installed on devices or emulators.
+For Android the output of the build is an *APK* file. *APK* files can be directly installed on devices or emulators.
 
 #### 2.1.1 Installing on an Emulator
 
-Given you have an emulator up and running. To install on an emulator, do the following:
+With your emulator running, install your app in your emulator by doing the following:
 
-1. Drag & drop the APK onto the emulator's window.
+1. Drag and drop the *APK* onto the emulator's window.
 2. Wait for the installation to be done.
 3. Open the app from the launcher.
 
 #### 2.1.2 Installing on a Device
 
-There are various ways to get an app installed to a device we are just listing one for educational purposes. Feel free to ignore our suggestion if you already know how.
+There are various ways install an app on a device. Installing using a USB is detailed below, but you can use a different method if it suits you. Do the following to install your *APK* onto a device:
 
-To install the APK:
-
-1. Connect your device using USB.
-2. Enable File Transfer on your device (differs per device).
-3. Open This PC in File Exploer; your device should be listed as an external device.
-4. Drag & Drop the apk as you would do for a remote drive.
+1. Connect your device to your machine via USB.
+2. Enable file transfer on your device (differs per device).
+3. Open **This PC** in File Exploer; your device should be listed as an external device.
+4. Drag and drop your *APK* onto your device.
 5. Wait for it to finish transfering.
-6. On the device open the File Manager.
+6. Open your device's file manager.
 7. Navigate to the root of the file system.
-8. Tap the apk to install.
+8. Tap the *APK* to install.
 9. Go through the installation steps.
 10. Open the app from the launcher.
 
 ### 2.2 iOS
 
-By default your Custom Developer App will be unsigned. To get a signed IPA, follow the steps in the [Signing Your Build](deploying-native-app#signing-a-build) section of *How to Deploy Your First Mendix Native App*. Your Custom Developer App branch is plainly called **developer**.
+By default your custom developer app will be unsigned. To get a signed *IPA*, follow the steps in the [Signing Your Build](deploying-native-app#signing-a-build) section of *How to Deploy Your First Mendix Native App*. Your custom developer app branch is named **developer**.
 
-The unsigned output of an iOS build is an XCArchive. XCArchives require manual signing before they are ready to be installed on a device.
+The unsigned output of an iOS build is an *XCArchive* file. *XCArchive* files require manual signing before they are ready to be installed on a device.
 
-The signed output of iOS build is an IPA. If correctly signed IPAs can be installed on physical devices.
+The signed output of iOS build is an *IPA* file. If correctly signed, IPAs can be installed on physical devices.
 
 #### Prerequisites
 
-* Mac OSX machine
-* Rescent NodeJs and NPM version
-* Cocoapods ([installation instructions](https://cocoapods.org/#install))
-* Latest XCode version
-
+* Have a Mac OSX machine
+* Install LTS builds of NodeJs and NPM
+* Install Cocoapods ([installation instructions](https://cocoapods.org/#install))
+* Install the latest XCode version
 
 #### 2.2.1 Installing on an Emulator
 
-Builds with Native Builder are stripped of simulator artifacts. Therfore, to run on an iOS Simulator you will have to build the developer branch locally from source by completing these steps:
+Builds with the Native Builder are stripped of simulator artifacts. Therefore, to run on an iOS Simulator you will have to build the developer branch locally from source by completing these steps:
 
 1. Navigate to your GitHub repo.
 2. Switch to your **developer** branch:
     
    ![Switch branch on Github](attachments/how-to-devapps/github-branch-switching.png)
     
-3. Click the "Clone or Download" button and "Download ZIP":
+3. Click **Clone or Download** and then click **Download ZIP**:
 
    ![Download repository](attachments/how-to-devapps/github-download-branch.png)
    
-4. Unzip the donwloaded archive.
+4. Unzip the downloaded archive.
 5. Open a terminal and change directory into the folder.
 6. Run this command:
 
@@ -117,7 +111,7 @@ Builds with Native Builder are stripped of simulator artifacts. Therfore, to run
 
    ![iOS folder structure](attachments/how-to-devapps/ios-folder.png)
 
-8. In XCode select the **Dev** target and the emulator you want to build your Developer App for:
+8. In XCode select the **Dev** target and the emulator you want to build your developer app for:
 
    ![Dev target selection](attachments/how-to-devapps/xcode-target-selection.png)
 
@@ -125,5 +119,8 @@ Builds with Native Builder are stripped of simulator artifacts. Therfore, to run
 
 #### 2.2.2 Distributing the Custom Developer App
 
-To run on an non test device you will have to sign the Developer App with your certificates.
-For local builds, follow the [Local Signing](deploying-native-app.md#ios-local-signing) guide to sign the xcarchive. If you want Native Builder to sign your developer app, follow the steps in the [Signing Your Build](deploying-native-app#signing-a-build) section of *How to Deploy Your First Mendix Native App*.
+To run your custom developer app on a device which is not a test device, you will have to sign the developer app with your certificates. 
+
+For local builds, follow the [Local Signing](deploying-native-app.md#ios-local-signing) section of *How to Deploy Your First Mendix Native App* to sign the *.xarchive* file. 
+
+If you want Native Builder to sign your custom developer app, follow the steps in the [Signing Your Build](deploying-native-app#signing-a-build) section of *How to Deploy Your First Mendix Native App*.

@@ -39,7 +39,7 @@ Custom developer apps fill this role. Custom developer apps are apps you can gen
 
 As with a release build, when the Native Builder is done building you should have two archives for each build: an iOS and an Android build. These archives can be found under the build output path `{build output path}` with **Dev** prepended to their name. The default `{build output path}` is the `./builds` folder relative to your `native-builder.exe` location.
 
-## 2 Installing Your Customer Developer App
+## 2 Installing Your Custom Developer App
 
 ### 2.1 Android
 

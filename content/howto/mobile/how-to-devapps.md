@@ -42,7 +42,7 @@ As with a release build, when the Native Builder is done building you should hav
 
 ### 2.1 Android
 
-By default your custom developer app will be unsigned. To get a signed IPA, follow the steps in the [Signing Your Build](deploying-native-app#signing-a-build) section of *How to Deploy Your First Mendix Native App*. Your Custom developer app branch is named **developer**.
+By default your custom developer app will be unsigned. To get a signed *IPA*, follow the steps in the [Signing Your Build](deploying-native-app#signing-a-build) section of *How to Deploy Your First Mendix Native App*. Your Custom developer app branch is named **developer**.
 
 For Android the output of the build is an *APK* file. *APK* files can be directly installed on devices or emulators.
 
@@ -75,7 +75,7 @@ By default your custom developer app will be unsigned. To get a signed *IPA*, fo
 
 The unsigned output of an iOS build is an *XCArchive* file. *XCArchive* files require manual signing before they are ready to be installed on a device.
 
-The signed output of iOS build is an *IPA* file. If correctly signed, *IPA*s can be installed on physical devices.
+The signed output of iOS build is an *IPA* file. If correctly signed, *IPA* files can be installed on physical devices.
 
 Before installing, make sure you have completed the following prerequisites:
 

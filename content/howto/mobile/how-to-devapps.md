@@ -89,30 +89,30 @@ Before installing, make sure you have completed the following prerequisites:
 Builds with the Native Builder are stripped of simulator artifacts. Therefore, to run on an iOS Simulator you will have to build the developer branch locally from source by completing these steps:
 
 1. Navigate to your GitHub repo.
-2. Switch to your **developer** branch:
+2.  Switch to your **developer** branch:
    
-   ![Switch branch on Github](attachments/how-to-devapps/github-branch-switching.png)
+	![Switch branch on Github](attachments/how-to-devapps/github-branch-switching.png)
    
-3. Click **Clone or Download** and then click **Download ZIP**:
+3.  Click **Clone or Download** and then click **Download ZIP**:
 
-   ![Download repository](attachments/how-to-devapps/github-download-branch.png)
+	![Download repository](attachments/how-to-devapps/github-download-branch.png)
    
 4. Unzip the downloaded archive.
 5. Open a terminal and change directory into the folder.
 6. Run this command:
 
-   ```
-   npm i && cd ios && pod install
-   ```
+	```
+	npm i && cd ios && pod install
+	```
 
-   This will install the node module dependencies and the iOS Dependencies
-7. In the **ios** folder, open the **NativeTemplate.xcworkspace** file:
+	This will install the node module dependencies and the iOS Dependencies
+7.  In the **ios** folder, open the **NativeTemplate.xcworkspace** file:
 
-   ![iOS folder structure](attachments/how-to-devapps/ios-folder.png)
+	![iOS folder structure](attachments/how-to-devapps/ios-folder.png)
 
-8. In XCode select the **Dev** target and the emulator you want to build your developer app for:
+8.  In XCode select the **Dev** target and the emulator you want to build your developer app for:
 
-   ![Dev target selection](attachments/how-to-devapps/xcode-target-selection.png)
+	![Dev target selection](attachments/how-to-devapps/xcode-target-selection.png)
 
 9. Click **Play**.
 

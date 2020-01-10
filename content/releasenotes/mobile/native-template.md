@@ -8,6 +8,14 @@ description: "Native Template release notes."
 
 For more information on native mobile app development, see the [native-template repository](https://github.com/mendix/native-template/) and [How to Deploy Your First Mendix Native App](/howto/mobile/deploying-native-app) .
 
+## 3.0.0 
+
+**Release date: Jnauary 10th, 2019**
+
+### Improvement
+
+* We added support for generating custom developer applications per Mendix App and per Studio Pro versions.
+
 ## 2.1.0 
 
 **Release date: December 17th, 2019**

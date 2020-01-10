@@ -75,12 +75,12 @@ By default your custom developer app will be unsigned. To get a signed *IPA*, fo
 
 The unsigned output of an iOS build is an *XCArchive* file. *XCArchive* files require manual signing before they are ready to be installed on a device.
 
-The signed output of iOS build is an *IPA* file. If correctly signed, IPAs can be installed on physical devices.
+The signed output of iOS build is an *IPA* file. If correctly signed, *IPA*s can be installed on physical devices.
 
-#### Prerequisites
+Before installing, make sure you have completed the following prerequisites:
 
 * Have a Mac OSX machine
-* Install LTS builds of NodeJs and NPM
+* Install LTS builds of NodeJs and NPM (download [here](https://nodejs.org/en/))
 * Install Cocoapods ([installation instructions](https://cocoapods.org/#install))
 * Install the latest XCode version
 

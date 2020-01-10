@@ -92,7 +92,7 @@ native-builder.exe build --project-name "CoolApp" --app-version "1.0.0" --build-
 
 #### 2.2.2 Generating Custom Developer Apps
 
-When used, the `build dev-app` command will create a preview app much like the MakeItNative Application which would be specific to both your project and the Studio Pro version used in developing it. This command creates a *develop* branch on GitHub, and initializes the build on App Center. It also expects you to have run `prepare` at lease once.
+When used, the `build dev-app` command will create a preview app much like the Make It Native app. However, the preview app it makes will be a custom developer app specific to both your project and your Studio Pro version. This command creates a **develop** branch on GitHub, and initializes the build on App Center. It also expects you to have run the `prepare` command at least once.
 
 Here is an example of a command featuring `build dev-app`:
 
@@ -102,8 +102,8 @@ native-builder.exe build dev-app --project-name "CoolApp" --output-path "C:\bund
 
 | Parameters            | Description                                                                          | Example            |
 | --------------------- | ------------------------------------------------------------------------------------ | ------------------ |
-| `--project-name`      | Unique name of the project used during `prepare` **Required**                                    | `CoolApp`          |
-| `--output-path` | The absolute output path for the *ZIP* archives                                             | `C:\bundles\developer`       |
+| `--project-name`      | Unique name of the project used during `prepare`. **(Required)**                                    | `CoolApp`          |
+| `--output-path` | The absolute output path for the *ZIP* archives.                                             | `C:\bundles\developer`       |
 | `--platform`          | Platform with which to run command for. Defaults to both iOS and Android. | `ios` or `android` |
 
 ### 2.3 Regenerate

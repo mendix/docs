@@ -8,6 +8,14 @@ description: "Native Template release notes."
 
 For more information on native mobile app development, see the [native-template repository](https://github.com/mendix/native-template/) and [How to Deploy Your First Mendix Native App](/howto/mobile/deploying-native-app) .
 
+## 3.0.0 
+
+**Release date: January 10th, 2019**
+
+### New Feature
+
+* We added support for generating custom developer applications. When your app uses custom assets and outgrows the Make It Native testing app, you will need a custom developer app. To make a custom developer app, see [How to Create a Custom Developer App](/howto/mobile/how-to-devapps).
+
 ## 2.1.0 
 
 **Release date: December 17th, 2019**
@@ -108,5 +116,5 @@ iOS
 
 **Release date: August 1st, 2019**
 
-* This is the official release of the Native Template with support for Mendix Studio Pro 8.0
+* This is the official release of the Native Template with support for Mendix Studio Pro 8.0.
 

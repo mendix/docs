@@ -142,7 +142,57 @@ Click the `Suppression rules` button in the Errors pane.
 
 The `Manage Suppression Rules` window appears, showing the current rules.
 
-xxx
+note: after modifying the rules, you need to click `OK` to close the `Manage Suppression Rules` window, and apply the new rules. Then, the list of warnings will be updated.
+
+### Deleting a rule
+
+The simplest way to re-enable warnings, is to delete the relevant rule.
+
+Select the rule you wish to delete.
+
+Click the `Delete` button:
+
+![Rules window - delete button](attachments/suppression-rules/rules-dialog-delete-button.png)
+
+### Manually adding a new rule
+
+For more advanced case, you may want to manually add a new rule. This gives you full control over the settings that the rule uses, when deciding which warnings to suppress.
+
+To manually add a new rule, select the `New` button:
+![Rules window - new button](attachments/suppression-rules/rules-dialog-new-button.png)
+
+The `Add Suppression` window appears:
+
+![Rules window - add suppression](attachments/suppression-rules/new-warning-window.png)
+
+Adjust the settings, to control how warnings will be suppressed by the new rule.
+
+#### Rule Settings {#rule-settings}
+
+The table below describes the available settings:
+
+| Setting name | Description | Note |
+|---|---|---|
+| Module | Only suppress warnings within this module. | Select a module, to limit the rule to that module. Or select `(All)` to apply across all modules. |
+| Document | Only suppress warnings within this document. | Select a document, to limit the rule to that document. Or select `(All)` to apply across all documents. Note: to select a particular document, you first need to select a `Module`. |
+| Warning selector | Decide how to match warnings, in combination with `Value`. | When set to `All`, then the `Value` setting is not used. |
+| Value | The value used with `Warning selector` when matching warnings to suppress. | The value needs to match `Warning selector`. If `Warning selector` is set to `Error code`, then this should contain an error code like `CW1234`. If `Warning selector` is set to `Warning Message contains`, then value is the portion of text used to match warnings to suppress. In case of `All`, the value is not used. |
+
+### Editing a rule
+
+To edit an existing rule, select the `Edit` button:
+
+![Rules window - edit button](attachments/suppression-rules/rules-dialog-edit-button.png)
+
+A window opens, allowing you to edit the properties of the rule.
+
+![Rule settings window](attachments/suppression-rules/rule-settings-window.png)
+
+For details about the available settings, see section [Rule Settings](#rule-settings)
+
+Click `OK` to apply the new settings to the rule.
+
+Click `OK` again to apply the new rules. The list of warnings will be updated.
 
 ## 5 Limitations {#limitations}
 

@@ -14,7 +14,41 @@ Via this menu you can also enable/disables the [full screen mode](#full-screen) 
 
 ![View Menu](attachments/view-menu/view-menu.png)
 
-## 2 Changes {#changes}
+## 2 Positioning Panes
+
+You can change the panes layout by dragging and dropping them.  panes and position them differently in Studio Pro UI. 
+
+As you drag a pane, you can see arrows that indicate where you can position the pane. You can position the pane either inside the current pane (arrows grouped together) or full-window height (individual arrows on the borders):
+
+![](attachments/view-menu/interaction-with-panes.png)
+
+1. Within the current pane you can position a pane in one of the following ways:
+
+   1. Pane-height – left 
+
+   2. Pane-height – right 
+
+   3. Pane-height – top
+
+   4. Pane-height – bottom
+
+   5. New pane – pane height
+
+      Exception: Studio Pro working area
+
+2. Within the current window you can position a pane in one of the following ways:
+
+   1. Full-window height – left
+
+   2. Full-window height – right
+
+   3. Full-window height – top
+
+   4. Full-window height – bottom
+
+      
+
+## Changes {#changes}
 
 For version control enabled projects (projects with [Team Server](/developerportal/develop/team-server) or other SVN servers), the [Changes pane](changes-pane) shows the local changes to the app project since the last commit. You can commit changes, update to the latest revision, and view the history from here. 
 

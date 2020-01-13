@@ -122,6 +122,14 @@ Capitalize in all instances.
 Capitalize in all instances.
 {{% /alert %}}
 
+### Custom Developer App
+
+For a definition of this term, see [How to Create a Custom Developer App](/howto/mobile/how-to-devapps).
+
+{{% alert type="info" %}}
+Do not capitalize.
+{{% /alert %}}
+
 ### Deployment Package Repository
 
 {{% alert type="info" %}}

@@ -50,7 +50,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Install an integrated development environment (IDE) of your choice (Mendix recommends [Microsoft Visual Studio Code](https://code.visualstudio.com/))
 * Have a basic understanding of:
-	* Command prompt or the Unix command line
+	* Microsoft's Command Prompt or the Unix command line
 	* [TypeScript](https://www.typescriptlang.org/)
 	* [React](https://reactjs.org)
 

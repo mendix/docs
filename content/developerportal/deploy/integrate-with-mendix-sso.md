@@ -23,7 +23,14 @@ Want to know more about all the possibilities this opens up? Take a look at the 
 
 ## 2 Steps & Example
 
-These steps use the [Company Expenses](https://appstore.home.mendix.com/link/app/240/) (CE) app as an example. To incorporate the AppCloudServices module into an existing app, follow these steps:
+{{% alert type="warning" %}}
+These steps use the [Company Expenses](https://appstore.home.mendix.com/link/app/240/) (CE) app as an example.
+
+This app is no longer available in the App Store but the same principles apply to other apps. There are no plans to update this document to use a different example app as the AppCloudServices module has been deprecated.
+{{% /alert %}}
+
+
+To incorporate the AppCloudServices module into an existing app, follow these steps:
 
 1. Open your app project in Mendix Studio Pro.
 2. Open the **App Store** inside Studio Pro.

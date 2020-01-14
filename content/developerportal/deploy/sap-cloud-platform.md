@@ -454,7 +454,7 @@ There are also some differences in the way that Mendix can be used with SAP HANA
 
 SAP HANA works in a different way to PostgreSQL.
 
-If you select an SAP HANA database, an SAP HANA *schema* service will be added to your space and when you deploy your app it will be bound to the PostgreSQL service. This schema service defines access to a separate SAP Cloud Platform, SAP HANA service, which also needs to be running in the same space as your app.
+If you select an SAP HANA database, an SAP HANA *schema* service will be added to your space and when you deploy your app it will be bound to the SAP HANA schema service. This schema service defines access to a separate SAP Cloud Platform, SAP HANA service, which also needs to be running in the same space as your app.
 
 {{% alert type="warning" %}}
 Please bear the following in mind when using SAP HANA as your Mendix database:

@@ -274,7 +274,11 @@ The Datadog Events log contains events which come from your app: those are the s
 
 ![Example events log](attachments/datadog-metrics/datadog-event-log.png)
 
-### 7.3 Datadog Issues
+### 7.3 Datadog Agent not Started
+
+If you configure your app for Datadog but the Datadog agent is not started, the events will be sent to the app log files.
+
+### 7.4 Datadog Issues
 
 If you have any issues related to accessing Datadog, please contact their support here: [Support | Datadog](https://www.datadoghq.com/support/), or by email at [support@datadoghq.com](mailto:support@datadoghq.com).
 

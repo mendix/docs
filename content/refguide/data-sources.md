@@ -40,7 +40,7 @@ A data grid, template grid, and list view support the data sources listed below:
 
 {{% alert type="info" %}}
 
-The database source is the only data source that is also supported offline. If a list widget has a database data source in an offline application, the data will come from the database that is situated on the device. This database can be synced with a [button](button-properties) widget for creating a new object.
+Database and nanoflow data sources are the only data sources supported offline. If a list widget has a database data source in an offline application, the data will come from the database that is situated on the device. This database can be synced with a [button](button-properties) widget for creating a new object.
 
 {{% /alert %}}
 

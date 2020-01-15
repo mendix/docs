@@ -206,7 +206,15 @@ For integrations, you have the following types of microflow:
 |-------------------------------------------|-----------|
 | Enumeration                               | Enum\_ |
 
-#### 3.5.3 Pages
+#### 3.5.3 Constants
+
+[Constants](/refguide/constants) should be identified with a prefix.
+
+| Document Type                             | Prefix    |
+|-------------------------------------------|-----------|
+| Constants                                 | Const\_   |
+
+#### 3.5.4 Pages
 
 Pages use a **suffix** to indicate their use.
 
@@ -229,7 +237,7 @@ Pages that are used as a tooltip page should have the suffix **_Tooltip**.
 | Select multiple objects | \_MultiSelect |
 | Tooltip | \_Tooltip |
 
-#### 3.5.4 Integration Documents
+#### 3.5.5 Integration Documents
 
 Documents used to support integration should have the prefixes listed below.
 

@@ -14,11 +14,11 @@ Via this menu you can also enable/disables the [full screen mode](#full-screen) 
 
 ![View Menu](attachments/view-menu/view-menu.png)
 
-## 2 Positioning Panes
+## 2 Layout of Panes
 
-You can change the panes layout by dragging and dropping them.  panes and position them differently in Studio Pro UI. 
+You can change the default layout of panes and arrange in the layout you like.   
 
-As you drag a pane, you can see arrows that indicate where you can position the pane. You can position the pane either inside the current pane (arrows grouped together) or full-window height (individual arrows on the borders):
+When you drag a pane, you can see arrows that indicate where you can position this pane. You can position the pane either inside the current pane (arrows grouped together) or full-window height (individual arrows on the borders). Each position is presented and explained below:
 
 ![](attachments/view-menu/interaction-with-panes.png)
 
@@ -34,7 +34,9 @@ As you drag a pane, you can see arrows that indicate where you can position the 
 
    5. New pane – pane height
 
-      Exception: Studio Pro working area
+      {{% alert type="info" %}}If you try to position the pane as a new pane inside the working area, it will be opened as a dialog window.
+      
+      {{% /alert %}}
 
 2. Within the current window you can position a pane in one of the following ways:
 
@@ -46,7 +48,11 @@ As you drag a pane, you can see arrows that indicate where you can position the 
 
    4. Full-window height – bottom
 
-      
+To change the position of several tabs at once, drag the top-bar. To change the position of an individual tab, drag the tab itself. 
+
+Video below shows examples of how to position a pane:
+
+<video width="768" height="432" controls src="attachments/view-menu/positioning-panes.mp4">VIDEO</video>
 
 ## Changes {#changes}
 

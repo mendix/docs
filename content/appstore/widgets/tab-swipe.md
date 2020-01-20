@@ -1,5 +1,5 @@
 ---
-title: "Calendar"
+title: "Tab Swipe"
 category: "Widgets"
 description: " "
 tags: [ ]

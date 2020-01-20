@@ -26,7 +26,7 @@ Apps can be located on the Team Server, on another SVN server, or on the local d
 
 Use this setting to select the location where your app is stored. This can be the [Team Server](#team-server), a [private server](#private-server), that is an SVN server other than the Team Server, or a [local disk](#local). An app on disk can also be stored in the Team Server or another SVN server, in this case there is no difference in opening it using the **Team Server**/**Private server** option and or the **Locally on disk** option.
 
-### 2.1 Mendix Team Server
+### 2.1 Mendix Team Server {#team-server}
 
 Select the Team Server app you would like to open, then choose the development line.
 

@@ -867,4 +867,4 @@ The default class to style all web views is named `com_mendix_widget_native_webv
 
 * [Style Your Mendix Native App](/howto/mobile/how-to-use-native-styling)
 * [Implement Native Styling](/howto/mobile/native-styling)
-
+* [Design Properties Documentation](/apidocs-mxsdk/apidocs/design-properties)

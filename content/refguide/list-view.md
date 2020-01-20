@@ -70,6 +70,8 @@ An on-click event defines what action is performed when a user clicks a list vie
 
 the number of rows displayed on the page; after the indicated limit is reached, the **Load more...** button is displayed on the page.
 
+{{% alert type="info" %}}The **Load more** button is not visible on native mobile pages. The list view will automatically load new items, when the last of the currently loaded items is shown.{{% /alert %}}
+
 #### 2.4.4 Scroll Direction
 
 {{% alert type="info" %}}The scroll direction property is only supported on native mobile pages.{{% /alert %}}

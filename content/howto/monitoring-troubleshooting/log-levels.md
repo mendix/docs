@@ -102,7 +102,6 @@ To set the level of custom log messages that you have created via a microflow, f
 * [Clear Warning Messages in Mendix](clear-warning-messages)
 * [Test Web Services Using SoapUI](../testing/testing-web-services-using-soapui)
 * [Monitor Mendix Using JMX](monitoring-mendix-using-jmx)
-* [Log Levels](log-levels)
 * [Debug Microflows](debug-microflows)
 * [Debug Microflows Remotely](debug-microflows-remotely)
 * [Debug Java Actions](debug-java-actions)

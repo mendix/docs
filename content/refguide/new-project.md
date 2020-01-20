@@ -23,7 +23,7 @@ To create a new project, follow the steps below:
 
     ![Use This Starting Point](attachments/file-menu/starting-point.png)
 
-4. In the **App Settings** dialog, select the settings for your project and click **Create app**. For more information on app settings, see [App Settings](#app-settings). 
+4. In the **App Settings** dialog, select the settings for your project and click **Create app**. For more information on app settings, see the [App Settings](#app-settings) section. 
 
 The new project is created and opened. 
 
@@ -54,4 +54,4 @@ Specify the project directory in which the files for your app are stored. If you
 ## 3 Read More
 
 * [Version Control](version-control)
-* [Open Project](open-project-dialog)
+* [Open Project](open-app-dialog)

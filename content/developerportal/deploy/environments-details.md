@@ -47,9 +47,10 @@ At the bottom of the page there are three overview sections. These are described
 
 On the right side of the screen, you can find the following action buttons:
 
-* **Restart Application**
+* **Restart Application** – this stops the running application and starts it again — this is necessary to apply new constant values or scheduled events to the environment
 * **Start/Stop Application**
-* **Show Logged in Users**
+* **Clear Environment** *(only visible if your application is stopped)* – this clears, after confirmation, all data from your database and file storage, and removes your app from this environment — you should do this if you want to deploy a different app to this environment, it is not necessary if you are restoring a backup of the same app
+* **Show Logged in Users** 
 * **Change Admin Password**
 
 #### 2.1.1 Logging and Debugging in Mendix Cloud v4
@@ -59,7 +60,7 @@ On the right side of the screen, you can find the following action buttons:
 In Mendix Cloud v4 environments, you have two additional action buttons:
 
 * **View Live Log**
-* **Show debugger information** to show the settings to connect the debugger in Studio Pro to your app. For Mendix Cloud v4, the debugger is *always* enabled.
+* **Show debugger information** – shows the settings needed to connect the debugger in Studio Pro to your app — for Mendix Cloud v4, the debugger is *always* enabled
 
 #### 2.1.2 Logging and Debugging in Mendix Cloud v3
 
@@ -68,7 +69,7 @@ In Mendix Cloud v4 environments, you have two additional action buttons:
 In Mendix Cloud v3 environments, you have two additional action buttons:
 
 * **View Current Log**
-* **Enable/Disable Debugging** to enable or disable the debugger option. For more information about enabling the debugger, see [How to Debug Microflows Remotely](/howto7/monitoring-troubleshooting/debug-microflows-remotely)
+* **Enable/Disable Debugging** – enables or disables the debugger option — for more information about enabling the debugger, see [How to Debug Microflows Remotely](/howto7/monitoring-troubleshooting/debug-microflows-remotely)
 
 ### 2.2 Naming of Environments – Flexible Environments in Mendix Cloud v4{#naming}
 
@@ -261,7 +262,7 @@ For more information, see [How to Restrict Access for Incoming Requests](access-
 
 Add client certificates (in the PKCS12 format) or certificate authorities (in the PEM format). These will be used when your application initiates SSL/TLS connections.
 
-## 5 Log Levels Tab
+## 5 Log Levels Tab{#log-levels}
 
 ![](attachments/environments-details/loglevels-tab.png)   
 

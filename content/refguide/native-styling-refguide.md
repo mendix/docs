@@ -456,7 +456,7 @@ The default class to style all actions buttons is named `ActionButton`. However,
 
 ## 9 Pages {#pages}
 
-To style pages, you can add classes to the page or its layout. The sidebar, status bar, and header are part of a page and can also be styled this way.
+To style pages, you can add classes to a page or its layout. The sidebar, status bar, and header are part of a page and can also be styled this way.
 
 ```xml
 <sidebar/>

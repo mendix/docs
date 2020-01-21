@@ -10,6 +10,14 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 ## 2020
 
+### January 21st, 2020
+
+#### Fixes
+
+* We fixed an issue where, if the data type of a constant was changed in the app model, it was not changed in the Developer Portal. This meant that validation sometimes failed and the app could not be started. (Ticket 88425)
+* We fixed an issue on the page where you select a node to deploy your app, where the app name and the link to the Environments page disappeared.
+* We corrected the text of the welcome email for new cloud environments which gave incorrect instructions for deploying your app. (Ticket 93145)
+
 ### January 7th, 2020
 
 #### 3DES Ciphers Disabled for Mendix Cloud v3

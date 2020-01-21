@@ -262,7 +262,7 @@ For more information, see [How to Restrict Access for Incoming Requests](access-
 
 Add client certificates (in the PKCS12 format) or certificate authorities (in the PEM format). These will be used when your application initiates SSL/TLS connections.
 
-## 5 Log Levels Tab
+## 5 Log Levels Tab{#log-levels}
 
 ![](attachments/environments-details/loglevels-tab.png)   
 

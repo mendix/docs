@@ -56,7 +56,7 @@ The admin port will by default only allow connections from the local host. In ca
 
 Choose a strong password to protect the administrative interface running on the admin TCP port. Set this password to a long random string (when using the Windows Service Console, this is automatically done.) It is not used manually anywhere, and it is only used in the background by administrative tools like m2ee-tools and the Windows Service Console to be able to connect back to the Mendix application after it has been started for administrative tasks.
 
-## 9 Setting the Content Security Policy Header
+## 9 Setting Security Headers
 
 When running on-premises, no HTTP headers are set automatically. You will need to decide which HTTP headers you need to set for your app.
 

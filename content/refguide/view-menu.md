@@ -22,7 +22,7 @@ When you drag a pane, you can see arrows that indicate where you can position th
 
 ![](attachments/view-menu/interaction-with-panes.png)
 
-1. Within the current pane you can position a pane in one of the following ways:
+1. Within the current *pane* you can position a pane in one of the following ways:
 
    1. Pane-height – left 
 
@@ -38,7 +38,7 @@ When you drag a pane, you can see arrows that indicate where you can position th
       
       {{% /alert %}}
 
-2. Within the current window you can position a pane in one of the following ways:
+2. Within the current *window* you can position a pane in one of the following ways:
 
    1. Full-window height – left
 

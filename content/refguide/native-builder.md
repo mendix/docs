@@ -35,7 +35,7 @@ The `Prepare` command handles the creation of the app on both GitHub and App Cen
 
 An example of a `prepare` command:
 
-```
+```bash
 native-builder.exe prepare --github-access-token <token> --appcenter-api-token <token> --java-home <absolute-path> --mxbuild-path <absolute-path> --project-path <absolute-path-to-mpr-file> --projectName CoolApp --app-identifier "com.company.myapp" --app-name "My Cool App" --mendix-version 8.5.0
 ```
 
@@ -59,11 +59,13 @@ native-builder.exe prepare --github-access-token <token> --appcenter-api-token <
 
 ### 2.2 Build
 
+#### 2.2.1 Generating Apps for Distribution
+
 The `Build` command builds the JavaScript bundles and assets, creates a build on GitHub, and initializes the build on App Center. 
 
 If you already ran `prepare`, this is an example of a `build` command:
 
-```
+```bash
 native-builder.exe build --project-name "CoolApp" --app-version "1.0.0" --build-number 1
 ```
 
@@ -88,6 +90,22 @@ native-builder.exe build --project-name "CoolApp" --app-version "1.0.0" --build-
 | `--platform`                | Platform with which to run command for. Defaults to both iOS and Android. | `ios` or `android`                                  |
 | `--skip-mxbuild`            | Used if bundling JavaScript bundle and assets. Defaults to `false`.       | `true` or `false`                                   |
 
+#### 2.2.2 Generating Custom Developer Apps
+
+When used, the `build dev-app` command will create a preview app much like the Make It Native app. However, the preview app it makes will be a custom developer app specific to both your project and your Studio Pro version. This command creates a **develop** branch on GitHub, and initializes the build on App Center. It also expects you to have run the `prepare` command at least once.
+
+Here is an example of a command featuring `build dev-app`:
+
+```bash
+native-builder.exe build dev-app --project-name "CoolApp" --output-path "C:\bundles\developer"
+```
+
+| Parameters            | Description                                                                          | Example            |
+| --------------------- | ------------------------------------------------------------------------------------ | ------------------ |
+| `--project-name`      | Unique name of the project used during `prepare`. **(Required)**                                    | `CoolApp`          |
+| `--output-path` | The absolute output path for the *ZIP* archives.                                             | `C:\bundles\developer`       |
+| `--platform`          | Platform with which to run command for. Defaults to both iOS and Android. | `ios` or `android` |
+
 ### 2.3 Regenerate
 
 The `regenerate` command recreates the project on GitHub with the latest version of `Native Template`, renames the previous app with a new name to preserve changes (if any), and then updates the build configuration of the App Center apps. Running `regenerate` also expects that `prepare` has been run at least once for the `--project-name`.
@@ -99,7 +117,7 @@ The `regenerate` command recreates the project on GitHub with the latest version
 
 An example of a `regenerate` command:
 
-```
+```bash
 native-builder.exe regenerate --project-name "CoolApp" --mendix-version 8.5.0
 ```
 
@@ -136,7 +154,7 @@ The `patch-update` command allows you to update the metadata of a published upda
 Here is an example of a command featuring `patch-update`:
 
 ```bash
-native-builder.exe release patch-update --project-name "CoolApp" --target-version  "1.0.1"
+native-builder.exe release patch-update --project-name "CoolApp" --label "v4" --target-version  "1.0.1"
 ```
 
 | Parameters             | Description                                                                                                          | Example                                                |

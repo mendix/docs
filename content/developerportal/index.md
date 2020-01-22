@@ -2,6 +2,7 @@
 title: "Developer Portal Guide"
 description: "A description of the sections in the Developer Portal and links to more detail"
 tags: ["Mendix", "Developer Portal", "Platform Services", "Buzz", "Apps", "People", "Community", "App Store", "Academy", "Forum", "Docs"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
@@ -18,6 +19,10 @@ You can go to any part of the Developer Portal using the menu items described be
 In the company [Buzz](collaborate/buzz), you can communicate with colleagues, App Team members, stakeholders, and any other Mendix users in your company:
 
 ![](attachments/developerportal-buzz.png)
+
+To start a new app project click **Create App**, which will open a page where you can choose a starting pointing for your new app:
+
+![](attachments/create-app.png)
 
 ## 3 Apps
 

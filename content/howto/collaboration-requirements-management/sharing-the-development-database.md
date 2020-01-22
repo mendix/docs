@@ -75,7 +75,7 @@ On the bottom right pane, the results are shown and a total of 50 rows is retrie
 
 The built-in database can easily be shared with other members of the team. Like the business logic itself, it is possible to commit a snapshot of the database to the team server. To do this, take the following steps:
 
-1.  Select **Project** > **More Versioning** > **Add Snapshot of Data**:
+1.  Select **Version Control** > **Add Snapshot of Data**:
 
     ![](attachments/18448637/18580420.png)
 

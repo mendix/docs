@@ -28,8 +28,7 @@ A row has the following properties:
 
 *  **Visible** – allows you to hide an element from a page
 
-    {{% image_container width="300" %}}![Row Properties](attachments/container-widgets/row-properties.png)
-    {{% /image_container %}}
+    ![Row Properties](attachments/container-widgets/row-properties.png)
 
 For more information on properties listed above, see [Properties Common for Widgets](common-widget-properties).
 
@@ -45,7 +44,7 @@ A column has the following properties:
   * One column with weight 12
   * Two columns with weight 6 each
   * One column with weight 3 and one column with weight 9
-
+ 
 In this example, you can see one column with weight 12 (which takes up the full width) and two columns with weight 6 each:
 
 ![Columns Example](attachments/container-widgets/columns.png)
@@ -141,4 +140,4 @@ As the layout grid responds to the viewport width, and not to the width of its c
 
 * [Page](page)
 * [Container Widgets](container-widgets)
-* [Properties Common for Widgets](common-widget-properties)
+* [Properties Common in the Page Editor](common-widget-properties)

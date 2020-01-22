@@ -86,5 +86,5 @@ Default: *False*
 
 * [Page](page)
 * [File Widgets](file-widgets)
-* [Properties Common for Widgets](common-widget-properties)
+* [Properties Common in the Page Editor](common-widget-properties)
 * [System Texts](system-texts)

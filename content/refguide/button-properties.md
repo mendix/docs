@@ -1,7 +1,7 @@
 ---
 title: "Button Properties"
 parent: "button-widgets"
-tags: ["studio pro", "button", "button widget", "action button", "drop down button"]
+tags: ["studio pro", "button", "action button", "drop down button", "button widget", "image property"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -193,7 +193,7 @@ To add items to a drop-down buttons, do the following:
 
 * [Page](page)
 * [Button Widgets](button-widgets)
-* [Properties Common for Widgets](common-widget-properties)
+* [Properties Common in the Page Editor](common-widget-properties)
 * [On Click Event & Events Section](on-click-event)
 
 

@@ -122,6 +122,14 @@ Capitalize in all instances.
 Capitalize in all instances.
 {{% /alert %}}
 
+### Custom Developer App
+
+For a definition of this term, see [How to Create a Custom Developer App](/howto/mobile/how-to-devapps).
+
+{{% alert type="info" %}}
+Do not capitalize.
+{{% /alert %}}
+
 ### Deployment Package Repository
 
 {{% alert type="info" %}}
@@ -422,6 +430,14 @@ This is the correct capitalization for this [App Team role](/developerportal/com
 
 {{% alert type="info" %}}
 Capitalize in all instances.
+{{% /alert %}}
+
+### Studio Pro landing page
+
+The Studio Pro landing page refers to the page that contains **My Apps**, **App Store**, and **Developer Portal** tabs. 
+
+{{% alert type="info" %}}
+Capitalize "Studio Pro".
 {{% /alert %}}
 
 ### sub-microflow

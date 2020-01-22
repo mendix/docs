@@ -149,4 +149,4 @@ To perform actions on a template grid, select it on a page and right-click it. T
 * [Page](page)
 * [Data Widgets](data-widgets)
 * [Data Sources](data-sources)
-* [Properties Common for Widgets](common-widget-properties)
+* [Properties Common in the Page Editor](common-widget-properties)

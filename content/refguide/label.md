@@ -50,4 +50,4 @@ The **General** section contains the **Caption** property. **Caption** defines t
 
 * [Page](page)
 * [Common Widgets](common-widgets)
-* [Properties Common for Widgets](common-widget-properties)
+* [Properties Common in the Page Editor](common-widget-properties)

@@ -70,4 +70,4 @@ The **On-click** property specifies the action that will be executed when the us
 
 * [Page](page)
 * [Container Widgets](container-widgets)
-* [Properties Common for Widgets](common-widget-properties)
+* [Properties Common in the Page Editor](common-widget-properties)

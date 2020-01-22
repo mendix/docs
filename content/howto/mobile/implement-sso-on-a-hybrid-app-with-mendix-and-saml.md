@@ -44,11 +44,9 @@ When authenticating against an identity provider (IdP), the following steps are 
 5. The SAML token is sent to the Mendix Server by redirecting the client user agent back to the Mendix app.
 6. After authentication, Mendix redirects the client to the page requested initially.
 7. The client now requests the page requested initially.
-8. Now that a security context exists, Mendix responds with the requested resource (page).<a name="diagram"></a>
+8. Now that a security context exists, Mendix responds with the requested resource (page).
 
-![](attachments/implement-sso/saml-2.0-from-wikipedia.png)
-
-Diagram source: [SAML 2.0 Web Browser SSO Profile](https://en.wikipedia.org/wiki/SAML_2.0#SP_POST_Request;_IdP_POST_Response)
+For more information on the authentication process, see Wikipedia's [SAML 2.0 Web Browser SSO Profile](https://en.wikipedia.org/wiki/SAML_2.0#SP_POST_Request;_IdP_POST_Response).
 
 ## 4 The Problems<a name="problems"></a>
 
@@ -74,7 +72,7 @@ Mendix has created a standard approach to support SSO via the SAML module in a M
 
 The JavaScript code below will address the two problems described above.
 
-To address the [first problem](#firstproblem), when the mobile app is starting to load, the JavaScript below will be executed. It opens a new window using [Cordova’s InAppBrowser](https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-inappbrowser/), and all the redirects for the authentication are done there. When all the redirects are completed and the requested resource is sent from the Mendix Server back to the app (which is step 8 in the [SAML 2.0 Web Browser SSO Profile](#diagram) diagram), the authentication process is complete. The new window can then be closed, and the loading of the localhost *index.html* page can proceed.
+To address the [first problem](#firstproblem), when the mobile app is starting to load, the JavaScript below will be executed. It opens a new window using [Cordova’s InAppBrowser](https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-inappbrowser/), and all the redirects for the authentication are done there. When all the redirects are completed and the requested resource is sent from the Mendix Server back to the app, the authentication process is complete. The new window can then be closed, and the loading of the localhost *index.html* page can proceed.
 
 ```javascript
 MxApp.onConfigReady(function(config) {

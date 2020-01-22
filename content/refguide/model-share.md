@@ -5,6 +5,9 @@ menu_order: 30
 tags: ["studio pro"]
 ---
 
+{{% alert type="warning" %}}
+Model Share is deprecated and will be discontinued by **March 31st, 2020**. This means it will no longer be possible to upload microflows to and download them from Model Share.
+{{% /alert %}}
 
 ## 1 Introduction
 

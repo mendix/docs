@@ -2,7 +2,7 @@
 title: "Tab Container"
 parent: "container-widgets"
 menu_order: 40
-tags: ["studio pro", "tab container", "container widget", "widget"]
+tags: ["studio pro", "tab container", "tab page", "container widget", "widget"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #The anchor <tab-page> below is mapped, so it should not be removed or changed.
 ---
@@ -59,7 +59,7 @@ Default: *True*
 
 * [Page](page)
 * [Container Widgets](container-widgets)
-* [Properties Common for Widgets](common-widget-properties)
+* [Properties Common in the Page Editor](common-widget-properties)
 
 
 

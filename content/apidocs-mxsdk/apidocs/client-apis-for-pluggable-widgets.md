@@ -175,11 +175,21 @@ export type ImageValue = WebImage | NativeImage;
 
 `NativeImage` can be passed as a source of React Native’s [Image](https://facebook.github.io/react-native/docs/image) component, and `WebImage`  can be passed  to react-dom’s `img`.
 
+### 4.6 FileValue {#filevalue}
+
+`DynamicValue<FileValue>` is used to represent files. A file can be configured only through a [file](property-types-pluggable-widgets#file) property. `FileValue` is defined as follows:
+
+```ts
+export interface FileValue {
+    uri: string;
+}
+```
+
 ## 5 Exposed Modules
 
 ### 5.1 Icon {#icon}
 
-Mendix platform exposes two versions of an `Icon` react component: `mendix/componets/web/Icon` and `mendix/components/native/Icon`. Both components are useful helpers to render `WebIcon` and `NativeIcon` values respectively. They should be passed through an `icon` prop. The native `Icon` component additionally accepts `color` (`string`) and `size` (`number`) props.
+Mendix platform exposes two versions of an `Icon` react component: `mendix/components/web/Icon` and `mendix/components/native/Icon`. Both components are useful helpers to render `WebIcon` and `NativeIcon` values respectively. They should be passed through an `icon` prop. The native `Icon` component additionally accepts `color` (`string`) and `size` (`number`) props.
 
 ## 6 Exposed Libraries {#exposed-libraries}
 
@@ -201,6 +211,6 @@ The Mendix platform uses [big.js](https://www.npmjs.com/package/big-js) to repre
 
 ## 7 Read More
 
-* [Pluggable Widgets API](pluggable-widgets)
-* [Pluggable Widget Property Types](property-types-pluggable-widgets)
-* [Build Pluggable Widgets](/howto/extensibility/pluggable-widgets)
+* [Pluggable Widgets API Documentation](pluggable-widgets)
+* [Pluggable Widget Property Types Documentation](property-types-pluggable-widgets)
+* [How to Build Pluggable Widgets](/howto/extensibility/pluggable-widgets)

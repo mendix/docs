@@ -8,19 +8,47 @@ tags: ["deployment", "cloud environment", "Mendix Cloud", "SAP", "SAP Cloud", "I
 
 These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy), other [deployment](/developerportal/deploy/) options, and app [operations](/developerportal/operate/). For updates on the status of Mendix Cloud v4, Mendix Cloud v3, and other deployment options, see [Mendix Status](https://status.mendix.com/).
 
+## 2020
+
+### January 21st, 2020
+
+#### Fixes
+
+* We fixed an issue where, if the data type of a constant was changed in the app model, it was not changed in the Developer Portal. This meant that validation sometimes failed and the app could not be started. (Ticket 88425)
+* We fixed an issue on the page where you select a node to deploy your app, where the app name and the link to the Environments page disappeared.
+* We corrected the text of the welcome email for new cloud environments which gave incorrect instructions for deploying your app. (Ticket 93145)
+
+### January 7th, 2020
+
+#### 3DES Ciphers Disabled for Mendix Cloud v3
+
+* We have implemented a change to our Mendix Cloud v3 infrastructure so that incoming SSL connections no longer support 3DES ciphers. 3DES ciphers are considered insecure.
+
+### January 3rd, 2020
+
+#### SAP Cloud Platform Deployment
+
+* We added support for using the HANA trial database available in new SAP Cloud Platform trial accounts. See the [Running Mendix on SAP HANA](/developerportal/deploy/sap-cloud-platform#sap-hana) section of the *SAP Cloud Platform* deployment document for more details.
+
 ## 2019
+
+### December 23rd, 2019
+
+#### Improvements
+
+* We improved the stability and performance of Mendix Cloud deployment. (Tickets 86800, 92241, 92426)
 
 ### December 5th, 2019
 
 #### Improvements
 
-* On the *General* page of App Buzz, we added a **Private Cloud** target. This will currently take you to a closed beta test that allows you to connect your private cluster to Mendix. You can ask to join the beta program, but places are currently limited.
+* On the **General** page of [App Buzz](/developerportal/collaborate/buzz#app-buzz), we added a **Private Cloud** target. This will currently take you to a closed beta test that allows you to connect your private cluster to Mendix. You can ask to join the beta program, but places are currently limited.
 
 ### November 26th, 2019
 
 #### IBM Cloud Portal Deployment
 
-* We have updated the process for deploying to IBM Cloud Portal - see [IBM Cloud](/developerportal/deploy/ibm-cloud) to see the new process.
+* We have updated the process for deploying to IBM Cloud Portal (for details on the new process, see [IBM Cloud](/developerportal/deploy/ibm-cloud)).
 * We have also added the ability to manage IBM Cloud Portal Cloud Foundry Marketplace services from within the Mendix Developer Portal.
 
 ### November 21st, 2019

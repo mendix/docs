@@ -1,5 +1,5 @@
 ---
-title: "Properties Common for Widgets"
+title: "Properties Common in the Page Editor"
 parent: "pages"
 menu_order: 120
 tags: ["studio pro", "widget properties", "properties", "common", "widget"]
@@ -8,7 +8,7 @@ tags: ["studio pro", "widget properties", "properties", "common", "widget"]
 
 ## 1 Introduction
 
-These are properties that are shared by many widgets. For a complete list of properties, take a look at the relevant widget.
+These are properties that are shared by many elements in the page editor, such as a page or widgets. For a complete list of properties, take a look at the relevant element.
 
 ## 2 Common Section {#common-properties}
 

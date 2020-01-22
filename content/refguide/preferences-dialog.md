@@ -1,6 +1,6 @@
 ---
 title: "Preferences"
-parent: "dialogs"
+parent: "edit-menu"
 tags: ["studio pro"]
 ---
 
@@ -69,19 +69,29 @@ Sometimes the computer running Studio Pro cannot access the internet directly, b
 
 ### 5.1 Project Explorer
 
-#### 5.1.1 Project Explorer
+#### 5.1.1 New Version of the Project Explorer
 
-Select this option when you want to enable the new version of the [Project Explorer](project-explorer). Should you find any issues in the new version, you can switch back to the old version by unselecting this option.
+Select this option when you want to enable the new version of the [Project Explorer](project-explorer). Should you find any issues in the new version, you can switch back to the old version by clearing this check box.
 
 {{% alert type="info" %}}
 This option requires a restart.
 {{% /alert %}}
 
-### 5.2 Diffing and Merging
+### 5.2 Toolbox
 
-#### 5.2.1 New Version of the Changes Pane {#new-changes}
+#### 5.2.1 New Version of the Toolbox
 
-Select this option when you want to enable the new version of the [Changes](changes-pane) pane. Should you find any issues in the new version, you can switch back to the old version by unselecting this option.
+Select this option when you want to enable the new version of the [Toolbox](/refguide/view-menu#toolbox). Should you find any issues in the new version, you can switch back to the old version by clearing this check box.
+
+{{% alert type="info" %}}
+This option requires a restart.
+{{% /alert %}}
+
+### 5.3 Diffing and Merging
+
+#### 5.3.1 New Version of the Changes Pane {#new-changes}
+
+Select this option when you want to enable the new version of the [Changes](changes-pane) pane. Should you find any issues in the new version, you can switch back to the old version by clearing this check box.
 
 {{% alert type="info" %}}
 This option requires a restart.

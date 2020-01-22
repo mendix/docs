@@ -145,3 +145,4 @@ Persistent sessions also store a last-active date upon each request. To improve 
 {{% alert type="warning" %}}
 Overriding the default values for the `SessionTimeout` and `ClusterManagerActionInterval` custom settings can impact the behavior of "keep alive" and results in an unexpected session logout. The best practice is to set the `ClusterManagerActionInterval` to half of the `SessionTimeout` so that each node gets the chance to run the clean-up action at least once during the session time out interval.
 {{% /alert %}}
+

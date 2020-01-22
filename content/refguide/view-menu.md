@@ -22,7 +22,7 @@ This pane has two levels, so when you zoom into a changed document, you can revi
 
 ![](attachments/view-menu/changes.gif)
 
-## 3 Connector
+## 3 Connector {#connector}
 
 The **Connector** pane displays elements that can be connected to the currently selected element. For example, when a button is a selected, the **Connector** shows microflows that you can drag onto the button to connect them.
 

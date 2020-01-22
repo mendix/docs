@@ -9,7 +9,7 @@ tags: ["studio", "buzz"]
 
 Via the **Buzz** tab, you can collaborate on your app with team members – leave comments  or create feedback items on pages, microflows, the domain model, or a navigation document. With such in-context commenting it is easy to communicate clearly and plan your future work. 
 
-Comments from Studio Buzz are automatically posted in [App Buzz](/developerportal/collaborate/buzz#app-buzz) in the Developer Portal giving your team members an opportunity to respond to comments both in Studio and the Developer Portal. Thus, your team members do not have to work in Studio only, they can be Studio Pro users or Developer Portal users not accessing Studio for their daily work. 
+Comments from Studio Buzz are automatically posted in [App Buzz](/developerportal/collaborate/buzz#app-buzz) in the Developer Portal giving your team members an opportunity to respond to comments both in Studio and the Developer Portal. 
 
 ## 2 Leaving and Editing Comments {#comment}
 
@@ -39,7 +39,7 @@ You cannot delete comments in Studio, this is only possible in the [App Buzz](/d
 
 ## 2 Viewing App Buzz
 
-Your comments are posted and shown in the **App Buzz** in the Developer Portal. To view the **App Buzz**, click the ellipsis icon > **View App Buzz**:
+Your comments are posted and shown in the **App Buzz** in the Developer Portal. To view the **App Buzz**, click the ellipsis icon > **View app buzz**:
 
 ![App Buzz](attachments/buzz/viewing-app-buzz.png)
 
@@ -60,7 +60,7 @@ To create a feedback item, do the following:
 	{{% image_container width="350" %}}![Creating Feedback Item](attachments/buzz/creating-feedback-item.png)
 	{{% /image_container %}}
 	
-3.  In the **Create feedback** item dialog window, fill in the type of feedback, its title, and additional information if necessary.
+3.  In the **Create feedback item** dialog window, fill in the type of feedback, its title, and additional information if necessary.
 
     {{% image_container width="450" %}}![Create Feedback Item Dialog Box](attachments/buzz/feedback-item-info.png)
     {{% /image_container %}}

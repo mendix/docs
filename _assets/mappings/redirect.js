@@ -35,6 +35,13 @@ module.exports = {
       to: "/partners/siemens/mindsphere-module-details"
     },
 	/****************************************************
+     * From https://www.npmjs.com/package/mendixmodelsdk (potentially temporary until fixed)
+     ****************************************************/
+	{
+      from: "/MXSDK/Your+learning+path+for+the+Mendix+SDK",
+      to: "/apidocs-mxsdk/mxsdk/"
+    },	
+	/****************************************************
      * PERMANENT REDIRECTS
      ****************************************************/
 	 /****************************************************

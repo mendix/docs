@@ -81,7 +81,7 @@ To customize your Android source code and enable push notifications, do the foll
 </application>
 ```
 2. Move *google-services.json* inside your **android/app** folder.
-3. Open *android/app/src/main/res/raw/runtime_url* and replace its one line with your local IP address if you want to run against local mendix server.
+3. If you want to run against a local Mendix server, open *android/app/src/main/res/raw/runtime_url* and replace its one line with your local IP address.
 4. Commit and push your changes to master. This will automatically trigger an App Center build.
 
 ### 5.2 Customizing iOS Source Code
@@ -96,23 +96,19 @@ Remote notifications will not work with iOS Simulator.
 
 To change your app's capabilities, open *app/ios/yourProjectName.xcworkspace* in Xcode:
 
-1. Open the workspace in Xcode and drop the GoogleServices-Info.plist file into the root (ie ios) directory. Make sure to check the Copy items if needed option. Use the Create Group option and select both targets ie nativeTemplate and dev
+1. Open the workspace in Xcode and drop the *GoogleServices-Info.plist* file into the root iOS directory. 
+2. Make sure **Copy items if needed** is selected. 
+3. Select the **Create Groups** option, then select both **nativeTemplate** and **dev** targets:
 
 ![GoogleServicesInfoPlist](attachments/native-remote-push/GoogleServicesInfoPlist.png)
 
-2. In **Signing & Capabilities** tab, add **push notifications** capabilities to your app by doing the following:
-
-    a. Click **nativeTemplate** in the left-hand file explorer.
-
-    b. Click the **Signing & Capabilities** tab.
-
-    c. Click **Targets** > **nativeTemplate**.
-
-    d. Click **Capability**, type *push* in the dialog box, then select **Push Notifications**. 
-
-    e. Click **Capability**, type *background* in the dialog box, then select **Background Modes**.
-
-    f. Select **Background Modes** > **Remote Notifications**.
+In **Signing & Capabilities** tab, add **push notifications** capabilities to your app by doing the following:
+1. Click **nativeTemplate** in the left-hand file explorer.
+2. Click the **Signing & Capabilities** tab.
+3. Click **Targets** > **nativeTemplate**.
+4. Click **Capability**, type *push* in the dialog box, then select **Push Notifications**.
+5. Click **Capability**, type *background* in the dialog box, then select **Background Modes**.
+6. Select **Background Modes** > **Remote Notifications**:
 
 ![Capabilities](attachments/native-remote-push/iosCustomizations.png)
 

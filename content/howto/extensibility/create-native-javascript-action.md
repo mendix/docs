@@ -50,19 +50,10 @@ Follow these instructions  to set up your NFC project:
 
 1. Open Mendix Studio Pro.
 2. Select **File** > **New Project**.
-3.  Select the **Native Mobile Quickstart** app (also available online [here](https://appstore.home.mendix.com/link/app/109511/)):
-
-	![native mobile quickstart app](attachments/create-native-javascript-action/native-mobile-quickstart.png)
-
-4.  Click **Use this starting point**:
-
-	![use this starting point](attachments/create-native-javascript-action/starting-point.png)
-
-5.  Name your app NativeNFC and click **Create App** to close the dialog box:
-
-	![app settings](attachments/create-native-javascript-action/app-settings.png)
-
-8. Rename module **NativeMobile** to *NativeNFC*. You will add your implementation In this module.
+3.  Select the **Native Mobile Quickstart** app (also available online [here](https://appstore.home.mendix.com/link/app/109511/)).
+4.  Click **Use this starting point**.
+5.  Name your app NativeNFC and click **Create App** to close the dialog box.
+6. Rename module **NativeMobile** to *NativeNFC*. You will add your implementation In this module.
 7. Right-click on the module and select **Add other** > **JavaScript action**. Name the new JavaScript action *HasNFCSupport*. You will create the implementation later.
 8. Open the **Home_Native** page and add some welcome text for you test app.
 9. Add an action button with caption *Scan NFC Tag* on your home page. <br />
@@ -91,7 +82,6 @@ todo: how much of this can I replace with "Go to Deploy doc and follow sections 
 Now you will build a native app and install it on your phone:
 
 1. If you do not have your GitHub and App Center keys, follow the [Getting Your Tokens](/howto/mobile/deploying-native-app) section of *How to Deploy Your First Mendix Native App* to get your authentication codes.
-
 2. Complete [Preparing Your Project](/howto/mobile/deploying-native-app) section of *How to Deploy Your First Mendix Native App* using these parameters:
 
 	``` shell
@@ -136,10 +126,6 @@ The settings are stored in *C:\Users\mendix.tech.writer\.native_builder*:
 
 4. Validate that your local build succeeded by checking the log files in *C:\MendixProjects\NativeNFC\deployment\log\*.
 5. Install the app on your device. For more information on installing, please check the [Distributing](/howto/mobile/deploying-native-app#distributing) section of *How to Deploy Your First Mendix Native App*.
-	On Android, you might see a dialog box warning you against installing. Tap **INSTALL ANYWAY**.
-	
-	![Github template repo](attachments/create-native-javascript-action/install-blocked-by-play-protect.jpg)
-
 6. Open your app, which could look like this:
 
 	![native nfc app home](attachments/create-native-javascript-action/native-nfc-app-home-android.jpg)

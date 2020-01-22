@@ -103,7 +103,6 @@ To change your app's capabilities, open *app/ios/yourProjectName.xcworkspace* in
 ![GoogleServicesInfoPlist](attachments/native-remote-push/GoogleServicesInfoPlist.png)
 
 In **Signing & Capabilities** tab, add **push notifications** capabilities to your app by doing the following:
-
 1. Click **nativeTemplate** in the left-hand file explorer.
 2. Click the **Signing & Capabilities** tab.
 3. Click **Targets** > **nativeTemplate**.

@@ -277,7 +277,7 @@ Switching from a ZIP file to a UI resources package is straightforward:
 
 3. Lastly, set the **Theme ZIP file** setting to **None**.
 
-## 7 Miscellaneous Tab
+## 7 Miscellaneous Tab {#miscellaneous}
 
 These settings determine the behavior of Studio Pro for this project. The settings apply to everyone that is working on this project.
 

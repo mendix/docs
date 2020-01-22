@@ -110,7 +110,7 @@ You can add more tags if you want, but note that Datadog's charges include an el
 
 ## 5 Customizing the Metrics Agent{#customizing}
 
-Mendix provides logging of various activities within the app. These are sent to Datadog with the namespace **mx**.
+Mendix provides logging of various activities within the app. These are sent to Datadog with the namespace **mx**. Timing values are sent in milliseconds.
 
 By default, Mendix will pass a log of *all* request handler activity to Datadog and no other information. However, by using JSON to configure the metrics agent, you can add logs of microflows and activities within microflows, and restrict which request handler calls are sent. 
 
@@ -149,13 +149,15 @@ You can specify which request handlers, microflows, and activities are reported 
 
 The following Mendix *request handler* calls will be passed to Datadog:
 
-* `WebserviceRequestHandler` - SOAP requests (`mx.soap.time`)
-* `ServiceRequestHandler` – OData requests (`mx.odata.time`)
-* `RestRequestHandler` - REST requests (`mx.rest.time`)
-* `ProcessorRequestHandler` - REST, ODATA, SOAP doc requests
-* `ClientRequestHandler` - `/xas` requests
-* `FileRequestHandler` - File upload/download requests
-* `PageUrlRequestHandler` - `/p` requests
+| Request Handler | Call Type | Namespace |
+| --- | --- | --- |
+| `WebserviceRequestHandler` | SOAP requests | `mx.soap.time` |
+| `ServiceRequestHandler` | OData requests | `mx.odata.time` |
+| `RestRequestHandler` | REST requests | `mx.rest.time` |
+| `ProcessorRequestHandler` | REST, ODATA, SOAP **doc** requests | `mx.client.time` |
+| `ClientRequestHandler` | `/xas` requests (general queries for data in data grids, sending changes to the server, and triggering the execution of microflows) | `mx.client.time` |
+| `FileRequestHandler` | File upload/download requests | `mx.client.time` |
+| `PageUrlRequestHandler` | `/p` requests | `mx.client.time` |
 </details>
 
 **<details><summary><sup><small>[2]</small></sup>Activities (click to see list)</summary>**

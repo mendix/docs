@@ -158,6 +158,8 @@ The following Mendix *request handler* calls will be passed to Datadog:
 | `ClientRequestHandler` | `/xas` requests (general queries for data in data grids, sending changes to the server, and triggering the execution of microflows) | `mx.client.time` |
 | `FileRequestHandler` | File upload/download requests | `mx.client.time` |
 | `PageUrlRequestHandler` | `/p` requests | `mx.client.time` |
+
+You can find help in analyzing some of these values in [Trends in Mendix Cloud v4](trends-v4).
 </details>
 
 **<details><summary><sup><small>[2]</small></sup>Activities (click to see list)</summary>**

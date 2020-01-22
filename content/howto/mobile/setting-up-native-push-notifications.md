@@ -36,7 +36,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 To make a native app for this how to, do the following:
 
 1. Complete [How to Deploy Your First Mendix Native App](deploying-native-app) through the end of the *Preparing Your Project* section. Once you finish this, you will have a generated a GitHub repository with all the files you will need. 
-2. Clone the generated repository to your computer. This will enable customizations later.
+2. If you would like to run the apps from source, clone the generated repository to your computer. Otherwise you can edit the files using github inline editor.
 
 ## 4 Setting up Firebase Cloud Messaging Service {#firebase-setup}
 
@@ -58,7 +58,7 @@ After you run the `prepare` command, the Native Builder will create iOS and Andr
 
 To customize your Android source code and enable push notifications, do the following steps:
 
-1. Set app launch mode inside activity props in*android/app/src/main/AndroidManifest.xml*:
+1. Set app launch mode inside activity props in *android/app/src/main/AndroidManifest.xml*:
 
 ![AndroidManifestChanges](attachments/native-remote-push/androidManifestXml.png)
 ```

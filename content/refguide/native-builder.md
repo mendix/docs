@@ -110,6 +110,14 @@ native-builder.exe build dev-app --project-name "CoolApp" --output-path "C:\bund
 
 The `regenerate` command recreates the project on GitHub with the latest version of `Native Template`, renames the previous app with a new name to preserve changes (if any), and then updates the build configuration of the App Center apps. Running `regenerate` also expects that `prepare` has been run at least once for the `--project-name`.
 
+{{% alert type="info" %}}
+
+There is no automated way to preserve changes you made to the previous template. In case you have some, you have to apply them manually in the new GitHub repository. 
+In addition, when changing the Mendix version, please also update the `mxbuild-path` via the `prepare` command.
+
+{{% /alert %}}
+
+
 | Parameter                  | Description                                                                 | Example                                             |
 | -------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------- |
 | `--project-name`           | Absolute path to the directory where Java executable is located. | `My Cool App`                                       |

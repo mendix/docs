@@ -90,7 +90,7 @@ todo: how much of this can I replace with "Go to Deploy doc and follow sections 
 
 Now you will build a native app and install it on your phone:
 
-1. If you do not have your GitHub and App Center keys, follow the [Getting Your Tokens]((/howto/mobile/deploying-native-app)) section of *How to Deploy Your First Mendix Native App* to get your authentication codes.
+1. If you do not have your GitHub and App Center keys, follow the [Getting Your Tokens](/howto/mobile/deploying-native-app) section of *How to Deploy Your First Mendix Native App* to get your authentication codes.
 
 2. Complete [Preparing Your Project](/howto/mobile/deploying-native-app) section of *How to Deploy Your First Mendix Native App* using these parameters:
 

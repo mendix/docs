@@ -34,11 +34,13 @@ The **Auto-generate caption** property specifies whether the caption is automati
 
 ## 3 Background Color {#color}
 
-In **Background color**, you can choose a background color for the activity. Colors do not influence execution; they are only used to quickly spot an element in a flow. For example, you can make activities with [error handlers](microflows#errorhandlers) red so you can easily identify them.
+The **Background color** property allows you to choose a background color for the activity. Colors do not influence execution; they are only used to quickly spot an element in a flow. For example, you can make activities with [error handlers](microflows#errorhandlers) red so you can easily identify them.
+
+A background color can be specified for an individual activity by selecting that activity and then choosing a color in the **Properties** pane, or you can select a default color for all activities of a certain type in the [Miscellaneous](project-settings#miscellaneous) section in *Project Settings*. The default color can also be changed by right-clicking a microflow activity, and selecting the **Set as default color** option from the context menu. This will make the current activities' color the default color for all activities of the same type. If you change the default color for an activity type, and there are other activities of that type present in the project that have a different individual background color specified, you will be asked whether you want to overwrite these individual colors with the new default color.
 
 ## 4 Error Handling Type {#error-handling}
 
-In **Error handling type**, you can choose the type of error handling for the activity. For details on avaliable options and their effects, refer see the [Error Handlers](microflows#errorhandlers) section in *Microflows*.
+In **Error handling type**, you can choose the type of error handling for the activity. For details on available options and their effects, see the [Error Handlers](microflows#errorhandlers) section in *Microflows*.
 
 ## 5 Read More
 

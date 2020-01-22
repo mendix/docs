@@ -389,7 +389,7 @@ To accomplish these goals, update the **ReadNFCTag** JavaScript action with the 
 // - the code between BEGIN EXTRA CODE and END EXTRA CODE
 // Other code you write will be lost the next time you deploy the project.
 import { Big } from "big.js";
-import { Platform, BackHandler } from "react-native";
+import { BackHandler, NativeModules, Platform } from "react-native";
 import NfcManager, { Ndef } from "react-native-nfc-manager";
 
 // BEGIN EXTRA CODE
@@ -400,10 +400,13 @@ import NfcManager, { Ndef } from "react-native-nfc-manager";
  */
 export async function ReadNFCTag() {
 	// BEGIN USER CODE
+	if (!NativeModules.NfcManager) {
+		throw new Error("The NfcManager module is not available in your app.");
+	}
 	if (Platform.OS === "android") {
 		const enabled = await NfcManager.isEnabled();
 		if (!enabled) {
-			throw(new Error("NFC is not enabled"));
+			throw new Error("NFC is not enabled");
 		}
 	}
 

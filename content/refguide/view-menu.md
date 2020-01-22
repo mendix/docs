@@ -14,11 +14,17 @@ Via this menu you can also enable/disables the [full screen mode](#full-screen) 
 
 ![View Menu](attachments/view-menu/view-menu.png)
 
-## 2 Layout of Panes
+## 2 Layout of Panes {#layout-of-panes}
 
-You can change the default layout of panes and arrange in the layout you like.   
+You can change the default layout of panes and arrange in the layout you like.
 
-When you drag a pane, you can see arrows that indicate where you can position this pane. You can position the pane either inside the current pane (arrows grouped together) or make it full-window height (individual arrows on the borders). Each position is presented and explained below:
+{{% alert type="info" %}}
+
+Note that this section describes the behavior of panes, not the behavior of documents in the working area. For more information on behavior of documents open in the working area, see the [Document Tabs](studio-pro-overview#documents) section in *Studio Pro Overview*.
+
+{{% /alert %}}
+
+When you drag a pane, you can see arrows that indicate where you can position this pane. You can position the pane either inside the current pane (arrows grouped together) or make it full-window height (individual arrows on the borders). Each position is labelled and explained below:
 
 ![](attachments/view-menu/interaction-with-panes.png)
 
@@ -32,7 +38,7 @@ When you drag a pane, you can see arrows that indicate where you can position th
 
    4. Pane-height – bottom
 
-   5. New pane – pane height
+   5. New pane as a new tab
 
       {{% alert type="info" %}}If you try to position the pane as a new pane inside the working area, it will be opened as a dialog window.
       
@@ -48,11 +54,12 @@ When you drag a pane, you can see arrows that indicate where you can position th
 
    4. Full-window height – bottom
 
-If you have several panes grouped together in tabs, you can change the position of all tabs at once by dragging the top-bar. To change the position of an individual tab, drag the tab itself. 
-
 Video below shows examples of how to position a pane:
 
-<video width="768" height="432" controls src="attachments/view-menu/positioning-panes.mp4">VIDEO</video>
+<video width="640" height="360" controls src="attachments/view-menu/positioning-panes.mp4">VIDEO</video>
+
+If you have several panes grouped together in tabs, you can change the position of all tabs at once by dragging the top-bar. To change the position of an individual tab, drag the tab itself. 
+
 ## Changes {#changes}
 
 For version control enabled projects (projects with [Team Server](/developerportal/develop/team-server) or other SVN servers), the [Changes pane](changes-pane) shows the local changes to the app project since the last commit. You can commit changes, update to the latest revision, and view the history from here. 

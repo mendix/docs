@@ -67,19 +67,19 @@ Sometimes the computer running Studio Pro cannot access the internet directly, b
 
 ## 5 New Features Tab {#new-features}
 
-This tab lists several new features that are added to Studio Pro recently. The purpose of these settings is to allow you to switch back to the old versions of these features, should you encounter any problems.
+This tab lists new features that have been added to Studio Pro recently. The purpose of the settings described below is to allow you to switch back to the old versions of these features, should you encounter any problems.
 
 {{% alert type="info" %}}
-You need to restart Studio Pro to make changes to these settings take effect.
+You need to restart Studio Pro for changes to these settings to take effect.
 {{% /alert %}}
 
-#### 5.1 New Version of the Changes pane
+#### 5.1 New Version of the Changes Pane {#new-changes}
 
 Select this option when you want to enable the new version of the [Changes](changes-pane) pane. Should you find any issues in the new version, you can switch back to the old version by clearing this check box.
 
-#### 5.2 New Version of the Connector
+#### 5.2 New Version of the Connector {#new-connector}
 
-Select this option when you want to enable the new version of the Connector. Should you find any issues in the new version, you can switch back to the old version by clearing this check box.
+Select this option when you want to enable the new version of the [Connector](view-menu#connector). Should you find any issues in the new version, you can switch back to the old version by clearing this check box.
 
 #### 5.3 New Version of the Project Explorer
 

@@ -149,13 +149,13 @@ You can specify which request handlers, microflows, and activities are reported 
 
 The following Mendix *request handler* calls will be passed to Datadog:
 
-* `WebserviceRequestHandler`
-* `ServiceRequestHandler` – OData requests
-* `RestRequestHandler`
-* `ProcessorRequestHandler`
-* `ClientRequestHandler`
-* `FileRequestHandler`
-* `PageUrlRequestHandler`
+* `WebserviceRequestHandler` - SOAP requests (`mx.soap.time`)
+* `ServiceRequestHandler` – OData requests (`mx.odata.time`)
+* `RestRequestHandler` - REST requests (`mx.rest.time`)
+* `ProcessorRequestHandler` - REST, ODATA, SOAP doc requests
+* `ClientRequestHandler` - `/xas` requests
+* `FileRequestHandler` - File upload/download requests
+* `PageUrlRequestHandler` - `/p` requests
 </details>
 
 **<details><summary><sup><small>[2]</small></sup>Activities (click to see list)</summary>**

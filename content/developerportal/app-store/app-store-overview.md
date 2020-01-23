@@ -147,7 +147,7 @@ Click **Manage** to manage the component:
 On this page, you will see the following buttons:
 
 * **Create new draft version** – click this to create a new draft version of the component
-	* Only one draft version of a component can exist at a time, so when one draft version is in progress, another draft cannot be initiated – if there is a draft version in progress, click **View draft version** to see it
+	* Only one draft version of a component can exist at a time, so when one draft version is in progress, another draft cannot be initiated – if there is a draft version in progress, click **View draft** to see it
 	* For more information on creating a draft version, see the [Updating Existing App Store Content](share-app-store-content#updating) section of *How to Share App Store Content*
 * **Unpublish** – click this to remove that version from the component
 	* If the component is not the protected content of a [user group](#user-groups), you can only unpublish a version that you have published yourself

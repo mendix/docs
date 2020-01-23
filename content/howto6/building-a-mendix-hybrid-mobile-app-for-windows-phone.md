@@ -34,7 +34,7 @@ To create a Phonegap Build package using a provided template, follow these steps
     * {% raw %}{{description}}{% endraw %} - The description of your app
 
     After changing these variables, the `config.xml` will look similar to this:
-    {% highlight xml %}
+   ```
     <?xml version="1.0" encoding="UTF-8" ?>
         <widget xmlns = "http://www.w3.org/ns/widgets"
             xmlns:gap = "http://phonegap.com/ns/1.0"
@@ -45,7 +45,7 @@ To create a Phonegap Build package using a provided template, follow these steps
 
         <description>The Sample WP8 App</description>
 
-        .....{% endhighlight %}
+   ```
 4. Save the file.
 5. Open the `index.html` file and change the {% raw %}`{{url}}`{% endraw %} to the address where your application is
 running (for example, `https://com.mendixcloud.myapp`).

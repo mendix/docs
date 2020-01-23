@@ -50,14 +50,12 @@ To create a Phonegap Build package using a provided template, follow these steps
 5. Open the `index.html` file and change the {% raw %}`{{url}}`{% endraw %} to the address where your application is
 running (for example, `https://com.mendixcloud.myapp`).
 6. Save the file. The part where the URL is used will now look similar to this:
-    {% highlight js %}
-    ...
-
+   ```
     document.addEventListener("deviceready", function() {
         mxapp.initialize("https://com.mendixcloud.myapp", enableOffline, requirePin);
     });
+   ```
 
-    ...{% endhighlight %}
 To create an archive with these changes, follow these steps:
 
 1. Select all the files and directories you extracted.

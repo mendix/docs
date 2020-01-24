@@ -15,7 +15,7 @@ In the **Project** menu, you can view and/or manipulate settings that are connec
 
 ## 2 Tools
 
-Under **Project** > **Tools**, you can find settings on updating widgets, button icons, and layouts, checking widgets, and converting your classes to the **Design** properties.  
+Under **Project** > **Tools**, you can find settings on updating widgets, button icons, and layouts, checking widgets, and converting your classes to **Design** properties.  
 
 ![Tools](attachments/project-menu/tools.png)
 
@@ -72,6 +72,8 @@ The **Clean Deployment Directory** option cleans the deployment directory.
 The **Deploy to Licensed Cloud Node** option deploys the latest committed revision of a Team Server project to the associated Mendix Cloud node.
 
 Shortcut key:  <kbd>Ctrl</kbd> + <kbd>F5</kbd>
+
+For more information on using this option, see [Deploy to the Cloud](deploy-to-the-cloud-dialog).
 
 ## 9 Read More
 

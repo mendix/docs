@@ -8,23 +8,23 @@ tags: ["Studio Pro", "view menu", "top bar"]
 
 ## 1 Introduction
 
-Studio Pro supports a number of dockable window panes, such as the **Changes** or **Errors** panes. You can close some panes to just show the ones you need at the moment, but you can always reopen them via the **View** menu. 
+Studio Pro supports a number of dockable window panes, such as the **Changes** and **Errors** panes. You can close some panes to just show the ones you need at the moment, but you can always reopen them via the **View** menu. 
 
-Via this menu you can also enable/disables the [full screen mode](#full-screen) and also [reset the layout](#reset-layout) of your project to default.  
+Via this menu you can also enable or disable the [full screen mode](#full-screen) or [reset the layout](#reset-layout) of your project to the default.  
 
 ![View Menu](attachments/view-menu/view-menu.png)
 
 ## 2 Layout of Panes {#layout-of-panes}
 
-You can change the default layout of panes and arrange in the layout you like.
+You can change the default layout of panes and arrange them in the layout you like.
 
 {{% alert type="info" %}}
 
-Note that this section describes the behavior of panes, not the behavior of documents in the working area. For more information on behavior of documents open in the working area, see the [Document Tabs](studio-pro-overview#documents) section in *Studio Pro Overview*.
+Note that this section describes the behavior of panes, not the behavior of documents in the working area. For more information on the behavior of documents open in the working area, see the [Document Tabs](studio-pro-overview#documents) section in *Studio Pro Overview*.
 
 {{% /alert %}}
 
-When you drag a pane, you can see arrows that indicate where you can position this pane. You can position the pane either inside the current pane (arrows grouped together) or make it full-window height (individual arrows on the borders). Each position is labelled and explained below:
+When you drag a pane, you can see arrows that indicate where you can position this pane. You can position the pane either inside the current pane (arrows grouped together) or make it full-window height or width (individual arrows on the borders). Each position is labelled and explained below:
 
 ![](attachments/view-menu/interaction-with-panes.png)
 
@@ -54,10 +54,10 @@ When you drag a pane, you can see arrows that indicate where you can position th
 
    4. Full-window height – bottom
 
-Video below shows examples of how to position a pane:
+The video below shows examples of how to position a pane:
 
 <video width="640" height="360" controls src="attachments/view-menu/positioning-panes.mp4">VIDEO</video>
-If you have several panes grouped together in tabs, you can change the position of all tabs at once by dragging the top-bar. To change the position of an individual tab, drag the tab itself. 
+If you have several panes grouped together in tabs, you can change the position of all the tabs at once by dragging the top-bar. To change the position of an individual tab, drag the tab itself. 
 
 ## 3 Menu Items
 

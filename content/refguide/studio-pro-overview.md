@@ -28,7 +28,7 @@ Note that this section describes documents in the working area, not panes that y
 
 {{% /alert %}}
 
-You can have a number of tabs open, just like in a modern web browser. They can be closed, reordered, and shown side by side. Video below shows examples of how to interact with a tab:
+You can have a number of tabs open, just like in a modern web browser. They can be closed, reordered, and shown side by side. The video below shows examples of how to interact with a tab:
 
 <video controls width="608" height="456" src="attachments/studio-pro-overview/document-tabs.mp4">VIDEO</video>
 

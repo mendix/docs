@@ -32,10 +32,7 @@ Follow the instructions below to set up your first local notification:
 
 	![native mobile quickstart app](attachments/native-push/quickstart.png)
 
-4.  Click **Use this starting point**:
-
-	![use this starting point](attachments/native-push/starting-point.png)
-
+4.  Click **Use this starting point**.
 5.  Click **Create App** to close the dialog box:
 
 	{{% image_container width="500" %}}![app settings](attachments/native-push/app-settings.png){{% /image_container %}}

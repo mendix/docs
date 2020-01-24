@@ -8,43 +8,28 @@ draft: true
 
 ## 1 Introduction
 
-The [Auto-Load More](https://appstore.home.mendix.com/link/app/50323/) widget
+The [Auto-Load More](https://appstore.home.mendix.com/link/app/50323/) widget loads more items on the list view as the end-user scrolls.
 
-Loads more items on the list view as the user scrolls
-Dependencies
+### 1.1 Demo App Project
 
-Mendix 6.
-Demo project
+For a demo app project that has been deployed with this widget, see [here](http://autoloadmore.mxapps.io).
 
-http://autoloadmore.mxapps.io
+## 2 Usage
 
-1
-Usage
+1. Place the widget in the same page or snippet as the target list view (as in, right below it).
+2. Add the name of the **Target list view** to the widget (which can be found in the **Common** tab of the list view properties in Studio Pro).
 
-    Place the widget in the same page/snippet as the target list view (right below it).
-    Add the name of the target list view to the widget (found in the common tab of the list view properties in the modeler)
+## 3 Developing This App Store Component
 
-Issues, suggestions and feature requests
+1. Install the following:
+	* [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+	* [npm](https://www.npmjs.com/)
+	* [webpack-cli](https://www.npmjs.com/package/webpack-cli)
+	* [grunt-cli](https://github.com/gruntjs/grunt-cli)
+2. Fork and clone the [mendixlabs/auto-load-more]( https://github.com/mendixlabs/auto-load-more.git) repository. The code is in Typescript.
+3. Set up the development environment by running `npm install`.
+4. Create a folder named *dist* in the project root.
+5. Create a Mendix test project in the *dist* folder and rename its root folder to *dist/MxTestProject*, or get the test project from [mendixlabs/auto-load-more](https://github.com/mendixlabs/auto-load-more/releases/download/v1.1.2/TestAutoLoadMore.mpk). Changes to the widget code will be automatically pushed to this test project.
+6. To automatically compile, bundle, and push code changes to the running test project, run `grunt`.
 
-We are actively maintaining this widget, please report any issues or suggestions for improvement https://github.com/mendixlabs/auto-load-more/issues
-Development
-
-Prerequisite: Install git, node package manager, webpack CLI, grunt CLI
-
-To contribute, fork and clone.
-
-> git clone https://github.com/mendixlabs/auto-load-more.git
-
-The code is in typescript. Use a typescript IDE of your choice, like Visual Studio Code or WebStorm.
-
-To set up the development environment, run:
-
-> npm install
-
-Create a folder named dist in the project root.
-
-Create a Mendix test project in the dist folder and rename its root folder to dist/MxTestProject. Changes to the widget code shall be automatically pushed to this test project. https://github.com/mendixlabs/auto-load-more/releases/download/v1.1.2/TestAutoLoadMore.mpk
-
-To automatically compile, bundle and push code changes to the running test project, run:
-
-> grunt
+We are actively maintaining this widget. Please report any issues or suggestions for improvement at [mendixlabs/auto-load-more](https://github.com/mendixlabs/auto-load-more/issues).

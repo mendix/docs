@@ -16,6 +16,12 @@ Event handlers should be used moderately, as they will be triggered each and eve
 Event handlers are not triggered in a particular order. So, make sure events do not depend on each other in any way (also with regard to events in generalizations and specializations).
 {{% /alert %}}
 
+{{% alert type="info" %}}
+If the specified event is applied to a list of objects (if, for example, you are committing a list of objects), the handler will be triggered for all the objects first, and then the event will be applied to the list. In the given example,  the handler will run on all the objects first and then all the objects in the list will be committed.
+
+If your handler relies on the event having already been applied to another object in a list, you should loop through the list and apply the event to each object in turn.
+{{% /alert %}}
+
 ## 2 Properties
 
 ### 2.1 When

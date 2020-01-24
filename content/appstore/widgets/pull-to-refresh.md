@@ -35,8 +35,9 @@ For a demo app project that has been deployed with this widget, see [here](https
 	* **Text when pulling down**
 	* **Release to refresh text**
 	* **Text when refreshing**
-
 3. In the client, pull down the page until the **Release to refresh text** appears in order to refresh the page.
+
+![](attachments/pull-to-refresh/demo.gif)
 
 ## 3 Developing This App Store Component
 

@@ -64,7 +64,7 @@ Custom domain certificates (or just "certificates") are managed at the *applicat
 
 You can have more than one certificate for an application. For example when your certificate expires, you can upload a new certificate next to your old certificate.
 
-You can be choose which certificate to use when you configure a custom domain for an environment (test, acceptance, or production).
+You can choose which certificate to use when you configure a custom domain for an environment (test, acceptance, or production).
 
 ![](attachments/custom-domains/21168233.png)
 

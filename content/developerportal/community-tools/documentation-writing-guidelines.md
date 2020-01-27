@@ -24,7 +24,7 @@ When contributing to the Mendix documentation, please consider these style guide
 * Avoid adverbs such as “simply,” “possibly,” “might,” “could,” “actually,” and “potentially,” as these words add uncertainty and cloud the true meaning of sentences
 * Be inclusive with your language and do not use just "he," use "the user" or "they" instead
 
-Need an extra hand with spelling and grammar? Load your article into [Hemmingway](http://www.hemingwayapp.com/) to spot any potential errors.
+Need an extra hand with spelling and grammar? Load your article into [Hemmingway](http://www.hemingwayap.com/) to spot any potential errors.
 
 ## 3 Guidelines for the Mendix Studio Pro How-to's
 

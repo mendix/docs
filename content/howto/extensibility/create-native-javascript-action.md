@@ -91,7 +91,7 @@ Now you will build a native app and install it on your phone:
 	$ native-builder.exe prepare --java-home "C:\Program Files\AdoptOpenJDK\jdk-11.0.3.7-hotspot" --mxbuild-path "C:\Program Files\Mendix\8.5.0.64176\modeler\mxbuild.exe" --project-path "Y:\MendixProjects\NativeNFC\NativeNFC.mpr" --github-access-token "a1f422..." --appcenter-api-token "a1b95a..." --project-name "Native NFC App" --app-name "Native NFC App" --app-identifier "com.mendix.howto.nativenfc" --runtime-url "https://nativenfc-sandbox.mxapps.io/"
 	```
 
-As a result of the prepare command your app is created in [App Center](https://appcenter.ms/apps):
+As a result of the `prepare` command your app is created in [App Center](https://appcenter.ms/apps):
 
 ![App Center apps](attachments/create-native-javascript-action/app-center-apps.png)
 
@@ -140,13 +140,13 @@ The settings are stored in *C:\Users\mendix.tech.writer\.native_builder*:
 
 {{% alert type="info" %}}
 
-The Native Builder will locally run MxBuild. The output is a *bundles.js* file which will be pack with your application. So any update on your Mendix model requires a new build. You are not building a development app that updates automatically.
+The Native Builder will locally run MxBuild. The output is a *bundles.js* file which will be pack with your application. Therefore, any update on your Mendix model requires a new build. You are not building a development app that updates automatically.
 
 {{% /alert %}}
 
 ### 3.3 Installing a Dependency in Your (Custom Dev) App {#installing-dependency-app}
 
-In this section you will install the external library [react-native-nfc-manager](https://www.npmjs.com/package/react-native-nfc-manager) which makes adding NFC functionality easier. The Mendix native client is based on *React Native version 0.59*, which will have an impact on the selected version of the library [todo: can we delete this sentence? it is a dependency]. You will make all changes to the **master** branch, because with each build a new branch is created (`build/{number}`) from **master** with your latest changes.
+In this section you will install the external library [react-native-nfc-manager](https://www.npmjs.com/package/react-native-nfc-manager) which makes adding NFC functionality easier. The Mendix native client is based on *React Native version 0.59*, which will influence the selected version of the library [todo: can we delete this sentence? it is a dependency]. You will make all changes to the **master** branch, because with each build a new branch is created (`build/{number}`) from **master** with your latest changes.
 
 The dependency is split into two parts: the native operating system part and the client JavaScript part. To add the dependency for the app, do the following:
 
@@ -459,15 +459,17 @@ The second parameter of the `registerTagEvent` function is the instruction text 
 
 Congratulations on making your own native JavaScript action! Please use your own creativity to extend the NFC functionality or implement other modules with the lessons you have learned.
 
-### 3.10 Build for Release {#build-release}
-Up until now we use our custom developer app to validate the working of our application. When you want to distribute your app via the Google Play Store and Apple AppStore, you have make a build that included the bundled Mendix app.
+## 4 Build for Release {#build-release}
 
-To build the app for the first time we can run this `build` command 
+Until this section, you have used a custom developer app to validate your application. When you want to distribute your app in the Google Play Store or Apple App Store, you have make a build that includes the bundled Mendix app.
+
+To build the app for the first time, run this `build` command:
+
 ``` shell
 $ native-builder.exe build --project-name "Native NFC App" --app-version "1.0.0" --build-number 1`.
 ```
 
-For the full explanation how to build, sign and distribution see the [Deploy Your First Mendix Native App](howto/mobile/deploying-native-app#5-making-your-first-build) tutorial.
+For the full explanation on how to build, sign, and distribute your app to an app store see the [Making Your First Build](/howto/mobile/deploying-native-app#first-build) section of *How to Deploy Your First Mendix Native App* as well as the tutorial's subsequent sections.
 
 ## 4 Read More {#read-more}
 

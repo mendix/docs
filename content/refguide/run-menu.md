@@ -30,7 +30,7 @@ The **Run** menu items are described in the table below:
 | **Tablet Browser** | Shows the tablet mobile client for the currently running project in the browser. | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F9</kbd> |
 | **Phone Browser** | Shows the mobile client for the currently running project in the browser. | <kbd>Ctrl</kbd> + <kbd>F9</kbd> |
 | **Hybrid Phone App Online** | Views the app as a phone app online. | |
-| **View in the Mendix App** | Views the app via the [Mendix Mobile app](getting-the-mendix-app). | |
+| **View in the Mendix App** | Provides a link to allow you to view the app via the [Mendix Mobile app](getting-the-mendix-app). | |
 
 ## 3 Read More
 

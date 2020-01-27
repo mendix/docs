@@ -25,7 +25,7 @@ Before starting with this how-to, make sure you have completed the following pre
 * Download the [Selenium Client & WebDriver](http://www.seleniumhq.org/download/) for Java
 
 {{% alert type="warning" %}}
-This how-to uses the Company Expenses starter app starting in the [Add the Third Test Method](#third) section for an example scenario. However, this starter app is no longer platform-supported by Mendix. Therefore, sections using this starter app can only be used as reference and not as sections that can be completed step-by-step.
+This how-to uses the Company Expenses app template starting in the [Add the Third Test Method](#third) section for an example scenario. However, this app template is no longer platform-supported by Mendix. Therefore, sections using this app template can only be used as reference and not as sections that can be completed step-by-step.
 {{% /alert %}}
 
 ## 3 Creating a Java Project

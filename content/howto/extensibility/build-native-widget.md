@@ -109,7 +109,7 @@ In order to test your group box widget, you will a Mendix application that uses 
 
 1. Open Studio Pro.
 2. Create a new project by clicking **File** > **New Project**.
-3. Select the **Blank** app on the last page of **Starter Apps** (do not select **Blank App** on the first page).
+3. Select the **Blank** app (do not select **Blank App**).
 4. Click the **Use this starting point** button
 5. Fill in the following details in the **App Settings** dialog box:
 	* App name: *GroupBoxTestProject*

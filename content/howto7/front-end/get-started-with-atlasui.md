@@ -7,11 +7,11 @@ tags: ["Atlas", "UI", "UX", "user experience", "Web Modeler"]
 
 ## 1 Introduction
 
-The Web Modeler is a powerful collaborative tool that lets you build your application in the cloud together with your team. When you log into the Web Modeler for the first time, you get the option to choose a starter app that is powered by Atlas UI. For more information on the Web Modeler, see the [Web Modeler Guide](/studio). 
+The Web Modeler is a powerful collaborative tool that lets you build your application in the cloud together with your team. When you log into the Web Modeler for the first time, you get the option to choose an app template that is powered by Atlas UI. For more information on the Web Modeler, see the [Web Modeler Guide](/studio). 
 
 **This how-to will teach you how to do the following:**
 
-* Choose a starter app
+* Choose an app template
 * Edit your app in the Web Modeler
 * Choose a page template
 * Customize your theme
@@ -22,7 +22,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Have a Mendix account (sign up [here](https://www.mendix.com/try))
 
-## 2 Choosing Your Starter App
+## 2 Choosing Your App Template
 
 In the [Mendix Developer Portal](https://sprintr.home.mendix.com/index.html), click **Create App**. You will see a number of apps marked with **ATLAS UI** that are Atlas UI-based. You can select one to get started.
 

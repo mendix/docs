@@ -58,7 +58,7 @@ Enter the email addresses of all the co-workers you want to invite to your app p
 
 ### App Store component
 
-This is the generic name of the individual add-on, widget, module, connector, starter app, etc. available in the Mendix App Store.
+This is the generic name of the individual add-on, widget, module, connector, app template, etc. available in the Mendix App Store.
 
 {{% alert type="info" %}}
 Do not use "App Store item."<br />

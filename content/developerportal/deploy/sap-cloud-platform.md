@@ -22,7 +22,7 @@ Before you can manage your SAP Cloud Platform using the Developer Portal, you wi
 
 1. You have an existing app which has never been deployed on the SAP Cloud Platform and you want to change the cloud settings. See [Change Cloud Settings](#ChangeCloudSettings).
 
-2. You are creating a new app from an SAP starter app. See [New SAP App](#NewSAPApp).
+2. You are creating a new app from an SAP app template. See [New SAP App](#NewSAPApp).
 
 ### 2.1 Change Cloud Settings{#ChangeCloudSettings}
 
@@ -38,11 +38,7 @@ Click **Getting Started** and then continue with [Set Up Region](#SetUpRegion).
 
 ### 2.2 New SAP App{#NewSAPApp}
 
-In this scenario, you choose a Mendix starter app from the **SAP Apps** tab.
-
-![](attachments/sap-cloud-platform/sap-starter-apps.png)
-
-Select the starter app you want and give it a name.
+In this scenario, you choose a Mendix app template for SAP **SAP Apps** tab and give it a name.
 
 Once the app has been created you can continue with [Set Up Region](#SetUpRegion).
 

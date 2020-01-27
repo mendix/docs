@@ -179,11 +179,11 @@ appstore:
   priority: false
   draft: true
   menu_categories:
-    - "Starter Apps"
+    - "Connectors"
     - "Widgets"
     - "Modules"
-    - "Connectors"
     - "Themes"
+    - "App Templates"
 product-naming:
   space: "Mendix Product Naming Guide"
   priority: false

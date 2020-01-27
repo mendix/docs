@@ -296,14 +296,14 @@ Then the Studio Pro UI for the component appears like this:
 
 ### 3.3 Widgets {#widgets}
 
-The widgets property allows a user to place multiple widgets inside a pluggable widget, similar to the content of a [container](/refguide/container) widget. It is passed as a `ReactNode` prop to a client component if a `dataSource` attribute is not specified or if attribute is specified, but the data source is not configured by the user. Otherwise it is passed as a function that expects a `ListItem` and returns a `ReactNode`: `(item: ListItem) => ReactNode`. For more information, see the [datasource](#datasource) section below.
+The widgets property allows a user to place multiple widgets inside a pluggable widget, similar to the content of a [container](/refguide/container) widget. It is passed as a `ReactNode` prop to a client component if a `dataSource` attribute is not specified or if attribute is specified, but the data source is not configured by the user. Otherwise it is passed as a function that expects a `ObjectItem` and returns a `ReactNode`: `(item: ObjectItem) => ReactNode`. For more information, see the [datasource](#datasource) section below.
 
 {{% alert type="info" %}}
 This property type was introduced in Mendix 8.3.
 {{% /alert %}}
 
 {{% alert type="info" %}}
-Support for the `dataSource` attribute was introduced in Mendix 8.6.
+Support for the `dataSource` attribute was introduced in Mendix 8.7.
 {{% /alert %}}
 
 {{% alert type="warning" %}}
@@ -587,7 +587,7 @@ Then the Studio Pro UI for the property appears like this:
 The datasource property allows widgets to work with object lists. The client component will receive value prop of type [`ListValue`](client-apis-for-pluggable-widgets#listvalue) and may be used with the [`widgets`](#widgets) property.
 
 {{% alert type="info" %}}
-Support for the datasource property type was introduced in Mendix 8.6.
+Support for the datasource property type was introduced in Mendix 8.7.
 {{% /alert %}}
 
 {{% alert type="warning" %}}

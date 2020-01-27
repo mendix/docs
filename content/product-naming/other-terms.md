@@ -72,6 +72,19 @@ Use "App Store content" (and not "App Store components") to describe in general 
 Capitalize, because **Team** is capitalized in the Developer Portal UI.
 {{% /alert %}}
 
+## app template {#app-template}
+
+This is the term to use to reflect the create-new-app flow UI in the Developer Portal.
+
+There are two inconsistencies in other areas of the platform UI:
+
+* When creating a new company app template to add to the App Store as a component, you have to select **Starter Apps* as the **Sub category**
+* In the App Store, "sample apps" continues to be the menu item for app templates
+
+{{% alert type="info" %}}
+Do not use "starter app."
+{{% /alert %}}
+
 ### App User
 
 For a definition of this term, see the [Managing App Users](/developerportal/settings/general-settings#managing-app-users) section of the *Developer Portal Guide*.

@@ -373,7 +373,7 @@ To set up the appropriate scopes in MindSphere, do the following:
     ![](attachments/deploying-to-mindsphere/image15.png)
 
 {{% alert type="info" %}}
-If you are using the starter app, you should create two scopes, *user* and *admin*.
+If you are using the app template, you should create two scopes, *user* and *admin*.
 {{% /alert %}}
 
 For an explanation of the relationship between Mendix roles and MindSphere roles, see section [Roles & Scopes](/partners/siemens/mindsphere-module-details#rolesscopes) in *MindSphere Module Details*.

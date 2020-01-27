@@ -75,11 +75,11 @@ Your Mendix project should looks something like this:
 
 ### 3.2 Building a Native Custom Developer App {#custom-developer-app}
 
-When developing a native app, you can use the [Make it Native](/refguide/getting-the-make-it-native-app) app to quickly get started. However tihs app is bundled with a limited number of functionalities. This tutorial's app requires a NFC module in order to access the native NFC capabilities. This can only be achieved by using the [Native Builder](/refguide/native-builder). The Native Builder can create a custom developer app and will create packages for iOS and Android to install.
+When developing a native app, you can use the [Make it Native](/refguide/getting-the-make-it-native-app) app to quickly get started. However tihs app is bundled with a limited number of functionalities. This tutorial's app requires a NFC module in order to access the native NFC capabilities. This can only be achieved by using the [Native Builder](/refguide/native-builder). The Native Builder can create a custom developer app which you use to see and test your app.
 
 todo: how much of this can I replace with "Go to Deploy doc and follow sections 1-6?"
 
-Now you will build a native app and install it on your phone:
+Now you will build a native custom developer app and install it on your phone:
 
 1. If you do not have your GitHub and App Center keys, follow the [Getting Your Tokens](/howto/mobile/deploying-native-app#3-getting-your-tokens) section of *How to Deploy Your First Mendix Native App* to get your authentication codes.
 2. Complete [Preparing Your Project](/howto/mobile/deploying-native-app#4-preparing-your-project) section of *How to Deploy Your First Mendix Native App* using these parameters:
@@ -114,10 +114,12 @@ The settings are stored in *C:\Users\mendix.tech.writer\.native_builder*:
 	}
 	```
 
-3. To build the app for the first time, complete the [Build Your Developer App](/howto/mobile/how-to-devapps#3-build-your-developer-app) section of *Create a Custom Developer App* using this build command: 
+3. To build the app for the first time, complete the [Build Your Developer App](/howto/mobile/how-to-devapps#3-build-your-developer-app) section of *Create a Custom Developer App* using this build command:
+ 
 	``` shell
 	$ native-builder.exe build dev-app --project-name "Native NFC App"`.
 	```
+	
 	The project name should match the project names from your `prepare` command. Its output is now available in the *C:\native-builder\builds\* folder, where you will find *Native-NFC-App-Android-1.zip* for an Android app and *Native-NFC-App-iOS-1.zip* for an iOS app.
 
 {{% alert type="info" %}}

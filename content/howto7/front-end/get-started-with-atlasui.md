@@ -24,19 +24,13 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 2 Choosing Your Starter App
 
-In the [Mendix Developer Portal](https://sprintr.home.mendix.com/index.html), click **Create App**. On the **Starter Apps** tab, there are a number of apps marked with **ATLAS UI** that are Atlas UI-based. You can select one to get started.
-
-![Starter Apps in the Developer POrtal](attachments/get-started-with-atlasui/start_choose_your_starter_app.png)
+In the [Mendix Developer Portal](https://sprintr.home.mendix.com/index.html), click **Create App**. You will see a number of apps marked with **ATLAS UI** that are Atlas UI-based. You can select one to get started.
 
 For more information about Atlas UI, see [Atlas UI](index). 
 
 ## 3 Editing Your App in the Web Modeler
 
-You now have access to your app **Buzz** in the [Developer Portal](/developerportal). From **Buzz**, you can open the Web Modeler clicking **Edit App** in the top-right corner of the screen:
-
-{{% image_container width="300" %}}
-![Edit App Button in the Developer POrtal](attachments/get-started-with-atlasui/start_edit_your_app.png)
-{{% /image_container %}}
+You now have access to your app **Buzz** in the [Developer Portal](/developerportal). From **Buzz**, you can open the Web Modeler clicking **Edit App** in the top-right corner of the screen.
 
 Note that when you click **Edit App** for any Atlas UI app, it will automatically open in the Web Modeler. If you need to edit the app in the Desktop Modeler, click the drop-down menu on the **Edit App** button and select **Edit in Desktop Modeler**.
 

@@ -45,7 +45,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Install the latest Mendix Pluggable Widget Generator for Yeoman with the following command:
 
 	```shell
-	npm install -g @mendix/generator-widget
+	$ npm install -g @mendix/generator-widget
 	```
 
 * Install an integrated development environment (IDE) of your choice (Mendix recommends [Microsoft Visual Studio Code](https://code.visualstudio.com/))
@@ -79,7 +79,7 @@ To scaffold your project folder for the group box widget, follow these steps:
 3. Start the generator by executing the following command:
 
 	```shell
-	yo @mendix/widget GroupBox
+	$ yo @mendix/widget GroupBox
 	```
 
 4. The generator will ask you for some input during setup. Provide this information to the generator:
@@ -200,7 +200,7 @@ Define the structure and default style of the group box widget with these steps:
 5. Execute the following command to bundle your widget and update the widget bundle in your Mendix test project:
 
 	```shell
-	npm run dev
+	$ npm run dev
 	```
 
 	The executed script will keep watching your source files and rebundle the widget every time you save one of these files.
@@ -1096,8 +1096,8 @@ First change the widget property configuration:
 	ii. Change your current working directory to the folder where *GroupBox.png* is stored.<br />
 	iii. Execute the following command to generate the Base64 representation:<br />
 	
-	```cmd
-	certutil -encode GroupBox.png data.b64
+	```shell
+	$ certutil -encode GroupBox.png data.b64
 	```
 	
 	Upon success, you will see a **data.b64** file in the same location as your original image.
@@ -1109,7 +1109,7 @@ First change the widget property configuration:
 	iii. Execute the following command to generate the Base64 representation:<br />
 	
 	```shell
-	base64 -i GroupBox.png -o data.b64
+	$ base64 -i GroupBox.png -o data.b64
 	```
 	
 	Upon success, you will see a **data.b64** file in the same location as your original image.

@@ -68,17 +68,14 @@ Follow these instructions to set up your NFC project:
 	h. Drag and drop the **HasNFCSupport** JavaScript action onto this nanoflow.<br />
 	i. Save your nanoflow.
 10. Click **Run** to deploy to the sandbox. 
-11. After deployment is finished click **View** to see your app running in a browser (todo: but this will show the Home_responsive page, which we haven't worked in. Delete these steps?):
 
-	![project run and view button](attachments/create-native-javascript-action/run-view.png)
+Your Mendix project should looks something like this:
 
-	Your Mendix project should looks something like this:
-
-	![native nfc app home](attachments/create-native-javascript-action/native-nfc-app-home-studio-pro.png)
+![native nfc app home](attachments/create-native-javascript-action/native-nfc-app-home-studio-pro.png)
 
 ### 3.2 Building a Native Custom Developer App {#custom-developer-app}
 
-When developing a native app, the [Make it Native](/refguide/getting-the-make-it-native-app) app is the quickest way to get you started. However it is only bundled with a limited number functionalities. Our app is requires a NFC module in order to access the native NFC capabilities. This can only be achieved via [Native Builder](/refguide/native-builder). The builder can create developer app just like the **Make it Native** app and will create packages for iOS and Android to install.
+When developing a native app, you can use the [Make it Native](/refguide/getting-the-make-it-native-app) app to quickly get started. However tihs app is bundled with a limited number of functionalities. This tutorial's app requires a NFC module in order to access the native NFC capabilities. This can only be achieved by using the [Native Builder](/refguide/native-builder). The Native Builder can create a custom developer app and will create packages for iOS and Android to install.
 
 todo: how much of this can I replace with "Go to Deploy doc and follow sections 1-6?"
 

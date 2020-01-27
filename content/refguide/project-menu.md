@@ -21,23 +21,23 @@ Under **Project** > **Tools**, you can find settings on updating widgets, button
 
 ### 2.1 Batch Update Button Icons
 
-This option opens the **Batch Update Button Icons** dialog box so that you can configure the batch update of many button icons at once.
+The **Batch Update Button Icons** option allows you to update many button icons in a single batch process.
 
 ### 2.2 Batch Update Layouts
 
-This option opens the **Batch Update Layouts** dialog box so that you can configure the batch update of the layouts of many pages at once.
+The **Batch Update Layouts** option allows you to update the layouts of many pages in a single batch process.
 
-### 2.3 Batch Convert Split Panes
-
-This option opens the **Batch Convert Split Panes** dialog box so that you can configure the batch update.
-
-### 2.4 Update Widgets
+### 2.3 Update Widgets
 
 The **Update Widgets** option presents the current versions of the widgets you are using in your app project, what the latest versions of the widgets are, and an update option.
 
-### 2.5 Check Widgets
+### 2.4 Check Widgets
 
 The **Check Widgets** option checks that the widgets you have implemented in the app project have been built correctly.
+
+### 2.5 Convert Classes to Design Properties
+
+The **Convert classes to design properties** option allows you to convert classes in widgets into design properties to assist in changing the widget styling. See [How To Implement Native Styling](/howto/mobile/native-styling) for more information.
 
 ## 3 Synchronize Project Directory
 

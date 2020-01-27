@@ -51,7 +51,7 @@ We added the flexibility to label your App Store content with a [custom version 
 
 #### SAP Connector Renaming
 
-We renamed all the SAP-related connectors and starter apps in the App Store to be consistent. The changes are:
+We renamed all the SAP-related connectors and app templates in the App Store to be consistent. The changes are:
 
  Type | Old Name | New Name |
  ----- | ----- | -----|
@@ -60,9 +60,9 @@ We renamed all the SAP-related connectors and starter apps in the App Store to b
  Connector | SAP Leonardo Machine Learning Foundation Connector | Connector for SAP Leonardo Machine Learning Foundation |
  Connector | SAP OData Connector | OData Connector for SAP solutions |
  Connector | SAP OData Model Creator | OData Model Creator for SAP solutions |
- Starter App | Fiori Blank | Blank App for SAP Fiori themed apps |
- Starter App | SAP Northwind OData | Northwind OData Service Master-Detail App for SAP solutions |
- Starter App | SAP Purchase Order Approval Tutorial | Purchase Order Approval Tutorial for SAP solutions |
+ App Template | Fiori Blank | Blank App for SAP Fiori themed apps |
+ App Template | SAP Northwind OData | Northwind OData Service Master-Detail App for SAP solutions |
+ App Template | SAP Purchase Order Approval Tutorial | Purchase Order Approval Tutorial for SAP solutions |
 
 ### August 26th, 2019
 
@@ -97,7 +97,7 @@ We added a component in the App Store which, when configured in your app, allows
 
 #### Improvements
 
-* We fixed the issue with selecting specific **Starter Apps** when creating a new app in Mendix Studio Pro (Desktop Modeler).
+* We fixed the issue with selecting specific app templates when creating a new app in Mendix Studio Pro (Desktop Modeler).
 * We fixed the problems with deep links for private apps.
 
 ### April 29th, 2019
@@ -122,7 +122,7 @@ We added a component in the App Store which, when configured in your app, allows
 
 * We released an upgraded version of the [IBM Watson Connector Suite](https://appstore.home.mendix.com/link/app/2860/), which supports IBM Watson SDK version 6.11.0 and adds additional microflow actions.
 * We released an upgraded version of the [IBM Watson Connector Suite Example Project](https://appstore.home.mendix.com/link/app/2880/), which includes the new IBM Watson Connector Suite.
-* We released an upgraded version of the IBM Watson Blank App starter app, which includes the new IBM Watson Connector Suite.
+* We released an upgraded version of the IBM Watson Blank App app template, which includes the new IBM Watson Connector Suite.
 * For more information see [IBM Watson Connector](https://docs.mendix.com/partners/ibm/ibm-watson-connector).
 
 ### January 21st, 2019
@@ -159,7 +159,7 @@ The SAP Leonardo Machine Learning Foundation Connector is available in the App S
 
 #### SAP Fiori Styling
 
-The existing SAP Blank starter app has been replaced by a new Fiori Blank starter app. This new Fiori Blank starter app has a new Fiori UI Package included. This is based on Atlas UI, which means that you can use either the Web Modeler or Desktop Modeler to build applications which give the Fiori UI experience.
+The existing SAP Blank app template has been replaced by a new Fiori Blank app template. This new Fiori Blank app template has a new Fiori UI Package included. This is based on Atlas UI, which means that you can use either the Web Modeler or Desktop Modeler to build applications which give the Fiori UI experience.
 
 #### Breaking Change
 

@@ -1,6 +1,6 @@
 ---
 title: "Employee Directory"
-category: "Starter Apps"
+category: "App Templates"
 description: " "
 tags: [ ]
 draft: true

@@ -20,7 +20,7 @@ Using Mendix accounts has the following benefits:
 
 In addition, the MendixSSO module has a default implementation for user administration. This can be used in any Mendix app, but if you want to implement customized user administration this is also possible. See [Customizing MendixSSO](#customizing), below, for more information.
 
-We are in the process of adding the MendixSSO module to the Mendix starter apps. Where it has been added, all you have to do is to set your security level to **Production** and your end-users will be able to sign in.
+We are in the process of adding the MendixSSO module to the Mendix app templates. Where it has been added, all you have to do is to set your security level to **Production** and your end-users will be able to sign in.
 
 You can see if your app has the MendixSSO module, and which version it has, by looking in the **App Store modules** section in the **Project Explorer** for your app project. The version number is recorded in the **Version** constant within the module.
 
@@ -109,7 +109,7 @@ To completely remove Mendix SSO. do the following:
 These instructions are for apps which did not originally have the MendixSSO module. For example, if you have an existing app which did not have the MendixSSO App Store module.
 
 {{% alert type="info" %}}
-You do not have to follow these steps for apps (for example, starter apps) which already have MendixSSO, or if you are upgrading an existing MendixSSO module to a newer version.
+You do not have to follow these steps for apps (for example, app templates) which already have MendixSSO, or if you are upgrading an existing MendixSSO module to a newer version.
 {{% /alert %}}
 
 To enable MendixSSO in your app, follow these steps:

@@ -235,7 +235,7 @@ This parameter is the unique name of your app, and can contain any characters. T
 
 ### 3.2 --runtime-url
 
-This parameter should point to the runtime you want to run your app against. If testing against a locally deployed app, use your machine's IP address (for example, {http://192.168.1.12:8080}). If testing against a Mendix Cloud-deployed app, use the fully qualified runtime URL of your deployment server (for example, {https://myapp.mendixcloud.com}). The correct protocol needs to be appended, otherwise the URL will be prefixed by default with `http://`.
+This parameter should point to the runtime you want to run your app against. If testing against a locally deployed app, use your machine's IP address (for example, `http://192.168.1.12:8080`). If testing against a Mendix Cloud-deployed app, use the fully qualified runtime URL of your deployment server (for example, `https://myapp.mendixcloud.com`). The correct protocol needs to be appended, otherwise the URL will be prefixed by default with `http://`.
 
 ### 3.3 --appcenter-organization
 

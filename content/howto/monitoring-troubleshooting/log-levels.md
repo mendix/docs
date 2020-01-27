@@ -82,21 +82,6 @@ payload = {
         { 'name':'ActionManager', 'level':'DEBUG'}
         ], 'force':True}
 }
-usage = """
-usage: python setlogs.py <admin password> [admin port]
-When running from the Modeler, admin password can be retrieved using process explorer:
-Determine M2EE_ADMIN_PASS for the java childprocess of Modeler.exe
-"""
-
-if len(sys.argv) < 2:
-    print(usage)
-    sys.exit()
-
-url = 'http://localhost:{}/'.format(8090 if len(sys.argv) == 2 else sys.argv[2])
-headers = {'X-M2EE-Authentication': base64.b64encode(sys.argv[1].encode('ascii'))}
-
-response = requests.post(url,headers=headers, json=payload)
-print(response.text)
 ```
 
 You can run this script as follows:

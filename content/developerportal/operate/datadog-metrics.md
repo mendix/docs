@@ -12,6 +12,8 @@ tags: ["Datadog", "Mendix Cloud", "v4", "monitoring", "analysis"]
 
 {{% alert type="info" %}}
 Datadog logging is supported in Mendix version 7.15 and above.
+
+Datadog logging from Mendix currently supports logs sent to **datadoghq.com**. It does not send logs to other Datadog endpoints (for example *datadoghq.eu*).
 {{% /alert %}}
 
 Two types of data are provided to Datadog:
@@ -27,7 +29,7 @@ Datadog is not supported in Mendix Cloud v3, nor in default deployment buildpack
 
 ## 2 Datadog API Key{#api-key}
 
-To make use of Datadog you will need a Datadog API key. If you already use Datadog, skip to the [Existing Datadog User](#existing-datadog-user) section to learn how to get one. Please note that you will need to use a Datadog account within the United States region. Using the European region is currently not supported.
+To make use of Datadog you will need a Datadog API key. If you already use Datadog, skip to the [Existing Datadog User](#existing-datadog-user) section to learn how to get one.
 
 ### 2.1 New Datadog User
 

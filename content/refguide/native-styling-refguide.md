@@ -289,15 +289,15 @@ A text box can be used to display or edit a textual value with multiple lines. T
 
 The default class to style all text areas is named `TextArea`.
 
-### 6.3 Drop Down {#drop-down}
+### 6.3 Drop-Down {#drop-down}
 
-A drop down is an input widget that can be used to display and edit enumeration attributes. 
+A drop-down is an input widget that can be used to display and edit enumeration attributes. 
 
-This is how a drop down widget could look in an iOS app: 
+This is how a drop-down widget could look in an iOS app: 
 
 {{% image_container width="300" %}}![drop down ios](attachments/native-styling-refguide/drop-down-ios.png){{% /image_container %}}
 
-This is how a drop down widget could look in an Android app:
+This is how a drop-down widget could look in an Android app:
 
 {{% image_container width="300" %}}![drop down android](attachments/native-styling-refguide/drop-down-android.png){{% /image_container %}}
 
@@ -336,7 +336,7 @@ The widget’s style properties are as follows:
 | `value`  | This has all TextStyle properties. | |
 | `validationMessage` | This has all TextStyle properties. |    |
 
-The default class to style all drop down inputs is named `DropDown`.
+The default class to style all drop-down inputs is named `DropDown`.
 
 ### 6.4 Check Box 
 
@@ -411,7 +411,7 @@ The default class to style all date picker inputs is named `DatePicker`.
 
 ### 6.6 Reference selector
 
-The reference selector is an input widget that can be used to display and edit associations. For more information on this widget, see [Reference Selector](reference-selector). This widget supports the same style properties and structure as the [drop down](#drop-down) widget above.
+The reference selector is an input widget that can be used to display and edit associations. For more information on this widget, see [Reference Selector](reference-selector). This widget supports the same style properties and structure as the [drop-down](#drop-down) widget above.
 
 The default class to style all reference selector inputs is named `ReferenceSelector`.
 

@@ -10,6 +10,8 @@ tags: ["Studio Pro", "menu", "top bar"]
 
 The top-bar of Studio Pro contains the following menus:
 
+![Menu-bar](attachments/menus/menu-bar.png)
+
 * [File](#file) – allows you to manage documents and projects
 * [Edit](#edit) – allows you to perform editing functions such as search or copy within Studio Pro
 * [View](#view) – allows you to choose how Studio Pro and dockable panes within Studio Pro are displayed

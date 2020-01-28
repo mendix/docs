@@ -2,26 +2,21 @@
 title: "Studio APIs for Pluggable Widgets"
 parent: "pluggable-widgets"
 menu_order: 30
-description: A guide for understanding the APIs available in both Studios to pluggable widgets
+description: A guide for understanding the APIs available to pluggable widgets in Mendix Studio and Studio Pro.
 tags: ["Widget", "Pluggable", "Custom", "JavaScript", "React"]
 ---
 
 ## 1 Introduction
 
-This page contains information about the API the different Studio's offer to build a better modeling experience for
-Pluggable Widgets.
-
-{{% alert type="info" %}}
-The following APIs are available from Mendix 8.0.0
-{{% /alert %}}
+This guide contains explains the APIs Mendix Studio and Studio Pro offer in order for you to build better pluggable widgets. The following APIs are available in Mendix 8.0.0 and higher.
 
 ## 2 Values API
 
-The values API is used to pass the values configured for the pluggable widget's properties.
+The values API passes the values configured for a pluggable widget's properties.
 
-These values will be passed in a javascript object, where the property's `key` is used as the object property.
+These values will be passed in a JavaScript object, where the property's `key` is used as the object property.
 
-A simple example of such an object could be:
+Here is an example of such an object:
 
 ```javascript
 {
@@ -32,7 +27,7 @@ A simple example of such an object could be:
 
 ### 2.1 Static Properties
 
-Static property types are exposed with their configured value as a javascript value:
+Static property types are exposed with their configured value as a JavaScript value:
 
 | Plugin Widget Type | JavaScript Type |
 | ------------------ | ----------------|
@@ -53,25 +48,21 @@ type ImageIcon = { type: "image"; imageUrl: string; }
 type IconProperty = null | GlyphIcon | ImageIcon;
 ```
 
-Icon properties are exposed as an object containing a `type` field that is either `"glyph"` (if a glyphicon is selected)
-or `"image"` (if an image is selected), or as `null` if no icon is selected at all.
+Icon properties are exposed objects containing a `type` field that is either `"glyph"` if a Glyphicon is selected,
+ `"image"` if an image is selected, or as `null` if no icon is selected at all.
 
-For the `"glyph"` type, `iconClass` is available; which contains the class to apply on a `glyphicon` element to
-include the right icon. It will be an empty string if no icon has been selected.
+For the `"glyph"` type, `iconClass` is available. It contains the class to apply on a `glyphicon` element to
+include the correct icon. It will be an empty string value if no icon has been selected.
 
-For the `"image"` type, an `imageUrl` is available; representing a URL from which the selected image can be reached
-for the Studio and Design Mode previews. It will be an empty string if no image has been selected.
+For the `"image"` type, `imageUrl` is available. It represents a URL from which your selected image can be reached
+by the Studio and Design Mode preview modes. It will be an empty string value if no image has been selected.
 
 ### 2.3 Image
 
-Image properties will be passed as a `string` property that will contain the URL on which the image is served in
-Studio and Design Mode previews. It will be an empty string if no image is selected.
+Image properties will be passed as a `string` property. This property will contain an image URL suited to the Mendix
+Studio and Design Mode previews. It will be an empty string value if no image is selected.
 
 ### 2.4 Widgets
-
-{{% alert type="warning" %}}
-Experimental API. Format of the data might change depending on (internal) feedback.
-{{% /alert %}}
 
 ```
 type WidgetsProperty = {
@@ -82,16 +73,12 @@ type WidgetsProperty = {
 
 This property is exposed as an object containing the following properties:
 
-- `widgetCount`: The number of (immediate) child widgets configured
-- `renderer`: A React Component allowing rendering of the child widgets in the preview.
+* `widgetCount`: The number of immediate child widgets configured
+* `renderer`: A React component allowing rendering of the child widgets in the preview
 
 ### 2.5 Expression
 
-{{% alert type="warning" %}}
-Experimental API. Format of the data might change depending on (internal) feedback.
-{{% /alert %}}
-
-This property will be passed as a `string` containing the expression as typed by the user.
+This property will be passed as a `string` value containing the expression as typed by the user.
 
 ### 2.6 Text Template
 

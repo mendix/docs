@@ -152,6 +152,8 @@ The dependency is split into two parts: the native operating system part and the
 5. Install the required library as a dependency with the command `$ npm install --save react-native-nfc-manager@1.2.2`.
 	Note the version after the `@` sign. Versions 2 and higher are not supported on Mendix Studio Pro 8.5.
 
+Next you will use the `react-native link` command to link your module. This command works for React Native versions below 0.60. It is replaced in versions 0.60 and higher with auto-linking. Auto-linking does not require any linking or code changes. However, both processes have downsides and not every module supports them.
+
 To integrate the module into the template, you will need to make a few code changes. Using `link` you can do most changes automatically with the React Native CLI. If you wish to link automatically, follow the [Automatic Linking](#auto-linking) section below. If you wish to link manually, see the [Manual Linking](#manual-linking) section below.
 
 Regardless of which linking method you choose, complete the following steps first:
@@ -166,11 +168,9 @@ You should see sucesses from the previous linking commands. Even when your linki
 1.Open *C:\github\native-nfc-app\android\app\src\main\java\com\mendix\nativetemplate\MainApplication.java*.
 2. Make sure the following is included in the list of imports: `import community.revteltech.nfc.NfcManagerPackage;`.
 
+You can skip the Manual Linking section and move on to the [Using the Modules](#using-modules) section now.
+
 #### 3.3.2 Manual Linking {#manual-linking}
-
-todo: check both "in this section" para intros
-
-In this section you will use the `react-native link` command to link your module. This command works for React Native versions below 0.60. It is replaced in versions 0.60 and higher with auto-linking. Auto-linking does not require any linking or code changes. However, both processes have downsides and not every module supports them.
 
 This section shows how to link manually. This method replaces the linking steps in the *Installing a Dependency in Your App* section above and could be used for validating if the `react-native link` command succeeded.
 
@@ -208,7 +208,7 @@ For more information about linking, see the following resources:
 * The Medium post [Demystifying React Native Modules Linking](https://engineering.brigad.co/demystifying-react-native-modules-linking-964399ec731b)
 * The GitHub React Native community post [Autolinking](https://github.com/react-native-community/cli/blob/master/docs/autolinking.md)
 
-#### 3.3.3 Using the Modules
+#### 3.3.3 Using the Modules {#using-modules}
 
 For Android devices, you must add code which checks if a user permits the module. Do this by adding `uses permission` in the `android/app/src/main/AndroidManifest.xml` file (specifically in the section above the `<application` line):
 
@@ -225,12 +225,13 @@ For iOS you have to add permission to use NFC capabilities:
 	
 	![ios capabilities](attachments/create-native-javascript-action/xcode-capabilities-nfc.png)
 	
-Add a usage description so the user can give their permission to use the NFC reader:
+
+Add a usage description so the user can give their permission to use the NFC reader: [todo: confirm that this whole bit to end of section is only for ios. Android don't have to do the git stuff?]
 
 1. In **ios/nativeTemplate/Info.plist** right-click [todo: where?], select **Add Row**, and title they key `NFCReaderUsageDescription` with the description: *To be able to read NFC tags, please accept.*
 2. To stage the changes, use the command `$ git add .` You can check the staged files with the command `$ git status`.
 3. Commit the files with the command `$ git commit -m "Add NFC Manager dependency"`.
-4. Now the files are committed, but they are only stored locally on your machine. Push them to your repository with the command `$ git push`. This will make the changes available for the Native Builder to create a new app with NFC support.
+4. Now the files are committed, but they are only stored locally on your machine. Push them to your repository with the command `$ git push`. This will make the changes available so that the Native Builder can create a new app with NFC support.
 
 ### 3.4 Install a Dependency in Your Project {#install-dependency-project}
 
@@ -242,7 +243,7 @@ The dependency is split into two parts: the native device part, and the client J
 	$ cd C:\MendixProjects\NativeNFC\javascriptsource\nativenfc\actions
 	```
 
-2. In this folder, locate *HasNFCSupport.js* which contains the JavaScript action's code. (todo: check contains)
+2. Make sure *HasNFCSupport.js* is in this folder so you know you are in the right place.
 3. Install the dependency with the command `$ npm install react-native-nfc-manager@1.2.2`.
 
 {{% alert type="info" %}}
@@ -276,7 +277,7 @@ Build an action to check if a device supports NFC:
 	return NfcManager.isSupported();
 	```
 	The `NativeModules` contains all loaded modules, this allows us to check if the app has the module installed. This will throw an error when the action is used in the **Make it Native** app.
-	The NfcManager is imported from your newly added module. The `isSupported` functions check if NFC is supported by the hardware. They return a Promise that will resolved to a boolean value to indicate if NFC is supported.
+	The NfcManager is imported from your newly added module. The `isSupported` functions check if NFC is supported by the hardware. They return a Promise that will resolved to a boolean value to indicate if NFC is supported. [todo: at this stage I have 1 error: variable name property is required in the HasNFCSupport action in ACT_ReadNFCTag. Is this expected?]
 
 5. Optionally, you can **Expose as nanoflow action** and add an icon:
 	
@@ -284,11 +285,11 @@ Build an action to check if a device supports NFC:
 
 	![has NFC support action code](attachments/create-native-javascript-action/action-has-nfc-support-code.png)
 
-Now make an action to read the NFC tag information:
-	
+Now make an JavaScript action to read the NFC tag information:
+
 1. Create an action named *ReadNFCTag*.
 2. Select **Return type** > **String**.
-3. Add the import above the `EXTRA CODE` block:
+3. Click the **Code** tab, and add the import above the `EXTRA CODE` block:
 
 	``` javascript
 	import NfcManager, { Ndef } from "react-native-nfc-manager";
@@ -322,12 +323,12 @@ Make a nanoflow to use your new actions:
 
 To make the nanoflow shown above, do the following:
 
-1. Open **ATC_ScanTag** which was created in [test project](#test-project)
-2. Add the **Has NFC Support** action. [TODO is this named action or activity?]
+1. Open **ATC_ReadNFCTag** which was created in [test project](#test-project)[todo: check ACT name, as it was previously written as Scan Tag by andries but I think that has been changed]
+2. Add the **Has NFC Support** action. [TODO: this is already here, delete this instruction?]
 3. Right-click the action, select **Set error handling**, and set the type to **Custom without rollback**.
-4. Create a **Show message** action and set the template as: *Error occur while checking NFC support: {1}*. Use *$lastError* as the parameter.
-5. Connect the **Has NFC Support** activity with the **Show message** activity. Right-click it, and select **Set as error handler**.
-6. Add a **Decision** action. In the expression check for the return variable **$HasNFCSupport** of the HasNFCSupport action.
+4. Create a **Show message** action, set the type as **Error**, and set the template as: *Error occur while checking NFC support: {1}*. Add a parameter containing *$lastError*.
+5. Make sure the **Has NFC Support** activity is connected to the **Show message** activity. Right-click the connection and select **Set as error handler**.
+6. Add a **Decision** action. In the expression check for the return variable **$HasNFCSupport** of the HasNFCSupport action [todo: how? after I double click the decsion, what exactly do I type? RESUME HERE].
 7. If a device is not supported, show a message of type warning with the text. Create a **Show message** action with template text *Sorry, your device does not support NFC.*
 8. If a device is supported, add the **Read NFC Tag** action and store the response in the variable `TagValue`.
 9. Right-click the **Read NFC Tag** action and select **Set error handling**. Set the type to **Custom without rollback**.

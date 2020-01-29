@@ -152,36 +152,21 @@ The dependency is split into two parts: the native operating system part and the
 5. Install the required library as a dependency with the command `$ npm install --save react-native-nfc-manager@1.2.2`.
 	Note the version after the `@` sign. Versions 2 and higher are not supported on Mendix Studio Pro 8.5.
 
-To integrate the module into the template, you will need to make a few code changes. Using `link` you can do most changes automatically with the React Native CLI. If you wish to link automatically, follow the steps below. If you wish to link manually, see the [Manual Linking](#manual-linking) section below.
+To integrate the module into the template, you will need to make a few code changes. Using `link` you can do most changes automatically with the React Native CLI. If you wish to link automatically, follow the [Automatic Linking](#auto-linking) section below. If you wish to link manually, see the [Manual Linking](#manual-linking) section below.
+
+Regardless of which linking method you choose, complete the following steps first:
 
 1. Install the React Native CLI using the command `npm install -g react-native-cli@2.0.1` (note that the versions should match the React Native version of your Mendix version).
 2. Link the new module with the command `$ react-native link react-native-nfc-manager`. 
 
-todo: I want to try and seperate subsections here so that the doc has steps 1 and 2 (which are required by auto and manual linking) in a section, and then auto and manual linking get split into their own sections after that shared material is finished.
+#### 3.3.1 Automatic Linking {#auto-linking}
 
-Even when your linking shows successes in your CLI, linking problems may have occured with your linked apps. To truly validate success, complete the following steps. 
+You should see sucesses from the previous linking commands. Even when your linking shows successes in your CLI, linking problems may have occured with your linked apps. To truly validate success, complete the following steps:
 
-1. Fix auto link, with missing step:  In *C:\github\native-nfc-app\android\app\src\main\java\com\mendix\nativetemplate\MainApplication.java*  When you add this package (todo: check package) in Android Studio, the import is automatically added. If you use a plain text editor, add an extra import section on the line `import community.revteltech.nfc.NfcManagerPackage;`.
-3. For Android devices, you must add `uses permission` in the `android/app/src/main/AndroidManifest.xml` file. Add (if it is not already there) the following section before the line with <application`
+1.Open *C:\github\native-nfc-app\android\app\src\main\java\com\mendix\nativetemplate\MainApplication.java*.
+2. Make sure the following is included in the list of imports: `import community.revteltech.nfc.NfcManagerPackage;`.
 
-	``` xml
-	<uses-permission android:name="android.permission.NFC" />
-	<uses-feature android:name="android.hardware.nfc" android:required="false" />
-	```
-
-For iOS you have to add NFC capabilities for signing process.(todo: what?)
-
-1. Open your project in xCode [todo: switch to "app"?]:<br />
-	a. In **Signing & Capabilities**, click **+ Capability** and select **Near Field Communication Tag Reading**.<br />
-	
-	![ios capabilities](attachments/create-native-javascript-action/xcode-capabilities-nfc.png)
-	
-	b. You must add a usage description to get permission to use the NFC reader. In **ios/nativeTemplate/Info.plist** right-click, select **Add Row**, and set they key `NFCReaderUsageDescription` with the description: *To be able to read NFC tags, please accept.*
-2. To stage the changes, use the command `$ git add .` You can check the staged files with the command `$ git status`.
-3. Commit the files with the command `$ git commit -m "Add NFC Manager dependency"`.
-4. Now the files are committed, but they are only stored locally on your machine. Push them to your repository with the command `$ git push`. This will make the changes available for the Native Builder to create a new app with NFC support.
-
-#### 3.3.1 Manual linking {#manual-linking}
+#### 3.3.2 Manual Linking {#manual-linking}
 
 todo: check both "in this section" para intros
 
@@ -222,6 +207,30 @@ For more information about linking, see the following resources:
 * Facebook's React Native [Linking Documentation](https://facebook.github.io/react-native/docs/linking)
 * The Medium post [Demystifying React Native Modules Linking](https://engineering.brigad.co/demystifying-react-native-modules-linking-964399ec731b)
 * The GitHub React Native community post [Autolinking](https://github.com/react-native-community/cli/blob/master/docs/autolinking.md)
+
+#### 3.3.3 Using the Modules
+
+For Android devices, you must add code which checks if a user permits the module. Do this by adding `uses permission` in the `android/app/src/main/AndroidManifest.xml` file (specifically in the section above the `<application` line):
+
+	``` xml
+	<uses-permission android:name="android.permission.NFC" />
+	<uses-feature android:name="android.hardware.nfc" android:required="false" />
+	```
+
+For iOS you have to add permission to use NFC capabilities:
+
+1. Open your project in xCode.
+2. Select your project in the left menu.
+3. In **Signing & Capabilities**, click **Capability** and select **Near Field Communication Tag Reading**
+	
+	![ios capabilities](attachments/create-native-javascript-action/xcode-capabilities-nfc.png)
+	
+Add a usage description so the user can give their permission to use the NFC reader:
+
+1. In **ios/nativeTemplate/Info.plist** right-click [todo: where?], select **Add Row**, and title they key `NFCReaderUsageDescription` with the description: *To be able to read NFC tags, please accept.*
+2. To stage the changes, use the command `$ git add .` You can check the staged files with the command `$ git status`.
+3. Commit the files with the command `$ git commit -m "Add NFC Manager dependency"`.
+4. Now the files are committed, but they are only stored locally on your machine. Push them to your repository with the command `$ git push`. This will make the changes available for the Native Builder to create a new app with NFC support.
 
 ### 3.4 Install a Dependency in Your Project {#install-dependency-project}
 

@@ -8,6 +8,18 @@ description: "Native Template release notes."
 
 For more information on native mobile app development, see the [native-template repository](https://github.com/mendix/native-template/) and [How to Deploy Your First Mendix Native App](/howto/mobile/deploying-native-app) .
 
+## 3.1.0
+
+**Release date: February 4th, 2020**
+
+### Improvement
+
+* The MendixNative and Native Template are now written in Objective C. We identified various issues with our initial implementation in Swift that now should be aliviated. Between others, Bridging Header colisions, swift compiler incompatibility, React Native link not working as itended and finally React Native's ecosystem being fully oriented towards Objective C. With this update we are again closing the gap between Native Template and the React Native starter template, allowing any new features in React Native, see auto linking, to be easily usable with this project.
+
+* Native Template now supports the new Push Notifications flow. As soon as a Google Service config file has been included Native Template will enable the required libraries automatically.
+
+* Added support for URL Schemes.
+
 ## 3.0.0 
 
 **Release date: January 10th, 2020**

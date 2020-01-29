@@ -70,6 +70,10 @@ Sometimes the computer running Studio Pro cannot access the internet directly, b
 This tab lists new features that have been added to Studio Pro recently. The purpose of the settings described below is to allow you to switch back to the old versions of these features, should you encounter any problems.
 
 {{% alert type="info" %}}
+All of the new features listed below are turned on by default.
+{{% /alert %}}
+
+{{% alert type="info" %}}
 You need to restart Studio Pro for changes to these settings to take effect.
 {{% /alert %}}
 

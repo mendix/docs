@@ -122,6 +122,7 @@ The settings are stored in *C:\Users\mendix.tech.writer\.native_builder*:
 	
 	The project name should match the project names from your `prepare` command. 
 	
+
 You apps are now available in the *C:\native-builder\builds\* folder, where you will find *Native-NFC-App-Android-1.zip* for an Android app and *Native-NFC-App-iOS-1.zip* for an iOS app.
 
 {{% alert type="info" %}}
@@ -155,6 +156,8 @@ To integrate the module into the template, you will need to make a few code chan
 
 1. Install the React Native CLI using the command `npm install -g react-native-cli@2.0.1` (note that the versions should match the React Native version of your Mendix version).
 2. Link the new module with the command `$ react-native link react-native-nfc-manager`. 
+
+todo: I want to try and seperate subsections here so that the doc has steps 1 and 2 (which are required by auto and manual linking) in a section, and then auto and manual linking get split into their own sections after that shared material is finished.
 
 Even when your linking shows successes in your CLI, linking problems may have occured with your linked apps. To truly validate success, complete the following steps. 
 

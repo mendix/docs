@@ -54,7 +54,9 @@ native-builder.exe prepare --github-access-token <token> --appcenter-api-token <
 | `--project-path`            | Absolute path to the Mendix project file.                            | `C:\MyApp\MyApp.mpr`                                |
 | `--mxbuild-path`            | Absolute path to MxBuild executable.                                 | `C:\Program Files\Mendix\8.0.0\modeler\mxbuild.exe` |
 | `--runtime-url`             | URL of the Mendix runtime.                                           | `https://myapp.mendixcloud.com`                     |
-| `--mendix-version`          | The Mendix Studio Pro version your Mendix project is using.          | `8.5.0`                                             |
+| `--mendix-version`          | The Mendix Studio Pro version your Mendix project is using. **(Required)**          | `8.5.0`                                             |
+| `--firebase-android-config-path`          | Absolute path to a google-services.json file.          | `C:\MyApp\google-services.json`                     |
+| `--firebase-ios-config-path`          | Absolute path to a GoogleService-Info.plist file.          | `C:\MyApp\GoogleService-Info.plist`                 |
 
 
 ### 2.2 Build
@@ -203,6 +205,36 @@ native-builder.exe bundle --project-name "CoolApp" --output-path "C:\bundles"
 | `--project-name`      | Unique name of the project used during `prepare` **Required**                                    | `CoolApp`          |
 | `--output-path` | The absolute output path for the *ZIP* archives **Required**                                             | `C:\bundles`       |
 | `--platform`          | Platform with which to run command for. Defaults to both iOS and Android. | `ios` or `android` |
+
+### 2.9 iOS specific configurations
+
+Commands to modify the iOS configuration are groupped under the `ios` command.
+
+#### 2.9.1 Add/remove entitlements
+
+To add or remove entitlements one can use the `add-entitlements` or `remove-entitlements` command:
+
+```bash
+native-builder.exe ios add-entitlements --project-name "CoolApp" --entitlements environment nfc
+```
+
+| Parameters            | Description                                                                          | Example            |
+| --------------------- | ------------------------------------------------------------------------------------ | ------------------ |
+| `--project-name`      | Unique name of the project used during `prepare` **Required**                                    | `CoolApp`          |
+| `--entitlements` | A list of the entitlements to add to your project. Supported options environment, nfc                 | `environment nfc`       |
+
+#### 2.9.2 Add/remove background modes
+
+To add or remove background one can use the `add-background-modes` or `remove-background-modes` command:
+
+```bash
+native-builder.exe ios add-background-modes --project-name "CoolApp" --modes notification
+```
+
+| Parameters            | Description                                                                          | Example            |
+| --------------------- | ------------------------------------------------------------------------------------ | ------------------ |
+| `--project-name`      | Unique name of the project used during `prepare` **Required**                                    | `CoolApp`          |
+| `--modes` | A list of background modes to add to your project. Supported options notification                 | `notification`       |
 
 ## 3 Expanded Parameter Explanations
 

@@ -10,56 +10,13 @@ draft: true
 
 The [Contacts for Hybrid](https://appstore.home.mendix.com/link/app/1473/) widget enables the PhoneGap native contacts functionality within your Mendix mobile application. 
 
-Contributing
-For more information on contributing to this repository visit Contributing to a GitHub repository!
-Configuration
-First place the widget in a dataview where you want the button to be placed. Make sure this form is reachable from a mobile application. Next, make sure to configure the widget using the below described settings:
-Behavior
+## 2 Configuration
 
-    Contact type
-    This option let's you switch the widget between 'Retrieve Contact' and 'Create Contact'.
+To configure this widget, follow these steps:
 
-Button
-
-    Label
-    The label text that is shown on the button.
-
-    Class
-    An optional class to be placed directly on the button dom node.
-
-Data source
-
-    Attributes
-    All these attributes are the mapping between your application and the mobile contact.
-
-Events
-
-    Contact added success
-    An optional microflow that will be triggered once contact has been added successfully to the phone.
-
-Additional Info
-Latest version:	
-3.0
-Requires:	
-6.0.1
-or higher
-Published:	
-12/2/2015
-License:	Apache V2
-URL:
-UUID:
-View on GitHub
-How to install a widget
-Developer Info
-loading...
-Marco Laponder
-Front-end developer at MendixMendix level 3
-0
-Added items
-5
-Updated items
-0
-Reviews added
- 
-Mendix
-Rotterdam, Netherlands
+1. Place the widget in a data view where you want the button to be placed. Make sure this form is reachable from a mobile application.
+2. On the **Button** properties tab, enter the label text to be shown on the button for **Label**.
+3. On the same tab, optionally enter a class to be placed directly on the button DOM node for **Class**.
+4. On the **Behavior** tab, set the widget to **Create contact** or **Retrieve contact** for **Contact type**.
+5. On the **Data source** tab, set the attributes that are the mapping between your application and the mobile contact.
+6. On the **Events** tab, optionally add a microflow that will be triggered once a contact has been successfully added to the phone for **Contact added success**.

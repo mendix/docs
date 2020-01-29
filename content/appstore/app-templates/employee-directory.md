@@ -8,7 +8,7 @@ draft: true
 
 ## 1 Introduction
 
-The [Employee Directory](https://appstore.home.mendix.com/link/app/257/) starter app is one of the basic Mendix business templates. Every Mendix business template is a stand-alone application that covers some generic functionality. 
+The [Employee Directory](https://appstore.home.mendix.com/link/app/257/) app template is one of the basic Mendix business templates. Every Mendix business template is a stand-alone application that covers some generic functionality. 
 
 This template focuses on the main aspects of managing a big group of people, as in a company or institution, and enables viewing a simple and brief overview of this group. On clicking an employee, a more informative view is shown. Not only does this template give the user the ability to add lots of detailed user information, but it also brings different user roles, each with other abilities, such as adding and modifying employees and departments.
 
@@ -78,7 +78,7 @@ The conjunct user rights consist of the following:
 
 ## 6 Advanced Features
 
-This starter app contains several advanced features worth mentioning. For instance, the **Directory** folder contains a lot of microflows that start with "Get". These are microflows that get a certain value from a certain attribute of a certain object. This value is then converted into a new value (sometimes as a new type) and then returned to the proper object. 
+This app template contains several advanced features worth mentioning. For instance, the **Directory** folder contains a lot of microflows that start with "Get". These are microflows that get a certain value from a certain attribute of a certain object. This value is then converted into a new value (sometimes as a new type) and then returned to the proper object. 
 
 ### 6.1 Example 1
 

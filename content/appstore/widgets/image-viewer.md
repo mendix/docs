@@ -1,5 +1,5 @@
 ---
-title: "Camera"
+title: "Image Viewer"
 category: "Widgets"
 description: " "
 tags: [ ]

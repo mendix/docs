@@ -72,7 +72,7 @@ Use "App Store content" (and not "App Store components") to describe in general 
 Capitalize, because **Team** is capitalized in the Developer Portal UI.
 {{% /alert %}}
 
-## app template {#app-template}
+### app template {#app-template}
 
 This is the term to use to reflect the create-new-app flow UI in the Developer Portal.
 

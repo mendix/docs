@@ -118,7 +118,7 @@ The new entity is added to the domain model.
 {{% image_container width="250" %}}![](attachments/domain-models/new-entity.png)
 {{% /image_container %}}
 
-### 3.1 Adding New Image or File Entities
+### 3.1 Adding New Image or File Entities {#adding-image-or-file-entities}
 
 While adding new entities from the **Toolbox** works for all types of entities, you can use a specific way of adding image and file entities to your domain model.
 

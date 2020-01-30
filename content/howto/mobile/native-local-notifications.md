@@ -20,7 +20,7 @@ This how-to will teach you to build local notifications for native applications.
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Review the [basic differences](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/) between local notifications and push notifications
-* Install the [Make it Native](/refguide/getting-the-make-it-native-app) app on your mobile device
+* Install the [Make It Native](/refguide/getting-the-make-it-native-app) app on your mobile device
 
 ## 3 Creating a Project and Configuring Notifications
 

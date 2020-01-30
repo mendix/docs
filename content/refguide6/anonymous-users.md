@@ -21,7 +21,7 @@ This is the user role that end-users of your application have when they are not 
 
 When anonymous users are allowed, here you can optionally configure a sign-in microflow. This microflow can be used to transfer data from the anonymous user to the signed-in user. In this microflow the current user is set to the signed-in user.
 
-The sign-in microflow has two parameters.
+The sign-in microflow has two parameters:
 
 | Name | Type | Description |
 | --- | --- | --- |

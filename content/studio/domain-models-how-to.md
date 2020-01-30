@@ -23,41 +23,71 @@ You are configuring the domain model for an online shop.
 
 The workflow for new customers of the online shop will look the following way:
 
-1. A customer browses through products represented by name, description, availability, price, vendor, an image, and a unique ID. 
-2. The customer adds products to a shopping cart. 
-3. In the shopping cart, every item is presented as a separate line, that the customer can delete or choose the quantity of. 
-4. When the customer has decided on the order, he/she needs to register and enter the following details:
-   1. full name, 
-   2. an address, 
-   3. email, and 
-   4. a date of birth. 
-5. When registration is complete, the customer is assigned a unique ID. 
-6. The customer pays the order and gets a confirmation that the order is created. 
+1. A customer registers in the online shop and enters the following details:
+   1. Full name
+   2. Address
+   3. Email
+   4. Date of birth
+2. When registration is complete, a *unique ID* is assigned to the customer. 
+3. The customer browses through *products* represented by the following:
+   1. Image 
+   2. Name
+   3. Description 
+   4. Availability
+   5. Price 
+   6. Vendor
+   7.  Unique product ID 
+4. The customer adds products to a shopping cart. 
+5. In the shopping cart, every item is presented as a separate line showing the *quantity* and the *price* per line. The customer pays the order and gets a *confirmation* with *order details* and the *date* the order is purchased. 
 
-Prior to configuring the domain model, you need to decide what data to include. Start with deciding what will be an entity. In this example, the online shop will contain the following:
+Based on the description below, you can divide your data to the following elements: 
 
-* Order – item(s) ordered by a customers
-* Order line – an individual item ordered
+* Order –  general information about the order such as its status, order number, who placed the order, their address and name, etc. 
+* Order line – unique items ordered with their quantity and price
 * Order confirmation – confirmation that an order has been created
-* Customer – person who made an order
+* Customer – user who made an order
 * Product – items that a customer can order
-*  Product Image– an image of the product 
 
-### 2.1 Adding Entities and Attributes
+### 2.1 Defining the Product
 
-After you defined what data should become an entity, you can start creating them:
+As products is one of the main elements of the online shop, an entity should be created to represent a product in your domain model. The information that defines the product, such as its name and price, should be attributes of the entity. To define the product in your domain model, follow the steps below:  
 
-1. Open your [domain model](domain-models).
-2. One of the central parts of the online shop are products. Create entity *Product*. For more information on how to create a new entity, see the [Adding New Entities](domain-models) section in *Domain Models Overview*.
-3.  Products contain information on their name, price, etc. These are the attributes of the Product entity.   For the **Product** entity, create attributes (for more information on how to create the attribute, see the [Adding New Attributes](domain-models) section) and do the following:<br />
-    1. Product ID Autonumber
-    2. Name String
-    3. Description String
-    4. Available Boolean
-5. Price Decimal
-    6. Vendor String
+1. Create the **Product** entity. (For more information on how to create a new entity, see the [Adding New Entities](domain-models#adding-new-entities) section in *Domain Model*.)
 
-The attribute is created.
+3.  Create attributes for the **Product** entity. (For more information on how to create an attribute, see the [Adding New Attributes](domain-models#adding-new-attributes) section in *Domain Model*). Do the following:<br />
+    1. Create the *Product ID* attribute: set the name to *Product_ID* and set the type to *Autonumber*.
+    
+    2. Create the *Name* attribute: set the name to *Name* and set the type to *String*.
+    
+    3. Create the *Description* attribute: set the name to *Description* and set the type to *String*. 
+    
+    4. Create the attribute to indicate if the product is available: set the name to *Available* and set the type to *Boolean*.
+    
+    5. Create the *Price* attribute: set the name to *Price* and set the type to *Decimal*. 
+    
+    6.  Create the *Vendor* attribute: set the name to *Vendor* and set the type to *String*. 
+    
+		![Product Entity](attachments/domain-models-how-to/product-entity.png)
+
+4. Each product has an *image*, but you did not create it as an attribute. You need to create an image entity for it, a special type of entity that allows you to store images and set its name to *Product_Image*. (For more information on how to create image entities, see the [Adding Image or File Entities](domain-models#adding-image-or-file-entities) section in Domain Model)
+
+    {{% alert type="info" %}} *Name* and *Size* are created automatically and are read-only.
+    {{% /alert %}}
+
+Good job! You created the **Product** entity, its attributes, and the **Product_Image** image entity. 
+
+### Defining the Order
+
+Information on an order consist of two parts:
+
+* General information about the order such as its status, order number, who placed the order, their address and name, etc. 
+* Items ordered, their quantity and price
+
+Therefore, you need to create two entities: *Order* (general information about the order) and *Order_Line* (information on the items ordered). 
+
+
+
+
 
 ### 2.2 Creating Associations
 

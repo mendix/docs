@@ -473,7 +473,7 @@ If you have issues with your app running on SAP HANA, you will need to use the S
 If you are using a trial account, the SAP HANA Schema is only available if your account was created after November 2019. If you have a trial account which was created before then, you will not be able to use the hanatrial-schema database.
 {{% /alert %}}
 
-For trial accounts which support it, generally those created after November 2019, you can bind your Mendix app to a trial SAP HANA database. Just choose **hanatrial-schema** from the dropdown of supported databases.
+For trial accounts which support it, generally those created after November 2019, you can bind your Mendix app to a trial SAP HANA database. Just choose **hanatrial-schema** from the drop-down of supported databases.
 
 ![](attachments/sap-cloud-platform/hanatrial-schema.png)
 

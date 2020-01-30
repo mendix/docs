@@ -219,11 +219,11 @@ For Mendix Cloud v3, only *X-Frame-Options* is supported. For Mendix Cloud v4 th
 
 There are three types of value for these headers:
 
-*  Choose a value from a dropdown
+*  Choose a value from a drop-down
 
     ![](attachments/environments-details/http-header-dropdown.png)
 
-*  Choose a value from a dropdown and specify a URL
+*  Choose a value from a drop-down and specify a URL
 
     ![](attachments/environments-details/http-header-url.png)
 

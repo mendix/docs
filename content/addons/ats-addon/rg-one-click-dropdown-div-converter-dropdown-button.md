@@ -1,11 +1,11 @@
 ---
 title: "Click Drop-Down div Converter Drop-Down Button"
-parent: "rg-one-dropdown-div-converter"
+parent: "rg-one-drop-down-div-converter"
 ---
 
 ## 1 Description
 
-Clicks the dropdown button of the drop-down `div` converter to expand the drop-down menu.
+Clicks the drop-down button of the drop-down `div` converter to expand the drop-down menu.
 
 ## 2 Supported Widgets
 

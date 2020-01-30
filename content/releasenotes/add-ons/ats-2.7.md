@@ -62,7 +62,7 @@ The same holds for the function parameters.
 * We sped up the opening of the edit page for large datasets.
 * When editing a value for parameter of type number it is now possible to use the edit dialog, same as for text parameters.
 * When running from Browserstack or Saucelabs we select by default the Windows 10 platform and FullHD resolution. For MacOS the resolution UXGA is selected by default. We hope that this will save a few clicks.
-* We have changed the platform selection to use icons instead of a dropdown. This also enabled us to limit the choices to only those which make sense, for example you can no longer select Internet Explorer and MacOS.
+* We have changed the platform selection to use icons instead of a drop-down. This also enabled us to limit the choices to only those which make sense, for example you can no longer select Internet Explorer and MacOS.
 * We removed the "View" button for pre-conditions where the condition is related to a function. Since function can not be viewed this button is not needed.
 * In the search dialog there is now an indicator when multi selection is available.
 * When a test case/suite that is related to a schedule/job template is deleted the related schedule/job is also deleted.

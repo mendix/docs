@@ -738,7 +738,7 @@ Supported widgets: drop-down, reference selector, search input drop-down.
 
 #### Return Value
 
-_Boolean_ True if option with specified value is available in dropdown
+_Boolean_ True if option with specified value is available in drop-down
 
 ### Assert Checkbox Set Selector Value {#AssertCheckboxSetSelectorValue}
 

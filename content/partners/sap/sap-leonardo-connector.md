@@ -422,7 +422,7 @@ The ML Foundation Trial is not added automatically to your quota. Therefore, you
 
 5. Add parameters, if required, and click **Next**. In most cases additional parameters are not required.
 
-6. Choose your app from the dropdown list of **Application**s. In most cases you will not need to add any parameters.
+6. Choose your app from the drop-down list of **Application**s. In most cases you will not need to add any parameters.
 
 7. Click **Next**.
 

@@ -211,7 +211,7 @@ In order to build (and debug) a Mendix iOS app, you need to ensure that you have
 
       ![apple-23](./attachments/debug-a-mobile-app/apple-23.png)
 
-24. Select your new **App ID** from the dropdown and click **Continue**:
+24. Select your new **App ID** from the drop-down and click **Continue**:
 
       ![apple-24](./attachments/debug-a-mobile-app/apple-24.png)
 
@@ -288,7 +288,7 @@ You can use PhoneGap Build to build the native application and tell it to initia
 
     ![phonegap-12](./attachments/debug-a-mobile-app/phonegap-12.png)
 
-14. Return to the app online and choose your new key from the dropdown. This will trigger a new build of your app:
+14. Return to the app online and choose your new key from the drop-down. This will trigger a new build of your app:
 
     ![phonegap-13](./attachments/debug-a-mobile-app/phonegap-13.png)
 

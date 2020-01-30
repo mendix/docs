@@ -32,7 +32,7 @@ Once you are a team member, providing you have been given a role with sufficient
 
 1. Choose **Open project...** in Studio Pro.
 2. Select *Mendix Team Server* as for **Where is your App stored?**.
-3. Choose your app from the **Team Server App** dropdown.
+3. Choose your app from the **Team Server App** drop-down.
 4. Change the **Project directory**, or leave the default suggested by Studio Pro.
 5. Click **Create app**.
 
@@ -174,7 +174,7 @@ For each *document* you can decide whether to accept the conflicted elements whi
 
 This decision applies to all the conflicts in the document; you cannot choose your version for some conflicted changes but their changes for others. Non-conflicting changes will be merged as normal.
 
-Ensure you are viewing changes for the whole project in the **Changes** dock, select the document which is conflicted, and use the required option from the **Tasks** dropdown.
+Ensure you are viewing changes for the whole project in the **Changes** dock, select the document which is conflicted, and use the required option from the **Tasks** drop-down.
 
 ![Resolving a conflict using the changes dock](attachments/using-version-control-in-studio-pro/resolve-document-conflict.png)
 

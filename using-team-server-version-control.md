@@ -7,7 +7,7 @@ tags: []
 
 In the Mendix Platform there is a central repository that contains both the model and the resources. Each person working on the project, has a local copy of both model and resources. There are explicit actions to commit local changes to the repository and to retrieve changes by others from the repository (update). We build on top of Subversion that supports this style of working.
 
-We chose Subversion because of its popularity, maturity and solid Windows support. Building on top of Subversion means that we inherit its reliable protocols for sending and receiving changes. Subversion has a lot of operations that allow us to support advanced features like branching and merging. Studio Pro simplifies Subversion commands by providing a layer over them. All common operations can be executed right from the Modeler.
+Subversion is popular, mature with solid Windows support. Building on top of Subversion means that we inherit its reliable protocols for sending and receiving changes. Subversion has a lot of operations that allow us to support advanced features like branching and merging. Studio Pro simplifies Subversion commands by providing a layer over them. All common operations can be executed right from the Modeler.
 
 ## 2\. Concepts
 

@@ -10,7 +10,7 @@ tags: ["Widget", "Pluggable", "Custom", "JavaScript", "React"]
 
 This guide explains the APIs Mendix Studio and Studio Pro offer so you can build better pluggable widgets. Specifically, you can use these APIs and modules to alter pluggable widgets' preview appearances while working in Mendix Studio or Studio Pro's Design Mode. 
 
-In contrast, [Client APIs Available to Pluggable Widgets](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets) is meant for pluggable widget development once your app project is running in the client. The following APIs are available in Mendix 8.0.0 and higher.
+In contrast, [Client APIs Available to Pluggable Widgets](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets) is meant for pluggable widget development once your app project is running in the client. This guide's APIs are available in Mendix 8.0.0 and higher.
 
 ## 2 Values API
 
@@ -50,19 +50,19 @@ type ImageIcon = { type: "image"; imageUrl: string; }
 type IconProperty = null | GlyphIcon | ImageIcon;
 ```
 
-Icon properties are exposed objects containing a `type` field that is either `"glyph"` if a glyphicon is selected,
- `"image"` if an image is selected, or as `null` if no icon is selected at all.
+Icon properties are exposed objects containing a `type` field that is `"glyph"` if a glyphicon is selected,
+ `"image"` if an image is selected, or `null` if no icon is selected at all.
 
 For the `"glyph"` type, `iconClass` is available. It contains the class to apply on a `glyphicon` element to
 display the correct icon. It will be an empty string value if no icon has been selected.
 
 For the `"image"` type, `imageUrl` is available. It represents a URL from which your selected image can be reached
-by the Studio and Design Mode preview modes. It will be an empty string value if no image has been selected.
+by Studio and Studio Pro's Design mode. It will be an empty string value if no image has been selected.
 
 ### 2.3 Image
 
-Image properties will be passed as a string property. This property will contain an image URL suited to the Mendix
-Studio and Design Mode previews. It will be an empty string value if no image is selected.
+Image properties will be passed as a string property. This property will contain an image URL suited to 
+Studio and Studio Pro's Design mode. It will be an empty string value if no image is selected.
 
 ### 2.4 Widgets
 

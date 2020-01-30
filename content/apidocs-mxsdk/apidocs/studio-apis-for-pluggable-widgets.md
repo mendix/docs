@@ -8,13 +8,13 @@ tags: ["Widget", "Pluggable", "Custom", "JavaScript", "React"]
 
 ## 1 Introduction
 
-This guide contains explains the APIs Mendix Studio and Studio Pro offer in order for you to build better pluggable widgets. The following APIs are available in Mendix 8.0.0 and higher.
+This guide explains the APIs Mendix Studio and Studio Pro offer in order for you to build better pluggable widgets. Specifically, you can use these APIs and modules to alter pluggable widgets' preview appearances while working in Mendix Studio or Studio Pro's Design Mode. 
+
+In contrast, [Client APIs Available to Pluggable Widgets](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets) is meant for pluggable widget development once your app project is running in the client. The following APIs are available in Mendix 8.0.0 and higher.
 
 ## 2 Values API
 
-The values API passes the values configured for a pluggable widget's properties.
-
-These values will be passed in a JavaScript object, where the property's `key` is used as the object property.
+The values API passes the values configured for a pluggable widget's properties. These values will be passed in a JavaScript object, where the property's `key` is used as the object property.
 
 Here is an example of such an object:
 
@@ -48,18 +48,18 @@ type ImageIcon = { type: "image"; imageUrl: string; }
 type IconProperty = null | GlyphIcon | ImageIcon;
 ```
 
-Icon properties are exposed objects containing a `type` field that is either `"glyph"` if a Glyphicon is selected,
+Icon properties are exposed objects containing a `type` field that is either `"glyph"` if a glyphicon is selected,
  `"image"` if an image is selected, or as `null` if no icon is selected at all.
 
 For the `"glyph"` type, `iconClass` is available. It contains the class to apply on a `glyphicon` element to
-include the correct icon. It will be an empty string value if no icon has been selected.
+display the correct icon. It will be an empty string value if no icon has been selected.
 
 For the `"image"` type, `imageUrl` is available. It represents a URL from which your selected image can be reached
 by the Studio and Design Mode preview modes. It will be an empty string value if no image has been selected.
 
 ### 2.3 Image
 
-Image properties will be passed as a `string` property. This property will contain an image URL suited to the Mendix
+Image properties will be passed as a string property. This property will contain an image URL suited to the Mendix
 Studio and Design Mode previews. It will be an empty string value if no image is selected.
 
 ### 2.4 Widgets
@@ -78,11 +78,11 @@ This property is exposed as an object containing the following properties:
 
 ### 2.5 Expression
 
-This property will be passed as a `string` value containing the expression as typed by the user.
+This property will be passed as a string value containing the expression as typed by the user.
 
 ### 2.6 Text Template
 
-A preview `string` will be passed. This preview is built using the currently active language, and by
+A preview string will be passed. This preview is built using the currently active language, and by
 replacing the placeholders with the names of the attributes.
 
 For example, you could see these placeholders:
@@ -101,15 +101,15 @@ Description: {EventDescription}
 
 ### 2.7 Action
 
+Actions are passed as an object that will contain a `type` field identifying what action has been selected, and a
+`params` field that contains an object with additional information (where applicable).
+
 ```
 type ActionProperty = {
     type: string;
     params: { [key: string]: any }
 }
 ```
-
-Actions are passed as an object that will contain a `type` field identifying what action has been selected, and a
-`params` field that contains an object with additional information (where applicable).
 
 The possible types and their parameters are as follows:
 
@@ -136,7 +136,7 @@ The possible types and their parameters are as follows:
 
 ### 2.8 Attribute
 
-A `string` containing the path of the selected attribute will be passed.
+A string containing the path of the selected attribute will be passed.
 
 Examples:
 
@@ -150,7 +150,7 @@ values will be passed.
 
 ### 2.10 File
 
-A `string` containing the path of the selected file entity will be passed.
+A string containing the path of the selected file entity will be passed.
 
 Examples:
 
@@ -165,7 +165,7 @@ as well as Studio Pro's Design Mode.
 Add the module by adding a file to your custom widget with the same name as your `xml` file as well as the suffix
 `.webmodeler.js`. For example, a widget named `TextBox.xml` would have the preview module `TextBox.webmodeler.js`.
 
-This module is expected to be a CommonJS module, exporting the following functions using the `exports` object.
+This preview module is expected to be a CommonJS module, exporting the following functions using the `exports` object.
 
 ### 3.1 Exposed Libraries
 
@@ -189,8 +189,7 @@ The `preview` export is expected to be a `class` or `function` representing a `R
 * `styleObj` (`React.CSSProperties`): a parsed variant of `style` in the format as how React components expect their
   `style` attribute
 
-Assuming a pluggable widget with a `string` property `content` and an `integer` property `padding`, the following shows
-a simple preview component:
+Assuming a pluggable widget with a string property `content` and an `integer` property `padding`, the following shows a simple preview component:
 
 ```tsx
 type Props = { 
@@ -231,7 +230,7 @@ export const preview: React.FC<Props> = (props) => {
 
 #### 3.2.2 Using an Icon Property
 
-Similar to the client API, a component is provided that allows to preview an [icon property](#2-2-icon) in the same way as the
+The preview module provides a component to preview an [icon property](#2-2-icon) in the same way as the
 `Icon` component in the client would. This component can be imported from `"mendix/components/web/Icon"` and accepts
 the `IconProperty` as `icon` parameter.
 

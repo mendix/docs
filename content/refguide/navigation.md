@@ -61,7 +61,7 @@ All the users accessing the Mendix app from a browser on a phone will automatica
 
 A Mendix app can be installed on a phone as a native application which has the benefit of a more responsive UI. The app will also be [offline-first](offline-first), which means all the data is stored on the phone and only synchronized with the server on request.
 
-You are required to enable anonymous users in your project's security settings and include anonymous user roles on native login pages. There is no built-in login screen in the native profile; login pages are modeled as regular native pages. Therefore, a user will need a user role to view a regular native page in this profile.
+You are required to enable anonymous users in your project's security settings and include anonymous user roles on native login pages. This is because there is no built-in login screen in the native profile; login pages are modeled as regular native pages. 
 
 ## 3 Redirection to Profiles {#redirection}
 

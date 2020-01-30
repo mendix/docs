@@ -1,14 +1,14 @@
 ---
-title: "Studio APIs for Pluggable Widgets"
+title: "Preview Appearance APIs for Pluggable Widgets"
 parent: "pluggable-widgets"
 menu_order: 30
-description: A guide for understanding the APIs available to pluggable widgets in Mendix Studio and Studio Pro.
+description: A guide for understanding the APIs which influence pluggable widget preview appearances.
 tags: ["Widget", "Pluggable", "Custom", "JavaScript", "React"]
 ---
 
 ## 1 Introduction
 
-This guide explains the APIs Mendix Studio and Studio Pro offer in order for you to build better pluggable widgets. Specifically, you can use these APIs and modules to alter pluggable widgets' preview appearances while working in Mendix Studio or Studio Pro's Design Mode. 
+This guide explains the APIs Mendix Studio and Studio Pro offer so you can build better pluggable widgets. Specifically, you can use these APIs and modules to alter pluggable widgets' preview appearances while working in Mendix Studio or Studio Pro's Design Mode. 
 
 In contrast, [Client APIs Available to Pluggable Widgets](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets) is meant for pluggable widget development once your app project is running in the client. The following APIs are available in Mendix 8.0.0 and higher.
 
@@ -41,6 +41,8 @@ For `enumeration` properties, the currently selected option's `key` will be used
 
 ### 2.2 Icon
 
+This property appears as follows:
+
 ```typescript
 type GlyphIcon = { type: "glyph"; iconClass: string; }
 type ImageIcon = { type: "image"; imageUrl: string; }
@@ -63,6 +65,8 @@ Image properties will be passed as a string property. This property will contain
 Studio and Design Mode previews. It will be an empty string value if no image is selected.
 
 ### 2.4 Widgets
+
+This property appears as follows:
 
 ```
 type WidgetsProperty = {
@@ -101,8 +105,7 @@ Description: {EventDescription}
 
 ### 2.7 Action
 
-Actions are passed as an object that will contain a `type` field identifying what action has been selected, and a
-`params` field that contains an object with additional information (where applicable).
+This property appears as follows:
 
 ```
 type ActionProperty = {
@@ -110,6 +113,9 @@ type ActionProperty = {
     params: { [key: string]: any }
 }
 ```
+
+Actions are passed as an object that will contain a `type` field identifying what action has been selected, and a
+`params` field that contains an object with additional information (where applicable).
 
 The possible types and their parameters are as follows:
 
@@ -138,7 +144,7 @@ The possible types and their parameters are as follows:
 
 A string containing the path of the selected attribute will be passed.
 
-Examples:
+Here are a few examples:
 
 * `EventName`
 * `MyFirstModule.EventSchedule_Event/MyFirstModule.Event/EventName`
@@ -150,9 +156,9 @@ values will be passed.
 
 ### 2.10 File
 
-A string containing the path of the selected file entity will be passed.
+A string containing the path of the selected file entity will be passed. 
 
-Examples:
+Here are a few examples:
 
 * `MyFirstModule.Event`
 * `MyFirstModule.EventSchedule_Event/MyFirstModule.Event`

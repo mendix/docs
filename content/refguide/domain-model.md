@@ -6,26 +6,23 @@ tags: ["domain model", "entity", "association", "annotation", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+## 1 Introduction
 
-The domain model is a data model that describes the information in your application domain in an abstract way. It is central to the architecture of your application. The domain model consists of [entities](entities) and their relations represented by [associations](associations).
+The **domain model** is a model that describes the information (or *data*) used by your application in an abstract way. It is central to the architecture of your application. Each [module](modules) has its own domain model which describes the data used in that module. All modules within a app project can use data from all the domain models within the app.
 
-Here is a domain model that defines customers and orders. The line between them is an association. The words 'Customer' and 'Order' are the names of the entities. The words below the entity names are the attributes of the entities.
+A domain model consists of [entities](entities) with their relationships to other entities represented by [associations](associations). You can also add [annotations](annotations) to your domain model to explain how it is to be used.
 
-![](attachments/domain-model-editor/917531.png)
+Below is a domain model that defines customers and orders. The line between them is an association. The names of the entities are `Customer` and `Order`. Within the boxes representing the entities the attributes of the entities together with the [type](attributes#type) of data it holds.
 
-## Components
+![Domain Model annotated with structure](attachments/domain-model/annotated-domain-model.png)
 
-*   [Associations](associations)
-*   [Annotations](annotations)
-*   [Entities](entities)
+## 2 Implementation
 
-## Technical Appendix
-
-In the database every entity is stored in one separate table and has columns for the attributes defined in Studio Pro, the system attributes and a unique identifier for the object. If an entity has specializations there is also a column indicating which specialization the object belongs to. An association is stored in a cross-table with the identifiers (ID) of both objects.
+In the database every entity is stored in a separate table and has columns for the attributes defined in Studio Pro, the system attributes, and a unique object identifier. If an entity has specializations there is also a column indicating which specialization the object belongs to. An association is stored in a junction table with the identifiers (ID) of both objects.
 
 Take a look at the following domain model.
 
-![](attachments/domain-model-editor/917890.png)
+![](attachments/domain-model/customer-order.png)
 
 The entity 'Customer' is stored in the table 'module$customer' which is shown below. Take note of the 'system$owner' and 'system$changedby' columns which contain the IDs of the 'User' objects from the 'System' module.
 

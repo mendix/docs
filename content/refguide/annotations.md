@@ -7,15 +7,11 @@ tags: ["domain model", "annotation", "studio pro"]
 
 ## 1 Introduction
 
-An annotation is an element that can be used to put comments in a domain model.
+An a**nnotation** can be used to put comments in a domain model.
 
-{{% alert type="info" %}}
+For example, an order entity contains two decimal attributed, **TotalPrice** and **Discount** attribute. You add an annotation to note that, unlike the total price, the discount represents a percentage and not an amount of money.
 
-An order entity contains both a total amount and a discount attribute. You add an annotation to mention the fact that, unlike the total price, the discount is represented by a percentage and not an amount of money.
-
-![](attachments/domain-model-editor/16844036.png)
-
-{{% /alert %}}
+![](attachments/domain-model/16844036.png)
 
 ## 2 Common Properties
 

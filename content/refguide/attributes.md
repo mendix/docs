@@ -63,7 +63,7 @@ The password itself should not be stored, but only its hash value, thus it is st
 
 A customer can be active or inactive, which is stored in an attribute named 'Active' of type Boolean.
 
-![](attachments/domain-model-editor/917578.png)
+![](attachments/domain-model/917578.png)
 
 ### 3.2 Localize (Only for Date & Time Attribute Type)
 
@@ -108,7 +108,7 @@ If the value is a computation, the **Microflow** property defines which microflo
 
 For example, in a web shop, you want to show the total expenses for each customer. These are calculated by retrieving all orders associated with the customer and adding their totals.
 
-![](attachments/domain-model-editor/917570.png)
+![](attachments/domain-model/917570.png)
 
 ### 4.3 Default Value (If Value Is Stored)
 

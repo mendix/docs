@@ -45,6 +45,8 @@ The rows in the table are CDs. The type of the two rows is 'CD' and this is the 
 
 The name property defines the name of the entity. This name is used to refer to the entity from forms, microflows, queries, constraints, etc.
 
+The name only has to be unique within a module domain model. You can have two entities with the same name, provided they are in the domain models of different modules.
+
 ### 3.2 Generalization
 
 An entity can be a more specialized version of a general entity. This means that the specialized entity has all the attributes, associations, events, and other properties of the more general entity. Using the generalization property you can specify which entity is the generalization of the entity. For example, the Car entity has Vehicle as its generalization.
@@ -54,7 +56,7 @@ The generalization specifies the entity from which a specific entity derives its
 {{% alert type="info" %}}
 
 This property can be used in a situation where, for example, one has an entity 'Student' and an entity 'Professor' which have some generic properties. They both have a name, telephone number and email address and can be a member of one or more courses. Both entities are *generalized* in the entity 'Member'. Conversely, this means that the entity 'Member' is *specialized* in the entities 'Student' and 'Professor'.
-![](attachments/domain-model-editor/917900.png)
+![](attachments/domain-model/917900.png)
 
 {{% /alert %}}
 
@@ -68,7 +70,7 @@ Define whether instances of this entity can be stored in the database. See [pers
 
 {{% alert type="info" %}}
 
-![](attachments/domain-model-editor/4325380.png)
+![](attachments/domain-model/4325380.png)
 
 {{% /alert %}}
 

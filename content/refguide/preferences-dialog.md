@@ -85,13 +85,13 @@ With this option, you can enable the new version of the [Connector](view-menu#co
 
 Default: *disabled*
 
-#### 5.3 New Version of the Project Explorer
+#### 5.3 New Version of the Project Explorer {#new-project-explorer}
 
 With this option, you can enable the new version of the [Project Explorer](project-explorer). Should you find any issues in the new version, you can switch back to the old version by clearing this check box.
 
 Default: *enabled*
 
-#### 5.4 New Version of the Toolbox
+#### 5.4 New Version of the Toolbox {#new-toolbox}
 
 With this option, you can enable the new version of the [Toolbox](/refguide/view-menu#toolbox). Should you find any issues in the new version, you can switch back to the old version by clearing this check box.
 

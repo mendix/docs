@@ -3,7 +3,7 @@ title: "Preview Appearance APIs for Pluggable Widgets"
 parent: "pluggable-widgets"
 menu_order: 30
 description: A guide for understanding the APIs which influence pluggable widget preview appearances.
-tags: ["Widget", "Pluggable", "Custom", "JavaScript", "React"]
+tags: ["Widget", "Pluggable", "Custom", "JavaScript", "React", "Preview"]
 ---
 
 ## 1 Introduction
@@ -255,7 +255,7 @@ export const preview: React.FC<Props> = (props) => (
 );
 ``` 
 
-### 3.3 `getPreviewCss`
+### 3.3 The GetPreviewCss Export
 
 The `getPreviewCss` export is expected to be a `function` returning a `string` containing any CSS that the preview needs
 to render.

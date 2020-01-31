@@ -17,7 +17,7 @@ We are heavily invested in streamlining the experience of building your apps and
 
 ## Improvements
 
-* Custom developer apps are officially released. Using the `dev-app` command, you can build a smaller version of the Make It Native app tailored to your specific app's testing needs. A custom developer app is built against the sources, dependencies, and capabilities of the final release app.
+* Custom developer apps are officially released. Using the `dev-app` command, you can build a smaller version of the Make It Native app tailored to your specific app's testing needs. A custom developer app is built against the sources, dependencies, and capabilities of the final release app. For more information, see [How to Create a Custom Developer App](/howto/mobile/how-to-devapps).
 
 * The image functionality has been updated. With this improvement we were able to remove all extra dependencies and compress the CLI to a single executable.
 

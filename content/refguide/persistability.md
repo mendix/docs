@@ -1,7 +1,7 @@
 ---
 title: "Persistability"
-parent: "entities"
-menu_order: 10
+parent: "domain-model"
+menu_order: 3
 tags: ["domain model", "entity", "persistability", "persistable", "non-persistable"]
 ---
 

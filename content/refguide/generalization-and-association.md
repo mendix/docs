@@ -51,6 +51,10 @@ The associated objects will only be retrieved when they are shown in a page. Thi
 
 If you require a lot of searching, sorting and displaying of the inherited/associated information it can be significantly more efficient to use inheritance. If the associated information is only required on a few pages, the additional delay retrieving the information over association instead of inheritance might be acceptable compared to the faster retrieve times on any other place in the application.
 
+#### 2.3.3 One-to-Many Association
+
+When using an inheritance with a one-to-many association, you cannot use an over-association retrieve.
+
 ## 3 Flexibility
 
 Making a decision between inheritance and associations is something you should do before loading a lot of data into the application. When adding associations, additional data may be required to specify the relationships between objects. When you remove generalizations, the relationship between the two objects will get lost. There are tricks you can use to resolve any previous relationships, however, this can be extremely difficult and time consuming once there is a lot of data available in your application.

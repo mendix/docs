@@ -1,7 +1,7 @@
 ---
 title: "Access Rules"
-parent: "entities"
-menu_order: 70
+parent: "domain-model"
+menu_order: 9
 tags: ["domain model", "entity", "access rule", "xpath constraint", "module role", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---

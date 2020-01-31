@@ -472,7 +472,7 @@ If you have issues with your app running on SAP HANA, you will need to use the S
 {{% alert type="info" %}}
 If you are using a trial account created before November 2019, the SAP HANA Schema may not be available.
 
-If you do not have the three **SAP HANA Schemas & HDI Containers (Trial)** services in your subaccount entitlements you can add the services in the SAP Cloud Platform Cockpit. Select **Entitlements** > **Configure Entitlements** > **Add Service Plans** and choose the three **SAP HANA Schemas & HDI Containers (Trial)** services.
+If you do not have the three **SAP HANA Schemas & HDI Containers (Trial)** services in your subaccount entitlements, you can add the services in the SAP Cloud Platform cockpit. Select **Entitlements** > **Configure Entitlements** > **Add Service Plans**, and choose the three **SAP HANA Schemas & HDI Containers (Trial)** services.
 {{% /alert %}}
 
 For trial accounts which have the **SAP HANA Schemas & HDI Containers (Trial)** services, you can bind your Mendix app to a trial SAP HANA database. Just choose **hanatrial-schema** from the dropdown of supported databases.

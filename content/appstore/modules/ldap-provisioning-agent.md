@@ -21,7 +21,7 @@ Registering and off-boarding users on the Mendix Platform manually requires time
 
 ## 2 Configuration
 
-To successfully connect this application to your Directory Service, configuration is required on both a [connection](#connection) instance level (per LDAP server you want to manage) and an application level (to set up this app itself).
+To successfully connect this application to your Directory Service, configuration is required on both a [connection](#connection) instance level (per LDAP server you want to manage) and an [application](#application) level (to set up this app itself).
 
 ### 2.1 Connection {#connection}
 
@@ -33,7 +33,7 @@ Before getting started with the wizard, it is advised to have the following info
 	* You should not use a user account for this, as this application will be dependent on the availability of this account
 * A Mendix API Key – this key and the Mendix user combination will be used when performing REST API calls to Mendix user management
 
-#### 2.1.1 LDAP Connection
+#### 2.1.1 LDAP Connection {#ldap-connection}
 
 This step directs you to a successful connection with your Directory Service and requires the following input:
 
@@ -47,7 +47,7 @@ After filling in the correct credentials, try them by clicking **Test connection
 
 #### 2.1.2 Mendix API Key
 
-The Mendix API key is used when performing REST API calls to the Mendix [User Management API](apidocs-mxsdk/apidocs/user-management-api). 
+The Mendix API key is used when performing REST API calls to the Mendix [User Management API](/apidocs-mxsdk/apidocs/user-management-api). 
 
 To verify if a REST API call is valid, the combination of the API Key and the user owning the API key is checked. Every registered Mendix user is allowed to create API keys (for more information, see [How to Manage API Keys](/developerportal/settings/api-key)). Creating a separate Mendix user account for this task is recommended (this account needs to have a valid email address in order to receive the account confirmation email).
 
@@ -71,44 +71,50 @@ To have a certain connection instance scheduled, you can select an hourly, daily
 Two email templates are associated when you create a new LDAP connection:
 
 * Created Mendix account – an email based on this template will be sent when a new user account is created; this email contains a single-use password
-
 * Error notification – when an unexpected exception occurs, a notification email based on this template will be sent to the specified administration email address
 
 In this wizard step, you are able to modify the text as you require. The templates contain a set of tokens. These tokens start with `{%’ and end with a ‘%}`.
 
 When a connection instance is successfully created, you can change the configuration at a later stage by clicking the instance located in the menu on the left.
 
-## 3 Application
+### 2.2 Application {#application}
 
-On application level it is required to configure settings in your cloud slot dashboard(or in you Mendix Business Server when on premise). You can configure these settings when starting your application from the cloud dashboard.
+On the application level, it is necessary to configure settings in your Mendix Cloud slot dashboard (or in your Mendix Runtime when on-premises). You can configure these settings when starting your application from the cloud dashboard.
 
-Scheduled events
-In order to activate scheduled synchronization of your Directory Service with Mendix User Management you need to enable scheduled event ‘Hourly_event’.
+#### 2.2.1 Scheduled Events
 
-Constants
+In order to activate the scheduled synchronization of your Directory Service with Mendix user management, you need to enable the **Hourly_event** scheduled event.
+
+#### 2.2.2 Constants
+
 All constants will be set correctly by default, but there are certain constants you should modify and some you might want to change.
 
-The constant we strongly advice to modify are:
-Encryption.EncryptionKey – this constant is default in this application. So it’s very easy for anyone to decrypt passwords using this default key, when the database for some reason is compromised. 
+You are strongly advised to modify the following constant:
 
-Constant values which might be interesting to modify:
-RunningInCloud - Boolean value indicating if the application should act as being in run in Cloud (or on-premise otherwise)
-EmailTemplate.CleanupPeriodEmail – Cleans logged sent emails which are older than the value specified (in days)
-EmailTemplate.CleanupPeriodEmailLog – Cleans logged exceptions which are older than the value specified (in days)
-Synchronization.AdminEmailsEnabled – Set to true if email notifications should be send to the specified administrator emailaddress
-Synchronization.EmailFromAddress – Email address which will be used as from address for emails sent by this application.
+* **Encryption.EncryptionKey** – this constant is a default in this application, so it is very easy for anyone to decrypt passwords using this key if the database is compromised
 
-Synchronization
-Synchronization runs are executed from a scheduled event which you can specify in the configuration of a LDAP Connection instance.
+You can consider modifying the following constants:
 
-You can also choose to start a synchronization with the ‘Synchronize now’ button. Note that synchronizations can only start when the instance is ‘active’. You can activate an instance by clicking the activate button. Click deactivate to disable the instance.
+* **RunningInCloud** – this Boolean value indicates if the application should act as if it is being in run in the Mendix Cloud (otherwise, on-premises)
+* **EmailTemplate.CleanupPeriodEmail** – this cleans the logged sent emails which are older than the value specified (in days)
+* **EmailTemplate.CleanupPeriodEmailLog** – Cleans logged exceptions which are older than the specified value (in days)
+* **Synchronization.AdminEmailsEnabled** – set this to true if email notifications should be sent to a specified administrator email address
+* **Synchronization.EmailFromAddress** – this email address will be used as the "from" address for emails sent by this application
 
-Testing
-For the LDAP side, you can get a test LDAP server or use a limited data set from your production LDAP as this app only reads from it.
+## 3 Synchronization
 
-For the calls to the Mendix Platform, we advise you to create a new test company. This company will need a different email domain in order to register it was a new company, so you will need access to a different domain (@test.mendix.com for example) and a working mailbox to one of these email addresses, in order to do the sign-up. Remember to make create an API key for the correct user and make sure that account is Member Manager.
+Synchronization runs are executed from a scheduled event that you can specify in the configuration of a [LDAP connection](#ldap-connection) instance.
 
-Troubleshooting
-Any change log items causing errors while synchronizing will be skipped. A new synchronization cannot start until all issues of the previous synchronization run are successfully executed.
+You can also choose to start a synchronization with the **Synchronize now** button. Note that synchronizations can only start when the instance is "active." You can activate an instance by clicking **Activate**. Click **Deactivate** to disable the instance.
 
-You can view the details for a failed run, where you can use the resend change log button to retry the change request.
+## 4 Testing
+
+For the LDAP side, you can get a test LDAP server or use a limited dataset from your production LDAP, as this app only reads from it.
+
+For calls to the Mendix Platform, creating a new test company is recommended. This company will need a different email domain in order to register it was a new company, so you will need access to a different domain (for example, @test.mendix.com) and a working mailbox to one of these email addresses in order to sign up. Remember to create an API key for the correct user and make sure that account has the **Member manager** role.
+
+## 5 Troubleshooting
+
+Any change log items causing errors while synchronizing will be skipped. A new synchronization cannot start until all issues of the previous synchronizations run are successfully executed.
+
+You can view the details for a failed run and click **Resend change log** to retry the change request.

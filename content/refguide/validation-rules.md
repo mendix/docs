@@ -1,10 +1,12 @@
 ---
 title: "Validation Rules"
-parent: "entities"
-menu_order: 40
+parent: "domain-model"
+menu_order: 6
 tags: ["domain model", "entity", "validation rule"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
+
+## 1 Introduction
 
 Validation rules are conditions that should be satisfied before an object is committed. If a condition defined by a validation rule is not satisfied when the object is committed, the server generates a validation error. If the object was committed using a form, this results in a validation message. When committing an object in a microflow, this results in an error that can be handled using custom error handling. In all other cases, a validation error results in a Java exception being thrown.
 
@@ -20,19 +22,19 @@ Only persistable entities can define validation rules as they say something abou
 
 {{% /alert %}}
 
-## General Properties
+## 2 General Properties
 
-### Attribute
+### 2.1 Attribute
 
 This property defines the attribute to which the validation rule applies. An entity can specify validation rules for its own attributes, or for attributes of one of its generalizations.
 
-### Error message
+### 2.2 Error message
 
 This property defines the message that is displayed to the end-user when the attribute value does not satisfy the condition defined by the validation rule.
 
-## Rule Properties
+## 3 Rule Properties
 
-### Rule
+### 3.1 Rule
 
 The rule defines which condition an attribute should satisfy.
 
@@ -51,7 +53,7 @@ Date values should be entered in [ISO 8601](http://en.wikipedia.org/wiki/ISO_860
 
 {{% /alert %}}
 
-## Rule Order
+### 3.2 Rule Order
 
 Validation rules can be ordered in Studio Pro. The order of the rules determines the order of execution. If multiple rules are violated, their error messages will be concatenated (in the defined order) and shown in the page. Although the order can be set for all the validation rules in the entity, only the order per attribute will have an impact as all validation rules are executed for all attributes.
 

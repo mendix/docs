@@ -1,5 +1,5 @@
 ---
-title: "Associations & Their Properties"
+title: "Association Properties"
 parent: "domain-model"
 tags: ["domain model", "association", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -78,9 +78,9 @@ Delete behavior defines what should happen to the associated object when an obje
 
 | Value | Description |
 | --- | --- |
-| delete {name of entity} object but keep {name of other entity} object(s) | When an object is deleted, the associated object(s) are not deleted. |
-| delete {name of entity} object and {name of other entity} object(s) as well | When an object is deleted, the associated object(s) are also deleted. |
-| delete {name of entity} object only if it is not associated with {name of other entity} object(s) | An object can only be deleted if it is not associated with any other object(s). |
+| Delete {name of entity} object but keep {name of other entity} object(s) | When an object is deleted, the associated object(s) are not deleted. |
+| Delete {name of entity} object and {name of other entity} object(s) as well | When an object is deleted, the associated object(s) are also deleted. |
+| Delete {name of entity} object only if it is not associated with {name of other entity} object(s) | An object can only be deleted if it is not associated with any other object(s). |
 
 Default: *delete {name of entity} object but keep {name of other entity} object(s)*
 

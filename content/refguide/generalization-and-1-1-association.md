@@ -23,7 +23,7 @@ In order to understand the impact and behavior of the application, you need to u
 
 The Mendix Platform uses the transaction level [Read Committed](http://en.wikipedia.org/wiki/Isolation_(database_systems)#Read_committed), which means, as the name suggests, that only committed objects are visible outside the transaction. Any other microflows trying to access an object that is being changed at the same time, will have to wait until the transaction has completed. This is important to know, since this has significant impact on your choice between inheritance or associated objects.
 
-### 2.2 Creating and Changing Objects
+### 2.2 Creating & Changing Objects
 
 When changing an object, the Mendix Platform will write those changes to the database as soon as you execute the commit activity. The update or insert query will be performed based on the values you have changed. This behavior varies per database, but most likely this will lock the record and prevent other users from reading it until the transaction has been completed (either finished or rolled back).
 
@@ -45,7 +45,7 @@ Mendix is optimized to only retrieve the data that is required for the action th
 
 If you retrieve any specializations from the super class the platform will always include the entire hierarchy in the query, in order to guarantee a consistent data structure. For example, if you have an overview of **Administration.Account**, the platform will include the System.User table whether or not you show any System.User attributes, just to make sure that the data is consistent and complete. Both tables have a clustered index on the object id, so joining the information in the database is extremely efficient.
 
-#### 2.3.2 One-to-One  Association
+#### 2.3.2 One-to-One Association
 
 The associated objects will only be retrieved when they are shown in a page. This is less efficient than with inheritance, because the information is retrieved using the association table, but based on how the information is ordered and filtered, it will be far less efficient to join over the association table than over the clustered index that is used with inheritance.
 
@@ -71,11 +71,8 @@ This explanation might not have given you an explicit answer to the question on 
 
 There are a few situations where a clear answer can be given:
 
-_Never use inheritance for entities with:_
-
-*   _A high number of transactions on the different sub entities (As a high we consider multiple changes or creates per second)_
-*   _Only a handful common attributes. If you feel that it isn't worth creating associated objects for the information, it isn't worth inheriting either_
-
-_Never use one-to-one association for entities:_
-
-*   _That always require the information from the associated objects, and users intensively search and sort on the associated attributes._
+* Never use inheritance for entities with:
+  * A high number of transactions on the different sub entities (As a high we consider multiple changes or creates per second)
+  * Only a handful common attributes. If you feel that it isn't worth creating associated objects for the information, it isn't worth inheriting either
+* Never use one-to-one association for entities:
+  * That always require the information from the associated objects, and users intensively search and sort on the associated attributes

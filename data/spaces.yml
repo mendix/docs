@@ -183,7 +183,6 @@ appstore:
     - "Widgets"
     - "Modules"
     - "Themes"
-    - "App Templates"
 product-naming:
   space: "Mendix Product Naming Guide"
   priority: false

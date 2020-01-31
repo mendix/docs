@@ -1,7 +1,7 @@
 ---
 title: "Event Handlers"
-parent: "entities"
-menu_order: 50
+parent: "domain-model"
+menu_order: 7
 tags: ["domain model", "entity", "event handler", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---

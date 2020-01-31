@@ -1,7 +1,7 @@
 ---
 title: "Associations"
-parent: "entities"
-menu_order: 30
+parent: "domain-model"
+menu_order: 5
 tags: ["domain model", "association", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -80,10 +80,10 @@ You can find correspondence between **Type**/**Owner** and **Multiplicity**/**Na
 
 | **Multiplicity** | **Navigability** | Type          | Owner   |
 | -----------------|----------------- | ------------- | ------- |
-| one-to-one     | —      | Reference     | Both    |
-| one-to-many     | —     | Reference     | Default |
-| many-to-many     | X objects refer to Y objects | Reference set | Default |
-| many-to-many     | X and Y objects refer to each other | Reference set | Both    |
+| One-to-one     | —      | Reference     | Both    |
+| One-to-many     | —     | Reference     | Default |
+| Many-to-many     | X objects refer to Y objects | Reference set | Default |
+| Many-to-many     | X and Y objects refer to each other | Reference set | Both    |
 
 For more information on multiplicity and navigability, see the [Multiplicity](association-properties#multiplicity) and [Navigability](association-properties#navigability) sections in *Associations and Their Properties*.
 

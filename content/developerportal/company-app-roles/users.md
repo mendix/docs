@@ -76,7 +76,7 @@ Click **Create Report** to create a report about users active in your company. T
 
 You have the following report options:
 
-* **Export users** – this report will return a list of users who are active in your company
+* **Export users** – this report will return a list of users who are active in your company and your company's apps, including external users that are part of your company's App Teams
 * **Export permissions** – this report will return a list of permissions for users active in your company's apps
 
 You can export these reports by clicking **Export to Excel**. Note that the exports will contain further details in addition to those shown on the screen.

@@ -45,7 +45,7 @@ The stack trace is a list of current method calls from the point when the applic
 
 In Studio Pro, log messages that include a stack trace are marked with a paperclip icon. Double-clicking this icon shows the stack trace.
 
-### 2.2 Level<a name="Level"></a>
+### 2.2 Level {#level}
 
 The log level defines the severity of the log message. In Studio Pro, this is represented by different colors and an icon. 
 
@@ -62,11 +62,37 @@ These are the log levels used by Mendix:
 
 ## 3 Setting the Log Levels
 
-In this section, you will learn how to configure the log levels of the messages produced by the system. The different levels highlighted in the [Level](#Level) section, above, can be applied to the predefined logging produced by Mendix Studio Pro and to custom logging. 
+In this section, you will learn how to configure the log levels of the messages produced by the system. The different highlighted [levels](#Level) can be applied to the predefined logging produced by Mendix Studio Pro and to custom logging. 
 
 This section describes how to configure both the log levels for predefined logging created by Studio Pro and custom logging.
 
-### 3.1 Configuring the Log Levels for Standard Log Messages
+### 3.1 Configuring Log Levels via Script
+
+Log levels can be configured through the runtime admin port before the actual log levels exist. This enables creating a script that sets all the required log levels at once.
+
+This is a Python script that sets `ConnectionBus` and `ActionManager` to the Trace and Debug levels:
+
+```
+import requests, base64, json, sys
+
+payload = {
+    'action':'set_log_level',
+    'params': {'nodes' : [
+        { 'name':'ConnectionBus', 'level':'TRACE'},
+        { 'name':'ActionManager', 'level':'DEBUG'}
+        ], 'force':True}
+}
+```
+
+You can run this script as follows:
+
+```
+C:\temp\LogDemoApp\python
+λ python setlogs.py 87a32a3e-c6db-4bc8-9fa3-7cd5b108eaec 8090
+{"feedback":{},"result":0}
+```
+
+### 3.2 Configuring the Log Levels for Standard Log Messages
 
 To set the log levels for standard log messages, follow these steps:
 
@@ -80,7 +106,7 @@ To set the log levels for standard log messages, follow these steps:
 You can override the log level for standard log messages in each environment when your app is deployed to the Mendix cloud. See the [Log Levels Tab](/developerportal/deploy/environments-details#log-levels) section in *Environment Details* for more information.
 {{% /alert %}}
 
-### 3.2 Configuring the Log Levels for Custom Log Messages
+### 3.3 Configuring the Log Levels for Custom Log Messages
 
 To set the level of custom log messages that you have created via a microflow, follow these steps:
 
@@ -94,9 +120,7 @@ To set the level of custom log messages that you have created via a microflow, f
 
 * [Find the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
 * [Clear Warning Messages in Mendix](clear-warning-messages)
-* [Test Web Services Using SoapUI](../testing/testing-web-services-using-soapui)
 * [Monitor Mendix Using JMX](monitoring-mendix-using-jmx)
 * [Debug Microflows](debug-microflows)
-* [Debug Microflows Remotely](debug-microflows-remotely)
 * [Debug Java Actions](debug-java-actions)
-* [Debug Java Actions Remotely](debug-java-actions-remotely)
+* [A Script to Set the Log Node Levels in Mendix](http://www.mxblog.eu/p/post/2533274790397906)

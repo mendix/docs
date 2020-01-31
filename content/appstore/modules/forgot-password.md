@@ -1,5 +1,5 @@
 ---
-title: "Audit Trail"
+title: "Forgot Password"
 category: "Modules"
 description: " "
 tags: [ ]

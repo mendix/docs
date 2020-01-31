@@ -1,5 +1,5 @@
 ---
-title: "Camera"
+title: "Image Viewer"
 category: "Widgets"
 description: " "
 tags: [ ]
@@ -61,7 +61,7 @@ To contribute to the development of this widget, follow these steps:
 2. Fork and clone the [mendixlabs/image-viewer](https://github.com/mendixlabs/image-viewer) repository. The code is in Typescript.
 3. Set up the development environment by running `npm install`.
 4. Create a folder named *dist* in the project root.
-5. Create a Mendix test project in the *dist* folder and rename its root folder to *dist/MxTestProject*, or get the test project from [mendixlabs/image-viewer](https://github.com/MendixLabs/image-viewer/releases/latest)). Changes to the widget code will be automatically pushed to this test project.
+5. Create a Mendix test project in the *dist* folder and rename its root folder to *dist/MxTestProject*, or get the test project from [mendixlabs/image-viewer](https://github.com/MendixLabs/image-viewer/releases/latest). Changes to the widget code will be automatically pushed to this test project.
 6. To automatically compile, bundle, and push code changes to the running test project, run `grunt`.
 7. To run the project unit tests with code coverage (results can be found at `dist/testresults/coverage/index.html`), run: `npm run test:unit`.
 8. Run the unit test continuously during development via `karma start`.

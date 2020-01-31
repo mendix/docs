@@ -1,5 +1,5 @@
 ---
-title: "Generalization & One-to-One Associations"
+title: "Generalization & Associations"
 parent: "entities"
 menu_order: 5
 #tags: ["domain model", "association", "inheritance", "one-to-one", "generalization", "studio pro"]
@@ -50,6 +50,10 @@ If you retrieve any specializations from the super class the platform will alway
 The associated objects will only be retrieved when they are shown in a page. This is less efficient than with inheritance, because the information is retrieved using the association table, but based on how the information is ordered and filtered, it will be far less efficient to join over the association table than over the clustered index that is used with inheritance.
 
 If you require a lot of searching, sorting and displaying of the inherited/associated information it can be significantly more efficient to use inheritance. If the associated information is only required on a few pages, the additional delay retrieving the information over association instead of inheritance might be acceptable compared to the faster retrieve times on any other place in the application.
+
+#### 2.3.2 One-to-Many Association
+
+When using an inheritance with a one-to-many association, you cannot use an over-association retrieve.
 
 ## 3 Flexibility
 

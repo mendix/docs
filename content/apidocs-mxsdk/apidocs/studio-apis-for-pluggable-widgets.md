@@ -8,7 +8,7 @@ tags: ["Widget", "Pluggable", "Custom", "JavaScript", "React", "Preview"]
 
 ## 1 Introduction
 
-This guide explains the APIs Mendix Studio and Studio Pro offer so you can build better pluggable widgets. Specifically, you can use these APIs and modules to alter pluggable widgets' preview appearances while working in Mendix Studio or Studio Pro's Design mode. 
+This guide explains the APIs offered by Mendix Studio and Studio Pro so you can build better pluggable widgets. Specifically, you can use these APIs and modules to alter pluggable widgets' preview appearances while working in Mendix Studio or Studio Pro's Design mode. 
 
 In contrast, [Client APIs Available to Pluggable Widgets](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets) is meant for pluggable widget development once your app project is running in the client. This guide's APIs are available in Mendix 8.0.0 and higher.
 
@@ -101,7 +101,7 @@ Using parameters `EventName` and `EventDescription` instead of the placeholders 
 ```
 Name: {EventName}
 Description: {EventDescription}
-``` 
+```
 
 ### 2.7 Action
 
@@ -253,7 +253,7 @@ export const preview: React.FC<Props> = (props) => (
         <div className="my-pw-content">…</div>
     </div>
 );
-``` 
+```
 
 ### 3.3 The GetPreviewCss Export
 
@@ -269,3 +269,9 @@ export function getPreviewCss() {
 `;
 }
 ```
+
+## 4 Read More
+
+* [Client APIs Available to Pluggable Widgets](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets)
+* [Pluggable Widget Property Types](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets)
+* [How to Build a Pluggable Native Widget](/howto/extensibility/build-native-widget)

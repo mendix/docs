@@ -53,7 +53,7 @@ If you require a lot of searching, sorting and displaying of the inherited/assoc
 
 #### 2.3.3 One-to-Many Association
 
-When using an inheritance with a one-to-many association, you cannot use an over-association retrieve.
+When using an inheritance with a one-to-many association, you cannot retrieve [by association](retrieve#source).
 
 ## 3 Flexibility
 

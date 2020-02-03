@@ -169,8 +169,8 @@ Be aware of the following:
 
 | Parameters            | Description                                                                          | Example                                                |
 | --------------------- | ------------------------------------------------------------------------------------ | ------------------------------------------------------ |
-| `--project-name`      | Unique name of the project used during `prepare` **Required**                                     | `CoolApp`                                              |
-| `--label`             | A unique label of the stable version to rollback to **Required**                                  | This can be gotten by using the `release list` command |
+| `--project-name`      | Unique name of the project used during `prepare` **(Required)**                                     | `CoolApp`                                              |
+| `--label`             | A unique label of the stable version to rollback to **(Required)**                                  | This can be gotten by using the `release list` command |
 | `--platform`          | Platform with which to run command for. Defaults to both iOS and Android. | `ios` or `android`                                     |
 | `--deployment-target` | OTA target group. Defaults to `Production`                                | `Staging`                                              |
 
@@ -186,7 +186,7 @@ native-builder.exe release list --project-name "CoolApp"
 
 | Parameters            | Description                                                                          | Example            |
 | --------------------- | ------------------------------------------------------------------------------------ | ------------------ |
-| `--project-name`      | Unique name of the project used during `prepare` **Required**                                    | `CoolApp`          |
+| `--project-name`      | Unique name of the project used during `prepare` **(Required)**                                    | `CoolApp`          |
 | `--platform`          | Platform with which to run command for. Defaults to both iOS and Android. | `ios` or `android` |
 | `--deployment-target` | OTA target group. Defaults to `Production`                                | `Staging`          |
 
@@ -202,8 +202,8 @@ native-builder.exe bundle --project-name "CoolApp" --output-path "C:\bundles"
 
 | Parameters            | Description                                                                          | Example            |
 | --------------------- | ------------------------------------------------------------------------------------ | ------------------ |
-| `--project-name`      | Unique name of the project used during `prepare` **Required**                                    | `CoolApp`          |
-| `--output-path` | The absolute output path for the *ZIP* archives **Required**                                             | `C:\bundles`       |
+| `--project-name`      | Unique name of the project used during `prepare` **(Required)**                                    | `CoolApp`          |
+| `--output-path` | The absolute output path for the *ZIP* archives **(Required)**                                             | `C:\bundles`       |
 | `--platform`          | Platform with which to run command for. Defaults to both iOS and Android. | `ios` or `android` |
 
 ### 2.9 iOS-Specific Configurations
@@ -220,7 +220,7 @@ native-builder.exe ios add-entitlements --project-name "CoolApp" --entitlements 
 
 | Parameters            | Description                                                                          | Example            |
 | --------------------- | ------------------------------------------------------------------------------------ | ------------------ |
-| `--project-name`      | Unique name of the project used during `prepare` **Required**                                    | `CoolApp`          |
+| `--project-name`      | Unique name of the project used during `prepare` **(Required)**                                    | `CoolApp`          |
 | `--entitlements` | A list of the entitlements to add to your project. Supported options environment, nfc                 | `environment nfc`       |
 
 #### 2.9.2 Adding and Removing Background Modes
@@ -233,7 +233,7 @@ native-builder.exe ios add-background-modes --project-name "CoolApp" --modes not
 
 | Parameters            | Description                                                                          | Example            |
 | --------------------- | ------------------------------------------------------------------------------------ | ------------------ |
-| `--project-name`      | Unique name of the project used during `prepare` **Required**                                    | `CoolApp`          |
+| `--project-name`      | Unique name of the project used during `prepare` **(Required)**                                    | `CoolApp`          |
 | `--modes` | A list of background modes to add to your project. Supported options notification                 | `notification`       |
 
 ## 3 Expanded Parameter Explanations

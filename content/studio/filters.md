@@ -85,7 +85,7 @@ To create a new filter, do the following:
 
 4. Select an operator and a value on the right. 
 
-    The value on the right can be a literal value that you type in (only available for string, long, integer, decimal, and autonumber attribute types ) or it can be an attribute/association/value that you choose from the drop-down list. The options in the drop-down list depend on the left attribute/association. 
+    The value on the right can be a literal value that you type in (only available for string, long, integer, decimal, and autonumber attribute types), or it can be an attribute, association, or value you choose from the drop-down list. The options in the drop-down list depend on the left attribute/association. 
 
     ![](attachments/filters/list-of-options.png)
 

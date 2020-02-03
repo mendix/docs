@@ -1,7 +1,7 @@
 ---
 title: "Build Custom Widgets"
 category: "Extensibility"
-menu_order: 2
+menu_order: 30
 tags: ["widget", "develop widget", "customize"]
 ---
 

@@ -134,7 +134,7 @@ To be able to use the data from your model in the REST service, you need to crea
 
 To view and try out your app, follow these steps:
 
-1. Run your app and open it in the browser via this URL: http://localhost:8080/rest-doc/.
+1. Run your app and open it in the browser via this URL: `http://localhost:8080/rest-doc/`.
 2.  You will see a page with the documentation of all your published REST services:
 
 	![](attachments/publish-rest-service/RESTTestOverview.png)

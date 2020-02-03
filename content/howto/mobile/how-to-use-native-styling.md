@@ -4,6 +4,7 @@ parent: "native-styling"
 menu_order: 30
 description: A how-to for styling your first Mendix Native App.
 tags: ["styling", "design", "classes", "native"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
@@ -30,11 +31,7 @@ These resources let you style your app with a wide variety of interface parts. H
 
 	![button](attachments/how-to-use-native-styling/button-one.png)
 
-2.  Click **Run locally** and then click **View** to see your app: 
-
-	![run locally](attachments/how-to-use-native-styling/run-locally.png)
-
-	The button is white with blue text: its default styling. 
+2.  Click **Run Locally** and then click **View** to see your app. The button will be white with blue text, which is its default styling:
 
 	![default button](attachments/how-to-use-native-styling/default-button.png)
 
@@ -52,7 +49,7 @@ These resources let you style your app with a wide variety of interface parts. H
 	```
 
 5. Save your file.
-6.  Click **Run locally** to apply your changes:
+6.  Click **Run Locally** to apply your changes:
 
 	![rosybrown button](attachments/how-to-use-native-styling/brand-primary-rosybrown.png)
 

@@ -1,7 +1,7 @@
 ---
 title: "Associations"
-parent: "entities"
-menu_order: 30
+parent: "domain-model"
+menu_order: 5
 tags: ["domain model", "association", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -29,10 +29,8 @@ This property defines whether an association is a reference (single) or a refere
 
 | Value | Description |
 | --- | --- |
-| Reference | Single: an object of the owning entity refers to zero or one objects of the other entity. |
+| Reference *(default)* | Single: an object of the owning entity refers to zero or one objects of the other entity. |
 | Reference set | Plural: an object of the owning entity refers to zero or more objects of the other entity. |
-
-* *Default value*: Reference
 
 {{% alert type="info" %}}
 
@@ -46,10 +44,8 @@ This property defines whether an association has one or two owners. If there is 
 
 | Value | Description |
 | --- | --- |
-| Default | Only one entity is the owner (the parent). |
+| Default *(default)* | Only one entity is the owner (the parent). |
 | Both | Both entities are owners. |
-
-* *Default value*: Default
 
 Ownership is important as it defines two aspects of an association:
 
@@ -76,18 +72,18 @@ If both ends own the association, you can overcome this limitation. However, thi
 
 Note that only recording the association on one of the entities does not affect your ability to navigate the association from both ends. However, it may be slower to navigate from the non-owning end.
 
-## 5 Type and Owner Relation to Multiplicity and Navigability
+## 5 Type & Owner Relation to Multiplicity & Navigability {#types}
 
-**Type** and **Owner** properties of an entity are related to **[Multiplicity](association-properties#multiplicity)** and **[Navigability](association-properties#navigability)** properties of an association. When you change **Type** or **Owner**, you change **Multiplicity** and **Navigability** as well. 
+**Type** and **Owner** properties of an entity are related to [Multiplicity](association-properties#multiplicity) and [Navigability](association-properties#navigability) properties of an association. When you change **Type** or **Owner**, you change **Multiplicity** and **Navigability** as well. 
 
 You can find correspondence between **Type**/**Owner** and **Multiplicity**/**Navigability** in the table below.
 
 | **Multiplicity** | **Navigability** | Type          | Owner   |
 | -----------------|----------------- | ------------- | ------- |
-| one-to-one     | —      | Reference     | Both    |
-| one-to-many     | —     | Reference     | Default |
-| many-to-many     | X objects refer to Y objects | Reference set | Default |
-| many-to-many     | X and Y objects refer to each other | Reference set | Both    |
+| One-to-one     | —      | Reference     | Both    |
+| One-to-many     | —     | Reference     | Default |
+| Many-to-many     | X objects refer to Y objects | Reference set | Default |
+| Many-to-many     | X and Y objects refer to each other | Reference set | Both    |
 
 For more information on multiplicity and navigability, see the [Multiplicity](association-properties#multiplicity) and [Navigability](association-properties#navigability) sections in *Associations and Their Properties*.
 

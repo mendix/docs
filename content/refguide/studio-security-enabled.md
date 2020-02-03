@@ -16,7 +16,7 @@ Users can enable security from Studio. While the Studio user simply clicks the *
 When security is enabled, a number of checks and changes are done at several levels.
 
 1. Studio checks if security is enabled. If security is set to **Prototype/demo** or **Production**, the process stops. If security is off, steps described below are executed. 
-2. The AppCloudServices module is set up if the project does not have it yet (for more information on this process, see the [Modules Set Up](#module-set-up) section). If the AppCloudServices module has been already installed for this project, the process stops. 
+2. The [MendixSSO](/developerportal/deploy/mendix-sso) module is set up if the project does not have it yet (for more information on this process, see the [Modules Set Up](#module-set-up) section). If the MendixSSO module has been already installed for this project, the process stops. 
 3. Studio does checks and changes (if necessary) to [demo users](demo-users) , [module roles](module-security) , and [user roles](user-roles) (for more information on this process, see the [Module Roles and Demo Users Set Up](#module-roles-and-demo-users) section).
 4. Studio sets access rules for entities (and their attributes and associations), if entities do not have access rules yet (for more information on this process, see the [Entity Access Set Up](#entity-access) section).
 5. Studio checks if the *login.html* file exists, backs it up, and replaces it with a new version. Also, Studio checks if *index.html* exists, it searches for `document.cookie = "originURI=/login.html";` and replaces it with `document.cookie = "originURI=/openid/login";` (for more information on this process, see the [Files Set Up](#files-set-up) section).
@@ -30,19 +30,19 @@ If security has already been set to **Prototype/demo** or **Production** in Stud
 
 ## 3 Modules Set Up {#module-set-up}
 
-When security is enabled in Studio, the AppCloudServices module is set up. This module enables single sign-on and user management in your app.
+When security is enabled in Studio, the Mendix SSO module is set up. This module enables single sign-on and user management in your app.
 
 To enable single sign-on the following checks and changes are performed:
 
-1. The AppCloudServices startup microflow is created. For more information on possible outcomes of this process, see the [Project Security Level Set Up](#project-security-level) section.
+1. The Mendix SSO startup microflow ( MendixSSO.MendixSSO_AfterStartup ) is created. For more information on possible outcomes of this process, see the [Project Security Level Set Up](#project-security-level) section.
 2. *index.html* and *login.html* files are checked and changed if necessary. For more information, see the [Files Set Up](#files-set-up) section.
 
-The AppCloudServices module also adds user management to your app. With user management you can manage app users.
+The Mendix SSO module also adds user management to your app. With user management you can manage app users.
 
-{{% alert type="info" %}}If your project already has the AppCloudServices module installed, you will not be able to enable security from Studio. You can only set security manually in Studio Pro meeting the following requirements: 
+{{% alert type="info" %}}If your project already has the Mendix SSO module installed, you will not be able to enable security from Studio. You can only set security manually in Studio Pro meeting the following requirements: 
 
 * Security should be set to **Production** <br/>
-* The AppCloudServices module should be set up to enable single sign on
+* The Mendix SSO module should be set up to enable single sign on
 
 {{% /alert %}}
 
@@ -67,9 +67,9 @@ After the **After startup** microflow is set up, Studio checks if the *Administr
     {{% alert type="info" %}}Studio links the Administrator role from the System module to the Administrator role on the project level. *Every other project role* created from Studio, including the original User project role, will be linked to the User module role for the System module.
     {{% /alert %}}
 
-3. Studio links the Administrator role at the project level to AppCloudServices.Administrator and Administration.Administrator (if they exist, if not, Studio will not do any linking). The User role at the project level is linked to AppCloudServices.User, and Administration.User (if they exist, if not, Studio will not do any linking). All other AppStore modules will remain unchanged. 
+3. Studio links the Administrator role at the project level to MendixSSO.Administrator and Administration.Administrator (if they exist, if not, Studio will not do any linking). The User role at the project level is linked to MendixSSO.User, and Administration.User (if they exist, if not, Studio will not do any linking). All other AppStore modules will remain unchanged. 
 
-    Every other user role created in Studio will be linked to the AppCloudServices.User and the Administration.User in the AppCloudServices and Administration modules correspondingly.
+    Every other user role created in Studio will be linked to the MendixSSO.User and the Administration.User in the MendixSSO and Administration modules correspondingly.
 
 4. Studio checks if demo users named *demo_administrator* and *demo_user* exist, and if not, Studio creates them.
 
@@ -131,14 +131,14 @@ On the **Project** level, Studio does the following:
     ![](attachments/studio-security-enabled/start-up-microflow.png)
 
     There are two possible outcomes of this check:<br/>
-    a. If the model does not contain any **After startup** microflow, the *AppCloudServices.StartAppCloudServices* microflow is used.<br/>
-    b. If the model contains the **After startup** microflow, Studio creates *CallBothStartupMicroflows* microflow in the same place as the existing one. *CallBothStartupMicroflows* will call the *AppCloudServices.StartAppCloudServices* microflow first, then it will call the microflow that already existed in the project.
+    a. If the model does not contain any **After startup** microflow, the *MendixSSO.MendixSSO_AfterStartup* microflow is used.<br/>
+    b. If the model contains the **After startup** microflow, Studio creates *CallBothStartupMicroflows* microflow in the same place as the existing one. *CallBothStartupMicroflows* will call the *MendixSSO.MendixSSO_AfterStartup* microflow first, then it will call the microflow that already existed in the project.
 
 ## 8  Studio Compatibility {#studio-compatible}
 
 Studio Pro security settings are compatible with Studio (that means that roles and permissions can be edited in Studio), when all of the following criteria are met:
 
-* The AppCloudServices module has been installed
+* The MendixSSO module has been installed
 * The security level has been be set to production
 * Demo users have been enabled
 * Demo users must have the correct name: identical to the project role name, but with the *demo_* prefix (for example, demo_user)

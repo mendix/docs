@@ -3,6 +3,7 @@ title: "Version Control"
 description: "This document gives definitions and explains the version control  process"
 tags: ["Version Control", "Application Lifecycle Management", "Commit", "Collaborate"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+#This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
 ## 1 Introduction
@@ -56,7 +57,7 @@ A conflict occurs when two versions of the app cannot be combined automatically.
 
 When a conflict occurs, a developer has to intervene to decide how it should be resolved before it can be committed to the Team Server as a new revision.
 
-### 2.7 Update
+### 2.7 Update {#update}
 
 Updating is the action, invoked in Studio Pro, which gets the latest revision of the current [development line](#development-line) from the Team Server repository and merges the differences into the current working copy.
 
@@ -88,7 +89,7 @@ You may enable Studio for one of the development lines. This means that a develo
 
 Studio cannot be used to develop the app if it is not enabled for any development lines.
 
-For starter apps created via the Developer Portal, the main line of a new app will be Studio enabled.
+For app templates created via the Developer Portal, the main line of a new app will be Studio enabled.
 
 ### 2.11 Tag
 
@@ -205,6 +206,5 @@ Note that errors can be introduced by the [merge](#merge) process even if no con
 ## 5 Main Documents in This Category
 
 * [Using Version Control in Studio Pro](using-version-control-in-studio-pro) – presents technical details for using version control (theoretical concerns are described above)
-* [Team Server Overview](/developerportal/develop/team-server) – introduces topics relating to Team Server and app development
 * [Collaborative Development](collaborative-development) – describes the process of sharing app model changes when a team of more than one person is working on the app
 * [Team Server Overview](/developerportal/develop/team-server) – presents an overview of viewing Team Server information in the Developer Portal (for example, revision summary and details)

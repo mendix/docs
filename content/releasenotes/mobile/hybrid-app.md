@@ -1,6 +1,6 @@
 ---
 title: "Hybrid App Base & Template"
-category: "Mobile Products"
+category: "Mobile"
 menu_order: 30
 toc-level: 1
 description: "Mendix Hybrid App Base & Hybrid App Template release notes."
@@ -8,13 +8,43 @@ description: "Mendix Hybrid App Base & Hybrid App Template release notes."
 
 If you are building your hybrid mobile app using the regular PhoneGap Build approach from within the Mendix Developer Portal, you do not need to worry about these numbers. Downloading and building a new package will set you up with the latest version.
 
-If you are using the advanced flow, you can get the latest version of the Hybrid App Base by running `npm update` from your hybrid app project directory. To upgrade to the latest version of the Hybrid App Template, either pull in the latest changes from GitHub, or download a new copy from the Mendix Developer Portal ([Developer Portal](https://sprintr.home.mendix.com/index.html) > **DEPLOY**).
+If you are using the advanced flow, you can get the latest version of the Hybrid App Base by running `npm update` from your hybrid app project directory. To upgrade to the latest version of the Hybrid App Template, either pull in the latest changes from GitHub, or download a new copy from [Mendix Developer Portal](https://sprintr.home.mendix.com/index.html) > **DEPLOY**.
 
-{{% alert type="info" %}}
 For more information on hybrid mobile app development in Mendix, see the [Hybrid Mobile](/refguide/hybrid-mobile) section of the *Studio Pro 8 Guide* and the [Hybrid Mobile](/howto/mobile/hybrid-mobile) section of the *Studio Pro 8 How-to's*.
-{{% /alert %}}
 
 ## 2019
+
+### Hybrid App Base 4.1.9
+
+**Release date: January 3rd, 2020**
+
+* We fixed an issue with race conditions in asynchronous hooks.
+* We introduced a new **onBeforeSynchonization** hook.
+
+### Hybrid App Base 4.1.8
+
+**Release date: December 17th, 2019**
+
+* We fixed a regression with the keyboard-avoiding behavior in iOS.
+* We fixed an issue with SSO failing to load on iOS 13 devices.
+
+### Hybrid App Base 4.1.7
+
+**Release date: November 18th, 2019**
+
+* We fixed an issue with missing build scripts.
+
+### Hybrid App Base 4.1.6
+
+**Release date: November 12th, 2019**
+
+* We fixed an issue that would stop apps from loading on iPads running iOS 13.
+
+### Hybrid App Base 4.1.5 
+
+**Release date: November 12th, 2019**
+
+* We fixed an issue with the Android build failing due to missing files.
 
 ### Hybrid App Base 4.1.4
 

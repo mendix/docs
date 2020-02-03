@@ -12,7 +12,7 @@ Use the [Deep Link](https://appstore.home.mendix.com/link/app/43/) to add reques
 
 ### 1.1 Typical Usage Scenarios
 
-The typical usage scenario is configuring a link to trigger a microflow like this: `    https://myapp.com/link/resetpassword/DF6345SDF`. The module is design- and runtime-configurable, it respects security, and it supports links for both logged-in and anonymous users.
+The typical usage scenario is configuring a link to trigger a microflow like this: `https://myapp.com/link/resetpassword/DF6345SDF`. The module is design- and runtime-configurable, it respects security, and it supports links for both logged-in and anonymous users.
 
 ### 1.2 Features
 
@@ -54,7 +54,7 @@ You need a custom microflow with [microflow call](/refguide/microflow-call) acti
 
 Start the application and sign in as a user who has the **Deeplink.Admin** module role associated to one of their user roles. Then, open the page that includes the `DeepLink.DeepLinkConfigurationOverview` snippet (for more information, see [Navigation](#navigation) above). You can manage all the deep link configuration entries on this page.
 
-### 2.5 Deeplink.CreateDeeplinkConfig Microflow Parameters
+### 2.5 Setting the Microflow Parameters
 
 The **Deeplink.CreateDeeplinkConfig** microflow requires the following parameters to be set carefully:
 

@@ -6,6 +6,7 @@ tags: ["domain model", "entity", "association", "annotation", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+## 1 Introduction
 
 The domain model is a data model that describes the information in your application domain in an abstract way. It is central to the architecture of your application. The domain model consists of [entities](entities) and their relations represented by [associations](associations).
 
@@ -13,13 +14,7 @@ Here is a domain model that defines customers and orders. The line between them 
 
 ![](attachments/domain-model-editor/917531.png)
 
-## Components
-
-*   [Associations](associations)
-*   [Annotations](annotations)
-*   [Entities](entities)
-
-## Technical Appendix
+## 2 Technical Appendix
 
 In the database every entity is stored in one separate table and has columns for the attributes defined in Studio Pro, the system attributes and a unique identifier for the object. If an entity has specializations there is also a column indicating which specialization the object belongs to. An association is stored in a cross-table with the identifiers (ID) of both objects.
 

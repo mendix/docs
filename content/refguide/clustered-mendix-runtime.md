@@ -60,7 +60,7 @@ If no database synchronization is required, all the cluster nodes will become fu
 
 Uploaded files should be stored in a shared file storage facility, as every Mendix Runtime node should access the same files. Either the local storage facility is shared or the files are stored in a central storage facility such as an Amazon S3 file storage, Microsoft Azure Blob storage, or IBM Bluemix Object Storage. 
 
-For more information about configuring the Mendix Runtime to store files on these storage facilities,  see [Custom settings](custom-settings).
+For more information about configuring the Mendix Runtime to store files on these storage facilities,  see [Runtime Customization](custom-settings).
 
 ## 7 After-Startup & Before-Shutdown Microflows {#startup-shutdown-microflows}
 
@@ -145,3 +145,4 @@ Persistent sessions also store a last-active date upon each request. To improve 
 {{% alert type="warning" %}}
 Overriding the default values for the `SessionTimeout` and `ClusterManagerActionInterval` custom settings can impact the behavior of "keep alive" and results in an unexpected session logout. The best practice is to set the `ClusterManagerActionInterval` to half of the `SessionTimeout` so that each node gets the chance to run the clean-up action at least once during the session time out interval.
 {{% /alert %}}
+

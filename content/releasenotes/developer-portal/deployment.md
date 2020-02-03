@@ -3,11 +3,81 @@ title: "Deployment"
 category: "Developer Portal"
 description: "Release notes for deployment capabilities managed in the Mendix Developer Portal"
 tags: ["deployment", "cloud environment", "Mendix Cloud", "SAP", "SAP Cloud", "IBM", "on-premises", "free app"]
+#This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
 These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy), other [deployment](/developerportal/deploy/) options, and app [operations](/developerportal/operate/). For updates on the status of Mendix Cloud v4, Mendix Cloud v3, and other deployment options, see [Mendix Status](https://status.mendix.com/).
 
+## 2020
+
+### January 21st, 2020
+
+#### Fixes
+
+* We fixed an issue where, if the data type of a constant was changed in the app model, it was not changed in the Developer Portal. This meant that validation sometimes failed and the app could not be started. (Ticket 88425)
+* We fixed an issue on the page where you select a node to deploy your app, where the app name and the link to the Environments page disappeared.
+* We corrected the text of the welcome email for new cloud environments which gave incorrect instructions for deploying your app. (Ticket 93145)
+
+### January 7th, 2020
+
+#### 3DES Ciphers Disabled for Mendix Cloud v3
+
+* We have implemented a change to our Mendix Cloud v3 infrastructure so that incoming SSL connections no longer support 3DES ciphers. 3DES ciphers are considered insecure.
+
+### January 3rd, 2020
+
+#### SAP Cloud Platform Deployment
+
+* We added support for using the HANA trial database available in new SAP Cloud Platform trial accounts. See the [Running Mendix on SAP HANA](/developerportal/deploy/sap-cloud-platform#sap-hana) section of the *SAP Cloud Platform* deployment document for more details.
+
 ## 2019
+
+### December 23rd, 2019
+
+#### Improvements
+
+* We improved the stability and performance of Mendix Cloud deployment. (Tickets 86800, 92241, 92426)
+
+### December 5th, 2019
+
+#### Improvements
+
+* On the **General** page of [App Buzz](/developerportal/collaborate/buzz#app-buzz), we added a **Private Cloud** target. This will currently take you to a closed beta test that allows you to connect your private cluster to Mendix. You can ask to join the beta program, but places are currently limited.
+
+### November 26th, 2019
+
+#### IBM Cloud Portal Deployment
+
+* We have updated the process for deploying to IBM Cloud Portal (for details on the new process, see [IBM Cloud](/developerportal/deploy/ibm-cloud)).
+* We have also added the ability to manage IBM Cloud Portal Cloud Foundry Marketplace services from within the Mendix Developer Portal.
+
+### November 21st, 2019
+
+#### Mendix Cloud Deployment Upgrade
+
+* We implemented a number of improvements to enable Mendix Support to provide better support if there are deployment issues
+
+### November 7th, 2019
+
+#### Mendix Cloud Deployment Upgrade
+
+* We have improved the stability and performance of Mendix Cloud Deployment and Operations.
+
+### October 30th, 2019
+
+#### Mendix Cloud Deployment Upgrade
+
+* We have upgraded Mendix Cloud Deployment and Operation. It is now a Mendix 7 app.
+* You can now mask app constant values so that they cannot be seen in the **Model Options** tab of the **Environment Details**.
+* We now warn you on all **OPERATE** and **DEPLOY** pages if a maintenance window has been created to allow updating of the Mendix Developer Portal.
+
+**Known Issue**
+
+* In the **Environments** page, when you click the **Details** button for a **Production** environment and successfully complete two-factor authentication you are redirected to the **first** environment listed for your app, *not the Production environment*. (Ticket 90999)
+
+    * Workaround – Choose the **Details** for the **Production** environment again and you will be taken to the correct environment.
+
+* When you attempt to open an **OPERATE** or **DEPLOY** page in the Developer Portal, you may see a login page. You will need to force a refresh of your page, or clear your browser cache, in order to access the page.
 
 ### September 27th, 2019
 
@@ -88,6 +158,12 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 
 * All **HTTP Request Headers** set by the Mendix Cloud which available to app developers are documented in [Mendix Cloud HTTP Request Headers](/developerportal/deploy/mendix-cloud-request-headers).
 * The `X-Client-Certificate` request header that is currently present is deprecated and will be removed in a later stage. Any application relying on this header must switch to the new `SSL-Client-S-DN` header. See the previously mentioned documentation for more information.
+
+### May 17th, 2019
+
+#### Environment Fixes
+
+* We made several changes to our maintenance window management to ensure that environments are completely locked during maintenance.
 
 ### May 16th, 2019
 
@@ -182,7 +258,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 * We fixed a problem on Mendix Cloud v3 which prevented Path-based Access Restrictions from working with multiple TLS certificate authorities. (Ticket 77282)
 * We fixed the problem which prevented users in the Pacific Time Zone from being able to download the current day's logs. (Tickets 78325, 78586, 79119, 79162, 79427)
 * We addressed and solved a problem which meant that some sandboxes could not be resumed after getting stopped.
-* We have fixed the issue that prevented apps with ACS (App Cloud Services) from being deployed using the Web Modeler. (Ticket 76888)
+* We have fixed the issue that prevented apps with ACS (AppCloudServices) from being deployed using the Web Modeler. (Ticket 76888)
 
 ### January 28th, 2019
 
@@ -230,7 +306,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 
 #### Improvements
 
-* Deploying to IBM Cloud is available from within Mendix. If you start with an IBM starter app, you will be taken through the process of creating a deployment environment on IBM Cloud. You can then deploy your app to IBM Cloud from within the Desktop Modeler or Mendix Developer Portal. More information is available in [IBM Cloud](/developerportal/deploy/ibm-cloud). You can also find Mendix Starter Kits on IBM Cloud and start the process from there.
+* Deploying to IBM Cloud is available from within Mendix. If you start with an app template, you will be taken through the process of creating a deployment environment on IBM Cloud. You can then deploy your app to IBM Cloud from within the Desktop Modeler or Mendix Developer Portal. More information is available in [IBM Cloud](/developerportal/deploy/ibm-cloud). You can also find Mendix Starter Kits on IBM Cloud and start the process from there.
 
 ### October 22nd, 2018
 
@@ -337,6 +413,12 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 * We improved the stability of the alerting stack.
 
+### June 26th, 2018
+
+#### App Start Fix
+
+* We fixed the bug that allowed users to start an application during a restore.
+
 ### June 15th, 2018
 
 #### Improvement
@@ -357,9 +439,15 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 ### June 8th, 2018
 
-#### Improvement
+#### Improvements
 
 * We have introduced scaling via API for Mendix Cloud v4. It is now possible to scale Mendix Cloud v4 applications via the Deploy API. For instructions, see the [Deploy API](../../apidocs-mxsdk/apidocs/deploy-api).
+*  We have aggregated the health icons for the acceptance and test environments in the **Nodes** dashboard and **Company Admin** screen.
+
+	{{% image_container width="300" %}}![](attachments/CPHealthIcon.png)
+	{{% /image_container %}}
+
+* The health icon will display the health status of the environment that is in the worst condition. This is to prepare for an upcoming release that will support more than three environments per application.
 
 #### Fixes
 

@@ -1,30 +1,39 @@
 ---
-title: "Deploy To The Cloud Dialog"
-parent: "dialogs"
+title: "Deploy to the Cloud"
+parent: "project-menu"
 tags: ["studio pro"]
 ---
-Use this dialog to create a versioned deployment package and upload it to your app in the Mendix Cloud.
 
-## Development line
+## 1 Introduction
 
-Choose the development line for which you want to create a deployment package. This can be the main line or any branch line. For example, you create a package from a maintenance branch line if your want to put a fix you implemented there online. Or you create a deployment package from the main line because you are ready to deploy the next big version of your application.
+This menu option dialog creates a versioned deployment package and deploys it to your environment in the Mendix Cloud.
 
-## Revision
+![Deploy to the Cloud dialog](attachments/project-menu/deploy-to-the-cloud.png)
 
-Choose the revision of the selected development line for which you want to create a deployment package. This is not necessarily the latest revision because you might want to exclude some recently developed functionality.
+## 2 Development Line
 
-## New version
+Choose the **Development line** for which you want to create a deployment package. This can be the main line or any branch line. For example, you create a package from a maintenance branch line if your want to put a fix you implemented there online. Or you create a deployment package from the main line because you are ready to deploy the next big version of your application.
 
-Choose a version for the deployment package. The version consists of four numbers: major version, minor version, patch and revision. The revision is fixed and determined by the revision you selected for 'Revision'.
+## 3 Revision
 
-The other numbers are free to choose but it is wise to use a convention for the numbering. Major versions typically contain major new feature or rewrites of existing features. A minor version contains small new features and fixes. A patch solves minor issues and should not change the data model of the application. A patch release should be interchangeable with another patch release with no changes to the data.
+Choose the **Revision** of the selected development line for which you want to create a deployment package. One reason you may not want the latest revision is if you want to exclude some recently developed functionality.
+
+## 4 New Version
+
+Choose a **New version** for the deployment package. The version consists of four numbers: major version, minor version, patch and revision. The revision is fixed and determined by the revision you selected for **Revision**.
+
+You are free to choose the other numbers, but it is wise to use a convention for the numbering. Major versions typically contain major new feature or rewrites of existing features. A minor version contains small new features and fixes. A patch solves minor issues and should not change the data model of the application. A patch release should be interchangeable with another patch release with no changes to the data.
 
 Studio Pro will show you the latest version that you created a package for (if any). You can increase major, minor or patch according to the convention you use.
 
-## Description
+## 5 Description
 
-You can enter a custom description for this deployment package. It is purely for your own reference so that you can quickly recognize a package. The deployment portal will show you this description along with the version number.
+You can enter a custom **Description** for this deployment package. It is purely for your own reference so that you can quickly recognize a package. The Developer Portal will show you this description along with the version number.
 
-## Destination
+## 6 App
 
-This shows the app in the Mendix Cloud where the deployment package will end up.
+This shows the **App** in the Mendix Cloud where the deployment package will be deployed. This is for information only, you cannot change the destination here.
+
+## 7 Licensee
+
+This shows the **Licensee** of this licensed node.

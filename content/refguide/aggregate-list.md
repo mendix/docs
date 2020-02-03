@@ -44,6 +44,6 @@ Defines which attribute of the objects in the list is used to aggregate over. Th
 
 ## 4 Output
 
-### 4.1 Variable
+### 4.1 Variable Name
 
 The name of the variable in which the result of the aggregation is stored. This variable will have a numeric data type that is based on the selected function.

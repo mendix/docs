@@ -23,7 +23,14 @@ Want to know more about all the possibilities this opens up? Take a look at the 
 
 ## 2 Steps & Example
 
-These steps use the [Company Expenses](https://appstore.home.mendix.com/link/app/240/) (CE) app as an example. To incorporate the AppCloudServices module into an existing app, follow these steps:
+{{% alert type="warning" %}}
+These steps use the [Company Expenses](https://appstore.home.mendix.com/link/app/240/) (CE) app as an example.
+
+This app is no longer available in the App Store but the same principles apply to other apps. There are no plans to update this document to use a different example app as the AppCloudServices module has been deprecated.
+{{% /alert %}}
+
+
+To incorporate the AppCloudServices module into an existing app, follow these steps:
 
 1. Open your app project in Mendix Studio Pro.
 2. Open the **App Store** inside Studio Pro.
@@ -66,7 +73,7 @@ These steps use the [Company Expenses](https://appstore.home.mendix.com/link/app
 
 	{{% alert type="info" %}}If this microflow is not called during startup, your users will encounter **404 Not Found** errors when trying to navigate to your app.{{% /alert %}}
 
-Congratulations! Your app now makes use of the AppCloud services.
+Congratulations! Your app now makes use of the AppCloudServices.
 
 ## 3 Managing User Logins with Mendix AppCloudServices SSO{#managing-mendix-sso}
 
@@ -138,7 +145,7 @@ If you do not have a custom index.html yet, you can take the one that is generat
 3.  Open the folder `deployment`, and then the folder `web`.
 4.  Copy the `index.html` file to the `/theme/` folder in the root of your project (two folders up), and update it with the change mentioned above.
 
-Once this is done, after deploying your app in the mendix cloud, you can test the implementation by pointing your browser to `https://yourapp.mendixcloud.com/`, after which you should be automatically redirected to the Mendix Account login page, and then redirected and logged in to your app.
+Once this is done, after deploying your app in the Mendix Cloud, you can test the implementation by pointing your browser to `https://yourapp.mendixcloud.com/`, after which you should be automatically redirected to the Mendix Account login page, and then redirected and logged in to your app.
 
 ### 3.2 Users Can Sign in with a Mendix or Local Account
 
@@ -314,7 +321,7 @@ To test your implementation, deploy to the Mendix Cloud, and browse to your app,
 
 When part of your app targets anonymous users, there are anonymous pages in your app. You need to support the case where users login to your app with their Mendix account from an anonymous page.
 
-To solve this problem, add somewhere in the anonymously accessible part of your app a link to `/openid/login`. Use the HTML/JS snippet widget from the app store to create a link. Set the content of the snippet to: `<a href="/openid/login">Sign in with your Mendix account</a>`
+To solve this problem, add somewhere in the anonymously accessible part of your app a link to `/openid/login`. Use the [HTML/JavaScript Snippet](https://appstore.home.mendix.com/link/app/56/) widget from the App Store to create a link. Set the content of the snippet to: `<a href="/openid/login">Sign in with your Mendix account</a>`
 
 To try out your implementation, deploy your app to the Mendix Cloud, and go to your app, e.g., `https://yourapp.mendixcloud.com/`. Go to the page where you inserted the link, and click on it. You should be redirected to the Mendix Account login page, and then back to your app, to the (role-based) homepage of the user with which you logged in.
 
@@ -322,17 +329,27 @@ To try out your implementation, deploy your app to the Mendix Cloud, and go to y
 
 This scenario is similar to the previous one, except now users need to be able to either login to your app with a Mendix account, or a local account. This can be implemented by adding a link to a custom login page, similar to the one in scenario 2.
 
-To implement this, add a link to the custom login page in the anonymous part with your app. Similar to in the previous scenario, this can be implemented with the HTML/JS snippet custom widget from the app store. Set the content of the snippet to: `<a href="/login.html">Log in</a>`.
+To implement this, add a link to the custom login page in the anonymous part with your app. Similar to in the previous scenario, this can be implemented with the HTML/JS snippet custom widget from the App Store. Set the content of the snippet to: `<a href="/login.html">Log in</a>`.
 
 The custom login page can be created in a similar manner as in scenario 2, with the same `login.html` and `login.css` files.
 
 You can view the implementation by deploying your app to the Mendix Cloud and going to your app, e.g. `https://yourapp.mendixcloud.com/`, and going to the page where you inserted the link. Click on the link, and you should see the custom login page. Test the local account login, and logout. Then test the Mendix account login.
 
+## 4 Troubleshooting Common AppCloudServices SSO Errors
+
+There are a couple of common problems you may encounter when developing an AppCloud-enabled app.
+
+### 4.1 "404 Not Found" Errors When Navigating to `/openid/login`
+
+A frequent cause of "404 not found" errors when navigating to `/openid/login` is that the OpenID request handler is not enabled. It should be enabled on startup.
+
+To fix this, make sure the **AppCloudServices.StartAppCloudServices** microflow is executed during the startup of your application. You can do this by setting it as the app's after-startup microflow or by having the application's existing after-startup microflow trigger it.
+
+### 4.2 Realm Verification Errors
+
+These are commonly caused by compatibility issues with JAR files in the `<projectpath>/userlib` directory of your project. For details on the most common compatibility issues, refer to [Troubleshooting](/refguide/troubleshooting) in the *Studio Pro Guide*.
+
 ## 4 Read More
 
-* [Azure: Deploy](azure-deploy)
 * [Mendix Cloud: Deploy](mendix-cloud-deploy)
 * [Mendix Single Sign-On](integrate-with-mendix-sso)
-* [Sending Email](sending-email)
-* [Trends in Mendix Cloud v3](/developerportal/operate/trends)
-* [Trends in Mendix Cloud v4](/developerportal/operate/trends-v4)

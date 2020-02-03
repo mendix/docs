@@ -56,7 +56,6 @@ The same holds for the function parameters.
 * We have also added the screenshot feature to data driven test cases. Whenever a data driven test case fails for a given record in the dataset, a screen shot will be recorded and will be accessible in the logs. This will work in the same way as it is working now for standard test cases.
 * Selecting a dataset for a test case now uses the sidebar search dialog.
 
-
 ### Improvements
 
 * We added the corresponding provider logos for Browserstack and Saucelabs.

@@ -1,14 +1,12 @@
 ---
 title: "Mendix Mobile App"
-category: "Mobile Products"
+category: "Mobile"
 menu_order: 20
 description: "These are the release notes for the Mendix Mobile app."
 toc-level: 1
 ---
 
-{{% alert type="info" %}}
-For more information on the **Mendix** mobile app, see [Getting the Mendix Mobile App](/refguide/getting-the-mendix-app).
-{{% /alert %}}
+For more information on the Mendix mobile app, see [Getting the Mendix Mobile App](/refguide/getting-the-mendix-app).
 
 ## Android 4.7.1 / iOS 4.7.1
 

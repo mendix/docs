@@ -26,7 +26,7 @@ On the **App Service** page, you can see a list of the available app services, w
 
 ![](attachments/app-services/publish-appservice.png)
 
-For more information, see [Published App Services](/refguide/published-app-services) in the Mendix Studio Pro Guide as well as the [Mendix App Services: Putting Them to Work for Your Projects](https://www.mendix.com/videos/mendix-app-services-putting-work-projects-pieter-van-balen-mendix-developer/) blog post.
+For more information, see [Published App Services](/refguide/published-app-services) in the *Studio Pro Guide*.
 
 ### 2.1 Settings
 
@@ -92,6 +92,5 @@ For more information, see [How to Share App Store Content](../app-store/share-ap
 ## 5 Read More
 
 * [Deploy and Manage](/developerportal/deploy)
-* [Mendix App Services: Putting Them to Work for Your Projects](https://www.mendix.com/videos/mendix-app-services-putting-work-projects-pieter-van-balen-mendix-developer/)
 * [Published App Service](/refguide/published-app-services)
 * [How to Share App Store Content](../app-store/share-app-store-content)

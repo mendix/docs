@@ -31,7 +31,7 @@ A row has the following properties:
 * **Style** – allows you to specify additional CSS styling
 * **Visible** – allows you to hide an element from a page
 
-For more information on properties listed above, see [Properties Common for Widgets](common-widget-properties).
+For more information on properties listed above, see [Properties Common in the Page Editor](common-widget-properties).
 
 ### 2.2 Cells and Their Properties {#cells}
 
@@ -39,9 +39,9 @@ Each section of a table row or column is called a cell. Cells can contain widget
 
 A cell has the following properties:
 
-* **Class** – allows you to specify one or more cascading style sheet (CSS) classes (for more information on this property, see [Properties Common for Widgets](common-widget-properties))
+* **Class** – allows you to specify one or more cascading style sheet (CSS) classes (for more information on this property, see [Properties Common in the Page Editor](common-widget-properties))
 
-* **Style** – allows you to specify additional CSS styling (for more information on this property, see [Properties Common for Widgets](common-widget-properties))
+* **Style** – allows you to specify additional CSS styling (for more information on this property, see [Properties Common in the Page Editor](common-widget-properties))
 
 * **Cell type** – indicates the type of the cell, the following options are possible:
 
@@ -116,14 +116,12 @@ Table properties consist of the following sections:
 
 #### 3.2.1 Width Unit
 
-The **Width Unit** defines whether the [**Column widths**](#column-widths) property is set in percentage or in pixels. 
+The **Width Unit** defines whether the [Column widths](#column-widths) property is set in percentage or in pixels. 
 
 | Value | Description |
 | --- | --- |
-| Percentage | The **Column widths** property is specified in percentages. When resizing, columns will become wider/narrower while keeping the same relative widths. |
+| Percentage  *(default)* | The **Column widths** property is specified in percentages. When resizing, columns will become wider/narrower while keeping the same relative widths. |
 | Pixels | The **Column widths** property is specified in pixels. When resizing, the pixel width columns will keep the same size; auto columns will become wider/narrower. |
-
-*Default value*: Percentage
 
 #### 3.2.2 Column Widths {#column-widths}
 
@@ -146,6 +144,6 @@ For example, you can you can have three columns of which the first is 200 pixels
 
 * [Page](page)
 * [Container Widgets](container-widgets)
-* [Properties Common for Widgets](common-widget-properties)
+* [Properties Common in the Page Editor](common-widget-properties)
 
 

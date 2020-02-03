@@ -24,7 +24,7 @@ For example, the following drop down allows the end-user to see, and set, the **
 
 An example of drop down properties is represented in the image below:
 
-{{% image_container width="250" %}}![](attachments/drop-down/drop-down-properties.png)
+{{% image_container width="300" %}}![](attachments/drop-down/drop-down-properties.png)
 {{% /image_container %}}
 
 Drop down properties consist of the following sections:
@@ -45,7 +45,7 @@ Drop down properties consist of the following sections:
 
 ### 2.2 Data Source Section{#data-source}
 
-{{% snippet file="refguide/attribute-path-property.md" %}}
+{{% snippet file="refguide/data-source-section-link.md" %}}
 
 ### 2.3 Design Properties Section{#design-properties}
 
@@ -95,7 +95,7 @@ For example, the drop-down that allows the end-user to select the region allocat
 
 ### 2.8 Validation Section{#validation}
 
-{{% snippet file="refguide/widget-validation.md" %}}
+{{% snippet file="refguide/widget-validation-link.md" %}}
 
 ### 2.9 Visibility Section{#visibility}
 

@@ -32,25 +32,13 @@ The [List View Swipe](https://appstore.home.mendix.com/link/app/47781/) widget m
 
 For a demo app project that has been deployed with this widget, see [here](http://listviewswipeout.mxapps.io).
 
-## 2 Usage
+## 2 Configuration
 
-### 2.1 Basic Usage
-
-Follow these steps to use this widget at a basic level:
+Follow these steps to configure this widget at a basic level:
 
 1. Place the widget directly underneath the list view.
 2. Provide the name of the list view in **General** > **Target list view** in the widget editor.
 3. Configure a **Swipe to left** or **Swipe to right** action on those respective editor tabs.
-
-### 2.2 Designing the Background
-
-To design the background of the view, follow these steps:
-
-1. Create one to four containers inside the list view item:
-	* The "swipe" container is shown as the foreground and is swiped away – add the `widget-listview-swipe-foreground` class to place this over the background containers
-	* The  "hide" container is sshown after swiping, during the hide animation
-	* It is possible to create a container for left and right swiping, or to share the containers
-2. Add the container names to their respective fields in the widget editor (as in, **Swipe container** and **Hide container** as configured on the **Swipe to left** or **Swipe to right** tabs).
 
 ## 3 Styling
 
@@ -77,8 +65,18 @@ Use the following details for styling:
 	* `.will-accept-swipe`
 	* `.swiping-right`
 	* `.swiping-left`
+	
+### 3.1 Designing the Background
 
-### 3.1 Disabling the Swipe
+To design the background of the view, follow these steps:
+
+1. Create one to four containers inside the list view item:
+	* The "swipe" container is shown as the foreground and is swiped away – add the `widget-listview-swipe-foreground` class to place this over the background containers
+	* The  "hide" container is shown after swiping, during the hide animation
+	* It is possible to create a container for left and right swiping, or to share the containers
+2. Add the container names to their respective fields in the widget editor (as in, **Swipe container** and **Hide container** as configured on the **Swipe to left** or **Swipe to right** tabs).
+
+### 3.2 Disabling the Swipe
 
 In some scenarios, swiping should be (conditionally) disabled. To disable a single swipe item, add the `.widget-listview-swipe-disabled`, `.widget-listview-swipe-disabled-left`, or `.widget-listview-swipe-disabled-right` CSS class to the list view item. To disable all the swipe actions, add the class to the list view .
 
@@ -94,10 +92,10 @@ To contribute to the development of this widget, follow these steps:
 	* [webpack-cli](https://www.npmjs.com/package/webpack-cli)
 	* [grunt-cli](https://github.com/gruntjs/grunt-cli)
 
-2. Fork and clone [mendixlabs/listview-swipe](https://github.com/mendixlabs/listview-swipe.git).
-3. The code is in typescript. To set up the development environment, run `npm install`.
+2. Fork and clone the [mendixlabs/listview-swipe](https://github.com/mendixlabs/listview-swipe.git) repository. The code is in Typescript.
+3. Set up the development environment by running `npm install`.
 4. Create a folder named *dist* in the project root.
-5. Create a Mendix test project in the *dist* folder and rename its root folder to *dist/MxTestProject* (or, get the test project from [mendixlabs/listview-swipe releases](https://github.com/mendixlabs/listview-swipe/releases/latest)). Changes to the widget code are automatically pushed to this test project.
+5. Create a Mendix test project in the *dist* folder and rename its root folder to *dist/MxTestProject*, or get the test project from [mendixlabs/listview-swipe releases](https://github.com/mendixlabs/listview-swipe/releases/latest). Changes to the widget code will be automatically pushed to this test project.
 6. To automatically compile, bundle, and push code changes to the running test project, run `grunt`.
 
 We are actively maintaining this widget. Please report any issues or suggestions for improvement at [mendixlabs/listview-swipe](https://github.com/mendixlabs/listview-swipe/issues).

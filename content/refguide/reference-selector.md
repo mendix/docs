@@ -10,7 +10,7 @@ tags: ["studio pro"]
 
 A **reference selector** is used to display and, optionally, allow the end-user to select the value of a one-to-one or one-to-many [association](association-properties) by selecting the associated object.
 
-A reference selector must be placed in a [data widget](data-widgets). The object(s) retrieved by that widget must be at the *many* end of a one-to-many association, or at either end of a one-to-one association.
+A reference selector must be placed in a [data widget](data-widgets). The object(s) retrieved by this data widget must be at the *many* end of a one-to-many association, or at either end of a one-to-one association.
 
 For example, if you have an employee they will work for one company. A company can have many employees. The entities **Employee** and **Company** have a one-to-many association, **Employee_Company**, which you can select by choosing a Company from the Employee through the reference selector.  
 
@@ -53,23 +53,9 @@ Reference selector properties consist of the following sections:
 
 ### 2.2 Data Source Section{#data-source}
 
-{{% snippet file="refguide/attribute-path-property.md" %}}
+{{% snippet file="refguide/data-source-section-link.md" %}}
 
 The attribute path specifies which attribute of an associated entity is shown in the reference selector. The path must follow one association of type reference starting in the entity of the data view.
-
-{{% alert type="info" %}}
-In the case of a reference selector you are selecting an association to another object. The attribute should indicate uniquely to the end-user which object is being selected.
-{{% /alert %}}
-
-The attribute can be of one of the following [data types](data-types):
-
-* Autonumber
-* Date and Time
-* Decimal
-* Enumeration
-* Integer
-* Long
-* String
 
 ### 2.3 Design Properties Section{#design-properties}
 
@@ -93,12 +79,9 @@ The formatting section applies only to the way that numeric attributes are displ
 * Integer
 * Long
 
-{{% todo %}}[Need to do something about numeric formatting]{{% /todo %}}
-
-{{% snippet file="refguide/numeric-formatting.md" %}}
+{{% snippet file="refguide/numeric-formatting-link.md" %}}
 
 ### 2.7 General Section{#general}
-
 
 #### 2.7.1 Select Using{#select-using}
 
@@ -148,7 +131,7 @@ It is recommended that you generate a new page to show by right-clicking the wid
 
 ![Generate a select page by right-clicking the widget](attachments/reference-selector/generate-select-page.png)
 
-See [Opening Pages](opening-pages). Note that opening select pages in content is prohibited.
+See the [Show a Page](on-click-event#show-page) section of *On Click Event & Events Section*. Note that select pages must have a [pop-up layout](layout#layout-type).
 
 **Page title**
 
@@ -275,7 +258,7 @@ In microflow settings you can specify what parameters are passed to the microflo
 
 ### 2.10 Validation Section{#validation}
 
-{{% snippet file="refguide/widget-validation.md" %}}
+{{% snippet file="refguide/widget-validation-link.md" %}}
 
 ### 2.11 Visibility Section{#visibility}
 

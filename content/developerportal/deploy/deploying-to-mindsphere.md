@@ -45,7 +45,7 @@ To deploy your app to MindSphere you need the following prerequisites.
 
 You must customize your app to allow it to be deployed to MindSphere, registered via the MindSphere Developer Cockpit, and shown in the launchpad. This is done through MindSphere customization modules. There are two ways to include the customization you need in your app.
 
-### 3.1 Option A: Using the MindSphere Starter App
+### 3.1 Option A: Using the MindSphere App Template
 
 The **MindSphere Starter Application** in the Mendix App Store contains all the modules and styling which you need to create an app you want to deploy to MindSphere.
 
@@ -75,7 +75,7 @@ Open Studio Pro (version 7.22.2 or above) and follow these steps:
 
 ### 3.2 Option B: Customizing an Existing App{#existingapp}
 
-If you have an existing app which was not based on the MindSphere starter app, you must import the required customization. The three modules which must be imported are:
+If you have an existing app which was not based on the MindSphere app template, you must import the required customization. The three modules which must be imported are:
 
 * MindSphere SSO from the Mendix App Store here: [Siemens MindSphere SSO](https://appstore.home.mendix.com/link/app/108805/)
 
@@ -231,6 +231,8 @@ To deploy your deployment package, do the following:
 
     For more information see [Using the a9s PostgreSQL](https://developer.mindsphere.io/paas/a9s-postgresql/using.html) on the MindSphere developers site.
 
+    {{% alert type="warning" %}}Each Mendix app needs its own database. Do not bind more than one app to a database as both apps will not work properly. Create a new database instance instead.{{% /alert %}}
+
 4.  Depending on your infrastructure and service broker usage, it may take several minutes to create the service instance. Check if your PostgreSQL service has been created successfully using the following command:
     `cf services`
     Your service should be listed, and the last operation should be ‘create succeeded’.
@@ -249,6 +251,8 @@ To deploy your deployment package, do the following:
     ```
 
     {{% alert type="info" %}}`disk_quota_size` and `memory_size` must be at least **512M** to enable a Mendix app to run.<br />See the *Cloud Foundry* [App Manifest Attribute Reference](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest-attributes.html) for more information on valid specifications for memory and disk quota sizes.{{% /alert %}}
+
+    {{% alert type="warning" %}}Each Mendix app needs its own database. Do not bind more than one app to a database as both apps will not work properly. Create a new database instance instead.{{% /alert %}}
 
     For more information on the configuration of manifest files, see [Configuring the manifest file](https://developer.mindsphere.io/howto/howto-cf-single-manifest.html#configuring-the-manifest-file) on the MindSphere developers site.
 
@@ -329,12 +333,22 @@ To create a new app in the MindSphere launchpad, do the following:
       If your app is running on MindSphere on **AWS** use Region `eu1`:
 
       ```code
-      default-src 'self' 'unsafe-inline' 'unsafe-eval' static.eu1.mindsphere.io sprintr.home.mendix.com; font-src 'self' static.eu1.mindsphere.io fonts.gstatic.com; style-src * 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval' static.eu1.mindsphere.io sprintr.home.mendix.com; img-src * data:;
+      default-src 'self' 'unsafe-inline' 'unsafe-eval' static.eu1.mindsphere.io feedback-static.mendix.com home.mendix.com;
+      font-src 'self' static.eu1.mindsphere.io fonts.gstatic.com;
+      script-src 'self' 'unsafe-inline' 'unsafe-eval' static.eu1.mindsphere.io feedback-static.mendix.com home.mendix.com;
+      style-src 'self' 'unsafe-inline' static.eu1.mindsphere.io feedback-static.mendix.com home.mendix.com fonts.googleapis.com;
+      img-src * data:;
+      connect-src 'self' 'unsafe-inline'  *;
       ```
       If your app is running on Mindsphere on **Azure** use Region `eu2`:
 
       ```code
-      default-src 'self' 'unsafe-inline' 'unsafe-eval' static.eu1.mindsphere.io sprintr.home.mendix.com; img-src 'self' static.eu1.mindsphere.io sprintr.home.mendix.com data: uistorageaccountprod.blob.core.windows.net; font-src 'self' data: *.eu2.mindsphere.io uistorageaccountprod.blob.core.windows.net static.eu1.mindsphere.io; style-src 'self' 'unsafe-inline' *.eu2.mindsphere.io uistorageaccountprod.blob.core.windows.net static.eu1.mindsphere.io sprintr.home.mendix.com home.mendix.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' *.eu2.mindsphere.io uistorageaccountprod.blob.core.windows.net static.eu1.mindsphere.io sprintr.home.mendix.com home.mendix.com; connect-src 'self' 'unsafe-inline' *;
+      default-src 'self' 'unsafe-inline' 'unsafe-eval' static.eu1.mindsphere.io feedback-static.mendix.com home.mendix.com;
+      font-src 'self' data: *.eu2.mindsphere.io uistorageaccountprod.blob.core.windows.net static.eu1.mindsphere.io fonts.gstatic.com;
+      script-src 'self' 'unsafe-inline' 'unsafe-eval' *.eu2.mindsphere.io uistorageaccountprod.blob.core.windows.net static.eu1.mindsphere.io feedback-static.mendix.com home.mendix.com;
+      style-src 'self' 'unsafe-inline' *.eu2.mindsphere.io uistorageaccountprod.blob.core.windows.net static.eu1.mindsphere.io feedback-static.mendix.com home.mendix.com fonts.googleapis.com;
+      img-src 'self' static.eu1.mindsphere.io feedback-static.mendix.com home.mendix.com sprintr.home.mendix.com data: uistorageaccountprod.blob.core.windows.net;
+      connect-src 'self' 'unsafe-inline' *;
       ```
 
       {{% alert type="info" %}}These content security policy (CSP) settings are needed to ensure that the MindSphere OS Bar and the [Mendix Feedback Widget](https://appstore.home.mendix.com/link/app/199/) are loaded correctly. You may need to set additional CSP settings if you make additional calls to other domains (for example, if you use Google maps from maps.googleapi.com).{{% /alert %}}
@@ -359,7 +373,7 @@ To set up the appropriate scopes in MindSphere, do the following:
     ![](attachments/deploying-to-mindsphere/image15.png)
 
 {{% alert type="info" %}}
-If you are using the starter app, you should create two scopes, *user* and *admin*.
+If you are using the app template, you should create two scopes, *user* and *admin*.
 {{% /alert %}}
 
 For an explanation of the relationship between Mendix roles and MindSphere roles, see section [Roles & Scopes](/partners/siemens/mindsphere-module-details#rolesscopes) in *MindSphere Module Details*.

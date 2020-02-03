@@ -98,5 +98,4 @@ The debugger is now connected to your app running in the cloud.
 * [Log Levels](log-levels)
 * [Debug Microflows](debug-microflows)
 * [Debug Java Actions](debug-java-actions)
-* [Handle Common Mendix SSO Errors](handle-common-mendix-sso-errors)
 * [The Ultimate Debugger](http://www.mendix.com/tech-blog/the-ultimate-debugger/) 

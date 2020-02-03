@@ -6,6 +6,6 @@ One of the strengths of Mendix is that it is easy to connect your Mendix applica
 
 For details on extensibility, see the following how-to's:
 
-* [How to Explore the Connectors and Adapters](explore-the-connectors-and-adapters)
 * [How to Access a Samba Share from the MxCloud](access-a-samba-share-from-the-mxcloud)
 * [How to Install and Configure the SMTP Module](install-and-configure-the-smtp-module)
+

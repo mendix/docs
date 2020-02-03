@@ -34,6 +34,10 @@ For each parameter of the nanoflow, you have to supply an argument of the same t
 
 This is the data type of the result of the called nanoflow. The return type is defined by the called nanoflow.
 
-### 3.2 Variable Name
+### 3.2 Use Return Value
 
-The name of the variable that will contain the result of the called nanoflow.
+If **User return value** is set to *Yes* you will be asked to give the return value a name.
+
+### 3.3 Variable Name, Object Name, or List Name
+
+The name of the variable, object, or list that will contain the result of the called nanoflow.

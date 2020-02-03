@@ -26,7 +26,7 @@ To allow you to both add a Group to a Customer, and add a Customer to a Group, y
 
 ![The domain model for a reference set selector between Customer (parent) and Group where the owner is 'both' (as in, the Customer and Group refer to each other)](attachments/reference-set-selector/domain-model-owner-both.png)
 
-In the reference set selector, the related entity and association used to connect it to the entity in the data view are displayed at the top of the reference set selector, and the names of the attributes of the associated objects which will be displayed are shown inside the reference set selector. Each attribute is displayed in a [column](columns). The association and related entity and attributes are displayed between square brackets, and colored blue.
+In the reference set selector, the related entity and association used to connect it to the entity in the data view are displayed at the top of the reference set selector, and the names of the attributes of the associated objects which will be displayed are shown inside the reference set selector. Each attribute is displayed in a [grid column](columns). The association and related entity and attributes are displayed between square brackets, and colored blue.
 
 For example, using the domain model above, the following reference set selector allows the end-user to associate a Customer with one or more Groups by setting the association **Customer_Group**. This is done by selecting the **Name**(s) of the **Group**(s) associated with the current **Customer**.
 
@@ -37,11 +37,15 @@ The reference set selector looks a lot like a [data grid](data-grid) and consequ
 *   The **Add** button adds an association to an existing object. You will need to specify the page which opens when you want to add a new association. For more information, see [Add Button](control-bar#add-button).
 *   The **Remove** button removes the association to an object, but does not change or delete the object itself
 
+{{% alert type="info" %}}
+You must explicitly commit the object in the data view containing your reference set selector to save the association changes. This can be done, for example, by having a **Save** button for the object in the data view (as shown for the *Customer* entity in the picture above).
+{{% /alert %}}
+
 ## 2 Properties
 
 An example of reference set selector properties is represented in the image below:
 
-{{% image_container width="400" %}}![](attachments/reference-set-selector/reference-set-selector-properties.png)
+{{% image_container width="250" %}}![](attachments/reference-set-selector/reference-set-selector-properties.png)
 {{% /image_container %}}
 
 Reference set selector properties consist of the following sections:
@@ -62,7 +66,7 @@ There are three additional sets of properties which do not appear in the propert
 
     ![](attachments/reference-set-selector/sort-bar.png)
 
-3. Each attribute is displayed in a column. You can find out more about the properties of these columns in [Columns](columns)
+3. Each attribute is displayed in a column. You can find out more about the properties of these columns in [Grid Columns](columns)
 
 ### 2.1 Common Section{#common}
 
@@ -70,23 +74,9 @@ There are three additional sets of properties which do not appear in the propert
 
 ### 2.2 Data Source Section{#data-source}
 
-{{% snippet file="refguide/attribute-path-property.md" %}}
+{{% snippet file="refguide/data-source-section-link.md" %}}
 
-The attribute path specifies which attribute(s) of an associated entity is shown in the reference set selector. The path must follow one association of type reference starting in the entity of the data view.
-
-{{% alert type="info" %}}
-In the case of a reference set selector you are selecting an association to another object. The attribute should indicate uniquely to the end-user which object is being selected.
-{{% /alert %}}
-
-The attribute can be of one of the following [data types](data-types):
-
-* Autonumber
-* Date and Time
-* Decimal
-* Enumeration
-* Integer
-* Long
-* String
+The attribute path specifies which attribute(s) of an associated entity is shown in the reference set selector. The path must follow one association of type reference set starting in the entity of the data view.
 
 {{% alert type="warning" %}}
 You cannot currently use non-persistable entities in a reference set selector.
@@ -121,19 +111,19 @@ If column widths are defined as percentages, you can also change the widths of c
 
 With this property you can change the number of rows that will be shown in one page. See also the property 'Show empty rows'.
 
-_Default value:_ 5
+Default: *5*
 
 #### 2.5.4 Show Empty Rows
 
 If you choose to show empty rows there will always be the grid that shows the same number of rows (see 'Number of rows') even if there are fewer objects to show on the page.
 
-_Default value:_ False
+Default: *False*
 
 #### 2.5.5 Tooltip page
 
 A tooltip page is a page that appears when you hover your mouse over a row. The tooltip page must contain a data view on the same entity as the data grid.
 
-The tooltip will only be shown for the columns you specify. The default for each column is that the tooltip will _not_ appear. See [Columns](columns) for more information.
+The tooltip will only be shown for the columns you specify. The default for each column is that the tooltip will _not_ appear. See [Grid Columns](columns) for more information.
 
 #### 2.5.6 Show Control Bar
 
@@ -145,13 +135,13 @@ Even if the control bar is invisible there can still be a default button that is
 
 {{% /alert %}}
 
-_Default value:_ True
+Default: *True*
 
 #### 2.5.7 Show Paging Buttons
 
 This property indicates whether the buttons to page through the information in the grid are visible or not. Only hide these buttons if you are sure that there will never be more objects than the number of rows of the grid. Note that hiding the control bar also hides the paging buttons.
 
-_Default value:_ True
+Default: *True*
 
 #### 2.5.8 Selection Mode
 
@@ -160,12 +150,10 @@ The selection mode determines whether and how the user can select items in the r
 | Value | Description |
 | --- | --- |
 | No selection | The user cannot select items. Of this is chosen, then you cannot have a **Remove** button in your reference set selector|
-| Single selection | The user can select a single item by clicking on it. Clicking another item will make that item the selection. Clicking a selected item will deselect it. |
+| Single selection  *(default)* | The user can select a single item by clicking on it. Clicking another item will make that item the selection. Clicking a selected item will deselect it. |
 | Single selection and maintain | The user can select a single item by clicking on it. The first item is always selected by default. Clicking another item will make that item the selection. Clicking a selected item will not deselect it. |
 | Multi-selection | The user can select multiple items by clicking the first one and holding the <kbd>Ctrl</kbd> key while clicking on other items. Clicking an item without the <kbd>Ctrl</kbd> key will deselect all other selected items and make the clicked item the selection. |
 | Simple multi-selection | The user can select multiple items by clicking on them in turn. |
-
-_Default value:_ Single selection
 
 #### 2.5.9 Select first
 
@@ -173,10 +161,8 @@ Specifies whether the first item should be selected by default when the referenc
 
 Possible values:
 
-* No
+* No *(default)* 
 * Yes
-
-_Default value:_ No
 
 #### 2.5.10 Default Button Trigger
 
@@ -185,9 +171,7 @@ The default button can be triggered by a single or a double click on a row.
 | Value | Description |
 | --- | --- |
 | Single click | A single click triggers the default button. This cannot be used in combination with allowing the user to select rows. |
-| Double click | A double click triggers the default button. |
-
-_Default value:_ Double click
+| Double click  *(default)* | A double click triggers the default button. |
 
 ### 2.6 Selectable Objects Section{#selectable-objects}
 

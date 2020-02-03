@@ -18,7 +18,7 @@ A group box can be used to visually group related widgets together. Group boxes 
 
 An example of group box properties is represented in the image below:
 
-{{% image_container width="350" %}}![Group Box Properties](attachments/container-widgets/group-box-properties.png)
+{{% image_container width="300" %}}![Group Box Properties](attachments/container-widgets/group-box-properties.png)
 {{% /image_container %}}
 
 Group box properties consist of the following sections:
@@ -38,13 +38,13 @@ Group box properties consist of the following sections:
 
 **Show Header** defines whether a header is shown above the group box. 
 
-_Default value:_ True
+Default: *True*
 
 #### 2.2.2 Caption
 
 This property is only displayed when the **Show Header** option is enabled. It defines the caption that is shown in the header.
 
-_Default value:_ Group box
+Default: *Group box*
 
 #### 2.2.3 Collapsible
 
@@ -52,11 +52,9 @@ This property specifies whether the group box can be collapsed by clicking the h
 
 Possible values of this property are the following:
 
-* **Yes (start expanded)** – the elements inside the group box will be initially displayed and can be collapsed when a user clicks a minus icon in the header
+* **Yes (start expanded)**  *(default)* – the elements inside the group box will be initially displayed and can be collapsed when a user clicks a minus icon in the header
 * **Yes (start collapsed)** – the elements inside the group box will be initially hidden and can be expanded when a user clicks a plus icon in the header
 * **No** – group box elements are always displayed and the group box cannot be collapsed
-
-_Default value:_ Yes (start expanded)
 
 ### 2.3 Visibility Section {#visibility}
 
@@ -66,6 +64,6 @@ _Default value:_ Yes (start expanded)
 
 * [Page](page)
 * [Container Widgets](container-widgets)
-* [Properties Common for Widgets](common-widget-properties)
+* [Properties Common in the Page Editor](common-widget-properties)
 
 

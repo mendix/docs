@@ -1,7 +1,7 @@
 ---
 title: "Attributes"
-parent: "entities"
-menu_order: 20
+parent: "domain-model"
+menu_order: 4
 tags: ["domain model", "entity", "attribute", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -43,7 +43,7 @@ Decimal | A positive or negative number that can have digits after the decimal p
 Enumeration | A list of predefined attributes. For more information, see [Enumerations](enumerations). 
 Integer | A whole number that can be positive (maximum 2<sup>31</sup>-1, thus 2147483647), negative (minimum -2<sup>31</sup>, thus -2147483648), or zero.
 Long | A whole number that can be positive (maximum 2<sup>63</sup>-1), negative (minimum -2<sup>63</sup>), or zero.
-String | A text containing letters, spaces, numbers and other characters.
+String *(default)* | A text containing letters, spaces, numbers and other characters.
 
 The maximum size that can approximately be stored in an attribute of type binary depends on the database:
 
@@ -51,17 +51,15 @@ The maximum size that can approximately be stored in an attribute of type binary
 | --- | --- | --- | --- |
 | 1 MB | 1 GB | 2 GB | 128 TB or limited by hard disk of server |
 
-_Default value:_ String
-
 In a web shop, you want to store the id, profile photo, level (for service quality), user name, password, activity, total of minutes spent online, year of subscription, date of birth, total amount of expenses and the standard amount of discount for a customer.
 
 The ID should be unique for every customer, so this attribute has type AutoNumber.
 
 The photo will be represented by an association to an entity that specializes Image. You do not use a Binary attribute for this purpose.
 
-Level has three possible values: High, Medium and Low. This is stored in an attribute of type Enum.
+Level has three possible values: High, Medium and Low. This is stored in an attribute of type Enumeration.
 
-The password itself should not be stored, but only its hash value, thus it is stored in an attribute of type HashString.
+The password itself should not be stored, but only its hash value, thus it is stored in an attribute of type **Hashed string**.
 
 A customer can be active or inactive, which is stored in an attribute named 'Active' of type Boolean.
 
@@ -73,7 +71,7 @@ This property indicates whether the date and time should be localized. By defaul
 
 In technical terms, this property indicates whether the client assumes that the date and time are in a local time zone (Yes) or in UTC (No). In the former case, the date is first converted to UTC before being sent to the server and converted from UTC before being displayed.
 
-*Default value*: Yes
+Default: *Yes*
 
 ### 3.3 Enumeration (Only for Enumeration Attribute Type)
 
@@ -83,13 +81,13 @@ The enumeration property indicates which enumeration defines the possible values
 
 This property specifies whether the length of a String is limited to a maximum or unlimited. In the case of a limited length, the 'Max length' property specifies the maximum (see below).
 
-_Default value:_ Limited
+Default: *Limited*
 
 ### 3.5 Max Length (Only for String Attribute Type)
 
 The 'Max length' property specifies the number of characters that can be stored in the attribute.
 
-_Default value:_ 200
+Default: *200*
 
 ## 4 Value
 
@@ -108,7 +106,7 @@ Take note of the following things when using **Calculated** attributes:
 
 If the value is a computation, the **Microflow** property defines which microflow defines this computation to calculate the value of the attribute when the object is retrieved. The microflow should have a parameter of the type of the entity of the attribute and it should return a value with the same type as the attribute.
 
-In a webshop, you want to show the total expenses for each customer. These are calculated by retrieving all orders associated with the customer and adding their totals.
+For example, in a web shop, you want to show the total expenses for each customer. These are calculated by retrieving all orders associated with the customer and adding their totals.
 
 ![](attachments/domain-model-editor/917570.png)
 
@@ -116,15 +114,15 @@ In a webshop, you want to show the total expenses for each customer. These are c
 
 The **Default value** property defines the value of this attribute when an object is created. The default value should be compatible with the type of the attribute.
 
-| Type of Attribute | Default Value Property | Additional Comments |
+| Type of Attribute | Default Value When Not Specified | Additional Comments |
 | --- | --- | --- |
-| AutoNumber | 1 | Starting value of the increment. If there are already rows in the table, the AutoNumber values will be based on the right 32 bits of the id column value. This can cause gaps in the AutoNumber ranges with jumps of 100, because id values are reserved by the Runtime in blocks of 100. |
+| AutoNumber | 1 | Starting value of this attribute. If there are already objects of this entity, the AutoNumber values will be based on the right 32 bits of the id column value. This can cause gaps in the AutoNumber ranges with jumps of 100, because id values are reserved by the Runtime in blocks of 100. |
 | Binary | N/A |   |
 | Boolean | False |   |
-| DateTime | (empty) | The default value should either comply with the format year-month-day (eventually postfixed by hour:minute, eventually postfixed by :second), or be `[%CurrentDateTime%]` (which means that when an object is created the value of this attribute is the date and time when the object is created). |
+| Date and time | (empty) | The default value can either be a UTC date with the format `year-month-day` (suffixed optionally by ` hour:minute`, or ` hours:minute:second`), or `[%CurrentDateTime%]` (which sets the value of this attribute to the date and time when the object is created). |
 | Decimal | 0 |   |
-| Enum | (empty) |   |
-| HashString | (empty) |   |
+| Enumeration | (empty) |   |
+| Hashed string | (empty) |   |
 | Integer | 0 |   |
 | Long | 0 |   |
 | String | (empty) |   |

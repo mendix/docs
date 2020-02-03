@@ -6,7 +6,7 @@ tags: ["studio pro"]
 
 ## 1 Introduction
 
-Data storage is the data foundation of the Mendix runtime. Data storage does the following:
+Data storage is the data foundation of the Mendix Runtime. Data storage does the following:
 
 * Connects to supported relational databases
 * Stores and retrieves entities and associations from the domain model

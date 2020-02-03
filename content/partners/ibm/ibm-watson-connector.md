@@ -48,7 +48,7 @@ If you are running your app on IBM Cloud and the Watson resources have been adde
 
 #### 1.1.2 IBM Watson Connector Suite
 
-Import the [IBM Watson Connector Suite](https://appstore.home.mendix.com/link/app/2860/) into your project from the App Store. This will give you access to the connector actions within your microflows. IBM starter apps for Watson have the suite already included.
+Import the [IBM Watson Connector Suite](https://appstore.home.mendix.com/link/app/2860/) into your project from the App Store. This will give you access to the connector actions within your microflows. IBM app templates for Watson have the suite already included.
 
 ![The list of IBM Watson connector actions available in Mendix microflows](attachments/ibm-watson-connector/connectorlist.png)
 

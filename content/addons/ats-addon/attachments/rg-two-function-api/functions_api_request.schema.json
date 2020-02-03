@@ -1,0 +1,91 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Function API request",
+    "description": "Request to execute an ATS function via the function API.",
+    "type": "object",
+    "properties": {
+        "remoteSeleniumDriver": {
+            "$ref": "#/definitions/_remoteSeleniumDriver"                
+        },
+        "functionToExecute": {
+            "$ref": "#/definitions/_functionToExecute"
+        }
+    },            
+    "required": [
+        "remoteSeleniumDriver",
+        "functionToExecute"
+    ],
+    "additionalProperties": false,
+    "definitions": {
+        "_remoteSeleniumDriver": {
+            "type": "object",
+            "properties": {
+                "url": {
+                    "type": "string"                
+                },
+                "sessionId": {
+                    "type": "string"
+                },
+                "dialect": {
+                    "type":  "string",
+                    "enum": [
+                        "OSS",
+                        "W3C"
+                    ],
+                    "default": "W3C"
+                },
+                "platform": {
+                    "type": "string",
+                    "enum": [
+                        "desktop",
+                        "android",
+                        "ios"
+                    ],
+                    "default": "desktop"
+                }
+            },
+            "required": [
+                "url",
+                "sessionId"
+            ],
+            "additionalProperties": false                
+        },
+        "_functionToExecute": {
+            "type": "object",
+            "properties": {
+                "key" : {
+                    "type": "string"
+                },
+                "values": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/_value"
+                    },
+                    "maxItems": 20
+                }
+            },
+            "required": [
+                "key"
+            ],
+            "additionalProperties": false
+        },
+        "_value": {
+            "type": "object",
+            "properties": {
+                "key": {
+                    "type": "string"
+                },
+                "value": {
+                    "type": ["number","string","boolean","null"]
+                },
+                "isWebElement": {
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "key"
+            ],
+            "additionalProperties": false
+        }
+    }
+}

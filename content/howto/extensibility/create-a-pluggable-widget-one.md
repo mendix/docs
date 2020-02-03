@@ -1,14 +1,14 @@
 ---
-title: "Build a Text Box Pluggable Widget: Part 1"
+title: "Build a Pluggable Web Widget: Part 1"
 parent: "pluggable-widgets"
 menu_order: 10
-description: "This how-to will teach you to create a pluggable widget."
+description: "This how-to will teach you to create a pluggable web widget."
 tags: ["widget", "pluggable", "JavaScript", "API", "JavaScript-API"]
 ---
 
 ## 1 Introduction
 
-Pluggable widgets are the new generation of custom-built widgets. These widgets are based on React and use a different architecture than the older custom widgets based on Dojo. With pluggable widgets, you can develop powerful tools in simple, precise ways. In the first part of this series, you will learn to create a text input widget step by step.
+Pluggable web widgets are the new generation of custom-built widgets. These widgets are based on React and use a different architecture than the older custom widgets based on Dojo. With pluggable web widgets, you can develop powerful tools in simple, precise ways. In the first part of this series, you will learn to create a text input widget.
 
 **This how-to will teach you how to do the following:**
 
@@ -38,7 +38,7 @@ The following steps will teach you to build a pluggable input widget, and show y
 
 ### 3.1 Creating a Test Project{#creating-a-test-project}
 
-1. Open Mendix Studio Pro and create a new test project by selecting **File > New Project** from the top menu bar. Select the starter app **Blank**, which is the last option on the last page. Then click the **Use this starting point** button, and on the **App Settings** dialog box click **Create app**.
+1. Open Mendix Studio Pro and create a new test project by selecting **File > New Project** from the top menu bar and then **Blank App**..
 
 	Optionally you may remove all unused custom widgets to optimize the debugging process. Select **Project > Show Project Directory in Explorer** from the Mendix Studio Pro menu and open the **widgets** folder. Then, delete all the files in this folder. 
 
@@ -56,10 +56,11 @@ The following steps will teach you to build a pluggable input widget, and show y
 	f. Provide the name *DSS_CreateTestObject* to this new microflow.<br />
 	g. Click the **Show** button. This will open the microflow editor. Then click the **OK** button to close the dialog box.<br />
 	h. Add a new **Create object** action on your microflow.
-3. Open the new **Create Object** action's properties by double clicking it. For its **Entity**, click the **Select** button and choose the entity you created above. Then click the **OK** button to close the dialog box.
-4. Right click on the **Create Entity** activity, then click **Set $NewEntity as Return Value**.
+	
+3. Open the new **Create Object** action's properties by double clicking it. For its **Entity**, click the **Select** button and choose the entity you created above. Then click **OK** to close the dialog box.
+4. Right-click the **Create Entity** activity, then click **Set $NewEntity as Return Value**.
 5. Go back to the home page, open the **Add Widget** menu, and then add a **TextBox** widget inside the data view.
-6.  Open the Textbox's properties and select the **Datasource Attribute (path)** string attribute you created above. Then click the **OK** button to close the dialog box. The end result should look like this:
+6. Open the Textbox's properties and select the **Datasource Attribute (path)** string attribute you created above. Then click the **OK** button to close the dialog box. The end result should look like this:
 
 	![](attachments/pluggable-part-one/createtestobject.png)
 
@@ -123,10 +124,12 @@ Open the **(YourMendixProject)/CustomWidgets/TextBox** folder in your IDE of cho
 	```
 
 	Explaining the code:
-	* The `TextBox.xml` is the [widget definition file](/apidocs-mxsdk/apidocs/pluggable-widgets#widget-definition) used in Mendix studio to read the widget's capabilities
+	
+	* *TextBox.xml* is the [widget definition file](/apidocs-mxsdk/apidocs/pluggable-widgets#widget-definition) used in Studio Pro which reads the widget's capabilities
 	* The property `pluginWidget=true` will make the widget work with the new widget API
-	* The `needsEntityContext=true` is set up to allow the attribute to be taken from context
+	* The property `needsEntityContext=true` is set up to allow the attribute to be taken from context
 	* The property of the [type attribute](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets#attribute) only allows the selection of string attributes from the domain model
+  
 3. The typescript typing based on the XML will be generated automatically. Start the development process with the following command: `$ npm run dev`.
 
 	This process will bundle the widget and generate the properties into *typings/TextBoxProperties.d.ts*.
@@ -204,6 +207,7 @@ Open the **(YourMendixProject)/CustomWidgets/TextBox** folder in your IDE of cho
 	```
 
 	Before moving on from this step, you should remove the import lines concerning the **Hello World** sample text from *TextBox.webmodeler.tsx* and *TextBox.tsx*, as these lines are no longer in use.
+
 7.  Add a test widget to the project home page:<br />
 	a. To find your widget for the first time you need to refresh from the files system. Use <kbd>F4</kbd> or select **Project > Synchronize Project Directory** from the Mendix Studio Pro menu.<br />
 	b. Navigate to **Home > Add widget** in the editor menu.<br />
@@ -216,7 +220,7 @@ Open the **(YourMendixProject)/CustomWidgets/TextBox** folder in your IDE of cho
 	![](attachments/pluggable-part-one/updateallwidgets.png)
 
 	{{% alert type="info" %}}The widgets in Studio and Studio Pro are not automatically updated. To refresh them press <kbd>F4</kbd> or select **Project > Synchronize Project Directory** from the Mendix Studio Pro menu to reload the widgets from the file system. Then right-click the widget and select **Update all widgets** to update the newly-changed properties in the widget.{{% /alert %}}
-8.  When running the project, the new widget is already functional. The first text box is a standard Text box widget and the second is your pluggable widget. When data is changed in the first input and the cursor is moved to the next widget, the data of your widget is also updated: 
+8.  When running the project, the new widget is already functional. The first text box is a standard Text box widget and the second is your pluggable web widget. When data is changed in the first input and the cursor is moved to the next widget, the data of your widget is also updated: 
 
 	![two text widgets](attachments/pluggable-part-one/twotextwidgets.png)
 
@@ -272,7 +276,7 @@ The input works, but the styling could be improved. In the next code snippets, y
 	* The style property is a React style object which can be passed to an HTML element directly
 	* `classNames` is an external utility function which dynamically creates and combines class names; it must be imported before it can be used (for the full API, see the property’s [documentation](https://github.com/JedWatson/classnames))
 	* Each property with a question mark is optional
-3.  Your efforts will result in a well-styled input widget:
+3. Your efforts will result in a well-styled input widget:
 
 	![styled widgets](attachments/pluggable-part-one/styledinputwidgets.png)
 
@@ -280,7 +284,7 @@ The input works, but the styling could be improved. In the next code snippets, y
 
 While the Mendix input widgets come with labels, you will need to add one to TextBox manually. With the new API it is easy to [add a label](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets#label) to any widget.
 
-1.  In the *TextBox.xml* file, add an element `<propertyGroup caption="Label">` with a child element `<systemProperty />` above the existing `<propertyGroup caption="Data source">` element:
+1. In the *TextBox.xml* file, add an element `<propertyGroup caption="Label">` with a child element `<systemProperty />` above the existing `<propertyGroup caption="Data source">` element:
 
 	```xml
 	<propertyGroup caption="Label">
@@ -292,11 +296,11 @@ While the Mendix input widgets come with labels, you will need to add one to Tex
 
 	![edit text box two](attachments/pluggable-part-one/edittextboxtwo.png)
 
-2.  Preview the label in the page editor:
+2. Preview the label in the page editor:
 
 	![edit data view one](attachments/pluggable-part-one/editdataviewone.png)
 
-3.  This will result in a label above or next to the input depending on the available space, data view `Form orientation`, and the `Label width (weight)`:
+3. This will result in a label above or next to the input depending on the available space, data view `Form orientation`, and the `Label width (weight)`:
 
 	![input widgets with label](attachments/pluggable-part-one/inputwidgetswithlabel.png)
 
@@ -377,7 +381,8 @@ Continue with the next tutorial to learn how to add validation feedback, custom 
 
 ## 4 Read More
 
-* [Build a Text Box Pluggable Widget: Part 2 (Advanced)](create-a-pluggable-widget-two)
+
+* [Build a Pluggable Web Widget: Part 2 (Advanced)](create-a-pluggable-widget-two)
 * [Pluggable Widgets API](/apidocs-mxsdk/apidocs/pluggable-widgets)
 * [Client APIs Available to Pluggable Widgets](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets)
 * [Pluggable Widget Property Types](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets)

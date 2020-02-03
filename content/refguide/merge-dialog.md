@@ -1,23 +1,25 @@
 ---
 title: "Merge Dialog"
-parent: "dialogs"
-tags: ["studio pro"]
+parent: "version-control-menu"
+tags: ["studio pro", "merge-dialog", "merge", "version control"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
-With the merge dialog you can [merge](version-control#merge) changes from a branch line to the main line. For example, a fix that you applied in a maintenance branch line can be merged back to the main line so that you do not have to apply the fix by hand again. Also if you completed developing a large feature in a separate branch line you can use merge to incorporate that feature into the main line.
+With the **Merge** dialog you can [merge](version-control#merge) changes from a branch line to the main line. For example, a fix that you applied in a maintenance branch line can be merged back to the main line so that you do not have to apply the fix by hand again. Also if you completed developing a large feature in a separate branch line you can use merge to incorporate that feature into the main line.
+
+To access the **Merge** dialog, open [Version Control menu](version-control-menu) > **Merge Changes Here**:
+
+![Merge Dialog](attachments/merge-dialog/merge-dialog.png)
 
 {{% alert type="warning" %}}
-
 Before continuing with the merge action, please make sure that you are currently working in the development line that you want to merge to.
-
 {{% /alert %}}
 
 The following merge scenarios are supported:
 
-## 2 Port fix
+## 2 Port Fix
 
 This merge scenario allows you to merge a fix from a maintenance branch line to the main line. If you just want to merge a small fix, a single commit is often enough. It is however also possible to merge multiple commits at once.
 
@@ -29,7 +31,7 @@ Choose the branch line from which you want to merge the fix.
 
 Choose whether you want to merge just a single commit or a whole range of commits from the maintenance branch line. In the latter case both the start and end revisions must be selected. The start revision is the revision with the lowest number and the end revision is the revision with the highest number. Note that all revisions that are contained within the specified range are merged.
 
-## 3 Merge feature branch
+## 3 Merge Feature Branch
 
 This merge scenario allows you to merge a complete feature branch line to the main line.
 

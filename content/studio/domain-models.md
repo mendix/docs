@@ -25,7 +25,7 @@ Let us say you have a collection of CDs like the one in the table below:
 | How to Dismantle an Atomic Bomb | U2                       |
 | Exodus                          | Bob Marley & The Wailers |
 
-The rows in the table are CDs. So, *CD* is the *entity* name. A specific CD like "How to Dismantle an Atomic Bomb" of the band U2 is called an *object* of the *CD* entity. Characteristics like the "Title" and "Artist" are called *attributes*.
+The rows in the table are CDs. So, a *CD* is an *entity*. A specific CD like "How to Dismantle an Atomic Bomb" of the band U2 is an *object* of the *CD* entity. That means that an *object* is a single instance of an entity. Characteristics like the "Title" and "Artist" are *attributes*.
 
 To view the **Domain Models** of your app in Studio, click the **Domain Models** icon in the left menu bar of Studio.
 
@@ -42,7 +42,7 @@ The **Auto Arrange** option in the top-left corner groups and aligns entities by
 
 The domain model can contain the following components:
 
-* [Entity](#entity-types) – represents a class of real-world objects. Entities can have attributes:
+* [Entity](#entity-types) – represents a class of real-world objects; entities can have attributes
  	* [Attribute](#attributes) – describes and/or identify the entity
 * [Association](#associations) – describes a relation between entities
 
@@ -64,7 +64,7 @@ Entities have the following properties:
 
   * **Name** – defines the name of the entity
 
-  * **Persistable** – defines whether objects of the entity are stored in the database (for more information on persistability, see [Persistability](/refguide/persistability) in *Studio Pro Guide*)
+  * **Persistable** – defines whether objects of the entity are stored in the database (for more information on persistability, see [Persistability](/refguide/persistability) in the *Studio Pro Guide*)
 
 		![General Properties of an Entity](attachments/domain-models/entity-general-properties.png)
 
@@ -163,25 +163,33 @@ A new attribute is added to the entity.
 
 ## 5 Adding New Associations
 
-To add an association in the domain model, do the following:
+There are several ways to add an association in the domain model. You can do one of the following:
 
-1. Select a block with an entity you want to add an association to.
-2.  Click the arrow icon:
+1. Click the dot icon that appears and do one the following:
 
-    {{% image_container width="250" %}}![](attachments/domain-models/adding-association.png)
-    {{% /image_container %}}
-   
-3.  Select a second entity for the new association from the list of existing entities and click **Select**. You can also create a new entity for the association from the dialog box. 
+    ![](attachments/domain-models/adding-association-dot-icon.png)
 
-    ![](attachments/domain-models/new-association.png)
+    1. To create an association with an existing entity, drag the dot to the second entity. 
 
-A module name is indicated next to the entity name in brackets. 
+    2.  To create an association with a new entity, drag the dot icon and hold it for a couple of seconds until it turns into a plus icon. By dropping the plus icon, you can create a new entity with an association from the first entity:
 
-{{% alert type="info" %}}
+        ![](attachments/domain-models/plus-icon.png)
 
-If you select the entity from another module, you will create a cross-module association. For more information, see the [Cross-Module Associations](domain-models-association-properties#cross-module-associations) section in *Associations*. The entities of the current module are listed first. 
+4. Select a block with an entity you want to add an association to do the following:
 
-{{% /alert %}}
+    1.  Click the arrow icon:
+    
+        {{% image_container width="250" %}}![](attachments/domain-models/adding-association.png)
+        {{% /image_container %}}
+
+    2.  Select a second entity for the new association from the list of existing entities and click **Select**. You can also create a new entity for the association from the dialog box. 
+
+        ![](attachments/domain-models/new-association.png)
+
+        A module name is indicated next to the entity name in brackets. 
+    
+        {{% alert type="info" %}} If you select the entity from another module, you will create a cross-module association. For more information, see the [Cross-Module Associations](domain-models-association-properties#cross-module-associations) section in *Associations*. The entities of the current module are listed first.     
+        {{% /alert %}}
 
 ## 6 Specifying Properties
 
@@ -206,7 +214,7 @@ To change the entity properties, click the entity in the domain model. The **Pro
 You can manage the following properties of an attribute:
 
 *   The **Name** of the attribute
-*   The [**Type**](domain-models-attributes)  of the attribute
+*   The [Type](domain-models-attributes)  of the attribute
 
 	![](attachments/domain-models/attribute-properties.png)
 

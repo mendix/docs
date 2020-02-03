@@ -152,8 +152,8 @@ These settings can be used to store files using the Microsoft Azure blob storage
 | com.mendix.storage.azure.Container | Name of the container containing the blob. The container is created if it does not exist yet. |   |
 | com.mendix.storage.azure.ParallelismFactor | Maximum number of parallel multi-part file uploads / downloads. We advise you not to change this setting unless you experience slow file transfers for large files. Choosing larger values will lead to higher memory usage. | 5 |
 |com.mendix.storage.azure.UseHttps| Introduced in version 7.7. For enabling or disabling secure connections using HTTPS. Can be `true` or `false`. | `true` |
-| com.mendix.storage.azure.TimeoutIntervalInMs | Sets the amount of time (in milliseconds) to allow a call to the storage service to complete. For more information, see [the Azure Libraries](https://azure.github.io/azure-sdk-for-java/com/microsoft/azure/storage/RequestOptions.html#setTimeoutIntervalInMs-java.lang.Integer-). | No timeout |
-| com.mendix.storage.azure.MaximumExecutionTimeInMs | Sets the maximum execution time (in milliseconds) to use when making this request. For more information, see [the Azure Libraries](https://azure.github.io/azure-sdk-for-java/com/microsoft/azure/storage/RequestOptions.html#setMaximumExecutionTimeInMs-java.lang.Integer-). | No maximum time |
+| com.mendix.storage.azure.TimeoutIntervalInMs | Sets the amount of time (in milliseconds) to allow a call to the storage service to complete. For more information, see [the Azure Libraries](https://azure.github.io/azure-sdk-for-java/storage.html). | No timeout |
+| com.mendix.storage.azure.MaximumExecutionTimeInMs | Sets the maximum execution time (in milliseconds) to use when making this request. For more information, see [the Azure Libraries](https://azure.github.io/azure-sdk-for-java/storage.html). | No maximum time |
 
 {{% alert type="warning" %}}
 

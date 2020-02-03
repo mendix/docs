@@ -13,9 +13,9 @@ addons:
   space: "Add-on Guides"
   priority: false
   menu_categories:
+    - "ATS Guide"
     - "APM Guide"
     - "AQM Guide"
-    - "ATS Guide"
 howto6:
   space: "Mendix 6 How-to's"
   priority: false
@@ -115,8 +115,8 @@ releasenotes:
     - "Studio"
     - "Developer Portal"
     - "App Store"
-    - "SDKs"
     - "Mobile"
+    - "SDKs"
     - "Add-ons"
     - "Mendix Beta Features"
 developerportal:
@@ -143,6 +143,7 @@ studio:
     - "Pages"
     - "Navigation Document"
     - "Microflows"
+    - "Buzz"
     - "Data Filters"
     - "Previewing & Publishing Your App"
     - "Checks"
@@ -158,7 +159,7 @@ studio7:
     - "Domain Model"
     - "Pages"
     - "Navigation Document"
-    - "Microflows"
+    - "Microflows"    
     - "Data Filters"
     - "Previewing & Publishing Your App"
     - "Checks"
@@ -170,18 +171,18 @@ partners:
   space: "Strategic Partners Guide"
   priority: false
   menu_categories:
-    - "IBM"
-    - "SAP"
     - "Siemens"
+    - "SAP"
+    - "IBM"
 appstore:
   space: "App Store Guide"
   priority: false
   draft: true
   menu_categories:
-    - "Starter Apps"
+    - "Connectors"
     - "Widgets"
     - "Modules"
-    - "Connectors"
+    - "Themes"
 product-naming:
   space: "Mendix Product Naming Guide"
   priority: false
@@ -191,4 +192,4 @@ product-naming:
     - "Other Mendix Terms"
     - "Strategic Partner Terms"
     - "Terminology History"
-    
+    - "Maintaining Documentation Links"

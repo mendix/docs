@@ -24,7 +24,7 @@ To be able to create such a domain model, there are several questions that you n
 2.  Which SDK classes do you need to use?
 3.  How do you use those SDK classes?
 
-The answer to the first question is directly based on functional requirements: you need to create two entities, one association, and set the generalization of one of the two entities. For the answers to the second and third question you need to combine information from several sources of information: the [*Studio Pro Guide*](/refguide/), [References](sdk-refguide), and the [Model SDK API](https://apidocs.mendix.com/modelsdk/latest/index.html) documentation.
+The answer to the first question is directly based on functional requirements: you need to create two entities, one association, and set the generalization of one of the two entities. For the answers to the second and third question you need to combine information from several sources of information: the [Studio Pro Guide](/refguide/), [References](sdk-refguide), and the [Model SDK API](https://apidocs.mendix.com/modelsdk/latest/index.html) documentation.
 
 The *Studio Pro Guide* gives an overview of what can be configured for different parts of the Mendix app model, the Mendix Metamodel reference guide specifies in detail which actual programmable objects are available in the SDK, and the Model SDK API docs provide the precise API details needed to write the actual code.
 
@@ -158,24 +158,16 @@ const generalization = domainmodels.Generalization.createIn(customer);
 generalization.generalization = systemUser;
 ```
 
-New entities by default have a `NoGeneralization` set, so the `generalization` property for the `Customer` entity needs to be updated:
-
-```ts
-customer.generalization = generalization;
-```
-
 Together, the creation of the `Customer` entity will look like the following code snippet. Replace the creation of the `customer` entity instance in the script with the following snippet:
 
 ```ts
-const systemUser = workingCopy.model().findEntityByQualifiedName(`Administration.Account`);
-
-const generalization = domainmodels.Generalization.createIn(customer);
-generalization.generalization = systemUser;
-
 const customer = domainmodels.Entity.createIn(domainModel);
 customer.name = `Customer`;
 customer.location = { x: 100, y: 100 };
-customer.generalization = generalization;
+
+const generalization = domainmodels.Generalization.createIn(customer);
+const systemUser = workingCopy.model().findEntityByQualifiedName(`Administration.Account`);
+generalization.generalization = systemUser;
 ```
 
 ### 4.1 Resources

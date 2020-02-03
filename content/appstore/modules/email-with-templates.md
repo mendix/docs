@@ -24,9 +24,7 @@ The typical usage scenario is sending emails with a template system and using to
 #### 1.2.2 Java Libraries
 
 * *commons-codec-1.10.jar*
-* *commons-email-1.3.1*
 * *commons-email-1.4.0.jar*
-* *com.sun.mail.javax.mail-1.4.5.jar*
 * *javax.mail-1.6.0.jar*
 
 ## 2 Configuration

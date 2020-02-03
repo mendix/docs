@@ -22,7 +22,7 @@ The hybrid mobile app packaging process is based on Adobe PhoneGap. We have inte
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Have a Mendix app with mobile support running in the Mendix Cloud, either as a Free App or on a licensed cloud node
-	* If you require an app to test with, set up the [Company Expenses](https://appstore.home.mendix.com/link/app/240/) app from the Mendix App Store as a Free App to try out its mobile features 
+	* If you require an app to test with, set up the [Event App](https://appstore.home.mendix.com/link/app/36793/) from the Mendix App Store as a Free App to try out its mobile features 
 * Have an account for Adobe PhoneGap Build (you can create one for free [here](https://build.phonegap.com/plans/free-adobeid))
 
 To publish your app in the Apple App Store, do the following:
@@ -122,7 +122,7 @@ Apple provides general information on [publishing an iOS app in the Apple App St
 
 	![add a key](attachments/publishing-a-hybrid-app/add-a-key.png)
 
-3. A dialog box will prompt you to upload a certificate file and a provisioning profile file. You can get those files from Apple. The certificate is the *.p12* file, and the provisioning profile is the *.mobileprovision* file. For more information, see [Managing App Signing Keys](/refguide/managing-app-signing-keys).
+3. A dialog box will prompt you to upload a certificate file and a provisioning profile file. You can get those files from Apple. The certificate is the *.p12* file, and the provisioning profile is the *.mobileprovision* file. For more information, see the [Managing App Signing Keys Reference Guide](/refguide/managing-app-signing-keys).
 3. Give the key a title that you can easily recognize, and upload the files.
 4.  Click the lock with the yellow background on the same row as your key and enter a passphrase. The key can now be used for builds for the period of an hour. After an hour, the passphrase needs to be entered again:
 

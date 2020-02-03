@@ -43,7 +43,7 @@ The return type property is the data type of the JavaScript action's result. The
 
 This property determines if the returned value from the JavaScript action should be stored in a variable.
 
-### 3.3 Variable, Object, or List
+### 3.3 Variable Name, Object Name, or List Name
 
 The result of the Javascript action will be given this name. The label indicates whether the result is a variable, object, or list. If it is an object or list, the **Return type** will indicate the entity which is being returned. You may only set a variable name if **Use return value** has been set to **Yes**.
 

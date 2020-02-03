@@ -10,11 +10,11 @@ draft: true
 
 Use the [Database Connector](https://appstore.home.mendix.com/link/app/2888/) to incorporate your external data directly in your Mendix application. This connector enables seamlessly connecting to external databases without being limited in your choice of database or SQL dialect.
 
-This section of the *App Store Components Guide* focuses on executing an SQL `SELECT` query and SQL statements on external relational databases.
+This document focuses on executing an SQL `SELECT` query and SQL statements on external relational databases.
 
-The `Execute query` action (which is present in the connector) provides a consistent environment for Mendix app projects to perform an arbitrary `SELECT` SQL query on relational external databases.  A Java database connectivity (JDBC) API (which is a standard Java API) is used when the Java action attempts to connect with a relational database for which a JDBC driver exists.
+The **Execute query** action (which is present in the connector) provides a consistent environment for Mendix app projects to perform an arbitrary `SELECT` SQL query on relational external databases.  A Java database connectivity (JDBC) API (which is a standard Java API) is used when the Java action attempts to connect with a relational database for which a JDBC driver exists.
 
-The `Execute statement` action works internally in the same manner as the`Execute query` action. However, it is used for `INSERT`, `UPDATE`, `DELETE`, `STORED PROCEDURE`, or `DDL` statements.
+The **Execute statement** action works internally in the same manner as the **Execute query** action. However, it is used for `INSERT`, `UPDATE`, `DELETE`, `STORED PROCEDURE`, or `DDL` statements.
 
 ### 1.1 Dependencies
 
@@ -31,25 +31,25 @@ These are the prerequisites for using this connector:
 	* For example, if you want to connect to Amazon RDS PostgreSQL database (`jdbc:postgresql://xyz-rds-instance.ccnapcvoeosh.eu-west-1.rds.amazonaws.com:5432/postgres`), you need to place the PostgreSQL JDBC driver *.jar* inside the **userlib** folder
 	* For more information, see the [Common JDBC Drivers](#links) section below
 * Specific to the `Execute` query action: an entity in the domain model that can be used for the results of the executed query
-	* For example, a query like `select name, number from stock` has two columns (of the string and integer type, respectively), so in order to use the `Execute` query action, you have to add an entity in the domain model that has the same attributes as the columns in the query
+	* For example, a query like `select name, number from stock` has two columns (of the string and integer type, respectively), so in order to use the **Execute query** action, you have to add an entity in the domain model that has the same attributes as the columns in the query
 
 ## 3 Getting Started
 
 ### 3.1 Usage
 
-Once you have imported the Database Connector into your app project, you will have **Database Connector** available in the **Toolbox**. The connector supports two actions: `Execute query` and `Execute statement`. To use either of these in your Mendix application, drag them into your microflow. Next, provide all the arguments for the selected action and choose the output result name.
+Once you have imported the Database Connector into your app project, you will have **Database Connector** available in the **Toolbox**. The connector supports two actions: **Execute query** and **Execute statement**. To use either of these in your Mendix application, drag them into your microflow. Next, provide all the arguments for the selected action and choose the output result name.
 
 ### 3.2 Results
 
 These are the results of the actions:
 
-* `Execute query` –  a list of objects of the row type, which is also the output of the `SELECT SQL` query
-* `Execute statement` – either an integer or a long value, which usually represents the amount of affected rows
+* **Execute query** –  a list of objects of the row type, which is also the output of the `SELECT SQL` query
+* **Execute statement** – either an integer or a long value, which usually represents the amount of affected rows
 
 ## 4 Best Practices
 
-* Avoid havinga user input as part of your dynamic SQL queries and statements (in the future, using parameters with queries or statements will be supported)
-* Avoid fetching large amounts of data, which can lead to memory issues (as all the `ResultSet` data is loaded into memory at once)
+* Avoid having a user input as part of your dynamic SQL queries and statements (in the future, using parameters with queries or statements will be supported)
+* Avoid fetching large amounts of data, which can lead to memory issues (as all the **ResultSet** data is loaded into memory at once)
 
 ## 5 Common JDBC Drivers {#links}
 

@@ -8,7 +8,7 @@ tags: ["Deploy","Manage", "Mendix Cloud", "IBM", "SAP", "Cloud Foundry", "Kubern
 
 A Mendix application can be deployed in different ways. You can deploy to your local machine for development and testing. You can deploy to the Mendix cloud, which is the default location for both free and licensed apps. You can also deploy to IBM Cloud, SAP Cloud Platform, Cloud Foundry-based platforms, Docker containers, Azure, or to a server you configured yourself.
 
-This section of the Developer Portal Guide contains step-by-step instructions, and additional reference material, to help you to deploy and manage your Mendix apps in the cloud or on premises. It is split into a number of sections:
+This section of the *Developer Portal Guide* contains step-by-step instructions, and additional reference material, to help you to deploy and manage your Mendix apps in the cloud or on premises. It is split into a number of sections:
 
 * [General](general) – contains information which applies to deployments in many different environments
 * Environment-specific sections – these contain instructions for the deployment and maintenance of apps in specific environments, for example, [Mendix Cloud](mendix-cloud-deploy) and [SAP Cloud Platform](sap-cloud-platform)
@@ -41,13 +41,13 @@ For more information, see [Mendix Cloud](mendix-cloud-deploy).
 
 ## 4 IBM Cloud
 
-If you create your app from an IBM Starter App, or an IBM Starter Kit on IBM Cloud, then the Developer Portal will lead you through the creation of an environment on IBM Cloud. You can then deploy your app to your IBM environment directly from within Studio Pro.
+If you create your app from an IBM app template, or an IBM Starter Kit on IBM Cloud, then the Developer Portal will lead you through the creation of an environment on IBM Cloud. You can then deploy your app to your IBM environment directly from within Studio Pro.
 
 For more information, see [IBM Cloud](ibm-cloud).
 
 ## 5 SAP Cloud Platform
 
-If you create your app from an SAP Starter App, the Developer Portal will lead you through the creation of an environment on SAP Cloud Platform. You can then deploy your app to your SAP Cloud Platform environment directly from within Studio Pro.
+If you create your app from an SAP app template, the Developer Portal will lead you through the creation of an environment on SAP Cloud Platform. You can then deploy your app to your SAP Cloud Platform environment directly from within Studio Pro.
 
 For more information, see [SAP Cloud Platform](sap-cloud-platform).
 

@@ -1,6 +1,7 @@
 ---
-title: "History Dialog"
-parent: "dialogs"
+title: "History"
+parent: "version-control-menu"
+menu_order: 50
 tags: ["studio pro"]
 ---
 ## 1 Introduction
@@ -40,4 +41,5 @@ This tab page shows a list of the files that were changed on disk. You see wheth
 
 ## 7 Read More
 
-* [Dialog Boxes](dialogs)
+* [Version Control](version-control)
+* [Stories Pane](stories-pane)

@@ -87,7 +87,7 @@ If you are unlinking from a licensed node, the node is NOT deleted and data is r
 
 Before you can link an app to a new environment, you need to unlink it from its current environment. All apps will be created as a Free App by default the first time they are deployed. In most cases, therefore, you will have to unlink them.
 
-### 4.2.1 Unlinking a Free App{#unlink-free}
+#### 4.2.1 Unlinking a Free App{#unlink-free}
 
 To unlink a Free App, do the following:
 
@@ -115,7 +115,7 @@ To unlink a Free App, do the following:
 
 Your app has now been unlinked from the Free App environment.
 
-### 4.2.1 Unlinking a Licensed App
+#### 4.2.2 Unlinking a Licensed App{#unlink-licensed}
 
 It is not possible to unlink an app from a licensed node. The only way to do this is to connect another app to the licensed node; this will unlink the existing app automatically.
 
@@ -165,7 +165,7 @@ To connect your app to a licensed node, do the following:
 
 Your app is now connected to this node.
 
-### 4.3.2 Connecting Your App: Method 2
+#### 4.3.2 Connecting Your App: Method 2
 
 {{% alert type="info" %}}
 The method described below will only work if there is currently no app linked to the node.

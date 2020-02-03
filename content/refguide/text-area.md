@@ -20,7 +20,7 @@ For example, the following text area allows the end-user to see, and set, the **
 
 An example of text area properties is represented in the image below:
 
-{{% image_container width="250" %}}![](attachments/text-area/text-area-properties.png)
+{{% image_container width="300" %}}![](attachments/text-area/text-area-properties.png)
 {{% /image_container %}}
 
 Text area properties consist of the following sections:
@@ -41,7 +41,7 @@ Text area properties consist of the following sections:
 
 ### 2.2 Data Source Section{#data-source}
 
-{{% snippet file="refguide/attribute-path-property.md" %}}
+{{% snippet file="refguide/data-source-section-link.md" %}}
 
 ### 2.3 Design Properties Section{#design-properties}
 
@@ -82,13 +82,13 @@ This differs from the [On change](#on-change) property in that the event will al
 
 This property defines whether the text area grows automatically depending on the amount of text in it.
 
-_Default value:_ No
+Default: *No*
 
 #### 2.6.2 Number of Lines
 
 **Number of lines** determines the size of the text area, based on the height of the lines. If the text in the text area contains more lines, a scrollbar will enable the end-user to see it all. This property is only used if **Grow automatically** is set to *No*.
 
-_Default value:_ 5
+Default: *5*
 
 #### 2.6.3 Counter Message
 
@@ -101,8 +101,6 @@ For example, if you use the counter message `You've used {1} characters of the {
 ![](attachments/text-area/counter-message.png)
 
 #### 2.6.4 Text Too Long Message
-
-{{% todo %}}[DOES THIS ACTUALLY DO ANYTHING - HOW CAN IT BE DISPLAYED?]{{% /todo %}}
 
 {{% alert type="info" %}}Text too long message is not supported on native mobile pages.{{% /alert %}}
 
@@ -130,7 +128,7 @@ It can be used, for example, to give a hint to the end-user what kind of text sh
 
 ### 2.8 Validation Section{#validation}
 
-{{% snippet file="refguide/widget-validation.md" %}}
+{{% snippet file="refguide/widget-validation-link.md" %}}
 
 ### 2.9 Visibility Section{#visibility}
 

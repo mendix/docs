@@ -24,7 +24,7 @@ A label shows static text, which describes the purpose of a specific widget to a
 
 An example of label properties is represented in the image below:
 
-{{% image_container width="350" %}}!![Label Properties](attachments/common-widgets/label-properties.png)
+{{% image_container width="300" %}}![Label Properties](attachments/common-widgets/label-properties.png)
 {{% /image_container %}}
 
 Label properties consist of the following sections:
@@ -50,4 +50,4 @@ The **General** section contains the **Caption** property. **Caption** defines t
 
 * [Page](page)
 * [Common Widgets](common-widgets)
-* [Properties Common for Widgets](common-widget-properties)
+* [Properties Common in the Page Editor](common-widget-properties)

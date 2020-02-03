@@ -21,6 +21,8 @@ We are heavily invested in streamlining the experience of building your apps and
 
 * The image functionality has been updated. With this improvement we were able to remove all extra dependencies and compress the CLI to a single executable.
 
+* We introduced new iOS-specific configuration commands. For more information, see [Native Builder](/refguide/native-builder).
+
 ## Fixes
 
 * We fixed an issue with the OTA archiving algorithm that could make consecutive updates fail to install.

@@ -27,19 +27,11 @@ All performance issues are extremely context-sensitive. That is, there is no sin
 
 ## Slow UI
 
-If your user interface is slow, you'll need to figure out whether this is due to slow microflows called by the page, or due to a large number of calls made by the UI. To determine, you'll need to use a web browser debugger, such as Firebug [http://getfirebug.com/](http://getfirebug.com/).
+If your user interface is slow, you will need to figure out whether this is due to slow microflows called by the page or to a large number of calls made by the UI. To determine this, you need to use a web browser with developer tools (a console, debugger, performance tools, etc.) like [Firefox Developer Edition](https://www.mozilla.org/nl/firefox/developer/).
 
-After installing Firebug, open your app in Firefox, navigate to your app, and before you load the page with an issue, press the F12 key on your keyboard. This will activate Firebug:
+In an example scenario, you run tests on your app and find that you have 26 XPath retrieves for a single page load. You may be able to see the run times for each step and how long each step waited before starting. Some retrieves may take longer than others, but the fact that you have such a large amount of retrieves occurring is also a potential issue.
 
-![](attachments/18448611/18580223.png)
-
-From here, click on the "Net" tab and activate Firebug if prompted. Then, select the _all_ sub-tab. Next, in Firefox load your slow page. Your Firebug window should look something like this:
-
-![](attachments/18448611/18580224.png)
-
-Here I have _26_ xpath retrieves for my single page load. The timeline on the right gives you run times for each step (purple), and indicates how long that step waited before starting (grey). In my case, I have a few retrieves that took longer than others, but the fact that I have 26 retrieves occurring is also a potential issue.
-
-Once you've identified the cause, either too many loads, or slow loads, you're ready to move on.
+Once you have identified the cause for your slow UI—either too many loads or slow loads—you can move on to the sections below.
 
 ### Too Many Loads
 
@@ -55,11 +47,7 @@ Every situation is unique, but you're well on your way to finding your slow comp
 
 ### Slow Loads
 
-So you've determined that slow loads are your issue. Take a look at the slow load in Firebug, and determine where it comes from:
-
-*   A retrieve action
-*   A microflow
-*   Slow network (long transfer time for small amount of data)
+If you have determined that slow loads are your issue, take a look at the slow load with your developer tools and determine where it comes from. The sections below address specific examples.
 
 #### Slow Network
 

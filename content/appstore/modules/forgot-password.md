@@ -1,5 +1,5 @@
 ---
-title: "Audit Trail"
+title: "Forgot Password"
 category: "Modules"
 description: " "
 tags: [ ]
@@ -14,10 +14,10 @@ With this module, the end-user can enter their email address, and an email will 
 
 ### 1.1 Dependencies {#dependencies}
 
-* [Email with Templates](email-with-templates) module
-* [Deep Link](deep-link) module
-* [Encryption](encryption) module
-* [Model Reflection](model-reflection) module
+* [Email with Templates](email-with-templates)
+* [Deep Link](deep-link)
+* [Encryption](encryption)
+* [Model Reflection](model-reflection)
 
 ## 2 Configuration
 

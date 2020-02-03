@@ -206,7 +206,7 @@ native-builder.exe bundle --project-name "CoolApp" --output-path "C:\bundles"
 | `--output-path` | The absolute output path for the *ZIP* archives **Required**                                             | `C:\bundles`       |
 | `--platform`          | Platform with which to run command for. Defaults to both iOS and Android. | `ios` or `android` |
 
-### 2.9 iOS Specific Configurations
+### 2.9 iOS-Specific Configurations
 
 Commands to modify the iOS configuration are groupped under the `ios` command.
 

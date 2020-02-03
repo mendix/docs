@@ -349,10 +349,10 @@ To write your own NFC tag, do the following:
 
 1. Install the NFC Tools app on your device.
 2. Open the NFC Tools app.
-3. Scan your tag. The **Technology available** section it should state it supports *NDEF*. The **Writeable** section should show **Yes**.
-4. Click **WRITE**, **Add a record**, and select **Text**.
-5. Enter the text *Hello Mendix Developer!* and click **OK**.
-6. Click **Write / 30 Bytes**.
+3. Scan your tag. The **Technologies available** section should state it supports *Ndef*. The **Writeable** section should show **Yes**.
+4. Tap **WRITE**, tap **Add a record**, and tap **Text**.
+5. Enter the text *Hello Mendix Developer!* and tap **OK**.
+6. Tap **Write / 30 Bytes**.
 7. Scan your tag. You will receive a **Write complete** dialog box:
 
 	![write nfc tag](attachments/create-native-javascript-action/nfc-tools-write-tag.jpg)
@@ -368,17 +368,17 @@ Making software is an iterative process. If you integrate your own module or bui
 {{% /alert %}}
 
 1. Open your CLI.
-2. Run the following command to rebuild: 
+2. Run the following command to rebuild your NFC app: 
 
 	``` shell
-	$ native-builder.exe build dev-app --project-name "Native NFC App"`.
+	$ native-builder.exe build dev-app --project-name "Native NFC App" --app-version 1.1 --build-number 1.1
 	```
 
 	This builder will use the configuration you set during the [Install a Dependency in Your Project](#install-dependency-project) section above.
 3. After the build has successfully finished, the build file will be available in *C:\native-builder\builds*.
 4. Uninstall the previous version of the app on your device.
 5. Install the app on your device. For more information on installing an app on your device, see the [Distributing](/howto/mobile/deploying-native-app#distributing) section of *Deploy Your First Mendix Native App*.
-7. Open the app, tap **Scan tag**, and scan your NFC tag. You should see an information dialog box with the text contained by the tag:
+7. Open the app, tap **Scan tag**, and scan your NFC tag. You should see an information dialog box with the text contained by the tag [todo: 1 I got a "nfc manager module error" 2 while the NFC app is still open, touching an NFC tag to the device will spawn a dialog from THAT app, not the custom dev app. I must add a step to say "close nfc app"?]:
 
 	![read NFC tag scanning ios](attachments/create-native-javascript-action/native-nfc-app-scanning-ios.png)
 
@@ -489,7 +489,7 @@ For the full explanation on how to build, sign, and distribute your app to an ap
 
 {{% alert type="info" %}}
 
-The Native Builder will locally run MxBuild. The output is a *bundles.js* file which will be pack with your application. Therefore, any update on your Mendix model requires a new build. You are not building a development app that updates automatically.
+The Native Builder will locally run MxBuild. The output is a *bundles.js* file which will be packaged with your application. Therefore, any update on your Mendix model requires a new build. You are not building a development app that updates automatically.
 
 {{% /alert %}}
 

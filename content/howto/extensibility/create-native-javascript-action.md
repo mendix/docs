@@ -378,7 +378,7 @@ Making software is an iterative process. If you integrate your own module or bui
 3. After the build has successfully finished, the build file will be available in *C:\native-builder\builds*.
 4. Uninstall the previous version of the app on your device.
 5. Install the app on your device. For more information on installing an app on your device, see the [Distributing](/howto/mobile/deploying-native-app#distributing) section of *Deploy Your First Mendix Native App*.
-7. Open the app, tap **Scan tag**, and scan your NFC tag. You should see an information dialog box with the text contained by the tag [todo: 1 I got a "nfc manager module error" 2 while the NFC app is still open, touching an NFC tag to the device will spawn a dialog from THAT app, not the custom dev app. I must add a step to say "close nfc app"?]:
+7. Open the app, tap **Scan tag**, and scan your NFC tag. You should see an information dialog box with the text contained by the tag [todo: RESUME HERE 1 I got a "nfc manager module error" 2 while the NFC app is still open, touching an NFC tag to the device will spawn a dialog from THAT app, not the custom dev app. I must add a step to say "close nfc app"?]:
 
 	![read NFC tag scanning ios](attachments/create-native-javascript-action/native-nfc-app-scanning-ios.png)
 

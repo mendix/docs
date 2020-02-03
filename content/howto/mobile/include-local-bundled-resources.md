@@ -11,7 +11,7 @@ If you have ever wanted to include a local copy of your deployed cloud resources
 
 ## 2 Prerequisites
 
-To begin this process, you will need to build versions versions of your mobile application:
+To begin this process, you will need to build versions of your mobile application:
 
 1. Navigate to the [Developer Portal](https://sprintr.home.mendix.com/index.html), then click your app.
 2. Click **Deploy** > **Mobile App**.

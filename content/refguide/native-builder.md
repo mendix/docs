@@ -208,33 +208,33 @@ native-builder.exe bundle --project-name "CoolApp" --output-path "C:\bundles"
 
 ### 2.9 iOS-Specific Configurations
 
-Commands to modify the iOS configuration are groupped under the `ios` command.
+Commands to modify the iOS configuration are groupped under the `config ios` command.
 
 #### 2.9.1 Adding and Removing Entitlements
 
 To add or remove entitlements, use the `add-entitlements` or `remove-entitlements` commands:
 
 ```bash
-native-builder.exe ios add-entitlements --project-name "CoolApp" --entitlements environment nfc
+native-builder.exe config ios add-entitlements --project-name "CoolApp" --entitlements notification nfc
 ```
 
 | Parameters            | Description                                                                          | Example            |
 | --------------------- | ------------------------------------------------------------------------------------ | ------------------ |
 | `--project-name`      | Unique name of the project used during `prepare` **(Required)**                                    | `CoolApp`          |
-| `--entitlements` | A list of the entitlements to add to your project. Supported options environment, nfc                 | `environment nfc`       |
+| `--entitlements` | A list of the entitlements to add to your project. Supported options `notification`, `nfc`                 | `notification nfc`       |
 
 #### 2.9.2 Adding and Removing Background Modes
 
 To add or remove background modes, use the `add-background-modes` or `remove-background-modes` commands:
 
 ```bash
-native-builder.exe ios add-background-modes --project-name "CoolApp" --modes notification
+native-builder.exe config ios add-background-modes --project-name "CoolApp" --modes notification
 ```
 
 | Parameters            | Description                                                                          | Example            |
 | --------------------- | ------------------------------------------------------------------------------------ | ------------------ |
 | `--project-name`      | Unique name of the project used during `prepare` **(Required)**                                    | `CoolApp`          |
-| `--modes` | A list of background modes to add to your project. Supported options notification                 | `notification`       |
+| `--modes` | A list of background modes to add to your project. Supported options `notification`                 | `notification`       |
 
 ## 3 Expanded Parameter Explanations
 

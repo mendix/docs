@@ -22,7 +22,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Install Mendix 8.5.0 (Build 64176) from the [App Store](https://appstore.home.mendix.com/link/modelers/)
 * Install the [Git](https://git-scm.com/downloads) command line tool
 * Install npm's [node js](https://nodejs.org)
-* Install [Native Builder v3.1.0](https://www.dropbox.com/sh/hpw7sshut9bco68/AABackrr75rPSgW7u5LBMkMra?dl=0)
+* Install [Native Builder v3.1.0](https://www.dropbox.com/sh/hpw7sshut9bco68/AABackrr75rPSgW7u5LBMkMra?dl=0) (this tutorial can only be completed using Native Builder v3.1.0 or higher)
 * Have a fiscal [NFC NDEF](https://www.dummies.com/consumer-electronics/nfc-data-exchange-format-ndef/) tag for testing
 * Own a mobile device with NFC capabilities
 
@@ -85,7 +85,7 @@ Now you will build a native custom developer app and install it on your phone:
 2. Complete [Preparing Your Project](/howto/mobile/deploying-native-app#4-preparing-your-project) section of *How to Deploy Your First Mendix Native App* using these parameters:
 
 	``` shell
-	$ native-builder.exe prepare --java-home "C:\Program Files\AdoptOpenJDK\jdk-11.0.3.7-hotspot" --mxbuild-path "C:\Program Files\Mendix\8.5.0.64176\modeler\mxbuild.exe" --project-path "Y:\MendixProjects\NativeNFC\NativeNFC.mpr" --github-access-token "a1f422..." --appcenter-api-token "a1b95a..." --project-name "Native NFC App" --app-name "Native NFC App" --app-identifier "com.mendix.howto.nativenfc" --runtime-url "https://nativenfc-sandbox.mxapps.io/" --build-number 1 --app-version "1.0" 
+	$ native-builder.exe prepare --java-home "C:\Program Files\AdoptOpenJDK\jdk-11.0.3.7-hotspot" --mxbuild-path "C:\Program Files\Mendix\8.5.0.64176\modeler\mxbuild.exe" --project-path "Y:\MendixProjects\NativeNFC\NativeNFC.mpr" --github-access-token "a1f422..." --appcenter-api-token "a1b95a..." --project-name "Native NFC App" --app-name "Native NFC App" --app-identifier "com.mendix.howto.nativenfc" --runtime-url "https://nativenfc-sandbox.mxapps.io/"
 	```
 
 As a result of the `prepare` command your app is created in [App Center](https://appcenter.ms/apps):
@@ -96,28 +96,10 @@ A new repository is created in your GitHub account:
 
 ![Github template repo](attachments/create-native-javascript-action/github-template-repo.png)
 
-The settings are stored in *C:\Users\mendix.tech.writer\.native_builder*:
-
-	```json
-	{
-		"Native NFC App": {
-			"gitHubAccessToken": "a1f422...",
-			"appCenterApiToken": "a1b95a...",
-			"projectName": "Native NFC App",
-			"appName": "Native NFC App",
-			"appIdentifier": "com.mendix.howto.nativenfc",
-			"javaHome": "C:\\Program Files\\AdoptOpenJDK\\jdk-11.0.3.7-hotspot",
-			"projectPath": "C:\\MendixProjects\\NativeNFC\\NativeNFC.mpr",
-			"mxbuildPath": "C:\\Program Files\\Mendix\\8.5.0.64176\\modeler\\mxbuild.exe",
-			"runtimeUrl": "https://nativenfc-sandbox.mxapps.io/"
-		}
-	}
-	```
-
 3. To build the app for the first time, complete the [Build Your Developer App](/howto/mobile/how-to-devapps#3-build-your-developer-app) section of *Create a Custom Developer App* using this build command:
 
 	``` shell
-	$ native-builder.exe build dev-app --project-name "Native NFC App" --build-number 1 --app-version "1.0"
+	$ native-builder.exe build dev-app --project-name "Native NFC App"
 	```
 	
 	The project name should match the project names from your `prepare` command. 
@@ -225,13 +207,17 @@ For iOS you have to add permission to use NFC capabilities:
 	
 	![ios capabilities](attachments/create-native-javascript-action/xcode-capabilities-nfc.png)
 	
+4. Add a usage description so the user can give their permission to use the NFC reader: [todo: confirm that this whole bit to end of section is only for ios. Android don't have to do the git stuff?]
 
-Add a usage description so the user can give their permission to use the NFC reader: [todo: confirm that this whole bit to end of section is only for ios. Android don't have to do the git stuff?]
+5. In **ios/nativeTemplate/Info.plist** right-click [todo: where?], select **Add Row**, and title they key `NFCReaderUsageDescription` with the description: *To be able to read NFC tags, please accept.*
 
-1. In **ios/nativeTemplate/Info.plist** right-click [todo: where?], select **Add Row**, and title they key `NFCReaderUsageDescription` with the description: *To be able to read NFC tags, please accept.*
-2. To stage the changes, use the command `$ git add .` You can check the staged files with the command `$ git status`.
-3. Commit the files with the command `$ git commit -m "Add NFC Manager dependency"`.
-4. Now the files are committed, but they are only stored locally on your machine. Push them to your repository with the command `$ git push`. This will make the changes available so that the Native Builder can create a new app with NFC support.
+#### 3.3.4 Commit Template {#commit-template}
+
+For both platforms, you need to store your changes in the template. Push your changes to GitHub (where the Native Builder can use them later):
+
+1. To stage the changes, use the command `$ git add .` while in **C:\github\native-nfc-app**. You can check the staged files with the command `$ git status`.
+2. Commit the files with the command `$ git commit -m "Add NFC Manager dependency"`.
+3. Now the files are committed, but they are only stored locally on your machine. Push them to your repository with the command `$ git push`. This will make the changes available so that the Native Builder can create a new app with NFC support.
 
 ### 3.4 Install a Dependency in Your Project {#install-dependency-project}
 
@@ -357,6 +343,12 @@ To write your own NFC tag, do the following:
 
 	![write nfc tag](attachments/create-native-javascript-action/nfc-tools-write-tag.jpg)
 
+{{% alert type="info" %}}
+
+This dialog box is your phone's operating system recognizing the NFC tag. On Android devices, you will see a success message anytime you touch an NFC tag to your device. What you truly need to test is your app's NFC scanning after tapping its button. You will be able to do this on all platforms: on iOS things work as expected, and on Android an app scanning NFC takes priority over the operating systems' scanning.
+
+{{% /alert %}}
+
 ### 3.8 Rebuilding Your Native App {#rebuilding-app}
 
 Now that you added NFC capability to your app's source code, you must rebuild your native app and reinstall it on your device to use the new JavaScript actions.
@@ -371,7 +363,7 @@ Making software is an iterative process. If you integrate your own module or bui
 2. Run the following command to rebuild your NFC app: 
 
 	``` shell
-	$ native-builder.exe build dev-app --project-name "Native NFC App" --app-version 1.1 --build-number 1.1
+	$ native-builder.exe build dev-app --project-name "Native NFC App"
 	```
 
 	This builder will use the configuration you set during the [Install a Dependency in Your Project](#install-dependency-project) section above.
@@ -394,7 +386,7 @@ On Android, NFC can be switched off. Also, scanning should be canceled if the ba
 
 On iOS, scanning can be canceled when the **Ready to Scan** dialog box is up. 
 
-To accomplish these goals, update the **ReadNFCTag** JavaScript action with the following code, and repeat the steps in the [Rebuilding Your App](#rebuilding-app) section above to build and install on your device.
+To accomplish these goals, replace all the **USER CODE** in the **ReadNFCTag** JavaScript action with the following code, and repeat the steps in the [Rebuilding Your App](#rebuilding-app) section above to build and install on your device.
 
 ``` js
 // This file was generated by Mendix Studio Pro.
@@ -482,7 +474,7 @@ Until this section, you have used a custom developer app to validate your applic
 To build the app for the first time, run this `build` command:
 
 ``` shell
-$ native-builder.exe build --project-name "Native NFC App" --app-version "1.0.0" --build-number 1`.
+$ native-builder.exe build --project-name "Native NFC App" --app-version "1.0.0" --build-number 1
 ```
 
 For the full explanation on how to build, sign, and distribute your app to an app store see the [Making Your First Build](/howto/mobile/deploying-native-app#first-build) section of *How to Deploy Your First Mendix Native App* as well as the tutorial's subsequent sections.

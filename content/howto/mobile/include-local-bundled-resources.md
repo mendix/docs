@@ -1,5 +1,5 @@
 ---
-title: "Include Local Bundled Resources"
+title: "Migrate Local Bundled Resources to a Deployed iOS App"
 parent: "hybrid-mobile"
 menu_order: 11
 tags: ["mobile", "hybrid", "local", "ios", "apple"]

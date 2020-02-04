@@ -55,8 +55,8 @@ native-builder.exe prepare --github-access-token <token> --appcenter-api-token <
 | `--mxbuild-path`            | Absolute path to MxBuild executable.                                 | `C:\Program Files\Mendix\8.0.0\modeler\mxbuild.exe` |
 | `--runtime-url`             | URL of the Mendix runtime.                                           | `https://myapp.mendixcloud.com`                     |
 | `--mendix-version`          | The Mendix Studio Pro version your Mendix project is using. **(Required)**          | `8.5.0`                                             |
-| `--firebase-android-config-path`          | Absolute path to a google-services.json file.          | `C:\MyApp\google-services.json`                     |
-| `--firebase-ios-config-path`          | Absolute path to a GoogleService-Info.plist file.          | `C:\MyApp\GoogleService-Info.plist`                 |
+| `--firebase-android-config-path`          | Absolute path to a *google-services.json* file.          | `C:\MyApp\google-services.json`                     |
+| `--firebase-ios-config-path`          | Absolute path to a *GoogleService-Info.plist* file.          | `C:\MyApp\GoogleService-Info.plist`                 |
 
 
 ### 2.2 Build

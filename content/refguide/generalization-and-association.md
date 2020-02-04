@@ -1,7 +1,7 @@
 ---
 title: "Generalization & Associations"
-parent: "domain-model"
-menu_order: 2
+parent: "entities"
+menu_order: 10
 #tags: ["domain model", "association", "inheritance", "one-to-one", "generalization", "studio pro"]
 ---
 

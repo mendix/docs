@@ -1,22 +1,20 @@
 ---
 title: "Entities"
 parent: "domain-model"
-menu_order: 1
+menu_order: 10
 tags: ["domain model", "entity", "entities", "attribute", "validation rule", "even handler", "access rule", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
-An entity represents a class of real-world objects, such as customers, invoices, work items, etc. An instance of an entity is called an object. For example, the object representing the person 'Bob Marley' could be an instance of the entity 'Person'.
+An **entity** usually represents a class of real-world objects, such as customers, invoices, CDs, etc. An instance of an entity is called an object.
+
+For example, the object representing the CD 'Exodus' could be an instance of the entity 'CD'.
+
+![Example of a CD entity](attachments/entities/example-entity.png) 
 
 The properties or features of an entity are described using [attributes](attributes). An attribute represents a small piece of information about an entity, such as the name or birth date of a person.
-
-The domain model editor uses the following symbols for visualization on entities:
-
-| Symbol | Description |
-| --- | --- |
-| ![](attachments/819203/917594.png) | This entity has one or more event handlers. |
 
 For example, you have a collection of CDs like the one in the table below:
 
@@ -26,6 +24,14 @@ For example, you have a collection of CDs like the one in the table below:
 | Exodus | Bob Marley & The Wailers |
 
 The rows in the table are CDs. The type of the two rows is 'CD' and this is the entity name. A specific CD like 'How to Dismantle an Atomic Bomb' of the band U2 is called an object of the entity 'CD'. Characteristics like the title and artist are called attributes.
+
+The domain model editor uses the following symbols for visualization on entities:
+
+| Symbol | Description |
+| --- | --- |
+| ![](attachments/entities/with-event-handlers.png) | This entity has one or more event handlers. |
+
+
 
 ## 2 Components
 
@@ -53,7 +59,7 @@ The generalization specifies the entity from which a specific entity derives its
 For example, this property can be used in a situation where, for example, one has an entity 'Student' and an entity 'Professor' which have some generic properties. They both have a name, telephone number and email address and can be a member of one or more courses. Both entities are *generalized* in the entity 'Member'. Conversely, this means that the entity 'Member' is *specialized* in the entities 'Student' and 'Professor'.
 
 This property can be used in a situation where, for example, one has an entity 'Student' and an entity 'Professor' which have some generic properties. They both have a name, telephone number and email address and can be a member of one or more courses. Both entities are *generalized* in the entity 'Member'. Conversely, this means that the entity 'Member' is *specialized* in the entities 'Student' and 'Professor'.
-![](attachments/domain-model/917900.png)
+![](attachments/entities/917900.png)
 
 For more information, see [Generalization & Associations](generalization-and-association).
 
@@ -65,7 +71,7 @@ The image property can be used to associate the entity with an image. In the dom
 
 Define whether instances of this entity can be stored in the database. Non-persistable entities are painted orange instead of blue to indicate the difference.
 
-![](attachments/domain-model/4325380.png)
+![](attachments/entities/4325380.png)
 
 For more information, see [Persistability](persistability)s.
 

@@ -54,13 +54,15 @@ Member read and write rights define the access rights for every member (attribut
 | Read | Users are allowed to view the value of this member, but cannot edit it. |
 | Read, Write | Users are allowed to view and edit the value of this member. |
 
+{{% alert type="info" %}}
+You cannot set *write* access to attributes which are calculated. This includes attributes of type *Autonumber* and attributes where the attribute value is set to **Calculated**.
+{{% /alert %}}
+
 The set of objects to which the member access rights apply can be limited by using an [XPath constraint](#constraint).
 
-{{% alert type="info" %}}
-A customer is allowed to view the discount, but is not allowed to edit it. The access rights for the discount attribute are **Read**.
+For example, a customer is allowed to view the discount, but is not allowed to edit it. The access rights for the discount attribute are **Read**.
 
 ![](attachments/entities/917534.png)
-{{% /alert %}}
 
 ### 2.6 XPath Constraint {#constraint}
 

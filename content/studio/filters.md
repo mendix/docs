@@ -11,7 +11,7 @@ In Mendix Studio, you can filter data in pages and microflows.
 
 *In a microflow*, you can filter the retrieved data by creating filters for the **Retrieve** activity. To add a filter objects should be retrieved from the database:
 
-![](attachments/filters/retrieve-from-database.png)
+<img src="attachments/filters/retrieve-from-database.png" style="zoom:67%;" />
 
 *In a page*, you can add a filter to a list view or a data grid. Mind that the data source of the list view or the data grid should be **Database**: 
 

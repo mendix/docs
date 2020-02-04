@@ -1,5 +1,5 @@
 ---
-title: "Include local bundled Resources.zip"
+title: "Include Local Bundled Resources"
 parent: "hybrid-mobile"
 menu_order: 11
 tags: ["mobile", "hybrid", "local", "ios", "apple"]
@@ -7,7 +7,7 @@ tags: ["mobile", "hybrid", "local", "ios", "apple"]
 
 ## 1 Introduction
 
-If you have ever wanted to include a local copy of your deployed cloud resources into your distributed iOS app, then, this how-to is tailored just for you.
+This tutorial will teach you to migrate a local copy of your deployed cloud resources into your distributed iOS app.
 
 ## 2 Prerequisites
 
@@ -22,16 +22,16 @@ This will give you a *zip* project that you can use to customize your app accord
 
 ## 3 Getting and Using local Resources
 
-You need the local copy of the *resources.zip* of your deployed mendix app. This can be gotten by following the link `https://<insert deployed runtime url>/resources.zip`.
+You need the local copy of the *resources.zip* of your deployed Mendix app, which you can find at this address: `https://{your deployed runtime url}/resources.zip`.
 
 To successfully use the resources, you must put the *resources.zip* in your app's **www** folder:
 
-1. Extract the contents of the *zip* project gotten from the previous section.
+1. Extract the contents of the *resources.zip*.
 2. Navigate to the *dist* directory.
 3. Extract the contents of the *zip* project found in there.
 4. Navigate into the *www* directory within extracted contents.
 5. Paste the *resources.zip* within the *www* directory
-6. Compress the extracted contents from *3* with the included changes from *5* into a new *zip* package.
+6. Compress the extracted contents from step 3 with the included changes from *5* into a new *zip* package.
 
 ## 4 Building Your Mobile App
 

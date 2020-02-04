@@ -113,7 +113,7 @@ All items of the left menu bar are described in the table below:
 
 The top right menu of Studio consists of the **Toolbox**, **Properties** , and **Buzz** tabs: 
 
-<img src="attachments/general/toolbox-properties-buzz.png" style="zoom:80%;" />
+<img src="attachments/general/toolbox-properties-buzz.png"  />
 
 The **Toolbox**, **Properties** , and **Buzz** tabs are describes in the table below:
 

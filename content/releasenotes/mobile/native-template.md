@@ -14,9 +14,9 @@ For more information on native mobile app development, see the [native-template 
 
 ### Improvements
 
-* The MendixNative and Native Template are now written in Objective C. With this update we are further closing the gap between the Native Template and the React Native starter template. Now that they are more aligned, you can use new React Native features like [autolinking](https://github.com/react-native-community/cli/blob/master/docs/autolinking.md) to develop your app.
+* The MendixNative library and [Native Template](https://github.com/mendix/native-template) are now written in Objective C. With this update we are further closing the gap between the Native Template and the React Native starter template. Now that they are more aligned, you can use new React Native features like [autolinking](https://github.com/react-native-community/cli/blob/master/docs/autolinking.md) to develop your app.
 
-* The Native Template now supports push notifications. As soon as you include a Google services configuration file in your app, the Native Template will enable the required libraries automatically.
+* The Native Template now supports push notifications. As soon as you include a Google services configuration file (GoogleService-Info.plist* and *google-services.json* in your app, the Native Template will enable the required libraries automatically.
 
 * Added support for URL Schemes.
 

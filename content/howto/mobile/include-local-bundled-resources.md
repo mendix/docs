@@ -20,7 +20,7 @@ To begin this process, you will need to build versions of your mobile applicatio
 
 This will give you a *zip* project that you can use to customize your app according to the [hybrid app package documentation](https://github.com/mendix/hybrid-app-template/).
 
-## 3 Getting and Using local Resources
+## 3 Getting and Using Local Resources
 
 You need the local copy of the *resources.zip* of your deployed Mendix app, which you can find at this address: `https://{your deployed runtime url}/resources.zip`.
 
@@ -29,9 +29,9 @@ To successfully use the resources, you must put the *resources.zip* in your app'
 1. Extract the contents of the *resources.zip*.
 2. Navigate to the *dist* directory.
 3. Extract the contents of the *zip* project found in there.
-4. Navigate into the *www* directory within extracted contents.
-5. Paste the *resources.zip* within the *www* directory
-6. Compress the extracted contents from step 3 with the included changes from *5* into a new *zip* package.
+4. In the extracted contents, navigate to the *www* directory.
+5. Paste the *resources.zip* into the *www* directory
+6. Compress the extracted contents from step 3 with the included changes from step 5 into a new *zip* package.
 
 ## 4 Building Your Mobile App
 

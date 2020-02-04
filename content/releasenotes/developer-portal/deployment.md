@@ -10,6 +10,12 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 ## 2020
 
+### February 5th, 2020
+
+#### SAP Cloud Platform Deployment
+
+* We added support for the SAP Cloud Platform **Azure Netherlands** region.
+
 ### January 21st, 2020
 
 #### Fixes

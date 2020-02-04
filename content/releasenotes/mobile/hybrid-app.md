@@ -8,7 +8,7 @@ description: "Mendix Hybrid App Base & Hybrid App Template release notes."
 
 If you are building your hybrid mobile app using the regular PhoneGap Build approach from within the Mendix Developer Portal, you do not need to worry about these numbers. Downloading and building a new package will set you up with the latest version.
 
-If you are using the advanced flow, you can get the latest version of the Hybrid App Base by running `npm update` from your hybrid app project directory. To upgrade to the latest version of the Hybrid App Template, either pull in the latest changes from GitHub, or download a new copy from [Mendix Developer Portal](https://sprintr.home.mendix.com/index.html) > **DEPLOY**.
+If you are using the advanced flow, you can get the latest version of the Hybrid App Base by running `npm upgrade` from your hybrid app project directory. To upgrade to the latest version of the Hybrid App Template, either pull in the latest changes from GitHub, or download a new copy from [Mendix Developer Portal](https://sprintr.home.mendix.com/index.html) > **DEPLOY**.
 
 For more information on hybrid mobile app development in Mendix, see the [Hybrid Mobile](/refguide/hybrid-mobile) section of the *Studio Pro 8 Guide* and the [Hybrid Mobile](/howto/mobile/hybrid-mobile) section of the *Studio Pro 8 How-to's*.
 

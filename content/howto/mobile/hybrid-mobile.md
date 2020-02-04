@@ -15,6 +15,6 @@ A Mendix hybrid app is a web application which runs inside a container that can 
 * [Configure the Mendix Feedback Widget for iOS](feedback-widget-ios)
 * [Implement SSO on a Hybrid App with Mendix & SAML](implement-sso-on-a-hybrid-app-with-mendix-and-saml)
 * [Debug a Mobile App with Mendix](debug-a-mobile-app)
-* [Include local bundled Resources](include-local-bundled-resources)
+* [Migrate Local Bundled Resources to a Deployed iOS App](include-local-bundled-resources)
 * [Deploy Your First Hybrid Mobile App](deploy-your-first-hybrid-mobile-app)
 * [Publish a Mendix Hybrid Mobile App in Mobile App Stores](publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)

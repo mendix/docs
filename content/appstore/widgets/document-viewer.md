@@ -14,11 +14,9 @@ The [Document Viewer](https://appstore.home.mendix.com/link/app/12/) widget enab
 
 With this widget, you can display uploaded images, PDFs, or office documents on your app pages.
 
-### 1.2 Features & Limitations
+### 1.2 Limitations
 
-The widget tries to display a document inside a page. However, it may fail to do this, since browser settings determine whether a document can be opened inside a page. In such cases, a download pop-up window is opened.
-
-For example, Internet Explorder may succeed in opening a *.doc* file inside a page and fail in opening a *.png* image, while exactly the opposite may be true for FireFox.
+The widget tries to display a document inside a page. However, it may fail to do this, since browser settings determine whether a document can be opened inside a page. In such cases, a download pop-up window is opened. For example, Internet Explorer may succeed in opening a *.doc* file inside a page and fail in opening a *.png* image, while exactly the opposite may be true for FireFox.
 
 ## 2 Configuration
 

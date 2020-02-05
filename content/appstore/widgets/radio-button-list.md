@@ -20,6 +20,10 @@ Visualize all the possible options in your user interface, instead of just forci
 * Specify the text of labels for a Boolean attribute
 * Attach a microflow for the on-change event
 
+### 1.3 Limitations
+
+* **On change** has no effect on the form. The workaround is to add a microflow to the on-change property of the widget. This microflow must contain a change activity. The change activity must have **Refresh in client** enabled.
+
 ## 2 Installation
 
 Download the widget into your app project and add either **Association Radio Button List** or **Attribute Radio Button List** to a data view on a page. Configure the properties dscribed below to determine how the widget will behave in your application.
@@ -74,8 +78,3 @@ The configuration of the widget's required properties would be the following:
 * **Entity to list**: CompanyDepartment
 * **Label**: Name (string attribute of CompanyDepartment)
 * **Association**: Employee_CompanyDeparment/CompanyDepartment.
-
-## 5 Known Bugs
-
-* **On change** has no effect on the form.
-	* Workaround: add a microflow to the on-change property of the widget. This microflow must contain a change activity. The change activity must have **Refresh in client** enabled.

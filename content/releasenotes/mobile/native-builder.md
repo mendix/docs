@@ -13,14 +13,12 @@ We are heavily invested in streamlining the experience of building your apps and
 
 ## 3.2.0
 
-**Release date: February 4th, 2020**
+**Release date: February 5th, 2020**
 
 ## Improvements
 
 * Custom developer apps are officially released. Using the `dev-app` command, you can build a smaller version of the Make It Native app tailored to your specific app's testing needs. A custom developer app is built against the sources, dependencies, and capabilities of the final release app. For more information, see [How to Create a Custom Developer App](/howto/mobile/how-to-devapps).
-
-* The image functionality has been updated. With this improvement we were able to remove all extra dependencies and compress the CLI to a single executable.
-
+* We have updated image functionality. With this improvement we were able to remove all extra dependencies and compress the CLI to a single executable.
 * We introduced new iOS-specific configuration commands. For more information, see [Native Builder](/refguide/native-builder).
 
 ## Fixes
@@ -35,9 +33,7 @@ We are heavily invested in streamlining the experience of building your apps and
 ### Improvements
 
 * A few factors, such as third-party services' stability, might crash the Native Builder with no visible errors. To give you more information during such a crash, we introduced the global `--verbose` argument. If provided, the Native Builder will output an extended stack trace in case of an error.
-
 * To simplify custom builds we introduced the `bundle` command. With the `bundle` command, you can easily generate a JavaScript bundle without having to go through the whole build process. This command will generate an iOS or an Android JavaScript bundle and all the required assets, then output the bundle to the provided path.
-
 * As Mendix Studio Pro and the Native Builders mature, we will be introducing new dependencies or requirements that might not fare well with older versions. For this reason we introduced the mandatory `--mendix-version` arguments for the `regenerate` and `prepare` commands. When you provide the Studio Pro version your Mendix project is built with, the Native Builder knows to select the correct version of the Native Template when generating the project. Important to know, is that if an unknown version is provided native builder will use the latest available version for creating the repository. 
 
 ### Fixes

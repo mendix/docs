@@ -22,7 +22,7 @@ Download a *zip* project which contains a customizable package of your app's set
 
 You now have a *zip* project that you can use to customize your app. [todo: must they cusomize their app right here?]For more information on how to do this, see the [Customizing Your App](https://github.com/mendix/hybrid-app-template#customizing-your-app) section of the *Hybrid App Template Documentation*.
 
-## 3 Getting and Using Local Resources
+## 3 Getting and Using Local Resources [todo: do they use local resources in this step?]
 
 [todo: you need a sentence here like "In order to X, you need a local copy of your app's *resources.zip* file.]You need the local copy of your deployed app's *resources.zip* file. To get it, go to this address in a web browser: `https://{your deployed runtime url}/resources.zip`. The *resources.zip* file will download automatically.
 

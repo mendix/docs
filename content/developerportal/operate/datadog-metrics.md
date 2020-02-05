@@ -112,9 +112,14 @@ You can add more tags if you want, but note that Datadog's charges include an el
 
 ## 5 Customizing the Metrics Agent{#customizing}
 
-Mendix provides logging of various activities within the app. These are sent to Datadog with the namespace **mx**. Timing values are sent in milliseconds.
+Mendix provides logging of various actions within the app. These are sent to Datadog with the namespace **mx**. Timing values are sent in milliseconds.
 
-By default, Mendix will pass a log of *all* request handler activity to Datadog and no other information. However, by using JSON to configure the metrics agent, you can add logs of microflows and activities within microflows, and restrict which request handler calls are sent. 
+By default, Mendix will pass a log of *all* request handler activity to Datadog and no other information. However, by using JSON to configure the metrics agent, you can add logs of microflows and activities within microflows, and restrict which request handler calls are sent.
+
+Mendix adds the following tags to metrics from microflows and activities:
+
+* **microflow:{microflow_name}** – indicates which microflow the metric came from — the microflow name is in the format `{module}.{microflow}`
+* **activity:{activity_name}** – indicates which activity the metric came from
 
 ### 5.1 Format of Metrics Agent Configuration
 

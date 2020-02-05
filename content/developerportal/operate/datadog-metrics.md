@@ -70,7 +70,7 @@ To send your runtime information to Datadog, you need to provide the Datadog API
 2. Click **Details** to select the environment you wish to monitor with Datadog. 
 3. Open the **Runtime** tab.
 4. Add a **Custom Environment Variable**.
-5.  Select **DD_API_KEY** from the *Name* dropdown.
+5.  Select **DD_API_KEY** from the *Name* drop-down.
 
 	![Dropdown containing custom environment variable names](attachments/datadog-metrics/environment-variable-dd-api-key.png)
 

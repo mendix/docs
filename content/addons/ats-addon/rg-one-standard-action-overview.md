@@ -78,13 +78,13 @@ A _ConfirmationDialog_ is shown when a delete or microflow action requires a con
 | --- | --- | --- |
 | Assert Checkbox Value | CheckBox | Assert the value of a Checkbox |
 | Assert Value | TextBox, TextArea, DatePicker, DropDown, RadioButton, ReferenceSelector, SearchInput Text, SearchInput DropDown, Label, OnChange Inputbox | Assert the text value from a Textbox, Textarea, Dateinput |
-| Dropdown has Option | DropDown, ReferenceSelector, SearchInput DropDown | Returns true if value is available in dropdown |
+| Dropdown has Option | DropDown, ReferenceSelector, SearchInput DropDown | Returns true if value is available in drop-down |
 | Get Checkbox Value | CheckBox | Returns true if the Checkbox is checked |
-| Get Index | DropDown, ReferenceSelector, SearchInput DropDown | Get index of selected value in a dropdown, e.g. an EnumSelect or ReferenceSelector |
+| Get Index | DropDown, ReferenceSelector, SearchInput DropDown | Get index of selected value in a drop-down, e.g. an EnumSelect or ReferenceSelector |
 | Get Value | TextBox, TextArea, DatePicker, DropDown, RadioButton, ReferenceSelector, SearchInput Text, SearchInput DropDown, Label, OnChange Inputbox | Get the text value from a Textbox, Textarea, Dateinput, RadioButton, Dropdowns |
 | Set Checkbox Value | CheckBox | Sets the value of a Checkbox |
 | Set Value | TextBox, TextArea, DatePicker, DropDown, RadioButton, ReferenceSelector, SearchInput Text, SearchInput DropDown, OnChange Inputbox | Set the text value of a Textbox, Textarea, Dateinput, Reference Selector, Enum Selector |
-| Set Value (by index) | DropDown, ReferenceSelector, SearchInput DropDown | Set the value of a dropdown by index, e.g. EnumSelect or ReferenceSelector |
+| Set Value (by index) | DropDown, ReferenceSelector, SearchInput DropDown | Set the value of a drop-down by index, e.g. EnumSelect or ReferenceSelector |
 | Toggle Checkbox Value | CheckBox | Click on a Checkbox to toggle its value |
 
 ## 8 Navigation, Menu

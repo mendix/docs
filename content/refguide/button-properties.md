@@ -1,7 +1,7 @@
 ---
 title: "Button Properties"
 parent: "button-widgets"
-tags: ["studio pro", "button", "action button", "drop down button", "button widget", "image property"]
+tags: ["studio pro", "button", "action button", "drop-down button", "button widget", "image property"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -176,7 +176,7 @@ To add items to a drop-down buttons, do the following:
 
     ![Adding New Item](attachments/button-widgets/adding-new-item.png)
 
-3. In the **Edit Drop Down Button** Item dialog window, do the following:
+3. In the **Edit Drop-down Button** Item dialog window, do the following:
    1. Specify the caption for the item.
    2. Select an image (icon) to be displayed for this item.
    3. Select an on-click event to be performed when the end-user clicks this item.

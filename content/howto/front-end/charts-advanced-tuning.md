@@ -81,7 +81,7 @@ This is what the chart looks like before making any changes:
 To create a custom configuration, follow these steps:
 
 1. Repeat steps 1 to 8 from the [layout instructions](#layout-changes).
-2. Select the name of the series you want to display differently from the drop down menu: in this case **Series 1**.
+2. Select the name of the series you want to display differently from the drop-down menu: in this case **Series 1**.
 3. Edit the **Custom settings**; change them to `{ "type": "line" }`.
     ![chart editor](attachments/charts/charts-widget-bar-line-combination.png)
 4. Copy the the custom settings.
@@ -99,7 +99,7 @@ After the changes, the chart looks like this:
 To create custom a configuration, follow these steps:
 
 1. Repeat steps 1 to 8 from the [layout instructions](#layout-changes).
-2. Select **Configuration** from the drop down menu.
+2. Select **Configuration** from the drop-down menu.
 3. Edit the **Custom settings**, change them to `{ "displayModeBar": true }`.
 4. Add more Custom settings as desired. See [here](https://plot.ly/javascript/configuration-options/) for more configuration settings.
 5. The changes made in the editor are not persistable; copy the required settings.

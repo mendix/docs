@@ -413,7 +413,7 @@ Every action of the OData Connector for SAP solutions will ask for a set of para
 
 ![](attachments/sap-odata-connector/actionparameters-sapodataconnector.png)
 
-The parameters can be entered using the drop down, clicking the **Edit** or **Select…** buttons, or typing directly into a text field.
+The parameters can be entered using the drop-down, clicking the **Edit** or **Select…** buttons, or typing directly into a text field.
 
 Within the edit box, you can type your parameter. As is standard in Mendix, certain characters (for example [@ $ .]) will trigger a pop-up window to help you select the right values. This can also be triggered using <kbd>Ctrl</kbd>+<kbd>Space</kbd>. Typing while this pop-up window is open will filter the list of possibilities. For example, you can type (the beginning of) _entitysetnames_ and the pop-up window will allow you to select the collection of entity set names which you want.
 

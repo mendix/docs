@@ -24,11 +24,11 @@ You are configuring the domain model for an online shop.
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Familiarize yourself with the domain model terms and performing basic functions. For more information, see [Domain Model](domain-models).
+* Familiarize yourself with the domain model terms and learn how to perform basic functions. For more information, see [Domain Model](domain-models).
 
 ## 3 Defining What Data to Include  
 
-The workflow for new customers of the online shop looks the following way:
+Understanding the workflow will help you define what data to include to your domain model. The workflow for new customers of the online shop looks the following way:
 
 1. A customer registers in the online shop and enters the following details:
    1. Full name
@@ -37,7 +37,7 @@ The workflow for new customers of the online shop looks the following way:
    4. Date of birth
 2. When registration is complete, a *unique ID* is assigned to the customer. 
 3. The customer browses through *products* and the following product details are displayed:
-   1. Image 
+   1. Product image 
    2. Name
    3. Description 
    4. Availability
@@ -49,13 +49,13 @@ The workflow for new customers of the online shop looks the following way:
 
 Based on the description below, you can divide your data to the following elements: 
 
-* Customer 
-* Product 
-* Order 
+* [Customer](#customer) 
+* [Product](#product) 
+* [Order](#order) 
 
 ## 4 Defining the Product {#product}
 
-As products is one of the main elements of the online shop, an entity should be created to represent a product in your domain model. The information that defines the product, such as its name and price, should be attributes of the **Product** entity. 
+As a product is one of the main elements of the online shop, an entity should be created to represent a product in your domain model. The information that defines the product, such as its name and price, should be attributes of the **Product** entity. 
 
 To add the product to your domain model, follow the steps below:  
 
@@ -98,7 +98,7 @@ To add the product to your domain model, follow the steps below:
    
    12. In the **Create New Attribute** dialog window, set the name to *Vendor*, set the type to *String*, and click **Create**. 
    
-3. Each product has an *image*, but you did not create it as an attribute. You need to create an image entity for it, a special type of entity that allows you to store images and set its name to *Product_Image*. Follow the steps below:
+3. Each product has an *image*, but you did not create it as an attribute. You need to create a special type of entity that allows you to store images – an image entity, and set its name to *Product_Image*. Follow the steps below:
 
 	1.  Open **Toolbox**, drag and drop the **Image Entity** in your domain model:
 
@@ -116,9 +116,9 @@ Good job! You created the **Product** entity, its attributes, and the **Product_
 
 The order information can be divided into following:
 
-* Order – general information about the order such as its status, order number, name of the customer and their address, etc. 
-* Order line – items ordered, their quantity and price
-* Order confirmation – confirmation that is sent to the customer that the order is created
+* **Order** – general information about the order such as its status, order number, name of the customer and their address, etc. 
+* **Order line** – items ordered, their quantity and price
+* **Order confirmation** – confirmation that is sent to the customer that the order is created
 
 So, you need to create three entities: *Order*, *Order_Line*, and *Order_Confirmation*. 
 
@@ -183,23 +183,22 @@ You configured three entities that define the order in your online shop.
 
 ## 6 Defining the Customer
 
-A customer is another crucial part of the online shop that needs a separate entity. The information that defines customers, such as its name and price, should be attributes of this entity.
+A customer is another crucial part of the online shop that needs a separate entity. The details that define customers, such as a name and address, should be attributes of this entity.
 
 Follow the steps below:
 
-1. Create the **Customer** entity (for more information on how to create a new entity, see the [Adding New Entities](domain-models#adding-new-entities) section in *Domain Model*).
-
-2. Create attributes for the **Customer** entity (for more information on how to create an attribute, see the [Adding New Attributes](domain-models#adding-new-attributes) section in *Domain Model*). Do the following:
-
-    1. Create the *Customer ID* attribute: set **Name** to *Customer_ID* and **Type** to *Autonumber*. 
-
-    2. Create the *Name* attribute: set **Name** to *Name* and **Type** to *String*.
-
-    3. Create the *Address* attribute: set **Name** to *Address* and **Type** to *String*.
-
-    4. Create the *Email* attribute: set **Name** to *Email* and **Type** to *String*.
-
-    5. Create the *Date_Of_Birth* attribute: set **Name** to *Date_Of_Birth* and **Type** to *Date and Time*.
+1. Create the **Customer** entity. Use the same method as for creating the **Product** entity. For more information, see the [Defining the Product](#product) section.
+2. Create attributes for the **Customer** entity (for more information on how to create an attribute, see the [Adding New Attributes](domain-models#adding-new-attributes) section in *Domain Model*). Do the following:<br />
+1. Select the entity and click **New attribute**.
+    2. In the **Create New Attribute** dialog window, set **Name** to *Customer_ID*, set **Type** to *Autonumber*, and click **Create**. 
+3. Repeat step 2a to create the *Name* attribute.
+    4. In the **Create New Attribute** dialog window, set **Name** to *Name*, set **Type** to *String*, and click **Create**.
+5. Repeat step 2a to create the *Address* attribute.
+    6. In the **Create New Attribute** dialog window, set **Name** to *Address*, set **Type** to *String*, and click **Create**.
+7. Repeat step 2a to create the *Email* attribute.
+    8. In the **Create New Attribute** dialog window, set **Name** to *Email*, set **Type** to *String*, and click **Create**.
+9. Repeat step 2a to create the *Date_Of_Birth* attribute.
+    10. In the **Create New Attribute** dialog window, set **Name** to *Date_Of_Birth*, set **Type** to *Date and Time*, and click **Create**.
 
 
 You created the **Customer** entity and its attributes:
@@ -214,29 +213,36 @@ You have created all the entities and their attributes:
 
 Now you need to define how these entities are connected to each other and create associations. For more information on associations, see [Associations](domain-models-associations).  
 
-First define how entities are connected between each other:
+First, define how entities are connected between each other:
 
 1. One product image is connected to only one product: this means they have a one-to-one association.
 2. One order can contain multiple items (order lines) in it, that means the **Order** and **Order_Line** have a one-to-many association.
-3. The **Order_Line** will use information about the product, it needs to access the name of the product, its ID, etc. One product can be associated with several order lines, so **Product** and **Order_Line** need a one-to-many association.
+3. The **Order_Line** uses information about the product, it needs to access the name of the product, its ID, etc. One product can be associated with several order lines, so **Product** and **Order_Line** need a one-to-many association.
 4. One order confirmation is issued per one order. This means one **Order** object is associated with one **Order_Confirmation** object and has a one-to-one association. 
-5. Order needs to access information about a customer: name, address, etc. Several orders can be connected to one customer, so Order and Customer have a one-to-many association.
+5. Order needs to access information about a customer: name, address, etc. Several orders can be connected to one customer, so the **Order** and **Customer** have a one-to-many association.
 
 Now that you defined connections between entities, you can start creating these connections. Follow the steps below:
 
 1. Create an association from the **Product_Image** to **Product**. Do the following:
 
-    1. Hover over the Product_Image entity and click the dot icon.
-    2. Drag the dot to to the Product entity. 
+    1. Hover over the **Product_Image** entity and click the dot icon:
+
+       ![Product Image and Product Association](attachments/domain-models-how-to/product-image-product-association.png)
+
+    2. Drag the dot to to the **Product** entity. 
+
     3. Open **Properties** and change the multiplicity (one-to-many is created by default) to one-to-one.
 
-		![Product_Image and Product Association](attachments/domain-models-how-to/product-image-and-product-association.png)
+      ![Product_Image and Product Association](attachments/domain-models-how-to/product-image-and-product-association.png)
 
-3. Create an association from **Order_Line** to **Order** following the steps 1a and 1b above. (The correct multiplicity, one-to-many, is created by default).
-4.  Create an association from **Order** to **Customer** following the steps 1a and 1b above. (The correct multiplicity, one-to-many, is created by default.)
-5. Create an association from **Order** to **Order_Line**. Do the following:
+3. Create an association from **Order_Line** to **Order** following the steps 1a and 1b above. (The one-to-many multiplicity that you need is created by default).
+3. Create an association from **Order** to **Customer** following the steps 1a and 1b above. (The one-to-many multiplicity that you need is created by default).
+
+4. Create an association from **Order** to **Order_Line**. Do the following:
     1. Follow the steps 1a and 1b above.
     2. Open **Properties** and change the multiplicity (one-to-many is created by default) to one-to-one.
+
+All associations are created.
 
 Congratulations! You have now configured the domain model for the online shop!
 

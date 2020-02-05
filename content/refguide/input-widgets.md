@@ -26,7 +26,7 @@ There are several different input widgets, these are used for different [data ty
 
     ![Text area containing notes attribute](attachments/input-widgets/text-area.png)
 
-*   [Drop Down](drop-down) – shows the current value of and, optionally, allows end-users to pick an option from a list of options in an *enumeration* attribute:
+*   [Drop-Down](drop-down) – shows the current value of and, optionally, allows end-users to pick an option from a list of options in an *enumeration* attribute:
 
     ![Drop down containing region attribute](attachments/input-widgets/drop-down.png)
 

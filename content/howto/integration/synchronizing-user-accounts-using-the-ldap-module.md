@@ -129,14 +129,14 @@ The final step in the configuration is to configure how the LDAP module handles 
 
     ![](attachments/18448733/18581918.png)
 
-5.  Select an attribute name in the **User Attribute** drop down, for example "FullName".
+5.  Select an attribute name in the **User Attribute** drop-down, for example "FullName".
 
     {{% alert type="info" %}}
 
-    If the drop down is empty, click **Cancel**, **Save & Close** and reopen the server configuration. This refreshes the information in the settings screens.
+    If the drop-down is empty, click **Cancel**, **Save & Close** and reopen the server configuration. This refreshes the information in the settings screens.
 
     {{% /alert %}}
-6.  In the **(select new)** drop down, select an LDAP attribute, like "displayName".
+6.  In the **(select new)** drop-down, select an LDAP attribute, like "displayName".
 7.  Click **Save**.You have just created an LDAP attribute mapping. The "displayName" attribute of an LDAP user will now be used to fill the "FullName" attribute of a Mendix user, when it is created during the synchronization.
 8.  Open the **LDAP group mapping** tab.
 

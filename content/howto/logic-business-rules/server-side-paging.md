@@ -160,7 +160,7 @@ You can set a default sort order for data. When a user has not clicked a header,
 	{{% image_container width="500" %}}![create object activity one](attachments/server-side-paging/create-nano.png){{% /image_container %}}
 
 5. Click **New** to set the value for a member of the **Paging** entity.  
-6. Click the **Member** dropdown menu and select **SortAttribute (String (200))**. 
+6. Click the **Member** drop-down menu and select **SortAttribute (String (200))**. 
 7.  Set **Value** to `'Name'`:
 
 	{{% image_container width="500" %}}![name value](attachments/server-side-paging/name-value.png){{% /image_container %}}

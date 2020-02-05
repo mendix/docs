@@ -11,7 +11,7 @@ This how-to explains how to create an Unsupported Widget action for the referenc
 
 The how-to assumes you must build your own action.
 
-This how-to applies to all widgets like the reference selector widget, if the widget has a dropdown you can follow this how-to. Keep in mind that it might need some adjustments according to the widget!
+This how-to applies to all widgets like the reference selector widget, if the widget has a drop-down you can follow this how-to. Keep in mind that it might need some adjustments according to the widget!
 
 **This how-to will teach you how to do the following:**
 

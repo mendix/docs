@@ -14,15 +14,17 @@ For more information on native mobile app development, see the [native-template 
 
 ### Improvements
 
-* The MendixNative library and [Native Template](https://github.com/mendix/native-template) are now written in Objective C. With this update we are further closing the gap between the Native Template and the React Native starter template. Now that they are more aligned, you can use new React Native features like [autolinking](https://github.com/react-native-community/cli/blob/master/docs/autolinking.md) to develop your app.
+* The MendixNative library and [Native Template](https://github.com/mendix/native-template) are now written in Objective C. With this update we are closing the gap between the Native Template and the React Native starter template. 
 
-* The Native Template now supports push notifications. As soon as you include a Google services configuration file (GoogleService-Info.plist* and *google-services.json* in your app, the Native Template will enable the required libraries automatically.
+* We added support for push notifications in the Native Template. As soon as you include a Google services configuration file (GoogleService-Info.plist* and *google-services.json*) in your app, the Native Template will enable the required libraries automatically.
 
-* Added support for URL Schemes.
+* We added support for URL Schemes.
 
 ### Fixes
 
-* We solved various issues with our initial implementation in Swift. Header collisions have been bridged, Swift compiler incompatibility has been solved, React Native links now work as intended, and React Native's ecosystem is now fully oriented towards Objective C.
+* We fixed bridging headers so that they work as intended
+* We fixed Swift compiler incompatibilities 
+* We fix the React Native `link` command so that it works as intended
 
 ## 3.0.0 
 

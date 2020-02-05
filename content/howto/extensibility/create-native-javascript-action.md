@@ -31,10 +31,10 @@ Before starting this how-to, make sure you have completed the following prerequi
 To create NFC JavaScript actions, you will do the following:
 
 1. Create a Mendix project.
-2. Build a native app.
-3. Add a native dependency.
-4. Make two NFC JavaScript actions.
-5. Implement the NFC Scanner in your app.
+1. Build a native app.
+1. Add a native dependency.
+1. Make two NFC JavaScript actions.
+1. Implement the NFC Scanner in your app.
 
 {{% alert type="info" %}}
 This tutorial's commands assume your software is installed in the following places:
@@ -50,14 +50,14 @@ This tutorial's commands assume your software is installed in the following plac
 Follow these instructions to set up your NFC project:
 
 1. Open Mendix Studio Pro.
-2. Select **File** > **New Project**.
-3. Select the **Native Mobile Quickstart** app (also available online [here](https://appstore.home.mendix.com/link/app/109511/)).
-4. Click **Use this starting point**.
-5. Name your app NativeNFC and click **Create App** to close the dialog box.
-6. Rename module **NativeMobile** to *NativeNFC*. You will add your implementation In this module.
-7. Right-click on the module and select **Add other** > **JavaScript action**. Name the new JavaScript action *HasNFCSupport*. You will create the implementation later.
-8. Open the **Home_Native** page and add some welcome text for you test app.
-9. Add an action button with caption *Scan NFC Tag* on your home page. <br />
+1. Select **File** > **New Project**.
+1. Select the **Native Mobile Quickstart** app (also available online [here](https://appstore.home.mendix.com/link/app/109511/)).
+1. Click **Use this starting point**.
+1. Name your app NativeNFC and click **Create App** to close the dialog box.
+1. Rename module **NativeMobile** to *NativeNFC*. You will add your implementation In this module.
+1. Right-click on the module and select **Add other** > **JavaScript action**. Name the new JavaScript action *HasNFCSupport*. You will create the implementation later.
+1. Open the **Home_Native** page and add some welcome text for you test app.
+1. Add an action button with caption *Scan NFC Tag* on your home page. <br />
 	a. Right-click your home page and click **Add widget**.<br />
 	b. Select **Call nanoflow button**.<br />
 	c. Click **new**.<br />
@@ -67,7 +67,7 @@ Follow these instructions to set up your NFC project:
 	g. Open **ACT_ReadNFCTag**.<br />
 	h. Drag and drop the **HasNFCSupport** JavaScript action onto this nanoflow.<br />
 	i. Save your nanoflow.
-10. Click **Run** to deploy to the sandbox. 
+1. Click **Run** to deploy to the sandbox. 
 
 Your Mendix project should looks something like this:
 
@@ -82,21 +82,21 @@ In this section, you will create a normal custom developer app to learn the proc
 Now you will build a native custom developer app and install it on your phone:
 
 1. If you do not have your GitHub and App Center keys, follow the [Getting Your Tokens](/howto/mobile/deploying-native-app#3-getting-your-tokens) section of *How to Deploy Your First Mendix Native App* to get your authentication codes.
-2. Complete [Preparing Your Project](/howto/mobile/deploying-native-app#4-preparing-your-project) section of *How to Deploy Your First Mendix Native App* using these parameters:
+1. Complete [Preparing Your Project](/howto/mobile/deploying-native-app#4-preparing-your-project) section of *How to Deploy Your First Mendix Native App* using these parameters:
 
 	``` shell
 	$ native-builder.exe prepare --java-home "C:\Program Files\AdoptOpenJDK\jdk-11.0.3.7-hotspot" --mxbuild-path "C:\Program Files\Mendix\8.5.0.64176\modeler\mxbuild.exe" --project-path "Y:\MendixProjects\NativeNFC\NativeNFC.mpr" --github-access-token "a1f422..." --appcenter-api-token "a1b95a..." --project-name "Native NFC App" --app-name "Native NFC App" --app-identifier "com.mendix.howto.nativenfc" --runtime-url "https://nativenfc-sandbox.mxapps.io/"
 	```
 
-As a result of the `prepare` command your app is created in [App Center](https://appcenter.ms/apps):
+	As a result of the `prepare` command your app is created in [App Center](https://appcenter.ms/apps):
 
-![App Center apps](attachments/create-native-javascript-action/app-center-apps.png)
+	![App Center apps](attachments/create-native-javascript-action/app-center-apps.png)
 
-A new repository is created in your GitHub account:
+	A new repository is created in your GitHub account:
 
-![Github template repo](attachments/create-native-javascript-action/github-template-repo.png)
+	![Github template repo](attachments/create-native-javascript-action/github-template-repo.png)
 
-3. To build the app for the first time, complete the [Build Your Developer App](/howto/mobile/how-to-devapps#3-build-your-developer-app) section of *Create a Custom Developer App* using this build command:
+1. To build the app for the first time, complete the [Build Your Developer App](/howto/mobile/how-to-devapps#3-build-your-developer-app) section of *Create a Custom Developer App* using this build command:
 
 	``` shell
 	$ native-builder.exe build dev-app --project-name "Native NFC App"
@@ -110,16 +110,13 @@ You apps are now available in the *C:\native-builder\builds\* folder, where you 
 {{% alert type="info" %}}
 
 1. During a build, the free version of the App Center will time out if the build exceeds 30 minutes.
-2. By default, Native Builder builds both an iOS and Android apps. To build faster, for one platform specifically, add the parameter `--platform android` or `--platform ios` to the `build` command.
+1. By default, Native Builder builds both an iOS and Android apps. To build faster, for one platform specifically, add the parameter `--platform android` or `--platform ios` to the `build` command.
 
 {{% /alert %}}
 
-3. Install the app on your device. For more information on installing, please check the [Distributing](/howto/mobile/deploying-native-app#6-distributing) section of *How to Deploy Your First Mendix Native App*.
-4. Open your app, which could look like this:
-
-	![native nfc app home](attachments/create-native-javascript-action/native-nfc-app-home-android.jpg)
-
-5. Tap your NFC button. You will incur this error: **JavaScript action was not implemented**. You will implement your action later.
+1. Install the app on your device. For more information on app installation, see the [Distributing](/howto/mobile/deploying-native-app#6-distributing) section of *How to Deploy Your First Mendix Native App*.
+1. Open your app on your testing device.
+1. Tap your NFC button. You will incur this error: **JavaScript action was not implemented**. You will implement your action later.
 
 ### 3.3 Installing a Dependency in Your Custom Developer App {#installing-dependency-app}
 
@@ -128,10 +125,10 @@ In this section you will install the external library [react-native-nfc-manager]
 The dependency is split into two parts: the native operating system part and the client JavaScript part. To add the dependency for the app, do the following:
 
 1. Open a command line interface (CLI) and change directory to your GitHub project folder: `$ cd C:/github/`.
-2. Use your repository URL to clone the files on your machine with the command `$ git clone https://github.com/user-name/native-nfc-app`.
-3. Open the folder containing your cloned code: `$ cd native-nfc-app`.
-4. To install all its current dependencies, use the command `$ npm install`.
-5. Install the required library as a dependency with the command `$ npm install --save react-native-nfc-manager@1.2.2`.
+1. Use your repository URL to clone the files on your machine with the command `$ git clone https://github.com/user-name/native-nfc-app`.
+1. Open the folder containing your cloned code: `$ cd native-nfc-app`.
+1. To install all its current dependencies, use the command `$ npm install`.
+1. Install the required library as a dependency with the command `$ npm install --save react-native-nfc-manager@1.2.2`.
 	Note the version after the `@` sign. Versions 2 and higher are not supported on Mendix Studio Pro 8.5.
 
 Next you will use the `react-native link` command to link your module. This command works for React Native versions below 0.60. It is replaced in versions 0.60 and higher with auto-linking. Auto-linking does not require any linking or code changes. However, both processes have downsides and not every module supports them.
@@ -141,14 +138,14 @@ To integrate the module into the template, you will need to make a few code chan
 Regardless of which linking method you choose, complete the following steps first:
 
 1. Install the React Native CLI using the command `npm install -g react-native-cli@2.0.1` (note that the versions should match the React Native version of your Mendix version).
-2. Link the new module with the command `$ react-native link react-native-nfc-manager`. 
+1. Link the new module with the command `$ react-native link react-native-nfc-manager`. 
 
 #### 3.3.1 Automatic Linking {#auto-linking}
 
 You should see sucesses from the previous linking commands. Even when your linking shows successes in your CLI, linking problems may have occured with your linked apps. To truly validate success, complete the following steps:
 
 1.Open *C:\github\native-nfc-app\android\app\src\main\java\com\mendix\nativetemplate\MainApplication.java*.
-2. Make sure the following is included in the list of imports: `import community.revteltech.nfc.NfcManagerPackage;`.
+1. Make sure the following is included in the list of imports: `import community.revteltech.nfc.NfcManagerPackage;`.
 
 You can skip the Manual Linking section and move on to the [Using the Modules](#using-modules) section now.
 
@@ -165,24 +162,24 @@ To link for Android devices, do the following:
 	project(':react-native-nfc-manager').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-nfc-manager/android')
 	```
 
-2. To use the new gradle module in **C:\github\native-nfc-app\android\app\build.gradle**, add this to your list of dependencies:
+1. To use the new gradle module in **C:\github\native-nfc-app\android\app\build.gradle**, add this to your list of dependencies:
 
 	``` gradle
 	implementation project(":react-native-nfc-manager")
 	```
 
-3. Now the main application needs to initialize the NFC manager. In *C:\github\native-nfc-app\android\app\src\main\java\com\mendix\nativetemplate\MainApplication.java* add an item to the `Arrays.<ReactPackage>asList`, add a comma after the other dependency, and add the `new NfcManagerPackage()`:
+1. Now the main application needs to initialize the NFC manager. In *C:\github\native-nfc-app\android\app\src\main\java\com\mendix\nativetemplate\MainApplication.java* add an item to the `Arrays.<ReactPackage>asList`, add a comma after the other dependency, and add the `new NfcManagerPackage()`:
 
 	``` java
 	new NfcManagerPackage()
 	```
 	
-4. When you add this package (todo: check package) in Android Studio, the import is automatically added. If you use a plain text editor, add an extra import section on the line `import community.revteltech.nfc.NfcManagerPackage;`.
+1. When you add this package (todo: check package) in Android Studio, the import is automatically added. If you use a plain text editor, add an extra import section on the line `import community.revteltech.nfc.NfcManagerPackage;`.
 
 To link for iOS devices, do the following:
 
 1. Open **C:\github\native-nfc-app\ios\Podfile**.
-2. In the `abstract_target` section; before `end`, add a new line with `pod 'react-native-nfc-manager', :path => '../node_modules/react-native-nfc-manager'`
+1. In the `abstract_target` section; before `end`, add a new line with `pod 'react-native-nfc-manager', :path => '../node_modules/react-native-nfc-manager'`
 
 For more information about linking, see the following resources:
 
@@ -202,22 +199,22 @@ For Android devices, you must add code which checks if a user permits the module
 For iOS you have to add permission to use NFC capabilities:
 
 1. Open your project in xCode.
-2. Select your project in the left menu.
-3. In **Signing & Capabilities**, click **Capability** and select **Near Field Communication Tag Reading**
+1. Select your project in the left menu.
+1. In **Signing & Capabilities**, click **Capability** and select **Near Field Communication Tag Reading**
 	
 	![ios capabilities](attachments/create-native-javascript-action/xcode-capabilities-nfc.png)
 	
-4. Add a usage description so the user can give their permission to use the NFC reader: [todo: confirm that this whole bit to end of section is only for ios. Android don't have to do the git stuff?]
+1. Add a usage description so the user can give their permission to use the NFC reader: [todo: confirm that this whole bit to end of section is only for ios. Android don't have to do the git stuff?]
 
-5. In **ios/nativeTemplate/Info.plist** right-click [todo: where?], select **Add Row**, and title they key `NFCReaderUsageDescription` with the description: *To be able to read NFC tags, please accept.*
+1. In **ios/nativeTemplate/Info.plist** right-click [todo: where?], select **Add Row**, and title they key `NFCReaderUsageDescription` with the description: *To be able to read NFC tags, please accept.*
 
 #### 3.3.4 Commit Template {#commit-template}
 
 For both platforms, you need to store your changes in the template. Push your changes to GitHub (where the Native Builder can use them later):
 
 1. To stage the changes, use the command `$ git add .` while in **C:\github\native-nfc-app**. You can check the staged files with the command `$ git status`.
-2. Commit the files with the command `$ git commit -m "Add NFC Manager dependency"`.
-3. Now the files are committed, but they are only stored locally on your machine. Push them to your repository with the command `$ git push`. This will make the changes available so that the Native Builder can create a new app with NFC support.
+1. Commit the files with the command `$ git commit -m "Add NFC Manager dependency"`.
+1. Now the files are committed, but they are only stored locally on your machine. Push them to your repository with the command `$ git push`. This will make the changes available so that the Native Builder can create a new app with NFC support.
 
 ### 3.4 Install a Dependency in Your Project {#install-dependency-project}
 
@@ -229,8 +226,8 @@ The dependency is split into two parts: the native device part, and the client J
 	$ cd C:\MendixProjects\NativeNFC\javascriptsource\nativenfc\actions
 	```
 
-2. Make sure *HasNFCSupport.js* is in this folder so you know you are in the right place.
-3. Install the dependency with the command `$ npm install react-native-nfc-manager@1.2.2`.
+1. Make sure *HasNFCSupport.js* is in this folder so you know you are in the right place.
+1. Install the dependency with the command `$ npm install react-native-nfc-manager@1.2.2`.
 
 {{% alert type="info" %}}
 
@@ -245,8 +242,8 @@ JavaScript actions for web and native platforms are similar. However, they have 
 Build an action to check if a device supports NFC:
 
 1. Open the **HasNFCSupport** JavaScript action.
-2. Change the **Return type** to **Boolean**.
-3. Add this import above the `EXTRA CODE` block:
+1. Change the **Return type** to **Boolean**.
+1. Add this import above the `EXTRA CODE` block:
 	
 	``` javascript
 	import { Big } from "big.js";
@@ -254,7 +251,7 @@ Build an action to check if a device supports NFC:
 	import NfcManager from "react-native-nfc-manager";
 	```
 	
-4. Replace the content of the `USER CODE` block with the following:
+1. Replace the content of the `USER CODE` block with the following:
 	
 	``` javascript
 	if (!NativeModules.NfcManager) {
@@ -265,7 +262,7 @@ Build an action to check if a device supports NFC:
 	The `NativeModules` contains all loaded modules, this allows us to check if the app has the module installed. This will throw an error when the action is used in the **Make it Native** app.
 	The NfcManager is imported from your newly added module. The `isSupported` functions check if NFC is supported by the hardware. They return a Promise that will resolved to a boolean value to indicate if NFC is supported. [todo: at this stage I have 1 error: variable name property is required in the HasNFCSupport action in ACT_ReadNFCTag. Is this expected?]
 
-5. Optionally, you can **Expose as nanoflow action** and add an icon:
+1. Optionally, you can **Expose as nanoflow action** and add an icon:
 	
 	![has NFC support action settings](attachments/create-native-javascript-action/action-has-nfc-support-settings.png)
 
@@ -274,8 +271,8 @@ Build an action to check if a device supports NFC:
 Now make an JavaScript action to read the NFC tag information:
 
 1. Create a JavaScript action named *ReadNFCTag*.
-2. Select **Return type** > **String**.
-3. Click the **Code** tab, and add the import above the `EXTRA CODE` block:
+1. Select **Return type** > **String**.
+1. Click the **Code** tab, and add the import above the `EXTRA CODE` block:
 
 	``` javascript
 	import NfcManager, { Ndef } from "react-native-nfc-manager";
@@ -295,7 +292,7 @@ Now make an JavaScript action to read the NFC tag information:
 
 	[todo: review this to see if it's needed. It's a bit dense.] Here you return a promise that resolves a string value. The nanoflow will wait until the resolve function is called. The registration listens for tags that are picked up by the reader. When the callback function is executed as a tag is found, [todo: insert subject] un-register to stop listening for other tags. The payload is decoded from a byte array into text. When the resolve function is called with the text parameter, that nanoflow will receive this value as the return parameter.
 	
-5. Optionally, [todo: select? what verb goes before this?] **Expose as nanoflow action** and add a nice icon if you would like.
+1. Optionally, [todo: select? what verb goes before this?] **Expose as nanoflow action** and add a nice icon if you would like.
 
 	![Read NFC tag action settings](attachments/create-native-javascript-action/action-read-nfc-tag-settings.png)
 
@@ -334,12 +331,12 @@ Now you have a way to read NFC *NDEF* tags. Next you will write some text for yo
 To write your own NFC tag, do the following:
 
 1. Install the NFC Tools app on your device.
-2. Open the NFC Tools app.
-3. Scan your tag. The **Technologies available** section should state it supports *Ndef*. The **Writeable** section should show **Yes**.
-4. Tap **WRITE**, tap **Add a record**, and tap **Text**.
-5. Enter the text *Hello Mendix Developer!* and tap **OK**.
-6. Tap **Write / 30 Bytes**.
-7. Scan your tag. You will receive a **Write complete** dialog box:
+1. Open the NFC Tools app.
+1. Scan your tag. The **Technologies available** section should state it supports *Ndef*. The **Writeable** section should show **Yes**.
+1. Tap **WRITE**, tap **Add a record**, and tap **Text**.
+1. Enter the text *Hello Mendix Developer!* and tap **OK**.
+1. Tap **Write / 30 Bytes**.
+1. Scan your tag. You will receive a **Write complete** dialog box:
 
 	![write nfc tag](attachments/create-native-javascript-action/nfc-tools-write-tag.jpg)
 
@@ -360,17 +357,17 @@ Making software is an iterative process. If you integrate your own module or bui
 {{% /alert %}}
 
 1. Open your CLI.
-2. Run the following command to rebuild your NFC app: 
+1. Run the following command to rebuild your NFC app: 
 
 	``` shell
 	$ native-builder.exe build dev-app --project-name "Native NFC App"
 	```
 
 	This builder will use the configuration you set during the [Install a Dependency in Your Project](#install-dependency-project) section above.
-3. After the build has successfully finished, the build file will be available in *C:\native-builder\builds*.
-4. Uninstall the previous version of the app on your device.
-5. Install the app on your device. For more information on installing an app on your device, see the [Distributing](/howto/mobile/deploying-native-app#distributing) section of *Deploy Your First Mendix Native App*.
-7. Open the app, tap **Scan tag**, and scan your NFC tag. You should see an information dialog box with the text contained by the tag [todo: RESUME HERE 1 I got a "nfc manager module error" 2 while the NFC app is still open, touching an NFC tag to the device will spawn a dialog from THAT app, not the custom dev app. I must add a step to say "close nfc app"?]:
+1. After the build has successfully finished, the build file will be available in *C:\native-builder\builds*.
+1. Uninstall the previous version of the app on your device.
+1. Install the app on your device. For more information on installing an app on your device, see the [Distributing](/howto/mobile/deploying-native-app#distributing) section of *Deploy Your First Mendix Native App*.
+1. Open the app, tap **Scan tag**, and scan your NFC tag. You should see an information dialog box with the text contained by the tag [todo: RESUME HERE 1 I got a "nfc manager module error" 2 while the NFC app is still open, touching an NFC tag to the device will spawn a dialog from THAT app, not the custom dev app. I must add a step to say "close nfc app"?]:
 
 	![read NFC tag scanning ios](attachments/create-native-javascript-action/native-nfc-app-scanning-ios.png)
 
@@ -382,11 +379,11 @@ Congratulations for completing this NFC tutorial! To go beyond the lessons you h
 
 Now you have a working NFC scanner. However, you can  improve its functionality on both on Android and iOS.
 
-On Android, NFC can be switched off. Also, scanning should be canceled if the back button is clicked. 
+On Android, NFC scanning can be switched off. Also, scanning should be canceled if the back button is clicked.
 
 On iOS, scanning can be canceled when the **Ready to Scan** dialog box is up. 
 
-To accomplish these goals, replace all the **USER CODE** in the **ReadNFCTag** JavaScript action with the following code, and repeat the steps in the [Rebuilding Your App](#rebuilding-app) section above to build and install on your device.
+To implement these capabilities, replace all the **USER CODE** in the **ReadNFCTag** JavaScript action with the following code, then repeat the steps in the [Rebuilding Your App](#rebuilding-app) section above to build and install the updated app on your device:
 
 ``` js
 // This file was generated by Mendix Studio Pro.
@@ -457,25 +454,18 @@ export async function ReadNFCTag() {
 
 Explaining the code:
 
-At the beginning of the action on Android, the code checks if the NFC tag reader is switched off and throws an error if so. It creates a Promise with `resolve` and `reject` parameters. Note the `async` keyword before the function. This allows `await` to be used with an asynchronous function and lets them execute together while respecting their order in the code. The `start` will initialize the module and register a callback for iOS. This callback will be called when the *NFC NDEF reader session* becomes invalid, either because of the OS or because the **Cancel** button was pressed.  
-
-For Android, a lister for the **hardware back** button is included. When you click it, you will stop listening for tags, and [todo: can cancel? this part of the sentence is unclear] cancel the execution by calling the `reject` function. This way the nanoflow will receive an error that is caught by the error handler. 
+At the beginning of the action on Android, the code checks if the NFC tag reader is switched off and throws an error if so. It creates a Promise with `resolve` and `reject` parameters. Note the `async` keyword before the function. This allows `await` to be used with an asynchronous function and lets them execute together while respecting their order in the code. The `start` will initialize the module and register a callback for iOS. This callback will be called when the **NFC NDEF reader session** becomes invalid, either because of the OS or because the **Cancel** button was tapped.  
+For Android, a lister [todo: listener?] for the **hardware back** button is included. When you tap it, you will stop listening for tags, and cancel the execution by calling the `reject` function. This way the nanoflow will receive an error that is caught by the error handler. 
 
 When the app is listening for a tag, you can switch off the NFC function in Android. This causes a *state change* that you will catch, and causes a rejection to the promise.
 
-The second parameter of the `registerTagEvent` function is the instruction text which shows in the iOS `Ready to Scan` dialog box. After the tag is found by the reader, you have to `stop` the NFC manager. This way you stop listening for state changes on Android, and you stop listening for the session to close in iOS.
+The second parameter of the `registerTagEvent` function is the instruction text which appears in the iOS **Ready to Scan** dialog box. After the tag is found by the reader, you have to `stop` the NFC manager. This way you stop listening for state changes on Android, and you stop listening for the session to close in iOS.
 
 Congratulations on making your own native JavaScript action! Please use your own creativity to extend the NFC functionality or implement other modules with the lessons you have learned.
 
-## 4 Build for Release {#build-release}
+## 4 Build for Release
 
 Until this section, you have used a custom developer app to validate your application. When you want to distribute your app in the Google Play Store or Apple App Store, you have make a build that includes the bundled Mendix app.
-
-To build the app for the first time, run this `build` command:
-
-``` shell
-$ native-builder.exe build --project-name "Native NFC App" --app-version "1.0.0" --build-number 1
-```
 
 For the full explanation on how to build, sign, and distribute your app to an app store see the [Making Your First Build](/howto/mobile/deploying-native-app#first-build) section of *How to Deploy Your First Mendix Native App* as well as the tutorial's subsequent sections.
 
@@ -485,9 +475,8 @@ The Native Builder will locally run MxBuild. The output is a *bundles.js* file w
 
 {{% /alert %}}
 
-## 4 Read More {#read-more}
+## 4 Read More
 
-* [Getting Started with Native Mobile](/howto/mobile/getting-started-with-native-mobile)
 * [How to Deploy Your First Mendix Native App](/howto/mobile/deploying-native-app)
 * [JavaScript Actions Reference Guide](/refguide/javascript-actions)
 * [How To Build JavaScript actions](/howto/extensibility/build-javascript-actions)

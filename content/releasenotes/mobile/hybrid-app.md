@@ -16,7 +16,7 @@ For more information on hybrid mobile app development in Mendix, see the [Hybrid
 
 ### Hybrid App Base 4.1.10
 
-**Release date: February 4rd, 2020**
+**Release date: February 4th, 2020**
 
 * We added implementation details for including local resources (only if it exists) into your packaged iOS app.
 * We fixed an issue with Android 10 failing with secure storage.

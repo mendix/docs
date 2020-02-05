@@ -128,6 +128,12 @@ Use [Free App](other-terms#free-app) or "Free App environment" as of Mendix 8.
 Replaced by [Developer Portal](main-product-names#devportal).
 {{% /alert %}}
 
+## starter app
+
+{{% alert type="info" %}}
+Replaced by [app template](other-terms#app-template) to reflect the create-new-app flow UI in the Developer Portal.
+{{% /alert %}}
+
 ## Web Modeler {#wm}
 
 This term should still be used when referring to Mendix versions below 8.

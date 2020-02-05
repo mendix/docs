@@ -16,8 +16,8 @@ You may have tried to build a hybrid app package for Windows Phone, and found ou
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* A Mendix App with mobile support running in the Mendix Cloud, either in a Free App or on a licensed cloud node
-* An account for Adobe PhoneGap Build. You can sign up for an account [here](https://build.phonegap.com/plans)
+* A Mendix App with mobile support running in the Mendix Cloud, either in a Free App or on a licensed cloud node.
+* An account for Adobe PhoneGap Build. You can sign up for an account [here](https://build.phonegap.com/plans).
 
 ## 3 Building the Windows Phone Package
 

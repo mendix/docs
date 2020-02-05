@@ -8,7 +8,7 @@ draft: true
 
 ## 1 Introduction
 
-The [LDAP Synchronization](https://appstore.home.mendix.com/link/app/24/) module can be used to synchronize users (or other objects) using the Lightweight Directory Access Protocol (LDAP) protocol. 
+The [LDAP Synchronization](https://appstore.home.mendix.com/link/app/24/) module can be used to synchronize users (or other objects) using the Lightweight Directory Access Protocol (LDAP). 
 
 ### 1.1 Typical Usage Scenarios
 

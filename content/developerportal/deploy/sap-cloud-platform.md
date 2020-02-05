@@ -22,7 +22,7 @@ Before you can manage your SAP Cloud Platform using the Developer Portal, you wi
 
 1. You have an existing app which has never been deployed on the SAP Cloud Platform and you want to change the cloud settings. See [Change Cloud Settings](#ChangeCloudSettings).
 
-2. You are creating a new app from an SAP starter app. See [New SAP App](#NewSAPApp).
+2. You are creating a new app from an SAP app template. See [New SAP App](#NewSAPApp).
 
 ### 2.1 Change Cloud Settings{#ChangeCloudSettings}
 
@@ -38,11 +38,7 @@ Click **Getting Started** and then continue with [Set Up Region](#SetUpRegion).
 
 ### 2.2 New SAP App{#NewSAPApp}
 
-In this scenario, you choose a Mendix starter app from the **SAP Apps** tab.
-
-![](attachments/sap-cloud-platform/sap-starter-apps.png)
-
-Select the starter app you want and give it a name.
+In this scenario, you choose a Mendix app template for SAP **SAP Apps** tab and give it a name.
 
 Once the app has been created you can continue with [Set Up Region](#SetUpRegion).
 
@@ -474,10 +470,12 @@ If you have issues with your app running on SAP HANA, you will need to use the S
 #### 8.2.2 SAP HANA Configuration for Trial Accounts
 
 {{% alert type="info" %}}
-If you are using a trial account, the SAP HANA Schema is only available if your account was created after November 2019. If you have a trial account which was created before then, you will not be able to use the hanatrial-schema database.
+If you are using a trial account created before November 2019, the SAP HANA Schema may not be available.
+
+If you do not have the three **SAP HANA Schemas & HDI Containers (Trial)** services in your subaccount entitlements, you can add the services in the SAP Cloud Platform cockpit. Select **Entitlements** > **Configure Entitlements** > **Add Service Plans**, and choose the three **SAP HANA Schemas & HDI Containers (Trial)** services.
 {{% /alert %}}
 
-For trial accounts which support it, generally those created after November 2019, you can bind your Mendix app to a trial SAP HANA database. Just choose **hanatrial-schema** from the dropdown of supported databases.
+For trial accounts which have the **SAP HANA Schemas & HDI Containers (Trial)** services, you can bind your Mendix app to a trial SAP HANA database. Just choose **hanatrial-schema** from the dropdown of supported databases.
 
 ![](attachments/sap-cloud-platform/hanatrial-schema.png)
 

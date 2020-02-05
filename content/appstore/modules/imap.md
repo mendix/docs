@@ -30,7 +30,7 @@ The [IMAP/POP3 Incoming Email](https://appstore.home.mendix.com/link/app/1042/) 
 
 ### 1.4 Dependencies
 
-* [Encryption](encryption) module (used to encrypt passwords of the email accounts)
+* [Encryption](encryption) (used to encrypt passwords of the email accounts)
 
 ## 2 Configuration
 

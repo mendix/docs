@@ -11,7 +11,7 @@ In Mendix Studio, you can filter data in pages and microflows.
 
 *In a microflow*, you can filter the retrieved data by creating filters for the **Retrieve** activity. To add a filter objects should be retrieved from the database:
 
-![](attachments/filters/retrieve-from-database.png)
+<img src="attachments/filters/retrieve-from-database.png"  />
 
 *In a page*, you can add a filter to a list view or a data grid. Mind that the data source of the list view or the data grid should be **Database**: 
 
@@ -85,7 +85,7 @@ To create a new filter, do the following:
 
 4. Select an operator and a value on the right. 
 
-    The value on the right can be a literal value that you type in (only available for string, long, integer, decimal, and autonumber attribute types ) or it can be an attribute/association/value that you choose from the drop-down list. The options in the drop-down list depend on the left attribute/association. 
+    The value on the right can be a literal value that you type in (only available for string, long, integer, decimal, and autonumber attribute types), or it can be an attribute, association, or value you choose from the drop-down list. The options in the drop-down list depend on the left attribute/association. 
 
     ![](attachments/filters/list-of-options.png)
 

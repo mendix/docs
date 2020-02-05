@@ -93,7 +93,7 @@ You may enable the Web Modeler for one of the development lines. This means that
 
 The Web Modeler cannot be used to develop the app if it is not enabled for any development lines.
 
-For starter apps created via the Developer Portal, the main line of a new app will be Web Modeler enabled.
+For app templates created via the Developer Portal, the main line of a new app will be Web Modeler enabled.
 
 ### 2.11 Tag
 

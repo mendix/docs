@@ -37,7 +37,7 @@ To successfully use the resources, you will *resources.zip* in your app's **www*
 
 ## 4 Building Your Mobile App
 
-Now that you have set up your hybrid app with the local resources, you may continue building it by following the [hybrid app package documentation](https://github.com/mendix/hybrid-app-template/).
+Now that you have set up your hybrid app with the local resources, you may continue building it by following the [hybrid app package documentation](https://github.com/mendix/hybrid-app-template/). Once you build this app, your app will load more quickly the first time it is run because of the work you completed here.
 
 ## 5 Read More
 

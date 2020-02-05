@@ -204,9 +204,9 @@ For iOS you have to add permission to use NFC capabilities:
 	
 	![ios capabilities](attachments/create-native-javascript-action/xcode-capabilities-nfc.png)
 	
-1. Add a usage description so the user can give their permission to use the NFC reader: [todo: confirm that this whole bit to end of section is only for ios. Android don't have to do the git stuff?]
+1. Add a usage description so the user can give their permission to use the NFC reader: [todo: where? will the option pop up under Near Field Communication Tag Reading]
 
-1. In **ios/nativeTemplate/Info.plist** right-click [todo: where?], select **Add Row**, and title they key `NFCReaderUsageDescription` with the description: *To be able to read NFC tags, please accept.*
+1. In **ios/nativeTemplate/Info.plist** right-click, select **Add Row**, and title the key `NFCReaderUsageDescription` with the description: *To be able to read NFC tags, please accept.*
 
 #### 3.3.4 Commit Template {#commit-template}
 
@@ -260,9 +260,9 @@ Build an action to check if a device supports NFC:
 	return NfcManager.isSupported();
 	```
 	The `NativeModules` contains all loaded modules, this allows us to check if the app has the module installed. This will throw an error when the action is used in the **Make it Native** app.
-	The NfcManager is imported from your newly added module. The `isSupported` functions check if NFC is supported by the hardware. They return a Promise that will resolved to a boolean value to indicate if NFC is supported. [todo: at this stage I have 1 error: variable name property is required in the HasNFCSupport action in ACT_ReadNFCTag. Is this expected?]
+	The NfcManager is imported from your newly added module. The `isSupported` functions check if NFC is supported by the hardware. They return a Promise that will resolved to a boolean value to indicate if NFC is supported.
 
-1. Optionally, you can **Expose as nanoflow action** and add an icon:
+1. Optionally, click the **Expose as nanoflow action** tab, select **Expose as nanoflow action**, and **Select** an icon for your JavaScript action. [todo: sort out this pictures and the pair in the next list]
 	
 	![has NFC support action settings](attachments/create-native-javascript-action/action-has-nfc-support-settings.png)
 
@@ -292,7 +292,7 @@ Now make an JavaScript action to read the NFC tag information:
 
 	[todo: review this to see if it's needed. It's a bit dense.] Here you return a promise that resolves a string value. The nanoflow will wait until the resolve function is called. The registration listens for tags that are picked up by the reader. When the callback function is executed as a tag is found, [todo: insert subject] un-register to stop listening for other tags. The payload is decoded from a byte array into text. When the resolve function is called with the text parameter, that nanoflow will receive this value as the return parameter.
 	
-1. Optionally, [todo: select? what verb goes before this?] **Expose as nanoflow action** and add a nice icon if you would like.
+1. Optionally, click the **Expose as nanoflow action** tab, select **Expose as nanoflow action**, and **Select** an icon for your JavaScript action.
 
 	![Read NFC tag action settings](attachments/create-native-javascript-action/action-read-nfc-tag-settings.png)
 

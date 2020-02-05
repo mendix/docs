@@ -43,6 +43,8 @@ Here you can select a microflow that is automatically executed immediately after
 
 {{% alert type="warning" %}}
 There is a timeout of *11 minutes* on the after startup microflow. If your after startup microflow takes longer than 11 minutes your whole app will fail to start.
+
+After startup is designed to initialize the app and therefore runs *before* the app is able to respond to incoming service requests (for example, published REST services).
 {{% /alert %}}
 
 ### 3.4 Before Shutdown

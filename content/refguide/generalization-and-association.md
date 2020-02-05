@@ -55,6 +55,41 @@ If you require a lot of searching, sorting and displaying of the inherited/assoc
 
 When using an inheritance with a one-to-many association, you cannot retrieve [by association](retrieve#source).
 
+Here is an example inheritance:
+
+![](attachments/generalization-and-association/limitation.png)
+
+In this example, a list of **Specializations** cannot be retrieved when using a standard by-association retrieve in a microflow if the input is the specialization.
+
+However, there is a workaround for this limitation: The list of Specializations can be retrieved with a Java action using the Java API. This Java action needs two parameters: the **Specialization** and a Boolean **Reverse** via this code snippet:
+
+```
+public class RetrieveAsAssociatedWithB extends CustomJavaAction<java.util.List<IMendixObject>>
+{
+	private IMendixObject __B;
+	private main.proxies.Specialization B;
+	private java.lang.Boolean Reverse;
+
+	public RetrieveAsAssociatedWithB(IContext context, IMendixObject B, java.lang.Boolean Reverse)
+	{
+		super(context);
+		this.__B = B;
+		this.Reverse = Reverse;
+	}
+
+	@java.lang.Override
+	public java.util.List<IMendixObject> executeAction() throws Exception
+	{
+		this.B = __B == null ? null : main.proxies.Specialization.initialize(getContext(), __B);
+ 
+		// BEGIN USER CODE
+		return Core.retrieveByPath(getContext(), __B, "Main.Generalization_Specialization", Reverse);
+		// END USER CODE
+	}
+}
+```
+When setting the `Reverse` Boolean to true and using the `Specialization` object as the input, the returned list will contain all the Specializations associated to the Specialization.
+
 ## 3 Flexibility
 
 Making a decision between inheritance and associations is something you should do before loading a lot of data into the application. When adding associations, additional data may be required to specify the relationships between objects. When you remove generalizations, the relationship between the two objects will get lost. There are tricks you can use to resolve any previous relationships, however, this can be extremely difficult and time consuming once there is a lot of data available in your application.

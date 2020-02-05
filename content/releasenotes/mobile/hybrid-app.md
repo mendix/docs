@@ -18,7 +18,7 @@ For more information on hybrid mobile app development in Mendix, see the [Hybrid
 
 **Release date: February 4th, 2020**
 
-* We added implementation details for including local resources (only if it exists) into your packaged iOS app.
+* We added implementation capabilities for including local resources (only if it exists) into your packaged iOS app. For more information on using local resources to speed up your app's initial launch, see [How to Migrate Local Bundled Resources to a Deployed iOS App](/howto/mobile/include-local-bundled-resources).
 * We fixed an issue with Android 10 failing with secure storage.
 
 ### Hybrid App Base 4.1.9

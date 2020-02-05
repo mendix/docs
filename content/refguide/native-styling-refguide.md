@@ -456,10 +456,9 @@ The default class to style all actions buttons is named `ActionButton`. However,
 
 ## 9 Pages {#pages}
 
-To style pages, you can add classes to a page or its layout. The sidebar, status bar, and header are part of a page and can also be styled this way.
+To style pages, you can add classes to a page or its layout. The status bar and header are part of a page and can also be styled this way.
 
 ```xml
-<sidebar/>
 <page>
 	<statusBar/>
 	<header/>
@@ -471,7 +470,6 @@ To style pages, you can add classes to a page or its layout. The sidebar, status
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
-| `sidebar` | `container` | This has all ViewStyle properties. |
 | `statusBar` | `barStyle` | The style of the status bar, which can be either `dark-content` (black text) or `light-content` (white text). |
 | `statusBar` | `backgroundColor` | The background color of the status bar (Android only). |
 | `header` | `container` | This has all ViewStyle properties. |

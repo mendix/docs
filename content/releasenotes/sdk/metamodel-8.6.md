@@ -11,60 +11,48 @@ parent: "metamodel-8"
 
 ### StringTemplateParameterValue (Element)
 
-#### Property 'template'
-* Deleted - Use 'TypedTemplate' instead.
+* We deleted the `template` property. Use `TypedTemplate` instead.
+* We introduced the `typedTemplate` property.
 
-#### Property 'typedTemplate'
-* Introduced.
+### TypedTemplate, TypedTemplateArgument & PrimitiveTypedTemplateArgument (Elements)
 
-### TypedTemplate (Element)
-* Introduced.
-
-### TypedTemplateArgument (Element)
-* Introduced.
-
-### PrimitiveTypedTemplateArgument (Element)
-* Introduced.
+* We introduced these elements.
 
 ## Settings
 
 ### ModelerSettings (Element)
 
-#### Property 'actionActivityDefaultColors'
-* Introduced.
+* We introduced the `actionActivityDefaultColors` property.
 
 ### ActionActivityDefaultColor (Element)
-* Introduced.
+
+* We introduced this element.
 
 ## Rest
 
 ### ConsumedODataService (ModelUnit)
 
-#### Property 'metadataReferences'
-* Introduced - The metadata file.
-
-#### Property 'oDataVersion'
-* Introduced - The OData version of the service.
+* We introduced the `metadataReferences` property for a metadata file.
+* We introduced the `oDataVersion` property for the OData version of the service.
 
 ### MetadataReference (Element)
-* Introduced - Referenced metadata file
+
+* We introduced this element for the referenced metadata file.
 
 ## Pages
 
 ### StaticImageViewer (Element)
 
-#### Property 'alternativeText'
-* Introduced.
+* We introduced the `alternativeText` property.
 
 ### DynamicImageViewer (Element)
 
-#### Property 'alternativeText'
-* Introduced.
+* We introduced the `alternativeText` property.
 
 ### RetrievalQuery (Element)
 
-#### Property 'parameters'
-* Introduced.
+* We introduced the `parameters` property.
 
 ### RetrievalQueryParameter (Element)
-* Introduced.
+
+* We introduced this element.

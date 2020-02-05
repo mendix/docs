@@ -20,9 +20,9 @@ For more information on native mobile app development, see the [native-template 
 
 ### Fixes
 
-* We fixed bridging headers so that they work as intended
-* We fixed Swift compiler incompatibilities 
-* We fix the React Native `link` command so that it works as intended
+* We fixed bridging headers so that they work as intended.
+* We fixed Swift compiler incompatibilities.
+* We fix the React Native `link` command so that it works as intended.
 
 ## 3.0.0 
 

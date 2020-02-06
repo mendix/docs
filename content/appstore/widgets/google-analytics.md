@@ -51,7 +51,7 @@ MasterPageTracker should only be used once in your Mendix application.
 This widget must be inside a data view.
 {{% /alert %}}
 
-* **Url** – the URL that should be shown in the Google Analytics overview
+* **URL** – the URL that should be shown in the Google Analytics overview
 * **Title ** – the title that should be shown in the Google Analytics overview
 
 For example, if the **Url** is */test/${name}*, then if the URL is parsed, *${name}* will be replaced by the value of the current object's attribute, which is defined in the **Data Source** tab. 

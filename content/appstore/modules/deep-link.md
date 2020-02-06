@@ -2,7 +2,7 @@
 title: "Deep Link"
 category: "Modules"
 description: " "
-tags: [ ]
+tags: ["app store", "app store component", "deep link"]
 draft: true
 ---
 

@@ -2,7 +2,7 @@
 title: "Excel Exporter"
 category: "Modules"
 description: " "
-tags: [ ]
+tags: ["app store", "app store component", "excel exporter",' "excel", "filedocument"]
 draft: true
 ---
 
@@ -24,5 +24,5 @@ This version is compatible with the following components:
 
 ## 3 Read More
 
-* [How to Use the Excel Exporter](/howto/integration/using-the-excel-exporter)
+* [How to Use the Excel Exporter](https://docs.mendix.com/howto/integration/using-the-excel-exporter)
 

@@ -78,7 +78,7 @@ This is the term to use to reflect the create-new-app flow UI in the Developer P
 
 There are two inconsistencies in other areas of the platform UI:
 
-* When creating a new company app template to add to the App Store as a component, you have to select **Starter Apps* as the **Sub category**
+* When creating a new company app template to add to the App Store as a component, you have to select **Starter Apps** as the **Sub category**
 * In the App Store, "sample apps" continues to be the menu item for app templates
 
 {{% alert type="info" %}}

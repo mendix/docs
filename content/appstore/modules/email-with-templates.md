@@ -2,7 +2,7 @@
 title: "Email with Templates"
 category: "Modules"
 description: " "
-tags: [ ]
+tags: ["app store", "app store component", "email with templates", "token"]
 draft: true
 ---
 
@@ -43,4 +43,4 @@ To configure this module, follow these steps:
 
 ## 3 Read More
 
-* [Sending Email](/developerportal/deploy/sending-email)
+* [Sending Email](https://docs.mendix.com/developerportal/deploy/sending-email)

@@ -2,7 +2,7 @@
 title: "MxSMTP"
 category: "Modules"
 description: " "
-tags: [ ]
+tags: ["app store", "app store component", "mxsmtp"]
 draft: true
 ---
 

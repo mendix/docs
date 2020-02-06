@@ -8,6 +8,18 @@ description: "Native Template release notes."
 
 For more information on native mobile app development, see the [native-template repository](https://github.com/mendix/native-template/) and [How to Deploy Your First Mendix Native App](/howto/mobile/deploying-native-app) .
 
+## 3.1.1
+
+**Release date: February 6th, 2020**
+
+An iOS app built with version 3.1.0 of Native Template, will fail to sync dynamic images correctly.
+This results in images missing and an annoying popup.
+This issue cannot be resolved with an OTA update but will require a full build of the iOS variant of an app.
+
+### Fixes
+
+* On iOS dynamic images should again being synced correctly to the device
+
 ## 3.1.0
 
 **Release date: February 5th, 2020**

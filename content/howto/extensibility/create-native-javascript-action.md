@@ -174,7 +174,7 @@ To link for Android devices, do the following:
 	new NfcManagerPackage()
 	```
 	
-1. When you add this package (todo: check package) in Android Studio, the import is automatically added. If you use a plain text editor, add an extra import section on the line `import community.revteltech.nfc.NfcManagerPackage;`.
+1. When you add this package (todo: is "package" right?) in Android Studio, the import is automatically added. If you use a plain text editor, add an extra import section on the line `import community.revteltech.nfc.NfcManagerPackage;`.
 
 To link for iOS devices, do the following:
 

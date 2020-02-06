@@ -19,10 +19,7 @@ To create a new project, follow the steps below:
    
 2. In **My Apps** tab, select a starting point – an app template. 
 
-3.  Click **Use this starting point**:
-
-    ![Use This Starting Point](attachments/file-menu/starting-point.png)
-
+3.  Click **Use this app**.
 4. In the **App Settings** dialog, select the settings for your project and click **Create app**. For more information on app settings, see the [App Settings](#app-settings) section. 
 
 The new project is created and opened. 

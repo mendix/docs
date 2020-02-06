@@ -43,6 +43,8 @@ Here you can select a microflow that is automatically executed immediately after
 
 {{% alert type="warning" %}}
 There is a timeout of *11 minutes* on the after startup microflow. If your after startup microflow takes longer than 11 minutes your whole app will fail to start.
+
+After startup is designed to initialize the app and therefore runs *before* the app is able to respond to incoming service requests (for example, published REST services).
 {{% /alert %}}
 
 ### 3.4 Before Shutdown
@@ -253,7 +255,7 @@ For background information, see [Transport Layer Security (TLS) Renegotiation Is
 
 {{% /alert %}}
 
-## 6 Theme
+## 6 Theme Tab
 
 ### 6.1 UI Resources Package
 
@@ -287,6 +289,10 @@ When deploying to the cloud, custom widgets are bundled to optimize client-serve
 
 If this option is set, custom widgets will also be bundled locally. This mimics the production deployment, eliminating risk at the cost of start-up time.
 
-### 7.2 Suggest Lower-Case Names in Microflows
+### 7.2 Suggest Lower-Case Variable Names in Microflows
 
 When enabled, the names that Studio Pro suggests in microflows will start with a lower-case letter instead of an upper-case letter.
+
+### 7.3 Activity Default Colors
+
+This table allows you to select a default color for each microflow activity type that is available in your project. The selected color will be used as the background color for all microflow activities of that type in your project. It is possible to override this default value for individual activities in the microflow editor. If you change the default color for an activity type, and there are activities of that type present in the project that have an individual background color specified, a dialog will be shown that allows you to apply the new default color to these activities as well.

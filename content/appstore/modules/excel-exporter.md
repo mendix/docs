@@ -2,7 +2,7 @@
 title: "Excel Exporter"
 category: "Modules"
 description: " "
-tags: [ ]
+tags: ["app store", "app store component", "excel exporter", "excel", "filedocument"]
 draft: true
 ---
 
@@ -16,6 +16,13 @@ The module creates an OQL query and directly prints the result to a FileDocument
 
 You can add styling to your Excel to create proper headers and styling formats in order to create a complete report.
 
+This version is compatible with the following components:
+
+* [Excel Importer](excel-importer) version 8.1.1
+* [Mx Model Reflection](model-reflection) version 6.1.1
+* [Atlas UI Resources](atlas-ui-resources) version 1.2.2
+
 ## 3 Read More
 
-* [How to Use the Excel Exporter](/howto/integration/using-the-excel-exporter)
+* [How to Use the Excel Exporter](https://docs.mendix.com/howto/integration/using-the-excel-exporter)
+

@@ -24,7 +24,7 @@ The on-change microflow should be set up to commit the object if a commit is req
 
 ## 3 Properties
 
-### 3.1 On Change Microflow
+### 3.1 On-Change Microflow
 
 This is the microflow executed when a check box or radio button is cleared. This receives the left entity as an input parameter.
 

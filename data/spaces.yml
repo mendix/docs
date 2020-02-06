@@ -143,6 +143,7 @@ studio:
     - "Pages"
     - "Navigation Document"
     - "Microflows"
+    - "Buzz"
     - "Data Filters"
     - "Previewing & Publishing Your App"
     - "Checks"
@@ -158,7 +159,7 @@ studio7:
     - "Domain Model"
     - "Pages"
     - "Navigation Document"
-    - "Microflows"
+    - "Microflows"    
     - "Data Filters"
     - "Previewing & Publishing Your App"
     - "Checks"
@@ -178,10 +179,9 @@ appstore:
   priority: false
   draft: true
   menu_categories:
-    - "Starter Apps"
+    - "Connectors"
     - "Widgets"
     - "Modules"
-    - "Connectors"
     - "Themes"
 product-naming:
   space: "Mendix Product Naming Guide"

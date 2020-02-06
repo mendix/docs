@@ -34,7 +34,7 @@ Clone this [code sample](https://github.com/mendix/native-group-box-pluggable-wi
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Install Mendix Studio Pro 8.3
-* Install the Mendix Make it Native app on a mobile device or an emulator.
+* Install the Mendix Make It Native app on a mobile device or an emulator.
 * Install Long Term Support (LTS) v10.16.3 or any higher version of [Node.js](https://nodejs.org)
 * Install the latest [Yeoman](https://yeoman.io/) with the following command:
 
@@ -45,7 +45,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Install the latest Mendix Pluggable Widget Generator for Yeoman with the following command:
 
 	```shell
-	npm install -g @mendix/generator-widget
+	$ npm install -g @mendix/generator-widget
 	```
 
 * Install an integrated development environment (IDE) of your choice (Mendix recommends [Microsoft Visual Studio Code](https://code.visualstudio.com/))
@@ -79,7 +79,7 @@ To scaffold your project folder for the group box widget, follow these steps:
 3. Start the generator by executing the following command:
 
 	```shell
-	yo @mendix/widget GroupBox
+	$ yo @mendix/widget GroupBox
 	```
 
 4. The generator will ask you for some input during setup. Provide this information to the generator:
@@ -109,7 +109,7 @@ In order to test your group box widget, you will a Mendix application that uses 
 
 1. Open Studio Pro.
 2. Create a new project by clicking **File** > **New Project**.
-3. Select the **Blank** app on the last page of **Starter Apps** (do not select **Blank App** on the first page).
+3. Select the **Blank** app (do not select **Blank App**).
 4. Click the **Use this starting point** button
 5. Fill in the following details in the **App Settings** dialog box:
 	* App name: *GroupBoxTestProject*
@@ -200,7 +200,7 @@ Define the structure and default style of the group box widget with these steps:
 5. Execute the following command to bundle your widget and update the widget bundle in your Mendix test project:
 
 	```shell
-	npm run dev
+	$ npm run dev
 	```
 
 	The executed script will keep watching your source files and rebundle the widget every time you save one of these files.
@@ -568,7 +568,7 @@ Verify that the new content property works:
 8. Drag and drop a **Show message** activity onto your nanoflow.
 9. Double-click the activity and add the text *Hello World!* to the **Template**, then click **OK**.
 10. Rerun the app locally.
-11. With the Make it Native app, verify that your button is inside the group box and is triggering a message popup saying **Hello World!**.
+11. With the Make It Native app, verify that your button is inside the group box and is triggering a message popup saying **Hello World!**.
 
 	![hello world](attachments/build-native-widget/5-hello-world.png)
 
@@ -678,7 +678,7 @@ To start, make the complete header clickable:
 	```
 
 5. Make sure all files have been saved.
-6. Reload your test app in the Make it Native app to view the change.
+6. Reload your test app in the Make It Native app to view the change.
 7. Verify the header is clickable by tapping it. You should see a light-up effect on iOS. Note that on Android, the ripple effect is not visible on a black background, so you cannot verify yet if it is clickable.
 
 Now make it possible to expand or collapse the group box:
@@ -1096,8 +1096,8 @@ First change the widget property configuration:
 	ii. Change your current working directory to the folder where *GroupBox.png* is stored.<br />
 	iii. Execute the following command to generate the Base64 representation:<br />
 	
-	```cmd
-	certutil -encode GroupBox.png data.b64
+	```shell
+	$ certutil -encode GroupBox.png data.b64
 	```
 	
 	Upon success, you will see a **data.b64** file in the same location as your original image.
@@ -1109,7 +1109,7 @@ First change the widget property configuration:
 	iii. Execute the following command to generate the Base64 representation:<br />
 	
 	```shell
-	base64 -i GroupBox.png -o data.b64
+	$ base64 -i GroupBox.png -o data.b64
 	```
 	
 	Upon success, you will see a **data.b64** file in the same location as your original image.

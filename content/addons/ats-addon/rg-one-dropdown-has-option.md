@@ -5,7 +5,7 @@ parent: "rg-one-input"
 
 ## 1 Description
 
-Returns true if the value is available in the dropdown otherwise false.
+Returns true if the value is available in the drop-down otherwise false.
 
 ## 2 Supported Widgets
 
@@ -30,4 +30,4 @@ Search Context | WebElement | no | Limit the search to the given WebElement
 
 Name | Datatype | Description
 --- | --- | ---
-Has Option | Boolean | True if option with specified value is available in dropdown otherwise false.
+Has Option | Boolean | True if option with specified value is available in drop-down otherwise false.

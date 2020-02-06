@@ -2,7 +2,7 @@
 title: "Deep Link"
 category: "Modules"
 description: " "
-tags: [ ]
+tags: ["app store", "app store component", "deep link"]
 draft: true
 ---
 
@@ -54,7 +54,7 @@ You need a custom microflow with [microflow call](/refguide/microflow-call) acti
 
 Start the application and sign in as a user who has the **Deeplink.Admin** module role associated to one of their user roles. Then, open the page that includes the `DeepLink.DeepLinkConfigurationOverview` snippet (for more information, see [Navigation](#navigation) above). You can manage all the deep link configuration entries on this page.
 
-### 2.5 Deeplink.CreateDeeplinkConfig Microflow Parameters
+### 2.5 Setting the Microflow Parameters
 
 The **Deeplink.CreateDeeplinkConfig** microflow requires the following parameters to be set carefully:
 

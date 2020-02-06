@@ -2,7 +2,7 @@
 title: "Navigation Layout"
 category: "Modules"
 description: " "
-tags: [ ]
+tags: ["app store", "app store component", "navigation layout"]
 draft: true
 ---
 
@@ -12,7 +12,7 @@ The [Navigation Layout](https://appstore.home.mendix.com/link/app/23446/) module
 
 ### 1.1 Dependency
 
-* [Administration](https://appstore.home.mendix.com/link/app/23513/) module
+* [Administration](https://appstore.home.mendix.com/link/app/23513/)
 
 ## 2 Read More
 

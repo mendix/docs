@@ -71,7 +71,7 @@ The following steps describe how to add test steps manually to your test case. Y
 
     ![](attachments/ht-two-create-a-test-case/test-case-page-add-description.png)
 
-4. Add the URL of the application you want to test by clicking the dropdown of the input parameter **Application URL**. In the dropdown select the **Environment URL** below the **Global constant**. 
+4. Add the URL of the application you want to test by clicking the drop-down of the input parameter **Application URL**. In the dropdown select the **Environment URL** below the **Global constant**. 
 
     ![](attachments/ht-two-create-a-test-case/open-input-value-dropdown.png)
   

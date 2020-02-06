@@ -140,7 +140,7 @@ For attributes, you can choose to store the value in the database or to calculat
 | On change event           | OCh\_{Purpose}   | Input widgets   |
 | On leave event            | OLe\_{Purpose}   | Input widgets   |
 | Data source               | DS\_{Purpose}    | Data view, list view, data grid, template grid |
-| Microflow/action button   | ACT\_{Purpose} or IVK\_{Purpose} | Menu item, Navigation item, Microflow and Action button, Drop down button<br />(“IVK\_” is used historically) |
+| Microflow/action button   | ACT\_{Purpose} or IVK\_{Purpose} | Menu item, Navigation item, Microflow and Action button, Drop-down button<br />(“IVK\_” is used historically) |
 
 #### 3.4.4 Validation Microflows
 

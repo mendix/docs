@@ -70,7 +70,7 @@ With the following widgets, the Attribute (Path) specifies the attribute which i
 
 *   [Text Box](text-box)
 *   [Text Area](text-area)
-*   [Drop Down](drop-down)
+*   [Drop-down](drop-down)
 *   [Check Box](check-box)
 *   [Radio Buttons](radio-buttons)
 *   [Date Picker](date-picker)

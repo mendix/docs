@@ -32,7 +32,7 @@ Once you are a team member, providing you have been given a role with sufficient
 
 1. Choose **Open project...** in Studio Pro.
 2. Select *Mendix Team Server* as for **Where is your App stored?**.
-3. Choose your app from the **Team Server App** dropdown.
+3. Choose your app from the **Team Server App** drop-down.
 4. Change the **Project directory**, or leave the default suggested by Studio Pro.
 5. Click **Create app**.
 
@@ -174,7 +174,7 @@ For each *document* you can decide whether to accept the conflicted elements whi
 
 This decision applies to all the conflicts in the document; you cannot choose your version for some conflicted changes but their changes for others. Non-conflicting changes will be merged as normal.
 
-Ensure you are viewing changes for the whole project in the **Changes** dock, select the document which is conflicted, and use the required option from the **Tasks** dropdown.
+Ensure you are viewing changes for the whole project in the **Changes** dock, select the document which is conflicted, and use the required option from the **Tasks** drop-down.
 
 ![Resolving a conflict using the changes dock](attachments/using-version-control-in-studio-pro/resolve-document-conflict.png)
 
@@ -355,3 +355,8 @@ If you want to delete a whole directory, you will have to use the delete command
 If you perform branching outside of Studio Pro, you will not be able to immediately deploy to Mendix Cloud. That is because Studio Pro adds metadata about the Mendix version of your app project to each revision when you commit or create a branch, which is needed by the Mendix Cloud deployment. Branching outside of Studio Pro means that metadata is missing from your branch, thus your app cannot successfully be deployed.
 
 To fix this, make a small commit on your branch in Studio Pro (for example, changing a documentation field). Studio Pro will then add the metadata that Mendix Cloud deployment requires, and you will be able to deploy your app.
+
+## 10 Read More
+
+* [Advanced Branching and Merging Strategies](https://www.mendix.com/blog/advanced-branching-merging-strategies-part-1-2/)
+

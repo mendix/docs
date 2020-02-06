@@ -268,8 +268,7 @@ Build an action to check if a device supports NFC:
 	
 	![has NFC support action code](attachments/create-native-javascript-action/action-has-nfc-support-code.png)
 
-1. Optionally, click the **Expose as nanoflow action** tab, select **Expose as nanoflow action**, and **Select** an icon for your JavaScript action. [todo: sort out this pictures and the pair in the next list]
-	
+1. Optionally, click the **Expose as nanoflow action** tab, select **Expose as nanoflow action**, and **Select** an icon for your JavaScript action.	
 
 Now make an JavaScript action to read the NFC tag information:
 
@@ -339,9 +338,9 @@ To write your own NFC tag, do the following:
 1. Tap **WRITE**, tap **Add a record**, and tap **Text**.
 1. Enter the text *Hello Mendix Developer!* and tap **OK**.
 1. Tap **Write / 30 Bytes**.
-1. Scan your tag. You will receive a **Write complete** dialog box:
+1. Scan your tag. You will see a **Write complete** dialog box:
 
-	![write nfc tag](attachments/create-native-javascript-action/nfc-tools-write-tag.jpg)
+	![write nfc tag](attachments/create-native-javascript-action/nfc-tools-write-tag.png)
 
 {{% alert type="info" %}}
 
@@ -370,11 +369,9 @@ Making software is an iterative process. If you integrate your own module or bui
 1. After the build has successfully finished, the build file will be available in *C:\native-builder\builds*.
 1. Uninstall the previous version of the app on your device.
 1. Install the app on your device. For more information on installing an app on your device, see the [Distributing](/howto/mobile/deploying-native-app#distributing) section of *Deploy Your First Mendix Native App*.
-1. Open the app, tap **Scan tag**, and scan your NFC tag. You should see an information dialog box with the text contained by the tag:
+1. Open the app, tap **Scan tag**, and scan your NFC tag. You should see a dialog box with the text you assigned to your tag:
 
-	![read NFC tag scanning ios](attachments/create-native-javascript-action/native-nfc-app-scanning-ios.png)
-
-	![read NFC successfully](attachments/create-native-javascript-action/native-nfc-app-success-android.jpg)
+	![read NFC successfully](attachments/create-native-javascript-action/native-nfc-app-success-android.png)
 
 Congratulations for completing this NFC tutorial! To go beyond the lessons you have learned, see the sections below. 
 
@@ -457,7 +454,7 @@ export async function ReadNFCTag() {
 
 Explaining the code:
 
-At the beginning of the action on Android, the code checks if the NFC tag reader is switched off and throws an error if so. It creates a Promise with `resolve` and `reject` parameters. Note the `async` keyword before the function. This allows `await` to be used with an asynchronous function and lets them execute together while respecting their order in the code. The `start` will initialize the module and register a callback for iOS. This callback will be called when the **NFC NDEF reader session** becomes invalid, either because of the OS or because the **Cancel** button was tapped.  
+[todo: how much detail is needed here?] At the beginning of the action on Android, the code checks if the NFC tag reader is switched off and throws an error if so. It creates a Promise with `resolve` and `reject` parameters. Note the `async` keyword before the function. This allows `await` to be used with an asynchronous function and lets them execute together while respecting their order in the code. The `start` will initialize the module and register a callback for iOS. This callback will be called when the **NFC NDEF reader session** becomes invalid, either because of the OS or because the **Cancel** button was tapped.  
 For Android, a lister [todo: listener?] for the **hardware back** button is included. When you tap it, you will stop listening for tags, and cancel the execution by calling the `reject` function. This way the nanoflow will receive an error that is caught by the error handler. 
 
 When the app is listening for a tag, you can switch off the NFC function in Android. This causes a *state change* that you will catch, and causes a rejection to the promise.

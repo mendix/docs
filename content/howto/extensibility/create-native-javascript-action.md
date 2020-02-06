@@ -259,14 +259,17 @@ Build an action to check if a device supports NFC:
 	}
 	return NfcManager.isSupported();
 	```
-	The `NativeModules` contains all loaded modules, this allows us to check if the app has the module installed. This will throw an error when the action is used in the **Make it Native** app.
-	The NfcManager is imported from your newly added module. The `isSupported` functions check if NFC is supported by the hardware. They return a Promise that will resolved to a boolean value to indicate if NFC is supported.
+	Explaining the code:
+	
+	* The `NativeModules` contains all loaded modules. This allows you to check if the app has the module installed. This will throw an error when the action is used in the **Make it Native** app.
+	* The NfcManager is imported from your newly added module. The `isSupported` functions check if NFC is supported by the hardware. They return a Promise that will resolved to a boolean value to indicate if NFC is supported.
+
+	When finished, your code will look like this:
+	
+	![has NFC support action code](attachments/create-native-javascript-action/action-has-nfc-support-code.png)
 
 1. Optionally, click the **Expose as nanoflow action** tab, select **Expose as nanoflow action**, and **Select** an icon for your JavaScript action. [todo: sort out this pictures and the pair in the next list]
 	
-	![has NFC support action settings](attachments/create-native-javascript-action/action-has-nfc-support-settings.png)
-
-	![has NFC support action code](attachments/create-native-javascript-action/action-has-nfc-support-code.png)
 
 Now make an JavaScript action to read the NFC tag information:
 
@@ -292,11 +295,11 @@ Now make an JavaScript action to read the NFC tag information:
 
 	[todo: review this to see if it's needed. It's a bit dense.] Here you return a promise that resolves a string value. The nanoflow will wait until the resolve function is called. The registration listens for tags that are picked up by the reader. When the callback function is executed as a tag is found, [todo: insert subject] un-register to stop listening for other tags. The payload is decoded from a byte array into text. When the resolve function is called with the text parameter, that nanoflow will receive this value as the return parameter.
 	
-1. Optionally, click the **Expose as nanoflow action** tab, select **Expose as nanoflow action**, and **Select** an icon for your JavaScript action.
-
-	![Read NFC tag action settings](attachments/create-native-javascript-action/action-read-nfc-tag-settings.png)
-
+	When finished, your code will look like this:
+	
 	![Read NFC tag action code](attachments/create-native-javascript-action/action-read-nfc-tag-code.png)
+	
+1. Optionally, click the **Expose as nanoflow action** tab, select **Expose as nanoflow action**, and **Select** an icon for your JavaScript action.
 
 ### 3.6 Use NFC JavaScript Actions {#use-nfc-action}
 
@@ -352,7 +355,7 @@ Now that you added NFC capability to your app's source code, you must rebuild yo
 
 {{% alert type="info" %}}
 
-Making software is an iterative process. If you integrate your own module or build your own actions, it is highly recommended to set up a system which allows you to iterate quickly. To learn more about setting up a development environment with your local modeler [todo remove "modeler" replace with "using Studio Pro and the Native Builder"?], see the [Advanced Usage](/refguide/native-builder#advanced-usage) section of the *Native Builder Reference Guide*. This will require an Apple Mac with [XCode](https://developer.apple.com/xcode/) for iOS and [Android Studio](https://developer.android.com/studio) for Android devices.
+Making software is an iterative process. If you integrate your own module or build your own actions, it is highly recommended to set up a system which allows you to iterate quickly. For more information on setting up a local development environment, see the [Advanced Usage](/refguide/native-builder#advanced-usage) section of the *Native Builder Reference Guide*. This will require an Apple Mac with [XCode](https://developer.apple.com/xcode/) for iOS and [Android Studio](https://developer.android.com/studio) for Android devices.
 
 {{% /alert %}}
 
@@ -367,7 +370,7 @@ Making software is an iterative process. If you integrate your own module or bui
 1. After the build has successfully finished, the build file will be available in *C:\native-builder\builds*.
 1. Uninstall the previous version of the app on your device.
 1. Install the app on your device. For more information on installing an app on your device, see the [Distributing](/howto/mobile/deploying-native-app#distributing) section of *Deploy Your First Mendix Native App*.
-1. Open the app, tap **Scan tag**, and scan your NFC tag. You should see an information dialog box with the text contained by the tag [todo: RESUME HERE 1 I got a "nfc manager module error" 2 while the NFC app is still open, touching an NFC tag to the device will spawn a dialog from THAT app, not the custom dev app. I must add a step to say "close nfc app"?]:
+1. Open the app, tap **Scan tag**, and scan your NFC tag. You should see an information dialog box with the text contained by the tag:
 
 	![read NFC tag scanning ios](attachments/create-native-javascript-action/native-nfc-app-scanning-ios.png)
 
@@ -377,7 +380,7 @@ Congratulations for completing this NFC tutorial! To go beyond the lessons you h
 
 ### 3.9 Hardening the Code {#hardening-nfc-action-code}
 
-Now you have a working NFC scanner. However, you can  improve its functionality on both on Android and iOS.
+Now you have a working NFC scanner. However, you can  improve it for both Android and iOS.
 
 On Android, NFC scanning can be switched off. Also, scanning should be canceled if the back button is clicked.
 

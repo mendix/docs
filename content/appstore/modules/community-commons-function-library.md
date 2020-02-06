@@ -2,7 +2,7 @@
 title: "Community Commons Function Library"
 category: "Modules"
 description: " "
-tags: [ ]
+tags: ["app store", "app store component", "community commons function library", "community commons", "java action call"]
 draft: true
 #README exists
 ---

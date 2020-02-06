@@ -2,7 +2,7 @@
 title: "Database Connector"
 category: "Connectors"
 description: " "
-tags: [ ]
+tags: ["app store", "app store component", "database connector", "jdbc", "hikari", "query" ]
 draft: true
 ---
 

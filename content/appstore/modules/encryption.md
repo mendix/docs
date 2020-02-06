@@ -2,7 +2,7 @@
 title: "Encryption"
 category: "Modules"
 description: " "
-tags: [ ]
+tags: ["app store", "app store component", "encryption", "aes"]
 draft: true
 ---
 

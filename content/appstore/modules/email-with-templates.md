@@ -2,7 +2,7 @@
 title: "Email with Templates"
 category: "Modules"
 description: " "
-tags: [ ]
+tags: ["app store", "app store component", "email with templates", "token"]
 draft: true
 ---
 

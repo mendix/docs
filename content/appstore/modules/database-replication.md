@@ -2,7 +2,7 @@
 title: "Database Replication"
 category: "Modules"
 description: " "
-tags: [ ]
+tags: ["app store", "app store component", "database replication"]
 draft: true
 ---
 

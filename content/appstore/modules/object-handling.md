@@ -2,7 +2,7 @@
 title: "Object Handling"
 category: "Modules"
 description: " "
-tags: [ ]
+tags: ["app store", "app store component", "object handling", "community commons"]
 draft: true
 ---
 

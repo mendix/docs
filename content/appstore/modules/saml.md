@@ -2,7 +2,7 @@
 title: "SAML"
 category: "Modules"
 description: " "
-tags: [ ]
+tags: ["app store", "app store component", "saml", "idp", "identity provider"]
 draft: true
 ---
 

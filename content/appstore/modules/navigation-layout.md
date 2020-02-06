@@ -2,7 +2,7 @@
 title: "Navigation Layout"
 category: "Modules"
 description: " "
-tags: [ ]
+tags: ["app store", "app store component", "navigation layout"]
 draft: true
 ---
 

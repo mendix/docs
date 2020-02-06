@@ -11,6 +11,16 @@ These release notes cover changes to the app project management functionality an
 For release notes on Mendix Cloud and deployment options, see [Deployment](deployment).
 {{% /alert %}}
 
+## 2020
+
+### February 6th, 2020
+
+#### Improvements
+
+* We implemented a new design for the [Create App](/developerportal/#buzz) flow.
+* When creating a new app, you can now search through templates for feature demos, academy training apps, and ready-made apps.
+* After selecting an app template, you can now choose a nice icon for your app project.
+
 ## 2019
 
 ### December 23rd, 2019

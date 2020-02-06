@@ -267,11 +267,11 @@ You can import and export table mappings to an XML file using the **Import/expor
 
 ## 11 Troubleshooting
 
-### 11.1 I Selected a Table Alias, But the Column Name Field Does Not Show Anything
+### 11.1 A Table Alias Is Selected but the Column Name Field Does Not Show Anything
 
 This is a limitation. The workaround is to select the blank option in the table alias selector, and then select your desired table again. This should repopulate the column selector.
 
-### 11.2 Mapping Inheritance 
+### 11.2 No Automatic Mapping Inheritance 
 
 An example of mapping inheritance would be creating a different sub-type of a generalization based on a value in a column.
 

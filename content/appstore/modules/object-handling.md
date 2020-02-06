@@ -50,4 +50,4 @@ This helper Java class can be used in Java actions:
 
 ## 3 Read More
 
-* [How to Test Microflows Using the Unit Testing Module](/howto/testing/testing-microflows-using-the-unittesting-module)
+* [How to Test Microflows Using the Unit Testing Module](https://docs.mendix.com/howto/testing/testing-microflows-using-the-unittesting-module)

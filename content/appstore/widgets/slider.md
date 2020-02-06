@@ -61,4 +61,4 @@ We are actively maintaining this widget. Please report any issues or suggestions
 
 ## 5 Read More
 
-* [Native Styling](/refguide/native-styling-refguide)
+* [Native Styling](https://docs.mendix.com/refguide/native-styling-refguide)

@@ -22,7 +22,7 @@ An action page has the tabs below.
 
 ### 2.1 Name
 
-This is the name of the action the consumer will see in their toolbox.
+The name of the action that the consumer will see in their toolbox.
 
 ### 2.2 Icon
 

@@ -15,13 +15,11 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 ### February 6th, 2020
 
-* New design for Create New App implemented.
-* Users can now search on templates when creating an app.
-* Users can now choose a nice logo on app creation.
-
 #### Improvements
 
-
+* We implemented a new design for the [Create App](/developerportal/#buzz) flow.
+* When creating a new app, you can now search through templates for feature demos, academy training apps, and ready-made apps.
+* After selecting an app template, you can now choose a nice icon for your app project.
 
 ## 2019
 

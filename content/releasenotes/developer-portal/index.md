@@ -11,6 +11,18 @@ These release notes cover changes to the app project management functionality an
 For release notes on Mendix Cloud and deployment options, see [Deployment](deployment).
 {{% /alert %}}
 
+## 2020
+
+### February 6th, 2020
+
+* New design for Create New App implemented.
+* Users can now search on templates when creating an app.
+* Users can now choose a nice logo on app creation.
+
+#### Improvements
+
+
+
 ## 2019
 
 ### December 23rd, 2019

@@ -2,13 +2,13 @@
 title: "Excel Importer"
 category: "Modules"
 description: " "
-tags: ["app store", "app store component",  ]
+tags: ["app store", "app store component", "excel importer", "excel", "mapping"]
 draft: true
 ---
 
 ## 1 Introduction
 
-The [Excel Importer](https://appstore.home.mendix.com/link/app/72/) module enables you to import Excel data sheets into your Mendix application. You ca configure a mapping between your sheet and domain model and automatically create or update your objects.
+The [Excel Importer](https://appstore.home.mendix.com/link/app/72/) module enables you to import Excel data sheets into your Mendix application. You can configure a mapping between your sheet and domain model and automatically create or update your objects.
 
 ### 1.1 Typical Usage Scenarios
 

@@ -2,7 +2,7 @@
 title: "Forgot Password"
 category: "Modules"
 description: " "
-tags: ["app store", "app store component",  ]
+tags: ["app store", "app store component", "forgot password", "password", "login", "credentials"]
 draft: true
 ---
 

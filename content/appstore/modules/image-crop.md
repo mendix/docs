@@ -2,7 +2,7 @@
 title: "Image Crop"
 category: "Modules"
 description: " "
-tags: ["app store", "app store component",  ]
+tags: ["app store", "app store component", "image crop", "cropper", "image"]
 draft: true
 ---
 

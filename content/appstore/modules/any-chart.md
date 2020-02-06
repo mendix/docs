@@ -2,7 +2,7 @@
 title: "Any Chart"
 category: "Modules"
 description: " "
-tags: ["app store", "app store component", "any chart" "plotly.js"]
+tags: ["app store", "app store component", "any chart", "plotly.js"]
 draft: true
 ---
 

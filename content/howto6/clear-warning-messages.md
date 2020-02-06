@@ -28,9 +28,7 @@ To get more information, double-click or right-click the warning.
 ## 3 Common Warnings
 
 {{% alert type="warning" %}}
-
 [Deprecated] Using the main placeholder contents for pop-ups is deprecated.  This potion will be removed in a future version.  Please use a separate pop-up layout instead.
-
 {{% /alert %}}
 
 * This will not affect the project in this version of the Modeler, but it may cause problems when upgrading

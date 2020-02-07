@@ -14,7 +14,7 @@ For more information on native mobile app development, see the [native-template 
 
 ### Fix
 
-* We fixed an issue where dynamic images would not sync correctly in iOS apps. This dynamic image sync issue resulted in images missing and a pop-up window. This problem cannot be resolved with an OTA update. Triggering a full build of your iOS app will fix this issue.
+* We fixed an issue where dynamic images would not sync correctly in iOS apps. This issue resulted in images missing from pages and a pop-up window. This problem cannot be resolved with an OTA update. Triggering a full build of your iOS app will fix this issue.
 
 ## 3.1.0
 

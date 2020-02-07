@@ -1,7 +1,7 @@
 ---
 title: "Community Commons Function Library"
 category: "Modules"
-description: " "
+description: "Describes the configuration and usage of the Community Commons Function Library module, which is available in the Mendix App Store."
 tags: ["app store", "app store component", "community commons function library", "community commons", "java action call"]
 draft: true
 #README exists

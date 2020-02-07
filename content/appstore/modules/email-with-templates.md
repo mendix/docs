@@ -1,7 +1,7 @@
 ---
 title: "Email with Templates"
 category: "Modules"
-description: " "
+description: "Describes the configuration and usage of the Email with Templates module, which is available in the Mendix App Store."
 tags: ["app store", "app store component", "email with templates", "token"]
 draft: true
 ---

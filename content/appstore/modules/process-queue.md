@@ -1,7 +1,7 @@
 ---
 title: "Process Queue"
 category: "Modules"
-description: " "
+description: "Describes the configuration and usage of the Process Queue module, which is available in the Mendix App Store."
 tags: ["app store", "app store component", "process queue", "queue overview"]
 draft: true
 ---

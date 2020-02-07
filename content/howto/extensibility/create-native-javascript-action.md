@@ -1,6 +1,7 @@
 ---
 title: "Build JavaScript Actions for Native Mobile"
 parent: "build-javascript-actions"
+menu_order: 30
 description: "This tutorial will teach you to build a JavaScript action for native mobile apps."
 tags: ["NFC", "Near Field Communication", "JavaScript", "native", "mobile"]
 ---

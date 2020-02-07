@@ -7,7 +7,7 @@ draft: true
 
 ## 1 Introduction
 
-This guide presents documentation on configuring and using platform-supported App Store components.
+This guide presents documentation on configuring and using [platform-supported](/developerportal/app-store/app-store-content-support#category) App Store components.
 
 For details on latest version of an App Store component, the Studio Pro version required for use, and when the component published, please see the component page in the Mendix App Store.
 

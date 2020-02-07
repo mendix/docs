@@ -144,7 +144,7 @@ Regardless of which linking method you choose, complete the following steps firs
 
 You should see successes from the previous linking commands. Even when your linking shows successes in your CLI, linking problems may have occurred with your linked apps. To truly validate success, complete the following steps:
 
-1.Open *C:\github\native-nfc-app\android\app\src\main\java\com\mendix\nativetemplate\MainApplication.java*.
+1. Open *C:\github\native-nfc-app\android\app\src\main\java\com\mendix\nativetemplate\MainApplication.java*.
 1. Make sure the following is included in the list of imports: `import community.revteltech.nfc.NfcManagerPackage;`.
 
 You can skip the Manual Linking section and move on to the [Using the Modules](#using-modules) section now.
@@ -179,7 +179,7 @@ To link for Android devices, do the following:
 To link for iOS devices, do the following:
 
 1. Open **C:\github\native-nfc-app\ios\Podfile**.
-1. In the `abstract_target` section; before `end`, add a new line with `pod 'react-native-nfc-manager', :path => '../node_modules/react-native-nfc-manager'`
+1. In the `abstract_target` section; before `end`, add a new line with `pod 'react-native-nfc-manager', :path => '../node_modules/react-native-nfc-manager'`.
 
 For more information about linking, see the following resources:
 
@@ -293,6 +293,8 @@ Now make an JavaScript action to read the NFC tag information:
 	});
 	```
 
+	Explaining the code:
+
 	Here you return a promise that resolves a string value. The nanoflow will wait until the resolve function is called. The registration listens for tags that are picked up by the reader. When the callback function is executed as a tag is found, un-register the listener to stop listening for other tags. The payload is decoded from a byte array into text. When the resolve function is called with the text parameter, that nanoflow will receive this value as the return parameter.
 	
 	When finished, your code will look like this:
@@ -380,9 +382,9 @@ Congratulations for completing this NFC tutorial! To go beyond the lessons you h
 
 Now you have a working NFC scanner. However, you can  improve it for both Android and iOS.
 
-On Android, NFC scanning can be switched off. Also, scanning should be canceled if the back button is clicked.
+**On Android** — NFC scanning can be switched off. Also, scanning should be canceled if the back button is clicked.
 
-On iOS, scanning can be canceled when the **Ready to Scan** dialog box is up. 
+**On iOS** — Scanning can be canceled when the **Ready to Scan** dialog box is up. 
 
 To implement these capabilities, replace all the **USER CODE** in the **ReadNFCTag** JavaScript action with the following code, then repeat the steps in the [Rebuilding Your App](#rebuilding-app) section above to build and install the updated app on your device:
 
@@ -477,7 +479,7 @@ The Native Builder will locally run MxBuild. The output is a *bundles.js* file w
 
 {{% /alert %}}
 
-## 4 Read More
+## 5 Read More
 
 * [How to Deploy Your First Mendix Native App](/howto/mobile/deploying-native-app)
 * [JavaScript Actions Reference Guide](/refguide/javascript-actions)

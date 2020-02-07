@@ -16,7 +16,7 @@ In a browser, the layout grid is based on the Bootstrap grid system. For more in
 
 {{% alert type="info" %}}
 
-Row and column properties described below are available if your project has [Mendix version 8.5](/releasenotes/studio-pro/8.5) or above  and [Atlas UI Resources](https://appstore.home.mendix.com/link/app/104730/) version 2.4.0 or above. 
+Row and column properties described below are available if your project has [Mendix version 8.5.1](/releasenotes/studio-pro/8.5) or above  and [Atlas UI Resources](https://appstore.home.mendix.com/link/app/104730/) version 2.4.0 or above. 
 
 For more information on row and column properties, see the [Rows and Their Properties](#rows) and [Columns and Their Properties](#columns) sections. 
 
@@ -26,7 +26,7 @@ For more information on row and column properties, see the [Rows and Their Prope
 
 An example of layout grid properties is represented in the image below:
 
-{{% image_container width="350" %}}![Layout Grid Properties](attachments/container-widgets/layout-grid-properties.png)
+{{% image_container width="250" %}}![Layout Grid Properties](attachments/container-widgets/layout-grid-properties.png)
 {{% /image_container %}}
 
 Layout grid properties consist of the following sections:
@@ -71,7 +71,7 @@ A layout grid can contain one or more rows. Each row contains [columns](#columns
 
 An example of layout grid row properties is represented in the image below:
 
-{{% image_container width="400" %}}![Row Properties](attachments/container-widgets/row-properties.png)
+{{% image_container width="300" %}}![Row Properties](attachments/container-widgets/row-properties.png)
 {{% /image_container %}}
 
 Row properties consist of the following sections:
@@ -115,7 +115,7 @@ Columns form a row of a layout grid.
 
  An example of layout grid column properties is represented in the image below:
 
-![Column Properties](attachments/container-widgets/column-properties.png)
+<img src="attachments/container-widgets/column-properties.png" alt="Column Properties" style="zoom: 80%;" />
 
 Layout grid column properties consist of the following sections:
 
@@ -152,7 +152,7 @@ For the *desktop* and *tablet*, you might want to set the first column with a pi
 
 For *phone*, it can be a good idea to place two columns one under another, setting them to **Manual** width of *12* (for more information on the column size property, see the [Size](#column-size) section). In this case, the second column will be automatically wrapped to another line:
 
- ![Layout Example, Phone](attachments/container-widgets/layout-example-phone.png)
+ <img src="attachments/container-widgets/layout-example-phone.png" alt="Layout Example, Phone" style="zoom:80%;" />
 
 On the picture below you can see the settings for two column described above:
 

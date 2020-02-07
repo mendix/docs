@@ -2,7 +2,7 @@
 title: "Format String"
 category: "Widgets"
 description: "Describes the configuration and usage of the Format String widget, which is available in the Mendix App Store."
-tags: ["app store", "app store component", "widget", "format string"]
+tags: ["app store", "app store component", "widget", "format string", "platform support"]
 draft: true
 ---
 

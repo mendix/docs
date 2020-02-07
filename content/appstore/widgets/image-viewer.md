@@ -2,7 +2,7 @@
 title: "Image Viewer"
 category: "Widgets"
 description: "Describes the configuration and usage of the Image Viewer widget, which is available in the Mendix App Store."
-tags: ["app store", "app store component", "widget", "image viewer"]
+tags: ["app store", "app store component", "widget", "image viewer", "platform support"]
 draft: true
 ---
 

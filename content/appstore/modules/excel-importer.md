@@ -2,7 +2,7 @@
 title: "Excel Importer"
 category: "Modules"
 description: "Describes the configuration and usage of the Excel Importer module, which is available in the Mendix App Store."
-tags: ["app store", "app store component", "excel importer", "excel", "mapping"]
+tags: ["app store", "app store component", "excel importer", "excel", "mapping", "platform support"]
 draft: true
 ---
 

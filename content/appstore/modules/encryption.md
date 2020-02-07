@@ -2,7 +2,7 @@
 title: "Encryption"
 category: "Modules"
 description: "Describes the configuration and usage of the Encryption module, which is available in the Mendix App Store."
-tags: ["app store", "app store component", "encryption", "aes"]
+tags: ["app store", "app store component", "encryption", "aes", "platform support"]
 draft: true
 ---
 

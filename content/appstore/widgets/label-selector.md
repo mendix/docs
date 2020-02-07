@@ -2,7 +2,7 @@
 title: "Label Selector"
 category: "Widgets"
 description: "Describes the configuration and usage of the Label Selector widget, which is available in the Mendix App Store."
-tags: ["app store", "app store component", "widget", "label selector"]
+tags: ["app store", "app store component", "widget", "label selector", "platform support"]
 draft: true
 ---
 

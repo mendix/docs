@@ -2,7 +2,7 @@
 title: "Contacts for Hybrid"
 category: "Widgets"
 description: "Describes the configuration and usage of the Contacts for Hybrid widget, which is available in the Mendix App Store."
-tags: ["app store", "app store component", "widget", "contacats for hybrid", "phonegap", "native", "mobile"]
+tags: ["app store", "app store component", "widget", "contacats for hybrid", "phonegap", "native", "mobile", "platform support"]
 draft: true
 ---
 

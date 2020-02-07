@@ -2,7 +2,7 @@
 title: "Charts"
 category: "Widgets"
 description: "Describes the configuration and usage of the Charts widget, which is available in the Mendix App Store."
-tags: ["app store", "app store component", "widget", "chart", "line chart", "area chart", "column chart", "bar chart", "heat map"]
+tags: ["app store", "app store component", "widget", "chart", "line chart", "area chart", "column chart", "bar chart", "heat map", "platform support"]
 draft: true
 ---
 

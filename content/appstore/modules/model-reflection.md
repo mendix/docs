@@ -2,7 +2,7 @@
 title: "Mx Model Reflection"
 category: "Modules"
 description: "Describes the configuration and usage of the Mx Model Reflection module, which is available in the Mendix App Store."
-tags: ["app store", "app store component", "mx model reflection", "token configuration"]
+tags: ["app store", "app store component", "mx model reflection", "token configuration", "platform support"]
 draft: true
 ---
 

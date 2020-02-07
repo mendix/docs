@@ -2,7 +2,7 @@
 title: "Object Handling"
 category: "Modules"
 description: "Describes the configuration and usage of the Object Handling module, which is available in the Mendix App Store."
-tags: ["app store", "app store component", "object handling", "community commons"]
+tags: ["app store", "app store component", "object handling", "community commons", "platform support"]
 draft: true
 ---
 

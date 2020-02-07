@@ -2,7 +2,7 @@
 title: "Rich Text"
 category: "Widgets"
 description: "Describes the configuration and usage of the Rich Text widget, which is available in the Mendix App Store."
-tags: ["app store", "app store component", "widget", "rich text"]
+tags: ["app store", "app store component", "widget", "rich text", "platform support"]
 draft: true
 ---
 

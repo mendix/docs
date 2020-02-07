@@ -2,7 +2,7 @@
 title: "Unit Testing"
 category: "Modules"
 description: "Describes the configuration and usage of the Unit Testing module, which is available in the Mendix App Store."
-tags: ["app store", "app store component", "unit testing", "unit test", "test suite", "testing", "qa", "quality"]
+tags: ["app store", "app store component", "unit testing", "unit test", "test suite", "testing", "qa", "quality", "platform support"]
 draft: true
 ---
 

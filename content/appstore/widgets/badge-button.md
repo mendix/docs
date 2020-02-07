@@ -2,7 +2,7 @@
 title: "Badge Button"
 category: "Widgets"
 description: " "
-tags: [ ]
+tags: ["app store", "app store component", "widget", "badge button", "token"]
 draft: true
 ---
 

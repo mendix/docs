@@ -2,7 +2,7 @@
 title: "Badge"
 category: "Widgets"
 description: " "
-tags: [ ]
+tags: ["app store", "app store component", "widget", "badge", "color label"]
 draft: true
 ---
 

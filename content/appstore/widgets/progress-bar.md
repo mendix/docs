@@ -2,7 +2,7 @@
 title: "Progress Bar"
 category: "Widgets"
 description: " "
-tags: [ ]
+tags: ["app store", "app store component", "widget", "progress bar", "bootstrap"]
 draft: true
 ---
 

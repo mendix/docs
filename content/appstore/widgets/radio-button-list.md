@@ -2,7 +2,7 @@
 title: "Radio Button List"
 category: "Widgets"
 description: " "
-tags: [ ]
+tags: ["app store", "app store component", "widget", "radio button list"]
 draft: true
 ---
 

@@ -2,7 +2,7 @@
 title: "Range Slider"
 category: "Widgets"
 description: " "
-tags: [ ]
+tags: ["app store", "app store component", "widget", "range slider"]
 draft: true
 ---
 

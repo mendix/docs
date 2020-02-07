@@ -2,7 +2,7 @@
 title: "Auto-Load More"
 category: "Widgets"
 description: " "
-tags: [ ]
+tags: ["app store", "app store component", "widget", "auto-load more", "load"]
 draft: true
 ---
 

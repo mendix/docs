@@ -2,7 +2,7 @@
 title: "Rich Text"
 category: "Widgets"
 description: " "
-tags: [ ]
+tags: ["app store", "app store component", "widget", "rich text"]
 draft: true
 ---
 

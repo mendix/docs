@@ -2,7 +2,7 @@
 title: "Grid Selector"
 category: "Widgets"
 description: " "
-tags: [ ]
+tags: ["app store", "app store component", "widget", "grid selector"]
 draft: true
 ---
 

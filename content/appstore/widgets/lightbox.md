@@ -2,7 +2,7 @@
 title: "Lightbox"
 category: "Widgets"
 description: " "
-tags: [ ]
+tags: ["app store", "app store component", "widget", "lighbtox", "web gallery"]
 draft: true
 ---
 

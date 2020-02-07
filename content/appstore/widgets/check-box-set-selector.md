@@ -2,7 +2,7 @@
 title: "Check Box Set Selector"
 category: "Widgets"
 description: " "
-tags: [ ]
+tags: ["app store", "app store component", "widget", "check box set selector", "check box"]
 draft: true
 ---
 

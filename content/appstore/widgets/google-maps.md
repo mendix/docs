@@ -2,7 +2,7 @@
 title: "Google Maps"
 category: "Widgets"
 description: " "
-tags: [ ]
+tags: ["app store", "app store component", "widget", "google maps"]
 draft: true
 ---
 

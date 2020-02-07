@@ -2,7 +2,7 @@
 title: "Microflow Timer"
 category: "Widgets"
 description: " "
-tags: [ ]
+tags: ["app store", "app store component", "widget", "microflow timer"]
 draft: true
 ---
 

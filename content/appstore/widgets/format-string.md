@@ -2,7 +2,7 @@
 title: "Format String"
 category: "Widgets"
 description: " "
-tags: [ ]
+tags: ["app store", "app store component", "widget", "format string"]
 draft: true
 ---
 

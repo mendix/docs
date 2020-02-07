@@ -2,7 +2,7 @@
 title: "Bootstrap Tooltip"
 category: "Widgets"
 description: " "
-tags: [ ]
+tags: ["app store", "app store component", "widget", "bootstrap tooltip"]
 draft: true
 ---
 

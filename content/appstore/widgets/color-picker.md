@@ -2,7 +2,7 @@
 title: "Color Picker"
 category: "Widgets"
 description: " "
-tags: [ ]
+tags: ["app store", "app store component", "widget", "color picker", "react"]
 draft: true
 ---
 

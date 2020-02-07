@@ -2,7 +2,7 @@
 title: "Charts"
 category: "Widgets"
 description: " "
-tags: [ ]
+tags: ["app store", "app store component", "widget", "chart", "line chart", "area chart", "column chart", "bar chart", "heat map"]
 draft: true
 ---
 

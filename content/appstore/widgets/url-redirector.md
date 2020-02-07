@@ -2,7 +2,7 @@
 title: "URL Redirector"
 category: "Widgets"
 description: " "
-tags: [ ]
+tags: ["app store", "app store component", "widget", "url redirector", "url", "static", "dynamic"]
 draft: true
 ---
 

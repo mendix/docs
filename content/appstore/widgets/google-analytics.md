@@ -2,7 +2,7 @@
 title: "Google Analytics"
 category: "Widgets"
 description: " "
-tags: [ ]
+tags: ["app store", "app store component", "widget", "google analytics", "eventtracker", "webmaster"]
 draft: true
 ---
 

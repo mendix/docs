@@ -2,7 +2,7 @@
 title: "Barcode Scanner"
 category: "Widgets"
 description: " "
-tags: [ ]
+tags: ["app store", "app store component", "widget", "barcode scanner", "phonegap"]
 draft: true
 ---
 

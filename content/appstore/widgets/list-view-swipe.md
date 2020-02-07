@@ -2,7 +2,7 @@
 title: "List View Swipe"
 category: "Widgets"
 description: " "
-tags: [ ]
+tags: ["app store", "app store component", "widget", "list view swipe"]
 draft: true
 ---
 

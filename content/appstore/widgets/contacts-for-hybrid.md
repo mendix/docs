@@ -2,7 +2,7 @@
 title: "Contacts for Hybrid"
 category: "Widgets"
 description: " "
-tags: [ ]
+tags: ["app store", "app store component", "widget", "contacats for hybrid", "phonegap", "native", "mobile"]
 draft: true
 ---
 

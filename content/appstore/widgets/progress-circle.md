@@ -2,7 +2,7 @@
 title: "Progress Circle"
 category: "Widgets"
 description: " "
-tags: [ ]
+tags: ["app store", "app store component", "widget", "progress circle"]
 draft: true
 ---
 

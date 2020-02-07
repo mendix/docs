@@ -2,7 +2,7 @@
 title: "Maps"
 category: "Widgets"
 description: " "
-tags: [ ]
+tags: ["app store", "app store component", "widget", "maps", "google maps", "openstreetmap", "mapbox", "here maps"]
 draft: true
 ---
 

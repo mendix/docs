@@ -2,7 +2,7 @@
 title: "List View Controls"
 category: "Widgets"
 description: " "
-tags: [ ]
+tags: ["app store", "app store component", "widget", "list view control", "check box filter"]
 draft: true
 ---
 

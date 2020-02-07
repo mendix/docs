@@ -2,7 +2,7 @@
 title: "Carousel"
 category: "Widgets"
 description: " "
-tags: [ ]
+tags: ["app store", "app store component", "widget", "carousel", "image"]
 draft: true
 ---
 

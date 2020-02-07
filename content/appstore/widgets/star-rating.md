@@ -2,7 +2,7 @@
 title: "Star Rating"
 category: "Widgets"
 description: " "
-tags: [ ]
+tags: ["app store", "app store component", "widget", "star rating", "star", "glyphicon"]
 draft: true
 ---
 

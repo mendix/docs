@@ -2,7 +2,7 @@
 title: "Document Viewer"
 category: "Widgets"
 description: " "
-tags: [ ]
+tags: ["app store", "app store component", "widget", "document viewer"]
 draft: true
 ---
 

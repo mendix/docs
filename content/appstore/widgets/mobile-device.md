@@ -2,7 +2,7 @@
 title: "Mobile Device"
 category: "Widgets"
 description: " "
-tags: [ ]
+tags: ["app store", "app store component", "widget", "mobile device", "cordova", "phonegap"]
 draft: true
 ---
 

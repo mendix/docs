@@ -2,7 +2,7 @@
 title: "Mobile Features"
 category: "Widgets"
 description: " "
-tags: [ ]
+tags: ["app store", "app store component", "widget", "mobile feature", "spinner", "transitions", "status bar"]
 draft: true
 ---
 

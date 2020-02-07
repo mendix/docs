@@ -2,7 +2,7 @@
 title: "Label Selector"
 category: "Widgets"
 description: " "
-tags: [ ]
+tags: ["app store", "app store component", "widget", "label selector"]
 draft: true
 ---
 

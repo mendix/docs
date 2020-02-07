@@ -2,7 +2,7 @@
 title: "Camera"
 category: "Widgets"
 description: " "
-tags: [ ]
+tags: ["app store", "app store component", "widget", "camera", "ios", "android", "picture source"]
 draft: true
 ---
 

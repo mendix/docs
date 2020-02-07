@@ -2,7 +2,7 @@
 title: "Tab Swipe"
 category: "Widgets"
 description: " "
-tags: [ ]
+tags: ["app store", "app store component", "widget", "tab swipe"]
 draft: true
 ---
 

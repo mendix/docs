@@ -2,7 +2,7 @@
 title: "Slider"
 category: "Widgets"
 description: " "
-tags: [ ]
+tags: ["app store", "app store component", "widget", "slider", "bound"]
 draft: true
 ---
 

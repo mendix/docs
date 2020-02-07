@@ -2,7 +2,7 @@
 title: "Calendar"
 category: "Widgets"
 description: " "
-tags: [ ]
+tags: ["app store", "app store component", "widget", "calendar"]
 draft: true
 ---
 

@@ -2,7 +2,7 @@
 title: "Native Mobile Resources"
 category: "Modules"
 description: " "
-tags: [ ]
+tags: ["app store", "app store component", "native mobile resources", "native widget"]
 draft: true
 ---
 

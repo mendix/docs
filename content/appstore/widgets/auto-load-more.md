@@ -10,7 +10,7 @@ draft: true
 
 The [Auto-Load More](https://appstore.home.mendix.com/link/app/50323/) widget loads more items on the list view as the end-user scrolls.
 
-### 1.1 Demo App Project
+### Demo App Project
 
 For a demo app project that has been deployed with this widget, see [here](http://autoloadmore.mxapps.io).
 

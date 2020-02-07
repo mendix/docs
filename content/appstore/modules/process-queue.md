@@ -2,7 +2,7 @@
 title: "Process Queue"
 category: "Modules"
 description: " "
-tags: [ ]
+tags: ["app store", "app store component", "process queue", "queue overview"]
 draft: true
 ---
 

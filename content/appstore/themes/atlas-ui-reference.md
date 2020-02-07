@@ -19,7 +19,7 @@ Use the [Atlas UI Reference & Custom Styling App](https://appstore.home.mendix.c
 * Building blocks
 * Widgets
 
-## Configuration
+## 2 Configuration
 
 After installing this theme in your app project, run your app locally and do the following:
 

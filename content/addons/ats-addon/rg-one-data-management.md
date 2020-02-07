@@ -7,7 +7,7 @@ parent: "rg-one-ats"
 
 The **Repository** is the heart of ATS, since it allows you to create and manage folders, test suites, test cases and actions. The folder in the ATS is equivalent to a directory in your file browser. You can create folders within other folders, and in each folder, you can store test suites, test cases and actions.
 
-![Repository of the ATS](attachments/rg-one-data-management/21168203.png)
+![Repository of ATS](attachments/rg-one-data-management/21168203.png)
 
 ## 2 Import/Export
 

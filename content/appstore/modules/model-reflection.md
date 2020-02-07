@@ -2,7 +2,7 @@
 title: "Mx Model Reflection"
 category: "Modules"
 description: " "
-tags: [ ]
+tags: ["app store", "app store component", "mx model reflection", "token configuration"]
 draft: true
 ---
 

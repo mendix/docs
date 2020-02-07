@@ -2,7 +2,7 @@
 title: "Atlas UI Resources"
 category: "Modules"
 description: " "
-tags: [ ]
+tags: ["app store", "app store component", "atlas ui", "atlas ui resources", "brand", "page template", "building block", "custom widget"]
 draft: true
 ---
 
@@ -10,7 +10,7 @@ draft: true
 
 The [Atlas UI Resources](https://appstore.home.mendix.com/link/app/104730/) help you to speed up your app design process by using custom templates, building blocks, and widget, and making them your own.
 
-### 1.1 Typical usage scenario
+### 1.1 Typical Usage Scenario
 
 Use this module to brand your Atlas UI app with your own brand or customer brand. This module contains all the page templates, building blocks, and custom widgets you need.
 

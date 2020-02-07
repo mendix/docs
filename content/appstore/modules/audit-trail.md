@@ -2,7 +2,7 @@
 title: "Audit Trail"
 category: "Modules"
 description: " "
-tags: [ ]
+tags: ["app store", "app store component", "audit trail", "log"]
 draft: true
 ---
 

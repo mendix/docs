@@ -40,6 +40,8 @@ This means that you can only expose an association when the entity on the other 
 
 Using this method, you can expose both sides of the association and you can expose many-to-many associations.
 
+However it is important to know that **each link is a new call**. This means that large datasets take a long time to retrieve and use way more resources. If you're using external software like PowerBI to retrieve the data, a better solution for exposing the many-to-many associations might be a published RESTService. The JSON can then be converted into tables and records.
+
 ### 2.2 As an Associated Object ID
 
 When you choose to represent assocations as an associated object ID, the ID of the associated object is represented as an `Edm.Int64` property. If the association refers to more than one object, you can not expose it from that side.

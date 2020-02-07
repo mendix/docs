@@ -1,7 +1,7 @@
 ---
-title: "Create JavaScript Actions for Native Mobile"
+title: "Build JavaScript Actions for Native Mobile"
 parent: "build-javascript-actions"
-description: "This tutorial will teach you to create a JavaScript action for native mobile apps."
+description: "This tutorial will teach you to build a JavaScript action for native mobile apps."
 tags: ["NFC", "Near Field Communication", "JavaScript", "native", "mobile"]
 ---
 
@@ -28,7 +28,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Building NFC JavaScript Actions
 
-To create NFC JavaScript actions, you will do the following:
+To build NFC JavaScript actions, you will do the following:
 
 1. Create a Mendix project.
 1. Build a native app.

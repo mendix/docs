@@ -7,7 +7,7 @@ draft: true
 
 ## 1 Introduction
 
-The modules available in the Mendix App Store can be added to your app project to provide new functionality with accompanying domain models and security options.
+The modules available in the Mendix App Store can be added to your app project to provide new functionality with accompanying domain models and security options. These App Store modules function similarly to the app project [modules](/refguide/modules) you create for your app project. However, when you download these modules into your app project, they will go into the **Project** > **App Store modules** folder.
 
 ## 2 Popular Platform-Supported Modules
 
@@ -17,4 +17,3 @@ The modules available in the Mendix App Store can be added to your app project t
 * [Excel Exporter](excel-exporter)
 * [LDAP Synchronization](ldap-synchronization)
 * [SAML](saml)
-

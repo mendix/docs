@@ -62,7 +62,35 @@ To create a new microflow and to start building custom logic, do the following:
 
 The new microflow is created, you can now add logic using events and activities. 
 
-## 4 Adding New Event or Activity {#adding-activity-to-microflow}
+## 4 Duplicating a Microflow
+
+To duplicate an existing microflow, do the following:
+
+1. Click the **Microflows** icon in the left menu bar.
+
+2. In the side panel, click the ellipsis icon and select **Duplicate** in the drop-down menu:
+
+    <img src="attachments/microflows/microflow-duplicate-delete.png" style="zoom:80%;" />
+
+The microflow is duplicated.
+
+## 5 Deleting a Microflow
+
+To delete a microflow in Studio, do one of the following:
+
+1. Open the microflow you want to delete and follow the steps below:
+
+    1. Open the **Properties** tab.
+
+    2. Click **Delete** at the bottom of the **Properties** tab.
+
+2. Click the **Microflows** icon in the left menu bar and do the following:
+
+    1. In the side panel, click the ellipsis icon and select **Delete** in the drop-down menu:
+    
+        <img src="attachments/microflows/microflow-duplicate-delete.png" alt="Delete Microflow" style="zoom:80%;" />
+
+## 6 Adding New Event or Activity {#adding-activity-to-microflow}
 
 To add a new activity or event to the microflow, do the following:
 
@@ -71,7 +99,7 @@ To add a new activity or event to the microflow, do the following:
 3. Select the event or activity in the **General**, **Object Activities** or **Client Activities** section.
 4. Drag and drop the event or activity in the microflow. 
 
-## 5 Toolbox {#microflows-toolbox}
+## 7 Toolbox {#microflows-toolbox}
 
 The **Toolbox** tab contains the following sections:
 
@@ -79,7 +107,7 @@ The **Toolbox** tab contains the following sections:
 * [Object Activities](#microflow-object-activities)
 * [Client Activities](#microflow-client-activities)
 
-### 5.1 General {#microflow-general-section}
+### 7.1 General {#microflow-general-section}
 
 The **General** section contains various elements, such as a parameter and an end event: 
 
@@ -99,7 +127,7 @@ Elements available in the **General** section are described in the table below.
 | Merge                           | A merge can be used to combine flows into one.  If previously you split the microflow flow (for example, when adding a decision) and now one and the same action needs to be executed for these separated flows, you can combine the two (or more) paths using a merge. For more information, see [Merge](/refguide/merge) in the *Studio Pro Guide*. |
 | Parameter                       | A parameter is an input data for the microflow and can be used in any activity in the microflow. For more information on parameters, see [Parameter](/refguide/parameter) in the *Studio Pro Guide*. |
 
-### 5.2 Object Activities {#microflow-object-activities}
+### 7.2 Object Activities {#microflow-object-activities}
 
 The **Object Activities** section contains activities that interact with an object or objects (for more information on what an object is, see [Domain Model](domain-models)): 
 
@@ -119,7 +147,7 @@ The **Object Activities** are described in the table below.
 | Delete         | **Delete Object** can be used to delete one data object or a list of objects. For more information, see [Delete](/refguide/deleting-objects) in the *Studio Pro Guide*. |
 | Retrieve       | **Retrieve** can be used to get one or more objects, either by getting another object through an [association](domain-models-association-properties), or by retrieving objects from the database. For more information, see [Retrieve](/refguide/retrieve) in the *Studio Pro Guide*. |
 
-### 5.3 Client Activities Section {#microflow-client-activities}
+### 7.3 Client Activities Section {#microflow-client-activities}
 
 The **Client Activities** perform activities in the client, for example, open a page or show a message:
 
@@ -134,7 +162,7 @@ The **Client Activities** are described in the table below.
 | Show Message   | With the **Show Message** action you can show a blocking or non-blocking message to an end-user. (Non-blocking message lets users continue their work in the app with the pop-up window open, while the blocking message does not let the user continue work until the pop-up window is closed. ) For more information, see [Show Message](/refguide/show-message) in the *Studio Pro Guide*. |
 | Show Page      | With the **Show Page** action you can show a page to the end-user. For more information, see [Show Page](/refguide/show-page) in the *Studio Pro Guide*. |
 
-### 5.4 Variable Activities
+### 7.4 Variable Activities
 
 The **Variable Activities** section contain activities that manipulate variables: 
 
@@ -152,7 +180,7 @@ For example, you can first create a variable named *Discount* to a microflow, an
 {{% image_container width="400" %}}![Example a Microflow](attachments/microflows/example-of-using-var-activities.png)
 {{% /image_container %}}
 
-## 6 Flows {#flows} 
+## 8 Flows {#flows} 
 
 Flows are lines connecting the elements. You can find the description of flows in the table below:
 
@@ -161,7 +189,7 @@ Flows are lines connecting the elements. You can find the description of flows i
 | Sequence Flow   | ![Sequence Flow](attachments/microflows/sequence-flow.png)   | A sequence flow is an arrow that links events, activities, decisions, and merges with each other. Thus, it defines the order of execution. Flows always flow in one direction where elements are executed one by one. This means that the microflow cannot follow two flows at the same time. Even if you have a **Decision** that splits a flow into several flows, the microflow will follow only one of the flows. |
 | Annotation Flow | ![Annotation Flow](attachments/microflows/annotation-flow.png) | An annotation flow is a connection that can be used to link an annotation to a flow element(s). |
 
-## 7 Activity Icons 
+## 9 Activity Icons 
 
 When configuring the activities of microflows you will notice icons above or underneath activities. You can find the description of icons in the table below:
 
@@ -173,7 +201,7 @@ When configuring the activities of microflows you will notice icons above or und
 | Commit without events | ![Commit Without Events Icon](attachments/microflows/commit-with-no-events-icon.png) | Indicates that the object will be committed but without events. This means that the object will be saved in the database, but event handlers will not be triggered. For more information on event handlers, see [Event Handlers](/refguide/event-handlers) in the *Studio Pro Guide* |
 | Refresh in Client     | ![Refresh in Client Icon](attachments/microflows/refresh-in-client-icon.png) | Indicates that the result of the activity will be displayed to an end-user. |
 
-## 8 Read More
+## 10 Read More
 
 * [General Info](general)
 * [Decision](microflows-decision)

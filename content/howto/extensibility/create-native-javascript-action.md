@@ -142,7 +142,7 @@ Regardless of which linking method you choose, complete the following steps firs
 
 #### 3.3.1 Automatic Linking {#auto-linking}
 
-You should see sucesses from the previous linking commands. Even when your linking shows successes in your CLI, linking problems may have occured with your linked apps. To truly validate success, complete the following steps:
+You should see successes from the previous linking commands. Even when your linking shows successes in your CLI, linking problems may have occurred with your linked apps. To truly validate success, complete the following steps:
 
 1.Open *C:\github\native-nfc-app\android\app\src\main\java\com\mendix\nativetemplate\MainApplication.java*.
 1. Make sure the following is included in the list of imports: `import community.revteltech.nfc.NfcManagerPackage;`.

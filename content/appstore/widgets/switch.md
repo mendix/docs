@@ -1,8 +1,8 @@
 ---
 title: "Switch"
 category: "Widgets"
-description: " "
-tags: [ ]
+description: "Describes the configuration and usage of the Switch widget, which is available in the Mendix App Store."
+tags: ["app store", "app store component", "widget", "switch", "platform support"]
 draft: true
 ---
 
@@ -39,7 +39,6 @@ To contribute to the development of this widget, follow these steps:
 	* [karma cli](https://www.npmjs.com/package/karma-cli)
 
 2. Fork and clone the [mendixlabs/boolean-slider](https://github.com/mendixlabs/boolean-slider.git) repository. The code is in Typescript.
-
 3. Set up the development environment by running `npm install`.
 4. Create a folder named *dist* in the project root.
 5. Create a Mendix test project in the *dist* folder and rename its root folder to *dist/MxTestProject*, or get the test project from [mendixlabs/boolean-slider](https://github.com/MendixLabs/boolean-slider/releases/latest). Changes to the widget code will be automatically pushed to this test project.

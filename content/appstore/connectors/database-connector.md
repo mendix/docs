@@ -1,7 +1,7 @@
 ---
 title: "Database Connector"
 category: "Connectors"
-description: " "
+description: "Describes the configuration and usage of the Database Connector, which is available in the Mendix App Store."
 tags: ["app store", "app store component", "database connector", "jdbc", "hikari", "query" ]
 draft: true
 ---

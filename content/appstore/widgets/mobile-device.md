@@ -1,8 +1,8 @@
 ---
 title: "Mobile Device"
 category: "Widgets"
-description: " "
-tags: [ ]
+description: "Describes the configuration and usage of the Mobile Device widget, which is available in the Mendix App Store."
+tags: ["app store", "app store component", "widget", "mobile device", "cordova", "phonegap", "platform support"]
 draft: true
 ---
 

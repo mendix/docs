@@ -1,8 +1,8 @@
 ---
 title: "List View Controls"
 category: "Widgets"
-description: " "
-tags: [ ]
+description: "Describes the configuration and usage of the List View Controls widget, which is available in the Mendix App Store."
+tags: ["app store", "app store component", "widget", "list view control", "check box filter", "platform support"]
 draft: true
 ---
 

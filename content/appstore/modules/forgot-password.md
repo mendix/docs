@@ -1,8 +1,8 @@
 ---
 title: "Forgot Password"
 category: "Modules"
-description: " "
-tags: ["app store", "app store component", "forgot password", "password", "login", "credentials"]
+description: "Describes the configuration and usage of the Forgot Password module, which is available in the Mendix App Store."
+tags: ["app store", "app store component", "forgot password", "password", "login", "credentials", "platform support"]
 draft: true
 ---
 

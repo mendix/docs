@@ -1,8 +1,8 @@
 ---
 title: "Calendar"
 category: "Widgets"
-description: " "
-tags: [ ]
+description: "Describes the configuration and usage of the Calendar widget, which is available in the Mendix App Store."
+tags: ["app store", "app store component", "widget", "calendar", "platform support"]
 draft: true
 ---
 

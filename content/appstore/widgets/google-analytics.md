@@ -1,8 +1,8 @@
 ---
 title: "Google Analytics"
 category: "Widgets"
-description: " "
-tags: [ ]
+description: "Describes the configuration and usage of the Google Analytics widget, which is available in the Mendix App Store."
+tags: ["app store", "app store component", "widget", "google analytics", "eventtracker", "webmaster", "platform support"]
 draft: true
 ---
 

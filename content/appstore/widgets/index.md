@@ -1,7 +1,7 @@
 ---
 title: "Widgets"
 description: " "
-tags: [ ]
+tags: ["platform support"]
 draft: true
 ---
 

@@ -1,8 +1,8 @@
 ---
 title: "Radio Button List"
 category: "Widgets"
-description: " "
-tags: [ ]
+description: "Describes the configuration and usage of the Radio Button List widget, which is available in the Mendix App Store."
+tags: ["app store", "app store component", "widget", "radio button list", "platform support"]
 draft: true
 ---
 

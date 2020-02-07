@@ -1,8 +1,8 @@
 ---
 title: "Audit Trail"
 category: "Modules"
-description: " "
-tags: ["app store", "app store component", "audit trail", "log"]
+description: "Describes the configuration and usage of the Audit Trail module, which is available in the Mendix App Store."
+tags: ["app store", "app store component", "audit trail", "log", "platform support"]
 draft: true
 ---
 

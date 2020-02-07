@@ -28,8 +28,6 @@ Category | Description
 **Reviews** | The most recent content reviews along with the author and date of the review. Clicking the name of the review author will bring you to their [Mendix Profile](../mendix-profile/index). Clicking the title of an App Store component will allow you to see the details of what was reviewed. 
 **Top App Store contributors** | The top 10 App Store contributors of the last 30 days. Clicking the name of the developer will bring you to their Mendix Profile. Clicking **View full leaderboard** will take you to the [Mendix Leaderboards](https://developer.mendixcloud.com/link/topappstore30).
 
-To see a detail page for each category, click **View more**.
-
 ## 3 Add-On Details Page {#details}
 
 Clicking an App Store component in a menu will bring you to the component's details page. The details page presents the sections described below.

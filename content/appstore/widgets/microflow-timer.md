@@ -1,7 +1,7 @@
 ---
 title: "Microflow Timer"
 category: "Widgets"
-description: " "
+description: "Describes the configuration and usage of the Microflow Timer widget, which is available in the Mendix App Store."
 tags: ["app store", "app store component", "widget", "microflow timer"]
 draft: true
 ---

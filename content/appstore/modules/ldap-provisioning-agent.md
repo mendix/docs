@@ -1,7 +1,7 @@
 ---
 title: "LDAP Provisioning Agent"
 category: "Modules"
-description: " "
+description: "Describes the configuration and usage of the LDAP Provisioning Agent module, which is available in the Mendix App Store."
 tags: ["app store", "app store component", "ldap", "ldap provisioning agent"]
 draft: true
 ---

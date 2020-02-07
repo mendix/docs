@@ -1,7 +1,7 @@
 ---
 title: "Atlas UI Resources"
 category: "Modules"
-description: " "
+description: "Describes the configuration and usage of the Atlas UI Resources module, which is available in the Mendix App Store."
 tags: ["app store", "app store component", "atlas ui", "atlas ui resources", "brand", "page template", "building block", "custom widget"]
 draft: true
 ---

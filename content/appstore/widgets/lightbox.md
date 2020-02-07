@@ -1,7 +1,7 @@
 ---
 title: "Lightbox"
 category: "Widgets"
-description: " "
+description: "Describes the configuration and usage of the Lightbox widget, which is available in the Mendix App Store."
 tags: ["app store", "app store component", "widget", "lighbtox", "web gallery"]
 draft: true
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Tab Swipe"
 category: "Widgets"
-description: " "
+description: "Describes the configuration and usage of the Tab Swipe widget, which is available in the Mendix App Store."
 tags: ["app store", "app store component", "widget", "tab swipe"]
 draft: true
 ---

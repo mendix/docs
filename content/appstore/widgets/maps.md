@@ -1,7 +1,7 @@
 ---
 title: "Maps"
 category: "Widgets"
-description: " "
+description: "Describes the configuration and usage of the Maps widget, which is available in the Mendix App Store."
 tags: ["app store", "app store component", "widget", "maps", "google maps", "openstreetmap", "mapbox", "here maps"]
 draft: true
 ---

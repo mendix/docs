@@ -1,7 +1,7 @@
 ---
 title: "Grid Selector"
 category: "Widgets"
-description: " "
+description: "Describes the configuration and usage of the Grid Selector widget, which is available in the Mendix App Store."
 tags: ["app store", "app store component", "widget", "grid selector"]
 draft: true
 ---

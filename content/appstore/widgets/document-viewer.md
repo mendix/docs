@@ -1,7 +1,7 @@
 ---
 title: "Document Viewer"
 category: "Widgets"
-description: " "
+description: "Describes the configuration and usage of the Document Viewer widget, which is available in the Mendix App Store."
 tags: ["app store", "app store component", "widget", "document viewer"]
 draft: true
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Mobile Features"
 category: "Widgets"
-description: " "
+description: "Describes the configuration and usage of the Mobile Features widget, which is available in the Mendix App Store."
 tags: ["app store", "app store component", "widget", "mobile feature", "spinner", "transitions", "status bar"]
 draft: true
 ---

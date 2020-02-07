@@ -1,7 +1,7 @@
 ---
 title: "Carousel"
 category: "Widgets"
-description: " "
+description: "Describes the configuration and usage of the Carousel widget, which is available in the Mendix App Store."
 tags: ["app store", "app store component", "widget", "carousel", "image"]
 draft: true
 ---

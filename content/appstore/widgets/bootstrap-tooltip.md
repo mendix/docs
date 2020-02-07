@@ -1,7 +1,7 @@
 ---
 title: "Bootstrap Tooltip"
 category: "Widgets"
-description: " "
+description: "Describes the configuration and usage of the Bootstrap Tooltip widget, which is available in the Mendix App Store."
 tags: ["app store", "app store component", "widget", "bootstrap tooltip"]
 draft: true
 ---

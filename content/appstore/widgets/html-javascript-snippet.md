@@ -1,7 +1,7 @@
 ---
 title: "HTML/JavaScript Snippet"
 category: "Widgets"
-description: " "
+description: "Describes the configuration and usage of the TML/JavaScript Snippet widget, which is available in the Mendix App Store."
 tags: ["app store", "app store component", "widget", "html", "javascript", "snippet"]
 draft: true
 ---

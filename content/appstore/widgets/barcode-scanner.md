@@ -1,7 +1,7 @@
 ---
 title: "Barcode Scanner"
 category: "Widgets"
-description: " "
+description: "Describes the configuration and usage of the Barcode Scanner widget, which is available in the Mendix App Store."
 tags: ["app store", "app store component", "widget", "barcode scanner", "phonegap"]
 draft: true
 ---

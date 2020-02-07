@@ -322,7 +322,7 @@ This parameter makes the Native Builder pick a compatible version of the Native 
 This parameter provides additional details when the Native Builder incurs errors. When `--verbose` is used and the Native Builder errors, the Native Builder will output a complete stack trace of the error. This is useful for cases where the Native Builder fails with an unknown error.
 
 
-## 4 Advanced Usage
+## 4 Advanced Usage {#advanced-usage}
 
 ### 4.1 Custom Native Code
 

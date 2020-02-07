@@ -52,7 +52,7 @@ The Cloud Foundry Buildpack determines which cluster node becomes the cluster le
 
 ## 5 Cluster Startup
 
-The cluster leader is responsible for performing the database synchronization. This means that, in general, there will some downtime when you deploy a new version of the app while the cluster leader determines whether database synchronization is required.
+The cluster leader is responsible for performing the database synchronization. This means that, in general, there will be some downtime when you deploy a new version of the app while the cluster leader determines whether database synchronization is required.
 
 If database synchronization is required, all the cluster slaves will wait until the cluster leader finishes the database synchronization. When the database synchronization has finished, all the cluster nodes will become fully functional.
 

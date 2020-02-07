@@ -12,13 +12,9 @@ For more information on native mobile app development, see the [native-template 
 
 **Release date: February 6th, 2020**
 
-An iOS app built with version 3.1.0 of Native Template, will fail to sync dynamic images correctly.
-This results in images missing and an annoying popup.
-This issue cannot be resolved with an OTA update but will require a full build of the iOS variant of an app.
+### Fix
 
-### Fixes
-
-* On iOS dynamic images should again being synced correctly to the device
+* We fixed an issue where dynamic images would not sync correctly in iOS apps. This dynamic image sync issue resulted in images missing and a pop-up window. This problem cannot be resolved with an OTA update. Triggering a full build of your iOS app will fix this issue.
 
 ## 3.1.0
 

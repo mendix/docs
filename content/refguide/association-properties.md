@@ -1,6 +1,6 @@
 ---
-title: "Associations & Their Properties"
-parent: "domain-model"
+title: "Association Properties"
+parent: "associations"
 tags: ["domain model", "association", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -29,7 +29,6 @@ If you double-click an association, its properties are opened.
 
 ![Association Properties](attachments/association-properties/association-properties.png)
 
-
 Associations have the following properties:
 
 * [Name](#name) 
@@ -52,11 +51,11 @@ Multiplicity defines the number of possible referred objects. It is indicated by
 
 Multiplicity can be of the following types:
 
-| Multiplicity | means | is the equivalent of |
+| Multiplicity | Meaning | Equivalent of |
 | --- | --- | --- |
-| One-to-one | one X object is associated with one Y object |  an association of type **Reference** with owner set to **Both** |
-| One-to-many | one X object is associated with multiple Y object |  an association of type **Reference** with owner set to **Default** |
-| Many-to-many | multiple X objects are associated with multiple Y objects |  an association of type **Reference set** – in this case ownership is set by the **Navigability** property |
+| One-to-one | One X object is associated with one Y object | An association of type **Reference** with owner set to **Both** |
+| One-to-many | One X object is associated with multiple Y object | An association of type **Reference** with owner set to **Default** |
+| Many-to-many | Multiple X objects are associated with multiple Y objects |  An association of type **Reference set** – in this case ownership is set by the **Navigability** property |
 
 For more information about association types, see the [Type](associations#type) section in *Associations*, and for information on ownership, see the [Owner](associations#owner) section in *Associations*.
 
@@ -64,10 +63,10 @@ For more information about association types, see the [Type](associations#type) 
 
 Navigability changes the owner of many-to-many associations. Navigability has the following options:
 
-| Navigability | means | is the equivalent of |
+| Navigability | Meaning | Equivalent of |
 | --- | --- | --- |
-| X objects refer to Y objects | the owner of the association is X | an association of type **Reference set** with owner set to **Default** |
-| X and Y objects refer to each other | both entities are owners | an association of type **Reference set** with owner set to **Both** |
+| X objects refer to Y objects | The owner of the association is X | An association of type **Reference set** with owner set to **Default** |
+| X and Y objects refer to each other | Both entities are owners | An association of type **Reference set** with owner set to **Both** |
 
 This corresponds to the **Owner** property for **Reference sets** as described in the [Owner](associations#owner) section of *Associations*.
 
@@ -79,9 +78,9 @@ Delete behavior defines what should happen to the associated object when an obje
 
 | Value | Description |
 | --- | --- |
-| delete {name of entity} object but keep {name of other entity} object(s) | When an object is deleted, the associated object(s) are not deleted. |
-| delete {name of entity} object and {name of other entity} object(s) as well | When an object is deleted, the associated object(s) are also deleted. |
-| delete {name of entity} object only if it is not associated with {name of other entity} object(s) | An object can only be deleted if it is not associated with any other object(s). |
+| Delete {name of entity} object but keep {name of other entity} object(s) | When an object is deleted, the associated object(s) are not deleted. |
+| Delete {name of entity} object and {name of other entity} object(s) as well | When an object is deleted, the associated object(s) are also deleted. |
+| Delete {name of entity} object only if it is not associated with {name of other entity} object(s) | An object can only be deleted if it is not associated with any other object(s). |
 
 Default: *delete {name of entity} object but keep {name of other entity} object(s)*
 

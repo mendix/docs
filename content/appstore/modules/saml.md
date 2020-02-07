@@ -1,8 +1,8 @@
 ---
 title: "SAML"
 category: "Modules"
-description: " "
-tags: [ ]
+description: "Describes the configuration and usage of the SAML module, which is available in the Mendix App Store."
+tags: ["app store", "app store component", "saml", "idp", "identity provider", "platform support"]
 draft: true
 ---
 
@@ -52,13 +52,13 @@ You can choose what you want to enter for the entity ID, organization, and conta
 
 Accessing the metadata can be done by downloading the XML file or by opening `http://www.app.com/SSO/metadata`.
 
-### 3.1 Create a New IdP Configuration
+### 3.1 Creating a New IdP Configuration
 
 When creating a new IdP configuration, you are guided through a workflow to help you configure everything required for the IdP configuration. Each option in the workflow is explained below.
 
 Upon completing these steps, you only need to send the metadata file to the IdP and have them configure the authentication on their end. 
 
-### 3.2 Configure the IdP-Specific Settings
+### 3.2 Configuring the IdP-Specific Settings
 
 Each IdP (entity descriptor) should have its own configuration set. Every IdP can be configured and enabled separately. All changes made in the configuration are immediately applied when you save the configuration. 
 
@@ -104,13 +104,13 @@ This file contains the documented properties, and example lines show the default
 
 With these settings, you can configure the behavior of this module and improve multi-tentant behavior of your application. For plain SAML authentication, it is best to leave this file unchanged. 
 
-### 4.1 Debugging the Configuration
+## 5 Debugging the Configuration
 
 When testing and debugging the configuration, an option is to view the messages in the log files. A detailed cause of the failure will be printed in case something goes wrong.
 
 When enabling the log node SSO to show trace messages, you can find detailed information from every step in the process. This allows for an easy analysis of where potential configuration errors recite. Enabling trace messages for the SSO log node will also allow for detailed response messages to the user trying to sign in. By default, every failed login attempt always results in this message: "Unable to validate the SAML message!" After enabling trace logging, you can see the exact cause of the failure in the browser. In case of exceptions, you can even see the stack trace.  Obviously, you should not have this enabled in production, but it does allow for easier and faster testing of the configuration.
 
-### 4.2 Error Messages
+### 5.1 Error Messages
 
 * **"The application hasn't been properly configured to support Single Sign On."** – This message indicates an incomplete IdP configuration. In more detailed error messages (via the log file), you are able to see which property in the IdP configuration has not been configured.
 * **"Unable to complete the request"** – A message has been received that does not have a RelayState/RequestID that matches any of the previously generated IDs (or the message has been answered already). If you get this message, you should validate the message communication and confirm that you are not using unsolicited requests. Or, you can enable that check the box to allow for IdP initiated authentication. 
@@ -123,33 +123,33 @@ When enabling the log node SSO to show trace messages, you can find detailed inf
 * **“MSIS7046: The SAML protocol parameter ‘RelayState’ was not found or not valid.”** – This error can be shown on the ADFS server, most likely when you are using Mac OSX and a Safari browser. Setting the `BindingURI_Redirect` constant to true might help resolve the issue. By default, Mendix favors the `Post` binding, as the maximum size exceeds that of a `Redirect` binding due to its use of cookies and post information instead of URL parameters. The size can be a factor when using encryption.
 * **"Unable to validate Response, see SAMLRequest overview for detailed response. Error: An error occured while commiting user: p:'johndoe@company.com'/u:'JoHnDoE@CoMpAnY.CoM'"** – All user names passing through the SAML module are converted to lower-case, so make sure all the existing user names and new user names are also converted to lower-case. This is because certain systems are not case-sensitive (for example, Active Directory), and also because it is a good idea to create two unique users (for example, "JoHnDoE@CoMpAnY.CoM" and "johndoe@company.com").
 
-### 4.3 URLs
+## 6 URLs
 
 * **/SSO/metadata** – This provides a point for the IdP to automatically download the metadata from this SP.
 * **/SSO/discovery** – If there are multiple active IdP configurations and discovery is enabled, this page can give a list of all the IdP configuration. It also allows the user to click the correct URL to sign in.
 * **/SSO/login/[IdP Alias]  /SSO/login?_idp_id=[IdP_Alias]** – For logging using a specific IdP, you have to open either of these two URLs and pass the IdP alias as a parameter in the URL.
 * **/SSO/login/SSO/** – If you have only one active IdP, opening these URLs will automatically try to log you in using the active IdP. In the case of multiple active IdPs and discovery enabled, the user will be redirected to the discovery page.  If discovery is not allowed, the user will receive an error message.
 
-## 5 Custom Behavior
+## 7 Custom Behavior
 
-### 5.1 evaluateMultipleUserMatches
+### 7.1 evaluateMultipleUserMatches
 
 The module tries to look up the user that matches the provided user name. When multiple `System.User` records are found, this microflow is always executed.
 
 It is possible to customize this microflow to determine the correct user. Whichever user instance is returned will be signed in to the application (and passed on to any other microflow).
 
-### 5.2 CustomUserProvioning {#customuserprovisioning}
+### 7.2 CustomUserProvioning {#customuserprovisioning}
 
 When selecting in the SSO configuration to run the `customUserProvisioning` action (previously known as `CustomLoginLogic`), you can update the new or retrieved user with additional information from the assertion. All the assertions are passed into the microflow, and these can be transformed and stored in the user record. Also, additional roles can be granted to the users based on the assertion attributes.
 
-### 5.3 CustomAfterSigninLogic
+### 7.3 CustomAfterSigninLogic
 
 After a new session is created for the user, this microflow can be called to copy any data from the previous session to the new session. This microflow behaves similarly to the platform after the sign-in microflow. By using this microflow, it is possible to copy records from the anonymous user to the newly signed-in user.
 
-## 6 Custom Settings
+## 8 Custom Settings
 
 The resources folder contains the *SAMLConfig.properties* file, and through this file, advanced settings can be configured for the module. This file contains the settings along with documentation on the settings. Through this file, it is possible to alter the URLs used as well as how the application behaves in a multi-tenant environment. The file also specifies all the default values and behavior in more detail.
 
-## 7 Read More
+## 9 Read More
 
 * [SSO Using SAML](https://gettingstarted.mendixcloud.com/link/module/115/lecture/938)

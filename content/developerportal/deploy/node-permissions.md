@@ -46,7 +46,7 @@ To access the node permissions, do the following:
 
 ![](attachments/node-permissions/node-permissions.png)
 
-3. Select the environment for which you want to change permissions from the dropdown.
+3. Select the environment for which you want to change permissions from the drop-down.
 
     ![](attachments/node-permissions/node-flexible-environments.png)
 

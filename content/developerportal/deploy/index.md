@@ -41,13 +41,13 @@ For more information, see [Mendix Cloud](mendix-cloud-deploy).
 
 ## 4 IBM Cloud
 
-If you create your app from an IBM Starter App, or an IBM Starter Kit on IBM Cloud, then the Developer Portal will lead you through the creation of an environment on IBM Cloud. You can then deploy your app to your IBM environment directly from within Studio Pro.
+If you create your app from an IBM app template, or an IBM Starter Kit on IBM Cloud, then the Developer Portal will lead you through the creation of an environment on IBM Cloud. You can then deploy your app to your IBM environment directly from within Studio Pro.
 
 For more information, see [IBM Cloud](ibm-cloud).
 
 ## 5 SAP Cloud Platform
 
-If you create your app from an SAP Starter App, the Developer Portal will lead you through the creation of an environment on SAP Cloud Platform. You can then deploy your app to your SAP Cloud Platform environment directly from within Studio Pro.
+If you create your app from an SAP app template, the Developer Portal will lead you through the creation of an environment on SAP Cloud Platform. You can then deploy your app to your SAP Cloud Platform environment directly from within Studio Pro.
 
 For more information, see [SAP Cloud Platform](sap-cloud-platform).
 

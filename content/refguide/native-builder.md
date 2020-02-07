@@ -54,7 +54,9 @@ native-builder.exe prepare --github-access-token <token> --appcenter-api-token <
 | `--project-path`            | Absolute path to the Mendix project file.                            | `C:\MyApp\MyApp.mpr`                                |
 | `--mxbuild-path`            | Absolute path to MxBuild executable.                                 | `C:\Program Files\Mendix\8.0.0\modeler\mxbuild.exe` |
 | `--runtime-url`             | URL of the Mendix runtime.                                           | `https://myapp.mendixcloud.com`                     |
-| `--mendix-version`          | The Mendix Studio Pro version your Mendix project is using.          | `8.5.0`                                             |
+| `--mendix-version`          | The Mendix Studio Pro version your Mendix project is using. **(Required)**          | `8.5.0`                                             |
+| `--firebase-android-config-path`          | Absolute path to a *google-services.json* file.          | `C:\MyApp\google-services.json`                     |
+| `--firebase-ios-config-path`          | Absolute path to a *GoogleService-Info.plist* file.          | `C:\MyApp\GoogleService-Info.plist`                 |
 
 
 ### 2.2 Build
@@ -110,6 +112,11 @@ native-builder.exe build dev-app --project-name "CoolApp" --output-path "C:\bund
 
 The `regenerate` command recreates the project on GitHub with the latest version of `Native Template`, renames the previous app with a new name to preserve changes (if any), and then updates the build configuration of the App Center apps. Running `regenerate` also expects that `prepare` has been run at least once for the `--project-name`.
 
+{{% alert type="info" %}}
+There is no automated way to preserve changes you made to a previous template. If you have some, you must apply them manually in the new GitHub repository. In addition, when changing your app's Mendix version, please also update the `mxbuild-path` using the `prepare` command.
+{{% /alert %}}
+
+
 | Parameter                  | Description                                                                 | Example                                             |
 | -------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------- |
 | `--project-name`           | Absolute path to the directory where Java executable is located. | `My Cool App`                                       |
@@ -137,15 +144,15 @@ native-builder.exe release push-update --project-name "CoolApp" --target-version
 
 | Parameters             | Description                                                                                                    | Example                                                          |
 | ---------------------- | -------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
-| `--project-name`       | Unique name of the project used during `prepare` **(Required)**                                                              | `CoolApp`                                                        |
+| `--project-name`       | Unique name of the project used during `prepare`. **(Required)**                                                              | `CoolApp`                                                        |
 | `--target-version`     | Version or range of versions of the already published app that this update should affect. **(Required)**                      | Semantic version See [Semantic Versioning](https://semver.org/)  |
 | `--rollout-percentage` | Percentage number of users that should get this update. Once set, the value can not be reduced afterwards. **(Required)**    | A number between `1` and `100`.                                  |
 | `--build-number`       | App Center build number that this update should target. **(Required)**                                                       | Any number as defined during `build`                             |
 | `--description`        | More info associated with this update that users would see before downloading.                      | Any text message.                                                |
 | `--mandatory`          | Determines if this update should be considered important and forced on the users. Defaults to true. | `true` or `false`                                                |
 | `--platform`           | Platform with which to run command for. Defaults to both iOS and Android.                           | `ios` or `android`                                               |
-| `--deployment-target`  | OTA target group. Defaults to `Production`                                                          | `Staging`                                                        |
-| `--skip-mxbuild`       | Used if bundling JavaScript bundle and assets. Defaults to `false`                                  | `true` or `false`                                                |
+| `--deployment-target`  | OTA target group. Defaults to `Production`.                                                          | `Staging`                                                        |
+| `--skip-mxbuild`       | Used if bundling JavaScript bundle and assets. Defaults to `false`.                                  | `true` or `false`                                                |
 
 ### 2.5 Updating an OTA Deployment Release's Metadata
 
@@ -159,14 +166,14 @@ native-builder.exe release patch-update --project-name "CoolApp" --label "v4" --
 
 | Parameters             | Description                                                                                                          | Example                                                |
 | ---------------------- | -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------ |
-| `--project-name`       | Unique name of the project used during `prepare` **(Required)**                                                                     | `CoolApp`                                              |
-| `--label`              | Unique label of the update to patch **(Required)**                                                                                 | This can be gotten by using the `release list` command |
+| `--project-name`       | Unique name of the project used during `prepare`. **(Required)**                                                                     | `CoolApp`                                              |
+| `--label`              | Unique label of the update to patch. **(Required)**                                                                                 | This can be gotten by using the `release list` command |
 | `--target-version`     | Version or range of versions of the already published app that the update should affect.                  | Semantic versioning See [Semantic Versioning](https://semver.org/)    |
 | `--rollout-percentage` | Percentage number of users that should get the update. Once set, the value can not be reduced afterwards. | A number between `1` and `100`.                        |
 | `--description`        | More info associated with the update that users would see before downloading.                             | Any text message.                                      |
-| `--mandatory`          | Determines if the update should be considered important and forced on the users                           | `true` or `false`                                      |
-| `--platform`           | Platform with which to run command for. Defaults to both iOS and Android.                                 | `ios` or `android`                                     |
-| `--deployment-target`  | OTA target group. Defaults to `Production`                                                                | `Staging`                                              |
+| `--mandatory`          | Determines if the update will be mandatory.                           | `true` or `false`                                      |
+| `--platform`           | Specifies which platform your command is run for. Defaults to both iOS and Android.                                 | `ios` or `android`                                     |
+| `--deployment-target`  | OTA target group. Defaults to `Production`.                                                                | `Staging`                                              |
 
 ### 2.6 Rolling Back to a Previous Deployment Release
 
@@ -185,10 +192,10 @@ Be aware of the following:
 
 | Parameters            | Description                                                                          | Example                                                |
 | --------------------- | ------------------------------------------------------------------------------------ | ------------------------------------------------------ |
-| `--project-name`      | Unique name of the project used during `prepare` **Required**                                     | `CoolApp`                                              |
-| `--label`             | A unique label of the stable version to rollback to **Required**                                  | This can be gotten by using the `release list` command |
+| `--project-name`      | Unique name of the project used during `prepare`. **(Required)**                                     | `CoolApp`                                              |
+| `--label`             | A unique label of the stable version to rollback to. **(Required)**                                  | This can be gotten by using the `release list` command |
 | `--platform`          | Platform with which to run command for. Defaults to both iOS and Android. | `ios` or `android`                                     |
-| `--deployment-target` | OTA target group. Defaults to `Production`                                | `Staging`                                              |
+| `--deployment-target` | OTA target group. Defaults to `Production`.                                | `Staging`                                              |
 
 ### 2.7 Listing Deployment Releases
 
@@ -202,9 +209,9 @@ native-builder.exe release list --project-name "CoolApp"
 
 | Parameters            | Description                                                                          | Example            |
 | --------------------- | ------------------------------------------------------------------------------------ | ------------------ |
-| `--project-name`      | Unique name of the project used during `prepare` **Required**                                    | `CoolApp`          |
+| `--project-name`      | Unique name of the project used during `prepare`. **(Required)**                                    | `CoolApp`          |
 | `--platform`          | Platform with which to run command for. Defaults to both iOS and Android. | `ios` or `android` |
-| `--deployment-target` | OTA target group. Defaults to `Production`                                | `Staging`          |
+| `--deployment-target` | OTA target group. Defaults to `Production`.                                | `Staging`          |
 
 ### 2.8 Generating Only the App Bundles
 
@@ -218,9 +225,39 @@ native-builder.exe bundle --project-name "CoolApp" --output-path "C:\bundles"
 
 | Parameters            | Description                                                                          | Example            |
 | --------------------- | ------------------------------------------------------------------------------------ | ------------------ |
-| `--project-name`      | Unique name of the project used during `prepare` **Required**                                    | `CoolApp`          |
-| `--output-path` | The absolute output path for the *ZIP* archives **Required**                                             | `C:\bundles`       |
+| `--project-name`      | Unique name of the project used during `prepare`. **(Required)**                                    | `CoolApp`          |
+| `--output-path` | The absolute output path for the *ZIP* archives. **(Required)**                                             | `C:\bundles`       |
 | `--platform`          | Platform with which to run command for. Defaults to both iOS and Android. | `ios` or `android` |
+
+### 2.9 iOS-Specific Configurations
+
+Commands to modify the iOS configuration are grouped under the `config ios` command.
+
+#### 2.9.1 Adding and Removing Entitlements
+
+To add or remove entitlements, use the `add-entitlements` or `remove-entitlements` commands:
+
+```bash
+native-builder.exe config ios add-entitlements --project-name "CoolApp" --entitlements notification nfc
+```
+
+| Parameters            | Description                                                                          | Example            |
+| --------------------- | ------------------------------------------------------------------------------------ | ------------------ |
+| `--project-name`      | Unique name of the project used during `prepare`. **(Required)**                                    | `CoolApp`          |
+| `--entitlements` | A list of the entitlements to add to your project. Supported options are `notification` and `nfc`                 | `notification nfc`       |
+
+#### 2.9.2 Adding and Removing Background Modes
+
+To add or remove background modes, use the `add-background-modes` or `remove-background-modes` commands:
+
+```bash
+native-builder.exe config ios add-background-modes --project-name "CoolApp" --modes notification
+```
+
+| Parameters            | Description                                                                          | Example            |
+| --------------------- | ------------------------------------------------------------------------------------ | ------------------ |
+| `--project-name`      | Unique name of the project used during `prepare`. **(Required)**                                    | `CoolApp`          |
+| `--modes` | A list of background modes to add to your project. The `notification` option is supported.                | `notification`       |
 
 ## 3 Expanded Parameter Explanations
 
@@ -230,7 +267,7 @@ This parameter is the unique name of your app, and can contain any characters. T
 
 ### 3.2 --runtime-url
 
-This parameter should point to the runtime you want to run your app against. If testing against a locally deployed app, use your machine's IP address (for example, {http://192.168.1.12:8080}). If testing against a Mendix Cloud-deployed app, use the fully qualified runtime URL of your deployment server (for example, {https://myapp.mendixcloud.com}). The correct protocol needs to be appended, otherwise the URL will be prefixed by default with `http://`.
+This parameter should point to the runtime you want to run your app against. If testing against a locally deployed app, use your machine's IP address (for example, `http://192.168.1.12:8080`). If testing against a Mendix Cloud-deployed app, use the fully qualified runtime URL of your deployment server (for example, `https://myapp.mendixcloud.com`). The correct protocol needs to be appended, otherwise the URL will be prefixed by default with `http://`.
 
 ### 3.3 --appcenter-organization
 

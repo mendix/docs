@@ -1,8 +1,8 @@
 ---
 title: "Slider"
 category: "Widgets"
-description: " "
-tags: [ ]
+description: "Describes the configuration and usage of the Slider widget, which is available in the Mendix App Store."
+tags: ["app store", "app store component", "widget", "slider", "bound", "platform support"]
 draft: true
 ---
 
@@ -52,7 +52,7 @@ To contribute to the development of this widget, follow these steps:
 2. Fork and clone the [mendixlabs/slider](https://github.com/mendixlabs/slider) repository. The code is in Typescript.
 3. Set up the development environment by running `npm install`.
 4. Create a folder named *dist* in the project root.
-5. Create a Mendix test project in the *dist* folder and rename its root folder to *dist/MxTestProject*, or get the test project from [mendixlabs/slider](https://github.com/mendixlabs/slider/releases/latest)). Changes to the widget code will be automatically pushed to this test project.
+5. Create a Mendix test project in the *dist* folder and rename its root folder to *dist/MxTestProject*, or get the test project from [mendixlabs/slider](https://github.com/mendixlabs/slider/releases/latest). Changes to the widget code will be automatically pushed to this test project.
 6. To automatically compile, bundle, and push code changes to the running test project, run `grunt`.
 7. To run the project unit tests with code coverage (results can be found at `dist/testresults/coverage/index.html`), run: `npm test`.
 8. Run the unit test continuously during development via `karma start`.
@@ -61,4 +61,4 @@ We are actively maintaining this widget. Please report any issues or suggestions
 
 ## 5 Read More
 
-* [Native Styling](/refguide/native-styling-refguide)
+* [Native Styling](https://docs.mendix.com/refguide/native-styling-refguide)

@@ -11,6 +11,16 @@ These release notes cover changes to the app project management functionality an
 For release notes on Mendix Cloud and deployment options, see [Deployment](deployment).
 {{% /alert %}}
 
+## 2020
+
+### February 6th, 2020
+
+#### Improvements
+
+* We implemented a new design for the [Create App](/developerportal/#buzz) flow.
+* When creating a new app, you can now search through templates for feature demos, academy training apps, and ready-made apps.
+* After selecting an app template, you can now choose a nice icon for your app project.
+
 ## 2019
 
 ### December 23rd, 2019
@@ -395,7 +405,7 @@ The Web Modeler can now be enabled for all types of apps. You can do this on the
 #### New Features
 
 * We added the **View App** and **Edit App** buttons. The **View App** button brings you to the deployment URL of your Free App, or, if you have test, acceptance, and production environments, it lets you choose between these environments using a drop-down menu. The **Edit App** button will launch the Desktop Modeler if you have it installed; if you are part of the partner group testing the Web Modeler, then you'll have the choice to directly open your app in the WM.
-* We redesigned the interface. The new look sports light colors and a responsive layout. Menu items pertaining to your apps have been moved from the top to the left-hand side. Users with permissions to access restricted parts of the Mendix App Platform can navigate there using the **Profile** menu, which opens when you click your avatar in the top-right corner of the screen.
+* We redesigned the interface. The new look sports light colors and a responsive layout. Menu items pertaining to your apps have been moved from the top to the left side. Users with permissions to access restricted parts of the Mendix App Platform can navigate there using the **Profile** menu, which opens when you click your avatar in the top-right corner of the screen.
 * We improved the breadcrumbs. A header on top of the Mendix App Platform will show you where you are in the navigation structure.
 * The **Feedback** widget can now be used when opened on small screen sizes (for example, on a  smartphone).
 * The **Guidance** sidebar has been replaced by the **Intercom** widget.

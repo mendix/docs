@@ -51,7 +51,7 @@ You can use demo user to test what your application looks like to different user
 
 1. View you app.
 2. Sign in it as the [Administrator](administrator).
-3.  Click a user icon in the right-hand side of the screen. The menu bar **Select user** will be displayed: 
+3.  Click a user icon in the right side of the screen. The menu bar **Select user** will be displayed: 
 
 	![](attachments/demo-users/demo-users-example.png)
 	

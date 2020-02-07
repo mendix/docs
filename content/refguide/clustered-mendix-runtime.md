@@ -37,7 +37,7 @@ Scaling out can be done using the Pivotal App Manager. For details on using the 
 
 Mendix Runtime has the concept of a cluster leader. This is a single node within a Mendix Runtime cluster that performs cluster management activities. These are the activities:
 
-* `Session cleanup handling` – each node expires its sessions (meaning, not being used for a configured timespan) and removes the session persisted in the database
+* `Session cleanup handling` – each node expires its sessions (meaning, not being used for a configured timespan) and the cluster leader removes the sessions persisted in the database
 	* In exceptional cases (for example, a node crash), some sessions may not be removed from the database, in which case the cluster leader makes sure this removal still happens
 * `Cluster node expiration handling` – removing cluster nodes after they have expired (meaning, not giving a heartbeat for a configured timespan)
 * `Background job expiration handling` – removing data about background jobs after the information has expired (meaning, older than a specific timespan)
@@ -145,3 +145,4 @@ Persistent sessions also store a last-active date upon each request. To improve 
 {{% alert type="warning" %}}
 Overriding the default values for the `SessionTimeout` and `ClusterManagerActionInterval` custom settings can impact the behavior of "keep alive" and results in an unexpected session logout. The best practice is to set the `ClusterManagerActionInterval` to half of the `SessionTimeout` so that each node gets the chance to run the clean-up action at least once during the session time out interval.
 {{% /alert %}}
+

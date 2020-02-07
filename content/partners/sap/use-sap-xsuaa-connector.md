@@ -24,7 +24,7 @@ In this document, you will see how to use the XSUAA Connector for SAP Cloud Plat
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Create an SAP app using an SAP starter app
+* Create an SAP app using an SAP app template
 * Select and deploy the app to an SAP account and subaccount where you have authority to configure security
 * Set the security level for the project to at least Prototype/demo to use SAP Authentication; for more information see [Project Security](/refguide/project-security) and for instructions on setting security levels, see [How To Create a Secure App](/howto/security/create-a-secure-app)
 * Setup the app with the following two **User roles** in **Project ... > Security**: Supervisor and Inspector
@@ -51,7 +51,7 @@ SAP Authentication will not work if the Project Security is off. See the prerequ
 
 ### 4.1 Adding the OnStartup Microflow to the Application Settings
 
-The app needs to be bound to the SAP XSUAA service. This is achieved by executing a microflow when the app starts. This may have been set up already if XSUAA was included in your starter app.
+The app needs to be bound to the SAP XSUAA service. This is achieved by executing a microflow when the app starts. This may have been set up already if XSUAA was included in your app template.
 
 To add the After Startup microflow to your application, follow these steps:
 

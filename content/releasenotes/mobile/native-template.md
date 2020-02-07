@@ -8,6 +8,30 @@ description: "Native Template release notes."
 
 For more information on native mobile app development, see the [native-template repository](https://github.com/mendix/native-template/) and [How to Deploy Your First Mendix Native App](/howto/mobile/deploying-native-app) .
 
+## 3.1.1
+
+**Release date: February 6th, 2020**
+
+### Fix
+
+* We fixed an issue where dynamic images would not sync correctly in iOS apps. This issue resulted in images missing from pages and a pop-up window. This problem cannot be resolved with an OTA update. Triggering a full build of your iOS app will fix this issue.
+
+## 3.1.0
+
+**Release date: February 5th, 2020**
+
+### Improvements
+
+* The MendixNative library and [Native Template](https://github.com/mendix/native-template) are now written in Objective C. With this update we are closing the gap between the Native Template and the React Native starter template. 
+* We added support for push notifications in the Native Template. As soon as you include a Google services configuration file (GoogleService-Info.plist* and *google-services.json*) in your app, the Native Template will enable the required libraries automatically.
+* We added support for URL Schemes.
+
+### Fixes
+
+* We fixed bridging headers so that they work as intended.
+* We fixed Swift compiler incompatibilities.
+* We fix the React Native `link` command so that it works as intended.
+
 ## 3.0.0 
 
 **Release date: January 10th, 2020**

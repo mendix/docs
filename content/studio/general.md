@@ -113,15 +113,15 @@ All items of the left menu bar are described in the table below:
 
 The top right menu of Studio consists of the **Toolbox**, **Properties** , and **Buzz** tabs: 
 
-![](attachments/general/toolbox-properties-buzz.png)
+<img src="attachments/general/toolbox-properties-buzz.png"  />
 
 The **Toolbox**, **Properties** , and **Buzz** tabs are describes in the table below:
 
-| Tab        | Description                                                  |
-| ---------- | ------------------------------------------------------------ |
-| Toolbox    | Shows tools available for the current editor.                |
-| Properties | Shows the properties of the selected item.                   |
-| Buzz       | Allows an app development team to make comments to different pages, microflows, domain models, and layouts of Studio, and interact with each other. |
+| Tab          | Description                                                  |
+| ------------ | ------------------------------------------------------------ |
+| Toolbox      | Shows tools available for the current editor.                |
+| Properties   | Shows the properties of the selected item.                   |
+| [Buzz](buzz) | Allows an app development team to make comments to different pages, microflows, domain models, and layouts of Studio, and interact with each other. |
 
 ## 7 Top Menu Bar
 

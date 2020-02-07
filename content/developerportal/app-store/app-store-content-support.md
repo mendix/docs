@@ -2,12 +2,12 @@
 title: "App Store Content Support"
 category: "App Store"
 menu_order: 40
-tags: ["app store", "support", "platform support", "community support"]
+tags: ["app store", "support", "platform support", "community support", "deprecated"]
 description: "Describes the various levels of support available for using App Store content in your Mendix apps."
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 App Store Content Support
+## 1 App Store Content Support {#category}
 
 Support for App Store content is determined by the content support category and the service level agreement (SLA) the user possesses. We distinguish the following content support categories:
 

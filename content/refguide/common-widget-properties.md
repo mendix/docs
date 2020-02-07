@@ -70,7 +70,7 @@ With the following widgets, the Attribute (Path) specifies the attribute which i
 
 *   [Text Box](text-box)
 *   [Text Area](text-area)
-*   [Drop Down](drop-down)
+*   [Drop-down](drop-down)
 *   [Check Box](check-box)
 *   [Radio Buttons](radio-buttons)
 *   [Date Picker](date-picker)
@@ -317,8 +317,6 @@ By default, whether or not an element is displayed in the browser is determined 
 {{% alert type="info" %}}
 You can choose both **Context** conditions and **Module roles** conditions to apply to the widget.
 {{% /alert %}}
-
-{{% todo %}}[Investigate the difference between DEFAULT and ALWAYS - If a widget is inside an invisible widget, you cannot make it display by choosing ALWAYS?]{{% /todo %}}
 
 Note that with the **Visible** property, you only hide data and do not protect it. You can hide a tab or a table row from an end-user, but if they still have access to the data then they could see it some other way. To restrict access to sensitive data, use a constraint on the domain model, not on individual pages. 
 

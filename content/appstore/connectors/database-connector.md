@@ -1,8 +1,8 @@
 ---
 title: "Database Connector"
 category: "Connectors"
-description: " "
-tags: [ ]
+description: "Describes the configuration and usage of the Database Connector, which is available in the Mendix App Store."
+tags: ["app store", "app store component", "database connector", "jdbc", "hikari", "query" ]
 draft: true
 ---
 
@@ -48,7 +48,7 @@ These are the results of the actions:
 
 ## 4 Best Practices
 
-* Avoid havinga user input as part of your dynamic SQL queries and statements (in the future, using parameters with queries or statements will be supported)
+* Avoid having a user input as part of your dynamic SQL queries and statements (in the future, using parameters with queries or statements will be supported)
 * Avoid fetching large amounts of data, which can lead to memory issues (as all the **ResultSet** data is loaded into memory at once)
 
 ## 5 Common JDBC Drivers {#links}

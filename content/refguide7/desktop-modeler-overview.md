@@ -125,7 +125,7 @@ Using items in the menu bar of the Modeler, you can create new projects, deploy 
 | More Versioning > Add Snapshot of Data | Creates a snapshot of the built-in database and adds that to the version control repository. This is especially useful for adding test data to your app or for demo purposes. |   |
 | Tools > Batch update button icons | Opens the **Batch Update Button Icons** dialog box so that you can configure the batch update of many button icons at once.  |   |
 | Tools > Batch update layouts | Opens the **Batch Update Layouts** dialog box so that you can configure the batch update of the layouts of many pages at once.  |  |
-| Tools > Batch convert Split panes | Opens the **Batch Convert Split Panes** dialog box so that you can configure the batch update. |  |
+| Tools > Batch convert Split panes | Opens the **Batch Convert Split Panes** dialog box so that you can convert split panes in Mendix 6 apps into layout grids. See [Split Panes](/releasenotes/studio-pro/7.0#split-panes) in the Mendix 7 release notes for more information. |  |
 | Tools > Update Widgets (available in version 7.23) | Presents the current versions of the widgets you are using in your app project, what the latest versions of the widgets are, and an update option. |  |
 | Tools > Check Widgets | Checks that the widgets you have implemented in the app project have been built correctly. | |
 | Synchronize Project Directory | If necessary, this action creates folders inside the project directory (resources, widgets, theme, etc.). It also reads the widget packages that are currently inside the widgets folders. For example, if you add widgets to the widgets folder, you needs to synchronize the project directory for them to appear in the form toolbox. | <kbd>F4</kbd> |
@@ -157,7 +157,9 @@ Using items in the menu bar of the Modeler, you can create new projects, deploy 
 
 | Menu Item | Description | Shortcut Key |
 | --- | --- | --- |
-| Current Language | Displays the current language of your app project. | |
+| Current Language | Displays the current language of your app project and allows you to make another language the current language. | |
+| Select Previous Language | Makes the previous language of your app project the current language. | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>L</kbd> |
+| Select Next Language | Makes the next language of your app project the current language. | <kbd>Ctrl</kbd>+<kbd>L</kbd> |
 | Language Settings | Opens the **Project Settings** dialog box to the **Languages** tab so that you can adjust the language configuration of the app project. | |
 | Batch Replace | Opens a form in which you can correct texts within one language. This is useful to check whether texts presented to the user are consistent. |   |
 | Batch Translate | Opens a form in which you can quickly translate many texts from one language to another. |   |

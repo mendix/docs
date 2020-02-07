@@ -254,10 +254,10 @@ To install your app via USB, connect your device to a machine via USB. To Instal
 
 1. Follow the instructions on Google’s [Transfer files between your computer & Android device](https://support.google.com/android/answer/9064445?hl=en) to get the APK onto your device. Note which folder you transfer the APK into.
 2. Open your phone’s file manager, navigate to the folder containing your APK, then tap the APK file to open it.
-3. Tap the **Install** button.
-	You might see a dialog box warning you against installing. Tap **INSTALL ANYWAY**. 
+3. Tap the **Install** button. 
 	
-	![Github template repo](/howto/extensibility/attachments/create-native-javascript-action/install-blocked-by-play-protect.jpg)
+	{{% alert type="info" %}}On Android, you might see a dialog box warning you against installing because this is not a Play Store app. Tap **INSTALL ANYWAY**.
+	{{% /alert %}}
 	
 4. Tap the **Done** button when prompted. You should now be able to access your installed app via your **App Drawer**, as well as by tapping the **Open** button after the installation completes.
 

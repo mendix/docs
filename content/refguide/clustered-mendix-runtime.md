@@ -37,22 +37,24 @@ Scaling out can be done using the Pivotal App Manager. For details on using the 
 
 Mendix Runtime has the concept of a cluster leader. This is a single node within a Mendix Runtime cluster that performs cluster management activities. These are the activities:
 
-* `Session cleanup handling` – each node expires its sessions (meaning, not being used for a configured timespan) and the cluster leader removes the sessions persisted in the database
+* **Session cleanup handling** – each node expires its sessions (meaning, not being used for a configured timespan) and the cluster leader removes the sessions persisted in the database
 	* In exceptional cases (for example, a node crash), some sessions may not be removed from the database, in which case the cluster leader makes sure this removal still happens
-* `Cluster node expiration handling` – removing cluster nodes after they have expired (meaning, not giving a heartbeat for a configured timespan)
-* `Background job expiration handling` – removing data about background jobs after the information has expired (meaning, older than a specific timespan)
-* `Unblocking blocked users`
-* `Executing Scheduled Events` – scheduled events are only executed on the cluster leader now
-* `Performing database synchronization after new deploy`
-* `Clear persistent sessions after new deploy` – invalidating all existing sessions so that they get in sync with the latest model version
+* **Cluster node expiration handling** – removing cluster nodes after they have expired (meaning, not giving a heartbeat for a configured timespan)
+* **Background job expiration handling** – removing data about background jobs after the information has expired (meaning, older than a specific timespan)
+* **Unblocking blocked users**
+* **Executing Scheduled Events** – scheduled events are only executed on the cluster leader
+* **Performing database synchronization after new deploy**
+* **Clear persistent sessions after new deploy** – invalidating all existing sessions so that they get in sync with the latest model version
 
 These activities are only performed by the cluster leader. If the cluster leader is not running, the cluster will still function. However, the activities listed above will not be performed.
 
-The Cloud Foundry Buildpack determines which cluster node becomes the cluster leader and which becomes a cluster slave.
+The Cloud Foundry Buildpack determines which cluster node becomes the cluster leader and which become cluster slaves.
 
 ## 5 Cluster Startup
 
-The cluster leader is responsible for performing the database synchronization. So, if a new app deploy has been detected, all the cluster slaves will wait until the cluster leader finishes the database synchronization. When the database synchronization has finished, the cluster slaves and cluster leader will automatically become fully functional.
+Individual nodes in a cluster can be started and stopped with no impact on the uptime of the app. However, when you deploy a new version of the app the whole cluster is restarted and the cluster leader determines whether database synchronization is required. This means that there will be some downtime when the app is deployed while this is done.
+
+If database synchronization is required, all the cluster slaves will wait until the cluster leader finishes the database synchronization. When the database synchronization has finished, all the cluster nodes will become fully functional.
 
 If no database synchronization is required, all the cluster nodes will become fully functional directly after startup.
 

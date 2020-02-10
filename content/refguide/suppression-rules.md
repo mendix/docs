@@ -50,7 +50,7 @@ After you select the menu, a confirmation appears:
 
 The list of warnings will be updated in the error pane.
 
-To modify or undo the suppression of the warnings, see section [4 Editing the suppression rules](#editing-rules).
+To modify or undo the suppression of the warnings, see section [Editing the suppression rules](#editing-rules).
 
 ### 2.4 Suppress App Store warnings
 
@@ -65,8 +65,6 @@ To suppress App Store warnings, check the box in front of `Suppress warnings fro
 ![Supressing App Store warnings](attachments/suppression-rules/rules-dialog-app-store-setting.png)
 
 Select the `OK` button to apply the new settings.
-
-Note: there are some limitations to suppressing specific warnings. See section [5 Limitations](#limitations) for more details.
 
 ## 3 How do the Suppression Rules work? {#suppression-rules-behavior}
 
@@ -144,7 +142,7 @@ The `Manage Suppression Rules` window appears, showing the current rules.
 
 note: after modifying the rules, you need to click `OK` to close the `Manage Suppression Rules` window, and apply the new rules. Then, the list of warnings will be updated.
 
-### Deleting a rule
+### 4.1 Deleting a rule
 
 The simplest way to re-enable warnings, is to delete the relevant rule.
 
@@ -154,7 +152,7 @@ Click the `Delete` button:
 
 ![Rules window - delete button](attachments/suppression-rules/rules-dialog-delete-button.png)
 
-### Manually adding a new rule
+### 4.2 Manually adding a new rule
 
 For more advanced case, you may want to manually add a new rule. This gives you full control over the settings that the rule uses, when deciding which warnings to suppress.
 
@@ -167,7 +165,7 @@ The `Add Suppression` window appears:
 
 Adjust the settings, to control how warnings will be suppressed by the new rule.
 
-#### Rule Settings {#rule-settings}
+#### 4.3 Rule Settings {#rule-settings}
 
 The table below describes the available settings:
 
@@ -176,9 +174,9 @@ The table below describes the available settings:
 | Module | Only suppress warnings within this module. | Select a module, to limit the rule to that module. Or select `(All)` to apply across all modules. |
 | Document | Only suppress warnings within this document. | Select a document, to limit the rule to that document. Or select `(All)` to apply across all documents. Note: to select a particular document, you first need to select a `Module`. |
 | Warning selector | Decide how to match warnings, in combination with `Value`. | When set to `All`, then the `Value` setting is not used. |
-| Value | The value used with `Warning selector` when matching warnings to suppress. | The value needs to match `Warning selector`. If `Warning selector` is set to `Error code`, then this should contain an error code like `CW1234`. If `Warning selector` is set to `Warning Message contains`, then value is the portion of text used to match warnings to suppress. In case of `All`, the value is not used. |
+| Value | The value used with `Warning selector` when matching warnings to suppress. | The value needs to match `Warning selector`. If `Warning selector` is set to `Error code`, then this should contain an error code like `CW1234`. In case of `All`, the value is not used. |
 
-### Editing a rule
+### 4.4 Editing a rule
 
 To edit an existing rule, select the `Edit` button:
 
@@ -194,17 +192,7 @@ Click `OK` to apply the new settings to the rule.
 
 Click `OK` again to apply the new rules. The list of warnings will be updated.
 
-## 5 Limitations {#limitations}
-
-Studio Pro identifies specific warnings by an error code, but not all warnings have an error code yet. If an error code is available, your suppression rule will automatically target that error code.  If no error code is available, Studio Pro tries to match the warning textually, by the warning message. 
-
-That means that if you are suppressing the warning `Variable 'Price' is never used` and if that warning does not have an error code, Studio Pro will suppress all warnings that contain the literal text `Variable 'Price' is never used`. If you then later change the variable name from `Price` to `DiscountPrice`, your suppression rule will no longer textually match with that warning, and the warning will be visible again. A workaround for this is, is to edit the suppression rule, so that the variable name is ommitted: in this case, the literal text can be shortened to `is never used.`. For instructions on how to edit a rule, see section [4 Editing the suppression rules](#editing-rules).
-
-Similarly, when you create a suppression rule that targets a message with only the word `Microflow`, then this suppression rule may suppress multiple warnings.
-
-In the future we hope to improve the behavior, by adding more error codes to warnings so that it is easier to target specific warnings.
-
-## 6 Read More {#read-more}
+## 5 Read More {#read-more}
 
 * [Errors Pane](errors-pane)
 * [Consistency Errors](consistency-errors)

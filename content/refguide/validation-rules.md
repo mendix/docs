@@ -1,7 +1,7 @@
 ---
 title: "Validation Rules"
-parent: "domain-model"
-menu_order: 6
+parent: "entities"
+menu_order: 40
 tags: ["domain model", "entity", "validation rule"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -10,16 +10,12 @@ tags: ["domain model", "entity", "validation rule"]
 
 Validation rules are conditions that should be satisfied before an object is committed. If a condition defined by a validation rule is not satisfied when the object is committed, the server generates a validation error. If the object was committed using a form, this results in a validation message. When committing an object in a microflow, this results in an error that can be handled using custom error handling. In all other cases, a validation error results in a Java exception being thrown.
 
-{{% alert type="info" %}}
+For example, for entity 'Customer' the name and credit need to be filled in at all times, and the expenses cannot be higher than the credit. This is visualized in the domain model editor as follows:
 
-For entity 'Customer' the name and credit need to be filled in at all times, and the expenses cannot be higher than the credit. This is visualized in the domain model editor as follows:
+![](attachments/entities/917546.png)
 
-![](attachments/domain-model-editor/917546.png)
-
-{{% /alert %}}{{% alert type="warning" %}}
-
+{{% alert type="warning" %}}
 Only persistable entities can define validation rules as they say something about database integrity. Therefore, validation rules are disabled for non-persistable entities.
-
 {{% /alert %}}
 
 ## 2 General Properties

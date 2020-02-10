@@ -1,7 +1,7 @@
 ---
 title: "Attributes"
-parent: "domain-model"
-menu_order: 4
+parent: "entities"
+menu_order: 30
 tags: ["domain model", "entity", "attribute", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -14,8 +14,8 @@ The domain model editor uses the following symbols for visualization of attribut
 
 | Symbol | Description |
 | --- | --- |
-| ![](attachments/819203/917593.png) | This attribute has one or more validation rules. |
-| ![](attachments/819203/917592.png) | This attribute has a microflow that calculates the value of the attribute. |
+| ![](attachments/entities/917593.png) | This attribute has one or more validation rules. |
+| ![](attachments/entities/917592.png) | This attribute has a microflow that calculates the value of the attribute. |
 
 ## 2 Common
 
@@ -63,7 +63,7 @@ The password itself should not be stored, but only its hash value, thus it is st
 
 A customer can be active or inactive, which is stored in an attribute named 'Active' of type Boolean.
 
-![](attachments/domain-model-editor/917578.png)
+![](attachments/entities/917578.png)
 
 ### 3.2 Localize (Only for Date & Time Attribute Type)
 
@@ -108,7 +108,7 @@ If the value is a computation, the **Microflow** property defines which microflo
 
 For example, in a web shop, you want to show the total expenses for each customer. These are calculated by retrieving all orders associated with the customer and adding their totals.
 
-![](attachments/domain-model-editor/917570.png)
+![](attachments/entities/917570.png)
 
 ### 4.3 Default Value (If Value Is Stored)
 

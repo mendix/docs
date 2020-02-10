@@ -1,13 +1,13 @@
 ---
 title: "Querying Over Self-References"
-parent: "domain-model"
-menu_order: 10
+parent: "associations"
+menu_order: 20
 tags: ["query", "self-reference", "association", "domain model"]
 ---
 
 When using more generic domain models, you often turn to using inheritance or self references to allow for simple yet efficiently designed models. This makes building your microflows and application logic much easier, but it can become challenging to query the correct objects; especially when your are using a self-reference. In this example, a self-reference to Group is used. This will allow you to build a group structure with an unlimited amount of sub-groups.
 
-![](attachments/query-over/18581640.png)
+![](attachments/query-over/self-reference-domain-model.png)
 
 ![](attachments/query-over/18581639.png)
 
@@ -17,12 +17,12 @@ If you have the ParentGroup available in your microflow you can easily retrieve 
 
 ![](attachments/query-over/18581638.png)
 
-If we assume that the $ParentGroup variable is the group S2 with ID 5\. The following data highlighted in blue will be returned. The Platform applies the constraint by default on the right/child side of the association and returns the relavant ChildGroups.
+If we assume that the $ParentGroup variable is the group S2 with ID 5\. The following data highlighted in blue will be returned. The Platform applies the constraint by default on the right/child side of the association and returns the relevant ChildGroups.
 
 ![](attachments/query-over/18581637.png)
 
 However when you only have the SubGroup available and you want to retrieve all its ParentGroups from the database it becomes more complicated. You can use the expression [reversed()] to instruct the platform to read the constraint opposite of what it would normally do. So instead of reading the association from left to right the platform will interpret the id's from right to left. Keep in mind that this instruction only applies to one association. So if you would have used multiple associations they are always interpreted the normal way. 
-The reversed() expression can only be applied on self-references, when an association is created between two different objecttypes the platform will be capable of determining the correct join automatically.
+The reversed() expression can only be applied on self-references, when an association is created between two different object types the platform will be capable of determining the correct join automatically.
 
 ![](attachments/query-over/18581636.png)
 

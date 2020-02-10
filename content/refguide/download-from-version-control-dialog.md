@@ -6,30 +6,40 @@ tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-Use this dialog box to download an app from an SVN version control server. Note that you can use the [Open App Dialog](open-app-dialog) for this, too. You only need to use this dialog box in the specialized case that you want a second download of an app (and development line) you already have on disk.
+## 1 Introduction
 
-## Location
+Use the **Download from Version Control Server…** menu item to download an app from an SVN version control server (for example, [Team Server](/developerportal/develop/team-server)). If you are currently editing an app, the project will be closed (after prompting to save any changes) and the newly downloaded app will be opened using the current version of Studio Pro.
 
-Use this setting to select the location where your app is stored. This can be either the Team Server or an SVN server other than the Team Server.
+{{% alert type="info" %}}
+If the downloaded app was created with a different version of Mendix, you will be asked if it can be converted to the current version.
 
-{{% alert type="warning" %}}
-
-This option is only available when support for other SVN servers is enabled in the Preferences dialog.
-
+You can also use the [Open App Dialog](open-app-dialog) to download and open an app from Team Server. However, you will need to use this option if you want to download a second copy of an app (and development line) you already have on disk.
 {{% /alert %}}
 
-### Mendix Team Server
+![Download from Version Control Server dialog box](attachments/version-control-menu/download-from-version-control-server.png)
 
-From the list select the Team Server app you wish to open, then choose the development line that you want to download.
+## 2 Where is Your App Stored?
+
+If **Enable private version control** is set in the project [Preferences](preferences-dialog#enable), you can choose between the **Mendix Team Server** or a **Private server**. If it is not enabled, you will only be able to choose an app from the Mendix Team Server.
+
+### 2.1 Mendix Team Server
+
+Use the **Team Server App** dropdown to choose the app you want to download.
 
 For more information about the Mendix Team Server, see [Team Server Overview](/developerportal/develop/team-server).
 
+### 2.2 Private Server
+
+Enter the URL of your private SVN server in **App repository address** and click **Connect**.
+
+![Download from Version Control Server dialog box](attachments/version-control-menu/download-from-private-server.png)
+
+## 3 Development Line
+
+Choose the **Development line** you want to download.
+
 For more information about development lines, see [Version Control](version-control).
 
-### Other SVN server
+## 4 Project Directory
 
-In the *SVN repository address* field, enter the address of the app you want to open and click *Connect* to load the development lines from the repository. Then choose the development line that you want to download.
-
-## Disk location
-
-Choose the directory where you want to download the app to. The suggested name includes the name of the development line (*main* or the name of the branch line).
+Choose the **Project directory** you want to download the app to. The suggested name includes the name of the development line (*main* or the name of the branch line), but you can change this if you want.

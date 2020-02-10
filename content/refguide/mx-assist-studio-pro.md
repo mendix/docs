@@ -40,7 +40,7 @@ To open the settings of Mendix Assist, click **Edit** > **Preference**. In the *
 Mendix Assist has the following properties:
 
 * **Enable Mendix Assist** – switches Mendix Assist on and off
-* **Show suggestions for system variable** – when enabled, Mendix Assist will make suggestions for system objects as well (for example, it can suggest that you change such objects as **currentUser** or **currentSession**)
+* **Show suggestions for system variables** – when enabled, Mendix Assist will make suggestions for system objects as well (for example, it can suggest that you change such objects as **currentUser** or **currentSession**)
 
   ![](attachments/mx-assist-studio-pro/mx-assist-system-variables.png)
 

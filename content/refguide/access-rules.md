@@ -1,7 +1,7 @@
 ---
 title: "Access Rules"
-parent: "domain-model"
-menu_order: 9
+parent: "entities"
+menu_order: 70
 tags: ["domain model", "entity", "access rule", "xpath constraint", "module role", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -20,7 +20,7 @@ Access rules are not inherited from an entity's generalization; rather, the secu
 
 Access rules are defined in the entity's **Properties** > **Access rules**.
 
-![Access Rules for Entities](attachments/access-rules/access-rules-section.png)
+![Access Rules for Entities](attachments/entities/access-rules-section.png)
 
 {{% alert type="info" %}}
 The **Access rules** section is visible only if the [Project Security](project-security) is set to **Production**.
@@ -54,13 +54,15 @@ Member read and write rights define the access rights for every member (attribut
 | Read | Users are allowed to view the value of this member, but cannot edit it. |
 | Read, Write | Users are allowed to view and edit the value of this member. |
 
+{{% alert type="info" %}}
+You cannot set *write* access to attributes which are calculated. This includes attributes of type *Autonumber* and attributes where the attribute value is set to **Calculated**.
+{{% /alert %}}
+
 The set of objects to which the member access rights apply can be limited by using an [XPath constraint](#constraint).
 
-{{% alert type="info" %}}
-A customer is allowed to view the discount, but is not allowed to edit it. The access rights for the discount attribute are **Read**.
+For example, a customer is allowed to view the discount, but is not allowed to edit it. The access rights for the discount attribute are **Read**.
 
-![](attachments/domain-model-editor/917534.png)
-{{% /alert %}}
+![](attachments/entities/917534.png)
 
 ### 2.6 XPath Constraint {#constraint}
 
@@ -68,7 +70,7 @@ An [XPath constraint](xpath-constraints) can be used to constrain the set of obj
 
 The **Customer** entity is a specialization of the **User** entity. The **Order** entity is associated to the **Customer** entity.
 
-![](attachments/domain-model-editor/917537.png)
+![](attachments/entities/917537.png)
 
 A logged-in customer is allowed to view personal orders, but is not allowed to view the orders of other customers. This is accomplished by using the following XPath constraint in the access rule of the **Order** entity:
 

@@ -1,7 +1,7 @@
 ---
 title: "Indexes"
-parent: "domain-model"
-menu_order: 8
+parent: "entities"
+menu_order: 60
 tags: ["domain model", "entity", "attribute", "index", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -24,7 +24,7 @@ Changing and deleting objects of an entity with indexes takes longer, because th
 
 Customers are usually retrieved by a combination of ZIP code and house number. So, *one* index is set on the combination of the attributes:
 
-![](attachments/domain-model-editor/917548.png)
+![](attachments/entities/917548.png)
 
 The objects are retrieved by the following OQL query – pay attention to the order of the attributes in the `WHERE` clause:
 

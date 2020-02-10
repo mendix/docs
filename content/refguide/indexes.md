@@ -24,7 +24,7 @@ Changing and deleting objects of an entity with indexes takes longer, because th
 
 Customers are usually retrieved by a combination of ZIP code and house number. So, *one* index is set on the combination of the attributes:
 
-![](attachments/entities/917548.png)
+![](attachments/domain-model/917548.png)
 
 The objects are retrieved by the following OQL query – pay attention to the order of the attributes in the `WHERE` clause:
 

@@ -12,7 +12,7 @@ An **entity** usually represents a class of real-world objects, such as customer
 
 For example, the object representing the CD 'Exodus' could be an instance of the entity 'CD'.
 
-![Example of a CD entity](attachments/entities/example-entity.png) 
+![Example of a CD entity](attachments/domain-model/example-entity.png) 
 
 The properties or features of an entity are described using [attributes](attributes). An attribute represents a small piece of information about an entity, such as the name or birth date of a person.
 
@@ -29,7 +29,7 @@ The rows in the table are CDs. The type of the two rows is 'CD' and this is the 
 
 An example of the entity properties is represented in the image below:
 
-{{% image_container width="300" %}}![](attachments/entities/entity-properties.png)
+{{% image_container width="300" %}}![](attachments/domain-model/entity-properties.png)
 {{% /image_container %}}
 
 Entity properties consist of the following sections:
@@ -69,7 +69,7 @@ One important use of this feature is to derive functionality from the System mod
 
 For example, this property can be used in a situation where, you have an entity 'Student' and an entity 'Professor' which have some generic properties. They both have a name, telephone number and email address and can be a member of one or more courses. Both entities are *generalized* in the entity 'Member'. Conversely, this means that the entity 'Member' is *specialized* in the entities 'Student' and 'Professor'.
 
-![](attachments/entities/917900.png)
+![](attachments/domain-model/917900.png)
 
 For more information, and a discussion on the relative merits of using generalization or associations, see [Generalization & Associations](generalization-and-association).
 
@@ -123,11 +123,11 @@ This property defines whether the entity has the system association 'changedBy'.
 | True | Entity has the system association 'changedBy'. |
 | False *(default)*  | Entity does not have the system association 'changedBy'. |
 
-## 3 Tabs in the Entity Dialog Box
+## 3 Tabs in the Entity Dialog Box{#dialog-box}
 
 You can also edit an entity by opening the entity properties dialog box.
 
-![Example of a CD entity](attachments/entities/example-entity.png)
+![Example of a CD entity](attachments/domain-model/example-entity.png)
 
 In addition to the properties described above, there are also tabs which allow you to edit the following:
 

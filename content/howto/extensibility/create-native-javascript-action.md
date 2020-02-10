@@ -192,10 +192,10 @@ For more information about linking, see the following resources:
 
 For Android devices, you must add code which checks if a user permits the module. Do this by adding `uses permission` in the `android/app/src/main/AndroidManifest.xml` file (specifically in the section above the `<application` line):
 
-	``` xml
-	<uses-permission android:name="android.permission.NFC" />
-	<uses-feature android:name="android.hardware.nfc" android:required="false" />
-	```
+``` xml
+<uses-permission android:name="android.permission.NFC" />
+<uses-feature android:name="android.hardware.nfc" android:required="false" />
+```
 
 For iOS you have to add permission to use NFC capabilities:
 

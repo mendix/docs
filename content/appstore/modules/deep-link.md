@@ -1,8 +1,8 @@
 ---
 title: "Deep Link"
 category: "Modules"
-description: " "
-tags: ["app store", "app store component", "deep link"]
+description: "Describes the configuration and usage of the Deep Link module, which is available in the Mendix App Store."
+tags: ["app store", "app store component", "deep link", "platform support"]
 draft: true
 ---
 

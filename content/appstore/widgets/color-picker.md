@@ -1,8 +1,8 @@
 ---
 title: "Color Picker"
 category: "Widgets"
-description: " "
-tags: [ ]
+description: "Describes the configuration and usage of the Color Picker widget, which is available in the Mendix App Store."
+tags: ["app store", "app store component", "widget", "color picker", "react", "platform support"]
 draft: true
 ---
 

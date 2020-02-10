@@ -1,8 +1,8 @@
 ---
 title: "Badge Button"
 category: "Widgets"
-description: " "
-tags: [ ]
+description: "Describes the configuration and usage of the Badge Button widget, which is available in the Mendix App Store."
+tags: ["app store", "app store component", "widget", "badge button", "token", "platform support"]
 draft: true
 ---
 

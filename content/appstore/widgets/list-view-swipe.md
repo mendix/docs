@@ -1,8 +1,8 @@
 ---
 title: "List View Swipe"
 category: "Widgets"
-description: " "
-tags: [ ]
+description: "Describes the configuration and usage of the List View Swipe widget, which is available in the Mendix App Store."
+tags: ["app store", "app store component", "widget", "list view swipe", "platform support"]
 draft: true
 ---
 

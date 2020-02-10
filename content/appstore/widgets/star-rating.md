@@ -1,8 +1,8 @@
 ---
 title: "Star Rating"
 category: "Widgets"
-description: " "
-tags: [ ]
+description: "Describes the configuration and usage of the Star Rating widget, which is available in the Mendix App Store."
+tags: ["app store", "app store component", "widget", "star rating", "star", "glyphicon", "platform support"]
 draft: true
 ---
 

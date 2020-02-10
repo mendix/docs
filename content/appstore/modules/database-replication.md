@@ -1,8 +1,8 @@
 ---
 title: "Database Replication"
 category: "Modules"
-description: " "
-tags: ["app store", "app store component", "database replication"]
+description: "Describes the configuration and usage of the Database Replication module, which is available in the Mendix App Store."
+tags: ["app store", "app store component", "database replication", "platform support"]
 draft: true
 ---
 

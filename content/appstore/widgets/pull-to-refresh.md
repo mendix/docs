@@ -1,8 +1,8 @@
 ---
 title: "Pull to Refresh"
 category: "Widgets"
-description: " "
-tags: [ ]
+description: "Describes the configuration and usage of the Pull to Refresh widget, which is available in the Mendix App Store."
+tags: ["app store", "app store component", "widget", "pull to refresh", "platform support"]
 draft: true
 ---
 
@@ -29,6 +29,8 @@ The [Pull to Refresh](https://appstore.home.mendix.com/link/app/47782/) widget e
 For a demo app project that has been deployed with this widget, see [here](https://pulltorefresh.mxapps.io).
 
 ## 2 Usage
+
+To use this widget, follow these steps:
 
 1. Place the widget on a page or layout.
 2.  Add the following on the **Display** tab:

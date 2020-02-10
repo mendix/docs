@@ -1,8 +1,8 @@
 ---
 title: "Signature"
 category: "Widgets"
-description: " "
-tags: [ ]
+description: "Describes the configuration and usage of the Signature widget, which is available in the Mendix App Store."
+tags: ["app store", "app store component", "widget", "signature", "platform support"]
 draft: true
 ---
 

@@ -1,8 +1,8 @@
 ---
 title: "Image Crop"
 category: "Modules"
-description: " "
-tags: ["app store", "app store component", "image crop", "cropper", "image"]
+description: "Describes the configuration and usage of the Image Crop module, which is available in the Mendix App Store."
+tags: ["app store", "app store component", "image crop", "cropper", "image", "platform support"]
 draft: true
 ---
 

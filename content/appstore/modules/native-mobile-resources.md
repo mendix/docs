@@ -1,8 +1,8 @@
 ---
 title: "Native Mobile Resources"
 category: "Modules"
-description: " "
-tags: ["app store", "app store component", "native mobile resources", "native widget"]
+description: "Describes the configuration and usage of the Native Mobile Resources module, which is available in the Mendix App Store."
+tags: ["app store", "app store component", "native mobile resources", "native widget", "platform support"]
 draft: true
 ---
 

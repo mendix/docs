@@ -32,7 +32,7 @@ An example of the validation rule properties is represented in the image below:
 
 ![](attachments/domain-model/validation-rule-properties.png)
 
-Attribute properties consist of the following sections:
+Validation rule properties consist of the following sections:
 
 * [General](#general)
 * [Rule](#rule)
@@ -41,11 +41,11 @@ Attribute properties consist of the following sections:
 
 #### 2.1.1 Attribute
 
-This property defines the attribute to which the validation rule applies. An entity can specify validation rules for its own attributes, or for attributes of one of its generalizations.
+**Attribute** specifies the attribute to which the validation rule applies. The validation rules apply to attributes of the entity and, if it has a generalization, the attributes of its generalization.
 
-#### 2.1.2 Error message
+#### 2.1.2 Error Message
 
-This property defines the message that is displayed to the end-user when the attribute value does not satisfy the condition defined by the validation rule.
+**Error message** defines the message that is displayed to the end-user when the attribute value does not satisfy the condition defined by the validation rule.
 
 ### 2.2 Rule Properties
 
@@ -56,20 +56,18 @@ The rule defines which condition an attribute should satisfy.
 | Option | Description |
 | --- | --- |
 | Required *(default)*  | The attribute needs to have a value. It cannot be empty. |
-| Unique | The attribute should have a value that is unique compared to the values of this attribute in all other objects of the same same entity. |
+| Unique | The value of this attribute must be different from the values of this attribute in all other objects of the same entity. |
 | Equals | The attribute value needs to be equal to a specified value or equal to the value of another attribute of the same object. |
-| Range | The attribute value needs to be in a range between specified values or between the values of other attributes of the same object. |
+| Range | The attribute value needs to be greater than or equal to, less than or equal to, or between two values. The values are either specified fixed values or values of other attributes of the same object. |
 | Regular expression | The attribute needs to match a [regular expression](regular-expressions). |
 | Maximum length | The attribute may have no more than the specified number of characters. |
 
-{{% alert type="warning" %}}
-
+{{% alert type="info" %}}
 Date values should be entered in [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) format, for example 2015-07-26.
-
 {{% /alert %}}
 
 #### 2.2.2 Rule Order
 
-Validation rules can be ordered in Studio Pro. The order of the rules determines the order of execution. If multiple rules are violated, their error messages will be concatenated (in the defined order) and shown in the page. Although the order can be set for all the validation rules in the entity, only the order per attribute will have an impact as all validation rules are executed for all attributes.
+Validation rules can be ordered in Studio Pro. The order of the rules determines the order they are applied. If multiple rules are violated, their error messages will be concatenated (in the defined order) and shown in the page. Although the order can be set for all the validation rules in the entity, only the order per attribute will have an impact as all validation rules are executed for all attributes.
 
-The `uniqueness` validations do not comply to the defined order. This validation requires a database query and is executed only when the complete object satisfies to all the other validation rules.
+The `uniqueness` validations do not follow the defined order. This validation requires a database query and is executed only when the complete object satisfies to all the other validation rules.

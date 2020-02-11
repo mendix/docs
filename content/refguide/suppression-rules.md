@@ -16,7 +16,7 @@ While warnings can be valuable, there are some situations where you might want t
 
 * You made a deliberate choice in your project that leads to a warning, and you know this will not lead to problems.
 * You are using an App Store module that contains warnings and you don't want to change the App Store module.
-* The number of warnings is so large that the warning tab is not usable anymore, and you want to temporariliy disable some of them.
+* The number of warnings is so large that the warning tab is not usable anymore, and you want to temporarily disable some of them.
 
 With **Suppression rules** it is possible to disable warnings in a number of ways.
 
@@ -56,13 +56,13 @@ To modify or undo the suppression of the warnings, see section [Editing the supp
 
 It is possible to suppress App Store warnings by clicking the `Suppression rules` button in the Errors pane.
 
-The `Manage Suppression Rules` window appears.
-
 ![Viewing the suppress warnings rules](attachments/suppression-rules/errors-pane-suppress-warnings-button.png)
+
+The `Manage Suppression Rules` window appears.
 
 To suppress App Store warnings, check the box in front of `Suppress warnings from App Store modules`
 
-![Supressing App Store warnings](attachments/suppression-rules/rules-dialog-app-store-setting.png)
+![Suppressing App Store warnings](attachments/suppression-rules/rules-dialog-app-store-setting.png)
 
 Select the `OK` button to apply the new settings.
 
@@ -136,7 +136,7 @@ The list of warnings updates, using the imported warnings.
 
 Click the `Suppression rules` button in the Errors pane.
 
-![Supress warnings button](attachments/suppression-rules/errors-pane-suppress-warnings-button.png)
+![Suppress warnings button](attachments/suppression-rules/errors-pane-suppress-warnings-button.png)
 
 The `Manage Suppression Rules` window appears, showing the current rules.
 
@@ -154,7 +154,7 @@ Click the `Delete` button:
 
 ### 4.2 Manually adding a new rule
 
-For more advanced case, you may want to manually add a new rule. This gives you full control over the settings that the rule uses, when deciding which warnings to suppress.
+For more advanced cases, you may want to manually add a new rule. This gives you full control over the settings that the rule uses, when deciding which warnings to suppress.
 
 To manually add a new rule, select the `New` button:
 ![Rules window - new button](attachments/suppression-rules/rules-dialog-new-button.png)

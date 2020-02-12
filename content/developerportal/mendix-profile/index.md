@@ -302,12 +302,16 @@ In this section, you can merge your accounts and select your profile visibility.
 
 With use of the Mendix Profile, you can merge your old Mendix account(s) into your current Mendix account. This action combines all your hard-earned points, certifications, and achievements in your efforts to climb the leaderboards.
 
-All you have to do is make your profile public (see below), enter the email address of the account you want to merge with the account you are currently logged in to, and send a merge request.
+All you have to do is make your profile public (for details, see the [Selecting Your Profile Visibility](#public) section below), enter the email address of the account you want to merge with the account you are currently logged in to, and send a merge request.
 
 We’ll take things from there!
 
 {{% alert type="info" %}}
-With this action, Mendix only combines the accounts. The old account is not deactivated. That should be done by the Company Admin.
+Once an old account has been merged to a new account, you will no longer have access to the app projects you were invited to via your old account. With your new account, you will need to be invited to those app projects again in order to gain access. Adding your new account to the relevant app projects prior to the merge is recommended.
+{{% /alert %}}
+
+{{% alert type="info" %}}
+With the merge, the accounts are only combined. The old account is not deactivated. That should be done by the Company Admin.
 {{% /alert %}}
 
 #### 10.6.2 Selecting Your Profile Visibility {#public}

@@ -204,8 +204,12 @@ To update content that has already been published, follow these steps:
 
 1. Go to the information page for the content you want to update (for example, by selecting **Published** on the **My App Store** tab and finding an app you want to update).
 2.  Click **Create new draft version**:
-
+	
 	![](attachments/share-app-store-content/update_content_1.png)
+	
+	{{% alert type="info" %}}
+	Only one draft version of a component can exist at a time, so when one draft version is in progress, another draft cannot be initiated. If there is a draft version in progress, click **View draft** to see it.
+	{{% /alert %}}
 
 3. On the **DRAFT** page, you can edit the content details (as described in the [Adding New App Store Content](#adding) section above).
 4.  In the **Version Details** section, you must select the **Update type** so that the content is saved as a new version:

@@ -157,7 +157,7 @@ To implement this in your app project, open the project in Mendix Studio Pro. Yo
 You can remove **spacing-outer-bottom-medium**, as that is a variable that contains defined styling code. If you do not remove this, you will probably have trouble later in the app project if you, for example, want to position your title somewhere else. 
 
 {{% alert type="info" %}}
-The inline styling is not made use of in this example. That is because the inline styling will always overrule your code in VSC. 
+The inline styling is used in this example. That is because the inline styling will always overrule your code in VSC. 
 {{% /alert %}}
 
 ### 5.1 Seeing Your Changes

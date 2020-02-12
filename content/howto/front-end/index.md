@@ -16,3 +16,4 @@ Looking to create great user experiences and a user-friendly graphical user inte
 * [Use Layouts & Snippets](layouts-and-snippets) – covers the basics of creating pages using style layouts and snippets
 * [Implement Styles](styles) – explains how to use class names to implement text and background colors, typography, buttons, list views, alerts, and other elements
 * [Create Custom Error Pages](custom-error-page) – explains how to create a professional looking error page that will appear when your app is down
+* [Use Gulp & Sass](use-gulp-and-sass) – shows how to set up and use the Gulp and Sass approach to style your apps

@@ -3,6 +3,7 @@ title: "Implement Mendix Best Practices for Development"
 category: "General Info"
 menu_order: 7
 tags: ["best practice", "development", "develop", "reusable", "prefix"]
+#Academy are SMEs for verification, they discuss and link to this doc in training
 ---
 
 ## 1 Introduction

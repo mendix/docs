@@ -25,7 +25,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 	![](attachments/set-up-sass/releases.png)
 
-3.  Download the **Gulp.zip** file:
+3.  Download the *Gulp.zip* file:
 
 	![](attachments/set-up-sass/gulp.png)
 
@@ -40,11 +40,11 @@ Before starting this how-to, make sure you have completed the following prerequi
 To prepare your app project, follow these steps:
 
 1. Open the [app project directory](../general/show-project-directory) (via **Project** > **Show Project Directory in Explorer** in Studio Pro).
-2.  Unpack the **Gulp.zip** file into your main app project folder. You will then see a **Gulpfile** and **package** file that look like this:
+2.  Unpack the *Gulp.zip* file into your main app project folder. You will then see a *Gulpfile* and *package* file that look like this:
 
 	![](attachments/set-up-sass/unpack.png)
 
-	After you have unpacked the **Gulp.zip** into your app project folder, you can remove the *zip* file.
+	After you have unpacked the *Gulp.zip* into your app project folder, you can remove the *zip* file.
 4.  Open **Windows PowerShell**:
 
 	![](attachments/set-up-sass/powershell.png)
@@ -92,7 +92,7 @@ To prepare your app project, follow these steps:
 Final steps! Read below to open and work with Sass:
 
 1. Open the main app project folder and go to **theme** \> **styles** \> **sass** \> **custom**.
-2. Double-click either the **custom.scss** or **\_custom-variables.scss** file, which will open in VSC:
+2. Double-click either the *custom.scss* or *\_custom-variables.scss* file, which will open in VSC:
 
 	![](attachments/set-up-sass/custom-variables.png)
 
@@ -110,7 +110,7 @@ Final steps! Read below to open and work with Sass:
 
 ### 4.1  Keeping Your Sass in the Custom Folder
 
-it is important to keep in mind that you are only working in the **custom** folder. You will not make any changes in the **lib** folder, but you can use that as a reference. You will only use the contents of the **\_variables.scss** file to get the variables you need and copy them in your **\_custom-variables.scss** file. The variables can differ from the default font sizes, colors, background colors, heights, and so on. In the **\_custom-variables.scss** file, you can also make your own variables, for example `$brand-blue: \#48B0F7;`.
+it is important to keep in mind that you are only working in the **custom** folder. You will not make any changes in the **lib** folder, but you can use that as a reference. You will only use the contents of the *\_variables.scss* file to get the variables you need and copy them in your *\_custom-variables.scss* file. The variables can differ from the default font sizes, colors, background colors, heights, and so on. In the *\_custom-variables.scss* file, you can also make your own variables, for example `$brand-blue: \#48B0F7;`.
 
 You can now work on the Sass structure and organize everything neatly by creating sub-folders and files in the **custom** folder. You can also look in the **lib** folder to get an idea of which folders and files you will most likely use in your app project.
 
@@ -120,7 +120,7 @@ When you create a new Sass file, follow this naming guideline: *\_{namefilehere}
 
 ### 4.2 Importing New Sub-Folders & Files
 
-Before you can see any changes in your app project with your new Sass, you need to import the folders and files first. If you open **custom.scss**, you will see this:
+Before you can see any changes in your app project with your new Sass, you need to import the folders and files first. If you open *custom.scss*, you will see this:
 
 `@import "custom-variables";`
 
@@ -192,9 +192,9 @@ Practice the routine above a few times and you will master it in no time. In add
 * Do not make use of inline styling via Studio Pro
 * Be sure to change the portal of `localhost:8080` into `localhost:3000`
 * Add the following items to the TortoiseSVN ignore list:
-	* **node_modules**
-	* **Gulpfile**
-	* **package**
+	* *node_modules*
+	* *Gulpfile*
+	* *package*
 
 Have fun styling!
 

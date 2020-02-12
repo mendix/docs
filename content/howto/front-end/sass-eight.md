@@ -194,9 +194,9 @@ Practice the routine above a few times and you will master it in no time. In add
 * Do not make use of inline styling via Studio Pro
 * Be sure to change the portal of `localhost:8080` into `localhost:3000`
 * Add the following items to the TortoiseSVN ignore list:
-	* **node_modules**
-	* **Gulpfile**
-	* **package**
+	* *node_modules*
+	* *Gulpfile*
+	* *package*
 
 Have fun styling!
 

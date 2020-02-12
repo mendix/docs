@@ -45,16 +45,16 @@ To prepare your app project, follow these steps:
 	![](attachments/set-up-sass/unpack.png)
 
 	After you have unpacked the *Gulp.zip* into your app project folder, you can remove the *zip* file.
-4.  Open **Windows PowerShell**:
+3.  Open **Windows PowerShell**:
 
 	![](attachments/set-up-sass/powershell.png)
 
-5.  Copy the address as text from your main project folder and paste it into Powershell:
+4.  Copy the address as text from your main project folder and paste it into Powershell:
 
 	![](attachments/set-up-sass/copy.png)
 
-6.  Provide the directory for your app project folder in PowerShell: `cd ‘directory for your app project folder’`
-7.   Write `npm install` or use `npm install gulp-cli -g`:
+5.  Provide the directory for your app project folder in PowerShell: `cd ‘directory for your app project folder’`
+6.  Write `npm install` or use `npm install gulp-cli -g`:
 
 	![](attachments/set-up-sass/write-install.png)
 
@@ -63,13 +63,13 @@ To prepare your app project, follow these steps:
 	{{% alert type="info" %}}You should do this for each new app project! That way, you will not have to repeat the installation step whenever you reopen the app project and Powershell.
 	{{% /alert %}}
 
-6. Write `gulp dev`. Your screen should then look like this:
+7.  Write `gulp dev`. Your screen should then look like this:
 
 	![](attachments/set-up-sass/gulp-dev.png)
 
 	At this point, you are ready to start working with Sass.
 
-7. You also need to add the following selected items into the ignore list of TortoiseSVN for each new app project (or else your app project will take too long to commit a change) :
+8.  You also need to add the following selected items into the ignore list of TortoiseSVN for each new app project (or else your app project will take too long to commit a change) :
 
 	![](attachments/set-up-sass/selected-ignore.png)
 
@@ -83,9 +83,9 @@ To prepare your app project, follow these steps:
 	
 	If you need to remove an item from the ignore list, right-click it and select **TortoiseSVN** > **Remove from ignore list**.
 
-8. Open your app project in Studio Pro, then click **Run Locally** and **View**:
+9.  Open your app project in Studio Pro, then click **Run Locally** and **View**:
 
-![](attachments/set-up-sass/run-view.png)
+	![](attachments/set-up-sass/run-view.png)
 
 ## 4  Setting Up Your Sass Files
 

@@ -268,13 +268,11 @@ If you have multiple development lines, you sometimes want to port changes from 
 
 Merging is always done while you have a working copy open. The merge will result in extra local changes in that working copy. It is advisable to commit local changes first before merging extra changes into a working copy. Otherwise, the uncommitted local changes and the changes caused by the merge will be combined and it is very hard to untangle them if you are unhappy with the merge. Studio Pro will warn you if you have uncommitted changes.
 
-Choose **Version Control > Merge Changes Here**.
-
-Choose the appropriate *type of merge*, for example **Port fix**.
+Select **Version Control > Merge Changes Here**, then select the appropriate type of merge (for example, **Port fix**).
 
 ![](attachments/using-version-control-in-studio-pro/2018-02-21_14-19-47.png)
 
-You can merge either a single revision, or a whole range of revisions, from one development line to another. If a branch line represents a big new feature that you want to integrate completely into the main line, you can merge all the revisions of the branch.
+You can merge a single revision or a whole range of revisions from one development line to another. If a branch line represents a big new feature that you want to integrate completely into the main line, you can merge all the revisions of the branch.
 
 #### 7.2.3 Reverse Merging
 
@@ -285,6 +283,22 @@ Choose **Version Control > Reverse Merge Changes...**
 ![](attachments/using-version-control-in-studio-pro/revert-committed-changes.png)
 
 After a reverse merge the project will look like the changes never happened; if you 'reverse merge' the adding of a page, the page will be deleted locally. Just like when you are doing a normal merge, conflicts can arise. In the example, if later commits change the added page, the reverse merge will result in a conflict. After resolving any problems, you can commit the results to the repository.
+
+#### 7.2.4 Replacing the Main Line with a Branch Line
+
+There are two methods for fully replacing your main line with a branch line.
+
+The first method is to merge the entire branch line into the main line, essentially replacing the main line contents with the branch line contents). This works as long as the branch line is up to date with the main line (to avoid conflicts. To do this, follow these steps:
+
+1. Select **Version Control > Merge Changes Here** > **Merge feature branch**.
+2. Select the branch to merge into the main line.
+
+The second method should be used if the first method is not possible for some reason and you want to "overwrite" the main line with your branch line. For this method, you must follow these steps:
+
+1. Check out both the main line and the branch line locally.
+2. Overwrite all the files in the main line project directory with those of the branch line (except for the *.svn* directory).
+3. Commit your changes using Studio Pro. 
+4. Reopen the main line project in Studio Pro only after overwriting the files.
 
 ## 8 Versioning a Project Deployed to the Cloud
 

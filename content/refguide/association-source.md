@@ -33,5 +33,5 @@ The **Entity (path)** property specifies the association by which the widget is 
 
 ## 3 Read More
 
-* [Associations](association-landing-page)
+* [Associations](associations)
 * [Data Widgets](data-widgets)

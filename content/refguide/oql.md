@@ -8,7 +8,7 @@ tags: ["studio pro"]
 
 The Mendix Object Query Language (OQL) is a relational query language just like [SQL](http://en.wikipedia.org/wiki/Sql). The major advantage of OQL is that it uses entity and association names instead of actual database table names.
 
-In addition, OQL can use predefined relations (association-landing-page) to easily join objects without having to calculate which columns should be coupled. Despite these differences, many SQL keywords also work in OQL.
+In addition, OQL can use predefined relations (associations) to easily join objects without having to calculate which columns should be coupled. Despite these differences, many SQL keywords also work in OQL.
 
 These are some examples of OQL queries:
 

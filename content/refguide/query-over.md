@@ -1,6 +1,6 @@
 ---
 title: "Querying Over Self-References"
-parent: "association-landing-page"
+parent: "associations"
 menu_order: 20
 tags: ["query", "self-reference", "association", "domain model"]
 ---

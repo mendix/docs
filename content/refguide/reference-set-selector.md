@@ -10,7 +10,7 @@ tags: ["studio pro"]
 
 ## 1 Introduction
 
-A **reference set selector** is used to allow the end-user to display or select the value(s) of a many-to-many (reference set) [association](associations) by selecting the associated object(s).
+A **reference set selector** is used to allow the end-user to display or select the value(s) of a many-to-many (reference set) [association](association-properties) by selecting the associated object(s).
 
 A reference set selector must be placed in a [data widget](data-widgets).
 
@@ -196,5 +196,5 @@ You cannot use a microflow to define selectable objects in a reference set selec
 
 *   [Data view](data-view)
 *   [Entities](entities)
-*   [Associations](association-landing-page)
+*   [Associations](associations)
 * [Control Bar](control-bar)

@@ -1,86 +1,163 @@
 ---
-title: "Association Properties"
-parent: "association-landing-page"
-menu_order: 10
+title: "Associations"
+parent: "domain-model"
+menu_order: 20
 tags: ["domain model", "association", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
-There are two ways to edit the properties of an [association](association-landing-page). This document describes the properties you can edit from the association in the domain model.
+An association describes a relation between entities. In the domain model, an association is represented by a line or arrow between two entities.
 
+The value of the association can only be viewed or edited from the object of the entity that is the _[owner](association-member-properties#owner)_ of the association. Either one entity or both entities can be the owner of the association. If one entity is the owner, there is an arrow that points from the owner to the other entity. If both entities are owners, there is a line between the two entities.
 
+The [multiplicity](#multiplicity) (or number of referred objects) of an association is indicated by the number one (`1`) or a star (`*`) at either side of the association.
 
-## 2 Association Properties
+In the example below, the arrow indicates that **Order** is the owner of the association, and the `1` and `*` indicate that one customer is associated with many orders:
 
-An example of the association properties is represented in the image below:
+![](attachments/associations/918217.png)
 
-![Association Properties](attachments/associations/association-properties.png)
+{{% alert type="info" %}}
+An association between a persistable entity and a non-persistable entity must start in the non-persistable entity and have the owner **Default**. For more information on persistable and non-persistable entities, see [Persistability](persistability).
+{{% /alert %}}
 
-Associations have the following properties:
+## 2 Editing Associations
 
-* [Name](#name) 
-* [Documentation](#documentation)
-* [Multiplicity](#multiplicity)
-* [Navigability](#navigability)
-* [Delete Behavior](#delete-behavior)
+There are two ways of editing an association.
 
-### 2.1 Name {#name}
+### 2.1 Edit the Association Directly
 
-The name of the association is used to refer to it from forms, microflows, etcetera.
+You can edit the association itself. 
 
-### 2.2 Documentation {#documentation}
+![](attachments/associations/edit-association.png)
 
-You can write notes and documentation on this element in this field. 
+For more information see [Association Properties](association-properties).
 
-### 2.3 Multiplicity {#multiplicity}
+### 2.2 Edit from Associations in the Entity
 
-Multiplicity defines the number of possible referred objects. It is indicated by the number one (`1`) or a star (`*`) at either side of the association.
+You can edit the associations as members of the entity.
 
-Multiplicity can be of the following types:
+![](attachments/associations/edit-entity-association.png)
 
-| Multiplicity | Meaning | Equivalent of |
-| --- | --- | --- |
-| One-to-one | One X object is associated with one Y object | An association of type **Reference** with owner set to **Both** |
-| One-to-many | One X object is associated with multiple Y object | An association of type **Reference** with owner set to **Default** |
-| Many-to-many | Multiple X objects are associated with multiple Y objects |  An association of type **Reference set** – in this case ownership is set by the **Navigability** property |
+For more information see [Association Member Properties](association-member-properties).
 
-For more information about association types, see the [Type](association-properties#type) section in *Associations*, and for information on ownership, see the [Owner](association-properties#owner) section in *Associations*.
+## 3 Association Examples{#examples}
 
-### 2.4 Navigability {#navigability}
+### 3.1 One to Many Association
 
-Navigability changes the owner of many-to-many associations. Navigability has the following options:
+Drawing an association from the **Order** entity to the **Customer** entity results in the following:
 
-| Navigability | Meaning | Equivalent of |
-| --- | --- | --- |
-| X objects refer to Y objects | The owner of the association is X | An association of type **Reference set** with owner set to **Default** |
-| X and Y objects refer to each other | Both entities are owners | An association of type **Reference set** with owner set to **Both** |
+![](attachments/associations/918217.png)
 
-This corresponds to the **Owner** property for **Reference sets** as described in the [Owner](association-properties#owner) section of *Associations*.
+The type property has its default value `Reference`. In this example, a customer can have multiple orders, and an order can only have one customer.
 
-Despite it's name, navigability is usually only important when changing associations. Making one object owner of an association does not prevent you reading the association from the non-owner end.
+In XML, instances of these entities and their association look as follows (note that the association is only stored in the **Order** element):
 
-### 2.5 Delete Behavior {#delete-behavior}
+```xml
+<Order id="101">
+	<number>1</number>
+	<date>9/30/2008</date>
+	<Order_Customer>id_201</Order_Customer>
+</Order>
 
-Delete behavior defines what should happen to the associated object when an object is deleted. The following options can be configured for each end of the association.
+<Customer id="201">
+	<fullname>Apple Inc.</fullname>
+	<address>1 Infinite Loop</address>
+	<telephonenumber>1-800-MY-APPLE</telephonenumber>
+</Customer>
 
-| Value | Description |
-| --- | --- |
-| Delete {name of entity} object but keep {name of other entity} object(s) | When an object is deleted, the associated object(s) are not deleted. |
-| Delete {name of entity} object and {name of other entity} object(s) as well | When an object is deleted, the associated object(s) are also deleted. |
-| Delete {name of entity} object only if it is not associated with {name of other entity} object(s) | An object can only be deleted if it is not associated with any other object(s). |
+```
 
-Default: *delete {name of entity} object but keep {name of other entity} object(s)*
+### 3.2 Many to Many Association (Default Ownership)
 
-This delete behavior is used if you want to delete any associated **Profile** when a **Customer** is deleted:
+A many-to-many association with default ownership is created by drawing an association and then setting the `Type` property to `Reference set`.
 
-![](attachments/associations/918143.png)
+In this example, a **Customer** can have multiple **Groups**, and a **Group** can have multiple **Customers**:
 
-This delete behavior is used if you want to be able to delete a **Customer** only if it is not associated with any **Order**:
+![](attachments/associations/918127.png)
 
-![](attachments/associations/918146.png)
+In XML, instances of these entities and their associations look as follows (note that the association is only stored in the **Customer** element):
 
-## 3 Read More
+```xml
+<Customer id="201">
+	<fullname>Apple Inc.</name>
+	<address>1 Infinite Loop</address>
+	<telephonenumber>1-800-MY-APPLE</telephonenumber>
+	<Customer_Group>id_301 id_302</Customer_Group>
+</Customer>
 
-* [Associations](association-landing-page)
+<Group id="301">
+	<name>Multinational corporations</name>
+</Group>
+
+<Group id="302">
+	<name>Hardware suppliers</name>
+</Group>
+
+```
+
+### 3.3 One to One Association
+
+A one-to-one association is created by setting the owner property to `Both` (while leaving the type property at its default value `Reference`).
+
+In this example, a **Customer** can have one **Profile**, and a **Profile** can have one **Customer**:
+
+![](attachments/associations/918128.png)
+
+In XML, instances of these entities and their associations look as follows (note that the association is stored both in the **Profile** element and the **Customer** element):
+
+```xml
+<Profile id="401">
+	<religion>Buddhism</religion>
+	<job>Chief Executive Officer</job>
+	<website>http://www.apple.com/ </website>
+	<Customer_Profile>id_201</Customer_Profile>
+</Profile>
+
+<Customer id="201">
+	<fullname>Steve Jobs</fullname>
+	<address>1 Infinite Loop</address>
+	<telephonenumber>1-800-MY-APPLE</telephonenumber>
+	<Customer_Profile>id_401</Customer_Profile>
+</Customer>
+
+```
+
+### 3.4 Many to Many Association (Both Owners)
+
+A many-to-many association where both entities are owners is created by setting the owner property to `Both` and the type property to `Reference set`.
+
+In this example, an **Accountant** can have multiple **Groups** and a **Group** can have multiple **Accountants**:
+
+{{% image_container width="500" %}}![](attachments/associations/918125.png)
+{{% /image_container %}}
+
+In XML, instances of these entities and their association look as follows (note that the association is stored both in the **Accountant** element and the **Group** element):
+
+```xml
+<Accountant id="501">
+	<idnumber>1</idnumber>
+	<name>Earl Grey</name>
+	<telephonenumber>1-800-EARL-GREY</telephonenumber>
+	<Accountant_Group>id_301 id_302</Accountant_Group>
+</Accountant>
+
+<Accountant id="502">
+	<idnumber>2</idnumber>
+	<name>Scrooge McDuck</name>
+	<telephonenumber>1-800-SCROOGE-MCDUCK</telephonenumber>
+	<Accountant_Group>id_301 id_302</Accountant_Group>
+</Accountant>
+
+<Group id="301">
+	<name>Multinational corporations</name>
+	<Accountant_Group>id_501 id_502</Accountant_Group>
+</Group>
+
+<Group id="302">
+	<name>Hardware suppliers</name>
+	<Accountant_Group>id_501 id_502</Accountant_Group>
+</Group>
+
+```

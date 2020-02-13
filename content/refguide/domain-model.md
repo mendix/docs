@@ -10,7 +10,7 @@ tags: ["domain model", "entity", "association", "annotation", "studio pro"]
 
 The **domain model** is a model that describes the information (or *data*) used by your application in an abstract way. It is central to the architecture of your application. Each [module](modules) has its own domain model which describes the data used in that module. All modules within a app project can use data from all the domain models within the app.
 
-A domain model consists of [entities](entities) with their relationships to other entities represented by [associations](association-landing-page). You can also add [annotations](annotations) to your domain model to explain how it is to be used.
+A domain model consists of [entities](entities) with their relationships to other entities represented by [associations](associations). You can also add [annotations](annotations) to your domain model to explain how it is to be used.
 
 Below is a domain model that defines customers and orders. The names of the entities are `Customer` and `Order`. The line between them is an association. `Order_Customer`. One customer can have many orders, but each order is for one customer. Within the boxes representing the entities you can see the [attributes](attributes) of the entities together with the [type](attributes#type) of data they hold. There is also a [non-persistable](persistability) entity, `ProductQueryResults`, which is used to record product information which is retrieved from a separate product system.
 

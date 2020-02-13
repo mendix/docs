@@ -132,7 +132,7 @@ You can also edit an entity by opening the entity properties dialog box.
 In addition to the properties described above, there are also tabs which allow you to edit the following:
 
 *   [Attributes](attributes)
-*   [Associations](association-landing-page)
+*   [Associations](associations)
 *   [Validation Rules](validation-rules)
 *   [Event Handlers](event-handlers)
 *   [Indexes](indexes)

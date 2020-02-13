@@ -74,7 +74,7 @@ The set of objects that can be deleted can be limited by using an [XPath constra
 
 #### 2.3.2 Member Read & Write Rights Section
 
-**Member read and write rights** define the access rights for every member ([attribute](attributes) or [association](association-landing-page)) of the entity. These access rights indicate whether users are allowed to view and/or edit the member's value. The set of objects to which these rights apply can be limited by using an [XPath constraint](#xpath-constraint).
+**Member read and write rights** define the access rights for every member ([attribute](attributes) or [association](associations)) of the entity. These access rights indicate whether users are allowed to view and/or edit the member's value. The set of objects to which these rights apply can be limited by using an [XPath constraint](#xpath-constraint).
 
 | Value | Description |
 | --- | --- |

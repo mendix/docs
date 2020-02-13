@@ -52,6 +52,8 @@ A user role can be allowed to manage users with a number of other user roles (in
 | All | End-users with this user role can manage all users and grant all user roles. Usually this option should only be configured for an administrator. |
 | Selected | End-users with this user role can manage users that have at most the selected user roles, and can grant only the selected user roles. If no user roles are selected, end-users with this user role cannot manage users at all. |
 
+Internally, user manangement properties are translated into entity access rules for `System.User`. This means that they are not applied in microflows that don't check entity access.
+
 ## 3 Read More
 
 * [Project Security](project-security)

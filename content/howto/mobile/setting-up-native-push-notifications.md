@@ -113,7 +113,7 @@ In **Signing & Capabilities** tab, add **push notifications** capabilities to yo
 5. Click **Capability**, type *background* in the dialog box, then select **Background Modes**.
 6.  Select **Background Modes** > **Remote Notifications**:
 
-  ![Capabilities](attachments/native-remote-push/iosCustomizations.png)
+  ![Capabilities](attachments/native-remote-push/ios-customizations.png)
 
 Congratulations, you finished setting up customizations for your custom native app! To implement remote push notifications on a test device, see [Use Remote Notifications](native-remote-notifications).
 

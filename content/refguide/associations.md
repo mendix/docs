@@ -28,7 +28,7 @@ There are two ways of editing an association.
 
 ### 2.1 Edit the Association Directly
 
-You can edit the association itself. 
+You can edit the association itself. In this case you will define the association using multiplicity and navigability.
 
 ![](attachments/associations/edit-association.png)
 
@@ -36,7 +36,7 @@ For more information see [Association Properties](association-properties).
 
 ### 2.2 Edit from Associations in the Entity
 
-You can edit the associations as members of the entity.
+You can edit the associations as members of the entity. In this case you will define the association using type and owner.
 
 ![](attachments/associations/edit-entity-association.png)
 
@@ -46,11 +46,11 @@ For more information see [Association Member Properties](association-member-prop
 
 ### 3.1 One to Many Association
 
-Drawing an association from the **Order** entity to the **Customer** entity results in the following:
+In this example, drawing an association from the **Order** entity to the **Customer** entity results in the following:
 
 ![](attachments/associations/918217.png)
 
-The type property has its default value `Reference`. In this example, a customer can have multiple orders, and an order can only have one customer.
+The type property has its default value `Reference`, and the owner (the Order entity) is `Default`. This is the same as having multiplicity set to `One 'Customer' object is associated with multiple 'Order' objects` so a customer can have multiple orders, but an order can only have one customer.
 
 In XML, instances of these entities and their association look as follows (note that the association is only stored in the **Order** element):
 
@@ -71,9 +71,9 @@ In XML, instances of these entities and their association look as follows (note 
 
 ### 3.2 Many to Many Association (Default Ownership)
 
-A many-to-many association with default ownership is created by drawing an association and then setting the `Type` property to `Reference set`.
+A many-to-many association with default ownership is created by drawing an association and then setting the type property to `Reference set` and leaving the owner as `Default`.
 
-In this example, a **Customer** can have multiple **Groups**, and a **Group** can have multiple **Customers**:
+In this example, a **Customer** can have multiple **Groups**, and a **Group** can have multiple **Customers**. This is the same as having multiplicity set to `Multiple 'Group' objects are associated with multiple 'Customer' objects` with Navigability set to `'Customer' objects refer to 'Group' objects`:
 
 ![](attachments/associations/918127.png)
 
@@ -101,7 +101,7 @@ In XML, instances of these entities and their associations look as follows (note
 
 A one-to-one association is created by setting the owner property to `Both` (while leaving the type property at its default value `Reference`).
 
-In this example, a **Customer** can have one **Profile**, and a **Profile** can have one **Customer**:
+In this example, a **Customer** can have one **Profile**, and a **Profile** can have one **Customer**. This is the same as having multiplicity set to `One 'Customer' object is associated with one 'Profile' object`:
 
 ![](attachments/associations/918128.png)
 
@@ -128,7 +128,7 @@ In XML, instances of these entities and their associations look as follows (note
 
 A many-to-many association where both entities are owners is created by setting the owner property to `Both` and the type property to `Reference set`.
 
-In this example, an **Accountant** can have multiple **Groups** and a **Group** can have multiple **Accountants**:
+In this example, an **Accountant** can have multiple **Groups** and a **Group** can have multiple **Accountants**. This is the same as having multiplicity set to `Multiple 'Group' objects are associated with multiple 'Accountant' objects` with Navigability set to `'Accountant' and 'Group' objects refer to each other`:
 
 {{% image_container width="500" %}}![](attachments/associations/918125.png)
 {{% /image_container %}}

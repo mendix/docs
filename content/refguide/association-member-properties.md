@@ -7,7 +7,7 @@ tags: ["domain model", "association", "studio pro"]
 
 ## 1 Introduction
 
-There are two ways to edit the properties of an [association](associations). This document describes the properties you can edit from the **Associations** tab in the entity properties.
+There are two ways to edit the properties of an [association](associations). This document describes the properties you can edit from the **Associations** tab in the entity properties. If you want to edit the association as described in [Association Properties](association-properties), you can click **Edit** to open the association properties dialog.
 
 For more information on associations, see [Associations](associations). 
 
@@ -22,11 +22,17 @@ Associations in the Association tab have the following properties:
 * [Name](#name) 
 * [Type](#type)
 * [Owner](#owner)
-* [Parent/Child](#parent-child)  
+* [Parent/Child](#parent-child)
+
+You can sort the list of associations by any of these properties (ascending or descending) by clicking the column titles.
 
 ### 2.1 Name {#name}
 
-The name of the association is used to refer to it from forms, microflows, XPath constraints, etcetera.
+The name of the association is used to refer to it. For example, in forms or microflows.
+
+{{% alert type="info" %}}
+You cannot change this name in the association tab. To change the name, click **Edit** (or double-click the association name) to open the [Association Properties](association-properties).
+{{% /alert %}}
 
 ### 2.2 Type {#type}
 
@@ -75,13 +81,15 @@ For example, imagine you have a many-to-many association, **Customer_Group**, be
 
 If both ends own the association, you can overcome this limitation. However, this has to be balanced by the overhead associated with having to commit all entities where the association is recorded. Therefore, it is recommended that many-to-many relationships are owned by the **Default** entity, unless there is a strong business reason for needing to add the association from either end in your Mendix app.
 
-Note that only recording the association on one of the entities does not affect your ability to navigate the association from both ends. However, it may be slower to navigate from the non-owning end.
+{{% alert type="info" %}}
+Recording the association on only one of the entities does not affect your ability to navigate the association from both ends. However, it may be slower to navigate from the non-owning end.
+{{% /alert %}}
 
-### 2.4 Type & Owner Relation to Multiplicity & Navigability {#types}
+### 2.4 Type & Owner Relationship with Multiplicity & Navigability {#types}
 
 **Type** and **Owner** properties of an entity are related to [Multiplicity](association-member-properties#multiplicity) and [Navigability](association-member-properties#navigability) properties of an association. When you change **Type** or **Owner**, you change **Multiplicity** and **Navigability** as well. 
 
-You can find correspondence between **Type**/**Owner** and **Multiplicity**/**Navigability** in the table below.
+You can find the correspondence between **Type**/**Owner** and **Multiplicity**/**Navigability** in the table below.
 
 | **Multiplicity** | **Navigability** | Type          | Owner   |
 | -----------------|----------------- | ------------- | ------- |
@@ -92,12 +100,11 @@ You can find correspondence between **Type**/**Owner** and **Multiplicity**/**Na
 
 For more information on multiplicity and navigability, see the [Multiplicity](association-member-properties#multiplicity) and [Navigability](association-member-properties#navigability) sections in *Association Member Properties*.
 
-## 6 Parent/Child {#parent-child}
+## 3 Parent/Child {#parent-child}
 
 Parent and child settings show you the direction of the association. Parent defines the entity the association starts from, and child defines the entity the association ends with.
 
-
-## 8 Read More
+## 4 Read More
 
 * [Association Properties](association-properties)
 * [Entities](entities)

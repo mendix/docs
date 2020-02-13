@@ -90,7 +90,7 @@ You can find correspondence between **Type**/**Owner** and **Multiplicity**/**Na
 | Many-to-many     | X objects refer to Y objects | Reference set | Default |
 | Many-to-many     | X and Y objects refer to each other | Reference set | Both    |
 
-For more information on multiplicity and navigability, see the [Multiplicity](association-member-properties#multiplicity) and [Navigability](association-member-properties#navigability) sections in *Associations and Their Properties*.
+For more information on multiplicity and navigability, see the [Multiplicity](association-member-properties#multiplicity) and [Navigability](association-member-properties#navigability) sections in *Association Member Properties*.
 
 ## 6 Parent/Child {#parent-child}
 
@@ -99,5 +99,5 @@ Parent and child settings show you the direction of the association. Parent defi
 
 ## 8 Read More
 
-* [Associations and Their Properties](association-properties)
+* [Association Properties](association-properties)
 * [Entities](entities)

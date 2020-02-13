@@ -76,7 +76,7 @@ Image properties are exposed objects containing a `type` field that is `"static"
 For the `"static"` type, `imageUrl`  is available. It represents a URL from which your selected image can be reached
 by Studio and Studio Pro's Design mode. It will be an empty string value if no image has been selected.
 
-For the `"dynamic"` type, `entity` is available. It represents the name of the entity where the data of the selected image is stored in. It will be an empty string value if no entity has been selected.
+For the `"dynamic"` type, `entity` is available. It represents the entity where the selected image's data is stored. It will be an empty string value if no entity has been selected.
 
 ### 2.4 Widgets
 

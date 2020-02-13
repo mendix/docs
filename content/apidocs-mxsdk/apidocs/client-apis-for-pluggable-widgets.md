@@ -58,7 +58,7 @@ export interface ActionValue {
 }
 ```
 
-The flag `canExecute` indicates if an action can be executed under the current conditions. Think of a **Call microflow** action triggering a microflow with a parameter. Such an action cannot be executed until a parameter object is available, for example when a parent Data view has finished loading. An attempt to `execute` an action that cannot be executed will have no effect except generating a debug-level warning message.
+The flag `canExecute` indicates if an action can be executed under the current conditions. This helps you prevent executing actions that are not allowed by the app's security settings. User roles can be set in the microflows and nanoflows, allowing users to call them. For more information on user roles and security, see the [Module Security Reference Guide](/refguide/module-security). You can also employ this flag when using a **Call microflow** action triggering a microflow with a parameter. Such an action cannot be executed until a parameter object is available, for example when a parent Data view has finished loading. An attempt to `execute` an action that cannot be executed will have no effect except generating a debug-level warning message. 
 
 The flag `isExecuting` indicates whether an action is currently running. A long-running action can take seconds to complete. Your component might use this information to render an inline loading indicator which lets users track loading progress. Often it is not desirable to allow a user to trigger multiple actions in parallel. Therefore, a component (maybe based on a configuration) can decide to skip triggering an action while a previous execution is still in progress.
 

@@ -3,6 +3,7 @@ title: "Implement Mendix Best Practices for Development"
 category: "General Info"
 menu_order: 7
 tags: ["best practice", "development", "develop", "reusable", "prefix"]
+#Academy are SMEs for verification, they discuss and link to this doc in training
 ---
 
 ## 1 Introduction
@@ -56,6 +57,10 @@ The [module roles](/refguide/module-security#module-role) should have logical na
 #### 3.2.1 Entity Names
 
 Most of the time, an [entity](/refguide/entities) reflects a real-world object that people can relate to. Therefore, the entity name should also reflect that object and identify its purpose. There are sometimes project-specific exceptions that lead to creating other types of entity, but that is up to you. The name of an entity is singular since an object is a single instance of the entity. A good example is using **Customer** and not **Customers**. Furthermore, we advise avoiding abbreviations, underscores, mathematical characters or any other special characters in the names of entities. Entity names also use camel case, for example, **HousekeepingRecord** or **LogEntry**.
+
+{{% alert type="info" %}}
+Following these entity naming conventions will prevent issues with naming conflicts between modules and entities. For example, if a module named **Customer** contains an entity named **customer** (note the lower-case "c"), there will be a Java compilation error and the app will not run. Renaming the entity to **Customer** will solve the problem.
+{{% /alert %}}
 
 #### 3.2.2 Entity Attributes
 

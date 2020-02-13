@@ -1,6 +1,6 @@
 ---
 title: "Click Drop-Down div Converter Drop-Down Button"
-parent: "rg-one-drop-down-div-converter"
+parent: "rg-one-dropdown-div-converter"
 ---
 
 ## 1 Description

@@ -54,7 +54,7 @@ During the import process, spreadsheet data is analyzed and converted the follow
     1. All values of one column in your spreadsheet are used in another column.
     2. The values of the other column are unique. 
     3. The type of data in these columns is converted to string or enumeration attribute types. For more information on correspondence between Excel data types and attribute types, see the [Correspondence Between Excel Data Types and Attribute Types](#excel-type-attribute-type) section.
-      
+    
 
 Download this Excel spreadsheet example to check how data is normalized there: [Spreadsheet Example](attachments/start-with-data/Example.xlsx). You can also import it into an app and test how this spreadsheet is converted. For more information, see the [Importing a Spreadsheet](#importing-spreadsheet) section.
 
@@ -93,7 +93,7 @@ In the table below, you can see how the Excel data corresponds to the attribute 
 
 After you upload the spreadsheet, worksheets that have relations (associations) are identified. 
 
-{{% alert type="warning" %}}Associations are not identified if the data is converted to *Integer*. In this case you can either change the column type to *Text* in Excel, or change the type of both columns to *String* when previewing your data. For more information on how to change attribute types, see the [Managing Attribute Types](#managing-attribute-types) section.
+{{% alert type="info" %}}Associations are not identified if the data is converted to *Integer*. In this case you can either change the column type to *Text* in Excel, or change the type of both columns to *String* when previewing your data. For more information on how to change attribute types, see the [Managing Attribute Types](#managing-attribute-types) section.
 {{% /alert %}} 
 
 In the **Data Preview**, you can check the spreadsheet data before the actual import is completed. You can review tables and columns and untick the ones that you do not want to import. Tables that have relations (associations) detected are indicated with a link icon:

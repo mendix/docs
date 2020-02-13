@@ -21,7 +21,7 @@ Studio Pro Guide | Model SDK API Docs
 [Domain Model](/refguide/domain-model) | TypeScript module [domainmodels](https://apidocs.mendix.com/modelsdk/latest/modules/domainmodels.html) 
 [Entities](/refguide/entities) | [DomainModel](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.domainmodel.html)
 [Attributes](/refguide/attributes) | [Entity](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.entity.html)
-[Associations](/refguide/associations) | [Association](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.association.html)
+[Associations](/refguide/association-landing-page) | [Association](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.association.html)
 | [Attribute](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.attribute.html)
 
 ## 2 Attributes

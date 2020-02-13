@@ -169,7 +169,7 @@ The _reference selector_ is an input widget that can be used to display and edit
 
 Studio Pro Guide | Model SDK API docs
 --- | --- |
-[Associations](/refguide/associations) | [InputReferenceSelector](https://apidocs.mendix.com/modelsdk/latest/classes/pages.inputreferencesetselector.html)
+[Associations](/refguide/association-landing-page) | [InputReferenceSelector](https://apidocs.mendix.com/modelsdk/latest/classes/pages.inputreferencesetselector.html)
 [Input Widgets](/refguide/input-widgets) | [ReferenceSetSelector](https://apidocs.mendix.com/modelsdk/latest/classes/pages.referencesetselector.html)
 [Reference selector](/refguide/reference-selector) | [PageSettings](https://apidocs.mendix.com/modelsdk/latest/classes/pages.pagesettings.html)
 [Reference set selector](/refguide/reference-set-selector) | [MicroflowSettings](https://apidocs.mendix.com/modelsdk/latest/classes/pages.microflowsettings.html)

@@ -52,7 +52,7 @@ The **Auto Arrange** option above the domain model groups and aligns entities by
 | [Attribute](domain-models-attributes) | Attributes are characteristics that describe and/or identify the entity. For example, a *Customer* entity typically has attributes for the name of the customer, an e-mail address, and other personal information. If we draw a parallel with databases, the attribute is a column. | Name<br />Type |
 | [Association](domain-models-association-properties) | An association describes a relation between entities. In the domain model, an association is represented by a line/arrow between two entities. If we draw a parallel with databases, the association is a foreign key. | Name<br />[Multiplicity](domain-models-association-properties#multiplicity)<br />[Delete behavior](domain-models-association-properties#delete-behavior) |
 
-For examples and more technical details, see [Domain Model](/refguide/domain-model), [Entities](/refguide/entities), [Attributes](/refguide/attributes), and [Associations](/refguide/associations) in the *Studio Pro Guide*. 
+For examples and more technical details, see [Domain Model](/refguide/domain-model), [Entities](/refguide/entities), [Attributes](/refguide/attributes), and [Associations](/refguide/association-landing-page) in the *Studio Pro Guide*. 
 
 ## 3 Adding New Entities {#adding-new-entities}
 

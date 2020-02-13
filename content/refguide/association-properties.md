@@ -1,98 +1,104 @@
 ---
-title: "Association Properties"
-parent: "associations"
-menu_order: 10
+title: "Association Member Properties"
+parent: "association-landing-page"
+menu_order: 15
 tags: ["domain model", "association", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
-An association describes a relation between entities. In the domain model, an association is represented by a line or arrow between two entities.
+There are two ways to edit the properties of an [association](association-landing-page). This document describes the properties you can edit from the **Associations** tab in the entity properties.
 
-The value of the association can only be viewed or edited from the object of the entity that is the _[owner](associations#owner)_ of the association. Either one entity or both entities can be the owner of the association. If one entity is the owner, there is an arrow that points from the owner to the other entity. If both entities are owners, there is a line between the two entities.
+For more information on associations, see [Associations](association-landing-page). 
 
-The [multiplicity](#multiplicity) (or number of referred objects) of an association is indicated by the number one (`1`) or a star (`*`) at either side of the association.
+## 2 Properties
 
-In the example below, the arrow indicates that **Order** is the owner of the association, and the `1` and `*` indicate that one customer is associated with many orders:
+An example of the **Associations** tab of the entity properties is represented in the image below:
 
-![](attachments/association-properties/918217.png)
+![](attachments/associations/edit-entity-association.png)
 
-{{% alert type="info" %}}
-
-An association between a persistable entity and a non-persistable entity must start in the non-persistable entity and have the owner **Default**. For more information on persistable and non-persistable entities, see [Persistability](persistability).
-
-{{% /alert %}}
-
-## 2 Association Properties
-
-If you double-click an association, its properties are opened. 
-
-![Association Properties](attachments/association-properties/association-properties.png)
-
-Associations have the following properties:
+Associations in the Association tab have the following properties:
 
 * [Name](#name) 
-* [Documentation](#documentation)
-* [Multiplicity](#multiplicity)
-* [Navigability](#navigability)
-* [Delete Behavior](#delete-behavior)
+* [Type](#type)
+* [Owner](#owner)
+* [Parent/Child](#parent-child)  
 
 ### 2.1 Name {#name}
 
-The name of the association is used to refer to it from forms, microflows, etcetera.
+The name of the association is used to refer to it from forms, microflows, XPath constraints, etcetera.
 
-### 2.2 Documentation {#documentation}
+### 2.2 Type {#type}
 
-You can write notes and documentation on this element in this field. 
-
-### 2.3 Multiplicity {#multiplicity}
-
-Multiplicity defines the number of possible referred objects. It is indicated by the number one (`1`) or a star (`*`) at either side of the association.
-
-Multiplicity can be of the following types:
-
-| Multiplicity | Meaning | Equivalent of |
-| --- | --- | --- |
-| One-to-one | One X object is associated with one Y object | An association of type **Reference** with owner set to **Both** |
-| One-to-many | One X object is associated with multiple Y object | An association of type **Reference** with owner set to **Default** |
-| Many-to-many | Multiple X objects are associated with multiple Y objects |  An association of type **Reference set** – in this case ownership is set by the **Navigability** property |
-
-For more information about association types, see the [Type](associations#type) section in *Associations*, and for information on ownership, see the [Owner](associations#owner) section in *Associations*.
-
-### 2.4 Navigability {#navigability}
-
-Navigability changes the owner of many-to-many associations. Navigability has the following options:
-
-| Navigability | Meaning | Equivalent of |
-| --- | --- | --- |
-| X objects refer to Y objects | The owner of the association is X | An association of type **Reference set** with owner set to **Default** |
-| X and Y objects refer to each other | Both entities are owners | An association of type **Reference set** with owner set to **Both** |
-
-This corresponds to the **Owner** property for **Reference sets** as described in the [Owner](associations#owner) section of *Associations*.
-
-Despite it's name, navigability is usually only important when changing associations. Making one object owner of an association does not prevent you reading the association from the non-owner end.
-
-### 2.5 Delete Behavior {#delete-behavior}
-
-Delete behavior defines what should happen to the associated object when an object is deleted. The following options can be configured for each end of the association.
+This property defines whether an association is a reference (single) or a reference set (plural).
 
 | Value | Description |
 | --- | --- |
-| Delete {name of entity} object but keep {name of other entity} object(s) | When an object is deleted, the associated object(s) are not deleted. |
-| Delete {name of entity} object and {name of other entity} object(s) as well | When an object is deleted, the associated object(s) are also deleted. |
-| Delete {name of entity} object only if it is not associated with {name of other entity} object(s) | An object can only be deleted if it is not associated with any other object(s). |
+| Reference *(default)* | Single: an object of the owning entity refers to zero or one objects of the other entity. |
+| Reference set | Plural: an object of the owning entity refers to zero or more objects of the other entity. |
 
-Default: *delete {name of entity} object but keep {name of other entity} object(s)*
+{{% alert type="info" %}}
 
-This delete behavior is used if you want to delete any associated **Profile** when a **Customer** is deleted:
+The examples for this property are combined with the example of the owner property below.
 
-![](attachments/association-properties/918143.png)
+{{% /alert %}}
 
-This delete behavior is used if you want to be able to delete a **Customer** only if it is not associated with any **Order**:
+### 2.3 Owner {#owner}
 
-![](attachments/association-properties/918146.png)
+This property defines whether an association has one or two owners. If there is one owner, the owner is located at the start of the arrow.
 
-## 3 Read More
+| Value | Description |
+| --- | --- |
+| Default *(default)* | Only one entity is the owner (the parent). |
+| Both | Both entities are owners. |
 
-* [Associations](associations)
+Ownership is important as it defines two aspects of an association:
+
+* how cardinality (many or one) is controlled
+* where the association is recorded
+
+#### 2.3.1 Cardinality
+
+Cardinality refers to counting the number of associations an object can have. To ensure that an object can count the occurrences of a particular association it needs to have ownership of the association.
+
+So, for a one-to-many association the *many* end owns the association to ensure that it can only associate with *one* object. For a one-to-one association, both ends own the association. For a many-to-many relationship cardinality is not important.
+
+#### 2.3.2 Association Recording
+
+An association is recorded in the object which owns it. If both objects own the association, then the association is recorded with both objects. You can see examples of where the associations are recorded in the [Association Examples](association-landing-page#examples) section of *Associations*.
+
+Where the association is recorded has an important impact on the user of reference and reference set selectors in your app. The selector can only be inside a data view containing the _owning_ object. This is because it is only when you commit the owning object that the association is recorded.
+
+For example, imagine you have a many-to-many association, **Customer_Group**, between **Customer** and **Group** owned by the Customer entity. You can put an input reference set selector to select Groups from within a Customer data view. However you _cannot_ put an input reference set selector to select Customers from within a Group data view.
+
+![Selecting Group objects through an input reference set selector in a Customer data view](attachments/associations/input-reference-set-selector.png)
+
+If both ends own the association, you can overcome this limitation. However, this has to be balanced by the overhead associated with having to commit all entities where the association is recorded. Therefore, it is recommended that many-to-many relationships are owned by the **Default** entity, unless there is a strong business reason for needing to add the association from either end in your Mendix app.
+
+Note that only recording the association on one of the entities does not affect your ability to navigate the association from both ends. However, it may be slower to navigate from the non-owning end.
+
+### 2.4 Type & Owner Relation to Multiplicity & Navigability {#types}
+
+**Type** and **Owner** properties of an entity are related to [Multiplicity](association-properties#multiplicity) and [Navigability](association-properties#navigability) properties of an association. When you change **Type** or **Owner**, you change **Multiplicity** and **Navigability** as well. 
+
+You can find correspondence between **Type**/**Owner** and **Multiplicity**/**Navigability** in the table below.
+
+| **Multiplicity** | **Navigability** | Type          | Owner   |
+| -----------------|----------------- | ------------- | ------- |
+| One-to-one     | —      | Reference     | Both    |
+| One-to-many     | —     | Reference     | Default |
+| Many-to-many     | X objects refer to Y objects | Reference set | Default |
+| Many-to-many     | X and Y objects refer to each other | Reference set | Both    |
+
+For more information on multiplicity and navigability, see the [Multiplicity](association-properties#multiplicity) and [Navigability](association-properties#navigability) sections in *Associations and Their Properties*.
+
+## 6 Parent/Child {#parent-child}
+
+Parent and child settings show you the direction of the association. Parent defines the entity the association starts from, and child defines the entity the association ends with.
+
+
+## 8 Read More
+
+* [Associations and Their Properties](associations)
+* [Entities](entities)

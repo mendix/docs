@@ -13,7 +13,7 @@ A **drop-down** is used to display and, optionally, allow the end-user to edit t
 A drop-down must be placed in a [data widget](data-widgets) and displays an attribute of the object(s) retrieved by that widget. The name of the attribute to be displayed is shown inside the drop-down, between square brackets, and colored blue.
 
 {{% alert type="info" %}}
-A drop-down should not be confused with a [reference selector](reference-selector), which is used to select an [association](associations) to another object.
+A drop-down should not be confused with a [reference selector](reference-selector), which is used to select an [association](association-landing-page) to another object.
 {{% /alert %}}
 
 For example, the following drop-down allows the end-user to see, and set, the **Region** to which a customer is allocated. The possible values for **Region** are held in an enumeration.

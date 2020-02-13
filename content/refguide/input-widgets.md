@@ -16,7 +16,7 @@ For example, the input widgets can be placed inside a [data view](data-view):
 
 ![Data view containing widgets](attachments/input-widgets/data-view.png)
 
-There are several different input widgets, these are used for different [data types](data-types) and for different types of [association](association-properties). The input widgets category contains the following widgets:
+There are several different input widgets, these are used for different [data types](data-types) and for different types of [association](associations). The input widgets category contains the following widgets:
 
 *   [Text Box](text-box) – displays and, optionally, allows the end-user to add or edit text data from a *numeric* or *string-like* attribute:
 
@@ -57,7 +57,7 @@ There are several different input widgets, these are used for different [data ty
 {{% alert type="info" %}}
 For more information on data types, see [Data Types](data-types).
 
-For more information on associations and their properties, see [Associations](associations).
+For more information on associations and their properties, see [Associations](association-landing-page).
 {{% /alert %}}
 
 ## 2 Performing Basic Functions
@@ -69,5 +69,5 @@ For more information on associations and their properties, see [Associations](as
 * [Page](page)
 * [Pages](pages)
 * [Data Types](data-types)
-* [Associations](associations)
+* [Associations](association-landing-page)
   

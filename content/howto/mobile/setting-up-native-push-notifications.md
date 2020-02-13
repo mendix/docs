@@ -106,7 +106,7 @@ To change your app's capabilities, open *app/ios/yourProjectName.xcworkspace* in
 
 In **Signing & Capabilities** tab, add **push notifications** capabilities to your app by doing the following:
 
-1. Click **nativeTemplate** in the left-hand file explorer.
+1. Click **nativeTemplate** in the left-side file explorer.
 2. Click the **Signing & Capabilities** tab.
 3. Click **Targets** > **nativeTemplate**.
 4. Click **Capability**, type *push* in the dialog box, then select **Push Notifications**.

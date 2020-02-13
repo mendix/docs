@@ -58,6 +58,8 @@ The [module roles](/refguide/module-security#module-role) should have logical na
 
 Most of the time, an [entity](/refguide/entities) reflects a real-world object that people can relate to. Therefore, the entity name should also reflect that object and identify its purpose. There are sometimes project-specific exceptions that lead to creating other types of entity, but that is up to you. The name of an entity is singular since an object is a single instance of the entity. A good example is using **Customer** and not **Customers**. Furthermore, we advise avoiding abbreviations, underscores, mathematical characters or any other special characters in the names of entities. Entity names also use camel case, for example, **HousekeepingRecord** or **LogEntry**.
 
+Following entity naming conventions will prevent issues with naming conflicts between modules and entities. For example, if a module named `Customer` contains an entity named `customer` (note the lowercased 'c'), the project won't run because of a Java compilation error. Renaming the entity to `Customer` will solve the problem.
+
 #### 3.2.2 Entity Attributes
 
 The entity [attribute](/refguide/attributes) should reflect a property of a real-world object that people can relate to and fits the purpose of that property. We advise avoiding abbreviations, underscores (except in the case described in the next paragraph), mathematical characters or any other special characters in the names. Entity attributes should use camel case, for example, **FirstName** or **TelephoneNumber**.

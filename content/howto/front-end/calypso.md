@@ -16,7 +16,7 @@ Calypso is a tool which makes it easier for you to customize your Mendix apps' s
 * Moves compiled files to your deployment folder
 * Injects the compiled *CSS* files into your browser so you can preview changes instantly 
 
-Calypso is the easiest styling solution for most users. However, if you already use a Gulp service worker in your development workflow please consult [How to Set Up Gulp & Sass](/howto/frontend/sass-eight) for a styling solution which might suit you better.
+Calypso is the easiest styling solution for most users. However, if you already use a Gulp service worker in your development workflow please consult [How to Set Up Gulp & Sass](/howto/front-end/sass-eight) for a styling solution which might suit you better.
 
 ## 2 Prerequisites
 
@@ -89,4 +89,4 @@ Good job! You've installed Calypso and used it to customize your styling quickly
 
 * [Get Started with Atlas UI](get-started-with-atlasui)
 * [Migrate Existing App Projects to Atlas UI](migrate-existing-projects-to-atlasui)
-* [How to Set Up Gulp & Sass](/howto/frontend/sass-eight)
+* [How to Set Up Gulp & Sass](/howto/front-end/sass-eight)

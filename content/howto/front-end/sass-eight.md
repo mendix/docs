@@ -85,9 +85,7 @@ To prepare your app project, follow these steps:
 	
 	If you need to remove an item from the ignore list, right-click it and select **TortoiseSVN** > **Remove from ignore list**.
 
-9.  Open your app project in Studio Pro, then click **Run Locally** and **View**:
-
-	![](attachments/set-up-sass/run-view.png)
+9.  Open your app project in Studio Pro, then click **Run Locally** and **View**.
 
 ## 4  Setting Up Your Sass Files
 

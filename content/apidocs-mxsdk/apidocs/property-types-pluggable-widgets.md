@@ -29,17 +29,17 @@ This defines the prop `key` in the client component props which are supplied to 
 
 This defines a property's type. A `type` must be one of the following: 
 
-* Static Properties
+* Static Types
 	* [string](#string)
 	* [boolean](#boolean)
 	* [integer](#integer)
 	* [decimal](#decimal)
 	* [enumeration](#enumeration)
-* Component Properties
+* Component Types
 	* [icon](#icon)
 	* [image](#image)
 	* [widgets](#widgets)
-* Dynamic Properties
+* Dynamic Types
 	* [expression](#expression)
 	* [textTemplate](#texttemplate)
 	* [action](#action)
@@ -53,13 +53,13 @@ This defines a property's type. A `type` must be one of the following:
 
 `<description>` (required) — This is a description which explains a property's purpose.
 
-## 2 Static Properties
+## 2 Static Types
 
-Static properties are made to pass values configured in Studio or Studio Pro to the widget. They do not depend on any dynamic data. Static properties are passed to the widget client component as simple primitive values.
+Static types are made to pass values configured in Studio or Studio Pro to the widget. They do not depend on any dynamic data. Static properties are passed to the widget client component as simple primitive values.
 
 ### 2.1 String{#string}
 
-String is represented as a simple text input in Studio Pro. It is passed as a `string` prop to a client component.
+The string property type is represented as a simple text input in Studio Pro. It is passed as a `string` prop to a client component.
 
 #### 2.1.1 XML Attributes
 
@@ -102,7 +102,7 @@ Then the Studio Pro UI for the property appears like this:
 
 ### 2.2 Boolean{#boolean}
 
-Boolean is represented as a toggle in Studio Pro. It is passed as `boolean` prop to a client component.
+Properties of type Boolean are represented as a toggle in Studio Pro. They are passed as `boolean` props to a client component.
 
 #### 2.2.1 XML Attributes
 
@@ -156,7 +156,7 @@ Then the Studio Pro UI for the property appears like this:
 
 ### 2.4 Decimal{#decimal}
 
-Decimal is represented as a number input in Studio Pro. It is passed as a `Big` prop to a client component.
+Properties of type decimal are represented as a number input in Studio Pro. They are passed as a `Big` prop to a client component.
 
 #### 2.4.1 XML Attributes
 
@@ -183,7 +183,7 @@ Then the Studio Pro UI for the property appears like this:
 
 ### 2.5 Enumeration{#enumeration}
 
-Enumeration allows a user to select one out of multiple options defined in the XML. The `key` of a selected enumeration element is passed as `string` prop to a client component.
+The enumeration property type allows a user to select one out of multiple options defined in the XML. The `key` of a selected enumeration element is passed as `string` prop to a client component.
 
 #### 2.5.1 XML Attributes
 
@@ -223,11 +223,11 @@ Then the Studio Pro UI for the property appears like this:
 
 ![](attachments/widget-property-types/enumeration.png)
 
-## 3 Components
+## 3 Component Types
 
 ### 3.1 Icon {#icon}
 
-Icon allows a user to configure an icon similar to one used by a [button](/refguide/button-properties#icon). It is passed as `DynamicValue<IconValue>` prop to a client component.
+Properties of type icon allows a user to configure an icon similar to one used by a [button](/refguide/button-properties#icon). It is passed as `DynamicValue<IconValue>` prop to a client component.
 
 {{% alert type="info" %}}
 This property type was introduced in Mendix 8.1.
@@ -295,7 +295,7 @@ Then the Studio Pro UI for the component appears like this:
 
 ### 3.3 Widgets {#widgets}
 
-The widgets property allows a user to place multiple widgets inside a pluggable widget, similar to the content of a [container](/refguide/container) widget. It is passed as a `ReactNode` prop to a client component.
+The widgets property type allows a user to place multiple widgets inside a pluggable widget, similar to the content of a [container](/refguide/container) widget. It is passed as a `ReactNode` prop to a client component.
 
 {{% alert type="info" %}}
 This property type was introduced in Mendix 8.3.
@@ -327,7 +327,7 @@ then the Studio Pro UI for the component appears like this:
 
 ![studio pro ui](attachments/widget-property-types/widgets.png)
 
-## 4 Dynamic Properties
+## 4 Dynamic Types
 
 ### 4.1 Expression{#expression}
 
@@ -372,7 +372,7 @@ Then the Studio Pro UI for the property appears like this:
 
 ### 4.2 TextTemplate{#texttemplate}
 
-`TextTemplate` allows a user to configure translatable text template similar to the [Caption](/refguide/text#caption) of a text widget. The interpolated string will be passed to the client component as `DynamicValue<string>`.
+TextTemplate allows a user to configure translatable text template similar to the [Caption](/refguide/text#caption) of a text widget. The interpolated string will be passed to the client component as `DynamicValue<string>`.
 
 #### 4.2.1 XML Attributes
 
@@ -410,7 +410,7 @@ Then the Studio Pro UI for the property appears like this:
 
 ### 4.3 Action{#action}
 
-The action property allows a user to configure an action to do things like calling nanoflows, saving changes, and opening pages. The client component will receive `ActionValue` representing it, or `undefined` when the **Do nothing** action was selected.
+The action property type allows a user to configure an action to do things like calling nanoflows, saving changes, and opening pages. The client component will receive `ActionValue` representing it, or `undefined` when the **Do nothing** action was selected.
 
 #### 4.3.1 XML Attributes
 
@@ -436,7 +436,7 @@ Then the Studio Pro UI for the property appears like this:
 
 ### 4.4 Attribute{#attribute}
 
-The attribute property allows a widget to work directly with entities' attributes, both reading and writing attributes. Depending on the widget's purposes, a widget should define attribute types it supports. The client component will receive `EditableValue<T>` where `T` depends on a `<attributeType>` configured.
+The attribute property type allows a widget to work directly with entities' attributes, both reading and writing attributes. Depending on the widget's purposes, a widget should define attribute types it supports. The client component will receive `EditableValue<T>` where `T` depends on a `<attributeType>` configured.
 
 #### 4.4.1 XML 
 
@@ -492,7 +492,7 @@ Then the Studio Pro UI for the property appears like this:
 
 ### 4.5 Object{#object}
 
-The object property allows to create an arbitrary list of properties.
+The object property type allows to create an arbitrary list of properties.
 
 #### 4.5.1 XML Attributes
 
@@ -536,7 +536,7 @@ Then the Studio Pro UI for the property appears like this:
 
 ### 4.6 File {#file}
 
-The file property allows a user to configure a file from an object that is a specialization of **System.File**. It is passed as a [`DynamicValue<FileValue>`](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets#filevalue) prop to a client component.
+The file property type allows a user to configure a file from an object that is a specialization of **System.File**. It is passed as a [`DynamicValue<FileValue>`](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets#filevalue) prop to a client component.
 
 #### 4.6.1 XML Attributes
 

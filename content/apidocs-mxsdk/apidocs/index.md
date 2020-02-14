@@ -86,32 +86,38 @@ All functionality and information from both the application model and Mendix Run
 
 * [Runtime API](runtime-api)
 
-## 14 Single Sign-On API
-
-The Mendix Single Sign-On system is based on OpenID. Learn how to connect your (non-Mendix) app to the Mendix Identity Provider.
-
-* [SSO API](single-sign-on-api)
-
-## 15 Stories API
+## 14 Stories API
 
 Extend the requirements and project management capabilities of Mendix, or connect third-party service management and project management tools.
 
 * [Stories API](stories-api)
 
-## 16 Team Server API
+## 15 Team Server API
 
 Retrieve information (branches, revisions) about application models stored in Team Server. You always access an application model via the context of an application (see the Deploy API for more information about retrieving applications and application identities).
 
 * [Team Server API](team-server-api)
 
-## 17 User Management API
+## 16 User Management API
 
 Integrate your company's user management systems with the Mendix App Platform. Create and manage user accounts and security groups, and then define group policies for your applications.
 
 * [User Management API](user-management-api)
 
-## 18 Webhooks
+## 17 Webhooks
 
 Webhooks allow you to build or set up Mendix Platform connectors that subscribe to certain events on the Developer Portal. 
 
 * [Webhooks](webhooks-sprints)
+
+## 18 Deprecated APIs
+
+### 18.1 Single Sign-On API
+
+{{% alert type="warning" %}}
+The API for the Mendix Single Sign-On system based on OpenID has been deprecated and will be discontinued from 1st April 2020.
+{{% /alert %}}
+
+* [SSO API](single-sign-on-api)
+
+

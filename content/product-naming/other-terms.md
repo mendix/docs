@@ -345,6 +345,14 @@ Capitalize in all instances (to parallel "Team Server" and "Build Server").
 Spell with "Mx" abbreviation as one word.
 {{% /alert %}}
 
+### Native Builder
+
+{{% alert type="info" %}}
+Do not use "Native Oven".<br />
+<br />
+Capitalize in all instances.
+{{% /alert %}}
+
 ## O-Z
 
 ### on-premises

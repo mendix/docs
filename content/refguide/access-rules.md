@@ -13,7 +13,7 @@ The **access rules** of an entity define what a user is allowed to do with objec
 Every access rule is applicable to one or more [module roles](module-security#module-role). An access rule grants certain access rights to those roles. Rules are additive, which means that if multiple access rules apply to the same module role, all access rights of those rules are combined for that module role.
 
 {{% alert type="warning" %}}
-Access rules are not inherited from an entity's generalization, the security for every entity is specified explicitly. This means that when adding an access rule to an entity, always make sure that all required XPath constraints are applied.
+Access rules are not inherited from an entity's [generalization](entities#generalization), the security for every entity is specified explicitly. This means that when adding an access rule to an entity, always make sure that all required XPath constraints are applied.
 
 If the entity has a generalization with access rules defining XPath constraints, these will not apply to its specializations and will therefore not limit its visibility.
 {{% /alert %}}
@@ -62,11 +62,11 @@ The **Access rights** tab allows you to assign rights to users with the selected
 
 #### 2.3.1 Create and Delete Rights Section
 
-**Allow creating new objects**
+##### 2.3.1.1 Allow creating new objects
 
 If **Allow creating new objects** is checked, users are allowed to create new objects of this entity.
 
-**Allow deleting existing objects**
+##### 2.3.1.2 Allow deleting existing objects
 
 If **Allow deleting existing objects** is checked, users are allowed to delete existing objects of this entity.
 

@@ -10,7 +10,7 @@ tags: ["domain model", "association", "studio pro"]
 
 There are two ways to edit the properties of an [association](associations). This page describes the properties you can edit in the properties pane of the association in the domain model, or from opening the association properties dialog directly from the association or the association tab in the entity properties.
 
-You can also edit an association directly within the association tab in the entity properties. For more information see [Association Member Properties](association-member-properties).
+You can also edit an association directly within the association tab in the entity properties. For more information see [Association Tab Properties](association-member-properties).
 
 ## 2 Association Properties
 
@@ -46,7 +46,7 @@ Multiplicity can be of the following types:
 | One-to-many *(default)*| One X object is associated with multiple Y object | An association of type **Reference** with owner set to **Default** |
 | Many-to-many | Multiple X objects are associated with multiple Y objects |  An association of type **Reference set** – in this case ownership is set by the **Navigability** property |
 
-For more information about association types, see the [Type](association-member-properties#type) section in *Association Member Properties*, and for information on ownership, see the [Owner](association-member-properties#owner) section in *Association Member Properties*.
+For more information about association types, see the [Type](association-member-properties#type) section in *Association Tab Properties*, and for information on ownership, see the [Owner](association-member-properties#owner) section in *Association Tab Properties*.
 
 ### 2.4 Navigability {#navigability}
 
@@ -57,7 +57,7 @@ Navigability changes the owner of many-to-many associations. Navigability has th
 | X objects refer to Y objects *(default)* | The owner of the association is X | An association of type **Reference set** with owner set to **Default** |
 | X and Y objects refer to each other | Both entities are owners | An association of type **Reference set** with owner set to **Both** |
 
-This corresponds to the **Owner** property for **Reference sets**. See the [Owner](association-member-properties#owner) section of *Association Member Properties* for a more detailed discussion of the impact of changing navigability.
+This corresponds to the **Owner** property for **Reference sets**. See the [Owner](association-member-properties#owner) section of *Association Tab Properties* for a more detailed discussion of the impact of changing navigability.
 
 Despite it's name, navigability is usually only important when adding or changing associations. Making one object owner of an association does not prevent you reading the association from the non-owner end.
 

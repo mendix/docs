@@ -96,7 +96,11 @@ A customer can be active or inactive, which is stored in an attribute named **Ac
 
 ![](attachments/domain-model/customer-attribute-examples.png)
 
-#### 2.2.2 Localize (Only for Date & Time Attribute Type)
+#### 2.2.2 Localize
+
+{{% alert type="info" %}}
+This property is shown if **Type** is set to **Date and time**.
+{{% /alert %}}
 
 This property indicates whether the date and time should be localized. By default localization is enabled. If you are _not_ interested in the time component of a date (e.g. a birthday), you should set this property to 'No'. Otherwise, the date can change because of time zone differences: a date and time early in the morning on April 2nd in Europe will be on April 1st in the U.S.A.
 
@@ -104,17 +108,29 @@ In technical terms, this property indicates whether the client assumes that the 
 
 Default: *Yes*
 
-#### 2.2.3 Enumeration (Only for Enumeration Attribute Type)
+#### 2.2.3 Enumeration
+
+{{% alert type="info" %}}
+This property is shown if **Type** is set to **Enumeration**.
+{{% /alert %}}
 
 The enumeration property indicates which enumeration defines the possible values for this attribute.
 
-#### 2.2.4 Length (Only for String Attribute Type)
+#### 2.2.4 Length
+
+{{% alert type="info" %}}
+This property is shown if **Type** is set to **String**.
+{{% /alert %}}
 
 This property specifies whether the length of a String is limited or unlimited. In the case of a limited length, the 'Max length' property specifies the maximum (see below).
 
 Default: *Limited*
 
 #### 2.2.5 Max Length (Only for String Attribute Type)
+
+{{% alert type="info" %}}
+This property is shown if **Type** is set to **String**.
+{{% /alert %}}
 
 The 'Max length' property specifies the number of characters that can be stored in the attribute.
 
@@ -133,7 +149,11 @@ Take note of the following things when using **Calculated** attributes:
 * It is not possible to sort on an attribute for which this property is used, because sorting is done by the database engine.
 * Uncommitted associated objects cannot be retrieved in calculated attributes.
 
-#### 2.3.2 Microflow (If Value Is Calculated with Microflow)
+#### 2.3.2 Microflow
+
+{{% alert type="info" %}}
+This property is shown if **Value** is set to **Calculated**.
+{{% /alert %}}
 
 If the value is a computation, the **Microflow** property defines which microflow defines this computation to calculate the value of the attribute when the object is retrieved. The microflow should have a parameter of the type of the entity of the attribute and it should return a value with the same type as the attribute.
 
@@ -141,7 +161,11 @@ For example, in a web shop, you want to show the total expenses for each custome
 
 ![](attachments/domain-model/917570.png)
 
-#### 2.3.3 Default Value (If Value Is Stored)
+#### 2.3.3 Default Value
+
+{{% alert type="info" %}}
+This property is shown if **Value** is set to **Stored**.
+{{% /alert %}}
 
 The **Default value** property defines the value of this attribute when an object is created. The default value should be compatible with the type of the attribute.
 

@@ -16,11 +16,19 @@ Indexes can be added and edited from the **Indexes** tab of the entity propertie
 
 ## 2 Important Considerations
 
+### 2.1 Order of Attributes
+
 Indexes are ordered, which means that when you create an index on two or more attributes it is important to consider the order of the attributes. To take advantage of the improved performance when searching or querying on multiple attributes, these attributes should be in the same order as those in the index. By extension, when the retrieval is constrained by only one attribute, the improved performance is only achieved if this is the first attribute in the index.
+
+### 2.2 Indexes on System Members
 
 If you choose to store an entity's `owner` and `changedBy` system members, an index is created. This is not so for the `createdDate` and `changedDate` system members. In addition, an index is created for the automatically generated attribute `id`. See [Domain Model](domain-model) for more information about the implementation of these attributes.
 
+### 2.3 Indexes on Non-Persistable Entities
+
 You can only define indexes for persistable entities as indexes are a database concept. Consequently, indexes are disabled for non-persistable entities.
+
+### 2.4 Performance Considerations
 
 Changing and deleting objects of an entity with indexes takes longer, because the index needs to be updated in addition to the actual data. Therefore, for attributes that are rarely used as criteria in a search or query, only create an index if the increase in retrieval performance justifies the decrease in update performance.
 

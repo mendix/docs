@@ -22,11 +22,17 @@ In the example below, the arrow indicates that **Order** is the owner of the ass
 An association between a persistable entity and a non-persistable entity must start in the non-persistable entity and have the owner **Default**. For more information on persistable and non-persistable entities, see [Persistability](persistability).
 {{% /alert %}}
 
-## 2 Editing Associations
+## 2 Creating Associations
+
+The quickest way to create an association is to draw the association between two entities in a [domain model](domain-model). By default this will create a one-to-many association starting at the owner/many side of the association and ending at the one side of the association. The association will be named by joining the names of the two entities with an underscore. You can then edit the association as discussed in the next section.
+
+You can also create associations between entities in different modules of your app. In this case it is not possible to draw the association. You can create an association to an entity in another module's domain model by creating a new association in the **Association** tab of the entity which owns the association. You can then choose any entity within your app as the target of the association. For more information see [Association Tab Properties](association-member-properties).
+
+## 3 Editing Associations
 
 There are two ways of editing an association.
 
-### 2.1 Edit the Association Directly
+### 3.1 Edit the Association Directly
 
 You can edit the association itself. In this case you will define the association using multiplicity and navigability.
 
@@ -34,17 +40,17 @@ You can edit the association itself. In this case you will define the associatio
 
 For more information see [Association Properties](association-properties).
 
-### 2.2 Edit from Associations in the Entity
+### 3.2 Edit from Associations in the Entity
 
 You can edit the associations as members of the entity. In this case you will define the association using type and owner.
 
 ![](attachments/associations/edit-entity-association.png)
 
-For more information see [Association Member Properties](association-member-properties).
+For more information see [Association Tab Properties](association-member-properties).
 
-## 3 Association Examples{#examples}
+## 4 Association Examples{#examples}
 
-### 3.1 One to Many Association
+### 4.1 One-to-Many Association
 
 In this example, drawing an association from the **Order** entity to the **Customer** entity results in the following:
 
@@ -69,7 +75,7 @@ In XML, instances of these entities and their association look as follows (note 
 
 ```
 
-### 3.2 Many to Many Association (Default Ownership)
+### 4.2 Many-to-Many Association with Default Ownership
 
 A many-to-many association with default ownership is created by drawing an association and then setting the type property to `Reference set` and leaving the owner as `Default`.
 
@@ -97,7 +103,7 @@ In XML, instances of these entities and their associations look as follows (note
 
 ```
 
-### 3.3 One to One Association
+### 4.3 One-to-One Association
 
 A one-to-one association is created by setting the owner property to `Both` (while leaving the type property at its default value `Reference`).
 
@@ -124,7 +130,7 @@ In XML, instances of these entities and their associations look as follows (note
 
 ```
 
-### 3.4 Many to Many Association (Both Owners)
+### 4.4 Many-to-Many Association with Dual Ownership
 
 A many-to-many association where both entities are owners is created by setting the owner property to `Both` and the type property to `Reference set`.
 

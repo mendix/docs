@@ -1,5 +1,5 @@
 ---
-title: "Association Member Properties"
+title: "Association Tab Properties"
 parent: "associations"
 menu_order: 15
 tags: ["domain model", "association", "studio pro"]
@@ -98,7 +98,7 @@ You can find the correspondence between **Type**/**Owner** and **Multiplicity**/
 | Many-to-many     | X objects refer to Y objects | Reference set | Default |
 | Many-to-many     | X and Y objects refer to each other | Reference set | Both    |
 
-For more information on multiplicity and navigability, see the [Multiplicity](association-member-properties#multiplicity) and [Navigability](association-member-properties#navigability) sections in *Association Member Properties*.
+For more information on multiplicity and navigability, see the [Multiplicity](association-member-properties#multiplicity) and [Navigability](association-member-properties#navigability) sections in *Association Tab Properties*.
 
 ## 3 Parent/Child {#parent-child}
 

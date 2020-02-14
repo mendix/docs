@@ -23,7 +23,7 @@ For example, you have a collection of CDs like the one in the table below:
 | How to Dismantle an Atomic Bomb | U2 |
 | Exodus | Bob Marley & The Wailers |
 
-The rows in the table are CDs. The type of the two rows is 'CD' and this is the entity name. A specific CD like 'How to Dismantle an Atomic Bomb' of the band U2 is called an object of the entity 'CD'. Characteristics like the title and artist are called attributes.
+The rows in the table are CDs. The type of the two rows is *CD* and this is the entity name. A specific CD like *How to Dismantle an Atomic Bomb* from the band *U2* is called an object of the entity *CD*. Characteristics like the title and artist are called attributes.
 
 ## 2 Properties
 
@@ -65,7 +65,7 @@ An entity can be a more specialized version of a general entity. This means that
 
 The generalization specifies the entity from which a specific entity derives its properties (attributes, associations, events, and other properties). It is used when entities have common attributes and can be generalized using a super entity. In object oriented programming (OOP) the generic term for generalization and specialization is called **inheritance**.
 
-One important use of this feature is to derive functionality from the System module, for example, images from the entity 'Image' and files from the entity 'FileDocument'. 
+One important use of this feature is to derive functionality from the System module, for example, images from the entity `Image` and files from the entity `FileDocument`. 
 
 For example, this property can be used in a situation where, you have an entity 'Student' and an entity 'Professor' which have some generic properties. They both have a name, telephone number and email address and can be a member of one or more courses. Both entities are *generalized* in the entity 'Member'. Conversely, this means that the entity 'Member' is *specialized* in the entities 'Student' and 'Professor'.
 

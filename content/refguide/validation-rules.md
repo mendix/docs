@@ -68,6 +68,6 @@ Date values should be entered in [ISO 8601](http://en.wikipedia.org/wiki/ISO_860
 
 #### 2.2.2 Rule Order
 
-Validation rules can be ordered in Studio Pro. The order of the rules determines the order they are applied. If multiple rules are violated, their error messages will be concatenated (in the defined order) and shown in the page. Although the order can be set for all the validation rules in the entity, only the order per attribute will have an impact as all validation rules are executed for all attributes.
+Validation rules can be ordered in Studio Pro. The order of the rules determines the order they are applied. If multiple rules are violated, all their error messages will be recorded (in the defined order) and shown in the page. Although the order can be set for all the validation rules in the entity, only the order per attribute will have an impact as all validation rules are executed for all attributes.
 
 The `uniqueness` validations do not follow the defined order. This validation requires a database query and is executed only when the complete object satisfies to all the other validation rules.

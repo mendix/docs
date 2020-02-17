@@ -52,7 +52,7 @@ The list of warnings will be updated in the error pane.
 
 To modify or undo the suppression of the warnings, see section [Editing the suppression rules](#editing-rules).
 
-### 2.4 Suppress App Store warnings
+### 2.4 Suppress App Store warnings {#suppress-appstore-warnings}
 
 It is possible to suppress App Store warnings by clicking the `Suppression rules` button in the Errors pane.
 

@@ -883,9 +883,9 @@ The default class to style all web views is named `com_mendix_widget_native_webv
 
 ### 11.19 Animation
 
-The animation widget allows you to animate a container. You can make the content wiggle, move, change size, and more.
+The animation widget allows you to animate a container. You can make the content wiggle, move, change size, and more:
 
-{{% image_container width="350" %}}![animation](attachments/native-styling-refguide/animation.gif){{% /image_container %}}
+{{% image_container width="300" %}}![animation](attachments/native-styling-refguide/animation-border.gif){{% /image_container %}}
 
 The widget’s style properties are as follows:
 

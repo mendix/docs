@@ -881,6 +881,26 @@ The web view widget allows you to embed static or dynamic websites in your app. 
 
 The default class to style all web views is named `com_mendix_widget_native_webview_WebView`. 
 
+### 11.19 Animation
+
+The Animation widget allows you to animate a container. You can making the content wiggel, move resize and more. 
+
+The widget’s style properties are as follows:
+
+```xml
+<container>
+  {content}
+</container>
+```
+
+The widget’s style properties are as follows:
+
+| Element | Style Properties    | Description |
+| --- | --- | --- |
+| `container` | This has all ViewStyle properties. |      |
+
+The default class to style all web views is named `com_mendix_widget_native_animation_Animation`. 
+
 ## 12 Read More
 
 * [Style Your Mendix Native App](/howto/mobile/how-to-use-native-styling)

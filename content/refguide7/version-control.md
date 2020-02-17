@@ -14,9 +14,9 @@ Version Control allows you to manage your app development in two ways:
 
 Version control in Mendix is built on top of [Apache Subversion](https://subversion.apache.org/) and the concepts will be familiar to Subversion users. Mendix simplifies Subversion commands by building them into the Modelers and Developer Portal.
 
-{{% alert type="info" %}}The processes involving the Web Modeler described here apply to collaborative working in Mendix versions 7.23.3 and above.
+{{% alert type="warning" %}}The processes involving the Web Modeler described here apply to collaborative working in Mendix versions 7.23.3 and above. 
 
-Mendix versions 7.23.2 and below use a different method to sync work between the Web and Desktop Modelers. See [Sync the Web Modeler & Desktop Modeler](sync-webmodeler-desktopmodeler) for more information.
+You cannot sync your changes with the Web Modeler if your project has Mendix version 7.23.2 or below. You will still be able to open your project in the Web Modeler, but the Web Modeler will automatically upgrade it to the latest patch version of 7.23. 
 {{% /alert %}}
 
 ## 2 Concepts {#concepts}
@@ -93,7 +93,7 @@ You may enable the Web Modeler for one of the development lines. This means that
 
 The Web Modeler cannot be used to develop the app if it is not enabled for any development lines.
 
-For starter apps created via the Developer Portal, the main line of a new app will be Web Modeler enabled.
+For app templates created via the Developer Portal, the main line of a new app will be Web Modeler enabled.
 
 ### 2.11 Tag
 

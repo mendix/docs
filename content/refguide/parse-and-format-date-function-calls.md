@@ -2,11 +2,12 @@
 title: "Parse & Format Date Function Calls"
 parent: "expressions"
 description: "Describes the functions for parsing datetimes from strings using a specified pattern or producing a string from a datetime in Mendix."
+tags: ["studio pro"]
 ---
 
 Functions to parse datetimes from strings, using a specified pattern, or produce a string from a datetime.
 
-See [http://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html](http://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html) for all pattern possibilities.
+See [https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/text/SimpleDateFormat.html](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/text/SimpleDateFormat.html) for all pattern possibilities.
 
 ## parseDateTime[UTC]
 
@@ -19,12 +20,12 @@ Takes a string and tries to parse it. If it fails and a default value is specifi
 *   a format
     Type: String
 *   a default value (**optional**)
-    Type: DateTime
+    Type: Date and time
 
 ### Output
 
 The parsed date, or the default value if a date could not be parsed.
-Type: DateTime
+Type: Date and time
 
 ```java
 parseDateTime('2015-05-21', 'yyyy-MM-dd')
@@ -53,7 +54,7 @@ Converts the datetime to a string, formatted according to the format parameter. 
 ### Input parameters
 
 *   a date
-    Type: DateTime
+    Type: Date and time
 *   a format (**optional**)
     Type: String
 
@@ -85,7 +86,7 @@ Converts the time part of datetime to a string in a standard format. `formatTime
 ### Input parameters
 
 *   a date
-    Type: DateTime
+    Type: Date and time
 
 ### Output
 
@@ -109,7 +110,7 @@ Converts the date part of datetime to a string in a standard format. `formatDate
 ### Input parameters
 
 *   a date
-    Type: DateTime
+    Type: Date and time
 
 ### Output
 

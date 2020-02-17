@@ -4,8 +4,11 @@ parent: "integration"
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert type="info" %}} 
+App services have been deprecated in version 7.23.4 and are marked for removal in version 8.0.0. Use a [consumed web service](consumed-web-services) to consume existing app services.
+{{% /alert %}} 
 
-App services are the preferred way of connecting Mendix applications to each other. An app service can be imported and its content can be used. As for now, app services provide the following content:
+App services are a way of connecting Mendix applications to each other. An app service can be imported and its content can be used. As for now, app services provide the following content: 
 
 *   Microflow actions
 *   Domain model entities

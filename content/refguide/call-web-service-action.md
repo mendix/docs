@@ -1,12 +1,12 @@
 ---
-title: "Call Web Service Action"
-parent: "microflow-activities"
-tags: ["studio pro"]
+title: "Call Web Service"
+parent: "integration-activities"
+tags: ["studio pro", "integration activity", "call we service"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="info" %}}
-This activity can only be used in microflows, not in nanoflows.
+{{% alert type="warning" %}}
+ This activity can only be used in **Microflows**.
 {{% /alert %}}
 
 ## 1 Introduction
@@ -41,15 +41,21 @@ When calling a web service using a call-web-service activity, the location of th
 
 ### 2.4 Use Timeout on Request
 
-This can be used to throw an exception when the web service takes too long to respond after connecting. After a set amount of time, an exception will be thrown and the microflow will roll back or go into your custom error handler. Note that this does not change the connection timeout.
+This can be used to throw an exception when the web service takes too long to respond after connecting. After a set amount of time, an exception will be thrown and the microflow will roll back or go into your custom error handler.
 
-_Default value:_ No
+Default value: *Yes* (as of Studio Pro [8.5.0](/releasenotes/studio-pro/8.5#850); in earlier versions, the default value was No)
+
+{{% alert type="warning" %}}
+It is recommended that you keep this set this to **Yes**. Most cloud infrastructure services (including those used by the Mendix Cloud) will close HTTP connections automatically if there is no traffic for a few minutes, even if your activity is still waiting for a response. This means that, if your activity calls a web service which takes a long time to respond, the connection may be closed without the activity being aware of this, and your activity will not receive a response. Under these circumstances, if **Use timeout on request** is set to **No**, your activity will get stuck waiting indefinitely for data to arrive.
+{{% /alert %}}
+
+Default: *No*
 
 ### 2.5 Timeout
 
 **Timeout** specifies the timeout value in seconds.
 
-_Default value:_ 30
+Default value: *300* (as of Studio Pro [8.5.0](/releasenotes/studio-pro/8.5#850); in earlier versions, the default value was 30)
 
 ### 2.6 Validate Against WSDL
 
@@ -63,7 +69,7 @@ When consuming a WSDL that uses encoding, turning on validation will lead to a c
 
 Schema validation is not supported when you configure the [consumed web service](consumed-web-service) to send binary data as attachments.
 
-_Default value:_ No
+Default: *No*
 
 ### 2.7 Proxy Configuration
 
@@ -129,7 +135,7 @@ This option can be used when all children of the XML element of the request part
 
 If a primitive request parameter is both optional and nillable, you need to select whether or not to send the empty values.
 
-_Default:_ do not send the empty values.
+*Default value*::_ do not send the empty values.
 
 {{% /alert %}}
 
@@ -137,7 +143,7 @@ _Default:_ do not send the empty values.
 
 This option allows you to generate the XML for the request part using a template. The template defines the XML structure of the request part in plain text. Parameters can be used by writing a number between braces, e.g. '{1}'. For each parameter in the template you can specify its value using a [microflow expression](expressions) resulting in a String value.
 
-For the request header, Studio Pro provides some common XML structures in the drop down menu.
+For the request header, Studio Pro provides some common XML structures in the drop-down menu.
 
 ## 5 SOAP Response
 

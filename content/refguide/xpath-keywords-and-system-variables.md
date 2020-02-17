@@ -1,6 +1,7 @@
 ---
 title: "XPath Keywords & System Variables"
 parent: "xpath-constraints"
+tags: ["studio pro"]
 ---
 
 ## 1 Overview
@@ -42,6 +43,10 @@ These will be created for each user role in your app project. Here is an example
 | Token | Description |
 | --- | --- |
 | `[%UserRole_Administrator%]` | The Administrator user role. |
+
+Here is an example for retrieving that user role: 
+
+![](attachments/xpath/user-role.png)
 
 ### 3.3 Time-Related
 

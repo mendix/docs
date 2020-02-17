@@ -8,7 +8,7 @@ tags: ["Deploy","App","Environment","Developer Portal"]
 
 ## 1 Introduction
 
-To enter the **Environment details** page, go to the [Mendix Portal](http://home.mendix.com), select your licensed app, click **Environments**, and then click **Details** on the specific environment. 
+To enter the **Environment details** page, go to the [Developer Portal](http://home.mendix.com), select your licensed app, click **Environments**, and then click **Details** on the specific environment. 
 
 ![](attachments/environments-details/environment-details.png)   
 
@@ -27,29 +27,30 @@ The view of the **General** tab depends on the Mendix Cloud version on which the
         ![](attachments/environments-details/environment-status.png)   
 
 * **Running since** date – the date on which the app was started
-* **Name** – the type of environment (Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy#flexible-environments)): see section 2.2 [Naming of Environments](#naming) for more information
+* **Name** – the type of environment (Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy#flexible-environments)): see [Naming of Environments](#naming) for more information
 * **URL** – the URL of the app
 * **Project ID** – the unique identifier for your Mendix app
 * **Environment ID** – the unique identifier of this environment
 * **Custom domains** – the custom domains of the app
 * **Java Version** – Oracle version 1.8 or AdoptOpenJDK version 8
 * **Studio Target** – whether this environment is the one where apps will be deployed from Studio - see [Studio Deployment Settings](studio-deployment-settings) for more information
-* **Plan** – (*Cloud V4 only*) the type of plan covered by this license
-* **Instances** – (*Cloud V4 only*) A summary of the number and memory allocation of *instances* of this environment: see section 2.3, [Scaling...](#scaling) for more information
-* **Database Status** – (*Cloud V3 only*) this is **Running** by default
+* **Plan** – (*Cloud v4 only*) the type of plan covered by this license
+* **Instances** – (*Cloud v4 only*) A summary of the number and memory allocation of *instances* of this environment: see [Scaling...](#scaling) for more information
+* **Database Status** – (*Cloud v3 only*) this is **Running** by default
 * **Database Version** – the PostgreSQL version that is supporting the database
 * **Region** - the region where the app is hosted
 * **Mendix Cloud Version** – Mendix Cloud v3/Mendix Cloud v4
 
-At the bottom of the page there are three overview sections. These are described below in section 2.4, [Overviews](#overviews)
+At the bottom of the page there are three overview sections. These are described below in the [Overviews](#overviews) section.
 
 ### 2.1 Actions
 
 On the right side of the screen, you can find the following action buttons:
 
-* **Restart Application**
+* **Restart Application** – this stops the running application and starts it again — this is necessary to apply new constant values or scheduled events to the environment
 * **Start/Stop Application**
-* **Show Logged in Users**
+* **Clear Environment** *(only visible if your application is stopped)* – this clears, after confirmation, all data from your database and file storage, and removes your app from this environment — you should do this if you want to deploy a different app to this environment, it is not necessary if you are restoring a backup of the same app
+* **Show Logged in Users** 
 * **Change Admin Password**
 
 #### 2.1.1 Logging and Debugging in Mendix Cloud v4
@@ -59,7 +60,7 @@ On the right side of the screen, you can find the following action buttons:
 In Mendix Cloud v4 environments, you have two additional action buttons:
 
 * **View Live Log**
-* **Show debugger information** to show the settings to connect the debugger in Studio Pro to your app. For Mendix Cloud v4, the debugger is *always* enabled.
+* **Show debugger information** – shows the settings needed to connect the debugger in Studio Pro to your app — for Mendix Cloud v4, the debugger is *always* enabled
 
 #### 2.1.2 Logging and Debugging in Mendix Cloud v3
 
@@ -68,7 +69,7 @@ In Mendix Cloud v4 environments, you have two additional action buttons:
 In Mendix Cloud v3 environments, you have two additional action buttons:
 
 * **View Current Log**
-* **Enable/Disable Debugging** to enable or disable the debugger option. For more information about enabling the debugger, see [How to Debug Microflows Remotely](/howto7/monitoring-troubleshooting/debug-microflows-remotely)
+* **Enable/Disable Debugging** – enables or disables the debugger option — for more information about enabling the debugger, see [How to Debug Microflows Remotely](/howto7/monitoring-troubleshooting/debug-microflows-remotely)
 
 ### 2.2 Naming of Environments – Flexible Environments in Mendix Cloud v4{#naming}
 
@@ -138,8 +139,7 @@ The limitation types are the following:
 * **Concurrent anonymous** – the number of anonymous users that are logged in simultaneously
 * **Named** – the number of named users registered in the database that are allowed to use the application
 
-
-## 3 Model Options Tab
+## 3 Model Options Tab {#model-options}
 
 ![](attachments/environments-details/model-options.png)
 
@@ -205,7 +205,7 @@ HTTP Headers allows you to set the values of selected HTTP response headers. The
 This replaces the option to prevent embedding your app in an IFrame with more flexible options to set HTTP Headers.
 {{% /alert %}}
 
-For Mendix Cloud v3, only *X-Frame-Options* is supported. For Mendix Cloud v4 the HTTP headers which are supported in the Mendix Developer Portal are:
+For Mendix Cloud v3, only *X-Frame-Options* is supported. For Mendix Cloud v4 the HTTP headers which are supported in the Developer Portal are:
 
 | Header | Description | Additional Information |
 | --- | --- | --- |
@@ -219,17 +219,19 @@ For Mendix Cloud v3, only *X-Frame-Options* is supported. For Mendix Cloud v4 th
 
 There are three types of value for these headers:
 
-* Choose a value from a dropdown
+*  Choose a value from a drop-down
 
-   ![](attachments/environments-details/http-header-dropdown.png)
+    ![](attachments/environments-details/http-header-dropdown.png)
 
-* Choose a value from a dropdown and specify a URL
+*  Choose a value from a drop-down and specify a URL
 
-   ![](attachments/environments-details/http-header-url.png)
+    ![](attachments/environments-details/http-header-url.png)
 
-* Enter the required values as a string
+*  Enter the required values as a string
 
-   ![](attachments/environments-details/http-header-string.png)
+    ![](attachments/environments-details/http-header-string.png)
+
+The changes to the headers will be implemented when the app is redeployed.
 
 Additional information can be found in the Mozilla developer guide [HTTP headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers).
 
@@ -260,7 +262,7 @@ For more information, see [How to Restrict Access for Incoming Requests](access-
 
 Add client certificates (in the PKCS12 format) or certificate authorities (in the PEM format). These will be used when your application initiates SSL/TLS connections.
 
-## 5 Log Levels Tab
+## 5 Log Levels Tab{#log-levels}
 
 ![](attachments/environments-details/loglevels-tab.png)   
 
@@ -301,7 +303,7 @@ Use the Custom Runtime Settings section to perform the following actions:
 * **Edit** the runtime setting
 * **Delete** the runtime settings
 
-For more information about runtime settings, read the [Custom Settings](/refguide/custom-settings) and [Tricky Custom Settings in Mendix Runtime](/refguide/tricky-custom-runtime-settings) documentation.
+For more information about runtime settings, read the [Runtime Customization](/refguide/custom-settings) and [Tricky Custom Settings in Mendix Runtime](/refguide/tricky-custom-runtime-settings) documentation.
 
 The Mendix Cloud uses runtime settings to configure the included systems for logs, backups, and database. Therefore, the following settings are **not** configurable by users:
 

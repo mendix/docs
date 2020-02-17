@@ -2,7 +2,7 @@
 title: "Denormalize Data to Improve Performance"
 category: "Data Models"
 menu_order: 6
-tags: []
+tags: ["studio pro"]
 ---
 
 ## 1 Introduction
@@ -113,10 +113,10 @@ Now the application is ready to store redundant data, but you still need to keep
     ![](attachments/18448743/18582155.png)
 
 15. Insert an aggregate list activity, double-click it to open its properties on the **Aggregate List** dialog box, and do the following:
-    * Select **OrderList** as the **Input Variable**
+    * Select **OrderList** as the **Input > List**
     * Select **Sum** as the **Function**
     * Select **Totalprice** as the **Attribute**
-    * Enter *SumTotalprice* as the **Output Variable** name
+    * Enter *SumTotalprice* as the **Output > Variable** name
 
     ![](attachments/18448743/18582153.png)
 
@@ -125,7 +125,7 @@ Now the application is ready to store redundant data, but you still need to keep
     ![](attachments/18448743/18582152.png)
     
 17. Insert a change activity, double-click it to open its properties on the **Change Object** dialog box, and do the following:
-    * Select **Customer** as the **Input Variable**
+    * Select **Customer** as the **Input > Object**
     * Select **Yes** as the **Commit** action
     * Select **Yes** to refresh in the client (the object changes are made on the server side, and with this option, the server triggers the client to refresh the object)
     * Click **New** to create a new change item
@@ -144,11 +144,9 @@ Now the application is ready to store redundant data, but you still need to keep
 * [Work with Images & Files](working-with-images-and-files)
 * [Create a Basic Data Layer](create-a-basic-data-layer)
 * [Set Up Data Validation](setting-up-data-validation)
-* [Work with Object Events](working-with-object-events)
 * [Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
 * [Stories](/developerportal/collaborate/stories)
 * [Define Access Rules Using XPath](../logic-business-rules/define-access-rules-using-xpath)
-* [Perform the Scout and Windows 10 Workaround](../front-end/perform-scout-and-windows-10-workaround)
 * [Attributes](/refguide/attributes)
 * [Event Handlers](/refguide/event-handlers)
 

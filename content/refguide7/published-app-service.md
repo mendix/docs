@@ -3,6 +3,9 @@ title: "Published App Service"
 parent: "published-app-services"
 ---
 
+{{% alert type="info" %}}
+App services have been deprecated in version 7.23.4 and are marked for removal in version 8.0.0. Use a [published web service](published-web-services) or a [published REST service](published-rest-services) instead.
+{{% /alert %}}
 
 ## General
 

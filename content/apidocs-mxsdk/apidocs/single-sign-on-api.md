@@ -5,6 +5,10 @@ category: "API Documentation"
 
 ## 1 Connecting to Mendix OpenID
 
+{{% alert type="warning" %}}
+The API for the Mendix Single Sign-On system based on OpenID 2.0 has been deprecated and will be discontinued from 1st April 2020.
+{{% /alert %}}
+
 The Mendix Single Sign-On system is based on the [OpenID 2.0 protocol](http://openid.net/specs/openid-authentication-2_0.html) and any AppCloud-Powered Mendix application will automatically use this single sign-on system. Non-Mendix apps can be integrated with the Mendix Single Sign-On server as well by using one of the many available implementations. An extensive list of existing implementations can be found [here](http://openid.net/developers/libraries/obsolete/). The OP Endpoint to connect to is [https://mxid2.mendixcloud.com/mxid2/discover](https://mxid2.mendixcloud.com/mxid2/discover). Note that all Mendix OpenIDs (OP Identifiers) start with `https://mxid2.mendixcloud.com/mxid2/`.
 
 ## 2 Realm Verification
@@ -19,5 +23,5 @@ Currently no OpenID extensions (like OpenID AX) are supported to retrieve profil
 
 The following optional query parameters can be sent as part of the authentication requests:
 
-*   _mxid2.continuation_ : The URL the user should be redirected to after the user has successfully been authenticated.
-*   _mxid2.logoffcallback_ : If provided, this URL will be invoked once using a GET request by the Mendix Single Sign-On server to indicate that the user has logged out globally. This request will be invoked with query parameters: The _fingerprint_ containing the base64 encoding of the user-agent string of the browser, and the _openid_ of the user that has logged out. His/her session could be destroyed locally if desired.
+*   `mxid2.continuation` – The URL the user should be redirected to after the user has successfully been authenticated.
+*   `mxid2.logoffcallback` – If provided, this URL will be invoked once using a GET request by the Mendix Single Sign-On server to indicate that the user has logged out globally. This request will be invoked with query parameters: The `fingerprint` containing the base64 encoding of the user-agent string of the browser, and the `openid` of the user that has logged out. His/her session could be destroyed locally if desired.

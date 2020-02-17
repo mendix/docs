@@ -1,24 +1,28 @@
 ---
 title: "Regular Expressions"
-category: "App Modeling"
+parent: "resources"
+menu_order: 70
+tags: ["studio pro", "regular expressions", "regular expression"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+## 1 Introduction
 
 A regular expression describes a set of criteria that a string can match. In the [validation rules](validation-rules) of an entity a regular expression can be used to validate whether an attribute of type String matches these criteria.
 
 A regular expression has the following properties.
 
-## Common
+## 2 Common
 
-### Name
+### 2.1 Name
 
 The name can be used to refer to the regular expression from a [validation rule](validation-rules) of an entity.
 
-### Documentation
+### 2.2 Documentation
 
 This is for documentation purpose only; it is not visible in the end-user application that you are modeling.
 
-## Expression
+## 3 Expression
 
 The expression defines the criteria that a string should be checked against in a [formal, internationally standardized regular expression language](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html).
 
@@ -37,7 +41,7 @@ The criteria are:
 
 {{% /alert %}}
 
-### Subexpressions
+### 3.1 Subexpressions
 
 A regular expression consists of a sequence of subexpressions. A string matches a regular expression if all parts of the string match these subexpressions in the same order.
 
@@ -73,7 +77,7 @@ A regular expression can contain the following types of subexpressions:
 
 * A literal character – this is a character that does not have a special meaning in the regular expression language and it matches itself. This is effectively any character except `\[](){}^-$?*+|.`. For example:
 
-    * *`space`* in the Dutch zip code example is a literal character that just matches itself
+    * *`space`* in the Dutch ZIP code example is a literal character that just matches itself
 
     If you need to match one of the characters which is not a literal, prefix it with a backslash (`\`).
 
@@ -81,7 +85,7 @@ A regular expression can contain the following types of subexpressions:
 
 * `\d` – a digit" an abbreviation for `[0-9]`
 
-### Quantifiers
+### 3.2 Quantifiers
 
 The number of times that a subexpression may occur in a string is indicated by a quantifier after the subexpression. If no quantifier is present, the subexpression must occur exactly once.
 
@@ -94,7 +98,7 @@ The following quantifiers can be used:
 | + | The preceding subexpression should occur once or more. |
 |   | No quantifier means that the preceding subexpression should occur exactly once. |
 
-## **Read More**
+## 4 Read More
 
 * [https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html#matches-java.lang.String-java.lang.CharSequence-](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html#matches-java.lang.String-java.lang.CharSequence-)
 * [http://www.regular-expressions.info/java.html](http://www.regular-expressions.info/java.html)

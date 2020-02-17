@@ -1,6 +1,8 @@
 ---
 title: "Integration Activities"
 parent: "activities"
+menu_order: 60
+tags: ["studio pro"]
 ---
 
 ## Call REST Service

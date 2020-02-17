@@ -1,7 +1,12 @@
 ---
 title: "Rollback Object"
 parent: "object-activities"
+tags: ["studio pro"]
 ---
+
+{{% alert type="warning" %}}
+This activity can be used in both **Microflows** and **Nanoflows**.
+{{% /alert %}}
 
 ## 1 Introduction
 
@@ -15,11 +20,11 @@ When the Rollback object action is performed in a sub-microflow, it rolls back t
 
 {{% alert type="info" %}}
 
-See [Microflow Element Common Properties](microflow-element-common-properties) for properties that all microflow activities share (for example, caption). This page only describes the properties specific to the action.
+See [Common Properties](microflow-element-common-properties) for properties that all microflow activities share (for example, caption). This page only describes the properties specific to the action.
 
 {{% /alert %}}
 
-If the microflow is called from the client, [input widgets](input-widgets) showing the rolled back object's attributes are refreshed automatically. This includes updating their visibility and editability [conditions](conditions).
+If the microflow is called from the client, [input widgets](input-widgets) showing the rolled back object's attributes are refreshed automatically. This includes updating their visibility and editability [properties](common-widget-properties).
 
 ## 2 Input Properties
 
@@ -39,4 +44,4 @@ Rolled back attribute values are always reflected in client. [Data sources](data
 When inside a [nanoflow](nanoflows), the Rollback object action reloads [data sources](data-sources) as if **Refresh in client** was set to *Yes*.
 {{% /alert %}}
 
-_Default value_: No
+Default: *No*

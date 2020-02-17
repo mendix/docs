@@ -1,6 +1,7 @@
 ---
 title: "DateTime Handling FAQ"
 parent: "date-and-time-handling"
+tags: ["studio pro"]
 ---
 
 
@@ -42,7 +43,7 @@ You can download the DateTimeLibrary App Store module to get an implementation f
 
 ### How is a non-localized date supposed to work?
 
-Per attribute of type DateTime you can specify whether you want the date and time to be localized. Both localized and non-localized attributes are stored in UTC but only localized attributes are shown in the time zone of the user when displaying (or picking) their value, for example in the client or in generated documents. Use non-localized attributes if you are not interested in the time component (e.g. birthdays) or if you want a date to look exactly the same all over the world. Otherwise, the date could shift because of time zone differences: a date and time early in the morning on April 2nd in Europe will be on April 1st in the USA.
+Per attribute of type **Date and time** you can specify whether you want the date and time to be localized. Both localized and non-localized attributes are stored in UTC but only localized attributes are shown in the time zone of the user when displaying (or picking) their value, for example in the client or in generated documents. Use non-localized attributes if you are not interested in the time component (e.g. birthdays) or if you want a date to look exactly the same all over the world. Otherwise, the date could shift because of time zone differences: a date and time early in the morning on April 2nd in Europe will be on April 1st in the USA.
 
 ### If I assign a non-localized date the value of token: `[%CurrentDateTime%]` what should I be seeing in the client if I am in EST? It is currently 14:15 (EST), should I see that time or 19:15?
 
@@ -75,4 +76,4 @@ A scheduled event also needs a time zone to operate in, just like when a user wo
 
 ### How are DateTimes in XML that have no timezone information treated?
 
-If a DateTime is encountered in XML that is processed using an XML-To-Domain mapping and specifies no timezone, before Mendix 5.13 the DateTime would be interpreted as if it was in the server's timezone. After Mendix 5.13 this DateTime is interpreted as if it was in UTC, making it more inline with all the other DateTime operations and less error prone. The location of the machine running the server won't affect any operations anymore. This may however change behavior.
+If a DateTime is encountered in XML that is processed using an XML-To-Domain mapping and specifies no timezone, this DateTime is interpreted as if it is UTC. The location of the machine running the server won't affect any operations.

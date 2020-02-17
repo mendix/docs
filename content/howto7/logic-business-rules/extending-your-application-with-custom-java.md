@@ -22,7 +22,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 	{{% alert type="info" %}}You can use any text editor to create custom Java actions, but we highly recommend using Eclipse. The Modeler contains a **Deploy for Eclipse** feature verifying that everything that needs to be configured in Eclipse is done automatically. All you have to do is import the project into your Eclipse working environment.
 {{% /alert %}}
 
-* Have an app project with the **Asset Manager** starter app (**Create App** > **Asset Manager**)
+* Have an app project with the **Asset Manager** app template
 
 ## 3 Adding a Java Action in the Modeler
 

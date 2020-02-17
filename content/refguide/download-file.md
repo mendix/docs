@@ -1,10 +1,12 @@
 ---
 title: "Download File"
 parent: "client-activities"
+tags: ["studio pro"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="info" %}}
-This activity can only be used in microflows, not in nanoflows.
+{{% alert type="warning" %}}
+This activity can only be used in **Microflows**.
 {{% /alert %}}
 
 ## 1 Introduction
@@ -13,7 +15,7 @@ The download-file action can be used to enable the browser to download a specifi
 
 {{% alert type="info" %}}
 
-See [Microflow Element Common Properties](microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
+See [Common Properties](microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
 
 {{% /alert %}}
 

@@ -1,6 +1,7 @@
 ---
 title: "Parse Integer"
 parent: "expressions"
+tags: ["studio pro"]
 ---
 
 

@@ -1,7 +1,7 @@
 ---
 title: "Use Mendix Data Storage APIs to Build Reusable Microflow Actions"
 category: "Extensibility"
-menu_order: 5
+menu_order: 90
 description: "Describes creating custom microflow actions using Data Storage APIs."
 tags: ["java", "connector kit", "microflow action", "parameter type", "sql", "xpath", "oql", "datastorage"]
 output:
@@ -225,7 +225,7 @@ You create a Java action with parameters for the start date and the end date. Yo
 
     ![](attachments/dsapi/image036.png)
 
-When you use this in a microflow, you just need to specify the start and end dates, and the name of the variable that will hold the resulting list. This example iterates through all the data objects in the list and prints the date of that object.
+When you use this in a microflow, you just need to specify the start and end dates, and the name of the resulting list. This example iterates through all the data objects in the list and prints the date of that object.
 
 ![](attachments/dsapi/image037.png)
 

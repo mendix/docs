@@ -2,8 +2,7 @@
 title: "Published REST Path Parameters"
 parent: "published-rest-service"
 menu_order: 30
-#description: " "
-tags: ["published REST", "path parameters", "Data and Time"]
+tags: ["published REST", "path parameters", "Data and Time", "studio pro"]
 # combine this with published rest service
 ---
 

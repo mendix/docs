@@ -23,10 +23,12 @@ When the Mendix company and app roles as well as the contact information are imp
 Before starting this how-to, make sure you have completed the prerequisites described below:
 
 * To add extra Company Admins, you need to be a **Company Admin**
-* To change the App Contact, you need to have a **SCRUM Master** role or possess the App Team **Settings** permission 
+* To change the App Contact, you need to have a **Scrum Master** role or possess the App Team **Settings** permission 
 * To change the Technical Contact, you need to be a **Technical Contact**
 
 ## 3 Adding a Company Admin
+
+If your company does not yet have a Company Admin, submit a [Mendix Support](https://support.mendix.com/hc/en-us) request to assign one.
 
 A company can have multiple Company Admins to manage the company's settings, users, apps, and nodes. 
 
@@ -38,16 +40,16 @@ When you are a Company Admin, you can add extra Company Admins by following thes
 
 2.  Select the **Company Admins** tab:
 
-	![](attachments/companyadmin-overview.png)
+	![](attachments/company-admin-overview.png)
 
 3. Click **Add Company Admin**.
 4.  Select the users that should be changed into Company Admins, then select the permissions:
 
-	* **Can manage Company** – can manage all the settings of the company
+	* **Can manage Company**<a name="app-store-manager"></a> – can manage all the settings of the company
+		* In addition, this role can create, manage, and delete Mendix App Store [user groups](../app-store/app-store-overview#user-groups)
 	* **Can manage Users** – can manage only the **Users** page of the company settings
 	* **Can manage Apps** – can manage only the **Apps** page of the company settings
 	* **Can manage Nodes** – can manage only the **Nodes** page of the company settings
-	* **Can manage App Store**<a name="app-store-manager"></a> – can specify protected App Store items, add [content owners](../app-store/app-store-overview#cm) to protected items, and configure [external downloaders](../app-store/app-store-overview#ext) for private App Store content; this permission makes the Company Admin the default content owner for all protected App Store items
 
 	![](attachments/add-companyadmin.png)
 
@@ -98,7 +100,7 @@ If you are the current Technical Contact for an app, you can make another team m
 
 It is possible to change or add new App Team roles for a specific app or at the company level for all company apps. This depends on your role:
 
-* 	As a SCRUM Master, you can edit roles for the specific app of which you are the SCRUM Master by selecting **Team** > **Manage Team** (which will take you to the **App Team** tab of the **Settings** > **Security** page), clicking **Role settings,** then making your edits or clicking **New role** to create a custom new App Team role for that app
+* 	As a Scrum Master, you can edit roles for the specific app of which you are the Scrum Master by selecting **Team** > **Manage Team** (which will take you to the **App Team** tab of the **Settings** > **Security** page), clicking **Role settings,** then making your edits or clicking **New role** to create a custom new App Team role for that app
 
 	![](attachments/app-roles-edit.png)
 

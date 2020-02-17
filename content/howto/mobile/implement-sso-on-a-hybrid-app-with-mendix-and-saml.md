@@ -8,7 +8,15 @@ tags: ["SAML", "SSO", "mobile", "hybrid app", "phonegap", "authentication"]
 
 ## 1 Introduction
 
-This how-to will describe the challenges behind implementing SSO (single sign-on) in hybrid mobile apps and teach you how this can be solved in Mendix app projects.
+This how-to will describe the challenges involved in implementing SSO (single sign-on) in hybrid mobile apps, and teach you how this can be solved in Mendix app projects.
+
+{{% alert type="warning" %}}
+The implementation described in this how-to will not work when you have enabled anonymous users in your project. Disable anonymous users in your project to use this implementation.
+{{% /alert %}}
+
+{{% alert type="warning" %}}
+The implementation described in this how-to will not work when you have enabled the PIN feature for your hybrid app. Disable the PIN feature for your hybrid app to use this implementation.
+{{% /alert %}}
 
 ## 2 Prerequisites
 
@@ -21,9 +29,9 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Context
 
-### 3.1 Mendix Mobile Apps, Hybrid Apps, Cordova, and PhoneGap Build
+### 3.1 Hybrid Apps, Cordova, and PhoneGap Build
 
-Mendix apps can be viewed in mobile web browsers. However, some features of mobile devices cannot be accessed through HTML and JavaScript. Also, if you want to publish your app in the Apple App Store or Google Play Store, you have to wrap your app in a native shell. Mendix uses [Cordova](https://cordova.apache.org/) to do this. Cordova creates a native wrapper around a web application and provides access to native functionality through a JavaScript API. These apps are called hybrid apps, because they are a hybrid of a web and a native app. To create binaries of your app, Mendix leverages PhoneGap Build so that you do not need to install software (Android SDK, XCode) for this.
+Hybrid Mendix apps can be viewed in mobile web browsers. However, some features of mobile devices cannot be accessed through HTML and JavaScript. Also, if you want to publish your app in the Apple App Store or Google Play Store, you have to wrap your app in a native shell. Mendix uses [Cordova](https://cordova.apache.org/) to do this. Cordova creates a native wrapper around a web application and provides access to native functionality through a JavaScript API. These apps are called hybrid apps, because they are a hybrid of a web and a native app. To create binaries of your app, Mendix leverages PhoneGap Build so that you do not need to install software (Android SDK, XCode) for this.
 
 ### 3.2 How Authentication Against an IdP Works<a name="how"></a>
 
@@ -36,11 +44,9 @@ When authenticating against an identity provider (IdP), the following steps are 
 5. The SAML token is sent to the Mendix Server by redirecting the client user agent back to the Mendix app.
 6. After authentication, Mendix redirects the client to the page requested initially.
 7. The client now requests the page requested initially.
-8. Now that a security context exists, Mendix responds with the requested resource (page).<a name="diagram"></a>
+8. Now that a security context exists, Mendix responds with the requested resource (page).
 
-![](attachments/implement-sso/saml-2.0-from-wikipedia.png)
-
-Diagram source: [SAML 2.0 Web Browser SSO Profile](https://en.wikipedia.org/wiki/SAML_2.0#SP_POST_Request;_IdP_POST_Response)
+For more information on the authentication process, see Wikipedia's [SAML 2.0 Web Browser SSO Profile](https://en.wikipedia.org/wiki/SAML_2.0#SP_POST_Request;_IdP_POST_Response).
 
 ## 4 The Problems<a name="problems"></a>
 
@@ -66,63 +72,58 @@ Mendix has created a standard approach to support SSO via the SAML module in a M
 
 The JavaScript code below will address the two problems described above.
 
-To address the [first problem](#firstproblem), when the mobile app is starting to load, the JavaScript below will be executed. It opens a new window using [Cordova’s InAppBrowser](https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-inappbrowser/), and all the redirects for the authentication are done there. When all the redirects are completed and the requested resource is sent from the Mendix Server back to the app (which is step 8 in the [SAML 2.0 Web Browser SSO Profile](#diagram) diagram), the authentication process is complete. The new window can then be closed, and the loading of the localhost *index.html* page can proceed.
+To address the [first problem](#firstproblem), when the mobile app is starting to load, the JavaScript below will be executed. It opens a new window using [Cordova’s InAppBrowser](https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-inappbrowser/), and all the redirects for the authentication are done there. When all the redirects are completed and the requested resource is sent from the Mendix Server back to the app, the authentication process is complete. The new window can then be closed, and the loading of the localhost *index.html* page can proceed.
 
 ```javascript
 MxApp.onConfigReady(function(config) {
-	
     var samlLogin = function() {
         var samlWindow = cordova.InAppBrowser.open(window.mx.remoteUrl + "SSO/", "_blank", "location=no,toolbar=no");
-        var exitFn = function(){
+
+        var exitFn = function() {
             navigator.app.exitApp();
         };
+
         samlWindow.addEventListener("exit", exitFn);
-        var cb = function(event) {        
-            if (event.url.indexOf(window.mx.remoteUrl) == 0 && event.url.indexOf("SSO") == -1) {
-            
-                samlWindow.removeEventListener("loadstop", cb);
-                samlWindow.removeEventListener("exit", exitFn);
-				
-                samlWindow.executeScript({
-                    code: "document.cookie;"
-                }, function(values) {
-                    var value = values[0] + ";";
-                    var token = new RegExp('AUTH_TOKEN=([^;]+);', 'g').exec(value);
-                    var authPromise = new Promise(function(resolve, reject) {
-                        if (token && token.length > 1) {
-                            window.localStorage.setItem("mx-authtoken", token[1]);
-							
-                            window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function (fs) {
-                                fs.root.getFile(".mx-token", { create: true, exclusive: false }, function (fileEntry) {
-                                    fileEntry.createWriter(function (fileWriter) {
-                                        fileWriter.onwriteend = resolve;
-                                        fileWriter.onerror = reject;
-                                        fileWriter.write(token[1]);
-                                    });
-                                }, reject);
-                            }, reject);
-                        } else {
-                            resolve();
-                        }
+
+        var loop = setInterval(function() {
+            samlWindow.executeScript({
+                code: "window.location.href;"
+            }, function(href) {
+                if (href[0].indexOf(window.mx.remoteUrl) == 0 && href[0].indexOf("SSO") == -1) {
+                    samlWindow.executeScript({
+                        code: "document.cookie;"
+                    }, function(values) {
+                        samlWindow.removeEventListener("exit", exitFn);
+
+                        var authPromise = new Promise(function(resolve, reject) {
+                            var token = new RegExp('AUTH_TOKEN=([^;]+)', 'g').exec(values[0]);
+                            if (token && token.length > 1) {
+                                mx.session.tokenStore.set(token[1]).then(resolve);
+                            } else {
+                                resolve();
+                            }
+                        });
+
+                        var closeWindow = function() {
+                            samlWindow.close();
+
+                            if (window.mx.afterLoginAction) {
+                                window.mx.afterLoginAction();
+                            }
+                        };
+
+                        authPromise.then(closeWindow);
                     });
-                    
-                    var closeWindow = function() {
-                        samlWindow.close();
-                        if (window.mx.afterLoginAction) {
-                            window.mx.afterLoginAction();
-                        }
-                    };
-                    authPromise.then(closeWindow, closeWindow);
-                });
-            };
-        }
-        samlWindow.addEventListener("loadstop", cb);
+                };
+            });
+        }, 1000);
     }
+
     config.ui.customLoginFn = samlLogin;
 });
 ```
 
-To address the [second problem](#secondproblem), after a successful authentication against the IdP, Mendix stores a token in the device’s local storage. The system will use that token from that moment on to create a new session for the user. The session is created in Mendix only, so a new authentication against the IdP will not be performed again. This token is a TokenInformation (part of the System module) object, and it can be accessed/edited in microflows. By default, this local token will never expire, but this can be overridden by changing the `com.mendix.webui.HybridAppLoginTimeOut` [custom runtime setting](/refguide/custom-settings). The downside of this approach is that access rights will not be updated upon login, since no interaction is done with the IdP. However, in most systems using SSO, user and role provisioning is handled separately from the authentication, so this might not be an issue.
+To address the [second problem](#secondproblem), after a successful authentication against the IdP, Mendix stores a token in the device’s local storage. The system will use that token from that moment on to create a new session for the user. The session is created in Mendix only, so a new authentication against the IdP will not be performed again. This token is a TokenInformation (part of the System module) object, and it can be accessed/edited in microflows. By default, this local token will never expire, but this can be overridden by changing the `com.mendix.webui.HybridAppLoginTimeOut` [Runtime customization setting](/refguide/custom-settings). The downside of this approach is that access rights will not be updated upon login, since no interaction is done with the IdP. However, in most systems using SSO, user and role provisioning is handled separately from the authentication, so this might not be an issue.
 
 ### 5.2 The Hybrid App Package
 
@@ -149,7 +150,7 @@ To use the hybrid app package, follow these steps:
     ![](attachments/implement-sso/entry.js-with-fix.png)
 
 7.  Create the PhoneGap Build package by following the instructions in the **Through Uploading to PhoneGap Build** section of the [Mendix PhoneGap Build App Template documentation](https://github.com/mendix/hybrid-app-template#through-uploading-to-phonegap-build). Be sure to read the **Prerequisites** and **Build on PhoneGap** sections of this documentation as well. This is an overview of the steps:<br>
-    a. Install [Node.js](https://nodejs.org/en/download/). <br>
+    a. Install the latest stable version of [Node.js](https://nodejs.org/en/download/). <br>
     b. In the hybrid app root folder, execute **npm install**. <br>
     {{% alert type="warning" %}}Not all versions of the **cordova-inappbrowser-plugin** will work correctly when implementing SSO for your hybrid app. In some versions, the InAppBrowser page is not always closed, causing the application to be opened in the InAppBrowser instead of the app. This can result in incorrect behavior, such as the camera not being detected. To make sure the SSO implementation works correctly, we recommend using version **3.0.0** of the cordova-inappbrowser-plugin. You can check the version of the plugin that is used by opening the *config.xml.mustache* file (under `src`) and looking for the following line: `<plugin name="cordova-plugin-inappbrowser" source="npm" spec="1.4.0" />`.  If necessary, change the plugin version to `3.0.0` before packaging your app: `<plugin name="cordova-plugin-inappbrowser" source="npm" spec="3.0.0" />`.{{% /alert %}}<br>
     c. In the hybrid app root folder execute **npm run package**.<br>

@@ -8,6 +8,10 @@ tags: ["Developer Portal", "App Services", "Deploy"]
 
 ## 1 Introduction
 
+{{% alert type="info" %}}
+App services are deprecated and marked for removal. Use a [published web service](/refguide/published-web-services) or a [published REST service](/refguide/published-rest-services) instead.
+{{% /alert %}}
+
 The **App Services** page provides an overview of possible resources that can be published to the [Mendix App Store](https://appstore.home.mendix.com/):
 
 * **App Service**
@@ -22,7 +26,7 @@ On the **App Service** page, you can see a list of the available app services, w
 
 ![](attachments/app-services/publish-appservice.png)
 
-For more information, see [Published App Services](/refguide/published-app-services) in the Mendix Studio Pro Guide as well as the [Mendix App Services: Putting Them to Work for Your Projects](https://www.mendix.com/videos/mendix-app-services-putting-work-projects-pieter-van-balen-mendix-developer/) blog post.
+For more information, see [Published App Services](/refguide/published-app-services) in the *Studio Pro Guide*.
 
 ### 2.1 Settings
 
@@ -88,6 +92,5 @@ For more information, see [How to Share App Store Content](../app-store/share-ap
 ## 5 Read More
 
 * [Deploy and Manage](/developerportal/deploy)
-* [Mendix App Services: Putting Them to Work for Your Projects](https://www.mendix.com/videos/mendix-app-services-putting-work-projects-pieter-van-balen-mendix-developer/)
 * [Published App Service](/refguide/published-app-services)
 * [How to Share App Store Content](../app-store/share-app-store-content)

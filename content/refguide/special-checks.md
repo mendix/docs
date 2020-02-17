@@ -1,6 +1,7 @@
 ---
 title: "Special Checks"
 parent: "expressions"
+tags: ["studio pro"]
 ---
 
 ## Checking for an Empty Object
@@ -61,7 +62,7 @@ Type: Any type of object.
 
 ### Output
 
-Returns whether the object is new (created but not yet committed). Note this only holds when this function is called on the variable which represents the created object. When the object is retrieved from the database isNew will always yield false.
+Returns whether the object is new (created but not yet committed). Note this only holds when this function is called on a created object. When the object is retrieved from the database isNew will always yield false.
 
 Type: Boolean.
 
@@ -72,7 +73,7 @@ isNew($object1)
 ## Checking Whether an Object Is Synced<a name="synced"></a>
 
 {{% alert type="info" %}}
-This function is available only in expressions for [conditional visibility or editability](conditions), as only they are evaluated client-side.
+This function is available only in expressions for [conditional visibility or editability](common-widget-properties), as only they are evaluated client-side.
 {{% /alert %}}
 
 ### Input

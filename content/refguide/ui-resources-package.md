@@ -1,6 +1,7 @@
 ---
 title: "UI Resources Package"
-category: "App Modeling"
+parent: "modules"
+tags: ["studio pro", "ui resources"]
 ---
 
 ## 1 Introduction

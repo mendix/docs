@@ -12,7 +12,7 @@ Mendix apps encourage the application of a services-oriented architecture, with 
 
 One important aspect of services is that all access to data and logic is handled by the service operations. Direct access to databases used for storing the service data is discouraged, because this would bypass the business rules and security handled by the service. This creates a challenge for generic reporting, data warehousing, and ETL tooling.
 
-A new standard called OData being adopted more and more, as this enables generic data access within a services-oriented architecture. [OData](http://www.odata.org) is “an open protocol to allow the creation and consumption of queryable and interoperable Restful APIs in a simple and standard way.". In other words, it enables tools to use any REST/OData service by providing metadata that describes the data being provided and by standardizing the messages exchanged with the OData services.
+A new standard called OData is being adopted more and more, as this enables generic data access within a services-oriented architecture. [OData](http://www.odata.org) is “an open protocol to allow the creation and consumption of queryable and interoperable Restful APIs in a simple and standard way.". In other words, it enables tools to use any REST/OData service by providing metadata that describes the data being provided and by standardizing the messages exchanged with the OData services.
 
 A reporting tool like Tableau or Excel can discover what data and functionality is available in an OData service and provide a generic way for users to build new queries for the data.
 
@@ -27,196 +27,154 @@ A reporting tool like Tableau or Excel can discover what data and functionality 
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Open the [Company Expenses sample app](https://appstore.home.mendix.com/link/app/240/Mendix/Company-Expenses) from the Mendix App Store in Studio Pro
-    * Add some expense reports to the app so that you have data to work with in this how-to
-* Install Excel 2013
-* Download and install [Tableau](http://www.tableau.com/) (you can use the trial version for 14 days)
+* Create an app using the **Asset Manager** app template
+* Install Excel (we will use Excel for Office 365)
+* Download and install [Tableau](https://public.tableau.com) (The public version of Tableau is free)
 
 ## 3 Creating a Published OData Service
 
 A published OData service can be used by third-party applications to read data from a Mendix application. In this chapter, you will create and configure such a service.
 
-1. Open Studio Pro and add a new folder to the **Expenses** folder called **OData Services**.
-2. Right-click the OData Service folder and select **Add** > **Published services** > **Published OData service**:
+1. Open Studio Pro and add a folder named *OData Services* to **MyFirstModule**.
+2.  Right-click the new folder and select **Add other** > **Published OData service**:
 
-    ![](attachments/18448736/18582029.png)
+	![](attachments/18448736/18582029.png)
 
-3.  Enter the name **Expenses** and click **OK**.
+3.  Enter the name **Assets** and click **OK**:
 
-    ![](attachments/18448736/18582027.png)
+	![](attachments/18448736/18582027.png)
 
-4.  Go to the Resources tab and click **Add published resource**:
+4.  Under **Resources**, click **Add**:
 
-    ![](attachments/18448736/18581979.png)
+	![](attachments/18448736/18581979.png)
 
-5. In the **Edit published resource** window, you can select an **Entity** as the data source for the OData service. Security in OData is managed by the project security settings and the entity level access rules; therefore, if you have already configured access rules in your app, you don't have to configure it separately for OData.
+5.  In the **Select Persistable Entity** window, select the **SmartTask** entity and click **Select**:
 
-    Click **Select**:
+	![](attachments/18448736/18582024.png)
 
-    ![](attachments/18448736/18581978.png)
+	Security in OData is managed by the **Project Security** settings and the entity-level access rules; therefore, if you have already configured access rules in your app, you do not have to configure security separately for OData.
 
-6. In the **Select Entity** window, select the **Expense** entity and click **Select**:
+6.  Repeat steps 4 and 5 for the **Engineer** entity:
 
-    ![](attachments/18448736/18582024.png)
+	![](attachments/18448736/18581976.png)
 
-7. In the **Edit published resource** window, do the following:
-    * Change the **Exposed entity name** to *Expenses*:
-    * Click **Select** for **Exposed attributes and associations**
+7.  On the **Settings** tab, choose **As an associated id** for **Associations**. Excel can handle the setting **As a link**, but Tableau does not support it.
 
-    ![](attachments/18448736/18581977.png)
+	![](attachments/18448736/18581982.png)
 
-8. In the **Select members for entity** window, select what values are exposed in the OData service, then click **OK** to save the resource:
+Start the application. The OData service is now ready to be consumed.
 
-    ![](attachments/18448736/18581982.png)
+## 4 Working with Mendix Data in Excel for Office 365
 
-9. Repeat steps 4–8 for the **ExpenseType** and **Employee** entities:
+1. Open Excel.
+2.  Open the **DATA** tab and select **Get Data** > **From Other Sources** > **From OData Feed**:
 
-    ![](attachments/18448736/18581976.png)
+	![](attachments/18448736/18581994.png)
 
-10. Click **OK** to save the OData service.
+3.  On the **OData Feed** dialog box, enter `http://localhost:8080/odata/Assets/v1/` for the **URL** and Click **OK**:
 
-Restart the application. The OData service is now ready to be consumed.
+	![](attachments/18448736/18581993.png)
 
-## 4 Working with Mendix Data in Excel 2013
+4.  Select **SmartTasks** in the Navigator and click **Load**:
 
-1. Open Excel and create a new blank workbook:
+	![](attachments/18448736/18581990.png)
 
-    ![](attachments/18448736/18581995.png)
+5. The data of the Mendix application is now available in Excel:
 
-2. Open the **DATA** tab and select **From Other Sources** > **From OData Data Feed**:
-
-    ![](attachments/18448736/18581994.png)
-
-3. On the **Data Connection Wizard** dialog box, do the following:
-    * Enter `http://localhost:8080/odata/Published_OData_service/Expenses` for the **Location of the data feed**
-    * Select **Use this name and password** and enter the *MxAdmin* credentials
-    * Click **Next**
-
-    ![](attachments/18448736/18581993.png)
-
-4. Select **Expenses** in the tables selector and click **Finish**:
-
-    ![](attachments/18448736/18581990.png)
-
-5. On the **Import Data** dialog box, select **Table** as the import method and then click **OK**:
-
-    ![](attachments/18448736/18581988.png)
-
-6. The data of the Mendix application should now be imported in Excel:
-
-    ![](attachments/18448736/18581987.png)
+	![](attachments/18448736/18581987.png)
 
 ## 5 Working with Mendix Data in Tableau
 
-To visualize data from the Company Expenses app in Tableau, follow these steps:
+To visualize data from the Asset Manager app in Tableau, follow these steps:
 
-1. Open **Tableau** and select **More Servers...** > **OData**:
+1.  Open **Tableau** and select **Connect** > **To a Server** > **OData**:
 
-    ![](attachments/18448736/18582022.png)
+	![](attachments/18448736/18582022.png)
 
-2. On the **Server Connection** dialog box, do the following:
-    * Enter `http://localhost:8080/odata/Published_OData_service/Expenses` for the **Server** address
-    * Select **Use a specific username and password** and enter the *MxAdmin* credentials
-    * Click **OK** to save the server connection
+2.  On the **Server Connection** dialog box, enter `http://localhost:8080/odata/Assets/v1/SmartTasks` for the **Server**   address:
 
-    ![](attachments/18448736/18582020.png)
+	![](attachments/18448736/18582020.png)
 
-3. Click **OK** to save the server connection. You should now see the data source details:
+3.  Click **Sign In** to save the server connection. You should now see the data source details:
 
-    ![](attachments/18448736/18582016.png)
+	![](attachments/18448736/18582016.png)
 
-4. Click the name of the server connection and change it to *Expenses* for readability:
+4.  Click the name of the server connection and change it to *SmartTasks* for readability:
 
-    ![](attachments/18448736/18582015.png)
+	![](attachments/18448736/18582015.png)
 
-5. Repeat step 1–4 to add a server connection for `http://localhost:8080/odata/Published_OData_service/Expenses`.
-6. Open Sheet1 and drag **Expense_Employee** and **Expense_ExpenseType** from **Measures** to **Dimensions**:
+5.  Click **Data** > **New Data Source** and repeat step 1–4 to add a server connection for `http://localhost:8080/odata/Assets/v1/Engineers`.
+6.  Open **Sheet1**. Under **Data**, click **Engineers** and drag **ID** from **Measures** to **Dimensions**:
 
-    ![](attachments/18448736/18582012.png)
+	![](attachments/18448736/18582012.png)
 
-7. Select **Data** > **Edit Relationships...** in order to define the relation between the different data sources:
+7.  Similarly, click **SmartTasks** and drag **SmartTask_Engineer** from **Measures** to **Dimensions**.
+8.  Select **Data** > **Edit Relationships...** in order to define the relation between the different data sources:
 
-    ![](attachments/18448736/18582014.png)
+	![](attachments/18448736/18582014.png)
 
-8. On the **Relationships** window, do the following:
-    * Select **Expenses** for the **Primary data source** (1)
-    * Select **Employees** for the **Secondary data source** (2)
-    * Switch to **Custom** mapping (3)
-    * Remove any default mappings (4)
-    * Click **Add...** to configure a field mapping (5)
+8.  On the **Relationships** window, do the following:<br />
+	a. Select **SmartTasks** for the **Primary data source**.<br />
+	b. Select **Engineers** for the **Secondary data source**.<br />
+	c. Switch to **Custom** mapping.<br />
+	d. Remove any default mappings.<br />
+	e. Click **Add...** to configure a field mapping.
 
-    ![](attachments/18448736/18582013.png)
+	![](attachments/18448736/18582013.png)
 
-9. In the **Add/Edit Field Mapping** window, select **Expense_Employee** for the **Primary data source field** and **ID** for the **Secondary data source field**, then click **OK** to save the field mapping:
+9.  In the **Add/Edit Field Mapping** window, select **ID** for the **Primary data source field** and **SmartTask_Engineer** for the **Secondary data source field**, then click **OK** to save the field mapping:
 
-    ![](attachments/18448736/18582011.png)
+	![](attachments/18448736/18582011.png)
 
-10. In the **Relationships** window, do the following:
-    * Select **ExpenseTypes** for the **Secondary data source**
-    * Switch to **Custom** mapping
-    * Remove the default mappings
-    * Click **Add...** to configure a field mapping
+10. In the **Relationships** window, click **OK** to save the relationships:
 
-    ![](attachments/18448736/18582010.png)
+	![](attachments/18448736/18582007.png)
 
-11. In the **Add/Edit Field Mapping** window, select **Expense_ExpenseType** for the **Primary data source field** and **ID** for the **Secondary data source field**, then click **OK** to save the field mapping:
+11. Select **Engineers** for the data source and drag the **Name** attribute from the **Dimensions** section to **Rows**:
 
-    ![](attachments/18448736/18582008.png)
+	![](attachments/18448736/18582006.png)
 
-12. In the **Relationships** window, click **OK** to save the relationships:
+14. Select **SmartTasks** for the data source and do the following:<br />
+	a. Click the **SmartTask_Engineer** attribute to use it as the linking field.<br />
+	b. Drag. **Number of Records** from the **Measures** section to **Columns**.
 
-    ![](attachments/18448736/18582007.png)
+	![](attachments/18448736/18582005.png)
 
-13. Select **Expenses** for the data source and drag the **Amount** attribute from the **Measures** section to **Rows**:
-
-    ![](attachments/18448736/18582006.png)
-
-14. Select **Employees** for the data source, drag the **FullName** attribute from the **Dimensions** section to **Columns**, and click the icon next to the **ID** attribute to use ID as the linking field:
-
-    ![](attachments/18448736/18582005.png)
-
-15. Select **ExpenseTypes** for the data source, drag the **Name** attribute from the **Dimensions** section to **Color**, and click the icon next to the **ID** attribute to use ID as the linking field:
-
-    ![](attachments/18448736/18582002.png)
-
-You should now see a stacked bar chart with data combined over multiple data sources:
-
-![](attachments/18448736/18582003.png)
+You should now see a bar chart of the data.
 
 ## 6 Filtering Data With Query Parameters
 
-By default all the expenses are retrieved by Tableau, but Mendix allows you to add filters to the query so only the desired data is being retrieved.
+By default, all data is retrieved by Tableau, but Mendix allows you to add filters to the query so only the desired data is being retrieved.
 
 To filter data with query parameters, follow these steps:
 
-1. Right-click the **Expenses** data source and select **Edit Data Source...**:
+1.  Right-click the **Engineers** data source and select **Edit Data Source...**:
 
-    ![](attachments/18448736/18582001.png)
+	![](attachments/18448736/18582001.png)
 
-2. Click the OData URL to change the connection settings:
+2.  Click the OData URL to change the connection settings:
 
-    ![](attachments/18448736/18582000.png)
+	![](attachments/18448736/18582000.png)
 
-3. Add `?$top=3` to the server URL (in order to only retrieve the first three expenses) and click **OK**:
+3.  Add *?$top=2* to the server URL (in order to only retrieve the first two engineers) and click **Sign In**:
 
-    ![](attachments/18448736/18581998.png)
+	![](attachments/18448736/18581998.png)
 
-4. Open sheet1, where you should now see a stacked bar chart with only the data of the three expenses:
+4.  On the warning indicating that the data being used was refreshed, click **OK**.
+5.  Open **Sheet1** and drag **Name** to **Rows** again. Now you should now see a bar chart with only the data of the two engineers:
 
-    ![](attachments/18448736/18581997.png)
+	![](attachments/18448736/18581997.png)
 
-5. You can combine filters by using the `&` character. Repeat steps 1–4, but now use `http://localhost:8080/odata/Expenses/Expenses?$skip=3&$top=3` as the server URL. You should now see a stacked bar chart showing the data of expenses four to six.
+6. You can combine filters by using the `&` character. Repeat steps 1–4, but now use `http://localhost:8080/odata/Expenses/Expenses?$skip=1` as the server URL. You should now see a bar chart showing the data of engineers 2 and 3.
 
 These are some other query examples:
 
-* `http://localhost:8080/odata/Expenses/Expenses(1688849860265137)`
-* `http://localhost:8080/odata/Expenses/Expenses?$top=100`
-* `http://localhost:8080/odata/Expenses/Expenses?$skip=10&$ top=10`
-* `http://localhost:8080/odata/Expenses/Expenses/$count`
-* `http://localhost:8080/odata/Expenses/Expenses?$filter=Firstname+eq+'Ivan'`
-* `http://localhost:8080/odata/Expenses/Expenses?$filter=Firstname+ne+'Ivan'`
-* `http://localhost:8080/odata/Expenses/Expenses?$filter=DateOfBirth+gt+datetime'1995-01-01T00:00:00'`
-* `http://localhost:8080/odata/Expenses/Expenses?$filter=DateOfBirth+gt+datetime'2005-01-01T00:00:00'&$orderby=DateOfBirth`
+* `http://localhost:8080/odata/Assets/v1/Engineers(7881299347898469)`
+* `http://localhost:8080/odata/Assets/v1/Engineers/$count`
+* `http://localhost:8080/odata/Assets/v1/Engineers?$filter=Name+eq+'Kim'`
+* `http://localhost:8080/odata/Assets/v1/Engineers?$filter=Name+ne+'Kim'`
+* `http://localhost:8080/odata/Assets/v1/SmartTasks?$filter=DueDate+gt+datetime'1995-01-01T00:00:00'`
+* `http://localhost:8080/odata/Assets/v1/SmartTasks?$filter=Created+gt+datetime'2005-01-01T00:00:00'&$orderby=DueDate`
 
 ## 7 Read More
 
@@ -225,11 +183,3 @@ These are some other query examples:
 * [Export XML Documents](export-xml-documents)
 * [Import Excel Documents](importing-excel-documents)
 * [Expose a Web Service](expose-a-web-service)
-* [Enable Selenium Support](selenium-support)
-* [Synchronize User Accounts Using the LDAP Module](synchronizing-user-accounts-using-the-ldap-module)
-* [Import XML Documents](importing-xml-documents)
-* [Consume a REST Service](consume-a-rest-service)
-* [Expose Data to BI Tools Using OData](exposing-data-to-bi-tools-using-odata)
-* [Publishing OData Services](/refguide/published-odata-services)
-* [OData Representation](/refguide/odata-representation)
-* [OData Query Options](/refguide/odata-query-options)

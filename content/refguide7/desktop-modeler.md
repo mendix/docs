@@ -42,8 +42,8 @@ The following documents in the **Desktop Modeler** category of the *Mendix Refer
 * [JSON structures](json-structures)
 * [XML schemas](xml-schemas)
 * [Export mappings](export-mappings) and [import mappings](import-mappings)
-* [Consumed app services](consumed-app-services) and [consumed web services](consumed-web-services)
-* [Published REST services](published-rest-services), [published web services](published-web-services), [published OData services](published-odata-services), and [published app services](published-app-services)
+* [Consumed app services (deprecated)](consumed-app-services) and [consumed web services](consumed-web-services)
+* [Published REST services](published-rest-services), [published web services](published-web-services), [published OData services](published-odata-services), and [published app services (deprecated)](published-app-services)
 
 ## 3 Other Documents in This Category
 

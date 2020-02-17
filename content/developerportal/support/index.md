@@ -8,9 +8,9 @@ Although our platform is highly accessible and new versions of our products are 
 
 Mendix Support is here to answer any questions and solve any issues that you might have. We try to make your journey as frictionless as possible.
 
-### 1.1 Service Level Agreements
+### 1.1 Service Level Agreements {#sla}
 
-We are available for all users of the Mendix platform, and we are bound by service-level agreements (SLA) to our licensed customers. Licensed customers can select their type of SLA level: **Platform** or **Platinum**. The SLA level determines the specific agreement on the following points:
+We are available for all users of the Mendix Platform, and we are bound by service-level agreements (SLA) to our licensed customers. Licensed customers can select their type of SLA level: **Platform** or **Platinum**. The SLA level determines the specific agreement on the following points:
 
 * Support availability
 * Platform availability
@@ -34,15 +34,15 @@ For more details about the idea forum, see [The Mendix Forum](/developerportal/c
 
 ## 4 Accessing Mendix Support
 
-You can access the Mendix Support team through the [Support Portal](https://support.mendix.com), via email (support@mendix.com), or by phone (phone numbers are listed in the Support Portal). Please note that critical tickets always need to be accompanied by a phone call to speed up the triage of the issue. In the Support Portal, you can check the status of your personal tickets, check all the submitted tickets on your applications, and provide updates on them.
+You can access the Mendix Support team through the [Mendix Support Portal](https://support.mendix.com), via email (support@mendix.com), or by phone (phone numbers are listed in the Support Portal). Please note that critical tickets always need to be accompanied by a phone call to speed up the triage of the issue. In the Support Portal, you can check the status of your personal tickets, check all the submitted tickets on your applications, and provide updates on them.
 
 ## 5 What We Expect from You
 
-Mendix supports the Mendix platform, and we expect you to support the applications that you have built on the platform. The following points are not supported through the standard SLA:
+Mendix supports the Mendix Platform, and we expect you to support the applications that you have built on the platform. The following points are not supported through the standard SLA:
 
 * Developing code on your behalf
 * Debugging or troubleshooting your applications
-* Analyzing and troubleshooting the performance of your applications or your infrastructure, except when we suspect an underlying issue exists in the Mendix platform
+* Analyzing and troubleshooting the performance of your applications or your infrastructure, except when we suspect an underlying issue exists in the Mendix Platform
 * Troubleshooting Mendix Community-developed components from the Mendix App Store
 
 During the start phase and through part of the scale phase of your digital transformation journey, it might be best to let the development team (DevOps) handle the support of the applications. As the number of applications grows, it is best to let an expert service desk handle the support of your applications. You can involve your existing service desk team or outsource support to one of our support partners, which you can find listed on the [Mendix Partners](https://developer.mendixcloud.com/openid/login?immediate=true&continuation=link/partneroverview) page.
@@ -61,14 +61,22 @@ It is very important to read these alerts carefully and to act upon them, as the
 
 We expect your support team to be trained and certified on Studio Pro and the Developer Portal so that they can interpret and analyze alerts, graphs, and logs in the Developer Portal. For more information, please check our available [training courses](https://gettingstarted.mendixcloud.com/link/classroom) and [expert webinars](https://gettingstarted.mendixcloud.com/link/webinar) or contact the Mendix Academy (<academy@mendix.com>).
 
-## 6 Reach Out to Mendix Support
+## 6 Platform Status
 
-If you suspect an issue in the Mendix platform exists after your analysis (or if you have questions about your analysis), you can reach out to Mendix Support. We will provide pointers on how to solve the issues yourself or redirect you to Expert Services for further assistance. If we suspect a platform issue, we will involve second and third line support for confirmation, and we will fix it if it is a platform issue. If the issue is commercial (for example, because your app requires a larger app container or more file storage), we might refer you to your Customer Success Manager directly.
+If there is an issue in the Mendix Platform that affects multiple customers or if there is planned maintenance, we will communicate this through our [status page](https://status.mendix.com) and send updates on the progress through email if you have subscribed to this service. Having your service desk team subscribe to updates from this page is recommended.
 
-## 7 Platform Status
+## 7 Reach Out to Mendix Support
 
-If there is an issue in the Mendix platform that affects multiple customers or if there is planned maintenance, we will communicate this through our [status page](https://status.mendix.com) and send updates on the progress through email if you have subscribed to this service. Having your service desk team subscribe to updates from this page is recommended.
+If you suspect an issue in the Mendix Platform exists after your analysis (or if you have questions about your analysis), you can reach out to Mendix Support. We will provide pointers on how to solve the issues yourself or redirect you to Expert Services for further assistance. If we suspect a platform issue, we will involve second and third line support for confirmation, and we will fix it if it is a platform issue. If the issue is commercial (for example, because your app requires a larger app container or more file storage), we might refer you to your Customer Success Manager directly.
 
 ## 8 Product Support Period
 
 Mendix supports the current major release and the two prior major releases (and we support each major release for a minimum of 24 months). Because of this, we recommend that you upgrade your projects to the latest version of Studio Pro at least once a year. We will reach out to you in time if you are running on a version that will become unsupported so that you have ample time to perform an upgrade.
+
+## 9 Main Documents in This Category
+
+* [Prepare Your App Project for Support](prepare-your-project) – shows  you how to configure project authorization to select the affected app(s) in the Mendix Support Portal
+* [Submit a Support Request](submit-support-request) – presents the details necessary for Mendix Support to process your request
+* [Make a New App Node Request](new-app-node-request-template) – describes how to deploy a new licensed node in the Mendix Cloud or on-premises/virtual private cloud
+* [Support Ticket Priority](ticket-priority) – describes how priority levels are determined for Mendix Support
+* [Support Escalation Process](escalation-management-process) – describes how a support request can be escalated to bring your issue to closure

@@ -20,7 +20,7 @@ In order to access the team server project two prerequisites must be arranged;
 
 Becoming a team member is handled through an invite which has to be send to you by another team member. So if you aren’t member of a project yet, ask a current team member to invite you.
 
-The role is depending on the project security/role settings. By default the roles “SCRUM Master” & “Business Engineer” are allowed to access the team server. Though this can be adjusted by the scrum master of the project. Once a role has the “Edit” right to the development step, team members with this role will be able to download the model, change it and committing new revisions. View means that the team member is allowed to see the repository overview of the team server revisions.
+The role is depending on the project security/role settings. By default the roles “Scrum Master” & “Business Engineer” are allowed to access the team server. Though this can be adjusted by the scrum master of the project. Once a role has the “Edit” right to the development step, team members with this role will be able to download the model, change it and committing new revisions. View means that the team member is allowed to see the repository overview of the team server revisions.
 
 ![](attachments/18448641/18580469.png)
 
@@ -83,7 +83,7 @@ Our advice is to keep commits small and this means that a commit probably relate
 
 The Modeler also attaches some information automatically:
 
-*   The author, i.e. the person who committed.
+*   The author, as in, the person who committed.
 *   The date and time of the commit.
 *   The list of changed documents/folder/modules along with the type of the change (modify, add, delete, ...).
 *   The version of the Modeler that was used to commit.
@@ -183,5 +183,5 @@ The example shows that you can merge a single revision. It is also possible to m
 *   [Contributing to a GitHub repository](contribute-to-a-github-repository)
 *   [Starting your own repository](starting-your-own-repository)
 *   [Using Team Server - Version Control](using-team-server-version-control)
-*   [How to Use the Mendix Feedback Widget](/developerportal/feedback/use-feedback-widget)
+*   [How to Use the Mendix Feedback Widget](/developerportal/collaborate/use-feedback-widget)
 *   [Sharing the Development Database](sharing-the-development-database)

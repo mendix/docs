@@ -7,7 +7,7 @@ tags: ["iot", "connector", "timeseries", "big data", "analytics", "extensibility
 
 ## 1 Introduction
 
-This how-to is focussed on implementing and understanding the TimeSeries Connector and the TimeSeries Analytics platform. The TimeSeries Connector is especially useful when your application needs to handle large amounts of data. 
+This how-to is focused on implementing and understanding the TimeSeries Connector and the TimeSeries Analytics platform. The TimeSeries Connector is especially useful when your application needs to handle large amounts of data. 
 
 When looking at the IoT trend recently, one hundred sensors that send data each minute will send 144.000 objects to your database per day, one hundred and fifty will send 216.000 objects. See how these numbers start to add up once you add a few more sensors? Now imagine having your standard relational database handle this amount of data, let alone perform analysis on it. The TimeSeries Analytics platform is designed specifically to handle these amounts of data.
 
@@ -31,7 +31,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 Follow these steps to get access to the TimeSeries connector and receive an API key:
 
-1. Sign up for the connector by going to our [Connector website](http://connector.timeseries.nl/ "Click here to go to the TimeSeries website") and register for free. You will receive your API key in an email after registering.
+1. Sign up for the connector by going to our [Connector website](https://connector.timeseries.com/) and register for free. You will receive your API key in an email after registering.
 
   {{% alert type="info" %}}
   It can take up to a few hours to generate the key and send it to you. This key is used to activate and access your TimeSeries Analytics instance.
@@ -62,7 +62,7 @@ There are three constants that you can configure. Follow these steps to configur
 
 ### 4.2 Available Enumerations
 
-These are the available enumarations in the TimeSeriesConnector module:
+These are the available enumerations in the TimeSeriesConnector module:
 
 * Enum_AggregationInterval: INTERVAL or REGISTER. These are determined by the TimeSeries platform and are the supported interval types for aggregation calls
 * Enum_AggregationPeriod: Hourly, daily, weekly, monthly or yearly. These are the supported time periods
@@ -122,7 +122,7 @@ In our example implementation we have created a page with a *Channel* object, on
 
 ![](attachments/how-to-get-started-with-the-timeseries-connector/CreateChannel.png)
 
-After having set the necessary attributes and associations, we trigger some validation and call the **Add channel** action. This action will return a boolean, specifying if the action was successful.
+After having set the necessary attributes and associations, we trigger some validation and call the **Add channel** action. This action will return a Boolean, specifying if the action was successful.
 
 <iframe width='100%' height='491px' frameborder='0' src='https://modelshare.mendix.com/models/d0dc163e-9741-4efc-986e-00bcbbf86ce7/timeseries-connector-create-channel?embed=true'></iframe>
 
@@ -147,11 +147,11 @@ In our example implementation we have created a page with a *measurement* object
 
 ![](attachments/how-to-get-started-with-the-timeseries-connector/StoreMeasurement.png)
 
-After having set the necessary attributes and associations, we trigger some validation and call the **Store measurement** action. This action will return a boolean, which is not used. 
+After having set the necessary attributes and associations, we trigger some validation and call the **Store measurement** action. This action will return a Boolean, which is not used. 
 
 <iframe width='100%' height='491px' frameborder='0' src='https://modelshare.mendix.com/models/ab003bd9-159a-4b76-8fbe-42512951c28b/timeseries-connector-store-measurement?embed=true'></iframe>
 
-You can find this microflow in the *TimerSeriesConnector* module under **3. Measuremenets > StoreMeasurements > IVK_StoreMeasurement**.
+You can find this microflow in the *TimerSeriesConnector* module under **3. Measurements > StoreMeasurements > IVK_StoreMeasurement**.
 
 ### 5.4 Aggregate Your Data
 

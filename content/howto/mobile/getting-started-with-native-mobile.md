@@ -1,5 +1,5 @@
 ---
-title: "Create & Test a Native Mobile App"
+title: "Get Started with Native Mobile"
 parent: "native-mobile"
 menu_order: 10
 description: A how-to for creating a native mobile Mendix app and viewing it on a mobile device.
@@ -8,36 +8,34 @@ tags: ["native", "mobile", "developer", "test"]
 
 ## 1 Introduction
 
-To use Mendix Studio Pro's native app capabilities, you can either start using a Blank app or download the [Native Mobile Quickstart](https://appstore.home.mendix.com/link/app/109511/) app from the Mendix App Store. This how-to uses the latter, because it is optimized to quickly build a native mobile app. Out of the box this app gives you a native page, a native phone profile to enable native device navigation, a native layout with menus, and native widgets and actions which leverage device capabilities.
+To use Mendix Studio Pro's native app capabilities, you can use the [Native Mobile Quickstart](https://appstore.home.mendix.com/link/app/109511/) app from the Mendix App Store. This app is optimized to quickly build a native mobile app. Out of the box, this app gives you a native page, a native phone profile to enable native device navigation, a native layout with menus, and native widgets and actions which leverage device capabilities.
 
 The Native Mobile Quickstart app also includes four modules:
 
 * **Administration** – helps you manage users
 * **Atlas UI Resources package** – allows for app styling
-* **Nanoflow Commons** – helps model out client-side logic
-* **Native Mobile Actions** – contains JavaScript actions specific to native mobile apps
+* **Nanoflow Commons** – contains generic useful nanoflow actions
+* **Native Mobile Actions** – contains various native widgets and nanoflow actions that leverage device capabilities
 
 ## 2 Prerequisites {#prerequisites}
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Have a mobile device to test your native app 
-* For information on browser and device requirements, see [System Requirements](/refguide/system-requirements)
+* For information on device requirements, see [System Requirements](/refguide/system-requirements)
 * If you wish to use an emulator for Android mobile testing, install a product such as [Bluestacks](https://www.bluestacks.com/nl/index.html) or [Genymotion](https://www.genymotion.com/) (your emulator must have Google Play services supported)
 
-## 3 Creating a New Project Based on the Quickstart App{#quickstartapp}
+## 3 Creating a New App Project Based on the Quickstart App {#quickstartapp}
 
-{{% todo %}}[add Apple App Store link to MakeItNative app]{{% /todo %}}
-
-For details on making a Mendix app using the Native Mobile Quickstart app template, download the [Make It Native](https://play.google.com/store/apps/details?id=com.mendix.developerapp) app. Using the Make It Native app to view the changes to your Mendix app, see the sections below.
+For details on making a Mendix app using the Native Mobile Quickstart app template, download the Make It Native app on either the [Google Play store](https://play.google.com/store/apps/details?id=com.mendix.developerapp) or the [Apple App Store](https://apps.apple.com/us/app/make-it-native/id1334081181). This app template includes the latest version of Atlas UI, as well as the [Native Mobile Resources](https://appstore.home.mendix.com/link/app/109513/) module containing widgets and nanoflow actions for native mobile apps. For more information on building native apps, see the [Build a Native Mobile Inspection App](https://gettingstarted.mendixcloud.com/link/path/66) learning path. Using the Make It Native app to view the changes to your Mendix app, see the sections below.
 
 ### 3.1 Starting a Quickstarter App Project
 
 To start a new app based on a template, follow these steps:
 
-1.  Open Mendix Studio Pro. Select **File** > **New Project** , and then select the Native Mobile Quickstart app: 
+1.  Open Mendix Studio Pro. Select **File** > **New Project** , and then select the **Native Mobile Quickstart** app: 
 
-	{{% image_container width="500" %}}![mobile quickstart app](attachments/getting-started-with-native-mobile/native-mobile-quickstart.png){{% /image_container %}}
+	![mobile quickstart app](attachments/getting-started-with-native-mobile/native-mobile-quickstart.png)
 
 2.  Next, click **Use this starting point**:
 
@@ -47,10 +45,7 @@ To start a new app based on a template, follow these steps:
 
 	{{% image_container width="500" %}}![create app button](attachments/getting-started-with-native-mobile/create-app.png){{% /image_container %}}
 
-4.  Click **Run Locally** to see the app in action:
-
-	![run locally button](attachments/getting-started-with-native-mobile/run-locally.png)
-
+4.  Click **Run Locally** to see the app in action.
 5.  After running your app, you may see a Windows Security Alert dialog box. Accept the permissions selected by default and click **Allow access** to close the dialog box: 
 
 	{{% image_container width="500" %}}![firewall dialog box](attachments/getting-started-with-native-mobile/firewall-dialog.png){{% /image_container %}}
@@ -61,27 +56,19 @@ To start a new app based on a template, follow these steps:
 
 At this point you have a running native app. To view your app on a mobile device, however, you need to download the Make It Native app.
 
-### 3.2 Downloading the Make It Native App
+### 3.2 Downloading and Installing the Make It Native App
 
-To view your app on a mobile device, you must install the Make It Native app. The sections below describe two options for doing this.
+#### 3.2.1 Downloading for Android
 
-{{% todo %}}[replace screenshot below with two app store screens when they get new logos?]{{% /todo %}}
-
-#### Option 1: Use the App Store for Your Device
-
-Download the Make It Native app from [Google Play](https://play.google.com/store/apps/details?id=com.mendix.developerapp) (coming soon for iOS) and install it on your mobile device:
+To view your app on an Android device (or emulator), you must download and install the Make It Native app from the [Google Play store](https://play.google.com/store/apps/details?id=com.mendix.developerapp):
 
 {{% image_container width="500" %}}![native app on googleplay](attachments/getting-started-with-native-mobile/make-it-native-googleplay.png){{% /image_container %}}
 
-#### Option 2: Using Mendix Studio Pro
+#### 3.2.2 Downloading for iOS {#downloading-for-ios}
 
-{{% todo %}}[The two app store buttons mentioned below do not exist yet. Update with pic later.]{{% /todo %}}
+To view your app on a iOS device, you must download and install the Make It Native app from the [Apple App Store](https://apps.apple.com/us/app/make-it-native/id1334081181):
 
-Alternatively, you can navigate to the Make It Native app using Mendix Studio Pro: 
-
-1. In Mendix Studio Pro, click the drop-down menu next to the **View button**, and then click **View in the Mendix App**.
-2. This will bring up a dialog box. In the **Native mobile** tab, click either **Go to play store** or **Go to app store** to be brought to the Google Play or Apple App Store pages for the Make It Native app.
-3. In the iOS or Android app store, you can download the Make It Native app to your device of choice.
+{{% image_container width="500" %}}![native app on app store](attachments/getting-started-with-native-mobile/make-it-native-ios.png){{% /image_container %}}
 
 ### 3.3 Viewing Your App on Your Testing Device
 
@@ -104,11 +91,9 @@ Your mobile device has to be on the same network as your development machine for
 
 Now you can see your app on your device. While this is just a template app, whenever you make changes you will be able to view them live on your Make It Native app.
 
-You may notice an **Enable dev mode** toggle on the Make It Native app home page. Turning this toggle on will give you more detailed warning messages during error screens, as well as additional functionality on the developer app menu.
+You may notice an **Enable dev mode** toggle on the Make It Native app home page. Turning this toggle on will give you more detailed warning messages during error screens, as well as additional functionality on the developer app menu:
 
 {{% image_container width="500" %}}![enable dev mode](attachments/getting-started-with-native-mobile/enable-dev-mode.png){{% /image_container %}}
-	
-{{% todo %}}[link to future debug doc - For more information on debugging, see Debugging A Native Mobile App]{{% /todo %}}
 
 ### 3.4 Viewing Changes to Your App on Your Testing Device {#viewingchanges}
 
@@ -129,9 +114,10 @@ Should you get an error screen while testing your app, there are easy ways to re
 * Tap your test app with three fingers to restart your app
 * With the **Enable dev mode** toggle turned on, hold a three-fingered tap to bring up the developer app menu – here you can access **ADVANCED SETTINGS** and **ENABLE REMOTE JS DEBUGGING** 
 
-{{% todo %}}[(link to future debug doc at the end of the last bullet above)]{{% /todo %}}
+For more detailed instructions on debugging a native app, see [Debug Native Apps (Advanced)](native-debug).
 
 ## 4 Read More
 
 * [Build Pluggable Widgets](../extensibility/pluggable-widgets)
 * [Native Styling](/refguide/native-styling-refguide)
+* [Debug Native Apps (Advanced)](native-debug)

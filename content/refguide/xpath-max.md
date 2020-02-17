@@ -1,6 +1,7 @@
 ---
 title: "XPath Max"
 parent: "xpath-query-functions"
+tags: ["studio pro"]
 ---
 
 ## 1 Overview

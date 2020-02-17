@@ -1,7 +1,12 @@
 ---
 title: "Commit Object(s)"
 parent: "object-activities"
+tags: ["studio pro"]
 ---
+
+{{% alert type="warning" %}}
+This activity can be used in both **Microflows** and **Nanoflows**.
+{{% /alert %}}
 
 ## 1 Introduction
 
@@ -9,13 +14,13 @@ This action can commit one or more objects. For persistable entities this means 
 
 {{% alert type="info" %}}
 
-See [Microflow Element Common Properties](microflow-element-common-properties) for properties that all microflow activities share (for example, caption). This page only describes the properties specific to the action.
+See [Common Properties](microflow-element-common-properties) for properties that all microflow activities share (for example, caption). This page only describes the properties specific to the action.
 
 {{% /alert %}}
 
 ## 2 Input Properties
 
-### 2.1 Variable
+### 2.1 Object or List
 
 The object or list of objects that you want to commit.
 
@@ -47,4 +52,4 @@ When committing a large number of objects, we recommend that you do not enable '
 When inside a [nanoflow](nanoflows), the object is refreshed across the client as if **Refresh in client** was set to *Yes*.
 {{% /alert %}}
 
-_Default value_: No
+Default: *No*

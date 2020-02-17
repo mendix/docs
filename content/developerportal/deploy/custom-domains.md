@@ -13,7 +13,9 @@ tags: ["Custom Domain","Mendix Cloud","Developer Portal", "certificates"]
 The Mendix Cloud supports adding custom domains such as `https://myapp.mycompany.com/` to your environments. As we only allow HTTPS connections, you have to provide a custom domain certificate (an SSL/TLS certificate). This how-to walks you through the process.
 
 {{% alert type="info" %}}
-This option is provided for licensed apps. You cannot add custom domains to free apps.
+This option is provided for licensed apps. You cannot add custom domains to Free Apps.
+
+This documentation is describing certificates for *incoming* connections. For information on setting up certificates for *outgoing* connections, see [Certificates](certificates).
 {{% /alert %}}
 
 {{% alert type="warning" %}}
@@ -52,7 +54,7 @@ Create a CNAME (Canonical Name) record and point it to `[YOUR-CUSTOM-DOMAIN].cna
 
 {{% alert type="info" %}}
 
-It is not possible to create a CNAME record for an apex/naked domain (meaning, a domain without a subdomain, like `mycompany.com`). If you want to use a custom apex/naked domain you should redirect it to a subdomain (for example, `subdomain.mycompany.com`) in your DNS and create a CNAME for the subdomain instead.
+It is not possible to create a CNAME record for an apex/naked domain (meaning, a domain without a subdomain, like `mycompany.com`). If you want to use a custom apex/naked domain you should redirect it to a subdomain (for example, `subdomain.mycompany.com`) and create a CNAME for the subdomain instead.
 
 {{% /alert %}}
 
@@ -62,7 +64,7 @@ Custom domain certificates (or just "certificates") are managed at the *applicat
 
 You can have more than one certificate for an application. For example when your certificate expires, you can upload a new certificate next to your old certificate.
 
-You can be choose which certificate to use when you configure a custom domain for an environment (test, acceptance, or production).
+You can choose which certificate to use when you configure a custom domain for an environment (test, acceptance, or production).
 
 ![](attachments/custom-domains/21168233.png)
 
@@ -76,7 +78,7 @@ To manage custom domains, follow these steps:
 
     ![](attachments/custom-domains/custom-domains-tab.png)
 
-If you already have a signed SSL/TLS certificate, continue with section 5, [Uploading Your Own Custom Domain Certificate](#Uploading).
+If you already have a signed SSL/TLS certificate, continue with [Uploading Your Own Custom Domain Certificate](#Uploading), below.
 
 ## 4 Obtaining a New Signed Certificate
 
@@ -124,7 +126,7 @@ Once you have a signed SSL/TLS certificate, you can upload it by following these
 
     ![](attachments/custom-domains/21168227.png)
 
-You can now configure your custom domain. See section 7, [Configuring a Custom Domain](#Configuring).
+You can now configure your custom domain. See [Configuring a Custom Domain](#Configuring), below.
 
 ## 5 Uploading Your Own Custom Domain Certificate{#Uploading}
 
@@ -156,7 +158,7 @@ To upload the custom domain certificate, follow these steps:
 
     {{% alert type="info" %}}The SSL/TLS private key will be hidden after uploading it. It will be stored in our secure keystore and will not be available for download in order to keep it secure.{{% /alert %}}
 
-You can now configure your custom domain. See section 7, [Configuring a Custom Domain](#Configuring).
+You can now configure your custom domain. See [Configuring a Custom Domain](#Configuring), below.
 
 ## 6 Renewing a Custom Domain Certificate
 
@@ -170,11 +172,11 @@ Custom domain certificates have an expiry date. There are two methods for renewi
 
 You can handle an expiring domain certificate by replacing it with a new one. You can do this in one of two ways:
 
-* generate a new certificate request (for more information, see section 4, [Generating a Certificate Request for Your Custom Domain](#Generating))
+* generate a new certificate request (for more information, see [Generating a Certificate Request for Your Custom Domain](#Generating))
 
-* upload a new custom domain certificate (for more information, see section 5, [Uploading Your Own Custom Domain Certificate](#Uploading)).
+* upload a new custom domain certificate (for more information, see [Uploading Your Own Custom Domain Certificate](#Uploading))
 
-You can now select the new certificate for your custom domain (for more information, see section 7 [Configuring a Custom Domain](#Configuring)).
+You can now select the new certificate for your custom domain (for more information, see [Configuring a Custom Domain](#Configuring)), below.
 
 ### 6.2 Method 2: Renewing by Updating an Existing Custom Domain Certificate
 
@@ -206,7 +208,7 @@ To configure a custom domain for your application environment, follow these step
 
 6. Type the **Domain name** (for example *myapp.mycompany.com*).
 
-7. Select a **Certificate** from the dropdown list of uploaded certificates.
+7. Select a **Certificate** from the drop-down list of uploaded certificates.
 
 8. Click **Save** to save your custom domain. It will be configured for your application environment automatically.
 
@@ -215,7 +217,7 @@ To configure a custom domain for your application environment, follow these step
 
 {{% alert type="info" %}}
 
-Make sure you have configured a CNAME record for your custom domain with your domain registrar/DNS provider (for details, see section 2.2. [Create and Configure a CNAME Record](#DNS)).
+Make sure you have configured a CNAME record for your custom domain with your domain registrar/DNS provider (for details, see [Create and Configure a CNAME Record](#DNS)), above.
 
 {{% /alert %}}
 
@@ -240,5 +242,5 @@ To reach the root certificate, you have to link your certificate via the interme
 * [Certificates](certificates)
 * [Environments](environments)
 * [Mendix Cloud: Deploy](mendix-cloud-deploy)
-* [Licensing Apps](licensing-apps)
+* [Licensing Mendix Cloud Apps](licensing-apps)
 * [Company & App Roles](/developerportal/company-app-roles/index).

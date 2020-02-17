@@ -1,7 +1,7 @@
 ---
 title: "Implement Best Practices for JavaScript Actions"
 category: "Extensibility"
-menu_order: 42
+menu_order: 60
 description: "This set of best practices will help you get the most out of your JavaScript actions."
 tags: ["JavaScript", "API", "nanoflow"]
 ---
@@ -23,8 +23,6 @@ JavaScript actions are run in the browser, and each browser version has its own 
 
 Older browsers might not have the new ES6 functions implemented, so be careful copying and pasting modern sample code from the internet, especially when IE11 must be supported. Some ECMAScript 6 functions are polyfilled by the Mendix Client.
 
-{{% todo %}}[check with client-core if polyfill statement is correct]{{% /todo %}} 
-
 Mendix Studio Pro contains the following polyfills from [Core JS](https://github.com/zloirock/core-js):
 
 * **core-js/fn/array/find**
@@ -40,9 +38,13 @@ Mendix Studio Pro contains the following polyfills from [Core JS](https://github
 * **core-js/fn/string/starts-with**
 * **core-js/fn/string/ends-with**
 * **core-js/fn/string/pad-end**
-* **core-js/es6/promise**
-* **core-js/es6/symbol**
-* **core-js/es6/map**
+* **core-js/features/string/includes**
+* **core-js/features/promise**
+* **core-js/features/symbol**
+* **core-js/features/set**
+* **core-js/features/map**
+
+Mendix Studio Pro also contains a polyfill for Mozilla's [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API).
 
 ### 2.1 Handling Input{#handlinginput}
 
@@ -146,9 +148,7 @@ function CameraStart(targetSize, pictureSource, correctOrientation, waterMark) {
 }
 ```
 
-{{% todo %}}["All input types are described in the reference guide." goes in para below this, write "write javascript actions" refguide, add link]{{% /todo %}}
-
-For more information on choosing correct input types, see the [Better APIs](#betterapis) section below.
+For more detail on input types, see [JavaScript Actions](/refguide/javascript-actions). For more information on choosing correct input types, see the [Better APIs](#betterapis) section below.
 
 ### 2.2 Coding the Actions
 
@@ -211,18 +211,11 @@ For more information on changing objects, consult the [Set](https://apidocs.mend
 
 #### 2.2.5 Loading Platform-Shipped Dependencies
 
-{{% todo %}}[update code snippet when Andries does]{{% /todo %}} 
-
 Use the following code for loading platform-shipped dependencies (please note the shipped dependencies might vary per Mendix version):
 
 ```javascript
 // Synchronous libs that are already loaded
-var dojoTopic = require("dojo/topic");
-
-// Asynchonous libs that need to loaded asynchronous
-require([ "Noty" ], function (Noty) {
-    // do you stuff
-});    
+var lang = require("mendix/lang");
 ```
 
 The following libraries are provided by the Mendix Client:
@@ -245,20 +238,12 @@ Below is an example of using an external dependency based on [Noty](https://gith
 3. In *theme/index.html*, do the following: <br/>
 	a. Add a link to the style sheets after *mxui.css*. <br/>
 	b. Add a script tag for the library after *mxui.js*. <br/>
-	c. Put the following code in *theme/index.html* to handle external dependencies:
+	c. Add a `script` tag after **mxui.js** in *theme/index.html* to add an external JavaScript:
 
-	```javascript
+	```html
 	<!doctype html>
 	<html>
-		<head>
-			<!-- ... --->
-			<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css?{{cachebust}}">
-			<link rel="stylesheet" href="mxclientsystem/mxui/ui/mxui.css?{{cachebust}}">
-			<link rel="stylesheet" href="noty/noty.css?{{cachebust}}">
-			<link rel="stylesheet" href="noty/themes/bootstrap-v3.css?{{cachebust}}">
-			{{themecss}}
-			<!-- ... --->
-		</head>
+		<!-- ... --->
 		<body dir="ltr">
 			<div id="content"></div>
 			<!-- ... --->
@@ -267,10 +252,24 @@ Below is an example of using an external dependency based on [Noty](https://gith
 		</body>
 	</html>
 	```
-
+	
+	d. Add the following links in the `cssFiles` array of the *theme/settings.json* to add external styling:
+	
+	```json
+	{
+	    // ...
+	    "cssFiles": [
+	    	"styles/web/css/main.css",
+		"noty/noty.css"
+		"noty/themes/bootstrap-v3.css"
+	    ],
+	    // ...
+	}
+	```
+	
 4. To support hybrid mobile apps, add the script and CSS to *theme/components.json*: 
 
-	```javascript
+	```json
 	{
 		"files": {
 			"css": [
@@ -307,7 +306,7 @@ Below is an example of using an external dependency based on [Noty](https://gith
 
 #### 2.2.7 Understanding Hybrid App External Dependencies
 
-The Mendix hybrid app ships with a large set of plugins by default. For more details on default plugins, see the [Version Upgrades](/releasenotes/mobile/hybrid-app#upgrades-20) section of *Hybrid App*.
+The Mendix hybrid app ships with a large set of plugins by default. For more details on default plugins, see the [November 20th, 2018 Version Upgrades](/releasenotes/mobile/hybrid-app#upgrades-20) section of the *Hybrid App Base & Template* release notes.
 
 It is also possible to add new plugins during a mobile build. For more information on adding new plugins, see [Publish a Mendix Hybrid Mobile App in Mobile App Stores](/howto/mobile/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores).
 
@@ -315,9 +314,7 @@ The actual list of plugins use can be found in *config.xml* inside your deployme
 
 ### 2.3 Understanding Returns
 
-{{% todo %}}["For the full reference see (link to ref guide)." goes at end of first para below. Check with Marco about when jsactions refguide is up after mxworld**]{{% /todo %}} 
-
-The JavaScript action can specify a return type such as Integer, DateTime, Object, List of object, and Generics. 
+The JavaScript action can specify a return type such as Integer, DateTime, Object, List of object, and Generics. For more information on returns, see [JavaScript Actions](/refguide/javascript-actions).
 
 Actions can be synchronous or asynchronous. Synchronous actions will directly return the value and finish executing. An asynchronous action will return a promise, and will continue to execute and finish at a later time. The nanoflow will continue to execute when the promise is resolved.
 
@@ -386,8 +383,6 @@ Explaining the callback code:
 
 #### 2.3.2 Understanding Promise API
 
-{{% todo %}}["For more information on building a JavaScript action rest consume function, see X)link below" goes before first para below. Search githubusers howto https://paper.dropbox.com/doc/How-to-JS-Action-Search-GitHub-Users--Aa5K2Y5MoulzXbbhiRyghWEiAg-g3bkJVCHJDv8qx3T9r1ik]{{% /todo %}} 
-
 This function uses the browser promise API:
 
 ```javascript
@@ -410,9 +405,11 @@ function GetUserNameSampleRest(userID) {
 
 Explaining the Promise API code:
 
-* The URL refers to a sample API that returns a JSON object `{ id: string, name: string }`. Fetch is a browser API for retrieving data which returns a promise (see the [MDI Fetch API documentation](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API). The response is a promise that is converted into data with the `.json()` function. The name is accessed and returned. 
+* The URL refers to a sample API that returns a JSON object `{ id: string, name: string }`, and `fetch` is a browser API for retrieving data which returns a promise (see the [MDI Fetch API documentation](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) — the response is a promise that is converted into data with the `.json()` function (the name is accessed and returned)
 
-* As this is a part of a promise already, it does not need to call a `resolve` function or return a promise itself. This makes error handling on promises easier, as a single error function can be used to catch errors at all three steps: fetch, parse JSON, and accessing the data. For a more detailed explanation, see the [MDN promise documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+* As this is a part of a promise already, it does not need to call a `resolve` function or return a promise itself — this makes error handling on promises easier, as a single error function can be used to catch errors at all three steps: fetch, parse JSON, and accessing the data (for a more detailed explanation, see the [MDN promise documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise))
+
+* For more information on building a JavaScript action rest consume function, see [Build JavaScript Actions: Part 2 (Advanced)](write-javascript-github).
 
 #### 2.3.3 Understanding Common Promise Functions
 
@@ -531,7 +528,8 @@ Not all capabilities are recommended for use. Consider the side effects that an 
 
 ## 7 Read More
 
-* [Write JavaScript Actions](write-javascript-actions)
+* [Build JavaScript Actions](/howto/extensibility/build-javascript-actions)
+* [JavaScript Actions](/refguide/javascript-actions)
 * [Mendix Client API](https://apidocs.mendix.com/7/client/)
 * JavaScript basics:
 	* [Mozilla JavaScript Basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics)

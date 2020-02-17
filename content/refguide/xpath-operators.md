@@ -1,6 +1,7 @@
 ---
 title: "XPath Operators"
 parent: "xpath-constraints"
+tags: ["studio pro"]
 ---
 
 ## 1 For XPath Query Constraints

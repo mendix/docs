@@ -15,7 +15,7 @@ The User Management API requires its users with the required permissions to auth
 
 If an error occurs while performing a REST request, the server will always return a JSON object with error information. For example:
 
-```java
+```json
 {
     "errorMessage": "Authentication failed. The HTTP headers 'Mendix-Username' and 'Mendix-ApiKey' should contain valid credentials to authenticate for this request.",
     "errorCode": "UNAUTHORIZED"
@@ -100,7 +100,7 @@ A user account within a company that has additional permissions. New company adm
 
 | Role | Description |
 | --- | --- |
-| Company manager | Has all of the privileges below. Can also manage company information, other company admins, security groups, security rules, password policies and launchpad settings. |
+| Company manager | Has all of the privileges below. Can also manage company information, other company admins, security groups, security rules, and password policies. |
 | Member manager | Can manage individual users within the company, and modify security group memberships. |
 | Project manager | Can see all Mendix projects within the company, and add or remove users to those projects. |
 | Node manager | Can see all licensed App nodes that are managed by this company, or which relate to this company in any other way. |
@@ -115,7 +115,7 @@ The image below provides a domain model representation of the concepts discussed
 
 Retrieves a user account's OpenID based on its email address.
 
-```java
+```http
  HTTP Method: GET
  URL: https://platform.mendix.com/api/1/users/by-email/<emailAddress>
 ```
@@ -124,15 +124,15 @@ Retrieves a user account's OpenID based on its email address.
 
 Company Manager, Member Manager
 
-#### 4.3 Request
+### 4.3 Request
 
-##### 4.3.1 Parameter
+#### 4.3.1 Parameter
 
 *   _emailAddress_ : The email address of the user account you are trying to retrieve. Please note that this address should be URL-encoded.
 
-##### 4.3.2 Example
+#### 4.3.2 Example
 
-```java
+```http
 GET /api/1/users/by-email/johndoe3%40example.com HTTP/1.1
 Host: platform.mendix.com
 Content-Type: application/json
@@ -147,7 +147,7 @@ JSON object with a single key-value pair containing key _openId_ containing the 
 
 ##### 4.3.3.1 Example
 
-```java
+```json
 {
     "openId": "https://mxid2.mendixcloud.com/mxid2/id?id=bdddd12c-cc93-4600-82e4-88baa5314y79"
 }
@@ -158,7 +158,7 @@ JSON object with a single key-value pair containing key _openId_ containing the 
 
 Retrieves the OpenIDs of all users in your company.
 
-```java
+```http
 HTTP Method: GET
  URL: https://platform.mendix.com/api/1/users
 ```
@@ -177,7 +177,7 @@ Company Manager, Member Manager
 
 ##### 4.4.2.2 Example
 
-```java
+```http
 GET /api/1/users HTTP/1.1
 Host: platform.mendix.com
 Content-Type: application/json
@@ -190,7 +190,7 @@ Mendix-ApiKey:87a8a34d-5ee7-43ba-81f0-7b1b17d5ecd7
 
 A JSON object with two key-value pairs; _count_ indicating the total number of users in the company satisfying the search parameters (Note that depending on the chosen values for _limit_ and _offset_, the number of results in the response may be lower than the _count_.) and _users_ containing an array of objects with a single key-value pair _openId_ containing the OpenID of a user from the company. HTTP Status 200.
 
-```java
+```json
 {
     "users": [
         {
@@ -220,7 +220,7 @@ A JSON object with two key-value pairs; _count_ indicating the total number of u
 
 Creates a new user account in your company. This is only allowed if the requesting user has permission to do so (member management privileges within the company). It is only possible to create new user accounts for email addresses that match one of the email domains owned by the company of the requester. After this request the user will be able to log in. No confirmations emails are sent if this API is used.
 
-```java
+```http
  HTTP Method: POST
  URL: https://platform.mendix.com/api/1/users
 ```
@@ -243,7 +243,7 @@ A JSON object with the following keys:
 
 ##### 4.5.2.2 Example
 
-```java
+```http
 POST /api/1/users HTTP/1.1
 Host: platform.mendix.com
 Content-Type: application/json
@@ -266,7 +266,7 @@ A JSON object with a two key-value pairs; _openId_ containing the OpenID for the
 
 ##### 4.5.3.1 Example
 
-```java
+```json
 {
     "openId" : "https://mxid2.mendixcloud.com/mxid2/id?id=bdddd12c-cc93-4600-82e4-88baa5314y79",
     "getUrl" : "https://platform.mendix.com/api/1/users/by-email/johndoe3@example.com"
@@ -277,7 +277,7 @@ A JSON object with a two key-value pairs; _openId_ containing the OpenID for the
 
 Activate/deactivate a user account in your company. Deactivating a user means that the user can no longer access the Mendix Platform. However, all data of this user is retained.
 
-```java
+```http
  HTTP Method: PUT
  URL: https://platform.mendix.com/api/1/users/<openId>
 ```
@@ -300,7 +300,7 @@ A JSON object with keys:
 
 ##### 4.6.2.3 Example
 
-```java
+```http
 POST /api/1/users/https%3A%2F%2Fmxid2.mendix.dev%2Fmxid2%2Fid%3Fid%3D51b54074-a66c-4337-8488-aac89bf47a2d HTTP/1.1
 Host: platform.mendix.com
 Content-Type: application/json
@@ -313,7 +313,7 @@ Mendix-ApiKey:87a8a34d-5ee7-43ba-81f0-7b1b17d5ecd7
 
 ```
 
-#### 4.6.2 Output
+#### 4.6.3 Output
 
 None when successful, with HTTP status 200.
 
@@ -321,7 +321,7 @@ None when successful, with HTTP status 200.
 
 Retrieves a security group based on its UUID.
 
-```java
+```http
 HTTP Method: GET
 URL: https://platform.mendix.com/api/1/groups/<securityGroupUuid>
 ```
@@ -338,7 +338,7 @@ Company Manager, Member Manager
 
 ##### 4.7.2.2 Example
 
-```java
+```http
 GET /api/1/groups/86a2558b-b63b-4c76-a056-018d9eb8f1b9 HTTP/1.1
 Host: platform.mendix.com
 Content-Type: application/json
@@ -361,7 +361,7 @@ If the call is successful, it should return HTTP status 200.
 
 ##### 4.7.3.1 Example
 
-```java
+```json
 {
     "name": "RnD",
     "description": "Research and Development",
@@ -375,7 +375,7 @@ If the call is successful, it should return HTTP status 200.
 
 Retrieves a security group based on its name.
 
-```java
+```http
  HTTP Method: GET
  URL: https://platform.mendix.com/api/1/groups/by-name/<securityGroupName>
 ```
@@ -392,7 +392,7 @@ Company Manager, Member Manager
 
 ##### 4.8.2.2 Example
 
-```java
+```http
 
 GET /api/1/groups/RnD HTTP/1.1
 Host: platform.mendix.com
@@ -416,7 +416,7 @@ If the call is successful, it should return HTTP status 200.
 
 ##### 4.8.3.1 Example
 
-```java
+```json
 {
     "name": "RnD",
     "description": "Research and Development",
@@ -430,7 +430,7 @@ If the call is successful, it should return HTTP status 200.
 
 Retrieves all security groups which exist in a company.
 
-```java
+```http
 HTTP Method: GET
 URL: https://platform.mendix.com/api/1/groups
 ```
@@ -449,7 +449,7 @@ Company Manager, Member Manager
 
 ##### 4.9.2.2 Example
 
-```java
+```http
 GET /api/1/groups?limit=2 HTTP/1.1
 Host: platform.mendix.com
 Content-Type: application/json
@@ -472,7 +472,7 @@ If the call is successful, it should return HTTP status 200.
 
 ##### 4.9.4 Example
 
-```java
+```json
 {
     "groups": [
         {
@@ -499,7 +499,7 @@ If the call is successful, it should return HTTP status 200.
 
 Retrieves all users that are a member of a certain security group.
 
-```java
+```http
 HTTP Method: GET
 URL: https://platform.mendix.com/api/1/groups/<securityGroupUuid>/users
 ```
@@ -522,7 +522,7 @@ Company Manager, Member Manager
 
 ##### 4.10.2.3 Example
 
-```java
+```http
 
 GET /api/1/groups/86a2558b-b63b-4c76-a056-018d9eb8f1b9/users?limit=10 HTTP/1.1
 Host: platform.mendix.com
@@ -538,7 +538,7 @@ A JSON object with two key-value pairs; _count_ indicating the total number of u
 
 ##### 4.10.3.1 Example
 
-```java
+```json
 {
     "users": [
         {
@@ -557,7 +557,7 @@ A JSON object with two key-value pairs; _count_ indicating the total number of u
 
 Creates a security group in your company.
 
-```java
+```http
  HTTP Method: POST
  URL: https://platform.mendix.com/api/1/groups
 ```
@@ -578,7 +578,7 @@ A JSON object with the following keys:
 
 ##### 4.11.2.2 Example
 
-```java
+```http
 POST /api/1/groups HTTP/1.1
 Host: platform.mendix.com
 Content-Type: application/json
@@ -598,7 +598,7 @@ JSON object with two key-value pairs; _uuid_ containing the UUID of the security
 
 ##### 4.11.3.1 Example
 
-```java
+```json
 {
     "uuid": "a552a41b-5b30-41000-bab7-ad102eacd653",
     "getUrl" : "https://platform.mendix.com/api/1/groups/a552a41b-5b30-41000-bab7-ad102eacd653"
@@ -609,7 +609,7 @@ JSON object with two key-value pairs; _uuid_ containing the UUID of the security
 
 Updates a security group in your company.
 
-```java
+```http
  HTTP Method: PUT
  URL: https://platform.mendix.com/api/1/groups/<securityGroupUuid>
 ```
@@ -634,7 +634,7 @@ A JSON object with the following keys:
 
 ##### 4.12.2.3 Example
 
-```java
+```http
 PUT /api/1/groups/a552a41b-5b30-41000-bab7-ad102eacd653 HTTP/1.1
 Host: platform.mendix.com
 Content-Type: application/json
@@ -656,7 +656,7 @@ None if successful, with HTTP status 200.
 
 Deletes a security group from your company.
 
-```java
+```http
  HTTP Method: DELETE
  URL: https://platform.mendix.com/api/1/groups/<securityGroupUuid>
 ```
@@ -673,7 +673,7 @@ Company Manager
 
 ##### 4.13.2.2 Example
 
-```java
+```http
 
 DELETE /api/1/groups/a552a41b-5b30-41000-bab7-ad102eacd653 HTTP/1.1
 Host: platform.mendix.com
@@ -691,7 +691,7 @@ None if successful, with HTTP status 200.
 
 Adds a user account from your company to the specified security group.
 
-```java
+```http
 HTTP Method: POST
 URL: https://platform.mendix.com/api/1/groups/<securityGroupUuid>/users
 ```
@@ -713,7 +713,7 @@ A JSON object with one key:
 
 ##### 4.14.2.3 Example
 
-```java
+```http
 POST /api/1/groups/a552a41b-5b30-41000-bab7-ad102eacd653/users HTTP/1.1
 Host: platform.mendix.com
 Content-Type: application/json
@@ -734,7 +734,7 @@ None if successful, HTTP status 200.
 
 Remove the specified user account from the security group.
 
-```java
+```http
  HTTP Method: DELETE
  URL: https://platform.mendix.com/api/1/groups/<securityGroupUuid>/users/<openId>
 ```
@@ -752,7 +752,7 @@ Company Manager, Members Manager
 
 ##### 4.15.2.2 Example
 
-```java
+```http
 
 DELETE /api/1/groups/a552a41b-5b30-41000-bab7-ad102eacd653/users/https%3A%2F%2Fmxid2.mendix.dev%2Fmxid2%2Fid%3Fid%3Ddaba46fc-692c-4622-adb4-981fcfb0dec9 HTTP/1.1
 Host: platform.mendix.com
@@ -766,9 +766,9 @@ Mendix-ApiKey:87a8a34d-5ee7-43ba-81f0-7b1b17d5ecd7
 
 None if successful, HTTP status 200.
 
-## 4.16 Addendum
+### 4.16 Addendum
 
-### 4.16.1 Countries Reference
+#### 4.16.1 Countries Reference
 
 Afghanistan
 Albania

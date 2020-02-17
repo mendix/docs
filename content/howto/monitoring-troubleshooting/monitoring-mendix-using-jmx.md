@@ -11,7 +11,7 @@ This how-to is relevant if you run Mendix on-premises. If you do this, you proba
 
 For Java applications, most monitoring tools provide a way to hook into [JMX](http://www.oracle.com/technetwork/java/javase/tech/javamanagement-140525.html) in order to get information about the application. This how-to describes using JMX to get information on your Mendix application.
 
-Mendix doesn’t provide any runtime or application specific MBeans, which means that without writing your own MBeans, you will only be able to monitor generic JVM statistics. This how-to will also describe enabling JMX on your Mendix runtime as well as writing custom MBeans to expose Mendix runtime information and app-specific information.
+Mendix doesn’t provide any runtime or application specific MBeans, which means that without writing your own MBeans, you will only be able to monitor generic JVM statistics. This how-to will also describe enabling JMX on your Mendix Runtime as well as writing custom MBeans to expose Mendix Runtime information and app-specific information.
 
 **This how-to will teach you how to do the following:**
 
@@ -158,7 +158,6 @@ The idea is that you will have a Java Action that you can call in a microflow wh
 * [Debug Java Actions Remotely](debug-java-actions-remotely)
 * [Log Levels](log-levels)
 * [Debug Java Actions](debug-java-actions)
-* [Handle Common Mendix SSO Errors](handle-common-mendix-sso-errors)
 * [Debug Microflows](debug-microflows)
 * [Debug Microflows Remotely](debug-microflows-remotely)
 * [Debug Java Actions Remotely](debug-java-actions-remotely)

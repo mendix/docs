@@ -2,12 +2,12 @@
 title: "Clustered Mendix Runtime"
 category: "Mendix Runtime"
 description: "Using the cluster functionality, you can set up your Mendix application to run behind a load balancer to enable a failover and/or high availability architecture."
-tags: ["runtime", "cluster", "load balancer", "failover", "pivotal"]
+tags: ["runtime", "cluster", "load balancer", "failover", "pivotal", "studio pro"]
 ---
 
 ## 1 Introduction
 
-This page describes the impact and behavior of running Mendix Runtime as a cluster. Using the cluster functionality, you can set up your Mendix application to run behind a load balancer to enable a failover and/or high availability architecture.
+This page describes the behavior and impact of running Mendix Runtime as a cluster. Using the cluster functionality, you can set up your Mendix application to run behind a load balancer to enable a failover and/or high availability architecture.
 
 The main feature enabling clustering is Mendix's stateless runtime architecture. This means that the dirty state (the non-persistable entity instances and not-yet-persisted changes) are stored on the client and not on the server. This enables much easier scaling of the Mendix Runtime, as each cluster node can handle any request from the client. The stateless runtime architecture also allows for better dirty state maintainability and better insight in application state.
 
@@ -37,22 +37,24 @@ Scaling out can be done using the Pivotal App Manager. For details on using the 
 
 Mendix Runtime has the concept of a cluster leader. This is a single node within a Mendix Runtime cluster that performs cluster management activities. These are the activities:
 
-* `Session cleanup handling` – each node expires its sessions (meaning, not being used for a configured timespan) and removes the session persisted in the database
+* **Session cleanup handling** – each node expires its sessions (meaning, not being used for a configured timespan) and the cluster leader removes the sessions persisted in the database
 	* In exceptional cases (for example, a node crash), some sessions may not be removed from the database, in which case the cluster leader makes sure this removal still happens
-* `Cluster node expiration handling` – removing cluster nodes after they have expired (meaning, not giving a heartbeat for a configured timespan)
-* `Background job expiration handling` – removing data about background jobs after the information has expired (meaning, older than a specific timespan)
-* `Unblocking blocked users`
-* `Executing Scheduled Events` – scheduled events are only executed on the cluster leader now
-* `Performing database synchronization after new deploy`
-* `Clear persistent sessions after new deploy` – invalidating all existing sessions so that they get in sync with the latest model version
+* **Cluster node expiration handling** – removing cluster nodes after they have expired (meaning, not giving a heartbeat for a configured timespan)
+* **Background job expiration handling** – removing data about background jobs after the information has expired (meaning, older than a specific timespan)
+* **Unblocking blocked users**
+* **Executing Scheduled Events** – scheduled events are only executed on the cluster leader
+* **Performing database synchronization after new deploy**
+* **Clear persistent sessions after new deploy** – invalidating all existing sessions so that they get in sync with the latest model version
 
 These activities are only performed by the cluster leader. If the cluster leader is not running, the cluster will still function. However, the activities listed above will not be performed.
 
-The Cloud Foundry Buildpack determines which cluster node becomes the cluster leader and which becomes a cluster slave.
+The Cloud Foundry Buildpack determines which cluster node becomes the cluster leader and which become cluster slaves.
 
 ## 5 Cluster Startup
 
-The cluster leader is responsible for performing the database synchronization. So, if a new app deploy has been detected, all the cluster slaves will wait until the cluster leader finishes the database synchronization. When the database synchronization has finished, the cluster slaves and cluster leader will automatically become fully functional.
+Individual nodes in a cluster can be started and stopped with no impact on the uptime of the app. However, when you deploy a new version of the app the whole cluster is restarted and the cluster leader determines whether database synchronization is required. This means that there will be some downtime when the app is deployed while this is done.
+
+If database synchronization is required, all the cluster slaves will wait until the cluster leader finishes the database synchronization. When the database synchronization has finished, all the cluster nodes will become fully functional.
 
 If no database synchronization is required, all the cluster nodes will become fully functional directly after startup.
 
@@ -60,7 +62,7 @@ If no database synchronization is required, all the cluster nodes will become fu
 
 Uploaded files should be stored in a shared file storage facility, as every Mendix Runtime node should access the same files. Either the local storage facility is shared or the files are stored in a central storage facility such as an Amazon S3 file storage, Microsoft Azure Blob storage, or IBM Bluemix Object Storage. 
 
-For more information about configuring the Mendix Runtime to store files on these storage facilities,  see [Custom settings](custom-settings).
+For more information about configuring the Mendix Runtime to store files on these storage facilities,  see [Runtime Customization](custom-settings).
 
 ## 7 After-Startup & Before-Shutdown Microflows {#startup-shutdown-microflows}
 
@@ -95,7 +97,7 @@ Reading objects and deleting (unchanged) objects from the Mendix database is sti
 Only the dirty state for requests that originate from the Mendix Client (both synchronous and asynchronous calls) can be retained between requests. For all other requests—such as scheduled events, web services, or background executions—the state only lives for the current request. After that, the dirty state either has to be persisted or discarded. The reason for only allowing Mendix Client requests to retain their dirty state is that this is currently the only channel that works with actual user input. User input requires more interaction and flexibility with the data between requests. By only allowing these requests to retain their dirty state, the load on the Mendix Runtime and the external source is minimized, and performance is optimized.
 
 {{% alert type="info" %}}
-Whenever the Mendix Client is restarted, all the state is discarded, as it is only kept in the Mendix Client memory. The Mendix Client is restarted when reloading the browser tab (for example, when pressing <kbd>F5</kbd>), restarting a mobile hybrid app, or explicitly logging out.
+Whenever the Mendix Client is restarted, all the state is discarded, as it is only kept in the Mendix Client memory. The Mendix Client is restarted when reloading the browser tab (for example, when pressing <kbd>F5</kbd>), restarting a mobile hybrid app, or explicitly signing out.
 {{% /alert %}}
 
 The more objects that are part of the dirty state, the more data has to be transferred in the requests and responses between the Mendix Runtime and the Mendix Client. As such, this has an impact on performance. In cluster environments, it is advised to minimize the amount of dirty state to minimize the impact of the synchronization on performance.
@@ -109,7 +111,7 @@ It is important to realize that when calling external web services in Mendix to 
 To reduce the performance impact of large requests and responses, an app developer should be aware of the following scenarios that cause large requests and responses:
 
 * A microflow that creates a large number of non-persistable entities and shows them in a page
-* A microflow that calls a web service or app service to retrieve external data and convert them to non-persistable entities
+* A microflow that calls a web service to retrieve external data and convert them to non-persistable entities
 * A page that has multiple microflow data source data views, each causing the state transferred to the Mendix Runtime to handle the microflow
 
 {{% alert type="warning" %}}
@@ -118,7 +120,7 @@ To make sure the dirty state does not become too big when the above scenarios ap
 
 ## 10 Associating Entities with `System.Session` or `System.User`
 
-The `$currentSession` variable is available in microflows so that a reference to the current session can easily be obtained. When an object needs to be stored, its association can be set to `$currentSession`, and when the object needs to be retrieved again, `$currentSession` can be used as a starting point from which the desired object can be retrieved by association. The associated object can be designed so that it meets the desired needs. This same pattern applies to entities associated with `System.User`. In that case, you can use the `$currentUser` variable.
+The `$currentSession` *Session* object is available in microflows so that a reference to the current session can easily be obtained. When an object needs to be stored, its association can be set to `$currentSession`, and when the object needs to be retrieved again, `$currentSession` can be used as a starting point from which the desired object can be retrieved by association. The associated object can be designed so that it meets the desired needs. This same pattern applies to entities associated with `System.User`. In that case, you can use the `$currentUser` *User* object.
 
 ![](attachments/core/2018-03-01_17-49-15.png)
 
@@ -136,12 +138,13 @@ When data is associated to the current user or current session, it cannot be aut
 
 ## 11 Sessions Are Always Persistent
 
-To support seamless clustering, sessions are always persisted in the database. In previous versions, this was a known performance bottleneck. Mendix now contains optimizations to migitate this performance hit.
+To support seamless clustering, sessions are always persisted in the database. In previous versions, this was a known performance bottleneck. Mendix now contains optimizations to mitigate this performance hit.
 
-Roundtrips to the database for this purpose are reduced by giving the persistent sessions a maximum caching time of thirty seconds (by default). This means that after logging out of a session, the session might still be accessible for thirty seconds on other nodes of the cluster, but only in case that node has handled a previous request on that session just before the logout happened. This timeout can be configured. Lowering it makes the cluster more secure, because the chance that the session is still accessible within the configured time window is smaller. However, this also requires more frequent roundtrips to the database (which impacts performance). Increasing the timeout has the opposite effect. This can be configured by setting `SessionValidationTimeout` (value in milliseconds).
+Roundtrips to the database for this purpose are reduced by giving the persistent sessions a maximum caching time of thirty seconds (by default). This means that after signing out of a session, the session might still be accessible for thirty seconds on other nodes of the cluster, but only in case that node has handled a previous request on that session just before the logout happened. This timeout can be configured. Lowering it makes the cluster more secure, because the chance that the session is still accessible within the configured time window is smaller. However, this also requires more frequent roundtrips to the database (which impacts performance). Increasing the timeout has the opposite effect. This can be configured by setting `SessionValidationTimeout` (value in milliseconds).
 
 Persistent sessions also store a last-active date upon each request. To improve this particular aspect of the performance, the last-active date attribute of a session is no longer committed to the database immediately on each request. Instead, this information is queued for an action to run at a configurable interval to be stored in the Mendix database. This action verifies whether the session has not been logged out by another node and whether the last active date is more recent than the one in the database. The interval can be configured by setting `ClusterManagerActionInterval` (value in milliseconds).
 
 {{% alert type="warning" %}}
 Overriding the default values for the `SessionTimeout` and `ClusterManagerActionInterval` custom settings can impact the behavior of "keep alive" and results in an unexpected session logout. The best practice is to set the `ClusterManagerActionInterval` to half of the `SessionTimeout` so that each node gets the chance to run the clean-up action at least once during the session time out interval.
 {{% /alert %}}
+

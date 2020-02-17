@@ -1,6 +1,7 @@
 ---
 title: "OQL Functions"
 parent: "oql-expressions"
+tags: ["studio pro"]
 ---
 
 

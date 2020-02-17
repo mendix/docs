@@ -1,18 +1,19 @@
 ---
 title: "Generate Document"
-parent: "document-generation-activities"
+parent: "activities"
+menu_order: 80
 description: "Describes generating documents from a microflow. "
-tags: ["PDF", "document", "document template", "HTML", "Microsoft Word", "ODT"]
+tags: ["PDF", "document", "document template", "HTML", "Microsoft Word", "ODT", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="info" %}}
-This activity can only be used in microflows, not in nanoflows.
+{{% alert type="warning" %}}
+This activity can only be used in **Microflows**.
 {{% /alert %}}
 
 ## 1 Introduction
 
-The generate-document microflow action can be used to create a document based on a [template](document-templates).
+The generate-document microflow action can be used to write a document to a file, based on a [template](document-templates). The types of document which can be created are listed in [Document Type](#document-type).
 
 {{% alert type="info" %}}
 
@@ -21,15 +22,15 @@ Generate document
 
 {{% /alert %}}{{% alert type="info" %}}
 
-See [Microflow Element Common Properties](microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
+See [Common Properties](microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
 
 {{% /alert %}}
 
 ## 2 Input Properties
 
-### 2.1 File Document
+### 2.1 File
 
-The file document that will contain the generated document. It should be an object of entity System.FileDocument or a specialization thereof.
+The name of the file document that will contain the generated document. It should be an object of entity System.FileDocument or a specialization thereof.
 
 ## 3 Action Properties
 
@@ -39,13 +40,11 @@ The language in which the titles and labels of the document should appear.
 
 | Option | Description |
 | --- | --- |
-| Current user | Use the language of the current user. |
+| Current user *(default)*  | Use the language of the current user. |
 | Project default | Use the default language that is specified in the [Project Settings](project-settings). |
-| Variable | Use the language stored in the selected variable. The variable should be of type System.Language. |
+| Variable | Use the language stored in the selected object, which must be of type System.Language. |
 
-_Default value:_ Current user
-
-### 3.2 Document Type
+### 3.2 Document Type{#document-type}
 
 The document type specifies the type of the generated document.
 

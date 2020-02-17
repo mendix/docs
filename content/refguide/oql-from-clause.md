@@ -1,6 +1,7 @@
 ---
 title: "OQL From Clause"
 parent: "oql"
+tags: ["studio pro"]
 ---
 
 ## 1 Introduction

@@ -1,6 +1,7 @@
 ---
 title: "Start Event"
 parent: "events"
+tags: ["studio pro"]
 ---
 
 A start event defines the location where the flow will start from. A flow can only start from one location. Therefore, a flow can only contain one start event.

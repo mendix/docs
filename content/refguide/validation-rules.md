@@ -47,7 +47,7 @@ Validation rule properties consist of the following sections:
 
 **Error message** defines the message that is displayed to the end-user when the attribute value does not satisfy the condition defined by the validation rule.
 
-### 2.2 Rule Properties
+### 2.2 Rule Properties {#rule}
 
 #### 2.2.1 Rule
 

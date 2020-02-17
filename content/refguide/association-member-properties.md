@@ -87,7 +87,7 @@ Recording the association on only one of the entities does not affect your abili
 
 ### 2.4 Type & Owner Relationship with Multiplicity & Navigability {#types}
 
-**Type** and **Owner** properties of an entity are related to [Multiplicity](association-member-properties#multiplicity) and [Navigability](association-member-properties#navigability) properties of an association. When you change **Type** or **Owner**, you change **Multiplicity** and **Navigability** as well. 
+**Type** and **Owner** properties of an entity are related to [Multiplicity](association-properties#multiplicity) and [Navigability](association-properties#navigability) properties of an association. When you change **Type** or **Owner**, you change **Multiplicity** and **Navigability** as well. 
 
 You can find the correspondence between **Type**/**Owner** and **Multiplicity**/**Navigability** in the table below.
 
@@ -98,7 +98,7 @@ You can find the correspondence between **Type**/**Owner** and **Multiplicity**/
 | Many-to-many     | X objects refer to Y objects | Reference set | Default |
 | Many-to-many     | X and Y objects refer to each other | Reference set | Both    |
 
-For more information on multiplicity and navigability, see the [Multiplicity](association-member-properties#multiplicity) and [Navigability](association-member-properties#navigability) sections in *Association Tab Properties*.
+For more information on multiplicity and navigability, see the [Multiplicity](association-properties#multiplicity) and [Navigability](association-properties#navigability) sections in *Association Properties*.
 
 ## 3 Parent/Child {#parent-child}
 

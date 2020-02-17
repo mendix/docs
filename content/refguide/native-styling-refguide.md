@@ -883,7 +883,7 @@ The default class to style all web views is named `com_mendix_widget_native_webv
 
 ### 11.19 Animation
 
-The Animation widget allows you to animate a container. You can making the content wiggel, move resize and more. 
+The animation widget allows you to animate a container. You can make the content wiggle, move, change size, and more. 
 
 The widget’s style properties are as follows:
 
@@ -892,8 +892,6 @@ The widget’s style properties are as follows:
   {content}
 </container>
 ```
-
-The widget’s style properties are as follows:
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |

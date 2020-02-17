@@ -7,7 +7,7 @@ tags: ["studio", "domain model", "decision", "domain model"]
 
 ## 1 Introduction
 
-This how-to explains how you can configure the domain model in Mendix Studio. 
+This how-to explains how you can configure a domain model in Mendix Studio. 
 
 **This how-to will teach you how to do the following:**
 
@@ -18,7 +18,7 @@ This how-to explains how you can configure the domain model in Mendix Studio.
 
 This how-to describes the following use case: 
 
-You are configuring the domain model for an online shop. 
+You are configuring the domain model for an online shopping app. 
 
 ## 2 Prerequisites
 
@@ -28,9 +28,9 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Defining What Data to Include  
 
-Understanding the workflow will help you define what data to include to your domain model. The workflow for new customers of the online shop looks the following way:
+Understanding the typical process will help you define what data to include to your domain model. The workflow for new customers of the online shopping app looks the following way:
 
-1. A customer registers in the online shop and enters the following details:
+1. A customer registers in the online shopping app and enters the following details:
    1. Full name
    2. Address
    3. Email
@@ -47,7 +47,7 @@ Understanding the workflow will help you define what data to include to your dom
 4. The customer adds products to a shopping cart. 
 5. In the shopping cart, every item is presented as a separate line showing *quantity* and *price* per line. The customer checks the order, pays it, and gets a *confirmation* with the *order details* and the *date* the order is purchased on. 
 
-Based on the description below, you can divide your data to the following elements: 
+Based on the description above, you can divide your data to the following elements: 
 
 * [Customer](#customer) 
 * [Product](#product) 
@@ -55,7 +55,7 @@ Based on the description below, you can divide your data to the following elemen
 
 ## 4 Defining the Product {#product}
 
-As a product is one of the main elements of the online shop, an entity should be created to represent a product in your domain model. The information that defines the product, such as its name and price, should be attributes of the **Product** entity. 
+As a product is one of the main elements of the online shopping app, an entity should be created to represent a product in your domain model. The information that defines the product, such as its name and price, should be attributes of the **Product** entity. 
 
 To add the product to your domain model, follow the steps below:  
 
@@ -65,18 +65,18 @@ To add the product to your domain model, follow the steps below:
 
     2. Open **Toolbox**, drag and drop **Entity** in your domain model:
 
-       <img src="attachments/domain-models-how-to/adding-entity.png" alt="Adding a New Entity" style="zoom: 80%;" />
+       <img src="attachments/domain-models-how-to-configure/adding-entity.png" alt="Adding a New Entity" style="zoom: 80%;" />
 
     3. In the **Create New Entity**, dialog window, set the name to **Product** and click **Create**.
 
 2. Create attributes for the **Product** entity. Do the following:<br />
     1. Select the entity and click **New attribute**:
       
-		<img src="attachments/domain-models-how-to/adding-new-attribute.png" alt="Adding New Attribute" style="zoom:67%;" />
+		<img src="attachments/domain-models-how-to-configure/adding-new-attribute.png" alt="Adding New Attribute" style="zoom:67%;" />
       
-    2. In the **Create New Attribute** dialog window, set the name to *Product_ID*, set the type to *Autonumber*, and click **Create**:
+    2. In the **Create New Attribute** dialog window, set the name to *Product_ID*, set the type to *Autonumber* (so that ID for a product will be assigned automatically), and click **Create**:
       
-        <img src="attachments/domain-models-how-to/create-new-attribute-dialog.png" alt="Create New Attribute Dialog Window" style="zoom:67%;" />
+        <img src="attachments/domain-models-how-to-configure/create-new-attribute-dialog.png" alt="Create New Attribute Dialog Window" style="zoom:67%;" />
       
     3. Repeat step 2a to add the *Name* attribute. 
       
@@ -102,7 +102,7 @@ To add the product to your domain model, follow the steps below:
 
 	1.  Open **Toolbox**, drag and drop the **Image Entity** in your domain model:
 
-		<img src="attachments/domain-models-how-to/adding-image-entity.png" alt="Image Entity" style="zoom:80%;" />
+		<img src="attachments/domain-models-how-to-configure/adding-image-entity.png" alt="Image Entity" style="zoom:80%;" />
 
 	2. In the **Create New Image Attribute** dialog window, set the name to *Product_Image* and click **Create**.
 		{{% alert type="info" %}} *Name* and *Size* attributes are created automatically and are read-only.
@@ -110,7 +110,7 @@ To add the product to your domain model, follow the steps below:
 
 Good job! You created the **Product** entity, its attributes, and the **Product_Image** image entity:
 
- <img src="attachments/domain-models-how-to/product-and-product-image.png" alt="Product and Product Image Entities" style="zoom:80%;" />
+ <img src="attachments/domain-models-how-to-configure/product-and-product-image.png" alt="Product and Product Image Entities" style="zoom:70%;" />
 
 ## 5 Defining the Order
 
@@ -118,7 +118,7 @@ The order information can be divided into following:
 
 * **Order** – general information about the order such as its status, order number, name of the customer and their address, etc. 
 * **Order line** – items ordered, their quantity and price
-* **Order confirmation** – confirmation that is sent to the customer that the order is created
+* **Order confirmation** – confirmation that is sent to the customer that the order is placed
 
 So, you need to create three entities: *Order*, *Order_Line*, and *Order_Confirmation*. 
 
@@ -133,27 +133,27 @@ Do the following:
       
     3. Repeat step 2a to create the *Status* attribute.
       
-    4. Set the attribute **Name** to *Status* and **Type** to *Enumeration*. 
+    4. Set the attribute **Name** to *Status* and **Type** to *Enumeration*. The enumeration will include different status values, for example, *Placed* or *Shipped*. 
       
     5. Click **Select enumeration** to create a new [enumeration](domain-models-enumeration). 
       
-		<img src="attachments/domain-models-how-to/select-enumeration.png" alt="Select Enumeration" style="zoom:80%;" />
+		<img src="attachments/domain-models-how-to-configure/select-enumeration.png" alt="Select Enumeration" style="zoom:70%;" />
       
     6. In the **Select enumeration** dialog window, click **New Enumeration**.
       
     7. In the **Create new enumeration** dialog window, click **Add Item** (*Status* is filled out automatically for the **Name**).
       
-		<img src="attachments/domain-models-how-to/create-new-enumeration.png" alt="Create New Enumeration" style="zoom:80%;" />
+		<img src="attachments/domain-models-how-to-configure/create-new-enumeration.png" alt="Create New Enumeration" style="zoom:70%;" />
       
     8. Enter *Ordered* for the **Caption** (**Name** is filled out as *Ordered* automatically).
       
-    9. Click **Add Item** and repeat the step above to create the **Paid**, **Shipped**, **Delivered**, and **Cancelled** statuses.
+    9. Click **Add Item** and repeat the step above to create the **Paid**, **Shipped**, **Delivered**, and **Canceled** statuses.
       
-		<img src="attachments/domain-models-how-to/create-enumeration-items.png" alt="Create Enumeration Items" style="zoom:80%;" />
+		<img src="attachments/domain-models-how-to-configure/create-enumeration-items.png" alt="Create Enumeration Items" style="zoom:70%;" />
       
     10. Click **Create** to close the dialog windows and create the attribute.
    
-3. Create the **Order_Line** entity. Use the same method as for creating the **Product** entity. For more information, see the [Defining the Product](#product) section. 
+3. Create the **Order_Line** entity to hold the order products and quantities. Use the same method as for creating the **Product** entity. For more information, see the [Defining the Product](#product) section. 
 
 4. Create attributes for the **Order_Line** entity. Do the following:<br />
 
@@ -166,7 +166,7 @@ Do the following:
 
     1. Open **Toolbox**, drag and drop the **File Entity** in your domain model:
 
-		<img src="attachments/domain-models-how-to/adding-file-entity.png" alt="Image Entity" style="zoom:80%;" />
+		<img src="attachments/domain-models-how-to-configure/adding-file-entity.png" alt="Image Entity" style="zoom:80%;" />
 
     2. In the **Create New File Attribute** dialog window, set the name to *Order_Confirmation* and click **Create**.
 
@@ -179,11 +179,11 @@ Do the following:
 		{{% alert type="info" %}} *Name* and *Size* attributes are created automatically and are read-only.
 		{{% /alert %}}
 
-You configured three entities that define the order in your online shop.
+You configured three entities that define the order in your online shopping app.
 
 ## 6 Defining the Customer
 
-A customer is another crucial part of the online shop that needs a separate entity. The details that define customers, such as a name and address, should be attributes of this entity.
+A customer is another crucial part of the online shopping app that needs a separate entity. The details that define customers, such as a name and address, should be attributes of this entity.
 
 Follow the steps below:
 
@@ -203,13 +203,13 @@ Follow the steps below:
 
 You created the **Customer** entity and its attributes:
 
-<img src="attachments/domain-models-how-to/customer_entity.png" alt="Customer Entity" style="zoom: 80%;" />
+<img src="attachments/domain-models-how-to-configure/customer_entity.png" alt="Customer Entity" style="zoom: 80%;" />
 
 ## 7 Creating Associations
 
 You have created all the entities and their attributes:
 
-<img src="attachments/domain-models-how-to/entities.png" alt="Entities"  />
+<img src="attachments/domain-models-how-to-configure/entities.png" alt="Entities"  />
 
 Now you need to define how these entities are connected to each other and create associations. For more information on associations, see [Associations](domain-models-associations).  
 
@@ -217,9 +217,9 @@ First, define how entities are connected between each other:
 
 1. One product image is connected to only one product: this means they have a one-to-one association.
 2. One order can contain multiple items (order lines) in it, that means the **Order** and **Order_Line** have a one-to-many association.
-3. The **Order_Line** uses information about the product, it needs to access the name of the product, its ID, etc. One product can be associated with several order lines, so **Product** and **Order_Line** need a one-to-many association.
-4. One order confirmation is issued per one order. This means one **Order** object is associated with one **Order_Confirmation** object and has a one-to-one association. 
-5. Order needs to access information about a customer: name, address, etc. Several orders can be connected to one customer, so the **Order** and **Customer** have a one-to-many association.
+3. The **Order_Line** uses information about the product. One product can be associated with several order lines, so **Product** and **Order_Line** need a one-to-many association.
+4. One order confirmation is issued per order. This means one **Order** object is associated with one **Order_Confirmation** object and has a one-to-one association. 
+5.  An order is placed by a customer. Several orders can be connected to one customer, so the **Order** and **Customer** have a one-to-many association.
 
 Now that you defined connections between entities, you can start creating these connections. Follow the steps below:
 
@@ -227,15 +227,18 @@ Now that you defined connections between entities, you can start creating these 
 
     1. Hover over the **Product_Image** entity and click the dot icon:
 
-       ![Product Image and Product Association](attachments/domain-models-how-to/product-image-product-association.png)
+       <img src="attachments/domain-models-how-to-configure/product-image-product-association.png" alt="Product Image and Product Association" style="zoom:70%;" />
 
-    2. Drag the dot to to the **Product** entity. 
+    2. Drag the dot to the **Product** entity.
+    
+    	{{% alert type="info" %}}Another way to create an association between entities is to select an entity and click the arrow icon.
+    	{{% /alert %}}
 
     3. Open **Properties** and change the multiplicity (one-to-many is created by default) to one-to-one.
 
-      ![Product_Image and Product Association](attachments/domain-models-how-to/product-image-and-product-association.png)
-
-3. Create an association from **Order_Line** to **Order** following the steps 1a and 1b above. (The one-to-many multiplicity that you need is created by default).
+		<img src="attachments/domain-models-how-to-configure/product-image-and-product-association.png" alt="Product_Image and Product Association" style="zoom:80%;" />
+    
+2. Create an association from **Order_Line** to **Order** following the steps 1a and 1b above. (The one-to-many multiplicity that you need is created by default).
 3. Create an association from **Order** to **Customer** following the steps 1a and 1b above. (The one-to-many multiplicity that you need is created by default).
 
 4. Create an association from **Order** to **Order_Line**. Do the following:
@@ -244,8 +247,21 @@ Now that you defined connections between entities, you can start creating these 
 
 All associations are created.
 
-Congratulations! You have now configured the domain model for the online shop!
+{{% alert type="info" %}}
 
-![Domain Model Online Shop](attachments/domain-models-how-to/domain-model-online-shop.png)
+Alternatively, you can create an image or file entity clicking **New attribute** > **Add file or image**, in this case an association is created by default. For more information, see the [Adding New Image or File Entities](domain-models#adding-image-or-file-entities) section in *Domain Model*.
 
+{{% /alert %}}
 
+Congratulations! You have now configured the domain model for the online shopping app! 
+
+![Domain Model online shopping app](attachments/domain-models-how-to-configure/domain-model-online-shop.png)
+
+Now you can build [pages](page-editor) for it or use [Buzz](buzz) to collaborate with developers and designers from your team and build the app experience. 
+
+## 8 Read More
+
+* [Domain Model](domain-models)
+* [Pages](page-editor)
+* [Microflows](microflows)
+* [Buzz](buzz)

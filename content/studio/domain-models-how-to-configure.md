@@ -112,7 +112,7 @@ Good job! You created the **Product** entity, its attributes, and the **Product_
 
  <img src="attachments/domain-models-how-to-configure/product-and-product-image.png" alt="Product and Product Image Entities" style="zoom:70%;" />
 
-## 5 Defining the Order
+## 5 Defining the Order {#order}
 
 The order information can be divided into following:
 
@@ -181,7 +181,7 @@ Do the following:
 
 You configured three entities that define the order in your online shopping app.
 
-## 6 Defining the Customer
+## 6 Defining the Customer {#customer}
 
 A customer is another crucial part of the online shopping app that needs a separate entity. The details that define customers, such as a name and address, should be attributes of this entity.
 
@@ -211,7 +211,7 @@ You have created all the entities and their attributes:
 
 <img src="attachments/domain-models-how-to-configure/entities.png" alt="Entities"  />
 
-Now you need to define how these entities are connected to each other and create associations. For more information on associations, see [Associations](domain-models-associations).  
+Now you need to define how these entities are connected to each other and create associations. For more information on associations, see [Associations](domain-models-association-properties).  
 
 First, define how entities are connected between each other:
 

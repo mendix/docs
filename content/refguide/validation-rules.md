@@ -37,7 +37,7 @@ Validation rule properties consist of the following sections:
 * [General](#general)
 * [Rule](#rule)
 
-### 2.1 General Properties{#general}
+### 2.1 General Properties {#general}
 
 #### 2.1.1 Attribute
 

@@ -48,7 +48,7 @@ You can edit the associations as members of the entity. In this case you will de
 
 For more information see [Association Tab Properties](association-member-properties).
 
-## 4 Association Examples{#examples}
+## 4 Association Examples {#examples}
 
 ### 4.1 One-to-Many Association
 

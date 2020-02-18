@@ -70,7 +70,7 @@ Entities have the following properties:
 
 *  **Stored Information** properties define whether the information about the entity is stored in the database. If the information is stored, it can be retrieved afterwards and can be used in [page filters](filters). For example, you can add a filter and show only objects that were created by the current user. 
 
-  	You can toggle the following properties: 
+    	You can toggle the following properties: 
 
   	* **Store 'Created by'** – when enabled, the user who created the entity is stored in the database
 
@@ -273,3 +273,4 @@ You cannot delete *Name* and *Size* attributes of image and file entities.
 
 * [Attributes](domain-models-attributes)
 * [Associations](domain-models-association-properties) 
+* [Configure a Domain Model](#domain-models-how-to-configure)

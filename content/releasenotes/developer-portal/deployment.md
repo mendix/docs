@@ -14,7 +14,7 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 #### TLSv1.3 Support for Mendix Cloud (All Regions)
 
-* Starting on February 24th, we will roll out TLSv1.3 support to Mendix Cloud v4 and Mendix Cloud v3. TLSv1.3 improves the speed and security of HTTPS connections.
+* Starting on February 24th, we will roll out TLSv1.3 support to Mendix Cloud v4 and Mendix Cloud v3. TLSv1.3 improves the speed and security of HTTPS connections. We expect to complete this work by February 27th.
 
 ### February 17th, 2020
 

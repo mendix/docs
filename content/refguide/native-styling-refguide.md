@@ -901,9 +901,9 @@ The widget’s style properties are as follows:
 
 The default class to style all animation widgets is named `com_mendix_widget_native_animation_Animation`.
 
-### 11.20 Intro screen
+### 11.20 Introduction Screen
 
-Displays swipeable contents with buttons to proceed or go back and pagination.
+This introduction screen widget displays paginated contents you can swipe through, and offers buttons on each page buttons to proceed or go back.
 
 {{% image_container width="350" %}}![intro screen](attachments/native-styling-refguide/intro-screen.gif){{% /image_container %}}
 

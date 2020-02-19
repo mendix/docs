@@ -206,9 +206,9 @@ You may encounter certain issues when styling your app using Gulp and Sass. Here
 
 When using UX-theming in Mendix 8, some issues might occur with an infinite loop or folders not being recognized.
 
-This is probably because your theme folder has changes [todo: has changes?]. The Mendix 8 theme structure uses distinct folders for **web** and **native** styling files. Make sure you set the following folders correctly in your Gulpfile:
+This is probably because your theme folder has changes. The Mendix 8 theme structure uses distinct folders for **web** and **native** styling files. Make sure you set the following folders correctly in your Gulpfile:
 
-```[todo: add code lang. Css?]
+```
 // What is the name of the style folder in this theme folder?
 var sourceStyleFolder = 'theme/styles/web';
 
@@ -218,7 +218,7 @@ var deploymentStyleFolder = 'styles/web';
 
 ### 7.2 Apache Subversion Issues
 
-Other issues might occur with SVN and possible rewriting *Gulpfile.js* [todo: possible rewriting?]. To fix these issues, try the following solutions:
+Other issues might occur with SVN and possible rewriting of *Gulpfile.js*. To fix these issues, try the following solutions:
 
 * Remove *node_modules*, *package.json*, *package-lock.json* and *Gulpfile.js*, then replace them with a fresh copy downloaded from Mendix's [ux-theming repository](https://github.com/mendix/ux-theming/)
 * Ignore not only *node_modules* but also *Gulpfile.js* — this means you will have to add the *Gulpfile* to the project if you download it again or someone in your team is working on it

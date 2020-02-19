@@ -41,9 +41,9 @@ To run Gulp, follow these steps:
 
 1. You should still be in your root if you just finished the installation, so type `gulp dev` in your root.
 2. Make sure your Mendix project is running.
-3. For a quick test to see if everything is working, open *theme/styles/sass/custom/_custom-variables.scss* and type `body{ background-color: red; }`. Your background will then be a beautiful red:
+3.  For a quick test to see if everything is working, open *theme/styles/sass/custom/_custom-variables.scss* and type `body{ background-color: red; }`. Your background will then be a beautiful red:
 
-![](attachments/style-with-gulp-and-sass/red.png)
+	![](attachments/style-with-gulp-and-sass/red.png)
 
 {{% alert type="info" %}}
 If you are using Parallels on Mac, you can access your Mendix project on your Mac browser by going to your Parallels machine (for example, `http://10.211.55.3:30001` – this is different on each setup).

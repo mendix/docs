@@ -110,7 +110,7 @@ Final steps! Read below to open and work with Sass:
 
 ### 4.1  Keeping Your Sass in the Custom Folder
 
-it is important to keep in mind that you are only working in the **custom** folder. You will not make any changes in the **lib** folder, but you can use that as a reference. You will only use the contents of the *\_variables.scss* file to get the variables you need and copy them in your *\_custom-variables.scss* file. The variables can differ from the default font sizes, colors, background colors, heights, and so on. In the *\_custom-variables.scss* file, you can also make your own variables, for example `$brand-blue: \#48B0F7;`.
+It is important to keep in mind that you are only working in the **custom** folder. You will not make any changes in the **lib** folder, but you can use that as a reference. You will only use the contents of the *\_variables.scss* file to get the variables you need and copy them in your *\_custom-variables.scss* file. The variables can differ from the default font sizes, colors, background colors, heights, and so on. In the *\_custom-variables.scss* file, you can also make your own variables, for example `$brand-blue: \#48B0F7;`.
 
 You can now work on the Sass structure and organize everything neatly by creating sub-folders and files in the **custom** folder. You can also look in the **lib** folder to get an idea of which folders and files you will most likely use in your app project.
 
@@ -185,8 +185,8 @@ Practice the routine above a few times and you will master it in no time. In add
 	* `npm install`
 	* `npm install dev`
 	* `npm install gulp-cli -g`
-	* If the above do not work, you can also use `npm run dev`, though keep in mind you are not installing the gulp
-* Make sure the app project is running locally in Studio Pro (you will not be able to see yoru changes if the app is not running)
+	* If the commands above do not work, you can also use `npm run dev`, though keep in mind you are not installing the gulp
+* Make sure the app project is running locally in Studio Pro (you will not be able to see your changes if the app is not running)
 * If you change or add something in Studio Pro, save it and run the app project again
 * Make sure you are working in the right folder (which in VSC is always **sass** > **custom**; you should not work in **lib**)
 * Do not make use of inline styling via Studio Pro

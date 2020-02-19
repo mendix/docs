@@ -60,16 +60,16 @@ You will use these later to complete your work with the Native Builder and with 
 
 After you create your app via native builder `prepare` command, the Native Builder will create iOS and Android source code. To enable push notifications, you will customize these platforms' source code files. We already partly automated this process in `native-builder v3.2.0`. If you wish to implement the changes manually, please skip to section [Manually Implementing Changes](###5.1.b-manually-implementing-changes).
 
-### 5.1.a Implementing push changes via native builder
+### 5.1.1 Implementing Push Changes With the Native Builder
 
-Make sure to keep the following variables handy since it will be used in the command: 
+Remember these aspects of your app, since you will use them often in commands: 
 
 * *project name* 
 * *mendix version* 
 * *github access token*
-* absolute path to *google-services.json* and *GoogleService-Info.plist* 
+* the absolute path to *google-services.json* and *GoogleService-Info.plist* 
 
-Without any specific order run these commands:
+Run these commands (the order does not matter):
 
 ```
 ./native-builder.exe config ios add-entitlements --project-name "your project name" --entitlements notification
@@ -79,9 +79,9 @@ Without any specific order run these commands:
 ./native-builder.exe prepare --github-access-token yourAccessToken12345 --projectName "your project name"  --mendix-version x.x.x --firebase-ios-config-path A:\\bsolute-Path-To\GoogleService-Info.plist --firebase-android-config-path A:\\bsolute-Path-To\google-services.json
 ```
 
-These commands will automatically do the necessary code alterations and make a github commit in your repo. 
+These commands will automatically do the necessary code alterations and make a GitHub commit in your repo. 
 
-### 5.1.b Manually Implementing Changes 
+### 5.1.2 Manually Implementing Changes 
 
 #### Android
 

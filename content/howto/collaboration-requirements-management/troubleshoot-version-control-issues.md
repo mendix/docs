@@ -168,6 +168,17 @@ To resolve a conflict on the `svn:ignore` property, perform these steps:
 
 You have resolved the conflict and can commit from Studio Pro.
 
+### 2.8 Getting an Error with the Message `SharpSvn.SvnRepositoryIOForbiddenException: Access to '/.../!svn/rvr/1/trunk' forbidden`
+
+If you get this error, try the following options:
+
+* In the Developer Portal, check whether the user has access to the project. You might need to add the user to the project.
+
+* If the user does have access, in the Developer Portal remove the user from the project and add them back. The system will re-sync access rules then.
+
+* If none of the above helps, please make sure WebDAV protocol is not blocked within your network. It is [required](/refguide/system-requirements) by Studio Pro for Version Control to work. It might be blocked by your proxy server or software like firewall.
+
+
 ## 3 Other Problems
 
 If the solutions here do not work for your version control problems, please submit a request to [Mendix Support](https://support.mendix.com/).

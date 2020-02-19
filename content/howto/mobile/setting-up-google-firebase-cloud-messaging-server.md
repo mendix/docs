@@ -49,11 +49,12 @@ Click **Create new project** and fill in the project name and region for your ap
 
 ## 4 Adding an Android or iOS App
 
-Before you add an app to FCM, you must retrieve your app's bundle ID. Its location depends on your type of app.
+Before you add an app to FCM, you must retrieve your app's bundle ID. Its location depends on your type of your mobile app.
 
-For a native app, you can find this ID in your generated GitHub repo. Open  *android/app/src/main/AndroidManifest.xml* and consult your manifest tag's `package` property to find your ID. This package name will be the same when adding iOS app.
+For a native app, your bundle ID will be what you specify for the `--application-id` parameter. You can find this ID later in your generated GitHub repo:
 
-![](attachments/push-server/firebase/android_manifest.png)
+* For Android, open  *android/app/build.gradle* and consult **applicationId** to find your ID 
+* For iOS, open *ios/Config/config.xcconfig* and consult **BUNDLE_IDENTIFIER** to find your ID
 
 For a hybrid app, you can find this ID in your Project Dashboard. Click **Deploy**, then **Mobile App**. Your ID is listed as **App Identifier**:
 

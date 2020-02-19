@@ -112,6 +112,8 @@ In **Signing & Capabilities** tab, add **push notifications** capabilities to yo
 
   ![Capabilities](attachments/native-remote-push/ios-customizations.png)
 
+Commit and push your changes to master branch.
+
 ### 5.2 Customizing Android Manifest file
 
 Set app launch mode inside activity props and add necessary receiver changes in *android/app/src/main/AndroidManifest.xml*:

@@ -903,7 +903,7 @@ The default class to style all animation widgets is named `com_mendix_widget_nat
 
 ### 11.20 Introduction Screen
 
-This introduction screen widget displays paginated contents you can swipe through, and offers buttons on each page buttons to proceed or go back.
+This introduction screen widget displays paginated contents you can swipe through, and offers buttons on each page to proceed or go back.
 
 {{% image_container width="350" %}}![intro screen](attachments/native-styling-refguide/intro-screen.gif){{% /image_container %}}
 

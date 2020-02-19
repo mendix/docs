@@ -8,6 +8,12 @@ description: "Native Template release notes."
 
 For more information on native mobile app development, see the [native-template repository](https://github.com/mendix/native-template/) and [How to Deploy Your First Mendix Native App](/howto/mobile/deploying-native-app) .
 
+## 3.1.2
+
+**Release date: February 19th, 2020**
+
+* We fixed an issue with OTA in iOS. This issue resulted in OTA not triggering correctly and therefor never updating the app.
+  
 ## 3.1.1
 
 **Release date: February 6th, 2020**
@@ -141,4 +147,3 @@ iOS
 **Release date: August 1st, 2019**
 
 * This is the official release of the Native Template with support for Mendix Studio Pro 8.0.
-

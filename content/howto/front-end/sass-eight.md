@@ -126,7 +126,7 @@ Before you can see any changes in your app project with your new Sass, you need 
 
 To import all the sub-folders and files you have created, write this:
 
-```
+```scss
 \@import "custom-variables";
 // base
 \@import "base/login";
@@ -138,7 +138,7 @@ After you import everything, you are finally ready to Sass!
 
 Here is an example of custom Sass:
 
-```
+```scss
 .pageheader-title {
 color: red;
 }
@@ -208,7 +208,7 @@ When using UX-theming in Mendix 8, some issues might occur with an infinite loop
 
 This is probably because your theme folder has changes. The Mendix 8 theme structure uses distinct folders for **web** and **native** styling files. Make sure you set the following folders correctly in your Gulpfile:
 
-```
+```js
 // What is the name of the style folder in this theme folder?
 var sourceStyleFolder = 'theme/styles/web';
 

@@ -12,7 +12,9 @@ For more information on native mobile app development, see the [native-template 
 
 **Release date: February 19th, 2020**
 
-* We fixed an issue with OTA in iOS. This issue resulted in OTA not triggering correctly and therefor never updating the app.
+### Fix
+
+* We fixed an issue in iOS apps where OTA updates did not trigger correctly, and therefore did not update apps.
   
 ## 3.1.1
 
@@ -99,7 +101,7 @@ iOS
 ### Improvements
 
 * We added support for Android 10's Dark theme and iOS 13's Dark Mode.
-* We added over the air update support (for details, see [How to Use Over the Air Updates](/howto/mobile/how-to-ota)).
+* We added over the air (OTA) update support (for details, see [How to Use Over the Air Updates](/howto/mobile/how-to-ota)).
 * We migrated iOS project to Xcode 11.
 * We switched the App Center build platform to standard ReactNative.
 

@@ -67,7 +67,7 @@ You can fix this error by creating a microflow that will that will create a new 
 
     ![Default Home Page Setting](attachments/consistency-errors-navigation/default-home-page-field.png)
 
-3. In the **Select Navigation Target** dialog window, click **New**, then select **Create Microflow**.
+3. In the **Select Navigation Target** dialog box, click **New**, then select **Create Microflow**.
 
 4. Name the microflow *ACT_Open_HomePage*.
 

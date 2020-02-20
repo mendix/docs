@@ -19,7 +19,7 @@ Another way to add a resource is by right-clicking on an entity in the domain mo
 
 ### 1.1 Resource
 
-Press **Select** to open a dialog window that allows you to select an entity from the domain model to publish. Click on an entity in the displayed tree and press **Select** to confirm.
+Press **Select** to open a dialog box that allows you to select an entity from the domain model to publish. Click on an entity in the displayed tree and press **Select** to confirm.
 
 ![](attachments/16713722/16843930.png)
 

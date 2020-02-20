@@ -56,7 +56,7 @@ By default all apps created in Mendix Studio are Free Apps. A Free App is a comp
 
 To publish your application, follow these steps:
 
-1. Click **Publish** in the top menu bar of Studio (the dialog with your app status will open). 
+1. Click **Publish** in the top menu bar of Studio (the dialog box with your app status will open). 
 2.  Once your cloud environment has been set up, you will see the **Update** button. Click it to push the latest changes from Studio to the published app or to publish the app for the first time. 
 
     ![Publishing and Updating Your App](attachments/publishing-app/publish-and-update-buttons.png)

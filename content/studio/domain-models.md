@@ -130,13 +130,13 @@ To create a new image/file entity with an association automatically, follow the 
 
 2. Click **New attribute** button.
 
-3.  In the **Create New Attribute** dialog window, click **Add image or file** in the bottom-right corner:
+3.  In the **Create New Attribute** dialog box, click **Add image or file** in the bottom-right corner:
 
     ![Add Image or File](attachments/domain-models/add-image-or-file.png)
 
-4. In the **Image and Files** dialog window, select the type or entity (image or file).
+4. In the **Image and Files** dialog box, select the type or entity (image or file).
 
-5. In the **Create New Image/File Entity** dialog window, specify the name of the special entity and click **Create**. 
+5. In the **Create New Image/File Entity** dialog box, specify the name of the special entity and click **Create**. 
 
 The new image or file entity is created with default *Name* and *Size* attributes and the association to the entity that you selected in the first step:
 ![Image Entity Example](attachments/domain-models/image-entity-example.png)

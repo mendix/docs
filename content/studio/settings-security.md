@@ -89,7 +89,7 @@ To create a new app role, do the following:
 
     ![](attachments/settings-security/add-role-button.png)
 
-3.  Specify the name of the new role in the **Create Role** dialog window and click **Create**.
+3.  Specify the name of the new role in the **Create Role** dialog box and click **Create**.
 
     ![Create Role Dialog Box](attachments/settings-security/create-role-dialog.png)
 

@@ -21,7 +21,7 @@ Click **Add** in the **Resources** pane of the **Published OData Service** windo
 
 ![](attachments/16713722/16843930.png)
 
-[//]: # now called Select Persistable Entity when done from this doc - verify and replace
+[//]: # replace with the now called Select Persistable Entity when done from this doc - verify and replace
 
 An alternative way to add a resource is in **Domain Model**, right-click an entity and select **Expose as OData resource**... to open the **Published OData Service** window. Add** or **Edit** a published OData service document to display the **Published resource editor**.
 

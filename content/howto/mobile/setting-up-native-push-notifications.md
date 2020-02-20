@@ -98,13 +98,13 @@ Manually add the `google-services.json` file inside your **android/app** folder.
 
 In order for your generated template to work with push notifications, you will need XCODE installed in your machine.
 
-1. Open the *app/ios/yourProjectName.xcworkspace* in Xcode
-2. Right Click in the left pane and select *Add files to ...* and drop the *GoogleServices-Info.plist* file into the root iOS directory. 
+1. Open the *app/ios/yourProjectName.xcworkspace* in Xcode.
+2.  Right Click in the left pane and select *Add files to ...* and drop the *GoogleServices-Info.plist* file into the root iOS directory:
 
-![AddFilesToXcode](attachments/native-remote-push/add-files-to-xcode.png)
+  ![AddFilesToXcode](attachments/native-remote-push/add-files-to-xcode.png)
 
 3. Select *GoogleService-Info.plist* and make sure **Copy items if needed** is selected. 
-4. Select the **Create Groups** option, then select all targets:
+4.  Select the **Create Groups** option, then select all targets:
 
   ![GoogleServicesInfoPlist](attachments/native-remote-push/GoogleServicesInfoPlist.png)
 
@@ -119,15 +119,13 @@ In **Signing & Capabilities** tab, add **push notifications** capabilities to yo
 
   ![Capabilities](attachments/native-remote-push/ios-customizations.png)
 
-Commit and push your changes to master branch.
+Commit and push your changes to your master branch.
 
 ### 5.2 Customizing the Android Manifest File {#customize-android-manifest}
 
 Set app launch mode inside activity props and add necessary receiver changes in *android/app/src/main/AndroidManifest.xml*:
-
-  ![AndroidManifestChanges](attachments/native-remote-push/androidManifestXml.png)
-  
-  ```
+ 
+ ```
   <activity
   ...
   android:launchMode="singleTop"
@@ -145,7 +143,9 @@ Set app launch mode inside activity props and add necessary receiver changes in 
     </intent-filter>
   </receiver>
 </application>
-  ```
+```
+
+![AndroidManifestChanges](attachments/native-remote-push/androidManifestXml.png)
 
 Congratulations, you finished setting up customizations for your custom native app! To implement remote push notifications on a test device, see [Use Remote Notifications](native-remote-notifications).
 

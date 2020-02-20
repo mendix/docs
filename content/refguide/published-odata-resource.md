@@ -3,8 +3,6 @@ title: "Published OData Resource"
 parent: "published-odata-services"
 tags: ["studio pro"]
 ---
-++check all button and menu names
-
 {{% alert type="warning" %}}
 
 This document describes the properties of a published OData resource. For a general overview of OData services, see [Published OData Services](published-odata-services).
@@ -41,7 +39,7 @@ The _System_._ID_ attribute is used as a key in OData services and must always b
 
 {{% /alert %}}
 
-Attributes of published entities are nillable by default. This means that if their value is **empty** then they will be encoded as explicit nulls in the OData content. If you deselect the **nillable** column, the attribute cannot be **empty** (otherwise a runtime error would occur).++check the key names.++
+Attributes of published entities are nillable by default. This means that if their value is **empty** then they will be encoded as explicit nulls in the OData content. If you deselect the **nillable** column, the attribute cannot be **empty** (otherwise a runtime error would occur).
 
 {{% alert type="info" %}}
 
@@ -73,9 +71,9 @@ Enter the name of the entity set in the  **Exposed set name**. This is the last 
 
 Default: *{Entity name}s*
 
-## 5 Use Paging++
+## 5 Use Paging
 
-The **Use paging** option ++ enables you to set a maximum number of objects per response, and include a link to the next set of objects. A client such as Tableau can use this to show progress and automatically continue to follow the links until all the data is retrieved. The memory usage of the clients can be improved if  paging is set to a reasonable page size.
+The **Use paging** option enables you to set a maximum number of objects per response, and include a link to the next set of objects. A client such as Tableau can use this to show progress and automatically continue to follow the links until all the data is retrieved. The memory usage of the clients can be improved if  paging is set to a reasonable page size.
 
 Default: *No*
 

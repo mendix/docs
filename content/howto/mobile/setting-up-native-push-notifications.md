@@ -58,9 +58,11 @@ You will use these later to complete your work with the Native Builder and with 
 
 ## 5 Setting up Native App Customizations
 
-After you create your app via native builder `prepare` command, the Native Builder will create iOS and Android source code. To enable push notifications, you will customize these platforms' source code files. We already partly automated this process in `native-builder v3.2.0`. If you wish to implement the changes manually, please skip to section [Manually Implementing Changes](###5.1.b-manually-implementing-changes).
+After you create your app using the Native Builder's `prepare` command, the Native Builder will create iOS and Android source code. To enable push notifications, you will customize these platforms' source code files. The easiest way for your to customize these source code files is to follow [Implementing Push Changes With the Native Builder](#auto-changes). If you wish to implement the changes manually, please skip to section [Manually Implementing Changes](#manually-implementing-changes). 
 
-### 5.1.1 Implementing Push Changes With the Native Builder
+Choose one of these sections and complete *only* that section before moving on to [Customizing the Android Manifest File](#customize-android-manifest).
+
+### 5.1.1 Implementing Push Changes With the Native Builder {#auto-changes}
 
 Remember these aspects of your app, since you will use them often in commands: 
 
@@ -81,7 +83,7 @@ Run these commands (the order does not matter):
 
 These commands will automatically do the necessary code alterations and make a GitHub commit in your repo. 
 
-### 5.1.2 Manually Implementing Changes 
+### 5.1.2 Manually Implementing Changes {#manually-implementing-changes}
 
 #### Android
 
@@ -114,7 +116,7 @@ In **Signing & Capabilities** tab, add **push notifications** capabilities to yo
 
 Commit and push your changes to master branch.
 
-### 5.2 Customizing Android Manifest file
+### 5.2 Customizing the Android Manifest File {#customize-android-manifest}
 
 Set app launch mode inside activity props and add necessary receiver changes in *android/app/src/main/AndroidManifest.xml*:
 

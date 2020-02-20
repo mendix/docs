@@ -23,7 +23,7 @@ If you want to use local push notifications with the Make It Native app, the onl
 
 {{% alert type="info" %}}
 
-Remote notifications will not work with iOS Simulator.
+Remote notifications will not work in the iOS Simulator app.
 
 {{% /alert %}}
 
@@ -39,14 +39,14 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Creating a Native Builder App
 
-To make a native app for this how to, do the following:
+To make a native app, do the following:
 
-1. Complete [How to Deploy Your First Mendix Native App](deploying-native-app) through the end of the *Preparing Your Project* section. Once you finish this, you will have a generated a GitHub repository with all the files you will need. 
+1. Complete [How to Deploy Your First Mendix Native App](deploying-native-app) through the end of the *Preparing Your Project* section. Once you finish those sections, you will have a generated a GitHub repository with all the files you will need. 
 1. If you would like to run your apps from source, clone the generated repository to your computer. Otherwise you can edit the files using GitHub's inline editor.
 
 ## 4 Setting up Firebase Cloud Messaging Service {#firebase-setup}
 
-Google's Firebase service supports both Android and Apple push notifications. Because APNs can require more work from you during customization steps, this document will teach you to set up your push notifications using Firebase.
+Google's Firebase service supports both Android and Apple push notifications. Because APNs can require more work during customization steps, this document will teach you to set up your push notifications using Firebase.
 
 To set up the Firebase cloud messaging server, complete [Setting up Google Firebase Cloud Messaging Server](setting-up-google-firebase-cloud-messaging-server). During that document's *Adding an Android and iOS App* section, be sure to add both an iOS and an Android app to your Firebase configuration. After you complete that tutorial, you will have these files:
 
@@ -147,7 +147,7 @@ Set app launch mode inside activity props and add necessary receiver changes in 
 
 ![AndroidManifestChanges](attachments/native-remote-push/androidManifestXml.png)
 
-Congratulations, you finished setting up customizations for your custom developer app! To implement remote push notifications on a test device, see [Use Remote Notifications](native-remote-notifications).
+Congratulations, you finished setting up customizations for your custom native app! To implement remote push notifications on a test device, see [Use Remote Notifications](native-remote-notifications).
 
 ## 6 Read More
 

@@ -967,6 +967,38 @@ The widget’s style properties are as follows:
 
 The default class to style all into screen widgets is named `com_mendix_widget_native_animation_Animation`.
 
+### 11.20 List View Swipe
+
+The list view swipe widget can make the list view interactive, by adding swipe gesture and add extra buttons in the background behind a list item.
+
+{{% image_container width="350" %}}![list view swipe](attachments/native-styling-refguide/list-view-swipe-buttons.gif){{% /image_container %}}
+
+The widget’s style properties are as follows:
+
+```xml
+<container>
+	<leftAction>
+		{Left background}
+	</leftAction>
+	{Foreground}
+	<rightAction>
+		{Right background}
+	</rightAction>
+</container>
+```
+
+| Element | Style Properties | Description |
+| --- | --- | --- |
+| `container` | This has all ViewStyle properties. | |
+| `leftAction` | This has all ViewStyle properties. | |
+| `leftAction` |`panelSize` | number of pixels, the combined size a of the background buttons |
+| `leftAction` |`threshold` | number of pixels to accept the swipe action |
+| `rightAction` | This has all ViewStyle properties. | |
+| `rightAction` |`panelSize` | number of pixels, the combined size a of the background buttons |
+| `rightAction` |`threshold` | number of pixels to accept the swipe action |
+
+The default class to style all animation widgets is named `com_mendix_widget_native_listviewswipe_ListViewSwipe`.
+
 ## 12 Read More
 
 * [Style Your Mendix Native App](/howto/mobile/how-to-use-native-styling)

@@ -143,11 +143,11 @@ The top menu bar items are described in the table below:
 
 ## 8 Cut/Copy/Paste Function 
 
-You can copy and paste pages, microflows, and enumerations. You can also cut, copy, and paste separate elements such as widgets or microflow activities. 
+You can copy and paste pages, microflows, and [enumerations](domain-models-enumerations). You can also cut, copy, and paste separate elements such as widgets or microflow activities. 
 
 ### 8.1 Copy/Paste Pages, Microflows, and Enumerations
 
-Pages, microflows, and enumerations can be copied to clipboard and then pasted to a different app project or a module. You can also copy and paste them to the same app project, however, there is the **Duplicate** option you can use for this purpose. For more information on how to copy, paste, or duplicate pages, microflows, and enumerations, see [Pages](page-editor), [Microflows](microflows), and [Enumerations](domain-models-enumeration) respectively.  
+Pages, microflows, and enumerations can be copied to clipboard and then pasted to a different Studio app  (for more information on modules, see [Domain Model](domain-models)). You can also copy and paste pages, microflows, and enumerations to the same app, however, there is the **Duplicate** option you can use for this purpose. For more information on how to copy, paste, or duplicate pages, microflows, and enumerations, see [Pages](page-editor), [Microflows](microflows), and [Enumerations](domain-models-enumeration) respectively.  
 
 Mind the following when copying and pasting pages, microflows, and enumerations:
 

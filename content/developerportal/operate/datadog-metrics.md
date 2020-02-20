@@ -82,11 +82,9 @@ To send your runtime information to Datadog, you need to provide the Datadog API
 
 	This will ensure that some messages are sent to Datadog. You can change the log level later once you have confirmed that Datadog is receiving them.
 
-7.  Return to the **Environments** page for your app and *Deploy* or *Transport* your app into the selected environment.
+8.  Return to the **Environments** page for your app and *Deploy* or *Transport* your app into the selected environment.
 
-	{{% alert type="warning" %}}Your app must be **redeployed** as additional dependencies need to be included.<br/><br/>Restarting the app is not sufficient to start sending data to Datadog.{{% /alert %}}
-
-8. **Restart** the application.
+	{{% alert type="warning" %}}Your app must be **redeployed** before it is started as additional dependencies need to be included.<br/><br/>Restarting the app is not sufficient to start sending data to Datadog.{{% /alert %}}
 
 ## 4 Tagging Metrics for Datadog
 

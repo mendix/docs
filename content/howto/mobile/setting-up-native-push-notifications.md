@@ -36,15 +36,9 @@ Remote notifications will not work in the iOS Simulator app.
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Learn the basics of [Git](https://www.atlassian.com/git)
+* Complete [How to Deploy Your First Mendix Native App](deploying-native-app) through the end of the *Preparing Your Project* section. Once you finish those sections, you will have a generated a GitHub repository with all the files you will need.
 
-## 3 Creating a Native Builder App
-
-To make a native app, do the following:
-
-1. Complete [How to Deploy Your First Mendix Native App](deploying-native-app) through the end of the *Preparing Your Project* section. Once you finish those sections, you will have a generated a GitHub repository with all the files you will need. 
-1. If you would like to run your apps from source, clone the generated repository to your computer. Otherwise you can edit the files using GitHub's inline editor.
-
-## 4 Setting up Firebase Cloud Messaging Service {#firebase-setup}
+## 3 Setting up Firebase Cloud Messaging Service {#firebase-setup}
 
 Google's Firebase service supports both Android and Apple push notifications. Because APNs can require more work during customization steps, this document will teach you to set up your push notifications using Firebase.
 
@@ -56,13 +50,13 @@ To set up the Firebase cloud messaging server, complete [Setting up Google Fireb
 
 You will use these later to complete your work with the Native Builder and with Firebase.
 
-## 5 Setting up Native App Customizations
+## 4 Setting up Native App Customizations
 
 After you create your app using the Native Builder's `prepare` command, the Native Builder will create iOS and Android source code. To enable push notifications, you will customize these platforms' source code files. The easiest way for your to customize these source code files is to follow [Implementing Push Changes With the Native Builder](#auto-changes). If you wish to implement the changes manually, please skip to section [Manually Implementing Changes](#manually-implementing-changes). 
 
 Choose one of these sections and complete *only* that section before moving on to [Customizing the Android Manifest File](#customize-android-manifest).
 
-### 5.1.1 Implementing Push Changes With the Native Builder {#auto-changes}
+### 5.1 Implementing Push Changes With the Native Builder {#auto-changes}
 
 Remember these parameters of your app, since you will use them often in commands (for more information on parameters, see the [Native Builder Reference Guide](/refguide/native-builder)): 
 
@@ -88,7 +82,7 @@ Run these commands in any order:
 
 These commands will automatically do the necessary code alterations and make a GitHub commit in your repo. 
 
-### 5.1.2 Manually Implementing Changes {#manually-implementing-changes}
+### 5.2 Manually Implementing Changes {#manually-implementing-changes}
 
 #### Android
 
@@ -121,7 +115,7 @@ In **Signing & Capabilities** tab, add **push notifications** capabilities to yo
 
 Commit and push your changes to your master branch.
 
-### 5.2 Customizing the Android Manifest File {#customize-android-manifest}
+### 5.3 Customizing the Android Manifest File {#customize-android-manifest}
 
 Set app launch mode inside activity props and add necessary receiver changes in *android/app/src/main/AndroidManifest.xml*:
  

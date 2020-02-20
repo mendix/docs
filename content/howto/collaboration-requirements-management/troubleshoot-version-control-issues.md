@@ -16,9 +16,9 @@ For more information and general help on version control, see the following docu
 * [Version Control](/refguide/version-control)
 * [Using Version Control in Studio Pro](/refguide/using-version-control-in-studio-pro)
 
-## 2 Known Problems & Fixes
+## 2 Errors & Fixes
 
-Below is a list of known problems and steps to fix them.
+Below is a list of known errors and the steps to fix them.
 
 ### 2.1 Getting an Error Containing `SharpSvn.SvnAuthenticationException: Proxy authentication failed`
 
@@ -172,12 +172,10 @@ You have resolved the conflict and can commit from Studio Pro.
 
 If you get this error, try the following options:
 
-* In the Developer Portal, check whether the user has access to the project. You might need to add the user to the project.
-
-* If the user does have access, in the Developer Portal remove the user from the project and add them back. The system will re-sync access rules then.
-
-* If none of the above helps, please make sure WebDAV protocol is not blocked within your network. It is [required](/refguide/system-requirements) by Studio Pro for Version Control to work. It might be blocked by your proxy server or software like firewall.
-
+* In the [Developer Portal](/developerportal/collaborate/team), check whether the user has access to the app project:
+	* If they do not have access, invite them to the app project
+	* If they do have access, remove them from the app project and add them back – this will re-sync the access rules
+* If the above does not work, make sure the [WebDAV protocol](http://www.webdav.org/) is not blocked within your network – this protocol is [required](/refguide/system-requirements) by Studio Pro for [version control](/refguide/version-control) to work, but it might be blocked by your proxy server or other software like a firewall
 
 ## 3 Other Problems
 

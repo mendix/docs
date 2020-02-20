@@ -72,7 +72,20 @@ To create a new page in Studio, do the following:
 
 A new page is created.
 
-### 2.3 Duplicating a Page
+### 2.3 Copying and Pasting a Page
+
+You can copy and paste a page in another Studio app providing that these apps have the same Mendix version. You can also paste the page in the same Studio app, however, you can use the [duplicate](#duplicate) function for that. 
+
+To copy and paste a page, do the following:
+
+1. Click the **Pages** icon in the left menu bar.
+
+2. In the side panel, click the ellipsis icon and select **Copy to clipboard** in the drop-down menu:
+3. Open a Studio app which you want to paste the page to and press <kbd>Ctrl</kbd> +<kbd>V</kbd>. 
+
+Your page is pasted. 
+
+### 2.4 Duplicating a Page
 
 To duplicate an existing page, do the following:
 
@@ -84,7 +97,7 @@ To duplicate an existing page, do the following:
 
 The page is duplicated.
 
-### 2.4 Deleting a Page
+### 2.5 Deleting a Page
 
 To delete a page in Studio, do one of the following:
 
@@ -102,14 +115,14 @@ To delete a page in Studio, do one of the following:
 
 The selected page is deleted.
 
-### 2.5 Adding Elements on a Page
+### 2.6 Adding Elements on a Page
 
 To add elements on a page, do the following:
 
 1. In **Toolbox**, open the [Widgets](#widgets) tab or the [Building Blocks](#building-blocks) tab.
 2. Select an element you would like to add, drag and drop this element on a page. 
 
-### 2.6 Viewing Elements On a Page
+### 2.7 Viewing Elements On a Page
 
 There are two ways to view an element and its [properties](#page-editor-properties):
 
@@ -121,7 +134,7 @@ The selected element is indicated with an blue border. Additionally, if the elem
 {{% image_container width="400" %}}![](attachments/page-editor/input-widget-example.png)
 {{% /image_container %}}
 
-### 2. Deleting Elements from a Page
+### 2.8 Deleting Elements from a Page
 
 To delete an element from a page, do one of the following:
 

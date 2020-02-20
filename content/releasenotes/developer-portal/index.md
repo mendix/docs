@@ -13,6 +13,12 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 ## 2020
 
+### February 21st, 2020
+
+* We fixed an issue where favorited apps would still show up after being deleted in the favorites view on the MyApps page.
+* We made performance improvements to the MyApps page.
+* We fixed an issue where the description field would not expand properly when creating a new story.
+
 ### February 6th, 2020
 
 #### Improvements

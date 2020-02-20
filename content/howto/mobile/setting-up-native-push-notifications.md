@@ -64,20 +64,25 @@ Choose one of these sections and complete *only* that section before moving on t
 
 ### 5.1.1 Implementing Push Changes With the Native Builder {#auto-changes}
 
-Remember these aspects of your app, since you will use them often in commands: 
+Remember these parameters of your app, since you will use them often in commands (for more information on parameters, see the [Native Builder Reference Guide](/refguide/native-builder)): 
 
-* *project name* 
-* *mendix version* 
-* *github access token*
-* the absolute path to *google-services.json* and *GoogleService-Info.plist* 
+* `--project-name`
+* `--mendix-version` 
+* `--github-access-token`
 
-Run these commands (the order does not matter):
+Also, be sure to remember the absolute path to your app's *google-services.json* and *GoogleService-Info.plist* files.
+
+Run these commands in any order:
 
 ```
 ./native-builder.exe config ios add-entitlements --project-name "your project name" --entitlements notification
+```
 
+```
 ./native-builder.exe config ios add-background-modes --project-name "your project name" --modes notification
+```
 
+```
 ./native-builder.exe prepare --github-access-token yourAccessToken12345 --projectName "your project name"  --mendix-version x.x.x --firebase-ios-config-path A:\\bsolute-Path-To\GoogleService-Info.plist --firebase-android-config-path A:\\bsolute-Path-To\google-services.json
 ```
 

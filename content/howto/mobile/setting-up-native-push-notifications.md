@@ -1,10 +1,10 @@
 ---
 title: "Setting Up Remote Notifications"
-#category: "Native Mobile"
-#parent: "native-mobile"
-#menu_order: 11
-#description: "Learn how to set up remote push notifications for native apps."
-#tags: ["mobile", "push notification", "remote", "push", "notification"]
+category: "Native Mobile"
+parent: "native-mobile"
+menu_order: 11
+description: "Learn how to set up remote push notifications for native apps."
+tags: ["mobile", "push notification", "remote", "push", "notification"]
 ---
 
 ## 1 Introduction
@@ -14,12 +14,12 @@ Remote push notifications allow you to remotely trigger small text messages, sou
 Native remote push notifications have the more capabilities than hybrid push notifications. Native push notifications also require a unique setup method:
 
 1. Generate an app using the Native Builder.
-2. Configure your Firebase setup.
-3. Customize your native template.
+1. Configure your Firebase setup.
+1. Customize your native template.
 
 Follow the sections below to complete these three tasks and enable native remote push notifications. After you have completed this document, see [How To Use Native Push Notifications](/howto/mobile/native-remote-notifications) for instructions on implementing native push notifications.
 
-If you want to use local push notifications with the Make it Native app, the only step you have to perform is [Setting up Firebase Cloud Messaging Service (#4-firebase-setup)
+If you want to use local push notifications with the Make It Native app, the only step you have to perform is [Setting up Firebase Cloud Messaging Service (#firebase-setup)
 
 {{% alert type="info" %}}
 
@@ -42,7 +42,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 To make a native app for this how to, do the following:
 
 1. Complete [How to Deploy Your First Mendix Native App](deploying-native-app) through the end of the *Preparing Your Project* section. Once you finish this, you will have a generated a GitHub repository with all the files you will need. 
-2. If you would like to run your apps from source, clone the generated repository to your computer. Otherwise you can edit the files using GitHub's inline editor.
+1. If you would like to run your apps from source, clone the generated repository to your computer. Otherwise you can edit the files using GitHub's inline editor.
 
 ## 4 Setting up Firebase Cloud Messaging Service {#firebase-setup}
 
@@ -99,23 +99,23 @@ Manually add the `google-services.json` file inside your **android/app** folder.
 In order for your generated template to work with push notifications, you will need XCODE installed in your machine.
 
 1. Open the *app/ios/yourProjectName.xcworkspace* in Xcode.
-2.  Right Click in the left pane and select *Add files to ...* and drop the *GoogleServices-Info.plist* file into the root iOS directory:
+1.  Right Click in the left pane and select *Add files to ...* and drop the *GoogleServices-Info.plist* file into the root iOS directory:
 
   ![AddFilesToXcode](attachments/native-remote-push/add-files-to-xcode.png)
 
-3. Select *GoogleService-Info.plist* and make sure **Copy items if needed** is selected. 
-4.  Select the **Create Groups** option, then select all targets:
+1. Select *GoogleService-Info.plist* and make sure **Copy items if needed** is selected. 
+1.  Select the **Create Groups** option, then select all targets:
 
   ![GoogleServicesInfoPlist](attachments/native-remote-push/GoogleServicesInfoPlist.png)
 
 In **Signing & Capabilities** tab, add **push notifications** capabilities to your app by doing the following:
 
 1. Click **nativeTemplate** in the left-side file explorer.
-2. Click the **Signing & Capabilities** tab.
-3. Click **Targets** > **nativeTemplate**.
-4. Click **Capability**, type *push* in the dialog box, then select **Push Notifications**.
-5. Click **Capability**, type *background* in the dialog box, then select **Background Modes**.
-6. Select **Background Modes** > **Remote Notifications**:
+1. Click the **Signing & Capabilities** tab.
+1. Click **Targets** > **nativeTemplate**.
+1. Click **Capability**, type *push* in the dialog box, then select **Push Notifications**.
+1. Click **Capability**, type *background* in the dialog box, then select **Background Modes**.
+1. Select **Background Modes** > **Remote Notifications**:
 
   ![Capabilities](attachments/native-remote-push/ios-customizations.png)
 
@@ -147,7 +147,7 @@ Set app launch mode inside activity props and add necessary receiver changes in 
 
 ![AndroidManifestChanges](attachments/native-remote-push/androidManifestXml.png)
 
-Congratulations, you finished setting up customizations for your custom native app! To implement remote push notifications on a test device, see [Use Remote Notifications](native-remote-notifications).
+Congratulations, you finished setting up customizations for your custom developer app! To implement remote push notifications on a test device, see [Use Remote Notifications](native-remote-notifications).
 
 ## 6 Read More
 

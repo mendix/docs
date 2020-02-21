@@ -79,12 +79,6 @@ Sometimes the computer running Studio Pro cannot access the internet directly, b
 
 The **New features** tab allows you to turn new features on and off. These are features which are being worked on but are either not yet developed sufficiently to remove the previous version, or which are currently optional.
 
-### 5.1 Project Explorer
-
-#### 5.1.1 New Version of the Project Explorer
-
-Select this option when you want to enable the new version of the [Project Explorer](project-explorer). Should you find any issues in the new version, you can switch back to the old version by clearing this check box.
-
 {{% alert type="info" %}}
 You need to restart Studio Pro for changes to these settings to take effect.
 {{% /alert %}}

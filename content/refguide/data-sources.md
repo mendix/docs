@@ -26,7 +26,7 @@ The **Microflow** source is not supported in offline applications because it imp
 
 {{% /alert %}}
 
-## 3 Data Grid, Template Grid, List View
+## 3 Data Grid, Template Grid, List View {#data-sources}
 
 A data grid, template grid, and list view support the data sources listed below:
 

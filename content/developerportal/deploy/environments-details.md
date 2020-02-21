@@ -266,11 +266,10 @@ Add client certificates (in the PKCS12 format) or certificate authorities (in th
 
 ![](attachments/environments-details/loglevels-tab.png)   
 
-Log levels are used to distinguish the log messages and to highlight the highest priority ones so that they can receive the immediate intervention they require.
+Log levels are used to distinguish the log messages and to highlight the highest priority ones so that they can receive the immediate intervention they require. Note that log nodes appear in the list only after a message has been logged to them. 
 
 On this tab, you can perform the following actions:
 
-* Retrieve the current log levels by clicking **Refresh**
 * Change the log level type by clicking the specific level
 * Click **Set all to INFO** to revert all the changes
 

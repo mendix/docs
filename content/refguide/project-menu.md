@@ -27,7 +27,7 @@ The **Batch Update Button Icons** option allows you to update many button icons 
 
 The **Batch Update Layouts** option allows you to update the layouts of many pages in a single batch process.
 
-### 2.3 Update Widgets
+### 2.3 Update Widgets {#update-widgets}
 
 The **Update Widgets** option presents the current versions of the widgets you are using in your app project, what the latest versions of the widgets are, and an update option.
 

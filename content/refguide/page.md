@@ -50,7 +50,7 @@ To create a new page, do the following:
     {{% image_container width="350" %}}![](attachments/page/add-page.png)
     {{% /image_container %}}
 
-2.  In the **Create Page** dialog window, fill in the **Page name** and select a **Navigation layout**.
+2.  In the **Create Page** dialog box, fill in the **Page name** and select a **Navigation layout**.
 
     ![](attachments/page/create-page.png)
 
@@ -151,7 +151,7 @@ Both modes allow you to edit your page by doing the following:
 * Dragging widgets from the **Toolbox** pane onto the page
 * Dragging widgets, and their contents, from one place on the page to another
 * Viewing and editing properties of each widget in the **Properties** pane
-* Opening a **Properties** dialog window from the menu you get when you right-click the widget
+* Opening a **Properties** dialog box from the menu you get when you right-click the widget
 
 ### 3.1 Structure Mode {#structure-mode}
 

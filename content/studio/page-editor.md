@@ -64,7 +64,7 @@ To create a new page in Studio, do the following:
     {{% image_container width="400" %}}![](attachments/page-editor/new-page.png)
     {{% /image_container %}}
 
-3.  In the **Create new page** dialog window, fill out the title of the page, select a layout and a page template.  
+3.  In the **Create new page** dialog box, fill out the title of the page, select a layout and a page template.  
 
 	![](attachments/page-editor/create-new-page-dialog.png)
 

@@ -42,11 +42,11 @@ information dialog with brief description of this activity/event is displayed ab
 
 ![](attachments/mx-assist/info-dialog.png)
 
-The following options are available in the information dialog window:
+The following options are available in the information dialog box:
 
-* **Don't show again** – disables the information dialog window (it will not be shown again when you insert other activities) 
+* **Don't show again** – disables the information dialog box (it will not be shown again when you insert other activities) 
 * **Lean More** – opens documentation on microflow activities
-* **Thanks, I understand** – dismisses the current information dialog window 
+* **Thanks, I understand** – dismisses the current information dialog box 
 
 ## 3 Settings
 
@@ -59,7 +59,7 @@ Settings available for Mendix Assist are described in the table below:
 | Setting                      | Description                                                  |
 | ---------------------------- | ------------------------------------------------------------ |
 | Mendix Assist Is ON/OFF      | Toggling the setting enables/disables the tool.              |
-| Information Dialog Is ON/OFF | Toggling the setting enables/disables the information dialog window. **Note** The information dialog window is disabled if Mendix Assist is OFF. |
+| Information Dialog Is ON/OFF | Toggling the setting enables/disables the information dialog box. **Note** The information dialog box is disabled if Mendix Assist is OFF. |
 
 You can also enable/disable Mendix Assist by clicking the information icon in the top menu bar of Mendix Studio: 
 

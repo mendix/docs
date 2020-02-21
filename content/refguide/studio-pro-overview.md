@@ -50,8 +50,8 @@ In most dialog boxes for editing properties, the following shortcut keys can be 
 
 | Key | Description |
 | --- | --- |
-| <kbd>Ctrl</kbd> + <kbd>Enter</kbd> | Confirms all changes and closes the dialog window. Works as if the **OK** button was clicked. This is especially useful if the focus is on a multi-line text box; otherwise, pressing <kbd>Enter</kbd> will have the same effect. |
-| <kbd>Esc</kbd> | Cancels all changes and closes the dialog window. Works as if the **Cancel** button was clicked. |
+| <kbd>Ctrl</kbd> + <kbd>Enter</kbd> | Confirms all changes and closes the dialog box. Works as if the **OK** button was clicked. This is especially useful if the focus is on a multi-line text box; otherwise, pressing <kbd>Enter</kbd> will have the same effect. |
+| <kbd>Esc</kbd> | Cancels all changes and closes the dialog box. Works as if the **Cancel** button was clicked. |
 | <kbd>Ctrl</kbd> + Mouse scroll wheel | Zooms in or out. This works in all editors. |
 | <kbd>Shift</kbd> + Mouse scroll wheel | Scrolls left or right. Works as if you were using the horizontal scroll bars. |
 

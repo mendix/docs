@@ -34,7 +34,7 @@ Buttons allow you to perform the following actions:
 
 * **Commit** – commits your changes to the repository and starts a new revision (for more information on the commit concept, see the [Commit](version-control#commit) section in *Version Control*)
 
-* **History** – opens the **History** dialog window that shows the changes made on the current development line of the project (for more information on history, see [History](history-dialog))
+* **History** – opens the **History** dialog box that shows the changes made on the current development line of the project (for more information on history, see [History](history-dialog))
 
 * **Show Conflicts** – available only for a zoomed-in level of a conflicted document, shows details of a conflict
 

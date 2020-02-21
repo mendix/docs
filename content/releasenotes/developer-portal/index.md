@@ -13,6 +13,12 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 ## 2020
 
+### February 21st, 2020
+
+* We fixed an issue where [favorited apps](/developerportal/apps-list/#favoriting) still showed up in the favorites view on the [My Apps](/developerportal/apps-list/) page after being deleted.
+* We made performance improvements to the **My Apps** page.
+* We fixed an issue where the description field did not expand properly when creating a new [story](/developerportal/collaborate/stories).
+
 ### February 6th, 2020
 
 #### Improvements

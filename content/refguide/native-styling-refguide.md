@@ -901,7 +901,7 @@ The default class to style all animation widgets is named `com_mendix_widget_nat
 
 ### 11.20 Introduction Screen
 
-This introduction screen widget displays paginated contents you can swipe through, and offers buttons on each page to proceed or go back.
+This introduction screen widget displays paginated contents you can swipe through, and offers buttons on each page to proceed or go back:
 
 {{% image_container width="350" %}}![intro screen](attachments/native-styling-refguide/intro-screen.gif){{% /image_container %}}
 
@@ -960,16 +960,16 @@ The widget’s style properties are as follows:
 | `dotStyle` | This has all ViewStyle properties. | |
 | `activeDotStyle` | This has all ViewStyle properties. | |
 | `buttonsContainer` | This has all ViewStyle properties. | |
-| `container` | This has all ViewStyle properties. | for buttonSkip, buttonDone, buttonPrevious and buttonNext |
+| `container` | This has all ViewStyle properties. | Meant for `buttonSkip`, `buttonDone`, `buttonPrevious`, and `buttonNext`. |
 | `caption` | This has all ViewStyle properties. | |
 | `icon` | `size` | The size of the icon. |
 | `icon` | `color` | The color of the icon. |
 
 The default class to style all into screen widgets is named `com_mendix_widget_native_animation_Animation`.
 
-### 11.20 List View Swipe
+### 11.21 List View Swipe
 
-The list view swipe widget can make the list view interactive, by adding swipe gesture and add extra buttons in the background behind a list item.
+The list view swipe widget can make a list view interactive by adding swipe gestures and extra buttons in the background behind a list item:
 
 {{% image_container width="350" %}}![list view swipe](attachments/native-styling-refguide/list-view-swipe-buttons.gif){{% /image_container %}}
 
@@ -991,11 +991,11 @@ The widget’s style properties are as follows:
 | --- | --- | --- |
 | `container` | This has all ViewStyle properties. | |
 | `leftAction` | This has all ViewStyle properties. | |
-| `leftAction` |`panelSize` | number of pixels, the combined size a of the background buttons |
-| `leftAction` |`threshold` | number of pixels to accept the swipe action |
+| `leftAction` |`panelSize` | The number of pixels and the combined size of the background buttons. |
+| `leftAction` |`threshold` | The number of pixels to accept the swipe action. |
 | `rightAction` | This has all ViewStyle properties. | |
-| `rightAction` |`panelSize` | number of pixels, the combined size a of the background buttons |
-| `rightAction` |`threshold` | number of pixels to accept the swipe action |
+| `rightAction` |`panelSize` | The number of pixels and the combined size of the background buttons. |
+| `rightAction` |`threshold` | The number of pixels to accept the swipe action. |
 
 The default class to style all animation widgets is named `com_mendix_widget_native_listviewswipe_ListViewSwipe`.
 

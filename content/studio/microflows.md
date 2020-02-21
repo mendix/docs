@@ -64,19 +64,17 @@ The new microflow is created, you can now add logic using events and activities.
 
 ## 4 Duplicating a Microflow {#duplicate}
 
-To duplicate an existing microflow, do the following:
+To duplicate a microflow, do the following:
 
 1. Click the **Microflows** icon in the left menu bar.
 
-2. In the side panel, click the ellipsis icon and select **Duplicate** in the drop-down menu:
+2.  In the side panel, click the ellipsis icon and select **Duplicate** in the drop-down menu:
 
-   <img src="attachments/microflows/duplicate-microflow.png" style="zoom:80%;" />
+    <img src="attachments/microflows/duplicate-microflow.png" style="zoom:80%;" />
 
 The microflow is duplicated.
 
 ## 5 Copying and Pasting a Microflow
-
-You can copy and paste a microflow in another Studio app providing that these apps have the same Mendix version. You can also paste the microflow in the same Studio app, however, you can use the [duplicate](#duplicate) function for that. 
 
 To copy and paste a microflow, do the following:
 
@@ -86,9 +84,9 @@ To copy and paste a microflow, do the following:
 
     <img src="attachments/microflows/copy-microflow.png" alt="Copying a Microflow" style="zoom:80%;" />
 
-3. Open a Studio app which you want to paste the microflow to and press <kbd>Ctrl</kbd> +<kbd>V</kbd>. 
+3. Open the Studio app where you want to paste the microflow and press <kbd>Ctrl</kbd> +<kbd>V</kbd> or <kbd>Cmd</kbd> +<kbd>V</kbd>. 
 
-Your microflow is pasted. 
+Your microflow is pasted. For more information on copy/paste function in Studio, see the [Copy/Paste Pages, Microflows, and Enumerations](#copy-paste-documents) section in *General*. 
 
 ## 6 Deleting a Microflow
 
@@ -106,7 +104,7 @@ To delete a microflow in Studio, do one of the following:
     
         <img src="attachments/microflows/delete-microflow.png" alt="Delete Microflow" style="zoom:80%;" />
 
-## 7 Adding New Event or Activity {#adding-activity-to-microflow}
+## 7 Adding a New Event or Activity {#adding-activity-to-microflow}
 
 To add a new activity or event to the microflow, do the following:
 

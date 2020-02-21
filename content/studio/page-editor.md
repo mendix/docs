@@ -86,8 +86,6 @@ The page is duplicated.
 
 ### 2.4 Copying and Pasting a Page
 
-You can copy and paste a page in another Studio app providing that these apps have the same Mendix version. You can also paste the page in the same Studio app, however, you can use the [duplicate](#duplicate) function for that. 
-
 To copy and paste a page, do the following:
 
 1. Click the **Pages** icon in the left menu bar.
@@ -96,9 +94,9 @@ To copy and paste a page, do the following:
 
     <img src="attachments/page-editor/copy-page.png" alt="Copying a Page" style="zoom:80%;" />
 
-3. Open a Studio app which you want to paste the page to and press <kbd>Ctrl</kbd> +<kbd>V</kbd>. 
+3. Open the Studio app where you want to paste the page and press <kbd>Ctrl</kbd> +<kbd>V</kbd> or <kbd>Cmd</kbd> +<kbd>V</kbd>. 
 
-Your page is pasted. 
+Your page is pasted. For more information on copy/paste function in Studio, see the [Copy/Paste Pages, Microflows, and Enumerations](#copy-paste-documents) section in *General*.
 
 ### 2.5 Deleting a Page
 

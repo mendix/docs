@@ -72,7 +72,7 @@ The existing enumeration is selected for the attribute of the enumeration type.
 
 ### 3.3 Copying and Pasting an Enumeration
 
-You can copy and paste an enumeration to another module or Studio app. Follow the steps below:
+You can copy and paste an enumeration to another Studio app. Follow the steps below:
 
 1. Open your [domain model](domain-models).
 2. Select the attribute of the enumeration type and click **Enumeration** in its properties.
@@ -80,7 +80,7 @@ You can copy and paste an enumeration to another module or Studio app. Follow th
 4. Select the **Copy to clipboard** option in the drop-down menu. 
 5. Open a different module or Studio app, navigate to a domain model and press <kbd>Ctrl</kbd> + <kbd>V</kbd>.
 
-The enumeration is pasted.
+The enumeration is pasted. For more information on copy/paste function in Studio, see the [Copy/Paste Pages, Microflows, and Enumerations](#copy-paste-documents) section in *General*.
 
 ### 3.4 Duplicating an Enumeration 
 

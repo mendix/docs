@@ -960,7 +960,7 @@ The widget’s style properties are as follows:
 | `dotStyle` | This has all ViewStyle properties. | |
 | `activeDotStyle` | This has all ViewStyle properties. | |
 | `buttonsContainer` | This has all ViewStyle properties. | |
-| `container` | This has all ViewStyle properties. | Meant for `buttonSkip`, `buttonDone`, `buttonPrevious`, and `buttonNext`. |
+| `container` | This has all ViewStyle properties. | Meant for buttonSkip, buttonDone, buttonPrevious, and buttonNext. |
 | `caption` | This has all ViewStyle properties. | |
 | `icon` | `size` | The size of the icon. |
 | `icon` | `color` | The color of the icon. |

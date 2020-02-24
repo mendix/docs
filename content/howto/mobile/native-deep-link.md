@@ -39,7 +39,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 -   Installed git [command line](https://git-scm.com/downloads) tool
 -   Installed [Mendix 8.6](https://appstore.home.mendix.com/link/modelers/)
 
-## 3. Setup App Deep Linking
+## 3. Setting up App Deep Linking
 
 If you do not already have a native template for your app, you can create one.
 
@@ -102,7 +102,7 @@ The **plist** registers the schema and host, so that they will be associated wit
     ```
     This method will regester the opend URL so it can used in the Deep Link Nanoflow actions.
 
-### 3.3 Rebuild Native app
+### 3.3 Rebuilding Your Native App
 
 When running locally from source you have launch your app again, or us the Native builder to build a new app.
 
@@ -118,21 +118,21 @@ When running locally from source you have launch your app again, or us the Nativ
     ```
 1. Now rebuild and install your native app, to add our new capabilities. Use the how to for [template](/howto/mobile/deploying-native-app) or [dev app](/howto/mobile/how-to-devapps) to rebuild the app.
 
-## 4 Use Deep Linking in your App
+## 4 Using Deep Linking in Your App
 
 Now your app is ready to use links, so we can now setup the how to handle the additional path, query data. If you skip this section the links to your app will just open the app, but nothing is done with additional data available in URL.
 
-### 4.1 Deeplink Nanoflow Actions
+### 4.1 Deeplinking Nanoflow Actions
 
 Now we have to handle the incoming URL in our Mendix application. We can make use of the Nanoflow Actions **Register Deep Link** and **Parse Url To Object** that are part of the [Native Mobile Resource](https://appstore.home.mendix.com/link/app/109513/) module. This module can also be found in your app when you created it with an up-to-date Starter App. If you can don not have the actions availes, please update the module trough the App Store.
 
-#### 4.1.1 Register Deep Link
+#### 4.1.1 Registering Deep Link
 
 This nanoflow actions registers a callback nanoflow, which is called very time the app is opened via an URL. This "Callback URL Handler" nanoflow will receive the URL, of type string, as input parameter. Please note that the name of the input parameter is case sensitive and can not be changed.
 
-#### 4.1.2 Parse Url To Object
+#### 4.1.2 Parsing a URL To Object
 
-This nanoflow action will create a new Mendix object and split URL and set all the oject attributes with their values. For example the URL: https://john.doe:secret@www.example.com:123/forum/questions/?tag=networking&order=newest#top
+This nanoflow action will create a new Mendix object, and split a URL, and set all the oject attributes with their values. For example the URL: https://john.doe:secret@www.example.com:123/forum/questions/?tag=networking&order=newest#top
 
 | Attribute                                                   | Value                                                                                        |
 | ----------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
@@ -155,7 +155,7 @@ This nanoflow action will create a new Mendix object and split URL and set all t
 | tag                                                         | networking                                                                                   |
 | order                                                       | newest                                                                                       |
 
-### 4.2 Use it in your App
+### 4.2 Using Utilities in Your App [todo: check utilities]
 
 Now we have the utilities to register and process an URL, we can use them in our application.
 
@@ -174,20 +174,20 @@ Now we have the utilities to register and process an URL, we can use them in our
 1. Implement the Deep link handler nanoflow **DL_ShowUrlDetails**, like the image below. The nanoflow has one input parameter named **URL** and is of type `string` which is case sensitive. Use the `ParseI Url to Object` nanoflow action, and provide the URL and the entity of the parameter object. The Show message action will display a message with the details of the URL.
    ![nanoflow handle deep link](attachments/native-deep-link/nanoflow-handle-deeplink.png)
 
-### 4.3 Let's Test It
+### 4.3 Testing Deeplinking
 
-Go add some test links on your Mendix responsive or mobile page, restart the modeler, and open the page in your browser of your device... click and test!
+Go add some test links on your Mendix responsive or mobile page, restart the modeler, and open the page in your browser of your device. Tap the button to test:
 
 ![studio pro test page](attachments/native-deep-link/page-test-deeplink.png)
 
-Please note; if you running the app not from a local source, you have to rebuild of the app with Native builder before testing.
+Please note that if you running the app not from a local source, you have to rebuild your app with the Native builder before testing.
 
 ## 5. Read more
 
--   [Native Builder](/refguide/native-builder)
--   [Deploying Native App](/howto/mobile/deploying-native-app)
--   [React Native Linking](https://facebook.github.io/react-native/docs/linking)
--   [Deep Linking Android](https://developer.android.com/training/app-links/deep-linking)
--   [Deep Linking iOS](https://developer.apple.com/documentation/uikit/inter-process_communication/allowing_apps_and_websites_to_link_to_your_content/defining_a_custom_url_scheme_for_your_app)
--   [Universal Linking iOS](https://developer.apple.com/ios/universal-links/)
--   [URL Schema vs Universal Link](https://medium.com/wolox-driving-innovation/ios-deep-linking-url-scheme-vs-universal-links-50abd3802f97)
+*   [Native Builder](/refguide/native-builder)
+*   [Deploying Native App](/howto/mobile/deploying-native-app)
+*   [React Native Linking](https://facebook.github.io/react-native/docs/linking)
+*   [Deep Linking Android](https://developer.android.com/training/app-links/deep-linking)
+*   [Deep Linking iOS](https://developer.apple.com/documentation/uikit/inter-process_communication/allowing_apps_and_websites_to_link_to_your_content/defining_a_custom_url_scheme_for_your_app)
+*   [Universal Linking iOS](https://developer.apple.com/ios/universal-links/)
+*   [URL Schema vs Universal Link](https://medium.com/wolox-driving-innovation/ios-deep-linking-url-scheme-vs-universal-links-50abd3802f97)

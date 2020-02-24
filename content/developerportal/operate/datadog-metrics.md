@@ -275,21 +275,19 @@ The valid values for **DD_LOG_LEVEL** are:
 * INFO
 * DEBUG
 
-### 7.2 Datadog Events Log
+### 7.2 Datadog Region
+
+The Datadog integration defaults to the default Datadog region (US). If you want to set the region to EU, use the method outlined above to set the `DD_SITE` environment variable to `datadoghq.eu`.
+
+### 7.3 Datadog Events Log
 
 The Datadog Events log contains events which come from your app: those are the same events that would appear in the Mendix Console. It does not contain events from the environment.
 
 ![Example events log](attachments/datadog-metrics/datadog-event-log.png)
 
-### 7.3 Datadog Agent not Started
+### 7.4 Datadog Agent not Started
 
 If you configure your app for Datadog but the Datadog agent is not started, the events will be sent to the app log files.
-
-### 7.4 Datadog Environment Variables
-
-If you configure your app for Datadog, a Datadog Agent is started for you. You can set additional environment variables according to the [Datadog Agent documentation](https://docs.datadoghq.com/agent/guide/agent-configuration-files/).
-
-Some environment variables are pre-provisioned for you according to the [Mendix Buildpack documentation](https://github.com/mendix/cf-mendix-buildpack#datadog). Depending on the variable, you have the choice to override the preset value.
 
 ### 7.5 Datadog Issues
 

@@ -1,8 +1,8 @@
 ---
-title: "How to Setup Deep Link in Native App"
+title: "Set Up Deep Links in Native Apps"
 parent: "native-mobile"
 menu_order: 72
-description: "Connect URLs to your native app by add a deep link".
+description: "Connect URLs to your native app by adding a deep link".
 tags: ["deeplink", "deep link", "url","native", "mobile", "developer", "native-builder", "developer app", "make it native"]
 ---
 
@@ -10,7 +10,7 @@ tags: ["deeplink", "deep link", "url","native", "mobile", "developer", "native-b
 
 While URLs typically open websites, they can also be used to open an installed app on your mobile divice. With this tutorial you will learn how to connect the URL `app://myapp` to your Mendix Native App installed on your Android or iOS device. It is also possible to pass additional data using path, query parameters, and hashes. Passing additional data could look like this: `app://myapp/task/123?action=close#info`.
 
-A URL is constructed of various parts:
+A URL is constructed of these parts:
 
 ```txt
         username       host      port
@@ -28,7 +28,7 @@ When an app is installed it registers the `schema` and optionally the `host` so 
 
 Please note that the Make It Native app has already the registered schema `makeitnative://` and can be used out of the box. If want to use the Make It Native app with that schema, see the [Using Deep Linking in Your App](#using-deep-linking) section below. If you want to change this schema, see [How to Create a Custom Developer App](/howto/mobile/how-to-devapps) to build your own custom developer app and then use this tutorial to change its schema [todo: which sections apply in this case?].
 
-For development and this tutorial it is recommend to run the app from source against the local running Mendix Studio Pro. This will save you time when rebuilding and redeploying your app. To do this, follow the steps in the [Connecting to a Local Running Instance of Studio Pro](/refguide/native-builder#connect-local) section of the *Native Builder Reference Guide*.
+For development and this tutorial we recommend running the app from source against the local running Mendix Studio Pro. This will save you time when rebuilding and redeploying your app. To do this, follow the steps in the [Connecting to a Local Running Instance of Studio Pro](/refguide/native-builder#connect-local) section of the *Native Builder Reference Guide*.
 
 ## 2. Prerequisites
 
@@ -49,13 +49,13 @@ If you do not already have a native template for your app, you can create one.
     native-builder.exe prepare --project-name "Native Deep Link" --app-name "Native Deep Link" --java-home "C:\Program Files\AdoptOpenJDK\jdk-11.0.3.7-hotspot" --mxbuild-path "C:\Program Files\Mendix\8.6.0.715\modeler\mxbuild.exe" --project-path "C:\mendix-projects\NativeDeepLink\NativeDeepLink.mpr" --github-access-token "c3f322c471623" --appcenter-api-token "2d5b570693d34"  --app-identifier "com.mendix.native.deeplink" --runtime-url "https://nativedeeplink-sandbox.mxapps.io/" --mendix-version "8.6.0"
     ```
     
-1. Open your command line tool and navigater or create a folder on your file system where you like to edit the build template:
+1. Open your command line interface (CLI) of choice or create a folder on your file system where you want to edit the build template:
 
     ```shell
     cd c:/github
     ```
     
-1. Use git to clone your native builder template from GitHub:
+1. Use git to clone your Native Builder template from GitHub: [todo: deepling -> deeplink?]
 
     ```shell
     git clone https://github.com/your-account/native-deepling-app
@@ -63,12 +63,11 @@ If you do not already have a native template for your app, you can create one.
 
 ### 3.1 For Android Apps
 
-The manifest file registers the schema and host on your Android device that will be associated with your Mendix app.
+The manifest file registers the schema and host on your Android device that will be associated with your Mendix app. [todo: give previous sentence context, and make a sentence here which intros steps]
 
-1. Open the folder where you cloned your template into. In our case `c:/github/native-deepling-app`.
-1. Open file `android/app/src/main/AndroidManifest.xml`.
-1. Add in `activity` the attribute `android:launchMode="singleTask"`.  
-   [More information on lauch mode](https://developer.android.com/guide/topics/manifest/activity-element#lmode)
+1. Open the folder that you cloned your template into: `c:/github/native-deepling-app`.
+1. Open *android/app/src/main/AndroidManifest.xml*.
+1. In `activity`, add the attribute `android:launchMode="singleTask"`. For more information on Launch Mode, see this [Android documentation](https://developer.android.com/guide/topics/manifest/activity-element#lmode).
 1. Add an `intent-filter` in the `activity`:
 
     ```xml
@@ -80,17 +79,20 @@ The manifest file registers the schema and host on your Android device that will
     </intent-filter>
     ```
     
-    [More information on linking in Android](https://developer.android.com/training/app-links/deep-linking#adding-filters).
+    Fr more information on linking in Android, see this [Android documentation](https://developer.android.com/training/app-links/deep-linking#adding-filters).
 
 ### 3.2 For iOS Apps
 
-The **plist** registers the schema and host, so that they will be associated with your app in iOS.
+The **plist** registers the schema and host, so that they will be associated with your app in iOS. [todo: plist what? file? Also as above so here.]
 
-1. Open the folder where you cloned your template into. In our case `c:/github/native-deepling-app`.
-1. Open in Xcode (available on Apple Mac only) `ios/NativeTemplate.xcworkspace`
-1. Open the file `ios/NativeTemplate/Info.plist` file, and add `URL types` therein add `URL Schemes` and `URL identifier`, as shown in the picture below.
+1. Open the folder that you cloned your template into: `c:/github/native-deepling-app`.
+1. In Xcode (available on Apple Mac only) open *ios/NativeTemplate.xcworkspace*.
+1. Open *ios/NativeTemplate/Info.plist*, add `URL types` therein, then add `URL Schemes` and `URL identifier`:
+
    ![ios info plist](attachments/native-deep-link/ios-info-plist.png)
-   When viewing the **Info.plist** as a text file you would see that a section is added:
+   
+   When viewing *Info.plist* as a text file, you would see that a section is added:
+   
     ```xml
     <key>CFBundleURLTypes</key>
     <array>
@@ -105,25 +107,22 @@ The **plist** registers the schema and host, so that they will be associated wit
     </array>
     ```
 
-1. Open the `ios/AppDelegate.m` file and add before `@end` a new method:
+1. Open *ios/AppDelegate.m* and before `@end` add a new method:
+
     ```objc
     - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
         return [RCTLinkingManager application:application openURL:url sourceApplication:sourceApplication annotation:annotation];
     }
     ```
-    This method will register the opened URL so it can used in the Deep Link Nanoflow actions.
+    
+    This method will register the opened URL so it can be used in the Deep Link Nanoflow actions. [todo: I think this should not be capitalized. Check with Andries.]
 
 ### 3.3 Rebuilding Your Native App
 
-When running locally from source you have launch your app again, or us the Native builder to build a new app.
+When running locally from source you have launch your app again, or use the Native Builder to build a new app. [todo: change to "If you are not running locally from source, use the Native Builder to build a new app with the `` command. Add a colon after last sentence here after the 1 method we recommend is made clear.]
 
-1. Open in a command line tool the folder where you edited template into:
-
-    ```shell
-    cd c:/github/native-deepling-app
-    ```
-    
-1. Add, commit and push all changes from steps above:
+1. With your CLI, open the folder that you cloned your template into: `cd c:/github/native-deepling-app`.
+1. Add, commit, and push all changes from steps above:
 
     ```shell
     git add .
@@ -141,7 +140,7 @@ When running locally from source you have launch your app again, or us the Nativ
 
 Now your app is ready to use links, so we can now setup the how to handle the additional path, query data. If you skip this section the links to your app will just open the app, but nothing is done with additional data available in URL.
 
-### 4.1 Deeplinking Nanoflow Actions
+### 4.1 Deep Linking Nanoflow Actions
 
 Now we have to handle the incoming URL in our Mendix application. We can make use of the Nanoflow Actions **Register Deep Link** and **Parse Url To Object** that are part of the [Native Mobile Resource](https://appstore.home.mendix.com/link/app/109513/) module. This module can also be found in your app when you created it with an up-to-date Starter App. If you can don not have the actions availes, please update the module trough the App Store.
 
@@ -197,7 +196,7 @@ Now we have the utilities to register and process an URL, we can use them in our
 
    ![nanoflow handle deep link](attachments/native-deep-link/nanoflow-handle-deep-link.png)
 
-### 4.3 Testing Deeplinking
+### 4.3 Testing Deep Linking
 
 Go add some test links, for example `mayapp://app/task/123` and or `makeitnative://task/123` on your Mendix responsive or mobile page, restart the modeler, and open the page in your browser of your device. Tap the links to test:
 

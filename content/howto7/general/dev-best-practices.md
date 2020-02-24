@@ -35,7 +35,7 @@ Every project has at least one configuration, but it may have many. Every projec
 
 ### 2.4 User Roles
 
-The [user roles](/refguide7/user-roles) should have logical names that reflect the different types of users that will use the application. The user roles are singular and use a camel case notation, like **FunctionalAdministrator**. User roles are mostly defined in English, but there is an option to name these in a different language, since the user role is visible in the front-end.
+The [user roles](/refguide7/user-roles) should have logical names that reflect the different types of users that will use the application. The user roles are singular and use a UpperCamelCase notation, like **FunctionalAdministrator**. User roles are mostly defined in English, but there is an option to name these in a different language, since the user role is visible in the front-end.
 
 Each user role should correspond to only one module role per module. In other words, a user role should not map to multiple module roles within the same module. This helps to keep the number of applicable module roles for a user to a minimum, which reduces complexity in understanding the security model and reduces the performance impact of complex security rules.
 
@@ -45,7 +45,7 @@ Each user role should correspond to only one module role per module. In other wo
 
 #### 3.1.1 Module Names
 
-Modules should be treated like standalone replaceable services; for example, the customer module should function as a standalone customer management system as much as possible, replaceable by a different customer management system. Module names should have camel case names that identify the responsibility of the module, for example, **CustomerManagement** or **SharePointIntegration**.
+Modules should be treated like standalone replaceable services; for example, the customer module should function as a standalone customer management system as much as possible, replaceable by a different customer management system. Module names should have UpperCamelCase names that identify the responsibility of the module, for example, **CustomerManagement** or **SharePointIntegration**.
 
 #### 3.1.2 Module Roles
 
@@ -55,11 +55,11 @@ The [module roles](/refguide7/module-role) should have logical names that reflec
 
 #### 3.2.1 Entity Names
 
-Most of the time, an [entity](/refguide7/entities) reflects a real-world object that people can relate to. Therefore, the entity name should also reflect that object and identify its purpose. There are sometimes project-specific exceptions that lead to creating other types of entity, but that is up to you. The name of an entity is singular since an object is a single instance of the entity. A good example is using **Customer** and not **Customers**. Furthermore, we advise avoiding abbreviations, underscores, mathematical characters or any other special characters in the names of entities. Entity names also use camel case, for example, **HousekeepingRecord** or **LogEntry**.
+Most of the time, an [entity](/refguide7/entities) reflects a real-world object that people can relate to. Therefore, the entity name should also reflect that object and identify its purpose. There are sometimes project-specific exceptions that lead to creating other types of entity, but that is up to you. The name of an entity is singular since an object is a single instance of the entity. A good example is using **Customer** and not **Customers**. Furthermore, we advise avoiding abbreviations, underscores, mathematical characters or any other special characters in the names of entities. Entity names also use UpperCamelCase, for example, **HousekeepingRecord** or **LogEntry**.
 
 #### 3.2.2 Entity Attributes
 
-The entity [attribute](/refguide7/attributes) should reflect a property of a real-world object that people can relate to and fits the purpose of that property. We advise avoiding abbreviations, underscores (except in the case described in the next paragraph), mathematical characters or any other special characters in the names. Entity attributes should use camel case, for example, **FirstName** or **TelephoneNumber**.
+The entity [attribute](/refguide7/attributes) should reflect a property of a real-world object that people can relate to and fits the purpose of that property. We advise avoiding abbreviations, underscores (except in the case described in the next paragraph), mathematical characters or any other special characters in the names. Entity attributes should use UpperCamelCase, for example, **FirstName** or **TelephoneNumber**.
 
 Attributes that do not reflect business-related data, but are only necessary for technical reasons, should start with an underscore (`_`).
 

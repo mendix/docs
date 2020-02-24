@@ -1,19 +1,21 @@
 ---
 title: "Enumeration"
-parent: "domain-models-attributes"
-description: "Describes an attribute of the enumeration type in Mendix Studio."
-tags: ["studio", "domain model", "attributes", "attribute types", "enumeration"]
+parent: "domain-models"
+description: "Describes enumerations in Mendix Studio."
+tags: ["studio", "domain model", "attributes", "enumeration"]
 ---
 
 ## 1 Introduction 
 
-This document describes an enumeration attribute type in Mendix Studio. An enumeration is a type of an attribute that has a list of predefined options. The enumeration has one or more items (values). Each item represents one option. For example, the status of a customer grade can be Bronze, Silver, and Gold. So, the enumeration for the customer grade will consist of three items: *Bronze*, *Silver*, *Gold*.  For more information, see [Enumeration Items](#enumeration-items). 
+This document describes an enumeration in Mendix Studio. An enumeration is a list of one or more items (values). Each item represents one option. For example, a customer can be assigned a *Bronze*, *Silver*, and *Gold* grade. So, the *Customer Grade* is an enumeration, while *Bronze*, *Silver*, and *Gold* are enumeration items.  For more information on items, see the [Enumeration Items](#enumeration-items) section. 
+
+When you create an attribute of *enumeration* type you either assign an existing enumeration to it or create a new one. For details on properties of attributes of the enumeration type, see the [Attribute Properties](domain-models-attributes#attribute-properties) section in *Attributes*. 
 
 ## 2 Enumeration Items {#enumeration-items}
 
 An enumeration consists of enumeration items or values. Each item represents one of the options. 
 
-An attribute of the enumeration type can also represent an uninitialized state. For example, if you do not assign any grade to a customer, the grade status is *empty*.  
+The enumeration can also represent an *uninitialized state*. For example, if you do not assign any grade to a customer, the grade status is *empty*.  
 
 ## 3 Basic Actions
 
@@ -68,11 +70,7 @@ You can also set an existing enumeration for attributes of the enumeration type.
 
 The existing enumeration is selected for the attribute of the enumeration type. 
 
-## 4 Properties
-
-For details on properties of attributes of the enumeration type, see section [3 Attribute Properties](domain-models-attributes#attribute-properties) in *Attributes*. 
-
-## 5 Read More
+## 4 Read More
 
 * [Domain Model](domain-models)
 * [Attributes](domain-models-attributes) 

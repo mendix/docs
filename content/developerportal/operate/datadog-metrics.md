@@ -12,8 +12,6 @@ tags: ["Datadog", "Mendix Cloud", "v4", "monitoring", "analysis"]
 
 {{% alert type="info" %}}
 Datadog logging is supported in Mendix version 7.15 and above.
-
-Datadog logging from Mendix currently supports logs sent to **datadoghq.com**. It does not send logs to other Datadog endpoints (for example *datadoghq.eu*).
 {{% /alert %}}
 
 Two types of data are provided to Datadog:
@@ -35,7 +33,7 @@ To make use of Datadog you will need a Datadog API key. If you already use Datad
 
 If you are new to Datadog, you will need to get an account first.
 
-1. Go to the Datadog site ([https://www.datadoghq.com/](https://www.datadoghq.com/)) and choose **GET STARTED FREE**.
+1. Go to the Datadog site (for example, [https://www.datadoghq.com/](https://www.datadoghq.com/)) and choose **GET STARTED FREE**.
 2. Enter your Datadog account details. Once you have entered your details you cannot continue until you have set up your agent.
 3.  Choose the option **From Source**.
 
@@ -287,7 +285,13 @@ The Datadog Events log contains events which come from your app: those are the s
 
 If you configure your app for Datadog but the Datadog agent is not started, the events will be sent to the app log files.
 
-### 7.4 Datadog Issues
+### 7.4 Datadog Environment Variables
+
+If you configure your app for Datadog, a Datadog Agent is started for you. You can set additional environment variables according to the [Datadog Agent documentation](https://docs.datadoghq.com/agent/guide/agent-configuration-files/).
+
+Some environment variables are pre-provisioned for you according to the [Mendix Buildpack documentation](https://github.com/mendix/cf-mendix-buildpack#datadog). Depending on the variable, you have the choice to override the preset value.
+
+### 7.5 Datadog Issues
 
 If you have any issues related to accessing Datadog, please contact their support here: [Support | Datadog](https://www.datadoghq.com/support/), or by email at [support@datadoghq.com](mailto:support@datadoghq.com).
 

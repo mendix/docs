@@ -1,8 +1,8 @@
 ---
 title: "Progress Circle"
 category: "Widgets"
-description: " "
-tags: [ ]
+description: "Describes the configuration and usage of the Progress Circle widget, which is available in the Mendix App Store."
+tags: ["app store", "app store component", "widget", "progress circle", "platform support"]
 draft: true
 ---
 

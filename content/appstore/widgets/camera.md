@@ -1,8 +1,8 @@
 ---
 title: "Camera"
 category: "Widgets"
-description: " "
-tags: [ ]
+description: "Describes the configuration and usage of the Camera widget, which is available in the Mendix App Store."
+tags: ["app store", "app store component", "widget", "camera", "ios", "android", "picture source", "platform support"]
 draft: true
 ---
 

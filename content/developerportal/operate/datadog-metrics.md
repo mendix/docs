@@ -12,6 +12,8 @@ tags: ["Datadog", "Mendix Cloud", "v4", "monitoring", "analysis"]
 
 {{% alert type="info" %}}
 Datadog logging is supported in Mendix version 7.15 and above.
+
+Datadog logging from Mendix currently supports logs sent to **datadoghq.com**. It does not send logs to other Datadog endpoints (for example *datadoghq.eu*).
 {{% /alert %}}
 
 Two types of data are provided to Datadog:
@@ -68,7 +70,7 @@ To send your runtime information to Datadog, you need to provide the Datadog API
 2. Click **Details** to select the environment you wish to monitor with Datadog. 
 3. Open the **Runtime** tab.
 4. Add a **Custom Environment Variable**.
-5.  Select **DD_API_KEY** from the *Name* dropdown.
+5.  Select **DD_API_KEY** from the *Name* drop-down.
 
 	![Dropdown containing custom environment variable names](attachments/datadog-metrics/environment-variable-dd-api-key.png)
 
@@ -80,11 +82,9 @@ To send your runtime information to Datadog, you need to provide the Datadog API
 
 	This will ensure that some messages are sent to Datadog. You can change the log level later once you have confirmed that Datadog is receiving them.
 
-7.  Return to the **Environments** page for your app and *Deploy* or *Transport* your app into the selected environment.
+8.  Return to the **Environments** page for your app and *Deploy* or *Transport* your app into the selected environment.
 
-	{{% alert type="warning" %}}Your app must be **redeployed** as additional dependencies need to be included.<br/><br/>Restarting the app is not sufficient to start sending data to Datadog.{{% /alert %}}
-
-8. **Restart** the application.
+	{{% alert type="warning" %}}Your app must be **redeployed** before it is started as additional dependencies need to be included.<br/><br/>Restarting the app is not sufficient to start sending data to Datadog.{{% /alert %}}
 
 ## 4 Tagging Metrics for Datadog
 
@@ -110,9 +110,14 @@ You can add more tags if you want, but note that Datadog's charges include an el
 
 ## 5 Customizing the Metrics Agent{#customizing}
 
-Mendix provides logging of various activities within the app. These are sent to Datadog with the namespace **mx**. Timing values are sent in milliseconds.
+Mendix provides logging of various actions within the app. These are sent to Datadog with the namespace **mx**. Timing values are sent in milliseconds.
 
-By default, Mendix will pass a log of *all* request handler activity to Datadog and no other information. However, by using JSON to configure the metrics agent, you can add logs of microflows and activities within microflows, and restrict which request handler calls are sent. 
+By default, Mendix will pass a log of *all* request handler activity to Datadog and no other information. However, by using JSON to configure the metrics agent, you can add logs of microflows and activities within microflows, and restrict which request handler calls are sent.
+
+Mendix adds the following tags to metrics from microflows and activities:
+
+* **microflow:{microflow_name}** – indicates which microflow the metric came from — the microflow name is in the format `{module}.{microflow}`
+* **activity:{activity_name}** – indicates which activity the metric came from
 
 ### 5.1 Format of Metrics Agent Configuration
 

@@ -34,7 +34,7 @@ Clone this [code sample](https://github.com/mendix/native-group-box-pluggable-wi
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Install Mendix Studio Pro 8.3
-* Install the Mendix Make it Native app on a mobile device or an emulator.
+* Install the Mendix Make It Native app on a mobile device or an emulator.
 * Install Long Term Support (LTS) v10.16.3 or any higher version of [Node.js](https://nodejs.org)
 * Install the latest [Yeoman](https://yeoman.io/) with the following command:
 
@@ -109,7 +109,7 @@ In order to test your group box widget, you will a Mendix application that uses 
 
 1. Open Studio Pro.
 2. Create a new project by clicking **File** > **New Project**.
-3. Select the **Blank** app on the last page of **Starter Apps** (do not select **Blank App** on the first page).
+3. Select the **Blank** app (do not select **Blank App**).
 4. Click the **Use this starting point** button
 5. Fill in the following details in the **App Settings** dialog box:
 	* App name: *GroupBoxTestProject*
@@ -568,7 +568,7 @@ Verify that the new content property works:
 8. Drag and drop a **Show message** activity onto your nanoflow.
 9. Double-click the activity and add the text *Hello World!* to the **Template**, then click **OK**.
 10. Rerun the app locally.
-11. With the Make it Native app, verify that your button is inside the group box and is triggering a message popup saying **Hello World!**.
+11. With the Make It Native app, verify that your button is inside the group box and is triggering a message popup saying **Hello World!**.
 
 	![hello world](attachments/build-native-widget/5-hello-world.png)
 
@@ -678,7 +678,7 @@ To start, make the complete header clickable:
 	```
 
 5. Make sure all files have been saved.
-6. Reload your test app in the Make it Native app to view the change.
+6. Reload your test app in the Make It Native app to view the change.
 7. Verify the header is clickable by tapping it. You should see a light-up effect on iOS. Note that on Android, the ripple effect is not visible on a black background, so you cannot verify yet if it is clickable.
 
 Now make it possible to expand or collapse the group box:

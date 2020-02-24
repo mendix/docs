@@ -1,8 +1,8 @@
 ---
 title: "Auto-Load More"
 category: "Widgets"
-description: " "
-tags: [ ]
+description: "Describes the configuration and usage of the Auto-Load More widget, which is available in the Mendix App Store."
+tags: ["app store", "app store component", "widget", "auto-load more", "load", "platform support"]
 draft: true
 ---
 

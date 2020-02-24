@@ -107,7 +107,7 @@ If you run into errors while running the `prepare` command, try running your CLI
 
 You have successfully prepared your app, and in the next section will make a build from it.
 
-## 5 Making Your First Build
+## 5 Making Your First Build {#first-build}
 
 To initiate your first build in the Native Builder, you will execute a command in CLI with various parameters included. For more information on parameters, see the [Commands](/refguide/native-builder#commands) section in the *Native Builder* guide. While some parameters are optional, two are required: the `--project-name` parameter and the `--build-number` parameter.
 
@@ -229,7 +229,7 @@ In case of failure, the build logs will be downloaded for your convenience. Plea
 
 Afer your build succeeds, note the downloaded *.zip* archives at the path provided by Native Builder.
 
-## 6 Distributing
+## 6 Distributing {#distributing}
 
 If your builds are not signed, the downloaded archives `CoolApp-Android-1.zip` and `CoolApp-iOS-1.zip` will contain *non-release* builds, `app-debug.apk` and `nativeTemplate.xcarchive`. 
 
@@ -248,7 +248,7 @@ You can skip this section if you completed [Signing a Build](#signing-a-build). 
 
 #### 6.1.2 Installing on a Device
 
-The *app-debug.apk* or *app-release.apk* can readily be installed on any device by sending the file over via any available means eg USB.
+The *app-debug.apk* or *app-release.apk* can readily be installed on any device by sending the file over via any available means (for example USB).
 
 To install your app via USB, connect your device to a machine via USB. To Install an APK from your device's file manager app this way:
 

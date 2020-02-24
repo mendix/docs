@@ -34,7 +34,11 @@ A user can specify multiple classes for every widget. They can do this either di
 
 A user can specify a custom CSS for every widget on a web page by using the [style](/refguide/common-widget-properties#style) property. This styling is passed to a client component through an optional `style` prop of the type `CSSProperties`.
 
-On native pages, the meaning of a `style` prop is very different. First of all, a user cannot specify the aforementioned inline styles for widgets on a native page. So a `style` prop is used to pass styles computed based on configured classes. A client component will receive an array of [style objects](/refguide/native-styling-refguide#2-style-objects).
+On native pages, the meaning of a `style` prop is very different. First of all, a user cannot specify the aforementioned inline styles for widgets on a native page. So a `style` prop is used to pass styles computed based on configured classes. A client component will receive an array with a single [style object](/refguide/native-styling-refguide#2-style-objects) with all applicable styles combined.
+
+{{% alert type="info" %}}
+This property was introduced in Mendix 8.0 with an array of style objects. This array was changed to contain a single style object in Mendix 8.6.
+{{% /alert %}}
 
 ### 3.4 TabIndex
 
@@ -54,7 +58,7 @@ export interface ActionValue {
 }
 ```
 
-The flag `canExecute` indicates if an action can be executed under the current conditions. Think of a **Call microflow** action triggering a microflow with a parameter. Such an action cannot be executed until a parameter object is available, for example when a parent Data view has finished loading. An attempt to `execute` an action that cannot be executed will have no effect except generating a debug-level warning message.
+The flag `canExecute` indicates if an action can be executed under the current conditions. This helps you prevent executing actions that are not allowed by the app's security settings. User roles can be set in the microflows and nanoflows, allowing users to call them. For more information on user roles and security, see the [Module Security Reference Guide](/refguide/module-security). You can also employ this flag when using a **Call microflow** action triggering a microflow with a parameter. Such an action cannot be executed until a parameter object is available, for example when a parent Data view has finished loading. An attempt to `execute` an action that cannot be executed will have no effect except generating a debug-level warning message. 
 
 The flag `isExecuting` indicates whether an action is currently running. A long-running action can take seconds to complete. Your component might use this information to render an inline loading indicator which lets users track loading progress. Often it is not desirable to allow a user to trigger multiple actions in parallel. Therefore, a component (maybe based on a configuration) can decide to skip triggering an action while a previous execution is still in progress.
 
@@ -131,7 +135,7 @@ In practice, many client components present values as nicely formatted strings w
 
 There is a way to use more the convenient `displayValue`  and `setTextValue` while retaining control over the format. A component can use a `setFormatter` method passing a formatter object: an object with `format` and `parse` methods. The Mendix platform provides a convenient way of creating such objects for simple cases. An existing formatter exposed using a `EditableValue.formatter` field can be modified using its `withConfig` method. For complex cases formatters still can be created manually. A formatter can be reset back to default settings by calling `setFormatter(undefined)`.
 
-The optional field `universe` is used to indicate the set of all possible values that can be passed to a `setValue` if a set is limited. Currently, `universe` is provided only when the edited attribute is of the Boolean or enumeration [types](/refguide/attributes#3-1-type).
+The optional field `universe` is used to indicate the set of all possible values that can be passed to a `setValue` if a set is limited. Currently, `universe` is provided only when the edited attribute is of the Boolean or enumeration [types](/refguide/attributes#type).
 
 ### 4.4 IconValue
 

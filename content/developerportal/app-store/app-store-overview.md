@@ -28,8 +28,6 @@ Category | Description
 **Reviews** | The most recent content reviews along with the author and date of the review. Clicking the name of the review author will bring you to their [Mendix Profile](../mendix-profile/index). Clicking the title of an App Store component will allow you to see the details of what was reviewed. 
 **Top App Store contributors** | The top 10 App Store contributors of the last 30 days. Clicking the name of the developer will bring you to their Mendix Profile. Clicking **View full leaderboard** will take you to the [Mendix Leaderboards](https://developer.mendixcloud.com/link/topappstore30).
 
-To see a detail page for each category, click **View more**.
-
 ## 3 Add-On Details Page {#details}
 
 Clicking an App Store component in a menu will bring you to the component's details page. The details page presents the sections described below.
@@ -146,7 +144,9 @@ Click **Manage** to manage the component:
 
 On this page, you will see the following buttons:
 
-* **Create new draft version** – click this to create a new draft version of the component (for details on creating a draft version, see the [Updating Existing App Store Content](share-app-store-content#updating) section of *How to Share App Store Content*)
+* **Create new draft version** – click this to create a new draft version of the component
+	* Only one draft version of a component can exist at a time, so when one draft version is in progress, another draft cannot be initiated – if there is a draft version in progress, click **View draft** to see it
+	* For more information on creating a draft version, see the [Updating Existing App Store Content](share-app-store-content#updating) section of *How to Share App Store Content*
 * **Unpublish** – click this to remove that version from the component
 	* If the component is not the protected content of a [user group](#user-groups), you can only unpublish a version that you have published yourself
 	* If the component is protected [content](#content) from a user group, a group [member](#members) can unpublish any version

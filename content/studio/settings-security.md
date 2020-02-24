@@ -89,7 +89,7 @@ To create a new app role, do the following:
 
     ![](attachments/settings-security/add-role-button.png)
 
-3.  Specify the name of the new role in the **Create Role** dialog window and click **Create**.
+3.  Specify the name of the new role in the **Create Role** dialog box and click **Create**.
 
     ![Create Role Dialog Box](attachments/settings-security/create-role-dialog.png)
 
@@ -159,7 +159,7 @@ You can test how your app looks like for different roles the following way:
 
 1. [Preview your app](publishing-app).
 
-2. Click a user icon in the right-hand side of the screen:
+2. Click a user icon in the right side of the screen:
 
     ![](attachments/settings-security/user-icon.png)
 

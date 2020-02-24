@@ -11,6 +11,21 @@ The [Native Builder](/refguide/native-builder) is a command line input tool whic
 
 We are heavily invested in streamlining the experience of building your apps and are continuously improving upon the tool's capabilities. For more information on using the Native Builder, see [How To Deploy Your First Mendix Native App](/howto/mobile/deploying-native-app).
 
+## 3.2.0
+
+**Release date: February 5th, 2020**
+
+### Improvements
+
+* Custom developer apps are officially released. Using the `dev-app` command, you can build a smaller version of the Make It Native app tailored to your specific app's testing needs. A custom developer app is built against the sources, dependencies, and capabilities of the final release app. For more information, see [How to Create a Custom Developer App](/howto/mobile/how-to-devapps).
+* We have updated image functionality. With this improvement we were able to remove all extra dependencies and compress the CLI to a single executable.
+* We introduced new iOS-specific configuration commands. For more information, see [Native Builder](/refguide/native-builder).
+
+### Fixes
+
+* We fixed an issue with the OTA archiving algorithm that could make consecutive updates fail to install.
+* We fixed an issue with OTA on Android where resources might go missing after a successful update.
+
 ## 3.1.0
 
 **Release date: December 17th, 2019**

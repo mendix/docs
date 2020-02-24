@@ -32,11 +32,11 @@ The **History** option shows the history of committed revisions of the app. For 
 
 ## 6 Download from Version Control Server
 
-The **Download from Version Control Server** option downloads an app from the Team Server or another SVN server. This creates a local working copy of the app for development. For more information on what settings are displayed in the **Download from Version Control Server** dialog window, see [Download from Version Control Server](download-from-version-control-dialog).
+The **Download from Version Control Server** option downloads an app from the Team Server or another SVN server. This creates a local working copy of the app for development. For more information on what settings are displayed in the **Download from Version Control Server** dialog box, see [Download from Version Control Server](download-from-version-control-dialog).
 
 ## 7 Upload to Version Control Server
 
-The **Upload to Version Control Server** option uploads a local app to a new or existing Team Server repository, or to another SVN server. This is only possible if the app is not yet version controlled. For more information on what settings are displayed in the **Upload to Version Control Server** dialog window, see [Upload to Version Control Server](upload-to-version-control-dialog).
+The **Upload to Version Control Server** option uploads a local app to a new or existing Team Server repository, or to another SVN server. This is only possible if the app is not yet version controlled. For more information on what settings are displayed in the **Upload to Version Control Server** dialog box, see [Upload to Version Control Server](upload-to-version-control-dialog).
 
 ## 8 Manage Branch Lines
 
@@ -50,11 +50,15 @@ The **Merge Changes Here** option allows you to merge changes that were committe
 
 The **Reverse Merge Changes** option allows locally rolling back changes that were committed to the version control repository. These local changes can then be committed as a new revision.
 
-## 11 Add Snapshot of Data
+## 11 Revert All Changes
+
+The **Revert All Changes** option allows rolling back all local changes, both in the project and in files on disk, that have been introduced since the last commit.
+
+## 12 Add Snapshot of Data
 
 The **Add Snapshot of Data** option creates a snapshot of the built-in database and adds that to the version control repository. This is especially useful for adding test data to your app or for demo purposes.
 
-## 12 Read More
+## 13 Read More
 
 * [Studio Pro Overview](studio-pro-overview)
 * [Version Control](version-control)

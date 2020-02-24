@@ -10,6 +10,18 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 ## 2020
 
+### Future change – from February 24th, 2020
+
+#### TLSv1.3 Support for Mendix Cloud (All Regions)
+
+* Starting on February 24th, we will roll out TLSv1.3 support to Mendix Cloud v4 and Mendix Cloud v3. TLSv1.3 improves the speed and security of HTTPS connections. We expect to complete this work by February 27th.
+
+### February 17th, 2020
+
+#### TLSv1.3 Support for Mendix Cloud v4 Free Tier EU
+
+* We enabled TLSv1.3 support in Mendix Cloud v4 Free Tier EU. TLSv1.3 improves the speed and security of HTTPS connections.
+
 ### January 21st, 2020
 
 #### Fixes
@@ -306,7 +318,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 
 #### Improvements
 
-* Deploying to IBM Cloud is available from within Mendix. If you start with an IBM starter app, you will be taken through the process of creating a deployment environment on IBM Cloud. You can then deploy your app to IBM Cloud from within the Desktop Modeler or Mendix Developer Portal. More information is available in [IBM Cloud](/developerportal/deploy/ibm-cloud). You can also find Mendix Starter Kits on IBM Cloud and start the process from there.
+* Deploying to IBM Cloud is available from within Mendix. If you start with an app template, you will be taken through the process of creating a deployment environment on IBM Cloud. You can then deploy your app to IBM Cloud from within the Desktop Modeler or Mendix Developer Portal. More information is available in [IBM Cloud](/developerportal/deploy/ibm-cloud). You can also find Mendix Starter Kits on IBM Cloud and start the process from there.
 
 ### October 22nd, 2018
 

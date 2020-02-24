@@ -10,6 +10,8 @@ tags: ["Studio Pro", "menu", "top bar"]
 
 The top-bar of Studio Pro contains the following menus:
 
+![Menu-bar](attachments/menus/menu-bar.png)
+
 * [File](#file) – allows you to manage documents and projects
 * [Edit](#edit) – allows you to perform editing functions such as search or copy within Studio Pro
 * [View](#view) – allows you to choose how Studio Pro and dockable panes within Studio Pro are displayed
@@ -47,11 +49,13 @@ In the **Version Control** menu, you can view and/or manipulate settings on the 
 
 | Menu Item | Description | Shortcut Key |
 | --- | --- | --- |
-| **Current Language** | Displays the current language of your app project. | |
+| **Current Language** | Displays the current language of your app project and allows you to make another language the current language. | |
+| **Select Previous Language** | Makes the previous language of your app project the current language. | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>L</kbd> |
+| **Select Next Language** | Makes the next language of your app project the current language. | <kbd>Ctrl</kbd>+<kbd>L</kbd> |
 | **Language Settings** | Opens the **Project Settings** dialog box to the **Languages** tab so that you can adjust the language configuration of the app project. | |
-| **Batch Replace** | Opens a dialog window in which you can correct texts within one language. This is useful to check whether texts presented to the user are consistent. |   |
-| **Batch Translate** | Opens a dialog window in which you can quickly translate many texts from one language to another. |   |
-| **Language Operations** | Opens a dialog window in which you can copy, move, swap, or delete all translations in a given language for selected modules. |   |
+| **Batch Replace** | Opens a dialog box in which you can correct texts within one language. This is useful for checking whether the texts presented to the user are consistent. |   |
+| **Batch Translate** | Opens a dialog box in which you can quickly translate many texts from one language to another. |   |
+| **Language Operations** | Opens a dialog box in which you can copy, move, swap, or delete all the translations in a given language for selected modules. |   |
 
 ## 9 Help Menu {#help}
 

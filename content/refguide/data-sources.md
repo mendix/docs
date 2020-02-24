@@ -26,7 +26,7 @@ The **Microflow** source is not supported in offline applications because it imp
 
 {{% /alert %}}
 
-## 3 List widgets {#list-widgets}
+## 3 List Widgets {#list-widgets}
 
 A data grid, template grid, and list view are list widgets. Also some [pluggable widgets](/apidocs-mxsdk/apidocs/pluggable-widgets) may behave as list widgets and use data sources. Supported data sources are listed below:
 

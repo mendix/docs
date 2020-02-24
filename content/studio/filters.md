@@ -11,11 +11,11 @@ In Mendix Studio, you can filter data in pages and microflows.
 
 *In a microflow*, you can filter the retrieved data by creating filters for the **Retrieve** activity. To add a filter objects should be retrieved from the database:
 
-![](attachments/filters/retrieve-from-database.png)
+<img src="attachments/filters/retrieve-from-database.png" style="zoom:80%;" />
 
 *In a page*, you can add a filter to a list view or a data grid. Mind that the data source of the list view or the data grid should be **Database**: 
 
-![](attachments/filters/page-database.jpg)
+<img src="attachments/filters/page-database.jpg" style="zoom:80%;" />
 
 ## 2 Conditions and Groups
 
@@ -77,7 +77,7 @@ To create a new filter, do the following:
 
 2. Click the **Filter** field.
 
-    ![](attachments/filters/filter-field.png)
+    <img src="attachments/filters/filter-field.png" style="zoom:80%;" />
 
 3. In the **Add Filter** dialog box, specify the attribute/association on the left first, as operators depend on the type of attribute that you have chosen. For example, if you choose *Date and Time* attribute type, you will be able to select the **in same quarter as** operator, while this operator is unavailable for other attribute types. 
 
@@ -85,7 +85,7 @@ To create a new filter, do the following:
 
 4. Select an operator and a value on the right. 
 
-    The value on the right can be a literal value that you type in (only available for string, long, integer, decimal, and autonumber attribute types ) or it can be an attribute/association/value that you choose from the drop-down list. The options in the drop-down list depend on the left attribute/association. 
+    The value on the right can be a literal value that you type in (only available for string, long, integer, decimal, and autonumber attribute types), or it can be an attribute, association, or value you choose from the drop-down list. The options in the drop-down list depend on the left attribute/association. 
 
     ![](attachments/filters/list-of-options.png)
 

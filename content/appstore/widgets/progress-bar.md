@@ -1,8 +1,8 @@
 ---
 title: "Progress Bar"
 category: "Widgets"
-description: " "
-tags: [ ]
+description: "Describes the configuration and usage of the Progress Bar widget, which is available in the Mendix App Store."
+tags: ["app store", "app store component", "widget", "progress bar", "bootstrap", "platform support"]
 draft: true
 ---
 

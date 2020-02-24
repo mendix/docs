@@ -15,7 +15,7 @@ To open the **Theme Customizer**, click the paintbrush icon in the left menu bar
 
 ![Theme Customizer Icon](attachments/theme-customizer/theme-customizer-icon.png)
 
-In the left-hand side, the Theme Customizer contains settings that you can change to customize different elements of your app. The changes you make are previewed in the right-hand side. There are two preview modes:
+On the left, the Theme Customizer contains settings that you can change to customize different elements of your app. The changes you make are previewed on the right side. There are two preview modes:
 
 * [Widget View](#widget-view) – previews the style on individual widgets
 
@@ -30,7 +30,7 @@ You can switch between the modes by clicking the corresponding button in the top
 
 ## 2 Settings
 
-You can change the way your app looks using different settings in left-hand side of the **Theme Customizer**, that are divided in the following sections:
+You can change the way your app looks using different settings on the left side of the **Theme Customizer**, that are divided in the following sections:
 
 ### 2.1 Upload Logo
 
@@ -85,7 +85,7 @@ To upload a logo, do the following:
 
     ![Uploading Your Logo](attachments/theme-customizer/upload-logo.png)
 
-3. In the dialog window, select the picture you want to use as the logo.
+3. In the dialog box, select the picture you want to use as the logo.
 
 4.  The selected picture is uploaded and shown in the preview. 
 

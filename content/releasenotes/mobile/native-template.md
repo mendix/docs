@@ -8,6 +8,38 @@ description: "Native Template release notes."
 
 For more information on native mobile app development, see the [native-template repository](https://github.com/mendix/native-template/) and [How to Deploy Your First Mendix Native App](/howto/mobile/deploying-native-app) .
 
+## 3.1.2
+
+**Release date: February 19th, 2020**
+
+### Fix
+
+* We fixed an issue in iOS apps where OTA updates did not trigger correctly, and therefore did not update apps.
+  
+## 3.1.1
+
+**Release date: February 6th, 2020**
+
+### Fix
+
+* We fixed an issue where dynamic images would not sync correctly in iOS apps. This issue resulted in images missing from pages and a pop-up window. This problem cannot be resolved with an OTA update. Triggering a full build of your iOS app will fix this issue.
+
+## 3.1.0
+
+**Release date: February 5th, 2020**
+
+### Improvements
+
+* The MendixNative library and [Native Template](https://github.com/mendix/native-template) are now written in Objective C. With this update we are closing the gap between the Native Template and the React Native starter template. 
+* We added support for push notifications in the Native Template. As soon as you include a Google services configuration file (GoogleService-Info.plist* and *google-services.json*) in your app, the Native Template will enable the required libraries automatically.
+* We added support for URL Schemes.
+
+### Fixes
+
+* We fixed bridging headers so that they work as intended.
+* We fixed Swift compiler incompatibilities.
+* We fix the React Native `link` command so that it works as intended.
+
 ## 3.0.0 
 
 **Release date: January 10th, 2020**
@@ -69,7 +101,7 @@ iOS
 ### Improvements
 
 * We added support for Android 10's Dark theme and iOS 13's Dark Mode.
-* We added over the air update support (for details, see [How to Use Over the Air Updates](/howto/mobile/how-to-ota)).
+* We added over the air (OTA) update support (for details, see [How to Use Over the Air Updates](/howto/mobile/how-to-ota)).
 * We migrated iOS project to Xcode 11.
 * We switched the App Center build platform to standard ReactNative.
 
@@ -117,4 +149,3 @@ iOS
 **Release date: August 1st, 2019**
 
 * This is the official release of the Native Template with support for Mendix Studio Pro 8.0.
-

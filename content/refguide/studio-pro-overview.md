@@ -18,9 +18,21 @@ This documentation describes the graphical user interface of Studio Pro. The res
 Press <kbd>F1</kbd> while in Studio Pro to quickly jump to the right page in the documentation.
 {{% /alert %}}
 
-## 2 Document Tabs
+## 2 Document Tabs {#documents}
 
-The documents you view and edit are shown in tabs. You can have a number of tabs open, just like in a modern web browser. They can be closed, reordered, and shown side by side. Each document has its own save state, history, and future, so undo and redo actions are unlimited.
+The documents you view and edit are shown in tabs. 
+
+{{% alert type="info" %}}
+
+Note that this section describes documents in the working area, not panes that you can open and position around the working area. For more information on behavior of panes, see the [Layout of Panes](view-menu#layout-of-panes) section in *View Menu*.
+
+{{% /alert %}}
+
+You can have a number of tabs open, just like in a modern web browser. They can be closed, reordered, and shown side by side. The video below shows examples of how to interact with a tab:
+
+<video controls width="608" height="456" src="attachments/studio-pro-overview/document-tabs.mp4">VIDEO</video>
+
+Each document has its own save state, history, and future, so undo and redo actions are unlimited.
 
 ## 3 Menus 
 
@@ -38,8 +50,8 @@ In most dialog boxes for editing properties, the following shortcut keys can be 
 
 | Key | Description |
 | --- | --- |
-| <kbd>Ctrl</kbd> + <kbd>Enter</kbd> | Confirms all changes and closes the dialog window. Works as if the **OK** button was clicked. This is especially useful if the focus is on a multi-line text box; otherwise, pressing <kbd>Enter</kbd> will have the same effect. |
-| <kbd>Esc</kbd> | Cancels all changes and closes the dialog window. Works as if the **Cancel** button was clicked. |
+| <kbd>Ctrl</kbd> + <kbd>Enter</kbd> | Confirms all changes and closes the dialog box. Works as if the **OK** button was clicked. This is especially useful if the focus is on a multi-line text box; otherwise, pressing <kbd>Enter</kbd> will have the same effect. |
+| <kbd>Esc</kbd> | Cancels all changes and closes the dialog box. Works as if the **Cancel** button was clicked. |
 | <kbd>Ctrl</kbd> + Mouse scroll wheel | Zooms in or out. This works in all editors. |
 | <kbd>Shift</kbd> + Mouse scroll wheel | Scrolls left or right. Works as if you were using the horizontal scroll bars. |
 

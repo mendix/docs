@@ -20,7 +20,7 @@ For the properties that all microflow activities share (for example, the **Capti
 
 ## 2 Activity Properties
 
-### 2.1 Retrieve Source
+### 2.1 Retrieve Source {#source}
 
 The **Source** defines the way the objects are retrieved:
 

@@ -31,16 +31,16 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Download and install [Tableau](http://www.tableau.com/) (you can use the trial version for 14 days)
 
 {{% alert type="warning" %}}
-This how-to uses the Company Expenses starter app for an example scenario. However, this starter app is no longer platform-supported by Mendix. Therefore, sections using this starter app can only be used as reference and not as sections that can be completed step-by-step.
+This how-to uses the Company Expenses app template for an example scenario. However, this app templateis no longer platform-supported by Mendix. Therefore, sections using this app template can only be used as reference and not as sections that can be completed step-by-step.
 
-The how-to for Studio Pro 8 uses the Asset Manager starter app and is supported. For more information, see [How to Expose Data to BI Tools Using OData](/howto/integration/exposing-data-to-bi-tools-using-odata) for Studio Pro 8.
+The how-to for Studio Pro 8 uses the Asset Manager app template and is supported. For more information, see [How to Expose Data to BI Tools Using OData](/howto/integration/exposing-data-to-bi-tools-using-odata) for Studio Pro 8.
 {{% /alert %}}
 
 ## 3 Creating a Published OData Service
 
 A published OData service can be used by third-party applications to read data from a Mendix application. In this chapter, you will create and configure such a service.
 
-1. Open the Company Expenses starter app in the Desktop Modeler and add a new folder to the **Expenses** folder called **OData Services**.
+1. Open the Company Expenses app template in the Desktop Modeler and add a new folder to the **Expenses** folder called **OData Services**.
 2. Right-click the OData Service folder and select **Add** > **Published services** > **Published OData service**:
 
     ![](attachments/18448736/18582029.png)

@@ -1,8 +1,8 @@
 ---
 title: "Encryption"
 category: "Modules"
-description: " "
-tags: [ ]
+description: "Describes the configuration and usage of the Encryption module, which is available in the Mendix App Store."
+tags: ["app store", "app store component", "encryption", "aes", "platform support"]
 draft: true
 ---
 
@@ -24,6 +24,6 @@ Set the `EncryptionKey` constant located in the **Private - String en/de-cryptio
 
 ## 3 Read More
 
-* [How to Install & Configure the SMTP Email Module](/howto/integration/install-and-configure-the-smtp-module)
-* [How to Synchronize User Accounts Using the LDAP Module](/howto/integration/synchronizing-user-accounts-using-the-ldap-module)
-* [How to Implement Push Notifications](/howto/mobile/implementation-guide)
+* [How to Install & Configure the SMTP Email Module](https://docs.mendix.com/howto/integration/install-and-configure-the-smtp-module)
+* [How to Synchronize User Accounts Using the LDAP Module](https://docs.mendix.com/howto/integration/synchronizing-user-accounts-using-the-ldap-module)
+* [How to Implement Push Notifications](https://docs.mendix.com/howto/mobile/implementation-guide)

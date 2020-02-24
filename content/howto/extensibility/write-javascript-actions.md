@@ -1,6 +1,7 @@
 ---
 title: "Build JavaScript Actions: Part 1 (Basic)"
 parent: "build-javascript-actions"
+menu_order: 10
 description: "This how-to will teach you to create a JavaScript action."
 tags: ["widget", "TexttoSpeech", "SpeechtoText", "JavaScript", "API", "JavaScript-API"]
 ---
@@ -24,7 +25,7 @@ To create a JavaScript action that can synthesize text to speech, follow these s
 
 1.  Create a new **JavaScript action** in your Mendix project:
 
-	![add javascript action from drop down](attachments/write-javascript-actions/createanewjsaction.png)
+	![add javascript action from drop-down](attachments/write-javascript-actions/createanewjsaction.png)
 
 2.  Give it a descriptive name:
 

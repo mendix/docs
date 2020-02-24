@@ -208,7 +208,7 @@ To configure a custom domain for your application environment, follow these step
 
 6. Type the **Domain name** (for example *myapp.mycompany.com*).
 
-7. Select a **Certificate** from the dropdown list of uploaded certificates.
+7. Select a **Certificate** from the drop-down list of uploaded certificates.
 
 8. Click **Save** to save your custom domain. It will be configured for your application environment automatically.
 

@@ -3,9 +3,6 @@
 parent: "published-odata-services"
 tags: ["studio pro"]
 ---
-```
-[//]: # (simplify this by grouping the items on the different menus and describing them)
-```
 
 {{% alert type="warning" %}}
 

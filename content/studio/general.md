@@ -143,16 +143,16 @@ The top menu bar items are described in the table below:
 
 ## 8 Cut/Copy/Paste Function 
 
-You can copy and paste pages, microflows, and [enumerations](domain-models-enumeration). You can also cut, copy, and paste separate elements such as widgets or microflow activities. 
+You can copy and paste pages and microflows. You can also cut, copy, and paste separate elements such as widgets or microflow activities. 
 
-### 8.1 Copy/Paste Pages, Microflows, and Enumerations {#copy-paste-documents}
+### 8.1 Copy/Paste Pages and Microflows {#copy-paste-documents}
 
-Pages, microflows, and enumerations can be copied to clipboard and then pasted to a different Studio app. You can also copy and paste pages, microflows, and enumerations to the same app, however, there is the **Duplicate** option you can use for this purpose. For more information on how to copy, paste, or duplicate pages, microflows, and enumerations, see [Pages](page-editor), [Microflows](microflows), and [Enumerations](domain-models-enumeration) respectively.  
+Pages and microflows can be copied to clipboard and then pasted to a different Studio app. You can also copy and paste pages and microflows to the same app, however, there is the **Duplicate** option you can use for this purpose. For more information on how to copy, paste, or duplicate pages and microflows, see [Pages](page-editor) and [Microflows](microflows) respectively.  
 
-Mind the following when copying and pasting pages, microflows, and enumerations:
+Mind the following when copying and pasting pages and microflows:
 
-* You can copy/paste pages, microflows, and enumerations only to Studio apps that have the same Mendix version 
-* You can copy/paste pages, microflows, and enumerations only between instances of the same browser
+* You can copy/paste pages and microflows only to Studio apps that have the same Mendix version 
+* You can copy/paste pages and microflows only while using the same browser
 * You *cannot* copy/paste from Studio to Studio Pro or vice versa
 
 ### 8.2 Cut/Copy/Paste Separate Elements

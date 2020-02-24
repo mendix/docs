@@ -96,7 +96,7 @@ To copy and paste a page, do the following:
 
 3. Open the Studio app where you want to paste the page and press <kbd>Ctrl</kbd> +<kbd>V</kbd> or <kbd>Cmd</kbd> +<kbd>V</kbd>. 
 
-Your page is pasted. For more information on copy/paste function in Studio, see the [Copy/Paste Pages, Microflows, and Enumerations](#copy-paste-documents) section in *General*.
+Your page is pasted. For more information on copy/paste function in Studio, see the [Copy/Paste Pages and Microflows](#copy-paste-documents) section in *General Info*.
 
 ### 2.5 Deleting a Page
 

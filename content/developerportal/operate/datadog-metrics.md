@@ -33,7 +33,7 @@ To make use of Datadog you will need a Datadog API key. If you already use Datad
 
 If you are new to Datadog, you will need to get an account first.
 
-1. Go to the Datadog site ([https://www.datadoghq.com/](https://www.datadoghq.com/)) and choose **GET STARTED FREE**.
+1. Go to the Datadog site (for example, [https://www.datadoghq.com/](https://www.datadoghq.com/)) and choose **GET STARTED FREE**.
 2. Enter your Datadog account details. Once you have entered your details you cannot continue until you have set up your agent.
 3.  Choose the option **From Source**.
 

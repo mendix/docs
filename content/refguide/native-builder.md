@@ -334,7 +334,7 @@ For more information on syncing your repository, see [When to Sync Your Native T
 
 In App Center you can configure your builds at the branch level. If no configuration is available for branch **master**, Native Builder will create a default configuration. If a configuration is already present, it will not be modified by the tool. When a branch for a build is initialized, the configuration of **master** is copied over. Consecutive builds will not alter this branch's configuration. This is to avoid overriding your custom configuration unless the `regenerate` command is used.
 
-### 4.3 Connecting to a Local Running Instance of Studio Pro
+### 4.3 Connecting to a Local Running Instance of Studio Pro {#connect-local}
 
 Advanced users might wish to connect to a local running instance of Studio Pro. Be aware that if you make the changes described in this section to your template, you must revert all those changes to use the Native Builder with your template.
 

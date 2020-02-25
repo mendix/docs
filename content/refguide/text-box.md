@@ -61,29 +61,29 @@ Text box properties consist of the following sections:
 
 ### 2.5 Events Section{#events}
 
-#### 2.5.1 On-Change{#on-change}
+#### 2.5.1 On Change Event{#on-change}
 
-The on-change property specifies an action that will be executed when the value has been changed and gets submitted. A value will be submitted when pressing the <kbd>Enter</kbd> key or leaving the widget, either by using the <kbd>Tab</kbd> key or by clicking another widget.
-
-{{% snippet file="refguide/events-section-link.md" %}}
-
-#### 2.5.2 On-Enter
-
-The on-enter property specifies an action that will be executed when the widget is entered, either by using the <kbd>Tab</kbd> key or by clicking it with the mouse.
+The on change event property specifies an action that will be executed when the value has been changed and gets submitted. A value will be submitted when pressing the <kbd>Enter</kbd> key or leaving the widget, either by using the <kbd>Tab</kbd> key or by clicking another widget.
 
 {{% snippet file="refguide/events-section-link.md" %}}
 
-#### 2.5.3 On-Leave
+#### 2.5.2 On Enter Event
 
-The on-leave property specifies an action that will be executed when leaving the widget, either by using the <kbd>Tab</kbd> key or by clicking another widget.
+The on enter event property specifies an action that will be executed when the widget is entered, either by using the <kbd>Tab</kbd> key or by clicking it with the mouse.
+
+{{% snippet file="refguide/events-section-link.md" %}}
+
+#### 2.5.3 On Leave Event
+
+The on leave event property specifies an action that will be executed when leaving the widget, either by using the <kbd>Tab</kbd> key or by clicking another widget.
 
 This differs from the [On change](#on-change) property in that the event will always be triggered, even if the value has not been changed.
 
 {{% snippet file="refguide/events-section-link.md" %}}
 
-#### 2.5.4 On-Enter Key Press
+#### 2.5.4 On Enter Key Press
 
-The on-enter key press property specifies an action that will be executed when the widget is entered and the <kbd>Enter</kbd> key is pressed. In a web application the widget will keep focus after the action gets executed.
+The on enter key press event property specifies an action that will be executed when the widget is entered and the <kbd>Enter</kbd> key is pressed. In a web application the widget will keep focus after the action gets executed.
 
 {{% snippet file="refguide/events-section-link.md" %}}
 

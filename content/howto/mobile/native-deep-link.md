@@ -87,7 +87,8 @@ The **plist** registers the schema and host, so that they will be associated wit
 
 1. Open the folder that you cloned your template into: `c:/github/native-deepling-app`.
 1. In Xcode (available on Apple Mac only) open *ios/NativeTemplate.xcworkspace*.
-1. Open *ios/NativeTemplate/Info.plist*, add `URL types` therein, then add `URL Schemes` and `URL identifier`:
+1. Open *ios/NativeTemplate/Info.plist*
+1. Add `URL types`, then add `URL Schemes` and `URL identifier`:
 
    ![ios info plist](attachments/native-deep-link/ios-info-plist.png)
    
@@ -107,7 +108,8 @@ The **plist** registers the schema and host, so that they will be associated wit
     </array>
     ```
 
-1. Open *ios/AppDelegate.m* and before `@end` add a new method:
+1. Open *ios/AppDelegate.m* 
+1. Before `@end`, add a new method:
 
     ```objc
     - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
@@ -138,19 +140,19 @@ When running locally from source you have launch your app again, or use the Nati
 
 ## 4 Using Deep Linking in Your App {#using-deep-linking}
 
-Now your app is ready to use links, so we can now setup the how to handle the additional path, query data. If you skip this section the links to your app will just open the app, but nothing is done with additional data available in URL.
+Now your app is ready to use links, so you will set up the additional path and query data handling (todo: check sentence). If you skip this section, the links to your app will just open the app. Nothing will be done with the additional data available in your URL.
 
-### 4.1 Deep Linking Nanoflow Actions
+### 4.1 Deep Linking Nanoflow Actions (todo: deep linking and nanoflow actions?)
 
-Now we have to handle the incoming URL in our Mendix application. We can make use of the Nanoflow Actions **Register Deep Link** and **Parse Url To Object** that are part of the [Native Mobile Resource](https://appstore.home.mendix.com/link/app/109513/) module. This module can also be found in your app when you created it with an up-to-date Starter App. If you can don not have the actions availes, please update the module trough the App Store.
+Now you have to handle the incoming URL in your Mendix application. To do this, you will use the Nanoflow Actions **Register Deep Link** and **Parse Url To Object** found in the [Native Mobile Resources](https://appstore.home.mendix.com/link/app/109513/) module. This module is automatically included in your app if it began as an up-to-date Starter App. If you do not see these actions available in your app, please update the module through the App Store.
 
 #### 4.1.1 Registering Deep Link
 
-This nanoflow actions registers a callback nanoflow, which is called very time the app is opened via an URL. This "Callback URL Handler" nanoflow will receive the URL, of type string, as input parameter. Please note that the name of the input parameter is case sensitive and can not be changed.
+The Register Deep Link nanoflow action registers a callback nanoflow, which is called each time the app is opened via an URL. This "Callback URL Handler" nanoflow will receive the URL, of type string, as input parameter. Please note that the name of the input parameter is case sensitive and can not be changed.
 
 #### 4.1.2 Parsing a URL To Object
 
-This nanoflow action will create a new Mendix object, and split a URL, and set all the oject attributes with their values. For example the URL: https://john.doe:secret@www.example.com:123/forum/questions/?tag=networking&order=newest#top
+This nanoflow action will create a new Mendix object, split a URL, and set all the oject attributes with their values. For example, the URL https://john.doe:secret@www.example.com:123/forum/questions/?tag=networking&order=newest#top has the following attributes and values:
 
 | Attribute                                                   | Value                                                                                        |
 | ----------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
@@ -175,7 +177,7 @@ This nanoflow action will create a new Mendix object, and split a URL, and set a
 
 ### 4.2 Using Utilities in Your App [todo: check utilities]
 
-Now we have the utilities to register and process an URL, we can use them in our application.
+Now that you have the utilities to register and process an URL, you can use them in your application:
 
 1. In your app add the **App events** widget, which is also par of the Native Mobile Resource module, on your home page.
 1. Select open the widget and in the tab `App events` section `Page load` select a `On load` action `Call nanoflow`, and create a new nanoflow named **OL_RegisterDeepLink**:

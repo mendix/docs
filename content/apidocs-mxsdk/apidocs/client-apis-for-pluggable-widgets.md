@@ -177,7 +177,7 @@ export type NativeImage = Readonly<ImageURISource> | undefined;
 export type ImageValue = WebImage | NativeImage;
 ```
 
-`NativeImage` can be passed as a source of React Native’s [Image](https://facebook.github.io/react-native/docs/image) component, and `WebImage`  can be passed  to react-dom’s `img`.
+`NativeImage` can be passed as a source of React Native’s [Image](https://facebook.github.io/react-native/docs/image) component, and `WebImage` can be passed  to react-dom’s `img`.
 
 ### 4.6 FileValue {#filevalue}
 
@@ -213,7 +213,7 @@ export interface ListValue {
 
 When a `datasource` property with `isList="true"` is configured for a widget, the client component gets a list of objects represented as a `ListValue`. This type allows detailed access to a data source, and enables control over the limit and offset of items represented in the list.
 
-However it is not possible to access domain data directly from `ListValue`, as every object is represented only by GUID in the `items` array. Instead, a list of items may be used in combination with other properties, for example with a property of type [`widgets`](property-types-pluggable-widgets#widgets). The `dataSource` attribute on that property should refference a `datasource` property.
+However it is not possible to access domain data directly from `ListValue`, as every object is represented only by GUID in the `items` array. Instead, a list of items may be used in combination with other properties, for example with a property of type [`widgets`](property-types-pluggable-widgets#widgets). The `dataSource` attribute on that property should reference a `datasource` property.
 
 For clarity, consider the following example using `ListValue` together with the `widgets` property type. When the `widgets` property named `myWidgets` is configured to be tied to a `datasource` named `myDataSource`, the client component props appear as follows:
 

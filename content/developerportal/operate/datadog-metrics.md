@@ -80,7 +80,7 @@ To send your runtime information to Datadog, you need to provide the Datadog API
 
 	This will ensure that some messages are sent to Datadog. You can change the log level later once you have confirmed that Datadog is receiving them.
 
-8. By default, the Datadog integration defaults to the US region (datadoghq.com). If you want to use a datadog site which is another region, set the `DD_SITE` environment variable to the required site. For example, for the EU Datadog site, set `DD_SITE` to `datadoghq.eu`.
+8. By default, the Datadog integration defaults to the US region (datadoghq.com). If you want to use a Datadog site which is another region, set the `DD_SITE` environment variable to the required site. For example, for the EU Datadog site, set `DD_SITE` to `datadoghq.eu`.
 
 9.  Return to the **Environments** page for your app and *Deploy* or *Transport* your app into the selected environment.
 

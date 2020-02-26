@@ -6,9 +6,10 @@ category: "APM Guide"
 
 ## 1 Introduction
 
-The *APM Installation Guides* are organized according to the APM version.
+The *APD Installation Guides* are organized according to the APD version.
 
 ## 2 Main Documents in This Section
 
+* [APD 3 Installation Guide](ig-three)
 * [APM 2 Installation Guide](ig-two)
 * [APM 1 Installation Guide](ig-one)

@@ -16,25 +16,13 @@ This document describes the properties of a published OData resource. For a gene
 
 Click **Add** in the **Resources** pane of the **Published OData Service** window to open the **Select Persistable Entity** window. Select an entity to publish from the **Project Explorer** and click **Select**.
 
-
-<<<<<<< Updated upstream
-[//]: # replace with the now called Select Persistable Entity when done from this doc - verify and replace
-=======
->>>>>>> Stashed changes
-
 ![](attachments/16713722/published-odata-service.png)
-
-
 
 ### 1.1 Add a Resource from the Domain Module
 
 An alternative way to add a resource is in the **Domain Model**: right-click an entity and select **Expose as OData resource...**. 
 
-
-
 ![](attachments/16713722/16843929.png)
-
-
 
 To add a resource, click the OData service name in the project explorer in the **Select Published Data Service** window, and click **Select**. 
 
@@ -44,8 +32,6 @@ To create a new OData service and add the entity to it, click **New** , and type
 In the **Resources** pane of the **Published OData Service** window select a resource and click **Edit** to display the **Edit published resource** window. 
 
 ![](attachments/16713722/Edit-published-resource.png)
-
-
 
 It is possible to **Select** another **Entity** or view the entity in the Domain model by clicking **Show**. The [**Exposed attributes and associations**]( #exatass) for the selected entity can be set in this window. 
 

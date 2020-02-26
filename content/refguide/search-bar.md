@@ -54,7 +54,7 @@ However, there are additional properties that are described in the sections belo
 
 {{% alert type="info" %}}
 
-Known limitation; custom date formatting is not limited, however the search implementation is limited and the formatting should be an exect date, and can not be used with more granular time fromatting like hours and minutes or more coarse like weeks, months and years.
+Known limitation; custom date formatting is not limited, however the search implementation is limited and the formatting should be an exact date, and can not be used with more granular time formatting like hours and minutes or more coarse like weeks, months and years.
 
 {{% /alert %}}
 
@@ -108,7 +108,7 @@ The value entered by the end user (or the default value in the case of hidden an
 | Greater          | Is the attribute value greater than the entered value?       | Text, Date                              | > date + 1 day            |
 | Greater or equal | Is the attribute value greater than or equal to the entered value? | Text, Date                        | > date                    |
 | Equal *(default)*| Is the attribute value the same as the entered value?        | Text, Date, Drop-down                   | >= date and < date + 1 day|
-| Not equal        | Is the attribute value not the same as the entered value?    | Text, Date, Drop-down                   | > date + 1 day or < date  |
+| Not equal        | Is the attribute value not the same as the entered value?    | Text, Date, Drop-down                   | != date                   |
 | Smaller or equal | Is the attribute value smaller than or equal to the entered value? | Text, Date                        | < date + 1 da             |
 | Smaller          | Is the attribute value smaller than the entered value?       | Text, Date                              | < date                    |
 

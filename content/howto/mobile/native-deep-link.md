@@ -30,6 +30,10 @@ Please note that the Make It Native app has already the registered schema `makei
 
 For development and this tutorial we recommend running the app from source against the local running Mendix Studio Pro. This will save you time when rebuilding and redeploying your app. To do this, follow the steps in the [Connecting to a Local Running Instance of Studio Pro](/refguide/native-builder#connect-local) section of the *Native Builder Reference Guide*.
 
+{{% alert type="info" %}}
+The current iOS version of the Make it Native App can open an app using a URL. However it cannot not handle deep link URL details [todo: details never written elsewhere in plain text]. For now, please use Android devices to test deep links.
+{{% /alert %}}
+
 ## 2. Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:

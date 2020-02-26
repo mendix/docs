@@ -148,11 +148,15 @@ Now you have to handle the incoming URL in your Mendix application. To do this, 
 
 #### 4.1.1 Registering Deep Link
 
-The Register Deep Link nanoflow action registers a callback nanoflow, which is called each time the app is opened via an URL. This "Callback URL Handler" nanoflow will receive the URL, of type string, as input parameter. Please note that the name of the input parameter is case sensitive and can not be changed.
+The Register Deep Link nanoflow action registers a callback nanoflow, which is called each time the app is opened using a URL. This "Callback URL Handler" [todo: check name. If it really is this name, no quotes. If it doesn't have a real name, lower case.] nanoflow will receive the URL, of type string, as an input parameter. 
 
-#### 4.1.2 Parsing a URL To Object
+{{% alert type="info" %}}
+The name of the input parameter is case sensitive and can not be changed.
+{{% /alert %}}
+        
+#### 4.1.2 Parsing a URL To a Mendix Object
 
-This nanoflow action will create a new Mendix object, split a URL, and set all the oject attributes with their values. For example, the URL https://john.doe:secret@www.example.com:123/forum/questions/?tag=networking&order=newest#top has the following attributes and values:
+The Register Deep Link nanoflow action [todo: check] will create a new Mendix object, split a URL, and set all the oject attributes with their values. For example, the URL https://john.doe:secret@www.example.com:123/forum/questions/?tag=networking&order=newest#top has the following attributes and values:
 
 | Attribute                                                   | Value                                                                                        |
 | ----------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
@@ -179,32 +183,33 @@ This nanoflow action will create a new Mendix object, split a URL, and set all t
 
 Now that you have the utilities to register and process an URL, you can use them in your application:
 
-1. In your app add the **App events** widget, which is also par of the Native Mobile Resource module, on your home page.
+1. In your app add the **App events** widget, which is also part of the Native Mobile Resource module, on your home page.
 1. Select open the widget and in the tab `App events` section `Page load` select a `On load` action `Call nanoflow`, and create a new nanoflow named **OL_RegisterDeepLink**:
 
    ![app event register deeplink](attachments/native-deep-link/app-events-register-deep-link.png)
    This nanoflow will be called only once when the app is started.
 
-1. Implement the **OL_RegisterDeepLink** nanoflow, add the action **Register DeepLink**, in the **Url handler**, create an nanoflow name **DL_ShowUrlDetails**:
+1. Implement the **OL_RegisterDeepLink** nanoflow, add the action **Register DeepLink** [todo: if this is a typed thing italics], and in the **Url handler** create an nanoflow named *DL_ShowUrlDetails*:
 
    ![nanoflow register deeplink](attachments/native-deep-link/nanoflow-register-deep-link.png)
+   
    This nanoflow will be called everytime the app is opened using a URL.
 
-1. To parse the URL into we can use a non persistent entity named **DeepLinkParameter** from the Native Mobile Resource module. If you use query strings or more with you can copy this entity to your own module. The attributes are all optional and you should only add the attributes that are need for you implementation. Beside the standard list of possible URL parts, you can also add the keys of the query string. (For example `?name=Jhon&title=sir`) The attributes are not case sensitive. You can add attributes for path segments of the URL which will be split into `Path0` , `Path1`, and more:
+1. To parse the URL into [todo: into what?] use a non-persistent entity named **DeepLinkParameter** from the Native Mobile Resources module. If you use query strings or more with you can copy this entity to your own module. The attributes are all optional and you should only add the attributes your implementation requires. Besides the standard list of possible URL parts, you can also add the query string's keys (for example `?name=Jhon&title=sir`). The attributes are not case sensitive. You can add attributes for path segments of the URL which will be split into `Path0` , `Path1`, and more:
 
     ![parameter entity](attachments/native-deep-link/entity-parameter.png)
 
-1. Implement the Deep link handler nanoflow **DL_ShowUrlDetails**, like the image below. The nanoflow has one input parameter named **URL** and is of type `string` which is case sensitive. Use the `ParseI Url to Object` nanoflow action, and provide the URL and the entity of the parameter object. The Show message action will display a message with the details of the URL:
+1. Implement the deep link handler nanoflow **DL_ShowUrlDetails** like the image below. The nanoflow has one input parameter named **URL** and is of type `string` (which is case sensitive). Use the `ParseI Url to Object` [todo: sp?] nanoflow action, and provide the URL and the entity of the parameter object. The show message action will display a message with the details of the URL:
 
    ![nanoflow handle deep link](attachments/native-deep-link/nanoflow-handle-deep-link.png)
 
 ### 4.3 Testing Deep Linking
 
-Go add some test links, for example `mayapp://app/task/123` and or `makeitnative://task/123` on your Mendix responsive or mobile page, restart the modeler, and open the page in your browser of your device. Tap the links to test:
+Go add some test links, for example `mayapp://app/task/123` or `makeitnative://task/123` to your responsive or mobile page, restart Mendix Studio Pro, and open the page in your device's browser. Tap the links to test:
 
 ![studio pro test page](attachments/native-deep-link/page-test-deep-link.png)
 
-Please note that if you running the app not from a local source, you have to rebuild your app with the Native builder before testing.
+Please note that if you are not running the app from a local source, you must rebuild your app with the Native builder before testing.
 
 ## 5. Read more
 

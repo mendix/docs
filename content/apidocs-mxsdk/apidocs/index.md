@@ -28,7 +28,7 @@ Continue on to the [Client API](client-api).
 
 ## 5 Deploy API {#deploy-api}
 
-With this API, you can manage application environments in the [Mendix Cloud](developerportal/deploy/mendix-cloud-deploy), retrieve statuses, start and stop applications, and deploy or transport new model versions to application environments. You will also have to use the [Build API](#build-api) to create and manage deployment packages.
+With this API, you can manage application environments in the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy), retrieve statuses, start and stop applications, and deploy or transport new model versions to application environments. You will also have to use the [Build API](#build-api) to create and manage deployment packages.
 
 For details, see [Deploy API](deploy-api).
 

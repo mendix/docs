@@ -24,13 +24,13 @@ The top bar of the top level of the **Changes** pane consists of various buttons
 
 Buttons allow you to perform the following actions:
 
-* **Back** – goes back up one level. At the top level, this button is disabled
+* **Back** – goes back up one level; at the top level, this button is disabled
 
-* **Go to** – opens a zoomed-in level and opens up the selected document (or brings it to the front if already opened)
+* **Go to** – opens a zoomed-in level and opens up the selected document 
 
 * **Tasks** – allows you to perform specific actions such as reverting the change to the latest commit, or solving conflicts
 
-* **Update** – retrieves latest changes from the repository, (for more information on the update concept, see the [Update](version-control#update) section in *Version Control*) 
+* **Update** – retrieves latest changes from the repository (for more information on the update concept, see the [Update](version-control#update) section in *Version Control*) 
 
 * **Commit** – commits your changes to the repository and starts a new revision (for more information on the commit concept, see the [Commit](version-control#commit) section in *Version Control*)
 
@@ -66,13 +66,13 @@ You can zoom into a changed or conflicting document, by doing one of the followi
 To exit the zoomed-in level, click the **Back** button or press <kbd>Backspace</kbd>.
 
 There are two types of zoomed-in levels:
-* For modified documents
-* For conflicting documents
+* [For modified documents](#modified)
+* [For conflicting documents](#conflicts)
 
 Each of them contains their own set of buttons.
 
-### Modifications zoomed-in level
-This zoomed-in level is split into two grids, with elements on the left and changed properties on the right. If no properties were changed for an element, for example, when an element was added or deleted, the right grid will be empty:
+### 4.1 Zoomed-In Level for Modified Documents {#modified}
+The zoomed-in level for modified documents is split into two grids, with elements on the left and changed properties on the right. If no properties were changed for an element, for example, when an element was added or deleted, the right grid will be empty:
 
 ![No Properties to Show](attachments/changes-pane/element-added.png)
 
@@ -98,8 +98,8 @@ The grid on the right contains the following columns:
 
 * **Mine** – the change to the property that was made on the current development line
 
-### Conflicts zoomed-in level
-This zoomed-in level is also split into two grids, with elements on the left and conflicting properties on the right.
+### 4.2 Zoomed-In Level for Conflicted Documents {#conflicts)
+The zoomed-in level for conflicted documents is split into two grids, with elements on the left and conflicting properties on the right.
 
 The toolbar at this level contains the following buttons:
 
@@ -109,13 +109,14 @@ The toolbar at this level contains the following buttons:
 
 * **Show purely visual changes** – shows visual changes, such as dragging an entity to a new location in the domain model
 
-_The following three buttons are toggles, and each selection de-selects the other two:_
-
 * **Show Conflicts** – it shows details of a conflict. It will be selected by default when first zooming into this level.
 
 * **Show Changes in mine** – it shows changes to a document on a current development line (for more information on how to solve conflicts, see the [Dealing With Conflicts](using-version-control-in-studio-pro#conflicts) section in *Using Version Control in Studio Pro*)
 
 * **Show Changes in theirs** – it shows incoming changes to a document from another development line (for more information on how to solve conflicts, see the [Dealing With Conflicts](using-version-control-in-studio-pro#conflicts) section in *Using Version Control in Studio Pro*)
+
+	{{% alert type="info" %}}**Show Conflicts**, **Show Changes in mine**, and **Show Changes in theirs** described above are toggles, and each selection de-selects the other two.
+	{{% /alert %}}
 
 The columns on the left side of the grid will vary based on what toggle button is pressed on the toolbar.
 
@@ -147,7 +148,7 @@ The left side of the grid contains the following columns when **Show Changes in 
 	![Conflict Grid](attachments/changes-pane/changes-in-merge-end-grid.png)
 	
 
-The columns on the grid on the right will vary depending on what kind of conficting element is selected on the left side:
+The columns on the grid on the right will vary depending on what kind of conficting element is selected on the left side.
 
 If the selected item on the left side is a conflict that resulted in both sides changing the same element, then the following columns will be displayed on the right side of the grid:
 
@@ -169,7 +170,7 @@ If the selected item on the left side is a conflict that resulted in one side ch
 
 * **Mine** – the change to the property that was made on the current development line
 
-	![Rigth Grid](attachments/changes-pane/conflict-grid-right-side-deletion-modification.png)
+	![Right Grid](attachments/changes-pane/conflict-grid-right-side-deletion-modification.png)
 
 ##  5 Read More
 

@@ -6,7 +6,7 @@ tags: ["studio pro"]
 
 {{% alert type="warning" %}}
 
-This document describes the properties of a published OData resource. For a general overview of OData services, see [Published OData Services](published-odata-services).
+This document describes the properties of a published OData resource. For an overview of OData services, see [Published OData Services](published-odata-services).
 
 {{% /alert %}}
 

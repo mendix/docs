@@ -80,11 +80,25 @@ To duplicate an existing page, do the following:
 
 2. In the side panel, click the ellipsis icon and select **Duplicate** in the drop-down menu:
 
-    <img src="attachments/page-editor/duplicate-delete-page.png" alt="Duplicate Page" style="zoom:80%;" />
+    <img src="attachments/page-editor/duplicate-page.png" alt="Duplicate Page" style="zoom:80%;" />
 
 The page is duplicated.
 
-### 2.4 Deleting a Page
+### 2.4 Copying and Pasting a Page
+
+To copy and paste a page, do the following:
+
+1. Click the **Pages** icon in the left menu bar.
+
+2.  In the side panel, click the ellipsis icon and select **Copy to clipboard** in the drop-down menu:
+
+    <img src="attachments/page-editor/copy-page.png" alt="Copying a Page" style="zoom:80%;" />
+
+3. Open the Studio app where you want to paste the page and press <kbd>Ctrl</kbd> +<kbd>V</kbd> or <kbd>Cmd</kbd> +<kbd>V</kbd>. 
+
+Your page is pasted. For more information on copy/paste function in Studio, see the [Copy/Paste Pages and Microflows](general#copy-paste-documents) section in *General Info*.
+
+### 2.5 Deleting a Page
 
 To delete a page in Studio, do one of the following:
 
@@ -98,18 +112,18 @@ To delete a page in Studio, do one of the following:
 
     1. In the side panel, click the ellipsis icon and select **Delete** in the drop-down menu:
 
-		<img src="attachments/page-editor/duplicate-delete-page.png" alt="Delete Page" style="zoom:80%;" />
+		<img src="attachments/page-editor/delete-page.png" alt="Delete Page" style="zoom:80%;" />
 
 The selected page is deleted.
 
-### 2.5 Adding Elements on a Page
+### 2.6 Adding Elements on a Page
 
 To add elements on a page, do the following:
 
 1. In **Toolbox**, open the [Widgets](#widgets) tab or the [Building Blocks](#building-blocks) tab.
 2. Select an element you would like to add, drag and drop this element on a page. 
 
-### 2.6 Viewing Elements On a Page
+### 2.7 Viewing Elements On a Page
 
 There are two ways to view an element and its [properties](#page-editor-properties):
 
@@ -121,7 +135,7 @@ The selected element is indicated with an blue border. Additionally, if the elem
 {{% image_container width="400" %}}![](attachments/page-editor/input-widget-example.png)
 {{% /image_container %}}
 
-### 2. Deleting Elements from a Page
+### 2.8 Deleting Elements from a Page
 
 To delete an element from a page, do one of the following:
 

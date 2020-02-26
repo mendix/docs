@@ -12,8 +12,6 @@ tags: ["Datadog", "Mendix Cloud", "v4", "monitoring", "analysis"]
 
 {{% alert type="info" %}}
 Datadog logging is supported in Mendix version 7.15 and above.
-
-Datadog logging from Mendix currently supports logs sent to **datadoghq.com**. It does not send logs to other Datadog endpoints (for example *datadoghq.eu*).
 {{% /alert %}}
 
 Two types of data are provided to Datadog:
@@ -35,7 +33,7 @@ To make use of Datadog you will need a Datadog API key. If you already use Datad
 
 If you are new to Datadog, you will need to get an account first.
 
-1. Go to the Datadog site ([https://www.datadoghq.com/](https://www.datadoghq.com/)) and choose **GET STARTED FREE**.
+1. Go to the Datadog site (for example, [https://www.datadoghq.com/](https://www.datadoghq.com/)) and choose **GET STARTED FREE**.
 2. Enter your Datadog account details. Once you have entered your details you cannot continue until you have set up your agent.
 3.  Choose the option **From Source**.
 
@@ -82,7 +80,9 @@ To send your runtime information to Datadog, you need to provide the Datadog API
 
 	This will ensure that some messages are sent to Datadog. You can change the log level later once you have confirmed that Datadog is receiving them.
 
-8.  Return to the **Environments** page for your app and *Deploy* or *Transport* your app into the selected environment.
+8. By default, the Datadog integration defaults to the US region (datadoghq.com). If you want to use a Datadog site which is another region, set the `DD_SITE` environment variable to the required site. For example, for the EU Datadog site, set `DD_SITE` to `datadoghq.eu`.
+
+9.  Return to the **Environments** page for your app and *Deploy* or *Transport* your app into the selected environment.
 
 	{{% alert type="warning" %}}Your app must be **redeployed** before it is started as additional dependencies need to be included.<br/><br/>Restarting the app is not sufficient to start sending data to Datadog.{{% /alert %}}
 
@@ -277,17 +277,24 @@ The valid values for **DD_LOG_LEVEL** are:
 * INFO
 * DEBUG
 
-### 7.2 Datadog Events Log
+### 7.2 Datadog Regions
+
+The valid values for **DD_SITE** are:
+
+* datadog.com
+* datadog.eu
+
+### 7.3 Datadog Events Log
 
 The Datadog Events log contains events which come from your app: those are the same events that would appear in the Mendix Console. It does not contain events from the environment.
 
 ![Example events log](attachments/datadog-metrics/datadog-event-log.png)
 
-### 7.3 Datadog Agent not Started
+### 7.4 Datadog Agent not Started
 
 If you configure your app for Datadog but the Datadog agent is not started, the events will be sent to the app log files.
 
-### 7.4 Datadog Issues
+### 7.5 Datadog Issues
 
 If you have any issues related to accessing Datadog, please contact their support here: [Support | Datadog](https://www.datadoghq.com/support/), or by email at [support@datadoghq.com](mailto:support@datadoghq.com).
 

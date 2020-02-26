@@ -12,112 +12,106 @@ The API documentation is divided into the sections described below.
 
 Most Mendix Platform APIs require their users to authenticate themselves. This is done by using API keys.
 
-* [Authentication](authentication)
+Continue reading in [Authentication](authentication).
 
-## 3 Build API
+## 3 Build API {#build-api}
 
-Create and manage deployment packages using our build server. You will need information from the Team Server API as input for these API calls.
+To create and manage deployment packages using the Mendix build server, you will need information from the [Team Server API](#team-server-api) as input for these API calls.
 
-* [Build API](build-api)
+For details, see [Build API](build-api).
 
 ## 4 Client API
 
-Enrich the user interface of your applications by building on top of our web client APIs.
+Enrich the user interface of your applications by building on top of the Mendix web client APIs.
 
-* [Client API](client-api)
+Continue on to the [Client API](client-api).
 
-## 5 Deploy API
+## 5 Deploy API {#deploy-api}
 
-Manage application environments in our public cloud. Retrieve status, start, and stop applications, or deploy and transport new model versions to application environments. Use the Build API to create and manage deployment packages.
+With this API, you can manage application environments in the [Mendix Cloud](developerportal/deploy/mendix-cloud-deploy), retrieve statuses, start and stop applications, and deploy or transport new model versions to application environments. You will also have to use the [Build API](#build-api) to create and manage deployment packages.
 
-* [Deploy API](deploy-api)
+For details, see [Deploy API](deploy-api).
 
 ## 6 Design Properties API
 
-Learn how design properties work in Atlas UI and beyond. Then, make your own custom design properties.
+Learn how design properties work in Atlas UI and beyond with this API. Then, make your own custom design properties.
 
-* [Design Properties API](design-properties)
+For details, see [Design Properties API](design-properties).
 
 ## 7 Feedback API
 
-Build on top of the feedback management functionality of the Mendix App Platform, or connect your own feedback gathering tool.
+Use this API to build on top of the [feedback management](/developerportal/collaborate/feedback) functionality of the Mendix Platform and connect your own feedback gathering tool.
 
-* [Feedback API](feedback-api)
+For details, see [Feedback API](feedback-api).
 
 ## 8 Invite API
 
-Invite new users directly from your applications, or allow your existing users to do so themselves.
+Use this API to invite new users directly from your applications or allow your existing users to do so themselves.
 
-Part of the AppCloudServices module.
+This is part of the [AppCloudServices](https://appstore.home.mendix.com/link/app/934/) module.
 
-* [Invite API](invite-api)
+For details, see [Invite API](invite-api).
 
 ## 9 Permissions API
 
-Retrieve the user roles of your applications' users, so you can grant them the intended access level to the application.
+With this API, you can retrieve the [user roles](/refguide/user-roles) of your application users so you can grant them specific access levels to the application.
 
-Part of the AppCloudServices module.
+This is part of the [AppCloudServices](https://appstore.home.mendix.com/link/app/934/) module.
 
-* [Permissions API](permissions-api)
+For details, see [Permissions API](permissions-api).
 
 ## 10 Pluggable Widgets API
 
-Understand pluggable widgets, how they extend app functionality, and how they can be built to interact with Mendix's APIs.
+This API helps you to understand pluggable widgets, how they extend app functionality, and how they can be built to interact with Mendix's APIs.
 
-* [Pluggable Widgets API](pluggable-widgets)
+For details, see [Pluggable Widgets API](pluggable-widgets).
 
 ## 11 Profile API
 
-Retrieve the profile information of your applications' users from the Mendix Platform, so they do not have to fill in their profile for every new app.
+Use this API to retrieve the profile information of your application users from the Mendix Platform so that they do not have to fill in their profile for every new app.
 
-Part of the AppCloudServices module.
+This is part of the [AppCloudServices](https://appstore.home.mendix.com/link/app/934/) module.
 
-* [Profile API](profile-api)
+For details, see [Profile API](profile-api).
 
 ## 12 Projects API
 
-The Projects API allows you to programmatically create a project in your company space and move working copies between the Team Server and the Model Server.
+This API allows you to programmatically create an app project in your company space and move working copies between the [Team Server](/developerportal/develop/team-server) and the Model Server.
 
-* [Project API](projects-api)
+For details, see [Project API](projects-api).
 
 ## 13 Runtime API {#runtime}
 
-All functionality and information from both the application model and Mendix Runtime is accessible via the Runtime API.
+All the functionality and information from both the application model and [Mendix Runtime](/refguide/runtime) is accessible via this API.
 
-* [Runtime API](runtime-api)
+Continue on to the [Runtime API](runtime-api).
 
 ## 14 Stories API
 
-Extend the requirements and project management capabilities of Mendix, or connect third-party service management and project management tools.
+Use this API to extend the [requirements and project management](/developerportal/develop/planning-development) capabilities of the Mendix Platform, or connect third-party service management and project management tools.
 
-* [Stories API](stories-api)
+For details, see [Stories API](stories-api).
 
-## 15 Team Server API
+## 15 Team Server API {#team-server-api}
 
-Retrieve information (branches, revisions) about application models stored in Team Server. You always access an application model via the context of an application (see the Deploy API for more information about retrieving applications and application identities).
+This API enables retrieving information (branches, revisions) about application models stored in Team Server. You always access an application model via the context of an application (for more information about retrieving apps and app identities, see [Deploy API](#deploy-api)).
 
-* [Team Server API](team-server-api)
+For details, see [Team Server API](team-server-api).
 
 ## 16 User Management API
 
-Integrate your company's user management systems with the Mendix App Platform. Create and manage user accounts and security groups, and then define group policies for your applications.
+Use this API to integrate your company's user management systems with the Mendix Platform. You can then create and manage user accounts and security groups as well as define group policies for your applications.
 
-* [User Management API](user-management-api)
+For details, see [User Management API](user-management-api).
 
 ## 17 Webhooks
 
-Webhooks allow you to build or set up Mendix Platform connectors that subscribe to certain events on the Developer Portal. 
+Webhooks allow you to build or set up Mendix Platform connectors that subscribe to certain events on the [Developer Portal](/developerportal/index).
 
-* [Webhooks](webhooks-sprints)
+Continue reading in [Webhooks](webhooks-sprints).
 
 ## 18 Deprecated APIs
 
-### 18.1 Single Sign-On API
-
 {{% alert type="warning" %}}
-The API for the Mendix Single Sign-On system based on OpenID has been deprecated and will be discontinued from 1st April 2020.
+The [SSO API](single-sign-on-api) for the Mendix Single Sign-On system based on OpenID has been deprecated and will be discontinued from 1st April 2020.
 {{% /alert %}}
-
-* [SSO API](single-sign-on-api)
-
-

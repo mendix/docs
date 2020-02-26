@@ -83,9 +83,8 @@ The **Call a microflow** event executes the specified microflow.
 
 {{%alert type="info" %}}
 
-Some care is required when setting `Call a Microflow` as the action for the `On change`, `On enter`, or `On leave` event of a widget.
-As microflows always require _some_ time to complete, any changes to the current form (e.g. by changing values in input widgets) made in the meantime will be overwritten by the results of the microflow.
-It is therefore not recommended to change entities/attributes on the current page in a microflow triggered by an `On change`, `On enter`, or `On leave` event.
+When setting **Call a Microflow** as an action for the **On change**, **On enter**, or **On leave** event of a widget, note that microflows require some time to complete, any changes to the current form (e.g. by changing values in input widgets) made in the meantime will be overwritten by the results of the microflow.
+Therefore, it is not recommended to change entities/attributes on the current page in a microflow triggered by an **On change**, **On enter**, or **On leave** event.
 
 {{%/alert %}}
 

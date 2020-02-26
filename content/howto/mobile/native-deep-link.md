@@ -45,15 +45,13 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 If you do not already have a native template for your app, you can create one.
 
-1. Create a shell app with Native Builder, with the `prepare` command. Using the how to [Deploy Your First Mendix Native App](/howto/mobile/deploying-native-app).
-
-        Example command, replace the parameters with your project parametrs, local paths and tokens:
+1. Create a shell app with Native Builder using the `prepare` command as shown in [How to Deploy Your First Mendix Native App](/howto/mobile/deploying-native-app). When you do this, replace the parameters in this example command with your own project's parameters, local paths, and tokens:
 
     ``` shell
     native-builder.exe prepare --project-name "Native Deep Link" --app-name "Native Deep Link" --java-home "C:\Program Files\AdoptOpenJDK\jdk-11.0.3.7-hotspot" --mxbuild-path "C:\Program Files\Mendix\8.6.0.715\modeler\mxbuild.exe" --project-path "C:\mendix-projects\NativeDeepLink\NativeDeepLink.mpr" --github-access-token "c3f322c471623" --appcenter-api-token "2d5b570693d34"  --app-identifier "com.mendix.native.deeplink" --runtime-url "https://nativedeeplink-sandbox.mxapps.io/" --mendix-version "8.6.0"
     ```
     
-1. Open your command line interface (CLI) of choice or create a folder on your file system where you want to edit the build template:
+1. Open your command line interface (CLI) of choice and change directory to the folder where you want to edit the build template [todo: check]:
 
     ```shell
     cd c:/github
@@ -83,16 +81,16 @@ The manifest file registers the schema and host on your Android device that will
     </intent-filter>
     ```
     
-    Fr more information on linking in Android, see this [Android documentation](https://developer.android.com/training/app-links/deep-linking#adding-filters).
+    For more information on linking in Android, see this [Android documentation](https://developer.android.com/training/app-links/deep-linking#adding-filters).
 
 ### 3.2 For iOS Apps
 
-The **plist** registers the schema and host, so that they will be associated with your app in iOS. [todo: plist what? file? Also as above so here.]
+The **plist** registers the schema and host, so that they will be associated with your app in iOS. [todo: plist what? file? If so, italics. Also as above so here.]
 
 1. Open the folder that you cloned your template into: `c:/github/native-deepling-app`.
 1. In Xcode (available on Apple Mac only) open *ios/NativeTemplate.xcworkspace*.
 1. Open *ios/NativeTemplate/Info.plist*
-1. Add `URL types`, then add `URL Schemes` and `URL identifier`:
+1.  Add `URL types`, then add `URL Schemes` and `URL identifier`:
 
    ![ios info plist](attachments/native-deep-link/ios-info-plist.png)
    

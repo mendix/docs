@@ -32,7 +32,8 @@ However, it is possible to export and import suppression rules manually. For mor
 
 ## 3 Suppressing a Warning in the Errors Pane {#suppress-warning}
 
-From the **Errors** pane, you can suppress a warning for a document, a module, or the entire project.
+From the **Errors** pane, you can suppress a warning for a document, a module, or the entire project:
+![Suppressing a Warning](attachments/suppression-rules/suppressing-warning.png)
 
 ### 3.1 Suppressing a Warning for a Specific Document
 
@@ -42,7 +43,6 @@ To suppress a warning for a specific document only, do the following:
 
 2. Select **Suppress this warning** > **For the document {Document name}**. 
 
-	![Suppressing a warning for a document](attachments/suppression-rules/suppress-this-warning-menu-for-document.png)
 
 The warning is only suppressed for the specific document. If the same warning appears in another document (for example, on another page), it will still be displayed for that document.
 
@@ -54,7 +54,6 @@ To suppress a warning for a specific module, do the following:
 
 2. Select **Suppress this warning** > **For the module {Module name}**. 
 
-	![Suppressing a warning for a module](attachments/suppression-rules/suppress-this-warning-menu-for-module.png)
 
 The warning is suppressed for the whole module. If the same warning appears in another module, it will still be displayed for that module.
 
@@ -66,7 +65,6 @@ To suppress a warning for the entire project, do the following:
 
 2. Select **Suppress this warning** > **For the entire project**.
 
-	![Suppressing a warning for the entire project](attachments/suppression-rules/suppress-this-warning-menu-for-project.png)
 
 The warning is suppressed for the whole project and the list of warnings is updated in the **Errors** pane.
 
@@ -96,7 +94,7 @@ To suppress App Store warnings, do the following:
 
 Warnings from App Store modules are suppressed. 
 
-### 4.2 Adding a New Rule
+### 4.2 Adding a Rule
 
 For more advanced cases, you may want to manually add a new rule. This gives you full control over the settings that the rule uses, when deciding which warnings to suppress.
 
@@ -129,7 +127,7 @@ To edit an existing rule, follow the steps below:
 
     ![Rules window - edit button](attachments/suppression-rules/rules-dialog-edit-button.png)
 
-3.  In the **Edit Suppression** dialog box, edit options to change the rule (for more information on settings, see the [Rule Setting](#rule-settings) section. 
+3.  In the **Edit Suppression** dialog box, edit options to change the rule (for more information on settings, see the [Suppression Rule Settings](#rule-settings) section. 
 
     ![Rule settings window](attachments/suppression-rules/rule-settings-window.png)
 

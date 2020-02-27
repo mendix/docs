@@ -14,26 +14,31 @@ This document describes the properties of a published OData resource. For an ove
 
 ### 1.1 Add a Resource
 
-Click **Add** in the **Resources** pane of the **Published OData Service** window to open the **Select Persistable Entity** window. Select an entity to publish from the **Project Explorer** and click **Select**.
+Click **Add** in the **Resources** pane of the **Published OData Service** window to open the **Select Entity** window. Select an entity to publish and click **Select**.
 
-![](attachments/16713722/published-odata-service.png)
 
-### 1.1 Add a Resource from the Domain Module
 
-An alternative way to add a resource is in the **Domain Model**: right-click an entity and select **Expose as OData resource...**. 
+![](attachments/published-odata-resource/published-odata-service.png)
 
-![](attachments/16713722/16843929.png)
 
-To add a resource, click the OData service name in the project explorer in the **Select Published Data Service** window, and click **Select**. 
 
-To create a new OData service and add the entity to it, click **New** , and type the name of the service you want to create in the **Add Published OData Service** dialog box. 
+An alternative way to add a resource is in the **Domain Model**: right-click an entity and select **Expose as OData resource**. 
+
+![](attachments/published-odata-resource/create-odata-resource-from-domain-model.png)
+
+To add a resource, click the OData service name in the **Select Published Data Service** window, and click **Select**. 
+
+To create a new OData service and add the entity to it, click **New**  and enter the name of the service you want to create in the **Add Published OData Service** dialog box. 
 
 ### 1.2 Edit a Resource
-In the **Resources** pane of the **Published OData Service** window select a resource and click **Edit** to display the **Edit published resource** window. 
 
-![](attachments/16713722/Edit-published-resource.png)
+In the **Resources** pane of the **Published OData Service** window, select a resource and click **Edit** to display the **Edit published resource** window. 
 
-It is possible to **Select** another **Entity** or view the entity in the Domain model by clicking **Show**. The [**Exposed attributes and associations**]( #exatass) for the selected entity can be set in this window. 
+![](attachments/published-odata-resource/Edit-published-resource.png)
+
+
+
+It is possible to select another **Entity** or view the entity in the domain model by clicking **Show**. The [Exposed attributes and associations](#exatass) for the selected entity can be set in this window. 
 
 Specify the location where the resource will be published in **Example of location**.
 
@@ -47,7 +52,7 @@ In the **Public documentation** tab, you can provide a summary and a description
 
 ## 2 Selecting Exposed Attributes and Associations {#exatass}
 
-In the **Edit published resource** window, **Select** the **Exposed attributes and associations** to display the list of attributes and associations for the entity.
+In the **Edit published resource** window, select **Exposed attributes and associations** to display the list of attributes and associations for the entity.
 
 {{% alert type="info" %}}
 
@@ -55,11 +60,11 @@ The **System.ID** attribute is used as a key in OData services and must always b
 
 {{% /alert %}}
 
-Attributes of published entities are **Nillable** by default. This means that if their value is empty then they will be encoded as explicit nulls in the OData content. If **Nillable** is deselected for an attribute, the attribute cannot be empty (otherwise, a runtime error will occur).
+Attributes of published entities are **Nillable** by default. This means that if their value is empty then they will be encoded as explicit nulls in the OData content. If **Nillable** is unchecked for an attribute, the attribute cannot be empty (as this will result in a runtime error).
 
 {{% alert type="info" %}}
 
-Attributes of the type **Binary** cannot be exported through OData services except the **Contents** field of the **System.FileDocument** attribute.
+Attributes of the type **Binary** cannot be exported through OData services except for the **Contents** field of the **System.FileDocument** attribute.
 
 {{% /alert %}}
 
@@ -87,13 +92,13 @@ These features make it easier to refactor the domain model without affecting ext
 
 ## 4 Exposed Set Name
 
-Customize name of the entity set that is displayed in the **Exposed set name** field of the **Edit published resource** window. This is the last part of the URL of the resource as given in the **Example of location**.
+It is possible to customize the name of the entity set that is displayed in the **Exposed set name** field of the **Edit published resource** window. This forms the last part of the URL of the resource as given in the **Example of location**.
 
 Default: *{Entity name}s*
 
 ## 5 Use Paging
 
-The **Use paging** option is used to set a maximum number of objects per response, and include a link to the next set of objects. A client such as [Tableau](https://www.tableau.com/trial/tableau-software?utm_campaign_id=2017049&utm_campaign=Prospecting-CORE-ALL-ALL-ALL-ALL&utm_medium=Paid+Search&utm_source=Google+Search&utm_language=EN&utm_country=BENX&kw=tableau&adgroup=CTX-Brand-Core-EN-E-control&adused=324815280187&matchtype=e&placement=&gclid=EAIaIQobChMI0831s4re5wIVScDeCh1osAAcEAAYASAAEgL9VfD_BwE&gclsrc=aw.ds) is able use this to show progress and automatically continue to follow the links until all the data is retrieved. The memory usage of the clients can be improved if paging is set to a reasonable page size.
+The **Use paging** option is used to set a maximum number of objects per response, and include a link to the next set of objects. A client such as [Tableau](https://www.tableau.com) is able use this to display progress and automatically continue to follow the links until all the data is retrieved. The memory usage of the clients can be improved if paging is set to a reasonable page size.
 
 Default: *No*
 

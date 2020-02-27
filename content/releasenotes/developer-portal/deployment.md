@@ -23,7 +23,7 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
     * You will be unable to stop or start your app while the backup is being restored
     * Your environment details page will display a message while the backup is being restored
     * The environment activity log will indicate when the restore has completed
-* New Deploy API calls have been added. See [Deploy API](/apidocs-mxsdk/apidocs/deploy-api) for more information.
+* New Deploy API calls have been added. These will be added to the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api) documentation shortly.
 * You will now be warned that you cannot restore a file-only backup to Mendix Cloud. You can only restore backups which include the database.
 
 ### February 17th, 2020

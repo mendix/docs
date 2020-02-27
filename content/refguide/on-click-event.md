@@ -79,7 +79,16 @@ The **Show a page** event opens the specified page. Select the page which opens 
 
 ### 3.3 Call a Microflow {#call-microflow}
 
-The **Call a microflow** event executes the specified microflow. The following settings are specific for this event:
+The **Call a microflow** event executes the specified microflow.
+
+{{%alert type="info" %}}
+
+When setting **Call a microflow** as an action for the **On change**, **On enter**, or **On leave** event of a widget, note that microflows require some time to complete. Any changes to the current form made in the meantime (e.g. changing values in input widgets) will be overwritten by the results of the microflow.
+Therefore, it is not recommended to change entities/attributes on the current page in a microflow triggered by an **On change**, **On enter**, or **On leave** event.
+
+{{%/alert %}}
+
+The following settings are specific for this event:
 
 #### 3.3.1 Microflow{#microflow}
 

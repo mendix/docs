@@ -98,7 +98,7 @@ The grid on the right contains the following columns:
 
 * **Mine** – the change to the property that was made on the current development line
 
-### 4.2 Zoomed-In Level for Conflicted Documents {#conflicts)
+### 4.2 Zoomed-In Level for Conflicted Documents {#conflicts}
 The zoomed-in level for conflicted documents is split into two grids, with elements on the left and conflicting properties on the right.
 
 The toolbar at this level contains the following buttons:

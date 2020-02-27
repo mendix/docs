@@ -37,30 +37,36 @@ From the **Errors** pane, you can suppress a warning for a document, a module, o
 ### 3.1 Suppressing a Warning for a Specific Document
 
 To suppress a warning for a specific document only, do the following:
+
 1. Right-click the warning you would like to suppress.
+
 2. Select **Suppress this warning** > **For the document {Document name}**. 
 
-![Suppressing a warning for a document](attachments/suppression-rules/suppress-this-warning-menu-for-document.png)
+	![Suppressing a warning for a document](attachments/suppression-rules/suppress-this-warning-menu-for-document.png)
 
 The warning is only suppressed for the specific document. If the same warning appears in another document (for example, on another page), it will still be displayed for that document.
 
 ### 3.2 Suppressing a Warning for a Specific Module
 
 To suppress a warning for a specific module, do the following:
+
 1. Right-click the warning you would like to suppress.
+
 2. Select **Suppress this warning** > **For the module {Module name}**. 
 
-![Suppressing a warning for a module](attachments/suppression-rules/suppress-this-warning-menu-for-module.png)
+	![Suppressing a warning for a module](attachments/suppression-rules/suppress-this-warning-menu-for-module.png)
 
 The warning is suppressed for the whole module. If the same warning appears in another module, it will still be displayed for that module.
 
 ### 3.3 Suppress a Warning for the Entire Project
 
 To suppress a warning for the entire project, do the following:
+
 1. Right-click the warning you would like to suppress.
+
 2. Select **Suppress this warning** > **For the entire project**.
 
-![Suppressing a warning for the entire project](attachments/suppression-rules/suppress-this-warning-menu-for-project.png)
+	![Suppressing a warning for the entire project](attachments/suppression-rules/suppress-this-warning-menu-for-project.png)
 
 The warning is suppressed for the whole project and the list of warnings is updated in the **Errors** pane.
 
@@ -77,13 +83,14 @@ After modifying suppression rules, click **OK** to close the **Manage Suppressio
 #### 4.1 Suppressing App Store Warnings {#suppress-appstore-warnings}
 
 To suppress App Store warnings, do the following:
+
 1.  Click the **Suppression rules** button in the **Errors** pane.
 
-    ![Viewing the suppress warnings rules](attachments/suppression-rules/errors-pane-suppress-warnings-button.png)
+	![Viewing the suppress warnings rules](attachments/suppression-rules/errors-pane-suppress-warnings-button.png)
 
 2. In the **Manage Suppression Rules** dialog box, check the **Suppress warnings from App Store modules** option.
 
-   ![Suppressing App Store warnings](attachments/suppression-rules/rules-dialog-app-store-setting.png)
+    ![Suppressing App Store warnings](attachments/suppression-rules/rules-dialog-app-store-setting.png)
 
 3. Click **OK** to apply the new setting.
 
@@ -103,7 +110,7 @@ To manually add a new rule, follow the steps below:
 
 3. In the **Add Suppression** dialog box, set the necessary options to add the rule (for more information on settings, see the [Rule Setting](#rule-settings) section.  
 
-   ![Rules window - add suppression](attachments/suppression-rules/new-warning-window.png)
+    ![Rules window - add suppression](attachments/suppression-rules/new-warning-window.png)
    
 4. Confirm your choice by clicking **OK**.
 
@@ -122,9 +129,9 @@ To edit an existing rule, follow the steps below:
 
     ![Rules window - edit button](attachments/suppression-rules/rules-dialog-edit-button.png)
 
-3.  In the **Add Suppression** dialog box, edit options to change the rule (for more information on settings, see the [Rule Setting](#rule-settings) section. 
+3.  In the **Edit Suppression** dialog box, edit options to change the rule (for more information on settings, see the [Rule Setting](#rule-settings) section. 
 
-   ![Rule settings window](attachments/suppression-rules/rule-settings-window.png)
+    ![Rule settings window](attachments/suppression-rules/rule-settings-window.png)
 
 4. Confirm your choice by clicking **OK**.
 

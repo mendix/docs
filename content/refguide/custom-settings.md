@@ -69,8 +69,8 @@ The settings below influence the behavior of the log files. These settings can o
 | DatabasePassword | Password for the DatabaseUserName supplied above. | |
 | DatabaseHost | The host name and optionally the TCP port number of the database. Use a colon as separator between host name and port number. Possible values are: db.url.org, db.url.org:1521, 10.0.0.5, 10.0.0.5:1433\. It's possible to use a plain IPv6 address by enclosing it in brackets, like: [::1]:5432 <br/>This will be overridden if you supply **DatabaseJdbcUrl**. | |
 | DatabaseName | The name of the database or schema used by the Mendix app <br/>This will be overridden if you supply **DatabaseJdbcUrl**. | |
-| DatabaseJdbcUrl | Defines the JDBC URL to use for the database connection (which overrides the other database connection settings). This feature is not supported for PostgreSQL databases. |   |
-| DatabaseUseSsl | For PostgreSQL databases, defines whether the connection will be made using SSL. | false |
+| DatabaseJdbcUrl | Defines the JDBC URL to use for the database connection (which overrides the other database connection settings). |   |
+| DatabaseUseSsl | For PostgreSQL databases, defines whether the connection will be made using SSL without certificate validation. If you need certificate validation, use **DatabaseJdbcUrl** instead. | false |
 | LogMinDurationQuery | Defines whether database queries are logged via the ConnectionBus_Queries log node if they finished after the number of milliseconds specified here. By default, only the relevant SQL query will be logged. Set the log level of the ConnectionBus_Queries log node to TRACE to show more information about the page or the microflow which leads to this query. |   |
 | OracleServiceName | Defines the SERVICE_NAME when you have a connection with an Oracle DBMS. |   |
 | ReadCommittedSnapshot | Defines whether the READ_COMMITTED_SNAPSHOT option of Microsoft SQL Server must be enabled or not. See for more information: [Using Snapshot Isolation](http://msdn.microsoft.com/en-us/library/tcbchxcb(VS.80).aspx). The value can be true or false. | true |
@@ -151,21 +151,20 @@ These settings can be used to store files using the Microsoft Azure blob storage
 
 | Name | Description | Default Value |
 | --- | --- | --- |
-| com.mendix.core.StorageService | Has to be set to 'com.mendix.storage.azure' to select Azure as the storage service |   |
-| com.mendix.storage.azure.AccountName | Account name to authenticate with the azure blob storage service |   |
-| com.mendix.storage.azure.AccountKey | Account key to authenticate with the azure blob storage service |   |
-| com.mendix.storage.azure.SharedAccessSignature | Provides delegated access to resources in your storage account. [Shared Access Signature](https://docs.microsoft.com/en-us/azure/storage/common/storage-dotnet-shared-access-signature-part-1)|   |
-| com.mendix.storage.azure.BlobEndpoint |Set the blob endpoint. This setting is required when authenticate by SharedAccessSignature is used|   |
-| com.mendix.storage.azure.Container | Name of the container containing the blob. The container is created if it does not exist yet. |   |
-| com.mendix.storage.azure.ParallelismFactor | Maximum number of parallel multi-part file uploads / downloads. We advise you not to change this setting unless you experience slow file transfers for large files. Choosing larger values will lead to higher memory usage. | 5 |
-|com.mendix.storage.azure.UseHttps| For enabling or disabling secure connections using HTTPS. Can be `true` or `false`. | `true` |
+| com.mendix.core.StorageService | Has to be set to *com.mendix.storage.azure* to select Azure as the storage service. |   |
+| com.mendix.storage.azure.AccountName | Account name to authenticate with the Azure blob storage service. |   |
+| com.mendix.storage.azure.AccountKey | Account key to authenticate with the Azure blob storage service. |   |
+| com.mendix.storage.azure.SharedAccessSignature | Provides delegated access to resources in your storage account. For more information, see [Shared Access Signature on docs.microsoft.com](https://docs.microsoft.com/en-us/azure/storage/common/storage-dotnet-shared-access-signature-part-1). |   |
+| com.mendix.storage.azure.BlobEndpoint | Set the blob endpoint. This setting is required when authentication by SharedAccessSignature is used. |   |
+| com.mendix.storage.azure.Container | Name of the container containing the blob. |   |
+| com.mendix.storage.azure.CreateContainerIfNotExists | Indicates whether to check if the container exists, and creates it if it does not exist. This setting was introduced in Studio Pro [8.7.0](/releasenotes/studio-pro/8.7#870). | `true` |
+| com.mendix.storage.azure.ParallelismFactor | Maximum number of parallel multi-part file uploads/downloads. We advise not changing this setting unless you experience slow file transfers for large files. Choosing larger values will lead to higher memory usage. | 5 |
+| com.mendix.storage.azure.UseHttps| For enabling or disabling secure connections using HTTPS. Can be `true` or `false`. | `true` |
 | com.mendix.storage.azure.TimeoutIntervalInMs | Sets the amount of time (in milliseconds) to allow a call to the storage service to complete. For more information, see the [Azure libraries](https://azure.github.io/azure-sdk-for-java/storage.html). | No timeout |
 | com.mendix.storage.azure.MaximumExecutionTimeInMs | Sets the maximum execution time (in milliseconds) to use when making this request. For more information, see the [Azure libraries](https://azure.github.io/azure-sdk-for-java/storage.html). | No maximum time |
 
 {{% alert type="warning" %}}
-
 Azure blob storage's default connection protocol is HTTPS in order to encourage secure connections by default. This is a highly recommended best practice (for more information, see [Configure Azure Storage Connection Strings](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string)). This should now be transparent, unless you use custom domain names (for details, see [Require Secure Transfer](https://docs.microsoft.com/en-us/azure/storage/common/storage-require-secure-transfer)). In that case, you should use the `UseHttps` setting above to revert to the previous default behavior and disable HTTPS.
-
 {{% /alert %}}
 
 ## 8 IBM Cloud (Bluemix) Object Storage Settings

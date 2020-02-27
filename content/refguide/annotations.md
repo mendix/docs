@@ -10,7 +10,7 @@ tags: ["domain model", "annotation", "studio pro"]
 
 An **annotation** can be used to add comments to a domain model.
 
-For example, an order entity contains two decimal attributed, **TotalPrice** and **Discount** attribute. You add an annotation to note that, unlike the total price, the discount represents a percentage and not an amount of money.
+For example, an order entity contains two decimal attributes, **TotalPrice** and **Discount**. You can add an annotation to note that, unlike the total price, the discount represents a percentage and not an amount of money.
 
 ![](attachments/domain-model/16844036.png)
 

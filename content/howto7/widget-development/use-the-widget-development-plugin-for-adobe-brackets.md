@@ -51,7 +51,7 @@ To create a new widget, follow these steps:
 
     ![](attachments/18448565/18579932.png)
 
-    The name of the widget is very important, as this name is the name used in Mendix. Using the [CamelCase](http://en.wikipedia.org/wiki/CamelCase) naming convention is strongly recommended. Each new widget should have an author, version number, copyright, license, package name, widget name, and path defined before you can click **OK**. The location directory must also exist.
+    The name of the widget is very important, as this name is the name used in Mendix. Using the [UpperCamelCase](http://en.wikipedia.org/wiki/CamelCase) naming convention is strongly recommended. Each new widget should have an author, version number, copyright, license, package name, widget name, and path defined before you can click **OK**. The location directory must also exist.
 
     These are some details on the settings:
 

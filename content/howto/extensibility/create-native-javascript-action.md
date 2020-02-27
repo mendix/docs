@@ -115,7 +115,7 @@ Your apps are now available in the *C:\native-builder\builds\* folder, where you
 
 {{% /alert %}}
 
-1. Install the app on your device. For more information on app installation, see the [Distributing](/howto/mobile/deploying-native-app#6-distributing) section of *How to Deploy Your First Mendix Native App*.
+1. Install the app on your device. For more information on app installation, see the [Distributing](/howto/mobile/deploying-native-app#distributing) section of *How to Deploy Your First Mendix Native App*.
 1. Open your app on your testing device.
 1. Tap your NFC button. You will incur this error: **JavaScript action was not implemented**. You will implement your action later.
 

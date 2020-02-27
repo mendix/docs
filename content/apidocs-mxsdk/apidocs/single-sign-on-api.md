@@ -5,6 +5,10 @@ category: "API Documentation"
 
 ## 1 Connecting to Mendix OpenID
 
+{{% alert type="warning" %}}
+The API for the Mendix Single Sign-On system based on OpenID 2.0 has been deprecated and will be discontinued from 1st April 2020.
+{{% /alert %}}
+
 The Mendix Single Sign-On system is based on the [OpenID 2.0 protocol](http://openid.net/specs/openid-authentication-2_0.html) and any AppCloud-Powered Mendix application will automatically use this single sign-on system. Non-Mendix apps can be integrated with the Mendix Single Sign-On server as well by using one of the many available implementations. An extensive list of existing implementations can be found [here](http://openid.net/developers/libraries/obsolete/). The OP Endpoint to connect to is [https://mxid2.mendixcloud.com/mxid2/discover](https://mxid2.mendixcloud.com/mxid2/discover). Note that all Mendix OpenIDs (OP Identifiers) start with `https://mxid2.mendixcloud.com/mxid2/`.
 
 ## 2 Realm Verification

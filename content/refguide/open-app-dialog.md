@@ -2,7 +2,7 @@
 title: "Open Project"
 parent: "file-menu"
 menu_order: 20
-description: "Describes the Open Project (app) flow and the Open App dialog window"
+description: "Describes the Open Project (app) flow and the Open App dialog box"
 tags: ["studio pro", "open app", "open project"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -14,7 +14,7 @@ To open a project in Mendix Studio Pro, do one of the following:
 * Open the **File** menu in the top bar > **Open Project**
 *  Click **Open App** on the Studio Pro landing page
 
-The **Open App** dialog window will open, where you can select the app location:
+The **Open App** dialog box will open, where you can select the app location:
 
 ![Open App](attachments/file-menu/open-app.png)
 

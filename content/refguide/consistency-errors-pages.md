@@ -224,7 +224,7 @@ To fix this error, do the following:
 
 1. Open your domain model and double-click the association that you are using for the reference selector.
 
-2.  In **Properties of Association** dialog window, change **Multiplicity** to one-to-many (in our example, multiple 'Employee' objects are associated with one 'City' objects).
+2.  In **Properties of Association** dialog box, change **Multiplicity** to one-to-many (in our example, multiple 'Employee' objects are associated with one 'City' objects).
 
     ![Multiplicity for One-to-many Association](attachments/consistency-errors-pages/one-to-many-multiplicity.png)
 
@@ -255,7 +255,7 @@ To fix the error, do the following:
 
 1. Open your domain model and double-click the association that you are using for the reference set selector or the input reference set selector and do the following: <br/>
 
-2.  In **Properties of Association** dialog window, change **Multiplicity** to many-to-many (in our example, multiple 'Employee' objects are associated with multiple 'City' objects).
+2.  In **Properties of Association** dialog box, change **Multiplicity** to many-to-many (in our example, multiple 'Employee' objects are associated with multiple 'City' objects).
 
     ![Multiplicity for Many-to-many Association](attachments/consistency-errors-pages/changing-multiplicity.png)
 

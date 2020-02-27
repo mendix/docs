@@ -84,11 +84,11 @@ In previous section you created a microflow which return a list of characters. N
 4. Select **Type** > **Microflow**. 
 5. Click **Microflow** > **Select** and select the **Call_REST** microflow. 
 6. Click **OK** to accept the changes to the data source.
-7.  When you see the **“Do you want to automatically fill the contents of the data grid?”** dialog window, click **Yes**:
+7.  When you see the **“Do you want to automatically fill the contents of the data grid?”** pop-up window, click **Yes**:
 
 	{{% image_container width="500" %}}![click yes](attachments/server-side-paging/auto-fill.png){{% /image_container %}}
 
-8.  When you see the  **“Do you want to generate controls for microflow source parameters of the data grid? This will enable server-side paging sorting and searching for the grid.”** dialog window, click **Yes**:
+8.  When you see the  **“Do you want to generate controls for microflow source parameters of the data grid? This will enable server-side paging sorting and searching for the grid.”** pop-up window, click **Yes**:
 
 	{{% image_container width="500" %}}![click yes again](attachments/server-side-paging/question-dialog.png){{% /image_container %}}
 

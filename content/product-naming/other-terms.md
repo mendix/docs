@@ -345,6 +345,14 @@ Capitalize in all instances (to parallel "Team Server" and "Build Server").
 Spell with "Mx" abbreviation as one word.
 {{% /alert %}}
 
+### Native Builder
+
+{{% alert type="info" %}}
+Do not use "Native Oven".<br />
+<br />
+Capitalize in all instances.
+{{% /alert %}}
+
 ## O-Z
 
 ### on-premises
@@ -363,7 +371,7 @@ On-premises deployment needs specific security considerations.
 
 ### one-to-one & one-to-many associations
 
-For details on association properties, see [Associations & Their Properties](/refguide/association-properties). 
+For details on association properties, see [Association Properties](/refguide/association-properties). 
 
 {{% alert type="info" %}}
 Write as "one-to-one" and "one-to-many," not as "1-1" or "1-to-many."

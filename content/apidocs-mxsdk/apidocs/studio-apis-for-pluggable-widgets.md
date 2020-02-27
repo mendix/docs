@@ -8,7 +8,7 @@ tags: ["Widget", "Pluggable", "Custom", "JavaScript", "React", "Preview"]
 
 ## 1 Introduction
 
-This guide explains the APIs offered by Mendix Studio and Studio Pro so you can build better pluggable widgets. Specifically, you can use these APIs and modules to alter pluggable widgets' preview appearances while working in Mendix Studio or Studio Pro's Design mode. 
+This guide explains the APIs offered by Mendix Studio and Studio Pro so you can build better pluggable widgets. Specifically, you can use these APIs and modules to alter pluggable widgets' preview appearances while working in Mendix Studio or Studio Pro's Design mode.
 
 In contrast, [Client APIs Available to Pluggable Widgets](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets) is meant for pluggable widget development once your app project is running in the client. This guide's APIs are available in Mendix 8.0.0 and higher.
 
@@ -61,8 +61,22 @@ by Studio and Studio Pro's Design mode. It will be an empty string value if no i
 
 ### 2.3 Image
 
-Image properties will be passed as a string property. This property will contain an image URL suited to 
-Studio and Studio Pro's Design mode. It will be an empty string value if no image is selected.
+This property appears as follows:
+
+```typescript
+type StaticImage = { type: "static"; imageUrl: string; };
+type DynamicImage = { type: "dynamic"; entity: string; };
+
+type ImageProperty = null | StaticImage | DynamicImage;
+```
+
+Image properties are exposed objects containing a `type` field that is `"static"` if a static image is selected,
+ `"dynamic"` if an entity is selected, or `null` if no image is selected at all.
+
+For the `"static"` type, `imageUrl`  is available. It represents a URL from which your selected image can be reached
+by Studio and Studio Pro's Design mode. It will be an empty string value if no image has been selected.
+
+For the `"dynamic"` type, `entity` is available. It represents the entity where the selected image's data is stored. It will be an empty string value if no entity has been selected.
 
 ### 2.4 Widgets
 
@@ -156,7 +170,7 @@ values will be passed.
 
 ### 2.10 File
 
-A string containing the path of the selected file entity will be passed. 
+A string containing the path of the selected file entity will be passed.
 
 Here are a few examples:
 
@@ -198,7 +212,7 @@ The `preview` export is expected to be a `class` or `function` representing a `R
 Assuming a pluggable widget with a string property `content` and an `integer` property `padding`, the following shows a simple preview component:
 
 ```tsx
-type Props = { 
+type Props = {
     content: string;
     padding: number;
     className: string;
@@ -215,7 +229,7 @@ export const preview: React.FC<Props> = (props) => (
 
 #### 3.2.1 Using a Widgets Property
 
-A [Widgets Property](#2-4-widgets) contains a `renderer` field that allows its content to be rendered when filled, or shows an empty drop zone when empty inside the preview. It requires a single, empty, DOM node as a child in which to render the contents:
+A [Widgets Property](#2-4-widgets) contains a `renderer` field that allows its content to be rendered when filled, or shows an empty drop-zone when empty inside the preview. It requires a single, empty, DOM node as a child in which to render the contents:
 
 ```tsx
 type Props = {

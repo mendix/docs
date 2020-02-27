@@ -32,11 +32,11 @@ The **History** option shows the history of committed revisions of the app. For 
 
 ## 6 Download from Version Control Server
 
-The **Download from Version Control Server** option downloads an app from the Team Server or another SVN server. This creates a local working copy of the app for development. For more information on what settings are displayed in the **Download from Version Control Server** dialog window, see [Download from Version Control Server](download-from-version-control-dialog).
+The **Download from Version Control Server** option downloads an app from the Team Server or another SVN server. This creates a local working copy of the app for development. For more information on what settings are displayed in the **Download from Version Control Server** dialog box, see [Download from Version Control Server](download-from-version-control-dialog).
 
 ## 7 Upload to Version Control Server
 
-The **Upload to Version Control Server** option uploads a local app to a new or existing Team Server repository, or to another SVN server. This is only possible if the app is not yet version controlled. For more information on what settings are displayed in the **Upload to Version Control Server** dialog window, see [Upload to Version Control Server](upload-to-version-control-dialog).
+The **Upload to Version Control Server** option uploads a local app to a new or existing Team Server repository, or to another SVN server. This is only possible if the app is not yet version controlled. For more information on what settings are displayed in the **Upload to Version Control Server** dialog box, see [Upload to Version Control Server](upload-to-version-control-dialog).
 
 ## 8 Manage Branch Lines
 

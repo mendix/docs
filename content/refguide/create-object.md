@@ -52,9 +52,9 @@ When inside a [nanoflow](nanoflows), the Create object action reloads [data sour
 
 Default: *No*
 
-### 2.3 Initialize Members
+### 2.3 Change Members
 
-You can initialize members (attributes and associations) of the newly created object. Values for members are specified with an [expression](expressions) and must be of the same type as the member.
+You can set the values of members (attributes and associations) of the newly created object to be different from the default value set in the [entity](entities). Values for members are specified with an [expression](expressions) and must be of the same type as the member.
 
 ## 3 Output Properties
 

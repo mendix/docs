@@ -64,7 +64,7 @@ Validating user input can also be achieved by overriding the default save button
 ![](attachments/18448742/18582143.png)
 
 1.  Right click the **Save** button and select **Delete** to remove it from the page.
-2.  Right click the drop zone below the **Cancel** button and select **Add widget > Button widgets > Call microflow**.
+2.  Right click the drop-zone below the **Cancel** button and select **Add widget > Button widgets > Call microflow**.
 
     ![](attachments/18448742/18582142.png)
 

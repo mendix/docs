@@ -98,8 +98,8 @@ Current support:
 * [Microsoft SQL Server](/developerportal/deploy/mendix-on-windows-microsoft-sql-server) 2016, 2017
 * [Azure SQL](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017) v12 compatibility mode 130 or higher
 * [MySQL](mysql) 5.7, 8.0
-* [Oracle Database](oracle) 12c Release 2
-* PostgreSQL 9.5, 9.6, 10, 11
+* [Oracle Database](oracle) 12c Release 2, 18, 19
+* PostgreSQL 9.5, 9.6, 10, 11, 12
 * [SAP HANA](saphana) 2.00.040.00.1545918182
 
 {{% alert type="warning" %}}

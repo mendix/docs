@@ -210,7 +210,7 @@ module.exports = {
     },
     {
       from: "/developerportal/deploy/integrate-with-mendix-sso",
-      to: "developerportal/deploy/mendix-sso"
+      to: "/developerportal/deploy/mendix-sso"
     },
     /****************************************************
      * From the App Store (permanent, mapped)

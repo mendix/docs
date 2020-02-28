@@ -5,7 +5,7 @@ category: "APD Guide"
 
 ## 1 Introduction
 
-The *APD Reference Guides* are organized according to the APD version.
+The *APD Reference Guides* are organized according to version.
 
 ## 2 Main Documents in This Section
 

@@ -186,9 +186,11 @@ The **Material** tab contains properties for configuring appearance:
 
 * **Dragging** — allows a user to manipulate an object by dragging it with their finger. This property gives users a very instinctive way to move objects
 
-	{{% image_container width="300" %}}![Pinching gif](attachments/get-started/dragging.gif){{% /image_container %}}
+	{{% image_container width="300" %}}![Dragging gif](attachments/get-started/dragging.gif){{% /image_container %}}
 
 * **Pinching** — can be used to scale the object, similar to zooming in and out on a maps widget. Select **Enable Pinching** > **Yes**, select **Enable Pinch to Scale** > **Yes**, and set the **Scale Factor** to 1, then pinch out on your object to examine it in detail.
+
+	{{% image_container width="300" %}}![Pinching gif](attachments/get-started/pinching.gif){{% /image_container %}}
 
 ### 5.4 Events
 

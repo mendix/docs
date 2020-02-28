@@ -14,7 +14,7 @@ To allow you to manage the deployment of your apps to OpenShift and Kubernetes, 
 
 This document explains how to set up the cluster in Mendix
 
-Once you have registered your cluster, you can invite additional team members who can then create or view environments in which their apps are deployed, depending on the rights you give them. For more information on the relationship between Mendix environments and Kubernetes clusters, see Containerized Mendix App Architecture, below.
+Once you have registered your cluster, you can invite additional team members who can then create or view environments in which their apps are deployed, depending on the rights you give them. For more information on the relationship between Mendix environments and Kubernetes clusters, see [Containerized Mendix App Architecture](#containerized-architecture), below.
 
 ## 2 Prerequisites for Registering a Cluster
 
@@ -120,7 +120,7 @@ The Mendix operator and Mendix agent are now installed on your platform. If you 
 
 The installation script can be found in the **Installation** tab for your cluster in the cluster manager.
 
-### 3.3 Running the Reconfiguration Script
+### 3.3 Running the Reconfiguration Script{#reconfiguration-script}
 
 Before you deploy an app to your namespace, you will need to configure a number of services namely:
 
@@ -355,7 +355,7 @@ Click **Activate** next to the name of the plan you wish to activate. The plan c
 
 The **Installation** tab shows you the installation script and configuration script which you used to create the cluster, together with the parameters which are used to configure the agent.
 
-You can use the **Reconfiguration Script** to change the configuration of your cluster by pasting it into a bash shell as described in Running the Reconfiguration Script, above.
+You can use the **Reconfiguration Script** to change the configuration of your cluster by pasting it into a bash shell as described in [Running the Reconfiguration Script]{#reconfiguration-script}, above.
 
 You can also copy the installation and reconfiguration scripts to retain in your own code repository, if you wish.
 
@@ -367,7 +367,7 @@ If you delete your app from the OpenShift console, this will not delete the *Pro
 
 If you do not need your data on AWS anymore, then you need to clean it up manually.
 
-## 6 Containerized Mendix App Architecture
+## 6 Containerized Mendix App Architecture{#containerized-architecture}
 
 Within your cluster you can run one, or several, Mendix apps. Each app runs in a namespace. You can see the relationship between the Mendix environments and the Kubernetes namespaces in the image below.
 

@@ -235,7 +235,7 @@ These are described in more detail, below.
 
 In addition, there are several indicators describing the status of the environment.
 
-#### 4.2.1 Environment Status Indicators{environment-status}
+#### 4.2.1 Environment Status Indicators{#environment-status}
 
 ##### 4.2.1.1 Network
 
@@ -295,7 +295,6 @@ This button contains a list of actions which you can perform quickly on the envi
 * **Model Options** – allows you to change the running of scheduled events and the values of constants for your app by taking you to the **Model Options** tab of the **Environment Details** page
 * **Stop Application** (only shown if at least one replica is running) – stops the application by reducing the number of replicas to zero
 **Delete Environment** – this deletes the environment (see [Current Limitations](#limitations), below, for additional details about what is deleted) — you will be asked to confirm this action
-* To change any constants, select the constant you want to edit and then click **Edit**.
 
 ### 4.3 Activity
 
@@ -363,8 +362,6 @@ This allows you to change the password for the local admin user in your app with
 ##### 5.1.3.5 Delete Environment
 
 This deletes the environment (see [Current Limitations](#limitations), below, for additional details about what is deleted) — you will be asked to confirm this action.
-
-To change any constants, select the constant you want to edit and then click **Edit**. See 
 
 ##### 5.1.3.6 Change Purpose
 

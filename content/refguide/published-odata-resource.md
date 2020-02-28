@@ -16,11 +16,11 @@ This document describes the properties of a published OData resource. For an ove
 
 Click **Add** in the **Resources** pane of the **Published OData Service** window to open the **Select Entity** window. Select an entity to publish and click **Select**.
 
-![Odata service page](attachments/published-odata-resource/published-odata-service.png)
+![OData service page](attachments/published-odata-resource/published-odata-service.png)
 
 An alternative way to add a resource is in the **Domain Model**: right-click an entity and select **Expose as OData resource**. 
 
-![Domain model drop-down menu](attachments/published-odata-resource/create-odata-resource-from-domain-model.png)
+![Domain model dropdown menu](attachments/published-odata-resource/create-odata-resource-from-domain-model.png)
 
 To add a resource, click the OData service name in the **Select Published Data Service** window, and click **Select**. 
 
@@ -30,7 +30,7 @@ To create a new OData service and add the entity to it, click **New**  and enter
 
 In the **Resources** pane of the **Published OData Service** window, select a resource and click **Edit** to display the **Edit published resource** window. 
 
-![Edit published Odata diaglog box](attachments/published-odata-resource/Edit-published-resource.png)
+![Edit published OData dialog box](attachments/published-odata-resource/Edit-published-resource.png)
 
 It is possible to select another **Entity** or view the entity in the domain model by clicking **Show**. The [exposed attributes and associations](#exatass) for the selected entity can be set in this window. 
 

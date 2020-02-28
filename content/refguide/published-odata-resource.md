@@ -1,5 +1,5 @@
 ---
- title: "Published OData Resource"
+title: "Published OData Resource"
 parent: "published-odata-services"
 tags: ["studio pro"]
 ---
@@ -16,15 +16,11 @@ This document describes the properties of a published OData resource. For an ove
 
 Click **Add** in the **Resources** pane of the **Published OData Service** window to open the **Select Entity** window. Select an entity to publish and click **Select**.
 
-
-
-![](attachments/published-odata-resource/published-odata-service.png)
-
-
+![Odata service page](attachments/published-odata-resource/published-odata-service.png)
 
 An alternative way to add a resource is in the **Domain Model**: right-click an entity and select **Expose as OData resource**. 
 
-![](attachments/published-odata-resource/create-odata-resource-from-domain-model.png)
+![Domain model drop-down menu](attachments/published-odata-resource/create-odata-resource-from-domain-model.png)
 
 To add a resource, click the OData service name in the **Select Published Data Service** window, and click **Select**. 
 
@@ -34,16 +30,13 @@ To create a new OData service and add the entity to it, click **New**  and enter
 
 In the **Resources** pane of the **Published OData Service** window, select a resource and click **Edit** to display the **Edit published resource** window. 
 
-![](attachments/published-odata-resource/Edit-published-resource.png)
+![Edit published Odata diaglog box](attachments/published-odata-resource/Edit-published-resource.png)
 
-
-
-It is possible to select another **Entity** or view the entity in the domain model by clicking **Show**. The [Exposed attributes and associations](#exatass) for the selected entity can be set in this window. 
+It is possible to select another **Entity** or view the entity in the domain model by clicking **Show**. The [exposed attributes and associations](#exatass) for the selected entity can be set in this window. 
 
 Specify the location where the resource will be published in **Example of location**.
 
 In the **Public documentation** tab, you can provide a summary and a description of the exposed entity.
-
 
 {{% alert type="info" %}}
 
@@ -99,7 +92,7 @@ Default: *{Entity name}s*
 
 ## 5 Use Paging
 
-The **Use paging** option is used to set a maximum number of objects per response, and include a link to the next set of objects. A client such as [Tableau](https://www.tableau.com) is able use this to display progress and automatically continue to follow the links until all the data is retrieved. The memory usage of the clients can be improved if paging is set to a reasonable page size.
+The **Use paging** option is used to set a maximum number of objects per response and include a link to the next set of objects. A client such as [Tableau](https://www.tableau.com) is able use this to display progress and automatically continue to follow the links until all the data is retrieved. The memory usage of the clients can be improved if paging is set to a reasonable page size.
 
 Default: *No*
 

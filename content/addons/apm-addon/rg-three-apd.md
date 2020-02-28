@@ -1,6 +1,6 @@
 ---
 title: "APD 3 Reference Guide"
-parent: "rg-apm"
+parent: "rg-apd"
 menu_order: 1
 ---
 

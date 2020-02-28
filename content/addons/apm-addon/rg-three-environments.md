@@ -1,6 +1,6 @@
 ---
 title: "Environments"
-parent: "rg-three-apm"
+parent: "rg-three-apd"
 ---
 
 ## 1 Environments Overview
@@ -23,11 +23,11 @@ In order to add a new environment, click **New environment** in the **Environmen
 
 ![](attachments/rg-three/new_environment.png)
 
-All the environments initially start as a Mendix Studio Pro environment. A Mendix Studio Pro environment is only visible for the user that creates it in APM.
+All the environments initially start as a Mendix Studio Pro environment. A Mendix Studio Pro environment is only visible for the user that creates it in APD.
 
 For project administrators (with SCRUM Master role), an extra **Modeler environment** switch (for Mendix Studio Pro) is available to alter the type. After setting the switch to **No**, it is possible to change it to production, acceptance, or test.
 
-Each environment must have a name. The name of an environment is only for display purposes in APM, and it does not have to match your hostname/servername.
+Each environment must have a name. The name of an environment is only for display purposes in APD, and it does not have to match your hostname/servername.
 For a description of the other settings, see the [APD settings](rg-three-settings).
 
 Upon creating the environment, an API key for the APD Agent configuration will be generated (it is possible to generate a new one at a later time in the environment settings). For more information about the API key and APD Agent installation, see the [APD 3 Installation Guide](ig-three).

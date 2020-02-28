@@ -1,6 +1,6 @@
 ---
 title: "Performance Statistics"
-parent: "rg-three-apm"
+parent: "rg-three-apd"
 ---
 
 ## 1 Performance Statistics

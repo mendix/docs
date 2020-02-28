@@ -1,6 +1,6 @@
 ---
 title: "Dashboard"
-parent: "rg-three-apm"
+parent: "rg-three-apd"
 ---
 
 The dashboard of an environment shows real-time information regarding the following

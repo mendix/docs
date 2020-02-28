@@ -1,6 +1,6 @@
 ---
 title: "Logs"
-parent: "rg-three-apm"
+parent: "rg-three-apd"
 ---
 
 ## 1 Logs Overview

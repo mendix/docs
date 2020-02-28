@@ -6,11 +6,12 @@ menu_order: 1
 
 ## 1 Introduction
 
-This is the installation guide for Mansystems APD 3, the succesor to APM 2.
+This is the installation guide for Mansystems APD 3, the successor to APM 2.
 
 Note the following:
 
 * Before using APD 3, create a database backup and have a backup deployment ready
+* If APM 2 was installed, write down the current values for the constantes **APMAgent2.APMAPIKey** (and, if set, **APMAgent2.APMAdvancedSettings**), and use the values for **APDAgent.APIKey** and, if applicable, **APDAgent.AdvancedSettings**.
 * Remove APM 1 and/or APM 2 if they are installed, see [Uninstall Steps APM 1](ig-one-uninstall-steps) and/or [Uninstall Steps APM 2](ig-two-uninstall-steps)
 
 ## 2 Installation
@@ -22,11 +23,11 @@ To install APD 3, follow these steps:
 3. Select your app in the dashboard.
 4. In the environments dashboard, select the **New Environment** tile. If you are a SCRUM Master of the Mendix app project, you can add test, acceptance, and production environments. If you are not, you can only add Mendix Studio Pro environments. For more detailed information, see the [Environments overview](rg-three-environments) documentation.
 5. Choose an environment name.
-6. Click **Save and generate API key**, then use this key as the value for the **APDAgent.APMDPIKey** constant in step 10.
+6. Click **Save and generate API key**, then use this key as the value for the **APDAgent.APIKey** constant in step 10.
 7. In Studio Pro with your app, import the [Mendix Application Performance Monitor](https://appstore.home.mendix.com/link/app/6127/) module from the Mendix App Store.
-8. Add the **USE_ME/AfterStartup** microflow to your app's **After startup** microflow.
-9. Copy the widget from **USE_ME/CopyPasteAPMBrowserWidget** to the layout(s) of your app. Please note that it will only be loaded once, regardless of how many times the user opens a page containing the widget.
-10. Set the value of the **USE_ME/APDAgent.APDAPIKey** constant with the key you generated at step 6.
+8. Add the **USE_ME/APDAfterStartup** microflow to your app's **After startup** microflow.
+9. Use the snippet **USE_ME/APDBrowserAgentWidget** in the layout(s) of your app. Please note that it will only be loaded once, regardless of how many times the user opens a page containing the widget.
+10. Set the value of the **USE_ME/APDAgent.APIKey** constant with the key you generated at step 6.
 
 ## 3 Upgrading
 

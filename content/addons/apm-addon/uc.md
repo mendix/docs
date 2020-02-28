@@ -1,6 +1,6 @@
 ---
 title: "APM Use Cases"
-category: "APM Guide"
+category: "APD Guide"
 ---
 
 ## 1 Introduction

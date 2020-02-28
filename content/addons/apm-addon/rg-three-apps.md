@@ -1,6 +1,6 @@
 ---
 title: "Apps"
-parent: "rg-three-apm"
+parent: "rg-three-apd"
 ---
 
 ## 1 Apps Overview

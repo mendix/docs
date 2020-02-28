@@ -1,6 +1,6 @@
 ---
 title: "Settings"
-parent: "rg-three-apm"
+parent: "rg-three-apd"
 ---
 
 The settings displayed in this screenshot are available for an environment:
@@ -14,7 +14,7 @@ By default, the best options are already selected for the most common situations
 * **Runtime agent memory usage** – This determines several technical settings, such as maximum trap duration, maximum number of trap records, maximum number of messages or performance nodes recorded in the agent that still need to be sent to the manager. This setting is a protection against too much memory use. In Mendix Studio Pro, you can safely set this to **Large** to record/trap more. Setting this to me **Medium** is advised.
 * **Enabled** – You can configure if browser agent guest users, browser agents, or runtimes are allowed to connect to this environment. This is a security setting.
 * **Statistics collection** – Statistics are available **Per microflow** and **Per microflow action**. For **Per microflow action**, statistics will be generated for actions in a microflow (**Per microflow** does not do this).
-* **Trap message collection** – This can be set to **All messages** and **Without database nodes**. Changing this to **Without database nodes** will stop the sending of logs from database nodes to APM. These nodes include:
+* **Trap message collection** – This can be set to **All messages** and **Without database nodes**. Changing this to **Without database nodes** will stop the sending of logs from database nodes to the APD Manager. These nodes include:
   * DataStorage_QueryPlan
   * DataStorage_QueryHandling
   * ConnectionBus_Update

@@ -97,7 +97,7 @@ With this, the agent can be tuned. The settings cannot be overruled from the man
 * There is a hard-coded maximum of the messages that the APM Agent / manager accept from the Mendix log thread for both message and stack trace.
 * Max message length in MendixMessage via advanced setting
 * New APM API for ci/cd. This is still beta and not public available.
-* excludenodes=<node:level,node:level,...> to not subscribe to certain nodes.above the specified level. This feature can be used exclude lognodes, for example as a workaround for the webservice in Mendix 6 and Mendix 7 < 7.11 platform bug.
+* `excludenodes=<node:level,node:level,...>` to not subscribe to certain nodes.above the specified level. This feature can be used exclude lognodes, for example as a workaround for the webservice in Mendix 6 and Mendix 7 < 7.11 platform bug.
 * Load tool bug fix recording and processing queryIds
 * Load tool XML page load on need, since button action ‘Create Object’ has no open_form in the client-API
 * Fix for APM statistics counting some microflows multiple times depending on the amount of call sources

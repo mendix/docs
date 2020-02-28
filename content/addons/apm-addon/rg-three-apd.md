@@ -18,7 +18,7 @@ This is the reference guide for Mansystems APD 3 for Mendix. It has the followin
 * [Performance Recorder](rg-three-recorder)
 * [Settings](rg-three-settings)
 
-![](attachments/rg-three/APD_Powered_Logo.png)
+![](attachments/rg-three/APD_Powered_logo.png)
 
 The sections below provide a short explanation of APD along with its features and possible uses.
 

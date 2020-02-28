@@ -16,7 +16,7 @@ Within your cluster you can run one, or several, Mendix apps. Each app runs in a
 
 ![](attachments/private-cloud-deploy/image1.png)
 
-Because you can run several Mendix apps in the same cluster, each app must have a unique name. In addition, the app cannot have the same name as the Mendix tools used to deploy the app. See the section Reserved Names for Mendix Apps, below.
+Because you can run several Mendix apps in the same cluster, each app must have a unique name. In addition, the app cannot have the same name as the Mendix tools used to deploy the app. See the section [Reserved Names for Mendix Apps](#reserved-names), below.
 
 ##  2 Prerequisites for Deploying an App
 
@@ -34,22 +34,21 @@ When you first create your app, it will be set to deploy to the Mendix Cloud. Yo
 
 1. Open the **General** page for your app in the Developer Portal.
     
-  ![](attachments/private-cloud-deploy/image2.png)
+      ![](attachments/private-cloud-deploy/image2.png)
 
 2. Click **Cloud Settings**.
 
 3. Click **Mendix for Private Cloud**.
     
-  ![](attachments/private-cloud-deploy/image3.png)
+    ![](attachments/private-cloud-deploy/image3.png)
 
 4. Click **Set up Mendix for Private Cloud**.
     
-  ![](attachments/private-cloud-deploy/image4.png)
+    ![](attachments/private-cloud-deploy/image4.png)
 
 5. Your app is now configured for private cloud.
 
-### 3.2 Creating an Environment
-
+### 3.2 Creating an Environment{#create-environment}
 When deploying your app for the first time, there will be no environments and no deployment packages available. The **Environments** page for your app in the Developer Portal will show you the current status.
 
 ![](attachments/private-cloud-deploy/image5.png)
@@ -64,76 +63,74 @@ First you need to create an environment:
 
 4. Select the **Purpose**.
     
-    1. For development of the app, for example acceptance testing, choose **Development**.
-    
-    2. For production deployment, select **Production**. If you select production, then you will be asked for the **Subscription Secret** which ensures that your app runs as a licensed app. See <https://docs.mendix.com/developerportal/deploy/mendix-cloud-deploy#free-app> for the differences between free/test apps and licensed apps.
+  1. For development of the app, for example acceptance testing, choose **Development**.
+  2. For production deployment, select **Production**. If you select production, then you will be asked for the **Subscription Secret** which ensures that your app runs as a licensed app. See [Free Apps](mendix-cloud-deploy#free-app) in *Mendix Cloud* for the differences between free/test apps and licensed apps.
 
-|                                                                                                                                                                                                               |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Your app can only be deployed to a production environment if security is set on. You will not receive an error if security is set off, but the deployment will appear to hang with a spinner being displayed. |
+    {{% alert type="warning" %}}Your app can only be deployed to a production environment if security is set on. You will not receive an error if security is set off, but the deployment will appear to hang with a spinner being displayed.{{% /alert %}}
 
 5. Click **Next**.
     
-  ![](attachments/private-cloud-deploy/image6.png)
+    ![](attachments/private-cloud-deploy/image6.png)
 
-6. Select **Core Resources**. 
+6. Select **Core Resources**.
+
     There are four pre-defined sets of resources, **Tiny**, **Small**, **Medium**, and **Large**. Choosing these will set the **CPU** and **Memory** values automatically.
 
-| **Name** | **CPU cores**    | **Memory (Gb)**   |
-| -------- | ---------------- | ----------------- |
-| Tiny     | 0.25             | 0.5               |
-| Small    | 1                | 1                 |
-| Medium   | 2                | 2                 |
-| Large    | 3                | 3                 |
-| Custom   | own choice 0.25+ | own choice 0.5GB+ |
+    | **Name** | **CPU cores**    | **Memory (Gb)**   |
+    | -------- | ---------------- | ----------------- |
+    | Tiny     | 0.25             | 0.5               |
+    | Small    | 1                | 1                 |
+    | Medium   | 2                | 2                 |
+    | Large    | 3                | 3                 |
+    | Custom   | own choice 0.25+ | own choice 0.5GB+ |
 
-> Alternatively, you can choose **Custom**, and enter your own requirements for **CPU** and **Memory**.
+    Alternatively, you can choose **Custom**, and enter your own requirements for **CPU** and **Memory**.
 
 7. Select a **Database plan** from the list of plans set up in the cluster.
 
 8. Select a **Storage plan** from the list of plans set up in the cluster.
     
-  ![](attachments/private-cloud-deploy/image7.png)
+    ![](attachments/private-cloud-deploy/image7.png)
 
 9. Click **Create Environment**.
 
 10. You will see your new environment listed. An *in-progress* icon will be shows next to the resource plans until they have been provisioned.
 
-> ![](attachments/private-cloud-deploy/image8.png)
+![](attachments/private-cloud-deploy/image8.png)
 
-You will not be able to deploy to this environment until it has been fully prepared. This means that all the resource plans have been confirmed and that the placeholder app has been successfully deployed. See Deploying the Deployment Package, below, for instructions on how to check that the environment has been created successfully.
+You will not be able to deploy to this environment until it has been fully prepared. This means that all the resource plans have been confirmed and that the placeholder app has been successfully deployed. See [Deploying the Deployment Package](#deploy-package), below, for instructions on how to check that the environment has been created successfully.
 
-### 3.3 Creating a Deployment Package
+### 3.3 Creating a Deployment Package {#create-deployment-package}
 
 Before you can deploy your app, you will need to create a deployment package. Ensure that you have committed the version of the app you want to deploy before continuing.
 
 1. On the **Environments** page for your app in the Developer Portal, click **Create Package**.
     
-  ![](attachments/private-cloud-deploy/image9.png)
+    ![](attachments/private-cloud-deploy/image9.png)
 
 2. Select the branch which contains the commit for which you want to create a deployment package and click **Next**.
     
-  ![](attachments/private-cloud-deploy/image10.png)
+    ![](attachments/private-cloud-deploy/image10.png)
 
 3. Select the revision/commit for which you want to create a deployment package and click **Next**.
     
-  ![](attachments/private-cloud-deploy/image11.png)
+    ![](attachments/private-cloud-deploy/image11.png)
 
 4. Enter a **New version** and **Tag description** according to your own deployment procedure.
 
-5. Select an environment in **Environment for Autodeploy** if you want to deploy and start your package immediately. You need to make sure that the environment is ready using the techniques described in Deploying the Deployment Package, below, where you can also see how to deploy a deployment package manually.
+5. Select an environment in **Environment for Autodeploy** if you want to deploy and start your package immediately. You need to make sure that the environment is ready using the techniques described in [Deploying the Deployment Package](#deploy-package), below, where you can also see how to deploy a deployment package manually.
 
 6. Click **Build this revision.**
     
-  ![](attachments/private-cloud-deploy/image12.png)
+    ![](attachments/private-cloud-deploy/image12.png)
 
 7. Confirm the information message and you will be returned to the **Environments** page.
 
-### 3.4 Deploying the Deployment Package
+### 3.4 Deploying the Deployment Package{#deploy-package}
 
 You can also deploy an existing deployment package to an environment without having to create a new one. This also allows you to specify constant values and control scheduled events before the app is started.
 
-After creating an environment and deployment package (see Creating an Environment and Creating a Deployment Package, above) you will now have a deployment package and an environment. Check that there is a green tick next to the deployment package and the resources of the environment. If any of these have failed, try to create the environment or the deployment package again, and contact your cluster manager. If neither of these solves the problem. contact Mendix support for help.
+After creating an environment and deployment package (see [Creating an Environment](#create-environment) and [Creating a Deployment Package](#create-deployment-package), above) you will now have a deployment package and an environment. Check that there is a green tick next to the deployment package and the resources of the environment. If any of these have failed, try to create the environment or the deployment package again, and contact your cluster manager. If neither of these solves the problem. contact Mendix support for help.
 
 ![](attachments/private-cloud-deploy/image13.png)
 
@@ -151,7 +148,7 @@ If everything has been created successfully, and the PlaceholderMDA has been bui
 
 4. Click **Transport**.
     
-  ![](attachments/private-cloud-deploy/image15.png)
+    ![](attachments/private-cloud-deploy/image15.png)
 
 5. Change any constants in the **Constants** tab: select the constant you want to edit and then click **Edit**.
 
@@ -159,22 +156,20 @@ If everything has been created successfully, and the PlaceholderMDA has been bui
 
 7. Click **Continue** to continue to the Start Application confirmation page.
     
-  ![](attachments/private-cloud-deploy/image16.png)
+    ![](attachments/private-cloud-deploy/image16.png)
 
 8. Click Apply Changes to deploy the application to the selected environment. The app will start automatically once the deployment is successful.
 
-You can find a description of what this deployment means within the Kubernetes cluster in How the Operator Deploys Your App, below.
+You can find a description of what this deployment means within the Kubernetes cluster in [How the Operator Deploys Your App](#how-operator-deploys), below.
 
-You will be taken to the Environment Details page for the selected environment. You can find information about managing your environment from this page in Managing Your Environments from the Environment Details Page, below.
+You will be taken to the Environment Details page for the selected environment. You can find information about managing your environment from this page in [Managing Your Environments from the Environment Details Page](#environment-details), below.
 
 ## 4 Environments Page
 
 The **Environments** page of the Developer Portal contains three sections:
 
 * Deployment Package Repository
-
 * Environments
-
 * Activity
 
 ### 4.1 Deployment Package Repository
@@ -183,14 +178,11 @@ This lists the deployment packages which have been created for this app project
 
 ![](attachments/private-cloud-deploy/image17.png)
 
-. There are four buttons:
+There are four buttons:
 
 * Refresh
-
 * Create Package
-
 * Details
-
 * Deploy
 
 These are described in more detail below.
@@ -199,13 +191,13 @@ These are described in more detail below.
 
 Sometimes the page will not be automatically refreshed with the latest information. Click this button to update the information on the page.
 
-|                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------ |
-| Using the browser refresh button will take you away from this environments page, so use this button instead. |
+{{% alert type="info" %}}
+Using the browser refresh button will take you away from this environments page, so use this button instead.
+{{% /alert %}}
 
 #### 4.1.2 Create Package
 
-This creates a new package as described in Creating a Deployment Package, above.
+This creates a new package as described in [Creating a Deployment Package](#create-deployment-package), above.
 
 #### 4.1.3 Details
 
@@ -213,21 +205,19 @@ This displays details of the deployment package.
 
 ![](attachments/private-cloud-deploy/image18.png)
 
-The information shows here is labeled to help you. The indicators in the environment description are described in the next section, Environments, below
+The information shows here is labeled to help you. The indicators in the environment description are described in the next section, [Environments](#environments), below
 
 There are three additional actions you can take while looking at the deployment package details:
 
 * **Expand to view build output** – shows the output from the Mendix build
-
 * **Download Package** – allows you to download the deployment package and save it locally
-
 * **Delete Package** – deletes the deployment package – you will be asked to confirm this action
 
 #### 4.1.4 Deploy
 
-This deploys the package to an existing environment as described in Deploying the Deployment Package, above.
+This deploys the package to an existing environment as described in [Deploying the Deployment Package](#deploy-package), above.
 
-### 4.2 Environments
+### 4.2 Environments {#environments}
 
 This section shows all the environments created for this app project.
 
@@ -238,25 +228,21 @@ For each environment, you can see a summary of the status of the resources and d
 You can perform the following actions:
 
 * **Add Environment**
-
 * View **Details**
-
 * Perform **Actions**
 
 These are described in more detail, below.
 
 In addition, there are several indicators describing the status of the environment.
 
-#### 4.2.1 Environment Status Indicators
+#### 4.2.1 Environment Status Indicators{environment-status}
 
 ##### 4.2.1.1 Network
 
 The **Network** indicator has the following values
 
 * Tick – the network is operational
-
 * Cross – the network is not operational
-
 * Spinner – the network is being provisioned
 
 ##### 4.2.1.2 Storage
@@ -264,9 +250,7 @@ The **Network** indicator has the following values
 The **Storage** indicator has the following values
 
 * Tick – storage is provisioned
-
 * Cross – storage is not provisioned
-
 * Spinner – storage is being provisioned
 
 ##### 4.2.1.3 Database
@@ -274,9 +258,7 @@ The **Storage** indicator has the following values
 The **Database** indicator has the following values
 
 * Tick – the database is provisioned
-
 * Cross – the database is not provisioned
-
 * Spinner – the database is being provisioned
 
 ##### 4.2.1.4 Development
@@ -285,7 +267,7 @@ The word **Development** indicates that this environment is set up for developme
 
 The word changes to **Production** if the environment is set up for production.
 
-See Creating an Environment, above, for more information.
+See [Creating an Environment](#create-environment), above, for more information.
 
 ##### 4.2.1.5 Trial
 
@@ -297,29 +279,23 @@ The word **Licensed** shows that the environment is a production environment.
 
 #### 4.2.2 Add Environment
 
-This adds a new environment as described in Creating an Environment, above.
+This adds a new environment as described in [Creating an Environment](#create-environment), above.
 
 #### 4.2.3 Details
 
-This opens the **Environment Details** page which is described in more detail in Managing Your Environments from the Environment Details Page, below.
+This opens the **Environment Details** page which is described in more detail in Managing Your Environments from the [Environment Details Page](#environment-details), below.
 
 #### 4.2.4 Actions
 
 This button contains a list of actions which you can perform quickly on the environment. Most of these actions will be disabled if the app is currently starting or stopping. These actions are:
 
 * **Start Application** (only shown if app is stopped) – allows you to start a stopped application
-
 * **Transport Package** – allows you to deploy the deployment package in the current environment to another environment within the app project, or to redeploy it in the current environment
-
 * **Environment Logs** – takes you to the log page defined by the cluster manager when they registered the cluster
-
 * **Model Options** – allows you to change the running of scheduled events and the values of constants for your app by taking you to the **Model Options** tab of the **Environment Details** page
-
 * **Stop Application** (only shown if at least one replica is running) – stops the application by reducing the number of replicas to zero
-
-**Delete Environment** – this deletes the environment (see
-
-* To change any constants, select the constant you want to edit and then click **Edit**.Current Limitations, below, for additional details about what is deleted) — you will be asked to confirm this action
+**Delete Environment** – this deletes the environment (see [Current Limitations](#limitations), below, for additional details about what is deleted) — you will be asked to confirm this action
+* To change any constants, select the constant you want to edit and then click **Edit**.
 
 ### 4.3 Activity
 
@@ -327,7 +303,7 @@ This section shows all the activities, such as creating environments and deployi
 
 ![](attachments/private-cloud-deploy/image20.png)
 
-## 5 Managing Your Environments from the Environment Details Page
+## 5 Managing Your Environments from the Environment Details Page{#environment-details}
 
 Each environment you create has an **Environment Details** page which allows you to monitor and manage your environments. You can reach this by clicking the **Details** button next to the environment you want to manage.
 
@@ -338,7 +314,6 @@ If you have any outstanding changes to your environment the page will display a 
 The environment details page consists of two tabs:
 
 * General
-
 * Model Options
 
 These tabs are described below.
@@ -351,13 +326,13 @@ The general tab shows information about your running app. This information is de
 
 Most of the information is self-explanatory, but the status information gives you a quick summary of the status of the environment and the app deployed there.
 
-#### 5.1.1 Loaded Deployment Details \> Status
+#### 5.1.1 Loaded Deployment Details > Status
 
 This status shows you the following information – how many replicas are running, whether there was a successful build, and how long since the app was last started.
 
-#### 5.1.2 Environment Details \> Status
+#### 5.1.2 Environment Details > Status
 
-**T**his shows you the status of the environment and is the same as the status shown on the Environments page and described in Environment Status Indicators, above.
+This shows you the status of the environment and is the same as the status shown on the Environments page and described in [Environment Status Indicators](#environment-status), above.
 
 #### 5.1.3 Action Buttons
 
@@ -371,7 +346,7 @@ If the app is currently running, clicking **Stop Application** immediately stops
 
 ##### 5.1.3.2 Transport Package
 
-Allows you to deploy the deployment package in the current environment to another environment within the app project, or to redeploy it in the current environment. See Deploying the Deployment Package, above, for more information.
+Allows you to deploy the deployment package in the current environment to another environment within the app project, or to redeploy it in the current environment. See [Deploying the Deployment Package](#deploy-package), above, for more information.
 
 ##### 5.1.3.3 Scale Application
 
@@ -387,9 +362,9 @@ This allows you to change the password for the local admin user in your app with
 
 ##### 5.1.3.5 Delete Environment
 
-This deletes the environment (see
+This deletes the environment (see [Current Limitations](#limitations), below, for additional details about what is deleted) — you will be asked to confirm this action.
 
-To change any constants, select the constant you want to edit and then click **Edit**.Current Limitations, below, for additional details about what is deleted) — you will be asked to confirm this action.
+To change any constants, select the constant you want to edit and then click **Edit**. See 
 
 ##### 5.1.3.6 Change Purpose
 
@@ -397,9 +372,9 @@ This enables you to change the purpose of your app environment. You can label an
 
 For production deployment, select **Production**. If you select production, then you will be asked for the Subscription Secret which ensures that your app runs as a licensed app. See <https://docs.mendix.com/developerportal/deploy/mendix-cloud-deploy#free-app> for the differences between free/test apps and licensed apps.
 
-|                                                                                                                                                                                                               |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Your app can only be deployed to a production environment if security is set on. You will not receive an error if security is set off, but the deployment will appear to hang with a spinner being displayed. |
+{{% alert type="warning" %}}
+Your app can only be deployed to a production environment if security is set on. You will not receive an error if security is set off, but the deployment will appear to hang with a spinner being displayed.
+{{% /alert %}}
 
 ##### 5.1.3.7 Change Subscription Secret
 
@@ -417,9 +392,9 @@ To toggle any scheduled events, select the scheduled event you want to enable or
 
 To change any constants, select the constant you want to edit and then click **Edit**.
 
-## 6 Current Limitations
+## 6 Current Limitations{#limitations}
 
-### 6.1 Reserved Names for Mendix Apps
+### 6.1 Reserved Names for Mendix Apps{#reserved-names}
 
 All names beginning **mendix-** are reserved for use by the Mendix Operator.
 
@@ -433,7 +408,7 @@ Delete all the environments from the Mendix Developer Portal before you delete t
 
 If you attempt to deploy an app with security not set to production into a production environment you will not get an error, however the deployment will appear to hang with **Replicas running** and **Runtime** showing a spinner.
 
-## 7 How the Operator Deploys Your App
+## 7 How the Operator Deploys Your App {#how-operator-deploys}
 
 The Mendix Operator is another app within your private cloud cluster. It is triggered when you provide a CR file. The process looks like this:
 
@@ -441,14 +416,12 @@ The Mendix Operator is another app within your private cloud cluster. It is trig
 
 The Mendix Operator CR is processed by the Mendix Operator into four steps:
 
-1. > The Build CR is created – this creates a Docker image from the app deployment package, pushes it into the Image Registry, and provides the correct information to the Runtime CR
+1. The Build CR is created – this creates a Docker image from the app deployment package, pushes it into the Image Registry, and provides the correct information to the Runtime CR
 
-<!-- end list -->
+2. The Database CR is created – this causes the Service Broker to provision an AWS RDS database, according to the plan selected, and pass information about the database to the Runtime CR
 
-1. The Database CR is created – this causes the Service Broker to provision an AWS RDS database, according to the plan selected, and pass information about the database to the Runtime CR
+3. The Storage CR is created – this causes the Service Broker to provision an S3 storage bucket for the app and pass information about the storage to the Runtime CR
 
-2. The Storage CR is created – this causes the Service Broker to provision an S3 storage bucket for the app and pass information about the storage to the Runtime CR
-
-3. The OpenShift Route CR is created – this sets up a route to the app.
+4. The OpenShift Route CR is created – this sets up a route to the app.
 
 The Runtime CR is now complete, and the Runtime Controller uses the CR to pull the Docker image from the Image Registry and deploy it to an App Container in the OpenShift Cluster.

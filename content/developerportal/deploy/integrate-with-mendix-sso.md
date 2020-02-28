@@ -349,7 +349,6 @@ To fix this, make sure the **AppCloudServices.StartAppCloudServices** microflow 
 
 These are commonly caused by compatibility issues with JAR files in the `<projectpath>/userlib` directory of your project. For details on the most common compatibility issues, refer to [Troubleshooting](/refguide/troubleshooting) in the *Studio Pro Guide*.
 
-## 4 Read More
+## 5 Read More
 
 * [Mendix Cloud: Deploy](mendix-cloud-deploy)
-* [Mendix Single Sign-On](integrate-with-mendix-sso)

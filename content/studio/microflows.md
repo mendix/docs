@@ -86,7 +86,7 @@ To copy and paste a microflow, do the following:
 
 3. Open the Studio app where you want to paste the microflow and press <kbd>Ctrl</kbd> +<kbd>V</kbd> or <kbd>Cmd</kbd> +<kbd>V</kbd>. 
 
-Your microflow is pasted. For more information on copy/paste function in Studio, see the [Copy/Paste Pages and Microflows](general#copy-paste-documents) section in *General Info*. 
+Your microflow is pasted. For more information on copy/paste function in Studio, see the [Copy/Paste Pages, Microflows, and Enumerations](general#copy-paste-documents) section in *General Info*. 
 
 ## 6 Deleting a Microflow
 

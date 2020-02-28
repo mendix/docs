@@ -55,7 +55,7 @@ For example:
 `{m,n}` – matches the preceding element at least _m_ and not more than _n_ times.
 For example, a{3,5} matches only "_aaa_", "_aaaa_", and "_aaaaa_".
 
-`{n}` – matches the preceding element exactly n times. For example, using this construct the expression of the Dutch zip code example above would be:`[0-9]{4} ?[a-zA-Z]{2}`
+`{n}` – matches the preceding element exactly n times. For example, using this construct the expression of the Dutch zip code example above would be:`[1-9][0-9]{3} ?[A-Za-z]{2}`
 
 `.` – a dot matches any single character. If you want to match a dot, you can escape it by prefixing it with a `\` (backslash).
 

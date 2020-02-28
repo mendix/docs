@@ -2538,11 +2538,11 @@ module.exports = {
      ****************************************************/
 	{
 	  from: "/apm/installation-guide",
-	  to: "/addons/apm-addon/ig-two"
+	  to: "/addons/apd-addon/ig-two"
 	},
 	{
       from: "/apm/reference-guide/rg-2/reference-guide-2",
-      to: "/addons/apm-addon/rg-two-apm"
+      to: "/addons/apd-addon/rg-two-apm"
     },
 	{
 	  from: "~*\\\/aqm\\\/",
@@ -2551,7 +2551,7 @@ module.exports = {
     },
 	{
 	  from: "~*\\\/apm\\\/",
-	  to: "/addons/apm-addon/index",
+	  to: "/addons/apd-addon/index",
 	  exact: true
     },
 	{

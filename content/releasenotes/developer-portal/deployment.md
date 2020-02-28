@@ -10,11 +10,7 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 ## 2020
 
-### February 27th, 2020
-
-#### TLSv1.3 Support for Mendix Cloud (All Regions)
-
-* Mendix Cloud v4 and Mendix Cloud v3 now support TLSv1.3. TLSv1.3 improves the speed and security of HTTPS connections.
+### March 2nd, 2020
 
 #### Mendix Cloud Backups
 
@@ -25,6 +21,12 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
     * The environment activity log will indicate when the restore has completed
 * New Deploy API calls have been added. These will be added to the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api) documentation shortly.
 * You will now be warned that you cannot restore a file-only backup to Mendix Cloud. You can only restore backups which include the database.
+
+### February 27th, 2020
+
+#### TLSv1.3 Support for Mendix Cloud (All Regions)
+
+* Mendix Cloud v4 and Mendix Cloud v3 now support TLSv1.3. TLSv1.3 improves the speed and security of HTTPS connections.
 
 ### February 17th, 2020
 

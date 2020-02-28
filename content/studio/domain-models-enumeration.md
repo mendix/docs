@@ -48,7 +48,7 @@ To create a new enumeration, do the following:
 
 The attribute and the enumeration items are created.
 
-### 3.2 Selecting an Existing Enumeration {#select-existing-enumeration}
+### 3.2 Selecting an Enumeration {#select-existing-enumeration}
 
 You can also set an existing enumeration for attributes of the enumeration type. Do the following:
 
@@ -69,6 +69,40 @@ You can also set an existing enumeration for attributes of the enumeration type.
     ![](attachments/domain-models-enumeration/selecting-existing-enumeration.png)
 
 The existing enumeration is selected for the attribute of the enumeration type. 
+
+### 3.3 Copying and Pasting an Enumeration
+
+You can copy and paste an enumeration to another Studio app. Follow the steps below:
+
+1. Open your [domain model](domain-models).
+
+2. Select the attribute of the enumeration type and click **Enumeration** in its properties.
+
+3. In the **Select Enumeration** dialog box, select the enumeration you would like to copy and click the ellipsis icon.
+
+4. Select the **Copy to clipboard** option in the drop-down menu. 
+
+    <img src="attachments/domain-models-enumeration/copy-to-clipboard.png" alt="Copy Enumeration" style="zoom:80%;" />
+
+5. Open a different module or Studio app, navigate to a domain model and press <kbd>Ctrl</kbd> + <kbd>V</kbd>.
+
+The enumeration is pasted. For more information on copy/paste function in Studio, see the [Copy/Paste Pages, Microflows, and Enumerations](#copy-paste-documents) section in *General Info*.
+
+### 3.4 Duplicating an Enumeration 
+
+To duplicate an enumeration, follow the steps below:
+
+1. Open your [domain model](domain-models).
+
+2. Select the attribute of the enumeration type and click **Enumeration** in its properties.
+
+3. In the **Select Enumeration** dialog box, select the enumeration you would like to duplicate and click the ellipsis icon.
+
+4.  Select the **Duplicate** option in the drop-down menu. 
+
+    <img src="attachments/domain-models-enumeration/duplicate.png" alt="Duplicate Enumeration" style="zoom:80%;" />
+
+The enumeration is duplicated.
 
 ## 4 Read More
 

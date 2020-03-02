@@ -1,3 +1,11 @@
+---
+title: "Using Command Line to Deploy a Mendix App to a Private Cloud Cluster"
+parent: "private-cloud"
+description: "Describes the processes for using the Mendix Operator directly to deploy a Mendix app in the Private Cloud"
+menu_order: 30
+tags: ["Deploy", "Private Cloud", "Environment", "Operator", "CI/CD", "CLI"]
+---
+
 ## Introduction
 
 Once you have the Mendix Operator installed in your Kubernetes, AWS-EKS, or OpenShift cluster (see [Registering a Private Cloud Cluster](private-cloud-register), you can use it to control the deployment of your Mendix app using Mendix Custom Resources (CRs). The Mendix operator then creates the app container and builds the app inside the cluster, together with all the resources the app needs.

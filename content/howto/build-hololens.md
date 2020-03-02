@@ -49,7 +49,7 @@ The markers determine the placement of the pages. The HoloLens scans the markers
 To create the markers, complete the following steps:
 
 1. Click **Run Locally**, then click **View** to see your app in a browser.
-2. Click http://localhost:8080/p/ARConfig and click **Enter** to view the configuration page, and then go to **Entities** > **Markers**.
+2. Navigate to http://localhost:8080/p/ARConfig and click **Enter** to view the configuration page, and then go to **Entities** > **Markers**.
 3. If there are no markers there already, click **Generate**:
 
 	![](attachments/build-hololens/generate.png)
@@ -67,12 +67,12 @@ To create the markers, complete the following steps:
 To configure your markers, follow these steps:
 
 1. Click **Entities** > **Configuration**.
-2. Click **New**:
+1. Click **New**:
 
 	![](attachments/build-hololens/new-config.png)
 
-3. Fill in a new name for your configuration.
-4. Fill in the **Marker size** in meters. Printing the standard PDF gives you markers of 0.04 meters. If your printed PDF does not match the configuration marker size, the webviews’ positioning will be unreliable:
+1. Fill in a new name for your configuration.
+1. Fill in the **Marker size** in meters. Printing the standard PDF gives you markers of 0.04 meters. If your printed PDF does not match the configuration marker size, the webviews’ positioning will be unreliable:
 
 	![](attachments/build-hololens/edit-config.png)
 
@@ -81,13 +81,13 @@ To configure your markers, follow these steps:
 To configure you screen settings, follow these instructions:
 
 1. Click **Entities** > **Screen Settings**.
-2. Click **New**:
+1. Click **New**:
 
 	![](attachments/build-hololens/screen-settings.png)
 
-3. Fill in a new name for your screen settings.
-4. Set **Width pixels** and **Height pixels** to *400*. Width and height pixels control the resolution of the webview itself. Remember that the HoloLens is a mobile device and not as graphically powerful as a desktop PC. Setting too high a resolution can slow HoloLens apps down.
-5. Set **Width meters** and **Height meters** to *0.20*. Width and height meters control the size of your HoloLens app’s webview:
+1. Fill in a new name for your screen settings.
+1. Set **Width pixels** and **Height pixels** to *400*. Width and height pixels control the resolution of the webview itself. Remember that the HoloLens is a mobile device and not as graphically powerful as a desktop PC. Setting too high a resolution can slow HoloLens apps down.
+1. Set **Width meters** and **Height meters** to *0.20*. Width and height meters control the size of your HoloLens app’s webview:
 
 	![](attachments/build-hololens/w-and-h.png)
 
@@ -102,7 +102,7 @@ To configure your **Web View Info** settings, follow these instructions:
 1. Click **New,** then configure the subsequent settings as you choose.
 1. **Web view ID**: This setting is generated automatically. No action is required.
 1. **Configuration/Marker Size**: This setting is the one you configured when editing **Marker size** in **Edit Configuration**. No action is required.
-1. **Path**: Here you must enter a path to your local URL, or any other website you would like to show. If you want to show a page of your Mendix app project, set that page’s URL in its properties. For example, you could make your app project’s home page URL {/something} in properties, clicking **Run Locall**, and navigating to it by clicking http://localhost:8080/p/something.
+1. **Path**: Here you must enter a path to your local URL, or any other website you would like to show. If you want to show a page of your Mendix app project, set that page’s URL in its properties. For example, you could make your app project’s home page URL {/something} in properties, clicking **Run Local**, and navigating to it by navigating to http://localhost:8080/p/something.
 1. **Screen**: Select the screen you made in section 5.3.
 1. **Marker**: Select any marker from the ones you generated earlier.
 1. **Marker offset**: This setting dictates the amount of meters the webview should be from the webview. **Marker offset x** controls the horizontal axis, **Marker offset y** controls the vertical axis, and **Marker offset z** controls depth. Configure these dimensions as you choose.
@@ -123,7 +123,7 @@ To run your app on a HoloLens, follow these steps:
 	c. Creating a Username and Password. <br />
 	d. Security Certificate.
 
-1. In a web browser go to [http://127.0.0.1:10080/](http://127.0.0.1:10080/) and log in when prompted:
+1. Navigate to http://127.0.0.1:10080/ and log in when prompted:
 
 	![](attachments/build-hololens/login.png)
 
@@ -141,7 +141,7 @@ To run your app on a HoloLens, follow these steps:
 
 Optionally, if you receive the following error, you will need to install some extra packages: 
 
-	```
+	```	
 	“Windows cannot install package HoloLensMendixApplication_1.0.7.0_x86__pzq3xp76mxafg because this package depends on a framework that could not be found. Provide the framework "Microsoft.NET.CoreRuntime.1.1" published by "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US", with neutral or x86 processor architecture and minimum version 1.1.27004.0, along with this package to install. The frameworks with name "Microsoft.NET.CoreRuntime.1.1" currently installed are: {} Failure text: Package failed updates, dependency or conflict validation. (0x80073cf3)”
 	```
 

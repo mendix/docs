@@ -79,7 +79,7 @@ The **ARImageTracker** widget allows you to track an image. Like ARContainer, th
 
 It is possible to use a more conventional image, like a company logo, as long as it has enough contrast and edges. If your image does not posses these qualities, you will notice AR elements floating in incorrect places and motion tracking failures as you move your camera. It is also possible that your image will not be recognized at all. 
 
-**Orientation** — this dictates the orientation of 3D objects on your tracker, not the orientation of the trackeritself. Leaving it on **Up** will make your 3D object appear right side up when you have it lying on a table.
+**Orientation** — this dictates the orientation of 3D objects on your tracker, not the orientation of the tracker itself. Leaving it on **Up** will make your 3D object appear right side up when you have it lying on a table.
 
 Your standard cube will not look different when turned around. To show orientation, this tutorial has temporarily added the following texture was added (see the [Material](#material) section below to learn how to add your own texture to an object):
 

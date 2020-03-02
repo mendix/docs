@@ -226,6 +226,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 List of objects with the following key-value pairs:
 
 *   _Status_ (String): Status of the environment. Possible values: Empty, Stopped, Running
+*   _EnvironmentId_ (String): Unique identifier of the environment.
 *   _Url_ (String): URL to access your application.
 *   _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy#flexible-environments).
 *   _ModelVersion_ (String): The version number of the package deployed in your environment.
@@ -238,6 +239,7 @@ List of objects with the following key-value pairs:
 [
     {
         "Status" :  "Stopped" ,
+        "EnvironmentId" :  "cd5fc610-edb0-43c5-a374-0439a6411ace",
         "Mode" :  "Acceptance",
         "Url" :  "https://calc-accp.mendixcloud.com",
         "ModelVersion" :  "1.1.0.253",
@@ -247,6 +249,7 @@ List of objects with the following key-value pairs:
     },
     {
         "Status" :  "Stopped" ,
+        "EnvironmentId" :  "867c9f56-84ec-438b-b1ae-9f9c50377cba",
         "Mode" :  "Production",
         "Url" :  "https://calc.mendixcloud.com",
         "ModelVersion" :  "175.0.0.3702",
@@ -289,6 +292,7 @@ Mendix-ApiKey: 26587896-1cef-4483-accf-ad304e2673d6
 An object with the following key-value pairs:
 
 *   _Status_ (String): Status of the environment. Possible values: Empty, Stopped, Running
+*   _EnvironmentId_ (String): Unique identifier of the environment.
 *   _Url_ (String): URL to access your application.
 *   _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy#flexible-environments).
 *   _ModelVersion_ (String): The version number of the package deployed in your environment.
@@ -309,6 +313,7 @@ An object with the following key-value pairs:
 ```json
 {
      "Status" :  "Stopped" ,
+     "EnvironmentId" :  "cd5fc610-edb0-43c5-a374-0439a6411ace",
      "Mode" :  "Acceptance",
      "Url" :  "https://calc-accp.mendixcloud.com",
      "ModelVersion" :  "1.1.0.253",

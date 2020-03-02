@@ -5,7 +5,7 @@ parent: "rg-three-recorder"
 
 ## 1 Introduction
 
-When you open a runtime recording from the [recorded sessions overview](rg-three-recorder), the details of this runtime recording will be shown. The results are sorted by duration. All the recorded actions are clickable and show detailed information. By drilling down to an exact location, you can pin-point where the time is spent in the application.
+When you open a runtime recording from the [recorded sessions overview](rg-three-recorder), the details of this runtime recording will be shown. The results are sorted by duration. All the recorded actions are clickable and show detailed information. By drilling down to an exact location, you can pinpoint where the time is spent in the application.
 
 ![](attachments/rg-three/Performance_runtime_recording.png)
 

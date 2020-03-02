@@ -59,7 +59,7 @@ Very little configuration is necessary to make your AR function. All you need is
 
 Now that you have a simple scene running, you will a closer look at the widgets you used to understand what they do.
 
-### 4.1 ARContainer
+### 3.1 ARContainer
 
 This widget starts an AR scene: the video feed you see on AR apps. It is named ARContainer because this widget will hold all your other AR widgets. It is the foundation of every Mendix AR mobile application:
 
@@ -67,7 +67,7 @@ This widget starts an AR scene: the video feed you see on AR apps. It is named A
 
 Selecting **Enable autofocus** > **No** can give a slight benefit to performance, but in most cases you should keep **Yes** selected.
 
-### 4.2 ARImageTracker {#ar-tracker}
+### 3.2 ARImageTracker {#ar-tracker}
 
 The **ARImageTracker** widget allows you to track an image. Like ARContainer, this widget can contain other AR widgets. All widgets you put into ARImageTracker will stick to the image. That means that every object (ARCube, ARSphere, and others) will follow or track the image.
 
@@ -93,13 +93,13 @@ Here is a cube with the **Left** orientation:
 
 {{% image_container width="300" %}}![Cube on tracker with Left orientation](attachments/get-started/left-cube.png){{% /image_container %}}
 
-## 5 Configuring Your ARCube Widget
+## 4 Configuring Your ARCube Widget
 
 The **ARCube** widget will places a cube into the scene, specifically onto the **ARImageTracker** widget. There are several properties you can configure in this widget to customize its behavior. 
 
 Having the **ARCube** widget in the **ARImageTracker** widget will render a white cube the same size as the image tracker directly on top of it. Next you will configure **ARCube’s** properties.
 
-### 5.1 General
+### 4.1 General
 
 The **General** tab contains basic properties for configuring position:
 
@@ -141,7 +141,7 @@ In the **General** tab you can configure **Position**, **Rotation**, and **Scale
 
 	{{% image_container width="300" %}}![Cube with Scale (0.5,0.5,0.5)](attachments/get-started/scale-half.png){{% /image_container %}}
 
-### 5.2 Material {#material}
+### 4.2 Material {#material}
 
 The **Material** tab contains properties for configuring appearance:
 
@@ -172,7 +172,7 @@ The **Material** tab contains properties for configuring appearance:
 
 	{{% image_container width="300" %}}![Cube with lighting type Constant](attachments/get-started/constant.png){{% /image_container %}}
 
-### 5.3 Interaction
+### 4.3 Interaction
 
 **Interaction** is where Mendix AR gets more advanced. These properties dictate every way you can interact with your object. Enabling any of these will also allow you to catch the events they generate in the **Events** tab:
 
@@ -192,7 +192,7 @@ The **Material** tab contains properties for configuring appearance:
 
 	{{% image_container width="300" %}}![Pinching gif](attachments/get-started/pinching.gif){{% /image_container %}}
 
-### 5.4 Events
+### 4.4 Events
 
 The **Events** tab appears this way:
 
@@ -200,7 +200,7 @@ The **Events** tab appears this way:
 
 Events on 3D objects work like any other event on a widget. The main difference is that **On Drag**, **On Pinch**, and **On Collision** events will only be called when they are enabled in the interaction tab.
 
-### 5.5 Common
+### 4.5 Common
 
 The **Common** tab appears this way:
 
@@ -213,7 +213,7 @@ The **Common** tab has two important properties:
 
 	{{% image_container width="300" %}}![Visibility](attachments/get-started/visibility.png){{% /image_container %}}
 
-### 5.6 Appearance
+### 4.6 Appearance
 
 The **Appearance** tab appears this way:
 
@@ -221,6 +221,7 @@ The **Appearance** tab appears this way:
 
 Currently the properties in the **Appearance** tab have no influence on AR widgets. This tab can be ignored.
 
-## 6 Read More
+## 5 Read More
 
+* [Use Augmented Reality](ar-parent)
 * [Build HoloLens Apps With Mendix](build-hololens)

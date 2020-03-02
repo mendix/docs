@@ -191,4 +191,5 @@ Congratulations! You have just added HoloLens functionality to a Mendix app, the
 
 ## 6 Read More
 
+* [Use Augmented Reality](ar-parent)
 * [Get Started with AR](get-started-ar)

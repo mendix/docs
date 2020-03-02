@@ -395,7 +395,7 @@ To change any constants, select the constant you want to edit and then click **E
 
 All names beginning **mendix-** are reserved for use by the Mendix Operator.
 
-All names beginning **openshift-** are reserved for use by OpenShift if you are deploying to an OpenShift cluster
+All names beginning **openshift-** are reserved for use by OpenShift if you are deploying to an OpenShift cluster.
 
 ### 6.2 Deleting the Cluster
 

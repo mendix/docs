@@ -57,7 +57,7 @@ To register a cluster in your OpenShift context, you need the following:
   
   3. **Type** – choose the correct type for your cluster, for example **Kubernetes**
 
-    ![](attachments/private-cloud-cluster/image7.png)
+        ![](attachments/private-cloud-cluster/image7.png)
 
 7. Click **Done**.
 

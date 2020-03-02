@@ -42,7 +42,7 @@ This how-to will teach you to build Mendix applications for the first generation
 
 ###  4.1 Markers
 
-First, you will configure your pages in the Mendix Module. To do this, your project needs to be running. You will begin by generating markers. While trackers are specifically used for mobile (for more information on trackers, see the [ARImageTracker section](#get-started-ar#ar-tracker) of *How to Get Started with AR*), markers are slightly more defined in their requirements. Markers are specifically used for HoloLens, and appear more as QR codes. 
+First, you will configure your pages in the Mendix Module. To do this, your project needs to be running. You will begin by generating markers. While trackers are specifically used for mobile (for more information on trackers, see the [ARImageTracker section](get-started-ar#ar-tracker) of *How to Get Started with AR*), markers are slightly more defined in their requirements. Markers are specifically used for HoloLens, and appear more as QR codes. 
 
 The markers determine the placement of the pages. The HoloLens scans the markers, and through this configuration will know which page goes with which marker. 
 

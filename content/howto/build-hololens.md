@@ -139,7 +139,7 @@ To run your app on a HoloLens, follow these steps:
 
 	{{% image_container width="300" %}}![](attachments/build-hololens/install-bundle.png){{% /image_container %}}
 
-Optionally, if you receive the following error, you will need to install some extra packages: 
+	Optionally, if you receive the following error, you will need to install some extra packages: 
 
 	```	
 	“Windows cannot install package HoloLensMendixApplication_1.0.7.0_x86__pzq3xp76mxafg because this package depends on a framework that could not be found. Provide the framework "Microsoft.NET.CoreRuntime.1.1" published by "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US", with neutral or x86 processor architecture and minimum version 1.1.27004.0, along with this package to install. The frameworks with name "Microsoft.NET.CoreRuntime.1.1" currently installed are: {} Failure text: Package failed updates, dependency or conflict validation. (0x80073cf3)”

@@ -10,11 +10,23 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 ## 2020
 
-### Future change – from February 24th, 2020
+### March 2nd, 2020
+
+#### Mendix Cloud Backups
+
+* Restoring data on the Mendix Cloud now takes place asynchronously. This means the following:
+    * You can continue working in the Developer Portal while your backup is restored
+    * You will be unable to stop or start your app while the backup is being restored
+    * Your environment details page will display a message while the backup is being restored
+    * The environment activity log will indicate when the restore has completed
+* New Deploy API calls have been added. These will be added to the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api) documentation shortly.
+* You will now be warned that you cannot restore a file-only backup to Mendix Cloud. You can only restore backups which include the database.
+
+### February 27th, 2020
 
 #### TLSv1.3 Support for Mendix Cloud (All Regions)
 
-* Starting on February 24th, we will roll out TLSv1.3 support to Mendix Cloud v4 and Mendix Cloud v3. TLSv1.3 improves the speed and security of HTTPS connections. We expect to complete this work by February 27th.
+* Mendix Cloud v4 and Mendix Cloud v3 now support TLSv1.3. TLSv1.3 improves the speed and security of HTTPS connections.
 
 ### February 17th, 2020
 
@@ -753,7 +765,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 #### Improvement
 
-* We introduced a new setting in **Node Security**, you can now configure **Monitoring Permissions** separately from **Transport Permissions**. Immediately after this change, we granted all users that had **Transport Permissions** on an environment the **Monitoring Permissions** there as well. From now on, a **Technical Contact** can configure these settings for everyone in the team separately. While we introduced this setting, we revisited the layout of the **Node Security** screen, you now have a simpler interface to change the permissions en each environment.
+* We introduced a new setting in **Node Security**, you can now configure **Monitoring Permissions** separately from **Transport Permissions**. Immediately after this change, we granted all users that had **Transport Permissions** on an environment the **Monitoring Permissions** there as well. From now on, a **Technical Contact** can configure these settings for everyone in the team separately. While we introduced this setting, we revisited the layout of the **Node Security** screen, you now have a simpler interface to change the permissions for each environment.
 
 ### February 20th, 2017
 

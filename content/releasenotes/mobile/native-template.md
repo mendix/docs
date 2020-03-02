@@ -12,8 +12,10 @@ For more information on native mobile app development, see the [native-template 
 
 **Release date: March 2nd, 2020**
 
-* The Android app should now by default use a larger heap to accommodate for memory heavy tasks.
-* The Android app should not crash when the maps widget is being used but the API key has not been configured yet.
+### Fixes
+
+* We fixed a memory issue. The Android template now uses use a larger heap by default to accommodate for memory-heavy tasks.
+* We fixed an issue where the Android app crashed when the maps widget was used but the API key had not been configured yet. The Android app no longer crashes in this case.
 
 ## 3.1.2
 

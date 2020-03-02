@@ -12,6 +12,18 @@ For more information on the Make It Native app, see [Getting the Make It Native 
 
 You can download the Make It Native app for [iOS](https://apps.apple.com/app/make-it-native/id1334081181) or [Android](https://play.google.com/store/apps/details?id=com.mendix.developerapp).
 
+## Android 1.2.2 / iOS 1.2.4
+
+**Release date: February 5th, 2019**
+
+#### Improvement
+
+* Fixed various minor bugs
+
+### Known Issues
+
+* When using the **Touchable** option in the inspector overlay, the Mendix Native app crashes
+
 ## Android 1.2.1 / iOS 1.2.3
 
 **Release date: December 17th, 2019**

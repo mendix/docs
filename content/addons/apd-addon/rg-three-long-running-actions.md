@@ -3,7 +3,7 @@ title: "Long-Running Actions"
 parent: "rg-three-apd"
 ---
 
-After clicking the **Long running microflow** indicator, a pop-up window with long-running microflows will be displayed.
+After clicking the **Long running microflow** indicator, a pop-up window with long-running microflows is displayed:
 
  ![](attachments/rg-three/long-running-actions.png)
 

@@ -56,7 +56,7 @@ These are the settings available on the **User settings** dialog box:
 
 Clicking **Delete account** deletes your account, including the Mendix Studio Pro environments belonging to your account. After the deletion, you will navigate to the Mendix Developer Portal. Apps are not deleted at this time.
 
-## 4 Cleanups
+## 4 Cleanups {#cleanups}
 
 The APD manager runs automatic cleanups. These remove monitoring data automatically after a certain period of time. APD manager uses the following periods of time:
 

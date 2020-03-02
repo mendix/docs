@@ -8,6 +8,13 @@ description: "Native Template release notes."
 
 For more information on native mobile app development, see the [native-template repository](https://github.com/mendix/native-template/) and [How to Deploy Your First Mendix Native App](/howto/mobile/deploying-native-app) .
 
+## 3.1.3
+
+**Release date: March 2nd, 2020**
+
+* The Android app should now by default use a larger heap to accommodate for memory heavy tasks.
+* The Android app should not crash when the maps widget is being used but the API key has not been configured yet.
+
 ## 3.1.2
 
 **Release date: February 19th, 2020**

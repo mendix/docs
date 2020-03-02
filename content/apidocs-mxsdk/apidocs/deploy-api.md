@@ -171,6 +171,7 @@ Mendix-ApiKey: 26587896-1cef-4483-accf-ad304e2673d6
 Object with the following key-value pairs:
 
 *   _AppId_ (String): Sub-domain name of the app.
+*   _ProjectId_ (String): Developer Portal Project identifier.
 *   _Name_ (String): Name of the app.
 *   _Url_ (String): Production or Free App URL to access your app.
 

@@ -51,7 +51,7 @@ Very little configuration is necessary to make your AR function. All you need is
 1. Click **Image** > **Edit**. 
 1.  Select a tracker from an image collection. This image will be the foundation of your AR application and is what your camera will track:
 
-	{{% image_container width="300" %}}![Select tracker](attachments/get-started/select-tracker.png){{% /image_container %}}
+	{{% image_container width="300" %}}![Select tracker](attachments/get-started/select-marker.png){{% /image_container %}}
 
 1.  Click **Run** in Mendix Studio Pro to automatically refresh your Make It Native app. Now your **Hello World AR** app is up and running. You should now see a simple white cube rendered on top of a tracker:
 
@@ -67,7 +67,7 @@ This widget starts an AR scene: the video feed you see on AR apps. It is named A
 
 Selecting **Enable autofocus** > **No** can give a slight benefit to performance, but in most cases you should keep **Yes** selected.
 
-### 4.2 ARImageTracker
+### 4.2 ARImageTracker {#ar-tracker}
 
 The **ARImageTracker** widget allows you to track an image. Like ARContainer, this widget can contain other AR widgets. All widgets you put into ARImageTracker will stick to the image. That means that every object (ARCube, ARSphere, and others) will follow or track the image.
 

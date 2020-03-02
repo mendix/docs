@@ -40,9 +40,11 @@ This how-to will teach you to build Mendix applications for the first generation
 
 ## 4 Configuring Your Pages
 
-##  4.1 Markers (todo:change all markers in this doc to trackers)
+###  4.1 Markers
 
-First, you will configure your pages in the Mendix Module. To do this, your project needs to be running. You will begin by generating markers. The markers determine the placement of the pages. The HoloLens scans the markers, and through this configuration will know which page goes with which marker. 
+First, you will configure your pages in the Mendix Module. To do this, your project needs to be running. You will begin by generating markers. While trackers are specifically used for mobile (for more information on trackers, see the [ARImageTracker section](#get-started-ar#ar-tracker) of *How to Get Started with AR*), markers are slightly more defined in their requirements. Markers are specifically used for HoloLens, and appear more as QR codes. 
+
+The markers determine the placement of the pages. The HoloLens scans the markers, and through this configuration will know which page goes with which marker. 
 
 To create the markers, complete the following steps:
 
@@ -60,7 +62,7 @@ To create the markers, complete the following steps:
 
 	![](attachments/build-hololens/print-trackers.png)
 
-## 4.2 Configuration
+### 4.2 Configuration
 
 To configure your markers, follow these steps:
 
@@ -74,7 +76,7 @@ To configure your markers, follow these steps:
 
 	![](attachments/build-hololens/edit-config.png)
 
-## 4.3 Screen Settings
+### 4.3 Screen Settings
 
 To configure you screen settings, follow these instructions:
 
@@ -89,7 +91,7 @@ To configure you screen settings, follow these instructions:
 
 	![](attachments/build-hololens/w-and-h.png)
 
-## 4.4 Web View Info
+### 4.4 Web View Info
 
 To configure your **Web View Info** settings, follow these instructions:
 
@@ -157,11 +159,9 @@ To fix the error, follow these steps:
 	
 	![](attachments/build-hololens/add-dependencies.png)
 	
-1. With both these dependencies selected, click **Install**:
+1. With both these dependencies and your *.msixbundle*  selected, click **Install**:
 	
 	![](attachments/build-hololens/install-dependencies.png)
-
-TODO: IS THIS THE END OF THE ERROR FLOW?
 
 You can now check for your Mendix app and see the results of your installations:
 

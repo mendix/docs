@@ -21,22 +21,22 @@ This how-to will teach you to build Mendix applications for the first generation
 
 ### 2.1 Current Limitations of This Technology
 
-* The only input you can give the pages is through an Air tap. Dragging is not supported. 
-* Videos do not work.
+* The only input you can give the pages is through an Air tap (Dragging is not supported)
+* Videos do not work
 
 ## 3 Putting the ARModule in Your Mendix Project
 
 1. In your current Mendix project, right-click **Project (YourProjectName)** and select **Import Module Package**. This will open up a file selector:
 
-	![](attachments/build-hololens/file-selector.png)
+	{{% image_container width="300" %}}![](attachments/build-hololens/file-selector.png){{% /image_container %}}
 
 2. The folder provided by Mendix contains the file *ARConfiguration.mpk*. Select it and click **Open**:
 
-	![](attachments/build-hololens/select-mpk.png)
+	{{% image_container width="300" %}}![](attachments/build-hololens/select-mpk.png){{% /image_container %}}
 
 3. In the subsequent dialog window, select **Action** > **Add as a new module** and click **Import**:
 
-	![](attachments/build-hololens/import.png)
+	{{% image_container width="300" %}}![](attachments/build-hololens/import.png){{% /image_container %}}
 
 ## 4 Configuring Your Pages
 
@@ -52,15 +52,15 @@ To create the markers, complete the following steps:
 2. Navigate to http://localhost:8080/p/ARConfig and click **Enter** to view the configuration page, and then go to **Entities** > **Markers**.
 3. If there are no markers there already, click **Generate**:
 
-	![](attachments/build-hololens/generate.png)
+	{{% image_container width="300" %}}![](attachments/build-hololens/generate.png){{% /image_container %}}
 
 3. This should generate 51 markers:
 
-	![](attachments/build-hololens/fifty-one.png)
+	{{% image_container width="300" %}}![](attachments/build-hololens/fifty-one.png){{% /image_container %}}
 
     Optionally, to print a PDF with all your markers, click **Print**:
 
-	![](attachments/build-hololens/print-trackers.png)
+	{{% image_container width="300" %}}![](attachments/build-hololens/print-trackers.png){{% /image_container %}}
 
 ### 4.2 Configuration
 
@@ -69,12 +69,12 @@ To configure your markers, follow these steps:
 1. Click **Entities** > **Configuration**.
 1. Click **New**:
 
-	![](attachments/build-hololens/new-config.png)
+	{{% image_container width="300" %}}![](attachments/build-hololens/new-config.png){{% /image_container %}}
 
 1. Fill in a new name for your configuration.
 1. Fill in the **Marker size** in meters. Printing the standard PDF gives you markers of 0.04 meters. If your printed PDF does not match the configuration marker size, the webviews’ positioning will be unreliable:
 
-	![](attachments/build-hololens/edit-config.png)
+	{{% image_container width="300" %}}![](attachments/build-hololens/edit-config.png){{% /image_container %}}
 
 ### 4.3 Screen Settings
 
@@ -83,13 +83,13 @@ To configure you screen settings, follow these instructions:
 1. Click **Entities** > **Screen Settings**.
 1. Click **New**:
 
-	![](attachments/build-hololens/screen-settings.png)
+	{{% image_container width="300" %}}![](attachments/build-hololens/screen-settings.png){{% /image_container %}}
 
 1. Fill in a new name for your screen settings.
 1. Set **Width pixels** and **Height pixels** to *400*. Width and height pixels control the resolution of the webview itself. Remember that the HoloLens is a mobile device and not as graphically powerful as a desktop PC. Setting too high a resolution can slow HoloLens apps down.
 1. Set **Width meters** and **Height meters** to *0.20*. Width and height meters control the size of your HoloLens app’s webview:
 
-	![](attachments/build-hololens/w-and-h.png)
+	{{% image_container width="300" %}}![](attachments/build-hololens/w-and-h.png){{% /image_container %}}
 
 ### 4.4 Web View Info
 
@@ -97,7 +97,7 @@ To configure your **Web View Info** settings, follow these instructions:
 
 1. Click **Entities** > **Web View Info.**
 
-	![](attachments/build-hololens/web-view-info.png)
+	{{% image_container width="300" %}}![](attachments/build-hololens/web-view-info.png){{% /image_container %}}
 
 1. Click **New,** then configure the subsequent settings as you choose.
 1. **Web view ID**: This setting is generated automatically. No action is required.
@@ -108,7 +108,7 @@ To configure your **Web View Info** settings, follow these instructions:
 1. **Marker offset**: This setting dictates the amount of meters the webview should be from the webview. **Marker offset x** controls the horizontal axis, **Marker offset y** controls the vertical axis, and **Marker offset z** controls depth. Configure these dimensions as you choose.
 1. **Tag along**: Selecting **Yes** will keep this screen in your field of vision as you look around:
 
-	![](attachments/build-hololens/edit-web-view-info.png)
+	{{% image_container width="300" %}}![](attachments/build-hololens/edit-web-view-info.png){{% /image_container %}}
 
 	This information will generate a REST interface when you run the app.
 
@@ -125,19 +125,19 @@ To run your app on a HoloLens, follow these steps:
 
 1. Navigate to http://127.0.0.1:10080/ and log in when prompted:
 
-	![](attachments/build-hololens/login.png)
+	{{% image_container width="300" %}}![](attachments/build-hololens/login.png){{% /image_container %}}
 
 1. Click **Views** > **Apps**:
 
-	![](attachments/build-hololens/views-apps.png)
+	{{% image_container width="300" %}}![](attachments/build-hololens/views-apps.png){{% /image_container %}}
 
 1. Click **Choose File,** navigate to your *.msixbundle* file, and click **Open**:
 
-	![](attachments/build-hololens/open-bundle.png)
+	{{% image_container width="300" %}}![](attachments/build-hololens/open-bundle.png){{% /image_container %}}
 
 1. With your *.msixbundle* file selected, click **Install**:
 
-	![](attachments/build-hololens/install-bundle.png)
+	{{% image_container width="300" %}}![](attachments/build-hololens/install-bundle.png){{% /image_container %}}
 
 Optionally, if you receive the following error, you will need to install some extra packages: 
 
@@ -149,43 +149,43 @@ To fix the error, follow these steps:
 
 1. Select **Allow me to select framework packages** and then click **Next**:
 	
-	![](attachments/build-hololens/allow-me.png)
+	{{% image_container width="300" %}}![](attachments/build-hololens/allow-me.png){{% /image_container %}}
 	
 1. Select **Choose File**, and in the build folder, navigate to **Dependencies/x86**:
 	
-	![](attachments/build-hololens/dependencies.png)
+	{{% image_container width="300" %}}![](attachments/build-hololens/dependencies.png){{% /image_container %}}
 	
 1. Add both *.appx* files to **Dependencies/x86**:
 	
-	![](attachments/build-hololens/add-dependencies.png)
+	{{% image_container width="300" %}}![](attachments/build-hololens/add-dependencies.png){{% /image_container %}}
 	
 1. With both these dependencies and your *.msixbundle*  selected, click **Install**:
 	
-	![](attachments/build-hololens/install-dependencies.png)
+	{{% image_container width="300" %}}![](attachments/build-hololens/install-dependencies.png){{% /image_container %}}
 
 You can now check for your Mendix app and see the results of your installations:
 
 1. Check that **Mendix (App)** is in **Installed apps**:
 
-	![](attachments/build-hololens/check-for-mendix.png)
+	{{% image_container width="300" %}}![](attachments/build-hololens/check-for-mendix.png){{% /image_container %}}
 
 1. Put on your HoloLens, then open the app. Make sure your HoloLens is connected to the same WiFi network as the computer running your Mendix app. Enter either the URL of your Mendix server or its IP address by Air tapping each number field, and Air tap **Load configuration**:
 
-	![](attachments/build-hololens/load-config.png)
+	{{% image_container width="300" %}}![](attachments/build-hololens/load-config.png){{% /image_container %}}
 
 1. If the application can reach your Mendix server, it will fetch configurations that have webviews attached:
 
-	![](attachments/build-hololens/fetch-configs.png)
+	{{% image_container width="300" %}}![](attachments/build-hololens/fetch-configs.png){{% /image_container %}}
 
 1. When you are ready to start the 3D environment, click **Go**. 
 1. When the 3D environment is loaded after the Mendix logo splash screen, you will see a message: **Longpress to start scanning for webviews**. To start scanning for markers, look at the markers, and then Tap and hold them.
 1. You should see a blue square with the text **Scanning** underneath:
 
-	![](attachments/build-hololens/scanning.png)
+	{{% image_container width="300" %}}![](attachments/build-hololens/scanning.png){{% /image_container %}}
 
 1. As soon as you release your Tap and hold, the scanning will stop. Aiming this scanning rectangle at your marker sheet will show the configured pages at that location:
 
-	![](attachments/build-hololens/show-pages.png)
+	{{% image_container width="300" %}}![](attachments/build-hololens/show-pages.png){{% /image_container %}}
 
 Congratulations! You have just added HoloLens functionality to a Mendix app, then ran that Mendix app in your HoloLens’ 3D environment.
 

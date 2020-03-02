@@ -15,7 +15,7 @@ For more information on native mobile app development, see the [native-template 
 ### Fixes
 
 * We fixed a memory issue. The Android template now uses use a larger heap by default to accommodate for memory-heavy tasks.
-* We fixed an issue where the Android app crashed when the maps widget was used but the API key had not been configured yet. The Android app no longer crashes in this case.
+* We fixed an issue where the Android template crashed when the maps widget was used but the API key had not been configured yet. The Android app no longer crashes in this case.
 
 ## 3.1.2
 

@@ -15,9 +15,9 @@ This how-to will teach you to build Mendix applications for the first generation
 * The Mendix HoloLens app (the *.msixbundle* file specifically)
 * A Windows device running Windows 10 with the [Windows 10 SDK](https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk) installed
 * Consult the Microsoft [Gestures](https://docs.microsoft.com/en-us/windows/mixed-reality/gestures) documentation to familiarize yourself with HoloLens gesture terms
-* A Microsoft HoloLens (version 10.0.17763.502) on the same WiFi network as your Mendix project
-* Ensure you have the correct credentials for your HoloLens’ account (lacking correct credentials can lock you out of your device, forcing a factory reset)
-* Ensure the Mendix project on your computer is reachable through IP on other devices in the same network
+* A Microsoft HoloLens (version 10.0.17763.502) connected to the same WiFi network as your Mendix project
+* Ensure you have the correct credentials for your HoloLens account (lacking correct credentials can lock you out of your device, forcing a factory reset)
+* Ensure your computer's Mendix project can be reached through IP on other devices on the same network
 
 ### 2.1 Current Limitations of This Technology
 
@@ -30,11 +30,11 @@ This how-to will teach you to build Mendix applications for the first generation
 
 	![](attachments/build-hololens/file-selector.png)
 
-2. The folder provided by Mendix contains a file called *ARConfiguration.mpk*. Select this file and click **Open**.
+2. The folder provided by Mendix contains the file *ARConfiguration.mpk*. Select it and click **Open**:
 
 	![](attachments/build-hololens/select-mpk.png)
 
-3. In the subsequent dialog window, select **Action** > **Add as a new module** and click **Import**.
+3. In the subsequent dialog window, select **Action** > **Add as a new module** and click **Import**:
 
 	![](attachments/build-hololens/import.png)
 
@@ -42,12 +42,13 @@ This how-to will teach you to build Mendix applications for the first generation
 
 ##  4.1 Markers (todo:change all markers in this doc to trackers)
 
-First, configure your pages in the Mendix Module. To do this, your project needs to be running. 
-You will begin by generating markers. The markers determine the placement of the pages. The HoloLens scans the markers, and through this configuration will know what page goes with what marker. To create the markers complete the following steps:
+First, you will configure your pages in the Mendix Module. To do this, your project needs to be running. You will begin by generating markers. The markers determine the placement of the pages. The HoloLens scans the markers, and through this configuration will know which page goes with which marker. 
 
-1. Click **Run Locally**, then click **View** to see your app in a browser 
+To create the markers, complete the following steps:
+
+1. Click **Run Locally**, then click **View** to see your app in a browser.
 2. Click http://localhost:8080/p/ARConfig and click **Enter** to view the configuration page, and then go to **Entities** > **Markers**.
-3. If there are no markers there already, click **Generate:**
+3. If there are no markers there already, click **Generate**:
 
 	![](attachments/build-hololens/generate.png)
 
@@ -55,13 +56,15 @@ You will begin by generating markers. The markers determine the placement of the
 
 	![](attachments/build-hololens/fifty-one.png)
 
-    Optionally, to print a PDF with all your markers, click **Print.**
+    Optionally, to print a PDF with all your markers, click **Print**:
 
 	![](attachments/build-hololens/print-trackers.png)
 
 ## 4.2 Configuration
 
-1. Click **Entities** > **Configuration.**
+To configure your markers, follow these steps:
+
+1. Click **Entities** > **Configuration**.
 2. Click **New**:
 
 	![](attachments/build-hololens/new-config.png)
@@ -73,7 +76,9 @@ You will begin by generating markers. The markers determine the placement of the
 
 ## 4.3 Screen Settings
 
-1. Click **Entities** > **Screen Settings**
+To configure you screen settings, follow these instructions:
+
+1. Click **Entities** > **Screen Settings**.
 2. Click **New**:
 
 	![](attachments/build-hololens/screen-settings.png)
@@ -86,17 +91,19 @@ You will begin by generating markers. The markers determine the placement of the
 
 ## 4.4 Web View Info
 
+To configure your **Web View Info** settings, follow these instructions:
+
 1. Click **Entities** > **Web View Info.**
 
 	![](attachments/build-hololens/web-view-info.png)
 
-1. Click **New,** then configure the subsequent settings as you choose**.**
-1. **Web view ID**: This setting is generated automatically.
-1. **Configuration/Marker Size**: This setting is the one you configured when editing **Marker size** in **Edit Configuration**.
-1. **Path**: Here you must enter a path to your local URL, or any other website you would like to show. If you want to show a page of your Mendix app project, set that page’s URL in its properties. For example, you could make your app project’s home page URL “/something” in properties, clicking **Run Locally,** and navigating to it by clicking http://localhost:8080/p/something.
+1. Click **New,** then configure the subsequent settings as you choose.
+1. **Web view ID**: This setting is generated automatically. No action is required.
+1. **Configuration/Marker Size**: This setting is the one you configured when editing **Marker size** in **Edit Configuration**. No action is required.
+1. **Path**: Here you must enter a path to your local URL, or any other website you would like to show. If you want to show a page of your Mendix app project, set that page’s URL in its properties. For example, you could make your app project’s home page URL {/something} in properties, clicking **Run Locall**, and navigating to it by clicking http://localhost:8080/p/something.
 1. **Screen**: Select the screen you made in section 5.3.
 1. **Marker**: Select any marker from the ones you generated earlier.
-1. **Marker offset**: This setting dictates the amount of meters the webview should be from the webview. **Marker offset x** controls the horizontal axis, **Marker offset y** controls the vertical axis, and **Marker offset z** controls depth.
+1. **Marker offset**: This setting dictates the amount of meters the webview should be from the webview. **Marker offset x** controls the horizontal axis, **Marker offset y** controls the vertical axis, and **Marker offset z** controls depth. Configure these dimensions as you choose.
 1. **Tag along**: Selecting **Yes** will keep this screen in your field of vision as you look around:
 
 	![](attachments/build-hololens/edit-web-view-info.png)
@@ -105,18 +112,20 @@ You will begin by generating markers. The markers determine the placement of the
 
 ## 5 Running Your App on a HoloLens
 
-1. Connect your HoloLens to your computer
-1. Go to Microsoft’s [Using the Windows Device Portal](https://docs.microsoft.com/en-us/windows/mixed-reality/using-the-windows-device-portal) and set up your HoloLens by completing the following sections:
-	* Setting up HoloLens to use Windows Device Portal
-	* Connecting over USB
-	* Creating a Username and Password
-	* Security Certificate
+To run your app on a HoloLens, follow these steps:
+
+1. Connect your HoloLens to your computer.
+1. Go to Microsoft’s [Using the Windows Device Portal](https://docs.microsoft.com/en-us/windows/mixed-reality/using-the-windows-device-portal) and set up your HoloLens by completing the following sections: <br />
+	a. Setting up HoloLens to use Windows Device Portal. <br />
+	b. Connecting over USB. <br />
+	c. Creating a Username and Password. <br />
+	d. Security Certificate.
 
 1. In a web browser go to [http://127.0.0.1:10080/](http://127.0.0.1:10080/) and log in when prompted:
 
 	![](attachments/build-hololens/login.png)
 
-1. Click **Views** > **Apps**
+1. Click **Views** > **Apps**:
 
 	![](attachments/build-hololens/views-apps.png)
 
@@ -124,7 +133,7 @@ You will begin by generating markers. The markers determine the placement of the
 
 	![](attachments/build-hololens/open-bundle.png)
 
-1. With your *.msixbundle* file selected, click **Install:**
+1. With your *.msixbundle* file selected, click **Install**:
 
 	![](attachments/build-hololens/install-bundle.png)
 
@@ -133,6 +142,8 @@ Optionally, if you receive the following error, you will need to install some ex
 	```
 	“Windows cannot install package HoloLensMendixApplication_1.0.7.0_x86__pzq3xp76mxafg because this package depends on a framework that could not be found. Provide the framework "Microsoft.NET.CoreRuntime.1.1" published by "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US", with neutral or x86 processor architecture and minimum version 1.1.27004.0, along with this package to install. The frameworks with name "Microsoft.NET.CoreRuntime.1.1" currently installed are: {} Failure text: Package failed updates, dependency or conflict validation. (0x80073cf3)”
 	```
+
+To fix the error, follow these steps:
 
 1. Select **Allow me to select framework packages** and then click **Next**:
 	

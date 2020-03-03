@@ -54,7 +54,7 @@ However, there are additional properties that are described in the sections belo
 
 {{% alert type="info" %}}
 
-While custom date formatting is not limited, the search implementation is limited. Search input formatting must be an exact day, and cannot be anything else.
+Search input formatting must be an exact day. Custom date formatting is not limited.
 
 {{% /alert %}}
 

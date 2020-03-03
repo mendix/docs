@@ -10,12 +10,22 @@ tags: ["Studio Pro"]
 
 ## 1 Introduction
 
-Mendix Studio Pro is the tool for creating, viewing, and editing your Mendix applications. A Mendix app is called a [project](project) in Studio Pro. A project consists of many documents that are grouped in [modules](modules) and folders. There are some project-level settings, but the core of the functionality is inside the modules. Examples of documents are [project settings](project-settings), [domain models](domain-model), [pages](pages), and [microflows](microflows). One Studio Pro instance can have only one project open at a time, but you can open two Studio Pro instances when necessary.
+Mendix Studio Pro is the tool for creating, viewing, and editing your Mendix applications. A Mendix app is called a [project](project) in Studio Pro. 
 
-This documentation describes the graphical user interface of Studio Pro. The rest of the documentation follows the structure of the project explorer.
+## Installing Studio Pro
+
+## Studio Pro Interface
+
+A project consists of many *documents* that are grouped in [modules](modules) and folders. A *document* is a individual file, for example, a [page](pages), [microflow](microflows), or a [scheduled event](scheduled-events). 
+
+![Studio Pro Diagram](attachments/studio-pro-overview/studio-pro-diagram.png)
+
+One Studio Pro instance can have only one project open at a time, but you can open two Studio Pro instances when necessary.
+
+This documentation describes the graphical user interface of Studio Pro. 
 
 {{% alert type="info" %}}
-Press <kbd>F1</kbd> while in Studio Pro to quickly jump to the right page in the documentation.
+When Studio Pro is open, press <kbd>F1</kbd> to quickly jump to documentation.
 {{% /alert %}}
 
 ## 2 Document Tabs {#documents}
@@ -24,7 +34,7 @@ The documents you view and edit are shown in tabs.
 
 {{% alert type="info" %}}
 
-Note that this section describes documents in the working area, not panes that you can open and position around the working area. For more information on behavior of panes, see the [Layout of Panes](view-menu#layout-of-panes) section in *View Menu*.
+This section describes documents in the working area, not panes that you can open and position around the working area. For more information on behavior of panes, see the [Layout of Panes](view-menu#layout-of-panes) section in *View Menu*.
 
 {{% /alert %}}
 

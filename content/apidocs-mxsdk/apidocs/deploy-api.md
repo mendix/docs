@@ -26,7 +26,7 @@ As APIs are designed for automated systems, the Deploy API does not require the 
 Only _Retrieve apps_, _Create Free App Environment_ and _Retrieve app_ API calls are supported for Free Apps. Please note that most API calls — with the exception of _Upload Package_ — require that the _Content-Type_ header be set to _application/json_.
 {{% /alert %}}
 
-### 3.1 Retrieve Apps
+### 3.1 Retrieve Apps{#list-apps}
 
 #### 3.1.1 Description
 
@@ -193,7 +193,7 @@ Object with the following key-value pairs:
 }
 ```
 
-### 3.4 Retrieve Environments
+### 3.4 Retrieve Environments{#list-environments}
 
 #### 3.4.1 Description
 

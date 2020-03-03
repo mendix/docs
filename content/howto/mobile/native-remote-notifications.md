@@ -5,7 +5,6 @@ title: "Use Remote Notifications"
 #menu_order: 11
 #description: "Learn to set up native push notifications with the Native builder."
 #tags: ["mobile", "push notification", "remote", "push", "notification"]
-draft: true
 ---
 
 ## 1 Introduction
@@ -20,12 +19,16 @@ If you want to use push notifications with custom apps which created with native
 
 ## 3 Setting Up Your Mendix Project
 
-Create a Mendix project using the Native Mobile Quickstart starter app. [todo add link]
+Create a Mendix project using the Native Mobile Quickstart starter app:
+
+1. Open Mendix Studio Pro. **Select File** > **New Project** , and then select the **Native Mobile Quickstart app**.
+2. Click **Use this starting point**.
+3. Click **Create app** to close the dialog box.
 
 ### 3.1 Installing Your Module 
 
 1. Add the [Community Commons](https://appstore.home.mendix.com/link/app/170/) module to your app project.
-2. Add the [Encryption] module to your module [todo add link].
+2. Add the [Encryption](https://appstore.home.mendix.com/link/app/1011/) module to your app project.
 3. Set the encryption private key by doing the following:<br />
 	a. Double-click **Settings**.<br />
 	b. Click **Edit**.<br />
@@ -93,7 +96,7 @@ Deploy your project and open your administration page in a web browser. Do the f
 2. Select **Enabled**.
 3. Name your configuration.
 4. Set it as **Development** (this will not affect any functionality, it is only a label).
-5. Set the **Project id** to the project id you set in the [Native Apps] section of *How to Set Up the Google Firebase Cloud Messaging Server* [todo: fix link].
+5. Set the **Project id** to the project id you set in the [Native Apps](setting-up-google-firebase-cloud-messaging-server#native-apps) section of *How to Set Up the Google Firebase Cloud Messaging Server* [todo: fix link].
 6.  Upload your private key (which you got in the [SOMETHING] section of *Setting up Remote Push Notifications* [todo: fix link]:
 
     ![FCMConfig](attachments/native-remote-push/modeler/FCMConfig.png)
@@ -311,5 +314,7 @@ Every user is allowed to have more than one device. When sending push notificati
 To send a push notification to all users, use the **SendMessageToUsers** Java action.
 
 ## 6 Read More
+
+* [Use Local Notifications](local-notif-parent)
 
 todo add links (firebase, local notifs)

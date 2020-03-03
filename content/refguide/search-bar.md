@@ -54,7 +54,7 @@ However, there are additional properties that are described in the sections belo
 
 {{% alert type="info" %}}
 
-Known limitation; custom date formatting is not limited, however the search implementation is limited and the formatting should be an exact date, and can not be used with more granular time formatting like hours and minutes or more coarse like weeks, months and years.
+While custom date formatting is not limited, the search implementation is limited. Search input formatting must be an exact day, and cannot be anything else.
 
 {{% /alert %}}
 
@@ -101,7 +101,7 @@ This property is available for **Comparison** and **Drop-down** search fields.
 
 The value entered by the end user (or the default value in the case of hidden and read-only search fields) is compared to the value of the attribute of each of the objects in the grid. If the match succeeds, the object will be part of the search result. There are different ways in which the attribute value and the entered value can be compared. In the third column below you see the type of search field for which the comparison operator is allowed.
 
-| Value            | Description                                                  | Search field types                      | Date input query          |
+| Value            | Description                                                  | Search Field Types                      | Date Input Query          |
 | ---------------- | ------------------------------------------------------------ | --------------------------------------- | ------------------------- |
 | Contains         | Does the attribute value contain the entered value?          | Text (attribute must be of type String) |                           |
 | Starts with      | Does the attribute value start with the entered value?       | Text (attribute must be of type String) |                           |

@@ -109,7 +109,7 @@ The value entered by the end user (or the default value in the case of hidden an
 | Greater or equal | Is the attribute value greater than or equal to the entered value? | Text, Date                        | > date                    |
 | Equal *(default)*| Is the attribute value the same as the entered value?        | Text, Date, Drop-down                   | >= date and < date + 1 day|
 | Not equal        | Is the attribute value not the same as the entered value?    | Text, Date, Drop-down                   | != date                   |
-| Smaller or equal | Is the attribute value smaller than or equal to the entered value? | Text, Date                        | < date + 1 da             |
+| Smaller or equal | Is the attribute value smaller than or equal to the entered value? | Text, Date                        | < date + 1 day             |
 | Smaller          | Is the attribute value smaller than the entered value?       | Text, Date                              | < date                    |
 
 {{% alert type="info" %}}

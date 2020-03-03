@@ -71,7 +71,7 @@ The first script is the installation script which will install the Mendix operat
 
 You will need to have administrator rights to your private cloud platform. This means you will have to log in before you run the installation script. The instructions below are for the OpenShift platform; a similar process will be required for other platforms.
 
-#### 3.2.1 Logging in to OpenShift
+#### 3.2.1 Signing in to OpenShift{#openshift-signin}
 
 To run the installation script on OpenShift, you must sign in to OpenShift using the OpenShift CLI, and then run a Bash script in Bash.
 

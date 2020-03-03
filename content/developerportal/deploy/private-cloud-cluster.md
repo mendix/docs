@@ -22,7 +22,7 @@ To register a cluster in your OpenShift context, you need the following:
 
 * A Kubernetes platform or OpenShift version 3.11 or above
 * Administration account for your platform
-* **OpenShift CLI** installation (see [Getting started with the CLI](https://docs.openshift.com/container-platform/4.1/cli_reference/getting-started-cli.html) on the RedHat OpenShift website for more information) if you are creating clusters on OpenShift
+* **OpenShift CLI** installation (see [Getting started with the CLI](https://docs.openshift.com/container-platform/4.1/cli_reference/getting-started-cli.html) on the Red Hat OpenShift website for more information) if you are creating clusters on OpenShift
 * **Bash** (Bourne-again shell) for your machine. If you are running on Windows, you can use something like [**Windows Subsystem for Linux (WSL)**](https://docs.microsoft.com/en-us/windows/wsl/faq) or the **Git Bash emulator** that comes with [git for windows](https://gitforwindows.org/).
 
 ## 3 Registering a Cluster

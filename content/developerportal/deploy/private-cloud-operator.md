@@ -18,7 +18,7 @@ Alternatively, you can create a connected cluster and use the Mendix Developer P
 
 * A Kubernetes, AWS-EKS, or OpenShift (version 3.11 or above) platform
 * Platform administration account
-* **OpenShift CLI** installation if you are deploying on OpenShift (see [Getting started with the CLI](https://docs.openshift.com/container-platform/4.1/cli_reference/getting-started-cli.html) on the RedHat OpenShift website for more information)
+* **OpenShift CLI** installation if you are deploying on OpenShift (see [Getting started with the CLI](https://docs.openshift.com/container-platform/4.1/cli_reference/getting-started-cli.html) on the Red Hat OpenShift website for more information)
 * **Bash** (Bourne-again shell) for your machine. If you are running on Windows, you can use something like [**Windows Subsystem for Linux (WSL)**](https://docs.microsoft.com/en-us/windows/wsl/faq) or the **Git Bash emulator** that comes with [git for windows](https://gitforwindows.org/).
 * The **deployment package** of a Mendix app made with version 7.23.0 or above
 

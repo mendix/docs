@@ -405,7 +405,33 @@ Delete all the environments from the Mendix Developer Portal before you delete t
 
 If you attempt to deploy an app with security not set to production into a production environment you will not get an error, however the deployment will appear to hang with **Replicas running** and **Runtime** showing a spinner.
 
-## 7 How the Operator Deploys Your App {#how-operator-deploys}
+## 7 Troubleshooting
+
+This section covers an issue which can arise where Mendix cannot recover automatically and manual intervention may be required.
+
+### 7.1 Agent Connection Status Not up to Date
+
+Under certain conditions, the status of an environment in the Portal might become outdated and not reflect the environment state in the cluster. The Agent needs to be restarted to force it to resend the latest environment state to the Portal.
+
+Run the following command in the namespace where the Mendix Operator is deployed:
+
+#### 7.1.1 OpenShift
+
+```bash
+oc scale deployment mendix-agent --replicas=0 && \
+sleep 200 && \
+oc scale deployment mendix-agent --replicas=1
+
+```
+#### 7.1.2 Kubernetes
+
+```bash
+kubectl scale deployment mendix-agent --replicas=0 && \
+sleep 200 && \
+kubectl scale deployment mendix-agent --replicas=1
+```
+
+## 8 How the Operator Deploys Your App {#how-operator-deploys}
 
 The Mendix Operator is another app within your private cloud cluster. It is triggered when you provide a CR file. The process looks like this:
 

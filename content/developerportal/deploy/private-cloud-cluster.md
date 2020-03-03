@@ -367,7 +367,33 @@ If you delete your app from the OpenShift console, this will not delete the *Pro
 
 If you do not need your data on AWS anymore, then you need to clean it up manually.
 
-## 6 Containerized Mendix App Architecture{#containerized-architecture}
+## 6 Troubleshooting
+
+This section covers an issue which can arise where Mendix cannot recover automatically and manual intervention may be required.
+
+### 6.1 Agent Connection Status Not up to Date
+
+The Cluster status may show as `Waiting for Connection`, even though the Agent is actually connected to the cluster. The Agent needs to be restarted to force it to reconnect.
+
+Run the following command in the namespace where the Mendix Operator is deployed:
+
+#### 6.1.1 OpenShift
+
+```bash
+oc scale deployment mendix-agent --replicas=0 && \
+sleep 200 && \
+oc scale deployment mendix-agent --replicas=1
+
+```
+#### 6.1.2 Kubernetes
+
+```bash
+kubectl scale deployment mendix-agent --replicas=0 && \
+sleep 200 && \
+kubectl scale deployment mendix-agent --replicas=1
+```
+
+## 7 Containerized Mendix App Architecture{#containerized-architecture}
 
 Within your cluster you can run one, or several, Mendix apps. Each app runs in a namespace. You can see the relationship between the Mendix environments and the Kubernetes namespaces in the image below.
 

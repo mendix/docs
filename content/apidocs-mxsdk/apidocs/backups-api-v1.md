@@ -1,7 +1,8 @@
 ---
-title: "Backups API"
+title: "Backups API V1"
 parent: "deploy-api"
 description: "An API to allow the triggering of backups creation, restore, download and to get information about existing snapshots."
+menu_order: 20
 ---
 
 ## 1 Introduction

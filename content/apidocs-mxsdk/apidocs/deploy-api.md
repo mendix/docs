@@ -8,7 +8,7 @@ tags: ["API", "deploy", "licensed", "deployment", "cloud"]
 
 ## 1 Introduction
 
-The Deploy API allows you to manage application environments in the Mendix Cloud. You can retrieve the status of, and start and stop, applications. You can also configure new model versions and deploy them to application environments. To create and manage deployment packages you also need the [Build API](build-api). For backup-related actions refer to [Backup API](backups-api).
+The Deploy API allows you to manage application environments in the Mendix Cloud. You can retrieve the status of, and start and stop, applications. You can also configure new model versions and deploy them to application environments. To create and manage deployment packages you also need the [Build API](build-api). For backup-related actions refer to [Backups API](backups-api).
 
 This image provides a domain model representation of the concepts discussed below and how these are related:
 

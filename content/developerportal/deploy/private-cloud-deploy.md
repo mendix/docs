@@ -8,9 +8,13 @@ tags: ["Deploy", "Private Cloud", "Environment"]
 
 ## 1 Introduction
 
-To deploy apps to your private cloud cluster (for example to Red Hat OpenShift or AWS-EKS), the cluster needs to be registered in the Mendix Developer Portal. This creates a link between the Mendix Developer Portal and the cluster. See [Registering a Private Cloud Cluster](#private-cloud-register) for instructions on how to do this.
+To deploy apps to your private cloud cluster (for example to Red Hat OpenShift or AWS-EKS), the cluster needs to be registered in the Mendix Developer Portal. This creates a link between the Mendix Developer Portal and the cluster. See [Registering a Private Cloud Cluster](private-cloud-register) for instructions on how to do this.
 
 Once the cluster has been registered, team members with *Deploy App* rights can create environments and deploy an app.
+
+This document explains how to use the Mendix Developer Portal to deploy the app.
+
+Alternatively, you can provide the CRs through the console or command line for a standalone cluster. This is described in [Using Command Line to Deploy a Mendix App to a Private Cloud Cluster](private-cloud-operator).
 
 Within your cluster you can run one, or several, Mendix apps. Each app runs in a namespace. You can see the relationship between the Mendix environments and the Kubernetes namespaces in the image below.
 
@@ -22,7 +26,7 @@ Because you can run several Mendix apps in the same cluster, each app must have 
 
 To register a cluster on your private cloud platform, you need the following:
 
-* A Mendix account with **Deploy App** rights to an existing Cluster – see [Registering a Private Cloud Cluster](#private-cloud-register) for more information on setting up clusters and adding members
+* A Mendix account with **Deploy App** rights to an existing Cluster – see [Registering a Private Cloud Cluster](private-cloud-register) for more information on setting up clusters and adding members
 * Mendix Studio Pro version 7.23.0 or above
 * A Mendix app created with the version of Studio Pro you are using.
 

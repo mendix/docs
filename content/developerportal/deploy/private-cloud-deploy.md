@@ -8,9 +8,9 @@ tags: ["Deploy", "Private Cloud", "Environment"]
 
 ## 1 Introduction
 
-To deploy apps to your private cloud cluster (for example on OpenShift or Kubernetes), the cluster needs to be registered in the Mendix Developer Portal. This creates a link between the Mendix Developer Portal and the cluster.
+To deploy apps to your private cloud cluster (for example to Red Hat OpenShift or AWS-EKS), the cluster needs to be registered in the Mendix Developer Portal. This creates a link between the Mendix Developer Portal and the cluster. See [Registering a Private Cloud Cluster](#private-cloud-register) for instructions on how to do this.
 
-Once the cluster has been registered, team members with Deploy App rights can then create environments and deploy an app.
+Once the cluster has been registered, team members with *Deploy App* rights can create environments and deploy an app.
 
 Within your cluster you can run one, or several, Mendix apps. Each app runs in a namespace. You can see the relationship between the Mendix environments and the Kubernetes namespaces in the image below.
 
@@ -22,7 +22,7 @@ Because you can run several Mendix apps in the same cluster, each app must have 
 
 To register a cluster on your private cloud platform, you need the following:
 
-* A Mendix account with **Deploy App** rights to an existing Cluster – see the document *Mendix Register Cluster* for more information on setting up clusters and adding members
+* A Mendix account with **Deploy App** rights to an existing Cluster – see [Registering a Private Cloud Cluster](#private-cloud-register) for more information on setting up clusters and adding members
 * Mendix Studio Pro version 7.23.0 or above
 * A Mendix app created with the version of Studio Pro you are using.
 
@@ -174,7 +174,7 @@ The **Environments** page of the Developer Portal contains three sections:
 
 ### 4.1 Deployment Package Repository
 
-This lists the deployment packages which have been created for this app project
+This lists the deployment packages which have been created for this app project.
 
 ![](attachments/private-cloud-deploy/image17.png)
 
@@ -205,7 +205,7 @@ This displays details of the deployment package.
 
 ![](attachments/private-cloud-deploy/image18.png)
 
-The information shows here is labeled to help you. The indicators in the environment description are described in the next section, [Environments](#environments), below
+The information shows here is labeled to help you. The indicators in the environment description are described in the next section, [Environments](#environments), below.
 
 There are three additional actions you can take while looking at the deployment package details:
 
@@ -239,7 +239,7 @@ In addition, there are several indicators describing the status of the environme
 
 ##### 4.2.1.1 Network
 
-The **Network** indicator has the following values
+The **Network** indicator has the following values:
 
 * Tick – the network is operational
 * Cross – the network is not operational
@@ -247,7 +247,7 @@ The **Network** indicator has the following values
 
 ##### 4.2.1.2 Storage
 
-The **Storage** indicator has the following values
+The **Storage** indicator has the following values:
 
 * Tick – storage is provisioned
 * Cross – storage is not provisioned
@@ -255,7 +255,7 @@ The **Storage** indicator has the following values
 
 ##### 4.2.1.3 Database
 
-The **Database** indicator has the following values
+The **Database** indicator has the following values:
 
 * Tick – the database is provisioned
 * Cross – the database is not provisioned
@@ -283,7 +283,7 @@ This adds a new environment as described in [Creating an Environment](#create-en
 
 #### 4.2.3 Details
 
-This opens the **Environment Details** page which is described in more detail in Managing Your Environments from the [Environment Details Page](#environment-details), below.
+This opens the **Environment Details** page which is described in more detail in [Managing Your Environments from the Environment Details Page](#environment-details), below.
 
 #### 4.2.4 Actions
 
@@ -293,7 +293,7 @@ This button contains a list of actions which you can perform quickly on the envi
 * **Transport Package** – allows you to deploy the deployment package in the current environment to another environment within the app project, or to redeploy it in the current environment
 * **Environment Logs** – takes you to the log page defined by the cluster manager when they registered the cluster
 * **Model Options** – allows you to change the running of scheduled events and the values of constants for your app by taking you to the **Model Options** tab of the **Environment Details** page
-* **Stop Application** (only shown if at least one replica is running) – stops the application by reducing the number of replicas to zero
+* **Stop Application** (only shown if at least one replica is running) — stops the application by reducing the number of replicas to zero
 **Delete Environment** – this deletes the environment (see [Current Limitations](#limitations), below, for additional details about what is deleted) — you will be asked to confirm this action
 
 ### 4.3 Activity
@@ -319,7 +319,7 @@ These tabs are described below.
 
 ### 5.1 General Tab
 
-The general tab shows information about your running app. This information is designed to be self-explanatory.
+The general tab shows information about your running app.
 
 ![](attachments/private-cloud-deploy/image22.png)
 

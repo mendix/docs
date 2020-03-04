@@ -47,7 +47,7 @@ Click **Create new project** and fill in the project name and region for your ap
 
 ![](attachments/Setting+up+Google+Firebase+Cloud+Messaging+Server/Create_Firebase_Project.png)
 
-## 4 Adding an Android or iOS App
+## 4 Adding an Android or iOS App {#native-apps}
 
 Before you add an app to FCM, you must retrieve your app's bundle ID. Its location depends on your type of your mobile app.
 

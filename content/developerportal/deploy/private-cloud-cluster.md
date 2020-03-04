@@ -8,11 +8,11 @@ tags: ["Register", "Private Cloud", "Cluster"]
 
 ## 1 Introduction
 
-To allow you to manage the deployment of your apps to OpenShift and Kubernetes, you first need to register a cluster in the Mendix Developer Portal. This will provide you with the information you need to deploy the **Mendix Operator** and **Mendix Agent** in your OpenShift context and create a link to the **Environments** pages of your Mendix app through the **Interactor**.
+To allow you to manage the deployment of your apps to Red Hat OpenShift and Kubernetes, you first need to register a cluster in the Mendix Developer Portal. This will provide you with the information you need to deploy the **Mendix Operator** and **Mendix Agent** in your OpenShift context and create a link to the **Environments** pages of your Mendix app through the **Interactor**.
 
 ![](attachments/private-cloud-cluster/image1.png)
 
-This document explains how to set up the cluster in Mendix
+This document explains how to set up the cluster in Mendix.
 
 Once you have registered your cluster, you can invite additional team members who can then create or view environments in which their apps are deployed, depending on the rights you give them. For more information on the relationship between Mendix environments and Kubernetes clusters, see [Containerized Mendix App Architecture](#containerized-architecture), below.
 
@@ -23,6 +23,7 @@ To register a cluster in your OpenShift context, you need the following:
 * A Kubernetes platform or OpenShift version 3.11 or above
 * Administration account for your platform
 * **OpenShift CLI** installation (see [Getting started with the CLI](https://docs.openshift.com/container-platform/4.1/cli_reference/getting-started-cli.html) on the Red Hat OpenShift website for more information) if you are creating clusters on OpenShift
+* **Kubectl** installation if you are deploying to another Kubernetes platform (see [Install and Set Up kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) on the Kubernetes webside for more information)
 * **Bash** (Bourne-again shell) for your machine. If you are running on Windows, you can use something like [**Windows Subsystem for Linux (WSL)**](https://docs.microsoft.com/en-us/windows/wsl/faq) or the **Git Bash emulator** that comes with [git for windows](https://gitforwindows.org/).
 
 ## 3 Registering a Cluster
@@ -51,11 +52,13 @@ To register a cluster in your OpenShift context, you need the following:
 
 6. Enter the following information:
     
-  1. **Name** – The name you want to give the cluster you are registering
+  1. **Name** – The name you want to give the cluster you are registering.
   
-  2. **Namespace** – this is the namespace in your platform
+  2. **Namespace** – this is the namespace in your platform.
   
-  3. **Type** – choose the correct type for your cluster, for example **Kubernetes**
+  3. **Type** – choose the correct type for your cluster, for example **Kubernetes (production)**.
+
+  4. **Installation type** – if you want to [create environments and deploy your app from the Mendix Developer Portal](private-cloud-deploy), choose **Connected**, but if you only want to [control your deployments through the Mendix Operator using the CLI](private-cloud-operator), choose **Standalone**.
 
         ![](attachments/private-cloud-cluster/image7.png)
 
@@ -69,11 +72,13 @@ The first script is the installation script which will install the Mendix operat
 
 ### 3.2 Running the Installation Script
 
-You will need to have administrator rights to your private cloud platform. This means you will have to log in before you run the installation script. The instructions below are for the OpenShift platform; a similar process will be required for other platforms.
+You will need to have administrator rights to your private cloud platform. This means you will have to log in before you run the installation script. 
 
 #### 3.2.1 Signing in to OpenShift{#openshift-signin}
 
-To run the installation script on OpenShift, you must sign in to OpenShift using the OpenShift CLI, and then run a Bash script in Bash.
+These instructions are for the OpenShift platform; a similar process will be required for other platforms.
+
+To run the installation script on OpenShift, you must sign in to OpenShift using the OpenShift CLI, before you run the scripts in Bash.
 
 You can do this as follows:
 
@@ -99,11 +104,11 @@ You can do this as follows:
 
 To execute the installation script, do the following:
 
-1. Copy the Installation Script which has been created for you by clicking **Copy to clipboard**  
+1. Copy the Installation Script which has been created for you by clicking **Copy to clipboard**.
 
     ![](attachments/private-cloud-cluster/image12.png)
 
-2. Paste the script into your bash console and press **Enter** to run the script.
+2. Paste the script into your Bash console and press **Enter** to run the script.
 
 The response to the script should look like the image below. You can see that the script has installed the following:
 
@@ -118,7 +123,7 @@ The Mendix operator and Mendix agent are now installed on your platform. If you 
 
 ![](attachments/private-cloud-cluster/image14.png)
 
-The installation script can be found in the **Installation** tab for your cluster in the cluster manager.
+You can always find the installation script again in the **Installation** tab for your cluster in the cluster manager.
 
 ### 3.3 Running the Reconfiguration Script{#reconfiguration-script}
 
@@ -218,9 +223,9 @@ Once it is configured, you can manage your cluster through the Developer Portal.
 
     ![](attachments/private-cloud-cluster/image23.png)
 
-  From this page you can see a summary of your clusters with an indication of their status and how long they have been running (uptime).
+    From this page you can see a summary of your clusters with an indication of their status and how long they have been running (uptime).
 
-2. Click the tile of the cluster you want to manage  
+2. Click the tile of the cluster you want to manage.
 
     ![](attachments/private-cloud-cluster/image24.png)
 
@@ -304,7 +309,7 @@ You can change the access rights for, or completely remove, existing members.
 
 2. Either:
     
-  1. Make changes and click **Save**
+  1. Make changes and click **Save**.
     
   2. Click **Remove member** to remove this member completely. You will be asked to confirm this action.
         
@@ -335,7 +340,7 @@ The **Plans** tab shows you the database and storage plans which are currently c
 
 ![](attachments/private-cloud-cluster/image33.png)
 
-From this tab you can do the following.
+From this tab you can perform the following action:
 
 #### 4.4.1 Add a Plan
 
@@ -345,7 +350,7 @@ Click **Add** and you will be able to enter the name of an existing plan and add
 
 #### 4.4.2 Deactivate a Plan
 
-Click **Deactivate** next to the name of the plan you wish to deactivate. You cannot remove plans from within the cluster manager, but you can deactivate them to ensure that developers cannot create environments using the plan. Any environments currently using the plan will not be affected by this setting
+Click **Deactivate** next to the name of the plan you wish to deactivate. You cannot remove plans from within the cluster manager, but you can deactivate them to ensure that developers cannot create environments using the plan. Any environments currently using the plan will not be affected by this setting.
 
 #### 4.4.3 Activate a Plan
 
@@ -355,7 +360,7 @@ Click **Activate** next to the name of the plan you wish to activate. The plan c
 
 The **Installation** tab shows you the installation script and configuration script which you used to create the cluster, together with the parameters which are used to configure the agent.
 
-You can use the **Reconfiguration Script** to change the configuration of your cluster by pasting it into a bash shell as described in [Running the Reconfiguration Script]{#reconfiguration-script}, above.
+You can use the **Reconfiguration Script** to change the configuration of your cluster by pasting it into a bash shell as described in [Running the Reconfiguration Script](#reconfiguration-script), above.
 
 You can also copy the installation and reconfiguration scripts to retain in your own code repository, if you wish.
 
@@ -371,13 +376,17 @@ If you do not need your data on AWS anymore, then you need to clean it up manual
 
 This section covers an issue which can arise where Mendix cannot recover automatically and manual intervention may be required.
 
-### 6.1 Agent Connection Status Not up to Date
+### 6.1 Status Reporting
+
+Under some circumstances changes in the status of the cluster and its environments will not be updated automatically. To ensure you are seeing the current status, you may need to click the **Refresh** button on the screen (not the browser page refresh button).
+
+### 6.2 Agent Connection Status Not up to Date
 
 The Cluster status may show as `Waiting for Connection`, even though the Agent is actually connected to the cluster. The Agent needs to be restarted to force it to reconnect.
 
 Run the following command in the namespace where the Mendix Operator is deployed:
 
-#### 6.1.1 OpenShift
+#### 6.2.1 OpenShift
 
 ```bash
 oc scale deployment mendix-agent --replicas=0 && \
@@ -385,7 +394,7 @@ sleep 200 && \
 oc scale deployment mendix-agent --replicas=1
 
 ```
-#### 6.1.2 Kubernetes
+#### 6.2.2 Kubernetes
 
 ```bash
 kubectl scale deployment mendix-agent --replicas=0 && \

@@ -409,13 +409,17 @@ If you attempt to deploy an app with security not set to production into a produ
 
 This section covers an issue which can arise where Mendix cannot recover automatically and manual intervention may be required.
 
-### 7.1 Agent Connection Status Not up to Date
+### 7.1 Status Reporting
+
+Under some circumstances changes in the status of the environment and its apps will not be updated automatically. To ensure you are seeing the current status, you may need to click the **Refresh** button on the screen (not the browser page refresh button).
+
+### 7.2 Agent Connection Status Not up to Date
 
 Under certain conditions, the status of an environment in the Portal might become outdated and not reflect the environment state in the cluster. The Agent needs to be restarted to force it to resend the latest environment state to the Portal.
 
 Run the following command in the namespace where the Mendix Operator is deployed:
 
-#### 7.1.1 OpenShift
+#### 7.2.1 OpenShift
 
 ```bash
 oc scale deployment mendix-agent --replicas=0 && \
@@ -423,7 +427,7 @@ sleep 200 && \
 oc scale deployment mendix-agent --replicas=1
 
 ```
-#### 7.1.2 Kubernetes
+#### 7.2.2 Kubernetes
 
 ```bash
 kubectl scale deployment mendix-agent --replicas=0 && \

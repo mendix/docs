@@ -8,9 +8,9 @@ tags: ["Deploy", "Private Cloud", "Environment", "Operator", "CI/CD", "CLI"]
 
 ## 1 Introduction
 
-Once you have the Mendix Operator installed in your Kubernetes, AWS-EKS, or OpenShift cluster (see [Registering a Private Cloud Cluster](private-cloud-cluster), you can use it to control the deployment of your Mendix app using Mendix Custom Resources (CRs). The Mendix operator then creates the app container and builds the app inside the cluster, together with all the resources the app needs.
+Once you have the Mendix Operator installed in your Kubernetes Red Hat OpenShift, AWS-EKS, or AWS-AKS cluster (see [Registering a Private Cloud Cluster](private-cloud-cluster), you can use it to control the deployment of your Mendix app using Mendix Custom Resources (CRs). The Mendix operator then creates the app container and builds the app inside the cluster, together with all the resources the app needs.
 
-This document explains how to provide the CRs through the console or command line for a standalone cluster. This enables you to automate your deployment processes if required.
+This document explains how to provide the CRs through the console or command line for a standalone cluster. This enables you to automate your deployment processes and perform deployments from behind a firewall which would prevent access to the Mendix Developer Portal.
 
 Alternatively, you can create a connected cluster and use the Mendix Developer Portal to deploy the app, as described in [Deploying a Mendix App to a Private Cloud Cluster](private-cloud-deploy).
 
@@ -19,6 +19,7 @@ Alternatively, you can create a connected cluster and use the Mendix Developer P
 * A Kubernetes, AWS-EKS, or OpenShift (version 3.11 or above) platform
 * Platform administration account
 * **OpenShift CLI** installation if you are deploying on OpenShift (see [Getting started with the CLI](https://docs.openshift.com/container-platform/4.1/cli_reference/getting-started-cli.html) on the Red Hat OpenShift website for more information)
+* **Kubectl** installation if you are deploying to another Kubernetes platform (see [Install and Set Up kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) on the Kubernetes webside for more information)
 * **Bash** (Bourne-again shell) for your machine. If you are running on Windows, you can use something like [**Windows Subsystem for Linux (WSL)**](https://docs.microsoft.com/en-us/windows/wsl/faq) or the **Git Bash emulator** that comes with [git for windows](https://gitforwindows.org/).
 * The **deployment package** of a Mendix app made with version 7.23.0 or above
 

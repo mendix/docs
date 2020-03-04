@@ -8,9 +8,15 @@ tags: ["Deployment", "Private Cloud", "Environment"]
 
 ## 1 Introduction
 
-You can deploy and manage your Mendix apps in a private cloud cluster, for example Red Hat OpenShift or Kubernetes.
+You can deploy and manage your Mendix apps in a Kubernetes private cloud cluster.
 
-There are two steps required to achieve this:
+The following platforms are officially supported by Mendix:
+
+* Red Hat OpenShift
+* Amazon Web Services Elastic Kubernetes Service (AWS-EKS)
+* Amazon Web Services Azure Kubernetes Service (AWS-AKS)
+
+There are two steps required to achieve this, listed below.
 
 ### 1.1 Registering Your Cluster
 

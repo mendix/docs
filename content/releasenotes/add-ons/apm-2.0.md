@@ -86,10 +86,10 @@ We made the following improvements to the browser agent:
 
 * We released the Mendix 6 version of the agent for release [2.0.7](#207) (which contains the Mendix 7 version).
 
-## 2.0.5
+## 2.0.5 {#205}
 
-* If logs and performance run as threads, there is a limit on the buffer between the Mendix log thread and the APM threads. If the Mendix platform delivers too quickly, APM will now drop the messages.
-* Advanced settings have been added to allow certain functions:
+* If logs and performance run as threads, there is a limit on the buffer between the Mendix log thread and the APM threads. If the Mendix Platform delivers too quickly, APM will now drop the messages.
+* Advanced settings have been added to allow for the following functions:
 	* **Use profiler**
 	* **User recorder**
 	* **Max trap collection**
@@ -97,20 +97,19 @@ We made the following improvements to the browser agent:
 
 	With this, the agent can be tuned, and the settings cannot be overruled from the manager (for example, for protecting a production environment or in the event of conflicts for not using the profiler).
 * There is now the **NONE** option for statistics and trap collection, with which you effectively turn off the tools.
-* There is now a hard-coded maximum of messages that the APM agent/manager can accept from a Mendix log thread for both the message and stack trace.
-* Max message length in MendixMessage via advanced setting
-* New APM API for ci/cd. This is still beta and not public available.
-* `excludenodes=<node:level,node:level,...>` to not subscribe to certain nodes.above the specified level. This feature can be used exclude lognodes, for example as a workaround for the webservice in Mendix 6 and Mendix 7 < 7.11 platform bug.
-* Load tool bug fix recording and processing queryIds
-* Load tool XML page load on need, since button action ‘Create Object’ has no open_form in the client-API
-* Fix for APM statistics counting some microflows multiple times depending on the amount of call sources
-* Performance recording of SQL statements functioning again (failed in v62 after option to disable profiling)
-* Hourly purge of performance tool memory structures (together with statistic snapshot upload) to prevent out of memory issues if for example many microflows end in error
-* Some extra clearing of memory structures to faster release memory and give the java garbage collector an easier job
+* There is now a hard-coded maximum of messages that the APM agent and APM Manager can accept from a Mendix log thread for both the message and stack trace.
+* There is now  a maximum message length in `MendixMessage` via an advanced setting.
+* `excludenodes=<node:level,node:level,...>` can now be used to not subscribe to certain nodes above the specified level. This feature can be used exclude log nodes (for example, as a workaround for a Mendix 6 web service and Mendix 7 bugs).
+* There is now a load tool bug fix for recording and processing query IDs.
+* The load tool loads XML pages on need, since the [create object](/refguide/create-object) button action has no `open_form` in the Client API.
+* We fixed APM statistics that were counting some microflows multiple times depending on the amount of call sources.
+* The performance recording of SQL statements is now functioning again.
+* There is now an hourly purge of performance tool memory structures (together with statistic snapshot uploads) to prevent out-of-memory issues if, for example, many microflows end in error.
+* Some extra clearing of memory structures has been added for a faster release memory and to give the Java garbage collector an easier job.
 
 ## 2.0.4
 
-The Mendix 6 version of the agent in release 2.0.5, which contains the Mendix 7 version.
+* We released the Mendix 6 version of the agent for release [2.0.5](#205) (which contains the Mendix 7 version).
 
 ## 2.0.3
 

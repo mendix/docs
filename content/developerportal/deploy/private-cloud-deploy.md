@@ -24,7 +24,7 @@ Because you can run several Mendix apps in the same cluster, each app must have 
 
 ##  2 Prerequisites for Deploying an App
 
-To register a cluster on your private cloud platform, you need the following:
+To deploy an app to your private cloud platform, you need the following:
 
 * A Mendix account with **Deploy App** rights to an existing Cluster – see [Registering a Private Cloud Cluster](private-cloud-cluster) for more information on setting up clusters and adding members
 * Mendix Studio Pro version 7.23.0 or above

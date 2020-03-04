@@ -8,7 +8,7 @@ tags: ["Deploy", "Private Cloud", "Environment", "Operator", "CI/CD", "CLI"]
 
 ## 1 Introduction
 
-Once you have the Mendix Operator installed in your Kubernetes Red Hat OpenShift, AWS-EKS, or AWS-AKS cluster (see [Registering a Private Cloud Cluster](private-cloud-cluster), you can use it to control the deployment of your Mendix app using Mendix Custom Resources (CRs). The Mendix operator then creates the app container and builds the app inside the cluster, together with all the resources the app needs.
+Once you have the Mendix Operator installed in your Kubernetes Red Hat OpenShift, AWS-EKS, or AWS-AKS cluster (see [Registering a Private Cloud Cluster](private-cloud-cluster)), you can use it to control the deployment of your Mendix app using Mendix Custom Resources (CRs). The Mendix operator then creates the app container and builds the app inside the cluster, together with all the resources the app needs.
 
 This document explains how to provide the CRs through the console or command line for a standalone cluster. This enables you to automate your deployment processes and perform deployments from behind a firewall which would prevent access to the Mendix Developer Portal.
 
@@ -43,7 +43,7 @@ The deployment package must be available over the internet without requiring aut
 
 ### 3.2 Editing the CR{#edit-cr}
 
-You need to configure the following CR:
+You need to create a file containing the following yml code and then configure it to create the CR for your app:
 
 ```yml
 apiVersion: privatecloud.mendix.com/v1alpha1
@@ -86,7 +86,7 @@ spec:
       }
 ```
 
-Make the following changes:
+You need to make the following changes:
 
 * **name**: – You can deploy multiple apps in one project/namespace — the app name in the CR doesn't have to match the app name in the mda but must be unique in the project — see [Reserved Names for Mendix Apps](#reserved-names), below, for restrictions on naming your app
 * **database/storage**: – ensure that these have the correct **servicePlan** — they have to have the same names that you registered in the cluster
@@ -100,14 +100,15 @@ Make the following changes:
 * **dtapmode**: – For development of the app, for example acceptance testing, choose **D**, for production deployment, select **P**
 
     if you select production, then you will need to provide a **Subscription Secret** to ensure that your app runs as a licensed app — see [Free Apps](mendix-cloud-deploy#free-app) in *Mendix Cloud* for the differences between free/test apps and licensed apps
+    
     the subscription secret needs to be supplied via the **customConfiguration** using the following values:
 
-    * "License.SubscriptionSecret":"{subscription secret}"
-    * "License.UseLicenseServer":"true"
-    * "License.LicenseServerURL":<https://subscription-api.test.mendix.com/activate>
-    * "License.EnvironmentName":"{environment name}"
+    * `"License.SubscriptionSecret":"{subscription secret}"`
+    * `"License.UseLicenseServer":"true"`
+    * `"License.LicenseServerURL":<https://subscription-api.test.mendix.com/activate>`
+    * `"License.EnvironmentName":"{environment name}"`
 
-    {{% alert type="warning" %}}Your app can only be deployed to a production environment if security is set on. {{% /alert %}}
+    {{% alert type="warning" %}}Your app can only be deployed to a production environment if [security in the app is set on](/refguide/project-security). {{% /alert %}}
 * **jettyOptions** and **customConfiguration**: – if you have any custom Mendix Runtime parameters, they need to be added to this section — options for the Mendix runtime have to be provided in JSON format — see the examples in the CR for the correct format
 
 ### 3.3 Building and Deploying Your App

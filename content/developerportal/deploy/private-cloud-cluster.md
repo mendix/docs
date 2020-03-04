@@ -56,7 +56,7 @@ To register a cluster in your OpenShift context, you need the following:
   
   2. **Namespace** – this is the namespace in your platform.
   
-  3. **Type** – choose the correct type for your cluster, for example **Kubernetes (production)**.
+  3. **Type** – choose the correct type for your cluster.
 
   4. **Installation type** – if you want to [create environments and deploy your app from the Mendix Developer Portal](private-cloud-deploy), choose **Connected**, but if you only want to [control your deployments through the Mendix Operator using the CLI](private-cloud-operator), choose **Standalone**.
 

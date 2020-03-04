@@ -300,7 +300,7 @@ The second method should be used if the first method is not possible for some re
 3. Commit your changes using Studio Pro. 
 4. Reopen the main line project in Studio Pro only after overwriting the files.
 
-## 8 Versioning a Project Deployed to the Cloud
+## 8 Versioning a Project Deployed to the Cloud {#versioning-project}
 
 ### 8.1 Deploying Locally
 

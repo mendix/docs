@@ -10,25 +10,49 @@ tags: ["Studio Pro"]
 
 ## 1 Introduction
 
-Mendix Studio Pro is the tool for creating, viewing, and editing your Mendix applications. A Mendix app is called a [project](project) in Studio Pro. 
-
-## Installing Studio Pro
-
-## Studio Pro Interface
-
-A project consists of many *documents* that are grouped in [modules](modules) and folders. A *document* is a individual file, for example, a [page](pages), [microflow](microflows), or a [scheduled event](scheduled-events). 
-
-![Studio Pro Diagram](attachments/studio-pro-overview/studio-pro-diagram.png)
+Mendix Studio Pro is the tool for creating, viewing, and editing your Mendix applications. A Mendix app is called a [project](project) in Studio Pro.  You can easily go from Studio Pro to the Developer Portal, Mendix Studio, or App Store. 
 
 One Studio Pro instance can have only one project open at a time, but you can open two Studio Pro instances when necessary.
-
-This documentation describes the graphical user interface of Studio Pro. 
 
 {{% alert type="info" %}}
 When Studio Pro is open, press <kbd>F1</kbd> to quickly jump to documentation.
 {{% /alert %}}
 
-## 2 Document Tabs {#documents}
+This document describes the user interface of Mendix Studio Pro. 
+
+<img src="attachments/studio-pro-overview/studio-pro-diagram.png" alt="Studio Pro Diagram"  />
+
+## 2 Project Structure
+
+A project consists of individual files (*documents*) and settings that are grouped in folders and [modules](modules). The complete structure of your project can be viewed in the **Project Explorer**. For more information on a project structure, see [Project Explorer](project-explorer).
+
+## 3 Top Bar
+
+The Studio Pro top bar contains the following items:
+
+* [Menus](#menus) 
+* [Buttons to run and view your app](#run-and-view)
+* [Links to the Developer Portal and App Store](#links) 
+
+### 3.1 Menus {#menus}
+
+In the Studio Pro top bar, you can see several menus, such as [Edit](edit-menu), [View](view-menu), or [Version Control](version-control-menu) menus. Each menu contains menu items that allow you to perform various actions, for example, to [create a deployment package](create-deployment-package-dialog), set [preferences](preferences-dialog), or view the [Errors](errors-pane) pane. 
+
+For more information on menus, see [Menus](menus). 
+
+### 3.2 Run and View Buttons {#run-and-view}
+
+You can deploy your app by clicking **Run** or **Run locally** buttons. To view your deployed app, click the **View** button. 
+
+For more information on deployment in Mendix, see [Deployment](developerportal/deploy).
+
+For more information on deploying your app and versioning it, see  the [Versioning a Project Deployed to the Cloud](using-version-control-in-studio-pro#versioning-project) section in *Using Version Control in Studio Pro*. 
+
+### 3.3 Links to the Developer Portal and App Store {#links}
+
+In the top-right you can find links to the Developer Portal and App Store. You can also see your account name (if you are signed in). Click the account name to navigate to your apps, the Developer Portal, your profile, or to sign out. 
+
+## 4 Document Tabs {#documents}
 
 The documents you view and edit are shown in tabs. 
 
@@ -44,15 +68,17 @@ You can have a number of tabs open, just like in a modern web browser. They can 
 
 Each document has its own save state, history, and future, so undo and redo actions are unlimited.
 
-## 3 Menus 
+## 5 Working Area
 
-In the Studio Pro top bar, you can see several menus, such as [Edit](edit-menu), [View](view-menu), or [Version Control](version-control-menu) menus. Each menu contains menu items that allow you to perform various actions, for example, to [create a deployment package](create-deployment-package-dialog), set [preferences](preferences-dialog), or view the [Errors](errors-pane) pane. 
+A working area is an editor that allows you to change documents or a domain model. Depending on which document you are working on, it has different settings in its top area. 
 
-For more information on menus, see [Menus](menus). 
+## 6 Panes
 
-## 4 Shortcut Keys
+Dockable panes can be positioned around the working area and contain various elements and settings. For example, you can view list of errors, configure properties of a specific document or an element, view toolbox. Panes can be opened via [Menus](menus). 
 
-### 4.1 General Shortcut Keys
+## 7 Shortcut Keys
+
+### 7.1 General Shortcut Keys
 
 In the main window pane, <kbd>Ctrl</kbd> + <kbd>Tab</kbd> can be used to navigate between all open documents. Other shortcut keys that can be used in the main window pane can be found next to their relevant menu item in  [Menus](menus).
 
@@ -73,7 +99,7 @@ In most edit grids (such as the list of attributes in the entity properties), th
 | <kbd>Enter</kbd> | Edits the currently selected item. |
 | <kbd>Delete</kbd> | Deletes the currently selected item(s). |
 
-### 4.2 Domain Model Editor Shortcut Keys
+### 7.2 Domain Model Editor Shortcut Keys
 
 The following shortcut keys are available in the domain model editor:
 
@@ -83,7 +109,7 @@ The following shortcut keys are available in the domain model editor:
 | <kbd>Ctrl</kbd> + <kbd>A</kbd> | Selects all entities. |
 | <kbd>Esc</kbd> | Clears selection. |
 
-### 4.3 Page Editor Shortcut Keys
+### 7.3 Page Editor Shortcut Keys
 
 The following shortcut keys are available in the page editor:
 
@@ -94,7 +120,7 @@ The following shortcut keys are available in the page editor:
 | <kbd>Enter</kbd> | Edits the properties of the currently selected object in a dialog box. |
 | <kbd>F2</kbd> | Edits the caption of a label or button inline on the page. You can also just start typing a letter or a digit and the caption will be replaced by what you type. |
 
-### 4.4 Microflow Editor Shortcut Keys
+### 7.4 Microflow Editor Shortcut Keys
 
 The following shortcut keys are available in the microflow editor:
 
@@ -109,7 +135,7 @@ The following shortcut keys are available in the microflow editor:
 | <kbd>Shift</kbd> when resizing an activity | When resizing the entity, by holding <kbd>Shift</kbd> , the microflow component will stay centered at its current position and will expand equally in all directions. |
 | <kbd>Ctrl</kbd> when selecting multiple activities | When pressing the <kbd>Ctrl</kbd>, you can select additional microflow components. Clicking a selected component while holding <kbd>Ctrl</kbd> will deselect it. |
 
-### 4.5 Microflow Debugger Shortcut Keys {#debugger-shortcuts}
+### 7.5 Microflow Debugger Shortcut Keys {#debugger-shortcuts}
 
 The following shortcut keys are available for the the microflow debugger:
 

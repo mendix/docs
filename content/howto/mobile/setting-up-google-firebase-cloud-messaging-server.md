@@ -53,7 +53,7 @@ Before you add an app to FCM, you must retrieve your app's bundle ID. Its locati
 
 For a native app, your bundle ID will be what you specify for the `--application-id` parameter. You can find this ID later in your generated GitHub repo:
 
-* For Android, open  *android/app/build.gradle* and consult **applicationId** to find your ID 
+* For Android, open *android/app/build.gradle* and consult **applicationId** to find your ID 
 * For iOS, open *ios/Config/config.xcconfig* and consult **BUNDLE_IDENTIFIER** to find your ID
 
 For a hybrid app, you can find this ID in your Project Dashboard. Click **Deploy**, then **Mobile App**. Your ID is listed as **App Identifier**:
@@ -66,11 +66,11 @@ Do the following to add your app to FCM:
 
   ![](attachments/push-server/firebase/project_settings.png)
 
-2. Go to the **General** tab and click **Add app**:
+1. Go to the **General** tab and click **Add app**:
 
   ![](attachments/push-server/firebase/add_app.png)
 
-3. Select Android and fill in the bundle_id. 
+1. Select Android and fill in the bundle_id. 
 
   ![](attachments/push-server/firebase/android_setup.png)
 

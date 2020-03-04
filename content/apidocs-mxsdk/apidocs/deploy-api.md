@@ -8,7 +8,7 @@ tags: ["API", "deploy", "licensed", "deployment", "cloud"]
 
 ## 1 Introduction
 
-The Deploy API allows you to manage application environments in the Mendix Cloud. You can retrieve the status of, and start and stop, applications. You can also configure new model versions and deploy them to application environments. To create and manage deployment packages you need, in addition, the [Build API](build-api). For backups related actions refer to [Backups API documentation](backups-api).
+The Deploy API allows you to manage application environments in the Mendix Cloud. You can retrieve the status of, and start and stop, applications. You can also configure new model versions and deploy them to application environments. To create and manage deployment packages you also need the [Build API](build-api). For backup-related actions refer to [Backup API](backups-api).
 
 This image provides a domain model representation of the concepts discussed below and how these are related:
 
@@ -225,7 +225,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 List of objects with the following key-value pairs:
 
-*   _Status_ (String): Status of the environment. Possible values: Empty, Stopped, Running
+*   _Status_ (String): Status of the environment. Possible values: Empty, Stopped, Running.
 *   _EnvironmentId_ (String): Unique identifier of the environment.
 *   _Url_ (String): URL to access your application.
 *   _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy#flexible-environments).
@@ -291,7 +291,7 @@ Mendix-ApiKey: 26587896-1cef-4483-accf-ad304e2673d6
 
 An object with the following key-value pairs:
 
-*   _Status_ (String): Status of the environment. Possible values: Empty, Stopped, Running
+*   _Status_ (String): Status of the environment. Possible values: Empty, Stopped, Running.
 *   _EnvironmentId_ (String): Unique identifier of the environment.
 *   _Url_ (String): URL to access your application.
 *   _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy#flexible-environments).
@@ -849,9 +849,9 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 }
 ```
 
-### 3.19 Scaling Environments (Mendix Cloud v4 Only)
+### 3.15 Scaling Environments (Mendix Cloud v4 Only)
 
-#### 3.19.1 Description
+#### 3.15.1 Description
 
 Scale memory and instances of an environment. Only those environments that run a package that has Mendix Runtime version 7 or above will make it possible to spread the total memory over multiple instances.
 
@@ -862,7 +862,7 @@ HTTP Method: POST
 URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/scale
 ```
 
-#### 3.19.2 Request
+#### 3.15.2 Request
 
 **Request Parameters**
 
@@ -885,7 +885,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 }
 ```
 
-#### 3.19.3 Output
+#### 3.15.3 Output
 
 **Error Codes**
 
@@ -913,9 +913,9 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 }
 ```
 
-### 3.20 Create Environment Tags (Mendix Cloud v4 Only)
+### 3.16 Create Environment Tags (Mendix Cloud v4 Only)
 
-#### 3.20.1 Description
+#### 3.16.1 Description
 
 Tags are arbitrary strings that are not interpreted by the Developer Portal. Users are able to set tags on environments. Tags serve two purposes:
 
@@ -927,7 +927,7 @@ HTTP Method: POST
 URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/tags
 ```
 
-#### 3.20.2 Request
+#### 3.16.2 Request
 
 **Request Parameters**
 
@@ -949,7 +949,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 }
 ```
 
-#### 3.20.3 Output
+#### 3.16.3 Output
 
 **Error Codes**
 
@@ -965,9 +965,9 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 }
 ```
 
-### 3.21 Retrieve Environment Tags (Mendix Cloud v4 Only)
+### 3.17 Retrieve Environment Tags (Mendix Cloud v4 Only)
 
-#### 3.21.1 Description
+#### 3.17.1 Description
 
 Gets current values of environment tags.
 
@@ -976,7 +976,7 @@ HTTP Method: GET
 URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/tags
 ```
 
-#### 3.21.2 Request
+#### 3.17.2 Request
 
 **Request Parameters**
 
@@ -995,7 +995,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 ```
 
-#### 3.21.3 Output
+#### 3.17.3 Output
 
 **Error Codes**
 
@@ -1011,9 +1011,9 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 }
 ```
 
-### 3.22 Delete Environment Tags (Mendix Cloud v4 Only)
+### 3.18 Delete Environment Tags (Mendix Cloud v4 Only)
 
-#### 3.22.1 Description
+#### 3.18.1 Description
 
 Deletes the current value of environment tags.
 
@@ -1022,7 +1022,7 @@ HTTP Method: DELETE
 URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/tags
 ```
 
-#### 3.22.2 Request
+#### 3.18.2 Request
 
 **Request Parameters**
 
@@ -1043,7 +1043,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 }
 ```
 
-#### 3.22.3 Output
+#### 3.18.3 Output
 
 **Response Code**
 
@@ -1063,9 +1063,9 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 []
 ```
 
-### 3.23 Download Archived Logs for a Specific Date (Mendix Cloud v4 Only)
+### 3.19 Download Archived Logs for a Specific Date (Mendix Cloud v4 Only)
 
-#### 3.23.1 Description
+#### 3.19.1 Description
 
 Downloads archived logs for a specific date.
 
@@ -1074,7 +1074,7 @@ HTTP Method: GET
 URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/logs/<Date>(YYYY-MM-DD)
 ```
 
-#### 3.23.2 Request
+#### 3.19.2 Request
 
 **Request Parameters**
 
@@ -1099,7 +1099,7 @@ Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 ```
 
-#### 3.23.3 Output
+#### 3.19.3 Output
 
 **Error Codes**
 

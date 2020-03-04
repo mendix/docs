@@ -9,6 +9,10 @@ menu_order: 20
 
 The Backups API allows you to manage data snapshots of applications hosted in the Mendix Cloud. Data snapshots consist of a Postgresql database dump and file objects referenced from the database. You can create new snapshots, and restore or download them. Uploading snapshots is currently only supported via the [Developer Portal](/developerportal/operate/backups).
 
+{{% alert type="info" %}}
+This documents version 1 of the backups API. A new [V2 API](backups-api) is available which uses asynchronuous operations of long-running tasks.
+{{% /alert %}}
+
 ## 2 Authentication
 
 The Backups API requires authentication via API keys that are bound to your Mendix account (for more information, see [Deploy Authentication](deploy-api#authentication)). In addition to the **API Access** permission, the **Backups** permission is also required to manage backups. 

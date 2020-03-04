@@ -1,20 +1,21 @@
 ---
-title: "Backups API V2"
+title: "Backup API V2"
 parent: "deploy-api"
 description: "An API to allow the triggering of backups creation, restore, download and to get information about existing snapshots."
+menu_order: 10
 ---
 
 ## 1 Introduction
 
-The Backups API V2 allows you to manage data snapshots of applications hosted in the Mendix Cloud V4. Data snapshots consist of a Postgresql database dump and file objects referenced from the database. You can create new snapshots, restore or download them. Uploading snapshot is currently only supported via the [Developer Portal](/developerportal/operate/backups). Unlike the [older v1 api](backups-api-v1), this new V2 API is focussed on asynchronuous operations of long running tasks.
+The Backups API V2 allows you to manage data snapshots of applications hosted in the Mendix Cloud V4. Data snapshots consist of a Postgresql database dump and file objects referenced from the database. You can create new snapshots and restore or download them. Uploading snapshots is currently only supported via the [Developer Portal](/developerportal/operate/backups). Unlike the [older V1 API](backups-api-v1), this new V2 API is focused on asynchronuous operations of long-running tasks.
 
 {{% alert type="info" %}}
-This article is only applicable to applications deployed in **Mendix Cloud V4**. You can check this in the [developer portal](/developerportal/deploy/environments-details).
+This article is only applicable to applications deployed in **Mendix Cloud V4**. You can check which version of the Mendix Cloud you are using in the [Developer Portal](/developerportal/deploy/environments-details).
 {{% /alert %}}
 
 ## 2 Authentication
 
-The Backups API requires authentication via API keys that are bound to your Mendix account (for more information, see [Deploy Authentication](deploy-api#authentication)). In addition to the **API Access** permission, the **Backups** permission is also mandatory to manage backups. 
+The Backups API requires authentication via API keys that are bound to your Mendix account (for more information, see [Deploy Authentication](deploy-api#authentication)). In addition to the **API Access** permission, the **Backups** permission is also required to manage backups. 
 
 
 ## 3 API Calls
@@ -53,7 +54,7 @@ Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 ```
 
-#### 3.11.3 Output
+#### 3.1.3 Output
 
 An object with the following key-value pairs:
 

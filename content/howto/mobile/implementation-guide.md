@@ -107,9 +107,9 @@ Make sure that the `Encryption.EncryptionKey` constant has a value before you st
 
 {{% /alert %}}
 
-## 9 Setting Up Access to APNs and/or FCM
+## 9 Setting Up Access to APNs or FCM
 
-Set up access to APNs and/or FCM and configure them in your application. Please note that starting with FCM is recommended, because it is significantly less complicated than setting up APNs. You can return to this step later to set up APNs.
+Below are instructions for setting up access to APNs or FCM and configuring them in your application. We recommend starting with FCM, because it is significantly less complicated than setting up APNs. You can return to this section later to set up APNs.
 
 Open your Mendix app, sign in as an **Admin**, and open the **PushNotifications_Administration** page. Scroll to the **FCM** section and create or edit a configuration. 
 

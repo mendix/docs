@@ -8,7 +8,7 @@ tags: ["deeplink", "deep link", "url","native", "mobile", "developer", "native-b
 
 ## 1. Introduction
 
-While URLs typically open websites, they can also be used to open an installed app on your mobile divice. With this tutorial you will learn how to connect the URL `app://myapp` to your Mendix Native App installed on your Android or iOS device. It is also possible to pass additional data using path, query parameters, and hashes. Passing additional data could look like this: `app://myapp/task/123?action=close#info`.
+While URLs typically open websites, they can also be used to open an installed app on your mobile device. With this tutorial you will learn how to connect the URL `app://myapp` to your Mendix Native App installed on your Android or iOS device. It is also possible to pass additional data using path, query parameters, and hashes. Passing additional data could look like this: `app://myapp/task/123?action=close#info`.
 
 A URL is constructed of these parts:
 
@@ -26,7 +26,7 @@ When an app is installed it registers the `schema` and optionally the `host` so 
 
 ### 1.1 Testing
 
-Please note that the Make It Native app has already the registered schema `makeitnative://` and can be used out of the box. If want to use the Make It Native app with that schema, see the [Using Deep Linking in Your App](#using-deep-linking) section below. If you want to change this schema, see [How to Create a Custom Developer App](/howto/mobile/how-to-devapps) to build your own custom developer app and then use this tutorial to change its schema [todo: which sections apply in this case?].
+Please note that the Make It Native app has already the registered schema `makeitnative://` and can be used out of the box. To use the Make It Native app with that schema, see the [Using Deep Linking in Your App](#using-deep-linking) section below. If you want to change this schema, see [How to Create a Custom Developer App](/howto/mobile/how-to-devapps) to build your own custom developer app and then use this tutorial to change its schema [todo: which sections apply in this case?].
 
 For development and this tutorial we recommend running the app from source against the local running Mendix Studio Pro. This will save you time when rebuilding and redeploying your app. To do this, follow the steps in the [Connecting to a Local Running Instance of Studio Pro](/refguide/native-builder#connect-local) section of the *Native Builder Reference Guide*.
 

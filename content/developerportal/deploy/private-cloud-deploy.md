@@ -18,7 +18,7 @@ Alternatively, you can provide the CRs through the console or command line for a
 
 Within your cluster you can run one, or several, Mendix apps. Each app runs in a namespace. You can see the relationship between the Mendix environments and the Kubernetes namespaces in the image below.
 
-![](attachments/private-cloud-deploy/image1.png)
+![](attachments/private-cloud-deploy/mx4pc-containerized-architecture.png)
 
 Because you can run several Mendix apps in the same cluster, each app must have a unique name. In addition, the app cannot have the same name as the Mendix tools used to deploy the app. See the section [Reserved Names for Mendix Apps](#reserved-names), below.
 
@@ -443,7 +443,7 @@ kubectl scale deployment mendix-agent --replicas=1
 
 The Mendix Operator is another app within your private cloud cluster. It is triggered when you provide a CR file. The process looks like this:
 
-![](attachments/private-cloud-deploy/image25.png)
+![](attachments/private-cloud-deploy/mx4pc-operator-deploy.png)
 
 The Mendix Operator CR is processed by the Mendix Operator into four steps:
 

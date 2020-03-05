@@ -2537,6 +2537,10 @@ module.exports = {
      * Add-on Guides (permanent, mapped)
      ****************************************************/
 	{
+	  from: "/addons/apm-addon/",
+	  to: "/addons/apd-addon/"
+	},
+		{
 	  from: "/apm/installation-guide",
 	  to: "/addons/apd-addon/ig-two"
 	},
@@ -2558,21 +2562,6 @@ module.exports = {
 	  from: "~*\\\/ats\\\/",
 	  to: "/addons/ats-addon/index",
 	  exact: true
-    },	
-	// {
-    //   from: "~*\\\/apm\\\/use-cases\\\/uc",
-    //   to: "/apm/use-cases/",
-    //   exact: true
-    // },
-    // {
-    //   from: "~*\\\/apm\\\/installation-guide\\\/ig",
-    //   to: "/apm/installation-guide/",
-    //   exact: true
-    // },
-    // {
-    //   from: "~*\\\/apm\\\/reference-guide\\\/rg",
-    //   to: "/apm/reference-guide/",
-    //   exact: true
-    // },
+    },
   ]
 }

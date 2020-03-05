@@ -24,7 +24,7 @@ This document describes the user interface of Mendix Studio Pro.
 
 ## 2 Project Structure
 
-A project consists of individual files (*documents*) and settings that are grouped in folders and [modules](modules). The complete structure of your project can be viewed in the **Project Explorer**. For more information on a project structure, see [Project Explorer](project-explorer).
+A project consists of individual files (*documents*) and settings that are grouped in folders and [modules](modules). The complete structure of your project can be viewed in the [Project Explorer](project-explorer). 
 
 ## 3 Top Bar
 
@@ -50,7 +50,9 @@ For more information on deploying your app and versioning it, see  the [Versioni
 
 ### 3.3 Links to the Developer Portal and App Store {#links}
 
-In the top-right you can find links to the Developer Portal and App Store. You can also see your account name (if you are signed in). Click the account name to navigate to your apps, the Developer Portal, your profile, or to sign out. 
+You can find links to the [Developer Portal](/developerportal/index) and [App Store](/developerportal/app-store/) in the top-right corner of Studio Pro . Your account is displayed next to these buttons if you are signed in. 
+
+Click the account name to navigate to your apps, the Developer Portal, your profile, or to sign out. 
 
 ## 4 Document Tabs {#documents}
 
@@ -70,7 +72,7 @@ Each document has its own save state, history, and future, so undo and redo acti
 
 ## 5 Working Area
 
-A working area is an editor that allows you to change documents or a domain model. Depending on which document you are working on, it has different settings in its top area. 
+A working area is a current editor that you work in and allows you to change documents or a domain model. Depending on which which editor you are working in (pages, microflows, domain model), it has different settings on the top. 
 
 ## 6 Panes
 

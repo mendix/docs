@@ -1,5 +1,5 @@
 ---
-title: "Backup API V2"
+title: "Backups API V2"
 parent: "deploy-api"
 description: "An API to allow the triggering of backups creation, restore, download and to get information about existing snapshots."
 menu_order: 10
@@ -7,7 +7,7 @@ menu_order: 10
 
 ## 1 Introduction
 
-The Backups API V2 allows you to manage data snapshots of applications hosted in the Mendix Cloud V4. Data snapshots consist of a Postgresql database dump and file objects referenced from the database. You can create new snapshots and restore or download them. Uploading snapshots is currently only supported via the [Developer Portal](/developerportal/operate/backups). Unlike the [older V1 API](backups-api-v1), this new V2 API is focused on asynchronuous operations of long-running tasks.
+The Backups API V2 allows you to manage data snapshots of applications hosted in the Mendix Cloud V4. Data snapshots consist of a Postgresql database dump and file objects referenced from the database. You can create new snapshots and restore or download them. Uploading snapshots is currently only supported via the [Developer Portal](/developerportal/operate/backups). Unlike the [older V1 API](backups-api-v1), this new V2 API is focused on asynchronous operations of long-running tasks.
 
 {{% alert type="info" %}}
 This article is only applicable to applications deployed in **Mendix Cloud V4**. You can check which version of the Mendix Cloud you are using in the [Developer Portal](/developerportal/deploy/environments-details).

@@ -10,7 +10,7 @@ tags: ["Studio Pro"]
 
 ## 1 Introduction
 
-Mendix Studio Pro is the tool for creating, viewing, and editing your Mendix applications. A Mendix app is called a [project](project) in Studio Pro.  You can easily go from Studio Pro to the Developer Portal, Mendix Studio, or App Store. 
+Mendix Studio Pro is the tool for creating, viewing, and editing your Mendix applications. A Mendix app is called a [project](project) in Studio Pro.  
 
 One Studio Pro instance can have only one project open at a time, but you can open two Studio Pro instances when necessary.
 
@@ -18,7 +18,7 @@ One Studio Pro instance can have only one project open at a time, but you can op
 When Studio Pro is open, press <kbd>F1</kbd> to quickly jump to documentation.
 {{% /alert %}}
 
-This document describes the user interface of Mendix Studio Pro. 
+This document describes the user interface of Mendix Studio Pro:
 
 <img src="attachments/studio-pro-overview/studio-pro-diagram.png" alt="Studio Pro Diagram"  />
 
@@ -72,11 +72,11 @@ Each document has its own save state, history, and future, so undo and redo acti
 
 ## 5 Working Area
 
-A working area is a current editor that you work in and allows you to change documents or a domain model. Depending on which which editor you are working in (pages, microflows, domain model), it has different settings on the top. 
+A working area is a current document tab that you work in. The working area and its settings differs depending on an editor (for example, pages, microflows, domain model editors) and type of the document.  
 
 ## 6 Panes
 
-Dockable panes can be positioned around the working area and contain various elements and settings. For example, you can view list of errors, configure properties of a specific document or an element, view toolbox. Panes can be opened via [Menus](menus). 
+Dockable panes can be positioned around the working area and contain various elements and settings. For example, you can view list of errors, configure properties of a specific document or an element, view toolbox. Panes are opened via [Menus](menus). 
 
 ## 7 Shortcut Keys
 
@@ -147,3 +147,11 @@ The following shortcut keys are available for the the microflow debugger:
 | <kbd>Alt</kbd> + <kbd>F6</kbd> | *Step over* – moves the debugger to the next step in the same microflow. |
 | <kbd>Alt</kbd> + <kbd>F7</kbd> | *Step out* – instructs the debugger to leave the sub-microflow or loop.  |
 | <kbd>Alt</kbd> + <kbd>F8</kbd> | *Continue* – instructs the debugger to continue until it reaches another breakpoint. |
+
+## 8 Read More
+
+* [Project Explorer](project-explorer)
+
+* [Menus](menus)
+
+  

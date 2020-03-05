@@ -1,7 +1,7 @@
 ---
 title: "How to Build a Mendix Hybrid Mobile App for Windows Phone"
 category: "Mobile"
-tags: []
+tags: ["mobile"]
 ---
 
 ## 1 Introduction
@@ -16,8 +16,8 @@ You may have tried to build a hybrid app package for Windows Phone, and found ou
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* A Mendix App with mobile support running in the Mendix Cloud, either in a Free App or on a licensed cloud node
-* An account for Adobe PhoneGap Build. You can sign up for an account [here](https://build.phonegap.com/plans)
+* A Mendix App with mobile support running in the Mendix Cloud, either in a Free App or on a licensed cloud node.
+* An account for Adobe PhoneGap Build. You can sign up for an account [here](https://build.phonegap.com/plans).
 
 ## 3 Building the Windows Phone Package
 
@@ -34,7 +34,7 @@ To create a Phonegap Build package using a provided template, follow these steps
     * {% raw %}{{description}}{% endraw %} - The description of your app
 
     After changing these variables, the `config.xml` will look similar to this:
-    {% highlight xml %}
+   ```
     <?xml version="1.0" encoding="UTF-8" ?>
         <widget xmlns = "http://www.w3.org/ns/widgets"
             xmlns:gap = "http://phonegap.com/ns/1.0"
@@ -45,19 +45,17 @@ To create a Phonegap Build package using a provided template, follow these steps
 
         <description>The Sample WP8 App</description>
 
-        .....{% endhighlight %}
+   ```
 4. Save the file.
 5. Open the `index.html` file and change the {% raw %}`{{url}}`{% endraw %} to the address where your application is
 running (for example, `https://com.mendixcloud.myapp`).
 6. Save the file. The part where the URL is used will now look similar to this:
-    {% highlight js %}
-    ...
-
+   ```
     document.addEventListener("deviceready", function() {
         mxapp.initialize("https://com.mendixcloud.myapp", enableOffline, requirePin);
     });
+   ```
 
-    ...{% endhighlight %}
 To create an archive with these changes, follow these steps:
 
 1. Select all the files and directories you extracted.

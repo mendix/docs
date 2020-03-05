@@ -1,10 +1,14 @@
 ---
-title: "Publish Data to Other Mendix Apps Using an App Service"
+title: "Publish Data to Other Mendix Apps Using an App Service (Deprecated)"
 category: "Integration"
 menu_order: 14
 description: "Describes how to use an app service to publish data to other Mendix apps."
-tags: ["integration", "app service", "publish"]
+tags: ["integration", "publish"]
 ---
+
+{{% alert type="info" %}}
+App services are deprecated marked for removal. Use a [published web service](/refguide/published-web-services) or a [published REST service](/refguide/published-rest-services) instead.
+{{% /alert %}}
 
 ## 1 Introduction
 
@@ -63,7 +67,7 @@ To create this microflow, follow these steps:
 15. For **Value**, enter *$IteratorProduct/Stock*, then click **OK**.
 16. From the **Toolbox**, drag a **Change list** activity onto the loop
 17. Connect the **Create PublishedProduct** activity to the **Add to list** activity.
-18. Double-click the **Add to list** activity and for **Variable name**, select **PublishedProductList**.
+18. Double-click the **Add to list** activity and for **List**, select **PublishedProductList**.
 19. For **Value**, enter *$NewPublishedProduct*, then click **OK**.
 20. Double-click the red end event and for **Type**, select **List**.
 21. For **Entity**, select **PublishedProduct**.

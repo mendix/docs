@@ -1,5 +1,6 @@
 ---
 title: "Front-End"
+tags: ["studio pro"]
 ---
 
 ## 1 Introduction 
@@ -8,15 +9,14 @@ Looking to create great user experiences and a user-friendly graphical user inte
 
 ## 2 Main Documents in This Category
 
-* [Atlas UI](atlas-ui)
-* [Implement Best Practices for UX Design](ux-best-practices)
-* [Configure Your Theme](configuring-your-theme)
-* [Create Your First Two Overview & Detail Pages](create-your-first-two-overview-and-detail-pages)
-* [Use Layouts & Snippets](layouts-and-snippets)
-* [Set Up the Navigation Structure](../general/setting-up-the-navigation-structure)
-* [Set Up the Mendix UI Framework](setup-mendix-ui-framework)
-* [Create a Custom Theme with the Mendix UI Framework](create-a-custom-theme-with-the-mendix-ui-framework)
-* [Implement Styles](styles)
-* [Start Styling with Gulp & Sass](style-with-gulp-and-sass)
-* [Create Custom Error Pages](custom-error-page)
-* [Style Google Maps](style-google-maps)
+* [Atlas UI](atlas-ui) – introduces you to the Mendix Atlas UI design framework
+* [Implement Best Practices for UX Design](ux-best-practices) – presents best practices written by a UX Designer for contributing to the app development process
+* [Configure Your Theme](configuring-your-theme) – explains how to configure the styling of your page in Studio Pro and Studio
+* [Use the Charts Widgets](charts-tutorials) – these how-to's will help you create and fine-tune your chart widgets
+* [Create Your First Two Overview & Detail Pages](create-your-first-two-overview-and-detail-pages) – introduces how to create overview and detail pages as well as configure navigation and security
+* [Use Layouts & Snippets](layouts-and-snippets) – covers the basics of creating pages using style layouts and snippets
+* [Implement Styles](styles) – explains how to use class names to implement text and background colors, typography, buttons, list views, alerts, and other elements
+* [Use Gulp & Sass](use-gulp-and-sass) – shows how to set up and use the Gulp and Sass approach to style your apps
+* [Create Custom Error Pages](custom-error-page) – explains how to create a professional looking error page that will appear when your app is down
+* [Style Google Maps](style-google-maps) – shows how you can enhance your app's map overviews with improved styling
+

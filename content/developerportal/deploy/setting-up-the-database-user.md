@@ -28,7 +28,7 @@ With the User Mapping properties you can grant the user access to the different 
 
 ![](attachments/setting-up-the-database-user/18580672.png)
 
-The Mendix Platform keeps the database consistent. This means that the platform validates the database structure at the start-up and automatically generates the SQL scripts to update the table structure. The Mendix Service Console provides you with the option to execute these scripts directly on the database. The Mendix Platform requires the usage of the schema ‘dbo’
+The Mendix Runtime keeps the database consistent. This means that the runtime validates the database structure at the start-up and automatically generates the SQL scripts to update the table structure. The Mendix Service Console provides you with the option to execute these scripts directly on the database. The Mendix Runtime requires the usage of the schema ‘dbo’
 
 The recommended database role is `db_owner`. If you choose not to assign the `db_owner` role to the user, the following roles should be assigned. The roles `db_datareader` and `db_datawriter` are the minimum permission the user should get so he can read and write in the contents of all the tables. During the database upgrade, altering the tables and stored functions is required. During that action, it is usually sufficient to have the `db_ddladmin` role, but when the stored functions needs to be added, the `db_owner` role is required (for more information, see [SQL Server Troubleshooter](troubleshooting-sql-server)).
 

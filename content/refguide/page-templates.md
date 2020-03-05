@@ -1,6 +1,8 @@
 ---
-title: "Page Templates"
-parent: "pages"
+title: "Page Template"
+parent: "page-resources"
+menu_order: 20
+tags: ["studio pro", "page template", "page resource"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -14,7 +16,7 @@ When creating a new page, the user is presented with an overview of all the comp
 
 By mapping out the common design patterns of a project, a great deal of the initial work involved in creating new pages can be mitigated. 
 
-Generally, page templates are stored in the project's [UI Resources package](ui-resources-package). This keeps them in sync with the project theme, as well as providing a handy place to consolidate all design-related data. 
+Generally, page templates are stored in the project's [UI resources package](ui-resources-package). This keeps them in sync with the project theme, as well as providing a handy place to consolidate all design-related data. 
 
 To create a page template, right-click a page in either the **Project Explorer** or an empty section of the canvas and select **Create page template**. The page will be added as a new page template, which will automatically make it available in the **Create Page** wizard.
 
@@ -24,19 +26,11 @@ Page template properties are described in the sections below.
 
 ## 3 Common Properties
 
-{{% snippet file="refguide/Document+Name+Property.md" %}}
-
-{{% snippet file="refguide/Documentation+Property.md" %}}
-
-{{% snippet file="refguide/Document+Class+Property.md" %}}
-
-{{% snippet file="refguide/Style+Property.md" %}}
+{{% snippet file="refguide/common-section-link.md" %}}
 
 ## 4 Designer Properties
 
-{{% snippet file="refguide/Canvas+Width+Property.md" %}}
-
-{{% snippet file="refguide/Canvas+Height+Property.md" %}}
+{{% snippet file="refguide/designer-properties.md" %}}
 
 ## 5 General Properties
 
@@ -54,13 +48,11 @@ Depending on the context in which a page is created, the user is presented with 
 
 Value | Description
 --- | ---
-Creating new pages | The page template is available when creating new pages from most contexts, such as from the Project Explorer.
+Creating new pages *(default)* | The page template is available when creating new pages from most contexts, such as from the Project Explorer.
 Generating edit pages | The page template is available when a user generates a new page from a new or edit button.
 Generating select pages | The page templates is available when the user generates a new page from a select button.
 
 This setting may also place extra restrictions on the template. Page templates intended as new or edit pages require exactly one top-level data view be present. Page templates intended as Select pages require exactly one list view, data grid, or template grid. 
-
-*Default value:* Creating new pages
 
 ### 5.4 Layout Type
 

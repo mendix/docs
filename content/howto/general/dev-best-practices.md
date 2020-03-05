@@ -1,13 +1,14 @@
 ---
-title: "Implement Best Practices for Development"
+title: "Implement Mendix Best Practices for Development"
 category: "General Info"
-menu_order: 3
+menu_order: 7
 tags: ["best practice", "development", "develop", "reusable", "prefix"]
+#Academy are SMEs for verification, they discuss and link to this doc in training
 ---
 
 ## 1 Introduction
 
-This document can be used as a guideline for adopting consistent naming and modeling conventions while developing your Mendix applications. This will help to improve your application’s maintainability and performance, and make it easier to read and understand.
+This document can be used as a reference for adopting consistent naming and modeling conventions while developing your Mendix applications. This will help to improve your application’s maintainability and performance, and make it easier to read and understand.
 
 Even with the powerful navigation and search support in Mendix Studio Pro, adhering to naming and modeling conventions is a wise thing because:
 
@@ -35,31 +36,35 @@ Every project has at least one configuration, but it may have many. Every projec
 
 ### 2.4 User Roles
 
-The [user roles](/refguide/user-roles) should have logical names that reflect the different types of users that will use the application. The user roles are singular and use a camel case notation, like **FunctionalAdministrator**. User roles are mostly defined in English, but there is an option to name these in a different language, since the user role is visible in the front-end.
+The [user roles](/refguide/user-roles) should have logical names that reflect the different types of users that will use the application. The user roles are singular and use an UpperCamelCase notation, like **FunctionalAdministrator**. User roles are mostly defined in English, but there is an option to name these in a different language, since the user role is visible in the front-end.
 
 Each user role should correspond to only one module role per module. In other words, a user role should not map to multiple module roles within the same module. This helps to keep the number of applicable module roles for a user to a minimum, which reduces complexity in understanding the security model and reduces the performance impact of complex security rules.
 
-## 3. Naming Conventions
+## 3 Naming Conventions
 
 ### 3.1 Modules
 
 #### 3.1.1 Module Names
 
-Modules should be treated like standalone replaceable services; for example, the customer module should function as a standalone customer management system as much as possible, replaceable by a different customer management system. Module names should have camel case names that identify the responsibility of the module, for example, **CustomerManagement** or **SharePointIntegration**.
+Modules should be treated like stand-alone replaceable services; for example, the customer module should function as a stand-alone customer management system as much as possible, replaceable by a different customer management system. Module names should have UpperCamelCase names that identify the responsibility of the module, for example, **CustomerManagement** or **SharePointIntegration**.
 
 #### 3.1.2 Module Roles
 
-The [module roles](/refguide/module-role) should have logical names that reflect the access they should have within a module. In contrast to the user role, the module role should always be in English, for instance **Administrator** or **Employee**.
+The [module roles](/refguide/module-security#module-role) should have logical names that reflect the access they should have within a module. In contrast to the user role, the module role should always be in English, for instance **Administrator** or **Employee**.
 
 ### 3.2 Domain Model
 
 #### 3.2.1 Entity Names
 
-Most of the time, an [entity](/refguide/entities) reflects a real-world object that people can relate to. Therefore, the entity name should also reflect that object and identify its purpose. There are sometimes project-specific exceptions that lead to creating other types of entity, but that is up to you. The name of an entity is singular since an object is a single instance of the entity. A good example is using **Customer** and not **Customers**. Furthermore, we advise avoiding abbreviations, underscores, mathematical characters or any other special characters in the names of entities. Entity names also use camel case, for example, **HousekeepingRecord** or **LogEntry**.
+Most of the time, an [entity](/refguide/entities) reflects a real-world object that people can relate to. Therefore, the entity name should also reflect that object and identify its purpose. There are sometimes project-specific exceptions that lead to creating other types of entity, but that is up to you. The name of an entity is singular since an object is a single instance of the entity. A good example is using **Customer** and not **Customers**. Furthermore, we advise avoiding abbreviations, underscores, mathematical characters or any other special characters in the names of entities. Entity names also use UpperCamelCase, for example, **HousekeepingRecord** or **LogEntry**.
+
+{{% alert type="info" %}}
+Following these entity naming conventions will prevent issues with naming conflicts between modules and entities. For example, if a module named **Customer** contains an entity named **customer** (note the lower-case "c"), there will be a Java compilation error and the app will not run. Renaming the entity to **Customer** will solve the problem.
+{{% /alert %}}
 
 #### 3.2.2 Entity Attributes
 
-The entity [attribute](/refguide/attributes) should reflect a property of a real-world object that people can relate to and fits the purpose of that property. We advise avoiding abbreviations, underscores (except in the case described in the next paragraph), mathematical characters or any other special characters in the names. Entity attributes should use camel case, for example, **FirstName** or **TelephoneNumber**.
+The entity [attribute](/refguide/attributes) should reflect a property of a real-world object that people can relate to and fits the purpose of that property. We advise avoiding abbreviations, underscores (except in the case described in the next paragraph), mathematical characters or any other special characters in the names. Entity attributes should use UpperCamelCase, for example, **FirstName** or **TelephoneNumber**.
 
 Attributes that do not reflect business-related data, but are only necessary for technical reasons, should start with an underscore (`_`).
 
@@ -69,13 +74,13 @@ A strong indicator for determining whether or not an attribute is business-relat
 
 #### 3.2.3 Associations
 
-**Naming multiple associations between entities**
+##### 3.2.3.1 Naming Multiple Associations Between Entities
 
 [Association](/refguide/associations) names in the domain model are automatically generated by Mendix. The auto-generated names follow the best practice and should be used by default.
 
 If you have multiple associations between the same entities we recommend extending the association name. Extending this name with a recognizable purpose clarifies where you should use the association. For example, you can have a relationship between **Person** and **Address**. A person can have multiple addresses but you want to specify what their postal address is and what their delivery address is. An implementation choice could be that you create two associations for that purpose and adjust the names of the associations accordingly. For example, **Person_Address_Delivery**.
 
-**Renaming entities**
+##### 3.2.3.2 Renaming Entities
 
 When an association already exists between entities and you change the name on one or both of the entities, Mendix will rename the association automatically. 
 
@@ -113,79 +118,79 @@ The microflows related to such an event handler should have the following prefix
 
 | Event Type      | Prefix               |
 |-----------------|----------------------|
-| Before commit   | BCo_{Entity name} |
-| After commit    | ACo_{Entity name} |
-| Before create   | BCr_{Entity name} |
-| After create    | ACr_{Entity name} |
-| Before delete   | BDe_{Entity name} |
-| After delete    | ADe_{Entity name} |
-| Before rollback | BRo_{Entity name} |
-| After rollback  | ARo_{Entity name} |
+| Before commit   | BCo\_{Entity name} |
+| After commit    | ACo\_{Entity name} |
+| Before create   | BCr\_{Entity name} |
+| After create    | ACr\_{Entity name} |
+| Before delete   | BDe\_{Entity name} |
+| After delete    | ADe\_{Entity name} |
+| Before rollback | BRo\_{Entity name} |
+| After rollback  | ARo\_{Entity name} |
 
 #### 3.4.2 Calculated Attribute Microflows
 
-For attributes, you can choose to store the value in the database or to calculate the value based on a microflow. For the microflow which does the calculation you should use **Cal_** as a prefix, and refer to the entity and attribute which is being calculated.
+For attributes, you can choose to store the value in the database or to calculate the value based on a microflow. For the microflow which does the calculation you should use **Cal_** as a prefix, and refer to the entity and attribute which is being calculated. The calculation is triggered when you show the entity on a page or use it in a microflow. On a page, the object's calculation attribute refreshes if you navigate away from the object and back to it in any way (via pagination buttons or tabs or by re-entering the page).
 
 | Event Type      | Prefix               |
 |-----------------|----------------------|
-| Calculation     | Cal_{Entity name}    |
+| Calculation     | Cal\_{Entity name}\_{Attribute name}    |
 
-#### 3.4.4 Page-based Microflows
+#### 3.4.3 Page-Based Microflows
 
 [Pages](/refguide/pages) have a number of events that can trigger a microflow. See the following list for the examples and prefixes:
 
 | Event Type                | Prefix             | Used In |
-|---------------------------|--------------------|--------------------------------|
-| On enter event            | OEn_{Purpose}   | Input widgets                  |
-| On change event           | OCh_{Purpose}   | Input widgets                  |
-| On leave event            | OLe_{Purpose}   | Input widgets                  |
-| Data source               | DS_{Purpose}    | Data view, list view, data grid, template grid |
-| Microflow/action button   | ACT_{Purpose} or IVK_{Purpose} | Menu item, Navigation item, Microflow and Action button, Drop down button<br />(“IVK_” is used historically) |
+|---------------------------|--------------------|---- |
+| On enter event            | OEn\_{Purpose}   | Input widgets   |
+| On change event           | OCh\_{Purpose}   | Input widgets   |
+| On leave event            | OLe\_{Purpose}   | Input widgets   |
+| Data source               | DS\_{Purpose}    | Data view, list view, data grid, template grid |
+| Action button             | Act\_{Purpose}   | Menu item, navigation item, microflow and action button, drop-down button<br />(“IVK\_” is used historically) |
 
-### 3.4.5 Validation Microflows
+#### 3.4.4 Validation Microflows
 
 Microflows that are used for [data validation](/howto/data-models/setting-up-data-validation) use the prefix **Val_**.
 
 | Event Type      | Prefix               |
 |-----------------|----------------------|
-| Validation      | Val_                 |
+| Validation      | Val\_                 |
 
-### 3.4.6 Scheduled Event Microflows
+#### 3.4.5 Scheduled Event Microflows
 
 For the microflow that you use in your [scheduled events](/refguide/scheduled-events), use the prefix **ScE_**. The event itself should have a descriptive name since it will be shown in the cloud configuration portal. The scheduled event and the microflow should have the same name.
 
 | Event Type      | Prefix               |
 |-----------------|----------------------|
-| Scheduled Event | ScE_                 |
+| Scheduled Event | ScE\_                 |
 
-#### 3.4.7 Project Microflows
+#### 3.4.6 Project Microflows
 
 Your [project settings](/refguide/project-settings) provide three events that can trigger a microflow. In these cases we advise writing out the purpose as a microflow name. These microflows are defined only once per project and should preferably call sub-microflows to do the actual processing. These sub-microflows should have a prefix indicated below:
 
 | Event Type      | Microflow Name | Sub-microflow Prefix |
 |-----------------|----------------|----------------------|
-| After startup   | AfterStartUp   | ASu_                 |
-| Before shutdown | BeforeShutDown | BSd_                 |
-| Health check    | HealthCheck    | HCh_                 |
+| After startup   | AfterStartUp   | ASu\_                 |
+| Before shutdown | BeforeShutDown | BSd\_                 |
+| Health check    | HealthCheck    | HCh\_                 |
 
-#### 3.4.8 Unit Test Microflows
+#### 3.4.7 Unit Test Microflows
 
 Microflows containing [unit tests](/howto/testing/testing-microflows-using-the-unittesting-module) should have the prefix **Test_**.
 
 | Event Type      | Prefix               |
 |-----------------|----------------------|
-| Unit Test       | Test_                |
+| Unit Test       | Test\_                |
 
-#### 3.4.9 Integration Microflows
+#### 3.4.8 Integration Microflows
 
 For integrations, you have the following types of microflow:
 
 | Event Type                                | Prefix |
 |-------------------------------------------|--------|
-| Consumed web service operation microflow  | CWS_  |
-| Published web service operation microflow | PWS_  |
-| Published app service operation microflow | PAS_  |
-| Published REST service operation microflow | PRS_  |
+| Consumed web service operation microflow  | CWS\_  |
+| Published web service operation microflow | PWS\_  |
+| Published app service operation microflow | PAS\_  |
+| Published REST service operation microflow | PRS\_  |
 
 ### 3.5 Other Document Types
 
@@ -195,10 +200,18 @@ For integrations, you have the following types of microflow:
 
 | Document Type                             | Prefix    |
 |-------------------------------------------|-----------|
-| Layout                                    | **Lay_**  |
-| Snippet                                   | **Snip_** |
+| Layout                                    | Lay\_  |
+| Snippet                                   | Snip\_ |
 
-#### 3.5.2 Pages
+#### 3.5.2 Enumerations
+
+[Enumerations](/refguide/enumerations) should be identified with a prefix.
+
+| Document Type                             | Prefix    |
+|-------------------------------------------|-----------|
+| Enumeration                               | Enum\_ |
+
+#### 3.5.3 Pages
 
 Pages use a **suffix** to indicate their use.
 
@@ -212,26 +225,26 @@ Pages that are used as a tooltip page should have the suffix **_Tooltip**.
 
 | Page Purpose                             | Suffix |
 |-------------------------------------------|--------|
-| List objects of a single entity type  | _Overview |
-| Create an object | _New |
-| Update an object | _Edit |
-| Create *or* Update an object | _NewEdit |
-| View an object (read-only) | _View |
-| Select a single object | _Select |
-| Select multiple objects | _MultiSelect |
-| Tooltip | _Tooltip |
+| List objects of a single entity type  | \_Overview |
+| Create an object | \_New |
+| Update an object | \_Edit |
+| Create *or* Update an object | \_NewEdit |
+| View an object (read-only) | \_View |
+| Select a single object | \_Select |
+| Select multiple objects | \_MultiSelect |
+| Tooltip | \_Tooltip |
 
-#### 3.5.3 Integration Documents
+#### 3.5.4 Integration Documents
 
 Documents used to support integration should have the prefixes listed below.
 
 | Document Type                             | Prefix |
 |-------------------------------------------|--------|
-| Import mapping                            | ImM_  |
-| Export mapping                            | ExM_  |
-| XML schema                                | XSD_  |
-| JSON structure                            | JSON_ |
-| Deeplink                                  | Dl_   |
+| Import mapping                            | ImM\_  |
+| Export mapping                            | ExM\_  |
+| XML schema                                | XSD\_  |
+| JSON structure                            | JSON\_ |
+| Deeplink                                  | Dl\_   |
 
 ### 3.6 Home Pages
 
@@ -239,14 +252,14 @@ You can define the [home pages](/refguide/show-home-page) per device and role in
 
 | Event Type           | Device  | Page Name                   |
 |----------------------|---------|-----------------------------|
-| Default home page    | Desktop | Home_Desktop_Default      |
-| Default home page    | Tablet  | Home_Tablet_Default       |
-| Default home page    | Mobile  | Home_Phone_Default        |
-| Role based home page | Desktop | Home_Desktop_{Userrole} |
-| Role based home page | Tablet  | Home_Tablet_{Userrole}  |
-| Role based home page | Mobile  | Home_Phone_{Userrole}   |
+| Default home page    | Desktop | Home_Desktop\_Default      |
+| Default home page    | Tablet  | Home_Tablet\_Default       |
+| Default home page    | Mobile  | Home_Phone\_Default        |
+| Role based home page | Desktop | Home_Desktop\_{Userrole} |
+| Role based home page | Tablet  | Home_Tablet\_{Userrole}  |
+| Role based home page | Mobile  | Home_Phone\_{Userrole}   |
 
-## 4. General Guidelines & Best Practices
+## 4 General Guidelines & Best Practices
 
 ### 4.1 Domain Models
 
@@ -270,7 +283,7 @@ When using inheritance (specialization/generalization), it is recommended to use
 
 #### 4.2.1 Size {#size}
 
-The size of a microflow should not exceed 25 elements. An element is any block that Studio Pro allows in a microflow (loops, action activities, splits, etc.). In some cases exceeding this limit is acceptable; this can occur, for instance, for validation or data copying flows.
+The size of a microflow should not exceed 25 elements. An element is any block that Studio Pro allows in a microflow (loops, action activities, decisions, etc.). In some cases exceeding this limit is acceptable; this can occur, for instance, for validation or data copying flows.
 
 Split microflows up into logical, functional elements. If a microflow has more than twenty-five elements, split the microflow up by creating a sub-microflow for a part of it. For example, by separating presentation logic from business logic.
 
@@ -278,7 +291,7 @@ Certain cases (such as validation checks) may require this rule to be ignored to
 
 #### 4.2.2 Documentation & Annotations {#documentation-and-annotations}
 
-All complex microflows (more than ten activities or more than two splits) should have an [annotation](/refguide/annotations) describing the purpose of the microflow, expected parameters, and return values. This annotation should be placed at the start, so it is visible when the microflow is opened. This will assist other developers in quickly understanding the general purpose of a microflow, without having to read through it entirely.
+All complex microflows (more than ten activities or more than two decisions) should have an [annotation](/refguide/annotations) describing the purpose of the microflow, expected parameters, and return values. This annotation should be placed at the start, so it is visible when the microflow is opened. This will assist other developers in quickly understanding the general purpose of a microflow, without having to read through it entirely.
 
 Complex, non-standard or integration-related sections in microflows should also have an accompanying annotation. Examples of these are web service calls, custom loops, and Java calls.
 
@@ -292,7 +305,7 @@ If you decide to color code the different activities in your project, be sure to
 
 #### 4.2.4 Complexity
 
-Nested `IF` statements in a single microflow expression are not recommended. If multiple checks depend on one another, this should be represented by multiple splits in the microflow, so that the complexity is not hidden away in the expressions. You can use `AND` and `OR` operators to produce complex expressions if necessary.
+Nested `IF` statements in a single microflow expression are not recommended. If multiple checks depend on one another, this should be represented by multiple decisions in the microflow, so that the complexity is not hidden away in the expressions. You can use `AND` and `OR` operators to produce complex expressions if necessary.
 
 Event triggers on input fields must be kept as simple as possible, since they are potentially executed very often, depending on user behavior. Complex operations here will reduce performance.
 
@@ -320,14 +333,19 @@ When an XPath needs multiple constraints, each constraint must be put in bracket
 
 The [security](/howto/security/index) overview in Studio Pro must not show any incomplete (yellow) parts. All entity, microflow, and page access must be configured completely.
 
-It is recommended **not** to assign default rights to new members when defining entity access. This will ensure that access is only granted after a conscious decision.
+Assigning default rights to new members when defining entity access is NOT recommended. This will ensure that access is only granted after a conscious decision.
 
 ### 4.6 Mendix Version
 
 Apps should keep up with new Mendix releases as much as possible.
 
-### 4.7 App Store Components
+### 4.7 App Store Content
 
 When introducing a new [Mendix App Store](https://appstore.home.mendix.com/index3.html) component to a project, carefully consider the support level of the component. Using components that are community supported introduces a maintainability and upgrade risk.
 
-App Store modules should **not** be modified. This is because, if an App Store module is modified, updating to a new version becomes much harder because the changes will be overwritten when a new version is downloaded from the App Store. If changing an App Store module is unavoidable, changes should be marked explicitly and clearly, and performed again when the module is updated. To minimize the number of changes in the actual App Store module, it is advisable to combine them in a separate extension module wherever possible.
+App Store modules should NOT be modified. If an App Store module is modified, updating to a new version becomes much harder, because the changes will be overwritten when a new version is downloaded from the App Store. If changing an App Store module is unavoidable, you have two options:
+
+* Mark any changes you make explicitly and clearly, and perform them again when the module is updated
+* Copy the contents of the App Store module to another module in your app and use that module instead (remember that your app will no longer reflect updates to the original App Store module)
+
+To minimize the number of changes in the actual App Store module, it is advisable to combine them in a separate extension module wherever possible.

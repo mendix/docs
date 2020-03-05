@@ -1,12 +1,12 @@
 ---
-title: "Call REST Service Action"
-parent: "microflow-activities"
-tags: ["studio pro"]
+title: "Call REST Service"
+parent: "integration-activities"
+tags: ["studio pro", "integration activity", "call rest service"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="info" %}}
-This activity can only be used in microflows, not in nanoflows.
+{{% alert type="warning" %}}
+This activity can only be used in **Microflows**.
 {{% /alert %}}
 
 ## 1 Introduction
@@ -26,6 +26,12 @@ The **HTTP method** property defines the HTTP method to use when calling a REST 
 ### 2.2 Timeout
 
 Set **Use timeout on request** to **Yes** to be able specify how long the Call REST activity should wait for the REST endpoint to respond. If the REST endpoint has not responded after the number of seconds in **Timeout (s)**, an exception will occur and the microflow will roll back or go into your custom error handler.
+
+Default value: *Yes, 300 seconds* (as of Studio Pro [8.5.0](/releasenotes/studio-pro/8.5#850); in earlier versions, the default value was No)
+
+{{% alert type="warning" %}}
+It is recommended that you keep this set to **Yes**. Most cloud infrastructure services (including those used by the Mendix Cloud) will close HTTP connections automatically if there is no traffic for a few minutes, even if your activity is still waiting for a response. This means that, if your activity calls a web service which takes a long time to respond, the connection may be closed without the activity being aware of this, and your activity will not receive a response. Under these circumstances, if **Use timeout on request** is set to **No**, your activity will get stuck waiting indefinitely for data to arrive.
+{{% /alert %}}
 
 ### 2.3 Proxy Configuration
 
@@ -75,7 +81,7 @@ If the [export mapping](export-mappings) requires an input, this field shows the
 
 #### 4.1.3 Parameter
 
-If the [export mapping](export-mappings) requires an input, you can select a variable of the correct type.
+If the [export mapping](export-mappings) requires an input, you can select a parameter of the correct type.
 
 #### 4.1.4 Content Type
 
@@ -85,7 +91,19 @@ If the [export mapping](export-mappings) is based on a message definition, it ca
 
 This option allows you to send binary data (for example, the contents of a FileDocument).
 
-### 4.3 Custom Request Template
+### 4.3 Form-Data
+
+This option allows you to generate a multipart/form-data request for multiple parts. Each part is a pair with a key and a value (microflow expression). 
+
+FileDocuments and images are are also supported for this option when used as variables in microflow expressions.
+
+#### 4.3.1 Content Type
+
+Setting up a **Content-Type header** for a form-data request will result in a consistency error, as it will automatically be set to **multipart/form-data**. 
+
+The content type for the FileDocument part is **application/octet-stream**.
+
+### 4.4 Custom Request Template
 
 This option allows you to generate the request using a string template. The template defines the structure of the request in plain text. Parameters can be used by writing a number between braces (for example, `{1}`). For each parameter in the template, you can specify its value using a [microflow expression](expressions) resulting in a string value. To escape the opening brace (`{`), a double opening brace should be used (`{{`).
 
@@ -99,15 +117,15 @@ These are the options in the drop-down menu for handling the response:
 
 * **Apply import mapping** – if the response is JSON or XML, it can be transformed directly into objects using an [import mapping](import-mappings). The fields that you can choose here are described in the [Import Mapping action](import-mapping-action)
 * **Store in an HTTP response** – any successful HTTP response can be stored directly in an [HttpResponse](http-request-and-response-entities#http-response) object, and the [$latestHttpResponse](#latesthttpresponse) variable is also updated
-* **Store in a file document variable** – if the response is a binary content (for example, a PDF), it can be stored in an entity – this entity should inherit from `System.FileDocument`
+* **Store in a file document** – if the response contains binary content (for example, a PDF), it can be stored in an object of an entity type which inherits from `System.FileDocument`
 * **Store in a string** – if the response is a string (for example, CSV), it can be stored directly in a string variable
 * **Do not store in a variable** - use this option when the call does not return anything useful
 
 ### 5.2 Output
 
-The **Type** field defines the type of the output variable.
+The **Type** field defines the type of the output.
 
-The **Name** field defines the name for the variable that will hold the result of the operation.
+The **Variable** field defines the name for the result of the operation.
 
 ### 5.3 Error Handling
 
@@ -115,9 +133,9 @@ This section is applicable when the HTTP response status code is not successful 
 
 When the **Store message body in $latestHttpResponse variable** option is selected, `$latestHttpResponse/Content` will be set with the response body. It might contain some useful information provided by the server (for example, why the authentication is rejected).
 
-### 5.4 $latestHttpResponse Variable<a name="latesthttpresponse"></a>
+### 5.4 $latestHttpResponse Object<a name="latesthttpresponse"></a>
 
-The `$latestHttpResponse` variable is of the [HttpResponse](http-request-and-response-entities#http-response) type. It is available after a Call REST activity.
+The `$latestHttpResponse` object is of the [HttpResponse](http-request-and-response-entities#http-response) type. It is available after a Call REST activity.
 
 However, its `Content` attribute will be left empty in most cases to minimize memory usage.
 
@@ -126,4 +144,4 @@ This attribute is filled when one of the following scenarios occur:
 * The **Response handling** is **Store in an HTTP response** and the call succeeded
 * The **Store message body in $latestHttpResponse variable** option in the **Error handling** section is checked and the call failed
 
-This variable can be accessed from any microflow action in the scope.
+This object can be accessed from any microflow action in the scope.

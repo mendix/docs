@@ -24,7 +24,7 @@ When a validation is set and it fails for this widget, a message will be shown w
 
 ### Validation Message
 
-This property determines the message that is shown to the user if widget validation is enabled and has failed. This is a translable text (for more information, see [Translatable Texts](translatable-texts)).
+This property determines the message that is shown to the user if widget validation is enabled and has failed. This is a translatable text (for more information, see [Translatable Texts](translatable-texts)).
 
 <div class="alert alert-info">
 
@@ -40,7 +40,7 @@ This property indicates whether this widget must be filled in by the end user or
 
 ### Required Message
 
-This property determines the message that is shown to the user if the widget is empty and the **Required** property is set to *true*. This is a translable text (for more inforamtion, see [Translatable Texts](translatable-texts)).
+This property determines the message that is shown to the user if the widget is empty and the **Required** property is set to *true*. This is a translatable text (for more information, see [Translatable Texts](translatable-texts)).
 
 <div class="alert alert-info">
 

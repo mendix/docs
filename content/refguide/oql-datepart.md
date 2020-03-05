@@ -1,6 +1,7 @@
 ---
 title: "OQL DATEPART"
 parent: "oql-functions"
+tags: ["studio pro"]
 ---
 
 

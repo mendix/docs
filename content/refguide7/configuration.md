@@ -5,7 +5,7 @@ parent: "project-settings"
 ---
 
 
-A configuration is a group of settings with a name. You can define any number of configurations. The active configuration, i.e. the one that will be used when running your application, is determined by the drop-down in the toolbar of the Modeler.
+A configuration is a group of settings with a name. You can define any number of configurations. The active configuration, as in, the one that will be used when running your application, is determined by the drop-down in the toolbar of the Modeler.
 
 You can use configurations to have different database settings for different people working on your project. Maybe one person has SQL Server on their computer and the other Postgres. You can also have a shared configuration for connecting to a database server that you both have access to.
 
@@ -88,7 +88,13 @@ When you set the Java heap setting to 'Custom', you can specify the amount of he
 
 ### Emulate cloud security
 
-Projects hosted in the Mendix Cloud have to adhere to much stricter security policies than hosting it on your own server. Turning on this switch emulates that behavior. A security policy will be enforced, which will allow you to test your Java actions and verify that they will also run in the cloud.
+Projects hosted in the Mendix Cloud have to adhere to much stricter security policies than those hosted on your own server. Turning this switch on emulates that behavior. A security policy will be enforced which will allow you to test your Java actions and verify that they will also run in the cloud. 
+
+{{% alert type="warning" %}}
+
+This option is removed from versions 7.21.0 and above, see [release notes](/releasenotes/studio-pro/7.21#62223) for more information. 
+
+{{% /alert %}}
 
 ### Extra JVM parameters
 

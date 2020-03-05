@@ -1,6 +1,7 @@
 ---
 title: "OQL Order by Clause"
 parent: "oql"
+tags: ["studio pro"]
 ---
 
 

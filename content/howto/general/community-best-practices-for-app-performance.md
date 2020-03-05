@@ -1,7 +1,7 @@
 ---
 title: "Implement Community Best Practices for App Performance"
 category: "General Info"
-menu_order: 4
+menu_order: 8
 tags: ["best practice", "performance", "community"]
 ---
 
@@ -32,16 +32,10 @@ If you made a simple and sound design of the app's domain models, consider the f
 * Consider archiving data if your volume grows too large and you do not need all the data all the time. You can even consider creating two identical entities, one with the data currently being used, and the other with all the data that is only used for reporting or other historic reasons.
 * Consider denormalizing the data, which means copying attribute values to other entities. This is so the data is not retrieved every time from the source. If data does not change a lot, this can save a lot of queries. However, you need to build the logic to keep the copied attributes in sync!
 * Don't use multiple levels of inheritance and too many specializations on entities that will contain a substantial amount of data, especially when you are using domain model XPath access on entities. This will generate complex queries adding XPaths for every specialization's security rules and, on a large dataset, will lead to slow queries. Consider the following alternatives:
-	* Combine attributes in one entity and add an enum to determine its specialization.
+	* Combine attributes in one entity and add an enumeration to determine its specialization.
 	* Add separate entities for specializations with a one-to-one relation. Depending on UI needs, this one-to-one relation might be a normal reference from specialization to generalization to save prefetching time.
 	* Add a non-persistable layer with inheritance that is populated by your business logic.
 * Don't use temporary associations on persistable entities. Use a non-persistable entity for your screen/UI logic here.
-
-{{% alert type="info" %}}
-
-Mendix is said to have optimized the retrieves, so not every association ID is loaded on every retrieve. This needs further investigation.
-
-{{% /alert %}}
 
 ##  3 Index Best Practices
 
@@ -62,9 +56,9 @@ Indexes is a topic with a long history of best practices from the database world
     * Do commits after the loop in a list commit. 
     * If needed, create a list named `<Entity>_CommitList` before the loop and collect the items to be committed there.
     * For retrieves in a loop, consider retrieving all the data before the loop, and do finds on that list inside the loop.
-    * If loops contain splits, consider if the split logic can be a query before the loop to minimize iterations.
+    * If loops contain decisions, consider if the decision logic can be a query before the loop to minimize iterations.
 * Prevent unnecessary retrieves if objects or lists can be passed as parameters.
-* Know and use the retrieve + aggregate optimization. If you retrieve a list and count the list, Mendix will optimize this to one query. If you need the list later in the microflow, after some splits, it is wise to retrieve the list again so that you only retrieve the data when needed. This also works in batches where you can retrieve the total count optimized and retrieve chunks in a separate query.
+* Know and use the retrieve + aggregate optimization. If you retrieve a list and count the list, Mendix will optimize this to one query. If you need the list later in the microflow, after some decisions, it is wise to retrieve the list again so that you only retrieve the data when needed. This also works in batches where you can retrieve the total count optimized and retrieve chunks in a separate query.
 * Use the retrieve over association if possible. This uses caching, it is more readable, and it uses an index. If business logic requires the database value (because the value over association might be changed), then of course a database retrieve is needed.
 * Commit as late as possible. A commit locks that record (or list of records). This means that any other user/logic that wants to commit the same object has to wait until the first transaction is finished.
 * To prevent locking, do scheduled events that commit data in small chunks. This is so the data does not get locked over a longer period of time.
@@ -85,7 +79,7 @@ Indexes is a topic with a long history of best practices from the database world
 
 ## 7 XPath Best Practices
 
-* Avoid "unequal" and "not" clauses in XPath. Often they can be rewritten to positive statements, like `<boolean>=false()`, `<enum> = valueA`, `<enum> = valueB`, `integer>valueA`, or `integer<valueB`.
+* Avoid "unequal" and "not" clauses in XPath. Often they can be rewritten to positive statements, like `<boolean>=false()`, `<enumeration> = valueA`, `<enumeration> = valueB`, `integer>valueA`, or `integer<valueB`.
 * Combine paths to the same associated entity if query logic allows this.
 * In older PostgreSQL databases, it was wise to start the XPath with attribute clauses, since the database query optimizer was processing clauses in order. Nowadays, it is claimed that the query optimizer has improved, and this "rule" is no longer needed.
 * Make sure that the attributes used are indexed.

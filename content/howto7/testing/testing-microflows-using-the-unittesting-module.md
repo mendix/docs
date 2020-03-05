@@ -112,11 +112,8 @@ In this chapter you will learn how to create a microflow test. To create a new m
 ### 3.2 Creating a Unit Test
 
 1. Add a **new folder** to MyFirstModule and name it _UnitTests_.
-
 2. Add a new microflow to the folder **UnitTests** and enter *Test_PromoteEmployeeToJunior* for its name.
-
 3. The microflow has one input parameter: **Employee**. So create the **Employee** object.
-
 4. Add a new activity of action type **Create object**.
 
 5. Select entity **Employee**.
@@ -193,7 +190,7 @@ In this chapter you will learn how to create a microflow test. To create a new m
 
 31. Run the project locally.
 
-32. Go to _http://localhost:8080/index.html_.
+32. Go to `http://localhost:8080/index.html`.
 
 33. Click on **UnitTestOverview** in the navigation. **MyFirstModule** will be shown in the list with modules that contain one or more testcases.
 

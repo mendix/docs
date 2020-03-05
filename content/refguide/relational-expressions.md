@@ -1,8 +1,10 @@
 ---
 title: "Relational Expressions"
 parent: "expressions"
+tags: ["studio pro"]
 ---
-Relational expressions allow the user to compare variables and base changes and actions upon that information. The return type of such expressions is always boolean.
+
+Relational expressions allow the user to compare values and to make changes and perform actions based upon that information. The return type of such expressions is always Boolean.
 
 ## Less than ( < )
 
@@ -15,7 +17,7 @@ The values be any of the following types, but the two values should be in the sa
 
 *   String
 *   Numeric (Integer/Long, Decimal)
-*   DateTime
+*   Date and time
 
 ```java
 4<3
@@ -37,7 +39,7 @@ The values be any of the following types, but the two values should be in the sa
 
 *   String
 *   Numeric (Integer/Long, Decimal)
-*   DateTime
+*   Date and time
 
 ```java
 4>3
@@ -59,7 +61,7 @@ The values be any of the following types, but the two values should be in the sa
 
 *   String
 *   Numeric (Integer/Long, Decimal)
-*   DateTime
+*   Date and time
 
 ```java
 6<=3
@@ -94,7 +96,7 @@ The values be any of the following types, but the two values should be in the sa
 
 *   String
 *   Numeric (Integer/Long, Decimal)
-*   DateTime
+*   Date and time
 
 ```java
 4>=3
@@ -117,7 +119,7 @@ The values be any of the following types, but the two values should be in the sa
 
 *   String
 *   Numeric (Integer/Long, Decimal)
-*   DateTime
+*   Date and time
 *   Domain Entity. Equality is checked based on the ID of the object.
 
 ```java
@@ -130,7 +132,7 @@ returns:
 False
 ```
 
-or with a DateTime:
+or with a Date and time:
 
 ```java
 dateTime(2007) = dateTime(2007)
@@ -153,7 +155,7 @@ The values be any of the following types, but the two values should be in the sa
 
 *   String
 *   Numeric (Integer/Long, Decimal)
-*   DateTime
+*   Date and time
 *   Object. Equality is checked based on the ID of the object.
 
 ```java

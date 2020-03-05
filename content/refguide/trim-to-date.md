@@ -1,6 +1,7 @@
 ---
 title: "Trim to Date"
 parent: "expressions"
+tags: ["studio pro"]
 ---
 
 ## 1 Introduction
@@ -14,12 +15,12 @@ Trim the date to seconds, rounding off all milliseconds to zero.
 ### 2.1 Input Parameters
 
 * The date that should be trimmed
-* Type: DateTime
+* Type: Date and time
 
 ### 2.2 Output
 
 * The same date, only rounded down to seconds
-* Type: DateTime
+* Type: Date and time
 
 ### 2.3 Example
 
@@ -42,12 +43,12 @@ Trim the date to minutes, rounding off all (milli)seconds to zero.
 ### 3.1 Input Parameters
 
 * The date that should be trimmed
-* Type: DateTime
+* Type: Date and time
 
 ### 3.2 Output
 
 * The same date, only rounded down to minutes
-* Type: DateTime
+* Type: Date and time
 
 ### 3.3 Example
 
@@ -72,12 +73,12 @@ Trim the date to hours, rounding off all minutes to zero.
 ### 4.1 Input Parameters
 
 * The date that should be trimmed
-* Type: DateTime
+* Type: Date and time
 
 ### 4.2 Output
 
 * The same date, only rounded down to hours
-* Type: DateTime
+* Type: Date and time
 
 ### 4.3 Example
 
@@ -102,12 +103,12 @@ Trim the date to days, rounding off all hours to zero.
 ### 5.1 Input Parameters
 
 * The date that should be trimmed
-* Type: DateTime
+* Type: Date and time
 
 ### 5.2 Output
 
 * The same date, only rounded down to days
-* Type: DateTime
+* Type: Date and time
 
 ### 5.3 Example
 
@@ -132,12 +133,12 @@ Trim the date to months, rounding off all days to zero.
 ### 6.1 Input Parameters
 
 *   date that should be trimmed
-*   Type: DateTime
+*   Type: Date and time
 
 ### 6.2 Output
 
 * The same date, only rounded down to months
-* Type: DateTime
+* Type: Date and time
 
 ### 6.3 Example
 
@@ -162,12 +163,12 @@ Trim the date to years, rounding off all months and days to zero.
 ### 7.1 Input Parameters
 
 * The date that should be trimmed
-* Type: DateTime
+* Type: Date and time
 
 ### 7.2 Output
 
 * The same date, only rounded down to years
-* Type: DateTime
+* Type: Date and time
 
 ### 7.3 Example
 

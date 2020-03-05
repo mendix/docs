@@ -1,11 +1,13 @@
 ---
 title: "Log Message"
-parent: "logging-activities"
+parent: "activities"
+menu_order: 70
+tags: ["studio pro", "logging activity", "logging activities"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="info" %}}
-This activity can only be used in microflows, not in nanoflows.
+{{% alert type="warning" %}}
+This activity can be used in both **Microflows** and **Nanoflows**.
 {{% /alert %}}
 
 ## 1 Introduction
@@ -14,7 +16,7 @@ With the log-message action you can create messages that appear in the log of yo
 
 {{% alert type="info" %}}
 
-See [Microflow Element Common Properties](microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
+See [Common Properties](microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
 
 {{% /alert %}}
 
@@ -28,21 +30,19 @@ The log level defines the severity of the log message. In the Studio Pro **Conso
 | --- | --- | --- |
 | Trace |   | Used for detailed execution traces. |
 | Debug |   | Used to debug execution. |
-| Info |   | Used to log informative messages. |
+| Info  *(default)*  |   | Used to log informative messages. |
 | Warning | ![](attachments/819203/917893.png) | Used to log warnings. These messages appear in orange. |
 | Error | ![](attachments/819203/917894.png) | Used to log error messages. These messages appear in red. |
 | Critical | ![](attachments/819203/917895.png) | Used to log critical errors. These messages appear in  white on red  . |
 
-_Default value:_ Info
-
-### 2.2 Log Node Name
+### 2.2 Log Node Name {#log-node-name}
 
 The log node name is a microflow expression that defines the source of the log message. For example, if you log messages from an email module, the log node name could be 'Email module'.
 
-{{% alert type="success" %}}
-
+{{% alert type="info" %}}
 It is advised to use a [constant](constants) for the log node name. This prevents typing errors and makes it easier to change the log node name afterwards.
 
+You can only set custom [log node levels](/developerportal/deploy/environments-details#log-levels) for the environment if your app has posted a message to that log node. It is therefore recommended that you send an initial message to all your custom log nodes in an [after startup microflow](project-settings#after-startup).
 {{% /alert %}}
 
 ### 2.3 Template
@@ -53,7 +53,7 @@ Template defines the text of the message. The template can contain parameters th
 
 For each parameter in the template you define a microflow expression of which the value will be inserted at the position of the parameter. Parameters need to be entered using [expressions](expressions) resulting in a string.
 
-{{% alert type="success" %}}
+{{% alert type="info" %}}
 
 With parameters you can customize your message with data specific to the situation. For example, the message "An e-mail has been sent to customer {1}." with parameter `$customer/FullName` will show the full name of the customer to whom an e-mail has been sent.
 

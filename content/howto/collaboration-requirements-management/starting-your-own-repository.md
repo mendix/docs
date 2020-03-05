@@ -1,43 +1,41 @@
 ---
-title: "Start Your Own Repository"
+title: "Start Your Own GitHub Repository"
 category: "Collaboration"
 menu_order: 30
-tags: []
+tags: ["studio pro"]
 ---
 
 ## 1 Introduction
 
-In this how-to you will learn how to set up a GitHub repository. The repository will contain your development content and can be shared with others, in order to contribute to the application.
+In this how-to, you will learn how to set up a GitHub repository. The repository will contain your development content and can be shared for others to contribute to an application or [App Store component](/developerportal/app-store/share-app-store-content).
 
 ## 2 Preparation
 
-*   Make sure you have a [GitHub account](https://github.com/join)
-*   Make sure you have a [Mendix account](https://developers.mendix.com/start-for-free/)
-*   Read the [GitHub - Create a repo](https://help.github.com/articles/create-a-repo) guide
+* Have a [GitHub account](https://github.com/join)
+* Read the [Create a Repo](https://help.github.com/articles/create-a-repo) GitHub guide
 
 ## 3 Creating Your Repo
 
-First of all, your repo needs a name. We advise you use the same name that it is/will be published under in the App Store, and then using normal CamelCase to replace spaces. For example: "My first app" would be `Mendix/MyFirstApp` on GitHub.
+First of all, your repo needs a name. You should use the same name that will be used for the item published in the [Mendix App Store](https://appstore.home.mendix.com/index3.html). Use UpperCamelCase to replace the spaces (for example, *My first app* becomes *Mendix/MyFirstApp* on GitHub).
 
-Same as with the description. It should say what the App does, so it would be easiest to keep this in line with the App on the App Store.
+The description should say what the item does. This description can also be used in the Mendix App Store.
 
-(Add the Mendix .gitignore to make sure you keep your repo clean.)
+Add a *.gitignore* file to make sure you keep your repo clean.
 
-## 4 Folder Structure
+## 4 App Store Widget Boilerplate
 
-When making a new widget, we suggest you use the [App Store Widget Boilerplate](https://github.com/mendix/AppStoreWidgetBoilerplate), available on GitHub. This has everything you need to get started developing a Mendix widget.
+When making a new widget, use the [App Store Widget Boilerplate](https://github.com/mendix/AppStoreWidgetBoilerplate) from GitHub. This has everything you need to get started developing a Mendix widget.
 
 ## 5 Releases
 
-If you want to make a new release for the App Store, we advise you start off with a new tag on the appropriate commit on the master or release branch. From these tags, you can create a [new Release in GitHub](https://help.github.com/articles/creating-releases). In this release you can set your release notes (which you can then use for the App Store release as well) and give it a more official name. If you add the .mpk as a binary file to the release tag (see image blow) the App Store will automatically sync the .mpk to your new draft. We suggest also linking this to the upcoming App Store release by mentioning that release number in the description.
+If you want to make a new release for the Mendix App Store, start with a new tag on the appropriate commit on the master or release branch. From these tags, you can create a [new release in GitHub](https://help.github.com/articles/creating-releases). In this release, set your release notes (which you can then use for the App Store release as well) and provide an official name. If you add the *.mpk* file as a binary file to the release tag, the Mendix App Store will automatically sync the *.mpk* to your new draft:
 
 ![](attachments/18448643/18580533.png)
 
+You should link this to the upcoming Mendix App Store release by mentioning that release number in the description.
+
 ## 6 Read More
 
-*   [Stories](/developerportal/collaborate/stories)
 *   [Contributing to a GitHub repository](contribute-to-a-github-repository)
 *   [Version Control](/refguide/version-control)
-*   [How to Use the Feedback Widget](/developerportal/feedback/use-feedback-widget)
 *   [Sharing the Development Database](sharing-the-development-database)
-

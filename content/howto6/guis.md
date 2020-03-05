@@ -12,7 +12,6 @@ Here's where you will find all you need. From how to create pages to setting up 
 *   [Setting Up the Navigation Structure](setting-up-the-navigation-structure)
 *   [Layouts and Snippets](layouts-and-snippets)
 *   [Setup Mendix UI Framework](setup-mendix-ui-framework)
-    *   [Scout and Windows 10 Workaround](scout-and-windows-10-workaround)
     *   [Setup Mendix UI Framework with just CSS](setup-mendix-ui-framework-with-just-css)
 *   [Create a custom theme with the Mendix UI Framework](create-a-custom-theme-with-the-mendix-ui-framework)
 *   [Setup Mendix UI Framework with Koala](setup-mendix-ui-framework-with-koala)

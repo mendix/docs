@@ -3,8 +3,6 @@ title: "2"
 parent: "model-sdk"
 ---
 
-These are the release notes for the Model SDK version 2.
-
 ## 2.9.1
 
 | Impact | Description                                                  |
@@ -71,7 +69,7 @@ Note that Model SDK 2.6.1 and 2.6.2 have been skipped (and unpublished from NPM)
 | None | Added support for Mendix 6.6.0. |
 | None | `getFilePaths` accepts an option objects which can define `format` (either `zip` or `json`), `filter` (glob pattern) and `path` (output filename if format is `zip`). |
 | None | Output filename is no longer mandatory for `getFile` / `getFiles` / `exportMpk`. If not provided, raw response is provided in the callback instead. |
-| None | Support for forcing full deployment. Deploying a working copy is functionality that's not accessible to regular Model SDK users (i.e. non-trusted backends), so no impact. |
+| None | Support for forcing full deployment. Deploying a working copy is functionality that's not accessible to regular Model SDK users (as in, non-trusted backends), so no impact. |
 | None | Fixed a bug with delete deltas not being sent while they should - this e.g. caused 2 translations to be created for the title text of a new page, with the translations having the same language code. |
 | None | More (complete) support for running model checks from the SDK: corrected implementation of check level groups, renamed `hasPrefix` standard library method for expressions (checks and queries) to `startsWith`. |
 
@@ -132,8 +130,8 @@ In turn, this necessitated us to make some fundamental changes to avoid having t
 
 *   The `container` property is not strictly typed anymore; e.g., `domainmodels.Attribute.container` is not of type `Entity` anymore but of a general `Container` type.
 *   Instead, `containerAs<T>` properties of type `T` are introduced on all elements. This property returns the instance of `T` which contains the element or throws if it's not contained by an instance of `T`. To avoid those exceptions, use `container` together with `instanceof`-guards.
-*   In case an element is contained by _multiple_ properties (i.e., more than 1), `createIn<T>Under<P>` methods are generated which creates a new element in a given instance of `T` under property `P`. Several previously-existing `createIn` methods have been replaced by a `createIn<T>Under<P>` method, where these `createIn` methods considered only 1 containing property.
+*   In case an element is contained by _multiple_ properties (as in, more than 1), `createIn<T>Under<P>` methods are generated which creates a new element in a given instance of `T` under property `P`. Several previously-existing `createIn` methods have been replaced by a `createIn<T>Under<P>` method, where these `createIn` methods considered only 1 containing property.
 *   Elements that are contained by one property in at least one version will have a `createIn` method that works as expected for those versions and throws for other versions.
-*   Elements that are always (i.e., in all versions) contained by properties that are derived, will not have any `createIn...` methods.
+*   Elements that are always (as in, in all versions) contained by properties that are derived, will not have any `createIn...` methods.
 
 Dependent code can be easily fixed by using the `containerAs<T>` property instead of the `container` property, and (in a few specific cases) by using a `createIn<T>Under<P>` method instead of the `createIn` method.

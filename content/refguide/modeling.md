@@ -31,6 +31,7 @@ The following documents in this category describe the documents you can add:
 * [Building blocks](building-block)
 * [Page templates](page-templates)
 * [Java actions](java-actions)
+* [JavaScript Actions](javascript-actions)
 * [Rules](rules)
 * [Enumerations](enumerations)
 * [Datasets](data-sets)
@@ -42,19 +43,12 @@ The following documents in this category describe the documents you can add:
 * [JSON structures](json-structures)
 * [XML schemas](xml-schemas)
 * [Export mappings](export-mappings) and [import mappings](import-mappings)
-* [Consumed app services (deprecated)](consumed-app-services) (deprecated) and [consumed web services](consumed-web-services)
-* [Published REST services](published-rest-services), [published web services](published-web-services), [published OData services](published-odata-services), and [published app services (deprecated)](published-app-services) 
+* [Consumed web services](consumed-web-services) and [consumed app services (deprecated)](consumed-app-services)
+* [Published web services](published-web-services), [published REST services](published-rest-services), [published OData services](published-odata-services), and [published app services (deprecated)](published-app-services) 
 
-## 3 Other Documents in This Category
+The following documents provide additional important information about using Studio Pro:
 
-The following documents provide additional information about using Studio Pro
-
-* [Data Types](data-types)
-* [Dialog Boxes](dialogs)
-* [Domain Model](domain-model)
-* [Integration](integration)
-* [Modules](modules)
-* [Projects](project)
-* [Security](security)
-* [Translatable Texts](translatable-texts)
-* [XPath](xpath)
+* [Domain Model](domain-model) – presents information on the data model for your app
+* [Integration](integration) – details methods for integrating with both Mendix and non-Mendix applications
+* [Project Explorer](project-explorer) – presents information on the structure of your app project, including important details on [security](security)
+* [XPath](xpath) – introduces you to the Mendix query language, including details on [XPath constraints](xpath-constraints), [functions](xpath-query-functions), and [tokens](xpath-tokens)

@@ -7,7 +7,7 @@ tags: ["Charts", "Widgets", "Desktop Modeler", "Chart Configuration", "Configura
 
 ## 1 Introduction
 
-This guide explains the options for configuring chart widgets. The chart widgets are included in Mendix starter apps based on Atlas UI. They can be included in other Mendix apps by downloading them from the Mendix App Store here: https://appstore.home.mendix.com/link/app/105695/.
+This guide explains the options for configuring chart widgets. The chart widgets are included in Mendix app templates based on Atlas UI. They can be included in other Mendix apps by downloading them from the Mendix App Store here: https://appstore.home.mendix.com/link/app/105695/.
 
 This guide covers the following widgets:
 
@@ -285,7 +285,7 @@ The properties above are common across the chart types. In this section, the pro
 
     * **Border style**: Straight, Curved
 
-    * **Fill area**: Fill area between data points and x-axis: Yes, No
+    * **Fill area**: Fill area between data points and X-axis: Yes, No
 
 2. **Static series** Tab
 

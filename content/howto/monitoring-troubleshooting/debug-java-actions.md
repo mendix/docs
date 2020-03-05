@@ -1,7 +1,7 @@
 ---
 title: "Debug Java Actions"
 category: "Monitoring & Troubleshooting"
-menu_order: 6
+menu_order: 4
 tags: ["monitoring", "troubleshooting", "debug", "java action"]
 ---
 
@@ -12,7 +12,7 @@ Mendix Studio Pro has a built-in debugger to solve errors on the microflow level
 **This how-to will teach you how to do the following:**
 
 * Set breakpoints
-* Debug in Eclipe
+* Debug in Eclipse
 
 ## 2 Prerequisites
 
@@ -69,6 +69,5 @@ Before starting this how-to, make sure you have completed the following prerequi
 * [Debug Java Actions Remotely](debug-java-actions-remotely)
 * [Log Levels](log-levels)
 * [Debug Microflows](debug-microflows)
-* [Common Mendix SSO Errors](handle-common-mendix-sso-errors)
 * [Debug Microflows Remotely](debug-microflows-remotely)
 * [Java Actions](/refguide/java-actions)

@@ -1,6 +1,7 @@
 ---
 title: "OQL Group by Clause"
 parent: "oql"
+tags: ["studio pro"]
 ---
 
 

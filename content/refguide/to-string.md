@@ -1,8 +1,8 @@
 ---
 title: "To String"
 parent: "expressions"
+tags: ["studio pro"]
 ---
-
 
 Basic functions to convert values of various data types to string.
 
@@ -14,7 +14,7 @@ If you need full control over the output format, consider using the data type sp
 
 ### Input Parameters
 
-A value that should be converted to a String. Supported [types](data-types): Integer/Long, Decimal, DateTime, Boolean and Enumeration. In case of Enumeration, returns the key of the enumeration value, not the caption. See also [Enumerations in expressions](enumerations-in-expressions).
+A value that should be converted to a String. Supported [types](data-types): Integer/Long, Decimal, Date and time, Boolean and Enumeration. In case of Enumeration, returns the key of the enumeration value, not the caption. See also [Enumerations in expressions](enumerations-in-expressions).
 
 ```java
 toString(1.4)
@@ -26,7 +26,7 @@ returns:
 '1.4'
 ```
 
-with a DateTime:
+with a Date and time type:
 
 ```java
 toString(dateTime(2007))

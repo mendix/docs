@@ -1,13 +1,15 @@
 ---
 title: "Atlas UI"
 category: "Front-End"
-menu_order: 9
+menu_order: 5
 tags: ["Atlas", "UI", "UX", "user experience"]
 ---
 
 ## 1 Introduction
 
-Mendix Atlas UI is the design framework that makes building elegant user experiences a rapid process. It was built upon three design principles: simplicity, harmony, and flexibility. Simplicity helps you focus on what is important. We’ve simplified the design process with readymade page templates, building blocks, and widgets that can be arranged and customized to suit your app. Our design elements are harmonious, bringing a unified aesthetic to your app landscape. Atlas UI is built to be fully responsive, ensuring quality across scale without losing functionality. Visit the [Atlas UI site](https://atlas.mendix.com/) for detailed previews and descriptions of all Atlas UI elements.
+Mendix Atlas UI is the design framework that makes building elegant user experiences a rapid process. It was built upon three design principles: simplicity, harmony, and flexibility. Simplicity helps you focus on what is important. We’ve simplified the design process with readymade page templates, building blocks, and widgets that can be arranged and customized to suit your app. Our design elements are harmonious, bringing a unified aesthetic to your app landscape. Atlas UI is built to be fully responsive, ensuring quality across scale without losing functionality. 
+
+Visit the [Atlas UI site](https://atlas.mendix.com/) for detailed previews and descriptions of all Atlas UI elements, or see the Atlas UI Framework [GitHub repository](https://github.com/mendix/Atlas-UI-Framework). If you wish to customize your Mendix apps' styling, see [Use Calypso](calypso).
 
 ### 1.1 Mendix Studio
 
@@ -60,8 +62,10 @@ You can further customize widgets by changing their design properties. Colors, t
 ## 3 Read More
 
 * [Get Started with Atlas UI](get-started-with-atlasui)
-* [Migrate Existing Projects to Atlas UI](migrate-existing-projects-to-atlasui)
+* [Migrate Existing App Projects to Atlas UI](migrate-existing-projects-to-atlasui)
 * [Create Company Atlas UI Resources](create-company-atlas-ui-resources)
 * [Share Company Atlas UI Resources](share-company-atlas-ui-resources)
 * [Create Custom Preview Images for Building Blocks & Page Templates](create-custom-preview-images-for-building-blocks-and-page-templates)
 * [Extend Design Properties to Customize Your Studio Experience](extend-design-properties-to-customize)
+* [Troubleshooting Atlas UI Changes](/refguide/migration-atlas)
+* [Use Calypso](calypso)

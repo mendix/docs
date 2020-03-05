@@ -2,6 +2,7 @@
 title: "DB2"
 parent: "data-storage"
 menu_order: 40
+tags: ["studio pro"]
 ---
 
 ## 1 Introduction

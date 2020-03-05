@@ -4,7 +4,7 @@ module.exports = {
      * POTENTIALLY TEMPORARY REDIRECTS
      ****************************************************/
 	/****************************************************
-     * From the Web Modeler (potentially temporary until fixed in product, mapped)
+     * From Studio(potentially temporary until the support of old bundles stops, mapped)
      ****************************************************/
 	{
       from: "/refguide/web-modeler/domain-models-association-properties-wm",
@@ -24,35 +24,23 @@ module.exports = {
     },
 	{
       from: "/refguide/web-modeler/app-settings-wm",
-      to: "/studio/app-settings"
+      to: "/studio/settings-widget-overview"
+    },	
+    {
+      from: "/howto/sap/use-sap-odata-model-creator",
+      to: "/partners/sap/use-sap-odata-model-creator"
+    },	
+    {
+      from: "/refguide/siemens/mindsphere-module-details",
+      to: "/partners/siemens/mindsphere-module-details"
     },
 	/****************************************************
-     * From the Support Portal (potentially temporary until fixed in product, mapped) 
+     * From https://www.npmjs.com/package/mendixmodelsdk (potentially temporary until fixed)
      ****************************************************/
 	{
-      from: "/community/app-store-content-support",
-      to: "/developerportal/app-store/app-store-content-support"
-    },
-	{
-      from: "/mendixcloud/custom-domains",
-      to: "/developerportal/deploy/custom-domains"
-    },
-	{
-      from: "/developerportal/howto/how-to-link-app-to-node",
-      to: "/developerportal/deploy/licensing-apps"
-    },
-	{
-      from: "/developerportal/howto/how-to-link-a-different-app-to-a-node",
-      to: "/developerportal/deploy/licensing-apps"
-    },
-	{
-      from: "/developerportal/support/new-app-request-template",
-      to: "/developerportal/support/new-app-node-request-template"
-    },
-	{
-      from: "/developerportal/support/export-a-project-package",
-      to: "/refguide/export-project-package-dialog"
-    },
+      from: "/MXSDK/Your+learning+path+for+the+Mendix+SDK",
+      to: "/apidocs-mxsdk/mxsdk/"
+    },	
 	/****************************************************
      * PERMANENT REDIRECTS
      ****************************************************/
@@ -68,15 +56,18 @@ module.exports = {
       to: "/"
     },
 	/****************************************************
-     * Studio Guide (permanent, unmapped)
+     * Studio Pro Guide (permanent, mapped)
      ****************************************************/
 	{
-      from: "/howto/tutorials/",
-      to: "/studio/general"
+      from: "/refguide/mindsphere/mindsphere-module-details",
+      to: "/partners/siemens/mindsphere-module-details"
     },
+	/****************************************************
+     * Reference Guide version 7 (permanent, unmapped)
+     ****************************************************/	
 	{
-      from: "/howto/tutorials/mendix-tutorials",
-      to: "/studio/general"
+      from: "/refguide/moving-from-6-to-7",
+      to: "/refguide7/moving-from-6-to-7"
     },
 	/****************************************************
      * How-to's (permanent, unmapped)
@@ -103,6 +94,17 @@ module.exports = {
 	{
       from: "/howto7/ux/configuring-your-theme",
       to: "/howto7/front-end/configuring-your-theme"
+    },
+	/****************************************************
+     * Studio Guide (permanent, unmapped)
+     ****************************************************/
+	{
+      from: "/howto/tutorials/",
+      to: "/studio/general"
+    },
+	{
+      from: "/howto/tutorials/mendix-tutorials",
+      to: "/studio/general"
     },
 	/****************************************************
      * Developer Portal Guide (permanent, unmapped) 
@@ -186,11 +188,11 @@ module.exports = {
       from: "/developerportal/howto/deploying-to-the-cloud",
       to: "/developerportal/deploy/mendix-cloud-deploy"
     },
-  {
+	{
       from: "/deployment/on-premises/deploy-mendix-on-microsoft-windows",
       to: "/developerportal/deploy/deploy-mendix-on-microsoft-windows"
     },
-  {
+	{
       from: "/deployment/on-premises",
       to: "/developerportal/deploy/on-premises-design"
     },
@@ -202,7 +204,15 @@ module.exports = {
       from: "/refguide/publish-packages-to-mobile-stores",
       to: "/howto/mobile/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores"
     },
-	/****************************************************
+	{
+      from: "/refguide/team-server",
+      to: "/developerportal/develop/team-server"
+    },
+    {
+      from: "/developerportal/deploy/integrate-with-mendix-sso",
+      to: "/developerportal/deploy/mendix-sso"
+    },
+    /****************************************************
      * From the App Store (permanent, mapped)
      ****************************************************/
 	{
@@ -235,11 +245,11 @@ module.exports = {
     },
 	{
       from: "/howto/ux/create-a-custom-theme-with-the-mendix-ui-framework",
-      to: "/howto/front-end/create-a-custom-theme-with-the-mendix-ui-framework"
+      to: "/howto/front-end/atlas-ui"
     },
 	{
-      from: "/addons/APM",
-      to: "/apm/"
+      from: "/howto/front-end/create-a-custom-theme-with-the-mendix-ui-framework",
+      to: "/howto/front-end/atlas-ui"
     },
 	{
       from: "/releasenotes/desktop-modeler/",
@@ -390,6 +400,37 @@ module.exports = {
       to: "/releasenotes/studio-pro/6.0"
     },
 	/****************************************************
+     * From the Support Portal (permanent, mapped) 
+     ****************************************************/
+	{
+      from: "/community/app-store-content-support",
+      to: "/developerportal/app-store/app-store-content-support"
+    },
+	{
+      from: "/mendixcloud/custom-domains",
+      to: "/developerportal/deploy/custom-domains"
+    },
+	{
+      from: "/developerportal/howto/how-to-link-app-to-node",
+      to: "/developerportal/deploy/licensing-apps"
+    },
+	{
+      from: "/developerportal/howto/how-to-link-a-different-app-to-a-node",
+      to: "/developerportal/deploy/licensing-apps"
+    },
+	{
+      from: "/developerportal/support/new-app-request-template",
+      to: "/developerportal/support/new-app-node-request-template"
+    },
+	{
+      from: "/developerportal/support/export-a-project-package",
+      to: "/refguide/export-project-package-dialog"
+    },
+	{
+      from: "/developerportal/support/change-affected-apps",
+      to: "/developerportal/support/prepare-your-project"
+    },
+	/****************************************************
      * From Studio Pro version 8 (permanent as backups, mapped)
      ****************************************************/
 	{
@@ -412,15 +453,15 @@ module.exports = {
       from: "/refguide8/download-from-team-server-dialog",
       to: "/refguide/download-from-version-control-dialog"
     },
-  {
+	{
       from: "/refguide8/open-project-dialog",
       to: "/refguide/open-app-dialog"
     },
-  {
+	{
       from: "/refguide8/upload-to-team-server-dialog",
       to: "/refguide/upload-to-version-control-dialog"
     },
-  {
+	{
       from: "/refguide8/microflow-expressions",
       to: "/refguide/expressions"
     },
@@ -434,7 +475,7 @@ module.exports = {
     },
 	{
       from: "/refguide8/drop-down-widget",
-      to: "/refguide/drop_down"
+      to: "/refguide/drop-down"
     },
 	{
       from: "/refguide8/horizontal-split-pane",
@@ -452,7 +493,204 @@ module.exports = {
       from: "/refguide8/Developing+Hybrid+Mobile+Apps",
       to: "/refguide/developing-hybrid-mobile-apps"
     },
-	/****************************************************
+	{
+      from: "/refguide8/enumeration-values",
+      to: "/refguide/enumerations"
+    },
+	{
+      from: "/refguide8/inheritance-split",
+      to: "/refguide/object-type-decision"
+    },
+	{
+      from: "/refguide8/exclusive-split",
+      to: "/refguide/decision"
+	},
+	{
+      from: "/howto/deploying-a-mendix-app-to-cloud-foundry",
+      to: "/developerportal/deploy/cloud-foundry-deploy"
+    },
+	{
+      from: "/refguide8/menu-item",
+      to: "/refguide/menu"
+    },
+	{
+      from: "/refguide8/Show+Page",
+      to: "/refguide/show-page"
+    },
+	{
+      from: "/refguide8/Validation+Feedback",
+      to: "/refguide/validation-feedback"
+    },
+	{
+      from: "/refguide8/Show+Message",
+      to: "/refguide/show-message"
+    },
+	{
+      from: "/refguide8/Show+Home+Page",
+      to: "/refguide/show-home-page"
+    },
+	{
+      from: "/refguide8/Download+File",
+      to: "/refguide/download-file"
+    },
+	{
+      from: "/refguide8/Close+Form",
+      to: "/refguide/close-page"
+    },
+	{
+      from: "/refguide8/Row+(document+template)",
+      to: "/refguide/row-document-template"
+    },
+	{
+      from: "/refguide8/Table+(document+template",
+      to: "/refguide/table-document-template"
+    },
+	{
+      from: "/refguide8/Cell+(document+template)",
+      to: "/refguide/cell-document-template"
+    },
+	{
+      from: "/refguide8/Static+Image+(document+template)",
+      to: "/refguide/static-image-document-template"
+    },
+	{
+      from: "/refguide8/Title+(document+template)",
+      to: "/refguide/title-document-template"
+    },
+	{
+      from: "/refguide8/Static+label+(document+template)",
+      to: "/refguide/static-label-document-template"
+    },
+	{
+      from: "/refguide8/Page+Break+(document+template)",
+      to: "/refguide/page-break-document-template"
+    },
+	{
+      from: "/refguide8/Line+Break+(document+template)",
+      to: "/refguide/line-break-document-template"
+    },
+	{
+      from: "/refguide8/Header+(document+template)",
+      to: "/refguide/header-document-template"
+    },
+	{
+      from: "/refguide8/Footer+(document+template)",
+      to: "/refguide/footer-document-template"
+    },
+	{
+      from: "/refguide8/Dynamic+label+(document+template)",
+      to: "/refguide/dynamic-label-document-template"
+    },
+	{
+      from: "/refguide8/Template+Grid+(document+template)",
+      to: "/refguide/template-grid-document-template"
+    },
+	{
+      from: "/refguide8/Data+Grid+(document+template)",
+      to: "/refguide/data-grid-document-template"
+    },
+	{
+      from: "/refguide8/Sort+Bar",
+      to: "/refguide/sort-bar"
+    },
+	{
+      from: "/refguide8/Columns+(document+template)",
+      to: "/refguide/columns-document-template"
+    },
+	{
+      from: "/refguide8/Dynamic+Image+(document+template)",
+      to: "/refguide/dynamic-image-document-template"
+    },
+	{
+      from: "/refguide8/Data+View+(document+template)",
+      to: "/refguide/data-view-document-template"
+    },
+	{
+      from: "/refguide8/Document+Templates",
+      to: "/refguide/document-templates"
+    },
+	{
+      from: "/refguide8/tab-page",
+      to: "/refguide/tab-container"
+    },
+	{
+		from: "/refguide8/action-button",
+      to: "/refguide/button-properties"
+    },
+	{
+		from: "/refguide8/drop-down-button",
+      to: "/refguide/button-properties"
+    },
+	{
+		from: "/refguide8/image-property",
+      to: "/refguide/button-properties"
+    },
+	{
+		from: "/refguide8/grid-action-button",
+      to: "/refguide/control-bar"
+    },
+	{
+		from: "/refguide8/remove-button",
+      to: "/refguide/control-bar"
+    },
+	{
+		from: "/refguide8/select-button",
+      to: "/refguide/control-bar"
+    },
+	{
+		from: "/refguide8/add-button",
+      to: "/refguide/control-bar"
+    },
+	{
+		from: "/refguide8/deselect-all-button",
+      to: "/refguide/control-bar"
+    },
+	{
+		from: "/refguide8/export-to-csv-button",
+      to: "/refguide/control-bar"
+    },
+	{
+		from: "/refguide8/export-to-excel-button",
+      to: "/refguide/control-bar"
+    },
+	{
+		from: "/refguide8/grid-new-button",
+      to: "/refguide/control-bar"
+    },
+	{
+		from: "/refguide8/search-button",
+      to: "/refguide/control-bar"
+    },
+	{
+		from: "/refguide8/select-all-button",
+      to: "/refguide/control-bar"
+    },
+	{
+		from: "/refguide8/comparison-search-field",
+      to: "/refguide/search-bar"
+    },
+	{
+		from: "/refguide8/drop-down-search-field",
+      to: "/refguide/search-bar"
+    },
+	{
+		from: "/refguide8/range-search-field",
+      to: "/refguide/search-bar"
+    },
+    {
+      from: "/refguide8/opening-pages",
+        to: "/refguide/pages"
+      },
+    {
+      from: "/refguide8/starting-microflows",
+        to: "/refguide/on-click-event"
+      },
+	  {
+      from: "/refguide8/app-settings-dialog",
+        to: "/refguide/new-project"
+      },
+  
+    /****************************************************
      * From Desktop Modeler version 7 (permanent, mapped)
      ****************************************************/
 	{
@@ -465,29 +703,33 @@ module.exports = {
     },
 	{
       from: "/refguide7/desktop-webmodeler",
-      to: "/refguide7/sync-webmodeler-desktopmodeler"
+      to: "/refguide7/collaborative-development"
     },
 	{
       from: "/web-modeler/general-sync-webmodeler-desktopmodeler-wm",
-      to: "/refguide7/sync-webmodeler-desktopmodeler"
+      to: "/refguide7/collaborative-development"
     },
 	{
       from: "/howto/web-modeler/syncing-webmodeler-desktop",
-      to: "/refguide7/sync-webmodeler-desktopmodeler"
+      to: "/refguide7/collaborative-development"
+    },
+	{
+      from: "/refguide7/sync-webmodeler-desktopmodeler",
+      to: "/refguide7/collaborative-development"
     },
 	{
       from: "/refguide7/download-from-team-server-dialog",
       to: "/refguide7/download-from-version-control-dialog"
     },
-  {
+	{
       from: "/refguide7/open-project-dialog",
       to: "/refguide7/open-app-dialog"
     },
-  {
+	{
       from: "/refguide7/upload-to-team-server-dialog",
       to: "/refguide7/upload-to-version-control-dialog"
     },
-  {
+	{
       from: "/refguide7/microflow-expressions",
       to: "/refguide7/expressions"
     },
@@ -519,6 +761,106 @@ module.exports = {
       from: "/refguide7/Developing+Hybrid+Mobile+Apps",
       to: "/refguide7/developing-hybrid-mobile-apps"
     },
+	{
+      from: "/howto7/deploying-a-mendix-app-to-cloud-foundry",
+      to: "/developerportal/deploy/cloud-foundry-deploy"
+    },
+	{
+      from: "/refguide7/Show+Page",
+      to: "/refguide7/show-page"
+    },
+	{
+      from: "/refguide7/Validation+Feedback",
+      to: "/refguide7/validation-feedback"
+    },
+	{
+      from: "/refguide7/Show+Message",
+      to: "/refguide7/show-message"
+    },
+	{
+      from: "/refguide7/Show+Home+Page",
+      to: "/refguide7/show-home-page"
+    },
+	{
+      from: "/refguide7/Download+File",
+      to: "/refguide7/download-file"
+    },
+	{
+      from: "/refguide7/Close+Form",
+      to: "/refguide7/close-page"
+    },
+	{
+      from: "/refguide7/Row+(document+template)",
+      to: "/refguide7/row-document-template"
+    },
+	{
+      from: "/refguide7/Table+(document+template",
+      to: "/refguide7/table-document-template"
+    },
+	{
+      from: "/refguide7/Cell+(document+template)",
+      to: "/refguide7/cell-document-template"
+    },
+	{
+      from: "/refguide7/Static+Image+(document+template)",
+      to: "/refguide7/static-image-document-template"
+    },
+	{
+      from: "/refguide7/Title+(document+template)",
+      to: "/refguide7/title-document-template"
+    },
+	{
+      from: "/refguide7/Static+label+(document+template)",
+      to: "/refguide7/static-label-document-template"
+    },
+	{
+      from: "/refguide7/Page+Break+(document+template)",
+      to: "/refguide7/page-break-document-template"
+    },
+	{
+      from: "/refguide7/Line+Break+(document+template)",
+      to: "/refguide7/line-break-document-template"
+    },
+	{
+      from: "/refguide7/Header+(document+template)",
+      to: "/refguide7/header-document-template"
+    },
+	{
+      from: "/refguide7/Footer+(document+template)",
+      to: "/refguide7/footer-document-template"
+    },
+	{
+      from: "/refguide7/Dynamic+label+(document+template)",
+      to: "/refguide7/dynamic-label-document-template"
+    },
+	{
+      from: "/refguide7/Template+Grid+(document+template)",
+      to: "/refguide7/template-grid-document-template"
+    },
+	{
+      from: "/refguide7/Data+Grid+(document+template)",
+      to: "/refguide7/data-grid-document-template"
+    },
+	{
+      from: "/refguide7/Sort+Bar",
+      to: "/refguide7/sort-bar"
+    },
+	{
+      from: "/refguide7/Columns+(document+template)",
+      to: "/refguide7/columns-document-template"
+    },
+	{
+      from: "/refguide7/Dynamic+Image+(document+template)",
+      to: "/refguide7/dynamic-image-document-template"
+    },
+	{
+      from: "/refguide7/Data+View+(document+template)",
+      to: "/refguide7/data-view-document-template"
+    },
+	{
+      from: "/refguide7/Document+Templates",
+      to: "/refguide7/document-templates"
+    },	
 	/****************************************************
      * From Desktop Modeler version 6 (permanent)
      ****************************************************/
@@ -2192,9 +2534,32 @@ module.exports = {
       to: "/howto6/solving-load-and-import-errors"
     },
 	/****************************************************
-     * APM (permanent, unmapped)
+     * Add-on Guides (permanent, mapped)
      ****************************************************/
-    // {
+	{
+	  from: "/apm/installation-guide",
+	  to: "/addons/apm-addon/ig-two"
+	},
+	{
+      from: "/apm/reference-guide/rg-2/reference-guide-2",
+      to: "/addons/apm-addon/rg-two-apm"
+    },
+	{
+	  from: "~*\\\/aqm\\\/",
+	  to: "/addons/aqm-addon/index",
+	  exact: true
+    },
+	{
+	  from: "~*\\\/apm\\\/",
+	  to: "/addons/apm-addon/index",
+	  exact: true
+    },
+	{
+	  from: "~*\\\/ats\\\/",
+	  to: "/addons/ats-addon/index",
+	  exact: true
+    },	
+	// {
     //   from: "~*\\\/apm\\\/use-cases\\\/uc",
     //   to: "/apm/use-cases/",
     //   exact: true

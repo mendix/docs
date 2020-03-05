@@ -13,15 +13,15 @@ The Mendix Community site includes the community tools described below.
 
 On the [Mendix Forum](https://forum.mendixcloud.com/index3.html), you can ask questions and explore the knowledge offered by the entire Mendix community. There are questions and answers on various topics as well as a specific **Idea Forum** for the submission of unique ideas on changes and improvements to the Mendix app platform.
 
-The **Forum** section at the top of the Mendix Community site presents the latest questions being asked on the forum along with the author of the question and how long ago it was asked:
+The **Forum** section at the top of the Mendix Community site presents the latest questions being asked on the Mendix Forum along with the author of the question and how long ago it was asked:
 
 {{% image_container width="550" %}}
 ![](attachments/the-community-site/Forum.png)
 {{% /image_container %}}
 
-Click any question to go to that specific question page in the forum. Click **Ask a question** to submit your own question to the forum.
+Click any question to go to that specific question page in the Mendix Forum. Click **Ask a question** to submit your own question to the Mendix Forum.
 
-For more information on the forum, see [Mendix Forum](mendix-forum).
+For more information, see [Mendix Forum](mendix-forum).
 
 ## 3 Monthly Webinar
 
@@ -81,7 +81,7 @@ For more information, see the [App Store Overview](../app-store/app-store-overvi
 
 ## 7 Documentation
 
-The [Mendix Documentation](https://docs.mendix.com/) covers all aspects of the Mendix Platform. The Mendix Studio Pro Guide includes in-depth information on Mendix Studio, Studio Pro, and Team Server. The Mendix Studio Pro How-To's present detailed instructions for building and customizing apps with Mendix. The API documentation contains several different sections, such as the Deploy API and Team Server API.
+The [Mendix Documentation](https://docs.mendix.com/) covers all aspects of the Mendix Platform. The [Studio Pro Guide](/refguide/index) includes in-depth information on Mendix Studio, Studio Pro, and Team Server. The [Studio Pro How-to's](/howto/index) present detailed instructions for building and customizing apps with Mendix. The API documentation contains several different sections, such as the Deploy API and Team Server API.
 
 The **Documentation** section of the Developers site presents the latest updates on the documentation site:
 
@@ -103,9 +103,8 @@ Click any blog post title to go to the full text of that post. There is a lot of
 
 ## 9 Main Documents in This Category
 
-* [Mendix Forum](mendix-forum)
-* [Contribute to the Documentation](contribute-to-the-mendix-documentation)
-* [Documentation Writing Guidelines](documentation-writing-guidelines)
-* [Mendix Jobs Board](mendix-job-board)
-* [Mendix MVP Program](mendix-mvp-program)
-* [Set Up Your Partner Profile](how-to-set-up-your-partner-profile)
+* [Mendix Forum](mendix-forum) – describes how to use the Mendix Forum and the Mendix Idea Forum to ask questions, search for answers, and post ideas
+* [Contribute to the Documentation](contribute-to-the-mendix-documentation) – shows you how to edit and write new documentation to help the Mendix community
+* [Mendix Jobs Board](mendix-job-board) – explains how to post and find Mendix-related jobs
+* [Mendix MVP Program](mendix-mvp-program) – describes how Mendix MVPs are selected and what the benefits are to being an MVP
+* [Set Up Your Partner Profile](how-to-set-up-your-partner-profile) – shows you how to set up the Mendix Partner Profile for your company

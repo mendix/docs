@@ -3,7 +3,7 @@ title: "Unix Deployment"
 parent: "on-premises-design"
 description: "How to install and configure Mendix on a Unix-like system"
 menu_order: 99
-tags: ["RedHat", "CentOS", "install", "deploy", "m2ee", "Debian", "GNU", "Linux", "Unix-like", "Unix", "U*ix", "*nix", "on-premises"]
+tags: ["Red Hat", "CentOS", "install", "deploy", "m2ee", "Debian", "GNU", "Linux", "Unix-like", "Unix", "U*ix", "*nix", "on-premises"]
 ---
 
 ## 1 Introduction
@@ -33,5 +33,5 @@ To activate your license key, follow these steps:
 
 1. Open the interactive m2ee console.
 2. Use the command `show_license_information` to display a generated server ID.
-3. Use the server ID to obtain a license key from Mendix.
-4. sActivate your license on the server using the `activate_license` m2ee command.
+3. Use the server ID to obtain a license key from Mendix (see [Licensing Apps](licensing-apps-outside-mxcloud) for information on requesting a license key).
+4. Activate your license on the server using the `activate_license` m2ee command.

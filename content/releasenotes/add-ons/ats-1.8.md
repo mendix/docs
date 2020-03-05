@@ -8,6 +8,7 @@ parent: "ats-1"
 **Release date: December 14th, 2017**
 
 ### Fixes
+
 * We fixed a bug that sometimes caused an error when opening the test error logs. More specifically, if the error log contained HTML characters it caused issues with Mendix. HTML characters in the error messages are now correctly escaped and rendered as a string.
 * We fixed an issue where some images were not displayed in cloud version v4.
 
@@ -16,6 +17,7 @@ parent: "ats-1"
 **Release date: July 3rd, 2017**
 
 ### Fixes
+
 * We fixed a bug where Mendix actions were not shown in the search results if there were more than 25 results.
 * We fixed a bug where the error log was lost due to being too long. 
 * We fixed a bug where the action **Set Value** could set a value on a read only widget.
@@ -79,7 +81,7 @@ ATS now supports testing the recently released Mendix 7.
 
 ### New Action
 
-* We added a new action to click an x-y coordinate within the browser window or a certain UI element. For more details, see [Click Coordinates](/ats/refguide/rg-version-1/click-coordinates) in the ATS Reference Guide 1.
+* We added a new action to click an x-y coordinate within the browser window or a certain UI element. For more details, see [Click Coordinates](/addons/ats-addon/rg-one-click-coordinates) in the ATS Reference Guide 1.
 
 ### Improvements
 
@@ -141,13 +143,13 @@ These are the new widgets now supported by ATS:
 * [CKEditor](https://appstore.home.mendix.com/link/app/1715/Mendix/CKEditor-For-Mendix) (not supported in recording yet)
 * [Bootstrap Wysiwyg Editor](https://appstore.home.mendix.com/link/app/902/Mendix/Bootstrap-Wysiwyg-Editor) (not supported in recording yet)
 
-The [Action Reference Guide](/ats/refguide/rg-version-1/standard-actions-reference) lists the new actions.
+The [Action Reference Guide](/addons/ats-addon/rg-one-standard-actions-reference) lists the new actions.
 
 ### Action Reference Guide and Tutorial
 
 If you use a widget that is not supported by ATS, you can help yourself and create your own actions. To help you with this, we now provide a Tutorial that explains how to create an action based on the example of the Boolean Slider widget.
 
-We've also documented all our actions in a [Reference Guide](/ats/refguide/rg-version-1/standard-actions-reference). It describes all the actions that you can use in your test cases. In addition to that, it also references the internal actions that are very helpful if you want to create your own actions.
+We've also documented all our actions in a [Reference Guide](/addons/ats-addon/rg-one-standard-actions-reference). It describes all the actions that you can use in your test cases. In addition to that, it also references the internal actions that are very helpful if you want to create your own actions.
 
 ### Improved Recording
 

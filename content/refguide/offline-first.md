@@ -1,8 +1,8 @@
 ---
 title: "Offline-First"
 category: "Mobile"
-menu_order: 3
-tags: ["offline", "native", "mobile"]
+menu_order: 30
+tags: ["offline", "native", "mobile", "studio pro"]
 ---
 
 ## 1 Introduction
@@ -40,7 +40,7 @@ The synchronization process consists of two phases. In the [upload phase](#uploa
 
 The upload phase begins with a referential integrity validation of the new or changed objects that should be committed to the server. This validation checks for references to other objects that are not yet committed to the local database. 
 
-For example, when a committed `City` object refers to an uncommitted `Country` object, synchronizing the `City` object will yield an invalid `Country` object reference, which will break the app's data integrity. If a sync is triggered while data integrity is broken, the following error message will appear (indicating an error in the model to fix): "Sync has failed due to a modeling error. Your database contains objects that reference uncommitted objects: object of type `City` (reference `City_Country`)." To fix this, such objects must also be committed before synchronizing (in this example, `Country`should be committed before synchronizing).
+For example, when a committed `City` object refers to an uncommitted `Country` object, synchronizing the `City` object will yield an invalid `Country` object reference, which will break the app's data integrity. If a synchronization is triggered while data integrity is broken, the following error message will appear (indicating an error in the model to fix): "Sync has failed due to a modeling error. Your database contains objects that reference uncommitted objects: object of type `City` (reference `City_Country`)." To fix this, such objects must also be committed before synchronizing (in this example, `Country`should be committed before synchronizing).
 
 The upload phase executes the following operations after validation:
 
@@ -50,7 +50,7 @@ The upload phase executes the following operations after validation:
 
 ### 2.2 Download Phase {#download}
 
-If the upload phase was succesful, the download phase starts in which the local database is updated with the newest data from the server database. A network request is made to the server per entity.
+If the upload phase was successful, the download phase starts in which the local database is updated with the newest data from the server database. A network request is made to the server per entity.
 
 You can manage which entities are synchronized to the local database by customizing your app's synchronization behavior. For more details on this procedure, see the [Customizable Synchronization](#customizable-synchronization) section below.
 
@@ -68,7 +68,7 @@ Furthermore, it is possible to disable downloads for an entity. This can be very
 
 If you have custom widgets or JavaScript actions which use an entity that cannot be detected by Studio Pro in your offline-first profile (because its only used in the code), you can use customizable synchronization to include such entities.
 
-{{% todo %}}[include customsync.png]{{% /todo %}}
+{{% image_container width="450" %}}![custom synchronization](attachments/offline-first/custom-sync.png){{% /image_container %}}
 
 ### 2.4 Error Handling
 
@@ -97,11 +97,7 @@ During the synchronization, changed and new objects are committed. An object's s
 * An error occurs during the execution of a before- or after-commit event microflow
 * The object is not valid according to domain-level validation rules
 
-When a synchronization error occurs because of one the reasons above, an object's commit is skipped, its changes are ignored, and references from other objects to it become invalid. Objects referencing such a skipped object (which are not triggering errors) will be synchronized normally. Such a situation is likely to be a modeling error and is logged on the server.
-
-{{% alert type="warning" %}}
-The behavior described above will be available as of [Mendix version 8 GA](/releasenotes/studio-pro/8.0). Before this version is available and there is a synchronization error occurs because of one the reasons listed above, the synchronization is aborted and the data is reverted on the local device. It is thus very important to prevent these situations.
-{{% /alert %}}
+{{% alert type="warning" %}}When a synchronization error occurs because of one the reasons above, an object's commit is skipped, its changes are ignored, and references from other objects to it become invalid. Objects referencing such a skipped object (which are not triggering errors) will be synchronized normally. Such a situation is likely to be a modeling error and is logged on the server.{{% /alert %}}
 
 ### 2.4.3 Preventing Synchronization Issues
 
@@ -113,10 +109,6 @@ To avoid the problems mentioned above, we suggest following these best practices
 * When committing objects that are being referenced by other objects, make sure the other objects are also committed.
 
 If synchronization is triggered using a synchronize action in a nanoflow and an error occurs, it is possible to handle the error gracefully using the nanoflow error handling.
-
-{{% alert type="info" %}}
-This functionality is available as of Mendix 8 Beta.
-{{% /alert %}}
 
 ### 2.4.4 Conflict Resolution
 
@@ -132,6 +124,7 @@ To ensure the best user experience for your Mendix application, follow these bes
 * Because network connections can be slow and unreliable and mobile devices often have limited storage, avoid synchronizing large files or images (for example, by limiting the size of photos)
 * Use an `isDeleted` Boolean attribute for delete functionality so that conflicts can be handled correctly on the server
 * Use before- and after-commit microflows to pre- or post-process data, or perform additional server-side logic using microflows
+* Help your user remember to synchronize their data so it is processed as soon as possible: you can check for connectivity and automatically synchronize in the nanoflow that commits your object, or remind a user to synchronize while using a notification or before signing out to ensure no data is lost
 
 ## 4 Ensuring Your App Is Offline-First {#limitations}
 
@@ -140,10 +133,6 @@ Mendix helps developers in building rich offline-first apps. However, there are 
 ### 4.1 Microflows
 
 Microflows cannot be called directly from offline apps. However, before- and after-commit microflows still run during synchronization, which can be used for application logic on the server.
-
-{{% alert type="info" %}}
-Support for calling microflows from offline-first apps will be added in Mendix 8.
-{{% /alert %}}
 
 ### 4.2 Autonumbers & Calculated Attributes
 

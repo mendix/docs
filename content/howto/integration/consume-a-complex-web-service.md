@@ -72,7 +72,7 @@ When finished the wizard will add to your model based on the options selected:
 
 ## 3 Importing a Web Service Directly
 
-An alternative to using the wizard described above is to import a web service document directly into your project. For more information, see [Consumed Web Services](/refguide/consumed-web-services) in the *Mendix Studio Pro Guide*.
+An alternative to using the wizard described above is to import a web service document directly into your project. For more information, see [Consumed Web Services](/refguide/consumed-web-services) in the *Studio Pro Guide*.
 
 To import a web service directly, follow these steps:
 
@@ -104,7 +104,7 @@ To configure the web service call, follow these steps:
 
     {{% /alert %}}
 
-2. If you are creating your own microflow, add the Call Web Service activity to the microflow. For details on how to add activities to microflows, see [Activities](/refguide/activities) in the *Mendix Studio Pro Guide*.
+2. If you are creating your own microflow, add the Call Web Service activity to the microflow. For details on how to add activities to microflows, see [Activities](/refguide/activities) in the *Studio Pro Guide*.
 3. Double-click the activity to open the **Call Web Service** wizard and in the **Operation** section, click **Select...** for **Operation**.
 4. This opens the **Select Web Service Operation** dialog box, where you can choose the operation for this web service call:
 
@@ -143,7 +143,7 @@ To configure the web service call, follow these steps:
 * [Import Excel Documents](importing-excel-documents)
 * [Expose a Web Service](expose-a-web-service)
 * [Use Selenium Support](selenium-support)
-* [Synchronize User Accounts Using the LDAP Mmodule](synchronizing-user-accounts-using-the-ldap-module)
+* [Synchronize User Accounts Using the LDAP Module](synchronizing-user-accounts-using-the-ldap-module)
 * [Import XML Documents](importing-xml-documents)
 * [Consume a REST Service](consume-a-rest-service)
 * [Expose Data to BI tools Using OData](exposing-data-to-bi-tools-using-odata)

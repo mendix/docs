@@ -2,7 +2,7 @@
 title: "Leave & Delete an App"
 parent: "general-settings"
 description: "Describes how to leave, delete, and deactivate an app in the Developer Portal."
-tags: ["app", "delete", "deactivate", "Developer Portal", "SCRUM Master"]
+tags: ["app", "delete", "deactivate", "Developer Portal", "Scrum Master"]
 ---
 
 ## 1 Introduction
@@ -11,13 +11,13 @@ You can create a new app project in one click and leave the app project just as 
 
 Your ability to delete and deactivate an app depends on your App Team role:
 
-* A **SCRUM Master** is allowed to deactivate and delete an app (even when there are still App Team members for the app)
-* A custom role with the **App Settings** permission is also allowed to deactivate and delete an app (even when there are still App Team members for the app)
+* A **Scrum Master** is allowed to deactivate and delete an app
+* A custom role with the **App Settings** permission is also allowed to deactivate and delete an app
 * A **Company Admin** is allowed to delete, deactivate, and activate all the company's apps (with or without App Team members for the app)
 
 For more information on roles, see [Company & App Roles](/developerportal/company-app-roles/index).
 
-**This how-to will teach you how to do the following as a SCRUM Master:**
+**This how-to will teach you how to do the following as a Scrum Master:**
 
 * Leave an app
 * Delete an app
@@ -27,7 +27,7 @@ For more information on roles, see [Company & App Roles](/developerportal/compan
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* To leave, delete, or deactivate an app, have the **SCRUM Master** role on your App Team (or a custom role with the **App Settings** permission)
+* To leave, delete, or deactivate an app, have the **Scrum Master** role on your App Team (or a custom role with the **App Settings** permission)
 
 ## 3 Leaving & Deleting (or Deactivating) an App
 
@@ -35,7 +35,7 @@ There are some important points to understand when you want to leave and/or dele
 
 * You cannot delete or deactivate an app if you are the **Technical Contact** of the app
 * Only Free Apps can be deleted
-* App deletion cannot be undone, which means that ALL DATA WILL BE LOST, including all files on the [Team Server](/refguide/team-server) and all data in the Free App [node](../company-app-roles/nodes) (if applicable)
+* App deletion cannot be undone, which means that ALL DATA WILL BE LOST, including all files on the [Team Server](/developerportal/develop/team-server) and all data in the Free App [node](../company-app-roles/nodes) (if applicable)
 
 If you want to leave and delete your app, follow these steps:
 
@@ -60,9 +60,14 @@ If you want to leave and delete your app, follow these steps:
 		* Note that because a deactivated app will still exist in the company, only a Company Admin can re-activate the app and invite members to it – for details, see [How to Deactivate & Activate an App](../company-app-roles/deactivate-activate-app))
 	* Click **Continue and delete app** to leave and fully delete the app from your company
 
-	![](attachments/delete-confirmation.png) 
+	![](attachments/delete-confirmation.png)
 
-## 4 Read More
+
+## 4 Alternative Method
+
+If you are the only team member of an app, you can also delete it directly from your list of apps. See [Apps List](/developerportal/apps-list/index) for more information.
+
+## 5 Read More
 
 * [Apps](../company-app-roles/apps)
 * [How to Deactivate & Activate an App](../company-app-roles/deactivate-activate-app)

@@ -15,7 +15,7 @@ This new approach has important advantages, such as the ability to easily scale 
 
 The stateless architecture of Mendix 7 means that all temporary objects are stored in the Mendix Client (browser), instead of in the Mendix Runtime. However, since the objects are used in microflows, the Mendix Runtime will need them to be able to execute a microflow. For this reason, the state is transferred by the browser to the server when a request is sent.
 
-The Mendix Mendix Client that runs in the browser determines which objects are relevant for the current page and microflows you want to execute. It does this based on the possibility of retrieving objects from the microflow parameters by following the relations from that object. Only objects that can be retrieved are transferred to the server to optimize performance. However, since there are many flexible ways to retrieve objects, Mendix must be conservative in this. There will often be more objects sent than are strictly necessary to be able to execute a microflow.
+The Mendix Client that runs in the browser determines which objects are relevant for the current page and microflows you want to execute. It does this based on the possibility of retrieving objects from the microflow parameters by following the relations from that object. Only objects that can be retrieved are transferred to the server to optimize performance. However, since there are many flexible ways to retrieve objects, Mendix must be conservative in this. There will often be more objects sent than are strictly necessary to be able to execute a microflow.
 
 After a microflow has run, any new objects or updates to existing objects that were made are returned to the Mendix Client. The Mendix Client can then update its state and refresh any objects on the current page if necessary. This is only done for NPEs and for persistable objects that are on the current page.
 
@@ -95,7 +95,7 @@ This goes especially for microflows related to integrations: as soon as the mess
 
 ### 7.1 Scenario
 
-Be careful when using non-persistable objects in layouts. Since layouts can be used for many pages in your app, objects in layouts can be on the screen for a long time. If you use non-persistable objects here, they will be sent back and forth between the Mendix Mendix Client and Mendix Runtime very often, since they are always available.
+Be careful when using non-persistable objects in layouts. Since layouts can be used for many pages in your app, objects in layouts can be on the screen for a long time. If you use non-persistable objects here, they will be sent back and forth between the Mendix Client and Mendix Runtime very often, since they are always available.
 
 ### 7.2 Tip
 

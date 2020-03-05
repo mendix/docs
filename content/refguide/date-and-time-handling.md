@@ -1,6 +1,7 @@
 ---
 title: "Date & Time Handling"
 category: "Mendix Runtime"
+tags: ["studio pro"]
 ---
 
 ## 1 Introduction
@@ -11,7 +12,7 @@ The Mendix Server operations use the time zone of the user instead of the server
 
 There are three time zones that come into play in a Mendix application:
 
-1.  User/client: The time zone where the client is running is used for presenting dates and times to the end user. The time zone is now (optionally) stored with each user to properly deal with daylight saving time. If the time zone is not set daylight saving time (DST) is not applied.
+1.  User/client: The time zone where the client is running is used for presenting dates and times to the end-user. The time zone is now (optionally) stored with each user to properly deal with daylight saving time. If the time zone is not set daylight saving time (DST) is not applied.
 2.  Coordinated Universal Time (UTC): The platform stores all dates in the UTC time zone. This is a time standard that is often used in servers to provide an unambiguous date format. It does not change with a change of the seasons (DST). Every time a date or time is presented to the user it is localized to the time zone of the client unless specified differently.
 3.  Server: The time zone that the server is running in is only used for scheduling the time at which scheduled events run. When defining a scheduled event you can choose whether you want to use server time or UTC time. For everything else, the server time is irrelevant.
 
@@ -23,7 +24,7 @@ The server needs to know the time zone of each user. Unfortunately, the web brow
 
 The entity TimeZone has been added to the System module along with an association between User and TimeZone. The TimeZone entity has three attributes: a code (based on the Olson database), a description suitable for showing to the user ("(GMT-05:00) New York") and a raw offset that is using for sorting the list of time zones.
 
-In the Administration module the Account_NewEdit form adds a time zone selector to set the time zone of the user. By default, the form MyAccount does not have this selector. It is the administrator's task to correctly set the time zone. You can add it yourself if you want your end users to be able to set their time zone.
+In the Administration module the Account_NewEdit page adds a time zone selector to set the time zone of the user. By default, the MyAccount page does not have this selector. It is the administrator's task to correctly set the time zone. You can add it yourself if you want your end-users to be able to set their time zone.
 
 Studio Pro adds a setting to the project Settings dialog. On the 'Model' tab you can specify a default time zone. This time zone is used for new users, but it is also applied to all users that do not have a time zone yet when starting your application.
 
@@ -46,8 +47,8 @@ If you do nothing in a multiple time zone project the situation for server opera
 There are several things you can do in a multiple time zone project:
 
 *   Nothing. If you do nothing server operations will use the user's current UTC offset and this is a reasonable approximation of actually setting the time zone. Only DST will not be handled properly.
-*   Allow the users to set their own time zone. Add the time zone reference selector to the form with which users can manage their own account, by default MyAccount in Administration. When doing this, take note that a timezone will only effectively be updated after a user logged out and back in.
-*   The administrator sets the time zone. Add the time zone reference selector to the form with which the administrator manages accounts, by default Account_NewEdit in Administration. If the application does not have too many users this is a viable solution.
+*   Allow the users to set their own time zone. Add the time zone reference selector to the page with which users can manage their own account, by default MyAccount in Administration. When doing this, take note that a timezone will only effectively be updated after a user logged out and back in.
+*   The administrator sets the time zone. Add the time zone reference selector to the page with which the administrator manages accounts, by default Account_NewEdit in Administration. If the application does not have too many users this is a viable solution.
 *   Automatically set the time zone by using a microflow. If your application is used in few time zones and you can automatically determine which users should which time zone you can write an after startup microflow to set the time zones. For example, if the application is used in the United States and in the Netherlands and all users in the United States have their language set to American English and all users in the Netherlands have their language set to Dutch a microflow can loop through all users and set the time zone based on the language code of the user.
 
 {{% alert type="warning" %}}
@@ -62,7 +63,7 @@ If your application is accessible without signing in, those anonymous users will
 
 ## 6 To Localize or Not to Localize
 
-Per attribute of type DateTime you can specify whether you want the date and time to be localized. This is not a new feature but worth mentioning on this page. Both localized and non-localized attributes are stored in UTC but only localized attributes are converted to the time zone of the user when displaying their value. Use non-localized attributes if you are not interested in the time component (e.g. birthdays) or if you want a date to look exactly the same all over the world.
+Per attribute of type **Date and time** you can specify whether you want the date and time to be localized. This is not a new feature but worth mentioning on this page. Both localized and non-localized attributes are stored in UTC but only localized attributes are converted to the time zone of the user when displaying their value. Use non-localized attributes if you are not interested in the time component (e.g. birthdays) or if you want a date to look exactly the same all over the world.
 
 See the documentation of the Localize property of [Attributes](attributes) for more information.
 

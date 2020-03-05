@@ -1,5 +1,5 @@
 ---
-title: "Moving from 5 to 6"
+title: "Moving from Modeler Version 5 to 6"
 category: "General"
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: "Java Programming"
 description: "Describes how to use the Mendix Java library and use Eclipse as an environment to write your Mendix Java Actions."
+tags: ["studio pro"]
 ---
 
 ## 1 Introduction
@@ -36,22 +37,28 @@ The executeAction method throws all exceptions that occur. This means you can do
 In the Java code that you write for your Java actions, you can use the Mendix Java library.
 
 {{% alert type="info" %}}
-You can find the Javadoc at [apidocs.mendix.com](http://apidocs.mendix.com/7/runtime/) or in the directory you in which installed Mendix (for example, *C:\Program Files\Mendix\8.0.0\runtime\javado*).
+You can find the Javadoc at [apidocs.mendix.com](http://apidocs.mendix.com/7/runtime/) or in the directory you in which installed Mendix (for example, *C:\Program Files\Mendix\8.0.0\runtime\javadoc*).
 {{% /alert %}}
 
 This library is automatically added to your libraries when you imported your project into Eclipse, and it is called *mxruntime.jar*.
 
 For details on usage and example, see [How to Use the Java API](/howto/logic-business-rules/java-api-tutorial).
 
-## 4 Using Eclipse as an Environment to Write Your Mendix Java Actions
+## 4 Opening HTTP Connections
+
+Most cloud infrastructure services (including those used by the Mendix Cloud) will close HTTP connections automatically if there is no traffic for a few minutes, even if your activity is still waiting for a response. This means that, if your activity calls a web service which takes a long time to respond, the connection may be closed without the activity being aware of this and your activity will not receive a response, but instead get stuck waiting indefinitely for data to arrive.
+
+You should therefore ensure that you always set a timeout for any connections you make in your custom Java code.
+
+## 5 Using Eclipse as an Environment to Write Your Mendix Java Actions
 
 For details on this topic, see [Using Eclipse](using-eclipse).
 
-## 5 Java Actions in the Cloud
+## 6 Java Actions in the Cloud
 
 For details on this topic, see [V3: Java in Mendix Cloud](/developerportal/deploy/java-in-the-cloud).
 
-## 6 Main Documents in This Category
+## 7 Main Documents in This Category
 
-* [Troubleshooting](troubleshooting)
-* [Using Eclipse](using-eclipse)
+* [Troubleshooting](troubleshooting) – presents problematic JAR files and workarounds
+* [Using Eclipse](using-eclipse) – describes how to use Eclipse to write and debug the Java actions in your Mendix app project

@@ -13,12 +13,12 @@ When creating an anonymous user role, always make sure you give it as little acc
 
 **After using this how-to, you will know how to do the following:**  
 
-* Set access to a transient object
+* Set access to a non-persistable object
 * Give anonymous users read and write access
 
-## 2 Transient Objects
+## 2 Non-Persistable Objects
 
-When you set access to a transient object, the security rules you specify should be whatever you functionally need. Transient objects only live in the session cache from the user that created the object; therefore, an anonymous user is never able to access any information that wasn't created specifically for or by them. However, it is a completely different situation for a persistable object.
+When you set access to a non-persistable object, the security rules you specify should be whatever you functionally need. Non-persistable objects only live in the session cache from the user that created the object; therefore, an anonymous user is never able to access any information that wasn't created specifically for or by them. However, it is a completely different situation for a persistable object.
 
 ## 3 Write Access
 
@@ -47,11 +47,10 @@ If you have anonymous access, you need to limit the access to as few entities as
 
 If you need to give an anonymous user access to change an object ALWAYS apply instance access as well. An anonymous user should NEVER have write access on all records in an entity. 
 
-Limiting the navigation or page display is not the same thing as security. All data can be accessed by talking directly to the platform API, and anything that is visible according to the security model is accessible by sending the correct messages to the server. Limiting data in the UI does not mean that it cannot be accessed. Only instance access rules guarantee what you can and cannot do.
+Limiting the navigation or page display is not the same thing as security. All data can be accessed by talking directly to the Platform APIs, and anything that is visible according to the security model is accessible by sending the correct messages to the server. Limiting data in the UI does not mean that it cannot be accessed. Only instance access rules guarantee what you can and cannot do.
 
 For example, to download a file, it is possible to get the UR (for example, `https://myMendixApp.com/file?fileID=2804771`). All that is necessary is to try random numbers until a file is found that is accessible. Unless you specify instance or object access, in that case, the platform would always validate the request against your privileges before presenting the information.
 
 ## 7 Read More
 
 * [Creating a Secure App](create-a-secure-app)
-* [Anonymous User Security](set-up-anonymous-user-security)

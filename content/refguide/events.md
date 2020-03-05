@@ -1,6 +1,8 @@
 ---
 title: "Events"
-parent: "common-elements"
+parent: "application-logic"
+menu_order: 50
+tags: ["studio pro"]
 ---
 
 This section describes the events for microflows and nanoflows:

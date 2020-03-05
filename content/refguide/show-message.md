@@ -1,10 +1,12 @@
 ---
 title: "Show Message"
 parent: "client-activities"
+tags: ["studio pro"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="info" %}}
-This activity can only be used in microflows, not in nanoflows.
+{{% alert type="warning" %}}
+This activity can be used in both **Microflows** and **Nanoflows**.
 {{% /alert %}}
 
 ## 1 Introduction
@@ -13,7 +15,7 @@ With the show-message action you can show a blocking or non-blocking message to 
 
 {{% alert type="info" %}}
 
-See [Microflow Element Common Properties](microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
+See [Common Properties](microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
 
 {{% /alert %}}
 
@@ -25,11 +27,9 @@ Type defines the color scheme and icon of the message.
 
 There are three message options:
 
-* Information
+* Information *(default)* 
 * Warning
 * Error 
-
-_Default value:_ Information
 
 ### 2.2 Template
 
@@ -39,7 +39,7 @@ Template defines the text of the message. The template can contain parameters th
 
 For each parameter in the template you define a microflow expression of which the value will be inserted at the position of the parameter. Parameters need to be entered using [expressions](expressions) resulting in a string.
 
-{{% alert type="success" %}}
+{{% alert type="info" %}}
 
 With parameters you can customize your message with data specific to the situation. For example, the message "An e-mail has been sent to customer {1}." with parameter `$customer/FullName` will show the full name of the customer to whom an e-mail has been sent.
 
@@ -47,11 +47,9 @@ With parameters you can customize your message with data specific to the situati
 
 ### 2.4 Blocking
 
-Blocking defines whether the message appears with a hover on top of the existing form(s).
+Blocking defines whether the message appears with a hover on top of the existing page(s).
 
 | Option | Description |
 | --- | --- |
-| Yes | The message appears in a pop-up in the center of the screen on a blocking overlay, rendering the background inaccessible until the pop-up is closed. |
+| Yes *(default)* | The message appears in a pop-up in the center of the screen on a blocking overlay, rendering the background inaccessible until the pop-up is closed. |
 | No | The message appears in a pop-up in the center of the screen but does not block the rest of the window, allowing the user to continue what they were doing with the pop-up open. |
-
-_Default value:_ Yes

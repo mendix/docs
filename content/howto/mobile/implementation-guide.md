@@ -19,7 +19,7 @@ This how-to will walk you through the steps needed to implement push notificatio
 
 ## 2 Importing the PushNotifications Module from the App Store
 
-The [Push Notifications Connector module](https://appstore.home.mendix.com/link/app/3003/) is published in the Mendix App Store. To import it into your project, click **App Store** in the top right of Stuido Pro, which will open the App Store in a new tab. Search for "Push Notifications Connector" and click the title of the result:
+The [Push Notifications Connector module](https://appstore.home.mendix.com/link/app/3003/) is published in the Mendix App Store. To import it into your project, click **App Store** in the top right of Mendix Studio Pro, which will open the App Store in a new tab. Search for "Push Notifications Connector" and click the title of the result:
 
 ![](attachments/19955732/20218020.png)
 
@@ -68,16 +68,19 @@ Please do not remove the button with the caption **Device Registration reference
 
 The PushNotifications module contains a microflow named **AfterStartup_PushNotifications** that will start the APNs connector for you. Call this microflow from your **AfterStartup** microflow.
 
-If your project uses Mendix SSO, most likely the **AppCloudServices.StartAppCloudServices** microflow is set to execute after startup (for details, refer to [Integrate Your App with Mendix SSO](/developerportal/deploy/integrate-with-mendix-sso) in the *Mendix Studio Pro Guide*). We suggest that you change your startup microflow to a new microflow, from which you will call both after the startup microflows.
+If your project already has an AfterStartup microflow configured, it is recommended that you either: 
+
+* create a new microflow, from which you will call both the existing AfterStartup microflow and the AfterStartup_PushNotifications microflow, and then set this as the AfterStartup microflow for your app
+* add a new action to the existing AfterStartup microflow to run the AfterStartup_PushNotifications microflow
 
 <iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/02c590e5-f8bf-4f0e-90d6-3719390ee863/onstartupacsandpushnotifications?embed=true" allowfullscreen=""></iframe>
-
 ## 6 Setting Up the Administration Pages {#setting}
 
 Add the **PushNotifications_Administration** page to the project navigation, so it can be reached after you deploy your app. This page contains three tabs:
+
 * **Pending Messages** – shows all the messages that are queued either because they were sent using the QueueMessage action or because previous attempts to send them failed
 * **Devices** – contains a list of all the devices registered with the application and is useful for testing purposes
-* **Configuration** – used to configure your application so that it can reach the respective services (APNs and FCM) later on
+* **Configuration** – configures your application so that it can reach the respective services (APNs and FCM) later on
 
 {{% alert type="warning" %}}
 
@@ -96,11 +99,11 @@ On the **User roles** tab of the **Project Security** dialog box, include the fo
 
 ## 8 Deploying Your App
 
-At this point, all the implementation steps are done and you can deploy your application to the Mendix Cloud. If you are using a free app, simply click **Run**.
+At this point, all the implementation steps are done and you can deploy your application to the Mendix Cloud. If you are using a Free App, simply click **Run**.
 
 {{% alert type="warning" %}}
 
-Make sure that the `Encryption.EncryptionKey` constant has a value before you start the application. If the value is not set, you will get a NullPointerException when you try to send a notification to APNs. If you are using a free app, set a default value for the constant in the model. Otherwise, configure the constant value in the Mendix Developer Portal.
+Make sure that the `Encryption.EncryptionKey` constant has a value before you start the application. If the value is not set, you will get a NullPointerException when you try to send a notification to APNs. If you are using a Free App, set a default value for the constant in the model. Otherwise, configure the constant value in the Mendix Developer Portal.
 
 {{% /alert %}}
 
@@ -117,3 +120,8 @@ You now need to build the hybrid mobile application. For an explanation on how t
 For more information about the PhoneGap Build, refer to the [Adobe PhoneGap Build documentation](http://docs.phonegap.com/).
 
 Please note that a free PhoneGap Build account is limited to a single application, whereas paid plans support multiple applications. As a consequence, you may need to delete an existing app from your PhoneGap Build environment in order to create a new one.
+
+## 11 Read More
+
+* [Microflows](/refguide/microflows)
+* [Test the Implementation](testing-the-implementation)

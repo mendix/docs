@@ -4,6 +4,7 @@ parent: "companyadmin-settings"
 menu_order: 20
 description: "Describes how a Company Admin can manage an app's users in the Developer Portal."
 tags: ["company","admin", "Company Admin", Developer Portal", "activate", "deactivate", "user"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
@@ -33,7 +34,7 @@ If a Mendix user moves to another company or comes from another company that is 
 Before deactivating a user, make sure the following points are true for that user:
 
 * They do not have a **Company Contact**, **App Contact**, or **Technical Contact** role
-* They are not the only **SCRUM Master** in an App Team
+* They are not the only **Scrum Master** in an App Team
 * They are not involved in unsolved support tickets with [Mendix Support](https://support.mendix.com)
 
 For more information, see [How to Manage Company & App Roles](/developerportal/company-app-roles/manage-roles) and [Company & App Roles](/developerportal/company-app-roles/index).
@@ -75,7 +76,7 @@ Click **Create Report** to create a report about users active in your company. T
 
 You have the following report options:
 
-* **Export users** – this report will return a list of users who are active in your company
+* **Export users** – this report will return a list of users who are active in your company and your company's apps, including external users that are part of your company's App Teams
 * **Export permissions** – this report will return a list of permissions for users active in your company's apps
 
 You can export these reports by clicking **Export to Excel**. Note that the exports will contain further details in addition to those shown on the screen.
@@ -96,7 +97,7 @@ You can perform the following actions on this tab:
         * Members of this security group will be granted access to these apps automatically
         * It is only possible to create access policies for licensed AppCloud-enabled apps
         * Under **Select Environment**, you can select a specific node environment for the app
-        * Under **Select Role(s)**, you can select specific user roles for the app
+        * Under **Select Role(s)**, you can select specific [user roles](/refguide/project-security#user-roles) for the app
 
 ## 4 Security History Tab
 

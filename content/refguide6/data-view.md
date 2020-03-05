@@ -33,7 +33,7 @@ The footer of the data view is the section at the bottom of the data view which 
 
 {{% alert type="info" %}}
 
-The data view control bar has been converted to a normal drop zone, and renamed to 'footer' in version 6.7.0\. See [Data view footer](data-view).
+The data view control bar has been converted to a normal drop-zone, and renamed to 'footer' in version 6.7.0\. See [Data view footer](data-view).
 
 {{% /alert %}}
 
@@ -97,7 +97,7 @@ _Default value:_ True
 
 {{% alert type="info" %}}
 
-The data view control bar has been converted to a normal drop zone, and renamed to 'footer' in version 6.7.0\. Use the [Show footer property](data-view) instead.
+The data view control bar has been converted to a normal drop-zone, and renamed to 'footer' in version 6.7.0\. Use the [Show footer property](data-view) instead.
 
 {{% /alert %}}
 
@@ -107,7 +107,7 @@ _Default value:_ True
 
 ### Empty entity message
 
-If this message is specified, a data view that receives no source data will show this message instead of its content. Otherwise, the data view will show its static content and disabled input widgets. This property is a translable text. See [Translatable Texts](translatable-texts).
+If this message is specified, a data view that receives no source data will show this message instead of its content. Otherwise, the data view will show its static content and disabled input widgets. This property is a translatable text. See [Translatable Texts](translatable-texts).
 
 There are number of ways a data view can end up without source data. For instance, a data view with a 'Listen to widget' data source will remain empty until an object is selected in the target grid. In this scenario, 'Empty entity message' can be used to guide the user to select an item from the grid.
 

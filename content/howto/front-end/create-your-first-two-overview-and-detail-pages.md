@@ -1,7 +1,7 @@
 ---
 title: "Create Your First Two Overview & Detail Pages"
 category: "Front-End"
-menu_order: 20
+menu_order: 25
 tags: ["Front-End"]
 ---
 
@@ -78,11 +78,8 @@ You should now have an overview page with a data grid like this:
 
 ## 5 Read More
 
-* [Perform the Scout and Windows 10 Workaround](perform-scout-and-windows-10-workaround)
+* [Atlas UI](atlas-ui)
 * [Use Layouts and Snippets](layouts-and-snippets)
-* [Set Up the Mendix UI Framework with Just CSS](setup-mendix-ui-framework-with-just-css)
 * [Set Up the Navigation Structure](../general/setting-up-the-navigation-structure)
-* [Set Up the Mendix UI Framework with Scout](setup-mendix-ui-framework-with-scout)
-* [Set Up the Mendix UI Framework with Koala](setup-mendix-ui-framework-with-koala)
 * [Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
 * [Page](/refguide/page)

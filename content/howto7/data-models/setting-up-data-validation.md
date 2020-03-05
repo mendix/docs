@@ -30,7 +30,7 @@ This section will explain how you can add validation rules to the domain model o
 The page builder of the Desktop Modeler allows you to configure which inputs are mandatory and what message is shown to the user if the input is empty. If you don't have a detail page yet, take a look at [this](../front-end/create-your-first-two-overview-and-detail-pages) how-to.
 
 1.  Open a **detail page** and double click an input to open its properties.
-2.  Enter a messagefor **Placeholder text**. This message is shown below the input if a user clicks the save button without filling in a value.
+2.  Enter a message for **Placeholder text**. This message is shown below the input if a user clicks the save button without filling in a value.
 
 ![](attachments/18448742/18582144.png)
 
@@ -38,7 +38,7 @@ Please note that a _required_ validation rule on entity level overrules this pro
 
 ## 3 Advanced Data Validation with the 'Before Commit' Event
 
-Validation rules are great for simple validations, but Mendix also offers ways to handle more complex validations. The domain model allows you to define event handlers on entity level. The 'Before Commit' and 'After Commit' events are always triggered when an object is committed to the database. The 'After Commit' is most commonly used to calculate values of de-normalised data. With the 'Before Commit' event you can execute a microflow that must return a boolean value. If the microflow returns 'false', the entire commit is aborted otherwise the object is stored in the database. This mechanism is great for data validation. This section will explain how you can validate data by use of the 'Before Commit' event.
+Validation rules are great for simple validations, but Mendix also offers ways to handle more complex validations. The domain model allows you to define event handlers on entity level. The 'Before Commit' and 'After Commit' events are always triggered when an object is committed to the database. The 'After Commit' is most commonly used to calculate values of de-normalized data. With the 'Before Commit' event you can execute a microflow that must return a Boolean value. If the microflow returns 'false', the entire commit is aborted otherwise the object is stored in the database. This mechanism is great for data validation. This section will explain how you can validate data by use of the 'Before Commit' event.
 
 1.  Open a **domain model** in the Desktop Modeler.
 2.  Double click an entity to open its **properties**.
@@ -55,7 +55,7 @@ Validation rules are great for simple validations, but Mendix also offers ways t
 
     ![](attachments/18448742/18582145.png)
 
-As long as this Microflow returns a boolean value, you are free to add any logic to determine if the data is valid or not. If the Microflow returns 'false', the commit is cancelled. Returning 'true' will commit the object. If you don't know how to work with microflows, take a look at how-to.
+As long as this Microflow returns a Boolean value, you are free to add any logic to determine if the data is valid or not. If the Microflow returns 'false', the commit is cancelled. Returning 'true' will commit the object. If you don't know how to work with microflows, take a look at how-to.
 
 ## 4 Advanced Validation with a Custom 'Save' Button
 
@@ -64,7 +64,7 @@ Validating user input can also be achieved by overriding the default save button
 ![](attachments/18448742/18582143.png)
 
 1.  Right click the **Save** button and select **Delete** to remove it from the page.
-2.  Right click the drop zone below the **Cancel** button and select **Add widget > Button widgets > Call microflow**.
+2.  Right click the drop-zone below the **Cancel** button and select **Add widget > Button widgets > Call microflow**.
 
     ![](attachments/18448742/18582142.png)
 
@@ -113,5 +113,3 @@ Validating user input can also be achieved by overriding the default save button
 * [How to Set Up Data Validation](setting-up-data-validation)
 * [How to Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
 * [Stories](/developerportal/collaborate/stories)
-* [How to Perform the Scout and Windows 10 Workaround](../front-end/perform-scout-and-windows-10-workaround)
-

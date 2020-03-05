@@ -2,7 +2,7 @@
 title: "Share the Development Database"
 category: "Collaboration"
 menu_order: 40
-tags: []
+tags: ["studio pro"]
 ---
 
 ## 1 Introduction
@@ -75,7 +75,7 @@ On the bottom right pane, the results are shown and a total of 50 rows is retrie
 
 The built-in database can easily be shared with other members of the team. Like the business logic itself, it is possible to commit a snapshot of the database to the team server. To do this, take the following steps:
 
-1.  Select **Project** > **More Versioning** > **Add Snapshot of Data**:
+1.  Select **Version Control** > **Add Snapshot of Data**:
 
     ![](attachments/18448637/18580420.png)
 
@@ -90,7 +90,7 @@ To import a data snapshot into the model, the app project has to be updated sinc
 
     ![](attachments/18448637/18580419.png)
 
-2.  To implement the data snapshot, the database has to be extracted from a .zip file to the deployment directory
+2.  To implement the data snapshot, the database has to be extracted from a ZIP file to the deployment directory
 
     ![](attachments/18448637/18580417.png)
 
@@ -108,4 +108,4 @@ Make sure the names of the databases aren't the same or make a copy of your own 
 *   [Contributing to a GitHub repository](contribute-to-a-github-repository)
 *   [Starting your own repository](starting-your-own-repository)
 *   [Version Control](/refguide/version-control)
-*   [How to Use the Feedback Widget](/developerportal/feedback/use-feedback-widget)
+*   [How to Use the Feedback Widget](/developerportal/collaborate/use-feedback-widget)

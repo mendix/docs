@@ -14,7 +14,7 @@ On the **Model** page of the Developer Portal, you have options for opening up y
 
 ## 2 Mendix Studio Pro
 
-In Studio Pro, you can visually model your app’s domain model, UI, logic, and integrations with third-party services and back-end systems. Use the power of Studio Pro to rapidly build enterprise-ready apps.
+In [Studio Pro](/refguide), you can visually model your app’s domain model, UI, logic, and integrations with third-party services and back-end systems. Use the power of Studio Pro to rapidly build enterprise-ready apps.
 
 Click **Edit in Studio Pro** to open your app project in Studio Pro.
 
@@ -28,9 +28,9 @@ If you need some help with Studio Pro, click **Help me get started**. A page wil
 
 The **What's next?** section at the bottom of the page presents the following options:
 
-* **Show me the basics** includes a link to the [Start with a Blank App learning path](https://gettingstarted.mendixcloud.com/link/path/2) in the Mendix Academy, where you will learn some fundamental information about how to model with Mendix
+* **Show me the basics** includes a link to the [Start with a Blank App](https://gettingstarted.mendixcloud.com/link/path/2) learning path in the Mendix Academy, where you will learn some fundamental information about how to model with Mendix
 * **I've got a question** includes links to the Mendix [Forum](https://gettingstarted.mendixcloud.com/index3.html) and the [Documentation](https://docs.mendix.com/), where you can browse information, search for specific details, and ask questions to the Mendix community
-* **I'm ready to get serious** includes a link to the [Become a Rapid Developer learning path](https://gettingstarted.mendixcloud.com/link/path/10), which will teach you how to create apps and prepare you to get certified as a Mendix Rapid Developer!
+* **I'm ready to get serious** includes a link to the [Become a Rapid Developer](https://gettingstarted.mendixcloud.com/link/path/10) learning path, which will teach you how to create apps and prepare you to get certified as a Mendix Rapid Developer!
 
 ## 3  Mendix Studio
 

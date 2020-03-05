@@ -1,6 +1,7 @@
 ---
 title: "JSON Structures"
 parent: "integration"
+tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -73,9 +74,8 @@ Each JSON property is composed of a key ("name") and a value ("John"). If the va
 *   "string". Converted into an attribute of type String.
 *   123\. Converted into an attribute of type Integer.
 *   true or false. Converted into an attribute of type Boolean.
-*   "1985-04-12T23:20:50.52Z". Converted into an attribute of type DateTime.
+*   "1985-04-12T23:20:50.52Z". Converted into an attribute of type **Date and time**.
 *   12.50\. Converted into an attribute of type Decimal.
-*   null. Converted into an  attribute of type String.
 
 ### 2.2 JSON Arrays
 

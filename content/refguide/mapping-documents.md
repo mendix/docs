@@ -1,6 +1,7 @@
 ---
 title: "Mapping Documents"
 parent: "integration"
+tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -47,7 +48,7 @@ To specify an import or export mapping, the user needs to do a number of things:
 
     If the schema is large, a subset of elements can be selected so you don't have to map all of them. This is explained in more detail in the [Select Elements](select--elements) section.
 
-3.  Click **OK**. A structure is created with placeholders for entities on the left-hand side, and the selected XSD elements on the right-hand side.
+3.  Click **OK**. A structure is created with placeholders for entities on the left, and the selected XSD elements on the right side.
 
     It is possible to include a parameter entity in mapping documents. Mapping documents with a parameter entity need to be invoked (in a [Call Web Service Action](call-web-service-action) or [Export with Mapping](export-mapping-action) action) by passing a parameter of the configured type. Mapping documents without a parameter entity can be invoked without passing a parameter. For import mappings, a parameter entity can be included by dragging one onto the placeholder in the created structure using the Connector tool. Export mappings always need to have a parameter entity (the object that is being exported) and the mapped root element is used for this. In both cases, the parameter entity is depicted as a yellow arrow parameter symbol.
 

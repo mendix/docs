@@ -57,7 +57,7 @@ To import module packages, follow these steps:
 
 1. Right-click your project in the **Project Explorer** and select **Import Module Package**.
 
-    ![](attachments/18448739/18582115.png)
+    ![](attachments/18448739/import-package.png)
 
 2. Select your Mendix module package file and click **Open**. The **Import Module** dialog box will open.
 
@@ -106,12 +106,12 @@ The package can contain a single example of one of the following:
 * XML schema
 * Export mapping
 * Import mapping
-* Consumed app service
+* Consumed app service (deprecated)
 * Consumed web service
 * Published REST service
 * Published web service
 * Published OData service
-* Published app service
+* Published app service (deprecated)
 
 To import module objects, follow these steps:
 

@@ -1,7 +1,7 @@
 ---
-title: "Native Styling"
+title: "Implement Native Styling"
 parent: "native-mobile"
-menu_order: 10
+menu_order: 30
 description: General information for native styling in Mendix.
 tags: ["styling", "design", "native"]
 ---
@@ -22,17 +22,19 @@ These folders have strict protocols:
 * Any variables you want to change or add should be put in *custom-variables.js* 
 * Any classes you want to change or add should be put in *custom.js*
 
-The **native/core/_helperfunctions** folder contains multiple helper functions. These functions can help you style more easily. For example, the `adjustFont` function receives a font and adjusts it to the screen size. This will make your font sizes responsive. For more information about these helper classes, see their descriptions in the code.
+The **native/core/base** folder contains global helper classes. These classes are generic and can be put on all widgets. Some of them are also available as design properties in Mendix Studio Pro.
 
-The **native/core/base** folder contains *helpers.js*, which includes all helper classes. These classes are generic and can be put on all widgets. Some of them are also available as design properties in Mendix Studio Pro.
+The **native/core/helpers** folder contains helper classes for widgets. Every widget has its own file which contains its design properties and some extra classes.
 
-The **native/core/widgets** folder contains widget styling. Every widget has its own file which contains its default class names. Some widgets also have specific design properties. One exception to these guidelines is *typography.js*, which contains all typography-related classes.
+The **native/core/helpers/_helperfunctions** folder contains multiple helper functions. These functions can help you style more easily. For example, the `adjustFont` function receives a font and adjusts it to the screen size. This will make your font sizes responsive. For more information about these helper classes, see their descriptions in the code.
 
-In **native/resources** you will find resource package styling. Here you can find all styling related to building blocks and page templates.
+The **native/core/widgets** folder contains the default widget styling. Every widget has its own file which contains its default class name.
+
+In **native/ui_resources** you will find resource package styling. Here you can find all styling related to building blocks, page templates and layouts.
 
 ## 3 Classes
 
-Default class names – which are the class names set by Mendix Studio Pro – will always be named in Pascal case. All other classes will be in camel case. This keeps changes to default widget styles clear.
+Default class names – which are the class names set by Mendix Studio Pro – will always be named in Pascal case. All other classes will be in lowerCamelCase. This keeps changes to default widget styles clear.
 
 ## 4 Design Properties
 
@@ -41,4 +43,4 @@ Available in Mendix Studio and Mendix Studio Pro, design properties are an easie
 ## 5 Read More
 
 * [Mendix Atlas UI](../front-end/atlas-ui)
-* [Create and Test a Native Mobile App](getting-started-with-native-mobile)
+* [Get Started with Native Mobile](getting-started-with-native-mobile)

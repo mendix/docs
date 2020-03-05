@@ -16,7 +16,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * If APM 2 was installed, do the following: 
 	* Write down the current values for the constant **APMAgent2.APMAPIKey** (and, if set, **APMAgent2.APMAdvancedSettings**),
 	* Use the values for **APDAgent.APIKey** and, if applicable, **APDAgent.AdvancedSettings**
-* Remove APM 1 and/or APM 2 if they are installed, see [Uninstall Steps APM 1](ig-one-uninstall-steps) and/or [Uninstall Steps APM 2](ig-two-uninstall-steps)
+* Remove APM 1 and/or APM 2 if they are installed (for details, see [Uninstall Steps APM 1](ig-one-uninstall-steps))
 
 ## 3 Installation
 

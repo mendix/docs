@@ -40,6 +40,10 @@ If you plan to deploy your app for testing on an Android device, make sure you h
 
 To use the Native Builder, you will first need to get tokens to authenticate with GitHub and App Center. If you already have tokens for your GitHub and App Center, you do not need to repeat these sections.
 
+{{% alert type="info" %}}
+The Native Builder needs to communicate with GitHub and App Center. Therefore, make sure your firewall permissions do not restrict the Native Builder.
+{{% /alert %}}
+
 ### 3.1 GitHub Token {#github-token}
 
 1. Go to [GitHub](https://github.com/) and sign in.

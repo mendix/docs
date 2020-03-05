@@ -55,14 +55,14 @@ To incorporate the AppCloudServices module into an existing app, follow these st
 
 	![](attachments/integrate-with-mendix-sso/18581215.png)
 
-7.  Add the Boolean attribute **IsLocalUser** (with default **true** ) to your app user entity. This is the entity that represents your user accounts and extends the **System.User** entity. The Boolean attribute allows you to differentiate between Mendix accounts and local accounts. For the CE app, this entity is called **Expenses.Employee**.
+7.  Add the Boolean attribute **IsLocalUser** (with default **true** ) to your App User entity. This is the entity that represents your user accounts and extends the **System.User** entity. The Boolean attribute allows you to differentiate between Mendix accounts and local accounts. For the CE app, this entity is called **Expenses.Employee**.
 
 	![](attachments/integrate-with-mendix-sso/18581214.png)
 
 	It is a good idea to give the administrator role(s) (or equivalent) read access to the **IsLocalUser** attribute with an access rule.
 
 8. Open the microflow you copied in step 5.
-9.  Open the **Create** action and select your app user entity as the object type to be created (instead of the preselected **UserManagement.Account**). You will need to reset the two members in this action afterwards. In the CE app, you want to change the **Entity** to **Expenses.Employee**, and then change the first member to **FullName** and the second to **IsLocalUser**.
+9.  Open the **Create** action and select your App User entity as the object type to be created (instead of the preselected **UserManagement.Account**). You will need to reset the two members in this action afterwards. In the CE app, you want to change the **Entity** to **Expenses.Employee**, and then change the first member to **FullName** and the second to **IsLocalUser**.
 
 	![](attachments/integrate-with-mendix-sso/18581213.png)
 

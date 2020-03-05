@@ -76,7 +76,7 @@ You can also click **Details** for technical details of the feedback item:
 
 On the item's details page, you can also **Turn email updates on/off**. This is useful for when you comment on a feedback item and perform further [processing](#processing) actions on it.
 
-In the **Leave a comment** box, you can post a comment and start an exchange with the app user or App Team member who submitted the feedback. This is a good place to ask for clarification. You can also use the **Add:** icons to attach files to your comment.
+In the **Leave a comment** box, you can post a comment and start an exchange with the App User or App Team member who submitted the feedback. This is a good place to ask for clarification. You can also use the **Add:** icons to attach files to your comment.
 
 ![](attachments/feedback/comment.png)
 

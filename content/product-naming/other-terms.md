@@ -46,7 +46,9 @@ Always capitalize.
 
 ### app project {#app-project}
 
-"App" should be used instead of "project" as much as possible in the documentation. Use "app project" to clarify project management-related tasks in the Developer Portal.
+"App" should be used instead of "project" as much as possible (despite the fact that "project" is still used throughout Studio Pro). 
+
+Use "app project" where necessary for clarification (for example, for project management-related tasks in the Developer Portal).
 
 {{% alert type="success" %}}
 Enter the email addresses of all the co-workers you want to invite to your app project.

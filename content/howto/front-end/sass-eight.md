@@ -42,21 +42,22 @@ Before starting this how-to, make sure you have completed the following prerequi
 To prepare your app project, follow these steps:
 
 1. Open the [app project directory](../general/show-project-directory) (via **Project** > **Show Project Directory in Explorer** in Studio Pro).
-2.  Unpack the *Gulp.zip* file into your main app project folder. You will then see a *Gulpfile* and *package* file that look like this:
+1.  Unpack the *Gulp.zip* file into your main app project folder. You will then see a *Gulpfile* and *package* file that look like this:
 
 	![](attachments/set-up-sass/unpack.png)
 
 	After you have unpacked the *Gulp.zip* into your app project folder, you can remove the *zip* file.
-3.  Open **Windows PowerShell**:
+1.  Open **Windows PowerShell** as an administrator:
 
 	![](attachments/set-up-sass/powershell.png)
 
-4.  Copy the address as text from your main project folder and paste it into Powershell:
+1.  Copy the address as text from your main project folder and paste it into Powershell:
 
 	![](attachments/set-up-sass/copy.png)
 
-5.  Provide the directory for your app project folder in PowerShell: `cd ‘directory for your app project folder’`
-6.  Write `npm install` or use `npm install gulp-cli -g`:
+1.  Provide the directory for your app project folder in PowerShell: `cd ‘directory for your app project folder’`
+1.  Adjust permissions by writing `Set-ExecutionPolicy -ExecutionPolicy ByPass -Scope CurrentUser` then pressing <kbd>Enter</kbd> .
+1.  Write `npm install` or use `npm install gulp-cli -g` with your app running locally on Studio Pro:
 
 	![](attachments/set-up-sass/write-install.png)
 
@@ -65,13 +66,13 @@ To prepare your app project, follow these steps:
 	{{% alert type="info" %}}You should do this for each new app project! That way, you will not have to repeat the installation step whenever you reopen the app project and Powershell.
 	{{% /alert %}}
 
-7.  Write `gulp dev`. Your screen should then look like this:
+1.  Write `gulp dev`. Your screen should then look like this:
 
 	![](attachments/set-up-sass/gulp-dev.png)
 
 	At this point, you are ready to start working with Sass.
 
-8.  You also need to add the following selected items into the ignore list of TortoiseSVN for each new app project (or else your app project will take too long to commit a change) :
+1.  You also need to add the following selected items into the ignore list of TortoiseSVN for each new app project (or else your app project will take too long to commit a change) :
 
 	![](attachments/set-up-sass/selected-ignore.png)
 
@@ -85,7 +86,7 @@ To prepare your app project, follow these steps:
 	
 	If you need to remove an item from the ignore list, right-click it and select **TortoiseSVN** > **Remove from ignore list**.
 
-9.  Open your app project in Studio Pro, then click **Run Locally** and **View**.
+1.  Open your app project in Studio Pro, then click **Run Locally** and **View**.
 
 ## 4  Setting Up Your Sass Files
 

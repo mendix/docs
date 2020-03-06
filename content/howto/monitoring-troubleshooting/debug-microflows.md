@@ -77,7 +77,7 @@ Breakpoints are points in a microflow where the application will halt execution.
     ![](attachments/18448571/18580008.png)
     
 5. You have the following options on this pane:
-    * Click **Step into** or **Step over** to move to the next step in the microflow (note that the difference between **Step into** and **Step over** is only noticeable if you run into a call microflow activity or a loop)
+    * Click **Step into** or **Step over** to move to the next step in the microflow (note that the difference between **Step into** and **Step over** is only noticeable if you run into a microflow call activity or a loop)
         * **Step into** means that the debugger steps into the sub microflow or loop
         * **Step over** moves the debugger to the next step in the same microflow
     * Click **Step out** to instruct the debugger to leave the sub microflow or loop (this is basically the opposite of **Step Into**)

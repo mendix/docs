@@ -161,7 +161,7 @@ In the previous section you iterated over a filtered list of objects using a 'Lo
 
     ![](attachments/18448686/18581069.png)
 
-6.  Double click the **Change variable** activity to open its **properties** and set the following properties:<br>
+6.  Double click the **Change variable** activity to open its **Properties** and set the following properties:<br>
     a. For **Variable** select **CalculatedTotalPrice**.<br>
     b. For **Value** enter `$CalculatedTotalPrice + $IteratorOrder/TotalPrice`.<br>
 

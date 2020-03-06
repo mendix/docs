@@ -120,7 +120,7 @@ To edit the Java action in Eclipse, follow these steps:
 	{{% /image_container %}}
 
 11. Click **OK** to save the expression.
-12. In the **Call Java Action** window, change the output **Variable** to *ReversedName*:
+12. In the **Call Java Action** properties editor, change the output **Variable** to *ReversedName*:
 
 	{{% image_container width="500" %}}![](attachments/extend-custom-java/call2.png)
 	{{% /image_container %}}

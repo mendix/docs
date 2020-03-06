@@ -10,7 +10,7 @@ tags: ["studio pro"]
 This activity can be used in both **Microflows** and **Nanoflows**.
 {{% /alert %}}
 
-Close page closes the currently open page.
+The close page activity closes the currently open page.
 
 {{% alert type="info" %}}
 

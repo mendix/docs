@@ -129,15 +129,15 @@ The **Variable** field defines the name for the result of the operation.
 
 ### 5.3 Error Handling
 
-This section is applicable when the HTTP response status code is not successful (for example, [4xx] or [5xx]).
+This section is applicable when the HTTP response status code is not successful (for example, `[4xx]` or `[5xx]`).
 
-In this case the flow will continue in the [error handler](microflows#errorhandlers). You should always add an error handler for a _Call REST Service_ action.
+In this case, the flow will continue in the [error handler](microflows#errorhandlers). You should always add an error handler for a [Call REST service](/refguide/call-rest-action) action.
 
 When the **Store message body in $latestHttpResponse variable** option is selected, `$latestHttpResponse/Content` will be set with the response body. It might contain some useful information provided by the server (for example, why the authentication is rejected).
 
 ### 5.4 $latestHttpResponse Object<a name="latesthttpresponse"></a>
 
-The `$latestHttpResponse` object is of the [HttpResponse](http-request-and-response-entities#http-response) type. It is available after the _Call REST Service_ action.
+The `$latestHttpResponse` object is of the [HttpResponse](http-request-and-response-entities#http-response) type. It is available after the **Call REST service** action.
 
 However, its `Content` attribute will be left empty in most cases to minimize memory usage.
 

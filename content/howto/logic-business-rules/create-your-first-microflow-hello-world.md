@@ -53,7 +53,7 @@ To edit the new microflow, follow these steps:
     
     ![](attachments/18448678/18580967.png)
 
-3.  Drag a **Show message** action from the **Toolbox** to the line between the green start even and red end event, which will insert a show message action activity:
+3.  Drag a **Show message** action from the **Toolbox** to the line between the green start even and red end event, which will insert a show message activity:
 
     ![](attachments/18448678/18580972.png)
 

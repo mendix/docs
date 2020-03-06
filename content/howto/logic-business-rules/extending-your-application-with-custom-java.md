@@ -138,7 +138,7 @@ To edit the Java action in Eclipse, follow these steps:
 	{{% image_container width="500" %}}![](attachments/extend-custom-java/parameter.png)
 	{{% /image_container %}}
 
-18. Click **OK** to save the parameter. The **Show Message** activity properties should now look like this:
+18. Click **OK** to save the parameter. The **Show Message** properties should now look like this:
 
 	{{% image_container width="500" %}}![](attachments/extend-custom-java/show-message.png)
 	{{% /image_container %}}

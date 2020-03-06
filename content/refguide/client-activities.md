@@ -19,7 +19,7 @@ See [Show Page](show-page).
 
 ## Show Home Page
 
-See [Show home page](show-home-page).
+See [Show Home Page](show-home-page).
 
 ## Show Message
 

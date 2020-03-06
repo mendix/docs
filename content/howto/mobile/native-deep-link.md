@@ -8,7 +8,7 @@ tags: ["deeplink", "deep link", "url","native", "mobile", "developer", "native-b
 
 ## 1. Introduction
 
-While URLs typically open websites, they can also be used to open an installed app on your mobile device. With this tutorial you will learn how to connect the URL `app://myapp` to your Mendix Native App installed on your Android or iOS device. It is also possible to pass additional data using path, query parameters, and hashes. Passing additional data could look like this: `app://myapp/task/123?action=close#info`.
+While URLs typically open websites, they can also open an installed app on your mobile device. With this tutorial you will learn how to connect the URL `app://myapp` to your Mendix Native App installed on your Android or iOS device. It is also possible to pass additional data using paths, query parameters, and hashes. Passing additional data could look like this: `app://myapp/task/123?action=close#info`.
 
 A URL is constructed of these parts:
 
@@ -22,13 +22,13 @@ scheme          authority                  path                 query           
 
 You can also register the handling of a normal weblink beginning with `http(s)://`. However this requires some more work for iOS, and is not covered in this tutorial [todo: is just iOS https not covered here, or both platforms not covered?]. In that case you could check [Universal Links: Make the Connection](https://www.raywenderlich.com/6080-universal-links-make-the-connection) by Owen L. Brown.
 
-When an app is installed it registers the `schema` and optionally the `host` so the operating system will know what application should be opened when the URL is clicked. The application could either be closed or running in the background [todo: what?].
+When an app is installed it registers the `schema` and optionally the `host` so its operating system knows which application should be opened when the URL is clicked. The application could either be closed or running in the background [todo: what?].
 
 ### 1.1 Testing
 
 Please note that the Make It Native app has already the registered schema `makeitnative://` and can be used out of the box. To use the Make It Native app with that schema, see the [Using Deep Linking in Your App](#using-deep-linking) section below. If you want to change this schema, see [How to Create a Custom Developer App](/howto/mobile/how-to-devapps) to build your own custom developer app and then use this tutorial to change its schema [todo: which sections apply in this case?].
 
-For development and this tutorial we recommend running the app from source against the local running Mendix Studio Pro. This will save you time when rebuilding and redeploying your app. To do this, follow the steps in the [Connecting to a Local Running Instance of Studio Pro](/refguide/native-builder#connect-local) section of the *Native Builder Reference Guide*.
+For development work and completing this tutorial we recommend running your app from source against a local instance of Mendix Studio Pro. This will save you time when rebuilding and redeploying your app. To do this, follow the steps in the [Connecting to a Local Running Instance of Studio Pro](/refguide/native-builder#connect-local) section of the *Native Builder Reference Guide*.
 
 {{% alert type="info" %}}
 The current iOS version of the Make it Native App can open an app using a URL. However it cannot not handle deep link URL details [todo: details never written elsewhere in plain text]. For now, please use Android devices to test deep links.
@@ -43,7 +43,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3. Setting up App Deep Linking
 
-If you do not already have a native template for your app, you can create one.
+If you do not already have a native template for your app, you can create one:
 
 1. Create a shell app with Native Builder using the `prepare` command as shown in [How to Deploy Your First Mendix Native App](/howto/mobile/deploying-native-app). When you do this, replace the parameters in this example command with your own project's parameters, local paths, and tokens:
 

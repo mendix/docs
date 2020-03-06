@@ -289,7 +289,7 @@ You can skip this section if you completed [Signing a Build](#signing-a-build). 
 
 In order to deploy the *nativeTemplate.xcarchive* on a device or on the App Store, an Apple developer account and a development team is required. If one is available, do the following:
 
-1. Using an Xcode version below 11, double-click on the *nativeTemplate.xcarchive* file and it should open with the built-in *Application Loader* software.
+1. Using an Xcode version below 11, double-click the *nativeTemplate.xcarchive* file and it should open with the built-in *Application Loader* software.
 
 2.  Click the *Distribute App* button to start the local signing flow.:
 

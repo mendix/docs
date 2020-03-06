@@ -162,7 +162,7 @@ In Structure mode, the page widgets are laid out so that it is easy to see the l
     ![Frequently-used widgets](attachments/page/structure-mode-info.png)
 
 * Each widget has a drop-zone before/above and after/below it – this makes it easier to place widgets correctly when they appear close together in Design mode
-* Right-click on a drop-zone allows you to insert a widget into it
+* Right-click a drop-zone allows you to insert a widget into it
 * There is a menu at the top of the page of data widgets – these cannot be dragged, but are positioned by clicking a drop-zone after selecting the widget
 
     ![Frequently-used widgets](attachments/page/frequently-used.png)

@@ -57,7 +57,7 @@ The following steps will teach you to build a pluggable input widget, and show y
 	g. Click the **Show** button. This will open the microflow editor. Then click the **OK** button to close the dialog box.<br />
 	h. Add a new **Create object** action on your microflow.
 	
-3. Open the new **Create Object** action's properties by double clicking it. For its **Entity**, click the **Select** button and choose the entity you created above. Then click **OK** to close the dialog box.
+3. Open the new **Create object** action's properties by double clicking it. For its **Entity**, click the **Select** button and choose the entity you created above. Then click **OK** to close the dialog box.
 4. Right-click the **Create Entity** activity, then click **Set $NewEntity as Return Value**.
 5. Go back to the home page, open the **Add Widget** menu, and then add a **TextBox** widget inside the data view.
 6. Open the Textbox's properties and select the **Datasource Attribute (path)** string attribute you created above. Then click the **OK** button to close the dialog box. The end result should look like this:

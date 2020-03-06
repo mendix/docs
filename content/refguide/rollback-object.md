@@ -1,6 +1,7 @@
 ---
 title: "Rollback Object"
 parent: "object-activities"
+menu_order: 7
 tags: ["studio pro"]
 ---
 

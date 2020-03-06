@@ -89,7 +89,7 @@ You should see a microflow like this:
 
 ## 4 Iterate Over a List of Objects
 
-In the previous section you retrieved a list of orders with the status 'Processing'. In this section you will iterate over this list and change the status of each object individually to 'Complete'. To do so you will use a 'Loop' to iterate over the 'OrderProcessingList' and use the 'Change object' activity to change the status of the order object.
+In the previous section you retrieved a list of orders with the status 'Processing'. In this section you will iterate over this list and change the status of each object individually to 'Complete'. To do so you will use a 'Loop' to iterate over the 'OrderProcessingList' and use the change object activity to change the status of the order object.
 
 1.  Open the **IVK_SetOrderToComplete** microflow created in the previous section.
   
@@ -204,7 +204,7 @@ In the previous section you iterated over a list to add the value of single obje
     ![](attachments/18448686/18581059.png)
 
 4.  Click **OK**.
-5.  Double click on the message activity and replace the `$CalculatedTotalPrice` variable in the **Parameters** expression with the `$SumTotalPrice` variable.
+5.  Double click the message activity and replace the `$CalculatedTotalPrice` variable in the **Parameters** expression with the `$SumTotalPrice` variable.
   
     ![](attachments/18448686/18581055.png)
 

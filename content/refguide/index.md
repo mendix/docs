@@ -33,11 +33,17 @@ Studio Pro allows you to run and view your app locally or in the default environ
 
 For more information on deploying your app and versioning it, see  the [Versioning a Project Deployed to the Cloud](using-version-control-in-studio-pro#versioning-project) section in *Using Version Control in Studio Pro*. 
 
-## Version Control
+## 3 Version Control
 
-## Mendix Runtime
+[Version Control](version-control) allows you to manage your app development, work on multiple development lines, as well as collaboratively work with [Mendix Studio](/studio). 
 
-## Mobile
+## 4 Mendix Runtime
+
+The [Mendix Runtime](mendix-runtime) executes the application model that is created in Studio Pro. It is included in the Studio Pro 8 Guide as it is versioned in the same way. 
+
+## 5 Mobile
+
+Mobile app development allows you to create native mobile and hybrid apps and an important part of Studio Pro. For more information, see [Mobile](mobile). 
 
 ## Document Categories
 

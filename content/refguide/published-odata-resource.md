@@ -30,7 +30,7 @@ To create a new OData service and add the entity to it, click **New**  and enter
 
 In the **Resources** pane of the **Published OData Service** window, select a resource and click **Edit** to display the **Edit published resource** window. 
 
-![Edit published OData dialog box](attachments/published-odata-resource/Edit-published-resource.png)
+![Edit published OData dialog box](attachments/published-odata-resource/edit-published-resource.png)
 
 It is possible to select another **Entity** or view the entity in the domain model by clicking **Show**. The [exposed attributes and associations](#exatass) for the selected entity can be set in this window. 
 

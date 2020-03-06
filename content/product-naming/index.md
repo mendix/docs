@@ -14,6 +14,7 @@ The purpose of this guide is not to provide a definition for each term. Terminol
 For a term to be included in this guide, it should already appear in the Mendix Platform UI, Mendix Documentation, and/or Mendix Platform Evaluation Guide.
 
 A term may not already be included in this guide for the following reasons:
+
 * There are no specific usage guidelines or decisions on the term (at least not yet)
 * It is a generic term, not branded by Mendix (for example, "domain model," "page," "template," or "layout")
 * It is an internal-only term (for example, names of apps or technical terms only used on R&D teams)

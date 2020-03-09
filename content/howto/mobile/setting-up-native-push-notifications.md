@@ -56,7 +56,7 @@ After you create your app using the Native Builder's `prepare` command, the Nati
 
 Choose one of these sections and complete *only* that section before moving on to [Customizing the Android Manifest File](#customize-android-manifest).
 
-### 5.1 Implementing Push Changes With the Native Builder {#auto-changes}
+### 4.1 Implementing Push Changes With the Native Builder {#auto-changes}
 
 Remember these parameters of your app, since you will use them often in commands (for more information on parameters, see the [Native Builder Reference Guide](/refguide/native-builder)): 
 
@@ -82,13 +82,13 @@ Run these commands in any order:
 
 These commands will automatically do the necessary code alterations and make a GitHub commit in your repo. 
 
-### 5.2 Manually Implementing Changes {#manually-implementing-changes}
+### 4.2 Manually Implementing Changes {#manually-implementing-changes}
 
-#### Android
+#### 4.2.1 Android
 
 Manually add the `google-services.json` file inside your **android/app** folder. Commit and push your changes to master branch.
 
-#### iOS
+#### 4.2.2 iOS
 
 In order for your generated template to work with push notifications, you will need XCODE installed in your machine.
 
@@ -115,7 +115,7 @@ In **Signing & Capabilities** tab, add **push notifications** capabilities to yo
 
 Commit and push your changes to your master branch.
 
-### 5.3 Customizing the Android Manifest File {#customize-android-manifest}
+### 4.3 Customizing the Android Manifest File {#customize-android-manifest}
 
 Set app launch mode inside activity props and add necessary receiver changes in *android/app/src/main/AndroidManifest.xml*:
  
@@ -144,7 +144,7 @@ android:launchMode="singleTop"
 
 Congratulations, you finished setting up customizations for your custom native app! To implement remote push notifications on a test device, see [Use Remote Notifications](native-remote-notifications).
 
-## 6 Read More
+## 5 Read More
 
 * [How to Use Local Notifications](local-notif-parent)
 * [Native Builder Reference Guide](/refguide/native-builder)

@@ -19,8 +19,6 @@ The generate-document microflow action can be used to write a document to a file
 
 See [Common Properties](microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
 
-{{% /alert %}}
-
 ## 2 Input Properties
 
 ### 2.1 File

@@ -166,7 +166,7 @@ To set up an example entity, do the following:
 
 #### 4.1.2 Synchronizing Unused Entities
 
-Studio Pro uses smart data syncing, meaning if an entity has not been retrieved on the native side, it will not be there. This situation will not occur often since most Mendix native apps do retrieve entities which you want to show. For more information, see the [Synchronization](/refguide/offline-first#sychronization) section of the *Offline-First Reference Guide*.
+Studio Pro uses smart data syncing, meaning if an entity has not been retrieved on the native side, it will not be available in the native app. This situation will not occur often, since most Mendix native apps do retrieve entities which you want to show. For more information, see the [Synchronization](/refguide/offline-first#sychronization) section of the *Offline-First Reference Guide*.
 
 Your app does not retrieve any products in any of its pages. Fix this by doing the following:
 
@@ -235,7 +235,7 @@ To enable push notifications for an app in the foreground, do the following:
 1. In your **Home_Native** page inside of the **NativeNotification** data view, do the following:<br />
 	a. Add a container.<br />
 	b. Set its visibility to **NativeNotification/showNotification**.<br />
- 	c. Add a text field saying *You have received a product*.<br /> [todo: redo screenshot with proper spelling of "received"]
+ 	c. Add a text field saying *You have received a product*.<br /> 
  	d. Drag and drop your **ACT_GetProductAndShowPage** nanoflow next to it:
 
 	![ContainerVisibility](attachments/native-remote-push/modeler/ContainerVisibility.png)

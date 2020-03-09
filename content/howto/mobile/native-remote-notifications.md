@@ -110,6 +110,8 @@ Next you will test the implementation of your configurations.
 
 ### 3.5 Sending a Push Notification to a Single Device {#sending-single}
 
+To see your changes from Studio Pro, rebuild your bundle using the Native Builder's `build` command. For more information on the `build` command, see the [Build](/refguide/native-builder#build) section of the *Native Builder* reference guide. Then, do the following:
+
 1. Reload the app on your phone.
 1. Put the app in the background by returning to your mobile device's home screen.
 1. On your desktop browser, open the **Administration** page and click the **Devices** tab.

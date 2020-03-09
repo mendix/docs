@@ -29,7 +29,7 @@ Command-line arguments provide information to the Native Builder, such as where 
 
 	![change directory](attachments/native-builder/change-directory.png)
 
-### 2.1 Prepare
+### 2.1 Prepare {#prepare}
 
 The `Prepare` command handles the creation of the app on both GitHub and App Center, sets up icon assets and splash images, and then verifies for Java, Mendix, and project paths. A configuration file is generated relative to the user folder to keep that information for later use. You can update this configuration by using the `prepare` command and passing the arguments you would like to update.
 
@@ -59,7 +59,7 @@ native-builder.exe prepare --github-access-token <token> --appcenter-api-token <
 | `--firebase-ios-config-path`          | Absolute path to a *GoogleService-Info.plist* file.          | `C:\MyApp\GoogleService-Info.plist`                 |
 
 
-### 2.2 Build
+### 2.2 Build {#build}
 
 #### 2.2.1 Generating Apps for Distribution
 
@@ -92,7 +92,7 @@ native-builder.exe build --project-name "CoolApp" --app-version "1.0.0" --build-
 | `--platform`                | Platform with which to run command for. Defaults to both iOS and Android. | `ios` or `android`                                  |
 | `--skip-mxbuild`            | Used if bundling JavaScript bundle and assets. Defaults to `false`.       | `true` or `false`                                   |
 
-#### 2.2.2 Generating Custom Developer Apps
+#### 2.2.2 Generating Custom Developer Apps {#generate}
 
 When used, the `build dev-app` command will create a preview app much like the Make It Native app. However, the preview app it makes will be a custom developer app specific to both your project and your Studio Pro version. This command creates a **develop** branch on GitHub, and initializes the build on App Center. It also expects you to have run the `prepare` command at least once.
 
@@ -108,7 +108,7 @@ native-builder.exe build dev-app --project-name "CoolApp" --output-path "C:\bund
 | `--output-path` | The absolute output path for the *ZIP* archives.                                             | `C:\bundles\developer`       |
 | `--platform`          | Platform with which to run command for. Defaults to both iOS and Android. | `ios` or `android` |
 
-### 2.3 Regenerate
+### 2.3 Regenerate {#regenerate}
 
 The `regenerate` command recreates the project on GitHub with the latest version of `Native Template`, renames the previous app with a new name to preserve changes (if any), and then updates the build configuration of the App Center apps. Running `regenerate` also expects that `prepare` has been run at least once for the `--project-name`.
 
@@ -132,7 +132,7 @@ native-builder.exe regenerate --project-name "CoolApp" --mendix-version 8.5.0
 | ---------------- | ------------------------------------------------- | --------- |
 | `--project-name` | Unique name of the project used during `prepare`. | `CoolApp` |
 
-### 2.4 Creating an Over the Air Deployment Release
+### 2.4 Creating an Over the Air Deployment Release {#ota}
 
 The `push-update` command handles generating a new JavaScript bundle and assets, and deploying that over the air (OTA) update.
 
@@ -154,7 +154,7 @@ native-builder.exe release push-update --project-name "CoolApp" --target-version
 | `--deployment-target`  | OTA target group. Defaults to `Production`.                                                          | `Staging`                                                        |
 | `--skip-mxbuild`       | Used if bundling JavaScript bundle and assets. Defaults to `false`.                                  | `true` or `false`                                                |
 
-### 2.5 Updating an OTA Deployment Release's Metadata
+### 2.5 Updating an OTA Deployment Release's Metadata {#update-ota}
 
 The `patch-update` command allows you to update the metadata of a published update that has not been rolled out to all users (in technical terms, an update which does not have a `rollout-percentage` value of `100`).
 
@@ -175,7 +175,7 @@ native-builder.exe release patch-update --project-name "CoolApp" --label "v4" --
 | `--platform`           | Specifies which platform your command is run for. Defaults to both iOS and Android.                                 | `ios` or `android`                                     |
 | `--deployment-target`  | OTA target group. Defaults to `Production`.                                                                | `Staging`                                              |
 
-### 2.6 Rolling Back to a Previous Deployment Release
+### 2.6 Rolling Back to a Previous Deployment Release {#rollback}
 
 The `rollback-update` command allows you to revert to a previous deployment release with the same target version of your app. This command creates a new deployment using a previous deployment release specified with the `--label` argument.
 
@@ -259,7 +259,7 @@ native-builder.exe config ios add-background-modes --project-name "CoolApp" --mo
 | `--project-name`      | Unique name of the project used during `prepare`. **(Required)**                                    | `CoolApp`          |
 | `--modes` | A list of background modes to add to your project. The `notification` option is supported.                | `notification`       |
 
-## 3 Expanded Parameter Explanations
+## 3 Expanded Parameter Explanations {#parameters}
 
 ### 3.1 --project-name
 

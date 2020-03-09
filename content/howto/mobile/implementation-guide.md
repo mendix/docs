@@ -117,7 +117,7 @@ Configure FCM as follows:
 
 1. Select the **Enabled** checkbox.
 2. Enter a name for the new configuration.
-3. Enter your Firebase project ID (located on the Firebase console website).
+3. Enter your Firebase project ID (located on the [Firebase console](https://console.firebase.google.com/) website).
 4. Upload your private key (which you downloaded when you created a service account).
 
 {{% alert type="warning" %}}

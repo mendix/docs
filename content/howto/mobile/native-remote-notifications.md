@@ -80,13 +80,13 @@ To set up a notification widget, do the following:
 
 To set up actions which will occur after tapping or receiving a notification, do the following:
 
-1. Create two nanoflows (*ACT_OnRecieve* and *ACT_OnOpen*) which will create two different logs (**onRecieve triggered** and **onOpen triggered**):
+1. Create two nanoflows (*ACT_OnReceive* and *ACT_OnOpen*) which will create two different logs (**onReceive triggered** and **onOpen triggered**):
 
-    ![ACT_OnRecieve](attachments/native-remote-push/modeler/ACT_OnRecieve.png)
+    ![ACT_OnReceive](attachments/native-remote-push/modeler/ACT_OnReceive.png)
 
 1. Double-click your notifications widget and do the following:<br />
     a. Add an action called *logIt*.<br />
-    b. For **On recieve** select **ACT_OnRecieve**.<br />
+    b. For **On receive** select **ACT_OnReceive**.<br />
     c. For **On open** select **ACT_OnOpen**:
 
     ![LogitAction](attachments/native-remote-push/modeler/logitAction.png)
@@ -130,10 +130,10 @@ Now you should be able to see registered devices (which is probably only one: yo
 
 You will see your notification with the text you configured:
 
-![PushRecieved](attachments/native-remote-push/modeler/PushRecieved.png)
+![PushReceived](attachments/native-remote-push/modeler/PushReceived.png)
 
 1. Tap the notification. You will see a log message in your Studio Pro console: **onOpen triggered**.
-1. Now send and tap a notification while keeping the app open. You will see a different log in your modeler console: **onRecieve triggered**. 
+1. Now send and tap a notification while keeping the app open. You will see a different log in your modeler console: **onReceive triggered**. 
 
 ## 4 Sending Data Using Push Notifications
 
@@ -239,23 +239,23 @@ To enable push notifications for an app in the foreground, do the following:
 
 	![ContainerVisibility](attachments/native-remote-push/modeler/ContainerVisibility.png)
 
-1. Create a nanoflow called *ACT_ShowNotificationOnRecieve* which will be responsible for toggling the **NativeNotification/showNotification** attribute:<br />
+1. Create a nanoflow called *ACT_ShowNotificationOnReceive* which will be responsible for toggling the **NativeNotification/showNotification** attribute:<br />
 	a. Set **NativeNotification** as a parameter.<br />
  	b. Change **NativeNotification/showNotification** to **true** without committing.<br />
  	c. Drag and drop a **Wait** JavaScript action, and set it for *5000* ms.<br />
  	d. Change the **NativeNotification/showNotification** to **false** without committing:
    
-	![ACT_ShowNotificationOnRecieve](attachments/native-remote-push/modeler/ACT_ShowNotificationOnRecieve.png)
+	![ACT_ShowNotificationOnReceive](attachments/native-remote-push/modeler/ACT_ShowNotificationOnReceive.png)
 
 1. Navigate to your **Home_Native** page and do the following:<br />
 	a. Double-click your notification widget<br />
-	b. Change **sendProduct** so that on receive it triggers **ACT_ShowNotificationOnRecieve**:
+	b. Change **sendProduct** so that on receive it triggers **ACT_ShowNotificationOnReceive**:
 
-	![sendProductOnRecieve](attachments/native-remote-push/modeler/sendProductOnRecieve.png)
+	![sendProductOnReceive](attachments/native-remote-push/modeler/sendProductOnReceive.png)
 
 Now repeat the steps in [Testing the Implementation](#testing-guid), but this time put your app in the foreground. You will see a notification with your text and a button for five seconds:
 
-![onRecieveShowDV](attachments/native-remote-push/modeler/onRecieveShowDV.png)
+![onReceiveShowDV](attachments/native-remote-push/modeler/onReceiveShowDV.png)
 
 ## 5 Sending Notifications to Multiple Devices
 

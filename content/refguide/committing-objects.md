@@ -1,6 +1,7 @@
 ---
 title: "Commit Object(s)"
 parent: "object-activities"
+menu_order: 3
 tags: ["studio pro"]
 ---
 

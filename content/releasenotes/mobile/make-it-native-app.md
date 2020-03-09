@@ -12,6 +12,14 @@ For more information on the Make It Native app, see [Getting the Make It Native 
 
 You can download the Make It Native app for [iOS](https://apps.apple.com/app/make-it-native/id1334081181) or [Android](https://play.google.com/store/apps/details?id=com.mendix.developerapp).
 
+## Android 1.2.2 / iOS 1.2.4
+
+**Release date: February 4th, 2019**
+
+### Fixes
+
+* We fixed various minor bugs.
+
 ## Android 1.2.1 / iOS 1.2.3
 
 **Release date: December 17th, 2019**

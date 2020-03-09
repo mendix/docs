@@ -73,7 +73,7 @@ The **Roles and Permissions** screen consist of three tabs:
 
 The **Roles** tab lists all roles and indicates the number of pages and microflows these roles can access. 
 
-The **Page Access** and **Microflow Access** tabs contain a table where all pages/microflows are listed in rows, and all roles are placed in columns. You can decide which pages and microflows a particular role can access: tick/untick the box per document to grant/restrict access for it. To select/deselect all documents click on the **More Options** icon next to the user role.
+The **Page Access** and **Microflow Access** tabs contain a table where all pages/microflows are listed in rows, and all roles are placed in columns. You can decide which pages and microflows a particular role can access: tick/untick the box per document to grant/restrict access for it. To select/deselect all documents click the **More Options** icon next to the user role.
 
 As a result, you will get a matrix specific for each role. 
 

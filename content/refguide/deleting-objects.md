@@ -1,6 +1,7 @@
 ---
 title: "Delete Object(s)"
 parent: "object-activities"
+menu_order: 5
 tags: ["studio pro"]
 ---
 

@@ -74,7 +74,7 @@ To use the REST Data source end point in your chart, follow these steps:
 
 1. Create a page in your project containing an **Area chart** widget.
 
-1. Double click on the **Area chart** widget.
+1. Double click the **Area chart** widget.
 
 1. In the tab **Chart properties**, add a new chart **Series** property.
 

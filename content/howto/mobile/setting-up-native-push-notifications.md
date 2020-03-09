@@ -119,23 +119,24 @@ Commit and push your changes to your master branch.
 
 Set app launch mode inside activity props and add necessary receiver changes in *android/app/src/main/AndroidManifest.xml*:
  
- ```
-  <activity
-  ...
-  android:launchMode="singleTop"
+```
+<activity
+...
+android:launchMode="singleTop"
   >
-  ```
-  ```
-  <application ...>
-  <receiver android:name="io.invertase.firebase.notifications.RNFirebaseNotificationReceiver"/>
-  <receiver android:enabled="true" android:exported="true"  android:name="io.invertase.firebase.notifications.RNFirebaseNotificationsRebootReceiver">
-    <intent-filter>
-      <action android:name="android.intent.action.BOOT_COMPLETED"/>
-      <action android:name="android.intent.action.QUICKBOOT_POWERON"/>
-      <action android:name="com.htc.intent.action.QUICKBOOT_POWERON"/>
-      <category android:name="android.intent.category.DEFAULT" />
-    </intent-filter>
-  </receiver>
+```
+ 
+```
+<application ...>
+<receiver android:name="io.invertase.firebase.notifications.RNFirebaseNotificationReceiver"/>
+<receiver android:enabled="true" android:exported="true"  android:name="io.invertase.firebase.notifications.RNFirebaseNotificationsRebootReceiver">
+  <intent-filter>
+    <action android:name="android.intent.action.BOOT_COMPLETED"/>
+    <action android:name="android.intent.action.QUICKBOOT_POWERON"/>
+    <action android:name="com.htc.intent.action.QUICKBOOT_POWERON"/>
+    <category android:name="android.intent.category.DEFAULT" />
+  </intent-filter>
+</receiver>
 </application>
 ```
 

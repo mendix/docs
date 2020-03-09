@@ -63,7 +63,7 @@ First you need to create an environment:
 
 2. Enter **Environment Name**, the name for the environment. The environment name can only contain lowercase letters, numbers and dashes and must start and end with an alphanumeric character. You can have several environments for your app, for example test, acceptance, and production.
 
-3. Use the drop-down **Select Cluster** to select an existing cluster. You will only see clusters for which you have *Deploy App* rights.
+3. Use the drop-down **Select Cluster** to select an existing cluster. You will see all clusters of which you are a member.
 
 4. Select the **Purpose**.
     
@@ -86,7 +86,7 @@ First you need to create an environment:
     | Small    | 1                | 1                 |
     | Medium   | 2                | 2                 |
     | Large    | 3                | 3                 |
-    | Custom   | own choice 0.25+ | own choice 0.5GB+ |
+    | Custom   | own choice, should be at least 0.25 | own choice, should be at least 0.5GB |
 
     Alternatively, you can choose **Custom**, and enter your own requirements for **CPU** and **Memory**.
 
@@ -421,9 +421,13 @@ Under some circumstances changes in the status of the environment and its apps w
 
 Under certain conditions, the status of an environment in the Portal might become outdated and not reflect the environment state in the cluster. The Agent needs to be restarted to force it to resend the latest environment state to the Portal.
 
-Run the following command in the namespace where the Mendix Operator is deployed:
+You need to run the following command in the namespace where the Mendix Operator is deployed:
 
 #### 7.2.1 OpenShift
+
+First go to the namespace using the command `oc config set-context --current --namespace={namespace}`, using the name of your namespace.
+
+Now run the following command.
 
 ```bash
 oc scale deployment mendix-agent --replicas=0 && \
@@ -432,6 +436,10 @@ oc scale deployment mendix-agent --replicas=1
 
 ```
 #### 7.2.2 Kubernetes
+
+First go to the namespace using the command `kubectl config set-context --current --namespace={namespace}`, using the name of your namespace.
+
+Now run the following command.
 
 ```bash
 kubectl scale deployment mendix-agent --replicas=0 && \

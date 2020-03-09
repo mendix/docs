@@ -61,7 +61,7 @@ Classes are groups of styling properties which define how certain elements of yo
 
 1. Place a second button widget on your app's home page.
 2. Run your app to view your button.
-3. Select the button widget, and then click on the **Properties** panel. Under **Common** you will see the button's **Class** field.
+3. Select the button widget, and then click the **Properties** panel. Under **Common** you will see the button's **Class** field.
 4.  Type *btnSuccess* into the **Class** field:
 
 	![class field](attachments/how-to-use-native-styling/btn-success.png)

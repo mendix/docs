@@ -76,7 +76,7 @@ Validating user input can also be achieved by overriding the default save button
     ![](attachments/18448742/18582141.png)
 
 4.  Create a **Commit** activity to store the object in the database.
-5.  Create a **Close Page** activity to close the detail page.
+5.  Create a **Close page** activity to close the detail page.
 
     You have now created a Microflow that mimics the default 'Save' button behavior. It should look like this:
     

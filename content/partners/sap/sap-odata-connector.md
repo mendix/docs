@@ -211,7 +211,7 @@ This produces the GET request `https://sapes5.sapdevcenter.com/sap/opu/odata/iwb
 The Create operation creates a new object in the SAP back-end system using the OData service. The object is described by an entity in the SAP service domain model.
 
 {{% alert type="info" %}}
-This Create is not the same as the Mendix **Create Object** action. The OData Connector for SAP solutions Create will commit the object to the SAP back-end system and it cannot be rolled back. If you decide later that you do not want this object you must delete it using its key.
+This Create is not the same as the Mendix **Create object** action. The OData Connector for SAP solutions Create will commit the object to the SAP back-end system and it cannot be rolled back. If you decide later that you do not want this object you must delete it using its key.
 {{% /alert %}}
 
 ![](attachments/sap-odata-connector/create-params.png)
@@ -244,7 +244,7 @@ For example, this connector can be used to create a product using the **GWSAMPLE
 
 `GWSAMPLE_BASIC.EntitySetNames.ProductSet` is the name of the Product collection listed in the EntitySetNames enumeration of the SAP Service Data Model.
 
-The **Odata object** is an object of entity type **Product**. This can be created, by using, for example, the **Create Object** action.
+The **Odata object** is an object of entity type **Product**. This can be created, by using, for example, the **Create object** action.
 
  You will need to pass authentication using **Request Parameters** and the **Add basic authentication** action described in [Helper Actions](#HelperActions), below.
 

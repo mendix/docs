@@ -10,6 +10,12 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 ## 2020
 
+### March 4th, 2020
+
+#### Mendix for Private Cloud
+
+* You can now deploy Mendix apps easily to Kubernetes-based platforms. We currently support Red Hat OpenShift, Amazon Web Services Elastic Kubernetes Service (AWS-EKS), and Amazon Web Services Azure Kubernetes Service (AWS-AKS). This involves deploying a Mendix Operator to your cluster to manage the Mendix requests. For more information see the [Private Cloud](/developerportal/deploy/private-cloud) documentation.
+
 ### March 2nd, 2020
 
 #### Mendix Cloud Backups
@@ -193,7 +199,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 
 #### Mendix Cloud Improvements
 
-* We redesigned the app user management page of the Developer Portal for Mendix Cloud environments which are enabled for single sign-on (SSO).
+* We redesigned the App User management page of the Developer Portal for Mendix Cloud environments which are enabled for single sign-on (SSO).
 
 ### May 13th, 2019
 
@@ -742,7 +748,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 ### April 1st, 2017
 
-* We added list backups/download backup operations to the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api#3-15-list-environment-backups).
+* We added list backups/download backup operations to the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api).
 * We fixed the status page link in alert emails.
 * We updated the **Security** link from the Deploy/Operate tabs. It now goes to the same page on all pages in the platform.
 * We fixed an issue where the Free Apps backups page was very slow or resulted in an error in some cases.

@@ -24,11 +24,11 @@ None.
 
 ### 3.1 Step 1 – Import the `PushNotifications` Module from the App Store
 
-The `PushNotifications` module is published in the Mendix App Store. To import it into your project, click on 'App Store' in the top right of Modeler. This will open the App Store in a new tab. Search for _Push Notifications Connector_ and click on the title of the result.
+The `PushNotifications` module is published in the Mendix App Store. To import it into your project, click 'App Store' in the top right of Modeler. This will open the App Store in a new tab. Search for _Push Notifications Connector_ and click the title of the result.
 
 ![](attachments/19955732/20218020.png)
 
-On the resulting page, click on the green `Download` button. Make sure that 'Add as a new module' is selected, and click OK.
+On the resulting page, click the green `Download` button. Make sure that 'Add as a new module' is selected, and click OK.
 
 ![](attachments/19955732/20217885.jpg)
 
@@ -40,7 +40,7 @@ If your project is using an older version of the [Encryption module](https://app
 
 ![](attachments/19955732/20217886.jpg)
 
-After importing the module and the dependencies, your error dock will inform you that entity access is out of date; double-click on the error, and then click on `Update security` at the top of the domain model pane to fix this error.
+After importing the module and the dependencies, your error dock will inform you that entity access is out of date; double-click the error, and then click `Update security` at the top of the domain model pane to fix this error.
 
 ### 3.3 Step 3 – Include the Push Notifications Snippet in the Application's Layouts
 

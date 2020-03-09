@@ -125,7 +125,7 @@ Clicking the header on the data grid in the client will update the **Paging** en
 Use these attributes when calling your REST service:
 
 1. Open your **Call_REST** microflow.
-2. Double-click the **Call REST Service** activity. 
+2. Double-click the **Call REST service** activity. 
 3. Click **Location** > **Edit**.
 4.  Add `&_sort={2}&_order={3}` to the end of your current **Template** address:
 
@@ -153,9 +153,9 @@ Deploy your app again and navigate to the page with your data grid. Click the co
 You can set a default sort order for data. When a user has not clicked a header, the data will be ordered in the default sort order:
 
 1. Open the page containing your data grid.
-2. Right-click on the data view surrounding the data grid.
+2. Right-click the data view surrounding the data grid.
 3. Select **Go to data source nanoflow**.
-4.  Double-click on the **Create object** activity: 
+4.  Double-click the **Create object** activity: 
 
 	{{% image_container width="500" %}}![create object activity one](attachments/server-side-paging/create-nano.png){{% /image_container %}}
 
@@ -176,8 +176,8 @@ Deploy your app again and navigate to the page with your data grid. The data wil
 Apps that use a REST service which does not support sorting, or apps which do not enable users to change sorting order, require special functionality. In these cases, disable sorting so that clicking the header has no effect:
 
 1. Open the page containing the data grid.
-2. Right-click on the data view surrounding the data grid and select **Go to data source nanoflow**.
-3. Double-click on the **Create object** activity. 
+2. Right-click the data view surrounding the data grid and select **Go to data source nanoflow**.
+3. Double-click the **Create object** activity. 
 4. Click **New** to set the value for another member of the **Paging** entity. 
 5. Select **Member** > **IsSortable (Boolean)** from the drop-down menu.
 6.  Type *false* into **Value**:
@@ -197,7 +197,7 @@ If you are using Mendix 8.3 or above, generating controls also generates input f
 You only need to use this data in your microflow and pass the search criteria to your REST call to get a filtered set of data. As an example, follow the instructions below to filter the **Name** attribute:
 
 1. Open your **Call_REST** microflow.
-2. Double-click the **Call REST Service** activity.
+2. Double-click the **Call REST service** activity.
 3. Click **Location** > **Edit**.
 4.  Add `&name_like={4}` to the end of your current **Template** address:
 

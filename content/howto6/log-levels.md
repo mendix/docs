@@ -80,7 +80,7 @@ You can also set the level of log messages in ones that you have created via a m
  ![](attachments/18448575/18580028.png)
 
 1.  Open the relevant microflow, for which you intend to change its log message’s level.
-2.  Double click on the ‘log message activity’
+2.  Double click the ‘log message activity’
 3.  From the drop list, in the log level row select the correct level 
 
 ## 3\. Related Content

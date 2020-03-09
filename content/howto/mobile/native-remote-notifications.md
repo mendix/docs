@@ -224,7 +224,7 @@ To test the implementation, do the following:
 
 1. With your app running in the background, send a notification, and tap it. This will navigate to the **NativeProductOverview** page with the proper object.
 
-## 4.2 Push Notifications for an App in the Foreground
+### 4.2 Push Notifications for an App in the Foreground
 
 To enable push notifications for an app in the foreground, do the following:
 
@@ -305,7 +305,7 @@ Test your new push notification capabilities by doing the following:
 
 This will send a notification to all available devices. When you tap the notification, you will be redirected to the particular product page you modeled.
 
-### 6 More Java Action Explanations
+## 6 More Java Action Explanations
 
 For more detail on Java actions available in the Push notifications module, see the sections below.
 

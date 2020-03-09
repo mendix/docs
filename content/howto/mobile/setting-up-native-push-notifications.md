@@ -88,7 +88,7 @@ These commands will automatically do the necessary code alterations and make a G
 
 Manually add the `google-services.json` file inside your **android/app** folder. Commit and push your changes to master branch.
 
-#### IOS
+#### iOS
 
 In order for your generated template to work with push notifications, you will need XCODE installed in your machine.
 

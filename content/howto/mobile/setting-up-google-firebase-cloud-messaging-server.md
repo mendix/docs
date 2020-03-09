@@ -23,9 +23,9 @@ There are two possible scenarios: you can create a new FCM project, or you can u
 
 To prevent the degraded reliability of push notifications delivery, you should migrate existing GCM projects to FCM and upgrade credentials if needed.
 
-#### 3.1.1 Sign in to the Developers Console
+#### 3.1.1 Sign in to the Developer's Console
 
-Open the [Firebase developers console](https://console.firebase.google.com/) and sign in with your Google ID.
+Open the [Firebase developer's console](https://console.firebase.google.com/) and sign in with your Google ID.
 
 #### 3.1.2 Importing the Project
 
@@ -40,7 +40,7 @@ With that done, continue with [Configuring APNs Credentials](#configuring) below
 
 ### 3.2 Creating a New FCM Project
 
-#### 3.2.1 Signing In to the Developers Console
+#### 3.2.1 Sign in to the Developers Console
 
 Open up the [Firebase developers console](https://console.firebase.google.com/) and sign in with your Google ID.
 
@@ -50,9 +50,9 @@ To create a project, do the following:
 
 1. Click **Create new project**.
 1. Fill in your application's project name and region. 
-1. Click **Create**"
+1.  Click **Create**"
 
-  ![](attachments/Setting+up+Google+Firebase+Cloud+Messaging+Server/Create_Firebase_Project.png)
+	![](attachments/Setting+up+Google+Firebase+Cloud+Messaging+Server/Create_Firebase_Project.png)
 
 ## 4 Adding an Android or iOS App {#native-apps}
 
@@ -69,29 +69,30 @@ For a hybrid app, you can find this ID in your Project Dashboard. Click **Deploy
 
 Do the following to add your app to FCM:
 
-1. Click the **Project Overview** cogwheel and select **Project settings**:
+1.  Click the **Project Overview** cogwheel and select **Project settings**:
 
-  ![](attachments/push-server/firebase/project_settings.png)
+	![](attachments/push-server/firebase/project_settings.png)
 
-1. Go to the **General** tab and click **Add app**:
+1.  Go to the **General** tab and click **Add app**:
 
-  ![](attachments/push-server/firebase/add_app.png)
+	![](attachments/push-server/firebase/add_app.png)
 
-1. Select Android and, fill in the bundle_id, and skip the rest of the steps: 
+1.  Select Android and, fill in the bundle_id, and skip the rest of the steps: 
 
-  ![](attachments/push-server/firebase/android_setup.png)
+	![](attachments/push-server/firebase/android_setup.png)
 
 Bundle id must be matching with your package id. Make sure to repeat this step for IOS aswell.
 
 ## 5 Configuring APNs Credentials (Optional) {#configuring}
 
-If you wish to send push notifications to iOS devices through FCM, you will need to configure your APNs credentials. To do so, click in the top-left corner of the screen and select **Project settings**.
+If you wish to send push notifications to iOS devices through FCM, you will need to configure your APNs credentials:
 
-Navigate to the **Cloud messaging** tab.
+1. Click in the top-left corner of the screen and select **Project settings**.
+1.  Navigate to the **Cloud messaging** tab:
 
-![](attachments/push_notifications_cloud_messaging.png)
+	![](attachments/push_notifications_cloud_messaging.png)
 
-On this tab, upload either your APNs key or your APNs certificate(s). For more information on APN SSL certificates, see [How to Set up the Apple Push Notification Server](setting-up-apple-push-notification-server).
+1. On this tab, upload either your APNs key or your APNs certificate(s). For more information on APN SSL certificates, see [How to Set up the Apple Push Notification Server](setting-up-apple-push-notification-server).
 
 ## 6 Setting Up a Service Account
 

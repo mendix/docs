@@ -130,7 +130,7 @@ Now you should be able to see registered devices (which is probably only one: yo
 
 You will see your notification with the text you configured:
 
-    ![PushRecieved](attachments/native-remote-push/modeler/PushRecieved.png)
+![PushRecieved](attachments/native-remote-push/modeler/PushRecieved.png)
 
 1. Tap the notification. You will see a log message in your Studio Pro console: **onOpen triggered**.
 1. Now send and tap a notification while keeping the app open. You will see a different log in your modeler console: **onRecieve triggered**. 
@@ -244,7 +244,7 @@ To enable push notifications for an app in the foreground, do the following:
  	b. Change **NativeNotification/showNotification** to **true** without committing.<br />
  	c. Drag and drop a **Wait** JavaScript action, and set it for *5000* ms.<br />
  	d. Change the **NativeNotification/showNotification** to **false** without committing:
-    
+   
 	![ACT_ShowNotificationOnRecieve](attachments/native-remote-push/modeler/ACT_ShowNotificationOnRecieve.png)
 
 1. Navigate to your **Home_Native** page and do the following:<br />

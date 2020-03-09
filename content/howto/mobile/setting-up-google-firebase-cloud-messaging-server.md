@@ -70,7 +70,7 @@ Do the following to add your app to FCM:
 
   ![](attachments/push-server/firebase/add_app.png)
 
-1. Select Android and fill in the bundle_id. 
+1. Select Android and, fill in the bundle_id, and skip the rest of the steps: 
 
   ![](attachments/push-server/firebase/android_setup.png)
 

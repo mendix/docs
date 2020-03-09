@@ -27,6 +27,8 @@ Create a Mendix project using the Native Mobile Quickstart starter app:
 
 ### 3.1 Installing Your Module 
 
+To install your module, do the following:
+
 1. Add the [Community Commons](https://appstore.home.mendix.com/link/app/170/) module to your app project.
 1. Add the [Encryption](https://appstore.home.mendix.com/link/app/1011/) module to your app project.
 1. Set the encryption private key by doing the following:<br />
@@ -41,6 +43,8 @@ Create a Mendix project using the Native Mobile Quickstart starter app:
 1. Add the [Push Notifications Connector](https://appstore.home.mendix.com/link/app/3003/) module to your app project.
 
 ### 3.2 Setting Up a Notification Widget
+
+To set up a notification widget, do the following:
 
 1. Drag and drop an app events widget onto your app's home page, double-click it, and do the following:<br />
     a. Set **Page load** > **On load** to **Call a nanoflow**, then specify **PushNotifications.OnPageLoad_RegisterPushNotifications**.<br />
@@ -136,7 +140,7 @@ You will see your notification with the text you configured:
 
 Imagine your business has several products, and you want to send one product to a user using an administration module interface. How would you achieve this goal?
 
-In this section you will learn the following:
+Below you will learn the following:
 
 * How to show a push notification to a user if their app is in the background — when a user taps it, they will be brought to a product page
 * How to show a small view to a user if their app is in the foreground — when a user taps the button in the animation, they will be brought to a product page
@@ -144,6 +148,8 @@ In this section you will learn the following:
 ### 4.1 Push Notifications for an App in the Background
 
 #### 4.1.1 Setting Up an Example Entity
+
+To set up an example entity, do the following:
 
 1. In the **Domain Model**, add a *Product* entity with a *ProductName* attribute.
 1.  Right-click **Product** > **Generate overview pages**.
@@ -160,7 +166,7 @@ In this section you will learn the following:
 
 #### 4.1.2 Synchronizing Unused Entities
 
-Studio Pro does smart data syncing, meaning if an entity has not been retrieved on the native side, it will not be there. This situation will not occur often since most Mendix native apps do retrieve entities which you want to show [todo: go back over these 2 sentences with Mehmet]. For more information, see the [Synchronization](/refguide/offline-first#sychronization) section of the *Offline-First Reference Guide*.
+Studio Pro uses smart data syncing, meaning if an entity has not been retrieved on the native side, it will not be there. This situation will not occur often since most Mendix native apps do retrieve entities which you want to show. For more information, see the [Synchronization](/refguide/offline-first#sychronization) section of the *Offline-First Reference Guide*.
 
 Your app does not retrieve any products in any of its pages. Fix this by doing the following:
 
@@ -171,7 +177,7 @@ Your app does not retrieve any products in any of its pages. Fix this by doing t
 
 #### 4.1.3 Determining GUIDs {#guid-objects}
 
-In order to send a particular object to a page, first an object's GUID must be determined and sent using a push notification. To begin this process, you will log the object GUID to your Mendix Studio Pro's console (to be used later in the [Testing the Implementation](#testing-guid) section):
+In order to send a particular object to a page, first an object's GUID must be determined and sent using a push notification. To begin this process, you will log the object GUID to your Mendix Studio Pro's console (which you will use later in the [Testing the Implementation](#testing-guid) section below):
 
 1.  Create a nanoflow *ACT_GetGUIDAndLog* which does the following:<br />
     a. Accepts **Product** object as a parameter.<br />
@@ -184,7 +190,9 @@ In order to send a particular object to a page, first an object's GUID must be d
 
     ![getGUIdAndLogButton](attachments/native-remote-push/modeler/getGUIDAndLogButton.png)
 
-#### 4.1.4 Creating a Data Passing Nanoflow
+#### 4.1.4 Creating a Data-Passing Nanoflow
+
+To create a data-passing nanoflow, do the following:
 
 1.  Create a nanoflow *ACT_GetProductAndShowPage* which does the following:<br />
     a. Accepts a **Notification** object as a parameter:<br />
@@ -205,6 +213,8 @@ In order to send a particular object to a page, first an object's GUID must be d
 
 #### 4.1.5 Testing the Implementation {#testing-guid}
 
+To test the implementation, do the following:
+
 1. Click the nanoflow button you created in [Determining GUIDs](#guid-objects) to log the object's GUID (which you can see in your Studio Pro Console).
 1. Follow the steps in the [Sending a Push Notification to a Single Device](#sending-single) section again, but with the following changes:<br />
     a. Set the action name to *sendProduct*.<br />
@@ -215,6 +225,8 @@ In order to send a particular object to a page, first an object's GUID must be d
 1. With your app running in the background, send a notification, and tap it. This will navigate to the **NativeProductOverview** page with the proper object.
 
 ## 4.2 Push Notifications for an App in the Foreground
+
+To enable push notifications for an app in the foreground, do the following:
 
 1.  Add one more **boolean** field named *showNotification* to the **NativeNotification** entity:
 
@@ -295,7 +307,7 @@ This will send a notification to all available devices. When you tap the notific
 
 ### 6 More Java Action Explanations
 
-For more detail on Java actions available in the Push notifications module, see the subsections below.
+For more detail on Java actions available in the Push notifications module, see the sections below.
 
 ### 6.1 PrepareMessageData Microflow
 

@@ -1,7 +1,7 @@
 ---
 title: "1"
 parent: "apd"
-menu_order: 20
+menu_order: 3
 ---
 
 These are the release notes for Mendix Application Performance Monitor version 1:

@@ -1,10 +1,9 @@
 ---
 title: "Set Up Hybrid Push Notifications"
-#category: "Hybrid Mobile"
-#parent: "hybrid-mobile"
-#menu_order: 11
-#description: "Learn how to set up hybrid push notifications with PhoneGap Build."
-#tags: ["mobile", "push notification", "remote", "push", "notification"]
+parent: "hybrid-mobile"
+menu_order: 9
+description: "Learn how to set up hybrid push notifications with PhoneGap Build."
+tags: ["mobile", "push notification", "remote", "push", "notification"]
 ---
 
 ## 1 Introduction

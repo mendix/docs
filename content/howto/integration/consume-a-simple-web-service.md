@@ -103,7 +103,7 @@ To create logic to call the web service, follow these steps:
 
     ![](attachments/18448738/18582072.png)
 
-20. Click **OK** again to save the **Show message activity** properties. The microflow will look like this:
+20. Click **OK** again to save the show message activity properties. The microflow will look like this:
 
     ![](attachments/18448738/18582070.png)
 

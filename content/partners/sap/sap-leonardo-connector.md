@@ -416,7 +416,7 @@ The ML Foundation Trial is not added automatically to your quota. Therefore, you
 
     ![choose the machine learning service from the marketplace](attachments/sap-leonardo-connector/choose-ml-service.png)
 
-3. Go to **Instances** and click on **New Instance** to add an instance of the service.
+3. Go to **Instances** and click **New Instance** to add an instance of the service.
 
 4. Choose the desired **Service Plan** and click **Next**.
 

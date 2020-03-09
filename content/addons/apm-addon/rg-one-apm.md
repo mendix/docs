@@ -68,7 +68,7 @@ This is the call tree, which provides an overview of what happens, showing the c
 
 ![](attachments/rg-one-introduction/Performance_Tool_Tree_View.png)
 
-Below is the performance tool output. You can double-click on all actions and in the case of a microflow call, you can browse to the next microflow. In the case of loops you will see the individual iterations.
+Below is the performance tool output. You can double-click all actions and in the case of a microflow call, you can browse to the next microflow. In the case of loops you will see the individual iterations.
 
 ![](attachments/rg-one-introduction/Performance_Tool_Browse_Microflow.png)
 

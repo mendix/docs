@@ -53,7 +53,7 @@ If you have downloaded a full backup, this will also have been archived as a *.t
 
 4. Fill in the **Database** name.
 5. Select the correct owner (the default is **postgres**) and click **Save**.
-6. Right-click on the newly created database and click **Restore...**.
+6. Right-click the newly created database and click **Restore...**.
 
     ![](attachments/restore-backup-locally/restore-database.png)
 

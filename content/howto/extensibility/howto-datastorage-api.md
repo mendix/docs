@@ -37,7 +37,7 @@ For more information on calling Java actions from a microflow, see [Java Actions
 
 The goal is to create a microflow action where a user can specify an Xpath expression and which result entities are expected. The action will execute the XPath statement and return the resulting list of objects.
 
-In practice, this is not a very useful microflow action as you can already do this with the standard Retrieve action in Mendix Studio Pro. The goal, however, is to illustrate how you can use the Xpath Java API.
+In practice, this is not a very useful microflow action as you can already do this with the standard retrieve action in Mendix Studio Pro. The goal, however, is to illustrate how you can use the Xpath Java API.
 
 The Java action needs the following parameters:
 

@@ -108,7 +108,7 @@ To send an email in a microflow, follow these steps:
 
     ![](attachments/19202956/19398984.png)
 
-8. Add a Change object before the sub-microflow call. Set the **Object** as **Email**.
+8. Add a **Change object** activity before the sub-microflow call. Set the **Object** as **Email**.
 
 9. Because users are only editing the plain text of the email on the previous page, change the email so that the **UseOnlyPlainText** Boolean is set to **true**:
 

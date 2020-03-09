@@ -94,7 +94,7 @@ Based on the structure of the file you want to import, you will setup your templ
     For this example you will be using a simple Excel file, with just one sheet and columnheaders at the first row. If a more comprehensive Excel file is used you can change these values at the Sheet nr, Header row nr, and Import from row nr boxes.
 
     {{% /alert %}}
-9.  Under the **Connect columns to attributes** section, click on **New** to create a mapping from the Excel sheet column to the proper Mendix attribute.
+9.  Under the **Connect columns to attributes** section, click **New** to create a mapping from the Excel sheet column to the proper Mendix attribute.
     ![](attachments/18448735/18581964.png)
 
 10.  Add the column number, this should correspond with the column number from the value on the Excel file you want to map

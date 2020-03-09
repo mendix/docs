@@ -199,7 +199,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 
 #### Mendix Cloud Improvements
 
-* We redesigned the app user management page of the Developer Portal for Mendix Cloud environments which are enabled for single sign-on (SSO).
+* We redesigned the App User management page of the Developer Portal for Mendix Cloud environments which are enabled for single sign-on (SSO).
 
 ### May 13th, 2019
 

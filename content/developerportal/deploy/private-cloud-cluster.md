@@ -10,7 +10,7 @@ tags: ["Register", "Private Cloud", "Cluster"]
 
 To allow you to manage the deployment of your apps to Red Hat OpenShift and Kubernetes, you first need to register a cluster in the Mendix Developer Portal. This will provide you with the information you need to deploy the **Mendix Operator** and **Mendix Agent** in your OpenShift context and create a link to the **Environments** pages of your Mendix app through the **Interactor**.
 
-![](attachments/private-cloud-cluster/image1.png)
+![](attachments/private-cloud-cluster/mx4pc-architecture.png)
 
 This document explains how to set up the cluster in Mendix.
 
@@ -301,6 +301,8 @@ You can invite additional members to the cluster, and configure their role depen
 
 6. The user will receive an email and will be required to follow a link to confirm that they want to join this cluster. They will need to be logged in to Mendix when they follow the confirmation link.
 
+    {{% alert type="warning" %}}There is currently an issue where users cannot accept an invite if they have not first visited the cluster manager page. The workaround is first to go to the cluster manager page [https://privatecloud.mendixcloud.com/](https://privatecloud.mendixcloud.com/) and then go to the URL send in the invitation email.{{% /alert %}}
+
 #### 4.2.2 Editing & Removing Members
 
 You can change the access rights for, or completely remove, existing members.
@@ -406,6 +408,6 @@ kubectl scale deployment mendix-agent --replicas=1
 
 Within your cluster you can run one, or several, Mendix apps. Each app runs in a namespace. You can see the relationship between the Mendix environments and the Kubernetes namespaces in the image below.
 
-![](attachments/private-cloud-cluster/image35.png)
+![](attachments/private-cloud-cluster/mx4pc-containerized-architecture.png)
 
 Because you can run several Mendix apps in the same cluster, each app must have a unique name. In addition, the app cannot have the same name as the Mendix tools used to deploy the app. See Deploy an app to Private Cloud for more information.

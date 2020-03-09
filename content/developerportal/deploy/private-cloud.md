@@ -14,7 +14,7 @@ The following platforms are officially supported by Mendix:
 
 * Red Hat OpenShift
 * Amazon Web Services Elastic Kubernetes Service (AWS-EKS)
-* Amazon Web Services Azure Kubernetes Service (AWS-AKS)
+* Azure Kubernetes Service (AKS)
 
 There are two steps required to achieve this, listed below.
 

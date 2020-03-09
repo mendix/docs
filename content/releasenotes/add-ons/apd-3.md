@@ -1,7 +1,7 @@
 ---
 title: "3"
 parent: "apd"
-menu_order: 10
+menu_order: 1
 ---
 
 These are the release notes for Mendix Application Performance Diagnostics version 3:

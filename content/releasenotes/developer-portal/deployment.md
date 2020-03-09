@@ -748,7 +748,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 ### April 1st, 2017
 
-* We added list backups/download backup operations to the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api#3-15-list-environment-backups).
+* We added list backups/download backup operations to the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api).
 * We fixed the status page link in alert emails.
 * We updated the **Security** link from the Deploy/Operate tabs. It now goes to the same page on all pages in the platform.
 * We fixed an issue where the Free Apps backups page was very slow or resulted in an error in some cases.

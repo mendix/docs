@@ -67,36 +67,36 @@ To add the product to your domain model, follow the steps below:
 
        <img src="attachments/domain-models-how-to-configure/adding-entity.png" alt="Adding a New Entity" style="zoom: 80%;" />
 
-    3. In the **Create New Entity**, dialog window, set the name to **Product** and click **Create**.
+    3. In the **Create New Entity**, dialog box, set the name to **Product** and click **Create**.
 
 2. Create attributes for the **Product** entity. Do the following:<br />
     1. Select the entity and click **New attribute**:
       
 		<img src="attachments/domain-models-how-to-configure/adding-new-attribute.png" alt="Adding New Attribute" style="zoom:67%;" />
       
-    2. In the **Create New Attribute** dialog window, set the name to *Product_ID*, set the type to *Autonumber* (so that ID for a product will be assigned automatically), and click **Create**:
+    2. In the **Create New Attribute** dialog box, set the name to *Product_ID*, set the type to *Autonumber* (so that ID for a product will be assigned automatically), and click **Create**:
       
         <img src="attachments/domain-models-how-to-configure/create-new-attribute-dialog.png" alt="Create New Attribute Dialog Window" style="zoom:67%;" />
       
     3. Repeat step 2a to add the *Name* attribute. 
       
-    4. In the **Create New Attribute** dialog window, set the name to *Name*, set the type to *String*, and click **Create**.
+    4. In the **Create New Attribute** dialog box, set the name to *Name*, set the type to *String*, and click **Create**.
       
    5. Repeat step 2a to add the *Description* attribute.
    
-   6. In the **Create New Attribute** dialog window, set the name to *Description*, set the type to *String*, and click **Create**. 
+   6. In the **Create New Attribute** dialog box, set the name to *Description*, set the type to *String*, and click **Create**. 
    
    7. Repeat step 2a to create the attribute to indicate if the product is available. 
    
-   8. In the **Create New Attribute** dialog window, set the name to *Available*, set the type to *Boolean*, and click **Create**.
+   8. In the **Create New Attribute** dialog box, set the name to *Available*, set the type to *Boolean*, and click **Create**.
    
    9. Repeat step 2a to create the *Price* attribute.
    
-   10. In the **Create New Attribute** dialog window, set the name to *Price*, set the type to *Decimal*, and click **Create**. 
+   10. In the **Create New Attribute** dialog box, set the name to *Price*, set the type to *Decimal*, and click **Create**. 
    
    11. Repeat step 2a to create the *Vendor* attribute. 
    
-   12. In the **Create New Attribute** dialog window, set the name to *Vendor*, set the type to *String*, and click **Create**. 
+   12. In the **Create New Attribute** dialog box, set the name to *Vendor*, set the type to *String*, and click **Create**. 
    
 3. Each product has an *image*, but you did not create it as an attribute. You need to create a special type of entity that allows you to store images – an image entity, and set its name to *Product_Image*. Follow the steps below:
 
@@ -104,7 +104,7 @@ To add the product to your domain model, follow the steps below:
 
 		<img src="attachments/domain-models-how-to-configure/adding-image-entity.png" alt="Image Entity" style="zoom:80%;" />
 
-	2. In the **Create New Image Attribute** dialog window, set the name to *Product_Image* and click **Create**.
+	2. In the **Create New Image Attribute** dialog box, set the name to *Product_Image* and click **Create**.
 		{{% alert type="info" %}} *Name* and *Size* attributes are created automatically and are read-only.
 		{{% /alert %}}
 
@@ -129,7 +129,7 @@ Do the following:
 2. Create attributes for the **Order** entity: *Order_Number* and *Status*. Do the following:<br />
     1. Select the entity and click **New attribute**.
       
-    2. In the **Create New Attribute** dialog window, set the name to *Order_Number*, set the type to *Autonumber*, and click **Create**. 
+    2. In the **Create New Attribute** dialog box, set the name to *Order_Number*, set the type to *Autonumber*, and click **Create**. 
       
     3. Repeat step 2a to create the *Status* attribute.
       
@@ -139,9 +139,9 @@ Do the following:
       
 		<img src="attachments/domain-models-how-to-configure/select-enumeration.png" alt="Select Enumeration" style="zoom:70%;" />
       
-    6. In the **Select enumeration** dialog window, click **New Enumeration**.
+    6. In the **Select enumeration** dialog box, click **New Enumeration**.
       
-    7. In the **Create new enumeration** dialog window, click **Add Item** (*Status* is filled out automatically for the **Name**).
+    7. In the **Create new enumeration** dialog box, click **Add Item** (*Status* is filled out automatically for the **Name**).
       
 		<img src="attachments/domain-models-how-to-configure/create-new-enumeration.png" alt="Create New Enumeration" style="zoom:70%;" />
       
@@ -151,16 +151,16 @@ Do the following:
       
 		<img src="attachments/domain-models-how-to-configure/create-enumeration-items.png" alt="Create Enumeration Items" style="zoom:70%;" />
       
-    10. Click **Create** to close the dialog windows and create the attribute.
+    10. Click **Create** to close the dialog boxs and create the attribute.
    
 3. Create the **Order_Line** entity to hold the order products and quantities. Use the same method as for creating the **Product** entity. For more information, see the [Defining the Product](#product) section. 
 
 4. Create attributes for the **Order_Line** entity. Do the following:<br />
 
     1. Repeat step 2a to create the *Quantity* attribute.
-    2. In the **Create New Attribute** dialog window, set **Name** to *Quantity*, set **Type** to *Integer*, and click **Create**.
+    2. In the **Create New Attribute** dialog box, set **Name** to *Quantity*, set **Type** to *Integer*, and click **Create**.
     3. Repeat step 2a to create the *Order_Price* attribute. 
-    4. In the **Create New Attribute** dialog window, set **Name** to *Order_Price*, set **Type** to *Decimal*, and click **Create**.
+    4. In the **Create New Attribute** dialog box, set **Name** to *Order_Price*, set **Type** to *Decimal*, and click **Create**.
 
 5. Create the **Order_Confirmation** entity. As an order confirmation is a file is sent to customers, you need to create a special type of entity that allows you to store files – the **File** entity. Do the following:
 
@@ -168,13 +168,13 @@ Do the following:
 
 		<img src="attachments/domain-models-how-to-configure/adding-file-entity.png" alt="Image Entity" style="zoom:80%;" />
 
-    2. In the **Create New File Attribute** dialog window, set the name to *Order_Confirmation* and click **Create**.
+    2. In the **Create New File Attribute** dialog box, set the name to *Order_Confirmation* and click **Create**.
 
 6. Create attributes for the the **Order_Confirmation** entity. Do the following:<br />
 
     1. Repeat step 2a to create the *Date_Sent* attribute.
 
-    2. In the **Create New Attribute** dialog window, set **Name** to *Date_Sent*, set **Type** to *Date and Time*, and click **Create**.
+    2. In the **Create New Attribute** dialog box, set **Name** to *Date_Sent*, set **Type** to *Date and Time*, and click **Create**.
 
 		{{% alert type="info" %}} *Name* and *Size* attributes are created automatically and are read-only.
 		{{% /alert %}}
@@ -190,15 +190,15 @@ Follow the steps below:
 1. Create the **Customer** entity. Use the same method as for creating the **Product** entity. For more information, see the [Defining the Product](#product) section.
 2. Create attributes for the **Customer** entity (for more information on how to create an attribute, see the [Adding New Attributes](domain-models#adding-new-attributes) section in *Domain Model*). Do the following:<br />
 1. Select the entity and click **New attribute**.
-    2. In the **Create New Attribute** dialog window, set **Name** to *Customer_ID*, set **Type** to *Autonumber*, and click **Create**. 
+    2. In the **Create New Attribute** dialog box, set **Name** to *Customer_ID*, set **Type** to *Autonumber*, and click **Create**. 
 3. Repeat step 2a to create the *Name* attribute.
-    4. In the **Create New Attribute** dialog window, set **Name** to *Name*, set **Type** to *String*, and click **Create**.
+    4. In the **Create New Attribute** dialog box, set **Name** to *Name*, set **Type** to *String*, and click **Create**.
 5. Repeat step 2a to create the *Address* attribute.
-    6. In the **Create New Attribute** dialog window, set **Name** to *Address*, set **Type** to *String*, and click **Create**.
+    6. In the **Create New Attribute** dialog box, set **Name** to *Address*, set **Type** to *String*, and click **Create**.
 7. Repeat step 2a to create the *Email* attribute.
-    8. In the **Create New Attribute** dialog window, set **Name** to *Email*, set **Type** to *String*, and click **Create**.
+    8. In the **Create New Attribute** dialog box, set **Name** to *Email*, set **Type** to *String*, and click **Create**.
 9. Repeat step 2a to create the *Date_Of_Birth* attribute.
-    10. In the **Create New Attribute** dialog window, set **Name** to *Date_Of_Birth*, set **Type** to *Date and Time*, and click **Create**.
+    10. In the **Create New Attribute** dialog box, set **Name** to *Date_Of_Birth*, set **Type** to *Date and Time*, and click **Create**.
 
 
 You created the **Customer** entity and its attributes:

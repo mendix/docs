@@ -79,35 +79,29 @@ Sometimes the computer running Studio Pro cannot access the internet directly, b
 
 The **New features** tab allows you to turn new features on and off. These are features which are being worked on but are either not yet developed sufficiently to remove the previous version, or which are currently optional.
 
-### 5.1 Project Explorer
-
-#### 5.1.1 New Version of the Project Explorer
-
-Select this option when you want to enable the new version of the [Project Explorer](project-explorer). Should you find any issues in the new version, you can switch back to the old version by clearing this check box.
-
 {{% alert type="info" %}}
 You need to restart Studio Pro for changes to these settings to take effect.
 {{% /alert %}}
 
-#### 5.1 New Version of the Changes Pane {#new-changes}
+### 5.1 New Version of the Changes Pane {#new-changes}
 
 With this option, you can enable the new version of the [Changes](changes-pane) pane. Should you find any issues in the new version, you can switch back to the old version by clearing this check box.
 
 Default: *enabled*
 
-#### 5.2 New Version of the Connector {#new-connector}
+### 5.2 New Version of the Connector {#new-connector}
 
 With this option, you can enable the new version of the [Connector](view-menu#connector). Should you find any issues in the new version, you can switch back to the old version by clearing this check box.
 
 Default: *disabled*
 
-#### 5.3 New Version of the Project Explorer {#new-project-explorer}
+### 5.3 New Version of the Project Explorer {#new-project-explorer}
 
 With this option, you can enable the new version of the [Project Explorer](project-explorer). Should you find any issues in the new version, you can switch back to the old version by clearing this check box.
 
 Default: *enabled*
 
-#### 5.4 New Version of the Toolbox {#new-toolbox}
+### 5.4 New Version of the Toolbox {#new-toolbox}
 
 With this option, you can enable the new version of the [Toolbox](/refguide/view-menu#toolbox). Should you find any issues in the new version, you can switch back to the old version by clearing this check box.
 

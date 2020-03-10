@@ -229,7 +229,7 @@ export const preview: React.FC<Props> = (props) => (
 
 #### 3.2.1 Using a Widgets Property
 
-A [Widgets Property](#2-4-widgets) contains a `renderer` field that allows its content to be rendered when filled, or shows an empty drop zone when empty inside the preview. It requires a single, empty, DOM node as a child in which to render the contents:
+A [Widgets Property](#2-4-widgets) contains a `renderer` field that allows its content to be rendered when filled, or shows an empty drop-zone when empty inside the preview. It requires a single, empty, DOM node as a child in which to render the contents:
 
 ```tsx
 type Props = {

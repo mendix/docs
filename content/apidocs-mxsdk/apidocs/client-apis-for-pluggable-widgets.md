@@ -71,10 +71,10 @@ The method `execute` triggers the action. It returns nothing and does not guaran
 DynamicValue is used to represent values that can change over time and is used by many property types. It is defined as follows:
 
 ```ts
-export type DynamicValue<T> =
-    | { readonly status: ValueStatus.Available; readonly value: T }
+export type DynamicValue<X> =
+    | { readonly status: ValueStatus.Available; readonly value: X }
     | { readonly status: ValueStatus.Unavailable; readonly value: undefined }
-    | { readonly status: ValueStatus.Loading; readonly value: T | undefined };
+    | { readonly status: ValueStatus.Loading; readonly value: X | undefined };
     
 export const enum ValueStatus {
     Loading = "loading",
@@ -177,7 +177,7 @@ export type NativeImage = Readonly<ImageURISource> | undefined;
 export type ImageValue = WebImage | NativeImage;
 ```
 
-`NativeImage` can be passed as a source of React Native’s [Image](https://facebook.github.io/react-native/docs/image) component, and `WebImage`  can be passed  to react-dom’s `img`.
+`NativeImage` can be passed as a source of React Native’s [Image](https://facebook.github.io/react-native/docs/image) component, and `WebImage` can be passed  to react-dom’s `img`.
 
 ### 4.6 FileValue {#filevalue}
 
@@ -187,6 +187,47 @@ export type ImageValue = WebImage | NativeImage;
 export interface FileValue {
     uri: string;
 }
+```
+
+### 4.6 ListValue{#listvalue}
+
+`ListValue` is used to represent a list of objects for the [datasource](property-types-pluggable-widgets#datasource) property.
+
+```ts
+export interface ObjectItem {
+    id: GUID;
+}
+
+export interface ListValue {
+    status: ValueStatus;
+    offset: number;
+    limit: number;
+    setOffset(offset: number): void;
+    setLimit(limit: Option<number>): void;
+    items?: ObjectItem[];
+    hasMoreItems?: boolean;
+    totalCount?: number;
+}
+```
+
+
+When a `datasource` property with `isList="true"` is configured for a widget, the client component gets a list of objects represented as a `ListValue`. This type allows detailed access to a data source, and enables control over the limit and offset of items represented in the list.
+
+However it is not possible to access domain data directly from `ListValue`, as every object is represented only by GUID in the `items` array. Instead, a list of items may be used in combination with other properties, for example with a property of type [`widgets`](property-types-pluggable-widgets#widgets). The `dataSource` attribute on that property should reference a `datasource` property.
+
+For clarity, consider the following example using `ListValue` together with the `widgets` property type. When the `widgets` property named `myWidgets` is configured to be tied to a `datasource` named `myDataSource`, the client component props appear as follows:
+
+```ts
+interface MyListWidgetsProps {
+    myDataSource: ListValue;
+    myWidgets: (i: ObjectItem) => ReactNode;
+}
+```
+
+Because of the above configurations, the client component may render every instance of widgets with a specific item from the list like this:
+
+```ts
+this.props.myDataSource.items.map(i => this.props.myWidgets(i));
 ```
 
 ## 5 Exposed Modules

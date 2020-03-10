@@ -12,7 +12,7 @@ This activity can only be used in **Microflows**.
 
 ## 1 Introduction
 
-The Microflow call activity can be used to call another [microflow](microflows). Arguments can be passed to the microflow and the result can be stored.
+The microflow call activity can be used to call another [microflow](microflows). Arguments can be passed to the microflow and the result can be stored.
 
 {{% alert type="info" %}}
 

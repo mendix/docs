@@ -11,7 +11,7 @@ tags: ["studio pro", "security", "project security"]
 
 In the **Project Security**, you can switch security on or off for the whole project. You can also configure security settings related to the project, such as user roles, administrator credentials, demo users, anonymous users, and password policy. To be able to configure, for example, [security per module](module-security) or [access rule for entities](access-rules), you need to switch the project security on first. 
 
-To configure the project security, open **Project Explorer** > **Project** >**Security**, and the dialog window will open:
+To configure the project security, open **Project Explorer** > **Project** >**Security**, and the dialog box will open:
 
 ![](attachments/project-security/project-security-dialog.png)
 

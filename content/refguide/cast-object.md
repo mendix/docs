@@ -1,6 +1,7 @@
 ---
 title: "Cast Object"
 parent: "object-activities"
+menu_order: 1
 tags: ["studio pro"]
 ---
 
@@ -10,7 +11,7 @@ This activity can only be used in **Microflows**.
 
 ## 1 Introduction
 
-The Cast Object activity can be used in a microflow after an [object type decision](object-type-decision) to change the type of object from the generalized object type to the specialized object type of the path out of the object type decision. 
+The cast object activity can be used in a microflow after an [object type decision](object-type-decision) to change the type of object from the generalized object type to the specialized object type of the path out of the object type decision. 
 
 To read more about specialization and generalization, see [Entities](entities).
 

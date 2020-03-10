@@ -21,7 +21,7 @@ The **Run** menu items are described in the table below:
 | --- | --- | --- |
 | **Run** | Deploys and run the project locally. The **Console** pane is activated and this shows the output of the server that runs the project. | <kbd>F5</kbd> |
 | **Run on Cloud Foundry** | Opens the **Edit Cloud Foundry Settings** dialog box so you can run your app on Cloud Foundry. | |
-| **Edit Cloud Foundry Settings** | Opens the **Edit Cloud Foundry Settings** dialog box so you can edit your Cloud Foundry settings. For more information on this dialog window, see [Edit Cloud Foundry Settings](edit-cloud-foundry-settings-dialog). | |
+| **Edit Cloud Foundry Settings** | Opens the **Edit Cloud Foundry Settings** dialog box so you can edit your Cloud Foundry settings. For more information on this dialog box, see [Edit Cloud Foundry Settings](edit-cloud-foundry-settings-dialog). | |
 | **Run Locally** | Runs the project locally so you can view the app. | <kbd>F5</kbd> |
 | **Stop** | Stops the currently running project. | <kbd>Shift</kbd> + <kbd>F5</kbd> |
 | **Configuration** | Sets the configuration level (**Default**). | |

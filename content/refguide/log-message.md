@@ -35,14 +35,14 @@ The log level defines the severity of the log message. In the Studio Pro **Conso
 | Error | ![](attachments/819203/917894.png) | Used to log error messages. These messages appear in red. |
 | Critical | ![](attachments/819203/917895.png) | Used to log critical errors. These messages appear in  white on red  . |
 
-### 2.2 Log Node Name
+### 2.2 Log Node Name {#log-node-name}
 
 The log node name is a microflow expression that defines the source of the log message. For example, if you log messages from an email module, the log node name could be 'Email module'.
 
 {{% alert type="info" %}}
-
 It is advised to use a [constant](constants) for the log node name. This prevents typing errors and makes it easier to change the log node name afterwards.
 
+You can only set custom [log node levels](/developerportal/deploy/environments-details#log-levels) for the environment if your app has posted a message to that log node. It is therefore recommended that you send an initial message to all your custom log nodes in an [after startup microflow](project-settings#after-startup).
 {{% /alert %}}
 
 ### 2.3 Template

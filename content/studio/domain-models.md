@@ -64,13 +64,13 @@ Entities have the following properties:
 
   * **Name** – defines the name of the entity
 
-  * **Persistable** – defines whether objects of the entity are stored in the database (for more information on persistability, see [Persistability](/refguide/persistability) in the *Studio Pro Guide*)
+  *  **Persistable** – defines whether objects of the entity are stored in the database (for more information on persistability, see [Persistability](/refguide/persistability) in the *Studio Pro Guide*)
 
-		![General Properties of an Entity](attachments/domain-models/entity-general-properties.png)
+	![General Properties of an Entity](attachments/domain-models/entity-general-properties.png)
 
-*  **Stored Information** properties define whether the information about the entity is stored in the database. If the information is stored, it can be retrieved afterwards and can be used in [page filters](filters). For example, you can add a filter and show only objects that were created by the current user. 
+*   **Stored Information** properties define whether the information about the entity is stored in the database. If the information is stored, it can be retrieved afterwards and can be used in [page filters](filters). For example, you can add a filter and show only objects that were created by the current user. 
 
-    	You can toggle the following properties: 
+	You can toggle the following properties: 
 
   	* **Store 'Created by'** – when enabled, the user who created the entity is stored in the database
 
@@ -130,13 +130,13 @@ To create a new image/file entity with an association automatically, follow the 
 
 2. Click **New attribute** button.
 
-3.  In the **Create New Attribute** dialog window, click **Add image or file** in the bottom-right corner:
+3.  In the **Create New Attribute** dialog box, click **Add image or file** in the bottom-right corner:
 
     ![Add Image or File](attachments/domain-models/add-image-or-file.png)
 
-4. In the **Image and Files** dialog window, select the type or entity (image or file).
+4. In the **Image and Files** dialog box, select the type or entity (image or file).
 
-5. In the **Create New Image/File Entity** dialog window, specify the name of the special entity and click **Create**. 
+5. In the **Create New Image/File Entity** dialog box, specify the name of the special entity and click **Create**. 
 
 The new image or file entity is created with default *Name* and *Size* attributes and the association to the entity that you selected in the first step:
 ![Image Entity Example](attachments/domain-models/image-entity-example.png)
@@ -273,4 +273,4 @@ You cannot delete *Name* and *Size* attributes of image and file entities.
 
 * [Attributes](domain-models-attributes)
 * [Associations](domain-models-association-properties) 
-* [Configure a Domain Model](#domain-models-how-to-configure)
+* [Configure a Domain Model](domain-models-how-to-configure)

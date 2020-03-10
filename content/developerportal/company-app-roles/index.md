@@ -33,8 +33,8 @@ To view the Company Contact, follow these steps:
 1. Go to the [Developer Portal](http://home.mendix.com) and in the top-right corner, click your avatar and select **My Profile**:
 
     ![](attachments/show-profile.png)
-2. Below your name, click your the name of your company.
-3. Below **Contact**, you can see the Company Contact:
+2. Below your name, click your company name.
+3. Below **Contact**, the Company Contact is displayed:
 
     ![](attachments/company-contact.png)
 

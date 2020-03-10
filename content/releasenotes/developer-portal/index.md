@@ -13,6 +13,12 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 ## 2020
 
+### February 21st, 2020
+
+* We fixed an issue where [favorited apps](/developerportal/apps-list/#favoriting) still showed up in the favorites view on the [My Apps](/developerportal/apps-list/) page after being deleted.
+* We made performance improvements to the **My Apps** page.
+* We fixed an issue where the description field did not expand properly when creating a new [story](/developerportal/collaborate/stories).
+
 ### February 6th, 2020
 
 #### Improvements
@@ -68,7 +74,7 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 #### Improvements
 
 * We fixed an issue that would prevent users from inviting email addresses that contain capital letters.
-* We fixed an issue that occassionally triggered an error message during signup.
+* We fixed an issue that occasionally triggered an error message during signup.
 * We made various small performance improvements on the Developer Portal.
 
 ### September 19th, 2019
@@ -76,7 +82,7 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 #### Launchpad Removal & App User Management Update
 
 * We removed the old launchpad page, as we have moved to a new SSO architecture. The old URL `launchpad.mendix.com` now links to your [My Apps](/developerportal/apps-list/) page.
-* We moved the app user management functionality of the launchpad to the **General** app settings in the Developer Portal. For more information, see the [Managing App Users](/developerportal/settings/general-settings#managing-app-users) section of *How to Manage General App Settings*.
+* We moved the App User management functionality of the launchpad to the **General** app settings in the Developer Portal. For more information, see the [Managing App Users](/developerportal/settings/general-settings#managing-app-users) section of *How to Manage General App Settings*.
 
 ### August 9th, 2019
 

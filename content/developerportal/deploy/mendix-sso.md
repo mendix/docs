@@ -13,6 +13,10 @@ tags: ["SSO", "Single Sign-on", "Mendix credentials"]
 
 The [MendixSSO module](https://appstore.home.mendix.com/link/app/111349/Mendix/MendixSSO-(for-Mendix-7)) enables your app users to sign in with their Mendix account when your app is deployed to the Mendix Cloud.
 
+{{% alert type="warning" %}}
+Mendix Single Sign-On is only activated when your app is deployed to the Mendix Cloud. When you run your app locally, or on another cloud, you will need to use local credentials.
+{{% /alert %}}
+
 Using Mendix accounts has the following benefits:
 
 * you do not need a special authorization module to support resetting and changing passwords
@@ -231,13 +235,13 @@ You need to tell the MendixSSO Module to use your new entity, instead of the def
 
     ![Modify custom afterstartup microflow to use custom create and update microflows](attachments/mendix-sso/custom-afterstartup-microflow.png)
 
-2. Update the **Create** action in the **MendixSSO_CreateUser** microflow in your user administration module to use the AppCloudServices user entity, not the one in the MendixSSO module.You will also need to update all the members which are set during the create.
+2. Update the **Create** action in the **MendixSSO_CreateUser** microflow in your user administration module to use your custom user entity, not the one in the MendixSSO module.You will also need to update all the members which are set during the create.
 
     ![Edit custom create microflow to use the new entity](attachments/mendix-sso/create-new-entity.png)
 
 3. Change the **End event** of the microflow to return an object of the correct type.
 
-4.  Change the Parameter of the **MendixSSO_UpdateUser** microflow in the module to be your AppCloudServices user entity instead of MendixSSOUser
+4.  Change the Parameter of the **MendixSSO_UpdateUser** microflow in the module to be your custom user entity instead of MendixSSOUser
 
 5. Change the **Change object** action to set the correct members of the object.
 

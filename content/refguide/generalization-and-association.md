@@ -7,9 +7,9 @@ tags: ["domain model", "association", "inheritance", "one-to-one", "generalizati
 
 ## 1 Introduction
 
-Sometimes, want to add information to an entity which is used in a different module, perhaps a module which is imported from the app store. You do not want to customize the entity as this will prevent you from getting updated versions of the module. At other times, you may want to add additional information to some objects of an entity but not to others. For these cases there are two methods you can use: **generalization** (or *inheritance* as it is often called) or **associated entities**.
+Sometimes, you want to add information to an entity which is used in a different module, perhaps a module which is imported from the app store. You do not want to customize the entity as this will prevent you from getting updated versions of the module. At other times, you may want to add additional information to some objects of an entity but not to others. For these cases there are two methods you can use: **generalization** (or *inheritance* as it is often called) or **associated entities**.
 
-Mendix developers have to choose on a daily basis whether or not they want to use inheritance or associations. One example which occurs in most projects is deciding how you want to set up your users? Are you going to keep using the already available Account entity in the Administration module? Or are you going to work with separate entities with a one-to-one association to the user account? Or are you going to add (multiple) entities that inherit from **System.User**? In this case, it would be bad practice to add additional information directly to the System.User entity and, in fact, Mendix prevents you from doing so.
+Mendix developers have to choose on a daily basis whether or not they want to use inheritance or associations. One example which occurs in most projects is deciding how you want to set up your users. Are you going to keep using the already available Account entity in the Administration module? Or are you going to work with separate entities with a one-to-one association to the user account? Or are you going to add (multiple) entities that inherit from **System.User**? In this case, it would be bad practice to add additional information directly to the System.User entity and, in fact, Mendix prevents you from doing so.
 
 When defining closely related structures, it can be difficult to decide on the best architecture. Should the entity inherit from a base structure or do you rather want to use a one-to-one association? You should consider both options as each one can have a huge impact on the performance of the application or the speed of development.
 
@@ -17,7 +17,7 @@ When defining closely related structures, it can be difficult to decide on the b
 
 The Mendix domain model is based on the [class diagram](http://en.wikipedia.org/wiki/Class_diagram) in [UML](http://en.wikipedia.org/wiki/Unified_Modeling_Language), which allows the specification of the objects/entities and their attributes and associations. The concept of generalization in Mendix is exactly the same as in UML. However, the Mendix domain model uses a different notation to display the generalization. The UML class diagram uses associations with a hollow triangle (arrow) pointing to the super class. In Mendix generalization is expressed with a blue label above the entity, specifying the entity name.
 
-UML also allows us to specify the types of associations, such as an [Aggregation](http://en.wikipedia.org/wiki/Aggregation_(object-oriented_programming)) or [Composition](http://en.wikipedia.org/wiki/Object_composition). The definition of these associations specify whether or not the objects can exist without each other. Unlike UML we can not specify how strong a relationship is. Any dependencies between the two objects have to be specified using [event microflows](/refguide/event-handlers) or [delete behavior/prevention](/refguide/associations).
+UML also allows us to specify the types of associations, such as an [Aggregation](http://en.wikipedia.org/wiki/Aggregation_(object-oriented_programming)) or [Composition](http://en.wikipedia.org/wiki/Object_composition). The definition of these associations specify whether or not the objects can exist without each other. Unlike UML we can not specify how strong a relationship is. Any dependencies between the two objects have to be specified using [event microflows](/refguide/event-handlers) or [delete behavior/prevention](/refguide/association-properties#delete-behavior).
 
 ### 2.1 Performance
 
@@ -27,7 +27,7 @@ The Mendix Platform uses the transaction level [Read Committed](http://en.wikipe
 
 ### 2.2 Creating & Changing Objects
 
-When changing an object, the Mendix Platform will write those changes to the database as soon as you execute the commit activity. The update or insert query will be performed based on the values you have changed. This behavior varies per database, but most likely this will lock the record and prevent other users from reading it until the transaction has been completed (either finished or rolled back).
+When changing an object, the Mendix Platform will write those changes to the database as soon as you execute the commit activity or when you set the **Commit** action on the change object to **Yes**. The update or insert query will be performed based on the values you have changed. This behavior varies per database, but most likely this will lock the record and prevent other users from reading it until the transaction has been completed (either finished or rolled back).
 
 #### 2.2.1 Inheritance
 
@@ -41,11 +41,15 @@ Whenever you have a high number of write transactions in your application, it is
 
 ### 2.3 Retrieving Objects
 
-Mendix is optimized to only retrieve the data that is required for the action that is being executed. That means, for example: if you do not show any associated or inherited attributes, those objects will not be included in the retrieve queries.
+When using data widgets on a page, Mendix is optimized to only retrieve the data that is required for the action that is being executed. That means, for example: if you do not show any associated or inherited attributes, those objects will not be included in the retrieve queries.
+
+When you use a microflow to retrieve data, however, all data is retrieved.
 
 #### 2.3.1 Inheritance
 
-If you retrieve any specializations from the super class the platform will always include the entire hierarchy in the query, in order to guarantee a consistent data structure. For example, if you have an overview of **Administration.Account**, the platform will include the System.User table whether or not you show any System.User attributes, just to make sure that the data is consistent and complete. Both tables have a clustered index on the object id, so joining the information in the database is extremely efficient.
+If you retrieve any specializations of a super class, the platform will only retrieve attributes from from the super class objects themselves if this data is required.
+
+One exception to this is the System.User entity. If you have an overview of **Administration.Account**, the platform will include the System.User table if security is set to production, whether or not you show any System.User attributes. Both tables have a clustered index on the object id, so joining the information in the database is extremely efficient.
 
 #### 2.3.2 One-to-One Association
 

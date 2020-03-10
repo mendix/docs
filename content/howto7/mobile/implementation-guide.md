@@ -110,9 +110,9 @@ Make sure that the `Encryption.EncryptionKey` constant has a value before you st
 
 {{% /alert %}}
 
-## 10 Setting Up Access to APNs and/or FCM
+## 10 Setting Up Access to APNs or FCM
 
-Set up access to APNs and/or FCM and configure them in your application. Please note that starting with FCM is recommended, because it is significantly less complicated than setting up APNs. You can return to this step later on to set up APNs.
+Set up access to APNs or FCM and configure them in your application. Please note that starting with FCM is recommended, because it is significantly less complicated than setting up APNs. You can return to this step later on to set up APNs.
 
 For more details, see [How to Set Up the Apple Push Notification Server](setting-up-apple-push-notification-server) and [How to Set Up the Firebase Cloud Messaging Server](setting-up-google-firebase-cloud-messaging-server).
 

@@ -107,6 +107,11 @@ Validating user input can also be achieved by overriding the default save button
 15. Select for example **Name** as member.
 16. Enter an error message in the **Template** field. You can use indexes to dynamically insert parameters in the template.
 
+If you want to validate on multiple attributes, it is best to do this in a sub-microflow. 
+Start by creating a Boolean variable, and setting it to 'true'. Make sure to mark this variable as 'return value'. Create your validations as described above, but after the validation feedback or error message, be sure to change the Boolean variable to 'false'. Connect the line back to the main sequence flow using a merge, and continue with the next validation. 
+At the end of the microflow, the variable you created is 'true' if it succesfully passed all validations, and 'false' when one or more validations failed. Be sure to add an exclusive split checking your return value, only allowing the flow to continue to the 'Commit' event if all validations are passed.
+This way you can keep this logic whilst performing all necessary validations at one go.
+
 ## 6 Read More
 
 * [Work with Images & Files](working-with-images-and-files)

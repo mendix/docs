@@ -182,7 +182,7 @@ For example, if you deleted a data view in a page and another person changes som
 
 Resolving a conflict will make the conflict go away but the document may, of course, still be marked as changed if there are changes to commit.
 
-## 6.2 Resolving a Project Conflict
+### 6.2 Resolving a Project Conflict
 
 Project conflicts are conflicts are conflicts at the level of the project. There are two cause for project conflicts:
 

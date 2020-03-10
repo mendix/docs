@@ -1,7 +1,7 @@
 ---
-title: "Setting Up Remote Notifications"
+title: "Set Up Remote Notifications"
 parent: "native-mobile"
-menu_order: 11
+menu_order: 8
 description: Learn how to set up remote push notifications for native apps.
 tags: ["mobile", "push notification", "remote", "push", "notification"]
 ---
@@ -41,7 +41,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 Google's Firebase service supports both Android and Apple push notifications. Because APNs can require more work during customization steps, this document will teach you to set up your push notifications using Firebase.
 
-To set up the Firebase cloud messaging server, complete [Setting up Google Firebase Cloud Messaging Server](setting-up-google-firebase-cloud-messaging-server). During that document's *Adding an Android and iOS App* section, be sure to add both an iOS and an Android app to your Firebase configuration. After you complete that tutorial, you will have these files:
+To set up the Firebase cloud messaging server, complete [How to Set Up the Google Firebase Cloud Messaging Server](setting-up-google-firebase-cloud-messaging-server). During that document's *Adding an Android and iOS App* section, be sure to add both an iOS and an Android app to your Firebase configuration. After you complete that tutorial, you will have these files:
 
 * *google-services.json*
 * *GoogleService-Info.plist*
@@ -51,7 +51,7 @@ You will use these later to complete your work with the Native Builder and with 
 
 ## 4 Setting up Native App Customizations
 
-After you create your app using the Native Builder's `prepare` command, the Native Builder will create iOS and Android source code. To enable push notifications, you will customize these platforms' source code files. The easiest way for your to customize these source code files is to follow [Implementing Push Changes With the Native Builder](#auto-changes). If you wish to implement the changes manually, please skip to section [Manually Implementing Changes](#manually-implementing-changes). 
+After you create your app using the Native Builder's `prepare` command, the Native Builder will create iOS and Android source code. To enable push notifications, you will customize these platforms' source code files. The easiest way for your to customize these source code files is to follow the [Implementing Push Changes With the Native Builder](#auto-changes) section below. If you wish to implement the changes manually, please skip to section [Manually Implementing Changes](#manually-implementing-changes) section further below. 
 
 Choose one of these sections and complete *only* that section before moving on to [Customizing the Android Manifest File](#customize-android-manifest).
 
@@ -117,14 +117,14 @@ Commit and push your changes to your master branch.
 ### 4.3 Customizing the Android Manifest File {#customize-android-manifest}
 
 Set app launch mode inside activity props and add necessary receiver changes in *android/app/src/main/AndroidManifest.xml*:
- 
+
 ```
 <activity
 ...
 android:launchMode="singleTop"
   >
 ```
- 
+
 ```
 <application ...>
 <receiver android:name="io.invertase.firebase.notifications.RNFirebaseNotificationReceiver"/>
@@ -141,7 +141,7 @@ android:launchMode="singleTop"
 
 ![AndroidManifestChanges](attachments/native-remote-push/androidManifestXml.png)
 
-Congratulations, you finished setting up customizations for your custom native app! To implement remote push notifications on a test device, see [Use Remote Notifications](native-remote-notifications).
+Congratulations, you finished setting up customizations for your custom native app! To implement remote push notifications on a test device, see [How to Use Remote Notifications](native-remote-notifications).
 
 ## 5 Read More
 

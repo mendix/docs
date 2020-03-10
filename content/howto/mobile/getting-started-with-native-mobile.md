@@ -1,7 +1,7 @@
 ---
 title: "Get Started with Native Mobile"
 parent: "native-mobile"
-menu_order: 8
+menu_order: 5
 description: A how-to for creating a native mobile Mendix app and viewing it on a mobile device.
 tags: ["native", "mobile", "developer", "test"]
 ---

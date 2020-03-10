@@ -57,7 +57,7 @@ This is the database manager. On the left pane all tables from all modules in th
 
 Queries can be executed in two ways. It can be done directly from the command line (top right pane) in SQL script, or via the explorer on the left pane. For more information about SQL, visit the following page: [http://www.w3schools.com/sql/](http://www.w3schools.com/sql/). To execute queries from the database explorer (left pane), the following steps have to be applied:
 
-1.  Right click on any table and select the preferred action
+1.  Right click any table and select the preferred action
 
     ![](attachments/18448637/18580423.png)
 

@@ -27,7 +27,7 @@ The **Batch Update Button Icons** option allows you to update many button icons 
 
 The **Batch Update Layouts** option allows you to update the layouts of many pages in a single batch process.
 
-### 2.3 Update Widgets
+### 2.3 Update Widgets {#update-widgets}
 
 The **Update Widgets** option presents the current versions of the widgets you are using in your app project, what the latest versions of the widgets are, and an update option.
 
@@ -61,7 +61,7 @@ The **Create Deployment Package** option creates a Mendix Deployment Archive pac
 
 Shortcut key:  <kbd>F7</kbd>
 
-For more information on settings displayed on the Create Deployment Package dialog window, see [Create Deployment Package](create-deployment-package-dialog).
+For more information on settings displayed on the Create Deployment Package dialog box, see [Create Deployment Package](create-deployment-package-dialog).
 
 ## 7 Clean Deployment Directory
 

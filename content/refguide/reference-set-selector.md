@@ -10,7 +10,7 @@ tags: ["studio pro"]
 
 ## 1 Introduction
 
-A **reference set selector** is used to allow the end-user to display or select the value(s) of a many-to-many (reference set) [association](association-properties) by selecting the associated object(s).
+A **reference set selector** is used to allow the end-user to display or select the value(s) of a many-to-many (reference set) [association](associations) by selecting the associated object(s).
 
 A reference set selector must be placed in a [data widget](data-widgets).
 
@@ -166,7 +166,7 @@ Possible values:
 
 #### 2.5.10 Default Button Trigger
 
-The default button can be triggered by a single or a double click on a row.
+The default button can be triggered by a single or a double click a row.
 
 | Value | Description |
 | --- | --- |

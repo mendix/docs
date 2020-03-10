@@ -43,7 +43,7 @@ For both explicitly committed and autocommitted objects, the following will occu
 
 ![](attachments/object-activities/18582172.png)
 
-For more information, see [Commit Object](committing-objects).
+For more information, see [Commit Object(s)](committing-objects).
 
 ## 5 Create
 

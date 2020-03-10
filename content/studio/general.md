@@ -143,14 +143,28 @@ The top menu bar items are described in the table below:
 
 ## 8 Cut/Copy/Paste Function 
 
-Cut/copy/paste function is available in all editors of Studio: pages, microflows, domain models, and navigation document. To cut/copy/paste you can use <kbd>Ctrl</kbd> + <kbd>Z</kbd> /  <kbd>Ctrl</kbd> + <kbd>C</kbd> / <kbd>Ctrl</kbd> + <kbd>V</kbd> or  <kbd>Cmn</kbd> + <kbd>Z</kbd> /  <kbd>Cmd</kbd> + <kbd>C</kbd> / <kbd>Cmd</kbd> + <kbd>V</kbd>. 
+You can copy and paste pages and microflows. You can also cut, copy, and paste separate elements such as widgets or microflow activities. 
+
+### 8.1 Copy/Paste Pages, Microflows, and Enumerations {#copy-paste-documents}
+
+Pages, microflows, and enumerations can be copied to clipboard and then pasted to a different Studio app. You can also copy and paste pages, microflows, and enumerations to the same app, however, there is the **Duplicate** option you can use for this purpose. For more information on how to copy, paste, or duplicate pages, microflows, and enumerations, see [Pages](page-editor), [Microflows](microflows), and [Enumerations](domain-models-enumeration) respectively.  
+
+Mind the following when copying and pasting pages, microflows, and enumerations:
+
+* You can copy/paste pages, microflows, and enumerations only to Studio apps that have the same Mendix version 
+* You can copy/paste pages, microflows, and enumerations only between instances of the same browser
+* You *cannot* copy/paste from Studio to Studio Pro or vice versa
+
+### 8.2 Cut/Copy/Paste Separate Elements
+
+Cut/copy/paste function is available in all editors of Studio: pages, microflows, domain models, and navigation document. To cut/copy/paste you can use <kbd>Ctrl</kbd> + <kbd>X</kbd> /  <kbd>Ctrl</kbd> + <kbd>C</kbd> / <kbd>Ctrl</kbd> + <kbd>V</kbd> or  <kbd>Cmd</kbd> + <kbd>X</kbd> /  <kbd>Cmd</kbd> + <kbd>C</kbd> / <kbd>Cmd</kbd> + <kbd>V</kbd>. 
 
 Mind the following characteristics when using cut/copy/paste:
 
 * You can cut/copy/paste elements within one editor; that means that you can cut/copy/paste elements within one page or to other pages in Studio, and copy microflow activities within one microflow or to other microflows
 * You can cut/copy/paste elements to different apps in Studio if they have the same Mendix version
 * You cannot copy/paste pages or microflows, only elements of a page or a microflow 
-* You cannot cut/copy/paste from Studio to Studio Pro
+* You cannot cut/copy/paste from Studio to Studio Pro or vice versa
 
 ## 9 Read More
 

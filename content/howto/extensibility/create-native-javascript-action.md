@@ -56,7 +56,7 @@ Follow these instructions to set up your NFC project:
 1. Click **Use this starting point**.
 1. Name your app NativeNFC and click **Create App** to close the dialog box.
 1. Rename module **NativeMobile** to *NativeNFC*. You will add your implementation In this module.
-1. Right-click on the module and select **Add other** > **JavaScript action**. Name the new JavaScript action *HasNFCSupport*. You will create the implementation later.
+1. Right-click the module and select **Add other** > **JavaScript action**. Name the new JavaScript action *HasNFCSupport*. You will create the implementation later.
 1. Open the **Home_Native** page and add some welcome text for you test app.
 1. Add an action button with caption *Scan NFC Tag* on your home page. <br />
 	a. Right-click your home page and click **Add widget**.<br />
@@ -115,7 +115,7 @@ Your apps are now available in the *C:\native-builder\builds\* folder, where you
 
 {{% /alert %}}
 
-1. Install the app on your device. For more information on app installation, see the [Distributing](/howto/mobile/deploying-native-app#6-distributing) section of *How to Deploy Your First Mendix Native App*.
+1. Install the app on your device. For more information on app installation, see the [Distributing](/howto/mobile/deploying-native-app#distributing) section of *How to Deploy Your First Mendix Native App*.
 1. Open your app on your testing device.
 1. Tap your NFC button. You will incur this error: **JavaScript action was not implemented**. You will implement your action later.
 

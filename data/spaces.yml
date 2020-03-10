@@ -14,7 +14,7 @@ addons:
   priority: false
   menu_categories:
     - "ATS Guide"
-    - "APM Guide"
+    - "APD Guide"
     - "AQM Guide"
 howto6:
   space: "Mendix 6 How-to's"

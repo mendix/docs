@@ -474,7 +474,7 @@ Next you will allow the Mendix developer to alter the header caption of your wid
 Do these final steps to sync and run your app:
 
 1. In Studio Pro press <kbd>F4</kbd> or select **Project > Synchronize Project Directory** to sync your app with the changes you made to **src/GroupBox.xml**. 
-2. An error will tell you to update your widget. Right-click on the Group Box widget and select **Update widget**. 
+2. An error will tell you to update your widget. Right-click the Group Box widget and select **Update widget**. 
 3. Double-click the same widget and you will now see your new property. 
 4. Fill in some caption text, click **OK**, and rerun your app locally to see your caption text in the app:
 

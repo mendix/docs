@@ -39,22 +39,22 @@ To schedule a notification for a specific time, do the following:
 
 The notification should be displayed at the end of the minute.
 
-If your app is open, it will not show the notification due to iOS and Android user guidelines. However, notifications for open apps can still trigger onReceive events. This allows you to design custom actions for notifications, such as showing a page with pop-up layout. Follow these steps to model an onRecieve event:
+If your app is open, it will not show the notification due to iOS and Android user guidelines. However, notifications for open apps can still trigger onReceive events. This allows you to design custom actions for notifications, such as showing a page with pop-up layout. Follow these steps to model an onReceive event:
 
-1. Make a new nanoflow named *ON_RecieveNotification*.
+1. Make a new nanoflow named *ON_ReceiveNotification*.
 2. Drag and drop a **Log message** activity on your nanoflow.
 3. Double-click this activity. 
-4. In **Template** write *I triggered on recieve notification* then click **OK**.
+4. In **Template** write *I triggered on receive notification* then click **OK**.
 5. Double-click your home page's notifications widget.
 6. Click **Actions** > **New**.
-7.  Create a **New Action** named *TriggerOnRecieve*, set **On receive** to **Call a nanoflow**, and select **ON_RecieveNotification**:
+7.  Create a **New Action** named *TriggerOnReceive*, set **On receive** to **Call a nanoflow**, and select **ON_ReceiveNotification**:
 
-	{{% image_container width="500" %}}![on recieve settings](attachments/native-push/on-receive-action.png){{% /image_container %}}
+	{{% image_container width="500" %}}![on receive settings](attachments/native-push/on-receive-action.png){{% /image_container %}}
 
 8. Click **OK** then **OK** again.
 8. In **ACT_CreateAndSendNotification**, double-click your schedule notification activity.
 10. Click **Action name** > **Edit**.
-11. Type *'TriggerOnRecieve'* into the argument field and click **OK**.
+11. Type *'TriggerOnReceive'* into the argument field and click **OK**.
 11. Click **OK**.
 12. Start and load the app on your mobile device.
 13. Tap the **Send notification** button, and *do not* minimize your app.
@@ -102,7 +102,7 @@ To cancel a specific scheduled notification, you will need to supply a notificat
 
 	![test id argument](attachments/native-push/test-id-arg.png)
 
-5. Click **OK** once more to close the dialog window. 
+5. Click **OK** once more to close the dialog box. 
 6. Create a nanoflow named *ACT_CancelScheduledNotifications*.
 7.  Drag and drop a JavaScript Action named **Cancel scheduled notification** onto your nanoflow:
 
@@ -111,7 +111,7 @@ To cancel a specific scheduled notification, you will need to supply a notificat
 8. Double-click your new cancel notification action.
 9. Click **Notification id** > **Edit**.
 10. Type *'testID'* into the parameter argument field and click **OK**.
-11. Click **OK** again to close the dialog window.
+11. Click **OK** again to close the dialog box.
 12. Drag and drop this nanoflow onto your home screen and name its button *Cancel a specific notification*:
 
 	{{% image_container width="300" %}}![cancel one button](attachments/native-push/cancel-specific-button.png){{% /image_container %}}

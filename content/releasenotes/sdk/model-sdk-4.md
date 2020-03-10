@@ -4,11 +4,18 @@ parent: "model-sdk"
 #When updating, remember to update the Latest Mendix Releases file
 ---
 
+## 4.30.0 {#430}
+
+**Release date: February 25th, 2020**
+
+* We added support for Mendix [8.7.0](../studio-pro/8).
+* We added support for Mendix Metamodel [8.7.0](metamodel-8.7).
+
 ## 4.29.0 {#429}
 
 **Release date: January 29th, 2020**
 
-* We added support for Mendix [8.6.0](../studio-pro/8).
+* We added support for Mendix [8.6.0](../studio-pro/8.6).
 * We added support for Mendix Metamodel [8.6.0](metamodel-8.6).
 
 ## 4.28.0 {#428}
@@ -22,7 +29,7 @@ parent: "model-sdk"
 
 **Release date: November 29th, 2019**
 
-* We restored the original behavior of `exportMpk` (for providing the raw response body when `outFilePath` is empty), which had beeen changed in [4.26.0](#426).
+* We restored the original behavior of `exportMpk` (for providing the raw response body when `outFilePath` is empty), which had been changed in [4.26.0](#426).
 
 ## 4.27.0 {#427}
 

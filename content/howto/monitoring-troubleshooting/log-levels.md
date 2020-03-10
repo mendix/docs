@@ -62,7 +62,7 @@ These are the log levels used by Mendix:
 
 ## 3 Setting the Log Levels
 
-In this section, you will learn how to configure the log levels of the messages produced by the system. The different highlighted [levels](#Level) can be applied to the predefined logging produced by Mendix Studio Pro and to custom logging. 
+In this section, you will learn how to configure the log levels of the messages produced by the system. The different highlighted [levels](#level) can be applied to the predefined logging produced by Mendix Studio Pro and to custom logging. 
 
 This section describes how to configure both the log levels for predefined logging created by Studio Pro and custom logging.
 

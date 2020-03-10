@@ -1,6 +1,7 @@
 ---
 title: "Close Page"
 parent: "client-activities"
+menu_order: 1
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -9,7 +10,7 @@ tags: ["studio pro"]
 This activity can be used in both **Microflows** and **Nanoflows**.
 {{% /alert %}}
 
-Close page closes the currently open page.
+The close page activity closes the currently open page.
 
 {{% alert type="info" %}}
 

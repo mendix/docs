@@ -1,6 +1,7 @@
 ---
 title: "Create Object"
 parent: "object-activities"
+menu_order: 4
 tags: ["studio pro"]
 ---
 
@@ -10,7 +11,7 @@ This activity can be used in both **Microflows** and **Nanoflows**.
 
 ## 1 Introduction 
 
-The Create object action can be used to create an object.
+The create object action can be used to create an object.
 
 {{% alert type="info" %}}
 
@@ -36,7 +37,7 @@ The entity of which you want to create an object.
 
 {{% alert type="warning" %}}
 
-Nanoflows do not support committing changes without events. Committing while running in an online app sends a commit request to the Mendix Runtime and runs the events. If a Create object action is used in an offline app, the changes are committed to the offline database.
+Nanoflows do not support committing changes without events. Committing while running in an online app sends a commit request to the Mendix Runtime and runs the events. If a create object action is used in an offline app, the changes are committed to the offline database.
 
 {{% /alert %}}
 
@@ -46,15 +47,15 @@ If the microflow is called from the client, [data sources](data-sources) do not 
 
 {{% alert type="warning" %}}
 
-When inside a [nanoflow](nanoflows), the Create object action reloads [data sources](data-sources) as if Refresh in client was set to *Yes*.
+When inside a [nanoflow](nanoflows), the create object action reloads [data sources](data-sources) as if Refresh in client was set to *Yes*.
 
 {{% /alert %}}
 
 Default: *No*
 
-### 2.3 Initialize Members
+### 2.3 Change Members
 
-You can initialize members (attributes and associations) of the newly created object. Values for members are specified with an [expression](expressions) and must be of the same type as the member.
+You can set the values of members (attributes and associations) of the newly created object to be different from the default value set in the [entity](entities). Values for members are specified with an [expression](expressions) and must be of the same type as the member.
 
 ## 3 Output Properties
 

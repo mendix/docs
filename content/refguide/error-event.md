@@ -1,6 +1,7 @@
 ---
 title: "Error Event"
 parent: "events"
+menu_order: 3
 tags: ["studio pro"]
 ---
 

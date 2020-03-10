@@ -46,11 +46,9 @@ Always capitalize.
 
 ### app project {#app-project}
 
-"App" should be used instead of "project" as much as possible in the documentation. However, be aware of potential confusion here when referring to what the user works on for project management in the Developer Portal or accesses in Studio Pro. A "project" would include the app being developed itself as well as resources from the Developer Portal, deployment, Mendix Runtime, etc. Thus, "app" as something a Mendix user makes and an end-user uses cannot entirely replace "project" in the documentation.
+"App" should be used instead of "project" as much as possible (despite the fact that "project" is still used throughout Studio Pro). 
 
-{{% alert type="info" %}}
-Use "app project" to clarify project management-related tasks in the Developer Portal.
-{{% /alert %}}
+Use "app project" where necessary for clarification (for example, for project management-related tasks in the Developer Portal).
 
 {{% alert type="success" %}}
 Enter the email addresses of all the co-workers you want to invite to your app project.
@@ -371,7 +369,7 @@ On-premises deployment needs specific security considerations.
 
 ### one-to-one & one-to-many associations
 
-For details on association properties, see [Associations & Their Properties](/refguide/association-properties). 
+For details on association properties, see [Association Properties](/refguide/association-properties). 
 
 {{% alert type="info" %}}
 Write as "one-to-one" and "one-to-many," not as "1-1" or "1-to-many."

@@ -41,7 +41,7 @@ When you drag a pane, you can see arrows that indicate where you can position th
 
    5. New pane as a new tab
 
-      {{% alert type="info" %}}If you try to position the pane as a new pane inside the working area, it will be opened as a dialog window.
+      {{% alert type="info" %}}If you try to position the pane as a new pane inside the working area, it will be opened as a dialog box.
       
       {{% /alert %}}
 

@@ -11,7 +11,7 @@ You can export a project package (*.mpk*) from Mendix Studio Pro for backup purp
 
 Project packages can be imported again into a new app using the [Import Project Package](import-project-package-dialog).
 
-To export the package, open the **File** menu > **Export Project Package** and select the relevant options in the **Export Project Package** dialog window:
+To export the package, open the **File** menu > **Export Project Package** and select the relevant options in the **Export Project Package** dialog box:
 
 ![Export Project Package Dialog Window](attachments/file-menu/export-project-package.png)
 

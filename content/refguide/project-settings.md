@@ -37,7 +37,7 @@ If this option is enabled (**true** by default), Mendix analyzes every microflow
 
 If you experience an issue while running your app in which objects seem to be lost, this option can be disabled to resolve that issue. If this does resolve the issue, please file a bug report so that we can fix the issue in the platform.
 
-### 3.3 After Startup
+### 3.3 After Startup{#after-startup}
 
 Here you can select a microflow that is automatically executed immediately after the application has been started up.
 
@@ -92,7 +92,7 @@ This affects time zone-related operations, such as parsing and formatting dates 
 
 If you run on-premises, then you can select the time zone to which the server is set. However, please note that no guarantees are given for the whereabouts of application servers in the cloud.
 
-### 3.9 Hash Algorithm
+### 3.9 Hash Algorithm{#hash-algorithm}
 
 The hash algorithm is used to generate hash values for attributes of the **Hashed string** type, such as the password of a user. Mendix offers two recommended hashing algorithms:
 

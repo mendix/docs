@@ -9,6 +9,10 @@ tags: ["domain model", "entity", "persistability", "persistable", "non-persistab
 
 The **Persistable** property of an entity in the domain model defines whether an object can be committed to the database.
 
+Persistable entities are colored blue in the domain model. Non-persistable entities are colored orange. The **Customer** entity in the image below is persistable, while **ProductQueryResults** is non-persistable.
+
+![Picture of a persistable and a non-persistable entity](attachments/domain-model/persistable-vs-non-persistable.png)
+
 ## 2 Persistable Entities
 
 When an entity is declared persistable, a database table is created for the entity.

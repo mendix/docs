@@ -62,7 +62,7 @@ A WSDL (Web Service Definition Language) document is a document that describes h
 Using imported web services, you can import a web service from an external application so they can be used in your own application. You can import web services from third parties (such as the
 [w3schools example service](http://www.w3schools.com/xml/tempconvert.asmx?WSDL)) or from other Mendix projects.
 
-To actually use these imported web services in a microflow, see [Call Web Service Action](call-web-service-action).
+To actually use these imported web services in a microflow, see [Call Web Service](call-web-service-action).
 
 ## Proxies
 

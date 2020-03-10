@@ -60,7 +60,7 @@ To create a feedback item, do the following:
 	{{% image_container width="350" %}}![Creating Feedback Item](attachments/buzz/creating-feedback-item.png)
 	{{% /image_container %}}
 	
-3.  In the **Create feedback item** dialog window, fill in the type of feedback, its title, and additional information if necessary.
+3.  In the **Create feedback item** dialog box, fill in the type of feedback, its title, and additional information if necessary.
 
     {{% image_container width="450" %}}![Create Feedback Item Dialog Box](attachments/buzz/feedback-item-info.png)
     {{% /image_container %}}

@@ -7,6 +7,14 @@ tags: ["app store", "connector", "module", "add on", "widget"]
 
 These release notes cover changes made to the [Mendix App Store](/developerportal/app-store/).
 
+## 2020
+
+### February 26th, 2020
+
+#### Improvement
+
+We have updated the single sign-on functionality in the App Store to use the latest [Mendix SSO](/developerportal/deploy/mendix-sso). Now, the first time you visit any App Store page requiring authentication, you will see a screen asking you to authorize access to your Mendix account. Click **Authorize** to continue.
+
 ## 2019
 
 ### November 14th, 2019

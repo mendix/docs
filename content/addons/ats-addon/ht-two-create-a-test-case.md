@@ -245,7 +245,7 @@ To add test steps using the ATS Recorder, follow these steps:
 15. Click the **Dialog Title** input parameter and add the title of the dialog box:
     ![](attachments/ht-two-create-a-test-case/new-expense-dialog-action-input-parameters-recorder.png)
 
-15.  For the logout, you can choose to keep the recorded click on the **Sign Out** button or replace it with the **Logout** action.
+15.  For the logout, you can choose to keep the recorded click the **Sign Out** button or replace it with the **Logout** action.
 16.  The last thing to do is to clarify to ATS what you are testing. This is done by setting the **Call Type** of your test steps to one of the following:
   
     * **Setup** for all the steps that you must perform to get to the test situation

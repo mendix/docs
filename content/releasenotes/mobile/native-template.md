@@ -8,6 +8,23 @@ description: "Native Template release notes."
 
 For more information on native mobile app development, see the [native-template repository](https://github.com/mendix/native-template/) and [How to Deploy Your First Mendix Native App](/howto/mobile/deploying-native-app) .
 
+## 3.1.3
+
+**Release date: March 2nd, 2020**
+
+### Fixes
+
+* We fixed a memory issue. The Android template now uses use a larger heap by default to accommodate for memory-heavy tasks.
+* We fixed an issue where the Android template crashed when the maps widget was used but the API key had not been configured yet. The Android app no longer crashes in this case.
+
+## 3.1.2
+
+**Release date: February 19th, 2020**
+
+### Fix
+
+* We fixed an issue in iOS apps where OTA updates did not trigger correctly, and therefore did not update apps.
+  
 ## 3.1.1
 
 **Release date: February 6th, 2020**
@@ -93,7 +110,7 @@ iOS
 ### Improvements
 
 * We added support for Android 10's Dark theme and iOS 13's Dark Mode.
-* We added over the air update support (for details, see [How to Use Over the Air Updates](/howto/mobile/how-to-ota)).
+* We added over the air (OTA) update support (for details, see [How to Use Over the Air Updates](/howto/mobile/how-to-ota)).
 * We migrated iOS project to Xcode 11.
 * We switched the App Center build platform to standard ReactNative.
 
@@ -141,4 +158,3 @@ iOS
 **Release date: August 1st, 2019**
 
 * This is the official release of the Native Template with support for Mendix Studio Pro 8.0.
-

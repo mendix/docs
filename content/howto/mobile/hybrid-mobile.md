@@ -11,6 +11,7 @@ A Mendix hybrid app is a web application which runs inside a container that can 
 
 ## 2 Documents in This Section
 
+* [Set Up Hybrid Push Notifications](setting-up-hybrid-push-notifications)
 * [Include Push Notifications](push-notifications)
 * [Configure the Mendix Feedback Widget for iOS](feedback-widget-ios)
 * [Implement SSO on a Hybrid App with Mendix & SAML](implement-sso-on-a-hybrid-app-with-mendix-and-saml)

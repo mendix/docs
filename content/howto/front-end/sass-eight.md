@@ -72,7 +72,7 @@ To prepare your app project, follow these steps:
 
 	At this point, you are ready to start working with Sass.
 
-9.  You also need to add the following selected items into the ignore list of TortoiseSVN for each new app project (or else your app project will take too long to commit a change). You will only have to do this ONCE when you set it up for your project :
+9.  You also need to add the following selected items into the ignore list of TortoiseSVN for each new app project (or else your app project will take too long to commit a change). You will only have to do this *once* when you set it up for your project :
 
 	![](attachments/set-up-sass/selected-ignore.png)
 

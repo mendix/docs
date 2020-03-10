@@ -35,7 +35,7 @@ When you change an object with inheritance the platform will potentially prevent
 
 #### 2.2.2 One-to-One Association
 
-When changing an object, none of the associated objects will be changed. There are two exceptions to this rule: of course if you change the associated object in an object event, or because associated objects are being 'autocommitted', see [Object Activities](object-activities).
+When changing an object, none of the associated objects will be changed. There are two exceptions to this rule: if you change the associated object in an object event, or when associated objects are being 'autocommitted', see [Object Activities](object-activities).
 
 Whenever you have a high number of write transactions in your application, it is far better to choose a one-to-one association, since this limits the number of tables that are being changed/locked during a transaction. However, if you do more inserts than updates it might be worth using inheritance again. Inheritance uses one less table to store the relationship; it does not have the association table. Therefore, any inserts require one indexed table fewer to be updated.
 
@@ -43,7 +43,7 @@ Whenever you have a high number of write transactions in your application, it is
 
 When using data widgets on a page, Mendix is optimized to only retrieve the data that is required for the action that is being executed. That means, for example: if you do not show any associated or inherited attributes, those objects will not be included in the retrieve queries.
 
-When you use a microflow to retrieve data, however, all data is retrieved.
+When you use a microflow to retrieve data, however, all data is retrieved (see [Microflows](#microflows), below).
 
 #### 2.3.1 Inheritance
 
@@ -73,7 +73,7 @@ Don't just add inheritance because it is easier, or remove it because it is slow
 
 When loading data through an integration, inheritance can improve the development speed, because functionality can be re-used. This is a huge advantage since all future changes only have to be applied in a single place. Inheritance however, could cause slower performance if all the changes can be stored in a separate entity. If it is possible to separate all data in a separate entity, and this information is only used by the application in a limited number of locations, it will be significantly faster to keep a one-to-one entity.
 
-## 4 Microflows
+## 4 Microflows {#microflows}
 
 Although data retrieval for pages is optimized to only join with entities and retrieve attributes which are used in the data view, microflow retrieve activities are not. In a microflow, *all* columns are retrieved, from generalizations and specializations of the entity. In addition, all associated entities are retrieved where the selected entity is at the parent end of an association.
  
@@ -84,7 +84,6 @@ The most efficient retrieval in a microflow is of an object with associations wi
 ## 5 Conclusion
 
 This explanation might not have given you an explicit answer to the question on when to use inheritance, but that is because there is no right or wrong answer. Both inheritance and one-to-one associations have their advantages and disadvantages. Based on the situation you need to decide what is better for a particular entity.
-
 
 {{% todo %}}[The paragraph commented out below refers to a summary which does not appear to have been written yet]{{% /todo %}}
 [//]: # (Below is a short summary of all the pros and cons for each situation.  Based on these criteria you will need to decide for your entity which solution is worth it.)

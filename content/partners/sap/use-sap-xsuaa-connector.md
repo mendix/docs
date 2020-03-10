@@ -105,7 +105,8 @@ An alternative to adding the SSO login button to the landing page of your app is
 
 {{% alert type="info" %}}
 Note that this will only work if you are running your app on SAP Cloud Platform.
-Users will be automatically redirected to XSUAA after signing out of the application, which might cause them to be signed in again.
+
+Because users will be automatically redirected to XSUAA after signing out of the application, this could cause them to be signed in again.
 {{% /alert %}}
 
 To accomplish this, follow these steps:

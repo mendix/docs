@@ -155,10 +155,6 @@ The result should look like this:
 
 ![](attachments/feedback/authentication.png)
 
-For version 8.0.1 and below, you need to set the following property instead:
-
-*  **Advanced** tab > **ID token provider** – the microflow that will return the current ID token via the string value of the decrypted ID token from the MendixSSO module; to obtain the token, the microflow needs to call the **DS_GetCurrentIdToken** microflow from the MendixSSO module.
-
 In the properties, you can configure the widget for certain actions in your app project, for example:
 
 * **Project** tab > **Allow screenshots**

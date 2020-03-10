@@ -125,6 +125,10 @@ This contains the *db.backup* file. This is a PostgreSQL dump file created using
 If the dump does not use the *custom format* then the restore will fail.
 {{% /alert %}}
 
+{{% alert type="warning" %}}
+If the dump is created with a version of pg_dump more recent than 9.6.17 then the restore will fail.
+{{% /alert %}}
+
 ### tree folder
 
 This contains the files which are stored in external file storage. Each file is stored in a second level location:

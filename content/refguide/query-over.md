@@ -15,7 +15,7 @@ This example is for an implementation of folders on a computer, where one folder
 
 ![](attachments/associations/query-over-example-structure.png)
 
-To implement this a self-reference to **Folder** is used. The self-reference is an association called **Folder_SubFolder**. This allows you to build a folder structure with unlimited numbers and levels of folders.
+To implement this, a self-reference to **Folder** is used. The self-reference is an association called **Folder_SubFolder**. This allows you to build a folder structure with unlimited numbers and levels of folders.
 
 {{% alert type="info" %}}
 The association in this case is a one-to-many association, but the same techniques apply to many-to-many or one-to-one associations.

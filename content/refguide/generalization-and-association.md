@@ -1,5 +1,5 @@
 ---
-title: "Generalization & Associations"
+title: "Generalization vs 1-1 Associations"
 parent: "domain-model"
 menu_order: 50
 tags: ["domain model", "association", "inheritance", "one-to-one", "generalization"]
@@ -56,45 +56,6 @@ One exception to this is the System.User entity. If you have an overview of **Ad
 The associated objects will only be retrieved when they are shown in a page. This is less efficient than with inheritance, because the information is retrieved using the association table, but based on how the information is ordered and filtered, it will be far less efficient to join over the association table than over the clustered index that is used with inheritance.
 
 If you require a lot of searching, sorting and displaying of the inherited/associated information it can be significantly more efficient to use inheritance. If the associated information is only required on a few pages, the additional delay retrieving the information over association instead of inheritance might be acceptable compared to the faster retrieve times on any other place in the application.
-
-#### 2.3.3 One-to-Many Association
-
-When using an inheritance with a one-to-many association, you cannot retrieve [by association](retrieve#source).
-
-Here is an example inheritance:
-
-![](attachments/generalization-and-association/limitation.png)
-
-In this example, a list of **Specializations** cannot be retrieved when using a standard by-association retrieve in a microflow if the input is the specialization.
-
-However, there is a workaround for this limitation: The list of Specializations can be retrieved with a Java action using the Java API. This Java action needs two parameters: the **Specialization** and a Boolean **Reverse** via this code snippet:
-
-```
-public class RetrieveAsAssociatedWithB extends CustomJavaAction<java.util.List<IMendixObject>>
-{
-	private IMendixObject __B;
-	private main.proxies.Specialization B;
-	private java.lang.Boolean Reverse;
-
-	public RetrieveAsAssociatedWithB(IContext context, IMendixObject B, java.lang.Boolean Reverse)
-	{
-		super(context);
-		this.__B = B;
-		this.Reverse = Reverse;
-	}
-
-	@java.lang.Override
-	public java.util.List<IMendixObject> executeAction() throws Exception
-	{
-		this.B = __B == null ? null : main.proxies.Specialization.initialize(getContext(), __B);
- 
-		// BEGIN USER CODE
-		return Core.retrieveByPath(getContext(), __B, "Main.Generalization_Specialization", Reverse);
-		// END USER CODE
-	}
-}
-```
-When setting the `Reverse` Boolean to true and using the `Specialization` object as the input, the returned list will contain all the Specializations associated to the Specialization.
 
 ## 3 Flexibility
 

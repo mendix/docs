@@ -15,7 +15,7 @@ When defining closely related structures, it can be difficult to decide on the b
 
 ## 2 Generalization, Specialization & Inheritance
 
-The Mendix domain model is based on the [class diagram](http://en.wikipedia.org/wiki/Class_diagram) in [UML](http://en.wikipedia.org/wiki/Unified_Modeling_Language), which allows the specification of the objects/entities and their attributes and associations. The concept of generalization in Mendix is exactly the same as in UML. However, the Mendix domain model uses a different notation to display the generalization. The UML class diagram uses associations with a hollow triangle (arrow) pointing to the super class. In Mendix generalization is expressed with a blue label above the entity, specifying the entity name.
+The Mendix domain model is based on the [class diagram](http://en.wikipedia.org/wiki/Class_diagram) in [UML](http://en.wikipedia.org/wiki/Unified_Modeling_Language), which allows the specification of the objects/entities and their attributes and associations. The concept of generalization in Mendix is exactly the same as in UML. However, the Mendix domain model uses a different notation to display the generalization. The UML class diagram uses associations with a hollow triangle (arrow) pointing to the super class (i.e. the generalization). In Mendix generalization is expressed with a blue label above the specialized entity, specifying the generalization entity name.
 
 UML also allows us to specify the types of associations, such as an [Aggregation](http://en.wikipedia.org/wiki/Aggregation_(object-oriented_programming)) or [Composition](http://en.wikipedia.org/wiki/Object_composition). The definition of these associations specify whether or not the objects can exist without each other. Unlike UML we can not specify how strong a relationship is. Any dependencies between the two objects have to be specified using [event microflows](/refguide/event-handlers) or [delete behavior/prevention](/refguide/association-properties#delete-behavior).
 
@@ -31,7 +31,7 @@ When changing an object, the Mendix Platform will write those changes to the dat
 
 #### 2.2.1 Inheritance
 
-When you change an object with inheritance the platform will potentially prevent all the retrieves on all entities from the hierarchy, since it will look at the super class, which is required for all retrieves.
+When you change an object with inheritance the platform will potentially prevent all the retrieves on all entities from the hierarchy, since it will look at the generalization, which is required for all retrieves.
 
 #### 2.2.2 One-to-One Association
 
@@ -47,13 +47,15 @@ When you use a microflow to retrieve data, however, all data is retrieved.
 
 #### 2.3.1 Inheritance
 
-If you retrieve any specializations of a super class, the platform will only retrieve attributes from from the super class objects themselves if this data is required.
+If you retrieve any specializations, the platform will only retrieve attributes from the generalization objects themselves if this data is required.
 
 One exception to this is the System.User entity. If you have an overview of **Administration.Account**, the platform will include the System.User table if security is set to production, whether or not you show any System.User attributes. Both tables have a clustered index on the object id, so joining the information in the database is extremely efficient.
 
+If you query a generalization, then additional queries will be performed after the main query if attributes of the specialization are needed.
+
 #### 2.3.2 One-to-One Association
 
-The associated objects will only be retrieved when they are shown in a page. This is less efficient than with inheritance, because the information is retrieved using the association table, but based on how the information is ordered and filtered, it will be far less efficient to join over the association table than over the clustered index that is used with inheritance.
+The associated objects have to be retrieved when they are shown in a page and will result in additional queries after the main query. This is less efficient than with inheritance, because the information is retrieved using the association table. Depending on how the information is ordered and filtered, it will generally be far less efficient to join over the association table than over the clustered index that is used with inheritance.
 
 If you require a lot of searching, sorting and displaying of the inherited/associated information it can be significantly more efficient to use inheritance. If the associated information is only required on a few pages, the additional delay retrieving the information over association instead of inheritance might be acceptable compared to the faster retrieve times on any other place in the application.
 
@@ -71,13 +73,21 @@ Don't just add inheritance because it is easier, or remove it because it is slow
 
 When loading data through an integration, inheritance can improve the development speed, because functionality can be re-used. This is a huge advantage since all future changes only have to be applied in a single place. Inheritance however, could cause slower performance if all the changes can be stored in a separate entity. If it is possible to separate all data in a separate entity, and this information is only used by the application in a limited number of locations, it will be significantly faster to keep a one-to-one entity.
 
-## 4 Conclusion
+## 4 Microflows
+
+Although data retrieval for pages is optimized to only join with entities and retrieve attributes which are used in the data view, microflow retrieve activities are not. In a microflow, *all* columns are retrieved, from generalizations and specializations of the entity. In addition, all associated entities are retrieved where the selected entity is at the parent end of an association.
+ 
+For entities with a lot of attributes this leads to a lot of data being retrieved from the database. For entities with a lot of associations where they are the parent, this also leads to a lot of additional queries.
+ 
+The most efficient retrieval in a microflow is of an object with associations with owner type `Default` where the object is the `child`. If you retrieve this object, no association tables will be read by default, because you are the child. In this case, the association is implemented as one-to-many, which is not always handy. But making a one-to-one association, with owner type `Both` makes the association act like a parent-to-parent association so that a retrieval of the object will always retrieve the associated object.
+
+## 5 Conclusion
 
 This explanation might not have given you an explicit answer to the question on when to use inheritance, but that is because there is no right or wrong answer. Both inheritance and one-to-one associations have their advantages and disadvantages. Based on the situation you need to decide what is better for a particular entity.
 
 
 {{% todo %}}[The paragraph commented out below refers to a summary which does not appear to have been written yet]{{% /todo %}}
-[//]: # (Below is a short summary of all the pros and cons for each situation. Based on these criteria you will need to decide for your entity which solution is worth it.)
+[//]: # (Below is a short summary of all the pros and cons for each situation.  Based on these criteria you will need to decide for your entity which solution is worth it.)
 
 There are a few situations where a clear answer can be given:
 

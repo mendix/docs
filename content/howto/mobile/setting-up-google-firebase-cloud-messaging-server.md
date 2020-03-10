@@ -1,6 +1,6 @@
 ---
 title: "Set Up the Google Firebase Cloud Messaging Server"
-parent: "mobile"
+parent: "push-notifications"
 menu_order: 40
 tags: ["mobile", "push notification", "google", "firebase", "server"]
 ---
@@ -119,5 +119,5 @@ Only create an iOS application in your Firebase project when you plan on using F
 ## 8 Read More
 
 * [Implement Push Notifications](implementation-guide)
-* [Setting up hybrid push notifications](setting-up-hybrid-push-notifications)
-* [Setting up native push notifications](setting-up-native-push-notifications)
+* [Set Up Hybrid Push Notifications](setting-up-hybrid-push-notifications)
+* [Setting Up Remote Notifications](setting-up-native-push-notifications)

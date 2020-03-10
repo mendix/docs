@@ -21,9 +21,9 @@ UML also allows us to specify the types of associations, such as an [Aggregation
 
 ### 2.1 Performance
 
-In order to understand the impact on, and behavior of, the application, you need to understand the basic concepts of [Transactions](http://en.wikipedia.org/wiki/Database_transaction) and [(Database) Isolation Levels](http://en.wikipedia.org/wiki/Isolation_(database_systems)#Read_committed). The Mendix Platform uses Transactions, which means that every microflow, commit, and delete will happen in a (database) transaction. The transaction is initialized as soon as the microflow executes its first write to the database. Retrieve activities will never start a transaction.
+In order to understand the impact on, and behavior of, the application, you need to understand the basic concepts of [Transactions](http://en.wikipedia.org/wiki/Database_transaction) and [(Database) Isolation Levels](http://en.wikipedia.org/wiki/Isolation_(database_systems)#Read_committed). The Mendix Platform uses Transactions, which means that every microflow, commit, and delete will happen in a (database) transaction.  The transaction is initialized as soon as the microflow executes its first write to the database. Retrieve activities will never start a transaction.
 
-The Mendix Platform uses the transaction level [Read Committed](http://en.wikipedia.org/wiki/Isolation_(database_systems)#Read_committed), which means, as the name suggests, that only committed objects are visible outside the transaction. Any other microflows trying to access an object that is being changed at the same time, will have to wait until the transaction has completed. This is important to know, since this has significant impact on your choice between inheritance or associated objects.
+The Mendix Platform uses the transaction level [Read Committed](http://en.wikipedia.org/wiki/Isolation_(database_systems)#Read_committed), which means,  as the name suggests, that only committed objects are visible outside the transaction. Any other microflows trying to access an object that is being changed at the same time, will have to wait until the transaction has completed. This is important to know, since this has significant impact on your choice between inheritance or associated objects.
 
 ### 2.2 Creating & Changing Objects
 
@@ -65,7 +65,7 @@ Making a decision between inheritance and associations is something you should d
 
 Using inheritance can make your microflows easier to maintain, you can re-use functionality but you also lose flexibility. Once you have applied inheritance to an entity it is difficulty to remove the inheritance and keep all the data with a relationship. Or if a record can change type of subclass, for example an employee object changes and becomes a project manager object. In most scenarios there is no perfect solution and there are always concessions to make, just be aware of the implications when making a choice.
 
-Don't just add inheritance because it is easier, or remove it because it is slower. Especially in scenarios were different object types have to go through a similar process it can be worth it to apply inheritance just so you can re-use functionality and increase the consistency and stability of your application. One place you definitely don't want to use inheritance is in a system with a high transaction volume. Writing and updating records in tables with inheritance is slower than just updating a single table. If there are many new or changed objects loaded through Excel, web services, or any other integration then inheritance can slow the process down significantly.
+Don't just add inheritance because it is easier, or remove it because it is slower. Especially in scenarios were different object types have to go through a similar process it can be worth it to apply inheritance just so you can re-use functionality and increase the consistency and stability of your application. One place you definitely don't want to use inheritance is in a system with a high transaction volume.  Writing and updating records in tables with inheritance is slower than just updating a single table. If there are many new or changed objects loaded through Excel, web services, or any other integration then inheritance can slow the process down significantly.
 
 ### 3.2 One-to-One Association
 
@@ -82,7 +82,7 @@ This explanation might not have given you an explicit answer to the question on 
 There are a few situations where a clear answer can be given:
 
 * Never use inheritance for entities with:
-  * A high number of transactions on the different sub entities (As a high we consider multiple changes or creates per second)
+  * A high number of transactions on  the different sub entities (As a high we consider multiple changes or creates per second)
   * Only a handful common attributes. If you feel that it isn't worth creating associated objects for the information, it isn't worth inheriting either
 * Never use one-to-one association for entities:
   * That always require the information from the associated objects, and users intensively search and sort on the associated attributes

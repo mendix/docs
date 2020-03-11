@@ -28,7 +28,7 @@ After microflows are created, you can add them to pages to run them in your app.
 
 To embed the microflow with a decision (the attribute of the enumeration type) to pages, do the following:
 
-1. Create a page for the existing customers details and name it *Customer_details*. For more information on creating pages, see the [Creating a New Page](page-editor) section in *Pages*.
+1. Create a page for the existing customers details and name it *Customer_details*. For more information on creating pages, see the [Creating a New Page](/studio/page-editor) section in *Pages*.
 2.  In **Toolbox** > **Widgets** > **Data Containers**, find **Data View**.
 
     ![](attachments/microflows-how-to-configure-decision/data-view.png)
@@ -71,7 +71,7 @@ To embed the microflow with a decision (the attribute of the enumeration type) t
 
 Congratulations! Now when the end-user clicks **Details**, the form for the corresponding customer grade will be opened. 
 
-You can now [preview your app](publishing-app) or publish it.
+You can now [preview your app](/studio/publishing-app) or publish it.
 
 ### 3.2 Embedding the Microflow Having a Decision with the Attribute of the Boolean Type 
 
@@ -113,4 +113,4 @@ To embed the microflow with a decision (the attribute of the Boolean type), do t
 
 Congratulations! Now when the end-user clicks **Place order**, only customers who are not blocked will be able to proceed. If a customer is blocked, they will get an error message. 
 
-You can preview and/or publish your app. For more information on how to preview and publish an app, see [Previewing & Publishing Your App](publishing-app).
+You can preview and/or publish your app. For more information on how to preview and publish an app, see [Previewing & Publishing Your App](/studio/publishing-app).

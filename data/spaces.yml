@@ -151,6 +151,13 @@ studio:
     - "Theme Customizer"
     - "Settings"
     - "Starting With Your Own Data"
+studio-how-to:
+  space: "Studio 8 How-To's"
+  priority: false
+  menu_categories:
+    - "Domain Model"
+    - "Pages"
+    - "Microflows" 
 studio7:
   space: "Mendix 7 Studio Guide"
   priority: false

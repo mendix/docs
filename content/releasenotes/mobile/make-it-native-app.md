@@ -14,7 +14,7 @@ You can download the Make It Native app for [iOS](https://apps.apple.com/app/mak
 
 ## Android 1.2.3 / iOS 1.2.5
 
-**Release date: February 11th, 2020**
+**Release date: March 11th, 2020**
 
 * We fixed an issue with synchronization. Changes in the project should be now correctly reflected in the app after reloading.
 

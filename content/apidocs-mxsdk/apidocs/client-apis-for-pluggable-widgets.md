@@ -169,15 +169,15 @@ In practice, `WebIcon` and `NativeIcon` are usually passed to a `Icon` component
 `DynamicValue<ImageValue>` is used to represent static or dynamic images. An image can be configured only through an [image](property-types-pluggable-widgets#image) property. `ImageValue` is defined as follows:
 
 ```ts
-export type WebImage = {
+export interface WebImage {
     readonly uri: string;
     readonly altText?: string;
-} | undefined;
-export type NativeImage = Readonly<ImageURISource> | undefined;
+}
+export type NativeImage = Readonly<ImageURISource | string | number>;
 export type ImageValue = WebImage | NativeImage;
 ```
 
-`NativeImage` can be passed as a source of React Native’s [Image](https://facebook.github.io/react-native/docs/image) component, and `WebImage` can be passed  to react-dom’s `img`.
+`NativeImage` can be passed to a `mendix/components/native/Image` component provided by Mendix for native widgets. `WebImage` can be passed to react-dom’s `img` component.
 
 ### 4.6 FileValue {#filevalue}
 

@@ -219,7 +219,7 @@ This section will teach you to add validation to your TextBox widget. Using micr
 
 ### 3.3 Customizing Validation
 
-Validation can come from a modeled microflow or nanoflow, but can also be widget specific. For this sample you will learn to implement a custom, required (text template)[/apidocs-mxsdk/apidocs/property-types-pluggable-widgets#texttemplate] message which will show when the input is empty.
+Validation can come from a modeled microflow or nanoflow, but can also be widget specific. For this sample you will learn to implement a custom, required [text template](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets#texttemplate) message which will show when the input is empty.
 
 
 1. In *TextBox.xml*, add the `requiredMessage` property inside the `propertyGroup` of `Data source`:

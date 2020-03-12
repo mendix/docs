@@ -187,12 +187,12 @@ The Register Deep Link nanoflow action will create a new Mendix object, split a 
 Now that the **Native Deep Link** nanoflow actions are available in Studio Pro, you have the utilities to register and process an URL. You will now  use them in your application:
 
 1. In your app add the **App events** widget, which is also part of the Native Mobile Resource module, on your home page.
-1. Select open the widget and in the tab `App events` section `Page load` select a `On load` action `Call nanoflow`, and create a new nanoflow named *OL_RegisterDeepLink*:
+1. Double-click the **App events** widget. In **App events** tab, select **Page load** > **On load** > **Call a nanoflow**, and create a new nanoflow named *OL_RegisterDeepLink*:
 
    ![app event register deeplink](attachments/native-deep-link/app-events-register-deep-link.png)
    This nanoflow will be called only once when the app is started.
 
-1. Implement the **OL_RegisterDeepLink** nanoflow, add the action **Register DeepLink**, and in the **Url handler** create an nanoflow named *DL_ShowUrlDetails*:
+1. Implement the **OL_RegisterDeepLink** nanoflow, add the action **Register DeepLink**, and in that action's **Url handler** create an nanoflow named *DL_ShowUrlDetails*:
 
    ![nanoflow register deeplink](attachments/native-deep-link/nanoflow-register-deep-link.png)
    

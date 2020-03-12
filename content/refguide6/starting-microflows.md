@@ -64,8 +64,14 @@ This property indicates whether a progress bar is shown during the execution of 
 | Value | Description |
 | --- | --- |
 | None | No progress bar is shown. |
-| Non-Blocking | A progress bar is shown, but the end user can continue working. |
+| Non-Blocking | A progress bar is shown, but the end user can continue working.  |
 | Blocking | A progress bar is shown and the end user must wait until the microflow is done. |
+
+{{% alert type="warning" %}}
+
+Non-blocking progress bars are shown with a delay of half a second. If the execution of your microflow takes less than half a second, the progress bar will not be shown at all. Blocking progress bars are shown immediately.
+
+{{% /alert %}}
 
 ### Progress message
 

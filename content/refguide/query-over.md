@@ -130,5 +130,4 @@ public class RetrieveAsAssociatedWithB extends CustomJavaAction<java.util.List<I
 	}
 }
 ```
-When setting the `Reverse` Boolean to true and using the `Specialization` object as the input, the returned list will contain all the Specializations associated to the Specialization.
-
+When setting the `Reverse` Boolean to true and using the `Specialization` object as the input, the returned list will contain all the Generalizations associated to the Specialization.

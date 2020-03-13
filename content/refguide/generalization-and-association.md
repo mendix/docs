@@ -25,9 +25,9 @@ UML also allows us to specify the types of associations, such as an [Aggregation
 
 To understand the impact on, and behavior of, the application, you need to understand the basic concepts of [Transactions](http://en.wikipedia.org/wiki/Database_transaction) and [(Database) Isolation Levels](http://en.wikipedia.org/wiki/Isolation_(database_systems)#Read_committed).
 
-The Mendix Platform uses transactions, which means that every microflow, commit, and delete will happen in a (database) transaction.  The transaction is initialized as soon as the microflow executes its first write to the database and only ends when the microflow completes. This is the reason we recommend that write activities for all types of entities and associations are moved as far as possible towards the end of the microflow. Transactions for retrieve activities, on the other hand, only last until the end of the retrieve action.
+The Mendix Platform uses transactions, which means that every microflow, commit, and delete will happen in a (database) transaction.  The transaction is initialized as soon as the microflow executes its first database action, and only ends when the microflow completes. Write actions to the database take write locks on the modified objects and these are held until the end of the transaction. This is the reason we recommend that write activities for all types of entities and associations are moved as far as possible towards the end of the microflow. Locks taken for retrieve activities, on the other hand, only last until the end of the retrieve action.
 
-Using the PostgreSQL database, the Mendix platform has the isolation level [Read Committed](http://en.wikipedia.org/wiki/Isolation_(database_systems)#Read_committed), which means that only committed objects can be read outside the transaction. If another microflow is trying to read an object that is in the middle of being changed, it will have to wait until the transaction has completed. For some other databases the isolation level may be different. This is important to know, since this has significant impact on your choice between inheritance or associated objects.
+The Mendix platform uses the isolation level [Read Committed](http://en.wikipedia.org/wiki/Isolation_(database_systems)#Read_committed), which means that only committed objects can be read outside the transaction. If another microflow is trying to read an object that is in the middle of being changed, it will have to wait until the transaction has completed. The details of the way the database implements this isolation level depend on the underlying database management system (for example, PostgreSQL). This is important to know, since this has significant impact on your choice between inheritance or associated objects.
 
 ### 2.2 Creating & Changing Objects
 
@@ -45,7 +45,7 @@ Whenever you have a high number of write transactions in your application, it is
 
 ### 2.3 Retrieving Objects
 
-When using data widgets on a page, Mendix is optimized to only retrieve the data that is required for the action that is being executed. That means, for example, that if you do not show any associated or inherited attributes those objects will not be included in the retrieve queries. XPath constraints may cause additional data to be retrieved if they contain access rules, for example those that apply constraints based on the current user. 
+When using data widgets on a page, Mendix is optimized to only retrieve the data that is required for the action that is being executed. That means, for example, that if you do not show any associated or inherited attributes those objects will not be included in the retrieve queries. Where entities in the domain model contain access rules using XPath constraints, however, this may cause additional data to be retrieved. For example, constraints based on the current user need to retrieve information about the user. 
 
 When you use a microflow to retrieve data, however, all data is retrieved (see [Microflows](#microflows), below).
 

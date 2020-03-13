@@ -28,7 +28,7 @@ Custom developer apps fill this role. Custom developer apps are apps you can gen
 3. Run the following command to build your project's custom developer app:
 
 	```
-	native-builder.exe build dev-app --project-name {your project's 	name}
+	native-builder.exe build dev-app --project-name {your project's name}
 	```
 
 	This command does the following: <br />

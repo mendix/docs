@@ -75,8 +75,17 @@ To set up a notification widget, do the following:
 1.  Open **Navigation**, in the **Responsive** pane click **New Item**, then add a new **Show page** item **PushNotifications/_USE ME/Administration**: 
 
     {{% image_container width="300" %}}![ProfileHomePage](attachments/native-remote-push/modeler/ProfileHomePage.png){{% /image_container %}}
+    
+### 3.3 Synchronizing Unused Entities
 
-### 3.3 Adding Actions to Your Notifications Widget
+Studio Pro uses smart data syncing, meaning if an entity has not been retrieved on the native side, it will not be available in the native app. This situation will not occur often, since most Mendix native apps do retrieve entities which you want to show. For more information, see the [Synchronization](/refguide/offline-first#synchronization) section of the *Offline-First Reference Guide*.
+
+Currently your app does not retrieve any notificaitons in any of its pages. Fix this by doing the following:
+
+1. In **Navigation** > **Native mobile**, click **Sync configuration**.
+2. Change **NativeNotification** to download **All Objects**
+
+### 3.4 Adding Actions to Your Notifications Widget
 
 To set up actions which will occur after tapping or receiving a notification, do the following:
 
@@ -91,7 +100,7 @@ To set up actions which will occur after tapping or receiving a notification, do
 
     {{% image_container width="300" %}}![LogitAction](attachments/native-remote-push/modeler/logitAction.png){{% /image_container %}}
 
-### 3.4 Adding Firebase Configurations
+### 3.5 Adding Firebase Configurations
 
 Deploy your project and open your administration page in a web browser. Then, do the following:
 
@@ -114,7 +123,7 @@ Deploy your project and open your administration page in a web browser. Then, do
 
 Next you will test the implementation of your configurations.
 
-### 3.5 Sending a Push Notification to a Single Device {#sending-single}
+### 3.6 Sending a Push Notification to a Single Device {#sending-single}
 
 To see your changes from Studio Pro, rebuild your bundle using the Native Builder's `build` command. For more information on the `build` command, see the [Build](/refguide/native-builder#build) section of the *Native Builder* reference guide. Then, do the following:
 
@@ -168,9 +177,7 @@ To set up an example entity, do the following:
 
 #### 4.1.2 Synchronizing Unused Entities
 
-Studio Pro uses smart data syncing, meaning if an entity has not been retrieved on the native side, it will not be available in the native app. This situation will not occur often, since most Mendix native apps do retrieve entities which you want to show. For more information, see the [Synchronization](/refguide/offline-first#synchronization) section of the *Offline-First Reference Guide*.
-
-Your app does not retrieve any products in any of its pages. Fix this by doing the following:
+As covered in previous synchronizing unused entities, app does not retrieve any products in any of its pages. Fix this by doing the following:
 
 1. In **Navigation** > **Native mobile**, click **Sync configuration**.
 2. Change **Product** to download **All Objects**:

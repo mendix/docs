@@ -99,7 +99,10 @@ Deploy your project and open your administration page in a web browser. Then, do
 1. Select **Enabled**.
 1. Name your configuration.
 1. Set it as **Development** (this will not affect any functionality, it is only a label).
-1. Set **Project id** to the `--application-id` you set in the [Adding an Android or iOS App](setting-up-google-firebase-cloud-messaging-server#native-apps) section of *How to Set Up the Google Firebase Cloud Messaging Server*.
+1. Set **Project id** to the **Project ID** listed on the Firebase console website:
+
+    {{% image_container width="300" %}}![Firebase Project ID](attachments/native-remote-push/modeler/firebase-project-id.png){{% /image_container %}}
+
 1.  Upload your private key (which you got in the [Setting up Firebase Cloud Messaging Service](setting-up-native-push-notifications#firebase-setup) section of *How to Set up Remote Notifications*:
 
     {{% image_container width="300" %}}![FCMConfig](attachments/native-remote-push/modeler/FCMConfig.png){{% /image_container %}}

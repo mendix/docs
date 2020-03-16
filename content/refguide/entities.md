@@ -71,7 +71,7 @@ For example, this property can be used in a situation where, you have an entity 
 
 ![](attachments/domain-model/917900.png)
 
-For more information, and a discussion on the relative merits of using generalization or associations, see [Generalization & Associations](generalization-and-association).
+For more information, and a discussion on the relative merits of using generalization or associations, see [Generalization vs 1-1 Associations](generalization-and-association).
 
 #### 2.3.3 Image
 

@@ -92,3 +92,42 @@ Use the constraint `[QueryOver.File_Folder/QueryOver.Folder/QueryOver.Folder_Sub
 ![](attachments/associations/query-over-retrieve-complex.png)
 
 If the $ChosenFolder object is `SubFolder2`, you will retrieve all the **File** objects associated with `MainFolder` over the association **File_Folder**.
+
+## 3 Associations to Specializations
+
+In the special case of self-reference when a one-to-many association is with a specialization of itself, you cannot retrieve [by association](retrieve#source).
+
+Here is an example inheritance:
+
+![](attachments/associations/limitation.png)
+
+In this example, a list of **Specializations** cannot be retrieved when using a standard by-association retrieve in a microflow if the input is the specialization.
+
+However, there is a workaround for this limitation: The list of Specializations can be retrieved with a Java action using the Java API. This Java action needs two parameters: the **Specialization** and a Boolean **Reverse** via this code snippet:
+
+```
+public class RetrieveAsAssociatedWithB extends CustomJavaAction<java.util.List<IMendixObject>>
+{
+	private IMendixObject __B;
+	private main.proxies.Specialization B;
+	private java.lang.Boolean Reverse;
+
+	public RetrieveAsAssociatedWithB(IContext context, IMendixObject B, java.lang.Boolean Reverse)
+	{
+		super(context);
+		this.__B = B;
+		this.Reverse = Reverse;
+	}
+
+	@java.lang.Override
+	public java.util.List<IMendixObject> executeAction() throws Exception
+	{
+		this.B = __B == null ? null : main.proxies.Specialization.initialize(getContext(), __B);
+ 
+		// BEGIN USER CODE
+		return Core.retrieveByPath(getContext(), __B, "Main.Generalization_Specialization", Reverse);
+		// END USER CODE
+	}
+}
+```
+When setting the `Reverse` Boolean to true and using the `Specialization` object as the input, the returned list will contain all the Generalizations associated to the Specialization.

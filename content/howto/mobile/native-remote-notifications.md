@@ -80,10 +80,10 @@ To set up a notification widget, do the following:
 
 Studio Pro uses smart data syncing, meaning if an entity has not been retrieved on the native side, it will not be available in the native app. This situation will not occur often, since most Mendix native apps do retrieve entities which you want to show. For more information, see the [Synchronization](/refguide/offline-first#synchronization) section of the *Offline-First Reference Guide*.
 
-Currently your app does not retrieve any notificaitons in any of its pages. Fix this by doing the following:
+Currently your app does not retrieve any notifications in any of its pages. Fix this by doing the following:
 
 1. In **Navigation** > **Native mobile**, click **Sync configuration**.
-2. Change **NativeNotification** to download **All Objects**
+1. Change the **NativeNotification** entity to download **All objects**.
 
 ### 3.4 Adding Actions to Your Notifications Widget
 
@@ -177,10 +177,10 @@ To set up an example entity, do the following:
 
 #### 4.1.2 Synchronizing Unused Entities
 
-As covered in previous synchronizing unused entities, app does not retrieve any products in any of its pages. Fix this by doing the following:
+While you did set up notification retrieval earlier, your app does not currently retrieve any products in any of its pages. Fix this by doing the following:
 
 1. In **Navigation** > **Native mobile**, click **Sync configuration**.
-2. Change **Product** to download **All Objects**:
+1. Change the **Product** entity to download **All objects**:
 
     {{% image_container width="300" %}}![SyncConfig](attachments/native-remote-push/modeler/SyncConfig.png){{% /image_container %}}
 

@@ -66,6 +66,12 @@ Microflows that apply entity access have an **Entity Access** tag in the editor.
 By default entity access is not applied. Set **Apply entity access** to **Yes** if you want to perform some actions that respect the access rights of the current user.
 {{% /alert %}}
 
+{{% alert type="info" %}}
+Entity access is not applied in the **System.ShowHomePage** microflow. When using this microflow to navigate to the home page and setting a microflow as default home page, entity access will not be applied. To work around this, you can create your own ShowHomePage microflow that has **Apply entity access** set to **Yes**.
+
+actions that respect the access rights of the current user.
+{{% /alert %}}
+
 ### 5.2 Allowed Roles
 
 **Allowed roles** defines which [module role](module-security#module-role) the user must have to be able to execute the microflow.

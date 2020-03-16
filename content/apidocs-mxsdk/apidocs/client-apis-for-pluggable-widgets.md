@@ -164,7 +164,7 @@ export type IconValue = WebIcon | NativeIcon;
 
 In practice, `WebIcon` and `NativeIcon` are usually passed to a `Icon` component provided by Mendix, since this provides a convenient way of handling all types of icons at once. For more information on `Icon`, see the [Icon](#icon) section below.
 
-### 4.5 ImageValue
+### 4.5 ImageValue{#imagevalue}
 
 `DynamicValue<ImageValue>` is used to represent static or dynamic images. An image can be configured only through an [image](property-types-pluggable-widgets#image) property. `ImageValue` is defined as follows:
 

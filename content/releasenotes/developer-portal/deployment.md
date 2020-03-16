@@ -10,6 +10,12 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 ## 2020
 
+### March 17th, 2020
+
+#### Mendix Clouds
+
+* We have updated the environment details and backups screens for Mendix Clouds to show a more precise region, and the location of the secondary backup.
+
 ### March 4th, 2020
 
 #### Mendix for Private Cloud

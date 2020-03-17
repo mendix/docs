@@ -49,6 +49,10 @@ If the microflow is called from the client, [data sources](data-sources) do not 
 
 When inside a [nanoflow](nanoflows), the create object action reloads [data sources](data-sources) as if Refresh in client was set to *Yes*.
 
+{{% alert type="warning" %}}
+When inside a [microflow](microflows.md) that has been called from a nanoflow in an offline profile, **Refresh in client** option will be ignored as if it was set to *No* (for more information, see [Offline](offline-first#4-1-microflows)).
+{{% /alert %}}
+
 {{% /alert %}}
 
 Default: *No*

@@ -9,6 +9,10 @@ menu_order: 6
 This activity can be used in both **Microflows** and **Nanoflows**.
 {{% /alert %}}
 
+{{% alert type="warning" %}}
+Please note that this action will be ignored and will not have any effect when used inside a microflow that has been called from a nanoflow in an offline profile (for more information, see [Offline](offline-first#4-1-microflows)).
+{{% /alert %}}
+
 ## 1 Introduction
 
 With this action, you can display a red text below a widget that displays an attribute or association.

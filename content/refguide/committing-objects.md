@@ -53,4 +53,8 @@ When committing a large number of objects, we recommend that you do not enable '
 When inside a [nanoflow](nanoflows), the object is refreshed across the client as if **Refresh in client** was set to *Yes*.
 {{% /alert %}}
 
+{{% alert type="warning" %}}
+When inside a microflow that has been called from a nanoflow in an offline profile, **Refresh in client** option will be ignored as if it was set to *No* (for more information, see [Offline](offline-first#4-1-microflows)).
+{{% /alert %}}
+
 Default: *No*

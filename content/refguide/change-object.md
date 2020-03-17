@@ -65,6 +65,10 @@ When inside a [nanoflow](nanoflows), the change object action does not have the 
 If **Commit type** is set to *Yes*, the object is refreshed across the client as if **Refresh in client** was set to *Yes*.
 {{% /alert %}}
 
+{{% alert type="warning" %}}
+When inside a microflow that has been called from a nanoflow in an offline profile, **Refresh in client** option will be ignored as if it was set to *No* (for more information, see [Offline](offline-first#4-1-microflows)).
+{{% /alert %}}
+
 Default: *No*
 
 ### 3.3 Change Members

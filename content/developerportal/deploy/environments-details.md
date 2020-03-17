@@ -167,10 +167,16 @@ In this section, you can view the configured constants. Constants are used to de
 
 To fill in a new value, select the constant and click **Edit**.
 
+Here you can type a **New value**.
+
+You can also set **Mask** to **Yes**. This replaces the **Current value** and the **New value** with asterisks on all screens in the Developer Portal. You will also get asterisks if you export the constants to Excel. This means that users who do not have edit rights to the constant cannot see the value which has been set.
+
+{{% image_container width="50%" %}}
+![Edit Constants Pop-up window](attachments/environments-details/edit-constant.png)
+{{% /image_container %}}
+
 {{% alert type="info" %}}
-
 You have to restart your application before the changes will be made.
-
 {{% /alert %}}
 
 For more information, see [Constants](/refguide/constants).

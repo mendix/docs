@@ -31,6 +31,10 @@ The microflow that is called by this activity.
 For each parameter of the microflow, you have to supply an argument of the same type. The values of the arguments are expressed using [expressions](expressions). There is a difference in the way argument values are passed to a sub-microflow:
   * Lists and objects are passed as references (meaning, if the list/object is changed in a sub-microflow, the original list/object is altered)
   * Primitive types (strings, numbers, etc.) are passed as values (meaning, they are immutable, and not changeable via sub-microflows)
+  
+{{% alert type="warning" %}}
+When used inside a nanoflow in an offline profile, only arguments of non-persistable entities that have no associations with persistable entities are allowed (for more information, see [Offline](offline-first#4-1-microflows)).
+{{% /alert %}}
 
 ## 3 Output Properties
 

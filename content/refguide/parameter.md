@@ -10,19 +10,15 @@ tags: ["studio pro"]
 
 A parameter is data that serves as input for the flow. Parameters are filled at the location from where the flow is triggered.
 
-{{% alert type="info" %}}
-
 When you have an object of the entity 'Customer' that you want to use in a microflow, a parameter is used. The object name is 'EnclosingCustomer' and is shown in black. The data type is object, therefore the entity name is shown underneath the object name in blue.
 
 ![](attachments/819203/917903.png)
-
-{{% /alert %}}
 
 ## 2 Output Properties
 
 ### 2.1 Name
 
-Name refers to the value of the parameter.
+**Name** refers to the value of the parameter.
 
 ### 2.2 Data Type
 

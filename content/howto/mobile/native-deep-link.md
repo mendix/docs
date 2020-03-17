@@ -202,9 +202,21 @@ Now that the **Native Deep Link** nanoflow actions are available in Studio Pro, 
 
     ![parameter entity](attachments/native-deep-link/entity-parameter.png)
 
-1. [todo: add more step-by-step detail in this part.] Implement the deep link handler nanoflow **DL_ShowUrlDetails** like the image below. The nanoflow has one input parameter named **URL** and is of type string (which is case sensitive). Use the **Parse Url to Object** nanoflow action, and provide the URL and the entity of the parameter object. The show message action will display a message with the details of the URL:
+1. [todo: update screenshot w mine] Implement the deep link handler nanoflow **DL_ShowUrlDetails** so that it can pass URL data:<br />
+a. In **DL_ShowUrlDetails** drag and drop a parameter into your nanoflow's white space.<br />
+b. Double-click the parameter, give it the name *URL* and the type **String**.<br />
+b. Add a **Parse URL to Object** activity to your nanoflow. Double-click it and configure it like this:<br />
+        todo: put new image 1
+c. Add a **Show message** activity to the right of your **Parse URL to Object** activity.<br />
+d. Double-click the **Parse URL to Object** activity.<br />
+e. In **Template** write *Your deep link callback URL {1} host = {2}*.
+f. Click **Parameters** > **New**, write *$Parameter/Href*, and click **OK**.
+g. Click **Parameters** > **New**, write *$Parameter/Host*, and click **OK**.
+h. Right-click your **Parse URL to Object** activity, click **Set error handling**, and click **Custom without rollback**.
+i. Drop an **End event** below your **Parse URL to Object** activity. Drag a line from **Parse URL to Object** down to the end event, right click it, and click **Set as error handler**.
+j. Add a **Show message** activity to this line. Set it as type **Error**, and into template type *Failed to parse deep link data.*. Your finished nanoflow will look like this:
 
-   ![nanoflow handle deep link](attachments/native-deep-link/nanoflow-handle-deep-link.png)
+        todo: add full updated image 2
 
 ### 4.3 Testing Deep Linking
 

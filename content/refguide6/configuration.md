@@ -89,7 +89,7 @@ When you set the Java heap setting to 'Custom', you can specify the amount of he
 
 {{% alert type="info" %}}
 
-This switch is obsolete since DATEREPLACEME. See [this update](ANNOUNCEMENTREPLACEME) for more details.
+This switch is obsolete since DATEREPLACEME. See this update (ANNOUNCEMENTREPLACEME) for more details.
 
 {{% /alert %}}
 

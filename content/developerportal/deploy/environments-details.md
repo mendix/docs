@@ -169,7 +169,7 @@ To fill in a new value, select the constant and click **Edit**.
 
 Here you can type a **New value**.
 
-You can also set **Mask** to **Yes**. This replaces the **Current value** and the **New value** with asterisks on all screens in the Developer Portal. You will also get asterisks if you export the constants to Excel. This means that users who do not have edit rights to the constant cannot see the value which has been set.
+You can also set **Mask** to **Yes**. This replaces the **Current value** and the **New value** with asterisks on all screens in the Developer Portal. You will also get asterisks if you export the constants to Excel. This means that you can keep your constants secret from users who do not have edit rights.
 
 {{% image_container width="50%" %}}
 ![Edit Constants Pop-up window](attachments/environments-details/edit-constant.png)

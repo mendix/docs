@@ -38,7 +38,7 @@ The primary hosting locations are as follows:
 *   Mendix Cloud Asia Pacific: AWS Tokyo
 *   Mendix Cloud UK: AWS London
 
-Backups will always be stored in at least one external region, separate from the primary hosting location.
+Backups will always be stored in at least one secondary location, separate from the primary hosting location.
 
 Data will always be stored in the same political region for the following regions:
 

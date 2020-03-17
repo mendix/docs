@@ -54,11 +54,7 @@ You should therefore ensure that you always set a timeout for any connections yo
 
 For details on this topic, see [Using Eclipse](using-eclipse).
 
-## 6 Java Actions in the Cloud
-
-For details on this topic, see [V3: Java in Mendix Cloud](/developerportal/deploy/java-in-the-cloud).
-
-## 7 Main Documents in This Category
+## 6 Main Documents in This Category
 
 * [Troubleshooting](troubleshooting) – presents problematic JAR files and workarounds
 * [Using Eclipse](using-eclipse) – describes how to use Eclipse to write and debug the Java actions in your Mendix app project

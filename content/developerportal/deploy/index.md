@@ -21,10 +21,6 @@ This section of the *Developer Portal Guide* contains step-by-step instructions,
 
 In *Studio Pro*, you can click **Run Locally** in the toolbar to run your app locally. Use the **View** button to directly jump to see your app running in your browser at *localhost*.
 
-If you plan to deploy to version 3 (v3) of the Mendix Cloud later on, *and* your project contains Java actions, you should enable the **Emulate Cloud Security** setting. 
-
-For more information, see [V3: Java in Mendix Cloud](java-in-the-cloud).
-
 ### 2.2 Studio
 
 In *Studio*, you can click **Preview** in the top-right corner of Studio to see a preview of your app in the browser. 

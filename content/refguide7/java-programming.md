@@ -47,11 +47,7 @@ For details on usage and example, see [How to Use the Java API](/howto7/logic-bu
 
 For details on this topic, see [Using Eclipse](using-eclipse).
 
-## 5 Java Actions in the Cloud
-
-For details on this topic, see [V3: Java in Mendix Cloud](/developerportal/deploy/java-in-the-cloud).
-
-## 6 Main Documents in This Category
+## 5 Main Documents in This Category
 
 * [Troubleshooting](troubleshooting)
 * [Using Eclipse](using-eclipse)

@@ -8,7 +8,7 @@ tags: ["studio", "pages", "list", "how to", "filter", "sort"]
 
 ## 1 Introduction 
 
-This how-to explains how you can filter and sort items in a list in Mendix Studio. 
+This how-to explains how you can filter and sort items in a list view or a data grid in Mendix Studio. 
 
 **This how-to will teach you how to do the following:**
 
@@ -17,23 +17,27 @@ This how-to explains how you can filter and sort items in a list in Mendix Studi
 
 The how-to describes the following use case: 
 
-You have a list inspections reports that shows companies checked on compliance with safety regulations. You would like to display only companies that failed this inspection. You also would like to display reports for February 2020 only. In addition, items should be sorted by date and time starting from the latest one.  
+You have a list inspections reports that shows companies checked on compliance with safety regulations. You would like to display only companies that failed this inspection. You also would like to display reports for today only. In addition, items should be sorted by date and time starting from the latest one.  
+
+A list of inspection reports is displayed on a page. For example, it can look the following way if you have a list view:
+
+<img src="attachments/pages-how-to-filter-and-sort/list-view-example.png" style="zoom:60%;" />
+
+The page can also look the following way if you have a list in a data grid:
+
+![](attachments/pages-how-to-filter-and-sort/page-example-data-grid.png)
 
 Domain model is configured the following way in this use-case:
 
-<img src="attachments/pages-how-to-configure-list/domain-model.png" style="zoom:70%;" />
-
-A list of inspection reports is displayed on a separate page and looks the following way:
-
-<img src="attachments/pages-how-to-filter-and-sort/list-view-example.png" style="zoom:60%;" />
+<img src="attachments/pages-how-to-filter-and-sort/domain-model.png" style="zoom:50%;" />
 
 ## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Familiarize yourself with the domain model terms and learn how to perform basic functions. For more information, see [Domain Model](/studio/domain-models).
 * Familiarize yourself with page terms and how to perform basic functions on pages. For more information, see [Pages](/studio/pages). 
 * Familiarize yourself with terms on data filters. For more information, see [Data Filters](/studio/filters).
+* Familiarize yourself with the domain model terms and learn how to perform basic functions. For more information, see [Domain Model](/studio/domain-models).
 
 ## 3 Filtering Information 
 
@@ -43,40 +47,32 @@ You also would like to show reports that were created or modified in February 20
 
 To configure a filter, do the following:
 
-1. Select the list view and open its properties.
+1. Select the list view or the data grid and open its properties:
 
-2. In the **Data Source** section, click **Filter**.
+2. In the **Data Source** section, click **Filter**:
+
+    <img src="attachments/pages-how-to-filter-and-sort/properties-filter.png" style="zoom:67%;" />
 
 3. In the **Add Filter** dialog box, add conditions of the filter by doing the following:
 
     1. Select the **Passed** attribute in the drop-down menu:
 
-		<img src="attachments/pages-how-to-filter-and-sort/add-filter-select-attribute.png" style="zoom:70%;" />
+    	<img src="attachments/pages-how-to-filter-and-sort/add-filter-select-attribute.png" style="zoom:70%;" />
 
-	2. Once you select the first part of the condition, you can select the other part to complete it. Select *false*:
-	
-		<img src="attachments/pages-how-to-filter-and-sort/add-filter-condition.png" style="zoom:70%;" />
-	
-	3. To filter inspection reports for February 2020, you need to add two conditions: the date and time should include but should not be earlier than February 1st, 2020; and the date and time should include but should not be later than February 29th, 2020. 
-	
-		Click **Add new condition** and select the **DateAndTime** attribute in the drop-down menu.
-	
-	5. Set an operator from *is* to *greater than or equal to*.
-	
-	6. Add the second part of the condition: the date should include but should not be earlier than February 1st, 2020. The format for date is YYYY-MM-DD, so type in *2020-02-01*.
-	
-		<img src="attachments/pages-how-to-filter-and-sort/date-condition.png" style="zoom:70%;" />
-	
-	7. Now you need to restrict data to the end of the month. Click **Add new condition** and select the **DateAndTime** attribute in the drop-down menu.
+    2. Once you select the first part of the condition, you can select the other part to complete it. Select *false*:
 
-    8. Set an operator from *is* to *less than or equal to*.
-    
-    9. Add the second part of the condition: the date should include but should not be later than February 29th, 2020. The format for date is YYYY-MM-DD, so type in *2020-02-29*.
-    
-    	<img src="attachments/pages-how-to-filter-and-sort/complete-filter.png" style="zoom:70%;" />
-	10.  Click **Save**.
+    	<img src="attachments/pages-how-to-filter-and-sort/add-filter-condition.png" style="zoom:70%;" />
 
-You have created the filter that has three conditions and reads the following way: *Select records of InspectionReport where Passed is false and date and time is greater than or equal to Feb 1st, 2020 and date and time is less than or equal to Feb 29th, 2020*. This means this filter will show you only the reports that fall under all three conditions: which failed the inspection check and which were created or modified in February 2020. 
+    3. To filter inspection reports for the current day, you need to add another condition to your filter: click **Add new condition** and select the **DateAndTime** attribute in the drop-down menu.
+
+    4. Add the second part of the condition: the date should be today's date. Select *Today* in the drop-down menu: 
+
+		![](attachments/pages-how-to-filter-and-sort/filter-date-and-time.png)
+
+    5. Click **Save**.
+
+
+You have created the filter that has two conditions and reads the following way: *Select records of InspectionReport where Passed is false and date and time is Today. This means this filter will show you only the reports that fall under both conditions: which failed the inspection check and which were created or modified in the current day. 
 
 ## 4 Sorting Items  
 

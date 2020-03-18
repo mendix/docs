@@ -149,7 +149,7 @@ These actions are as the following:
 Only arguments of non-persistable entities that have no associations with persistable entities are allowed to be used in a microflow call being used in an offline profile. For each of these arguments we send the entire reachable tree of the associated objects to the server to execute the call.
 
 #### 4.1.3 Microflow Return Value
-//TODO
+Returning objects or lists of persistable entities is not supported. 
 
 ### 4.2 Autonumbers & Calculated Attributes
 

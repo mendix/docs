@@ -197,7 +197,7 @@ This is how the widget’s code is structured:
 <container>
 	<tabBar>
 		<tab>
-			<label>PAGE 1</label>
+			<activeLabel>PAGE 1</activeLabel>
 		</tab>
 		<tab>
 			<label>PAGE 2</label>
@@ -222,6 +222,7 @@ The widget’s style properties are as follows:
 | `indicator` | This has all ViewStyle properties. |     |
 | `tab`       | This has all ViewStyle properties. |     |
 | `label`     | This has all TextStyle properties. |     |
+| `activeLabel`     | This has all TextStyle properties. |     |
 
 The default class to style all tab containers is named `TabContainer`.
 

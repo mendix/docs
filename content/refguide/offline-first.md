@@ -146,7 +146,8 @@ These actions are as the following:
 * [Close page](close-page.md)
 
 #### 4.1.2 Microflow Arguments Type
-Only arguments of non-persistable entities that have no associations with persistable entities are allowed to be used in a microflow call being used in an offline profile. For each of these arguments we send the entire reachable tree of the associated objects to the server to execute the call.
+* Only arguments of non-persistable entities that have no associations with persistable entities are allowed to be used. For each of these arguments we send the entire reachable tree of the associated objects to the server to execute the call.
+* Passing non-persistable objects created in a microflow is not supported.
 
 #### 4.1.3 Microflow Return Value
 Returning objects or lists of persistable entities is not supported. 

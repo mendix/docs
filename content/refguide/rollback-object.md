@@ -1,6 +1,7 @@
 ---
 title: "Rollback Object"
 parent: "object-activities"
+menu_order: 7
 tags: ["studio pro"]
 ---
 
@@ -10,11 +11,11 @@ This activity can be used in both **Microflows** and **Nanoflows**.
 
 ## 1 Introduction
 
-The Rollback object action can be used to undo changes (that have not been committed) made to the object in the part of the flow preceding the activity. Furthermore, it deletes objects that have been created but never committed.
+The rollback object action can be used to undo changes (that have not been committed) made to the object in the part of the flow preceding the activity. Furthermore, it deletes objects that have been created but never committed.
 
 {{% alert type="info" %}}
 
-When the Rollback object action is performed in a sub-microflow, it rolls back the changes in both the sub-microflow as well as its parent microflow.
+When the rollback object action is performed in a sub-microflow, it rolls back the changes in both the sub-microflow as well as its parent microflow.
 
 {{% /alert %}}
 
@@ -41,7 +42,7 @@ Rolled back attribute values are always reflected in client. [Data sources](data
 {{% /alert %}}
 
 {{% alert type="warning" %}}
-When inside a [nanoflow](nanoflows), the Rollback object action reloads [data sources](data-sources) as if **Refresh in client** was set to *Yes*.
+When inside a [nanoflow](nanoflows), the rollback object action reloads [data sources](data-sources) as if **Refresh in client** was set to *Yes*.
 {{% /alert %}}
 
 Default: *No*

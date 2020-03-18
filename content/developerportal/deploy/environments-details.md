@@ -167,10 +167,16 @@ In this section, you can view the configured constants. Constants are used to de
 
 To fill in a new value, select the constant and click **Edit**.
 
+Here you can type a **New value**.
+
+You can also set **Mask** to **Yes**. This replaces the **Current value** and the **New value** with asterisks on all screens in the Developer Portal. You will also get asterisks if you export the constants to Excel. This means that you can keep your constants secret from users who do not have edit rights.
+
+{{% image_container width="50%" %}}
+![Edit Constants Pop-up window](attachments/environments-details/edit-constant.png)
+{{% /image_container %}}
+
 {{% alert type="info" %}}
-
 You have to restart your application before the changes will be made.
-
 {{% /alert %}}
 
 For more information, see [Constants](/refguide/constants).
@@ -266,11 +272,10 @@ Add client certificates (in the PKCS12 format) or certificate authorities (in th
 
 ![](attachments/environments-details/loglevels-tab.png)   
 
-Log levels are used to distinguish the log messages and to highlight the highest priority ones so that they can receive the immediate intervention they require.
+Log levels are used to distinguish the log messages and to highlight the highest priority ones so that they can receive the immediate intervention they require. Note that custom log nodes appear in the list only after a message has been logged to them. See [Log Message](/refguide/log-message#log-node-name) for more information.
 
 On this tab, you can perform the following actions:
 
-* Retrieve the current log levels by clicking **Refresh**
 * Change the log level type by clicking the specific level
 * Click **Set all to INFO** to revert all the changes
 

@@ -71,7 +71,7 @@ The **Show a page** event opens the specified page. Select the page which opens 
 
 * **Page title** – the page you open can be given a unique title, depending on where you open it from. This allows you to re-use the same page for different purposes. For example, by setting the title to **New Customer** from one button and **Edit Customer** from another, you can use the same page for editing new and existing customers.
 
-    This option is activated by checking the **Override page title** check box in the **Edit** dialog window:
+    This option is activated by checking the **Override page title** check box in the **Edit** dialog box:
 
     ![Page Title Property](attachments/on-click-event/page-title-property.png)
 
@@ -79,7 +79,16 @@ The **Show a page** event opens the specified page. Select the page which opens 
 
 ### 3.3 Call a Microflow {#call-microflow}
 
-The **Call a microflow** event executes the specified microflow. The following settings are specific for this event:
+The **Call a microflow** event executes the specified microflow.
+
+{{%alert type="info" %}}
+
+When setting **Call a microflow** as an action for the **On change**, **On enter**, or **On leave** event of a widget, note that microflows require some time to complete. Any changes to the current form made in the meantime (e.g. changing values in input widgets) will be overwritten by the results of the microflow.
+Therefore, it is not recommended to change entities/attributes on the current page in a microflow triggered by an **On change**, **On enter**, or **On leave** event.
+
+{{%/alert %}}
+
+The following settings are specific for this event:
 
 #### 3.3.1 Microflow{#microflow}
 
@@ -124,6 +133,10 @@ If the microflow is triggered within a grid and has an object list parameter, th
 | None | No progress bar is shown. |
 | Non-Blocking | A progress bar is shown, but the end-user can continue working. |
 | Blocking | A progress bar is shown and the end-user must wait until the microflow is done. |
+
+{{% alert type="warning" %}}
+Non-blocking progress bars are shown with a delay of half a second. If the execution of your microflow takes less than half a second, the progress bar will not be shown at all. Blocking progress bars are shown immediately.
+{{% /alert %}}
 
 ##### 3.3.2.5 Progress Message
 

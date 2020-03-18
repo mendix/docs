@@ -1,6 +1,7 @@
 ---
 title: "Start Event"
 parent: "events"
+menu_order: 1
 tags: ["studio pro"]
 ---
 

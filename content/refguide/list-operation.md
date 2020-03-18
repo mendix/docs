@@ -1,6 +1,7 @@
 ---
 title: "List Operation"
 parent: "list-activities"
+menu_order: 4
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -11,7 +12,7 @@ This activity can be used in both **Microflows** and **Nanoflows**.
 
 ## 1 Introduction
 
-The List Operation activity can perform various actions on a list. See below for details on these actions.
+The list operation activity can perform various actions on a list. See below for details on these actions.
 
 {{% alert type="info" %}}
 

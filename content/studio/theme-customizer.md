@@ -85,7 +85,7 @@ To upload a logo, do the following:
 
     ![Uploading Your Logo](attachments/theme-customizer/upload-logo.png)
 
-3. In the dialog window, select the picture you want to use as the logo.
+3. In the dialog box, select the picture you want to use as the logo.
 
 4.  The selected picture is uploaded and shown in the preview. 
 

@@ -289,8 +289,8 @@ To create a JavaScript action that can search for users on GitHub, follow the st
 
 	![list display](attachments/jsactions-advanced/variable-display.png)
 
-18. To edit your **Change Object** activity, do the following: <br/>
-	a. Double-click your **Change Object** activity. <br/>
+18. To edit your **Change object** activity, do the following: <br/>
+	a. Double-click your **Change object** activity. <br/>
 	b. Select **GithubSearch(HowTo.GithubSearch)** from the **Object** drop-down menu. <br/>
 	c. Click **Action** > **New**. <br/>
 	d. Select **HowTo.GithubSearch_GithubUser(ListofHowTo.GithubUser)** from the **Member** drop-down menu. <br/>
@@ -298,7 +298,7 @@ To create a JavaScript action that can search for users on GitHub, follow the st
 
 	![edit change](attachments/jsactions-advanced/edit-change-item.png)
 	
-	f. Your finished **Change Object** action will look like this:
+	f. Your finished **Change object** action will look like this:
 	
 	![change object](attachments/jsactions-advanced/change-object-final.png)
 

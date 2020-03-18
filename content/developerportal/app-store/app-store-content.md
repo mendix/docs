@@ -66,7 +66,7 @@ To add the Radio Button List widget from the App Store via Studio Pro, follow th
 		{{% image_container width="350" %}}![](attachments/app-store-content/18580440.png)
 		{{% /image_container %}}
 
-	* Right-click the drop zone where you want to use the widget, select **Add Widget**, then browse the list of **Add-on widgets**:
+	* Right-click the drop-zone where you want to use the widget, select **Add Widget**, then browse the list of **Add-on widgets**:
 
 		![](attachments/app-store-content/18580439.png)
 

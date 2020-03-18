@@ -188,7 +188,7 @@ Now that you covered the error handling of the parameter parsing, it's time to h
 
 To add the error handling for those situations when the OrderID parameter is filled but no result is found, follow these steps:
 
-1.  After the activity for retrieving from the database, add a decision activity with the following statement: `$Order != empty`. The true exit is connected to the activity for exporting to JSON. For the false exit, add new Create object activities that create a **NewhttpErrorNotFoundResponse** and a **NewhttpErrorNotFoundHeader**:
+1.  After the activity for retrieving from the database, add a decision activity with the following statement: `$Order != empty`. The true exit is connected to the activity for exporting to JSON. For the false exit, add new create object activities that create a **NewhttpErrorNotFoundResponse** and a **NewhttpErrorNotFoundHeader**:
 
 	![](attachments/publish-rest-service/OrderNotFoundResponse.png)
 

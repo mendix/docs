@@ -26,7 +26,7 @@ In the **Project Explorer**, you can do the following:
   * Expand a folder or open a document by pressing <kbd>Enter</kbd> 
   * Clear the filter query by pressing <kbd>Esc</kbd>
 * **Open the document** – double-click the document to open it
-* **Select the active document** – click the icon in the top-right corner of the **Project Explorer** to quickly view the active document in the **Project Explorer** tree. By default the active document is always selected so you can quickly see where the document you are editing is located. You can change this behavior in the **Edit** > **Preferences** dialog window.
+* **Select the active document** – click the icon in the top-right corner of the **Project Explorer** to quickly view the active document in the **Project Explorer** tree. By default the active document is always selected so you can quickly see where the document you are editing is located. You can change this behavior in the **Edit** > **Preferences** dialog box.
 * **Expand all documents** – click the plus icon in the top-left corner of the **Project Explorer** to expand all document and see the whole structure of your project
 * **Collapse all documents** – click the minus icon in the top-left corner of the **Project Explorer** to collapse all documents
 * **Expand or collapse an individual folder** – to expand/collapse documents in an individual folder click the plus/minus icon or double-click the folder 

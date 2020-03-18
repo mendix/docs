@@ -26,7 +26,7 @@ FROM
 
 ## 2 entity_name
 
-This specifies the entity from which data must be retrieved.
+This specifies the entity from which data must be retrieved. The entity name can be optionally encapsulated in double quotes. If the entity name is a reserved OQL word (like `Order` or `Group`), double quotes are mandatory.
 
 ## 3 ( sub_oql_query )
 
@@ -54,6 +54,8 @@ The syntax is as follows:
 This specifies the entity to join and the path from an earlier defined entity in the `FROM` clause to this entity.
 
 The path `Crm.Customer/Crm.Customer_Address/Crm.Address` defines a path from the earlier defined entity **Crm.Customer** to the new entity **Crm.Address**.
+
+Similar to `entity_name`, double quotes can be used.
 
 ### 4.2 \[ ON \<constraint\> \]
 
@@ -111,7 +113,7 @@ FULL [ OUTER ] JOIN entity_path [ ON <constraint> ]
 
 ### 4.4 Example
 
-In this scenario, you are using a `LEFT OUTER JOIN` to get the records in table A that have no association in table B. 
+In this scenario, you are using a `LEFT OUTER JOIN` to get the records in table A that have no association in table B.
 
 For example, you have the entities **Customer** and **Order**, where a customer can have an association to multiple orders. You want to retrieve all the customers that have no orders at all.
 

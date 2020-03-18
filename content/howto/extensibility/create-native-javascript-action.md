@@ -56,7 +56,7 @@ Follow these instructions to set up your NFC project:
 1. Click **Use this starting point**.
 1. Name your app NativeNFC and click **Create App** to close the dialog box.
 1. Rename module **NativeMobile** to *NativeNFC*. You will add your implementation In this module.
-1. Right-click on the module and select **Add other** > **JavaScript action**. Name the new JavaScript action *HasNFCSupport*. You will create the implementation later.
+1. Right-click the module and select **Add other** > **JavaScript action**. Name the new JavaScript action *HasNFCSupport*. You will create the implementation later.
 1. Open the **Home_Native** page and add some welcome text for you test app.
 1. Add an action button with caption *Scan NFC Tag* on your home page. <br />
 	a. Right-click your home page and click **Add widget**.<br />
@@ -156,7 +156,7 @@ This section shows how to link manually. This method replaces the linking steps 
 
 To link for Android devices, do the following:
 
-1. To expose the library to the template, you must link it using Gradle. Open **C:\github\native-nfc-app\android\settings.gradle**, then add the include and project at the end of the file before `include`, `**':app'**`, `**':mendixnative-release'**`:
+1. To expose the library to the template, you must link it using Gradle. Open **C:\github\native-nfc-app\android\settings.gradle**, then add this line of code before `include ':app' , ':mendixnative-release'`:
 
 	``` gradle
 	include ':react-native-nfc-manager'

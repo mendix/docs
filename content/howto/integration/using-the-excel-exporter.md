@@ -31,14 +31,14 @@ To download the modules, follow these steps:
 	
 
 {{% alert type="warning" %}}
-Depending on the layout selected when the project was created, errors in the Modeler may arise due to the new module's default layouts. To correct this, open each page that has an error and update the layout to the desired layout within the app.
+Depending on the layout selected when the project was created, errors in Studio Pro may arise due to the new module's default layouts. To correct this, open each page that has an error and update the layout to the desired layout within the app.
 {{% /alert %}}
 
 ## 3 Adding Navigation Items to Allow Users to Configure Settings
 
 In this section of the how-to, you will learn how to add the required pages in the app project's **Navigation** that are needed to configure both the Mx Model Reflection and the Excel Export templates that will be used within the app.
 
-1.  In the Modeler, open **Project** > **Navigation**.
+1.  In Studio Pro, open **Project** > **Navigation**.
 2.  Add a new item to the Navigation to access **MxModelReflection.MxObjects_Overview**:
 
     ![](attachments/18448688/18581165.png)
@@ -71,7 +71,7 @@ The Excel Exporter has many moving pieces that allow the configurations to be as
 
 ### 5.1 Creating an Input Object Entity
 
-1.  In the Modeler, open the domain model for your app project and add an entity to serve as a "master export" entity that is of specialization **FileDocument.**
+1.  In Studio Pro, open the domain model for your app project and add an entity to serve as a "master export" entity that is of specialization **FileDocument.**
 2.  Create an association between the newly created entity and the entity(ies) that you will want to serve as a base for the Excel export.
 
     ![](attachments/18448732/18581908.png)

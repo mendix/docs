@@ -174,7 +174,7 @@ In order to build (and debug) a Mendix iOS app, you need to ensure that you have
 
       ![apple-10](./attachments/debug-a-mobile-app/apple-10.png)
 
-9. Right-click on the certificate in the list of certificates and select **Export**.
+9. Right-click the certificate in the list of certificates and select **Export**.
 
       ![apple-11](./attachments/debug-a-mobile-app/apple-11.png)
 

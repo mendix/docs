@@ -113,7 +113,7 @@ To create a custom widget with Adobe Brackets, follow these steps:
 
     ![](attachments/18448564/18579879.png)
 
-    The name of the widget is very important, because it will be used in Mendix. Using the CamelCase naming convention is recommended (for more information, see [http://en.wikipedia.org/wiki/CamelCase](http://en.wikipedia.org/wiki/CamelCase)). Each new widget should have at least the author, version number, copyright, license, package name, widget name, and path defined before you can click **Continue**. The location directory must also exist, and you must have access rights to the folder. 
+    The name of the widget is very important, because it will be used in Mendix. Using the UpperCamelCase naming convention is recommended (for more information, see [http://en.wikipedia.org/wiki/CamelCase](http://en.wikipedia.org/wiki/CamelCase)). Each new widget should have at least the author, version number, copyright, license, package name, widget name, and path defined before you can click **Continue**. The location directory must also exist, and you must have access rights to the folder. 
 
     These are the additional naming guidelines about the settings:
 

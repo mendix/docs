@@ -436,8 +436,8 @@ The following changes have been made to the input reference set selector markup:
 
 The following changes have been made to the `DropDownButton` widget:
 
-* The class `mx-list` has been removed from the list of terms in the dialog window
-* The class `mx-dropdown` has been removed from the dialog window, as it has nothing to do with drop-down in the search input
+* The class `mx-list` has been removed from the list of terms in the dialog box
+* The class `mx-dropdown` has been removed from the dialog box, as it has nothing to do with drop-down in the search input
 
 ## 13 File Manager and Image Uploader Widget Changes
 

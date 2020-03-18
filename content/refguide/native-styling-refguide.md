@@ -197,7 +197,7 @@ This is how the widget’s code is structured:
 <container>
 	<tabBar>
 		<tab>
-			<label>PAGE 1</label>
+			<activeLabel>PAGE 1</activeLabel>
 		</tab>
 		<tab>
 			<label>PAGE 2</label>
@@ -222,6 +222,7 @@ The widget’s style properties are as follows:
 | `indicator` | This has all ViewStyle properties. |     |
 | `tab`       | This has all ViewStyle properties. |     |
 | `label`     | This has all TextStyle properties. |     |
+| `activeLabel`     | This has all TextStyle properties. |     |
 
 The default class to style all tab containers is named `TabContainer`.
 
@@ -797,11 +798,11 @@ The widget’s style properties are as follows:
 
 ```xml
 <container>
-  <icon/><icon/><icon/><icon/><icon/>
+	<icon/><icon/><icon/><icon/><icon/>
 </container>
 
 <containerDisabled>
-  <icon/><icon/><icon/><icon/><icon/>
+	<icon/><icon/><icon/><icon/><icon/>
 </containerDisabled>
 ```
 
@@ -826,17 +827,17 @@ The widget’s style properties are as follows:
 
 ```xml
 <container>
-  <button><text>Standard</text></button>
-  <activeButton><activeButtonText>Sattelite</activeButtonText></activeButton>
-  <button><text>Hybrid</text></button>
-  <validationMessage/>
+	<button><text>Standard</text></button>
+	<activeButton><activeButtonText>Sattelite</activeButtonText></activeButton>
+	<button><text>Hybrid</text></button>
+	<validationMessage/>
 </container>
 
 <containerDisabled>
-  <button><text>Standard</text></button>
-  <activeButton><activeButtonText>Sattelite</activeButtonText></activeButton>
-  <button><text>Hybrid</text></button>
-  <validationMessage/>
+	<button><text>Standard</text></button>
+	<activeButton><activeButtonText>Sattelite</activeButtonText></activeButton>
+	<button><text>Hybrid</text></button>
+	<validationMessage/>
 </containerDisabled>
 ```
 
@@ -889,7 +890,7 @@ The widget’s style properties are as follows:
 
 ```xml
 <container>
-  {content}
+	{content}
 </container>
 ```
 
@@ -897,7 +898,107 @@ The widget’s style properties are as follows:
 | --- | --- | --- |
 | `container` | This has all ViewStyle properties. |      |
 
-The default class to style all web views is named `com_mendix_widget_native_animation_Animation`.
+The default class to style all animation widgets is named `com_mendix_widget_native_animation_Animation`.
+
+### 11.20 Introduction Screen
+
+This introduction screen widget displays paginated contents you can swipe through, and offers buttons on each page to proceed or go back:
+
+{{% image_container width="350" %}}![intro screen](attachments/native-styling-refguide/intro-screen.gif){{% /image_container %}}
+
+The widget’s style properties are as follows:
+
+```xml
+<fullscreenContainer>
+	content
+	<paginationContainer>
+		<dotStyle/><activeDotStyle/><dotStyle/>
+	</paginationContainer>
+	<paginationAbove.buttonsContainer>
+		<buttonSkip.container>
+			<icon/><caption>Skip</caption>
+		</buttonSkip.container>
+		<buttonPrevious.container>
+			<icon/><caption>Back</caption>
+		</buttonPrevious.container>
+		<buttonNext.container>
+			<icon/><caption>Next</caption>
+		</buttonNext.container>
+		<buttonDone.container>
+			<icon/><caption>Done</caption>
+		</buttonDone.container>
+	</paginationAbove.buttonsContainer>
+</fullscreenContainer>
+
+<popupContainer>
+	content
+	<paginationBetween>
+		<buttonSkip.container>
+			<icon/><caption>Skip</caption>
+		</buttonSkip.container>
+		<buttonPrevious.container>
+			<icon/><caption>Back</caption>
+		</buttonPrevious.container>
+		<paginationContainer>
+			<paginationText>4 / 5</paginationText>
+		</paginationContainer>
+		<buttonNext.container>
+			<icon/><caption>Next</caption>
+		</buttonNext.container>
+		<buttonDone.container>
+			<icon/><caption>Done</caption>
+		</buttonDone.container>
+	</paginationBetween>
+</popupContainer>
+```
+
+| Element | Style Properties | Description |
+| --- | --- | --- |
+| `fullscreenContainer` | This has all ViewStyle properties. | |
+| `popupContainer` | This has all ViewStyle properties. | |
+| `paginationContainer` | This has all ViewStyle properties. | |
+| `paginationText` | This has all TextStyle properties. | |
+| `dotStyle` | This has all ViewStyle properties. | |
+| `activeDotStyle` | This has all ViewStyle properties. | |
+| `buttonsContainer` | This has all ViewStyle properties. | |
+| `container` | This has all ViewStyle properties. | Meant for buttonSkip, buttonDone, buttonPrevious, and buttonNext. |
+| `caption` | This has all ViewStyle properties. | |
+| `icon` | `size` | The size of the icon. |
+| `icon` | `color` | The color of the icon. |
+
+The default class to style all into screen widgets is named `com_mendix_widget_native_animation_Animation`.
+
+### 11.21 List View Swipe
+
+The list view swipe widget can make a list view interactive by adding swipe gestures and extra buttons in the background behind a list item:
+
+{{% image_container width="350" %}}![list view swipe](attachments/native-styling-refguide/list-view-swipe-buttons.gif){{% /image_container %}}
+
+The widget’s style properties are as follows:
+
+```xml
+<container>
+	<leftAction>
+		{Left background}
+	</leftAction>
+	{Foreground}
+	<rightAction>
+		{Right background}
+	</rightAction>
+</container>
+```
+
+| Element | Style Properties | Description |
+| --- | --- | --- |
+| `container` | This has all ViewStyle properties. | |
+| `leftAction` | This has all ViewStyle properties. | |
+| `leftAction` |`panelSize` | The number of pixels and the combined size of the background buttons. |
+| `leftAction` |`threshold` | The number of pixels to accept the swipe action. |
+| `rightAction` | This has all ViewStyle properties. | |
+| `rightAction` |`panelSize` | The number of pixels and the combined size of the background buttons. |
+| `rightAction` |`threshold` | The number of pixels to accept the swipe action. |
+
+The default class to style all animation widgets is named `com_mendix_widget_native_listviewswipe_ListViewSwipe`.
 
 ## 12 Read More
 

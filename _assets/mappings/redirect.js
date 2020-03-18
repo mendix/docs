@@ -35,13 +35,6 @@ module.exports = {
       to: "/partners/siemens/mindsphere-module-details"
     },
 	/****************************************************
-     * From https://www.npmjs.com/package/mendixmodelsdk (potentially temporary until fixed)
-     ****************************************************/
-	{
-      from: "/MXSDK/Your+learning+path+for+the+Mendix+SDK",
-      to: "/apidocs-mxsdk/mxsdk/"
-    },	
-	/****************************************************
      * PERMANENT REDIRECTS
      ****************************************************/
 	 /****************************************************
@@ -208,7 +201,11 @@ module.exports = {
       from: "/refguide/team-server",
       to: "/developerportal/develop/team-server"
     },
-	/****************************************************
+    {
+      from: "/developerportal/deploy/integrate-with-mendix-sso",
+      to: "/developerportal/deploy/mendix-sso"
+    },
+    /****************************************************
      * From the App Store (permanent, mapped)
      ****************************************************/
 	{
@@ -2533,12 +2530,16 @@ module.exports = {
      * Add-on Guides (permanent, mapped)
      ****************************************************/
 	{
+	  from: "/addons/apm-addon/",
+	  to: "/addons/apd-addon/"
+	},
+		{
 	  from: "/apm/installation-guide",
-	  to: "/addons/apm-addon/ig-two"
+	  to: "/addons/apd-addon/ig-two"
 	},
 	{
       from: "/apm/reference-guide/rg-2/reference-guide-2",
-      to: "/addons/apm-addon/rg-two-apm"
+      to: "/addons/apd-addon/rg-two-apm"
     },
 	{
 	  from: "~*\\\/aqm\\\/",
@@ -2547,28 +2548,13 @@ module.exports = {
     },
 	{
 	  from: "~*\\\/apm\\\/",
-	  to: "/addons/apm-addon/index",
+	  to: "/addons/apd-addon/index",
 	  exact: true
     },
 	{
 	  from: "~*\\\/ats\\\/",
 	  to: "/addons/ats-addon/index",
 	  exact: true
-    },	
-	// {
-    //   from: "~*\\\/apm\\\/use-cases\\\/uc",
-    //   to: "/apm/use-cases/",
-    //   exact: true
-    // },
-    // {
-    //   from: "~*\\\/apm\\\/installation-guide\\\/ig",
-    //   to: "/apm/installation-guide/",
-    //   exact: true
-    // },
-    // {
-    //   from: "~*\\\/apm\\\/reference-guide\\\/rg",
-    //   to: "/apm/reference-guide/",
-    //   exact: true
-    // },
+    },
   ]
 }

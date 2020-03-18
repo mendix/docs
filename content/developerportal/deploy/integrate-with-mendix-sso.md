@@ -55,14 +55,14 @@ To incorporate the AppCloudServices module into an existing app, follow these st
 
 	![](attachments/integrate-with-mendix-sso/18581215.png)
 
-7.  Add the Boolean attribute **IsLocalUser** (with default **true** ) to your app user entity. This is the entity that represents your user accounts and extends the **System.User** entity. The Boolean attribute allows you to differentiate between Mendix accounts and local accounts. For the CE app, this entity is called **Expenses.Employee**.
+7.  Add the Boolean attribute **IsLocalUser** (with default **true** ) to your App User entity. This is the entity that represents your user accounts and extends the **System.User** entity. The Boolean attribute allows you to differentiate between Mendix accounts and local accounts. For the CE app, this entity is called **Expenses.Employee**.
 
 	![](attachments/integrate-with-mendix-sso/18581214.png)
 
 	It is a good idea to give the administrator role(s) (or equivalent) read access to the **IsLocalUser** attribute with an access rule.
 
 8. Open the microflow you copied in step 5.
-9.  Open the **Create** action and select your app user entity as the object type to be created (instead of the preselected **UserManagement.Account**). You will need to reset the two members in this action afterwards. In the CE app, you want to change the **Entity** to **Expenses.Employee**, and then change the first member to **FullName** and the second to **IsLocalUser**.
+9.  Open the **Create** action and select your App User entity as the object type to be created (instead of the preselected **UserManagement.Account**). You will need to reset the two members in this action afterwards. In the CE app, you want to change the **Entity** to **Expenses.Employee**, and then change the first member to **FullName** and the second to **IsLocalUser**.
 
 	![](attachments/integrate-with-mendix-sso/18581213.png)
 
@@ -323,7 +323,7 @@ When part of your app targets anonymous users, there are anonymous pages in your
 
 To solve this problem, add somewhere in the anonymously accessible part of your app a link to `/openid/login`. Use the [HTML/JavaScript Snippet](https://appstore.home.mendix.com/link/app/56/) widget from the App Store to create a link. Set the content of the snippet to: `<a href="/openid/login">Sign in with your Mendix account</a>`
 
-To try out your implementation, deploy your app to the Mendix Cloud, and go to your app, e.g., `https://yourapp.mendixcloud.com/`. Go to the page where you inserted the link, and click on it. You should be redirected to the Mendix Account login page, and then back to your app, to the (role-based) homepage of the user with which you logged in.
+To try out your implementation, deploy your app to the Mendix Cloud, and go to your app, e.g., `https://yourapp.mendixcloud.com/`. Go to the page where you inserted the link, and click it. You should be redirected to the Mendix Account login page, and then back to your app, to the (role-based) homepage of the user with which you logged in.
 
 ### 3.4 Users Can Sign in with a Mendix or Local Account from an Anonymous Session
 
@@ -349,7 +349,6 @@ To fix this, make sure the **AppCloudServices.StartAppCloudServices** microflow 
 
 These are commonly caused by compatibility issues with JAR files in the `<projectpath>/userlib` directory of your project. For details on the most common compatibility issues, refer to [Troubleshooting](/refguide/troubleshooting) in the *Studio Pro Guide*.
 
-## 4 Read More
+## 5 Read More
 
 * [Mendix Cloud: Deploy](mendix-cloud-deploy)
-* [Mendix Single Sign-On](integrate-with-mendix-sso)

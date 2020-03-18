@@ -166,7 +166,7 @@ Possible values:
 
 #### 2.5.10 Default Button Trigger
 
-The default button can be triggered by a single or a double click on a row.
+The default button can be triggered by a single or a double click a row.
 
 | Value | Description |
 | --- | --- |

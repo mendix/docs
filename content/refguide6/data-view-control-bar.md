@@ -6,7 +6,7 @@ parent: "data-view"
 
 {{% alert type="info" %}}
 
-The data view control bar has been converted to a normal drop zone, and renamed to 'footer' in version 6.7.0\. See [Data view footer](data-view).
+The data view control bar has been converted to a normal drop-zone, and renamed to 'footer' in version 6.7.0\. See [Data view footer](data-view).
 
 {{% /alert %}}
 

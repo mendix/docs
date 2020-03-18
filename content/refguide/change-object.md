@@ -1,6 +1,7 @@
 ---
 title: "Change Object"
 parent: "object-activities"
+menu_order: 2
 tags: ["studio pro"]
 ---
 
@@ -10,7 +11,7 @@ This activity can be used in both **Microflows** and **Nanoflows**.
 
 ## 1 Introduction
 
-The Change object activity can be used to change the members of an object. This can be done with or without committing and with or without events.
+The change object activity can be used to change the members of an object. This can be done with or without committing and with or without events.
 
 {{% alert type="info" %}}
 
@@ -59,7 +60,7 @@ Changed attribute values are *always* reflected in the client. If the object is 
 {{% /alert %}}
 
 {{% alert type="warning" %}}
-When inside a [nanoflow](nanoflows), the Change object action does not have the **Refresh in client** option available, and the refresh behavior depends on the **Commit type** option. It always reflects the changed attribute values in the client, including [visibility](common-widget-properties#visibility-properties).
+When inside a [nanoflow](nanoflows), the change object action does not have the **Refresh in client** option available, and the refresh behavior depends on the **Commit type** option. It always reflects the changed attribute values in the client, including [visibility](common-widget-properties#visibility-properties).
 
 If **Commit type** is set to *Yes*, the object is refreshed across the client as if **Refresh in client** was set to *Yes*.
 {{% /alert %}}

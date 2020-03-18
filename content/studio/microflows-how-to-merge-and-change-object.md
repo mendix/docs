@@ -76,7 +76,7 @@ Now you will add logic to the microflow. You have merged three flows into one to
 
     a. Click the **Customer** entity > **New attribute**.<br/>
 
-    b. In the **Create New Attribute** dialog window, set **Name** to *Active* and **Type** to *Boolean*.<br/> 
+    b. In the **Create New Attribute** dialog box, set **Name** to *Active* and **Type** to *Boolean*.<br/> 
 
     ![](attachments/microflows-how-to-merge-and-change-object/new-attribute-active.png)<br/>
 
@@ -95,7 +95,7 @@ Now you will add logic to the microflow. You have merged three flows into one to
 
     ![](attachments/microflows-how-to-merge-and-change-object/change-object-add-new-value.png)<br/>
 
-    c. In the **Change value** dialog window, select the attribute named **Active**, then click the **Expression** tab, and type *true*. This means that after the order form is opened for a specific customer, the customer's status is set to active (active=true), no matter what grade this customer has.<br/> 
+    c. In the **Change value** dialog box, select the attribute named **Active**, then click the **Expression** tab, and type *true*. This means that after the order form is opened for a specific customer, the customer's status is set to active (active=true), no matter what grade this customer has.<br/> 
 
     ![](attachments/microflows-how-to-merge-and-change-object/change-value-expression-editor.png)<br/>
 

@@ -37,7 +37,7 @@ If this option is enabled (**true** by default), Mendix analyzes every microflow
 
 If you experience an issue while running your app in which objects seem to be lost, this option can be disabled to resolve that issue. If this does resolve the issue, please file a bug report so that we can fix the issue in the platform.
 
-### 3.3 After Startup
+### 3.3 After Startup{#after-startup}
 
 Here you can select a microflow that is automatically executed immediately after the application has been started up.
 

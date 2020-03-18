@@ -67,13 +67,13 @@ You can fix this error by creating a microflow that will that will create a new 
 
     ![Default Home Page Setting](attachments/consistency-errors-navigation/default-home-page-field.png)
 
-3. In the **Select Navigation Target** dialog window, click **New**, then select **Create Microflow**.
+3. In the **Select Navigation Target** dialog box, click **New**, then select **Create Microflow**.
 
 4. Name the microflow *ACT_Open_HomePage*.
 
-5. Open the created microflow, add a **Create Object** activity to it 
+5. Open the created microflow, add a **Create object** activity to it 
 
-6.  For the **Create Object** activity, set **Entity** to **Customer**. 
+6.  For the **Create object** activity, set **Entity** to **Customer**. 
 
     ![Create Object Properties](attachments/consistency-errors-navigation/create-object-properties.png)
 

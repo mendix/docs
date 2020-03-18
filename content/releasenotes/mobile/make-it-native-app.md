@@ -12,6 +12,30 @@ For more information on the Make It Native app, see [Getting the Make It Native 
 
 You can download the Make It Native app for [iOS](https://apps.apple.com/app/make-it-native/id1334081181) or [Android](https://play.google.com/store/apps/details?id=com.mendix.developerapp).
 
+## Android 1.2.3 / iOS 1.2.5
+
+**Release date: March 11th, 2020**
+
+### Fixes
+
+* We fixed an issue with synchronization. Changes in the project should be now correctly reflected in the app after reloading.
+
+### Known Issues
+
+* When using the **Touchable** option in the inspector overlay, the Mendix Native app crashes.
+
+## Android 1.2.2 / iOS 1.2.4
+
+**Release date: February 4th, 2020**
+
+### Fixes
+
+* We fixed various minor bugs.
+
+### Known Issues
+
+* When using the **Touchable** option in the inspector overlay, the Mendix Native app crashes.
+
 ## Android 1.2.1 / iOS 1.2.3
 
 **Release date: December 17th, 2019**
@@ -22,7 +46,7 @@ You can download the Make It Native app for [iOS](https://apps.apple.com/app/mak
 
 ### Known Issues
 
-* When using the **Touchable** option in the inspector overlay, the Mendix Native app crashes
+* When using the **Touchable** option in the inspector overlay, the Mendix Native app crashes.
 
 ## Android 1.2.1 / iOS 1.2.2
 
@@ -85,7 +109,7 @@ On Android:
 
 **Release date: September 30th, 2019**
 
-### New Feature
+### New Features
 
 * The Make It Native app now has tablet support. Now you can run and test your Mendix application using the Make It Native app on tablets. 
 
@@ -94,7 +118,7 @@ On Android:
 * We enabled the full suite of device orientations. Now you can test your apps in any device orientation.
 * We improved loading performance by optimizing the bundle size when **Dev Mode** is disabled. 
 
-### Fix
+### Fixes
 
 * <a name="153"></a>We fixed an issue where clearing data on Android via the start screen did not clear cookies correctly.
 

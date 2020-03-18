@@ -19,11 +19,11 @@ The how-to describes the following use case:
 
 You have a list inspections reports that shows companies checked on compliance with safety regulations. You would like to display only companies that failed this inspection. You also would like to display reports for today only. In addition, items should be sorted by date and time starting from the latest one.  
 
-A list of inspection reports is displayed on a page. For example, it can look the following way if you have a list view:
+A list of inspection reports is displayed on a page. If you have the list in a list view, the page can look the following way:
 
 <img src="attachments/pages-how-to-filter-and-sort/list-view-example.png" style="zoom:60%;" />
 
-The page can also look the following way if you have a list in a data grid:
+Or the page can look the following way if your list is in a data grid:
 
 ![](attachments/pages-how-to-filter-and-sort/page-example-data-grid.png)
 
@@ -51,7 +51,7 @@ To configure a filter, do the following:
 
 2. In the **Data Source** section, click **Filter**:
 
-    <img src="attachments/pages-how-to-filter-and-sort/properties-filter.png" style="zoom:67%;" />
+    <img src="attachments/pages-how-to-filter-and-sort/properties-filter.png" style="zoom: 50%;" />
 
 3. In the **Add Filter** dialog box, add conditions of the filter by doing the following:
 
@@ -69,7 +69,7 @@ To configure a filter, do the following:
 
 		![](attachments/pages-how-to-filter-and-sort/filter-date-and-time.png)
 
-    5. Click **Save**.
+    5. Click **Add**.
 
 
 You have created the filter that has two conditions and reads the following way: *Select records of InspectionReport where Passed is false and date and time is Today. This means this filter will show you only the reports that fall under both conditions: which failed the inspection check and which were created or modified in the current day. 
@@ -78,13 +78,13 @@ You have created the filter that has two conditions and reads the following way:
 
 To sort items in the list by date and time starting from the latest one, follow the steps below:
 
-1. Select the list view and open its properties.
+1. Select the list view or the data grid and open its properties.
 
 2. In **Sorting Order** property, click **Add Sorting Rule**.
 
 3. In **Add sorting rule** dialog box, select the **DateAndTime** attribute and set **Order** to *Descending*.
 
-	<img src="attachments/pages-how-to-filter-and-sort/add-sorting-rule.png" style="zoom:70%;" />
+	<img src="attachments/pages-how-to-filter-and-sort/add-sorting-rule.png" style="zoom:50%;" />
 
 4. Click **Add**.
 

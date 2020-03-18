@@ -26,7 +26,7 @@ FROM
 
 ## 2 entity_name
 
-This specifies the entity from which data must be retrieved. Entity name can be optionally encapsulated in double quotes. If entity name is a reserved OQL word, like `Order` or `Group`, double quotes are mandatory.
+This specifies the entity from which data must be retrieved. The entity name can be optionally encapsulated in double quotes. If the entity name is a reserved OQL word (like `Order` or `Group`), double quotes are mandatory.
 
 ## 3 ( sub_oql_query )
 
@@ -55,7 +55,7 @@ This specifies the entity to join and the path from an earlier defined entity in
 
 The path `Crm.Customer/Crm.Customer_Address/Crm.Address` defines a path from the earlier defined entity **Crm.Customer** to the new entity **Crm.Address**.
 
-Similarly to entity_name, double quotes can be used.
+Similar to `entity_name`, double quotes can be used.
 
 ### 4.2 \[ ON \<constraint\> \]
 

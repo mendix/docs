@@ -7,11 +7,11 @@ tags: ["studio pro", "loop"]
 
 ## 1 Introduction
 
-A loop is used to iterate over a list of objects. For each object the flow inside the loop is executed. The iterator, which looks the same as a parameter, represents the current object in the list for each iteration. Beneath it the name of the object is shown in black and the entity type of the object in blue.
+A loop is used to iterate over a list of objects. For each object the flow inside the loop is executed. The iterator, which looks the same as a parameter, represents the current object in the list for each iteration. The name of the object is shown in black and the entity type of the object is in blue.
 
-The flow starts at the element that has no incoming sequence flows. A loop can contain all elements used in flows, with the exception of start and stop events. Additionally, a loop (and only a loop) can contain [break events](break-event) and [continue events](continue-event).
+The flow starts at the element that has no incoming sequence flows. A loop can contain all elements used in flows except for start and stop events. Only a loop can contain [break events](break-event) and [continue events](continue-event).
 
-For example, if you have a situation where you have a list of objects of the entity 'OrderLine' and you want to set the purchase date for every object, you can use a loop with a change activity in it that sets the purchase date.
+For example, if you have a list of objects of the *OrderLine* entity and you want to set the purchase date for every object, you can use a loop with a change activity in it that sets the purchase date:
 
 ![](attachments/819203/917942.png)
 

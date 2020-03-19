@@ -3,7 +3,6 @@ title: "Atlas UI Reference & Custom Styling"
 category: "Themes"
 description: "Describes the configuration and usage of the Atlas UI Reference & Custom Styling theme, which is available in the Mendix App Store."
 tags: ["app store", "app store component", "atlas ui", "atlas ui reference", "custom styling", "page template", "building block", "widget", "platform support"]
-draft: true
 ---
 
 ## 1 Introduction

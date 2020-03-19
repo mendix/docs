@@ -3,7 +3,6 @@ title: "Navigation Layout"
 category: "Modules"
 description: "Describes the configuration and usage of the Navigation Layout module, which is available in the Mendix App Store."
 tags: ["app store", "app store component", "navigation layout", "platform support"]
-draft: true
 ---
 
 ## 1 Introduction

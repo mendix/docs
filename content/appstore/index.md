@@ -2,7 +2,6 @@
 title: "App Store Guide"
 description: " "
 tags: [ "app store", "app store component", "platform support"]
-draft: true
 ---
 
 ## 1 Introduction

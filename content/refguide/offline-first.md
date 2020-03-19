@@ -146,11 +146,12 @@ These actions are as the following:
 * [Close page](close-page.md)
 
 #### 4.1.2 Microflow Arguments Type
-* Only arguments of non-persistable entities that have no associations with persistable entities are allowed to be used. For each of these arguments we send the entire reachable tree of the associated objects to the server to execute the call.
-* Passing non-persistable objects created in a microflow is not supported.
+* Passing an object or a list of a persistable entity is not supported.
+* Passing an object or a list of a non-persistable entity that have an association with a persistable entity is not supported (such association can be an indirect association).
 
 #### 4.1.3 Microflow Return Value
-Returning objects or lists of persistable entities is not supported. 
+* Returning an object or a list of persistable entity is not supported.
+* Returning an object or a list of a non-persistable entity that have an association with a persistable entity is not supported (such association can be an indirect association).
 
 ### 4.2 Autonumbers & Calculated Attributes
 

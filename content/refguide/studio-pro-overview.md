@@ -40,7 +40,7 @@ For more information on menus, see [Menus](menus).
 
 You can deploy your app by clicking the **Run** or **Run locally** buttons. To view your deployed app, click the **View** button. 
 
-For more information on deployment in Mendix, see [Deployment](developerportal/deploy).
+For more information on deployment in Mendix, see [Deployment](/developerportal/deploy).
 
 For more information on deploying your app and versioning it, see  the [Versioning a Project Deployed to the Cloud](using-version-control-in-studio-pro#versioning-project) section in *Using Version Control in Studio Pro*. 
 

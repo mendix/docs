@@ -31,7 +31,7 @@ When it comes to testing your application, you first need to decide what you are
 
 Studio Pro allows you to run and view your app locally or in the default environment.
 
-For more information on options for deploying your app see [Deployment](/developerportal/deploy/index).
+For more information on options for deploying your app see [Deployment](/developerportal/deploy).
 
 ## 3 Version Control
 
@@ -39,7 +39,7 @@ For more information on options for deploying your app see [Deployment](/develop
 
 ## 4 Mendix Runtime
 
-The [Mendix Runtime](mendix-runtime) executes the application model that is created in Studio Pro. It is included in the Studio Pro 8 Guide as it is uses the same version numbering. 
+The [Mendix Runtime](runtime) executes the application model that is created in Studio Pro. It is included in the Studio Pro 8 Guide as it is uses the same version numbering. 
 
 ## 5 Mobile
 

@@ -2,15 +2,17 @@
 title: "Start Event"
 parent: "events"
 menu_order: 1
-tags: ["studio pro"]
+tags: ["studio pro", "start event", "event"]
 ---
 
-A start event defines the location where the flow will start from. A flow can only start from one location. Therefore, a flow can only contain one start event.
+## 1 Introduction
+A start event defines a starting point of a microflow and is represented by a green dot. A flow can contain only one start event.
 
-{{% alert type="info" %}}
+Link a start event and an activity you would like to start the microflow from with a [sequence flow](sequence-flow).
 
-When you want to start your flow with an activity, you link a start event, using a sequence flow with the activity.
+![](attachments/events/start-event.png)
 
-![](attachments/819203/917944.png)
+## 2 Read More
 
-{{% /alert %}}
+* [End Event](end-event)
+* [Sequence Flow](sequence-flow)

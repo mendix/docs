@@ -2,13 +2,13 @@
 title: "Events"
 parent: "application-logic"
 menu_order: 90
-tags: ["studio pro"]
+tags: ["studio pro", "event", "events"]
 ---
 
 This section describes the events for microflows and nanoflows:
 
-* [Break Event](break-event)
-* [Continue Event](continue-event)
+* [Start Event](start-event)
 * [End Event](end-event)
 * [Error Event](error-event)
-* [Start Event](start-event)
+* [Continue Event](continue-event)
+* [Break Event](break-event)

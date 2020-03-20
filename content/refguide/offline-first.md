@@ -135,7 +135,11 @@ Mendix helps developers in building rich offline-first apps. However, there are 
 
 Microflows can be called from offline apps by using [Microflow call](microflow-call.md) action in your nanoflows to perform logic on the server. However, it works a bit different that it is when used in online profiles, these differences are explained below:
 
-#### 4.1.1 UI Actions
+#### 4.1.1 Microflow Arguments Type
+* Passing an object or a list of a persistable entity is not supported.
+* Passing an object or a list of a non-persistable entity that have an association with a persistable entity is not supported (such association can be an indirect association).
+
+#### 4.1.2 UI Actions
 UI related actions will be ignored and will not have any effect. We encourage you to model such UI side effects in the caller nanoflow.
 
 These actions are as the following:
@@ -144,10 +148,7 @@ These actions are as the following:
 * [Show home page](show-home-page.md)
 * [Show page](show-page.md)
 * [Close page](close-page.md)
-
-#### 4.1.2 Microflow Arguments Type
-* Passing an object or a list of a persistable entity is not supported.
-* Passing an object or a list of a non-persistable entity that have an association with a persistable entity is not supported (such association can be an indirect association).
+* [Download file](download-file.md)
 
 #### 4.1.3 Microflow Return Value
 * Returning an object or a list of persistable entity is not supported.

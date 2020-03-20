@@ -10,6 +10,10 @@ tags: ["studio pro"]
 This activity can only be used in **Microflows**.
 {{% /alert %}}
 
+{{% alert type="warning" %}}
+This action is ignored and does not work when microflow is called from an offline native or hybrid app. For more information, visit [Offline](offline-first#4-1-microflows).
+{{% /alert %}}
+
 ## 1 Introduction
 
 The download-file action can be used to enable the browser to download a specific file. The user gets a download popup or the file is shown directly in the browser.

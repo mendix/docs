@@ -11,7 +11,7 @@ This activity can be used in both **Microflows** and **Nanoflows**.
 {{% /alert %}}
 
 {{% alert type="warning" %}}
-Please note that this action will be ignored and will not have any effect when used inside a microflow that has been called from a nanoflow in an offline profile (for more information, see [Offline](offline-first#4-1-microflows)).
+This action is ignored and does not work when microflow is called from an offline native or hybrid app. For more information, visit [Offline](offline-first#4-1-microflows).
 {{% /alert %}}
 
 ## 1 Introduction

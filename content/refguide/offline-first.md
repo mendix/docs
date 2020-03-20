@@ -150,12 +150,12 @@ These actions are as the following:
 * [Close page](close-page.md)
 * [Download file](download-file.md)
 
-#### 4.1.3 Microflow Return Value
+#### 4.1.3 Objects Side-effects
+When your microflow is dealing with objects, changes on these objects will not be reflected to the client unless you perform synchronization in case of persistable objects, or return these objects in case of non-persistable.
+
+#### 4.1.4 Microflow Return Value
 * Returning an object or a list of persistable entity is not supported.
 * Returning an object or a list of a non-persistable entity that have an association with a persistable entity is not supported (such association can be an indirect association).
-
-#### 4.1.4 Objects Side-effects
-* When your microflow is dealing with objects, changes on these objects will not be reflected to the client unless you perform synchronization in case of persistable objects, or return these objects in case of non-persistable.
 
 ### 4.2 Autonumbers & Calculated Attributes
 

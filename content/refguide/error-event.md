@@ -15,11 +15,11 @@ An error event defines where a microflow will stop and throw an error that occur
 
 {{% alert type="warning" %}}
 
-You can only use an error event if an error is in scope: Studio Pro does not accept it if you connect the normal execution flow to an error event, because there would not be an error to re-throw.
+You can only use an error event if an error is in scope: Studio Pro does not accept it if you connect the normal execution flow to an error event, because there would not be an error to pass back to the caller..
 
 {{% /alert %}}
 
-In this example, an error is caught while committing an object to the database, and is re-thrown at the error event. From outside the microflow, you can catch this error with custom error handling and react appropriately. So you can implement your error handling on multiple levels.
+In this example, an error occurs while committing an object to the database. It is caught, and the flow continues to the error event where the error is passed back to the caller of the microflow. So you can implement your error handling on multiple levels.
 
 ![](attachments/events/error-event.png)
 

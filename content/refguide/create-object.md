@@ -46,13 +46,11 @@ Nanoflows do not support committing changes without events. Committing while run
 If the microflow is called from the client, [data sources](data-sources) do not reload, unless **Refresh in client** is set to *Yes*.
 
 {{% alert type="warning" %}}
-
 When inside a [nanoflow](nanoflows), the create object action reloads [data sources](data-sources) as if Refresh in client was set to *Yes*.
-
-{{% alert type="warning" %}}
-When inside a [microflow](microflows.md) that has been called from a nanoflow in an offline profile, **Refresh in client** option will be ignored as if it was set to *No* (for more information, see [Offline](offline-first#4-1-microflows)).
 {{% /alert %}}
 
+{{% alert type="warning" %}}
+When inside a microflow that is called from an offline native or hybrid app, **Refresh in client** option is ignored and work as if it is was set to *No*. For more information, visit [Offline](offline-first#4-1-microflows).
 {{% /alert %}}
 
 Default: *No*

@@ -46,7 +46,7 @@ When inside a [nanoflow](nanoflows), the rollback object action reloads [data so
 {{% /alert %}}
 
 {{% alert type="warning" %}}
-When inside a microflow that has been called from a nanoflow in an offline profile, **Refresh in client** option will be ignored as if it was set to *No* (for more information, see [Offline](offline-first#4-1-microflows)).
+When inside a microflow that is called from an offline native or hybrid app, **Refresh in client** option is ignored and work as if it is was set to *No*. For more information, visit [Offline](offline-first#4-1-microflows).
 {{% /alert %}}
 
 Default: *No*

@@ -10,6 +10,12 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 ## 2020
 
+### March 26th, 2020
+
+#### SAP Environments Page
+
+* We have added a log of all deployment activities which are carried out on your SAP environments.
+
 ### March 17th, 2020
 
 #### Mendix Clouds

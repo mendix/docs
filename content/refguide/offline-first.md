@@ -154,6 +154,9 @@ These actions are as the following:
 * Returning an object or a list of persistable entity is not supported.
 * Returning an object or a list of a non-persistable entity that have an association with a persistable entity is not supported (such association can be an indirect association).
 
+#### 4.1.4 Objects Side-effects
+* When your microflow is dealing with objects, changes on these objects will not be reflected to the client unless you perform synchronization in case of persistable objects, or return these objects in case of non-persistable.
+
 ### 4.2 Autonumbers & Calculated Attributes
 
 Both autonumbers and calculated attributes require input from the server; therefore, they are not allowed. Objects with these attribute types can still be viewed and created offline, but the attributes themselves cannot be displayed.

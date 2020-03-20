@@ -8,19 +8,38 @@ tags: ["studio pro", "end event", "event"]
 
 ## 1 Introduction
 
-An end event defines where the flow will stop. If the return type of the flow is 
-not *Nothing*, a [return value](#return-value) should be specified.
+An end event defines where the flow will stop. There can be more than one end event, for example when a [decision](decision) is used. So, the number of end events depends on the number of possible outcomes of the microflow or a nanoflow.
 
-If you want to stop your flow after an activity, you link the activity to a stop event with a sequence flow. In this case, the flow is called from another flow that expects the *Buyer* to be returned.
+An end event can return an object, enumeration, a list, etc. For more information, see the [Return Value](#return value) section. 
+
+In the example below, a *Buyer* variable of the *Customer* entity is returned by the end event:
+
+
 
 ![](attachments/events/end-event.png)
+
+
 
 ## 2 Behavior Properties
 
 ### 2.1 Return Value {#return-value}
 
-The return value is the value that is returned to the flow that called the current flow. The value can be entered as an [expression](expressions).
+The return value is the value that is returned to the flow that called the current flow. 
+
+You can choose to return nothing, or to return, for example, a list, enumeration, or Boolean value:
+
+![](attachments/events/end-event-type.png)
+
+The return value can be entered as an [expression](expressions).
+
+{{% alert type="info" %}}
+
+If you are calling a microflow from another microflow, note that a *calling* microflow cannot control what is returned. It is controlled by the *called* microflow. 
+
+{{% /alert %}}
 
 ## 3 Read More
 
 * [Start Event](start-event)
+
+* [Microflow Call](microflow-call)

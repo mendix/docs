@@ -6,7 +6,7 @@ tags: ["studio pro", "start event", "event"]
 ---
 
 ## 1 Introduction
-A start event defines a starting point of a microflow and is represented by a green dot. A flow can contain only one start event.
+A start event defines a starting point of a microflow or a nanoflow and is represented by a green circle. A flow can contain only one start event.
 
 Link a start event and an activity you would like to start the microflow from with a [sequence flow](sequence-flow).
 

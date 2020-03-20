@@ -133,7 +133,7 @@ Mendix helps developers in building rich offline-first apps. However, there are 
 
 ### 4.1 Microflows
 
-Microflows can be called from offline apps by using [Microflow call](microflow-call.md) action in your nanoflows to perform logic on the server. However, it works a bit different that it is when used in online profiles, these differences are explained below:
+Microflows can be called from offline apps by using [Microflow call](microflow-call.md) action in your nanoflows to perform logic on the server. However, it works a bit different than it is when used in online profiles, these differences are explained below:
 
 #### 4.1.1 Microflow Arguments Type
 * Passing an object or a list of a persistable entity is not supported.

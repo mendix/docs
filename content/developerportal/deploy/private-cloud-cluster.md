@@ -167,7 +167,11 @@ You can return to this initial question from any of the other questions by choos
 
 ![](attachments/private-cloud-cluster/image17.png)
 
-**Postgres** will enable you to enter the values to configure a PostgreSQL database. You will need to provide all the information about your PostgreSQL database such as host, port, user, database, and password.
+**Postgres** will enable you to enter the values to configure a PostgreSQL database. You will need to provide all the information about your PostgreSQL database such as plan name, host, port, database, user, and password.
+
+{{% alert type="info" %}}
+If the plan already exists you will receive an error that it cannot be created. This is not a problem, you can continue to use the plan, which will now have the new configuration.
+{{% /alert %}}
 
 **Ephemeral** will enable you to quickly set up your environment and deploy your app, but any data you store in the database will be lost when you restart your environment.
 
@@ -178,6 +182,10 @@ You can return to this initial question from any of the other questions by choos
 **Minio** will connect to an S3-compatible object storage. You will need to provide all the information about your Minio storage such as endpoint, access key, and secret key.
 
 **Amazon S3** will connect to an S3 bucket in AWS. You will need to provide all the information about your Amazon S3 storage such as plan name, region, access key, and secret key.
+
+{{% alert type="info" %}}
+If the plan already exists you will receive an error that it cannot be created. This is not a problem, you can continue to use the plan, which will now have the new configuration.
+{{% /alert %}}
 
 **Ephemeral** will enable you to quickly set up your environment and deploy your app, but any data objects you store will be lost when you restart your environment.
 

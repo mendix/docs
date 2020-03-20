@@ -1,5 +1,5 @@
 ---
-title: "Mx Model Reflection"
+title: "MxModel Reflection"
 category: "Modules"
 description: "Describes the configuration and usage of the Mx Model Reflection module, which is available in the Mendix App Store."
 tags: ["app store", "app store component", "mx model reflection", "token configuration", "platform support"]
@@ -7,7 +7,7 @@ tags: ["app store", "app store component", "mx model reflection", "token configu
 
 ## 1 Introduction
 
-The [Mx Model Reflection](https://appstore.home.mendix.com/link/app/69/) module can be used to show the reflection of the configuration in your domain model. The module creates an object for each entity, attribute, and reference.
+The [MxModel Reflection](https://appstore.home.mendix.com/link/app/69/) module can be used to show the reflection of the configuration in your domain model. The module creates an object for each entity, attribute, and reference.
 
 ### 1.1 Typical Usage Scenarios
 

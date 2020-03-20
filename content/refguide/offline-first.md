@@ -151,7 +151,7 @@ These actions are as the following:
 * [Download file](download-file.md)
 
 #### 4.1.3 Objects Side-effects
-When your microflow is dealing with objects, changes on these objects will not be reflected to the client unless you perform synchronization in case of persistable objects, or return these objects in case of non-persistable.
+When your microflow is dealing with objects, changes on these objects will not be reflected to the client unless you perform synchronization in case of persistable objects, or return these objects in case thery are non-persistable objects.
 
 #### 4.1.4 Microflow Return Value
 * Returning an object or a list of persistable entity is not supported.

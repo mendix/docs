@@ -11,7 +11,7 @@ This activity can only be used in microflows, not in nanoflows.
 
 ## 1 Introduction
 
-An error event defines where a microflow will stop and throw an error that occurred earlier. If you call a microflow, you may want to know whether any errors occurred within the microflow or not. This event throws the error again, so the caller of the microflow can catch them. All database actions within the current transaction will be rolled back. For more information on error handlers and their settings, see the [Error Handlers](microflows#errorhandlers) section in *Microflows*. 
+An error event defines where a microflow will stop and throw an error that occurred earlier. If you call a microflow, you may want to know whether any errors occurred within the microflow or not. This event throws the error again, so the caller of the microflow can catch them. You can control whether all database actions within the current transaction will be rolled back. For more information on error handlers and their settings, see the [Error Handlers](microflows#errorhandlers) section in *Microflows*. 
 
 Link an error event and an activity which has an error handlers set on it with a [sequence flow](sequence-flow).
 
@@ -27,6 +27,6 @@ In this example, an error occurs while committing an object to the database. It 
 
 {{% alert type="info" %}}
 
-When adding an error event, you need to add an [error handler](microflows#errorhandlers) to an activity before the error event, and select **Set as error handler** for the sequence flow.
+When adding an error event, you need to add an [error handler](microflows#errorhandlers) for an activity before the error event, and select **Set as error handler** for the sequence flow.
 
 {{% /alert %}}

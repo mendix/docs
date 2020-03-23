@@ -8,13 +8,12 @@ tags: ["studio", "pages", "image", "image uploader"]
 
 ## 1 Introduction 
 
-This how-to explains how you can filter and sort items in a list view or a data grid in Mendix Studio. 
+This how-to explains how you can configure image uploading to a Mendix Studio app. 
 
 **This how-to will teach you how to do the following:**
 
-* Create image and file entities
+* Create image entities
 * Add an image uploader to a form
-* Add a file uploader to a form
 
 The how-to describes the following use case: 
 
@@ -59,13 +58,13 @@ The image entity is automatically created together with a one-to-one association
 
 ## 4 Adding an Image Uploader to a Form
 
-An **Image Uploader** is a widget that allows your end-users upload images. However, it can only function inside a data container (a list view or data view) and can only have an image entity as its data source. If you just drag and drop image uploader to your current form, it will not work, because your current data view has the  **Employee** entity as its data source, which is not an image type of entity. 
+An **Image Uploader** is a widget that allows your end-users upload images. However, it can only function inside a data container (a list view or data view) and can only have an image entity as its data source. If you just drag and drop image uploader to your current form, it will not work, because your current data view has the **Employee** entity as its data source, which is not an image type of entity. 
 
 To solve this issue, you first need to drag and drop another data view *inside* your current one, this way you will be able to access the **ProfilePicture** entity over **Employee_ProfilePicture** association. Then you can place an image uploader inside the second data view and it will work properly with your image entity. 
 
 Follow the steps below:
 
-1.  Open the page with employee's form. 
+1.  Open the page with the employee detail form. 
 
 2. Find a data view in the **Toolbox** and drag and drop it *inside* the current data view. 
 

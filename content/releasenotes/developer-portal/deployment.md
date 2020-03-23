@@ -10,6 +10,13 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 ## 2020
 
+### March 23rd, 2020
+
+#### Mendix for Private Cloud
+
+* We fixed an issue where users could not accept invitations to join a cluster.
+* We fixed an issue were the first time an app was deployed no replicas were started, meaning that it was still in a stopped state. Now all apps will have one replica started when they are deployed for the first time.
+
 ### March 17th, 2020
 
 #### Mendix Clouds

@@ -182,7 +182,7 @@ For example, if you deleted a data view in a page and another person changes som
 
 Resolving a conflict will make the conflict go away but the document may, of course, still be marked as changed if there are changes to commit.
 
-## 6.2 Resolving a Project Conflict
+### 6.2 Resolving a Project Conflict
 
 Project conflicts are conflicts are conflicts at the level of the project. There are two cause for project conflicts:
 
@@ -300,7 +300,7 @@ The second method should be used if the first method is not possible for some re
 3. Commit your changes using Studio Pro. 
 4. Reopen the main line project in Studio Pro only after overwriting the files.
 
-## 8 Versioning a Project Deployed to the Cloud
+## 8 Versioning a Project Deployed to the Cloud {#versioning-project}
 
 ### 8.1 Deploying Locally
 

@@ -2,7 +2,7 @@
 title: "Continue Event"
 parent: "events"
 menu_order: 4
-tags: ["studio pro", "continue event", "event". "loop"]
+tags: ["studio pro", "continue event", "event", "loop"]
 ---
 
 ## 1 Introduction

@@ -12,7 +12,13 @@ Events are elements that are displayed as circles on a flow of your microflow an
 You can add the following events to your flow:
 
 * [Start Event](start-event) – indicated the beginning of your microflow or nanoflow 
+
 * [End Event](end-event) – defines where the flow stops
+
 * [Error Event](error-event) – defines where the microflow will stop and throw an error
+
 * [Continue Event](continue-event) – used in loops to stop the current iteration and start the iteration of the next object
+
 * [Break Event](break-event) – used in loops to exit the loop and continue with the rest of the flow
+
+    <img src="attachments/events/events.png" style="zoom:67%;" />

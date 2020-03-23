@@ -89,7 +89,7 @@ MxApp.onConfigReady(function(config) {
             samlWindow.executeScript({
                 code: "window.location.href;"
             }, function(href) {
-                if (href[0].indexOf(window.mx.remoteUrl) == 0 && href[0].indexOf("SSO") == -1) {
+                if (href[0].toLowerCase().indexOf(window.mx.remoteUrl.toLowerCase()) == 0 && href[0].indexOf("SSO") == -1) {
                     samlWindow.executeScript({
                         code: "document.cookie;"
                     }, function(values) {

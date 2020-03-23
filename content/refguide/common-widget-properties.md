@@ -94,7 +94,7 @@ In Mendix 8.1 and above, you can edit attributes presented in input widgets over
 {{% /alert %}}
 
 {{% alert type="info" %}}
-In Mendix 8.8 and above, you can edit attributes of any enclosing data container including grandparent data containers, not only of the data container that contains the widget.
+In Mendix 8.8 and above, you can edit attributes of any enclosing data container including grandparent data containers.
 {{% /alert %}}
 
 #### 3.1.2 Association Input Widgets

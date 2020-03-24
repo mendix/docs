@@ -177,7 +177,6 @@ partners:
 appstore:
   space: "App Store Guide"
   priority: false
-  draft: true
   menu_categories:
     - "Connectors"
     - "Widgets"

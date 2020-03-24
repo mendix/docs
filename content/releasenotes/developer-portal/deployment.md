@@ -10,6 +10,17 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 ## 2020
 
+### March 24th, 2020
+
+#### Mendix Operator v1.0.1
+
+* We have added an additional field to the `MendixApp` CR which will allows the Deployment Portal to display the latest state for environments.
+* We have improved compatibility with popular container image registries (such as Azure Container Registry). The build process can now recognize that the container image already has the necessary base layers and avoid downloading them again, saving time and network traffic.
+
+#### Mendix Gateway Agent v1.0.1
+
+* We have improved reliability for sending Environment statuses to the Deployment Portal.
+
 ### March 23rd, 2020
 
 #### Mendix for Private Cloud

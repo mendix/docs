@@ -220,11 +220,13 @@ j. Add a **Show message** activity to this line. Set it as type **Error**, and i
 
 ### 4.3 Testing Deep Linking
 
-Go add some test links, for example `mayapp://app/task/123` or `makeitnative://task/123` to your responsive or mobile page, restart Mendix Studio Pro, and open the page in your device's browser. Tap the links to test:
+Add a few test links, for example {myapp://app/task/123} or {makeitnative://task/123}, to your responsive or mobile page, restart Mendix Studio Pro, and open the page in your device's browser. Tap the links to test:
 
 ![studio pro test page](attachments/native-deep-link/page-test-deep-link.png)
 
-Please note that if you are not running the app from a local source, you must rebuild your app with the Native builder before testing.
+{{% alert type="info" %}}
+Please note that if you are not running the app from a local source, you must build your app again with the Native builder before testing. Do this by using the `build` command: `build --project-name “Native Deep Link” --app-version “1.0.0" --build-number 2`.
+{{% /alert %}}
 
 ## 5. Read more
 

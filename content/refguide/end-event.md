@@ -10,7 +10,7 @@ tags: ["studio pro", "end event", "event"]
 
 An end event defines where the flow will stop. 
 
-An end event can return a value: an object, enumeration, a list, etc. For more information, see the [Return Value](#return value) section. 
+An end event can return a value: an object, enumeration, a list, etc. For more information, see the [Return Value](#return-value) section. 
 
 In the example below, a *Buyer* variable of the *Customer* entity is returned by the end event:
 

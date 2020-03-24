@@ -1,34 +1,48 @@
 ---
 title: "Rollback Object"
 parent: "object-activities"
+menu_order: 7
+tags: ["studio pro"]
 ---
 
+{{% alert type="warning" %}}
+This activity can be used in both **Microflows** and **Nanoflows**.
+{{% /alert %}}
 
-The rollback-object action can be used to undo changes (that have not been committed) that were made to the object in the part of the microflow preceding the activity. Furthermore, it deletes objects that have been created but have never been committed.
+## 1 Introduction
 
-**Rollback in sub microflows**
-
-When the rollback-object action is performed in a sub microflow it will roll back the changes in the sub microflow, as well as its parent microflow.
+The rollback object action can be used to undo changes (that have not been committed) made to the object in the part of the flow preceding the activity. Furthermore, it deletes objects that have been created but never committed.
 
 {{% alert type="info" %}}
 
-See [Microflow Element Common Properties](microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
+When the rollback object action is performed in a sub-microflow, it rolls back the changes in both the sub-microflow as well as its parent microflow.
 
 {{% /alert %}}
 
-## Input Properties
+{{% alert type="info" %}}
 
-### Object
+See [Common Properties](microflow-element-common-properties) for properties that all microflow activities share (for example, caption). This page only describes the properties specific to the action.
+
+{{% /alert %}}
+
+If the microflow is called from the client, [input widgets](input-widgets) showing the rolled back object's attributes are refreshed automatically. This includes updating their visibility and editability [properties](common-widget-properties).
+
+## 2 Input Properties
+
+### 2.1 Object
 
 Object defines the object that needs to be rolled back.
 
-### Refresh in client
+### 2.2 Refresh in Client
 
-This property specifies whether forms that use the entity of the object being rolled back are refreshed.
+If the microflow is called from the client, the rollback is not reflected in the client if **Refresh in client** is set to *No*. If Refresh in client is set to *Yes*, the object is refreshed across the client, which includes reloading of relevant [data sources](data-sources).
 
-| Option | Description |
-| --- | --- |
-| Yes | Objects of same entity are refreshed in the user's browser. |
-| No | Objects of same entity are not refreshed in the user's browser. |
+{{% alert type="info" %}}
+Rolled back attribute values are always reflected in client. [Data sources](data-sources) are only reloaded if **Refresh in client** is set to *Yes*.
+{{% /alert %}}
 
-_Default value_: No
+{{% alert type="warning" %}}
+When inside a [nanoflow](nanoflows), the rollback object action reloads [data sources](data-sources) as if **Refresh in client** was set to *Yes*.
+{{% /alert %}}
+
+Default: *No*

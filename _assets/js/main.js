@@ -4,10 +4,74 @@
 
     This provides the basic functionality in the docs.mendix.com site. Work-in-progress
   */
+
+  function getAllUrlParams(url) {
+
+    var queryString = url ? url.split('?')[1] : window.location.search.slice(1);
+    var obj = {};
+
+    if (queryString) {
+
+      queryString = queryString.split('#')[0];
+      var arr = queryString.split('&');
+
+      for (var i = 0; i < arr.length; i++) {
+        var a = arr[i].split('=');
+        var paramName = a[0];
+        var paramValue = typeof (a[1]) === 'undefined' ? true : a[1];
+
+        paramName = paramName.toLowerCase();
+        if (typeof paramValue === 'string') paramValue = paramValue.toLowerCase();
+
+        if (paramName.match(/\[(\d+)?\]$/)) {
+
+          var key = paramName.replace(/\[(\d+)?\]/, '');
+          if (!obj[key]) obj[key] = [];
+          if (paramName.match(/\[\d+\]$/)) {
+            var index = /\[(\d+)\]/.exec(paramName)[1];
+            obj[key][index] = paramValue;
+          } else {
+            obj[key].push(paramValue);
+          }
+        } else {
+          if (!obj[paramName]) {
+            obj[paramName] = paramValue;
+          } else if (obj[paramName] && typeof obj[paramName] === 'string'){
+            obj[paramName] = [obj[paramName]];
+            obj[paramName].push(paramValue);
+          } else {
+            obj[paramName].push(paramValue);
+          }
+        }
+      }
+    }
+
+    return obj;
+  }
+
   $(function() {
 
     var $win = $(window);
     var $body = $(document.body);
+    window.__mxDocsInIframe = false;
+
+    // Set class for iframes
+    try {
+      const show = getAllUrlParams().show;
+      const noLinks = getAllUrlParams().nolinks;
+      if (typeof show !== "undefined" && show === "iframe") {
+        window.__mxDocsInIframe = true;
+        $body.addClass("iframe");
+        $body.find('.mx__main').removeClass('col-md-9 col-md-push-3');
+        $body.find('.mx__sidebar').remove();
+        $body.find('.topbar').remove();
+      }
+      if (typeof noLinks !== "undefined" && noLinks === "1") {
+        $body.addClass("nolinks");
+      }
+    } catch (error) {
+      console.warn(error);
+    }
 
     // Make sure external links are opened with _blank
     $(".mx__page__content a").each(function () {
@@ -23,15 +87,57 @@
     });
 
     /*****************
+      Image containers
+    ******************/
+    $('.image-container').each(function () {
+      var $this = $(this);
+      var widthData = $this.data('max-width');
+      var alignData = $this.data('align');
+      var $images = $('img', $this);
+      if (!widthData || !$images) {
+        return;
+      }
+      if (alignData) {
+        $this.addClass('text-' + alignData);
+      }
+      var width = 'number' === typeof widthData ? widthData + 'px' : widthData;
+      $images.each(function () {
+        var $img = $(this);
+        $img.css('width', '100%');
+        $img.css('max-width', width);
+        $img.show();
+      });
+    });
+
+    /*****************
       Menu structure
     ******************/
     function normalizeId(id) {
-      return id.replace(/[ '"\+\-&]+/g, "-").toLowerCase();
+      return id.replace(/[ '"\+\-&\.]+/g, "-").replace(/[\(\)]/g, '').toLowerCase();
     }
 
     function getRandom(max) {
       max = Math.floor(max);
       return Math.floor(Math.random() * max);
+    }
+
+    function hasMenuOrders(arr) {
+      return arr.length > 0 && arr.filter(function (p) { return typeof p.mo !== 'undefined'; }).length > 0;
+    }
+
+    function sortOnMenuOrders(arr) {
+      if (hasMenuOrders(arr)) {
+        var fixed = arr.map(function (p) {
+          if (typeof p.mo === 'undefined') {
+            p.mo = 100000000;
+          }
+          return p;
+        });
+        return fixed.sort(function (p1, p2) {
+          return p1.mo - p2.mo;
+        });
+      }
+      return arr;
     }
 
     function sortPages(arr, getModifier, numFunc) {
@@ -71,23 +177,29 @@
       return arr.sort();
     }
 
-    function addNormalLink(title, url) {
+    function addNormalLink(title, url, draft) {
+      var cleanUrl = url === null ? null : url.replace(/[\(\)]/g, '');
       return $([
         '<i class="link-icon link-icon-link"></i>',
-        url === null ? '' : '<a href="' + url + '" data-page-title="' + title + '" title="' + title + '">',
-        '<div class="category-title" ' + (url === null ? 'data-page-title="' + title + '"' : '') + '>' + title + '</div>',
-        url === null ? '' : '</a>'
+        cleanUrl === null ? '' : '<a href="' + cleanUrl + '" data-page-title="' + title + '" title="' + title + '">',
+        '<div class="category-title" ' + (cleanUrl === null ? 'data-page-title="' + title + '"' : '') + '>' + title +
+        (draft ? '<span class="category-title__badge badge">draft</span>' : '') +
+        '</div>',
+        cleanUrl === null ? '' : '</a>'
       ].join(''));
     }
 
-    function addExpandLink(id, title, url) {
+    function addExpandLink(id, title, url, draft) {
+      var cleanUrl = url === null ? null : url.replace(/[\(\)]/g, '');
       return $([
         '<a class="expand-link" href="#' + id + '" data-toggle="collapse" aria-expanded="false" aria-controls="' + id + '">',
         '<i class="link-icon link-icon-menu"></i>',
         '</a>',
-        url === null ? '' : '<a title="' + title + '" data-page-title="' + title + '" href="' + url + '">',
-        '<div class="category-title" ' + (url === null ? 'data-page-title="' + title + '"' : '') + '>' + title + '</div>',
-        url === null ? '' : '</a>',
+        cleanUrl === null ? '' : '<a title="' + title + '" data-page-title="' + title + '" href="' + cleanUrl + '">',
+        '<div class="category-title" ' + (cleanUrl === null ? 'data-page-title="' + title + '"' : '') + '>' + title +
+        (draft ? '<span class="category-title__badge badge">draft</span>' : '') +
+        '</div>',
+        cleanUrl === null ? '' : '</a>',
       ].join(''));
     }
 
@@ -100,6 +212,7 @@
           return rootpage.p && rootpage.p.toLowerCase() === page.i.toLowerCase() && rootpage.d.indexOf(page.d) !== -1;
         });
         var title = typeof page.mt !== 'undefined' ? page.mt : page.t;
+        var draft = typeof page.dr !== 'undefined' ? page.dr : false;
 
         if (subpages && subpages.length > 0) {
           var pageId = 'page-' + getRandom(100000) + '-' + normalizeId(page.i),
@@ -109,11 +222,13 @@
             subpages = sortOnVersion(subpages);
           }
 
-          $item.append(addExpandLink(pageId, title, page.u));
+          subpages = sortOnMenuOrders(subpages);
+
+          $item.append(addExpandLink(pageId, title, page.u, draft));
           $collapse.append(addPages(subpages, data));
           $item.append($collapse);
         } else {
-          $item.append(addNormalLink(title, page.u));
+          $item.append(addNormalLink(title, page.u, draft));
         }
         $list.append($item);
       });
@@ -132,18 +247,22 @@
         console.log('Problem with ' + spaceID + ', multiple category pages found for: ' + catID, catPage);
       }
       var catUrl = catPage && catPage.length === 1 ? catPage[0].u : null;
+      var catDraft = catPage && catPage.length === 1 ? (typeof catPage[0].dr !== 'undefined'? catPage[0].dr : false) : false;
 
       if (catUrl && catUrl.indexOf("/releasenotes/") === 0){
         getPages = sortOnVersion(getPages);
       }
 
+      getPages = sortOnMenuOrders(getPages);
+
       if (getPages.length === 0 && catUrl) {
-        $cat.append(addNormalLink(cat, catUrl));
+        $cat.append(addNormalLink(cat, catUrl, catDraft));
       } else if (getPages.length > 0) {
         var catId = spaceID + '-cat-' + id,
-            $collapse = $('<div class="collapse" id="'+ catId + '" />');
+            $collapse = $('<div class="collapse" id="'+ catId + '" />'),
+            isDraft = catPage.length === 1 ? (typeof catPage[0].dr !== 'undefined' ? catPage[0].dr : false) : false;
 
-        $cat.append(addExpandLink(catId, cat, catPage.length === 1 ? catPage[0].u : null));
+        $cat.append(addExpandLink(catId, cat, catPage.length === 1 ? catPage[0].u : null, isDraft));
         $collapse.append(addPages(getPages, data));
         $cat.append($collapse);
       } else {
@@ -153,35 +272,59 @@
       return $cat;
     }
 
-    function menu(element, callback) {
+    function hasPathInData(data, main) {
+      if (main.u && main.u === window.location.pathname) {
+        return true;
+      }
+      if (data.pages) {
+        var filtered = data.pages
+          .map(function (page) { return page.u.replace(window.location.pathname, '')})
+          .filter(function (u) { return u === '' || u === '/' });
+        return filtered.length > 0;
+      }
+      return false;
+    }
+
+    function menu(element, data, callback) {
       var $menu = $(element),
           $source = $menu.data('source');
-      $.get($source, function( data ) {
-        if (data.categories && data.pages) {
-          var mainPage = data.pages.filter(function (page) { return page.m });
-          var space = $source.replace('/json/', '').replace('.json', '');
-          if (mainPage.length === 1) {
-            var main = mainPage[0];
-            var mainID = 'space-' + normalizeId(main.t);
-            var $space = $('<div class="space" />');
-            var $collapse = $('<div class="collapse" id="' + mainID + '" />');
-            var title = typeof main.mt !== 'undefined' ? main.mt : main.t;
-            $menu.append($space);
-            $space.append(addExpandLink(mainID, title, main.u));
-            $space.append($collapse);
+      if (data.categories && data.pages) {
+        var mainPage = data.pages.filter(function (page) { return page.m });
+        var space = $source.replace('/json/', '').replace('.json', '');
+        if (mainPage.length === 1) {
+          var main = mainPage[0];
+          var isDraft = typeof main.dr !== 'undefined' ? main.dr : false;
+          var mainID = 'space-' + normalizeId(main.t);
+          var $space = $('<div class="space" />');
+          var $collapse = $('<div class="collapse" id="' + mainID + '" />');
+          var title = typeof main.mt !== 'undefined' ? main.mt : main.t;
+          $menu.append($space);
+          var $expandLink = addExpandLink(mainID, title, main.u, isDraft);
+          $space.append($expandLink);
+          $space.append($collapse);
+          if (hasPathInData(data, main)) {
             data.categories.forEach(function (cat) {
               $collapse.append(createCategory(space, cat, data));
             });
             callback($menu);
           } else {
-            console.warn('Cannot find mainpage for ' + $source);
+            $('> .expand-link', $expandLink.parent()).one('click', function (e) {
+              data.categories.forEach(function (cat) {
+                $collapse.append(createCategory(space, cat, data));
+              });
+            });
+            callback($menu);
           }
+        } else {
+          console.warn('Cannot find mainpage for ' + $source);
         }
-      });
+      }
     }
 
     function hasBreadCrumbLink(title) {
-      return $('ul.mx__breadcrumb').find('li').filter(function (){ return $(this).text().trim() === title.trim(); }).length > 0;
+      return $('ul.mx__breadcrumb').find('li').filter(function (){
+        return $(this).text().trim() === (title + "").trim();
+      }).length > 0;
     }
 
     function shortenBreadCrumb() {
@@ -229,12 +372,15 @@
 
     function walkmenu(element) {
       var found = false;
+      var hrefList = [];
+      var broken = false;
       $(element).find('a').each(function () {
         var $menulink = $(this);
         if ($menulink.attr('href') === window.location.pathname) {
           var $parents = $($menulink.parents('.collapse').get().reverse()),
               $breadcrumb = $('ul.mx__breadcrumb'),
               href = $menulink.attr('href'),
+              $menulinkTitle = $menulink.data('page-title') || $menulink.text(),
               $parent = $menulink.parent();
 
           $menulink.addClass('active');
@@ -242,26 +388,79 @@
           $parents.each(function () {
             var $collapse = $(this),
                 $parentlink = $collapse.parent().find('> a.expand-link'),
+                $parentA = $collapse.parent().find('> a:not(.expand-link)'),
                 $title = $collapse.parent().find('> [data-page-title]');
 
             $collapse.addClass('in');
             $parentlink.attr('aria-expanded', 'true');
 
             if ($title && $title.length) {
+              var dataTitle = $title.data('page-title') || $title.text();
               found = true;
               $title.addClass('sub-active');
-              if (!hasBreadCrumbLink($title.text())) {
+              if (!hasBreadCrumbLink(dataTitle)) {
                 if ($title.attr('href')) {
-                  $breadcrumb.append('<li><a href="' + $title.attr('href') + '" title="' + $title.text() + '">' + $title.text() + '</a></li>');
+                  $breadcrumb.append('<li><a href="' + $title.attr('href') + '" title="' + dataTitle + '">' + dataTitle + '</a></li>');
                 } else {
-                  $breadcrumb.append('<li>' + $title.text() + '</li>');
+                  $breadcrumb.append('<li>' + dataTitle + '</li>');
                 }
               }
             }
+
+            if ($parentA && $parentA.attr('href')) {
+              hrefList.push({
+                title: $parentA.text(),
+                href: $parentA.attr('href')
+              });
+            } else {
+              broken = true;
+            }
+
           });
 
+          if (!broken) {
+            hrefList.push({
+              title: $menulinkTitle,
+              href: href
+            });
+            var schema = {
+              "@context": "http://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "item":
+                  {
+                    "@type": "WebSite",
+                    "@id": "https://docs.mendix.com",
+                    "name": "Mendix Documentation"
+                   }
+                }
+              ]
+            };
+
+            $.each(hrefList, function (index, item) {
+              schema.itemListElement.push({
+                "@type": "ListItem",
+                "position": index + 2,
+                "item":
+                {
+                  "@type": "WebPage",
+                  "@id": "https://docs.mendix.com" + item.href,
+                  "name": item.title
+                 }
+               });
+            });
+
+            $( "<script/>", {
+              "type": "application/ld+json",
+              "html":JSON.stringify(schema, null, 4)
+            }).appendTo( "head" );
+          }
+
           if (!hasBreadCrumbLink($menulink.text())) {
-            $breadcrumb.append('<li><a href="' + href + '" title="' + $menulink.text() + '">' + $menulink.text() + '</a></li>');
+            $breadcrumb.append('<li><a href="' + href + '" title="' + $menulinkTitle + '">' + $menulinkTitle + '</a></li>');
           }
 
           if ($parent.find('> .expand-link').length === 1) {
@@ -277,11 +476,29 @@
       $('.sidebar-menu--loading').removeClass('sidebar-menu--loading');
     }
 
-    $('.menu').each(function () {
-      if ($(this).data("source")) {
-        menu(this, walkmenu);
-      }
-    });
+    var $menus = $('.menu');
+    var isTest = $('body').hasClass('test');
+    var lastBuild = $('meta[property="og:updated_time"]').attr('content');
+    var cacheBust = lastBuild ? '?q=' + +(new Date(lastBuild)) : '';
+    if (!window.__mxDocsInIframe && $menus.length) {
+      $.get('/json/spaces.json' + (isTest ? cacheBust : ''), function( data ) {
+        window.__mxMenuItems = data;
+        $menus.each(function () {
+          if ($(this).hasClass('menu--draft') && !$('body').hasClass('test')) {
+            return true;
+          }
+          var source = $(this).data("source");
+          if (source) {
+            var filtered = data.filter(function (s) { return s.filename === source });
+            if (filtered.length === 1) {
+              menu(this, filtered[0].content, walkmenu);
+            } else {
+              console.warn('Cannot find menu for :' + source);
+            }
+          }
+        });
+      })
+    }
 
     /*****************
       Back to top
@@ -368,7 +585,7 @@
       Table of contents
     ******************/
     var $toc = $('#toc');
-    if ($toc.length === 1) {
+    if (!window.__mxDocsInIframe && $toc.length === 1) {
       var maxLevel = $('#toc') ? $('#toc').data('level') || null : null;
       $('#toc').toc({
         noBackToTopLinks: true,
@@ -391,7 +608,10 @@
       });
 
       var $header = $('.mx__page__header');
-      $toc.children().first().css('margin-top', $header.height() + 8);
+      var $toc_title = $('.mx__toc__title');
+      var initialMarginHeight = $header.height() + 8;
+
+      $toc.children().first().css('margin-top', initialMarginHeight);
       $toc.css('position', 'fixed');
 
       $body.scrollspy({
@@ -403,9 +623,14 @@
         $body.scrollspy('refresh');
       });
 
+      var scrollToc = function () {
+        $toc_title.css('margin-top', $win.scrollTop() > initialMarginHeight ? 0 : initialMarginHeight - $win.scrollTop());
+      }
+
       setTimeout(function () {
         var $el = $toc;
         $el.show();
+        scrollToc();
         $el.affix({
           offset: {
             top: function () {
@@ -417,15 +642,13 @@
             },
             bottom: function () {
               var height = $('.footer').outerHeight(true);
-              height += $('#footerWrapper').outerHeight(true);
+              height += $('.mx-developer__footer').outerHeight(true);
               return this.bottom = height + 50;
             }
           }
         });
-        // $el.on('activate.bs.scrollspy', function (event) {
-        //   console.log(event.target);
-        // })
       }, 100);
+      $win.on('scroll', scrollToc);
     }
 
     /*****************
@@ -535,11 +758,23 @@
       Intercom
     ******************/
     function loadIntercom() {
+      if (window.__mxDocsInIframe) {
+        console.warn('Page in iframe, disabling Intercom');
+        window.Intercom('shutdown');
+        return;
+      }
       if (!window.intercomSettings || !window.intercomSettings.user_id) {
         console.warn('No openID found, so the user might not be logged in. Skipping Intercom');
         window.Intercom('shutdown');
       } else {
         window.Intercom('boot', window.intercomSettings);
+        setTimeout(function () {
+          var loc = window.location.toString();
+          window.Intercom('update', {
+            'url': loc,
+            'update': 1
+          });
+        }.bind(this), 2000);
       }
     }
 
@@ -571,5 +806,6 @@
           loadIntercom();
         });
     }
+
   });
 })(jQuery));

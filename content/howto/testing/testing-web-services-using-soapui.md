@@ -1,17 +1,21 @@
 ---
 title: "Test Web Services Using SoapUI"
 category: "Testing"
-tags: []
+menu_order: 30
+tags: ["test", "testing", "web service", "soapui"]
 ---
+
+## 1 Introduction
+
 You can publish your own webservices in a Mendix application. These webservices consist of operations. Other applications can then call operations of this webservice and you can return a result. This result is based on a microflow that will be executed when the webservice is called. With SoapUI you can create (automated) tests for these webservices.
 
-**After completing this how-to you will know:**
+**This how-to will teach you how to do the following:**
 
-*   How to create a SOAP project with SoapUI.
-*   How to create assertions in SoapUI.
-*   How to build an automated test using SoapUI.
+* Create a SOAP project with SoapUI
+* Create assertions in SoapUI
+* Build an automated test using SoapUI
 
-## 1. Preparation
+## 2 Preparation
 
 Before you can start with this how-to, make sure you have completed the following prerequisites.
 
@@ -20,7 +24,6 @@ Before you can start with this how-to, make sure you have completed the followin
 
 | Software | Version used in this how-to |
 | --- | --- |
-| Mendix Business Modeler | 5.20.0 |
 | SoapUI | 5.2.0 |
 
 {{% alert type="warning" %}}
@@ -29,29 +32,29 @@ All images, names and steps in this how-to are based on these versions. When usi
 
 {{% /alert %}}
 
-## 2\. Publish more microflows as web service operation
+## 3 Publishing More Microflows as Web Service Operation
 
 In the how-to [Exposing a web service](../integration/expose-a-web-service) you already published the microflow _GetCustomers_ as web service operation. In this chapter you will create two more microflow and publish them as web service operation.
 
-1.  Open the **Mendix Business Modeler**.
+1.  Open Studio Pro.
 2.  Open the project you created in the how-to [Exposing a web service](../integration/expose-a-web-service).
-3.  Create a **Microflow** that creates a customer and returns a boolean. 
+3.  Create a **Microflow** that creates a customer and returns a Boolean. 
 
     <iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/27dedcb6-38d2-48e4-a77d-68e1d5bde73a/createcustomer?embed=true"></iframe>
-4.  Create a **Microflow** that deletes a customer and returns a boolean.
+4.  Create a **Microflow** that deletes a customer and returns a Boolean.
 
     <iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/33c17aed-c915-420b-b433-0c22614a0273/deletecustomer?embed=true"></iframe>
 5.  Publish both microflows as web service operation of the **CustomerWebservice** as described in chapter 4 of the how-to [Exposing a web service](../integration/expose-a-web-service).
 
-## 3\. Create a new SOAP project
+## 4 Creating a new SOAP Project
 
 In this chapter you will create a new SOAP project.
 
 1.  Open **SoapUI**.
 2.  Press **CTRL+N** to create a new SOAP project.
     ![](attachments/18448632/18580339.png)
-3.  Run the project locally in the **Mendix Business Modeler**.
-4.  Go to _http://localhost:8080/ws-doc/_.
+3.  Run the project locally in Studio Pro.
+4.  Go to `http://localhost:8080/ws-doc/`.
     ![](attachments/18448632/18580314.png)
 5.  Enter the URL of the WSDL schema in the **Initial WSDL** field in SoapUI.
     The Project Name field will automatically be filled with the name of the webservice following by _?wsdl_.
@@ -59,7 +62,7 @@ In this chapter you will create a new SOAP project.
 6.  Click** OK**. This will create a new SOAP project in SoapUI.
     ![](attachments/18448632/18580313.png)
 
-## 4\. Build a TestSuite, a TestCase and a TestStep
+## 5 Building a TestSuite, TestCase, and TestStep
 
 In this chapter you will build a testsuite. A testsuite contains one or more testcases. Every testcase contains one ore more teststeps. 
 
@@ -69,7 +72,7 @@ In this chapter you will build a testsuite. A testsuite contains one or more tes
 3. Select TestSuite 1 and press **CTRL+N** to create a new TestCase.
    ![](attachments/18448632/18580331.png)
 4. Click **OK**.
-5. Expand Testuite 1 and TestCase 1.
+5. Expand TestSuite 1 and TestCase 1.
 6. Right-click **Test Steps(0)** and select **SOAP Request**.
    ![](attachments/18448632/18580312.png)
 7. Enter _Retrieve Customers_ in the name field.
@@ -98,7 +101,7 @@ In this chapter you will build a testsuite. A testsuite contains one or more tes
 
 14. Press **ALT+Enter** to submit the request. The customers you created in the previous how-to will be shown in the response. The response will look like the code below:
 
-    ```
+    ```xml
     <soap:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tns="http://www.example.com/">
         <soap:Body>
             <tns:GetCustomersResponse>
@@ -131,7 +134,7 @@ In this chapter you will build a testsuite. A testsuite contains one or more tes
     </soap:Envelope>
     ```
 
-## 5\. Assertions
+## 6 Assertions
 
 Assertions are used to validate the message received by a TestStep during execution, usually by comparing parts of the message (or the entire message) to some expected value. In this chapter you will create an assertion that validates the number of customers.
 
@@ -147,7 +150,7 @@ Assertions are used to validate the message received by a TestStep during execut
     ![](attachments/18448632/18580323.png)
 7.  Click **Save**.
 
-## 6\. Extend your test case
+## 7 Extending Your Test Case
 
 In this chapter you will extend your test case with multiple test steps and assertions.
 
@@ -160,7 +163,7 @@ In this chapter you will extend your test case with multiple test steps and asse
 
 2.  Change the request into the following value:
 
-    ```java
+    ```xml
     <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:exam="http://www.example.com/">
        <soapenv:Header/>
        <soapenv:Body>
@@ -205,7 +208,7 @@ In this chapter you will extend your test case with multiple test steps and asse
     </soapenv:Envelope>
     ```
 
-## 7\. Run the test case
+## 8 Running the Test Case
 
 In this chapter you will learn how to run the testcase you created in previous chapters.
 
@@ -216,7 +219,7 @@ In this chapter you will learn how to run the testcase you created in previous c
 
 Congratulations! You have just created your first automated test with SoapUI.
 
-## 8\. Related content
+## 9 Read More
 
 *   [Finding the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
 *   [Clearing Warning Messages in Mendix](../monitoring-troubleshooting/clear-warning-messages)
@@ -225,11 +228,8 @@ Congratulations! You have just created your first automated test with SoapUI.
 *   [Debugging Java actions remotely](../monitoring-troubleshooting/debug-java-actions-remotely)
 *   [Log Levels](../monitoring-troubleshooting/log-levels)
 *   [Debugging Java Actions](../monitoring-troubleshooting/debug-java-actions)
-*   [Common Mendix SSO Errors](../monitoring-troubleshooting/handle-common-mendix-sso-errors)
 *   [Debugging Microflows](../monitoring-troubleshooting/debug-microflows)
 *   [Debugging Microflows Remotely](../monitoring-troubleshooting/debug-microflows-remotely)
-
-
 
 Learn more about this topic using the following helpful links:
 

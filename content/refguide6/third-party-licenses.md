@@ -4,7 +4,7 @@ category: "General"
 ---
 
 
-Mendix uses various third party libraries that have their own licenses. All the licenses are available when you download the freely available Mendix platform installation. They can be found in various subfolders of your Mendix installation folder.
+Mendix uses various third party libraries that have their own licenses. All the licenses are available when you download the freely available Mendix Platform installation. They can be found in various subfolders of your Mendix installation folder.
 
 *   Runtime Server libraries can be found in the folder runtime\lib
 *   Modeler libraries can be found in the folder modeler\Licenses

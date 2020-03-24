@@ -1,32 +1,54 @@
 ---
 title: "Report Parameter"
 parent: "report-widgets"
+menu_order: 20
+tags: ["studio pro"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+## 1 Introduction
 
+A **Report parameter** allows the end-user to select a parameter for the [data set](data-sets) that supplies the data for a [Report grid](report-grid). The parameter is used to filter the results in different ways so that the same report can display different sets of data.
 
-With the report parameter, the user can specify a parameter of the data set that is then used for filtering the data displayed in the [Report](report-widgets).
+For example, a report may show order data for a customer and the report parameter can be used to specify which customer's data should be displayed.
 
-Note that if you have a report parameter widget on the page, you must also add a [Report Button](report-button) widget so that it is possible for the user to regenerate the report after specifying the parameter.
+The report parameter is displayed in structure mode with the data set parameter name (and the attribute to be displayed if the parameter is an object) shown between square brackets and colored blue.
 
-{{% alert type="warning" %}}
+![Report parameter in structure mode](attachments/report-widgets/report-parameter.png)
 
-A drop-down menu can be used for a data set parameter of any type except DateTime. DataTime parameters can be filtered by a [Report Date Parameter](report-date-parameter).
+{{% alert type="info" %}}
+A **Report parameter** cannot be used for data set parameters of type **Date and time**. Date and time parameters must be filtered by a [Report Date Parameter](report-date-parameter) widget.
 
+If you add a report parameter widget on the page, you must also add a [Report Button](report-button) widget. This allows the end-user to regenerate the report after specifying the parameter.
 {{% /alert %}}
 
-## General Properties
+## 2 Report Parameter Properties
 
-### Parameter
+An example of report parameter properties is represented in the image below:
 
-Refers to the data set parameter, the value of which is restricted by this widget. The corresponding data set must be used by one of the report widgets on the page.
+{{% image_container width="300" %}}![Report parameter in structure mode](attachments/report-widgets/report-parameter-properties.png)
+{{% /image_container %}}
 
-### Displayed Attribute
+Report parameter properties consist of the following sections:
 
-If the type of the data set parameter is an object, this property indicates which attribute of the corresponding entity is shown in the drop-down menu.
+* [Common](#common)
+* [Design Properties](#design-properties)
+* [General](#general)
 
-## Common Properties
+### 2.1 Common Section{#common}
 
-### Name, Class, Style
+{{% snippet file="refguide/common-section-link.md" %}}
 
-For details, see [Common Widget Properties](common-widget-properties).
+### 2.2 Design Properties Section{#design-properties}
+
+{{% snippet file="refguide/design-section-link.md" %}}
+
+### 2.3 General Section{#general}
+
+#### 2.3.1 Parameter
+
+**Parameter** is set to a data set parameter, the value of which is restricted by this widget. The corresponding data set must be used by one of the report widgets on the page.
+
+#### 2.3.2 Displayed Attribute
+
+**Displayed attribute** is only available if the data set parameter is an object. Displayed attribute specifies which attribute of the corresponding entity is shown in the drop-down selection.

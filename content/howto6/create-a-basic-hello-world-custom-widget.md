@@ -26,7 +26,7 @@ Before starting with this how-to, make sure you have completed the following pre
 
 ## 3 Custom Widget Overview
 
-This section explains what a custom widget is and how it behaves in the Mendix platform.
+This section explains what a custom widget is and how it behaves in the Mendix Platform.
 
 ### 3.1 What Is a Custom Mendix Widget?
 
@@ -88,7 +88,7 @@ The following files are required to create a widget:
 
 {{% alert type="info" %}}
 
-A property will contain the end-result of something that is configured/provided by Mendix. You must always create a starting situation where you gather what you need before continuing with the logic inside your widget and/or inside the Mendix platform.
+A property will contain the end-result of something that is configured/provided by Mendix. You must always create a starting situation where you gather what you need before continuing with the logic inside your widget and/or inside the Mendix Platform.
 
 {{% /alert %}}
 
@@ -113,7 +113,7 @@ To create a custom widget with Adobe Brackets, follow these steps:
 
     ![](attachments/18448564/18579879.png)
 
-    The name of the widget is very important, because it will be used in Mendix. Using the CamelCase naming convention is recommended (for more information, see [http://en.wikipedia.org/wiki/CamelCase](http://en.wikipedia.org/wiki/CamelCase)). Each new widget should have at least the author, version number, copyright, license, package name, widget name, and path defined before you can click **Continue**. The location directory must also exist, and you must have access rights to the folder. 
+    The name of the widget is very important, because it will be used in Mendix. Using the UpperCamelCase naming convention is recommended (for more information, see [http://en.wikipedia.org/wiki/CamelCase](http://en.wikipedia.org/wiki/CamelCase)). Each new widget should have at least the author, version number, copyright, license, package name, widget name, and path defined before you can click **Continue**. The location directory must also exist, and you must have access rights to the folder. 
 
     These are the additional naming guidelines about the settings:
 
@@ -726,7 +726,7 @@ This is a great book that can help you understand what JavaScript is all about:
 
 [http://addyosmani.com/resources/essentialjsdesignpatterns/book/](http://addyosmani.com/resources/essentialjsdesignpatterns/book/) 
 
-## 9 Related Content
+## 9 Read More
 
 * [Create a Chainable Custom Widget](create-a-chainable-custom-widget)
 * [Get Started with the Widget Development Plugin for Adobe Brackets](getting-started-with-the-widget-development-plugin-for-adobe-brackets)

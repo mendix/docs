@@ -1,6 +1,7 @@
 ---
 title: "Map Automatically"
 parent: "mapping-documents"
+tags: ["studio pro"]
 ---
 
 
@@ -38,4 +39,4 @@ Note that "Map Automatically" is not going to create entity generalization if th
 
 ## Manual verification
 
-"Map automatically" is a helper tool. It creates domain model entities and associations to relieve you from doing a lot of manual work. It is advised that you make sure the changes in the domain model are correct. You can use the reporting dialog, or look at the changes dock of the Modeler to see what has been changed effectively. Often, in more complex mappings, you may want to rename elements in the domain model, reconnect schema elements to other attributes, or revise entity generalizations. Be aware that if a generalization is set to an entity, this may have consequences for the database tables that store Mendix objects.
+"Map automatically" is a helper tool. It creates domain model entities and associations to relieve you from doing a lot of manual work. It is advised that you make sure the changes in the domain model are correct. You can use the reporting dialog, or look at the changes dock of Studio Pro to see what has been changed effectively. Often, in more complex mappings, you may want to rename elements in the domain model, reconnect schema elements to other attributes, or revise entity generalizations. Be aware that if a generalization is set to an entity, this may have consequences for the database tables that store Mendix objects.

@@ -1,12 +1,14 @@
 ---
 title: "String Function Calls"
-parent: "microflow-expressions"
+parent: "expressions"
 description: "Describes the functions for converting and inspecting strings in Mendix."
+tags: ["studio pro"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 These are functions to convert and inspect [strings](data-types). Note that these functions never change the string itself, they only return a new value.
 
-Strings are surrounded by quotes. If the string contains a quote, it should be escaped by another quote. For example: `'this isn't funny'`.
+Strings are surrounded by quotes. If the string contains a quote, it should be escaped by another quote. For example: `'this isn''t funny'`.
 
 ## toLowerCase
 
@@ -110,13 +112,13 @@ returns:
 or, with a third parameter:
 
 ```java
-substring('thisismystring', 6,2)
+substring('mendixapp', 6,3)
 ```
 
 returns:
 
 ```java
-'my'
+'app'
 ```
 
 ## find
@@ -227,19 +229,31 @@ returns:
 
 ## contains
 
-Determines whether a substring occurs in the original string.
+Determines whether the original string (first parameter) contains a substring (second parameter).
 
 This expression: 
 
 ```java
-contains('mystring', 'otherstring')
+contains('stringtosearchin', 'stringtosearchfor')
 ```
 
 is equivalent to the following expression:
 
 ```java
-find('mystring', 'otherstring') != -1
+find('stringtosearchin', 'stringtosearchfor') != -1
 ```
+
+Searching for an empty variable or empty string, like this expression where `$param = ''`:
+
+```java
+contains('stringtosearchin', $param)
+```
+
+will return true.
+
+{{% alert type="warning" %}}
+This function is case-sensitive.
+{{% /alert %}}
 
 ### Input Parameters
 
@@ -309,7 +323,7 @@ Whether the original string ends with the substring.
 * Type: Boolean
 
 ```java
-startsWith('thisismystring', 'ring')
+endsWith('thisismystring', 'ring')
 ```
 
 returns:
@@ -356,10 +370,10 @@ Checks to see if a string matches a given regular expression.
 
 {{% alert type="warning" %}}
 
-Please note that this function call uses a regular expression language provided by the current platform:
+Please note that this function call uses a [regular expression](regular-expressions) language provided by the current platform:
 
 * When used inside a [microflow](microflow) – Java's regular expressions (for details, see [Class Pattern documentation](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html))
-* When used inside [conditional formatting](conditions) – JavaScript's regular expressions (for details, see [Regular Expressions documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions))
+* When used in the client – JavaScript's regular expressions (for details, see [Regular Expressions documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions))
 
 {{% /alert %}}
 
@@ -388,6 +402,10 @@ In `isMatch()`, the regex is implicitly anchored at `^` and `$`.
 * `isMatch('NLG 123.45', '[0-9]')` returns false
 * `isMatch('NLG 123.45', '.*[0-9].*')` returns true
 
+NB searching an empty string:
+
+* `isMatch('', '.*[0-9].*')` returns false
+
 ## replaceAll
 
 Replaces all occurrences of a regular expression with another string.
@@ -396,17 +414,17 @@ Replaces all occurrences of a regular expression with another string.
 
 * The string to search in
     * Type: string
-* The regular expression to match
+* The regular expression to match; if you want to search for a literal string, enclose it between `\Q` and `\E` (for example, `\QPaul S. Mueller\E` will search for the string `Paul S. Mueller`, without interpreting the dot as a wildcard)
     * Type: string
-* The replacement value
+* The string to be substituted for each match (this does not support backreferences, substitutions, or captures)
     * Type: string
 
 {{% alert type="warning" %}}
 
-Please note that this function call uses a regular expression language provided by the current platform:
+Please note that this function call uses a [regular expression](regular-expressions) language provided by the current platform:
 
 * When used inside [microflows](microflows) – Java's regular expressions (for details, see [Class Pattern](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html))
-* When used inside [conditional formatting](conditions) – JavaScript's regular expressions (for details, see [Regular Expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions))
+* When used in the client – JavaScript's regular expressions (for details, see [Regular Expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions))
 
 {{% /alert %}}
 
@@ -447,22 +465,22 @@ Replaces the first occurrence of the regular expression with a replacement strin
 * The string to search in
     * Type: string
 * The regular expression to match
-    * Type: string
-* The replacement value
+    * Type: string; if you want to search for a literal string, enclose it between `\Q` and `\E` (for example, `\QPaul S. Mueller\E` will search for the string `Paul S. Mueller`, without interpreting the dot as a wildcard)
+* The string to be substituted for the first match (this does not support backreferences, substitutions, or captures)
     * Type: string
 
 {{% alert type="warning" %}}
 
-Please note that this function call uses a regular expression language provided by the current platform:
+Please note that this function call uses a [regular expression](regular-expressions) language provided by the current platform:
 
 * When used inside a [microflow](microflow) – Java's regular expressions (for details, see [Class Pattern documentation](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html))
-* When used inside [conditional formatting](conditions) – JavaScript's regular expressions (for details, see [Regular Expressions documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions))
+* When used in the client – JavaScript's regular expressions (for details, see [Regular Expressions documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions))
 
 {{% /alert %}}
 
 ### Output
 
-The original string, with all occurrences of the regular expression replaced by the replacement string. If the regular expression does not occur in the string, the original is returned.
+The original string, with the first occurrence of the regular expression replaced by the replacement string. If the regular expression does not occur in the string, the original is returned.
 
 * Type: string
 
@@ -483,9 +501,9 @@ The `+` operator can be used to concatenate two strings or a string and a number
 ### Input Parameters
 
 * First parameter
-    * Type: string, integer/long, float, or decimal
+    * Type: string, integer/long, decimal
 * Second parameter
-    * Type: string, integer/long, float, or decimal
+    * Type: string, integer/long, decimal
 
 At least one of the parameters must be of type string.
 
@@ -562,7 +580,7 @@ Converts a string back from a URL. The opposite of [urlEncode](#urlEncode).
 The string, URL-decoded.
 
 ```java
-urlEncode('Hello%2C+world%21')
+urlDecode('Hello%2C+world%21')
 ```
 
 returns:

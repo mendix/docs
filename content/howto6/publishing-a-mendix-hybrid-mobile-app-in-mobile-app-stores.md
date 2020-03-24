@@ -22,11 +22,11 @@ You require the following before you can build hybrid mobile packages of your ap
 
 ## 2\. Starting the packaging process
 
-Before starting, make sure you have a Mendix App with mobile support enabled running in the Mendix Cloud, either in a Free App or in a licensed cloud node. If you do not have one ready yet, set up the Company Expenses app from the Mendix App Store in a Free App to try out its mobile features.
+Before starting, make sure you have a Mendix App with mobile support enabled running in the Mendix Cloud, either in a Free App or in a licensed cloud node.
 
 First, open the "Publish for Mobile App Stores" page in the Mendix Developer Portal:
 
-1. Open the Mendix Developer Portal [from your launchpad](https://home.mendix.com/home/).
+1. Open the Mendix Developer Portal.
 2. Go to the project of the Mendix App that you want to publish.
 3.  Go to the **Publish** tab.
 4. Click **Publish for Mobile App Stores**.
@@ -46,7 +46,7 @@ First, open the "Publish for Mobile App Stores" page in the Mendix Developer Por
 8. Click the green **Publish for Mobile App Stores** button.
     You are then presented with the "Build Mobile App Store Packages" page.
 9. Select the environment that you want to publish.
-    *   For Community Edition apps, the only option is "Sandbox" (for example, Free App)
+    *   For Free Apps, the only option is "Sandbox"
     *   For apps running on a licensed cloud node, you can choose from Test, Acceptance and Production (depending on what is available on your cloud node)
 10. Leave the choice on how to build the package on the default: "Build Mobile App Store packages for me by sending the build configuration to Adobe PhoneGap Build". You can use the alternative option to manually download a PhoneGap Build package, which you can then inspect, modify and upload manually to Adobe PhoneGap Build. See our documentation on [how you can customize the PhoneGap Build package](/refguide6/customizing-phonegap-build-packages). This is unnecessary in almost all scenarios.
 11. Start the actual hybrid mobile app package building process: Click the green "Start PhoneGap Build job" button to initiate the packaging process.
@@ -107,23 +107,29 @@ You can now deploy your app to your test device. An easy way to do this is with 
 1.  Open iTunes and connect your iOS device to your computer.
 
     ![](attachments/18448693/18581203.png)
-2.  At the top right, click on the device selector to show the contents of your device.
+2.  At the top right, click the device selector to show the contents of your device.
 3.  Click "Apps" to show available and installed apps.
     ![](attachments/18448693/18581202.png)
 4.  Open the menu in the top left corner of the iTunes window.
 5.  Click "Add File to Library...".
 6.  Select the ".ipa" package file that you downloaded earlier.
-7.  iTunes will ask whether you want to replace any existing version of the app, if there is one - do so.
+7. iTunes will ask whether you want to replace any existing version of the app, if there is one - do so.
+
     *   You can also open an ".ipa" file directly with iTunes by double-clicking on it.
 8.  In the list of apps, your app should show up. Click the "Install" button next to your app.
 
 Click "Apply" at the bottom to execute the actual installation.
 The app should now be visible on your device. Open it and log in to your app with a regular user account (set one up in the Mendix App in your desktop browser if you have not done so yet).
 
-## 5\. Related content
+## 5\. Examples
+
+** How to build a Phonegap app in the cloud **
+
+{{% youtube 7ic625u2YJE %}}
+
+## 6\. Related content
 
 *   [Mobile](mobile)
-*   [Deploy your first Hybrid Mobile App](deploy-your-first-hybrid-mobile-app)
 *   [Publishing a Mendix Hybrid Mobile App in Mobile App Stores](publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)
 *   [The Mobile Slider Custom Widget](the-mobile-slider-custom-widget)
 *   [Debug a Hybrid Mobile Application](debug-a-hybrid-mobile-application)

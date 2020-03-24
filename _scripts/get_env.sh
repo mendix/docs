@@ -6,5 +6,5 @@ if [[ $TRAVIS_BRANCH == 'development' ]]; then
 elif [[ $TRAVIS_BRANCH == 'master' ]]; then
     echo 'production'
 else
-    exit 0
+    echo 'test'
 fi

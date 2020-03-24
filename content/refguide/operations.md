@@ -1,18 +1,19 @@
 ---
 title: "Operations"
 parent: "published-web-services"
+tags: ["studio pro"]
 ---
 
 
 Provides the actual methods of which the webservice is composed.
 
-Looking at an operation in more detail, you can see that a microflow can be selected. When you select a microflow, the other fields will be automatically filled These can be changed as needed.
+Looking at an operation in more detail, you can see that a microflow can be selected. When you select a microflow, the other fields will be automatically filled. These can be changed as needed.
 
 An operation has the following properties:
 
 ## General
 
-## ![](attachments/16713701/16843884.png)
+![](attachments/16713701/16843884.png)
 
 ### Name
 
@@ -61,6 +62,7 @@ The CountCarsAndHp operation. It takes a non-optional list of Vehicle as a param
 {{% /alert %}}{{% alert type="info" %}}
 
 ![](attachments/819203/918221.png)
+
 The microflow attached to the CountCarsAndHp operation. It takes a list of objects of the entity Vehicle as input and returns an object that holds the number of cars and the total amount of horsepower of those cars.
 
 {{% /alert %}}
@@ -102,7 +104,7 @@ This section pertains to the return type of the microflow and how it is transfor
 
 ### Type
 
-Defines what kind of object will be returned by the microflow. If the returned type is a complex type (i.e. something from your entity model) you can use the Members button to select which members will be returned in the same way as parameters.
+Defines what kind of object will be returned by the microflow. If the returned type is a complex type (as in, something from your entity model) you can use the Members button to select which members will be returned in the same way as parameters.
 
 ### Name
 

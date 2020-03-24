@@ -1,25 +1,64 @@
 ---
 title: "Menu Bar"
 parent: "menu-widgets"
+tags: ["studio pro"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert type="warning" %}}The menu bar widget is not supported on native mobile pages.{{% /alert %}}
 
-The menu bar widget shows a configured menu in the form of a horizontal bar with items. Items can have subitems in which case the main item can be expanded. Subitems cannot have subitems again. In the end a [Menu Item](menu-item) points to either the page or the microflow that will opened or started when the item is clicked.
+## 1 Introduction
 
-{{% alert type="info" %}}
+A menu bar shows menu items of a [navigation profile](navigation#profiles) or in a [menu](menu) document in the form of a horizontal bar with items. These items are determined by the [**Menu source**](#menu-source) and are either configured in the **[Navigation](navigation)** or a **[Menu](menu)**.
 
-![](attachments/16713888/16844017.png)
+Menu bars can go two levels deep, that means menu items can have sub-items. For more information on menu items and their properties, see [Menu](menu).
 
-{{% /alert %}}
+![Menu Bar](attachments/menu-widgets/menu-bar.png)
 
-## Common Properties
+## 2 Properties
 
-{{% snippet file="refguide/Name+Property.md" %}}
+An example of menu bar properties is represented in the image below:
 
-{{% snippet file="refguide/Class+Property.md" %}}
+{{% image_container width="300" %}}![](attachments/menu-widgets/menu-bar-properties.png)
+{{% /image_container %}}
 
-{{% snippet file="refguide/Style+Property.md" %}}
+Menu bar properties consist of the following sections:
 
-## General Properties
+* [Common](#common)
+* [Design properties](#design)
+* [General](#general)
 
-{{% snippet file="refguide/Menu+Source+Properties.md" %}}
+### 2.1 Common Section {#common}
+
+{{% snippet file="refguide/common-section-link.md" %}}
+
+### 2.2 Design Properties Section {#design}
+
+{{% snippet file="refguide/design-section-link.md" %}}
+
+### 2.3 General Section {#general}
+
+#### 2.3.1 Menu Source {#menu-source}
+
+The items that are shown in the menu widget are determined by the **Menu source**. Possible menu sources are described in the table below:
+
+| Value              | Description                                                  |
+| ------------------ | ------------------------------------------------------------ |
+| Project navigation  *(default)* | The menu items are taken from one of profiles defined in the [**Navigation**](navigation#profiles). |
+| Menu document      | The menu items are taken from a [menu](menu) document.       |
+
+#### 2.3.2 Profile 
+
+Only available when the [menu source](#menu-source) is set to **Project navigation**. The **Profile** property specifies what [navigation profile](navigation#profiles) is used for the widget. 
+
+Default: *Responsive*
+
+#### 2.3.3 Menu 
+
+Only available when the [menu source](#menu-source) is set to **Menu document**. The **Menu** property specifies what [menu](menu) document is used for the widget.
+
+## 3 Read More
+
+* [Page](page)
+* [Menu Widgets](menu-widgets)
+* [Properties Common in the Page Editor](common-widget-properties)

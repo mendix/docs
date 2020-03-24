@@ -1,35 +1,47 @@
 ---
-title: "Branch Line Manager Dialog"
-parent: "dialogs"
+title: "Branch Line Manager"
+parent: "version-control-menu"
+menu_order: 80
+tags: ["studio pro", "manage branch lines", "branch line manager"]
 ---
-Used to manage the branch lines of a Team Server project. From this dialog new [branch lines](version-control-concepts) can be created and existing branch lines can be deleted. A branch line allows independent development from other development lines. There are two main reasons for creating a branch line. The first is to do maintenance development on a version that is running in production. You can keep on developing in the main line while you fix issues in the branch line. The second reason for creating a branch line is if you are starting the development of a very large feature, a feature that will probably take more than a day to develop. By doing this in a branch line you can commit the half implemented feature (possibly even with errors) without disturbing other development in the main line.
 
-## Team Server project
+## 1 Introduction
 
-Select the Team Server project that you want to manages the branch lines of. If you have a project open in the Modeler it will be selected automatically. However, you can also create a branch line from the Start Page and in that case no project will be selected.
+The **Branch Line Manager** is used to manage [branch lines](version-control#branches) of an app that is stored on a version control server:
 
-By clicking 'New' in the branch lines grid you can create a new branch line.
+![Branch Line Manager](attachments/version-control-menu/branch-line-manager.png)
 
-### Create branch from
+To view the **Branch Line Manager** dialog box, open **Version Control** > **Manage Branch Lines**.
 
-Choose where you want to create the branch line from. If you are doing maintenance on a deployed version you probably want to select a tagged version here. If you want to develop a large feature independently of the main line you choose 'Main line'. It is also possible to create a branch line from another branch line and we recommend you only do that if you know what you are doing.
+A branch line allows independent development from other development lines. There are two main reasons for creating a branch line:
+1. To do maintenance development on a version of your app that is running in production. You can keep on developing in the main line while you fix issues in the branch line.
+2. If you are starting the development of a very large feature that will take more than a day to develop. By doing this in a branch line you can commit the half-implemented feature (possibly even with errors) without disturbing other development in the main line.
 
-### Tagged version (for 'Tagged version')
+## 2 Location
 
-Select from which tagged version you want to create a branch line. Every time you create a deployment archive a tag is created so that you can always refer back to that version of the project.
+Use this setting to select the location where your app is stored. This can be either the [Team Server](#team-server-app) or [another SVN server](#other-svn-server-app).
 
-### Revision (for 'Main line')
+{{% alert type="warning" %}}
 
-Select from which revision of the main line you want to create a branch line. Often you want to choose the most recent version. You then develop some functionality in the branch line and merge it back when you are done.
+This option is only available when support for other SVN servers is enabled in the Preferences dialog.
 
-### Branch line (for 'Branch line')
+{{% /alert %}}
 
-Select from which branch line you want to create another branch line. We recommend that you make branch lines only from the main line but in some cases branching a branch line can be very useful.
+### 2.1 Team Server App {#team-server-app}
 
-### Revision (for 'Branch line')
+Select the Team Server app of which you want to manage the branch lines. If you have an app open in Studio Pro it will be selected automatically. However, you can also manage branch lines without opening an app first, in which case no app will be selected.
 
-Select from which revision of the selected branch line you want to create another branch line.
+For more information about the Mendix Team Server, see [Team Server](/developerportal/develop/team-server).
 
-### Branch name
+### 2.2 Other SVN Server App {#other-svn-server-app}
 
-Enter a name for the new branch line. The existing branch lines are shown so that you do not accidentally create a branch line twice.
+In the **SVN repository address field**, enter the address of the app you want to manage and click **Connect** to load the available branches from the repository.
+
+## 3 Managing Branch Lines
+
+In the **Branch Line Manager**, you can create and delete branch line, enable and disable Mendix Studio for the project. For more information on how to perform these actions, see the [Managing Development Lines in Studio Pro](collaborative-development#managing-branches) section in *Collaborative Development*. 
+
+## 4 Read More
+
+* [Version Control](version-control)
+* [Collaborative Development](collaborative-development)

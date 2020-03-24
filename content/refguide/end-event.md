@@ -1,21 +1,47 @@
 ---
 title: "End Event"
-parent: "microflows"
+parent: "events"
+menu_order: 2
+tags: ["studio pro", "end event", "event"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+## 1 Introduction
 
-An end event defines the location where the microflow will stop. If the return type of the microflow is not `Nothing` a return value should be specified.
+An end event defines where the flow will stop. 
+
+An end event can return a value: an object, enumeration, a list, etc. For more information, see the [Return Value](#return value) section. 
+
+In the example below, a *Buyer* variable of the *Customer* entity is returned by the end event:
+
+![](attachments/events/end-event.png)
+
+The number of end events depends on the number of possible outcomes of the microflow or a nanoflow. That means there can be more than one end event, for example when a [decision](decision) is used:
+
+<img src="attachments/events/end-events.png" style="zoom:60%;" /> 
+
+## 2 Behavior Properties
+
+### 2.1 Return Value {#return-value}
+
+The return value is the value that is returned to the flow that called the current flow. If you have several end events and they have a return value, they all need to return a value of the same type. For example, if one of the end events returns an object of type *Entity*, the others need to return the same type: 
+
+<img src="attachments/events/return-value.png" style="zoom:50%;" />
+
+You can choose to return nothing, or to return, for example, a list, enumeration, or Boolean value:
+
+![](attachments/events/end-event-type.png)
+
+The return value can be entered as an [expression](expressions).
 
 {{% alert type="info" %}}
 
-If you want to stop your microflow after an activity, you link the activity, using a sequence flow with a stop event. In this case the microflow is called from another microflow that expects the buyer to be returned.
-
-![](attachments/819203/917940.png)
+If you are calling a microflow from another microflow, note that a *calling* microflow cannot control what is returned. It is controlled by the *called* microflow. 
 
 {{% /alert %}}
 
-## Behavior Properties
+## 3 Read More
 
-### Return value
+* [Start Event](start-event)
 
-The return value is the value that is returned to the microflow that called the current microflow. The value can be entered as a [microflow expression](microflow-expressions).
+* [Microflow Call](microflow-call)

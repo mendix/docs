@@ -1,25 +1,29 @@
 ---
-title: "Add date function calls"
-parent: "microflow-expressions"
+title: "Add Date Function Calls"
+parent: "expressions"
+tags: ["studio pro"]
 ---
 
+## 1 Introduction
 
-Adding a time unit to a date. In all examples, the first input can be either a new dateTime (depicted in all examples), a variable of type DateTime or an attribute of a domain entity of type DateTime.
+This is a reference for adding a time unit to a date. 
 
-## addMilliseconds
+The first input can be either a new dateTime (depicted in all examples), a variable of type **Date and time**, or an attribute of a domain entity of type **Date and time**.
+
+## 2 addMilliseconds
 
 Add a number of milliseconds to a date.
 
-### Input parameters
+### 2.1 Input Parameters
 
-*   Initial date
-    Type: DateTime
-*   The amount of milliseconds to be added
+* Initial date
+	Type: Date and time
+* The amount of milliseconds to be added
     Type: Integer
 
-### Output
+### 2.2 Output
 
-A result of type DateTime that corresponds to the initial date plus x milliseconds.
+A result of type **Date and time** that corresponds to the initial date plus x milliseconds.
 
 {{% alert type="info" %}}
 
@@ -37,20 +41,20 @@ results in a datetime that corresponds to
 
 {{% /alert %}}
 
-## addSeconds
+## 3 addSeconds
 
 Add a number of seconds to a date.
 
-### Input parameters
+### 3.1 Input Parameters
 
 *   Initial date
-    Type: DateTime
+    Type: Date and time
 *   The amount of seconds to be added
     Type: Integer
 
-### Output
+### 3.2 Output
 
-A result of type DateTime that corresponds to the initial date plus x seconds.
+A result of type **Date and time** that corresponds to the initial date plus x seconds.
 
 {{% alert type="info" %}}
 
@@ -68,20 +72,20 @@ results in a datetime that corresponds to
 
 {{% /alert %}}
 
-## addMinutes
+## 4 addMinutes
 
 Add a number of minutes to a date.
 
-### Input parameters
+### 4.1 Input Parameters
 
 *   Initial date
-    Type: DateTime
+    Type: Date and time
 *   The amount of minutes to be added
     Type: Integer
 
-### Output
+### 4.2 Output
 
-A result of type DateTime that corresponds to the initial date plus x minutes.
+A result of type **Date and time** that corresponds to the initial date plus x minutes.
 
 {{% alert type="info" %}}
 
@@ -99,20 +103,20 @@ results in a datetime that corresponds to
 
 {{% /alert %}}
 
-## addHours
+## 5 addHours
 
 Add a number of hours to a date.
 
-### Input parameters
+### 5.1 Input Parameters
 
 *   Initial date
-    Type: DateTime
+    Type: Date and time
 *   The amount of hours to be added
     Type: Integer
 
-### Output
+### 5.2 Output
 
-A result of type DateTime that corresponds to the initial date plus x hours.
+A result of type **Date and time** that corresponds to the initial date plus x hours.
 
 {{% alert type="info" %}}
 
@@ -130,20 +134,20 @@ results in a datetime that corresponds to
 
 {{% /alert %}}
 
-## addDays[UTC]
+## 6 addDays[UTC]
 
 Add a number of days to a date. `addDays` uses the server's calendar and `addDaysUTC` uses the UTC calendar.
 
-### Input parameters
+### 6.1 Input Parameters
 
 *   Initial date
-    Type: DateTime
+    Type: Date and time
 *   The amount of days to be added
     Type: Integer
 
-### Output
+### 6.2 Output
 
-A result of type DateTime that corresponds to the initial date plus x days.
+A result of type **Date and time** that corresponds to the initial date plus x days.
 
 {{% alert type="info" %}}
 
@@ -161,20 +165,20 @@ results in a datetime that corresponds to
 
 {{% /alert %}}
 
-## addWeeks[UTC]
+## 7 addWeeks[UTC]
 
 Add a number of weeks to a date. `addWeeks` uses the server's calendar and `addWeeksUTC` uses the UTC calendar.
 
-### Input parameters
+### 7.1 Input Parameters
 
 *   Initial date
-    Type: DateTime
+    Type: Date and time
 *   The amount of weeks to be added
     Type: Integer
 
-### Output
+### 7.2 Output
 
-A result of type DateTime that corresponds to the initial date plus x weeks.
+A result of type **Date and time** that corresponds to the initial date plus x weeks.
 
 {{% alert type="info" %}}
 
@@ -192,20 +196,20 @@ results in a datetime that corresponds to
 
 {{% /alert %}}
 
-## addMonths[UTC]
+## 8 addMonths[UTC]
 
 Add a number of months to a date. `addMonths` uses the server's calendar and `addMonthsUTC` uses the UTC calendar.
 
-### Input parameters
+### 8.1 Input Parameters
 
 *   Initial date
-    Type: DateTime
+    Type: Date and time
 *   The amount of months to be added
     Type: Integer
 
-### Output
+### 8.2 Output
 
-A result of type DateTime that corresponds to the initial date plus x months.
+A result of type **Date and time** that corresponds to the initial date plus x months.
 
 {{% alert type="info" %}}
 
@@ -223,20 +227,20 @@ results in a datetime that corresponds to
 
 {{% /alert %}}
 
-## addYears[UTC]
+## 9 addYears[UTC]
 
 Add a number of years to a date. `addYears` uses the server's calendar and `addYearsUTC` uses the UTC calendar.
 
-### Input parameters
+### 9.1 Input Parameters
 
 *   Initial date
-    Type: DateTime
+    Type: Date and time
 *   The amount of years to be added
     Type: Integer
 
-### Output
+### 9.2 Output
 
-A result of type DateTime that corresponds to the initial date plus x years.
+A result of type **Date and time** that corresponds to the initial date plus x years.
 
 {{% alert type="info" %}}
 

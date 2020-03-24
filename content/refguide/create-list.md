@@ -1,25 +1,32 @@
 ---
 title: "Create List"
 parent: "list-activities"
+menu_order: 3
+tags: ["studio pro"]
 ---
 
+{{% alert type="warning" %}}
+This activity can be used in both **Microflows** and **Nanoflows**.
+{{% /alert %}}
 
-The Create List activity creates a list variable containing an empty list.
+## 1 Introduction
+
+This activity creates a list which is empty.
 
 {{% alert type="info" %}}
 
-See [Microflow Element Common Properties](microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
+See [Common Properties](microflow-element-common-properties) for properties that all microflow activities share (f\or example, caption). This page only describes the properties specific to the action.
 
 {{% /alert %}}
 
-## Action Properties
+## 2 Action Properties
 
-### Entity
+### 2.1 Entity
 
 The entity of the objects list. All objects in the list should be of the same type.
 
-## Output Properties
+## 3 Output Properties
 
-### Variable
+### 3.1 List Name
 
-Variable name defines the name of the list variable. The variable can be used by all activities that follow this activity.
+This is the name of the list which can be used by all activities that follow this activity.

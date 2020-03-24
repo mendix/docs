@@ -24,17 +24,11 @@ Before you can start with this how-to, please make sure you have completed the f
 In this chapter we will create a new app and select a theme from the New App selector.
 
 1.  Open the **Mendix Modeler**.
-2.  Create a **New App** from the **My Apps** screen in the Mendix Modeler.
-
-     ![](attachments/18448706/18581412.png)
+2.  Create a **New App** n the Mendix Modeler.
 3.  Select a theme for your app.
-
-    ![](attachments/18448706/18581411.png)
 4.  You can now deploy your app or just head over to section 3 to configure Scout.
 
 ## 3\. Configure Scout
-
-**Windows 10 users need to use the following workaround. Click [here](scout-and-windows-10-workaround) for the workaround.**
 
 The Mendix UI Framework uses **Sass**, which relies on Ruby. However, you can install [Scout](http://mhs.github.io/scout-app/) to run Sass in a self-contained Ruby environment, letting you effortlessly manage all of your Sass projects with a handful of clicks. This way you don't have to worry about using the terminal. You can still do this if you are familiar with Sass and terminal.
 
@@ -86,7 +80,6 @@ The Mendix UI Framework uses **Sass**, which relies on Ruby. However, you can in
 
 ## 5\. Related content
 
-*   [Scout and Windows 10 Workaround](scout-and-windows-10-workaround)
 *   [Layouts and Snippets](layouts-and-snippets)
 *   [Filtering Data on an Overview Page](filtering-data-on-an-overview-page)
 *   [Setup Mendix UI Framework with just CSS](setup-mendix-ui-framework-with-just-css)

@@ -53,7 +53,7 @@ Once you have the unique URL and password, there are two methods for connecting 
 
 {{% alert type="warning" %}}
 
-If you do not see an overview similar to the one below, then you do not have sufficient cloud permissions to deploy packages into the cloud or to debug in the cloud. Contact the technical contact or the project SCRUM master in your project to get sufficient permissions.
+If you do not see an overview similar to the one below, then you do not have sufficient cloud permissions to deploy packages into the cloud or to debug in the cloud. Contact the technical contact or the project Scrum Master in your project to get sufficient permissions.
 
 {{% /alert %}}
 
@@ -72,7 +72,7 @@ If you do not see an overview similar to the one below, then you do not have suf
 1. Go to the **Debugger** dock window.
 2. Click **Connect** and enter the URL and password information in the dialog window.
 
-## 4 Related Content
+## 4 Read More
 
 * [How to Find the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
 * [How to Clear Warning Messages](clear-warning-messages)

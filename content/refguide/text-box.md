@@ -1,106 +1,165 @@
 ---
-title: "Text box"
+title: "Text Box"
 parent: "input-widgets"
+menu_order: 10
+tags: ["studio pro"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+## 1 Introduction
 
-A text box can be used to display and/or edit a textual value.
+A text box is used to display and, optionally, allow the end-user to edit the value of an attribute from an object in a textual form. It can be used to display attributes of the following [data types](data-types):
 
-{{% alert type="info" %}}
+* Autonumber
+* Decimal
+* Hashed string
+* Integer
+* Long
+* String
 
-![](attachments/16713878/16843994.png)
-This text box allows the end-user to set the name of the customer.
+A text box must be placed in a [data widget](data-widgets) and displays an attribute of the object(s) retrieved by that widget. The name of the attribute to be displayed is shown inside the text box, between square brackets, and colored blue.
 
+For example, the following text box allows the end-user to see, and set, the **Name** of a customer.
+
+![](attachments/text-box/text-box.png)
+
+## 2 Properties
+
+An example of text box properties is represented in the image below:
+
+{{% image_container width="300" %}}![](attachments/text-box/text-box-properties.png)
+{{% /image_container %}}
+
+Text box properties consist of the following sections:
+
+* [Common](#common)
+* [Data source](#data-source)
+* [Design Properties](#design-properties)
+* [Editability](#editability)
+* [Events](#events)
+* [Formatting](#formatting)
+* [General](#general)
+* [Label](#label)
+* [Validation](#validation)
+* [Visibility](#visibility)
+
+### 2.1 Common Section{#common}
+
+{{% snippet file="refguide/common-section-link.md" %}}
+
+### 2.2 Data Source Section{#data-source}
+
+{{% snippet file="refguide/data-source-section-link.md" %}}
+
+### 2.3 Design Properties Section{#design-properties}
+
+{{% snippet file="refguide/design-section-link.md" %}} 
+
+### 2.4 Editability Section{#editability}
+
+{{% snippet file="refguide/editability-section-link.md" %}}
+
+### 2.5 Events Section{#events}
+
+#### 2.5.1 On Change Event{#on-change}
+
+The on change event property specifies an action that will be executed when the value has been changed and gets submitted. A value will be submitted when pressing the <kbd>Enter</kbd> key or leaving the widget, either by using the <kbd>Tab</kbd> key or by clicking another widget.
+
+{{% snippet file="refguide/events-section-link.md" %}}
+
+#### 2.5.2 On Enter Event
+
+The on enter event property specifies an action that will be executed when the widget is entered, either by using the <kbd>Tab</kbd> key or by clicking it with the mouse.
+
+{{% snippet file="refguide/events-section-link.md" %}}
+
+#### 2.5.3 On Leave Event
+
+The on leave event property specifies an action that will be executed when leaving the widget, either by using the <kbd>Tab</kbd> key or by clicking another widget.
+
+This differs from the [On change](#on-change) property in that the event will always be triggered, even if the value has not been changed.
+
+{{% snippet file="refguide/events-section-link.md" %}}
+
+#### 2.5.4 On Enter Key Press Event
+
+The on enter key press event property specifies an action that will be executed when the focus is inside the widget  and the <kbd>Enter</kbd> key is pressed. In a web application the widget will keep focus after the action gets executed.
+
+{{% snippet file="refguide/events-section-link.md" %}}
+
+### 2.6 Formatting Section{#formatting}
+
+The formatting section applies only to the way that numeric attributes are displayed. These are attributes of the following data types:
+
+* Decimal
+* Integer
+* Long
+
+{{% snippet file="refguide/numeric-formatting-link.md" %}}
+
+### 2.7 General Section{#general}
+
+#### 2.7.1 Show as Password
+
+Attributes of the data type `String` or `Hashed string` can have their value hidden. This can be used for passwords, for example, to prevent bystanders from seeing them.
+
+| Value | Description |
+| --- | --- |
+| False *(default)*| Normal text box |
+| True | Typed characters are not shown to the end-user , instead an asterisk is shown for every typed character |
+
+#### 2.7.2 Input Mask
+
+{{% alert type="info" %}}Input masks are not supported on native mobile pages.
+
+Input masks are designed for string data types. Be cautious when using them with numeric or hashed string data types.
 {{% /alert %}}
 
-A text box must be placed in a data view or template grid and connected to an attribute of type String. The connected attribute is shown in blue and between brackets inside the text box.
+The input mask limits what the end-user can enter in the text box, following the rules below:
 
-## General Properties
+| Character | Allows Input of |
+| ----- | ----- |
+| `9` | any digit |
+| `Z` | any letter |
+| `U` | an upper-case letter |
+| `L` | a lower-case letter |
+| `*` | a letter *or* a digit |
 
-### Decimal Precision (Only for Numeric Attributes)
+Other characters will be taken literally.
 
-The precision of a value describes the number of digits that are used to express that value. This property indicates the number of decimal places (the number of digits following the point).
+For example, the input mask `99-LLL-9999` matches `24-apr-2008`.
 
-_Default value:_ 2
+#### 2.7.3 Maximum Length
 
-### Group Digits (Only for Numeric Attributes)
-
-For ease of reading, numbers with many digits before the decimal separator may be divided into groups using a delimiter. This property indicates whether the end user will see these groups.
-
-_Default value:_ False
-
-### Show as Password (Only for Attributes of the String or HashString Type)
-
-| Value | Description |
-| --- | --- |
-| False | Normal text box |
-| True | Typed characters are not shown to the end user. Instead an asterisk is shown for every typed character. |
-
-_Default value:_ False
-
-### Input Mask (Only in Web Forms)
-
-The input mask limits what the user can enter in the text box. A '9' means any digit, 'Z' means any letter, 'U' an upper-case letter, 'L' a lower-case letter and '*' a letter or a digit. Other characters will be taken literally. For example, the input mask 99-LLL-9999 matches 24-apr-2008.
-
-### Maximum Length
-
-This property indicates the maximum number of characters that can be typed in this text box.
+This property specifies the maximum number of characters that can be typed in this text box.
 
 | Value | Description |
 | --- | --- |
-| Attribute length | The maximum number of characters is the same as the maximum length of the connected attribute. |
-| Unlimited | The maximum number of characters is unlimited. |
-| Custom | The maximum number of characters is set by the user. |
+| Attribute length *(default)* | The maximum number of characters is the same as the maximum length of the connected attribute |
+| Unlimited | The maximum number of characters is unlimited |
+| Custom | The maximum number of characters is specified in the widget properties |
 
-_Default value: Attribute length_
+#### 2.7.4 Placeholder Text
 
-### Placeholder Text
+The placeholder text is shown when no text has been entered yet, or when a displayed attribute is empty.
 
-The placeholder text is shown when no text has been entered yet. It can be used to give a hint to the user what kind of text should be entered.
+It can be used, for example, to give a hint to the end-user what kind of text should be entered.
 
-## Validation Properties
+<a name="label-properties"></a>
+### 2.8 Label Section{#label}
 
-{{% snippet file="refguide/Widget+Validation.md" %}}
+{{% snippet file="refguide/label-section-link.md" %}}
 
-## Data Source Properties
+### 2.9 Validation Section{#validation}
 
-{{% snippet file="refguide/Attribute+Path+Property.md" %}}
+{{% snippet file="refguide/widget-validation-link.md" %}}
 
-{{% snippet file="refguide/Label+Property.md" %}}
+### 2.10 Visibility Section{#visibility}
 
-## Editability Properties
+{{% snippet file="refguide/visibility-section-link.md" %}}
 
-{{% snippet file="refguide/Editable+Property.md" %}}
+## 3 Read More
 
-{{% snippet file="refguide/Read+Only+Style.md" %}}
-
-{{% snippet file="refguide/Condition+Property.md" %}}
-
-## Visibility Properties
-
-{{% snippet file="refguide/Visibility+Property.md" %}}
-
-{{% snippet file="refguide/Visibility+Property+With+Module+Roles+Simple.md" %}}
-
-## Events Properties
-
-{{% snippet file="refguide/On+Change+Event.md" %}}
-
-{{% snippet file="refguide/On+Enter+event.md" %}}
-
-{{% snippet file="refguide/On+Leave+Event.md" %}}
-
-## Common Properties
-
-{{% snippet file="refguide/Name+Property.md" %}}
-
-{{% snippet file="refguide/Class+Property.md" %}}
-
-{{% snippet file="refguide/Style+Property.md" %}}
-
-{{% snippet file="refguide/Tab+index+Property.md" %}}
-
-## Related Content
-
-*   [Data view](data-view)
-*   [Attributes](attributes)
+* [Data Types](data-types)  
+* [Data View](data-view)
+* [Attributes](attributes)

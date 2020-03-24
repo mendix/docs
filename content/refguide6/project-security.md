@@ -24,7 +24,7 @@ The security level defines how security is applied and which security settings n
 
 {{% alert type="warning" %}}
 
-Security levels 'Off' and 'Prototype / demo' are only allowed in development and test. For acceptance and production you need to use the 'Production' security level and configure all security settings accordingly.
+For all licensed Mendix Cloud nodes, you need to use the **Production** security level and configure all security settings accordingly. Security levels **Off** and **Prototype/demo** are only allowed when testing locally, when deploying a Free App, and in cloud environments outside the Mendix Cloud which are specifically set up with **Development mode**. 
 
 {{% /alert %}}{{% alert type="info" %}}
 
@@ -51,7 +51,7 @@ When the security level is set to 'Prototype / demo' or 'Production', a number o
 
 ## Module Status
 
-The module status overview shows the security status for each module. It shows the total number of items for which security needs to be configured, as well as the number of items for which security has been configured already. At the 'Prototype / demo' security level, the status of form access and microflow access is shown. Additionally, at the 'Production' security level, the status of entity access and data set access (if applicable) is shown.
+The module status overview shows the security status for each module. It shows the total number of items for which security needs to be configured, as well as the number of items for which security has been configured already. At the 'Prototype / demo' security level, the status of form access and microflow access is shown. Additionally, at the 'Production' security level, the status of entity access and dataset access (if applicable) is shown.
 
 ## User Roles
 

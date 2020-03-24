@@ -1,72 +1,71 @@
 ---
 title: "Retrieve"
 parent: "object-activities"
+menu_order: 6
+tags: ["studio pro"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert type="warning" %}}
+This activity can be used in both **Microflows** and **Nanoflows**.
+{{% /alert %}}
 
-Retrieve can be used to get one or more objects, either by directly traversing an association of another object, or by retrieving objects from the database.
+## 1 Introduction
+
+A **Retrieve** activity can be used to get one or more objects, either by directly traversing an association of another object, or by retrieving objects from the database.
 
 {{% alert type="info" %}}
-
-See [Microflow Element Common Properties](microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
+For the properties that all microflow activities share (for example, the **Caption**), see [Common Properties](microflow-element-common-properties). This page only describes the properties specific to this activity.
 
 {{% /alert %}}
 
-## Action Properties
+## 2 Activity Properties
 
-### Retrieve type
+### 2.1 Retrieve Source {#source}
 
-Retrieve type defines the way the objects are retrieved.
+The **Source** defines the way the objects are retrieved:
 
 | Option | Description |
 | --- | --- |
-| Association | Retrieve the object(s) associated to an object by following an association. Changes to the association that have not been committed to the database can be retrieved only by using this type of retrieval. |
-| From database | Retrieve objects from the database. |
+| By association | Retrieve the object(s) associated to an object by following an association. Note that when objects and/or their associations are changed and not committed, the data is not yet available in the database. By retrieving **By association**, the data that is not committed can be retrieved. For more information, see the [Retrieve by Association Properties](#association) section below.  |
+| From database | Retrieve objects from the database. For more information, see the [Retrieve from Database Properties](#from-database) section below. |
 
-{{% alert type="warning" %}}
+### 2.2 Retrieve by Association Properties {#association}
 
-When objects and/or its associations are changed and not committed, the data is not available in the database yet. By retrieving by association the data that is not committed can be retrieved.
+#### 2.2.1 Association
 
-{{% /alert %}}
+This property specifies which association will be followed. The association must be an association from an object that is already available to the retrieve activity. Associations can be followed in both directions.
 
-## Retrieve By Association Properties
+### 2.3 Retrieve from Database Properties {#from-database}
 
-### Association
+#### 2.3.1 Entity
 
-This property specifies which association will be followed. The association must be an association from an object that is already available in a variable. Associations can be followed in both directions.
+This property specifies the entity from which to retrieve instances (objects).
 
-## Retrieve From Database Properties
+#### 2.3.2 Range
 
-### Entity
-
-The entity of which to retrieve instances (objects).
-
-### Range
-
-The range determines how many objects are retrieved.
+This property specifies the range that determines how many objects are retrieved:
 
 | Range | Meaning |
 | --- | --- |
 | All | Retrieve all objects at once. |
-| First | Retrieve only the first object. The result of the retrieve action will be a single object instead of a list. |
-| Custom | Retrieve a given number of objects (limit) starting at a given index (offset). Limit and offset are microflow expressions that should result in a number. Note: the first object has offset 0. A limit of 0 means that all objects are retrieved. |
+| First | Retrieve only the first object. The result of the retrieve action will be a single object instead of a list. Note that when you know you have only one object or you only want to use the first object in a list, use **First** to get a result of the object type (as opposed to a list). |
+| Custom | Retrieve a given number of objects (**Amount**) starting at a given index (**Offset**). The amount and offset are expressions that should result in a number. Note that the first object has an offset of 0. An amount of 0 means that all objects are retrieved. |
 
-{{% alert type="warning" %}}
+#### 2.3.3 XPath Constraint
 
-When you know you have only one object or you only want to use the first object in your list, use 'first' to get a result of type object (as opposed to list).
+The [XPath](xpath) constraint defines the condition the objects need to fulfill to be retrieved. If there is no XPath constraint, all objects of the entity are retrieved.
 
+{{% alert type="info" %}}
+Date functions, user-role tokens, computations based on tokens, and following associations are not supported in XPath constraints when the retrieve activity is in a nanoflow.
 {{% /alert %}}
 
-### XPath constraint
+#### 2.3.4 Sorting
 
-[XPath](xpath) constraint defines the condition the objects need to suffice to be retrieved. If there is no XPath constraint, all objects of the entity are retrieved.
+This property defines the order of the list. The list can be sorted in ascending and descending order on the values of an attribute. If there are objects that have the same attribute value, the list is sorted based on the second attribute (if any) and so on.
 
-### Sorting
+## 3 Output Properties
 
-Sorting defines the order of the list. The list can be sorted in ascending and descending order on the values of an attribute. If there are objects that have the same attribute value the list is sorted based on the second attribute (if any) and so on.
+### 3.1 List Name or Object Name
 
-## Output Properties
-
-### Variable name
-
-Variable name defines the name of the result list or object variable. It can be used by all activities that follow this activity.
+This is the name of the list or object returned by the activity. It can be used by all the activities that follow this activity.

@@ -54,7 +54,7 @@ Now the application is ready to store redundant data, but you still need to keep
     * Select **Commit** as the **Event**
     * Select **Yes** for **Pass the event object**
     * Click **Select...** to open the microflow selector
- 
+
     ![](attachments/18448743/18582166.png)
 4. On the microrflow selector, click **New** and enter a name for the new microflow (for example, *Order_AfterCommit*).
 5. Click **OK** to create the new microflow, and then click **OK** again to save the event handler.
@@ -124,16 +124,14 @@ Now the application is ready to store redundant data, but you still need to keep
 
 20. Run the application and create some customers and orders. You should now see an up-to-date value for the TotalOrderAmount.
 
-## 5 Related Content
+## 5 Read More
 
 * [How to Work with Images and Files](working-with-images-and-files)
 * [How to Create a Basic Data Layer](create-a-basic-data-layer)
 * [How to Set Up Data Validation](setting-up-data-validation)
 * [How to Work with Object Events](working-with-object-events)
 * [How to Find the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
-* [How to Manage Your Application Requirements](/developerportal/howto/managing-your-application-requirements-with-mendix)
+* [How to Manage Your Application Requirements](/developerportal/collaborate/stories)
 * [How to Define Access Rules Using XPath](define-access-rules-using-xpath)
-* [How to Configure the Scout and Windows 10 Workaround](scout-and-windows-10-workaround)
-* [How to Generate a Personal SSH2 Key Pair](generating-a-personal-ssh2-key-pair)
 * [Attributes](/refguide6/attributes)
 * [Event Handlers](/refguide6/event-handlers)

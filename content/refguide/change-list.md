@@ -1,38 +1,52 @@
 ---
 title: "Change List"
 parent: "list-activities"
+menu_order: 2
+tags: ["studio pro", "List"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert type="warning" %}}
+This activity can be used in both **Microflows** and **Nanoflows**.
 
-With the Change List activity you can change a list that is stored in a variable.
+Note that there are minor differences between the way this function works in microflows, and the way it works in nanoflows.
+{{% /alert %}}
+
+## 1 Introduction
+
+With this activity you can change a list.
 
 {{% alert type="info" %}}
 
-See [Microflow Element Common Properties](microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
+See [Common Properties](microflow-element-common-properties) for properties that all microflow activities share (for example, caption). This page only describes the properties specific to the action.
 
 {{% /alert %}}
 
-## Input Properties
+## 2 Input Properties
 
-### List
+### 2.1 List
 
-Defines the list variable that is changed.
+Specifies the list that is changed.
 
-## Action Properties
+## 3 Action Properties
 
-### Type
+### 3.1 Type
 
-Defines the type of change that is performed to the list.
+Defines the type of change that is applied to the list.
 
 | Option | Description |
 | --- | --- |
-| Add | The value is added to the list. |
-| Remove | The value is removed from the list. |
+| Add *(default)* | The object(s) referred to by value are added to the list. The same object can be added multiple times. |
+| Remove | The object(s) referred to by value are removed from the list. If there are duplicate objects in the list, then only one will be removed. If you ask to remove an object which isn't in the list, there is no error |
 | Clear | The list is emptied. |
-| Replace | The list is emptied and the value is added to the list. |
+| Replace | The list is emptied and the object(s) referred to by value are added to the list. |
 
-_Default value:_ Add
+If you do not want duplicates in your (microflow) list, you can either remove the object(s) first, or use the **Contains** [list operation](list-operation) to examine the list before adding the object(s).
 
-### Value
+{{% alert type="warning" %}}
+Currently, this works differently in **nanoflows**. In a **nanoflow** objects will *not* be added if they are already in the list whereas, in a **microflow**, the same object can be added multiple times.
+{{% /alert %}}
 
-Value defines the value that is used to change the list. The value is entered using a [microflow expression](microflow-expressions). The microflow expression should result in an object or list of the same [entity](entities) as the input list.
+### 3.2 Value
+
+Value defines the objects that are used to change the list. The value is entered using an [expression](expressions). The expression should result in an object or list of objects of the same type of [entity](entities) as the input list.

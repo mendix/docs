@@ -1,60 +1,37 @@
 ---
 title: "Mendix Platform SDK"
 ---
-## Your Learning Path for the Mendix SDK
 
-Before the Mendix SDK can make your life easier, there's some learning to do. Follow the step-by-step guides listed below to learn everything you need about using the SDK. After finishing the learning path, you'll not only know how to use the SDK, but also how all the parts fit together. [See the full program >>](your-learning-path-for-the-mendix-sdk)
+## 1 Introduction & FAQ
 
-### Learning Path
+Before the [Mendix Platform SDK](https://apidocs.mendix.com/platformsdk/latest/) can make your life easier, you should learn about the [Mendix Model SDK](https://apidocs.mendix.com/modelsdk/latest/index.html). Start with the [SDK Introduction](sdk-intro) and the [SDK FAQ](sdk-faq). 
 
-*   [Setting up your development environment](setting-up-your-development-environment)
-*   [Creating your first script](creating-your-first-script)
-*   [Creating the domain model](creating-the-domain-model)
-*   [Manipulating existing models](manipulating-existing-models)
-    *   [Changing things in the model](changing-things-in-the-model)
-    *   [Closing the server connection](closing-the-server-connection)
-    *   [Finding things in the model](finding-things-in-the-model)
-    *   [Loading units and elements](loading-units-and-elements)
-*   [Generating code from the model](generating-code-from-the-model)
+## 2 SDK Reference Guide
 
-## Reference Documentation
+Browse the reference documentation below about the Mendix Metamodel:
 
-Browse the compiled documentation about the Mendix Metamodel, as well as external resources you can use as a reference for programming with the Mendix SDK.
+* [Understanding the Mendix Metamodel](understanding-the-metamodel) – explains the basic components of the Mendix Metamodel as well as the domain model, microflows, pages, and app projects in the Mendix Metamodel
+* [JavaScript & TypeScript Resources](javascript-typescript-resources) – summarizes TypeScript and provides links to useful resources for learning more
+* [Working with when.js and Promises in TypeScript](working-with-when.js-and-promises-in-typescript) – explains what promises are, how to use them, and how resolve common problems when using them
 
-### [Understanding the Metamodel](understanding-the-metamodel)
+## 3 SDK How-to's
 
-*   [Domain Model (Meta Model)](domain-model-metamodel)
-*   [Microflows (metamodel)](microflows-metamodel)
-*   [Pages (metamodel)](pages-metamodel)
-*   [Projects (metamodel)](projects-metamodel)
+Follow these step-by-step guides to learn everything you need about using the SDK:
 
-### Mendix Model SDK
+* [How to Set Up Your Development Environment](setting-up-your-development-environment) – leads you through the process of setting up everything you need to start working with the Mendix Platform SDK
+* [How to Create Your First Script](creating-your-first-script) – teaches you how to write a script that will use the Mendix Platform SDK
+* [How to Create the Domain Model](creating-the-domain-model) – guides you in the process of creating a more extensive domain model
+* [How to Manipulate Existing Models](manipulating-existing-models) – teaches you how to change things in the model, close the server connection, and find and load units and elements
+* [How to Generate Code from the Model](generating-code-from-the-model) – explains how to write code to alter your model
 
-*   Manipulating existing models
-    *   [Finding things](finding-things-in-the-model)
-    *   [Loading things](loading-units-and-elements)
-    *   [Changing things](changing-things-in-the-model)
-    *   [Closing the server connection](closing-the-server-connection)
-*   [Generating code from the model](generating-code-from-the-model)
-*   [Working with when.js and promises in TypeScript](working-with-when.js-and-promises-in-typescript)
-*   [Model SDK API docs](https://apidocs.mendix.com/modelsdk/latest/index.html)
+## 4 SDK Use Cases
 
-### Other Resources
+The [Use Case Examples](sdk-use-cases) provide examples from the four basic categories of actions performed with the Mendix SDK: analyzing, exporting, modifying and importing.
 
-*   [JavaScript & TypeScript resources](javascript-typescript-resources)
-*   [Mendix Platform SDK API docs](https://apidocs.mendix.com/platformsdk/latest/)
-*   [FAQ](faq)
+## 5 Other Resources
 
-## Need Help?
+For more information, check the [Mendix Model SDK Release Notes](/releasenotes/sdk/model-sdk) for details on the releases of the Mendix Model SDK.
 
-Check whether your question is answered in the [frequently asked questions](faq) section. Otherwise, ask your question in the [Beta Program project](https://sprintr.home.mendix.com/link/project/5d2b2ddb-5cdb-479f-b8de-0bf1e883356a) on the platform or in our [Gitter](https://gitter.im/mendix/mendixplatformsdk) chat room. Check out the technical specifications of the Mendix Platform SDK and Model API.
+## 6 Need Help?
 
-If you need help with JavaScript/TypeScript, you can go to our [JavaScript & TypeScript resources](javascript-typescript-resources) page.
-
-## Main Documents in This Category
-
-* [Your Learning Path for the Mendix SDK](your-learning-path-for-the-mendix-sdk)
-* [Reference Documentation](reference-documentation)
-* [FAQ](faq)
-* [Use Case Examples](use-case-examples)
-* [Working with when.js and Promises in TypeScript](working-with-when.js-and-promises-in-typescript)
+If you need help with the SDKs, check whether your question is answered in the [SDK FAQ](sdk-faq). Otherwise, ask your question in the [Mendix Forum](https://forum.mendixcloud.com/index4.html). 

@@ -1,6 +1,8 @@
 ---
 title: "Published Web Services"
 parent: "integration"
+tags: ["studio pro"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 
@@ -20,11 +22,11 @@ When running, Mendix projects publish webservices documentation. The address is 
 
 ### WSDL
 
-This is an XML document that is computer readable. This means that the modeler can read this document and automatically figure out how to interact with the webservice.
+This is an XML document that is computer readable. This means that Studio Pro can read this document and automatically figure out how to interact with the webservice.
 
 ### Example request/response xml messages
 
-On the "Published webservices" page (`http://localhost:8080/ws-doc/`) you will also find a list of all operations, per published webservice. These link to pages which describe sample messages. Note that you do not need these examples when building a mendix-to-mendix interaction, they are there purely to help people who want to create their own clients.
+On the "Published webservices" page (`http://localhost:8080/ws-doc/`) you will also find a list of all operations, per published webservice. These link to pages which describe sample messages. Note that you do not need these examples when building a Mendix-to-Mendix interaction, they are there purely to help people who want to create their own clients.
 
 ## How does a published webservice call work?
 
@@ -48,8 +50,9 @@ Every webservice call requires authentication. Specifically, the SOAP envelope h
 
 ```
 
-These details _must_ match an existing webservice user in the runtime. These users can be created by logging in as an Administrator and clicking on "create webservice user" in the Users datagrid in the system module. Normal (non-webservice) users cannot be used to call webservices and webservice users cannot log in via the standard login page.
-Other than that, there is no difference between how normal users and webservice users call microflows.
+These details _must_ match an existing webservice user in the runtime. These users can be created by signing in as an Administrator and clicking on "create webservice user" in the Users datagrid in the system module. Normal (non-webservice) users cannot be used to call webservices and webservice users cannot sign in via the standard login page.
+
+Other than that, there is no difference between how normal users and web service users call microflows.
 
 #### Parameter handling
 

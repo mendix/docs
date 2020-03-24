@@ -1,7 +1,8 @@
 ---
 title: "Extend Your Application with Custom Java"
 category: "Logic & Business Rules"
-tags: []
+menu_order: 12
+tags: ["microflow", "logic", "java", "extend", "jdk", "custom", "UnsupportedClassVersionError"]
 ---
 
 ## 1 Introduction
@@ -14,180 +15,167 @@ Most application logic can be developed using microflows. Microflows are very po
 
 ## 2 Prerequisites
 
-Before starting this how-to, make sure you have completed the following prerequisites:
+Before starting this how-to, make sure you have completed the following prerequisite:
 
-* Read [How to Create and Deploy Your First App](../modeling-basics/create-and-deploy-your-first-app)
-* You need Eclipse: download it [here](https://eclipse.org/)
+*  Have Eclipse installed (download it [here](https://eclipse.org/))
 
-{{% alert type="info" %}}
-
-You can use any text editor to create custom Java actions, but we highly recommend using Eclipse. The Modeler contains a **Deploy for Eclipse** feature verifying that everything that needs to be configured in Eclipse is done automatically. All you have to do is import the project into your Eclipse working environment.
-
+	{{% alert type="info" %}}You can use any text editor to create custom Java actions, but we highly recommend using Eclipse. Studio Pro contains a **Deploy for Eclipse** feature verifying that everything that needs to be configured in Eclipse is done automatically. All you have to do is import the project into your Eclipse working environment.
 {{% /alert %}}
 
-## 3 Adding Java Actions in the Modeler
+* Have an app project with the **Asset Manager** app template
 
-1. Right-click the **MyFirstModule** module and select **Add** > **Resources** > **Java action**:
+## 3 Adding a Java Action in Studio Pro
 
-    ![](attachments/18448685/18581053.png)
+1. Right-click the **MyFirstModule** module and select **Add other** > **Resources** > **Java action**.
+2. Enter *ReverseAssetName* for the **Name** of the new Java action and click **OK**.
+3.  In the **Java Action** wizard, click **Add** to add a parameter and do the following:</br>
 
-2. Name the new Java action *ReverseCustomerName* and click **OK**:
+	1. Enter *inputAssets* for the **Name** of the new parameter</br>
+	2. Select **Object** for the **Type**.</br>
+	3. Click **Select** for **Entity** and select **MyFirstModule.Assets** as the object type.</br>
+	4. Click **OK**.</br>
 
-    ![](attachments/18448685/18581052.png)
+	{{% image_container width="500" %}}![](attachments/extend-custom-java/add.png)
+	{{% /image_container %}}
 
-3. Click **Add** to add a parameter:
+4. Back on the **Java Action** wizard, change the **Return type** of the Java action to **String** and click **OK** to save the Java action:
 
-    ![](attachments/18448685/18581050.png)
+	![](attachments/extend-custom-java/return.png)
 
-4. On the **Parameter** window, do the following:
-
-    * Name the parameter *inputCustomer*
-    * Select **Object** as type
-    * Click **Select...** and select **MyFirstModule.Customer** as the object type
-    Click **OK**
-
-    ![](attachments/18448685/18581049.png)
-
-5. Change the return type of the Java action to **String** and click **OK** to save the Java action:
-
-    ![](attachments/18448685/18581046.png)
-
-6. Select **Project** > **Deploy for Eclipse** in the Modeler:
-
-    ![](attachments/18448685/18581045.png)
+5. Select **Project** > **Deploy for Eclipse** from the top Studio Pro toolbar.
 
 ## 4 Editing the Java Action in Eclipse
 
 To edit the Java action in Eclipse, follow these steps:
 
-1. Open **Eclipse** and right-click somewhere in the **Package Explorer**.
-2. Select **Import...** from the menu:
+1.  Open Eclipse, right-click in the **Package Explorer** window, and select **Import...** from the menu:
 
-    ![](attachments/18448685/18581044.png)
+	{{% image_container width="400" %}}![](attachments/extend-custom-java/import.png)
+	{{% /image_container %}}
 
-3. In the **Import** window, select **Existing Projects into Workspace** and click **Next**:
+3.  In the **Import** window, select **Existing Projects into Workspace** and click **Next**:
 
-    ![](attachments/18448685/18581043.png)
+	{{% image_container width="400" %}}![](attachments/extend-custom-java/import2.png)
+	{{% /image_container %}}
 
-4. Set the project directory as the root directory for this project and click **Finish**:
+4.  Set the project directory as the root directory for this project and click **Finish**:
 
-    ![](attachments/18448685/18581042.png)
+	{{% image_container width="400" %}}![](attachments/extend-custom-java/import3.png)
+	{{% /image_container %}}
 
-    If you don't know what the project directory is, select **Project** > **Show Project Directory in Explorer** in the Modeler:
+	{{% alert type="info" %}}If you don't know what the project directory is, select **Project** > **Show Project Directory in Explorer** in Studio Pro.
+	{{% /alert %}}
 
-    ![](attachments/18448685/18581026.png)
+5.  Double-click **ReverseAssetName.java** in the **Package Explorer** of Eclipse:
 
-5. Double-click **ReverseCustomerName.java** in the **Package Explorer** of Eclipse:
+	![](attachments/extend-custom-java/package-explorer.png)
 
-    ![](attachments/18448685/18581041.png)
+	In the Java code, there is a placeholder marked with `//BEGIN USER CODE` and `//END USER CODE` comment statements. This is where you can add your own Java code. Studio Pro will never overwrite the code between those two statements.
 
-    In the Java code, there is a placeholder marked with `//BEGIN USER CODE` and `//END USER CODE` comment statements. This is where you can add your own Java code. The modeler will never overwrite the code between those two statements.
+	![](attachments/extend-custom-java/java1.png)
 
-    ![](attachments/18448685/18581040.png)
+	As you can see, Studio Pro generated a variable for `inputAssets`. You can use that variable to get the name of the asset and reverse it like this:
 
-    As you can see, the Modeler generated a variable for the input customer object name `inputCustomer`. You can use that variable to get the name of the customer and reverse it like this:
+	```java
+	String assetsAssetName = this.inputAssets.getAssetName(this.getContext());
+	return new StringBuilder(assetsAssetName).reverse().toString();
+	```
 
-    ```java
-    String customerName = this.inputCustomer.getName(this.getContext());
-    return new StringBuilder(customerName).reverse().toString();
-    ```
+6.  Insert the above code between the `//BEGIN USER CODE` and `//END USER CODE` comment statements. It should look like this:
 
-6. Insert the above code between the `//BEGIN USER CODE` and `//END USER CODE` comment statements. It should look like this:
+	![](attachments/extend-custom-java/java2.png)
 
-    ![](attachments/18448685/18581039.png)
-
-7. Save the Java action in Eclipse:
-
-    ![](attachments/18448685/18581025.png)
+7. Select **File** > **Save** to Save the Java action in Eclipse.
 
 ## 5 Calling the Java Action from a Microflow
 
-1. Open the Modeler and locate the **Customer_Overview** page.
-2. Add a new **Microflow** button to the control bar of the data grid and change the caption to *Reverse Name*:
+1. Back in Studio Pro, locate the **Assets** page via **Project Explorer**.
+2.  Under **{AssetName}**, right-click and select **Add widget**:
 
-    ![](attachments/18448685/18581038.png)
+	{{% image_container width="300" %}}![](attachments/extend-custom-java/add-widget.png)
+	{{% /image_container %}}
 
-3. Right-click the new **Microflow** button and select **Select microflow...**:
+3. In the **Select widget** dialog box that appears, select **Button widgets** > **Call microflow button**.
+4. In the **Select Microflow** dialog box, click **New** to create a new microflow.
+5. Enter *Asset_ReverseName* for the **Name** of the new microflow and click **OK**.
+6.  Right-click the **Asset reverse name** button you just created and select **Go to on clock microflow** to open the new microflow, which should look like this:
 
-    ![](attachments/18448685/18581037.png)
+	{{% image_container width="500" %}}![](attachments/extend-custom-java/microflow1.png)
+	{{% /image_container %}}
 
-4. Name the new microflow *Customer_ReverseName* and click **OK**:
+7.  Drag the **ReverseAssetName** Java action from the **Project Explorer** onto the line between the green start event and red end event. This generates a Java action activity:
 
-    ![](attachments/18448685/18581036.png)
+	{{% image_container width="500" %}}![](attachments/extend-custom-java/microflow2.png)
+	{{% /image_container %}}
 
-5. Open the new microflow, which should look like this:
+8.  Double-click the generated activity to open the **Call Java Action** properties editor, and then click **Edit** for the first input to open the argument editor:
 
-    ![](attachments/18448685/18581035.png)
+	{{% image_container width="500" %}}![](attachments/extend-custom-java/call1.png)
+	{{% /image_container %}}
 
-6. Drag the **ReverseCustomerName** Java action from the **Project Explorer** onto the line between the green start event and red end event. This generates a Java action activity:
+9. Press and hold the <kbd>Ctrl</kbd> key and then press the spacebar to open the code completion editor.
+10. Select **$Assets (MyFirstModule.Assets)**:
 
-    ![](attachments/18448685/18581034.png)
+	{{% image_container width="500" %}}![](attachments/extend-custom-java/argument.png)
+	{{% /image_container %}}
 
-7. Double-click the generated activity to open the **Call Java Action** properties editor, and then double-click the first argument to open the expression editor:
+11. Click **OK** to save the expression.
+12. In the **Call Java Action** properties editor, change the output **Variable** to *ReversedName*:
 
-    ![](attachments/18448685/18581033.png)
+	{{% image_container width="500" %}}![](attachments/extend-custom-java/call2.png)
+	{{% /image_container %}}
 
-8. Press and hold the **Ctrl** key and press the spacebar to open the code completion editor.
-9. Select **$Customer (MyFirstModule.Customer)**:
+13. Click **OK** to save the properties. The microflow should now look like this:
 
-    ![](attachments/18448685/18581032.png)
+	{{% image_container width="500" %}}![](attachments/extend-custom-java/microflow3.png)
+	{{% /image_container %}}
 
-10. Click **OK** to save the expression.
-11. In the **Call Java Action** window, change the output **Variable** to *ReversedName*:
+14. From the **Toolbox** (select **View** > **Toolbox** to open it, if necessary), drag a **Show message** activity into the microflow.
+15. Double-click the activity to open the **Show Message** properties editor and enter *Reversed name: {1}* for **Template**.
+16. In the **Parameters** section, click **New** to open the expression editor.
+17. Select **$ReversedName (String)**, which is the output variable of the Java action:
 
-    ![](attachments/18448685/18581031.png)
+	{{% image_container width="500" %}}![](attachments/extend-custom-java/parameter.png)
+	{{% /image_container %}}
 
-12. Click **OK** to save the properties. The microflow should now look like this:
+18. Click **OK** to save the parameter. The **Show Message** properties should now look like this:
 
-    ![](attachments/18448685/18581023.png)
+	{{% image_container width="500" %}}![](attachments/extend-custom-java/show-message.png)
+	{{% /image_container %}}
 
-13. Open the **Toolbox** from the bottom-right corner of the Modeler:
+19. Click **OK** to save the show message activity. The microflow should now look like this:
 
-    ![](attachments/2949137/3080422.png)
+	{{% image_container width="500" %}}![](attachments/extend-custom-java/microflow4.png)
+	{{% /image_container %}}
 
-    You can also open the **Toolbox** from the **View** menu:
+## 6 Deploying & Seeing the Results
 
-    ![](attachments/2949137/3080419.png)
+1. Click **Run Locally** to deploy the application locally and click **View** to open the application in your browser.
+2. To test the new feature, select **Asset** from the app's **Dashboard**.
+3.  On the **Assets** page, click **Asset reverse name** for the asset that has been loaded:
 
-14. Drag a show message activity from the **Toolbox** to the line between the green start and red end event.
-15. Double-click the activity to open the **Show Message** properties editor.
-16. Enter *Reversed name: {1}* for **Template**:
+	{{% image_container width="600" %}}![](attachments/extend-custom-java/app1.png)
+	{{% /image_container %}}
 
-    ![](attachments/18448685/18581030.png)
+4.  The reversed name of the asset will be presented: 
 
-17. Click the **New** button to add a new parameter to open the expression editor.
-18. Press and hold the **Ctrl** button and press the spacebar to open the code completion editor.
-19. Select **$ReversedName (String)**, which is the output variable of the Java action:
+	{{% image_container width="600" %}}![](attachments/extend-custom-java/app2.png)
+	{{% /image_container %}}
 
-    ![](attachments/18448685/18581028.png)
+## 7 Troubleshooting {#troubleshooting}
 
-20. Click **OK** to save the parameter. The show message activity properties should now look like this:
+If you get an `UnsupportedClassVersionError` when running your app, follow these steps:
 
-    ![](attachments/18448685/18581027.png)
+1. Clean your app project's **deployment** folder by selecting **Project** > **Clean Deployment Directory**.
+2. Add the same JDK version to Eclipse as that which you are using in Studio Pro (this is the recommended version correlation). For details on JDK requirements, see the [Mendix Studio Pro](/refguide/system-requirements#sp) section of *System Requirements*.
 
-21. Click **OK** to save the show message activity. The microflow should now look like this:
+## 8 Read More
 
-    ![](attachments/18448685/18581022.png)
-
-## 6 Deploying and Seeing the Results
-
-1. Click **Run** to deploy the application to the cloud. The Modeler automatically commits the changes to Team Server for version control.
-
-    ![](attachments/8784287/8946349.png)
-
-2.  As soon as the deployment process is completed, click **View** to open the application in your browser:
-
-    ![](attachments/8784287/8946352.png)
-
-3.  Open the customers overview, select a row, and click **Reverse Name**. You should now see a message pop-up window with the reversed customer name.
-
-## 7 Related Content
-
-* [How to Define Access Rules Using XPath](define-access-rules-using-xpath)
-* [How to Trigger Logic Using Microflows](triggering-logic-using-microflows)
-* [How to Create a Custom Save Button](create-a-custom-save-button)
-* [How to Work with Lists in a Microflow](working-with-lists-in-a-microflow)
-* [How to Optimize Retrieve Activities](optimizing-retrieve-activities)
-* [How to Set Up Error Handling](set-up-error-handling)
-* [How to Optimize Microflow Aggregates](optimizing-microflow-aggregates)
-* [How to Extract and Use Sub Microflows](extract-and-use-sub-microflows)
+* [Define Access Rules Using XPath](define-access-rules-using-xpath)
+* [Trigger Logic Using Microflows](triggering-logic-using-microflows)
+* [Create a Custom Save Button](create-a-custom-save-button)
+* [Work with Lists in a Microflow](working-with-lists-in-a-microflow)
+* [Optimize Retrieve Activities](optimizing-retrieve-activities)
+* [Set Up Error Handling](set-up-error-handling)
+* [Optimize Microflow Aggregates](optimizing-microflow-aggregates)
+* [Extract & Use Sub-Microflows](extract-and-use-sub-microflows)

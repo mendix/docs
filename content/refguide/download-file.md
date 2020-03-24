@@ -1,26 +1,34 @@
 ---
 title: "Download File"
 parent: "client-activities"
+menu_order: 2
+tags: ["studio pro"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert type="warning" %}}
+This activity can only be used in **Microflows**.
+{{% /alert %}}
+
+## 1 Introduction
 
 The download-file action can be used to enable the browser to download a specific file. The user gets a download popup or the file is shown directly in the browser.
 
 {{% alert type="info" %}}
 
-See [Microflow Element Common Properties](microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
+See [Common Properties](microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
 
 {{% /alert %}}
 
-## Input Properties
+## 2 Input Properties
 
-### File document
+### 2.1 File document
 
 Input file document defines the file to be downloaded. The information of the file is stored in an object of entity System.FileDocument or a specialization.
 
-## Action Properties
+## 3 Action Properties
 
-### Show file in browser
+### 3.1 Show File in Browser
 
 Show file in browser defines whether the file is downloaded to a location specified by the user or shown directly in the browser.
 

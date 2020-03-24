@@ -28,7 +28,7 @@ We have prepared a Mendix hybrid mobile project on GitHub for you with all the s
 1.  Go to **[https://github.com/mendix/MobileSlider](https://github.com/mendix/MobileSlider).**
 2.  Click on **Download ZIP** to download the latest version.
 3.  You can find the test project in the **"test"** directory fully configured and ready to use.
-4.  The app is available on [http://localhost:8109/](http://localhost:8109/) once you start running it in Mendix.
+4.  The app is available on `http://localhost:8109/` once you start running it in Mendix.
 
 
 
@@ -143,7 +143,7 @@ $('#mx-slider-background-layer').on('mx.slide.set.background', lang.hitch(this, 
 
 ## 8\. Conclusion
 
-I encourage you to download all the source files from the GitHub repository and dive right into the goodies that these widgets provide. It will show you how powerful the Mendix platform can be, extended with new UX features.
+I encourage you to download all the source files from the GitHub repository and dive right into the goodies that these widgets provide. It will show you how powerful the Mendix Platform can be, extended with new UX features.
 
 
 

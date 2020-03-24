@@ -1,27 +1,27 @@
 ---
 title: "Parameter"
-parent: "microflows"
+parent: "application-logic"
+menu_order: 70
+tags: ["studio pro", "parameter", "microflow"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+## 1 Introduction
 
-A parameter is data that serves as input for the microflow. Parameters are filled at the location from where the microflow is triggered.
+A parameter is a special kind of variable that is used an input for the microflow. When a microflow is triggered, the parameters are filled with the current values.
 
-{{% alert type="info" %}}
+If you want to use an object of the *Customer* entity in a microflow, use the parameter. In the picture below, the object name is *EnclosingCustomer* and is shown in black. The data type is object, therefore the entity name is shown underneath the object name in blue.
 
-When you have an object of the entity 'Customer' that you want to use in a microflow, a parameter is used. The variable name is 'EnclosingCustomer' and is shown in black. The data type is object, therefore the entity name is shown underneath the variable name in blue.
+![](attachments/parameter/parameter.png)
 
-![](attachments/819203/917903.png)
+## 2 Output Properties
 
-{{% /alert %}}
+### 2.1 Name
 
-## Output Properties
+**Name** refers to the value of the parameter.
 
-### Variable name
+### 2.2 Data Type
 
-Variable name defines the name of the variable in which the argument of the parameter is stored.
+The data type of a parameter defines the type of the value that it expects. See [Data Types](data-types) for the possible data types.
 
-### Data type
-
-The data type of a microflow parameter defines the type of the value that it expects. See [Data Types](data-types) for the possible data types.
-
-_Default value:_ Object
+Default: *Object*

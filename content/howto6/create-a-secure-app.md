@@ -247,7 +247,6 @@ An XPath constraint can be used to constrain the set of objects to which the acc
 7. If you log in with the Test User account, you will see that only orders with the **Order status** of **Open** are shown in the overview:
     ![](attachments/18448715/18581520.png)
 
-## 7 Related Content
+## 7 Read More
 
-* [Generate a Personal SSH2 Key Pair](generating-a-personal-ssh2-key-pair)
 * [Set Up Anonymous User Security](set-up-anonymous-user-security)

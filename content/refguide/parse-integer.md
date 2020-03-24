@@ -1,6 +1,7 @@
 ---
-title: "Parse integer"
-parent: "microflow-expressions"
+title: "Parse Integer"
+parent: "expressions"
+tags: ["studio pro"]
 ---
 
 

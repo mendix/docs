@@ -1,29 +1,38 @@
 ---
 title: "NULL Order Behavior"
 parent: "data-storage"
+tags: ["studio pro"]
+menu_order: 20
 ---
 
-An ORDER BY clause allows you to specify the order in which rows appear in the result set. For instance, sorting on a column in a **data grid** sorts the data of the column in either Ascending (smallest value first) or Descending (largest value first) order. The default order is ascending.
+## 1 Introduction
 
-However, NULL is a special marker used in Structured Query Language (SQL) to indicate that a data value does not exist in the database.
+An `ORDER BY` clause allows you to specify the order in which rows appear in the result set. For instance, sorting on a column in a data grid sorts the data of the column in either ascending (smallest value first) or descending (largest value first) order. The default order is ascending.
 
-In case we have NULL values in the column and a sort is applied on the column, the decision whether the NULLs should come first or last varies per database type. 
+However, `NULL` is a special marker used in SQL to indicate that a data value does not exist in the database.
 
-We will explain default NULL values ordering behaviour, per database type, going forward.
+If you have `NULL` values in the column and a sort is applied on the column, the decision whether the `NULLs` should come first or last varies per database type.
 
-**HSQLDB**<br />
-If you specify the ORDER BY clause, a NULL value always comes first before any non-NULL value, irrespective of the sort order.
+## 2 Default NULL Value Sort Order Behavior by Database Type
 
-**MARIADB / MYSQL / SQLSERVER**<br />
-If you specify the ORDER BY clause, NULL values by default are ordered as less than values that are not NULL. Using the ASC order, a NULL value comes first before any non-NULL value; using DESC order, the NULL comes last.
+### 2.1 HSQLDB
 
-**DB2 / ORACLE / POSTGRESQL** <br />
-If you specify the ORDER BY clause, NULL values by default are ordered as more than values that are not NULL. Using the ASC order, a NULL value comes after any non-NULL value; using DESC order, the NULL comes first.
+If you specify the `ORDER BY` clause, a `NULL` value always comes first before any non-`NULL` value, irrespective of the sort order.
 
-The following overview summarizes the NULLs default sort ordering provided by different database types.
+### 2.2 MARIADB, MYSQL & SQLSERVER
 
-| NULL Ordering Behavior/ Database Types  | MARIADB/MYSQL | SQLSERVER | HSQLDB | DB2 | ORACLE | POSTGRESQL
-|------------------------|---|---|---|---|---|---|---|
+If you specify the `ORDER BY` clause, `NULL` values by default are ordered as less than values that are not `NULL`. Using the `ASC` order, a `NULL` value comes before any non-`NULL` value. Using the `DESC` order, the `NULL` comes last.
+
+### 2.3 DB2, ORACLE & POSTGRESQL
+
+If you specify the `ORDER BY` clause, `NULL` values by default are ordered as more than values that are not `NULL`. Using the `ASC` order, a `NULL` value comes after any non-`NULL` value. Using the `DESC` order, the `NULL` comes first.
+
+## 3 Overview of Default NULLs Sort Order
+
+This table presents the `NULLs` default sort ordering provided by different database types:
+
+| NULL Ordering Behavior/Database Types  | MARIADB/MYSQL | SQLSERVER | HSQLDB | DB2 | ORACLE | POSTGRESQL |
+|------------------------|---|---|---|---|---|---|
 | **ASC NULLS FIRST** | ✔ | ✔ |  ✔  |    |  |   |
 | **ASC NULLS LAST**|  |   |   |  ✔ |  ✔ |  ✔|
 | **DESC NULLS FIRST**|   |   | ✔ |  ✔| ✔  | ✔|

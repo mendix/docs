@@ -13,7 +13,7 @@ A data grid showing accounts.
 
 {{% /alert %}}
 
-# Common properties
+## Common properties
 
 {{% snippet file="refguide6/Name+Property.md" %}}
 
@@ -86,7 +86,7 @@ _Default value:_ False
 
 ### Default button trigger
 
-The default button can be triggered by a single or a double click on a row.
+The default button can be triggered by a single or a double click a row.
 
 | Value | Description |
 | --- | --- |
@@ -126,13 +126,13 @@ See the corresponding data source for its properties:
 
 {{% snippet file="refguide6/Visibility+Property+With+Module+Roles+Simple.md" %}}
 
-# Components
+## Components
 
 ## Columns
 
-#### Common Properties
+### Common Properties
 
-### Class property
+#### Class property
 
 The class property allows you to specify a cascading style sheet (CSS) class for the widget. This class will be applied to the widget in the browser and the widget will get the corresponding styling. The class should be a class from the theme that is used in the project. It overrules the default styling of the widget.
 
@@ -146,7 +146,7 @@ Note that the styling is applied in the following order:
 
 {{% /alert %}}
 
-### Style property
+#### Style property
 
 The style property allows you to specify additional CSS styling. If a class is also specified, this styling is applied _after_ the class.
 
@@ -157,7 +157,7 @@ This will result in a blue background
 
 {{% /alert %}}
 
-### Data Source Properties
+#### Data Source Properties
 
 #### Attribute (path)
 
@@ -233,7 +233,7 @@ The caption of a column is the text that appears as a header above the rows. Thi
 
 #### Editable
 
-The editable property indicates whether the values of the column will be editable in-line, i.e. without opening a page with a data view. In-line editing allows the data grid to behave like you would expect from a spreadsheet application.
+The editable property indicates whether the values of the column will be editable inline, as in, without opening a page with a data view. In-line editing allows the data grid to behave like you would expect from a spreadsheet application.
 
 #### Aggregate function
 

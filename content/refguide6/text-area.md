@@ -100,7 +100,7 @@ The placeholder text is shown when no text has been entered yet. It can be used 
 
 {{% snippet file="refguide6/Tab+index+Property.md" %}}
 
-## Related Content
+## Read More
 
 *   [Data view](data-view)
 *   [Attributes](attributes)

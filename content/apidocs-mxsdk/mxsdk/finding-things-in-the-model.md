@@ -1,39 +1,65 @@
 ---
-title: "Finding Things in the Model"
+title: "Find Things in the Model"
 parent: "manipulating-existing-models"
+tags: ["app store module", "module"]
 ---
-The `model` object we got back from `workingCopy.model()` can be used to find and even manipulate units and elements. It provides three different means with which we can find units and elements.
 
-## The model.root property
+## 1 Introduction
 
-The `root` object refers to the `root` project node in the Project Explorer in the Mendix Modeler, and from here on you can walk through the project tree and into specific documents. The following line for examples finds the name of the first attribute of the `Customer` entity in the first module of your project.
+The `model` object you get back from `workingCopy.model()` can be used to find and even manipulate units and elements. It provides three different means with which you can find units and elements.
 
-```js
-var attrName = model.root
-	.modules[0]
-	.domainModel
-	.entities.filter(entity => entity.name === "Customer")[0]
-	.attributes[0].name;
-```
+## 2 The model.root Property
 
-## The model.allXXX() functions
+The `root` object refers to the `root` project node in the **Project Explorer** in Studio Pro. From there, you can walk through the app project tree and into specific documents.
 
-These functions return the complete collection of a specific type of units. Some unit types are abstract, for example `allMicroflowBases` returns all microflows and all rules. So the snippet above could also be expressed as:
+For example, this snippet finds the name of the first attribute of the `Customer` entity in the first module of your app project:
 
 ```js
-var attrName = model.allDomainModels()[0]
-	.entities.filter(entity => entity.name === "Customer")[0]
-	.attributes[0].name;
+const model = workingCopy.model();
+const domainModel = model.root.modules[0].domainModel;
+const customerEntity = domainModel.entities.filter(entity => entity.name === "Customer")[0]
+
+const attributeName = customerEntity.attributes[0].name;
 ```
 
-## The model.findXXXByQualifiedName() functions
+## 3 The model.allXXX() Functions
 
-For all referable concepts in a model (both units, such as a page, as well as elements, such as an entity) a `find` function is exposed through the `model` object. Given a _fully-qualified name_ (for example `"Customers.Customer.Name"`) it finds the element with that name, or it returns `null` if it doesn't exist.
+These functions return the complete collection of a specific type of units. Some unit types are abstract (for example, `allMicroflowBases` returns all microflows and all rules).
+
+So, the example snippet above could also be expressed this way:
 
 ```js
-var attrName = model
-	.findEntityByQualifiedName("Customers.Customer")
-	.attributes[0].name;
+const domainModel = model.allDomainModels()[0];
+const customerEntity = domainModel.entities.filter(entity => entity.name === "Customer")[0]
+
+const attributeName = customerEntity.attributes[0].name;
 ```
 
-Continue the learning path with [Loading units and elements](loading-units-and-elements).
+## 4 The model.findXXXByQualifiedName() Functions
+
+For all the referable concepts in a model (both units, such as a page, as well as elements, such as an entity), a `find` function is exposed through the `model` object. Given a fully-qualified name (for example, `"Customers.Customer.Name"`), it finds the element with that name, or it returns `null` if it doesn't exist.
+
+```js
+const customerEntity = model.findEntityByQualifiedName("Customers.Customer");
+const attributeName = customerEntity.attributes[0].name;
+```
+
+For more information, see [How to Load Units and Elements](loading-units-and-elements).
+
+## 5 The model.allModules Function
+
+Implement this snippet to fetch information on all the App Store modules used in your app project:
+
+```js
+const model = workingCopy.model();
+model.allModules()
+	.filter(module => module.fromAppStore === true)
+	.forEach(module =>
+		console.log({
+			name: module.name,
+			appStoreVersion: module.appStoreVersion,
+			appStoreGuid: module.appStoreGuid,
+			appStoreVersionGuid: module.appStoreVersionGuid
+		})
+	);
+```

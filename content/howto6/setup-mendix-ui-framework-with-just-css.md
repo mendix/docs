@@ -22,12 +22,8 @@ Before you can start with this how-to, make sure you have completed the followin
 In this chapter we will create a new app and select a theme from the New App selector.
 
 1.  Open the **Mendix Modeler**.
-2.  Create a **New App** from the **My Apps** screen in the Mendix Modeler.
-
-     ![](attachments/18448709/18581431.png)
+2.  Create a **New App**  screen in the Mendix Modeler.
 3.  Select a theme for your app.
-
-    ![](attachments/18448709/18581432.png)
 4.  You can now deploy your app (F5)
 
     ![](attachments/18448709/18581429.png) 
@@ -55,9 +51,8 @@ In this chapter we will create a new app and select a theme from the New App sel
     ![](attachments/18448709/18581426.png) 
 8.  Congratulations, you made your first theme change.
 
-## 4\. Related Content
+## 4. Read More
 
-*   [Scout and Windows 10 Workaround](scout-and-windows-10-workaround)
 *   [Layouts and Snippets](layouts-and-snippets)
 *   [Filtering Data on an Overview Page](filtering-data-on-an-overview-page)
 *   [Setup Mendix UI Framework with just CSS](setup-mendix-ui-framework-with-just-css)

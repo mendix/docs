@@ -30,7 +30,7 @@ To use this service, you need to create an account at [https://www.rijksmuseum.n
 Make sure you have completed these prerequisite steps:
 
 1. Open the Mendix Modeler, and then click **App Store** in the upper-right part of the toolbar to open the App Store.
-2. In the App Store, search for and download the latest **Rest Services** module:
+2. In the App Store, search for the **Rest Services** module, and download a version of this module that will work with a version 6.x.x of the Desktop Modeler:
     ![](attachments/18448729/18581739.png)
 3. Search for and download the latest **Community Commons Function Library** module from the App Store:
     ![](attachments/18448729/18581738.png)
@@ -147,7 +147,7 @@ To consume the service using a Get request, follow these steps:
     Name | Argument
     --- | ---
     method | RestServices.HttpMethod.GET
-    url | 'https://www.rijksmuseum.nl/api/en/collection/?key=' + <API_Key> + '&format=json'
+    url | `https://www.rijksmuseum.nl/api/en/collection/?key=` + <API_Key> + `&format=json`
     optRequestData | $Query
     optResponseData | $newResults
     sendWithFormEncoding | false
@@ -176,7 +176,7 @@ In this section, you will create a microflow to hypothetically send data back to
     Name | Argument
     --- | ---
     method | RestServices.HttpMethod.POST
-    url | 'https://www.rijksmuseum.nl/api/en/collection/?key=' + <API_Key> + '&format=json'
+    url | `https://www.rijksmuseum.nl/api/en/collection/?key=` + <API_Key> + `&format=json`
     optRequestData | $Results (ideally you would name it Request)
     optResponseData | Add here the entity to which you can map the response (if a response is available from the service)
     sendWithFormEncoding | false
@@ -184,7 +184,7 @@ In this section, you will create a microflow to hypothetically send data back to
     **![](attachments/18448729/18581753.png)**
     If you now change the data of one of the objects linked to the **Results** object that you are passing on to the microflow, the POST request will update the other system accordingly.
 
-## 7 Related Content
+## 7 Read More
 
 * [Consuming a Complex Web Service](consume-a-complex-web-service)
 * [Consuming a Simple Web Service](consume-a-simple-web-service)
@@ -194,4 +194,4 @@ In this section, you will create a microflow to hypothetically send data back to
 * [Selenium Support](selenium-support)
 * [Synchronizing User Accounts Using the LDAP Module](synchronizing-user-accounts-using-the-ldap-module)
 * [Importing XML Documents](importing-xml-documents)
-* [Exposing Data to BI Tools Using OData](exposing-data-to-bi-tools-using-odata)
+

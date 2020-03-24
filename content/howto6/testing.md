@@ -5,13 +5,11 @@ Testing is a vital component when creating a Mendix application. On this page yo
 
 ## How-To's
 
-*   [Application Performance Monitor](/addons/apm/)
-*   [Application Test Suite](/ats/)
-*   [Application Quality Monitor](/addons/aqm/)
+*   [Application Performance Diagnostics](/addons/apd-addon/)
+*   [Application Test Suite](/addons/ats-addon/)
+*   [Application Quality Monitor](/addons/aqm-addon/)
 *   [Testing microflows using the UnitTesting module](testing-microflows-using-the-unittesting-module)
 *   [Testing web services using SoapUI](testing-web-services-using-soapui)
-*   [Testing Mendix applications using Selenium IDE](testing-mendix-applications-using-selenium-ide)
-*   [Creating automated tests with TestNG](create-automated-tests-with-testng)
 
 ## Blogs
 

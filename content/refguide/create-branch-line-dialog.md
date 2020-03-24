@@ -1,33 +1,60 @@
 ---
-title: "Create Branch Line Dialog"
-parent: "dialogs"
+title: "Create Branch Line"
+parent: "branch-line-manager-dialog"
+menu_order: 90
+tags: ["studio pro", "create branch line"]
 ---
-Use this dialog to create a new [development line](version-control-concepts). A development lines allows independent development from other development lines. There are two main reasons for creating a branch line. The first is to do maintenance development on a version that is running in production. You can keep on developing in the main line while you fix issues in the branch line. The second reason for creating a branch is if you are starting the development of a very large feature, a feature that will probably take more than a day to develop. By doing this in a branch line you can commit the half implemented feature (possibly even with errors) without disturbing other development in the main line.
 
-## Team Server project
+## 1 Introduction
 
-Select the Team Server project that you want to create a branch line for. If you have a project open in the Modeler it will be selected automatically. However, you can also create a branch line from the Start Page and in that case no project will be selected.
+Use the **Create Branch Line** dialog box to create a new [branch line](version-control#branches) via the **Branch Line Manager**:
 
-## Create branch from
+![](attachments/version-control-menu/create-branch-line.png)
 
-Choose where you want to create the branch from. If you are doing maintenance on a deployed version you probably want to select a tagged version here. If you want to develop a large feature independently of the main line you choose 'Main line'. It is also possible to create a branch line from a branch line and we recommend you only do that if you know what you are doing.
+To view the **Create Branch Line** dialog box,  do the following:
 
-## Tagged version (for 'Tagged version')
+1. Open **Version Control** > **Manage Branch Lines**.
+2. In the **Branch Line Manager**, click **New**. 
+
+The **Create Branch Line** dialog box is displayed.
+
+For more information on how to manage branch lines, see the [Managing Development Lines in Studio Pro](collaborative-development#managing-branches) section in *Collaborative Development* and [Branch Line Manager](branch-line-manager-dialog). For information on the version control, see [Version Control](version-control). 
+
+## 2 Create Branch From
+
+**Create branch from** allows you to choose the development line you want to create the branch line from. You can choose one of the following options:
+
+* <a name="main-line"></a>**Main line** – generally you would want to select *Main line* if you want to develop a large feature independently of the main line
+* <a name="branch-line"></a>**Branch line** – allows you to create a branch line from another branch line
+* <a name="tagged-version"></a>**Tagged version** – if you are doing maintenance on a deployed version you probably want to select a *tagged version*
+
+## 3 Revision 
+
+This setting is only available when you select the [Main line](#main-line) or [Branch line](#branch-line) in **Create branch from**. 
+
+Select from which revision of the main line or a branch line you want to create a branch line. Often, you would want to choose the most recent version.
+
+## 4 Branch Line 
+
+This setting is only available when you select [Branch line](#branch-line) in **Create branch from**. 
+
+Select from which branch line you want to create another branch line. We recommend that you make branch lines only from the main line but in some cases branching a branch line can be useful.
+
+## 5 Tagged Version
+
+This setting is only available when you select [Tagged version](#tagged-version) in **Create branch from**.  
 
 Select from which tagged version you want to create a branch line. Every time you create a deployment archive a tag is created so that you can always refer back to that version of the project.
 
-## Revision (for 'Main line')
+## 6 Branch Name
 
-Select from which revision of the main line you want to create a branch line. Often you want to choose the most recent version. You then develop some functionality in the branch line and merge it back when you are done.
+Enter a name of the new branch line. 
 
-## Branch line (for 'Branch line')
+## 7 Existing Branch Lines
 
-Select from which branch line you want to create another branch line. We recommend that you make branches only from the main line but in some cases branching a branch line can be very useful.
+Since branch line names must be unique, this option shows the existing branch lines, so that you do not accidentally create a branch line with the same name.
 
-## Revision (for 'Branch line')
+## 8 Read More
 
-Select from which revision of the selected branch line you want to create another branch line.
-
-## Branch name
-
-Enter a name for the new branch line. The existing branch lines are shown so that you do not accidentally create a branch twice.
+* [Version Control](version-control)
+* [Collaborative Development](collaborative-development)

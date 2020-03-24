@@ -2,12 +2,14 @@
 title: "Monitoring - Mendix Runtime"
 category: "Proactive Maintenance"
 ---
+
 The Mendix Runtime monitoring actions can be called by sending a JSON request to the admin handler. This is accomplished by sending a request to the admin port which is specified in the application configuration.
-The JSON request should be accompanied by a base64 encoded monitoring password (the password should also be specified in the application configuration) and put in the request header "X-M2EE-Authentication". The content type of the request should be "application/json".
+
+The JSON request should be accompanied by a base64 encoded monitoring password (the password should also be specified in the application configuration) and put in the request header "X-M2EE-Authentication". The content type of the request should be `application/json`.
 
 Read the next sections to find out which monitoring actions are supported.
 
-## Current executions
+## Current Executions
 
 **Request**
 
@@ -78,14 +80,14 @@ Read the next sections to find out which monitoring actions are supported.
 }
 ```
 
-This request returns the current executions of actions known by the Mendix Runtime. Actions can amongst others be microflows, Java actions, web service calls and scheduled events. For each execution the following is reported:
+This request returns the current executions of actions known by the Mendix Runtime. Actions can be microflows, Java actions, web service calls, and scheduled events, among others. For each execution, the following is reported:
 
-*   the "duration" of the execution in milliseconds.
-*   the "type" of execution. Possible types are "CLIENT", "CLIENT_ASYNC", "CLIENT_ASYNC_MONITORED", "CUSTOM", "WEB_SERVICE", "SCHEDULED_EVENT" and "UNKNOWN". "CLIENT_ASYNC" is the asynchronous microflow call triggered from the web client, "CLIENT_ASYNC_MONITORED" is the actual execution of the asynchronous microflow in the Mendix Runtime, which happens in a different thread.
-*   the "user" is the name of the user associated with the session executing the action. In case of a non-user session the name "System" is displayed.
-*   the "action_stack" shows the stack of actions for this execution. For each action in this stack detailed information is displayed, e.g. for a microflow the current activity and the name of the microflow are shown.
+* The `duration` of the execution in milliseconds.
+* The `type` of execution. Possible types are `CLIENT`, `CLIENT_ASYNC`, `CLIENT_ASYNC_MONITORED`, `CUSTOM`, `WEB_SERVICE`, `SCHEDULED_EVENT`, and `UNKNOWN`. `CLIENT_ASYN` is the asynchronous microflow call triggered from the web client, and `CLIENT_ASYNC_MONITORED` is the actual execution of the asynchronous microflow in the Mendix Runtime, which happens in a different thread.
+*  The `user` is the name of the user associated with the session executing the action. In case of a non-user session, the name `System` is displayed.
+* The `action_stack` shows the stack of actions for this execution. For each action in this stack, detailed information is displayed (for example, for a microflow, the current activity and the name of the microflow are shown).
 
-## Runtime statistics
+## Runtime Statistics
 
 **Request**
 
@@ -188,50 +190,54 @@ This request returns the current executions of actions known by the Mendix Runti
 ```
 
 <u>Requests</u>
-Displays information about the request per handler. The value field shows the number of requests per handler. Since Mendix 5.3, the last_request_timestamp field shows the timestamp in milliseconds of the last handled request. If there are no requests handled, this field shows the moment the handler is registered.
-The empty handler represents the resource request handler, which handles images, forms etc. (only in use when no reverse proxy is used for static content handling).
-"file" handles file uploads and downloads, "xas/" processes CRUD actions and microflow execution calls issued by the web client and "ws/" and "ws-doc/" handle web service requests and provide web service documentation.
+Displays information about the request per handler. The value field shows the number of requests per handler. Since Mendix 5.3, the `last_request_timestamp` field shows the timestamp in milliseconds of the last handled request. If there are no requests handled, this field shows the moment the handler is registered.
+
+The empty handler represents the resource request handler, which handles images, forms, etc. (only in use when no reverse proxy is used for static content handling).
+
+`file` handles file uploads and downloads, `xas/` processes CRUD actions and microflow execution calls issued by the web client, and `ws/` and `ws-doc/` handle web service requests and provide web service documentation.
 
 <u>Cache</u>
 
-Shows the total number of objects which are currently part of the runtime state (all session together). The runtime state either resides in memory (non-clustered runtime) or in Redis or the database (clustered runtime). Too many objects in the state could slow down the performance of the Mendix Runtime.
+Shows the total number of objects that are currently part of the runtime state (all session together). The runtime state either resides in memory (non-clustered runtime), in Redis, or the database (clustered runtime). Too many objects in the state could slow down the performance of the Mendix Runtime.
 
 <u>Sessions</u>
-The "user_sessions" sections shows the current user sessions with their user agents. The other sections show the number of sessions per category. Categories are "named users" (the number of user instances), "named_user_sessions" (the number of non-anonymous concurrent sessions) and "anonymous_sessions" (the number of anonymous concurrent sessions).
+
+The `user_sessions` sections shows the current user sessions with their user agents. The other sections show the number of sessions per category. Categories are `named users` (the number of user instances), `named_user_sessions` (the number of non-anonymous concurrent sessions), and `anonymous_sessions` (the number of anonymous concurrent sessions).
 
 <u>Connectionbus</u>
-Number of database requests. Distinguishes between "select", "update", "insert", "delete" commands and started database transactions.
+
+The number of database requests. Distinguishes between `select`, `update`, `insert`, and `delete` commands and started database transactions.
 
 <u>Memory</u>
 
 {{% alert type="warning" %}}
 
-Memory statistics should only be interpreted by experts, lack of detailed knowledge of the Java memory model can lead to false conclusions.
+Memory statistics should only be interpreted by experts. A lack of detailed knowledge of the Java memory model can lead to false conclusions.
 
 {{% /alert %}}{{% alert type="warning" %}}
 
-For versions of lower than Mendix 6.6 or Mendix 5.21.5 running on Java8, the information returned in the "memory" part of the response provides incomplete and incorrect information. If you rely on information in this section for these versions we recommend you to upgrade your version to Mendix 6.7 or 5.21.5 or higher.
+For versions lower than Mendix 6.6 or Mendix 5.21.5 running on Java8, the information returned in the `memory` part of the response provides incomplete and incorrect information. If you rely on information in this section for these versions, upgrading your version to Mendix 6.7 or 5.21.5 or higher is recommended.
 
-For backwards compatibility reasons the fields "code", "eden", "tenured", "survivor" and "permanent" are still present but they should not be relied on anymore. They will be removed from Mendix 7 onwards.
+For backwards compatibility reasons, the fields `code`, `eden`, `tenured`, `survivor`, and `permanent` are still present, but they should not be relied on anymore. They will be removed from Mendix 7 onwards.
 
 {{% /alert %}}
 
-Represents the number of bytes allocated to the specified memory sections. For a general explanation, see the [Oracle documentation on tuning garbage collection](http://docs.oracle.com/javase/8/docs/technotes/guides/vm/gctuning/). For the heap and non-heap fields see the [memory usage](https://docs.oracle.com/javase/8/docs/api/java/lang/management/MemoryUsage.html) page. The "memorypools" section contains an ordered list of all the memory pools exactly as we receive them from the JVM, in the same order and with some fields of the [MemoryPoolMxBean](http://docs.oracle.com/javase/8/docs/api/java/lang/management/MemoryPoolMXBean.html):
+Represents the number of bytes allocated to the specified memory sections. For a general explanation, see the [Oracle documentation on tuning garbage collection](http://docs.oracle.com/javase/8/docs/technotes/guides/vm/gctuning/). For the heap and non-heap fields, see [Class MemoryUsage](https://docs.oracle.com/javase/8/docs/api/java/lang/management/MemoryUsage.html). The `memorypools` section contains an ordered list of all the memory pools exactly as we receive them from the JVM, in the same order and with some fields of the [MemoryPoolMxBean](http://docs.oracle.com/javase/8/docs/api/java/lang/management/MemoryPoolMXBean.html):
 
-*   "usage": returns an estimate of the memory usage of this memory pool (in bytes).
-*   "is_heap": is this memory pool part of the heap or not?
-*   "name": the description of the memory pool as received by the JVM. These names can be different depending on for example JDK,memory manager or  garbage collection options.
-*   "index": the index in the JSON Array. This field is not strictly needed as the pools are returned in a list so you can, and should, rely on the order of the list in case you are processing them in a program.
+* `usage` – returns an estimate of the memory usage of this memory pool (in bytes).
+* `is_heap` – is this memory pool part of the heap or not?
+*  `name` – the description of the memory pool as received by the JVM. These names can be different depending on, for example, the JDK, memory manager, or garbage collection options.
+*  `index` – the index in the JSON array. This field is not strictly needed, as the pools are returned in a list so that you can (and should) rely on the order of the list in case you are processing them in a program.
 
 {{% alert type="info" %}}
 
-If you are automatically processing the "memorypools" section to for example display in a graph, you should ideally not make any assumptions about the kind of memory pool based on its order in the list or its name as these may change depending on for example garbage collector settings or Java version.
+If you are automatically processing the `memorypools` section to, for example, display in a graph, you should ideally not make any assumptions about the kind of memory pool based on its order in the list or its name, as these may change depending on, for example, garbage collector settings or the Java version.
 
-In case you do want to develop a strategy on interpreting these pools anyway based on Java version: you can get the Java version from the 'about' admin action.
+In case you do want to develop a strategy for interpreting these pools anyway based on the Java version, you can get the Java version from the `about` admin action.
 
 {{% /alert %}}
 
-## State statistics
+## State Statistics
 
 **Request**
 
@@ -264,9 +270,9 @@ In case you do want to develop a strategy on interpreting these pools anyway bas
 }
 ```
 
-This monitoring action gives more detailed information about objects which are currently in the state of the Mendix Runtime. In "totals" the total number of objects per sessions are shown, in "user_totals" the number of objects per entity for a particular sessions are shown. This information can be an aid in figuring out which objects cause a lot of memory usage.
+This monitoring action gives more detailed information about objects that are currently in the state of the Mendix Runtime. In `1totals`, the total number of objects per sessions are shown, and in `user_totals` the number of objects per entity for a particular sessions are shown. This information can be an aid in figuring out which objects cause a lot of memory usage.
 
-## Server statistics
+## Server Statistics
 
 **Request**
 
@@ -283,7 +289,6 @@ This monitoring action gives more detailed information about objects which are c
     "jetty":{
       "current_connections":0,
       "max_connections":0,
-      "max_idle_time_s_low_resources":0,
       "max_idle_time_s":200
     },
     "threadpool": {
@@ -301,11 +306,11 @@ This monitoring action gives more detailed information about objects which are c
 }
 ```
 
-The server statistics monitor action gives information about the embedded Jetty web server. The "jetty" section lists the number of current open connections and the maximum number of open connections. In addition, the maximum idle time of connection before it's being closed is listed, for both when Jetty is under normal circumstances and when low on resources.
+The server statistics monitor action gives information about the embedded Jetty web server. The `jetty` section lists the number of current open connections and the maximum number of open connections. In addition, the maximum idle time of connection before it is closed is listed, for both when Jetty is under normal circumstances and when low on resources. Please note that in Mendix 6.10.11 and above, information about the maximum idle time of connections before it is closed when Jetty is low on resources ("max_idle_time_s_low_resources") is removed as part of the Jetty upgrade, because it is no longer provided by Jetty.
 
-The "threadpool" section gives information about the threadpool of the handler which processes all requests which go through the runtime port. See the [Jetty QueuedThreadPool documentation](http://download.eclipse.org/jetty/9.3.12.v20160915/apidocs/org/eclipse/jetty/util/thread/QueuedThreadPool.html) for more information.
+The `threadpool` section gives information about the threadpool of the handler which processes all requests which go through the runtime port. For more information, see the [Jetty QueuedThreadPool documentation](http://download.eclipse.org/jetty/9.3.12.v20160915/apidocs/org/eclipse/jetty/util/thread/QueuedThreadPool.html).
 
-## Logged in users
+## Logged-In Users
 
 **Request**
 
@@ -326,9 +331,9 @@ The "threadpool" section gives information about the threadpool of the handler w
 }
 ```
 
-Shows which users are currently logged in. If a user has multiple sessions, this user will be list once for every session.
+Shows which users are currently logged in. If a user has multiple sessions, this user will be listed once for every session.
 
-## Thread stack traces
+## Thread Stack Traces
 
 **Request**
 
@@ -387,9 +392,9 @@ Shows which users are currently logged in. If a user has multiple sessions, this
 }
 ```
 
-Returns all the current thread stack traces by name. This is useful to low level analyze what is happening in the application. Use the "get_current_runtime_executions" request to retrieve information on a higher level (microflows and other actions).
+Returns all the current thread stack traces by name. This is useful to low-level analyze what is happening in the application. Use the `get_current_runtime_executions` request to retrieve information on a higher level (microflows and other actions).
 
-## Runtime status
+## Runtime Status
 
 **Request**
 
@@ -409,9 +414,9 @@ Returns all the current thread stack traces by name. This is useful to low level
 }
 ```
 
-Returns the current Mendix Runtime status. Possible status values are: "created", "starting", "broken", "running", "stopping" and "stopped". This information can be used to track in what state the Mendix Runtime is when the command to start or stop was given or to check whether the runtime is still running.
+Returns the current Mendix Runtime status. Possible status values are: `created`, `starting`, `broken`, `running`, `stopping`, and `stopped`. This information can be used to track the state the Mendix Runtime is in when the command to start or stop was given or to check whether the runtime is still running.
 
-## Check health
+## Check Health
 
 **Request**
 
@@ -432,13 +437,13 @@ Returns the current Mendix Runtime status. Possible status values are: "created"
 }
 ```
 
-In the Mendix Modeler a [Health Microflow](project-settings) can be configured. This microflow can report on the functional status of the application. Does the general functionality of the application work? Are the necessary remote services available?
+In the Mendix Modeler, a [health microflow](project-settings) can be configured. This microflow can report on the functional status of the application. It will address whether the general functionality of the application works and if the necessary remote services are available.
 
-If such a Health Microflow has been configured, this request will report on the current health status. The "health" value, can be either "healthy", "sick", or "unknown" (when no health microflow was configured). In case of the value "sick", the "diagnosis" value will give the reason the application is not healthy. This reason is the return value of the Health Microflow.
+If a health microflow has been configured, this request will report on the current health status. The `health` value can be either `healthy`, `sick`, or `unknown` (when no health microflow was configured). In case of the value `sick`, the `diagnosis` value will give the reason that the application is not healthy. This reason is the return value of the health microflow.
 
 {{% alert type="warning" %}}
 
-This request can only be executed when the Mendix Runtime status is "running" (see Runtime Status).
+This request can only be executed when the Mendix Runtime status is `running` (see **Runtime Status** above).
 
 {{% /alert %}}
 
@@ -469,4 +474,4 @@ This request can only be executed when the Mendix Runtime status is "running" (s
 }
 ```
 
-Returns feedback about the Mendix Runtime. "java_version" is available from Mendix 6.6 onwards.
+Returns feedback about the Mendix Runtime. `java_version` is available from Mendix 6.6 onwards.

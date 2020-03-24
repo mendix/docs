@@ -1,117 +1,195 @@
 ---
 title: "Page"
 parent: "pages"
+menu_order: 10
+tags: ["studio pro", "page", "properties"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-
-{{% alert type="warning" %}}
-
-This document describes the properties of a page. If you want to see what pages are for and what kind of widgets can be placed on them, please read the [Pages](pages) overview documentation.
-
-{{% /alert %}}
-
-Pages define the end user interface of a Mendix application. Every page is based on a [layout](layout). A page fills the 'gaps' defined by a layout with widgets such as the [data view](data-view) and the [data grid](data-grid).
-
-## Common Properties
-
-### Name
-
-The name of the page. You can change the name via the project explorer.
-
-{{% snippet file="refguide/Documentation+Property.md" %}}
-
-### Class
-
-The class property allows you to specify a cascading style sheet (CSS) class for the page.
-
-### Style
-
-The style property allows you to specify custom cascading style sheet (CSS) rules for this page. If a class is also specified, this styling is applied _after_ the class.
+## 1 Introduction
 
 {{% alert type="info" %}}
-`background-color:blue;`
-This will result in a blue background
+
+This document describes basic functions you can perform in the page editor and its modes. For details on what pages are for and what kind of widgets can be placed on them, see [Pages](pages).
+
 {{% /alert %}}
 
-## Designer Properties
+Pages define the end-user interface of a Mendix application. Every page is based on a [layout](layout). A page fills the "gaps" defined by a layout with widgets such as the [data view](data-view) and [data grid](data-grid).
 
-### Canvas width
+## 2 Performing Basic Functions
 
-The canvas width property defines the width in pixels of the page in the page editor. It is purely used for editing purposes; this property has no effect on the actual application.
+You can perform the following basic function when working in the page editor:
 
-_Default value:_ 800
+* Open a page
+* Create a page
+* Delete a page
+* Add elements on a page
+* View element properties
+* Arrange elements on a page
 
-### Canvas height
+### 2.1 Opening a Page
 
-The canvas height property defines the preferred minimum height in pixels of the page in the page editor. It is purely used for editing purposes; this property has no effect on the actual application.
+To open a page in Studio Pro, do the following:
 
-_Default value:_ 600
+1. In the [Project Explorer](project-explorer), open a module where this page is located. 
 
-## General Properties
+2. Navigate to the page's location inside the module. A page can be listed as an individual element or be included in the **Pages** folder:
 
-### Title
+    ![](attachments/page/project-explorer-pages.png)
 
-The title of the page that is shown using the [page title widget](page-title). If the page is shown in a pop-up window, the title appears in the title bar of the pop-up. The title can be overridden from places where forms are opened to make it possible to reuse a page for different purposes. For example, a [Grid Create Button](grid-new-button) and an [Edit button](edit-button) can refer to the same page but override the title to "New" and "Edit" respectively.
+3. Select a page you want to open and double-click it.
 
-### Layout
+The selected page is opened. 
 
-The [layout](layout) that this page is based on.
+### 2.2 Creating a Page
 
-### URL
+To create a new page, do the following:
 
-The URL of the page can be used to directly navigate to the page (for example, from external links or bookmarks). It will be shown in the address bar of the browser when you visit the page. When navigating to a page without a URL configured, the last visited URL is shown. Note that the full URL of the page will be the base URL of your application followed by `/p` and then by the configured URL of the page (for example, *http://example.mendixcloud.com/p/home_page*).
-Pages with top level data views (parameterized pages) can also have URLs. The URL property of such pages should contain the `{Id}` path segment at the end.
-In the browser, the `{Id}` segment will be replaced with the actual identifier of an entity.
+1.  In the [Project Explorer](project-explorer), right-click the module or a folder you want to create a page in and select **Add page**:
 
-In simple e-commerce applications, the URLs can be configured as follows:
+    {{% image_container width="350" %}}![](attachments/page/add-page.png)
+    {{% /image_container %}}
 
-*/orders/* - the URL for a page with a data grid for `Orders`. In browser the URL will look like `http://example.mendixcloud.com/p/orders/`.
+2.  In the **Create Page** dialog box, fill in the **Page name** and select a **Navigation layout**.
 
-*/order/{Id}* - the URL for a page with a data from particular `Order`. Actual URLs in browser will look like `http://example.mendixcloud.com/p/order/3212449487634321` where `3212449487634321` unique identifier of the `Order`.
+    ![](attachments/page/create-page.png)
 
+3. Click **OK**. 
 
-## Navigation Properties
+A new page is created.
 
-### Visible for
+### 2.3 Deleting a Page
 
-The module roles for which the page is visible. This has effect on [menu widgets](menu-widgets) and on buttons that are visible only if allowed. See, for example, the [Edit button](edit-button).
+To delete a page, do the following:
 
-See also [Module Security](module-security).
+1. In the [Project Explorer](project-explorer), select a page you would like to delete and right-click it.
+2. In the displayed list, select **Delete** and confirm your choice by clicking **Delete** in the pop-up dialog.
 
-## Pop-up Properties
+The selected page is deleted. 
 
-The pop-up properties are only relevant for popup pages, as opposed to content pages.
+### 2.4 Adding Elements on a Page {#add-elements}
 
-### Width (in pixels)
+The way you can add an element on a page depends on a mode you are editing your page in. For more information on modes, see the [Page Editor Modes](#page-editor-modes) section.
 
-Specifies the pop-up width in pixels. When set to 0, the width is determined automatically.
+In **Structure mode**, there are several ways to add an element on a page:
 
-_Default value:_ 0
+1.  Through the **Toolbox**:
 
-### Height (in pixels)
+    1. Open the **Toolbox** and select **Widgets** or **Building blocks** tab there.
+    
+        ![](attachments/page/toolbox.png)
+      
+    2. Select an element you would like to add and drag and drop this element on your page.
+   
+2. Though the menu at the top of the page:
 
-Specifies the pop-up height in pixels. When set to 0, the height is determined automatically.
+    1. Do one of the following:
 
-_Default value:_ 0
+        i. Select frequently-used widgets (a data view, a data grid, a template grid, or a list view).
 
-### Resizable
+        ii. Click **Add widget**  or **Add building block**, find an element in a list and click **Select**.
 
-Specifies whether the pop-up is resizable (Yes) or fixed-size (No).
+        ![](attachments/page/top-menu.png)
+        
+    2. Click a drop-zone on a page to position an element.
 
-_Default value:_ Yes
+3. By right-clicking a drop-zone:<br/>
 
-### Close action
+    a. Right-click a drop-zone you want to insert an element in.<br/>
 
-Configures the behavior of the popup close button (the little cross in the top-right corner). The default behavior of the popup close button is to rollback any changes and close the popup. If you want to customize the behavior of the popup close button, you can point to a button on the page. When the popup close button is clicked, it will then act as if the selected button is clicked. If the selected button is not available the popup close button will revert back to the default behavior.
+    b. Select between adding a widget or a building block.<br/>
 
- _Default value:_ Default (cancel)
+    {{% image_container width="400" %}}![](attachments/page/adding-widget-in-drop-zone.png)
+    {{% /image_container %}}<br/>
 
-## Usage Properties
+    c. Select an element you would like to add and confirm your choice by clicking **Select**.
 
-### Mark as used
+In **Design mode**, you can add elements though the Toolbox. Do the following:
 
-You can search for unused items (Ctrl+Shift+F, Search for = Unused items) in the Modeler. Pages that are only used from Java code will be listed as unused because the Modeler cannot look inside Java source code.
+1. Open the **Toolbox** and select **Widgets** or **Building blocks** tab there. 
+2. Select an element you would like to add and drag and drop this element on your page.
 
-By setting the propery 'Mark as used' to 'Yes' you specify that the document is used implicitly and the Modeler will no longer list it when searching for unused items.
+### 2.5 Viewing Element Properties {#view-properties}
 
-_Default value:_ No
+To view properties of an element, do one of the following:
+
+1. Select an element and open **Properties** pane to view its properties.
+2. Right-click an element and select **Properties** from the list of options that opens.
+3. Double-click an element.
+
+### 2.6 Arranging Elements on a Page {#arrange-elements}
+
+To cut/copy/paste you can use the following shortcuts:
+
+* <kbd>Ctrl</kbd> + <kbd>Z</kbd> /  <kbd>Ctrl</kbd> + <kbd>C</kbd> / <kbd>Ctrl</kbd> + <kbd>V</kbd>  
+* <kbd>Cmd</kbd> + <kbd>Z</kbd> /  <kbd>Cmd</kbd> + <kbd>C</kbd> / <kbd>Cmd</kbd> + <kbd>V</kbd>
+
+{{% alert type="info" %}}
+
+You can cut/copy/paste elements on a page to different apps in Studio Pro if they have the same Mendix version. However, you cannot cut/copy/paste the whole page.
+
+You cannot cut/copy/paste from Studio Pro to Studio.
+
+{{% /alert %}}
+
+To delete an element from a page, select this element and press <kbd>Delete</kbd> or right-click an element and select **Delete** in a drop-down menu. 
+
+## 3 Page Editor Modes {#page-editor-modes}
+
+There are two different ways to edit your page:
+
+* [Structure Mode](#structure-mode), the default editor which clearly shows the relationship between page elements, together with additional information about each element
+* [Design Mode](#design-mode), a WYSIWYG (**W**hat **Y**ou **S**ee **I**s **W**hat **Y**ou **G**et) editor which better reflects what the page will look like when it is published
+
+You can switch to the WYSIWYG editor from the default editor by clicking the **Design mode** button in the page editor.
+You can return to the structural editor by clicking **Structure mode**.
+
+![Design mode and Structure mode buttons](attachments/page/design-mode.png)
+
+Both modes allow you to edit your page by doing the following:
+
+* Dragging widgets from the **Toolbox** pane onto the page
+* Dragging widgets, and their contents, from one place on the page to another
+* Viewing and editing properties of each widget in the **Properties** pane
+* Opening a **Properties** dialog box from the menu you get when you right-click the widget
+
+### 3.1 Structure Mode {#structure-mode}
+
+In Structure mode, the page widgets are laid out so that it is easy to see the logical relationship between them. It has the following features which are not available in Design mode:
+
+* Widgets are shown with additional information easily visible – for example, data sources for data views and the width assigned to columns
+
+    ![Frequently-used widgets](attachments/page/structure-mode-info.png)
+
+* Each widget has a drop-zone before/above and after/below it – this makes it easier to place widgets correctly when they appear close together in Design mode
+* Right-click a drop-zone allows you to insert a widget into it
+* There is a menu at the top of the page of data widgets – these cannot be dragged, but are positioned by clicking a drop-zone after selecting the widget
+
+    ![Frequently-used widgets](attachments/page/frequently-used.png)
+
+* Widgets are shown without styling applied to them, but you can see which widgets do have styling applied via the class or style property by clicking the **Show styles** button.
+
+    ![Show styles button](attachments/page/show-styles.png)
+
+### 3.2 Design Mode {#design-mode}
+
+In Design mode, the page is laid out as it will appear when published so that it is easy to see the spatial relationship between the elements.
+
+For example, the example page shown in [Structure Mode](#structure-mode), above, will look like this in **Design mode** for a tablet:
+
+![Design mode page as displayed on a tablet](attachments/page/design-mode-example.png)
+
+It has the following features which are not available in Structure mode:
+
+* The widgets are shown as they will be on the page – for example two text widgets which are laid out vertically in structural mode may actually be laid out horizontally when the app is published, and this will be reflected in Design mode
+
+* The page layout can be seen for different device modes – for example phone or browser by clicking the appropriate device mode button
+
+    ![Show styles button](attachments/page/design-factor.png)
+
+* The widgets have design properties and CSS classes and styles applied to them so you can see what they will look like
+
+## 4 Read More
+
+* [Pages](pages)
+* [Page Properties](page-properties)

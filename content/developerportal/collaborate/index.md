@@ -1,52 +1,35 @@
 ---
-title: "Collaborate"
+title: "Collaboration Tools"
+description: "Describes the collaboration tools available in the Mendix Developer Portal."
+tags: ["Developer Portal", "Sprint", "story", "stories", "buzz"]
 ---
 
 ## 1 Introduction
 
-The **Collaborate** category supports collaboration with your team and the tracking of sprints and other tasks in the app.
+The Developer Portal supports collaboration with your team and the tracking of Sprints and other tasks in your app projects.
 
-![](attachments/collaborate.png)
-
-This category is divided into the five pages presented below.
+The documentation within the **Collaboration Tools** category covers the following collaboration tools:
 
 ## 2 Buzz
 
-The **Buzz** lets you see and share ideas as well as collaborate with your team. You will get an overview of new team members, new stories and their changes, and added or completed sprints.
+**Buzz** lets you see and share ideas as well as discuss and collaborate with your team. You will get an overview of new team members, new stories and their changes, and Sprints which are added or completed.
 
-For more details, see [App Buzz](appbuzz).
+For details, see [Buzz](buzz).
 
 ## 3 Team
 
-The **Team** page shows an overview of your team members. It's also the place to **Invite Members** and **Manage your team**.
+The **Team** page shows an overview of your App Team members. It is also where you can invite new members and manage your team.
 
-Click **Name** or **Role** to filter in an ascending or descending order. The default sorting order is ascending by **Name**.
-
-For more details, see [Team](team).
+For details, see [App Team](team).
 
 ## 4 Stories
 
-The **Stories** page lets you add, edit, and delete stories, sprints, and labels. You can also import to and export from Excel and view the history.
+The **Stories** page lets you add, edit, and delete stories and Sprints. You can also import stories from, and export them to, Excel, and view story history.
 
-For more details, see [Stories](stories).
+For details, see [Stories](stories).
 
-## 5 Feedback
+## 5 Documents
 
-The **Feedback** pages show an overview of the feedback provided about the app. There are two ways of submitting feedback:
+The **Documents** page lets you upload and download files related to the app project. You can also add labels and comments related to the files.
 
-1. Add feedback on the **Feedback** page in the Developer Portal.
-2. Add feedback by going to the app (to go to the app, click **View App**).
-
-{{% alert type="info" %}}
-
-The **Feedback** button in the **Developer Portal** is used to provide feedback on the Mendix platform. It is intended for low priority issues, questions, and ideas on how to improve the Mendix platform.
-
-{{% /alert %}}
-
-For more details, see [Feedback](feedback) and [How to Provide Feedback on Mendix](../howto/feedback-mendix).
-
-## 6 Documents
-
-The **Documents** pages lets you upload files related to the app. It is possible to replace a current file with a newer version, add labels, comment, and download files.
-
-For more details, see [Documents](documents).
+For details, see [Documents](documents).

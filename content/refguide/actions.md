@@ -1,73 +1,79 @@
 ---
 title: "Actions"
 parent: "published-app-services"
+tags: ["studio pro"]
 ---
 
+## 1 Introduction
 
-Provides the actual microflow actions of the app service. Note that once an app service version is set to Consumable, its parameters and return type are no longer editable as they are part of the app service contract.
+{{% alert type="info" %}}
+App services are deprecated and marked for removal. Use a [published web service](published-web-services) or a [published REST service](published-rest-services) instead.
+{{% /alert %}}
 
-In the General tab, you can set the microflow that corresponds to the action. When the microflow is set, the Parameters tab will be filled automatically.
+Actions provide the actual microflow actions of the app service. Once an app service version is set to **Consumable**, its parameters and return type are no longer editable, as they are part of the app service contract.
 
-An action page has the following tabs:
+In the **General** tab, you can set the microflow that corresponds to the action. When the microflow is set, the **Parameters** tab will be filled automatically.
 
-## General
+An action page has the tabs below.
+
+## 2 General
 
 ![](attachments/16713720/16843926.png)
 
-### Caption
+### 2.1 Name
 
 This is the name of the action the consumer will see in their toolbox.
 
-### Icon
+### 2.2 Icon
 
-This is the icon that belongs to the action. An icon can be selected from any images document in the project. A new icon can be added to an images document if it is not available yet.
+This is the icon that belongs to the action. An icon can be selected from any image documents in the app project. A new icon can be added to an image document if it is not available yet.
 
-### Microflow
+### 2.3 Microflow
 
-Defines which microflow will be executed when this action is called.
+This defines which microflow will be executed when this action is called.
 
-### Description
+### 2.4 Description
 
-Describes the action. The consumer will see this description their overview.
+This describes the action. The consumer will see this description in their overview.
 
-## Parameters
+## 3 Parameters
 
-### ![](attachments/16713720/16843923.png)
+![](attachments/16713720/16843923.png)
 
-### Microflow parameter
+### 3.1 Microflow Parameter
 
-Defines the name of the parameter in the microflow
+This defines the name of the parameter in the microflow.
 
-### Type
+### 3.2 Type
 
-Defines the type of the parameter.
+This defines the type of the parameter.
 
-### Can be empty
+### 3.3 Can Be Empty
 
-Defines whether a value is can be empty as an input parameter.
+This defines whether a value can be empty as an input parameter.
 
-### Action parameter
+### 3.4 Action Parameter
 
-Defines the name of the parameter in the app service action call. This is initially copied from the microflow parameter name but can be modified. There are three reserved parameter names that are not allowed to be used: **username**, **password** and **appservicelocation** (case insensitive).
+This defines the name of the parameter in the app service action call. This is initially copied from the microflow parameter name, but it can be modified. There are three reserved parameter names that are not allowed to be used:
 
-### Exposed attributes and associations
+* *username*
+* *password*
+* *appservicelocation* (case insensitive)
+
+### 3.5 Exposed Attributes & Associations
 
 ![](attachments/16713720/16843922.png)
 
-A button is available for complex types (e.g. an entity from your domain model), to define whether to include or exclude the attribute in an entity, as well as to define whether an attribute can be empty as input.
+A button is available for complex types (for example, an entity from your domain model) in order to define whether to include the attribute in an entity as well as to define whether an attribute can be empty as an input.
 
-### Return Type
+## 4 Return Type
 
-Defines what kind of object will be returned by the action. This can be a simple type (like an integer or string), or a complex type (i.e. an entity from your entity model)
+This defines what kind of object will be returned by the action. This can be a simple type (like an integer or string), or a complex type (for example, an entity from your entity model).
 
-### Can be empty
+### 4.1 Can Be Empty
 
-Defines whether the return value can be **empty**.
+This defines whether the return value can be empty.
 
-{{% alert type="info" %}}
+For example, an **empty** ReturnObject is disallowed here:
 
 ![](attachments/16713720/16843921.png)
-
-The Return Type tab of an app service action called 'ServeReturnObject'. An **empty** ReturnObject is disallowed here.
-
-{{% /alert %}}

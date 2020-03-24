@@ -1,24 +1,25 @@
 ---
 title: "Client Activities"
 parent: "activities"
+menu_order: 50
+tags: ["studio pro"]
 ---
 
+## Close Page
 
-## Close form
-
-See [Close Form](close-form).
+See [Close Page](close-page).
 
 ## Download File
 
 See [Download File](download-file).
 
-## Show Form
+## Show Page
 
 See [Show Page](show-page).
 
-## Show Home page
+## Show Home Page
 
-See [Show home page](show-home-page).
+See [Show Home Page](show-home-page).
 
 ## Show Message
 

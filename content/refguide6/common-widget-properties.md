@@ -2,10 +2,6 @@
 title: "Common Widget Properties"
 parent: "common-widgets"
 ---
-# Common Widget Properties
-
-
-
 These are properties that are shared by many widgets. For a complete list of properties, take a look at the relevant widget.
 
 ## Behavior Properties
@@ -18,7 +14,7 @@ _Default value:_ False
 
 ### Required message (only in web forms)
 
-This property determines the message that is shown to the end user if the widget is empty and the 'Required' property is set to true. This is a translable text. See [Translatable Texts](translatable-texts).
+This property determines the message that is shown to the end user if the widget is empty and the 'Required' property is set to true. This is a translatable text. See [Translatable Texts](translatable-texts).
 
 {{% alert type="info" %}}
 

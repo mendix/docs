@@ -1,7 +1,8 @@
 ---
 title: "Monitor Mendix Using JMX"
 category: "Monitoring & Troubleshooting"
-tags: []
+menu_order: 10
+tags: ["monitoring", "troubleshooting", "jmx"]
 ---
 
 ## 1 Introduction
@@ -10,7 +11,7 @@ This how-to is relevant if you run Mendix on-premises. If you do this, you proba
 
 For Java applications, most monitoring tools provide a way to hook into [JMX](http://www.oracle.com/technetwork/java/javase/tech/javamanagement-140525.html) in order to get information about the application. This how-to describes using JMX to get information on your Mendix application.
 
-Mendix doesn’t provide any runtime or application specific MBeans, which means that without writing your own MBeans, you will only be able to monitor generic JVM statistics. This how-to will also describe enabling JMX on your Mendix runtime as well as writing custom MBeans to expose Mendix runtime information and app-specific information.
+Mendix doesn’t provide any runtime or application specific MBeans, which means that without writing your own MBeans, you will only be able to monitor generic JVM statistics. This how-to will also describe enabling JMX on your Mendix Runtime as well as writing custom MBeans to expose Mendix Runtime information and app-specific information.
 
 **This how-to will teach you how to do the following:**
 
@@ -148,19 +149,15 @@ You can use the same approach with an interface and an implementation class to e
 
 The idea is that you will have a Java Action that you can call in a microflow where you expose arbitrary key value pairs.
 
-## 6 Related Content
+## 6 Read More
 
-* [How to Find the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
-* [How to Clear Warning Messages](clear-warning-messages)
-* [How to Test Web Services Using SoapUI](../testing/testing-web-services-using-soapui)
-* [How to Monitor Mendix Using JMX](monitoring-mendix-using-jmx)
-* [How to Debug Java Actions Remotely](debug-java-actions-remotely)
-* [How to Log Levels](log-levels)
-* [How to Debug Java Actions](debug-java-actions)
-* [How to Handle Common Mendix SSO Errors](handle-common-mendix-sso-errors)
-* [How to Debug Microflows](debug-microflows)
-* [How to Debug Microflows Remotely](debug-microflows-remotely)
-* [How to Debug Java Actions Remotely](debug-java-actions-remotely)
-* [Getting Started with the Nexus Maven Repository Manager](http://www.andrejkoelewijn.com/blog/2010/03/09/getting-started-with-nexus-maven-repository-manager/)
-* [Using Eclipse to Debug Your Tomcat Web Application](http://www.andrejkoelewijn.com/blog/2003/10/23/using-eclipse-to-debug-your-tomcat-web-application/)
-* [Profiling Mendix Using JProfiler](http://www.andrejkoelewijn.com/blog/2014/01/15/profiling-mendix-using-jprofiler/)
+* [Find the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
+* [Clear Warning Messages](clear-warning-messages)
+* [Test Web Services Using SoapUI](../testing/testing-web-services-using-soapui)
+* [Monitor Mendix Using JMX](monitoring-mendix-using-jmx)
+* [Debug Java Actions Remotely](debug-java-actions-remotely)
+* [Log Levels](log-levels)
+* [Debug Java Actions](debug-java-actions)
+* [Debug Microflows](debug-microflows)
+* [Debug Microflows Remotely](debug-microflows-remotely)
+* [Debug Java Actions Remotely](debug-java-actions-remotely)

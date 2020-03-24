@@ -1,6 +1,7 @@
 ---
 title: "OQL Where Clause"
 parent: "oql"
+tags: ["studio pro", "queries", "where"]
 ---
 
 
@@ -13,7 +14,7 @@ WHERE <constraint>
 ```
 
 `<constraint>`
-An expression for which the value always equals true. Expressions consist of simple comparables with operators, functions, keywords or system variables.
+An expression for which the value always equals true. Expressions consist of simple comparisons using operators, functions, keywords or system variables.
 
 {{% alert type="info" %}}
 
@@ -29,7 +30,7 @@ This query retrieves all customers whose name is equal to 'Jansen'.
 ```
 SELECT FirstName FROM Sales.Customer
 INNER JOIN Sales.Customer/Sales.Customer_Address/Sales.Address
-WHERE Sales.Address/LastName = 'Rotterdam'
+WHERE Sales.Address/City = 'Rotterdam'
 ```
 
 This query retrieves all customers who live in 'Rotterdam'.

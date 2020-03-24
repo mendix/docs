@@ -99,13 +99,18 @@ $active-color: $color-black;
     font-size: 14px;
     font-weight: 400;
 
-
-
     .category-title {
       color: $color-darker-grey;
       text-overflow: ellipsis;
       overflow: hidden;
       white-space: nowrap;
+
+      @include element('badge') {
+        margin-left: 2px;
+        font-size: 8px;
+        background-color: #ff8400;
+        margin-top: -15px;
+      }
     }
 
     @include modifier('deprecated') {
@@ -204,6 +209,10 @@ $active-color: $color-black;
         }
       }
 
+    }
+
+    @include modifier('draft') {
+      display: none;
     }
   }
 }

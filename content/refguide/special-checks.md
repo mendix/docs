@@ -1,6 +1,7 @@
 ---
-title: "Special checks"
-parent: "microflow-expressions"
+title: "Special Checks"
+parent: "expressions"
+tags: ["studio pro"]
 ---
 
 ## Checking for an Empty Object
@@ -50,7 +51,8 @@ Assuming $object1 is an domain entity and that it has a member called 'member1',
 | $object1 has a value | false | true |
 | $object1 has no value | N/A | true |
 
-## Checking Whether an Object Is New
+## Checking Whether an Object Is New<a name="new"></a>
+
 
 ### Input
 
@@ -60,7 +62,7 @@ Type: Any type of object.
 
 ### Output
 
-Returns whether the object is new (created but not yet committed). Note this only holds when this function is called on the variable which represents the created object. When the object is retrieved from the database isNew will always yield false.
+Returns whether the object is new (created but not yet committed). Note this only holds when this function is called on a created object. When the object is retrieved from the database isNew will always yield false.
 
 Type: Boolean.
 
@@ -68,14 +70,10 @@ Type: Boolean.
 isNew($object1)
 ```
 
-## Checking Whether an Object Is Synced
+## Checking Whether an Object Is Synced<a name="synced"></a>
 
 {{% alert type="info" %}}
-
-This function is available only in expressions for [conditional visibility or editability](conditions), as only they are evaluated client-side.
-
-This was added in Mendix 7.1.
-
+This function is available only in expressions for [conditional visibility or editability](common-widget-properties), as only they are evaluated client-side.
 {{% /alert %}}
 
 ### Input
@@ -86,7 +84,7 @@ Type: Any type of object.
 
 ### Output
 
-Returns whether the changes done to the object [offline](offline) have been synchronized to the runtime database. In web profiles and [hybrid profiles](hybrid-phone-profile) without offline support, this always returns `true`.
+Returns whether the changes done to the object [offline](offline-first) have been synchronized to the runtime database. In web profiles and [hybrid profiles](navigation#hybrid-profiles) without offline support, this always returns `true`.
 
 Type: Boolean.
 

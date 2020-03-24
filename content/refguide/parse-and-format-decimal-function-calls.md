@@ -1,66 +1,40 @@
 ---
-title: "Parsing and Formatting Decimal Function Calls"
-parent: "microflow-expressions"
+title: "Parsing & Formatting Decimal Function Calls"
+parent: "expressions"
+tags: ["studio pro"]
 ---
 
-For details on all the pattern possibilities, see [Class DecimalFormat](http://docs.oracle.com/javase/7/docs/api/java/text/DecimalFormat.html).
+## 1 Introduction
 
-## parseDecimal
+For details on all the pattern possibilities, see [Class DecimalFormat](https://docs.oracle.com/javase/8/docs/api/java/text/DecimalFormat.html).
+
+## 2 parseDecimal
 
 Parses a string value to a decimal value. Takes optional parameters for the format and default values.
 
-### Input Parameters
+### 2.1 Input Parameters
 
 * Value to parse
     * Type: string
-* Pattern to match (optional)
+* Format for the input value based on the Java library `DecimalFormat` (for details, see [Class DecimalFormat](https://docs.oracle.com/javase/8/docs/api/java/text/DecimalFormat.html))
     * Type: string
 * Default value (optional)
-    * Type: decimal
+    * Type: decimal or empty
 
-### Output
+### 2.2 Output
 
 A decimal value that matches the inputted string value. If the value cannot be parsed (meaning, it does not match the format parameter or contains illegal characters), the default value will be returned. If no default value was provided, an error occurs.
 
-```java
-parseDecimal('3.45')
-```
+* `parseDecimal('3.45')` returns 3.45
+* `parseDecimal('noDecimal', 5.05)` returns 5.05
+* `parseDecimal('noDecimal', empty)` returns empty
+* `parseDecimal('3,241.98', '#,###.##')` returns 3241.98
 
-returns:
-
-```java
-3.45
-```
-
-with default value:
-
-```java
-parseDecimal('noDecimal', 5.05)
-```
-
-returns:
-
-```java
-5.05
-```
-
-with format parameter:
-
-```java
-parseDecimal('$3.33', '$#.##')
-```
-
-returns:
-
-```java
-3.33
-```
-
-## formatDecimal
+## 3 formatDecimal
 
 Converts a decimal value to a string value according to a specified format.
 
-### Input Parameters
+### 3.1 Input Parameters
 
 * Value to convert
     * Type: decimal
@@ -69,10 +43,9 @@ Converts a decimal value to a string value according to a specified format.
 * Locale in which the results should be formated (optional)
    * For the supported values, see [forLanguageTag](https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html#forLanguageTag-java.lang.String-)
    * When omitted, the user configured locale is used
-   * Supported from Mendix 7.3
    * Type: string
 
-### Output
+### 3.2 Output
 
 A string representation of the decimal in the format specified by the `format` parameter.
 

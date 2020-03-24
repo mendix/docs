@@ -15,7 +15,7 @@ Before you continue, make sure that you know how to create:
 *   **Overview and detail pages** ([Creating your first two overview and detail pages](create-your-first-two-overview-and-detail-pages)).
 *   **Menu items** ([Setting Up the Navigation Structure](setting-up-the-navigation-structure)).
 *   **Microflows** ([Create your first Microflow: Hello World!](create-your-first-microflow-hello-world)
-*   **Add Appstore content** ([Use App Store Content in the Modeler](/community/app-store/use-app-store-content-in-the-modeler)).
+*   **Add Appstore content** ([Use App Store Content](/developerportal/app-store/app-store-content)).
 *   **Secure applications** ([Creating a secure app](create-a-secure-app)).
 
 Follow these steps:
@@ -94,7 +94,7 @@ Based on the structure of the file you want to import, you will setup your templ
     For this example you will be using a simple Excel file, with just one sheet and columnheaders at the first row. If a more comprehensive Excel file is used you can change these values at the Sheet nr, Header row nr, and Import from row nr boxes.
 
     {{% /alert %}}
-9.  Under the **Connect columns to attributes** section, click on **New** to create a mapping from the Excel sheet column to the proper Mendix attribute.
+9.  Under the **Connect columns to attributes** section, click **New** to create a mapping from the Excel sheet column to the proper Mendix attribute.
     ![](attachments/18448735/18581964.png)
 
 10.  Add the column number, this should correspond with the column number from the value on the Excel file you want to map
@@ -235,8 +235,4 @@ Once you have completed an Excel template you can export the template for exampl
 *   [Synchronizing user accounts using the LDAP module](synchronizing-user-accounts-using-the-ldap-module)
 *   [Importing XML documents](importing-xml-documents)
 *   [Consuming a REST Service](consume-a-rest-service)
-*   [Exposing data to BI tools using OData](exposing-data-to-bi-tools-using-odata)
-
-
-
 *   [Export to CSV button](/refguide6/export-to-csv-button)

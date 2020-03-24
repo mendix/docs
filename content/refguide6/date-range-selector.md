@@ -9,7 +9,7 @@ This has been renamed to [Report Date Parameter](report-date-parameter) in versi
 
 {{% /alert %}}
 
-With a date range selector the end user can filter a report on a parameter of the data set which has type DataTime.
+With a date range selector the end user can filter a report on a parameter of the dataset which has type DataTime.
 
 In the date range selector you can add [date range fields](date-range-field) to make it easier for an end user to select a data range. (This can be done by right clicking the data range selector and choosing add field from the popup menu.)
 
@@ -45,7 +45,7 @@ Maximum year which can be chosen in a date range field in which the end user can
 
 ### Parameter
 
-Parameter of the data set of which the range is determined by this date range selector.
+Parameter of the dataset of which the range is determined by this date range selector.
 
 ## Common Properties
 

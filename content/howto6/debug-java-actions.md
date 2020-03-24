@@ -59,7 +59,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 5. Place your cursor on any of the variables in the Java action to see its value in a pop-up window:
     ![](attachments/18448578/18580057.png)
 
-## 5 Related Content
+## 5 Read More
 
 * [How to Find the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
 * [How to Clear Warning Messages in Mendix](clear-warning-messages)

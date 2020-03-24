@@ -12,7 +12,7 @@
     var DEBOUNCE = null;
     search.addWidget(
       instantsearch.widgets.searchBox({
-        container: '#mendix_search',
+        container: '#mendix-search-field',
         autofocus: true,
         wrapInput: false,
         queryHook: function (query, search) {

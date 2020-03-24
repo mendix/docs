@@ -1,0 +1,61 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Function API response",
+    "description": "Response to a request to execute an ATS function via the function API.",
+    "type": "object",
+    "oneOf": [
+        {
+            "$ref": "#/definitions/_passed"
+        },
+        {
+            "$ref": "#/definitions/_failed"
+        }
+    ],
+    "definitions": {
+        "_passed": {
+            "type": "object",
+            "properties": {
+                "result": {
+                    "type": "string",
+                    "enum": [
+                        "PASSED"
+                    ],
+                    "default": "PASSED"
+                },
+                "returnValue": {
+                    "type": [ "number", "string", "boolean" ]
+                },
+                "isWebElement": {
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "result"
+            ],
+            "additionalProperties": false      
+
+        },
+        "_failed": {
+            "type": "object",
+            "properties": {
+                "result": {
+                    "type": "string",
+                    "enum": [
+                        "FAILED"
+                    ],
+                    "default": "FAILED"
+                },
+                "errorMessage": {
+                    "type": "string"
+                },
+                "stackTrace": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "result"
+            ],
+            "additionalProperties": false
+        }
+    }
+}

@@ -1,7 +1,10 @@
 ---
 title: "Consumed Web Services"
 parent: "integration"
+tags: ["studio pro"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
+
 {{% alert type="warning" %}}
 
 This document describes imported web services. If you're looking for specific information on the consumed web services screen, you can check the [Consumed web service](consumed-web-service) documentation.
@@ -16,11 +19,11 @@ Mendix supports the interaction between servers using SOAP. This can either be M
 
 ### Consumed web services
 
-Using third party web services is easy in Mendix. There is a Microflow activity available which calls a web service on another system and imports the XML in the Mendix database. See [Consumed Web Services](consumed-web-services).
+Using third party web services is easy in Mendix. There is a Microflow activity available which calls a web service on another system and imports the XML in the Mendix database.
 
 ### Published web services
 
-To expose functionality in a Mendix server (thus enabling other systems to make use of certain functions) a Microflow can easily be published as a web service. See [Published Web Services](published-web-services).
+To expose functionality in a Mendix Server (thus enabling other systems to make use of certain functions) a Microflow can easily be published as a web service. See [Published Web Services](published-web-services).
 
 ## XML
 
@@ -57,9 +60,9 @@ An XSD (XML Schema Definition) document is a document that describes how the XML
 A WSDL (Web Service Definition Language) document is a document that describes how a client can interact with the server that publishes it. It describes the types of messages (incoming and outgoing) and where the messages must be sent to (an endpoint URL).
 
 Using imported web services, you can import a web service from an external application so they can be used in your own application. You can import web services from third parties (such as the
-[w3schools example service](http://www.w3schools.com/xml/tempconvert.asmx?WSDL)) or from other mendix projects.
+[w3schools example service](http://www.w3schools.com/xml/tempconvert.asmx?WSDL)) or from other Mendix projects.
 
-To actually use these imported web services in a microflow, see [Call Web Service Action](call-web-service-action).
+To actually use these imported web services in a microflow, see [Call Web Service](call-web-service-action).
 
 ## Proxies
 
@@ -78,4 +81,4 @@ Mendix supports consuming web service data according to the following protocols:
 *   WS-PolicyAttachment 1.5
 *   WS-ReliableMessaging 1.1
 
-To connect to a Microsoft .NET web service, you have to configure your web service to use basicHttpBinding (SOAP 1.1) or wsHttpBinding (SOAP 1.2). For a secure connection, you have to configure SSL and to set the security mode to 'Transport' with clientCredentialType 'Basic' in the file 'web.config'. The user credentials can be configured in the Modeler as [described here](call-web-service-action) (see 'Use HTTP authentication').
+To connect to a Microsoft .NET web service, you have to configure your web service to use basicHttpBinding (SOAP 1.1) or wsHttpBinding (SOAP 1.2). For a secure connection, you have to configure SSL and to set the security mode to 'Transport' with clientCredentialType 'Basic' in the file 'web.config'. The user credentials can be configured in Studio Pro as [described here](call-web-service-action) (see 'Use HTTP authentication').

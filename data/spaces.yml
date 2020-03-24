@@ -4,70 +4,21 @@
 #  priority: 1 - 9 (used for sitemap). If omitted this will not be included, which defaults to 0.5
 #  menu_categories: List with the categories used in the side menu
 apidocs-mxsdk:
-  space: "API & SDK"
+  space: "APIs & SDK"
   priority: false
   menu_categories:
     - "API Documentation"
     - "Mendix Platform SDK"
 addons:
-  space: "Other Add-Ons"
+  space: "Add-on Guides"
   priority: false
   menu_categories:
-    - "APM"
-    - "AQM"
-ats:
-  space: "ATS Add-On"
-  priority: false
-  menu_categories:
-    - "General"
-    - "Reference Guide 1"
-    - "How-To's"
-    - "Best Practices"
-community:
-  space: "Community"
-  priority: false
-  menu_categories:
-    - "Tools"
-    - "Documentation"
-    - "App Store"
-howto40:
-  space: "Mendix 4 How-To's"
-  priority: false
-  mendix_version: 4
-  noindex: true
-  menu_categories:
-    - "General"
-    - "Modeler"
-    - "Java Programming"
-    - "Deployment"
-    - "Custom Widgets"
-    - "Debugging"
-  banner:
-    type: 'warning'
-    text: 'You are browsing the documentation of an unsupported version of Mendix. Please find the latest version of the How-To&#39;s <a href="/howto/">here</a>.'
-howto50:
-  space: "Mendix 5 How-To's"
-  priority: false
-  mendix_version: 5
-  noindex: true
-  menu_categories:
-    - "Getting Started"
-    - "Data Models"
-    - "GUIs"
-    - "Logic & Business Rules"
-    - "Mobile"
-    - "Security"
-    - "Integration"
-    - "Extendability"
-    - "Custom Widget Development"
-    - "Testing"
-    - "Monitoring & Troubleshooting"
-    - "Collaboration & Project Management"
-    - "Cloud Foundry"
-    - "On-Premises Deployment"
+    - "ATS Guide"
+    - "APD Guide"
+    - "AQM Guide"
 howto6:
-  space: "Mendix 6 How-To's"
-  priority: 5
+  space: "Mendix 6 How-to's"
+  priority: false
   mendix_version: 6
   noindex: true
   menu_categories:
@@ -83,62 +34,44 @@ howto6:
     - "Testing"
     - "Monitoring & Troubleshooting"
     - "Collaboration & Project Management"
-    - "Cloud Foundry"
-    - "On-Premises Deployment"
-howto:
-  space: "Mendix 7 How-To's"
+howto7:
+  space: "Mendix 7 How-to's"
   priority: 6
   mendix_version: 7
   menu_categories:
-    - "Tutorials"
-    - "Modeling Basics"
+    - "General"
+    - "Front-End"
     - "Data Models"
-    - "GUIs"
     - "Logic & Business Rules"
-    - "Mobile"
+    - "Mobile Development"
     - "Security"
     - "Integration"
-    - "Extendability"
-    - "Custom Widget Development"
+    - "SAP"
+    - "Siemens MindSphere"
+    - "Extensibility"
+    - "Widget Development"
     - "Testing"
     - "Monitoring & Troubleshooting"
-    - "Collaboration & Project Management"
-    - "Cloud Foundry"
-    - "On-Premises Deployment"
-refguide4:
-  space: "Mendix 4 Reference Guide"
-  priority: false
-  mendix_version: 4
-  noindex: true
-  menu_categories:
-    - "App Platform"
-    - "Team Server"
-    - "Modeler"
-    - "Runtime"
-    - "Client"
-    - "Java Programming"
-    - "Release Notes"
-    - "System Requirements"
-    - "Moving from 3 to 4"
-  banner:
-    type: 'warning'
-    text: 'You are browsing the documentation of an unsupported version of Mendix. Please find the latest version of the Reference Guide <a href="/refguide/">here</a>'
-refguide5:
-  space: "Mendix 5 Reference Guide"
-  priority: false
-  mendix_version: 5
-  noindex: true
-  menu_categories:
-    - "General"
-    - "Team Server"
-    - "Modeler"
-    - "Runtime"
-    - "Java Programming"
+    - "Collaboration & Requirements Management"
+howto:
+  space: "Studio Pro 8 How-to's"
+  priority: 7
+  mendix_version: 8
+  menu_categories:  
+    - "General Info"
+    - "Collaboration"
+    - "Front-End"
     - "Mobile"
-    - "Proactive Maintenance"
+    - "Data Models"
+    - "Logic & Business Rules"
+    - "Integration"
+    - "Extensibility"
+    - "Security"
+    - "Testing"
+    - "Monitoring & Troubleshooting"
 refguide6:
   space: "Mendix 6 Reference Guide"
-  priority: 6
+  priority: false
   mendix_version: 6
   noindex: true
   menu_categories:
@@ -149,55 +82,113 @@ refguide6:
     - "Java Programming"
     - "Mobile"
     - "Proactive Maintenance"
-refguide:
+refguide7:
   space: "Mendix 7 Reference Guide"
   priority: 7
   mendix_version: 7
   menu_categories:
     - "General"
-    - "Team Server"
-    - "Modeler"
-    - "Runtime"
+    - "Desktop Modeler"
+    - "Version Control"
+    - "Mendix Runtime"
     - "Java Programming"
-    - "Mobile"
-howtogeneral:
-  space: "General How-To's"
-  priority: 6
+    - "Mobile Development"
+    - "SAP"
+    - "IBM"
+    - "Siemens MindSphere"
+refguide:
+  space: "Studio Pro 8 Guide"
+  priority: 8
+  mendix_version: 8
   menu_categories:
-    - "Mendix Cloud"
-    - "Tips & Tricks"
-    - "Best Practices"
-    - "Mendix Support"
+    - "General Info"
+    - "App Modeling"
+    - "Version Control"
+    - "Mendix Runtime"
+    - "Mobile"
+    - "Java Programming"
 releasenotes:
   space: "Release Notes"
   priority: false
   menu_categories:
-    - "Desktop Modeler"
-    - "Platform Portal"
-    - "Model SDK"
-    - "Platform SDK"
-    - "APM"
-    - "ATS"
-    - "AQM"
-    - "Beta Features"
+    - "Studio Pro"
+    - "Studio"
+    - "Developer Portal"
+    - "App Store"
+    - "Mobile"
+    - "SDKs"
+    - "Add-ons"
+    - "Mendix Beta Features"
 developerportal:
-  space: "Developer Portal"
+  space: "Developer Portal Guide"
   priority: false
   menu_categories:
-    - "General"
-    - "Company Admin"
-    - "Collaborate"
-    - "Develop"
-    - "Deploy"
-    - "Operate"
+    - "Mendix Profile"
+    - "Company & App Roles"
+    - "Apps List"
+    - "Collaboration Tools"
+    - "Development"
+    - "Deployment"
+    - "Operations"
+    - "App Settings"
+    - "Community Tools"
+    - "App Store"
+    - "Mendix Support"
+studio:
+  space: "Studio 8 Guide"
+  priority: false
+  menu_categories:
+    - "General Info"
+    - "Domain Model"
+    - "Pages"
+    - "Navigation Document"
+    - "Microflows"
+    - "Buzz"
+    - "Data Filters"
+    - "Previewing & Publishing Your App"
+    - "Checks"
+    - "Consistency Errors"
+    - "Theme Customizer"
     - "Settings"
-    - "How-To's"
-deployment:
-  space: "Deployment"
+    - "Starting With Your Own Data"
+studio7:
+  space: "Mendix 7 Studio Guide"
   priority: false
   menu_categories:
-    - "Amazon Web Services"
-    - "Azure"
-    - "Cloud Foundry"
-    - "Mendix Cloud"
-    - "On-Premises"
+    - "General Info"
+    - "Domain Model"
+    - "Pages"
+    - "Navigation Document"
+    - "Microflows"    
+    - "Data Filters"
+    - "Previewing & Publishing Your App"
+    - "Checks"
+    - "Consistency Errors"
+    - "Theme Customizer"
+    - "Settings"
+    - "Starting With Your Own Data"
+partners:
+  space: "Strategic Partners Guide"
+  priority: false
+  menu_categories:
+    - "Siemens"
+    - "SAP"
+    - "IBM"
+appstore:
+  space: "App Store Guide"
+  priority: false
+  menu_categories:
+    - "Connectors"
+    - "Widgets"
+    - "Modules"
+    - "Themes"
+product-naming:
+  space: "Mendix Product Naming Guide"
+  priority: false
+  draft: true
+  menu_categories:
+    - "Main Product Names"
+    - "Other Mendix Terms"
+    - "Strategic Partner Terms"
+    - "Terminology History"
+    - "Maintaining Documentation Links"

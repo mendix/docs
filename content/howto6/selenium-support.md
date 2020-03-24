@@ -13,7 +13,7 @@ More complex widgets, like a grid, can set more specific CSS classes to sub-elem
 
 Some widgets, like a Grid or a Listview, can show multiple items. Every item has a CSS class '`mx-name-index-`' followed by an index number, starting at 0.
 
-The easiest way to discover these names is to use a browser's developer tool, like [Firebug](https://addons.mozilla.org/nl/firefox/addon/firebug/).
+The easiest way to discover these names is to use a browser's developer tool.
 
 ## 2\. Pitfalls
 
@@ -47,8 +47,6 @@ Note that the fourth row in a grid has an index of 3.
 
 ## 4\. Related content
 
-*   [Creating automated tests with TestNG](create-automated-tests-with-testng)
-*   [Testing Mendix applications using Selenium IDE](testing-mendix-applications-using-selenium-ide)
 *   [Consuming a complex web service](consume-a-complex-web-service)
 *   [Consuming a simple Web Service](consume-a-simple-web-service)
 *   [Selenium Support](selenium-support)

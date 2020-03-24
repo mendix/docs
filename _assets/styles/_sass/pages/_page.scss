@@ -44,6 +44,14 @@ $block: 'mx';
       max-width: 80%;
     }
 
+    @include modifier('wide') {
+      @include mq("md") {
+        float: left;
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+
     @include element('header') {
       @include element('head') {
         margin: 0;
@@ -80,6 +88,26 @@ $block: 'mx';
         height: 20px;
         padding: 4px;
       }
+
+      /* .mx__page__header__nav is pushing first h2 element too far down the page, reduce height to zero */
+      .mx__page__header__nav{
+        height: 0;
+        padding: 0;
+      }
+
+      @include element('pdf-button') {
+        @include clearfix();
+        font-size: 12px;
+        margin: 0 0 5px 5px;
+        display: inline-block;
+        float: right;
+        i {
+          margin-right: 3px;
+        }
+        &:hover {
+          text-decoration: none;
+        }
+      }
     }
 
     @include element('content') {
@@ -87,9 +115,10 @@ $block: 'mx';
       margin: 0 0 30px;
       line-height: 24px;
 
+      /* originally gave all the elements space above and below - doesn't give a controllable result */
       > * {
         //margin-top: 20px;
-        margin-bottom: 10px;
+        //margin-bottom: 10px;
       }
 
       blockquote {
@@ -104,8 +133,41 @@ $block: 'mx';
 
       ul, ol { padding-left: 20px; }
 
+      /* ordered lists inside ordered lists will be displayed using letters */
+      ol ol { list-style-type: lower-alpha;}
+
+      /* Standard paragraphs decide how far they are from element above */
+      /* defined as margins rather than padding as this is how the rest of the CSS is written */
+      p, .alert{
+        margin: 0.8em 0 0 0;
+      }
+
+      /* Paragraphs inside alerts don't need the extra space - the alert has the space above */
+      .alert p {
+        margin: 0;
+      }
+
+      /* but a curve around the border of the search and changes to 82% to align with featured lists and added a minimum width with @media for it to be 100% on smaller screens*/
+      .input-group .form-control {
+        border-radius: 4px;  
+              
+        @media (min-width: 1200px) {
+          max-width: 82%;
+          
+        }
+      }
+
+      /* Headers have a slightly larger space above - to make them a bit more obvious without increasing the font size */
+      h2, h3, h4{
+        margin-top: 1em;
+      }
+
       h5 {
         font-size: 16px;
+      }
+      h6 {
+        font-size: 14px;
+        font-weight: bold;
       }
 
       table {
@@ -184,6 +246,12 @@ $block: 'mx';
           }
         }
       }
+
+      .image-container {
+        img {
+          display: none;
+        }
+      }
     }
 
     @include modifier('frontpage') {
@@ -194,13 +262,29 @@ $block: 'mx';
 
     @include element('frontpage-block') {
       display: block;
-      margin: $frontpage-search-block-margins 0;
-      padding: 0 0 $frontpage-search-block-margins;
-      border-bottom: 1px solid $border-color;
+      /* The margin and padding were using frontpage-search-block-margins for margin and padding, I changed them for the sections on the front page to be closer to each other */
+      margin: 20px 0 0;
+      padding: 0 0 40px;
+      /* a line on the front page is not needed, we can divide elements with margins and paddings */
+      //border-bottom: 1px solid $border-color;
       @include element('404-title') {
         margin: 0 auto;
         display: block;
-        text-align: center;
+        text-align: center;        
+      }
+    }
+
+    .todo {
+      position: relative;
+      border-width: 2px;
+      &:before {
+        content: 'todo';
+        position: absolute;
+        top: -8px;
+        left: -1px;
+        font-size: 11px;
+        font-weight: bold;
+        color: #F00;
       }
     }
   }

@@ -1,7 +1,9 @@
 ---
 title: "Expose a Web Service"
 category: "Integration"
+menu_order: 12
 description: "Describes how Mendix supports exposing the functionality and data of your app using web services."
+tags: ["web service", "expose", "integration"]
 ---
 
 ## 1 Introduction
@@ -17,11 +19,11 @@ Mendix supports many ways to expose the functionality and data of your applicati
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Download the latest version of the [Mendix Modeler](https://appstore.home.mendix.com/index3.html)
+* Download the latest version of [Mendix Studio Pro](https://appstore.home.mendix.com/index3.html)
 
 {{% alert type="warning" %}}
 
-This how-to was written based on Modeler version 5.20. All the images, names, and steps in this how-to are based on this version. When using other versions, the images and/or names on your screen may be different than the images and names used in this how-to.
+This how-to was written based on Studio Pro version 5.20. All the images, names, and steps in this how-to are based on this version. When using other versions, the images and/or names on your screen may be different than the images and names used in this how-to.
 
 {{% /alert %}}
 
@@ -31,8 +33,8 @@ This how-to was written based on Modeler version 5.20. All the images, names, an
 
     ![](attachments/7831572/8945665.png)
 
-2. Create overview and detail pages to manage objects of the **Customer** type (for details on how to create overview and detail pages, see [How to Create Your First Two Overview and Detail Pages](../guis/create-your-first-two-overview-and-detail-pages).
-3. Create a menu item to access the customer overview page (for details on how to create menu items, see [How to Set Up the Navigation Structure](../guis/setting-up-the-navigation-structure).
+2. Create overview and detail pages to manage objects of the **Customer** type (for details on how to create overview and detail pages, see [How to Create Your First Two Overview & Detail Pages](../front-end/create-your-first-two-overview-and-detail-pages).
+3. Create a menu item to access the customer overview page (for details on how to create menu items, see [How to Set Up the Navigation Structure](../general/setting-up-the-navigation-structure).
 4. Run the application and add some data to expose in the web service.
 
 ## <a name="4"></a>4 Creating a Published Web Service
@@ -48,15 +50,11 @@ To create a published web service, follow these steps:
     ![](attachments/18448728/18581728.png)
 
 3. You should now see the **Published Web Service** properties window. Take note of the following tab details:
-    * On the **General** tab, you can change the **Name** if necessary:
-
-        ![](attachments/18448728/18581714.png)
-
-    * On the **Operations** tab, you can see the available operations of the web service (currently the list is empty, so we'll add an operation [6 Publishing a Microflow](#6)):
+    * On the **Operations** tab, you can see the available operations of the web service (currently the list is empty, so we'll add an operation in section [6 Publishing a Microflow](#6)):
 
         ![](attachments/18448728/18581713.png)
 
-    * On the **Settings** tab, you can configure the other settings (for now leave the settings as they are; for details on these settings, see [Published Web Services](/refguide7/published-web-services) in the Mendix Reference Guide):
+    * On the **Settings** tab, you can configure the other settings. Do change them before publishing your web service, especially the **Target namespace** (for details on these settings, see [Published Web Service](/refguide/published-web-service) in the *Studio Pro Guide*):
 
         ![](attachments/18448728/18581712.png)
 
@@ -81,7 +79,7 @@ To create the functionality to expose, follow these steps:
 
 To publish a microflow, follow these steps:
 
-1. Right-click somewhere in the background of the microflow and select **Publish as Web service operation...**:
+1. Right-click somewhere in the background of the microflow and select **Publish as Web service operation**:
 
     ![](attachments/18448728/18581708.png)
 
@@ -116,10 +114,10 @@ You need a Web Services Description Language (WSDL) to allow others to interact 
 
 To get a WSDL, follow these steps:
 
-1. Run the application locally or in a sandbox.
+1. Run the application locally or in a Free App environment.
 2. View the application in your browser:
     * If you run the application locally, the application URL should look like this: `http://localhost:8080/index.html`
-    * If you run the application in a sandbox, the application URL should look like this: `https://myfirstapp.mendixcloud.com/index.html`
+    * If you run the application in a Free App environment, the application URL should look like this: `https://myfirstapp.mendixcloud.com/index.html`
 3. In both of the above cases, you can replace `/index.html` with `/ws-doc/` to open the web service documentation page:
 
     ![](attachments/18448728/18581703.png)
@@ -148,18 +146,18 @@ Mendix enables creating your own user management functionality as long as your o
 
 When exposing a web service, consider the following things:
 
-* In the Modeler some words are reserved for Mendix use (for example, type, enum)
+* In Studio Pro some words are reserved for Mendix use (for example, type, Enumeration)
 * Because you may not want to publish a "_type" attribute with an underscore ("`_`") in front of it, you can change the WSDL name by changing the last column in the selected attribute window
 * If an attribute is renamed after it is published, the name in the WSDL does not automatically change (because that would break the customer's implementation)
 
-## 10 Related Content
+## 10 Read More
 
-* [How to Consume a Complex Web Service](consume-a-complex-web-service)
-* [How to Consume a Simple Web Service](consume-a-simple-web-service)
-* [How to Export XML Documents](export-xml-documents)
-* [How to Import Excel Documents](importing-excel-documents)
-* [How to Enable Selenium Support](selenium-support)
-* [How to Synchronize User Accounts Using the LDAP Module](synchronizing-user-accounts-using-the-ldap-module)
-* [How to Import XML Documents](importing-xml-documents)
-* [How to Consume a REST Service](consume-a-rest-service)
-* [How to Expose Data to BI Tools Using OData](exposing-data-to-bi-tools-using-odata)
+* [Consume a Complex Web Service](consume-a-complex-web-service)
+* [Consume a Simple Web Service](consume-a-simple-web-service)
+* [Export XML Documents](export-xml-documents)
+* [Import Excel Documents](importing-excel-documents)
+* [Enable Selenium Support](selenium-support)
+* [Synchronize User Accounts Using the LDAP Module](synchronizing-user-accounts-using-the-ldap-module)
+* [Import XML Documents](importing-xml-documents)
+* [Consume a REST Service](consume-a-rest-service)
+* [Expose Data to BI Tools Using OData](exposing-data-to-bi-tools-using-odata)

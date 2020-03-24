@@ -1,6 +1,7 @@
 ---
-title: "DateTime handling FAQ"
-category: "Runtime"
+title: "DateTime Handling FAQ"
+parent: "date-and-time-handling"
+tags: ["studio pro"]
 ---
 
 
@@ -18,7 +19,7 @@ The default time zone determines the time zone for newly created users and also 
 
 ### What is the purpose of setting a time zone for a user?
 
-The time zone setting for a user defines under what time zone operations are performed for this user on the **server**, for example when a Microflow formats a DateTime value as a String to get the current hour of the day. Note that this is different from operations in the users browser. Unfortunately it is not possible for browsers to operate under a different time zone than **either** the one of the browsers computer **or** the UTC time zone. This means that users should set their time zone to the one their browser runs on, or they might notice discrepancies in what is displayed in their browser and (for example) generated documents or formatted strings. Note that if you do **not** set a timezone to a user, the server only knows the offset from UTC that the browser reports of the **current** moment, which can lead to unexpected results when dealing with dates in a different period of the year after a Daylight Savings Time adjustment.
+The time zone setting for a user defines under what time zone operations are performed for this user on the **server**, for example when a Microflow formats a DateTime value as a String to get the current hour of the day. Note that this is different from operations in the users browser. Unfortunately it is not possible for browsers to operate under a different time zone than **either** the one of the browsers computer **or** the UTC time zone. This means that users should set their time zone to the one their browser runs on, or they might notice discrepancies in what is displayed in their browser and (for example) generated documents or formatted strings. Note that if you do **not** set a timezone to a user, the server sometimes only knows the offset from UTC that the browser reports of the **current** moment, which can lead to unexpected results when dealing with dates in a different period of the year after a Daylight Savings Time adjustment.
 
 ### How is Daylight Savings Time (DST) handled?
 
@@ -42,7 +43,7 @@ You can download the DateTimeLibrary App Store module to get an implementation f
 
 ### How is a non-localized date supposed to work?
 
-Per attribute of type DateTime you can specify whether you want the date and time to be localized. Both localized and non-localized attributes are stored in UTC but only localized attributes are shown in the time zone of the user when displaying (or picking) their value, for example in the client or in generated documents. Use non-localized attributes if you are not interested in the time component (e.g. birthdays) or if you want a date to look exactly the same all over the world. Otherwise, the date could shift because of time zone differences: a date and time early in the morning on April 2nd in Europe will be on April 1st in the USA.
+Per attribute of type **Date and time** you can specify whether you want the date and time to be localized. Both localized and non-localized attributes are stored in UTC but only localized attributes are shown in the time zone of the user when displaying (or picking) their value, for example in the client or in generated documents. Use non-localized attributes if you are not interested in the time component (e.g. birthdays) or if you want a date to look exactly the same all over the world. Otherwise, the date could shift because of time zone differences: a date and time early in the morning on April 2nd in Europe will be on April 1st in the USA.
 
 ### If I assign a non-localized date the value of token: `[%CurrentDateTime%]` what should I be seeing in the client if I am in EST? It is currently 14:15 (EST), should I see that time or 19:15?
 
@@ -75,4 +76,4 @@ A scheduled event also needs a time zone to operate in, just like when a user wo
 
 ### How are DateTimes in XML that have no timezone information treated?
 
-If a DateTime is encountered in XML that is processed using an XML-To-Domain mapping and specifies no timezone, before Mendix 5.13 the DateTime would be interpreted as if it was in the server's timezone. After Mendix 5.13 this DateTime is interpreted as if it was in UTC, making it more inline with all the other DateTime operations and less error prone. The location of the machine running the server won't affect any operations anymore. This may however change behavior.
+If a DateTime is encountered in XML that is processed using an XML-To-Domain mapping and specifies no timezone, this DateTime is interpreted as if it is UTC. The location of the machine running the server won't affect any operations.

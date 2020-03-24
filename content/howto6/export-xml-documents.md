@@ -200,7 +200,7 @@ To create the export logic, follow these steps:
 23. Deploy the application and open the customer overview page.
 24. Click the **Export as XML** button and download the generated XML document.
 
-## 6 Related Content
+## 6 Read More
 
 * [How to Consume a Complex Web Service](consume-a-complex-web-service)
 * [How to Consume a Simple Web Service](consume-a-simple-web-service)
@@ -210,4 +210,4 @@ To create the export logic, follow these steps:
 * [How to Synchronize User Accounts Using the LDAP Module](synchronizing-user-accounts-using-the-ldap-module)
 * [How to Import XML Documents](importing-xml-documents)
 * [How to Consume a REST Service](consume-a-rest-service)
-* [How to Expose Data to BI Tools Using OData](exposing-data-to-bi-tools-using-odata)
+

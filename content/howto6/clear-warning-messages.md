@@ -28,9 +28,7 @@ To get more information, double-click or right-click the warning.
 ## 3 Common Warnings
 
 {{% alert type="warning" %}}
-
 [Deprecated] Using the main placeholder contents for pop-ups is deprecated.  This potion will be removed in a future version.  Please use a separate pop-up layout instead.
-
 {{% /alert %}}
 
 * This will not affect the project in this version of the Modeler, but it may cause problems when upgrading
@@ -168,7 +166,7 @@ Variable ‘Variable’ is never used.
 * There are multiple potential causes here
 * The solution involves removing the variable from the microflow, which could mean deleting the retrieve activity or electing to not use the return value of a microflow call
 
-## 4 Related Content
+## 4 Read More
 
 *   [Finding the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
 *   [Testing Web Services Using SoapUI](testing-web-services-using-soapui)

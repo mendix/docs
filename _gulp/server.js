@@ -8,10 +8,13 @@ const spawnServer = (folder) => {
   const server = Server.create({
     path: targetFolder,
     port: 8888,
+    middleware: [function (req, res, next) {
+      next();
+    }],
     fallback: (req, res) => {
       const parsed = url.parse(req.url),
-            target = parsed.pathname + '.html',
-            alternateTarget = parsed.pathname + '/index.html';
+        target = parsed.pathname + '.html',
+        alternateTarget = parsed.pathname + '/index.html';
 
       if (shell.test('-f', path.join(targetFolder, target))) {
         return target + (parsed.query ? `?${parsed.query}` : '');

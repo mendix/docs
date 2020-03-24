@@ -102,16 +102,14 @@ To configure the delete behavior, double-click the **Order_Customer** associatio
     * The **Error message** will be shown to a user that tries to delete a customer that has orders
     ![](attachments/18448745/18582208.png)
 
-## 7 Related Content
+## 7 Read More
 
 * [Work with Images and Files](working-with-images-and-files)
 * [Denormalize Data to Improve Performance](denormalize-data-to-improve-performance)
 * [Set Up Data Validation](setting-up-data-validation)
 * [Work with Object Events](working-with-object-events)
 * [Find the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
-* [Manage Your Application Requirements with Mendix](/developerportal/howto/managing-your-application-requirements-with-mendix)
+* [Manage Your Application Requirements with Mendix](/developerportal/collaborate/stories)
 * [Define Access Rules Using XPath](define-access-rules-using-xpath)
-* [Scout and Windows 10 Workaround](scout-and-windows-10-workaround)
-* [Generate a Personal SSH2 Key Pair](generating-a-personal-ssh2-key-pair)
 * [Create Your First Two Overview and Detail Pages](create-your-first-two-overview-and-detail-pages)
 * [Set Up Data Validation](setting-up-data-validation)

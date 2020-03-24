@@ -18,7 +18,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Install [weinre](https://people.apache.org/~pmuellr/weinre/docs/latest/)
 * Install the Mendix Developer App (v1.1 or later) on your mobile device:
-    * Download for [Android](https://play.google.com/store/apps/details?id=com.mendix.MendixDeveloperApp&hl)
+    * Download for [Android](https://play.google.com/store/apps/details?id=com.mendix.SprintrMobile)
     * Download for [iOS](https://itunes.apple.com/us/app/mendix-developer-app/id922423316)
     * Download for [Windows Phone](https://www.microsoft.com/en-us/store/p/mendix-developer-app/9wzdncrdftvr)
 
@@ -35,11 +35,11 @@ Click the settings icon in the top-right corner of the screen to configure your 
 
 ![](attachments/18448572/18580021.png)
 
-On the configure screen, fill in the same settings that you used to start weinre, which should be [http://1.2.3.4:9090](http://1.2.3.4:9090) (wherein `1.2.3.4` is your local IP).
+On the configure screen, fill in the same settings that you used to start weinre, which should be `http://1.2.3.4:9090` (wherein `1.2.3.4` is your local IP).
 
 You can now navigate to the same address on your local browser to start the debugging session.
 
-## 4 Related Content
+## 4 Read More
 
 * [How to Find the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
 * [How to Clear Warning Messages in Mendix](clear-warning-messages)

@@ -71,7 +71,7 @@ This module has many moving pieces that allow the configurations to be as simple
 ### 4.1 Creating an Input Object Entity
 
 1.  Open the **Domain Model** and add an **Entity** to serve as a "Master Export" entity that is of specialization **FileDocument**.
-2.  Create a **reference set association** between the newly created entity and the entity(ies) that you will want to serve as a base for the Excel Export.
+2.  Create an association between the newly created entity and the entity(ies) that you will want to serve as a base for the Excel Export.
     ![](attachments/18448732/18581908.png)
 
 ### 4.2 Basic Setup of the Template
@@ -186,4 +186,3 @@ This module has many steps that must be configured in order for the template to 
 *   [Exposing a web service](expose-a-web-service)
 *   [Importing XML documents](importing-xml-documents)
 *   [Consuming a REST Service](consume-a-rest-service)
-*   [Exposing data to BI tools using OData](exposing-data-to-bi-tools-using-odata)

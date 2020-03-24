@@ -48,7 +48,7 @@ The following steps are only relevant for on-premises deployments (skip to [2.2.
 
 ### <a name="CloudFoundry"></a>3.2.1 Cloud Foundry
 
-Follow these build pack instructions to set up New Relic for Cloud Foundry deployments: [https://github.com/mendix/cf-mendix-buildpack#new-relic](https://github.com/mendix/cf-mendix-buildpack#new-relic).
+Follow these buildpack instructions to set up New Relic for Cloud Foundry deployments: [https://github.com/mendix/cf-mendix-buildpack#new-relic](https://github.com/mendix/cf-mendix-buildpack#new-relic).
 
 ### 3.2.2 On Premise Linux & Windows Service Console
 
@@ -64,7 +64,7 @@ To the `javaopts` list in your *m2ee.yaml* file, add "-javaagent:<path-to-javaag
 
 ### 3.2.3 Mendix Modeler (Development Mode Only)
 
-1. Open your Mendix application, and click on **Settings** in the **Project Explorer**:
+1. Open your Mendix application, and click **Settings** in the **Project Explorer**:
 
     ![](attachments/19202618/19398902.png)
 
@@ -91,7 +91,7 @@ Your database calls and queries will now be visible on the database page:
 
 For more information on New Relic, see the New Relic documentation here: [https://docs.newrelic.com/](https://docs.newrelic.com/).
 
-## 7 Related Content
+## 7 Read More
 
 *   [Finding the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
 *   [Clearing Warning Messages in Mendix](clear-warning-messages)

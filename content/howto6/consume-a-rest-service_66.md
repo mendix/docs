@@ -158,7 +158,7 @@ To fill in the CreateInput microflow, follow these steps:
 
 Congratulations! You can now start your app and get summaries from Wikipedia.
 
-## 9 Related Content
+## 9 Read More
 
 * [How to Consume a Complex Web Service](consume-a-complex-web-service)
 * [How to Consume a Simple Web Service](consume-a-simple-web-service)
@@ -166,4 +166,4 @@ Congratulations! You can now start your app and get summaries from Wikipedia.
 * [How to Import XML Documents](importing-xml-documents)
 * [How to Import Excel Documents](importing-excel-documents)
 * [How to Expose a Web Service](expose-a-web-service)
-* [How to Expose Data to BI Tools Using OData](exposing-data-to-bi-tools-using-odata)
+

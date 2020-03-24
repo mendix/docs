@@ -1,8 +1,9 @@
 ---
-title: "Add-Ons"
+title: "Add-on Guides"
+description: "Presents guides for APM, AQM, and ATS."
 ---
 
-This space has all the documentation for the following add-ons:
+The *Add-on Guides* are divided into the following categories:
 
-* [APM](apm/)
-* [AQM](aqm/)
+{{% category_block %}}
+

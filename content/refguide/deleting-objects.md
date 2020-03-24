@@ -1,32 +1,38 @@
 ---
 title: "Delete Object(s)"
 parent: "object-activities"
+menu_order: 5
+tags: ["studio pro"]
 ---
 
+{{% alert type="warning" %}}
+This activity can only be used in **Microflows**.
+{{% /alert %}}
 
-Delete Object can be used to delete one or more objects.
+## 1 Introduction
+
+Delete object can be used to delete one or more objects.
 
 {{% alert type="info" %}}
 
-See [Microflow Element Common Properties](microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
+See [Common Properties](microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
 
 {{% /alert %}}
 
-## Input Properties
+## 2 Input Properties
 
-### Variabele
+### 2.1 Object or List
 
-The variable that refers to the object or list of objects that will be deleted. If you choose a list, all objects in that list will be deleted.
+The name of the object or list of objects that will be deleted. If you choose a list, all objects in that list will be deleted.
 
-## Action Properties
+## 3 Action Properties
 
-### Refresh in client
+### 3.1 Refresh in Client
 
-Refresh in client defines whether pages that use the entity of the object being deleted are refreshed.
+If the microflow is called from the client, the deletion is not reflected in the client if **Refresh in client** is set to *No*. If set to *Yes*, the deletion is reflected across the client, which includes reloading relevant [data sources](data-sources).
 
-| Option | Description |
-| --- | --- |
-| Yes | Objects of same entity are refreshed in the user's browser. |
-| No | Objects of same entity are not refreshed in the user's browser. |
+{{% alert type="info" %}}
+Deletions are always reflected in the client. [Data sources](data-sources) are only reloaded if **Refresh in client** is set to *Yes*.
+{{% /alert %}}
 
-_Default value:_ No
+Default: *No*

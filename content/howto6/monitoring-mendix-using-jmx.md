@@ -64,7 +64,7 @@ The simplest way to expose management information is by writing a MBean interfac
 
     }
     ```
-2.  And here is the implementation, MxStats.java. The methods just call the [Mendix Core](http://apidocs.mendix.com/4/runtime/classcom_1_1mendix_1_1core_1_1_core.html) class, and return the value:
+2.  And here is the implementation, MxStats.java. The methods just call the [Mendix Core](http://apidocs.rnd.mendix.com/4/runtime/classcom_1_1mendix_1_1core_1_1_core.html) class, and return the value:
 
     ```
     package jmx.actions;

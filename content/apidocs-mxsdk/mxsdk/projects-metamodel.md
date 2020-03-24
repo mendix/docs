@@ -14,10 +14,10 @@ A Mendix app model starts with a project. A project contains several top-level o
 
 Studio Pro Guide | Model SDK API docs
 -|-
-[Project](/refguide/project) |TypeScript module [projects](https://apidocs.mendix.com/modelsdk/latest/modules/projects.html)
-[Modules](/refguide/modules) |[Project](https://apidocs.mendix.com/modelsdk/latest/classes/projects.project.html)
-|[Module](https://apidocs.mendix.com/modelsdk/latest/classes/projects.module.html)
-|[ProjectDocument](https://apidocs.mendix.com/modelsdk/latest/classes/projects.projectdocument.html)
+[Project](/refguide/project) |TypeScript module [projects](https://apidocs.rnd.mendix.com/modelsdk/latest/modules/projects.html)
+[Modules](/refguide/modules) |[Project](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/projects.project.html)
+|[Module](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/projects.module.html)
+|[ProjectDocument](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/projects.projectdocument.html)
 
 ### 1.2 Project Documents
 
@@ -29,7 +29,7 @@ Project-level documents describe project security, project settings, app navigat
 
 Studio Pro Guide | Model SDK API docs
 -|-
-[Project Settings](/refguide/project-settings) |[ProjectDocument](https://apidocs.mendix.com/modelsdk/latest/classes/projects.projectdocument.html) and its inheritance hierarchy
+[Project Settings](/refguide/project-settings) |[ProjectDocument](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/projects.projectdocument.html) and its inheritance hierarchy
 [Project Security](/refguide/project-security) |
 [Navigation](/refguide/navigation) |
 [System Texts](/refguide/system-texts) |
@@ -46,8 +46,8 @@ A module consists of a domain model, model security settings and zero or more do
 
 Studio Pro Guide | Model SDK API docs
 -|-
-[Domain Model](/refguide/domain-model) | Property [`domainModel`](https://apidocs.mendix.com/modelsdk/latest/classes/projects.module.html#domainmodel) of Project
-[Module Security](/refguide/module-security) | Property [`moduleSecurity`](https://apidocs.mendix.com/modelsdk/latest/classes/projects.module.html#modulesecurity) of Project
+[Domain Model](/refguide/domain-model) | Property [`domainModel`](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/projects.module.html#domainmodel) of Project
+[Module Security](/refguide/module-security) | Property [`moduleSecurity`](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/projects.module.html#modulesecurity) of Project
 
 ### 2.2 Documents
 
@@ -61,9 +61,9 @@ In this sense, Module and Folder behave in the exact same way, and thus inherit 
 
 Studio Pro Guide | Model SDK API docs
 -|-
-[Modules](/refguide/modules) |Property [`modules`](https://apidocs.mendix.com/modelsdk/latest/classes/projects.project.html#modules) of Project
-|[Module](https://apidocs.mendix.com/modelsdk/latest/classes/projects.module.html)
-|[FolderBase](https://apidocs.mendix.com/modelsdk/latest/classes/projects.folderbase.html)
-|[Folder](https://apidocs.mendix.com/modelsdk/latest/classes/projects.folder.html)
-|[ModuleDocument](https://apidocs.mendix.com/modelsdk/latest/classes/projects.moduledocument.html)
-|[Document](https://apidocs.mendix.com/modelsdk/latest/classes/projects.document.html)
+[Modules](/refguide/modules) |Property [`modules`](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/projects.project.html#modules) of Project
+|[Module](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/projects.module.html)
+|[FolderBase](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/projects.folderbase.html)
+|[Folder](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/projects.folder.html)
+|[ModuleDocument](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/projects.moduledocument.html)
+|[Document](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/projects.document.html)

@@ -281,7 +281,7 @@ The valid values for **DD_LOG_LEVEL** are:
 
 The valid values for **DD_SITE** are:
 
-* datadog.com
+* datadoghq.com
 * datadoghq.eu
 
 ### 7.3 Datadog Events Log

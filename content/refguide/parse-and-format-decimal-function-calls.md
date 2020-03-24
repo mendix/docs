@@ -28,7 +28,7 @@ A decimal value that matches the inputted string value. If the value cannot be p
 * `parseDecimal('3.45')` returns 3.45
 * `parseDecimal('noDecimal', 5.05)` returns 5.05
 * `parseDecimal('noDecimal', empty)` returns empty
-* `parseDecimal('3,241.98', '#,###.##)` returns 3241.98
+* `parseDecimal('3,241.98', '#,###.##')` returns 3241.98
 
 ## 3 formatDecimal
 

@@ -117,44 +117,7 @@ Name: {EventName}
 Description: {EventDescription}
 ```
 
-### 2.7 Action
-
-This property appears as follows:
-
-```
-type ActionProperty = {
-    type: string;
-    params: { [key: string]: any }
-}
-```
-
-Actions are passed as an object that will contain a `type` field identifying what action has been selected, and a
-`params` field that contains an object with additional information (where applicable).
-
-The possible types and their parameters are as follows:
-
-* `NoClientAction`: the 'Do nothing' action
-* `PageClientAction`: the 'Show a page' action
-    * `params.page`: the selected page's name
-* `MicroflowClientAction`: the 'Call a microflow' action
-    * `params.microflow`: the selected microflow's name
-* `NanoflowClientAction`: the 'Call a nanoflow' action
-    * `params.nanoflow`: the selected nanoflow's name
-* `OpenLinkClientAction`: the 'Open link' action
-    * `params.linkType`: the type of link (can be "Web", "Email", "Call", or "Text")
-    * `params.isDynamic`: whether or not the link value is based on an attribute (`true`) or static (`false`)
-    * `params.value`: when dynamic, this contains the name of the selected attribute (otherwise, this contains
-    the value for the link)
-* `CreateObjectClientAction`: the 'Create object' action
-    * `params.objectType`: the name of the entity to be created
-    * `params.page`: the name of the selected edit page
-* `SaveChangesClientAction`: the 'Save changes' action
-* `CancelChangesClientAction`: the 'Cancel changes' action
-* `ClosePageClientAction`: the 'Close page' action
-* `SignOutClientAction`: the 'Sign out' action
-* `DeleteClientAction`: the 'Delete' action
-
-### 2.8 Attribute
+### 2.7 Attribute
 
 A string containing the path of the selected attribute will be passed.
 
@@ -163,12 +126,12 @@ Here are a few examples:
 * `EventName`
 * `MyFirstModule.EventSchedule_Event/MyFirstModule.Event/EventName`
 
-### 2.9 Object
+### 2.8 Object
 
 Sub-object properties will be passed as an `array` of values. For each configured sub-object, an entry with all
 values will be passed.
 
-### 2.10 File
+### 2.9 File
 
 A string containing the path of the selected file entity will be passed.
 

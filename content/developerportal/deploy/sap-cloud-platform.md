@@ -127,6 +127,8 @@ To create a new environment, perform the following steps:
 
 5.  Enter the name of the environment. This can be anything you choose: for example Test, Acceptance, or Production.
 
+    {{% todo %}}[Get better picture once live]{{% /todo %}}
+
     ![](attachments/sap-cloud-platform/08-sap-env-2.png)
 
 6.  Set the size of the memory that the app needs in order to run. This can also be changed later.
@@ -145,7 +147,9 @@ To create a new environment, perform the following steps:
 
     {{% alert type="info" %}}If you do not have a subscription secret, create a support ticket with Mendix Support and they will send you one.{{% /alert %}}
 
-11. Click **Next** to create the environment and finish the setup.
+11. If you want the user to be redirected to a custom URL after they have logged in using XSUAA then, optionally, add **Redirect URLs**. 
+
+12. Click **Next** to create the environment and finish the setup.
 
     ![](attachments/sap-cloud-platform/09-sap-env-3.png)
 

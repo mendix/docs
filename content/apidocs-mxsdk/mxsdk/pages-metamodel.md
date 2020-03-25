@@ -14,9 +14,9 @@ Pages are defined based on Layouts (see below). Pages, Layouts and Snippets inhe
 
 Studio Pro Guide | Model SDK API docs
 --- | --- |
-[Pages overview](/refguide/pages) | [Page](https://apidocs.mendix.com/modelsdk/latest/classes/pages.page.html)
-[Page](/refguide/page) | [FormBase](https://apidocs.mendix.com/modelsdk/latest/classes/pages.formbase.html)
- | [LayoutCall](https://apidocs.mendix.com/modelsdk/latest/classes/pages.layoutcall.html)
+[Pages overview](/refguide/pages) | [Page](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.page.html)
+[Page](/refguide/page) | [FormBase](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.formbase.html)
+ | [LayoutCall](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.layoutcall.html)
 
 ## 2 Layouts
 
@@ -28,12 +28,12 @@ A Layout can contain one or more Widgets or Placeholders. For each Placeholder, 
 
 Studio Pro Guide | Model SDK API docs
 --- | --- |
-[Layout](/refguide/layout) | [Page](https://apidocs.mendix.com/modelsdk/latest/classes/pages.page.html)
-| [Layout](https://apidocs.mendix.com/modelsdk/latest/classes/pages.layout.html)
-| [LayoutParameter](https://apidocs.mendix.com/modelsdk/latest/classes/pages.layoutparameter.html)
-| [Placeholder](https://apidocs.mendix.com/modelsdk/latest/classes/pages.placeholder.html)
-| [LayoutCall](https://apidocs.mendix.com/modelsdk/latest/classes/pages.layoutcall.html)
-| [LayoutCallArgument](https://apidocs.mendix.com/modelsdk/latest/classes/pages.layoutcallargument.html)
+[Layout](/refguide/layout) | [Page](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.page.html)
+| [Layout](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.layout.html)
+| [LayoutParameter](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.layoutparameter.html)
+| [Placeholder](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.placeholder.html)
+| [LayoutCall](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.layoutcall.html)
+| [LayoutCallArgument](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.layoutcallargument.html)
 
 ## 3 Snippets
 
@@ -47,9 +47,9 @@ For a Page to include a Snippet, it needs to use the SnippetCallWidget which, in
 
 Studio Pro Guide | Model SDK API docs
 --- | --- |
-[Snippet](/refguide/snippet) | [Snippet](https://apidocs.mendix.com/modelsdk/latest/classes/pages.snippet.html)
-| [SnippetCall](https://apidocs.mendix.com/modelsdk/latest/classes/pages.snippetcall.html)
-| [SnippetCallWidget](https://apidocs.mendix.com/modelsdk/latest/classes/pages.snippetcallwidget.html)
+[Snippet](/refguide/snippet) | [Snippet](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.snippet.html)
+| [SnippetCall](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.snippetcall.html)
+| [SnippetCallWidget](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.snippetcallwidget.html)
 
 ## 4 Data Widgets
 
@@ -75,11 +75,11 @@ The control bar of the data view can have the following buttons: save, cancel, c
 
 Studio Pro Guide | Model SDK API docs
 --- | --- |
-[List View](/refguide/list-view) | [ListView](https://apidocs.mendix.com/modelsdk/latest/classes/pages.listview.html)
-[Data view](/refguide/data-view) | [ListViewTemplate](https://apidocs.mendix.com/modelsdk/latest/classes/pages.listviewtemplate.html)
-[Footer](/refguide/footer-document-template) | [DataView](https://apidocs.mendix.com/modelsdk/latest/classes/pages.dataview.html)
-| [DataViewControlBar](https://apidocs.mendix.com/modelsdk/latest/classes/pages.dataviewcontrolbar.html)
-| [ConditionalVisibilitySettings](https://apidocs.mendix.com/modelsdk/latest/classes/pages.conditionalvisibilitysettings.html)
+[List View](/refguide/list-view) | [ListView](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.listview.html)
+[Data view](/refguide/data-view) | [ListViewTemplate](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.listviewtemplate.html)
+[Footer](/refguide/footer-document-template) | [DataView](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.dataview.html)
+| [DataViewControlBar](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.dataviewcontrolbar.html)
+| [ConditionalVisibilitySettings](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.conditionalvisibilitysettings.html)
 
 ## 5 Data Sources
 
@@ -103,9 +103,9 @@ An `ImageViewerSource` only works with the ImageViewer widget and is restricted 
 
 Studio Pro Guide | Model SDK API docs
 --- | --- |
-[Data Sources](/refguide/data-sources) | [DataSource](https://apidocs.mendix.com/modelsdk/latest/classes/pages.datasource.html)
-[Listen to Grid Source](/refguide/listen-to-grid-source) | [DatabaseConstraint](https://apidocs.mendix.com/modelsdk/latest/classes/pages.databaseconstraint.html)
-[XPath](/refguide/xpath) | [SortableEntityPathSource](https://apidocs.mendix.com/modelsdk/latest/classes/pages.sortableentitypathsource.html)
+[Data Sources](/refguide/data-sources) | [DataSource](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.datasource.html)
+[Listen to Grid Source](/refguide/listen-to-grid-source) | [DatabaseConstraint](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.databaseconstraint.html)
+[XPath](/refguide/xpath) | [SortableEntityPathSource](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.sortableentitypathsource.html)
 
 ## 6 Grids
 
@@ -127,10 +127,10 @@ A reference set selector allows you to set an association of type _reference set
 
 Studio Pro Guide | Model SDK API Docs
 --- | --- |
-[Template grid](/refguide/template-grid) | [TemplateGrid](https://apidocs.mendix.com/modelsdk/latest/classes/pages.templategrid.html)
-[Data grid](/refguide/data-grid) | [DataGrid](https://apidocs.mendix.com/modelsdk/latest/classes/pages.datagrid.html)
-[Reference set selector](/refguide/reference-set-selector) | [ReferenceSetSelector](https://apidocs.mendix.com/modelsdk/latest/classes/pages.referencesetselector.html)
-[Control Bar](/refguide/control-bar) | [GridControlBar](https://apidocs.mendix.com/modelsdk/latest/classes/pages.gridcontrolbar.html)
+[Template grid](/refguide/template-grid) | [TemplateGrid](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.templategrid.html)
+[Data grid](/refguide/data-grid) | [DataGrid](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.datagrid.html)
+[Reference set selector](/refguide/reference-set-selector) | [ReferenceSetSelector](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.referencesetselector.html)
+[Control Bar](/refguide/control-bar) | [GridControlBar](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.gridcontrolbar.html)
 
 ## 7 Buttons
 
@@ -140,12 +140,12 @@ Button widgets perform an action when clicked. They can be rendered as a button 
 
 Studio Pro Guide | Model SDK API Docs
 --- | --- 
-[Button Widgets](/refguide/button-widgets) | [Button](https://apidocs.mendix.com/modelsdk/latest/classes/pages.button.html)
-[Button Properties](/refguide/button-properties) | [ButtonStyle](https://apidocs.mendix.com/modelsdk/latest/classes/pages.buttonstyle.html)
-[Translatable Texts](/refguide/translatable-texts) | [RenderType](https://apidocs.mendix.com/modelsdk/latest/classes/pages.rendertype.html)
-| [Icon](https://apidocs.mendix.com/modelsdk/latest/classes/pages.icon.html)
-| [Text](https://apidocs.mendix.com/modelsdk/latest/classes/texts.text.html)
-| [ClientTemplate](https://apidocs.mendix.com/modelsdk/latest/classes/pages.clienttemplate.html)
+[Button Widgets](/refguide/button-widgets) | [Button](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.button.html)
+[Button Properties](/refguide/button-properties) | [ButtonStyle](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.buttonstyle.html)
+[Translatable Texts](/refguide/translatable-texts) | [RenderType](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.rendertype.html)
+| [Icon](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.icon.html)
+| [Text](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/texts.text.html)
+| [ClientTemplate](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.clienttemplate.html)
 
 ## 8 Containers
 
@@ -155,11 +155,11 @@ DivContainers, Split Panes, Group Boxes, LayoutGridColumns, ScrollContainerRegio
 
 Studio Pro Guide | Model SDK API docs
 --- | --- |
-[Tab page](/refguide/tab-container#tab-page) | [TabPage](https://apidocs.mendix.com/modelsdk/latest/classes/pages.tabpage.html)
-[Layout grid](/refguide/layout-grid) | [LayoutGrid](https://apidocs.mendix.com/modelsdk/latest/classes/pages.layoutgrid.html)
-[Container](/refguide/container) | [DivContainer](https://apidocs.mendix.com/modelsdk/latest/classes/pages.divcontainer.html)
-[Scroll Container](/refguide/scroll-container) | [SplitPane](https://apidocs.mendix.com/modelsdk/latest/classes/pages.splitpane.html)
-[Scroll Container](/refguide/scroll-container) | [ScrollContainer](https://apidocs.mendix.com/modelsdk/latest/classes/pages.scrollcontainer.html)
+[Tab page](/refguide/tab-container#tab-page) | [TabPage](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.tabpage.html)
+[Layout grid](/refguide/layout-grid) | [LayoutGrid](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.layoutgrid.html)
+[Container](/refguide/container) | [DivContainer](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.divcontainer.html)
+[Scroll Container](/refguide/scroll-container) | [SplitPane](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.splitpane.html)
+[Scroll Container](/refguide/scroll-container) | [ScrollContainer](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.scrollcontainer.html)
 
 ## 9 Association Widgets
 
@@ -169,10 +169,10 @@ The _reference selector_ is an input widget that can be used to display and edit
 
 Studio Pro Guide | Model SDK API docs
 --- | --- |
-[Associations](/refguide/associations) | [InputReferenceSelector](https://apidocs.mendix.com/modelsdk/latest/classes/pages.inputreferencesetselector.html)
-[Input Widgets](/refguide/input-widgets) | [ReferenceSetSelector](https://apidocs.mendix.com/modelsdk/latest/classes/pages.referencesetselector.html)
-[Reference selector](/refguide/reference-selector) | [PageSettings](https://apidocs.mendix.com/modelsdk/latest/classes/pages.pagesettings.html)
-[Reference set selector](/refguide/reference-set-selector) | [MicroflowSettings](https://apidocs.mendix.com/modelsdk/latest/classes/pages.microflowsettings.html)
+[Associations](/refguide/associations) | [InputReferenceSelector](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.inputreferencesetselector.html)
+[Input Widgets](/refguide/input-widgets) | [ReferenceSetSelector](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.referencesetselector.html)
+[Reference selector](/refguide/reference-selector) | [PageSettings](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.pagesettings.html)
+[Reference set selector](/refguide/reference-set-selector) | [MicroflowSettings](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.microflowsettings.html)
 [Call a Microflow](/refguide/on-click-event#call-microflow) |
 [Pages](/refguide/pages) |
 

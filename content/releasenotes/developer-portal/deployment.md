@@ -10,11 +10,30 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 ## 2020
 
+
 ### March 26th, 2020
 
 #### SAP Environments Page
 
 * We have added a log of all deployment activities which are carried out on your SAP environments.
+
+### March 24th, 2020
+
+#### Mendix for Private Cloud — Mendix Operator v1.0.1
+
+* We have added an additional field to the `MendixApp` CR which will allows the Developer Portal to display the latest state of environments.
+* We have improved compatibility with popular container image registries (such as Azure Container Registry). The build process can now recognize that the container image already has the necessary base layers, and avoids downloading them again, saving time and network traffic.
+
+#### Mendix for Private Cloud — Mendix Gateway Agent v1.0.1
+
+* We have improved the reliability of sending environment statuses to the Developer Portal.
+
+### March 23rd, 2020
+
+#### Mendix for Private Cloud
+
+* We fixed an issue where users could not accept invitations to join a cluster.
+* We fixed an issue were the first time an app was deployed no replicas were started, meaning that it was still in a stopped state. Now all apps will have one replica started when they are deployed for the first time.
 
 ### March 17th, 2020
 

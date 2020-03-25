@@ -14,81 +14,131 @@ tags: ["Datadog", "Mendix Cloud", "v4", "monitoring", "analysis"]
 Datadog logging is supported in Mendix version 7.15 and above.
 {{% /alert %}}
 
-Two types of data are provided to Datadog:
-
-* Data from within the Mendix app itself – this is described in [Customizing the Metrics Agent](#customizing), below
-* Data from the Mendix Runtime, the Java Virtual Machine (JVM), the database, and the SaaS (Software as a Service, for example Cloud Foundry) environment – this is described in [Environment Metrics](#environment), below
-
-This document explains how to configure your Mendix Cloud v4 app to send data to Datadog. If you want to know more about the capabilities of Datadog and, in particular, using Datadog with Mendix, have a look at the Mendix blog [Monitor Your Mendix Apps with Datadog](https://www.mendix.com/blog/monitor-your-mendix-apps-with-datadog/).
+This document explains what information can be provided to Datadog and how to configure your Mendix Cloud v4 app to send data to Datadog. If you want to know more about the capabilities of Datadog and, in particular, using Datadog with Mendix, have a look at the Mendix blog [Monitor Your Mendix Apps with Datadog](https://www.mendix.com/blog/monitor-your-mendix-apps-with-datadog/).
 
 {{% alert type="warning" %}}
 Datadog is not supported in Mendix Cloud v3, nor in default deployment buildpacks for other cloud platforms.
 {{% /alert %}}
 
-## 2 Datadog API Key{#api-key}
+## 2 What Information Can Mendix Supply to Datadog?
 
-To make use of Datadog you will need a Datadog API key. If you already use Datadog, skip to the [Existing Datadog User](#existing-datadog-user) section to learn how to get one.
+Mendix provides two types of data to Datadog:
 
-### 2.1 New Datadog User
+* Data from the Mendix Runtime, the Java Virtual Machine (JVM), the database, and the SaaS (Software as a Service, for example Cloud Foundry) environment – this is described in [Environment Metrics](#environment), below
+* Data from within the Mendix app itself – this is described in [App Metrics](#app-metrics), below
 
-If you are new to Datadog, you will need to get an account first.
+### 2.1 Environment Metrics{#environment}
 
-1. Go to the Datadog site (for example, [https://www.datadoghq.com/](https://www.datadoghq.com/)) and choose **GET STARTED FREE**.
-2. Enter your Datadog account details. Once you have entered your details you cannot continue until you have set up your agent.
-3.  Choose the option **From Source**.
+Once you have configured Datadog for your app, it will automatically send information about the environment in which your app is running.
 
-    ![The From Source option on the Agent setup screen](attachments/datadog-metrics/from-source.png)
+#### 2.1.1 Environment Metrics Namespaces
 
-4.  Copy the value of *DD_API_KEY* key shown on the install script.
+The metrics from your app's environment are supplied in the following namespaces:
 
-    ![Source install script shows DD_API_KEY=your API key](attachments/datadog-metrics/dd-api-key.png)
+* database – metrics on the database performance
+* datadog  – metrics on datadog usage
+* jmx – metrics from the Mendix runtime
+* jvm – metrics from the Java virtual machine in which the Mendix runtime runs
+* postgresql – database metrics specific to PostgreSQL databases
+* synthetics – metrics specifically labelled as coming from tests (see the Datadog documentation [Synthetics](https://docs.datadoghq.com/synthetics/))
+* system – metrics from the base system running on the platform or PaaS (see the Datadog documentation [System Check](https://docs.datadoghq.com/integrations/system/))
 
-5. You now need to use this API key with your app: see [Connect Node to Datadog](#connect-node).
+#### 2.1.2 Useful Metrics for Mendix Apps
 
-### 2.2 Existing Datadog User{#existing-datadog-user}
+The following metrics are useful when monitoring the performance of your Mendix app:
 
-To find your existing API key, or to request a new one for your app, do the following:
+* database.diskstorage_size
+* jvm.heap_memory
+* jvm.heap_memory_committed
+* jvm.heap_memory_init
+* jvm.heap_memory_max
+* jvm.non_heap_memory
+* jvm.non_heap_memory_committed
+* jvm.non_heap_memory_init
+* jvm.non_heap_memory_max
+* postgresql.connections
+* postgresql.database_size
+* postgresql.max_connections
+* postgresql.percent_usage_connections
 
-1. Login to your Datadog account.
-2.  Go to the **Integrations > API** screen.
+Note that the absolute values are often not useful, but looking at trends over time can indicate performance issues or future action which might be required. Some of these trends are similar to those described in [Trends in Mendix Cloud v4](trends-v4).
 
-    ![Datadog site: navigation to Integration, API](attachments/datadog-metrics/datadog-integrations-api.png)
+## 3 App Metrics {#app-metrics}
 
-3.  Copy an existing **API Key** or create a new one.
+Mendix provides logging of various actions within the app. These are sent to Datadog with the namespace `mx`. Timing values are sent in milliseconds.
 
-    ![Datadog site: API Keys page](attachments/datadog-metrics/datadog-api=keys.png)
+By default, Mendix will only pass request handler activity to Datadog, but you can configure it to provide metrics for microflows and activities as well. You can find how to do this in [Customizing the Metrics Agent](#customizing), below.
 
-4. For more information on Datadog API keys, see the following page on the Datadog site: [How do I reset my Application Keys](https://docs.datadoghq.com/account_management/faq/how-do-i-reset-my-application-keys/) and related documentation.
+### 3.1 What Metrics Can You Get From Your App?
 
-## 3 Connect Node to Datadog{#connect-node}
+#### 3.1.1 Request Handler Metrics
 
-To send your runtime information to Datadog, you need to provide the Datadog API key to your environment.
+Unless you customize your metrics agent, the metrics agent will provide metrics for all your request handlers. The metrics provided are:
 
-1. Go to the **Environments** page of your app in the *Developer Portal*.
-2. Click **Details** to select the environment you wish to monitor with Datadog. 
-3. Open the **Runtime** tab.
-4. Add a **Custom Environment Variable**.
-5.  Select **DD_API_KEY** from the *Name* drop-down.
+* `mx.soap.time` – for SOAP requests
+* `mx.odata.time` – for OData requests
+* `mx.rest.time` – for REST requests
+* `mx.client.time` – for all of the following types of request
+  * REST, ODATA, SOAP **doc** requests
+  * `/xas` requests (general queries for data in data grids, sending changes to the server, and triggering the execution of microflows)
+  * File upload/download requests
+  * `/p` requests
 
-	![Dropdown containing custom environment variable names](attachments/datadog-metrics/environment-variable-dd-api-key.png)
+Each metric is also tagged with `resource:{resource_name}` to indicate which resource was being requested.
 
-6. Enter the Datadog **API key**, obtained in the [Datadog API Key](#api-key) section, above, as the *Value* of the Environment Variable.
-7. Add a second **Custom Environment Variable**:
+#### 3.1.2 Microflow Metrics
 
-	* **Name**: *DD_LOG_LEVEL*
-	* **Value**: *INFO*
+For the microflows you select (see [Customizing the Metrics Agent](#customizing), below), the metrics agent will provide the following metrics:
 
-	This will ensure that some messages are sent to Datadog. You can change the log level later once you have confirmed that Datadog is receiving them.
+* mx.microflow.time.avg
+* mx.microflow.time.count
+* mx.microflow.time.max
+* mx.microflow.time.median
+* mx.microflow.time.95percentile
 
-8. By default, the Datadog integration defaults to the US region (datadoghq.com). If you want to use a Datadog site which is another region, set the `DD_SITE` environment variable to the required site. For example, for the EU Datadog site, set `DD_SITE` to `datadoghq.eu`.
+In addition, each metric will be tagged with the `microflow:{microflow_name}` tag which indicates which microflow the metric came from. The microflow name is in the format `{module}.{microflow}`.
 
-9.  Return to the **Environments** page for your app and *Deploy* or *Transport* your app into the selected environment.
+#### 3.1.3 Activity Metrics
 
-	{{% alert type="warning" %}}Your app must be **redeployed** before it is started as additional dependencies need to be included.<br/><br/>Restarting the app is not sufficient to start sending data to Datadog.{{% /alert %}}
+For the activities you select (see [Customizing the Metrics Agent](#customizing), below), the metrics agent will provide the following metrics:
 
-## 4 Tagging Metrics for Datadog
+* mx.activity.time.avg
+* mx.activity.time.count
+* mx.activity.time.max
+* mx.activity.time.median
+* mx.activity.time.95percentile
 
-To identify the metrics for your app and environment in Datadog, it is recommended that you add tags for the app name and environment. Our recommendation is that you use the following tags:
+In addition, all activities reported by Mendix will have the tags `activity:{activity_name}` and `microflow:{microflow_name}` to indicate which activity and microflow the metric came from.
+
+The activity name will be one of the following activities which are reported:
+
+* CastObject
+* ChangeObject
+* CommitObject
+* CreateObject
+* DeleteObject
+* RetrieveObject
+* RollbackObject
+* AggregateList
+* ChangeList
+* ListOperation
+* JavaAction
+* Microflow
+* CallRestService
+* CallWebService
+* ImportWithMapping
+* ExportWithMapping
+
+### 3.2 Tagging Metrics for Datadog
+
+As described above, Mendix adds the following tags to metrics from microflows and activities:
+
+* **microflow:{microflow_name}** – indicates which microflow the metric came from — the microflow name is in the format `{module}.{microflow}`
+* **activity:{activity_name}** – indicates which activity the metric came from
+
+However, if you use Datadog to monitor more than one app and environment you will not be able to tell which app or environment these metrics apply to. To identify the metrics for your app and environment in Datadog, you need to add tags for the app name and environment.
+
+Our recommendation is that you use the following tags:
 
 * app:{app_name} – this enables you to identify all metrics sent from your app (for example, **app:customermanagement**)
 * env:{environment_name} – this enables you to identify metrics sent from a particular environment so you can separate out production metrics from test metrics (for example, **env:accp**)
@@ -106,20 +156,15 @@ Setting these values for your app means that all metrics from this environment o
 
 ![Example metric showing tags in Datadog](attachments/datadog-metrics/datadog-summary-tags.png)
 
+{{% alert type="info" %}}
 You can add more tags if you want, but note that Datadog's charges include an element for [custom metrics](https://docs.datadoghq.com/developers/metrics/custom_metrics/) as described on the Datadog site.
+{{% /alert %}}
 
-## 5 Customizing the Metrics Agent{#customizing}
+### 3.3 Customizing the Metrics Agent{#customizing}
 
-Mendix provides logging of various actions within the app. These are sent to Datadog with the namespace **mx**. Timing values are sent in milliseconds.
+By default, Mendix will pass a log of *all* **request handler** activity to Datadog and no other information. However, by using JSON to configure the metrics agent, you can add logs of microflows and activities within microflows, and restrict which request handler calls are sent.
 
-By default, Mendix will pass a log of *all* request handler activity to Datadog and no other information. However, by using JSON to configure the metrics agent, you can add logs of microflows and activities within microflows, and restrict which request handler calls are sent.
-
-Mendix adds the following tags to metrics from microflows and activities:
-
-* **microflow:{microflow_name}** – indicates which microflow the metric came from — the microflow name is in the format `{module}.{microflow}`
-* **activity:{activity_name}** – indicates which activity the metric came from
-
-### 5.1 Format of Metrics Agent Configuration
+#### 3.3.1 Format of Metrics Agent Configuration
 
 You can specify which request handlers, microflows, and activities are reported to Datadog using a JSON configuration with the following format (note that this is the syntax and not an example of this custom setting):
 
@@ -220,7 +265,7 @@ The following example will send logs for:
 }
 ```
 
-### 5.2 Passing a Configuration to the Metrics Agent
+#### 3.3.2 Passing a Configuration to the Metrics Agent
 
 You pass the configuration to the metrics agent by adding a *Custom Runtime Setting* to your Mendix Cloud environment.
 
@@ -233,41 +278,72 @@ You pass the configuration to the metrics agent by adding a *Custom Runtime Sett
 4. Click **Save**.
 5. Restart your app to apply the new settings.
 
-## 6 Environment Metrics{#environment}
+## 4 Setting Up Datadog For Your Mendix App
 
-As well as information from within the Mendix app (identified by the namespace *mx*), your app environment will also provide metrics in the following namespaces:
+### 4.1 Datadog API Key{#api-key}
 
-* database – metrics on the database performance
-* datadog  – metrics on datadog usage
-* jmx – metrics from the Mendix runtime
-* jvm – metrics from the Java virtual machine in which the Mendix runtime runs
-* postgresql – database metrics specific to PostgreSQL databases
-* synthetics – metrics specifically labelled as coming from tests (see the Datadog documentation [Synthetics](https://docs.datadoghq.com/synthetics/))
-* system – metrics from the base system running on the platform or PaaS (see the Datadog documentation [System Check](https://docs.datadoghq.com/integrations/system/))
+To make use of Datadog you will need a Datadog API key. If you already use Datadog, skip to the [Existing Datadog User](#existing-datadog-user) section to learn how to get one.
 
-### 6.1 Useful Metrics for Mendix Apps
+#### 4.1.1 New Datadog User
 
-The following metrics are useful when monitoring the performance of your Mendix app:
+If you are new to Datadog, you will need to get an account first.
 
-* database.diskstorage_size
-* jvm.heap_memory
-* jvm.heap_memory_committed
-* jvm.heap_memory_init
-* jvm.heap_memory_max
-* jvm.non_heap_memory
-* jvm.non_heap_memory_committed
-* jvm.non_heap_memory_init
-* jvm.non_heap_memory_max
-* postgresql.connections
-* postgresql.database_size
-* postgresql.max_connections
-* postgresql.percent_usage_connections
+1. Go to the Datadog site (for example, [https://www.datadoghq.com/](https://www.datadoghq.com/)) and choose **GET STARTED FREE**.
+2. Enter your Datadog account details. Once you have entered your details you cannot continue until you have set up your agent.
+3.  Choose the option **From Source**.
 
-Note that the absolute values are often not useful, but looking at trends over time can indicate performance issues or future action which might be required. Some of these trends are similar to those described in [Trends in Mendix Cloud v4](trends-v4).
+    ![The From Source option on the Agent setup screen](attachments/datadog-metrics/from-source.png)
 
-## 7 Additional Information
+4.  Copy the value of *DD_API_KEY* key shown on the install script.
 
-### 7.1 Log Levels
+    ![Source install script shows DD_API_KEY=your API key](attachments/datadog-metrics/dd-api-key.png)
+
+5. You now need to use this API key with your app: see [Connect Node to Datadog](#connect-node).
+
+#### 4.1.2 Existing Datadog User{#existing-datadog-user}
+
+To find your existing API key, or to request a new one for your app, do the following:
+
+1. Login to your Datadog account.
+2.  Go to the **Integrations > API** screen.
+
+    ![Datadog site: navigation to Integration, API](attachments/datadog-metrics/datadog-integrations-api.png)
+
+3.  Copy an existing **API Key** or create a new one.
+
+    ![Datadog site: API Keys page](attachments/datadog-metrics/datadog-api=keys.png)
+
+4. For more information on Datadog API keys, see the following page on the Datadog site: [How do I reset my Application Keys](https://docs.datadoghq.com/account_management/faq/how-do-i-reset-my-application-keys/) and related documentation.
+
+### 4.2 Connect Node to Datadog{#connect-node}
+
+To send your runtime information to Datadog, you need to provide the Datadog API key to your environment.
+
+1. Go to the **Environments** page of your app in the *Developer Portal*.
+2. Click **Details** to select the environment you wish to monitor with Datadog. 
+3. Open the **Runtime** tab.
+4. Add a **Custom Environment Variable**.
+5.  Select **DD_API_KEY** from the *Name* drop-down.
+
+	![Dropdown containing custom environment variable names](attachments/datadog-metrics/environment-variable-dd-api-key.png)
+
+6. Enter the Datadog **API key**, obtained in the [Datadog API Key](#api-key) section, above, as the *Value* of the Environment Variable.
+7. Add a second **Custom Environment Variable**:
+
+	* **Name**: *DD_LOG_LEVEL*
+	* **Value**: *INFO*
+
+	This will ensure that some messages are sent to Datadog. You can change the log level later once you have confirmed that Datadog is receiving them.
+
+8. By default, the Datadog integration defaults to the US region (datadoghq.com). If you want to use a Datadog site which is another region, set the `DD_SITE` environment variable to the required site. For example, for the EU Datadog site, set `DD_SITE` to `datadoghq.eu`.
+
+9.  Return to the **Environments** page for your app and *Deploy* or *Transport* your app into the selected environment.
+
+	{{% alert type="warning" %}}Your app must be **redeployed** before it is started as additional dependencies need to be included.<br/><br/>Restarting the app is not sufficient to start sending data to Datadog.{{% /alert %}}
+
+## 5 Additional Information
+
+### 5.1 Log Levels
 
 The valid values for **DD_LOG_LEVEL** are:
 
@@ -277,27 +353,27 @@ The valid values for **DD_LOG_LEVEL** are:
 * INFO
 * DEBUG
 
-### 7.2 Datadog Regions
+### 5.2 Datadog Regions
 
 The valid values for **DD_SITE** are:
 
-* datadog.com
-* datadog.eu
+* datadoghq.com
+* datadoghq.eu
 
-### 7.3 Datadog Events Log
+### 5.3 Datadog Events Log
 
 The Datadog Events log contains events which come from your app: those are the same events that would appear in the Mendix Console. It does not contain events from the environment.
 
 ![Example events log](attachments/datadog-metrics/datadog-event-log.png)
 
-### 7.4 Datadog Agent not Started
+### 5.4 Datadog Agent not Started
 
 If you configure your app for Datadog but the Datadog agent is not started, the events will be sent to the app log files.
 
-### 7.5 Datadog Issues
+### 5.5 Datadog Issues
 
 If you have any issues related to accessing Datadog, please contact their support here: [Support | Datadog](https://www.datadoghq.com/support/), or by email at [support@datadoghq.com](mailto:support@datadoghq.com).
 
-## 8 Read More
+## 6 Read More
 
 * [Metrics](metrics)

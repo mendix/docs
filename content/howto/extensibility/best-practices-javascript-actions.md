@@ -156,7 +156,7 @@ To customize your JavaScript actions, consult the sections below.
 
 #### 2.2.1 Understanding the Mendix Client API
 
-Within the JavaScript actions, the full Mendix Client API is available. For reference, see the [Mendix Client API](https://apidocs.mendix.com/7/client/). Note that some parts of the Mendix Client API were created for widgets, and are less relevant for JavaScript actions.
+Within the JavaScript actions, the full Mendix Client API is available. For reference, see the [Mendix Client API](https://apidocs.rnd.mendix.com/7/client/index.html). Note that some parts of the Mendix Client API were created for widgets, and are less relevant for JavaScript actions.
 
 #### 2.2.2 Using Numeric Parameters in Your JavaScript Actions
 
@@ -194,7 +194,7 @@ mx.data.create({
 });
 ```
 
-For more information on creating objects, consult the [Create](https://apidocs.mendix.com/7/client/mx.data.html#.create) section of the *Mendix Client API*.
+For more information on creating objects, consult the [Create](https://apidocs.rnd.mendix.com/7/client/mx.data.html#.create) section of the *Mendix Client API*.
 
 #### 2.2.4 Changing Objects
 
@@ -207,7 +207,7 @@ mxobj.get("Name");               // "Henry"
 mxobj.getOriginalValue("Name")   // "Fred"
 ```
 
-For more information on changing objects, consult the [Set](https://apidocs.mendix.com/7/client/mendix_lib_MxObject.html#set) section of the *Mendix Client API*.
+For more information on changing objects, consult the [Set](https://apidocs.rnd.mendix.com/7/client/mendix_lib_MxObject.html#set) section of the *Mendix Client API*.
 
 #### 2.2.5 Loading Platform-Shipped Dependencies
 
@@ -220,10 +220,10 @@ var lang = require("mendix/lang");
 
 The following libraries are provided by the Mendix Client:
 
-* [mendix/lang](https://apidocs.mendix.com/7/client/module-mendix_lang.html)
-* [mendix/validator](https://apidocs.mendix.com/7/client/module-mendix_validator.html)
-* [mxui/dom](https://apidocs.mendix.com/7/client/module-mxui_dom.html)
-* [mxui/html/parser](https://apidocs.mendix.com/7/client/module-mxui_html_parser.html)
+* [mendix/lang](https://apidocs.rnd.mendix.com/7/client/module-mendix_lang.html)
+* [mendix/validator](https://apidocs.rnd.mendix.com/7/client/module-mendix_validator.html)
+* [mxui/dom](https://apidocs.rnd.mendix.com/7/client/module-mxui_dom.html)
+* [mxui/html/parser](https://apidocs.rnd.mendix.com/7/client/module-mxui_html_parser.html)
 
 While there are Dojo and Document Object Model (DOM) functions available, they are not recommended. For more information on Dojo and DOM functions, see the [Understanding Bad Practice](#badpractice) section of this document below. 
 
@@ -530,7 +530,7 @@ Not all capabilities are recommended for use. Consider the side effects that an 
 
 * [Build JavaScript Actions](/howto/extensibility/build-javascript-actions)
 * [JavaScript Actions](/refguide/javascript-actions)
-* [Mendix Client API](https://apidocs.mendix.com/7/client/)
+* [Mendix Client API](https://apidocs.rnd.mendix.com/7/client/index.html)
 * JavaScript basics:
 	* [Mozilla JavaScript Basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
 	* [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)

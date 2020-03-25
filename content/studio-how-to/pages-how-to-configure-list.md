@@ -14,7 +14,7 @@ This how-to explains how you can configure a list of items in Mendix Studio.
 
 * Create a new page
 * Configure a list view
-* Configure a data view that listens to the list view
+* Configure a data view that shows the details of an item selected in the list
 * Configure a data grid
 
 The how-to describes the following use case: 
@@ -23,9 +23,9 @@ The HSE department of your company has the following inspection report:
 
 ![](attachments/pages-how-to-configure-list/report-example.png)
 
-Your company has an application that is used by inspectors who travel to different companies and inspect whether these companies comply with safety regulations. They fill in their names, a company name, site location, data and time when the inspection was conducted, as well as full name of a superintendent who was present during the inspection. 
+Your company has an application that is used by inspectors who travel to different companies and inspect whether these companies comply with safety regulations. They fill in their names, a company name, site location, date and time when the inspection was conducted, as well as full name of a superintendent who was present during the inspection. 
 
-Inspectors also have a safety inspection checklist based on this checklist the inspector evaluates whether the company passed the inspection. They check the following:
+Inspectors also have a safety inspection checklist. Based on this checklist the inspector evaluates whether the company passed the inspection. They check the following:
 
 * If emergency contact posters are displayed
 * If safety training are held regularly
@@ -89,19 +89,21 @@ The page is created, now you need to configure it. You need to connect data to t
 
 2. In the **Select Entity** dialog box, select *InspectionReport* and confirm your choice by clicking **Select**. Now the list is connected to the *InspectionReport* entity. 
 
-3. To display the name of each report dynamically, do the following:
+3. To display the name of each report per company, do the following:
 
     1. Select the **Name** text in the list view and click the properties icon to quickly configure widget's properties:
 
-		<img src="attachments/pages-how-to-configure-list/text-widget-list-view.png" alt="List View Text Widget" style="zoom:80%;" />
+    	<img src="attachments/pages-how-to-configure-list/text-widget-list-view.png" alt="List View Text Widget" style="zoom:80%;" />
 
     2. In the dialog box, delete *Name* from the **Content** property and click **Add attribute**:
 
-		<img src="attachments/pages-how-to-configure-list/quick-config.png" style="zoom:80%;" />
+    	<img src="attachments/pages-how-to-configure-list/quick-config.png" style="zoom:80%;" />
 
     3. In the **Select Attribute** dialog box, choose *CompanyName* and click **Select**. 
 
-4. As the goal of the new page is to merely display data, delete the **New** button above the list view together with the container it is placed in.
+4. Delete the image from the list and the column where this image is placed, as now the image displays a a user image and does not correspond with companies you are displaying. 
+
+5. As the goal of the new page is to merely display data, delete the **New** button above the list view together with the container it is placed in.
 
 Now the list view will display a list of reports by company name:
 
@@ -111,13 +113,13 @@ Now the list view will display a list of reports by company name:
 
 Now you need to configure report details displayed next to the list. The idea is when you select the company name from the list, the details of the latest inspection report for this company will be displayed. 
 
-The Master Details page template which your page is based on has a preconfigured data view that listens to the list view. That means that the data view has access to the list view data. 
+The Master Details page template which your page is based on has a preconfigured data view that listens to the list view. That means that the data view shows data of the report selected in the list view . 
 
 Now you need to configure widgets inside the data view to show attributes of the *InspectionReport* entity, or in other words to show all the details that a report has: a company name, site location, inspection date and time, inspector's name, etc. 
 
 All the details that a report has need to be displayed. Do the following:
 
-1. Delete an empty column and **Edit**, **Send Email**, and **Delete** buttons on the right as you will only  display data on this data, not change it.
+1. Delete the empty column and **Edit**, **Send Email**, and **Delete** buttons on the right as you will only  display data on this data, not change it.
 
 2. Double-click the *User Details* text widget (which is displayed as a heading) and rename it to *Inspection Report Details*. 
 
@@ -145,9 +147,9 @@ Now the data view and widgets inside it show the details of the inspection repor
 
 ## 6 Showing Checklist Items
 
-In the initial inspection report, checklist is a table where an inspector ticks **Yes** or **No** column: whether the company has posters with emergency contacts, whether it conducts safety trainings regularly, etc. 
+In the initial inspection report, checklist is a table where an inspector ticks the **Yes** or **No** column: whether the company has posters with emergency contacts, whether it conducts safety trainings regularly, etc. 
 
-To display checklist items in a table, you can add a data grid. It is important that you place it *inside* the data view: this way the data grid will access and display only checklist items associated with the current report rather then display all checklist items ever added to all reports. This means your data grid will get data over ChecklistItem_InspectionReport association.
+To display checklist items in a table, you can add a data grid. It is important that you place it *inside* the data view: this way the data grid will access and display only checklist items associated with the current report rather than display all checklist items ever added to all reports. This means your data grid will get data over an association, in this case called ChecklistItem_InspectionReport.
 
 Follow the steps below:
 
@@ -179,4 +181,4 @@ Congratulations! You have a page that displays a list of inspection reports, det
 
 You can now preview your app and test your page. For more information on how to preview your page, see [Previewing & Publishing Your App](/studio/publishing-app).
 
-You can also work on the page details, for example, delete an image from the list or replace it with a dynamic image to display a unique company logo next to its name. For more information on dynamic images, see [Images & Files](/studio/page-editor-widgets-images-and-files).
+You can also work on the page details, for example, add a dynamic image to the list to display a unique company logo next to its name. For more information on dynamic images, see [Images & Files](/studio/page-editor-widgets-images-and-files).

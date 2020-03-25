@@ -17,7 +17,7 @@ This how-to explains how you can filter and sort items in a list view or a data 
 
 The how-to describes the following use case: 
 
-You have a list inspections reports that shows companies checked on compliance with safety regulations. You would like to display only companies that failed this inspection. You also would like to display reports for today only. In addition, items should be sorted by date and time starting from the latest one.  
+You have build a page with a list of inspections reports that shows companies checked on compliance with safety regulations. You would like to display only companies that failed this inspection. You also would like to display reports for today only. In addition, items should be sorted by date and time starting from the latest one.  
 
 A list of inspection reports is displayed on a page. If you have the list in a list view, the page can look the following way:
 
@@ -41,7 +41,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Filtering Information 
 
-First, you need to add a filter to your list.  As you would like to show only companies which failed the inspection check, the **Passed** attribute (see the domain model image above) should have been marked in a inspection report as *No*. 
+First, you need to add a filter to your list.  As you would like to show only companies which failed the inspection check, the **Passed** attribute (see the domain model image above) should have been marked in an inspection report as *No*. 
 
 You also would like to show reports that were created or modified in February 2020, that means the **DateAndTime** attribute should fall into a range from February 1st, 2020 to February 29th, 2020. 
 
@@ -72,7 +72,7 @@ To configure a filter, do the following:
     5. Click **Add**.
 
 
-You have created the filter that has two conditions and reads the following way: *Select records of InspectionReport where Passed is false and date and time is Today. This means this filter will show you only the reports that fall under both conditions: which failed the inspection check and which were created or modified in the current day. 
+Good job! You have created the filter that has two conditions and reads the following way: *Select records of InspectionReport where Passed is false and date and time is Today. This means this filter will show you only the reports that fall under both conditions: which failed the inspection check and which were created or modified in the current day. 
 
 ## 4 Sorting Items  
 

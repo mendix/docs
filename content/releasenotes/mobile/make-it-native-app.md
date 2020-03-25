@@ -12,6 +12,12 @@ For more information on the Make It Native app, see [Getting the Make It Native 
 
 You can download the Make It Native app for [iOS](https://apps.apple.com/app/make-it-native/id1334081181) or [Android](https://play.google.com/store/apps/details?id=com.mendix.developerapp).
 
+## Adroid 1.3.0 / iOS 1.3.0
+
+**Release date: March 31st, 2020**
+
+* We updated the dependencies to remove the deprecated UIWebView library from iOS.
+
 ## Android 1.2.3 / iOS 1.2.5
 
 **Release date: March 11th, 2020**

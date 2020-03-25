@@ -11,7 +11,7 @@ This activity can only be used in **Microflows**.
 {{% /alert %}}
 
 {{% alert type="warning" %}}
-This action is ignored and does not work when a microflow is called from an offline native or hybrid app. For more information, visit [Offline](offline-first#4-1-microflows).
+This action is ignored and does not work when a microflow is called from an offline native or hybrid app. For more information, check out the [Offline-first](offline-first#4-1-microflows) documentation.
 {{% /alert %}}
 
 ## 1 Introduction

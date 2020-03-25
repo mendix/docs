@@ -33,7 +33,7 @@ For each parameter of the microflow, you have to supply an argument of the same 
   * Primitive types (strings, numbers, etc.) are passed as values (meaning, they are immutable, and not changeable via sub-microflows)
   
 {{% alert type="warning" %}}
-When used inside a nanoflow in an offline profile, only primitives & non-persistable entities that have no associations with persistable entities are allowed as arguments for the call (for more information, see [Offline](offline-first#4-1-microflows)).
+When used inside a nanoflow in an offline profile, only primitives & non-persistable entities that have no associations with persistable entities are allowed as arguments for the call. For more information, check out the [Offline-first](offline-first#4-1-microflows) documentation.
 {{% /alert %}}
 
 ## 3 Output Properties

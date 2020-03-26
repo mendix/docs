@@ -103,7 +103,9 @@ The page is created, now you need to configure it. You need to connect data to t
 
 4. Delete the image from the list and the column where this image is placed, as now the image displays a a user image and does not correspond with companies you are displaying. 
 
-5. As the goal of the new page is to merely display data, delete the **New** button above the list view together with the container it is placed in.
+5. As the goal of the new page is to merely display data, delete the **New** button above the list view together with the container it is placed in:
+
+    <img src="attachments/pages-how-to-configure-list/container.png" style="zoom:50%;" />
 
 Now the list view will display a list of reports by company name:
 
@@ -133,13 +135,15 @@ All the details that a report has need to be displayed. Do the following:
 
 13. To add information on whether the company *passed* the check, you need to add radio buttons with *Yes* and *No* options. Open **Toolbox** and search for radio buttons.
 
-14. Drag and drop radio buttons inside the data view.
+7. Drag and drop radio buttons inside the data view (you can see if you placed it correctly on the breadcrumb at the bottom of the page):
 
-15. In the dialog box that appears next to it, click the **Attribute** property:
+   ![](attachments/pages-how-to-configure-list/breadcrumb.png)
 
-	<img src="attachments/pages-how-to-configure-list/radio-buttons-attribute.png" style="zoom:80%;" />
+8. In the dialog box that appears next to it, click the **Attribute** property:
 
-16. In the **Select Attribute** dialog box, choose *Passed* and click **Select**. 
+   <img src="attachments/pages-how-to-configure-list/radio-buttons-attribute.png" style="zoom:80%;" />
+
+9. In the **Select Attribute** dialog box, choose *Passed* and click **Select**. 
 
 Now the data view and widgets inside it show the details of the inspection report that is selected in the list:
 

@@ -36,6 +36,10 @@ Converts a decimal value to a string value according to a specified format.
 
 ### 3.1 Input Parameters
 
+The functionality of formatDecimal depends on whether it is used in a microflow or a nanoflow.
+
+#### 3.1.1 Microflows
+
 * Value to convert
     * Type: decimal
 * Format for the result based on the Java library `DecimalFormat` (for details, see [Class DecimalFormat](https://docs.oracle.com/javase/8/docs/api/java/text/DecimalFormat.html))
@@ -45,11 +49,20 @@ Converts a decimal value to a string value according to a specified format.
    * When omitted, the user configured locale is used
    * Type: string
 
+#### 3.1.2 Nanoflows
+
+In nanoflows, this function only takes a single parameter:
+
+* Value to convert
+    * Type: decimal
+
 ### 3.2 Output
 
 A string representation of the decimal in the format specified by the `format` parameter.
 
 * Type: string
+
+#### 3.2.1 Microflow Examples
 
 ```java
 formatDecimal(1234.56, '#,###.#')
@@ -61,6 +74,8 @@ returns (depending on the language settings):
 '1,234.5' or '1.234,5'
 ```
 
+and
+
 ```java
 formatDecimal(1234.56, '¤ #,##0.00')
 ```
@@ -71,6 +86,8 @@ returns (depending on language settings):
 '€ 1.234,50' or '$ 1,234.50'
 ```
 
+and
+
 ```java
 formatDecimal(0.56, '% ##0')
 ```
@@ -80,3 +97,7 @@ returns:
 ```java
 '% 56' 
 ```
+
+#### 3.2.2 Nanoflow Examples
+
+In a nanoflow, this will format the decimal using the format appropriate to the user's locale.

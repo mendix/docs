@@ -1,5 +1,5 @@
 ---
-title: "Configure a List and View Its Details"
+title: "Configure a Form and Change Items Related to It"
 category: "Pages"
 description: "Describes how to configure a list of items in Mendix Studio."
 menu_order: 30
@@ -8,14 +8,12 @@ tags: ["studio", "pages", "list", "how to"]
 
 ## 1 Introduction 
 
-This how-to explains how you can configure a list of items and view the item details selected in this list. 
+This how-to explains how you can configure a list of items and how to view in Mendix Studio. 
 
 **This how-to will teach you how to do the following:**
 
-* Create a new page
-* Configure a list view
-* Configure a data view that shows the details of an item selected in the list
-* Configure a data grid
+* Configure a form (a data view)
+* Show items related to this form in a table 
 
 The how-to describes the following use case: 
 
@@ -34,11 +32,13 @@ Inspectors also have a safety inspection checklist. Based on this checklist the 
 
 If any of the above requirements are not met, during the next inspection the inspector indicates the date when the safety violation was fixed. 
 
-You would like to display details of an inspection report and a checklist for it on one page.
+You have a list of all inspection reports. You would like a **Details** button in this list to open a pop-up page showing the details of the selected report and its check list items. 
 
 ## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
+
+* Familiarize yourself with page terms and how to perform basic functions on pages. For more information, see [Pages](/studio/pages). 
 
 * Familiarize yourself with the domain model terms and learn how to perform basic functions. For more information, see [Domain Model](/studio/domain-models).
 
@@ -46,7 +46,6 @@ Before starting this how-to, make sure you have completed the following prerequi
 
     <img src="attachments/pages-how-to-configure-list/domain-model.png" alt="Domain Model" style="zoom: 75%;" />
 
-* Familiarize yourself with page terms and how to perform basic functions on pages. For more information, see [Pages](/studio/pages). 
 
 ## 3 Adding the Master Detail Page
 

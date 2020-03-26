@@ -275,11 +275,15 @@ See [Creating an Environment](#create-environment), above, for more information.
 
 ##### 4.2.1.5 Trial
 
-The word **Trial** indicates that the environment is unlicensed and the app is running as a Free App.
+The word **Trial** indicates that the Operator managing that environment is unlicensed.
 
-The word changes to **Expired** if the trial environment has existed for more than thirty days. In this case you will be unable to stop or start your app, or deploy an app to this environment. The only action you can take is to delete the environment.
+The word changes to **Expired** if the environment has existed for more than thirty days and the Operator is running in trial mode. In this case you will be unable to stop or start your app, or deploy an app to this environment. The only action you can take is to delete the environment. When the Operator is running in trial mode, it will stop managing an environment thirty days after the environment was created.
 
-The word **Licensed** shows that the environment is a production environment.
+The word **Licensed** shows that the Operator managing that environment is licensed.
+
+{{% alert type="info" %}}
+The Operator license is independent from a Mendix Runtime license. The Operator license allows to manage Mendix apps in your cluster, while the Mendix Runtime license (configured through a [Subscription Secret](#change-subscription-secret)) removes trial restrictions from a Mendix App itself.
+{{% /alert %}}
 
 #### 4.2.2 Add Environment
 
@@ -377,7 +381,7 @@ For production deployment, select **Production**. If you select production, then
 Your app can only be deployed to a production environment if security is set on. You will not receive an error if security is set off, but the deployment will appear to hang with a spinner being displayed.
 {{% /alert %}}
 
-##### 5.1.3.7 Change Subscription Secret
+##### 5.1.3.7 Change Subscription Secret{#change-subscription-secret}
 
 If you select Production as the **purpose** of the app environment, then you will need to use a Subscription Secret which ensures that your app runs as a licensed app. If you need to enter or change the subscription secret, then you can do that here.
 

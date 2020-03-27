@@ -179,9 +179,40 @@ If the plan already exists you will receive an error that it cannot be created. 
 
 ![](attachments/private-cloud-cluster/image18.png)
 
-**Minio** will connect to an S3-compatible object storage. You will need to provide all the information about your Minio storage such as endpoint, access key, and secret key.
+**Minio** will connect to a [MinIO](https://min.io/product/overview) S3-compatible object storage. You will need to provide all the information about your MinIO storage such as endpoint, access key, and secret key. The MinIO server needs to be a full-featured MinIO server and not a [MinIO Gateway](https://github.com/minio/minio/tree/master/docs/gateway).
 
-**Amazon S3** will connect to an S3 bucket in AWS. You will need to provide all the information about your Amazon S3 storage such as plan name, region, access key, and secret key.
+**Amazon S3** will connect to an AWS account to create S3 buckets and associated IAM accounts. Each app will receive a dedicated S3 bucket and an IAM account which only has access to that specific S3 bucket. You will need to provide all the information about your Amazon S3 storage such as plan name, region, access key, and secret key. The associated IAM account needs to have the following IAM policy (replace `<account_id>` with your AWS account number):
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "bucketPermissions",
+            "Effect": "Allow",
+            "Action": [
+                "s3:CreateBucket",
+                "s3:DeleteBucket"
+            ],
+            "Resource": "arn:aws:s3:::mendix-*"
+        },
+        {
+            "Sid": "iamPermissions",
+            "Effect": "Allow",
+            "Action": [
+                "iam:DeleteAccessKey",
+                "iam:PutUserPolicy",
+                "iam:DeleteUserPolicy",
+                "iam:DeleteUser",
+                "iam:CreateUser",
+                "iam:CreateAccessKey"
+            ],
+            "Resource": [
+                "arn:aws:iam::<account_id>:user/mendix-*"
+            ]
+        }
+    ]
+}
+```
 
 {{% alert type="info" %}}
 If the plan already exists you will receive an error that it cannot be created. This is not a problem, you can continue to use the plan, which will now have the new configuration.
@@ -203,7 +234,7 @@ Both forms of ingress can have TLS enabled or disabled.
 
 ![](attachments/private-cloud-cluster/image20.png)
 
-You can choose one of the following registry types. OpenShift registries can only be used for clusters on the OpenShift platform, but AWS ECR can also be used for clusters on OpenShift. For some of these registries you may need to supply additional information such as the pull URL, push URL, name, and secret.
+You can choose one of the following registry types. OpenShift registries can only be used for clusters on the OpenShift platform. AWS ECR can only be used for AWS EKS clusters. For some of these registries you may need to supply additional information such as the pull URL, push URL, name, and secret.
 
 * OpenShift 3 Registry
 * OpenShift 4 Registry
@@ -215,7 +246,7 @@ You can choose one of the following registry types. OpenShift registries can onl
 
 ![](attachments/private-cloud-cluster/image21.png)
 
-Choose **Yes** if you want to configure the proxy and you will be asked for the information required.
+Choose **Yes** if a proxy is required to access the public internet from the cluster; you will be asked for the proxy configuration details.
 
 ### 3.4 Confirming Cluster Configuration
 
@@ -376,11 +407,13 @@ You can also copy the installation and reconfiguration scripts to retain in your
 
 ## 5 Current Limitations
 
-### 5.1 Plans on AWS
+### 5.1 Storage provisioning
 
-If you delete your app from the OpenShift console, this will not delete the *Prod plans* you have set up on AWS. This is a feature of AWS to ensure that you only delete data explicitly.
+If the Operator fails to provision or deprovision storage (a database or file storage), it will not retry the operation. If there is a failed `*-database` or `*-file` pod, you'll need to do the following:
 
-If you do not need your data on AWS anymore, then you need to clean it up manually.
+1. Check the failed pod logs for the error message.
+2. Troubleshoot and fix the cause of this error.
+3. Delete the failed pod to retry the process again.
 
 ## 6 Troubleshooting
 

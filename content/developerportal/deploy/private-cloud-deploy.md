@@ -277,12 +277,14 @@ See [Creating an Environment](#create-environment), above, for more information.
 
 The word **Trial** indicates that the Operator managing that environment is unlicensed.
 
-The word changes to **Expired** if the environment has existed for more than thirty days and the Operator is running in trial mode. In this case you will be unable to stop or start your app, or deploy an app to this environment. The only action you can take is to delete the environment. When the Operator is running in trial mode, it will stop managing an environment thirty days after the environment was created.
+When the Operator is running in trial mode, it will stop managing an environment thirty days after the environment was created and the word changes to **Expired**. In this case you will be unable to stop or start your app, or deploy an app to this environment. The only action you can take is to delete the environment. 
 
 The word **Licensed** shows that the Operator managing that environment is licensed.
 
 {{% alert type="info" %}}
-The Operator license is independent from a Mendix Runtime license. The Operator license allows to manage Mendix apps in your cluster, while the Mendix Runtime license (configured through a [Subscription Secret](#change-subscription-secret)) removes trial restrictions from a Mendix App itself.
+The Operator license is independent from a Mendix Runtime license. The Operator license allows you to manage Mendix apps in your cluster, while the Mendix Runtime license (configured through a [Subscription Secret](#change-subscription-secret)) removes trial restrictions from a Mendix App itself.
+
+You can get an Operator license from [Mendix Support](https://support.mendix.com), together with instructions on how to configure it.
 {{% /alert %}}
 
 #### 4.2.2 Add Environment

@@ -5,18 +5,20 @@ menu_order: 10
 description: "These release notes showcase each release of the iOS and Android Make It Native app versions."
 tags: ["Native", "Android", "iOS", "Apple", "Android"]
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
-#KI: "When using the `Touchable` option" = UICORE-417
 ---
 
 For more information on the Make It Native app, see [Getting the Make It Native App](/refguide/getting-the-make-it-native-app).
 
 You can download the Make It Native app for [iOS](https://apps.apple.com/app/make-it-native/id1334081181) or [Android](https://play.google.com/store/apps/details?id=com.mendix.developerapp).
 
-## Adroid 1.3.0 / iOS 1.3.0
+## Android 1.3.0 / iOS 1.3.0
 
 **Release date: March 31st, 2020**
 
+### Fixes
+
 * We updated the dependencies to remove the deprecated UIWebView library from iOS.
+* We fixed an issue where a native mobile app crashed when debugging it using the **Touchable** option in the inspector overlay. Fixed in [Studio Pro 8.8](/releasenotes/studio-pro/8.8#417).
 
 ## Android 1.2.3 / iOS 1.2.5
 

@@ -409,11 +409,11 @@ You can also copy the installation and reconfiguration scripts to retain in your
 
 ### 5.1 Storage provisioning
 
-If the Operator fails to provision or deprovision storage (a database or file storage), it will not retry the operation. If there is a Failed `*-database` or `*-file` pod, you'll need to:
+If the Operator fails to provision or deprovision storage (a database or file storage), it will not retry the operation. If there is a failed `*-database` or `*-file` pod, you'll need to do the following:
 
-1. Check the Failed pod logs for the error message
-2. Troubleshoot and fix the cause of this error
-3. Delete the Failed pod to retry the process again
+1. Check the failed pod logs for the error message.
+2. Troubleshoot and fix the cause of this error.
+3. Delete the failed pod to retry the process again.
 
 ## 6 Troubleshooting
 

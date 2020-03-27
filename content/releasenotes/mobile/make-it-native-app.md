@@ -18,7 +18,7 @@ You can download the Make It Native app for [iOS](https://apps.apple.com/app/mak
 ### Fixes
 
 * We updated the dependencies to remove the deprecated UIWebView library from iOS.
-* We fixed an issue where a native mobile app crashed when debugging it using the **Touchable** option in the inspector overlay. Fixed in [Studio Pro 8.8](/releasenotes/studio-pro/8.8#417).
+* <a name="417"></a>We fixed an issue where a native mobile app crashed when debugging it using the **Touchable** option in the inspector overlay.
 
 ## Android 1.2.3 / iOS 1.2.5
 
@@ -31,6 +31,7 @@ You can download the Make It Native app for [iOS](https://apps.apple.com/app/mak
 ### Known Issues
 
 * When using the **Touchable** option in the inspector overlay, the Mendix Native app crashes.
+	* Fixed in [1.3.0/1.3.0](#417)
 
 ## Android 1.2.2 / iOS 1.2.4
 
@@ -43,6 +44,7 @@ You can download the Make It Native app for [iOS](https://apps.apple.com/app/mak
 ### Known Issues
 
 * When using the **Touchable** option in the inspector overlay, the Mendix Native app crashes.
+	* Fixed in [1.3.0/1.3.0](#417)
 
 ## Android 1.2.1 / iOS 1.2.3
 
@@ -55,6 +57,7 @@ You can download the Make It Native app for [iOS](https://apps.apple.com/app/mak
 ### Known Issues
 
 * When using the **Touchable** option in the inspector overlay, the Mendix Native app crashes.
+	* Fixed in [1.3.0/1.3.0](#417)
 
 ## Android 1.2.1 / iOS 1.2.2
 
@@ -71,6 +74,7 @@ On Android:
 ### Known Issues
 
 * When using the **Touchable** option in the inspector overlay, the Mendix Native app crashes.
+	* Fixed in [1.3.0/1.3.0](#417)
 
 ## Android 1.2.0 / iOS 1.2.1
 
@@ -85,6 +89,7 @@ On iOS:
 ### Known Issues
 
 * When using the **Touchable** option in the inspector overlay, the Mendix Native app crashes.
+	* Fixed in [1.3.0/1.3.0](#417)
 
 ## Android 1.2.0 / iOS 1.2.0
 
@@ -112,6 +117,7 @@ On Android:
 ### Known Issues
 
 * When using the **Touchable** option in the inspector overlay, the Mendix Native app crashes.
+	* Fixed in [1.3.0/1.3.0](#417)
 
 ## Android 1.1.0 / iOS 1.1.0
 

@@ -116,7 +116,7 @@ The *info.plist* file registers the schema and host so that they will be associa
         return [RCTLinkingManager application:application openURL:url sourceApplication:sourceApplication annotation:annotation];
     }
 	```
-    
+   
 	This method will register the opened URL so it can be used in the **Native Deep Link** nanoflow actions. 
 
 ### 3.3 Rebuilding Your Native App
@@ -205,7 +205,7 @@ Next you will implement the deep link handler nanoflow **DL_ShowUrlDetails** so 
 1. Double-click the parameter, give it the name *URL* (which is case sensitive) and the type **String**.
 1. Add a **Parse URL to Object** activity to your nanoflow. Double-click it and configure it like this:
 
-        ![parse url](attachments/native-deep-link/parse-url.png)
+	![parse url](attachments/native-deep-link/parse-url.png)
     
 1. Add a **Show message** activity to the right of your **Parse URL to Object** activity.
 1. Double-click the **Parse URL to Object** activity.
@@ -216,7 +216,7 @@ Next you will implement the deep link handler nanoflow **DL_ShowUrlDetails** so 
 1. Drop an **End event** below your **Parse URL to Object** activity. Drag a line from **Parse URL to Object** down to the end event, right click it, and click **Set as error handler**.
 1. Add a **Show message** activity to this line. Set it as type **Error**, and into template type *Failed to parse deep link data.*. Your finished nanoflow will look like this:
 
-        ![full nanoflow](attachments/native-deep-link/deep-link-nano-full.png)
+	![full nanoflow](attachments/native-deep-link/deep-link-nano-full.png)
 
 ### 4.3 Testing Deep Linking
 

@@ -1,61 +1,48 @@
-# Metamodel Release Notes for version 8.8.0
+---
+title: "8.8"
+parent: "metamodel-8"
+---
 
-## CodeActions
+## 8.8.0
 
-### StringTemplateParameterType (Element)
+**Release date: March 31st, 2020**
 
+### CodeActions
 
-#### Property 'grammar'
-* Introduced;
+#### StringTemplateParameterType (Element)
 
-## Settings
+* We introduced the `grammar` property.
 
-### WorkflowsProjectSettingsPart (Element)
-* Introduced;
+### Settings
 
-## Rest
+#### WorkflowsProjectSettingsPart (Element)
 
-### MetadataReference (Element)
+* We introduced this element.
 
+### Rest
 
-#### Property 'metadataReferences'
-* Introduced; "References of this reference"
+#### MetadataReference (Element)
 
-## CustomWidgets
+* We introduced the `metadataReferences` property for "references of this reference."
 
-### WidgetValue (Element)
+### CustomWidgets
 
+#### WidgetValue (Element)
 
-#### Property 'sourceVariable'
-* Introduced;
+* We introduced the `sourceVariable` property.
 
-## Pages
+### Pages
 
-### AttributeWidget (Element)
+#### AttributeWidget (Element)
 
+* We introduced the `sourceVariable` property.
 
-#### Property 'sourceVariable'
-* Introduced;
+### Workflows
 
-## Workflows
+#### Workflow (ModelUnit)
 
-### Workflow (ModelUnit)
-* Introduced;
+* We introduced this ModelUnit.
 
-### WorkflowActivityOutcome (Element)
-* Introduced;
+#### WorkflowActivityOutcome, WorkflowActivity, Flow, StartWorkflowActivity, EndWorkflowActivity & UserTask (Elements)
 
-### WorkflowActivity (Element)
-* Introduced;
-
-### Flow (Element)
-* Introduced;
-
-### StartWorkflowActivity (Element)
-* Introduced;
-
-### EndWorkflowActivity (Element)
-* Introduced;
-
-### UserTask (Element)
-* Introduced;
+* We introduced these elements.

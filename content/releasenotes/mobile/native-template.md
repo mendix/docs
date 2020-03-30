@@ -12,9 +12,13 @@ For more information on native mobile app development, see the [native-template 
 
 **Release date: March 31st, 2020**
 
-This release is compatible with Mendix Studio Pro 8.8 and later. This version of Native Template is required to be able to release your Mendix Native App on iOS after April 1st. 
+{{% alert type="info" %}}
+This release is compatible with Mendix Studio Pro 8.8 and higher. This version of the Native Template is required to be able to release your Mendix Native App on iOS after April 1st. 
+{{% /alert %}}
 
-* We updated the dependencies to remove the deprecated UIWebView library from iOS
+### Fixes
+
+* We updated the dependencies to remove the deprecated UIWebView library from iOS.
 
 ## 3.1.3
 

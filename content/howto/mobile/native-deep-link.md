@@ -220,9 +220,7 @@ Now that the **Native Deep Link** nanoflow actions are available in Studio Pro, 
 
 ### 4.3 Testing Deep Linking
 
-Add a few test link buttons, for example {app://myapp/task/123} or {makeitnative://task/123}, to your web page, then re-run your project. Open the your app in your device's browser by typing *{your local IP address}:8080* into the browser. With the app loaded, tap the links to test:
-
-![studio pro test page](attachments/native-deep-link/page-test-deep-link.png)
+Add a few test link buttons, for example {app://myapp/task/123} or {makeitnative://task/123}, to your web page, then re-run your project. Open the your app in your device's browser by typing *{your local IP address}:8080* into the browser. With the app loaded, tap the links to test. You should be brought out of your browser and into your app's page!
 
 {{% alert type="info" %}}
 Please note that if you are not running the app from a local source, you must build your app again with the Native builder before testing. Do this by using the `build` command: `build --project-name “Native Deep Link” --app-version “1.0.0" --build-number 2`.

@@ -36,7 +36,7 @@ Deletions are always reflected in the client. [Data sources](data-sources) are o
 {{% /alert %}}
 
 {{% alert type="warning" %}}
-When inside a microflow that is called from an offline native or hybrid app, **Refresh in client** option is ignored and works as if it was set to *No*. For more information, check out the [Offline-first](offline-first#4-1-microflows) documentation.
+When inside a microflow that is called from an offline, native, or hybrid app, the **Refresh in client** option is ignored and functions as if it was set to **No**. For more information, see the [Microflows](offline-first#microflows) section of the *Offline-First Reference Guide*.
 {{% /alert %}}
 
 Default: *No*

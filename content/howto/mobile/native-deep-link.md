@@ -30,10 +30,6 @@ Please note that the Make It Native app has already the registered schema `makei
 
 For development work and completing this tutorial we recommend running your app from source against a local instance of Mendix Studio Pro. This will save you time when rebuilding and redeploying your app. To do this, follow the steps in the [Connecting to a Local Running Instance of Studio Pro](/refguide/native-builder#connect-local) section of the *Native Builder Reference Guide*.
 
-{{% alert type="info" %}}
-The current iOS version of the Make it Native App can open an app using a URL. However it cannot not handle deep link URL details. For now, please use Android devices to test deep links.
-{{% /alert %}}
-
 ## 2. Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
@@ -115,6 +111,7 @@ The *info.plist* file registers the schema and host so that they will be associa
 1. Before `@end`, add a new method:
 
     ```objc
+    #import "React/RCTLinkingManager.h"
     - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
         return [RCTLinkingManager application:application openURL:url sourceApplication:sourceApplication annotation:annotation];
     }
@@ -192,7 +189,7 @@ Now that the **Native Deep Link** nanoflow actions are available in Studio Pro, 
    ![app event register deeplink](attachments/native-deep-link/app-events-register-deep-link.png)
    This nanoflow will be called only once when the app is started.
 
-1. Implement the **OL_RegisterDeepLink** nanoflow, add the action **Register DeepLink**, and in that action's **Url handler** create an nanoflow named *DL_ShowUrlDetails*:
+1. In the **OL_RegisterDeepLink** nanoflow, add the action **Register DeepLink**, and in that action's **Url handler** create an nanoflow named *DL_ShowUrlDetails*:
 
    ![nanoflow register deeplink](attachments/native-deep-link/nanoflow-register-deep-link.png)
    
@@ -202,25 +199,28 @@ Now that the **Native Deep Link** nanoflow actions are available in Studio Pro, 
 
     ![parameter entity](attachments/native-deep-link/entity-parameter.png)
 
-1. [todo: update screenshot w mine] Implement the deep link handler nanoflow **DL_ShowUrlDetails** so that it can pass URL data:<br />
-a. In **DL_ShowUrlDetails** drag and drop a parameter into your nanoflow's white space.<br />
-b. Double-click the parameter, give it the name *URL* and the type **String**.<br />
-b. Add a **Parse URL to Object** activity to your nanoflow. Double-click it and configure it like this:<br />
+[todo: update screenshot w mine] Next you wll implement the deep link handler nanoflow **DL_ShowUrlDetails** so that it can pass URL data:
+
+1. In **DL_ShowUrlDetails** drag and drop a parameter into your nanoflow's white space.
+1. Double-click the parameter, give it the name *URL* (which is case sensitive) and the type **String**.
+1. Add a **Parse URL to Object** activity to your nanoflow. Double-click it and configure it like this:
+
         todo: put new image 1
-c. Add a **Show message** activity to the right of your **Parse URL to Object** activity.<br />
-d. Double-click the **Parse URL to Object** activity.<br />
-e. In **Template** write *Your deep link callback URL {1} host = {2}*.
-f. Click **Parameters** > **New**, write *$Parameter/Href*, and click **OK**.
-g. Click **Parameters** > **New**, write *$Parameter/Host*, and click **OK**.
-h. Right-click your **Parse URL to Object** activity, click **Set error handling**, and click **Custom without rollback**.
-i. Drop an **End event** below your **Parse URL to Object** activity. Drag a line from **Parse URL to Object** down to the end event, right click it, and click **Set as error handler**.
-j. Add a **Show message** activity to this line. Set it as type **Error**, and into template type *Failed to parse deep link data.*. Your finished nanoflow will look like this:
+        
+1. Add a **Show message** activity to the right of your **Parse URL to Object** activity.
+1. Double-click the **Parse URL to Object** activity.
+1. In **Template** write *Your deep link callback URL {1} host = {2}*.
+1. Click **Parameters** > **New**, write *$Parameter/Href*, and click **OK**.
+1. Click **Parameters** > **New**, write *$Parameter/Host*, and click **OK**.
+1. Right-click your **Parse URL to Object** activity, click **Set error handling**, and click **Custom without rollback**.
+1. Drop an **End event** below your **Parse URL to Object** activity. Drag a line from **Parse URL to Object** down to the end event, right click it, and click **Set as error handler**.
+1. Add a **Show message** activity to this line. Set it as type **Error**, and into template type *Failed to parse deep link data.*. Your finished nanoflow will look like this:
 
         todo: add full updated image 2
 
 ### 4.3 Testing Deep Linking
 
-Add a few test links, for example {myapp://app/task/123} or {makeitnative://task/123}, to your responsive or mobile page, restart Mendix Studio Pro, and open the page in your device's browser. Tap the links to test:
+Add a few test link buttons, for example {app://myapp/task/123} or {makeitnative://task/123}, to your web page, then re-run your project. Open the your app in your device's browser by typing *{your local IP address}:8080* into the browser. With the app loaded, tap the links to test:
 
 ![studio pro test page](attachments/native-deep-link/page-test-deep-link.png)
 

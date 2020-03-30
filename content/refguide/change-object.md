@@ -66,7 +66,7 @@ If **Commit type** is set to *Yes*, the object is refreshed across the client as
 {{% /alert %}}
 
 {{% alert type="warning" %}}
-When inside a microflow that is called from an offline native or hybrid app, **Refresh in client** option is ignored and works as if it was set to *No*. For more information, check out the [Offline-first](offline-first#4-1-microflows) documentation.
+When inside a microflow that is called from an offline, native, or hybrid app, the **Refresh in client** option is ignored and functions as if it was set to **No**. For more information, see the [Offline-First Reference Guide](offline-first#4-1-microflows).
 {{% /alert %}}
 
 Default: *No*

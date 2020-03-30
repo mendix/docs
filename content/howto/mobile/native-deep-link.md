@@ -184,16 +184,17 @@ The Register Deep Link nanoflow action will create a new Mendix object, split a 
 Now that the **Native Deep Link** nanoflow actions are available in Studio Pro, you have the utilities to register and process an URL. You will now  use them in your application:
 
 1. In your app add the **App events** widget, which is also part of the Native Mobile Resource module, on your home page.
-1. Double-click the **App events** widget. In **App events** tab, select **Page load** > **On load** > **Call a nanoflow**, and create a new nanoflow named *OL_RegisterDeepLink*:
+1.  Double-click the **App events** widget. In **App events** tab, select **Page load** > **On load** > **Call a nanoflow**, and create a new nanoflow named *OL_RegisterDeepLink*:
 
-   ![app event register deeplink](attachments/native-deep-link/app-events-register-deep-link.png)
-   This nanoflow will be called only once when the app is started.
+	![app event register deeplink](attachments/native-deep-link/app-events-register-deep-link.png)
 
-1. In the **OL_RegisterDeepLink** nanoflow, add the action **Register DeepLink**, and in that action's **Url handler** create an nanoflow named *DL_ShowUrlDetails*:
+	This nanoflow will be called only once when the app is started.
 
-   ![nanoflow register deeplink](attachments/native-deep-link/nanoflow-register-deep-link.png)
+1.  In the **OL_RegisterDeepLink** nanoflow, add the action **Register DeepLink**, and in that action's **Url handler** create an nanoflow named *DL_ShowUrlDetails*:
+
+	![nanoflow register deeplink](attachments/native-deep-link/nanoflow-register-deep-link.png)
    
-   This nanoflow will be called every time the app is opened using a URL.
+	This nanoflow will be called every time the app is opened using a URL.
 
 1. To parse the URL into an object, you will use a non-persistent entity named **DeepLinkParameter** from the **NativeMobileActions** module in the next step. For now, go to **NativeMobileActions** > **Domain Model** and examine this entity. If you use query strings or more, you can copy this entity to your own module. The attributes are all optional and you should only add the attributes your implementation requires. Besides the standard list of possible URL parts, you can also add the query string's keys (for example `?name=Jhon&title=sir`). The attributes are not case sensitive. You can add attributes for path segments of the URL which will be split into `Path0` , `Path1`, and more:
 
@@ -206,7 +207,7 @@ Next you will implement the deep link handler nanoflow **DL_ShowUrlDetails** so 
 1. Add a **Parse URL to Object** activity to your nanoflow. Double-click it and configure it like this:
 
 	![parse url](attachments/native-deep-link/parse-url.png)
-    
+   
 1. Add a **Show message** activity to the right of your **Parse URL to Object** activity.
 1. Double-click the **Parse URL to Object** activity.
 1. In **Template** write *Your deep link callback URL {1} host = {2}*.

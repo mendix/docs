@@ -1,7 +1,7 @@
 ---
 title: "Set Up Deep Links in Native Apps"
 parent: "native-mobile"
-menu_order: 72
+menu_order: 75
 description: "Connect URLs to your native app by adding a deep link."
 tags: ["deep link", "url", "native", "mobile", "developer app", "make it native"]
 ---
@@ -89,12 +89,12 @@ The *info.plist* file registers the schema and host so that they will be associa
 1. Open *ios/NativeTemplate/Info.plist*
 1.  Add `URL types`, then add `URL Schemes` and `URL identifier`:
 
-   ![ios info plist](attachments/native-deep-link/ios-info-plist.png)
+	![ios info plist](attachments/native-deep-link/ios-info-plist.png)
    
-   When viewing *Info.plist* as a text file, you would see that a section is added:
+	When viewing *Info.plist* as a text file, you would see that a section is added:
    
-    ```xml
-    <key>CFBundleURLTypes</key>
+	```xml
+	<key>CFBundleURLTypes</key>
     <array>
         <dict>
             <key>CFBundleURLSchemes</key>
@@ -105,19 +105,19 @@ The *info.plist* file registers the schema and host so that they will be associa
             <string>myapp</string>
         </dict>
     </array>
-    ```
+	```
 
 1. Open *ios/AppDelegate.m* 
 1. Add this import to the existing imports: `#import "React/RCTLinkingManager.h"`.
 1. Before `@end`, add a new method:
 
-    ```objc
-    - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+	```objc
+		- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
         return [RCTLinkingManager application:application openURL:url sourceApplication:sourceApplication annotation:annotation];
     }
-    ```
+	```
     
-    This method will register the opened URL so it can be used in the **Native Deep Link** nanoflow actions. 
+	This method will register the opened URL so it can be used in the **Native Deep Link** nanoflow actions. 
 
 ### 3.3 Rebuilding Your Native App
 
@@ -156,7 +156,7 @@ The name of the input parameter is case sensitive and can not be changed.
         
 #### 4.1.2 Parsing a URL To a Mendix Object
 
-The Register Deep Link nanoflow action will create a new Mendix object, split a URL, and set all the oject attributes with their values. For example, the URL https://john.doe:secret@www.example.com:123/forum/questions/?tag=networking&order=newest#top has the following attributes and values:
+The Register Deep Link nanoflow action will create a new Mendix object, split a URL, and set all the object attributes with their values. For example, the URL https://john.doe:secret@www.example.com:123/forum/questions/?tag=networking&order=newest#top has the following attributes and values:
 
 | Attribute                                                   | Value                                                                                        |
 | ----------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
@@ -193,20 +193,20 @@ Now that the **Native Deep Link** nanoflow actions are available in Studio Pro, 
 
    ![nanoflow register deeplink](attachments/native-deep-link/nanoflow-register-deep-link.png)
    
-   This nanoflow will be called everytime the app is opened using a URL.
+   This nanoflow will be called every time the app is opened using a URL.
 
 1. To parse the URL into an object, you will use a non-persistent entity named **DeepLinkParameter** from the **NativeMobileActions** module in the next step. For now, go to **NativeMobileActions** > **Domain Model** and examine this entity. If you use query strings or more, you can copy this entity to your own module. The attributes are all optional and you should only add the attributes your implementation requires. Besides the standard list of possible URL parts, you can also add the query string's keys (for example `?name=Jhon&title=sir`). The attributes are not case sensitive. You can add attributes for path segments of the URL which will be split into `Path0` , `Path1`, and more:
 
     ![parameter entity](attachments/native-deep-link/entity-parameter.png)
 
-[todo: update screenshot w mine] Next you wll implement the deep link handler nanoflow **DL_ShowUrlDetails** so that it can pass URL data:
+Next you will implement the deep link handler nanoflow **DL_ShowUrlDetails** so that it can pass URL data:
 
 1. In **DL_ShowUrlDetails** drag and drop a parameter into your nanoflow's white space.
 1. Double-click the parameter, give it the name *URL* (which is case sensitive) and the type **String**.
 1. Add a **Parse URL to Object** activity to your nanoflow. Double-click it and configure it like this:
 
-        todo: put new image 1
-        
+        ![parse url](attachments/native-deep-link/parse-url.png)
+    
 1. Add a **Show message** activity to the right of your **Parse URL to Object** activity.
 1. Double-click the **Parse URL to Object** activity.
 1. In **Template** write *Your deep link callback URL {1} host = {2}*.
@@ -216,7 +216,7 @@ Now that the **Native Deep Link** nanoflow actions are available in Studio Pro, 
 1. Drop an **End event** below your **Parse URL to Object** activity. Drag a line from **Parse URL to Object** down to the end event, right click it, and click **Set as error handler**.
 1. Add a **Show message** activity to this line. Set it as type **Error**, and into template type *Failed to parse deep link data.*. Your finished nanoflow will look like this:
 
-        todo: add full updated image 2
+        ![full nanoflow](attachments/native-deep-link/deep-link-nano-full.png)
 
 ### 4.3 Testing Deep Linking
 

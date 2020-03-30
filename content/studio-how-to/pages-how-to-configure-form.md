@@ -23,7 +23,7 @@ The HSE department of your company has the following inspection report:
 
 Your company has an application that is used by inspectors who travel to different companies and inspect whether these companies comply with safety regulations. They fill in their names, a company name, site location, date and time when the inspection was conducted, as well as full name of a superintendent who was present during the inspection. 
 
-Inspectors also have a safety inspection checklist. Based on this checklist the inspector evaluates whether the company passed the inspection. They should check and tick the following checklist items or **questions**:
+Inspectors also have a safety inspection *checklist*. Based on this checklist the inspector evaluates whether the company passed the inspection. They should check and tick the following checklist items or *questions*:
 
 * If emergency contact posters are displayed
 * If safety training are held regularly
@@ -36,7 +36,7 @@ You have a list of all inspection reports:
 
 <img src="attachments/pages-how-to-configure-form/inspection-report-list.png" style="zoom:50%;" />
 
-You would like the **Details** button in this list to open a pop-up page showing the details of the selected report and its check list items. 
+You would like the **Details** button in this list to open a pop-up page showing the details of the selected report and a table with check list questions related to this report.  
 
 ## 2 Prerequisites
 
@@ -48,7 +48,11 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Make sure your domain model is configured the following way:
 
-    <img src="attachments/pages-how-to-configure-form/domain-model.png" alt="Domain Model" style="zoom: 60%;" />
+    <img src="attachments/pages-how-to-configure-form/domain-model.png" alt="Domain Model" style="zoom: 50%;" />
+
+    * Make sure you have configured the Question attribute as an enumeration:
+
+		<img src="attachments/pages-how-to-configure-form/enumeration.png" style="zoom:60%;" />
 
 * Make sure you have a page with inspection reports list and the **Details** button:
 
@@ -56,25 +60,25 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Adding a Page with a Form
 
-You would like to open a page with inspection report details clicking the **Details** button in the report list. Do the following:
+The **Details** button in the inspection report list should open a page with the inspection report details. To configure the page, do the following:
 
 1. Click the **Details** button and go its properties.
 
 2. Set **Page** as an on-click action and click the **Page** property.
 
-	![Button Properties](attachments/pages-how-to-configure-form/button-properties.png)
+	<img src="attachments/pages-how-to-configure-form/button-properties.png" alt="Button Properties" style="zoom:70%;" />
 
-3.  In the **Select Page** dialog box, click **New Page**, and do the following:
+3.  In the **Select Page** dialog box, click **New Page**.
 
 1.  In the **Create new page** dialog box, fill in the page title. 
 
-2.  You can see that the **Pre-fill page contents based on the InspectionReport entity** option is on, so the page template (Forms) is selected automatically for you. Choose **Forms Vertical**:
+2.  The **Pre-fill page contents based on the InspectionReport entity** option is on, so the page template (Forms) is selected automatically for you. Choose **Forms Vertical**:
 
 	<img src="attachments/pages-how-to-configure-form/create-new-page.png" alt="Create New Page" style="zoom:50%;" />
 
 3. Click **Create**.
 	
-3. The page with a form (a data view) is created. However, the data view's data source was automatically set to **List widget**, you need to change that. Select the data view, go to its properties, and follow the steps below:
+3. The page with a form (a data view) is created. However, the data view's data source was automatically set to **List widget**, you need to change that. Select the data view and go to its properties.
 
 1. Change the data source from **List widget** to **Context**.
 
@@ -86,25 +90,27 @@ The form on the page is configured:
 
  <img src="attachments/pages-how-to-configure-form/data-view-configured.png" style="zoom:60%;" />
 
-## 4 Showing Checklist Items
+## 4 Showing Checklist Questions
 
-In the initial inspection report, checklist is a table where an inspector has a list of *questions* and ticks the **Yes** or **No** column next to the question: whether the company has posters with emergency contacts, whether it conducts safety trainings regularly, etc. 
+An inspector has a list of *questions* and indicates with **Yes** or **No** whether meets the regulation: whether the company has posters with emergency contacts, whether it conducts safety trainings regularly, etc. You would like to show a table with the checklist questions and their results below the inspection report: 
 
-To display checklist items in a table, you can add a data grid. It is important that you place it *inside* the data view: this way the data grid will access and display only checklist items associated with the current report rather than display all checklist items ever added to all reports. This means your data grid will get data over an association, in this case called ChecklistItem_InspectionReport.
+<img src="attachments/pages-how-to-configure-form/inspection-report-example.png" style="zoom:60%;" />
+
+To display checklist details in a table, you can add a data grid. It is important that you place it *inside* the data view: this way the data grid will access and display only checklist items associated with the current report rather than display all checklist items ever added to all reports. This means your data grid will get data over an association, in this case called *Checklist_InspectionReport*.
 
 Follow the steps below:
 
 1. Open **Toolbox** > **Data Containers**.
 
-2. Drag and drop **Data Grid** *inside* the data view (you can see if you placed it correctly on the breadcrumb at the bottom of the page):
+2. Drag and drop **Data Grid** *inside* the data view (you can view the breadcrumb at the bottom of the page to check if you placed the data grid correctly):
 
     ![](attachments/pages-how-to-configure-form/breadcrumb.png)
 
-3. In the data grid properties, click **Entity**.  
+3. Go to the data grid properties and click **Entity**.  
 
-4. To show only checklist items associated with the current inspection report, choose the **Checklist** entity over association (*ChecklistItem_InspectionReport/ChecklistItem*) in the **Select Entity** dialog box and click **Select**:
+4. To show only checklist items associated with the current inspection report, choose the **Checklist** entity over association (*Checklist_InspectionReport/Checklist*) in the **Select Entity** dialog box and click **Select**:
 
-    <img src="attachments/pages-how-to-configure-form/data-grid-over-association.png" style="zoom:70%;" />
+    <img src="attachments/pages-how-to-configure-form/data-grid-over-association.png" style="zoom:50%;" />
 
 5. As the purpose of the page is to display information, you do not need the **Search** section in the data grid. Open data grid properties > **Search** section and disable the **Enable Search** toggle:
 
@@ -118,8 +124,8 @@ Now checklist items are displayed in a table below the inspection report details
 
 Congratulations! You have a page that displays details of the selected report and checklist items of this report:
 
-<img src="attachments/pages-how-to-configure-form/configured-page.png" alt="Configured Page" style="zoom:67%;" />
+<img src="attachments/pages-how-to-configure-form/configured-page.png" alt="Configured Page" style="zoom:60%;" />
 
 You can now preview your app and test your page. For more information on how to preview your page, see [Previewing & Publishing Your App](/studio/publishing-app).
 
-You can also work on the page details, for example, add a dynamic image to the list to display a unique company logo next to its name. For more information on dynamic images, see [Images & Files](/studio/page-editor-widgets-images-and-files).
+You can also work on the page details, for example, add a dynamic image to the inspection report list to display a unique company logo next to its name. For more information on dynamic images, see [Images & Files](/studio/page-editor-widgets-images-and-files).

@@ -2,7 +2,7 @@
 title: "Set Up Deep Links in Native Apps"
 parent: "native-mobile"
 menu_order: 72
-description: "Connect URLs to your native app by adding a deep link".
+description: "Connect URLs to your native app by adding a deep link."
 tags: ["deep link", "url", "native", "mobile", "developer app", "make it native"]
 ---
 

@@ -15,8 +15,10 @@ You can download the Make It Native app for [iOS](https://apps.apple.com/app/mak
 
 **Release date: March 31st, 2020**
 
-This update is required to work with Mendix Studio Pro 8.8.
-
+{{% alert type="info" %}}
+If you are working in Mendix Studio Pro 8.8 or higher, you must update your Make It Native app to this version.
+{{% /alert %}}
+	
 ### New Features
 
 * We added support for all new Mendix Studio Pro 8.8 features. 

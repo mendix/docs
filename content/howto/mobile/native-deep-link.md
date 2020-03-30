@@ -26,9 +26,9 @@ When an app is installed it registers the `schema` and optionally the `host` so 
 
 ### 1.1 Testing
 
-Please note that the Make It Native app has already the registered schema `makeitnative://` and can be used out of the box. To use the Make It Native app with that schema, see the [Using Deep Linking in Your App](#using-deep-linking) section below. If you want to change this schema, see [How to Create a Custom Developer App](/howto/mobile/how-to-devapps) to build your own custom developer app and then use the [Setting up App Deep Linking]() section below to change its schema.
+For this tutorial we recommend running your app from source against a local instance of Mendix Studio Pro. This will save you time when rebuilding and redeploying your app. To do this, follow the steps in [How to Get Started with Native Mobile](/howto/mobile/getting-started-with-native-mobile) to make an app and link it to the Make It Native mobile testing app.
 
-For development work and completing this tutorial we recommend running your app from source against a local instance of Mendix Studio Pro. This will save you time when rebuilding and redeploying your app. To do this, follow the steps in the [Connecting to a Local Running Instance of Studio Pro](/refguide/native-builder#connect-local) section of the *Native Builder Reference Guide*.
+Please note that the Make It Native app has already the registered schema `makeitnative://` and can be used out of the box. To use the Make It Native app with that schema, see the [Using Deep Linking in Your App](#using-deep-linking) section below. If you want to change this schema, see [How to Create a Custom Developer App](/howto/mobile/how-to-devapps) to build your own custom developer app and then use the [Setting up App Deep Linking](#set-up) section below to change its schema.
 
 ## 2. Prerequisites
 
@@ -38,7 +38,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Install git [command line](https://git-scm.com/downloads) tool
 * Make sure your [Native Mobile Resources](https://appstore.home.mendix.com/link/app/109513/) module is up to date
 
-## 3. Setting up App Deep Linking
+## 3. Setting up App Deep Linking {#set-up}
 
 If you do not already have a native template for your app, you can create one:
 

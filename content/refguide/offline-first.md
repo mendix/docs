@@ -134,6 +134,24 @@ Mendix helps developers in building rich offline-first apps. However, there are 
 
 Microflows cannot be called directly from offline apps. However, before- and after-commit microflows still run during synchronization, which can be used for application logic on the server.
 
+### 4.4.1 Preventing offline microflow call issues {#prevent-offline-mf-call-issues}
+
+To make microflow calls work from offline-first apps, mx stores in an offline app some information about the microflows reachable from the app.
+That includes microflow names, types and names of their parameters, return types.
+
+As a result, if you rename a microflow or change its parameters or the return type after the initial release of your app and then redeploy,
+there is a chance that there are offline devices that have not received the updated information yet.
+All microflow calls from such a device will still contain the old data, which means that the request will fail.
+
+To avoid backwards-compability errors in microflow calls after the initial release, we suggest following these best practices:
+
+* Do not rename microflows or move to them a different module.
+* Do not add, remove, rename or change type of microflow parameters.
+* Do not change return types.
+
+If you want to change any of the mentioned above, introduce a new microflow.
+You can change the contents of the microflow, but keep in mind that older apps might call them until they're updated.
+
 ### 4.2 Autonumbers & Calculated Attributes {#autonumbers}
 
 Both autonumbers and calculated attributes require input from the server; therefore, they are not allowed. Objects with these attribute types can still be viewed and created offline, but the attributes themselves cannot be displayed.

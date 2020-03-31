@@ -103,6 +103,10 @@ There are two ways that the device can build the packages:
 
 ### 4.1 Building It in the Cloud
 
+{{% alert type="info" %}}
+Building in the cloud uses the Phonegap Build service from Adobe. Unfortunately, Adobe no longer maintains this service. As a result, as of April 30th 2020, iOS apps built through the platform or via the Phonegap Build service are not being accepted on Apple's App Store.
+        {{% /alert %}}
+
 After selecting the **Build in the cloud** option and choosing the correct environment, you are ready to start the PhoneGap build.
 
 When you click **Start PhoneGap Build job**, Mendix will generate an Adobe PhoneGap Build package and send it to the PhoneGap Build service on your behalf. You might be required to authorize this request using an Adobe PhoneGap Build account.
@@ -121,7 +125,61 @@ You can freely customize the generated package to enable, for example, additiona
 
 For detailed instructions, see the [hybrid-app-template GitHub repository](https://github.com/mendix/hybrid-app-template).
 
-To generate the app store packages, go to [Build.PhoneGap.com](https://build.phonegap.com/).
+To generate the Android Google Play package, go to [Build.PhoneGap.com](https://build.phonegap.com/).
+
+For iOS please follow the instrcutions bellow.
+
+### 4.3 Building iOS locally for release
+
+**Prerequisites**: 
+
+* A Mac OSX machine
+* XCode and its command-line tools installed
+* A NodeJS LTS installation
+* The **Do it yourself** package from Cloud Portal downloaded and unzipped in a location
+
+To build the app follow the following instructions:
+
+1. Open a terminal window and change directory into the unzipped package folder, e.g. `cd /Downloads/phongap` if it is in your downloads folder.
+
+2. Run `npm i && npm run package && npm run platform:ios && npm run build -- ios --release --device`
+    
+    This combination of commands does the following: 
+    * Installs all required dependencies.
+    * Packages the Cordova app for deployment.
+    * Adds the iOS platform to Cordova.
+    * Runs iOS release build. 
+
+3. If it's the first time you are building the project it might fail with the following error in the console: 
+
+    `error: Signing for "..." requires a development team. Select a development team in the Signing & Capabilities editor. (in target '...' from project '...')`
+
+4. To fix the error proceed in opening the *.xcworkspace file under `/build/platforms/ios/` by double-clicking it. Xcode shoud open with the project loaded.
+
+    ![Opening XCWorkspace](attachments/mobileapp/open-xcworkspace.png)
+
+5. Select the root element from the tree view in the left panel.
+   
+    ![Selecting the root element](attachments/mobileapp/root-element.png)
+
+6. The screen should change to the following view. If not select the item under Targets on the left panel not the item under Project and select the tab Signing & Certificates.
+    ![Signing screen with errors](attachments/mobileapp/setup-signing-wrong.png)
+
+7. As can been seen both Debug and Release might have been configured for **Automatically manage signing**. Disable both checkboxes to switch to manual signing. The screen should change to the following. 
+
+    ![Signing screen correctly configured](attachments/mobileapp/setup-signing-correct.png)
+
+8. Enable **Automatically manage signing**.
+
+9. Select a Team using the dropdown. If you haven't yet signed in with your credentials XCode will prompt you to do so.
+
+10. When configured correctly all errors should be gone. 
+
+11. Run `npm run build -- ios --release --device` again.
+
+12. The build should now succeed and a folder created at `/build/platforms/ios/build` with the following file structure.
+    ![Signing screen correctly configured](attachments/mobileapp/folder-final.png)
+13. The *.ipa generated can be now uploaded to Testflight for further testing. If you wish to do so, continue with the [Upload tools](https://help.apple.com/app-store-connect/#/dev82a6a9d79) section, on the App Store documenation.
 
 ## 5 Example
 

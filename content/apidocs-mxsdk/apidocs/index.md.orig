@@ -108,14 +108,4 @@ For details, see [User Management API](user-management-api).
 
 Webhooks allow you to build or set up Mendix Platform connectors that subscribe to certain events on the [Developer Portal](/developerportal/index).
 
-<<<<<<< HEAD
-* [Webhooks](webhooks-sprints)
-=======
 Continue reading in [Webhooks](webhooks-sprints).
-
-## 18 Deprecated APIs
-
-{{% alert type="warning" %}}
-The [SSO API](single-sign-on-api) for the Mendix Single Sign-On system based on OpenID has been deprecated and will be discontinued from 1st April 2020.
-{{% /alert %}}
->>>>>>> development

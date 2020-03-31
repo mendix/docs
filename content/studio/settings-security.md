@@ -193,7 +193,7 @@ People invited to join your App Team in the Developer Portal are not added as Ap
 If you have created a new user role on the **Roles and Permissions** page, you need to publish the app first to be able to see and assign this role in the Developer Portal.
 {{% /alert %}}
 
-## 6 Auto-Upgrade to a New Service {#upgrade}
+## 6 Auto-Upgrade to the New Service {#upgrade}
 
 When you try to publish your app, you may be notified that upgrade of the service that secures your app is required first:
 

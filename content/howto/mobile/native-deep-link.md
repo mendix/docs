@@ -229,8 +229,8 @@ Please note that if you are not running the app from a local source, you must bu
 
 ## 5. Read more
 
-*   [Native Builder](/refguide/native-builder)
-*   [Deploying Native App](/howto/mobile/deploying-native-app)
+*   [Native Builder Reference Guide](/refguide/native-builder)
+*   [How to Deploy Your First Mendix Native App](/howto/mobile/deploying-native-app)
 *   [React Native Linking](https://facebook.github.io/react-native/docs/linking)
 *   [Deep Linking Android](https://developer.android.com/training/app-links/deep-linking)
 *   [Deep Linking iOS](https://developer.apple.com/documentation/uikit/inter-process_communication/allowing_apps_and_websites_to_link_to_your_content/defining_a_custom_url_scheme_for_your_app)

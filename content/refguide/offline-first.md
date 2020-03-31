@@ -136,12 +136,12 @@ Microflows cannot be called directly from offline apps. However, before- and aft
 
 ### 4.4.1 Preventing offline microflow call issues {#prevent-offline-mf-call-issues}
 
-To make microflow calls work from offline-first apps, mx stores in an offline app some information about the microflows reachable from the app.
-That includes microflow names, types and names of their parameters, return types.
+To make microflow calls work from offline-first apps, mx stores in an offline app some information about the microflows that are called from the app.
+That includes microflow names and names of their parameters.
 
-As a result, if you rename a microflow or change its parameters or the return type after the initial release of your app and then redeploy,
-there is a chance that there are offline devices that have not received the updated information yet.
-All microflow calls from such a device will still contain the old data, which means that the request will fail.
+This means that changes to microflows used from offline apps must be backwards-compatible,
+because there can be older apps which have not received an OTA update yet.
+All microflow calls from such a device will still contain the old microflow call configuration in nanoflows, which means that the request might fail.
 
 To avoid backwards-compability errors in microflow calls after the initial release, we suggest following these best practices:
 

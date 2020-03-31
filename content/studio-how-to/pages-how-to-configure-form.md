@@ -8,7 +8,7 @@ tags: ["studio", "pages", "list", "how to"]
 
 ## 1 Introduction 
 
-This how-to explains how you can configure a a page with a form and how to show items related to this form on the same page. 
+This how-to explains how you can configure a page with a form and how to show items related to this form on the same page. 
 
 **This how-to will teach you how to do the following:**
 
@@ -23,7 +23,7 @@ The HSE department of your company has the following inspection report:
 
 Your company has an application that is used by inspectors who travel to different companies and inspect whether these companies comply with safety regulations. They fill in their names, a company name, site location, date and time when the inspection was conducted, as well as full name of a superintendent who was present during the inspection. 
 
-Inspectors also have a safety inspection *checklist*. Based on this checklist the inspector evaluates whether the company passed the inspection. They should check and tick the following checklist items or *questions*:
+Inspectors also have a safety inspection *checklist*. Based on this checklist the inspector evaluates whether the company passed the inspection. They should check if requirements on the following *questions* are met:
 
 * If emergency contact posters are displayed
 * If safety training are held regularly
@@ -50,7 +50,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
     <img src="attachments/pages-how-to-configure-form/domain-model.png" alt="Domain Model" style="zoom: 50%;" />
 
-    * Make sure you have configured the Question attribute as an enumeration:
+    * Make sure you have configured the **Question** attribute as the following enumeration enumeration:
 
 		<img src="attachments/pages-how-to-configure-form/enumeration.png" style="zoom:60%;" />
 
@@ -92,7 +92,7 @@ The form on the page is configured:
 
 ## 4 Showing Checklist Questions
 
-An inspector has a list of *questions* and indicates with **Yes** or **No** whether meets the regulation: whether the company has posters with emergency contacts, whether it conducts safety trainings regularly, etc. You would like to show a table with the checklist questions and their results below the inspection report: 
+An inspector has a list of *questions* and indicates with **Yes** or **No** whether the company meets the requirements: whether the company has posters with emergency contacts, whether it conducts safety trainings regularly, etc. You would like to show a table with the checklist questions and their results below the inspection report: 
 
 <img src="attachments/pages-how-to-configure-form/inspection-report-example.png" style="zoom:60%;" />
 
@@ -118,11 +118,11 @@ Follow the steps below:
 
 6. You also do not need **Search**, **New**, **Edit**, and **Delete** buttons in the data grid. Open data grid properties > **Control Bar** section and disable the **Show Buttons** toggle:
 
-  ![Show Buttons Toggle](attachments/pages-how-to-configure-form/data-grid-show-buttons.png)
+	![Show Buttons Toggle](attachments/pages-how-to-configure-form/data-grid-show-buttons.png)
 
-Now checklist items are displayed in a table below the inspection report details.
+Now checklist items are displayed in the table.
 
-Congratulations! You have a page that displays details of the selected report and checklist items of this report:
+Congratulations! You have the page that displays details of the selected report and checklist items of this report:
 
 <img src="attachments/pages-how-to-configure-form/configured-page.png" alt="Configured Page" style="zoom:60%;" />
 

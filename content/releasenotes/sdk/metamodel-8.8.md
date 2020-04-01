@@ -5,7 +5,7 @@ parent: "metamodel-8"
 
 ## 8.8.0
 
-**Release date: March 31st, 2020**
+**Release date: April 1st, 2020**
 
 ### CodeActions
 

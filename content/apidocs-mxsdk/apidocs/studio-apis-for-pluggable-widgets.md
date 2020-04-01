@@ -128,8 +128,9 @@ Here are a few examples:
 
 ### 2.8 Object
 
-Sub-object properties will be passed as an `array` of values. For each configured sub-object, an entry with all
-values will be passed.
+Object properties are passed as an `array` of JavaScript objects.
+For each configured sub-object, an object will be passed with all the sub-object's properties.
+These properties are available by their `key`, with values as described in this document. 
 
 ### 2.9 File
 

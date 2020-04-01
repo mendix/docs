@@ -20,11 +20,11 @@ https://john.doe@www.example.com:123/forum/questions/?tag=networking&order=newes
 scheme          authority                  path                 query           hash
 ```
 
-You can also register the handling of a normal weblink beginning with `http://` or `https://`. However this requires some more work for iOS, and is not covered in this tutorial. For iOS see [Universal Links: Make the Connection](https://www.raywenderlich.com/6080-universal-links-make-the-connection) by Owen L. Brown. Android does allow for both types of weblink handling out of the box, as shown in the [For Android Apps]() section below. 
+You can also register the handling of a normal weblink beginning with `http://` or `https://`. However this requires some more work for iOS, and is not covered in this tutorial. For iOS see [Universal Links: Make the Connection](https://www.raywenderlich.com/6080-universal-links-make-the-connection) by Owen L. Brown. Android does allow for both types of weblink handling out of the box, as shown in the [For Android Apps](#for-android) section below. 
 
 When an app is installed it registers the `schema` and optionally the `host` so its operating system knows which application should be opened when the URL is clicked. If you tap the link, the application will be opened whether it is running, running in the background, or closed.
 
-### 1.1 Testing
+### 1.1 Testing With the Make It Native App
 
 For this tutorial we recommend running your app from source against a local instance of Mendix Studio Pro. This will save you time when rebuilding and redeploying your app. To do this, follow the steps in [How to Get Started with Native Mobile](/howto/mobile/getting-started-with-native-mobile) to make an app and link it to the Make It Native mobile testing app.
 
@@ -60,7 +60,7 @@ If you do not already have a native template for your app, you can create one:
     git clone https://github.com/your-account/native-deeplink-app
     ```
 
-### 3.1 For Android Apps
+### 3.1 For Android Apps {#for-android}
 
 The manifest file registers the schema and host on your Android device that will be associated with your Mendix app. Put simply, the manifest file controls the permissions, `activity` code, and more. So to enable deep linking, you will need to configure your *AndroidManifest.xml* file:
 

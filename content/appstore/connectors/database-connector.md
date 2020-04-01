@@ -36,14 +36,18 @@ These are the prerequisites for using this connector:
 
 ### 3.1 Usage
 
-Once you have imported the Database Connector into your app project, you will have **Database Connector** available in the **Toolbox**. The connector supports two actions: **Execute query** and **Execute statement**. To use either of these in your Mendix application, drag them into your microflow. Next, provide all the arguments for the selected action and choose the output result name.
+Once you have imported the Database Connector into your app project, you will have **Database Connector** available in the **Toolbox**. The connector supports four actions: **Execute query**, **Execute statement**, **Execute parameterized query**, and **Execute parameterized statement**. To use any of these in your Mendix application, drag them into your microflow. Next, provide all the arguments for the selected action and choose the output result name.
+
+The actions **Execute query** and **Execute parameterized query** should be used for querying objects with a **SELECT** SQL command, whereas **Execute statement** and **Execute parameterized statement** should be used for all other commands (for instance, **INSERT**, **UPDATE**, or **DELETE**).
+
+For both queries and statement, the difference between the parameterized and the regular versions are that for the former takes a string template parameter while the latter takes a fully formed SQL command string with no placeholders.
 
 ### 3.2 Results
 
 These are the results of the actions:
 
-* **Execute query** –  a list of objects of the row type, which is also the output of the `SELECT SQL` query
-* **Execute statement** – either an integer or a long value, which usually represents the amount of affected rows
+* **Execute query** and **Execute parameterized query** – a list of objects of the row type, which is also the output of the `SELECT SQL` query
+* **Execute statement** and **Execute parameterized statement** – either an integer or a long value, which usually represents the amount of affected rows
 
 ## 4 Best Practices
 

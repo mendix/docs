@@ -13,7 +13,7 @@ For more information on native mobile app development, see the [native-template 
 **Release date: April 1st, 2020**
 
 {{% alert type="info" %}}
-This release is compatible with Mendix Studio Pro 8.8 and higher.
+This release is compatible with Mendix Studio Pro 8.8 and above.
 {{% /alert %}}
 
 {{% alert type="warning" %}}

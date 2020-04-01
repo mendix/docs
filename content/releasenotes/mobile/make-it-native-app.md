@@ -13,7 +13,7 @@ You can download the Make It Native app for [iOS](https://apps.apple.com/app/mak
 
 ## Android 1.3.0 / iOS 1.3.0
 
-**Release date: March 31st, 2020**
+**Release date: April 1st, 2020**
 
 {{% alert type="info" %}}
 If you are working in Mendix Studio Pro 8.8 or higher, you must update your Make It Native app to this version.

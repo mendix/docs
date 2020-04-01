@@ -10,6 +10,10 @@ tags: ["studio pro"]
 This activity can only be used in **Microflows**.
 {{% /alert %}}
 
+{{% alert type="warning" %}}
+This action is ignored and does not work when a microflow is called from an offline, native, or hybrid app. For more information, see the [Microflows](offline-first#microflows) section of the *Offline-First Reference Guide*.
+{{% /alert %}}
+
 The show home page action navigates to the home page for the current user. It goes to the same page as you go to after signing in and respects role-based home pages. This action has no properties to configure.
 
 {{% alert type="info" %}}

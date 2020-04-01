@@ -123,7 +123,8 @@ To ensure the best user experience for your Mendix application, follow these bes
 * Limit the amount of data that will be synchronized by customizing the synchronization configuration or security access rules
 * Because network connections can be slow and unreliable and mobile devices often have limited storage, avoid synchronizing large files or images (for example, by limiting the size of photos)
 * Use an `isDeleted` Boolean attribute for delete functionality so that conflicts can be handled correctly on the server
-* Use before- and after-commit microflows to pre- or post-process data, or perform additional server-side logic using microflows
+* Use before- and after-commit microflows to pre- or post-process data.
+* Use a [microflow call](microflow-call) in your nanoflows to perform additional server-side logic such as retrieving data from a REST service, or accessing and using complex logic such as Java actions.
 * Help your user remember to synchronize their data so it is processed as soon as possible: you can check for connectivity and automatically synchronize in the nanoflow that commits your object, or remind a user to synchronize while using a notification or before signing out to ensure no data is lost
 
 ## 4 Ensuring Your App Is Offline-First {#limitations}
@@ -132,7 +133,34 @@ Mendix helps developers in building rich offline-first apps. However, there are 
 
 ### 4.1 Microflows {#microflows}
 
-Microflows cannot be called directly from offline apps. However, before- and after-commit microflows still run during synchronization, which can be used for application logic on the server.
+Microflows can be called from offline apps by using [microflow call](microflow-call) action in your nanoflows to perform logic on the server. However, it works a bit different from when used in online profiles, these differences are explained below:
+
+#### 4.1.1 Microflow Arguments Type
+
+* Passing an object or a list of a persistable entity is not supported.
+* Passing an object or a list of a non-persistable entity that has an association with a persistable entity is not supported (such an association can be an indirect association).
+
+#### 4.1.2 UI Actions
+
+UI-related actions will be ignored and will not have any effect. We encourage you to model such UI-side effects in the caller nanoflow.
+
+These actions are as the following:
+
+* [Show message](show-message)
+* [Show validation message](validation-feedback)
+* [Show home page](show-home-page)
+* [Show page](show-page)
+* [Close page](close-page)
+* [Download file](download-file)
+
+#### 4.1.3 Object Side-Effects
+
+Changes to persistable objects made in a microflow will not be reflected on the client unless you synchronize. Non-persistable objects must be returned in order for changes to be reflected.
+
+#### 4.1.4 Microflow Return Value
+
+* Returning an object or a list of persistable entity is not supported.
+* Returning an object or a list of a non-persistable entity that has an association with a persistable entity is not supported (such association can be an indirect association).
 
 ### 4.2 Autonumbers & Calculated Attributes {#autonumbers}
 

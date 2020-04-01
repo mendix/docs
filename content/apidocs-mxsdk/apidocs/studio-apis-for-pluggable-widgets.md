@@ -12,7 +12,7 @@ This guide explains the APIs offered by Mendix Studio and Studio Pro so you can 
 
 In contrast, [Client APIs Available to Pluggable Widgets](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets) is meant for pluggable widget development once your app project is running in the client. This guide's APIs are available in Mendix 8.0.0 and higher.
 
-## 2 Values API
+## 2 Values API {#values}
 
 The values API passes the values configured for a pluggable widget's properties. These values will be passed in a JavaScript object, where the property's `key` is used as the object property.
 
@@ -128,7 +128,7 @@ Here are a few examples:
 
 ### 2.8 Object
 
-Object properties are passed as an `array` of JavaScript objects. For each configured sub-object, an object will be passed with all the sub-object's properties. These properties are available by their `key`, with values as described in this document. 
+Object properties are passed as an `array` of JavaScript objects. For each configured sub-object, an object will be passed with all the sub-object's properties. These properties are available by their `key`, with values as described throughout the [Values](#values) section.
 
 ### 2.9 File
 

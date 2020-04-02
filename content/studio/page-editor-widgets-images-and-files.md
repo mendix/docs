@@ -72,7 +72,11 @@ For more information on the **Events** section for static and dynamic images, se
 
 The dynamic image has a specific on-click action **Enlarge on Click**. The full-size image will be displayed when the user clicks it. This property overrides other on-click actions. 
 
-#### 2.1.3 Design Section
+#### 2.1.3 Conditional Visibility Section
+
+{{% snippet file="studio/visibility-section-link.md" %}}
+
+#### 2.1.4 Design Section
 
 For information on the **Design** section and its properties, see [Design Section in Widgets](page-editor-widgets-design-section).
 
@@ -120,7 +124,11 @@ The **Show Buttons For** option specifies whether end-users are able to upload a
 * **Download** – end-users are able to download a file
 * **Both** – end-users are able to upload and download files
 
-#### 3.1.4 Design Section
+#### 3.1.4 Conditional Visibility Section
+
+{{% snippet file="studio/visibility-section-link.md" %}}
+
+#### 3.1.5 Design Section
 
 For information on the **Design** section and its properties, see [Design Section in Widgets](page-editor-widgets-design-section).
 

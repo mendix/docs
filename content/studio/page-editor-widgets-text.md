@@ -88,11 +88,15 @@ You can put several **Title** widgets on your page, but they will all display th
 
 {{% /alert %}}
 
-## 4 Design Section {#input-elements-design}
+## 4 Conditional Visibility Section
+
+{{% snippet file="studio/visibility-section-link.md" %}}
+
+## 5 Design Section {#input-elements-design}
 
 For information on the **Design** section and its properties, see [Design Section](page-editor-widgets-design-section).
 
-## 5 Read More
+## 6 Read More
 
 * [Pages](page-editor) 
 * [Widgets](page-editor-widgets)

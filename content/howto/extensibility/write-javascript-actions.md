@@ -154,7 +154,7 @@ To create a JavaScript action that can synthesize text to speech, follow these s
 * [Build JavaScript Actions: Part 2 (Advanced)](write-javascript-github)
 * [Implement Best Practices for JavaScript Actions](best-practices-javascript-actions)
 * [JavaScript Actions](/refguide/javascript-actions)
-* [Mendix Client API](https://apidocs.mendix.com/8/client/) 
+* [Mendix Client API](https://apidocs.rnd.mendix.com/8/client/index.html) 
 * JavaScript Resources:
 	* [JavaScript basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
 	* [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)

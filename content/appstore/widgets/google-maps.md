@@ -3,7 +3,6 @@ title: "Google Maps"
 category: "Widgets"
 description: "Describes the configuration and usage of the Google Maps widget, which is available in the Mendix App Store."
 tags: ["app store", "app store component", "widget", "google maps", "platform support"]
-draft: true
 ---
 
 ## 1 Introduction

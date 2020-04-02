@@ -35,4 +35,8 @@ If the microflow is called from the client, the deletion is not reflected in the
 Deletions are always reflected in the client. [Data sources](data-sources) are only reloaded if **Refresh in client** is set to *Yes*.
 {{% /alert %}}
 
+{{% alert type="warning" %}}
+When inside a microflow that is called from an offline, native, or hybrid app, the **Refresh in client** option is ignored and functions as if it was set to **No**. For more information, see the [Microflows](offline-first#microflows) section of the *Offline-First Reference Guide*.
+{{% /alert %}}
+
 Default: *No*

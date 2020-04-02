@@ -45,4 +45,8 @@ Rolled back attribute values are always reflected in client. [Data sources](data
 When inside a [nanoflow](nanoflows), the rollback object action reloads [data sources](data-sources) as if **Refresh in client** was set to *Yes*.
 {{% /alert %}}
 
+{{% alert type="warning" %}}
+When inside a microflow that is called from an offline, native, or hybrid app, the **Refresh in client** option is ignored and functions as if it was set to **No**. For more information, see the [Microflows](offline-first#microflows) section of the *Offline-First Reference Guide*.
+{{% /alert %}}
+
 Default: *No*

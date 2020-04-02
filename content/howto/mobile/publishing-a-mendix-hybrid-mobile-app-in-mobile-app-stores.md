@@ -7,7 +7,10 @@ tags: ["mobile", "app store", "phonegap"]
 ## 1 Introduction
 
 {{% alert type="info" %}}
-Building in the cloud uses the Phonegap Build service from Adobe. Unfortunately, Adobe no longer maintains this service. As a result, as of April 30th 2020, iOS apps built through the platform or via the Phonegap Build service are not being accepted on Apple's App Store. Please follow the guide on building your iOS apps locally [here](/developerportal/deploy/mobileapp#building-ios-locally).
+Building in the cloud uses the Phonegap Build service from Adobe. Unfortunately, Adobe no longer maintains this service. As a result, as of April 30th 2020, iOS apps built through the platform or via the Phonegap Build service are not being accepted on Apple's App Store. 
+
+If you wish to build your iOS app, continue with section [4.2 Doing It Yourself](/developerportal/deploy/mobileapp#doing-it-yourself) and [4.3 Building your iOS app localy](/developerportal/deploy/mobileapp##building-ios-locally), respectively.
+
         {{% /alert %}}
 
 Once you have finished developing a Mendix hybrid mobile application, you will want to make it available as an app for mobile platforms such as Apple iOS and Google Android. We make it possible to produce platform-specific installation packages. For more details on deploying platform-specific installation packages, see [Mobile App](/developerportal/deploy/mobileapp).

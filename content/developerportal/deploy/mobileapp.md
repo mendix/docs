@@ -104,8 +104,12 @@ There are two ways that the device can build the packages:
 ### 4.1 Building It in the Cloud
 
 {{% alert type="info" %}}
+
 Building in the cloud uses the Phonegap Build service from Adobe. Unfortunately, Adobe no longer maintains this service. As a result, as of April 30th 2020, iOS apps built through the platform or via the Phonegap Build service are not being accepted on Apple's App Store.
-        {{% /alert %}}
+
+If you wish to build your iOS app, continue with section [4.2 Doing It Yourself](/developerportal/deploy/mobileapp#doing-it-yourself) and [4.3 Building your iOS app localy](/developerportal/deploy/mobileapp##building-ios-locally), respectively.
+
+{{% /alert %}}
 
 After selecting the **Build in the cloud** option and choosing the correct environment, you are ready to start the PhoneGap build.
 
@@ -115,7 +119,7 @@ As soon as the build job has completed, the platform-specific packages will be r
 
 Please note that an Adobe PhoneGap Build account is required to continue. Create [an account](https://build.phonegap.com/plans) if you do not have one already.
 
-### 4.2 Doing It Yourself
+### 4.2 Doing It Yourself {#doing-it-yourself}
 
 After selecting the **Do it yourself** option and choosing the correct environment, click **Download a customizable package**. The package contains all your settings, icons, and splash screens. It allows you to easily make changes, create local builds, run on emulators, and upload to the PhoneGap Build service.
 
@@ -129,7 +133,7 @@ To generate the Android Google Play package, go to [Build.PhoneGap.com](https://
 
 For iOS please follow the instrcutions bellow.
 
-### 4.3 Building iOS locally for release {#building-ios-locally}
+### 4.3 Building your iOS app locally {#building-ios-locally}
 
 **Prerequisites**: 
 * A Mac OSX machine.
@@ -151,7 +155,7 @@ To prepare your project for building follow the following instructions:
     * Packages the Cordova app for deployment.
     * Adds the iOS platform to Cordova.
 
-#### 4.3.2 Building your iOS app
+#### 4.3.2 Building your prepared project
 
 There two possible ways for building your apps. Using the Cordova CLI or XCode. 
 The first is the shorter way and allows Cordova to fully control the configuration of your project. 

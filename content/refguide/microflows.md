@@ -29,7 +29,6 @@ A microflow is composed of elements. Below is a categorized overview of all elem
 *   [Decisions](#decisions) deal with making choices and merging different paths again.
 *   [Activities](#activities) are the actions that are executed in a microflow.
 *   [Artifacts](#artifacts) provide the microflow with input and allow comments to be made.
-*   [Error handlers](#errorhandlers) can be set on an activity, decision, or loop to define how to handle an error.
 
 ### 2.1 Events{#events}
 
@@ -43,7 +42,7 @@ Events represent start and endpoints of a microflow and special operations in a 
 | [![](attachments/microflows-and-nanoflows/918115.png)](continue-event) | [Continue Event](continue-event) | A continue event is used to stop the current iteration of a loop and continue with the next iteration. Please note that continue events can only be used inside a [Loop](loop). |
 | [![](attachments/microflows-and-nanoflows/918026.png)](break-event) | [Break Event](break-event) | A break event is used to stop iterating over the list of objects and continue with the rest of the flow after the loop. Please note that break events can only be used inside a [Loop](loop). |
 
-## 5 Flows{#flows}
+### 2.2 Flows{#flows}
 
 Flows form the connection between elements.
 
@@ -52,7 +51,7 @@ Flows form the connection between elements.
 | [![](attachments/microflows-and-nanoflows/917883.png)](sequence-flow) | [Sequence Flow](sequence-flow) | A sequence flow is an arrow that links events, activities, decisions, and merges with each other. Together they define the order of execution within a microflow. |
 | [![](attachments/microflows-and-nanoflows/917688.png)](annotation#annotation-flow) | [Annotation flow](annotation#annotation-flow) | An association is a connection that can be used to connect an annotation to another element. |
 
-## 6 Decisions {#decisions}
+### 2.3 Decisions {#decisions}
 
 Decisions deal with making choices and merging different paths again..
 
@@ -63,7 +62,7 @@ Decisions deal with making choices and merging different paths again..
 | [![](attachments/microflows-and-nanoflows/918122.png)](object-type-decision) | [Object Type Decision](object-type-decision) | An object type decision is an element that makes a choice based on the [specialization](entities) of the selected object. You can give the specialized object a name using a [cast object](cast-object) action. |
 | [![](attachments/microflows-and-nanoflows/918116.png)](merge) | [Merge](merge) | A merge can be used to combine multiple sequence flows into one. If a choice is made in a microflow and afterwards some common work needs to be done, you can combine the two (or more) paths using a merge. |
 
-## 7 Activities{#activities}
+### 2.4 Activities{#activities}
 
 Activities are the actions that are executed in a microflow.
 
@@ -72,7 +71,7 @@ Activities are the actions that are executed in a microflow.
 | [![](attachments/microflows-and-nanoflows/918096.png)](activities) | [Activity](activities) | An activity can be used to execute a specific action in a microflow. |
 | [![](attachments/microflows-and-nanoflows/917804.png)](loop) | [Loop](loop) | A looped activity is used to iterate over a list of objects. For every object the flow inside the looped activity is executed. A looped activity can contain all elements used in microflows, with the exception of start and stop events. The flow starts at the first element with no incoming flows. |
 
-## 8 Artifacts{#artifacts}
+### 2.5 Artifacts{#artifacts}
 
 Artifacts provide the microflow with input and allow comments to be made.
 
@@ -81,72 +80,13 @@ Artifacts provide the microflow with input and allow comments to be made.
 | [![](attachments/microflows-and-nanoflows/918019.png)](parameter) | [Parameter](parameter) | A parameter is data that serves as input for the microflow. Parameters are filled at the location from where the microflow is triggered. |
 | [![](attachments/microflows-and-nanoflows/917689.png)](annotation) | [Annotation](annotation) | An annotation is an element that can be used to put comments in a microflow. |
 
-## 9 Item Usages
+### 2.6 Item Usages
 
 Studio Pro visualizes which items are used by the selected element(s). It does this by showing the used items in white text on a blue background. Conversely, elements that use the item(s) returned by the selected element(s) are marked with the word 'Usage' in white text on a green background.
 
 In the example below, the parameter **AccountPasswordData** is highlighted because it is used in the selected activity (**Retrieve Account**). And the activity **Save password** has a **Usage** label because it uses the object returned by **Retrieve Account**.
 
 ![](attachments/16713739/16843950.png)
-
-## 10 Errors
-
-When an error occurs in a microflow, all changes that have been made to objects are rolled back and the microflow is aborted. Optionally, you can [handle errors](/howto/logic-business-rules/set-up-error-handling) in the microflow itself by configuring different error handling settings. You can even inspect the details of the error by looking at the predefined objects `$latestError` and `$latestSoapFault`.
-
-### 10.1 Error Handlers {#errorhandlers}
-
-An error handler can be set on an activity, decision, or loop.
-On an activity or decision, it gives you three options:
-
-*   Rollback (default)
-*   Custom with rollback
-*   Custom without rollback
-
-For the latter two options you can draw an additional flow from the block and mark this flow as the error handler flow. When selecting 'Custom with rollback' it will trigger this path when the error occurs and still rollback your objects afterwards. The 'Custom without rollback' option does not rollback the objects. After you selected a flow as the error handler it will show this as in the following image.
-
-![](attachments/microflows-and-nanoflows/918247.png)
-
-On a loop you get two options:
-
-*   Rollback (default)
-*   Continue
-
-The continue option means that when an error occurs, the loop will simply continue to the next iteration. It will show as a continue icon on the exit flow of the loop.
-
-![](attachments/microflows-and-nanoflows/918246.png)
-
-### 10.2 Inspecting Errors
-
-When an error occurs inside a microflow, under the hood a Java exception is raised that contains information about the error that occurred. Inside a custom error handler (as in, after an error handling flow), you can inspect the type of this Java exception as well as several other properties. Every microflow contains two predefined error objects, `$latestError` and `$latestSoapFault`. `$latestError` is an object of entity System.Error, while `$latestSoapFault` is an object of entity System.SoapFault, which is a specialization of System.Error.
-
-In a custom error handler that is executed after an error occurs, `$latestError` is set to an object containing information about the error that occurred. If the error is a SOAP fault (an error that occurs as a result of a web service call), `$latestSoapFault` is set to an object that contains more specific information about the SOAP fault. Otherwise, `$latestSoapFault` is `empty`.
-
-{{% alert type="info" %}}
-
-You can determine whether an error was a SOAP fault by checking `$latestSoapFault` for `empty`.
-
-{{% /alert %}}
-
-The following table shows the attributes of System.Error and System.SoapFault.
-
-| Entity | Attribute | Type | Description |
-| --- | --- | --- | --- |
-| System.Error | ErrorType | String | The Java exception type of the error that occurred. |
-| System.Error | Message | String | The message of the Java exception. |
-| System.Error | Stacktrace | String | The stacktrace of the Java exception. |
-| System.SoapFault | Code | String | The Code element of the SOAP fault. |
-| System.SoapFault | Reason | String | The Reason element of the SOAP fault. |
-| System.SoapFault | Node | String | The Node element of the SOAP fault. |
-| System.SoapFault | Role | String | The Role element of the SOAP fault. |
-| System.SoapFault | Detail | String | The Detail element of the SOAP fault. |
-
-Click [here](http://www.w3.org/TR/soap12-part1/#soapfault) for more information on SOAP faults.
-
-{{% alert type="warning" %}}
-
-In microflows that apply entity access, it is not possible to inspect the attributes of error objects for security reasons. You can pass the error object to a sub-microflow that does not apply entity access and inspect the attributes there.
-
-{{% /alert %}}
 
 ## 3 Keyboard Support{#keyboard}
 

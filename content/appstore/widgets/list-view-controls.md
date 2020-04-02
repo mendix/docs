@@ -179,7 +179,7 @@ Add an interactive search box to all of your list views with this widget. This s
 
 While developing, you will probably rely mostly on `npm start`. However, there are additional scripts at your disposal:
 
-| npm run <script> | Description |
+| npm run &lt;script&gt; | Description |
 | --- | --- |
 | start | Builds the project, monitors the source and config for changes, and rebuilds. |
 | test | Runs lint, builds, unit tests with Karma, generates a coverage report, deploys, and runs end-to-end test. |

@@ -46,7 +46,7 @@ For both queries and statements, the difference between the parameterized and re
 
 These are the results of the actions:
 
-* **Execute query** and **Execute parameterized query** – a list of objects of the row type, which is also the output of the `SELECT SQL` query
+* **Execute query** and **Execute parameterized query** – a list of objects of the row type, which is also the output of the `SELECT` SQL query
 * **Execute statement** and **Execute parameterized statement** – either an integer or a long value, which usually represents the amount of affected rows
 
 ## 4 Best Practices

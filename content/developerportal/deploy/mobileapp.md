@@ -179,6 +179,7 @@ This process is shorter than using XCode but might become more involved in under
     `npm run build -- ios --debug --emulator`
 
 2. When the build succeeds the generated IPA file can be found in `/build/platforms/ios/build`. The folder should have the following file structure. (If you did a build for an emulator an *.app file will be available)
+   
     ![Signing screen correctly configured](attachments/mobileapp/folder-final.png)
     
 3. The IPA generated can be now uploaded to Testflight for further testing. If you wish to do so, continue with the [Upload tools](https://help.apple.com/app-store-connect/#/dev82a6a9d79) section, on the App Store documenation.
@@ -196,6 +197,7 @@ Using XCode might be easier for less technical users due to its visual interface
     ![Selecting the root element](attachments/mobileapp/root-element.png)
 
 5. The screen should change to the following view. If not select the item under Targets on the left panel not the item under Project and select the tab Signing & Certificates.
+
     ![Signing screen with errors](attachments/mobileapp/setup-signing-wrong.png)
 
 6. As can been seen both Debug and Release might have been configured for **Automatically manage signing**. Disable both checkboxes to switch to manual signing. The screen should change to the following. 
@@ -209,9 +211,11 @@ Using XCode might be easier for less technical users due to its visual interface
 9. When configured correctly all errors should be gone. 
 
 10. Make sure you select the target to be your app's build target and as a device "Generic iOS Device".
- ![Signing screen correctly configured](attachments/mobileapp/target-device.png)
+
+    ![Signing screen correctly configured](attachments/mobileapp/target-device.png)
 
 11. Select Product and then Archive from the menu bar.
+
     ![Archiving](attachments/mobileapp/archiving.png)
 
 12. After the process finishes successfully the Organizer view will come up. Your app should be selected and your latest Archive visible. You can always open the organizer yourself through XCode's Window menu.

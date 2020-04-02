@@ -115,7 +115,7 @@ This module provides integration with Uber's APIs for logging in, viewing profil
 
 ## 15 Google Analytics
 
-[![](attachments/18448690/google_analytics.png)](https://appstore.home.mendix.com/link/app/105/Mendix/Google-Analytics)
+[![](attachments/18448690/google_analytics.png)](/appstore/widgets/google-analytics)
 
 You can now add Google Analytics-tracking to your Mendix application! This widget lets you track events, pages, and transactions on your own Google Analytics account.
 

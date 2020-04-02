@@ -39,7 +39,7 @@ This module enables creating templates that export data from your Mendix applica
 
 ## 5 Google Maps
 
-[![](attachments/18448690/google_maps.png)](https://appstore.home.mendix.com/link/app/48911/)
+[![](attachments/18448690/google_maps.png)](/appstore/widgets/google-maps)
 
 This widget enables bringing the world into your application via Google Maps!
 
@@ -55,7 +55,7 @@ This module enables your project to retrieve emails from POP3, POP3S, IMAP, and 
 
 ## 7 Google Analytics
 
-[![](attachments/18448690/google_analytics.png)](https://appstore.home.mendix.com/link/app/105/)
+[![](attachments/18448690/google_analytics.png)](/appstore/widgets/google-analytics)
 
 You can now add Google Analytics-tracking to your Mendix application! This widget lets you track events, pages, and transactions on your own Google Analytics account.
 

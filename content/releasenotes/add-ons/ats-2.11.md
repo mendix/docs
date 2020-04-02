@@ -48,7 +48,7 @@ We are constantly on the lookout for popular widgets that we can support with AT
 
 * [AutoComplete Widget](https://appstore.home.mendix.com/link/app/2695/)
 * [Switch](https://appstore.home.mendix.com/link/app/50324/)
-* [Format String](https://appstore.home.mendix.com/link/app/264/)
+* [Format String](/appstore/widgets/format-string)
 * [CustomString](https://appstore.home.mendix.com/link/app/1426/)
 
 ### Improvements

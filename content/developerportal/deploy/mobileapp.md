@@ -171,7 +171,7 @@ This process is shorter than using XCode but might become more involved in under
 
 1. Run: 
 
-    `npm run build -- ios --release --device --codeSignIdentity=iPhone Developer" --developmentTeam=<your-teams-id>`
+    `npm run build -- ios --release --device --codeSignIdentity="iPhone Developer" --developmentTeam="<your-teams-id>"`
 
     This combination of commands does the following: 
     * Starts a release build that will create binaries for a physical device.

@@ -134,23 +134,19 @@ Mendix helps developers in building rich offline-first apps. However, there are 
 
 Microflows cannot be called directly from offline apps. However, before- and after-commit microflows still run during synchronization, which can be used for application logic on the server.
 
-### 4.4.1 Preventing offline microflow call issues {#prevent-offline-mf-call-issues}
+### 4.4.1 Offline Microflow Best Practices {#offline-mf-best-practices}
 
-To make microflow calls work from offline-first apps, mx stores in an offline app some information about the microflows that are called from the app.
-This means that changes to microflows used from offline apps must be backwards-compatible,
-because there can be older apps which have not received an OTA update yet.
-All microflow calls from such a device will still contain the old microflow call configuration in nanoflows, which means that the request might fail.
+To make microflow calls work from offline-first apps, Mendix stores some information in the offline app about the microflows which is called from the app. This means that changes to microflows used from offline apps must be backwards-compatible, because there can be older apps which have not received an OTA update yet. All microflow calls from such a device will still contain the old microflow call configuration in nanoflows, which means that the request might fail.
 
-To avoid backwards-compability errors in offline microflow calls after the initial release, we suggest following these best practices:
+To avoid backwards-compatibility errors in offline microflow calls after the initial release, we suggest these best practices:
 
-* Do not rename microflows or move to them a different module.
-* Do not rename modules that contain microflows called from offline apps.
-* Do not add, remove, rename or change type of microflow parameters.
-* Do not change return types.
-* Do not delete a microflow before making sure that all devices have received an update.
+* Do not rename microflows or move them to different modules
+* Do not rename modules that contain microflows called from offline apps
+* Do not add, remove, rename, or change types of microflow parameters
+* Do not change return types
+* Do not delete a microflow before making sure that all devices have received an update
 
-If you want to change any of the mentioned above, introduce a new microflow.
-You can change the contents of the microflow, but keep in mind that older apps might call them until they're updated.
+If you want to deviate from the practices outlined above, introduce a new microflow. You can change the contents of the microflow, but keep in mind that older apps might call the contents until they are updated.
 
 ### 4.2 Autonumbers & Calculated Attributes {#autonumbers}
 

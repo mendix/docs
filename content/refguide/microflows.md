@@ -9,32 +9,16 @@ tags: ["studio pro"]
 
 ## 1 Introduction
 
+Microflows allow you to express the logic of your application. A microflow can perform actions such as creating and updating objects, showing pages and making choices. It is a visual way of expressing what traditionally ends up in textual program code. Microflows run in the runtime server and can therefore not be used in offline apps.
+
+This page is a summary of the elements which make up a microflow, together with their visual representation within the microflow. It also covers [keyboard support](#keyboard) when editing microflows.
+
+
 {{% alert type="info" %}}
-
-This page is an overview of all the elements that can be used in a microflow. For the properties of the microflow itself, see [Microflow Properties](microflow).
-
+For the properties of the microflow itself, see [Microflow Properties](microflow).
 {{% /alert %}}
 
-Microflows allow you to express the logic of your application. A microflow can perform actions such as creating and updating objects, showing pages and making choices. It is a visual way of expressing what traditionally ends up in textual program code.
-
-## 2 Keyboard Support
-
-The microflow editor offers keyboard support for navigating and manipulating microflows. The following table shows the keys that can be used.
-
-| Key | Effect |
-| --- | --- |
-| Arrow Keys | Select nearby element (activity, event, loop or parameter) in the direction of the arrow. |
-| Enter | Edit the properties of the selected element. |
-| F2 | Rename the item returned by the selected element. |
-| Shift+F2 or just start typing | Edit the caption of the selected element. |
-| Ctrl+Arrow Keys | Move the selected element in the direction of the arrow. |
-| Tab | If a loop is selected, the first element inside the loop will be selected. |
-| Shift+Tab | If an element inside a loop is selected, the loop itself will be selected. |
-| Home | Select the start event. |
-| End | Cycle through the end events. |
-| Context-menu key or Shift-F10 | Open the context-menu for the currently selected element. |
-
-## 3 Notation
+## 2 Microflow Notation
 
 The graphical notation of microflows is based on the [Business Process Model and Notation](https://en.wikipedia.org/wiki/Business_Process_Model_and_Notation) (BPMN). BPMN is a standardized graphical notation for drawing business processes in a workflow.
 
@@ -47,7 +31,7 @@ A microflow is composed of elements. Below is a categorized overview of all elem
 *   [Artifacts](#artifacts) provide the microflow with input and allow comments to be made.
 *   [Error handlers](#errorhandlers) can be set on an activity, decision, or loop to define how to handle an error.
 
-## 4 Events<a name="events"></a>
+### 2.1 Events{#events}
 
 Events represent start and endpoints of a microflow and special operations in a loop.
 
@@ -59,7 +43,7 @@ Events represent start and endpoints of a microflow and special operations in a 
 | [![](attachments/819203/918115.png)](continue-event) | [Continue Event](continue-event) | A continue event is used to stop the current iteration of a loop and continue with the next iteration. Please note that continue events can only be used inside a [Loop](loop). |
 | [![](attachments/819203/918026.png)](break-event) | [Break Event](break-event) | A break event is used to stop iterating over the list of objects and continue with the rest of the flow after the loop. Please note that break events can only be used inside a [Loop](loop). |
 
-## 5 Flows<a name="flows"></a>
+## 5 Flows{#flows}
 
 Flows form the connection between elements.
 
@@ -79,7 +63,7 @@ Decisions deal with making choices and merging different paths again..
 | [![](attachments/819203/918122.png)](object-type-decision) | [Object Type Decision](object-type-decision) | An object type decision is an element that makes a choice based on the [specialization](entities) of the selected object. You can give the specialized object a name using a [cast object](cast-object) action. |
 | [![](attachments/819203/918116.png)](merge) | [Merge](merge) | A merge can be used to combine multiple sequence flows into one. If a choice is made in a microflow and afterwards some common work needs to be done, you can combine the two (or more) paths using a merge. |
 
-## 7 Activities<a name="activities"></a>
+## 7 Activities{#activities}
 
 Activities are the actions that are executed in a microflow.
 
@@ -88,7 +72,7 @@ Activities are the actions that are executed in a microflow.
 | [![](attachments/819203/918096.png)](activities) | [Activity](activities) | An activity can be used to execute a specific action in a microflow. |
 | [![](attachments/819203/917804.png)](loop) | [Loop](loop) | A looped activity is used to iterate over a list of objects. For every object the flow inside the looped activity is executed. A looped activity can contain all elements used in microflows, with the exception of start and stop events. The flow starts at the first element with no incoming flows. |
 
-## 8 Artifacts<a name="artifacts"></a>
+## 8 Artifacts{#artifacts}
 
 Artifacts provide the microflow with input and allow comments to be made.
 
@@ -164,7 +148,24 @@ In microflows that apply entity access, it is not possible to inspect the attrib
 
 {{% /alert %}}
 
-## 11 Microflow Debugging
+## 3 Keyboard Support{#keyboard}
+
+The microflow editor offers keyboard support for navigating and manipulating microflows. The following table shows the keys that can be used.
+
+| Key | Effect |
+| --- | --- |
+| Arrow Keys | Select nearby element (activity, event, loop or parameter) in the direction of the arrow. |
+| Enter | Edit the properties of the selected element. |
+| F2 | Rename the item returned by the selected element. |
+| Shift+F2 or just start typing | Edit the caption of the selected element. |
+| Ctrl+Arrow Keys | Move the selected element in the direction of the arrow. |
+| Tab | If a loop is selected, the first element inside the loop will be selected. |
+| Shift+Tab | If an element inside a loop is selected, the loop itself will be selected. |
+| Home | Select the start event. |
+| End | Cycle through the end events. |
+| Context-menu key or Shift-F10 | Open the context-menu for the currently selected element. |
+
+## 4 Microflow Debugging
 
 If you want to see what happens while a microflow is executing, you can use the microflow debugger. See the following how-tos:
 

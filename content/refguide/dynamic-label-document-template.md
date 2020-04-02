@@ -11,7 +11,7 @@ A dynamic label is used for the same kind of attributes as a text box from the p
 
 {{% alert type="info" %}}
 
-![](attachments/819203/918131.png)
+![](attachments/microflows-and-nanoflows/918131.png)
 
 A dynamic label linking to a customer name.
 

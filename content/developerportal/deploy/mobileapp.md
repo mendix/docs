@@ -165,14 +165,20 @@ There is not prefered way, you can use whatever works best for your case.
 
 This process is shorter than using XCode but might become more involved in understanding why a build fails. 
 
-1. Run: `npm run build -- ios --release --device --codeSignIdentity=iPhone Developer" --developmentTeam=<your-teams-id>`
+1. Run: 
+
+    `npm run build -- ios --release --device --codeSignIdentity=iPhone Developer" --developmentTeam=<your-teams-id>`
 
     This combination of commands does the following: 
     * Starts a release build that will create binaries for a physical device.
     * Uses the code sign identity "iPhone Developer" for signing.
     * Looks up the provisioning files and certificates using the provided Apple Developer's team id.
 
-2. When the build succeeds the generated IPA file can be found in `/build/platforms/ios/build`. The folder should have the following file structure.
+    From the above it is easily deducted that if you wish to build for an emulator and do a debug build the following command can be used: 
+
+    `npm run build -- ios --debug --emulator`
+
+2. When the build succeeds the generated IPA file can be found in `/build/platforms/ios/build`. The folder should have the following file structure. (If you did a build for an emulator an *.app file will be available)
     ![Signing screen correctly configured](attachments/mobileapp/folder-final.png)
     
 3. The IPA generated can be now uploaded to Testflight for further testing. If you wish to do so, continue with the [Upload tools](https://help.apple.com/app-store-connect/#/dev82a6a9d79) section, on the App Store documenation.

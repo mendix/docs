@@ -58,11 +58,7 @@ In this section, you will learn how to add a widget to your app project. You can
 
 To add the Radio Button List widget from the App Store via Studio Pro, follow these steps:
 
-<<<<<<< HEAD:content/appstore/general/app-store-content.md
 1. Download the [Radio Button List](../widgets/radio-button-list) widget (for reference, follow the steps in the [Downloading Content from the App Store](#downloading2) section above).
-=======
-1. Download the [Radio Button List](/appstore/widgets/radio-button-list) widget (for reference, follow the steps in the [Downloading Content from the App Store](#downloading2) section above).
->>>>>>> development:content/developerportal/app-store/app-store-content.md
 2.  A widget downloaded from the App Store is placed in your app project structure. You can find the widget and start using it in the following ways:
 
 	* Click **Add widget**, then browse the list of **Add-on widgets**:

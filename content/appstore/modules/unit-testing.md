@@ -11,7 +11,7 @@ Use the [Unit Testing](https://appstore.home.mendix.com/link/app/390/) module to
 
 ### 1.1 Dependencies
 
-* [ObjectHandling](https://appstore.home.mendix.com/link/app/37114/)
+* [Object Handling](/appstore/modules/object-handling)
 * *junit-4.11.jar*
 * *org.apache.commons.io-2.3.0.jar*
 * *org.apache.commons.lang3.jar*

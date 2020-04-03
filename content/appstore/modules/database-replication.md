@@ -7,7 +7,7 @@ tags: ["app store", "app store component", "database replication", "platform sup
 
 ## 1 Introduction
 
-You can use the [Database Replication](https://appstore.home.mendix.com/link/app/160/) module to import data from existing databases into your Mendix application. You can configure how to map each table, column, and relation to your Mendix domain model. Complex mappings over multiple table joins are also possible. You can configured in the client or from Java.
+You can use the [Database Replication](/appstore/modules/database-replication) module to import data from existing databases into your Mendix application. You can configure how to map each table, column, and relation to your Mendix domain model. Complex mappings over multiple table joins are also possible. You can configured in the client or from Java.
 
 ### 1.1 Typical Usage Scenarios
 
@@ -27,10 +27,10 @@ You can use the [Database Replication](https://appstore.home.mendix.com/link/app
 
 ### 1.3 Dependencies
 
-* [Mx Model Reflection](https://appstore.home.mendix.com/link/app/69/) module – this module is required in order to configure the mapping between the Excel columns and the domain model
+* [Mx Model Reflection](/appstore/modules/model-reflection) module – this module is required in order to configure the mapping between the Excel columns and the domain model
 * The *replication.jar* file (supplied in the *.mpk* file)
 	* Make sure you remove any older versions of *replication.jar* before installing this module (if you update, you do not need to remove the library anymore)
-	* If you have an old *replication.jar file* and are using the [Excel Importer](https://appstore.home.mendix.com/link/app/72/), update this module as well, since you need Excel Importer 3.0 or higher when using this module
+	* If you have an old *replication.jar file* and are using the [Excel Importer](/appstore/modules/excel-importer), update this module as well, since you need Excel Importer 3.0 or higher when using this module
 
 ## 2 Configuration
 

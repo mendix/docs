@@ -28,7 +28,7 @@ The [LDAP Synchronization](https://appstore.home.mendix.com/link/app/24/) module
 This module is dependent on the following additional modules – make sure they are also present in your app project and configured properly:
 
 * [Community Commons Functions Library](/appstore/modules/community-commons-function-library)
-* [Encryption](https://appstore.home.mendix.com/link/app/1011/)
+* [Encryption](/appstore/modules/encryption)
 
 ## 2 Installation
 

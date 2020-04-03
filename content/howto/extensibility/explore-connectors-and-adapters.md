@@ -15,23 +15,23 @@ For documentation on using more specific connectors and adapters for Siemens, SA
 
 ## 2 SAML
 
-[![](attachments/18448690/SAML.png)](https://appstore.home.mendix.com/link/app/1174/)
+[![](attachments/18448690/SAML.png)](/appstore/modules/saml)
 
 This module allows you to use SAML to authenticate your users in your cloud application. The module can communicate with any identity provider that supports SAML2.0 or Shibboleth.
 
-[Click to download in the Mendix App Store.](https://appstore.home.mendix.com/link/app/1174/)
+[Click to download in the Mendix App Store.](/appstore/modules/saml)
 
 ## 3 Excel Importer
 
-[![](attachments/18448690/excel_importer.png)](https://appstore.home.mendix.com/link/app/72/)
+[![](attachments/18448690/excel_importer.png)](/appstore/modules/excel-importer)
 
 With this module, you can import all the Excel files you want!
 
-[Click to download in the Mendix App Store.](https://appstore.home.mendix.com/link/app/72/)
+[Click to download in the Mendix App Store.](/appstore/modules/excel-importer)
 
 ## 4 Excel Exporter
 
-[![](attachments/18448690/excel_exporter.png)](https://appstore.home.mendix.com/link/app/726/)
+[![](attachments/18448690/excel_exporter.png)](/appstore/modules/excel-exporter)
 
 This module enables creating templates that export data from your Mendix application to Excel or the CSV format. This module creates an OQL query and directly prints the result to a FileDocument in your desired format. Add styling to your Excel to create the proper headers and styling formats for a complete report.
 
@@ -47,11 +47,11 @@ This widget enables bringing the world into your application via Google Maps!
 
 ## 6 IMAP/POP3 Incoming Email
 
-[![](attachments/18448690/imap.png)](https://appstore.home.mendix.com/link/app/1042/)
+[![](attachments/18448690/imap.png)](/appstore/modules/imap)
 
 This module enables your project to retrieve emails from POP3, POP3S, IMAP, and IMAPS servers.
 
-[Click to download in the Mendix App Store.](https://appstore.home.mendix.com/link/app/1042/)
+[Click to download in the Mendix App Store.](/appstore/modules/imap)
 
 ## 7 Google Analytics
 

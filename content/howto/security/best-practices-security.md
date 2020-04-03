@@ -88,7 +88,7 @@ Your application might require sensitive information that should be extra encryp
 * Connection information for consumed services (like credentials, service locations, or keys)
 * Personal information (like bank account numbers or social security numbers)
 
-This data is defined within the domain model and stored within the database of your application. To minimize the impact of this information when it is leaked, we recommend storing this data in a (symmetric) encrypted manner. The [Encryption module](https://appstore.home.mendix.com/link/app/1011/Mendix/Encryption) available from the Mendix App Store provides a way to encrypt this sensitive information in a database record based on an encryption key that is stored at the Mendix application server.
+This data is defined within the domain model and stored within the database of your application. To minimize the impact of this information when it is leaked, we recommend storing this data in a (symmetric) encrypted manner. The [Encryption](/appstore/modules/encryption) module available from the Mendix App Store provides a way to encrypt this sensitive information in a database record based on an encryption key that is stored at the Mendix application server.
 
 ## 7 Using a Third-Party Identity Provider
 
@@ -96,8 +96,8 @@ When developing an application, authentication is one of the basic consideration
 
 Mendix offers a range of App Store modules that enable your application to be connected with these services, including:
 
-* [SAML](https://appstore.home.mendix.com/link/app/1174/Mendix/SAML)
-* [LDAP](https://appstore.home.mendix.com/link/app/24/Mendix/LDAP-Synchronization-module)
+* [SAML](/appstore/modules/saml)
+* [LDAP Synchronization](/appstore/modules/ldap-synchronization)
 
 Your application can gain the following benefits from using an identity provider:
 

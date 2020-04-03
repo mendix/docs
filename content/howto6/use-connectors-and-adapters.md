@@ -42,23 +42,23 @@ This module enables building Mendix apps on top of your [Salesforce](http://Sale
 
 ## 6 SAML
 
-[![](attachments/18448690/saml.png)](https://appstore.home.mendix.com/link/app/1174/Mendix/SAML)
+[![](attachments/18448690/saml.png)](/appstore/modules/saml)
 
 This module allows you to use SAML to authenticate your users in your cloud application. The module can communicate with any identity provider that supports SAML2.0 or Shibboleth.
 
-[Click to download in the Mendix App Store.](https://appstore.home.mendix.com/link/app/1174/Mendix/SAML)
+[Click to download in the Mendix App Store.](/appstore/modules/saml)
 
 ## 7 Excel Importer
 
-[![](attachments/18448690/excel_importer.png)](https://appstore.home.mendix.com/link/app/72/Mendix/Excel-importer)
+[![](attachments/18448690/excel_importer.png)](/appstore/modules/excel-importer)
 
 With this module, you can import all the Excel files you want!
 
-[Click to download in the Mendix App Store.](https://appstore.home.mendix.com/link/app/72/Mendix/Excel-importer)
+[Click to download in the Mendix App Store.](/appstore/modules/excel-importer)
 
 ## 8 Excel Exporter
 
-[![](attachments/18448690/excel_exporter.png)](https://appstore.home.mendix.com/link/app/726/Mendix/Excel-exporter)
+[![](attachments/18448690/excel_exporter.png)](/appstore/modules/excel-exporter)
 
 This module enables creating templates that export data from your Mendix application to Excel or the CSV format. This module creates an OQL query and directly prints the result to a FileDocument in your desired format. Add styling to your Excel to create the proper headers and styling formats for a complete report.
 
@@ -82,19 +82,19 @@ This module enables launching a new (or existing) Lync conversation directly fro
 
 ## 11 IMAP/POP3 incoming email
 
-[![](attachments/18448690/imap.png)](https://appstore.home.mendix.com/link/app/1042/Mendix/IMAP/POP3-incoming-email)
+[![](attachments/18448690/imap.png)](/appstore/modules/imap)
 
 This module enables your project to retrieve emails from POP3, POP3S, IMAP, and IMAPS servers.
 
-[Click to download in the Mendix App Store.](https://appstore.home.mendix.com/link/app/1042/Mendix/IMAP/POP3-incoming-email)
+[Click to download in the Mendix App Store.](/appstore/modules/imap)
 
 ## 12 MxSMTP Module
 
-[![](attachments/18448690/mxsmtp.png)](https://appstore.home.mendix.com/link/app/256/Mendix/MxSMTP-Module)
+[![](attachments/18448690/mxsmtp.png)](/appstore/modules/mxsmtp)
 
 This module lets your application run a mail server. It will process any messages it receives and stores these in your application.
 
-[Click to download in the Mendix App Store.](https://appstore.home.mendix.com/link/app/256/Mendix/MxSMTP-Module)
+[Click to download in the Mendix App Store.](/appstore/modules/mxsmtp)
 
 ## 13 SFTP Connection
 

@@ -26,7 +26,7 @@ With this module, you can authenticate against your Microsoft Active Directory s
 
 ### 1.4 Dependencies
 
-* [MxModelReflection](https://appstore.home.mendix.com/link/app/69/)
+* [MxModelReflection](/appstore/modules/model-reflection)
 
 ## 2 Installation
 

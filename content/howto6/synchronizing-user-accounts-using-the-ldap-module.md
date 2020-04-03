@@ -12,8 +12,8 @@ Your client might already have a centralized identity management solution in pla
 1.  Open the Mendix Modeler.
 2.  Import the following App Store modules into your application model:
 
-*   [LDAP Synchronization Module](https://appstore.home.mendix.com/link/app/24/Mendix/LDAP-Synchronization-module)
-*   [Encryption](https://appstore.home.mendix.com/link/app/1011/Mendix/Encryption)
+*   [LDAP Synchronization](/appstore/modules/ldap-synchronization)
+*   [Encryption](/appstore/modules/encryption)
 *   [Community Commons Function Library](/appstore/modules/community-commons-function-libraryMendix/Community-Commons-Function-Library)
 
 ## 2\. Configuring the LDAP Synchronization Module
@@ -156,4 +156,4 @@ Note that the scheduled event will always synchronize all enabled LDAP server co
 *   [Importing XML documents](importing-xml-documents)
 *   [Consuming a REST Service](consume-a-rest-service)
 *   [http://www.openldap.org/](http://www.openldap.org/)
-*   [https://appstore.home.mendix.com/link/app/24/Mendix/LDAP-Synchronization-module](https://appstore.home.mendix.com/link/app/24/Mendix/LDAP-Synchronization-module)
+*   [LDAP Synchronization](/appstore/modules/ldap-synchronization)

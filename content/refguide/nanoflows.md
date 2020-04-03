@@ -132,14 +132,17 @@ List activities can be used to create and manipulate lists of objects.
 
 | Graphic | Name | Description |
 | --- | --- | --- |
+| [![aggregate list](attachments/819203/918028.png)](aggregate-list) | [Aggregate list](aggregate-list) | Can be used to calculate aggregated values such as the maximum, minimum, sum, average, and total amount of objects over a list of objects. |
 | [![change list](attachments/819203/918007.png)](change-list) | [Change list](change-list) | Can be used to change the content of a list variable. |
 | [![create list](attachments/819203/918009.png)](create-list) | [Create list](create-list) | Can be used to create a (empty) list variable. |
+| [![list operation](attachments/819203/917792.png)](list-operation) | [List operation](list-operation) | Can be used to combine or compare two lists with objects of the same entity. |
 
 #### 5.4.3 Action Call Activities
 
 
 | Graphic | Name | Description |
 | --- | --- | --- |
+| [![microflow call](attachments/819203/918001.png)](microflow-call) | [Microflow call](microflow-call) | Can be used to call a microflow. Arguments can be passed to the microflow and the result can be stored in a variable. |
 | [![javascript action call](attachments/819203/918008.png)](javascript-action-call) | [JavaScript action call](javascript-action-call) | Can be used to execute a JavaScript action. |
 | [![call nanoflow](attachments/819203/918005.png)](nanoflow-call) | [Call nanoflow](nanoflow-call) | Can be used to call a nanoflow. |
 
@@ -152,7 +155,7 @@ Variable activities can be used to create or change a variable within a microflo
 
 | Graphic | Name | Description |
 | --- | --- | --- |
-| [![cange variable](attachments/819203/918011.png)](change-variable) | [Change variable](change-variable) | Can be used to change the value of a variable. |
+| [![change variable](attachments/819203/918011.png)](change-variable) | [Change variable](change-variable) | Can be used to change the value of a variable. |
 | [![create variable](attachments/819203/918110.png)](create-variable) | [Create variable](create-variable) | Can be used to create a new variable. |
 
 #### 5.4.5 Client Activities
@@ -164,6 +167,7 @@ Client activities can be used to have the web client of your application perform
 | [![close page](attachments/819203/918114.png)](close-page) | [Close page](close-page) | Closes the page that is opened last by the user that calls the microflow in which this activity is used. |
 | [![show page](attachments/819203/917544.png)](show-page) | [Show page](show-page) | Can be used to show a page to the user that calls the microflow in which this activity is used. |
 | [![validation feedback](attachments/819203/918097.png)](validation-feedback) | [Validation feedback](validation-feedback) | Can be used to display red text below a widget that displays an attribute or association. |
+| [![show message](attachments/819203/918099.png)](show-message) | [Show message](show-message) | Can be used to show a blocking or non-blocking message to the user that calls the nanoflow in which this activity is used. |
 
 ### 5.5 Loop
 

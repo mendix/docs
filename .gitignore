@@ -20,6 +20,5 @@ _scripts/hugo_bin
 .vscode/settings.json
 .idea
 
-mx-*
 bin
 content/howto/front-end/calypso.md

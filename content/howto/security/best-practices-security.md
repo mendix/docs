@@ -42,8 +42,8 @@ When you are building an application, you may use [Mendix App Store](https://app
 These are the common cases and best practices:
 
 *	HTML content, usually derived from an HTML editor and displayed using an HTML viewer, format string,  or an email client – these are the ways to avoid this abuse:
-    *	Use the XSSSanitize action from the [CommunityCommons](https://appstore.home.mendix.com/link/app/170/Mendix/Community-Commons-Function-Library) module to strip malicious code from the entered HTML
-    *	Display the value of an attribute as HTML or using the HTMLEncode function from the [CommunityCommons](https://appstore.home.mendix.com/link/app/170/Mendix/Community-Commons-Function-Library) module
+    *	Use the XSSSanitize action from the [CommunityCommons Function Library](/appstore/modules/community-commons-function-libraryMendix/Community-Commons-Function-Library) module to strip malicious code from the entered HTML
+    *	Display the value of an attribute as HTML or using the HTMLEncode function from the [Community Commons Function Library](/appstore/modules/community-commons-function-libraryMendix/Community-Commons-Function-Library) module
 *	Database connections (for example, using the [Database Connector](/appstore/connectors/database-connector)), where user input is being used within constraints – these are the ways to avoid this abuse:
     *	Use prepared statements, which will cause the database-specific connector to take care of escaping the value
     *	Sanity-check your user input (for example, use a regular expression to check if your user input only contains alphanumeric characters, spaces, and dashes)

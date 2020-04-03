@@ -42,7 +42,7 @@ The Push Notifications Connector assumes that the mobile app and the "back-end" 
 The PushNotifications module has two dependencies:
 
  * [Encryption module](https://appstore.home.mendix.com/link/app/1011/Mendix/Encryption)
- * [The Community Commons module](https://appstore.home.mendix.com/link/app/170/)
+ * [Community Commons Function Library](/appstore/modules/community-commons-function-library)
  
 To include these dependencies, download them from the App Store in a way similar to how you installed the PushNotifications module. While importing, you may get a pop-up window with information about overwriting project files, which you can confirm by clicking **OK**.
 

@@ -14,7 +14,7 @@ Your client might already have a centralized identity management solution in pla
 
 *   [LDAP Synchronization Module](https://appstore.home.mendix.com/link/app/24/Mendix/LDAP-Synchronization-module)
 *   [Encryption](https://appstore.home.mendix.com/link/app/1011/Mendix/Encryption)
-*   [Community Commons Function Library](https://appstore.home.mendix.com/link/app/170/Mendix/Community-Commons-Function-Library)
+*   [Community Commons Function Library](/appstore/modules/community-commons-function-libraryMendix/Community-Commons-Function-Library)
 
 ## 2\. Configuring the LDAP Synchronization Module
 

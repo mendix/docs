@@ -9,10 +9,11 @@ tags: ["studio pro"]
 
 ## 1 Introduction
 
-Microflows allow you to express the logic of your application. A microflow can perform actions such as creating and updating objects, showing pages and making choices. It is a visual way of expressing what traditionally ends up in textual program code. Microflows run in the runtime server and can therefore not be used in offline apps.
+Microflows allow you to express the logic of your application. A microflow can perform actions such as creating and updating objects, showing pages and making choices. It is a visual way of expressing what traditionally ends up in textual program code.
+
+Microflows run in the runtime server and can therefore not be used in offline apps. For application logic within offline apps, see [Nanoflows](nanoflows).
 
 This page is a summary of the elements which make up a microflow, together with their visual representation within the microflow. It also covers [keyboard support](#keyboard) when editing microflows.
-
 
 {{% alert type="info" %}}
 For the properties of the microflow itself, see [Microflow Properties](microflow).
@@ -39,8 +40,8 @@ Events represent start and endpoints of a microflow and special operations in a 
 | [![](attachments/microflows-and-nanoflows/917902.png)](start-event) | [Start Event](start-event) | A start event is the starting point of the microflow. A microflow can only have one start event. |
 | [![](attachments/microflows-and-nanoflows/918113.png)](end-event) | [End Event](end-event) | An end event defines the location where the microflow will stop. Depending on the return type of the microflow in some cases a value must be specified. There can be more than one end event. |
 | ![](attachments/16713739/16843951.png) | [Error Event](error-event) | An error event defines a location where the microflow will stop and throw an error that occurred earlier. If you call a microflow, you may want to know whether any errors occurred within the microflow or not. |
-| [![](attachments/microflows-and-nanoflows/918115.png)](continue-event) | [Continue Event](continue-event) | A continue event is used to stop the current iteration of a loop and continue with the next iteration. Please note that continue events can only be used inside a [Loop](loop). |
-| [![](attachments/microflows-and-nanoflows/918026.png)](break-event) | [Break Event](break-event) | A break event is used to stop iterating over the list of objects and continue with the rest of the flow after the loop. Please note that break events can only be used inside a [Loop](loop). |
+| [![](attachments/microflows-and-nanoflows/918115.png)](continue-event) | [Continue Event](continue-event) | A continue event is used to stop the current iteration of a loop and continue with the next iteration. Continue events can only be used inside a [Loop](loop). |
+| [![](attachments/microflows-and-nanoflows/918026.png)](break-event) | [Break Event](break-event) | A break event is used to stop iterating over the list of objects and continue with the rest of the flow after the loop. Break events can only be used inside a [Loop](loop). |
 
 ### 2.2 Flows{#flows}
 
@@ -95,15 +96,15 @@ The microflow editor offers keyboard support for navigating and manipulating mic
 | Key | Effect |
 | --- | --- |
 | Arrow Keys | Select nearby element (activity, event, loop or parameter) in the direction of the arrow. |
-| Enter | Edit the properties of the selected element. |
-| F2 | Rename the item returned by the selected element. |
-| Shift+F2 or just start typing | Edit the caption of the selected element. |
-| Ctrl+Arrow Keys | Move the selected element in the direction of the arrow. |
-| Tab | If a loop is selected, the first element inside the loop will be selected. |
-| Shift+Tab | If an element inside a loop is selected, the loop itself will be selected. |
-| Home | Select the start event. |
-| End | Cycle through the end events. |
-| Context-menu key or Shift-F10 | Open the context-menu for the currently selected element. |
+| <kbd>Enter</kbd> | Edit the properties of the selected element. |
+| <kbd>F2</kbd> | Rename the item returned by the selected element. |
+| <kbd>Shift</kbd> + <kbd>F2</kbd> or just start typing | Edit the caption of the selected element. |
+| <kbd>Ctrl</kbd> + arrow keys | Move the selected element in the direction of the arrow. |
+| <kbd>Tab</kbd> | If a loop is selected, the first element inside the loop will be selected. |
+| <kbd>Shift</kbd> + <kbd>Tab</kbd> | If an element inside a loop is selected, the loop itself will be selected. |
+| <kbd>Home</kbd> | Select the start event. |
+| <kbd>End</kbd> | Cycle through the end events. |
+| Context-menu key or <kbd>Shift</kbd> + <kbd>F10</kbd> | Open the context-menu for the currently selected element. |
 
 ## 4 Microflow Debugging
 

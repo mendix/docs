@@ -128,7 +128,7 @@ Here are a few examples:
 
 ### 2.8 Object
 
-Object properties are passed as an `array` of JavaScript objects. For each configured sub-object, an object will be passed with all the sub-object's properties. These properties are available by their `key`, with values as described throughout the [Values](#values) section.
+Object properties are passed as an `array` of JavaScript objects. For each configured sub-object, an object will be passed with all the sub-object's properties. These properties are available by their `key`, with values as described throughout the [Values API](#values) section.
 
 ### 2.9 File
 
@@ -161,7 +161,7 @@ It is possible to require the following modules:
 
 ### 3.2 Preview Export
 
-The `preview` export is expected to be a `class` or `function` representing a `React` component. This component, the values object (see [Values API](#2-values-api)), and the following properties will be rendered along with the values as properties:
+The `preview` export is expected to be a `class` or `function` representing a `React` component. This component, the values object (see the [Values API](#values) section above), and the following properties will be rendered along with the values as properties:
 
 * `readOnly` (`boolean`): `true` if the widget is read-only (for example, if it is configured to be so due to the `Editability`
   system property, or if it is inside a read-only data view)

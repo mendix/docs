@@ -64,8 +64,8 @@ Date functions, user-role tokens, computations based on tokens, and following as
 
 This property defines the order of the list. The list can be sorted in ascending and descending order on the values of an attribute. If there are objects that have the same attribute value, the list is sorted based on the second attribute (if any) and so on.
 
-## 5 Output Properties
+## 3 Output Properties
 
-### 5.1 List Name or Object Name
+### 3.1 List Name or Object Name
 
 This is the name of the list or object returned by the activity. It can be used by all the activities that follow this activity.

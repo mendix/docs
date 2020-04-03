@@ -3,7 +3,6 @@ title: "Slider"
 category: "Widgets"
 description: "Describes the configuration and usage of the Slider widget, which is available in the Mendix App Store."
 tags: ["app store", "app store component", "widget", "slider", "bound", "platform support"]
-draft: true
 ---
 
 ## 1 Introduction

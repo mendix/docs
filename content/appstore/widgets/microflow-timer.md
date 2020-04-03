@@ -3,7 +3,6 @@ title: "Microflow Timer"
 category: "Widgets"
 description: "Describes the configuration and usage of the Microflow Timer widget, which is available in the Mendix App Store."
 tags: ["app store", "app store component", "widget", "microflow timer", "platform support"]
-draft: true
 ---
 
 ## 1 Introduction

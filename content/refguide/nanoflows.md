@@ -120,8 +120,8 @@ Object activities can be used to create and manipulate objects. The [domain mode
 
 | Graphic | Name | Description |
 | --- | --- | --- |
-| [![change object](attachments/microflows-and-nanoflows/917661.png)](change-object) | [Change object](change-object) | Can be used to change the members of an object. This can be done with or without commiting. |
-| [![commiting objects](attachments/microflows-and-nanoflows/17661961.png)](committing-objects) | [Commit object(s)](committing-objects) | Can be used to commit the changes to one or more objects. |
+| [![change object](attachments/microflows-and-nanoflows/917661.png)](change-object) | [Change object](change-object) | Can be used to change the members of an object. This can be done with or without committing. |
+| [![committing objects](attachments/microflows-and-nanoflows/17661961.png)](committing-objects) | [Commit object(s)](committing-objects) | Can be used to commit the changes to one or more objects. |
 | [![create object](attachments/microflows-and-nanoflows/917756.png)](create-object) | [Create object](create-object) | Can be used to create an object. |
 | [![retrieve](attachments/microflows-and-nanoflows/917866.png)](retrieve) | [Retrieve](retrieve) | Can be used to get one (or more) associated objects of another object. The activity can also get one (or more) objects directly from the database. |
 | [![rollback object](attachments/microflows-and-nanoflows/918119.png)](rollback-object) | [Rollback object](rollback-object) | Can be used to undo the changes (that have not been committed) made to the object in the part of the nanoflow preceding the activity. This also deletes objects that have been created but never committed. |
@@ -132,14 +132,17 @@ List activities can be used to create and manipulate lists of objects.
 
 | Graphic | Name | Description |
 | --- | --- | --- |
+| [![aggregate list](attachments/microflows-and-nanoflows/918028.png)](aggregate-list) | [Aggregate list](aggregate-list) | Can be used to calculate aggregated values such as the maximum, minimum, sum, average, and total amount of objects over a list of objects. |
 | [![change list](attachments/microflows-and-nanoflows/918007.png)](change-list) | [Change list](change-list) | Can be used to change the content of a list variable. |
 | [![create list](attachments/microflows-and-nanoflows/918009.png)](create-list) | [Create list](create-list) | Can be used to create a (empty) list variable. |
+| [![list operation](attachments/microflows-and-nanoflows/917792.png)](list-operation) | [List operation](list-operation) | Can be used to combine or compare two lists with objects of the same entity. |
 
 #### 5.4.3 Action Call Activities
 
 
 | Graphic | Name | Description |
 | --- | --- | --- |
+| [![microflow call](attachments/microflows-and-nanoflows/918001.png)](microflow-call) | [Microflow call](microflow-call) | Can be used to call a microflow. Arguments can be passed to the microflow and the result can be stored in a variable. |
 | [![javascript action call](attachments/microflows-and-nanoflows/918008.png)](javascript-action-call) | [JavaScript action call](javascript-action-call) | Can be used to execute a JavaScript action. |
 | [![call nanoflow](attachments/microflows-and-nanoflows/918005.png)](nanoflow-call) | [Call nanoflow](nanoflow-call) | Can be used to call a nanoflow. |
 
@@ -152,7 +155,7 @@ Variable activities can be used to create or change a variable within a microflo
 
 | Graphic | Name | Description |
 | --- | --- | --- |
-| [![cange variable](attachments/microflows-and-nanoflows/918011.png)](change-variable) | [Change variable](change-variable) | Can be used to change the value of a variable. |
+| [![change variable](attachments/microflows-and-nanoflows/918011.png)](change-variable) | [Change variable](change-variable) | Can be used to change the value of a variable. |
 | [![create variable](attachments/microflows-and-nanoflows/918110.png)](create-variable) | [Create variable](create-variable) | Can be used to create a new variable. |
 
 #### 5.4.5 Client Activities
@@ -164,6 +167,7 @@ Client activities can be used to have the web client of your application perform
 | [![close page](attachments/microflows-and-nanoflows/918114.png)](close-page) | [Close page](close-page) | Closes the page that is opened last by the user that calls the microflow in which this activity is used. |
 | [![show page](attachments/microflows-and-nanoflows/917544.png)](show-page) | [Show page](show-page) | Can be used to show a page to the user that calls the microflow in which this activity is used. |
 | [![validation feedback](attachments/microflows-and-nanoflows/918097.png)](validation-feedback) | [Validation feedback](validation-feedback) | Can be used to display red text below a widget that displays an attribute or association. |
+| [![show message](attachments/microflows-and-nanoflows/918099.png)](show-message) | [Show message](show-message) | Can be used to show a blocking or non-blocking message to the user that calls the nanoflow in which this activity is used. |
 
 ### 5.5 Loop
 

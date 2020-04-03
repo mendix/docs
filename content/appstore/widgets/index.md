@@ -2,7 +2,6 @@
 title: "Widgets"
 description: " "
 tags: ["platform support"]
-draft: true
 ---
 
 ## 1 Introduction

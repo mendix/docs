@@ -63,6 +63,8 @@ $active-color: $color-black;
 
   @include element('loader') {
     display: none;
+    transition: all 0.4s ease-in-out;
+    overflow: hidden;
 
     .svg {
       margin: auto auto;

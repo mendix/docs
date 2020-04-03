@@ -3,7 +3,6 @@ title: "LDAP Synchronization"
 category: "Modules"
 description: "Describes the configuration and usage of the LDAP Synchronization module, which is available in the Mendix App Store."
 tags: ["app store", "app store component", "ldap", "ldap synchronization", "platform support"]
-draft: true
 ---
 
 ## 1 Introduction

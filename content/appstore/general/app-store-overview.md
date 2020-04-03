@@ -20,8 +20,8 @@ The home page of the Mendix App Store presents various content categories:
 
 Category | Description
 --- | ---
+[Connectors](connectors/index), **Mobile**, [Widgets](widgets/index), [Modules](modules/index), [Themes](themes/index), **App Services**, **Add-on Examples**, **Sample Apps** | Add-on categories and sub-categories available in the sidebar menu (for example, **Internet-of-Things** and **Authentication**). 
 **Featured** | The most important and useful App Store content as determined by Mendix (think of it as a "staff picks" section). 
-**Connectors**, **Mobile**, **Widgets**, **Modules**, **Themes**, **App Services**, **Add-on Examples**, **Sample Apps** | Add-on categories and sub-categories (for example, **Internet-of-Things** and **Authentication**). 
 **New content** | The most recently uploaded content. 
 **Recent updates** | The most recently updated content. 
 **Most popular** | Content that has been downloaded the most in the past seven days. 
@@ -61,7 +61,7 @@ The details page for each add-on and app presents the following item information
 
 	![](attachments/app-store-overview/content_detail_5.png)
 
-*  **Documentation** tab – can include details on typical usage scenarios, features and limitations, dependencies, installation and configuration, and frequently asked questions:
+*  **Documentation** tab – can include details on typical usage scenarios, features and limitations, dependencies, installation and configuration, and frequently asked questions; [platform-supported](app-store-content-support#category) components are documented in the various categories of this *App Store Guide*:
 
 	![](attachments/app-store-overview/content_detail_6.png)
 

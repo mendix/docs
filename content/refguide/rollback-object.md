@@ -50,3 +50,15 @@ When inside a microflow that is called from an offline, native, or hybrid app, t
 {{% /alert %}}
 
 Default: *No*
+
+## 3 What Does Rollback Do?
+
+Pressing a Cancel button or triggering a rollback activity will initiate the rollback events. These actions are not triggered in the case of a rollback because of an error.
+
+* Events: all before and after events are executed, and if any before-rollback event returns false, an exception can be thrown
+	* If an exception occurs during an event, all the applied changes are reverted with the default error handling behavior
+	* Changes made prior to the rollback will be kept
+* Database: there is no database communication happening during this event unless it is specified in a before- or after-create event
+* Result: an object with the state **Instantiated** will be removed, and an object with any other state will be reverted back to the values it had during the last commit
+
+![](attachments/object-activities/18582170.png)

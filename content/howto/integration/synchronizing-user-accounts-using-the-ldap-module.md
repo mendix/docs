@@ -13,8 +13,8 @@ Your company might already have a centralized identity management solution in pl
 
 * Import the following App Store modules into your application model:
     * [LDAP Synchronization](/appstore/modules/ldap-synchronization)
-    * [Encryption](h/appstore/modules/encryption)
-    * [Community Commons Function Library](/appstore/modules/community-commons-function-libraryMendix/Community-Commons-Function-Library)
+    * [Encryption](/appstore/modules/encryption)
+    * [Community Commons Function Library](/appstore/modules/community-commons-function-library)
 
 ## 3 Configuring the LDAP Synchronization Module
 

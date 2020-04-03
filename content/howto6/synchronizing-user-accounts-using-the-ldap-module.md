@@ -14,7 +14,7 @@ Your client might already have a centralized identity management solution in pla
 
 *   [LDAP Synchronization](/appstore/modules/ldap-synchronization)
 *   [Encryption](/appstore/modules/encryption)
-*   [Community Commons Function Library](/appstore/modules/community-commons-function-libraryMendix/Community-Commons-Function-Library)
+*   [Community Commons Function Library](/appstore/modules/community-commons-function-library)
 
 ## 2\. Configuring the LDAP Synchronization Module
 

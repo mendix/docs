@@ -59,7 +59,7 @@ As an enumeration is used for the **OrderStatus** attribute, a microflow needs t
 
 ## 5 Using the Application Model Metadata in the Client
 
-In order to set up import templates for importing data, your application model meta data should be reflected in the client. This can be achieved by using [Mx Model reflection](https://appstore.home.mendix.com/link/app/69/Mendix/Mx-Model-reflection). In this part of the How-to you will learn to do so.
+In order to set up import templates for importing data, your application model meta data should be reflected in the client. This can be achieved by using [Mx Model reflection](/appstore/modules/model-reflection). In this part of the How-to you will learn to do so.
 
 1.  Click **Run Locally** to start your application:
 

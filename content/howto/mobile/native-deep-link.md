@@ -36,7 +36,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Complete the [Prerequisites](/howto/mobile/deploying-native-app#prerequisites) section of *How to Deploy Your First Mendix Native App*
 * Install git [command line](https://git-scm.com/downloads) tool
-* Make sure your [Native Mobile Resources](https://appstore.home.mendix.com/link/app/109513/) module is up to date
+* Make sure your [Native Mobile Resources](/appstore/modules/native-mobile-resources) module is up to date
 
 ## 3. Setting up App Deep Linking {#set-up}
 
@@ -144,7 +144,7 @@ Now your app is ready to use links, so you will set up the additional path and q
 
 ### 4.1 Native Deep Link Nanoflow Actions 
 
-Now you have to handle the incoming URL in your Mendix application. To do this, you will use the Nanoflow Actions **Register Deep Link** and **Parse Url To Object** found in the [Native Mobile Resources](https://appstore.home.mendix.com/link/app/109513/) module. This module is automatically included in your app if it began as an up-to-date Starter App. If you do not see these actions available in your app, please update the module through the App Store.
+Now you have to handle the incoming URL in your Mendix application. To do this, you will use the Nanoflow Actions **Register Deep Link** and **Parse Url To Object** found in the [Native Mobile Resources](/appstore/modules/native-mobile-resources) module. This module is automatically included in your app if it began as an up-to-date Starter App. If you do not see these actions available in your app, please update the module through the App Store.
 
 #### 4.1.1 Registering Deep Link
 

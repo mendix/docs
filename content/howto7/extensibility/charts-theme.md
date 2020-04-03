@@ -20,7 +20,7 @@ The look of individual **Charts** widgets can be fine tuned with advanced settin
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Download the latest Mendix desktop modeler
-* Download the latest [Chart Widget](https://appstore.home.mendix.com/link/app/105695/) from the Mendix App Store
+* Download the latest [Chart Widget](/appstore/widgets/charts) from the Mendix App Store
 * Setup a chart: see [How to create a charts](charts-basic-create)
 
 ## 3 Creating a Chart Theme

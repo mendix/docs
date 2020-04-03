@@ -83,7 +83,7 @@ Editability indicates whether the end-user will be able to change the value disp
 
 * **Read-only** – the value is in read-only mode
 
-* **Conditional** – the widget is editable only if specified conditions are met (see the sections below for more information)
+* **Conditional** – the widget is editable only if specified conditions are met  (for more information, see  [Attribute-Based](#attribute-based) and [Attribute Values](#attribute-values) sections below)
 
 	{{%alert type="info" %}}If an attribute set for the widget's data source is of the AutoNumber type, the widget is set into read-only mode by default and the **Editability** setting itself is disabled, because attributes of this type are generated automatically.
 	
@@ -96,35 +96,25 @@ The **Attribute-Based** property is only shown when [Conditional Editability](#e
 
 **Attribute-Based** conditional editability allows you to show widgets only when they match a certain value of the selected attribute. 
 
-{{%alert type="info" %}}The attribute must be of the Boolean or enumeration type.
+{{%alert type="info" %}}
+
+The attribute must be of the Boolean or enumeration type.
 
 {{%/alert %}} 
 
-{{%alert type="info" %}}You can only configure attribute-based conditional visibility when a widget is placed in a data container: a data view or a list view.
+{{%alert type="info" %}}
+
+You can only configure attribute-based conditional editability when a widget is placed in a data container: a data view or a list view.
 
 {{%/alert %}}
 
-#### 3.2.5 Attribute Values
+#### 3.2.5 Attribute Values {#attribute-values}
 
 This property is shown only when an attribute in the [Attribute-Based](#attribute-based) property is selected. The **Attribute Values** property allows you to select certain attribute values.
 
-For example, you would like to make the **City** field editable only when users fill the **Country** field in, because you can deliver your products only to a limited number of countries. So, you need to select *Country* in the **Attribute-Based** property and *Netherlands*, *Belgium*, *Germany*, *France* in as the **Attribute Value**:
+For example, you would like to make the **City** field editable only when users fill the **Country** field in, because you can deliver your products to a limited number of countries. So, you need to select *Country* in the **Attribute-Based** property and *Netherlands*, *Belgium*, *Germany*, *France* in the **Attribute Value** property:
 
 ![](attachments/page-editor-widgets-input-elements/attribute-based-editability.png)
-
-#### 3.2.6 Role-Based {#role-based}
-
-The widget can be made editable to a specific of the user roles available in your app. 
-
-{{% alert type="info" %}}
-
-You can only configure role-based conditional editability when security is enabled. For more information, see [Security, Roles & Permissions](settings-security).
-
-{{% /alert %}}
-
-#### 3.2.7 Roles
-
-The **Roles** property is only shown when the [Role-Based](#role-based) property is enabled and shows a list of roles available in your app. Select the roles that you would like to make a widget editable for. For example, for employee performance review, you would like to make the manager's assessment field editable to users with Manager role only:
 
 #### 3.2.8 Specific Properties
 

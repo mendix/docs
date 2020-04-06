@@ -190,7 +190,7 @@ When the **Subscribe** box is checked next to a favorite component, you will rec
 
 ## 5 Your Company's App Store
 
-### 5.1 Company Content
+### 5.1 Company Content {#company-content}
 
 On this page, you can see all the content your company has published:
 

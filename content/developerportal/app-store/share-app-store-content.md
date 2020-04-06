@@ -207,8 +207,7 @@ To update content that has already been published, follow these steps:
 	
 	![](attachments/share-app-store-content/update_content_1.png)
 	
-	{{% alert type="info" %}}
-	Only one draft version of a component can exist at a time, so when one draft version is in progress, another draft cannot be initiated. If there is a draft version in progress, click **View draft** to see it.
+	{{% alert type="info" %}}Only one draft version of a component can exist at a time, so when one draft version is in progress, another draft cannot be initiated. If there is a draft version in progress, click **View draft** to see it.
 	{{% /alert %}}
 
 3. On the **DRAFT** page, you can edit the content details (as described in the [Adding New App Store Content](#adding) section above).

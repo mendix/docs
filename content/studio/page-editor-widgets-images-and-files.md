@@ -120,7 +120,7 @@ Editability indicates whether the end-user will be able to change the value disp
 
 * **Read-only** – the value is in read-only mode
 
-* **Conditional** – the widget is editable only if specified conditions are met  (for more information, see  [Attribute-Based](#attribute-based) and [Attribute Values](#attribute-values) sections below)
+* **Conditional** – the widget is editable only if specified conditions are met based on an attribute value (for more information, see  [Attribute-Based](#attribute-based) and [Attribute Values](#attribute-values) sections below) or based on an expression. You can create a condition based on an expression in Studio Pro only (for details, see the [Editability Section](/refguide/common-widget-properties#editability) in *Properties Common in the Page Editor*)
 
   {{%alert type="info" %}}If an attribute set for the widget's data source is of the AutoNumber type, the widget is set into read-only mode by default and the **Editability** setting itself is disabled, because attributes of this type are generated automatically.
 
@@ -140,7 +140,7 @@ The attribute must be of the Boolean or enumeration type.
 
 {{%alert type="info" %}}
 
-You can only configure attribute-based conditional editability when a widget is placed in a data container: a data view or a list view.
+You can only configure attribute-based conditional editability when a widget is placed in a data container: a data view or a list view. For more information on how to place widgets on a page, see [Adding Elements on a Page](page-editor#adding-elements) section in *Pages*. 
 
 {{%/alert %}}
 

@@ -103,10 +103,10 @@ During the synchronization, changed and new objects are committed. An object's s
 
 To avoid the problems mentioned above, we suggest following these best practices:
 
-* Do not remove, rename, or change the type of entities or their attributes in offline apps after your initial release. This may cause objects or values to be no longer accessible to offline users. If needed, you can do an "in-between" release that is still backwards-compatible, and then make the changes in the next release after all the apps are synchronized.
-* Do not delete objects which can be synced to offline users. This will result in lost changes on those objects when attempted to synchronize them.
-* Avoid using domain-level validation for offline entities – use nanoflows or input validation instead. It is also a good practice to validate again on the server using microflows.
-* When committing objects that are being referenced by other objects, make sure the other objects are also committed.
+* Do not remove, rename, or change the type of entities or their attributes in offline apps after your initial release — this may cause objects or values to be no longer accessible to offline users (if needed, you can do an "in-between" release that is still backwards-compatible, and then make the changes in the next release after all the apps are synchronized)
+* Do not delete objects which can be synced to offline users (this will result in lost changes on those objects when attempted to synchronize them)
+* Avoid using domain-level validation for offline entities – use nanoflows or input validation instead (it is also a good practice to validate again on the server using microflows)
+* When committing objects that are being referenced by other objects, make sure the other objects are also committed
 
 If synchronization is triggered using a synchronize action in a nanoflow and an error occurs, it is possible to handle the error gracefully using the nanoflow error handling.
 

@@ -147,10 +147,6 @@ module.exports = {
       to: "/developerportal/app-store/"
     },
 	{
-      from: "/community/app-store/app-store-overview",
-      to: "/developerportal/app-store/app-store-overview"
-    },
-	{
       from: "/deployment/mendixcloud/sending-email",
       to: "/developerportal/deploy/sending-email"
     },
@@ -205,16 +201,24 @@ module.exports = {
       from: "/developerportal/deploy/integrate-with-mendix-sso",
       to: "/developerportal/deploy/mendix-sso"
     },
+	/****************************************************
+     * App Store Guide (permanent, unmapped) 
+     ****************************************************/	
+	{
+      from: "/community/app-store/app-store-overview",
+      to: "/appstore/general/app-store-overview"
+    },
+	
     /****************************************************
      * From the App Store (permanent, mapped)
      ****************************************************/
 	{
 	  from: "/community/app-store/use-app-store-content-in-the-modeler",
-	  to: "/developerportal/app-store/app-store-content"
+	  to: "/appstore/general/app-store-content"
     },
 	{
       from: "/developerportal/app-store/use-app-store-content-in-the-modeler",
-      to: "/developerportal/app-store/app-store-content"
+      to: "/appstore/general/app-store-content"
     },
 	{
       from: "/mendixcloud/java-in-the-cloud",
@@ -397,7 +401,7 @@ module.exports = {
      ****************************************************/
 	{
       from: "/community/app-store-content-support",
-      to: "/developerportal/app-store/app-store-content-support"
+      to: "/appstore/general/app-store-content-support"
     },
 	{
       from: "/mendixcloud/custom-domains",

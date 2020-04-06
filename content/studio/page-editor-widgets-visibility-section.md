@@ -7,16 +7,16 @@ tags: ["studio", "page editor", "widgets", "on click action", "events"]
 
 ## 1 Introduction 
 
-The **Conditional Visibility** section in **Properties** allows you to hide a widget from a page unless the certain conditions are met. You can hide widgets based on the following conditions:
+The **Conditional Visibility** section in widget properties allows you allows you to show a widget only when certain conditions are met. You can make widgets visible based on the following conditions:
 
 * [An attribute value of a widget](#attribute-based)
 * [User roles in your app](#role-based) 
 
-For example, you have a web shop and you do not want to bother users with filling in the same address twice when the delivery address matches the billing address. You would like to show fields to fill the billing address in only when a user checks *Yes* for the **Is billing address different from the delivery address?** option. In this case you can make the billing address fields visible based on an *attribute value*: the field will be displayed only when the *BillingAddressDifferent* is ticked (set to *true*):
+For example, you have a web shop and you do not want to bother users with filling in the same address twice when the delivery address matches the billing address. You would like to show fields to fill the billing address in only when a user unchecks the **Is billing address the same as the delivery address?** option. In this case you can make the billing address fields visible based on an *attribute value*: the field will be displayed only when the *BillingAddressSame* is unticked (set to *false*):
 
 ![](attachments/page-editor-widgets-visibility-section/attribute-based-example.png)
 
-You can also hide a widget from a certain *user role*. For example, you can hide a widget showing salary amounts from all users except Finance Managers. 
+You can also show a widget to a certain *user role* only. For example, you can show a widget showing salary amounts only to Finance Managers. 
 
 ## 2 Conditional Visibility Properties
 
@@ -48,7 +48,7 @@ For example, you would like to show a special offer price only for customers wit
 
 ### 2.3 Role-Based {#role-based}
 
-The widget can be made visible to a specific of the user roles available in your app. When enabled, this setting will render the widget invisible to all users that are not linked to one of the selected user roles.
+The widget can be made visible to a specific of the user roles available in your app. When enabled, this setting will render the widget visible to all users that are linked to one of the selected user roles.
 
 {{% alert type="info" %}}
 
@@ -77,7 +77,7 @@ To configure attribute-based visibility, do the following:
 3. In the **Select Attribute** dialog box, select an attribute of the Boolean or enumeration type and click **Select**.
 
 4. The **Attribute Values** property is now displayed in properties. Untick the values that does not meet the conditions you would like to set:
-    <img src="attachments/page-editor-widgets-visibility-section/attribute-values.png" style="zoom:50%;" /> 
+    <img src="attachments/page-editor-widgets-visibility-section/attribute-values.png" style="zoom:60%;" /> 
 
 Attribute-based conditional visibility is set for the widget.
 

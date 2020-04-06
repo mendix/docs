@@ -9,12 +9,13 @@ These release notes cover changes made to the [Mendix App Store](/developerporta
 
 ## 2020
 
-### April 07th, 2020
+### April 7th, 2020
 
-#### Security Fix
+#### Security Fix Needed for App Store in Studio Pro
 
-The download of private content in the Studio Pro Appstore tab has been temporarily disabled due to a potential security vulnerability that was recently discovered. This will be enabled again in one of our future releases of Studio Pro planned for later this year.
-The latest version of the private content can meanwhile be downloaded from [My App Store](https://appstore.home.mendix.com/link/myappstore) -> Company Content
+Downloading [private content](/developerportal/app-store/share-app-store-content#private-app-store) from the App Store available in Studio Pro has been temporarily disabled due to a potential security vulnerability. This will be enabled again in a future release.
+
+You can continue downloading the latest version of private App Store content from the [Company Content](/developerportal/app-store/app-store-overview#company-content) page in the [Mendix App Store](https://appstore.home.mendix.com/).
 
 ### February 26th, 2020
 

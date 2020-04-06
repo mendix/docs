@@ -11,7 +11,7 @@ These release notes cover changes made to the [Mendix App Store](/developerporta
 
 ### April 7th, 2020
 
-#### Security Fix Needed for App Store in Studio Pro/Desktop Modeler
+#### Security Fix Needed for App Store in Studio Pro/Desktop Modeler {#private-fix}
 
 Downloading [private content](/developerportal/app-store/share-app-store-content#private-app-store) from the App Store available in Studio Pro/Desktop Modeler has been temporarily disabled due to a security vulnerability.
 

@@ -117,7 +117,11 @@ Name: {EventName}
 Description: {EventDescription}
 ```
 
-### 2.7 Attribute
+### 2.7 Action
+
+When an action is set, an empty object `{}` is passed to indicate that an action has been set. When no client action is set, the passed value will be `null`.
+
+### 2.8 Attribute
 
 A string containing the path of the selected attribute will be passed.
 
@@ -126,11 +130,11 @@ Here are a few examples:
 * `EventName`
 * `MyFirstModule.EventSchedule_Event/MyFirstModule.Event/EventName`
 
-### 2.8 Object
+### 2.9 Object
 
 Object properties are passed as an `array` of JavaScript objects. For each configured sub-object, an object will be passed with all the sub-object's properties. These properties are available by their `key`, with values as described throughout the [Values API](#values) section.
 
-### 2.9 File
+### 2.10 File
 
 A string containing the path of the selected file entity will be passed.
 
@@ -168,22 +172,18 @@ The `preview` export is expected to be a `class` or `function` representing a `R
 * `className` (`string`): the classes from the system, which will include manually configured classes through the `class`
   property in Studio Pro, and the classes resulting from configured design properties
 * `style` (`string`): a string representation of the styles as entered in the `style` property in Studio Pro
-* `styleObj` (`React.CSSProperties`): a parsed variant of `style` in the format as how React components expect their
-  `style` attribute
 
-Assuming a pluggable widget with a string property `content` and an `integer` property `padding`, the following shows a simple preview component:
+Assuming a pluggable widget with the string properties `content` and `style`, the following shows a simple preview component:
 
 ```tsx
 type Props = {
     content: string;
-    padding: number;
+    style: string;
     className: string;
-    styleObj: React.CSSProperties;
 }
 
 export const preview: React.FC<Props> = (props) => (
-    <div className={`my-pw-container ${props.className}`}
-         style={{ ...props.styleObj, padding: props.padding }}>
+    <div className={`my-pw-container ${props.className}`} style={props.style}>
         {props.content}
     </div>
 );

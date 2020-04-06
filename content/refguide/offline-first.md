@@ -134,9 +134,9 @@ Mendix helps developers in building rich offline-first apps. However, there are 
 
 Microflows cannot be called directly from offline apps. However, before- and after-commit microflows still run during synchronization, which can be used for application logic on the server.
 
-### 4.4.1 Offline Microflow Best Practices {#offline-mf-best-practices}
+### 4.1.1 Offline Microflow Best Practices {#offline-mf-best-practices}
 
-To make microflow calls work from offline-first apps, Mendix stores some information in the offline app about the microflows which is called from the app. This means that changes to microflows used from offline apps must be backwards-compatible, because there can be older apps which have not received an OTA update yet. All microflow calls from such a device will still contain the old microflow call configuration in nanoflows, which means that the request might fail.
+To make microflow calls work from offline-first apps, Mendix stores some microflow information in the offline app. That information is called from the app. This means that changes to microflows used from offline apps must be backwards-compatible, because there can be older apps which have not received an over the air update yet. All microflow calls from such a device will still contain the old microflow call configuration in nanoflows, which means that the request might fail. For more information on over the air updates, see [How to Use Over the Air Updates](/howto/mobile/how-to-ota).
 
 To avoid backwards-compatibility errors in offline microflow calls after the initial release, we suggest these best practices:
 

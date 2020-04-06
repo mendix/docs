@@ -13,21 +13,36 @@ This activity can be used in both **Microflows** and **Nanoflows**.
 
 The **Commit** activity can commit one or more objects. For persistable entities this means that the object will be stored in the database. Committing non-persistable entities stores the current attribute values and association values in memory, this allows a rollback to revert to those values. See also [Persistability](persistability).
 
-{{% alert type="info" %}}
+## 2 Properties
 
-See [Common Properties](microflow-element-common-properties) for properties that all microflow activities share (for example, caption). This page only describes the properties specific to the action.
+An example of commit object(s) properties is represented in the image below:
 
-{{% /alert %}}
+![commit object(s) properties](attachments/object-activities/commit-properties.png)
 
-## 2 Input Properties
+There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the left.
 
-### 2.1 Object or List
+The commit object(s) properties pane consist of the following sections:
+
+* [Action](#action)
+* [Common](#common)
+
+## 3 Action{#action}
+
+The Action section of the properties pane shows the action associated with this activity.
+
+You can open a dialog box to configure this action by clicking the ellipsis (**…**) next to the action.
+
+You can also open the dialog box by right-clicking the activity in the microflow and selecting **Properties**.
+
+### 3.1 Input Section
+
+#### 3.1.1 Object or List
 
 The object or list of objects that you want to commit.
 
-## 3 Action Properties
+### 3.2 Action Section
 
-### 3.1 With Events
+#### 3.2.1 With Events
 
 Indicates whether or not to execute the commit event handlers of the objects.
 
@@ -37,7 +52,7 @@ Nanoflows do not have this property. Committing while running in an online app s
 
 {{% /alert %}}
 
-### 3.2 Refresh in Client
+#### 3.2.2 Refresh in Client{#refresh-in-client}
 
 If the microflow is called from the client, the change is not reflected in the client if **Refresh in client** is set to *No*. If set to *Yes*, the object is refreshed across the client, which includes reloading the relevant [data sources](data-sources).
 
@@ -59,7 +74,11 @@ When inside a microflow that is called from an offline, native, or hybrid app, t
 
 Default: *No*
 
-## 4 How Commits Work
+## 4 Common Section{#common}
+
+{{% snippet file="refguide/microflow-common-section-link.md" %}}
+
+## 5 How Commits Work
 
 When an object is committed through a default Save button, a commit activity, or web services, it will always trigger the commit events. The platform will also evaluate all associated objects. To guarantee data consistency, the platform may also autocommit associated objects.
 
@@ -83,3 +102,4 @@ For both explicitly committed and autocommitted objects, the following will occu
 * Result: an object with the state Instantiated will be inserted into the database, and an object with any other state will be updated
 
 ![](attachments/object-activities/18582172.png)
+

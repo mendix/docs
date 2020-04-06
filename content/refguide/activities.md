@@ -7,9 +7,13 @@ tags: ["studio pro", "microflows", "nanoflows", "activity"]
 
 ## 1 Introduction
 
-Activities represent the actions that are executed in a microflow or a nanoflow.
+Activities define the actions that are executed in a microflow or a nanoflow.
 
-Available types of activities are described below.
+There are different types of activity, and these are grouped together in the Studio Pro toolbox. All the activities are listed below, follow the links for more information.
+
+{{% alert type="info" %}}
+Most activities can be used in both microflows and nanoflows. However, some can only be used in one of these types of flow, or the behavior may differ between microflows and nanoflows. Follow the links for more information.
+{{% /alert %}}
 
 ## 2 Object Activities
 
@@ -17,11 +21,11 @@ Object activities can be used to create and manipulate objects. The [domain mode
 
 | Graphic | Name | Description |
 | --- | --- | --- |
-| [![cast object](attachments/microflows-and-nanoflows/918013.png)](cast-object) | [Cast object](cast-object) | Can be used in combination with an [object type decision](object-type-decision) to use the specialized members of the object. For more information on the specialized members of an object, see [Entities](entities) |
-| [![change object](attachments/microflows-and-nanoflows/917661.png)](change-object) | [Change object](change-object) |Can be used to change the members of an object. This can be done with or without commiting, and with or without events. |
+| [![cast object](attachments/microflows-and-nanoflows/918013.png)](cast-object) | [Cast object](cast-object) *(microflows only)* | Can be used in combination with an [object type decision](object-type-decision) to use the specialized members of the object. For more information on the specialized members of an object, see [Entities](entities) |
+| [![change object](attachments/microflows-and-nanoflows/917661.png)](change-object) | [Change object](change-object) |Can be used to change the members of an object. This can be done with or without committing, and with or without events. |
 | [![commit object](attachments/microflows-and-nanoflows/17661961.png)](committing-objects) | [Commit object(s)](committing-objects) | Can be used to commit changes to one or more objects. |
 | [![create object](attachments/microflows-and-nanoflows/917756.png)](create-object) | [Create object](create-object) | Can be used to create an object. |
-| [![delete object](attachments/microflows-and-nanoflows/918191.png)](deleting-objects) | [Delete object(s)](deleting-objects) | Can be used to delete an object. |
+| [![delete object](attachments/microflows-and-nanoflows/918191.png)](deleting-objects) | [Delete object(s)](deleting-objects) *(microflows only)* | Can be used to delete an object. |
 | [![retrieve](attachments/microflows-and-nanoflows/917866.png)](retrieve) | [Retrieve](retrieve) | Can be used to get one (or more) associated objects of another object. Furthermore, this activity can also get one or more objects directly from a database. |
 | [![rollback object](attachments/microflows-and-nanoflows/918119.png)](rollback-object) | [Rollback object](rollback-object) | Can be used to undo uncommitted changes that were made to an object in the part of the microflow preceding the activity. Furthermore, it deletes objects that have been created but have never been committed. |
 

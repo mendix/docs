@@ -146,8 +146,7 @@ To avoid backwards-compatibility errors in offline microflow calls after the ini
 * Do not change return types
 * Do not delete a microflow before making sure that all devices have received an update
 
-If you want to deviate from the practices outlined above, introduce a new microflow. You can change the contents of the microflow,
-but keep in mind that older apps might call the new version of the microflow until they are updated.
+If you want to deviate from the practices outlined above, introduce a new microflow. You can change the contents of the microflow, but keep in mind that older apps might call the new version of the microflow until they are updated.
 
 ### 4.2 Autonumbers & Calculated Attributes {#autonumbers}
 

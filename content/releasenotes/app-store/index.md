@@ -11,11 +11,13 @@ These release notes cover changes made to the [Mendix App Store](/developerporta
 
 ### April 7th, 2020
 
-#### Security Fix Needed for App Store in Studio Pro
+#### Security Fix Needed for App Store in Studio Pro/Desktop Modeler
 
-Downloading [private content](/developerportal/app-store/share-app-store-content#private-app-store) from the App Store available in Studio Pro has been temporarily disabled due to a potential security vulnerability. This will be enabled again in a future release.
+Downloading [private content](/developerportal/app-store/share-app-store-content#private-app-store) from the App Store available in Studio Pro/Desktop Modeler has been temporarily disabled due to a security vulnerability. 
 
-You can continue downloading the latest version of private App Store content from the [Company Content](/developerportal/app-store/app-store-overview#company-content) page in the [Mendix App Store](https://appstore.home.mendix.com/).
+You will be able to download private content from the App Store available in Studio Pro/Desktop Modeler again in a future [8.x](../studio-pro/8), [8.6.x](../studio-pro/8.6), and  [7.23.x](../studio-pro/7.23) release. This functionality will then only be available in those and subsequent versions. This functionality will not be available again for the App Store in Desktop Modeler version [6](../studio-pro/6).
+
+You can continue downloading the latest version of private App Store content from the [Company Content](/developerportal/app-store/app-store-overview#company-content) page in the [Mendix App Store](https://appstore.home.mendix.com/) and use it in the respective versions of Studio Pro/Desktop Modeler.
 
 ### February 26th, 2020
 

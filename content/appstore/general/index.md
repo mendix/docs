@@ -1,11 +1,9 @@
 ---
-title: "App Store"
+title: "General Info"
 description: "Presents details on using, sharing, and getting support on Mendix App Store content."
 ---
 
 ## 1 Introduction
-
-Mendix Studio Pro contains a lot of out-of-the-box widgets such as data grids and snippets. However, if you want to extend your application with more widgets and modules (for example, the [Forgot Password](/appstore/modules/forgot-password) module, simple charts, an [Excel importer](/appstore/modules/excel-importer), and other features, you need to add content from the [Mendix App Store](https://appstore.home.mendix.com/). The App Store contains many useful and reusable widgets and modules created by Mendix as well as by our partners and community.
 
 Mendix delivers a robust platform for the rapid development of apps. To make your development move even more quickly, you can use content from the App Store. In addition to downloading content from the App Store, you can upload items you have developed to share and help the whole Mendix community.
 

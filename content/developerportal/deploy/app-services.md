@@ -79,7 +79,7 @@ By selecting **Application**, you can publish the application's model in the Men
 
 Click **Go to App Store** to publish your app's model.
 
-For more information, see [How to Share App Store Content](../app-store/share-app-store-content).
+For more information, see [How to Share App Store Content](/appstore/general/share-app-store-content).
 
 ## 4 Widget
 
@@ -87,10 +87,9 @@ By selecting **Widget**, you can upload a widget to the Mendix App Store.
 
 Click **Go to App Store** to upload your widget.
 
-For more information, see [How to Share App Store Content](../app-store/share-app-store-content).
+For more information, see [How to Share App Store Content](/appstore/general/share-app-store-content).
 
 ## 5 Read More
 
 * [Deploy and Manage](/developerportal/deploy)
 * [Published App Service](/refguide/published-app-services)
-* [How to Share App Store Content](../app-store/share-app-store-content)

@@ -77,7 +77,7 @@ The **App Store** section of the Mendix community site presents the latest updat
 
 Click the item name to go to its page in the App Store, where you can read a detailed description of the content and check out some user reviews. Click **View all Apps** to go to the main Mendix App Store page, where you can see featured and new content, recent updates, reviews, and the top contributors to the Mendix App Store.
 
-For more information, see the [App Store Overview](../app-store/app-store-overview).
+For more information, see the [App Store Overview](/appstore/general/app-store-overview) in the *App Store Guide*.
 
 ## 7 Documentation
 

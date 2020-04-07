@@ -66,45 +66,37 @@ This API helps you to understand pluggable widgets, how they extend app function
 
 For details, see [Pluggable Widgets API](pluggable-widgets).
 
-## 11 Profile API
-
-Use this API to retrieve the profile information of your application users from the Mendix Platform so that they do not have to fill in their profile for every new app.
-
-This is part of the [AppCloudServices](https://appstore.home.mendix.com/link/app/934/) module.
-
-For details, see [Profile API](profile-api).
-
-## 12 Projects API
+## 11 Projects API
 
 This API allows you to programmatically create an app project in your company space and move working copies between the [Team Server](/developerportal/develop/team-server) and the Model Server.
 
 For details, see [Project API](projects-api).
 
-## 13 Runtime API {#runtime}
+## 12 Runtime API {#runtime}
 
 All the functionality and information from both the application model and [Mendix Runtime](/refguide/runtime) is accessible via this API.
 
 Continue on to the [Runtime API](runtime-api).
 
-## 14 Stories API
+## 13 Stories API
 
 Use this API to extend the [requirements and project management](/developerportal/develop/planning-development) capabilities of the Mendix Platform, or connect third-party service management and project management tools.
 
 For details, see [Stories API](stories-api).
 
-## 15 Team Server API {#team-server-api}
+## 14 Team Server API {#team-server-api}
 
 This API enables retrieving information (branches, revisions) about application models stored in Team Server. You always access an application model via the context of an application (for more information about retrieving apps and app identities, see [Deploy API](#deploy-api)).
 
 For details, see [Team Server API](team-server-api).
 
-## 16 User Management API
+## 15 User Management API
 
 Use this API to integrate your company's user management systems with the Mendix Platform. You can then create and manage user accounts and security groups as well as define group policies for your applications.
 
 For details, see [User Management API](user-management-api).
 
-## 17 Webhooks
+## 16 Webhooks
 
 Webhooks allow you to build or set up Mendix Platform connectors that subscribe to certain events on the [Developer Portal](/developerportal/index).
 

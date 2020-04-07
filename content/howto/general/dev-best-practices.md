@@ -106,7 +106,7 @@ Generally, [microflow](/refguide/microflows) names should include the type of ev
 
 There are exceptions, such as where there is no main entity, or there is another reason to use a different name to improve understandability. The important thing is to make sure the name of the microflow clearly indicates its purpose.
 
-To easily find and recognize the purpose of a microflow, you can use standard prefixes. Common purposes or events and their standard prefixes are listed below. If a microflow is triggered by several events you can consider using more than one prefix.
+To easily find and recognize the purpose of a microflow, you can use standard prefixes. Common purposes or events and their standard prefixes are listed below. If a microflow is triggered by several events, consider using more than one prefix. If a microflow does not comply to any of the patterns listed below, it should not have a prefix.
 
 #### 3.4.1 Entity Event Microflows
 

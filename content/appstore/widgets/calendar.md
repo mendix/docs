@@ -3,6 +3,7 @@ title: "Calendar"
 category: "Widgets"
 description: "Describes the configuration and usage of the Calendar widget, which is available in the Mendix App Store."
 tags: ["app store", "app store component", "widget", "calendar", "platform support"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction

@@ -58,7 +58,7 @@ In this section, you will learn how to add a widget to your app project. You can
 
 To add the Radio Button List widget from the App Store via Studio Pro, follow these steps:
 
-1. Download the [Radio Button List](https://appstore.home.mendix.com/link/app/20/) widget (for reference, follow the steps in the [Downloading Content from the App Store](#downloading2) section above).
+1. Download the [Radio Button List](/appstore/widgets/radio-button-list) widget (for reference, follow the steps in the [Downloading Content from the App Store](#downloading2) section above).
 2.  A widget downloaded from the App Store is placed in your app project structure. You can find the widget and start using it in the following ways:
 
 	* Click **Add widget**, then browse the list of **Add-on widgets**:
@@ -103,7 +103,7 @@ To resolve this widget error, follow these steps:
 
 ## 5 Using a Module in Studio Pro {#downloading}
 
-In addition to widgets, you can download entire modules from the App Store (for example, the [Excel Importer](https://appstore.home.mendix.com/link/app/72/)). The modules include whole functionalities and integrations that can be very helpful when you are building your applications.
+In addition to widgets, you can download entire modules from the App Store (for example, the [Excel Importer](/appstore/modules/excel-importer)). The modules include whole functionalities and integrations that can be very helpful when you are building your applications.
 
 In this section, you will learn how to add the Google Maps module as an example scenario. You can follow the same steps to download any App Store module you need.
 
@@ -126,7 +126,7 @@ To add the Google Maps module from the App Store via Studio Pro, follow these st
 
 ### 5.2 Using the Module
 
-Each module that you download from the App Store is different, and some modules might lead to errors because they are connected to other modules. For example, if you download the [Excel Importer](https://appstore.home.mendix.com/link/app/72/) module, you will also need to download the Mx Model Reflection module to make the errors disappear. If you run into any problems, always check the **Documentation** tab specific to the App Store component for installation guidelines and details on any dependencies.
+Each module that you download from the App Store is different, and some modules might lead to errors because they are connected to other modules. For example, if you download the [Excel Importer](/appstore/modules/excel-importer) module, you will also need to download the Mx Model Reflection module to make the errors disappear. If you run into any problems, always check the **Documentation** tab specific to the App Store component for installation guidelines and details on any dependencies.
 
 {{% alert type="warning" %}}
 Sometimes additional widgets are added when you download a module. For example, the Google Maps widget is included when you download the Google Maps module.

@@ -143,10 +143,6 @@ module.exports = {
       to: "/developerportal/support/"
     },
 	{
-      from: "/community/app-store/",
-      to: "/developerportal/app-store/"
-    },
-	{
       from: "/deployment/mendixcloud/sending-email",
       to: "/developerportal/deploy/sending-email"
     },
@@ -208,7 +204,10 @@ module.exports = {
       from: "/community/app-store/app-store-overview",
       to: "/appstore/general/app-store-overview"
     },
-	
+	{
+      from: "/community/app-store/",
+      to: "/appstore/index"
+    },
     /****************************************************
      * From the App Store (permanent, mapped)
      ****************************************************/

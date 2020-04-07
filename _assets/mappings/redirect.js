@@ -198,7 +198,7 @@ module.exports = {
       to: "/developerportal/deploy/mendix-sso"
     },
 	/****************************************************
-     * App Store Guide (permanent, unmapped) 
+     * App Store Guide (permanent, mapped & unmapped) 
      ****************************************************/	
 	{
       from: "/community/app-store/app-store-overview",

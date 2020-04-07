@@ -207,6 +207,22 @@ module.exports = {
 	{
       from: "/community/app-store/",
       to: "/appstore/index"
+    },	
+	{
+      from: "/developerportal/app-store/app-store-content",
+      to: "/appstore/general/app-store-content"
+    },	
+	{
+      from: "/developerportal/app-store/app-store-content-support",
+      to: "/appstore/general/app-store-content-support"
+    },
+	{
+      from: "/developerportal/app-store/app-store-overview",
+      to: "/appstore/general/app-store-overview"
+    },
+	{
+      from: "/developerportal/app-store/share-app-store-content",
+      to: "/appstore/general/share-app-store-content"
     },
     /****************************************************
      * From the App Store (permanent, mapped)

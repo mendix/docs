@@ -44,15 +44,7 @@ Use this API to build on top of the [feedback management](/developerportal/colla
 
 For details, see [Feedback API](feedback-api).
 
-## 8 Invite API
-
-Use this API to invite new users directly from your applications or allow your existing users to do so themselves.
-
-This is part of the [AppCloudServices](https://appstore.home.mendix.com/link/app/934/) module.
-
-For details, see [Invite API](invite-api).
-
-## 9 Permissions API
+## 8 Permissions API
 
 With this API, you can retrieve the [user roles](/refguide/user-roles) of your application users so you can grant them specific access levels to the application.
 
@@ -60,43 +52,43 @@ This is part of the [AppCloudServices](https://appstore.home.mendix.com/link/app
 
 For details, see [Permissions API](permissions-api).
 
-## 10 Pluggable Widgets API
+## 9 Pluggable Widgets API
 
 This API helps you to understand pluggable widgets, how they extend app functionality, and how they can be built to interact with Mendix's APIs.
 
 For details, see [Pluggable Widgets API](pluggable-widgets).
 
-## 11 Projects API
+## 10 Projects API
 
 This API allows you to programmatically create an app project in your company space and move working copies between the [Team Server](/developerportal/develop/team-server) and the Model Server.
 
 For details, see [Project API](projects-api).
 
-## 12 Runtime API {#runtime}
+## 11 Runtime API {#runtime}
 
 All the functionality and information from both the application model and [Mendix Runtime](/refguide/runtime) is accessible via this API.
 
 Continue on to the [Runtime API](runtime-api).
 
-## 13 Stories API
+## 12 Stories API
 
 Use this API to extend the [requirements and project management](/developerportal/develop/planning-development) capabilities of the Mendix Platform, or connect third-party service management and project management tools.
 
 For details, see [Stories API](stories-api).
 
-## 14 Team Server API {#team-server-api}
+## 13 Team Server API {#team-server-api}
 
 This API enables retrieving information (branches, revisions) about application models stored in Team Server. You always access an application model via the context of an application (for more information about retrieving apps and app identities, see [Deploy API](#deploy-api)).
 
 For details, see [Team Server API](team-server-api).
 
-## 15 User Management API
+## 14 User Management API
 
 Use this API to integrate your company's user management systems with the Mendix Platform. You can then create and manage user accounts and security groups as well as define group policies for your applications.
 
 For details, see [User Management API](user-management-api).
 
-## 16 Webhooks
+## 15 Webhooks
 
 Webhooks allow you to build or set up Mendix Platform connectors that subscribe to certain events on the [Developer Portal](/developerportal/index).
 

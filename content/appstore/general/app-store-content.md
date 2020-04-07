@@ -111,7 +111,7 @@ In this section, you will learn how to add the Google Maps module as an example 
 
 To add the Google Maps module from the App Store via Studio Pro, follow these steps:
 
-1. Download the [Google Maps](https://appstore.home.mendix.com/link/app/48911/).
+1. Download the [Google Maps Module](https://appstore.home.mendix.com/link/app/174/).
 2.  In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your project:
 
 	![](attachments/app-store-content/18580431.png)

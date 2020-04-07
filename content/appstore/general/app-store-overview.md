@@ -1,6 +1,6 @@
 ---
 title: "App Store Overview"
-category: "App Store"
+category: "General Info"
 menu_order: 10
 description: "Presents an overview of how to find and use content from the Mendix App Store."
 tags: ["app store", "widget", "connector", "module", "partner"]

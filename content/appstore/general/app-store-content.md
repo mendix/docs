@@ -1,6 +1,6 @@
 ---
 title: "Use App Store Content"
-category: "App Store"
+category: "General Info"
 menu_order: 20
 tags: ["app store", "Studio Pro"]
 description: "Covers the basics of how to access the App Store from Studio Pro and provides examples of how to add a widget and module to your app."

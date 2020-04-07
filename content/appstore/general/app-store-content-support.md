@@ -1,6 +1,6 @@
 ---
 title: "App Store Content Support"
-category: "App Store"
+category: "General Info"
 menu_order: 40
 tags: ["app store", "support", "platform support", "community support", "deprecated"]
 description: "Describes the various levels of support available for using App Store content in your Mendix apps."

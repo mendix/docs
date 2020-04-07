@@ -1,7 +1,7 @@
 ---
 title: "Commit Object(s)"
 parent: "object-activities"
-menu_order: 3
+menu_order: 30
 tags: ["studio pro"]
 ---
 
@@ -21,7 +21,7 @@ An example of commit object(s) properties is represented in the image below:
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the left.
 
-The commit object(s) properties pane consist of the following sections:
+The commit object(s) properties pane consists of the following sections:
 
 * [Action](#action)
 * [Common](#common)
@@ -32,7 +32,7 @@ The Action section of the properties pane shows the action associated with this 
 
 You can open a dialog box to configure this action by clicking the ellipsis (**…**) next to the action.
 
-You can also open the dialog box by right-clicking the activity in the microflow and selecting **Properties**.
+You can also open the dialog box by double-clicking the activity in the microflow or right-clicking the activity and selecting **Properties**.
 
 ### 3.1 Input Section
 
@@ -44,41 +44,57 @@ The object or list of objects that you want to commit.
 
 #### 3.2.1 With Events
 
+{{% alert type="info" %}}
+This property is for microflows only.
+{{% /alert %}}
+
 Indicates whether or not to execute the commit event handlers of the objects.
 
-{{% alert type="warning" %}}
+Default: *Yes*
 
-Nanoflows do not have this property. Committing while running in an online app sends a commit request to the Mendix Runtime and always runs the events. If the commit object(s) action is used in an offline app, the changes are committed to the offline database, and event handlers will run when the offline app synchronizes.
+**Events in nanoflows**
 
-{{% /alert %}}
+Nanoflows do not have this property.
+
+If the commit object(s) action is used in an online app, it sends a commit request to the Mendix Runtime and always runs the events.
+
+If the commit object(s) action is used in an offline app, the changes are committed to the offline database, and event handlers are run when the offline app synchronizes.
 
 #### 3.2.2 Refresh in Client{#refresh-in-client}
 
-If the microflow is called from the client, the change is not reflected in the client if **Refresh in client** is set to *No*. If set to *Yes*, the object is refreshed across the client, which includes reloading the relevant [data sources](data-sources).
+This setting defines how changes are reflected in the pages presented to the end-user.
+
+Default: *No*
+
+**Microflow is called from the client in an online app.**
+
+If **Refresh in client** is set to *No*, the change is not reflected in the client.
+
+If set to *Yes*, the object is refreshed across the client, which includes reloading the relevant [data sources](data-sources).
 
 {{% alert type="info" %}}
-All attribute values are reflected in the client, including virtual ones, even if **Refresh in client** is set to *No*.
+Changed attribute values are *always* reflected in the client. The object is refreshed from the Mendix Runtime, which includes updating virtual attributes. 
 {{% /alert %}}
 
 {{% alert type="warning" %}}
 When committing a large number of objects, we recommend that you do not enable 'Refresh in client' because it can slow things down.
 {{% /alert %}}
 
-{{% alert type="warning" %}}
+**Microflow is called in an offline, native, or hybrid app**
+
+When inside a microflow that is called from an offline, native, or hybrid app, the **Refresh in client** option is ignored and functions as if it was set to **No**.
+
+For more information, see the [Microflows](offline-first#microflows) section of the *Offline-First Reference Guide*.
+
+**Action is in a nanoflow.**
+
 When inside a [nanoflow](nanoflows), the object is refreshed across the client as if **Refresh in client** was set to *Yes*.
-{{% /alert %}}
-
-{{% alert type="warning" %}}
-When inside a microflow that is called from an offline, native, or hybrid app, the **Refresh in client** option is ignored and functions as if it was set to **No**. For more information, see the [Microflows](offline-first#microflows) section of the *Offline-First Reference Guide*.
-{{% /alert %}}
-
-Default: *No*
 
 ## 4 Common Section{#common}
 
 {{% snippet file="refguide/microflow-common-section-link.md" %}}
 
-## 5 How Commits Work
+## 5 How Commits Work{#how-commits-work}
 
 When an object is committed through a default Save button, a commit activity, or web services, it will always trigger the commit events. The platform will also evaluate all associated objects. To guarantee data consistency, the platform may also autocommit associated objects.
 
@@ -102,4 +118,3 @@ For both explicitly committed and autocommitted objects, the following will occu
 * Result: an object with the state Instantiated will be inserted into the database, and an object with any other state will be updated
 
 ![](attachments/object-activities/18582172.png)
-

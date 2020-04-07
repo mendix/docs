@@ -1,7 +1,7 @@
 ---
 title: "Cast Object"
 parent: "object-activities"
-menu_order: 1
+menu_order: 10
 tags: ["studio pro"]
 ---
 
@@ -23,7 +23,7 @@ An example of cast object properties is represented in the image below:
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the left.
 
-The cast object properties pane consist of the following sections:
+The cast object properties pane consists of the following sections:
 
 * [Action](#action)
 * [Common](#common)
@@ -34,7 +34,7 @@ The Action section of the properties pane shows the action associated with this 
 
 You can open a dialog box to configure this action by clicking the ellipsis (**…**) next to the action.
 
-You can also open the dialog box by right-clicking the activity in the microflow and selecting **Properties**.
+You can also open the dialog box by double-clicking the activity in the microflow or right-clicking the activity and selecting **Properties**.
 
 ### 3.1 Output Section
 

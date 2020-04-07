@@ -39,7 +39,7 @@ Static property types are exposed with their configured value as a JavaScript va
 
 For `enumeration` properties, the currently selected option's `key` will be used as the value.
 
-### 2.2 Icon
+### 2.2 Icon {#icon}
 
 This property appears as follows:
 
@@ -78,7 +78,7 @@ by Studio and Studio Pro's Design mode. It will be an empty string value if no i
 
 For the `"dynamic"` type, `entity` is available. It represents the entity where the selected image's data is stored. It will be an empty string value if no entity has been selected.
 
-### 2.4 Widgets
+### 2.4 Widgets {#widgets}
 
 This property appears as follows:
 
@@ -117,7 +117,11 @@ Name: {EventName}
 Description: {EventDescription}
 ```
 
-### 2.7 Attribute
+### 2.7 Action
+
+When an action is set, an empty object `{}` is passed to indicate that an action has been set. When no client action is set, the passed value will be `null`.
+
+### 2.8 Attribute
 
 A string containing the path of the selected attribute will be passed.
 
@@ -126,11 +130,11 @@ Here are a few examples:
 * `EventName`
 * `MyFirstModule.EventSchedule_Event/MyFirstModule.Event/EventName`
 
-### 2.8 Object
+### 2.9 Object
 
-Object properties are passed as an `array` of JavaScript objects. For each configured sub-object, an object will be passed with all the sub-object's properties. These properties are available by their `key`, with values as described throughout the [Values](#values) section.
+Object properties are passed as an `array` of JavaScript objects. For each configured sub-object, an object will be passed with all the sub-object's properties. These properties are available by their `key`, with values as described throughout the [Values API](#values) section.
 
-### 2.9 File
+### 2.10 File
 
 A string containing the path of the selected file entity will be passed.
 
@@ -161,29 +165,25 @@ It is possible to require the following modules:
 
 ### 3.2 Preview Export
 
-The `preview` export is expected to be a `class` or `function` representing a `React` component. This component, the values object (see [Values API](#2-values-api)), and the following properties will be rendered along with the values as properties:
+The `preview` export is expected to be a `class` or `function` representing a `React` component. This component, the values object (see the [Values API](#values) section above), and the following properties will be rendered along with the values as properties:
 
 * `readOnly` (`boolean`): `true` if the widget is read-only (for example, if it is configured to be so due to the `Editability`
   system property, or if it is inside a read-only data view)
 * `className` (`string`): the classes from the system, which will include manually configured classes through the `class`
   property in Studio Pro, and the classes resulting from configured design properties
 * `style` (`string`): a string representation of the styles as entered in the `style` property in Studio Pro
-* `styleObj` (`React.CSSProperties`): a parsed variant of `style` in the format as how React components expect their
-  `style` attribute
 
-Assuming a pluggable widget with a string property `content` and an `integer` property `padding`, the following shows a simple preview component:
+Assuming a pluggable widget with the string properties `content` and `style`, the following shows a simple preview component:
 
 ```tsx
 type Props = {
     content: string;
-    padding: number;
+    style: string;
     className: string;
-    styleObj: React.CSSProperties;
 }
 
 export const preview: React.FC<Props> = (props) => (
-    <div className={`my-pw-container ${props.className}`}
-         style={{ ...props.styleObj, padding: props.padding }}>
+    <div className={`my-pw-container ${props.className}`} style={props.style}>
         {props.content}
     </div>
 );
@@ -191,7 +191,7 @@ export const preview: React.FC<Props> = (props) => (
 
 #### 3.2.1 Using a Widgets Property
 
-A [Widgets Property](#2-4-widgets) contains a `renderer` field that allows its content to be rendered when filled, or shows an empty drop-zone when empty inside the preview. It requires a single, empty, DOM node as a child in which to render the contents:
+A [Widgets Property](#widgets) contains a `renderer` field that allows its content to be rendered when filled, or shows an empty drop-zone when empty inside the preview. It requires a single, empty, DOM node as a child in which to render the contents:
 
 ```tsx
 type Props = {
@@ -212,7 +212,7 @@ export const preview: React.FC<Props> = (props) => {
 
 #### 3.2.2 Using an Icon Property
 
-The preview module provides a component to preview an [icon property](#2-2-icon) in the same way as the
+The preview module provides a component to preview an [icon property](#icon) in the same way as the
 `Icon` component in the client would. This component can be imported from `"mendix/components/web/Icon"` and accepts
 the `IconProperty` as `icon` parameter.
 

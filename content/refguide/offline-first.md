@@ -103,10 +103,10 @@ During the synchronization, changed and new objects are committed. An object's s
 
 To avoid the problems mentioned above, we suggest following these best practices:
 
-* Do not remove, rename, or change the type of entities or their attributes in offline apps after your initial release. This may cause objects or values to be no longer accessible to offline users. If needed, you can do an "in-between" release that is still backwards-compatible, and then make the changes in the next release after all the apps are synchronized.
-* Do not delete objects which can be synced to offline users. This will result in lost changes on those objects when attempted to synchronize them.
-* Avoid using domain-level validation for offline entities – use nanoflows or input validation instead. It is also a good practice to validate again on the server using microflows.
-* When committing objects that are being referenced by other objects, make sure the other objects are also committed.
+* Do not remove, rename, or change the type of entities or their attributes in offline apps after your initial release — this may cause objects or values to be no longer accessible to offline users (if needed, you can do an "in-between" release that is still backwards-compatible, and then make the changes in the next release after all the apps are synchronized)
+* Do not delete objects which can be synced to offline users (this will result in lost changes on those objects when attempted to synchronize them)
+* Avoid using domain-level validation for offline entities – use nanoflows or input validation instead (it is also a good practice to validate again on the server using microflows)
+* When committing objects that are being referenced by other objects, make sure the other objects are also committed
 
 If synchronization is triggered using a synchronize action in a nanoflow and an error occurs, it is possible to handle the error gracefully using the nanoflow error handling.
 
@@ -161,6 +161,20 @@ Changes to persistable objects made in a microflow will not be reflected on the 
 
 * Returning an object or a list of persistable entity is not supported.
 * Returning an object or a list of a non-persistable entity that has an association with a persistable entity is not supported (such association can be an indirect association).
+
+### 4.1.1 Offline Microflow Best Practices {#offline-mf-best-practices}
+
+To make microflow calls work from offline-first apps, Mendix stores some microflow information in the offline app. That information is called from the app. This means that changes to microflows used from offline apps must be backwards-compatible, because there can be older apps which have not received an over the air update yet. All microflow calls from such a device will still contain the old microflow call configuration in nanoflows, which means that the request might fail. For more information on over the air updates, see [How to Use Over the Air Updates](/howto/mobile/how-to-ota).
+
+To avoid backwards-compatibility errors in offline microflow calls after the initial release, we suggest these best practices:
+
+* Do not rename microflows or move them to different modules
+* Do not rename modules that contain microflows called from offline apps
+* Do not add, remove, rename, or change types of microflow parameters
+* Do not change return types
+* Do not delete a microflow before making sure that all devices have received an update
+
+If you want to deviate from the practices outlined above, introduce a new microflow. You can change the contents of the microflow, but keep in mind that older apps might call the new version of the microflow until they are updated.
 
 ### 4.2 Autonumbers & Calculated Attributes {#autonumbers}
 

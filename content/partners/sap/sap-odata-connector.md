@@ -621,7 +621,7 @@ This is the name that you give the result of your Activity. This can be used lat
 * [Data Types](/refguide/data-types)
 * [Domain Model](/refguide/domain-model)
 * [Entities](/refguide/entities)
-* [How to Use App Store Content](/developerportal/app-store/app-store-content)
+* [How to Use App Store Content](/appstore/general/app-store-content)
 * [How to Use the OData Connector for SAP Solutions](/partners/sap/use-sap-odata-connector)
 * [How to Use the OData Model Creator for SAP Solutions](/partners/sap/use-sap-odata-model-creator)
 * [SAP Cloud Connector](sap-cloud-connector)

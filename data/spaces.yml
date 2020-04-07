@@ -132,7 +132,6 @@ developerportal:
     - "Operations"
     - "App Settings"
     - "Community Tools"
-    - "App Store"
     - "Mendix Support"
 studio:
   space: "Studio 8 Guide"
@@ -178,6 +177,7 @@ appstore:
   space: "App Store Guide"
   priority: false
   menu_categories:
+    - "General Info"
     - "Connectors"
     - "Widgets"
     - "Modules"

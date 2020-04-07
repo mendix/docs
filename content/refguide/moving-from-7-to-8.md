@@ -243,7 +243,7 @@ To resolve this issue, use the previous version of Mendix to change the invalid 
 
 ### 9.2 DOM and Atlas UI Issues
 
-Mendix 8 comes with several improvements to its DOM structure. These DOM changes will affect the Sass styling of app projects. Because of these updates, Mendix 8 app projects are designed to be completed using [Atlas UI Resources](https://appstore.home.mendix.com/link/app/104730/) (v2.0.0 or higher). Upgrading your Atlas UI can cause issues with your app project's theming. To troubleshoot either DOM or Atlas UI migration issues, consult the following documents:
+Mendix 8 comes with several improvements to its DOM structure. These DOM changes will affect the Sass styling of app projects. Because of these updates, Mendix 8 app projects are designed to be completed using [Atlas UI Resources](/appstore/modules/atlas-ui-resources) (v2.0.0 or higher). Upgrading your Atlas UI can cause issues with your app project's theming. To troubleshoot either DOM or Atlas UI migration issues, consult the following documents:
 
 * [Troubleshooting DOM Changes](migration-dom-issues)
 * [Troubleshooting Atlas UI Changes](migration-atlas)

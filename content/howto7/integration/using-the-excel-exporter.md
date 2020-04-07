@@ -11,7 +11,7 @@ It is standard Mendix functionality to export items from a data grid in a Mendix
 
 ## 2 Downloading the Required App Store Modules
 
-In this section, you will learn how to download the necessary modules from the Mendix App Store. In just a few clicks, the modules will be imported into your app project. The modules required for this process are [Mx Model Reflection](https://appstore.home.mendix.com/link/app/69/) and [Excel Exporter](https://appstore.home.mendix.com/link/app/726/).
+In this section, you will learn how to download the necessary modules from the Mendix App Store. In just a few clicks, the modules will be imported into your app project. The modules required for this process are [Mx Model Reflection](/appstore/modules/model-reflection) and [Excel Exporter](/appstore/modules/excel-exporter).
 
 {{% alert type="info" %}}
 The Mx Model Reflection module is used in most Mendix apps. The purpose of this module is to enable the app to reflect into the domain model (entities and attributes) and microflow definitions at runtime.

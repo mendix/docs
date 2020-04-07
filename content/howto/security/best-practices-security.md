@@ -42,9 +42,9 @@ When you are building an application, you may use [Mendix App Store](https://app
 These are the common cases and best practices:
 
 *	HTML content, usually derived from an HTML editor and displayed using an HTML viewer, format string,  or an email client – these are the ways to avoid this abuse:
-    *	Use the XSSSanitize action from the [CommunityCommons](https://appstore.home.mendix.com/link/app/170/Mendix/Community-Commons-Function-Library) module to strip malicious code from the entered HTML
-    *	Display the value of an attribute as HTML or using the HTMLEncode function from the [CommunityCommons](https://appstore.home.mendix.com/link/app/170/Mendix/Community-Commons-Function-Library) module
-*	Database connections (for example, using a [Database Connector](https://appstore.home.mendix.com/link/app/2888/Mendix/Database-Connector)), where user input is being used within constraints – these are the ways to avoid this abuse:
+    *	Use the XSSSanitize action from the [CommunityCommons Function Library](/appstore/modules/community-commons-function-library) module to strip malicious code from the entered HTML
+    *	Display the value of an attribute as HTML or using the HTMLEncode function from the [Community Commons Function Library](/appstore/modules/community-commons-function-library) module
+*	Database connections (for example, using the [Database Connector](/appstore/connectors/database-connector)), where user input is being used within constraints – these are the ways to avoid this abuse:
     *	Use prepared statements, which will cause the database-specific connector to take care of escaping the value
     *	Sanity-check your user input (for example, use a regular expression to check if your user input only contains alphanumeric characters, spaces, and dashes)
 
@@ -88,7 +88,7 @@ Your application might require sensitive information that should be extra encryp
 * Connection information for consumed services (like credentials, service locations, or keys)
 * Personal information (like bank account numbers or social security numbers)
 
-This data is defined within the domain model and stored within the database of your application. To minimize the impact of this information when it is leaked, we recommend storing this data in a (symmetric) encrypted manner. The [Encryption module](https://appstore.home.mendix.com/link/app/1011/Mendix/Encryption) available from the Mendix App Store provides a way to encrypt this sensitive information in a database record based on an encryption key that is stored at the Mendix application server.
+This data is defined within the domain model and stored within the database of your application. To minimize the impact of this information when it is leaked, we recommend storing this data in a (symmetric) encrypted manner. The [Encryption](/appstore/modules/encryption) module available from the Mendix App Store provides a way to encrypt this sensitive information in a database record based on an encryption key that is stored at the Mendix application server.
 
 ## 7 Using a Third-Party Identity Provider
 
@@ -96,8 +96,8 @@ When developing an application, authentication is one of the basic consideration
 
 Mendix offers a range of App Store modules that enable your application to be connected with these services, including:
 
-* [SAML](https://appstore.home.mendix.com/link/app/1174/Mendix/SAML)
-* [LDAP](https://appstore.home.mendix.com/link/app/24/Mendix/LDAP-Synchronization-module)
+* [SAML](/appstore/modules/saml)
+* [LDAP Synchronization](/appstore/modules/ldap-synchronization)
 
 Your application can gain the following benefits from using an identity provider:
 
@@ -179,4 +179,4 @@ Security in Mendix does not include scanning files that end-users upload or down
 To scan uploaded files for malicious content, do one of the following:
 
 * Create a custom module and configure the functionality yourself.
-* Check available modules in the [Mendix App Store](https://appstore.home.mendix.com/index3.html). For more information on how to use the Mendix App Store content, see [How to Use the App Store Content](/developerportal/app-store/app-store-content).
+* Check available modules in the [Mendix App Store](https://appstore.home.mendix.com/index3.html). For more information on how to use the Mendix App Store content, see [How to Use App Store Content](/appstore/general/app-store-content).

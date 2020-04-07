@@ -1,6 +1,6 @@
 ---
 title: "App Store Overview"
-category: "App Store"
+category: "General Info"
 menu_order: 10
 description: "Presents an overview of how to find and use content from the Mendix App Store."
 tags: ["app store", "widget", "connector", "module", "partner"]
@@ -20,12 +20,12 @@ The home page of the Mendix App Store presents various content categories:
 
 Category | Description
 --- | ---
+[Connectors](../connectors/index), **Mobile**, [Widgets](../widgets/index), [Modules](../modules/index), [Themes](../themes/index), **App Services**, **Add-on Examples**, **Sample Apps** | Add-on categories and sub-categories available in the sidebar menu (for example, **Internet-of-Things** and **Authentication**). 
 **Featured** | The most important and useful App Store content as determined by Mendix (think of it as a "staff picks" section). 
-**Connectors**, **Mobile**, **Widgets**, **Modules**, **Themes**, **App Services**, **Add-on Examples**, **Sample Apps** | Add-on categories and sub-categories (for example, **Internet-of-Things** and **Authentication**). 
 **New content** | The most recently uploaded content. 
 **Recent updates** | The most recently updated content. 
 **Most popular** | Content that has been downloaded the most in the past seven days. 
-**Reviews** | The most recent content reviews along with the author and date of the review. Clicking the name of the review author will bring you to their [Mendix Profile](../mendix-profile/index). Clicking the title of an App Store component will allow you to see the details of what was reviewed. 
+**Reviews** | The most recent content reviews along with the author and date of the review. Clicking the name of the review author will bring you to their [Mendix Profile](/developerportal/mendix-profile/index). Clicking the title of an App Store component will allow you to see the details of what was reviewed. 
 **Top App Store contributors** | The top 10 App Store contributors of the last 30 days. Clicking the name of the developer will bring you to their Mendix Profile. Clicking **View full leaderboard** will take you to the [Mendix Leaderboards](https://developer.mendixcloud.com/link/topappstore30).
 
 ## 3 Add-On Details Page {#details}
@@ -61,7 +61,7 @@ The details page for each add-on and app presents the following item information
 
 	![](attachments/app-store-overview/content_detail_5.png)
 
-*  **Documentation** tab – can include details on typical usage scenarios, features and limitations, dependencies, installation and configuration, and frequently asked questions:
+*  **Documentation** tab – can include details on typical usage scenarios, features and limitations, dependencies, installation and configuration, and frequently asked questions; [platform-supported](app-store-content-support#category) components are documented in the various categories of this *App Store Guide*:
 
 	![](attachments/app-store-overview/content_detail_6.png)
 
@@ -109,7 +109,7 @@ In the **Developer Info** section, you can see the following information:
 	* Clicking the developer name will bring you to their [Mendix Profile](/developerportal/mendix-profile/index)
 * The numbers for **Added items**, **Updated items**, and **Reviews added** in the Mendix App Store
 * The company for which the developer works
-	* Clicking the company name will bring you to the company's [Partner Profile](../community-tools/how-to-set-up-your-partner-profile)
+	* Clicking the company name will bring you to the company's [Partner Profile](/developerportal/community-tools/how-to-set-up-your-partner-profile)
 
 ## 4 My App Store
 
@@ -217,7 +217,7 @@ This page contains reviews of **Your company's content** as well as **Your compa
 You can configure user groups for various levels of access to your company's App Store. The available configuration tabs for each user group page are described in the sections below.
 
 {{% alert type="info" %}}
-The **User Groups** menu item and page are visible to all users. However, only [Company Admins](../company-app-roles/companyadmin-settings) with the [Can manage Company](../company-app-roles/manage-roles#app-store-manager) permission can create and delete user groups. Both [Group Admins](#members) and Company Admins can manage user groups.
+The **User Groups** menu item and page are visible to all users. However, only [Company Admins](/developerportal/company-app-roles/companyadmin-settings) with the [Can manage Company](/developerportal/company-app-roles/manage-roles#app-store-manager) permission can create and delete user groups. Both [Group Admins](#members) and Company Admins can manage user groups.
 {{% /alert %}}
 
 #### 5.3.1 Members Tab {#members}

@@ -129,7 +129,7 @@ You can add large attachments such as project files to the request. Please note 
 * Reproducible steps
 
 {{% alert type="info" %}}
-Not all App Store content is compatible with every version of Studio Pro, and not all App Store content is supported by Mendix. For more information, see [App Store Content Support](/developerportal/app-store/app-store-content-support).
+Not all App Store content is compatible with every version of Studio Pro, and not all App Store content is supported by Mendix. For more information, see [App Store Content Support](/appstore/general/app-store-content-support).
 {{% /alert %}}
 
 ### 5.6 Mobile Problems

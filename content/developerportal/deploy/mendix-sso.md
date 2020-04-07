@@ -3,7 +3,7 @@ title: "Mendix Single Sign-On"
 parent: "mendix-cloud-deploy"
 menu_order: 70
 description: "Use the MendixSSO module to add Single Sign-on to your app using the user's Mendix credentials"
-tags: ["SSO", "Single Sign-on", "Mendix credentials"]
+tags: ["SSO", "Single Sign-on", "Mendix credentials", "MendixSSO"]
 #draft: true
 #Ownership claimed by Identity Services Team.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -30,7 +30,7 @@ You can see if your app has the MendixSSO module, and which version it has, by l
 
 ![](attachments/mendix-sso/mxsso-app-store-module.png)
 
-If your app does not have the MendixSSO module, it is available from the Mendix App Store here: [Mendix SSO](https://appstore.home.mendix.com/link/app/111349/Mendix/MendixSSO-(for-Mendix-7)). Follow the instructions in [How To Use App Store Content](/developerportal/app-store/app-store-content) to import it into your app and then follow the instructions in [Setting Up Mendix Single Sign-On](#setting-up), below.
+If your app does not have the MendixSSO module, it is available from the Mendix App Store here: [Mendix SSO](https://appstore.home.mendix.com/link/app/111349/Mendix/MendixSSO-(for-Mendix-7)). Follow the instructions in [How to Use App Store Content](/appstore/general/app-store-content) to import it into your app and then follow the instructions in [Setting Up Mendix Single Sign-On](#setting-up), below.
 
 If you need a newer version of the MendixSSO module (for example, to use a new feature), then it is also available from the App Store via the same link.
 

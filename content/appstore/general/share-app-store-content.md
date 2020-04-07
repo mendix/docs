@@ -1,6 +1,6 @@
 ---
 title: "Share App Store Content"
-category: "App Store"
+category: "General Info"
 menu_order: 30
 tags: ["app store", "public app store", "private app store", widget", "module"]
 description: "Describes how to create and share Mendix App Store content."
@@ -35,8 +35,8 @@ Submitted App Store content will be reviewed within five working days.
 These are some general guidelines for creating new App Store content :
 
 * Set up a separate project to build and maintain your App Store component
-* Use a relatively recent Mendix version when creating the item, not only the latest Mendix version (for example, use Mendix 7.8 and 6.6 )
-* Create multiple versions of your App Store component (for example, for Mendix 7 and 6)
+* Use a relatively recent Mendix version when creating the item, not only the latest Mendix version
+* Create multiple versions of your App Store component (for example, for Studio Pro 8 and Desktop Modeler 7)
 
 Any information the end-user should know about your content can be written on the [Documentation tab](#doc-tab) when you are adding the content to the App Store.
 
@@ -63,7 +63,7 @@ To develop modules and submit them to the App Store, follow these guidelines:
 * Create a folder named **USE_ME** and add the microflows and pages that are relevant for the user
 * Create an empty folder with the version number as its name, which will appear in Studio Pro's Project Explorer
 * If you add any userlib *jar* files, make sure they are accompanied by a *MyModule.RequiredLib* file so that users know where the *jar* files come from
-* Verify that the module's Java actions compile correctly (the easiest way to check is to create a deployment package, as it will clean the deployment folder and rebuild the app; for more information, see [Create Deployment Package Dialog](/developerportal/deploy/environments) and [Environments](../deploy/environments))
+* Verify that the module's Java actions compile correctly (the easiest way to check is to create a deployment package, as it will clean the deployment folder and rebuild the app; for more information, see [Create Deployment Package Dialog](/developerportal/deploy/environments) and [Environments](/developerportal/deploy/environments))
 * Reduce the use of layouts – using snippets will result in fewer module dependencies and will reduce the number of potential errors (for example, missing layouts)
 * User roles and security should be implemented 
 * Creating a new release or module export should be done while the security level of the project containing the module is set to **Production**
@@ -99,10 +99,10 @@ To add content to the App Store, follow these steps:
 		a. Select the type of GitHub profile (**Organisation** or **User**) where the content is stored.<br />
 		b. Enter the **GitHub profile name**.<br />
 		c. Click **Check** to confirm that this profile is publicly available in GitHub.<br />
-		d. Select the **GitHub repo** from which the content will be uploaded by clicking **Select**.<br/>The system will crawl all of the projects for that GitHub profile and present the Mendix package file (*.mpk*) options to you in a pop-up window.<br/>
+		d. Select the **GitHub repo** from which the content will be uploaded by clicking **Select**. The system will crawl all of the projects for that GitHub profile and present the Mendix package file (*.mpk*) options to you in a pop-up window.<br/>
 		e. Click **Select** on this window when you find the correct *.mpk* file name.<br />
 		f. Select the **release** by clicking **Select**. If there are various releases of the *.mpk* file available, the system will present them to you in a pop-up window. When you find the correct release, click **Select** on this window.<br />
-		g. Check the **Use GitHub README for documentation** check box if you want the repo's *readme.md* file to be included on the App Store component's [Documentation tab](#doc-tab).<br/>This is useful for including nicely formatted documentation with screenshots for your App Store component.<br />
+		g. Check the **Use GitHub README for documentation** check box if you want the repo's *README.md* file to be included on the App Store component's [Documentation tab](#doc-tab). This is useful for including nicely formatted documentation with screenshots for your App Store component.<br />
 		{{% alert type="info" %}}The **Release notes** section is only available for updating a new version of the content (for details see the  [Updating Existing App Store Content](#updating) section below).{{% /alert %}}<br />
 
 		{{% image_container width="400" %}}![](attachments/share-app-store-content/add_content_1.png)

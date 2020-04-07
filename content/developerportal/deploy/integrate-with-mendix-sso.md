@@ -321,9 +321,9 @@ To test your implementation, deploy to the Mendix Cloud, and browse to your app,
 
 When part of your app targets anonymous users, there are anonymous pages in your app. You need to support the case where users login to your app with their Mendix account from an anonymous page.
 
-To solve this problem, add somewhere in the anonymously accessible part of your app a link to `/openid/login`. Use the [HTML/JavaScript Snippet](https://appstore.home.mendix.com/link/app/56/) widget from the App Store to create a link. Set the content of the snippet to: `<a href="/openid/login">Sign in with your Mendix account</a>`
+To solve this problem, add somewhere in the anonymously accessible part of your app a link to `/openid/login`. Use the [HTML/JavaScript Snippet](/appstore/widgets/html-javascript-snippet) widget from the App Store to create a link. Set the content of the snippet to: `<a href="/openid/login">Sign in with your Mendix account</a>`
 
-To try out your implementation, deploy your app to the Mendix Cloud, and go to your app, e.g., `https://yourapp.mendixcloud.com/`. Go to the page where you inserted the link, and click it. You should be redirected to the Mendix Account login page, and then back to your app, to the (role-based) homepage of the user with which you logged in.
+To try out your implementation, deploy your app to the Mendix Cloud, and go to your app (for example, `https://yourapp.mendixcloud.com/`). Go to the page where you inserted the link, and click it. You should be redirected to the Mendix Account login page, and then back to your app, to the (role-based) homepage of the user with which you logged in.
 
 ### 3.4 Users Can Sign in with a Mendix or Local Account from an Anonymous Session
 

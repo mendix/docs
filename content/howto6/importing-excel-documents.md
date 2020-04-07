@@ -15,7 +15,7 @@ Before you continue, make sure that you know how to create:
 *   **Overview and detail pages** ([Creating your first two overview and detail pages](create-your-first-two-overview-and-detail-pages)).
 *   **Menu items** ([Setting Up the Navigation Structure](setting-up-the-navigation-structure)).
 *   **Microflows** ([Create your first Microflow: Hello World!](create-your-first-microflow-hello-world)
-*   **Add Appstore content** ([Use App Store Content](/developerportal/app-store/app-store-content)).
+*   **Add Appstore content** ([Use App Store Content](/appstore/general/app-store-content)).
 *   **Secure applications** ([Creating a secure app](create-a-secure-app)).
 
 Follow these steps:
@@ -44,7 +44,7 @@ As an enumeration is used for the **OrderStatus** attribute, a microflow needs t
 
 ## 3 Use the application model meta data in the client
 
-In order to set up import templates for importing data, your application model meta data should be reflected in the client. This can be achieved by using [Mx Model reflection](https://appstore.home.mendix.com/link/app/69/Mendix/Mx-Model-reflection). In this part of the How-to you will learn to do so.
+In order to set up import templates for importing data, your application model meta data should be reflected in the client. This can be achieved by using [Mx Model reflection](/appstore/modules/model-reflection). In this part of the How-to you will learn to do so.
 
 1.  Click on **Run Locally** to start your application.
 

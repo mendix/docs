@@ -35,13 +35,6 @@ module.exports = {
       to: "/partners/siemens/mindsphere-module-details"
     },
 	/****************************************************
-     * From https://www.npmjs.com/package/mendixmodelsdk (potentially temporary until fixed)
-     ****************************************************/
-	{
-      from: "/MXSDK/Your+learning+path+for+the+Mendix+SDK",
-      to: "/apidocs-mxsdk/mxsdk/"
-    },	
-	/****************************************************
      * PERMANENT REDIRECTS
      ****************************************************/
 	 /****************************************************
@@ -150,14 +143,6 @@ module.exports = {
       to: "/developerportal/support/"
     },
 	{
-      from: "/community/app-store/",
-      to: "/developerportal/app-store/"
-    },
-	{
-      from: "/community/app-store/app-store-overview",
-      to: "/developerportal/app-store/app-store-overview"
-    },
-	{
       from: "/deployment/mendixcloud/sending-email",
       to: "/developerportal/deploy/sending-email"
     },
@@ -212,16 +197,43 @@ module.exports = {
       from: "/developerportal/deploy/integrate-with-mendix-sso",
       to: "/developerportal/deploy/mendix-sso"
     },
+	/****************************************************
+     * App Store Guide (permanent, mapped & unmapped) 
+     ****************************************************/	
+	{
+      from: "/community/app-store/app-store-overview",
+      to: "/appstore/general/app-store-overview"
+    },
+	{
+      from: "/community/app-store/",
+      to: "/appstore/index"
+    },	
+	{
+      from: "/developerportal/app-store/app-store-content",
+      to: "/appstore/general/app-store-content"
+    },	
+	{
+      from: "/developerportal/app-store/app-store-content-support",
+      to: "/appstore/general/app-store-content-support"
+    },
+	{
+      from: "/developerportal/app-store/app-store-overview",
+      to: "/appstore/general/app-store-overview"
+    },
+	{
+      from: "/developerportal/app-store/share-app-store-content",
+      to: "/appstore/general/share-app-store-content"
+    },
     /****************************************************
      * From the App Store (permanent, mapped)
      ****************************************************/
 	{
 	  from: "/community/app-store/use-app-store-content-in-the-modeler",
-	  to: "/developerportal/app-store/app-store-content"
+	  to: "/appstore/general/app-store-content"
     },
 	{
       from: "/developerportal/app-store/use-app-store-content-in-the-modeler",
-      to: "/developerportal/app-store/app-store-content"
+      to: "/appstore/general/app-store-content"
     },
 	{
       from: "/mendixcloud/java-in-the-cloud",
@@ -404,7 +416,7 @@ module.exports = {
      ****************************************************/
 	{
       from: "/community/app-store-content-support",
-      to: "/developerportal/app-store/app-store-content-support"
+      to: "/appstore/general/app-store-content-support"
     },
 	{
       from: "/mendixcloud/custom-domains",

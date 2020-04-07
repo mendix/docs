@@ -14,6 +14,7 @@ You build Mendix native mobile apps the same way you build web or hybrid apps. Y
 ## 2 Documents in This Section
 
 * [Get Started with Native Mobile](getting-started-with-native-mobile)
+* [Set Up Remote Notifications](setting-up-native-push-notifications)
 * [Use Remote Notifications](native-remote-notifications)
 * [Use Local Notifications](local-notif-parent)
 * [Work with Parallels](using-mendix-studio-pro-on-a-mac)
@@ -22,4 +23,5 @@ You build Mendix native mobile apps the same way you build web or hybrid apps. Y
 * [Deploy Your First Mendix Native App](deploying-native-app)
 * [Use Local Notifications](local-notif-parent)
 * [Create a Custom Developer App](how-to-devapps)
+* [Set Up Deep Links in Native Apps](native-deep-link)
 

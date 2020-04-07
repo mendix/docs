@@ -70,11 +70,11 @@ If you have custom widgets or JavaScript actions which use an entity that cannot
 
 {{% image_container width="450" %}}![custom synchronization](attachments/offline-first/custom-sync.png){{% /image_container %}}
 
-### 2.4 Error Handling
+### 2.4 Error Handling {#error-handling}
 
 During synchronization, errors might occur. This section describes how Mendix handles these errors and how you can prevent them.
 
-#### 2.4.1 Network-Related Errors
+#### 2.4.1 Network-Related Errors {#network-errors}
 
 Synchronization requires a connection to the server, so during synchronization, errors may occur due to failing or poor network connections. Network errors may involve a dropped connection or a timeout. By default, the timeout for synchronization is 30 seconds per network request.
 
@@ -99,61 +99,103 @@ During the synchronization, changed and new objects are committed. An object's s
 
 {{% alert type="warning" %}}When a synchronization error occurs because of one the reasons above, an object's commit is skipped, its changes are ignored, and references from other objects to it become invalid. Objects referencing such a skipped object (which are not triggering errors) will be synchronized normally. Such a situation is likely to be a modeling error and is logged on the server.{{% /alert %}}
 
-### 2.4.3 Preventing Synchronization Issues
+### 2.4.3 Preventing Synchronization Issues {#prevent-sync-issues}
 
 To avoid the problems mentioned above, we suggest following these best practices:
 
-* Do not remove, rename, or change the type of entities or their attributes in offline apps after your initial release. This may cause objects or values to be no longer accessible to offline users. If needed, you can do an "in-between" release that is still backwards-compatible, and then make the changes in the next release after all the apps are synchronized.
-* Do not delete objects which can be synced to offline users. This will result in lost changes on those objects when attempted to synchronize them.
-* Avoid using domain-level validation for offline entities – use nanoflows or input validation instead. It is also a good practice to validate again on the server using microflows.
-* When committing objects that are being referenced by other objects, make sure the other objects are also committed.
+* Do not remove, rename, or change the type of entities or their attributes in offline apps after your initial release — this may cause objects or values to be no longer accessible to offline users (if needed, you can do an "in-between" release that is still backwards-compatible, and then make the changes in the next release after all the apps are synchronized)
+* Do not delete objects which can be synced to offline users (this will result in lost changes on those objects when attempted to synchronize them)
+* Avoid using domain-level validation for offline entities – use nanoflows or input validation instead (it is also a good practice to validate again on the server using microflows)
+* When committing objects that are being referenced by other objects, make sure the other objects are also committed
 
 If synchronization is triggered using a synchronize action in a nanoflow and an error occurs, it is possible to handle the error gracefully using the nanoflow error handling.
 
-### 2.4.4 Conflict Resolution
+### 2.4.4 Conflict Resolution {#conflict-res}
 
 It can happen that multiple users synchronize the same state of an object on their device, change it, and then synchronize this object back to the server. In this case, the last synchronization overwrites the entire content of the object on the server. This is also called a "last wins" approach. 
 
 If another approach is needed, conflicts can be detected in a before-commit microflow (for example, by using a revision ID attribute on the entity). Based on that, custom conflict resolution can be performed.
 
-## 3 Best Practices
+## 3 Best Practices {#best-practices}
 
 To ensure the best user experience for your Mendix application, follow these best practices:
 
 * Limit the amount of data that will be synchronized by customizing the synchronization configuration or security access rules
 * Because network connections can be slow and unreliable and mobile devices often have limited storage, avoid synchronizing large files or images (for example, by limiting the size of photos)
 * Use an `isDeleted` Boolean attribute for delete functionality so that conflicts can be handled correctly on the server
-* Use before- and after-commit microflows to pre- or post-process data, or perform additional server-side logic using microflows
+* Use before- and after-commit microflows to pre- or post-process data.
+* Use a [microflow call](microflow-call) in your nanoflows to perform additional server-side logic such as retrieving data from a REST service, or accessing and using complex logic such as Java actions.
 * Help your user remember to synchronize their data so it is processed as soon as possible: you can check for connectivity and automatically synchronize in the nanoflow that commits your object, or remind a user to synchronize while using a notification or before signing out to ensure no data is lost
 
 ## 4 Ensuring Your App Is Offline-First {#limitations}
 
 Mendix helps developers in building rich offline-first apps. However, there are some limitations.
 
-### 4.1 Microflows
+### 4.1 Microflows {#microflows}
 
-Microflows cannot be called directly from offline apps. However, before- and after-commit microflows still run during synchronization, which can be used for application logic on the server.
+Microflows can be called from offline apps by using [microflow call](microflow-call) action in your nanoflows to perform logic on the server. However, it works a bit different from when used in online profiles, these differences are explained below:
 
-### 4.2 Autonumbers & Calculated Attributes
+#### 4.1.1 Microflow Arguments Type
+
+* Passing an object or a list of a persistable entity is not supported.
+* Passing an object or a list of a non-persistable entity that has an association with a persistable entity is not supported (such an association can be an indirect association).
+
+#### 4.1.2 UI Actions
+
+UI-related actions will be ignored and will not have any effect. We encourage you to model such UI-side effects in the caller nanoflow.
+
+These actions are as the following:
+
+* [Show message](show-message)
+* [Show validation message](validation-feedback)
+* [Show home page](show-home-page)
+* [Show page](show-page)
+* [Close page](close-page)
+* [Download file](download-file)
+
+#### 4.1.3 Object Side-Effects
+
+Changes to persistable objects made in a microflow will not be reflected on the client unless you synchronize. Non-persistable objects must be returned in order for changes to be reflected.
+
+#### 4.1.4 Microflow Return Value
+
+* Returning an object or a list of persistable entity is not supported.
+* Returning an object or a list of a non-persistable entity that has an association with a persistable entity is not supported (such association can be an indirect association).
+
+### 4.1.1 Offline Microflow Best Practices {#offline-mf-best-practices}
+
+To make microflow calls work from offline-first apps, Mendix stores some microflow information in the offline app. That information is called from the app. This means that changes to microflows used from offline apps must be backwards-compatible, because there can be older apps which have not received an over the air update yet. All microflow calls from such a device will still contain the old microflow call configuration in nanoflows, which means that the request might fail. For more information on over the air updates, see [How to Use Over the Air Updates](/howto/mobile/how-to-ota).
+
+To avoid backwards-compatibility errors in offline microflow calls after the initial release, we suggest these best practices:
+
+* Do not rename microflows or move them to different modules
+* Do not rename modules that contain microflows called from offline apps
+* Do not add, remove, rename, or change types of microflow parameters
+* Do not change return types
+* Do not delete a microflow before making sure that all devices have received an update
+
+If you want to deviate from the practices outlined above, introduce a new microflow. You can change the contents of the microflow, but keep in mind that older apps might call the new version of the microflow until they are updated.
+
+### 4.2 Autonumbers & Calculated Attributes {#autonumbers}
 
 Both autonumbers and calculated attributes require input from the server; therefore, they are not allowed. Objects with these attribute types can still be viewed and created offline, but the attributes themselves cannot be displayed.
 
-### 4.3 Default Attribute Values
+### 4.3 Default Attribute Values {#default-attributive}
 
 Default attribute values for entities in the domain model do not have any effect on objects created offline. Boolean attributes will always default to `false`, numeric attributes to `0`, and other attributes to `empty`.
 
-### 4.4 Many-to-Many Associations
+### 4.4 Many-to-Many Associations {#many-to-many}
 
 Many-to-many associations are not supported. A common alternative is to introduce a third entity that has one-to-many associations with the other entities.
 
-### 4.5 Inheritance
+### 4.5 Inheritance {#inheritance}
 
 It is not possible to use more than one entity from a generalization or specialization relation. For example if you have an `Animal` entity and a `Dog` specialization, you can use either use `Animal` or `Dog`, but not both from your offline profile. An alternative pattern is to use composition (for example, object associations).
 
-### 4.6 System Members
+### 4.6 System Members {#system-members}
 
 System members (`createdDate`, `changedDate`, `owner`, `changedBy`) are not supported.
 
-### 4.7 Excel and CSV Export
+### 4.7 Excel and CSV Export {#excel-cv}
 
 Excel and CSV export are not available in offline applications.

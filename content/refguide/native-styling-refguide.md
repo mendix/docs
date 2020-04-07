@@ -197,7 +197,7 @@ This is how the widget’s code is structured:
 <container>
 	<tabBar>
 		<tab>
-			<label>PAGE 1</label>
+			<activeLabel>PAGE 1</activeLabel>
 		</tab>
 		<tab>
 			<label>PAGE 2</label>
@@ -222,6 +222,7 @@ The widget’s style properties are as follows:
 | `indicator` | This has all ViewStyle properties. |     |
 | `tab`       | This has all ViewStyle properties. |     |
 | `label`     | This has all TextStyle properties. |     |
+| `activeLabel`     | This has all TextStyle properties. |     |
 
 The default class to style all tab containers is named `TabContainer`.
 
@@ -519,7 +520,7 @@ The default class to style the navigation is named  `navigationStyle`. There is 
 
 ## 11 Add-On Widgets
 
-Add-on widgets are distributed through the [Native Mobile Resources](https://appstore.home.mendix.com/link/app/109513/) module, and are not shipped with Mendix Studio Pro. Other add-on widgets might also be distributed through app templates, as well as modules importing pages from other projects. 
+Add-on widgets are distributed through the [Native Mobile Resources](/appstore/modules/native-mobile-resources) module, and are not shipped with Mendix Studio Pro. Other add-on widgets might also be distributed through app templates, as well as modules importing pages from other projects. 
 
 ### 11.1 Activity Indicator {#activity-indicator}
 

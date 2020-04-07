@@ -3,7 +3,7 @@ title: "Rich Text"
 category: "Widgets"
 description: "Describes the configuration and usage of the Rich Text widget, which is available in the Mendix App Store."
 tags: ["app store", "app store component", "widget", "rich text", "platform support"]
-draft: true
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
@@ -35,7 +35,7 @@ The input and output is sanitized. All unsupported HTML tags and JavaScript is r
 * Schemes: `http`, `https`, `ftp`, `mailto`
 
 {{% alert type="info" %}}
-To be fully secure, all user HTML input should be sanitized on the server side too. This could be done with the XSSSanitize action found in the Community Commons https://appstore.home.mendix.com/link/app/170/ When the option 'Sanitize content' is set to 'false' server side sanitating is required before showing any HTML content.
+To be fully secure, all user HTML input should be sanitized on the server side too. This could be done with the XSSSanitize action found in the [Community Commons](/appstore/modules/community-commons-function-library). When the option 'Sanitize content' is set to 'false' server side sanitating is required before showing any HTML content.
 {{% /alert %}}
 
 ## 3 Usage

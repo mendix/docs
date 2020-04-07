@@ -7,7 +7,7 @@ tags: ["Widget", "Pluggable", "Custom", "JavaScript", "React"]
 
 ## 1 Introduction
 
-Mendix comes with a wide variety of [Widgets](/refguide/pages#3-widgets-and-their-categories), but sometimes your app requires a widget outside of this set. To support a more  advanced UI pattern or create project-specific interactions, you will need to make your own pluggable widget. Your new pluggable widget can be used while modeling pages alongside standard Mendix components. It can also be shared between multiple projects and distributed through the [App Store](https://docs.mendix.com/developerportal/app-store/).
+Mendix comes with a wide variety of [Widgets](/refguide/pages#3-widgets-and-their-categories), but sometimes your app requires a widget outside of this set. To support a more  advanced UI pattern or create project-specific interactions, you will need to make your own pluggable widget. Your new pluggable widget can be used while modeling pages alongside standard Mendix components. It can also be shared between multiple projects and distributed through the [App Store](https://docs.mendix.com/appstore/index).
 
 You are in control of a pluggable widget's appearance and behavior. Customize a pluggable widget by implementing a widget as a plain [React](https://reactjs.org/) component written in JavaScript or TypeScript. The component will be rendered in a Mendix app, and will be able to use APIs provided by Mendix to interact with that app.
 
@@ -23,18 +23,18 @@ Pluggable widgets are the successor to [Custom widgets](/howto/extensibility/wid
 | ------------ | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
 | Framework    | [React](#3-client-component)                                                                          | [Dojo](/howto/extensibility/widget-development#3-2-dojo)                 |
 | Data access  | Declarative, props-based                                                                              | Imperative, callback-based                                               |
-| Data updates | [Receive updates in props](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets#4-2-dynamicvalue) | [Subscribe](https://apidocs.mendix.com/8/client/mx.data.html#.subscribe) |
-| API          | [Pluggable widgets API](/apidocs-mxsdk/apidocs/pluggable-widgets)                                     | [Mendix client API](https://apidocs.mendix.com/8/client/)                |
+| Data updates | [Receive updates in props](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets#4-2-dynamicvalue) | [Subscribe](https://apidocs.rnd.mendix.com/8/client/mx.data.html#.subscribe) |
+| API          | [Pluggable widgets API](/apidocs-mxsdk/apidocs/pluggable-widgets)                                     | [Mendix client API](https://apidocs.rnd.mendix.com/8/client/index.html)                |
 | Platform     | [Web and native](#5-2-widget-description)                                                             | Web                                                                      |
 
 | Feature                                                           | Pluggable widgets                                    | Custom widgets                                                        |
 | ----------------------------------------------------------------- | ---------------------------------------------------- | --------------------------------------------------------------------- |
 | Access to attribute data                                          | [Yes](property-types-pluggable-widgets#attribute)    | Yes                                                                   |
-| Retrieve additional data over associations, microflows, or nanoflows | [Yes](property-types-pluggable-widgets#datasource) (with [widgets](property-types-pluggable-widgets#widgets) only)   | [Yes](https://apidocs.mendix.com/8/client/mx.data.html#.get)          |  |
+| Retrieve additional data over associations, microflows, or nanoflows | [Yes](property-types-pluggable-widgets#datasource) (with [widgets](property-types-pluggable-widgets#widgets) only)   | [Yes](https://apidocs.rnd.mendix.com/8/client/mx.data.html#.get)          |  |
 | Template Text; combine data and translatable text                 | [Yes](property-types-pluggable-widgets#texttemplate) | No                                                                    |
 | Expressions; logic combined with data                             | [Yes](property-types-pluggable-widgets#expression)   | No                                                                    |
-| File support; download, and open                           | [yes](property-types-pluggable-widgets#file)                                                   | [Yes](https://apidocs.mendix.com/8/client/mx.data.html#.saveDocument) |
-| File support; upload                          | No                                                   | [Yes](https://apidocs.mendix.com/8/client/mx.data.html#.saveDocument) |
+| File support; download, and open                           | [yes](property-types-pluggable-widgets#file)                                                   | [Yes](https://apidocs.rnd.mendix.com/8/client/mx.data.html#.saveDocument) |
+| File support; upload                          | No                                                   | [Yes](https://apidocs.rnd.mendix.com/8/client/mx.data.html#.saveDocument) |
 | Use conditional visibility                                        | [Yes](property-types-pluggable-widgets#visibility)   | No                                                                    |
 | Use conditional editability                                       | [Yes](property-types-pluggable-widgets#editability)  | No                                                                    |
 | Use glyph icons                                                   | [Yes](property-types-pluggable-widgets#icon)         | No                                                                    |

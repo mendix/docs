@@ -4,7 +4,7 @@ title: "Mendix Platform SDK"
 
 ## 1 Introduction & FAQ
 
-Before the [Mendix Platform SDK](https://apidocs.mendix.com/platformsdk/latest/) can make your life easier, you should learn about the [Mendix Model SDK](https://apidocs.mendix.com/modelsdk/latest/index.html). Start with the [SDK Introduction](sdk-intro) and the [SDK FAQ](sdk-faq). 
+Before the [Mendix Platform SDK](https://apidocs.rnd.mendix.com/platformsdk/latest/index.html) can make your life easier, you should learn about the [Mendix Model SDK](https://apidocs.rnd.mendix.com/modelsdk/latest/index.html). Start with the [SDK Introduction](sdk-intro) and the [SDK FAQ](sdk-faq). 
 
 ## 2 SDK Reference Guide
 

@@ -1,6 +1,7 @@
 ---
 title: "Common Properties"
 parent: "application-logic"
+menu_order: 110
 tags: ["studio pro", "common properties", "microflow", "nanoflow"]
 ---
 

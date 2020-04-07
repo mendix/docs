@@ -3,7 +3,7 @@ title: "List View Controls"
 category: "Widgets"
 description: "Describes the configuration and usage of the List View Controls widget, which is available in the Mendix App Store."
 tags: ["app store", "app store component", "widget", "list view control", "check box filter", "platform support"]
-draft: true
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
@@ -179,7 +179,7 @@ Add an interactive search box to all of your list views with this widget. This s
 
 While developing, you will probably rely mostly on `npm start`. However, there are additional scripts at your disposal:
 
-| npm run <script> | Description |
+| npm run `<script>` | Description |
 | --- | --- |
 | start | Builds the project, monitors the source and config for changes, and rebuilds. |
 | test | Runs lint, builds, unit tests with Karma, generates a coverage report, deploys, and runs end-to-end test. |

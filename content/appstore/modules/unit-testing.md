@@ -3,7 +3,7 @@ title: "Unit Testing"
 category: "Modules"
 description: "Describes the configuration and usage of the Unit Testing module, which is available in the Mendix App Store."
 tags: ["app store", "app store component", "unit testing", "unit test", "test suite", "testing", "qa", "quality", "platform support"]
-draft: true
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
@@ -12,7 +12,7 @@ Use the [Unit Testing](https://appstore.home.mendix.com/link/app/390/) module to
 
 ### 1.1 Dependencies
 
-* [ObjectHandling](https://appstore.home.mendix.com/link/app/37114/)
+* [Object Handling](/appstore/modules/object-handling)
 * *junit-4.11.jar*
 * *org.apache.commons.io-2.3.0.jar*
 * *org.apache.commons.lang3.jar*

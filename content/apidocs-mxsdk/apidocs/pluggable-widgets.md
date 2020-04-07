@@ -7,7 +7,7 @@ tags: ["Widget", "Pluggable", "Custom", "JavaScript", "React"]
 
 ## 1 Introduction
 
-Mendix comes with a wide variety of [Widgets](/refguide/pages#3-widgets-and-their-categories), but sometimes your app requires a widget outside of this set. To support a more  advanced UI pattern or create project-specific interactions, you will need to make your own pluggable widget. Your new pluggable widget can be used while modeling pages alongside standard Mendix components. It can also be shared between multiple projects and distributed through the [App Store](https://docs.mendix.com/developerportal/app-store/).
+Mendix comes with a wide variety of [Widgets](/refguide/pages#3-widgets-and-their-categories), but sometimes your app requires a widget outside of this set. To support a more  advanced UI pattern or create project-specific interactions, you will need to make your own pluggable widget. Your new pluggable widget can be used while modeling pages alongside standard Mendix components. It can also be shared between multiple projects and distributed through the [App Store](https://docs.mendix.com/appstore/index).
 
 You are in control of a pluggable widget's appearance and behavior. Customize a pluggable widget by implementing a widget as a plain [React](https://reactjs.org/) component written in JavaScript or TypeScript. The component will be rendered in a Mendix app, and will be able to use APIs provided by Mendix to interact with that app.
 

@@ -1,6 +1,6 @@
 ---
 title: "Use App Store Content"
-category: "App Store"
+category: "General Info"
 menu_order: 20
 tags: ["app store", "Studio Pro"]
 description: "Covers the basics of how to access the App Store from Studio Pro and provides examples of how to add a widget and module to your app."
@@ -58,7 +58,7 @@ In this section, you will learn how to add a widget to your app project. You can
 
 To add the Radio Button List widget from the App Store via Studio Pro, follow these steps:
 
-1. Download the [Radio Button List](/appstore/widgets/radio-button-list) widget (for reference, follow the steps in the [Downloading Content from the App Store](#downloading2) section above).
+1. Download the [Radio Button List](../widgets/radio-button-list) widget (for reference, follow the steps in the [Downloading Content from the App Store](#downloading2) section above).
 2.  A widget downloaded from the App Store is placed in your app project structure. You can find the widget and start using it in the following ways:
 
 	* Click **Add widget**, then browse the list of **Add-on widgets**:
@@ -107,11 +107,11 @@ In addition to widgets, you can download entire modules from the App Store (for 
 
 In this section, you will learn how to add the Google Maps module as an example scenario. You can follow the same steps to download any App Store module you need.
 
-### 5.1 Adding a Module from the App Store
+### 5.1 Adding the Module
 
 To add the Google Maps module from the App Store via Studio Pro, follow these steps:
 
-1. Download the [Google Maps Module](https://appstore.home.mendix.com/link/app/174/).
+1. Download the [Google Maps](https://appstore.home.mendix.com/link/app/48911/).
 2.  In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your project:
 
 	![](attachments/app-store-content/18580431.png)

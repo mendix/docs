@@ -1,6 +1,6 @@
 ---
 title: "App Store Content Support"
-category: "App Store"
+category: "General Info"
 menu_order: 40
 tags: ["app store", "support", "platform support", "community support", "deprecated"]
 description: "Describes the various levels of support available for using App Store content in your Mendix apps."
@@ -56,4 +56,4 @@ The level of support depends on the availability and effort of the developer and
 
 * [App Store Overview](app-store-overview)
 * [How to Share App Store Content](share-app-store-content)
-* [How to Use App Store Content](/developerportal/app-store/app-store-content)
+* [How to Use App Store Content](app-store-content)

@@ -251,7 +251,7 @@ For react-native Mendix exposes a single version: 0.61.5. Mendix also includes t
 |   [@react-native-community/art](https://www.npmjs.com/package/@react-native-community/art)   |   1.2.0   |
 |   [@react-native-community/async-storage](https://www.npmjs.com/package/@react-native-community/async-storage)   |   1.8.1   |
 |   [@react-native-community/cameraroll](https://www.npmjs.com/package/@react-native-community/cameraroll)   | 1.4.0     |
-|  [@react-native-community/datetimepicker](https://www.npmjs.com/package/@react-native-community/datetimepicker)    |   2.3.0   |
+|  [@react-native-community/datetimepicker](https://www.npmjs.com/package/@react-native-community/datetimepicker)   |  2.3.0  |
 |   [@react-native-community/geolocation](https://www.npmjs.com/package/@react-native-community/geolocation)   |   2.0.2   |
 |   [@react-native-community/masked-view](https://www.npmjs.com/package/@react-native-community/masked-view)   |  0.1.7    |
 |   [@react-native-community/netinfo](https://www.npmjs.com/package/@react-native-community/netinfo)   | 5.6.2     |

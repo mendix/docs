@@ -10,7 +10,7 @@ In Mendix, all text is saved in UTF-8 encoding. First make sure your source code
 
 {{% alert type="info" %}}
 
-![](attachments/819203/918120.png)
+![](attachments/microflows-and-nanoflows/918120.png)
 Settings UTF-8 encoding.
 
 {{% /alert %}}
@@ -19,7 +19,7 @@ You should also have a Java Development Kit (JDK) installed and selected.
 
 {{% alert type="info" %}}
 
-![](attachments/819203/918186.png)
+![](attachments/microflows-and-nanoflows/918186.png)
 Selecting a default JDK.
 
 {{% /alert %}}
@@ -34,12 +34,12 @@ To add a Mendix project to Eclipse, you can perform these steps:
 
 {{% alert type="info" %}}
 
-![](attachments/819203/917580.png)
+![](attachments/microflows-and-nanoflows/917580.png)
 Import existing project.
 
 {{% /alert %}}{{% alert type="info" %}}
 
-![](attachments/819203/917527.png)
+![](attachments/microflows-and-nanoflows/917527.png)
 Import existing project step 2.
 
 {{% /alert %}}
@@ -50,7 +50,7 @@ To actually launch the project, go to 'debug configurations' or 'run configurati
 
 {{% alert type="info" %}}
 
-![](attachments/819203/917586.png)
+![](attachments/microflows-and-nanoflows/917586.png)
 Looking up your launch configuration.
 
 {{% /alert %}}
@@ -59,7 +59,7 @@ After you have launched the application, you will see the M2EE admin console pop
 
 {{% alert type="info" %}}
 
-![](attachments/819203/917582.png)
+![](attachments/microflows-and-nanoflows/917582.png)
 The M2EE admin console.
 
 {{% /alert %}}

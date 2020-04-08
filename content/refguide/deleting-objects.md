@@ -28,7 +28,7 @@ The delete object properties pane consists of the following sections:
 
 ## 3 Action{#action}
 
-The Action section of the properties pane shows the action associated with this activity.
+The **Action** section of the properties pane shows the action associated with this activity.
 
 You can open a dialog box to configure this action by clicking the ellipsis (**…**) next to the action.
 

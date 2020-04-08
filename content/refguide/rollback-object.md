@@ -32,7 +32,7 @@ The rollback object properties pane consists of the following sections:
 
 ## 3 Action{#action}
 
-The Action section of the properties pane shows the action associated with this activity.
+The **Action** section of the properties pane shows the action associated with this activity.
 
 You can open a dialog box to configure this action by clicking the ellipsis (**…**) next to the action.
 
@@ -42,7 +42,7 @@ You can also open the dialog box by double-clicking the activity in the microflo
 
 #### 3.1.1 Object
 
-Object defines the object that needs to be rolled back.
+**Object** defines the object that needs to be rolled back.
 
 #### 3.1.2 Refresh in Client
 
@@ -76,7 +76,7 @@ When inside a [nanoflow](nanoflows), the rollback object action reloads [data so
 
 ## 5 What Does Rollback Do?
 
-Pressing a Cancel button or triggering a rollback activity will initiate the rollback events. These actions are not triggered in the case of a rollback because of an error.
+Pressing a **Cancel** button or triggering a rollback activity will initiate the rollback events. These actions are not triggered in the case of a rollback because of an error.
 
 * Events: all before and after events are executed, and if any before-rollback event returns false, an exception can be thrown
 	* If an exception occurs during an event, all the applied changes are reverted with the default error handling behavior

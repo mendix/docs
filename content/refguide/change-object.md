@@ -28,7 +28,7 @@ The change object properties pane consists of the following sections:
 
 ## 3 Action{#action}
 
-The Action section of the properties pane shows the action associated with this activity.
+The **Action** section of the properties pane shows the action associated with this activity.
 
 You can open a dialog box to configure this action by clicking the ellipsis (**…**) next to the action.
 
@@ -38,13 +38,13 @@ You can also open the dialog box by double-clicking the activity in the microflo
 
 #### 3.1.1 Object
 
-Object defines the object that is changed.
+**Object** defines the object that is changed.
 
 ### 3.2 Action Section
 
 #### 3.2.1 Commit
 
-Commit defines the way the object is committed. See the section [How Commits Work](#how-commits-work) in *Commit Object(s)* for more information on committing.
+**Commit** defines the way the object is committed. See the section [How Commits Work](#how-commits-work) in *Commit Object(s)* for more information on committing.
 
 | Option | Description |
 | --- | --- |

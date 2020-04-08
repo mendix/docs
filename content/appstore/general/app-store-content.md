@@ -107,7 +107,7 @@ In addition to widgets, you can download entire modules from the App Store (for 
 
 In this section, you will learn how to add the Google Maps module as an example scenario. You can follow the same steps to download any App Store module you need.
 
-### 5.1 Adding a Module from the App Store
+### 5.1 Adding the Module
 
 To add the Google Maps module from the App Store via Studio Pro, follow these steps:
 
@@ -144,7 +144,7 @@ To use the Google Maps module in Studio Pro, follow these steps:
 
 There are also guidelines for using projects, layouts, and themes from the App Store.
 
-### 6.1 Using a Project or Layout from the App Store {#project-layout}
+### 6.1 Using a Project or Layout {#project-layout}
 
 Downloading a project or layout will create a new project structure in the the location that you enter. After clicking **Download**, a window will appear where you can specify how the project should be created.
 
@@ -152,7 +152,7 @@ Downloading a project or layout will create a new project structure in the the l
 You cannot create a new project in an existing repository that is not empty.
 {{% /alert %}}
 
-### 6.2 Using a Theme from the App Store
+### 6.2 Using a Theme
 
 Downloading a theme is very similar to downloading a widget. Like a widget, a theme is added to the project structure, in the **theme** folder of your app project. A theme downloaded from the App Store will immediately be set as the active theme for your project. You can find out which theme is active for your project in the app  project **Settings**.
 

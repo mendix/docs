@@ -246,40 +246,42 @@ Mendix provides you with React version 16.9.x (in npm terms `~16.9.0`). Patch ve
 
 For react-native Mendix exposes a single version: 0.61.5. Mendix also includes the following libraries:
 
-* [@react-native-community/art](https://www.npmjs.com/package/@react-native-community/art) of version 1.2.0
-* [@react-native-community/async-storage](https://www.npmjs.com/package/@react-native-community/async-storage) of version 1.8.1
-* [@react-native-community/cameraroll](https://www.npmjs.com/package/@react-native-community/cameraroll) of version 1.4.0
-* [@react-native-community/datetimepicker](https://www.npmjs.com/package/@react-native-community/datetimepicker) of version 2.3.0
-* [@react-native-community/geolocation](https://www.npmjs.com/package/@react-native-community/geolocation) of version 2.0.2
-* [@react-native-community/masked-view](https://www.npmjs.com/package/@react-native-community/masked-view) of version 0.1.7
-* [@react-native-community/netinfo](https://www.npmjs.com/package/@react-native-community/netinfo) of version 5.6.2
-* [react-native-ble-plx](https://www.npmjs.com/package/react-native-ble-plx) of version 1.1.1
-* [react-native-calendar-events](https://www.npmjs.com/package/react-native-calendar-events) of version 1.7.3
-* [react-native-camera](https://www.npmjs.com/package/react-native-camera) of version 3.19.2
-* [react-native-code-push](https://www.npmjs.com/package/react-native-code-push) of version 6.1.1
-* [react-native-device-info](https://www.npmjs.com/package/react-native-device-info) of version 5.5.3
-* [react-native-fast-image](https://www.npmjs.com/package/react-native-fast-image) of version 8.1.5
-* [react-native-firebase](https://www.npmjs.com/package/react-native-firebase) of version 5.6.0
-* [react-native-geocoder](https://www.npmjs.com/package/react-native-geocoder) of version 0.5.0
-* [react-native-gesture-handler](https://www.npmjs.com/package/react-native-gesture-handler) of version 1.6.0
-* [react-native-image-picker](https://www.npmjs.com/package/react-native-image-picker) of version 2.3.1
-* [react-native-inappbrowser-reborn](https://www.npmjs.com/package/react-native-inappbrowser-reborn) of version 3.3.4
-* [react-native-localize](https://www.npmjs.com/package/react-native-localize) of version 1.3.4
-* [react-native-maps](https://www.npmjs.com/package/react-native-maps) of version 0.27.0
-* [react-native-reanimated](https://www.npmjs.com/package/react-native-reanimated) of version 1.7.0
-* [react-native-safe-area-context](https://www.npmjs.com/package/react-native-safe-area-context) of version 0.7.3
-* [react-native-sound](https://www.npmjs.com/package/react-native-sound) of version 0.11.0
-* [react-native-svg](https://www.npmjs.com/package/react-native-svg) of version 12.0.3
-* [react-native-tab-view](https://www.npmjs.com/package/react-native-tab-view) of version 2.13.0
-* [react-native-touch-id](https://www.npmjs.com/package/react-native-touch-id) of version 4.4.1
-* [react-native-vector-icons](https://www.npmjs.com/package/react-native-vector-icons) of version 6.6.0
-* [react-native-video](https://www.npmjs.com/package/react-native-video) of version 5.0.2
-* [react-native-view-shot](https://www.npmjs.com/package/react-native-view-shot) of version 3.1.2
-* [react-native-webview](https://www.npmjs.com/package/react-native-webview) of version 8.1.2
-* [react-navigation](https://www.npmjs.com/package/react-navigation) of version 4.3.1
-* [react-navigation-drawer](https://www.npmjs.com/package/react-navigation-drawer) of version 2.4.4
-* [react-navigation-stack](https://www.npmjs.com/package/react-navigation-stack) of version 2.3.1
-* [react-navigation-tabs](https://www.npmjs.com/package/react-navigation-tabs) of version 2.8.4
+|   Library   |   Version   |
+| ---- | ---- |
+|   [@react-native-community/art](https://www.npmjs.com/package/@react-native-community/art)   |   1.2.0   |
+|   [@react-native-community/async-storage](https://www.npmjs.com/package/@react-native-community/async-storage)   |   1.8.1   |
+|   [@react-native-community/cameraroll](https://www.npmjs.com/package/@react-native-community/cameraroll)   | 1.4.0     |
+|  [@react-native-community/datetimepicker](https://www.npmjs.com/package/@react-native-community/datetimepicker)    |   2.3.0   |
+|   [@react-native-community/geolocation](https://www.npmjs.com/package/@react-native-community/geolocation)   |   2.0.2   |
+|   [@react-native-community/masked-view](https://www.npmjs.com/package/@react-native-community/masked-view)   |  0.1.7    |
+|   [@react-native-community/netinfo](https://www.npmjs.com/package/@react-native-community/netinfo)   | 5.6.2     |
+|   [react-native-ble-plx](https://www.npmjs.com/package/react-native-ble-plx)   |   1.1.1   |
+|   [react-native-calendar-events](https://www.npmjs.com/package/react-native-calendar-events)   |   1.7.3   |
+|   [react-native-camera](https://www.npmjs.com/package/react-native-camera)   |   3.19.2   |
+|   [react-native-code-push](https://www.npmjs.com/package/react-native-code-push)   |   6.1.1   |
+|   [react-native-device-info](https://www.npmjs.com/package/react-native-device-info)   |   5.5.3   |
+|   [react-native-fast-image](https://www.npmjs.com/package/react-native-fast-image)   |   8.1.5   |
+|   [react-native-firebase](https://www.npmjs.com/package/react-native-firebase)   |   5.6.0   |
+|   [react-native-geocoder](https://www.npmjs.com/package/react-native-geocoder)   |   0.5.0   |
+|   [react-native-gesture-handler](https://www.npmjs.com/package/react-native-gesture-handler)   |   1.6.0   |
+|   [react-native-image-picker](https://www.npmjs.com/package/react-native-image-picker)   |   2.3.1   |
+|   [react-native-inappbrowser-reborn](https://www.npmjs.com/package/react-native-inappbrowser-reborn)   |  3.3.4    |
+|   [react-native-localize](https://www.npmjs.com/package/react-native-localize)   |   1.3.4   |
+|   [react-native-maps](https://www.npmjs.com/package/react-native-maps)    |   0.27.0   |
+|   [react-native-reanimated](https://www.npmjs.com/package/react-native-reanimated)   |   1.7.0   |
+|   [react-native-safe-area-context](https://www.npmjs.com/package/react-native-safe-area-context)   | 0.7.3     |
+|   [react-native-sound](https://www.npmjs.com/package/react-native-sound)   |   0.11.0   |
+|   [react-native-svg](https://www.npmjs.com/package/react-native-svg)   |   12.0.3   |
+|   [react-native-tab-view](https://www.npmjs.com/package/react-native-tab-view)   |   2.13.0   |
+|   [react-native-touch-id](https://www.npmjs.com/package/react-native-touch-id)   |   4.4.1   |
+|   [react-native-vector-icons](https://www.npmjs.com/package/react-native-vector-icons)   |   6.6.0   |
+|   [react-native-video](https://www.npmjs.com/package/react-native-video)   |   5.0.2   |
+|   [react-native-view-shot](https://www.npmjs.com/package/react-native-view-shot)   |   3.1.2   |
+|   [react-native-webview](https://www.npmjs.com/package/react-native-webview)   |   8.1.2   |
+|   [react-navigation](https://www.npmjs.com/package/react-navigation)    |   4.3.1   |
+|   [react-navigation-drawer](https://www.npmjs.com/package/react-navigation-drawer)   |   2.4.4   |
+|   [react-navigation-stack](https://www.npmjs.com/package/react-navigation-stack)   |   2.3.1   |
+|   [react-navigation-tabs](https://www.npmjs.com/package/react-navigation-tabs)   |   2.8.4 |
 
 ### 6.2 Big.js
 

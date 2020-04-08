@@ -44,7 +44,7 @@ You can also open the dialog box by double-clicking the activity in the microflo
 
 #### 3.2.1 Commit
 
-**Commit** defines the way the object is committed. See the section [How Commits Work](#how-commits-work) in *Commit Object(s)* for more information on committing.
+**Commit** defines the way the object is committed. See the section [How Commits Work](committing-objects#how-commits-work) in *Commit Object(s)* for more information on committing.
 
 | Option | Description |
 | --- | --- |
@@ -62,7 +62,7 @@ However, if the flow is triggered from a data grid button that just performs an 
 
 Nanoflows do not support committing changes without events. Committing while running in an online app sends a commit request to the Mendix Runtime and runs the events. If a change object action is used in an offline app, the changes are committed to the offline database.
 
-#### 3.2.2 Refresh in Client
+#### 3.2.2 Refresh in Client{#refresh-in-client}
 
 This setting defines how changes are reflected in the pages presented to the end-user.
 

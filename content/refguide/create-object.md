@@ -42,7 +42,7 @@ The entity of which you want to create an object.
 
 #### 3.1.2 Commit
 
-**Commit** defines the way the object is committed. See the section [How Commits Work](#how-commits-work) in *Commit Object(s)* for more information on committing.
+**Commit** defines the way the object is committed. See the section [How Commits Work](committing-objects#how-commits-work) in *Commit Object(s)* for more information on committing.
 
 | Option | Description |
 | --- | --- |

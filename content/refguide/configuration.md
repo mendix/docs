@@ -7,7 +7,7 @@ tags: ["studio pro", "configurations", "configuration"]
 
 ## 1 Introduction
 
-A configuration is a group of settings. To access configurations, open the **Project Explorer** > **Project** > **Settings** > the **Configuration** tab. 
+A configuration is a group of settings which are applied when running your project locally. To access configurations, open the **Project Explorer** > **Project** > **Settings** > the **Configuration** tab. 
 
 You can define any number of configurations. The active configuration, as in, the one that will be used when running your application, is determined by the drop-down in the toolbar of Studio Pro.
 

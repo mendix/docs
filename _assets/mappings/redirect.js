@@ -193,10 +193,6 @@ module.exports = {
       from: "/refguide/team-server",
       to: "/developerportal/develop/team-server"
     },
-    {
-      from: "/developerportal/deploy/integrate-with-mendix-sso",
-      to: "/developerportal/deploy/mendix-sso"
-    },
 	/****************************************************
      * App Store Guide (permanent, mapped & unmapped) 
      ****************************************************/	

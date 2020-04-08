@@ -26,7 +26,9 @@ Mendix automatically analyzes your app's data model to determine which entities 
 Synchronization is automatically triggered during the following scenarios:
 
 * The initial startup of your mobile app
-* The first startup of your mobile app after your Mendix app is redeployed (if there is a network connection)
+* The first startup of your mobile app after your Mendix app is redeployed when the following conditions are matched:
+ * There is a network connection
+ * You are using a new Mendix version or the domain model has changed
 
 Synchronization can also be configured via different places in your Mendix app, for example:
 
@@ -46,7 +48,7 @@ The upload phase executes the following operations after validation:
 
 1. It detects all the changes made to the local database. The local database can be modified only by committing an object. Such an object can be a new object created (while offline), or it can be an existing object previously sychronized from the server.
 2. <a name="steptwo"></a>If there are changed or new file objects, their contents are uploaded to the server and stored temporarily. Each file is uploaded in a separate network request.
-3. <a name="stepthree"></a>All the changed and new objects are committed to the server, and the content of the files are linked to the objects. This step is performed in a single network request. Any configured before- or after-commit event handlers on these objects will run as usual.
+3. <a name="stepthree"></a>All the changed and new objects are committed to the server, and the content of the files are linked to the objects. This step is performed in a single network request. Any configured before- or after-commit event handlers on these objects will run on the server as usual, after the data has been uploaded and before it is downloaded.
 
 ### 2.2 Download Phase {#download}
 

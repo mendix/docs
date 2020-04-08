@@ -19,7 +19,7 @@ An example of delete object properties is represented in the image below:
 
 ![delete object properties](attachments/object-activities/delete-properties.png)
 
-There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the left.
+There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 
 The delete object properties pane consists of the following sections:
 
@@ -48,7 +48,7 @@ This setting defines how changes are reflected in the pages presented to the end
 
 Default: *No*
 
-**Microflow is called from the client in an online app.**
+##### Microflow is called from the client in an online app
 
 If **Refresh in client** is set to *No*, the deletion is not reflected in the client.
 
@@ -58,7 +58,7 @@ If set to *Yes*, the deletion is reflected across the client, which includes rel
 Deletions are always reflected in the client. [Data sources](data-sources) are only reloaded if **Refresh in client** is set to *Yes*.
 {{% /alert %}}
 
-**Microflow is called in an offline, native, or hybrid app**
+##### Microflow is called in an offline, native, or hybrid app
 
 When inside a microflow that is called from an offline, native, or hybrid app, the **Refresh in client** option is ignored and functions as if it was set to **No**.
 
@@ -74,7 +74,7 @@ Clicking a Delete button or triggering a delete activity will initiate the delet
 
 * Events: all before and after events are executed, and if any before-delete event returns false, an exception can be thrown
 	* If an exception occurs during an event, all the applied changes are reverted with the default error handling behavior
-	* Changes made prior to the rollback will be kept 
+	* Changes made prior to the rollback will be kept
 * Database: if an object has the state **Instantiated**, there will be no database communication required
 	* For any other status, a delete query is executed in the database
 * Result: the object will be removed from memory and if applicable from the database

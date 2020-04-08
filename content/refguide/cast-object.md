@@ -11,7 +11,7 @@ This activity can only be used in **Microflows**.
 
 ## 1 Introduction
 
-The cast object activity is used in a microflow after an [object type decision](object-type-decision) to change the type of object from the generalized object type to the specialized object type of the path out of the object type decision. 
+The cast object activity is used in a microflow after an [object type decision](object-type-decision) to change the type of object from the generalized object type to the specialized object type of the path out of the object type decision.
 
 To read more about specialization and generalization, see [Entities](entities).
 
@@ -21,7 +21,7 @@ An example of cast object properties is represented in the image below:
 
 ![cast object properties](attachments/object-activities/cast-properties.png)
 
-There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the left.
+There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 
 The cast object properties pane consists of the following sections:
 

@@ -19,7 +19,7 @@ An example of commit object(s) properties is represented in the image below:
 
 ![commit object(s) properties](attachments/object-activities/commit-properties.png)
 
-There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the left.
+There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 
 The commit object(s) properties pane consists of the following sections:
 
@@ -52,7 +52,7 @@ Indicates whether or not to execute the commit event handlers of the objects.
 
 Default: *Yes*
 
-**Events in nanoflows**
+##### Events in nanoflows
 
 Nanoflows do not have this property.
 
@@ -66,27 +66,27 @@ This setting defines how changes are reflected in the pages presented to the end
 
 Default: *No*
 
-**Microflow is called from the client in an online app.**
+##### Microflow is called from the client in an online app
 
 If **Refresh in client** is set to *No*, the change is not reflected in the client.
 
 If set to *Yes*, the object is refreshed across the client, which includes reloading the relevant [data sources](data-sources).
 
 {{% alert type="info" %}}
-Changed attribute values are *always* reflected in the client. The object is refreshed from the Mendix Runtime, which includes updating virtual attributes. 
+Changed attribute values are *always* reflected in the client. The object is refreshed from the Mendix Runtime, which includes updating virtual attributes.
 {{% /alert %}}
 
 {{% alert type="warning" %}}
 When committing a large number of objects, we recommend that you do not enable 'Refresh in client' because it can slow things down.
 {{% /alert %}}
 
-**Microflow is called in an offline, native, or hybrid app**
+##### Microflow is called in an offline, native, or hybrid app
 
 When inside a microflow that is called from an offline, native, or hybrid app, the **Refresh in client** option is ignored and functions as if it was set to **No**.
 
 For more information, see the [Microflows](offline-first#microflows) section of the *Offline-First Reference Guide*.
 
-**Action is in a nanoflow.**
+##### Action is in a nanoflow
 
 When inside a [nanoflow](nanoflows), the object is refreshed across the client as if **Refresh in client** was set to *Yes*.
 

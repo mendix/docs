@@ -23,7 +23,7 @@ An example of rollback object properties is represented in the image below:
 
 ![rollback object properties](attachments/object-activities/rollback-properties.png)
 
-There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the left.
+There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 
 The rollback object properties pane consists of the following sections:
 
@@ -50,7 +50,7 @@ This setting defines how changes are reflected in the pages presented to the end
 
 Default: *No*
 
-**Microflow is called from the client in an online app.**
+##### Microflow is called from the client in an online app
 
 If **Refresh in client** is set to *No*, the rollback is not reflected in the client.
 
@@ -60,13 +60,13 @@ If set to *Yes*, the object is refreshed across the client, which includes reloa
 Rolled back attribute values are always reflected in client. This includes updating their visibility and editability [properties](common-widget-properties). [Data sources](data-sources) are only reloaded if **Refresh in client** is set to *Yes*.
 {{% /alert %}}
 
-**Microflow is called in an offline, native, or hybrid app**
+##### Microflow is called in an offline, native, or hybrid app
 
 When inside a microflow that is called from an offline, native, or hybrid app, the **Refresh in client** option is ignored and functions as if it was set to **No**.
 
 For more information, see the [Microflows](offline-first#microflows) section of the *Offline-First Reference Guide*.
 
-**Action is in a nanoflow.**
+##### Action is in a nanoflow
 
 When inside a [nanoflow](nanoflows), the rollback object action reloads [data sources](data-sources) as if **Refresh in client** was set to *Yes*.
 

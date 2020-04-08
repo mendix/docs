@@ -87,8 +87,6 @@ You can create several environments for your app. For example, you may have crea
 
 This is done from the **Environments** page of the Developer Portal.
 
-{{% todo %}}[Get better image once released to acceptance or production]{{% /todo %}}
-
 ![](attachments/sap-cloud-platform/environments-page.png)
 
 Your Environments page will show you the following:
@@ -126,8 +124,6 @@ To create a new environment, perform the following steps:
 4.  Click **Next**.
 
 5.  Enter the name of the environment. This can be anything you choose: for example Test, Acceptance, or Production.
-
-    {{% todo %}}[Get better picture once live]{{% /todo %}}
 
     ![](attachments/sap-cloud-platform/08-sap-env-2.png)
 

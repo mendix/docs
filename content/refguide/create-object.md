@@ -50,7 +50,7 @@ The entity of which you want to create an object.
 | Yes without event handlers | The object is saved in the database, but the [event handlers](event-handlers) are not triggered. |
 | No *(default)*  | The object is changed without being saved in the database. |
 
-##### Commits in nanoflows
+##### Commits in Nanoflows
 
 Nanoflows do not support committing changes without events. Committing while running in an online app sends a commit request to the Mendix Runtime and runs the events. If a change object action is used in an offline app, the changes are committed to the offline database.
 
@@ -60,19 +60,19 @@ This setting defines how changes are reflected in the pages presented to the end
 
 Default: *No*
 
-##### Microflow is called from the client in an online app
+##### Microflow is Called from the Client in an Online App
 
 If **Refresh in client** is set to *No*, the change is not reflected in the client.
 
 If set to *Yes*, [data sources](data-sources) are reloaded.
 
-##### Microflow is called in an offline, native, or hybrid app
+##### Microflow is Called in an Offline, Native, or Hybrid App
 
 When inside a microflow that is called from an offline, native, or hybrid app, the **Refresh in client** option is ignored and functions as if it was set to **No**.
 
 For more information, see the [Microflows](offline-first#microflows) section of the *Offline-First Reference Guide*.
 
-##### Action is in a nanoflow
+##### Action is in a Nanoflow
 
 In a nanoflow, the create object action reloads [data sources](data-sources) as if Refresh in client was set to *Yes*.
 

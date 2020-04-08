@@ -48,7 +48,7 @@ This setting defines how changes are reflected in the pages presented to the end
 
 Default: *No*
 
-##### Microflow is called from the client in an online app
+##### Microflow is Called from the Client in an Online App
 
 If **Refresh in client** is set to *No*, the deletion is not reflected in the client.
 
@@ -58,7 +58,7 @@ If set to *Yes*, the deletion is reflected across the client, which includes rel
 Deletions are always reflected in the client. [Data sources](data-sources) are only reloaded if **Refresh in client** is set to *Yes*.
 {{% /alert %}}
 
-##### Microflow is called in an offline, native, or hybrid app
+##### Microflow is Called in an Offline, Native, or Hybrid App
 
 When inside a microflow that is called from an offline, native, or hybrid app, the **Refresh in client** option is ignored and functions as if it was set to **No**.
 

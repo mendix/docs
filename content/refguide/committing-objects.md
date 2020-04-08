@@ -52,7 +52,7 @@ Indicates whether or not to execute the commit event handlers of the objects.
 
 Default: *Yes*
 
-##### Events in nanoflows
+##### Events in Nanoflows
 
 Nanoflows do not have this property.
 
@@ -66,7 +66,7 @@ This setting defines how changes are reflected in the pages presented to the end
 
 Default: *No*
 
-##### Microflow is called from the client in an online app
+##### Microflow is Called from the Client in an Online App
 
 If **Refresh in client** is set to *No*, the change is not reflected in the client.
 
@@ -80,13 +80,13 @@ Changed attribute values are *always* reflected in the client. The object is ref
 When committing a large number of objects, we recommend that you do not enable 'Refresh in client' because it can slow things down.
 {{% /alert %}}
 
-##### Microflow is called in an offline, native, or hybrid app
+##### Microflow is Called in an Offline, Native, or Hybrid App
 
 When inside a microflow that is called from an offline, native, or hybrid app, the **Refresh in client** option is ignored and functions as if it was set to **No**.
 
 For more information, see the [Microflows](offline-first#microflows) section of the *Offline-First Reference Guide*.
 
-##### Action is in a nanoflow
+##### Action is in a Nanoflow
 
 When inside a [nanoflow](nanoflows), the object is refreshed across the client as if **Refresh in client** was set to *Yes*.
 

@@ -193,10 +193,6 @@ module.exports = {
       from: "/refguide/team-server",
       to: "/developerportal/develop/team-server"
     },
-    {
-      from: "/developerportal/deploy/integrate-with-mendix-sso",
-      to: "/developerportal/deploy/mendix-sso"
-    },
 	/****************************************************
      * App Store Guide (permanent, mapped & unmapped) 
      ****************************************************/	
@@ -250,10 +246,6 @@ module.exports = {
 	{
       from: "/howto/collaboration-project-management/contribute-to-a-github-repository",
       to: "/howto/collaboration-requirements-management/contribute-to-a-github-repository"
-    },
-	{
-      from: "/mendixcloud/Integrate+your+app+with+Mendix+SSO",
-      to: "/developerportal/deploy/integrate-with-mendix-sso"
     },
 	{
       from: "/howto/ux/create-a-custom-theme-with-the-mendix-ui-framework",

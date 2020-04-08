@@ -248,10 +248,6 @@ module.exports = {
       to: "/howto/collaboration-requirements-management/contribute-to-a-github-repository"
     },
 	{
-      from: "/mendixcloud/Integrate+your+app+with+Mendix+SSO",
-      to: "/developerportal/deploy/integrate-with-mendix-sso"
-    },
-	{
       from: "/howto/ux/create-a-custom-theme-with-the-mendix-ui-framework",
       to: "/howto/front-end/atlas-ui"
     },

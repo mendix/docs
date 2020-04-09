@@ -27,7 +27,7 @@ The sections below describe the Mendix resources that can help you understand ho
 
 * [Expert Series: Kickstart Your Widget Development](https://www.youtube.com/watch?v=MZ0Ihu2QGYY)
 
-### 3.2 Dojo
+### 3.2 Dojo {#dojo}
 
 Custom widgets are Dojo widgets. In order to understand how widgets are structured and what their life cycle is, you need to know how Dojo widgets are built. You can consult this quick introduction:
 

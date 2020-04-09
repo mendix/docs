@@ -34,7 +34,7 @@ A user can specify multiple classes for every widget. They can do this either di
 
 A user can specify a custom CSS for every widget on a web page by using the [style](/refguide/common-widget-properties#style) property. This styling is passed to a client component through an optional `style` prop of the type `CSSProperties`.
 
-On native pages, the meaning of a `style` prop is very different. First of all, a user cannot specify the aforementioned inline styles for widgets on a native page. So a `style` prop is used to pass styles computed based on configured classes. A client component will receive an array with a single [style object](/refguide/native-styling-refguide#2-style-objects) with all applicable styles combined.
+On native pages, the meaning of a `style` prop is very different. First of all, a user cannot specify the aforementioned inline styles for widgets on a native page. So a `style` prop is used to pass styles computed based on configured classes. A client component will receive an array with a single [style object](/refguide/native-styling-refguide#style-objects) with all applicable styles combined.
 
 {{% alert type="info" %}}
 This property was introduced in Mendix 8.0 with an array of style objects. This array was changed to contain a single style object in Mendix 8.6.
@@ -66,7 +66,7 @@ Note that `isExecuting` indicates only whether the current action is running. It
 
 The method `execute` triggers the action. It returns nothing and does not guarantee that the action will be started synchronously. But when the action does start, the component will receive a new prop with the `isExecuting` flag set.
 
-### 4.2 DynamicValue
+### 4.2 DynamicValue {#dynamic-value}
 
 DynamicValue is used to represent values that can change over time and is used by many property types. It is defined as follows:
 

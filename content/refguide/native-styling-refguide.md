@@ -16,7 +16,7 @@ To keep widgets responsive, Mendix apps use Flexbox. Using Flexbox, a component 
 
 You can use the `height` and `width` properties to set a widget component’s dimensions. For more information on size, see React Native’s [Height and Width documentation](https://reactnative.dev/docs/height-and-width).
 
-## 2  Style Objects
+## 2  Style Objects {#style-objects}
 
 A widget is composed of various elements, and each can be styled individually. You can customize your widgets using style objects. A style object is a JavaScript object with a set of attributes specific for each widget. Some of the attributes reuse properties of other elements, such as React Native’s ViewStyle, TextStyle, ImageStyle, and Colors elements. You can consult the following property sets for more information on styling properties as you customize your app:
 

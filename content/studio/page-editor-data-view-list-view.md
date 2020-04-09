@@ -55,7 +55,7 @@ In the **General** section, you can enable/disable the following options:
 
 ### 2.3 Conditional Visibility {#visibility-data-view}
 
-{{% snippet file="refguide/visibility-section-link.md" %}}
+{{% snippet file="studio/visibility-section-link.md" %}}
 
 ### 2.4 Design Section {#design-section-data-view}
 
@@ -102,7 +102,7 @@ In the **General** section, you can select the number of rows to be displayed on
 
 * **Read-Only** (enabled by default) – when enabled, all [input elements](page-editor-widgets-input-elements) (for example, a text area, a check box) in the list view will be in read-only mode
 
-### 3.4 Conditional Visibility Section {#conditional-visibility-list-view} 
+### 3.4 Conditional Visibility Section {# 
 
 {{% snippet file="studio/visibility-section-link.md" %}}
 

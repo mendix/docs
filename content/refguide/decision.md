@@ -33,23 +33,23 @@ For more information, see the [Caption](microflow-element-common-properties#capt
 | Option | Description |
 | --- | --- |
 | [Expression](#expression) | Expressions can be used to create or change an object or a variable based on logic. |
-| [Rule](#rule) | A rule is a special kind of a microflow the outcomes of which can be used in a decision instead of calling a sub-microflow and using the return variable of that sub-microflow. The idea is that complicated decisions can be consolidated in rules and reused in various places. |
+| [Rule](#rule) | A rule is a special kind of microflow, the outcomes of which can be used in a decision instead of calling a sub-microflow and using the return variable of that sub-microflow. The idea is that complicated decisions can be consolidated in rules and reused in various places. |
 
 ##### 2.1.2.1 Expression {#expression}
 
-If the **Type** property is set to **Expression**, the expression is used to define the condition of the decision. For more information on expressions, see [Microflow Expressions](expressions).
+If the **Type** property is set to **Expression**, the expression entered here is used to define the condition of the decision. For more information on expressions, see [Microflow Expressions](expressions).
 
 The expression should result in a Boolean or an enumeration. 
 
-For the expression resulting in a Boolean, two flows are possible: **true** and **false**. For example, you can use the expression resulting in a Boolean, if you want to check whether a customer's email is verified or not.
+For the expression resulting in a Boolean, two flows are possible: **true** and **false**. For example, you can use the expression resulting in a Boolean if you want to check whether a customer's email is verified or not.
 
 The number of conditions available for the enumeration type depends on the corresponding enumeration values. There is also the *empty* condition available for enumeration: if the enumeration parameter or an attribute of an object is unassigned, the sequence flow with the caption **(empty)** is followed.
 
-If you want to open a different order form per customer grade you can use a decision. The microflow parameter is *Customer*. Depending on what grade the customer has, a different sequence flow is followed and a different order form is opened. If a end-user needs to select a customer grade but does not do that, the flow labelled **(empty)** is followed and an error message is shown to the end-user.
+If you want to open a different order form per customer grade you can use a decision. The microflow parameter is *Customer*. Depending on what grade the customer has, a different sequence flow is followed and a different order form is opened. If an end-user needs to select a customer grade but does not do that, the flow labelled **(empty)** is followed and an error message is shown to the end-user.
 
 <img src="attachments/decisions/decision-example.png" style="zoom:50%;" />
 
-The expression used for the example above is`$Customer/Grade`. As you want to go a different direction for each enumeration you can suffice by just stating the attribute.
+Since you want to go in a different direction for each value of the enumeration, you only need to use the attribute containing the enumeration. So the expression in the example above is`$Customer/Grade`. 
 
 ##### 2.2.2.2 Rule {#rule}
 
@@ -59,11 +59,9 @@ The properties of the **Rule** decision type are the following ones:
 
 * **Rule** – allows you to select a rule.
 
-* **Parameter **– for each parameter of the rule an argument needs to be specified using [expressions](expressions). For example, a rule that determines whether a customer deserves a certain status will have a customer object as a parameter.
+* **Parameter** – for each parameter of the rule an argument needs to be specified using [expressions](expressions). For example, a rule that determines whether a customer deserves a certain status will have a customer object as a parameter.
 
   <img src="attachments/decisions/rule-properties.png" style="zoom:50%;" />
-
-  
 
 #### 2.1.3 Error Handling Type
 

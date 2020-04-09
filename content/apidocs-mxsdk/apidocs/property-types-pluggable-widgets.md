@@ -432,14 +432,23 @@ Then the Studio Pro UI for the property appears like this:
 
 ### 4.3 Action{#action}
 
-The action property type allows a user to configure an action to do things like calling nanoflows, saving changes, and opening pages. The client component will receive `ActionValue` representing it, or `undefined` when the **Do nothing** action was selected.
+The action property type allows a user to configure an action to do things like calling nanoflows, saving changes, and opening pages.
+
+If a `dataSource` attribute is not specified, or if an `dataSource` attribute is specified, but the data source is not configured by the user, the client will receive an `ActionValue` representing the action, or `undefined` when the **Do nothing** action was selected.
+
+When a `dataSource` attribute is specified and configured by the user it is passed as a function that expects an `ObjectItem` and returns an `ActionValue`: `(item: ObjectItem) => ActionValue`. For more information, see the [Datasource](#datasource) section below.
+
+{{% alert type="info" %}}
+Support for the `dataSource` attribute was introduced in Mendix 8.9.
+{{% /alert %}}
 
 #### 4.3.1 XML Attributes
 
-| Attribute  | Required | Attribute Type | Description                                                                                                                                                          |
-| ---------- | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `type`     | Yes      | String         | Must be `action`                                                                                                                                                     |
-| `key`      | Yes      | String         | See [key](#key) |
+| Attribute  | Required   | Attribute Type | Description                                                                                                                                                          |
+| ------------ | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `type`       | Yes      | String         | Must be `action`                                                                                                                                                     |
+| `key`        | Yes      | String         | See [key](#key) |
+| `dataSource` | No       | Property Path  | Specifies path to a [`datasource`](#datasource) property linked to this action's property |
 
 #### 4.3.2 Studio Pro UI
 

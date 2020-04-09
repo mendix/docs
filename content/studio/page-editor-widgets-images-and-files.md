@@ -72,7 +72,11 @@ For more information on the **Events** section for static and dynamic images, se
 
 The dynamic image has a specific on-click action **Enlarge on Click**. The full-size image will be displayed when the user clicks it. This property overrides other on-click actions. 
 
-#### 2.1.3 Design Section
+#### 2.1.3 Conditional Visibility Section
+
+{{% snippet file="studio/visibility-section-link.md" %}}
+
+#### 2.1.4 Design Section
 
 For information on the **Design** section and its properties, see [Design Section in Widgets](page-editor-widgets-design-section).
 
@@ -98,13 +102,55 @@ The **Data Source** section consists of the **Context Entity** option. **Context
 
 #### 3.1.2 General Section
 
-Properties of the **General** section are described in the table below:
+The **General** section properties are described below.
 
-| Property    | Description                                                  |
-| ----------- | ------------------------------------------------------------ |
-| Show Label  | Enable this property if you want to show a label (name) of a widget to the end-user.  *This property is enabled by default.* |
-| Label       | This property only appears if **Show Label** is enabled. Specify the name that will be displayed to end-users.  When you add an attribute, the name of the attribute is shown in the label in braces. This means that instead of a static text, the value of the attribute is displayed to end-users. |
-| Editability | Editability indicates whether the end-user will be able to change the value displayed by the widget. Possible values are the following: <ul><li>Editable – the value displayed by the widget is editable</li><li>Read-only – the value is in read-only mode</li><li>Conditional – the widget is editable only if specified conditions are met (this option can be configured in Studio Pro only)</li></ul> |
+##### 3.1.2.1 Show Label
+
+Enable this property if you want to show a label (name) of a widget to the end-user. *This property is enabled by default.*
+
+##### 3.1.2.2 Label
+
+This property only appears if **Show Label** is enabled. Specify the name that will be displayed to end-users. When you select an attribute, the name of the attribute is shown in the label in braces. This means that instead of a static text, the value of the attribute is displayed to end-users.
+
+##### 3.1.2.3 Editability {#editability}
+
+Editability indicates whether the end-user will be able to change the value displayed by the widget. Possible values are the following: 
+
+* **Editable** – the value displayed by the widget is editable
+
+* **Read-only** – the value is in read-only mode
+
+* **Conditional** – the widget is editable only if specified conditions are met based on an attribute value (for more information, see  [Attribute-Based](#attribute-based) and [Attribute Values](#attribute-values) sections below) or based on an expression. You can create a condition based on an expression in Studio Pro only (for details, see the [Editability Section](/refguide/common-widget-properties#editability) in *Properties Common in the Page Editor*)
+
+  {{%alert type="info" %}}If an attribute set for the widget's data source is of the AutoNumber type, the widget is set into read-only mode by default and the **Editability** setting itself is disabled, because attributes of this type are generated automatically.
+
+  {{%/alert %}}
+
+##### 3.1.2.4 Attribute-Based {#attribute-based}
+
+The **Attribute-Based** property is only shown when [Conditional Editability](#editability) is selected.
+
+**Attribute-Based** conditional editability allows you to show widgets only when they match a certain value of the selected attribute. 
+
+{{%alert type="info" %}}
+
+The attribute must be of the Boolean or enumeration type.
+
+{{%/alert %}} 
+
+{{%alert type="info" %}}
+
+You can only configure attribute-based conditional editability when a widget is placed in a data container: a data view or a list view. For more information on how to place widgets on a page, see [Adding Elements on a Page](page-editor#adding-elements) section in *Pages*. 
+
+{{%/alert %}}
+
+##### 3.1.2.5 Attribute Values {#attribute-values}
+
+This property is shown only when an attribute in the [Attribute-Based](#attribute-based) property is selected. The **Attribute Values** property allows you to select certain attribute values.
+
+For example, you would like to allow users upload images only when their *email is verified*. So, you need to select *EmailVerified* in the **Attribute-Based** property and *true* in the **Attribute Value** property:
+
+<img src="attachments/page-editor-widgets-input-elements/conditional-editability.png" style="zoom:60%;" />
 
 #### 3.1.3 Controls Section
 
@@ -120,7 +166,11 @@ The **Show Buttons For** option specifies whether end-users are able to upload a
 * **Download** – end-users are able to download a file
 * **Both** – end-users are able to upload and download files
 
-#### 3.1.4 Design Section
+#### 3.1.4 Conditional Visibility Section
+
+{{% snippet file="studio/visibility-section-link.md" %}}
+
+#### 3.1.5 Design Section
 
 For information on the **Design** section and its properties, see [Design Section in Widgets](page-editor-widgets-design-section).
 

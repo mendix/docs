@@ -37,6 +37,8 @@ The PushNotifications module has two dependencies:
 
  * [Encryption](/appstore/modules/encryption)
  * [Community Commons Function Library](/appstore/modules/community-commons-function-library)
+ * [Nanoflow Commons](https://appstore.home.mendix.com/link/app/109515/)
+ * [Native Mobile Resources](https://appstore.home.mendix.com/link/app/109513/)
 
 To include these dependencies, download them from the App Store in a way similar to how you installed the PushNotifications module. While importing, you may get a pop-up window with information about overwriting project files, which you can confirm by clicking **OK**.
 

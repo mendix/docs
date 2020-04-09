@@ -116,7 +116,7 @@ To delete a page in Studio, do one of the following:
 
 The selected page is deleted.
 
-### 2.6 Adding Elements on a Page
+### 2.6 Adding Elements on a Page {#adding-elements}
 
 To add elements on a page, do the following:
 

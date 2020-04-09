@@ -134,6 +134,10 @@ Before you can deploy your app, you will need to create a deployment package. En
 
 You can also deploy an existing deployment package to an environment without having to create a new one. This also allows you to specify constant values and control scheduled events before the app is started.
 
+{{% alert type="warning" %}}
+Currently, deployment packages are only valid for two weeks. Older deployment packages will still be visible, but if you try to deploy a package that was created more than two weeks ago, the deployment will fail and return a 403 error. The solution is to [recreate the deployment package](#create-deployment-package).
+{{% /alert %}}
+
 After creating an environment and deployment package (see [Creating an Environment](#create-environment) and [Creating a Deployment Package](#create-deployment-package), above) you will now have a deployment package and an environment. Check that there is a green tick next to the deployment package and the resources of the environment. If any of these have failed, try to create the environment or the deployment package again, and contact your cluster manager. If neither of these solves the problem. contact Mendix support for help.
 
 ![](attachments/private-cloud-deploy/image13.png)

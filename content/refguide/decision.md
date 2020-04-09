@@ -32,7 +32,7 @@ For more information, see the [Caption](microflow-element-common-properties#capt
 
 | Option | Description |
 | --- | --- |
-| [Expression](#expression) | Expressions are can be used to create or change an object or a variable based on logic. |
+| [Expression](#expression) | Expressions can be used to create or change an object or a variable based on logic. |
 | [Rule](#rule) | A rule is a special kind of a microflow the outcomes of which can be used in a decision instead of calling a sub-microflow and using the return variable of that sub-microflow. The idea is that complicated decisions can be consolidated in rules and reused in various places. |
 
 ##### 2.1.2.1 Expression {#expression}
@@ -53,14 +53,17 @@ The expression used for the example above is`$Customer/Grade`. As you want to go
 
 ##### 2.2.2.2 Rule {#rule}
 
-If the **Type** property is set to **Rule**, a [rule](rules) can be selected to define the condition of the decision. You can use the outcome of the rule for the decision. You can use the outcome of the rule for the decision instead of first calling a sub-microflow and using the return variable of that sub-microflow.
+If the **Type** property is set to **Rule**, a [rule](rules) can be selected to define the condition of the decision. You can use the outcome of the rule for the decision instead of calling a sub-microflow and using the return variable of that sub-microflow.
 
-The properties of the Rule decision type are described in the table below:
+The properties of the **Rule** decision type are the following ones:
 
-| Property  | Description                                                  |
-| --------- | ------------------------------------------------------------ |
-| Rule      | Allows you to select a rule.                                 |
-| Parameter | For each parameter of the rule an argument needs to be specified using [expressions](expressions). For example, a rule that determines whether a customer deserves a certain status will have a customer object as a parameter. |
+* **Rule** – allows you to select a rule.
+
+* **Parameter **– for each parameter of the rule an argument needs to be specified using [expressions](expressions). For example, a rule that determines whether a customer deserves a certain status will have a customer object as a parameter.
+
+  <img src="attachments/decisions/rule-properties.png" style="zoom:50%;" />
+
+  
 
 #### 2.1.3 Error Handling Type
 

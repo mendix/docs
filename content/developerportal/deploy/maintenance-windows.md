@@ -8,19 +8,31 @@ tags: ["Deploy","App","Developer Portal", "maintenance"]
 
 ## 1 Introduction
 
-In the Mendix Cloud Professional and Enterprise plans you can configure a weekly time range (*Maintenance Window*) when system maintenance can occur. Whenever Mendix has planned operations, these will be executed within your preferred time window. Naturally, we will always inform you upfront on any upcoming maintenance operations in accordance with your SLA.
+In the Mendix Cloud Professional and Enterprise plans you can configure a weekly time range (*Maintenance Window*) when system maintenance can occur. Whenever Mendix has planned maintenance operations, these will be executed within your preferred time window. Naturally, we will always inform you upfront on any upcoming maintenance operations in accordance with your SLA.
 
-**After completing this how-to you will know:**
+### 1.1 Preferred Maintenance Window
 
-*   How to configure a maintenance window
+The **Preferred Maintenance Window** is a standard time range in a week where you would prefer system maintenance to occur. This is always shown as **UTC** so don't forget to convert it to your local timezone.
+
+This window will only be used when planned maintenance is being scheduled.
+
+### 1.2 Planned Maintenance
+
+**Planned Maintenance** is a maintenance operation that will be carried out within your configured maintenance window. This is shown in local time, together with an offset from UTC.
 
 ## 2 Prerequisites
 
-Before you can start with this how-to, please make sure you have completed the following:
+To view maintenance windows, you need to have monitor or backup access to your Mendix app. To configure them, you need to have transport rights to it. For more information, see [Node Permissions](/developerportal/deploy/node-permissions).
 
-*   Have a Mendix Cloud application where you have transport, monitor, or backup access (for more information, see [Node Permissions](/developerportal/deploy/node-permissions))
+## 3 Configuring Maintenance for Your Application
 
-## 3 Configuring the Maintenance Window for your application
+{{% alert type="warning" %}}
+Maintenance windows and planned maintenance are defined in UTC time format. When selecting a time period, remember to convert to UTC from your local time.
+{{% /alert %}}
+
+### 3.1 Configuring the Maintenance Window for Your Application
+
+Follow the instructions below to configure a maintenance window:
 
 1. Go to the [Developer Portal](http://home.mendix.com).
 
@@ -36,29 +48,39 @@ Before you can start with this how-to, please make sure you have completed the f
 
     ![](attachments/maintenance-windows/maintenance.png)
     
-    The **Preferred Maintenance Window** is a weekly time range where system maintenance can occur.
+5. Click **Change** to modify the preferred maintenance window of your environment. Transport rights for this environment are required.
 
-    **Planned Maintenance** is a maintenance operation that will be executed within your configured maintenance window.
+6. Choose one of the maintenance windows suggested.
 
-5. Click **Change** to modify the preferred maintenance window of your environment. Transport rights for this environment are required. 
-
-    {{% alert type="warning" %}}All windows are defined in UTC time format. Remember to convert to UTC from your local time.{{% /alert %}}
+7. Click **Save** to confirm your new planned maintenance window.
 
 {{% alert type="info" %}}
-
-When a maintenance operation is planned, it will show up under **Planned Maintenance**. By default it will be planned in your preferred maintenance window. You can override the maintenance window of a specific maintenance operation by clicking **Reschedule**.
-
+Changing your preferred maintenance window will not change the time of any planned maintenance which is already scheduled. You will need to reschedule planned maintenance separately.
 {{% /alert %}}
+
+### 3.2 Rescheduling Planned Maintenance for Your Application
+
+When a maintenance operation is planned, it will show up under **Planned Maintenance**. By default it will be planned in your preferred maintenance window.
+
+{{% alert type="info" %}}
+Planned maintenance windows are displayed in your local timezone, as indicated by the offset (for example `+02:00` in the image above).
+{{% /alert %}}
+
+You can reschedule planned maintenance up  to one hour before the beginning of the planned maintenance window by doing the following:
+
+1. Click **Reschedule** to override a planned maintenance window.
+
+2. Choose one of the maintenance windows suggested. It does not have to be in your preferred maintenance window.
+
+    {{% alert type="warning" %}}When rescheduling, the maintenance window options are in **UTC**. When you save a new planned maintenance window, it will be shown in the local timezone.{{% /alert %}}
+
+    ![](attachments/maintenance-windows/reschedule-maintenance.png)
+
+3. Click **Save** to confirm your new planned maintenance window. 
 
 ## 4 Read More
 
-* [Alerts](/developerportal/operate/monitoring-application-health)
-* [Application Trends in Mendix Cloud v3](/developerportal/operate/trends)
-* [Application Trends in Mendix Cloud v4](/developerportal/operate/trends-v4)
 * [How to Manage Company & App Roles](/developerportal/company-app-roles/manage-roles)
-* [How to Receive Environment Status Alerts](/developerportal/operate/receive-alerts)
-* [Mendix Cloud](mendix-cloud-deploy)
-* [Mendix Cloud v4](mxcloudv4)
 * [Company & App Roles](/developerportal/company-app-roles/index)
 * [Node Permissions](/developerportal/deploy/node-permissions) 
 * [Technical Contact](/developerportal/company-app-roles/technical-contact)

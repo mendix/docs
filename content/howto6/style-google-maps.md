@@ -42,9 +42,9 @@ In this chapter I will explain how you can add styling to the Google Maps widget
 
 Choosing an existing style sheet from a large library that fits your application will save you a lot of time. Here is a website where a community is formed who uploads new styles on a regular basis: [https://snazzymaps.com/](https://snazzymaps.com/)
 
-1.  On the website click on **Explore:**
+1.  On the website click **Explore:**
     ![](attachments/19202780/19398959.png)
-2.  Explore the styles to find one that matches your application and click on it:
+2.  Explore the styles to find one that matches your application and click it:
     ![](attachments/19202780/19398960.png)
 3.  On the lefthand pane you will see the style array:
     ![](attachments/19202780/19398961.png)
@@ -66,7 +66,7 @@ Choosing an existing style sheet from a large library that fits your application
 
 Supporting communities is cool. Therefore I will also show you how to upload your own custom style array to the website.
 
-1.  Go-to Snazzy maps and click on **Create.**
+1.  Go-to Snazzy maps and click **Create.**
     **![](attachments/19202780/19398964.png)** 
 2.  Now you will see the same sort of handy quick style method that Mendix provides at [https://ux.mendix.com/theme-creator.html](https://ux.mendix.com/theme-creator.html).
     ![](attachments/19202780/19398965.png) 

@@ -1,10 +1,23 @@
 ---
 title: "App Store Guide"
-description: " "
-tags: [ ]
-draft: true
+description: "Presents documentation on configuring and using the latest versions of platform-supported components."
+tags: [ "app store", "app store component", "platform support"]
 ---
 
-For details on latest version of the item, the Studio Pro version required, and when published, please see the respective items in the App Store.
+## 1 Introduction
 
-Contributions are encouraged, so be sure to review [How to Contribute to a Mendix GitHub Repository](/howto/collaboration-requirements-management/contribute-to-a-github-repository).
+Mendix Studio Pro and Studio contain a lot of out-of-the-box widgets such as data grids and snippets. However, if you want to extend your application with more widgets and modules (for example, the [Forgot Password module](https://appstore.home.mendix.com/link/app/1296/)), simple charts, an [Excel importer](https://appstore.home.mendix.com/link/app/1296/), and other features, you need to add content from the [Mendix App Store](https://appstore.home.mendix.com/). The App Store contains many useful and reusable widgets and modules created by Mendix as well as by our partners and community.
+
+This guide presents documentation on configuring and using the latest versions of [platform-supported](/appstore/general/app-store-content-support#category) App Store components.
+
+For the Studio Pro version required for use, when the component was published, and other information on a component, please see the specific component page in the [Mendix App Store](https://appstore.home.mendix.com/).
+
+## 2 Document Categories
+
+The *App Store Guide* is divided into the following categories:
+
+* [General Info](general/index)
+* [Connectors](connectors/index)
+* [Modules](modules/index)
+* [Themes](themes/index)
+* [Widgets](widgets/index)

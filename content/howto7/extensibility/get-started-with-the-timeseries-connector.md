@@ -25,7 +25,7 @@ When looking at the IoT trend recently, one hundred sensors that send data each 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Have the Mendix Desktop Modeler installed (download [here](https://appstore.home.mendix.com/link/modeler/))
-* Have the Community Commons Function Library in your project (download [here](https://appstore.home.mendix.com/link/app/170/Mendix/Community-Commons-Function-Library)
+* Have the [Community Commons Function Library](/appstore/modules/community-commons-function-library) in your app project
 
 ## 3 Sign Up for the TimeSeries Connector
 

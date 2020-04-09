@@ -1,10 +1,9 @@
 ---
 title: "Community Commons Function Library"
 category: "Modules"
-description: " "
-tags: [ ]
-draft: true
-#README exists
+description: "Describes the configuration and usage of the Community Commons Function Library module, which is available in the Mendix App Store."
+tags: ["app store", "app store component", "community commons function library", "community commons", "java action call", "platform support"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
@@ -19,7 +18,7 @@ The module contains one constant: `CommunityCommons.MergeMultiplePdfs_MaxAtOnce`
 
 ## 3 Testing
 
-The Community Commons container project contains a variety of predesigned unit tests. To use these tests, download the [Unit Testing](https://appstore.home.mendix.com/link/app/390/) module from the Mendix App Store . This module has a dependency on the [ObjectHandling](https://appstore.home.mendix.com/link/app/37114/) module, so that module should also be imported to your app project if you want to run the tests.
+The Community Commons container project contains a variety of predesigned unit tests. To use these tests, download the [Unit Testing](/appstore/modules/unit-testing) module from the Mendix App Store . This module has a dependency on the [Object Handling](/appstore/modules/object-handling) module, so that module should also be imported to your app project if you want to run the tests.
 
 ## 4 Function List
 
@@ -167,5 +166,5 @@ For security reasons, Guava was upgraded to version 27 in version 7.4.0 of this 
 
 ## 6 Read More
 
-* [How to Implement Community Best Practices for App Performance](/howto/general/community-best-practices-for-app-performance)
-* [How to Implement Best Practices for App Security](/howto/security/best-practices-security)
+* [How to Implement Community Best Practices for App Performance](https://docs.mendix.com/howto/general/community-best-practices-for-app-performance)
+* [How to Implement Best Practices for App Security](https://docs.mendix.com/howto/security/best-practices-security)

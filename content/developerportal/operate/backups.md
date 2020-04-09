@@ -50,7 +50,7 @@ Anything you can download you can also upload again, which means you can upload 
 * **Files Only**
 
 {{% alert type="info" %}}
-Uploading a **Files Only** archive will result in a backup item with an exclamation mark and a warning message. Since the archive does not contain a database, it is not possible to restore it. This functionality can be used to move file documents from one environment to another (especially useful if you have a lot of file documents). It will still be necessary to upload a **Database Only** archive to make sure the database can be restored.
+Uploading a **Files Only** archive will result in a backup item with an exclamation mark and a warning message. Since the archive does not contain a database, it is not possible to restore it.
 {{% /alert %}}
 
 #### 3.2.2 Uploading Data in Mendix Cloud v3

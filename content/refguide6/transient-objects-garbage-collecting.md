@@ -25,7 +25,7 @@ Any references to the Mendix Platform Cache on this page or in any other piece o
 
 When creating an object in a microflow, for the duration of that microflow that object is considered to be ‘in use’. As soon as an ‘action’ completes the platform triggers the garbage collector which will identify all Objects that are no longer used and remove all of those Objects. The garbage collector can be triggered after a successfully executed microflow, but also when an exception had occured.
 
-It is important to note that the previous definition used the word 'action’. The garbage collector will not run after each microflow, for example a sub-microflow will not initiate the garbage collector. Any action that requires a transaction, such as a click on a microlfow button, a click on the save button, scheduled events, etc. are all actions that can initiate the garbage collector.
+It is important to note that the previous definition used the word 'action’. The garbage collector will not run after each microflow, for example a sub-microflow will not initiate the garbage collector. Any action that requires a transaction, such as a click a microlfow button, a click the save button, scheduled events, etc. are all actions that can initiate the garbage collector.
 
 Besides objects being used in a microflow, it is also possible that a user has the object open in the browser or in the browser history. All those objects are also considered to be in use for as long as you have the browser open.
 

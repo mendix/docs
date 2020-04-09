@@ -61,7 +61,7 @@ If you **Select existing app** you will be able to choose the correct app from a
 
 If you **Create new app** you will need to do the following:
 
-1. Select the **Domain** in which the app will run from the drop down.
+1. Select the **Domain** in which the app will run from the drop-down.
 2. Enter the **App name** for the app.
 
 The URL for your app will be {App name}.(Domain).

@@ -87,7 +87,7 @@ When running Mendix on a server, you will need Java Runtime Environment (JRE) 11
 There is an issue since Java 7 that causes timeouts when using web services with a certain amount of data. You can circumvent this issue by adding the VM params `-Djava.net.preferIPv4Stack=true`. Mendix Studio Pro will do this for you, but if you are running Mendix on premises on a Windows server, you will need to do this yourself. For more information about this issue, see [HotSpot (64bit server) hangs on socket read (JVM 1.7 bug?) - updated](http://blog.bielu.com/2011/11/hotspot-64bit-server-hangs-on-socket.html) and [Possible Bug in Java 7](https://forums.oracle.com/forums/thread.jspa?messageID=9985748).
 {{% /alert %}}
 
-## 8 Databases
+## 8 Databases {#databases}
 
 Mendix tries to support the most recent and patched database server versions from database vendors. We aim to add support for a new vendor version two minor Mendix versions after the vendor has released it. Dropping support for a database will be announced in the release notes at the date the vendor drops support. We will drop support two minor Mendix versions later.
 
@@ -95,11 +95,11 @@ Current support:
 
 * [IBM DB2](db2) 11.1 for Linux, Unix, and Windows
 * [MariaDB](mysql) 5.5, 10.1, 10.2, 10.3
-* [Microsoft SQL Server](/developerportal/deploy/mendix-on-windows-microsoft-sql-server) 2016, 2017
+* [Microsoft SQL Server](/developerportal/deploy/mendix-on-windows-microsoft-sql-server) 2016, 2017, 2019
 * [Azure SQL](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017) v12 compatibility mode 130 or higher
 * [MySQL](mysql) 5.7, 8.0
-* [Oracle Database](oracle) 12c Release 2
-* PostgreSQL 9.5, 9.6, 10, 11
+* [Oracle Database](oracle) 12c Release 2, 18, 19
+* PostgreSQL 9.5, 9.6, 10, 11, 12
 * [SAP HANA](saphana) 2.00.040.00.1545918182
 
 {{% alert type="warning" %}}

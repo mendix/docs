@@ -211,7 +211,7 @@ This produces the GET request `https://sapes5.sapdevcenter.com/sap/opu/odata/iwb
 The Create operation creates a new object in the SAP back-end system using the OData service. The object is described by an entity in the SAP service domain model.
 
 {{% alert type="info" %}}
-This Create is not the same as the Mendix **Create Object** action. The OData Connector for SAP solutions Create will commit the object to the SAP back-end system and it cannot be rolled back. If you decide later that you do not want this object you must delete it using its key.
+This Create is not the same as the Mendix **Create object** action. The OData Connector for SAP solutions Create will commit the object to the SAP back-end system and it cannot be rolled back. If you decide later that you do not want this object you must delete it using its key.
 {{% /alert %}}
 
 ![](attachments/sap-odata-connector/create-params.png)
@@ -244,7 +244,7 @@ For example, this connector can be used to create a product using the **GWSAMPLE
 
 `GWSAMPLE_BASIC.EntitySetNames.ProductSet` is the name of the Product collection listed in the EntitySetNames enumeration of the SAP Service Data Model.
 
-The **Odata object** is an object of entity type **Product**. This can be created, by using, for example, the **Create Object** action.
+The **Odata object** is an object of entity type **Product**. This can be created, by using, for example, the **Create object** action.
 
  You will need to pass authentication using **Request Parameters** and the **Add basic authentication** action described in [Helper Actions](#HelperActions), below.
 
@@ -413,7 +413,7 @@ Every action of the OData Connector for SAP solutions will ask for a set of para
 
 ![](attachments/sap-odata-connector/actionparameters-sapodataconnector.png)
 
-The parameters can be entered using the drop down, clicking the **Edit** or **Select…** buttons, or typing directly into a text field.
+The parameters can be entered using the drop-down, clicking the **Edit** or **Select…** buttons, or typing directly into a text field.
 
 Within the edit box, you can type your parameter. As is standard in Mendix, certain characters (for example [@ $ .]) will trigger a pop-up window to help you select the right values. This can also be triggered using <kbd>Ctrl</kbd>+<kbd>Space</kbd>. Typing while this pop-up window is open will filter the list of possibilities. For example, you can type (the beginning of) _entitysetnames_ and the pop-up window will allow you to select the collection of entity set names which you want.
 
@@ -621,7 +621,7 @@ This is the name that you give the result of your Activity. This can be used lat
 * [Data Types](/refguide/data-types)
 * [Domain Model](/refguide/domain-model)
 * [Entities](/refguide/entities)
-* [How to Use App Store Content](/developerportal/app-store/app-store-content)
+* [How to Use App Store Content](/appstore/general/app-store-content)
 * [How to Use the OData Connector for SAP Solutions](/partners/sap/use-sap-odata-connector)
 * [How to Use the OData Model Creator for SAP Solutions](/partners/sap/use-sap-odata-model-creator)
 * [SAP Cloud Connector](sap-cloud-connector)

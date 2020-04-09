@@ -3,6 +3,7 @@ title: "Implement Mendix Best Practices for Development"
 category: "General Info"
 menu_order: 7
 tags: ["best practice", "development", "develop", "reusable", "prefix"]
+#Academy are SMEs for verification, they discuss and link to this doc in training
 ---
 
 ## 1 Introduction
@@ -35,7 +36,7 @@ Every project has at least one configuration, but it may have many. Every projec
 
 ### 2.4 User Roles
 
-The [user roles](/refguide/user-roles) should have logical names that reflect the different types of users that will use the application. The user roles are singular and use a camel case notation, like **FunctionalAdministrator**. User roles are mostly defined in English, but there is an option to name these in a different language, since the user role is visible in the front-end.
+The [user roles](/refguide/user-roles) should have logical names that reflect the different types of users that will use the application. The user roles are singular and use an UpperCamelCase notation, like **FunctionalAdministrator**. User roles are mostly defined in English, but there is an option to name these in a different language, since the user role is visible in the front-end.
 
 Each user role should correspond to only one module role per module. In other words, a user role should not map to multiple module roles within the same module. This helps to keep the number of applicable module roles for a user to a minimum, which reduces complexity in understanding the security model and reduces the performance impact of complex security rules.
 
@@ -45,7 +46,7 @@ Each user role should correspond to only one module role per module. In other wo
 
 #### 3.1.1 Module Names
 
-Modules should be treated like stand-alone replaceable services; for example, the customer module should function as a stand-alone customer management system as much as possible, replaceable by a different customer management system. Module names should have camel case names that identify the responsibility of the module, for example, **CustomerManagement** or **SharePointIntegration**.
+Modules should be treated like stand-alone replaceable services; for example, the customer module should function as a stand-alone customer management system as much as possible, replaceable by a different customer management system. Module names should have UpperCamelCase names that identify the responsibility of the module, for example, **CustomerManagement** or **SharePointIntegration**.
 
 #### 3.1.2 Module Roles
 
@@ -55,11 +56,15 @@ The [module roles](/refguide/module-security#module-role) should have logical na
 
 #### 3.2.1 Entity Names
 
-Most of the time, an [entity](/refguide/entities) reflects a real-world object that people can relate to. Therefore, the entity name should also reflect that object and identify its purpose. There are sometimes project-specific exceptions that lead to creating other types of entity, but that is up to you. The name of an entity is singular since an object is a single instance of the entity. A good example is using **Customer** and not **Customers**. Furthermore, we advise avoiding abbreviations, underscores, mathematical characters or any other special characters in the names of entities. Entity names also use camel case, for example, **HousekeepingRecord** or **LogEntry**.
+Most of the time, an [entity](/refguide/entities) reflects a real-world object that people can relate to. Therefore, the entity name should also reflect that object and identify its purpose. There are sometimes project-specific exceptions that lead to creating other types of entity, but that is up to you. The name of an entity is singular since an object is a single instance of the entity. A good example is using **Customer** and not **Customers**. Furthermore, we advise avoiding abbreviations, underscores, mathematical characters or any other special characters in the names of entities. Entity names also use UpperCamelCase, for example, **HousekeepingRecord** or **LogEntry**.
+
+{{% alert type="info" %}}
+Following these entity naming conventions will prevent issues with naming conflicts between modules and entities. For example, if a module named **Customer** contains an entity named **customer** (note the lower-case "c"), there will be a Java compilation error and the app will not run. Renaming the entity to **Customer** will solve the problem.
+{{% /alert %}}
 
 #### 3.2.2 Entity Attributes
 
-The entity [attribute](/refguide/attributes) should reflect a property of a real-world object that people can relate to and fits the purpose of that property. We advise avoiding abbreviations, underscores (except in the case described in the next paragraph), mathematical characters or any other special characters in the names. Entity attributes should use camel case, for example, **FirstName** or **TelephoneNumber**.
+The entity [attribute](/refguide/attributes) should reflect a property of a real-world object that people can relate to and fits the purpose of that property. We advise avoiding abbreviations, underscores (except in the case described in the next paragraph), mathematical characters or any other special characters in the names. Entity attributes should use UpperCamelCase, for example, **FirstName** or **TelephoneNumber**.
 
 Attributes that do not reflect business-related data, but are only necessary for technical reasons, should start with an underscore (`_`).
 
@@ -101,7 +106,7 @@ Generally, [microflow](/refguide/microflows) names should include the type of ev
 
 There are exceptions, such as where there is no main entity, or there is another reason to use a different name to improve understandability. The important thing is to make sure the name of the microflow clearly indicates its purpose.
 
-To easily find and recognize the purpose of a microflow, you can use standard prefixes. Common purposes or events and their standard prefixes are listed below. If a microflow is triggered by several events you can consider using more than one prefix.
+To easily find and recognize the purpose of a microflow, you can use standard prefixes. Common purposes or events and their standard prefixes are listed below. If a microflow is triggered by several events, consider using more than one prefix. If a microflow does not comply to any of the patterns listed below, it should not have a prefix.
 
 #### 3.4.1 Entity Event Microflows
 
@@ -140,7 +145,7 @@ For attributes, you can choose to store the value in the database or to calculat
 | On change event           | OCh\_{Purpose}   | Input widgets   |
 | On leave event            | OLe\_{Purpose}   | Input widgets   |
 | Data source               | DS\_{Purpose}    | Data view, list view, data grid, template grid |
-| Microflow/action button   | ACT\_{Purpose} or IVK\_{Purpose} | Menu item, Navigation item, Microflow and Action button, Drop down button<br />(“IVK\_” is used historically) |
+| Action button             | Act\_{Purpose}   | Menu item, navigation item, microflow and action button, drop-down button<br />(“IVK\_” is used historically) |
 
 #### 3.4.4 Validation Microflows
 

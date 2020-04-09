@@ -20,7 +20,7 @@ Using Parallels, you can run Mendix Studio Pro on your Mac device using a Window
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Install [Parallels](https://www.parallels.com/products/desktop/), install Windows when prompted by Parallels, and create a Windows virtual machine
+* Install [Parallels Desktop Pro Edition](https://www.parallels.com/products/desktop/pro/), install Windows when prompted by Parallels, and create a Windows virtual machine (Parallels Desktop Pro Edition is necessary for Mendix's network features to work)
 * Install Mendix Studio Pro on your Windows virtual machine
 
 ## 3 Configuring Your Windows Virtual Machine for Mendix Studio Pro
@@ -38,6 +38,7 @@ To configure your Windows virtual machine to work with Mendix Studio Pro, follow
 
 4. Make sure **Source** is set to **Shared Network**.
 5. Make sure that both the **Inbound** bandwidth and **Outbound** bandwidth show **unlimited**.
+
 	If this is not the case, either enable **Network Conditioner** and set it to a profile that does not limit bandwidth, or click the **Options** tab then the **Optimization** pane and set **Resource usage** to **No limit**.
 6.  In the Parallels drop-down menu, select **Preferences**:
 

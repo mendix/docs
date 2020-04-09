@@ -29,23 +29,24 @@ This defines the prop `key` in the client component props which are supplied to 
 
 This defines a property's type. A `type` must be one of the following: 
 
-* Static Properties
+* Static Types
 	* [string](#string)
 	* [boolean](#boolean)
 	* [integer](#integer)
 	* [decimal](#decimal)
 	* [enumeration](#enumeration)
-* Component Properties
+* Component Types
 	* [icon](#icon)
 	* [image](#image)
 	* [widgets](#widgets)
-* Dynamic Properties
+* Dynamic Types
 	* [expression](#expression)
 	* [textTemplate](#texttemplate)
 	* [action](#action)
 	* [attribute](#attribute)
 	* [object](#object)
 	* [file](#file)
+	* [datasource](#datasource)
 
 ### 1.2 XML Elements
 
@@ -53,13 +54,13 @@ This defines a property's type. A `type` must be one of the following:
 
 `<description>` (required) — This is a description which explains a property's purpose.
 
-## 2 Static Properties
+## 2 Static Types
 
-Static properties are made to pass values configured in Studio or Studio Pro to the widget. They do not depend on any dynamic data. Static properties are passed to the widget client component as simple primitive values.
+Static types are made to pass values configured in Studio or Studio Pro to the widget. They do not depend on any dynamic data. Static properties are passed to the widget client component as simple primitive values.
 
 ### 2.1 String{#string}
 
-String is represented as a simple text input in Studio Pro. It is passed as a `string` prop to a client component.
+The string property type is represented as a simple text input in Studio Pro. It is passed as a `string` prop to a client component.
 
 #### 2.1.1 XML Attributes
 
@@ -102,7 +103,7 @@ Then the Studio Pro UI for the property appears like this:
 
 ### 2.2 Boolean{#boolean}
 
-Boolean is represented as a toggle in Studio Pro. It is passed as `boolean` prop to a client component.
+Properties of type Boolean are represented as a toggle in Studio Pro. They are passed as `boolean` props to a client component.
 
 #### 2.2.1 XML Attributes
 
@@ -156,7 +157,7 @@ Then the Studio Pro UI for the property appears like this:
 
 ### 2.4 Decimal{#decimal}
 
-Decimal is represented as a number input in Studio Pro. It is passed as a `Big` prop to a client component.
+Properties of type decimal are represented as a number input in Studio Pro. They are passed as a `Big` prop to a client component.
 
 #### 2.4.1 XML Attributes
 
@@ -183,7 +184,7 @@ Then the Studio Pro UI for the property appears like this:
 
 ### 2.5 Enumeration{#enumeration}
 
-Enumeration allows a user to select one out of multiple options defined in the XML. The `key` of a selected enumeration element is passed as `string` prop to a client component.
+The enumeration property type allows a user to select one out of multiple options defined in the XML. The `key` of a selected enumeration element is passed as `string` prop to a client component.
 
 #### 2.5.1 XML Attributes
 
@@ -223,11 +224,11 @@ Then the Studio Pro UI for the property appears like this:
 
 ![](attachments/widget-property-types/enumeration.png)
 
-## 3 Components
+## 3 Component Types
 
 ### 3.1 Icon {#icon}
 
-Icon allows a user to configure an icon similar to one used by a [button](/refguide/button-properties#icon). It is passed as `DynamicValue<IconValue>` prop to a client component.
+Properties of type icon allows a user to configure an icon similar to one used by a [button](/refguide/button-properties#icon). It is passed as `DynamicValue<IconValue>` prop to a client component.
 
 {{% alert type="info" %}}
 This property type was introduced in Mendix 8.1.
@@ -257,7 +258,7 @@ Then the Studio Pro UI for the component appears like this:
 
 ### 3.2 Image {#image}
 
-Image allows a user to configure a static image from an [image collection](/refguide/image-collection). It also allows a user to configure an image from an object that is a specialization of **System.Image**. It is passed as `DynamicValue<ImageValue>` prop to a client component. See [Images](https://docs.mendix.com/refguide/images) for more information about supported image formats.
+Image allows a user to configure a static image from an [image collection](/refguide/image-collection). It also allows a user to configure an image from an object that is a specialization of **System.Image**. It is passed as DynamicValue [ImageValue](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets#imagevalue) prop to a client component. See the [Images Reference Guide](/refguide/images) for more information about supported image formats.
 
 {{% alert type="info" %}}
 This property type was introduced in Mendix 8.1. Support for dynamic images was introduced in Mendix [8.4.0](/releasenotes/studio-pro/8.4).
@@ -295,10 +296,14 @@ Then the Studio Pro UI for the component appears like this:
 
 ### 3.3 Widgets {#widgets}
 
-The widgets property allows a user to place multiple widgets inside a pluggable widget, similar to the content of a [container](/refguide/container) widget. It is passed as a `ReactNode` prop to a client component.
+The widgets property allows a user to place multiple widgets inside a pluggable widget, similar to the content of a [container](/refguide/container) widget. It is passed as a `ReactNode` prop to a client component if a `dataSource` attribute is not specified or if an attribute is specified, but the data source is not configured by the user. Otherwise it is passed as a function that expects an `ObjectItem` and returns a `ReactNode`: `(item: ObjectItem) => ReactNode`. For more information, see the [Datasource](#datasource) section below.
 
 {{% alert type="info" %}}
 This property type was introduced in Mendix 8.3.
+{{% /alert %}}
+
+{{% alert type="info" %}}
+Support for the `dataSource` attribute was introduced in Mendix 8.7.
 {{% /alert %}}
 
 {{% alert type="warning" %}}
@@ -307,14 +312,16 @@ Some widgets are not yet supported inside pluggable widgets. Placing unsupported
 
 #### 3.3.1 XML Attributes
 
-| Attribute  | Required | Attribute Type | Description                                                                                                                                                          |
-| ---------- | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `type`     | Yes      | String         | Must be `widgets`                                                                                                                                                       |
-| `key`      | Yes      | String         | See [key](#key) |
-| `required` | No       | Boolean        | Whether a user must provide at least one widget. `true` by default                                                                                                |
+| Attribute    | Required | Attribute Type | Description |
+| ------------ | -------- | -------------- | ----------- |
+| `type`       | Yes      | String         | Must be `widgets` |
+| `key`        | Yes      | String         | See [key](#key) |
+| `dataSource` | No       | Property Path  | Specifies path to a [`datasource`](#datasource) property linked to this widget's property |
+| `required`   | No       | Boolean        | Whether a user must provide at least one widget, `true` by default |
+
 #### 3.3.2 Studio Pro UI
 
-When the component is defined as follows:
+When the component is defined without the `dataSource` attribute as follows:
 
 ```xml
 <property key="content" type="widgets" required="false">
@@ -327,11 +334,26 @@ then the Studio Pro UI for the component appears like this:
 
 ![studio pro ui](attachments/widget-property-types/widgets.png)
 
-## 4 Dynamic Properties
+#### 3.3.3 Using the DataSource Attribute
+
+When the component is defined with the `dataSource` attribute, assuming `myDataSource` is key of a [`datasource`](#datasource) property defined elsewhere for this widget:
+
+```xml
+<property key="content" type="widgets" required="false" dataSource="myDataSource">
+	<caption>Content</caption>
+	<description>Widgets using data source</description>
+</property>
+```
+
+then the Studio Pro UI for the component appears like this:
+
+![studio pro ui](attachments/widget-property-types/widgets_with_ds.png)
+
+## 4 Dynamic Types
 
 ### 4.1 Expression{#expression}
 
-Expression allows a user to configure an [expression](/refguide/expressions), the result of which will be passed to the client component as a `DynamicValue<T>` where `T` depends on a return type of the expression.
+The expression property allows a user to configure an [expression](/refguide/expressions), the result of which will be passed to the client component as a `DynamicValue<T>` where `T` depends on a return type of the expression.
 
 #### 4.1.1 XML Attributes
 
@@ -372,7 +394,7 @@ Then the Studio Pro UI for the property appears like this:
 
 ### 4.2 TextTemplate{#texttemplate}
 
-`TextTemplate` allows a user to configure translatable text template similar to the [Caption](/refguide/text#caption) of a text widget. The interpolated string will be passed to the client component as `DynamicValue<string>`.
+The TextTemplate property allows a user to configure translatable text template similar to the [Caption](/refguide/text#caption) of a text widget. The interpolated string will be passed to the client component as `DynamicValue<string>`.
 
 #### 4.2.1 XML Attributes
 
@@ -410,7 +432,7 @@ Then the Studio Pro UI for the property appears like this:
 
 ### 4.3 Action{#action}
 
-The action property allows a user to configure an action to do things like calling nanoflows, saving changes, and opening pages. The client component will receive `ActionValue` representing it, or `undefined` when the **Do nothing** action was selected.
+The action property type allows a user to configure an action to do things like calling nanoflows, saving changes, and opening pages. The client component will receive `ActionValue` representing it, or `undefined` when the **Do nothing** action was selected.
 
 #### 4.3.1 XML Attributes
 
@@ -436,7 +458,7 @@ Then the Studio Pro UI for the property appears like this:
 
 ### 4.4 Attribute{#attribute}
 
-The attribute property allows a widget to work directly with entities' attributes, both reading and writing attributes. Depending on the widget's purposes, a widget should define attribute types it supports. The client component will receive `EditableValue<T>` where `T` depends on a `<attributeType>` configured.
+The attribute property type allows a widget to work directly with entities' attributes, both reading and writing attributes. Depending on the widget's purposes, a widget should define attribute types it supports. The client component will receive `EditableValue<T>` where `T` depends on a `<attributeType>` configured.
 
 #### 4.4.1 XML 
 
@@ -492,7 +514,7 @@ Then the Studio Pro UI for the property appears like this:
 
 ### 4.5 Object{#object}
 
-The object property allows to create an arbitrary list of properties.
+The object property type allows to create an arbitrary list of properties.
 
 #### 4.5.1 XML Attributes
 
@@ -501,7 +523,7 @@ The object property allows to create an arbitrary list of properties.
 | `type`     | Yes      | String         | Must be `object`                                                                                                                                                     |
 | `key`      | Yes      | String         | See [key](#key) |
 | `isList`   | Yes      | Boolean        | Must be `true`                                                                                                                                                       |
-| `required` | No       | Boolean        | This decides if the is user is required to specified items in the list, `true` by default |
+| `required` | No       | Boolean        | This decides if the user is required to specify items in the list, `true` by default |
 
 #### 4.5.2 XML Elements
 
@@ -536,7 +558,7 @@ Then the Studio Pro UI for the property appears like this:
 
 ### 4.6 File {#file}
 
-The file property allows a user to configure a file from an object that is a specialization of **System.File**. It is passed as a [`DynamicValue<FileValue>`](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets#filevalue) prop to a client component.
+The file property type allows a user to configure a file from an object that is a specialization of **System.File**. It is passed as a [`DynamicValue<FileValue>`](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets#filevalue) prop to a client component.
 
 #### 4.6.1 XML Attributes
 
@@ -545,14 +567,14 @@ The file property allows a user to configure a file from an object that is a spe
 | `type`     | Yes      | String         | Must be `file` |
 | `key`      | Yes      | String         | See [key](#key)  |
 
-#### 4.6.3 Studio Pro UI
+#### 4.6.2 Studio Pro UI
 
 When the property is defined as follows:
 
 ```xml
+
 <property key="file" type="file" required="false">
 	<caption>File</caption>
-	<category>General</category>
 	<description>Sample text file</description>
 </property>
 ```
@@ -560,6 +582,43 @@ When the property is defined as follows:
 Then the Studio Pro UI for the property appears like this:
 
 ![](attachments/widget-property-types/file.png)
+
+
+### 4.7 Datasource {#datasource}
+
+The datasource property allows widgets to work with object lists. The client component will receive value prop of type [`ListValue`](client-apis-for-pluggable-widgets#listvalue) and may be used with the [`widgets`](#widgets) property. See [Data Sources](https://docs.mendix.com/refguide/data-sources#list-widgets) for available data source types.
+
+{{% alert type="info" %}}
+Support for the datasource property type was introduced in Mendix 8.7.
+{{% /alert %}}
+
+{{% alert type="warning" %}}
+Only list datasources are supported, therefore specifying `isList="true"` is required.
+{{% /alert %}}
+
+#### 4.7.1 XML Attributes
+
+| Attribute  | Required | Attribute Type | Description |
+| ---------- | -------- | -------------- | ----------- |
+| `type`     | Yes      | String         | Must be `datasource` |
+| `key`      | Yes      | String         | See [key](#key) |
+| `isList`   | Yes      | Boolean        | Must be `true` |
+| `required` | No       | Boolean        | This decides if the user is required to specify a datasource, `true` by default |
+
+#### 4.7.2 Studio Pro UI
+
+When the property is defined as follows:
+
+```xml
+<property key="data" type="datasource" isList="true" required="false">
+	<caption>Data source</caption>
+	<description />
+</property>
+```
+
+Then the Studio Pro UI for the property appears like this:
+
+![](attachments/widget-property-types/datasource.png)
 
 ## 5 System Properties {#system-properties}
 

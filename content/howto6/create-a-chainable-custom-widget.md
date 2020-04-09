@@ -147,7 +147,7 @@ On the [Mendix Model Share](https://modelshare.mendix.com/), you are able to sha
 
 ### 7.1 Saving the State in the AppFlow Entity
 
-This microflow will create an AppFlow for a particular logged-in app user. If there is already an AppFlow entity created for a user, it will return that AppFlow.
+This microflow will create an AppFlow for a particular logged-in App User. If there is already an AppFlow entity created for a user, it will return that AppFlow.
 
 <iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/ce3baab8-b611-4423-a049-d467db0d775c/chainable-custom-widget-project-creating-the-appflow-entity.?embed=true"></iframe>
 

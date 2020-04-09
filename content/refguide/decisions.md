@@ -1,7 +1,7 @@
 ---
 title: "Decisions"
 parent: "application-logic"
-menu_order: 40
+menu_order: 50
 tags: ["studio pro"]
 ---
 

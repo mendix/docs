@@ -1,9 +1,9 @@
 ---
 title: "Mobile Device"
 category: "Widgets"
-description: " "
-tags: [ ]
-draft: true
+description: "Describes the configuration and usage of the Mobile Device widget, which is available in the Mendix App Store."
+tags: ["app store", "app store component", "widget", "mobile device", "cordova", "phonegap", "platform support"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
@@ -13,8 +13,8 @@ The [Mobile Device](https://appstore.home.mendix.com/link/app/65139/) widget ret
 * Device ID – the unique ID of the device
 * Device platform – the platform on which the app runs (for example, Android, iOS, or web)
 * App name – the user-friendly name of app that is also displayed on your home screen and in the app stores 
-* App ID – the unique identifier of your mobile app (for example, com.mycompany.awesomeapp)
-* App version – the version of your mobile app (for example, 1.2.1)
+* App ID – the unique identifier of your mobile app (for example, *com.mycompany.awesomeapp*)
+* App version – the version of your mobile app (for example, *1.2.1*)
 
 Using this widget for Mendix [hybrid mobile](/refguide/hybrid-mobile) applications is recommended.
 
@@ -45,7 +45,7 @@ In some cases, it is important that end-users have downloaded the latest and cor
 
 ### 1.3 Dependencies
 
-* Add the [cordova-plugin-app-version](https://github.com/whiteoctober/cordova-plugin-app-version) to your [PhoneGap](/refguide/customizing-phonegap-build-package) app with this: `<plugin name="cordova-plugin-app-version" source="npm" spec="0.1.8" />`
+* Add the [cordova-plugin-app-version](https://github.com/whiteoctober/cordova-plugin-app-version) to your [PhoneGap](/refguide/customizing-phonegap-build-packages) app with this: `<plugin name="cordova-plugin-app-version" source="npm" spec="0.1.8" />`
 
 ### 1.4 Demo App Project
 

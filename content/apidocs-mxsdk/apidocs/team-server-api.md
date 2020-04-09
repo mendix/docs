@@ -9,6 +9,10 @@ The team server API allows you to retrieve the information (branches, revisions)
 The image below provides a domain model representation of the concepts discussed below and how these are related:
 ![](attachments/131076/425989.png)
 
+{{% alert type="warning" %}}
+The team server API is only available to *licensed* apps which are running in a Mendix Cloud.
+{{% /alert %}}
+
 ## 2 Authentication
 
 The Developer Portal Management API requires its users to authenticate themselves. This can be done by using API keys; for more information about this please refer to [this article](authentication "authentication").

@@ -160,6 +160,10 @@ To upload the custom domain certificate, follow these steps:
 
 You can now configure your custom domain. See [Configuring a Custom Domain](#Configuring), below.
 
+You can add as many certificates as you need. Each certificate will be listed with the description you gave it. Make sure you give them meaningful names, so you can identify them easily.
+
+![List of certificates](attachments/custom-domains/certificate-list.png)
+
 ## 6 Renewing a Custom Domain Certificate
 
 Custom domain certificates have an expiry date. There are two methods for renewing a custom domain certificate that is about to expire:
@@ -181,6 +185,8 @@ You can now select the new certificate for your custom domain (for more informat
 ### 6.2 Method 2: Renewing by Updating an Existing Custom Domain Certificate
 
 You can also edit an existing custom domain certificate.
+
+![Edit a certificate](attachments/custom-domains/certificate-edit.png)
 
 {{% alert type="warning" %}}
 For this you will need access to the certificate request that you created for the current certificate.
@@ -208,7 +214,7 @@ To configure a custom domain for your application environment, follow these step
 
 6. Type the **Domain name** (for example *myapp.mycompany.com*).
 
-7. Select a **Certificate** from the dropdown list of uploaded certificates.
+7. Select a **Certificate** from the drop-down list of uploaded certificates.
 
 8. Click **Save** to save your custom domain. It will be configured for your application environment automatically.
 

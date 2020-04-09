@@ -70,7 +70,7 @@ With the following widgets, the Attribute (Path) specifies the attribute which i
 
 *   [Text Box](text-box)
 *   [Text Area](text-area)
-*   [Drop Down](drop-down)
+*   [Drop-down](drop-down)
 *   [Check Box](check-box)
 *   [Radio Buttons](radio-buttons)
 *   [Date Picker](date-picker)
@@ -79,14 +79,22 @@ The attribute can be one of the following:
 
 1. An attribute of the entity of the data container that contains the widget.
 
-2. An attribute of an entity associated with the data container entity by following one or more associations of type reference through the domain model.
+2. An attribute of the entity of any enclosing data container that contains the widget. Available since Mendix 8.8.
 
-In the first case we say the widget is connected to an **attribute** and in the second case to an **attribute path**.
+3. An attribute of an entity associated with the data container entity by following one or more associations of type reference through the domain model.
+
+In the first two cases we say the widget is connected to an **attribute** and in the third case to an **attribute path**.
 
 {{% alert type="info" %}}
 In Mendix 8.0, an input widget connected to an **attribute path** must be read-only. Studio Pro will check this for you.
+{{% /alert %}}
 
+{{% alert type="info" %}}
 In Mendix 8.1 and above, you can edit attributes presented in input widgets over a path.
+{{% /alert %}}
+
+{{% alert type="info" %}}
+In Mendix 8.8 and above, you can edit attributes of any enclosing data container including grandparent data containers.
 {{% /alert %}}
 
 #### 3.1.2 Association Input Widgets

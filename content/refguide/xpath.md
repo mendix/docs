@@ -78,3 +78,10 @@ The following XPath functions are available:
 	* [not](xpath-not)
 	* [true](xpath-true)
 	* [false](xpath-false)
+	
+## 6 Example
+
+**How to find the right path to XPath**
+
+{{% youtube sdabUY-w4ZU %}}
+

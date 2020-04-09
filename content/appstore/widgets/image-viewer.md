@@ -1,9 +1,9 @@
 ---
 title: "Image Viewer"
 category: "Widgets"
-description: " "
-tags: [ ]
-draft: true
+description: "Describes the configuration and usage of the Image Viewer widget, which is available in the Mendix App Store."
+tags: ["app store", "app store component", "widget", "image viewer", "platform support"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
@@ -24,8 +24,7 @@ The [Image Viewer](https://appstore.home.mendix.com/link/app/65122/) widget disp
 
 ### 1.2 Demo App Project
 
-For a demo app project that has been deployed with these widgets, see [here](
-https://imageviewer.mxapps.io/).
+For a demo app project that has been deployed with these widgets, see [here](https://imageviewer.mxapps.io/).
 
 ## 2 Usage
 

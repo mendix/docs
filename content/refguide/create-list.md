@@ -1,6 +1,7 @@
 ---
 title: "Create List"
 parent: "list-activities"
+menu_order: 3
 tags: ["studio pro"]
 ---
 

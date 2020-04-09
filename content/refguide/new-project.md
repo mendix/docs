@@ -2,7 +2,7 @@
 title: "New Project"
 parent: "file-menu"
 menu_order: 10
-description: "This document describes the New Project (New App) flow and the App Settings dialog window."
+description: "This document describes the New Project (New App) flow and the App Settings dialog box."
 tags: ["studio pro", "create app", "new app", "new project", "creating new app"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -26,7 +26,7 @@ The new project is created and opened.
 
 ## 2 App Settings {#app-settings}
 
-When creating a new app, the **App Settings** dialog window is opened where you can specify an app name, whether or not to enable the online services provided by the Mendix Platform, the default language, and the location on disk where the project files for your app are stored:
+When creating a new app, the **App Settings** dialog box is opened where you can specify an app name, whether or not to enable the online services provided by the Mendix Platform, the default language, and the location on disk where the project files for your app are stored:
 
 ![App Settings](attachments/file-menu/app-settings-dialog.png)
 

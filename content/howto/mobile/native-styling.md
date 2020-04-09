@@ -34,7 +34,7 @@ In **native/ui_resources** you will find resource package styling. Here you can 
 
 ## 3 Classes
 
-Default class names – which are the class names set by Mendix Studio Pro – will always be named in Pascal case. All other classes will be in camel case. This keeps changes to default widget styles clear.
+Default class names – which are the class names set by Mendix Studio Pro – will always be named in Pascal case. All other classes will be in lowerCamelCase. This keeps changes to default widget styles clear.
 
 ## 4 Design Properties
 

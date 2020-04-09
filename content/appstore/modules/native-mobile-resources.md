@@ -1,9 +1,9 @@
 ---
 title: "Native Mobile Resources"
 category: "Modules"
-description: " "
-tags: [ ]
-draft: true
+description: "Describes the configuration and usage of the Native Mobile Resources module, which is available in the Mendix App Store."
+tags: ["app store", "app store component", "native mobile resources", "native widget", "platform support"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
@@ -21,6 +21,7 @@ These are the native widgets included in these resources along with links to the
 | [Badge](https://github.com/mendix/widgets-resources/blob/master/packages-native/badge) | Displays text or a value as a badge. |
 | [Barcode Scanner](https://github.com/mendix/widgets-resources/blob/master/packages-native/barcode-scanner) | Scans barcode and QR code values. |
 | [Color Picker](https://github.com/mendix/widgets-resources/blob/master/packages-native/color-picker) | Allows the app end-user to select colors. |
+| [Carousel](https://github.com/mendix/widgets-resources/tree/master/packages-native/carousel) | Creates a carousel that can be swiped with free modeling. |
 | [Feedback](https://github.com/mendix/widgets-resources/blob/master/packages-native/feedback) | Allows the app end-user to submit feedback directly into the app project. |
 | [Floating Action Button](https://github.com/mendix/widgets-resources/blob/master/packages-native/floating-action-button) | Displays a circular floating icon button. |
 | [Maps](https://github.com/mendix/widgets-resources/blob/master/packages-native/maps) | Shows locations on an interactive map. |

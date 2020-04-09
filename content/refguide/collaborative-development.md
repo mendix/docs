@@ -105,7 +105,7 @@ Whether Studio is enabled for a development line by default, depends on your pro
 
 To enable Studio for a development line or switch it to another development line, do the following: 
 
-1.  Click **Version Control** > **Manage Branch Lines**. In the **Branch Line Manager** dialog window, you can see that the development line that Studio is enabled for (if any) is marked with a globe icon in the first column.<br/> 
+1.  Click **Version Control** > **Manage Branch Lines**. In the **Branch Line Manager** dialog box, you can see that the development line that Studio is enabled for (if any) is marked with a globe icon in the first column.<br/> 
 
 	![Globe Icon in the Branch Line Manager](attachments/collaborative-development/globe-icon.png)<br/>
 
@@ -143,11 +143,11 @@ To create a new branch line, do the following:
 
 1. Click **Version Control** > **Manage Branch Lines**. 
 
-2.  In the **Branch Line Manager** dialog window, you see the list of existing development lines. Click **New** to create a branch line. <br/>
+2.  In the **Branch Line Manager** dialog box, you see the list of existing development lines. Click **New** to create a branch line. <br/>
 
     ![Creating New Branch](attachments/collaborative-development/creating-new-branch.png)<br/>
 
-3.  In the **Create Branch Line** dialog window, set the following: <br/>
+3.  In the **Create Branch Line** dialog box, set the following: <br/>
 
     a. What line you are creating a new line from: the main line, a branch line, or a tagged version. For more information on these concepts, see the [Concepts](version-control#concepts) section in *Version Control*. <br/> b. Select the revision, if needed. <br/>
 
@@ -165,7 +165,7 @@ To delete a branch line, do the following:
 
 1. Click **Version Control** > **Manage Branch Lines**. 
 
-2.  In the **Branch Line Manager** dialog window, select the branch you would like to delete, click **Delete** and confirm deletion. 
+2.  In the **Branch Line Manager** dialog box, select the branch you would like to delete, click **Delete** and confirm deletion. 
 
 	![Deleting a Branch](attachments/collaborative-development/deleting-branch.png)
 

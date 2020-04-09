@@ -47,7 +47,7 @@ In a JavaScript action's **Code** tab, you can see its parameters' values and ha
 
 ![parameter code](attachments/javascript-actions/parameter-code.png)
 
-You will see a parameter's category (1), parameter name (2), and description (3) in the **Call JavaScript Action** dialog window after double-clicking its activity in your nanoflow:
+You will see a parameter's category (1), parameter name (2), and description (3) in the **Call JavaScript Action** dialog box after double-clicking its activity in your nanoflow:
 
 {{% image_container width="400" %}}![call javascript action dialog](attachments/javascript-actions/call-js-action-dialog.png){{% /image_container %}}
 

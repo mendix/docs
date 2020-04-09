@@ -1,6 +1,7 @@
 ---
 title: "Aggregate List"
 parent: "list-activities"
+menu_order: 1
 tags: ["studio pro", "Aggregate", "Sum", "Average", "Count", "Minimum", "Maximum"]
 ---
 
@@ -10,7 +11,7 @@ This activity can be used in both **Microflows** and **Nanoflows**.
 
 ## 1 Introduction
 
-Aggregate List can be used to calculate aggregated values such as the maximum, minimum, sum, average and total number of objects over a list of objects.
+The aggregate list activity can be used to calculate aggregated values such as the maximum, minimum, sum, average and total number of objects over a list of objects.
 
 {{% alert type="info" %}}
 

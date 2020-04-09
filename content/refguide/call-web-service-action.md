@@ -143,7 +143,7 @@ If a primitive request parameter is both optional and nillable, you need to sele
 
 This option allows you to generate the XML for the request part using a template. The template defines the XML structure of the request part in plain text. Parameters can be used by writing a number between braces, e.g. '{1}'. For each parameter in the template you can specify its value using a [microflow expression](expressions) resulting in a String value.
 
-For the request header, Studio Pro provides some common XML structures in the drop down menu.
+For the request header, Studio Pro provides some common XML structures in the drop-down menu.
 
 ## 5 SOAP Response
 

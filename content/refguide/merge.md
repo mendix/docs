@@ -1,6 +1,7 @@
 ---
 title: "Merge"
 parent: "decisions"
+menu_order: 1
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -11,6 +12,6 @@ A merge can be used to combine multiple sequence flows into one sequence flow. I
 
 You have a situation where the microflow has been separated in two flows according to certain conditions. In one flow the status of the order is set to complete and in the other the status is set to incomplete. After this you want to retrieve all associated order lines (to for instance aggregate the prices into a total) for the two flows. You can use a merge to combine the two flows so you can suffice with only one activity for the retrieval.
 
-![](attachments/819203/917943.png)
+![](attachments/microflows-and-nanoflows/917943.png)
 
 {{% /alert %}}

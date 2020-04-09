@@ -47,8 +47,8 @@ To embed the microflow with a decision (the attribute of the enumeration type) t
 
     ![](attachments/microflows-how-to-configure-decision/create-button-properties.png) <br/>
 
-    c. In the **Select Page** dialog window, click **New** page.<br/>
-    d. In the **Create new page** dialog window, fill out the title of the page, for example, *New_customer*. <br/>
+    c. In the **Select Page** dialog box, click **New** page.<br/>
+    d. In the **Create new page** dialog box, fill out the title of the page, for example, *New_customer*. <br/>
     e. Tick **Pre-fill page contents based on the Customer entity** and click **Create**.
 
     ![](attachments/microflows-how-to-configure-decision/pre-fill-contents.png) 

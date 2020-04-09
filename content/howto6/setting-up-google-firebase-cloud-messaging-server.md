@@ -28,7 +28,7 @@ Open up the Firebase [developers console](https://console.firebase.google.com/) 
 
 ### 3.2 Step 2 – Import the Project
 
-In the Firebase console, select `Import Google Project`. Select your GCM project from the list of existing projects, select a region, and click on `Add Firebase`.
+In the Firebase console, select `Import Google Project`. Select your GCM project from the list of existing projects, select a region, and click `Add Firebase`.
 
 ![](attachments/Setting+up+Google+Firebase+Cloud+Messaging+Server/Add_Firebase_to_a_Google_Project.png)
 
@@ -48,7 +48,7 @@ Click `Create new project` and fill in the project name and region for your appl
 
 ### 4.3 Step 3 – Look Up the Cloud Messaging Credentials
 
-In the top left corner of the screen, click on the little cogwheel and select `Project settings`.
+In the top left corner of the screen, click the little cogwheel and select `Project settings`.
 
 ![](attachments/Setting+up+Google+Firebase+Cloud+Messaging+Server/Open_Project_Settings.png)
 

@@ -2,7 +2,7 @@
 title: "Import Project Package"
 parent: "file-menu"
 menu_order: 40
-description: "Describes the Import Project Package process and Import Project Package dialog window."
+description: "Describes the Import Project Package process and Import Project Package dialog box."
 tags: ["studio pro", "import project package"]
 ---
 ## 1 Introduction
@@ -15,7 +15,7 @@ To import a project package, do the following:
 
 2. Browse to the *.mpk* file you would like to import.
 
-3.  Select the relevant options in the **Import Project Package** dialog window and click **OK**. For more information on what options you can select, see the sections below. 
+3.  Select the relevant options in the **Import Project Package** dialog box and click **OK**. For more information on what options you can select, see the sections below. 
 
     ![Import Project Package Dialog Window](attachments/file-menu/import-project-package.png)
 

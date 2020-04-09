@@ -1,7 +1,7 @@
 ---
 title: "Button Properties"
 parent: "button-widgets"
-tags: ["studio pro", "button", "action button", "drop down button", "button widget", "image property"]
+tags: ["studio pro", "button", "action button", "drop-down button", "button widget", "image property"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -73,11 +73,11 @@ To add parameters, do the following:
 
 2. Double-click the **Caption** setting in the button widget properties.
 
-3.  In the **Edit Caption** dialog window > **Parameters** section click **New**:
+3.  In the **Edit Caption** dialog box > **Parameters** section click **New**:
 
     ![Adding New Parameter](attachments/button-widgets/new-parameter.png)
 
-4. In the **Edit Template Parameter** dialog window, click **Select**, choose an attribute and confirm your choice.
+4. In the **Edit Template Parameter** dialog box, click **Select**, choose an attribute and confirm your choice.
 
 5. In the **Caption** setting, write the text you would like to display and type **Index** of the parameter you would like to include. In the example below, to include a name of your customer , you need to use indexes {1} for the *Name* attribute:  
 
@@ -172,16 +172,16 @@ To add items to a drop-down buttons, do the following:
 
 1. Double-click the **Items** setting in the button widget properties.
 
-2.  In the **Edit Items** dialog window, click **New**:
+2.  In the **Edit Items** dialog box, click **New**:
 
     ![Adding New Item](attachments/button-widgets/adding-new-item.png)
 
-3. In the **Edit Drop Down Button** Item dialog window, do the following:
+3. In the **Edit Drop-down Button** Item dialog box, do the following:
    1. Specify the caption for the item.
    2. Select an image (icon) to be displayed for this item.
    3. Select an on-click event to be performed when the end-user clicks this item.
    4. Click **OK**.
-4. In the **Edit Items** dialog window, click **OK** to save your changes and add new item. 
+4. In the **Edit Items** dialog box, click **OK** to save your changes and add new item. 
   
 
 

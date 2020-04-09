@@ -154,7 +154,7 @@ To import widgets, follow these steps:
 
 ### 2.5 Importing Content from the App Store
 
-To learn more about importing content from the App Store, see [Use App Store Content](/developerportal/app-store/app-store-content).
+To learn more about importing content from the App Store, see [How to Use App Store Content](/appstore/general/app-store-content).
 
 ## 3 Exporting Objects
 

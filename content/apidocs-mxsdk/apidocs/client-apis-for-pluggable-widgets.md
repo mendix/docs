@@ -34,7 +34,11 @@ A user can specify multiple classes for every widget. They can do this either di
 
 A user can specify a custom CSS for every widget on a web page by using the [style](/refguide/common-widget-properties#style) property. This styling is passed to a client component through an optional `style` prop of the type `CSSProperties`.
 
-On native pages, the meaning of a `style` prop is very different. First of all, a user cannot specify the aforementioned inline styles for widgets on a native page. So a `style` prop is used to pass styles computed based on configured classes. A client component will receive an array of [style objects](/refguide/native-styling-refguide#2-style-objects).
+On native pages, the meaning of a `style` prop is very different. First of all, a user cannot specify the aforementioned inline styles for widgets on a native page. So a `style` prop is used to pass styles computed based on configured classes. A client component will receive an array with a single [style object](/refguide/native-styling-refguide#style-objects) with all applicable styles combined.
+
+{{% alert type="info" %}}
+This property was introduced in Mendix 8.0 with an array of style objects. This array was changed to contain a single style object in Mendix 8.6.
+{{% /alert %}}
 
 ### 3.4 TabIndex
 
@@ -54,7 +58,7 @@ export interface ActionValue {
 }
 ```
 
-The flag `canExecute` indicates if an action can be executed under the current conditions. Think of a **Call microflow** action triggering a microflow with a parameter. Such an action cannot be executed until a parameter object is available, for example when a parent Data view has finished loading. An attempt to `execute` an action that cannot be executed will have no effect except generating a debug-level warning message.
+The flag `canExecute` indicates if an action can be executed under the current conditions. This helps you prevent executing actions that are not allowed by the app's security settings. User roles can be set in the microflows and nanoflows, allowing users to call them. For more information on user roles and security, see the [Module Security Reference Guide](/refguide/module-security). You can also employ this flag when using a **Call microflow** action triggering a microflow with a parameter. Such an action cannot be executed until a parameter object is available, for example when a parent Data view has finished loading. An attempt to `execute` an action that cannot be executed will have no effect except generating a debug-level warning message. 
 
 The flag `isExecuting` indicates whether an action is currently running. A long-running action can take seconds to complete. Your component might use this information to render an inline loading indicator which lets users track loading progress. Often it is not desirable to allow a user to trigger multiple actions in parallel. Therefore, a component (maybe based on a configuration) can decide to skip triggering an action while a previous execution is still in progress.
 
@@ -62,15 +66,15 @@ Note that `isExecuting` indicates only whether the current action is running. It
 
 The method `execute` triggers the action. It returns nothing and does not guarantee that the action will be started synchronously. But when the action does start, the component will receive a new prop with the `isExecuting` flag set.
 
-### 4.2 DynamicValue
+### 4.2 DynamicValue {#dynamic-value}
 
 DynamicValue is used to represent values that can change over time and is used by many property types. It is defined as follows:
 
 ```ts
-export type DynamicValue<T> =
-    | { readonly status: ValueStatus.Available; readonly value: T }
+export type DynamicValue<X> =
+    | { readonly status: ValueStatus.Available; readonly value: X }
     | { readonly status: ValueStatus.Unavailable; readonly value: undefined }
-    | { readonly status: ValueStatus.Loading; readonly value: T | undefined };
+    | { readonly status: ValueStatus.Loading; readonly value: X | undefined };
     
 export const enum ValueStatus {
     Loading = "loading",
@@ -87,7 +91,7 @@ Though the type definition above looks complex, it is fairly simply to use becau
 
 * When `status` is `ValueStatus.Available`, then the dynamic value has sufficient information to be computed, and the result is exposed in `value`.
 * When `status` is `ValueStatus.Unavailable`, then the dynamic value does not have such information such as when a parent Data view’s Data source has returned nothing. The `value` is then always `undefined`.
-* When `status` is `ValueStatus.Loading`, then the dynamic value is awaiting for the required information to arrive. This happens when a parent Data view is either waiting for its object to load or is reloading it due to a [refresh in client](/refguide/change-object#3-2-refresh-in-client).
+* When `status` is `ValueStatus.Loading`, then the dynamic value is awaiting for the required information to arrive. This happens when a parent Data view is either waiting for its object to load or is reloading it due to a [refresh in client](/refguide/change-object#refresh-in-client).
 	* In case a dynamic value was previously in a `ValueStatus.Available` state, then the previous `value` is still returned. This is done so that a component can keep showing the previous value if it doesn’t need to handle `Loading` explicitly. This prevents flickering: a state when a displayed value rapidly changes between loading and not loading several times.
 	* In other cases, the `value` is `undefined`. This is a common situation while a page is still being loaded.
 
@@ -131,7 +135,7 @@ In practice, many client components present values as nicely formatted strings w
 
 There is a way to use more the convenient `displayValue`  and `setTextValue` while retaining control over the format. A component can use a `setFormatter` method passing a formatter object: an object with `format` and `parse` methods. The Mendix platform provides a convenient way of creating such objects for simple cases. An existing formatter exposed using a `EditableValue.formatter` field can be modified using its `withConfig` method. For complex cases formatters still can be created manually. A formatter can be reset back to default settings by calling `setFormatter(undefined)`.
 
-The optional field `universe` is used to indicate the set of all possible values that can be passed to a `setValue` if a set is limited. Currently, `universe` is provided only when the edited attribute is of the Boolean or enumeration [types](/refguide/attributes#3-1-type).
+The optional field `universe` is used to indicate the set of all possible values that can be passed to a `setValue` if a set is limited. Currently, `universe` is provided only when the edited attribute is of the Boolean or enumeration [types](/refguide/attributes#type).
 
 ### 4.4 IconValue
 
@@ -160,20 +164,20 @@ export type IconValue = WebIcon | NativeIcon;
 
 In practice, `WebIcon` and `NativeIcon` are usually passed to a `Icon` component provided by Mendix, since this provides a convenient way of handling all types of icons at once. For more information on `Icon`, see the [Icon](#icon) section below.
 
-### 4.5 ImageValue
+### 4.5 ImageValue{#imagevalue}
 
 `DynamicValue<ImageValue>` is used to represent static or dynamic images. An image can be configured only through an [image](property-types-pluggable-widgets#image) property. `ImageValue` is defined as follows:
 
 ```ts
-export type WebImage = {
+export interface WebImage {
     readonly uri: string;
     readonly altText?: string;
-} | undefined;
-export type NativeImage = Readonly<ImageURISource> | undefined;
+}
+export type NativeImage = Readonly<ImageURISource | string | number>;
 export type ImageValue = WebImage | NativeImage;
 ```
 
-`NativeImage` can be passed as a source of React Native’s [Image](https://facebook.github.io/react-native/docs/image) component, and `WebImage`  can be passed  to react-dom’s `img`.
+`NativeImage` can be passed to a `mendix/components/native/Image` component provided by Mendix for native widgets. `WebImage` can be passed to react-dom’s `img` component.
 
 ### 4.6 FileValue {#filevalue}
 
@@ -183,6 +187,47 @@ export type ImageValue = WebImage | NativeImage;
 export interface FileValue {
     uri: string;
 }
+```
+
+### 4.6 ListValue{#listvalue}
+
+`ListValue` is used to represent a list of objects for the [datasource](property-types-pluggable-widgets#datasource) property.
+
+```ts
+export interface ObjectItem {
+    id: GUID;
+}
+
+export interface ListValue {
+    status: ValueStatus;
+    offset: number;
+    limit: number;
+    setOffset(offset: number): void;
+    setLimit(limit: Option<number>): void;
+    items?: ObjectItem[];
+    hasMoreItems?: boolean;
+    totalCount?: number;
+}
+```
+
+
+When a `datasource` property with `isList="true"` is configured for a widget, the client component gets a list of objects represented as a `ListValue`. This type allows detailed access to a data source, and enables control over the limit and offset of items represented in the list.
+
+However it is not possible to access domain data directly from `ListValue`, as every object is represented only by GUID in the `items` array. Instead, a list of items may be used in combination with other properties, for example with a property of type [`widgets`](property-types-pluggable-widgets#widgets). The `dataSource` attribute on that property should reference a `datasource` property.
+
+For clarity, consider the following example using `ListValue` together with the `widgets` property type. When the `widgets` property named `myWidgets` is configured to be tied to a `datasource` named `myDataSource`, the client component props appear as follows:
+
+```ts
+interface MyListWidgetsProps {
+    myDataSource: ListValue;
+    myWidgets: (i: ObjectItem) => ReactNode;
+}
+```
+
+Because of the above configurations, the client component may render every instance of widgets with a specific item from the list like this:
+
+```ts
+this.props.myDataSource.items.map(i => this.props.myWidgets(i));
 ```
 
 ## 5 Exposed Modules
@@ -197,13 +242,46 @@ Mendix platform exposes two versions of an `Icon` react component: `mendix/compo
 
 Mendix platform re-export [react](https://www.npmjs.com/package/react), [react-dom](https://www.npmjs.com/package/react-dom), and [react-native](https://www.npmjs.com/package/react-native) packages to pluggable widgets. React is available to all components. React-dom is available only to components running in web or hybrid mobile apps. React-native is available only to components running in native mobile apps.
 
-Mendix provides you with React version 16.8.x (in npm terms `~16.8.0`). Patch versions might change from one minor release of Mendix to another. Mendix will always provide a matching version of react-dom.
+Mendix provides you with React version 16.9.x (in npm terms `~16.9.0`). Patch versions might change from one minor release of Mendix to another. Mendix will always provide a matching version of react-dom.
 
-For react-native Mendix exposes a single version: 0.59.9. Mendix also includes the following libraries:
+For react-native Mendix exposes a single version: 0.61.5. Mendix also includes the following libraries:
 
-* [react-native-gesture-handler](https://www.npmjs.com/package/react-native-gesture-handler) of version 1.3.0
-* [react-native-video](https://www.npmjs.com/package/react-native-video) of version 4.4.4
-* [react-native-device-info](https://www.npmjs.com/package/react-native-device-info) of version 1.8.0
+|   Library   |   Version   |
+| ---- | ---- |
+|   [@react-native-community/art](https://www.npmjs.com/package/@react-native-community/art)   |   1.2.0   |
+|   [@react-native-community/async-storage](https://www.npmjs.com/package/@react-native-community/async-storage)   |   1.8.1   |
+|   [@react-native-community/cameraroll](https://www.npmjs.com/package/@react-native-community/cameraroll)   | 1.4.0     |
+|  [@react-native-community/datetimepicker](https://www.npmjs.com/package/@react-native-community/datetimepicker)   |  2.3.0  |
+|   [@react-native-community/geolocation](https://www.npmjs.com/package/@react-native-community/geolocation)   |   2.0.2   |
+|   [@react-native-community/masked-view](https://www.npmjs.com/package/@react-native-community/masked-view)   |  0.1.7    |
+|   [@react-native-community/netinfo](https://www.npmjs.com/package/@react-native-community/netinfo)   | 5.6.2     |
+|   [react-native-ble-plx](https://www.npmjs.com/package/react-native-ble-plx)   |   1.1.1   |
+|   [react-native-calendar-events](https://www.npmjs.com/package/react-native-calendar-events)   |   1.7.3   |
+|   [react-native-camera](https://www.npmjs.com/package/react-native-camera)   |   3.19.2   |
+|   [react-native-code-push](https://www.npmjs.com/package/react-native-code-push)   |   6.1.1   |
+|   [react-native-device-info](https://www.npmjs.com/package/react-native-device-info)   |   5.5.3   |
+|   [react-native-fast-image](https://www.npmjs.com/package/react-native-fast-image)   |   8.1.5   |
+|   [react-native-firebase](https://www.npmjs.com/package/react-native-firebase)   |   5.6.0   |
+|   [react-native-geocoder](https://www.npmjs.com/package/react-native-geocoder)   |   0.5.0   |
+|   [react-native-gesture-handler](https://www.npmjs.com/package/react-native-gesture-handler)   |   1.6.0   |
+|   [react-native-image-picker](https://www.npmjs.com/package/react-native-image-picker)   |   2.3.1   |
+|   [react-native-inappbrowser-reborn](https://www.npmjs.com/package/react-native-inappbrowser-reborn)   |  3.3.4    |
+|   [react-native-localize](https://www.npmjs.com/package/react-native-localize)   |   1.3.4   |
+|   [react-native-maps](https://www.npmjs.com/package/react-native-maps)    |   0.27.0   |
+|   [react-native-reanimated](https://www.npmjs.com/package/react-native-reanimated)   |   1.7.0   |
+|   [react-native-safe-area-context](https://www.npmjs.com/package/react-native-safe-area-context)   | 0.7.3     |
+|   [react-native-sound](https://www.npmjs.com/package/react-native-sound)   |   0.11.0   |
+|   [react-native-svg](https://www.npmjs.com/package/react-native-svg)   |   12.0.3   |
+|   [react-native-tab-view](https://www.npmjs.com/package/react-native-tab-view)   |   2.13.0   |
+|   [react-native-touch-id](https://www.npmjs.com/package/react-native-touch-id)   |   4.4.1   |
+|   [react-native-vector-icons](https://www.npmjs.com/package/react-native-vector-icons)   |   6.6.0   |
+|   [react-native-video](https://www.npmjs.com/package/react-native-video)   |   5.0.2   |
+|   [react-native-view-shot](https://www.npmjs.com/package/react-native-view-shot)   |   3.1.2   |
+|   [react-native-webview](https://www.npmjs.com/package/react-native-webview)   |   8.1.2   |
+|   [react-navigation](https://www.npmjs.com/package/react-navigation)    |   4.3.1   |
+|   [react-navigation-drawer](https://www.npmjs.com/package/react-navigation-drawer)   |   2.4.4   |
+|   [react-navigation-stack](https://www.npmjs.com/package/react-navigation-stack)   |   2.3.1   |
+|   [react-navigation-tabs](https://www.npmjs.com/package/react-navigation-tabs)   |   2.8.4 |
 
 ### 6.2 Big.js
 

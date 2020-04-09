@@ -1,71 +1,106 @@
 ---
 title: "Attributes"
-parent: "domain-model"
-menu_order: 4
+parent: "entities"
+menu_order: 30
 tags: ["domain model", "entity", "attribute", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
-Attributes are characteristics that describe and/or identify the entity. For example, a Customer entity typically has attributes for the name of the customer, an e-mail address and other personal information.
+**Attributes** are characteristics that describe and/or identify an entity. Each of these attributes is given a name.
 
-The domain model editor uses the following symbols for visualization of attribute properties:
+A **Customer**, for example, typically has attributes for the name of the customer (for example, **FullName**), an e-mail address (for example, **EmailAddress**) and other personal information.
+
+![Example customer entity](attachments/domain-model/customer-entity.png)
+
+The domain model editor uses the following symbols to help visualize attribute properties:
 
 | Symbol | Description |
 | --- | --- |
-| ![](attachments/819203/917593.png) | This attribute has one or more validation rules. |
-| ![](attachments/819203/917592.png) | This attribute has a microflow that calculates the value of the attribute. |
+| ![](attachments/domain-model/917593.png) | This attribute has one or more validation rules. |
+| ![](attachments/domain-model/917592.png) | This attribute has a microflow that calculates the value of the attribute. |
 
-## 2 Common
+## 2 Properties
 
-### 2.1 Name
+You can add attributes to an entity from the [entity dialog box](entities#dialog-box). You can also edit them from this dialog box, or by double-clicking on the attribute name in the domain model.
 
-The name property defines the name of the attribute. This name is used to refer to the attribute from forms, microflows, queries, constraints etcetera.
+An example of the attribute properties is represented in the image below:
+
+![](attachments/domain-model/attribute-properties.png)
+
+Attribute properties consist of the following sections:
+
+* [Common](#common)
+* [Type](#type)
+* [Value](#value)
+
+### 2.1 Common Section{#common}
+
+#### 2.1.1 Name
+
+The **name** property specifies the name of the attribute. This name is used to refer to the attribute in forms, microflows, queries, constraints, and so forth.
 
 {{% alert type="warning" %}}
 If you delete an attribute in your entity and then create a new attribute with the same name, Mendix will consider it a new and different attribute. This means that upon deployment the old column will be dropped, including its data. Then a new, empty, column with the same name will be created.
 {{% /alert %}}
 
-## 3 Type {#type}
+#### 2.1.2 Documentation
 
-### 3.1 Type
+This allows you to describe aspects of the entity which may be useful to you or other team members when using the entity within the app.
 
-The type property defines the type of data that can be stored in the attribute. An attribute has one of the following types:
+### 2.2 Type Section{#type}
 
-Type | Possible values
---- | ---
-AutoNumber | A positive or negative whole number. AutoNumber attributes are automatically generated numbers. The default value of the attribute determines the first number that will be generated. Each created object will have an AutoNumber that is one greater than the previous one. AutoNumbers can only be used for persistable entities as the AutoNumber value is computed in the database.
-Binary | Binary data. Can only be used for persistable entities as the data is stored in the database. For example an entire file. In most cases you want to use an association to a FileDocument or Image to store file contents.
-Boolean | True or false.
-Date and time | A point in time consisting of a date and a time component accurate up to milliseconds. 
-Decimal | A positive or negative number that can have digits after the decimal point. The Decimal type can be used for high-precision calculations. Use this type to represent amounts of money for example. When a Decimal type attribute is persisted in the database its value is validated against 2 conditions. In case the number of digits of the integral part (before the decimal separator) is more than 20, an exception is thrown. In case the number of digits of the fractional part (after the decimal separator) is more than 8, the fractional value is automatically rounded according to [the round half to even rule (also known as bankers' rounding)](https://en.wikipedia.org/wiki/Rounding#Round_half_to_even). Therefore the the maximum allowable value for the Decimal type is 99999999999999999999.99999999.
-Enumeration | A list of predefined attributes. For more information, see [Enumerations](enumerations). 
-Integer | A whole number that can be positive (maximum 2<sup>31</sup>-1, thus 2147483647), negative (minimum -2<sup>31</sup>, thus -2147483648), or zero.
-Long | A whole number that can be positive (maximum 2<sup>63</sup>-1), negative (minimum -2<sup>63</sup>), or zero.
-String *(default)* | A text containing letters, spaces, numbers and other characters.
+#### 2.2.1 Type
 
-The maximum size that can approximately be stored in an attribute of type binary depends on the database:
+The type property defines the type of data that can be stored in the attribute. These are related to the data types described in [Data Types](data-types), but there is not a one-to-one mapping.
+
+{{% alert type="warning" %}}
+Mendix allows you to change attribute and association types on existing domain models. While some attributes can easily be converted, there are limitations and consequences of converting between some types. For more information, see [Attributes Type Migration](attributes-type-migration).
+{{% /alert %}}
+
+An attribute has one of the following types:
+
+Type | Possible values | Maps to Mendix data type |
+--- | --- | --- |
+AutoNumber | A positive or negative whole number.<br/>AutoNumber attributes are automatically generated numbers. The default value of the attribute determines the first number that will be generated. Each created object will have an AutoNumber that is one greater than the previous one. AutoNumbers can only be used for persistable entities as the AutoNumber value is computed in the database. | Integer/Long |
+Binary<sup><small>[1]</small></sup> | Binary data. Can only be used for persistable entities as the data is stored in the database. For example an entire file. In most cases you want to use an association to a FileDocument or Image to store file contents. | Binary |
+Boolean | True or false. | Boolean | 
+Date and time | A point in time consisting of a date and a time component accurate up to milliseconds. | Date and time |
+Decimal | A positive or negative number that can have digits after the decimal point. The Decimal type can be used for high-precision calculations. Use this type to represent amounts of money for example. When a Decimal type attribute is persisted in the database its value is validated against 2 conditions. In case the number of digits of the integral part (before the decimal separator) is more than 20, an exception is thrown. In case the number of digits of the fractional part (after the decimal separator) is more than 8, the fractional value is automatically rounded according to [the round half to even rule (also known as bankers' rounding)](https://en.wikipedia.org/wiki/Rounding#Round_half_to_even). Therefore the the maximum allowable value for the Decimal type is 99999999999999999999.99999999. | Decimal |
+Enumeration | A list of predefined attributes. For more information, see [Enumerations](enumerations). | Enumeration |
+Hashed string | A string which is hashed using the algorithm specified in the [project settings](project-settings#hash-algorithm). This can be used to store password hashes, for example, so that the original password is not recorded in the database.  | String |
+Integer | A whole number that can be positive (maximum 2<sup>31</sup>-1, thus 2147483647), negative (minimum -2<sup>31</sup>, thus -2147483648), or zero. | Integer/Long |
+Long | A whole number that can be positive (maximum 2<sup>63</sup>-1), negative (minimum -2<sup>63</sup>), or zero. | Integer/Long |
+String *(default)* | A text containing letters, spaces, numbers and other characters. | String |
+
+<sup><small>[1]</small></sup>The maximum size that can approximately be stored in an attribute of type binary depends on the database:
 
 | HSQLDB | PostgreSQL | SQL Server | Oracle |
 | --- | --- | --- | --- |
 | 1 MB | 1 GB | 2 GB | 128 TB or limited by hard disk of server |
 
+**Example**
+
 In a web shop, you want to store the id, profile photo, level (for service quality), user name, password, activity, total of minutes spent online, year of subscription, date of birth, total amount of expenses and the standard amount of discount for a customer.
 
-The ID should be unique for every customer, so this attribute has type AutoNumber.
+The **CustomerId** should be unique for every customer, so this attribute has type **AutoNumber**.
 
-The photo will be represented by an association to an entity that specializes Image. You do not use a Binary attribute for this purpose.
+The **Photo** is represented by an association to an entity that specializes Image. You do not use a Binary attribute for this purpose.
 
-Level has three possible values: High, Medium and Low. This is stored in an attribute of type Enumeration.
+**Level** has three possible values: High, Medium and Low. This is stored in an attribute of type **Enumeration**.
 
-The password itself should not be stored, but only its hash value, thus it is stored in an attribute of type **Hashed string**.
+The **Password** itself should not be stored, but only its hash value, thus it is stored in an attribute of type **Hashed string**.
 
-A customer can be active or inactive, which is stored in an attribute named 'Active' of type Boolean.
+A customer can be active or inactive, which is stored in an attribute named **Active** of type **Boolean**.
 
-![](attachments/domain-model-editor/917578.png)
+![](attachments/domain-model/customer-attribute-examples.png)
 
-### 3.2 Localize (Only for Date & Time Attribute Type)
+#### 2.2.2 Localize
+
+{{% alert type="info" %}}
+This property is shown if **Type** is set to **Date and time**.
+{{% /alert %}}
 
 This property indicates whether the date and time should be localized. By default localization is enabled. If you are _not_ interested in the time component of a date (e.g. a birthday), you should set this property to 'No'. Otherwise, the date can change because of time zone differences: a date and time early in the morning on April 2nd in Europe will be on April 1st in the U.S.A.
 
@@ -73,25 +108,37 @@ In technical terms, this property indicates whether the client assumes that the 
 
 Default: *Yes*
 
-### 3.3 Enumeration (Only for Enumeration Attribute Type)
+#### 2.2.3 Enumeration
+
+{{% alert type="info" %}}
+This property is shown if **Type** is set to **Enumeration**.
+{{% /alert %}}
 
 The enumeration property indicates which enumeration defines the possible values for this attribute.
 
-### 3.4 Length (Only for String Attribute Type)
+#### 2.2.4 Length
 
-This property specifies whether the length of a String is limited to a maximum or unlimited. In the case of a limited length, the 'Max length' property specifies the maximum (see below).
+{{% alert type="info" %}}
+This property is shown if **Type** is set to **String**.
+{{% /alert %}}
+
+This property specifies whether the length of a String is limited or unlimited. In the case of a limited length, the 'Max length' property specifies the maximum (see below).
 
 Default: *Limited*
 
-### 3.5 Max Length (Only for String Attribute Type)
+#### 2.2.5 Max Length (Only for String Attribute Type)
+
+{{% alert type="info" %}}
+This property is shown if **Type** is set to **String**.
+{{% /alert %}}
 
 The 'Max length' property specifies the number of characters that can be stored in the attribute.
 
 Default: *200*
 
-## 4 Value
+### 2.3 Value Section{#value}
 
-### 4.1 Value
+#### 2.3.1 Value
 
 The **Value** determines whether the value of the attribute is **Calculated** by a microflow or **Stored** in the database.
 
@@ -102,15 +149,23 @@ Take note of the following things when using **Calculated** attributes:
 * It is not possible to sort on an attribute for which this property is used, because sorting is done by the database engine.
 * Uncommitted associated objects cannot be retrieved in calculated attributes.
 
-### 4.2 Microflow (If Value Is Calculated with Microflow)
+#### 2.3.2 Microflow
+
+{{% alert type="info" %}}
+This property is shown if **Value** is set to **Calculated**.
+{{% /alert %}}
 
 If the value is a computation, the **Microflow** property defines which microflow defines this computation to calculate the value of the attribute when the object is retrieved. The microflow should have a parameter of the type of the entity of the attribute and it should return a value with the same type as the attribute.
 
 For example, in a web shop, you want to show the total expenses for each customer. These are calculated by retrieving all orders associated with the customer and adding their totals.
 
-![](attachments/domain-model-editor/917570.png)
+![](attachments/domain-model/917570.png)
 
-### 4.3 Default Value (If Value Is Stored)
+#### 2.3.3 Default Value
+
+{{% alert type="info" %}}
+This property is shown if **Value** is set to **Stored**.
+{{% /alert %}}
 
 The **Default value** property defines the value of this attribute when an object is created. The default value should be compatible with the type of the attribute.
 
@@ -126,7 +181,3 @@ The **Default value** property defines the value of this attribute when an objec
 | Integer | 0 |   |
 | Long | 0 |   |
 | String | (empty) |   |
-
-## 5 Effects of Data Type Changes on Existing Attributes
-
-For more information, see [Attributes Type Migration](attributes-type-migration).

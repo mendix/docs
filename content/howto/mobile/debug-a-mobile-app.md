@@ -148,7 +148,7 @@ You can now take advantage of all the debugging tools you know and love with Men
 In order to build (and debug) a Mendix iOS app, you need to ensure that you have the right setup in your Apple Developer Account. You will need a Developer Provisioning Profile that includes your device ID and a Signing Certificate. If you already have an iOS Development provisioning profile, you can continue with [5.2 PhoneGap Configuration](#PhonegapConfiguration). Follow these steps to set up an iOS provisioning profile:
 
 1. Go to [developer.apple.com](https://developer.apple.com/) and sign in to your account.
-2. Click **Certificates, IDs & Profiles** in the left-hand navigation.
+2. Click **Certificates, IDs & Profiles** in the left-side navigation.
 3. Click the `+` button to create a new certificate.
 4. Select **iOS Development** and click **Continue**:
 
@@ -174,7 +174,7 @@ In order to build (and debug) a Mendix iOS app, you need to ensure that you have
 
       ![apple-10](./attachments/debug-a-mobile-app/apple-10.png)
 
-9. Right-click on the certificate in the list of certificates and select **Export**:
+9. Right-click the certificate in the list of certificates and select **Export**:
 
       ![apple-11](./attachments/debug-a-mobile-app/apple-11.png)
 
@@ -211,7 +211,7 @@ In order to build (and debug) a Mendix iOS app, you need to ensure that you have
 
       ![apple-23](./attachments/debug-a-mobile-app/apple-23.png)
 
-24. Select your new **App ID** from the dropdown and click **Continue**:
+24. Select your new **App ID** from the drop-down and click **Continue**:
 
       ![apple-24](./attachments/debug-a-mobile-app/apple-24.png)
 
@@ -288,7 +288,7 @@ You can use PhoneGap Build to build the native application and tell it to initia
 
     ![phonegap-12](./attachments/debug-a-mobile-app/phonegap-12.png)
 
-14. Return to the app online and choose your new key from the dropdown. This will trigger a new build of your app:
+14. Return to the app online and choose your new key from the drop-down. This will trigger a new build of your app:
 
     ![phonegap-13](./attachments/debug-a-mobile-app/phonegap-13.png)
 

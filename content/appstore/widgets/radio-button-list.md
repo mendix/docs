@@ -1,9 +1,9 @@
 ---
 title: "Radio Button List"
 category: "Widgets"
-description: " "
-tags: [ ]
-draft: true
+description: "Describes the configuration and usage of the Radio Button List widget, which is available in the Mendix App Store."
+tags: ["app store", "app store component", "widget", "radio button list", "platform support"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
@@ -19,6 +19,10 @@ Visualize all the possible options in your user interface, instead of just forci
 * Display the list in a horizontal or vertical direction
 * Specify the text of labels for a Boolean attribute
 * Attach a microflow for the on-change event
+
+### 1.3 Limitations
+
+* **On change** has no effect on the form. The workaround is to add a microflow to the on-change property of the widget. This microflow must contain a change activity. The change activity must have **Refresh in client** enabled.
 
 ## 2 Installation
 
@@ -74,8 +78,3 @@ The configuration of the widget's required properties would be the following:
 * **Entity to list**: CompanyDepartment
 * **Label**: Name (string attribute of CompanyDepartment)
 * **Association**: Employee_CompanyDeparment/CompanyDepartment.
-
-## 5 Known Bugs
-
-* **On change** has no effect on the form.
-	* Workaround: add a microflow to the on-change property of the widget. This microflow must contain a change activity. The change activity must have **Refresh in client** enabled.

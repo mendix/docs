@@ -36,7 +36,7 @@ To select the environment for Studio, do the following:
 
     {{% /alert %}}
 
-4. In the **Select Studio Target** dialog window, click the drop-down menu and select the environment. 
+4. In the **Select Studio Target** dialog box, click the drop-down menu and select the environment. 
 
 5. Click **Save**.
 

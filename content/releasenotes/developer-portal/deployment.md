@@ -10,6 +10,70 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 ## 2020
 
+
+### March 26th, 2020
+
+#### SAP Cloud Platform Deployment
+
+* We have added support for deploying to the Azure Netherlands region of SAP Cloud Platform.
+    * **Object storage is only supported in the Azure Netherlands region for  Mendix version 8.7.0 and above**
+* We have added a log of all deployment activities which are carried out on your SAP environments to the environments page of apps which are deployed to SAP Cloud Platform.
+* We have added the ability to specify a custom URL (e.g. `appname.subdomain.domain.com`) where the user will be redirected after signing on using XSUAA, instead of being redirected to the generated URL (e.g. `appname.cfapps.eu10.hana.ondemand.com`) of the app.
+
+### March 24th, 2020
+
+#### Mendix for Private Cloud — Mendix Operator v1.0.1
+
+* We have added an additional field to the `MendixApp` CR which will allows the Developer Portal to display the latest state of environments.
+* We have improved compatibility with popular container image registries (such as Azure Container Registry). The build process can now recognize that the container image already has the necessary base layers, and avoids downloading them again, saving time and network traffic.
+
+#### Mendix for Private Cloud — Mendix Gateway Agent v1.0.1
+
+* We have improved the reliability of sending environment statuses to the Developer Portal.
+
+### March 23rd, 2020
+
+#### Mendix for Private Cloud
+
+* We fixed an issue where users could not accept invitations to join a cluster.
+* We fixed an issue were the first time an app was deployed no replicas were started, meaning that it was still in a stopped state. Now all apps will have one replica started when they are deployed for the first time.
+
+### March 17th, 2020
+
+#### Mendix Clouds
+
+* We have updated the environment details and backups screens for Mendix Clouds to show a more precise region, and the location of the secondary backup.
+
+### March 4th, 2020
+
+#### Mendix for Private Cloud
+
+* You can now deploy Mendix apps easily to Kubernetes-based platforms. We currently support Red Hat OpenShift, Amazon Web Services Elastic Kubernetes Service (AWS-EKS), and Amazon Web Services Azure Kubernetes Service (AWS-AKS). This involves deploying a Mendix Operator to your cluster to manage the Mendix requests. For more information see the [Private Cloud](/developerportal/deploy/private-cloud) documentation.
+
+### March 2nd, 2020
+
+#### Mendix Cloud Backups
+
+* Restoring data on the Mendix Cloud now takes place asynchronously. This means the following:
+    * You can continue working in the Developer Portal while your backup is restored
+    * You will be unable to stop or start your app while the backup is being restored
+    * Your environment details page will display a message while the backup is being restored
+    * The environment activity log will indicate when the restore has completed
+* New Deploy API calls have been added. These will be added to the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api) documentation shortly.
+* You will now be warned that you cannot restore a file-only backup to Mendix Cloud. You can only restore backups which include the database.
+
+### February 27th, 2020
+
+#### TLSv1.3 Support for Mendix Cloud (All Regions)
+
+* Mendix Cloud v4 and Mendix Cloud v3 now support TLSv1.3. TLSv1.3 improves the speed and security of HTTPS connections.
+
+### February 17th, 2020
+
+#### TLSv1.3 Support for Mendix Cloud v4 Free Tier EU
+
+* We enabled TLSv1.3 support in Mendix Cloud v4 Free Tier EU. TLSv1.3 improves the speed and security of HTTPS connections.
+
 ### January 21st, 2020
 
 #### Fixes
@@ -169,7 +233,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 
 #### Mendix Cloud Improvements
 
-* We redesigned the app user management page of the Developer Portal for Mendix Cloud environments which are enabled for single sign-on (SSO).
+* We redesigned the App User management page of the Developer Portal for Mendix Cloud environments which are enabled for single sign-on (SSO).
 
 ### May 13th, 2019
 
@@ -718,7 +782,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 ### April 1st, 2017
 
-* We added list backups/download backup operations to the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api#3-15-list-environment-backups).
+* We added list backups/download backup operations to the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api).
 * We fixed the status page link in alert emails.
 * We updated the **Security** link from the Deploy/Operate tabs. It now goes to the same page on all pages in the platform.
 * We fixed an issue where the Free Apps backups page was very slow or resulted in an error in some cases.
@@ -741,7 +805,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 #### Improvement
 
-* We introduced a new setting in **Node Security**, you can now configure **Monitoring Permissions** separately from **Transport Permissions**. Immediately after this change, we granted all users that had **Transport Permissions** on an environment the **Monitoring Permissions** there as well. From now on, a **Technical Contact** can configure these settings for everyone in the team separately. While we introduced this setting, we revisited the layout of the **Node Security** screen, you now have a simpler interface to change the permissions en each environment.
+* We introduced a new setting in **Node Security**, you can now configure **Monitoring Permissions** separately from **Transport Permissions**. Immediately after this change, we granted all users that had **Transport Permissions** on an environment the **Monitoring Permissions** there as well. From now on, a **Technical Contact** can configure these settings for everyone in the team separately. While we introduced this setting, we revisited the layout of the **Node Security** screen, you now have a simpler interface to change the permissions for each environment.
 
 ### February 20th, 2017
 

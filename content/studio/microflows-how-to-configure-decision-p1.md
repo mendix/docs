@@ -41,8 +41,8 @@ The app will open the corresponding page depending on the grade of a customer, f
 3.  For the **Customer** entity, create an attribute (for more information on how to create the attribute, see the [Adding New Attributes](domain-models) section) and do the following:<br />
     a. Set the attribute **Name** to *Grade*.<br />
     b. Set the [Type](domain-models-attributes) to **Enumeration**.<br />
-    c. Click **Select enumeration** to create a new enumeration.<br />d. In the **Select enumeration** dialog window, click **New**.<br/>
-    e. In the **Create new enumeration** dialog window, click **Add Item** (*Grade* is filled out automatically for the **Name**).<br />
+    c. Click **Select enumeration** to create a new enumeration.<br />d. In the **Select enumeration** dialog box, click **New**.<br/>
+    e. In the **Create new enumeration** dialog box, click **Add Item** (*Grade* is filled out automatically for the **Name**).<br />
 
     ![](attachments/microflows-how-to-configure-decision/new-enumeration-add-item.png) <br />
 
@@ -51,7 +51,7 @@ The app will open the corresponding page depending on the grade of a customer, f
     ![](attachments/microflows-how-to-configure-decision/new-enumeration-add-item-bronze.png)<br />
 
     g. Click **Add Item** and repeat the step above to create the **Silver** and **Gold** grades.<br />
-    h. Click **Create** to close the dialog windows and create the attribute.
+    h. Click **Create** to close the dialog boxs and create the attribute.
 
     ![](attachments/microflows-how-to-configure-decision/new-enumeration-bronze-silver-gold.png)
 
@@ -99,7 +99,7 @@ To configure the decision with the attribute or parameter of the enumeration typ
 8. To open a corresponding order form (page) for customers with the bronze grade, select **Show Page** in the **Toolbox**, drag and drop it to flow labelled **Bronze** in the microflow. 
 9.  Open the properties for the **Show Page** activity and do the following:<br />
     a. Click the **Select a page** field.<br />
-    b. In the **Select Page** dialog window, click **New page**, and [create a page](page-editor) for customer grade **Bronze**. 
+    b. In the **Select Page** dialog box, click **New page**, and [create a page](page-editor) for customer grade **Bronze**. 
     **Note** After you create a page, it will be added to the **Select field** automatically.<br />
 
     ![](attachments/microflows-how-to-configure-decision/show-page-select-page.png) <br />

@@ -1,6 +1,7 @@
 ---
 title: "Object Type Decision"
 parent: "decisions"
+menu_order: 2
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -25,7 +26,7 @@ The type of the input object is inspected to see how to continue.
 
 Let us say you have an entity `Student` and an entity `Professor` which have the entity `Member` as their generalization. For a `Professor` you want to open a different page than for another `Member`. The selected `Member` object is available in the parameter `SelectedMember` and is used as input to the object type decision. Note that there is no sequence flow for `Student`. If a sequence flow is missing, the closest generalization is searched that does have a sequence flow. In the case of `Student` this is `Member`. The sequence flow with the caption (empty) is followed when `SelectedMember` does not contain an object.
 
-![](attachments/819203/918058.png)
+![](attachments/microflows-and-nanoflows/918058.png)
 
 {{% /alert %}}
 

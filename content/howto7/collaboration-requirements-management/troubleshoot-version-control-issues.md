@@ -70,7 +70,7 @@ Remove your user settings and restart the Modeler.
 5. Double-click the `svn:ignore` property.
 6. Copy all text by doing <kbd>Ctrl</kbd>+<kbd>A</kbd> followed by <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 7. Paste into a new document in Notepad++ (or another editor that understands newline conventions).
-8. In the bottom right click on `CRLF` and select `LF` instead. This will replace CRLF by LF.
+8. In the bottom right click `CRLF` and select `LF` instead. This will replace CRLF by LF.
 9. Copy all text by doing <kbd>Ctrl</kbd>+<kbd>A</kbd> followed by <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 10. Go back to the window showing the `svn:ignore` property.
 11. Replace the current content by pasting from the clipboard: <kbd>Ctrl</kbd>+<kbd>A</kbd> followed by <kbd>Ctrl</kbd>+<kbd>V</kbd>.

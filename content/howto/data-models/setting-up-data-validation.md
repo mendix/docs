@@ -62,12 +62,12 @@ As long as this Microflow returns a Boolean value, you are free to add any logic
 
 ## 5 Advanced Validation with a Custom 'Save' Button
 
-Validating user input can also be achieved by overriding the default save button on a detail page. Start by creating an overview and detail page. If you don't know how to create overview and detail pages, take a look at [this](../front-end/create-your-first-two-overview-and-detail-pages) how-to. Your detail page should look similar to this:
+Validating user input can also be achieved by overriding the default save button on a detail page. Start by creating an overview and detail page. If you don't know how to create overview and detail pages, take a look at [How to Create Your First Two Overview & Detail Pages](../front-end/create-your-first-two-overview-and-detail-pages). Your detail page should look similar to this:
 
 ![](attachments/18448742/18582143.png)
 
 1.  Right click the **Save** button and select **Delete** to remove it from the page.
-2.  Right click the drop zone below the **Cancel** button and select **Add widget > Button widgets > Call microflow**.
+2.  Right click the drop-zone below the **Cancel** button and select **Add widget > Button widgets > Call microflow**.
 
     ![](attachments/18448742/18582142.png)
 
@@ -76,9 +76,9 @@ Validating user input can also be achieved by overriding the default save button
     ![](attachments/18448742/18582141.png)
 
 4.  Create a **Commit** activity to store the object in the database.
-5.  Create a **Close Page** activity to close the detail page.
+5.  Create a **Close page** activity to close the detail page.
 
-    You have now created a Microflow that mimics the default 'Save' button behavior. It should look like this:
+    You have now created a microflow that mimics the default 'Save' button behavior. It should look like this:
     
     ![](attachments/18448742/18582140.png)
 
@@ -107,7 +107,17 @@ Validating user input can also be achieved by overriding the default save button
 15. Select for example **Name** as member.
 16. Enter an error message in the **Template** field. You can use indexes to dynamically insert parameters in the template.
 
-## 6 Read More
+## 6 Validating Multiple Attributes
+
+If you want to validate multiple attributes, it is best to do this in a sub-microflow:
+
+1. Create a Boolean variable set to `true`. Be sure to mark this variable as the **Return value**.
+2. Create your validations as described above.
+3. Configure the sub-microflow to change the Boolean variable to `false` after the validation feedback or error message. Connect this flow back to the main sequence flow using a merge, and continue with the next validation.
+4. At the end of the sub-microflow, the variable should be `true` if it succesfully passed all validations, and `false` when one or more validations have failed. 
+5. Add a [decision](/refguide/decision) that checks the return value and only allows the microflow to continue to the **Commit** event if all validations are passed. This way, you can keep the logic while performing all necessary validations at once.
+
+## 7 Read More
 
 * [Work with Images & Files](working-with-images-and-files)
 * [Create a Basic Data Layer](create-a-basic-data-layer)

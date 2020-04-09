@@ -167,10 +167,16 @@ In this section, you can view the configured constants. Constants are used to de
 
 To fill in a new value, select the constant and click **Edit**.
 
+Here you can type a **New value**.
+
+You can also set **Mask** to **Yes**. This replaces the **Current value** and the **New value** with asterisks on all screens in the Developer Portal. You will also get asterisks if you export the constants to Excel. This means that you can keep your constants secret from users who do not have edit rights.
+
+{{% image_container width="50%" %}}
+![Edit Constants Pop-up window](attachments/environments-details/edit-constant.png)
+{{% /image_container %}}
+
 {{% alert type="info" %}}
-
 You have to restart your application before the changes will be made.
-
 {{% /alert %}}
 
 For more information, see [Constants](/refguide/constants).
@@ -213,17 +219,22 @@ For Mendix Cloud v3, only *X-Frame-Options* is supported. For Mendix Cloud v4 th
 | Content-Security-Policy | allows web site administrators to control resources the user agent is allowed to load for a given page | a string value<br/>*for more information see the W3C recommendation [Content Security Policy Level 2](https://www.w3.org/TR/CSP2/)* |
 | Referrer-Policy | governs which referrer information should be included with requests made | |
 | X-Content-Type-Options | indicate that the MIME types advertised in the Content-Type headers should not be changed and be followed | |
-| X-Frame-Options | indicates whether or not a browser should be allowed to render a page in a `<frame>`, `<iframe>`, `<embed>` or `<object>` | This was the value set previously to prevent embedding in an IFrame |
+| X-Frame-Options | indicates whether or not a browser should be allowed to render a page in a `<frame>`, `<iframe>`, `<embed>` or `<object>` | The default is not to allow apps to be rendered inside frames. <br/> This was the value set previously to prevent embedding in an IFrame <br/> See important note <sup><small>[1]</small></sup> below. |
 | X-Permitted-Cross-Domain-Policies | specifies whether this page can load resources from a different domain | |
 | X-XSS-Protection | stops pages from loading when they detect reflected cross-site scripting (XSS) attacks | |
 
+{{% alert type="warning" %}}
+<sup><small>[1]</small></sup>Modern browsers are introducing additional security to ensure that iframes are only allowed when they are from the same domain as the main page. To avoid this issue when you are using custom domain names and want to embed the app in an iframe, ensure that the app you want to embed is part of the same domain. For example, if your page is mainpage.domain.name, then the app embedded in the iframe should be appname.domain.name.
+{{% /alert %}}
+
+
 There are three types of value for these headers:
 
-*  Choose a value from a dropdown
+*  Choose a value from a drop-down
 
     ![](attachments/environments-details/http-header-dropdown.png)
 
-*  Choose a value from a dropdown and specify a URL
+*  Choose a value from a drop-down and specify a URL
 
     ![](attachments/environments-details/http-header-url.png)
 
@@ -266,11 +277,10 @@ Add client certificates (in the PKCS12 format) or certificate authorities (in th
 
 ![](attachments/environments-details/loglevels-tab.png)   
 
-Log levels are used to distinguish the log messages and to highlight the highest priority ones so that they can receive the immediate intervention they require.
+Log levels are used to distinguish the log messages and to highlight the highest priority ones so that they can receive the immediate intervention they require. Note that custom log nodes appear in the list only after a message has been logged to them. See [Log Message](/refguide/log-message#log-node-name) for more information.
 
 On this tab, you can perform the following actions:
 
-* Retrieve the current log levels by clicking **Refresh**
 * Change the log level type by clicking the specific level
 * Click **Set all to INFO** to revert all the changes
 

@@ -1,9 +1,9 @@
 ---
 title: "Process Queue"
 category: "Modules"
-description: " "
-tags: [ ]
-draft: true
+description: "Describes the configuration and usage of the Process Queue module, which is available in the Mendix App Store."
+tags: ["app store", "app store component", "process queue", "queue overview", "platform support"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
@@ -27,11 +27,11 @@ This module does NOT support a multi-instance setup and as a result should NOT b
 
 ### 1.2 Dependencies
 
-* [Mx Model Reflection](https://appstore.home.mendix.com/link/app/69/)
+* [Mx Model Reflection](/appstore/modules/model-reflection)
 
 ## 2 Configuration
 
-After importing the module, connect the **QueueOverview** form to your application. This is the starting place for defining the different queues and processes. Add the **ASu_InitialiseQueue** microflow as a startup event to instantiate the queue. Before configuring the queue, you need to synchronize the * [Mx Model Reflection](https://appstore.home.mendix.com/link/app/69/) module, and make sure you sync the **ProcessQueue** as well.
+After importing the module, connect the **QueueOverview** form to your application. This is the starting place for defining the different queues and processes. Add the **ASu_InitialiseQueue** microflow as a startup event to instantiate the queue. Before configuring the queue, you need to synchronize the * [Mx Model Reflection](/appstore/modules/model-reflection) module, and make sure you sync the **ProcessQueue** as well.
 
 Each microflow you configure here should have one input parameter of the **ProcessQueue.QueuedAction** type.
 

@@ -35,9 +35,9 @@ All images, names and steps in this how-to are based on these versions. When usi
 In this chapter you will set up the unit testing module and run the example tests.
 
 1.  Create a new project.
-2.  Download the [UnitTesting module](https://appstore.home.mendix.com/link/app/390/).
-3.  Download the [Community Commons Function Library module](https://appstore.home.mendix.com/link/app/170/).
-4.  Download the [ObjectHandling module](https://appstore.home.mendix.com/link/app/37114/).
+2.  Download the [Unit Testing](/appstore/modules/unit-testing) module.
+3.  Download the [Community Commons Function Library](/appstore/modules/community-commons-function-library).
+4.  Download the [Object Handling](/appstore/modules/object-handling) module.
 5.  Open the **Settings** of the project.
 
     ![](attachments/18448633/18580371.png)
@@ -69,9 +69,9 @@ In this chapter you will set up the unit testing module and run the example test
 
     ![](attachments/18448633/18580341.png)
     
-    At the left side 2 buttons are shown. When you click on the Run all button, all unit tests will be executed. When you click on the Reset button, the status of all tests will change to not executed (question mark icon). Beneath the buttons all modules which contains unit tests are shown. In this case UnitTesting is the only module which contains unit tests. When you click on UnitTesting, all unit tests of this module are shown.
+    At the left side 2 buttons are shown. When you click the Run all button, all unit tests will be executed. When you click the Reset button, the status of all tests will change to not executed (question mark icon). Beneath the buttons all modules which contains unit tests are shown. In this case UnitTesting is the only module which contains unit tests. When you click UnitTesting, all unit tests of this module are shown.
     If you want to save all changes made in the microflow to the database, you need to uncheck the checkbox 'Rollback microflow tests after execution'. Keep the checkbox checked if you want to rollback all changes.
-    At the right side the unit tests of the selected module are shown. In this example five unit tests are shown. When you click on the Run all button, all unit tests of the selected module will be executed. When you click on the play button next to a unit test, only that unit test will be executed.
+    At the right side the unit tests of the selected module are shown. In this example five unit tests are shown. When you click the Run all button, all unit tests of the selected module will be executed. When you click the play button next to a unit test, only that unit test will be executed.
 18. Click on the play button of **UnitTesting.Test_ValidUnitTest**.
   
     ![](attachments/18448633/18580359.png)
@@ -84,7 +84,7 @@ In this chapter you will set up the unit testing module and run the example test
     
     ![](attachments/18448633/18580357.png)
 
-19. Double click on **UnitTesting.TestValidUnitTest**.
+19. Double click **UnitTesting.TestValidUnitTest**.
   
     ![](attachments/18448633/18580340.png)
     

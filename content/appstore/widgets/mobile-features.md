@@ -1,9 +1,9 @@
 ---
 title: "Mobile Features"
 category: "Widgets"
-description: " "
-tags: [ ]
-draft: true
+description: "Describes the configuration and usage of the Mobile Features widget, which is available in the Mendix App Store."
+tags: ["app store", "app store component", "widget", "mobile feature", "spinner", "transitions", "status bar", "platform support"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
@@ -23,10 +23,9 @@ This widget includes the following features that can be used in a Mendix hybrid 
 * Dialog  boxes – info, warning, and error messages are shown using native dialog boxes
 * Spinner  – instead of the Mendix default loading dots, use the native loading spinners for your device
 * Status bar  – set the text color and background of the status bar
-* Custom connection error  – show a bar on top of the window when a connection error occurs (instead of the normal warning pop-up window)
 * Custom body classes:
-	* Online/offline  – when the app goes offline, a configurable class is added to the body of the page
-	* Android & iOS – depending on the platform, a configurable class is added to the body of the page (used for styling per platform)
+  * Online/offline  – when the app goes offline, a configurable class is added to the body of the page
+  * Android & iOS – depending on the platform, a configurable class is added to the body of the page (used for styling per platform)
 
 ### 1.3 Dependencies
 

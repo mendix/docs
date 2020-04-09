@@ -48,14 +48,15 @@ Studio has a minimum supported Mendix Studio version. This means that if the Men
 
 The table below gives examples of how Mendix versions relate to Studio ranges, and what version your project will be upgraded to in case you choose to upgrade:
 
-| Mendix version | Studio range | Mendix version it will be upgraded to when Upgrade is clicked: |
-| -------------- | ------------ | ------------------------------------------------------------ |
-| 7.11.0         | 7.11–7.14    | 7.23.7                                                       |
-| 7.15.1         | 7.15–7.22    | 7.23.7                                                       |
-| 7.22.2         | 7.15–7.22    | 7.23.7                                                       |
-| 7.23.0         | 7.23         | 7.23.7                                                       |
-| 7.23.7         | 7.23         | No automatic upgrade, only manual upgrade to Mendix 8. For details, see the [Upgrading to Mendix Version 8](#upgrade-to-8) section below. |
-| 8.0.0          | 8.0 & Above  | Latest available version of Mendix 8.                        |
+| Mendix version example | Studio range | Mendix version it will be upgraded to when Upgrade is clicked: |
+| ---------------------- | ------------ | ------------------------------------------------------------ |
+| 7.11.0                 | 7.11–7.14    | 7.23.12                                                      |
+| 7.15.1                 | 7.15–7.22    | 7.23.12                                                      |
+| 7.22.2                 | 7.15–7.22    | 7.23.12                                                      |
+| 7.23.0                 | 7.23         | 7.23.12                                                      |
+| 7.23.7                 | 7.23         | No automatic upgrade, only manual upgrade to Mendix 8. For details, see the [Upgrading to Mendix Version 8](#upgrade-to-8) section below. |
+| 8.0.0                  | 8.0–8.6      | 8.6.1                                                        |
+| 8.7.0                  | 8.7 & Above  | Latest available version of Mendix 8.                        |
 
 {{% alert type="warning" %}} 
 

@@ -26,9 +26,9 @@ Therefore this type of database is excellent to use while developing and running
 
 One application can make use of many different databases. Take the following steps to select the preferred database (if there is more than one configured)
 
-1.  Double click on settings in the project explorer
+1.  Double click settings in the project explorer
     ![](attachments/18448637/18580428.png)
-2.  Select the preferred database configuration and click on 'Make active'
+2.  Select the preferred database configuration and click 'Make active'
     ![](attachments/18448637/18580427.png)
 
 ## 4\. Start the database viewer
@@ -48,7 +48,7 @@ This is the database manager. On the left pane all tables from all modules in th
 
 Queries can be executed in two ways. It can be done directly from the command line (top right pane) in SQL script, or via the explorer on the left pane. For more information about SQL, visit the following page: [http://www.w3schools.com/sql/](http://www.w3schools.com/sql/). To execute queries from the database explorer (left pane), the following steps have to be applied:
 
-1.  Right click on any table and select the preferred action
+1.  Right click any table and select the preferred action
     ![](attachments/18448637/18580423.png)
 2.  To select all customers from the table CUSTOMER, click the first option. It will automatically fill the SQL command in the top right pane.
     ![](attachments/18448637/18580422.png)

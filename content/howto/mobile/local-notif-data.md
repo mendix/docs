@@ -205,11 +205,11 @@ Good job! When a user taps a notification from the **Pass GUID to Notification**
 
 Next you are going to create a show page action for **ON_tapNotification**.
 
-1.  Drag and drop a **Show Page** action onto your nanoflow:
+1.  Drag a **Show Page** activity onto your nanoflow:
 
 	{{% image_container width="500" %}}![new show page](attachments/native-push/add-show-page.png){{% /image_container %}}
 
-2. Double-click the show page activity.
+2. Double-click the **Show Page** activity.
 
 3. From the **Object to pass** drop-down menu select **ReturnedObjectByGuid**.
 

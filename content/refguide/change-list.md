@@ -1,6 +1,7 @@
 ---
 title: "Change List"
 parent: "list-activities"
+menu_order: 2
 tags: ["studio pro", "List"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -40,7 +41,7 @@ Defines the type of change that is applied to the list.
 | Clear | The list is emptied. |
 | Replace | The list is emptied and the object(s) referred to by value are added to the list. |
 
-If you do not want duplicates in your (microflow) list, you can either remove the object(s) first, or use the **Contains** [List Operation](list-operation) to examine the list before adding the object(s).
+If you do not want duplicates in your (microflow) list, you can either remove the object(s) first, or use the **Contains** [list operation](list-operation) to examine the list before adding the object(s).
 
 {{% alert type="warning" %}}
 Currently, this works differently in **nanoflows**. In a **nanoflow** objects will *not* be added if they are already in the list whereas, in a **microflow**, the same object can be added multiple times.

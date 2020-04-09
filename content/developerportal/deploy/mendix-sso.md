@@ -3,7 +3,7 @@ title: "Mendix Single Sign-On"
 parent: "mendix-cloud-deploy"
 menu_order: 70
 description: "Use the MendixSSO module to add Single Sign-on to your app using the user's Mendix credentials"
-tags: ["SSO", "Single Sign-on", "Mendix credentials"]
+tags: ["SSO", "Single Sign-on", "Mendix credentials", "MendixSSO"]
 #draft: true
 #Ownership claimed by Identity Services Team.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -12,6 +12,10 @@ tags: ["SSO", "Single Sign-on", "Mendix credentials"]
 ## 1 Introduction
 
 The [MendixSSO module](https://appstore.home.mendix.com/link/app/111349/Mendix/MendixSSO-(for-Mendix-7)) enables your app users to sign in with their Mendix account when your app is deployed to the Mendix Cloud.
+
+{{% alert type="warning" %}}
+Mendix Single Sign-On is only activated when your app is deployed to the Mendix Cloud. When you run your app locally, or on another cloud, you will need to use local credentials.
+{{% /alert %}}
 
 Using Mendix accounts has the following benefits:
 
@@ -26,7 +30,7 @@ You can see if your app has the MendixSSO module, and which version it has, by l
 
 ![](attachments/mendix-sso/mxsso-app-store-module.png)
 
-If your app does not have the MendixSSO module, it is available from the Mendix App Store here: [Mendix SSO](https://appstore.home.mendix.com/link/app/111349/Mendix/MendixSSO-(for-Mendix-7)). Follow the instructions in [How To Use App Store Content](/developerportal/app-store/app-store-content) to import it into your app and then follow the instructions in [Setting Up Mendix Single Sign-On](#setting-up), below.
+If your app does not have the MendixSSO module, it is available from the Mendix App Store here: [Mendix SSO](https://appstore.home.mendix.com/link/app/111349/Mendix/MendixSSO-(for-Mendix-7)). Follow the instructions in [How to Use App Store Content](/appstore/general/app-store-content) to import it into your app and then follow the instructions in [Setting Up Mendix Single Sign-On](#setting-up), below.
 
 If you need a newer version of the MendixSSO module (for example, to use a new feature), then it is also available from the App Store via the same link.
 
@@ -231,13 +235,13 @@ You need to tell the MendixSSO Module to use your new entity, instead of the def
 
     ![Modify custom afterstartup microflow to use custom create and update microflows](attachments/mendix-sso/custom-afterstartup-microflow.png)
 
-2. Update the **Create** action in the **MendixSSO_CreateUser** microflow in your user administration module to use the AppCloudServices user entity, not the one in the MendixSSO module.You will also need to update all the members which are set during the create.
+2. Update the **Create** action in the **MendixSSO_CreateUser** microflow in your user administration module to use your custom user entity, not the one in the MendixSSO module.You will also need to update all the members which are set during the create.
 
     ![Edit custom create microflow to use the new entity](attachments/mendix-sso/create-new-entity.png)
 
 3. Change the **End event** of the microflow to return an object of the correct type.
 
-4.  Change the Parameter of the **MendixSSO_UpdateUser** microflow in the module to be your AppCloudServices user entity instead of MendixSSOUser
+4.  Change the Parameter of the **MendixSSO_UpdateUser** microflow in the module to be your custom user entity instead of MendixSSOUser
 
 5. Change the **Change object** action to set the correct members of the object.
 

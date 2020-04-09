@@ -11,6 +11,22 @@ These release notes cover changes to the app project management functionality an
 For release notes on Mendix Cloud and deployment options, see [Deployment](deployment).
 {{% /alert %}}
 
+## 2020
+
+### February 21st, 2020
+
+* We fixed an issue where [favorited apps](/developerportal/apps-list/#favoriting) still showed up in the favorites view on the [My Apps](/developerportal/apps-list/) page after being deleted.
+* We made performance improvements to the **My Apps** page.
+* We fixed an issue where the description field did not expand properly when creating a new [story](/developerportal/collaborate/stories).
+
+### February 6th, 2020
+
+#### Improvements
+
+* We implemented a new design for the [Create App](/developerportal/#buzz) flow.
+* When creating a new app, you can now search through templates for feature demos, academy training apps, and ready-made apps.
+* After selecting an app template, you can now choose a nice icon for your app project.
+
 ## 2019
 
 ### December 23rd, 2019
@@ -58,7 +74,7 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 #### Improvements
 
 * We fixed an issue that would prevent users from inviting email addresses that contain capital letters.
-* We fixed an issue that occassionally triggered an error message during signup.
+* We fixed an issue that occasionally triggered an error message during signup.
 * We made various small performance improvements on the Developer Portal.
 
 ### September 19th, 2019
@@ -66,7 +82,7 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 #### Launchpad Removal & App User Management Update
 
 * We removed the old launchpad page, as we have moved to a new SSO architecture. The old URL `launchpad.mendix.com` now links to your [My Apps](/developerportal/apps-list/) page.
-* We moved the app user management functionality of the launchpad to the **General** app settings in the Developer Portal. For more information, see the [Managing App Users](/developerportal/settings/general-settings#managing-app-users) section of *How to Manage General App Settings*.
+* We moved the App User management functionality of the launchpad to the **General** app settings in the Developer Portal. For more information, see the [Managing App Users](/developerportal/settings/general-settings#managing-app-users) section of *How to Manage General App Settings*.
 
 ### August 9th, 2019
 
@@ -395,7 +411,7 @@ The Web Modeler can now be enabled for all types of apps. You can do this on the
 #### New Features
 
 * We added the **View App** and **Edit App** buttons. The **View App** button brings you to the deployment URL of your Free App, or, if you have test, acceptance, and production environments, it lets you choose between these environments using a drop-down menu. The **Edit App** button will launch the Desktop Modeler if you have it installed; if you are part of the partner group testing the Web Modeler, then you'll have the choice to directly open your app in the WM.
-* We redesigned the interface. The new look sports light colors and a responsive layout. Menu items pertaining to your apps have been moved from the top to the left-hand side. Users with permissions to access restricted parts of the Mendix App Platform can navigate there using the **Profile** menu, which opens when you click your avatar in the top-right corner of the screen.
+* We redesigned the interface. The new look sports light colors and a responsive layout. Menu items pertaining to your apps have been moved from the top to the left side. Users with permissions to access restricted parts of the Mendix App Platform can navigate there using the **Profile** menu, which opens when you click your avatar in the top-right corner of the screen.
 * We improved the breadcrumbs. A header on top of the Mendix App Platform will show you where you are in the navigation structure.
 * The **Feedback** widget can now be used when opened on small screen sizes (for example, on a  smartphone).
 * The **Guidance** sidebar has been replaced by the **Intercom** widget.

@@ -3,7 +3,7 @@ title: "Use Over the Air Updates"
 parent: "native-mobile"
 menu_order: 71
 description: A tutorial for pushing over the air updates (OTA).
-tags: ["native", "mobile", "ota", "native-builder", "over the air"]
+tags: ["native", "mobile", "ota", "native-builder", "over the air", "update"]
 ---
 
 ## 1 Introduction
@@ -171,7 +171,7 @@ Using a modification of `rollout-percentage` you can make builds optional. To do
 native-builder.exe release push-update --project-name "CoolApp" --target-version "1.0.0" --build-number 1 --rollout-percentage 100 --mandatory false
 ```
 
-Instead of the mandatory update dialog window, you app's users should now be greeted with a optional dialog window. This window will allow them to choose to install the update or not. 
+Instead of the mandatory update pop-up window, you app's users should now be greeted with a optional pop-up window. This window will allow them to choose to install the update or not. 
 
 ## 8 Preserving your Model's Integrity 
 

@@ -1,6 +1,7 @@
 ---
 title: "Build JavaScript Actions: Part 2 (Advanced)"
 parent: "build-javascript-actions"
+menu_order: 20
 description: "This advanced how-to will teach you to make a JavaScript action which can search for GitHub users."
 tags: ["widget", "search", "GitHub", "JavaScript", "API", "JavaScript-API"]
 ---
@@ -288,8 +289,8 @@ To create a JavaScript action that can search for users on GitHub, follow the st
 
 	![list display](attachments/jsactions-advanced/variable-display.png)
 
-18. To edit your **Change Object** activity, do the following: <br/>
-	a. Double-click your **Change Object** activity. <br/>
+18. To edit your **Change object** activity, do the following: <br/>
+	a. Double-click your **Change object** activity. <br/>
 	b. Select **GithubSearch(HowTo.GithubSearch)** from the **Object** drop-down menu. <br/>
 	c. Click **Action** > **New**. <br/>
 	d. Select **HowTo.GithubSearch_GithubUser(ListofHowTo.GithubUser)** from the **Member** drop-down menu. <br/>
@@ -297,7 +298,7 @@ To create a JavaScript action that can search for users on GitHub, follow the st
 
 	![edit change](attachments/jsactions-advanced/edit-change-item.png)
 	
-	f. Your finished **Change Object** action will look like this:
+	f. Your finished **Change object** action will look like this:
 	
 	![change object](attachments/jsactions-advanced/change-object-final.png)
 
@@ -314,7 +315,7 @@ Congratulations! Using the power of JavaScript actions, your app can search for 
 ## 5 Read More
 
 * [Build JavaScript Actions: Part 1 (Basic)](write-javascript-actions)
-* [Mendix Client API](https://apidocs.mendix.com/8/client/)
+* [Mendix Client API](https://apidocs.rnd.mendix.com/8/client/index.html)
 * [JavaScript Actions](/refguide/javascript-actions)
 * JavaScript Resources
 	* [JavaScript Basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics)

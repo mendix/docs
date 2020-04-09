@@ -40,7 +40,7 @@ To create a building block preview image in Photoshop, follow these steps:
 
 1. Download the [Atlas UI image templates resources pack](https://atlas.mendix.com/index3.html#/resources/7881299347899269).
 2. Open the Photoshop file named **BB_previewimage.psd**.
-3.  Double-click on the smart object in the **Layers** panel.
+3.  Double-click the smart object in the **Layers** panel.
 
     ![](attachments/howto/create_custom_image_bb_photoshop.png)
 

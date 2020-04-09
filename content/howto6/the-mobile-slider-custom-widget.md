@@ -174,8 +174,8 @@ Mendix Custom Widgets are based upon DOJO widgets. You will find the following B
 
 To communicate with Mendix you need to use the Mendix JavaScript Client API. Read all about it at the following online documentation:
 
-[https://apidocs.mendix.com/6/client/
- ](https://apidocs.mendix.com/6/client/)
+[https://apidocs.rnd.mendix.com/6/client/index.html
+ ](https://apidocs.rnd.mendix.com/6/client/index.html)
 
 ### 9.4 Learning JavaScript Design Patterns
 

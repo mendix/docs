@@ -1,9 +1,9 @@
 ---
 title: "SAML"
 category: "Modules"
-description: " "
-tags: [ ]
-draft: true
+description: "Describes the configuration and usage of the SAML module, which is available in the Mendix App Store."
+tags: ["app store", "app store component", "saml", "idp", "identity provider", "platform support"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
@@ -27,7 +27,7 @@ With this module, you can authenticate against your Microsoft Active Directory s
 
 ### 1.4 Dependencies
 
-* [MxModelReflection](https://appstore.home.mendix.com/link/app/69/)
+* [MxModelReflection](/appstore/modules/model-reflection)
 
 ## 2 Installation
 

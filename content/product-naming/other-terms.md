@@ -46,11 +46,9 @@ Always capitalize.
 
 ### app project {#app-project}
 
-"App" should be used instead of "project" as much as possible in the documentation. However, be aware of potential confusion here when referring to what the user works on for project management in the Developer Portal or accesses in Studio Pro. A "project" would include the app being developed itself as well as resources from the Developer Portal, deployment, Mendix Runtime, etc. Thus, "app" as something a Mendix user makes and an end-user uses cannot entirely replace "project" in the documentation.
+"App" should be used instead of "project" as much as possible (despite the fact that "project" is still used throughout Studio Pro). 
 
-{{% alert type="info" %}}
-Use "app project" to clarify project management-related tasks in the Developer Portal.
-{{% /alert %}}
+Use "app project" where necessary for clarification (for example, for project management-related tasks in the Developer Portal).
 
 {{% alert type="success" %}}
 Enter the email addresses of all the co-workers you want to invite to your app project.
@@ -78,7 +76,7 @@ This is the term to use to reflect the create-new-app flow UI in the Developer P
 
 There are two inconsistencies in other areas of the platform UI:
 
-* When creating a new company app template to add to the App Store as a component, you have to select **Starter Apps* as the **Sub category**
+* When creating a new company app template to add to the App Store as a component, you have to select **Starter Apps** as the **Sub category**
 * In the App Store, "sample apps" continues to be the menu item for app templates
 
 {{% alert type="info" %}}
@@ -345,6 +343,14 @@ Capitalize in all instances (to parallel "Team Server" and "Build Server").
 Spell with "Mx" abbreviation as one word.
 {{% /alert %}}
 
+### Native Builder
+
+{{% alert type="info" %}}
+Do not use "Native Oven".<br />
+<br />
+Capitalize in all instances.
+{{% /alert %}}
+
 ## O-Z
 
 ### on-premises
@@ -363,7 +369,7 @@ On-premises deployment needs specific security considerations.
 
 ### one-to-one & one-to-many associations
 
-For details on association properties, see [Associations & Their Properties](/refguide/association-properties). 
+For details on association properties, see [Association Properties](/refguide/association-properties). 
 
 {{% alert type="info" %}}
 Write as "one-to-one" and "one-to-many," not as "1-1" or "1-to-many."

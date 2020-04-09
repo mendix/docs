@@ -18,6 +18,7 @@ yarn-error.log
 manifest_test.yml
 _scripts/hugo_bin
 .vscode/settings.json
+.idea
 
 mx-*
 bin

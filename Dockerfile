@@ -9,7 +9,7 @@ ADD https://github.com/spf13/hugo/releases/download/v${HUGO_VERSION}/${HUGO_BINA
 RUN dpkg -i /tmp/hugo.deb \
 	&& rm /tmp/hugo.deb
 
-RUN npm i -g yarn
+RUN npm i --force -g yarn
 
 # Based on guidance at http://jdlm.info/articles/2016/03/06/lessons-building-node-app-docker.html
 RUN useradd --user-group --create-home app

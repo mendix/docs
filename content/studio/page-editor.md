@@ -64,7 +64,7 @@ To create a new page in Studio, do the following:
     {{% image_container width="400" %}}![](attachments/page-editor/new-page.png)
     {{% /image_container %}}
 
-3.  In the **Create new page** dialog window, fill out the title of the page, select a layout and a page template.  
+3.  In the **Create new page** dialog box, fill out the title of the page, select a layout and a page template.  
 
 	![](attachments/page-editor/create-new-page-dialog.png)
 
@@ -72,26 +72,58 @@ To create a new page in Studio, do the following:
 
 A new page is created.
 
-### 2.3 Deleting a Page
+### 2.3 Duplicating a Page
 
-To delete a page in Studio, do the following:
+To duplicate an existing page, do the following:
 
-1. Open the page you want to delete.
-2. Open the **Properties** tab.
-3.  Click **Delete** at the bottom of the **Properties** tab.
+1. Click the **Pages** icon in the left menu bar.
+
+2. In the side panel, click the ellipsis icon and select **Duplicate** in the drop-down menu:
+
+    <img src="attachments/page-editor/duplicate-page.png" alt="Duplicate Page" style="zoom:80%;" />
+
+The page is duplicated.
+
+### 2.4 Copying and Pasting a Page
+
+To copy and paste a page, do the following:
+
+1. Click the **Pages** icon in the left menu bar.
+
+2.  In the side panel, click the ellipsis icon and select **Copy to clipboard** in the drop-down menu:
+
+    <img src="attachments/page-editor/copy-page.png" alt="Copying a Page" style="zoom:80%;" />
+
+3. Open the Studio app where you want to paste the page and press <kbd>Ctrl</kbd> +<kbd>V</kbd> or <kbd>Cmd</kbd> +<kbd>V</kbd>. 
+
+Your page is pasted. For more information on copy/paste function in Studio, see the [Copy/Paste Pages, Microflows, and Enumerations](general#copy-paste-documents) section in *General Info*.
+
+### 2.5 Deleting a Page
+
+To delete a page in Studio, do one of the following:
+
+1. Open the page you want to delete and follow the steps below:
+    1. Open the **Properties** tab.
+    2. Click **Delete** at the bottom of the **Properties** tab.
 
     ![](attachments/page-editor/page-delete.png)
 
+2. Click the **Pages** icon in the left menu bar and do the following:
+
+    1. In the side panel, click the ellipsis icon and select **Delete** in the drop-down menu:
+
+		<img src="attachments/page-editor/delete-page.png" alt="Delete Page" style="zoom:80%;" />
+
 The selected page is deleted.
 
-### 2.4 Adding Elements on a Page
+### 2.6 Adding Elements on a Page
 
 To add elements on a page, do the following:
 
 1. In **Toolbox**, open the [Widgets](#widgets) tab or the [Building Blocks](#building-blocks) tab.
 2. Select an element you would like to add, drag and drop this element on a page. 
 
-### 2.5 Viewing Elements On a Page
+### 2.7 Viewing Elements On a Page
 
 There are two ways to view an element and its [properties](#page-editor-properties):
 
@@ -103,7 +135,7 @@ The selected element is indicated with an blue border. Additionally, if the elem
 {{% image_container width="400" %}}![](attachments/page-editor/input-widget-example.png)
 {{% /image_container %}}
 
-### 2.6 Deleting Elements from a Page
+### 2.8 Deleting Elements from a Page
 
 To delete an element from a page, do one of the following:
 

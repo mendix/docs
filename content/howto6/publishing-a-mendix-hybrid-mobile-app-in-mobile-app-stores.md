@@ -107,7 +107,7 @@ You can now deploy your app to your test device. An easy way to do this is with 
 1.  Open iTunes and connect your iOS device to your computer.
 
     ![](attachments/18448693/18581203.png)
-2.  At the top right, click on the device selector to show the contents of your device.
+2.  At the top right, click the device selector to show the contents of your device.
 3.  Click "Apps" to show available and installed apps.
     ![](attachments/18448693/18581202.png)
 4.  Open the menu in the top left corner of the iTunes window.

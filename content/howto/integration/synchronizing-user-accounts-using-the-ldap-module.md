@@ -12,9 +12,9 @@ Your company might already have a centralized identity management solution in pl
 ## 2 Prerequisites
 
 * Import the following App Store modules into your application model:
-    * [LDAP Synchronization Module](https://appstore.home.mendix.com/link/app/24/Mendix/LDAP-Synchronization-module)
-    * [Encryption](https://appstore.home.mendix.com/link/app/1011/Mendix/Encryption)
-    * [Community Commons Function Library](https://appstore.home.mendix.com/link/app/170/Mendix/Community-Commons-Function-Library)
+    * [LDAP Synchronization](/appstore/modules/ldap-synchronization)
+    * [Encryption](/appstore/modules/encryption)
+    * [Community Commons Function Library](/appstore/modules/community-commons-function-library)
 
 ## 3 Configuring the LDAP Synchronization Module
 
@@ -129,14 +129,14 @@ The final step in the configuration is to configure how the LDAP module handles 
 
     ![](attachments/18448733/18581918.png)
 
-5.  Select an attribute name in the **User Attribute** drop down, for example "FullName".
+5.  Select an attribute name in the **User Attribute** drop-down, for example "FullName".
 
     {{% alert type="info" %}}
 
-    If the drop down is empty, click **Cancel**, **Save & Close** and reopen the server configuration. This refreshes the information in the settings screens.
+    If the drop-down is empty, click **Cancel**, **Save & Close** and reopen the server configuration. This refreshes the information in the settings screens.
 
     {{% /alert %}}
-6.  In the **(select new)** drop down, select an LDAP attribute, like "displayName".
+6.  In the **(select new)** drop-down, select an LDAP attribute, like "displayName".
 7.  Click **Save**.You have just created an LDAP attribute mapping. The "displayName" attribute of an LDAP user will now be used to fill the "FullName" attribute of a Mendix user, when it is created during the synchronization.
 8.  Open the **LDAP group mapping** tab.
 
@@ -188,4 +188,4 @@ Note that the scheduled event will always synchronize all enabled LDAP server co
 *   [Consuming a REST Service](consume-a-rest-service)
 *   [Exposing data to BI tools using OData](exposing-data-to-bi-tools-using-odata)
 *   [http://www.openldap.org/](http://www.openldap.org/)
-*   [https://appstore.home.mendix.com/link/app/24/Mendix/LDAP-Synchronization-module](https://appstore.home.mendix.com/link/app/24/Mendix/LDAP-Synchronization-module)
+*   [LDAP Synchronization](/appstore/modules/ldap-synchronization)

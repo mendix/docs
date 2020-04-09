@@ -12,7 +12,7 @@ This tutorial will teach you how to go from a blank slate to an app running on a
 
 Every Native Builder project has configurations. These configurations are useful for preparing your app, and then creating builds on App Center and GitHub respectively. Configurations are also critical for making updates to apps already delivered to production devices. For more information on the Native Builder's capabilities, see the [Native Builder Reference Guide](/refguide/native-builder).
 
-## 2 Prerequisites
+## 2 Prerequisites {#prerequisites}
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
@@ -40,6 +40,10 @@ If you plan to deploy your app for testing on an Android device, make sure you h
 
 To use the Native Builder, you will first need to get tokens to authenticate with GitHub and App Center. If you already have tokens for your GitHub and App Center, you do not need to repeat these sections.
 
+{{% alert type="info" %}}
+The Native Builder needs to communicate with GitHub and App Center. Therefore, make sure your firewall permissions do not restrict the Native Builder.
+{{% /alert %}}
+
 ### 3.1 GitHub Token {#github-token}
 
 1. Go to [GitHub](https://github.com/) and sign in.
@@ -64,7 +68,7 @@ To use the Native Builder, you will first need to get tokens to authenticate wit
 The native builder uses the `prepare` command as well as a line of parameters in your CLI to specify the details of your build. Below is an example of a `prepare` command with a complete set of parameters:
 
 ```bash
-native-builder.exe prepare --project-name CoolApp --java-home "C:\Program Files\Java\jdk-11.0.3" --project-path "Y:\Documents\Mendix\CoolApp\CoolApp.mpr" --mxbuild-path "C:\Program Files\Mendix\8.3.0.61600\modeler\mxbuild.exe" --github-access-token b609183aa226a8c2d962700be7a387bd7776e986 --appcenter-api-token 440725eb1311ddfced62894a4d23fc90843370c7 --appcenter-organization "cool-organization" --runtime-url "https://coolapp.mendixcloud.com" --app-name "My Cool App" --app-identifier com.mendix.coolapp --mendix-version "8.5.0"
+native-builder.exe prepare --project-name CoolApp --java-home "C:\Program Files\Java\jdk-11.0.3" --project-path "Y:\Documents\Mendix\CoolApp\CoolApp.mpr" --mxbuild-path "C:\Program Files\Mendix\8.6.0.715\modeler\mxbuild.exe" --github-access-token b609183aa226a8c2d962700be7a387bd7776e986 --appcenter-api-token 440725eb1311ddfced62894a4d23fc90843370c7 --appcenter-organization "cool-organization" --runtime-url "https://coolapp.mendixcloud.com" --app-name "My Cool App" --app-identifier "com.mendix.coolapp" --mendix-version "8.6.0"
 ```
 
 The `prepare` command  does the following:
@@ -107,7 +111,7 @@ If you run into errors while running the `prepare` command, try running your CLI
 
 You have successfully prepared your app, and in the next section will make a build from it.
 
-## 5 Making Your First Build
+## 5 Making Your First Build {#first-build}
 
 To initiate your first build in the Native Builder, you will execute a command in CLI with various parameters included. For more information on parameters, see the [Commands](/refguide/native-builder#commands) section in the *Native Builder* guide. While some parameters are optional, two are required: the `--project-name` parameter and the `--build-number` parameter.
 
@@ -229,7 +233,7 @@ In case of failure, the build logs will be downloaded for your convenience. Plea
 
 Afer your build succeeds, note the downloaded *.zip* archives at the path provided by Native Builder.
 
-## 6 Distributing
+## 6 Distributing {#distributing}
 
 If your builds are not signed, the downloaded archives `CoolApp-Android-1.zip` and `CoolApp-iOS-1.zip` will contain *non-release* builds, `app-debug.apk` and `nativeTemplate.xcarchive`. 
 
@@ -248,7 +252,7 @@ You can skip this section if you completed [Signing a Build](#signing-a-build). 
 
 #### 6.1.2 Installing on a Device
 
-The *app-debug.apk* or *app-release.apk* can readily be installed on any device by sending the file over via any available means eg USB.
+The *app-debug.apk* or *app-release.apk* can readily be installed on any device by sending the file over via any available means (for example USB).
 
 To install your app via USB, connect your device to a machine via USB. To Install an APK from your device's file manager app this way:
 
@@ -285,7 +289,7 @@ You can skip this section if you completed [Signing a Build](#signing-a-build). 
 
 In order to deploy the *nativeTemplate.xcarchive* on a device or on the App Store, an Apple developer account and a development team is required. If one is available, do the following:
 
-1. Using an Xcode version below 11, double-click on the *nativeTemplate.xcarchive* file and it should open with the built-in *Application Loader* software.
+1. Using an Xcode version below 11, double-click the *nativeTemplate.xcarchive* file and it should open with the built-in *Application Loader* software.
 
 2.  Click the *Distribute App* button to start the local signing flow.:
 

@@ -25,7 +25,7 @@ This widget should only be used to group widgets belonging to a form.
 
 ### 1.4 Demo App Project
 
-For a demo app project that has been deployed with this widget, see [here]().
+For a demo app project that has been deployed with this widget, see [here](https://fieldset-sandbox.mxapps.io).
 
 ## 2 Dependencies
 

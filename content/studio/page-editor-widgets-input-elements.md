@@ -116,7 +116,7 @@ For example, you would like to make the **City** field editable only when users 
 
 ![](attachments/page-editor-widgets-input-elements/attribute-based-editability.png)
 
-#### 3.2.8 Specific Properties
+#### 3.2.6 Specific Properties
 
 Specific properties of the input elements are described in the table below:
 

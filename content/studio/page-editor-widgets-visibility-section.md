@@ -2,6 +2,7 @@
 title: "Conditional Visibility Section"
 parent: "page-editor-widgets"
 description: "Describes the Conditional Visibility section in widgets properties in Mendix Studio."
+menu_order: 80
 tags: ["studio", "page editor", "widgets", "on click action", "events"]
 ---
 
@@ -64,7 +65,7 @@ The **Roles** property is only shown when the [Role-Based](#role-based) property
 
 ## 3 Performing Basic Functions
 
- ### 3.1 Configuring Attribute-Based Conditional Visibility
+### 3.1 Configuring Attribute-Based Conditional Visibility
 
 To configure attribute-based visibility, do the following:
 

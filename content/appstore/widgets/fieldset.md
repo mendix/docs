@@ -8,7 +8,7 @@ tags: ["app store", "app store component", "widget", "fieldset", "token", "platf
 
 ## 1 Introduction
 
-The [Fielset]() widget is a container to group widgets within a form. Structuring a form helps end users to fill it out, especially when they rely on accessibility tools, like a screen reader.
+The [Fieldset]() widget is a container to group widgets within a form. Structuring a form helps end users to fill it out, especially when they rely on accessibility tools, like a screen reader.
 
 ### 1.1 Typical usage scenario
 

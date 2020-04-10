@@ -144,7 +144,7 @@ To delete an element from a page, do one of the following:
 
 ## 3 Highlight Conditional Items
 
-Located in the top-left corner of a page, this options highlights items that have [conditional visibility](page-editor-widgets-visibility-section) configured for them. Click the eye icon to enable this. 
+Located in the top-left corner of a page, this options highlights items that have [conditional visibility](page-editor-widgets-visibility-section) configured for them. Click the eye icon to enable this. For more information on conditional visibility and how it works, see [Conditional Visibility Section](page-editor-widgets-visibility-section).  
 
 ## 4 Breadcrumb {#breadcrumb}
 

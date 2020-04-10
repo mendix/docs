@@ -8,7 +8,7 @@ tags: ["studio", "page editor", "widgets", "on click action", "events"]
 
 ## 1 Introduction 
 
-The **Conditional Visibility** section in widget properties allows you allows you to show a widget only when certain conditions are met. You can make widgets visible based on the following conditions:
+The **Conditional Visibility** section in widget properties allows you to show a widget only when certain conditions are met. You can make widgets visible based on the following conditions:
 
 * [An attribute value of a widget](#attribute-based)
 * [User roles in your app](#role-based) 
@@ -18,6 +18,10 @@ For example, you have a web shop and you do not want to bother users with fillin
 ![](attachments/page-editor-widgets-visibility-section/attribute-based-example.png)
 
 You can also show a widget to a certain *user role* only. For example, you can show a widget showing salary amounts only to Finance Managers. 
+
+To see which widgets that have conditional visibility configured, click the **Highlight conditional items** option in the top-left corner of a page:
+
+<img src="attachments/page-editor-widgets-visibility-section/highlight-conditional-items.png" style="zoom:50%;" />
 
 ## 2 Conditional Visibility Properties
 

@@ -144,7 +144,7 @@ To delete an element from a page, do one of the following:
 
 ## 3 Highlight Conditional Items
 
-Located in the top-left corner of a page, this options highlights items that have [conditional visibility](page-editor-widgets-visibility-section) configured for them. Click the eye icon to enable this. For more information on conditional visibility and how it works, see [Conditional Visibility Section](page-editor-widgets-visibility-section).  
+Located in the top-left corner of a page, this option highlights items that have [conditional visibility](page-editor-widgets-visibility-section) configured for them. Click the eye icon to enable this. For more information on conditional visibility and how it works, see [Conditional Visibility Section](page-editor-widgets-visibility-section).  
 
 ## 4 Breadcrumb {#breadcrumb}
 
@@ -154,7 +154,7 @@ The breadcrumb serves two functions:
 
 * Shows a bottom-up layering of a selected item on a page. For example, when you select a button on a page, you will see that it is placed in a container, which is in a column.  Whereas, the column is in a row, and this row is placed in a layout grid on the page:
 
-  ![](attachments/page-editor/breadcrumb.png)
+	![](attachments/page-editor/breadcrumb.png)
 
 * Allows you to select an element on the page and view its properties. To navigate to an element on a page and view element's properties, click this element in the breadcrumb.
 

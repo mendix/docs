@@ -142,7 +142,11 @@ To delete an element from a page, do one of the following:
 * Select this element and press <kbd>Delete</kbd>
 * Open the **Properties** tab of this element and this click **Delete** at the bottom of the tab
 
-## 3 Breadcrumb {#breadcrumb}
+## 3 Highlight Conditional Items
+
+Located in the top-left corner of a page, this options highlights items that have [conditional visibility](page-editor-widgets-visibility-section) configured for them. Click the eye icon to enable this. For more information on conditional visibility and how it works, see [Conditional Visibility Section](page-editor-widgets-visibility-section).  
+
+## 4 Breadcrumb {#breadcrumb}
 
 A breadcrumb is displayed on every page in the left bottom corner of Studio.
 
@@ -154,7 +158,7 @@ The breadcrumb serves two functions:
 
 * Allows you to select an element on the page and view its properties. To navigate to an element on a page and view element's properties, click this element in the breadcrumb.
 
-## 4 Toolbox Tab
+## 5 Toolbox Tab
 
 The **Toolbox** shows the tools that can be used on pages. 
 
@@ -163,7 +167,7 @@ This tab consists of the following:
 * [Widgets](#widgets)
 * [Building Blocks](#building-blocks)
 
-### 4.1 Widgets {#widgets}
+### 5.1 Widgets {#widgets}
 
 Widgets are single user-interface elements that can be configured. 
 
@@ -171,7 +175,7 @@ You can [quickly configure](page-editor-widgets#quick-config) most of the non-cu
 
 You can update widgets in the [Widget Overview](settings-widget-overview). 
 
-### 4.2 Building Blocks {#building-blocks}
+### 5.2 Building Blocks {#building-blocks}
 
 Building blocks consist of pre-set widgets that allow you to build a page faster:  
 
@@ -204,7 +208,7 @@ Building blocks categories may differ because Atlas UI can be customized using S
 
 {{% /alert %}}
 
-## 5 Properties Tab {#page-editor-properties}
+## 6 Properties Tab {#page-editor-properties}
 
 The **Properties** tab displays the properties of the currently selected element and can differ per element. 
 
@@ -216,6 +220,6 @@ For example, if you click **Layout**—which is the layout that you choose when 
 {{% image_container width="300" %}}![](attachments/page-editor/layout.png)
 {{% /image_container %}}
 
-## 6 Read More
+## 7 Read More
 
 * [Widgets](page-editor-widgets)

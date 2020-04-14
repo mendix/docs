@@ -24,11 +24,11 @@ To display checks for your app and view the faulty elements in it, you can do th
     ![](attachments/checks/checks-button-red.png)
 
 4.  Click the **Checks** button, the warning or press <kbd>C</kbd> to view all checks. 
-   The panel with the list of checks appears at the bottom of the screen. For more information on the **Checks** panel, see the [Checks Panel Overview](#checks-panel-overview) section.
+    The panel with the list of checks appears at the bottom of the screen. For more information on the **Checks** panel, see the [Checks Panel Overview](#checks-panel-overview) section.
 
     ![](attachments/checks/checks-panel.png)
 
-4. To view the exact place and element that the error refers to, click the corresponding row in the **Checks** panel (you can click any place of the row, the whole row is responsive),  and the element that contains faults will be displayed.
+4. To view the exact place and element that the error refers to, click the corresponding row in the **Checks** panel (you can click any place of the row, the whole row is responsive), and the element that contains faults will be displayed and highlighted.
 
 5. To close the panel, either click the close button in the top-right corner of the panel, or click **Checks** in the top-right corner of Studio. 
 

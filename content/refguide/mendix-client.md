@@ -58,7 +58,7 @@ This runs client-side logic which is defined in the nanoflows in the model.
 
 ### 2.7 Platform APIs
 
-These are functions of the device on which the Mendix Client is running. In most cases this will be a function of a mobile device such as the camera or GPS location, but it can also include browser functions such as accessing an image file or making calls to Mendix Native APIs.
+These are functions of the device on which the Mendix Client is running. In most cases this will be a function of a mobile device such as the camera or GPS location, but it can also include making calls to Mendix Native APIs or browser functions such as accessing an image file.
 
 ### 2.8 Client Config
 
@@ -68,7 +68,7 @@ These include the shell page needed to start the Mendix Client, Cascading Style 
 
 ### 2.9 CodePush
 
-This process allows the Mendix app to distribute updates to clients which are running react-native apps.
+This process allows the Mendix app to distribute updates to clients which are running React Native apps.
 
 ### 2.10 Online Data
 
@@ -99,7 +99,7 @@ The state includes the following
     * non-persistable objects
     * attribute and association changes made to the objects
 
-To avoid performance issues, Mendix Client does not send the entire state to the runtime. State handling decides which parts of the state should be sent by analyzing the model during the deployment of the applications.
+To avoid performance issues, the Mendix Client does not send the entire state to the runtime. State handling decides which parts of the state should be sent by analyzing the model during the deployment of the applications.
 
 For more detailed information about state, see this blog: [https://www.mendix.com/blog/the-art-of-state-part-1-introduction-to-the-client-state/](https://www.mendix.com/blog/the-art-of-state-part-1-introduction-to-the-client-state/). This also includes a worked example where you can see, and duplicate for yourself, how state is passed to the Runtime Server.
 
@@ -107,7 +107,7 @@ State handling is also responsible for garbage collection. If you want to know m
 
 #### 2.13.2 Synchronization
 
-Where an app is “Offline First”, data created and changed in the app is stored locally until it is synchronized with the Runtime Server. This job is carried out by the synchronization process. This synchronizes the offline storage and object cache with the Runtime Server. For more information on offline first apps and synchronization, see [https://docs.mendix.com/refguide/offline-first](https://docs.mendix.com/refguide/offline-first).
+Where an app is “Offline First”, data created and changed in the app is stored locally until it is synchronized with the Runtime Server. This job is carried out by the synchronization process. This synchronizes the offline storage and object cache with the Runtime Server. For more information on offline first apps and synchronization, see [Offline-First](offline-first).
 
 #### 2.13.3 Session
 
@@ -133,17 +133,17 @@ These are described in the sections below.
 
 ### 3.1 Pluggable Widgets
 
-Pluggable widgets are reusable UI components written in react or react-native. This is a more powerful language than Dojo, which is used for Custom widgets, and is the recommended way of writing widgets. Pluggable widgets run on the native core framework using the pluggable widgets API which enables different pluggable widgets to communicate. They have limited access to web core widgets, but full access to the native core.
+Pluggable widgets are reusable UI components written in React or React Native. This is a more powerful language than Dojo, which is used for Custom widgets, and is the recommended way of writing widgets. Pluggable widgets run on the native core framework using the pluggable widgets API which enables different pluggable widgets to communicate. They have limited access to web core widgets, but full access to the native core.
 
 Pluggable widgets have many advantages over Custom widgets. For example, you can use conditional visibility and editability, and can place a Pluggable widget inside another Pluggable widget.
 
-For more information, see [https://docs.mendix.com/apidocs-mxsdk/apidocs/pluggable-widgets](https://docs.mendix.com/apidocs-mxsdk/apidocs/pluggable-widgets).
+For more information, see [Pluggable Widgets API](/apidocs-mxsdk/apidocs/pluggable-widgets).
 
 ### 3.2 Custom Widgets
 
-Custom widgets are written using Dojo and run on the web core framework using a previous version of the client API. Custom widgets can have access to some of the web core widgets through the API. However, they cannot use pluggable widgets or native core widgets which means that they cannot be used in native apps, or in offline hybrid apps. Custom widgets should only be used if you cannot create the functionality in a Pluggable Widget.
+Custom widgets are written using Dojo and run on the web core framework using a previous version of the client API. Custom widgets can have access to some of the web core widgets through the API. However, they cannot use pluggable widgets or native core widgets which means that they cannot be used in native apps, or in offline hybrid apps. Custom widgets should only be used if you cannot create the functionality in a Pluggable widget.
 
-For more information on Custom widgets, see [https://docs.mendix.com/howto/extensibility/widget-development](https://docs.mendix.com/howto/extensibility/widget-development).
+For more information on Custom widgets, see [Hot To Build Custom Widgets](/howto/extensibility/widget-development).
 
 ## 4 Mendix Client Startup
 
@@ -162,7 +162,7 @@ When the end-user launches an app in the browser, it triggers the following flow
 
 1. The end-user enters the URL of the app in the browser.
 
-2. The browser loads the HTML web page in the browser.
+2. The browser loads the HTML web page ("shell").
 
 3. The web page loads and starts the Mendix Client, together with the core widgets.
 

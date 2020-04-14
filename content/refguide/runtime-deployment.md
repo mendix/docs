@@ -30,11 +30,11 @@ This is the docker environment specification which specifies the docker environm
 
 ### 2.3 Project MPK
 
-This is the project model as created by Studio Pro or Studio. It cannot be directly interpreted by the Mendix runtime.
+This is the project model as created by Studio Pro or Studio. It cannot be directly interpreted by the Mendix Runtime.
 
 ### 2.4 MX Build
 
-This converts an app in mpk format to the mda format which can be interpreted by the Mendix runtime.
+This converts an app in mpk format to the mda format which can be interpreted by the Mendix Runtime.
 
 ### 2.5 Cloud Foundry
 
@@ -47,7 +47,7 @@ The buildpack is the Mendix script which controls the deployment of Mendix model
 * identifies the target environment and bound services such as database and file storage
 * if it receives a project in mpk format it initiates Mxbuild to convert it into mda format
 * it identifies the correct version of the Java Runtime Environment and pushes it to the environment
-* it identifies the correct version of the Mendix runtime and uses m2ee to push the Runtime Server to the environment, with a link to the project mda which defines the project
+* it identifies the correct version of the Mendix Runtime and uses m2ee to push the Runtime Server to the environment, with a link to the project mda which defines the project
 
 ### 2.7 Project MDA
 

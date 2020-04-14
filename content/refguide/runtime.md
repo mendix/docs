@@ -63,7 +63,7 @@ Also called the **App Container**. This launches and exposes the Runtime Server.
 
 ### 2.7 Runtime Server
 
-This is the server side of the Mendix runtime. It is described below in Runtime Server.
+This is the server side of the Mendix runtime. It is described in [Runtime Server](runtime-server).
 
 ### 2.8 Load Balancer
 
@@ -76,11 +76,11 @@ The CDN (Content Delivery Network) contains static configuration information whi
 
 ### 2.10 Mendix Client
 
-This is the browser or device which allows the end-user to interact with the app. This can be a web browser, such as Chrome, or a mobile device, such as an iPhone. It typically has a screen, pointer device, and input device to allow end-users to use the app.
+This is the browser or device which allows the end-user to interact with the app. This can be a web browser, such as Chrome, or a mobile device, such as an iPhone. It typically has a screen, pointer device, and input device to allow end-users to use the app. The Mendix Client is described in [Mendix Client](mendix-client).
 
 ## 3 Licensing
 
-You need a license to run an application in production mode. Without a license, the Runtime Server stops operating after a couple of hours. A license can be obtained through your account manager at Mendix. Afterwards, you can activate your license by following the instructions in [How to Activate Your Mendix License on Microsoft Windows](/developerportal/deploy/activate-a-mendix-license-on-microsoft-windows).
+You need a license to run an application in production mode. Without a license, the Runtime Server stops operating after a couple of hours. Information on licensing Mendix apps can be found in [Licensing Apps](developerportal/deploy/licensing-apps-outside-mxcloud).
 
 ## 4 APIs
 

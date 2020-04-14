@@ -5,20 +5,54 @@ menu_order: 10
 description: "These release notes showcase each release of the iOS and Android Make It Native app versions."
 tags: ["Native", "Android", "iOS", "Apple", "Android"]
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
-#KI: "When using the `Touchable` option" = UICORE-417
 ---
 
 For more information on the Make It Native app, see [Getting the Make It Native App](/refguide/getting-the-make-it-native-app).
 
 You can download the Make It Native app for [iOS](https://apps.apple.com/app/make-it-native/id1334081181) or [Android](https://play.google.com/store/apps/details?id=com.mendix.developerapp).
 
+## Android 1.3.0 / iOS 1.3.0
+
+**Release date: April 1st, 2020**
+
+{{% alert type="info" %}}
+If you are working in Mendix Studio Pro 8.8 or higher, you must update your Make It Native app to this version.
+{{% /alert %}}
+	
+### New Features
+
+* We added support for all new Mendix Studio Pro 8.8 features. 
+
+### Fixes
+
+* We updated the dependencies to remove the deprecated UIWebView library from iOS.
+* We [fixed an issue](/releasenotes/studio-pro/8.8#417) where a native mobile app crashed when debugging it using the **Touchable** option in the inspector overlay.
+
+## Android 1.2.3 / iOS 1.2.5
+
+**Release date: March 11th, 2020**
+
+### Fixes
+
+* We fixed an issue with synchronization. Changes in the project should be now correctly reflected in the app after reloading.
+
+### Known Issues
+
+* When using the **Touchable** option in the inspector overlay, the Mendix Native app crashes.
+	* Fixed in [Studio Pro 8.8](/releasenotes/studio-pro/8.8#417)
+
 ## Android 1.2.2 / iOS 1.2.4
 
-**Release date: February 4th, 2019**
+**Release date: February 4th, 2020**
 
 ### Fixes
 
 * We fixed various minor bugs.
+
+### Known Issues
+
+* When using the **Touchable** option in the inspector overlay, the Mendix Native app crashes.
+	* Fixed in [Studio Pro 8.8](/releasenotes/studio-pro/8.8#417)
 
 ## Android 1.2.1 / iOS 1.2.3
 
@@ -30,7 +64,8 @@ You can download the Make It Native app for [iOS](https://apps.apple.com/app/mak
 
 ### Known Issues
 
-* When using the **Touchable** option in the inspector overlay, the Mendix Native app crashes
+* When using the **Touchable** option in the inspector overlay, the Mendix Native app crashes.
+	* Fixed in [Studio Pro 8.8](/releasenotes/studio-pro/8.8#417)
 
 ## Android 1.2.1 / iOS 1.2.2
 
@@ -47,6 +82,7 @@ On Android:
 ### Known Issues
 
 * When using the **Touchable** option in the inspector overlay, the Mendix Native app crashes.
+	* Fixed in [Studio Pro 8.8](/releasenotes/studio-pro/8.8#417)
 
 ## Android 1.2.0 / iOS 1.2.1
 
@@ -61,6 +97,7 @@ On iOS:
 ### Known Issues
 
 * When using the **Touchable** option in the inspector overlay, the Mendix Native app crashes.
+	* Fixed in [Studio Pro 8.8](/releasenotes/studio-pro/8.8#417)
 
 ## Android 1.2.0 / iOS 1.2.0
 
@@ -88,12 +125,13 @@ On Android:
 ### Known Issues
 
 * When using the **Touchable** option in the inspector overlay, the Mendix Native app crashes.
+	* Fixed in [Studio Pro 8.8](/releasenotes/studio-pro/8.8#417)
 
 ## Android 1.1.0 / iOS 1.1.0
 
 **Release date: September 30th, 2019**
 
-### New Feature
+### New Features
 
 * The Make It Native app now has tablet support. Now you can run and test your Mendix application using the Make It Native app on tablets. 
 
@@ -102,7 +140,7 @@ On Android:
 * We enabled the full suite of device orientations. Now you can test your apps in any device orientation.
 * We improved loading performance by optimizing the bundle size when **Dev Mode** is disabled. 
 
-### Fix
+### Fixes
 
 * <a name="153"></a>We fixed an issue where clearing data on Android via the start screen did not clear cookies correctly.
 

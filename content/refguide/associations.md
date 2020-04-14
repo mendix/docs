@@ -16,7 +16,7 @@ The [multiplicity](association-properties#multiplicity) (or number of referred o
 
 In the example below, the arrow indicates that **Order** is the owner of the association, and the `1` and `*` indicate that one customer is associated with many orders:
 
-![](attachments/associations/918217.png)
+![](attachments/associations/association-order-customer.png)
 
 {{% alert type="info" %}}
 An association between a persistable entity and a non-persistable entity must start in the non-persistable entity and have the owner **Default**. For more information on persistable and non-persistable entities, see [Persistability](persistability).
@@ -54,7 +54,7 @@ For more information see [Association Tab Properties](association-member-propert
 
 In this example, drawing an association from the **Order** entity to the **Customer** entity results in the following:
 
-![](attachments/associations/918217.png)
+![](attachments/associations/association-order-customer.png)
 
 The type property has its default value `Reference`, and the owner (the Order entity) is `Default`. This is the same as having multiplicity set to `One 'Customer' object is associated with multiple 'Order' objects` so a customer can have multiple orders, but an order can only have one customer.
 
@@ -81,7 +81,7 @@ A many-to-many association with default ownership is created by drawing an assoc
 
 In this example, a **Customer** can have multiple **Groups**, and a **Group** can have multiple **Customers**. This is the same as having multiplicity set to `Multiple 'Group' objects are associated with multiple 'Customer' objects` with Navigability set to `'Customer' objects refer to 'Group' objects`:
 
-![](attachments/associations/918127.png)
+![](attachments/associations/association-customer-group.png)
 
 In XML, instances of these entities and their associations look as follows (note that the association is only stored in the **Customer** element):
 
@@ -109,7 +109,7 @@ A one-to-one association is created by setting the owner property to `Both` (whi
 
 In this example, a **Customer** can have one **Profile**, and a **Profile** can have one **Customer**. This is the same as having multiplicity set to `One 'Customer' object is associated with one 'Profile' object`:
 
-![](attachments/associations/918128.png)
+![](attachments/associations/association-customer-profile.png)
 
 In XML, instances of these entities and their associations look as follows (note that the association is stored both in the **Profile** element and the **Customer** element):
 
@@ -136,7 +136,7 @@ A many-to-many association where both entities are owners is created by setting 
 
 In this example, an **Accountant** can have multiple **Groups** and a **Group** can have multiple **Accountants**. This is the same as having multiplicity set to `Multiple 'Group' objects are associated with multiple 'Accountant' objects` with Navigability set to `'Accountant' and 'Group' objects refer to each other`:
 
-{{% image_container width="500" %}}![](attachments/associations/918125.png)
+{{% image_container width="500" %}}![](attachments/associations/association-accountant-group.png)
 {{% /image_container %}}
 
 In XML, instances of these entities and their association look as follows (note that the association is stored both in the **Accountant** element and the **Group** element):

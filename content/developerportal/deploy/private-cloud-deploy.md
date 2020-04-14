@@ -134,6 +134,10 @@ Before you can deploy your app, you will need to create a deployment package. En
 
 You can also deploy an existing deployment package to an environment without having to create a new one. This also allows you to specify constant values and control scheduled events before the app is started.
 
+{{% alert type="warning" %}}
+Currently, deployment packages are only valid for two weeks. Older deployment packages will still be visible, but if you try to deploy a package that was created more than two weeks ago, the deployment will fail and return a 403 error. The solution is to [recreate the deployment package](#create-deployment-package).
+{{% /alert %}}
+
 After creating an environment and deployment package (see [Creating an Environment](#create-environment) and [Creating a Deployment Package](#create-deployment-package), above) you will now have a deployment package and an environment. Check that there is a green tick next to the deployment package and the resources of the environment. If any of these have failed, try to create the environment or the deployment package again, and contact your cluster manager. If neither of these solves the problem. contact Mendix support for help.
 
 ![](attachments/private-cloud-deploy/image13.png)
@@ -275,11 +279,17 @@ See [Creating an Environment](#create-environment), above, for more information.
 
 ##### 4.2.1.5 Trial
 
-The word **Trial** indicates that the environment is unlicensed and the app is running as a Free App.
+The word **Trial** indicates that the Operator managing that environment is unlicensed.
 
-The word changes to **Expired** if the trial environment has existed for more than thirty days. In this case you will be unable to stop or start your app, or deploy an app to this environment. The only action you can take is to delete the environment.
+When the Operator is running in trial mode, it will stop managing an environment thirty days after the environment was created and the word changes to **Expired**. In this case you will be unable to stop or start your app, or deploy an app to this environment. The only action you can take is to delete the environment. 
 
-The word **Licensed** shows that the environment is a production environment.
+The word **Licensed** shows that the Operator managing that environment is licensed.
+
+{{% alert type="info" %}}
+The Operator license is independent from a Mendix Runtime license. The Operator license allows you to manage Mendix apps in your cluster, while the Mendix Runtime license (configured through a [Subscription Secret](#change-subscription-secret)) removes trial restrictions from a Mendix App itself.
+
+You can get an Operator license from [Mendix Support](https://support.mendix.com), together with instructions on how to configure it.
+{{% /alert %}}
 
 #### 4.2.2 Add Environment
 
@@ -377,7 +387,7 @@ For production deployment, select **Production**. If you select production, then
 Your app can only be deployed to a production environment if security is set on. You will not receive an error if security is set off, but the deployment will appear to hang with a spinner being displayed.
 {{% /alert %}}
 
-##### 5.1.3.7 Change Subscription Secret
+##### 5.1.3.7 Change Subscription Secret{#change-subscription-secret}
 
 If you select Production as the **purpose** of the app environment, then you will need to use a Subscription Secret which ensures that your app runs as a licensed app. If you need to enter or change the subscription secret, then you can do that here.
 
@@ -403,7 +413,47 @@ All names beginning **openshift-** are reserved for use by OpenShift if you are 
 
 ### 6.2 Deleting the Cluster
 
-Delete all the environments from the Mendix Developer Portal before you delete the cluster. If you do not do this, the database will not be removed from the environment.
+Delete all the environments from the Mendix Developer Portal before you delete the namespace from your Kubernetes cluster. If you do not do this, the database and file storage will not be removed from the environment.
+
+If the cluster is running in standalone mode, you need to delete all `MendixApp` CRs.
+
+To confirm that environments and their associated storage have been successfully deleted, run:
+
+For OpenShift:
+```bash
+oc get mendixapp -n {namespace}
+oc get storageinstance -n {namespace}
+```
+
+For Kubernetes:
+```bash
+kubectl get mendixapp -n {namespace}
+kubectl get storageinstance -n {namespace}
+```
+
+Both commands should return an empty list.
+
+### 6.2.1 Deleting StorageInstance CRs
+
+If the Operator fails to deprovision an app's database or file storage, the `*-database` or `*-file` Pod will fail with an Error state:
+
+![](attachments/private-cloud-deploy/deprovision-failed.png)
+
+To force removal of a StorageInstance `{name}`, run:
+
+For OpenShift:
+```bash
+oc patch -n {namespace} storageinstance {name} --type json -p='[{"op": "remove", "path": "/metadata/finalizers"}]'
+```
+
+For Kubernetes:
+```bash
+kubectl patch -n {namespace} storageinstance {name} --type json -p='[{"op": "remove", "path": "/metadata/finalizers"}]'
+```
+
+This will also delete the failed Pod.
+
+After manually removing the StorageInstance, you'll need to manually clean up any resources associated with it, such as the database, S3 bucket or associated AWS IAM account.
 
 ### 6.3 App Security and Production
 
@@ -457,9 +507,9 @@ The Mendix Operator CR is processed by the Mendix Operator into four steps:
 
 1. The Build CR is created – this creates a Docker image from the app deployment package, pushes it into the Image Registry, and provides the correct information to the Runtime CR
 
-2. The Database CR is created – this causes the Service Broker to provision an AWS RDS database, according to the plan selected, and pass information about the database to the Runtime CR
+2. The StorageInstance CR is created for the database – this causes the Operator to provision database database, according to the plan selected, and pass information about the database to the Runtime CR
 
-3. The Storage CR is created – this causes the Service Broker to provision an S3 storage bucket for the app and pass information about the storage to the Runtime CR
+3. The StorageInstance CR is created for the file storage – this causes the Operator to provision an file storage bucket for the app and pass information about the storage to the Runtime CR
 
 4. The OpenShift Route CR is created – this sets up a route to the app.
 

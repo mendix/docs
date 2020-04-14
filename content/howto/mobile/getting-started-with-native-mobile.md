@@ -1,7 +1,7 @@
 ---
 title: "Get Started with Native Mobile"
 parent: "native-mobile"
-menu_order: 10
+menu_order: 5
 description: A how-to for creating a native mobile Mendix app and viewing it on a mobile device.
 tags: ["native", "mobile", "developer", "test"]
 ---
@@ -27,7 +27,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Creating a New App Project Based on the Quickstart App {#quickstartapp}
 
-For details on making a Mendix app using the Native Mobile Quickstart app template, download the Make It Native app on either the [Google Play store](https://play.google.com/store/apps/details?id=com.mendix.developerapp) or the [Apple App Store](https://apps.apple.com/us/app/make-it-native/id1334081181). This app template includes the latest version of Atlas UI, as well as the [Native Mobile Resources](https://appstore.home.mendix.com/link/app/109513/) module containing widgets and nanoflow actions for native mobile apps. For more information on building native apps, see the [Build a Native Mobile Inspection App](https://gettingstarted.mendixcloud.com/link/path/66) learning path. Using the Make It Native app to view the changes to your Mendix app, see the sections below.
+For details on making a Mendix app using the Native Mobile Quickstart app template, download the Make It Native app on either the [Google Play store](https://play.google.com/store/apps/details?id=com.mendix.developerapp) or the [Apple App Store](https://apps.apple.com/us/app/make-it-native/id1334081181). This app template includes the latest version of Atlas UI, as well as the [Native Mobile Resources](/appstore/modules/native-mobile-resources) module containing widgets and nanoflow actions for native mobile apps. For more information on building native apps, see the [Build a Native Mobile Inspection App](https://gettingstarted.mendixcloud.com/link/path/66) learning path. Using the Make It Native app to view the changes to your Mendix app, see the sections below.
 
 ### 3.1 Starting a Quickstarter App Project
 

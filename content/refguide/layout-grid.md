@@ -16,7 +16,7 @@ In a browser, the layout grid is based on the Bootstrap grid system. For more in
 
 {{% alert type="info" %}}
 
-Row and column properties described below are available if your project has [Mendix version 8.5.1](/releasenotes/studio-pro/8.5) or above  and [Atlas UI Resources](https://appstore.home.mendix.com/link/app/104730/) version 2.4.0 or above. 
+Row and column properties described below are available if your project has [Mendix version 8.5.1](/releasenotes/studio-pro/8.5) or above  and [Atlas UI Resources](/appstore/modules/atlas-ui-resources) version 2.4.0 or above. 
 
 For more information on row and column properties, see the [Rows and Their Properties](#rows) and [Columns and Their Properties](#columns) sections. 
 

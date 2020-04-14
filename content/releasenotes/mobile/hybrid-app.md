@@ -144,7 +144,7 @@ If your app does not employ push notifications, you can still use the Phonegap B
 #### Other Fixes
 
 * We improved how permission texts are configured in order to fix an issue with building iOS apps.
-* We added an exception to the navigation for `about:blank` in order to fix an issue with the [Google Maps](https://appstore.home.mendix.com/link/app/48911/) widget.
+* We added an exception to the navigation for `about:blank` in order to fix an issue with the [Google Maps](/appstore/widgets/google-maps) widget.
 
 ## 2018
 

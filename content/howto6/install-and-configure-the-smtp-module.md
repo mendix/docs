@@ -28,7 +28,7 @@ In this chapter we will install the SMTP Email module and integrate it into an e
 
 1.  Download the SMTP Email module from the App Store
     ![Download the module from the app store](attachments/19202956/19398974.png)
-2.  You’ll need to download and set up the [Encryption Module](https://appstore.home.mendix.com/link/app/1011/Mendix/Encryption) as well. This will allow for protected passwords.
+2.  You’ll need to download and set up the [Encryption](/appstore/modules/encryption) module as well. This will allow for protected passwords.
 
     {{% alert type="warning" %}}
 

@@ -1,7 +1,7 @@
 ---
 title: "Create Object"
 parent: "object-activities"
-menu_order: 4
+menu_order: 40
 tags: ["studio pro"]
 ---
 
@@ -9,25 +9,40 @@ tags: ["studio pro"]
 This activity can be used in both **Microflows** and **Nanoflows**.
 {{% /alert %}}
 
-## 1 Introduction 
+## 1 Introduction
 
-The create object action can be used to create an object.
+The create object activity can be used to create an object.
 
-{{% alert type="info" %}}
+## 2 Properties
 
-See [Common Properties](microflow-element-common-properties) for properties that all microflow activities share (for example, caption). This page only describes the properties specific to the action.
+An example of create object properties is represented in the image below:
 
-{{% /alert %}}
+![create object properties](attachments/object-activities/create-properties.png)
 
-## 2 Action Properties
+There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 
-### 2.1 Entity
+The create object properties pane consists of the following sections:
+
+* [Action](#action)
+* [Common](#common)
+
+## 3 Action{#action}
+
+The **Action** section of the properties pane shows the action associated with this activity.
+
+You can open a dialog box to configure this action by clicking the ellipsis (**…**) next to the action.
+
+You can also open the dialog box by double-clicking the activity in the microflow or right-clicking the activity and selecting **Properties**.
+
+### 3.1 Action Section
+
+#### 3.1.1 Entity
 
 The entity of which you want to create an object.
 
-### 2.2 Commit Type
+#### 3.1.2 Commit
 
-**Commit** defines the way the object is committed.
+**Commit** defines the way the object is committed. See the section [How Commits Work](committing-objects#how-commits-work) in *Commit Object(s)* for more information on committing.
 
 | Option | Description |
 | --- | --- |
@@ -35,30 +50,55 @@ The entity of which you want to create an object.
 | Yes without event handlers | The object is saved in the database, but the [event handlers](event-handlers) are not triggered. |
 | No *(default)*  | The object is changed without being saved in the database. |
 
-{{% alert type="warning" %}}
+##### Commits in Nanoflows
 
-Nanoflows do not support committing changes without events. Committing while running in an online app sends a commit request to the Mendix Runtime and runs the events. If a create object action is used in an offline app, the changes are committed to the offline database.
+Nanoflows do not support committing changes without events. Committing while running in an online app sends a commit request to the Mendix Runtime and runs the events. If a change object action is used in an offline app, the changes are committed to the offline database.
 
-{{% /alert %}}
+#### 3.1.3 Refresh in Client
 
-### 2.3 Refresh in Client
-
-If the microflow is called from the client, [data sources](data-sources) do not reload, unless **Refresh in client** is set to *Yes*.
-
-{{% alert type="warning" %}}
-
-When inside a [nanoflow](nanoflows), the create object action reloads [data sources](data-sources) as if Refresh in client was set to *Yes*.
-
-{{% /alert %}}
+This setting defines how changes are reflected in the pages presented to the end-user.
 
 Default: *No*
 
-### 2.3 Change Members
+##### Microflow is Called from the Client in an Online App
+
+If **Refresh in client** is set to *No*, the change is not reflected in the client.
+
+If set to *Yes*, [data sources](data-sources) are reloaded.
+
+##### Microflow is Called in an Offline, Native, or Hybrid App
+
+When inside a microflow that is called from an offline, native, or hybrid app, the **Refresh in client** option is ignored and functions as if it was set to **No**.
+
+For more information, see the [Microflows](offline-first#microflows) section of the *Offline-First Reference Guide*.
+
+##### Action is in a Nanoflow
+
+In a nanoflow, the create object action reloads [data sources](data-sources) as if Refresh in client was set to *Yes*.
+
+#### 3.1.4 Change Members
 
 You can set the values of members (attributes and associations) of the newly created object to be different from the default value set in the [entity](entities). Values for members are specified with an [expression](expressions) and must be of the same type as the member.
 
-## 3 Output Properties
+### 3.2 Output Properties
 
-### 3.1 Object Name
+#### 3.2.1 Object Name
 
 This is the name of the resulting object which can be used by all activities that follow this activity.
+
+## 4 Common Section{#common}
+
+{{% snippet file="refguide/microflow-common-section-link.md" %}}
+
+## 5 What Happens During a Create?
+
+Wherever an object is initialized, all the events are always executed. The default **Create** button, a create activity in a microflow, and web services will always follow the steps described in the image below.
+
+* Events: all before and after events are executed, and if any before-create event returns false, an exception can be thrown
+	* If an exception occurs during an event, all the changes are reverted with the default error handling behavior
+* Database: there is no database communication happening during this event unless it is specified in a before- or after-create event
+* Result: a new object is available after these triggers
+	* The object will have the **Instantiated** state
+	* This influences the behavior in the other object actions
+
+![](attachments/object-activities/18582173.png)

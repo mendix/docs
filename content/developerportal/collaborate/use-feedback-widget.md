@@ -16,7 +16,16 @@ This collaboration is enabled by the [Mendix Feedback Widget](https://appstore.h
 ![](attachments/feedback/widget.png)
 
 {{% alert type="warning" %}}
-This how-to covers the Mendix Feedback Widget [version 6.0.0 and above](#above) as well as [version 5.1.3 and below](#below). There are different usage and configuration steps for these different versions of the widget.
+This how-to covers the Mendix Feedback Widget [version 8.1.0 and above](#above) as well as [version 5.1.3 and below](#below). There are different usage and configuration steps for these different versions of the widget.
+
+If you are trying to upgrade your Mendix Feedback Widget from version 7 to version 8, Studio Pro will not recognize the current configuration of this widget. Add the Mendix Feedback Widget into your page again and configure it accordingly. Then delete the old one.
+
+![](attachments/feedback/cannot-recognize-the-old-version.png)
+
+If you encounter the following issue, you need to delete the old mpk file in folder **/widgets/FeedbackWidget.mpk**` of your project.
+
+![](attachments/feedback/remove-feedbackwidget-mpk.png)
+
 {{% /alert %}}
 
 **This how-to will teach you how to do the following:**
@@ -31,7 +40,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Create an app containing an application model with no errors
 
-## 3 Widget Version 6.0.0 & Above {#above}
+## 3 Widget Version 8.1.0 & Above {#above}
 
 The sections below describe using and configuring the latest versions of the Mendix Feedback Widget.
 
@@ -86,7 +95,7 @@ You can add as many email addresses as you like and email your app to colleagues
 
 {{% alert type="info" %}}
 This feature is available when the following conditions are met:<br />
-* You are using version 7.0.7 or above of the widget<br />
+* You are using version 8.1.0 or above of the widget<br />
 * You have configured the widget to show the App Switcher (for details, see the [Configuring the Widget](#configuring) section below)<br />
 * Your app uses [Mendix single sign-on](/developerportal/deploy/mendix-sso)
 {{% /alert %}}
@@ -134,11 +143,17 @@ The feedback feature requires the following properties to be set:
 
 The App Switcher feature requires the [MendixSSO](/developerportal/deploy/mendix-sso) module to be implemented and the following properties to be set:
 
-*  **Advanced** tab > **ID token provider** – the microflow that will return the current ID token via the string value of the decrypted ID token from the MendixSSO module; to obtain the token, the microflow needs to call the **DS_GetCurrentIdToken** microflow from the MendixSSO module:
-
-	![](attachments/feedback/example-id-token-microflow.png)
-
 * **Advanced** tab > **Show App Switcher button** – set to **Yes**
+
+For version 8.1.0 or above of the widget, you also need to set the following:
+
+*  **Authentication** tab > **Decrypted Token Entity** – select the entity **DecryptedToken** from MendixSSO module
+*  **Authentication** tab > **Decrypted Token Value** – after selecting **Decrypted Token Entity**, select the **Value** attribute from it
+*  **Authentication** tab > **ID token provider** – select the **DS_GetCurrentIdToken** microflow from the MendixSSO module
+
+The result should look like this:
+
+![](attachments/feedback/authentication.png)
 
 In the properties, you can configure the widget for certain actions in your app project, for example:
 

@@ -7,7 +7,7 @@ tags: ["studio pro"]
 ---
 
 {{% alert type="warning" %}}
-This activity can only be used in **Microflows**.
+This activity can be used in both **Microflows** and **Nanoflows**.
 {{% /alert %}}
 
 ## 1 Introduction
@@ -31,6 +31,10 @@ The microflow that is called by this activity.
 For each parameter of the microflow, you have to supply an argument of the same type. The values of the arguments are expressed using [expressions](expressions). There is a difference in the way argument values are passed to a sub-microflow:
   * Lists and objects are passed as references (meaning, if the list/object is changed in a sub-microflow, the original list/object is altered)
   * Primitive types (strings, numbers, etc.) are passed as values (meaning, they are immutable, and not changeable via sub-microflows)
+  
+{{% alert type="warning" %}}
+When used inside a nanoflow in an offline profile, only primitives and non-persistable entities that have no associations with persistable entities are allowed as arguments for the call. For more information, see the [Microflows](offline-first#microflows) section of the *Offline-First Reference Guide*.
+{{% /alert %}}
 
 ## 3 Output Properties
 

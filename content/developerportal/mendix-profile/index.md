@@ -118,7 +118,6 @@ These are points you can gain through activity in the [Mendix App Store](https:/
 | Be the first member of your company to sign up for Mendix | 25 | N/A |
 | Upload to Model Share | 10 | 10 |
 | Send an app invite | 10 | 50 |
-| Download a microflow from [Model Share](https://modelshare.mendix.com/) | 5 | 5 |
 | Send a Mendix Platform invite | 5 | 50 |
 | Create an app project | 5 | 5 |
 | Submit a feedback item | 2 | 10 |

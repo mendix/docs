@@ -35,9 +35,9 @@ All images, names and steps in this how-to are based on these versions. When usi
 In this chapter you will set up the unit testing module and run the example tests.
 
 1.  Create a new project.
-2.  Download the [UnitTesting module](https://appstore.home.mendix.com/link/app/390/).
-3.  Download the [Community Commons Function Library module](https://appstore.home.mendix.com/link/app/170/).
-4.  Download the [ObjectHandling module](https://appstore.home.mendix.com/link/app/37114/).
+2.  Download the [Unit Testing](/appstore/modules/unit-testing) module.
+3.  Download the [Community Commons Function Library](/appstore/modules/community-commons-function-library).
+4.  Download the [Object Handling](/appstore/modules/object-handling) module.
 5.  Open the **Settings** of the project.
 
     ![](attachments/18448633/18580371.png)

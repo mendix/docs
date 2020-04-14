@@ -8,7 +8,7 @@ menu_order: 10
 
 ## 1 Introduction
 
-The [Mendix Forum](https://forum.mendixcloud.com/index3.html) is where the Mendix community comes together to help each other with questions and answers and to propose ideas for improving the Mendix Platform.
+The [Mendix Forum](https://forum.mendixcloud.com) is where the Mendix community comes together to help each other with questions and answers and to propose ideas for improving the Mendix Platform.
 
 The forum is closely integrated with the [Mendix Profile](../mendix-profile/index) so that Mendix community members can see all the interesting and useful information about who is participating in the Mendix Forum. If someone clicks your name anywhere on the Mendix Forum, your Mendix Profile will open, so make sure you [set your profile to public](../mendix-profile/index#public) so everyone can see your details and progress!
 

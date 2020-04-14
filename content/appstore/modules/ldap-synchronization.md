@@ -3,7 +3,7 @@ title: "LDAP Synchronization"
 category: "Modules"
 description: "Describes the configuration and usage of the LDAP Synchronization module, which is available in the Mendix App Store."
 tags: ["app store", "app store component", "ldap", "ldap synchronization", "platform support"]
-draft: true
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
@@ -28,8 +28,8 @@ The [LDAP Synchronization](https://appstore.home.mendix.com/link/app/24/) module
 
 This module is dependent on the following additional modules – make sure they are also present in your app project and configured properly:
 
-* [Community Commons Functions Library](https://appstore.home.mendix.com/link/app/170/)
-* [Encryption](https://appstore.home.mendix.com/link/app/1011/)
+* [Community Commons Functions Library](/appstore/modules/community-commons-function-library)
+* [Encryption](/appstore/modules/encryption)
 
 ## 2 Installation
 

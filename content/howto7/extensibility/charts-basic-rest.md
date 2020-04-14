@@ -20,7 +20,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Install the latest Mendix desktop modeler
 * Create a project
-* Import the latest [Charts Widgets](https://appstore.home.mendix.com/link/app/105695/) from the Mendix App Store
+* Import the latest [Charts Widgets](/appstore/widgets/charts) from the Mendix App Store
 
 ## 3 Setting up Data to be Exposed by a REST Endpoint
 

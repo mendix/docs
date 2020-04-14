@@ -125,7 +125,7 @@ Clicking the header on the data grid in the client will update the **Paging** en
 Use these attributes when calling your REST service:
 
 1. Open your **Call_REST** microflow.
-2. Double-click the **Call REST Service** activity. 
+2. Double-click the **Call REST service** activity. 
 3. Click **Location** > **Edit**.
 4.  Add `&_sort={2}&_order={3}` to the end of your current **Template** address:
 
@@ -197,7 +197,7 @@ If you are using Mendix 8.3 or above, generating controls also generates input f
 You only need to use this data in your microflow and pass the search criteria to your REST call to get a filtered set of data. As an example, follow the instructions below to filter the **Name** attribute:
 
 1. Open your **Call_REST** microflow.
-2. Double-click the **Call REST Service** activity.
+2. Double-click the **Call REST service** activity.
 3. Click **Location** > **Edit**.
 4.  Add `&name_like={4}` to the end of your current **Template** address:
 

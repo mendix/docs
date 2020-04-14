@@ -156,7 +156,7 @@ This section shows how to link manually. This method replaces the linking steps 
 
 To link for Android devices, do the following:
 
-1. To expose the library to the template, you must link it using Gradle. Open **C:\github\native-nfc-app\android\settings.gradle**, then add the include and project at the end of the file before `include`, `**':app'**`, `**':mendixnative-release'**`:
+1. To expose the library to the template, you must link it using Gradle. Open **C:\github\native-nfc-app\android\settings.gradle**, then add this line of code before `include ':app' , ':mendixnative-release'`:
 
 	``` gradle
 	include ':react-native-nfc-manager'

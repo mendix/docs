@@ -2,7 +2,6 @@
 title: "Themes"
 description: " "
 tags: [ "app store", "app store component", "theme"]
-draft: true
 ---
 
 ## 1 Introduction

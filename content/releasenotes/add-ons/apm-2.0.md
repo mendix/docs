@@ -3,6 +3,114 @@ title: "2.0"
 parent: "apm-2"
 ---
 
+## 2.0.22 {#2022}
+
+* We added a check on start-up to detect if the proper agent *.jar* file has been loaded.
+* We fixed an issue with [Client API](/apidocs-mxsdk/apidocs/client-api) requests, as `retrieve_by_microflow` and `retrieve_by_path` were not specifying their target.
+
+## 2.0.21
+
+* We released the Mendix 7 version of the agent for release [2.0.22](#2022) (which contains the Mendix 8 version).
+
+## 2.0.20
+
+* We released the Mendix 6 version of the agent for release [2.0.22](#2022) (which contains the Mendix 8 version).
+
+## 2.0.19 {#2019}
+
+* We changed the behavior for the advanced setting `memoryagentstoplimit`. Instead of the agent instantly stopping upon reaching the set limit, the agent now stops processing log messages and recording for a set time frame. If the memory usage does not decrease below the set limit when the set time frame expires, the agent shuts down completely; otherwise; the agent will resume.
+
+## 2.0.18
+
+* We released the Mendix 7 version of the agent for release [2.0.19](#2019) (which contains the Mendix 8 version).
+
+## 2.0.17
+
+* We released the Mendix 6 version of the agent for release [2.0.19](#2019) (which contains the Mendix 8 version).
+
+## 2.0.16 {#2016}
+
+* We removed the CORS headers from the `apm` request handler.
+
+## 2.0.15
+
+* We released the Mendix 7 version of the agent for release [2.0.16](#2016) (which contains the Mendix 8 version).
+
+## 2.0.14
+
+* We released the Mendix 6 version of the agent for release [2.0.16](#2016) (which contains the Mendix 8 version).
+* 
+## 2.0.13 {#2013}
+
+We made the following improvements to the browser agent:
+
+* We merged the statistics and recording collecting in order to reduce overhead and resource usage.
+* We improved support for [Mendix 7.6](/releasenotes/studio-pro/7.6) and above.
+
+We made the following improvements to the runtime agent:
+
+* We improved the JSON logging set behind an advanced setting.
+
+## 2.0.12
+
+* We released the Mendix 7 version of the agent for release [2.0.13](#2013) (which contains the Mendix 8 version).
+
+## 2.0.11
+
+* We released the Mendix 6 version of the agent for release [2.0.13](#2013) (which contains the Mendix 8 version).
+
+## 2.0.10 {#2010}
+
+This is the first release for [Mendix 8](/releasenotes/studio-pro/8.0).
+
+We made the following improvements to the browser agent:
+
+* We now prevent the browser agent from showing an error in the client in case a widget initialization fails.
+* We fixed the browser agent usage in combination with a username with Chinese characters.
+
+## 2.0.9
+
+* We released the Mendix 7 version of the agent for release [2.0.10](#2010) (which contains the Mendix 8 version).
+
+## 2.0.8
+
+* We released the Mendix 6 version of the agent for release [2.0.10](#2010) (which contains the Mendix 8 version).
+
+## 2.0.7 {#207}
+
+* We improved the memory so that by default 80% heap memory clears buffers, and 90% heap memory stops the APM agent. This is configurable in the advanced settings.
+* We optimized the code.
+* We improved performance so that they maximum depth for microflow statistics with a manually created loop is reduced.
+
+## 2.0.6
+
+* We released the Mendix 6 version of the agent for release [2.0.7](#207) (which contains the Mendix 7 version).
+
+## 2.0.5 {#205}
+
+* If logs and performance run as threads, there is a limit on the buffer between the Mendix log thread and the APM threads. If the Mendix Platform delivers too quickly, APM will now drop the messages.
+* Advanced settings have been added to allow for the following functions:
+	* **Use profiler**
+	* **User recorder**
+	* **Max trap collection**
+	* **Max statistics collection**
+
+	With this, the agent can be tuned, and the settings cannot be overruled from the manager (for example, for protecting a production environment or in the event of conflicts for not using the profiler).
+* There is now the **NONE** option for statistics and trap collection, with which you effectively turn off the tools.
+* There is now a hard-coded maximum of messages that the APM agent and APM Manager can accept from a Mendix log thread for both the message and stack trace.
+* There is now  a maximum message length in `MendixMessage` via an advanced setting.
+* `excludenodes=<node:level,node:level,...>` can now be used to not subscribe to certain nodes above the specified level. This feature can be used exclude log nodes (for example, as a workaround for a Mendix 6 web service and Mendix 7 bugs).
+* There is now a load tool bug fix for recording and processing query IDs.
+* The load tool loads XML pages on need, since the [create object](/refguide/create-object) button action has no `open_form` in the Client API.
+* We fixed APM statistics that were counting some microflows multiple times depending on the amount of call sources.
+* The performance recording of SQL statements is now functioning again.
+* There is now an hourly purge of performance tool memory structures (together with statistic snapshot uploads) to prevent out-of-memory issues if, for example, many microflows end in error.
+* Some extra clearing of memory structures has been added for a faster release memory and to give the Java garbage collector an easier job.
+
+## 2.0.4
+
+* We released the Mendix 6 version of the agent for release [2.0.5](#205) (which contains the Mendix 7 version).
+
 ## 2.0.3
 
 * We fixed an issue that caused the agent not to detect a microflow had finished. As a result the microflow was always shown as a long-running microflow. This is no longer the case.

@@ -14,7 +14,7 @@ addons:
   priority: false
   menu_categories:
     - "ATS Guide"
-    - "APM Guide"
+    - "APD Guide"
     - "AQM Guide"
 howto6:
   space: "Mendix 6 How-to's"
@@ -132,7 +132,6 @@ developerportal:
     - "Operations"
     - "App Settings"
     - "Community Tools"
-    - "App Store"
     - "Mendix Support"
 studio:
   space: "Studio 8 Guide"
@@ -184,8 +183,8 @@ partners:
 appstore:
   space: "App Store Guide"
   priority: false
-  draft: true
   menu_categories:
+    - "General Info"
     - "Connectors"
     - "Widgets"
     - "Modules"

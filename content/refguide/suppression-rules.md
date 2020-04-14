@@ -106,7 +106,7 @@ To manually add a new rule, follow the steps below:
 
     ![Rules window - new button](attachments/suppression-rules/rules-dialog-new-button.png)
 
-3. In the **Add Suppression** dialog box, set the necessary options to add the rule (for more information on settings, see the [Rule Setting](#rule-settings) section.  
+3. In the **Add Suppression Rule** dialog box, set the necessary options to add the rule (for more information on settings, see the [Rule Setting](#rule-settings) section.  
 
     ![Rules window - add suppression](attachments/suppression-rules/new-warning-window.png)
    
@@ -127,7 +127,7 @@ To edit an existing rule, follow the steps below:
 
     ![Rules window - edit button](attachments/suppression-rules/rules-dialog-edit-button.png)
 
-3.  In the **Edit Suppression** dialog box, edit options to change the rule (for more information on settings, see the [Suppression Rule Settings](#rule-settings) section. 
+3.  In the **Edit Suppression Rule** dialog box, edit options to change the rule (for more information on settings, see the [Suppression Rule Settings](#rule-settings) section. 
 
     ![Rule settings window](attachments/suppression-rules/rule-settings-window.png)
 
@@ -205,8 +205,8 @@ The table below describes the available settings:
 | ---------------- | ------------------------------------------------------------ |
 | Module           | Suppresses warnings within the selected module. When **(All)** is selected, the rule applies to all modules. |
 | Document         | Suppresses warnings within the selected document. When **(All)** is selected, the rule applies to all documents in the selected module. **Note**: to select a particular document, you first need to select a **Module**. |
-| Warning selector | Allows you to suppress a warning for a specific *error code* or for *all* warnings. |
-| Value            | Only displayed when the **Error code** option is selected in the **Warning selector** above. You can type in a specific error code, for example **CW1234**, to suppress only this specific warning. |
+| Suppress for | Allows you to suppress a warning for a specific *error code* or for *all* warnings. |
+| Value            | Only displayed when the **Error code** option is selected in the **Suppress for** selector above. You can type in a specific error code, for example **CW1234**, to suppress only this specific warning. |
 
 ## 6 Read More {#read-more}
 

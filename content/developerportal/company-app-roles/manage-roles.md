@@ -46,7 +46,7 @@ When you are a Company Admin, you can add extra Company Admins by following thes
 4.  Select the users that should be changed into Company Admins, then select the permissions:
 
 	* **Can manage Company**<a name="app-store-manager"></a> – can manage all the settings of the company
-		* In addition, this role can create, manage, and delete Mendix App Store [user groups](../app-store/app-store-overview#user-groups)
+		* In addition, this role can create, manage, and delete Mendix App Store [user groups](/appstore/general/app-store-overview#user-groups)
 	* **Can manage Users** – can manage only the **Users** page of the company settings
 	* **Can manage Apps** – can manage only the **Apps** page of the company settings
 	* **Can manage Nodes** – can manage only the **Nodes** page of the company settings

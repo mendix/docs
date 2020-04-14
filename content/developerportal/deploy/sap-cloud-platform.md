@@ -85,9 +85,17 @@ Your development environment is now configured and you can now develop your app.
 
 You can create several environments for your app. For example, you may have created a development environment, but you may want environments for test, acceptance, production, and so forth. Additionally, when you switch from another cloud you need to create at least one environment for your Mendix application.
 
-This is done from the **Environments** page of the Developer Portal:
+This is done from the **Environments** page of the Developer Portal.
 
 ![](attachments/sap-cloud-platform/environments-page.png)
+
+Your Environments page will show you the following:
+
+* a list of **deployment packages** for this app
+* a list of **environments** for this app
+* all the deployment **activities** which have been performed on this app
+
+To create a new environment, perform the following steps:
 
 1. Click **Add Environment** to start the wizard.
 
@@ -135,7 +143,9 @@ This is done from the **Environments** page of the Developer Portal:
 
     {{% alert type="info" %}}If you do not have a subscription secret, create a support ticket with Mendix Support and they will send you one.{{% /alert %}}
 
-11. Click **Next** to create the environment and finish the setup.
+11. If you want the user to be redirected to a custom URL after they have logged in using XSUAA then, optionally, add **Redirect URLs**. 
+
+12. Click **Next** to create the environment and finish the setup.
 
     ![](attachments/sap-cloud-platform/09-sap-env-3.png)
 

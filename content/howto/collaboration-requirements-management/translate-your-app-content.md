@@ -92,7 +92,7 @@ To translate a label, follow these steps:
 1. Select the desired development language from the language drop-down menu in Studio Pro toolbar (which displays "English, United States" by default). Words in your app project will be automatically translated if they are in the library.
 2. Words that have not been automatically translated (that is, those words that are in angle brackets) must be manually translated one-by-one or through batch translation (see below).
 
-### 4.3 Performing Batch Translation
+### 4.3 Performing Batch Translation {#batch-translate}
 
 Instead of going through the pages and translating labels one-by-one, it's much more efficient to use the batch translate option.
 

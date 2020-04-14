@@ -15,7 +15,9 @@ The **Project Explorer** shows the complete structure of your project including 
 The **Project Explorer** consists of the following:
 
 * **Project** folder – contains settings and documents that apply to your project as a whole (for more information, see [Projects](project))
-* **Modules**  – contain settings and documents, such as pages, microflows, a domain model, that apply to this module (for more information, see [Modules](modules)) 
+* **Modules**  – contain settings, a domain model, and *documents* that apply to this module (for more information, see [Modules](modules)) 
+  * **Domain model** – a model that describes the information (or *data*) used by your application in an abstract way; one module can have one domain model only 
+  * **Document** – an individual file, for example, a [page](pages), [microflow](microflows), or a [scheduled event](scheduled-events). 
 
 ## 2 Performing Basic Functions
 

@@ -19,11 +19,11 @@ If you have `NULL` values in the column and a sort is applied on the column, the
 
 If you specify the `ORDER BY` clause, a `NULL` value always comes first before any non-`NULL` value, irrespective of the sort order.
 
-### 2.2 MARIADB, MYSQL & SQLSERVER
+### 2.2 MARIADB, MYSQL, SAP HANA, & SQLSERVER
 
 If you specify the `ORDER BY` clause, `NULL` values by default are ordered as less than values that are not `NULL`. Using the `ASC` order, a `NULL` value comes before any non-`NULL` value. Using the `DESC` order, the `NULL` comes last.
 
-### 2.3 DB2, ORACLE & POSTGRESQL
+### 2.3 DB2, ORACLE, & POSTGRESQL
 
 If you specify the `ORDER BY` clause, `NULL` values by default are ordered as more than values that are not `NULL`. Using the `ASC` order, a `NULL` value comes after any non-`NULL` value. Using the `DESC` order, the `NULL` comes first.
 
@@ -31,9 +31,9 @@ If you specify the `ORDER BY` clause, `NULL` values by default are ordered as mo
 
 This table presents the `NULLs` default sort ordering provided by different database types:
 
-| NULL Ordering Behavior/Database Types  | MARIADB/MYSQL | SQLSERVER | HSQLDB | DB2 | ORACLE | POSTGRESQL |
-|------------------------|---|---|---|---|---|---|
-| **ASC NULLS FIRST** | ✔ | ✔ |  ✔  |    |  |   |
-| **ASC NULLS LAST**|  |   |   |  ✔ |  ✔ |  ✔|
-| **DESC NULLS FIRST**|   |   | ✔ |  ✔| ✔  | ✔|
-| **DESC NULLS LAST**| ✔ | ✔  |  |   |   |  |
+| NULL Ordering Behavior/Database Types  | DB2 | HSQLDB | MARIADB/ MYSQL | ORACLE | POSTGRESQL | SAP HANA | SQL SERVER |
+|---------------------:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| **ASC NULLS FIRST** |  | ✔ | ✔ |  |   | ✔ | ✔ |
+| **ASC NULLS LAST**| ✔ |  |  |  ✔ |  ✔| | |
+| **DESC NULLS FIRST**| ✔ | ✔ |   | ✔  | ✔| | |
+| **DESC NULLS LAST**|  |  | ✔ |   |  | ✔ | ✔ |

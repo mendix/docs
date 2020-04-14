@@ -13,7 +13,7 @@ For inserting page numbers, see [Static Label](static-label-document-template).
 
 {{% alert type="info" %}}
 
-![](attachments/819203/918236.png)
+![](attachments/microflows-and-nanoflows/918236.png)
 
 A header.
 

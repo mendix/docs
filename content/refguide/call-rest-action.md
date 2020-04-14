@@ -11,7 +11,7 @@ This activity can only be used in **Microflows**.
 
 ## 1 Introduction
 
-The Call REST Service action can be used to call a REST endpoint. You can specify the location and how the response of the REST call should be handled.
+The call REST service action can be used to call a REST endpoint. You can specify the location and how the response of the REST call should be handled.
 
 ## 2 General
 
@@ -131,7 +131,7 @@ The **Variable** field defines the name for the result of the operation.
 
 This section is applicable when the HTTP response status code is not successful (for example, `[4xx]` or `[5xx]`).
 
-In this case, the flow will continue in the [error handler](microflows#errorhandlers). You should always add an error handler for a [Call REST service](/refguide/call-rest-action) action.
+In this case, the flow will continue in the [error handler](error-event#errorhandlers). You should always add an error handler for a [call REST service](/refguide/call-rest-action) action.
 
 When the **Store message body in $latestHttpResponse variable** option is selected, `$latestHttpResponse/Content` will be set with the response body. It might contain some useful information provided by the server (for example, why the authentication is rejected).
 

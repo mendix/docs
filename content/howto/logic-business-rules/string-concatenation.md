@@ -23,7 +23,7 @@ Whenever you want to check if a string contains text it won't be sufficient to e
 
 ## 2 Breaking Down into Separate Decisions
 
-An inefficient example on how to check for text and create a combined messages based on the outcome. Building out all combinations is a lot of work, and if something need to change it will be a lot of work to change and it is prone to errors.
+An inefficient example on how to check for text and create a combined messages based on the outcome. Building out all combinations is a lot of work, and if something need to change it will be a lot of work to change and it is prone to errors. Reference this model:
 
 <iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/460db183-b5b4-44e7-8f15-3ea9725a9836/bco_contactperson_createfullname_inefficient?embed=true"></iframe>
 
@@ -47,6 +47,7 @@ then  getCaption( $ContactPerson/Suffix )
 else '')
 )
 ```
+Reference the model below:
 
 <iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/28e4594c-5f20-413f-ad9b-8912100cb976/bco_contactperson_createfullname_hardtoread?embed=true"></iframe>
 
@@ -59,5 +60,6 @@ In this example we went even one step further in the stability of the expression
 ```
 trim(  $ContactPerson/Fullname + ' ' + trim(  $ContactPerson/Firstname ) )
 ```
+Reference the model below:
 
 <iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/60fd9671-0e98-4ee3-9719-e0a060abe844/bco_contactperson_createfullname?embed=true"></iframe>

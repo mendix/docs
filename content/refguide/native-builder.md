@@ -334,51 +334,9 @@ For more information on syncing your repository, see [When to Sync Your Native T
 
 In App Center you can configure your builds at the branch level. If no configuration is available for branch **master**, Native Builder will create a default configuration. If a configuration is already present, it will not be modified by the tool. When a branch for a build is initialized, the configuration of **master** is copied over. Consecutive builds will not alter this branch's configuration. This is to avoid overriding your custom configuration unless the `regenerate` command is used.
 
-### 4.3 Connecting to a Local Running Instance of Studio Pro {#connect-local}
+### 4.3 Custom Developer App
 
-Advanced users might wish to connect to a local running instance of Studio Pro. Be aware that if you make the changes described in this section to your template, you must revert all those changes to use the Native Builder with your template.
-
-While following the instructions below, be sure to replace any instance of `LOCAL_IP_ADDRESS` with *your* local IP address (for example, {10.0.0.2}). If you are running Studio Pro on a port other than 8080, make sure to replace that too.
-
-#### 4.3.1 Getting Started
-
-1. Clone your repository locally from GitHub.
-2. Switch to the latest branch created by Native Builder (for example, {build/1})
-3. Follow this [guide](https://github.com/mendix/native-template#21-install-dependencies) to install your dependencies.
-
-#### 4.3.2 For iOS
-
-For an iOS app, do the following:
-
-1. Open **ios/NativeTemplate.xcworkspace** using Xcode.
-2. Open **NativeTemplate/AppDelegate.swift**.
-3. Replace this section of the code (on line **13**):
-
-	```swift
-	let bundleUrl = ReactNative.instance.getJSBundleFile()
-	```
-
-	with the following code:
-
-	```swift
-	let bundleUrl = AppUrl.forBundle(url: "http://LOCAL_IP_ADDRESS:8080", remoteDebuggingPackagerPort: 8083, isDebuggingRemotely: false, isDevModeEnabled: false)
-	```
-
-4. Locate the *Info.plist* file and replace the value of `Runtime url` with *http://LOCAL_IP_ADDRESS:8080*.
-5. Run the app by clicking the **Play** button.
-
-#### 4.3.3 For Android
-
-{{% alert type="info" %}}Starting with Android 9 (API level 28), cleartext support is disabled by default. If you are debugging with a device using v28 or higher, you need to include the `android:usesCleartextTraffic="true"` property in the `application` tag in your **app/src/main/AndroidManifest.xml** file.{{% /alert %}}
-
-For an Android app, do the following:
-
-1. Open the `android` directory using Android Studio.
-2. Open **app/src/main/java/com/mendix/nativetemplate/MainApplication.java**.
-3. On line **36** replace `false` with *true*.
-4. Open **app/src/main/res/raw/runtime_url**.
-5. Replace the file's contents with *http://LOCAL_IP_ADDRESS:8080*.
-6. Run the app by clicking the **Play** button.
+As your Mendix app project matures, you may want to expand its functionality (such as by introducing custom widgets or logic that will require new native dependencies). A custom developer app fills this role by serving as a replacement for the Make It Native app, and should be used when you have custom widgets and logic which are not supported by the Make It Native app. Custom developer apps are apps you can generate yourself using your current project structure, your custom modules, and any other requirements to test your evolving app. For more information, see [How to Create a Custom Developer App](/howto/mobile/how-to-devapps)
 
 ## 5 When to Sync Your Native Template {#sync-your-repository}
 

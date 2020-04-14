@@ -3,7 +3,7 @@ title: "Deep Link"
 category: "Modules"
 description: "Describes the configuration and usage of the Deep Link module, which is available in the Mendix App Store."
 tags: ["app store", "app store component", "deep link", "platform support"]
-draft: true
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
@@ -81,7 +81,7 @@ Follow these steps to update this homepage microflow:
 2. Configure the microflow to return a Boolean value that indicates if the module will start triggering a microflow. 
 3. Add an exclusive split that handles the result of `Deeplink.DeeplinkHome`:
 	* When the result of `Deeplink.DeeplinkHome` is true, the custom microflow should end, and the module will then call the correct microflow
-	* When the result is false, the microflow should continue with an [show page](/refguide/show-page) activity that opens the page or microflow that is your default home page (as in, the original intended behavior)
+	* When the result is false, the microflow should continue with a [show page](/refguide/show-page) activity that opens the page or microflow that is your default home page (as in, the original intended behavior)
 
 ### 2.7 Constants (Optional)
 

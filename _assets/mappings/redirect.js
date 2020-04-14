@@ -35,13 +35,6 @@ module.exports = {
       to: "/partners/siemens/mindsphere-module-details"
     },
 	/****************************************************
-     * From https://www.npmjs.com/package/mendixmodelsdk (potentially temporary until fixed)
-     ****************************************************/
-	{
-      from: "/MXSDK/Your+learning+path+for+the+Mendix+SDK",
-      to: "/apidocs-mxsdk/mxsdk/"
-    },	
-	/****************************************************
      * PERMANENT REDIRECTS
      ****************************************************/
 	 /****************************************************
@@ -150,14 +143,6 @@ module.exports = {
       to: "/developerportal/support/"
     },
 	{
-      from: "/community/app-store/",
-      to: "/developerportal/app-store/"
-    },
-	{
-      from: "/community/app-store/app-store-overview",
-      to: "/developerportal/app-store/app-store-overview"
-    },
-	{
       from: "/deployment/mendixcloud/sending-email",
       to: "/developerportal/deploy/sending-email"
     },
@@ -208,20 +193,43 @@ module.exports = {
       from: "/refguide/team-server",
       to: "/developerportal/develop/team-server"
     },
-    {
-      from: "/developerportal/deploy/integrate-with-mendix-sso",
-      to: "/developerportal/deploy/mendix-sso"
+	/****************************************************
+     * App Store Guide (permanent, mapped & unmapped) 
+     ****************************************************/	
+	{
+      from: "/community/app-store/app-store-overview",
+      to: "/appstore/general/app-store-overview"
+    },
+	{
+      from: "/community/app-store/",
+      to: "/appstore/index"
+    },	
+	{
+      from: "/developerportal/app-store/app-store-content",
+      to: "/appstore/general/app-store-content"
+    },	
+	{
+      from: "/developerportal/app-store/app-store-content-support",
+      to: "/appstore/general/app-store-content-support"
+    },
+	{
+      from: "/developerportal/app-store/app-store-overview",
+      to: "/appstore/general/app-store-overview"
+    },
+	{
+      from: "/developerportal/app-store/share-app-store-content",
+      to: "/appstore/general/share-app-store-content"
     },
     /****************************************************
      * From the App Store (permanent, mapped)
      ****************************************************/
 	{
 	  from: "/community/app-store/use-app-store-content-in-the-modeler",
-	  to: "/developerportal/app-store/app-store-content"
+	  to: "/appstore/general/app-store-content"
     },
 	{
       from: "/developerportal/app-store/use-app-store-content-in-the-modeler",
-      to: "/developerportal/app-store/app-store-content"
+      to: "/appstore/general/app-store-content"
     },
 	{
       from: "/mendixcloud/java-in-the-cloud",
@@ -238,10 +246,6 @@ module.exports = {
 	{
       from: "/howto/collaboration-project-management/contribute-to-a-github-repository",
       to: "/howto/collaboration-requirements-management/contribute-to-a-github-repository"
-    },
-	{
-      from: "/mendixcloud/Integrate+your+app+with+Mendix+SSO",
-      to: "/developerportal/deploy/integrate-with-mendix-sso"
     },
 	{
       from: "/howto/ux/create-a-custom-theme-with-the-mendix-ui-framework",
@@ -404,7 +408,7 @@ module.exports = {
      ****************************************************/
 	{
       from: "/community/app-store-content-support",
-      to: "/developerportal/app-store/app-store-content-support"
+      to: "/appstore/general/app-store-content-support"
     },
 	{
       from: "/mendixcloud/custom-domains",
@@ -2537,12 +2541,16 @@ module.exports = {
      * Add-on Guides (permanent, mapped)
      ****************************************************/
 	{
+	  from: "/addons/apm-addon/",
+	  to: "/addons/apd-addon/"
+	},
+		{
 	  from: "/apm/installation-guide",
-	  to: "/addons/apm-addon/ig-two"
+	  to: "/addons/apd-addon/ig-two"
 	},
 	{
       from: "/apm/reference-guide/rg-2/reference-guide-2",
-      to: "/addons/apm-addon/rg-two-apm"
+      to: "/addons/apd-addon/rg-two-apm"
     },
 	{
 	  from: "~*\\\/aqm\\\/",
@@ -2551,28 +2559,13 @@ module.exports = {
     },
 	{
 	  from: "~*\\\/apm\\\/",
-	  to: "/addons/apm-addon/index",
+	  to: "/addons/apd-addon/index",
 	  exact: true
     },
 	{
 	  from: "~*\\\/ats\\\/",
 	  to: "/addons/ats-addon/index",
 	  exact: true
-    },	
-	// {
-    //   from: "~*\\\/apm\\\/use-cases\\\/uc",
-    //   to: "/apm/use-cases/",
-    //   exact: true
-    // },
-    // {
-    //   from: "~*\\\/apm\\\/installation-guide\\\/ig",
-    //   to: "/apm/installation-guide/",
-    //   exact: true
-    // },
-    // {
-    //   from: "~*\\\/apm\\\/reference-guide\\\/rg",
-    //   to: "/apm/reference-guide/",
-    //   exact: true
-    // },
+    },
   ]
 }

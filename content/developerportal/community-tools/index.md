@@ -11,7 +11,7 @@ The Mendix Community site includes the community tools described below.
 
 ## 2 Mendix Forum
 
-On the [Mendix Forum](https://forum.mendixcloud.com/index3.html), you can ask questions and explore the knowledge offered by the entire Mendix community. There are questions and answers on various topics as well as a specific **Idea Forum** for the submission of unique ideas on changes and improvements to the Mendix app platform.
+On the [Mendix Forum](https://forum.mendixcloud.com), you can ask questions and explore the knowledge offered by the entire Mendix community. There are questions and answers on various topics as well as a specific **Idea Forum** for the submission of unique ideas on changes and improvements to the Mendix app platform.
 
 The **Forum** section at the top of the Mendix Community site presents the latest questions being asked on the Mendix Forum along with the author of the question and how long ago it was asked:
 
@@ -51,7 +51,7 @@ Click a meetup of your interest to find out details about the location and agend
 
 The Mendix Academy offers both self-paced online training and classroom instruction from our team of experts. These training opportunities can be used in coordination with the [Mendix Developer Certification Program](https://gettingstarted.mendixcloud.com/link/certification) to develop and validate your Mendix expertise.
 
-In the **Academy** section of the Mendix Community site, you can see links to our beginner, intermediate, and advanced learning paths in the [Mendix Academy](https://gettingstarted.mendixcloud.com/index3.html):
+In the **Academy** section of the Mendix Community site, you can see links to our beginner, intermediate, and advanced learning paths in the [Mendix Academy](https://gettingstarted.mendixcloud.com):
 
 {{% image_container width="550" %}}
 ![](attachments/the-community-site/academy1.png)
@@ -77,7 +77,7 @@ The **App Store** section of the Mendix community site presents the latest updat
 
 Click the item name to go to its page in the App Store, where you can read a detailed description of the content and check out some user reviews. Click **View all Apps** to go to the main Mendix App Store page, where you can see featured and new content, recent updates, reviews, and the top contributors to the Mendix App Store.
 
-For more information, see the [App Store Overview](../app-store/app-store-overview).
+For more information, see the [App Store Overview](/appstore/general/app-store-overview) in the *App Store Guide*.
 
 ## 7 Documentation
 

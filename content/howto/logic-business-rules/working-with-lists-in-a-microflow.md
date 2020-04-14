@@ -99,11 +99,7 @@ In the previous section you retrieved a list of orders with the status 'Processi
 
 	![](attachments/18448686/18581086.png)
 
-	{{% alert type="info" %}}A loop is used to iterate over a list of objects. For each object the flow inside the loop is executed.
-
-	For each object the flow inside the loop is executed. The flow starts at the element that has no incoming sequence flows. A loop can contain all elements used in microflows, with the exception of start and stop events. Additionally, a loop (and only a loop) can contain break events and continue events.
-
-	The iterator, which looks the same as a parameter, represents the current object in the list for each iteration. Beneath it the name of the object is shown in black and the entity type of the object in blue. For more information, see [Loop](/refguide/loop).
+	{{% alert type="info" %}}A loop is used to iterate over a list of objects. For each object the flow inside the loop is executed. For each object the flow inside the loop is executed. The flow starts at the element that has no incoming sequence flows. A loop can contain all elements used in microflows, with the exception of start and stop events. Additionally, a loop (and only a loop) can contain break events and continue events. The iterator, which looks the same as a parameter, represents the current object in the list for each iteration. Beneath it the name of the object is shown in black and the entity type of the object in blue. For more information, see [Loop](/refguide/loop).
 	{{% /alert %}}
 
 3.  Double click the loop activity and select the **OrderList** to iterate over.

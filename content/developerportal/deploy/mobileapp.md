@@ -105,9 +105,9 @@ There are two ways that the device can build the packages:
 
 {{% alert type="info" %}}
 
-Building in the cloud uses the Phonegap Build service from Adobe. Unfortunately, Adobe no longer maintains this service. As a result, as of April 30th 2020, iOS apps built through the platform or via the Phonegap Build service are not being accepted on Apple's App Store.
+Building in the cloud uses the PhoneGap Build service from Adobe. Unfortunately, Adobe no longer maintains this service. As a result, as of April 30th 2020, iOS apps built through the platform or using the PhoneGap Build service are not being accepted on Apple's App Store.
 
-If you wish to build your iOS app, continue with section [4.2 Doing It Yourself](/developerportal/deploy/mobileapp#doing-it-yourself) and [4.3 Building your iOS app localy](/developerportal/deploy/mobileapp##building-ios-locally), respectively.
+If you wish to build your iOS app, continue with section [Doing It Yourself](/developerportal/deploy/mobileapp#doing-it-yourself) and [Building Your iOS App Locally](/developerportal/deploy/mobileapp##building-ios-locally), respectively.
 
 {{% /alert %}}
 
@@ -133,99 +133,89 @@ To generate the Android Google Play package, go to [Build.PhoneGap.com](https://
 
 For iOS please follow the instrcutions bellow.
 
-### 4.3 Building your iOS app locally {#building-ios-locally}
+### 4.3 Building Your iOS App Locally {#building-ios-locally}
 
-**Prerequisites**: 
-* A Mac OSX machine.
-* A [NodeJS LTS](https://nodejs.org/en/download/) installation. The all in one installed will take care of all things required.
+Prerequisites: 
+
+* A Mac OSX machine
+* A [NodeJS LTS](https://nodejs.org/en/download/) installation. The all in one installed will take care of all things required
 * The **Do it yourself** package from Cloud Portal downloaded and unzipped in a known location
 * Registered for an [Apple Developer Account](https://developer.apple.com/register/index.action)
 * [XCode](https://apps.apple.com/us/app/xcode/id497799835?mt=12) and its command-line tools installed
 
-#### 4.3.1 Ppepare your project for building
+#### 4.3.1 Ppepare your Project for Building
 
 To prepare your project for building follow the following instructions:
 
-1. Open a terminal window and change directory into the unzipped package folder, e.g. `cd /Downloads/phonegap` if it is in your downloads folder.
-
-2. Run `npm i && npm run package && npm run platform:ios`
-    
-    This combination of commands does the following: 
+1. Open a terminal window and change directory into the unzipped package folder, for example **cd /Downloads/phonegap** if it is in your Downloads folder.
+1. Run `npm i && npm run package && npm run platform:ios`. This combination of commands does the following: 
     * Installs all required dependencies.
     * Packages the Cordova app for deployment.
     * Adds the iOS platform to Cordova.
 
-#### 4.3.2 Building your prepared project
+#### 4.3.2 Building your Prepared Project
 
-There two possible ways for building your apps. Using the Cordova CLI or XCode. 
-The first is the shorter way and allows Cordova to fully control the configuration of your project. 
-The later, is more involved but due to XCode's UI it might be easier to detect problems in the projet.
-There is not prefered way, you can use whatever works best for your case.
+There two possible ways to build your apps: the Cordova CLI or XCode. The Cordova CLI is shorter and allows Cordova to fully control the your project's configuration. XCode is more involved, but XCode's UI makes it easier to detect problems in the project. You can use whichever works best for your case.
 
-##### 4.3.2.1 Building iOS using the Corodova CLI
+##### 4.3.2.1 Building iOS Using the Corodova CLI
 
-**Prerequsites:**
+Prerequsites:
+
 * Your Apple Developer team's id. Can be found [here](https://developer.apple.com/account/#/membership/)
 
 This process is shorter than using XCode but might become more involved in understanding why a build fails. 
 
-1. Run: 
+1. Run `npm run build -- ios --release --device --codeSignIdentity="iPhone Developer" --developmentTeam="<your-teams-id>"`. This combination of commands does the following:
 
-    `npm run build -- ios --release --device --codeSignIdentity="iPhone Developer" --developmentTeam="<your-teams-id>"`
-
-    This combination of commands does the following: 
     * Starts a release build that will create binaries for a physical device.
     * Uses the code sign identity "iPhone Developer" for signing.
     * Looks up the provisioning files and certificates using the provided Apple Developer's team id.
 
-    From the above it is easily deducted that if you wish to build for an emulator and do a debug build the following command can be used: 
-
-    `npm run build -- ios --debug --emulator`
-
-2. When the build succeeds the generated IPA file can be found in `/build/platforms/ios/build`. The folder should have the following file structure. (If you did a build for an emulator an *.app file will be available)
+1.1 If you wish to build for an emulator and do a debug build, use the following command: `npm run build -- ios --debug --emulator`.
+1. When the build succeeds the generated *IPA* file can be found in */build/platforms/ios/build*. That folder should have the following file structure(if you did a build for an emulator an *.app* file will be available):
    
     ![Signing screen correctly configured](attachments/mobileapp/folder-final.png)
     
-3. The IPA generated can be now uploaded to Testflight for further testing. If you wish to do so, continue with the [Upload tools](https://help.apple.com/app-store-connect/#/dev82a6a9d79) section, on the App Store documenation.
-
+1. The IPA generated can be now uploaded to Testflight for further testing. If you wish to do so, continue with the [Upload tools](https://help.apple.com/app-store-connect/#/dev82a6a9d79) section, on the App Store documenation.
 
 ##### 4.3.2.2 Building iOS using XCode
-Using XCode might be easier for less technical users due to its visual interface. To build your app using XCode: 
+
+Using XCode can be easier than the Cordova CLI due to XCode's friendly visual interface. To build your app using XCode do the following: 
 
 1. Proceed in opening the *.xcworkspace file under `/build/platforms/ios/` by double-clicking it. Xcode shoud open with the project loaded.
 
     ![Opening XCWorkspace](attachments/mobileapp/open-xcworkspace.png)
 
-4. Select the root element from the tree view in the left panel.
+1. Select the root element from the tree view in the left panel.
    
     ![Selecting the root element](attachments/mobileapp/root-element.png)
 
-5. The screen should change to the following view. If not select the item under Targets on the left panel not the item under Project and select the tab Signing & Certificates.
+1. The screen should change to the following view. If not select the item under Targets on the left panel not the item under Project and select the tab Signing & Certificates.
 
     ![Signing screen with errors](attachments/mobileapp/setup-signing-wrong.png)
 
-6. As can been seen both Debug and Release might have been configured for **Automatically manage signing**. Disable both checkboxes to switch to manual signing. The screen should change to the following. 
+1. As can been seen both Debug and Release might have been configured for **Automatically manage signing**. Disable both checkboxes to switch to manual signing. The screen should change to the following. 
 
     ![Signing screen correctly configured](attachments/mobileapp/setup-signing-correct.png)
 
-7. Enable **Automatically manage signing** again.
+1. Enable **Automatically manage signing** again.
 
-8. Select a Team using the dropdown. If you haven't yet signed in with your credentials XCode will prompt you to do so.
+1. Select a Team using the dropdown. If you haven't yet signed in with your credentials XCode will prompt you to do so.
 
-9. When configured correctly all errors should be gone. 
+1. When configured correctly all errors should be gone. 
 
-10. Make sure you select the target to be your app's build target and as a device "Generic iOS Device".
+1. Make sure you select the target to be your app's build target and as a device "Generic iOS Device".
 
     ![Signing screen correctly configured](attachments/mobileapp/target-device.png)
 
-11. Select Product and then Archive from the menu bar.
+1. Select Product and then Archive from the menu bar.
 
     ![Archiving](attachments/mobileapp/archiving.png)
 
-12. After the process finishes successfully the Organizer view will come up. Your app should be selected and your latest Archive visible. You can always open the organizer yourself through XCode's Window menu.
+1. After the process finishes successfully the Organizer view will come up. Your app should be selected and your latest Archive visible. You can always open the organizer yourself through XCode's Window menu.
     ![Organizer](attachments/mobileapp/organizer.png)
 
-13. You can now use the "Distribute App" button to distribute your app to the appstore or archive it for local distribution.
+1. You can now use the "Distribute App" button to distribute your app to the appstore or archive it for local distribution.
     ![Distribute Options](attachments/mobileapp/distribute-options.png)
 
 

@@ -212,16 +212,17 @@ Using XCode can be easier than the Cordova CLI due to XCode's friendly visual in
 
     ![Archiving](attachments/mobileapp/archiving.png)
 
-1. After the process finishes successfully the Organizer view will come up. Your app should be selected and your latest Archive visible. You can always open the organizer yourself through XCode's Window menu.
+1. After the process finishes successfully the **Organizer** view will come up. Your app should be selected and your latest **Archive** visible. You can always open the organizer yourself through XCode's **Window** menu:
+
     ![Organizer](attachments/mobileapp/organizer.png)
 
-1. You can now use the "Distribute App" button to distribute your app to the appstore or archive it for local distribution.
-    ![Distribute Options](attachments/mobileapp/distribute-options.png)
+1. You can now use the **Distribute App** button to distribute your app to the appstore or archive it for local distribution:
 
+    ![Distribute Options](attachments/mobileapp/distribute-options.png)
 
 ## 5 Example
 
-**How to build a Phonegap app in the cloud**
+**How to build a PhoneGap app in the cloud**
 
 {{% youtube 7ic625u2YJE %}}
 

@@ -14,7 +14,7 @@ For more information on hybrid mobile app development in Mendix, see the [Hybrid
 
 ## 2020
 
-### Hybrid App Base 4.2.0
+### Hybrid App Base 5.0.0
 
 With this release we updated all PhoneGap dependencies to the latest supported to comply with the Apple App Store guidelines for the deprecated UIWebView dependency.
 
@@ -23,8 +23,6 @@ With this release we updated all PhoneGap dependencies to the latest supported t
 * We updated the iOS Engine to 5.1.1
 * We updated cordova-plugin-inappbrowser to 3.2.0
 * We updated the NativepageTransitions to use our internal fork
-
-## 2019
 
 ### Hybrid App Base 4.1.10
 
@@ -38,6 +36,9 @@ With this release we updated all PhoneGap dependencies to the latest supported t
 
 * We fixed an issue with race conditions in asynchronous hooks.
 * We introduced a new **onBeforeSynchonization** hook.
+
+
+## 2019
 
 ### Hybrid App Base 4.1.8
 

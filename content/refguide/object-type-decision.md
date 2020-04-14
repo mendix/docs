@@ -26,13 +26,13 @@ The object type decision properties consists of the following sections:
 
     <img src="attachments/decisions/object-type-decision-properties.png" style="zoom:50%;" />
 
-### 2.1 Common Section {#action}
+### 2.1 Common Section {#common} 
 
 #### 2.1.1 Caption
 
 For more information, see the [Caption](microflow-element-common-properties#caption) section in *Common Properties*.
 
-### 2.2 Input Section
+### 2.2 Input Section {#input}
 
 #### 2.2.1 Object
 

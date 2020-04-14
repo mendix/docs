@@ -65,4 +65,4 @@ The properties of the **Rule** decision type are the following ones:
 
 #### 2.1.3 Error Handling Type
 
-For more information, see the [Error Handling Type](microflow-element-common-properties#error handling) section in *Common Properties*.
+For more information, see the [Error Handling Type](microflow-element-common-properties#error-handling) section in *Common Properties*.

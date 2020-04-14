@@ -9,7 +9,7 @@ tags: ["mobile", "app store", "phonegap"]
 {{% alert type="info" %}}
 Building in the cloud uses the Phonegap Build service from Adobe. Unfortunately, Adobe no longer maintains this service. As a result, as of April 30th 2020, iOS apps built through the platform or via the Phonegap Build service are not being accepted on Apple's App Store. 
 
-If you wish to build your iOS app, continue with section [4.2 Doing It Yourself](/developerportal/deploy/mobileapp#doing-it-yourself) and [4.3 Building your iOS app localy](/developerportal/deploy/mobileapp##building-ios-locally), respectively.
+If you wish to build your iOS app, continue with section [Doing It Yourself](/developerportal/deploy/mobileapp#doing-it-yourself) and [Building Your iOS App Locally](/developerportal/deploy/mobileapp##building-ios-locally), respectively.
 
         {{% /alert %}}
 

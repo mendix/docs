@@ -20,7 +20,7 @@ The decision properties pane consists of the following sections:
 
 * [Common](#common)
 
-### 2.1 Common {#action}
+### 2.1 Common {#common}
 
 #### 2.1.1 Caption
 

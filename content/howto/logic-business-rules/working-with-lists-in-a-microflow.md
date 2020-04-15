@@ -126,6 +126,10 @@ In the previous section you retrieved a list of orders with the status 'Processi
 
     ![](attachments/18448686/18581076.png)
 
+Note: To optimize the number of commits, you can perform the commit outside of the loop. This way, there would be a single         commit to the database instead of one per order.
+
+![](attachments/8784287/working-with-lists-optimization.png)
+
 11. **Re-deploy** your application.
 12. Click the **Set Processing to Complete** button. The orders with status 'Processing' will now be changed to 'Complete'.
 

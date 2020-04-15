@@ -68,7 +68,7 @@ An enumeration is a predefined list of values that can be used as an attribute t
 
 To add enumerations, follow these steps:
 
-1. Right-click the module and select **Add** > **Enumeration**.
+1. Right-click the module and select **Add other** > **Enumeration**.
 2. Enter *OrderStatus* for the **Name** and click **OK**.
 3.  Click **New** to add a new enumeration value:
 

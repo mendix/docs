@@ -114,13 +114,13 @@ To displayed all the details that a contact has, do the following:
 
 3. Open the **Toolbox** and search for **Radio Buttons**, drag and drop it *inside* the data view above the *Name* text box.
 
-   ![](attachments/pages-how-to-configure-list/radio-buttons.png)
+    ![](attachments/pages-how-to-configure-list/radio-buttons.png)
 
 4. Open radio buttons properties and click **Data Source** > **Attribute**.
 
 5. In the **Select Attribute** dialog box, choose *Title* and click **Select**:
 
-   <img src="attachments/pages-how-to-configure-list/title.png" style="zoom:50%;" />
+    <img src="attachments/pages-how-to-configure-list/title.png" style="zoom:50%;" />
 
 6. Select the *Name* text box and click **Data Source** > **Attribute** in its properties. 
 
@@ -128,7 +128,7 @@ To displayed all the details that a contact has, do the following:
 
 8. Repeat steps 6 and 7 to set the **Phone** attribute for the *Phonenumber* text box, the **Email** attribute for the *Email* text box, **DateCreated**  for the *Birthday* text box, and **EstimatedValue** for the *Bio* text box. 
 
-   ![](attachments/pages-how-to-configure-list/attributes-replaced.png)
+    ![](attachments/pages-how-to-configure-list/attributes-replaced.png)
 
 9. You lack information on the contact's job title and status. To add the job title information, open the **Toolbox**, search for a **Text Box**, drag and drop it inside the data view below the **Name** text box.
 

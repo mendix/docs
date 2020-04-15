@@ -1,5 +1,5 @@
 ---
-title: "Configure a List and View Its Details"
+title: "Configure a List and View List Item Details"
 category: "Pages"
 description: "Describes how to configure a list of items in Mendix Studio."
 menu_order: 30
@@ -14,29 +14,29 @@ This how-to explains how you can configure a list of items and view the item det
 
 * Create a new page
 * Configure a list view
-* Configure a data view that shows the details of an item selected in the list
+* Configure a data view that shows the details of an item selected in the list view
 
 The how-to describes the following use case: 
 
-You are working as a Sales Representative and you have a list of opportunity contacts – potential customers. You would like to click a row in this list to view the details of the corresponding opportunity contact. 
+Sales Representatives in your company would like to view a list of opportunity contacts – potential customers. When Sales Representatives click a row in this list, the details of the corresponding opportunity contact are displayed next to the list. 
 
 ## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
+* Familiarize yourself with page terms and how to perform basic functions on pages. For more information, see [Pages](/studio/pages). 
+
 * Familiarize yourself with the domain model terms and learn how to perform basic functions. For more information, see [Domain Model](/studio/domain-models).
 
 * Make sure your domain model is configured the following way:
 
-    <img src="attachments/pages-how-to-configure-list/domain-model.png" style="zoom:67%;" />
-
-* Familiarize yourself with page terms and how to perform basic functions on pages. For more information, see [Pages](/studio/pages). 
+    <img src="attachments/pages-how-to-configure-list/domain-model.png" style="zoom:67%;" /> 
 
 ## 3 Adding the Master Detail Page
 
 You would like to open a page with opportunity contact list and its details from your home page. Do the following:
 
-1. Open your home page and navigate to **Toolbox** > **Widgets**.
+1. Open your home page and navigate to the **Toolbox** > **Widgets**.
 
 2. Search for **Open Page** button and drag and drop it to the page.
 
@@ -65,7 +65,7 @@ The page is created. In the responsive (Desktop) view, a list is displayed on th
 
 ## 4 Configuring the List
 
-The page is created, now you need to configure it. You need to connect data to the list first. Do the following:
+The page is created, now you need to configure it. First of all, you need to connect data to the list. Do the following:
 
 1. Select the list view and click the **Entity** option in its properties:
 
@@ -85,7 +85,7 @@ The page is created, now you need to configure it. You need to connect data to t
 
     3. In the **Select Attribute** dialog box, choose *Name* and click **Select**. 
 
-4. Delete the image from the list and the column where this image is placed, as now the image displays a a user image and does not correspond with companies you are displaying.
+4. Delete the image from the list and the column where this image is placed, as now the image displays a a user image that does not correspond to opportunity contacts you are displaying.
     <img src="attachments/pages-how-to-configure-list/list-with-no-image.png" style="zoom:60%;" />
 
 5. As the goal of the new page is to merely display data, delete the **New** button above the list view together with the container it is placed in:
@@ -98,23 +98,25 @@ Now the list view will display a list of opportunity contacts by their name:
 
 ## 5 Configuring Report Details
 
-Now you need to configure opportunity contact details displayed next to the list. The idea is when you select the name from the list, the details of the select contact will be displayed. 
+Now you need to configure opportunity contact details displayed next to the list. The idea is when you select the name from the list, the details of the selected contact will be displayed. 
 
 The Master Details page template which your page is based on has a preconfigured data view that listens to the list view. That means that the data view shows data of the opportunity contact selected in the list view . 
 
-Now you need to configure widgets inside the data view to show attributes of the *InspectionReport* entity, or in other words to show all the details that an opportunity contact has: a title, name, job title, phone, email, etc. 
+Now you need to configure widgets inside the data view to show attributes of the *InspectionReport* entity, or in other words to show all the details that an opportunity contact has, such as title, name, job title, phone, email. 
 
-All the details that a contact has need to be displayed. Do the following:
+To displayed all the details that a contact has, do the following:
 
-1. Delete the empty column and **Edit**, **Send Email**, and **Delete** buttons on the right as you will only  display data on this data, not change it.
+1. Delete the empty column and **Edit**, **Send Email**, and **Delete** buttons inside the data view as you will only  display data, not change it:
 
-2. Double-click the *User Details* text widget (which is displayed as a heading) and rename it to *Opportunity Contact Details*. 
+    ![](attachments/pages-how-to-configure-list/data-view-buttons.png)
 
-3. Open Toolbox and search for **Radio Buttons**, drag and drop it *inside* the data view before the *Name* text box.
+2. Double-click the *User Details* text widget (which is displayed as a data view heading) and rename it to *Opportunity Contact Details*. 
+
+3. Open the **Toolbox** and search for **Radio Buttons**, drag and drop it *inside* the data view above the *Name* text box.
 
    ![](attachments/pages-how-to-configure-list/radio-buttons.png)
 
-4. Open the radio buttons properties and click **Data Source** > **Attribute**.
+4. Open radio buttons properties and click **Data Source** > **Attribute**.
 
 5. In the **Select Attribute** dialog box, choose *Title* and click **Select**:
 
@@ -124,17 +126,17 @@ All the details that a contact has need to be displayed. Do the following:
 
 7. In the **Select Attribute** dialog box, choose *Name* and click **Select**.
 
-8. Repeat steps 6 and 7 to set  the **Phone** attribute for the *Phonenumber* text box, the **Email** attribute for the *Email* text box, **DateCreated**  for the *Birthday* text box, and **EstimatedValue** for the *Bio* text box. 
+8. Repeat steps 6 and 7 to set the **Phone** attribute for the *Phonenumber* text box, the **Email** attribute for the *Email* text box, **DateCreated**  for the *Birthday* text box, and **EstimatedValue** for the *Bio* text box. 
 
    ![](attachments/pages-how-to-configure-list/attributes-replaced.png)
 
-9. You lack information on the contact's job title and their status. To add the job title information to the data view, open the **Toolbox**, search for a **Text Box**, drag and drop it after **Name**.
+9. You lack information on the contact's job title and status. To add the job title information, open the **Toolbox**, search for a **Text Box**, drag and drop it inside the data view below the **Name** text box.
 
-10. Open text box properties and  click **Data Source** > **Attribute**. 
+10. Open text box properties and click **Data Source** > **Attribute**. 
 
 11. In the **Select Attribute** dialog box, choose *JobTitle* and click **Select**.
 
-12. To add the information on the opportunity prospect's status, open the **Toolbox**, search for for **Radio Buttons**, drag and drop it *inside* the data view after the **Estimated Value** text box.
+12. To add the information on the opportunity contact's status, open the **Toolbox**, search for for **Radio Buttons**, drag and drop it inside the data view below the **Estimated Value** text box.
 
 13. Open the radio buttons properties and click **Data Source** > **Attribute**.
 

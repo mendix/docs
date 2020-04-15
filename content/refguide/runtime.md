@@ -80,7 +80,7 @@ This is the browser or device which allows the end-user to interact with the app
 
 ## 3 Licensing
 
-You need a license to run an application in production mode. Without a license, the Runtime Server stops operating after a couple of hours. Information on licensing Mendix apps can be found in [Licensing Apps](developerportal/deploy/licensing-apps-outside-mxcloud).
+You need a license to run an application in production mode. Without a license, the Runtime Server stops operating after a couple of hours. Information on licensing Mendix apps can be found in [Licensing Apps](/developerportal/deploy/licensing-apps-outside-mxcloud).
 
 ## 4 APIs
 

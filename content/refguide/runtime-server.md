@@ -92,7 +92,7 @@ This runs custom Java which is held as Java actions in the project model.
 
 ### 2.17 Mendix Client API
 
-This receives requests from the Mendix Client, decodes them and passes them to the Runtime Core or the Object Manager, and formats a response to the Mendix Client once the request has been processed. The Mendix Client API is known as *xas*.
+This receives requests from the Mendix Client, decodes them and passes them to the Runtime Core or the Object Manager, and formats a response to the Mendix Client once the request has been processed. The Mendix Client API is known as *xas* (XML Application Server).
 
 ### 2.18 Custom Request Handler
 

@@ -23,6 +23,6 @@ This widget should only be used to group widgets belonging to a form.
 
 For a demo app project that has been deployed with this widget, click [here](https://fieldset-sandbox.mxapps.io).
 
-## 2 Dependencies
+## 1 Dependencies
 
 Mendix Studio or Mendix Studio Pro 8.3.1 or higher.

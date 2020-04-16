@@ -2,7 +2,7 @@
 title: "Client Activities"
 parent: "activities"
 menu_order: 50
-tags: ["studio pro"]
+tags: ["studio pro", "client activities", "activities"]
 ---
 
 ## Close Page

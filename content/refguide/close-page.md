@@ -2,7 +2,7 @@
 title: "Close Page"
 parent: "client-activities"
 menu_order: 1
-tags: ["studio pro"]
+tags: ["studio pro", "close page", "client activity"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -14,10 +14,19 @@ This activity can be used in both **Microflows** and **Nanoflows**.
 This action is ignored and does not work when a microflow is called from an offline, native, or hybrid app. For more information, see the [Microflows](offline-first#microflows) section of the *Offline-First Reference Guide*.
 {{% /alert %}}
 
-The close page activity closes the currently open page.
+## 1 Introduction
 
-{{% alert type="info" %}}
+The **Close page** activity closes the currently open page. For example, if can be used to close a pop-up page:
 
-See [Common Properties](microflow-element-common-properties) for properties that all microflow activities share (for example, caption). This page only describes the properties specific to the action.
+<img src="attachments/client-activities/close-page-example.png" style="zoom:50%;" />
 
-{{% /alert %}}
+## 2 Properties
+
+The close page activity properties consists of the following sections:
+
+* **Action** – shows the activity type
+* **Common**  – contain properties common for many microflow elements; for more information on these properties, see the [Common Properties](microflow-element-common-properties) 
+
+
+
+

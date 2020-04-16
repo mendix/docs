@@ -780,31 +780,7 @@
 
     if (window.Intercom && window.__IntercomAppId && window.intercomSettings) {
       $('#back-to-top').addClass('with-intercom');
-      $.getJSON('https://home.mendix.com/mxid/appbar2?b=' + Math.random() + '&callback=?', function (rawData) {
-          if (!rawData.length) {
-              console && console.warn("Appbar request returns no content.");
-              loadIntercom();
-              return;
-          }
-          var data = rawData[0];
-          if (!data) {
-              console && console.warn("Appbar request returns empty content.");
-              loadIntercom();
-              return;
-          }
-
-          if (data.loggedIn) {
-            if (data.userName) window.intercomSettings.email = data.userName;
-            if (data.openId) window.intercomSettings.user_id = data.openId;
-            if (data.displayName) window.intercomSettings.name = data.displayName;
-          }
-
-          loadIntercom();
-
-        }).fail(function () {
-          console.warn('Failed to get MXID');
-          loadIntercom();
-        });
+      loadIntercom();
     }
 
   });

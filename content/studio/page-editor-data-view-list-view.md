@@ -102,7 +102,7 @@ In the **General** section, you can select the number of rows to be displayed on
 
 * **Read-Only** (enabled by default) – when enabled, all [input elements](page-editor-widgets-input-elements) (for example, a text area, a check box) in the list view will be in read-only mode
 
-### 3.4 Conditional Visibility Section {# 
+### 3.4 Conditional Visibility Section {#visibility-list-view}
 
 {{% snippet file="studio/visibility-section-link.md" %}}
 

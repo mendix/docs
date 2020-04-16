@@ -77,7 +77,9 @@ To start the packaging process, follow these steps:
 
 7. Optionally, upload custom-branded app icons and splash screens under the tabs for the different platforms. You can find those tabs next to the **App Info** tab.
 
-{{% alert type="info" %}}If you do not upload any images, the default Mendix-branded images that are shown will continue to be used.{{% /alert %}}
+{{% alert type="info" %}}
+If you do not upload any images, the default Mendix-branded images that are shown will continue to be used.
+{{% /alert %}}
 
 8. Click the green **Publish for Mobile App Stores** button. You will be presented with the **Build Mobile App Store Packages** page:
 
@@ -99,7 +101,9 @@ To start the packaging process, follow these steps:
 	a. To build for the authorization, click **Authorize use of Adobe PhoneGap Build**, after which you will be temporarily redirected to the website of your Adobe PhoneGap Build. <br/>
 13. Choose **Yes** on the Adobe PhoneGap Build service page to allow the start of building jobs using your account. You will then be redirected back to the Mendix Developer Portal.
 
-{{% alert type="warning" %}}If you choose **No**, you will be redirected back to the Developer Portal and you will not be able to publish your app. {{% /alert %}}
+{{% alert type="warning" %}}
+If you choose **No**, you will be redirected back to the Developer Portal and you will not be able to publish your app.
+{{% /alert %}}
 
 After you have been redirected back to the Mendix Developer Portal, the packaging process will continue and you will have to set up your app's signing keys.
 

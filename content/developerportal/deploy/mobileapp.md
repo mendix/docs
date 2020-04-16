@@ -107,7 +107,7 @@ There are two ways that the device can build the packages:
 
 Building in the cloud uses the PhoneGap Build service from Adobe. Unfortunately, Adobe no longer maintains this service. As a result, as of April 30th 2020, iOS apps built through the platform or using the PhoneGap Build service are not being accepted on Apple's App Store.
 
-If you wish to build your iOS app, continue with section [Doing It Yourself](/developerportal/deploy/mobileapp#doing-it-yourself) or [Building Your iOS App Locally](/developerportal/deploy/mobileapp##building-ios-locally), respectively.
+If you wish to build your iOS app, continue with either the [Doing It Yourself](/developerportal/deploy/mobileapp#doing-it-yourself) section for remote building or [Building Your iOS App Locally](/developerportal/deploy/mobileapp##building-ios-locally) for local building.
 
 {{% /alert %}}
 
@@ -138,14 +138,14 @@ For iOS please follow the instrcutions bellow.
 Prerequisites: 
 
 * A Mac OSX machine
-* A [NodeJS LTS](https://nodejs.org/en/download/) installation. The all in one installed will take care of all things required
-* The **Do it yourself** package from Cloud Portal downloaded and unzipped in a known location
-* Registered for an [Apple Developer Account](https://developer.apple.com/register/index.action)
-* [XCode](https://apps.apple.com/us/app/xcode/id497799835?mt=12) and its command-line tools installed
+* Install [NodeJS LTS](https://nodejs.org/en/download/) using the all-in-one installation option
+* Download **Do it yourself** package from Cloud Portal and unzip it in a known location
+* Register for an [Apple Developer Account](https://developer.apple.com/register/index.action)
+* Install [XCode](https://apps.apple.com/us/app/xcode/id497799835?mt=12) and its command-line tools
 
-#### 4.3.1 Ppepare your Project for Building
+#### 4.3.1 Ppepare Your Project for Building
 
-To prepare your project for building follow the following instructions:
+To prepare your project for building, follow these instructions:
 
 1. Open a terminal window and change directory into the unzipped package folder, for example **cd /Downloads/phonegap** if it is in your Downloads folder.
 1. Run `npm i && npm run package && npm run platform:ios`. This combination of commands does the following: 
@@ -153,25 +153,23 @@ To prepare your project for building follow the following instructions:
     * Packages the Cordova app for deployment.
     * Adds the iOS platform to Cordova.
 
-#### 4.3.2 Building your Prepared Project
+#### 4.3.2 Building Your Prepared Project
 
-There two possible ways to build your apps: the Cordova CLI or XCode. The Cordova CLI is shorter and allows Cordova to fully control the your project's configuration. XCode is more involved, but XCode's UI makes it easier to detect problems in the project. You can use whichever works best for your case.
+There are two possible ways to build your apps: the Cordova CLI or XCode. The Cordova CLI is faster and allows Cordova to fully control the your project's configuration. XCode is more involved, but XCode's UI makes it easier to detect problems in the project. You can use whichever works best for your case.
 
 ##### 4.3.2.1 Building iOS Using the Corodova CLI
 
 Prerequsites:
 
-* Your Apple Developer team's id. Can be found [here](https://developer.apple.com/account/#/membership/)
+* Your Apple Developer team's id, which can be found [here](https://developer.apple.com/account/#/membership/)
 
-This process is shorter than using XCode but might become more involved in understanding why a build fails. 
+This process is shorter than using XCode but might require more work to understand why a build fails. To build using the Cordova CLI, do the following:
 
 1. Run `npm run build -- ios --release --device --codeSignIdentity="iPhone Developer" --developmentTeam="<your-teams-id>"`. This combination of commands does the following:
-
-    * Starts a release build that will create binaries for a physical device.
-    * Uses the code sign identity "iPhone Developer" for signing.
-    * Looks up the provisioning files and certificates using the provided Apple Developer's team id.
-
-1.1 If you wish to build for an emulator and do a debug build, use the following command: `npm run build -- ios --debug --emulator`.
+    * Starts a release build that will create binaries for a physical device
+    * Uses the code sign identity "iPhone Developer" for signing
+    * Looks up the provisioning files and certificates using the provided Apple Developer's team id
+1.1 Optionally, if you wish to build for an emulator and do a debug build use the following command instead: `npm run build -- ios --debug --emulator`.
 1. When the build succeeds the generated *IPA* file can be found in */build/platforms/ios/build*. That folder should have the following file structure(if you did a build for an emulator an *.app* file will be available):
    
     ![Signing screen correctly configured](attachments/mobileapp/folder-final.png)
@@ -182,33 +180,30 @@ This process is shorter than using XCode but might become more involved in under
 
 Using XCode can be easier than the Cordova CLI due to XCode's friendly visual interface. To build your app using XCode do the following: 
 
-1. Proceed in opening the *.xcworkspace file under `/build/platforms/ios/` by double-clicking it. Xcode shoud open with the project loaded.
+1. Under **/build/platforms/ios/** open the `.xcworkspace` file by double-clicking it. Xcode shoud open with the project loaded:
 
     ![Opening XCWorkspace](attachments/mobileapp/open-xcworkspace.png)
 
-1. Select the root element from the tree view in the left panel.
+1. Select the root element from the tree view in the left-side panel:
    
     ![Selecting the root element](attachments/mobileapp/root-element.png)
 
-1. The screen should change to the following view. If not select the item under Targets on the left panel not the item under Project and select the tab Signing & Certificates.
+1. The screen should change to the following view. If it does not, select the item under Targets on the left panel not the item under **Project** and select the tab **Signing & Certificates**:
 
     ![Signing screen with errors](attachments/mobileapp/setup-signing-wrong.png)
 
-1. As can been seen both Debug and Release might have been configured for **Automatically manage signing**. Disable both checkboxes to switch to manual signing. The screen should change to the following. 
+1. Both **Debug** and **Release** might have been configured for **Automatically manage signing**. Clear both check boxes to switch to manual signing. The screen should change to the following:
 
     ![Signing screen correctly configured](attachments/mobileapp/setup-signing-correct.png)
 
 1. Enable **Automatically manage signing** again.
-
-1. Select a Team using the dropdown. If you haven't yet signed in with your credentials XCode will prompt you to do so.
-
-1. When configured correctly all errors should be gone. 
-
-1. Make sure you select the target to be your app's build target and as a device "Generic iOS Device".
+1. Select a **Team** using the drop-down menu. If you have not yet signed in with your credentials, XCode will prompt you to do so.
+1. When configured correctly all errors should be gone.
+1. Make sure you select the target to be your app's build target and designate **Generic iOS Device** as a device:
 
     ![Signing screen correctly configured](attachments/mobileapp/target-device.png)
 
-1. Select Product and then Archive from the menu bar.
+1. Select **Product** and then **Archive** from the menu bar:
 
     ![Archiving](attachments/mobileapp/archiving.png)
 

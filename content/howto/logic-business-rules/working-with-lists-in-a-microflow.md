@@ -125,6 +125,11 @@ In the previous section you retrieved a list of orders with the status 'Processi
 9. Set **Commit** and **Refresh in Client** to **Yes** to commit your changes to the database and refresh your list in the client so your changes will be visible, then click **OK**. Your microflow should look like this:
 
     ![](attachments/18448686/18581076.png)
+    
+	{{% alert type="info" %}}To optimize the number of commits, you can perform the commit outside of the loop. This way, there will be a single commit to the database instead of one per order.
+	{{% /alert %}}
+
+	![](attachments/8784287/working-with-lists-optimization.jpg)
 
 11. **Re-deploy** your application.
 12. Click the **Set Processing to Complete** button. The orders with status 'Processing' will now be changed to 'Complete'.

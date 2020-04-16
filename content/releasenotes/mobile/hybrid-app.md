@@ -115,13 +115,13 @@ To enable more control over the target architecture, use the following variants:
 
 **Release date: January 28th, 2019**
 
-We fixed an issue on iOS where the app did not fill the entire screen after the keyboard was hidden.
+* We fixed an issue on iOS where the app did not fill the entire screen after the keyboard was hidden.
 
 ### Hybrid App Base 4.0.4
 
 **Release date: January 23rd, 2019**
 
-We fixed a mistake in the Google Services *.plist* file.
+* We fixed a mistake in the Google Services *.plist* file.
 
 ### Hybrid App Base 4.0.3
 
@@ -136,7 +136,7 @@ We fixed a mistake in the Google Services *.plist* file.
 
 **Release date: January 7th, 2019**
 
-The *build-extras.gradle* file was missing in the published npm package. We added it.
+* We added the *build-extras.gradle* file which was missing in the published npm package.
 
 ### Hybrid App Base 4.0.0 / Hybrid App Template 4.0.0
 

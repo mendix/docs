@@ -21,7 +21,8 @@ Because the Mendix Client can run in a browser, everything in the Mendix Client 
 The shell page is created in different ways, depending on the sort of client.
 
 * For a **browser** client, the initial page is provided by a *theme*
-* For a ***mobile app*** the initial page is packaged as an android or iOS app to be downloaded to the mobile device
+* For a **mobile app** the initial page is packaged as an android or iOS app to be downloaded to the mobile device
+* There is a third sort of app known as a **hybrid app**. For most purposes this can be treated as an app running in a browser client. In this case, however, the browser is embedded in a mobile application and has access to some [Cordova](https://cordova.apache.org/) plugins to give access to some features of a mobile device. We recommend that you use a native mobile app rather than a hybrid app if you want to make Mendix apps which run on mobile devices.
 
 Below is a chart showing the components of the Mendix Client. Each of the components is described below the chart.
 

@@ -135,7 +135,7 @@ For iOS please follow the instrcutions bellow.
 
 ### 4.3 Building Your iOS App Locally {#building-ios-locally}
 
-Prerequisites: 
+**Prerequisites:**
 
 * A Mac OSX machine
 * Install [NodeJS LTS](https://nodejs.org/en/download/) using the all-in-one installation option
@@ -143,7 +143,7 @@ Prerequisites:
 * Register for an [Apple Developer Account](https://developer.apple.com/register/index.action)
 * Install [XCode](https://apps.apple.com/us/app/xcode/id497799835?mt=12) and its command-line tools
 
-#### 4.3.1 Ppepare Your Project for Building
+#### 4.3.1 Prepare Your Project for Building
 
 To prepare your project for building, follow these instructions:
 
@@ -159,7 +159,7 @@ There are two possible ways to build your apps: the Cordova CLI or XCode. The Co
 
 ##### 4.3.2.1 Building iOS Using the Corodova CLI
 
-Prerequsites:
+**Prerequsites:**
 
 * Your Apple Developer team's id, which can be found [here](https://developer.apple.com/account/#/membership/)
 
@@ -179,7 +179,6 @@ This process is shorter than using XCode but might require more work to understa
 ##### 4.3.2.2 Building iOS using XCode
 
 Using XCode can be easier than the Cordova CLI due to XCode's friendly visual interface. To build your app using XCode do the following: 
-
 1. Under **/build/platforms/ios/** open the `.xcworkspace` file by double-clicking it. Xcode shoud open with the project loaded:
 
     ![Opening XCWorkspace](attachments/mobileapp/open-xcworkspace.png)
@@ -188,7 +187,7 @@ Using XCode can be easier than the Cordova CLI due to XCode's friendly visual in
    
     ![Selecting the root element](attachments/mobileapp/root-element.png)
 
-1. The screen should change to the following view. If it does not, select the item under Targets on the left panel not the item under **Project** and select the tab **Signing & Certificates**:
+1. The screen should change to the following view. If it does not, select the item under **Targets** on the left panel not the item under **Project** and select the tab **Signing & Certificates**:
 
     ![Signing screen with errors](attachments/mobileapp/setup-signing-wrong.png)
 
@@ -228,4 +227,4 @@ Using XCode can be easier than the Cordova CLI due to XCode's friendly visual in
 * [Offline](/refguide/offline-first)
 * [How to Publish a Mendix Hybrid Mobile App in App Stores](/howto/mobile/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)
 * [Adobe PhoneGap Build](https://build.phonegap.com/)
-* [Apache Cordova Phonegap Reference Config.xml](https://cordova.apache.org/docs/en/latest/config_ref/)
+* [Apache Cordova PhoneGap Reference Config.xml](https://cordova.apache.org/docs/en/latest/config_ref/)

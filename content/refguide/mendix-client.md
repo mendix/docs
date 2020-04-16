@@ -3,7 +3,7 @@ title: "Mendix Client"
 category: "Mendix Runtime"
 description: "A description of the Mendix Client part of the runtime and how it functions"
 menu_order: 20
-tags: ["runtime", "mendix client", "offline first", "browser", "javascript", "nanoflows", "widgets", "launch"]
+tags: ["runtime", "mendix client", "offline-first", "browser", "javascript", "nanoflows", "widgets", "launch"]
 ---
 
 ## 1 Introduction
@@ -47,7 +47,7 @@ This runs custom JavaScript, added by the app developer, which is held as JavaSc
 
 ### 2.4 UI Layer
 
-The UI layer performs navigation, resource loading, and platform integration. accepts interactions from the end-user (for example, data input or button presses) and passes them to the client core. It is responsible for building the page which is presented to the end-user in response to the actions of the Mendix Client, using the correct language and other locale settings.
+The UI layer performs navigation, resource loading, and platform integration. It is responsible for building the page which is presented to the end-user in response to the actions of the Mendix Client, using the correct language and other locale settings.
 
 ### 2.5 HTTPS Server
 
@@ -67,35 +67,32 @@ This is the static data which is needed by the Mendix Client. For a browser-base
 
 These include the shell page needed to start the Mendix Client, Cascading Style Sheets (css files) which define the app’s theme, and JavaScript files which define client-side logic.
 
-### 2.9 CodePush
+### 2.9 Data API
 
-This process allows the Mendix app to distribute updates to clients which are running React Native apps.
+This allows the Mendix Client to communicate with Offline Storage.
 
-### 2.10 Online Data
+### 2.10 Object Cache
 
-This manages the objects which are maintained in the Mendix Client (non-persistable, new, and changed objects) and ensures that they are passed to the Runtime Server when they are needed as part of a request.
+This holds and manages objects which are being used by the Mendix Client in memory – for example non-persistable objects, new objects, and objects returned by the Runtime Server to be displayed on a page. It also ensures that they are passed to the Runtime Server when they are needed as part of a request.
 
-### 2.11 Object Cache
+State handling will perform garbage collection to ensure that memory is released when it is no longer needed.
 
-This holds objects which are being used by the Mendix Client in memory – for example a list of objects returned by the Runtime Server to be displayed on a page. State handling will perform garbage collection to ensure that memory is released when it is no longer needed.
-
-### 2.12 Offline Storage
+### 2.11 Offline Storage
 
 This is permanent storage, usually on a mobile device, where data can be stored for apps which are running in offline mode. It differs from the temporary object storage in that data here is not lost at the end of a session, but is kept until it can be synced to the Runtime Server.
 
-### 2.13 State/Sync/Session
+### 2.12 State/Sync/Session
 
-This manages requests to the Runtime Server. Note that some actions in the Mendix Client will not require access to the Runtime Server. For example, if the Object Manager already has access to the required data in the temporary object storage, or if the app is written as “offline first”.
+This manages requests to the Runtime Server. Note that some actions in the Mendix Client will not require access to the Runtime Server. For example, if the Object Cache already has access to the required data in the temporary object storage, or if the app is written as “offline-first”.
 
 For more information about the communication between the Mendix Client and the Runtime Server, see [SIG–Mendix Performance Subjects](sig-mendix-performance-subjects-explanation).
 
-#### 2.13.1 State Handling
+#### 2.12.1 State Handling
 
 This holds the current state of the app and communicates it to the Runtime Server. As the state is held in the Mendix Client, the Runtime Server can be stateless. This ensures that it is easier to scale your app horizontally by adding more instances as any instance can handle any request.
 The state includes the following
 
-* which page is being displayed
-* the state of objects which are maintained by the object manager:
+* the state of objects which are maintained by the object cache:
     * newly created and not-yet-committed persistable objects
     * non-persistable objects
     * attribute and association changes made to the objects
@@ -106,15 +103,15 @@ For more detailed information about state, see this blog: [https://www.mendix.co
 
 State handling is also responsible for garbage collection. If you want to know more about this aspect, see this blog: [https://www.mendix.com/blog/the-art-of-state-part-2-garbage-collection/](https://www.mendix.com/blog/the-art-of-state-part-2-garbage-collection/).
 
-#### 2.13.2 Synchronization
+#### 2.12.2 Synchronization
 
-Where an app is “Offline First”, data created and changed in the app is stored locally until it is synchronized with the Runtime Server. This job is carried out by the synchronization process. This synchronizes the offline storage and object cache with the Runtime Server. For more information on offline first apps and synchronization, see [Offline-First](offline-first).
+Where an app is “offline-first”, data created and changed in the app is stored locally until it is synchronized with the Runtime Server. This job is carried out by the synchronization process. This synchronizes the offline storage and object cache with the Runtime Server. For more information on offline-first apps and synchronization, see [Offline-First](offline-first).
 
-#### 2.13.3 Session
+#### 2.12.3 Session
 
 This ensures that any session with the runtime is kept alive and restored if necessary. It also acts as the authentication for all communications with the runtime which require it.
 
-### 2.14 Runtime Server
+### 2.13 Runtime Server
 
 The Runtime Server waits for requests from the Mendix Client, processes the request, and returns the requested data, plus any additional state information where appropriate. This is done through a private API called *xas*.
 
@@ -142,7 +139,7 @@ For more information, see [Pluggable Widgets API](/apidocs-mxsdk/apidocs/pluggab
 
 ### 3.2 Custom Widgets
 
-Custom widgets are written using Dojo and run on the web core framework using a previous version of the client API. Custom widgets can have access to some of the web core widgets through the API. However, they cannot use pluggable widgets or native core widgets which means that they cannot be used in native apps, or in offline hybrid apps. Custom widgets should only be used if you cannot create the functionality in a Pluggable widget.
+Custom widgets are written using Dojo and run on the web core framework using a previous version of the client API. Custom widgets can have access to some of the web core widgets through the API. However, they cannot use pluggable widgets or native core widgets which means that they cannot be used in native apps. Custom widgets should only be used if you cannot create the functionality in a Pluggable widget.
 
 For more information on Custom widgets, see [Hot To Build Custom Widgets](/howto/extensibility/widget-development).
 
@@ -201,7 +198,7 @@ When the app is deployed, the static resources are placed in a structure referre
 
 ### 4.2 Launching Native Mendix Client
 
-The flow when launching a native app is different from launching in a browser. More information is stored locally as part of the app, and a native app can even be designed to run “offline first”, which means that it can still be run without any connection to the Runtime Server.
+The flow when launching a native app is different from launching in a browser. More information is stored locally as part of the app, and a native app can even be designed to run “offline-first”, which means that it can still be run without any connection to the Runtime Server.
 
 The flow described here is for production apps. During development, the flow is not the same. This enables you to do faster deployments and online debugging.
 
@@ -209,18 +206,16 @@ The flow described here is for production apps. During development, the flow is 
 
 2. The shell app loads a native bundle. This is the equivalent of the Mendix Client resources used by the Mendix Client running in a browser. It contains, for example, the Mendix Client code and page definitions. However, it is held locally on the device rather than centrally with the Runtime Server.
 
-3. The Mendix Client contacts the Runtime Server and authenticates the end-user.
+3. If there is not a valid authentication token on the device, the Mendix Client contacts the Runtime Server and authenticates the end-user and gets any additional configuration required from the Runtime Server.
 
-4. The Mendix Client gets any additional configuration required from the Runtime Server.
+4. If this is the first time the app has been started, or the first time after an update to the app, the Mendix Client performs a synchronization with the Runtime Server.
 
-5. The Mendix Client performs a synchronization with the Runtime Server.
-
-6. The Mendix Client checks the resources stored in Visual Studio App Center for updates to the native bundle. This enables the app to keep up-to-date without needing to download new versions of the app from the app store.
+5. The Mendix Client checks the resources stored in Visual Studio App Center for updates to the native bundle. This enables the app to keep up-to-date without needing to download new versions of the app from the app store.
 
     *The Mendix Client is now ready to start interacting with the end-user and will repeat the following steps for as long as the continues to run.*
 
-7. The Mendix Client prepares a page using either offline or online data.
+6. The Mendix Client prepares a page using the data on the device.
 
-8. The Mendix Client presents the page to the end-user.
+7. The Mendix Client presents the page to the end-user.
 
-9. The Mendix Client reacts to the end-user input.
+8. The Mendix Client reacts to the end-user input.

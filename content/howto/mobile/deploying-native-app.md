@@ -71,6 +71,8 @@ The native builder uses the `prepare` command as well as a line of parameters in
 native-builder.exe prepare --project-name CoolApp --java-home "C:\Program Files\Java\jdk-11.0.3" --project-path "Y:\Documents\Mendix\CoolApp\CoolApp.mpr" --mxbuild-path "C:\Program Files\Mendix\8.6.0.715\modeler\mxbuild.exe" --github-access-token b609183aa226a8c2d962700be7a387bd7776e986 --appcenter-api-token 440725eb1311ddfced62894a4d23fc90843370c7 --appcenter-organization "cool-organization" --runtime-url "https://coolapp.mendixcloud.com" --app-name "My Cool App" --app-identifier "com.mendix.coolapp" --mendix-version "8.6.0"
 ```
 
+NB. To be valid the app-identifier needs to be in small-caps and no special characters.
+
 The `prepare` command  does the following:
 
 * Generates a private GitHub repository which will house the project's source code and configurations

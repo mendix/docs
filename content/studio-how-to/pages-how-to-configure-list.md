@@ -18,7 +18,9 @@ This how-to explains how you can configure a list of items and view the item det
 
 The how-to describes the following use case: 
 
-Sales Representatives in your company would like to view a list of opportunity contacts – potential customers. When Sales Representatives click a row in this list, the details of the corresponding opportunity contact are displayed next to the list. 
+Sales Representatives in your company would like to view a list of opportunity contacts – potential customers. When Sales Representatives click a row in this list, the details of the corresponding opportunity contact are displayed next to the list:
+
+![](attachments/pages-how-to-configure-list/configured-page.png)
 
 ## 2 Prerequisites
 
@@ -71,7 +73,7 @@ The page is created, now you need to configure it. First of all, you need to con
 
 	![List View Properties](attachments/pages-how-to-configure-list/list-view-entity.png)
 
-2. In the **Select Entity** dialog box, select *OpportunityContact* and confirm your choice by clicking **Select**. Now the list is connected to the *OpportunityContact* entity. 
+2. In the **Select Entity** dialog box, select **OpportunityContact** and confirm your choice by clicking **Select**. Now the list is connected to the **OpportunityContact** entity. 
 
 3. To display the name of each report per company, do the following:
 
@@ -83,7 +85,7 @@ The page is created, now you need to configure it. First of all, you need to con
 
     	<img src="attachments/pages-how-to-configure-list/text-content.png" style="zoom:60%;" />
 
-    3. In the **Select Attribute** dialog box, choose *Name* and click **Select**. 
+    3. In the **Select Attribute** dialog box, choose **Name** and click **Select**. 
 
 4. Delete the image from the list and the column where this image is placed, as now the image displays a a user image that does not correspond to opportunity contacts you are displaying.
     <img src="attachments/pages-how-to-configure-list/list-with-no-image.png" style="zoom:60%;" />
@@ -92,7 +94,7 @@ The page is created, now you need to configure it. First of all, you need to con
 
     <img src="attachments/pages-how-to-configure-list/container.png" style="zoom:50%;" />
 
-Now the list view will display a list of opportunity contacts by their name:
+Now the list view will display the list of opportunity contacts by their name:
 
 <img src="attachments/pages-how-to-configure-list/list-configured.png" alt="Configured List" style="zoom:80%;" /> 
 
@@ -106,41 +108,43 @@ Now you need to configure widgets inside the data view to show attributes of the
 
 To displayed all the details that a contact has, do the following:
 
-1. Delete the empty column and **Edit**, **Send Email**, and **Delete** buttons inside the data view as you will only  display data, not change it:
+1. Delete the empty column and **Edit**, **Send Email**, and **Delete** buttons inside the data view as you will only display data, not change it:
 
     ![](attachments/pages-how-to-configure-list/data-view-buttons.png)
 
 2. Double-click the *User Details* text widget (which is displayed as a data view heading) and rename it to *Opportunity Contact Details*. 
 
-3. Open the **Toolbox** and search for **Radio Buttons**, drag and drop it *inside* the data view above the *Name* text box.
+3. Open the **Toolbox** and search for **Radio Buttons**, drag and drop it *inside* the data view above the **Name** text box.
 
     ![](attachments/pages-how-to-configure-list/radio-buttons.png)
 
 4. Open radio buttons properties and click **Data Source** > **Attribute**.
 
-5. In the **Select Attribute** dialog box, choose *Title* and click **Select**:
+5. In the **Select Attribute** dialog box, choose **Title** and click **Select**:
 
     <img src="attachments/pages-how-to-configure-list/title.png" style="zoom:50%;" />
 
-6. Select the *Name* text box and click **Data Source** > **Attribute** in its properties. 
+6. Select the **Name** text box and click **Data Source** > **Attribute** in its properties. 
 
-7. In the **Select Attribute** dialog box, choose *Name* and click **Select**.
+7. In the **Select Attribute** dialog box, choose **Name** and click **Select**.
 
-8. Repeat steps 6 and 7 to set the **Phone** attribute for the *Phonenumber* text box, the **Email** attribute for the *Email* text box, **DateCreated**  for the *Birthday* text box, and **EstimatedValue** for the *Bio* text box. 
+8. Repeat steps 6 and 7 to set the **Phone** attribute for the **Phonenumber** text box, the **Email** attribute for the **Email** text box, **DateCreated**  for the **Birthday** text box, and **EstimatedValue** for the **Bio** text box. 
 
     ![](attachments/pages-how-to-configure-list/attributes-replaced.png)
 
-9. You lack information on the contact's job title and status. To add the job title information, open the **Toolbox**, search for a **Text Box**, drag and drop it inside the data view below the **Name** text box.
+9. You lack information on the contact's job title and status. To add the job title information, open the **Toolbox**, search for a **Text Box**, drag and drop it inside the data view below the **Name** text box:
+
+    ![](attachments/pages-how-to-configure-list/job-title-text-box.png)
 
 10. Open text box properties and click **Data Source** > **Attribute**. 
 
-11. In the **Select Attribute** dialog box, choose *JobTitle* and click **Select**.
+11. In the **Select Attribute** dialog box, choose **JobTitle** and click **Select**.
 
 12. To add the information on the opportunity contact's status, open the **Toolbox**, search for for **Radio Buttons**, drag and drop it inside the data view below the **Estimated Value** text box.
 
 13. Open the radio buttons properties and click **Data Source** > **Attribute**.
 
-14. In the **Select Attribute** dialog box, choose *Status* and click **Select**.
+14. In the **Select Attribute** dialog box, choose **Status** and click **Select**.
 
 Congratulations! You have a page that displays a list of opportunity contacts and the details of the selected contact:
 

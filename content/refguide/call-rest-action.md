@@ -97,6 +97,8 @@ This option allows you to generate a multipart/form-data request for multiple pa
 
 FileDocuments and images are are also supported for this option when used as variables in microflow expressions.
 
+Alternatively one can create a header with the name "Content-Type" and the value "multipart/form-data; boundary=*some unique String*". Then one can use the 'custom request template' option in the request body and write a personalised form-data body. This option should be chosen, if the out-of-the-box 'form-data' option does not work.
+
 #### 4.3.1 Content Type
 
 Setting up a **Content-Type header** for a form-data request will result in a consistency error, as it will automatically be set to **multipart/form-data**. 

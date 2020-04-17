@@ -248,17 +248,29 @@ Additional information can be found in the Mozilla developer guide [HTTP headers
 
 ### 4.3 Outgoing Connections Whitelisting (Mendix Cloud Dedicated)
 
-If you are deploying your apps to [Mendix Cloud Dedicated](https://www.mendix.com/evaluation-guide/app-capabilities/mendix-cloud-overview#mendix-cloud-vpc) you can define which IP addresses and ports can be used for outgoing connections in this section.
+If you are deploying your apps to [Mendix Cloud Dedicated](https://www.mendix.com/evaluation-guide/app-capabilities/mendix-cloud-overview#mendix-cloud-vpc), all outgoing IP addresses will be blacklisted. This means that, although users can still find and use your app, your app will not be able to make calls to any other services over the internet.
 
-You can add or edit a number of different IP address and port combinations. Any which have already been set up will be listed here. You can do the following:
+You can define which IP addresses and ports can be used for outgoing connections in this section.
+
+You can add or edit a number of different IP address and port combinations. Any ranges which have already been set up will be listed here. You can do the following:
 
 * Click **Add** to add a new range
 * Select an existing range and click **Edit** to edit an existing range
-* Select an existing range and click **Delete** to delete an existing range
+* Select an existing range and click **Delete** to delete an existing range (you will be asked to confirm that you want to delete this range)
 
-#### 4.3.1 Managing a Whitelist Entry
+#### 4.3.1 Managing a Whitelist Range
+
+For each range where you define whitelisted IP addresses and ports, you can enter the following information:
 
 ![](attachments/environments-details/whitelist.png)
+
+* **Name** – A name to identify this range
+* **IP** – An inclusive range of whitelisted IP addresses in IPv4 format — all addresses between the **Start** address and the **End** address will be whitelisted, including the start and end addresses. If you only want to whitelist a single address, make the start and end addresses the same
+* **Port** – An inclusive range of ports which will be whitelisted for the IP range above. You can use several whitelist entries if you want to whitelist different port ranges for the same IP range
+* **Protocol** – You can specify whether the whitelisting is for **TCP**, **UDP**, or **ALL** traffic
+* **Description** – an optional description of this IP range, for example which API it supports
+
+Click **Save** to save your range. The new values will be applied immediately.
 
 ### 4.4 Path-Based Access Restrictions
 

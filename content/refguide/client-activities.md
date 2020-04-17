@@ -5,26 +5,34 @@ menu_order: 50
 tags: ["studio pro", "client activities", "activities"]
 ---
 
-## Close Page
+## 1 Introduction
 
-See [Close Page](close-page).
+**Client Activities** perform activities in the client, for example, open a page or show a message. 
 
-## Download File
+There are following types of client activities:
 
-See [Download File](download-file).
+* [Close page](close-page) – closes the currently open page
 
-## Show Page
+	<img src="attachments/client-activities/close-page.png" alt="Close Page" style="zoom:50%;" />
 
-See [Show Page](show-page).
+* [Download file](download-file) – enables the browser to download a specific file
 
-## Show Home Page
+	<img src="attachments/client-activities/download-file.png" alt="Download File" style="zoom:50%;" />
 
-See [Show Home Page](show-home-page).
+* [Show page](show-page) – shows a selected page to an end-user
 
-## Show Message
+	<img src="attachments/client-activities/show-page.png" alt="Show Page" style="zoom:50%;" />
 
-See [Show Message](show-message).
+* [Show home page](show-home-page) – opens a home page for an end-user 
 
-## Validation Feedback
+	<img src="attachments/client-activities/show-home-page.png" alt="Show Home Page" style="zoom:50%;" />
 
-See [Validation Feedback](validation-feedback).
+* [Show message](show-message) – shows a message to an end-user
+
+	<img src="attachments/client-activities/show-message.png" alt="Show Message" style="zoom:50%;" />
+
+* [Validation feedback](validation-feedback) – does a validation check, and if this check fails, it shows a message to the end-user
+
+	<img src="attachments/client-activities/validation-feedback.png" alt="Validation Feedback" style="zoom:50%;" />
+
+

@@ -28,7 +28,7 @@ There are two sets of properties for this activity, those in the dialog box on t
 
 ![](attachments/client-activities/show-page-properties.png)
 
-The cast object properties pane consists of the following sections:
+The **Show page** properties pane consists of the following sections:
 
 * [Action](#action)
 * [Common](#common)
@@ -44,35 +44,23 @@ You can also open the dialog box by double-clicking the activity in the microflo
 
 ### 3.1 Input Section
 
-{{% alert type="info" %}}
-See [Common Properties](microflow-element-common-properties) for properties that all microflow activities share (for example, caption). This page only describes the properties specific to the action.
-{{% /alert %}}
-
 #### 3.1.1 Object to Pass {#object-to-pass}
 
-Object that will be passed to the opened page. This object will be used by [data views](data-view) with a page parameter data source.
+An object that will be passed to page that is opened. This object will be used by [data views](data-view) with a page parameter data source.
 
 ### 3.2 Action Section
 
 #### 3.2.1 Page
 
-The [page](page) that is displayed to an end-user. If the [Object to pass](#object-to-pass) is specified, the page must contain a data view connected to the same entity as the passed object (or its generalization).
+The [page](page) that is displayed to an end-user. If the [Object to pass](#object-to-pass) property is specified, the page must contain a data view connected to the same entity as the passed object (or its generalization).
 
-{{% alert type="info" %}}
-
-You can generate a new page to show by clicking 'Select...' and then 'New'. If you have selected an Object to pass Studio Pro will automatically generate a data view to edit that object.
-
-{{% /alert %}}
+To create a new page that **Show page** activity will show, click the **Select** button > **New**. If you have selected an **Object to pass**, Studio Pro will automatically create a data view to edit that object.
 
 #### 3.2.2 Page Title
 
 By default the title of the page is determined by the page title property of the page. You can replace this title with a custom title if necessary.
 
-{{% alert type="info" %}}
-
-This feature allows you to re-use the same page for the **New** and [Edit]() buttons of a data grid. By simply setting the titles to, for example, *New Customer* and *Edit Customer*, you can save yourself the trouble of duplicating pages.
-
-{{% /alert %}}
+This feature allows you to re-use the same page for the **New** and **Edit** buttons of a [data grid](data-grid). By simply setting the titles to, for example, *New Customer* and *Edit Customer*, you can save yourself the trouble of duplicating pages.
 
 ## 4 Common Section{#common}
 

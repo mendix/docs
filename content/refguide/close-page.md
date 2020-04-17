@@ -16,13 +16,13 @@ This action is ignored and does not work when a microflow is called from an offl
 
 ## 1 Introduction
 
-The **Close page** activity closes the currently open page. For example, if can be used to close a pop-up page:
+The **Close page** activity closes the currently open page. For example, it can be used to close a pop-up page:
 
-<img src="attachments/client-activities/close-page-example.png" style="zoom:50%;" />
+<img src="attachments/client-activities/close-page.png" style="zoom:50%;" />
 
 ## 2 Properties
 
-The close page activity properties consists of the following sections:
+The **Close page** activity properties consists of the following sections:
 
 * **Action** – shows the activity type
 * **Common**  – contain properties common for many microflow elements; for more information on these properties, see the [Common Properties](microflow-element-common-properties) 

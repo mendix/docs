@@ -124,22 +124,24 @@ For a description of the Runtime Server, see [Runtime Server](runtime-server).
 Mendix pages are constructed from individual widgets. There are two types of widget which each run on a separate widget framework. Each widget framework provides APIs and controls the lifecycle of the widget.
 The two types of widget are:
 
-* Pluggable widgets
-* Custom widgets
+* Native core widgets
+* Web core widgets
 
 These are described in the sections below.
 
-### 3.1 Pluggable Widgets
+### 3.1 Native Core Widgets
 
-Pluggable widgets are reusable UI components written in React or React Native. This is a more powerful language than Dojo, which is used for Custom widgets, and is the recommended way of writing widgets. Pluggable widgets run on the native core framework using the pluggable widgets API which enables different pluggable widgets to communicate. They have limited access to web core widgets, but full access to the native core.
+Native Core widgets are reusable UI components written in React or React Native. They run on the native core framework using the an API which enables different native core widgets to communicate. This framework replaces the web core described below.
 
-Pluggable widgets have many advantages over Custom widgets. For example, you can use conditional visibility and editability, and can place a Pluggable widget inside another Pluggable widget.
+Mendix has a number of native core widgets which support the standard functions of Mendix pages. You can also write your own native core widgets, called **Pluggable widgets**. These are the recommended way of writing widgets and replace Custom widgets, described below. They have limited access to web core widgets, but full access to the native core. Pluggable widgets have many advantages over Custom widgets. For example, you can use conditional visibility and editability, and can place a Pluggable widget inside another Pluggable widget.
 
 For more information, see [Pluggable Widgets API](/apidocs-mxsdk/apidocs/pluggable-widgets).
 
-### 3.2 Custom Widgets
+### 3.2 Web Core Widgets
 
-Custom widgets are written using Dojo and run on the web core framework using a previous version of the client API. Custom widgets can have access to some of the web core widgets through the API. However, they cannot use pluggable widgets or native core widgets which means that they cannot be used in native apps. Custom widgets should only be used if you cannot create the functionality in a Pluggable widget.
+Web core widgets are written using Dojo and run on the web core framework using a previous version of the client API.
+
+You can write your own **Custom widgets** which have access to some of the web core widgets through the API. However, they cannot use pluggable widgets or other native core widgets which means that they cannot be used in native apps. Custom widgets should only be used if you cannot create the functionality in a Pluggable widget.
 
 For more information on Custom widgets, see [Hot To Build Custom Widgets](/howto/extensibility/widget-development).
 
@@ -193,7 +195,7 @@ When the app is deployed, the static resources are placed in a structure referre
 * index.html – the initial HTML page which is loaded when the end-user starts the Mendix Client — this contains the client configuration and other static non-Mendix content (for example if Google analytics is added to the app)
 * mxui.js – the main Mendix Client code
 * app styling/Atlas – the app-specific css styling and static visual elements which define how a page is displayed
-* widgets – both custom and pluggable widgets which are used by this app
+* widgets – both native and web core widgets which are used by this app
 * page definitions – xml page definitions which tell the Mendix Client what the pages for this app look like
 
 ### 4.2 Launching Native Mendix Client

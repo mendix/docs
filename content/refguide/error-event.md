@@ -36,17 +36,17 @@ When an error occurs in a microflow, all changes that have been made to objects 
 ### 2.1 Error Handlers {#errorhandlers}
 
 An error handler can be set on a microflow activity, decision, or loop.
-On an activity or decision, it gives you three options:
 
-*   Rollback (default)
-*   Custom with rollback
-*   Custom without rollback
+On an activity or decision, you have three options:
+
+*   **Rollback** (default)
+*   **Custom with rollback**
+*   **Custom without rollback**
 
 For the latter two options you can draw an additional flow from the block and mark this flow as the error handler flow. When selecting 'Custom with rollback' it will trigger this path when the error occurs and still rollback your objects afterwards. The 'Custom without rollback' option does not rollback the objects. After you selected a flow as the error handler it will show this as in the following image.
 
 {{% alert type="info" %}}
-Error handling is only specified for an individual action. The ‘without rollback’ in ‘custom without rollback’ is only targeted at the action itself, not the error handling.
-There is a slight difference between `custom with rollback` and `custom without rollback' throwing the same exception or another one in the error handler`. In the latter case, you still have access to database objects you've created until the end of error handler.
+Error handling is only specified for an individual action. The "without rollback" in the **Custom without rollback** option is only targeted at the action itself, not the error handling. There is thus a slight difference between **Custom with rollback** and **Custom without rollback** throwing the same exception or another one in the error handler. In the latter case, you will still have access to the database objects you have created until the end of error handler.
 {{% /alert %}}
 
 ![](attachments/microflows-and-nanoflows/918247.png)

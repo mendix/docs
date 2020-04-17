@@ -63,13 +63,13 @@ These are functions of the device on which the Mendix Client is running. In most
 
 ### 2.8 Client Config
 
-This is the static data which is needed by the Mendix Client. For a browser-based client, this data is held online, with the Runtime Server. For native apps, this is held locally in a native bundle.
+This is the static data which is needed by the Mendix Client. For a browser-based client, this data is held online, with the Runtime Server. For native apps, this is held locally on the device.
 
 These include the shell page needed to start the Mendix Client, Cascading Style Sheets (css files) which define the app’s theme, and JavaScript files which define client-side logic.
 
 ### 2.9 Data API
 
-This allows the Mendix Client to communicate with Offline Storage.
+This allows the Mendix Client to fetch and manipulate data in offline storage or the Mendix Runtime.
 
 ### 2.10 Object Cache
 
@@ -89,7 +89,7 @@ For more information about the communication between the Mendix Client and the R
 
 #### 2.12.1 State Handling
 
-This holds the current state of the app and communicates it to the Runtime Server. As the state is held in the Mendix Client, the Runtime Server can be stateless. This ensures that it is easier to scale your app horizontally by adding more instances as any instance can handle any request.
+This communicates the current state of the app (held in the object cache) to the Runtime Server. As the state is held in the Mendix Client, the Runtime Server can be stateless. This ensures that it is easier to scale your app horizontally by adding more instances as any instance can handle any request.
 The state includes the following
 
 * the state of objects which are maintained by the object cache:
@@ -204,7 +204,7 @@ The flow when launching a native app is different from launching in a browser. M
 
 The flow described here is for production apps. During development, the flow is not the same. This enables you to do faster deployments and online debugging.
 
-1. The end-user opens the app on their device. This is a project specific shell app, which runs natively on iOS or Android. It is released to the app store appropriate for the device. If a new version of the app is downloaded to the device, the app will behave as if the end-user has opened it, even if it was already open on their device.
+1. The end-user opens the app on their device. This is a project specific shell app, which runs natively on iOS or Android. It is released to the app store appropriate for the device. If a new version of the app is downloaded to the device, the app will behave as if the end-user has opened it for the first time, even if it was already open on their device.
 
 2. The shell app loads a native bundle. This is the equivalent of the Mendix Client resources used by the Mendix Client running in a browser. It contains, for example, the Mendix Client code and page definitions. However, it is held locally on the device rather than centrally with the Runtime Server.
 

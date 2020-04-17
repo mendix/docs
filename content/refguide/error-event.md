@@ -44,6 +44,10 @@ On an activity or decision, it gives you three options:
 
 For the latter two options you can draw an additional flow from the block and mark this flow as the error handler flow. When selecting 'Custom with rollback' it will trigger this path when the error occurs and still rollback your objects afterwards. The 'Custom without rollback' option does not rollback the objects. After you selected a flow as the error handler it will show this as in the following image.
 
+{{% alert type="info" %}}
+There is a slight difference between `custom with rollback` and `custom without rollback' throwing the same exception or another one in the error handler`. In the latter case, you still have access to database objects you've created until the end of error handler.
+{{% /alert %}}
+
 ![](attachments/microflows-and-nanoflows/918247.png)
 
 On a loop you get two options:

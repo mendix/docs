@@ -14,7 +14,7 @@ This description of the Runtime Server is based on an app running in the cloud. 
 
 ## 2 Description
 
-The Runtime Server is deployed to the cloud (see [Runtime Deployment](runtime-deployment) for more information) and waits for requests from the Mendix Client or a call from another app or service. It processes the request and returns the requested data, plus any additional state information where appropriate. For details of how this communication takes place, see [SIG–Mendix Performance Subjects](sig-mendix-performance-subjects-explanation). The Runtime Server itself is stateless, which enables it to be efficiently scaled to multiple instances.
+The Runtime Server is deployed to the cloud (see [Runtime Deployment](runtime-deployment) for more information) and waits for requests from the Mendix Client or a call from another app or service. It processes the request and returns the requested data, plus any additional state information where appropriate. For details of how this communication takes place, see [SIG–Mendix Performance Subjects](sig-mendix-performance-subjects-explanation). The Runtime Server itself is stateless, which allows it to be efficiently scaled to multiple instances.
 
 Below is a chart showing the components of the Runtime Server. Each of the components is described below the chart.
 
@@ -22,13 +22,13 @@ Below is a chart showing the components of the Runtime Server. Each of the compo
 
 ### 2.1 M2ee
 
-M2ee is used to launch the Runtime Server when your app is deployed to the cloud. Once the Runtime Server is running, m2ee can be used to connect back to the Runtime Server, issuing commands like setting log levels, asking how many users are logged in, showing currently running actions inside the application, or even telling it to shut down itself.
+M2ee is used to launch the Runtime Server when your app is deployed to the cloud. Once the Runtime Server is running, m2ee can be used to connect back to the Runtime Server, issuing commands like setting log levels, asking how many users are logged in, showing currently running actions inside the application, or even telling it to shut itself down.
 
 M2ee communicates with the Runtime Server through authenticated POST requests, in JSON format, which are sent to the administration port of the Runtime Server.
 
 ### 2.2 Runtime Core
 
-This is an interpreter written in Java and Scala, which uses the project model to decide how to process a request from the Mendix Client or a request from an external service and controls the various processes which need to take place to service the request.
+This is an interpreter written in Java and Scala, which uses the project model to decide how to process a request from the Mendix Client or a request from an external service, and controls the various processes which need to take place to service the request.
 
 ### 2.3 Project Model
 
@@ -68,7 +68,9 @@ This is the database (or sometimes the schema of a shared database) which holds 
 
 This manages the CRUD (create, read, update, and delete) operations for retrieving and storing data in the relational database which is bound to the app. The operations are performed using SQL which is tailored to the underlying database.
 
-Where queries are not formatted in SQL, the query executor will convert them from their original format (XPath or OQL for example). It also applies the security which is set within the app.
+Where queries are not formatted in SQL, the query executor will convert them from their original format (XPath or OQL for example).
+
+It also applies the security which is set within the app.
 
 ### 2.12 Object Manager
 

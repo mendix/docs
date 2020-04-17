@@ -246,7 +246,21 @@ The changes to the headers will be implemented when the app is redeployed.
 
 Additional information can be found in the Mozilla developer guide [HTTP headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers).
 
-### 4.3 Path-Based Access Restrictions
+### 4.3 Outgoing Connections Whitelisting (Mendix Cloud Dedicated)
+
+If you are deploying your apps to [Mendix Cloud Dedicated](https://www.mendix.com/evaluation-guide/app-capabilities/mendix-cloud-overview#mendix-cloud-vpc) you can define which IP addresses and ports can be used for outgoing connections in this section.
+
+You can add or edit a number of different IP address and port combinations. Any which have already been set up will be listed here. You can do the following:
+
+* Click **Add** to add a new range
+* Select an existing range and click **Edit** to edit an existing range
+* Select an existing range and click **Delete** to delete an existing range
+
+#### 4.3.1 Managing a Whitelist Entry
+
+![](attachments/environments-details/whitelist.png)
+
+### 4.4 Path-Based Access Restrictions
 
 You can restrict access to your application by means of Client Certificates or IP ranges.
 
@@ -269,7 +283,7 @@ You can **Delete** a path or you can **Add** and **Edit** a path with the follow
 
 For more information, see [How to Restrict Access for Incoming Requests](access-restrictions).
 
-### 4.4 Outgoing Connections Certificates
+### 4.5 Outgoing Connections Certificates
 
 Add client certificates (in the PKCS12 format) or certificate authorities (in the PEM format). These will be used when your application initiates SSL/TLS connections.
 

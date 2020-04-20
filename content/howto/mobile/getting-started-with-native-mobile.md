@@ -33,26 +33,12 @@ For details on making a Mendix app using the Native Mobile Quickstart app templa
 
 To start a new app based on a template, follow these steps:
 
-1.  Open Mendix Studio Pro. Select **File** > **New Project** , and then select the **Native Mobile Quickstart** app: 
-
-	![mobile quickstart app](attachments/getting-started-with-native-mobile/native-mobile-quickstart.png)
-
-2.  Next, click **Use this starting point**:
-
-	![starting point button](attachments/getting-started-with-native-mobile/use-this-starting-point.png)
-
-3.  Click **Create app** to close the dialog box:
-
-	{{% image_container width="500" %}}![create app button](attachments/getting-started-with-native-mobile/create-app.png){{% /image_container %}}
-
-4.  Click **Run Locally** to see the app in action.
-5.  After running your app, you may see a Windows Security Alert dialog box. Accept the permissions selected by default and click **Allow access** to close the dialog box: 
-
-	{{% image_container width="500" %}}![firewall dialog box](attachments/getting-started-with-native-mobile/firewall-dialog.png){{% /image_container %}}
-
-6.  If asked to create database **'default'**, click **Yes**:
-
-	{{% image_container width="500" %}}![database dialog box](attachments/getting-started-with-native-mobile/database-dialog.png){{% /image_container %}}
+1. Open Mendix Studio Pro. Select **File** > **New Project** , and then select the **Native Mobile Quickstart** app.
+2. Click **Use this starting point**.
+3. Click **Create app** to close the dialog box.
+4. Click **Run Locally** to see the app in action.
+5. After running your app, you may see a Windows Security Alert dialog box. Accept the permissions selected by default and click **Allow access** to close the dialog box.
+6.  If asked to create database **'default'**, click **Yes**.
 
 At this point you have a running native app. To view your app on a mobile device, however, you need to download the Make It Native app.
 
@@ -103,13 +89,9 @@ To see how changes made in Mendix Studio Pro are displayed live on your testing 
 
 	![new studio pro text](attachments/getting-started-with-native-mobile/new-text-studiopro.png)
 
-2.  Click **Run Locally** to automatically update the running app on your device, and see your new text:
+2. Click **Run Locally** to automatically update the running app on your device, and see your new text. When you click **Run Locally**, your app will automatically reload while keeping state. 
 
-	![new app text](attachments/getting-started-with-native-mobile/new-text-app.png)
-	
-	When you click **Run Locally**, your app will automatically reload while keeping state. 
-
-Should you get an error screen while testing your app, there are easy ways to restart it: 
+If you get an error screen while testing your app, there are easy ways to restart it: 
 
 * Tap your test app with three fingers to restart your app
 * With the **Enable dev mode** toggle turned on, hold a three-fingered tap to bring up the developer app menu – here you can access **ADVANCED SETTINGS** and **ENABLE REMOTE JS DEBUGGING** 

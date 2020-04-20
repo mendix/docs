@@ -1027,7 +1027,7 @@ The widget’s style properties are as follows:
 | Element | Style Properties | Description |
 | --- | --- | --- |
 | `container` | This has all ViewStyle properties. | |
-| `containerWhenExpandedFullscreen` | This has all ViewStyle properties. | Only available if `Expading` and `Enable full screen` are enable |
+| `containerWhenExpandedFullscreen` | This has all ViewStyle properties. | Only available if `Expading` and `Enable full screen` are enabled. |
 | `modal` | This has all ViewStyle properties. | |
 | `defaultStyle` | This has all TextStyle properties. | Available when `Default` is selected as style for basic items. |
 | `primaryStyle` | This has all TextStyle properties. | Available when `Primary` is selected as style for basic items. |

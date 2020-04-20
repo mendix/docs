@@ -1002,10 +1002,12 @@ The default class to style all animation widgets is named `com_mendix_widget_nat
 
 ### 11.22 Bottom sheet
 
-The bottom sheet widget creates a draggable surface anchored to the bottom of the screen or creates a set of options while blocking interaction with the rest of the screen. We have two customizable variations:
+The bottom sheet widget creates a set of options while blocking interaction with the rest of the screen or a draggable surface anchored to the bottom of the screen. We have two customizable variations:
 
+Modal bottom sheet:
 {{% image_container width="350" %}}![modal bottom sheet](attachments/native-styling-refguide/modal-bottom-sheet.gif){{% /image_container %}}
 
+Expanding bottom sheet:
 {{% image_container width="350" %}}![expanding bottom sheet](attachments/native-styling-refguide/expanding-bottom-sheet.gif){{% /image_container %}}
 
 The widget’s style properties are as follows:
@@ -1025,12 +1027,12 @@ The widget’s style properties are as follows:
 | Element | Style Properties | Description |
 | --- | --- | --- |
 | `container` | This has all ViewStyle properties. | |
-| `containerWhenExpandedFullscreen` | This has all ViewStyle properties. Only available if `Expading` and `Enable full screen` are enable | |
-| `modal` | This has all ViewStyle properties. |
-| `modalItems` | `defaultStyle` | This has all TextStyle properties. |
-| `modalItems` | `primaryStyle` | This has all TextStyle properties. |
-| `modalItems` | `dangerStyle` | This has all TextStyle properties. |
-| `modalItems` | `customStyle` | This has all TextStyle properties. |
+| `containerWhenExpandedFullscreen` | This has all ViewStyle properties. | Only available if `Expading` and `Enable full screen` are enable |
+| `modal` | This has all ViewStyle properties. | |
+| `defaultStyle` | This has all TextStyle properties. | Available when `Default` is selected as style for basic items. |
+| `primaryStyle` | This has all TextStyle properties. | Available when `Primary` is selected as style for basic items. |
+| `dangerStyle` | This has all TextStyle properties. | Available when `Danger` is selected as style for basic items. |
+| `customStyle` | This has all TextStyle properties. | Available when `Custom` is selected as style for basic items. |
 
 The default class to style all bottom sheet widgets is named `com_mendix_widget_native_bottomsheet_BottomSheet`.
 

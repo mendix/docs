@@ -1000,6 +1000,40 @@ The widget’s style properties are as follows:
 
 The default class to style all animation widgets is named `com_mendix_widget_native_listviewswipe_ListViewSwipe`.
 
+### 11.22 Bottom sheet
+
+The bottom sheet widget creates a draggable surface anchored to the bottom of the screen or creates a set of options while blocking interaction with the rest of the screen. We have two customizable variations:
+
+{{% image_container width="350" %}}![modal bottom sheet](attachments/native-styling-refguide/modal-bottom-sheet.gif){{% /image_container %}}
+
+{{% image_container width="350" %}}![expanding bottom sheet](attachments/native-styling-refguide/expanding-bottom-sheet.gif){{% /image_container %}}
+
+The widget’s style properties are as follows:
+
+```xml
+<container />
+<containerWhenExpandedFullscreen />
+<modal />
+<modalItems>
+	<defaultStyle />
+	<primaryStyle />
+	<dangerStyle />
+	<customStyle />
+</modalItems>
+```
+
+| Element | Style Properties | Description |
+| --- | --- | --- |
+| `container` | This has all ViewStyle properties. | |
+| `containerWhenExpandedFullscreen` | This has all ViewStyle properties. Only available if `Expading` and `Enable full screen` are enable | |
+| `modal` | This has all ViewStyle properties. |
+| `modalItems` | `defaultStyle` | This has all TextStyle properties. |
+| `modalItems` | `primaryStyle` | This has all TextStyle properties. |
+| `modalItems` | `dangerStyle` | This has all TextStyle properties. |
+| `modalItems` | `customStyle` | This has all TextStyle properties. |
+
+The default class to style all bottom sheet widgets is named `com_mendix_widget_native_bottomsheet_BottomSheet`.
+
 ## 12 Read More
 
 * [Style Your Mendix Native App](/howto/mobile/how-to-use-native-styling)

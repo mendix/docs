@@ -16,7 +16,7 @@ This action is ignored and does not work when a microflow is called from an offl
 
 ## 1 Introduction
 
-The **Validation feedback** activity does a validation check, and if this check fails, it shows a message to the end-user, a red text below a widget that displays an attribute or association. If this message is shown that means that a validation check has not passed. For example, if the customer did not verify their email, a message will be displayed that the customer should verify it before they can log in:
+The **Validation feedback** activity does a validation check, and if this check fails, it shows a red message to the end-user below the widget that displays the attribute or association which failed the validation. For example, if the customer did not verify their email, a message will be displayed that the customer should verify it before they can log in:
 
 <img src="attachments/client-activities/validation-feedback.png" alt="Validation Feedback" style="zoom:50%;" />
 
@@ -47,7 +47,7 @@ You can also open the dialog box by double-clicking the activity in the microflo
 
 #### 3.1.2 Member
 
-**Member** defines for which attribute or association the message will be shown. In you have a [reference selector](reference-selector) or [reference set selector](reference-set-selector), you should select an association that is edited with these widgets.
+**Member** defines for which attribute or association the message will be shown. In you have a [reference selector](reference-selector) or [reference set selector](reference-set-selector), you should select the association that is edited with these widgets.
 
 #### 3.1.3 Template
 

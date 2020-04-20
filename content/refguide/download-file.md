@@ -44,7 +44,7 @@ You can also open the dialog box by double-clicking the activity in the microflo
 
 #### 3.1.1 File document
 
-Input file document defines the file to be downloaded. The information of the file is stored in an object of entity System.FileDocument or a specialization.
+File document specifies the file to be downloaded. The file data is stored in an object of entity System.FileDocument or a specialization of this entity.
 
 ### 3.2 Action Section
 
@@ -63,7 +63,7 @@ On mobile devices files are always shown in a browser window.
 
 {{% /alert %}}
 
-Many browsers implement pop-up window blockers preventing them to be opened non-interactively, such as through a microflow. For mobile devices, this means that triggering downloads from a microflow is only possible after disabling the pop-up window blocker. You could consider using a **File Manager** widget to let the user initiate the download manually.
+Many browsers implement pop-up window blockers preventing them from being opened non-interactively, such as through a microflow. For mobile devices, this means that triggering downloads from a microflow is only possible after disabling the pop-up window blocker. You could consider using a **File Manager** widget to let the user initiate the download manually.
 
 ## 4 Common Section {#common}
 

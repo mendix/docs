@@ -16,11 +16,11 @@ This action is ignored and does not work when a microflow is called from an offl
 
 ## 1 Introduction
 
-The **Show home page** activity opens a home page for an end-user. For example, you can navigate your user to a home page when they are not logged in. 
+The **Show home page** activity opens the home page for an end-user. For example, you can navigate your user to the home page when they are not logged in. 
 
 <img src="attachments/client-activities/show-home-page.png" alt="Show Home Page" style="zoom:50%;" />
 
-This activity shows the same page that is displayed to the end-user after they log in, meaning it shows a home page defined for the current user role. For more information on role-based home pages, see [Navigation](navigation).
+This activity shows the same page that is displayed to the end-user after they log in, meaning it shows the home page defined for the current user role. For more information on role-based home pages, see [Navigation](navigation).
 
 ## 2 Properties
 

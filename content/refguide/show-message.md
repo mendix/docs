@@ -16,7 +16,7 @@ This action is ignored and does not work when a microflow is called from an offl
 
 ## 1 Introduction
 
-The **Show message** activity shows a blocking or non-blocking message to an end-user. For example, if an end-user did not select the customer grade in a form, you can show an error message telling them to select a grade to proceed:
+The **Show message** activity shows a blocking or non-blocking message to an end-user. For example, if the end-user did not select the customer grade in a form, you can show an error message telling them to select a grade to proceed:
 
 <img src="attachments/client-activities/show-message.png" alt="Show Message" style="zoom:50%;" />
 
@@ -57,13 +57,13 @@ There are three message options:
 
 #### 3.1.3 Parameters
 
-Parameters are attributes the value of which will be displayed. Parameters need to be entered using [expressions](expressions) resulting in a string.
+Parameters are attributes, the value of which will be displayed. Parameters need to be entered using [expressions](expressions) resulting in a string.
 
-With parameters you can customize your message with data specific to the situation. For example, the message "An e-mail has been sent to customer {1}." with parameter `$customer/FullName` will show the full name of the customer who an e-mail is sent to.
+With parameters you can customize your message with data specific to the situation. For example, the message "An e-mail has been sent to customer {1}." with parameter `$customer/FullName` will show the full name of the customer who an e-mail has been sent to.
 
 #### 3.1.4 Blocking
 
-The **Blocking** property defines whether the message shown to the end-user is blocking or not. Non-blocking message lets users continue their work in the app with the pop-up window open, while the blocking message does not let the user continue work until the pop-up window is closed.
+The **Blocking** property defines whether the message shown to the end-user is blocking or not. A non-blocking message lets users continue their work in the app with the pop-up window open, while a blocking message does not let the user continue work until the pop-up window is closed.
 
 | Option | Description |
 | --- | --- |

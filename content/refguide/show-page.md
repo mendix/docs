@@ -46,7 +46,7 @@ You can also open the dialog box by double-clicking the activity in the microflo
 
 #### 3.1.1 Object to Pass {#object-to-pass}
 
-An object that will be passed to page that is opened. This object will be used by [data views](data-view) with a page parameter data source.
+An object that will be passed to the page that is opened. This object will be used by [data views](data-view) with a page parameter data source.
 
 ### 3.2 Action Section
 

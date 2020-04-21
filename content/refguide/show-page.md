@@ -32,7 +32,6 @@ The **Show page** properties pane consists of the following sections:
 
 * [Action](#action)
 * [Common](#common)
-* [Input](#input)
 
 ## 3 Action {#action}
 
@@ -44,11 +43,15 @@ You can also open the dialog box by double-clicking the activity in the microflo
 
 ### 3.1 Input Section
 
+This is the section that is shown in the properties dialog box.
+
 #### 3.1.1 Object to Pass {#object-to-pass}
 
 An object that will be passed to the page that is opened. This object will be used by [data views](data-view) with a page parameter data source.
 
 ### 3.2 Action Section
+
+This is the section that is shown in the properties dialog box.
 
 #### 3.2.1 Page
 

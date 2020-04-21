@@ -26,5 +26,14 @@ This activity shows the same page that is displayed to the end-user after they l
 
 The **Show home page** activity properties consists of the following sections:
 
-* **Action** – shows the activity type
-* **Common**  – contain properties common for many microflow elements; for more information on these properties, see the [Common Properties](microflow-element-common-properties) 
+* [Action](#action)
+* [Common](#common)
+
+## 3 Action {#action}
+
+Shows the activity type.
+
+## 4 Common {#common}
+
+Contain properties common for many microflow elements; for more information on these properties, see the [Common Properties](microflow-element-common-properties).
+

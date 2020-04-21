@@ -6,7 +6,7 @@ tags: ["xml", "widget"]
 
 ## 1 Requirements
 
-This document assumes you have a basic understanding of XML and Mendix Studio Pro. For more information on XML, visit [W3 Schools - XML](http://w3schools.com/xml/). To learn more about Mendix Studio Pro, watch the [Getting Started](https://gettingstarted.mendixcloud.com/index.html) videos.
+This document assumes you have a basic understanding of XML and Mendix Studio Pro. For more information on XML, visit [W3 Schools - XML](http://w3schools.com/xml/).
 
 ## 2 Start of the Widget XML
 

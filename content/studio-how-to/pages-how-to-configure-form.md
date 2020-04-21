@@ -112,13 +112,30 @@ Follow the steps below:
 
     <img src="attachments/pages-how-to-configure-form/data-grid-over-association.png" style="zoom:50%;" />
 
-5. As the purpose of the page is to display information, you do not need the **Search** section in the data grid. Open data grid properties > **Search** section and disable the **Enable Search** toggle:
+5. As the main purpose of the page is to display information, you do not need the **Search** section in the data grid. Open data grid properties > **Search** section and disable the **Enable Search** toggle:
 
     ![Data Grid Search](attachments/pages-how-to-configure-form/data-grid-search.png)
 
-6. You also do not need **Search**, **New**, **Edit**, and **Delete** buttons in the data grid. Open data grid properties > **Control Bar** section and disable the **Show Buttons** toggle:
+6. To be able to add new checklist items to the report, select the **New** button in the data grid and open its properties.
 
-	![Show Buttons Toggle](attachments/pages-how-to-configure-form/data-grid-show-buttons.png)
+7. Set the **On Click Action** to **Page**. 
+
+8. Enable **Create Object** property. The Entity property is automatically set to **Checklist**:
+
+    <img src="attachments/pages-how-to-configure-form/new-button-properties.png" style="zoom:60%;" />
+
+9. Click the **Page** property.
+
+10. In the **Select Page** dialog box, click **New Page**.
+
+11. In the **Create new page** dialog box, fill in the page title and set the **Layout** to **PopupLayout**. 
+
+12. The **Pre-fill page contents based on the Checklist entity** option is on, so the page template (Forms) is selected automatically for you. Choose **Forms Columns**:
+
+     <img src="attachments/pages-how-to-configure-form/new-checklist.png" style="zoom:67%;" />
+
+13. Click **Create**.
+14. A pop-up page where end-users can add new checklist items is created. Now you can select the same page as an on-click action 
 
 Now checklist items are displayed in the table.
 

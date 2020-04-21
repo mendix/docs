@@ -19,7 +19,7 @@ The how-to describes the following use case:
 
 You have an HR app where employees can view and edit information about themselves, such as contract details and personal information. You have a page with employee details:
 
-<img src="attachments/pages-how-to-set-validation-and-editability/employee-details-page.png" style="zoom:50%;" />
+<img src="attachments/pages-how-to-set-validation-and-editability/employee-details-page.png" style="zoom:60%;" />
 
 You would like to make some fields on this page obligatory to fill in (required) and some read-only.
 
@@ -47,6 +47,8 @@ To make a field read-only, do the following:
 1. Open the **Employee Details** page.
 
 2. Select the **Contract type** field and open its properties.
+
+    <img src="attachments/pages-how-to-set-validation-and-editability/contract-type.png" style="zoom:50%;" />
 
 3. In the **General** section, set the **Editability** property to read-only:
 

@@ -51,7 +51,7 @@ Click a meetup of your interest to find out details about the location and agend
 
 The Mendix Academy offers both self-paced online training and classroom instruction from our team of experts. These training opportunities can be used in coordination with the [Mendix Developer Certification Program](https://gettingstarted.mendixcloud.com/link/certification) to develop and validate your Mendix expertise.
 
-In the **Academy** section of the Mendix Community site, you can see links to our beginner, intermediate, and advanced learning paths in the [Mendix Academy](https://gettingstarted.mendixcloud.com):
+In the **Academy** section of the Mendix Community site, you can see links to our beginner, intermediate, and advanced learning paths in the [Mendix Academy](https://gettingstarted.mendixcloud.com/link/home):
 
 {{% image_container width="550" %}}
 ![](attachments/the-community-site/academy1.png)

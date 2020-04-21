@@ -29,6 +29,10 @@ When running the Mendix application on SAP Cloud Platform, you can choose to use
 The SAP Destination Service replaces the SAP Cloud Connector flag which was used in previous version of the OData Connector for SAP solutions
 {{% /alert %}}
 
+{{% alert type="info" %}}
+The SAP Destination Service works without current user logged in for only No Authentication and Basic Authentication.
+{{% /alert %}}
+
 ## 2 Using the OData Connector for SAP Solutions{#UsingtheSAPODataConnector}
 
 Once you have downloaded the OData Connector for SAP solutions from the App Store, it will be imported into your app. You will find it in the Project Explorer under project **{Project name}** > **App Store modules** > **SAPODataConnector**.
@@ -99,10 +103,6 @@ This domain model generally works in the same way as a Mendix domain model, with
 
 * Every object is based on an entity which is a specialization of the ComplexType, FunctionParameters, or OdataObject entity. The OdataObject entity adds a **meta_objectURI** string, which is the URI of the object and can be used in entity manipulation actions, and a **meta_etag** string that identifies a state of the object. This is used by the OData service when you try to change data to check if it has been changed since it was retrieved by your app.
 * Many objects have attributes which end in …Deferred. These contain URIs which will return a list of objects of an entity type which is associated with the current object. For example: in the domain model above, the **Product** entity contains an attribute **ToSupplierDeferred**. This will contain a URI which can be used to return the **BusinessPartner** associated with the current **Product** object via the **ToSupplier_Product_BusinessPartner** association.
-
-{{% alert type="info" %}}
-If you are using the *SAP Destination Service* to identify the endpoint of your SAP OData Service, you will need to edit the strings from the  meta_objectURI and …Deferred attributes as they will already contain an endpoint in addition to the object references.
-{{% /alert %}}
 
 #### 2.3.2 OData Connector for SAP Solutions Domain Model<a name='ConnectorDM'></a>
 

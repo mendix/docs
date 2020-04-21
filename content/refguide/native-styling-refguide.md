@@ -1000,15 +1000,17 @@ The widget’s style properties are as follows:
 
 The default class to style all animation widgets is named `com_mendix_widget_native_listviewswipe_ListViewSwipe`.
 
-### 11.22 Bottom sheet
+### 11.22 Bottom Sheet
 
-The bottom sheet widget creates a set of options while blocking interaction with the rest of the screen or a draggable surface anchored to the bottom of the screen. We have two customizable variations:
+The bottom sheet widget creates a set of options while blocking interaction with the rest of the screen or a draggable surface anchored to the bottom of the screen. There are two customizable variations:
 
-Modal bottom sheet:
-{{% image_container width="350" %}}![modal bottom sheet](attachments/native-styling-refguide/modal-bottom-sheet.gif){{% /image_container %}}
+* Modal bottom sheet:
 
-Expanding bottom sheet:
-{{% image_container width="350" %}}![expanding bottom sheet](attachments/native-styling-refguide/expanding-bottom-sheet.gif){{% /image_container %}}
+	{{% image_container width="350" %}}![modal bottom sheet](attachments/native-styling-refguide/modal-bottom-sheet.gif){{% /image_container %}}
+
+* Expanding bottom sheet:
+
+	{{% image_container width="350" %}}![expanding bottom sheet](attachments/native-styling-refguide/expanding-bottom-sheet.gif){{% /image_container %}}
 
 The widget’s style properties are as follows:
 

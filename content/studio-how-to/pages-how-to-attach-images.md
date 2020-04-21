@@ -8,11 +8,11 @@ tags: ["studio", "pages", "image", "image uploader", "attachment", "attach image
 
 ## 1 Introduction 
 
-This how-to explains how you can configure image uploading in your app and enable your end-users to attach images. 
+This how-to explains how you can enable your end-users to attach images. They will be able to attach images from different devices: phone, tablet, or desktop; or they can take a new image on their phone camera. 
 
 **This how-to will teach you how to do the following:**
 
-* Create image and file entities
+* Create image entities
 * Create a page with a form that allows your end-users to attach images
 * Display attached images in a list
 
@@ -37,7 +37,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Familiarize yourself with page terms and how to perform basic functions on pages. For more information, see [Pages](/studio/pages). 
 * Familiarize yourself with the domain model terms and learn how to perform basic functions. For more information, see [Domain Model](/studio/domain-models).
 
-## 3 Creating Image and File Entities
+## 3 Creating an Image Entity
 
 First of all, to be able to attach and upload images you need to add a special type of entity to your domain model: an image entity. Do the following:
 
@@ -69,7 +69,7 @@ An **Image Uploader** is a widget that allows your end-users to attach and uploa
 
 <img src="attachments/pages-how-to-upload-images/form-example.png" style="zoom:50%;" /> 
 
-To solve this, you can add a button which will open a pop-up page where your end-users can upload images. This page will be connected to your current report form over the *Image_Report* association and will upload images to a specific report. 
+To solve this, you can add a button which will open a pop-up page where your end-users can upload images. This page will be connected to your current report form over the *Image_Report* association and will upload images as **Image** entity and associated to this specific report. 
 
 Follow the steps below:
 
@@ -93,7 +93,7 @@ Follow the steps below:
 
 8. In the button properties, click the **Entity** property.
 
-9. In the **Select Entity** dialog box, choose the **Image** entity over **Image_Report** association (*Image_Report/Image*) and click **Select**:
+9. In the **Select Entity** dialog box, choose the **Receipt** entity over **Receipt_Report** association (*Receipt_Report/Receipt*) and click **Select**:
 
     <img src="attachments/pages-how-to-upload-images/image-report-association.png" style="zoom:50%;" />
 
@@ -136,15 +136,15 @@ After users attach the images, it would be nice to display their attachments and
 3. Open list view properties and do the following:
 
     1. Click the **Entity** property.
-    2. As you want to display images attached to a particular report, you need to display an entity over association (in this case to display **Image** over the **Image_Report** association). In the **Select Entity** dialog box, choose **Image_Report/Image** and click **Select**:
+    2. As you want to display images attached to a particular report, you need to display an entity over association (in this case to display **Receipt** over the **Receipt_Report** association). In the **Select Entity** dialog box, choose **Receipt_Report/Receipt** and click **Select**:
 
-    	<img src="attachments/pages-how-to-upload-images/list-view-entity.png" style="zoom:50%;" />
+    	<img src="attachments/pages-how-to-upload-images/image-report-association.png" style="zoom:50%;" />
 
 4. Click the image in the list view, open its properties, and do the following.
 
     1. To display images which users attach, change the **Image Source** from **Static Image** to **Dynamic Image**. 
     2. Click the **Image Entity** property. 
-    3. In the **Select Image Entity**, choose **Image** and click **Select**.
+    3. In the **Select Image Entity**, choose **Receipt** and click **Select**.
     4. In the **Default Image** property, click **Select image**, and in the **Select image** dialog box, click **Clear**.  
 
     	<img src="attachments/pages-how-to-upload-images/image-properties.png" style="zoom:60%;" />

@@ -58,7 +58,7 @@ To make a field read-only, do the following:
 
     ![](attachments/pages-how-to-set-validation-and-editability/autonumber-read-only.png)
 
-Now Employee number and Contract type fields are read-only, they are grayed out, and end-users will not be able to edit them.
+Now **Employee number** and **Contract type** fields are read-only, they are grayed out, and end-users will not be able to edit them.
 
 <img src="attachments/pages-how-to-set-validation-and-editability/read-only-configured.png" style="zoom:67%;" />
 

@@ -20,8 +20,8 @@ Because all information is sent to the Mendix Client to build pages, everything 
 
 The client environment is created in different ways, depending on the sort of client.
 
-* For a **browser** client, the initial page is provided by a *theme*
-* For a **mobile app** the initial page is packaged as an android or iOS app to be downloaded to the mobile device
+* For a **browser** client, the initial environment is a page provided by a *theme*
+* For a **mobile app** the initial environment is packaged as an android or iOS app to be downloaded to the mobile device
 * There is a third sort of app known as a **hybrid app**. For most purposes this can be treated as an app running in a browser client. In this case, however, the browser is embedded in a mobile application and has access to some [Cordova](https://cordova.apache.org/) plugins to give access to some features of a mobile device. We recommend that you use a native mobile app rather than a hybrid app if you want to make Mendix apps which run on mobile devices.
 
 Below is a chart showing the components of the Mendix Client. Each of the components is described below the chart.
@@ -129,9 +129,9 @@ the lifecycle of the widget. These two frameworks are:
 
 Running on these frameworks are three types of widget:
 
-* Core widgets – which are part of the client, although some can also be downloaded from the App Store
-* Pluggable widgets – which are written by the user in react or react-native
-* Custom widgets – which are written by the user in Dojo
+* Core widgets – part of the client, although some can also be downloaded from the App Store
+* Pluggable widgets – written by the user in React or React native
+* Custom widgets – written by the user in Dojo
 
 These are described in the sections below.
 
@@ -143,7 +143,7 @@ Core widgets run on one of two frameworks, native core (React and React native) 
 
 #### 3.1.1 Native Core Framework
 
-Core widgets in this framework are reusable UI components written in React or React Native. This means that they can run in both browsers and native mobile apps. They use an API which enables different native core widgets to communicate. The **native core** framework replaces the web core framework described below, and widgets using the web core framework are gradually being replaced, where possible, by equivalent widgets using this framework.
+Core widgets in this framework are reusable UI components written in React or React Native. This means that they can run in both browsers and native mobile apps. They use an API which enables different **native core** widgets to communicate. The native core framework replaces the web core framework described below, and widgets using the web core framework are gradually being replaced, where possible, by equivalent widgets using this framework.
 
 #### 3.1.2 Web Core Framework
 
@@ -159,7 +159,7 @@ For more information, see [Pluggable Widgets API](/apidocs-mxsdk/apidocs/pluggab
 
 If you want to write additional widgets for browser-based apps, you can also write your own **Custom widgets** in Dojo which run on the web core framework and have access to some, but not all, of the Dojo core widgets through the web core API. However, they cannot use Pluggable widgets or core widgets running on the native core, which means that they cannot be used in native apps. Custom widgets should only be used if you cannot create the functionality in a Pluggable widget.
 
-For more information on Custom widgets, see [Hot To Build Custom Widgets](/howto/extensibility/widget-development).
+For more information on Custom widgets, see [How To Build Custom Widgets](/howto/extensibility/widget-development).
 
 ## 4 Mendix Client Startup
 

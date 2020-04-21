@@ -128,16 +128,25 @@ Follow the steps below:
 
 10. In the **Select Page** dialog box, click **New Page**.
 
-11. In the **Create new page** dialog box, fill in the page title and set the **Layout** to **PopupLayout**. 
+11. In the **Create new page** dialog box, set the page title to **Checklist_Details** and the **Layout** to **PopupLayout**. 
 
-12. The **Pre-fill page contents based on the Checklist entity** option is on, so the page template (Forms) is selected automatically for you. Choose **Forms Columns**:
+12. The **Pre-fill page contents based on the Checklist entity** option is on, so the page template (*Forms*) is selected automatically for you. Choose **Forms Columns**:
 
-     <img src="attachments/pages-how-to-configure-form/new-checklist.png" style="zoom:67%;" />
+     <img src="attachments/pages-how-to-configure-form/manage-checklist.png" style="zoom:60%;" />
 
 13. Click **Create**.
-14. A pop-up page where end-users can add new checklist items is created. Now you can select the same page as an on-click action 
 
-Now checklist items are displayed in the table.
+14. A pop-up page where end-users can add new checklist items is created. Now you can select the same page as an on-click action for the **Edit** button to edit the selected checklist. Click the **Edit** button in the data grid and open its properties.
+
+15. Set the **On Click Action** to **Page**.
+
+16. Set the **Page** property to **Manage_Checklist**.
+
+     <img src="attachments/pages-how-to-configure-form/edit-button-properties.png" style="zoom:67%;" />
+
+Now checklist items are displayed in the table. You can add new checklist by clicking the **New** button in the table, and edit the selected checklist by clicking the **Edit** button.
+
+<img src="attachments/pages-how-to-configure-form/data-grid-configured.png" style="zoom:67%;" />
 
 Congratulations! You have the page that displays details of the selected report and checklist items of this report:
 

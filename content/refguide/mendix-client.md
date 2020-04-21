@@ -14,11 +14,11 @@ This description of the Mendix Client is based on using the Runtime Server of an
 
 ## 2 Description
 
-The Mendix Client is a single page application controlled by the client core. This means that all paging is handled by the Mendix Client, rather than being separate pages served to the browser using different URLs. The initial page on which code is bootstrapped is called "shell", and the code consists of the *Core* and *Widgets*.
+The Mendix Client is a single environment controlled by the client core. This means that all paging is handled by the Mendix Client, rather than being separate pages served using different URLs. The code consists of the *Core* and *Widgets*.
 
-Because the Mendix Client can run in a browser, everything in the Mendix Client is visible to the end-user. Security is carried out in the Runtime Server, which will only send information to the Mendix Client which the user is allowed to see.
+Because all information is sent to the Mendix Client to build pages, everything in the Mendix Client is visible to the end-user. Security is carried out in the Runtime Server, which will only send information to the Mendix Client which the user is allowed to see.
 
-The shell page is created in different ways, depending on the sort of client.
+The client environment is created in different ways, depending on the sort of client.
 
 * For a **browser** client, the initial page is provided by a *theme*
 * For a **mobile app** the initial page is packaged as an android or iOS app to be downloaded to the mobile device
@@ -65,7 +65,7 @@ These are functions of the device on which the Mendix Client is running. In most
 
 This is the static data which is needed by the Mendix Client. For a browser-based client, this data is held online, with the Runtime Server. For native apps, this is held locally on the device.
 
-These include the shell page needed to start the Mendix Client, Cascading Style Sheets (css files) which define the app’s theme, and JavaScript files which define client-side logic.
+These include the initial environment (for example, the browser shell page) needed to start the Mendix Client, Cascading Style Sheets (css files) which define the app’s theme, and JavaScript files which define client-side logic.
 
 ### 2.9 Data API
 
@@ -121,27 +121,43 @@ For a description of the Runtime Server, see [Runtime Server](runtime-server).
 
 ## 3 Widgets{#widgets}
 
-Mendix pages are constructed from individual widgets. There are two types of widget which each run on a separate widget framework. Each widget framework provides APIs and controls the lifecycle of the widget.
-The two types of widget are:
+Mendix pages are constructed from individual widgets. Widgets run on one of two frameworks which provide APIs and control
+the lifecycle of the widget. These two frameworks are:
 
-* Native core widgets
-* Web core widgets
+* Native Core – written in React (for browsers) and React native (for native mobile)
+* Web Core – written in Dojo for browsers
+
+Running on these frameworks are three types of widget:
+
+* Core widgets – which are part of the client, although some can also be downloaded from the App Store
+* Pluggable widgets – which are written by the user in react or react-native
+* Custom widgets – which are written by the user in Dojo
 
 These are described in the sections below.
 
-### 3.1 Native Core Widgets
+### 3.1 Core Widgets
 
-Native Core widgets are reusable UI components written in React or React Native. They run on the native core framework using the an API which enables different native core widgets to communicate. This framework replaces the web core described below.
+Core widgets are part of the client and create the structure of the pages in your app. Many of them come as standard in Studio and Studio Pro, but there are additional core widgets which can be added by downloading them from the App Store.
 
-Mendix has a number of native core widgets which support the standard functions of Mendix pages. You can also write your own native core widgets, called **Pluggable widgets**. These are the recommended way of writing widgets and replace Custom widgets, described below. They have limited access to web core widgets, but full access to the native core. Pluggable widgets have many advantages over Custom widgets. For example, you can use conditional visibility and editability, and can place a Pluggable widget inside another Pluggable widget.
+Core widgets run on one of two frameworks, native core (React and React native) and web core (Dojo). Both types can co-exist in a single app, but the Dojo widgets can only be used for browser-based pages. These are gradually being replaced by equivalent widgets written in React (native).
+
+#### 3.1.1 Native Core Framework
+
+Core widgets in this framework are reusable UI components written in React or React Native. This means that they can run in both browsers and native mobile apps. They use an API which enables different native core widgets to communicate. The **native core** framework replaces the web core framework described below, and widgets using the web core framework are gradually being replaced, where possible, by equivalent widgets using this framework.
+
+#### 3.1.2 Web Core Framework
+
+Core widgets in this framework are written using Dojo and run on the **web core** framework. This, previous, version of the client API will only support widgets in browsers and allows only limited communication between widgets.
+
+### 3.1 Pluggable Widgets
+
+As well as using standard React (native) widgets supplied in the client, you can write your own native core widgets, called **Pluggable widgets**. These are the recommended way of writing widgets and replace Custom widgets, described below. They have limited access to web core (Dojo) widgets, but full access to the native core. Pluggable widgets have many advantages over Custom widgets. For example, you can use conditional visibility and editability, and can place a Pluggable widget inside another Pluggable widget.
 
 For more information, see [Pluggable Widgets API](/apidocs-mxsdk/apidocs/pluggable-widgets).
 
-### 3.2 Web Core Widgets
+### 3.2 Custom Widgets
 
-Web core widgets are written using Dojo and run on the web core framework using a previous version of the client API.
-
-You can write your own **Custom widgets** which have access to some of the web core widgets through the API. However, they cannot use pluggable widgets or other native core widgets which means that they cannot be used in native apps. Custom widgets should only be used if you cannot create the functionality in a Pluggable widget.
+If you want to write additional widgets for browser-based apps, you can also write your own **Custom widgets** in Dojo which run on the web core framework and have access to some, but not all, of the Dojo core widgets through the web core API. However, they cannot use Pluggable widgets or core widgets running on the native core, which means that they cannot be used in native apps. Custom widgets should only be used if you cannot create the functionality in a Pluggable widget.
 
 For more information on Custom widgets, see [Hot To Build Custom Widgets](/howto/extensibility/widget-development).
 
@@ -155,6 +171,8 @@ When an end-user wants to use a Mendix app, they need to start up the client on 
 How the Mendix Client is launched is described in the sections below.
 
 ### 4.1 Launching Mendix Client in a Browser
+
+In a browser, the environment is built on an initial page, the "shell", on which code is bootstrapped.
 
 #### 4.1.1 Launch Flow
 

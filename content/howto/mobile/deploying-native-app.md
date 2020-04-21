@@ -339,6 +339,52 @@ To install the *ipa* on your device, follow these steps:
 5. Your app will show up in the list of apps. Click the **Install** button next to your app.
 6. Click **Apply** at the bottom of the screen to execute the actual installation.
 
+### 6.2.3 Distributing for iOS Tablets
+
+When you try to build an app for tablets, your app will run as a phone app in a scaled mode optimized for tablet form factors. Apple has far stricter rules for releasing tablet apps. For example, they require the app to behave well in any possible rotation or resolution. This means that when making Mendix apps for iOS tablets you should take extra care to style your app correctly so it is not rejected. 
+
+By default, building for tablets is disabled in XCode. To enable building for tablets, do the following:
+
+1. Select the following options in your XCode workspace:<br />
+	a. **iPad**: this enables tablet mode. By default, if tablet mode in enabled you also have to support any possible orientation.<br />
+	b. **Portrait**.<br />
+	c. **Landscape Left**.<br />
+	d. **Landscape Right.**<br />
+	e. **Requires full screen**: Mendix requires this because full-screen orientations are easier on Mendix developers than smaller side-by-side forms.
+
+	{{% image_container width="300" %}}![select tablet options](attachments/deploying-native-app/tablet-workspace.png){{% /image_container %}}
+
+1. Commit these changes to your project's master branch so consecutive builds have the tablet settings enabled.
+1. In {folder}, open *project.pbxproj*:<br />
+	a. Change both instances of `TARGET_DEVICE_FAMILY = “1”;` to `TARGET_DEVICE_FAMILY = “1,2";`.
+1. In {folder}, open *info.plist*:<br />
+	a. Before the final `</dict>` line, add this key:<br />
+	
+	```
+	<key>UIRequiresFullScreen</key>
+	<true/>
+	```
+	
+	b. Change this code:<br />
+	
+	```
+		<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+</array>
+	```
+	
+	to the following:<br />
+	
+	```
+		<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	```
+	
 #### 6.2.3 Uploading to the Apple App Store
 
 To upload your app to the iOS App Store, follow these instructions (to continue, you must have completed the [Signing a Build](#signing-a-build) section above and recieved a build signed for the Apple Store):

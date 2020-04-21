@@ -57,7 +57,7 @@ In the **Academy** section of the Mendix Community site, you can see links to ou
 ![](attachments/the-community-site/academy1.png)
 {{% /image_container %}}
 
-Below that, you can see sign-up links for upcoming [Classroom Courses](https://gettingstarted.mendixcloud.com/link/classroom):
+Below that, you can see sign-up links for upcoming [classroom courses](https://gettingstarted.mendixcloud.com/link/classroom):
 
 {{% image_container width="550" %}}
 ![](attachments/the-community-site/academy2.png)

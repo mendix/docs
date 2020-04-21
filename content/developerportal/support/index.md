@@ -59,7 +59,7 @@ It is very important to read these alerts carefully and to act upon them, as the
 
 ### 5.3 Training
 
-We expect your support team to be trained and certified on Studio Pro and the Developer Portal so that they can interpret and analyze alerts, graphs, and logs in the Developer Portal. For more information, please check our available [classroom training courses](https://gettingstarted.mendixcloud.com/link/classroom) and [expert webinars](https://gettingstarted.mendixcloud.com/link/webinar) or contact the Mendix Academy (<academy@mendix.com>).
+We expect your support team to be trained and certified on Studio Pro and the Developer Portal so that they can interpret and analyze alerts, graphs, and logs in the Developer Portal. For more information, please check our available [classroom courses](https://gettingstarted.mendixcloud.com/link/classroom) and [expert webinars](https://gettingstarted.mendixcloud.com/link/webinar) or contact the Mendix Academy (<academy@mendix.com>).
 
 ## 6 Platform Status
 

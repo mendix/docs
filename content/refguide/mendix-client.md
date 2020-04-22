@@ -14,15 +14,13 @@ This description of the Mendix Client is based on using the Runtime Server of an
 
 ## 2 Description
 
-The Mendix Client is a single environment controlled by the client core. This means that all paging is handled by the Mendix Client, rather than being separate pages served using different URLs. The code consists of the *Core* and *Widgets*.
+The Mendix Client is used for all applications built with Mendix: web, mobile, and hybrid apps.
 
-Because all information is sent to the Mendix Client to build pages, everything in the Mendix Client is visible to the end-user. Security is carried out in the Runtime Server, which will only send information to the Mendix Client which the user is allowed to see.
+For web applications Mendix Client acts as a single page application. This means that all paging is handled by the Mendix Client, rather than being separate pages served using different URLs. Mendix Client is bootstrapped by loading a `mxui.js` script from an html page provided by the *theme*.
 
-The client environment is created in different ways, depending on the sort of client.
+For mobile applications Mendix Client acts as a React Native application. This means that apps created by Mendix consist of two parts: a *wrapper* and a *bundle*. Wrapper is a native iOS or Android application that loads the bundle and exposes platform functionality to it. Bundle includes Client Core, Pluggable Widgets, and application-specific resources like Nanoflows and Pages. The three supported types of wrappers are: [Make It Native app](/refguide/getting-the-make-it-native-app), [Custom Developer apps](howto/mobile/how-to-devapps#1-introduction), and [Native apps](howto/mobile/deploying-native-app). The first two of them load a bundle dynamically, while the last one includes a pre-packaged bundle that can be [updated](/howto/mobile/how-to-ota) later.
 
-* For a **browser** client, the initial environment is a page provided by a *theme*
-* For a **mobile app** the initial environment is packaged as an android or iOS app to be downloaded to the mobile device
-* There is a third sort of app known as a **hybrid app**. For most purposes this can be treated as an app running in a browser client. In this case, however, the browser is embedded in a mobile application and has access to some [Cordova](https://cordova.apache.org/) plugins to give access to some features of a mobile device. We recommend that you use a native mobile app rather than a hybrid app if you want to make Mendix apps which run on mobile devices.
+Hybrid applications for most purposes this can be treated as an app running in a browser. In this case, however, the browser is embedded in a mobile application and has access to some features of a mobile device through [Cordova](https://cordova.apache.org/) plugins. We recommend that you use a native mobile app rather than a hybrid app if you want to make Mendix apps which run on mobile devices.
 
 Below is a chart showing the components of the Mendix Client. Each of the components is described below the chart.
 
@@ -110,6 +108,8 @@ This ensures that any session with the runtime is kept alive and restored if nec
 The Runtime Server waits for requests from the Mendix Client, processes the request, and returns the requested data, plus any additional state information where appropriate. This is done through a private API called *xas*.
 
 It will also notify the Mendix Client when changes are made to the app, and allows developers to connect a debugger to the client to debug nanoflows.
+
+Because all information is sent to the Mendix Client to build pages, everything in the Mendix Client is visible to the end-user. Security is carried out in the Runtime Server, which will only send information to the Mendix Client which the user is allowed to see.
 
 For a description of the Runtime Server, see [Runtime Server](runtime-server).
 

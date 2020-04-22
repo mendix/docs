@@ -24,4 +24,4 @@ You build Mendix native mobile apps the same way you build web or hybrid apps. Y
 * [Use Local Notifications](local-notif-parent)
 * [Create a Custom Developer App](how-to-devapps)
 * [Set Up Deep Links in Native Apps](native-deep-link)
-
+* [Common Issues](common-issues)

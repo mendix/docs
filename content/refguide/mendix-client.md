@@ -59,7 +59,7 @@ This runs client-side logic which is defined in the nanoflows in the model.
 
 ### 2.7 Platform APIs
 
-These are functions of the device on which the Mendix Client is running. In most cases this will be a function of a mobile device such as the camera or GPS location, but it can also include making calls to Mendix Native APIs or browser functions such as accessing an image file.
+These are functions of the environment in which the Mendix Client is running. In most cases this will be a function of a mobile device such as the camera or GPS location, but it can also include making calls to Mendix Native APIs or browser functions such as accessing an image file.
 
 ### 2.8 Client Config
 
@@ -73,7 +73,7 @@ This allows the Mendix Client to fetch and manipulate data in offline storage or
 
 ### 2.10 Object Cache
 
-This holds and manages objects which are being used by the Mendix Client in memory – for example non-persistable objects, new objects, and objects returned by the Runtime Server to be displayed on a page. It also ensures that they are passed to the Runtime Server when they are needed as part of a request.
+This holds and manages objects which are being used by the Mendix Client in memory – for example non-persistable objects, new objects, and objects returned by the Runtime Server to be displayed on a page. As well as attribute and association changes made to these objects.
 
 State handling will perform garbage collection to ensure that memory is released when it is no longer needed.
 
@@ -90,12 +90,6 @@ For more information about the communication between the Mendix Client and the R
 #### 2.12.1 State Handling
 
 This communicates the current state of the app (held in the object cache) to the Runtime Server. As the state is held in the Mendix Client, the Runtime Server can be stateless. This ensures that it is easier to scale your app horizontally by adding more instances as any instance can handle any request.
-The state includes the following
-
-* the state of objects which are maintained by the object cache:
-    * newly created and not-yet-committed persistable objects
-    * non-persistable objects
-    * attribute and association changes made to the objects
 
 To avoid performance issues, the Mendix Client does not send the entire state to the runtime. State handling decides which parts of the state should be sent by analyzing the model during the deployment of the applications.
 
@@ -121,43 +115,29 @@ For a description of the Runtime Server, see [Runtime Server](runtime-server).
 
 ## 3 Widgets{#widgets}
 
-Mendix pages are constructed from individual widgets. Widgets run on one of two frameworks which provide APIs and control
-the lifecycle of the widget. These two frameworks are:
+Mendix pages are constructed from individual widgets. A widget can be of one of the following types:
 
-* Native Core – written in React (for browsers) and React native (for native mobile)
-* Web Core – written in Dojo for browsers
-
-Running on these frameworks are three types of widget:
-
-* Core widgets – part of the client, although some can also be downloaded from the App Store
-* Pluggable widgets – written by the user in React or React native
-* Custom widgets – written by the user in Dojo
+* Core widget – part of the Mendix Client
+* Pluggable widgets – based on React or React Native, written by the user or downloaded from the App Store
+* Custom widgets – based on Dojo, written by the user of download from the App Store
 
 These are described in the sections below.
 
 ### 3.1 Core Widgets
 
-Core widgets are part of the client and create the structure of the pages in your app. Many of them come as standard in Studio and Studio Pro, but there are additional core widgets which can be added by downloading them from the App Store.
+Mendix has a number of core widgets which support the standard functions of Mendix pages. Core widgets are part of the core client. Most of these widgets have native and web implementations, though some are limited only to one platform.
 
-Core widgets run on one of two frameworks, native core (React and React native) and web core (Dojo). Both types can co-exist in a single app, but the Dojo widgets can only be used for browser-based pages. These are gradually being replaced by equivalent widgets written in React (native).
-
-#### 3.1.1 Native Core Framework
-
-Core widgets in this framework are reusable UI components written in React or React Native. This means that they can run in both browsers and native mobile apps. They use an API which enables different **native core** widgets to communicate. The native core framework replaces the web core framework described below, and widgets using the web core framework are gradually being replaced, where possible, by equivalent widgets using this framework.
-
-#### 3.1.2 Web Core Framework
-
-Core widgets in this framework are written using Dojo and run on the **web core** framework. This, previous, version of the client API will only support widgets in browsers and allows only limited communication between widgets.
+In native mobile applications implementation based on React Native framework is used. In web applications - implementation based on either React or Dojo. Widgets that use Dojo have some limitations, for example they cannot be used inside a [pluggable widgets](/apidocs-mxsdk/apidocs/property-types-pluggablee-widgets#widgets). These implementations are gradually being replaced.
 
 ### 3.1 Pluggable Widgets
 
-As well as using standard React (native) widgets supplied in the client, you can write your own native core widgets, called **Pluggable widgets**. These are the recommended way of writing widgets and replace Custom widgets, described below. They have limited access to web core (Dojo) widgets, but full access to the native core. Pluggable widgets have many advantages over Custom widgets. For example, you can use conditional visibility and editability, and can place a Pluggable widget inside another Pluggable widget.
+You can also write your own widgets, called **Pluggable widgets**, in cases where Core widgets do not suffice. Pluggable widgets can be downloaded through the App Store. Pluggable widget are based on React (in web applications) or React Native (in native application) and are the recommended way of writing widgets and replace Custom widgets, described below.
 
 For more information, see [Pluggable Widgets API](/apidocs-mxsdk/apidocs/pluggable-widgets).
 
 ### 3.2 Custom Widgets
 
-If you want to write additional widgets for browser-based apps, you can also write your own **Custom widgets** in Dojo which run on the web core framework and have access to some, but not all, of the Dojo core widgets through the web core API. However, they cannot use Pluggable widgets or core widgets running on the native core, which means that they cannot be used in native apps. Custom widgets should only be used if you cannot create the functionality in a Pluggable widget.
+You can also write **Custom widgets**. They are based on Dojo framework and run only in web applications. They have access to a different, more low-level API than pluggable widgets. Custom widgets should only be used if you cannot create the functionality in a Pluggable widget.
 
 For more information on Custom widgets, see [How To Build Custom Widgets](/howto/extensibility/widget-development).
 

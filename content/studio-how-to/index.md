@@ -17,4 +17,8 @@ To quickly access Studio how-to's in Studio, click the information icon in the t
 
 ## 2 Documents Categories
 
-Documents in this space are divided into Domain Model, Pages, and Microflows categories reflecting different Studio editors.
+Documents in this space are divided into the following categories:
+
+* [Pages](pages) – focuses on building various page patterns, such as building a form or a list, as well configuring different functionality, for example, filtering data in a list 
+* [Domain Model](domain-model) – explains how to configure a domain model and its elements
+* [Microflows](microflows) – focuses on configuring various microflow elements and activities, such as configuring a decision

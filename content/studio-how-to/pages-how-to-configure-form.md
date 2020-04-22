@@ -36,7 +36,7 @@ You have a list of all inspection reports:
 
 <img src="attachments/pages-how-to-configure-form/inspection-report-list.png" style="zoom:50%;" />
 
-You would like the **Details** button in this list to open a pop-up page showing the details of the selected report and a table with check list questions related to this report.  
+You would like the **Details** button in this list to open a page showing the details of the selected report and a table with checklist questions related to this report. You also would like to be able to add new checklists to the table or edit existing ones. 
 
 ## 2 Prerequisites
 
@@ -50,7 +50,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
     <img src="attachments/pages-how-to-configure-form/domain-model.png" alt="Domain Model" style="zoom: 50%;" />
 
-    * Make sure you have configured the **Question** attribute as the following enumeration enumeration:
+    * Make sure you have configured the **Question** attribute as the following enumeration:
 
 		<img src="attachments/pages-how-to-configure-form/enumeration.png" style="zoom:60%;" />
 
@@ -70,7 +70,7 @@ The **Details** button in the inspection report list should open a page with the
 
 3.  In the **Select Page** dialog box, click **New Page**.
 
-1.  In the **Create new page** dialog box, fill in the page title. 
+1.  In the **Create new page** dialog box, set the **Title** to **Reports_Details**, and set the **Layout** to **Atlas_Default**. 
 
 2.  The **Pre-fill page contents based on the InspectionReport entity** option is on, so the page template (Forms) is selected automatically for you. Choose **Forms Vertical**:
 
@@ -120,7 +120,7 @@ Follow the steps below:
 
 7. Set the **On Click Action** to **Page**. 
 
-8. Enable **Create Object** property. The Entity property is automatically set to **Checklist**:
+8. Enable **Create Object** property. The **Entity** property is automatically set to **Checklist**:
 
     <img src="attachments/pages-how-to-configure-form/new-button-properties.png" style="zoom:60%;" />
 
@@ -128,7 +128,7 @@ Follow the steps below:
 
 10. In the **Select Page** dialog box, click **New Page**.
 
-11. In the **Create new page** dialog box, set the page title to **Checklist_Details** and the **Layout** to **PopupLayout**. 
+11. In the **Create new page** dialog box, set the **Title** to **Checklist_Details** and the **Layout** to **PopupLayout**. 
 
 12. The **Pre-fill page contents based on the Checklist entity** option is on, so the page template (*Forms*) is selected automatically for you. Choose **Forms Columns**:
 
@@ -154,4 +154,6 @@ Congratulations! You have the page that displays details of the selected report 
 
 You can now preview your app and test your page. For more information on how to preview your page, see [Previewing & Publishing Your App](/studio/publishing-app).
 
-You can also work on the page details, for example, add a dynamic image to the inspection report list to display a unique company logo next to its name. For more information on dynamic images, see [Images & Files](/studio/page-editor-widgets-images-and-files).
+You can also work on the page details, for example, add a dynamic image to the inspection report list to display a unique company logo next to its name. For more information on dynamic images, see [Images & Files](/studio/page-editor-widgets-images-and-files). 
+
+You can also add new functionality. For example, you can enable inspectors to attach images to their reports. For more information, see [How to Enable End-Users to Attach Images](pages-how-to-attach-images).

@@ -8,7 +8,7 @@ tags: ["app store", "app store component", "widget", "fieldset", "token", "platf
 
 ## 1 Introduction
 
-The [Fieldset]() widget is a container to group widgets within a form. Structuring a form helps end users to fill it out, especially when they rely on accessibility tools, like a screen reader. For example, you could use this widget to group input widgets that belong to the same address when a form requires multiple addresses to be filled out.
+The [Fieldset](https://appstore.home.mendix.com/link/app/113922/Mendix/Fieldset) widget is a container to group widgets within a form. Structuring a form helps end users to fill it out, especially when they rely on accessibility tools, like a screen reader. For example, you could use this widget to group input widgets that belong to the same address when a form requires multiple addresses to be filled out.
 
 ### 1.1 Features
 

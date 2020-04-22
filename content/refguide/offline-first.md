@@ -164,6 +164,10 @@ Changes to persistable objects made in a microflow will not be reflected on the 
 * Returning an object or a list of persistable entity is not supported.
 * Returning an object or a list of a non-persistable entity that has an association with a persistable entity is not supported (such association can be an indirect association).
 
+### 4.1.5 Language Switching
+
+To be able to switch the language of a Mendix app, a device must be online and have access to the Mendix runtime. For more information on the runtime, see the [Runtime Reference Guide](runtime).
+
 ### 4.1.1 Offline Microflow Best Practices {#offline-mf-best-practices}
 
 To make microflow calls work from offline-first apps, Mendix stores some microflow information in the offline app. That information is called from the app. This means that changes to microflows used from offline apps must be backwards-compatible, because there can be older apps which have not received an over the air update yet. All microflow calls from such a device will still contain the old microflow call configuration in nanoflows, which means that the request might fail. For more information on over the air updates, see [How to Use Over the Air Updates](/howto/mobile/how-to-ota).

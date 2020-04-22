@@ -321,6 +321,10 @@ Click **Scale Now** to apply the new settings. If the application is running, it
 
 Click **Reset** to return the values to what they were before the sliders were moved.
 
+{{% alert type="info" %}}
+You can also make use of the **Application Autoscaler** service on SAP Cloud Platform. Mendix provides assistance in setting up the parameters needed to configure application autoscaler. For more information see [Application Autoscaler for SAP Cloud Platform](/partners/sap/sap-autoscaler).
+{{% /alert %}}
+
 #### 7.1.7 Change License Subscription ID
 
 Click **Change** to change the subscription secret which is the code which registers your production Mendix license to this environment.
@@ -384,6 +388,10 @@ To connect a service in the section **Available Services**
     ![](attachments/sap-cloud-platform/service-connect.png)
 
     The services you have selected will be added as **Services To Be Bound**. Now, you can upload JSON **File** with a configuration that will be applied to the service binding. 
+
+{{% alert type="info" %}}
+If you use the **Application Autoscaler** service on SAP Cloud Platform, Mendix can create a JSON file for you. See [Application Autoscaler for SAP Cloud Platform](/partners/sap/sap-autoscaler) for more information.
+{{% /alert %}}
 
 To upload the JSON **File** for service binding, follow these steps:
 

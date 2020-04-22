@@ -30,3 +30,53 @@ Having provided this information, you can click **Connect Services** to connect 
 {{% alert type="info" %}}
 You must restart your app to bind the autoscaler to your app.
 {{% /alert %}}
+
+You will see from the documentation on the SAP website that the structure of the configuration file can get quite complex. Mendix therefore provides you with a tool to help you create the correct configuration.
+
+Click **Configurator** to start the **Autoscaler Configurator**.
+
+## 3 Using the Autoscaler Configurator
+
+The **autoscaler configurator** provide a user friendly interface to create the JSON required to configure the application autoscaler. There three options available:
+
+* Scheduled Scaling – the app is scaled according to a fixed schedule
+* Dynamic Scaling – the app is scaled depending on the value of a metric
+* Custom – a combination of both scheduled and dynamic scaling
+
+Open the autoscaler configurator by clicking **Configurator** next to the autoscaler service in the Services tab of Environment Details.
+
+You will first need to decide the sort of scaling you want to apply.
+
+For **Scaling** select one of:
+
+* Schedule-based scaling – scaling based on a schedule, see [Scheduled Scaling](#schedule), below
+* Dynamic scaling – scaling based on the values of metrics, see [Dynamic Scaling](#dynamic), below
+* Custom – you will need to set up both [Dynamic Scaling](#dynamic) and [Scheduled Scaling](#schedule) as described in the sections below
+
+## 3.2 Scheduled Scaling{#schedule}
+
+{{% alert type="warning" %}}
+Do not attempt to enter overlapping schedules as this will cause the scaling to fail.
+{{% /alert %}}
+
+Firstly you need to choose whether to set up a [Recurring Schedule](#recurring) or a schedule based on a [Specific Date](#specific). You can also choose to set up a **Custom** combination of the two.
+
+For all the types of schedule you will need to set the following:
+
+* **Min Instances** – minimum number of application instances that always run
+* **Max Instances** – maximum number of application instances that can be provisioned as part of application scaling
+
+{{% alert type="info" %}}
+For custom schedules you will see these values on the screen twice, but changing them in one place will automatically set them in the other.
+{{% /alert %}}
+
+### 3.2.1 Recurring Schedule{#recurring}
+
+
+
+
+### 3.2.2 Specific Date{#specific}
+
+
+
+## 3.3 Dynamic Scaling{#dynamic}

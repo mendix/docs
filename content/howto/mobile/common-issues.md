@@ -12,7 +12,7 @@ Mendix strives to make building and running native apps as simple as possible. H
 
 ## 2 Make it Native App
 
-To troubleshoot issues related to the [Make it Native](refguide/getting-the-make-it-native-app) app, see the sections below.
+To troubleshoot issues related to the [Make it Native](/refguide/getting-the-make-it-native-app) app, see the sections below.
 
 ### 2.1 "Unable to Load Script"
 

@@ -32,7 +32,7 @@ The **Download file** properties pane consists of the following sections:
 * [Input](#input)
 * [Common](#common)
 
-## 3 Action
+## 3 Action Section {#action}
 
 The **Action** section of the properties pane shows the action associated with this activity.
 
@@ -40,15 +40,11 @@ You can open a dialog box to configure this action by clicking the ellipsis (**â
 
 You can also open the dialog box by double-clicking the activity in the microflow or right-clicking the activity and selecting **Properties**.
 
-### 3.1 Input Section
-
-#### 3.1.1 File document
+### 3.1 File document
 
 File document specifies the file to be downloaded. The file data is stored in an object of entity System.FileDocument or a specialization of this entity.
 
-### 3.2 Action Section
-
-#### 3.2.1 Show File in Browser
+### 3.2 Show File in Browser
 
 **Show file in browser** defines whether the file is downloaded to a location specified by the end-user or shown directly in the browser.
 

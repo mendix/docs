@@ -33,7 +33,7 @@ The **Show page** properties pane consists of the following sections:
 * [Action](#action)
 * [Common](#common)
 
-## 3 Action {#action}
+## 3 Action Section {#action}
 
 The **Action** section of the properties pane shows the action associated with this activity.
 
@@ -41,25 +41,17 @@ You can open a dialog box to configure this action by clicking the ellipsis (**â
 
 You can also open the dialog box by double-clicking the activity in the microflow or right-clicking the activity and selecting **Properties**.
 
-### 3.1 Input Section
-
-This is the section that is shown in the properties dialog box.
-
-#### 3.1.1 Object to Pass {#object-to-pass}
+### 3.1 Object to Pass {#object-to-pass}
 
 An object that will be passed to the page that is opened. This object will be used by [data views](data-view) with a page parameter data source.
 
-### 3.2 Action Section
-
-This is the section that is shown in the properties dialog box.
-
-#### 3.2.1 Page
+### 3.2 Page
 
 The [page](page) that is displayed to an end-user. If the [Object to pass](#object-to-pass) property is specified, the page must contain a data view connected to the same entity as the passed object (or its generalization).
 
 To create a new page that **Show page** activity will show, click the **Select** button > **New**. If you have selected an **Object to pass**, Studio Pro will automatically create a data view to edit that object.
 
-#### 3.2.2 Page Title
+### 3.3 Page Title
 
 By default the title of the page is determined by the page title property of the page. You can replace this title with a custom title if necessary.
 
@@ -69,6 +61,6 @@ This feature allows you to re-use the same page for the **New** and **Edit** but
 
 {{% snippet file="refguide/microflow-common-section-link.md" %}}
 
+## 5 Read More
 
-
-
+* [Activities](activities)

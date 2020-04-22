@@ -8,6 +8,10 @@ tags: ["studio pro", "decision", "decisions"]
 ## 1 Introduction
 Decisions are elements that split or merge sequence flows based on conditions set for these elements. Decisions have a shape of a diamond.
 
+The elements described in this document are in the **Decisions** section of the **Toolbox**:
+
+<img src="attachments/decisions/decisions.png" alt="Decisions" style="zoom:67%;" />
+
 There are following types of decisions:
 
 * [Decision](decision) – makes a choice based on a condition and follows one and only one of the outgoing sequence flows

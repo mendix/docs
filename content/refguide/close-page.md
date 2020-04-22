@@ -24,9 +24,20 @@ The **Close page** activity closes the currently open page. For example, it can 
 
 The **Close page** activity properties consists of the following sections:
 
-* **Action** – shows the activity type
-* **Common**  – contain properties common for many microflow elements; for more information on these properties, see the [Common Properties](microflow-element-common-properties) 
+* [Action](#action) 
 
+* [Common](#common)  
 
+    <img src="attachments/client-activities/close-page-properties.png" alt="Close Page Properties" style="zoom:60%;" />
 
+## 3 Action Section {#action}
 
+The **Action** section of the properties pane shows the action associated with this activity.
+
+## 4 Common Section {#common}
+
+{{% snippet file="refguide/microflow-common-section-link.md" %}}
+
+## 5 Read More
+
+* [Show Page](show-page)

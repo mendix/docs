@@ -27,13 +27,21 @@ This activity shows the same page that is displayed to the end-user after they l
 The **Show home page** activity properties consists of the following sections:
 
 * [Action](#action)
+
 * [Common](#common)
 
-## 3 Action {#action}
+    <img src="attachments/client-activities/show-home-page-properties.png" alt="Show Home Page Properties" style="zoom:60%;" />
 
-Shows the activity type.
+## 3 Action Section {#action}
 
-## 4 Common {#common}
+The **Action** section of the properties pane shows the action associated with this activity.
 
-Contain properties common for many microflow elements; for more information on these properties, see the [Common Properties](microflow-element-common-properties).
+## 4 Common Section {#common}
+
+{{% snippet file="refguide/microflow-common-section-link.md" %}}
+
+## 5 Read More
+
+* [Show Page](show-page)
+* [Activities](activities)
 

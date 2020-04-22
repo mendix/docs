@@ -31,7 +31,7 @@ The **Show message** properties pane consists of the following sections:
 * [Action](#action)
 * [Common](#common)
 
-## 3 Action {#action}
+## 3 Action Section {#action}
 
 The **Action** section of the properties pane shows the action associated with this activity.
 
@@ -39,9 +39,7 @@ You can open a dialog box to configure this action by clicking the ellipsis (**â
 
 You can also open the dialog box by double-clicking the activity in the microflow or right-clicking the activity and selecting **Properties**.
 
-### 3.1 Action Section
-
-#### 3.1.1 Type
+### 3.1 Type
 
 **Type** defines the color scheme and icon of the message.
 
@@ -51,17 +49,17 @@ There are three message options:
 * Warning
 * Error 
 
-#### 3.1.2 Template
+### 3.2 Template
 
 **Template** defines the text of the message. The template can contain parameters that are written as a number between braces, e.g. {1}. The first parameter has number 1, the second 2, etc.
 
-#### 3.1.3 Parameters
+### 3.3 Parameters
 
 Parameters are attributes, the value of which will be displayed. Parameters need to be entered using [expressions](expressions) resulting in a string.
 
 With parameters you can customize your message with data specific to the situation. For example, the message "An e-mail has been sent to customer {1}." with parameter `$customer/FullName` will show the full name of the customer who an e-mail has been sent to.
 
-#### 3.1.4 Blocking
+### 3.4 Blocking
 
 The **Blocking** property defines whether the message shown to the end-user is blocking or not. A non-blocking message lets users continue their work in the app with the pop-up window open, while a blocking message does not let the user continue work until the pop-up window is closed.
 
@@ -74,3 +72,6 @@ The **Blocking** property defines whether the message shown to the end-user is b
 
 {{% snippet file="refguide/microflow-common-section-link.md" %}}
 
+## 5 Read More
+
+* [Activities](#activities)

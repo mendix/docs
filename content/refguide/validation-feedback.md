@@ -31,7 +31,7 @@ The **Validation feedback** properties pane consists of the following sections:
 * [Action](#action)
 * [Common](#common)
 
-## 3 Action
+## 3 Action Section {#action}
 
 The **Action** section of the properties pane shows the action associated with this activity.
 
@@ -39,17 +39,15 @@ You can open a dialog box to configure this action by clicking the ellipsis (**â
 
 You can also open the dialog box by double-clicking the activity in the microflow or right-clicking the activity and selecting **Properties**.
 
-### 3.1 Action Section
-
-#### 3.1.1 Object
+### 3.1 Object
 
 **Object** defines which object will be validated.
 
-#### 3.1.2 Member
+### 3.2 Member
 
 **Member** defines for which attribute or association the message will be shown. In you have a [reference selector](reference-selector) or [reference set selector](reference-set-selector), you should select the association that is edited with these widgets.
 
-#### 3.1.3 Template
+### 3.3 Template
 
 **Template** is the message that will be shown to the end-user. The template can contain parameters that are written as a number between braces, e.g. {1}. The first parameter has number 1, the second 2, etc.
 
@@ -59,10 +57,14 @@ Nanoflows do not support text templates in validation feedback. Only a static me
 
 {{% /alert %}}
 
-#### 3.1.4 Parameters
+### 3.4 Parameters
 
 Parameters are attributes the value of which will be displayed. Parameters need to be entered using [expressions](expressions) resulting in a string.
 
 ## 4 Common Section {#common}
 
 {{% snippet file="refguide/microflow-common-section-link.md" %}}
+
+## 5 Read More
+
+* [Activities](activities)

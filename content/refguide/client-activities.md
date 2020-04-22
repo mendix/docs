@@ -25,4 +25,7 @@ The following are the client activities you can use in your microflow or nanoflo
 
 * [Validation feedback](validation-feedback) – does a validation check, and if this check fails, it shows a message to the end-user
 
-	
+
+## 2 Read More
+
+* [Activities](activities)

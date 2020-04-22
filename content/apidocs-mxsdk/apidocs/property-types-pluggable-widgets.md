@@ -408,7 +408,7 @@ The TextTemplate property allows a user to configure translatable text template 
 
 #### 4.2.2 XML Elements
 
-`<translations>` — Allows to set a default value for text templates for different languages using `<translation>` elements with a `lang` attribute representing [ISO 639](https://en.wikipedia.org/wiki/ISO_639) code of the language. Available languages are listed in the [Languages Tab](/refguide/project-settings#4-languages-tab) in Studio Pro.
+`<translations>` — Allows a user to set a default value for text templates for different languages using `<translation>` elements with a `lang` attribute representing [ISO 639](https://en.wikipedia.org/wiki/ISO_639) code of the language. Available languages are listed in the [Languages Tab](/refguide/project-settings#4-languages-tab) in Studio Pro.
 
 #### 4.2.3 Studio Pro UI
 
@@ -432,9 +432,9 @@ Then the Studio Pro UI for the property appears like this:
 
 ### 4.3 Action{#action}
 
-The action property type allows a user to configure an action to do things like calling nanoflows, saving changes, and opening pages.
+The action property type allows a user to configure an action which can do things like call nanoflows, save changes, and open pages.
 
-If a `dataSource` attribute is not specified, or if an `dataSource` attribute is specified, but the data source is not configured by the user, the client will receive an `ActionValue` representing the action, or `undefined` when the **Do nothing** action was selected.
+If a `dataSource` attribute is not specified, or if a `dataSource` attribute is specified but the data source is not configured by the user, the client will receive an `ActionValue` representing the action or `undefined` if the **Do nothing** action was selected.
 
 When a `dataSource` attribute is specified and configured by the user it is passed as a function that expects an `ObjectItem` and returns an `ActionValue`: `(item: ObjectItem) => ActionValue`. For more information, see the [Datasource](#datasource) section below.
 

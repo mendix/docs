@@ -25,15 +25,10 @@ The top bar of the top level of the **Changes** pane consists of various buttons
 Buttons allow you to perform the following actions:
 
 * **Back** – goes back up one level; at the top level, this button is disabled
-
 * **Go to** – opens a zoomed-in level and opens up the selected document 
-
 * **Tasks** – allows you to perform specific actions such as reverting the change to the latest commit, or solving conflicts
-
 * **Update** – retrieves latest changes from the repository (for more information on the update concept, see the [Update](version-control#update) section in *Version Control*) 
-
 * **Commit** – commits your changes to the repository and starts a new revision (for more information on the commit concept, see the [Commit](version-control#commit) section in *Version Control*)
-
 * **History** – opens the **History** dialog box that shows the changes made on the current development line of the project (for more information on history, see [History](history-dialog))
 
 The **Back** and **Go to** buttons are common throughout all the levels, while other buttons will only apply to a specific one.
@@ -79,23 +74,18 @@ The zoomed-in level for modified documents is split into two grids, with element
 The toolbar at this level contains the following buttons:
 
 * **Back** – takes you back to the top level
-
 * **Go to** – takes you directly to the changed element 
-
 * **Show purely visual changes** – shows visual changes, such as dragging an entity to a new location in the domain model
 
 The left side of the grid contains the following columns:
 
 * **Element** – the name of the modified element
-
 * **Mine** – indicates the status of the change on the current development line
 
 The grid on the right contains the following columns:
 
 * **Property** – the property that was modified
-
 * **Original** – the original property value
-
 * **Mine** – the change to the property that was made on the current development line
 
 ### 4.2 Zoomed-In Level for Conflicted Documents {#conflicts}
@@ -104,15 +94,10 @@ The zoomed-in level for conflicted documents is split into two grids, with eleme
 The toolbar at this level contains the following buttons:
 
 * **Back** – takes you back to the top level
-
 * **Go to** – takes you directly to the selected element 
-
 * **Show purely visual changes** – shows visual changes, such as dragging an entity to a new location in the domain model
-
 * **Show Conflicts** – it shows details of a conflict. It will be selected by default when first zooming into this level.
-
 * **Show Changes in mine** – it shows changes to a document on a current development line (for more information on how to solve conflicts, see the [Dealing With Conflicts](using-version-control-in-studio-pro#conflicts) section in *Using Version Control in Studio Pro*)
-
 * **Show Changes in theirs** – it shows incoming changes to a document from another development line (for more information on how to solve conflicts, see the [Dealing With Conflicts](using-version-control-in-studio-pro#conflicts) section in *Using Version Control in Studio Pro*)
 
 	{{% alert type="info" %}}**Show Conflicts**, **Show Changes in mine**, and **Show Changes in theirs** described above are toggles, and each selection de-selects the other two.
@@ -123,18 +108,14 @@ The columns on the left side of the grid will vary based on what toggle button i
 The left side of the grid contains the following columns when **Show Conflicts** toggle is enabled:
 
 * **Element** – the name of the modified element
-
 * **Merge end** – the status of the incoming change on another development line
-
 * **Mine** – indicates the status of the change on the current development line
 
 	![Conflict Grid](attachments/changes-pane/conflict-grid.png)
 
-
 The left side of the grid contains the following columns when **Show Changes in mine** toggle is enabled:
 
 * **Element** – the name of the modified element
-
 * **Mine** – indicates the status of the change on the current development line
 
 	![Conflict Grid](attachments/changes-pane/changes-in-mine-grid.png)
@@ -142,7 +123,6 @@ The left side of the grid contains the following columns when **Show Changes in 
 The left side of the grid contains the following columns when **Show Changes in mine** toggle is enabled:
 
 * **Element** – the name of the modified element
-
 * **Merge end** – indicates the status of the change on the other development line
 
 	![Conflict Grid](attachments/changes-pane/changes-in-merge-end-grid.png)
@@ -153,11 +133,8 @@ The columns on the grid on the right will vary depending on what kind of confict
 If the selected item on the left side is a conflict that resulted in both sides changing the same element, then the following columns will be displayed on the right side of the grid:
 
 * **Property** – the property that was modified
-
 * **Merge start** – the original property value
-
 * **Merge end** – the change to the property that was made on the other development line
-
 * **Mine** – the change to the property that was made on the current development line
 
 	![Rigth Grid](attachments/changes-pane/conflict-grid-right-side-modification-modification.png)
@@ -165,9 +142,7 @@ If the selected item on the left side is a conflict that resulted in both sides 
 If the selected item on the left side is a conflict that resulted in one side changing an element and the other side deleting it, then the following columns will be displayed on the right side of the grid:
 
 * **Property** – the property that was modified
-
 * **Merge start** – the original property value
-
 * **Mine** – the change to the property that was made on the current development line
 
 	![Right Grid](attachments/changes-pane/conflict-grid-right-side-deletion-modification.png)

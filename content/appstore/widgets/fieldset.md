@@ -14,7 +14,7 @@ The [Fieldset](https://appstore.home.mendix.com/link/app/113922/Mendix/Fieldset)
 
 For a demo app project that has been deployed with this widget, click [here](https://fieldset-sandbox.mxapps.io).
 
-## 2 Compatability
+## 2 Compatibility
 
 This widget is compatible with the following products:
 * Mendix Studio
@@ -23,7 +23,7 @@ This widget is compatible with the following products:
 ## 3 Features
 
 * Group widgets in a form
-* Attach a legend to the group
+* Attaches a legend to the group
 
 ## 4 Limitations
 

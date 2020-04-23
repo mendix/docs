@@ -13,7 +13,7 @@ You build Mendix native mobile apps the same way you build web or hybrid apps. Y
 
 ## 2 Documents in This Section
 
-* [Make It Native App Archive](../../refguide/make-it-native-app-archive)
+* [Make It Native App Archive](/refguide/make-it-native-app-archive)
 * [Get Started with Native Mobile](getting-started-with-native-mobile)
 * [Set Up Remote Notifications](setting-up-native-push-notifications)
 * [Use Remote Notifications](native-remote-notifications)

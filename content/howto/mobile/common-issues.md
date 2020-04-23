@@ -14,9 +14,9 @@ Mendix strives to make building and running native apps as simple as possible. B
 
 To troubleshoot issues related to the [Make it Native](/refguide/getting-the-make-it-native-app) app, see the sections below.
 
-### 2.1 "Unable to Load Script"
+### 2.1 Error: Unable to Load Script
 
-Depending on your device settings and network characteristics, the Make it Native app can fail to connect to the runtime. If so, the make it Native app shows the following message:
+Depending on your device settings and network characteristics, the Make it Native app can fail to connect to the runtime. If so, the make it Native app shows the following error message:
 
 ![unable to load script](attachments/unabletoloadscript.png)
 

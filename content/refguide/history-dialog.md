@@ -6,7 +6,7 @@ tags: ["studio pro"]
 ---
 ## 1 Introduction
 
-Use the **History** dialog to look at all the changes that have been committed to a development line of a project. The dialog is also used when selecting a revision: to merge from, to create a branch line of or to create a deployment archive of.
+Use the **History** dialog box to look at all the changes that have been committed to a development line of an app project. This dialog box is also used when selecting a revision to merge from, create a branch line off of, or create a deployment archive of.
 
 ![](attachments/history-dialog/history-dialog.png)
 

@@ -57,7 +57,7 @@ In this section, you will learn how to run the Mx Model Reflection synchronizati
 
 To run the MxModelReflection sync, run your app, view it, and follow these steps:
 
-1.  Right-click the **MxReflection** navigation item to open the MxReflection overview page.
+1.  Click the **MxReflection** navigation item to open the MxReflection overview page.
 2.  Select each module the app needs to synchronize and click **Click to refresh**.
 3.  Under **Synchronize all entities and microflows of checked modules on the left**, click **Click to refresh** .
 

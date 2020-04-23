@@ -185,20 +185,17 @@ There are two things missing now from the app.
 
 To allow you to enter some data, you will need to generate some pages and then enter some data into them.
 
-1. Right-click on the **PolicyDoc** entity in the domain model and select **Generate overview pages…**.
-2. Select both **PolicyDoc** and **Policy** and click **OK**.
-3. Link the generated overview page(s) into the app, either through the home page or the app navigation.
-4. Run the app and enter some data to create **Policy** entity. You can link all, or some, of the Policy objects to a **PolicyDoc** object.
+1. Right-click on the **Policy** entity in the domain model and select **Generate overview pages…**.
+2. Select **Policy** and click **OK**.
+3. Link the generated overview page into the app, either through the home page or the app navigation.
+4. Run the app and enter some data to create **Policy** objects.
 
 ### 8.2 Running the microflow
 
-To run the microflow you created above, you will need to create another microflow which is added to the navigation. This microflow can do one of the following things:
-
-* Retrieve a **PolicyDoc** object which already has associations to **Policy** objects and pass this as the parameter to the microflow — this will export all the Policy objects you associated with the PolicyDoc when you entered the data
-* Create a **PolicyDoc** object and associate it with existing **Policy** objects and pass this as the parameter to the microflow — this will export all the Policy objects you associated with the PolicyDoc in the microflow
+To run the microflow you created above, you will need to create another microflow which is added to the navigation. This microflow should create a **PolicyDoc** object and associate it with existing **Policy** objects, making sure that all the associations are committed, and pass this PolicyDoc as the parameter to the microflow. This will export all the Policy objects you associated with the PolicyDoc.
 
 {{% alert type="info" %}}
-If you create a **PolicyDoc** with no associations to **Policy** objects, you will export an empty spreadsheet with the structure defined in the template.
+If you create a **PolicyDoc** with *no* associations to **Policy** objects, you will export an empty spreadsheet with the structure defined in the template.
 {{% /alert %}}
 
 ## 9 Read More

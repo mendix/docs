@@ -83,7 +83,7 @@ Data widgets are essential to many Mendix apps. These widgets will allow your us
 
 The data view widget shows the contents of one data object. For more information about this widget, see [Data View](data-view).This widget has no user interface, so it does not support any styling.
 
-### 3.2 List View Widget
+### 3.2 List View Widget {#list-view}
 
 The list view shows a list of objects arranged vertically or horizontally. For more information about this widget, see [List View](list-view). This is not the default list view, but how a list view widget could look in an app:
 

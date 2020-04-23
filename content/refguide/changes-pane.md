@@ -61,12 +61,14 @@ You can zoom into a changed or conflicting document, by doing one of the followi
 To exit the zoomed-in level, click the **Back** button or press <kbd>Backspace</kbd>.
 
 There are two types of zoomed-in levels:
+
 * [For modified documents](#modified)
 * [For conflicting documents](#conflicts)
 
 Each of them contains their own set of buttons.
 
 ### 4.1 Zoomed-In Level for Modified Documents {#modified}
+
 The zoomed-in level for modified documents is split into two grids, with elements on the left and changed properties on the right. If no properties were changed for an element, for example, when an element was added or deleted, the right grid will be empty:
 
 ![No Properties to Show](attachments/changes-pane/element-added.png)
@@ -89,6 +91,7 @@ The grid on the right contains the following columns:
 * **Mine** – the change to the property that was made on the current development line
 
 ### 4.2 Zoomed-In Level for Conflicted Documents {#conflicts}
+
 The zoomed-in level for conflicted documents is split into two grids, with elements on the left and conflicting properties on the right.
 
 The toolbar at this level contains the following buttons:

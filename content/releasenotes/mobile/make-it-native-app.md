@@ -11,6 +11,18 @@ For more information on the Make It Native app, see [Getting the Make It Native 
 
 You can download the Make It Native app for [iOS](https://apps.apple.com/app/make-it-native/id1334081181) or [Android](https://play.google.com/store/apps/details?id=com.mendix.developerapp).
 
+## Android 2.0.0 / iOS 2.0.0
+
+**Release date: April 28st, 2020**
+{{% alert type="info" %}}
+Due to upgrades to our dependencies, Make It Native 2.0.0 is not backwards compatible with versions older than Studio Pro 8.9. To keep working with older versions of Studio Pro, install a version from the archive. 
+{{% /alert %}}
+
+### New Features
+
+* We added support for all new Mendix Studio Pro 8.9 features. 
+* On iOS the Atlas UI sample app has been updated to showcase all the new features of the platform.
+
 ## Android 1.3.0 / iOS 1.3.0
 
 **Release date: April 1st, 2020**

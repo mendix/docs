@@ -18,7 +18,7 @@ To troubleshoot issues related to the [Make it Native](/refguide/getting-the-mak
 
 Depending on your device settings and network characteristics, the Make it Native app can fail to connect to the runtime. If so, the make it Native app shows the following error message:
 
-![unable to load script](attachments/unabletoloadscript.png)
+{{% image_container width="350" %}}![unable to load script](attachments/unabletoloadscript.png){{% /image_container %}}
 
 This failure is often caused by the Windows Defender firewall. In such cases, attempts to open the runtime URL from the mobile browser will also fail. To mitigate this issue, please do the following:
 
@@ -30,7 +30,7 @@ This failure is often caused by the Windows Defender firewall. In such cases, at
     d. For each Node.js entry, note their values in the **Program** column. They should all have a green check mark in front of them.<br /> 
     e. If the **Program** column shows a Mendix installation directory, then there should be a green icon in front of the entry. If this is not the case, double-click the entry and select **Allow the connection**:
     
-    ![inbound rules](attachments/inboundrules.png)
+    {{% image_container width="350" %}}![inbound rules](attachments/inboundrules.png){{% /image_container %}}
 
 1. Windows distinguishes between two types of networks: private and public. Windows Defender Firewall applies stricter regulations for public networks. If, and only if, you are connected to a trusted network, configure the network as **Private** on your computer.
 

@@ -104,7 +104,7 @@ There are two ways that the device can build the packages:
 {{% alert type="info" %}}
 Building in the cloud uses the PhoneGap Build service from Adobe. Unfortunately, Adobe no longer maintains this service. As a result, as of April 30th 2020, iOS apps built through the platform or using the PhoneGap Build service are not being accepted on Apple's App Store.
 
-If you wish to build your iOS app, continue with either the [Doing It Yourself](/developerportal/deploy/mobileapp#doing-it-yourself) section for remote building or [Building Your iOS App Locally](/developerportal/deploy/mobileapp##building-ios-locally) for local building.
+If you wish to build your iOS app, continue with either the [Doing It Yourself](#doing-it-yourself) section for remote building or [Building Your iOS App Locally](#building-ios-locally) for local building.
 {{% /alert %}}
 
 After selecting the **Build in the cloud** option and choosing the correct environment, you are ready to start the PhoneGap build.
@@ -175,9 +175,9 @@ This process is shorter than using XCode but might require more work to understa
 ##### 4.3.2.2 Building iOS using XCode
 
 Using XCode can be easier than the Cordova CLI due to XCode's friendly visual interface. To build your app using XCode do the following: 
-1. Under **/build/platforms/ios/** open the `.xcworkspace` file by double-clicking it. Xcode shoud open with the project loaded:
+1. Under **/build/platforms/ios/** open the `.xcworkspace` file by double-clicking it. Xcode should open with the project loaded:
 
-    ![Opening XCWorkspace](attachments/mobileapp/open-xcworkspace.png)
+    ![Opening XCWorkspace](attachments/mobileapp/xc-workspace.png)
 
 1. Select the root element from the tree view in the left-side panel:
    

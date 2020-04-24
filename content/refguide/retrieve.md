@@ -78,7 +78,11 @@ Date functions, user-role tokens, computations based on tokens, and following as
 
 This property defines the order of the list. The list can be sorted in ascending and descending order on the values of an attribute. If there are objects that have the same attribute value, the list is sorted based on the second attribute (if any) and so on.
 
-### 3.4 List Name or Object Name
+### 3.4 Type
+
+This read-only property indicates whether you will retrieve a singe object or a list.
+
+### 3.5 List Name or Object Name
 
 This is the name of the list or object returned by the activity. It can be used by all the activities that follow this activity.
 

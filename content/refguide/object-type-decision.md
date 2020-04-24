@@ -24,7 +24,9 @@ The object type decision properties consists of the following sections:
 
 * [Input](#input)
 
-    <img src="attachments/decisions/object-type-decision-properties.png" style="zoom:50%;" />
+    {{% image_container width="250" %}}
+![](attachments/decisions/object-type-decision-properties.png)
+{{% /image_container %}}
 
 ### 2.1 Common Section {#common} 
 

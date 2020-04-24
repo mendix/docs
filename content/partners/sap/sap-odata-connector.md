@@ -29,10 +29,6 @@ When running the Mendix application on SAP Cloud Platform, you can choose to use
 The SAP Destination Service replaces the SAP Cloud Connector flag which was used in previous version of the OData Connector for SAP solutions
 {{% /alert %}}
 
-{{% alert type="info" %}}
-The SAP Destination Service works without current user logged in for only No Authentication and Basic Authentication.
-{{% /alert %}}
-
 ## 2 Using the OData Connector for SAP Solutions{#UsingtheSAPODataConnector}
 
 Once you have downloaded the OData Connector for SAP solutions from the App Store, it will be imported into your app. You will find it in the Project Explorer under project **{Project name}** > **App Store modules** > **SAPODataConnector**.

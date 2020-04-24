@@ -4,7 +4,7 @@ category: "Settings"
 description: "Describes security and roles and permissions in Mendix Studio."
 menu_order: 10
 tags: ["studio", "security", "roles and permissions"]
-#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.#The anchor <upgrade> below is mapped, so it should not be removed or changed.
 ---
 
 ## 1 Introduction 
@@ -193,7 +193,23 @@ People invited to join your App Team in the Developer Portal are not added as Ap
 If you have created a new user role on the **Roles and Permissions** page, you need to publish the app first to be able to see and assign this role in the Developer Portal.
 {{% /alert %}}
 
-## 6 Read More
+## 6 Auto-Upgrade to the New Service {#upgrade}
+
+When you try to publish your app, you may be notified that upgrade of the service that secures your app is required first:
+
+{{% image_container width="300" %}}
+![Upgrade Required](attachments/settings-security/upgrade.png)
+{{% /image_container %}}
+
+A special service makes it possible to manage your app users. As of April 1st, 2020 we are replacing the current service with an improved one. This upgrade will be done automatically for you when you click **Auto-Upgrade**. 
+
+No need to worry if you do not auto-upgrade, your app will still be secured and running, however, you will not be able to publish a newer version of your app until you upgrade. 
+
+If the automatic upgrade fails, this means, the service was customized in Studio Pro, and only manual upgrade in Studio Pro is possible in this case. 
+
+If the auto-upgrade detects that the service was customized in Studio Pro by a team member, you will be notified that a manual upgrade in Studio Pro should be performed first. For more technical information on how to upgrade the service in Studio Pro, see [Upgrading to MendixSSO from AppCloudServices](/developerportal/deploy/upgrading-to-mendix-sso-from-acs).
+
+## 7 Read More
 
 * [Security](/refguide/security)
 * [Model Changes When Security Is Enabled in Studio](/refguide/studio-security-enabled)

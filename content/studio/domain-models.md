@@ -273,4 +273,4 @@ You cannot delete *Name* and *Size* attributes of image and file entities.
 
 * [Attributes](domain-models-attributes)
 * [Associations](domain-models-association-properties) 
-* [Configure a Domain Model](domain-models-how-to-configure)
+* [Configure a Domain Model](/studio-how-to/domain-model-how-to-configure)

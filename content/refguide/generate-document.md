@@ -15,7 +15,7 @@ This activity can only be used in **Microflows**.
 
 The generate-document microflow action can be used to write a document to a file, based on a [template](document-templates). The types of document which can be created are listed in [Document Type](#document-type).
 
-![](attachments/819203/918200.png)
+![](attachments/microflows-and-nanoflows/918200.png)
 
 See [Common Properties](microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
 

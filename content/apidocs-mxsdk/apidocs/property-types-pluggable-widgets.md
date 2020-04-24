@@ -167,7 +167,7 @@ Properties of type decimal are represented as a number input in Studio Pro. They
 | `key`          | Yes      | String         | See [key](#key) |
 | `defaultValue` | Yes      | Integer        | Default value for the property                                                                                                                                      |
 
-#### 2.3.2 Studio Pro UI
+#### 2.4.2 Studio Pro UI
 
 When the property is defined as follows:
 
@@ -258,7 +258,7 @@ Then the Studio Pro UI for the component appears like this:
 
 ### 3.2 Image {#image}
 
-Image allows a user to configure a static image from an [image collection](/refguide/image-collection). It also allows a user to configure an image from an object that is a specialization of **System.Image**. It is passed as [DynamicValue<ImageValue>](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets#imagevalue) prop to a client component. See the [Images Reference Guide](/refguide/images) for more information about supported image formats.
+Image allows a user to configure a static image from an [image collection](/refguide/image-collection). It also allows a user to configure an image from an object that is a specialization of **System.Image**. It is passed as DynamicValue [ImageValue](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets#imagevalue) prop to a client component. See the [Images Reference Guide](/refguide/images) for more information about supported image formats.
 
 {{% alert type="info" %}}
 This property type was introduced in Mendix 8.1. Support for dynamic images was introduced in Mendix [8.4.0](/releasenotes/studio-pro/8.4).
@@ -582,7 +582,6 @@ When the property is defined as follows:
 Then the Studio Pro UI for the property appears like this:
 
 ![](attachments/widget-property-types/file.png)
-
 
 ### 4.7 Datasource {#datasource}
 

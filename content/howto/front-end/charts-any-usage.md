@@ -25,7 +25,7 @@ With **Any Chart** you can build all the chart types that are possible with Plot
 Before starting this how-to, make sure you have the following prerequisites:
 
 * The latest version of Mendix Studio Pro
-* The latest [Any Chart](https://appstore.home.mendix.com/link/app/106517/Mendix/AnyChart) module
+* The latest [Any Chart](/appstore/modules/any-chart) module
 * An understanding of JSON data structures
 
 ## 3 Chart Structure

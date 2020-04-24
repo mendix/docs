@@ -12,18 +12,18 @@ This reference guide will contextualize the style elements Mendix uses in native
 
 Mendix apps use layouts to dictate how pages can look and function. For native apps specifically, you can use a native layout to easily integrate navigation and settings optimized for native functionality. For more information on layouts, see [Layout](layout).
 
-To keep widgets responsive, Mendix apps use Flexbox. Using Flexbox, a component can set the layout of its child components. This allows your app to retain a consistent layout across multiple form factors. For more information on layout, see React Native’s [Flexbox documentation](https://facebook.github.io/react-native/docs/flexbox).
+To keep widgets responsive, Mendix apps use Flexbox. Using Flexbox, a component can set the layout of its child components. This allows your app to retain a consistent layout across multiple form factors. For more information on layout, see React Native’s [Flexbox documentation](https://reactnative.dev/docs/flexbox).
 
-You can use the `height` and `width` properties to set a widget component’s dimensions. For more information on size, see React Native’s [Height and Width documentation](https://facebook.github.io/react-native/docs/height-and-width).
+You can use the `height` and `width` properties to set a widget component’s dimensions. For more information on size, see React Native’s [Height and Width documentation](https://reactnative.dev/docs/height-and-width).
 
-## 2  Style Objects
+## 2  Style Objects {#style-objects}
 
 A widget is composed of various elements, and each can be styled individually. You can customize your widgets using style objects. A style object is a JavaScript object with a set of attributes specific for each widget. Some of the attributes reuse properties of other elements, such as React Native’s ViewStyle, TextStyle, ImageStyle, and Colors elements. You can consult the following property sets for more information on styling properties as you customize your app:
 
-* **ViewStyle** – React Native’s [View Style](https://facebook.github.io/react-native/docs/view-style-props) property set helps you alter borders, opacity, and other general aspects of your app (the view style property set also contains layout, shadow, and transform properties as well)
-* **TextStyle** – React Native’s [Text](https://facebook.github.io/react-native/docs/text#style) property set will allow you to style text – using these props you can control text’s font, selection status, and more (the text property set also contains layout properties as well)
-* **ImageStyle** – React Native’s [Image](https://facebook.github.io/react-native/docs/image#style) property set will allow you to style images from network sources, a local library, and temporary local images – using these properties you can alter an image’s size, border, and more (the image property set also contains layout properties as well)
-* **Colors** – React Native’s [Color Reference](https://facebook.github.io/react-native/docs/colors) property set will allow you to alter colors – you can customize colors using red-green-blue notation, change hue or saturation, and more 
+* **ViewStyle** – React Native’s [View Style](https://reactnative.dev/docs/view-style-props) property set helps you alter borders, opacity, and other general aspects of your app (the view style property set also contains layout, shadow, and transform properties)
+* **TextStyle** – React Native’s [Text](https://reactnative.dev/docs/text#style) property set will allow you to style text – using these props you can control text’s font, selection status, and more (the text property set also contains layout properties)
+* **ImageStyle** – React Native’s [Image](https://reactnative.dev/docs/image#style) property set will allow you to style images from network sources, a local library, and temporary local images – using these properties you can alter an image’s size, border, and more, while the image property set also contains layout properties (the `resizeMode` value `repeat` is not supported)
+* **Colors** – React Native’s [Color Reference](https://reactnative.dev/docs/colors) property set will allow you to alter colors – you can customize colors using red-green-blue notation, change hue or saturation, and more 
 
 ### 2.1  Class Names
 
@@ -83,7 +83,7 @@ Data widgets are essential to many Mendix apps. These widgets will allow your us
 
 The data view widget shows the contents of one data object. For more information about this widget, see [Data View](data-view).This widget has no user interface, so it does not support any styling.
 
-### 3.2 List View Widget
+### 3.2 List View Widget {#list-view}
 
 The list view shows a list of objects arranged vertically or horizontally. For more information about this widget, see [List View](list-view). This is not the default list view, but how a list view widget could look in an app:
 
@@ -520,7 +520,7 @@ The default class to style the navigation is named  `navigationStyle`. There is 
 
 ## 11 Add-On Widgets
 
-Add-on widgets are distributed through the [Native Mobile Resources](https://appstore.home.mendix.com/link/app/109513/) module, and are not shipped with Mendix Studio Pro. Other add-on widgets might also be distributed through app templates, as well as modules importing pages from other projects. 
+Add-on widgets are distributed through the [Native Mobile Resources](/appstore/modules/native-mobile-resources) module, and are not shipped with Mendix Studio Pro. Other add-on widgets might also be distributed through app templates, as well as modules importing pages from other projects. 
 
 ### 11.1 Activity Indicator {#activity-indicator}
 
@@ -999,6 +999,44 @@ The widget’s style properties are as follows:
 | `rightAction` |`threshold` | The number of pixels to accept the swipe action. |
 
 The default class to style all animation widgets is named `com_mendix_widget_native_listviewswipe_ListViewSwipe`.
+
+### 11.22 Bottom Sheet
+
+The bottom sheet widget creates a set of options while blocking interaction with the rest of the screen or a draggable surface anchored to the bottom of the screen. There are two customizable variations:
+
+* Modal bottom sheet:
+
+	{{% image_container width="350" %}}![modal bottom sheet](attachments/native-styling-refguide/modal-bottom-sheet.gif){{% /image_container %}}
+
+* Expanding bottom sheet:
+
+	{{% image_container width="350" %}}![expanding bottom sheet](attachments/native-styling-refguide/expanding-bottom-sheet.gif){{% /image_container %}}
+
+The widget’s style properties are as follows:
+
+```xml
+<container />
+<containerWhenExpandedFullscreen />
+<modal />
+<modalItems>
+	<defaultStyle />
+	<primaryStyle />
+	<dangerStyle />
+	<customStyle />
+</modalItems>
+```
+
+| Element | Style Properties | Description |
+| --- | --- | --- |
+| `container` | This has all ViewStyle properties. | |
+| `containerWhenExpandedFullscreen` | This has all ViewStyle properties. | Only available if `Expading` and `Enable full screen` are enabled. |
+| `modal` | This has all ViewStyle properties. | |
+| `defaultStyle` | This has all TextStyle properties. | Available when `Default` is selected as style for basic items. |
+| `primaryStyle` | This has all TextStyle properties. | Available when `Primary` is selected as style for basic items. |
+| `dangerStyle` | This has all TextStyle properties. | Available when `Danger` is selected as style for basic items. |
+| `customStyle` | This has all TextStyle properties. | Available when `Custom` is selected as style for basic items. |
+
+The default class to style all bottom sheet widgets is named `com_mendix_widget_native_bottomsheet_BottomSheet`.
 
 ## 12 Read More
 

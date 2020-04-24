@@ -35,14 +35,16 @@ The Push Notifications Connector assumes that the mobile app and the "back-end" 
 
 The PushNotifications module has two dependencies:
 
- * [Encryption module](https://appstore.home.mendix.com/link/app/1011/Mendix/Encryption)
- * [The Community Commons module](https://appstore.home.mendix.com/link/app/170/)
+ * [Encryption](/appstore/modules/encryption)
+ * [Community Commons Function Library](/appstore/modules/community-commons-function-library)
+ * [Nanoflow Commons](https://appstore.home.mendix.com/link/app/109515/)
+ * [Native Mobile Resources](https://appstore.home.mendix.com/link/app/109513/)
 
 To include these dependencies, download them from the App Store in a way similar to how you installed the PushNotifications module. While importing, you may get a pop-up window with information about overwriting project files, which you can confirm by clicking **OK**.
 
 {{% alert type="info" %}}
 
-If your project is using an older version of the [Encryption module](https://appstore.home.mendix.com/link/app/1011/Mendix/Encryption), it might trigger an error for referencing a non-existent layout. You can fix this by assigning the master layout of the **Encryption.ResponsiveLayout_Certificate** layout to another layout (please note that in this specific use case, it is not important which layout is used). This does not apply to version 1.3.1 and above.
+If your project is using an older version of the [Encryption](/appstore/modules/encryption) module, it might trigger an error for referencing a non-existent layout. You can fix this by assigning the master layout of the **Encryption.ResponsiveLayout_Certificate** layout to another layout (please note that in this specific use case, it is not important which layout is used). This does not apply to version 1.3.1 and above.
 
 ![](attachments/19955732/20217886.jpg)
 
@@ -73,7 +75,8 @@ If your project already has an AfterStartup microflow configured, it is recommen
 * create a new microflow, from which you will call both the existing AfterStartup microflow and the AfterStartup_PushNotifications microflow, and then set this as the AfterStartup microflow for your app
 * add a new action to the existing AfterStartup microflow to run the AfterStartup_PushNotifications microflow
 
-<iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/02c590e5-f8bf-4f0e-90d6-3719390ee863/onstartupacsandpushnotifications?embed=true" allowfullscreen=""></iframe>
+![On start push microflow](attachments/19955732/on-app-startup.png)
+
 ## 6 Setting Up the Administration Pages {#setting}
 
 Add the **PushNotifications_Administration** page to the project navigation, so it can be reached after you deploy your app. This page contains three tabs:

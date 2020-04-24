@@ -1,6 +1,7 @@
 ---
 title: "Events Section"
 parent: "page-editor-widgets"
+menu_order: 70
 description: "Describes the Events section in widgets properties in Mendix Studio."
 tags: ["studio", "page editor", "widgets", "on click action", "events"]
 ---

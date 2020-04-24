@@ -84,7 +84,7 @@ parent: "metamodel-8"
 
 #### Snippet (ModelUnit)
 
-* We added the `type` property as public.
+* We added the public `type` property.
 
 #### RetrievalSchema (Element)
 

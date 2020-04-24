@@ -2,29 +2,32 @@
 title: "Client Activities"
 parent: "activities"
 menu_order: 50
-tags: ["studio pro"]
+tags: ["studio pro", "client activities", "activities"]
 ---
 
-## Close Page
+## 1 Introduction
 
-See [Close Page](close-page).
+**Client Activities** perform activities in the client, for example, opening a page or showing a message. The activities described in this document are in the **Object Activities** section of the **Toolbox**:
 
-## Download File
+{{% image_container width="300" %}}
+![Client Activities](attachments/client-activities/client-activities.png)
+{{% /image_container %}}
 
-See [Download File](download-file).
+The following are the client activities you can use in your microflow or nanoflow:
 
-## Show Page
+* [Close page](close-page) – closes the currently open page
 
-See [Show Page](show-page).
+* [Download file](download-file) *(only in microflows)* – downloads a file using the browser
 
-## Show Home Page
+* [Show home page](show-home-page) *(only in microflows)* – opens the home page for the end-user 
 
-See [Show Home Page](show-home-page).
+* [Show message](show-message) – shows a message to the end-user
 
-## Show Message
+* [Show page](show-page) – shows a selected page to the end-user
 
-See [Show Message](show-message).
+* [Validation feedback](validation-feedback) – does a validation check, and if this check fails, it shows a message to the end-user
 
-## Validation Feedback
 
-See [Validation Feedback](validation-feedback).
+## 2 Read More
+
+* [Activities](activities)

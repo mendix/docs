@@ -10,6 +10,33 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 ## 2020
 
+### April 24th, 2020
+
+#### SAP Cloud Platform Deployment
+
+* We have added an easy-to-use autoscaler configurator to allow you to easily create JSON configuration files for the **Application Autoscaler** on SAP Cloud Platform. See [Application Autoscaler for SAP Cloud Platform](/partners/sap/sap-autoscaler) for more information.
+    * There is currently an issue with how the JSON is uploaded. We are working on a fix for this but, in the meantime, please check the workaround in the documentation to ensure that the JSON is uploaded.
+
+### March 26th, 2020
+
+#### SAP Cloud Platform Deployment
+
+* We have added support for deploying to the Azure Netherlands region of SAP Cloud Platform.
+    * **Object storage is only supported in the Azure Netherlands region for  Mendix version 8.7.0 and above**
+* We have added a log of all deployment activities which are carried out on your SAP environments to the environments page of apps which are deployed to SAP Cloud Platform.
+* We have added the ability to specify a custom URL (e.g. `appname.subdomain.domain.com`) where the user will be redirected after signing on using XSUAA, instead of being redirected to the generated URL (e.g. `appname.cfapps.eu10.hana.ondemand.com`) of the app.
+
+### March 24th, 2020
+
+#### Mendix for Private Cloud — Mendix Operator v1.0.1
+
+* We have added an additional field to the `MendixApp` CR which will allows the Developer Portal to display the latest state of environments.
+* We have improved compatibility with popular container image registries (such as Azure Container Registry). The build process can now recognize that the container image already has the necessary base layers, and avoids downloading them again, saving time and network traffic.
+
+#### Mendix for Private Cloud — Mendix Gateway Agent v1.0.1
+
+* We have improved the reliability of sending environment statuses to the Developer Portal.
+
 ### March 23rd, 2020
 
 #### Mendix for Private Cloud

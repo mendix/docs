@@ -30,6 +30,7 @@ Data view consists of the following properties:
 
 * [Data Source](#data-source-data-view)
 * [General](#general-section-data-view)
+* [Conditional Visibility](#visibility-data-view)
 * [Design](#design-section-data-view)
 
 {{% image_container width="300" %}}![](attachments/page-editor-data-view-list-view/data-view-properties.png)
@@ -52,7 +53,11 @@ In the **General** section, you can enable/disable the following options:
 * **Read-Only** (disabled by default) – when enabled, all [input elements](page-editor-widgets-input-elements) (for example, a text area, a check box) in the data view will be in read-only mode
 * **Show Footer** (enabled by default) – a footer is an area at the bottom of the document, usually containing information common for all pages, such as copyrights  
 
-### 2.3 Design Section{#design-section-data-view}
+### 2.3 Conditional Visibility {#visibility-data-view}
+
+{{% snippet file="studio/visibility-section-link.md" %}}
+
+### 2.4 Design Section {#design-section-data-view}
 
 For information on the **Design** section and its properties, see [Design Section](page-editor-widgets-design-section).
 
@@ -62,6 +67,7 @@ List view consists of the following properties:
 
 * [Data Source](#data-source-list-view)
 * [General](#general-section-list-view)
+* [Conditional Visibility](#visibility-list-view)
 * [Design](#design-section-list-view)
 
 {{% image_container width="300" %}}![](attachments/page-editor-data-view-list-view/list-view-properties.png)
@@ -96,7 +102,11 @@ In the **General** section, you can select the number of rows to be displayed on
 
 * **Read-Only** (enabled by default) – when enabled, all [input elements](page-editor-widgets-input-elements) (for example, a text area, a check box) in the list view will be in read-only mode
 
-### 3.4 Design Section {#design-section-list-view}
+### 3.4 Conditional Visibility Section {#visibility-list-view}
+
+{{% snippet file="studio/visibility-section-link.md" %}}
+
+### 3.5 Design Section {#design-section-list-view}
 
 For information on the **Design** section and its properties, see [Design Section](page-editor-widgets-design-section).
 

@@ -46,7 +46,7 @@ For more information on deploying your app and versioning it, see  the [Versioni
 
 ### 2.3 Links to the Developer Portal and App Store {#links}
 
-You can find links to the [Developer Portal](/developerportal/index) and [App Store](/developerportal/app-store/) in the top-right corner of Studio Pro . Your account is displayed next to these buttons if you are signed in. 
+You can find links to the [Developer Portal](/developerportal/index) and [App Store](/appstore/index) in the top-right corner of Studio Pro . Your account is displayed next to these buttons if you are signed in. 
 
 Click the account name to navigate to your apps, the Developer Portal, your profile, or to sign out. 
 

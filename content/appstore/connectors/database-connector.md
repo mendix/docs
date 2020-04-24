@@ -3,6 +3,7 @@ title: "Database Connector"
 category: "Connectors"
 description: "Describes the configuration and usage of the Database Connector, which is available in the Mendix App Store."
 tags: ["app store", "app store component", "database connector", "jdbc", "hikari", "query" ]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
 ## 1 Introduction
@@ -36,14 +37,22 @@ These are the prerequisites for using this connector:
 
 ### 3.1 Usage
 
-Once you have imported the Database Connector into your app project, you will have **Database Connector** available in the **Toolbox**. The connector supports two actions: **Execute query** and **Execute statement**. To use either of these in your Mendix application, drag them into your microflow. Next, provide all the arguments for the selected action and choose the output result name.
+Once you have imported the Database Connector into your app project, you will have the **Database Connector** available in the **Toolbox**. The connector supports four actions: **Execute query**, **Execute statement**, **Execute parameterized query**, and **Execute parameterized statement**. To use any of these in your Mendix application, drag them into your microflow. Next, provide all the arguments for the selected action and choose the output result name.
+
+The **Execute query** and **Execute parameterized query** actions should be used for querying objects with a `SELECT` SQL command. The **Execute statement** and **Execute parameterized statement** actions should be used for all other commands (for instance, `INSERT`, `UPDATE`, or `DELETE`).
+
+For both queries and statements, the difference between the parameterized and regular versions are that the parameterized version takes a string template parameter, while the regular version takes a fully formed SQL command string with no placeholders.
+
+{{% alert type="info" %}}
+The parameterized actions are only available with Database Connector versions 3.0.0 and above. For these, it is necessary to use Mendix [8.6.0](/releasenotes/studio-pro/8.6#860).
+{{% /alert %}}
 
 ### 3.2 Results
 
 These are the results of the actions:
 
-* **Execute query** –  a list of objects of the row type, which is also the output of the `SELECT SQL` query
-* **Execute statement** – either an integer or a long value, which usually represents the amount of affected rows
+* **Execute query** and **Execute parameterized query** – a list of objects of the row type, which is also the output of the `SELECT` SQL query
+* **Execute statement** and **Execute parameterized statement** – either an integer or a long value, which usually represents the amount of affected rows
 
 ## 4 Best Practices
 

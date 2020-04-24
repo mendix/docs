@@ -10,7 +10,7 @@ tags: ["studio pro", "end event", "event"]
 
 An end event defines where the flow will stop. 
 
-An end event can return a value: an object, enumeration, a list, etc. For more information, see the [Return Value](#return value) section. 
+An end event can return a value: an object, enumeration, a list, etc. For more information, see the [Return Value](#return-value) section. 
 
 In the example below, a *Buyer* variable of the *Customer* entity is returned by the end event:
 
@@ -18,7 +18,7 @@ In the example below, a *Buyer* variable of the *Customer* entity is returned by
 
 The number of end events depends on the number of possible outcomes of the microflow or a nanoflow. That means there can be more than one end event, for example when a [decision](decision) is used:
 
-<img src="attachments/events/end-events.png" style="zoom:60%;" /> 
+![](attachments/events/end-events.png)
 
 ## 2 Behavior Properties
 
@@ -26,7 +26,9 @@ The number of end events depends on the number of possible outcomes of the micro
 
 The return value is the value that is returned to the flow that called the current flow. If you have several end events and they have a return value, they all need to return a value of the same type. For example, if one of the end events returns an object of type *Entity*, the others need to return the same type: 
 
-<img src="attachments/events/return-value.png" style="zoom:50%;" />
+{{% image_container width="300" %}}
+![](attachments/events/return-value.png)
+{{% /image_container %}}
 
 You can choose to return nothing, or to return, for example, a list, enumeration, or Boolean value:
 

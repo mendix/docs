@@ -9,7 +9,7 @@ tags: ["validation", "microflow", "translate"]
 
 Setting up validation rules should be relatively straight forward. Per object or per process step you want to have a single microflow that is in charge of the validation. That microflow has the required input parameters, validates all values. If a value is invalid the microflow will execute the validation feedback activity. When completing the microflow it will return a Boolean true/false whether or not the object has been successfully validated.
 
-These types of validation actions should be used throughout your project.
+These types of validation actions should be used throughout your project. 
 
 ![](attachments/translatable/18581628.png)
 
@@ -37,7 +37,7 @@ Create an enumeration containing all validation messages
 
 ![](attachments/translatable/18581624.png)
 
-This is the microflow you should use to create the message you should store in the entity:
+Reference the model below for messages you should store in the entity:
 
 <iframe width="100%" height="400px" frameborder="0" src="https://modelshare.mendix.com/models/34614f4f-a2d3-43ff-81c8-a14605e06a05/get-i18n-text-using-1-parameter?embed=true" allowfullscreen=""></iframe><iframe width="100%" height="400px" frameborder="0" src="https://modelshare.mendix.com/models/c1d54c7d-def4-4b39-9d90-92c6d5dab59f/get-i18n-text-using-2-parameters?embed=true" allowfullscreen=""></iframe>
 

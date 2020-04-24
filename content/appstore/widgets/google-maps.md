@@ -3,11 +3,12 @@ title: "Google Maps"
 category: "Widgets"
 description: "Describes the configuration and usage of the Google Maps widget, which is available in the Mendix App Store."
 tags: ["app store", "app store component", "widget", "google maps", "platform support"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
-The [Google Maps](https://appstore.home.mendix.com/link/app/48911/) widget can be used to show Google Maps locations in your app.
+The [Google Maps](/appstore/widgets/google-maps) widget can be used to show Google Maps locations in your app.
 
 ### 1.1 Features
 

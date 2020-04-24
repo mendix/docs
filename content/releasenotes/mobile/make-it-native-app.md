@@ -5,12 +5,28 @@ menu_order: 10
 description: "These release notes showcase each release of the iOS and Android Make It Native app versions."
 tags: ["Native", "Android", "iOS", "Apple", "Android"]
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
-#KI: "When using the `Touchable` option" = UICORE-417
 ---
 
 For more information on the Make It Native app, see [Getting the Make It Native App](/refguide/getting-the-make-it-native-app).
 
 You can download the Make It Native app for [iOS](https://apps.apple.com/app/make-it-native/id1334081181) or [Android](https://play.google.com/store/apps/details?id=com.mendix.developerapp).
+
+## Android 1.3.0 / iOS 1.3.0
+
+**Release date: April 1st, 2020**
+
+{{% alert type="info" %}}
+If you are working in Mendix Studio Pro 8.8 or higher, you must update your Make It Native app to this version.
+{{% /alert %}}
+	
+### New Features
+
+* We added support for all new Mendix Studio Pro 8.8 features. 
+
+### Fixes
+
+* We updated the dependencies to remove the deprecated UIWebView library from iOS.
+* We [fixed an issue](/releasenotes/studio-pro/8.8#417) where a native mobile app crashed when debugging it using the **Touchable** option in the inspector overlay.
 
 ## Android 1.2.3 / iOS 1.2.5
 
@@ -23,6 +39,7 @@ You can download the Make It Native app for [iOS](https://apps.apple.com/app/mak
 ### Known Issues
 
 * When using the **Touchable** option in the inspector overlay, the Mendix Native app crashes.
+	* Fixed in [Studio Pro 8.8](/releasenotes/studio-pro/8.8#417)
 
 ## Android 1.2.2 / iOS 1.2.4
 
@@ -35,6 +52,7 @@ You can download the Make It Native app for [iOS](https://apps.apple.com/app/mak
 ### Known Issues
 
 * When using the **Touchable** option in the inspector overlay, the Mendix Native app crashes.
+	* Fixed in [Studio Pro 8.8](/releasenotes/studio-pro/8.8#417)
 
 ## Android 1.2.1 / iOS 1.2.3
 
@@ -47,6 +65,7 @@ You can download the Make It Native app for [iOS](https://apps.apple.com/app/mak
 ### Known Issues
 
 * When using the **Touchable** option in the inspector overlay, the Mendix Native app crashes.
+	* Fixed in [Studio Pro 8.8](/releasenotes/studio-pro/8.8#417)
 
 ## Android 1.2.1 / iOS 1.2.2
 
@@ -63,6 +82,7 @@ On Android:
 ### Known Issues
 
 * When using the **Touchable** option in the inspector overlay, the Mendix Native app crashes.
+	* Fixed in [Studio Pro 8.8](/releasenotes/studio-pro/8.8#417)
 
 ## Android 1.2.0 / iOS 1.2.1
 
@@ -77,6 +97,7 @@ On iOS:
 ### Known Issues
 
 * When using the **Touchable** option in the inspector overlay, the Mendix Native app crashes.
+	* Fixed in [Studio Pro 8.8](/releasenotes/studio-pro/8.8#417)
 
 ## Android 1.2.0 / iOS 1.2.0
 
@@ -104,6 +125,7 @@ On Android:
 ### Known Issues
 
 * When using the **Touchable** option in the inspector overlay, the Mendix Native app crashes.
+	* Fixed in [Studio Pro 8.8](/releasenotes/studio-pro/8.8#417)
 
 ## Android 1.1.0 / iOS 1.1.0
 

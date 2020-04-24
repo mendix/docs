@@ -91,18 +91,6 @@ When writing for the *Studio Pro Guide*, consider these guidelines:
 * Add examples for each feature being documented
 * Add images that clearly show the specific functionality being described (so the reader can check that the image matches what they see on their screen)
 
-## 5 Embedding a Model Share
-
-To embed a model share in the documentation, paste the iframe, for example:
-
-```html
-<iframe width='100%' height='491px' frameborder='0' src='https://modelshare.mendix.com/models/fb092960-6fc1-41c0-bb64-d9e70c012bc5/save-example?embed=true' allowfullscreen></iframe>
-```
-
-This will render as:
-
-<iframe width='100%' height='491px' frameborder='0' src='https://modelshare.mendix.com/models/fb092960-6fc1-41c0-bb64-d9e70c012bc5/save-example?embed=true' allowfullscreen></iframe>
-
 ## 6 Read More
 
 * [How to Contribute to the Mendix Documentation](contribute-to-the-mendix-documentation)

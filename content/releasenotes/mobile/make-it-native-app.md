@@ -11,7 +11,7 @@ For more information on the Make It Native app, see [Getting the Make It Native 
 
 You can download the Make It Native app for [iOS](https://apps.apple.com/app/make-it-native/id1334081181) or [Android](https://play.google.com/store/apps/details?id=com.mendix.developerapp).
 
-## Android 2.0.0 / iOS 2.0.0
+## Android 2.0.0 / iOS 2.0.0 {#two-zero-zero}
 
 **Release date: April 28th, 2020**
 

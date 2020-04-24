@@ -16,7 +16,7 @@ To download the Make It Native app, search for *Make It Native* in your device's
 * [Download for Android](https://play.google.com/store/apps/details?id=com.mendix.developerapp)
 * [Download for iOS](https://apps.apple.com/app/make-it-native/id1334081181)
 
-## Archives
+## Archives {#archives}
 
 Occasionally Mendix will introduce features, bug fixes, and functionality that will make the Make It Native app incompatible with older versions of the Mendix Studio Pro.
 
@@ -33,7 +33,7 @@ You can also scan one of the QRcodes further down.
 
 iOS archive version for Make It Native are served via TestFlight links. To join the specific version of the Make It Native app you would like to install follow the appropriate link via the device that has the account you would like to join TestFlight with. Use the TestFlight app to install the version of the app you already joined.
 
-### Direct download links
+### Direct download links {#direct-links}
 
 ### Make It Native for Studio Pro 8.8 or earlier:
 

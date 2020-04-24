@@ -115,7 +115,9 @@ Columns form a row of a layout grid.
 
  An example of layout grid column properties is represented in the image below:
 
-<img src="attachments/container-widgets/column-properties.png" alt="Column Properties" style="zoom: 80%;" />
+{{% image_container width="300" %}}
+![Column Properties](attachments/container-widgets/column-properties.png)
+{{% /image_container %}}
 
 Layout grid column properties consist of the following sections:
 
@@ -152,7 +154,9 @@ For the *desktop* and *tablet*, you might want to set the first column with a pi
 
 For *phone*, it can be a good idea to place two columns one under another, setting them to **Manual** width of *12* (for more information on the column size property, see the [Size](#column-size) section). In this case, the second column will be automatically wrapped to another line:
 
- <img src="attachments/container-widgets/layout-example-phone.png" alt="Layout Example, Phone" style="zoom:80%;" />
+ {{% image_container width="300" %}}
+![Layout Example, Phone](attachments/container-widgets/layout-example-phone.png)
+{{% /image_container %}}
 
 On the picture below you can see the settings for two column described above:
 

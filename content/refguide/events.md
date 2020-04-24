@@ -9,7 +9,9 @@ tags: ["studio pro", "event", "events"]
 
 Events are elements that are displayed as circles on a flow of your microflow and are usually placed at the end or the beginning of the flow:
 
-<img src="attachments/events/events.png" style="zoom:67%;" />
+{{% image_container width="200" %}}
+![](attachments/events/events.png)
+{{% /image_container %}}
 
 For example, they are used to start or end your microflow, to break an iteration in a loop, or continue this iteration, depending on the type of the event. All of the events can be used both in a microflow or nanoflow, except for the error event. 
 

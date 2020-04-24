@@ -18,7 +18,7 @@ For more information on the Application AutoScaler see [Application Autoscaler S
 
 ## 2 Binding the Application Autoscaler{#binding}
 
-The autoscaler service can be found on the [services tab](/developerportal/deploy-sap-cloud-platform#binding-services) of the environment details page of your app's environment.
+The autoscaler service can be found on the [services tab](/developerportal/deploy/sap-cloud-platform#binding-services) of the environment details page of your app's environment.
 
 Selecting the autoscaler service will expand the entry to allow you to enter more details about the service you wish to bind, namely the **Plan** and the **File** which contains the configuration.
 

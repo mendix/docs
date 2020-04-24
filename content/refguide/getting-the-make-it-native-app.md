@@ -39,10 +39,10 @@ iOS archive versions for Make It Native are served via TestFlight links. To join
 
 ### 3.1 Make It Native for Studio Pro 8.8 and Below:
 
-|                                  Android                                  |     |     iOS     |
-| :-----------------------------------------------------------------------: | --- | :---------: |
-| ![Android QR Code](attachments/make-it-native-archive/qr-android-8.8.png) |     | Coming soon |
-|                                                                           |     |             |
+|                                  Android                                  |     iOS     |
+| :-----------------------------------------------------------------------: | :---------: |
+| ![Android QR Code](attachments/make-it-native-archive/qr-android-8.8.png) | Coming soon |
+|                                                                           |             |
 
 ## 4 Read More
 

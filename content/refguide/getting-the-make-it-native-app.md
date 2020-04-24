@@ -5,6 +5,8 @@ menu_order: 10
 tags: ["Android", "iOS", "native", "debug"]
 ---
 
+## 1 Introduction
+
 The Make It Native app allows developers to preview, test, and debug native app projects in conjunction with Mendix Studio Pro. It is available for both Android and iOS devices. 
 
 For more information on using the Make It Native app to test an app, see [How To Get Started with Native Mobile](/howto/mobile/getting-started-with-native-mobile). For advanced information on debugging with the Make It Native app, see [Debug Native Apps (Advanced)](/howto/mobile/native-debug).
@@ -16,7 +18,7 @@ To download the Make It Native app, search for *Make It Native* in your device's
 * [Download for Android](https://play.google.com/store/apps/details?id=com.mendix.developerapp)
 * [Download for iOS](https://apps.apple.com/app/make-it-native/id1334081181)
 
-## Archives {#archives}
+## 2 Archives {#archives}
 
 Occasionally Mendix will introduce features, bug fixes, and functionality that will make the Make It Native app incompatible with older versions of the Mendix Studio Pro.
 
@@ -24,18 +26,18 @@ For example, you might be working on a time-critical project where updating to t
 
 To solve this issue and others like it, the apps provided in this document can be installed side by side with the latest Make It Native app. Those apps working together will allow you to continue your work unimpeded.
 
-### Android
+### 2.1 Android
 
 To acquire the archive you need, see the [Android Make It Native Archive](https://www.dropbox.com/sh/37s3d4gumhej6j3/AAAdXd97G3s8W0sUE1TQyYW9a?dl=0). To install the APKs, navigate with your device to the link provided, choose the version you would like to install, then download and install it on your device.
-You can also scan one of the QRcodes further down.
+You can also scan one of the QR codes with your device in the [Direct Downloads](#direct-links) section below..
 
-### iOS
+### 2.2 iOS
 
-iOS archive version for Make It Native are served via TestFlight links. To join the specific version of the Make It Native app you would like to install follow the appropriate link via the device that has the account you would like to join TestFlight with. Use the TestFlight app to install the version of the app you already joined.
+iOS archive versions for Make It Native are served via TestFlight links. To join a specific TestFlight version of the Make It Native app and install it, tap the appropriate link using the device with the account you would like to join TestFlight with. Use the TestFlight app to install the version of the app you already joined.
 
-### Direct download links {#direct-links}
+## 3 Direct Download Links {#direct-links}
 
-### Make It Native for Studio Pro 8.8 or earlier:
+### 3.1 Make It Native for Studio Pro 8.8 and Below:
 
 |                                  Android                                  |     |     iOS     |
 | :-----------------------------------------------------------------------: | --- | :---------: |
@@ -44,6 +46,6 @@ iOS archive version for Make It Native are served via TestFlight links. To join 
 
 ## 4 Read More
 
-- [How to Deploy Your First Mendix Native App](deploying-native-app)
-- [How to Create a Custom Developer App](how-to-devapps)
-- [How to Debug Native Apps (Advanced)](native-debug)
+* [How to Deploy Your First Mendix Native App](deploying-native-app)
+* [How to Create a Custom Developer App](how-to-devapps)
+* [How to Debug Native Apps (Advanced)](native-debug)

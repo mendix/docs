@@ -130,7 +130,7 @@ Follow the steps below:
 
 11. In the **Create new page** dialog box, set the **Title** to **Checklist_Details** and the **Layout** to **PopupLayout**. 
 
-12. The **Pre-fill page contents based on the Checklist entity** option is on, so the page template (*Forms*) is selected automatically for you. Choose **Forms Columns**:
+12. The **Pre-fill page contents based on the Checklist entity** option is on, so the page template (*Forms*) is selected automatically for you. Choose **Forms Vertical**:
 
      <img src="attachments/pages-how-to-configure-form/manage-checklist.png" style="zoom:60%;" />
 

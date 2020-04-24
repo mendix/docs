@@ -96,7 +96,9 @@ The page is created, now you need to configure it. First of all, you need to con
 
 Now the list view will display the list of opportunity contacts by their name:
 
-<img src="attachments/pages-how-to-configure-list/list-configured.png" alt="Configured List" style="zoom:80%;" /> 
+{{% image_container width="80%" %}}
+![Configured List](attachments/pages-how-to-configure-list/list-configured.png)
+{{% /image_container %}} 
 
 ## 5 Configuring Report Details
 

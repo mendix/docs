@@ -14,15 +14,21 @@ This description of the Mendix Client is based on using the Runtime Server of an
 
 ## 2 Description
 
-The Mendix Client is a single page application controlled by the client core. This means that all paging is handled by the Mendix Client, rather than being separate pages served to the browser using different URLs. The initial page on which code is bootstrapped is called "shell", and the code consists of the *Core* and *Widgets*.
+The Mendix Client is used for all applications built with Mendix: web, mobile, and hybrid.
 
-Because the Mendix Client can run in a browser, everything in the Mendix Client is visible to the end-user. Security is carried out in the Runtime Server, which will only send information to the Mendix Client which the user is allowed to see.
+For **web applications**, Mendix Client acts as a single page application. This means that all paging is handled by the Mendix Client, rather than being separate pages served using different URLs. Mendix Client is bootstrapped by loading a `mxui.js` script from an HTML page provided by the *theme*.
 
-The shell page is created in different ways, depending on the sort of client.
+For **mobile applications** Mendix Client acts as a React Native application. This means that apps created by Mendix consist of two parts: a *wrapper* and a *bundle*. The wrapper is a native iOS or Android application that loads the bundle and exposes platform functionality to it. The bundle includes Client Core, Pluggable Widgets, and application-specific resources like nanoflows and pages.
 
-* For a **browser** client, the initial page is provided by a *theme*
-* For a **mobile app** the initial page is packaged as an android or iOS app to be downloaded to the mobile device
-* There is a third sort of app known as a **hybrid app**. For most purposes this can be treated as an app running in a browser client. In this case, however, the browser is embedded in a mobile application and has access to some [Cordova](https://cordova.apache.org/) plugins to give access to some features of a mobile device. We recommend that you use a native mobile app rather than a hybrid app if you want to make Mendix apps which run on mobile devices.
+The three supported types of wrappers for mobile applications are as follows:
+
+* [Make It Native app](getting-the-make-it-native-app)
+* [Custom Developer apps](/howto/mobile/how-to-devapps#1-introduction)
+* [Native apps](/howto/mobile/deploying-native-app)
+
+The first two of these load a bundle dynamically, while the last one includes a pre-packaged bundle that can be [updated](/howto/mobile/how-to-ota) later.
+
+A **Hybrid application**, for most purposes, can be treated as an app running in a browser. In this case, however, the browser is embedded in a mobile application and has access to some features of a mobile device through [Cordova](https://cordova.apache.org/) plugins. We recommend that you use a native mobile app rather than a hybrid app if you want to make Mendix apps which run on mobile devices.
 
 Below is a chart showing the components of the Mendix Client. Each of the components is described below the chart.
 
@@ -59,13 +65,13 @@ This runs client-side logic which is defined in the nanoflows in the model.
 
 ### 2.7 Platform APIs
 
-These are functions of the device on which the Mendix Client is running. In most cases this will be a function of a mobile device such as the camera or GPS location, but it can also include making calls to Mendix Native APIs or browser functions such as accessing an image file.
+These are functions of the environment in which the Mendix Client is running. In most cases this will be a function of a mobile device such as the camera or GPS location, but it can also include making calls to Mendix Native APIs or browser functions such as accessing an image file.
 
 ### 2.8 Client Config
 
 This is the static data which is needed by the Mendix Client. For a browser-based client, this data is held online, with the Runtime Server. For native apps, this is held locally on the device.
 
-These include the shell page needed to start the Mendix Client, Cascading Style Sheets (css files) which define the app’s theme, and JavaScript files which define client-side logic.
+These include the initial environment (for example, the browser shell page) needed to start the Mendix Client, Cascading Style Sheets (css files) which define the app’s theme, and JavaScript files which define client-side logic.
 
 ### 2.9 Data API
 
@@ -73,7 +79,7 @@ This allows the Mendix Client to fetch and manipulate data in offline storage or
 
 ### 2.10 Object Cache
 
-This holds and manages objects which are being used by the Mendix Client in memory – for example non-persistable objects, new objects, and objects returned by the Runtime Server to be displayed on a page. It also ensures that they are passed to the Runtime Server when they are needed as part of a request.
+This holds and manages objects which are being used by the Mendix Client in memory – for example non-persistable objects, new objects, and objects returned by the Runtime Server to be displayed on a page. It also holds changes to attributes and associations for these objects.
 
 State handling will perform garbage collection to ensure that memory is released when it is no longer needed.
 
@@ -90,12 +96,6 @@ For more information about the communication between the Mendix Client and the R
 #### 2.12.1 State Handling
 
 This communicates the current state of the app (held in the object cache) to the Runtime Server. As the state is held in the Mendix Client, the Runtime Server can be stateless. This ensures that it is easier to scale your app horizontally by adding more instances as any instance can handle any request.
-The state includes the following
-
-* the state of objects which are maintained by the object cache:
-    * newly created and not-yet-committed persistable objects
-    * non-persistable objects
-    * attribute and association changes made to the objects
 
 To avoid performance issues, the Mendix Client does not send the entire state to the runtime. State handling decides which parts of the state should be sent by analyzing the model during the deployment of the applications.
 
@@ -117,33 +117,37 @@ The Runtime Server waits for requests from the Mendix Client, processes the requ
 
 It will also notify the Mendix Client when changes are made to the app, and allows developers to connect a debugger to the client to debug nanoflows.
 
+Because all information is sent to the Mendix Client to build pages, everything in the Mendix Client is visible to the end-user. Security is carried out in the Runtime Server, which will only send information to the Mendix Client which the user is allowed to see.
+
 For a description of the Runtime Server, see [Runtime Server](runtime-server).
 
 ## 3 Widgets{#widgets}
 
-Mendix pages are constructed from individual widgets. There are two types of widget which each run on a separate widget framework. Each widget framework provides APIs and controls the lifecycle of the widget.
-The two types of widget are:
+Mendix pages are constructed from individual widgets. A widget can be of one of the following types:
 
-* Native core widgets
-* Web core widgets
+* Core widget – part of the Mendix Client
+* Pluggable widget – based on React or React Native, written by the user or downloaded from the App Store
+* Custom widget – based on Dojo, written by the user or downloaded from the App Store
 
 These are described in the sections below.
 
-### 3.1 Native Core Widgets
+### 3.1 Core Widgets
 
-Native Core widgets are reusable UI components written in React or React Native. They run on the native core framework using the an API which enables different native core widgets to communicate. This framework replaces the web core described below.
+Mendix has a number of core widgets which support the standard functions of Mendix pages. Core widgets are part of the core client. Most of these widgets have native and web implementations, though some are limited only to one platform.
 
-Mendix has a number of native core widgets which support the standard functions of Mendix pages. You can also write your own native core widgets, called **Pluggable widgets**. These are the recommended way of writing widgets and replace Custom widgets, described below. They have limited access to web core widgets, but full access to the native core. Pluggable widgets have many advantages over Custom widgets. For example, you can use conditional visibility and editability, and can place a Pluggable widget inside another Pluggable widget.
+In native mobile applications an implementation based on React Native framework is used. In web applications, implementation is based on either React or Dojo. Widgets that use Dojo have some limitations, for example they cannot be used inside a [pluggable widget](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets#widgets). These Dojo implementations are gradually being replaced.
+
+### 3.1 Pluggable Widgets
+
+You can also write your own widgets, called **Pluggable widgets**, in cases where Core widgets do not suffice. Pluggable widgets can be downloaded through the App Store. They are based on React (in web applications) or React Native (in native applications) and are the recommended way of writing widgets. They replace Custom widgets, described below.
 
 For more information, see [Pluggable Widgets API](/apidocs-mxsdk/apidocs/pluggable-widgets).
 
-### 3.2 Web Core Widgets
+### 3.2 Custom Widgets
 
-Web core widgets are written using Dojo and run on the web core framework using a previous version of the client API.
+You can also write **Custom widgets**. These are based on Dojo framework and run only in web applications. They have access to a different, more low-level, API than pluggable widgets. Custom widgets should only be used if you cannot create the functionality in a Pluggable widget.
 
-You can write your own **Custom widgets** which have access to some of the web core widgets through the API. However, they cannot use pluggable widgets or other native core widgets which means that they cannot be used in native apps. Custom widgets should only be used if you cannot create the functionality in a Pluggable widget.
-
-For more information on Custom widgets, see [Hot To Build Custom Widgets](/howto/extensibility/widget-development).
+For more information on Custom widgets, see [How To Build Custom Widgets](/howto/extensibility/widget-development).
 
 ## 4 Mendix Client Startup
 
@@ -155,6 +159,8 @@ When an end-user wants to use a Mendix app, they need to start up the client on 
 How the Mendix Client is launched is described in the sections below.
 
 ### 4.1 Launching Mendix Client in a Browser
+
+In a browser, the environment is built on an initial page, the "shell", on which code is bootstrapped.
 
 #### 4.1.1 Launch Flow
 

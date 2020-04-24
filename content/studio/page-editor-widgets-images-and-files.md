@@ -150,7 +150,9 @@ This property is shown only when an attribute in the [Attribute-Based](#attribut
 
 For example, you would like to allow users upload images only when their *email is verified*. So, you need to select *EmailVerified* in the **Attribute-Based** property and *true* in the **Attribute Value** property:
 
-<img src="attachments/page-editor-widgets-input-elements/conditional-editability.png" style="zoom:60%;" />
+{{% image_container width="250" %}}
+![](attachments/page-editor-widgets-input-elements/conditional-editability.png)
+{{% /image_container %}}
 
 #### 3.1.3 Controls Section
 

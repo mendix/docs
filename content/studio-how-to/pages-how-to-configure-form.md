@@ -8,7 +8,7 @@ tags: ["studio", "pages", "list", "how to"]
 
 ## 1 Introduction 
 
-This how-to explains how you can configure a page with a form and how to show items related to this form on the same page. 
+This how-to explains how you can configure a page with a form and how to show items related to this form on the same page. For example, to show a report and a checklist associated with this report. 
 
 **This how-to will teach you how to do the following:**
 
@@ -32,7 +32,7 @@ Inspectors also have a safety inspection *checklist*. Based on this checklist th
 
 If any of the above requirements are not met, during the next inspection the inspector indicates the date when the safety violation was fixed. 
 
-You have a list of all inspection reports:
+Your app already contains a list of all inspection reports:
 
 <img src="attachments/pages-how-to-configure-form/inspection-report-list.png" style="zoom:50%;" />
 
@@ -54,7 +54,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 		<img src="attachments/pages-how-to-configure-form/enumeration.png" style="zoom:60%;" />
 
-* Make sure you have a page with inspection reports list and the **Details** button:
+* Make sure your app contains a page with inspection reports list and the **Details** button:
 
   <img src="attachments/pages-how-to-configure-form/inspection-report-list.png" style="zoom:50%;" />
 
@@ -102,9 +102,9 @@ Follow the steps below:
 
 1. Open **Toolbox** > **Data Containers**.
 
-2. Drag and drop **Data Grid** *inside* the data view (you can view the breadcrumb at the bottom of the page to check if you placed the data grid correctly):
+2. Drag and drop **Data Grid** *inside* the data view:
 
-    ![](attachments/pages-how-to-configure-form/breadcrumb.png)
+    ![](attachments/pages-how-to-configure-form/data-grid-inside-data-view.png)
 
 3. Go to the data grid properties and click **Entity**.  
 

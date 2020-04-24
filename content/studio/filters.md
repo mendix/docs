@@ -11,13 +11,13 @@ In Mendix Studio, you can filter data in pages and microflows.
 
 *In a microflow*, you can filter the retrieved data by creating filters for the **Retrieve** activity. To add a filter objects should be retrieved from the database:
 
-{{% image_container width="200" %}}
+{{% image_container width="300" %}}
 ![](attachments/filters/retrieve-from-database.png)
 {{% /image_container %}}
 
 *In a page*, you can add a filter to a list view or a data grid. Mind that the data source of the list view or the data grid should be **Database**: 
 
-{{% image_container width="200" %}}
+{{% image_container width="300" %}}
 ![](attachments/filters/page-database.jpg)
 {{% /image_container %}}
 

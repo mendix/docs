@@ -29,7 +29,6 @@ There are two sets of properties for this activity, those in the dialog box on t
 The **Download file** properties pane consists of the following sections:
 
 * [Action](#action)
-* [Input](#input)
 * [Common](#common)
 
 ## 3 Action Section {#action}

@@ -13,9 +13,10 @@ You can download the Make It Native app for [iOS](https://apps.apple.com/app/mak
 
 ## Android 2.0.0 / iOS 2.0.0
 
-**Release date: April 28st, 2020**
+**Release date: April 28th, 2020**
+
 {{% alert type="info" %}}
-Due to upgrades to our dependencies, Make It Native 2.0.0 is not backwards compatible with versions older than Studio Pro 8.9. To keep working with older versions of Studio Pro, install a version from the archive. 
+Due to upgrades to our dependencies, neither version of Make It Native 2.0.0 is backwards compatible with versions older than Studio Pro 8.9. To keep working with older versions of Studio Pro, install a version from [the archive](/refguide/getting-the-make-it-native-app#direct-links). 
 {{% /alert %}}
 
 ### New Features

@@ -46,6 +46,6 @@ iOS archive versions for Make It Native are served via TestFlight links. To join
 
 ## 4 Read More
 
-* [How to Deploy Your First Mendix Native App](deploying-native-app)
-* [How to Create a Custom Developer App](how-to-devapps)
-* [How to Debug Native Apps (Advanced)](native-debug)
+* [How to Deploy Your First Mendix Native App](/howto/mobile/deploying-native-app)
+* [How to Create a Custom Developer App](/howto/mobile/how-to-devapps)
+* [How to Debug Native Apps (Advanced)](/howto/mobile/native-debug)

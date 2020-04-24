@@ -12,7 +12,19 @@ If you are using the advanced flow, you can get the latest version of the Hybrid
 
 For more information on hybrid mobile app development in Mendix, see the [Hybrid Mobile](/refguide/hybrid-mobile) section of the *Studio Pro 8 Guide* and the [Hybrid Mobile](/howto/mobile/hybrid-mobile) section of the *Studio Pro 8 How-to's*.
 
-## 2019
+## 2020
+
+### Hybrid App Base 5.0.0
+
+**Release date: April 15th, 2020**
+
+With this release we updated all PhoneGap dependencies to the latest supported versions to comply with the Apple App Store guidelines for the deprecated UIWebView dependency:
+
+* We updated Cordova and PhoneGap to 9.0.0
+* We updated the Android Engine to 8.1.0
+* We updated the iOS Engine to 5.1.1
+* We updated cordova-plugin-inappbrowser to 3.2.0
+* We updated the NativepageTransitions to use our internal fork
 
 ### Hybrid App Base 4.1.10
 
@@ -26,6 +38,9 @@ For more information on hybrid mobile app development in Mendix, see the [Hybrid
 
 * We fixed an issue with race conditions in asynchronous hooks.
 * We introduced a new **onBeforeSynchonization** hook.
+
+
+## 2019
 
 ### Hybrid App Base 4.1.8
 
@@ -100,13 +115,13 @@ To enable more control over the target architecture, use the following variants:
 
 **Release date: January 28th, 2019**
 
-We fixed an issue on iOS where the app did not fill the entire screen after the keyboard was hidden.
+* We fixed an issue on iOS where the app did not fill the entire screen after the keyboard was hidden.
 
 ### Hybrid App Base 4.0.4
 
 **Release date: January 23rd, 2019**
 
-We fixed a mistake in the Google Services *.plist* file.
+* We fixed a mistake in the Google Services *.plist* file.
 
 ### Hybrid App Base 4.0.3
 
@@ -121,7 +136,7 @@ We fixed a mistake in the Google Services *.plist* file.
 
 **Release date: January 7th, 2019**
 
-The *build-extras.gradle* file was missing in the published npm package. We added it.
+* We added the *build-extras.gradle* file which was missing in the published npm package.
 
 ### Hybrid App Base 4.0.0 / Hybrid App Template 4.0.0
 

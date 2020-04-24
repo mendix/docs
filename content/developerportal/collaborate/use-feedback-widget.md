@@ -97,7 +97,7 @@ You can add as many email addresses as you like and email your app to colleagues
 This feature is available when the following conditions are met:<br />
 * You are using version 8.1.0 or above of the widget<br />
 * You have configured the widget to show the App Switcher (for details, see the [Configuring the Widget](#configuring) section below)<br />
-* Your app uses [Mendix single sign-on](/developerportal/deploy/mendix-sso)
+* Your app uses [Mendix SSO](/developerportal/deploy/mendix-sso)
 {{% /alert %}}
 
 When you click the **App Switcher** button, a pop-up window appears with a list of other Mendix SSO-enabled apps that you have access to:
@@ -117,18 +117,19 @@ The sections below describe how to make sure you have the latest version of the 
 
 To ensure you have the latest version of the widget included in your app, follow these steps:
 
-1.  Download the latest version of the [Mendix Feedback Widget](https://appstore.home.mendix.com/link/app/199/) from the App Store (as accessed through Studio Pro):
+1.  Download the latest version of the [Mendix Feedback Widget](https://appstore.home.mendix.com/link/app/199/) from the App Store. You are strongly encouraged to use version 8.2.1 or above of the widget.
 
-	{{% image_container width="450" %}}![](attachments/feedback/app-store.png)
-	{{% /image_container %}}
-
-2.  When the latest widget is included in your app, you need to ensure that the widget is added to the homepage of the application. Open the homepage from your app's **Project** > **Navigation**:
+2.  When the widget is included in your app project, you need to ensure that it is added to the homepage of the application. Open the homepage from your app's **Project** > **Navigation**:
 
 	![](attachments/feedback/show-page.png)
 
 3.  If the widget has not been added automatically, add it to the desired page or layout by selecting **Add widget** > **Add-on widgets** > **Feedback & Collaboration Widget** and dropping it into a position in the page:
 
 	![](attachments/feedback/feedback-collaboration-widget.png)
+
+{{% alert type="info" %}}
+You can place the widget on any form in your app project, but it needs to be placed on only one form. If the user accesses that form, the widget will remain in the browser until the session is expired. This means you only need to place the widget on the home form. You can use this mechanism to limit the feedback to certain user roles as well. To do that, just place the widget on their home forms but not on the home form of other users.
+{{% /alert %}}
 
 #### 3.2.2 Configuring the Widget {#configuring}
 
@@ -138,14 +139,10 @@ All the configuration properties are explained on the various tabs of the proper
 
 The feedback feature requires the following properties to be set:
 
-* **Advanced** tab > **Feedback server location** – the URL of the Developer Portal server (usually `https://sprintr.home.mendix.com`)
 * **Project** tab > **App ID** – the unique identifier of your app project available in your app's [General](../settings/general-settings) settings in the Developer Portal
+* **Advanced** tab > **Feedback server location** – the URL of the Developer Portal server (usually `https://sprintr.home.mendix.com`)
 
-The App Switcher feature requires the [MendixSSO](/developerportal/deploy/mendix-sso) module to be implemented and the following properties to be set:
-
-* **Advanced** tab > **Show App Switcher button** – set to **Yes**
-
-For version 8.1.0 or above of the widget, you also need to set the following:
+For the best user experience, your are strongly encouraged to apply Mendix SSO to your app and connect the [MendixSSO](/developerportal/deploy/mendix-sso) module to version 8.2.1 or above of the Mendix Feedback Widget. For version 8.1.0 or above of the widget, you need to set the following:
 
 *  **Authentication** tab > **Decrypted Token Entity** – select the entity **DecryptedToken** from MendixSSO module
 *  **Authentication** tab > **Decrypted Token Value** – after selecting **Decrypted Token Entity**, select the **Value** attribute from it
@@ -155,13 +152,19 @@ The result should look like this:
 
 ![](attachments/feedback/authentication.png)
 
-In the properties, you can configure the widget for certain actions in your app project, for example:
+{{% alert type="info" %}}
+If Mendix SSO is applied and the above **Authentication** settings are configured correctly, the end-user can leave feedback without having to enter their name and email address. If your app does not have Mendix SSO, you should configure the **Data Source** properties so that the end-user's name and email address are prefilled when they leave feedback. If the **Data Source** properties are not configured, the end-user will have to manually enter their name and email address when they leave feedback.
+{{% /alert %}}
+
+The App Switcher feature requires the [MendixSSO](/developerportal/deploy/mendix-sso) module to be implemented and the following property to be set:
+
+* **Advanced** tab > **Show App Switcher button** – set to **Yes**
+
+You can also configure the widget for certain actions in your app project, for example:
 
 * **Project** tab > **Allow screenshots**
 * **Project** tab > **Hide Mendix logo**
 * **Collaboration** tab > **Share button**
-
-You can place the widget on any form in your app project, but it needs to be placed on only one form. If the user accesses that form, the widget will remain in the browser until the session is expired. This means you only need to place the widget on the home form. You can use this mechanism to limit the feedback to certain user roles as well. To do that, just place the widget on their home forms but not on the home form of other users.
 
 ## 4 Widget Version 5.1.3 & Below {#below}
 

@@ -583,7 +583,6 @@ Then the Studio Pro UI for the property appears like this:
 
 ![](attachments/widget-property-types/file.png)
 
-
 ### 4.7 Datasource {#datasource}
 
 The datasource property allows widgets to work with object lists. The client component will receive value prop of type [`ListValue`](client-apis-for-pluggable-widgets#listvalue) and may be used with the [`widgets`](#widgets) property. See [Data Sources](https://docs.mendix.com/refguide/data-sources#list-widgets) for available data source types.

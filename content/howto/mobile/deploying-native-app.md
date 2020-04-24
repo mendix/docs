@@ -8,7 +8,7 @@ tags: ["native", "mobile", "deploy", "native-builder", "builder", "appcenter"]
 
 ## 1 Introduction
 
-This tutorial will teach you how to go from a blank slate to an app running on a device.
+This how-to will teach you how to go from a blank slate to an app running on a device.
 
 Every Native Builder project has configurations. These configurations are useful for preparing your app, and then creating builds on App Center and GitHub respectively. Configurations are also critical for making updates to apps already delivered to production devices. For more information on the Native Builder's capabilities, see the [Native Builder Reference Guide](/refguide/native-builder).
 
@@ -70,6 +70,10 @@ The native builder uses the `prepare` command as well as a line of parameters in
 ```bash
 native-builder.exe prepare --project-name CoolApp --java-home "C:\Program Files\Java\jdk-11.0.3" --project-path "Y:\Documents\Mendix\CoolApp\CoolApp.mpr" --mxbuild-path "C:\Program Files\Mendix\8.6.0.715\modeler\mxbuild.exe" --github-access-token b609183aa226a8c2d962700be7a387bd7776e986 --appcenter-api-token 440725eb1311ddfced62894a4d23fc90843370c7 --appcenter-organization "cool-organization" --runtime-url "https://coolapp.mendixcloud.com" --app-name "My Cool App" --app-identifier "com.mendix.coolapp" --mendix-version "8.6.0"
 ```
+
+{{% alert type="info" %}}
+To be valid, the `app-identifier` needs to be lower-case with no special characters.
+{{% /alert %}}
 
 The `prepare` command  does the following:
 

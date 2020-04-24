@@ -14,13 +14,21 @@ This description of the Mendix Client is based on using the Runtime Server of an
 
 ## 2 Description
 
-The Mendix Client is used for all applications built with Mendix: web, mobile, and hybrid apps.
+The Mendix Client is used for all applications built with Mendix: web, mobile, and hybrid.
 
-For web applications Mendix Client acts as a single page application. This means that all paging is handled by the Mendix Client, rather than being separate pages served using different URLs. Mendix Client is bootstrapped by loading a `mxui.js` script from an html page provided by the *theme*.
+For **web applications**, Mendix Client acts as a single page application. This means that all paging is handled by the Mendix Client, rather than being separate pages served using different URLs. Mendix Client is bootstrapped by loading a `mxui.js` script from an HTML page provided by the *theme*.
 
-For mobile applications Mendix Client acts as a React Native application. This means that apps created by Mendix consist of two parts: a *wrapper* and a *bundle*. Wrapper is a native iOS or Android application that loads the bundle and exposes platform functionality to it. Bundle includes Client Core, Pluggable Widgets, and application-specific resources like Nanoflows and Pages. The three supported types of wrappers are: [Make It Native app](/refguide/getting-the-make-it-native-app), [Custom Developer apps](howto/mobile/how-to-devapps#1-introduction), and [Native apps](howto/mobile/deploying-native-app). The first two of them load a bundle dynamically, while the last one includes a pre-packaged bundle that can be [updated](/howto/mobile/how-to-ota) later.
+For **mobile applications** Mendix Client acts as a React Native application. This means that apps created by Mendix consist of two parts: a *wrapper* and a *bundle*. The wrapper is a native iOS or Android application that loads the bundle and exposes platform functionality to it. The bundle includes Client Core, Pluggable Widgets, and application-specific resources like nanoflows and pages.
 
-Hybrid applications for most purposes this can be treated as an app running in a browser. In this case, however, the browser is embedded in a mobile application and has access to some features of a mobile device through [Cordova](https://cordova.apache.org/) plugins. We recommend that you use a native mobile app rather than a hybrid app if you want to make Mendix apps which run on mobile devices.
+The three supported types of wrappers for mobile applications are as follows:
+
+* [Make It Native app](/refguide/getting-the-make-it-native-app)
+* [Custom Developer apps](howto/mobile/how-to-devapps#1-introduction)
+* [Native apps](howto/mobile/deploying-native-app)
+
+The first two of these load a bundle dynamically, while the last one includes a pre-packaged bundle that can be [updated](/howto/mobile/how-to-ota) later.
+
+A **Hybrid application**, for most purposes, can be treated as an app running in a browser. In this case, however, the browser is embedded in a mobile application and has access to some features of a mobile device through [Cordova](https://cordova.apache.org/) plugins. We recommend that you use a native mobile app rather than a hybrid app if you want to make Mendix apps which run on mobile devices.
 
 Below is a chart showing the components of the Mendix Client. Each of the components is described below the chart.
 
@@ -71,7 +79,7 @@ This allows the Mendix Client to fetch and manipulate data in offline storage or
 
 ### 2.10 Object Cache
 
-This holds and manages objects which are being used by the Mendix Client in memory – for example non-persistable objects, new objects, and objects returned by the Runtime Server to be displayed on a page. As well as attribute and association changes made to these objects.
+This holds and manages objects which are being used by the Mendix Client in memory – for example non-persistable objects, new objects, and objects returned by the Runtime Server to be displayed on a page. It also holds changes to attributes and associations for these objects.
 
 State handling will perform garbage collection to ensure that memory is released when it is no longer needed.
 
@@ -118,8 +126,8 @@ For a description of the Runtime Server, see [Runtime Server](runtime-server).
 Mendix pages are constructed from individual widgets. A widget can be of one of the following types:
 
 * Core widget – part of the Mendix Client
-* Pluggable widgets – based on React or React Native, written by the user or downloaded from the App Store
-* Custom widgets – based on Dojo, written by the user of download from the App Store
+* Pluggable widget – based on React or React Native, written by the user or downloaded from the App Store
+* Custom widget – based on Dojo, written by the user or downloaded from the App Store
 
 These are described in the sections below.
 
@@ -127,17 +135,17 @@ These are described in the sections below.
 
 Mendix has a number of core widgets which support the standard functions of Mendix pages. Core widgets are part of the core client. Most of these widgets have native and web implementations, though some are limited only to one platform.
 
-In native mobile applications implementation based on React Native framework is used. In web applications - implementation based on either React or Dojo. Widgets that use Dojo have some limitations, for example they cannot be used inside a [pluggable widgets](/apidocs-mxsdk/apidocs/property-types-pluggablee-widgets#widgets). These implementations are gradually being replaced.
+In native mobile applications an implementation based on React Native framework is used. In web applications, implementation is based on either React or Dojo. Widgets that use Dojo have some limitations, for example they cannot be used inside a [pluggable widget](/apidocs-mxsdk/apidocs/property-types-pluggablee-widgets#widgets). These Dojo implementations are gradually being replaced.
 
 ### 3.1 Pluggable Widgets
 
-You can also write your own widgets, called **Pluggable widgets**, in cases where Core widgets do not suffice. Pluggable widgets can be downloaded through the App Store. Pluggable widget are based on React (in web applications) or React Native (in native application) and are the recommended way of writing widgets and replace Custom widgets, described below.
+You can also write your own widgets, called **Pluggable widgets**, in cases where Core widgets do not suffice. Pluggable widgets can be downloaded through the App Store. They are based on React (in web applications) or React Native (in native applications) and are the recommended way of writing widgets. They replace Custom widgets, described below.
 
 For more information, see [Pluggable Widgets API](/apidocs-mxsdk/apidocs/pluggable-widgets).
 
 ### 3.2 Custom Widgets
 
-You can also write **Custom widgets**. They are based on Dojo framework and run only in web applications. They have access to a different, more low-level API than pluggable widgets. Custom widgets should only be used if you cannot create the functionality in a Pluggable widget.
+You can also write **Custom widgets**. These are based on Dojo framework and run only in web applications. They have access to a different, more low-level, API than pluggable widgets. Custom widgets should only be used if you cannot create the functionality in a Pluggable widget.
 
 For more information on Custom widgets, see [How To Build Custom Widgets](/howto/extensibility/widget-development).
 

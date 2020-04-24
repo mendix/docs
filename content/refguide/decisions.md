@@ -10,7 +10,9 @@ Decisions are elements that split or merge sequence flows based on conditions se
 
 The elements described in this document are in the **Decisions** section of the **Toolbox**:
 
-<img src="attachments/decisions/decisions.png" alt="Decisions" style="zoom:67%;" />
+{{% image_container width="300" %}}
+![Decisions](attachments/decisions/decisions.png)
+{{% /image_container %}}
 
 There are following types of decisions:
 

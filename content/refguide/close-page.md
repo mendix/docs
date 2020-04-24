@@ -18,7 +18,9 @@ This action is ignored and does not work when a microflow is called from an offl
 
 The **Close page** activity closes the currently open page. For example, it can be used to close a pop-up page:
 
-<img src="attachments/client-activities/close-page.png" style="zoom:50%;" />
+{{% image_container width="200" %}}
+![](attachments/client-activities/close-page.png)
+{{% /image_container %}}
 
 ## 2 Properties
 
@@ -28,7 +30,9 @@ The **Close page** activity properties consists of the following sections:
 
 * [Common](#common)  
 
-    <img src="attachments/client-activities/close-page-properties.png" alt="Close Page Properties" style="zoom:60%;" />
+    {{% image_container width="300" %}}
+![Close Page Properties](attachments/client-activities/close-page-properties.png)
+{{% /image_container %}}
 
 ## 3 Action Section {#action}
 

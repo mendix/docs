@@ -31,7 +31,7 @@ These are the native widgets included in these resources along with links to the
 | [Notifications](https://github.com/mendix/widgets-resources/blob/master/packages-native/notifications) | Triggers actions based on incoming notifications. |
 | [Progress Bar](https://github.com/mendix/widgets-resources/blob/master/packages-native/progress-bar) | Displays progress in a horizontal bar. |
 | [Progress Circle](https://github.com/mendix/widgets-resources/blob/master/packages-native/progress-circle) | Displays progress in a circle with enclosed text. |
-| [Popup Menu](https://github.com/mendix/widgets-resources/blob/master/packages-native/popup-menu) | Displays progress in a circle with enclosed text. |
+| [Popup Menu](https://github.com/mendix/widgets-resources/blob/master/packages-native/popup-menu) | Displays context menu exactly where the user taps on screen.. |
 | [QR Code](https://github.com/mendix/widgets-resources/blob/master/packages-native/qr-code) | Displays a QR code based on a value. |
 | [Range slider](https://github.com/mendix/widgets-resources/blob/master/packages-native/range-slider) | Changes a range of values using a slider. |
 | [Rating](https://github.com/mendix/widgets-resources/blob/master/packages-native/rating) | Gives a rating by selecting stars. |

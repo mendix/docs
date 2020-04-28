@@ -61,7 +61,7 @@ To add the product to your domain model, follow the steps below:
 
 1. Create the **Product** entity. Do the following:
 
-    1. Open your [domain model](domain-models).
+    1. Open your [domain model](/studio/domain-models).
 
     2. Open **Toolbox**, drag and drop **Entity** in your domain model:
 

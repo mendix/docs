@@ -37,7 +37,7 @@ To configure the domain model and create a page, do the following:
 
     a. Set the **Name** of the attribute to *Name*.<br/>
     
-    b. Set the [Type](/studio//studio/domain-models-attributes) to **String**.<br/>
+    b. Set the [Type](/studio/domain-models-attributes) to **String**.<br/>
 
     ![](attachments/microflows-how-to-configure-delete-object/name-attribute.png)<br/>    
     c. Click **Create** to add the new attribute.<br/>

@@ -35,8 +35,8 @@ Domain model is configured the following way in this use case:
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Familiarize yourself with page terms and how to perform basic functions on pages. For more information, see [Pages](/studio/pages). 
-* Familiarize yourself with editability and input validation properties of input elements. For more information, see [Editability](/studio/page-editor-input-elements#editability) and [Input Validation Section](/studio/page-editor-input-elements#validation) sections in *Input Elements*.
+* Familiarize yourself with page terms and how to perform basic functions on pages. For more information, see [Pages](/studio/page-editor). 
+* Familiarize yourself with editability and input validation properties of input elements. For more information, see [Editability](/studio/page-editor-widgets-input-elements#editability) and [Input Validation Section](/studio/page-editor-widgets-input-elements#validation) sections in *Input Elements*.
 * Familiarize yourself with the domain model terms and learn how to perform basic functions. For more information, see [Domain Model](/studio/domain-models).
 
 ## 3 Setting Fields as Read-Only

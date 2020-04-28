@@ -3,7 +3,7 @@ title: "8.9"
 parent: "metamodel-8"
 ---
 
-## 8.8.0
+## 8.9.0
 
 **Release date: April 28th, 2020**
 
@@ -49,7 +49,7 @@ parent: "metamodel-8"
 
 ### ODataKeyPart (Element)
 
-* We introduced this element for the part of the key of an OData entity.
+* We introduced this element for a part of the key of an OData entity.
 
 ## Navigation
 

@@ -2,7 +2,7 @@
 title: "Filter and Sort Items in a List"
 category: "Pages"
 description: "Describes how to filter and sort items in a list in Mendix Studio."
-menu_order: 30
+menu_order: 40
 tags: ["studio", "pages", "list", "how to", "filter", "sort"]
 ---
 
@@ -21,15 +21,21 @@ You have build a page with a list of inspections reports that shows companies ch
 
 A list of inspection reports is displayed on a page. If you have the list in a list view, the page can look the following way:
 
-<img src="attachments/pages-how-to-filter-and-sort/list-view-example.png" style="zoom:60%;" />
+{{% image_container width="600" %}}
+![](attachments/pages-how-to-filter-and-sort/list-view-example.png)
+{{% /image_container %}}
 
 Or the page can look the following way if your list is in a data grid:
 
+{{% image_container width="600" %}}
 ![](attachments/pages-how-to-filter-and-sort/page-example-data-grid.png)
+{{% /image_container %}}
 
 Domain model is configured the following way in this use-case:
 
-<img src="attachments/pages-how-to-filter-and-sort/domain-model.png" style="zoom:50%;" />
+{{% image_container width="250" %}}
+![](attachments/pages-how-to-filter-and-sort/domain-model.png)
+{{% /image_container %}}
 
 ## 2 Prerequisites
 
@@ -51,28 +57,27 @@ To configure a filter, do the following:
 
 2. In the **Data Source** section, click **Filter**:
 
-    <img src="attachments/pages-how-to-filter-and-sort/properties-filter.png" style="zoom: 50%;" />
+    {{% image_container width="250" %}}![](attachments/pages-how-to-filter-and-sort/properties-filter.png){{% /image_container %}}
 
 3. In the **Add Filter** dialog box, add conditions of the filter by doing the following:
 
     1. Select the **Passed** attribute in the drop-down menu:
 
-    	<img src="attachments/pages-how-to-filter-and-sort/add-filter-select-attribute.png" style="zoom:70%;" />
+    	{{% image_container width="550" %}}![](attachments/pages-how-to-filter-and-sort/add-filter-select-attribute.png){{% /image_container %}}
 
     2. Once you select the first part of the condition, you can select the other part to complete it. Select *false*:
 
-    	<img src="attachments/pages-how-to-filter-and-sort/add-filter-condition.png" style="zoom:70%;" />
+    	{{% image_container width="550" %}}![](attachments/pages-how-to-filter-and-sort/add-filter-condition.png){{% /image_container %}}
 
     3. To filter inspection reports for the current day, you need to add another condition to your filter: click **Add new condition** and select the **DateAndTime** attribute in the drop-down menu.
 
     4. Add the second part of the condition: the date should be today's date. Select *Today* in the drop-down menu: 
 
-		![](attachments/pages-how-to-filter-and-sort/filter-date-and-time.png)
+		{{% image_container width="550" %}}![](attachments/pages-how-to-filter-and-sort/filter-date-and-time.png){{% /image_container %}}
 
     5. Click **Add**.
 
-
-Good job! You have created the filter that has two conditions and reads the following way: *Select records of InspectionReport where Passed is false and date and time is Today. This means this filter will show you only the reports that fall under both conditions: which failed the inspection check and which were created or modified in the current day. 
+Good job! You have created the filter that has two conditions and reads the following way: *Select records of InspectionReport where Passed is false and date and time is Today.* This means this filter will show you only the reports that fall under both conditions: which failed the inspection check and which were created or modified in the current day. 
 
 ## 4 Sorting Items  
 
@@ -84,7 +89,7 @@ To sort items in the list by date and time starting from the latest one, follow 
 
 3. In **Add sorting rule** dialog box, select the **DateAndTime** attribute and set **Order** to *Descending*.
 
-	<img src="attachments/pages-how-to-filter-and-sort/add-sorting-rule.png" style="zoom:50%;" />
+	{{% image_container width="450" %}}![](attachments/pages-how-to-filter-and-sort/add-sorting-rule.png){{% /image_container %}}
 
 4. Click **Add**.
 

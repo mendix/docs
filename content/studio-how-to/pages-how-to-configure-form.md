@@ -2,7 +2,7 @@
 title: "Configure a Form and Show Items Related to It"
 category: "Pages"
 description: "Describes how to configure a list of items in Mendix Studio."
-menu_order: 30
+menu_order: 10
 tags: ["studio", "pages", "list", "how to"]
 ---
 
@@ -34,7 +34,7 @@ If any of the above requirements are not met, during the next inspection the ins
 
 Your app already contains a list of all inspection reports:
 
-![](attachments/pages-how-to-configure-form/inspection-report-list.png)
+{{% image_container width="600" %}}![](attachments/pages-how-to-configure-form/inspection-report-list.png){{% /image_container %}}
 
 You would like the **Details** button in this list to open a page showing the details of the selected report and a table with checklist questions related to this report. You also would like to be able to add new checklists to the table or edit existing ones. 
 
@@ -48,15 +48,15 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Make sure your domain model is configured the following way:
 
-    {{% image_container width=" 40%" %}}![Domain Model](attachments/pages-how-to-configure-form/domain-model.png){{% /image_container %}}
+    {{% image_container width="200" %}}![Domain Model](attachments/pages-how-to-configure-form/domain-model.png){{% /image_container %}}
 
     * Make sure you have configured the **Question** attribute as the following enumeration:
 
-		![](attachments/pages-how-to-configure-form/enumeration.png)
+		{{% image_container width="550" %}}![](attachments/pages-how-to-configure-form/enumeration.png){{% /image_container %}}
 
 * Make sure your app contains a page with inspection reports list and the **Details** button:
 
-  ![](attachments/pages-how-to-configure-form/inspection-report-list.png)
+    {{% image_container width="600" %}}![](attachments/pages-how-to-configure-form/inspection-report-list.png){{% /image_container %}}
 
 ## 3 Adding a Page with a Form
 
@@ -66,7 +66,7 @@ The **Details** button in the inspection report list should open a page with the
 
 2. Set **Page** as an on-click action and click the **Page** property.
 
-	{{% image_container width="40%" %}}![Button Properties](attachments/pages-how-to-configure-form/button-properties.png){{% /image_container %}}
+	{{% image_container width="250" %}}![Button Properties](attachments/pages-how-to-configure-form/button-properties.png){{% /image_container %}}
 
 3.  In the **Select Page** dialog box, click **New Page**.
 
@@ -74,7 +74,7 @@ The **Details** button in the inspection report list should open a page with the
 
 2.  The **Pre-fill page contents based on the InspectionReport entity** option is on, so the page template (Forms) is selected automatically for you. Choose **Forms Vertical**:
 
-	![Create New Page](attachments/pages-how-to-configure-form/create-new-page.png)
+	{{% image_container width="550" %}}![Create New Page](attachments/pages-how-to-configure-form/create-new-page.png){{% /image_container %}}
 
 3. Click **Create**.
 	
@@ -84,15 +84,16 @@ The **Details** button in the inspection report list should open a page with the
 
 2. Click the **Entity** property and set the **InspectionReport** entity for it:
 
-      {{% image_container width="50%" %}}![](attachments/pages-how-to-configure-form/data-view-source.png){{% /image_container %}} 
+      {{% image_container width="250" %}}![](attachments/pages-how-to-configure-form/data-view-source.png){{% /image_container %}} 
 
-The form on the page is configured: ![](attachments/pages-how-to-configure-form/data-view-configured.png)
+The form on the page is configured: 
+{{% image_container width="600" %}}![](attachments/pages-how-to-configure-form/data-view-configured.png){{% /image_container %}}
 
 ## 4 Showing Checklist Questions
 
 An inspector has a list of *questions* and indicates with **Yes** or **No** whether the company meets the requirements: whether the company has posters with emergency contacts, whether it conducts safety trainings regularly, etc. You would like to show a table with the checklist questions and their results below the inspection report: 
 
-{{% image_container width="500" %}}
+{{% image_container width="550" %}}
 
 ![](attachments/pages-how-to-configure-form/inspection-report-example.png)
 
@@ -106,7 +107,7 @@ Follow the steps below:
 
 2. Drag and drop **Data Grid** *inside* the data view:
 
-    {{% image_container width="70%" %}}![](attachments/pages-how-to-configure-form/data-grid-inside-data-view.png){{% /image_container %}}
+    {{% image_container width="550" %}}![](attachments/pages-how-to-configure-form/data-grid-inside-data-view.png){{% /image_container %}}
 
 3. Go to the data grid properties and click **Entity**.  
 
@@ -132,7 +133,9 @@ Follow the steps below:
 
 11. In the **Create new page** dialog box, set the **Title** to **Checklist_Details** and the **Layout** to **PopupLayout**. 
 
-12. The **Pre-fill page contents based on the Checklist entity** option is on, so the page template (*Forms*) is selected automatically for you. Choose **Forms Vertical**: ![](attachments/pages-how-to-configure-form/manage-checklist.png)
+12. The **Pre-fill page contents based on the Checklist entity** option is on, so the page template (*Forms*) is selected automatically for you. Choose **Forms Vertical**: 
+	
+	{{% image_container width="550" %}}![](attachments/pages-how-to-configure-form/manage-checklist.png){{% /image_container %}}
 
 13. Click **Create**.
 

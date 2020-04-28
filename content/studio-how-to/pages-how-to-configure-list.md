@@ -32,7 +32,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Make sure your domain model is configured the following way:
 
-    <img src="attachments/pages-how-to-configure-list/domain-model.png" style="zoom:67%;" /> 
+    {{% image_container width="200" %}}![](attachments/pages-how-to-configure-list/domain-model.png){{% /image_container %}} 
 
 ## 3 Adding the Master Detail Page
 
@@ -42,13 +42,13 @@ You would like to open a page with opportunity contact list and its details from
 
 2. Search for **Open Page** button and drag and drop it to the page.
 
-	![Open Page](attachments/pages-how-to-configure-list/open-page-button.png)
+	{{% image_container width="250" %}}![Open Page](attachments/pages-how-to-configure-list/open-page-button.png){{% /image_container %}}
 
 3. Open the button properties and follow the steps below:
 
     1. Set **Page** as an on-click action and click the **Page** property.
 
-    	![Button Properties](attachments/pages-how-to-configure-list/button-properties.png)
+    	{{% image_container width="250" %}}![Button Properties](attachments/pages-how-to-configure-list/button-properties.png){{% /image_container %}}
 
     2.  In the **Select Page** dialog box, click **New Page**.
 
@@ -56,7 +56,7 @@ You would like to open a page with opportunity contact list and its details from
 
     4. Select the page template by clicking **Master Detail** in the side bar and choose **Master Detail**:
 
-    	<img src="attachments/pages-how-to-configure-list/create-master-detail.png" style="zoom:67%;" />
+    	{{% image_container width="550" %}}![](attachments/pages-how-to-configure-list/create-master-detail.png){{% /image_container %}}
 
     5. Click **Create**.
 
@@ -71,7 +71,7 @@ The page is created, now you need to configure it. First of all, you need to con
 
 1. Select the list view and click the **Entity** option in its properties:
 
-	![List View Properties](attachments/pages-how-to-configure-list/list-view-entity.png)
+	{{% image_container width="250" %}}![List View Properties](attachments/pages-how-to-configure-list/list-view-entity.png){{% /image_container %}}
 
 2. In the **Select Entity** dialog box, select **OpportunityContact** and confirm your choice by clicking **Select**. Now the list is connected to the **OpportunityContact** entity. 
 
@@ -79,26 +79,24 @@ The page is created, now you need to configure it. First of all, you need to con
 
     1. Select the **Name** text in the list view and open the **Properties** tab.
 
-    	<img src="attachments/pages-how-to-configure-list/text.png" style="zoom:60%;" />
+    	{{% image_container width="300" %}}![](attachments/pages-how-to-configure-list/text.png){{% /image_container %}}
 
     2. In the **Content** property, delete *Name* and click **Add attribute**:
 
-    	<img src="attachments/pages-how-to-configure-list/text-content.png" style="zoom:60%;" />
+    	{{% image_container width="250" %}}![](attachments/pages-how-to-configure-list/text-content.png){{% /image_container %}}
 
     3. In the **Select Attribute** dialog box, choose **Name** and click **Select**. 
 
 4. Delete the image from the list and the column where this image is placed, as now the image displays a a user image that does not correspond to opportunity contacts you are displaying.
-    <img src="attachments/pages-how-to-configure-list/list-with-no-image.png" style="zoom:60%;" />
+    {{% image_container width="300" %}}![](attachments/pages-how-to-configure-list/list-with-no-image.png){{% /image_container %}}
 
 5. As the goal of the new page is to merely display data, delete the **New** button above the list view together with the container it is placed in:
 
-    <img src="attachments/pages-how-to-configure-list/container.png" style="zoom:50%;" />
+    {{% image_container width="300" %}}![](attachments/pages-how-to-configure-list/container.png){{% /image_container %}}
 
 Now the list view will display the list of opportunity contacts by their name:
 
-{{% image_container width="80%" %}}
-![Configured List](attachments/pages-how-to-configure-list/list-configured.png)
-{{% /image_container %}} 
+{{% image_container width="300" %}}![Configured List](attachments/pages-how-to-configure-list/list-configured.png){{% /image_container %}} 
 
 ## 5 Configuring Report Details
 
@@ -124,7 +122,7 @@ To displayed all the details that a contact has, do the following:
 
 5. In the **Select Attribute** dialog box, choose **Title** and click **Select**:
 
-    <img src="attachments/pages-how-to-configure-list/title.png" style="zoom:50%;" />
+    {{% image_container width="350" %}}![](attachments/pages-how-to-configure-list/title.png){{% /image_container %}}
 
 6. Select the **Name** text box and click **Data Source** > **Attribute** in its properties. 
 

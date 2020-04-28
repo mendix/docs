@@ -2,7 +2,7 @@
 title: "Enable End-Users to Attach Images"
 category: "Pages"
 description: "Describes how to configure image uploader in Mendix Studio."
-menu_order: 30
+menu_order: 50
 tags: ["studio", "pages", "image", "image uploader", "attachment", "attach image"]
 ---
 
@@ -20,7 +20,7 @@ The how-to describes the following use case:
 
 You have the **New Report** page with a form (a data view) where employees submit a trip report for  reimbursement. They fill in their name, department, purpose and date of their trip, and total amount to be reimbursed:
 
-![](attachments/pages-how-to-upload-images/form-example.png)
+{{% image_container width="600" %}}![](attachments/pages-how-to-upload-images/form-example.png){{% /image_container %}}
 
 Your domain model looks the following way:
 
@@ -63,13 +63,13 @@ First of all, to be able to attach and upload images you need to add a special t
 
 Good job! You have created image and file entities and associations from them to the **Report** entity:
 
-![](attachments/pages-how-to-upload-images/domain-model-configured.png)
+{{% image_container width="600" %}}![](attachments/pages-how-to-upload-images/domain-model-configured.png){{% /image_container %}}
 
 ## 4 Adding an Image Uploader
 
 An **Image Uploader** is a widget that allows your end-users to attach and upload images. However, it can only function inside a data container (a list view or data view) and can only have an image entity as its data source. If you just drag and drop the image uploader to your report form, it will not work correctly, because your current data view has the **Report** entity as its data source, which is not an image entity:
 
-![](attachments/pages-how-to-upload-images/form-example.png)
+{{% image_container width="600" %}}![](attachments/pages-how-to-upload-images/form-example.png){{% /image_container %}}
 
 To solve this, you can add a button which will open a pop-up page where your end-users can upload images. This page will be connected to your current report form over the *Image_Report* association and will upload images as **Image** entity and associated to this specific report. 
 
@@ -81,7 +81,7 @@ Follow the steps below:
 
 3. Drag and drop the button above **Save** and **Cancel** buttons:
 
-    ![](attachments/pages-how-to-upload-images/new-button.png)
+    {{% image_container width="450" %}}![](attachments/pages-how-to-upload-images/new-button.png){{% /image_container %}}
 
 4. Open button properties > the **Caption** property and rename it from *New* to *Attach Images*.
 
@@ -111,7 +111,7 @@ Follow the steps below:
 
      3. The **Pre-fill page contents based on the InspectionReport entity** option is on, so the page template (Forms) is selected automatically for you. Choose **Form Columns** and click **Create**.
 
-         ![](attachments/pages-how-to-upload-images/create-new-page-images.png)
+         {{% image_container width="500" %}}![](attachments/pages-how-to-upload-images/create-new-page-images.png){{% /image_container %}}
 
 13. A new pop-up page with a preconfigured form (a data view) is created:
 
@@ -123,7 +123,7 @@ Follow the steps below:
 
 You have created a pop-up page that will allow employees to attach images to their reimbursement reports:
 
-![](attachments/pages-how-to-upload-images/attach-images-pop-up-page.png)
+{{% image_container width="450" %}}![](attachments/pages-how-to-upload-images/attach-images-pop-up-page.png){{% /image_container %}}
 
 
 ## 5 Displaying Attached Images
@@ -134,7 +134,7 @@ After users attach the images, it would be nice to display their attachments and
 
 2. In the **Building Blocks**, search for **List 4** and drag and drop it under the **Attach Images** button (*inside* the data view). A list view with widgets inside it is added to your page:
 
-    ![](attachments/pages-how-to-upload-images/list-4.png)
+    {{% image_container width="550" %}}![](attachments/pages-how-to-upload-images/list-4.png){{% /image_container %}}
 
 3. Open list view properties and do the following:
 
@@ -172,7 +172,7 @@ After users attach the images, it would be nice to display their attachments and
 
 Great job! Now you have the image list that shows attached images and your users will be able to delete images from the list if necessary:
 
-![](attachments/pages-how-to-upload-images/configured-image-list.png)
+{{% image_container width="600" %}}![](attachments/pages-how-to-upload-images/configured-image-list.png){{% /image_container %}}
 
 Congratulations! You have configured the report that allows your users to attach images and displays these images in the list.
 

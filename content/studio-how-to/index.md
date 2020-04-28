@@ -1,5 +1,5 @@
 ---
-title: "Studio 8 How-To's"
+title: "Studio 8 How-to's"
 tags: ["studio", "how to"]
 ---
 

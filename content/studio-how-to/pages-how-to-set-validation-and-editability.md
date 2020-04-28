@@ -2,7 +2,7 @@
 title: "Set Fields as Read-Only or Required"
 category: "Pages"
 description: "Describes how to set validation and editability in Mendix Studio."
-menu_order: 30
+menu_order: 20
 tags: ["studio", "pages", "form", "how to", "validation", "required", "read-only", "editability"]
 ---
 
@@ -19,13 +19,17 @@ The how-to describes the following use case:
 
 You have an HR app where employees can view and edit information about themselves, such as contract details and personal information. You have a page with employee details:
 
-<img src="attachments/pages-how-to-set-validation-and-editability/employee-details-page.png" style="zoom:60%;" />
+{{% image_container width="600" %}}
+![](attachments/pages-how-to-set-validation-and-editability/employee-details-page.png)
+{{% /image_container %}}
 
 You would like to make some fields on this page obligatory to fill in (required) and some read-only.
 
 Domain model is configured the following way in this use case:
 
-<img src="attachments/pages-how-to-set-validation-and-editability/domain-model.png" style="zoom:60%;" />
+{{% image_container width="250" %}}
+![](attachments/pages-how-to-set-validation-and-editability/domain-model.png)
+{{% /image_container %}}
 
 ## 2 Prerequisites
 
@@ -48,11 +52,11 @@ To make a field read-only, do the following:
 
 2. Select the **Contract type** field and open its properties.
 
-    <img src="attachments/pages-how-to-set-validation-and-editability/contract-type.png" style="zoom:50%;" />
+    {{% image_container width="600" %}}![](attachments/pages-how-to-set-validation-and-editability/contract-type.png){{% /image_container %}}
 
 3. In the **General** section, set the **Editability** property to read-only:
 
-    <img src="attachments/pages-how-to-set-validation-and-editability/editability.png" style="zoom:60%;" />
+    {{% image_container width="250" %}}![](attachments/pages-how-to-set-validation-and-editability/editability.png){{% /image_container %}}
 
 4. Select the **Employee number** field and open its properties.
 
@@ -62,7 +66,7 @@ To make a field read-only, do the following:
 
 Now **Employee number** and **Contract type** fields are read-only, they are grayed out, and end-users will not be able to edit them.
 
-<img src="attachments/pages-how-to-set-validation-and-editability/read-only-configured.png" style="zoom:67%;" />
+{{% image_container width="600" %}}![](attachments/pages-how-to-set-validation-and-editability/read-only-configured.png){{% /image_container %}}
 
 ## 4 Setting Fields as Required
 
@@ -81,17 +85,17 @@ To set a field as required, do the following:
 
 3. In the **Input Validation** section, set the **Validation Type** property to **Required**:
 
-    <img src="attachments/pages-how-to-set-validation-and-editability/validation-type-required.png" style="zoom: 67%;" />
+    {{% image_container width="250" %}}![](attachments/pages-how-to-set-validation-and-editability/validation-type-required.png){{% /image_container %}}
     
 4. When an employee attempts to leave this fields empty, an error message will be displayed under the field. Specify this message in the **Message** property:
 
-    <img src="attachments/pages-how-to-set-validation-and-editability/validation-message.png" style="zoom: 67%;" />
+    {{% image_container width="250" %}}![](attachments/pages-how-to-set-validation-and-editability/validation-message.png){{% /image_container %}}
     
 5. Repeat steps 2-4 for **Address**, **Email**, and **Phone** fields to set them as required too. 
 
 Good job! Now when an employee attempts to leave **Name**, **Address**, **Email**, or **Phone** fields empty and tries to save changes, an error message will be displayed under the field saying "This field is required":
 
-<img src="attachments/pages-how-to-set-validation-and-editability/validation-example.png" style="zoom:50%;" />
+{{% image_container width="600" %}}![](attachments/pages-how-to-set-validation-and-editability/validation-example.png){{% /image_container %}}
 
 Changes will not be saved until all required fields are filled in.
 

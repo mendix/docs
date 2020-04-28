@@ -1,133 +1,98 @@
-# Metamodel Release Notes for version 8.9.0
+---
+title: "8.9"
+parent: "metamodel-8"
+---
+
+## 8.8.0
+
+**Release date: April 28th, 2020**
 
 ## DomainModels
 
 ### NoGeneralization (Element)
 
-
-#### Property 'key'
-* Introduced; "The remote key"
+* We introduced the `key` property for the remote key.
 
 ### EntityKey (Element)
-* Introduced; "The (remote) key of an entity"
+
+* We introduced this element for the (remote) key of an entity.
 
 ### EntityKeyPart (Element)
-* Introduced; "A part of the (remote) key of an entity"
+
+* We introduced this element for a part of the (remote) key of an entity.
 
 ## Microflows
 
 ### CloseFormAction (Element)
 
+* We introduced the `numberOfPages` property.
 
-#### Property 'numberOfPages'
-* Introduced;
+### WorkflowCallAction, SetWorkflowActivityOutcomeAction & OpenUserTaskAction (Elements)
 
-### WorkflowCallAction (Element)
-* Introduced;
-
-### SetWorkflowActivityOutcomeAction (Element)
-* Introduced;
-
-### OpenUserTaskAction (Element)
-* Introduced;
+* We introduced these elements.
 
 ## Rest
 
 ### ConsumedODataService (ModelUnit)
 
-
-#### Property 'entities'
-* Added public
+* We added the public `entities` property.
 
 ### ODataEntity (Element)
-* Added public
 
-#### Property 'keyNames'
-* Deleted;
-
-#### Property 'key'
-* Introduced; "The key of the OData entity"
+* We added this public element.
+* We deleted the `keyNames` property.
+* We introduced the `key` property for the key of the OData entity.
 
 ### ODataKey (Element)
-* Introduced; "The key of an OData entity"
+
+* We introduced this element for the key of an OData entity.
 
 ### ODataKeyPart (Element)
-* Introduced; "Part of the key of an OData entity"
+
+* We introduced this element for the part of the key of an OData entity.
 
 ## Navigation
 
 ### OfflineEntityConfig (Element)
 
-
-#### Property 'downloadMode'
-* Introduced;
-
-#### Property 'shouldDownload'
-* Deleted;
+* We introduced the `downloadMode` property.
+* We deleted the `shouldDownload` property.
 
 ## Pages
 
 ### ClosePageClientAction (Element)
 
-
-#### Property 'numberOfPages'
-* Introduced;
+* We introduced the `numberOfPages` property.
 
 ## Workflows
 
 ### Workflow (ModelUnit)
 
-
-#### Property 'context'
-* Deleted;
-
-#### Property 'contextEntity'
-* Introduced;
-
-#### Property 'activities'
-* Added public
-
-#### Property 'title'
-* Introduced;
-
-#### Property 'description'
-* Introduced;
+* We deleted the `context` property.
+* We introduced the `contextEntity`, `title`, and `description` properties.
+* We added the public `activities` property.
 
 ### WorkflowActivityOutcome (Element)
-* Added public
 
-#### Property 'name'
-* Added public
+* We added this public element.
+* We added the public `name` property.
 
 ### WorkflowActivity (Element)
-* Added public
 
-#### Property 'name'
-* Introduced;
-
-#### Property 'possibleOutcomes'
-* Added public
+* We added this public element.
+* We introduced the `name` property.
+* We added the public `possibleOutcomes` property.
 
 ### StartWorkflowActivity (Element)
-* Added public
+
+* We added this public element.
 
 ### EndWorkflowActivity (Element)
-* Added public
+
+* We added this public element.
 
 ### UserTask (Element)
-* Added public
 
-#### Property 'taskCaption'
-* Deleted;
-
-#### Property 'subject'
-* Introduced;
-
-#### Property 'taskDescription'
-* Deleted;
-
-#### Property 'description'
-* Introduced;
-
-#### Property 'userRole'
-* Introduced;
+* We added this public element.
+* We deleted the `taskCaption` and `taskDescription` properties.
+* We introduced the `subject`, `description`, and `userRole` properties.

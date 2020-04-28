@@ -78,17 +78,18 @@ First you need to create an environment:
 
 6. Select **Core Resources**.
 
-    There are four pre-defined sets of resources, **Tiny**, **Small**, **Medium**, and **Large**. Choosing these will set the **CPU** and **Memory** values automatically.
+    For core resources, there are two sets of values. The **Request** value is the amount of core resources which are initially requested. The **Limit** value is the maximum amount of resource that the environment can use.
 
-    | **Name** | **CPU cores**    | **Memory (Gb)**   |
-    | -------- | ---------------- | ----------------- |
-    | Tiny     | 0.25             | 0.5               |
-    | Small    | 1                | 1                 |
-    | Medium   | 2                | 2                 |
-    | Large    | 3                | 3                 |
-    | Custom   | own choice, should be at least 0.25 | own choice, should be at least 0.5GB |
+    There are three pre-defined sets of resources, **Small**, **Medium**, and **Large**. Choosing these will set the **CPU** and **Memory** values automatically.
 
-    Alternatively, you can choose **Custom**, and enter your own requirements for **CPU** and **Memory**.
+    | **Name** | **CPU cores**: Limit | **Memory (Gb)**: Limit | **CPU cores**: Request | **Memory (Gb)**: Request |
+    | --- | --- | --- | --- | --- |
+    | Small | 1 | 0.5 | 0.1 | 0.5 |
+    | Medium | 2 | 2 | 1 | 1 |
+    | Large | 4 | 4 | 2 | 2 |
+    | Custom | own choice | own choice | own choice | own choice |
+
+    Alternatively, you can choose **Custom**, and enter your own requirements for **CPU** and **Memory**. Ensure that these values are the same or greater than the values for a *Small* enviroment, otherwise you may run into problems running your app.
 
 7. Select a **Database plan** from the list of plans set up in the namespace.
 

@@ -16,4 +16,4 @@ The following are the action call activities you can use in your microflow or na
 
 ## 2 Read More
 
-* [Activities](#activities)
+* [Activities](activities)

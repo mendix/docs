@@ -10,7 +10,7 @@ tags: ["studio", "microflows", "merge", "expression", "change object"]
 
 This how-to explains how you can add advanced logic to a microflow by configuring a merge and a change object activity in Mendix Studio. 
 
-A merge is used to combine flows into one. If you split the microflow flow (with a decision) and now one and the same action needs to be executed for these separated flows, you can combine these two (or more) flows using a merge. For more information on decision, see [Decision](microflows-decision).
+A merge is used to combine flows into one. If you split the microflow flow (with a decision) and now one and the same action needs to be executed for these separated flows, you can combine these two (or more) flows using a merge. For more information on decision, see [Decision](/studio/microflows-decision).
 
 **This how-to will teach you how to do the following:**
 
@@ -112,4 +112,4 @@ Congratulations! Now you have the microflow that works the following way:
    b. If the customer does not have a grade, the error message pops up.<br/>
 2. If the customer has the grade, the customer's status is set to active irrespective of the grade once the order form is opened.
 
-Now you can preview or publish your app. For more information on how to preview and publish an app, see [Previewing & Publishing Your App](publishing-app).
+Now you can preview or publish your app. For more information on how to preview and publish an app, see [Previewing & Publishing Your App](/studio/publishing-app).

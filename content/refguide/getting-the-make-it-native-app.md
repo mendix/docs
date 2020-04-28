@@ -7,16 +7,16 @@ tags: ["Android", "iOS", "native", "debug"]
 
 ## 1 Introduction
 
-The Make It Native app allows developers to preview, test, and debug native app projects in conjunction with Mendix Studio Pro. It is available for both Android and iOS devices. 
+The Make It Native app allows developers to preview, test, and debug native app projects in conjunction with Mendix Studio Pro. It is available for both Android and iOS devices.
 
 For more information on using the Make It Native app to test an app, see [How To Get Started with Native Mobile](/howto/mobile/getting-started-with-native-mobile). For advanced information on debugging with the Make It Native app, see [Debug Native Apps (Advanced)](/howto/mobile/native-debug). If your app will require custom dependencies, such as custom widgets or fonts, see [How to Create a Custom Developer App](/howto/mobile/how-to-devapps).
 
-For information on which mobile operating systems are supported by the Make It Native app, see the [Mobile Operating Systems](system-requirements#mobileos) section of *System Requirements*.
+For information on which mobile operating systems are supported by the Make It Native app, see the [Mobile Operating Systems](system-requirements#mobileos) section of _System Requirements_.
 
-To download the Make It Native app, search for *Make It Native* in your device's app store, or select one of the download links below:
+To download the Make It Native app, search for _Make It Native_ in your device's app store, or select one of the download links below:
 
-* [Download for Android](https://play.google.com/store/apps/details?id=com.mendix.developerapp)
-* [Download for iOS](https://apps.apple.com/app/make-it-native/id1334081181)
+- [Download for Android](https://play.google.com/store/apps/details?id=com.mendix.developerapp)
+- [Download for iOS](https://apps.apple.com/app/make-it-native/id1334081181)
 
 ## 2 Archives {#archives}
 
@@ -39,13 +39,13 @@ iOS archive versions for Make It Native are served via TestFlight links. To join
 
 ### 3.1 Make It Native for Studio Pro 8.8 and Below:
 
-|                                  Android                                  |     iOS     |
-| :-----------------------------------------------------------------------: | :---------: |
-| ![Android QR Code](attachments/make-it-native-archive/qr-android-8.8.png) | Coming soon |
-|                                                                           |             |
+|                                  Android                                  |                                iOS                                |
+| :-----------------------------------------------------------------------: | :---------------------------------------------------------------: |
+| ![Android QR Code](attachments/make-it-native-archive/qr-android-8.8.png) | ![iOS QR Code](attachments/make-it-native-archive/qr-ios-8.8.png) |
+|   [Link](https://www.dropbox.com/s/z0255q1gcxpvlwl/MiN%208.8.apk?dl=0)    |        [Link](https://testflight.apple.com/join/ra3QR6iG)         |
 
 ## 4 Read More
 
-* [How to Deploy Your First Mendix Native App](/howto/mobile/deploying-native-app)
-* [How to Create a Custom Developer App](/howto/mobile/how-to-devapps)
-* [How to Debug Native Apps (Advanced)](/howto/mobile/native-debug)
+- [How to Deploy Your First Mendix Native App](/howto/mobile/deploying-native-app)
+- [How to Create a Custom Developer App](/howto/mobile/how-to-devapps)
+- [How to Debug Native Apps (Advanced)](/howto/mobile/native-debug)

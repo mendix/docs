@@ -7,12 +7,12 @@ tags: ["excel", "excel export", "excel exporter", "integration"]
 
 ## 1 Introduction
 
-Exporting items from a data grid in a Mendix application in Excel format via an **Export to Excel** button, is standard Mendix functionality. However, in instances where more customized Excel documents are required, your app can leverage Mendix App Store content to create custom Excel documents based on configurable templates. To achieve this, your app will require two Mendix App Store modules to be downloaded and configured.
+Exporting items from a data grid in a Mendix application in Excel format via an **Export to Excel** button, is standard Mendix functionality. However, in instances where more customized Excel documents are required, your app can leverage Mendix App Store content to create custom Excel documents based on configurable templates. To achieve this, your app will require you to download and configure two Mendix App Store modules.
 
 This how-to explains how to do the following:
 
-* download the App Store modules
-* configure your app to export the required data in the correct format
+* Download the App Store modules
+* Configure your app to export the required data in the correct format
 
 ## 2 Downloading the Required App Store Modules
 
@@ -25,12 +25,12 @@ The Mx Model Reflection module enables your app to obtain information about its 
 To download the modules, follow these steps:
 
 1. Open the **Mendix App Store** from within Studio Pro.
-2. Search for the keyword *reflection* and select **Mx Model reflection**:
+2.  Search for the keyword *reflection* and select **Mx Model reflection**:
 
-    ![](attachments/using-the-excel-exporter/18581166.png)
+	![](attachments/using-the-excel-exporter/18581166.png)
 
 3. Click **Download** to include the module in your app project. It will be imported into **Project** > **App Store modules** in the **Project Explorer**.
-4. Search for the keyword *Excel*, select **Excel exporter**, and download that module into your app project:
+4.  Search for the keyword *Excel*, select **Excel exporter**, and download that module into your app project:
 
 	![](attachments/using-the-excel-exporter/exporter.png)
 	
@@ -45,11 +45,11 @@ In this section, you will learn how to add the required pages in the app project
 1.  In Studio Pro, open **Project** > **Navigation**.
 2.  Add a new item to the Navigation to open the page **MxModelReflection.MxObjects_Overview**:
 
-    ![](attachments/using-the-excel-exporter/18581165.png)
+	![](attachments/using-the-excel-exporter/18581165.png)
 
 3.  Add a new item to the Navigation to open the page **XLSReport.Excel_Document_Overview**:
 
-    ![](attachments/using-the-excel-exporter/18581909.png)
+	![](attachments/using-the-excel-exporter/18581909.png)
 
 4.  Open **Project Security** and assign these two modules to the Administrator user role:
 
@@ -60,22 +60,21 @@ In this section, you will learn how to add the required pages in the app project
 In this section, you will create an entity which will be used to export the Excel workbook. This will be associated with the entity holding the data with which you want to fill the Excel spreadsheet. This how to will use a **Policy** entity to hold the data.
 
 1.  Open the domain model for your app project and add an entity to serve as a "master export" entity that is a specialization of **FileDocument**.
+2.  Create an association between the newly created entity and the entity (or entities) that you will want to serve as a base for the Excel export.
 
-2.  Create an association between the newly created entity and the entity(or entities) that you will want to serve as a base for the Excel export.
-
-    ![](attachments/using-the-excel-exporter/18581908.png)
+	![](attachments/using-the-excel-exporter/18581908.png)
 
 ## 5 Configuring Mx Model Reflection
 
-In this section, you will learn how to run the Mx Model Reflection synchronization so the app can leverage the output from that process to create highly customizable Excel Export templates.
+In this section, you will learn how to run the Mx Model Reflection synchronization so the app can leverage the output from that process to create highly customizable Excel export templates.
 
 To run the MxModelReflection sync follow these steps:
 
 1. Run your app.
 2. View the app.
-3.  Click the **MxReflection** navigation item to open the MxReflection overview page.
-4.  Select each module the app needs to synchronize and click **Click to refresh**.
-5.  Under **Synchronize all entities and microflows of checked modules on the left**, click **Click to refresh** .
+3. Click the **MxReflection** navigation item to open the MxReflection overview page.
+4. Select each module the app needs to synchronize and click **Click to refresh**.
+5. Under **Synchronize all entities and microflows of checked modules on the left**, click **Click to refresh** .
 
 ## 6 Creating Excel Export Templates
 
@@ -91,21 +90,23 @@ To set up a template, follow these steps:
 
 1. Run your app.
 2. View the app.
-3.  Click **Excel Exporter** to open the exporter overview page.
-4.  Click the **New** to create a new template.
+3. Click **Excel Exporter** to open the exporter overview page.
+4. Click the **New** to create a new template.
 5.  Configure the **Filename** (without extension) to be the default file name when the template is used. This is the **Name** by which the template can be identified.
 
 	{{% alert type="info" %}}The file name can always be changed when the template is used within a microflow.
 	{{% /alert %}}
 
 6.  Configure the **Input Object** to be the file document entity that is associated to your entity to be exported.
-7.  Provide a **Description** for identifying and documenting what this template is for.
+7.  Provide a **Description** for identifying and documenting what this template is for:
 
     ![](attachments/using-the-excel-exporter/new-excel-template.png)
 
 8.  Specify the **Date time export format** which defines how the dates and times should appear in the Excel file once exported.
 
 ### 6.2 Creating the Worksheet Layout
+
+To create the worksheet layout, follow these steps:
 
 1.  Under the **Worksheets** section for the template, select **New** to create a new sheet template:
 
@@ -120,18 +121,20 @@ To set up a template, follow these steps:
 
 5.  Select if the export should export distinct only or allow duplicate data
 6.  Specify the **Column default width** and **Row default height** (or leave them as defaults).
-7.  Specify if the extract will **Use Static Data** or not.
+7.  Specify if the extract will **Use Static Data** or not:
 
 	{{% alert type="info" %}}If static data is used, that will be configured below.
 	{{% /alert %}}
 
 8.  Specify if the **Default text style** that will denote the pre-defined style to be applied to the exported data.
-9.  Specify if the **Default header text style** that will denote the pre-defined style to be applied to the header data.
+9.  Specify if the **Default header text style** that will denote the pre-defined style to be applied to the header data:
 
 	{{% alert type="info" %}}Specifying styles are addressed in the section below.
 	{{% /alert %}}
 
 ### 6.3 Configuring the Dynamic Column Data
+
+To configure the dynamic column data, follow these steps:
 
 1. On the **Column Data tab**, select **New** to create a new export column:
 
@@ -145,6 +148,8 @@ To set up a template, follow these steps:
 
 ### 6.4 Configuring Static Data in the Sheet
 
+To configure the static data in the sheet, follow these steps:
+
 1.  Open the **Static Data tab** and select **New** to create a new export column.
 
 	![](attachments/using-the-excel-exporter/18581903.png)
@@ -156,6 +161,8 @@ To set up a template, follow these steps:
 
 ### 6.5 Configuring Custom Cell Formatting & Styling
 
+To configure the custom formatting and styling for the cells, follow these steps:
+
 1.  Back on the main page for your new template, click **New** in the **Styles** section to create a new style that can be applied to any of the data in the Excel export:
 
 	![](attachments/using-the-excel-exporter/18581900.png)
@@ -165,12 +172,9 @@ To set up a template, follow these steps:
 
 ## 7 Calling the Excel Export Module via Microflow
 
-In this section, you will learn how to call the newly created Excel export template in your application. 
-
-To retrieve the template and generate the document, follow these steps:
+In this section, you will learn how to call the newly created Excel export template in your application. To retrieve the template and generate the document, follow these steps:
 
 1. Create a microflow that either takes an inbound parameter of the object that needs to be exported, or retrieve that object into your microflow.
-
 2. In the microflow, retrieve a single object which is the template you set up earlier to use for the export.
 
 	![](attachments/using-the-excel-exporter/retrieve-template.png)
@@ -187,14 +191,16 @@ Your microflow should look similar to this:
 
 ## 8 Running the Microflow
 
-There are two things missing now from the app.
+There are two things missing now from the app:
 
-1. There is no data to download.
-2. There is no way to run the microflow.
+* There is no data to download
+* There is no way to run the microflow
+
+See the sections below to add these missing things.
 
 ### 8.1 Creating Data
 
-To allow you to enter some data, you will need to generate some pages and then enter some data into them.
+To allow you to enter some data, you will need to generate some pages and then enter some data into them by following these steps:
 
 1. Right-click on the **Policy** entity in the domain model and select **Generate overview pages…**.
 2. Select **Policy** and click **OK**.
@@ -212,4 +218,3 @@ If you create a **PolicyDoc** with *no* associations to **Policy** objects, you 
 ## 9 Read More
 
 * [Import Excel Documents](importing-excel-documents)
-

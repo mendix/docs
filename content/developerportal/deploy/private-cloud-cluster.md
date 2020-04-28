@@ -471,6 +471,8 @@ Run the following command in the namespace where the Mendix Operator is deployed
 
 #### 6.2.1 OpenShift
 
+First go to the namespace using the command `oc config set-context --current --namespace={namespace}`, using the name of your namespace.
+
 ```bash
 oc scale deployment mendix-agent --replicas=0 && \
 sleep 200 && \
@@ -478,6 +480,8 @@ oc scale deployment mendix-agent --replicas=1
 
 ```
 #### 6.2.2 Kubernetes
+
+First go to the namespace using the command `kubectl config set-context --current --namespace={namespace}`, using the name of your namespace.
 
 ```bash
 kubectl scale deployment mendix-agent --replicas=0 && \

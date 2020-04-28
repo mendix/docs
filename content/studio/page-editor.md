@@ -148,9 +148,9 @@ To delete an element from a page, do one of the following:
 * Select this element and press <kbd>Delete</kbd>
 * Open the **Properties** tab of this element and this click **Delete** at the bottom of the tab
 
-## 3 Highlight Conditional Items
+## 3 The Show Option
 
-Located in the top-left corner of a page, this option highlights items that have [conditional visibility](page-editor-widgets-visibility-section) configured for them. Click the eye icon to enable this. For more information on conditional visibility and how it works, see [Conditional Visibility Section](page-editor-widgets-visibility-section).  
+Located in the top-left corner of a page, the **Show** option highlights items that have [conditional visibility](page-editor-widgets-visibility-section) configured for them. Click the eye icon to enable this option. For more information on conditional visibility and how it works, see [Conditional Visibility Section](page-editor-widgets-visibility-section).  
 
 ## 4 Breadcrumb {#breadcrumb}
 

@@ -36,7 +36,7 @@ To start a new app based on a template, follow these steps:
 1. Open Mendix Studio Pro. Select **File** > **New Project** , and then select the **Native Mobile Quickstart** app.
 2. Click **Use this starting point**.
 3. Click **Create app** to close the dialog box.
-4. Click **Run Locally** to see the app in action.
+4. Click **Run Locally** to see the app in action. Please note that starting a native mobile app for the first time can take a bit longer (about one minute total) than subsequent instances.
 5. After running your app, you may see a Windows Security Alert dialog box. Accept the permissions selected by default and click **Allow access** to close the dialog box.
 6.  If asked to create database **'default'**, click **Yes**.
 

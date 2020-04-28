@@ -20,7 +20,7 @@ There are two steps required to achieve this, listed below.
 
 ### 1.1 Registering Your Cluster
 
-The first step is to register your private cloud cluster in the Developer Portal. For more information see [Registering a Private Cloud Cluster](private-cloud-cluster).
+The first step is to register your private cloud cluster in the Developer Portal. For more information see [Creating a Private Cloud Cluster](private-cloud-cluster).
 
 ### 1.2 Deploying Your App
 

@@ -8,7 +8,7 @@ tags: ["Deploy", "Private Cloud", "Environment"]
 
 ## 1 Introduction
 
-To deploy apps to your private cloud cluster (for example to Red Hat OpenShift or AWS-EKS), the cluster needs to be registered in the Mendix Developer Portal. This creates a link between the Mendix Developer Portal and the cluster. See [Registering a Private Cloud Cluster](private-cloud-cluster) for instructions on how to do this.
+To deploy apps to your private cloud cluster (for example to Red Hat OpenShift or AWS-EKS), the cluster needs to be registered in the Mendix Developer Portal. This creates a link between the Mendix Developer Portal and the cluster. See [Creating a Private Cloud Cluster](private-cloud-cluster) for instructions on how to do this.
 
 Once the cluster has been registered, team members with *Deploy App* rights can create environments and deploy an app.
 
@@ -26,7 +26,7 @@ Because you can run several Mendix apps in the same cluster, each app must have 
 
 To deploy an app to your private cloud platform, you need the following:
 
-* A Mendix account with **Deploy App** rights to an existing Cluster – see [Registering a Private Cloud Cluster](private-cloud-cluster) for more information on setting up clusters and adding members
+* A Mendix account with **Deploy App** rights to an existing Cluster – see [Creating a Private Cloud Cluster](private-cloud-cluster) for more information on setting up clusters and adding members
 * Mendix Studio Pro version 7.23.0 or above
 * A Mendix app created with the version of Studio Pro you are using.
 

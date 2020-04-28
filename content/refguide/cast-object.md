@@ -28,7 +28,7 @@ The cast object properties pane consists of the following sections:
 * [Action](#action)
 * [Common](#common)
 
-## 3 Action{#action}
+## 3 Action Section{#action}
 
 The **Action** section of the properties pane shows the action associated with this activity.
 
@@ -36,9 +36,7 @@ You can open a dialog box to configure this action by clicking the ellipsis (**â
 
 You can also open the dialog box by double-clicking the activity in the microflow or right-clicking the activity and selecting **Properties**.
 
-### 3.1 Output Section
-
-#### 3.1.1 Object Name
+### 3.1 Object Name
 
 This is the name for the result of the cast. It can be used by all activities that follow this activity.
 
@@ -48,6 +46,6 @@ This is the name for the result of the cast. It can be used by all activities th
 
 ## 5 Example
 
-For example, let's say there are three specializations of the **Question** object. Only an object of the specialized type **MultipleChoiceQuestion** needs to have some special actions performed on it. These will be done in a sub-microflow which has as the input type **MultipleChoiceQuestion**. Since an object of the type **Question** cannot get passed to the sub-microflow, the object first needs to be cast to the object type **MultipleChoiceQuestion**.
+For example, there are three specializations of the **Question** object. Only an object of the specialized type **MultipleChoiceQuestion** needs to have some special actions performed on it. These will be done in a sub-microflow which has as the input type **MultipleChoiceQuestion**. Since an object of the type **Question** cannot get passed to the sub-microflow, the object first needs to be cast to the object type **MultipleChoiceQuestion**.
 
 ![Example of cast in a microflow](attachments/object-activities/cast-example.png)

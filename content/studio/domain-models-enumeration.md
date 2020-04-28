@@ -81,8 +81,7 @@ You can copy and paste an enumeration to another Studio app. Follow the steps be
 3. In the **Select Enumeration** dialog box, select the enumeration you would like to copy and click the ellipsis icon.
 
 4. Select the **Copy to clipboard** option in the drop-down menu. 
-
-    <img src="attachments/domain-models-enumeration/copy-to-clipboard.png" alt="Copy Enumeration" style="zoom:80%;" />
+![Copy Enumeration](attachments/domain-models-enumeration/copy-to-clipboard.png)
 
 5. Open a different module or Studio app, navigate to a domain model and press <kbd>Ctrl</kbd> + <kbd>V</kbd>.
 
@@ -100,7 +99,7 @@ To duplicate an enumeration, follow the steps below:
 
 4.  Select the **Duplicate** option in the drop-down menu. 
 
-    <img src="attachments/domain-models-enumeration/duplicate.png" alt="Duplicate Enumeration" style="zoom:80%;" />
+    ![Duplicate Enumeration](attachments/domain-models-enumeration/duplicate.png)
 
 The enumeration is duplicated.
 

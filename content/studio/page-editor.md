@@ -80,7 +80,9 @@ To duplicate an existing page, do the following:
 
 2. In the side panel, click the ellipsis icon and select **Duplicate** in the drop-down menu:
 
-    <img src="attachments/page-editor/duplicate-page.png" alt="Duplicate Page" style="zoom:80%;" />
+    {{% image_container width="400" %}}
+![Duplicate Page](attachments/page-editor/duplicate-page.png)
+{{% /image_container %}}
 
 The page is duplicated.
 
@@ -92,7 +94,9 @@ To copy and paste a page, do the following:
 
 2.  In the side panel, click the ellipsis icon and select **Copy to clipboard** in the drop-down menu:
 
-    <img src="attachments/page-editor/copy-page.png" alt="Copying a Page" style="zoom:80%;" />
+    {{% image_container width="400" %}}
+![Copying a Page](attachments/page-editor/copy-page.png)
+{{% /image_container %}}
 
 3. Open the Studio app where you want to paste the page and press <kbd>Ctrl</kbd> +<kbd>V</kbd> or <kbd>Cmd</kbd> +<kbd>V</kbd>. 
 
@@ -112,7 +116,9 @@ To delete a page in Studio, do one of the following:
 
     1. In the side panel, click the ellipsis icon and select **Delete** in the drop-down menu:
 
-		<img src="attachments/page-editor/delete-page.png" alt="Delete Page" style="zoom:80%;" />
+		{{% image_container width="400" %}}
+![Delete Page](attachments/page-editor/delete-page.png)
+{{% /image_container %}}
 
 The selected page is deleted.
 

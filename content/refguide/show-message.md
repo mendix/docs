@@ -76,4 +76,4 @@ The **Blocking** property defines whether the message shown to the end-user is b
 
 ## 5 Read More
 
-* [Activities](#activities)
+* [Activities](activities)

@@ -35,11 +35,23 @@ You can also open the dialog box by double-clicking the activity in the microflo
 
 ### 3.1 Microflow
 
-The microflow that is called by this activity.
+The microflow that is called by this activity. Depending on the selected microflow, you will see a list of its parameters in a table. Parameters pass data to the activity. 
 
-### 3.2 Arguments
+#### 3.1.1 Edit Parameter Value
 
-For each parameter of the microflow, you have to supply an argument of the same type. The values of the arguments are expressed using [expressions](expressions). There is a difference in the way argument values are passed to a sub-microflow:
+**Edit parameter value** allows you to edit the [argument](#argument) value. 
+
+#### 3.1.2 Name
+
+The name of the parameter.
+
+#### 3.1.3 Type
+
+The type of the parameter. 
+
+#### 3.1.4 Argument {#argument}
+
+For each parameter of the microflow, you need to supply an argument of the same type. The values of the arguments are expressed using [expressions](expressions). There is a difference in the way argument values are passed to a sub-microflow:
   * Lists and objects are passed as references (meaning, if the list/object is changed in a sub-microflow, the original list/object is altered)
   * Primitive types (strings, numbers, etc.) are passed as values (meaning, they are immutable, and not changeable via sub-microflows)
 
@@ -53,11 +65,11 @@ The data type of the result of the called microflow. The return type is defined 
 
 ### 3.4 Use Return Value
 
-If **Use return value** is set to *Yes* you will be asked to give the return value a name.
+If **Use return value** is set to *Yes*, you will need to fill in the name of the variable, object, or list returned by the activity.
 
 ### 3.5 Variable Name, Object Name, or List Name
 
-The name of the result of the called microflow.
+The name of the variable, list, or object returned by the activity.
 
 ## 4 Common Section {#common}
 

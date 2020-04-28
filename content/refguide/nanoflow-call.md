@@ -47,11 +47,11 @@ This is the data type of the result of the called nanoflow. The return type is d
 
 ### 3.4 Use Return Value
 
-If **Use return value** is set to *Yes* you will be asked to give the return value a name.
+If **Use return value** is set to *Yes*, you will need to fill in the name of the variable, object, or list returned by the activity.
 
 ### 3.5 Variable Name, Object Name, or List Name
 
-The name of the variable, object, or list that will contain the result of the called nanoflow.
+The name of the variable, list, or object returned by the activity.
 
 ## 4 Common Section {#common}
 

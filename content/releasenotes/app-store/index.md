@@ -11,7 +11,7 @@ These release notes cover changes made to the [Mendix App Store](/appstore/index
 
 ### May 6th, 2020
 
-You can now download previous versions of App Store components from the [Mendix App Store](https://appstore.home.mendix.com/). This can be done in the "All versions" tab on the [Details page](https://docs.mendix.com/appstore/general/app-store-overview#details) of a component.
+You can now download previous versions of App Store components from the [Mendix App Store](https://appstore.home.mendix.com/). This can be done in the **All versions** tab on the component's [details page](/appstore/general/app-store-overview#details).
 
 ### April 7th, 2020
 

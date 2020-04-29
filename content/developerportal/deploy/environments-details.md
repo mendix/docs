@@ -248,7 +248,7 @@ Additional information can be found in the Mozilla developer guide [HTTP headers
 
 ### 4.3 Outgoing Connections Whitelisting (Mendix Cloud Dedicated)
 
-If you are deploying your apps to [Mendix Cloud Dedicated](https://www.mendix.com/evaluation-guide/app-capabilities/mendix-cloud-overview#mendix-cloud-vpc), all outgoing IP addresses will be blacklisted. This means that, although users can still find and use your app, your app will not be able to make calls to any other services over the internet.
+If you are deploying your apps to [Mendix Cloud Dedicated](https://www.mendix.com/evaluation-guide/app-capabilities/mendix-cloud-overview#mendix-cloud-vpc), all outgoing IP addresses will be allowed by default.
 
 You can define which IP addresses and ports can be used for outgoing connections in this section.
 

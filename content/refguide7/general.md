@@ -12,7 +12,6 @@ If you have been using Mendix version 6, we advise reading [Moving from 6 to 7](
 
 * [System Requirements](system-requirements)
 * [Moving from Version 6 to 7](moving-from-6-to-7)
-* [Model Share](model-share)
 * [Offline](offline)
 * [MxBuild](mxbuild)
 * [Third-Party Licenses](third-party-licenses)

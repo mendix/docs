@@ -102,6 +102,12 @@ Replaced by [Mendix Runtime](other-terms#runtime).
 Replaced by [Mendix mobile app](other-terms#mendix-mobile-app).
 {{% /alert %}}
 
+## Mendix Model Share
+
+{{% alert type="info" %}}
+Deprecated March 31, 2020. No longer appears in documentation.
+{{% /alert %}}
+
 ## Mendix Online Platform, Mendix Platform Portal
 
 {{% alert type="info" %}}

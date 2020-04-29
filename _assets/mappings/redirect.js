@@ -1698,10 +1698,6 @@ module.exports = {
       to: "/refguide6/mobile"
     },
     {
-      from: "/refguide6/Model+Share",
-      to: "/refguide6/model-share"
-    },
-    {
       from: "/refguide6/Modeler",
       to: "/refguide6/modeler"
     },

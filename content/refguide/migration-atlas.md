@@ -22,7 +22,7 @@ If you are using a modified version of Atlas UI resources, Mendix cannot update 
 
 Follow the steps below to begin upgrading your Atlas UI Resources module:
 
-1. Download the latest [Atlas UI Resources](https://appstore.home.mendix.com/link/app/104730/) module (v2.0.0 or higher).
+1. Download the latest [Atlas UI Resources](/appstore/modules/atlas-ui-resources) module (v2.0.0 or higher).
 2. Import this module into your app and replace the old resource module. This will overwrite the layouts, page templates, and building blocks inside of the resource module. The **theme** folder related to your old resource module will be moved to **theme_old**. You will get a new **theme** folder with the latest changes. From here, you must choose one of the following based on if you have custom styling or not:<br />
 	* If you did not change anything in the old **theme** folder, you can safely remove **theme_old** and leave everything else as is. Your styling will work and you can stop with consulting this document. <br />
 	* If you did change anything in the old **theme** folder, you will have to do some manual work to align your styling. Consult the information below to decide what to do based on your needs.

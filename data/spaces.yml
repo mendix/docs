@@ -132,7 +132,6 @@ developerportal:
     - "Operations"
     - "App Settings"
     - "Community Tools"
-    - "App Store"
     - "Mendix Support"
 studio:
   space: "Studio 8 Guide"
@@ -151,6 +150,13 @@ studio:
     - "Theme Customizer"
     - "Settings"
     - "Starting With Your Own Data"
+studio-how-to:
+  space: "Studio 8 How-to's"
+  priority: false
+  menu_categories:
+    - "Domain Model"
+    - "Pages"
+    - "Microflows" 
 studio7:
   space: "Mendix 7 Studio Guide"
   priority: false
@@ -177,8 +183,8 @@ partners:
 appstore:
   space: "App Store Guide"
   priority: false
-  draft: true
   menu_categories:
+    - "General Info"
     - "Connectors"
     - "Widgets"
     - "Modules"

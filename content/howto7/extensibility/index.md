@@ -16,4 +16,3 @@ One of the strengths of Mendix is that it is easy to connect your Mendix applica
 * [Build Microflow Actions Using the Mendix Connector Kit](howto-connector-kit)
 * [Use Mendix DataStorage APIs to Build Reusable Microflow Actions](howto-datastorage-api)
 * [Install & Configure the SMTP Email Module](install-and-configure-the-smtp-module)
-* [Use Connectors & Adapters](use-connectors-and-adapters)

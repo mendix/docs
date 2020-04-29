@@ -50,8 +50,8 @@ To submit a request with Mendix Support, follow these steps:
 	* **Incident** – if your app is down, or you are experiencing another platform issue
 	* **Standard Change: Request New Licensed Node** – please use the [Request New App Node](https://newnode.mendix.com) app unless you are requesting an SAP Subscription Secret
 	* **Standard Change: Change On-Prem Licensed Node** – request a new license key for an *existing* app (for example, if you have new hardware configuration)
-	* **Standard Change: Off-Board Licensed Node** – remove a licensed node or app that you no longer need (applies to all platforms)
-	* **Standard Change: Change Mendix Cloud Container Size** – all vertical scaling changes for a container that require downtime (for example, changing memory or database size)
+	* **Standard Change: Off-Board Licensed Node** – remove a licensed node or app that you no longer need (applies to all platforms) by creating a request [here](https://offboard.mendix.com/index.html)
+	* **Standard Change: Change Mendix Cloud Container Size** – all vertical scaling changes for a container that require downtime (for example, changing memory or database size) can be requested [here](https://resize.mendix.com/index.html)
 	* **Standard Change: Change Mendix Cloud File Storage** – increase or decrease the file storage size
 	* **Standard Change: Change Mendix Cloud URL** – change a *non-custom* Mendix URL (for example, *something.mendixcloud.com*)
 	* **Standard Change: Assign Company Admin** – make an existing Mendix user the [Company Admin](../company-app-roles/companyadmin-settings)
@@ -129,7 +129,7 @@ You can add large attachments such as project files to the request. Please note 
 * Reproducible steps
 
 {{% alert type="info" %}}
-Not all App Store content is compatible with every version of Studio Pro, and not all App Store content is supported by Mendix. For more information, see [App Store Content Support](/developerportal/app-store/app-store-content-support).
+Not all App Store content is compatible with every version of Studio Pro, and not all App Store content is supported by Mendix. For more information, see [App Store Content Support](/appstore/general/app-store-content-support).
 {{% /alert %}}
 
 ### 5.6 Mobile Problems

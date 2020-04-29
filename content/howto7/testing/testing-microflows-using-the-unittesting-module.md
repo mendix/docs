@@ -35,9 +35,9 @@ All images, names and steps in this how-to are based on these versions. When usi
 In this chapter you will set up the unit testing module and run the example tests.
 
 1.  Create a new project.
-2.  Download the [UnitTesting module](https://appstore.home.mendix.com/link/app/390/).
-3.  Download the [Community Commons Function Library module](https://appstore.home.mendix.com/link/app/170/).
-4.  Download the [ObjectHandling module](https://appstore.home.mendix.com/link/app/37114/).
+2.  Download the [Unit Testing](/appstore/modules/unit-testing) module.
+3.  Download the [Community Commons Function Library](/appstore/modules/community-commons-function-library).
+4.  Download the [Object Handling](/appstore/modules/object-handling) module.
 5.  Open the **Settings** of the project.
 
     ![](attachments/18448633/18580371.png)
@@ -107,7 +107,7 @@ In this chapter you will learn how to create a microflow test. To create a new m
 
 4.  Create a microflow called **Promote** that looks like this:
 
-    <iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/d5d6ad4f-bcc8-4ce8-a999-a86370bc6ffe/promote?embed=true" allowfullscreen=""></iframe>
+	![](attachments/18448633/promote.jpg)
 
 ### 3.2 Creating a Unit Test
 
@@ -172,21 +172,15 @@ In this chapter you will learn how to create a microflow test. To create a new m
 
 29. The microflow should look like the model below:
 
-    <iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/93a3546c-df5e-4b7d-9dc8-447a9f24432f/unittest-promote-employee-to-junior?embed=true"></iframe>
+	![](attachments/18448633/promotetojunior.jpg)
 
 30. Create three more test microflows as shown below:
 
-    **Test_PromoteEmployeeToMedior**
-
-    <iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/a609f474-dd8c-4315-84fb-1056256ca3fc/unittest-promote-employee-to-medior?embed=true"></iframe>
-
-    **Test_PromoteEmployeeToSenior**
-
-    <iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/f247e678-1738-416a-8e6a-77dfdb2cf392/unittest-promote-employee-to-senior?embed=true"></iframe>
-
-    **Test_PromoteEmployeeWhenAlreadySenior**
-
-    <iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/44d6c6be-d35c-403d-ad2f-d89398956a07/unittest-promote-employee-when-already-senior?embed=true"></iframe>
+	![](attachments/18448633/promotetomedior.jpg)
+	
+	![](attachments/18448633/promotetosenior.jpg)
+	
+	![](attachments/18448633/stillsenior.jpg)	
 
 31. Run the project locally.
 

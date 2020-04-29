@@ -29,7 +29,8 @@ A Free App has a number of limitations compared to a licensed app. The main limi
 | **Access Restriction Profiles**             | Not available.                                               | Can be configured from the Developer Portal.                 |
 | **Client Certificates**                     | Not available.                                               | Can be configured from the Developer Portal.                 |
 | **Starting and stopping your app manually** | Not available.                                               | Available in the Developer Portal.                           |
-| **Constants and Runtime Settings**          | Defined in Studio Pro                                        | Configurable through environment variables and settings in the Developer Portal. |
+| **Constants**          | Defined in Studio Pro                                        | Configurable through environment variables in the Developer Portal. |
+| **Runtime Settings**          | Not available                                        | Configurable through runtime and settings in the Developer Portal. |
 | **Scalability**                             | Only one instance and a fixed amount (1Gb) of memory.              | Configurable in the Developer Portal.                        |
 | **Metrics, Alerts, and Log Levels**         | Not available.                                               | Available.                                                   |
 | **Historic Archived Logs**                  | Not available, only live logs are available.                 | Available.                                                   |

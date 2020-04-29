@@ -21,7 +21,7 @@ The individual Charts widgets can be fine-tuned with advanced settings. The sett
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Installed the latest version of Mendix Studio Pro
-* Downloaded the latest [Chart Widget](https://appstore.home.mendix.com/link/app/105695/) from the Mendix App Store
+* Downloaded the latest [Chart Widget](/appstore/widgets/charts) from the Mendix App Store
 * Setup a chart, see [How to Create a Chart](charts-basic-create)
 
 ## 3 Changing the Layout {#layout-changes}

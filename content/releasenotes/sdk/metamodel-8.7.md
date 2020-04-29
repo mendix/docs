@@ -7,8 +7,8 @@ parent: "metamodel-8"
 
 **Release date: February 25th, 2020**
 
-## Pages
+### Pages
 
-### TextBox (Element)
+#### TextBox (Element)
 
 * We introduced the `onEnterKeyPressAction` property.

@@ -28,8 +28,8 @@ Create a Mendix project using the Native Mobile Quickstart starter app:
 
 To install your module, do the following:
 
-1. Add the [Community Commons](https://appstore.home.mendix.com/link/app/170/) module to your app project.
-1. Add the [Encryption](https://appstore.home.mendix.com/link/app/1011/) module to your app project.
+1. Add the [Community Commons Function Library](/appstore/modules/community-commons-function-library) module to your app project.
+1. Add the [Encryption](/appstore/modules/encryption) module to your app project.
 1. Set the encryption private key by doing the following:<br />
 	a. Double-click **Settings**.<br />
 	b. Click **Edit**.<br />

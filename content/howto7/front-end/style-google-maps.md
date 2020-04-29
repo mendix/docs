@@ -19,7 +19,7 @@ Google Maps is a very powerful addition to your applications. You can use it to 
 
 Before you start this how-to, please make sure you have completed the following prerequisites.
 
-*   Have the latest version of the Google Maps widget in your application: [Google Maps](https://appstore.home.mendix.com/link/app/48911/)
+*   Have the latest version of the Google Maps widget in your application: [Google Maps](/appstore/widgets/google-maps)
 
 {{% alert type="warning" %}}
 These instructions are for the Google Maps widget which you can download from the App Store. The Google Maps widget within the Atlas UI template has different options.

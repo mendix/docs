@@ -25,7 +25,7 @@ Examples of using microflows can be the following:
 
 To view the microflows of your app in Studio, click the **Microflows** icon in the left menu bar:
 
-{{% image_container width="300" %}}![Microflow Icon](attachments/microflows/micflows-icon.png)
+{{% image_container width="250" %}}![Microflow Icon](attachments/microflows/micflows-icon.png)
 {{% /image_container %}}
 
 ## 2 Concepts and Definitions 
@@ -53,7 +53,7 @@ To create a new microflow and to start building custom logic, do the following:
 1. Click the **Microflow** icon in the left menu bar. 
 2.  Click **New** on the **Microflows** side panel.
 
-    {{% image_container width="350" %}}![Adding New Microflow](attachments/microflows/new-microflow.png)
+    {{% image_container width="300" %}}![Adding New Microflow](attachments/microflows/new-microflow.png)
     {{% /image_container %}}
 
 3.  Fill in the name of the microflow in the pop-up dialog and click **Create**.
@@ -70,7 +70,7 @@ To duplicate a microflow, do the following:
 
 2.  In the side panel, click the ellipsis icon and select **Duplicate** in the drop-down menu:
 
-    <img src="attachments/microflows/duplicate-microflow.png" style="zoom:80%;" />
+    {{% image_container width="350" %}}![Duplication a Microflow](attachments/microflows/duplicate-microflow.png){{% /image_container %}}
 
 The microflow is duplicated.
 
@@ -82,7 +82,9 @@ To copy and paste a microflow, do the following:
 
 2.  In the side panel, click the ellipsis icon and select **Copy to clipboard** in the drop-down menu:
 
-    <img src="attachments/microflows/copy-microflow.png" alt="Copying a Microflow" style="zoom:80%;" />
+    {{% image_container width="350" %}}
+![Copying a Microflow](attachments/microflows/copy-microflow.png)
+{{% /image_container %}}
 
 3. Open the Studio app where you want to paste the microflow and press <kbd>Ctrl</kbd> +<kbd>V</kbd> or <kbd>Cmd</kbd> +<kbd>V</kbd>. 
 
@@ -102,7 +104,9 @@ To delete a microflow in Studio, do one of the following:
 
     1. In the side panel, click the ellipsis icon and select **Delete** in the drop-down menu:
     
-        <img src="attachments/microflows/delete-microflow.png" alt="Delete Microflow" style="zoom:80%;" />
+        {{% image_container width="350" %}}
+![Delete Microflow](attachments/microflows/delete-microflow.png)
+{{% /image_container %}}
 
 ## 7 Adding a New Event or Activity {#adding-activity-to-microflow}
 

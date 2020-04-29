@@ -254,7 +254,8 @@ You can define which IP addresses and ports can be used for outgoing connections
 
 You can add or edit a number of different IP address and port combinations. Any ranges which have already been set up will be listed here. You can do the following:
 
-* Click **Add** to add a new range
+* Select **Allow all outgoing connections** to remove any restrictions
+* Click **New** to add a new range
 * Select an existing range and click **Edit** to edit an existing range
 * Select an existing range and click **Delete** to delete an existing range (you will be asked to confirm that you want to delete this range)
 
@@ -265,12 +266,24 @@ For each range where you define whitelisted IP addresses and ports, you can ente
 ![](attachments/environments-details/whitelist.png)
 
 * **Name** – A name to identify this range
-* **IP** – An inclusive range of whitelisted IP addresses in IPv4 format — all addresses between the **Start** address and the **End** address will be whitelisted, including the start and end addresses. If you only want to whitelist a single address, make the start and end addresses the same
+* **IP** – An inclusive range of whitelisted IP addresses in IPv4 format. All the IP addresses must be in a public range, see [Valid IP Ranges](#valid-ip), below. All addresses between the **Start** address and the **End** address will be whitelisted, including the start and end addresses. If you only want to whitelist a single address, make the start and end addresses the same
 * **Port** – An inclusive range of ports which will be whitelisted for the IP range above. You can use several whitelist entries if you want to whitelist different port ranges for the same IP range
 * **Protocol** – You can specify whether the whitelisting is for **TCP**, **UDP**, or **ALL** traffic
 * **Description** – an optional description of this IP range, for example which API it supports
 
-Click **Save** to save your range. The new values will be applied immediately.
+Click **Save** to save your range. The new values will be applied within a few minutes without needing an app restart.
+
+#### 4.3.2 Valid IP Ranges{#valid-ip}
+
+IP Addresses must be within the following ranges:
+
+| IP Start | IP End |
+| --- | --- |
+| 0.0.0.0 | 9.255.255.255 |
+| 11.0.0.0 | 169.253.255.255 |
+| 169.255.0.0 | 172.15.255.255 |
+| 172.32.0.0 | 192.167.255.255 |
+| 192.169.0.0 | 255.255.255.255 |
 
 ### 4.4 Path-Based Access Restrictions
 

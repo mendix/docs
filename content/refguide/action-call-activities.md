@@ -2,13 +2,18 @@
 title: "Action Call Activities"
 parent: "activities"
 menu_order: 30
-tags: ["studio pro", "javascript", "javascript actions"]
+tags: ["studio pro", "action call", "action call activities"]
 ---
 
-This section contains these documents:
+## 1 Introduction
 
-* [Microflow Call](microflow-call)
-* [Nanoflow Call](nanoflow-call)
-* [Java Action Call](java-action-call)
-* [JavaScript Action Call](javascript-action-call)
+The following are the action call activities you can use in your microflow or nanoflow:
 
+* [Microflow call](microflow-call) – calls a microflow
+* [Nanoflow call](nanoflow-call) *(only in nanoflows)* – calls another nanoflow
+* [Java action call](java-action-call) *(only in microflows)* – calls a Java action
+* [JavaScript action call](javascript-action-call) *(only in nanoflows)* – calls a JavaScript action
+
+## 2 Read More
+
+* [Activities](activities)

@@ -26,7 +26,7 @@ The commit object(s) properties pane consists of the following sections:
 * [Action](#action)
 * [Common](#common)
 
-## 3 Action{#action}
+## 3 Action Section{#action}
 
 The Action section of the properties pane shows the action associated with this activity.
 
@@ -34,15 +34,11 @@ You can open a dialog box to configure this action by clicking the ellipsis (**â
 
 You can also open the dialog box by double-clicking the activity in the microflow or right-clicking the activity and selecting **Properties**.
 
-### 3.1 Input Section
-
-#### 3.1.1 Object or List
+### 3.1 Object or List
 
 The object or list of objects that you want to commit.
 
-### 3.2 Action Section
-
-#### 3.2.1 With Events
+### 3.2 With Events
 
 {{% alert type="info" %}}
 This property is for microflows only.
@@ -52,7 +48,7 @@ Indicates whether or not to execute the commit event handlers of the objects.
 
 Default: *Yes*
 
-##### Events in Nanoflows
+#### 3.2.1 Events in Nanoflows
 
 Nanoflows do not have this property.
 
@@ -60,13 +56,13 @@ If the commit object(s) action is used in an online app, it sends a commit reque
 
 If the commit object(s) action is used in an offline app, the changes are committed to the offline database, and event handlers are run when the offline app synchronizes.
 
-#### 3.2.2 Refresh in Client{#refresh-in-client}
+### 3.3 Refresh in Client{#refresh-in-client}
 
 This setting defines how changes are reflected in the pages presented to the end-user.
 
 Default: *No*
 
-##### Microflow is Called from the Client in an Online App
+#### 3.3.1 Microflow is Called from the Client in an Online App
 
 If **Refresh in client** is set to *No*, the change is not reflected in the client.
 
@@ -80,13 +76,13 @@ Changed attribute values are *always* reflected in the client. The object is ref
 When committing a large number of objects, we recommend that you do not enable 'Refresh in client' because it can slow things down.
 {{% /alert %}}
 
-##### Microflow is Called in an Offline, Native, or Hybrid App
+#### 3.3.2 Microflow is Called in an Offline, Native, or Hybrid App
 
 When inside a microflow that is called from an offline, native, or hybrid app, the **Refresh in client** option is ignored and functions as if it was set to **No**.
 
 For more information, see the [Microflows](offline-first#microflows) section of the *Offline-First Reference Guide*.
 
-##### Action is in a Nanoflow
+#### 3.3.3 Action is in a Nanoflow
 
 When inside a [nanoflow](nanoflows), the object is refreshed across the client as if **Refresh in client** was set to *Yes*.
 

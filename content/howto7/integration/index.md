@@ -16,7 +16,6 @@ We want to create a large network of Mendix apps, so let's start integrating!
 * [Import XML Documents](importing-xml-documents)
 * [Export XML Documents](export-xml-documents)
 * [Import Excel Documents](importing-excel-documents)
-* [Use the Excel Exporter](using-the-excel-exporter)
 * [Consume a Simple Web Service](consume-a-simple-web-service)
 * [Consume a Complex Web Service](consume-a-complex-web-service)
 * [Consume a REST Service](consume-a-rest-service)

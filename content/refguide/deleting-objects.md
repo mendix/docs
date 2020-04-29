@@ -26,7 +26,7 @@ The delete object properties pane consists of the following sections:
 * [Action](#action)
 * [Common](#common)
 
-## 3 Action{#action}
+## 3 Action Section{#action}
 
 The **Action** section of the properties pane shows the action associated with this activity.
 
@@ -34,21 +34,17 @@ You can open a dialog box to configure this action by clicking the ellipsis (**â
 
 You can also open the dialog box by double-clicking the activity in the microflow or right-clicking the activity and selecting **Properties**.
 
-### 3.1 Input Section
-
-#### 3.1.1 Object or List
+### 3.1 Object or List
 
 The name of the object or list of objects that will be deleted. If you choose a list, all objects in that list will be deleted.
 
-### 3.2 Action Section
-
-#### 3.2.1 Refresh in Client
+### 3.2 Refresh in Client
 
 This setting defines how changes are reflected in the pages presented to the end-user.
 
 Default: *No*
 
-##### Microflow is Called from the Client in an Online App
+#### 3.2.1 Microflow is Called from the Client in an Online App
 
 If **Refresh in client** is set to *No*, the deletion is not reflected in the client.
 
@@ -58,7 +54,7 @@ If set to *Yes*, the deletion is reflected across the client, which includes rel
 Deletions are always reflected in the client. [Data sources](data-sources) are only reloaded if **Refresh in client** is set to *Yes*.
 {{% /alert %}}
 
-##### Microflow is Called in an Offline, Native, or Hybrid App
+#### 3.2.2 Microflow is Called in an Offline, Native, or Hybrid App
 
 When inside a microflow that is called from an offline, native, or hybrid app, the **Refresh in client** option is ignored and functions as if it was set to **No**.
 

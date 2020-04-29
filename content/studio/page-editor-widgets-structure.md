@@ -120,7 +120,7 @@ In the **General** section of a row you can select the number of columns in it, 
 
     * You can also set the number of columns in the working area: select one of the columns and click a plus icon on top of it to add a new column to the right
 
-        <img src="attachments/page-editor-widgets-structure/adding-new-column.png" alt="Adding New Column" style="zoom:80%;" />
+        {{% image_container width="300" %}}![Adding New Column](attachments/page-editor-widgets-structure/adding-new-column.png){{% /image_container %}}
 
 * <a name="align-columns"></a>**Align Columns Vertically** – aligns all columns in the row vertically, you can select the following options:
 
@@ -177,7 +177,9 @@ You can choose the following options:
 
 You can also resize columns manually in the working area: drag the column border to change its size. 
 
-<img src="attachments/page-editor-widgets-structure/resizing-column.png" alt="Resizing Column" style="zoom:80%;" />
+{{% image_container width="300" %}}
+![Resizing Column](attachments/page-editor-widgets-structure/resizing-column.png)
+{{% /image_container %}}
 
 The **Width** property can be used to make your layout more flexible and adaptive to different types of devices.
 
@@ -189,7 +191,9 @@ For the *desktop* and *tablet*, you might want to set the first column with a pi
 
 For *phone*, it can be a good idea to place two columns one under another, setting them to **Manual** width of *12*. In this case, the second column will be automatically wrapped to another line:
 
- <img src="attachments/page-editor-widgets-structure/layout-example-phone.png" alt="Layout Example, Phone" style="zoom:80%;" />
+ {{% image_container width="300" %}}
+![Layout Example, Phone](attachments/page-editor-widgets-structure/layout-example-phone.png)
+{{% /image_container %}}
 
 ##### 3.3.2.2 Align Vertically {#align-column}
 

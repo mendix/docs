@@ -1038,6 +1038,56 @@ The widget’s style properties are as follows:
 
 The default class to style all bottom sheet widgets is named `com_mendix_widget_native_bottomsheet_BottomSheet`.
 
+### 11.23 Popup Menu
+
+The popup menu widget allows you to show context menu exactly where the user taps on screen.
+
+The widget’s style properties are as follows:
+
+```xml
+</container>
+</buttonContainer>
+<basic>
+    </containerStyle>
+    </dividerColor>
+    <itemStyle>
+        </ellipsizeMode>
+        </defaultStyle>
+        </primaryStyle>
+        </dangerStyle>
+        </customStyle>
+    </itemStyle>
+</basic>
+```
+
+A main object has four objects.
+
+| Element                    | Style Properties | Description                                                                                                      |
+| ----------------------------| --- | ---------------------------------------------------------------------------------------------------------------- |
+| basic      | BasicItemStyle |Styles items\.                                                                                                   |
+| buttonContainer | ViewStyle | Styles the wrapper view of triggerer since there could be multiple elements and it has to be wrapped in a view\. |
+| container       | ViewStlye | Styles the wrapper view around the whole menu\.                                                                  |
+
+#### BasicItemStyle
+
+| Element                   | Style Properties |  Description                                      |
+| ---------------------------| ---- | ------------------------------------------------ |
+| containerStyle | ViewStyle | Styles the wrapper container around basic item\. |
+| itemStyle | ItemStyle      | Styles the basic items\.                         |
+| dividerColor | string      | Styles the divider color                         |
+
+#### ItemStyle
+
+| Element                | Style Properties                     | Description                                                                                      |
+| ----------------------------------------| ----- | ------------------------------------------------------------------------------------------------ |
+| ellipsizeMode | 'head', 'middle', 'tail' or 'clip' | Styles how the text will be clipped if its too long\. |
+| defaultStyle |  TextStyle                | Styles all basic menu items which has "default" style selected\.                                 |
+| primaryStyle |  TextStyle                | Styles all basic menu items which has "primary" style selected\.                                 |
+| dangerStyle |  TextStyle                 | Styles all basic menu items which has "danger" style selected\.                                  |
+| customStyle |  TextStyle                 | Styles all basic menu items which has "custom" style selected\.                                  |
+
+The default class to style all Popup menus is named `com_mendix_widget_native_popupmenu_PopupMenu`.
+
 ## 12 Read More
 
 * [Style Your Mendix Native App](/howto/mobile/how-to-use-native-styling)

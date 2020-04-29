@@ -4,6 +4,7 @@ parent: "mendix-cloud-deploy"
 menu_order: 7
 description: "Describes the environmental details of your app and how to manage the environment."
 tags: ["Deploy","App","Environment","Developer Portal"]
+#The anchor #connection-whitelist below is mapped from the Developer Portal (Mendix Cloud Environment Details), so it should not be removed or changed.
 ---
 
 ## 1 Introduction
@@ -246,15 +247,15 @@ The changes to the headers will be implemented when the app is redeployed.
 
 Additional information can be found in the Mozilla developer guide [HTTP headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers).
 
-### 4.3 Outgoing Connections Whitelisting (Mendix Cloud Dedicated)
+### 4.3 Outgoing Connections Whitelisting (Mendix Cloud Dedicated){#connection-whitelist}
 
 If you are deploying your apps to [Mendix Cloud Dedicated](https://www.mendix.com/evaluation-guide/app-capabilities/mendix-cloud-overview#mendix-cloud-vpc), all outgoing IP addresses will be allowed by default.
 
-You can define which IP addresses and ports can be used for outgoing connections in this section.
+If you uncheck the **Allow all outgoing connections** option, you can define which IP addresses and ports can be used for outgoing connections in this section.
 
 You can add or edit a number of different IP address and port combinations. Any ranges which have already been set up will be listed here. You can do the following:
 
-* Select **Allow all outgoing connections** to remove any restrictions
+* Select **Allow all outgoing connections** to remove any restrictions, or deselect it to impose restrictions
 * Click **New** to add a new range
 * Select an existing range and click **Edit** to edit an existing range
 * Select an existing range and click **Delete** to delete an existing range (you will be asked to confirm that you want to delete this range)

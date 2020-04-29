@@ -60,11 +60,11 @@ This read-only property indicates whether you will retrieve a variable, object o
 
 ### 3.4 Use Return Value
 
-This property determines if the returned value from the JavaScript action should be stored in a variable.
+This property determines if the returned value from the JavaScript action should be available in the rest of the microflow or nanoflow. If **Use return value** is set to *Yes*, you will need to fill in the [name](#name) of the variable, object, or list returned by the activity.
 
-### 3.5 Variable Name, Object Name, or List Name
+### 3.5 Variable Name, Object Name, or List Name {#name}
 
-The name of the variable, list, or object returned by the activity. If it is an object or list, the [Return type](#return-type) will indicate the entity which is being returned. You may only set a variable name if **Use return value** has been set to **Yes**.
+The name of the variable, list, or object returned by the activity. If it is an object or list, the [Return type](#return-type) will indicate the entity which is being returned. 
 
 ## 4 Common Section {#common}
 

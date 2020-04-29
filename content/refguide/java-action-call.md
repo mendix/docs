@@ -12,7 +12,11 @@ This activity can only be used in **Microflows**.
 
 ## 1 Introduction
 
-The **Java action call** activity can be used to call a [Java action](java-actions). Arguments can be passed to the action and the result can be stored.
+The **Java action call** activity can be used to call a [Java action](java-actions). 
+
+![Java Action](attachments/action-call-activities/java-action-call.png)
+
+Arguments can be passed to the action and the result can be stored.
 
 ## 2 Properties
 
@@ -43,7 +47,7 @@ For each parameter of the Java action you have to supply an argument of the same
 
 ### 3.3 Return Type
 
-The return type is the [data type](data-types) of the result of the Java action. The return type is defined by the Java action.
+This read-only property indicates whether you will retrieve a variable, object or list. The return type is defined by the Java action. 
 
 ### 3.4 Use Return Value
 

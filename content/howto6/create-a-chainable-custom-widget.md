@@ -143,7 +143,7 @@ On this tab, you can set the visualization of the widget so that everything look
 
 ## 7 Microflows Inside the Project
 
-On the [Mendix Model Share](https://modelshare.mendix.com/), you are able to share your microflows from the test project used in this how-to. Let's take a closer look at what is inside the Mendix test project and why it is in there.  
+Let's take a closer look at what is inside the Mendix test project and why it is in there.  
 
 ### 7.1 Saving the State in the AppFlow Entity
 

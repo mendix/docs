@@ -16,11 +16,17 @@ To troubleshoot issues related to the [Make it Native](/refguide/getting-the-mak
 
 ### 2.1 Error: Unable to Load Script
 
-Depending on your device settings and network characteristics, the Make it Native app can fail to connect to the runtime. If so, the make it Native app shows the following error message:
+Depending on your device settings and network characteristics, the Make it Native app can fail to connect to the runtime. If so, the Make it Native app can show the following error messages:
 
-{{% image_container width="250" %}}![unable to load script](attachments/common-issues/unabletoloadscript.png){{% /image_container %}}
+*  **Unable to load script**:
 
-This failure is often caused by the Windows Defender firewall. In such cases, attempts to open the runtime URL from the mobile browser will also fail. To mitigate this issue, please do the following:
+	{{% image_container width="250" %}}![unable to load script](attachments/common-issues/unabletoloadscript.png){{% /image_container %}}
+
+*  **Cannot detect your runtime**:
+
+	{{% image_container width="250" %}}![cannot detect runtime](attachments/common-issues/min-error-firewall.png){{% /image_container %}}
+
+These failures are often caused by the Windows Defender firewall. In such cases, attempts to open the runtime URL from the mobile browser will also fail. To mitigate these issues, please do the following:
 
 1. Make sure that your computer and the mobile device are connected to the same network.
 1. Make sure that incoming connections are allowed by doing the following:<br />

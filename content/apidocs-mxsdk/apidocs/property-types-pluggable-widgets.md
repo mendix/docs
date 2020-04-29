@@ -167,7 +167,7 @@ Properties of type decimal are represented as a number input in Studio Pro. They
 | `key`          | Yes      | String         | See [key](#key) |
 | `defaultValue` | Yes      | Integer        | Default value for the property                                                                                                                                      |
 
-#### 2.3.2 Studio Pro UI
+#### 2.4.2 Studio Pro UI
 
 When the property is defined as follows:
 

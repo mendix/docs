@@ -341,7 +341,7 @@ To install the *ipa* on your device, follow these steps:
 
 ### 6.2.3 Distributing for iOS Tablets
 
-When you try to build an app for tablets, your app will run as a phone app in a scaled mode optimized for tablet form factors. Apple has far stricter rules for releasing tablet apps. For example, they require the app to behave well in any possible rotation or resolution. This means that when making Mendix apps for iOS tablets you should take extra care to style your app correctly so it is not rejected. 
+When you try to build an app for tablets, your app will run as a phone app in a scaled mode optimized for tablet form factors. Please note, however, that Apple has far stricter rules for releasing tablet apps. For example, they require the app to behave well in any possible rotation or resolution. This means that when making a Mendix app for iOS tablets you should take extra care to style your app correctly so it is not rejected. 
 
 By default, building for tablets is disabled in XCode. To enable building for tablets, do the following:
 

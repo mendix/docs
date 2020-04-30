@@ -9,7 +9,7 @@ tags: ["Native", "Android", "iOS", "Apple", "Android"]
 
 For more information on the Make It Native app, see [Getting the Make It Native App](/refguide/getting-the-make-it-native-app).
 
-You can download the Make It Native app for [iOS](https://apps.apple.com/app/make-it-native/id1334081181) or [Android](https://docs.mendix.com/refguide/getting-the-make-it-native-app#direct-links).
+You can download the Make It Native app for [iOS](https://apps.apple.com/app/make-it-native/id1334081181) or [Android](/refguide/getting-the-make-it-native-app#direct-links).
 
 ## Android 1.3.0 / iOS 1.3.0
 
@@ -18,7 +18,7 @@ You can download the Make It Native app for [iOS](https://apps.apple.com/app/mak
 {{% alert type="info" %}}
 If you are working in Mendix Studio Pro 8.8 or higher, you must update your Make It Native app to this version. 
 
-For older versions of Studio Pro please install the appropriate legacy app from [here](https://docs.mendix.com/refguide/getting-the-make-it-native-app#direct-links).
+For older versions of Studio Pro please install the appropriate legacy app [here](/refguide/getting-the-make-it-native-app#direct-links).
 {{% /alert %}}
 	
 ### New Features

@@ -1135,8 +1135,8 @@ export myCarouselStyle = {
 | Element                | Style Properties                               | Description                                                                                    |
 | -----------------------|-------------------------------- | ---------------------------------------------------------------------------------------------- |
 | container | ViewStyle                                   | Styles the view surrounding the carousel widget. For best results, make sure to give a fixed "height".                             |
-| cardLayout | LayoutStyle | Styles the carousel when the layout is selected to card  |
-| fullWidthLayout | LayoutStyle                             | Styles the carousel when the layout is selected to full width                 |
+| cardLayout | LayoutStyle | Styles the carousel when the layout is set to card  |
+| fullWidthLayout | LayoutStyle                             | Styles the carousel when the layout is set to full width.                 |
 
 #### LayoutStyle
 

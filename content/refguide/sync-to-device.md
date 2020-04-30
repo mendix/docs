@@ -1,7 +1,8 @@
 ---
-title: "Sync to device"
+title: "Sync to Device"
 parent: "client-activities"
 tags: ["studio pro", "sync to device", "client activities"]
+menu_order: 60
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -11,12 +12,14 @@ This activity can only be used in **Microflows**.
 
 ## 1 Introduction
 
-A **Sync to device** activity can be used to selectively sync
-one or more objects or lists to a device and store them in the offline database.
-It is meant to be used in offline apps and does nothing when used in online apps.
+The **Sync to device** activity can be used to selectively sync one or more objects or lists to a device and store them in the offline database. It is meant to be used in offline apps and does nothing when used in online ones.
 
 
 ## 2 Properties
+
+There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right:
+
+![Sync to Device Properties](attachments/client-activities/sync-to-device-properties.png)
 
 The **Sync to device** activity properties consists of the following sections:
 

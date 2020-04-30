@@ -1080,7 +1080,7 @@ A main object has four objects.
 
 | Element                | Style Properties                     | Description                                                                                      |
 | ----------------------------------------| ----- | ------------------------------------------------------------------------------------------------ |
-| ellipsizeMode | 'head', 'middle', 'tail' or 'clip' | Styles how the text will be clipped if its too long. |
+| ellipsizeMode | 'head', 'middle', 'tail', or 'clip' | Styles how the text will be clipped if its too long. |
 | defaultStyle |  TextStyle                | Styles all basic menu items which have "default" style selected.                                 |
 | primaryStyle |  TextStyle                | Styles all basic menu items which have "primary" style selected.                                 |
 | dangerStyle |  TextStyle                 | Styles all basic menu items which have "danger" style selected.                                  |
@@ -1158,8 +1158,6 @@ export myCarouselStyle = {
 | text | TextStyle                                                                   | Will be applied when there are more than five elements in carousel, in which case pagination buttons become text like **1/5**. |
 
 The default class to style all popup menus is named `com_mendix_widget_native_carousel_Carousel`.
-
-
 
 ## 12 Read More
 

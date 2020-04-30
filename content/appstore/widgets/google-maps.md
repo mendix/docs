@@ -8,7 +8,7 @@ tags: ["app store", "app store component", "widget", "google maps", "platform su
 
 ## 1 Introduction
 
-The [Google Maps](/appstore/widgets/google-maps) widget can be used to show Google Maps locations in your app.
+The [Google Maps](https://appstore.home.mendix.com/link/app/48911/) widget can be used to show Google Maps locations in your app.
 
 ### 1.1 Features
 

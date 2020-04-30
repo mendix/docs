@@ -1,5 +1,5 @@
 ---
-title: "Enable End-Users to Upload and Download Files"
+title: "Enable End-Users to Attach and Download Files"
 category: "Pages"
 description: "Describes how to configure file manager in Mendix Studio."
 menu_order: 50
@@ -8,30 +8,30 @@ tags: ["studio", "pages", "file", "upload files", "attachment", "file manager"]
 
 ## 1 Introduction 
 
-This how-to explains how you can enable your upload and download files. They will be able to upload files from different devices: phone, tablet, or desktop. 
+This how-to explains how you can enable your attach and download files. They will be able to attach files from different devices: phone, tablet, or desktop; as well as download attached files from a list.
 
 **This how-to will teach you how to do the following:**
 
 * Create file entities
 * Create a page with a form that allows your end-users to upload files
-* Display uploaded files in a list
+* Display attached files in a list
 * Download files
 
 The how-to describes the following use case: 
 
-You have the **New Report** page with a form (a data view) where employees submit a trip report for  reimbursement. They fill in their name, department, purpose and date of their trip, and total amount to be reimbursed:
+You have a company application where company's IT department keep track of assets assigned to employees. You have the **Employee Profile** page with a form (a data view) that has such details as employee's name, department, their email, phone, title, and assets assigned to them (for example, a mobile phone or laptop). This information is filled in and updated by IT administrators:
 
-{{% image_container width="600" %}}![](attachments/pages-how-to-upload-images/form-example.png){{% /image_container %}}
+
 
 Your domain model looks the following way:
 
 {{% image_container width="200" %}}
-![](attachments/pages-how-to-upload-images/domain-model.png)
+
 {{% /image_container %}}
 
-You would like to add a new functionality: when creating a reimbursement report, employees need to upload receipts – screenshots or scanned images of what they paid for.  
+You would like to add a new functionality: IT administrators should be able to attach files to employee profile, for example, to attach a device's warranty, phone or laptop policy signed by the employee.  
 
-You also would like to display attached images in a list below the report and to enable your end-users delete images from the list if needed.  
+You also would like to enable IT Administrators to download attached file from a list of files, and to delete files from the list if needed. 
 
 ## 2 Prerequisites
 
@@ -40,17 +40,17 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Familiarize yourself with page terms and how to perform basic functions on pages. For more information, see [Pages](/studio/page-editor). 
 * Familiarize yourself with the domain model terms and learn how to perform basic functions. For more information, see [Domain Model](/studio/domain-models).
 
-## 3 Creating an Image Entity
+## 3 Creating a File Entity
 
-First of all, to be able to attach and upload images you need to add a special type of entity to your domain model: an image entity. Do the following:
+First of all, to be able to attach and download files you need to add a special type of entity to your domain model: a [file](/studio/domain-models#entity-types) entity. Do the following:
 
 1. Open your domain model and open the **Toolbox** tab.
 
-2. Select the **Image Entity** and drag and drop it to your domain model.
+2. Select the **File Entity** and drag and drop it to your domain model.
 
-3. In the **Create New Image Entity** dialog box, set **Name** to *Image* and click **Create**.
+3. In the **Create New File Entity** dialog box, set **Name** to *File* and click **Create**.
 
-    {{% image_container width="400" %}}![](attachments/pages-how-to-upload-images/create-new-image-entity.png){{% /image_container %}}
+    
 
 4. Now you need to create an association from the **Image** entity to the **Report** entity. Do one of the following:
 

@@ -21,13 +21,11 @@ The how-to describes the following use case:
 
 You have a company application where company's IT department keep track of assets assigned to employees. You have the **Employee Profile** page with a form (a data view) that has such details as employee's name, department, their email, phone, title, and assets assigned to them (for example, a mobile phone or laptop). This information is filled in and updated by IT administrators:
 
-
+![Employee Profile Page](attachments/pages-how-to-attach-files/employee-profile-form.png)
 
 Your domain model looks the following way:
 
-{{% image_container width="200" %}}
-
-{{% /image_container %}}
+![Domain Model](attachments/pages-how-to-attach-files/domain-model.png)
 
 You would like to add a new functionality: IT administrators should be able to attach files to employee profile, for example, to attach a device's warranty, phone or laptop policy signed by the employee.  
 
@@ -42,63 +40,63 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Creating a File Entity
 
-First of all, to be able to attach and download files you need to add a special type of entity to your domain model: a [file](/studio/domain-models#entity-types) entity. Do the following:
+First of all, to be able to attach and download files you need to add a special type of entity to your domain model: a [file entity](/studio/domain-models#entity-types). Do the following:
 
 1. Open your domain model and open the **Toolbox** tab.
 
 2. Select the **File Entity** and drag and drop it to your domain model.
 
-3. In the **Create New File Entity** dialog box, set **Name** to *File* and click **Create**.
+3. In the **Create New File Entity** dialog box, set **Name** to *Document* and click **Create**.
 
-    
+    ![Create File Entity](attachments/pages-how-to-attach-files/create-file-entity.png)
 
-4. Now you need to create an association from the **Image** entity to the **Report** entity. Do one of the following:
+4. Now you need to create an association from the **File** entity to the **Employee** entity. Do one of the following:
 
-    1. Hover over the **Image** entity, click the dot icon, and drag the dot to the **Report** entity:
+    1. Hover over the **File** entity, click the dot icon, and drag the dot to the **Employee** entity:
 
-		{{% image_container width="500" %}}![](attachments/pages-how-to-upload-images/association-method1.png){{% /image_container %}}
+		![Create Association](attachments/pages-how-to-attach-files/create-association-method-one.png)
 
-    2. Select the **Image** entity, click the arrow icon, and select **Report** as a second entity for the association:
+    2. Select the **File** entity, click the arrow icon, and select **Employee** as a second entity for the association:
 
-		{{% image_container width="250" %}}![](attachments/pages-how-to-upload-images/association-method2.png){{% /image_container %}}
+		![Create Association](attachments/pages-how-to-attach-files/create-association-method-two.png)
 
-Good job! You have created image and file entities and associations from them to the **Report** entity:
+Good job! You have created the file entity and associations from it to the **Employee** entity:
 
-{{% image_container width="600" %}}![](attachments/pages-how-to-upload-images/domain-model-configured.png){{% /image_container %}}
+![Domain Model Configured](attachments/pages-how-to-attach-files/domain-model-configured.png)
 
-## 4 Adding an Image Uploader
+## 4 Adding a File Manager
 
-An **Image Uploader** is a widget that allows your end-users to attach and upload images. However, it can only function inside a data container (a list view or data view) and can only have an image entity as its data source. If you just drag and drop the image uploader to your report form, it will not work correctly, because your current data view has the **Report** entity as its data source, which is not an image entity:
+A **File Manager** is a widget that allows your end-users to attach and/or download files. However, it can only function inside a data container (a list view or data view) and can only have a file entity as its data source. If you just drag and drop the file manager to your employee profile form, it will not work correctly, because your current data view has the **Employee** entity as its data source, which is not a file entity:
 
-{{% image_container width="600" %}}![](attachments/pages-how-to-upload-images/form-example.png){{% /image_container %}}
+{{% image_container width="600" %}}![Employee Profile Page](attachments/pages-how-to-attach-files/employee-profile-form.png){{% /image_container %}}
 
 To solve this, you can add a button which will open a pop-up page where your end-users can upload images. This page will be connected to your current report form over the *Image_Report* association and will upload images as **Image** entity and associated to this specific report. 
 
 Follow the steps below:
 
-1. Open the **New Report** page where employees submit a new report. 
+1. Open the **Employee Profile** page where IT administrators create and edit information on employees and assets assigned to them. 
 
 2. Open the **Toolbox** and search for **Create Object** button.
 
 3. Drag and drop the button above **Save** and **Cancel** buttons:
 
-    {{% image_container width="450" %}}![](attachments/pages-how-to-upload-images/new-button.png){{% /image_container %}}
+    {{% image_container width="450" %}}![Create Object Button](attachments/pages-how-to-attach-files/create-object-button.png){{% /image_container %}}
 
-4. Open button properties > the **Caption** property and rename it from *New* to *Attach Images*.
+4. Open button properties > the **Caption** property and rename it from *New* to *Attach Files*.
 
 5. Click the **Icon** property. 
 
-6. In the **Select icon** dialog box, search for the *picture* icon and select it.
+6. In the **Select icon** dialog box, search for the *file* icon and select it.
 
 7. In the button properties, click the **Style** property and change it from *Default* to *Success*. After your changes, the button will look the following way:
 
-    {{% image_container width="150" %}}![](attachments/pages-how-to-upload-images/button-style-change.png){{% /image_container %}}
+    {{% image_container width="150" %}}![Attach Files](attachments/pages-how-to-attach-files/attach-files-button.png){{% /image_container %}}
 
 8. In the button properties, click the **Entity** property.
 
-9. In the **Select Entity** dialog box, choose the **Receipt** entity over **Receipt_Report** association (*Receipt_Report/Receipt*) and click **Select**:
+9. In the **Select Entity** dialog box, choose the **Document** entity and click **Select**:
 
-    {{% image_container width="400" %}}![](attachments/pages-how-to-upload-images/image-report-association.png){{% /image_container %}}
+    {{% image_container width="400" %}}![Select File Entity](attachments/pages-how-to-attach-files/select-file-entity.png){{% /image_container %}}
 
 10. In the button properties, click **Page**.
 
@@ -106,28 +104,28 @@ Follow the steps below:
 
 12. In the **Create new page** dialog box, do the following:
 
-     1. Set the **Title** to *Attach Images*.
+     1. Set the **Title** to *Attach Files*.
 
      2. Set the **Layout** to *PopupLayout*.
 
-     3. The **Pre-fill page contents based on the InspectionReport entity** option is on, so the page template (Forms) is selected automatically for you. Choose **Form Columns** and click **Create**.
+     3. The **Pre-fill page contents based on the Document entity** option is on, so the page template (Forms) is selected automatically for you. Choose **Form Vertical** and click **Create**.
 
-         {{% image_container width="500" %}}![](attachments/pages-how-to-upload-images/create-new-page-images.png){{% /image_container %}}
+         {{% image_container width="500" %}}![](attachments/pages-how-to-attach-files/create-attach-file-page.png){{% /image_container %}}
 
 13. A new pop-up page with a preconfigured form (a data view) is created:
 
      {{% image_container width="500" %}}![](attachments/pages-how-to-upload-images/attach-images-page.png){{% /image_container %}}
 
-     As you only need your end-users to upload images on this page, delete the **Dynamic image** widget, **Name** and **Size** text boxes from the data view. 
+     As you only need your end-users to attach files on this page, delete **Name** and **Size** text boxes from the data view. 
 
-14. Open the **Toolbox**, search for an **Image Uploader**, drag and drop it inside the data view. 
+14. Open the **Toolbox**, search for an **File Uploader**, drag and drop it inside the data view. 
 
-You have created a pop-up page that will allow employees to attach images to their reimbursement reports:
+You have created a pop-up page that will allow IT administrators to attach files to the employee profile form:
 
 {{% image_container width="450" %}}![](attachments/pages-how-to-upload-images/attach-images-pop-up-page.png){{% /image_container %}}
 
 
-## 5 Displaying Attached Images
+## 5 Downloading Files
 
 After users attach the images, it would be nice to display their attachments and give them an opportunity to delete the ones they do not need. To do so, you need to add a list with dynamic images:
 

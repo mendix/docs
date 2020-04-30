@@ -1081,10 +1081,10 @@ A main object has four objects.
 | Element                | Style Properties                     | Description                                                                                      |
 | ----------------------------------------| ----- | ------------------------------------------------------------------------------------------------ |
 | ellipsizeMode | 'head', 'middle', 'tail', or 'clip' | Styles how the text will be clipped if its too long. |
-| defaultStyle |  TextStyle                | Styles all basic menu items which have "default" style selected.                                 |
-| primaryStyle |  TextStyle                | Styles all basic menu items which have "primary" style selected.                                 |
-| dangerStyle |  TextStyle                 | Styles all basic menu items which have "danger" style selected.                                  |
-| customStyle |  TextStyle                 | Styles all basic menu items which have "custom" style selected.                                  |
+| defaultStyle |  TextStyle                | Styles all basic menu items which have the `default` style selected.                                 |
+| primaryStyle |  TextStyle                | Styles all basic menu items which have the `primary` style selected.                                 |
+| dangerStyle |  TextStyle                 | Styles all basic menu items which have the `danger` style selected.                                  |
+| customStyle |  TextStyle                 | Styles all basic menu items which have the `custom` style selected.                                  |
 
 The default class to style all popup menus is named `com_mendix_widget_native_popupmenu_PopupMenu`.
 
@@ -1143,7 +1143,7 @@ export myCarouselStyle = {
 | Element                | Style Properties                               | Description                                                                                    |
 | -----------------------|-------------------------------- | ---------------------------------------------------------------------------------------------- |
 | slideItem | ViewStyle                                   | Styles the view surrounding each slide, including inactive slides.                             |
-| inactiveSlideItem | { opacity?: number, scale?: number} | "inactiveSlideOpacity" and "inactiveSlideScale", will allow inactive slides smaller and faded. |
+| inactiveSlideItem | { opacity?: number, scale?: number} | `inactiveSlideOpacity` and `inactiveSlideScale`, will allow inactive slides smaller and faded. |
 | indicator | { color: string}                             | Styles the loading indicator which will be shown while the carousel is loading.                 |
 | pagination | Pagination                                 | Styles pagination container, dots, active dots, and text.                                        |
 

@@ -1040,7 +1040,7 @@ The default class to style all bottom sheet widgets is named `com_mendix_widget_
 
 ### 11.23 Popup Menu
 
-The popup menu widget allows you to show a context menu exactly where the user taps on screen.
+The popup menu widget allows you to show a context menu exactly where the user taps.
 
 The widget’s style properties are as follows:
 

@@ -11,6 +11,14 @@ For more information on the Make It Native app, see [Getting the Make It Native 
 
 You can download the Make It Native app for [iOS](https://apps.apple.com/app/make-it-native/id1334081181) or [Android](/refguide/getting-the-make-it-native-app#direct-links).
 
+## Android 2.0.1 / iOS 2.0.0
+
+**Release date: April 30th, 2020**
+
+### Fixes
+
+* Fixed an issue on Android where sanning a QR code would falsely trigger the Unsupported Studio Pro version dialog and refuse to load the app.
+
 ## Android 2.0.0 / iOS 2.0.0 {#two-zero-zero}
 
 **Release date: April 28th, 2020**

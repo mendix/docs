@@ -1,6 +1,6 @@
 ---
 title: "APD Reference Guides"
-category: "APD Guide"
+category: "APD"
 ---
 
 ## 1 Introduction

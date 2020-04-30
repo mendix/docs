@@ -11,7 +11,7 @@ These release notes cover changes made to the [Mendix App Store](/appstore/index
 
 ### May 6th, 2020
 
-You can now download previous versions of App Store components from the [Mendix App Store](https://appstore.home.mendix.com/). This can be done in the **All versions** tab on the component's [details page](/appstore/general/app-store-overview#details).
+You can now download previous versions of App Store components from the [Mendix App Store](https://appstore.home.mendix.com/). This can be done in the **All versions** tab on the component's [details page](/appstore/general/app-store-overview#details). This can be used as a workaround for not being able to download private content from older versions of Studio Pro/Desktop Modeler.
 
 ### April 7th, 2020
 

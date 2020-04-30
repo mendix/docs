@@ -61,13 +61,13 @@ First of all, to be able to attach and upload images you need to add a special t
 
 		{{% image_container width="250" %}}![](attachments/pages-how-to-upload-images/association-method2.png){{% /image_container %}}
 
-Good job! You have created image and file entities and associations from them to the **Report** entity:
+Good job! You have created the image entity and an association from it to the **Report** entity:
 
 {{% image_container width="600" %}}![](attachments/pages-how-to-upload-images/domain-model-configured.png){{% /image_container %}}
 
 ## 4 Adding an Image Uploader
 
-An **Image Uploader** is a widget that allows your end-users to attach and upload images. However, it can only function inside a data container (a list view or data view) and can only have an image entity as its data source. If you just drag and drop the image uploader to your report form, it will not work correctly, because your current data view has the **Report** entity as its data source, which is not an image entity:
+An **Image Uploader** is a widget that allows your end-users to attach images. However, it can only function inside a data container (a list view or data view) and can only have an image entity as its data source. If you just drag and drop the image uploader to your report form, it will not work correctly, because your current data view has the **Report** entity as its data source, which is not an image entity:
 
 {{% image_container width="600" %}}![](attachments/pages-how-to-upload-images/form-example.png){{% /image_container %}}
 
@@ -95,9 +95,9 @@ Follow the steps below:
 
 8. In the button properties, click the **Entity** property.
 
-9. In the **Select Entity** dialog box, choose the **Receipt** entity over **Receipt_Report** association (*Receipt_Report/Receipt*) and click **Select**:
+9. In the **Select Entity** dialog box, choose the **Receipt** entity and click **Select**:
 
-    {{% image_container width="400" %}}![](attachments/pages-how-to-upload-images/image-report-association.png){{% /image_container %}}
+    {{% image_container width="400" %}}![](attachments/pages-how-to-upload-images/select-image-entity.png){{% /image_container %}}
 
 10. In the button properties, click **Page**.
 
@@ -109,7 +109,7 @@ Follow the steps below:
 
      2. Set the **Layout** to *PopupLayout*.
 
-     3. The **Pre-fill page contents based on the InspectionReport entity** option is on, so the page template (Forms) is selected automatically for you. Choose **Form Columns** and click **Create**.
+     3. The **Pre-fill page contents based on the Receipt entity** option is on, so the page template (Forms) is selected automatically for you. Choose **Form Vertical** and click **Create**.
 
          {{% image_container width="500" %}}![](attachments/pages-how-to-upload-images/create-new-page-images.png){{% /image_container %}}
 
@@ -117,7 +117,7 @@ Follow the steps below:
 
      {{% image_container width="500" %}}![](attachments/pages-how-to-upload-images/attach-images-page.png){{% /image_container %}}
 
-     As you only need your end-users to upload images on this page, delete the **Dynamic image** widget, **Name** and **Size** text boxes from the data view. 
+     As you only need your end-users to attach images on this page, delete the **Dynamic image** widget, **Name** and **Size** text boxes from the data view. 
 
 14. Open the **Toolbox**, search for an **Image Uploader**, drag and drop it inside the data view. 
 

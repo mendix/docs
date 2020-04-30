@@ -108,6 +108,12 @@ To completely remove Mendix SSO. do the following:
 
 4. Review the **Errors** pane for any other references to **MendixSSO**—there will only be additional errors if MendixSSO has been modified.
 
+### 3.3 Removing MendixSSO Java Libraries
+
+The steps above will not remove any of the Java libraries associated with MendixSSO.
+
+All files installed by MendixSSO are marked with `.MendixSSO.RequiredLib`. Once you have removed MendixSSO from your app, files marked with `.MendixSSO.RequiredLib` can be removed safely, provided you have not created new dependencies on them by using them in your custom code.
+
 ## 4 Setting Up Mendix Single Sign-On{#setting-up}
 
 These instructions are for apps which did not originally have the MendixSSO module. For example, if you have an existing app which did not have the MendixSSO App Store module.

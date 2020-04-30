@@ -251,12 +251,6 @@ Do not capitalize "level."
 Capitalize in all instances.
 {{% /alert %}}
 
-### Mendix Model Share
-
-{{% alert type="info" %}}
-Capitalize in all instances.
-{{% /alert %}}
-
 ### Mendix points
 
 {{% alert type="info" %}}

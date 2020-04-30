@@ -10,7 +10,7 @@ apidocs-mxsdk:
     - "API Documentation"
     - "Mendix Platform SDK"
 addons:
-  space: "Add-on Guides"
+  space: "Quality Add-on Guides"
   priority: false
   menu_categories:
     - "ATS Guide"

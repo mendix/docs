@@ -104,7 +104,7 @@ Follow the steps below:
 
 12. In the **Create new page** dialog box, do the following:
 
-     1. Set the **Title** to *Attach Files*.
+     1. Set the **Title** to *Attach_File*.
 
      2. Set the **Layout** to *PopupLayout*.
 
@@ -114,7 +114,7 @@ Follow the steps below:
 
 13. A new pop-up page with a preconfigured form (a data view) is created:
 
-     {{% image_container width="500" %}}![](attachments/pages-how-to-upload-images/attach-images-page.png){{% /image_container %}}
+     {{% image_container width="500" %}}![Attach Files Page](attachments/pages-how-to-attach-files/attach-files-page.png){{% /image_container %}}
 
      As you only need your end-users to attach files on this page, delete **Name** and **Size** text boxes from the data view. 
 
@@ -122,16 +122,16 @@ Follow the steps below:
 
 You have created a pop-up page that will allow IT administrators to attach files to the employee profile form:
 
-{{% image_container width="450" %}}![](attachments/pages-how-to-upload-images/attach-images-pop-up-page.png){{% /image_container %}}
+{{% image_container width="450" %}}![Attach Files Page Configured](attachments/pages-how-to-attach-files/attach-files-page-configured.png){{% /image_container %}}
 
 
 ## 5 Downloading Files
 
-After users attach the images, it would be nice to display their attachments and give them an opportunity to delete the ones they do not need. To do so, you need to add a list with dynamic images:
+After your end-users attach the files, it would be nice to display files in a list and give users an opportunity to download attached files if needed. To do so, you need to add a list:
 
-1. Open the **New Report** page.
+1. Open the **Employee_Profile** page.
 
-2. In the **Building Blocks**, search for **List 4** and drag and drop it under the **Attach Images** button (*inside* the data view). A list view with widgets inside it is added to your page:
+2. In the **Building Blocks**, search for **List 4** and drag and drop it under the **Attach Files** button (make sure you drop it *inside* the data view, this way you will be able to list only files associated with a selected employee instead of all files that were attached to any employee profile). A list view with widgets inside it is added to your page:
 
     {{% image_container width="550" %}}![](attachments/pages-how-to-upload-images/list-4.png){{% /image_container %}}
 

@@ -28,7 +28,7 @@ Your domain model looks the following way:
 ![](attachments/pages-how-to-upload-images/domain-model.png)
 {{% /image_container %}}
 
-You would like to add a new functionality: when creating a reimbursement report, employees need to upload receipts – screenshots or scanned images of what they paid for.  
+You would like to add a new functionality: when creating a reimbursement report, employees need to attach receipts – screenshots or scanned images of what they paid for.  
 
 You also would like to display attached images in a list below the report and to enable your end-users delete images from the list if needed.  
 
@@ -47,7 +47,7 @@ First of all, to be able to attach and upload images you need to add a special t
 
 2. Select the **Image Entity** and drag and drop it to your domain model.
 
-3. In the **Create New Image Entity** dialog box, set **Name** to *Image* and click **Create**.
+3. In the **Create New Image Entity** dialog box, set **Name** to *Receipt* and click **Create**.
 
     {{% image_container width="400" %}}![](attachments/pages-how-to-upload-images/create-new-image-entity.png){{% /image_container %}}
 
@@ -71,7 +71,7 @@ An **Image Uploader** is a widget that allows your end-users to attach and uploa
 
 {{% image_container width="600" %}}![](attachments/pages-how-to-upload-images/form-example.png){{% /image_container %}}
 
-To solve this, you can add a button which will open a pop-up page where your end-users can upload images. This page will be connected to your current report form over the *Image_Report* association and will upload images as **Image** entity and associated to this specific report. 
+To solve this, you can add a button which will open a pop-up page where your end-users can attach images. This page will be connected to your current report form over the *Image_Report* association and will upload images as **Image** entity and associated to this specific report. 
 
 Follow the steps below:
 

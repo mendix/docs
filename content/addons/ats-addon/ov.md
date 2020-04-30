@@ -1,6 +1,6 @@
 ---
 title: "ATS Overview"
-category: "ATS Guide"
+category: "ATS"
 menu_order: 1
 ---
 

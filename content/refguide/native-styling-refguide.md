@@ -1040,7 +1040,7 @@ The default class to style all bottom sheet widgets is named `com_mendix_widget_
 
 ### 11.23 Popup Menu
 
-The popup menu widget allows you to show context menu exactly where the user taps on screen.
+The popup menu widget allows you to show a context menu exactly where the user taps on screen.
 
 The widget’s style properties are as follows:
 
@@ -1064,29 +1064,29 @@ A main object has four objects.
 
 | Element                    | Style Properties | Description                                                                                                      |
 | ----------------------------| --- | ---------------------------------------------------------------------------------------------------------------- |
-| basic      | BasicItemStyle |Styles items\.                                                                                                   |
-| buttonContainer | ViewStyle | Styles the wrapper view of triggerer since there could be multiple elements and it has to be wrapped in a view\. |
-| container       | ViewStlye | Styles the wrapper view around the whole menu\.                                                                  |
+| basic      | BasicItemStyle |Styles items.                                                                                                   |
+| buttonContainer | ViewStyle | Styles the wrapper view of triggerer since there could be multiple elements, and it has to be wrapped in a view. |
+| container       | ViewStlye | Styles the wrapper view around the whole menu.                                                                  |
 
 #### BasicItemStyle
 
 | Element                   | Style Properties |  Description                                      |
 | ---------------------------| ---- | ------------------------------------------------ |
-| containerStyle | ViewStyle | Styles the wrapper container around basic item\. |
-| itemStyle | ItemStyle      | Styles the basic items\.                         |
-| dividerColor | string      | Styles the divider color                         |
+| containerStyle | ViewStyle | Styles the wrapper container around a basic item. |
+| itemStyle | ItemStyle      | Styles the basic items.                         |
+| dividerColor | string      | Styles the divider color.                         |
 
 #### ItemStyle
 
 | Element                | Style Properties                     | Description                                                                                      |
 | ----------------------------------------| ----- | ------------------------------------------------------------------------------------------------ |
-| ellipsizeMode | 'head', 'middle', 'tail' or 'clip' | Styles how the text will be clipped if its too long\. |
-| defaultStyle |  TextStyle                | Styles all basic menu items which has "default" style selected\.                                 |
-| primaryStyle |  TextStyle                | Styles all basic menu items which has "primary" style selected\.                                 |
-| dangerStyle |  TextStyle                 | Styles all basic menu items which has "danger" style selected\.                                  |
-| customStyle |  TextStyle                 | Styles all basic menu items which has "custom" style selected\.                                  |
+| ellipsizeMode | 'head', 'middle', 'tail' or 'clip' | Styles how the text will be clipped if its too long. |
+| defaultStyle |  TextStyle                | Styles all basic menu items which have "default" style selected.                                 |
+| primaryStyle |  TextStyle                | Styles all basic menu items which have "primary" style selected.                                 |
+| dangerStyle |  TextStyle                 | Styles all basic menu items which have "danger" style selected.                                  |
+| customStyle |  TextStyle                 | Styles all basic menu items which have "custom" style selected.                                  |
 
-The default class to style all Popup menus is named `com_mendix_widget_native_popupmenu_PopupMenu`.
+The default class to style all popup menus is named `com_mendix_widget_native_popupmenu_PopupMenu`.
 
 ### 11.24 Carousel
 
@@ -1122,8 +1122,7 @@ The widget’s style properties are as follows:
 </fullWidthLayout>
 ```
 
-Main object has to have three objects called `container`, `cardLayout` and `fullWidthLayout`. `cardLayout` and `fullWidthLayout` will be applied automatically
-depending on selected layout in widget properties.
+Main object has to have three objects called `container`, `cardLayout`, and `fullWidthLayout`. `cardLayout` and `fullWidthLayout` will be applied automatically depending on selected layout in widget properties.
 
 ```
 export myCarouselStyle = {
@@ -1145,8 +1144,8 @@ export myCarouselStyle = {
 | -----------------------|-------------------------------- | ---------------------------------------------------------------------------------------------- |
 | slideItem | ViewStyle                                   | Styles the view surrounding each slide, including inactive slides.                             |
 | inactiveSlideItem | { opacity?: number, scale?: number} | "inactiveSlideOpacity" and "inactiveSlideScale", will allow inactive slides smaller and faded. |
-| indicator | { color: string}                             | Styles the loading indicator which will be shown while the carousel is loading                 |
-| pagination | Pagination                                 | Styles pagination container, dots, active dots and text                                        |
+| indicator | { color: string}                             | Styles the loading indicator which will be shown while the carousel is loading.                 |
+| pagination | Pagination                                 | Styles pagination container, dots, active dots, and text.                                        |
 
 #### Pagination
 
@@ -1155,10 +1154,10 @@ export myCarouselStyle = {
 | container | ViewStyle                                                              | Styles the main view around pagination, regardless of text or dot.                                             |
 | dotStyle | All ViewStyle properties + color: string                                              | Styles all the pagination dots.                                                                                |
 | inactiveDotStyle|  All ViewStyle properties + {opacity: number; scale: number; color: string}; | Additional styles for inactive dots. Will be merged with dotStyle.                                             |
-| dotContainerStyle | ViewStyle                                                      | Styles the view around individual pagination dots                                                              |
-| text | TextStyle                                                                   | Will be applied when there is more than 5 elements in carousel and pagination buttons becomes text like "1/5". |
+| dotContainerStyle | ViewStyle                                                      | Styles the view around individual pagination dots.                                                              |
+| text | TextStyle                                                                   | Will be applied when there are more than five elements in carousel, in which case pagination buttons become text like **1/5**. |
 
-The default class to style all Popup menus is named `com_mendix_widget_native_carousel_Carousel`.
+The default class to style all popup menus is named `com_mendix_widget_native_carousel_Carousel`.
 
 
 

@@ -1,6 +1,7 @@
 ---
 title: "Permissions API"
 category: "API Documentation"
+menu_order: 7
 ---
 
 ## 1 Introduction

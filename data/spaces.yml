@@ -10,12 +10,12 @@ apidocs-mxsdk:
     - "API Documentation"
     - "Mendix Platform SDK"
 addons:
-  space: "Add-on Guides"
+  space: "Quality Add-ons Guide"
   priority: false
   menu_categories:
-    - "ATS Guide"
-    - "APD Guide"
-    - "AQM Guide"
+    - "ATS"
+    - "APD"
+    - "AQM"
 howto6:
   space: "Mendix 6 How-to's"
   priority: false

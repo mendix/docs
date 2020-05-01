@@ -21,11 +21,13 @@ The how-to describes the following use case:
 
 You have a company application where company's IT department keep track of assets assigned to employees. You have the **Employee Profile** page with a form (a data view) that has such details as employee's name, department, their email, phone, title, and assets assigned to them (for example, a mobile phone or laptop). This information is filled in and updated by IT administrators:
 
+{{% image_container width="600" %}}
 ![Employee Profile Page](attachments/pages-how-to-attach-files/employee-profile-form.png)
+{{% /image_container %}}
 
 Your domain model looks the following way:
 
-![Domain Model](attachments/pages-how-to-attach-files/domain-model.png)
+{{% image_container width="200" %}}![Domain Model](attachments/pages-how-to-attach-files/domain-model.png){{% /image_container %}}
 
 You would like to add a new functionality: IT administrators should be able to attach files to employee profile, for example, to attach a device's warranty, phone or laptop policy signed by the employee.  
 
@@ -48,21 +50,21 @@ First of all, to be able to attach and download files you need to add a special 
 
 3. In the **Create New File Entity** dialog box, set **Name** to *Document* and click **Create**.
 
-    ![Create File Entity](attachments/pages-how-to-attach-files/create-file-entity.png)
+    {{% image_container width="450" %}}![Create File Entity](attachments/pages-how-to-attach-files/create-file-entity.png){{% /image_container %}}
 
 4. Now you need to create an association from the **File** entity to the **Employee** entity. Do one of the following:
 
     1. Hover over the **File** entity, click the dot icon, and drag the dot to the **Employee** entity:
 
-		![Create Association](attachments/pages-how-to-attach-files/create-association-method-one.png)
+		{{% image_container width="500" %}}![Create Association](attachments/pages-how-to-attach-files/create-association-method-one.png){{% /image_container %}}
 
     2. Select the **File** entity, click the arrow icon, and select **Employee** as a second entity for the association:
 
-		![Create Association](attachments/pages-how-to-attach-files/create-association-method-two.png)
+		{{% image_container width="250" %}}![Create Association](attachments/pages-how-to-attach-files/create-association-method-two.png){{% /image_container %}}
 
 Good job! You have created the file entity and associations from it to the **Employee** entity:
 
-![Domain Model Configured](attachments/pages-how-to-attach-files/domain-model-configured.png)
+{{% image_container width="600" %}}![Domain Model Configured](attachments/pages-how-to-attach-files/domain-model-configured.png){{% /image_container %}}
 
 ## 4 Adding a File Manager
 
@@ -163,7 +165,7 @@ After your end-users attach the files, it would be nice to display files in a li
 
 Great job! Now you have the list that shows attached files and your users can download files from this list:
 
-{{% image_container width="600" %}}![Configured List View](attachments/pages-how-to-attach-files/list-view-configured.png){{% /image_container %}}
+{{% image_container width="500" %}}![Configured List View](attachments/pages-how-to-attach-files/list-view-configured.png){{% /image_container %}}
 
 Congratulations! You have configured the form that allows IT administrators to attach files and displays these files in the list.
 

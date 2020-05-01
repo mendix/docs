@@ -82,15 +82,15 @@ Follow the steps below:
 
     {{% image_container width="450" %}}![Create Object Button](attachments/pages-how-to-attach-files/create-object-button.png){{% /image_container %}}
 
-4. Open button properties > the **Caption** property and rename it from *New* to *Attach Files*.
+4. Open button properties > the **Caption** property and rename it from *New* to *Attach File*.
 
 5. Click the **Icon** property. 
 
 6. In the **Select icon** dialog box, search for the *file* icon and select it.
 
-7. In the button properties, click the **Style** property and change it from *Default* to *Success*. After your changes, the button will look the following way:
+7. In the button properties, click the **Style** property and change it from **Default** to **Success**. After your changes, the button will look the following way:
 
-    {{% image_container width="150" %}}![Attach Files](attachments/pages-how-to-attach-files/attach-files-button.png){{% /image_container %}}
+    {{% image_container width="150" %}}![Attach Files](attachments/pages-how-to-attach-files/attach-file-button.png){{% /image_container %}}
 
 8. In the button properties, click the **Entity** property.
 
@@ -131,48 +131,40 @@ After your end-users attach the files, it would be nice to display files in a li
 
 1. Open the **Employee_Profile** page.
 
-2. In the **Building Blocks**, search for **List 4** and drag and drop it under the **Attach Files** button (make sure you drop it *inside* the data view, this way you will be able to list only files associated with a selected employee instead of all files that were attached to any employee profile). A list view with widgets inside it is added to your page:
+2. In the **Building Blocks**, search for **List 4** and drag and drop it under the **Attach File** button (make sure you drop it *inside* the data view, this way you will be able to list only files associated with a selected employee instead of all files that were attached to any employee profile). A list view with widgets inside it is added to your page:
 
-    {{% image_container width="550" %}}![](attachments/pages-how-to-upload-images/list-4.png){{% /image_container %}}
+    {{% image_container width="550" %}}![List 4](attachments/pages-how-to-attach-files/list-4.png){{% /image_container %}}
 
-3. Open list view properties and do the following:
+3. Select the list view, open its properties, and do the following:
 
     1. Click the **Entity** property.
-    2. As you want to display images attached to a particular report, you need to display an entity over association (in this case to display **Receipt** over the **Receipt_Report** association). In the **Select Entity** dialog box, choose **Receipt_Report/Receipt** and click **Select**:
+    2. In the **Select Entity** dialog box, choose **Document** and click **Select**. As the list view is placed inside the data view, only files associated with the selected employee will be displayed. :
 
-    	{{% image_container width="400" %}}![](attachments/pages-how-to-upload-images/image-report-association.png){{% /image_container %}}
+    	{{% image_container width="400" %}}![Select List View Entity](attachments/pages-how-to-attach-files/select-list-view-entity.png){{% /image_container %}}
 
-4. Click the image in the list view, open its properties, and do the following.
+4. Delete an image and a column it is placed in from the list:
 
-    1. To display images which users attach, change the **Image Source** from **Static Image** to **Dynamic Image**. 
-    2. Click the **Image Entity** property. 
-    3. In the **Select Image Entity**, choose **Receipt** and click **Select**.
-    4. In the **Default Image** property, click **Select image**, and in the **Select image** dialog box, click **Clear**.  
+    ![Delete Column From the List](attachments/pages-how-to-attach-files/column-list.png)
 
-    	{{% image_container width="300" %}}![](attachments/pages-how-to-upload-images/image-properties.png){{% /image_container %}}
-
-5. Delete a subtitle in the list view saying *Here you can put a subtitle*.
+5. Delete a subtitle in the list saying *Here you can put a subtitle*.
 
 6. Select the **Name** text in the list view and open its properties.
 
     1. In the **Content** property, delete the *Name* text and click **Add attribute**.
     2. In the **Select Attribute** dialog box, choose the **Name** attribute and click **Select** to display the name of the attached image.
 
-    	{{% image_container width="400" %}}![](attachments/pages-how-to-upload-images/select-attribute.png){{% /image_container %}}
+    	{{% image_container width="400" %}}![Select Attribute](attachments/pages-how-to-attach-files/select-attribute.png){{% /image_container %}}
 
-7. Select the **Details** button in the list view, open its properties, and do the following:
+7. Delete the **Details** button in the list view.
 
-    1. In the **Events** section > the **On Click Action** property, select **More**. 
-    2. In the **Action** property, select **Delete Object**. 
-    3. In the **General** section > the **Caption** property, change the button caption from *Details* to *Delete*. 
-    4. In the **Style** property, change **Default** to **Danger**. 
+8. Open the **Toolbox** and search for **File Downloader**, drag and drop it to the column where the **Details** button was placed. 
 
-    	{{% image_container width="250" %}}![](attachments/pages-how-to-upload-images/button-properties.png){{% /image_container %}}
+9. Open the **File Downloader** (**File Manager**) properties and delete the *File* text from the **Label** property.
 
-Great job! Now you have the image list that shows attached images and your users will be able to delete images from the list if necessary:
+Great job! Now you have the list that shows attached files and your users can download files from this list:
 
-{{% image_container width="600" %}}![](attachments/pages-how-to-upload-images/configured-image-list.png){{% /image_container %}}
+{{% image_container width="600" %}}![Configured List View](attachments/pages-how-to-attach-files/list-view-configured.png){{% /image_container %}}
 
-Congratulations! You have configured the report that allows your users to attach images and displays these images in the list.
+Congratulations! You have configured the form that allows IT administrators to attach files and displays these files in the list.
 
-[Preview your app](/studio/publishing-app) to test how the image uploading works. You can also configure a button to attach files instead of images. For more information on files, see [Images & Files](/studio/page-editor-widgets-images-and-files).
+[Preview your app](/studio/publishing-app) to test how the file uploading and downloading works. You can also configure a button to attach images instead of images. For more information on files, see [How to Enable End-Users to Attach Images](pages-how-to-attach-images).

@@ -50,11 +50,11 @@ For the **Rate** entity access rules, the **User** should be able to only write 
 
 ![](attachments/star-rating/star-rating3.png)
 
-When creating a new rating, its important to use the current user's previous rating as the initial rate value. Reproduce the microflow below for the custom rate-me button:
+When creating a new rating, its important to use the current user's previous rating as the initial rate value. Use a microflow like on the example below for the custom rate-me button:
 
 ![Rate Me](attachments/star-rating/rate-me-microflow.png)
 
-The calculation of the average rate is done by adding a Calculate Average Rate microflow to the after-commit and after-delete event handlers in the domain model:
+To calculate the average rate, add a microflow like the one in the example below to the after-commit and after-delete event handlers in the domain model:
 
 ![Calculate Average Rate](attachments/star-rating/calculate-average-rate.png)
 

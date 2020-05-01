@@ -17,7 +17,7 @@ You can download the Make It Native app for [iOS](https://apps.apple.com/app/mak
 
 ### Fixes
 
-* Fixed an issue on Android where sanning a QR code would falsely trigger the Unsupported Studio Pro version dialog and refuse to load the app.
+* We fixed an issue on Android where scanning a QR code would falsely trigger the unsupported Studio Pro version dialog and refuse to load the app.
 
 ## Android 2.0.0 / iOS 2.0.0 {#two-zero-zero}
 

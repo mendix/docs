@@ -89,7 +89,7 @@ Follow the steps below:
 
 6. In the **Select icon** dialog box, search for the *picture* icon and select it.
 
-7. In the button properties, click the **Style** property and change it from *Default* to *Success*. After your changes, the button will look the following way:
+7. In the button properties, click the **Style** property and change it from **Default** to **Success**. After your changes, the button will look the following way:
 
     {{% image_container width="150" %}}![](attachments/pages-how-to-upload-images/button-style-change.png){{% /image_container %}}
 
@@ -139,7 +139,7 @@ After users attach the images, it would be nice to display their attachments and
 3. Open list view properties and do the following:
 
     1. Click the **Entity** property.
-    2. As you want to display images attached to a particular report, you need to display an entity over association (in this case to display **Receipt** over the **Receipt_Report** association). In the **Select Entity** dialog box, choose **Receipt_Report/Receipt** and click **Select**:
+    2. In the **Select Entity** dialog box, choose **Receipt** and click **Select**. As you placed the list view *inside* the data view, the list will display only receipts attached to a particular report (instead of all receipts uploaded to your app):
 
     	{{% image_container width="400" %}}![](attachments/pages-how-to-upload-images/image-report-association.png){{% /image_container %}}
 

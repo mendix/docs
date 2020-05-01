@@ -23,13 +23,17 @@ In the **Administrator** tab the following properties are available:
 
 The user name is used to sign into the application as the Administrator.
 
-Default: *MxAdmin*
+Default: *MxAdmin* 
+
+Since this is general knowledge, it is safer to change this to a custom username.
 
 ### 2.2 Password {#password}
 
 The password is used to sign into the application as the Administrator. Click **Show password** to see the password. 
 
 Default: *1*
+
+This password is only used when Mendix is running locally. You can change the password for you other environments in [https://sprintr.mendix.com/](the Mendix portal) at your app's environment.
 
 ### 2.3 User Role {#user-role}
 

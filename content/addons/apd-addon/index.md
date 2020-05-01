@@ -1,5 +1,5 @@
 ---
-title: "APD Guide"
+title: "APD"
 ---
 
 ## 1 Introduction

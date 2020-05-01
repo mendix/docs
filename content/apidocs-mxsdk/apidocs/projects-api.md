@@ -1,6 +1,7 @@
 ---
 title: "Projects API"
 category: "API Documentation"
+menu_order: 9
 ---
 
 ## 1 Introduction

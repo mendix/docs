@@ -7,11 +7,9 @@ tags: ["studio pro", "client activities", "activities"]
 
 ## 1 Introduction
 
-**Client Activities** perform activities in the client, for example, opening a page or showing a message. The activities described in this document are in the **Object Activities** section of the **Toolbox**:
+**Client Activities** perform activities in the client, for example, opening a page or showing a message. The activities described in this document are in the **Client Activities** section of the **Toolbox** and can differ for microflows and nanoflows:
 
-{{% image_container width="300" %}}
 ![Client Activities](attachments/client-activities/client-activities.png)
-{{% /image_container %}}
 
 The following are the client activities you can use in your microflow or nanoflow:
 
@@ -21,6 +19,10 @@ The following are the client activities you can use in your microflow or nanoflo
 * [Show home page](show-home-page) *(only in microflows)* – opens the home page for the end-user 
 * [Show message](show-message) – shows a message to the end-user
 * [Show page](show-page) – shows a selected page to the end-user
+<<<<<<< HEAD
+=======
+* [Sync to device](sync-to-device) *(only in microflows)* – enables selectively synchronizing a set of objects to the device when calling a microflow from a nanoflow
+>>>>>>> development
 * [Validation feedback](validation-feedback) – does a validation check, and if this check fails, it shows a message to the end-user
 
 

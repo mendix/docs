@@ -1,6 +1,7 @@
 ---
 title: "Team Server API"
 category: "API Documentation"
+menu_order: 12
 ---
 
 ## 1 Introduction

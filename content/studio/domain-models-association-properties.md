@@ -46,7 +46,7 @@ Multiplicity shows the owner and the direction of association if the association
 You can swap the direction of the multiplicity if its type is one-to-many or many-to-many. In this case you will change the owner of association.
 
 {{% alert type="info" %}}
-For more details on associations, ownership, and multiplicity, see [Associations](/refguide/associations) in the *Studio Pro Guide*.
+For more details on the reasoning underlying associations, ownership, and multiplicity, see the [Introduction](/refguide/associations#intro) section of *Associations* in the *Studio Pro Guide*.
 {{% /alert %}}
 
 ## 4 Delete Behavior {#delete-behavior}

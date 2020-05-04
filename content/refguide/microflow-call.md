@@ -1,7 +1,6 @@
 ---
 title: "Microflow Call"
 parent: "action-call-activities"
-menu_order: 1
 tags: ["studio pro", "microflow call", "call microflow", "action call activities"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -39,17 +38,21 @@ You can also open the dialog box by double-clicking the activity in the microflo
 
 ### 3.1 Microflow
 
-The microflow that is called by this activity. Depending on the selected microflow, you will see a list of its parameters in a table. Parameters pass data to the activity. 
+The microflow that is called by this activity. 
 
-#### 3.1.1 Name
+### 3.2 Parameters
 
-The name of the parameter.
+Depending on the selected microflow, you will see a list of its parameters in a table. Parameters pass data to the activity. 
 
-#### 3.1.2 Type
+#### 3.2.1 Name
 
-The type of the parameter. For more information on possible types of parameters, see [Data Types](data-types). 
+The name of the parameter that is read-only.
 
-#### 3.1.3 Argument {#argument}
+#### 3.2.2 Type
+
+The type of the parameter that is read-only. For more information on possible types of parameters, see [Data Types](data-types). 
+
+#### 3.2.3 Argument {#argument}
 
 The **Edit parameter value** button allows you to edit the argument value. For each parameter of the microflow, you need to supply an argument of the same type. The values of the arguments are expressed using [expressions](expressions). There is a difference in the way argument values are passed to a sub-microflow:
 

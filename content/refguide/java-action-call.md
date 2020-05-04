@@ -43,7 +43,13 @@ The Java action that is called by this activity.
 
 ### 3.2 Arguments
 
-For each parameter of the Java action you have to supply an argument of the same type. The values of the arguments are expressed using [expressions](expressions).
+Click **Edit** next to the parameter to fill in the arguments. 
+
+An argument is the input data that you are passing to the Java action. For each Java action parameter, you must supply an argument of the same type. 
+
+The values of the arguments are defined using [expressions](expressions):
+
+![argument](attachments/action-call-activities/argument-edit.png)
 
 ### 3.3 Return Type
 

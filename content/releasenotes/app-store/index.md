@@ -11,7 +11,15 @@ These release notes cover changes made to the [Mendix App Store](/appstore/index
 
 ### May 6th, 2020
 
+#### Improvement
+
 You can now download previous versions of App Store components from the [Mendix App Store](https://appstore.home.mendix.com/). This can be done in the **All versions** tab on the component's [details page](/appstore/general/app-store-overview#details). This can be used as a workaround for not being able to download private content from the App Store available in older versions of Studio Pro/Desktop Modeler due to the [security issue](#private-fix) described below.
+
+### May 4th, 2020
+
+#### Fix
+
+As of Desktop Modeler version [7.23.14](../studio-pro/7.23#private), you are able to download private content in the App Store again. This is possible for Desktop Modeler version 7.23.14 and all further 7.23.x versions. It is not possible for Desktop Modeler versions below 7.23.14.
 
 ### April 7th, 2020
 

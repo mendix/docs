@@ -9,7 +9,7 @@ These release notes cover changes made to the [Mendix App Store](/appstore/index
 
 ## 2020
 
-### May 1st, 2020
+### May 4th, 2020
 
 As of Desktop Modeler version [7.23.14](../studio-pro/7.23#private), you are able to download private content in the App Store again. This is possible for Desktop Modeler version 7.23.14 and all further 7.23.x versions. It is not possible for Desktop Modeler versions below 7.23.14.
 

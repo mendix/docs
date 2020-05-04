@@ -70,11 +70,11 @@ Events represent the start and endpoints of a nanoflow and special operations in
 
 | Graphic | Name | Description |
 | --- | --- | --- |
-| [![start event](attachments/microflows-and-nanoflows/917902.png)](start-event) | [Start event](start-event) | The starting point of the nanoflow. A nanoflow can only have one start event. |
-| [![end event](attachments/microflows-and-nanoflows/918113.png)](end-event) | [End event](end-event) | Defines the location where the nanoflow will stop. Depending on the return type of the nanoflow, in some cases a value must be specified. There can be more than one end event. |
-| ![](attachments/16713739/16843951.png) | [Error Event](error-event) | An error event defines a location where the nanoflow will stop and throw an error that occurred earlier. If you call a nanoflow, you may want to know whether any errors occurred within the nanoflow or not. |
-| [![continue event](attachments/microflows-and-nanoflows/918115.png)](continue-event) | [Continue event](continue-event) | Used to stop the current iteration of a loop and continue with the next iteration. Continue events can only be used inside a [loop](loop). |
-| [![break event](attachments/microflows-and-nanoflows/918026.png)](break-event) | [Break Event](break-event) | Used to stop iterating over the list of objects and to continue with the rest of the flow after the loop. Break events can only be used inside a [loop](loop). |
+| [![start event](attachments/microflows-and-nanoflows/start-event.png)](start-event) | [Start event](start-event) | The starting point of the nanoflow. A nanoflow can only have one start event. |
+| [![end event](attachments/microflows-and-nanoflows/end-event.png)](end-event) | [End event](end-event) | Defines the location where the nanoflow will stop. Depending on the return type of the nanoflow, in some cases a value must be specified. There can be more than one end event. |
+| ![](attachments/microflows-and-nanoflows/error-event.png) | [Error Event](error-event) | An error event defines a location where the nanoflow will stop and throw an error that occurred earlier. If you call a nanoflow, you may want to know whether any errors occurred within the nanoflow or not. |
+| [![continue event](attachments/microflows-and-nanoflows/continue-event.png)](continue-event) | [Continue event](continue-event) | Used to stop the current iteration of a loop and continue with the next iteration. Continue events can only be used inside a [loop](loop). |
+| [![break event](attachments/microflows-and-nanoflows/break-event.png)](break-event) | [Break Event](break-event) | Used to stop iterating over the list of objects and to continue with the rest of the flow after the loop. Break events can only be used inside a [loop](loop). |
 
 ### 4.2 Flows {#flows}
 
@@ -82,8 +82,8 @@ Flows form the connection between elements.
 
 | Graphic | Name | Description |
 | --- | --- | --- |
-| [![](attachments/microflows-and-nanoflows/917883.png)](sequence-flow) | [Sequence flow](sequence-flow) | An arrow that links events, activities, decisions, and merges with each other. Together they define the order of execution within a nanoflow. |
-| [![](attachments/microflows-and-nanoflows/917688.png)](annotation#annotation-flow) | [Annotation flow](annotation#annotation-flow) | A connection that can be used to connect an annotation to another element. |
+| [![](attachments/microflows-and-nanoflows/sequence-flow.png)](sequence-flow) | [Sequence flow](sequence-flow) | An arrow that links events, activities, decisions, and merges with each other. Together they define the order of execution within a nanoflow. |
+| [![](attachments/microflows-and-nanoflows/annotation-flow.png)](annotation#annotation-flow) | [Annotation flow](annotation#annotation-flow) | A connection that can be used to connect an annotation to another element. |
 
 ### 4.3 Decisions {#decisions}
 
@@ -91,8 +91,8 @@ Decisions deal with making choices and merging different paths.
 
 | Graphic | Name | Description |
 | --- | --- | --- |
-| [![decision](attachments/microflows-and-nanoflows/917726.png)](decision) | [Decision](decision) | Makes a decision based on a condition and follows one and only one of the outgoing flows. **Note**: there is no parallel execution in nanoflows. |
-| [![merge](attachments/microflows-and-nanoflows/918116.png)](merge) | [Merge](merge) | Can be used to combine multiple sequence flows into one. If a choice is made in a nanoflow and afterwards some common work needs to be done, you can combine the two (or more) paths using a merge. |
+| [![decision](attachments/microflows-and-nanoflows/decision.png)](decision) | [Decision](decision) | Makes a decision based on a condition and follows one and only one of the outgoing flows. **Note**: there is no parallel execution in nanoflows. |
+| [![merge](attachments/microflows-and-nanoflows/merge.png)](merge) | [Merge](merge) | Can be used to combine multiple sequence flows into one. If a choice is made in a nanoflow and afterwards some common work needs to be done, you can combine the two (or more) paths using a merge. |
 
 ### 4.4 Activities {#activities}
 
@@ -157,7 +157,7 @@ Client activities can be used to have the web client of your application perform
 
 | Graphic | Name | Description |
 | --- | --- | --- |
-| [![loop](attachments/microflows-and-nanoflows/917804.png)](loop) | [Loop](loop) | A looped activity is used to iterate over a list of objects. For every object the flow inside the looped activity is executed. A looped activity can contain all elements used in nanoflows, with the exception of start and stop events. The flow starts at the first element with no incoming flows. |
+| [![loop](attachments/microflows-and-nanoflows/loop.png)](loop) | [Loop](loop) | A looped activity is used to iterate over a list of objects. For every object the flow inside the looped activity is executed. A looped activity can contain all elements used in nanoflows, with the exception of start and stop events. The flow starts at the first element with no incoming flows. |
 
 ### 4.6 Artifacts {#artifacts}
 
@@ -165,8 +165,8 @@ Artifacts provide the nanoflow with input and allow comments to be made.
 
 | Graphic | Name | Description |
 | --- | --- | --- |
-| [![parameter](attachments/microflows-and-nanoflows/918019.png)](parameter) | [Parameter](parameter) | Data that serves as input for the nanoflow. Parameters are filled at the location from which the nanoflow is triggered. |
-| [![annotation](attachments/microflows-and-nanoflows/917689.png)](annotation) | [Annotation](annotation) | An element that can be used to put comments in a nanoflow. |
+| [![parameter](attachments/microflows-and-nanoflows/parameter.png)](parameter) | [Parameter](parameter) | Data that serves as input for the nanoflow. Parameters are filled at the location from which the nanoflow is triggered. |
+| [![annotation](attachments/microflows-and-nanoflows/annotation.png)](annotation) | [Annotation](annotation) | An element that can be used to put comments in a nanoflow. |
 
 ### 4.7 Item Usages
 
@@ -174,7 +174,7 @@ Studio Pro visualizes which items are used by the selected element(s). It does t
 
 In the example below, the parameter **AccountPasswordData** is highlighted because it is used in the selected activity (**Retrieve Account**). And the activity **Save password** has a **Usage** label because it uses the object returned by **Retrieve Account**.
 
-![](attachments/16713739/16843950.png)
+![](attachments/microflows-and-nanoflows/microflow-nanoflow-example.png)
 
 ## 5 Keyboard Support
 

@@ -1,6 +1,7 @@
 ---
 title: "Design Properties API"
 category: "API Documentation"
+menu_order: 5
 description: "This guide outlines how design properties work and can help you create custom design properties."
 tags: ["styling", "design", "classes", "design properties"]
 ---

@@ -1,5 +1,5 @@
 ---
-title: "AQM Guide"
+title: "AQM"
 ---
 
 ## 1 Introduction

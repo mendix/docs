@@ -80,9 +80,9 @@ Your changes will be sent to Studio automatically if there are no conflicts. For
 
 ### 4.3 Viewing History of Commits
 
-You can see all the changes committed to the current development line via **Version Control** > **History**
+You can see all the changes committed to the current development line via **Version Control** > **History**:
 
-![History Dialog Box](attachments/collaborative-development/history.png)
+![History Dialog Box](attachments/history-dialog/history-dialog.png)
 
 ## 5 Managing Development Lines in Studio Pro {#managing-branches}
 

@@ -12,7 +12,7 @@ An association describes a relation between entities. In the domain model, an as
 
 ### 1.1 Ownership {#ownership}
 
-The value of an association can only be viewed or edited from the object of the entity that is the [owner](association-member-properties#owner) of the association. Ownership in an association is signified by an arrow (note that the arrow does not signify direction). Either one entity or both entities can be the owner of the association. If one entity is the owner, there is an arrow that points from the owner to the other entity. If both entities are owners, there is a line between the two entities but no arrow. This is the only way the arrow can be controlled.
+The value of an association should be viewed and edited from the object of the entity that is the [owner](association-member-properties#owner) of the association. Ownership in an association is signified by an arrow (note that the arrow does not signify direction). Either one entity or both entities can be the owner of the association. If one entity is the owner, there is an arrow that points from the owner to the other entity. If both entities are owners, there is a line between the two entities but no arrow. This is the only way the arrow can be controlled.
 
 It is important to understand why ownership exists. Ownership is implemented in Mendix so that you can change relationships dynamically rather than being stuck with your first design. For example, if you design something as a [one-to-many association](#one-to-many) and then need it to be a [many-to-many association with default ownership](#many-to-many), you do not need to rebuild your database, because Mendix handles it for you.
 

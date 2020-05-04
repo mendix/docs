@@ -6,11 +6,17 @@ tags: ["domain model", "association", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## 1 Introduction {#intro}
 
 An association describes a relation between entities. In the domain model, an association is represented by a line or arrow between two entities.
 
-The value of the association can only be viewed or edited from the object of the entity that is the _[owner](association-member-properties#owner)_ of the association. Either one entity or both entities can be the owner of the association. If one entity is the owner, there is an arrow that points from the owner to the other entity. If both entities are owners, there is a line between the two entities.
+### 1.1 Ownership {#ownership}
+
+The value of an association should be viewed and edited from the object of the entity that is the [owner](association-member-properties#owner) of the association. Ownership in an association is signified by an arrow (note that the arrow does not signify direction). Either one entity or both entities can be the owner of the association. If one entity is the owner, there is an arrow that points from the owner to the other entity. If both entities are owners, there is a line between the two entities but no arrow. This is the only way the arrow can be controlled.
+
+It is important to understand why ownership exists. Ownership is implemented in Mendix so that you can change relationships dynamically rather than being stuck with your first design. For example, if you design something as a [one-to-many association](#one-to-many) and then need it to be a [many-to-many association with default ownership](#many-to-many), you do not need to rebuild your database, because Mendix handles it for you.
+
+### 1.2 Multiplicity
 
 The [multiplicity](association-properties#multiplicity) (or number of referred objects) of an association is indicated by the number one (`1`) or a star (`*`) at either side of the association.
 
@@ -50,7 +56,7 @@ For more information see [Association Tab Properties](association-member-propert
 
 ## 4 Association Examples {#examples}
 
-### 4.1 One-to-Many Association
+### 4.1 One-to-Many Association {#one-to-many}
 
 In this example, drawing an association from the **Order** entity to the **Customer** entity results in the following:
 
@@ -75,7 +81,7 @@ In XML, instances of these entities and their association look as follows (note 
 
 ```
 
-### 4.2 Many-to-Many Association with Default Ownership
+### 4.2 Many-to-Many Association with Default Ownership {#many-to-many}
 
 A many-to-many association with default ownership is created by drawing an association and then setting the type property to `Reference set` and leaving the owner as `Default`.
 

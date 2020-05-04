@@ -19,15 +19,15 @@ Below is a domain model that defines customers and orders. The names of the enti
 | Element | Displays |
 | --- | --- |
 | Annotation | A comment explaining an aspect of the domain model |
-| Entity Name | How the entity will be referred to in the database |
+| Entity Name | How the [entity](entities) will be referred to in the database |
 | Event Handler(s) | An indication that one or more [event handlers](event-handlers) have been set up for this entity |
 | Image | An image which helps to identify the entity |
 | Validation Rule(s) | An indication that one or more [validation rules](validation-rules) have been set up for this attribute |
-| Calculated Value | An indication that the value of this attribute is calculated |
+| Calculated Value | An indication that the value of this [attribute](attributes) is calculated |
 | One | Indicates that one of this entity relates to the quantity of the entity at the other end of the association |
-| Association Name | How the association will be referred in the database |
+| Association Name | How the [association](associations) will be referred to in the database |
 | Many | Indicates that many of these entities relate to the quantity of the entity at the other end of the association |
-| Association Owner | An end of an association without an arrow indicates that this entity owns the association (it is possible for both entities to own the association) |
+| Association Owner | An end of an association without an arrow indicates that this entity [owns](associations#ownership) the association (it is also possible for both entities to own the association) |
 | Attribute Name | How this attribute will be referred to in the database |
 | Attribute Type | The [type](attributes#type) of data stored in this attribute |
 | Non-persistable Entity | This is an entity which is not stored in a database but only stored temporarily within the app |

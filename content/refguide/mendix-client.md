@@ -91,7 +91,7 @@ This is permanent storage, usually on a mobile device, where data can be stored 
 
 This manages requests to the Runtime Server. Note that some actions in the Mendix Client will not require access to the Runtime Server. For example, if the Object Cache already has access to the required data in the temporary object storage, or if the app is written as “offline-first”.
 
-For more information about the communication between the Mendix Client and the Runtime Server, see [SIG–Mendix Performance Subjects](sig-mendix-performance-subjects-explanation).
+For more information about the communication between the Mendix Client and the Runtime Server, see [Communication Patterns in the Mendix Runtime](communication-patterns).
 
 #### 2.12.1 State Handling
 

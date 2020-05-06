@@ -13,11 +13,12 @@ tags: ["studio pro", "client activities", "activities"]
 
 The following are the client activities you can use in your microflow or nanoflow:
 
+* [Nanoflow call](nanoflow-call) *(only in nanoflows)* – calls another nanoflow
 * [Close page](close-page) – closes the currently open page
 * [Download file](download-file) *(only in microflows)* – downloads a file using the browser
 * [Show home page](show-home-page) *(only in microflows)* – opens the home page for the end-user 
 * [Show message](show-message) – shows a message to the end-user
-* [Show page](show-page) – shows a selected page to the end-user
+* [Show page](show-page) – shows a selected page to the end-user 
 * [Sync to device](sync-to-device) *(only in microflows)* – enables selectively synchronizing a set of objects to the device when calling a microflow from a nanoflow
 * [Validation feedback](validation-feedback) – does a validation check, and if this check fails, it shows a message to the end-user
 

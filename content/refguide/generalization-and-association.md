@@ -1,5 +1,5 @@
 ---
-title: "Generalization vs 1-1 Associations"
+title: "Generalization vs One-to-One Associations"
 parent: "domain-model"
 menu_order: 50
 tags: ["domain model", "association", "inheritance", "one-to-one", "generalization"]

@@ -23,11 +23,11 @@ The **Aggregate list** activity can be used to calculate aggregated values over 
 
 An example of aggregate list properties is represented in the image below:
 
-![retrieve properties](attachments/list-activities/aggregate-list-properties.png)
+![aggregate list properties](attachments/list-activities/aggregate-list-properties.png)
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 
-The retrieve properties pane consists of the following sections:
+The aggregate list properties pane consists of the following sections:
 
 * [Action](#action)
 * [Common](#common)

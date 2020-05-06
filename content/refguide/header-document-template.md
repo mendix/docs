@@ -9,8 +9,6 @@ tags: ["studio pro"]
 
 When enabled, the header will be inserted at the top of every page. Other widgets can be put in the header.
 
-For inserting page numbers, see [Static Label](static-label-document-template).
-
 {{% alert type="info" %}}
 
 ![](attachments/microflows-and-nanoflows/918236.png)
@@ -18,6 +16,10 @@ For inserting page numbers, see [Static Label](static-label-document-template).
 A header.
 
 {{% /alert %}}
+
+For details on enabling the header from the properties of the document template itself, see the [Appearance Properties](document-template#appearance-properties) section of *Document Template*.
+
+For details on inserting page numbers, see [Static Label](static-label-document-template).
 
 ## 2 Appearance
 

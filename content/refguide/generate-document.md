@@ -67,7 +67,7 @@ The document type specifies the type of the generated document.
 
 ### 3.4 Override Margins
 
-**Override margins** allows you to set custom margins for your documents that can be defined at runtime.
+**Override margins** allows you to set custom margins for your documents. By using variables, these can be defined at runtime.
 
 ### 3.5 Template
 

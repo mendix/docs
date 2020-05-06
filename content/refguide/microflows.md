@@ -29,9 +29,9 @@ A microflow is composed of elements. Below is a categorized overview of all elem
 *   [Flows](#flows) form the connection between elements.
 *   [Decisions](#decisions) deal with making choices and merging different paths again.
 *   [Activities](#activities) are the actions that are executed in a microflow.
-*   Loop
-*   Parameter
-*   Annotation
+*   [Loop](loop) is used to iterate over a list of objects
+*   [Parameter](#parameter) is data that serves as input for the microflow.
+*   [Annotation](#annotation) is an element that can be used to put comments in a microflow.
 
 ### 2.1 Events{#events}
 
@@ -39,7 +39,7 @@ Events represent start and endpoints of a microflow and special operations in a 
 
 | Graphic | Name | Description |
 | --- | --- | --- |
-| [![](attachments/microflows-and-nanoflows/start-event)](start-event) | [Start Event](start-event) | A start event is the starting point of the microflow. A microflow can only have one start event. |
+| [![](attachments/microflows-and-nanoflows/start-event.png)](start-event) | [Start Event](start-event) | A start event is the starting point of the microflow. A microflow can only have one start event. |
 | [![](attachments/microflows-and-nanoflows/end-event.png)](end-event) | [End Event](end-event) | An end event defines the location where the microflow will stop. Depending on the return type of the microflow in some cases a value must be specified. There can be more than one end event. |
 | [![](attachments/microflows-and-nanoflows/error-event.png)](error-event) | [Error Event](error-event) | An error event defines a location where the microflow will stop and throw an error that occurred earlier. If you call a microflow, you may want to know whether any errors occurred within the microflow or not. |
 | [![](attachments/microflows-and-nanoflows/continue-event.png)](continue-event) | [Continue Event](continue-event) | A continue event is used to stop the current iteration of a loop and continue with the next iteration. Continue events can only be used inside a [Loop](loop). |
@@ -66,29 +66,31 @@ Decisions deal with making choices and merging different paths again.
 
 ### 2.4 Activities{#activities}
 
-[Activities](activities) are the actions that are executed in a microflow.
+[Activities](activities) are the actions that are executed in a microflow:
 
-### 2.5 Loop
+![Activity](attachments/microflows-and-nanoflows/activity.png)
+
+### 2.5 Loop {#loop}
 
 A [loop](loop) is used to iterate over a list of objects:
 
-![](attachments/microflows-and-nanoflows/loop.png)
+![Loop](attachments/microflows-and-nanoflows/loop.png)
 
 For every object the flow inside the loop is executed. A loop activity can contain all elements used in microflows, with the exception of start and end events. 
 
-### 2.6 Parameter
+### 2.6 Parameter {#parameter}
 
 A [parameter](parameter) is data that serves as input for the microflow. 
 
-![](attachments/microflows-and-nanoflows/parameter.png)
+![Parameter](attachments/microflows-and-nanoflows/parameter.png)
 
 Parameters are filled at the location from where the microflow is triggered.
 
-### 2.7 Annotation
+### 2.7 Annotation {#annotation}
 
 An [annotation](annotation) is an element that can be used to put comments in a microflow:
 
-![](attachments/microflows-and-nanoflows/annotation.png)
+![Annotation](attachments/microflows-and-nanoflows/annotation.png)
 
 ### 2.6 Item Usages
 

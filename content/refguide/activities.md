@@ -49,7 +49,6 @@ Action call activities can be used to call another microflow or to call a Java a
 | [![java action call](attachments/microflows-and-nanoflows/918018.png)](java-action-call) | [Java action call](java-action-call) | Can be used to call a Java action. Arguments can be passed to the action and the result can be stored in a variable. |
 | [![microflow call](attachments/microflows-and-nanoflows/918001.png)](microflow-call) | [Microflow call](microflow-call) | Can be used to call another microflow. Arguments can be passed to the microflow and the result can be stored in a variable. |
 | [![javascript action call](attachments/microflows-and-nanoflows/918008.png)](javascript-action-call) | [JavaScript action call](javascript-action-call) | Can be used to call a JavaScript action. Arguments can be passed to the action and the result can be stored in a variable. |
-| [![nanoflow call](attachments/microflows-and-nanoflows/918005.png)](nanoflow-call) | [Call nanoflow](nanoflow-call) | Can be used to call another nanoflow. Arguments can be passed to the nanoflow and the result can be stored in a variable. |
 
 ## 5 Variable Activities
 
@@ -66,6 +65,7 @@ Client activities can be used to have the web client of your application perform
 
 | Graphic | Name | Description |
 | --- | --- | --- |
+| [![nanoflow call](attachments/microflows-and-nanoflows/918005.png)](nanoflow-call) | [Call nanoflow](nanoflow-call) | Can be used to call another nanoflow. Arguments can be passed to the nanoflow and the result can be stored in a variable. |
 | [![close page](attachments/microflows-and-nanoflows/918114.png)](close-page) | [Close page](close-page) | Closes the page that was opened last by the user who called the microflow in which this activity is used. |
 | [![download file](attachments/microflows-and-nanoflows/918108.png)](download-file) | [Download file](download-file) | Can be used to enable the browser to download a specific file. The user who calls the microflow in which this activity is used gets a download pop-up window, or the file is shown directly in the browser. |
 | [![show message](attachments/microflows-and-nanoflows/918099.png)](show-message) | [Show message](show-message) | Can be used to show a blocking or non-blocking message to the user that calls the microflow in which this activity is used. |
@@ -73,6 +73,7 @@ Client activities can be used to have the web client of your application perform
 | [![validation feedback](attachments/microflows-and-nanoflows/918097.png)](validation-feedback) | [Validation feedback](validation-feedback) | Can be used to display a red text below a widget that displays an attribute or association. |
 | [![show home page](attachments/microflows-and-nanoflows/17661963.png)](show-home-page) | [Show home page](show-home-page) | Can be used to navigate to the home page for the current user. |
 | [![synchronize](attachments/microflows-and-nanoflows/synchronize.png)](synchronize) | [Synchronize](synchronize) | Can be used to synchronize data. |
+| [![sync to device](attachments/microflows-and-nanoflows/sync-to-device.png)](sync-to-device) | [Sync to device](sync-todevice) | Can be used to selectively sync one or more objects or lists to a device and store them in the offline database |
 
 ## 7 Integration Activities
 

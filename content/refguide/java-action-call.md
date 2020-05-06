@@ -14,7 +14,11 @@ This activity can only be used in **Microflows**.
 
 The **Java action call** activity can be used to call a [Java action](java-actions). 
 
+{{% image_container width="200" %}}
+
 ![Java Action](attachments/action-call-activities/java-action-call.png)
+
+{{% /image_container %}}
 
 Arguments can be passed to the action and the result can be stored.
 

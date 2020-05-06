@@ -11,7 +11,7 @@ When inserting a page break, the current page will be cut off after the break an
 
 {{% alert type="info" %}}
 
-![](attachments/microflows-and-nanoflows/918135.png)
+![](attachments/document-templates/918135.png)
 
 A page break.
 

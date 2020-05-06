@@ -44,12 +44,9 @@ On an activity or decision, you have three options:
 *   **Custom without rollback**
 
 For the latter two options you can draw an additional flow from the block and mark this flow as the error handler flow. When selecting 'Custom with rollback' it will trigger this path when the error occurs and still rollback your objects afterwards. The 'Custom without rollback' option does not rollback the objects. After you selected a flow as the error handler it will show this as in the following image.
-
-{{% alert type="info" %}}
 Error handling is only specified for an individual action. The "without rollback" in the **Custom without rollback** option is only targeted at the action itself, not the error handling. There is thus a slight difference between **Custom with rollback** and **Custom without rollback** throwing the same exception or another one in the error handler. In the latter case, you will still have access to the database objects you have created until the end of error handler.
-{{% /alert %}}
 
-![](attachments/microflows-and-nanoflows/918247.png)
+![](attachments/events/custom-without-rollback-microflows.png)
 
 On a loop you get two options:
 
@@ -58,7 +55,7 @@ On a loop you get two options:
 
 The continue option means that when an error occurs, the loop will simply continue to the next iteration. It will show as a continue icon on the exit flow of the loop.
 
-![](attachments/microflows-and-nanoflows/918246.png)
+![](attachments/events/error-event-loop.png)
 
 ### 2.2 Inspecting Errors
 
@@ -102,10 +99,10 @@ Error handlers are supported on all nanoflow elements except for gateways and lo
 
 With the **Custom without rollback** option, you can draw an additional flow from the block and then mark this flow as the error handler flow. The **Custom without rollback** option does not roll back the objects. After you select a flow as the error handler it will appear this way:
 
-![selected error handler](attachments/microflows-and-nanoflows/918248.png)
+![selected error handler](attachments/events/custom-without-rollback-nanoflows.png)
 
 ### 3.2 Error Inspection
 
 In a custom error handler executed after an error occurs, the `$latestError` variable is set to the message of the error information. The `$latestError` variable type is `String`, unlike in [microflows](microflows) where errors' type is the `System.Error` entity.
- 
+
 The `$latestSoapFault` variable is not available in nanoflows.

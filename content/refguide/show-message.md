@@ -57,7 +57,7 @@ There are three message options:
 
 ### 3.3 Parameters
 
-Parameters are attributes, the value of which will be displayed. Parameters need to be entered using [expressions](expressions) resulting in a string.
+For each parameter in the template, you define an attribute of the context entity or an associated entity. The value of this attribute will be inserted at the position of the parameter. Parameters should be entered using [expressions](expressions) resulting in a string.
 
 With parameters you can customize your message with data specific to the situation. For example, the message "An e-mail has been sent to customer {1}." with parameter `$customer/FullName` will show the full name of the customer who an e-mail has been sent to.
 

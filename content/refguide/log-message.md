@@ -46,21 +46,21 @@ The log level defines the severity of the log message. In the [Studio Pro Consol
 | Info  *(default)*  |   | Used to log informative messages. |
 | Warning | {{% image_container width="15%" %}}![Warning](attachments/log-message/warning.png){{% /image_container %}} | Used to log warnings. These messages appear in orange. |
 | Error | {{% image_container width="15%" %}}![Error](attachments/log-message/error.png){{% /image_container %}} | Used to log error messages. These messages appear in red. |
-| Critical | {{% image_container width="15%" %}}![Critical Error](attachments/log-message/critical-error.png){{% /image_container %}} | Used to log critical errors. These messages appear in white on red  . |
+| Critical | {{% image_container width="15%" %}}![Critical Error](attachments/log-message/critical-error.png){{% /image_container %}} | Used to log critical errors. These messages appear in white on red. |
 
 ### 3.2 Log Node Name {#log-node-name}
 
 The log node name is a microflow expression that defines the source of the log message. For example, if you log messages are from an email module, the log node name could be *Email module*.
 
 {{% alert type="info" %}}
-It is advised to use a [constant](constants) for the log node name. This prevents misprints and makes it easier to change the log node name afterwards.
+It is advised to use a [constant](constants) for the log node name. This prevents errors when entering the node name and makes it easier to change the log node name afterwards.
 
 You can only set custom [log node levels](/developerportal/deploy/environments-details#log-levels) for the environment if your app has posted a message to that log node. It is therefore recommended that you send an initial message to all your custom log nodes in an [after startup microflow](project-settings#after-startup).
 {{% /alert %}}
 
 ### 3.3 Template
 
-A **Template** defines the message text. The template can contain parameters that are written as a number between braces, e.g. `{1}`. The first parameter has number `1`, the second `2`.
+A **Template** defines the message text. The template can contain parameters that are written as a number between braces, e.g. `{1}`. The first parameter has number `1`, the second `2`, and so on.
 
 ### 3.4 Parameters
 

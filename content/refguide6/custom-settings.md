@@ -214,6 +214,8 @@ This parameter specifies the number of threads the thread pool can assign to exe
 
 The default value should be more than enough for most use cases. If your application experiences extremely high load and it runs out of threads you can try to increase this number.
 
+Also note that one could deplete the thread pool with long-running microflows. If each available thread is busy executing an long-running microflow, then other microflows will be 'starved' and will not start to execute until the long-running microflows are finished. They could even experience time-outs before they start executing or exhaust the number of available connections.
+
 {{% alert type="success" %}}
 
 If you want to inspect the configuration being used, you can set the system or config property 'akka.log-config-on-start' to 'on'. This will then print the complete configuration at INFO level when the actor system is started.

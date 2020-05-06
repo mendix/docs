@@ -13,7 +13,7 @@ For inserting page numbers, see [Static Label](static-label-document-template).
 
 {{% alert type="info" %}}
 
-![](attachments/microflows-and-nanoflows/918235.png)
+![](attachments/document-templates/918235.png)
 
 A footer.
 

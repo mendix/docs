@@ -62,7 +62,9 @@ A nanoflow is composed of elements. The following categories are used:
 * [Flows](#flows) form the connection between elements
 * [Decisions](#decisions) deal with making choices and merging different paths again
 * [Activities](#activities) are the actions that are executed in a nanoflow
-* [Artifacts](#artifacts) provide the nanoflow with input and allow comments to be made
+* [Loop](loop) is used to iterate over a list of objects
+* [Parameter](#parameter) is data that serves as input for the microflow.
+* [Annotation](#annotation) is an element that can be used to put comments in a microflow.
 
 ### 4.1 Events {#events}
 
@@ -70,11 +72,11 @@ Events represent the start and endpoints of a nanoflow and special operations in
 
 | Graphic | Name | Description |
 | --- | --- | --- |
-| [![start event](attachments/microflows-and-nanoflows/917902.png)](start-event) | [Start event](start-event) | The starting point of the nanoflow. A nanoflow can only have one start event. |
-| [![end event](attachments/microflows-and-nanoflows/918113.png)](end-event) | [End event](end-event) | Defines the location where the nanoflow will stop. Depending on the return type of the nanoflow, in some cases a value must be specified. There can be more than one end event. |
-| ![](attachments/16713739/16843951.png) | [Error Event](error-event) | An error event defines a location where the nanoflow will stop and throw an error that occurred earlier. If you call a nanoflow, you may want to know whether any errors occurred within the nanoflow or not. |
-| [![continue event](attachments/microflows-and-nanoflows/918115.png)](continue-event) | [Continue event](continue-event) | Used to stop the current iteration of a loop and continue with the next iteration. Continue events can only be used inside a [loop](loop). |
-| [![break event](attachments/microflows-and-nanoflows/918026.png)](break-event) | [Break Event](break-event) | Used to stop iterating over the list of objects and to continue with the rest of the flow after the loop. Break events can only be used inside a [loop](loop). |
+| [![start event](attachments/microflows-and-nanoflows/start-event.png)](start-event) | [Start event](start-event) | The starting point of the nanoflow. A nanoflow can only have one start event. |
+| [![end event](attachments/microflows-and-nanoflows/end-event.png)](end-event) | [End event](end-event) | Defines the location where the nanoflow will stop. Depending on the return type of the nanoflow, in some cases a value must be specified. There can be more than one end event. |
+| ![](attachments/microflows-and-nanoflows/error-event.png) | [Error Event](error-event) | An error event defines a location where the nanoflow will stop and throw an error that occurred earlier. If you call a nanoflow, you may want to know whether any errors occurred within the nanoflow or not. |
+| [![continue event](attachments/microflows-and-nanoflows/continue-event.png)](continue-event) | [Continue event](continue-event) | Used to stop the current iteration of a loop and continue with the next iteration. Continue events can only be used inside a [loop](loop). |
+| [![break event](attachments/microflows-and-nanoflows/break-event.png)](break-event) | [Break Event](break-event) | Used to stop iterating over the list of objects and to continue with the rest of the flow after the loop. Break events can only be used inside a [loop](loop). |
 
 ### 4.2 Flows {#flows}
 
@@ -82,8 +84,8 @@ Flows form the connection between elements.
 
 | Graphic | Name | Description |
 | --- | --- | --- |
-| [![](attachments/microflows-and-nanoflows/917883.png)](sequence-flow) | [Sequence flow](sequence-flow) | An arrow that links events, activities, decisions, and merges with each other. Together they define the order of execution within a nanoflow. |
-| [![](attachments/microflows-and-nanoflows/917688.png)](annotation#annotation-flow) | [Annotation flow](annotation#annotation-flow) | A connection that can be used to connect an annotation to another element. |
+| [![](attachments/microflows-and-nanoflows/sequence-flow.png)](sequence-flow) | [Sequence flow](sequence-flow) | An arrow that links events, activities, decisions, and merges with each other. Together they define the order of execution within a nanoflow. |
+| [![](attachments/microflows-and-nanoflows/annotation-flow.png)](annotation#annotation-flow) | [Annotation flow](annotation#annotation-flow) | A connection that can be used to connect an annotation to another element. |
 
 ### 4.3 Decisions {#decisions}
 
@@ -91,91 +93,44 @@ Decisions deal with making choices and merging different paths.
 
 | Graphic | Name | Description |
 | --- | --- | --- |
-| [![decision](attachments/microflows-and-nanoflows/917726.png)](decision) | [Decision](decision) | Makes a decision based on a condition and follows one and only one of the outgoing flows. **Note**: there is no parallel execution in nanoflows. |
-| [![merge](attachments/microflows-and-nanoflows/918116.png)](merge) | [Merge](merge) | Can be used to combine multiple sequence flows into one. If a choice is made in a nanoflow and afterwards some common work needs to be done, you can combine the two (or more) paths using a merge. |
+| [![decision](attachments/microflows-and-nanoflows/decision.png)](decision) | [Decision](decision) | Makes a decision based on a condition and follows one and only one of the outgoing flows. **Note**: there is no parallel execution in nanoflows. |
+| [![merge](attachments/microflows-and-nanoflows/merge.png)](merge) | [Merge](merge) | Can be used to combine multiple sequence flows into one. If a choice is made in a nanoflow and afterwards some common work needs to be done, you can combine the two (or more) paths using a merge. |
 
-### 4.4 Activities {#activities}
+### 4.4 Activities{#activities}
 
-Activities are the actions that are executed in a nanoflow.
+[Activities](activities) are the actions that are executed in a microflow:
 
-#### 4.4.1 Object Activities
+![Activity](attachments/microflows-and-nanoflows/activity.png)
 
-Object activities can be used to create and manipulate objects. The [domain model](domain-model) defines the object types ([entities](entities)) that can be used.
+### 4.5 Loop {#loop}
 
-| Graphic | Name | Description |
-| --- | --- | --- |
-| [![change object](attachments/microflows-and-nanoflows/917661.png)](change-object) | [Change object](change-object) | Can be used to change the members of an object. This can be done with or without committing. |
-| [![committing objects](attachments/microflows-and-nanoflows/17661961.png)](committing-objects) | [Commit object(s)](committing-objects) | Can be used to commit the changes to one or more objects. |
-| [![create object](attachments/microflows-and-nanoflows/917756.png)](create-object) | [Create object](create-object) | Can be used to create an object. |
-| [![retrieve](attachments/microflows-and-nanoflows/917866.png)](retrieve) | [Retrieve](retrieve) | Can be used to get one (or more) associated objects of another object. The activity can also get one (or more) objects directly from the database. |
-| [![rollback object](attachments/microflows-and-nanoflows/918119.png)](rollback-object) | [Rollback object](rollback-object) | Can be used to undo the changes (that have not been committed) made to the object in the part of the nanoflow preceding the activity. This also deletes objects that have been created but never committed. |
+A [loop](loop) is used to iterate over a list of objects:
 
-#### 4.4.2 List Activities
+![Loop](attachments/microflows-and-nanoflows/loop.png)
 
-List activities can be used to create and manipulate lists of objects.
+For every object the flow inside the loop is executed. A loop activity can contain all elements used in microflows, with the exception of start and end events. 
 
-| Graphic | Name | Description |
-| --- | --- | --- |
-| [![aggregate list](attachments/microflows-and-nanoflows/918028.png)](aggregate-list) | [Aggregate list](aggregate-list) | Can be used to calculate aggregated values such as the maximum, minimum, sum, average, and total amount of objects over a list of objects. |
-| [![change list](attachments/microflows-and-nanoflows/918007.png)](change-list) | [Change list](change-list) | Can be used to change the content of a list variable. |
-| [![create list](attachments/microflows-and-nanoflows/918009.png)](create-list) | [Create list](create-list) | Can be used to create a (empty) list variable. |
-| [![list operation](attachments/microflows-and-nanoflows/917792.png)](list-operation) | [List operation](list-operation) | Can be used to combine or compare two lists with objects of the same entity. |
+### 4.6 Parameter {#parameter}
 
-#### 4.4.3 Action Call Activities
+A [parameter](parameter) is data that serves as input for the microflow. 
 
+![Parameter](attachments/microflows-and-nanoflows/parameter.png)
 
-| Graphic | Name | Description |
-| --- | --- | --- |
-| [![microflow call](attachments/microflows-and-nanoflows/918001.png)](microflow-call) | [Microflow call](microflow-call) | Can be used to call a microflow. Arguments can be passed to the microflow and the result can be stored in a variable. |
-| [![javascript action call](attachments/microflows-and-nanoflows/918008.png)](javascript-action-call) | [JavaScript action call](javascript-action-call) | Can be used to execute a JavaScript action. |
-| [![call nanoflow](attachments/microflows-and-nanoflows/918005.png)](nanoflow-call) | [Call nanoflow](nanoflow-call) | Can be used to call a nanoflow. |
+Parameters are filled at the location from where the microflow is triggered.
 
+### 4.7 Annotation {#annotation}
 
-The [JavaScript action call](javascript-action-call) activity executes a JavaScript action.
+An [annotation](annotation) is an element that can be used to put comments in a microflow:
 
-#### 4.4.4 Variable Activities
+![Annotation](attachments/microflows-and-nanoflows/annotation.png)
 
-Variable activities can be used to create or change a variable within a microflow.
-
-| Graphic | Name | Description |
-| --- | --- | --- |
-| [![change variable](attachments/microflows-and-nanoflows/918011.png)](change-variable) | [Change variable](change-variable) | Can be used to change the value of a variable. |
-| [![create variable](attachments/microflows-and-nanoflows/918110.png)](create-variable) | [Create variable](create-variable) | Can be used to create a new variable. |
-
-#### 4.4.5 Client Activities
-
-Client activities can be used to have the web client of your application perform an action, such as showing a different page or downloading a file.
-
-| Graphic | Name | Description |
-| --- | --- | --- |
-| [![close page](attachments/microflows-and-nanoflows/918114.png)](close-page) | [Close page](close-page) | Closes the page that is opened last by the user that calls the nanoflow in which this activity is used. |
-| [![show page](attachments/microflows-and-nanoflows/917544.png)](show-page) | [Show page](show-page) | Can be used to show a page to the user that calls the nanoflow in which this activity is used. |
-| [![validation feedback](attachments/microflows-and-nanoflows/918097.png)](validation-feedback) | [Validation feedback](validation-feedback) | Can be used to display red text below a widget that displays an attribute or association. |
-| [![show message](attachments/microflows-and-nanoflows/918099.png)](show-message) | [Show message](show-message) | Can be used to show a blocking or non-blocking message to the user that calls the nanoflow in which this activity is used. |
-| [![synchronize](attachments/microflows-and-nanoflows/synchronize.png)](synchronize) | [Synchronize](synchronize) | Can be used to synchronize data. |
-
-### 4.5 Loop
-
-| Graphic | Name | Description |
-| --- | --- | --- |
-| [![loop](attachments/microflows-and-nanoflows/917804.png)](loop) | [Loop](loop) | A looped activity is used to iterate over a list of objects. For every object the flow inside the looped activity is executed. A looped activity can contain all elements used in nanoflows, with the exception of start and stop events. The flow starts at the first element with no incoming flows. |
-
-### 4.6 Artifacts {#artifacts}
-
-Artifacts provide the nanoflow with input and allow comments to be made.
-
-| Graphic | Name | Description |
-| --- | --- | --- |
-| [![parameter](attachments/microflows-and-nanoflows/918019.png)](parameter) | [Parameter](parameter) | Data that serves as input for the nanoflow. Parameters are filled at the location from which the nanoflow is triggered. |
-| [![annotation](attachments/microflows-and-nanoflows/917689.png)](annotation) | [Annotation](annotation) | An element that can be used to put comments in a nanoflow. |
-
-### 4.7 Item Usages
+### 4.8 Item Usages
 
 Studio Pro visualizes which items are used by the selected element(s). It does this by showing the used items in white text on a blue background. Conversely, elements that use the item(s) returned by the selected element(s) are marked with the word 'Usage' in white text on a green background.
 
 In the example below, the parameter **AccountPasswordData** is highlighted because it is used in the selected activity (**Retrieve Account**). And the activity **Save password** has a **Usage** label because it uses the object returned by **Retrieve Account**.
 
-![](attachments/16713739/16843950.png)
+![](attachments/microflows-and-nanoflows/microflow-nanoflow-example.png)
 
 ## 5 Keyboard Support
 

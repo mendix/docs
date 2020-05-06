@@ -11,7 +11,7 @@ A static image shows a predefined image. It can be put either inside or outside 
 
 {{% alert type="info" %}}
 
-![](attachments/microflows-and-nanoflows/918133.png)
+![](attachments/document-templates/918133.png)
 
 A static image inside a table cell.
 

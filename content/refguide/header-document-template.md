@@ -11,7 +11,7 @@ When enabled, the header will be inserted at the top of every page. Other widget
 
 {{% alert type="info" %}}
 
-![](attachments/microflows-and-nanoflows/918236.png)
+![](attachments/document-templates/918236.png)
 
 A header.
 

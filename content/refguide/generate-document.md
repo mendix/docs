@@ -3,7 +3,7 @@ title: "Generate Document"
 parent: "activities"
 menu_order: 80
 description: "Describes generating documents from a microflow. "
-tags: ["PDF", "document", "document template", "HTML", "Microsoft Word", "ODT", "studio pro"]
+tags: ["PDF", "document", "document template", "HTML", "Microsoft Word", "ODT", "studio pro", "generate document"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -13,31 +13,46 @@ This activity can only be used in **Microflows**.
 
 ## 1 Introduction
 
-The generate-document microflow action can be used to write a document to a file, based on a [template](document-templates). The types of document which can be created are listed in [Document Type](#document-type).
+The **Generate document** activity is used to write a document to a file, based on a [document template](document-templates). 
 
-![](attachments/microflows-and-nanoflows/918200.png)
+![Generate Document](attachments/generate-document/generate-document.png)
 
-See [Common Properties](microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
+For more information on which types of documents can be created, see [Document Type](#document-type).
 
-## 2 Input Properties
+## 2 Properties
 
-### 2.1 File
+There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right:
 
-The name of the file document that will contain the generated document. It should be an object of entity System.FileDocument or a specialization thereof.
+![Generate Document Properties](attachments/generate-document/generate-document-properties.png)
 
-## 3 Action Properties
+The **Generate document** properties pane consists of the following sections:
 
-### 3.1 Language
+* [Action](#action)
+* [Common](#common)
 
-The language in which the titles and labels of the document should appear.
+## 3 Action Section {#action}
+
+The **Action** section of the properties pane shows the action associated with this activity.
+
+You can open a dialog box to configure this action by clicking the ellipsis (**…**) next to the action.
+
+You can also open the dialog box by double-clicking the activity in the microflow or right-clicking the activity and selecting **Properties**.
+
+### 3.1 File
+
+The name of the file document that will contain the generated document. It should be an object of entity *System.FileDocument* or its specialization.
+
+### 3.2 Language
+
+The language in which the titles and labels of the document should appear is described in the table below:
 
 | Option | Description |
 | --- | --- |
 | Current user *(default)*  | Use the language of the current user. |
 | Project default | Use the default language that is specified in the [Project Settings](project-settings). |
-| Variable | Use the language stored in the selected object, which must be of type System.Language. |
+| Variable | Use the language stored in the selected object, which must be of type *System.Language*. |
 
-### 3.2 Document Type{#document-type}
+### 3.3 Document Type{#document-type}
 
 The document type specifies the type of the generated document.
 
@@ -50,10 +65,30 @@ The document type specifies the type of the generated document.
 | Rich-text format | Generate a document in Rich-text format. |
 | ODT | Generate a document in Open Office (ODT) format. |
 
-### 3.3 Template
-
-Template defines which [document template](document-templates) is used to generate the file. Depending on the template being used one or more arguments need to be specified. For each top-level data grid and data view objects of the correct type need to be passed to the template. The value of the argument can be entered using expressions.
-
 ### 3.4 Override Margins
 
-Here you can set custom margins for your documents that can be defined at runtime.
+**Override margins** allows you to set custom margins for your documents. By using variables, these can be defined at runtime.
+
+### 3.5 Template
+
+Template defines which [document template](document-templates) is used to generate the file. Depending on the selected document template one or more [arguments](#argument) need to be specified. 
+
+### 3.6 Arguments
+
+Depending on the selected document, you will see a list of its arguments in a table. Arguments pass data to the activity. 
+
+#### 3.5.1 Widget
+
+The name of the widget in the document template that needs arguments to be passed to it. This property  is read-only.
+
+#### 3.5.2 Type
+
+The type of the argument used in the document template that is read-only.
+
+#### 3.5.3 Argument {#argument}
+
+The **Edit argument** button allows you to edit the argument value.  An argument is the input data that you are passing to the document template. For each document template parameter (for each non-nested data view and data grid), you must supply an argument of the same type. The values of the arguments are expressed using [expressions](expressions).
+
+## 4 Common Section {#common}
+
+{{% snippet file="refguide/microflow-common-section-link.md" %}}

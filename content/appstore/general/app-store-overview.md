@@ -71,7 +71,7 @@ The details page for each add-on and app presents the following item information
 
 	![](attachments/app-store-overview/content_detail_7.png)
 
-*  **All versions** tab – lists all the versions (updates) of the component:
+*  **All versions** tab – lists all the versions (updates) of the component, any of which can be downloaded by clicking **Download**:
 
 	![](attachments/app-store-overview/content_detail_8.png)
 	

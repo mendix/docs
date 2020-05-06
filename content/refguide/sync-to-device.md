@@ -14,6 +14,9 @@ This activity can only be used in **Microflows**.
 
 The **Sync to device** activity can be used to selectively sync one or more objects or lists to a device and store them in the offline database. It is meant to be used in offline apps and does nothing when used in online ones.
 
+{{% image_container width="200" %}}
+![Sync to Device](attachments/client-activities/sync-to-device.png)
+{{% /image_container %}}
 
 ## 2 Properties
 

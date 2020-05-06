@@ -239,10 +239,11 @@ This is the main page of new UI:
 	* **Archived Sprints** – opens a page where sprints that have been completed are archived
 	* **History** – opens the [History](#history) page
 
-When you select a story, you can perform the following actions (these actions support multi-selection of stories):
+When you select a story, you can perform the following actions (these actions support multi-selection of stories, except for the **Clone** action):
 
 ![](attachments/stories/story-context-menu.png)
 
+* **Clone** – click this to duplicate a selected user story and its tasks, story points, status, and labels into a new user story 
 * **Move** –  click this to move a story to another sprint
 * **Assign Label** – click this to assign existing labels to a story
 * **Delete** – click this to delete a story

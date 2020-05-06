@@ -49,7 +49,6 @@ Action call activities can be used to call another microflow or to call a Java a
 | [![java action call](attachments/microflows-and-nanoflows/918018.png)](java-action-call) | [Java action call](java-action-call) | Can be used to call a Java action. Arguments can be passed to the action and the result can be stored in a variable. |
 | [![microflow call](attachments/microflows-and-nanoflows/918001.png)](microflow-call) | [Microflow call](microflow-call) | Can be used to call another microflow. Arguments can be passed to the microflow and the result can be stored in a variable. |
 | [![javascript action call](attachments/microflows-and-nanoflows/918008.png)](javascript-action-call) | [JavaScript action call](javascript-action-call) | Can be used to call a JavaScript action. Arguments can be passed to the action and the result can be stored in a variable. |
-| [![nanoflow call](attachments/microflows-and-nanoflows/918005.png)](nanoflow-call) | [Call nanoflow](nanoflow-call) | Can be used to call another nanoflow. Arguments can be passed to the nanoflow and the result can be stored in a variable. |
 
 ## 5 Variable Activities
 
@@ -66,12 +65,15 @@ Client activities can be used to have the web client of your application perform
 
 | Graphic | Name | Description |
 | --- | --- | --- |
+| [![nanoflow call](attachments/microflows-and-nanoflows/918005.png)](nanoflow-call) | [Call nanoflow](nanoflow-call) | Can be used to call another nanoflow. Arguments can be passed to the nanoflow and the result can be stored in a variable. |
 | [![close page](attachments/microflows-and-nanoflows/918114.png)](close-page) | [Close page](close-page) | Closes the page that was opened last by the user who called the microflow in which this activity is used. |
 | [![download file](attachments/microflows-and-nanoflows/918108.png)](download-file) | [Download file](download-file) | Can be used to enable the browser to download a specific file. The user who calls the microflow in which this activity is used gets a download pop-up window, or the file is shown directly in the browser. |
 | [![show message](attachments/microflows-and-nanoflows/918099.png)](show-message) | [Show message](show-message) | Can be used to show a blocking or non-blocking message to the user that calls the microflow in which this activity is used. |
 | [![show page](attachments/microflows-and-nanoflows/917544.png)](show-page) | [Show page](show-page) | Can be used to show a page to the user that calls the microflow in which this activity is used. |
 | [![validation feedback](attachments/microflows-and-nanoflows/918097.png)](validation-feedback) | [Validation feedback](validation-feedback) | Can be used to display a red text below a widget that displays an attribute or association. |
-| ![show home page](attachments/microflows-and-nanoflows/17661963.png) | [Show home page](show-home-page) | Can be used to navigate to the home page for the current user. |
+| [![show home page](attachments/microflows-and-nanoflows/17661963.png)](show-home-page) | [Show home page](show-home-page) | Can be used to navigate to the home page for the current user. |
+| [![synchronize](attachments/microflows-and-nanoflows/synchronize.png)](synchronize) | [Synchronize](synchronize) | Can be used to synchronize data. |
+| [![sync to device](attachments/microflows-and-nanoflows/sync-to-device.png)](sync-to-device) | [Sync to device](sync-todevice) | Can be used to selectively sync one or more objects or lists to a device and store them in the offline database |
 
 ## 7 Integration Activities
 
@@ -79,10 +81,10 @@ Integration activities can be used to integrate with other systems, for example 
 
 | Graphic                              | Name                                         | Description                                                  |
 | ------------------------------------ | -------------------------------------------- | ------------------------------------------------------------ |
-| ![call REST service](attachments/microflows-and-nanoflows/19399144.png) | [Call REST service](call-rest-action)         | The call REST service activity can be used to call a REST endpoint. You can use mappings to map results to entities or entities to requests. You can also use string templates and store the result in a string variable. |
-| ![call web service action](attachments/microflows-and-nanoflows/19398967.png) | [Call web service](call-web-service-action)  | The call web service activity can be used to call one of the [imported web services](consumed-web-services). The content of the request can be edited. Furthermore the response of the webservice can be mapped to entities, stored in a variable or be ignored. |
-| ![import with mapping](attachments/microflows-and-nanoflows/19398968.png) | [Import with mapping](import-mapping-action) | The import with mapping activity can be used to parse the data in a string variable or data stored in a file document, and store them to entities defined in the [domain model](domain-model) of the database. An [import mapping](import-mappings) is used to map the incoming XML or JSON to entities. |
-| ![export with mapping](attachments/microflows-and-nanoflows/19398969.png) | [Export with mapping](export-mapping-action) | The export with mapping activity can be used to export the data stored in [domain model](domain-model) entities into an XML or JSON string. It can also be stored in a file document. An [export mapping](export-mappings) is used to map domain model entities into XML or JSON. |
+| [![call REST service](attachments/microflows-and-nanoflows/19399144.png)](call-rest-action) | [Call REST service](call-rest-action)         | The call REST service activity can be used to call a REST endpoint. You can use mappings to map results to entities or entities to requests. You can also use string templates and store the result in a string variable. |
+| [![call web service action](attachments/microflows-and-nanoflows/19398967.png)](call-web-service-action) | [Call web service](call-web-service-action)  | The call web service activity can be used to call one of the [imported web services](consumed-web-services). The content of the request can be edited. Furthermore the response of the webservice can be mapped to entities, stored in a variable or be ignored. |
+| [![import with mapping](attachments/microflows-and-nanoflows/19398968.png)](import-mapping-action) | [Import with mapping](import-mapping-action) | The import with mapping activity can be used to parse the data in a string variable or data stored in a file document, and store them to entities defined in the [domain model](domain-model) of the database. An [import mapping](import-mappings) is used to map the incoming XML or JSON to entities. |
+| [![export with mapping](attachments/microflows-and-nanoflows/19398969.png)](export-mapping-action) | [Export with mapping](export-mapping-action) | The export with mapping activity can be used to export the data stored in [domain model](domain-model) entities into an XML or JSON string. It can also be stored in a file document. An [export mapping](export-mappings) is used to map domain model entities into XML or JSON. |
 
 ## 8 Document Generation Activities
 

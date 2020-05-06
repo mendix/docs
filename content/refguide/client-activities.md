@@ -20,6 +20,7 @@ The following are the client activities you can use in your microflow or nanoflo
 * [Show message](show-message) – shows a message to the end-user
 * [Show page](show-page) – shows a selected page to the end-user 
 * [Sync to device](sync-to-device) *(only in microflows)* – enables selectively synchronizing a set of objects to the device when calling a microflow from a nanoflow
+* [Synchronize](synchronize) *(only in nanoflows)* – synchronizes data between your device and the server
 * [Validation feedback](validation-feedback) – does a validation check, and if this check fails, it shows a message to the end-user
 
 

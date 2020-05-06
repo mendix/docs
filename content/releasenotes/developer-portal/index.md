@@ -13,6 +13,10 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 ## 2020
 
+### May 6th, 2020
+
+* We added a new story action called **Clone** to the new beta UI. For more information, see the [New UI Option (Beta)](/developerportal/collaborate/stories#beta) section of *Stories*.
+
 ### February 21st, 2020
 
 * We fixed an issue where [favorited apps](/developerportal/apps-list/#favoriting) still showed up in the favorites view on the [My Apps](/developerportal/apps-list/) page after being deleted.

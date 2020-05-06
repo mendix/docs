@@ -14,7 +14,7 @@ Note that there are minor differences between the way this function works in mic
 
 ## 1 Introduction
 
-The **Change list** activity allows you to change a list by adding objects to, and removing objects from, it.
+The **Change list** activity allows you to change a list by adding objects to, and removing objects from, it. The activity works directly on the list provided, in contrast to the [List operation](list-operation) activity.
 
 ## 2 Properties
 

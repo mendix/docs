@@ -29,7 +29,7 @@ A microflow is composed of elements. Below is a categorized overview of all elem
 *   [Flows](#flows) form the connection between elements.
 *   [Decisions](#decisions) deal with making choices and merging different paths again.
 *   [Activities](#activities) are the actions that are executed in a microflow.
-*   [Loop](loop) is used to iterate over a list of objects
+*   [Loop](loop) is used to iterate over a list of objects.
 *   [Parameter](#parameter) is data that serves as input for the microflow.
 *   [Annotation](#annotation) is an element that can be used to put comments in a microflow.
 

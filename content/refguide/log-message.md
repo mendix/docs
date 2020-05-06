@@ -35,7 +35,7 @@ You can open a dialog box to configure this action by clicking the ellipsis (**â
 
 You can also open the dialog box by double-clicking the activity in the microflow or right-clicking the activity and selecting **Properties**.
 
-### 3.1 Log Level
+### 3.3 Log Level
 
 The log level defines the severity of the log message. In the [Studio Pro Console pane](view-menu#console), messages have a different color and an icon for some log levels.
 
@@ -49,6 +49,10 @@ The log level defines the severity of the log message. In the [Studio Pro Consol
 | Critical | {{% image_container width="15%" %}}![Critical Error](attachments/log-message/critical-error.png){{% /image_container %}} | Used to log critical errors. These messages appear in white on red. |
 
 ### 3.2 Log Node Name {#log-node-name}
+
+{{% alert type="warning" %}}
+This property is only available in microflows.
+{{% /alert %}}
 
 The log node name is a microflow expression that defines the source of the log message. For example, if you log messages are from an email module, the log node name could be *Email module*.
 

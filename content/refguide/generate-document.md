@@ -3,7 +3,7 @@ title: "Generate Document"
 parent: "activities"
 menu_order: 80
 description: "Describes generating documents from a microflow. "
-tags: ["PDF", "document", "document template", "HTML", "Microsoft Word", "ODT", "studio pro"]
+tags: ["PDF", "document", "document template", "HTML", "Microsoft Word", "ODT", "studio pro", "generate document"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -73,17 +73,17 @@ The document type specifies the type of the generated document.
 
 Template defines which [document template](document-templates) is used to generate the file. Depending on the selected document template one or more [arguments](#argument) need to be specified. 
 
-### 3.6 Parameters
+### 3.6 Arguments
 
-Depending on the selected document, you will see a list of its parameters in a table. Parameters pass data to the activity. 
+Depending on the selected document, you will see a list of its arguments in a table. Arguments pass data to the activity. 
 
 #### 3.5.1 Widget
 
-The name of the widget in the document template that needs parameters to be passed to it. This property  is read-only.
+The name of the widget in the document template that needs arguments to be passed to it. This property  is read-only.
 
 #### 3.5.2 Type
 
-The type of the parameter used in the document template that is read-only.
+The type of the argument used in the document template that is read-only.
 
 #### 3.5.3 Argument {#argument}
 

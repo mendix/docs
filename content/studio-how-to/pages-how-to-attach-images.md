@@ -28,7 +28,7 @@ Your domain model looks the following way:
 ![](attachments/pages-how-to-upload-images/domain-model.png)
 {{% /image_container %}}
 
-You would like to add a new functionality: when creating a reimbursement report, employees need to upload receipts – screenshots or scanned images of what they paid for.  
+You would like to add a new functionality: when creating a reimbursement report, employees need to attach receipts – screenshots or scanned images of what they paid for.  
 
 You also would like to display attached images in a list below the report and to enable your end-users delete images from the list if needed.  
 
@@ -47,7 +47,7 @@ First of all, to be able to attach and upload images you need to add a special t
 
 2. Select the **Image Entity** and drag and drop it to your domain model.
 
-3. In the **Create New Image Entity** dialog box, set **Name** to *Image* and click **Create**.
+3. In the **Create New Image Entity** dialog box, set **Name** to *Receipt* and click **Create**.
 
     {{% image_container width="400" %}}![](attachments/pages-how-to-upload-images/create-new-image-entity.png){{% /image_container %}}
 
@@ -61,17 +61,17 @@ First of all, to be able to attach and upload images you need to add a special t
 
 		{{% image_container width="250" %}}![](attachments/pages-how-to-upload-images/association-method2.png){{% /image_container %}}
 
-Good job! You have created image and file entities and associations from them to the **Report** entity:
+Good job! You have created the image entity and an association from it to the **Report** entity:
 
 {{% image_container width="600" %}}![](attachments/pages-how-to-upload-images/domain-model-configured.png){{% /image_container %}}
 
 ## 4 Adding an Image Uploader
 
-An **Image Uploader** is a widget that allows your end-users to attach and upload images. However, it can only function inside a data container (a list view or data view) and can only have an image entity as its data source. If you just drag and drop the image uploader to your report form, it will not work correctly, because your current data view has the **Report** entity as its data source, which is not an image entity:
+An **Image Uploader** is a widget that allows your end-users to attach images. However, it can only function inside a data container (a list view or data view) and can only have an image entity as its data source. If you just drag and drop the image uploader to your report form, it will not work correctly, because your current data view has the **Report** entity as its data source, which is not an image entity:
 
 {{% image_container width="600" %}}![](attachments/pages-how-to-upload-images/form-example.png){{% /image_container %}}
 
-To solve this, you can add a button which will open a pop-up page where your end-users can upload images. This page will be connected to your current report form over the *Image_Report* association and will upload images as **Image** entity and associated to this specific report. 
+To solve this, you can add a button which will open a pop-up page where your end-users can attach images. This page will be connected to your current report form over the *Image_Report* association and will upload images as **Image** entity and associated to this specific report. 
 
 Follow the steps below:
 
@@ -89,15 +89,15 @@ Follow the steps below:
 
 6. In the **Select icon** dialog box, search for the *picture* icon and select it.
 
-7. In the button properties, click the **Style** property and change it from *Default* to *Success*. After your changes, the button will look the following way:
+7. In the button properties, click the **Style** property and change it from **Default** to **Success**. After your changes, the button will look the following way:
 
     {{% image_container width="150" %}}![](attachments/pages-how-to-upload-images/button-style-change.png){{% /image_container %}}
 
 8. In the button properties, click the **Entity** property.
 
-9. In the **Select Entity** dialog box, choose the **Receipt** entity over **Receipt_Report** association (*Receipt_Report/Receipt*) and click **Select**:
+9. In the **Select Entity** dialog box, choose the **Receipt** entity and click **Select**:
 
-    {{% image_container width="400" %}}![](attachments/pages-how-to-upload-images/image-report-association.png){{% /image_container %}}
+    {{% image_container width="400" %}}![](attachments/pages-how-to-upload-images/select-image-entity.png){{% /image_container %}}
 
 10. In the button properties, click **Page**.
 
@@ -109,7 +109,7 @@ Follow the steps below:
 
      2. Set the **Layout** to *PopupLayout*.
 
-     3. The **Pre-fill page contents based on the InspectionReport entity** option is on, so the page template (Forms) is selected automatically for you. Choose **Form Columns** and click **Create**.
+     3. The **Pre-fill page contents based on the Receipt entity** option is on, so the page template (Forms) is selected automatically for you. Choose **Form Vertical** and click **Create**.
 
          {{% image_container width="500" %}}![](attachments/pages-how-to-upload-images/create-new-page-images.png){{% /image_container %}}
 
@@ -117,7 +117,7 @@ Follow the steps below:
 
      {{% image_container width="500" %}}![](attachments/pages-how-to-upload-images/attach-images-page.png){{% /image_container %}}
 
-     As you only need your end-users to upload images on this page, delete the **Dynamic image** widget, **Name** and **Size** text boxes from the data view. 
+     As you only need your end-users to attach images on this page, delete the **Dynamic image** widget, **Name** and **Size** text boxes from the data view. 
 
 14. Open the **Toolbox**, search for an **Image Uploader**, drag and drop it inside the data view. 
 
@@ -139,7 +139,7 @@ After users attach the images, it would be nice to display their attachments and
 3. Open list view properties and do the following:
 
     1. Click the **Entity** property.
-    2. As you want to display images attached to a particular report, you need to display an entity over association (in this case to display **Receipt** over the **Receipt_Report** association). In the **Select Entity** dialog box, choose **Receipt_Report/Receipt** and click **Select**:
+    2. In the **Select Entity** dialog box, choose **Receipt** and click **Select**. As you placed the list view *inside* the data view, the list will display only receipts attached to a particular report (instead of all receipts uploaded to your app):
 
     	{{% image_container width="400" %}}![](attachments/pages-how-to-upload-images/image-report-association.png){{% /image_container %}}
 

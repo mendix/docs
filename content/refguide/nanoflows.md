@@ -152,6 +152,7 @@ Client activities can be used to have the web client of your application perform
 | [![show page](attachments/microflows-and-nanoflows/917544.png)](show-page) | [Show page](show-page) | Can be used to show a page to the user that calls the nanoflow in which this activity is used. |
 | [![validation feedback](attachments/microflows-and-nanoflows/918097.png)](validation-feedback) | [Validation feedback](validation-feedback) | Can be used to display red text below a widget that displays an attribute or association. |
 | [![show message](attachments/microflows-and-nanoflows/918099.png)](show-message) | [Show message](show-message) | Can be used to show a blocking or non-blocking message to the user that calls the nanoflow in which this activity is used. |
+| [![synchronize](attachments/microflows-and-nanoflows/synchronize.png)](synchronize) | [Synchronize](synchronize) | Can be used to synchronize data. |
 
 ### 4.5 Loop
 

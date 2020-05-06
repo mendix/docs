@@ -73,7 +73,7 @@ Client activities can be used to have the web client of your application perform
 | [![validation feedback](attachments/microflows-and-nanoflows/918097.png)](validation-feedback) | [Validation feedback](validation-feedback) | Can be used to display a red text below a widget that displays an attribute or association. |
 | [![show home page](attachments/microflows-and-nanoflows/17661963.png)](show-home-page) | [Show home page](show-home-page) | Can be used to navigate to the home page for the current user. |
 | [![synchronize](attachments/microflows-and-nanoflows/synchronize.png)](synchronize) | [Synchronize](synchronize) | Can be used to synchronize data. |
-| [![sync to device](attachments/microflows-and-nanoflows/sync-to-device.png)](sync-to-device) | [Sync to device](sync-todevice) | Can be used to selectively sync one or more objects or lists to a device and store them in the offline database |
+| [![sync to device](attachments/microflows-and-nanoflows/sync-to-device.png)](sync-to-device) | [Sync to device](sync-to-device) | Can be used to selectively sync one or more objects or lists to a device and store them in the offline database |
 
 ## 7 Integration Activities
 

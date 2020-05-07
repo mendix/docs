@@ -1,7 +1,7 @@
 ---
 title: "Java Action Call"
 parent: "action-call-activities"
-menu_order: 3
+menu_order: 10
 tags: ["studio pro", "Java", "java action call", "action call"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -12,7 +12,15 @@ This activity can only be used in **Microflows**.
 
 ## 1 Introduction
 
-The **Java action call** activity can be used to call a [Java action](java-actions). Arguments can be passed to the action and the result can be stored.
+The **Java action call** activity can be used to call a [Java action](java-actions). 
+
+{{% image_container width="200" %}}
+
+![Java Action](attachments/action-call-activities/java-action-call.png)
+
+{{% /image_container %}}
+
+Arguments can be passed to the action and the result can be stored.
 
 ## 2 Properties
 
@@ -39,11 +47,17 @@ The Java action that is called by this activity.
 
 ### 3.2 Arguments
 
-For each parameter of the Java action you have to supply an argument of the same type. The values of the arguments are expressed using [expressions](expressions).
+Click **Edit** next to the parameter to fill in the arguments. 
+
+An argument is the input data that you are passing to the Java action. For each Java action parameter, you must supply an argument of the same type. 
+
+The values of the arguments are defined using [expressions](expressions):
+
+![argument](attachments/action-call-activities/argument-edit.png)
 
 ### 3.3 Return Type
 
-The return type is the [data type](data-types) of the result of the Java action. The return type is defined by the Java action.
+This read-only property indicates whether you will retrieve a variable, object or list. The return type is defined by the Java action. 
 
 ### 3.4 Use Return Value
 

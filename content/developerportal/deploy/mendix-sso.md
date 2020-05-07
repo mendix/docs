@@ -19,8 +19,8 @@ Mendix Single Sign-On is only activated when your app is deployed to the Mendix 
 
 Using Mendix accounts has the following benefits:
 
-* you do not need a special authorization module to support resetting and changing passwords
-* it is easy to create multiple applications which all use the same sign-on mechanism
+* You do not need a special authorization module to support resetting and changing passwords
+* It is easy to create multiple applications which all use the same sign-on mechanism
 
 In addition, the MendixSSO module has a default implementation for user administration. This can be used in any Mendix app, but if you want to implement customized user administration this is also possible. See [Customizing MendixSSO](#customizing), below, for more information.
 

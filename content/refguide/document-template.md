@@ -8,7 +8,7 @@ tags: ["studio pro"]
 
 This document describes the properties of a document template. If you want to see what document templates are for and what kind of widgets can be placed on them, you can check the [Document Templates](document-templates) overview documentation.
 
-## 2 Appearance Properties
+## 2 Appearance Properties {#appearance-properties}
 
 ### 2.1 Page Format
 

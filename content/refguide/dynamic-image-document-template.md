@@ -11,7 +11,7 @@ A dynamic image can be used to show a System.Image. If the image is not availabl
 
 {{% alert type="info" %}}
 
-![](attachments/microflows-and-nanoflows/918132.png)
+![](attachments/document-templates/918132.png)
 A dynamic image inside a table cell, showing the preset default image.
 
 {{% /alert %}}

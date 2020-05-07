@@ -328,7 +328,7 @@ This parameter provides additional details when the Native Builder incurs errors
 
 If you have custom native dependencies or code, you can include them in your app by merging your changes to the **master** branch of the GitHub repository which the Native Builder is making. Every build branches off from **master** and your changes will be included. Remember to synchronize your repository occasionally to get the latest changes from Mendix native template.
 
-For more information on syncing your repository, see [When to Sync Your Native Template](#sync-your-repository) below.
+For more information on syncing your repository, see [When to Regenerate Your Native Template](#sync-your-repository) below.
 
 ### 4.2 Custom App Center Configuration
 

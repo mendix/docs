@@ -11,29 +11,75 @@ This activity can only be used in **Microflows**.
 
 ## 1 Introduction
 
-The call REST service action can be used to call a REST endpoint. You can specify the location and how the response of the REST call should be handled.
+The **call REST service** activity can be used to call a REST endpoint. You can specify the location and how the response of the REST call should be handled.
 
-## 2 General
+## 2 Properties
 
-![](attachments/19203256/19399080.png)
+An example of call rest action properties is represented in the image below:
 
-### 2.1 Location
+![call rest action properties](attachments/call-rest-action/call-rest-action-properties.png)
 
-The **Location** property defines the REST endpoint to be called. The location needs to be entered using a string template. The string template should result in a valid URL string. Parameters can be used by writing a number between braces (for example, `{1}`). For each parameter in the template, you can specify its value using a [microflow expression](expressions) resulting in a string value. To escape the opening brace (`{`), a double opening brace should be used (`{{`).
+There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
+
+The call rest action properties pane consists of the following sections:
+
+* [Action](#action)
+* [Common](#common)
+
+## 3 Action Section{#action}
+
+The **Action** section of the properties pane shows the action associated with this activity.
+
+You can open a dialog box to configure this action by clicking the ellipsis (**…**) next to the action.
+
+You can also open the dialog box by double-clicking the activity in the microflow or right-clicking the activity and selecting **Properties**.
+
+The properties dialog box consists of four tabs:
+
+* [General](#general)
+* [HTTP Headers](#http-headers)
+* [Request](#request)
+* [Response](#response)
+
+## 4 General Tab {#general}
+
+![](attachments/call-rest-action/19399080.png)
+
+### 4.1 Location
+
+The **Location** property defines the REST endpoint to be called.
+
+The location needs to be entered using a string template which must result in a valid URL string.
+
+#### 4.1.1 String Template{#string-template}
+
+The template for the location can contain parameters that are written as a number between braces (for example, `{1}`). The first parameter has the number `1`, the second `2`, etc. You can escape the opening brace (`{`), by using a double opening brace (`{{`).
+
+#### 4.1.2 Parameters
+
+For each parameter in the template, you can specify its value using a [microflow expression](expressions) resulting in a string value. This value will be inserted at the position of the parameter.
+
+### 4.2 HTTP Method
 
 The **HTTP method** property defines the HTTP method to use when calling a REST endpoint. The possible values are: GET, POST, PUT, PATCH, DELETE, HEAD, and OPTIONS.
 
-### 2.2 Timeout
+### 4.3 Use Timeout on Request
 
-Set **Use timeout on request** to **Yes** to be able specify how long the Call REST activity should wait for the REST endpoint to respond. If the REST endpoint has not responded after the number of seconds in **Timeout (s)**, an exception will occur and the microflow will roll back or go into your custom error handler.
-
-Default value: *Yes, 300 seconds* (as of Studio Pro [8.5.0](/releasenotes/studio-pro/8.5#850); in earlier versions, the default value was No)
+Set **Use timeout on request** to **Yes** to be able specify how long the Call REST activity should wait for the REST endpoint to respond. 
 
 {{% alert type="warning" %}}
 It is recommended that you keep this set to **Yes**. Most cloud infrastructure services (including those used by the Mendix Cloud) will close HTTP connections automatically if there is no traffic for a few minutes, even if your activity is still waiting for a response. This means that, if your activity calls a web service which takes a long time to respond, the connection may be closed without the activity being aware of this, and your activity will not receive a response. Under these circumstances, if **Use timeout on request** is set to **No**, your activity will get stuck waiting indefinitely for data to arrive.
 {{% /alert %}}
 
-### 2.3 Proxy Configuration
+Default value: *Yes* (as of Studio Pro [8.5.0](/releasenotes/studio-pro/8.5#850); in earlier versions, the default value was No)
+
+### 4.4 Timeout (s)
+
+If the REST endpoint has not responded after the number of seconds in **Timeout (s)**, an exception will occur and the microflow will roll back or go into your custom error handler.
+
+Default value: *300 seconds* (as of Studio Pro [8.5.0](/releasenotes/studio-pro/8.5#850); in earlier versions, the default value for **Use timeone on request** was No)
+
+### 4.5 Proxy Configuration
 
 In almost all cases, you can ignore this setting. **Use project settings** is a good default value.
 
@@ -45,73 +91,87 @@ If desired, you can configure whether to use a proxy for the request. These are 
 
 When you select **Override**, you can configure dynamically whether to use a proxy. You then supply the host, port, username, and password settings for the proxy.
 
-## 3 HTTP Headers
+## 5 HTTP Headers Tab {#http-headers}
 
-![](attachments/19203256/19399093.png)
+![](attachments/call-rest-action/19399093.png)
 
-### 3.1 Authentication
+### 5.1 Use HTTP Authentication
 
 The **Use HTTP authentication** check box defines whether basic authentication should be used.
 
+### 5.2 User Name
+
 The **User name** property defines the user name that will be used to authenticate over HTTP. The user name needs to be entered using [microflow Expressions](expressions). The microflow expression should result in a string.
+
+### 5.3 Password
 
 The **Password** property defines the password that will be used to authenticate over HTTP. The password needs to be entered using [expressions](expressions). The microflow expression should result in a string.
 
-### 3.2 Custom HTTP Headers
+### 5.4 Custom HTTP Headers
 
 These headers are added to the HTTP request header. Each custom header is a pair with a key and a value (a microflow expression).
 
-## 4 Request
+## 6 Request Tab {#request}
 
-![](attachments/19203256/19399114.png)
+![](attachments/call-rest-action/19399114.png)
 
-The sections below describe the options in the drop-down menu for generating the request. Requests can only be generated for HTTP methods POST, PUT, PATCH, and OPTIONS.
+The sections below describe the options in the drop-down menu for generating the request.
 
-### 4.1 Export Mapping for the Entire Request
+{{% alert type="info" %}}
+Requests can only be generated for HTTP methods POST, PUT, PATCH, and OPTIONS.
+{{% /alert %}}
+
+### 6.1 Export Mapping for the Entire Request
 
 This option allows you to use a single [export mapping](export-mappings) for the body of the request. 
 
-#### 4.1.1 Mapping
+#### 6.1.1 Mapping
 
 Select the mapping that you want to apply.
 
-#### 4.1.2 Parameter Type
+#### 6.1.2 Parameter Type
 
 If the [export mapping](export-mappings) requires an input, this field shows the type of the input.
 
-#### 4.1.3 Parameter
+#### 6.1.3 Parameter
 
 If the [export mapping](export-mappings) requires an input, you can select a parameter of the correct type.
 
-#### 4.1.4 Content Type
+#### 6.1.4 Content Type
 
-If the [export mapping](export-mappings) is based on a message definition, it can export both XML and JSON. Choose the type of output you want. **Content-Type header** is not set by default. To set it, use the **Custom HTTP Headers** tab.
+If the [export mapping](export-mappings) is based on a message definition, it can export either XML or JSON. Choose the type of output you want.
 
-### 4.2 Binary for the Entire Request
+{{% alert type="info" %}}
+**Content-Type header** is not set by default. To set it, use the **Custom HTTP Headers** tab.
+{{% /alert %}}
+
+### 6.2 Binary for the Entire Request
 
 This option allows you to send binary data (for example, the contents of a FileDocument).
 
-### 4.3 Form-Data
+### 6.3 Form-Data
 
 This option allows you to generate a multipart/form-data request for multiple parts. Each part is a pair with a key and a value (microflow expression). 
 
 FileDocuments and images are are also supported for this option when used as variables in microflow expressions.
 
-#### 4.3.1 Content Type
+#### 6.3.1 Content Type
 
 Setting up a **Content-Type header** for a form-data request will result in a consistency error, as it will automatically be set to **multipart/form-data**. 
 
 The content type for the FileDocument part is **application/octet-stream**.
 
-### 4.4 Custom Request Template
+### 6.4 Custom Request Template
 
-This option allows you to generate the request using a string template. The template defines the structure of the request in plain text. Parameters can be used by writing a number between braces (for example, `{1}`). For each parameter in the template, you can specify its value using a [microflow expression](expressions) resulting in a string value. To escape the opening brace (`{`), a double opening brace should be used (`{{`).
+This option allows you to generate the request using a string template. The template defines the structure of the request in plain text. 
 
-## 5 Response
+See [String Template](#string-template), above, for more information on constructing strings from templates.
 
-![](attachments/19203256/19399084.png)
+## 7 Response Tab {response}
 
-### 5.1 Response Handling
+![](attachments/call-rest-action/19399084.png)
+
+### 7.1 Response Handling
 
 These are the options in the drop-down menu for handling the response:
 
@@ -121,29 +181,28 @@ These are the options in the drop-down menu for handling the response:
 * **Store in a string** – if the response is a string (for example, CSV), it can be stored directly in a string variable
 * **Do not store in a variable** - use this option when the call does not return anything useful
 
-### 5.2 Output
+### 7.2 Type
 
 The **Type** field defines the type of the output.
 
+### 7.3 Variable
+
 The **Variable** field defines the name for the result of the operation.
 
-### 5.3 Error Handling
+### 7.4  Store Message Body in $latestHttpResponse Variable {#latesthttpresponse}
 
-This section is applicable when the HTTP response status code is not successful (for example, `[4xx]` or `[5xx]`).
+If HTTP response status code is not successful (for example, `[4xx]` or `[5xx]`), the flow will continue in an [error handler](error-event#errorhandlers).
 
-In this case, the flow will continue in the [error handler](error-event#errorhandlers). You should always add an error handler for a [call REST service](/refguide/call-rest-action) action.
+{{% alert type="warning" %}}
+You should always add an error handler for a [call REST service](/refguide/call-rest-action) action.
+{{% /alert %}}
 
-When the **Store message body in $latestHttpResponse variable** option is selected, `$latestHttpResponse/Content` will be set with the response body. It might contain some useful information provided by the server (for example, why the authentication is rejected).
+The `$latestHttpResponse` object is of the [HttpResponse](http-request-and-response-entities#http-response) type. It is created by the **Call REST service** action. However, its `Content` attribute will be left empty in most cases to minimize memory usage.
 
-### 5.4 $latestHttpResponse Object<a name="latesthttpresponse"></a>
+When the **Store message body in $latestHttpResponse variable** option is selected, `$latestHttpResponse/Content` will be filled with the response body. This might contain some useful information provided by the server (for example, why the authentication is rejected).
 
-The `$latestHttpResponse` object is of the [HttpResponse](http-request-and-response-entities#http-response) type. It is available after the **Call REST service** action.
+The Content attribute of $latestHttpResponse will also be filled if **Response handling** is **Store in an HTTP response** and the call succeeded.
 
-However, its `Content` attribute will be left empty in most cases to minimize memory usage.
+## 8 Common Section{#common}
 
-This attribute is filled when one of the following scenarios occur:
-
-* The **Response handling** is **Store in an HTTP response** and the call succeeded
-* The **Store message body in $latestHttpResponse variable** option in the **Error handling** section is checked and the call failed
-
-This object can be accessed from any microflow action in the scope.
+{{% snippet file="refguide/microflow-common-section-link.md" %}}

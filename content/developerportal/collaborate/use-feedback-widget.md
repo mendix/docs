@@ -142,11 +142,11 @@ The feedback feature requires the following properties to be set:
 * **Project** tab > **App ID** – the unique identifier of your app project available in your app's [General](../settings/general-settings) settings in the Developer Portal
 * **Advanced** tab > **Feedback server location** – the URL of the Developer Portal server (usually `https://sprintr.home.mendix.com`)
 
-For the best user experience, your are strongly encouraged to apply Mendix SSO to your app and connect the [MendixSSO](/developerportal/deploy/mendix-sso) module to version 8.2.1 or above of the Mendix Feedback Widget. For version 8.1.0 or above of the widget, you need to set the following:
+For the best user experience, your are strongly encouraged to apply Mendix SSO to your app and connect the [Mendix SSO](/appstore/modules/mendix-sso) module to version 8.2.1 or above of the Mendix Feedback Widget. For version 8.1.0 or above of the widget, you need to set the following:
 
-*  **Authentication** tab > **Decrypted Token Entity** – select the entity **DecryptedToken** from MendixSSO module
+*  **Authentication** tab > **Decrypted Token Entity** – select the entity **DecryptedToken** from Mendix SSO module
 *  **Authentication** tab > **Decrypted Token Value** – after selecting **Decrypted Token Entity**, select the **Value** attribute from it
-*  **Authentication** tab > **ID token provider** – select the **DS_GetCurrentIdToken** microflow from the MendixSSO module
+*  **Authentication** tab > **ID token provider** – select the **DS_GetCurrentIdToken** microflow from the Mendix SSO module
 
 The result should look like this:
 
@@ -156,7 +156,7 @@ The result should look like this:
 If Mendix SSO is applied and the above **Authentication** settings are configured correctly, the end-user can leave feedback without having to enter their name and email address. If your app does not have Mendix SSO, you should configure the **Data Source** properties so that the end-user's name and email address are prefilled when they leave feedback. If the **Data Source** properties are not configured, the end-user will have to manually enter their name and email address when they leave feedback.
 {{% /alert %}}
 
-The App Switcher feature requires the [MendixSSO](/developerportal/deploy/mendix-sso) module to be implemented and the following property to be set:
+The App Switcher feature requires the [Mendix SSO](/appstore/modules/mendix-sso) module to be implemented and the following property to be set:
 
 * **Advanced** tab > **Show App Switcher button** – set to **Yes**
 

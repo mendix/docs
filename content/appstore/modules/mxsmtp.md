@@ -1,5 +1,5 @@
 ---
-title: "MxSMTP"
+title: "Mx SMTP"
 category: "Modules"
 description: "Describes the configuration and usage of the MxSMTP module, which is available in the Mendix App Store."
 tags: ["app store", "app store component", "mxsmtp", "platform support"]
@@ -8,7 +8,7 @@ tags: ["app store", "app store component", "mxsmtp", "platform support"]
 
 ## 1 Introduction
 
-The [MxSMTP](https://appstore.home.mendix.com/link/app/256/) module enables your application to run a mail server. It will process any messages it receives and stores these in your application.
+The [Mx SMTP](https://appstore.home.mendix.com/link/app/256/) module enables your application to run a mail server. It will process any messages it receives and stores these in your application.
 
 {{% alert type="info" %}}
 This is an advanced module and will require specific server and DNS adjustments in order to work.

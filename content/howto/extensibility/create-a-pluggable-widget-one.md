@@ -100,7 +100,7 @@ The generator will ask you a few questions during setup. Answer the questions by
 
 Open the **(YourMendixProject)/CustomWidgets/TextBox** folder in your IDE of choice (any IDE is fine if it can execute commands) . From now on, all file references will be relative to this path. To set up your new widget, first you must use an attribute of the context object and display that attribute in an input field: 
 
-1. To prevent future errors, remove the file *src/components/HelloWorldSample.tsx*. Errors in *TextBox.webmodeler.tsx* will be dealt with in step 6 below.
+1. To prevent future errors, remove the file *src/components/HelloWorldSample.tsx*. Errors in *TextBox.editorPreview.tsx* will be dealt with in step 6 below.
 2. In *src/TextBox.xml*, the generator creates a sample property `sampleText`. Remove this property and add the new property `Text attribute`:
 
 	```xml
@@ -190,13 +190,13 @@ Open the **(YourMendixProject)/CustomWidgets/TextBox** folder in your IDE of cho
 
 	* The `textAttribute` is an object that will automatically have the actual data stored in the attribute – when the data is changed, it will cause an update of the component, and the new data will be displayed in the input
 
-6. Alter *Textbox.webmodeler.tsx* by adding the `TextInput` import to *Textbox.webmodeler.tsx*:
+6. Alter *Textbox.editorPreview.tsx* by adding the `TextInput` import to *Textbox.editorPreview.tsx*:
 
 	```tsx
 	import { TextInput } from "./components/TextInput";
 	```
 
-	Then, override the class lines in *Textbox.webmodeler.tsx* until they look like this:
+	Then, override the class lines in *Textbox.editorPreview.tsx* until they look like this:
 
 	```tsx
 	export class preview extends Component<TextBoxPreviewProps> {
@@ -206,7 +206,7 @@ Open the **(YourMendixProject)/CustomWidgets/TextBox** folder in your IDE of cho
 	}
 	```
 
-	Before moving on from this step, you should remove the import lines concerning the **Hello World** sample text from *TextBox.webmodeler.tsx* and *TextBox.tsx*, as these lines are no longer in use.
+	Before moving on from this step, you should remove the import lines concerning the **Hello World** sample text from *TextBox.editorPreview.tsx* and *TextBox.tsx*, as these lines are no longer in use.
 
 7.  Add a test widget to the project home page:<br />
 	a. To find your widget for the first time you need to refresh from the files system. Use <kbd>F4</kbd> or select **Project > Synchronize Project Directory** from the Mendix Studio Pro menu.<br />

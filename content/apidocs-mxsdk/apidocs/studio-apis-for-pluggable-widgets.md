@@ -149,7 +149,7 @@ It is possible to create a preview for pluggable widgets that will be rendered i
 as well as Studio Pro's Design Mode.
 
 Add the module by adding a file to your custom widget with the same name as your `xml` file as well as the suffix
-`.webmodeler.js`. For example, a widget named `TextBox.xml` would have the preview module `TextBox.webmodeler.js`.
+`.editorPreview.js`. For example, a widget named `TextBox.xml` would have the preview module `TextBox.editorPreview.js`.
 
 This preview module is expected to be a CommonJS module, exporting the following functions using the `exports` object.
 

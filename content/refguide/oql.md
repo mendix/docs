@@ -22,7 +22,7 @@ OQL queries do not take security into account out-of-the-box. This means that yo
 
 {{% /alert %}}
 
-Try your OQL example online with [OQL Playground](https://mydemoversion8-sandbox.mxapps.io/p/OQL). 
+Try your OQL example online with the [OQL Playground](https://mydemoversion8-sandbox.mxapps.io/p/OQL) demo app. 
 
 ## 2 Query Components
 

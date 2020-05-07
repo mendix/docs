@@ -315,7 +315,7 @@ The highest integer Android will allow is 2,147,483,647. Consider starting with 
 
 ### 3.13 --mendix-version
 
-This parameter makes the Native Builder pick a compatible version of the Native Template based on your Mendix project's Studio Pro version. This parameter needs to be a valid semantic version of Studio Pro, for example 8.5.1. The version provided needs to be as specific as possible, as even patch versions might include fixes that might not be compatible with all Native Templates available. To determine which Mendix version you are using check the **About** page or splash screen of your Mendix project's version of Mendix Studio Pro.
+This parameter makes the Native Builder pick a compatible version of the Native Template based on your Mendix project's Studio Pro version. This parameter needs to be a valid semantic version of Studio Pro, for example 8.5.1. The version provided needs to be as specific as possible, as even patch versions might include fixes that might not be compatible with all Native Templates available. To determine which Mendix version you are using check the **About** page or splash screen of your Mendix project's version of Studio Pro.
 
 ### 3.14 --verbose {#verbose}
 
@@ -344,10 +344,10 @@ The Native Template is being continuously developed. This means new versions are
 
 You should update your project's template in the following scenarios:
 
-* You app crashes unexpectively even though all Mendix Studio Pro modules and resources are fully updated using the Mendix App Store
+* You app crashes unexpectively even though all Studio Pro modules and resources are fully updated using the Mendix App Store
 * You updated your Studio Pro version
 
-The Native Template is tightly tied to the version of Mendix Studio Pro you are running. Therefore, every time your project is updated, consider running `regenerate` using the Native Builder to update your template.
+The Native Template is tightly tied to the version of Studio Pro you are running. Therefore, every time your project is updated, consider running `regenerate` using the Native Builder to update your template.
 
 ## 6 Resolving Errors
 

@@ -76,7 +76,7 @@ These operations takes a list and one or more members (attributes or association
 
 | Operation | Description | Result Type |
 | --- | --- | --- |
-| Sort | Allows you to sort a list based on a number of a attributes. The attributes are ordered to determine their priority while sorting. You cannot use associations to sort a list. | List |
+| Sort | Allows you to sort a list based on a number of a attributes. The attributes are ordered to determine their priority while sorting. You cannot use associations to sort a list. Sorting attributes from generalized entities is not allowed. | List |
 | Find | Find the first object of which the member has the given value. | Object |
 | Filter | Find all objects of which the member has the given value. | List |
 

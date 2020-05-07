@@ -523,7 +523,7 @@ You have now made your widget compatible with screen readers. If a screen reader
 
 To easily view changes to your widget while in Mendix Studio or Mendix Studio Pro's design mode, you can add preview functionality to your TextBox widget. Note that the properties received in preview mode will be slightly different than at the runtime level.
 
-To add preview mode functionality, create a new file *src/TextBox.webmodeler.tsx* and add this code to it:
+To add preview mode functionality, create a new file *src/TextBox.editorPreview.tsx* and add this code to it:
 
 ```tsx
 import { Component, createElement, ReactNode } from "react";

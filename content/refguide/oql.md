@@ -20,6 +20,8 @@ These are some examples of OQL queries:
 OQL queries do not take security into account out-of-the-box. This means that you can use OQL to manually define custom security expressions. In some cases, handling security yourself using OQL (instead of using the out-of-the-box security of XPath) may result in faster queries.
 {{% /alert %}}
 
+Try your OQL example online with the [OQL Playground](https://mydemoversion8-sandbox.mxapps.io/p/OQL) demo app. 
+
 ## 2 Query Components
 
 An OQL query can use these components:
@@ -32,5 +34,4 @@ An OQL query can use these components:
 | [Group by clause](oql-group-by-clause) (optional) | `GROUP BY Department` | Group rows on the values of the specified attributes.  |
 | [Order by clause](oql-order-by-clause) (optional) | `ORDER BY Date` | Sorts rows on the specified attributes.  |
 | [Limit clause](oql-limit-clause) (optional) | `LIMIT 50 OFFSET 30` | Limits rows to a subset of the total amount.  |
-
 

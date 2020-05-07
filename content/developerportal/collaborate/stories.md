@@ -164,10 +164,6 @@ To add a task to the story, follow these steps:
 
 3. Click **Post task** to save the new task for the story.
 
-{{% alert type="info" %}}
-You can also add sub-tasks to tasks, which will create a nested structure of stories with tasks.
-{{% /alert %}}
-
 After you have completed the task, check the box:
 
 ![](attachments/stories/complete-task.png)
@@ -187,7 +183,7 @@ If you need to reorder stories or move a story to a different Sprint, there are 
 3. Select the story and use the **Move to** button to select the new Sprint (for details on this method, see the [Moving a Story](#moving) section).
 
 {{% alert type="info" %}}
-Moving a story will move any tasks and sub-tasks as well.
+Moving a story will move the tasks as well.
 {{% /alert %}}
 
 ### 4.4 Managing Stories in Mendix Studio Pro 

@@ -538,7 +538,7 @@ The widget’s style properties are as follows:
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
-| `container` | All ViewStyle properties |  |
+| `container` | This has all ViewStyle properties. |  |
 | `indicator` | `color` | This is the color of the indicator (this defaults to `gray`). |
 | `indicator` | `size` | Possible values for indicator are `large` and `small` (this defaults to `large`). |
 
@@ -550,7 +550,7 @@ The app events widget allows you to set actions when your app’s network status
 
 ### 11.3 Background Image
 
-The background image widget allows to layer other widgets on top of an image.
+The background image widget enables layering one or more widgets on top of an image.
 
 The widget’s style properties are as follows:
 
@@ -562,9 +562,9 @@ The widget’s style properties are as follows:
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
-| `container` | All ViewStyle properties |  |
-| `image` | All ImageStyle properties |  |
-| `image` | `svgColor` | Property to set the color of an svg image (this defaults to `black`) |
+| `container` | This has all ViewStyle properties. |  |
+| `image` | This has all ImageStyle properties. |  |
+| `image` | `svgColor` | Property to set the color of an SVG image (this defaults to `black`). |
 
 The default class to style all background images is named `com_mendix_widget_native_backgroundimage_BackgroundImage`.
 

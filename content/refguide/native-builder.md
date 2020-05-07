@@ -12,7 +12,7 @@ The Native Builder takes your Mendix project containing a native profile and pac
 The Native Builder uses MxBuild, GitHub, and App Center to build your applications. The tool automates the configuration of these processes to streamline your app building experience. The Native builder allows you to create as many apps on GitHub as possible, as long as they are given unique app names using the `--project-name` parameter (for more information, see the [Commands](#commands) section below). Using the `prepare` and `build` command combination, the Native Builder packages your apps by doing the following:
 
 1. Deploys your Mendix project locally.
-2. Creates a new repository using the Mendix native template repository on GitHub named after the app name provided.
+2. Creates a new repository named using the project name argument provided and using the latest version of Mendix Native Template repository that fits the Mendix version provided.
 3. Creates a new branch in the new repository called **build/{build number provided to the tool}**.
 4. Commits the required files and assets to the build branch in the new repository.
 5. Configures your apps in App Center.
@@ -338,18 +338,16 @@ In App Center you can configure your builds at the branch level. If no configura
 
 As your Mendix app project matures, you may want to expand its functionality (such as by introducing custom widgets or logic that will require new native dependencies). A custom developer app fills this role by serving as a replacement for the Make It Native app, and should be used when you have custom widgets and logic which are not supported by the Make It Native app. Custom developer apps are apps you can generate yourself using your current project structure, your custom modules, and any other requirements to test your evolving app. For more information, see [How to Create a Custom Developer App](/howto/mobile/how-to-devapps)
 
-## 5 When to Sync Your Native Template {#sync-your-repository}
+## 5 When to Regenerate Your Native Template {#sync-your-repository}
 
-When Mendix updates the native template, the Native Builder will not automatically sync your GitHub repository. You will have to manually sync it yourself. The Native Builder avoids automatic synchronization because of possible merge conflicts with customized apps.
+The Native Template is being continuously developed and new version are released to accommodate new features of the Mendix platform or fix issues. When a new version is available Native Builder will prompt you with a warning, suggesting running regenerate to update your base template. 
 
-The following error scenarios could indicate that your repository is out of sync with the latest native template:
+The following scenarios could indicate that you should update your project's template:
 
-* Your App Center build fails
-* Your app crashes while you are testing it after adding a new pluggable widget or JavaScript action
+* You app crashes unexpectively even though all Studio modules and resources are fully updated using the Mendix App Store.
+* You updated your Mendix Studio version
 
-If either of these things happen, make sure that you are using the latest native template version by consulting [mendix / native-template](https://github.com/mendix/native-template).
-
-If your native template is not the latest version, synchronize your repository with the latest version of the native template. For instructions on syncing a GitHub repository, see GitHub's [Syncing a fork](https://help.github.com/en/articles/syncing-a-fork).
+Native Template is tightly tied to the version of Mendix Studio you are running, therefor, every time your project is updated, consider running regenerate using Native Builder to update you template.
 
 ## 6 Resolving Errors
 

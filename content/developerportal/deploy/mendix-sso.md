@@ -19,8 +19,8 @@ Mendix Single Sign-On is only activated when your app is deployed to the Mendix 
 
 Using Mendix accounts has the following benefits:
 
-* you do not need a special authorization module to support resetting and changing passwords
-* it is easy to create multiple applications which all use the same sign-on mechanism
+* You do not need a special authorization module to support resetting and changing passwords
+* It is easy to create multiple applications which all use the same sign-on mechanism
 
 In addition, the MendixSSO module has a default implementation for user administration. This can be used in any Mendix app, but if you want to implement customized user administration this is also possible. See [Customizing MendixSSO](#customizing), below, for more information.
 
@@ -107,6 +107,12 @@ To completely remove Mendix SSO. do the following:
 3. Delete the **MendixSSO** module from **App Store modules**.
 
 4. Review the **Errors** pane for any other references to **MendixSSO**—there will only be additional errors if MendixSSO has been modified.
+
+### 3.3 Removing MendixSSO Java Libraries
+
+The steps above will not remove any of the Java libraries associated with MendixSSO.
+
+All files installed by MendixSSO are marked with `.MendixSSO.RequiredLib`. Once you have removed MendixSSO from your app, files marked with `.MendixSSO.RequiredLib` can be removed safely, provided you have not created new dependencies on them by using them in your custom code.
 
 ## 4 Setting Up Mendix Single Sign-On{#setting-up}
 

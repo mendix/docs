@@ -46,7 +46,3 @@ A tutorial with some examples can be found at the [Java API Tutorial](/howto6/ja
 ## Using Eclipse as an environment to write your Mendix Java actions
 
 See [Using Eclipse](using-eclipse).
-
-## Java actions in the cloud
-
-See [Java in the Cloud](/developerportal/deploy/java-in-the-cloud).

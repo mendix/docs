@@ -12,44 +12,28 @@ When working with the Mendix Platform, objects of entities are always being mani
 
 The activities in this section of the microflow and nanoflow toolbox generally work on single objects, however **commit object(s)**, **delete object(s)**, and **retrieve** also work on lists of objects. For other activities which work with lists, see [List Activities](list-activities).
 
-The activities described in this document are in the **Object Activities** section of the **Toolbox**.
+The activities described in this document are in the **Object Activities** section of the **Toolbox**:
 
 {{% image_container width="40%" %}}
 ![Object activities toolbox](attachments/object-activities/object-activities-toolbox.png)
 {{% /image_container %}}
 
-## 2 Cast Object
+The following are the object activities you can use in your microflow or nanoflow:
 
-The **Cast object** activity changes the type of object from a generalized object type to the specialized object type. For more information, see [Cast Object](cast-object).
+* [Cast object](cast-object) *(only in microflows)* – changes the type of object from a generalized object type to the specialized object type
 
-{{% alert type="warning" %}}
-This activity can only be used in **Microflows**.
-{{% /alert %}}
+* [Change object](change-object) – changes the members of an object
 
-## 3 Change Object
+* [Commit objects(s)](committing-objects) – either stores objects of persistable entities in the database or stores objects of non-persistable entities in memory to allow them to be rolled back
 
-The **Change object** activity changes the members of an object. For more information, see [Change Object](change-object).
+* [Create object](create-object) – creates an object
 
-## 4 Commit Object(s)
+* [Delete object(s)](deleting-objects) *(only in microflows)* – activity deletes one or more objects
 
-The **Commit objects(s)** activity either stores objects of persistable entities in the database or stores objects of non-persistable entities in memory to allow them to be rolled back. For more information, see [Commit Object(s)](committing-objects).
+* [Retrieve](retrieve) – gets one or more objects of an entity
 
-## 5 Create Object
+* [Rollback object](rollback-object) – undoes uncommitted changes made to an object
 
-The **Create object** activity creates an object. For more information, see [Create Object](create-object).
+## 2 Read More
 
-## 6 Delete Object(s)
-
-The **Delete object(s)** activity deletes one or more objects. For more information, see [Delete Object(s)](deleting-objects).
-
-{{% alert type="warning" %}}
-This activity can only be used in **Microflows**.
-{{% /alert %}}
-
-## 7 Retrieve
-
-The **Retrieve** activity gets one or more objects of an entity. For more information, see [Retrieve](retrieve).
-
-## 8 Rollback
-
-The **Rollback object** activity undoes uncommitted changes made to an object. For more information, see [Rollback Object](rollback-object).
+* [Activities](activities)

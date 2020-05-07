@@ -11,7 +11,7 @@ The template grid shows a list of objects in a tile view. For example, a templat
 
 {{% alert type="info" %}}
 
-![](attachments/microflows-and-nanoflows/918137.png)
+![](attachments/document-templates/918137.png)
 
 A template grid showing products with name, description, and image.
 

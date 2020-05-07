@@ -116,7 +116,6 @@ These are points you can gain through activity in the [Mendix App Store](https:/
 | Activity | Points | Max. Points per Day |
 | --- | --- | --- |
 | Be the first member of your company to sign up for Mendix | 25 | N/A |
-| Upload to Model Share | 10 | 10 |
 | Send an app invite | 10 | 50 |
 | Send a Mendix Platform invite | 5 | 50 |
 | Create an app project | 5 | 5 |
@@ -162,8 +161,8 @@ In order to receive Mendix points for your contributions to Mendix GitHub reposi
 | Pass the [Rapid Developer Certification](https://gettingstarted.mendixcloud.com/link/certification/rapid) exam | 25 | N/A |
 | Complete a learning path in the [Mendix Academy](https://gettingstarted.mendixcloud.com/link/home) | 25 | N/A |
 | Make a large contribution to the [Mendix documentation](https://docs.mendix.com/) | 15 | N/A |
-| Attend the [Advanced Developer Classroom](https://gettingstarted.mendixcloud.com/link/classroom/advanced) course | 10 | N/A |
-| Attend the [Rapid Developer Classroom](https://gettingstarted.mendixcloud.com/link/classroom/rapid) course | 10 | N/A |
+| Attend the [Advanced Developer Course](https://gettingstarted.mendixcloud.com/link/classroom/5/Advanced/Course) | 10 | N/A |
+| Attend the [Rapid Developer Course](https://gettingstarted.mendixcloud.com/link/classroom/1/Rapid/Course) | 10 | N/A |
 | Make a small contribution to the Mendix documentation | 5 | N/A |
 | Complete a unit in the Mendix Academy | 1 | N/A |
 

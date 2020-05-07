@@ -197,7 +197,9 @@ If you have created a new user role on the **Roles and Permissions** page, you n
 
 When you try to publish your app, you may be notified that upgrade of the service that secures your app is required first:
 
-<img src="attachments/settings-security/upgrade.png" alt="Upgrade Required" style="zoom:50%;" />
+{{% image_container width="300" %}}
+![Upgrade Required](attachments/settings-security/upgrade.png)
+{{% /image_container %}}
 
 A special service makes it possible to manage your app users. As of April 1st, 2020 we are replacing the current service with an improved one. This upgrade will be done automatically for you when you click **Auto-Upgrade**. 
 

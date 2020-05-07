@@ -26,7 +26,7 @@ The create object properties pane consists of the following sections:
 * [Action](#action)
 * [Common](#common)
 
-## 3 Action{#action}
+## 3 Action Section {#action}
 
 The **Action** section of the properties pane shows the action associated with this activity.
 
@@ -34,13 +34,11 @@ You can open a dialog box to configure this action by clicking the ellipsis (**â
 
 You can also open the dialog box by double-clicking the activity in the microflow or right-clicking the activity and selecting **Properties**.
 
-### 3.1 Action Section
-
-#### 3.1.1 Entity
+### 3.1 Entity
 
 The entity of which you want to create an object.
 
-#### 3.1.2 Commit
+### 3.2 Commit
 
 **Commit** defines the way the object is committed. See the section [How Commits Work](committing-objects#how-commits-work) in *Commit Object(s)* for more information on committing.
 
@@ -50,39 +48,37 @@ The entity of which you want to create an object.
 | Yes without event handlers | The object is saved in the database, but the [event handlers](event-handlers) are not triggered. |
 | No *(default)*  | The object is changed without being saved in the database. |
 
-##### Commits in Nanoflows
+#### 3.2.1 Commits in Nanoflows
 
 Nanoflows do not support committing changes without events. Committing while running in an online app sends a commit request to the Mendix Runtime and runs the events. If a change object action is used in an offline app, the changes are committed to the offline database.
 
-#### 3.1.3 Refresh in Client
+### 3.3 Refresh in Client
 
 This setting defines how changes are reflected in the pages presented to the end-user.
 
 Default: *No*
 
-##### Microflow is Called from the Client in an Online App
+#### 3.3.1 Microflow Is Called from the Client in an Online App
 
 If **Refresh in client** is set to *No*, the change is not reflected in the client.
 
 If set to *Yes*, [data sources](data-sources) are reloaded.
 
-##### Microflow is Called in an Offline, Native, or Hybrid App
+#### 3.3.2  Microflow Is Called in an Offline, Native, or Hybrid App
 
 When inside a microflow that is called from an offline, native, or hybrid app, the **Refresh in client** option is ignored and functions as if it was set to **No**.
 
 For more information, see the [Microflows](offline-first#microflows) section of the *Offline-First Reference Guide*.
 
-##### Action is in a Nanoflow
+#### 3.3.4  Action Is in a Nanoflow
 
 In a nanoflow, the create object action reloads [data sources](data-sources) as if Refresh in client was set to *Yes*.
 
-#### 3.1.4 Change Members
+### 3.4 Change Members
 
 You can set the values of members (attributes and associations) of the newly created object to be different from the default value set in the [entity](entities). Values for members are specified with an [expression](expressions) and must be of the same type as the member.
 
-### 3.2 Output Properties
-
-#### 3.2.1 Object Name
+### 3.5 Object Name
 
 This is the name of the resulting object which can be used by all activities that follow this activity.
 

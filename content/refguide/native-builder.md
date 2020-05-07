@@ -12,7 +12,7 @@ The Native Builder takes your Mendix project containing a native profile and pac
 The Native Builder uses MxBuild, GitHub, and App Center to build your applications. The tool automates the configuration of these processes to streamline your app building experience. The Native builder allows you to create as many apps on GitHub as possible, as long as they are given unique app names using the `--project-name` parameter (for more information, see the [Commands](#commands) section below). Using the `prepare` and `build` command combination, the Native Builder packages your apps by doing the following:
 
 1. Deploys your Mendix project locally.
-2. Creates a new repository named using the project name argument provided and using the latest version of Mendix Native Template repository that fits the Mendix version provided.
+2. Creates a new repository (named using the project name argument provided) employing the latest version of the Mendix Native Template repository which fits the Mendix version provided.
 3. Creates a new branch in the new repository called **build/{build number provided to the tool}**.
 4. Commits the required files and assets to the build branch in the new repository.
 5. Configures your apps in App Center.
@@ -340,14 +340,14 @@ As your Mendix app project matures, you may want to expand its functionality (su
 
 ## 5 When to Regenerate Your Native Template {#sync-your-repository}
 
-The Native Template is being continuously developed and new version are released to accommodate new features of the Mendix platform or fix issues. When a new version is available Native Builder will prompt you with a warning, suggesting running regenerate to update your base template. 
+The Native Template is being continuously developed. This means new versions are regularly released to accommodate new features of the Mendix platform or to fix issues. When a new version is available, the Native Builder will suggest you run `regenerate` to update your base template. 
 
-The following scenarios could indicate that you should update your project's template:
+You should update your project's template in the following scenarios:
 
-* You app crashes unexpectively even though all Studio modules and resources are fully updated using the Mendix App Store.
-* You updated your Mendix Studio version
+* You app crashes unexpectively even though all Mendix Studio Pro modules and resources are fully updated using the Mendix App Store
+* You updated your Studio Pro version
 
-Native Template is tightly tied to the version of Mendix Studio you are running, therefor, every time your project is updated, consider running regenerate using Native Builder to update you template.
+The Native Template is tightly tied to the version of Mendix Studio Pro you are running. Therefore, every time your project is updated, consider running `regenerate` using the Native Builder to update your template.
 
 ## 6 Resolving Errors
 

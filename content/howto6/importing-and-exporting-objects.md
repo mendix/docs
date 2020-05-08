@@ -157,7 +157,6 @@ Mendix module object packages are stored as Mendix Package (.mpk) files. An obje
 *   [Importing Excel Documents](importing-excel-documents)
 *   [Exposing a web service](expose-a-web-service)
 *   [Selenium Support](selenium-support)
-*   [Synchronizing user accounts using the LDAP module](synchronizing-user-accounts-using-the-ldap-module)
 *   [Importing XML documents](importing-xml-documents)
 *   [Consuming a REST Service](consume-a-rest-service)
 *   [Modules](/refguide6/modules)

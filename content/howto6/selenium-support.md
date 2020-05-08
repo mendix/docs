@@ -50,7 +50,6 @@ Note that the fourth row in a grid has an index of 3.
 *   [Consuming a complex web service](consume-a-complex-web-service)
 *   [Consuming a simple Web Service](consume-a-simple-web-service)
 *   [Selenium Support](selenium-support)
-*   [Synchronizing user accounts using the LDAP module](synchronizing-user-accounts-using-the-ldap-module)
 *   [Importing Excel Documents](importing-excel-documents)
 *   [Exporting XML documents](export-xml-documents)
 *   [Exposing a web service](expose-a-web-service)

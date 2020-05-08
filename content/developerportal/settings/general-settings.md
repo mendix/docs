@@ -5,7 +5,7 @@ menu_order: 10
 description: "Describes general settings of your app."
 tags: ["Settings", "App", "Developer Portal"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
-#The anchor #managing-app-users below is mapped from App > General > Settings > Manage App Users and the MendixSSO module, so it should not be removed or changed.
+#The anchor #managing-app-users below is mapped from App > General > Settings > Manage App Users and the Mendix SSO module, so it should not be removed or changed.
 ---
 
 ## 1 Introduction
@@ -66,9 +66,9 @@ After clicking **Manage App Users**, you will see a list of environments for you
 
 * [Mendix Single Sign-On](/developerportal/deploy/mendix-sso) is implemented:
 	* In Studio, SSO is automatically implemented for your app project by enabling security for your app – for details, see the [Enabling Security](/studio/settings-security#enabling-security) section of *Security, Roles & Permissions*
-	* In Studio Pro, SSO can implemented via the [MendixSSO](https://appstore.home.mendix.com/link/app/111349/Mendix/MendixSSO-(for-Mendix-7) module, or the (deprecated) [AppCloudServices](https://appstore.home.mendix.com/link/app/934/) module
-		* for details of the Mendix SSO module, see [Mendix Single Sign-On](/developerportal/deploy/mendix-sso)
-		* for details of the (deprecated) AppCloudServices module, see the relevant document in the [Mendix Single Sign-On](/developerportal/deploy/mendix-sso) section of the documentation
+	* In Studio Pro, SSO can be implemented via the [Mendix SSO](/appstore/modules/mendix-sso) module or the (deprecated) [AppCloudServices](https://appstore.home.mendix.com/link/app/934/) module
+		* For details of the Mendix SSO module, see [Mendix Single Sign-On](/developerportal/deploy/mendix-sso)
+		* For details of the (deprecated) AppCloudServices module, see the relevant document in the [Mendix Single Sign-On](/developerportal/deploy/mendix-sso) section of the documentation
 * If you manage user roles from Studio, your app should be published (for more information see the [Managing App Users](/studio/settings-security#managing-app-users) section of *Security, Roles & Permissions* )
 * Your user role allows you to manage other users (for more information, see the [User Management Properties](/refguide/user-roles#user-management) section of *User Roles*)
 

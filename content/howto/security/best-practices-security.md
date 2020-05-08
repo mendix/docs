@@ -94,10 +94,7 @@ This data is defined within the domain model and stored within the database of y
 
 When developing an application, authentication is one of the basic considerations. Even though Mendix comes with a basic authentication mechanism, your application’s security is improved when authentication is delegated to an enterprise grade identity provider like ADFS.
 
-Mendix offers a range of App Store modules that enable your application to be connected with these services, including:
-
-* [SAML](/appstore/modules/saml)
-* [LDAP Synchronization](/appstore/modules/ldap-synchronization)
+Mendix offers the [SAML](/appstore/modules/saml) module that enables your application to be connected with these services.
 
 Your application can gain the following benefits from using an identity provider:
 

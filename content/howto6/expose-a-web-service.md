@@ -70,11 +70,13 @@ To create a published web service, follow these steps:
 To create the functionality to expose, follow these steps:
 
 1. Create a microflow that retrieves and returns a list of customers from the database (for details on how to create a microflow, see [How to Create Your First Microflow: Hello World!](create-your-first-microflow-hello-world)).
-2. To make the microflow more exciting, add two input parameters to dynamically set the range settings of the retrieve action. Configure the range options of the retrieve action like this:
+2.  To make the microflow more exciting, add two input parameters to dynamically set the range settings of the retrieve action. Configure the range options of the retrieve action like this:
 
     ![](attachments/18448728/18581709.png)
 
-    <iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/083d4d13-b438-4980-b0ba-90d9a3f59f40/getcustomers?embed=true" allowfullscreen=""></iframe>
+	Reference this microflow:
+	
+	![](attachments/expose/model.jpg)
 
 ## <a name="6"></a>6 Publishing a Microflow
 

@@ -156,7 +156,8 @@ studio-how-to:
   menu_categories:
     - "Domain Model"
     - "Pages"
-    - "Microflows" 
+    - "Microflows"
+    - "Security"
 studio7:
   space: "Mendix 7 Studio Guide"
   priority: false

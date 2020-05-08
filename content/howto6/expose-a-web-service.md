@@ -160,7 +160,6 @@ When exposing a web service, consider the following things:
 * [How to Export XML Documents](export-xml-documents)
 * [How to Import Excel Documents](importing-excel-documents)
 * [How to Enable Selenium Support](selenium-support)
-* [How to Synchronize User Accounts Using the LDAP Module](synchronizing-user-accounts-using-the-ldap-module)
 * [How to Import XML Documents](importing-xml-documents)
 * [How to Consume a REST Service](consume-a-rest-service)
 

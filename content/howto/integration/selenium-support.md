@@ -60,7 +60,6 @@ Note that the fourth row in a grid has an index of `3`.
 * [Test Mendix Applications Using Selenium IDE](../testing/testing-mendix-applications-using-selenium-ide)
 * [Consume a Complex Web Service](consume-a-complex-web-service)
 * [Consume a Simple Web Service](consume-a-simple-web-service)
-* [Synchronize User Accounts Using the LDAP Module](synchronizing-user-accounts-using-the-ldap-module)
 * [Import Excel Documents](importing-excel-documents)
 * [Export XML Documents](export-xml-documents)
 * [Expose a Web Service](expose-a-web-service)

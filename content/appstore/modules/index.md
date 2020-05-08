@@ -16,5 +16,5 @@ When you download these modules, they will go into the **Project** > **App Store
 * [Email with Templates](email-with-templates)
 * [Encryption](encryption)
 * [Excel Exporter](excel-exporter)
-* [LDAP Synchronization](ldap-synchronization)
+* [LDAP Provisioning Agent](ldap-provisioning-agent)
 * [SAML](saml)

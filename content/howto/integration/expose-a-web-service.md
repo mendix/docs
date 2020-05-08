@@ -159,7 +159,6 @@ When exposing a web service, consider the following things:
 * [Export XML Documents](export-xml-documents)
 * [Import Excel Documents](importing-excel-documents)
 * [Enable Selenium Support](selenium-support)
-* [Synchronize User Accounts Using the LDAP Module](synchronizing-user-accounts-using-the-ldap-module)
 * [Import XML Documents](importing-xml-documents)
 * [Consume a REST Service](consume-a-rest-service)
 * [Expose Data to BI Tools Using OData](exposing-data-to-bi-tools-using-odata)

@@ -13,4 +13,4 @@ To make your development life a little easier, here is a list of helpful third-p
 * [Selenium](https://www.seleniumhq.org/) – tools for automating web browsers
 * [Eclipse](http://www.eclipse.org/downloads/) – tools for writing and debugging Java actions (for more information, see [Using Eclipse](/refguide/using-eclipse))
 * [SOAP UI](https://www.soapui.org/) – REST and SOAP testing tools (for details, see [How to Test Web Services Using SoapUI](/howto/testing/testing-web-services-using-soapui))
-* [Visual Studio Code](https://code.visualstudio.com/) – a powerful code editor
+* [Visual Studio Code](https://code.visualstudio.com/) – a powerful code editor mainly useful for maintaining your theme 

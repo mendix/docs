@@ -1,7 +1,8 @@
 ---
-title: "Export with Mapping"
+title: "Export With Mapping"
 parent: "integration-activities"
 tags: ["studio pro", "integration activity", "export mapping action", "export to xml"]
+menu_order: 40
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -12,13 +13,13 @@ This activity can only be used in **Microflows**.
 
 ## 1 Introduction
 
-The **export with mapping** activity allows you to export the data stored in [domain model](domain-model) entities into an XML document, JSON document, or string variable.
+The **Export with mapping** activity allows you to export the data stored in [domain model](domain-model) entities into an XML document, JSON document, or string variable.
 
 ## 2 Properties
 
 An example of export with mapping properties is represented in the image below:
 
-![export with mapping properties](attachments/export-mapping-action/export-with-mapping-properties.png)
+![export with mapping properties](attachments/integration-activities/export-with-mapping-properties.png)
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 
@@ -34,8 +35,6 @@ The **Action** section of the properties pane shows the action associated with t
 You can open a dialog box to configure this action by clicking the ellipsis (**…**) next to the action.
 
 You can also open the dialog box by double-clicking the activity in the microflow or right-clicking the activity and selecting **Properties**.
-
-![](attachments/export-mapping-action/19399019.png)
 
 ### 3.1 Export Mapping
 

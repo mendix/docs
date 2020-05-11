@@ -2,6 +2,7 @@
 title: "Call REST Service"
 parent: "integration-activities"
 tags: ["studio pro", "integration activity", "call rest service"]
+menu_order: 10
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -11,13 +12,13 @@ This activity can only be used in **Microflows**.
 
 ## 1 Introduction
 
-The **call REST service** activity can be used to call a REST endpoint. You can specify the location and how the response of the REST call should be handled.
+The **Call REST service** activity can be used to call a REST endpoint. You can specify the location and how the response of the REST call should be handled.
 
 ## 2 Properties
 
 An example of call rest action properties is represented in the image below:
 
-![call rest action properties](attachments/call-rest-action/call-rest-action-properties.png)
+![call rest action properties](attachments/integration-activities/call-rest-action-properties.png)
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 
@@ -43,7 +44,7 @@ The properties dialog box consists of four tabs:
 
 ## 4 General Tab {#general}
 
-![](attachments/call-rest-action/19399080.png)
+![](attachments/integration-activities/general-tab.png)
 
 ### 4.1 Location
 
@@ -93,7 +94,7 @@ When you select **Override**, you can configure dynamically whether to use a pro
 
 ## 5 HTTP Headers Tab {#http-headers}
 
-![](attachments/call-rest-action/19399093.png)
+![](attachments/integration-activities/http-headers-tab.png)
 
 ### 5.1 Use HTTP Authentication
 
@@ -113,7 +114,7 @@ These headers are added to the HTTP request header. Each custom header is a pair
 
 ## 6 Request Tab {#request}
 
-![](attachments/call-rest-action/19399114.png)
+![](attachments/integration-actions/request-tab.png)
 
 The sections below describe the options in the drop-down menu for generating the request.
 
@@ -167,9 +168,9 @@ This option allows you to generate the request using a string template. The temp
 
 See [String Template](#string-template), above, for more information on constructing strings from templates.
 
-## 7 Response Tab {response}
+## 7 Response Tab {#response}
 
-![](attachments/call-rest-action/19399084.png)
+![](attachments/integration-activities/response-tab.png)
 
 ### 7.1 Response Handling
 

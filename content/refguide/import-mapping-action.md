@@ -2,6 +2,7 @@
 title: "Import With Mapping"
 parent: "integration-activities"
 tags: ["studio pro", "import xml", "import with mapping", "import mapping", "integration activity"]
+menu_order: 30
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -18,7 +19,7 @@ The **Import with mapping** activity allows you to import the data stored in an 
 
 An example of import with mapping properties is represented in the image below:
 
-![import with mapping properties](attachments/import-mapping-action/import-with-mapping-properties.png)
+![import with mapping properties](attachments/integration-activities/import-with-mapping-properties.png)
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 
@@ -35,7 +36,7 @@ You can open a dialog box to configure this action by clicking the ellipsis (**â
 
 You can also open the dialog box by double-clicking the activity in the microflow or right-clicking the activity and selecting **Properties**.
 
-![](attachments/import-mapping-action/import-mapping-action.png)
+![](attachments/integration-activities/import-mapping-action.png)
 
 ### 3.1 Variable
 

@@ -1,6 +1,6 @@
 ---
 title: "ATS"
-category: "Add-ons"
+category: "Quality Add-ons"
 menu_order: 10
 ---
 

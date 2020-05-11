@@ -14,7 +14,7 @@ On the **Feedback** page of the Developer Portal, you can view and manage the fe
 
 This feedback comes from different sources:
 
-* Submitted via the [Mendix Feedback Widget](use-feedback-widget)
+* Submitted via the [Mendix Feedback widget](/appstore/widgets/mendix-feedback)
 * Submitted on the **Feedback** page itself (for details, see the [Actions](#actions) section, below)
 * Submitted in Mendix Studio (for more information, see [Buzz](/studio/buzz))
 
@@ -120,7 +120,3 @@ Once a feedback item is connected to a user story, the user who submitted the st
 
 * Adding a story with feedback attached from your backlog to a Sprint will result in a message that the item has been planned
 * Completing a Sprint that contains a story with feedback attached will result in a message that the item has been completed
-
-## 5 Main Documents in This Category
-
-* [Use the Mendix Feedback Widget](use-feedback-widget)

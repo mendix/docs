@@ -149,7 +149,7 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 #### Feedback & Support
 
-* We removed the [Mendix Feedback Widget](https://appstore.home.mendix.com/link/app/199/) from the Developer Portal. If you want to report an issue or ask a question, please submit a ticket at [Mendix Support](https://support.mendix.com).
+* We removed the [Mendix Feedback](/appstore/widgets/mendix-feedback) widget from the Developer Portal. If you want to report an issue or ask a question, please submit a ticket at [Mendix Support](https://support.mendix.com).
 
 ### January 3rd, 2019
 
@@ -371,7 +371,7 @@ The Web Modeler can now be enabled for all types of apps. You can do this on the
 #### Fixes
 
 * A story in a completed Sprint no longer disappears when you open the details view.
-* The Mendix Feedback Widget now supports reporting feedback from pages with very long URLs.
+* The Mendix Feedback widget now supports reporting feedback from pages with very long URLs.
 
 ### June 7th, 2017
 

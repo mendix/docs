@@ -351,7 +351,7 @@ To create a new app in the MindSphere launchpad, do the following:
       connect-src 'self' 'unsafe-inline' *;
       ```
 
-      {{% alert type="info" %}}These content security policy (CSP) settings are needed to ensure that the MindSphere OS Bar and the [Mendix Feedback Widget](https://appstore.home.mendix.com/link/app/199/) are loaded correctly. You may need to set additional CSP settings if you make additional calls to other domains (for example, if you use Google maps from maps.googleapi.com).{{% /alert %}}
+      {{% alert type="info" %}}These content security policy (CSP) settings are needed to ensure that the MindSphere OS Bar and the [Mendix Feedback](/appstore/widgets/mendix-feedback) widget are loaded correctly. You may need to set additional CSP settings if you make additional calls to other domains (for example, if you use Google maps from maps.googleapi.com).{{% /alert %}}
 
       ![](attachments/deploying-to-mindsphere/image14.png)
 

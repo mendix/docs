@@ -8,11 +8,11 @@ tags: ["mobile", "feedback", "widget", "ios"]
 
 ## 1 Introduction
 
-When you first start a Mendix hybrid mobile app for iOS, the feedback button doess not work, due to an iOS security policy  whereby the application is only allowed to make requests and load content from `file:///` URLs. Because the content in the feedback widget is hosted at `https://sprintr.home.mendix.com`, the widget does not work 
+When you first start a Mendix hybrid mobile app for iOS, the feedback button from the [Mendix Feedback](/appstore/widgets/mendix-feedback) widget will not work. This is due to an iOS security policy whereby the application is only allowed to make requests and load content from `file:///` URLs. Because the content in the feedback widget is hosted at `https://sprintr.home.mendix.com`, the widget will not work 
 
 **This how-to will teach you how to do the following:**
 
-* Configure your hybrid mobile app to allow access to the Developer Portal feedback portal in your iOS hybrid app
+* Configure your iOS hybrid mobile app to allow access to the Developer Portal [feedback management](/developerportal/collaborate/feedback) functionality
 
 ## 2 Prerequisites
 
@@ -36,5 +36,4 @@ For more information on the Cordova Whitelist plugin, see [cordova-plugin-whitel
 
 ## 4 Read More
 
-* [Use the Mendix Feedback Widget](/developerportal/collaborate/use-feedback-widget)
-* [Feedback](/developerportal/collaborate/feedback)
+* [Feedback Management](/developerportal/collaborate/feedback)

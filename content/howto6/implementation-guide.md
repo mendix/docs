@@ -63,9 +63,10 @@ invisible to the user.
 
 The PushNotifications module contains a microflow named `AfterStartup_PushNotifications` which will start the connectors for FCM and APNs for you. Call this microflow from your AfterStartup microflow.
 
-If your project already has a microflow set to execute after startup, we suggest to change your startup microflow to a new microflow, from where you call both after startup microflows.
+If your project already has a microflow set to execute after startup, we suggest to change your startup microflow to a new microflow, from where you call both after startup microflows. Reference the microflow below:
 
-<iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/02c590e5-f8bf-4f0e-90d6-3719390ee863/onstartupacsandpushnotifications?embed=true" allowfullscreen=""></iframe>
+![](attachments/19955732/after-startup-microflow.png)
+
 
 ### 3.5 Step 5 – Set up the Administration Pages
 

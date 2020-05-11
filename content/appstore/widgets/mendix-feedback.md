@@ -54,7 +54,7 @@ When you have left your feedback, you need to exit the feedback mode by clicking
 ![](attachments/feedback/exit.png)
 
 {{% alert type="info" %}}
-For details on how to see all the feedback you have submitted, see the [Feedback](../mendix-profile/index#feedback) section of *Mendix Profile*.
+For details on how to see all the feedback you have submitted, see the [Feedback](/developerportal/mendix-profile/#feedback) section of *Mendix Profile*.
 {{% /alert %}}
 
 #### 2.1.2 Editing the App
@@ -123,7 +123,7 @@ You can configure the widget for certain actions in your app project (for exampl
 
 The feedback feature requires the following properties to be set:
 
-* **Project** tab > **App ID** – the unique identifier of your app project available in your app's [General](../settings/general-settings) settings in the Developer Portal
+* **Project** tab > **App ID** – the unique identifier of your app project available in your app's [General](/developerportal/settings/general-settings) settings in the Developer Portal
 * **Advanced** tab > **Feedback server location** – the URL of the Developer Portal server (usually `https://sprintr.home.mendix.com`)
 
 For the best user experience, your are strongly encouraged to apply Mendix SSO to your app and connect the [Mendix SSO](/appstore/modules/mendix-sso) module to version 8.2.1 or above of the Mendix Feedback widget. For version 8.1.0 or above of the widget, you need to set the following:
@@ -186,7 +186,7 @@ To provide feedback via the earlier versions of the Mendix Feedback widget, foll
 After clicking **Send feedback**, the feedback will go straight to the [Feedback](index) page of the app project in the Developer Portal.
 
 {{% alert type="info" %}}
-For details on how to see all the feedback you have submitted, see the [Feedback](../mendix-profile/index#feedback) section of *Mendix Profile*.
+For details on how to see all the feedback you have submitted, see the [Feedback](/developerportal/mendix-profile/#feedback) section of *Mendix Profile*.
 {{% /alert %}}
 
 ### 3.2 Configuring the Widget in Your App Project

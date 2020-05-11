@@ -12,5 +12,5 @@ To make your development life a little easier, here is a list of helpful third-p
 * [Firefox DevTools](https://www.mozilla.org/en-US/firefox/developer/?utm_source=firebug&utm_medium=lp&utm_campaign=switch&utm_content=landingpage) – these developer tools replace [Firebug](https://getfirebug.com/), which is no longer being supported
 * [Selenium](https://www.seleniumhq.org/) – tools for automating web browsers
 * [Eclipse](http://www.eclipse.org/downloads/) – tools for writing and debugging Java actions (for more information, see [Using Eclipse](/refguide/using-eclipse))
-* [SOAP UI](https://www.soapui.org/) – REST and SOAP testing tools (for details, see [How to Test Web Services Using SoapUI](/howto/testing/testing-web-services-using-soapui))
-* [Visual Studio Code](https://code.visualstudio.com/) – a powerful code editor
+* [SOAP UI](https://www.soapui.org/) – REST and SOAP testing tools (for more information, see [How to Test Web Services Using SoapUI](/howto/testing/testing-web-services-using-soapui))
+* [Visual Studio Code](https://code.visualstudio.com/) – a powerful code editor (especially useful for maintaining your theme)

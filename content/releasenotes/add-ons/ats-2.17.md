@@ -17,9 +17,9 @@ parent: "ats-2"
 
 ## 2.17
 
-**Release date: April 30th 2020**
+**Release date: April 30th, 2020**
 
-### Mendix 8.9 compatibility
+### Mendix 8.9 Compatibility
 
 Apps built with [Mendix 8.9](../studio-pro/8.9) can now be tested and recorded using ATS.
 

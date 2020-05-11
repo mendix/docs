@@ -15,7 +15,7 @@ parent: "ats-2"
 
 * When running scheduled test cases/suites, if there was a problem running one of the schedules, this blocked the execution of all scheduled items. This is now fixed so that an error in one schedule does not block other schedules from running.
 
-## 2.17
+## 2.17.0
 
 **Release date: April 30th, 2020**
 

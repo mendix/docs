@@ -10,7 +10,7 @@ Mendix Studio Pro and Studio contain a lot of out-of-the-box widgets such as dat
 
 This guide presents documentation on configuring and using the latest versions of [platform-supported](/appstore/general/app-store-content-support#category) App Store components.
 
-For the Studio Pro version required for use, when the component was published, and other information on a component, please see the specific component page in the [Mendix App Store](https://appstore.home.mendix.com/).
+For details on the Studio Pro version required for use and when the component was published, please see the specific component page in the [Mendix App Store](https://appstore.home.mendix.com/).
 
 ## 2 Document Categories
 
@@ -21,3 +21,7 @@ The *App Store Guide* is divided into the following categories:
 * [Modules](modules/index)
 * [Themes](themes/index)
 * [Widgets](widgets/index)
+
+## 3 Read More
+
+* [App Store Release Notes](/releasenotes/app-store/)

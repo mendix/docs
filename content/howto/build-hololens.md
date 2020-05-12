@@ -4,6 +4,7 @@ parent: "ar-parent"
 menu_order: 20
 description: "In this how-to you will learn to build Mendix applications for the first generation Hololens."
 tags: ["AR", "VR", "Hololens", "mixed reality"]
+nosearch: true
 ---
 
 ## 1 Introduction

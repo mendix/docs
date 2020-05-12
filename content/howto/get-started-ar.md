@@ -4,6 +4,7 @@ parent: "ar-parent"
 menu_order: 10
 description: "In this how-to you will make a 3D cube by dragging and dropping widgets into your Mendix app."
 tags: ["AR", "VR", "Hololens", "mixed reality"]
+nosearch: true
 ---
 
 ## 1 Introduction

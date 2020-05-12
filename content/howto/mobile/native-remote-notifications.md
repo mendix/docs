@@ -39,7 +39,7 @@ To install your module, do the following:
 
 	{{% image_container width="300" %}}![Capabilities](attachments/native-remote-push/modeler/setEncryption.png){{% /image_container %}}
 
-1. Add the [Push Notifications Connector](https://appstore.home.mendix.com/link/app/3003/) module to your app project.
+1. Add the [Push Notifications Connector](/appstore/modules/push-notifications) module to your app project.
 
 ### 3.2 Setting Up a Notification Widget
 

@@ -21,7 +21,7 @@ The Mendix push notifications functionality makes it easy for developers to incl
 To use push notifications, make sure you have the following:
 
 * Mendix Studio Pro from the [App Store](https://appstore.home.mendix.com/link/modeler)
-* The Mendix [Push Notifications Connector](https://appstore.home.mendix.com/link/app/3003/)
+* The Mendix [Push Notifications Connector](/appstore/modules/push-notifications)
 * A mobile device (to get started, we recommend an Android device connected to your development machine via a data cable)
 * An [Adobe PhoneGap Build](https://build.phonegap.com/) account
 

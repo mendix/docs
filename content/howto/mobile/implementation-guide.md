@@ -140,4 +140,4 @@ Please note that a free PhoneGap Build account is limited to a single applicatio
 ## 11 Read More
 
 * [Microflows](/refguide/microflows)
-* [Test the Implementation](testing-the-implementation)
+* [Test the Push Notifications Implementation](testing-the-implementation)

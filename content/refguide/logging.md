@@ -35,7 +35,7 @@ This should be used for debugging systems during development, but never in a pro
 
 This is the most verbose logging level, and can be used if you want even more fine-grained logging than debug.
 
-## 3 Log nodes
+## 3 Log Nodes
 
 This section will provide some details on specific log nodes.
 

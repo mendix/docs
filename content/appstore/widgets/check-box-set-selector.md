@@ -45,4 +45,4 @@ The [Check Box Set Selector](https://appstore.home.mendix.com/link/app/121/) wid
 
 ## 3 Read More
 
-* [Check Box Set Selector (ATS)](https://docs.mendix.com/addons/ats-addon/rg-one-checkbox-set-selector)
+* [Check Box Set Selector (ATS)](/addons/ats-addon/rg-one-checkbox-set-selector)

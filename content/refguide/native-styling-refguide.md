@@ -1064,27 +1064,27 @@ A main object has four objects.
 
 | Element                    | Style Properties | Description                                                                                                      |
 | ----------------------------| --- | ---------------------------------------------------------------------------------------------------------------- |
-| basic      | BasicItemStyle |Styles items.                                                                                                   |
-| buttonContainer | ViewStyle | Styles the wrapper view of triggerer since there could be multiple elements, and it has to be wrapped in a view. |
-| container       | ViewStlye | Styles the wrapper view around the whole menu.                                                                  |
+| basic      | `BasicItemStyle` |Styles items.                                                                                                   |
+| buttonContainer | This has all ViewStyle properties. | Styles the wrapper view of triggerer since there could be multiple elements, and it has to be wrapped in a view. |
+| container       | This has all ViewStyle properties. | Styles the wrapper view around the whole menu.                                                                  |
 
 #### BasicItemStyle
 
 | Element                   | Style Properties |  Description                                      |
 | ---------------------------| ---- | ------------------------------------------------ |
-| containerStyle | ViewStyle | Styles the wrapper container around a basic item. |
+| containerStyle | This has all ViewStyle properties. | Styles the wrapper container around a basic item. |
 | itemStyle | ItemStyle      | Styles the basic items.                         |
-| dividerColor | string      | Styles the divider color.                         |
+| dividerColor | `string`      | Styles the divider color.                         |
 
 #### ItemStyle
 
 | Element                | Style Properties                     | Description                                                                                      |
 | ----------------------------------------| ----- | ------------------------------------------------------------------------------------------------ |
-| ellipsizeMode | 'head', 'middle', 'tail', or 'clip' | Styles how the text will be clipped if its too long. |
-| defaultStyle |  TextStyle                | Styles all basic menu items which have the `default` style selected.                                 |
-| primaryStyle |  TextStyle                | Styles all basic menu items which have the `primary` style selected.                                 |
-| dangerStyle |  TextStyle                 | Styles all basic menu items which have the `danger` style selected.                                  |
-| customStyle |  TextStyle                 | Styles all basic menu items which have the `custom` style selected.                                  |
+| ellipsizeMode | `head`, `middle`, `tail`, or `clip` | Styles how the text will be clipped if its too long. |
+| defaultStyle |  This has all TextStyle properties.                | Styles all basic menu items which have the `default` style selected.                                 |
+| primaryStyle |  This has all TextStyle properties.                | Styles all basic menu items which have the `primary` style selected.                                 |
+| dangerStyle |  This has all TextStyle properties.                 | Styles all basic menu items which have the `danger` style selected.                                  |
+| customStyle |  This has all TextStyle properties.                 | Styles all basic menu items which have the `custom` style selected.                                  |
 
 The default class to style all popup menus is named `com_mendix_widget_native_popupmenu_PopupMenu`.
 
@@ -1134,7 +1134,7 @@ export myCarouselStyle = {
 
 | Element                | Style Properties                               | Description                                                                                    |
 | -----------------------|-------------------------------- | ---------------------------------------------------------------------------------------------- |
-| container | ViewStyle                                   | Styles the view surrounding the carousel widget. For best results, make sure to give a fixed "height".                             |
+| container | This has all ViewStyle properties.                                   | Styles the view surrounding the carousel widget. For best results, make sure to give a fixed `height`.                             |
 | cardLayout | LayoutStyle | Styles the carousel when the layout is set to card  |
 | fullWidthLayout | LayoutStyle                             | Styles the carousel when the layout is set to full width.                 |
 
@@ -1142,20 +1142,20 @@ export myCarouselStyle = {
 
 | Element                | Style Properties                               | Description                                                                                    |
 | -----------------------|-------------------------------- | ---------------------------------------------------------------------------------------------- |
-| slideItem | ViewStyle                                   | Styles the view surrounding each slide, including inactive slides.                             |
-| inactiveSlideItem | { opacity?: number, scale?: number} | `inactiveSlideOpacity` and `inactiveSlideScale`, will allow inactive slides smaller and faded. |
-| indicator | { color: string}                             | Styles the loading indicator which will be shown while the carousel is loading.                 |
+| slideItem | This has all ViewStyle properties.                                   | Styles the view surrounding each slide, including inactive slides.                             |
+| inactiveSlideItem | `opacity: number, scale: number` | `inactiveSlideOpacity` and `inactiveSlideScale`, will allow inactive slides smaller and faded. |
+| indicator | `color: string`                             | Styles the loading indicator which will be shown while the carousel is loading.                 |
 | pagination | Pagination                                 | Styles pagination container, dots, active dots, and text.                                        |
 
 #### Pagination
 
 | Element | Style Properties                                                                         | Description                                                                                                    |
 | ---------|------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------- |
-| container | ViewStyle                                                              | Styles the main view around pagination, regardless of text or dot.                                             |
-| dotStyle | All ViewStyle properties + color: string                                              | Styles all the pagination dots.                                                                                |
-| inactiveDotStyle|  All ViewStyle properties + {opacity: number; scale: number; color: string}; | Additional styles for inactive dots. Will be merged with dotStyle.                                             |
-| dotContainerStyle | ViewStyle                                                      | Styles the view around individual pagination dots.                                                              |
-| text | TextStyle                                                                   | Will be applied when there are more than five elements in carousel, in which case pagination buttons become text like **1/5**. |
+| container | This has all ViewStyle properties.                                                              | Styles the main view around pagination, regardless of text or dot.                                             |
+| dotStyle | All ViewStyle properties + `color: string`                                              | Styles all the pagination dots.                                                                                |
+| inactiveDotStyle|  All ViewStyle properties + `opacity: number; scale: number; color: string` | Additional styles for inactive dots. Will be merged with `dotStyle`.                                             |
+| dotContainerStyle | This has all ViewStyle properties.                                                      | Styles the view around individual pagination dots.                                                              |
+| text | This has all TextStyle properties.                                                                   | Will be applied when there are more than five elements in carousel, in which case pagination buttons become text like **1/5**. |
 
 The default class to style all popup menus is named `com_mendix_widget_native_carousel_Carousel`.
 

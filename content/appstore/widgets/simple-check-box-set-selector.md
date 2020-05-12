@@ -8,41 +8,28 @@ tags: ["app store", "app store component", "widget", "simple check box set selec
 
 ## 1 Introduction
 
-The [Simple Check Box Set Selector](https://appstore.home.mendix.com/link/app/2349/) enables you to render your reference set association as a check box list. It is a useful replacement for the default [reference set selector](/refguide/reference-set-selector).
-
+The [Simple Check Box Set Selector](https://appstore.home.mendix.com/link/app/2349/) enables rending a reference set association as a check box list. It is a useful replacement for the default [reference set selector](/refguide/reference-set-selector).
 
 ### 1.1 Typical Usage Scenario
 
-* Visualizing all possible options in your UI, instead of forcing your user to open a pop-up window to reference available options.
-
-
+* Visualizing all possible options in your UI, instead of forcing your user to open a pop-up window to reference available options
 
 ### 1.2 Features
 
+* Displaying a list horizontally or vertically
+* Optionally showing a label
+* Attaching a microflow to the on-change event
 
+## 2 Installation
 
-### 1.3 Limitations
-
-
-
-## 2 Properties
-
+After importing the widget into your app project, add it to a [data view](/refguide/data-view) on a page. Then, configure the properties to determine how the widget will behave in your application.
 
 ## 3 Read More
 
+* [Simple Check Box Set Selector](/addons/ats-addon/rg-one-simple-checkbox-set-selector) for ATS in the *Quality Add-ons Guide*
 
 
 
 
 
 
-## Typical usage scenario
-
-## Features and limitations
- 
-- Displaying the list in a horizontal or vertical direction.
-- Option to show a label(as is done for input widgets since Mx 5.18)
-- Attaching a microflow on the onchange event.
-
-## Installation
-Import the widget to your project and add it to a dataview on a page. Configure the properties to determine how the widget will behave in your application.

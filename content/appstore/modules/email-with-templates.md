@@ -23,7 +23,7 @@ The typical usage scenario is sending emails with a template system and using to
 
 #### 1.2.2 Java Libraries
 
-* *commons-codec-1.10.jar*
+* *commons-codec-1.14.jar*
 * *commons-email-1.4.0.jar*
 * *javax.mail-1.6.0.jar*
 

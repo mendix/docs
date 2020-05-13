@@ -88,7 +88,7 @@ This module enables your project to retrieve emails from POP3, POP3S, IMAP, and 
 
 [Click to download in the Mendix App Store.](/appstore/modules/imap)
 
-## 12 MxSMTP Module
+## 12 Mx SMTP Module
 
 [![](attachments/18448690/mxsmtp.png)](/appstore/modules/mxsmtp)
 

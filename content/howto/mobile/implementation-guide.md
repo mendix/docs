@@ -19,7 +19,7 @@ This how-to will walk you through the steps needed to implement push notificatio
 
 ## 2 Importing the PushNotifications Module from the App Store
 
-The [Push Notifications Connector module](https://appstore.home.mendix.com/link/app/3003/) is published in the Mendix App Store. To import it into your project, click **App Store** in the top right of Mendix Studio Pro, which will open the App Store in a new tab. Search for "Push Notifications Connector" and click the title of the result:
+The [Push Notifications Connector](/appstore/modules/push-notifications) module is published in the Mendix App Store. To import it into your project, click **App Store** in the top right of Mendix Studio Pro, which will open the App Store in a new tab. Search for "Push Notifications Connector" and click the title of the result:
 
 ![](attachments/19955732/20218020.png)
 
@@ -140,4 +140,4 @@ Please note that a free PhoneGap Build account is limited to a single applicatio
 ## 11 Read More
 
 * [Microflows](/refguide/microflows)
-* [Test the Implementation](testing-the-implementation)
+* [Test the Push Notifications Implementation](testing-the-implementation)

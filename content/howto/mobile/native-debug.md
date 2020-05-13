@@ -62,4 +62,4 @@ After running `react-devtools` you will see the React developer tools GUI. To us
 
 * [Get Started with Native Mobile](getting-started-with-native-mobile)
 * [Debug a Mobile App with Mendix](debug-a-mobile-app)
-* [Work with Parallels](using-mendix-studio-pro-on-a-mac)
+* [Build Native Mobile Apps with Parallels](using-mendix-studio-pro-on-a-mac)

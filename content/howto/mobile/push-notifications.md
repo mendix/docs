@@ -11,7 +11,7 @@ Push notifications enable your app to notify a user of events, even if the user 
 
 The Mendix push notifications solution consists of these two parts:
 
-* **PushNotifications module** – this is the "server-side" component responsible for sending push notifications to FCM/APNs, which will in turn send the notifications to the user devices
+* [Push Notifications Connector](/appstore/modules/push-notifications) module – this is the "server-side" component responsible for sending push notifications to FCM/APNs, which will in turn send the notifications to the user devices
 * **PushNotifications widget** – this resides in the hybrid mobile (PhoneGap) app and is responsible for the application's interaction with FCM/APNs (via the PhoneGap Push Plugin) in terms of registering the devices with these services and handling the push notifications received from them
 
 The Mendix push notifications functionality makes it easy for developers to include push notification capabilities in their Mendix hybrid mobile apps.
@@ -21,7 +21,7 @@ The Mendix push notifications functionality makes it easy for developers to incl
 To use push notifications, make sure you have the following:
 
 * Mendix Studio Pro from the [App Store](https://appstore.home.mendix.com/link/modeler)
-* The Mendix [Push Notifications Connector](https://appstore.home.mendix.com/link/app/3003/)
+* The Mendix [Push Notifications Connector](/appstore/modules/push-notifications)
 * A mobile device (to get started, we recommend an Android device connected to your development machine via a data cable)
 * An [Adobe PhoneGap Build](https://build.phonegap.com/) account
 

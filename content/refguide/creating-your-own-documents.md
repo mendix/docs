@@ -141,11 +141,22 @@ In this example, you retrieved the **OrderLine** information via the **Entity (p
 
 In addition to out-of-the-box Mendix functions, there are two other ways of generating documents with your Mendix app.
 
-### 5.1 App Store Module
+### 5.1 App Store Modules
 
-In the Mendix App Store, [Document generation 4 Mendix](https://appstore.home.mendix.com/link/app/2026/) is available.
+#### 5.1.1 Document generation 4 Mendix
+
+Available in the Mendix App Store, [Document generation 4 Mendix](https://appstore.home.mendix.com/link/app/2026/).
 
 For more information on this way of working, see [Document Generation for Mendix, Finally](http://www.appronto.nl/over-appronto/blog/word-merging-for-mendix-finally).
+
+#### 5.1.2 Templator - Document (PDF) generation alternative
+
+Available in the Mendix App Store, [Templator - Document (PDF) generation alternative](https://appstore.home.mendix.com/link/app/114043/).
+
+Templator is a Mendix module that lets developers generate PDF files using standard Mendix components. Because normal pages are used to generate the documents all styling (rounded corners ✅) and all built-in & app store widgets (charts ✅) are supported out of the box.
+
+For more information on this way of working, see [Templator - Homepage](https://www.notion.so/gajduk/Templator-d35db3ba165346e3b243d6695636ccd4).
+
 
 ### 5.2 Java API
 

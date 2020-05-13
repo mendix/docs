@@ -93,7 +93,7 @@ These are the `OPTIONS`:
 | --- | --- |
 | `mx create-project` | Creates a project in the current folder using all default parameters. |
 | `mx create-project --app-name "MyFirstApp" --output-dir "C:/Projects/MyFirstApp"` | Creates a project named `MyFirstApp` in `C:/Projects/MyFirstApp` folder using all default parameters. |
-| `mx create-project` "C:/Templates/ExpenseReportTemplate.mpk" | Creates a project with default parameters from a template located at `C:/Templates/ExpenseReportTemplate.mpk` |
+| `mx create-project "C:/Templates/ExpenseReportTemplate.mpk"` | Creates a project with default parameters from a template located at `C:/Templates/ExpenseReportTemplate.mpk` |
 
 #### 3.2.3 Return Codes 
 

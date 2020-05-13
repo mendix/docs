@@ -62,7 +62,7 @@ The following log nodes are used by Mendix when writing log messages.
 | DocumentExplorer | Logs messages related to the templating engine that generates documents. |
 | FileDocumentSizesPopulateJob | Logs messages for a background job that populates the file-size field in the database for documents that do not have that field filled (used during legacy migration). |
 | I18NProcessor | Logs messages related to translation of the app. |
-| JSON | See [JSON](#json), below, for more information |
+| JSON | JSON messages from the Mendix Client to the Runtime Server. See [JSON](#json), below, for more information |
 | Jetty | Logs messages from the internal Jetty webserver that handles HTTP requests between the runtime and the outside world. |
 | LocalFileSystemStore | Logs messages related to file handling if you are using local file system as your file store. |
 | Logging | Logs messages related to the logging framework used by Mendix. |
@@ -83,6 +83,6 @@ The following log nodes are used by Mendix when writing log messages.
 
 ### 3.2 JSON{#json}
 
-Has only one relevant level, which is debug.
+Has only one relevant level: *Debug*.
 
-Setting this log level to debug will show you all the JSON requests and responses from client to server. This may degrade performance as this output is normally done streaming. This can also be used to gain insight in what users are doing in a production environment. When using it here, make sure you have enough disk space available for your log files though.
+Setting this log level to debug will show you all the JSON requests and responses from the Mendix Client to the Runtime Server. This may degrade performance as this output is normally streamed. This can also be used to gain insight in what users are doing in a production environment. When using it here, make sure you have enough disk space available for your log files though.

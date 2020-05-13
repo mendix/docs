@@ -5,7 +5,7 @@ menu_order: 10
 description: "In this how-to you will make a 3D cube by dragging and dropping widgets into your Mendix app."
 tags: ["AR", "VR", "Hololens", "mixed reality"]
 nosearch: true
-sitemap: false
+disable_sitemap: true
 ---
 
 ## 1 Introduction

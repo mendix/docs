@@ -45,38 +45,38 @@ The following log nodes are used by Mendix when writing log messages.
 
 | Log Node | Description
 | --- | --- |
-| ActionManager | |
-| Configuration | |
-| ConnectionBus | General logging related to database startup, synchronization and connections management for Mendix |
-| ConnectionBus_Mapping | Information relating to the translations of XPath Queries and OQL text queries to OQL Queries |
-| ConnectionBus_Queries | Deprecated: This is a legacy node |
-| ConnectionBus_Retrieve | All information related to the retrieval of data, such as: Incoming requests from the application, the executed statement. Also logs issues encountered during the processing of the received data |
-| ConnectionBus_Security | Information regarding access rights needed to access the database |
-| ConnectionBus_Synchronize | Deprecated: This is a legacy node |
-| ConnectionBus_Update | All information related to the update of data in the database. Incoming storage requests, the executed statements and issues encountered during storage |
-| ConnectionBus_Validation | Information related modification of the existing database, and database migration |
+| ActionManager | Log messages related to action scheduling (e.g. scheduled events) and action execution (e.g. running microflows). |
+| Configuration | Logging related to the configuration of the Mendix app that is read in at startup. |
+| ConnectionBus | General logging related to database startup, synchronization and connections management for Mendix. |
+| ConnectionBus_Mapping | Information relating to the translations of XPath Queries and OQL text queries to OQL Queries. |
+| ConnectionBus_Queries | Deprecated: This is a legacy node. |
+| ConnectionBus_Retrieve | All information related to the retrieval of data, such as: Incoming requests from the application, the executed statement. Also logs issues encountered during the processing of the received data. |
+| ConnectionBus_Security | Information regarding access rights needed to access the database. |
+| ConnectionBus_Synchronize | Deprecated: This is a legacy node. |
+| ConnectionBus_Update | All information related to the update of data in the database. Incoming storage requests, the executed statements and issues encountered during storage. |
+| ConnectionBus_Validation | Information related modification of the existing database, and database migration. |
 | Connector | |
-| Core | |
-| DataStorage_QueryHandling | |
-| DataStorage_QueryPlan | Query execution plan information for installations (currently only supported for PostgreSQL databases)|
-| DocumentExplorer |
-| FileDocumentSizesPopulateJob | |
-| I18NProcessor | |
+| Core | Logs messages from the core runtime. This can be startup of the runtime, version of the runtime, license being used and issues related to interpreting the model. |
+| DataStorage_QueryHandling | Logs messages related to the queries that are being executed. |
+| DataStorage_QueryPlan | Query execution plan information for installations (currently only supported for PostgreSQL databases). |
+| DocumentExplorer | Logs messages related to the templating engine that generates documents. |
+| FileDocumentSizesPopulateJob | Logs messages for a background job that populates the file-size field in the database for documents that do not have that field filled (used during legacy migration). |
+| I18NProcessor | Logs messages related to translation of the app. |
 | JSON | See [JSON](#json), below, for more information |
-| Jetty | |
-| LocalFileSystemStore | |
-| Logging | |
-| MicroflowDebugging | |
-| MicroflowEngine | |
+| Jetty | Logs messages from the internal Jetty webserver that handles HTTP requests between the runtime and the outside world. |
+| LocalFileSystemStore | Logs messages related to file handling if you are using local file system as your file store. |
+| Logging | Logs messages related to the logging framework used by Mendix. |
+| MicroflowDebugging | Log messages related to the status of the microflow debugger, e.g. connection status, incoming and outgoing requests, etc. |
+| MicroflowEngine | Log messages related to microflow execution, e.g. which microflow / microflow action is being executed and errors that occur during the execution. |
 | ModelStore | |
 | Module | |
-| ObjectManagement | |
-| QueryParser | |
+| ObjectManagement | Logs messages for modules that are loaded on-demand in the core runtime like the microflow-engine. |
+| QueryParser | Logs messages related to the parsing or interpretation of XPath and OQL queries. |
 | REST Publish | |
 | RequestStatistics | |
 | Services | |
-| StorageAzure | |
-| StorageS3 | |
+| StorageAzure | Logs messages related to file handling if you are using Azure system as your file store. |
+| StorageS3 | Logs messages related to file handling if you are using Amazon S3 system as your file store. |
 | StorageSwift | |
 | WebServices | |
 | WebUI | |

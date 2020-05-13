@@ -143,20 +143,17 @@ In addition to out-of-the-box Mendix functions, there are two other ways of gene
 
 ### 5.1 App Store Modules
 
-#### 5.1.1 Document generation 4 Mendix
+#### 5.1.1 Document Generation for Mendix
 
-Available in the Mendix App Store, [Document generation 4 Mendix](https://appstore.home.mendix.com/link/app/2026/).
+The [Document Generation for Mendix](https://appstore.home.mendix.com/link/app/2026/) module is available in the Mendix App Store for your use. 
 
 For more information on this way of working, see [Document Generation for Mendix, Finally](http://www.appronto.nl/over-appronto/blog/word-merging-for-mendix-finally).
 
-#### 5.1.2 Templator - Document (PDF) generation alternative
+#### 5.1.2 Templator - Document (PDF) Generation Alternative 
 
-Available in the Mendix App Store, [Templator - Document (PDF) generation alternative](https://appstore.home.mendix.com/link/app/114043/).
+Also available in the Mendix App Store, the [Templator - Document (PDF) Generation Alternative](https://appstore.home.mendix.com/link/app/114043/) module lets you generate PDF files using standard Mendix components. Because normal pages are used to generate the documents, all styling (for example, with rounded corners) as well as core and App Store widgets (for example, charts) are supported out of the box.
 
-Templator is a Mendix module that lets developers generate PDF files using standard Mendix components. Because normal pages are used to generate the documents all styling (rounded corners ✅) and all built-in & app store widgets (charts ✅) are supported out of the box.
-
-For more information on this way of working, see [Templator - Homepage](https://www.notion.so/gajduk/Templator-d35db3ba165346e3b243d6695636ccd4).
-
+For more information on this way of working, see [Templator](https://www.notion.so/gajduk/Templator-d35db3ba165346e3b243d6695636ccd4).
 
 ### 5.2 Java API
 

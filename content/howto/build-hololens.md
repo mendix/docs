@@ -5,6 +5,7 @@ menu_order: 20
 description: "In this how-to you will learn to build Mendix applications for the first generation Hololens."
 tags: ["AR", "VR", "Hololens", "mixed reality"]
 nosearch: true
+sitemap: false
 ---
 
 ## 1 Introduction

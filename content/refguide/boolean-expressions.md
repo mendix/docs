@@ -38,19 +38,25 @@ The examples below illustrate which value the expression returns:
 
 ### 3.1 Examples
 
-Given a domain entity instance with name "$product" that has an integer attribute "price" with value "3" and another integer attribute "recommendedPrice" with value "2", the following expression:
+The examples below illustrate which value the expression returns:
 
-```java
-($product/price < $product/recommendedPrice : 2) or ($product/price > 0)
-```
+* You have a entity called *product* that has the *price* attribute of the integer type. The *price* attribute equals 3, and you have another attribute called *recommendedPrice* that equals 2. 
 
-will return True because at least one of the expressions evaluates to True (the second one, to be precise). Note that the expression would still return True if both statements had been True.
+	If you type in the following input:
 
-The following example returns False, because both expressions evaluate to False:
+	```java
+	($product/price < $product/recommendedPrice : 2) or ($product/price 	> 0)
+	```
 
-```java
-('hello' = 'nothello') or ('byebye' = 'stillnotbyebye')
-```
+	The expression will return `true` because at least one of the 	expressions is true (the second one). Note that the expression would 	still return `true` if both statements had been true.
+
+* If you type in the following input: 
+
+	```java
+	('hello' = 'nothello') or ('byebye' = 'stillnotbyebye')
+	```
+	
+	The expression will return `false`, because both expressions are false.
 
 ## 4 not
 
@@ -66,30 +72,25 @@ Returns the negation of the specified expression. If the expression evaluates to
 
 ### 4.3 Examples
 
-```java
-not('hello' = 'hallo')
+The examples below illustrate which value the expression returns:
 
-```
+* If you type in the following input:
 
-returns:
+	```java
+	not('hello' = 'hallo')
 
-```java
-true
+	```
 
-```
+	The expression will return `true` .
 
-and
 
-```java
-not(true)
+* If you type in the following input:
 
-```
+	```java
+	not(true)
+	```
 
-returns:
+	The expression will return `false` .
 
-```java
-false
-
-```
 
 

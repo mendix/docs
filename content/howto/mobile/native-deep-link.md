@@ -1,5 +1,5 @@
 ---
-title: "Set Up Deep Links in Native Apps"
+title: "Set Up Deep Links in Native Mobile Apps"
 parent: "native-mobile"
 menu_order: 75
 description: "Connect URLs to your native app by adding a deep link."

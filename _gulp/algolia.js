@@ -169,12 +169,15 @@ const weight = (item, index) => {
 
 const parseHtmlFile = file => {
   return new Promise((resolve, reject) => {
-    if (file.content && file.meta.title) {
+    if (file.meta && file.meta.nosearch) {
+      log(`Skipping file ${file.basePath}`);
+    } else if (file.content && file.meta && file.meta.title) {
       const $ = cheerio.load(file.content);
 
       const updateTime = $('meta[property="og:updated_time"]').attr('content');
       if (updateTime) {
         const m = moment(updateTime, 'YYYY-DD-MMTHH:mm:ssZZ');
+        // @ts-ignore
         if (m._isValid) {
           file.meta.time_stamp = m.unix();
         } else {

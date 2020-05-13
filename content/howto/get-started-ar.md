@@ -15,7 +15,7 @@ Working with augmented reality (AR) is not all that different from implementing 
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Have an Android mobile device that can [support ARCore](https://developers.google.com/ar/discover/supported-devices#android_play) 
+* Have an Android mobile device that can [support ARCore](https://developers.google.com/ar/discover/supported-devices#android_play)
 * Install [Google Play Services for AR](https://play.google.com/store/apps/details?id=com.google.ar.core&hl=en) on your device
 * Install the Make It Native app on your Android mobile device for testing purposes
 
@@ -29,7 +29,7 @@ Create a new app by following these steps:
 1. Right-click **MyFirstModule** and click **Add page**.
 1. Click **Native mobile** at the top of the dialog box.
 1. When prompted with the **No NativePhone profile exists. Do you want to create it?** dialog box, click **Yes**.
-1. Select the **Blank** > **Blank** page and click **OK**. 
+1. Select the **Blank** > **Blank** page and click **OK**.
 1. On this new page, remove the empty container so you can start with a completely blank page.
 
 You will begin by embedding the following widgets into your Mendix app:
@@ -48,15 +48,15 @@ Embed the widgets in this order:
 
 Very little configuration is necessary to make your AR function. All you need is an image tracker. A tracker is an image your AR can track and put AR effects on top of. Most images can serve as a tracker, provided they have enough contrast. Complex images make for the best tracker, because they are easier for your device’s camera to track. Start by adding an image to ARImageTracker:
 
-1. Double-click your **ARImageTracker** widget. 
-1. Click **Image** > **Edit**. 
+1. Double-click your **ARImageTracker** widget.
+1. Click **Image** > **Edit**.
 1.  Select a tracker from an image collection. This image will be the foundation of your AR application and is what your camera will track:
 
 	{{% image_container width="300" %}}![Select tracker](attachments/get-started/select-marker.png){{% /image_container %}}
 
 1.  Click **Run** in Mendix Studio Pro to automatically refresh your Make It Native app. Now your **Hello World AR** app is up and running. You should now see a simple white cube rendered on top of a tracker:
 
-	{{% image_container width="300" %}}![White cube](attachments/get-started/white-cube.png){{% /image_container %}}
+	{{% image_container width="300" %}}![White cube](attachments/get-started/white-cube.jpg){{% /image_container %}}
 
 Now that you have a simple scene running, you will a closer look at the widgets you used to understand what they do.
 
@@ -78,7 +78,7 @@ The **ARImageTracker** widget allows you to track an image. Like ARContainer, th
 
 {{% image_container width="300" %}}![Sample Tracker Image](attachments/get-started/sample-tracker-image.png){{% /image_container %}}
 
-It is possible to use a more conventional image, like a company logo, as long as it has enough contrast and edges. If your image does not posses these qualities, you will notice AR elements floating in incorrect places and motion tracking failures as you move your camera. It is also possible that your image will not be recognized at all. 
+It is possible to use a more conventional image, like a company logo, as long as it has enough contrast and edges. If your image does not posses these qualities, you will notice AR elements floating in incorrect places and motion tracking failures as you move your camera. It is also possible that your image will not be recognized at all.
 
 **Orientation** — this dictates the orientation of 3D objects on your tracker, not the orientation of the tracker itself. Leaving it on **Up** will make your 3D object appear right side up when you have it lying on a table.
 
@@ -88,15 +88,15 @@ Your standard cube will not look different when turned around. To show orientati
 
 Here is a cube with the **Up** orientation:
 
-{{% image_container width="300" %}}![Cube on tracker with Up orientation](attachments/get-started/up-cube.png){{% /image_container %}}
+{{% image_container width="300" %}}![Cube on tracker with Up orientation](attachments/get-started/up-cube.jpg){{% /image_container %}}
 
 Here is a cube with the **Left** orientation:
 
-{{% image_container width="300" %}}![Cube on tracker with Left orientation](attachments/get-started/left-cube.png){{% /image_container %}}
+{{% image_container width="300" %}}![Cube on tracker with Left orientation](attachments/get-started/left-cube.jpg){{% /image_container %}}
 
 ## 4 Configuring Your ARCube Widget
 
-The **ARCube** widget will places a cube into the scene, specifically onto the **ARImageTracker** widget. There are several properties you can configure in this widget to customize its behavior. 
+The **ARCube** widget will places a cube into the scene, specifically onto the **ARImageTracker** widget. There are several properties you can configure in this widget to customize its behavior.
 
 Having the **ARCube** widget in the **ARImageTracker** widget will render a white cube the same size as the image tracker directly on top of it. Next you will configure **ARCube’s** properties.
 
@@ -112,35 +112,35 @@ In the **General** tab you can configure **Position**, **Rotation**, and **Scale
 
 	Here is a cube in **Position** (1,0,0):
 
-	{{% image_container width="300" %}}![Cube on Position (1,0,0)](attachments/get-started/first-position.png){{% /image_container %}}
+	{{% image_container width="300" %}}![Cube on Position (1,0,0)](attachments/get-started/first-position.jpg){{% /image_container %}}
 
 	Here is a cube in **Position** (0,1,0):
 
-	{{% image_container width="300" %}}![Cube on Position (0,1,0)](attachments/get-started/second-position.png){{% /image_container %}}
+	{{% image_container width="300" %}}![Cube on Position (0,1,0)](attachments/get-started/second-position.jpg){{% /image_container %}}
 
 	Here is a cube in **Position** (0,0,1):
 
-	{{% image_container width="300" %}}![Cube on Position (0,0,1)](attachments/get-started/third-position.png){{% /image_container %}}
+	{{% image_container width="300" %}}![Cube on Position (0,0,1)](attachments/get-started/third-position.jpg){{% /image_container %}}
 
 * **Rotation** — the rotation of the cube in 360 degrees. Set **Rotation** **X** to *45* to see your cube rotated 45 degrees on its X axis:
 
 	Here is a cube with **Rotation** (0,0,0):
 
-	{{% image_container width="300" %}}![Cube with Rotation (0,0,0)](attachments/get-started/rotation-zero.png){{% /image_container %}}
+	{{% image_container width="300" %}}![Cube with Rotation (0,0,0)](attachments/get-started/rotation-zero.jpg){{% /image_container %}}
 
 	Here is a cube with **Rotation** (45,0,0):
 
-	{{% image_container width="300" %}}![Cube with Rotation (45,0,0)](attachments/get-started/rotation-forty-five.png){{% /image_container %}}
+	{{% image_container width="300" %}}![Cube with Rotation (45,0,0)](attachments/get-started/rotation-forty-five.jpg){{% /image_container %}}
 
 * **Scale** — the size of the object, also relative to the tracker it is embedded in. When the **Scale** is set to *(0,0,0)* the object will be invisible. Because **1** is exactly the size of the tracker, set **Scale X**, **Y** and **Z** to *0.5* to see your cube shrink in the tracker:
 
 	Here is a cube with **Scale** (1,1,1):
 
-	{{% image_container width="300" %}}![Cube with Scale (1,1,1)](attachments/get-started/scale-one.png){{% /image_container %}}
+	{{% image_container width="300" %}}![Cube with Scale (1,1,1)](attachments/get-started/scale-one.jpg){{% /image_container %}}
 
 	Here is a cube with **Scale** (0.5,0.5,0.5):
 
-	{{% image_container width="300" %}}![Cube with Scale (0.5,0.5,0.5)](attachments/get-started/scale-half.png){{% /image_container %}}
+	{{% image_container width="300" %}}![Cube with Scale (0.5,0.5,0.5)](attachments/get-started/scale-half.jpg){{% /image_container %}}
 
 ### 4.2 Material {#material}
 
@@ -150,28 +150,28 @@ The **Material** tab contains properties for configuring appearance:
 
 * **Texture** — an image you can place on the cube by clicking **Edit**. The image will appear on each face of the cube. Put the example tracker here as a texture to end up with this colorful cube (note that the cube now ignores any **Color** value — if you want to make your cube one solid color, make sure the Texture is set to **none**):
 
-	{{% image_container width="300" %}}![Texture](attachments/get-started/sample-texture.png){{% /image_container %}}
+	{{% image_container width="300" %}}![Texture](attachments/get-started/sample-texture.jpg){{% /image_container %}}
 
 * **Color** — the color of the cube. You can have either a **Texture** or **Color**, but not both. *White* is the standard color. Change the value to *green* to make your cube appear this way:
 
-	{{% image_container width="300" %}}![Color](attachments/get-started/green-color.png){{% /image_container %}}
+	{{% image_container width="300" %}}![Color](attachments/get-started/green-color.jpg){{% /image_container %}}
 
 * **Opacity** — the clarity or opacity of the cube. *1* is fully opaque, while *0* is fully transparent. Change the color of your cube back to *white* and change the opacity value to *0.5* to see your cube become partly transparent:
 
-	{{% image_container width="300" %}}![Opacity](attachments/get-started/opacity.png){{% /image_container %}}
+	{{% image_container width="300" %}}![Opacity](attachments/get-started/opacity.jpg){{% /image_container %}}
 
-* **Lighting type** — the way light from the scene will fall on your object. 
+* **Lighting type** — the way light from the scene will fall on your object.
 	* **Phong**, **Blinn**, and **Lambert** are standard configurations of adding light and shadows to your objects. They are also have relatively slight processor power requirements.
-	* **Constant** means no light is added — just pure colors are shown. 
+	* **Constant** means no light is added — just pure colors are shown.
 	* **PBR** (Physically Based Rendering) is the most advanced. PBR takes the entire scene into account when creating its lighting, the intricacies of which are beyond this how-to. Change between the various **Lighting type** options to see them in action:
 
 	Here is a cube with **Lighting type** > **Phong**:
 
-	{{% image_container width="300" %}}![Cube with lighting type Phong](attachments/get-started/phong.png){{% /image_container %}}
+	{{% image_container width="300" %}}![Cube with lighting type Phong](attachments/get-started/phong.jpg){{% /image_container %}}
 
 	Here is a cube with **Lighting type** > **Constant**:
 
-	{{% image_container width="300" %}}![Cube with lighting type Constant](attachments/get-started/constant.png){{% /image_container %}}
+	{{% image_container width="300" %}}![Cube with lighting type Constant](attachments/get-started/constant.jpg){{% /image_container %}}
 
 ### 4.3 Interaction
 
@@ -209,7 +209,7 @@ The **Common** tab appears this way:
 
 The **Common** tab has two important properties:
 
-* **Name** — is used internally in all AR Widgets and must be unique. It can be changed, but we recommend keeping its generated name. 
+* **Name** — is used internally in all AR Widgets and must be unique. It can be changed, but we recommend keeping its generated name.
 *  **Visible** — is used to dictate the visibility of the AR component. This can be conditional just like most other widgets:
 
 	{{% image_container width="300" %}}![Visibility](attachments/get-started/visibility.png){{% /image_container %}}

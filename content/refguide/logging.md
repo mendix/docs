@@ -37,9 +37,9 @@ This is the most verbose logging level, and can be used if you want even more fi
 
 ## 3 Log Nodes
 
-This section provides some details on specific log nodes.
+This section provides some details on specific log nodes used by Mendix. It is recommended that if you write your own [log messages](log-message) you use your own log node names to avoid confusion with the Mendix log messages.
 
-### 3.1 Default Mendix Log Nodes
+### 3.1 Default Mendix Log Nodes{#mendix-nodes}
 
 The following log nodes are used by Mendix when writing log messages.
 

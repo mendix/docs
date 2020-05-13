@@ -37,9 +37,51 @@ This is the most verbose logging level, and can be used if you want even more fi
 
 ## 3 Log Nodes
 
-This section will provide some details on specific log nodes.
+This section provides some details on specific log nodes.
 
-### 3.1 JSON
+### 3.1 Default Mendix Log Nodes
+
+The following log nodes are used by Mendix when writing log messages.
+
+| Log Node | Description
+| --- | --- |
+| ActionManager | |
+| Configuration | |
+| ConnectionBus | General logging related to database startup, synchronization and connections management for Mendix |
+| ConnectionBus_Mapping | Information relating to the translations of XPath Queries and OQL text queries to OQL Queries |
+| ConnectionBus_Queries | Deprecated: This is a legacy node |
+| ConnectionBus_Retrieve | All information related to the retrieval of data, such as: Incoming requests from the application, the executed statement. Also logs issues encountered during the processing of the received data |
+| ConnectionBus_Security | Information regarding access rights needed to access the database |
+| ConnectionBus_Synchronize | Deprecated: This is a legacy node |
+| ConnectionBus_Update | All information related to the update of data in the database. Incoming storage requests, the executed statements and issues encountered during storage |
+| ConnectionBus_Validation | Information related modification of the existing database, and database migration |
+| Connector | |
+| Core | |
+| DataStorage_QueryHandling | |
+| DataStorage_QueryPlan | Query execution plan information for installations (currently only supported for PostgreSQL databases)|
+| DocumentExplorer |
+| FileDocumentSizesPopulateJob | |
+| I18NProcessor | |
+| JSON | See [JSON](#json), below, for more information |
+| Jetty | |
+| LocalFileSystemStore | |
+| Logging | |
+| MicroflowDebugging | |
+| MicroflowEngine | |
+| ModelStore | |
+| Module | |
+| ObjectManagement | |
+| QueryParser | |
+| REST Publish | |
+| RequestStatistics | |
+| Services | |
+| StorageAzure | |
+| StorageS3 | |
+| StorageSwift | |
+| WebServices | |
+| WebUI | |
+
+### 3.2 JSON{#json}
 
 Has only one relevant level, which is debug.
 

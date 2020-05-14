@@ -20,10 +20,9 @@ This how-to explains how you can secure your app, create user roles, and open ac
 
 The how-to describes the following use case: 
 
-There is a car rental company that has a car rental app. Customers can register there and pick a car to rent; front-desk agents rent out cars to customers, adding such information as which car has been rented to  which customer and dates when the car was picked-up and dropped-off. Managers should be able to access all information. So, there are three types of users: customers, managers, and front-desk agents. You would like them to access the following information:
+There is a car rental company that has a car rental app. Customers can register there, pick a car to rent, and fill in a car rental form, adding such information as which car has been rented to  which customer and dates when the car was picked-up and dropped-off; front-desk agents also have an access to a car rental form, adding such information as which car has been rented to  which customer and dates when the car was picked-up and dropped-off. So, there are two types of users: customers and front-desk agents. You would like them to access the following information:
 
-* Managers – all information
-* Customers – their profile and details about a car
+* Customers – their profile, details about a car, and a car rental form
 * Front-desk agents – details about a car, a car rental form
 
 The domain model of this app looks the following way:

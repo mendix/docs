@@ -87,8 +87,7 @@ The Mendix Client uses a REST-like protocol to request data from the Runtime Ser
       "count":true,
       "aggregates":false
    },
-   "context":[
-   ],
+   "context":[],
    "profiledata":{
       "204ee5ad0c056a0":15
    }
@@ -120,7 +119,33 @@ Depending on the data displayed and the domain model (for example the security a
 The response of the Runtime Server to the Mendix Client is as follows:
 
 ```json
-{"count":2,"mxobjects":[{"objectType":"MyFirstModule.Employee","guid":"281474976710757","attributes":{"Firstname":{"value":"peter1"},"DateOfBirth":{"value":-315622800000},"Jobtitle":{"value":"sales"},"Department":{"value":"sales"},"Lastname":{"value":"jones"&#125;&#125;},{"objectType":"MyFirstModule.Employee","guid":"281474976710657","attributes":{"Firstname":{"value":"piet"},"DateOfBirth":{"value":476406000000},"Jobtitle":{"value":"consultant"},"Department":{"value":"expert services"},"Lastname":{"value":"jansen"&#125;&#125;}]}
+{
+   "count":2,
+   "mxobjects":[
+      {
+         "objectType":"MyFirstModule.Employee",
+         "guid":"281474976710757",
+         "attributes":{
+            "Firstname":{"value":"peter1"},
+            "DateOfBirth":{"value":-315622800000},
+            "Jobtitle":{"value":"sales"},
+            "Department":{"value":"sales"},
+            "Lastname":{"value":"jones"}
+         }
+      },
+      {
+         "objectType":"MyFirstModule.Employee",
+         "guid":"281474976710657",
+         "attributes":{
+            "Firstname":{"value":"piet"},
+            "DateOfBirth":{"value":476406000000},
+            "Jobtitle":{"value":"consultant"},
+            "Department":{"value":"expert services"},
+            "Lastname":{"value":"jansen"}
+         }
+      }
+   ]
+}
 ```
 
 ### 3.2 Create New Object
@@ -143,8 +168,7 @@ Create a new object:
       "objecttype":"MyFirstModule.Employee",
       "preventCache":1455032246146
    },
-   "context":[
-   ],
+   "context":[],
    "profiledata":{
       "204ee68c92aea60":27
    }
@@ -165,8 +189,7 @@ Save the object to the database:
          "DateOfBirth":-315622800000
       }
    },
-   "context":[
-   ],
+   "context":[],
    "profiledata":{
       "204ee6970d53960":18
    }
@@ -175,8 +198,17 @@ Save the object to the database:
 
 Commit the updates to the database:
 
-```java
-{"action":"commit","params":{"guid":"281474976710757"},"context":[],"profiledata":{"204ee6e9b5eddc0":25&#125;&#125;
+```json
+{
+   "action":"commit",
+   "params":{
+      "guid":"281474976710757"
+   },
+   "context":[],
+   "profiledata":{
+      "204ee6e9b5eddc0":25
+   }
+}
 ```
 
 The commit will cause the Runtime Server to save the object to the RDBMS. Before the commit, the data is only kept in the Runtime Server to optimize performance and minimize impact on the database.
@@ -212,8 +244,19 @@ The typical edit-existing-object flow consists of these steps:
 
 Save the changes to the database:
 
-```java
-{"action":"change","params":{"281474976710757":{"Firstname":"peter1"&#125;&#125;,"context":[],"profiledata":{"204ee8bb633f9a0":25&#125;&#125;
+```json
+{
+   "action":"change",
+   "params":{
+      "281474976710757":{
+         "Firstname":"peter1"
+      }
+   },
+   "context":[],
+   "profiledata":{
+      "204ee8bb633f9a0":25
+   }
+}
 ```
 
 This will trigger the following actions on the database:
@@ -236,8 +279,17 @@ The first step is required to determine all the data business logic and validati
 
 If all validations run correctly, the client can commit the changes to the database:
 
-```java
-{"action":"commit","params":{"guid":"281474976710757"},"context":[],"profiledata":{"204ee8ca8f775a0":20&#125;&#125;
+```json
+{
+   "action":"commit",
+   "params":{
+      "guid":"281474976710757"
+   },
+   "context":[],
+   "profiledata":{
+      "204ee8ca8f775a0":20
+   }
+}
 ```
 
 This will trigger the actual database update and commit.
@@ -266,8 +318,17 @@ The following sequence diagram outlines the typical delete scenario:
 
 Delete the object:
 
-```java
-{"action":"delete","params":{"guids":["281474976710757"]},"context":[],"profiledata":{"204eeae128284c0":323&#125;&#125;
+```json
+{
+   "action":"delete",
+   "params":{
+      "guids":["281474976710757"]
+   },
+   "context":[],
+   "profiledata":{
+      "204eeae128284c0":323
+   }
+}
 ```
 
 Get the object to enable the running of business logic, rules, and events before the actual deletion of the data:
@@ -293,7 +354,25 @@ WHERE "id" = ?
 Refresh the data grid:
 
 ```json
-{"action":"retrieve_by_xpath","params":{"xpath":"//MyFirstModule.Employee","schema":{"id":"a2916c7c-af2f-4267-a8e9-99604f045861","offset":0,"sort":[["Firstname","asc"]],"amount":20},"count":true,"aggregates":false},"context":[],"releaseids":["281474976710757"],"profiledata":{"204eeb2972550c0":28&#125;&#125;
+{
+   "action":"retrieve_by_xpath",
+   "params":{
+      "xpath":"//MyFirstModule.Employee",
+      "schema":{
+         "id":"a2916c7c-af2f-4267-a8e9-99604f045861",
+         "offset":0,
+         "sort":[["Firstname","asc"]],
+         "amount":20
+      },
+      "count":true,
+      "aggregates":false
+   },
+   "context":[],
+   "releaseids":["281474976710757"],
+   "profiledata":{
+      "204eeb2972550c0":28
+   }
+}
 ```
  
 ## 4 Executing Business Logic
@@ -317,7 +396,17 @@ A high-level sequence diagram for this scenario looks like this:
 JSON action executed from Mendix Client to Runtime Server:
 
 ```json
-{"action":"executeaction","params":{"actionname":"MyFirstModule.GetAllEmployees","applyto":"none"},"context":[],"profiledata":{"204f418ba05e7c0":55&#125;&#125;
+{
+   "action":"executeaction",
+   "params":{
+      "actionname":"MyFirstModule.GetAllEmployees",
+      "applyto":"none"
+   },
+   "context":[],
+   "profiledata":{
+      "204f418ba05e7c0":55
+   }
+}
 ```
 
 SQL statement executed on the database:
@@ -335,9 +424,38 @@ FROM "myfirstmodule$employee"
 Response from the Runtime Server to the Mendix Client:
 
 ```json
-{"actionResult":[{"objectType":"MyFirstModule.Employee","guid":"281474976710657","attributes":{"Firstname":{"value":"piet"},"DateOfBirth":{"value":476406000000},"Jobtitle":{"value":"consultant"},"Department":{"value":"expert services"},"Lastname":{"value":"jansen"&#125;&#125;},{"objectType":"MyFirstModule.Employee","guid":"281474976710957","attributes":{"Firstname":{"value":"wee"},"DateOfBirth":{"value":1454886000000},"Jobtitle":{"value":"ewji"},"Department":{"value":"wew"},"Lastname":{"value":"ewfeew"&#125;&#125;},{"objectType":"MyFirstModule.Employee","guid":"281474976710958
-…
-}]}
+{
+   "actionResult":[
+      {
+         "objectType":"MyFirstModule.Employee",
+         "guid":"281474976710657",
+         "attributes":{
+            "Firstname":{"value":"piet"},
+            "DateOfBirth":{"value":476406000000},
+            "Jobtitle":{"value":"consultant"},
+            "Department":{"value":"expert services"},
+            "Lastname":{"value":"jansen"}
+         }
+      },
+      {
+         "objectType":"MyFirstModule.Employee",
+         "guid":"281474976710957",
+         "attributes":{
+            "Firstname":{"value":"wee"},
+            "DateOfBirth":{"value":1454886000000},
+            "Jobtitle":{"value":"ewji"},
+            "Department":{"value":"wew"},
+            "Lastname":{"value":"ewfeew"}
+         }
+      },
+      {
+         "objectType":"MyFirstModule.Employee",
+         "guid":"281474976710958"
+         …
+      }
+      …
+   ]
+}
 ```
 
 ## 5 Mendix Runtime Internals

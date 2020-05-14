@@ -5,7 +5,7 @@ parent: "ats-2"
 
 ## 2.18.0
 
-**Release date: May 12th, 2020**
+**Release date: May 14th, 2020**
 
 ### Improvements
 

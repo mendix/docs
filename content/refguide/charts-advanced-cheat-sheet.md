@@ -632,11 +632,57 @@ The following configuration options are available in all charts.
   "modeBarButtonsToRemove": [ "sendDataToCloud", "lasso2d", "select2d", "hoverClosestCartesian", "hoverCompareCartesian", "toggleSpikelines" ],
   "locale": "nl",
   "locales": {
-    "nl": {
-      "dictionary": {
-        "Download plot as a png": "Opslaan als PNG"  
-      }
-    }
-  }
- }
+		"nl": {
+			"dictionary": {
+				"Download plot as a png": "Opslaan als PNG"
+			},
+			"format": {
+				"days": ["zondag",
+				"maandag",
+				"dinsdag",
+				"woensdag",
+				"donderdag",
+				"vrijdag",
+				"zaterdag"],
+				"shortDays": ["zon",
+				"maa",
+				"din",
+				"woe",
+				"don",
+				"vri",
+				"zat"],
+				"months": ["januari",
+				"februari",
+				"maart",
+				"april",
+				"mei",
+				"juni",
+				"juli",
+				"augustus",
+				"september",
+				"oktober",
+				"november",
+				"december"],
+				"shortMonths": ["jan",
+				"feb",
+				"maa",
+				"apr",
+				"mei",
+				"jun",
+				"jul",
+				"aug",
+				"sep",
+				"okt",
+				"nov",
+				"dec"],
+				"date": "%d-%m-%Y",
+				"datetime": "%d-%m-%Y %H:%M",
+				"year": "%Y",
+				"month": "%b %Y",
+				"dayMonth": "%d %b",
+				"dayMonthYear": "%d %b %Y"
+			}
+		}
+	}
+}
 ```

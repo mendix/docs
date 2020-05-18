@@ -43,6 +43,10 @@ This section provides some details on specific log nodes used by Mendix. It is r
 
 The following log nodes are used by Mendix when writing log messages.
 
+{{% alert type="info" %}}
+This list is currently incomplete and is being worked on.
+{{% /alert %}}
+
 | Log Node | Description
 | --- | --- |
 | ActionManager | Log messages related to action scheduling (e.g. scheduled events) and action execution (e.g. running microflows). |
@@ -59,14 +63,14 @@ The following log nodes are used by Mendix when writing log messages.
 | Core | Logs messages from the core runtime. This can be startup of the runtime, version of the runtime, license being used and issues related to interpreting the model. |
 | DataStorage_QueryHandling | Logs messages related to the queries that are being executed. |
 | DataStorage_QueryPlan | Query execution plan information for installations (currently only supported for PostgreSQL databases). |
-| DocumentExplorer | Logs messages related to the templating engine that generates documents. |
+| DocumentExporter | Logs messages related to the templating engine that generates documents. |
 | FileDocumentSizesPopulateJob | Logs messages for a background job that populates the file-size field in the database for documents that do not have that field filled (used during legacy migration). |
 | I18NProcessor | Logs messages related to translation of the app. |
 | JSON | JSON messages from the Mendix Client to the Runtime Server. See [JSON](#json), below, for more information |
 | Jetty | Logs messages from the internal Jetty webserver that handles HTTP requests between the runtime and the outside world. |
 | LocalFileSystemStore | Logs messages related to file handling if you are using local file system as your file store. |
 | Logging | Logs messages related to the logging framework used by Mendix. |
-| MicroflowDebugging | Log messages related to the status of the microflow debugger, e.g. connection status, incoming and outgoing requests, etc. |
+| MicroflowDebugger | Log messages related to the status of the microflow debugger, e.g. connection status, incoming and outgoing requests, etc. |
 | MicroflowEngine | Log messages related to microflow execution, e.g. which microflow / microflow action is being executed and errors that occur during the execution. |
 | ModelStore | |
 | Module | Logs messages for modules that are loaded on-demand in the core runtime like the microflow-engine. |

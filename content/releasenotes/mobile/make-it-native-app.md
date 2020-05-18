@@ -17,8 +17,7 @@ You can download the Make It Native app for [iOS](https://apps.apple.com/app/mak
 
 ### New Features
 
-From Mendix Studio Pro 8.10 and newer, the responsibility of deciding when to syncronise is returned to the client allowing for faster reloads and syncing behavior that aligns better with that of release apps.
-The behavior for Mendix Studio Pro 8.9 stays unchanged. 
+From Mendix Studio Pro 8.10 and above, the responsibility of deciding when to synchronize is returned to the client. This allows for faster reloads and syncing behavior that aligns better with that of release apps. The behavior for Mendix Studio Pro 8.9 remains unchanged. 
 
 ## Android 2.0.1 / iOS 2.0.0
 

@@ -8,7 +8,7 @@ tags: ["studio", "pages", "file", "upload files", "attachment", "file manager"]
 
 ## 1 Introduction 
 
-This how-to explains how you can enable your end-users to attach and download files. They will be able to attach files from different devices: phone, tablet, or desktop; as well as download attached files from a list.
+This how-to explains how you can enable your end-users to attach and download files, such as PDF files or Microsoft Word documents. They will be able to attach files from different devices: phone, tablet, or desktop; as well as download attached files from a list.
 
 **This how-to will teach you how to do the following:**
 
@@ -68,11 +68,11 @@ Good job! You have created the file entity and an association from it to the **E
 
 ## 4 Adding a File Manager
 
-A **File Manager** is a widget that allows your end-users to attach and/or download files. However, it can only function inside a data container (a list view or data view) and can only have a file entity as its data source. If you just drag and drop the file manager to your employee profile form, it will not work correctly, because your current data view has the **Employee** entity as its data source, which is not a file entity:
+A **File Manager** is a widget that allows your end-users to attach and/or download files. However, it can only function inside a data container (a list view or data view), and the list view or data view can only have a file entity as its data source. If you just drag and drop the file manager to your employee profile form, it will not work correctly, because your current data view has the **Employee** entity as its data source, and you need the data source to be a file entity, which is in this case the **Document** entity:
 
 {{% image_container width="600" %}}![Employee Profile Page](attachments/pages-how-to-attach-files/employee-profile-form.png){{% /image_container %}}
 
-To solve this, you can add a button which will open a pop-up page where your end-users (IT administrators) can upload images. This page will be connected to your current report form over the *Image_Report* association and will upload images as **Image** entity and associated to this specific report. 
+To solve this, you can add a button which will open a pop-up page where your end-users (IT administrators) can upload images. This page will be connected to your current report form over the *Document_Employee* association and will upload files that are associated to this specific report. 
 
 Follow the steps below:
 
@@ -98,7 +98,7 @@ Follow the steps below:
 
     5. Click the **Entity** property.
 
-    6. In the **Select Entity** dialog box, choose the **Document** entity and click **Select**:
+    6. In the **Select Entity** dialog box, choose the **Document** entity over **Document_Employee** association (*Document_Employee/Document*) and click **Select**:
 
         {{% image_container width="400" %}}![Select File Entity](attachments/pages-how-to-attach-files/select-file-entity.png){{% /image_container %}}
 
@@ -120,9 +120,9 @@ Follow the steps below:
 
              {{% image_container width="500" %}}![Attach Files Page](attachments/pages-how-to-attach-files/attach-file-page.png){{% /image_container %}}
 
-        ​	 As you only need your end-users to attach files on this page, delete **Name** and **Size** text boxes from the data view. 
+		5. As you only need your end-users to attach files on this page, delete **Name** and **Size** text boxes from the data view. 
 
-        1. Open the **Toolbox**, search for a **File Uploader**, drag and drop it inside the data view. 
+        6. Open the **Toolbox**, search for a **File Uploader**, drag and drop it inside the data view. 
 
 You have created a pop-up page that will allow IT administrators to attach files to the employee profile form:
 
@@ -142,7 +142,10 @@ After your end-users attach the files, it would be nice to display files in a li
 3. Select the list view, open its properties, and do the following:
 
     1. Click the **Entity** property.
-    2. In the **Select Entity** dialog box, choose **Document** and click **Select**.
+
+    2. In the **Select Entity** dialog box, choose the **Document** entity over **Document_Employee** association (*Document_Employee/Document*) and click **Select**:
+
+        ![Select Entity](attachments/pages-how-to-attach-files/select-file-entity.png)
 
 4. Delete an image and a column it is placed in from the list:
 

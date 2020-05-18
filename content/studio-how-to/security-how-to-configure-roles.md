@@ -1,14 +1,14 @@
 ---
 title: "Secure Your App and Configure Access to Its Functionality"
 category: "Security"
-description: "Describes how to configure file manager in Mendix Studio."
+description: "Describes how to configure security in Mendix Studio."
 menu_order: 50
 tags: ["studio", "security", "user roles", "secure your app", "conditional visibility"]
 ---
 
 ## 1 Introduction 
 
-This how-to explains how you can secure your app, create user roles, and open access to certain pages, microflows, and widgets for specific user roles. As a result, your end-users will be able to view only those pages and widgets and run only those microflows that they have access to. 
+This how-to explains how you can secure your app, create user roles, and open access to certain pages and microflows for specific user roles. As a result, your end-users will be able to view only those pages and widgets and run only those microflows that they have access to. 
 
 **This how-to will teach you how to do the following:**
 

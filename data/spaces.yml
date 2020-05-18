@@ -154,8 +154,8 @@ studio-how-to:
   space: "Studio 8 How-to's"
   priority: false
   menu_categories:
-    - "Domain Model"
     - "Pages"
+    - "Domain Model"
     - "Microflows"
     - "Security"
 studio7:

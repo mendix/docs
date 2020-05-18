@@ -13,7 +13,7 @@ You can download the Make It Native app for [iOS](https://apps.apple.com/app/mak
 
 ## Android 2.1.0 / iOS 2.1.0
 
-**Release date: April 15th, 2020**
+**Release date: May 15th, 2020**
 
 ### New Features
 

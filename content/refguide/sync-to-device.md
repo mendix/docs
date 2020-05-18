@@ -61,6 +61,7 @@ sync to device activity will remove it from the offline database, if found.
 
 When adding **Sync to device** to a microflow consider the following:
 
+* This action should be used in combination with the [**Nothing (preserve data)**](offline-first#customizable-synchronization) option to make sure your data is not cleared during a synchronize action
 * Sync to device action works in an append mode, it does not replace all data in the database.
 Any existing data is kept and only objects that are sent to the client are affected.
 * Syncing the same object or list multiple times will sync it only once. The latest commited state will be synced.

@@ -623,7 +623,7 @@ Displays two different X axes with different scales.
 
 ## 4 Configurations Options (All Charts) {#config-options}
 
-The following configuration options are available in all charts.
+The following configuration options are available in all charts (presented here as an example with formatting for the `nl` `locale`):
 
 ```json
 {

@@ -68,8 +68,8 @@ Depending on the use-case, more fine-grained synchronization controls might be r
 
 - All Objects, download all objects applying the regular security constraints.
 - By XPath, only download the objects that are matching the [XPath Constraints](xpath-constraints) in addition to the regular security constraints.
-- Nothing (clear data), don't download any objects automatically, but do clear the database when performing a synchronization. This can be useful in cases where the objects should only be uploaded, for example a `Feedback` entity.
-- Nothing (preserve data), don't download any objects automatically, and don't clear the database when performing a synchronization. This can be useful in cases where you want have full control over the download phase and should be used in combination with the [Sync to Device](sync-to-device) action.
+- Nothing (clear data), don't download any objects automatically, but do clear the data stored in the database for this entity when performing a synchronization. This can be useful in cases where the objects should only be uploaded, for example a `Feedback` entity.
+- Nothing (preserve data), don't download any objects automatically, and don't clear the data stored in the database for this entity when performing a synchronization. This can be useful in cases where you want have full control over the download phase and should be used in combination with the [Sync to Device](sync-to-device) action.
 
 If you have custom widgets or JavaScript actions which use an entity that cannot be detected by Studio Pro in your offline-first profile (because its only used in the code), you can use customizable synchronization to include such entities.
 

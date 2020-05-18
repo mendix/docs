@@ -19,7 +19,7 @@ This how-to explains how you can secure your app, create user roles, and open ac
 
 The how-to describes the following use case: 
 
-There is a car rental company that has a car rental app. Customers can register there, pick a car to rent, and fill in a car rental form; front-desk agents have an access to a car rental form and can edit car's details. So, there are two types of users: customers and front-desk agents. You would like them to access the following information:
+There is a car rental company that has a car rental app. Customers can register there, pick a car to rent, and fill in a car rental form; front-desk agents have an access to a car rental form and car's details. So, there are two types of users: customers and front-desk agents. You would like them to access the following information:
 
 * Customers – their profile, details about a car, and a car rental form
 * Front-desk agents –  details about a car and a car rental form
@@ -97,7 +97,7 @@ Good job! You have set the access for pages and the microflow for all your user 
 
 ## 5 Testing Your Users
 
-When you restrict access to a certain page or a microflow, widgets that open this page or run this microflow will be automatically hidden to this role. For example, since you have not given access for front-desk agents to customer personal profiles, they will not see a corresponding button that opens the personal profile either.  
+When you restrict access to a certain page or a microflow, widgets that open this page or run this microflow will be automatically hidden to this role. For example, since you have not given access for front-desk agents to customer personal profiles, they will not see a corresponding button which opens the personal profile either.  
 
 After you have set access for pages and microflows, you can test what each user role would see. 
 
@@ -111,11 +111,11 @@ You can test the roles that you set with [demo users](/studio/settings-security#
 
     ![Demo User Icon](attachments/security-how-to-configure-roles/demo-users-icon.png)
 
-   4. In the displayed menu bar, select a demo user and the app will be viewed from the perspective of the corresponding role. Click the **demo_customer** to test which functionality can the **Customer** role view and access.
+4. In the displayed menu bar, select a demo user and the app will be viewed from the perspective of the corresponding role. Click the **demo_customer** to test which functionality can the **Customer** role view and access.
 
     ![Select Demo User](attachments/security-how-to-configure-roles/select-user.png)
 
-4. Repeat steps 3-4 to the **Front_Desk** role:
+4. Repeat steps 3-4 to test the **Front_Desk** role:
 
     ![Testing Roles](attachments/security-how-to-configure-roles/testing-roles.png)
 
@@ -123,5 +123,5 @@ You can test the roles that you set with [demo users](/studio/settings-security#
 
 Congratulations! You have configured access for different user roles in your app. 
 
-While in preview, you tested different user role, after you publish your app, you can manage the end-users and assign user roles that you created to them. For more information, see the [Managing App Users](/studio/settings-security#managing-app-users) section in *Security, Roles & Permissions*.
+When you preview your app, you can test different user role, while after you publish it, you can manage the end-users and assign user roles to them. For more information, see the [Managing App Users](/studio/settings-security#managing-app-users) section in *Security, Roles & Permissions*.
 

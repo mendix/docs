@@ -365,7 +365,7 @@ By default, building for tablets is disabled in XCode. Do the following to enabl
 
 ##### 6.2.3.1 Directly Change the Files on GitHub
 
-First, navigate to your projects repository. This should be `www.github.com/<your git hub username>/<the given project name>`. Then do the following to enable tablet mode:
+First, navigate to your project's repository. This should be `www.github.com/<your github username>/<the given project name>`. Then do the following to enable tablet mode:
 
 1. Using the **Find File** functionality, find and open *project.pbxproj*:
 
@@ -380,7 +380,7 @@ First, navigate to your projects repository. This should be `www.github.com/<you
 
 	![find file toolbar](attachments/deploying-native-app/github-commit-file.png)
 
-1. Using the Find File functionality again, find and open *info.plist*.<br />
+1. Using the **Find File** functionality again, find and open *info.plist*.<br />
 1.  Click the edit icon, then change the code like so: 
 
 	a. Before the final `</dict>` line, add this key:<br />

@@ -29,7 +29,7 @@ title: "Enter the title of the document"
 
 ## 2 Installation
 
-{Describe the basic installation of the component.}
+{Describe the basic installation of the component if necessary.}
 
 ## 3 Configuration
 
@@ -40,6 +40,8 @@ title: "Enter the title of the document"
 {Optional: Provide more info for general use cases here if desired. You should provide this info in a reference guide page or how-to for more specific or advanced use cases.}
 
 ## 5 Troubleshooting
+
+{Optional: Provide basic troubleshooting info for configuration here if necessary. You should provide this info in a reference guide page or how-to for more specific use cases.}
 
 ## 6 Developing This App Store Component
 

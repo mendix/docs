@@ -37,7 +37,7 @@ title: "Enter the title of the document"
 
 ## 4 Usage
 
-{Provide more info for general use cases here if desired. You should provide this info in a reference guide page or how-to for more specific or advanced use cases.}
+{Optional: Provide more info for general use cases here if desired. You should provide this info in a reference guide page or how-to for more specific or advanced use cases.}
 
 ## 5 Troubleshooting
 

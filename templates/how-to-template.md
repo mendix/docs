@@ -9,7 +9,7 @@ title: "Enter the title of the document"
 
 ## 1 Introduction
 
-{Add the introduction text here}
+{Describe what this how-to will cover and what the user will learn.}
 
 **This how-to will teach you how to do the following:**
 
@@ -26,7 +26,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * {Prerequisite 1}
 * {Prerequisite 2}
 
-## 3 {Title of Section [Use Present Participle Verb/Gerund]}
+## 3 {Title of Section Using Present Participle Verb/Gerund}
 
 To {do this task}, follow these steps:
 
@@ -37,6 +37,8 @@ To {do this task}, follow these steps:
 
 ### 3.1 {Title of Sub-Section}
 
+{Use sub-sections for more detail.}
+
 ## 4 Read More
 
-{Add links to related documents and blog posts; make sure necessary third-party links are contextualized in the above sections, as they should not be put here}
+{Add links to related documents and blog posts. Contextualize necessary third-party links in the above sections, as they should not be put here.}

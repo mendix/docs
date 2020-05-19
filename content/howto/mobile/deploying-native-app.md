@@ -325,7 +325,7 @@ In order to deploy the *nativeTemplate.xcarchive* on a device or on the App Stor
 
 #### 6.2.2 Installing on a Device
 
-You can now deploy your app to your device. An easy way to do this is with Apple iTunes.
+You can now deploy your app to your device. An easy way to do this is with Apple's iTunes program.
 
 To install the *ipa* on your device, follow these steps:
 
@@ -339,38 +339,49 @@ To install the *ipa* on your device, follow these steps:
 5. Your app will show up in the list of apps. Click the **Install** button next to your app.
 6. Click **Apply** at the bottom of the screen to execute the actual installation.
 
-### 6.2.3 Distributing for iOS Tablets
+#### 6.2.3 Distributing for iOS Tablets
 
 When you try to build an app for tablets, your app will run as a phone app in a scaled mode optimized for tablet form factors. Please note, however, that Apple has far stricter rules for releasing tablet apps. For example, they require the app to behave well in any possible rotation or resolution. This means that when making a Mendix app for iOS tablets you should take extra care to style your app correctly so it is not rejected. 
 
-By default, building for tablets is disabled in XCode. There are two ways for enabling tablet mode. If you are working with a mac and are familiar with git you can use XCode, otherwise, you can directly do the changes in the appropriate files using Git Hub's page.
+There are two ways to enable tablet mode:
 
-#### 6.2.3.1 With XCode on a Mac
+* If you are working with a Mac and are familiar with Git you can use XCode
+* You can directly do the changes in the appropriate files using GitHub's page
+
+##### 6.2.3.1 Use XCode on a Mac
+
+By default, building for tablets is disabled in XCode. Do the following to enable tablet settings:
 
 1. Select the following options in your XCode workspace:<br />
 	a. **iPad**: this enables tablet mode. By default, if tablet mode in enabled you also have to support any possible orientation.<br />
 	b. **Portrait**.<br />
 	c. **Landscape Left**.<br />
 	d. **Landscape Right.**<br />
-	e. **Requires full screen**: Mendix requires this because full-screen orientations are easier on Mendix developers than smaller side-by-side forms.
+	e.  **Requires full screen**: Mendix requires this because full-screen orientations are easier on Mendix developers than smaller side-by-side forms.
 
 	{{% image_container width="300" %}}![select tablet options](attachments/deploying-native-app/tablet-workspace.png){{% /image_container %}}
 
 1. Commit these changes to your project's master branch so consecutive builds have the tablet settings enabled.
 
-#### 6.2.3.1 By directly changing the files on Git Hub
-To do so navigate to your projects repository. This should be `www.github.com/<your git hub username>/<the given project name>`. 
+##### 6.2.3.1 Directly Change the Files on GitHub
 
-1. Using the Find File functionality, find and open *project.pbxproj*.<br />
-![find file toolbar](attachments/deploying-native-app/github-find-file.png)
-1. click the edit icon: 
-![find file toolbar](attachments/deploying-native-app/github-edit-file.png)
+First, navigate to your projects repository. This should be `www.github.com/<your git hub username>/<the given project name>`. Then do the following to enable tablet mode:
 
-	a. Change both instances of `TARGET_DEVICE_FAMILY = “1”;` to `TARGET_DEVICE_FAMILY = “1,2";`.
-1. Commit the change
-![find file toolbar](attachments/deploying-native-app/github-commit-file.png)
+1. Using the **Find File** functionality, find and open *project.pbxproj*:
+
+	![find file toolbar](attachments/deploying-native-app/github-find-file.png)
+
+1.  Click the edit icon:
+
+	![find file toolbar](attachments/deploying-native-app/github-edit-file.png)
+
+1. Change both instances of `TARGET_DEVICE_FAMILY = “1”;` to `TARGET_DEVICE_FAMILY = “1,2";`.
+1.  Commit the change:
+
+	![find file toolbar](attachments/deploying-native-app/github-commit-file.png)
+
 1. Using the Find File functionality again, find and open *info.plist*.<br />
-1. Click the edit icon: 
+1.  Click the edit icon, then change the code like so: 
 
 	a. Before the final `</dict>` line, add this key:<br />
 	
@@ -399,6 +410,7 @@ To do so navigate to your projects repository. This should be `www.github.com/<y
 	</array>
 	```
 1. Commit the change.
+
 #### 6.2.3 Uploading to the Apple App Store
 
 To upload your app to the iOS App Store, follow these instructions (to continue, you must have completed the [Signing a Build](#signing-a-build) section above and recieved a build signed for the Apple Store):

@@ -18,7 +18,7 @@ This is an advanced module and will require specific server and DNS adjustments 
 This module is not supported in the Mendix Cloud.
 {{% /alert %}}
 
-### 1.1 Typical Usage Scenarios
+### 1.1 Typical Use Cases
 
 * Receiving emails into your application
 * Letting users reply to emails sent by the application

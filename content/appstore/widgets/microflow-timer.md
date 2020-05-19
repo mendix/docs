@@ -26,7 +26,7 @@ The [Microflow Timer](https://appstore.home.mendix.com/link/app/27/) widget can 
 
 The widget requires a data view or template grid context. This object will be sent as an argument to the invoked microflow or nanoflow.
 
-## 3 Properties {#properties}
+The following properties must be configured:
 
 * **Interval (in ms)** – This defines how often the microflow or nanoflow is called. The inteval is in milliseconds, so the default of 30000 equals 30 seconds. Unless **Execute once** is set to **Yes**, the microflow is invoked immediately after loading the page for the first time.
 * **Execute once** – If set to **Yes**, the microflow will be invoked only once. The **Interval (in ms)** above defines after how many seconds it will be invoked.

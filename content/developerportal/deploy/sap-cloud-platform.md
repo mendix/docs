@@ -393,6 +393,10 @@ To connect a service in the section **Available Services**
 If you use the **Application Autoscaler** service on SAP Cloud Platform, Mendix can create a JSON file for you. See [Application Autoscaler for SAP Cloud Platform](/partners/sap/sap-autoscaler) for more information.
 {{% /alert %}}
 
+{{% alert type="info" %}}
+If you use the **PostgreSQL on Amazon (AWS)** service on SAP Cloud Platform, Mendix can create a JSON file for you. See [PostgreSQL on Amazon (AWS) for SAP Cloud Platform](/partners/sap/sap-postgresql-on-aws) for more information.
+{{% /alert %}}
+
 To upload the JSON **File** for service binding, follow these steps:
 
 1. Select the service in the **Service To Be Bound** section.

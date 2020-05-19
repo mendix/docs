@@ -363,7 +363,7 @@ By default, building for tablets is disabled in XCode. Do the following to enabl
 
 1. Commit these changes to your project's master branch so consecutive builds have the tablet settings enabled.
 
-##### 6.2.3.1 Directly Change the Files on GitHub
+##### 6.2.3.2 Directly Change the Files on GitHub
 
 First, navigate to your project's repository. This should be `www.github.com/<your github username>/<the given project name>`. Then do the following to enable tablet mode:
 
@@ -408,7 +408,7 @@ First, navigate to your project's repository. This should be `www.github.com/<yo
 	```
 1. Commit these changes.
 
-#### 6.2.3 Uploading to the Apple App Store
+#### 6.2.4 Uploading to the Apple App Store
 
 To upload your app to the iOS App Store, follow these instructions (to continue, you must have completed the [Signing a Build](#signing-a-build) section above and recieved a build signed for the Apple Store):
 

@@ -367,7 +367,7 @@ By default, building for tablets is disabled in XCode. Do the following to enabl
 
 First, navigate to your project's repository. This should be `www.github.com/<your github username>/<the given project name>`. Then do the following to enable tablet mode:
 
-1. Using the **Find File** functionality, find and open *project.pbxproj*:
+1. Using the **Find file** functionality, find and open *project.pbxproj*:
 
 	![find file toolbar](attachments/deploying-native-app/github-find-file.png)
 
@@ -376,11 +376,8 @@ First, navigate to your project's repository. This should be `www.github.com/<yo
 	![find file toolbar](attachments/deploying-native-app/github-edit-file.png)
 
 1. Change both instances of `TARGET_DEVICE_FAMILY = “1”;` to `TARGET_DEVICE_FAMILY = “1,2";`.
-1.  Commit the change:
-
-	![find file toolbar](attachments/deploying-native-app/github-commit-file.png)
-
-1. Using the **Find File** functionality again, find and open *info.plist*.<br />
+1.  Commit these changes.
+1. Using the **Find file** functionality again, find and open *info.plist*.
 1.  Click the edit icon, then change the code like so: 
 
 	a. Before the final `</dict>` line, add this key:<br />
@@ -409,7 +406,7 @@ First, navigate to your project's repository. This should be `www.github.com/<yo
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	```
-1. Commit the change.
+1. Commit these changes.
 
 #### 6.2.3 Uploading to the Apple App Store
 

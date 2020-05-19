@@ -39,8 +39,6 @@ The three microflows used to handle the emails that are received are described b
 * **CheckMessageRecipient** –  This microflow calls a sub-microflow that receives the **To** and the **From** addressess. This is run for each of the recipients that are set in the **To** and **CC**. Here you could, for example, retrieve and check objects based on the input arguments (for example, `@myapplication.com`, where you can then retrieve an object for the hash to confirm something or further hook it up in your system) or use some other type of matching with your system. Note that **From** addressess can be easily faked, so make sure you keep this in mind when checking these. 
 * **ProcessMessage** – If the message passed the first two checks, it ends up in this microflow for any final checks. You have the entire **SMTPMessage** object here, so you can check for anything that the previous two checks might have missed or perform further actions with the message.
 
-## 3 Settings
-
 These are the main module settings:
 
 * **Port** – the port on which to listen

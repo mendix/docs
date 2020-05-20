@@ -408,7 +408,7 @@ First, navigate to your project's repository. This should be `www.github.com/<yo
 	```
 1. Commit these changes.
 
-#### 6.2.3 Uploading to the Apple App Store
+#### 6.2.4 Uploading to the Apple App Store
 
 To upload your app to the iOS App Store, follow these instructions (to continue, you must have completed the [Signing a Build](#signing-a-build) section above and recieved a build signed for the Apple Store):
 

@@ -265,11 +265,11 @@ This property type was introduced in Mendix 8.1. Support for dynamic images was 
 {{% /alert %}}
 
 {{% alert type="info" %}}
-Support for SVG images in native apps was introduced in Mendix [8.4.0](/releasenotes/studio-pro/8.4).
+Support for SVG images in native mobile apps was introduced in Mendix [8.4.0](/releasenotes/studio-pro/8.4).
 {{% /alert %}}
 
 {{% alert type="warning" %}}
-GIF images are not supported in native apps on Android devices.
+GIF images are not supported in native mobile apps on Android devices.
 {{% /alert %}}
 
 #### 3.2.1 XML Attributes
@@ -648,7 +648,7 @@ Label property allows a pluggable widget to have labeling functionality similar 
 
 ### 5.2 Name {#name}
 
-Every widget have a name by default. This property can be used to control position of the widget name input. If this property is not specified, input will be placed in **Common** tab. A widget’s name is also used for locating it during [automated tests](/howto/integration/selenium-support). For that purpose in web apps, a widget name is automatically appended to a `class` prop a component receives, and in native apps is passed as a separate `name` prop.
+Every widget have a name by default. This property can be used to control position of the widget name input. If this property is not specified, input will be placed in **Common** tab. A widget’s name is also used for locating it during [automated tests](/howto/integration/selenium-support). For that purpose in web apps, a widget name is automatically appended to a `class` prop a component receives, and in native mobile apps is passed as a separate `name` prop.
 
 ```xml
 <systemProperty key="Name"/>

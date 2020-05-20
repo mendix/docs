@@ -744,7 +744,7 @@ Now make it possible to expand or collapse the group box:
 	};
 	```
 
-8. Verify in the Make It Native app that you can expand and collapse the group box by tapping your widget's header.
+8. Verify in the Make it Native app that you can expand and collapse the group box by tapping your widget's header.
 
 #### 3.3.6 Adding an Expand and Collapse Icon Property
 

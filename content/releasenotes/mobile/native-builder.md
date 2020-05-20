@@ -7,7 +7,7 @@ description: "Native Builder release notes."
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
-The [Native Builder](/refguide/native-builder) is a command line input tool which helps you build your Mendix native app. After the Native Builder simplifies your build process, you can do what you want most: test and publish your app. The Native Builder uses MxBuild, GitHub, and App Center to simplify the app building process. 
+The [Native Builder](/refguide/native-builder) is a command line input tool which helps you build your Mendix native mobile app. After the Native Builder simplifies your build process, you can do what you want most: test and publish your app. The Native Builder uses MxBuild, GitHub, and App Center to simplify the app building process. 
 
 We are heavily invested in streamlining the experience of building your apps and are continuously improving upon the tool's capabilities. For more information on using the Native Builder, see [How To Deploy Your First Mendix Native Mobile App](/howto/mobile/deploying-native-app).
 

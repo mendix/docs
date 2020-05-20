@@ -383,4 +383,4 @@ If the Native Builder fails to complete a run and no error is provided, consider
 
 * [How to Deploy your First Mendix Native Mobile App](/howto/mobile/deploying-native-app)
 * [How to Get Started with Native Mobile](/howto/mobile/getting-started-with-native-mobile)
-* [How to Style Your Mendix Native App](/howto/mobile/how-to-use-native-styling)
+* [How to Style Your Mendix Native Mobile App](/howto/mobile/how-to-use-native-styling)

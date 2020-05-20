@@ -93,4 +93,4 @@ For information on how to change to your app and then see that change on your de
 ## 6 Read More
 
 * [Get Started with Native Mobile](getting-started-with-native-mobile)
-* [Style Your Mendix Native App](how-to-use-native-styling)
+* [Style Your Mendix Native Mobile App](how-to-use-native-styling)

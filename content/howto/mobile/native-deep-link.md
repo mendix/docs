@@ -119,7 +119,7 @@ The *info.plist* file registers the schema and host so that they will be associa
    
 	This method will register the opened URL so it can be used in the **Native Deep Link** nanoflow actions. 
 
-### 3.3 Rebuilding Your Native App
+### 3.3 Rebuilding Your Native Mobile App
 
 When running locally from source you have to launch your app again:
 

@@ -8,11 +8,11 @@ tags: ["NFC", "Near Field Communication", "JavaScript", "native", "mobile"]
 
 ## 1 Introduction
 
-Native applications have faster performance and give you the ability to use device hardware features. This tutorial will teach you to build your own JavaScript actions, specifically ones that harness your native mobile device's hardware to read Near Field Communication (NFC) tags. If you would like to use third-party modules other than an NFC scanner, refer to this tutorial as a general overview.
+Native mobile applications have faster performance and give you the ability to use device hardware features. This tutorial will teach you to build your own JavaScript actions, specifically ones that harness your native mobile device's hardware to read Near Field Communication (NFC) tags. If you would like to use third-party modules other than an NFC scanner, refer to this tutorial as a general overview.
 
 **This how-to will teach you how to do the following:**
 
-* Build a JavaScript action for a native app
+* Build a JavaScript action for a native mobile app
 * Add a dependency to the native JavaScript action
 * Implement an NFC scanner in a JavaScript action
 
@@ -32,7 +32,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 To build NFC JavaScript actions, you will do the following:
 
 1. Create a Mendix project.
-1. Build a native app.
+1. Build a native mobile app.
 1. Add a native dependency.
 1. Make two NFC JavaScript actions.
 1. Implement the NFC Scanner in your app.
@@ -78,7 +78,7 @@ Your Mendix project should looks something like this:
 
 ### 3.2 Building a Native Custom Developer App {#custom-developer-app}
 
-When developing a native app, you can use the [Make it Native](/refguide/getting-the-make-it-native-app) app to quickly get started. However, this app is bundled with a limited number of functionalities. This tutorial's app requires an NFC module in order to access the native NFC capabilities. This can only be achieved by using the [Native Builder](/refguide/native-builder). The Native Builder can create a custom developer app which you use to see and test your app. 
+When developing a native mobile app, you can use the [Make it Native](/refguide/getting-the-make-it-native-app) app to quickly get started. However, this app is bundled with a limited number of functionalities. This tutorial's app requires an NFC module in order to access the native NFC capabilities. This can only be achieved by using the [Native Builder](/refguide/native-builder). The Native Builder can create a custom developer app which you use to see and test your app. 
 
 In this section, you will create a normal custom developer app to learn the process. In the subsequent section [Installing a Dependency in Your Custom Developer App](#installing-dependency-app) you will create a tailored custom developer app suited for NFC tasks.
 
@@ -354,9 +354,9 @@ This dialog box is your phone's operating system recognizing the NFC tag. On And
 
 {{% /alert %}}
 
-### 3.8 Rebuilding Your Native App {#rebuilding-app}
+### 3.8 Rebuilding Your Native Mobile App {#rebuilding-app}
 
-Now that you added NFC capability to your app's source code, you must rebuild your native app and reinstall it on your device to use the new JavaScript actions.
+Now that you added NFC capability to your app's source code, you must rebuild your native mobile app and reinstall it on your device to use the new JavaScript actions.
 
 {{% alert type="info" %}}
 

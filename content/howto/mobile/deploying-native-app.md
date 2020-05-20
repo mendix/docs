@@ -139,7 +139,7 @@ Now it is time for you to make your own first build:
 
 This command does the following:
 
-* Generates a JavaScript deployment bundle and images of the native app from Studio Pro
+* Generates a JavaScript deployment bundle and images of the native mobile app from Studio Pro
 * Creates a new build branch on GitHub and starts a build process on App Center
 
 If your `build` command fails citing version conflicts on Java classes, try the following:

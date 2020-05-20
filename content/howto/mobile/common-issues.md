@@ -8,7 +8,7 @@ tags: ["native", "mobile", "developer", "troubleshoot", "app"]
 
 ## 1 Introduction
 
-Mendix strives to make building and running native apps as simple as possible. But because some complexity is inherent in making apps, problems can come up. If you are having issues while building or running native mobile apps, please consult the sections below to see if your issue has already been solved.
+Mendix strives to make building and running native mobile apps as simple as possible. But because some complexity is inherent in making apps, problems can come up. If you are having issues while building or running native mobile apps, please consult the sections below to see if your issue has already been solved.
 
 ## 2 Make It Native App
 

@@ -2,7 +2,7 @@
 title: "Set Up Remote Notifications"
 parent: "native-mobile"
 menu_order: 8
-description: Learn how to set up remote push notifications for native apps.
+description: Learn how to set up remote push notifications for native mobile apps.
 tags: ["mobile", "push notification", "remote", "push", "notification"]
 ---
 
@@ -141,7 +141,7 @@ android:launchMode="singleTop"
 
 ![AndroidManifestChanges](attachments/native-remote-push/androidManifestXml.png)
 
-Congratulations, you finished setting up customizations for your custom native app! To implement remote push notifications on a test device, see [How to Use Remote Notifications](native-remote-notifications).
+Congratulations, you finished setting up customizations for your custom native mobile app! To implement remote push notifications on a test device, see [How to Use Remote Notifications](native-remote-notifications).
 
 ## 5 Read More
 

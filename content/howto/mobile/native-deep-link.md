@@ -2,13 +2,13 @@
 title: "Set Up Deep Links in Native Mobile Apps"
 parent: "native-mobile"
 menu_order: 75
-description: "Connect URLs to your native app by adding a deep link."
+description: "Connect URLs to your native mobile app by adding a deep link."
 tags: ["deep link", "url", "native", "mobile", "developer app", "make it native"]
 ---
 
 ## 1. Introduction
 
-While URLs typically open websites, they can also open an installed app on your mobile device. With this tutorial you will learn how to connect the URL `app://myapp` to your Mendix Native App installed on your Android or iOS device. It is also possible to pass additional data using paths, query parameters, and hashes. Passing additional data could look like this: `app://myapp/task/123?action=close#info`.
+While URLs typically open websites, they can also open an installed app on your mobile device. With this tutorial you will learn how to connect the URL `app://myapp` to your Mendix native app installed on your Android or iOS device. It is also possible to pass additional data using paths, query parameters, and hashes. Passing additional data could look like this: `app://myapp/task/123?action=close#info`.
 
 A URL is constructed of these parts (everything after **path** is defined as a detail):
 

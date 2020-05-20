@@ -101,15 +101,7 @@ Click **Manage labels** to open a page where you can list and manage your labels
 
 ### 3.5 Manage Story Template
 
-Click **Manage story template** to create and edit the default tasks that can be added to every new story in your app project:
-
-![](attachments/stories/default-task.png)
-
-To enable these default tasks, select the **Add default tasks based on story template** check box when [creating a new story](#new-story).
-
-{{% alert type="info" %}}
-Only team members with sufficient rights can manage story templates.
-{{% /alert %}}
+{{% alert type="info" %}} The story template functionality has been replaced with the clone functionality in the [new stories ui] (#beta) {{% /alert %}}
 
 ### 3.6 History {#history}
 

@@ -15,7 +15,7 @@ This how-to explains how you can enable your end-users to attach and download fi
 * Create file entities
 * Create a page with a form that allows your end-users to upload files
 * Display attached files in a list
-* Download files
+* Allow your end-users to download files
 
 The how-to describes the following use case: 
 
@@ -147,7 +147,7 @@ After your end-users attach the files, it would be nice to display files in a li
 
         ![Select Entity](attachments/pages-how-to-attach-files/select-file-entity.png)
 
-4. Delete an image and a column it is placed in from the list:
+4. Delete the image and a column it is placed in from the list:
 
     ![Delete Column From the List](attachments/pages-how-to-attach-files/column-list.png)
 
@@ -172,4 +172,8 @@ Great job! Now you have the list that shows attached files and your users can do
 
 Congratulations! You have configured the form that allows IT administrators to attach files and displays these files in the list.
 
-[Preview your app](/studio/publishing-app) to test how the file uploading and downloading works. You can also configure a button to attach images instead of files. For more information, see [How to Enable End-Users to Attach Images](pages-how-to-attach-images).
+[Preview your app](/studio/publishing-app) to test how the file uploading and downloading works:
+
+![Previewed List](attachments/pages-how-to-attach-files/list-previewed.png) 
+
+You can also configure a button to attach images instead of files. For more information, see [How to Enable End-Users to Attach Images](pages-how-to-attach-images).

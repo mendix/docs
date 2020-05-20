@@ -7,7 +7,7 @@ tags: ["native", "mobile", "deploy", "native-builder", "builder", "appcenter"]
 
 ## 1 Introduction
 
-The Native Builder takes your Mendix project containing a native profile and packages a native app for iOS and Android. To learn more about using the Native Builder, see [How to Deploy your First Mendix Native Mobile App](/howto/mobile/deploying-native-app).
+The Native Builder takes your Mendix project containing a native profile and packages a native mobile app for iOS and Android. To learn more about using the Native Builder, see [How to Deploy your First Mendix Native Mobile App](/howto/mobile/deploying-native-app).
 
 The Native Builder uses MxBuild, GitHub, and App Center to build your applications. The tool automates the configuration of these processes to streamline your app building experience. The Native builder allows you to create as many apps on GitHub as possible, as long as they are given unique app names using the `--project-name` parameter (for more information, see the [Commands](#commands) section below). Using the `prepare` and `build` command combination, the Native Builder packages your apps by doing the following:
 

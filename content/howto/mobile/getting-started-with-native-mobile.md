@@ -96,10 +96,10 @@ If you get an error screen while testing your app, there are easy ways to restar
 * Tap your test app with three fingers to restart your app
 * With the **Enable dev mode** toggle turned on, hold a three-fingered tap to bring up the developer app menu – here you can access **ADVANCED SETTINGS** and **ENABLE REMOTE JS DEBUGGING** 
 
-For more detailed instructions on debugging a native app, see [Debug Native Apps (Advanced)](native-debug).
+For more detailed instructions on debugging a native app, see [Debug Native Mobile Apps (Advanced)](native-debug).
 
 ## 4 Read More
 
-* [Build Pluggable Widgets](../extensibility/pluggable-widgets)
-* [Native Styling](/refguide/native-styling-refguide)
-* [Debug Native Apps (Advanced)](native-debug)
+* [How to Build Pluggable Widgets](../extensibility/pluggable-widgets)
+* [Native Styling Reference Guide](/refguide/native-styling-refguide)
+* [How to Debug Native Mobile Apps (Advanced)](native-debug)

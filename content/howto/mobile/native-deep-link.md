@@ -34,7 +34,7 @@ Please note that the Make It Native app has already the registered schema `makei
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Complete the [Prerequisites](/howto/mobile/deploying-native-app#prerequisites) section of *How to Deploy Your First Mendix Native App*
+* Complete the [Prerequisites](/howto/mobile/deploying-native-app#prerequisites) section of *How to Deploy Your First Mendix Native Mobile App*
 * Install git [command line](https://git-scm.com/downloads) tool
 * Make sure your [Native Mobile Resources](/appstore/modules/native-mobile-resources) module is up to date
 
@@ -42,7 +42,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 If you do not already have a native template for your app, you can create one:
 
-1. Create a shell app with Native Builder using the `prepare` command as shown in [How to Deploy Your First Mendix Native App](/howto/mobile/deploying-native-app). When you do this, replace the parameters in this example command with your own project's parameters, local paths, and tokens:
+1. Create a shell app with Native Builder using the `prepare` command as shown in [How to Deploy Your First Mendix Native Mobile App](/howto/mobile/deploying-native-app). When you do this, replace the parameters in this example command with your own project's parameters, local paths, and tokens:
 
     ``` shell
     native-builder.exe prepare --project-name "Native Deep Link" --app-name "Native Deep Link" --java-home "C:\Program Files\AdoptOpenJDK\jdk-11.0.3.7-hotspot" --mxbuild-path "C:\Program Files\Mendix\8.6.0.715\modeler\mxbuild.exe" --project-path "C:\mendix-projects\NativeDeepLink\NativeDeepLink.mpr" --github-access-token "c3f322c471623" --appcenter-api-token "2d5b570693d34"  --app-identifier "com.mendix.native.deeplink" --runtime-url "https://nativedeeplink-sandbox.mxapps.io/" --mendix-version "8.6.0"
@@ -132,7 +132,7 @@ When running locally from source you have to launch your app again:
     git push
     ```
 
-1. Now rebuild and install your native app to add your new capabilities:
+1. Now rebuild and install your native mobile app to add your new capabilities:
 
     ``` shell
     native-builder.exe build --project-name "Native Deep Link" --app-version "1.0.0" --build-number 1
@@ -224,13 +224,13 @@ Next you will implement the deep link handler nanoflow **DL_ShowUrlDetails** so 
 Add a few test link buttons, for example {app://myapp/task/123} or {makeitnative://task/123}, to your web page, then re-run your project. Open the your app in your device's browser by typing *{your local IP address}:8080* into the browser. With the app loaded, tap the links to test. You should be brought out of your browser and into your app's page!
 
 {{% alert type="info" %}}
-Please note that if you are not running the app from a local source, you must build your app again with the Native builder before testing. Do this by using the `build` command: `build --project-name “Native Deep Link” --app-version “1.0.0" --build-number 2`.
+Please note that if you are not running the app from a local source, you must build your app again with the Native Builder before testing. Do this by using the `build` command: `build --project-name “Native Deep Link” --app-version “1.0.0" --build-number 2`.
 {{% /alert %}}
 
 ## 5. Read more
 
 *   [Native Builder Reference Guide](/refguide/native-builder)
-*   [How to Deploy Your First Mendix Native App](/howto/mobile/deploying-native-app)
+*   [How to Deploy Your First Mendix Native Mobile App](/howto/mobile/deploying-native-app)
 *   [React Native Linking](https://facebook.github.io/react-native/docs/linking)
 *   [Deep Linking Android](https://developer.android.com/training/app-links/deep-linking)
 *   [Deep Linking iOS](https://developer.apple.com/documentation/uikit/inter-process_communication/allowing_apps_and_websites_to_link_to_your_content/defining_a_custom_url_scheme_for_your_app)

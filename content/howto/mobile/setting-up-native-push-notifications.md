@@ -35,7 +35,7 @@ Remote notifications will not work in the iOS Simulator app.
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Learn the basics of [Git](https://www.atlassian.com/git)
-* Complete [How to Deploy Your First Mendix Native App](deploying-native-app) through the end of the *Preparing Your Project* section. Once you finish those sections, you will have a generated a GitHub repository with all the files you will need.
+* Complete [How to Deploy Your First Mendix Native Mobile App](deploying-native-app) through the end of the *Preparing Your Project* section. Once you finish those sections, you will have a generated a GitHub repository with all the files you will need.
 
 ## 3 Setting up Firebase Cloud Messaging Service {#firebase-setup}
 

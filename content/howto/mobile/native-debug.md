@@ -8,7 +8,7 @@ tags: ["native", "mobile", "debug", "Make It Native"]
 
 ## 1 Introduction
 
-When changing your native app or designing a custom widget, you may need to debug your implementation. The Make It Native app exposes a developer mode which supports debugging native apps for expert developers. Using Google Chrome is recommended for this, as it starts automatically during debugging.
+When changing your native mobile app or designing a custom widget, you may need to debug your implementation. The Make It Native app exposes a developer mode which supports debugging native mobile apps for expert developers. Using Google Chrome is recommended for this, as it starts automatically during debugging.
 
 ## 2 Debugging Your Native App
 

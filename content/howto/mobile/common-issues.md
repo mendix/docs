@@ -42,5 +42,5 @@ These failures are often caused by the Windows Defender firewall. In such cases,
 
 ## 3 Read More
 
-* [How to Debug Native Apps (Advanced)](native-debug)
+* [How to Debug Native Mobile Apps (Advanced)](native-debug)
 * [Native Builder Reference Guide](/refguide/native-builder)

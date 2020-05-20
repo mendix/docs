@@ -9,7 +9,7 @@ tags: ["Android", "iOS", "native", "debug"]
 
 The Make It Native app allows developers to preview, test, and debug native app projects in conjunction with Mendix Studio Pro. It is available for both Android and iOS devices.
 
-For more information on using the Make It Native app to test an app, see [How To Get Started with Native Mobile](/howto/mobile/getting-started-with-native-mobile). For advanced information on debugging with the Make It Native app, see [Debug Native Apps (Advanced)](/howto/mobile/native-debug). If your app will require custom dependencies, such as custom widgets or fonts, see [How to Create a Custom Developer App](/howto/mobile/how-to-devapps).
+For more information on using the Make It Native app to test an app, see [How To Get Started with Native Mobile](/howto/mobile/getting-started-with-native-mobile). For advanced information on debugging with the Make It Native app, see [Debug Native Mobile Apps (Advanced)](/howto/mobile/native-debug). If your app will require custom dependencies, such as custom widgets or fonts, see [How to Create a Custom Developer App](/howto/mobile/how-to-devapps).
 
 For information on which mobile operating systems are supported by the Make It Native app, see the [Mobile Operating Systems](system-requirements#mobileos) section of *System Requirements*.
 
@@ -46,6 +46,6 @@ iOS archive versions for Make It Native are served via TestFlight links. To join
 
 ## 4 Read More
 
-* [How to Deploy Your First Mendix Native App](/howto/mobile/deploying-native-app)
+* [How to Deploy Your First Mendix Native Mobile App](/howto/mobile/deploying-native-app)
 * [How to Create a Custom Developer App](/howto/mobile/how-to-devapps)
-* [How to Debug Native Apps (Advanced)](/howto/mobile/native-debug)
+* [How to Debug Native Mobile Apps (Advanced)](/howto/mobile/native-debug)

@@ -57,7 +57,7 @@ Does not support comparison on attributes of strings of unlimited length.
 
 ### 2.6 SAP HANA
 
-All operations depend on collation.
+All operations are case sensitive.
 
 Does not support sorting or comparison on attributes of strings of unlimited length.
 
@@ -78,7 +78,7 @@ This table presents the default case sensitivity by different database types:
 | DB2                | S              | S¹          | S                    |
 | MARIADB & MYSQL    | C              | C           | C                    |
 | ORACLE             | C¹             | C           | I                    |
-| SAP HANA           | C¹             | C¹          | I                    |
+| SAP HANA           | S¹             | S¹          | S                    |
 | SQL SERVER         | C              | C           | C                    |
 
 Where the letters have the following meaning:

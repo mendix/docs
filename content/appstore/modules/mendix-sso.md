@@ -26,7 +26,13 @@ You can use this module when you want your application's end-users to sign in wi
 [Company Admins](/developerportal/company-app-roles/companyadmin-settings) can manage [security groups](/developerportal/company-app-roles/users#security-groups) that grant app permissions to groups of users.
 {{% /alert %}}
 
-### 1.3 Dependencies
+### 1.3 Limitations
+
+* Due to the large number of app creations, synchronizing newly created app projects might take some time. When an app project is not yet synchronized, the deployment will not work when you attempt to deploy your app to the Mendix Developer Portal, as it will not recognize your app project. In these cases, please be patient and try again later or contact [Mendix Support](https://support.mendix.com/hc/en-us) if the problem persists. Mendix is working on resolving the volume throughput issues.
+* This module does not work for [native mobile](/refguide/native-mobile) apps.
+* The default app `Logout` action resolves to the origin location found in a session cookie, which (re)triggers the `/openid/login/` endpoint, which logs the end-user in again. 
+
+### 1.4 Dependencies
 
 Your app has to be deployed on the Mendix Cloud in order to use this module.
 
@@ -34,13 +40,7 @@ Your app has to be deployed on the Mendix Cloud in order to use this module.
 
 For instructions, see [Mendix Single Sign-On](/developerportal/deploy/mendix-sso) in the *Developer Portal Guide*.
 
-## 3 Limitations
-
-* Due to the large number of app creations, synchronizing newly created app projects might take some time. When an app project is not yet synchronized, the deployment will not work when you attempt to deploy your app to the Mendix Developer Portal, as it will not recognize your app project. In these cases, please be patient and try again later or contact [Mendix Support](https://support.mendix.com/hc/en-us) if the problem persists. Mendix is working on resolving the volume throughput issues.
-* This module does not work for [native mobile](/refguide/native-mobile) apps.
-* The default app `Logout` action resolves to the origin location found in a session cookie, which (re)triggers the `/openid/login/` endpoint, which logs the end-user in again. 
-
-## 4 Read More
+## 3 Read More
 
 * [Mendix Single Sign-On](/developerportal/deploy/mendix-sso)
 * [Upgrading to Mendix SSO from AppCloudServices](/developerportal/deploy/upgrading-to-mendix-sso-from-acs)

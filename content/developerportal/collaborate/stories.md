@@ -99,11 +99,7 @@ Click **Manage labels** to open a page where you can list and manage your labels
 | Merge Label | allows you to merge the selected label into another label.<br/>All stories which have the selected label are labeled with the other label and the selected label is deleted. |
 | Remove Label | allows you to remove the selected label from any stories to which it has been applied.<br/>The label is then deleted. |
 
-### 3.5 Manage Story Template
-
-{{% alert type="info" %}} The story template functionality has been replaced with the clone functionality in the [new stories ui] (#beta) {{% /alert %}}
-
-### 3.6 History {#history}
+### 3.5 History {#history}
 
 Click **History** to view the history of collaboration actions for the app. On this page, you can click the following:
 
@@ -231,7 +227,7 @@ When you select a story, you can perform the following actions (these actions su
 
 ![](attachments/stories/story-context-menu.jpg)
 
-* **Clone** – click this to duplicate a selected user story and its tasks, story points, status, and labels into a new user story 
+* **Clone** – click this to duplicate a selected user story and its tasks, story points, status, and labels into a new user story; this can enable utilizing a user story as a template
 * **Move** –  click this to move a story to another sprint
 * **Assign Label** – click this to assign existing labels to a story
 * **Delete** – click this to delete a story

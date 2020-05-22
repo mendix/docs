@@ -70,7 +70,7 @@ For each IP range, you can specify a **Name** for the range, and a range of addr
 
 ![](attachments/accessrestrict/ip-range.png)
 
-### 2.2 Access Restriction Profiles for Mendix Cloud V3
+### 2.2 Access Restriction Profiles for Mendix Cloud V3{#v3}
 
 For Mendix Cloud v3, you have fewer options for setting up an access restriction profile.
 

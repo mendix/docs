@@ -99,19 +99,7 @@ Click **Manage labels** to open a page where you can list and manage your labels
 | Merge Label | allows you to merge the selected label into another label.<br/>All stories which have the selected label are labeled with the other label and the selected label is deleted. |
 | Remove Label | allows you to remove the selected label from any stories to which it has been applied.<br/>The label is then deleted. |
 
-### 3.5 Manage Story Template
-
-Click **Manage story template** to create and edit the default tasks that can be added to every new story in your app project:
-
-![](attachments/stories/default-task.png)
-
-To enable these default tasks, select the **Add default tasks based on story template** check box when [creating a new story](#new-story).
-
-{{% alert type="info" %}}
-Only team members with sufficient rights can manage story templates.
-{{% /alert %}}
-
-### 3.6 History {#history}
+### 3.5 History {#history}
 
 Click **History** to view the history of collaboration actions for the app. On this page, you can click the following:
 

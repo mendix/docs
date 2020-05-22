@@ -8,10 +8,6 @@ tags: ["SAP", "Autoscaler"]
 
 ## 1 Introduction
 
-{{% alert type="warning" %}}
-Read the warning in [Binding the Application Autoscaler](#binding), below to ensure that the autoscaler is correctly configured.
-{{% /alert %}}
-
 The **Application Autoscaler** service for SAP Cloud Platform enables applications to automatically increase or decrease the number of instances of your app. This can be based on a schedule, or based on the value of a metric.
 
 For more information on the Application AutoScaler see [Application Autoscaler Service](https://help.sap.com/viewer/7472b7d13d5d4862b2b06a730a2df086/Cloud/en-US/4ad999a0be664160a08514ba4ce6430c.html) on the *SAP Help Portal*.
@@ -30,16 +26,6 @@ You will need to specify the following:
 * **File** – the file which contains the JSON to configure the autoscaler — more information, including the contents of the configuration file can be found in [Application Autoscaler Service](https://help.sap.com/viewer/7472b7d13d5d4862b2b06a730a2df086/Cloud/en-US/4ad999a0be664160a08514ba4ce6430c.html) on the *SAP Help Portal*
 
 Having provided this information, you can click **Connect Services** to connect the autoscaler to your app.
-
-{{% alert type="warning" %}}
-Do not immediately restart your app.
-
-There is currently an issue where you will need to select the JSON file again while the autoscaler is waiting to be bound.
-
-Edit the autoscaler while it is waiting to be bound and select the JSON file again.
-
-Now you can restart your app and the correct JSON will be uploaded.
-{{% /alert %}}
 
 You will see from the documentation on the SAP website that the structure of the configuration file can get quite complex. Mendix therefore provides you with a tool to help you create the correct configuration.
 

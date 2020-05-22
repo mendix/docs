@@ -10,7 +10,7 @@ tags: ["app store", "app store component", "image crop", "cropper", "image", "pl
 
 The [Image Crop](https://appstore.home.mendix.com/link/app/254/) module transforms images based on a selection made in the browser.
 
-### 1.1 Typical Usage Scenarios
+### 1.1 Typical Use Cases
 
 End-users can do the following with this module:
 

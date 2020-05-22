@@ -9,7 +9,7 @@ title: "Enter the title of the document"
 
 ## 1 Introduction
 
-{Add the introduction text here. Write about what this Mendix Reference Guide page will cover and what the user will learn.}
+{Describe what this page will cover and what the user will learn.}
 
 ## 2 {Title of the User Interface Element Being Described}
 
@@ -17,18 +17,14 @@ title: "Enter the title of the document"
 
 ![](attachments/{sub-folder with same name as doc file}/{image filename}.png)
 
-### 2.1 {Title of Section}
+### 2.1 {Title of Sub-Section}
 
-{Use sub-headings for more detail.}
+{Use sub-sections for more detail.}
 
-## 3 Example User Scenarios
+## 3 {Example Usage Scenarios}
 
-This section presents example user scenarios that can be referenced when using these features.
-
-### 3.1 {Example User Scenario}
-
-{Describe the example user scenario.}
+{Describe some example usage scenarios that can be referenced when using these features.}
 
 ## 4 Read More
 
-{Add links to related documents and blog posts; make sure necessary third-party links are contextualized in the above sections, as they should not be put here}
+{Add links to related documents and blog posts. Contextualize necessary third-party links in the above sections, as they should not be put here.}

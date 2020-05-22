@@ -10,7 +10,7 @@ tags: ["app store", "app store component", "widget", "microflow timer", "platfor
 
 The [Microflow Timer](https://appstore.home.mendix.com/link/app/27/) widget can be used to time and execute a microflow or nanoflow as long as a certain page is open. The microflow or nanoflow can be executed once or repeatedly, in which case it will not stop until it returns false or until the page is closed.
 
-### 1.1 Typical Usage Scenarios
+### 1.1 Typical Use Cases
 
 * Update a grid or object after a certain amount of time (for example, a message inbox)
 * Close a page with a message automatically after 10 seconds
@@ -26,7 +26,7 @@ The [Microflow Timer](https://appstore.home.mendix.com/link/app/27/) widget can 
 
 The widget requires a data view or template grid context. This object will be sent as an argument to the invoked microflow or nanoflow.
 
-## 3 Properties {#properties}
+The following properties must be configured:
 
 * **Interval (in ms)** – This defines how often the microflow or nanoflow is called. The inteval is in milliseconds, so the default of 30000 equals 30 seconds. Unless **Execute once** is set to **Yes**, the microflow is invoked immediately after loading the page for the first time.
 * **Execute once** – If set to **Yes**, the microflow will be invoked only once. The **Interval (in ms)** above defines after how many seconds it will be invoked.

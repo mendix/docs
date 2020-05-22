@@ -2,11 +2,7 @@
 title: "Enable End-Users to Attach Images"
 category: "Pages"
 description: "Describes how to configure image uploader in Mendix Studio."
-<<<<<<< HEAD
 menu_order: 70
-=======
-menu_order: 30
->>>>>>> development
 tags: ["studio", "pages", "image", "image uploader", "attachment", "attach image"]
 ---
 

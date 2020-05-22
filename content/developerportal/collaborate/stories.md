@@ -227,7 +227,7 @@ When you select a story, you can perform the following actions (these actions su
 
 ![](attachments/stories/story-context-menu.jpg)
 
-* **Clone** – click this to duplicate a selected user story and its tasks, story points, status, and labels into a new user story 
+* **Clone** – click this to duplicate a selected user story and its tasks, story points, status, and labels into a new user story; this can enable utilizing a user story as a template
 * **Move** –  click this to move a story to another sprint
 * **Assign Label** – click this to assign existing labels to a story
 * **Delete** – click this to delete a story

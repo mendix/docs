@@ -338,12 +338,10 @@ The Mendix Platform stores certain personal information about you. To view this 
 Mendix has been tracking these data changes since November, 2018.
 {{% /alert %}}
 
-## 13 Point Penalties
+## 11 Point Penalties
 
-Abusing the Forum, App Store, the point system or other community tools is not allowed. Any such action can result in a point penalty. Mendix reserves the right to give penalties to users who bypass or game the systems without informing the user.
+Abusing the Mendix Forum, App Store, point system, or other community tools is not allowed. Any such action can result in a point penalty. Mendix reserves the right to penalize a user who bypasses or games the system without informing them.
 
 ## 12 Main Document in This Category
 
 * [OAuth & Scopes](oauth-scopes) – provides introductory information on how OAuth and scopes work as well as details on scopes generated in the Developer Portal
-
-

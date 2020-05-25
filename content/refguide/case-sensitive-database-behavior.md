@@ -59,8 +59,7 @@ It is possible to set different collations for sorting and comparison operations
 
 Does not support comparison on attributes of strings of unlimited length.
 
-String functions are implemented by converting all letters to uppercase and is, therefore, sensitive to how the database is configured to convert letters.
-It is possible to set a different behavior for converting letters to uppercase by setting different values to the `NLS_UPPER` parameter.
+String functions are implemented by converting all letters to uppercase using the database's `UPPER` function and is, therefore, insensitive to the `locale` in which it is executed.
 
 ### 2.6 SAP HANA
 

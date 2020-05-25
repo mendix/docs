@@ -9,6 +9,29 @@ tags: ["deployment", "cloud environment", "Mendix Cloud", "SAP", "SAP Cloud", "I
 These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy), other [deployment](/developerportal/deploy/) options, and app [operations](/developerportal/operate/). For updates on the status of Mendix Cloud v4, Mendix Cloud v3, and other deployment options, see [Mendix Status](https://status.mendix.com/).
 
 ## 2020
+### June TODO, 2020
+
+TODO: fix versions and dates
+
+#### Mendix for Private Cloud — Mendix Operator v1.1.0
+
+To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide#operator-v1.1.0).
+
+TODO: update list
+
+* a
+* b
+* c
+
+#### Mendix for Private Cloud — Mendix Gateway Agent v1.1.0
+
+To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide#agent-v1.1.0).
+
+TODO: update list
+
+* a
+* b
+* c
 
 ### June 4th, 2020
 

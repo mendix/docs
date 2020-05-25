@@ -20,7 +20,7 @@ The how-to describes the following use case:
 
 You have a web shop and you would like to set the following conditions:
 
-* Show fields to fill the billing address in only when a customer unchecks the **Is billing address the same as the delivery address?** option:
+* Show a field with a billing address only when a customer unchecks the **Is billing address the same as the delivery address?** option:
 
     ![Is Billing Address the Same](attachments/pages-how-to-set-visibility/billing-address-same.png)
 
@@ -53,13 +53,19 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Setting Condition for a Billing Address
 
-The visibility of the billing address depends if the customer checks that the billing address is different from the delivery address. In your domain model, you have an attribute of the Boolean type called **BillingAddressSame**, so when it is set to *false*, the billing address should be visible. This means that the visibility of the billing address depends on this attribute value, so the conditional visibility is *attribute-based*. 
+*Conditional visibility* is a set of properties that allows you to show widgets only when certain conditions are met.
+
+The visibility of the billing address depends whether the customer checks that the billing address is different from the delivery address. In your domain model, you have an attribute of the Boolean type called **BillingAddressSame**, so when it is set to *false*, the billing address should be visible. This means that the visibility of the billing address depends on the value of the **BillingAddressSame** attribute, so the conditional visibility is *attribute-based*. 
+
+{{% alert type="info" %}}
 
 Attribute-based conditional visibility can be set only for widgets that are inside data containers (a data view, list view, or data grid). 
 
+{{% /alert %}}
+
 To set conditional visibility for the **Billing Address** field, do the following:
 
-1. Open the page where the customers specify their details including the delivery address and billing address:
+1. Open the page where the customers specify their details:
 
     ![Customer Details](attachments/pages-how-to-set-visibility/customer-page.png)
 
@@ -71,7 +77,7 @@ To set conditional visibility for the **Billing Address** field, do the followin
 
 4. In the **Select Attribute** dialog box, choose the **BillingAddressSame** attribute and click **Select**.
 
-5. The **Attribute Values** property is now displayed in properties. Untick the *True* value as it does not meet the conditions you would like to set:
+5. The **Attribute Values** property is now displayed in properties. Untick the *True* value as it does not meet the conditions you would like to set, and leave the **False** value selected:
 
     {{% image_container width="250" %}}![Attribute-Based Visibility](attachments/pages-how-to-set-visibility/attribute-based-visibility-set.png){{% /image_container %}}
 
@@ -79,7 +85,7 @@ Good job! Now the billing address will only be shown if the customer billing add
 
 ## 4 Showing an Element to Certain User Roles Only
 
- You have a list of products with the **Edit** button. You have three user roles in your app: Administrators, Sales_Managers, and Customers. You would like to show this button only to Administrators and Sales Managers, but to hide it from customers. For more information, on how to create user roles, see [How to Secure Your App and Configure Access to Its Functionality](security-how-to-configure-roles).
+ You have a list of products with the **Edit** button. You have three user roles in your app: **Administrators**, **Sales_Managers**, and **Customers**, and you would like to show this button only to Administrators and Sales managers only, hiding it from customers. For more information, on how to create user roles, see [How to Secure Your App and Configure Access to Its Functionality](security-how-to-configure-roles).
 
 To show an element only to a certain user role, do the following:
 
@@ -95,11 +101,11 @@ To show an element only to a certain user role, do the following:
 
     {{% image_container width="250" %}}![Unselected Roles](attachments/pages-how-to-set-visibility/unselected-roles.png){{% /image_container %}}
 
-Well done! Now the Edit button will only be shown to Administrator and Sales_Manager user roles only.
+Well done! Now the **Edit** button will only be shown to **Administrator** and **Sales_Manager** user roles only.
 
-## 3 Viewing Which Fields Have Conditional Visibility
+## 3 Viewing Fields With Conditional Visibility
 
-You can highlight which elements on your page have conditional visibility set. To show widgets with conditional visibility, do the following:
+To easily find which elements on your page have conditional visibility, you can highlight them. To show widgets with conditional visibility, do the following:
 
 1. Open the page.
 
@@ -111,7 +117,7 @@ Widgets with conditional visibility are highlighted:
 
 ![Highlighted Widget](attachments/pages-how-to-set-visibility/highlighted-widget.png)   
 
-Congratulations! You set several conditions for your widgets and you learnt how to show highlight these widgets on a page to find them easily.
+Congratulations! You set several conditions for your widgets and you learnt how to view these widgets on a page to find them easily.
 
 You can now preview your app and test it. For more information on how to preview your page, see [Previewing & Publishing Your App](/studio/publishing-app).
 You can also hide the whole page or a microflow from a certain user role. For more information, see [How to Secure Your App and Configure Access to Its Functionality](security-how-to-configure-roles).

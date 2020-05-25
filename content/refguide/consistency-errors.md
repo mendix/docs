@@ -10,7 +10,7 @@ tags: ["Studio Pro", "consistency errors", "checks", "errors"]
 
 To make sure that your app is always consistent and properly built, Studio Pro does consistency checks when you build your app. 
 
-When a consistency check is not met, Studio Pro will notify you about this via consistency errors on the [Errors pane](errors-pane) and highlight the error in the corresponding editor:
+When a consistency check is not met, Studio Pro will notify you about this via consistency errors on the [Errors pane](errors-pane). The errors in pages, microflows, domain models, and document templates will be highlighted:
 
 ![Errors Pane](attachments/consistency-errors/errors-pane.png)
 

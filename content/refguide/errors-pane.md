@@ -10,7 +10,7 @@ tags: ["Studio Pro", "errors", "error list", "errors pane"]
 
 To make sure that your app is always consistent and properly built, Studio Pro does consistency checks when you build your app. 
 
-When a consistency check is not met, Studio Pro will notify you about this on the **Errors** pane:
+When a consistency check is not met, Studio Pro will notify you about this on the **Errors** pane and highlight the check in the corresponding editor:
 
 ![Errors Pane](attachments/errors-pane/errors-pane.png)
 

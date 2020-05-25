@@ -10,9 +10,9 @@ tags: ["Studio Pro", "consistency errors", "checks", "errors"]
 
 To make sure that your app is always consistent and properly built, Studio Pro does consistency checks when you build your app. 
 
-When a consistency check is not met, Studio Pro will notify you about this via consistency errors on the **Errors** pane. 
+When a consistency check is not met, Studio Pro will notify you about this via consistency errors on the [Errors pane](errors-pane) and highlight the error in the corresponding editor:
 
-![The Errors tab](attachments/consistency-errors/errors-tab.png)
+![Errors Pane](attachments/consistency-errors/errors-pane.png)
 
 If you cannot see the **Errors** pane, you can enable it from the menu option **View > Error list**.
 
@@ -39,6 +39,7 @@ Errors need to be solved before your app can be deployed. A consistency error ca
 
 * [Page Editor Consistency Errors](consistency-errors-pages)
 * [Navigation Consistency Errors](consistency-errors-navigation)
+* [Errors Pane](errors-pane)
 * [Pages](pages)
 * [Microflows](microflows) 
 * [Navigation in Mendix](navigation)

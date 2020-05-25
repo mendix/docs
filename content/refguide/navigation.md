@@ -131,9 +131,9 @@ This deletes the profile. If [menu widgets](menu-widgets) are still referring to
 
 Only available on profiles supporting offline synchronization.
 
-This opens the **Customize offline synchronziation** dialog box that is used for overriding offline synchronization settings for specific entities. For each entity the download setting is shown. A default is automatically determined by analyzing the model, but can be overridden in which case the setting will appear in boldface. For more details on the settings and when to use them, please check out the [offline-first](offline-first#customizable-synchronization) documentation.
+This opens the **Customize offline synchronziation** dialog box that is used for overriding offline synchronization settings for specific entities. For each entity the download setting is shown. A default is automatically determined by analyzing the model, but can be overridden in which case the setting will appear in boldface. For more details on the settings and when to use them, see the [Offline-First Reference Guide](offline-first#customizable-synchronization).
 
-  ![](attachments/navigation/customize-offline-synchronization.png)
+![](attachments/navigation/customize-offline-synchronization.png)
 
 ## 5 Read More
 

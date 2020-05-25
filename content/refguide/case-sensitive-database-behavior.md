@@ -11,6 +11,7 @@ Case sensitive string operations are those that consider upper and lower case as
 Operations that affect strings in queries (for instance, inside an XPath constraint) can be case sensitive or case insensitive depending on the database vendor, version, and configuration used by the Mendix application.
 
 It is also important to note that each implementation of case insensitive operation may treat the case normalization of letters differently.
+As a general rule, it is based on locale which is either specified explicitly on database/table, or the database infers it from the OS.
 This normalization of letters, or case folding, is further described in the [W3C case folding wiki page](https://www.w3.org/International/wiki/Case_folding).
 
 For the purposes of this document we can divide these operations three categories:

@@ -10,6 +10,9 @@ menu_order: 20
 Case sensitive string operations are those that consider upper and lower case as different letters.
 Operations that affect strings in queries (for instance, inside an XPath constraint) can be case sensitive or case insensitive depending on the database vendor, version, and configuration used by the Mendix application.
 
+It is also important to note that each implementation of case insensitive operation may treat the case normalization of letters differently.
+This normalization of letters, or case folding, is further described in the [W3C case folding wiki page](https://www.w3.org/International/wiki/Case_folding).
+
 For the purposes of this document we can divide these operations three categories:
 
 - Sorting: Indicates the order in which you want objects to be loaded (alphabetically ascending or descending).
@@ -48,12 +51,15 @@ These are both case insensitive.
 
 ### 2.5 ORACLE
 
-All operations depend on collation.
+Sorting and comparison depend on collation.
 The default collation is `binary`, which is case sensitive, but a `binary_ci` is available for case insensitive operations.
 
 It is possible to set different collations for sorting and comparison operations by setting different values to the `NLS_SORT` and `NLS_COMP` "Linguistic Sort Parameters".
 
 Does not support comparison on attributes of strings of unlimited length.
+
+String functions are implemented by converting all letters to uppercase and is, therefore, sensitive to how the database is configured to convert letters.
+It is possible to set a different behavior for converting letters to uppercase by setting different values to the `NLS_UPPER` parameter.
 
 ### 2.6 SAP HANA
 

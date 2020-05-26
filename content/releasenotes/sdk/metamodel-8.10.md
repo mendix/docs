@@ -7,196 +7,184 @@ parent: "metamodel-8"
 
 **Release date: May 26th, 2020**
 
-## DomainModels
+### DomainModels
 
-### Entity (Element)
+#### Entity (Element)
 
+* We introduced the 'source' property as a replacement for the `remoteSource`, `remoteSourceDocument`, and `isRemote` properties.
+* We deleted the `remoteSource`, `remoteSourceDocument`, and `isRemote` properties. 
 
-#### Property 'isRemote'
-* Deleted; "Use property 'source' instead"
+#### EntitySource & RemoteEntitySource (Elements)
 
-#### Property 'remoteSource'
-* Deleted; "Use property 'source' instead"
+* We introduced these elements.
 
-#### Property 'remoteSourceDocument'
-* Deleted; "Use property 'source' instead"
+#### RemoteEntitySourceDocument (ModelUnit)
 
-#### Property 'source'
-* Introduced; "Replacement for remoteSource/remoteSourceDocument/isRemote properties"
-
-### EntitySource (Element)
-* Introduced; 
+* We introduced this ModelUnit.
 
 
-### RemoteEntitySource (Element)
-* Introduced; 
-
-
-### RemoteEntitySourceDocument (ModelUnit)
-
-
-#### Property 'description'
+##### Property 'description'
 * Introduced; "A multi-line description of the remote source"
 
-#### Property 'catalogUrl'
+##### Property 'catalogUrl'
 * Introduced; "A url to a page that gives more information about the remote source"
 
-#### Property 'icon'
+##### Property 'icon'
 * Introduced; "A custom icon of the source document"
 
-### MappedValue (Element)
+#### MappedValue (Element)
 * Introduced; 
 
 
-### AssociationBase (Element)
+#### AssociationBase (Element)
 
 
-#### Property 'remoteSourceDocument'
+##### Property 'remoteSourceDocument'
 * Deleted; "The information is now stored in ODataRemoteAssociationSource"
 
-#### Property 'source'
+##### Property 'source'
 * Introduced; 
 
-### AssociationSource (Element)
-* Introduced; 
-
-
-### RemoteAssociationSource (Element)
+#### AssociationSource (Element)
 * Introduced; 
 
 
-## Microflows
-
-### SynchronizeAction (Element)
-
-
-#### Property 'type'
-* Introduced; 
-
-#### Property 'variableNames'
-* Introduced; 
-
-### WorkflowCallAction (Element)
+#### RemoteAssociationSource (Element)
 * Introduced; 
 
 
-### SetTaskOutcomeAction (Element)
+### Microflows
+
+#### SynchronizeAction (Element)
+
+
+##### Property 'type'
+* Introduced; 
+
+##### Property 'variableNames'
+* Introduced; 
+
+#### WorkflowCallAction (Element)
 * Introduced; 
 
 
-### OpenUserTaskAction (Element)
+#### SetTaskOutcomeAction (Element)
 * Introduced; 
 
 
-## Rest
+#### OpenUserTaskAction (Element)
+* Introduced; 
 
-### ConsumedODataService (ModelUnit)
+
+### Rest
+
+#### ConsumedODataService (ModelUnit)
 
 
-#### Property 'serviceName'
+##### Property 'serviceName'
 * Added public
 
-#### Property '^version'
+##### Property '^version'
 * Added public
 
-### ODataRemoteEntitySource (Element)
+#### ODataRemoteEntitySource (Element)
 * Introduced; "Indicates that this entity is from an OData source"
 
 
-### ODataRemoteAssociationSource (Element)
+#### ODataRemoteAssociationSource (Element)
 * Introduced; "Indicates that this association is from an OData source"
 
 
-### ODataMappedValue (Element)
+#### ODataMappedValue (Element)
 * Introduced; "Indicates that the value of this attribute is from an OData source"
 
 
-### ODataEntity (Element)
+#### ODataEntity (Element)
 
 
-#### Property 'name'
+##### Property 'name'
 * Added public
 
-#### Property 'entity'
+##### Property 'entity'
 * Deleted; "No longer needed. Now Entity knows its Source."
 
-### ODataNavigationProperty (Element)
+#### ODataNavigationProperty (Element)
 
 
-#### Property 'association'
+##### Property 'association'
 * Deleted; "Associations now know their remote names"
 
-#### Property 'thisSideIsParent'
+##### Property 'thisSideIsParent'
 * Deleted; "No longer needed. Can be deduced in ODataRemoteAssociationSource"
 
-### ODataAttribute (Element)
+#### ODataAttribute (Element)
 
 
-#### Property 'attribute'
+##### Property 'attribute'
 * Deleted; "No longer needed. Now attributes know their remote name."
 
-## Pages
+### Pages
 
-### TextBox (Element)
+#### TextBox (Element)
 
 
-#### Property 'autocomplete'
+##### Property 'autocomplete'
 * Introduced; 
 
-### TextArea (Element)
+#### TextArea (Element)
 
 
-#### Property 'autocomplete'
+##### Property 'autocomplete'
 * Introduced; 
 
-### GroupBox (Element)
+#### GroupBox (Element)
 
 
-#### Property 'headerMode'
+##### Property 'headerMode'
 * Introduced; 
 
-## Workflows
+### Workflows
 
-### Workflow (ModelUnit)
-* Introduced; 
-
-
-### WorkflowActivity (Element)
+#### Workflow (ModelUnit)
 * Introduced; 
 
 
-### Flow (Element)
+#### WorkflowActivity (Element)
 * Introduced; 
 
 
-### FlowValue (Element)
+#### Flow (Element)
 * Introduced; 
 
 
-### NoValue (Element)
+#### FlowValue (Element)
 * Introduced; 
 
 
-### TaskOutcomeValue (Element)
+#### NoValue (Element)
 * Introduced; 
 
 
-### StartWorkflowActivity (Element)
+#### TaskOutcomeValue (Element)
 * Introduced; 
 
 
-### EndWorkflowActivity (Element)
+#### StartWorkflowActivity (Element)
 * Introduced; 
 
 
-### WorkflowTask (Element)
+#### EndWorkflowActivity (Element)
 * Introduced; 
 
 
-### WorkflowTaskOutcome (Element)
+#### WorkflowTask (Element)
 * Introduced; 
 
 
-### UserTask (Element)
+#### WorkflowTaskOutcome (Element)
+* Introduced; 
+
+
+#### UserTask (Element)
 * Introduced; 
 

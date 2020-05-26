@@ -8,9 +8,18 @@ tags: ["studio pro", "translation", "languages", "translatable text"]
 
 ## 1 Introduction
 
-All texts that are presented to the end-user can be translated to different languages. Examples include [labels](label), the captions of [buttons](button-widgets) and [data grid](data-grid) columns, [menu items](menu#menu-item) and [messages](show-message) that are sent from a [microflow](microflows).
+Mendix is designed so that it is easy to present the same information to users who have different language requirements. To support this, all texts that are presented to the end-user can be translated to different languages.
 
-### 1.1 Working in the Currently Selected Language
+These *translatable texts* include the following:
+
+* [button](button-widgets) captions
+* [data grid](data-grid) columns
+* [labels](label)
+* [menu items](menu#menu-item)
+* [messages](show-message) that are sent from a [microflow](microflows)
+* [text](text)
+
+## 2 Working in the Currently Selected Language
 
 You can see the language you are currently working in at the bottom right of the screen.
 
@@ -28,12 +37,14 @@ If you edit your app to add new widgets while not in the default language, any n
 
 All untranslated texts will be displayed in the default language when you run the application.
 
+## 3 The Language Menu
+
 The **Language** menu allows you to manage additional languages and translations for your app. This includes features to help you to translate a text in all places where it appears with a single change instead of having to change each occurrence individually:
 
 {{% image_container width="300" %}}![Language Menu](attachments/language/language-menu.png)
 {{% /image_container %}}
 
-## 2 Menu Items Overview
+### 3.1 Menu Items Overview
 
 The **File** menu items are described in the table below:
 
@@ -47,7 +58,11 @@ The **File** menu items are described in the table below:
 | [Batch Translate…](batch-translate) | Add and edit translations from a selected source language to a selected target language | *None* |
 | [Language Operations…](language-operations) | Manipulate (for example, copy) translations between languages. | *None* |
 
-## 3 Read More
+## 4 Setting the End-User's Language
+
+**XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX**
+
+## 5 Read More
 
 There is a worked example of adding a translation in [How to Translate Your App Content](/howto/collaboration-requirements-management/translate-your-app-content)
 

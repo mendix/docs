@@ -55,9 +55,9 @@ kubectl -n $OPERATOR_NAMESPACE patch deployment mendix-operator -p \
 Run the following commands to switch to the latest component versions:
 
 ```shell
-kubectl -n $OPERATOR_NAMESPACE patch operatorconfiguration mendix-operator-configuration -p \
+kubectl -n $OPERATOR_NAMESPACE patch operatorconfiguration mendix-operator-configuration --type merge -p \
 '{"spec":{
-    "sidecarImage":"quay.io/digital_ecosystems/mx-m2ee-sidecar:1.0.0",
+    "sidecarImage":"quay.io/digital_ecosystems/mx-m2ee-sidecar:1.1.0",
     "builderImage":"quay.io/digital_ecosystems/image-builder:ingvar-rhel",
     "buildRuntimeBaseImage":"index.docker.io/mendix/runtime-base:{{.MxRuntimeVersion}}-rhel",
     "dockerfile":null
@@ -67,7 +67,7 @@ kubectl -n $OPERATOR_NAMESPACE patch operatorconfiguration mendix-operator-confi
 Set the default requests and limits for Mendix Runtime pods:
 
 ```shell
-kubectl -n $OPERATOR_NAMESPACE patch operatorconfiguration mendix-operator-configuration -p \
+kubectl -n $OPERATOR_NAMESPACE patch operatorconfiguration mendix-operator-configuration --type merge -p \
 '{"spec":{
     "runtimeResources":{"limits":{"cpu":"1000m","memory":"512Mi"},"requests":{"cpu":"100m","memory":"512Mi"}}
 }}'
@@ -76,17 +76,18 @@ kubectl -n $OPERATOR_NAMESPACE patch operatorconfiguration mendix-operator-confi
 Set the configuration for readiness and liveness probes:
 
 ```shell
-kubectl -n $OPERATOR_NAMESPACE patch operatorconfiguration mendix-operator-configuration -p \
+kubectl -n $OPERATOR_NAMESPACE patch operatorconfiguration mendix-operator-configuration --type merge -p \
 '{"spec":{
-    "runtimeLivenessProbe":{"initialDelaySeconds":60,"periodSeconds":15}},
-    "runtimeReadinessProbe":{"initialDelaySeconds":5,"periodSeconds":1}}
+    "runtimeLivenessProbe":{"initialDelaySeconds":60,"periodSeconds":15},
+    "runtimeReadinessProbe":{"initialDelaySeconds":5,"periodSeconds":1}
 }}'
 ```
 
 Set the type to `on-demand` for all Storage Plans:
 
 ```shell
-# TODO: write me
+kubectl get storageplan --no-headers=true -o name | sed -e 's/.*\///g' | \
+  xargs -I {} kubectl patch storageplan {} --type=merge -p '{"spec":{"type":"on-demand"}}'
 ```
 
 ### Start the Mendix Operator
@@ -94,7 +95,7 @@ Set the type to `on-demand` for all Storage Plans:
 To start the updated version of the Mendix Operator, run:
 
 ```shell
-kubectl -n $OPERATOR_NAMESPACE scale deployment mendix-operator --replicas=0
+kubectl -n $OPERATOR_NAMESPACE scale deployment mendix-operator --replicas=1
 ```
 
 ### Cleanup steps
@@ -102,8 +103,7 @@ kubectl -n $OPERATOR_NAMESPACE scale deployment mendix-operator --replicas=0
 Delete StatefulSets from the Namespace where the Operator was installed:
 
 ```shell
-# TODO: VALIDATE ME
-kubectl -n $OPERATOR_NAMESPACE delete statefulset \*
+kubectl -n $OPERATOR_NAMESPACE delete --all statefulsets
 ```
 
 These StatefulSets will be replaced with Deploymens when the new version of the Operator is started.

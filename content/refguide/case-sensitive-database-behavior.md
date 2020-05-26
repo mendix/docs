@@ -17,7 +17,7 @@ This normalization of letters, or case folding, is further described in [Case Fo
 For the purposes of this document we can divide case sensitive operations into three categories:
 
 * Sorting: Indicates the order in which you want objects to be retrieved (alphabetically ascending or descending).
-* Comparing: These are operations that involve equality directly in queries (for instance, in the query `\\Entity[Attribute = 'a']`)
+* Comparing: These are operations that involve equality or other comparisons directly in queries (for instance, in the query `\\Entity[Attribute = 'a']`)
 * String functions: These are the [contains](xpath-contains), [starts-with](xpath-starts-with), and [ends-with](xpath-ends-with) functions of an XPath.
 
 Unless otherwise indicated below, sorting and comparing strings is case sensitive whereas string functions are case insensitive.

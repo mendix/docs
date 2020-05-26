@@ -27,7 +27,7 @@ For example, `contains('OneTwo', 'one')` will return `false`.
 
 SAP HANA does not support unlimited strings or strings with a specified length greater than 5000 characters when using the equal (`=`) or not equal (`!=`) operators in XPath constraints. However, it does support functions including `contains()`, `starts-with()`, and `ends-with()`.
 
-See also [Case Sensitive Database Behavior](case-sensitive-database-behavior).
+See also [Case-Sensitive Database Behavior](case-sensitive-database-behavior).
 
 ### 4.2 Sorting, Grouping & Aggregating
 

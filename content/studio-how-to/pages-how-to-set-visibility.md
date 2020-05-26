@@ -18,15 +18,13 @@ This how-to explains how you show fields to your end-users only when certain con
 
 The how-to describes the following use case: 
 
-You have a web shop and you would like to set the following conditions:
+You have a web shop and you would like to show a field with a billing address only when a customer unchecks the **Is billing address the same as the delivery address?** option (it is checked by default):
 
-* Show a field with a billing address only when a customer unchecks the **Is billing address the same as the delivery address?** option:
+![Is Billing Address the Same](attachments/pages-how-to-set-visibility/billing-address-same.png)
 
-    ![Is Billing Address the Same](attachments/pages-how-to-set-visibility/billing-address-same.png)
+You also would like to make the **Edit** button on the page listing products visible to Administrators and Sales managers only:
 
-* Make the **Edit** button in the list of products visible to Sales managers only
-
-    ![List of Products](attachments/pages-how-to-set-visibility/list-of-products.png)
+![List of Products](attachments/pages-how-to-set-visibility/list-of-products.png)
 
 The domain model looks the following way:
 
@@ -48,8 +46,8 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Familiarize yourself with page terms and how to perform basic functions on pages. For more information, see [Pages](/studio/page-editor). 
 * Familiarize yourself with conditional visibility. For more information, see [Conditional Visibility Section](/studio/page-editor-widgets-visibility-section).
+* Enable security and add user roles to your app. For more information, see [How to Secure Your App and Configure Access to Its Functionality](security-how-to-configure-roles).
 * Familiarize yourself with the domain model terms and learn how to perform basic functions. For more information, see [Domain Model](/studio/domain-models).
-* Familiarize yourself with information about security, roles, and permissions in Studio. For more information, see [Security, Roles & Permissions](settings-security).
 
 ## 3 Setting Condition for a Billing Address
 
@@ -119,5 +117,4 @@ Widgets with conditional visibility are highlighted:
 
 Congratulations! You set several conditions for your widgets and you learnt how to view these widgets on a page to find them easily.
 
-You can now preview your app and test it. For more information on how to preview your page, see [Previewing & Publishing Your App](/studio/publishing-app).
-You can also hide the whole page or a microflow from a certain user role. For more information, see [How to Secure Your App and Configure Access to Its Functionality](security-how-to-configure-roles).
+You can now preview your app and test the conditions that you have set: when the Billing address is being shown and which user roles can see the **Edit** button. For more information on how to preview your page, see [Previewing & Publishing Your App](/studio/publishing-app).

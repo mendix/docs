@@ -60,7 +60,7 @@ It is possible to set different collations for sorting and comparison operations
 
 Does not support comparison on string attributes of unlimited length.
 
-String functions are implemented by converting all letters to uppercase using the database's `UPPER` function and is, therefore, insensitive to the `locale` in which it is executed.
+String functions are implemented by converting all letters to uppercase using the database's `UPPER` function and are, therefore, **case insensitive** and insensitive to the `locale` in which they are executed.
 
 ### 2.6 SAP HANA
 
@@ -72,7 +72,7 @@ Does not support sorting or comparison on string attributes of unlimited length.
 
 All operations depend on collation.
 The default recommended collation is `SQL_Latin1_General_CP1_CI_AS`.
-For more information, see our guide on [Setting Up a new SQL Server Database](setting-up-a-new-sql-server-database) and the Microsoft documentation [Windows Collation Name](https://docs.microsoft.com/en-us/sql/t-sql/statements/windows-collation-name-transact-sql).
+For more information, see our guide on [Setting Up a new SQL Server Database](/developerportal/deploy/setting-up-a-new-sql-server-database) and the Microsoft documentation [Windows Collation Name](https://docs.microsoft.com/en-us/sql/t-sql/statements/windows-collation-name-transact-sql).
 
 ## 3 Overview of Default Case Sensitivity
 

@@ -66,7 +66,7 @@ parent: "metamodel-8"
 #### ODataNavigationProperty (Element)
 
 * We deleted the `association` property, because associations now know their remote names.
-* We deleted the `thisSideIsParent` property, which is no longer needed, as this can be `ODataRemoteAssociationSource`.
+* We deleted the `thisSideIsParent` property, which is no longer needed, as this can be deduced in `ODataRemoteAssociationSource`.
 
 #### ODataAttribute (Element)
 
@@ -84,12 +84,10 @@ parent: "metamodel-8"
 
 ### Workflows
 
-#### Workflow (ModelUnit)
-
-* We introduced this model unit.
-
 #### WorkflowActivity, Flow, FlowValue, NoValue TaskOutcomeValue, StartWorkflowActivity, EndWorkflowActivity, WorkflowTask, WorkflowTaskOutcome & UserTask (Elements)
 
 * We introduced these elements.
 
+#### Workflow (ModelUnit)
 
+* We introduced this model unit.

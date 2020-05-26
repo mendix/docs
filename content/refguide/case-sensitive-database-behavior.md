@@ -72,7 +72,7 @@ Does not support sorting or comparison on string attributes of unlimited length.
 
 All operations depend on collation.
 The default recommended collation is `SQL_Latin1_General_CP1_CI_AS`.
-For more information, see our guide on [Setting Up a new SQL Server Database](setting-up-a-new-sql-server-database) and the Microsoft documentation [Windows Collation Sorting Style](https://msdn.microsoft.com/en-us/library/ms143515.aspx).
+For more information, see our guide on [Setting Up a new SQL Server Database](setting-up-a-new-sql-server-database) and the Microsoft documentation [Windows Collation Name](https://docs.microsoft.com/en-us/sql/t-sql/statements/windows-collation-name-transact-sql).
 
 ## 3 Overview of Default Case Sensitivity
 

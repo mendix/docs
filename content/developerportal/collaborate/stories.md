@@ -54,13 +54,7 @@ You can also perform various actions to [manage labels](#manage-labels).
 
 Using the **More** button, you can perform the actions described below.
 
-### 3.1 Delete Selection
-
-Click **Delete selection** to delete the selected story or stories:
-
-![](attachments/stories/delete-selection.png)
-
-### 3.2 Complete Current Sprint
+### 3.1 Complete Current Sprint
 
 Click **Complete current sprint** to complete a Sprint. Note that all stories have to be marked **Done** before you are able to complete a Sprint.
 
@@ -68,7 +62,7 @@ You will receive this confirmation message, so make sure you are able to confirm
 
 ![](attachments/stories/complete-verify.png)
 
-### 3.3 Import / Export {#import-export}
+### 3.2 Import / Export {#import-export}
 
 Click **Import / Export** to import stories from or export stories to Excel:
 
@@ -86,7 +80,7 @@ When editing stories in Excel, follow these guidelines:
 * To reorder an item, adjust the depth by adding or removing the plus signs (make sure they stay consistent with every item being the same or 1 level deeper than the item above it)
 * To remove an item, replace its depth with a single minus sign (make sure that any tasks associated with it are either moved or are also removed)
 
-### 3.4 Manage Labels {#manage-labels}
+### 3.3 Manage Labels {#manage-labels}
 
 Click **Manage labels** to open a page where you can list and manage your labels:
 
@@ -99,7 +93,7 @@ Click **Manage labels** to open a page where you can list and manage your labels
 | Merge Label | allows you to merge the selected label into another label.<br/>All stories which have the selected label are labeled with the other label and the selected label is deleted. |
 | Remove Label | allows you to remove the selected label from any stories to which it has been applied.<br/>The label is then deleted. |
 
-### 3.5 History {#history}
+### 3.4 History {#history}
 
 Click **History** to view the history of collaboration actions for the app. On this page, you can click the following:
 
@@ -155,6 +149,18 @@ To add a task to the story, follow these steps:
 After you have completed the task, check the box:
 
 ![](attachments/stories/complete-task.png)
+
+### 4.3 Deleting a Story or Task {#deleting}
+
+To delete a story or a task, press the trash-icon below the title of the story or task. You will be asked for confirmation. When you confirm, the story or task will be removed from the system permanently.
+
+If you delete a story, its tasks will be deleted as well.
+
+If you delete a story that is linked to a feedback item you will be asked to choose to re-open or to unlink the feedback item.
+
+![](attachments/stories/delete-linked-story.png)
+
+Re-opening the feedback will revert the feedback item back to the Open status. To unlink it means the feedback item will remain in the Accepted status. Either way, the story will be deleted.
 
 ### 4.3 Moving Stories  {#moving-stories}
 

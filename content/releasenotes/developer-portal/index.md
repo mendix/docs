@@ -13,6 +13,22 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 ## 2020
 
+### May 27th, 2020
+
+#### Improvements
+
+* when you delete a story or task, it is now irreversibly removed from the system
+* we removed the ability to revert story-related changes in the project history
+* we removed the ability to delete several stories at once in the old stories page
+* we simplified story maintenance by preventing nested tasks
+* we made small improvements in the look and feel of the Developer Portal
+* we removed the read-only permission on the stories board to bring the Developer Portal in line with industry standards
+
+#### Fixes
+
+we fixed a small bug where the calendar icon on date/time input fields was not displayed properly
+we fixed a small bug where the star icon on your favorite projects was not displayed properly
+
 ### May 22nd, 2020
 
 #### Improvements

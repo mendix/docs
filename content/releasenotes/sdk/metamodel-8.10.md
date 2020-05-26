@@ -11,180 +11,85 @@ parent: "metamodel-8"
 
 #### Entity (Element)
 
-* We introduced the 'source' property as a replacement for the `remoteSource`, `remoteSourceDocument`, and `isRemote` properties.
+* We introduced the `source` property as a replacement for the `remoteSource`, `remoteSourceDocument`, and `isRemote` properties.
 * We deleted the `remoteSource`, `remoteSourceDocument`, and `isRemote` properties. 
 
-#### EntitySource & RemoteEntitySource (Elements)
+#### AssociationBase (Element)
+
+* We introduced the `source` property.
+* We deleted the `remoteSourceDocument` property. This information is now stored in `ODataRemoteAssociationSource`.
+
+#### EntitySource, RemoteEntitySource, MappedValue, AssociationSource & RemoteAssociationSource (Elements)
 
 * We introduced these elements.
 
 #### RemoteEntitySourceDocument (ModelUnit)
 
-* We introduced this ModelUnit.
-
-
-##### Property 'description'
-* Introduced; "A multi-line description of the remote source"
-
-##### Property 'catalogUrl'
-* Introduced; "A url to a page that gives more information about the remote source"
-
-##### Property 'icon'
-* Introduced; "A custom icon of the source document"
-
-#### MappedValue (Element)
-* Introduced; 
-
-
-#### AssociationBase (Element)
-
-
-##### Property 'remoteSourceDocument'
-* Deleted; "The information is now stored in ODataRemoteAssociationSource"
-
-##### Property 'source'
-* Introduced; 
-
-#### AssociationSource (Element)
-* Introduced; 
-
-
-#### RemoteAssociationSource (Element)
-* Introduced; 
-
+* We introduced this model unit.
+* We introduced the `description` property for a multi-line description of the remote source.
+* We introduced the  `catalogUrl` property for the URL to a page that gives more information about the remote source.
+* We introduced the `icon` property for a custom icon of the source document.
 
 ### Microflows
 
 #### SynchronizeAction (Element)
 
+* We introduced the `type` and `variableNames` properties.
 
-##### Property 'type'
-* Introduced; 
+#### WorkflowCallAction, SetTaskOutcomeAction & OpenUserTaskAction (Element)
 
-##### Property 'variableNames'
-* Introduced; 
-
-#### WorkflowCallAction (Element)
-* Introduced; 
-
-
-#### SetTaskOutcomeAction (Element)
-* Introduced; 
-
-
-#### OpenUserTaskAction (Element)
-* Introduced; 
-
+* We introduced these elements.
 
 ### Rest
 
 #### ConsumedODataService (ModelUnit)
 
-
-##### Property 'serviceName'
-* Added public
-
-##### Property '^version'
-* Added public
+* We added the public `serviceName` and `^version` properties.
 
 #### ODataRemoteEntitySource (Element)
-* Introduced; "Indicates that this entity is from an OData source"
 
+* We introduced this element, which indicates that this entity is from an OData source.
 
 #### ODataRemoteAssociationSource (Element)
-* Introduced; "Indicates that this association is from an OData source"
 
+* We introduced this element, which indicates that this association is from an OData source.
 
 #### ODataMappedValue (Element)
-* Introduced; "Indicates that the value of this attribute is from an OData source"
 
+* We introduced this element, which indicates that the value of this attribute is from an OData source.
 
 #### ODataEntity (Element)
 
-
-##### Property 'name'
-* Added public
-
-##### Property 'entity'
-* Deleted; "No longer needed. Now Entity knows its Source."
+* We added the public `name` property.
+* We deleted the `entity` property, which is no longer needed, because now an entity knows its source.
 
 #### ODataNavigationProperty (Element)
 
-
-##### Property 'association'
-* Deleted; "Associations now know their remote names"
-
-##### Property 'thisSideIsParent'
-* Deleted; "No longer needed. Can be deduced in ODataRemoteAssociationSource"
+* We deleted the `association` property, because associations now know their remote names.
+* We deleted the `thisSideIsParent` property, which is no longer needed, as this can be `ODataRemoteAssociationSource`.
 
 #### ODataAttribute (Element)
 
-
-##### Property 'attribute'
-* Deleted; "No longer needed. Now attributes know their remote name."
+* We deleted the `attribute` property, which is no longer needed, because now attributes know their remote name.
 
 ### Pages
 
-#### TextBox (Element)
+#### TextBox & TextArea (Elements)
 
-
-##### Property 'autocomplete'
-* Introduced; 
-
-#### TextArea (Element)
-
-
-##### Property 'autocomplete'
-* Introduced; 
+* We introduced the `autocomplete` property.
 
 #### GroupBox (Element)
 
-
-##### Property 'headerMode'
-* Introduced; 
+* We introduced the `headerMode` property.
 
 ### Workflows
 
 #### Workflow (ModelUnit)
-* Introduced; 
 
+* We introduced this model unit.
 
-#### WorkflowActivity (Element)
-* Introduced; 
+#### WorkflowActivity, Flow, FlowValue, NoValue TaskOutcomeValue, StartWorkflowActivity, EndWorkflowActivity, WorkflowTask, WorkflowTaskOutcome & UserTask (Elements)
 
+* We introduced these elements.
 
-#### Flow (Element)
-* Introduced; 
-
-
-#### FlowValue (Element)
-* Introduced; 
-
-
-#### NoValue (Element)
-* Introduced; 
-
-
-#### TaskOutcomeValue (Element)
-* Introduced; 
-
-
-#### StartWorkflowActivity (Element)
-* Introduced; 
-
-
-#### EndWorkflowActivity (Element)
-* Introduced; 
-
-
-#### WorkflowTask (Element)
-* Introduced; 
-
-
-#### WorkflowTaskOutcome (Element)
-* Introduced; 
-
-
-#### UserTask (Element)
-* Introduced; 
 

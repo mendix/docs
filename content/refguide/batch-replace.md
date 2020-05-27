@@ -33,7 +33,7 @@ The default is to work on all modules in the app.
 
 ### 2.2 Source Text Contains
 
-To search for phrases that are similar, type the word you want to search for.
+To search for phrases that are similar, type what you want to search for.
 
 ![Batch translate search](attachments/language/batch-replace-search.png)
 

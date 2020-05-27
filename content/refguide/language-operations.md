@@ -7,25 +7,60 @@ tags: ["studio pro", "translation", "languages", "translatable text"]
 
 ## 1 Introduction
 
-### 3.1 Configuring Language Operations {#toconfigurelanguageoperations}
+When creating an app in multiple languages, there are a number of tasks which you may want to carry out on all the texts in the app, or in a specific module.
 
-To update the language settings in Studio Pro, go to **Language > Language Operations**.
+**Language Operations** enable you to perform the following operations for a language dictionary. You can decide which modules the operation applies to:
+
+* **Move** texts from one language dictionary to another
+* **Copy** texts from one language dictionary to another
+* **Swap** texts between two language dictionaries
+* **Delete** texts from one language dictionary
 
 ![](attachments/language/language_operations.png)
 
-In the **Selection** section of the dialog box, you can select the documents and modules that you want to update. The columns of languages for which there are items but which are not included in the app project are gray.
+## 2 Selecting Modules
 
-In the **Operation** section of the dialog box, there are four language operation options, which are described below.
+In the **Selection** section of the dialog box, you can select the modules that you want to manage.
 
-* **Move** – moves the source language to the destination language, which ovewrites all the texts in the destination language with those in the source language
-	* Select the **Source language** and the **Destination language** in their respective drop-down menus for the move language operation
-	* Texts that are absent in the source language will be absent in the desination language
-	* Following this operation, all the texts in the source language will be deleted
-* **Copy** – copies the source language to the destination language, which ovewrites all the texts in the desination language with those in the source language
-	* Select the **Source language** and the **Destination language** in their respective drop-down menus for the copy language operation
-	* Texts that were absent in the source language will be absent in the desination language
-* **Swap** – swaps the source lanauge and the destination language, which moves all the texts in the source lanauge to the destination language and vice versa
-	* Select the **First language** and the **Second language** in their respective drop-down menus for the swap language operation
-* **Delete** – deletes all the texts in the language selected in the **Language** drop-down menu
+For each module, you can see the number of translatable texts which have been entered in each language which contains items. The gray columns indicate languages which are not selected in the project, but which contain translated texts. This enables you to remove a language from the project but still have access to the existing texts.
+
+## 3 Performing Operations
+
+Select an **Operation** to carry out on the selected module(s).
+
+There are four language operation options, described below. These can be carried out for any language which has been selected in the app, plus any other languages which have translated texts.
 
 Click **Apply** to apply the selected language operation.
+
+### 3.1 Move
+
+**Move** moves the source language to the destination language, which overwrites all the texts in the destination language with those in the source language and removes the texts in the source.
+
+Select the **Source language** and the **Destination language** from the  drop-down menus.
+
+{{% alert type="info" %}}
+* Texts that are absent in the source language will be absent in the destination language – any original text will be removed
+* All the texts in the source language will be deleted
+{{% /alert %}}
+
+### 3.2 Copy
+
+**Copy** copies the source language to the destination language, which overwrites all the texts in the destination language with those in the source language. Texts are not deleted from the source language.
+
+Select the **Source language** and the **Destination language** from the  drop-down menus.
+
+{{% alert type="info" %}}
+* Texts that are absent in the source language will be absent in the destination language – any original text will be removed
+{{% /alert %}}
+
+### 3.3 Swap
+
+**Swap** replaces the source language with the destination language, and the destination language with the source language.
+
+Select the **Source language** and the **Destination language** from the  drop-down menus.
+
+### 3.4 Delete
+
+**Delete** deletes all the texts in a selected language. 
+
+Select the language from the **Language** drop-down menu.

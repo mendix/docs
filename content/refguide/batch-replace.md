@@ -7,27 +7,92 @@ tags: ["studio pro", "translation", "languages", "translatable text"]
 
 ## 1 Introduction
 
-### 4.1 Consolidating Labels & Perform Batch Replace
+**Batch replace** works on the currently selected language and allows you to replace any existing texts with a new one.
 
-There may be some text in your app that occurs in more than one place, so before you translate, it is best to consolidate similar labels so that they stay the same after the translation. The language in your app will be more consistent if you have a high occurrence/text ration, as that means you reuse existing text across your app, which will increase the user experience.
+There are a number of reasons that you may wish to do this:
 
-To search for phrases that look similar and replace them as a batch, follow these steps:
+* The same text should appear in different places in the app, however, it has been entered inconsistently, for example sometimes with capital letters and sometimes not — if you reuse existing text across your app, this will improve the user experience
+* If all occurrences of a piece of text are identical, you only need to enter the translation once — this saves time and improves consistency
+* If you find better wording for a common label or text, you can change them all at once with a single command
 
-1. Go to **Language** > **Batch Replace**.
-2. In the **Source text contains** field of the **Batch replace** dialog box, enter the word you want to search for.
-3.  The results will appear in the table with the column headers **Text** and **Replace with** (as in the example image below, in which "Schedule" is being searched).
+![](attachments/language/batch_replace.png)
 
-	![](attachments/language/08_batch_replace_2.png)
+## 2 Using Batch Replace
 
-4. Enter the new replacement text under **Replace with**, and then click **Replace**.
+Batch replace works on the currently selected language, so first you should select the language you want to work on. See [Working in the Currently Selected Language](tranlatable-texts#selected-language) in *Language Menu*.
 
-### 4.2 Translating Labels
+### 2.1 Documents/modules
 
-To translate a label, follow these steps:
+You can select one or more modules you want to use for batch translate. For example, you may want to ignore texts from imported and system modules in the default language, or concentrate on translating just the system messages into your chosen language.
 
-1. Select the desired development language from the language drop-down menu in Studio Pro toolbar (which displays "English, United States" by default). Words in your app project will be automatically translated if they are in the library.
-2. Words that have not been automatically translated (that is, those words that are in angle brackets) must be manually translated one-by-one or through batch translation (see below).
+Click **Select…** and check the modules you want to work on.
 
-## 5 Exporting & Importing Translations
+![Module selection screen](attachments/language/batch-replace-modules.png)
 
-If you want to translate a language outside Studio Pro, you can export the translatable texts to the Excel (*.xlsx*) format by clicking **Export to Excel** on the **Batch translate** dialog box. This produces an Excel file with two columns, one for each language. When you’re done, simply import the Excel file into your app project by clicking **Import from Excel** on the **Batch translate** dialog box.
+The default is to work on all modules in the app.
+
+### 2.2 Source Text Contains
+
+To search for phrases that are similar, type the word you want to search for.
+
+![Batch translate search](attachments/language/batch-replace-search.png)
+
+By default, all the translatable text from the selected module(s) will be shown.
+
+Each found text will be displayed in the **Text** column.
+The **#** column shows the number of times it occurs in the selected module(s).
+
+If you select a line, you can look in the **Show occurrence** section to see the **Object** containing the text and the **Document** it appears in. Double-clicking or clicking **Show occurrence** will open the document and select the object so you can easily see the context.
+
+{{% alert type="success" %}}
+Tip: move the dialog box to one side to get a better look at the document.
+{{% /alert %}}
+
+### 2.3 Replace With
+
+In **Replace with**, type new text that you want to use instead of the existing text. Click **Replace** to confirm the replacement.
+
+![](attachments/language/batch-replace-replace.png)
+
+Identical replacement and original texts will be combined into a single entry.
+
+![Show combined entries](attachments/language/batch-replace-replaced.png)
+
+## 3 Exporting & Importing Text
+
+If you want to translate a language outside Studio Pro, you can export the translatable texts to the Microsoft Excel (*.xlsx*) format, make changes, and then import the changes from the updated Excel file.
+
+This is particularly useful if you are working on multiple apps and have already got text for, say, the system modules which you want to reuse.
+
+### 3.1 Export to Excel
+
+Click **Export to Excel…** to export the currently displayed text items to a Microsoft Excel (*.xlsx*) format file.
+
+The file will be in the format shown below:
+
+![Sample Excel file](attachments/language/batch-replace-excel.png)
+
+**Row 1** – *Filter:* indicates the modules which are included in the exported file.
+
+**Row 2**  – indicates the language. The first column represents the current text, the second column the *replace with* text.
+
+**Rows 3+**  – show the current texts
+
+You can make changes in column B which will be processed if the file is imported.
+
+### 3.2 Import from Excel
+
+Click **Import from Excel…** to import a correctly-constructed Microsoft Excel (*.xlsx*) format file.
+
+This does the following:
+
+* The selected module(s) are set to the ones in the *Filter:* line of the file
+* Any texts which are empty in column B will be ignored
+* Any texts in column A which do not match translatable texts in the selected module(s) will be ignored
+* Any text in column B which is not ignored is entered into the **Replace with** column
+
+Changes will only be made if you click **Replace**.
+
+{{% alert type="warning" %}}
+The formats of the Excel files for batch replace and batch translate are similar. You will be warned if you try to import a batch translate file or a batch replace file with the wrong language but you can still import it if you ignore the warning.
+{{% /alert %}}

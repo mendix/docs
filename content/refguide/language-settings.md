@@ -31,7 +31,7 @@ The initial default language is *English, United States*.
 
 You can add as many languages as you like from the list of supported languages by clicking **Add**, selecting the desired language, and clicking **OK**.
 
-![](attachments/language/02_dutch.png)
+![](attachments/language/add-language.png)
 
 Most languages will be added with an empty dictionary, although some translations have already been set up in the Dutch dictionary.
 

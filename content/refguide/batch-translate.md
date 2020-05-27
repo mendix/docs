@@ -7,39 +7,88 @@ tags: ["studio pro", "translation", "languages", "translatable text"]
 
 ## 1 Introduction
 
-### 4.3 Performing Batch Translation {#batch-translate}
+**Batch translate** allows you to enter texts in one language which correspond to texts in another language.
 
-Instead of going through the pages and translating labels one-by-one, it's much more efficient to use the batch translate option.
+Usually you will want to translate from the default language to a second language, but you can use any other dictionary of texts. For example, if your default language is *English, United States* you may already have translated the text into *Dutch, Netherlands* and you can use this as a reference for translating into *Dutch, Belgium* as there are likely to be more similarities.
 
-You can also filter to specific modules and use the search to find specific labels.
+![](attachments/language/batch-translate.png)
 
-To enable batch translation, follow these steps:
+## 2 Using Batch Translate
 
-1. Go to **Language** > **Batch Translate**.
-2. Select the **Source language** and **Destination language**.
-3. In the **Source text contains** field of the **Batch translate** dialog box, enter the word you want to search for.
-4.  The results will appear in the table with the column headers **Source** and **Translation** (as in the example image below, in which "Password" is being searched).
+Batch translate translates between two languages. When you select batch translate you will be asked to select the two languages you wish to use, a **Source language** to use as a reference, and a **Destination language** which is the one you want to update.
 
-	![](attachments/language/11_filter_module.png)
+![Select source and destination languages](attachments/language/batch-translate-languages.png)
 
-5. Enter the translated text for the various results under **Translation**, and then click **Translate**.
+### 2.1 Documents/modules
 
-#### 4.3.1 Text Occurrence & Context
+You can select one or more modules you want to use for batch translate. For example, you may have already got translations for imported and system modules and want to concentrate on translating your own modules.
 
-Because some labels and other texts are in the list multiple times, it’s important to know where in your app they’re being used. You can see this using the **Occurrence** window at the bottom of the **Batch translate** dialog box.
+Click **Select…** and check the modules you want to work on.
 
-For example, there may be two English labels with the word "address." If you translate this to Dutch, it’s important to know if the word is used in the context of "someone's contact details" or in the context of "talking to a person in a certain way" (for example, in Dutch, the first meaning translates to “adres,” but the second meaning translates to "aanspreken").
+![Module selection screen](attachments/language/batch-replace-modules.png)
 
-## 5 Exporting & Importing Translations
+The default is to work on all modules in the app.
 
-If you want to translate a language outside Studio Pro, you can export the translatable texts to the Excel (*.xlsx*) format by clicking **Export to Excel** on the **Batch translate** dialog box. This produces an Excel file with two columns, one for each language. When you’re done, simply import the Excel file into your app project by clicking **Import from Excel** on the **Batch translate** dialog box.
+### 2.2 Source Text Contains
 
-## OLD INTRO - USE AS REQUIRED
+To search for particular phrases, type the word you want to search for.
 
-Studio Pro makes it easy to translate your application into another language. You can add a language in the [Project Settings](project-settings) and then switch to that language by 
+![Batch translate search](attachments/language/batch-translate-search.png)
 
-For texts that have not been translated yet, the text in the default language is shown between angle brackets. For example, a caption can be shown as `<Name>`. This means that the caption has not been translated yet and was `Name` in the default language. By simply typing the text in the currently selected language (for example, `Naam` in Dutch), the caption will be translated.
+By default, all the translatable text from the selected module(s) will be shown.
 
-{{% alert type="info" %}}
-To ease the translation if you have a lot of texts, a **Batch Translate** feature can be found in the [Language](menus#language) menu. By using this feature you can quickly translate all occurrences of a word to a word in another language. It is even possible to export all texts to Excel and later import the translations again.
+Each found text will be displayed in the **Source** column.
+The **#** column shows the number of times it occurs in the selected module(s).
+
+If you select a line, you can look in the **Show occurrence** section to see the **Object** containing the text and the **Document** it appears in. Double-clicking or clicking **Show occurrence** will open the document and select the object so you can easily see the context.
+
+{{% alert type="success" %}}
+Tip: move the dialog box to one side to get a better look at the document.
+{{% /alert %}}
+
+### 2.3 Translation
+
+In **Translation**, type new text that you want to use instead of the existing text. Click **Translate** to confirm the replacement.
+
+![](attachments/language/batch-translate-translate.png)
+
+If you have two texts which are identical in the source language but different in the translation language, you will have to review and change these individually. This is not very common but imagine, for example, you have used `Order Lines` to both *describe the lines on an order* and to *label a button which sorts some lines*. See [Working in the Currently Selected Language](tranlatable-texts#selected-language) in *Language Menu* to find how to change individual texts.
+
+## 3 Exporting & Importing Text
+
+If you want to translate a language outside Studio Pro, you can export the translatable texts to the Microsoft Excel (*.xlsx*) format, make changes, and then import the changes from the updated Excel file.
+
+This is particularly useful if you are working on multiple apps and you want to apply your translations to a different app.
+
+### 3.1 Export to Excel
+
+Click **Export to Excel…** to export the currently displayed text items to a Microsoft Excel (*.xlsx*) format file.
+
+The file will be in the format shown below:
+
+![Sample Excel file](attachments/language/batch-translate-excel.png)
+
+**Row 1** – *Filter:* indicates the modules which are included in the exported file.
+
+**Row 2**  – indicates the source and translation language. The first column represents the current text, the second column the *translation* text.
+
+**Rows 3+**  – show the current texts
+
+You can make changes in column B which will be processed if the file is imported.
+
+### 3.2 Import from Excel
+
+Click **Import from Excel…** to import a correctly-constructed Microsoft Excel (*.xlsx*) format file.
+
+This does the following:
+
+* The selected module(s) are set to the ones in the *Filter:* line of the file
+* Any texts which are empty in column B will be ignored
+* Any texts in column A which do not match translatable texts in the selected module(s) will be ignored
+* Any text in column B which is not ignored is entered into the **Translation** column
+
+Changes will only be made if you click **Translate**.
+
+{{% alert type="warning" %}}
+The formats of the Excel files for batch translate and batch replace are similar. You will be warned if you try to import a batch replace file or a batch translate file with the incorrect languages but you can still import it if you ignore the warning.
 {{% /alert %}}

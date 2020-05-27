@@ -152,17 +152,17 @@ After you have completed the task, check the box:
 
 ### 4.3 Deleting a Story or Task {#deleting}
 
-To delete a story or a task, press the trash-icon below the title of the story or task. You will be asked for confirmation. When you confirm, the story or task will be removed from the system permanently.
+To delete a story or a task, click the trash can icon below the title of the story/task. After you confirm the deletion, the story/task will be removed from the system permanently.
 
 If you delete a story, its tasks will be deleted as well.
 
-If you delete a story that is linked to a feedback item you will be asked to choose to re-open or to unlink the feedback item.
+If you delete a story that is linked to a feedback item, you will be asked to choose to reopen or unlink the feedback item:
 
 ![](attachments/stories/delete-linked-story.png)
 
-Re-opening the feedback will revert the feedback item back to the Open status. To unlink it means the feedback item will remain in the Accepted status. Either way, the story will be deleted.
+Reopening the feedback item will revert it to the [Open](/developerportal/collaborate/feedback#stages) status. To unlink the feedback item means it will remain in the [Accepted](/developerportal/collaborate/feedback#stages) status. Either way, the story will be deleted.
 
-### 4.3 Moving Stories  {#moving-stories}
+### 4.3 Moving Stories {#moving-stories}
 
 If you need to reorder stories or move a story to a different Sprint, there are three ways to do this:
 

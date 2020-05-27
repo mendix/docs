@@ -126,7 +126,7 @@ For example, to set the `MyFirstModule.Constant` constant to `1234` and `MyModul
 {"MyFirstModule.Constant":"1234","MyModule.AnotherConstant":"true"}
 ```
 
-Next, convert this JSON into a string (by escaping it - replacing all `"` characters with `\"`) and use it as the **MicroflowConstants** value in **customConfiguration**. For example:
+Next, convert this JSON into a string by escaping it (in particular, replacing all `"` characters with `\"`) and use it as the **MicroflowConstants** value in **customConfiguration**. For example:
 ```yaml
 apiVersion: privatecloud.mendix.com/v1alpha1
 kind: MendixApp

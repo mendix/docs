@@ -18,13 +18,17 @@ This how-to explains how you show fields to your end-users only when certain con
 
 The how-to describes the following use case: 
 
-You have a web shop and you would like to show a field with a billing address only when a customer unchecks the **Is billing address the same as the delivery address?** option (it is checked by default):
+You have a web shop and you would like to show a field with a billing address only when a customer unchecks the **Billing address is the same as delivery address** option (it is checked by default):
 
-![Is Billing Address the Same](attachments/pages-how-to-set-visibility/billing-address-same.png)
+![Billing Address Is the Same As Delivery Address](attachments/pages-how-to-set-visibility/billing-address-same.png)
 
-You also would like to make the **Edit** button on the page listing products visible to Administrators and Sales managers only:
+You also have a page called **Product Overview** which lists products and you would like to make the **Edit** button in the list visible to Administrators and Sales managers only:
+
+{{% image_container width="450" %}}
 
 ![List of Products](attachments/pages-how-to-set-visibility/list-of-products.png)
+
+{{% /image_container %}}
 
 The domain model looks the following way:
 
@@ -87,9 +91,9 @@ Good job! Now the billing address will only be shown if the customer billing add
 
 To show an element only to a certain user role, do the following:
 
-1. Open the list of products and select the **Edit** button:
+1. Open the **Product Overview** page with the list of products and select the **Edit** button:
 
-    ![List of Products](attachments/pages-how-to-set-visibility/list-of-products.png)
+    {{% image_container width="450" %}}![List of Products](attachments/pages-how-to-set-visibility/list-of-products.png){{% /image_container %}}
 
 2. Open its properties and in **Conditional Visibility** section toggle the **Role-Based** property:
 

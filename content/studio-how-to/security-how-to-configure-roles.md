@@ -28,7 +28,7 @@ The domain model of this app looks the following way:
 
 ![Domain Model](attachments/security-how-to-configure-roles/domain-model.png)
 
-There are the following pages and a microflow in this app:
+There are the following pages in this app:
 
 * *Home_Web* – a home page which should be accessed by all roles. Buttons on the home page open the corresponding page:
 

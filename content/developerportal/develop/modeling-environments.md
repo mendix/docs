@@ -29,7 +29,7 @@ If you need some help with Studio Pro, click **Help me get started**. A page wil
 The **What's next?** section at the bottom of the page presents the following options:
 
 * **Show me the basics** includes a link to a basic learning path in the Mendix Academy, where you will learn some fundamental information about how to model with Mendix
-* **I've got a question** includes links to the Mendix [Forum](https://forum.mendixcloud.com) and the [Documentation](https://docs.mendix.com/), where you can browse information, search for specific details, and ask questions of the Mendix community
+* **I've got a question** includes links to the [Mendix Forum](https://forum.mendixcloud.com) and the [Mendix Documentation](https://docs.mendix.com/), where you can browse information, search for specific details, and ask questions of the Mendix community
 * **I'm ready to get serious** includes a link to a more comprehensive learning path, which will teach you how to create apps and prepare you to get certified as a Mendix Rapid Developer
 
 ## 3  Mendix Studio

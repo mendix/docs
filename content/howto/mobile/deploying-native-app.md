@@ -155,7 +155,9 @@ By default, App Center builds are unsigned and cannot be released on the Google 
 
 For Android, if you do not intend to publish your app to the Google Play Store, you can skip this section. For iOS, this step prepares an already installable iOS App Store Package (*.ipa*). Without this section's instructions, an unsigned version of an iOS app (*.xcarchive*) would need to be signed manually using Xcode in order to deploy on a device or in the App Store.
 
-Currently due to limitations, Native Builder is not able to copy signing keys from one branch to another. Therefor setting up signing has to be done per branch you want to release. When you build with Native Builder, the build number provided is used to create a new branch with the format **build/#number**. When ready to release, setup signing for the build number branch you decided according to this documentation and rebuild with native builder using the build number of the branch.
+{{% alert type="info" %}}
+Currently, the Native Builder is not able to copy signing keys from one branch to another. Therefore you must set up signing for each branch you want to release. When you build with the Native Builder, the build number provided is used to create a new branch with the format **{build/#number}**. When ready to release, set up signing for the build number branch you decided according to this documentation and rebuild with the Native Builder using the branch's build number.
+{{% /alert %}}
 
 To sign your app using App Center, do the following:
 

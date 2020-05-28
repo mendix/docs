@@ -360,7 +360,7 @@ The **Database burst balance** graph shows the number of credits accrued to supp
 
 ![](attachments/trends-v4/db-burst-balance.png)
 
-Apps running on Mendix Cloud V4 use AWS databases to store their data. These databases are **burstable**, which means that it has a specified performance baseline. This baseline varies from 5% to 20%.
+Apps running on Mendix Cloud V4 use AWS databases to store their data. These databases are **burstable**, which means that it has a specified performance baseline. See the AWS document [Overview of Monitoring Amazon RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MonitoringOverview.html) for more information.
 
 From the AWS documentation: *If a burstable performance instance uses fewer CPU resources than is required for baseline performance (such as when it is idle), the unspent CPU credits are accrued in the CPU credit balance. If a burstable performance instance needs to burst above the baseline performance level, it spends the accrued credits. The more credits that a burstable performance instance has accrued, the more time it can burst beyond its baseline when more performance is needed.*
 
@@ -378,4 +378,3 @@ For more information, see the *AWS Database blog* [Understanding Burst vs. Basel
 * [How to Receive Environment Status Alerts](receive-alerts)
 * [Cloud Version and Region in the Mendix Cloud](/developerportal/deploy/cloud-version-region)
 * [Mendix Cloud v4 - FAQ](/developerportal/deploy/mxcloudv4)
-

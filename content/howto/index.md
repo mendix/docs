@@ -10,7 +10,7 @@ tags: ["studio pro"]
 
 Browse the *Studio Pro 8 How-to's* to find step-by-step guides that will teach you how to build and customize apps with Mendix.
 
-## 2 Document Categories
+## 2 How-to Categories
 
 The *Studio Pro 8 How-to's* are divided into the following categories:
 

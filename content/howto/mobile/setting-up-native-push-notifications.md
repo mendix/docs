@@ -18,7 +18,7 @@ Native remote push notifications have the more capabilities than hybrid push not
 
 Follow the sections below to complete these three tasks and enable native remote push notifications. After you have completed this document, see [How To Use Native Push Notifications](/howto/mobile/native-remote-notifications) for instructions on implementing native push notifications.
 
-If you want to use local push notifications with the Make It Native app, the only step you have to perform is [Setting up Firebase Cloud Messaging Service (#firebase-setup)
+If you want to use local push notifications with the Make It Native app, the only step you have to perform is [Setting up Firebase Cloud Messaging Service](#firebase-setup)
 
 {{% alert type="info" %}}
 

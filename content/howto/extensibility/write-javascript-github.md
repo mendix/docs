@@ -8,7 +8,7 @@ tags: ["widget", "search", "GitHub", "JavaScript", "API", "JavaScript-API"]
 
 ## 1 Introduction
 
-Mendix has made nanoflows even more powerful with pluggable nanoflow actions – called JavaScript actions – in Mendix 8. [How to Build JavaScript Actions: Part 1 (Basic)](write-javascript-actions) shows you how to create a JavaScript TextToSpeech action, expose it as a nanoflow action, and then use it in a demo. In this advanced how-to you will learn to call a REST service, use a generic return type, and make an API to enhance the power of your JavaScript actions.
+Mendix has made nanoflows even more powerful with pluggable nanoflow actions — called JavaScript actions — in Mendix 8. [How to Build JavaScript Actions: Part 1 (Basic)](write-javascript-actions) shows you how to create a JavaScript TextToSpeech action, expose it as a nanoflow action, and then use it in a demo. In this advanced how-to you will learn to call a REST service, use a generic return type, and make an API to enhance the power of your JavaScript actions.
 
 **This how-to will teach you how to do the following:**
 
@@ -26,7 +26,7 @@ Mendix has made nanoflows even more powerful with pluggable nanoflow actions –
 In [Creating a "Search GitHub User" JavaScript Action](#create-a-search) below, you will make an API which allows you to search for GitHub users. Before continuing, you can do the following to practice your API skills: 
 
 * Learn how the GitHub API works using the [GitHub developer documentation](https://developer.github.com/v3/search/#search-users)
-* Use test tooling to see how the GitHub API in action – an HTTP GET request of the URL `https://api.github.com/search/users?q=test` will result in a JSON response which you should study
+* Use test tooling to see how the GitHub API in action — an HTTP GET request of the URL `https://api.github.com/search/users?q=test` will result in a JSON response which you should study
 
 ## 3 Downloading the Project Package
 

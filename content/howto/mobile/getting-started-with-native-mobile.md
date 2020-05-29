@@ -12,10 +12,10 @@ To use Mendix Studio Pro's native app capabilities, you can use the [Native Mobi
 
 The Native Mobile Quickstart app also includes four modules:
 
-* **Administration** – helps you manage users
-* **Atlas UI Resources package** – allows for app styling
-* **Nanoflow Commons** – contains generic useful nanoflow actions
-* **Native Mobile Actions** – contains various native widgets and nanoflow actions that leverage device capabilities
+* **Administration** — helps you manage users
+* **Atlas UI Resources package** — allows for app styling
+* **Nanoflow Commons** — contains generic useful nanoflow actions
+* **Native Mobile Actions** — contains various native widgets and nanoflow actions that leverage device capabilities
 
 ## 2 Prerequisites {#prerequisites}
 
@@ -94,7 +94,7 @@ To see how changes made in Mendix Studio Pro are displayed live on your testing 
 If you get an error screen while testing your app, there are easy ways to restart it: 
 
 * Tap your test app with three fingers to restart your app
-* With the **Enable dev mode** toggle turned on, hold a three-fingered tap to bring up the developer app menu – here you can access **ADVANCED SETTINGS** and **ENABLE REMOTE JS DEBUGGING** 
+* With the **Enable dev mode** toggle turned on, hold a three-fingered tap to bring up the developer app menu — here you can access **ADVANCED SETTINGS** and **ENABLE REMOTE JS DEBUGGING** 
 
 For more detailed instructions on debugging a native app, see [Debug Native Apps (Advanced)](native-debug).
 

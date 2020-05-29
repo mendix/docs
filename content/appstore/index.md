@@ -12,7 +12,7 @@ This guide presents documentation on configuring and using the latest versions o
 
 For details on the Studio Pro version required for use and when the component was published, please see the specific component page in the [Mendix App Store](https://appstore.home.mendix.com/).
 
-## 2 Document Categories
+## 2 Guide Categories
 
 The *App Store Guide* is divided into the following categories:
 

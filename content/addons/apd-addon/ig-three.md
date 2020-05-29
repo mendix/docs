@@ -40,6 +40,7 @@ To upgrade an APD 3 agent, follow these steps:
 1. In Mendix Studio Pro, import to replace the [Mendix Application Performance Monitor](https://appstore.home.mendix.com/link/app/6127/) module from the Mendix App Store.
 2. Remove the old APD 3 agent *.jar* (*apdagent_obfuscated_merged_{version}.jar*) from your **userlib** folder.
 3. Before testing in Mendix Studio Pro, use the **Clean deployment directory** option.
+4. Remove the old *Mansystems.APMBrowserAgent.mpk* from your widgets folder.
 
 ## 5 Security
 

@@ -14,7 +14,7 @@ You can apply restrictions to the top level of the application URL (`/`), and al
 
 ## 2 Access Restriction Profiles
 
-You can specify a number of different access restriction profiles for you application. You can give each of these a name so that you can describe its purpose.
+You can specify a number of different access restriction profiles for your application. You can give each of these a name so that you can describe its purpose.
 
 Click **New** to create a new access restriction profile. Select an existing profile and click **Edit** to modify it, or **Delete** to delete it. You can also click **Clone** to make a copy of an existing profile.
 
@@ -25,7 +25,7 @@ See below for information on setting up access restriction profiles for Mendix C
 When configuring an access restriction profile, you need to bear the following things in mind:
 
 * Access restriction profiles are configured at the *application* level and they can be reused in all the environments (test, acceptance, production) of an app
-* Access restriction profiles can contain any number of IPv4 and IPv6 address ranges, client CAs, or both
+* Access restriction profiles can contain any number of IPv4 address ranges, client CAs, or both
 * If an access restriction profile contains *both IP address ranges and client CAs*, then any match on *either* the IP range *or* the client certificate will grant access
 
 ### 2.1 Access Restriction Profiles for Mendix Cloud V4{#v4}
@@ -51,22 +51,26 @@ To change the name of a certificate profile, click the **Edit** icon next to the
 Upload your CA from a file in *.pem* format by clicking the **Upload Certificate Authority** button. Alternatively, click **Enter Manually** to open an editor where you can paste your CA.
 
 {{% alert type="info" %}}
-Your CA can contain multiple root certificates and intermediate certificates for each root certificate.
+Your CA can contain a single root certificate with multiple intermediate certificates.
 {{% /alert %}}
 
-Once the CA is uploaded, you will see a tree containing the root certificate(s) and any intermediate certificates included in the CA.
+Once the CA is uploaded, you will see a tree containing the root certificate and any intermediate certificates included in the CA.
 
 ![](attachments/accessrestrict/ca-profile.png)
 
 Select the check box next to each certificate you want to use. Lower-level (intermediate) certificates will be selected automatically. If there are several branches, you can select certificates from each branch individually.
 
-Click **Save** to save the current certificate profile.
+{{% alert type="info" %}}
+By default the last certificate in the CA will be selected.
+{{% /alert %}}
+
+Click **Save** to save the current certificate profile. At least one certificate must be selected before you can successfully save your profile.
 
 #### 2.1.3 Specifying IP Ranges
 
 You can specify a number of different IP ranges. Click **New** to add a new one, or use the **Edit** or **Delete** button to modify an existing IP range.
 
-For each IP range, you can specify a **Name** for the range, and a range of addresses in either IPv4 or IPv6 format.
+For each IP range, you can specify a **Name** for the range, and a range of addresses. Mendix Cloud v4 supports only IPv4 addresses.
 
 ![](attachments/accessrestrict/ip-range.png)
 
@@ -88,7 +92,7 @@ You can specify a number of different IP ranges. Click **New** to add a new one,
 The IP range filter option is not available in Mendix Cloud v3 environments hosted outside the Netherlands
 {{% /alert %}}
 
-For each IP range, you can specify a **Name** for the range, and a range of addresses in either IPv4 or IPv6 format.
+For each IP range, you can specify a **Name** for the range, and a range of addresses. Mendix Cloud v3 supports both IPv4 or IPv6 format addresses.
 
 ![](attachments/accessrestrict/ip-range.png)
 

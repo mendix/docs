@@ -21,7 +21,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Ensure that you have a network utilities tool on your mobile device (I use [PingTools](https://play.google.com/store/apps/details?id=ua.com.streamsoft.pingtools) on Android, and [NetworkPing Lite](https://itunes.apple.com/us/app/network-ping-lite/id289967115?mt=8) on iOS) in order to ensure connectivity between your device and your computer
 * Ensure that you have an Adobe ID that you can use to sign in to PhoneGap Build ([https://build.phonegap.com/apps](https://build.phonegap.com/apps))
-* Acquire a paid Apple Developer Membership – see [Apple Membership](https://developer.apple.com/support/membership/) for more details
+* Acquire a paid Apple Developer Membership — see [Apple Membership](https://developer.apple.com/support/membership/) for more details
 
 ## 3 Mendix and PhoneGap <a name="MendixAndPhonegap"></a>
 

@@ -46,7 +46,7 @@ To run Gulp, follow these steps:
 	![](attachments/style-with-gulp-and-sass/red.png)
 
 {{% alert type="info" %}}
-If you are using Parallels on Mac, you can access your Mendix project on your Mac browser by going to your Parallels machine (for example, `http://10.211.55.3:30001` – this is different on each setup).
+If you are using Parallels on Mac, you can access your Mendix project on your Mac browser by going to your Parallels machine (for example, `http://10.211.55.3:30001` — this is different on each setup).
 {{% /alert %}}
 
 And that's it! Now you are ready to start styling your Mendix app with Sass.

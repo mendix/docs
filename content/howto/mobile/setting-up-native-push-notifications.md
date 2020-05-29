@@ -22,7 +22,7 @@ If you want to use local push notifications with the Make It Native app, the onl
 
 {{% alert type="info" %}}
 
-Remote notifications will not work in the iOS Simulator app.
+Remote notifications will not work in XCode's Simulator. For iOS, notifications only work on physical devices.
 
 {{% /alert %}}
 

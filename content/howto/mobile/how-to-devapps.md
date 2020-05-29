@@ -86,7 +86,7 @@ Before installing, make sure you have completed the following prerequisites:
 
 #### 4.2.1 Installing on an Emulator
 
-Builds with the Native Builder are stripped of simulator artifacts. Therefore, to run on an iOS Simulator you will have to build the developer branch locally from source by completing these steps:
+Builds with the Native Builder are stripped of simulator artifacts. Therefore, to run on XCode's Simulator you will have to build the developer branch locally from source by completing these steps:
 
 1. Navigate to your GitHub repo.
 2.  Switch to your **developer** branch:

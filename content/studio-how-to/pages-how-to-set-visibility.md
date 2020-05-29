@@ -8,11 +8,11 @@ tags: ["studio", "pages", "how to", "visibility", "visible"]
 
 ## 1 Introduction 
 
-This how-to explains how you show fields to your end-users only when certain conditions are met. 
+This how-to explains how you show fields to your end-users only when certain conditions are met, which can be achieved by setting conditional visibility. 
 
 **This how-to will teach you how to do the following:**
 
-* Make fields visible only when a customer chooses a certain attribute value
+* Make fields visible only when an end-user chooses a certain attribute value
 * Make fields visible for a certain user role only
 * View fields are visible only under certain conditions
 
@@ -83,7 +83,7 @@ To set conditional visibility for the **Billing Address** field, do the followin
 
     {{% image_container width="250" %}}![Attribute-Based Visibility](attachments/pages-how-to-set-visibility/attribute-based-visibility-set.png){{% /image_container %}}
 
-Good job! Now the billing address will only be shown if the customer billing address does not match the delivery one.
+Good job! If you [preview your app](/studio/publishing-app), you will see that the billing address is only shown when you untick the  **Billing address is the same as delivery address** option.
 
 ## 4 Showing an Element to Certain User Roles Only
 

@@ -64,10 +64,32 @@ The **File** menu items are described in the table below:
 
 ## 4 Setting the End-User's Language
 
-**XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX**
+The language which is displayed to the end-user is determined by the **Language** object which is associated with the **User** object for the current end-user via the association **User_Language**. If the end-user is not associated with a language, or if the associated language is not one of those set in the app, then the end-user will see pages in the default language.
+
+![System Domain Model for User and Language](attachments/language/user-language-domain-model.png)
+
+If you allow end-users to change their display language within the app, the changes will not be applied immediately. This is because the translatable texts for the app are already set to the end-users original language.
+
+There are two options to ensure that the language is changed:
+
+1. Ask the end-user to do something manually
+    * sign out and sign in again
+    * use their browser's refresh command
+2. Force Mendix to reload the page – for example by doing the following:
+    1. Add the platform supported widget [HTML/ JavaScript Snippet](https://appstore.home.mendix.com/link/app/56/) to your app.
+    2. Create a pop-up page.
+    3. Place the HTMLSnippet widget on the pop-up page.
+    4. Add the **JavaScript** content `mx.reloadWithState();` to the widget.
+    5. Open your new pop-up page from a microflow when you want to switch the user's language.
+
+    ![System Domain Model for User and Language](attachments/language/reload-with-state.png)
 
 ## 5 Read More
 
 There is a worked example of adding a translation in [How to Translate Your App Content](/howto/collaboration-requirements-management/translate-your-app-content)
 
 See also [How To Use Translatable Validation Messages](/howto/logic-business-rules/translatable-validation-messages) for information on translating validation messages.
+
+For more explanations and ideas for refreshing the page when the language is changed see the Mendix forum question [Change language by clicking a link](https://forum.mendixcloud.com/link/questions/91821).
+
+Switching languages for anonymous users is also discussed in the Mendix Forum. For example in this question: [Anonymous User Journey](https://forum.mendixcloud.com/link/questions/91676).

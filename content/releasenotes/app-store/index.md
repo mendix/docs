@@ -13,7 +13,7 @@ These release notes cover changes made to the [Mendix App Store](/appstore/index
 
 #### Fix
 
-As of Studio Pro version [8.10.0](../studio-pro/8.6#private), you are able to download private content in the App Store again. This is not possible for Studio Pro versions 8.7–8.9.
+As of Studio Pro version [8.10.0](../studio-pro/8.10#1400), you are able to download private content in the App Store again. This is not possible for Studio Pro versions 8.7–8.9.
 
 ### May 6th, 2020
 
@@ -23,7 +23,7 @@ You can now download previous versions of App Store components from the [Mendix 
 
 #### Fix
 
-As of Studio Pro version [8.6.4](../studio-pro/8.6#private), you are able to download private content in the App Store again. This is possible for Studio Pro version 8.6.4 and all further 8.6.x versions. It is not possible for Studio Pro versions below 8.6.4.
+As of Studio Pro version [8.6.4](../studio-pro/8.6#private-content), you are able to download private content in the App Store again. This is possible for Studio Pro version 8.6.4 and all further 8.6.x versions. It is not possible for Studio Pro versions below 8.6.4.
 
 ### May 4th, 2020
 

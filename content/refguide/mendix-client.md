@@ -69,7 +69,7 @@ These are functions of the environment in which the Mendix Client is running. In
 
 ### 2.8 Client Config
 
-This is the static data which is needed by the Mendix Client. For a browser-based client, this data is held online, with the Runtime Server. For native apps, this is held locally on the device.
+This is the static data which is needed by the Mendix Client. For a browser-based client, this data is held online, with the Runtime Server. For native mobile apps, this is held locally on the device.
 
 These include the initial environment (for example, the browser shell page) needed to start the Mendix Client, Cascading Style Sheets (css files) which define the app’s theme, and JavaScript files which define client-side logic.
 
@@ -139,7 +139,7 @@ In native mobile applications an implementation based on React Native framework 
 
 ### 3.1 Pluggable Widgets
 
-You can also write your own widgets, called **Pluggable widgets**, in cases where Core widgets do not suffice. Pluggable widgets can be downloaded through the App Store. They are based on React (in web applications) or React Native (in native applications) and are the recommended way of writing widgets. They replace Custom widgets, described below.
+You can also write your own widgets, called **Pluggable widgets**, in cases where Core widgets do not suffice. Pluggable widgets can be downloaded through the App Store. They are based on React (in web applications) or React Native (in native mobile applications) and are the recommended way of writing widgets. They replace Custom widgets, described below.
 
 For more information, see [Pluggable Widgets API](/apidocs-mxsdk/apidocs/pluggable-widgets).
 
@@ -154,7 +154,7 @@ For more information on Custom widgets, see [How To Build Custom Widgets](/howto
 When an end-user wants to use a Mendix app, they need to start up the client on their device before they can connect to the Runtime Server. The way this works depends on the method used to run the client. This can be one of the following:
 
 * Browser
-* Native App
+* Native Mobile App
 
 How the Mendix Client is launched is described in the sections below.
 
@@ -206,7 +206,7 @@ When the app is deployed, the static resources are placed in a structure referre
 
 ### 4.2 Launching Native Mendix Client
 
-The flow when launching a native app is different from launching in a browser. More information is stored locally as part of the app, and a native app can even be designed to run “offline-first”, which means that it can still be run without any connection to the Runtime Server.
+The flow when launching a native mobile app is different from launching in a browser. More information is stored locally as part of the app, and a native mobile app can even be designed to run “offline-first”, which means that it can still be run without any connection to the Runtime Server.
 
 The flow described here is for production apps. During development, the flow is not the same. This enables you to do faster deployments and online debugging.
 

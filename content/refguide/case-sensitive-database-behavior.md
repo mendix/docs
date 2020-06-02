@@ -40,8 +40,7 @@ String functions are **case insensitive** as they are implemented using the `ILI
 
 ### 2.3 DB2
 
-**Case sensitive** for sorting, comparing, and in string functions.
-They cannot be configured.
+All operations are **case sensitive**. They cannot be configured.
 
 Does not support sorting on string attributes of unlimited length.
 

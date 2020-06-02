@@ -31,7 +31,7 @@ The default is to work on all modules in the app.
 
 ### 2.2 Source Text Contains
 
-To search for a particular phrase, type what you want to search for.
+To search for a particular phrase in the source language text, type what you want to search for. It is not possible to search for text in the destination language.
 
 ![Batch translate search](attachments/language/batch-translate-search.png)
 

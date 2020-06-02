@@ -127,15 +127,20 @@ android:launchMode="singleTop"
 
 ```
 <application ...>
-<receiver android:name="io.invertase.firebase.notifications.RNFirebaseNotificationReceiver"/>
-<receiver android:enabled="true" android:exported="true"  android:name="io.invertase.firebase.notifications.RNFirebaseNotificationsRebootReceiver">
+ <receiver android:name="io.invertase.firebase.notifications.RNFirebaseNotificationReceiver"/>
+ <receiver android:enabled="true" android:exported="true"  android:name="io.invertase.firebase.notifications.RNFirebaseNotificationsRebootReceiver">
   <intent-filter>
     <action android:name="android.intent.action.BOOT_COMPLETED"/>
     <action android:name="android.intent.action.QUICKBOOT_POWERON"/>
     <action android:name="com.htc.intent.action.QUICKBOOT_POWERON"/>
     <category android:name="android.intent.category.DEFAULT" />
   </intent-filter>
-</receiver>
+ </receiver>
+ <service android:name="io.invertase.firebase.messaging.RNFirebaseMessagingService">
+  <intent-filter>
+   <action android:name="com.google.firebase.MESSAGING_EVENT" />
+  </intent-filter>
+ </service>
 </application>
 ```
 

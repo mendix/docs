@@ -19,7 +19,7 @@ There are a number of reasons that you may wish to do this:
 
 ## 2 Using Batch Replace
 
-Batch replace works on the currently selected language, so first you should select the language you want to work on. See [Working in the Currently Selected Language](tranlatable-texts#selected-language) in *Language Menu*.
+Batch replace works on the currently selected language, so first you should select the language you want to work on. For more information, see the [Working in the Currently Selected Language](translatable-texts#selected-language) section in *Language Menu*.
 
 ### 2.1 Documents/modules
 

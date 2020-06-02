@@ -50,7 +50,7 @@ The **Language** menu allows you to manage additional languages and translations
 
 ### 3.1 Menu Items Overview
 
-The **File** menu items are described in the table below:
+The **Language** menu items are described in the table below:
 
 | Menu Item | Description | Shortcut Key |
 | --- | --- | --- |
@@ -86,7 +86,7 @@ There are two options to ensure that the language is changed:
 
 ## 5 Read More
 
-There is a worked example of adding a translation in [How to Translate Your App Content](/howto/collaboration-requirements-management/translate-your-app-content)
+There is a working example of adding a translation in [How to Translate Your App Content](/howto/collaboration-requirements-management/translate-your-app-content)
 
 See also [How To Use Translatable Validation Messages](/howto/logic-business-rules/translatable-validation-messages) for information on translating validation messages.
 

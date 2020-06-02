@@ -19,7 +19,7 @@ Batch translate translates between two languages. When you select batch translat
 
 ![Select source and destination languages](attachments/language/batch-translate-languages.png)
 
-### 2.1 Documents/modules
+### 2.1 Documents/Modules
 
 You can select one or more modules you want to use for batch translate. For example, you may have already got translations for imported and system modules and want to concentrate on translating your own modules.
 

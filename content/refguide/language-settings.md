@@ -14,7 +14,7 @@ Mendix is designed to be used by users in multiple languages. The **Languages** 
 You can reach this tab in two ways:
 
 1. Select the menu option **Language > Language Settings…**.
-2. Open the **Project '…' > Settings** dialog box from the [Project Explorer](project-explorer) and select the **Language** tab.
+2. Open the **Project {Name} > Settings** dialog box from the [Project Explorer](project-explorer) and select the **Language** tab.
 
 ## 2 Setting Default Language
 
@@ -43,7 +43,7 @@ You can set each language in your app to have additional settings.
 
 ### 4.1 Check Completeness
 
-If you check the **Check completeness** box, you will get a warning (or error) message in the [errors pane](errors-pane) for every text which has no entry in this language's dictionary.
+If you check the **Check completeness** box, you will get a warning (or error) message in the [Errors pane](errors-pane) for every text which has no entry in this language's dictionary.
 
 If this is the default language, the **Check completeness** box will be checked and you will not be able to uncheck it.
 
@@ -57,6 +57,6 @@ You can set a custom format for the following:
 
 Type a format string in the relevant box and you will see an example of how a date will be formatted underneath.
 
-Click **Edit…** to open a dialog box which will provide a full reference for the format string.
+Click **Edit…** to open a dialog box which will provide a full reference for the format string:
 
 ![Date edit dialog](attachments/language/date-format.png)

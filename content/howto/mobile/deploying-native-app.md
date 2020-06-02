@@ -1,8 +1,8 @@
 ---
-title: "Deploy Your First Mendix Native App"
+title: "Deploy Your First Mendix Native Mobile App"
 parent: "native-mobile"
 menu_order: 70
-description: Describes how to deploy your first Mendix Native App with the Native Builder.
+description: Describes how to deploy your first Mendix native mobile app with the Native Builder.
 tags: ["native", "mobile", "deploy", "native-builder", "builder", "appcenter"]
 ---
 
@@ -17,7 +17,7 @@ Every Native Builder project has configurations. These configurations are useful
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Read [How to Get Started with Native Mobile](/howto/mobile/getting-started-with-native-mobile) to see how to create, style and debug an application with Mendix Studio Pro
-* Deploy your native app to the cloud via Studio Pro and have the cloud address of your deployed application available
+* Deploy your native mobile app to the cloud via Studio Pro and have the cloud address of your deployed application available
 * Learn how to use Windows' command line interface (CLI) program `cmd`
 * Install [Java JDK 11](https://adoptopenjdk.net/) (if you have Studio Pro installed, you should already have JDK 11 in *C:\Program Files\AdoptOpenJDK*)
 * Download the Native Builder [executable](https://www.dropbox.com/sh/hpw7sshut9bco68/AABackrr75rPSgW7u5LBMkMra?dl=0) to a folder of your preference and extract all contents
@@ -139,7 +139,7 @@ Now it is time for you to make your own first build:
 
 This command does the following:
 
-* Generates a JavaScript deployment bundle and images of the Native App from Studio pro
+* Generates a JavaScript deployment bundle and images of the native mobile app from Studio Pro
 * Creates a new build branch on GitHub and starts a build process on App Center
 
 If your `build` command fails citing version conflicts on Java classes, try the following:

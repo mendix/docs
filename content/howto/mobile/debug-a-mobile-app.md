@@ -78,7 +78,7 @@ Since Mendix Studio Pro only runs on Mendix, you need to make sure that your vir
 
 ### 4.2 PhoneGap Configuration
 
-You can use PhoneGap Build to build the native application and tell it to initialize based on this new URL, rather than the default. Follow these steps to download a package, update it, and upload it to PhoneGap Build:
+You can use PhoneGap Build to build the native mobile application and tell it to initialize based on this new URL, rather than the default. Follow these steps to download a package, update it, and upload it to PhoneGap Build:
 
 1. Go to home.mendix.com and open your app.
 2. Go to the **Mobile App** page.
@@ -232,7 +232,7 @@ In order to build (and debug) a Mendix iOS app, you need to ensure that you have
 
 ### 5.2 Phonegap Configuration <a name="PhonegapConfiguration"></a>
 
-You can use PhoneGap Build to build the native application and tell it to initialize based on this new URL, rather than the default. Follow these steps to change the PhoneGap Build
+You can use PhoneGap Build to build the native mobile application and tell it to initialize based on this new URL, rather than the default. Follow these steps to change the PhoneGap Build
 
 1. Go to **home.mendix.com** and open your app.
 2. Navigate to the **Mobile App** page, listed under Deploy.
@@ -344,7 +344,7 @@ Follow these steps to test your computer's connection to your device:
 
 ### 6.2 PhoneGap Configuration
 
-You can use PhoneGap Build to build the native application and tell it to intialize based on this new URL, rather than the default. Follow these steps to create a new configuration:
+You can use PhoneGap Build to build the native mobile application and tell it to intialize based on this new URL, rather than the default. Follow these steps to create a new configuration:
 
 1. Go to **home.mendix.com** and open your app.
 2. Navigate to the **Mobile App** page under Deploy.

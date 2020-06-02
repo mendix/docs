@@ -9,16 +9,18 @@ tags: ["studio", "microflow", "expressions", "expression", "set value", "variabl
 
 ## 1 Introduction 
 
-This document describes microflow expressions in Mendix Studio. Expressions can be used to create or change an object or a variable based on logic. 
+This document describes microflow expressions in Mendix Studio. For information on microflow expressions in Studio Pro, see [Expressions](/refguide/expressions) in the *Studio Pro Guide*. 
+
+Expressions can be used to create or change an object or a variable based on logic. 
 
 The **Expression** tab is available for the following activities in a microflow:
 
-*  [End Event](/refguide/end-event)
+*  End Event
 *  [Decision](microflows-decision)
-*  [Create Object](/refguide/create-object)
-*  [Change Object](/refguide/change-object)
-*  [Create Variable](/refguide/create-variable) 
-*  [Change Variable](/refguide/change-variable)
+*  Create Object
+*  Change Object
+*  Create Variable 
+*  Change Variable
 
 ![](attachments/microflows-expressions/expression-tab.png)
 
@@ -114,3 +116,4 @@ You can use the following Boolean expressions:
 
 * [Microflows](microflows)
 * [Set & Change a Value for Different Activities in the Microflows](microflows-setting-and-changing-value)
+* [Expressions](/refguide/expressions)

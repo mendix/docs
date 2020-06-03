@@ -30,20 +30,36 @@ When you create an app from a Mendix template, there is one language, **English,
 
 To create your app, do the following:
 
-1. Create a new app using the 
+1. Create a new app using the **Blank App** template.
+2. Open the app in Studio Pro (images here are from Studio Pro version 8.10)
+3. Create a domain model in MyFirstModule with two entities:
+	* **Order** with the integer attribute **OrderNumber**
+	* **Product** with the string attribute **ProductName**
+		![Domain model for How To](attachments/translate-your-app-content/domain-model.png)
+4. Right-click one of the entities and select **Generate overview pages…**
+5. Ensure both entities are selected and click **OK**.
+	This will generate some pages containing text for you to translate.
+6. Open the page **Product_NewEdit** and add a new **Button** widget.
+7. Label the new button **Order**. Ignore any warnings about the setup of this button.
+	![Product New Edit page with an Order button](attachments/translate-your-app-content/order-button.png)
+8. Open the page **Home_Web** and put some text into the title and subtitle.
+	![Product New Edit page with an Order button](attachments/translate-your-app-content/home-page-text.png)
+
+You now have an app with some translatable texts.
 
 ## 3 Adding App Project Languages
-1.  In the **Project Explorer**, open the app project's **Settings** and go to the **Languages** tab.
 
-	![](attachments/Translating+Your+App+Content/01_project_settings.png)
+You can now add an additional language to your app. If you want to create the whole app in a language other than the current default, it is best to do this before you start creating the app. If you want to add alternative languages, it is best to do this when your app is nearing completion as it reduces the amount of work needed to do the translation from the default language, especially if there is already a translation for that language.
 
-2. 	Click **Add**, select the desired language, and click **OK**.
+To add an additional language, do the following:
 
-	![](attachments/Translating+Your+App+Content/02_dutch.png)
+1. Select the menu item **Language > Language settings…**.
+2. Click the **Add** button and select a second language. In this example we will be using *Russian, Russia*, but you can use any language you like.
+	{{% alert type="info" %}}It is recommended that you **don't** choose *Dutch, Netherlands* as this already contains translations for many of the translatable texts.{{% /alert %}}
+3. Click **OK** to confirm.
+	![Language settings tab in the project settings dialog](attachments/translate-your-app-content/language-settings.png)
 
-If you want to set a different language as the default, you can do that in the **Default language** drop-down menu on the **Languages** tab.
-
-Any app project language can be used as a development language in Studio Pro (for details, see the [Changing the Development Language](#changingthedevelopmentlanguage) section below).
+You will see that the default language is still *English, United States* which is what you want the end-user to see if they do not choose Russian as their language.
 
 ## 3 Changing the Development Language {#changingthedevelopmentlanguage}
 
@@ -51,7 +67,7 @@ The development language is the language used to define translatable texts as yo
 
 You can change the language setting if desired in Studio Pro by going to: **Language** > **Current Language**.
 
-![](attachments/Translating+Your+App+Content/04_switch_development_language.png)
+![](attachments/translate-your-app-content/04_switch_development_language.png)
 
 Mendix recommends setting your development language at the start of your app project, because all the added text (for example, button labels) will be added to the selected language library (so that it can be reused in other app projects).
 
@@ -63,7 +79,7 @@ When your app is deployed with labels that don’t yet have a translation, these
 
 To update the language settings in Studio Pro, go to **Language > Language Operations**.
 
-![](attachments/Translating+Your+App+Content/language_operations.png)
+![](attachments/translate-your-app-content/language_operations.png)
 
 In the **Selection** section of the dialog box, you can select the documents and modules that you want to update. The columns of languages for which there are items but which are not included in the app project are gray.
 
@@ -94,7 +110,7 @@ To search for phrases that look similar and replace them as a batch, follow thes
 2. In the **Source text contains** field of the **Batch replace** dialog box, enter the word you want to search for.
 3.  The results will appear in the table with the column headers **Text** and **Replace with** (as in the example image below, in which "Schedule" is being searched).
 
-	![](attachments/Translating+Your+App+Content/08_batch_replace_2.png)
+	![](attachments/translate-your-app-content/08_batch_replace_2.png)
 
 4. Enter the new replacement text under **Replace with**, and then click **Replace**.
 
@@ -118,7 +134,7 @@ To enable batch translation, follow these steps:
 3. In the **Source text contains** field of the **Batch translate** dialog box, enter the word you want to search for.
 4.  The results will appear in the table with the column headers **Source** and **Translation** (as in the example image below, in which "Password" is being searched).
 
-	![](attachments/Translating+Your+App+Content/11_filter_module.png)
+	![](attachments/translate-your-app-content/11_filter_module.png)
 
 5. Enter the translated text for the various results under **Translation**, and then click **Translate**.
 

@@ -61,6 +61,8 @@ To add an additional language, do the following:
 
 You will see that the default language is still *English, United States* which is what you want the end-user to see if they do not choose Russian as their language.
 
+**XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX**
+
 ## 3 Changing the Development Language {#changingthedevelopmentlanguage}
 
 The development language is the language used to define translatable texts as you develop your app in Studio Pro. For example, if you select **Dutch, Netherlands** as the development language, any labels that you type during the development of your app in Studio Pro will be added to your app project's Dutch dictionary. The Dutch translation of your app will be seen by users of your app who set Dutch as their preferred language in their profile (if they do not specify a preferred language, the app project default language will be used).
